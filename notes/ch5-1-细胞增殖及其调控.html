@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第五章 细胞的生命历程 · 第一节 细胞增殖及其调控 — 生物集训营笔记</title>
+<style>
+:root {
+  --bg: #fdfbf7; --bg2: #f5f0e8; --ink: #2c2416; --muted: #7a6e5e;
+  --rule: #d6ccc0; --accent: #c0392b; --accent2: #8b4513;
+  --highlight: #fff3cd; --note-bg: #fff8e7; --note-border: #e8c84a;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: "Noto Sans CJK SC", "WenQuanYi Micro Hei", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  font-size: 16px; line-height: 1.8; color: var(--ink); background: var(--bg);
+}
+.cover { text-align: center; padding: 4rem 2rem 3rem; border-bottom: 3px double var(--rule); margin-bottom: 0; background: linear-gradient(180deg, var(--bg2) 0%, var(--bg) 100%); }
+.cover .ch-num { font-size: 1rem; color: var(--accent); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 0.3rem; }
+.cover h1 { font-size: 2.2rem; font-weight: 800; color: var(--ink); margin-bottom: 0.5rem; letter-spacing: 0.03em; }
+.cover .subtitle { font-size: 1rem; color: var(--muted); }
+.cover .meta { margin-top: 1.2rem; font-size: 0.85rem; color: var(--muted); display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
+.main-layout { max-width: 1060px; margin: 0 auto; padding: 0 1.5rem; }
+.section-header { border-bottom: 3px solid var(--accent); padding: 2rem 0 0.6rem; margin-bottom: 1.5rem; }
+.section-header .sec-num { font-size: 0.9rem; color: var(--accent); font-weight: 700; letter-spacing: 0.08em; }
+.section-header h2 { font-size: 1.6rem; font-weight: 800; color: var(--ink); margin-top: 0.15rem; }
+.topic-header { margin: 2rem 0 1rem; padding-left: 0.8rem; border-left: 4px solid var(--accent); }
+.topic-header h3 { font-size: 1.25rem; font-weight: 700; color: var(--ink); }
+.subtopic-header { margin: 1.5rem 0 0.8rem; }
+.subtopic-header h4 { font-size: 1.1rem; font-weight: 700; color: var(--accent2); }
+.note-block { display: flex; gap: 1.5rem; margin-bottom: 1.2rem; align-items: flex-start; }
+.note-content { flex: 1; padding: 0.8rem 1rem; background: var(--bg2); border-radius: 6px; border: 1px solid var(--rule); }
+.note-content p { margin-bottom: 0.5rem; }
+.note-content p:last-child { margin-bottom: 0; }
+.note-content ul, .note-content ol { padding-left: 1.5rem; margin: 0.4rem 0; }
+.note-content li { margin-bottom: 0.25rem; }
+.annotation { width: 240px; flex-shrink: 0; background: var(--note-bg); border: 1px solid var(--note-border); border-radius: 6px; padding: 0.6rem 0.8rem; font-size: 0.82rem; line-height: 1.6; color: var(--accent2); align-self: flex-start; }
+.annotation::before { content: "📝 批注"; display: block; font-size: 0.7rem; font-weight: 700; color: var(--accent); letter-spacing: 0.06em; margin-bottom: 0.3rem; text-transform: uppercase; }
+.u { text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 2px; text-underline-offset: 3px; font-weight: 600; }
+.u-double { text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 2px; text-underline-offset: 3px; text-decoration-style: double; font-weight: 700; }
+.key-point { background: var(--highlight); padding: 0.1em 0.3em; border-radius: 3px; font-weight: 600; border-bottom: 1.5px solid var(--accent); }
+.table-wrap { overflow-x: auto; overflow-y: auto; max-height: 600px; margin: 1.5rem 0; border: 1px solid var(--rule); border-radius: 6px; }
+table { width: 100%; border-collapse: collapse; font-size: 0.9rem; min-width: 800px; }
+table thead th { background: var(--accent); color: #fff; padding: 0.6rem 0.8rem; font-weight: 700; text-align: center; white-space: nowrap; }
+table tbody td { padding: 0.5rem 0.8rem; border-bottom: 1px solid var(--rule); vertical-align: top; }
+table tbody tr:nth-child(even) { background: var(--bg2); }
+table tbody tr:last-child td { border-bottom: none; }
+table tbody td:first-child { font-weight: 600; white-space: nowrap; text-align: center; background: var(--bg2); }
+figcaption { text-align: center; font-size: 0.85rem; color: var(--muted); margin-top: 0.4rem; }
+.diagram { margin: 1.2rem 0; text-align: center; }
+.diagram img { max-width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 4px; }
+.summary-box { background: linear-gradient(135deg, #fdf2f2 0%, #fef9e7 100%); border: 2px solid var(--accent); border-radius: 8px; padding: 1.2rem 1.5rem; margin: 2rem 0; }
+.summary-box h4 { color: var(--accent); font-size: 1rem; margin-bottom: 0.6rem; }
+.expand-block { background: #f0f7f4; border: 1px dashed #7cb342; border-radius: 6px; padding: 0.5rem 0.9rem; margin: 0.6rem 0 0; font-size: 0.83rem; line-height: 1.6; color: #3e6b3e; }
+.expand-block::before { content: "🔍 拓展"; display: block; font-size: 0.7rem; font-weight: 700; color: #558b2f; letter-spacing: 0.06em; margin-bottom: 0.2rem; }
+.flow-box { background: var(--bg); border: 1px solid var(--rule); border-radius: 8px; padding: 1.2rem; margin: 1.2rem 0; text-align: center; }
+.flow-box .flow-title { font-size: 0.85rem; font-weight: 700; color: var(--accent); margin-bottom: 0.8rem; }
+.flow-row { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 0.3rem; font-size: 0.85rem; }
+.flow-item { background: var(--bg2); border: 1px solid var(--rule); border-radius: 4px; padding: 0.25rem 0.6rem; white-space: nowrap; }
+.flow-arrow { color: var(--accent); font-weight: 700; font-size: 1.1rem; }
+footer { margin-top: 3rem; padding: 1.5rem; border-top: 1px solid var(--rule); text-align: center; font-size: 0.8rem; color: var(--muted); }
+@media (max-width: 768px) {
+  .cover h1 { font-size: 1.5rem; }
+  .note-block { flex-direction: column; }
+  .annotation { width: 100%; }
+  .main-layout { padding: 0 0.8rem; }
+  table { font-size: 0.78rem; min-width: 600px; }
+}
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div class="ch-num">高中生物竞赛讲义 · 集训营</div>
+  <h1>第五章 细胞的生命历程</h1>
+  <div class="subtitle">第一节 细胞增殖及其调控</div>
+  <div class="meta">
+    <span>细胞周期</span><span>有丝分裂</span><span>减数分裂</span><span>细胞周期调控</span>
+    <span>📅 整理日期: 2026年7月6日</span>
+  </div>
+</div>
+
+<div class="main-layout">
+
+<div class="section-header">
+  <div class="sec-num">第一节</div>
+  <h2>细胞增殖及其调控</h2>
+</div>
+
+<!-- ====== 一、细胞周期概述 ====== -->
+<div class="topic-header">
+  <h3>一、细胞周期概述</h3>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><span class="u-double">细胞增殖（cell proliferation）</span>是生命活动的重要特征，是生物体生长、发育、繁殖和遗传的基础。细胞以分裂的方式进行增殖。</p>
+    <p>细胞分裂有三种主要方式：</p>
+    <ul>
+      <li><span class="key-point">无丝分裂（amitosis）</span>：分裂过程中不出现纺锤体和染色体的变化（也称直接分裂）。常见于原核生物、纤毛虫等。</li>
+      <li><span class="key-point">有丝分裂（mitosis）</span>：真核生物体细胞增殖的主要方式。分裂过程中有纺锤体和染色体形态变化。</li>
+      <li><span class="key-point">减数分裂（meiosis）</span>：有性生殖生物产生配子时进行的特殊分裂方式。染色体数减半。</li>
+    </ul>
+    <p><span class="u-double">细胞周期（cell cycle）</span>是<span class="u">连续分裂的细胞从一次分裂完成时开始到下一次分裂完成时为止所经历的全过程</span>。</p>
+    <p>真核细胞的一个细胞周期分为两个阶段：</p>
+    <ul>
+      <li><span class="key-point">分裂间期（interphase）</span>：G₁期 + S期 + G₂期，占细胞周期的 90-95% 时间</li>
+      <li><span class="key-point">分裂期（M期）</span>：有丝分裂期，约占 5-10%</li>
+    </ul>
+    <figure class="diagram">
+      <img src="assets/fig_cell_cycle.svg" alt="细胞周期示意图：G0期 → G1期 → S期 → G2期 → M期 → 返回G1">
+      <figcaption>图 5-1-1：细胞增殖周期示意图。细胞周期分为分裂间期（G₁、S、G₂）和分裂期（M）两部分，分裂间期又可细分为 G₁、S、G₂ 三个时相。G₀ 期是暂时脱离细胞周期的静止期。（原创矢量示意图）</figcaption>
+    </figure>
+  </div>
+  <div class="annotation">
+    细胞周期 = 分裂间期 + 分裂期。G₁、S、G₂ 三个时相完成 DNA 复制和蛋白质合成。M 期完成染色体分离和胞质分裂。一个细胞周期总时间因物种和细胞类型而异（酵母 90 min，小鼠肠上皮 12-24h，肝细胞可达 1 年）。
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>根据细胞增殖状态，可将细胞分为三类：</p>
+    <ul>
+      <li><span class="key-point">周期细胞（cycling cell）</span>：持续进行细胞周期，如上皮、造血干细胞</li>
+      <li><span class="key-point">G₀期细胞</span>：暂时脱离细胞周期、停止分裂，但保持增殖能力，在适当刺激下可重新进入周期。如肝、肾细胞</li>
+      <li><span class="key-point">终末细胞（terminally differentiated cell）</span>：永久脱离细胞周期，不再分裂。如神经元、心肌细胞、骨骼肌细胞</li>
+    </ul>
+    <p>细胞周期时间（Tc）因物种、细胞类型而异：</p>
+    <ul>
+      <li>细菌（如大肠杆菌）：~20 min</li>
+      <li>酵母：90-120 min</li>
+      <li>哺乳动物培养细胞：18-24 h</li>
+      <li>肝细胞：约 1 年</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    三类细胞对比：周期细胞（持续分裂）、G₀细胞（可逆静止）、终末细胞（永久静止）。G₀ 期的"可逆性"是其与终末分化的关键区别。
+  </div>
+</div>
+
+<!-- ====== 二、分裂间期 ====== -->
+<div class="topic-header">
+  <h3>二、分裂间期（Interphase）：G₁、S、G₂ 期</h3>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>分裂间期看似静止，实际上代谢旺盛，进行着复杂的生化合成和细胞器复制。</p>
+    <p><strong>（一）G₁期（DNA 合成前期）</strong></p>
+    <ul>
+      <li>持续时间：变化最大（数小时-数天），是细胞周期的主要调控点</li>
+      <li>主要事件：<span class="u-double">合成 RNA 和蛋白质</span>（包括 DNA 复制所需的酶类）</li>
+      <li><span class="key-point">限制点/检验点（restriction point, R点）</span>：G₁ 后期的一个关键决定点。通过 R 点的细胞将完成 DNA 复制并分裂；未通过的细胞进入 G₀ 期</li>
+      <li>关键分子：G₁期周期蛋白 D（cyclin D）、Cdk4/6 复合物驱动 R 点通过</li>
+    </ul>
+    <p><strong>（二）S期（DNA 合成期）</strong></p>
+    <ul>
+      <li>持续时间：通常 6-8 h</li>
+      <li>主要事件：<span class="u-double">DNA 复制（每条染色体的 DNA 复制一次，精确复制）</span>；组蛋白合成（与 DNA 同步）</li>
+      <li>关键酶：DNA 聚合酶 α、δ、ε；DNA 连接酶；拓扑异构酶</li>
+      <li>每个染色体形成两条姐妹染色单体，通过<span class="u">黏连蛋白（cohesin）</span>连接</li>
+    </ul>
+    <p><strong>（三）G₂期（DNA 合成后期）</strong></p>
+    <ul>
+      <li>持续时间：约 2-5 h</li>
+      <li>主要事件：合成 RNA 和蛋白质（包括纺锤体微管蛋白、有丝分裂所需的酶类）</li>
+      <li>关键检验点：<span class="key-point">G₂/M 检验点</span>，确保 DNA 完整复制后才进入 M 期</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    G₁ 期的 R 点是"是否分裂"的决定点。R 点类似"门卫"——通过则继续分裂，未通过则进入 G₀。S 期的"DNA 复制一次、一次复制"（once per cell cycle）是细胞周期的核心原则，由 CDK 严格控制。
+  </div>
+</div>
+
+<!-- ====== 三、染色体结构与类型 ====== -->
+<div class="topic-header">
+  <h3>三、染色体结构与类型</h3>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><span class="u-double">染色体（chromosome）</span>是细胞在有丝分裂或减数分裂过程中，由染色质聚缩而成的棒状结构。</p>
+    <p><strong>染色体的结构层次：</strong>核小体（DNA + 组蛋白八聚体）→ 染色质纤维（30 nm 螺线管）→ 超螺线管 → 染色单体（分裂期）</p>
+    <p><strong>染色体的主要结构：</strong></p>
+    <ul>
+      <li><span class="key-point">着丝粒/着丝点（centromere/kinetochore）</span>：染色体缩缢处，纺锤体微管附着点。包括着丝粒 DNA（α 卫星 DNA 重复序列）和动粒蛋白复合体（CENP-A、CENP-B、CENP-C）</li>
+      <li><span class="key-point">主缢痕（primary constriction）</span>：着丝粒所在位置</li>
+      <li><span class="key-point">次缢痕（secondary constriction）</span>：核仁组织区（NOR），与 rRNA 基因相关</li>
+      <li><span class="key-point">端粒（telomere）</span>：染色体末端的特殊结构（TTAGGG 重复序列），保护染色体末端不被降解或融合</li>
+      <li><span class="key-point">随体（satellite）</span>：次缢痕远端的球状小体</li>
+    </ul>
+    <p><strong>染色体的四种类型（按着丝粒位置）：</strong></p>
+    <ul>
+      <li><span class="key-point">中着丝粒染色体（metacentric）</span>：着丝粒位于中部，两臂等长</li>
+      <li><span class="key-point">亚中着丝粒染色体（submetacentric）</span>：着丝粒偏中，两臂不等长</li>
+      <li><span class="key-point">亚端着丝粒染色体（acrocentric）</span>：着丝粒靠近一端</li>
+      <li><span class="key-point">端着丝粒染色体（telocentric）</span>：着丝粒位于末端</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    染色体结构层次：DNA → 核小体 → 螺线管 → 超螺线管 → 染色单体。着丝粒 = 纺锤体附着点；端粒 = 端粒酶维持，与衰老相关。四种染色体类型以着丝粒位置区分。
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><strong>特殊染色体类型：</strong></p>
+    <ul>
+      <li><span class="key-point">常染色体（autosome）</span>：与性别决定无关的染色体（人 22 对）</li>
+      <li><span class="key-point">性染色体（sex chromosome）</span>：与性别决定相关（人 X、Y）</li>
+      <li><span class="key-point">多线染色体（polytene chromosome）</span>：见于双翅目昆虫（如摇蚊、果蝇幼虫）唾腺，DNA 多次复制但不分离，形成巨大染色体（每条含 1000-2000 条染色单体），上有"胀泡"（puff），是基因活跃转录区</li>
+      <li><span class="key-point">灯刷染色体（lampbrush chromosome）</span>：见于鱼类、两栖类（特别是蝶螈、蛙）卵母细胞第一次减数分裂双线期。两条同源染色体配对形成 4 条染色单体，每条染色单体侧环成对（matrix）。是研究 RNA 转录的经典材料</li>
+      <li><span class="key-point">B 染色体</span>：超过正常染色体数目的额外染色体（也称副染色体、超数染色体）。在许多动植物中存在，对表型影响小</li>
+      <li><span class="key-point">性染色体类型</span>：① XY 型（哺乳动物、果蝇、多数被子植物）；② ZW 型（鸟类、蝶类、爬行类）；③ XO 型（蝗虫）；④ X：Y = 1：1 = 性别</li>
+    </ul>
+    <p><strong>性染色体决定的性别类型：</strong></p>
+    <ul>
+      <li>XX-XY 型：XX 为雌，XY 为雄（哺乳类）</li>
+      <li>ZW-ZZ 型：ZW 为雌，ZZ 为雄（鸟、蛾、蝶）</li>
+      <li>XX-XO 型：XX 为雌，XO 为雄（部分昆虫）</li>
+      <li>单倍-二倍型：雌为 2n，雄为 n（蜜蜂蚂蚁）</li>
+      <li>环境决定型：温度等环境因子（龟、鳄鱼）</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    多线染色体和灯刷染色体是"巨型染色体"，是研究基因转录的"窗口"。XY 型和 ZW 型是两种主要的性染色体系统。环境决定性别在爬行动物中常见。
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><strong>染色体数目与核型：</strong></p>
+    <p>每种生物的染色体数目是恒定的，且<span class="u-double">体细胞为 2n，生殖细胞为 n</span>。人 2n = 46（44 常染色体 + XY/XX），果蝇 2n = 8，豌豆 2n = 14，水稻 2n = 24，小麦 2n = 42。</p>
+    <p><span class="u-double">核型（karyotype）</span>：一个体细胞中的全部染色体，按其大小、形态特征顺序排列所构成的图像。常用核型分析方法有：</p>
+    <ul>
+      <li><span class="key-point">① 荧光显带法（Q 带）</span>：用喹吖因（quinacrine）染色，富 AT 序列区发强荧光</li>
+      <li><span class="key-point">② 吉姆萨氏染色法（G 带）</span>：用 Giemsa 染色，AT 富集区深染</li>
+      <li><span class="key-point">③ 反带法（R 带）</span>：与 G 带相反，GC 富集区深染</li>
+      <li><span class="key-point">④ 末端显带法（T 带）</span>：专门显示染色体末端</li>
+      <li><span class="key-point">⑤ C 带法</span>：专门显示着丝粒附近的结构异染色质</li>
+    </ul>
+    <p>染色体带型是核型分析的基础，可用于：① 鉴定染色体；② 诊断染色体病（如 21 三体综合征）；③ 研究染色体结构变异。</p>
+  </div>
+  <div class="annotation">
+    染色体数目的恒定性是物种的标志。核型 = 染色体组型 = 全套染色体的系统排列。G/Q 带法（AT 富集区深染）和 R 带法（GC 富集区深染）是最常用的两种带型技术。
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><strong>染色体的多倍体与单倍体：</strong></p>
+    <ul>
+      <li><span class="key-point">一倍体（1N）</span>：配子中的染色体数（如人 n=23）</li>
+      <li><span class="key-point">二倍体（2N）</span>：体细胞中含两套染色体（如人 2n=46）</li>
+      <li><span class="key-point">多倍体</span>：含 3 套或以上染色体组（如 3N、4N）。<span class="u">多倍体在植物中常见（小麦 6N=42），动物中罕见（两栖类、鱼类有）</span>。人工诱导多倍体用秋水仙素抑制纺锤体形成</li>
+      <li><span class="key-point">单倍体（haploid）</span>：含配子染色体数的个体（不管由什么发育而来）</li>
+      <li><span class="key-point">非整倍体（aneuploid）</span>：染色体数不是整数倍（如 2n+1、2n-1、2n-2）。如 21 三体综合征（唐氏综合征）</li>
+    </ul>
+    <p>关键易混：<span class="u-double">单倍体 vs 一倍体</span>。一倍体必须是配子中的染色体数；单倍体可由配子直接发育（如蜜蜂雄蜂 n=16）或多倍体的配子发育（如四倍体植物的花药离体培养产生 2N 单倍体）。</p>
+  </div>
+  <div class="annotation">
+    1N、2N、N 倍体的概念区别。"一倍体"专指配子中的染色体数；"单倍体"指由配子发育而来的个体，不管本物种是几倍体。蜜蜂雄蜂是著名的单倍体个体（未受精卵发育）。
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><strong>基因组（genome）的概念：</strong></p>
+    <p>一个细胞中所含的<span class="u-double">全部遗传物质（DNA）</span>称为基因组。</p>
+    <ul>
+      <li><span class="key-point">核基因组（nuclear genome）</span>：细胞核内的染色体 DNA</li>
+      <li><span class="key-point">线粒体基因组（mitochondrial genome, mtDNA）</span>：线粒体 DNA（小环状，哺乳动物 16.5 kb）</li>
+      <li><span class="key-point">质体基因组（plastid genome）</span>：叶绿体等质体的 DNA</li>
+      <li><span class="key-point">病毒基因组</span>：DNA 病毒或 RNA 病毒的遗传物质</li>
+    </ul>
+    <p><span class="u-double">人类基因组计划（HGP）</span>完成了 30 亿碱基对的测序，但核基因组（nuclear genome）只指 22+X+Y 共 24 种染色体的 DNA。</p>
+  </div>
+  <div class="annotation">
+    基因组 = 一个细胞中所有遗传物质。植物细胞含核基因组 + 线粒体基因组 + 叶绿体基因组。原核生物只有 1 个染色体（环状 DNA），无核膜包被。
+  </div>
+</div>
+
+<!-- ====== 四、有丝分裂过程 ====== -->
+<div class="topic-header">
+  <h3>四、有丝分裂过程（Mitosis）</h3>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><span class="u-double">有丝分裂是真核生物体细胞增殖的主要方式</span>，通过分裂产生两个染色体数与母细胞相同的子细胞。</p>
+    <p>有丝分裂分为<span class="u-double">前期、前中期、中期、后期、末期和胞质分裂</span>六个阶段。</p>
+    <figure class="diagram">
+      <img src="assets/fig_mitosis_animal.svg" alt="动物细胞有丝分裂过程示意图：前期 → 前中期 → 中期 → 后期 → 末期 → 胞质分裂">
+      <figcaption>图 5-1-3：动物细胞有丝分裂过程。展示前期（染色体凝缩、纺锤体形成）、前中期（核膜崩解、染色体与纺锤体连接）、中期（染色体排列于赤道板）、后期（姐妹染色单体分离）、末期（核膜重建）、胞质分裂（缢缩成两个子细胞）。（原创矢量示意图）</figcaption>
+    </figure>
+
+    <p><strong>（一）前期（Prophase）</strong></p>
+    <ul>
+      <li>染色质螺旋化凝缩成可见的染色体（每条染色体含两条姐妹染色单体）</li>
+      <li>核仁逐渐解体，核膜开始消失</li>
+      <li>中心体（centrosome）发出星体微管（astral microtubule），两对中心体向两极移动，开始装配<span class="key-point">纺锤体（mitotic spindle）</span></li>
+      <li>纺锤体由 3 种微管组成：① <span class="u">动粒微管（kinetochore microtubule）</span>——连接染色体动粒与中心体；② <span class="u">极微管（polar/interpolar microtubule）</span>——连接两极；③ <span class="u">星体微管（astral microtubule）</span>——连接中心体与细胞皮层</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    有丝分裂"3+3"：3 个主要事件（染色体凝缩、纺锤体装配、核膜解体），3 类微管（动粒、极、星体）。中心粒复制在 S 期，每个中心体含 2 个中心粒。
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><strong>（二）前中期（Prometaphase）</strong></p>
+    <ul>
+      <li>核膜完全破裂（核孔复合体解聚）</li>
+      <li>染色体进一步凝集浓缩，核纤层蛋白（lamin）被 CDK1 磷酸化，核膜解体</li>
+      <li>动粒微管"捕获"染色体动粒，形成连接</li>
+      <li>染色体开始向赤道板方向移动（"之字形"双向运动，搜索与捕获）</li>
+    </ul>
+
+    <p><strong>（三）中期（Metaphase）</strong></p>
+    <ul>
+      <li>所有染色体的着丝粒排列在<span class="u-double">赤道板（equatorial plate）</span>上</li>
+      <li>每条染色体的两个动粒分别连接来自两极的动粒微管，形成"双极附着"（bi-orientation）</li>
+      <li>姐妹染色单体在动粒微管张力下处于"等待分离"状态</li>
+    </ul>
+
+    <p><strong>（四）后期（Anaphase）</strong></p>
+    <p>后期分两个阶段：</p>
+    <ul>
+      <li><span class="key-point">后期 A</span>：动粒微管缩短 → 染色单体（现称"子染色体"）的动粒被拉向两极</li>
+      <li><span class="key-point">后期 B</span>：极微管延长、滑动（动力蛋白 dynein 参与） → 两极距离加大</li>
+    </ul>
+    <p>关键事件：<span class="u-double">姐妹染色单体在着丝粒处分离</span>，由黏连蛋白（cohesin）被分离酶（separase）切割所致。</p>
+    <p>关键调控：<span class="key-point">后期促进复合物（APC/C）</span>激活 → 触发 separase 激活 → cohesin 切割 → 染色单体分离。</p>
+    <p>关键检验：<span class="key-point">纺锤体组装检验点（SAC）</span>——监控所有染色体的双极附着，未完成则阻止 APC/C 激活。</p>
+  </div>
+  <div class="annotation">
+    后期 A = 动粒微管解聚拉；后期 B = 极微管滑动推。SAC 是 M 期最重要的检验点，阻止染色体错误分离（非整倍体的主要来源）。
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><strong>（五）末期（Telophase）</strong></p>
+    <ul>
+      <li>两组子染色体分别到达两极</li>
+      <li>染色体解聚缩，松散为染色质</li>
+      <li>核纤层蛋白去磷酸化，重新组装核纤层</li>
+      <li>核膜片段（前期核膜破裂产生的膜泡）重新融合，形成两个子核的核膜</li>
+      <li>核仁重新出现（核仁组织区开始转录 rRNA）</li>
+      <li>纺锤体解体，微管解聚</li>
+    </ul>
+
+    <p><strong>（六）胞质分裂（Cytokinesis）</strong></p>
+    <p>胞质分裂在后期开始、末期完成，机制因细胞类型而异：</p>
+    <ul>
+      <li><span class="key-point">动物细胞：收缩环（contractile ring）</span>机制。赤道板下方细胞皮层的肌动蛋白纤维和肌球蛋白 II 组装成收缩环 → 水解 ATP 收缩 → 缢缩（"分裂沟"）→ 形成两个子细胞</li>
+      <li><span class="key-point">植物细胞：细胞板（cell plate）</span>机制。高尔基体/内质网囊泡在赤道面聚集 → 融合形成细胞板 → 融合细胞壁前体 → 形成中胶层 + 初生壁 → 子细胞分隔</li>
+      <li><span class="key-point">真菌：隔膜（septum）形成</span>。与植物类似但有隔膜孔</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    胞质分裂两大机制：动物 = 收缩环缢缩（肌动蛋白 + 肌球蛋白 II）；植物 = 细胞板融合（囊泡）。植物细胞壁的形成是 G 期的延续（有丝分裂不打断胞质分裂）。
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><strong>（七）植物细胞有丝分裂的特点：</strong></p>
+    <ul>
+      <li><span class="key-point">① 无中心粒</span>：高等植物细胞没有中心粒，但能通过微管组织中心（MTOC）正常装配纺锤体</li>
+      <li><span class="key-point">② 形成细胞板</span>：胞质分裂在细胞内形成新的细胞壁，而非表面缢缩</li>
+      <li><span class="key-point">③ 不出现中心体</span>：纺锤体由分散的微管组织中心产生</li>
+    </ul>
+
+    <p><strong>（八）特殊细胞的有丝分裂：</strong></p>
+    <ul>
+      <li><span class="key-point">早期胚胎细胞</span>：细胞周期极短（~8 h），无 G₁、G₂ 期；M 期长（占 50%）。胚胎后期才出现 G₁、G₂ 期</li>
+      <li><span class="key-point">甲藻（dinoflagellate）</span>：间核生物。核膜不破裂，染色体附着于核膜上；纺锤体在核外形成；染色体在核内分离</li>
+      <li><span class="key-point">硅藻（diatom）</span>：核膜不消失，微管在核内产生，动粒与微管相连</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    植物细胞有丝分裂与动物细胞的 3 大区别：无中心粒、形成细胞板、纺锤体由 MTOC 装配。早期胚胎细胞的"无 G₁/G₂"是细胞周期最简单的形式。
+  </div>
+</div>
+
+<!-- ====== 五、减数分裂 ====== -->
+<div class="topic-header">
+  <h3>五、减数分裂（Meiosis）</h3>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><span class="u-double">减数分裂是有性生殖生物产生配子时进行的特殊分裂方式</span>，特点是<span class="u-double">DNA 复制一次、细胞连续分裂两次，子细胞染色体数减半</span>。</p>
+    <p>减数分裂的产物：1 个母细胞 → 4 个子细胞，染色体数从 2n 减为 n。</p>
+    <p><strong>减数分裂的生物学意义：</strong></p>
+    <ul>
+      <li><span class="key-point">① 维持物种染色体数恒定</span>：通过受精作用 n + n = 2n</li>
+      <li><span class="key-point">② 产生遗传多样性</span>：同源染色体非姐妹染色单体之间的交叉互换 + 后期Ⅰ非姐妹染色单体的自由组合</li>
+    </ul>
+
+    <p><strong>（一）减数分裂Ⅰ（减数第一次分裂）</strong></p>
+    <p>同源染色体分离，导致染色体数减半（2n → n）。</p>
+    <ul>
+      <li><span class="key-point">前期Ⅰ（Prophase Ⅰ）</span>：最复杂、最长，分为 5 个亚期：
+        <ul>
+          <li><span class="u">细线期（leptotene）</span>：染色体凝缩，呈细线状</li>
+          <li><span class="u">偶线期（zygotene）</span>：同源染色体配对（联会 synapsis），形成 2n 个二价体</li>
+          <li><span class="u">粗线期（pachytene）</span>：联会完成，染色体变粗，<span class="u-double">同源染色体非姐妹染色单体之间发生交叉互换（crossing over）</span>。此时形成联会丝复合体（SC）</li>
+          <li><span class="u">双线期（diplotene）</span>：同源染色体开始分离，但<span class="u-double">交叉点（chiasma）</span>保持联系；Holliday 模型 1964 年提出</li>
+          <li><span class="u">终变期（diakinesis）</span>：染色体最大程度凝缩，核膜解体，纺锤体形成</li>
+        </ul>
+      </li>
+      <li><span class="key-point">中期Ⅰ</span>：四分体排列在赤道板上，<span class="u-double">同源染色体的动粒朝向两极</span></li>
+      <li><span class="key-point">后期Ⅰ</span>：<span class="u-double">同源染色体分离</span>（不是染色单体分离），自由组合到两极</li>
+      <li><span class="key-point">末期Ⅰ</span>：形成两个子核，染色体数减半（n）</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    减数分裂核心：DNA 复制 1 次 + 连续分裂 2 次。减数Ⅰ的特殊性是"同源染色体分离"（不是染色单体分离）。前期Ⅰ的 5 个亚期（细-偶-粗-双-终）是高频考点。
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><strong>（二）减数分裂Ⅱ（减数第二次分裂）</strong></p>
+    <p>类似有丝分裂，<span class="u-double">姐妹染色单体分离</span>。</p>
+    <ul>
+      <li><span class="key-point">前期Ⅱ</span>：染色体重新凝缩，纺锤体形成（无 DNA 复制）</li>
+      <li><span class="key-point">中期Ⅱ</span>：染色体排列在赤道板，<span class="u-double">姐妹染色单体的动粒朝向两极</span>（与中期Ⅰ不同：中期Ⅰ是同源染色体的动粒朝向两极）</li>
+      <li><span class="key-point">后期Ⅱ</span>：姐妹染色单体分离，被拉向两极</li>
+      <li><span class="key-point">末期Ⅱ</span>：形成 4 个子细胞，染色体数均为 n</li>
+    </ul>
+
+    <p><strong>（三）减数分裂的产物：</strong></p>
+    <ul>
+      <li><span class="key-point">雄性动物</span>：4 个大小相等的精细胞，进一步发育为 4 个精子</li>
+      <li><span class="key-point">雌性动物</span>：4 个大小悬殊的子细胞，1 个大的卵细胞 + 3 个小的极体（第一极体再分裂成 2 个第二极体，第二极体退化）</li>
+      <li><span class="key-point">植物</span>：产生 4 个孢子（spore），进而发育为配子体</li>
+    </ul>
+
+    <p><strong>（四）减数分裂与有丝分裂的比较：</strong></p>
+    <div class="table-wrap">
+    <table>
+      <thead><tr><th>特征</th><th>有丝分裂</th><th>减数分裂</th></tr></thead>
+      <tbody>
+        <tr><td>DNA 复制</td><td>1 次</td><td>1 次</td></tr>
+        <tr><td>细胞分裂</td><td>1 次</td><td>2 次（连续）</td></tr>
+        <tr><td>子细胞数</td><td>2 个</td><td>4 个</td></tr>
+        <tr><td>子细胞染色体数</td><td>2n（同母细胞）</td><td>n（减半）</td></tr>
+        <tr><td>联会</td><td>无</td><td>有（前期Ⅰ偶线期）</td></tr>
+        <tr><td>交叉互换</td><td>无</td><td>有（粗线期）</td></tr>
+        <tr><td>同源染色体分离</td><td>无</td><td>有（后期Ⅰ）</td></tr>
+        <tr><td>非姐妹染色单体分离</td><td>无</td><td>有（后期Ⅱ）</td></tr>
+        <tr><td>非整倍体来源</td><td>有丝分裂错误</td><td>减数分裂错误（更多）</td></tr>
+        <tr><td>发生对象</td><td>体细胞</td><td>生殖母细胞（精/卵原细胞）</td></tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+  <div class="annotation">
+    减数分裂 vs 有丝分裂的"3+3"区别：① 染色体数（n vs 2n）、② 联会交叉（有无）、③ 子细胞数（4 vs 2）。记忆口诀："减二=有丝"，"减一特殊"。
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><strong>（五）减数分裂发生的时间（按生物类型分）：</strong></p>
+    <ul>
+      <li><span class="key-point">① 终端减数分裂</span>：减数分裂发生在配子形成时。配子为 n，孢子体（2n）为营养体。如：人、动物、被子植物（花粉母细胞和胚囊母细胞）</li>
+      <li><span class="key-point">② 始端减数分裂（合子减数分裂）</span>：减数分裂发生在合子形成后。合子→减数分裂→配子→受精→2n 合子；2n 只在合子期短暂存在。如：衣藻、绿藻、水绵、轮藻</li>
+      <li><span class="key-point">③ 中间减数分裂（居间减数分裂）</span>：减数分裂发生在配子形成前。孢子体→无性孢子→配子体→配子。如：石莼、海带、鹿角蕨、所有高等植物和部分藻类的生活史</li>
+    </ul>
+
+    <p><strong>（六）减数分裂对基因重组的贡献：</strong></p>
+    <ul>
+      <li><span class="key-point">① 非同源染色体的自由组合</span>（后期Ⅰ）：n 对同源染色体可产生 2ⁿ 种组合（如人 n=23，产生 2²³ ≈ 8.4 × 10⁶ 种组合）</li>
+      <li><span class="key-point">② 同源染色体非姐妹染色单体的交叉互换</span>（前期Ⅰ粗线期）：产生新的等位基因组合</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    三种减数分裂时间：终（人、被子植物）、始（衣藻）、中（高等植物生活史）。植物生活史的"中间减数分裂"是核心：孢子体(2n) → 减数分裂 → 孢子(n) → 配子体 → 配子 → 受精 → 孢子体。
+  </div>
+</div>
+
+<!-- ====== 六、细胞增殖的调控 ====== -->
+<div class="topic-header">
+  <h3>六、细胞增殖的调控</h3>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>细胞增殖受两类因素控制：<span class="u-double">内在因素（基因/蛋白调控）</span>和<span class="u-double">外在因素（环境因子）</span>。</p>
+
+    <p><strong>（一）内在因素及其作用：</strong></p>
+    <p><span class="u-double">1. 三大里程碑研究：</span></p>
+    <ul>
+      <li><span class="key-point">① Hartwell（2001 年诺奖）</span>：在酵母中发现 cdc 基因（cell division cycle gene），如 cdc2、cdc28，揭示细胞周期的遗传控制</li>
+      <li><span class="key-point">② Hunt（2001 年诺奖）</span>：发现周期蛋白（cyclin），其浓度随细胞周期波动</li>
+      <li><span class="key-point">③ Nurse（2001 年诺奖）</span>：发现 cdk（cyclin-dependent kinase，周期蛋白依赖性激酶），是 cyclin 的催化亚基</li>
+    </ul>
+
+    <p><strong>2. MPF 的发现和本质：</strong></p>
+    <ul>
+      <li>MPF（M-phase Promoting Factor，M 期促进因子）= Cdk1 + cyclin B 复合物</li>
+      <li>MPF 的发现：通过细胞融合实验（如 G₁期细胞 + M 期细胞 → G₁ 期细胞核也出现 M 期变化）</li>
+      <li>MPF 功能：驱动 G₂→M 转换、染色体凝缩、核膜解体、纺锤体装配等</li>
+    </ul>
+
+    <p><strong>3. 细胞周期调控的核心机制：</strong></p>
+    <ul>
+      <li><span class="key-point">周期蛋白（cyclin）</span>：调节亚基，浓度随细胞周期波动。人类有 cyclin A、B、C、D、E 等</li>
+      <li><span class="key-point">周期蛋白依赖性激酶（CDK）</span>：催化亚基，需要与 cyclin 结合才有活性。人类有 CDK1-9</li>
+      <li><span class="key-point">CDK 抑制因子（CDI）</span>：如 p21、p27、p16（INK4a），抑制 CDK 活性</li>
+    </ul>
+    <p>不同 CDK-cyclin 复合物驱动不同检验点：</p>
+    <div class="table-wrap">
+    <table>
+      <thead><tr><th>CDK-cyclin 复合物</th><th>作用时期</th><th>关键功能</th></tr></thead>
+      <tbody>
+        <tr><td>Cyclin D + CDK4/6</td><td>G₁ 中期</td><td>磷酸化 Rb，释放 E2F，启动 G₁→S</td></tr>
+        <tr><td>Cyclin E + CDK2</td><td>G₁/S 转换</td><td>启动 DNA 复制</td></tr>
+        <tr><td>Cyclin A + CDK2</td><td>S 期</td><td>维持 DNA 复制</td></tr>
+        <tr><td>Cyclin A + CDK1</td><td>G₂ 期</td><td>准备 M 期</td></tr>
+        <tr><td>Cyclin B + CDK1 (MPF)</td><td>G₂/M 转换和 M 期</td><td>驱动有丝分裂全过程</td></tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+  <div class="annotation">
+    "CDK 是引擎，cyclin 是油门，CDI 是刹车"。2001 年诺贝尔奖授予 Hartwell、Hunt、Nurse 表彰细胞周期调控的发现。MPF = Cdk1 + cyclin B，是驱动 M 期的核心。
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><strong>4. 细胞周期检验点（checkpoints）：</strong></p>
+    <div class="table-wrap">
+    <table>
+      <thead><tr><th>检验点</th><th>位置</th><th>监控内容</th></tr></thead>
+      <tbody>
+        <tr><td>G₁ 检验点（R 点）</td><td>G₁ 后期</td><td>细胞大小、营养、DNA 损伤</td></tr>
+        <tr><td>S 检验点</td><td>S 期</td><td>DNA 复制完整性</td></tr>
+        <tr><td>G₂ 检验点</td><td>G₂ 后期</td><td>DNA 完整复制、损伤修复</td></tr>
+        <tr><td>纺锤体组装检验点（SAC）</td><td>M 中期</td><td>所有染色体双极附着</td></tr>
+        <tr><td>后期检验点</td><td>M 后期</td><td>染色单体正确分离</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p>检验点机制：<span class="u-double">监控-停止-修复-继续</span>。当 DNA 损伤时，p53（"基因组卫士"）激活 p21，p21 抑制 CDK2/4，细胞停滞在 G₁ 期进行 DNA 修复；修复失败则进入凋亡。</p>
+
+    <p><strong>5. 原癌基因与抑癌基因：</strong>（详见 ch5-4）</p>
+    <ul>
+      <li><span class="key-point">原癌基因（proto-oncogene）</span>：正常情况下促进细胞增殖（如 myc、ras、src）。突变后变为癌基因（oncogene）</li>
+      <li><span class="key-point">抑癌基因（tumor suppressor gene）</span>：抑制细胞增殖或促进凋亡（如 Rb、p53）。突变失活导致细胞癌变</li>
+      <li><span class="key-point">生长因子（growth factor）</span>：如 EGF、FGF、PDGF。配体-受体结合启动信号通路</li>
+    </ul>
+
+    <p><strong>（二）外在因素：</strong></p>
+    <ul>
+      <li>① <span class="u">电离辐射</span>：紫外线、X 射线、γ 射线引起 DNA 损伤</li>
+      <li>② <span class="u">化学物质</span>：如化学致癌物、化疗药物</li>
+      <li>③ <span class="u">病毒感染</span>：HPV、EBV 等肿瘤病毒</li>
+      <li>④ <span class="u">温度、pH、渗透压</span>：极端环境抑制细胞增殖</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    检验点是细胞周期的"安全检查站"。p53 失活是人类癌症中最常见的突变（约 50% 肿瘤）。Rb 是第一个被发现的抑癌基因（视网膜母细胞瘤）。
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><strong>（三）细胞周期与发育：</strong></p>
+    <p>细胞周期长度、增殖速率与细胞分化和器官形成密切相关：</p>
+    <ul>
+      <li>早期胚胎：细胞周期极短，体积不变（卵裂）</li>
+      <li>成体干细胞：缓慢分裂，补充组织细胞（如造血干细胞、肠上皮干细胞）</li>
+      <li>终末分化细胞：永久退出细胞周期（如神经元、心肌细胞）</li>
+    </ul>
+    <p><strong>异常增殖：</strong></p>
+    <ul>
+      <li>增殖过度 → <span class="u-double">肿瘤（癌症）</span>。如白血病、实体瘤</li>
+      <li>增殖不足 → <span class="u-double">再生障碍、衰老</span></li>
+    </ul>
+  </div>
+  <div class="annotation">
+    增殖过度 = 肿瘤；增殖不足 = 再生障碍。早期胚胎"无 G₁/G₂ 期"是特殊适应——快速产生大量细胞，体积不变。
+  </div>
+</div>
+
+<!-- ====== 总结 ====== -->
+<div class="summary-box">
+<h4>第一节核心要点回顾：</h4>
+<ul>
+<li><strong>细胞周期</strong>：G₁/S/G₂/M 四时相。R 点决定是否分裂。间期占 90% 时间</li>
+<li><strong>染色体</strong>：四种类型（中、亚中、亚端、端着丝粒）；4 种带型（Q/G/R/T/C）；多倍体（植物常见）、单倍体（动物罕见）</li>
+<li><strong>有丝分裂</strong>：6 阶段（前、前中、中、后、末、胞质分裂）。SAC 是关键检验点。3 类微管（动粒、极、星体）</li>
+<li><strong>减数分裂</strong>：DNA 复制 1 次 + 分裂 2 次 → 4 个 n 子细胞。前期Ⅰ 5 亚期（细-偶-粗-双-终），粗线期交叉互换。3 种发生时间（终/始/中）</li>
+<li><strong>调控</strong>：CDK + cyclin 驱动周期；2001 诺奖（Hartwell/Hunt/Nurse）。MPF = Cdk1 + cyclin B。p53/Rb 是关键抑癌基因</li>
+</ul>
+</div>
+
+</div>
+
+<footer><a href="index.html" style="color:var(--accent);text-decoration:none;margin-right:1rem;">← 返回目录</a>
+<p>本章基于《高中生物奥赛讲义》第五章第一节整理 · 生物集训营笔记</p>
+<p>参考：翟中和《细胞生物学》第 4 版 · Alberts《Molecular Biology of the Cell》7e · Hartwell/Hunt/Nurse 2001 诺奖</p>
+</footer>
+
+</body>
+</html>

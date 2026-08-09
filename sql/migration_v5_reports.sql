@@ -1,0 +1,71 @@
+-- ============================================================
+-- BioQuest Migration v5: 社区帖子举报功能
+-- 创建 community_reports 表，允许用户举报帖子，管理员在后台查看
+-- ============================================================
+
+-- 举报表
+CREATE TABLE IF NOT EXISTS community_reports (
+  id TEXT PRIMARY KEY DEFAULT gen_random_uuid()::text,
+  post_id TEXT NOT NULL REFERENCES community_posts(id) ON DELETE CASCADE,
+  reporter_id UUID NOT NULL REFERENCES auth.users(id) ON DELETE CASCADE,
+  reason TEXT DEFAULT '',
+  status TEXT DEFAULT 'pending', -- pending / dismissed / resolved
+  created_at TIMESTAMPTZ DEFAULT now(),
+  UNIQUE(post_id, reporter_id) -- 每个用户对同一帖子只能举报一次
+);
+
+-- 索引
+CREATE INDEX IF NOT EXISTS idx_reports_post ON community_reports(post_id);
+CREATE INDEX IF NOT EXISTS idx_reports_status ON community_reports(status);
+CREATE INDEX IF NOT EXISTS idx_reports_created ON community_reports(created_at DESC);
+
+-- RLS 策略
+ALTER TABLE community_reports ENABLE ROW LEVEL SECURITY;
+
+-- 认证用户可以提交举报（INSERT）
+DROP POLICY IF EXISTS "reports_insert" ON community_reports;
+CREATE POLICY "reports_insert" ON community_reports
+  FOR INSERT TO authenticated
+  WITH CHECK (auth.uid() = reporter_id);
+
+-- 用户可以查看自己的举报（SELECT）
+DROP POLICY IF EXISTS "reports_select_own" ON community_reports;
+CREATE POLICY "reports_select_own" ON community_reports
+  FOR SELECT TO authenticated
+  USING (auth.uid() = reporter_id);
+
+-- 管理员可以查看所有举报
+DROP POLICY IF EXISTS "reports_select_admin" ON community_reports;
+CREATE POLICY "reports_select_admin" ON community_reports
+  FOR SELECT TO authenticated
+  USING (
+    EXISTS (
+      SELECT 1 FROM profiles
+      WHERE profiles.id = auth.uid()
+      AND profiles.user_group = 'admin'
+    )
+  );
+
+-- 管理员可以更新举报状态（dismiss/resolve）
+DROP POLICY IF EXISTS "reports_update_admin" ON community_reports;
+CREATE POLICY "reports_update_admin" ON community_reports
+  FOR UPDATE TO authenticated
+  USING (
+    EXISTS (
+      SELECT 1 FROM profiles
+      WHERE profiles.id = auth.uid()
+      AND profiles.user_group = 'admin'
+    )
+  );
+
+-- 管理员可以删除举报
+DROP POLICY IF EXISTS "reports_delete_admin" ON community_reports;
+CREATE POLICY "reports_delete_admin" ON community_reports
+  FOR DELETE TO authenticated
+  USING (
+    EXISTS (
+      SELECT 1 FROM profiles
+      WHERE profiles.id = auth.uid()
+      AND profiles.user_group = 'admin'
+    )
+  );

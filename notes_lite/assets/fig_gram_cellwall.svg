@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 560" style="font-family: sans-serif;">
+  <rect x="0" y="0" width="880" height="560" fill="#fdfbf7"/>
+  <text x="440" y="28" text-anchor="middle" font-size="18" font-weight="700" fill="#2c2416">革兰氏阳性菌 vs 阴性菌 细胞壁结构对比</text>
+
+  <!-- ====== 左侧 G+ ====== -->
+  <text x="200" y="60" text-anchor="middle" font-size="16" font-weight="700" fill="#4a7c3a">革兰氏阳性菌(G&#8314;)</text>
+  <text x="200" y="78" text-anchor="middle" font-size="11" fill="#4a7c3a">紫紫色(结晶紫保留)</text>
+
+  <!-- G+ 细胞壁(厚肽聚糖) -->
+  <rect x="80" y="90" width="240" height="180" fill="#fff8e7" stroke="#8b4513" stroke-width="2"/>
+  <!-- 肽聚糖厚层(多层条纹) -->
+  <rect x="95" y="105" width="210" height="120" fill="#e8c84a" opacity="0.6" stroke="#8b4513"/>
+  <line x1="95" y1="120" x2="305" y2="120" stroke="#8b4513" stroke-width="0.8"/>
+  <line x1="95" y1="135" x2="305" y2="135" stroke="#8b4513" stroke-width="0.8"/>
+  <line x1="95" y1="150" x2="305" y2="150" stroke="#8b4513" stroke-width="0.8"/>
+  <line x1="95" y1="165" x2="305" y2="165" stroke="#8b4513" stroke-width="0.8"/>
+  <line x1="95" y1="180" x2="305" y2="180" stroke="#8b4513" stroke-width="0.8"/>
+  <line x1="95" y1="195" x2="305" y2="195" stroke="#8b4513" stroke-width="0.8"/>
+  <line x1="95" y1="210" x2="305" y2="210" stroke="#8b4513" stroke-width="0.8"/>
+  <text x="200" y="160" text-anchor="middle" font-size="13" font-weight="700" fill="#2c2416">肽聚糖(厚)</text>
+  <text x="200" y="178" text-anchor="middle" font-size="10" fill="#2c2416">20-80nm,多层,占90%</text>
+
+  <!-- 磷壁酸(竖线穿插) -->
+  <line x1="130" y1="105" x2="130" y2="225" stroke="#c0392b" stroke-width="2"/>
+  <line x1="170" y1="105" x2="170" y2="225" stroke="#c0392b" stroke-width="2"/>
+  <line x1="230" y1="105" x2="230" y2="225" stroke="#c0392b" stroke-width="2"/>
+  <line x1="270" y1="105" x2="270" y2="225" stroke="#c0392b" stroke-width="2"/>
+
+  <!-- 细胞膜 -->
+  <rect x="95" y="232" width="210" height="20" fill="#f0f7f4" stroke="#4a7c3a" stroke-width="1.5"/>
+  <text x="200" y="246" text-anchor="middle" font-size="9" fill="#4a7c3a">细胞膜</text>
+
+  <!-- G+ 标注 -->
+  <line x1="130" y1="115" x2="60" y2="100" stroke="#7a6e5e" stroke-width="1"/>
+  <text x="10" y="95" font-size="10" fill="#c0392b" font-weight="700">磷壁酸</text>
+  <text x="10" y="108" font-size="10" fill="#7a6e5e">teichoic acid</text>
+  <text x="10" y="120" font-size="10" fill="#7a6e5e">抗原性,黏附</text>
+
+  <line x1="95" y1="200" x2="30" y2="200" stroke="#7a6e5e" stroke-width="1"/>
+  <text x="10" y="225" font-size="10" fill="#8b4513" font-weight="700">肽聚糖</text>
+  <text x="10" y="238" font-size="10" fill="#7a6e5e">NAM-NAG</text>
+  <text x="10" y="250" font-size="10" fill="#7a6e5e">+四肽交联</text>
+
+  <text x="200" y="280" text-anchor="middle" font-size="10" fill="#2c2416">↓ 细胞质</text>
+
+  <!-- ====== 右侧 G- ====== -->
+  <text x="660" y="60" text-anchor="middle" font-size="16" font-weight="700" fill="#c0392b">革兰氏阴性菌(G&#8315;)</text>
+  <text x="660" y="78" text-anchor="middle" font-size="11" fill="#c0392b">红色(沙黄复染)</text>
+
+  <!-- G- 外膜 -->
+  <rect x="540" y="90" width="240" height="180" fill="#fff8e7" stroke="#8b4513" stroke-width="2"/>
+  <!-- 外膜(脂质双层+LPS) -->
+  <rect x="555" y="100" width="210" height="34" fill="#d6ccc0" stroke="#2c2416" stroke-width="1"/>
+  <!-- LPS(外膜外侧) -->
+  <rect x="555" y="94" width="210" height="8" fill="#c0392b" opacity="0.7"/>
+  <text x="660" y="120" text-anchor="middle" font-size="10" fill="#2c2416">外膜(磷脂+LPS)</text>
+
+  <!-- 周质空间(含薄肽聚糖) -->
+  <rect x="555" y="140" width="210" height="50" fill="#fff3cd" opacity="0.5" stroke="#8b4513"/>
+  <rect x="555" y="155" width="210" height="18" fill="#e8c84a" opacity="0.6" stroke="#8b4513"/>
+  <text x="660" y="168" text-anchor="middle" font-size="9" fill="#2c2416">肽聚糖(薄,单层)</text>
+  <text x="660" y="146" text-anchor="middle" font-size="10" fill="#7a6e5e">周质空间</text>
+  <text x="660" y="194" text-anchor="middle" font-size="10" fill="#7a6e5e">7-8nm,占10%</text>
+
+  <!-- 细胞膜 -->
+  <rect x="555" y="196" width="210" height="22" fill="#f0f7f4" stroke="#4a7c3a" stroke-width="1.5"/>
+  <text x="660" y="211" text-anchor="middle" font-size="9" fill="#4a7c3a">细胞膜</text>
+
+  <!-- G- 标注 -->
+  <line x1="555" y1="98" x2="500" y2="80" stroke="#7a6e5e" stroke-width="1"/>
+  <text x="430" y="76" font-size="10" fill="#c0392b" font-weight="700">LPS脂多糖</text>
+  <text x="430" y="88" font-size="10" fill="#7a6e5e">=类脂A(内毒素)</text>
+  <text x="430" y="100" font-size="10" fill="#7a6e5e">+核心多糖+O抗原</text>
+
+  <line x1="555" y1="170" x2="500" y2="165" stroke="#7a6e5e" stroke-width="1"/>
+  <text x="430" y="160" font-size="10" fill="#8b4513" font-weight="700">肽聚糖(薄)</text>
+  <text x="430" y="172" font-size="10" fill="#7a6e5e">单层,交联度低</text>
+
+  <line x1="555" y1="145" x2="500" y2="135" stroke="#7a6e5e" stroke-width="1"/>
+  <text x="430" y="130" font-size="10" fill="#2c2416" font-weight="700">周质空间</text>
+  <text x="430" y="142" font-size="10" fill="#7a6e5e">水解酶,结合蛋白</text>
+
+  <line x1="555" y1="205" x2="500" y2="215" stroke="#7a6e5e" stroke-width="1"/>
+  <text x="430" y="210" font-size="10" fill="#4a7c3a" font-weight="700">外膜孔蛋白</text>
+  <text x="430" y="222" font-size="10" fill="#7a6e5e">porin,物质通道</text>
+
+  <text x="660" y="280" text-anchor="middle" font-size="10" fill="#2c2416">↓ 细胞质</text>
+
+  <!-- 中间分隔 -->
+  <line x1="410" y1="50" x2="410" y2="300" stroke="#d6ccc0" stroke-width="1.5" stroke-dasharray="4,4"/>
+
+  <!-- ====== 底部对比表 ====== -->
+  <rect x="20" y="305" width="840" height="240" rx="6" fill="#fff8e7" stroke="#d6ccc0"/>
+  <text x="440" y="328" text-anchor="middle" font-size="13" font-weight="700" fill="#c0392b">G&#8314; 与 G&#8315; 细胞壁对比</text>
+  <line x1="30" y1="338" x2="850" y2="338" stroke="#d6ccc0"/>
+  <text x="180" y="358" text-anchor="middle" font-size="11" font-weight="700" fill="#4a7c3a">特征</text>
+  <text x="430" y="358" text-anchor="middle" font-size="11" font-weight="700" fill="#4a7c3a">革兰氏阳性(G&#8314;)</text>
+  <text x="680" y="358" text-anchor="middle" font-size="11" font-weight="700" fill="#c0392b">革兰氏阴性(G&#8315;)</text>
+  <line x1="30" y1="366" x2="850" y2="366" stroke="#d6ccc0"/>
+
+  <text x="40" y="384" font-size="10" fill="#2c2416" font-weight="600">肽聚糖厚度</text>
+  <text x="430" y="384" text-anchor="middle" font-size="10" fill="#4a7c3a">厚(20-80nm,多层,占90%)</text>
+  <text x="680" y="384" text-anchor="middle" font-size="10" fill="#c0392b">薄(7-8nm,1-2层,占10%)</text>
+
+  <text x="40" y="404" font-size="10" fill="#2c2416" font-weight="600">外膜</text>
+  <text x="430" y="404" text-anchor="middle" font-size="10" fill="#4a7c3a">无</text>
+  <text x="680" y="404" text-anchor="middle" font-size="10" fill="#c0392b">有(磷脂+LPS)</text>
+
+  <text x="40" y="424" font-size="10" fill="#2c2416" font-weight="600">脂多糖LPS</text>
+  <text x="430" y="424" text-anchor="middle" font-size="10" fill="#4a7c3a">无</text>
+  <text x="680" y="424" text-anchor="middle" font-size="10" fill="#c0392b">有(内毒素,O抗原)</text>
+
+  <text x="40" y="444" font-size="10" fill="#2c2416" font-weight="600">磷壁酸</text>
+  <text x="430" y="444" text-anchor="middle" font-size="10" fill="#4a7c3a">有(壁磷壁酸+膜磷壁酸)</text>
+  <text x="680" y="444" text-anchor="middle" font-size="10" fill="#c0392b">无</text>
+
+  <text x="40" y="464" font-size="10" fill="#2c2416" font-weight="600">周质空间</text>
+  <text x="430" y="464" text-anchor="middle" font-size="10" fill="#4a7c3a">窄/不明显</text>
+  <text x="680" y="464" text-anchor="middle" font-size="10" fill="#c0392b">明显(含多种酶)</text>
+
+  <text x="40" y="484" font-size="10" fill="#2c2416" font-weight="600">革兰染色</text>
+  <text x="430" y="484" text-anchor="middle" font-size="10" fill="#4a7c3a">蓝紫色(保留结晶紫)</text>
+  <text x="680" y="484" text-anchor="middle" font-size="10" fill="#c0392b">红色(脱色后沙黄复染)</text>
+
+  <text x="40" y="504" font-size="10" fill="#2c2416" font-weight="600">对抗生素敏感</text>
+  <text x="430" y="504" text-anchor="middle" font-size="10" fill="#4a7c3a">青霉素(抑制肽聚糖合成)</text>
+  <text x="680" y="504" text-anchor="middle" font-size="10" fill="#c0392b">链霉素/红霉素(针对核糖体)</text>
+
+  <text x="40" y="524" font-size="10" fill="#2c2416" font-weight="600">举例</text>
+  <text x="430" y="524" text-anchor="middle" font-size="10" fill="#4a7c3a">葡萄球菌,芽孢杆菌,链球菌</text>
+  <text x="680" y="524" text-anchor="middle" font-size="10" fill="#c0392b">大肠杆菌,沙门氏菌,螺菌</text>
+</svg>

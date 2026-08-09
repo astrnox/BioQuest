@@ -1,0 +1,36 @@
+{
+  "id": "hg19",
+  "name": "Human (GRCh37/hg19)",
+  "chromOrder": [
+    "chr1","chr2","chr3","chr4","chr5","chr6","chr7","chr8","chr9","chr10",
+    "chr11","chr12","chr13","chr14","chr15","chr16","chr17","chr18","chr19","chr20",
+    "chr21","chr22","chrX","chrY","chrM"
+  ],
+  "chromosomes": [
+    {"name": "chr1", "bpLength": 249250621},
+    {"name": "chr2", "bpLength": 243199373},
+    {"name": "chr3", "bpLength": 198022430},
+    {"name": "chr4", "bpLength": 191154276},
+    {"name": "chr5", "bpLength": 180915260},
+    {"name": "chr6", "bpLength": 171115067},
+    {"name": "chr7", "bpLength": 159138663},
+    {"name": "chr8", "bpLength": 146364022},
+    {"name": "chr9", "bpLength": 141213431},
+    {"name": "chr10","bpLength": 135534747},
+    {"name": "chr11","bpLength": 135006516},
+    {"name": "chr12","bpLength": 133851895},
+    {"name": "chr13","bpLength": 115169878},
+    {"name": "chr14","bpLength": 107349540},
+    {"name": "chr15","bpLength": 102531392},
+    {"name": "chr16","bpLength":  90354753},
+    {"name": "chr17","bpLength":  81195210},
+    {"name": "chr18","bpLength":  78077248},
+    {"name": "chr19","bpLength":  59128983},
+    {"name": "chr20","bpLength":  63025520},
+    {"name": "chr21","bpLength":  48129895},
+    {"name": "chr22","bpLength":  51304566},
+    {"name": "chrX", "bpLength": 155270560},
+    {"name": "chrY", "bpLength":  59373566},
+    {"name": "chrM", "bpLength":     16571}
+  ]
+}

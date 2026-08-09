@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第十四章 生物系统学基础 · 第一节 生物多样性 — 生物集训营笔记</title>
+<style>
+:root {
+  --bg: #fdfbf7; --bg2: #f5f0e8; --ink: #2c2416; --muted: #7a6e5e;
+  --rule: #d6ccc0; --accent: #c0392b; --accent2: #8b4513;
+  --highlight: #fff3cd; --note-bg: #fff8e7; --note-border: #e8c84a;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: "Noto Sans CJK SC", "WenQuanYi Micro Hei", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  font-size: 16px; line-height: 1.8; color: var(--ink); background: var(--bg);
+}
+.cover { text-align: center; padding: 4rem 2rem 3rem; border-bottom: 3px double var(--rule); margin-bottom: 0; background: linear-gradient(180deg, var(--bg2) 0%, var(--bg) 100%); }
+.cover .ch-num { font-size: 1rem; color: var(--accent); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 0.3rem; }
+.cover h1 { font-size: 2.2rem; font-weight: 800; color: var(--ink); margin-bottom: 0.5rem; letter-spacing: 0.03em; }
+.cover .subtitle { font-size: 1rem; color: var(--muted); }
+.cover .meta { margin-top: 1.2rem; font-size: 0.85rem; color: var(--muted); display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
+.main-layout { max-width: 1060px; margin: 0 auto; padding: 0 1.5rem; }
+.section-header { border-bottom: 3px solid var(--accent); padding: 2rem 0 0.6rem; margin-bottom: 1.5rem; }
+.section-header .sec-num { font-size: 0.9rem; color: var(--accent); font-weight: 700; letter-spacing: 0.08em; }
+.section-header h2 { font-size: 1.6rem; font-weight: 800; color: var(--ink); margin-top: 0.15rem; }
+.topic-header { margin: 2rem 0 1rem; padding-left: 0.8rem; border-left: 4px solid var(--accent); }
+.topic-header h3 { font-size: 1.25rem; font-weight: 700; color: var(--ink); }
+.subtopic-header { margin: 1.5rem 0 0.8rem; }
+.subtopic-header h4 { font-size: 1.1rem; font-weight: 700; color: var(--accent2); }
+.note-block { display: flex; gap: 1.5rem; margin-bottom: 1.2rem; align-items: flex-start; }
+.note-content { flex: 1; padding: 0.8rem 1rem; background: var(--bg2); border-radius: 6px; border: 1px solid var(--rule); }
+.note-content p { margin-bottom: 0.5rem; }
+.note-content p:last-child { margin-bottom: 0; }
+.note-content ul, .note-content ol { padding-left: 1.5rem; margin: 0.4rem 0; }
+.note-content li { margin-bottom: 0.25rem; }
+.annotation { width: 240px; flex-shrink: 0; background: var(--note-bg); border: 1px solid var(--note-border); border-radius: 6px; padding: 0.6rem 0.8rem; font-size: 0.82rem; line-height: 1.6; color: var(--accent2); align-self: flex-start; }
+.annotation::before { content: "📝 批注"; display: block; font-size: 0.7rem; font-weight: 700; color: var(--accent); letter-spacing: 0.06em; margin-bottom: 0.3rem; text-transform: uppercase; }
+.u { text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 2px; text-underline-offset: 3px; font-weight: 600; }
+.u-double { text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 2px; text-underline-offset: 3px; text-decoration-style: double; font-weight: 700; }
+.key-point { background: var(--highlight); padding: 0.1em 0.3em; border-radius: 3px; font-weight: 600; border-bottom: 1.5px solid var(--accent); }
+.table-wrap { overflow-x: auto; overflow-y: auto; max-height: 600px; margin: 1.5rem 0; border: 1px solid var(--rule); border-radius: 6px; }
+table { width: 100%; border-collapse: collapse; font-size: 0.9rem; min-width: 800px; }
+table thead th { background: var(--accent); color: #fff; padding: 0.6rem 0.8rem; font-weight: 700; text-align: center; white-space: nowrap; }
+table tbody td { padding: 0.5rem 0.8rem; border-bottom: 1px solid var(--rule); vertical-align: top; }
+table tbody tr:nth-child(even) { background: var(--bg2); }
+table tbody tr:last-child td { border-bottom: none; }
+table tbody td:first-child { font-weight: 600; white-space: nowrap; text-align: center; background: var(--bg2); }
+figcaption { text-align: center; font-size: 0.85rem; color: var(--muted); margin-top: 0.4rem; }
+.diagram { margin: 1.2rem 0; text-align: center; }
+.diagram img { max-width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 4px; }
+.summary-box { background: linear-gradient(135deg, #fdf2f2 0%, #fef9e7 100%); border: 2px solid var(--accent); border-radius: 8px; padding: 1.2rem 1.5rem; margin: 2rem 0; }
+.summary-box h4 { color: var(--accent); font-size: 1rem; margin-bottom: 0.6rem; }
+.expand-block { background: #f0f7f4; border: 1px dashed #7cb342; border-radius: 6px; padding: 0.5rem 0.9rem; margin: 0.6rem 0 0; font-size: 0.83rem; line-height: 1.6; color: #3e6b3e; }
+.expand-block::before { content: "🔍 拓展"; display: block; font-size: 0.7rem; font-weight: 700; color: #558b2f; letter-spacing: 0.06em; margin-bottom: 0.2rem; }
+.flow-box { background: var(--bg); border: 1px solid var(--rule); border-radius: 8px; padding: 1.2rem; margin: 1.2rem 0; text-align: center; }
+.flow-box .flow-title { font-size: 0.85rem; font-weight: 700; color: var(--accent); margin-bottom: 0.8rem; }
+.flow-row { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 0.3rem; font-size: 0.85rem; }
+.flow-item { background: var(--bg2); border: 1px solid var(--rule); border-radius: 4px; padding: 0.25rem 0.6rem; white-space: nowrap; }
+.flow-arrow { color: var(--accent); font-weight: 700; font-size: 1.1rem; }
+footer { margin-top: 3rem; padding: 1.5rem; border-top: 1px solid var(--rule); text-align: center; font-size: 0.8rem; color: var(--muted); }
+@media (max-width: 768px) {
+  .cover h1 { font-size: 1.5rem; }
+  .note-block { flex-direction: column; }
+  .annotation { width: 100%; }
+  .main-layout { padding: 0 0.8rem; }
+  table { font-size: 0.78rem; min-width: 600px; }
+}
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div class="ch-num">高中生物竞赛讲义 · 集训营</div>
+  <h1>第十四章 生物系统学基础</h1>
+  <div class="subtitle">第一节 生物多样性</div>
+  <div class="meta">
+    <span>遗传多样性</span><span>物种多样性</span><span>生态系统多样性</span><span>生物保护</span>
+    <span>📅 整理日期: 2026年7月6日</span>
+  </div>
+</div>
+
+<div class="main-layout">
+
+<div class="section-header">
+  <div class="sec-num">第一节</div>
+  <h2>生物多样性</h2>
+</div>
+
+<!-- ====== 一、生物多样性的概念 ====== -->
+<div class="topic-header">
+  <h3>一、生物多样性的概念</h3>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><span class="u-double">生物多样性（biodiversity）</span>是指生物及其与环境形成的生态复合体以及与此相关的各种生态过程的总和。它包括数以百万计的动物、植物、微生物和它们所拥有的基因以及它们与生存环境形成的复杂的生态系统。</p>
+    <p>关于生物多样性的概念和内涵，生物学家和保护生物学家有着不同侧重的定义：</p>
+    <ul>
+      <li><span class="key-point">美国技术评估局 1987 年定义</span>：生物多样性是指"地球上所有生物体的多样化"，包括陆地、海洋和其他水生生态系统以及它们所构成的生态综合体。</li>
+      <li><span class="key-point">联合国《生物多样性公约》（1992）</span>：生物多样性是指"所有来源的活的生物体中的变异性，这些来源包括陆地、海洋和其他水生生态系统及其所构成的生态综合体；包括物种内、物种间和生态系统的多样性"。</li>
+      <li><span class="key-point">E. O. Wilson 1985/1988 概念</span>：生物多样性是生物与环境形成的生态复合体以及与此相关的各种生态过程的总和，强调 <span class="u">生命形式的多样化（diversity of life forms）</span>。</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    奥赛常考：<strong>Wilson 1985</strong> 提出 biodiversity 一词，作为系统学/保护生物学核心概念。
+  </div>
+</div>
+
+<div class="expand-block">
+  <strong>为什么生物多样性重要？</strong>生物多样性是人类赖以生存的物质基础：①直接价值（食物、药材、木材、纤维、燃料等）；②间接价值（生态功能：涵养水源、保持水土、调节气候、净化空气）；③潜在价值（尚未发现的未知用途）。Wilson 称之为"生物多样性是人类的生命保险"。
+</div>
+
+<!-- ====== 二、生物多样性的层次 ====== -->
+<div class="topic-header">
+  <h3>二、生物多样性的层次（四个水平）</h3>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>生物多样性通常被认为有 <span class="u-double">四个层次（levels of biodiversity）</span>：</p>
+    <ol>
+      <li><span class="key-point">遗传多样性（genetic diversity）</span>：种内基因的变化，包括种群内和种群间的遗传变异。是一个物种适应环境变化、维持长期生存的基础。</li>
+      <li><span class="key-point">物种多样性（species diversity）</span>：一定区域内物种的丰富度（species richness）和均匀度（species evenness），是生物多样性最直观的体现。</li>
+      <li><span class="key-point">生态系统多样性（ecosystem diversity）</span>：生物群落与生境类型的多样化，包括森林、草原、荒漠、湿地、海洋、淡水等不同生态系统及其生态过程。</li>
+      <li><span class="key-point">景观多样性（landscape diversity）</span>：由不同类型生态系统组成的景观在空间结构、功能机制和时间动态方面的多样化。是更高层次、空间尺度上的生物多样性。</li>
+    </ol>
+  </div>
+  <div class="annotation">
+    四层次关系：<strong>遗传 → 物种 → 生态系统 → 景观</strong>，逐级放大。前三个是 <em>生物多样性公约</em> 法定层次，景观多样性与生态系统多样性有时合并讨论。
+  </div>
+</div>
+
+<div class="flow-box">
+  <div class="flow-title">图 14-1-1　生物多样性的四个层次（由小到大）</div>
+  <div class="flow-row">
+    <span class="flow-item">遗传多样性<br><small>（基因/等位基因）</small></span>
+    <span class="flow-arrow">→</span>
+    <span class="flow-item">物种多样性<br><small>（种群/物种）</small></span>
+    <span class="flow-arrow">→</span>
+    <span class="flow-item">生态系统多样性<br><small>（群落+生境）</small></span>
+    <span class="flow-arrow">→</span>
+    <span class="flow-item">景观多样性<br><small>（空间镶嵌）</small></span>
+  </div>
+</div>
+
+<div class="diagram">
+<svg viewBox="0 0 800 380" style="width:100%;max-width:700px;margin:1rem auto;display:block;font-family:sans-serif;">
+  <rect x="0" y="0" width="800" height="380" fill="#fdfbf7" stroke="#d6ccc0" rx="8"/>
+  <text x="400" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="#2c2416">图 14-1-2　生物多样性三个核心层次（由微观到宏观）</text>
+  <!-- 遗传多样性 -->
+  <rect x="20" y="48" width="230" height="300" fill="#fff8e7" stroke="#c0392b" stroke-width="1.5" rx="6"/>
+  <text x="135" y="73" text-anchor="middle" font-size="14" font-weight="700" fill="#c0392b">① 遗传多样性</text>
+  <text x="135" y="90" text-anchor="middle" font-size="11" fill="#7a6e5e">Genetic Diversity</text>
+  <path d="M 100 108 C 118 122, 152 122, 170 108 S 118 152, 100 138 S 152 168, 170 154 S 118 198, 100 184 S 152 214, 170 200" stroke="#8b4513" stroke-width="2" fill="none"/>
+  <path d="M 100 138 C 118 152, 152 152, 170 138 S 118 198, 100 184 S 152 214, 170 200 S 118 230, 100 216" stroke="#c0392b" stroke-width="2" fill="none"/>
+  <line x1="108" y1="118" x2="162" y2="118" stroke="#2c2416" stroke-width="1"/>
+  <line x1="100" y1="146" x2="170" y2="146" stroke="#2c2416" stroke-width="1"/>
+  <line x1="108" y1="176" x2="162" y2="176" stroke="#2c2416" stroke-width="1"/>
+  <line x1="100" y1="206" x2="170" y2="206" stroke="#2c2416" stroke-width="1"/>
+  <line x1="108" y1="226" x2="162" y2="226" stroke="#2c2416" stroke-width="1"/>
+  <text x="135" y="258" text-anchor="middle" font-size="11" fill="#2c2416">种内基因变异</text>
+  <text x="135" y="276" text-anchor="middle" font-size="10" fill="#7a6e5e">等位基因频率 / 基因型</text>
+  <text x="135" y="300" text-anchor="middle" font-size="10" fill="#8b4513">例：东北虎 vs 华南虎</text>
+  <text x="135" y="318" text-anchor="middle" font-size="10" fill="#8b4513">同种不同种群的遗传差异</text>
+  <text x="265" y="200" text-anchor="middle" font-size="20" fill="#c0392b" font-weight="700">→</text>
+  <!-- 物种多样性 -->
+  <rect x="285" y="48" width="230" height="300" fill="#fff8e7" stroke="#c0392b" stroke-width="1.5" rx="6"/>
+  <text x="400" y="73" text-anchor="middle" font-size="14" font-weight="700" fill="#c0392b">② 物种多样性</text>
+  <text x="400" y="90" text-anchor="middle" font-size="11" fill="#7a6e5e">Species Diversity</text>
+  <rect x="318" y="148" width="4" height="20" fill="#8b4513"/>
+  <polygon points="320,128 312,150 328,150" fill="#558b2f"/>
+  <path d="M 355 133 Q 365 126 375 133 Q 365 136 355 133 Z" fill="#c0392b"/>
+  <ellipse cx="410" cy="138" rx="12" ry="6" fill="#1565c0"/>
+  <polygon points="422,138 430,133 430,143" fill="#1565c0"/>
+  <circle cx="455" cy="133" r="4" fill="#c0392b"/><circle cx="445" cy="138" r="4" fill="#c0392b"/><circle cx="465" cy="138" r="4" fill="#c0392b"/><circle cx="455" cy="146" r="4" fill="#c0392b"/>
+  <circle cx="455" cy="138" r="3" fill="#f9a825"/>
+  <rect x="453" y="146" width="4" height="22" fill="#558b2f"/>
+  <ellipse cx="495" cy="138" rx="6" ry="3" fill="#2c2416"/>
+  <circle cx="325" cy="188" r="8" fill="#6d4c41"/>
+  <path d="M 360 183 Q 370 173 380 183 Q 375 193 365 193 Z" fill="#558b2f"/>
+  <rect x="405" y="178" width="10" height="14" fill="#8b4513" rx="2"/>
+  <path d="M 445 193 Q 450 178 455 193" stroke="#1565c0" stroke-width="1.5" fill="none"/>
+  <path d="M 460 193 Q 465 178 470 193" stroke="#1565c0" stroke-width="1.5" fill="none"/>
+  <ellipse cx="495" cy="186" rx="8" ry="4" fill="#7a6e5e"/>
+  <text x="400" y="240" text-anchor="middle" font-size="11" fill="#2c2416">丰富度 + 均匀度</text>
+  <text x="400" y="258" text-anchor="middle" font-size="10" fill="#7a6e5e">Richness &amp; Evenness</text>
+  <text x="400" y="282" text-anchor="middle" font-size="10" fill="#8b4513">例：热带雨林 &gt; 寒带针叶林</text>
+  <text x="400" y="300" text-anchor="middle" font-size="10" fill="#8b4513">约 870 万种（已描述 180 万）</text>
+  <text x="530" y="200" text-anchor="middle" font-size="20" fill="#c0392b" font-weight="700">→</text>
+  <!-- 生态系统多样性 -->
+  <rect x="550" y="48" width="230" height="300" fill="#fff8e7" stroke="#c0392b" stroke-width="1.5" rx="6"/>
+  <text x="665" y="73" text-anchor="middle" font-size="14" font-weight="700" fill="#c0392b">③ 生态系统多样性</text>
+  <text x="665" y="90" text-anchor="middle" font-size="11" fill="#7a6e5e">Ecosystem Diversity</text>
+  <rect x="572" y="153" width="3" height="15" fill="#8b4513"/>
+  <polygon points="573.5,123 565,153 582,153" fill="#558b2f"/>
+  <text x="573" y="178" font-size="9" fill="#8b4513" text-anchor="middle">森林</text>
+  <path d="M 600 153 Q 610 146 620 153 Q 630 146 640 153 L 640 163 L 600 163 Z" fill="#1565c0"/>
+  <text x="620" y="178" font-size="9" fill="#8b4513" text-anchor="middle">海洋</text>
+  <path d="M 647 163 Q 655 148 663 163 Q 670 148 677 163 Z" fill="#d4a017"/>
+  <circle cx="675" cy="146" r="5" fill="#f9a825"/>
+  <text x="662" y="178" font-size="9" fill="#8b4513" text-anchor="middle">荒漠</text>
+  <line x1="690" y1="163" x2="690" y2="153" stroke="#558b2f" stroke-width="1.5"/>
+  <line x1="695" y1="163" x2="695" y2="150" stroke="#558b2f" stroke-width="1.5"/>
+  <line x1="700" y1="163" x2="700" y2="154" stroke="#558b2f" stroke-width="1.5"/>
+  <line x1="705" y1="163" x2="705" y2="151" stroke="#558b2f" stroke-width="1.5"/>
+  <line x1="710" y1="163" x2="710" y2="153" stroke="#558b2f" stroke-width="1.5"/>
+  <text x="700" y="178" font-size="9" fill="#8b4513" text-anchor="middle">草原</text>
+  <path d="M 725 163 Q 735 153 745 163 Q 750 153 758 163" fill="none" stroke="#1565c0" stroke-width="1.5"/>
+  <rect x="730" y="148" width="3" height="15" fill="#8b4513"/>
+  <text x="742" y="178" font-size="9" fill="#8b4513" text-anchor="middle">湿地</text>
+  <text x="665" y="240" text-anchor="middle" font-size="11" fill="#2c2416">群落 + 生境类型多样化</text>
+  <text x="665" y="258" text-anchor="middle" font-size="10" fill="#7a6e5e">Communities + Habitats</text>
+  <text x="665" y="282" text-anchor="middle" font-size="10" fill="#8b4513">森林/草原/湿地/海洋</text>
+  <text x="665" y="300" text-anchor="middle" font-size="10" fill="#8b4513">14 类主要陆地生物群系</text>
+  <text x="400" y="362" text-anchor="middle" font-size="10" fill="#7a6e5e">三个层次逐级放大；《生物多样性公约》法定三层次；景观多样性为第四层次</text>
+</svg>
+<figcaption>图 14-1-2　生物多样性三个核心层次：遗传多样性（种内基因变异）→ 物种多样性（丰富度+均匀度）→ 生态系统多样性（群落+生境）</figcaption>
+</div>
+
+<!-- ====== 三、生物多样性的现状与威胁 ====== -->
+<div class="topic-header">
+  <h3>三、生物多样性的现状与威胁</h3>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><span class="u-double">生物多样性正以前所未有的速度丧失</span>。E. O. Wilson 估算：当前物种灭绝速率是自然灭绝速率的 <span class="key-point">1 000～10 000 倍</span>，是地球生命史上的"第六次大灭绝"。</p>
+    <p>主要威胁（<span class="u">HIPPO</span> 五大要素，国际自然保护联盟 IUCN 与 WRI 1992 报告）：</p>
+    <ul>
+      <li><span class="key-point">H - 栖息地破坏（Habitat loss）</span>：森林砍伐、湿地排干、城市化。最主要的威胁，约占 70% 以上。</li>
+      <li><span class="key-point">I - 入侵物种（Invasive species）</span>：外来种挤占本地种生态位，导致本地物种灭绝（如澳洲兔灾）。</li>
+      <li><span class="key-point">P - 污染（Pollution）</span>：化学农药、重金属、塑料、温室气体、氮磷富营养化。</li>
+      <li><span class="key-point">P - 人口增长（Population growth）</span>：人类对资源的需求压力，是前四项的根源。</li>
+      <li><span class="key-point">O - 过度利用（Over-exploitation）</span>：乱捕滥猎、过度捕捞、非法野生动物贸易。</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    WRI 1992（世界资源研究所报告）首次提出"生物多样性正在以惊人速度丧失"的警告。Wilson 1985/1988 的 biodiversity 概念是该领域奠基。
+  </div>
+</div>
+
+<div class="diagram">
+<svg viewBox="0 0 800 360" style="width:100%;max-width:700px;margin:1rem auto;display:block;font-family:sans-serif;">
+  <rect x="0" y="0" width="800" height="360" fill="#fdfbf7" stroke="#d6ccc0" rx="8"/>
+  <text x="400" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="#2c2416">图 14-1-3　生物多样性五大威胁——HIPPO（IUCN / WRI 1992）</text>
+  <rect x="20" y="50" width="148" height="200" fill="#fff8e7" stroke="#c0392b" stroke-width="1.5" rx="6"/>
+  <text x="94" y="100" text-anchor="middle" font-size="42" font-weight="800" fill="#c0392b">H</text>
+  <text x="94" y="125" text-anchor="middle" font-size="12" font-weight="700" fill="#2c2416">栖息地破坏</text>
+  <text x="94" y="142" text-anchor="middle" font-size="10" fill="#7a6e5e">Habitat loss</text>
+  <text x="94" y="168" text-anchor="middle" font-size="10" fill="#8b4513">森林砍伐</text>
+  <text x="94" y="184" text-anchor="middle" font-size="10" fill="#8b4513">湿地排干</text>
+  <text x="94" y="200" text-anchor="middle" font-size="10" fill="#8b4513">城市化扩张</text>
+  <text x="94" y="232" text-anchor="middle" font-size="11" font-weight="700" fill="#c0392b">最主要（≥70%）</text>
+  <rect x="178" y="50" width="148" height="200" fill="#fff8e7" stroke="#c0392b" stroke-width="1.5" rx="6"/>
+  <text x="252" y="100" text-anchor="middle" font-size="42" font-weight="800" fill="#c0392b">I</text>
+  <text x="252" y="125" text-anchor="middle" font-size="12" font-weight="700" fill="#2c2416">入侵物种</text>
+  <text x="252" y="142" text-anchor="middle" font-size="10" fill="#7a6e5e">Invasive species</text>
+  <text x="252" y="168" text-anchor="middle" font-size="10" fill="#8b4513">挤占生态位</text>
+  <text x="252" y="184" text-anchor="middle" font-size="10" fill="#8b4513">澳洲兔灾</text>
+  <text x="252" y="200" text-anchor="middle" font-size="10" fill="#8b4513">水葫芦泛滥</text>
+  <text x="252" y="232" text-anchor="middle" font-size="11" font-weight="700" fill="#c0392b">岛屿尤甚</text>
+  <rect x="336" y="50" width="148" height="200" fill="#fff8e7" stroke="#c0392b" stroke-width="1.5" rx="6"/>
+  <text x="410" y="100" text-anchor="middle" font-size="42" font-weight="800" fill="#c0392b">P</text>
+  <text x="410" y="125" text-anchor="middle" font-size="12" font-weight="700" fill="#2c2416">污染</text>
+  <text x="410" y="142" text-anchor="middle" font-size="10" fill="#7a6e5e">Pollution</text>
+  <text x="410" y="168" text-anchor="middle" font-size="10" fill="#8b4513">农药 / 重金属</text>
+  <text x="410" y="184" text-anchor="middle" font-size="10" fill="#8b4513">塑料 / 富营养化</text>
+  <text x="410" y="200" text-anchor="middle" font-size="10" fill="#8b4513">温室气体</text>
+  <text x="410" y="232" text-anchor="middle" font-size="11" font-weight="700" fill="#c0392b">水体酸化</text>
+  <rect x="494" y="50" width="148" height="200" fill="#fff8e7" stroke="#c0392b" stroke-width="1.5" rx="6"/>
+  <text x="568" y="100" text-anchor="middle" font-size="42" font-weight="800" fill="#c0392b">P</text>
+  <text x="568" y="125" text-anchor="middle" font-size="12" font-weight="700" fill="#2c2416">人口增长</text>
+  <text x="568" y="142" text-anchor="middle" font-size="10" fill="#7a6e5e">Population growth</text>
+  <text x="568" y="168" text-anchor="middle" font-size="10" fill="#8b4513">资源需求压力</text>
+  <text x="568" y="184" text-anchor="middle" font-size="10" fill="#8b4513">耕地扩张</text>
+  <text x="568" y="200" text-anchor="middle" font-size="10" fill="#8b4513">消费增长</text>
+  <text x="568" y="232" text-anchor="middle" font-size="11" font-weight="700" fill="#c0392b">威胁根源</text>
+  <rect x="652" y="50" width="128" height="200" fill="#fff8e7" stroke="#c0392b" stroke-width="1.5" rx="6"/>
+  <text x="716" y="100" text-anchor="middle" font-size="42" font-weight="800" fill="#c0392b">O</text>
+  <text x="716" y="125" text-anchor="middle" font-size="12" font-weight="700" fill="#2c2416">过度利用</text>
+  <text x="716" y="142" text-anchor="middle" font-size="10" fill="#7a6e5e">Over-exploitation</text>
+  <text x="716" y="168" text-anchor="middle" font-size="10" fill="#8b4513">乱捕滥猎</text>
+  <text x="716" y="184" text-anchor="middle" font-size="10" fill="#8b4513">过度捕捞</text>
+  <text x="716" y="200" text-anchor="middle" font-size="10" fill="#8b4513">非法野贸</text>
+  <text x="716" y="232" text-anchor="middle" font-size="11" font-weight="700" fill="#c0392b">物种枯竭</text>
+  <rect x="20" y="265" width="760" height="80" fill="#fff8e7" stroke="#e8c84a" rx="4"/>
+  <text x="400" y="286" text-anchor="middle" font-size="11" fill="#8b4513">口诀：H-I-P-P-O 五大威胁，人口增长（第二个 P）是其余四项的根源。</text>
+  <text x="400" y="306" text-anchor="middle" font-size="11" fill="#8b4513">Wilson 估算：当前物种灭绝速率是自然灭绝速率的 1 000～10 000 倍 → "第六次大灭绝"。</text>
+  <text x="400" y="326" text-anchor="middle" font-size="11" fill="#8b4513">新型威胁：气候变化（升温、珊瑚白化、物候错位）加剧上述影响。</text>
+</svg>
+<figcaption>图 14-1-3　生物多样性五大威胁 HIPPO：栖息地破坏（H，最主要）、入侵物种（I）、污染（P）、人口增长（P，根源）、过度利用（O）</figcaption>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>气候变化作为新型威胁正在加剧上述影响：</p>
+    <ul>
+      <li>温度上升 1.5–2℃，全球物种分布区平均上移数百米。</li>
+      <li>珊瑚白化（≥2℃ 时 70–90% 珊瑚礁将消失）。</li>
+      <li>物候错位：迁徙鸟类与昆虫繁殖期不同步。</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    IPCC 报告：若全球升温 >2℃，约 20–30% 的物种面临灭绝风险。
+  </div>
+</div>
+
+<div class="diagram">
+<svg viewBox="0 0 1060 420" style="width:100%;max-width:700px;margin:1rem auto;display:block;font-family:sans-serif;">
+  <rect x="0" y="0" width="800" height="420" fill="#fdfbf7" stroke="#d6ccc0" rx="8"/>
+  <text x="400" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="#2c2416">图 14-1-4　全球生物多样性热点地区（Biodiversity Hotspots）</text>
+  <path d="M 80 110 Q 60 130 70 170 Q 90 190 130 185 Q 160 175 165 150 Q 160 120 140 105 Q 110 95 80 110 Z" fill="#e8dcc8" stroke="#d6ccc0"/>
+  <path d="M 170 210 Q 155 230 160 280 Q 170 320 195 330 Q 215 320 220 280 Q 215 230 200 210 Q 185 200 170 210 Z" fill="#e8dcc8" stroke="#d6ccc0"/>
+  <path d="M 350 110 Q 340 125 345 145 Q 360 155 385 150 Q 400 140 395 120 Q 380 105 350 110 Z" fill="#e8dcc8" stroke="#d6ccc0"/>
+  <path d="M 360 165 Q 345 185 350 230 Q 365 270 390 285 Q 410 280 420 250 Q 425 210 410 180 Q 390 160 360 165 Z" fill="#e8dcc8" stroke="#d6ccc0"/>
+  <path d="M 410 105 Q 400 130 415 165 Q 460 180 530 160 Q 560 140 555 115 Q 530 95 470 95 Q 430 90 410 105 Z" fill="#e8dcc8" stroke="#d6ccc0"/>
+  <path d="M 540 175 Q 535 185 545 195 Q 570 200 590 190 Q 600 180 590 170 Q 565 165 540 175 Z" fill="#e8dcc8" stroke="#d6ccc0"/>
+  <path d="M 580 240 Q 570 255 575 280 Q 600 290 630 280 Q 640 260 625 245 Q 600 235 580 240 Z" fill="#e8dcc8" stroke="#d6ccc0"/>
+  <circle cx="175" cy="265" r="5" fill="#c0392b"/>
+  <text x="120" y="268" font-size="10" fill="#2c2416">热带安第斯</text>
+  <circle cx="210" cy="295" r="5" fill="#c0392b"/>
+  <text x="213" y="300" font-size="10" fill="#2c2416">大西洋森林</text>
+  <circle cx="140" cy="195" r="5" fill="#c0392b"/>
+  <text x="85" y="198" font-size="10" fill="#2c2416">中美洲</text>
+  <circle cx="175" cy="183" r="4" fill="#c0392b"/>
+  <text x="178" y="180" font-size="9" fill="#2c2416">加勒比</text>
+  <circle cx="430" cy="255" r="5" fill="#c0392b"/>
+  <text x="435" y="258" font-size="10" fill="#2c2416">马达加斯加</text>
+  <circle cx="395" cy="285" r="5" fill="#c0392b"/>
+  <text x="400" y="300" font-size="10" fill="#2c2416">好望角</text>
+  <circle cx="420" cy="205" r="4" fill="#c0392b"/>
+  <text x="425" y="208" font-size="9" fill="#2c2416">非洲之角</text>
+  <circle cx="365" cy="140" r="5" fill="#c0392b"/>
+  <text x="298" y="95" font-size="10" fill="#2c2416">地中海盆地</text>
+  <circle cx="400" cy="120" r="4" fill="#c0392b"/>
+  <text x="403" y="115" font-size="9" fill="#2c2416">高加索</text>
+  <circle cx="565" cy="188" r="5" fill="#c0392b"/>
+  <text x="570" y="191" font-size="10" fill="#2c2416">巽他群岛</text>
+  <circle cx="510" cy="175" r="5" fill="#c0392b"/>
+  <text x="470" y="172" font-size="10" fill="#2c2416">印缅地区</text>
+  <circle cx="475" cy="150" r="5" fill="#c0392b"/>
+  <text x="438" y="143" font-size="10" fill="#2c2416">中国西南</text>
+  <circle cx="588" cy="185" r="4" fill="#c0392b"/>
+  <text x="592" y="180" font-size="9" fill="#2c2416">菲律宾</text>
+  <circle cx="555" cy="128" r="4" fill="#c0392b"/>
+  <text x="560" y="125" font-size="9" fill="#2c2416">日本</text>
+  <circle cx="650" cy="295" r="4" fill="#c0392b"/>
+  <text x="655" y="300" font-size="10" fill="#2c2416">新西兰</text>
+  <circle cx="480" cy="195" r="4" fill="#c0392b"/>
+  <text x="483" y="200" font-size="9" fill="#2c2416">西高止</text>
+  <circle cx="60" cy="350" r="5" fill="#c0392b"/>
+  <text x="72" y="354" font-size="11" fill="#2c2416">生物多样性热点（Hotspot）</text>
+  <rect x="20" y="370" width="760" height="40" fill="#fff8e7" stroke="#e8c84a" rx="4"/>
+  <text x="400" y="388" text-anchor="middle" font-size="11" fill="#8b4513">热点判定标准（Myers 1988/2000, Conservation International）：</text>
+  <text x="400" y="403" text-anchor="middle" font-size="11" fill="#8b4513">① 至少含 1 500 种特有维管植物；② 原始植被已损失 ≥70%。全球共 36 个热点地区，覆盖 2.3% 陆地，却栖息 50%+ 特有植物物种。</text>
+</svg>
+<figcaption>图 14-1-4　全球 36 个生物多样性热点地区分布（红点标注主要热点）：热带安第斯、马达加斯加、中国西南、巽他群岛等</figcaption>
+</div>
+
+<!-- ====== 四、濒危物种与保护级别 ====== -->
+<div class="topic-header">
+  <h3>四、濒危物种与保护级别</h3>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><span class="u-double">IUCN 红色名录（Red List）濒危等级</span>是国际公认的物种受威胁程度评估标准，共 9 级：</p>
+    <ul>
+      <li><span class="key-point">LC（Least Concern，无危）</span>：生存状况良好。</li>
+      <li><span class="key-point">NT（Near Threatened，近危）</span>：接近濒危但尚未达到标准。</li>
+      <li><span class="key-point">VU（Vulnerable，易危）</span>：中期内面临灭绝风险。</li>
+      <li><span class="key-point">EN（Endangered，濒危）</span>：野生种群面临很高灭绝风险。</li>
+      <li><span class="key-point">CR（Critically Endangered，极危）</span>：面临极其严重的灭绝风险。</li>
+      <li><span class="key-point">EW（Extinct in the Wild，野外灭绝）</span>：仅存人工饲养个体。</li>
+      <li><span class="key-point">EX（Extinct，绝灭）</span>：最后一个个体已死亡。</li>
+      <li><span class="key-point">DD（Data Deficient，数据缺乏）</span>：信息不足无法评估。</li>
+      <li><span class="key-point">NE（Not Evaluated，未评估）</span>：尚未按标准评估。</li>
+    </ul>
+    <p>中国特有濒危物种举例：</p>
+    <ul>
+      <li>大熊猫（<em>Ailuropoda melanoleuca</em>）——EN，2016 年降为 VU（栖息地改善成效）</li>
+      <li>扬子鳄（<em>Alligator sinensis</em>）——CR</li>
+      <li>珙桐（<em>Davidia involucrata</em>）——EN，植物活化石</li>
+      <li>银杉（<em>Cathaya argyrophylla</em>）——EN，植物活化石</li>
+      <li>中华鲟（<em>Acipenser sinensis</em>）——CR</li>
+      <li>白鱀豚（<em>Lipotes vexillifer</em>）——CR，2007 年功能性灭绝</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    奥赛常考：<strong>VU / EN / CR</strong> 顺序是受威胁程度递增。IUCN 9 级体系中无危 LC 是 baseline。
+  </div>
+</div>
+
+<!-- ====== 五、生物多样性的保护 ====== -->
+<div class="topic-header">
+  <h3>五、生物多样性的保护</h3>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>保护策略分为 <span class="u-double">in-situ（就地保护）</span> 和 <span class="u-double">ex-situ（迁地保护）</span> 两大类：</p>
+    <ul>
+      <li><span class="key-point">就地保护（in-situ conservation）</span>：在物种原生地建立自然保护区（nature reserve）、国家公园，是最有效的保护方式。我国自 1956 年建立首个自然保护区（鼎湖山）以来，已建成 2700+ 处。</li>
+      <li><span class="key-point">迁地保护（ex-situ conservation）</span>：把物种迁移到动物园、植物园、种子库、基因库等设施内。著名的有英国邱园 Kew Gardens、中国国家基因库（深圳华大，2016 启用）、挪威斯瓦尔巴全球种子库（Svalbard Seed Vault）。</li>
+      <li><span class="key-point">立法保护</span>：《中华人民共和国野生动物保护法》（1989）、《中华人民共和国自然保护区条例》、CITES 公约、《生物多样性公约》（1992 签于里约，2010 名古屋议定书，2022 COP15 达成"昆明-蒙特利尔全球生物多样性框架"目标：30×30 即 2030 年前保护 30% 的陆地和海洋）。</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    <strong>30×30 目标</strong>（Half-Earth 概念延伸，源自 E. O. Wilson）：到 2030 年将全球 30% 的陆地与海洋纳入有效保护。COP15 通过。
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>关键概念：</p>
+    <ul>
+      <li><span class="key-point">关键物种（keystone species）</span>：在生态系统中对维持群落结构与功能起决定性作用的物种（如海獭、海獭对海胆、海胆对海带林）。</li>
+      <li><span class="key-point">伞护种（umbrella species）</span>：保护该物种能同时保护同域分布的许多其他物种，常用于确定保护区范围（如大熊猫作为我国西南山地森林的伞护种）。</li>
+      <li><span class="key-point">指示种（indicator species）</span>：对环境变化敏感的物种，用于监测生态系统健康（如地衣对 SO₂ 敏感，蛙类对水质敏感）。</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    关键物种 vs 优势种：优势种是数量最多的物种；关键物种可能数量不多但影响力巨大。两者常被混淆，注意区别。
+  </div>
+</div>
+
+<!-- ====== 六、生物多样性的价值 ====== -->
+<div class="topic-header">
+  <h3>六、生物多样性的价值</h3>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>按 McNeely 1988 / Costanza 1997 的分类，生物多样性的价值可分为：</p>
+    <ol>
+      <li><span class="key-point">直接使用价值（direct use value）</span>：生物资源的直接利用，如食物、药材、木材、纤维、燃料、观赏、游憩。</li>
+      <li><span class="key-point">间接使用价值（indirect use value）</span>：生态系统的服务功能，如水土保持、气候调节、传粉、种子扩散、废弃物分解、营养循环、水源涵养等。Costanza 1997 估算全球生态系统服务年价值约 33 万亿美元（远超当时全球 GDP）。</li>
+      <li><span class="key-point">潜在使用价值（potential use value）</span>：尚未被发现或利用的价值，亦称"选择价值"。</li>
+      <li><span class="key-point">存在价值（existence value）</span>：与任何使用无关、仅因物种存在而产生的伦理、美学、哲学等价值。</li>
+    </ol>
+  </div>
+  <div class="annotation">
+    Costanza 等 1997 年 <em>Nature</em> 论文：全球生态系统服务年价值 33 万亿美元，是当时全球 GDP 的 1.8 倍。
+  </div>
+</div>
+
+<div class="summary-box">
+  <h4>本节核心要点</h4>
+  <ul>
+    <li><strong>生物多样性</strong>：生物及其与环境形成的生态复合体以及与此相关的各种生态过程的总和（Wilson 1985/1988）。</li>
+    <li><strong>四个层次</strong>：遗传多样性 → 物种多样性 → 生态系统多样性 → 景观多样性。</li>
+    <li><strong>五大威胁</strong>（HIPPO）：栖息地破坏、入侵物种、污染、人口增长、过度利用。</li>
+    <li><strong>IUCN 9 级</strong>：LC / NT / VU / EN / CR / EW / EX / DD / NE，其中 VU、EN、CR 为受威胁级别。</li>
+    <li><strong>保护策略</strong>：就地保护（最有效）+ 迁地保护（动物园/植物园/种子库）+ 立法保护。</li>
+    <li><strong>30×30 目标</strong>：2030 年前保护全球 30% 的陆地与海洋（COP15，2022）。</li>
+  </ul>
+</div>
+
+</div>
+
+<footer><a href="index.html" style="color:var(--accent);text-decoration:none;margin-right:1rem;">← 返回目录</a>
+  第十四章 生物系统学基础 · 第一节 生物多样性 · 参考高中生物奥赛讲义 · 整理日期 2026年7月6日
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,1653 @@
+/* ============================================================
+ * 每日亿题 — TikTok风格刷题界面
+ * 设计：简洁卡片 + 流畅滑动 + 自然温馨配色
+ * 配色：对齐BioQuest主色调（鼠尾草绿 + 陶土橘 + 奶油白）
+ * 响应式：移动端/平板/桌面全覆盖，支持刘海屏安全区
+ * ============================================================ */
+
+/* ----- 全屏包装器 ----- */
+#dbWrapper {
+  position: fixed;
+  inset: 0;
+  z-index: 10001;
+  background: #faf8f5;
+  overflow: hidden;
+}
+[data-theme="dark"] #dbWrapper,
+html.dark #dbWrapper {
+  background: #1a1f1c;
+}
+
+/* ----- 页面容器 ----- */
+.db-page {
+  position: absolute;
+  inset: 0;
+  height: 100vh;
+  height: 100svh;
+  height: 100dvh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  background: linear-gradient(180deg, #faf8f5 0%, #f5f0e8 100%);
+  font-family: var(--font-sans, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif);
+  z-index: 1;
+  padding-left: env(safe-area-inset-left, 0px);
+  padding-right: env(safe-area-inset-right, 0px);
+}
+[data-theme="dark"] .db-page,
+html.dark .db-page {
+  background: linear-gradient(180deg, #1a1f1c 0%, #151917 100%);
+}
+
+/* 隐藏滚动条但保留功能 */
+.db-page::-webkit-scrollbar { display: none; }
+.db-page { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* ----- 顶部固定栏 ----- */
+.db-top-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  padding-top: env(safe-area-inset-top, 0px);
+  background: rgba(250, 248, 245, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 0.5px solid rgba(196, 149, 106, 0.12);
+  will-change: transform;
+  transform: translateZ(0);
+}
+[data-theme="dark"] .db-top-bar,
+html.dark .db-top-bar {
+  background: rgba(26, 31, 28, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom-color: rgba(196, 149, 106, 0.1);
+}
+
+.db-top-bar-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.db-back-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(74, 124, 89, 0.08);
+  color: #4a7c59;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+}
+.db-back-btn:hover { background: rgba(74, 124, 89, 0.15); }
+.db-back-btn:active { transform: scale(0.9); }
+.db-back-btn svg { width: 20px; height: 20px; }
+[data-theme="dark"] .db-back-btn,
+html.dark .db-back-btn {
+  background: rgba(74, 124, 89, 0.15);
+  color: #8db899;
+}
+[data-theme="dark"] .db-back-btn:hover,
+html.dark .db-back-btn:hover {
+  background: rgba(74, 124, 89, 0.25);
+}
+
+.db-top-bar-title {
+  font-size: 0.98rem;
+  font-weight: 650;
+  color: #2c3e30;
+  letter-spacing: 0.02em;
+}
+[data-theme="dark"] .db-top-bar-title,
+html.dark .db-top-bar-title {
+  color: #d4ddd6;
+}
+
+.db-top-bar-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.db-counter-badge {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #c4956a 0%, #d4a87e 100%);
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  transition: transform 0.2s cubic-bezier(0.22, 1, 0.36, 1);
+  box-shadow: 0 4px 12px rgba(196, 149, 106, 0.3);
+}
+.db-counter-badge.pulse {
+  animation: counterPulse 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+@keyframes counterPulse {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.18); }
+  100% { transform: scale(1); }
+}
+[data-theme="dark"] .db-counter-badge,
+html.dark .db-counter-badge {
+  background: linear-gradient(135deg, #c4956a 0%, #b08d5e 100%);
+  box-shadow: 0 4px 12px rgba(196, 149, 106, 0.2);
+}
+
+.db-counter-num {
+  font-variant-numeric: tabular-nums;
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+/* ----- 题目卡片 ----- */
+.db-card {
+  height: 100vh;
+  height: 100svh;
+  height: 100dvh;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  position: relative;
+  contain: layout style paint;
+  will-change: transform;
+  transform: translateZ(0);
+  overflow: hidden;
+}
+
+.db-card-inner {
+  width: 100%;
+  max-width: 600px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 64px 64px 40px 22px;
+  padding-top: calc(64px + env(safe-area-inset-top, 0px));
+  padding-bottom: calc(40px + env(safe-area-inset-bottom, 0px));
+  padding-right: calc(64px + env(safe-area-inset-right, 0px));
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  /*
+   * 动画性能优化（关键）：
+   *  - 默认所有卡片入场动画播放状态为 paused（静止不播），不占用合成线程
+   *  - 只有 .db-card--animate 类（由 IntersectionObserver 在卡片进入视口时添加）
+   *    才把 animation-play-state 置为 running，开始播放
+   *  - 动画本身使用 transform + opacity，避免 filter:blur 这类昂贵的 GPU 操作
+   *  - 用 contain + will-change + translate3d 提示浏览器做层提升
+   */
+  animation-name: dbCardReveal;
+  animation-duration: 0.34s;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  animation-fill-mode: both;
+  animation-play-state: paused;          /* 默认静止 */
+  will-change: transform, opacity;
+  contain: layout style paint;
+  transform: translate3d(0, 0, 0);
+}
+/* 仅当加了动画激活类（卡片进入视口）时才真正播放 */
+.db-card-inner.db-card--animate {
+  animation-play-state: running;
+}
+.db-card-inner::-webkit-scrollbar { display: none; }
+
+/* 卡片入场（抖音式轻量动画：只用 translate + scale + opacity，无 filter） */
+@keyframes dbCardReveal {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 14px, 0) scale(0.988);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+/* 题目文本：跟随卡片入场后再轻微弹出 —— 也受父级 --animate 控制（见下方父级选择器） */
+.db-question-text {
+  animation-name: dbTextPop;
+  animation-duration: 0.42s;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  animation-delay: 0.06s;
+  animation-fill-mode: both;
+  animation-play-state: paused;
+  will-change: transform, opacity;
+  contain: layout style;
+}
+@keyframes dbTextPop {
+  0% { opacity: 0; transform: translate3d(0, 6px, 0); }
+  100% { opacity: 1; transform: translate3d(0, 0, 0); }
+}
+
+/* 子问题列表：依次浮现 - 降低延迟密度（只保留前 2 个微错峰，后续同步以减少动画并发） */
+.db-sub-item {
+  animation-name: dbSubItemIn;
+  animation-duration: 0.34s;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  animation-fill-mode: both;
+  animation-play-state: paused;
+  will-change: transform, opacity;
+}
+.db-sub-item:nth-child(1) { animation-delay: 0.10s; }
+.db-sub-item:nth-child(2) { animation-delay: 0.14s; }
+.db-sub-item:nth-child(n+3) { animation-delay: 0.18s; }
+@keyframes dbSubItemIn {
+  0% { opacity: 0; transform: translate3d(0, 8px, 0) scale(0.994); }
+  100% { opacity: 1; transform: translate3d(0, 0, 0) scale(1); }
+}
+
+/* 提交按钮：最后浮现 */
+.db-submit-btn {
+  animation-name: dbSubmitIn;
+  animation-duration: 0.34s;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  animation-delay: 0.28s;
+  animation-fill-mode: both;
+  animation-play-state: paused;
+  will-change: transform, opacity;
+}
+@keyframes dbSubmitIn {
+  0% { opacity: 0; transform: translate3d(0, 6px, 0); }
+  100% { opacity: 1; transform: translate3d(0, 0, 0); }
+}
+
+/* ===== 父级激活选择器：父卡片 .db-card-inner 有了 --animate 就把所有子动画一起打开 ===== */
+.db-card-inner.db-card--animate .db-question-text,
+.db-card-inner.db-card--animate .db-sub-item,
+.db-card-inner.db-card--animate .db-submit-btn {
+  animation-play-state: running;
+}
+
+/* 卡片头部 */
+.db-card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 22px;
+  flex-shrink: 0;
+}
+
+.db-card-num {
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: #c4956a;
+  letter-spacing: 0.08em;
+  font-variant-numeric: tabular-nums;
+}
+[data-theme="dark"] .db-card-num,
+html.dark .db-card-num {
+  color: #d4a87e;
+}
+
+.db-card-subject {
+  font-size: 0.72rem;
+  color: #5a6b5e;
+  padding: 4px 12px;
+  border-radius: 12px;
+  background: rgba(74, 124, 89, 0.08);
+  border: 0.5px solid rgba(74, 124, 89, 0.15);
+  font-weight: 500;
+}
+[data-theme="dark"] .db-card-subject,
+html.dark .db-card-subject {
+  background: rgba(74, 124, 89, 0.15);
+  border-color: rgba(74, 124, 89, 0.25);
+  color: #8db899;
+}
+
+/* 题目ID（紧贴学科标签，供管理员按ID调题） */
+.db-card-qid {
+  font-size: 0.7rem;
+  color: #b08d5e;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 10px;
+  background: rgba(196, 149, 106, 0.08);
+  border: 0.5px solid rgba(196, 149, 106, 0.18);
+  cursor: default;
+  user-select: all;
+  -webkit-user-select: all;
+  transition: background 0.2s ease;
+}
+.db-card-qid:hover {
+  background: rgba(196, 149, 106, 0.16);
+}
+[data-theme="dark"] .db-card-qid,
+html.dark .db-card-qid {
+  color: #d4a87e;
+  background: rgba(196, 149, 106, 0.12);
+  border-color: rgba(196, 149, 106, 0.22);
+}
+
+/* 题目文本 */
+.db-question-text {
+  font-size: 1.12rem;
+  font-weight: 600;
+  line-height: 1.85;
+  color: #2c3e30;
+  margin-bottom: 28px;
+  flex-shrink: 0;
+  letter-spacing: 0.01em;
+}
+[data-theme="dark"] .db-question-text,
+html.dark .db-question-text {
+  color: #e0e5e2;
+}
+
+/* 子问题列表 */
+.db-sub-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.db-sub-item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px 18px;
+  border: 1.5px solid #e8e2d8;
+  border-radius: 16px;
+  background: #ffffff;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 1px 3px rgba(44, 62, 48, 0.03);
+}
+
+.db-sub-item:hover {
+  border-color: #d4c9b8;
+  box-shadow: 0 3px 8px rgba(44, 62, 48, 0.05);
+}
+[data-theme="dark"] .db-sub-item,
+html.dark .db-sub-item {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: none;
+}
+[data-theme="dark"] .db-sub-item:hover,
+html.dark .db-sub-item:hover {
+  border-color: rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.db-sub-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.db-sub-label {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #f5f0e8 0%, #ede9e3 100%);
+  color: #5a6b5e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+[data-theme="dark"] .db-sub-label,
+html.dark .db-sub-label {
+  background: rgba(255, 255, 255, 0.08);
+  color: #8db899;
+}
+
+.db-sub-text {
+  font-size: 0.94rem;
+  line-height: 1.7;
+  color: #3d4f41;
+  flex: 1;
+  padding-top: 2px;
+}
+[data-theme="dark"] .db-sub-text,
+html.dark .db-sub-text {
+  color: #c5cec8;
+}
+
+.db-sub-toggle {
+  display: flex;
+  gap: 10px;
+  padding-left: 38px;
+}
+
+.db-tf-btn {
+  flex: 1;
+  padding: 10px 0;
+  border-radius: 14px;
+  border: 1.5px solid #e2ddd6;
+  background: #faf8f5;
+  color: #5a6b5e;
+  font-size: 0.86rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  font-family: inherit;
+  text-align: center;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  -webkit-user-select: none;
+  min-height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  letter-spacing: 0.03em;
+}
+
+/* 未选中时悬停 */
+.db-tf-btn:not(.selected):hover {
+  border-color: #c4956a;
+  background: #fdf5ee;
+  color: #b08d5e;
+}
+
+.db-tf-btn:active { transform: scale(0.96); }
+
+/* 键盘焦点环 */
+.db-tf-btn:focus-visible,
+.db-submit-btn:focus-visible,
+.db-back-btn:focus-visible,
+.db-retry-btn:focus-visible,
+.db-error-retry-btn:focus-visible,
+.db-stop-btn:focus-visible,
+.db-stop-continue-btn:focus-visible,
+.db-stop-restart-btn:focus-visible,
+.db-action-btn:focus-visible {
+  outline: 2px solid #c4956a;
+  outline-offset: 2px;
+}
+[data-theme="dark"] .db-tf-btn:focus-visible,
+html.dark .db-tf-btn:focus-visible,
+[data-theme="dark"] .db-submit-btn:focus-visible,
+html.dark .db-submit-btn:focus-visible,
+[data-theme="dark"] .db-back-btn:focus-visible,
+html.dark .db-back-btn:focus-visible,
+[data-theme="dark"] .db-retry-btn:focus-visible,
+html.dark .db-retry-btn:focus-visible,
+[data-theme="dark"] .db-error-retry-btn:focus-visible,
+html.dark .db-error-retry-btn:focus-visible,
+[data-theme="dark"] .db-stop-btn:focus-visible,
+html.dark .db-stop-btn:focus-visible,
+[data-theme="dark"] .db-stop-continue-btn:focus-visible,
+html.dark .db-stop-continue-btn:focus-visible,
+[data-theme="dark"] .db-stop-restart-btn:focus-visible,
+html.dark .db-stop-restart-btn:focus-visible,
+[data-theme="dark"] .db-action-btn:focus-visible,
+html.dark .db-action-btn:focus-visible {
+  outline-color: #d4a87e;
+}
+
+/* 选中 - 正确 */
+.db-tf-btn[data-value="true"].selected {
+  background: linear-gradient(135deg, #edf7f0 0%, #dff0e4 100%);
+  border-color: #3a8c5c;
+  color: #2d6a45;
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(58, 140, 92, 0.15);
+}
+[data-theme="dark"] .db-tf-btn[data-value="true"].selected,
+html.dark .db-tf-btn[data-value="true"].selected {
+  background: linear-gradient(135deg, rgba(58, 140, 92, 0.2) 0%, rgba(58, 140, 92, 0.1) 100%);
+  border-color: #4caf70;
+  color: #81c784;
+  box-shadow: 0 2px 8px rgba(58, 140, 92, 0.1);
+}
+
+/* 选中 - 错误 */
+.db-tf-btn[data-value="false"].selected {
+  background: linear-gradient(135deg, #fdf0ec 0%, #f9e4de 100%);
+  border-color: #c0553a;
+  color: #a04530;
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(192, 85, 58, 0.15);
+}
+[data-theme="dark"] .db-tf-btn[data-value="false"].selected,
+html.dark .db-tf-btn[data-value="false"].selected {
+  background: linear-gradient(135deg, rgba(192, 85, 58, 0.2) 0%, rgba(192, 85, 58, 0.1) 100%);
+  border-color: #e07050;
+  color: #ef9a9a;
+  box-shadow: 0 2px 8px rgba(192, 85, 58, 0.1);
+}
+
+[data-theme="dark"] .db-tf-btn,
+html.dark .db-tf-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: #a0afa4;
+}
+[data-theme="dark"] .db-tf-btn:not(.selected):hover,
+html.dark .db-tf-btn:not(.selected):hover {
+  border-color: #c4956a;
+  background: rgba(196, 149, 106, 0.1);
+  color: #d4a87e;
+}
+
+/* ----- 提交按钮 ----- */
+.db-submit-btn {
+  display: block;
+  width: 100%;
+  margin-top: 22px;
+  padding: 15px;
+  border-radius: 16px;
+  border: none;
+  background: linear-gradient(135deg, #4a7c59 0%, #3a6347 100%);
+  color: #fff;
+  font-size: 0.96rem;
+  font-weight: 650;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+  font-family: inherit;
+  flex-shrink: 0;
+  -webkit-tap-highlight-color: transparent;
+  letter-spacing: 0.04em;
+  box-shadow: 0 6px 20px rgba(74, 124, 89, 0.25);
+}
+.db-submit-btn:active { transform: scale(0.97); }
+.db-submit-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #5d9a72 0%, #4a7c59 100%);
+  box-shadow: 0 8px 24px rgba(74, 124, 89, 0.3);
+}
+[data-theme="dark"] .db-submit-btn,
+html.dark .db-submit-btn {
+  background: linear-gradient(135deg, #5d9a72 0%, #4a7c59 100%);
+  box-shadow: 0 6px 20px rgba(74, 124, 89, 0.2);
+}
+[data-theme="dark"] .db-submit-btn:hover:not(:disabled),
+html.dark .db-submit-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #6bab82 0%, #5d9a72 100%);
+  box-shadow: 0 8px 24px rgba(74, 124, 89, 0.25);
+}
+
+.db-submit-btn:not(:disabled) {
+  animation: submitReady 0.5s ease-out;
+}
+
+@keyframes submitReady {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+  100% { transform: scale(1); }
+}
+
+.db-submit-btn:disabled {
+  background: #e8e2d8;
+  color: #b0a898;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+.db-submit-btn:disabled:active { transform: none; }
+[data-theme="dark"] .db-submit-btn:disabled,
+html.dark .db-submit-btn:disabled {
+  background: rgba(255, 255, 255, 0.06);
+  color: #5a6b5e;
+}
+
+/* ----- 结果区域 ----- */
+.db-result {
+  margin-top: 20px;
+  flex-shrink: 0;
+  animation: resultSlideIn 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes resultSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.db-result-summary {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 18px;
+  border-radius: 14px;
+  font-weight: 650;
+  font-size: 0.92rem;
+  margin-bottom: 14px;
+}
+
+.db-result-summary.all-correct {
+  background: linear-gradient(135deg, #edf7f0 0%, #dff0e4 100%);
+  color: #2d6a45;
+  border: 1px solid rgba(58, 140, 92, 0.2);
+}
+[data-theme="dark"] .db-result-summary.all-correct,
+html.dark .db-result-summary.all-correct {
+  background: rgba(58, 140, 92, 0.12);
+  color: #81c784;
+  border-color: rgba(58, 140, 92, 0.2);
+}
+
+.db-result-summary.partial {
+  background: linear-gradient(135deg, #fdf8ec 0%, #f9f0d4 100%);
+  color: #8a6d1f;
+  border: 1px solid rgba(212, 160, 48, 0.2);
+}
+[data-theme="dark"] .db-result-summary.partial,
+html.dark .db-result-summary.partial {
+  background: rgba(212, 160, 48, 0.12);
+  color: #ffb74d;
+  border-color: rgba(212, 160, 48, 0.2);
+}
+
+.db-result-summary.all-wrong {
+  background: linear-gradient(135deg, #fdf0ec 0%, #f9e4de 100%);
+  color: #a04530;
+  border: 1px solid rgba(192, 85, 58, 0.2);
+}
+[data-theme="dark"] .db-result-summary.all-wrong,
+html.dark .db-result-summary.all-wrong {
+  background: rgba(192, 85, 58, 0.12);
+  color: #ef9a9a;
+  border-color: rgba(192, 85, 58, 0.2);
+}
+
+.db-result-icon {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.db-explanation {
+  padding: 18px 20px;
+  border-radius: 14px;
+  background: #ffffff;
+  border: 1px solid #ede9e3;
+  border-left: 4px solid #c4956a;
+  box-shadow: 0 1px 4px rgba(44, 62, 48, 0.03);
+}
+[data-theme="dark"] .db-explanation,
+html.dark .db-explanation {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.08);
+  border-left-color: #c4956a;
+}
+
+.db-explanation-title {
+  font-weight: 700;
+  font-size: 0.75rem;
+  color: #c4956a;
+  margin-bottom: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+[data-theme="dark"] .db-explanation-title,
+html.dark .db-explanation-title {
+  color: #d4a87e;
+}
+
+.db-explanation-text {
+  font-size: 0.9rem;
+  line-height: 1.8;
+  color: #5a6b5e;
+}
+[data-theme="dark"] .db-explanation-text,
+html.dark .db-explanation-text {
+  color: #a0afa4;
+}
+
+/* 子问题结果状态 */
+.db-sub-item.result-correct {
+  border-color: rgba(58, 140, 92, 0.3);
+  background: linear-gradient(135deg, #f7fbf8 0%, #edf7f0 100%);
+}
+.db-sub-item.result-correct .db-sub-label {
+  background: linear-gradient(135deg, #3a8c5c 0%, #2d6a45 100%);
+  color: #fff;
+  box-shadow: 0 2px 6px rgba(58, 140, 92, 0.2);
+}
+[data-theme="dark"] .db-sub-item.result-correct,
+html.dark .db-sub-item.result-correct {
+  background: rgba(58, 140, 92, 0.08);
+  border-color: rgba(58, 140, 92, 0.25);
+}
+
+.db-sub-item.result-wrong {
+  border-color: rgba(192, 85, 58, 0.3);
+  background: linear-gradient(135deg, #fef8f6 0%, #fdf0ec 100%);
+}
+.db-sub-item.result-wrong .db-sub-label {
+  background: linear-gradient(135deg, #c0553a 0%, #a04530 100%);
+  color: #fff;
+  box-shadow: 0 2px 6px rgba(192, 85, 58, 0.2);
+}
+[data-theme="dark"] .db-sub-item.result-wrong,
+html.dark .db-sub-item.result-wrong {
+  background: rgba(192, 85, 58, 0.08);
+  border-color: rgba(192, 85, 58, 0.25);
+}
+
+.db-sub-result-icon {
+  font-size: 0.95rem;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+/* 结果状态下禁用按钮 */
+.db-sub-item.submitted .db-tf-btn {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+/* 下一题提示 */
+.db-swipe-hint {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 28px;
+  padding: 14px;
+  color: #c4956a;
+  font-size: 0.82rem;
+  font-weight: 500;
+  animation: hintFloat 2.5s ease-in-out infinite;
+  flex-shrink: 0;
+  will-change: transform;
+}
+[data-theme="dark"] .db-swipe-hint,
+html.dark .db-swipe-hint {
+  color: #d4a87e;
+}
+
+@keyframes hintFloat {
+  0%, 100% { opacity: 0.6; transform: translateY(0); }
+  50% { opacity: 1; transform: translateY(-5px); }
+}
+
+.db-swipe-hint svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* ----- 加载状态卡片 ----- */
+.db-loading-card {
+  height: 100vh;
+  height: 100svh;
+  height: 100dvh;
+  scroll-snap-align: start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.db-loading-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  color: #8a9a8e;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+[data-theme="dark"] .db-loading-content,
+html.dark .db-loading-content {
+  color: #6b7a70;
+}
+
+.db-spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid #f5f0e8;
+  border-top-color: #c4956a;
+  border-radius: 50%;
+  animation: spin 0.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+[data-theme="dark"] .db-spinner,
+html.dark .db-spinner {
+  border-color: rgba(255, 255, 255, 0.08);
+  border-top-color: #c4956a;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ----- 空状态 / 结束卡片 ----- */
+.db-end-card {
+  height: 100vh;
+  height: 100svh;
+  height: 100dvh;
+  scroll-snap-align: start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.db-end-content {
+  text-align: center;
+  color: #8a9a8e;
+  background: #ffffff;
+  padding: 40px 36px;
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(44, 62, 48, 0.08);
+  border: 1px solid #ede9e3;
+}
+[data-theme="dark"] .db-end-content,
+html.dark .db-end-content {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.db-end-icon {
+  font-size: 2.8rem;
+  margin-bottom: 14px;
+}
+
+.db-end-title {
+  font-size: 1.15rem;
+  font-weight: 650;
+  color: #2c3e30;
+  margin-bottom: 8px;
+}
+[data-theme="dark"] .db-end-title,
+html.dark .db-end-title {
+  color: #d4ddd6;
+}
+
+.db-end-desc {
+  font-size: 0.86rem;
+  color: #8a9a8e;
+  margin-bottom: 24px;
+}
+[data-theme="dark"] .db-end-desc,
+html.dark .db-end-desc {
+  color: #6b7a70;
+}
+
+.db-end-stats {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  margin-bottom: 24px;
+}
+
+.db-end-stat {
+  text-align: center;
+}
+
+.db-end-stat-val {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #c4956a;
+  font-variant-numeric: tabular-nums;
+}
+[data-theme="dark"] .db-end-stat-val,
+html.dark .db-end-stat-val {
+  color: #d4a87e;
+}
+
+.db-end-stat-lbl {
+  font-size: 0.72rem;
+  color: #8a9a8e;
+  margin-top: 4px;
+}
+[data-theme="dark"] .db-end-stat-lbl,
+html.dark .db-end-stat-lbl {
+  color: #6b7a70;
+}
+
+.db-retry-btn {
+  padding: 13px 36px;
+  border-radius: 16px;
+  border: none;
+  background: linear-gradient(135deg, #4a7c59 0%, #3a6347 100%);
+  color: #fff;
+  font-size: 0.92rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+  font-family: inherit;
+  box-shadow: 0 6px 20px rgba(74, 124, 89, 0.25);
+  letter-spacing: 0.03em;
+}
+.db-retry-btn:active { transform: scale(0.96); }
+.db-retry-btn:hover {
+  background: linear-gradient(135deg, #5d9a72 0%, #4a7c59 100%);
+  box-shadow: 0 8px 24px rgba(74, 124, 89, 0.3);
+}
+[data-theme="dark"] .db-retry-btn,
+html.dark .db-retry-btn {
+  background: linear-gradient(135deg, #5d9a72 0%, #4a7c59 100%);
+}
+
+/* ----- 错误状态 ----- */
+.db-error-card {
+  height: 100vh;
+  height: 100svh;
+  height: 100dvh;
+  scroll-snap-align: start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.db-error-content {
+  text-align: center;
+  color: #8a9a8e;
+  max-width: 320px;
+  padding: 0 20px;
+}
+
+.db-error-icon {
+  font-size: 2.8rem;
+  margin-bottom: 14px;
+}
+
+.db-error-title {
+  font-size: 1.05rem;
+  font-weight: 650;
+  color: #2c3e30;
+  margin-bottom: 10px;
+}
+[data-theme="dark"] .db-error-title,
+html.dark .db-error-title {
+  color: #d4ddd6;
+}
+
+.db-error-desc {
+  font-size: 0.84rem;
+  color: #8a9a8e;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+[data-theme="dark"] .db-error-desc,
+html.dark .db-error-desc {
+  color: #6b7a70;
+}
+
+.db-error-retry-btn {
+  padding: 11px 30px;
+  border-radius: 14px;
+  border: 1.5px solid #e2ddd6;
+  background: #ffffff;
+  color: #4a7c59;
+  font-size: 0.86rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  font-family: inherit;
+  letter-spacing: 0.02em;
+}
+.db-error-retry-btn:active { transform: scale(0.96); }
+.db-error-retry-btn:hover {
+  border-color: #c4956a;
+  background: #fdf5ee;
+  color: #b08d5e;
+}
+[data-theme="dark"] .db-error-retry-btn,
+html.dark .db-error-retry-btn {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.12);
+  color: #8db899;
+}
+[data-theme="dark"] .db-error-retry-btn:hover,
+html.dark .db-error-retry-btn:hover {
+  border-color: #c4956a;
+  background: rgba(196, 149, 106, 0.1);
+  color: #d4a87e;
+}
+
+/* ----- 响应式 ----- */
+@media (max-width: 640px) {
+  .db-card-inner {
+    padding: 58px 52px 36px 16px;
+    padding-top: calc(58px + env(safe-area-inset-top, 0px));
+    padding-bottom: calc(36px + env(safe-area-inset-bottom, 0px));
+    padding-right: calc(52px + env(safe-area-inset-right, 0px));
+  }
+
+  .db-question-text {
+    font-size: 1.02rem;
+    line-height: 1.75;
+  }
+
+  .db-sub-item {
+    padding: 14px 15px;
+    gap: 10px;
+    border-radius: 14px;
+  }
+
+  .db-sub-text {
+    font-size: 0.88rem;
+    line-height: 1.65;
+  }
+
+  .db-sub-toggle {
+    padding-left: 38px;
+    gap: 8px;
+  }
+
+  .db-tf-btn {
+    font-size: 0.82rem;
+    min-height: 40px;
+    padding: 9px 0;
+  }
+
+  .db-submit-btn {
+    padding: 14px;
+    font-size: 0.92rem;
+    border-radius: 14px;
+  }
+
+  .db-top-bar {
+    height: 50px;
+    padding: 0 14px;
+  }
+
+  .db-top-bar-title {
+    font-size: 0.92rem;
+  }
+
+  .db-counter-badge {
+    font-size: 0.74rem;
+    padding: 5px 12px;
+  }
+}
+
+/* 移动端横屏 */
+@media (max-width: 640px) and (orientation: landscape) {
+  .db-card-inner {
+    padding: 54px 52px 24px 16px;
+    padding-top: calc(54px + env(safe-area-inset-top, 0px));
+    padding-bottom: calc(24px + env(safe-area-inset-bottom, 0px));
+    padding-right: calc(52px + env(safe-area-inset-right, 0px));
+    max-width: 100%;
+  }
+
+  .db-question-text {
+    font-size: 0.94rem;
+    line-height: 1.6;
+    margin-bottom: 14px;
+  }
+
+  .db-card-header {
+    margin-bottom: 12px;
+  }
+
+  .db-sub-item {
+    padding: 10px 14px;
+    gap: 8px;
+  }
+
+  .db-sub-toggle {
+    padding-left: 34px;
+  }
+
+  .db-tf-btn {
+    font-size: 0.78rem;
+    min-height: 36px;
+    padding: 7px 0;
+  }
+
+  .db-submit-btn {
+    margin-top: 14px;
+    padding: 11px;
+    font-size: 0.84rem;
+  }
+
+  .db-top-bar {
+    height: 44px;
+  }
+
+  .db-swipe-hint {
+    margin-top: 14px;
+    padding: 8px;
+  }
+}
+
+/* 中等屏幕 (641-767px) */
+@media (min-width: 641px) and (max-width: 767px) {
+  .db-card-inner {
+    padding: 74px 26px 42px;
+    padding-bottom: calc(42px + env(safe-area-inset-bottom, 0px));
+  }
+
+  .db-question-text {
+    font-size: 1.06rem;
+    line-height: 1.8;
+  }
+
+  .db-sub-text {
+    font-size: 0.9rem;
+  }
+
+  .db-tf-btn {
+    font-size: 0.84rem;
+    min-height: 42px;
+  }
+}
+
+@media (min-width: 768px) {
+  .db-card-inner {
+    padding: 82px 36px 50px;
+    padding-bottom: calc(50px + env(safe-area-inset-bottom, 0px));
+  }
+
+  .db-sub-toggle {
+    padding-left: 38px;
+  }
+
+  .db-question-text {
+    font-size: 1.15rem;
+  }
+
+  .db-sub-text {
+    font-size: 0.96rem;
+  }
+}
+
+/* 大屏幕 (1200px+) */
+@media (min-width: 1200px) {
+  .db-card-inner {
+    max-width: 720px;
+    padding: 92px 44px 60px;
+    padding-bottom: calc(60px + env(safe-area-inset-bottom, 0px));
+  }
+
+  .db-question-text {
+    font-size: 1.22rem;
+    line-height: 1.95;
+  }
+
+  .db-sub-text {
+    font-size: 1rem;
+  }
+
+  .db-sub-item {
+    padding: 18px 22px;
+    border-radius: 18px;
+  }
+
+  .db-tf-btn {
+    font-size: 0.9rem;
+    min-height: 46px;
+  }
+
+  .db-submit-btn {
+    padding: 17px;
+    font-size: 1.02rem;
+    border-radius: 18px;
+  }
+}
+
+/* ----- 减弱动效偏好 ----- */
+@media (prefers-reduced-motion: reduce) {
+  .db-page {
+    scroll-behavior: auto;
+  }
+  .db-card-inner,
+  .db-question-text,
+  .db-sub-item,
+  .db-submit-btn {
+    animation: none !important;
+  }
+  .db-result {
+    animation: none;
+  }
+  .db-swipe-hint {
+    animation: none;
+  }
+  .db-counter-badge.pulse {
+    animation: none;
+  }
+  .db-spinner {
+    animation: none;
+    opacity: 0.5;
+  }
+  .db-submit-btn:not(:disabled) {
+    animation: none;
+  }
+  .db-action-btn {
+    transition: none;
+  }
+  .db-toast {
+    transition: none;
+  }
+  .db-progress-bar {
+    transition: none;
+  }
+}
+
+/* ============================================================
+ * 右侧操作栏 — 收藏/赞/踩/分享/题目ID
+ * ============================================================ */
+.db-action-bar {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  z-index: 10;
+  pointer-events: none;
+}
+.db-action-bar > * {
+  pointer-events: auto;
+}
+
+.db-action-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.92);
+  color: #5a6b5e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 8px rgba(44, 62, 48, 0.08);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  will-change: transform;
+}
+.db-action-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+.db-action-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 4px 12px rgba(44, 62, 48, 0.12);
+}
+
+.db-action-btn:active {
+  transform: scale(0.9);
+  transition: transform 0.08s ease;
+}
+[data-theme="dark"] .db-action-btn,
+html.dark .db-action-btn {
+  background: rgba(30, 35, 32, 0.92);
+  color: #8db899;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* 收藏激活态 */
+.db-action-btn.db-fav-btn.active {
+  color: #c0553a;
+  background: rgba(192, 85, 58, 0.1);
+  box-shadow: 0 2px 8px rgba(192, 85, 58, 0.15);
+}
+[data-theme="dark"] .db-action-btn.db-fav-btn.active,
+html.dark .db-action-btn.db-fav-btn.active {
+  color: #ef9a9a;
+  background: rgba(192, 85, 58, 0.15);
+}
+
+/* 赞激活态 */
+.db-action-btn.db-like-btn.active {
+  color: #3a8c5c;
+  background: rgba(58, 140, 92, 0.1);
+  box-shadow: 0 2px 8px rgba(58, 140, 92, 0.15);
+}
+[data-theme="dark"] .db-action-btn.db-like-btn.active,
+html.dark .db-action-btn.db-like-btn.active {
+  color: #81c784;
+  background: rgba(58, 140, 92, 0.15);
+}
+
+/* 踩激活态 */
+.db-action-btn.db-dislike-btn.active {
+  color: #8a9a8e;
+  background: rgba(44, 62, 48, 0.08);
+}
+[data-theme="dark"] .db-action-btn.db-dislike-btn.active,
+html.dark .db-action-btn.db-dislike-btn.active {
+  color: #6b7a70;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* 题目ID（旧版右侧操作栏内，已迁移至卡片头部 .db-card-qid） */
+.db-qid {
+  display: none;
+}
+
+/* ============================================================
+ * 顶部进度条
+ * ============================================================ */
+.db-progress-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: transparent;
+  z-index: 11;
+  pointer-events: none;
+}
+
+.db-progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #c4956a 0%, #d4a87e 50%, #c4956a 100%);
+  background-size: 200% 100%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  will-change: width;
+  border-radius: 0 2px 2px 0;
+  animation: progressShimmer 2s linear infinite;
+}
+@keyframes progressShimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+[data-theme="dark"] .db-progress-bar,
+html.dark .db-progress-bar {
+  background: linear-gradient(90deg, #c4956a 0%, #d4a87e 50%, #b08d5e 100%);
+}
+
+/* ============================================================
+ * Toast 提示
+ * ============================================================ */
+.db-toast {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: rgba(44, 62, 48, 0.9);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 14px;
+  font-size: 0.84rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  z-index: 20;
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  pointer-events: none;
+  white-space: nowrap;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+[data-theme="dark"] .db-toast,
+html.dark .db-toast {
+  background: rgba(255, 255, 255, 0.92);
+  color: #2c3e30;
+}
+
+.db-toast.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+
+/* ============================================================
+ * 响应式 — 操作栏
+ * ============================================================ */
+@media (max-width: 640px) {
+  .db-action-bar {
+    right: 6px;
+    gap: 10px;
+  }
+
+  .db-action-btn {
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 2px 6px rgba(44, 62, 48, 0.1);
+  }
+  .db-action-btn svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  .db-toast {
+    font-size: 0.8rem;
+    padding: 9px 16px;
+    border-radius: 12px;
+  }
+}
+
+/* ============================================================
+ * 停止按钮
+ * ============================================================ */
+.db-stop-btn {
+  padding: 6px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(192, 85, 58, 0.2);
+  background: rgba(192, 85, 58, 0.06);
+  color: #c0553a;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  font-family: inherit;
+  white-space: nowrap;
+  -webkit-tap-highlight-color: transparent;
+  letter-spacing: 0.03em;
+}
+.db-stop-btn:hover {
+  background: rgba(192, 85, 58, 0.1);
+  border-color: rgba(192, 85, 58, 0.3);
+}
+.db-stop-btn:active {
+  transform: scale(0.94);
+}
+[data-theme="dark"] .db-stop-btn,
+html.dark .db-stop-btn {
+  background: rgba(192, 85, 58, 0.12);
+  border-color: rgba(192, 85, 58, 0.25);
+  color: #ef9a9a;
+}
+[data-theme="dark"] .db-stop-btn:hover,
+html.dark .db-stop-btn:hover {
+  background: rgba(192, 85, 58, 0.2);
+  border-color: rgba(192, 85, 58, 0.35);
+}
+
+/* ============================================================
+ * 停止统计面板
+ * ============================================================ */
+.db-stop-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 50;
+  background: rgba(44, 62, 48, 0.4);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: stopOverlayIn 0.3s ease-out;
+  padding: 20px;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+[data-theme="dark"] .db-stop-overlay,
+html.dark .db-stop-overlay {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+@keyframes stopOverlayIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.db-stop-card {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 40px 36px 32px;
+  max-width: 380px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(44, 62, 48, 0.15);
+  animation: stopCardIn 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  border: 1px solid #ede9e3;
+}
+[data-theme="dark"] .db-stop-card,
+html.dark .db-stop-card {
+  background: #242a26;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+@keyframes stopCardIn {
+  from {
+    opacity: 0;
+    transform: translateY(28px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.db-stop-icon {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #c4956a;
+}
+
+.db-stop-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #2c3e30;
+  margin-bottom: 24px;
+  letter-spacing: 0.02em;
+}
+[data-theme="dark"] .db-stop-title,
+html.dark .db-stop-title {
+  color: #d4ddd6;
+}
+
+.db-stop-stats {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin-bottom: 28px;
+}
+
+.db-stop-stat {
+  text-align: center;
+}
+
+.db-stop-stat-val {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #c4956a;
+  font-variant-numeric: tabular-nums;
+}
+[data-theme="dark"] .db-stop-stat-val,
+html.dark .db-stop-stat-val {
+  color: #d4a87e;
+}
+
+.db-stop-stat-lbl {
+  font-size: 0.74rem;
+  color: #8a9a8e;
+  margin-top: 6px;
+  font-weight: 500;
+}
+[data-theme="dark"] .db-stop-stat-lbl,
+html.dark .db-stop-stat-lbl {
+  color: #6b7a70;
+}
+
+.db-stop-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.db-stop-continue-btn {
+  width: 100%;
+  padding: 14px;
+  border-radius: 16px;
+  border: none;
+  background: linear-gradient(135deg, #4a7c59 0%, #3a6347 100%);
+  color: #fff;
+  font-size: 0.94rem;
+  font-weight: 650;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+  font-family: inherit;
+  letter-spacing: 0.03em;
+  box-shadow: 0 6px 20px rgba(74, 124, 89, 0.25);
+}
+.db-stop-continue-btn:active {
+  transform: scale(0.97);
+}
+.db-stop-continue-btn:hover {
+  background: linear-gradient(135deg, #5d9a72 0%, #4a7c59 100%);
+  box-shadow: 0 8px 24px rgba(74, 124, 89, 0.3);
+}
+[data-theme="dark"] .db-stop-continue-btn,
+html.dark .db-stop-continue-btn {
+  background: linear-gradient(135deg, #5d9a72 0%, #4a7c59 100%);
+}
+
+.db-stop-restart-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 14px;
+  border: 1.5px solid #e2ddd6;
+  background: transparent;
+  color: #8a9a8e;
+  font-size: 0.86rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  font-family: inherit;
+  letter-spacing: 0.02em;
+}
+.db-stop-restart-btn:hover {
+  border-color: #c4956a;
+  color: #b08d5e;
+  background: #fdf5ee;
+}
+.db-stop-restart-btn:active {
+  transform: scale(0.97);
+}
+[data-theme="dark"] .db-stop-restart-btn,
+html.dark .db-stop-restart-btn {
+  border-color: rgba(255, 255, 255, 0.12);
+  color: #8db899;
+}
+[data-theme="dark"] .db-stop-restart-btn:hover,
+html.dark .db-stop-restart-btn:hover {
+  border-color: #c4956a;
+  color: #d4a87e;
+  background: rgba(196, 149, 106, 0.1);
+}
+
+/* 减弱动效 — 停止面板 */
+@media (prefers-reduced-motion: reduce) {
+  .db-stop-overlay {
+    animation: none;
+  }
+  .db-stop-card {
+    animation: none;
+  }
+}

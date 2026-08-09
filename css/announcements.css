@@ -1,0 +1,101 @@
+/* ============================================================
+   BioQuest — 公告栏样式
+   ============================================================ */
+
+.announcement-banner {
+  background: linear-gradient(135deg, #1a3a2a 0%, #2d5a3d 100%);
+  border-bottom: 1px solid rgba(232, 168, 48, 0.2);
+  padding: 10px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.announcement-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, rgba(232,168,48,0.05) 0%, transparent 50%, rgba(232,168,48,0.05) 100%);
+  pointer-events: none;
+}
+
+.announcement-inner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.announcement-icon {
+  flex-shrink: 0;
+  color: #e8a830;
+  display: flex;
+  align-items: center;
+  animation: announce-pulse 2s ease-in-out infinite;
+}
+
+@keyframes announce-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(1.1); }
+}
+
+.announcement-marquee {
+  flex: 1;
+  overflow: hidden;
+  min-width: 0;
+}
+
+.announcement-text {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.88rem;
+  line-height: 1.5;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  animation: announce-slide-in 0.4s ease-out;
+}
+
+@keyframes announce-slide-in {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.announcement-nav {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.announcement-nav-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.7);
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  padding: 0;
+  line-height: 1;
+}
+
+.announcement-nav-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.announcement-counter {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.7rem;
+  min-width: 28px;
+  text-align: center;
+}

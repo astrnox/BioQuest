@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="420" viewBox="0 0 800 420" style="background:#ffffff;font-family:"Noto Sans CJK SC", "WenQuanYi Micro Hei", "Microsoft YaHei", sans-serif;font-size:14px;">
+<text x="400.0" y="30" text-anchor="middle" fill="#1a1a1a" font-size="18px" font-weight="bold">气孔开放与关闭</text>
+<text x="200" y="70" text-anchor="middle" fill="#1a1a1a" font-size="14px" font-weight="bold">开放状态（保卫细胞吸水膨胀）</text>
+<rect x="50" y="100" width="300" height="260" fill="#e8f5e9" stroke="#4caf50" rx="0"/>
+<path d="M 130 230 C 130 180, 180 180, 200 230 C 220 280, 270 280, 270 230 C 270 180, 220 180, 200 230 C 180 280, 130 280, 130 230 Z" fill="#66bb6a" stroke="#2e7d32"/>
+<ellipse cx="200" cy="230" rx="25" ry="8" fill="#ffffff" stroke="none"/>
+<path d="M 90 230 Q 110 200 130 230 Q 110 260 90 230 Z" fill="#a5d6a7" stroke="#2e7d32"/>
+<path d="M 270 230 Q 290 200 310 230 Q 290 260 270 230 Z" fill="#a5d6a7" stroke="#2e7d32"/>
+<line x1="200" y1="130" x2="200" y2="180" stroke="#1f77b4" stroke-width="2"/>
+<polygon points="200,180 205.98472144103957,188.01143615546934 194.01527855896043,188.01143615546934" fill="#1f77b4"/>
+<text x="215" y="155" text-anchor="middle" fill="#1f77b4" font-size="12px" font-weight="normal">CO₂ 进入</text>
+<line x1="200" y1="330" x2="200" y2="280" stroke="#d62728" stroke-width="2"/>
+<polygon points="200,280 194.01527855896043,271.9885638445307 205.98472144103957,271.9885638445307" fill="#d62728"/>
+<text x="215" y="305" text-anchor="middle" fill="#d62728" font-size="12px" font-weight="normal">O₂/H₂O 逸出</text>
+<text x="200" y="370" text-anchor="middle" fill="#1a1a1a" font-size="13px" font-weight="normal">保卫细胞</text>
+<text x="90" y="300" text-anchor="middle" fill="#1a1a1a" font-size="13px" font-weight="normal">副卫细胞</text>
+<text x="70" y="140" text-anchor="middle" fill="#1a1a1a" font-size="13px" font-weight="normal">表皮细胞</text>
+<text x="600" y="70" text-anchor="middle" fill="#1a1a1a" font-size="14px" font-weight="bold">关闭状态（保卫细胞失水）</text>
+<rect x="450" y="100" width="300" height="260" fill="#e8f5e9" stroke="#4caf50" rx="0"/>
+<path d="M 530 230 C 530 200, 570 200, 580 230 C 590 260, 630 260, 640 230 C 650 200, 610 200, 600 230 C 590 260, 550 260, 540 230 Z" fill="#66bb6a" stroke="#2e7d32"/>
+<path d="M 585 230 L 595 230" fill="none" stroke="#333"/>
+<path d="M 490 230 Q 510 200 530 230 Q 510 260 490 230 Z" fill="#a5d6a7" stroke="#2e7d32"/>
+<path d="M 640 230 Q 660 200 680 230 Q 660 260 640 230 Z" fill="#a5d6a7" stroke="#2e7d32"/>
+<text x="600" y="370" text-anchor="middle" fill="#1a1a1a" font-size="13px" font-weight="normal">保卫细胞</text>
+<text x="600" y="160" text-anchor="middle" fill="#1a1a1a" font-size="13px" font-weight="normal">气孔关闭</text>
+</svg>

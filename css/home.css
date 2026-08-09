@@ -1,0 +1,1183 @@
+/* ============================================================
+ * BioQuest Homepage — Premium Botanical Laboratory Theme
+ * Design: Deep forest greens, amber/gold accents, cream bg
+ * ============================================================ */
+
+/* ----- HERO ----- */
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-bg canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    160deg,
+    rgba(18, 32, 22, 0.96) 0%,
+    rgba(26, 47, 29, 0.88) 35%,
+    rgba(45, 74, 43, 0.65) 70%,
+    rgba(90, 125, 92, 0.45) 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-gradient-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 55%;
+  background: linear-gradient(
+    90deg,
+    rgba(12, 24, 16, 0.5) 0%,
+    rgba(18, 32, 22, 0.3) 40%,
+    transparent 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: 0 var(--content-padding);
+  padding-top: calc(var(--header-height) + 40px);
+  padding-bottom: 80px;
+}
+
+.hero-label {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--marigold);
+  background: rgba(196, 149, 106, 0.12);
+  padding: 7px 16px;
+  border-radius: var(--radius-pill, 20px);
+  border: 1px solid rgba(196, 149, 106, 0.18);
+  margin-bottom: 32px;
+  animation: heroFadeIn 0.8s ease forwards;
+}
+
+.hero-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.8rem, 6vw, 4.4rem);
+  color: #fff;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 24px;
+  font-weight: 700;
+  animation: heroFadeIn 0.8s 0.1s ease both;
+}
+
+.hero-title-accent {
+  background: linear-gradient(120deg, #e8a830, #d4a574, #e8a830);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-subtitle {
+  font-size: 1.12rem;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.75;
+  margin-bottom: 40px;
+  max-width: 560px;
+  animation: heroFadeIn 0.8s 0.2s ease both;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  animation: heroFadeIn 0.8s 0.3s ease both;
+}
+
+.btn-primary-hero {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 15px 32px;
+  border-radius: var(--radius-lg, 12px);
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg, var(--color-warm, #c4956a), var(--color-warm-light, #d4a574));
+  color: var(--color-primary-900, #1a2f1d);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+.btn-primary-hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+  transition: left 0.5s ease;
+}
+
+.btn-primary-hero:hover::after {
+  left: 120%;
+}
+
+.btn-primary-hero:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-button, 0 8px 28px rgba(196, 149, 106, 0.35));
+  background: linear-gradient(135deg, var(--color-warm-light, #d4a574), var(--color-warm-200, #e0b98a));
+}
+
+.btn-primary-hero:active {
+  transform: scale(0.97);
+}
+
+.btn-primary-hero--lg {
+  font-size: 1.1rem;
+  padding: 18px 40px;
+  border-radius: var(--radius-xl, 14px);
+}
+
+.btn-outline-hero {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 15px 32px;
+  border-radius: var(--radius-lg, 12px);
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.9);
+  transition: all 0.25s ease;
+}
+
+.btn-outline-hero:hover {
+  border-color: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-2px);
+}
+
+.btn-outline-hero:active {
+  transform: scale(0.97);
+}
+
+.hero-scroll-hint {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  animation: scrollPulse 2.5s ease-in-out infinite;
+  animation: heroFadeIn 0.8s 0.6s ease both, scrollPulse 2.5s 1s ease-in-out infinite;
+}
+
+.scroll-line {
+  width: 1px;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.25);
+  position: relative;
+  overflow: hidden;
+}
+
+.scroll-line::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background: rgba(255, 255, 255, 0.5);
+  animation: scrollDot 2.5s ease-in-out infinite;
+}
+
+@keyframes heroFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scrollPulse {
+  0%, 100% { opacity: 0.35; }
+  50% { opacity: 0.7; }
+}
+
+@keyframes scrollDot {
+  0% { transform: translateY(-100%); }
+  50% { transform: translateY(160%); }
+  100% { transform: translateY(-100%); }
+}
+
+/* ----- STATS STRIP ----- */
+.stats-strip {
+  background: var(--color-cream);
+  padding: 48px 0;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.stats-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 0 48px;
+  transition: transform var(--transition-base), color var(--transition-base);
+}
+
+.stat-item:hover {
+  transform: translateY(-3px);
+}
+
+.stat-item:hover .stat-value {
+  background: linear-gradient(135deg, var(--color-mid), var(--color-amber));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.stat-value {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-weight: 700;
+  color: var(--color-mid);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.stat-unit {
+  font-size: 0.5em;
+  font-weight: 400;
+  color: var(--color-sage);
+  font-family: var(--font-sans);
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+}
+
+.stat-divider {
+  width: 1px;
+  height: 48px;
+  background: linear-gradient(to bottom, transparent, var(--border-light), transparent);
+}
+
+/* ----- MODULES ----- */
+.modules-section {
+  padding: 100px 0;
+  background: var(--surface-secondary);
+  background: linear-gradient(180deg, var(--color-cream) 0%, var(--surface-secondary) 50%, var(--color-cream) 100%);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.modules-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+}
+
+.module-block {
+  padding: 52px 48px;
+  cursor: pointer;
+  transition: background 0.35s ease, transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease, border-left-color 0.35s ease, border-left-width 0.35s ease;
+  position: relative;
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
+  border-left: 4px solid transparent;
+}
+
+.module-block:hover {
+  background: rgba(26, 58, 42, 0.03);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 32px rgba(26, 58, 42, 0.06);
+  border-left-color: var(--color-amber);
+}
+
+.module-block::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 48px;
+  right: 48px;
+  height: 1px;
+  background: var(--border-light);
+}
+
+.module-biochem { border-top: none; border-left: none; }
+.module-botany { border-top: none; border-right: none; }
+.module-zoology { border-bottom: none; border-left: none; }
+.module-genetics { border-bottom: none; border-right: none; }
+
+.module-block:nth-child(odd) {
+  border-right: 1px solid var(--border-light);
+}
+
+.module-icon-area {
+  flex-shrink: 0;
+  width: 72px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  background: rgba(26, 58, 42, 0.04);
+  transition: background 0.35s ease, transform 0.35s ease;
+}
+
+.module-block:hover .module-icon-area {
+  background: rgba(26, 58, 42, 0.08);
+  transform: scale(1.05);
+}
+
+.module-icon-svg {
+  color: var(--color-sage);
+  transition: color 0.35s ease;
+}
+
+.module-biochem:hover .module-icon-svg { color: var(--color-mid); }
+.module-botany:hover .module-icon-svg { color: #5a7d3c; }
+.module-zoology:hover .module-icon-svg { color: #6a5a3c; }
+.module-genetics:hover .module-icon-svg { color: #5a4a7c; }
+
+.module-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.module-name {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-deep);
+}
+
+.module-subjects {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  color: var(--color-amber);
+  font-weight: 600;
+}
+
+.module-desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  max-width: 380px;
+}
+
+/* ----- CTA ----- */
+.cta-section {
+  padding: 100px 0;
+  background: var(--color-deep);
+  background: linear-gradient(160deg, #1a2f1d, #0c1810), radial-gradient(ellipse at 30% 50%, rgba(196, 149, 106, 0.04) 0%, transparent 60%), radial-gradient(ellipse at 70% 80%, rgba(90, 125, 92, 0.03) 0%, transparent 50%);
+  background-blend-mode: normal, normal, normal;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(196, 149, 106, 0.25), transparent);
+}
+
+.cta-block {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.cta-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 16px;
+  letter-spacing: -0.01em;
+}
+
+.cta-subtitle {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 40px;
+  line-height: 1.7;
+}
+
+.cta-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-secondary-cta {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 15px 32px;
+  border-radius: var(--radius-lg, 12px);
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.8);
+  transition: all 0.25s ease;
+}
+
+.btn-secondary-cta:hover {
+  border-color: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.06);
+  transform: translateY(-2px);
+}
+
+.btn-secondary-cta:active {
+  transform: scale(0.97);
+}
+
+/* ============================================================
+ * SCROLL-TRIGGERED ANIMATIONS
+ * ============================================================ */
+.section-reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.section-reveal--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered reveal for children */
+.section-reveal-child {
+  opacity: 0;
+  transform: translateY(24px) scale(0.97);
+  transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.section-reveal-child--visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Scroll down indicator - smooth */
+.scroll-down-indicator {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--color-mid);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 50;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  border: none;
+}
+
+.scroll-down-indicator--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.scroll-down-indicator:hover {
+  background: var(--color-sage);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.25);
+}
+
+/* ============================================================
+ * RESPONSIVE
+ * ============================================================ */
+@media (max-width: 1024px) {
+  .hero-content {
+    padding: 0 40px;
+    padding-top: calc(var(--header-height) + 40px);
+  }
+
+  .modules-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .module-block {
+    padding: 40px 32px;
+  }
+
+  .module-block:nth-child(odd) {
+    border-right: none;
+  }
+
+  .module-block::after {
+    left: 32px;
+    right: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 90svh;
+  }
+
+  .hero-content {
+    padding: 0 24px;
+    padding-top: calc(var(--header-height) + 24px);
+    padding-bottom: 80px;
+  }
+
+  .hero-title {
+    font-size: clamp(2rem, 7vw, 2.8rem);
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .btn-primary-hero,
+  .btn-outline-hero {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-scroll-hint {
+    display: none;
+  }
+
+  .stats-row {
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  .stat-item {
+    padding: 0 24px;
+  }
+
+  .stat-divider {
+    display: none;
+  }
+
+  .modules-section {
+    padding: 64px 0;
+  }
+
+  .section-header {
+    margin-bottom: 40px;
+  }
+
+  .module-block {
+    padding: 32px 24px;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .module-icon-area {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+  }
+
+  .cta-section {
+    padding: 64px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.8rem;
+  }
+  .daily-question-card {
+    padding: 20px 16px;
+  }
+  .hero-subtitle {
+    font-size: 0.85rem;
+  }
+  .hero-actions {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+  .hero-actions a {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* ====== 每日一题 ====== */
+.daily-question-section {
+  padding: 60px 0 40px;
+  background: linear-gradient(135deg, rgba(90,125,92,0.04) 0%, rgba(232,168,48,0.04) 100%);
+}
+
+.daily-question-card {
+  max-width: 720px;
+  margin: 0 auto;
+  background: var(--surface, #fff);
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+  border: 1px solid var(--border, #e8e6e1);
+}
+
+.dq-header {
+  margin-bottom: 20px;
+}
+
+.dq-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.dq-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: rgba(232,168,48,0.12);
+  color: #c0880a;
+}
+
+.dq-subject {
+  font-size: 0.8rem;
+  color: var(--text-muted, #888);
+}
+
+.dq-streak {
+  font-size: 0.8rem;
+  color: #e8a830;
+  font-weight: 600;
+  margin-left: auto;
+}
+
+.dq-question {
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.7;
+  margin-bottom: 24px;
+  color: var(--text-primary, #1a2f1d);
+}
+
+.dq-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dq-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px 18px;
+  border: 1.5px solid var(--border, #e0e0e0);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.dq-option:hover {
+  border-color: var(--color-sage, #5a7d5c);
+  background: rgba(90,125,92,0.04);
+}
+
+.dq-marker {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid var(--border, #e0e0e0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  transition: all 0.2s;
+}
+
+.dq-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  padding-top: 3px;
+}
+
+.dq-selected {
+  border-color: var(--color-sage, #5a7d5c);
+  background: rgba(90,125,92,0.06);
+}
+
+.dq-selected .dq-marker {
+  border-color: var(--color-sage, #5a7d5c);
+  background: var(--color-sage, #5a7d5c);
+  color: #fff;
+}
+
+.dq-correct {
+  border-color: var(--success-green, #3a8c5c);
+  background: rgba(58,140,92,0.06);
+}
+
+.dq-correct .dq-marker {
+  border-color: var(--success-green, #3a8c5c);
+  background: var(--success-green, #3a8c5c);
+  color: #fff;
+}
+
+.dq-wrong {
+  border-color: var(--terracotta, #c0553a);
+  background: rgba(192,85,58,0.06);
+}
+
+.dq-wrong .dq-marker {
+  border-color: var(--terracotta, #c0553a);
+  background: var(--terracotta, #c0553a);
+  color: #fff;
+}
+
+.dq-result {
+  margin-top: 20px;
+  padding: 14px 18px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.dq-result-correct {
+  background: rgba(58,140,92,0.1);
+  color: var(--success-green, #3a8c5c);
+}
+
+.dq-result-wrong {
+  background: rgba(192,85,58,0.1);
+  color: var(--terracotta, #c0553a);
+}
+
+.dq-explanation {
+  margin-top: 16px;
+  padding: 18px;
+  background: rgba(232,168,48,0.06);
+  border-radius: 10px;
+  border-left: 3px solid #e8a830;
+}
+
+.dq-explanation-title {
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: #c0880a;
+  margin-bottom: 8px;
+}
+
+.dq-explanation-text {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--text-secondary, #555);
+}
+
+/* ============================================================
+ * 生物学史滑动式时间轴 — 签名区域
+ * 设计：深色森林底 + 琥珀金点缀 + 噪点纹理 + 不对称布局
+ * ============================================================ */
+
+.biology-history-section {
+  position: relative;
+  padding: 96px 0 120px;
+  background:
+    radial-gradient(ellipse at 20% 20%, rgba(196, 149, 106, 0.12) 0%, transparent 45%),
+    radial-gradient(ellipse at 85% 80%, rgba(90, 125, 92, 0.1) 0%, transparent 40%),
+    linear-gradient(160deg, #1a2f1d 0%, #14261a 50%, #1a2f1d 100%);
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* 噪点纹理层 */
+.biology-history-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.06'/%3E%3C/svg%3E");
+  opacity: 0.7;
+  pointer-events: none;
+  mix-blend-mode: overlay;
+  z-index: 0;
+}
+
+/* 顶部斜切装饰线 */
+.biology-history-section::after {
+  content: '';
+  position: absolute;
+  top: -60px;
+  left: -5%;
+  width: 110%;
+  height: 120px;
+  background: linear-gradient(90deg, transparent, rgba(196, 149, 106, 0.08), transparent);
+  transform: rotate(-2deg);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.biology-history-header {
+  position: relative;
+  z-index: 2;
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: 0 var(--content-padding);
+  margin-bottom: 56px;
+  padding-left: clamp(24px, 8vw, 96px);
+}
+
+.biology-history-label {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-amber-light);
+  margin-bottom: 14px;
+  opacity: 0.85;
+}
+
+.biology-history-title-main {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 700;
+  color: #f5f0e8;
+  line-height: 1.15;
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
+
+.biology-history-subtitle {
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: rgba(245, 240, 232, 0.65);
+  line-height: 1.75;
+  max-width: 560px;
+}
+
+.biology-history-vertical {
+  position: relative;
+  z-index: 2;
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: 0 var(--content-padding);
+}
+
+.bio-history-category {
+  margin-bottom: 72px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.bio-history-category.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.bio-history-category-header {
+  margin-bottom: 36px;
+  padding-left: 24px;
+  border-left: 3px solid var(--color-amber-light);
+}
+
+.bio-history-category-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.4rem, 3vw, 1.9rem);
+  font-weight: 700;
+  color: #f5f0e8;
+  margin-bottom: 8px;
+  letter-spacing: -0.01em;
+}
+
+.bio-history-category-subtitle {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  color: rgba(245, 240, 232, 0.62);
+  line-height: 1.65;
+  max-width: 560px;
+}
+
+.bio-history-timeline {
+  position: relative;
+  padding-left: 92px;
+}
+
+.bio-history-timeline::before {
+  content: '';
+  position: absolute;
+  top: 12px;
+  bottom: 12px;
+  left: 38px;
+  width: 2px;
+  background: linear-gradient(180deg, rgba(196, 149, 106, 0.55), rgba(196, 149, 106, 0.25) 80%, transparent);
+  border-radius: 999px;
+}
+
+.bio-history-event {
+  position: relative;
+  margin-bottom: 28px;
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+  cursor: pointer;
+}
+
+.bio-history-event.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.bio-history-event:focus-visible {
+  outline: none;
+}
+
+.bio-history-event:focus-visible .bio-history-card {
+  box-shadow: 0 0 0 3px rgba(196, 149, 106, 0.45), 0 12px 40px rgba(0, 0, 0, 0.22);
+}
+
+.bio-history-year-badge {
+  position: absolute;
+  left: -92px;
+  top: 6px;
+  width: 76px;
+  text-align: right;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-amber-light);
+  letter-spacing: 0.02em;
+  z-index: 2;
+}
+
+.bio-history-line {
+  position: absolute;
+  left: -58px;
+  top: 14px;
+  width: 20px;
+  height: 2px;
+  background: rgba(196, 149, 106, 0.45);
+  border-radius: 999px;
+}
+
+.bio-history-line::after {
+  content: '';
+  position: absolute;
+  right: -6px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-amber-light);
+  box-shadow: 0 0 0 4px rgba(196, 149, 106, 0.2);
+}
+
+.bio-history-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+  padding: 22px 24px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+              background 0.3s ease,
+              border-color 0.3s ease,
+              box-shadow 0.3s ease;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.16);
+}
+
+.bio-history-event:hover .bio-history-card,
+.bio-history-event--expanded .bio-history-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(196, 149, 106, 0.3);
+  transform: translateY(-4px);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.24);
+}
+
+.bio-history-card-year {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--color-amber-light);
+  margin-bottom: 6px;
+  opacity: 0.8;
+}
+
+.bio-history-card-title {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #f5f0e8;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+
+.bio-history-card-detail {
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  font-weight: 400;
+  color: rgba(245, 240, 232, 0.55);
+  line-height: 1.7;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: max-height 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+              opacity 0.35s ease,
+              transform 0.35s ease,
+              margin-top 0.35s ease;
+}
+
+.bio-history-event--expanded .bio-history-card-detail {
+  max-height: 260px;
+  opacity: 1;
+  transform: translateY(0);
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* 浅色模式适配 */
+[data-theme="light"] .biology-history-section {
+  background:
+    radial-gradient(ellipse at 20% 20%, rgba(196, 149, 106, 0.12) 0%, transparent 45%),
+    radial-gradient(ellipse at 85% 80%, rgba(90, 125, 92, 0.08) 0%, transparent 40%),
+    linear-gradient(160deg, #1b3a2d 0%, #162f22 50%, #1b3a2d 100%);
+}
+
+[data-theme="light"] .biology-history-title-main,
+[data-theme="light"] .bio-history-category-title,
+[data-theme="light"] .bio-history-card-title {
+  color: #f8f4ec;
+}
+
+[data-theme="light"] .biology-history-subtitle,
+[data-theme="light"] .bio-history-category-subtitle {
+  color: rgba(248, 244, 236, 0.68);
+}
+
+[data-theme="light"] .bio-history-card-detail {
+  color: rgba(248, 244, 236, 0.55);
+}
+
+/* 响应式 */
+@media (max-width: 768px) {
+  .biology-history-section {
+    padding: 64px 0 80px;
+  }
+
+  .biology-history-header {
+    padding-left: var(--content-padding);
+    margin-bottom: 40px;
+  }
+
+  .biology-history-title-main {
+    font-size: clamp(1.7rem, 6vw, 2.2rem);
+  }
+
+  .biology-history-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .bio-history-timeline {
+    padding-left: 64px;
+  }
+
+  .bio-history-year-badge {
+    left: -64px;
+    width: 52px;
+    font-size: 0.78rem;
+  }
+
+  .bio-history-line {
+    left: -40px;
+    width: 14px;
+  }
+
+  .bio-history-card {
+    padding: 18px 20px;
+  }
+
+  .bio-history-card-title {
+    font-size: 1.05rem;
+  }
+
+  .bio-history-card-detail {
+    font-size: 0.88rem;
+  }
+}

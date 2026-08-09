@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第十四章 生物系统学基础 · 第二节 生物分类学的发展 — 生物集训营笔记</title>
+<style>
+:root {
+  --bg: #fdfbf7; --bg2: #f5f0e8; --ink: #2c2416; --muted: #7a6e5e;
+  --rule: #d6ccc0; --accent: #c0392b; --accent2: #8b4513;
+  --highlight: #fff3cd; --note-bg: #fff8e7; --note-border: #e8c84a;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: "Noto Sans CJK SC", "WenQuanYi Micro Hei", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  font-size: 16px; line-height: 1.8; color: var(--ink); background: var(--bg);
+}
+.cover { text-align: center; padding: 4rem 2rem 3rem; border-bottom: 3px double var(--rule); margin-bottom: 0; background: linear-gradient(180deg, var(--bg2) 0%, var(--bg) 100%); }
+.cover .ch-num { font-size: 1rem; color: var(--accent); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 0.3rem; }
+.cover h1 { font-size: 2.2rem; font-weight: 800; color: var(--ink); margin-bottom: 0.5rem; letter-spacing: 0.03em; }
+.cover .subtitle { font-size: 1rem; color: var(--muted); }
+.cover .meta { margin-top: 1.2rem; font-size: 0.85rem; color: var(--muted); display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
+.main-layout { max-width: 1060px; margin: 0 auto; padding: 0 1.5rem; }
+.section-header { border-bottom: 3px solid var(--accent); padding: 2rem 0 0.6rem; margin-bottom: 1.5rem; }
+.section-header .sec-num { font-size: 0.9rem; color: var(--accent); font-weight: 700; letter-spacing: 0.08em; }
+.section-header h2 { font-size: 1.6rem; font-weight: 800; color: var(--ink); margin-top: 0.15rem; }
+.topic-header { margin: 2rem 0 1rem; padding-left: 0.8rem; border-left: 4px solid var(--accent); }
+.topic-header h3 { font-size: 1.25rem; font-weight: 700; color: var(--ink); }
+.subtopic-header { margin: 1.5rem 0 0.8rem; }
+.subtopic-header h4 { font-size: 1.1rem; font-weight: 700; color: var(--accent2); }
+.note-block { display: flex; gap: 1.5rem; margin-bottom: 1.2rem; align-items: flex-start; }
+.note-content { flex: 1; padding: 0.8rem 1rem; background: var(--bg2); border-radius: 6px; border: 1px solid var(--rule); }
+.note-content p { margin-bottom: 0.5rem; }
+.note-content p:last-child { margin-bottom: 0; }
+.note-content ul, .note-content ol { padding-left: 1.5rem; margin: 0.4rem 0; }
+.note-content li { margin-bottom: 0.25rem; }
+.annotation { width: 240px; flex-shrink: 0; background: var(--note-bg); border: 1px solid var(--note-border); border-radius: 6px; padding: 0.6rem 0.8rem; font-size: 0.82rem; line-height: 1.6; color: var(--accent2); align-self: flex-start; }
+.annotation::before { content: "📝 批注"; display: block; font-size: 0.7rem; font-weight: 700; color: var(--accent); letter-spacing: 0.06em; margin-bottom: 0.3rem; text-transform: uppercase; }
+.u { text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 2px; text-underline-offset: 3px; font-weight: 600; }
+.u-double { text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 2px; text-underline-offset: 3px; text-decoration-style: double; font-weight: 700; }
+.key-point { background: var(--highlight); padding: 0.1em 0.3em; border-radius: 3px; font-weight: 600; border-bottom: 1.5px solid var(--accent); }
+.table-wrap { overflow-x: auto; overflow-y: auto; max-height: 600px; margin: 1.5rem 0; border: 1px solid var(--rule); border-radius: 6px; }
+table { width: 100%; border-collapse: collapse; font-size: 0.9rem; min-width: 800px; }
+table thead th { background: var(--accent); color: #fff; padding: 0.6rem 0.8rem; font-weight: 700; text-align: center; white-space: nowrap; }
+table tbody td { padding: 0.5rem 0.8rem; border-bottom: 1px solid var(--rule); vertical-align: top; }
+table tbody tr:nth-child(even) { background: var(--bg2); }
+table tbody tr:last-child td { border-bottom: none; }
+table tbody td:first-child { font-weight: 600; white-space: nowrap; text-align: center; background: var(--bg2); }
+figcaption { text-align: center; font-size: 0.85rem; color: var(--muted); margin-top: 0.4rem; }
+.diagram { margin: 1.2rem 0; text-align: center; }
+.diagram img { max-width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 4px; }
+.summary-box { background: linear-gradient(135deg, #fdf2f2 0%, #fef9e7 100%); border: 2px solid var(--accent); border-radius: 8px; padding: 1.2rem 1.5rem; margin: 2rem 0; }
+.summary-box h4 { color: var(--accent); font-size: 1rem; margin-bottom: 0.6rem; }
+.expand-block { background: #f0f7f4; border: 1px dashed #7cb342; border-radius: 6px; padding: 0.5rem 0.9rem; margin: 0.6rem 0 0; font-size: 0.83rem; line-height: 1.6; color: #3e6b3e; }
+.expand-block::before { content: "🔍 拓展"; display: block; font-size: 0.7rem; font-weight: 700; color: #558b2f; letter-spacing: 0.06em; margin-bottom: 0.2rem; }
+.flow-box { background: var(--bg); border: 1px solid var(--rule); border-radius: 8px; padding: 1.2rem; margin: 1.2rem 0; text-align: center; }
+.flow-box .flow-title { font-size: 0.85rem; font-weight: 700; color: var(--accent); margin-bottom: 0.8rem; }
+.flow-row { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 0.3rem; font-size: 0.85rem; }
+.flow-item { background: var(--bg2); border: 1px solid var(--rule); border-radius: 4px; padding: 0.25rem 0.6rem; white-space: nowrap; }
+.flow-arrow { color: var(--accent); font-weight: 700; font-size: 1.1rem; }
+footer { margin-top: 3rem; padding: 1.5rem; border-top: 1px solid var(--rule); text-align: center; font-size: 0.8rem; color: var(--muted); }
+@media (max-width: 768px) {
+  .cover h1 { font-size: 1.5rem; }
+  .note-block { flex-direction: column; }
+  .annotation { width: 100%; }
+  .main-layout { padding: 0 0.8rem; }
+  table { font-size: 0.78rem; min-width: 600px; }
+}
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div class="ch-num">高中生物竞赛讲义 · 集训营</div>
+  <h1>第十四章 生物系统学基础</h1>
+  <div class="subtitle">第二节 生物分类学的发展</div>
+  <div class="meta">
+    <span>人为分类</span><span>自然分类</span><span>双名法</span><span>分子证据</span><span>分子钟</span>
+    <span>📅 整理日期: 2026年7月6日</span>
+  </div>
+</div>
+
+<div class="main-layout">
+
+<div class="section-header">
+  <div class="sec-num">第二节</div>
+  <h2>生物分类学的发展</h2>
+</div>
+
+<!-- ====== 一、人为分类 → 自然分类 ====== -->
+<div class="topic-header">
+  <h3>一、人为分类与自然分类</h3>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>生物分类的发展史大致可划分为两个阶段：<span class="u-double">人为分类（artificial classification）</span> 和 <span class="u-double">自然分类（natural classification）</span>。</p>
+    <ul>
+      <li><span class="key-point">人为分类</span>：仅依据生物的 <em>某些表面特征</em>（如能否飞行、能否行走、生活环境等）进行分类，不考虑物种间的亲缘关系和进化关系。中国古代《本草纲目》把人吃的植物分草部、谷部、菜部、果部、木部等即属此类。</li>
+      <li><span class="key-point">自然分类</span>：依据生物 <em>全面相似性</em>，特别是 <em>系统发育的亲缘关系</em>（形态、解剖、生理、生化、细胞、分子等多方面证据）进行分类。林奈 1735 年建立分类系统后，逐步向自然分类发展；19 世纪达尔文《物种起源》发表后，自然分类获得理论依据；20 世纪后期分子生物学兴起，自然分类的证据得到进一步丰富。</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    自然分类是分类学的目标。本节核心是 <strong>从林奈双名法到分子证据</strong> 的演进过程。
+  </div>
+</div>
+
+<div class="expand-block">
+  分类学发展史脉络：①古代本草式分类（李时珍《本草纲目》1596）→ ②林奈 1735/1753 创立双名法 → ③达尔文 1859《物种起源》给分类提供进化依据 → ④20 世纪细胞学/血清学/电泳/HPLC → ⑤20 世纪 60 年代起 DNA/蛋白质序列证据 → ⑥2008 起大规模基因组测序重构生命之树。
+</div>
+
+<div class="diagram">
+<svg viewBox="0 0 800 360" style="width:100%;max-width:700px;margin:1rem auto;display:block;font-family:sans-serif;">
+  <rect x="0" y="0" width="800" height="360" fill="#fdfbf7" stroke="#d6ccc0" rx="8"/>
+  <text x="400" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="#2c2416">图 14-2-1　生物分类学发展时间线</text>
+  <line x1="60" y1="180" x2="740" y2="180" stroke="#c0392b" stroke-width="3"/>
+  <polygon points="740,180 728,173 728,187" fill="#c0392b"/>
+  <circle cx="110" cy="180" r="8" fill="#c0392b"/>
+  <text x="110" y="158" text-anchor="middle" font-size="12" font-weight="700" fill="#2c2416">亚里士多德</text>
+  <text x="110" y="143" text-anchor="middle" font-size="9" fill="#7a6e5e">公元前4世纪</text>
+  <text x="110" y="205" text-anchor="middle" font-size="10" fill="#8b4513">人为分类萌芽</text>
+  <text x="110" y="220" text-anchor="middle" font-size="9" fill="#7a6e5e">植物/动物二分</text>
+  <circle cx="240" cy="180" r="8" fill="#c0392b"/>
+  <text x="240" y="158" text-anchor="middle" font-size="12" font-weight="700" fill="#2c2416">林奈</text>
+  <text x="240" y="143" text-anchor="middle" font-size="9" fill="#7a6e5e">1735/1753</text>
+  <text x="240" y="205" text-anchor="middle" font-size="10" fill="#8b4513">双名法确立</text>
+  <text x="240" y="220" text-anchor="middle" font-size="9" fill="#7a6e5e">阶层系统</text>
+  <circle cx="360" cy="180" r="8" fill="#c0392b"/>
+  <text x="360" y="158" text-anchor="middle" font-size="12" font-weight="700" fill="#2c2416">达尔文</text>
+  <text x="360" y="143" text-anchor="middle" font-size="9" fill="#7a6e5e">1859</text>
+  <text x="360" y="205" text-anchor="middle" font-size="10" fill="#8b4513">《物种起源》</text>
+  <text x="360" y="220" text-anchor="middle" font-size="9" fill="#7a6e5e">分类=进化关系</text>
+  <circle cx="480" cy="180" r="8" fill="#c0392b"/>
+  <text x="480" y="158" text-anchor="middle" font-size="12" font-weight="700" fill="#2c2416">数值分类学</text>
+  <text x="480" y="143" text-anchor="middle" font-size="9" fill="#7a6e5e">1963 Sokal&amp;Sneath</text>
+  <text x="480" y="205" text-anchor="middle" font-size="10" fill="#8b4513">表型相似性</text>
+  <text x="480" y="220" text-anchor="middle" font-size="9" fill="#7a6e5e">大量性状+统计聚类</text>
+  <circle cx="600" cy="180" r="8" fill="#c0392b"/>
+  <text x="600" y="158" text-anchor="middle" font-size="12" font-weight="700" fill="#2c2416">分支系统学</text>
+  <text x="600" y="143" text-anchor="middle" font-size="9" fill="#7a6e5e">1950/1966 Hennig</text>
+  <text x="600" y="205" text-anchor="middle" font-size="10" fill="#8b4513">共同衍征</text>
+  <text x="600" y="220" text-anchor="middle" font-size="9" fill="#7a6e5e">单系群/分支图</text>
+  <circle cx="720" cy="180" r="8" fill="#c0392b"/>
+  <text x="720" y="158" text-anchor="middle" font-size="12" font-weight="700" fill="#2c2416">分子系统学</text>
+  <text x="720" y="143" text-anchor="middle" font-size="9" fill="#7a6e5e">1960s–至今</text>
+  <text x="720" y="205" text-anchor="middle" font-size="10" fill="#8b4513">DNA/蛋白序列</text>
+  <text x="720" y="220" text-anchor="middle" font-size="9" fill="#7a6e5e">三域系统(1977)</text>
+  <rect x="80" y="270" width="200" height="3" fill="#8b4513"/>
+  <text x="180" y="290" text-anchor="middle" font-size="11" font-weight="700" fill="#8b4513">人为分类阶段</text>
+  <rect x="300" y="270" width="430" height="3" fill="#c0392b"/>
+  <text x="515" y="290" text-anchor="middle" font-size="11" font-weight="700" fill="#c0392b">自然分类阶段（反映系统发育）</text>
+  <text x="400" y="330" text-anchor="middle" font-size="10" fill="#7a6e5e">分类学从"以表面特征分类"到"以系统发育亲缘关系分类"的演进；分子系统学是当前主流</text>
+</svg>
+<figcaption>图 14-2-1　生物分类学发展时间线：亚里士多德（人为分类）→ 林奈（双名法）→ 达尔文（进化依据）→ 数值分类学（表型）→ 分支系统学（衍征）→ 分子系统学（DNA 序列）</figcaption>
+</div>
+
+<!-- ====== 二、人为分类——本草纲目 ====== -->
+<div class="topic-header">
+  <h3>二、人为分类的代表：李时珍《本草纲目》</h3>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><span class="u-double">李时珍（1518–1593）</span>，明代医药学家。其巨著 <em>《本草纲目》</em> 成书于 1578 年，全书 52 卷，载药 1 892 种（其中植物药 1 094 种），插图 1 109 幅，方剂 11 096 首，于 1596 年首次出版。</p>
+    <p>李时珍把植物分为 <span class="u-double">草、谷、菜、果、木</span> 5 部，下再分若干类：</p>
+    <ul>
+      <li>草部：山草、芳草、隰草、毒草、蔓草、水草、石草、苔类、杂草等 9 类。</li>
+      <li>谷部：麻麦稻、稷粟、菽豆、造酿等 4 类。</li>
+      <li>菜部：荤辛、柔滑、蓏菜、水菜、芝栭等 5 类。</li>
+      <li>果部：五果、山果、夷果、味果、蓏果、水果等 6 类。</li>
+      <li>木部：香木、乔木、灌木、寓木、苞木、杂木等 6 类。</li>
+    </ul>
+    <p>这是典型的<span class="u">人为分类</span>——以人的用途或习性为依据，未能反映植物的自然亲缘关系。但李时珍所创的"析族区类，振纲分目"的分类思想比欧洲早近 200 年。</p>
+  </div>
+  <div class="annotation">
+    李时珍的"五部"是中国 16 世纪植物分类的总结，比林奈 1735 年的人工分类早约 150 年。
+  </div>
+</div>
+
+<!-- ====== 三、自然分类的开端——林奈双名法 ====== -->
+<div class="topic-header">
+  <h3>三、自然分类的开端：林奈双名法</h3>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><span class="u-double">林奈（Carl von Linné / Carolus Linnaeus, 1707–1778）</span>，瑞典博物学家，现代分类学之父。1735 年发表 <em>《自然系统》（Systema Naturae）</em>，1753 年发表 <em>《植物种志》（Species Plantarum）</em>，正式确立 <span class="key-point">双名法（binomial nomenclature）</span>。</p>
+    <p>双名法规定：每种生物的学名由两个拉丁词组成——</p>
+    <ul>
+      <li>第一词为<span class="u">属名（genus）</span>，首字母大写，斜体。</li>
+      <li>第二词为<span class="u">种加词（specific epithet）</span>，小写，斜体。</li>
+      <li>学名之后可加命名人姓氏（正体）。</li>
+    </ul>
+    <p>例：</p>
+    <ul>
+      <li>狼的学名：<em>Canis lupus</em> Linnaeus, 1758</li>
+      <li>人的学名：<em>Homo sapiens</em> Linnaeus, 1758</li>
+      <li>家犬的学名：<em>Canis lupus familiaris</em>（亚种）</li>
+    </ul>
+    <p>双名法的优点：① <span class="key-point">统一</span>——世界通用一种拉丁语学名，消除各国语言差异；② <span class="key-point">精确</span>——一种生物对应一个学名；③ <span class="key-point">稳定</span>——有命名法规约束（ICZN, ICN 等）。</p>
+  </div>
+  <div class="annotation">
+    <strong>属名大写 + 种加词小写 + 斜体</strong>，命名人正体。这是论文写作最常考的形式规范。
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>林奈还创立了 <span class="u-double">阶层系统（hierarchical system）</span>，把生物分到 纲→目→属→种 4 个等级：</p>
+    <ul>
+      <li>纲（Classis）</li>
+      <li>目（Ordo）</li>
+      <li>属（Genus）</li>
+      <li>种（Species）</li>
+    </ul>
+    <p>林奈时已认识到更高的"界"（Regnum），但在他的系统中仅分为植物界、动物界两界。</p>
+  </div>
+  <div class="annotation">
+    林奈最初相信 <em>物种不变</em>，是 <em>神创论者</em>。但他建立的分类系统为后来达尔文进化论与自然分类提供了"骨架"。
+  </div>
+</div>
+
+<!-- ====== 四、自然分类的重要依据 ====== -->
+<div class="topic-header">
+  <h3>四、自然分类的重要依据</h3>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>自然分类的依据可分为四大类：</p>
+    <ul>
+      <li><span class="key-point">形态学依据（morphology）</span>：外部形态、解剖结构。最传统但常受趋同进化干扰。</li>
+      <li><span class="key-point">细胞学依据（cytology）</span>：染色体数目、组型（核型）、带型、减数分裂行为。核型分析是 20 世纪 60–80 年代的主要手段。</li>
+      <li><span class="key-point">化学与血清免疫学依据（chemistry & serology）</span>：蛋白质氨基酸组成、血清蛋白电泳、抗原-抗体沉淀反应（血清学距离）。</li>
+      <li><span class="key-point">分子生物学依据（molecular biology）</span>：DNA / RNA / 蛋白质序列、DNA 杂交、基因组比较。20 世纪 60 年代以来主流。</li>
+    </ul>
+    <p>DNA 杂交（DNA-DNA hybridization）：若两个物种的同源 DNA 链能够形成双链，能配对的碱基对越多，亲缘关系越近，反之越远。该方法由 B. H. Hoyer 等 1964 年首次用于分类学。</p>
+  </div>
+  <div class="annotation">
+    从形态→染色体→蛋白质→DNA 序列，是分类学证据"分子化"的过程。
+  </div>
+</div>
+
+<div class="diagram">
+<svg viewBox="0 0 800 440" style="width:100%;max-width:700px;margin:1rem auto;display:block;font-family:sans-serif;">
+  <rect x="0" y="0" width="800" height="440" fill="#fdfbf7" stroke="#d6ccc0" rx="8"/>
+  <text x="400" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="#2c2416">图 14-2-2　三大分类学派对比：数值分类学 vs 分支系统学 vs 分子系统学</text>
+  <!-- header row -->
+  <rect x="20" y="50" width="150" height="40" fill="#c0392b" rx="4"/>
+  <text x="95" y="75" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">对比项</text>
+  <rect x="180" y="50" width="205" height="40" fill="#c0392b" rx="4"/>
+  <text x="282" y="70" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">数值分类学</text>
+  <text x="282" y="85" text-anchor="middle" font-size="9" fill="#fff">Phenetics</text>
+  <rect x="395" y="50" width="205" height="40" fill="#c0392b" rx="4"/>
+  <text x="497" y="70" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">分支系统学</text>
+  <text x="497" y="85" text-anchor="middle" font-size="9" fill="#fff">Cladistics</text>
+  <rect x="610" y="50" width="170" height="40" fill="#c0392b" rx="4"/>
+  <text x="695" y="70" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">分子系统学</text>
+  <text x="695" y="85" text-anchor="middle" font-size="9" fill="#fff">Molecular</text>
+  <!-- rows -->
+  <rect x="20" y="95" width="150" height="50" fill="#fff8e7" stroke="#d6ccc0"/>
+  <text x="95" y="124" text-anchor="middle" font-size="11" font-weight="700" fill="#2c2416">代表人物</text>
+  <text x="282" y="120" text-anchor="middle" font-size="10" fill="#2c2416">Sokal &amp; Sneath</text>
+  <text x="282" y="136" text-anchor="middle" font-size="10" fill="#7a6e5e">1963</text>
+  <text x="497" y="120" text-anchor="middle" font-size="10" fill="#2c2416">Willi Hennig</text>
+  <text x="497" y="136" text-anchor="middle" font-size="10" fill="#7a6e5e">1950/1966</text>
+  <text x="695" y="120" text-anchor="middle" font-size="10" fill="#2c2416">Woese, Swofford</text>
+  <text x="695" y="136" text-anchor="middle" font-size="10" fill="#7a6e5e">1977–至今</text>
+  <rect x="20" y="150" width="150" height="50" fill="#fff8e7" stroke="#d6ccc0"/>
+  <text x="95" y="179" text-anchor="middle" font-size="11" font-weight="700" fill="#2c2416">分类依据</text>
+  <text x="282" y="175" text-anchor="middle" font-size="10" fill="#2c2416">总体相似性</text>
+  <text x="282" y="191" text-anchor="middle" font-size="9" fill="#8b4513">（大量表型性状）</text>
+  <text x="497" y="175" text-anchor="middle" font-size="10" fill="#2c2416">共同衍征</text>
+  <text x="497" y="191" text-anchor="middle" font-size="9" fill="#8b4513">（synapomorphy）</text>
+  <text x="695" y="175" text-anchor="middle" font-size="10" fill="#2c2416">DNA/RNA 序列</text>
+  <text x="695" y="191" text-anchor="middle" font-size="9" fill="#8b4513">（16S rRNA 等）</text>
+  <rect x="20" y="205" width="150" height="50" fill="#fff8e7" stroke="#d6ccc0"/>
+  <text x="95" y="234" text-anchor="middle" font-size="11" font-weight="700" fill="#2c2416">核心方法</text>
+  <text x="282" y="230" text-anchor="middle" font-size="10" fill="#2c2416">统计聚类分析</text>
+  <text x="282" y="246" text-anchor="middle" font-size="9" fill="#8b4513">UPGMA / 距离矩阵</text>
+  <text x="497" y="230" text-anchor="middle" font-size="10" fill="#2c2416">分支图（cladogram）</text>
+  <text x="497" y="246" text-anchor="middle" font-size="9" fill="#8b4513">简约法 / 似然法</text>
+  <text x="695" y="230" text-anchor="middle" font-size="10" fill="#2c2416">序列比对+建树</text>
+  <text x="695" y="246" text-anchor="middle" font-size="9" fill="#8b4513">ML / BI / NJ</text>
+  <rect x="20" y="260" width="150" height="50" fill="#fff8e7" stroke="#d6ccc0"/>
+  <text x="95" y="289" text-anchor="middle" font-size="11" font-weight="700" fill="#2c2416">优点</text>
+  <text x="282" y="285" text-anchor="middle" font-size="10" fill="#2c2416">客观可重复</text>
+  <text x="282" y="301" text-anchor="middle" font-size="9" fill="#8b4513">不受主观判断影响</text>
+  <text x="497" y="285" text-anchor="middle" font-size="10" fill="#2c2416">反映进化历史</text>
+  <text x="497" y="301" text-anchor="middle" font-size="9" fill="#8b4513">强调单系群</text>
+  <text x="695" y="285" text-anchor="middle" font-size="10" fill="#2c2416">数据量大、精确</text>
+  <text x="695" y="301" text-anchor="middle" font-size="9" fill="#8b4513">可量化分歧时间</text>
+  <rect x="20" y="315" width="150" height="50" fill="#fff8e7" stroke="#d6ccc0"/>
+  <text x="95" y="344" text-anchor="middle" font-size="11" font-weight="700" fill="#2c2416">局限</text>
+  <text x="282" y="340" text-anchor="middle" font-size="10" fill="#2c2416">不反映进化</text>
+  <text x="282" y="356" text-anchor="middle" font-size="9" fill="#8b4513">趋同进化干扰大</text>
+  <text x="497" y="340" text-anchor="middle" font-size="10" fill="#2c2416">性状选择主观</text>
+  <text x="497" y="356" text-anchor="middle" font-size="9" fill="#8b4513">祖先性状难判定</text>
+  <text x="695" y="340" text-anchor="middle" font-size="10" fill="#2c2416">依赖模型假设</text>
+  <text x="695" y="356" text-anchor="middle" font-size="9" fill="#8b4513">长枝吸引等问题</text>
+  <rect x="20" y="375" width="760" height="50" fill="#fff8e7" stroke="#e8c84a" rx="4"/>
+  <text x="400" y="395" text-anchor="middle" font-size="11" fill="#8b4513">奥赛要点：分支系统学（Hennig）强调"共同衍征"定义单系群，是现代系统学的基础；</text>
+  <text x="400" y="413" text-anchor="middle" font-size="11" fill="#8b4513">分子系统学在分支系统学框架下使用分子数据，是当前构建生命之树的主流方法。</text>
+</svg>
+<figcaption>图 14-2-2　三大分类学派对比：数值分类学（表型相似性）→ 分支系统学（共同衍征/单系群）→ 分子系统学（DNA 序列），后者整合前两者优点</figcaption>
+</div>
+
+<!-- ====== 五、血清免疫学证据（表 6-2-1） ====== -->
+<div class="topic-header">
+  <h3>五、血清免疫学证据：灵长类血清蛋白反应</h3>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>用不同动物血清为抗原注射到家兔体内，可使家兔产生对应抗体。若将 <span class="u-double">兔抗人血清抗体</span> 分别与 7 种灵长类动物血清混合，发生 <span class="u">抗原-抗体沉淀反应</span>，沉淀越多说明这两种动物血清蛋白的相似性越高，亲缘关系越近。</p>
+    <p>下表为 <span class="u-double">表 6-2-1</span> 灵长类血清蛋白反应（沉淀量相对值，"＋"越多沉淀越多，"－"表示无沉淀）：</p>
+  </div>
+  <div class="annotation">
+    沉淀反应愈多 → 抗原决定簇愈相似 → 亲缘关系愈近。这是 <strong>血清学距离</strong> 概念。
+  </div>
+</div>
+
+<div class="table-wrap">
+<table>
+  <thead>
+    <tr><th>动物</th><th>兔抗人血清反应</th><th>亲缘关系</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>人（<em>Homo</em>）</td><td>＋＋＋＋＋＋＋＋＋＋＋＋</td><td>对照（自身最强）</td></tr>
+    <tr><td>黑猩猩（<em>Pan</em>）</td><td>＋＋＋＋＋＋＋＋＋＋</td><td>最近</td></tr>
+    <tr><td>大猩猩（<em>Gorilla</em>）</td><td>＋＋＋＋＋＋＋＋＋</td><td>次近</td></tr>
+    <tr><td>猩猩（<em>Pongo</em>）</td><td>＋＋＋＋＋＋＋</td><td>较近</td></tr>
+    <tr><td>狒狒（<em>Papio</em>）</td><td>＋＋＋＋</td><td>中等</td></tr>
+    <tr><td>蜘蛛猴（<em>Ateles</em>）</td><td>＋＋</td><td>较远</td></tr>
+    <tr><td>狐猴（<em>Lemur</em>）</td><td>＋</td><td>最远</td></tr>
+  </tbody>
+</table>
+<figcaption>表 6-2-1　兔抗人血清抗体对 7 种灵长类动物血清的沉淀反应<br>（注："＋"的多少为相对沉淀量示意）</figcaption>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>依据表 6-2-1，可构建 <span class="u-double">图 6-2-1 系统发育树</span>，反映 7 种灵长类动物与人的亲缘关系：</p>
+    <ul>
+      <li>人与黑猩猩最近（大猩猩次之，猩猩再次），三者在分子水平上同属 <em>Hominidae</em>（人科）。</li>
+      <li>狒狒、蜘蛛猴、狐猴依次为更外群，狐猴是最低等的灵长类（半猴）。</li>
+      <li>该顺序与后来分子进化研究（细胞色素 c、基因组测序）结果高度一致。</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    <strong>人 - 黑猩猩 - 大猩猩 - 猩猩</strong> 这一进化关系，在血清学、细胞色素 c、基因组序列三种证据下都得到确认。人类与黑猩猩的 DNA 序列差异仅约 1.2%。
+  </div>
+</div>
+
+<div class="expand-block">
+  <strong>图 6-2-1 灵长类系统发育树</strong>（人 vs 6 种灵长类）：根 → 狐猴 → (蜘蛛猴) → (狒狒) → (猩猩) → (大猩猩) → (黑猩猩) → 人。即：人 + 黑猩猩最近、然后是大猩猩、猩猩，与狒狒、蜘蛛猴、狐猴的亲缘关系依次变远。该树是血清学、细胞色素 c、基因组共同支持的"经典结果"。
+</div>
+
+<!-- ====== 六、血清学扩展：大熊猫等 4 种动物抗体抗原反应 ====== -->
+<div class="topic-header">
+  <h3>六、血清学扩展：大熊猫等 4 种动物的抗体-抗原反应</h3>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>用大熊猫、小熊猫、熊、浣熊 4 种动物血清分别免疫家兔制备抗体，再用抗体与 4 种动物血清反应，得到 <span class="u-double">表 6-2-2</span>：</p>
+  </div>
+  <div class="annotation">
+    本表曾用于"大熊猫分类地位"的经典争论——大熊猫到底属于熊科还是浣熊科？现代 DNA 证据支持大熊猫是熊科的一个亚科。
+  </div>
+</div>
+
+<div class="table-wrap">
+<table>
+  <thead>
+    <tr><th>动物血清（抗原）</th><th>兔抗大熊猫抗体</th><th>兔抗小熊猫抗体</th><th>兔抗熊抗体</th><th>兔抗浣熊抗体</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>大熊猫</td><td>＋＋＋＋＋＋＋＋＋＋</td><td>＋＋＋</td><td>＋＋＋＋</td><td>＋</td></tr>
+    <tr><td>小熊猫</td><td>＋＋＋</td><td>＋＋＋＋＋＋＋＋＋</td><td>＋＋</td><td>＋＋</td></tr>
+    <tr><td>熊</td><td>＋＋＋＋</td><td>＋＋</td><td>＋＋＋＋＋＋＋＋＋</td><td>＋</td></tr>
+    <tr><td>浣熊</td><td>＋</td><td>＋＋</td><td>＋</td><td>＋＋＋＋＋＋＋＋＋</td></tr>
+  </tbody>
+</table>
+<figcaption>表 6-2-2　大熊猫、小熊猫、熊、浣熊 4 种动物血清的抗体-抗原反应<br>（注："＋"示意沉淀量；本表为简化版）</figcaption>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>结论：</p>
+    <ul>
+      <li>大熊猫与熊的交叉反应较强（4 对 4）→ 支持大熊猫归入 <em>Ursidae</em>（熊科）。</li>
+      <li>小熊猫与熊、浣熊的交叉反应都弱（2 对 1）→ 小熊猫与浣熊科 <em>Procyonidae</em> 较近（独立一支）。</li>
+      <li>这一结果正是后来 1985 年 O'Brien 等通过 DNA 杂交得到证实的著名结论。</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    <strong>大熊猫</strong>（<em>Ailuropoda melanoleuca</em>）分类地位的百年争论在 1980s 因 DNA 证据尘埃落定，归入熊科。
+  </div>
+</div>
+
+<!-- ====== 七、细胞色素 c 氨基酸序列差异（表 6-2-3） ====== -->
+<div class="topic-header">
+  <h3>七、分子证据（1）：细胞色素 c 氨基酸序列差异</h3>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><span class="u-double">细胞色素 c（cytochrome c）</span>是线粒体内膜上的含铁血红素蛋白，存在于所有好氧生物中，是 <span class="u">线粒体呼吸链的电子传递体</span>。其序列在 35 亿年进化中高度保守，是研究分子进化的经典模型。</p>
+    <p><span class="u-double">表 6-2-3</span> 不同物种与人 <em>细胞色素 c</em> 氨基酸序列的差异数（共 104 个氨基酸残基）：</p>
+  </div>
+  <div class="annotation">
+    细胞色素 c 含 <strong>104 个氨基酸</strong>（人），从原核到真核、从低等到高等都存在，结构高度保守。
+  </div>
+</div>
+
+<div class="table-wrap">
+<table>
+  <thead>
+    <tr><th>物种</th><th>与人氨基酸差异数</th><th>与人的分支年代（百万年）</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>黑猩猩（<em>Pan troglodytes</em>）</td><td>0</td><td>~6</td></tr>
+    <tr><td>猕猴（<em>Macaca</em>）</td><td>1</td><td>~30</td></tr>
+    <tr><td>狗（<em>Canis</em>）</td><td>11</td><td>~80</td></tr>
+    <tr><td>马（<em>Equus</em>）</td><td>12</td><td>~90</td></tr>
+    <tr><td>袋鼠（<em>Macropus</em>）</td><td>10</td><td>~130</td></tr>
+    <tr><td>鸡（<em>Gallus</em>）</td><td>13</td><td>~300</td></tr>
+    <tr><td>金枪鱼（<em>Thunnus</em>）</td><td>21</td><td>~400</td></tr>
+    <tr><td>鲨鱼（<em>Squalus</em>）</td><td>23</td><td>~450</td></tr>
+    <tr><td>果蝇（<em>Drosophila</em>）</td><td>29</td><td>~600</td></tr>
+    <tr><td>小麦（<em>Triticum</em>）</td><td>35</td><td>~1000</td></tr>
+    <tr><td>链孢霉（<em>Neurospora</em>）</td><td>43</td><td>~1000</td></tr>
+    <tr><td>酵母（<em>Saccharomyces</em>）</td><td>45</td><td>~1100</td></tr>
+  </tbody>
+</table>
+<figcaption>表 6-2-3　不同物种与人 <em>细胞色素 c</em> 氨基酸序列差异数（数据简版）</figcaption>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>关键数据点：</p>
+    <ul>
+      <li>黑猩猩 <span class="key-point">0</span>（与人氨基酸序列完全相同）</li>
+      <li>猕猴 1、金枪鱼 21、链孢霉 43、酵母 45</li>
+      <li>差异数随亲缘关系变远而递增，呈现明显 <span class="u-double">分子钟（molecular clock）</span> 规律。</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    奥赛必记：<strong>黑猩猩 0、猕猴 1、金枪鱼 21、链孢霉 43、酵母 45</strong>。
+  </div>
+</div>
+
+<!-- ====== 八、细胞色素 c 核苷酸序列差异（表 6-2-4） ====== -->
+<div class="topic-header">
+  <h3>八、分子证据（2）：细胞色素 c 核苷酸序列差异</h3>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><span class="u-double">表 6-2-4</span> 不同物种 <em>细胞色素 c</em> 基因的核苷酸序列差异数（人共 104×3=312 bp）：</p>
+  </div>
+  <div class="annotation">
+    核苷酸差异数 <strong>远大于氨基酸差异数</strong>，因为密码子第三位碱基常为同义突变（中性学说）。
+  </div>
+</div>
+
+<div class="table-wrap">
+<table>
+  <thead>
+    <tr><th>物种</th><th>核苷酸差异数（人=0）</th><th>主要差异类型</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>黑猩猩</td><td>1</td><td>同义</td></tr>
+    <tr><td>猕猴</td><td>2</td><td>同义</td></tr>
+    <tr><td>狗</td><td>14</td><td>13 同义 + 1 错义</td></tr>
+    <tr><td>马</td><td>15</td><td>13 同义 + 2 错义</td></tr>
+    <tr><td>袋鼠</td><td>13</td><td>12 同义 + 1 错义</td></tr>
+    <tr><td>鸡</td><td>19</td><td>16 同义 + 3 错义</td></tr>
+    <tr><td>金枪鱼</td><td>35</td><td>30 同义 + 5 错义</td></tr>
+    <tr><td>鲨鱼</td><td>40</td><td>33 同义 + 7 错义</td></tr>
+    <tr><td>果蝇</td><td>56</td><td>48 同义 + 8 错义</td></tr>
+    <tr><td>小麦</td><td>70</td><td>60 同义 + 10 错义</td></tr>
+    <tr><td>链孢霉</td><td>93</td><td>78 同义 + 15 错义</td></tr>
+    <tr><td>酵母</td><td>102</td><td>85 同义 + 17 错义</td></tr>
+  </tbody>
+</table>
+<figcaption>表 6-2-4　不同物种与人 <em>细胞色素 c</em> 基因核苷酸序列差异数（数据简版）</figcaption>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>可见：</p>
+    <ul>
+      <li>核苷酸差异 <span class="u">远大于</span> 氨基酸差异，提示大量同义突变被自然选择"沉默"。</li>
+      <li>这种 <span class="key-point">中性突变（neutral mutation）</span> 的累积为分子钟提供基础。</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    Kimura 1968 <strong>中性学说</strong>：绝大多数分子水平的突变是中性或近中性的，分子进化主要由随机漂变而非自然选择驱动。
+  </div>
+</div>
+
+<!-- ====== 九、分子钟 ====== -->
+<div class="topic-header">
+  <h3>九、分子钟（molecular clock）</h3>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><span class="u-double">分子钟（molecular clock）</span> 概念由 <span class="key-point">Zuckerkandl & Pauling 1962/1965</span> 提出：</p>
+    <ul>
+      <li>核心思想：<span class="u-double">特定蛋白质（或基因）的氨基酸（核苷酸）替换速率近似恒定</span>，可作为衡量物种分化时间的"时钟"。</li>
+      <li>数学表达：<span class="u">替换速率 ≈ 替换数 / 时间</span>。对细胞色素 c 而言，<span class="key-point">每 200 万年约有 1% 的氨基酸残基发生替换</span>，每 20 万年有 1 个核苷酸替换。</li>
+      <li>对线粒体 DNA（mtDNA）：替换速率约为核 DNA 的 5–10 倍，常用于近缘物种及人类起源研究。</li>
+    </ul>
+    <p>应用：</p>
+    <ul>
+      <li>标定物种分歧时间。</li>
+      <li>构建 <span class="key-point">分子系统树（molecular phylogenetic tree）</span>。</li>
+      <li>追溯人类起源（"线粒体夏娃"非洲起源说，1987 Cann, Stoneking, Wilson）。</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    <strong>200 万年 1%</strong> 是细胞色素 c 的经验值；不同蛋白/基因速率不同：组蛋白最慢、假基因最快、mtDNA 中等偏快。
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>分子钟的限制：</p>
+    <ul>
+      <li>替换速率在不同世系（lineage）并不绝对恒定——<span class="key-point">"时间依赖性"现象</span>。</li>
+      <li>受到 <span class="u">代际效应</span>（短世代物种每代突变多）、<span class="u">代谢率效应</span>（高代谢物种氧化损伤多）、<span class="u">DNA 修复效率</span> 的影响。</li>
+      <li>需用化石标定点（fossil calibration）进行校正。</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    改进方法：<strong>松弛分子钟（relaxed clock）</strong>（允许不同分支有不同速率）由 Thorne, Kishino & Felsenstein 1998 提出，已成主流。
+  </div>
+</div>
+
+<div class="diagram">
+<svg viewBox="0 0 800 420" style="width:100%;max-width:700px;margin:1rem auto;display:block;font-family:sans-serif;">
+  <rect x="0" y="0" width="800" height="420" fill="#fdfbf7" stroke="#d6ccc0" rx="8"/>
+  <text x="400" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="#2c2416">图 14-2-3　五界系统 vs 三域系统对比</text>
+  <!-- left: 五界系统 -->
+  <rect x="20" y="50" width="360" height="320" fill="#fff8e7" stroke="#8b4513" stroke-width="1.5" rx="6"/>
+  <text x="200" y="75" text-anchor="middle" font-size="14" font-weight="700" fill="#8b4513">五界系统（Whittaker 1969）</text>
+  <text x="200" y="92" text-anchor="middle" font-size="10" fill="#7a6e5e">依据：细胞结构 + 营养类型</text>
+  <rect x="50" y="108" width="300" height="38" fill="#e8dcc8" stroke="#d6ccc0" rx="4"/>
+  <text x="200" y="125" text-anchor="middle" font-size="12" font-weight="700" fill="#2c2416">原核生物界 Monera</text>
+  <text x="200" y="140" text-anchor="middle" font-size="9" fill="#7a6e5e">细菌、蓝藻（原核细胞）</text>
+  <rect x="50" y="152" width="300" height="38" fill="#e8dcc8" stroke="#d6ccc0" rx="4"/>
+  <text x="200" y="169" text-anchor="middle" font-size="12" font-weight="700" fill="#2c2416">原生生物界 Protista</text>
+  <text x="200" y="184" text-anchor="middle" font-size="9" fill="#7a6e5e">单细胞真核（草履虫、衣藻）</text>
+  <rect x="50" y="196" width="300" height="38" fill="#e8dcc8" stroke="#d6ccc0" rx="4"/>
+  <text x="200" y="213" text-anchor="middle" font-size="12" font-weight="700" fill="#2c2416">真菌界 Fungi</text>
+  <text x="200" y="228" text-anchor="middle" font-size="9" fill="#7a6e5e">吸收营养（几丁质细胞壁）</text>
+  <rect x="50" y="240" width="300" height="38" fill="#e8dcc8" stroke="#d6ccc0" rx="4"/>
+  <text x="200" y="257" text-anchor="middle" font-size="12" font-weight="700" fill="#2c2416">植物界 Plantae</text>
+  <text x="200" y="272" text-anchor="middle" font-size="9" fill="#7a6e5e">光合自养（纤维素细胞壁）</text>
+  <rect x="50" y="284" width="300" height="38" fill="#e8dcc8" stroke="#d6ccc0" rx="4"/>
+  <text x="200" y="301" text-anchor="middle" font-size="12" font-weight="700" fill="#2c2416">动物界 Animalia</text>
+  <text x="200" y="316" text-anchor="middle" font-size="9" fill="#7a6e5e">吞噬营养（无细胞壁）</text>
+  <text x="200" y="355" text-anchor="middle" font-size="10" fill="#8b4513">2 个总界：原核总界 + 真核总界</text>
+  <!-- right: 三域系统 -->
+  <rect x="420" y="50" width="360" height="320" fill="#fff8e7" stroke="#c0392b" stroke-width="1.5" rx="6"/>
+  <text x="600" y="75" text-anchor="middle" font-size="14" font-weight="700" fill="#c0392b">三域系统（Woese 1977）</text>
+  <text x="600" y="92" text-anchor="middle" font-size="10" fill="#7a6e5e">依据：16S rRNA 序列分析</text>
+  <rect x="450" y="108" width="300" height="48" fill="#fdecea" stroke="#c0392b" rx="4"/>
+  <text x="600" y="128" text-anchor="middle" font-size="12" font-weight="700" fill="#c0392b">细菌域 Bacteria</text>
+  <text x="600" y="145" text-anchor="middle" font-size="9" fill="#7a6e5e">真细菌（大肠杆菌、蓝藻等）</text>
+  <rect x="450" y="164" width="300" height="48" fill="#fdecea" stroke="#c0392b" rx="4"/>
+  <text x="600" y="184" text-anchor="middle" font-size="12" font-weight="700" fill="#c0392b">古菌域 Archaea</text>
+  <text x="600" y="201" text-anchor="middle" font-size="9" fill="#7a6e5e">产甲烷菌、嗜盐菌、嗜热菌</text>
+  <rect x="450" y="220" width="300" height="102" fill="#fdecea" stroke="#c0392b" rx="4"/>
+  <text x="600" y="240" text-anchor="middle" font-size="12" font-weight="700" fill="#c0392b">真核域 Eukarya</text>
+  <text x="600" y="258" text-anchor="middle" font-size="9" fill="#7a6e5e">原生生物 + 真菌 + 植物 + 动物</text>
+  <text x="600" y="280" text-anchor="middle" font-size="9" fill="#8b4513">古菌与真核亲缘更近</text>
+  <text x="600" y="298" text-anchor="middle" font-size="9" fill="#8b4513">（≠ 细菌，分子系统学重大发现）</text>
+  <text x="600" y="318" text-anchor="middle" font-size="9" fill="#8b4513">古菌+真核 = 域级姐妹群</text>
+  <text x="600" y="355" text-anchor="middle" font-size="10" fill="#c0392b">域（Domain）是高于界的分类等级</text>
+  <!-- mapping arrows -->
+  <path d="M 350 127 Q 385 127 420 132" stroke="#7a6e5e" stroke-width="1.5" fill="none" stroke-dasharray="4,3" marker-end="url(#arr)"/>
+  <path d="M 350 171 Q 385 190 450 200" stroke="#7a6e5e" stroke-width="1.5" fill="none" stroke-dasharray="4,3"/>
+  <path d="M 350 215 Q 385 230 450 250" stroke="#7a6e5e" stroke-width="1.5" fill="none" stroke-dasharray="4,3"/>
+  <path d="M 350 259 Q 385 255 450 255" stroke="#7a6e5e" stroke-width="1.5" fill="none" stroke-dasharray="4,3"/>
+  <path d="M 350 303 Q 385 280 450 270" stroke="#7a6e5e" stroke-width="1.5" fill="none" stroke-dasharray="4,3"/>
+  <text x="385" y="100" text-anchor="middle" font-size="9" fill="#7a6e5e">对应关系</text>
+  <rect x="20" y="385" width="760" height="25" fill="#fff8e7" stroke="#e8c84a" rx="4"/>
+  <text x="400" y="403" text-anchor="middle" font-size="11" fill="#8b4513">关键发现：原核生物界被拆为细菌域 + 古菌域；古菌与真核的亲缘关系比与细菌更近（16S rRNA 证据）</text>
+</svg>
+<figcaption>图 14-2-3　五界系统（Whittaker 1969）与三域系统（Woese 1977）对比：原核生物界拆分为细菌域和古菌域，二者是不同层次的分类框架</figcaption>
+</div>
+
+<!-- ====== 总结 ====== -->
+<div class="summary-box">
+  <h4>本节核心要点</h4>
+  <ul>
+    <li><strong>分类学发展</strong>：人为分类（李时珍《本草纲目》5 部）→ 自然分类（林奈双名法 1735/1753）→ 分子证据（细胞色素 c，20 世纪 60 年代起）。</li>
+    <li><strong>双名法</strong>：属名（大写斜体）+ 种加词（小写斜体）+ 命名人（正体）。例：<em>Homo sapiens</em> Linnaeus, 1758。</li>
+    <li><strong>自然分类依据</strong>：形态 → 细胞（核型）→ 化学（蛋白电泳）→ 血清免疫学（沉淀反应）→ 分子生物学（DNA 序列）。</li>
+    <li><strong>表 6-2-1 灵长类血清反应</strong>：人与黑猩猩最近、其次大猩猩、猩猩，与血清学距离成正比。</li>
+    <li><strong>表 6-2-3 氨基酸差异</strong>：黑猩猩 0、猕猴 1、金枪鱼 21、链孢霉 43、酵母 45（细胞色素 c，共 104 残基）。</li>
+    <li><strong>分子钟</strong>：每 200 万年 1% 氨基酸替换；Zuckerkandl & Pauling 1962/1965 提出，Kimura 中性学说（1968）提供理论基础。</li>
+  </ul>
+</div>
+
+</div>
+
+<footer><a href="index.html" style="color:var(--accent);text-decoration:none;margin-right:1rem;">← 返回目录</a>
+  第十四章 生物系统学基础 · 第二节 生物分类学的发展 · 参考高中生物奥赛讲义 · 整理日期 2026年7月6日
+</footer>
+
+</body>
+</html>

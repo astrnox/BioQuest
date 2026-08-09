@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第一章 生物化学 · 糖代谢与生物氧化 — 生物集训营笔记</title>
+<style>
+:root {
+  --bg: #fdfbf7; --bg2: #f5f0e8; --ink: #2c2416; --muted: #7a6e5e;
+  --rule: #d6ccc0; --accent: #c0392b; --accent2: #8b4513;
+  --highlight: #fff3cd; --note-bg: #fff8e7; --note-border: #e8c84a;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: "Noto Sans CJK SC", "WenQuanYi Micro Hei", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  font-size: 16px; line-height: 1.8; color: var(--ink); background: var(--bg);
+}
+.cover { text-align: center; padding: 4rem 2rem 3rem; border-bottom: 3px double var(--rule); margin-bottom: 0; background: linear-gradient(180deg, var(--bg2) 0%, var(--bg) 100%); }
+.cover .ch-num { font-size: 1rem; color: var(--accent); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 0.3rem; }
+.cover h1 { font-size: 2.2rem; font-weight: 800; color: var(--ink); margin-bottom: 0.5rem; letter-spacing: 0.03em; }
+.cover .subtitle { font-size: 1rem; color: var(--muted); }
+.cover .meta { margin-top: 1.2rem; font-size: 0.85rem; color: var(--muted); display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
+.main-layout { max-width: 1060px; margin: 0 auto; padding: 0 1.5rem; }
+.section-header { border-bottom: 3px solid var(--accent); padding: 2rem 0 0.6rem; margin-bottom: 1.5rem; }
+.section-header .sec-num { font-size: 0.9rem; color: var(--accent); font-weight: 700; letter-spacing: 0.08em; }
+.section-header h2 { font-size: 1.6rem; font-weight: 800; color: var(--ink); margin-top: 0.15rem; }
+.topic-header { margin: 2rem 0 1rem; padding-left: 0.8rem; border-left: 4px solid var(--accent); }
+.topic-header h3 { font-size: 1.25rem; font-weight: 700; color: var(--ink); }
+.subtopic-header { margin: 1.5rem 0 0.8rem; }
+.subtopic-header h4 { font-size: 1.1rem; font-weight: 700; color: var(--accent2); }
+.note-block { display: flex; gap: 1.5rem; margin-bottom: 1.2rem; align-items: flex-start; }
+.note-content { flex: 1; padding: 0.8rem 1rem; background: var(--bg2); border-radius: 6px; border: 1px solid var(--rule); }
+.note-content p { margin-bottom: 0.5rem; }
+.note-content p:last-child { margin-bottom: 0; }
+.note-content ul, .note-content ol { padding-left: 1.5rem; margin: 0.4rem 0; }
+.note-content li { margin-bottom: 0.25rem; }
+.annotation { width: 240px; flex-shrink: 0; background: var(--note-bg); border: 1px solid var(--note-border); border-radius: 6px; padding: 0.6rem 0.8rem; font-size: 0.82rem; line-height: 1.6; color: var(--accent2); align-self: flex-start; }
+.annotation::before { content: "📝 批注"; display: block; font-size: 0.7rem; font-weight: 700; color: var(--accent); letter-spacing: 0.06em; margin-bottom: 0.3rem; text-transform: uppercase; }
+.u { text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 2px; text-underline-offset: 3px; font-weight: 600; }
+.u-double { text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 2px; text-underline-offset: 3px; text-decoration-style: double; font-weight: 700; }
+.key-point { background: var(--highlight); padding: 0.1em 0.3em; border-radius: 3px; font-weight: 600; border-bottom: 1.5px solid var(--accent); }
+.table-wrap { overflow-x: auto; overflow-y: auto; max-height: 600px; margin: 1.5rem 0; border: 1px solid var(--rule); border-radius: 6px; }
+table { width: 100%; border-collapse: collapse; font-size: 0.9rem; min-width: 800px; }
+table thead th { background: var(--accent); color: #fff; padding: 0.6rem 0.8rem; font-weight: 700; text-align: center; white-space: nowrap; }
+table tbody td { padding: 0.5rem 0.8rem; border-bottom: 1px solid var(--rule); vertical-align: top; }
+table tbody tr:nth-child(even) { background: var(--bg2); }
+table tbody tr:last-child td { border-bottom: none; }
+table tbody td:first-child { font-weight: 600; white-space: nowrap; text-align: center; background: var(--bg2); }
+figcaption { text-align: center; font-size: 0.85rem; color: var(--muted); margin-top: 0.4rem; }
+.diagram { margin: 1.2rem 0; text-align: center; }
+.diagram img { max-width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 4px; }
+.summary-box { background: linear-gradient(135deg, #fdf2f2 0%, #fef9e7 100%); border: 2px solid var(--accent); border-radius: 8px; padding: 1.2rem 1.5rem; margin: 2rem 0; }
+.summary-box h4 { color: var(--accent); font-size: 1rem; margin-bottom: 0.6rem; }
+.expand-block { background: #f0f7f4; border: 1px dashed #7cb342; border-radius: 6px; padding: 0.5rem 0.9rem; margin: 0.6rem 0 0; font-size: 0.83rem; line-height: 1.6; color: #3e6b3e; }
+.expand-block::before { content: "🔍 拓展"; display: block; font-size: 0.7rem; font-weight: 700; color: #558b2f; letter-spacing: 0.06em; margin-bottom: 0.2rem; }
+.flow-box { background: var(--bg); border: 1px solid var(--rule); border-radius: 8px; padding: 1.2rem; margin: 1.2rem 0; text-align: center; }
+.flow-box .flow-title { font-size: 0.85rem; font-weight: 700; color: var(--accent); margin-bottom: 0.8rem; }
+.flow-row { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 0.3rem; font-size: 0.85rem; }
+.flow-item { background: var(--bg2); border: 1px solid var(--rule); border-radius: 4px; padding: 0.25rem 0.6rem; white-space: nowrap; }
+.flow-arrow { color: var(--accent); font-weight: 700; font-size: 1.1rem; }
+.math-box { background: #fef9e7; border-left: 3px solid var(--accent2); padding: 0.7rem 1rem; margin: 0.8rem 0; border-radius: 0 4px 4px 0; font-family: "Cambria Math", "STIX Two Math", Georgia, serif; font-size: 1.0rem; color: #1a1a1a; }
+footer { margin-top: 3rem; padding: 1.5rem; border-top: 1px solid var(--rule); text-align: center; font-size: 0.8rem; color: var(--muted); }
+@media (max-width: 768px) {
+  .cover h1 { font-size: 1.5rem; }
+  .note-block { flex-direction: column; }
+  .annotation { width: 100%; }
+  .main-layout { padding: 0 0.8rem; }
+  table { font-size: 0.78rem; min-width: 600px; }
+}
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div class="ch-num">高中生物竞赛讲义 · 集训营</div>
+  <h1>第一章 生物化学 · 糖代谢与生物氧化</h1>
+  <div class="subtitle">新陈代谢总论 · 呼吸链 · 糖酵解 · TCA · 磷酸戊糖途径 · 糖异生</div>
+  <div class="meta">
+    <span>新陈代谢与能量</span><span>呼吸链 4 复合体</span><span>糖酵解 10 步</span><span>柠檬酸循环 8 步</span><span>磷酸戊糖途径</span>
+    <span>糖原合成与糖异生</span><span>📅 整理日期: 2026年7月7日</span>
+  </div>
+</div>
+
+<div class="main-layout">
+
+<div class="section-header">
+  <div class="sec-num">第一节 · 糖代谢与生物氧化</div>
+  <h2>新陈代谢总论 · 生物氧化 · 糖的分解与合成代谢</h2>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>本节是 <span class="key-point">ch1-1-5 糖代谢与能量</span> 的深度补充，参考张丽萍《生物化学简明教程》第六版第8章 <span class="u">新陈代谢总论与生物氧化</span>（P162-182）+ 第9章 <span class="u">糖代谢</span>（P183-213），针对仅有高中人教版生物学基础的竞赛生重写，详细解释每步反应、催化酶、能量变化、调控机制。重点内容：</p>
+    <ol>
+      <li>新陈代谢研究方法与能量代谢基本规律（自由能、高能化合物）</li>
+      <li>生物氧化与呼吸链（4 大复合体）</li>
+      <li>氧化磷酸化（化学渗透假说、P/O 比、解偶联）</li>
+      <li>胞质 NADH 的穿梭（甘油-3-磷酸穿梭、苹果酸-天冬氨酸穿梭）</li>
+      <li>糖酵解 EMP 途径（10 步反应、关键酶、能量计算）</li>
+      <li>糖的有氧分解（丙酮酸脱氢酶复合体 + 柠檬酸循环 TCA 8 步）</li>
+      <li>磷酸戊糖途径 PPP（氧化阶段 + 非氧化阶段）</li>
+      <li>糖原合成、糖异生、乳酸循环（Cori 循环）</li>
+    </ol>
+  </div>
+  <div class="annotation">
+    高中衔接：高中必修一学过"细胞呼吸"——糖酵解、柠檬酸循环、氧化磷酸化三大阶段产生 ATP。但高中只讲了"什么变成什么、产生多少 ATP"的结果，没有讲每步反应、关键酶、调控位点。本节要把每个代谢途径的中间产物、关键酶、能量变化、调控方式都讲清楚。
+  </div>
+</div>
+
+<!-- ========== 第8章 新陈代谢总论 ========== -->
+<div class="topic-header"><h3>一、新陈代谢总论与能量代谢</h3></div>
+
+<div class="subtopic-header"><h4>1.1 新陈代谢研究方法</h4></div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><span class="u-double">新陈代谢（metabolism）</span>是活细胞中所有化学反应的总称，包括：</p>
+    <ul>
+      <li><span class="u">分解代谢（catabolism）</span>：复杂分子 → 简单分子，<span class="key-point">释放能量</span>，常伴随氧化</li>
+      <li><span class="u">合成代谢（anabolism）</span>：简单分子 → 复杂分子，<span class="key-point">消耗能量</span>，常伴随还原</li>
+    </ul>
+    <p>新陈代谢的研究方法：</p>
+    <ol>
+      <li><span class="u-double">同位素示踪法</span>：用放射性同位素（¹⁴C、³H、³²P、³⁵S、¹⁵N）标记底物，追踪代谢路径。最经典例子：Ruben 用 ¹⁸O 追踪光合作用产氧来自水；Krebs 用 ¹⁴C 标记乙酸证明柠檬酸循环</li>
+      <li><span class="u">酶抑制剂法</span>：用特异性抑制剂阻断某步反应，累积中间产物，推测代谢路径</li>
+      <li><span class="u">基因敲除法</span>：定向敲除特定基因，观察代谢表型变化</li>
+      <li><span class="u">代谢组学</span>：用质谱、NMR 同时检测细胞内所有小分子代谢物（&gt;1000 种）</li>
+    </ol>
+  </div>
+</div>
+
+<div class="subtopic-header"><h4>1.2 能量代谢基本规律</h4></div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>热力学基本概念：</p>
+    <ul>
+      <li><span class="u">自由能 G</span>：体系能做有用功的能量。生物反应中用标准自由能变化 <span class="key-point">ΔG⁰'</span>（pH 7.0，25℃，1 mol/L 浓度）</li>
+      <li><span class="u-double">ΔG &lt; 0 反应自发进行（放能反应）；ΔG &gt; 0 反应不能自发进行（吸能反应）</span>。这是判断反应方向的唯一判据</li>
+      <li>酶只改变<span class="u">反应速率</span>，不改变<span class="u">ΔG 或平衡常数 K</span></li>
+    </ul>
+    <p><span class="u-double">高能化合物（high-energy compound）</span>：水解释放大量自由能（ΔG⁰' &lt; -25 kJ/mol）的化合物。最重要的是 <span class="key-point">ATP</span>。</p>
+    <div class="table-wrap">
+    <table>
+    <thead>
+    <tr><th>高能化合物</th><th>高能键类型</th><th>ΔG⁰' (kJ/mol)</th><th>生理意义</th></tr>
+    </thead>
+    <tbody>
+    <tr><td>ATP</td><td>磷酸酐键（焦磷酸键）</td><td>-30.5</td><td>通用能量货币</td></tr>
+    <tr><td>UTP</td><td>磷酸酐键</td><td>-30.5</td><td>糖原合成、UDP-糖供体</td></tr>
+    <tr><td>GTP</td><td>磷酸酐键</td><td>-30.5</td><td>蛋白质合成、信号转导（cAMP）</td></tr>
+    <tr><td>CTP</td><td>磷酸酐键</td><td>-30.5</td><td>磷脂合成（CDP-胆碱）</td></tr>
+    <tr><td>乙酰-CoA</td><td>硫酯键</td><td>-31.4</td><td>碳骨架载体，进入 TCA</td></tr>
+    <tr><td>磷酸烯醇式丙酮酸（PEP）</td><td>磷酸酯键（烯醇式）</td><td>-61.9</td><td>糖酵解中间物，能量最高</td></tr>
+    <tr><td>1,3-二磷酸甘油酸</td><td>酰基磷酸混合酐</td><td>-49.4</td><td>糖酵解底物水平磷酸化</td></tr>
+    <tr><td>磷酸肌酸</td><td>磷酸胍基</td><td>-43.1</td><td>肌肉/脑的能量储存</td></tr>
+    </tbody>
+    </table>
+    </div>
+    <p>⚠️ <span class="key-point">ATP 的"轮转"作用</span>：ATP 在分解代谢中产生，在合成代谢中消耗，是细胞的"能量货币"。ATP ↔ ADP + Pi 的循环速度极快，一个静卧的人 24 小时消耗约 40 kg ATP（但体内 ATP 总量仅约 250 g，每分钟要循环数千次）</p>
+  </div>
+  <div class="annotation">
+    <span class="u-double">奥赛必背</span>：ATP、UTP、GTP、CTP 都能水解两个高能磷酸键，统称<span class="key-point">核苷三磷酸（NTP）</span>。记忆："UTP 糖，GTP 蛋白，CTP 脂，ATP 万能"。
+  </div>
+</div>
+
+<div class="subtopic-header"><h4>1.3 CoA 的递能作用</h4></div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><span class="u-double">辅酶 A（CoA）</span>由泛酸（VB₅）+ 巯基乙胺 + 3'-磷酸-ADP 组成。其核心是<span class="key-point">末端巯基（-SH）</span>，与羧酸形成<span class="u-double">硫酯键（高能键，ΔG⁰' ≈ -31 kJ/mol）</span>，从而<span class="u">活化酰基</span>。例如乙酰-CoA 是糖代谢进入 TCA 循环的"接口分子"。</p>
+  </div>
+</div>
+
+<div class="diagram">
+  <img src="assets/fig_central_metabolism.svg" alt="核心代谢途径总览" style="max-width:100%;border:1px solid var(--rule);border-radius:4px;">
+  <figcaption>图1：核心代谢途径总览——糖酵解、TCA循环、氧化磷酸化、脂肪酸β氧化及氨基酸代谢的相互联系，以乙酰CoA为核心枢纽</figcaption>
+</div>
+
+<!-- ========== 8.2 生物氧化 ========== -->
+<div class="topic-header"><h3>二、生物氧化（biological oxidation）</h3></div>
+
+<div class="subtopic-header"><h4>2.1 生物氧化的特点</h4></div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>生物氧化是<span class="key-point">有机分子在细胞内经过一系列酶催化逐步脱氢、失去电子，最终与 O₂ 结合生成 H₂O，同时逐步释放能量的过程</span>。三大特点：</p>
+    <ol>
+      <li><span class="u">温和条件</span>：常温、常压、近中性 pH，由酶催化</li>
+      <li><span class="u">逐步释放</span>：能量分步释放，避免一次释放造成能量浪费和高温损伤</li>
+      <li><span class="u">有水参与</span>：H⁺ 最终与 O₂ 结合生成 H₂O（不同于体外燃烧直接产生 H₂O₂）</li>
+    </ol>
+  </div>
+</div>
+
+<div class="subtopic-header"><h4>2.2 呼吸链的组成（4 大复合体 + 2 个移动载体）</h4></div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><span class="u-double">呼吸链（respiratory chain）</span>又称<span class="u">电子传递链（ETC）</span>，是位于<span class="key-point">线粒体内膜</span>的一系列递氢/递电子蛋白复合体。共 <span class="u-double">4 大复合体</span> + 2 个可移动电子载体：</p>
+    <div class="table-wrap">
+    <table>
+    <thead>
+    <tr><th>复合体</th><th>名称</th><th>催化反应</th><th>辅基</th><th>质子泵</th></tr>
+    </thead>
+    <tbody>
+    <tr><td>Ⅰ</td><td>NADH-泛醌还原酶</td><td>NADH + H⁺ + Q → NAD⁺ + QH₂</td><td>FMN, Fe-S</td><td>是</td></tr>
+    <tr><td>Ⅱ</td><td>琥珀酸-泛醌还原酶</td><td>琥珀酸 + Q → 延胡索酸 + QH₂</td><td>FAD, Fe-S</td><td>否</td></tr>
+    <tr><td>Ⅲ</td><td>Q-细胞色素 c 还原酶</td><td>QH₂ + 2 cyt c(ox) → Q + 2 cyt c(red) + 2H⁺</td><td>血红素 b₅₆₂/b₅₆₆, cyt c₁, Fe-S</td><td>是</td></tr>
+    <tr><td>Ⅳ</td><td>细胞色素 c 氧化酶</td><td>4 cyt c(red) + O₂ + 4H⁺ → 4 cyt c(ox) + 2H₂O</td><td>血红素 a, a₃, CuA, CuB</td><td>是</td></tr>
+    </tbody>
+    </table>
+    </div>
+    <p><span class="u">两个移动电子载体</span>：</p>
+    <ul>
+      <li><span class="u-double">泛醌（CoQ / Q）</span>：脂溶性，嵌在内膜中，从复合体Ⅰ/Ⅱ接受电子，传递到复合体Ⅲ</li>
+      <li><span class="u-double">细胞色素 c（cyt c）</span>：水溶性小蛋白，位于内膜外侧，从复合体Ⅲ接受电子，传递到复合体Ⅳ</li>
+    </ul>
+    <div class="flow-box">
+      <div class="flow-title">呼吸链电子传递路径</div>
+      <div class="flow-row">
+        <span class="flow-item">NADH</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-item">复合体Ⅰ</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-item">Q</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-item">复合体Ⅲ</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-item">cyt c</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-item">复合体Ⅳ</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-item">½ O₂ → H₂O</span>
+      </div>
+    </div>
+  </div>
+  <div class="annotation">
+    <span class="u-double">奥赛必背</span>：复合体Ⅰ、Ⅲ、Ⅳ 都能泵质子（每传一对电子各泵 4/4/2 个 H⁺，共 10 个 H⁺）；复合体Ⅱ（琥珀酸脱氢酶）不泵质子。FADH₂ 绕过复合体Ⅰ直接给 Q，所以<span class="key-point">FADH₂ 只产生约 1.5 ATP，NADH 产生约 2.5 ATP</span>（P/O 比 = 2.5/1.5）。
+  </div>
+</div>
+
+<div class="subtopic-header"><h4>2.3 氧化磷酸化（oxidative phosphorylation）</h4></div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><span class="u-double">氧化磷酸化</span>是<span class="key-point">电子传递过程中释放的自由能驱动 ADP + Pi 合成 ATP</span>的过程。是真核细胞 ATP 的主要来源（约占 80%）。</p>
+    <p><span class="u-double">化学渗透假说（Peter Mitchell, 1961 年提出，1978 年获诺贝尔化学奖）</span>：</p>
+    <ol>
+      <li>电子传递时，复合体Ⅰ、Ⅲ、Ⅳ 将质子从线粒体基质泵到内膜外侧（膜间隙）</li>
+      <li>形成跨内膜的<span class="key-point">质子电化学梯度（质子动力势 Δp）</span>：外酸内碱，外正内负</li>
+      <li>质子沿梯度通过 <span class="u-double">ATP 合酶（ATP synthase, F₀F₁）</span> 顺流回基质，驱动 ATP 合成</li>
+    </ol>
+    <p><span class="u-double">ATP 合酶（ATP synthase）</span>结构：</p>
+    <ul>
+      <li><span class="u">F₀</span>（内膜中，质子通道）：ab₂c₁₀~₁₄ 亚基，c 亚基环每转一圈泵 8~10 个质子</li>
+      <li><span class="u">F₁</span>（基质侧，催化 ATP 合成）：α₃β₃γδε，3 个 β 亚基构象循环（结合→合成→释放 ATP）</li>
+    </ul>
+    <p>⚠️ <span class="key-point">Boyer 结合变构机制（1997 年诺贝尔化学奖）</span>：β 亚基有 3 种构象——开放（O，释放 ATP）、松弛（L，结合 ADP+Pi）、紧密（T，合成 ATP）。γ 亚基旋转一周（120°），3 个 β 亚基依次经历 3 种构象，合成 3 个 ATP。</p>
+    <p><span class="u-double">P/O 比（P/O ratio）</span>：每消耗 1/2 氧原子（接受 1 对电子）所合成的 ATP 数：</p>
+    <ul>
+      <li>NADH：约 <span class="key-point">2.5 ATP</span>（10 H⁺ 跨膜，3 H⁺/ATP）</li>
+      <li>FADH₂：约 <span class="key-point">1.5 ATP</span>（6 H⁺ 跨膜）</li>
+    </ul>
+    <p><span class="u">解偶联剂（uncoupler）</span>：消除 H⁺ 梯度，电子传递正常进行但 ATP 合成停止，能量以热的形式释放。</p>
+    <ul>
+      <li><span class="u">DNP（2,4-二硝基苯酚）</span>：化学解偶联剂，将 H⁺ 从膜间隙带回基质</li>
+      <li><span class="u">UCP（解偶联蛋白）</span>：棕色脂肪组织中天然存在的解偶联蛋白，使新生儿产热御寒</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    <span class="u-double">奥赛常考</span>：① DNP 减肥药（早期因副作用停用）；② UCP1 是棕色脂肪组织产热的分子基础；③ 鱼藤酮抑制复合体Ⅰ、抗霉素 A 抑制复合体Ⅲ、CN⁻ 抑制复合体Ⅳ（细胞色素氧化酶）；④ 寡霉素抑制 ATP 合酶。
+  </div>
+</div>
+
+<div class="subtopic-header"><h4>2.4 胞质 NADH 的跨膜转运</h4></div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>糖酵解产生的 NADH 在胞质中，线粒体内膜<span class="key-point">不允许 NADH 自由通过</span>，需要"穿梭"。</p>
+    <div class="table-wrap">
+    <table>
+    <thead>
+    <tr><th>穿梭方式</th><th>机制</th><th>最终电子进入</th><th>ATP 数</th><th>主要分布</th></tr>
+    </thead>
+    <tbody>
+    <tr><td><span class="u-double">甘油-3-磷酸穿梭</span></td><td>胞质 DHAP ↔ G3P（消耗 NADH → NAD⁺）<br>G3P 进入线粒体 → DHAP（给 FAD → FADH₂）</td><td>复合体Ⅱ（UQ）</td><td>1.5</td><td>骨骼肌、脑</td></tr>
+    <tr><td><span class="u-double">苹果酸-天冬氨酸穿梭</span></td><td>胞质 OAA + NADH → 苹果酸（消耗 NADH）<br>苹果酸进入线粒体 → OAA + NADH（给 NAD⁺ → NADH）</td><td>复合体Ⅰ</td><td>2.5</td><td>心肌、肝、肾</td></tr>
+    </tbody>
+    </table>
+    </div>
+  </div>
+  <div class="annotation">
+    <span class="u-double">奥赛细节</span>：苹果酸-天冬氨酸穿梭在 NADH/NAD⁺比值高的组织（心肌）更活跃。甘油-3-磷酸穿梭效率低（损失 1 个 ATP 当量），但更快速。
+  </div>
+</div>
+
+<div class="subtopic-header"><h4>2.5 电子传递链与氧化磷酸化的抑制剂</h4></div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>呼吸链抑制剂、ATP 合酶抑制剂、解偶联剂和离子载体是竞赛高频考点，按作用位点分类如下：</p>
+    <div class="table-wrap">
+    <table>
+    <thead>
+    <tr><th>类别</th><th>抑制剂</th><th>作用位点</th><th>作用机制</th></tr>
+    </thead>
+    <tbody>
+    <tr><td rowspan="2">复合体Ⅰ抑制剂</td><td><span class="u-double">鱼藤酮（Rotenone）</span></td><td>复合体Ⅰ（NADH-泛醌还原酶）</td><td>阻断电子从 FMN → Fe-S → Q 的传递</td></tr>
+    <tr><td><span class="u-double">安密妥（Amytal）</span>、粉蝶霉素A</td><td>复合体Ⅰ</td><td>同上，巴比妥类衍生物</td></tr>
+    <tr><td>复合体Ⅱ抑制剂</td><td><span class="u-double">丙二酸</span></td><td>复合体Ⅱ（琥珀酸脱氢酶）</td><td>琥珀酸类似物，竞争性抑制</td></tr>
+    <tr><td>复合体Ⅲ抑制剂</td><td><span class="u-double">抗霉素A（Antimycin A）</span></td><td>复合体Ⅲ（Q-cyt c 还原酶）</td><td>阻断 cyt b → cyt c₁ 的电子传递</td></tr>
+    <tr><td rowspan="3">复合体Ⅳ抑制剂</td><td><span class="u-double">CN⁻（氰化物）</span></td><td>复合体Ⅳ（细胞色素c氧化酶）</td><td>与 cyt a₃ 的 Fe³⁺ 结合，阻断电子传递给 O₂</td></tr>
+    <tr><td><span class="u-double">CO（一氧化碳）</span></td><td>复合体Ⅳ</td><td>与 cyt a₃ 的 Fe²⁺ 结合</td></tr>
+    <tr><td><span class="u-double">N₃⁻（叠氮化物）</span></td><td>复合体Ⅳ</td><td>抑制 cyt a₃</td></tr>
+    <tr><td>ATP合酶抑制剂</td><td><span class="u-double">寡霉素（Oligomycin）</span></td><td>ATP合酶 F₀ 组分</td><td>阻断质子通道，ATP 合成停止；因质子梯度无法消散，反向也抑制电子传递</td></tr>
+    <tr><td>解偶联剂</td><td><span class="u-double">2,4-二硝基苯酚（DNP）</span></td><td>线粒体内膜</td><td>质子载体，将 H⁺ 从膜间隙带回基质，破坏质子梯度；电子传递正常但 ATP 合成停止，能量以热释放</td></tr>
+    <tr><td>离子载体</td><td><span class="u-double">缬氨霉素（Valinomycin）</span></td><td>线粒体内膜</td><td>K⁺ 离子载体，破坏膜电位（Δψ），间接破坏质子动力势</td></tr>
+    </tbody>
+    </table>
+    </div>
+    <p>⚠️ <span class="key-point">三类抑制剂的区别关键</span>：</p>
+    <ul>
+      <li><span class="u">电子传递抑制剂</span>（鱼藤酮、丙二酸、抗霉素A、CN⁻/CO/N₃⁻）：直接阻断某段电子传递 → 电子传递<span class="key-point">停止</span>，质子梯度消散，ATP 合成也随之停止</li>
+      <li><span class="u">ATP 合酶抑制剂</span>（寡霉素）：阻断质子回流 → ATP 合成停止，质子梯度增大，反馈抑制电子传递</li>
+      <li><span class="u">解偶联剂</span>（DNP）：电子传递<span class="key-point">正常进行</span>甚至加速（因消除了质子梯度的反馈抑制），但 ATP 合成停止，能量以热释放</li>
+      <li><span class="u">离子载体</span>（缬氨霉素）：破坏膜电位成分，效果类似解偶联</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    <span class="u-double">竞赛记忆口诀</span>：① 复合体Ⅰ→鱼藤酮/安密妥；② 复合体Ⅱ→丙二酸（琥珀酸类似物）；③ 复合体Ⅲ→抗霉素A；④ 复合体Ⅳ→CN⁻/CO/N₃⁻（三者都作用于细胞色素c氧化酶 cyt a₃）；⑤ ATP合酶→寡霉素（作用于 F₀）；⑥ 解偶联→DNP；⑦ 离子载体→缬氨霉素（K⁺）。
+  </div>
+</div>
+
+<div class="diagram">
+  <img src="assets/fig_etc_detail.svg" alt="电子传递链与氧化磷酸化" style="max-width:100%;border:1px solid var(--rule);border-radius:4px;">
+  <figcaption>图2：电子传递链（ETC）与氧化磷酸化——复合体I~IV的电子传递路径、质子梯度形成与ATP合酶</figcaption>
+</div>
+
+<svg viewBox="0 0 800 400" style="width:100%;max-width:720px;margin:1.2rem auto;display:block;font-family:sans-serif;">
+  <rect x="0" y="0" width="800" height="400" fill="#fdfbf7" stroke="#d6ccc0" rx="8"/>
+  <text x="400" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="#2c2416">ETC 抑制剂作用位点表</text>
+
+  <!-- 线粒体内膜示意 -->
+  <rect x="40" y="60" width="720" height="50" fill="#fef9e7" stroke="#8b4513" stroke-width="1.5" rx="4"/>
+  <text x="400" y="90" text-anchor="middle" font-size="11" fill="#8b4513">线粒体内膜</text>
+
+  <!-- 复合体I -->
+  <rect x="70" y="115" width="100" height="80" fill="#fdf2f2" stroke="#c0392b" stroke-width="2" rx="4"/>
+  <text x="120" y="140" text-anchor="middle" font-size="12" font-weight="700" fill="#c0392b">复合体I</text>
+  <text x="120" y="158" text-anchor="middle" font-size="9" fill="#2c2416">NADH脱氢酶</text>
+  <text x="120" y="172" text-anchor="middle" font-size="9" fill="#7a6e5e">FMN→Fe-S→Q</text>
+  <text x="120" y="188" text-anchor="middle" font-size="9" font-weight="700" fill="#c0392b">NADH→Q</text>
+  <text x="120" y="210" text-anchor="middle" font-size="10" font-weight="700" fill="#c0392b">鱼藤酮</text>
+  <text x="120" y="224" text-anchor="middle" font-size="9" fill="#c0392b">安密妥</text>
+
+  <!-- Q -->
+  <circle cx="200" cy="155" r="14" fill="#fff8e7" stroke="#8b4513" stroke-width="2"/>
+  <text x="200" y="159" text-anchor="middle" font-size="10" font-weight="700" fill="#8b4513">Q</text>
+
+  <!-- 复合体II -->
+  <rect x="230" y="115" width="100" height="80" fill="#fff8e7" stroke="#e8c84a" stroke-width="2" rx="4"/>
+  <text x="280" y="140" text-anchor="middle" font-size="12" font-weight="700" fill="#c0392b">复合体II</text>
+  <text x="280" y="158" text-anchor="middle" font-size="9" fill="#2c2416">琥珀酸脱氢酶</text>
+  <text x="280" y="172" text-anchor="middle" font-size="9" fill="#7a6e5e">FAD→Fe-S→Q</text>
+  <text x="280" y="188" text-anchor="middle" font-size="9" font-weight="700" fill="#c0392b">琥珀酸→Q</text>
+  <text x="280" y="210" text-anchor="middle" font-size="10" font-weight="700" fill="#c0392b">丙二酸</text>
+  <text x="280" y="224" text-anchor="middle" font-size="9" fill="#7a6e5e">(竞争性)</text>
+
+  <!-- 复合体III -->
+  <rect x="390" y="115" width="100" height="80" fill="#fdf2f2" stroke="#c0392b" stroke-width="2" rx="4"/>
+  <text x="440" y="140" text-anchor="middle" font-size="12" font-weight="700" fill="#c0392b">复合体III</text>
+  <text x="440" y="158" text-anchor="middle" font-size="9" fill="#2c2416">Q-cyt c还原酶</text>
+  <text x="440" y="172" text-anchor="middle" font-size="9" fill="#7a6e5e">cyt b→c₁</text>
+  <text x="440" y="188" text-anchor="middle" font-size="9" font-weight="700" fill="#c0392b">QH₂→cyt c</text>
+  <text x="440" y="210" text-anchor="middle" font-size="10" font-weight="700" fill="#c0392b">抗霉素A</text>
+
+  <!-- cyt c -->
+  <circle cx="520" cy="155" r="14" fill="#fff8e7" stroke="#8b4513" stroke-width="2"/>
+  <text x="520" y="159" text-anchor="middle" font-size="10" font-weight="700" fill="#8b4513">cyt c</text>
+
+  <!-- 复合体IV -->
+  <rect x="550" y="115" width="100" height="80" fill="#fdf2f2" stroke="#c0392b" stroke-width="2" rx="4"/>
+  <text x="600" y="140" text-anchor="middle" font-size="12" font-weight="700" fill="#c0392b">复合体IV</text>
+  <text x="600" y="158" text-anchor="middle" font-size="9" fill="#2c2416">细胞色素c氧化酶</text>
+  <text x="600" y="172" text-anchor="middle" font-size="9" fill="#7a6e5e">cyt aa₃→O₂</text>
+  <text x="600" y="188" text-anchor="middle" font-size="9" font-weight="700" fill="#c0392b">cyt c→O₂</text>
+  <text x="600" y="210" text-anchor="middle" font-size="10" font-weight="700" fill="#c0392b">CN⁻/CO/N₃⁻</text>
+  <text x="600" y="224" text-anchor="middle" font-size="9" fill="#7a6e5e">(cyt a₃)</text>
+
+  <!-- 电子流向箭头 -->
+  <text x="185" y="150" font-size="14" fill="#c0392b">→</text>
+  <text x="340" y="150" font-size="14" fill="#c0392b">→</text>
+  <text x="505" y="150" font-size="14" fill="#c0392b">→</text>
+  <text x="660" y="150" font-size="11" fill="#c0392b">→ ½O₂→H₂O</text>
+
+  <!-- ATP合酶 -->
+  <rect x="690" y="115" width="80" height="80" fill="#f0f7f4" stroke="#27ae60" stroke-width="2" rx="4"/>
+  <text x="730" y="140" text-anchor="middle" font-size="11" font-weight="700" fill="#27ae60">ATP合酶</text>
+  <text x="730" y="158" text-anchor="middle" font-size="9" fill="#2c2416">F₀-F₁</text>
+  <text x="730" y="172" text-anchor="middle" font-size="9" fill="#7a6e5e">H⁺→ATP</text>
+  <text x="730" y="188" text-anchor="middle" font-size="9" font-weight="700" fill="#27ae60">ADP+Pi</text>
+  <text x="730" y="210" text-anchor="middle" font-size="9" font-weight="700" fill="#c0392b">寡霉素</text>
+  <text x="730" y="224" text-anchor="middle" font-size="10" fill="#7a6e5e">(F₀通道)</text>
+
+  <!-- 底部三类抑制剂 -->
+  <rect x="40" y="250" width="230" height="130" fill="#fff8e7" stroke="#e8c84a" rx="6"/>
+  <text x="155" y="272" text-anchor="middle" font-size="12" font-weight="700" fill="#c0392b">电子传递抑制剂</text>
+  <text x="55" y="294" font-size="11" fill="#2c2416">• 鱼藤酮/安密妥 (复合体I)</text>
+  <text x="55" y="312" font-size="11" fill="#2c2416">• 丙二酸 (复合体II)</text>
+  <text x="55" y="330" font-size="11" fill="#2c2416">• 抗霉素A (复合体III)</text>
+  <text x="55" y="348" font-size="11" fill="#2c2416">• CN⁻/CO/N₃⁻ (复合体IV)</text>
+  <text x="55" y="368" font-size="10" font-weight="700" fill="#c0392b">→电子传递停止, ATP停止</text>
+
+  <rect x="285" y="250" width="230" height="130" fill="#fdf2f2" stroke="#c0392b" rx="6"/>
+  <text x="400" y="272" text-anchor="middle" font-size="12" font-weight="700" fill="#c0392b">ATP合酶抑制剂</text>
+  <text x="300" y="294" font-size="11" fill="#2c2416">• 寡霉素 (F₀质子通道)</text>
+  <text x="300" y="312" font-size="11" fill="#2c2416">• 苍术苷 (ANT转运载体)</text>
+  <text x="300" y="338" font-size="11" font-weight="700" fill="#2c2416">→ATP合成停止</text>
+  <text x="300" y="356" font-size="11" font-weight="700" fill="#2c2416">→质子梯度↑反馈抑制ETC</text>
+  <text x="300" y="372" font-size="10" fill="#7a6e5e">苍术苷: 间接(ANT上游)</text>
+
+  <rect x="530" y="250" width="230" height="130" fill="#f0f7f4" stroke="#27ae60" rx="6"/>
+  <text x="645" y="272" text-anchor="middle" font-size="12" font-weight="700" fill="#c0392b">解偶联剂/离子载体</text>
+  <text x="545" y="294" font-size="11" fill="#2c2416">• DNP (质子载体)</text>
+  <text x="545" y="312" font-size="11" fill="#2c2416">• 缬氨霉素 (K⁺载体)</text>
+  <text x="545" y="338" font-size="11" font-weight="700" fill="#c0392b">→电子传递正常(加速)</text>
+  <text x="545" y="356" font-size="11" font-weight="700" fill="#c0392b">→ATP合成停止</text>
+  <text x="545" y="372" font-size="10" fill="#7a6e5e">能量以热释放(棕色脂肪产热)</text>
+</svg>
+<figcaption>ETC 抑制剂作用位点表</figcaption>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><span class="u-double">苍术苷（Atractyloside）</span>是从苍术中提取的有毒糖苷，<span class="key-point">专一抑制 ADP/ATP 转运载体（ANT，腺苷酸转位酶）</span>。</p>
+    <p>ANT 位于线粒体内膜，负责将线粒体基质中合成的 ATP 运出、将胞质中的 ADP 运入（ATP/ADP 交换）。苍术苷抑制 ANT 后的连锁反应：</p>
+    <ol>
+      <li>线粒体内 ATP 无法运出 → 胞质 ATP ↓</li>
+      <li>ATP 蓄积在线粒体基质 → 反向抑制 ATP 合酶</li>
+      <li>质子梯度无法通过 ATP 合酶消散 → 跨膜质子梯度增大</li>
+      <li>质子梯度增大反馈抑制电子传递链 → 电子传递受阻</li>
+      <li>O₂ 不能被还原为 H₂O → <span class="key-point">呼吸停止</span></li>
+    </ol>
+    <p>⚠️ <span class="u-double">竞赛真题</span>：2018 全国联赛考过苍术苷的作用机制。苍术苷是研究氧化磷酸化与 ATP 转运的经典工具药。</p>
+  </div>
+  <div class="annotation">
+    <span class="u-double">对比记忆</span>：寡霉素直接抑制 ATP 合酶（F₀ 质子通道）；苍术苷抑制的是 ATP 合酶<span class="key-point">上游</span>的 ADP/ATP 转运载体（ANT），间接导致 ATP 合酶被产物（ATP）抑制。两者最终都导致呼吸停止，但初始作用靶点不同。
+  </div>
+</div>
+
+<!-- ========== 第9章 糖代谢 ========== -->
+<div class="topic-header"><h3>三、糖的分解代谢</h3></div>
+
+<div class="subtopic-header"><h4>3.1 糖酵解（Glycolysis, EMP 途径）</h4></div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><span class="u-double">糖酵解</span>是<span class="key-point">葡萄糖在胞质中分解为丙酮酸</span>的过程（10 步反应）。由 Embden-Meyerhof-Parnas 三人阐明，故又称 <span class="key-point">EMP 途径</span>。其总反应：</p>
+    <div class="math-box">
+      葡萄糖 + 2 NAD⁺ + 2 ADP + 2 Pi → 2 丙酮酸 + 2 NADH + 2 H⁺ + 2 ATP + 2 H₂O
+    </div>
+    <p><span class="u-double">糖酵解 10 步反应</span>（分两个阶段：① 准备阶段消耗 2 ATP；② 储能阶段产生 4 ATP，净产 2 ATP）：</p>
+    <div class="table-wrap">
+    <table>
+    <thead>
+    <tr><th>步骤</th><th>底物</th><th>产物</th><th>关键酶</th><th>能量变化</th><th>备注</th></tr>
+    </thead>
+    <tbody>
+    <tr><td>1</td><td>葡萄糖</td><td>葡萄糖-6-磷酸 (G6P)</td><td><span class="key-point">己糖激酶（HK）</span></td><td>-1 ATP</td><td>不可逆；HK 对所有己糖都有活性；<span class="u">肝中葡糖激酶（GK）</span>只对葡萄糖，且不受 G6P 反馈抑制</td></tr>
+    <tr><td>2</td><td>G6P</td><td>果糖-6-磷酸 (F6P)</td><td>磷酸葡萄糖异构酶</td><td>0</td><td>醛糖-酮糖互变</td></tr>
+    <tr><td>3</td><td>F6P</td><td>果糖-1,6-二磷酸 (FBP)</td><td><span class="key-point">磷酸果糖激酶-1（PFK-1）</span></td><td>-1 ATP</td><td><span class="u-double">糖酵解限速酶</span>；受 ATP/柠檬酸抑制，受 AMP/果糖-2,6-二磷酸激活</td></tr>
+    <tr><td>4</td><td>FBP</td><td>甘油醛-3-磷酸 (G3P) + 磷酸二羟丙酮 (DHAP)</td><td>醛缩酶</td><td>0</td><td>DHAP 与 G3P 通过磷酸丙糖异构酶互变</td></tr>
+    <tr><td>5</td><td>DHAP</td><td>G3P</td><td>磷酸丙糖异构酶</td><td>0</td><td>继续糖酵解</td></tr>
+    <tr><td>6</td><td>G3P</td><td>1,3-二磷酸甘油酸 (1,3-BPG)</td><td>甘油醛-3-磷酸脱氢酶 (GAPDH)</td><td>0 (NAD⁺ → NADH)</td><td>1 分子葡萄糖产 2 G3P，故此步产生 2 NADH</td></tr>
+    <tr><td>7</td><td>1,3-BPG</td><td>3-磷酸甘油酸 (3PG)</td><td>磷酸甘油酸激酶 (PGK)</td><td><span class="u-double">+1 ATP（底物水平磷酸化）</span></td><td>2 G3P → 2 ATP</td></tr>
+    <tr><td>8</td><td>3PG</td><td>2-磷酸甘油酸 (2PG)</td><td>磷酸甘油酸变位酶</td><td>0</td><td>磷酸基从 C3 移到 C2</td></tr>
+    <tr><td>9</td><td>2PG</td><td>磷酸烯醇式丙酮酸 (PEP)</td><td>烯醇化酶</td><td>0 (脱水)</td><td>形成高能磷酸键</td></tr>
+    <tr><td>10</td><td>PEP</td><td>丙酮酸</td><td><span class="key-point">丙酮酸激酶（PK）</span></td><td><span class="u-double">+1 ATP（底物水平磷酸化）</span></td><td>不可逆；2 PEP → 2 ATP</td></tr>
+    </tbody>
+    </table>
+    </div>
+    <figcaption>表 1 糖酵解 10 步反应（粗体为 3 个关键酶）</figcaption>
+    <p>⚠️ <span class="u-double">三个关键酶（不可逆）</span>：</p>
+    <ol>
+      <li><span class="key-point">己糖激酶（HK）</span> / 葡糖激酶（GK）—— 第 1 步</li>
+      <li><span class="u-double">磷酸果糖激酶-1（PFK-1）</span> —— 第 3 步，<span class="u-double">限速酶</span>，受多因素调控</li>
+      <li><span class="key-point">丙酮酸激酶（PK）</span> —— 第 10 步</li>
+    </ol>
+    <p>能量总结（每分子葡萄糖）：<span class="u-double">净产 2 ATP + 2 NADH</span>。NADH 进入呼吸链可再产 2.5~3 ATP（取决于穿梭方式）。</p>
+    <p><span class="u-double">丙酮酸的去路</span>：</p>
+    <ul>
+      <li><span class="u">有氧</span>：进入线粒体 → 丙酮酸脱氢酶复合体 → 乙酰-CoA → TCA 循环</li>
+      <li><span class="u">缺氧</span>：胞质中乳酸脱氢酶（LDH）催化丙酮酸 + NADH → 乳酸 + NAD⁺（再生 NAD⁺ 让糖酵解继续）</li>
+      <li><span class="u">酵母/某些植物</span>：丙酮酸脱羧酶催化丙酮酸 → 乙醛 → 乙醇脱氢酶催化 → 乙醇（酒精发酵）</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    <span class="u-double">奥赛必考</span>：PFK-1 是糖酵解<span class="key-point">最重要的限速酶</span>。ATP 和柠檬酸是它的<span class="key-point">别构抑制剂</span>（能量充足时关闭糖酵解），AMP、ADP、果糖-2,6-二磷酸（F-2,6-BP）是<span class="key-point">别构激活剂</span>（能量不足时打开糖酵解）。F-2,6-BP 是 PFK-2 / FBPase-2 双功能酶调控的产物，是肝糖代谢的关键信号分子。
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><span class="u-double">糖酵解中 Pi（无机磷酸）参与的步骤</span>：</p>
+    <ul>
+      <li><span class="u">3-磷酸甘油醛脱氢酶（GAPDH）</span>：GAP + NAD⁺ + <span class="key-point">Pi</span> → 1,3-BPG + NADH + H⁺。Pi 是 GAPDH 的<span class="key-point">直接底物</span>之一，参与将醛基氧化为酰基磷酸（高能磷酸键）</li>
+      <li><span class="u">磷酸甘油酸激酶（PGK）</span>：1,3-BPG + ADP → 3-PG + ATP（磷酸基已存在于 1,3-BPG 中，此处不另需游离 Pi）</li>
+    </ul>
+    <p>⚠️ <span class="u-double">竞赛真题</span>：2025 全国联赛考过"Pi 是糖酵解中哪个酶的直接底物"——答案为<span class="key-point">3-磷酸甘油醛脱氢酶（GAPDH）</span>。此步反应中游离 Pi 直接参与形成 1,3-BPG 的高能磷酸键，是糖酵解中唯一需要游离 Pi 作为直接底物的步骤。</p>
+  </div>
+  <div class="annotation">
+    <span class="u-double">易错点</span>：糖酵解中消耗 ATP 的步骤（HK、PFK-1）使用的是 ATP 的磷酸基，而非游离 Pi。只有 GAPDH 这一步直接消耗无机磷酸 Pi。
+  </div>
+</div>
+
+<div class="diagram">
+  <img src="assets/fig_glycolysis.svg" alt="糖酵解途径" style="max-width:100%;border:1px solid var(--rule);border-radius:4px;">
+  <figcaption>图3：糖酵解途径——葡萄糖经10步反应分解为丙酮酸，含两个底物水平磷酸化（7磷酸甘油酸激酶、10丙酮酸激酶）及三个限速步骤（1/3/10）</figcaption>
+</div>
+
+<div class="subtopic-header"><h4>3.2 丙酮酸脱氢酶复合体（PDH complex）</h4></div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>丙酮酸进入线粒体后，<span class="u-double">由丙酮酸脱氢酶复合体（PDH）催化氧化脱羧生成乙酰-CoA</span>，连接糖酵解与 TCA 循环：</p>
+    <div class="math-box">
+      丙酮酸 + NAD⁺ + HSCoA → 乙酰-CoA + CO₂ + NADH + H⁺
+    </div>
+    <p>PDH 是<span class="key-point">真核细胞最大的多酶复合体</span>，由 3 种酶共 60 个亚基组成（直径约 50 nm，α₂β₂γ₂ 的 E1 + 24 个 E2 + 6 个 E3 二聚体）：</p>
+    <ul>
+      <li><span class="u">E1（丙酮酸脱氢酶）</span>：TPP 辅酶，催化丙酮酸脱羧</li>
+      <li><span class="u">E2（二氢硫辛酰胺乙酰转移酶）</span>：硫辛酸辅基 + CoA，催化氧化 + 转移乙酰基</li>
+      <li><span class="u">E3（二氢硫辛酰胺脱氢酶）</span>：FAD + NAD⁺，将还原型硫辛酸再氧化，传递电子给 NAD⁺</li>
+    </ul>
+    <p>反应中 5 种辅酶协同工作：<span class="key-point">TPP → 硫辛酸 → CoA → FAD → NAD⁺</span>。硫辛酸的"摆臂"机制使 3 种酶协同工作。</p>
+    <p>PDH 调控：</p>
+    <ul>
+      <li><span class="u">产物抑制</span>：乙酰-CoA 和 NADH 抑制 PDH</li>
+      <li><span class="u-double">共价修饰</span>：<span class="key-point">PDH 激酶磷酸化 E1α（失活）</span>；<span class="key-point">PDH 磷酸酶去磷酸化（激活）</span></li>
+      <li>胰岛素/高 pH/高 Ca²⁺（肌肉收缩）激活 PDH；饥饿/高脂/高 ATP 抑制 PDH</li>
+    </ul>
+  </div>
+</div>
+
+<div class="subtopic-header"><h4>3.3 柠檬酸循环（TCA 循环 / Krebs 循环）</h4></div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><span class="u-double">柠檬酸循环</span>（TCA, tricarboxylic acid cycle；三羧酸循环；Krebs 循环）在线粒体基质中进行。每分子乙酰-CoA 完全氧化生成 <span class="key-point">2 CO₂ + 3 NADH + 1 FADH₂ + 1 GTP</span>（共相当于 10 ATP）。</p>
+    <p><span class="u-double">TCA 循环 8 步反应</span>：</p>
+    <div class="table-wrap">
+    <table>
+    <thead>
+    <tr><th>步骤</th><th>底物</th><th>产物</th><th>关键酶</th><th>能量/还原当量</th></tr>
+    </thead>
+    <tbody>
+    <tr><td>1</td><td>乙酰-CoA + 草酰乙酸 (OAA)</td><td>柠檬酸</td><td><span class="key-point">柠檬酸合酶</span></td><td>0（缩合）</td></tr>
+    <tr><td>2</td><td>柠檬酸</td><td>异柠檬酸</td><td>顺乌头酸酶</td><td>0（脱水-水合）</td></tr>
+    <tr><td>3</td><td>异柠檬酸</td><td>α-酮戊二酸 + CO₂</td><td><span class="key-point">异柠檬酸脱氢酶</span></td><td><span class="u-double">1 NADH</span></td></tr>
+    <tr><td>4</td><td>α-酮戊二酸 + HSCoA + NAD⁺</td><td>琥珀酰-CoA + CO₂</td><td><span class="key-point">α-酮戊二酸脱氢酶复合体</span></td><td><span class="u-double">1 NADH</span>（类似 PDH，需 TPP/硫辛酸/CoA/FAD/NAD⁺）</td></tr>
+    <tr><td>5</td><td>琥珀酰-CoA + GDP + Pi</td><td>琥珀酸 + GTP</td><td>琥珀酰-CoA 合成酶（琥珀酸硫激酶）</td><td><span class="u-double">1 GTP（底物水平磷酸化）</span></td></tr>
+    <tr><td>6</td><td>琥珀酸</td><td>延胡索酸</td><td>琥珀酸脱氢酶</td><td><span class="u-double">1 FADH₂</span>（唯一嵌入线粒体内膜的 TCA 酶=复合体Ⅱ）</td></tr>
+    <tr><td>7</td><td>延胡索酸 + H₂O</td><td>苹果酸</td><td>延胡索酸酶</td><td>0（水合）</td></tr>
+    <tr><td>8</td><td>苹果酸 + NAD⁺</td><td>OAA + NADH</td><td>苹果酸脱氢酶</td><td><span class="u-double">1 NADH</span></td></tr>
+    </tbody>
+    </table>
+    </div>
+    <figcaption>表 2 柠檬酸循环 8 步反应（粗体为 3 个不可逆关键酶）</figcaption>
+    <p>总反应（每分子乙酰-CoA）：</p>
+    <div class="math-box">
+      乙酰-CoA + 3 NAD⁺ + FAD + GDP + Pi + 2 H₂O → 2 CO₂ + 3 NADH + FADH₂ + GTP + 3 H⁺ + HSCoA
+    </div>
+    <p>每分子葡萄糖通过糖酵解 + PDH + TCA 完全氧化：</p>
+    <ul>
+      <li>产生 2 ATP（糖酵解底物水平）+ 2 GTP（TCA 底物水平）= 4 ATP</li>
+      <li>产生 10 NADH（2 来自糖酵解、2 来自 PDH、6 来自 TCA）→ 10 × 2.5 = 25 ATP</li>
+      <li>产生 2 FADH₂（TCA）→ 2 × 1.5 = 3 ATP</li>
+      <li><span class="u-double">总计约 30~32 ATP</span>（胞质 NADH 穿梭方式不同时 30 或 32）</li>
+    </ul>
+    <p>⚠️ <span class="key-point">TCA 循环的调控</span>：3 个不可逆关键酶是调控点——柠檬酸合酶、异柠檬酸脱氢酶、α-酮戊二酸脱氢酶。NADH、ATP 抑制；Ca²⁺、ADP 激活（肌肉收缩时促进产能）。</p>
+  </div>
+  <div class="annotation">
+    <span class="u-double">奥赛必背</span>：① 三大关键酶：柠檬酸合酶 + 异柠檬酸脱氢酶 + α-酮戊二酸脱氢酶；② 唯一嵌入线粒体内膜的酶是<span class="key-point">琥珀酸脱氢酶（复合体Ⅱ）</span>；③ 唯一一个产生 GTP 而非 ATP 的底物水平磷酸化反应；④ 2 个脱羧步骤（异柠檬酸→α-KG，α-KG→琥珀酰-CoA）都产生 CO₂；⑤ Krebs 因阐明此循环获 1953 年诺贝尔奖。
+  </div>
+</div>
+
+<div class="diagram">
+  <img src="assets/fig_tca_cycle.svg" alt="三羧酸循环" style="max-width:100%;border:1px solid var(--rule);border-radius:4px;">
+  <figcaption>图4：三羧酸循环（TCA/Krebs循环）——乙酰CoA经8步反应完全氧化，每轮产生2CO₂+3NADH+1FADH₂+1GTP（共10ATP）</figcaption>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><span class="u-double">底物水平磷酸化（substrate-level phosphorylation）</span>是指<span class="key-point">底物在酶催化下直接将磷酸基团转移给 ADP/GDP 生成 ATP/GTP</span>的过程，不经过电子传递链和质子梯度。糖代谢中共有 <span class="u-double">3 步</span>底物水平磷酸化反应：</p>
+    <div class="table-wrap">
+    <table>
+    <thead>
+    <tr><th>序号</th><th>反应</th><th>催化酶</th><th>所在途径</th><th>产物</th></tr>
+    </thead>
+    <tbody>
+    <tr><td>1</td><td>1,3-BPG + ADP → 3-PG + ATP</td><td><span class="u">磷酸甘油酸激酶（PGK）</span></td><td>糖酵解（第 7 步）</td><td>ATP</td></tr>
+    <tr><td>2</td><td>PEP + ADP → 丙酮酸 + ATP</td><td><span class="u">丙酮酸激酶（PK）</span></td><td>糖酵解（第 10 步）</td><td>ATP</td></tr>
+    <tr><td>3</td><td>琥珀酰-CoA + GDP → 琥珀酸 + GTP</td><td><span class="u">琥珀酰-CoA 合成酶</span>（琥珀酸硫激酶）</td><td>TCA 循环（第 5 步）</td><td>GTP</td></tr>
+    </tbody>
+    </table>
+    </div>
+    <p>⚠️ <span class="key-point">竞赛要点</span>：这是糖代谢中不经过电子传递链（氧化磷酸化）直接产生 ATP/GTP 的三步反应。每分子葡萄糖经糖酵解产生 2 ×（第 1、2 步）= 4 ATP（净产 2 ATP），经 TCA 产生 2 ×（第 3 步）= 2 GTP，共 6 个高能磷酸键来自底物水平磷酸化。</p>
+  </div>
+  <div class="annotation">
+    <span class="u-double">对比记忆</span>：底物水平磷酸化 vs 氧化磷酸化——前者直接从高能底物转移磷酸基给 ADP/GDP，后者通过质子梯度驱动 ATP 合酶。缺氧时氧化磷酸化受阻，细胞仍可通过糖酵解的底物水平磷酸化获得 ATP（剧烈运动时无氧糖酵解供能的基础）。
+  </div>
+</div>
+
+<div class="subtopic-header"><h4>3.4 乙醛酸循环（glyoxylate cycle）</h4></div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>乙醛酸循环是 TCA 循环的"变体"，仅存在于<span class="u-double">植物、细菌、真菌</span>（动物没有），位于<span class="u">乙醛酸循环体（glyoxysome）</span>中。意义：当生物以乙酸/脂肪酸为唯一碳源时，<span class="key-point">2 分子乙酰-CoA 净生成 1 分子琥珀酸</span>，可补充 TCA 中间物、净合成糖（糖异生）。</p>
+    <p>关键酶：<span class="u-double">异柠檬酸裂解酶 + 苹果酸合酶</span>（绕过了 TCA 中两个脱羧步骤）。净反应：2 乙酰-CoA → 1 琥珀酸（草酰乙酸在循环中再生）。意义：以乙酸/脂肪酸为碳源时，可净合成四碳二羧酸（琥珀酸），补充 TCA 中间物并通过糖异生合成葡萄糖。</p>
+  </div>
+</div>
+
+<div class="subtopic-header"><h4>3.5 磷酸戊糖途径（PPP, HMP）</h4></div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><span class="u-double">磷酸戊糖途径（pentose phosphate pathway, PPP）</span>是葡萄糖氧化的另一条途径，在胞质中进行，分两阶段：</p>
+    <ol>
+      <li><span class="u-double">氧化阶段</span>（产生 NADPH + 核糖-5-磷酸）：
+        <ul>
+          <li>葡萄糖-6-磷酸 → 6-磷酸葡糖酸内酯（<span class="u">6-磷酸葡糖脱氢酶 G6PD</span>，关键酶）→ 6-磷酸葡糖酸 → 核酮糖-5-磷酸（6-磷酸葡糖酸脱氢酶）→ 核糖-5-磷酸 + CO₂</li>
+          <li>总反应：<span class="key-point">3 G6P + 6 NADP⁺ → 3 核糖-5-P + 6 NADPH + 3 CO₂</span></li>
+        </ul>
+      </li>
+      <li><span class="u">非氧化阶段</span>（核糖-5-P 互变与糖回补）：
+        <ul>
+          <li><span class="u">转酮醇酶（TK）</span>：转移 2C 单位（酮糖→醛糖），辅酶为 <span class="key-point">TPP（焦磷酸硫胺素，VB₁）</span></li>
+          <li><span class="u">转醛醇酶（TA）</span>：转移 3C 单位，不需辅酶</li>
+          <li>5C、6C、4C、3C、7C 糖之间互变，最终回补 6-磷酸果糖和 3-磷酸甘油醛，可进入糖酵解或糖异生</li>
+        </ul>
+      </li>
+    </ol>
+    <p><span class="u-double">PPP 的生理意义</span>：</p>
+    <ul>
+      <li>产生 <span class="u-double">NADPH</span>（区别于 NADH）：用于<span class="key-point">还原性生物合成（脂肪酸、胆固醇合成）</span>、<span class="key-point">维持谷胱甘肽（GSH）还原态以对抗氧化应激</span>、细胞色素 P450 还原</li>
+      <li>产生 <span class="u-double">核糖-5-磷酸</span>：嘌呤/嘧啶合成的原料（核苷酸合成）</li>
+      <li><span class="u-double">连接糖酵解和糖异生</span>：非氧化阶段产生的 F6P 和 G3P 可回补糖酵解；反之当细胞需要 NADPH 而不需核糖时，核糖-5-P 也可逆向转化为糖酵解中间物，实现三条途径的灵活衔接</li>
+    </ul>
+    <p>⚠️ <span class="u-double">G6PD 缺乏症（蚕豆病，favism）</span>：X 染色体连锁隐性遗传，是<span class="key-point">人类最常见的酶缺陷病</span>。发病机制链：</p>
+    <ol>
+      <li>G6PD 缺乏 → PPP 氧化阶段受阻 → <span class="key-point">NADPH 产生不足</span></li>
+      <li>NADPH 不足 → 谷胱甘肽还原酶无法将 GSSG 还原为 GSH → <span class="key-point">GSH 维持困难</span></li>
+      <li>GSH 不足 → 红细胞无法清除活性氧 → <span class="key-point">红细胞膜易受氧化损伤</span></li>
+      <li>膜损伤 + 血红蛋白变性形成 Heinz 小体 → <span class="key-point">血管内/外溶血</span></li>
+    </ol>
+    <p>诱发因素：食用蚕豆（含蚕豆嘧啶核苷）、磺胺类药物、伯氨喹（抗疟药）、萘（樟脑丸）等氧化性物质。红细胞因缺乏线粒体，<span class="u">PPP 是其唯一 NADPH 来源</span>，故对 G6PD 缺乏最为敏感。</p>
+    <p>⚠️ <span class="u-double">竞赛真题</span>：蚕豆病患者红细胞内 PPP 途径受阻，NADPH 生成减少，GSH 无法维持还原态，导致红细胞膜氧化损伤而溶血。这是联赛高频考点。</p>
+  </div>
+  <div class="annotation">
+    <span class="u-double">奥赛必背</span>：NADPH 主要来源——① 磷酸戊糖途径（主要）；② 胞质柠檬酸裂解（柠檬酸从线粒体出来→ATP-柠檬酸裂解酶→OAA + 乙酰-CoA，同时产生 NADPH）。
+  </div>
+</div>
+
+<div class="subtopic-header"><h4>3.6 乙酰-CoA 的去向总结</h4></div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>三大物质代谢的"十字路口"是 <span class="u-double">乙酰-CoA</span>：</p>
+    <ul>
+      <li>糖 → 丙酮酸 → 乙酰-CoA</li>
+      <li>脂肪 → 脂肪酸 β-氧化 → 乙酰-CoA；甘油 → DHAP → 糖酵解</li>
+      <li>蛋白质 → 氨基酸 → 乙酰-CoA 或 TCA 中间物</li>
+    </ul>
+    <p>乙酰-CoA 的去向：</p>
+    <ol>
+      <li>进入 TCA 完全氧化产 ATP</li>
+      <li>合成 <span class="u">脂肪酸</span>（胞质，先经柠檬酸穿梭 + ATP-柠檬酸裂解酶生成乙酰-CoA）</li>
+      <li>合成 <span class="u">胆固醇</span>（甾醇）</li>
+      <li>合成 <span class="u">酮体</span>（饥饿、糖尿病时肝中产生）</li>
+      <li>合成 <span class="u">乙酰胆碱</span>（神经递质）</li>
+      <li>肝中 N-乙酰化反应（生物转化）</li>
+    </ol>
+  </div>
+</div>
+
+<!-- ========== 3.7 糖的合成代谢 ========== -->
+<div class="topic-header"><h3>四、糖的合成代谢</h3></div>
+
+<div class="subtopic-header"><h4>4.1 糖原合成（glycogenesis）</h4></div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>肝糖原/肌糖原的合成步骤：</p>
+    <ol>
+      <li>葡萄糖 → G6P（己糖激酶/葡糖激酶）</li>
+      <li>G6P → G1P（磷酸葡萄糖变位酶）</li>
+      <li>G1P + UTP → <span class="u-double">UDPG（UDP-葡萄糖，活化形式）</span> + PPi（UDP-葡萄糖焦磷酸化酶）</li>
+      <li>UDPG 中的葡萄糖基通过 α-1,4-糖苷键连接到糖原引物的非还原端（<span class="key-point">糖原合酶</span>，限速酶）</li>
+      <li>分支酶（4:6 转移酶，amylo-1,4→1,6-transglucosidase）每隔 8~12 个葡萄糖基引入一个 α-1,6-糖苷键分支</li>
+    </ol>
+    <p>糖原合酶有两种形式：<span class="u">a 型（去磷酸化，活性）</span>、<span class="u">b 型（磷酸化，无活性）</span>。其活性受 <span class="key-point">cAMP-PKA 级联调控</span>：肾上腺素/胰高血糖素 → cAMP ↑ → PKA → 糖原合酶 a 磷酸化为 b（失活），同时磷酸化酶 b 磷酸化为 a（激活）→ 糖原分解。</p>
+  </div>
+</div>
+
+<div class="subtopic-header"><h4>4.2 糖原分解（glycogenolysis）</h4></div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>糖原分解步骤：</p>
+    <ol>
+      <li>糖原 → G1P（<span class="key-point">糖原磷酸化酶</span>，限速酶，催化 α-1,4-糖苷键磷酸解）</li>
+      <li>α-1,6-糖苷键由<span class="u">脱支酶</span>（同时具有 4-α-D-葡糖苷转移酶活性）水解，释放葡萄糖</li>
+      <li>G1P → G6P（磷酸葡萄糖变位酶）</li>
+      <li>G6P → 葡萄糖（仅肝/肾，<span class="u">葡萄糖-6-磷酸酶</span>）→ 释放入血</li>
+    </ol>
+    <p>⚠️ 肌肉没有 G6P 酶，肌糖原分解的 G6P 直接进入糖酵解供能；只有肝糖原能补充血糖。</p>
+  </div>
+</div>
+
+<div class="subtopic-header"><h4>4.3 糖异生（gluconeogenesis）</h4></div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><span class="u-double">糖异生</span>：从非糖前体（乳酸、甘油、生糖氨基酸）合成葡萄糖。主要在<span class="key-point">肝细胞</span>（90%），少量在肾（10%）。</p>
+    <p>糖酵解的 3 个不可逆反应在糖异生中由 4 个关键酶绕过：</p>
+    <div class="table-wrap">
+    <table>
+    <thead>
+    <tr><th>糖酵解反应</th><th>糖异生对应</th><th>关键酶</th><th>能量</th></tr>
+    </thead>
+    <tbody>
+    <tr><td>丙酮酸 → PEP（PK 催化）</td><td>丙酮酸 → OAA → PEP</td><td><span class="key-point">丙酮酸羧化酶</span>（PC，生物素辅基，消耗 1 ATP）<br><span class="key-point">PEPCK</span>（PEP 羧激酶，消耗 1 GTP）</td><td>2~3 个高能键</td></tr>
+    <tr><td>FBP → F6P（PFK-1）</td><td>FBP → F6P</td><td><span class="key-point">果糖-1,6-二磷酸酶（FBPase-1）</span></td><td>0</td></tr>
+    <tr><td>G6P → 葡萄糖（GK）</td><td>G6P → 葡萄糖</td><td><span class="key-point">葡萄糖-6-磷酸酶</span>（仅肝/肾）</td><td>0</td></tr>
+    </tbody>
+    </table>
+    </div>
+    <p>总反应（从 2 丙酮酸 → 1 葡萄糖）：消耗 <span class="key-point">6 ATP + 2 GTP（相当于 4~6 个高能磷酸键）</span>，所以糖异生是耗能过程。</p>
+    <p><span class="u-double">乳酸循环（Cori 循环）</span>：</p>
+    <ol>
+      <li>肌肉缺氧时，葡萄糖经糖酵解产生乳酸 + ATP</li>
+      <li>乳酸经血液运到肝</li>
+      <li>肝中乳酸脱氢酶催化乳酸 → 丙酮酸（消耗 NAD⁺）</li>
+      <li>丙酮酸经糖异生 → 葡萄糖</li>
+      <li>葡萄糖回到肌肉</li>
+    </ol>
+    <p>意义：① 回收乳酸中的能量（避免酸中毒）；② 防止肌肉乳酸堆积；③ 间接为肌肉供能。</p>
+    <p>⚠️ <span class="u-double">糖异生的调控</span>：</p>
+    <ul>
+      <li><span class="u">高血糖/胰岛素</span> → 抑制糖异生（PKA 受抑）</li>
+      <li><span class="u">低血糖/胰高血糖素/糖皮质激素</span> → 激活糖异生（PKA 激活 PEPCK、FBPase-1；磷酸化 PFK-2 / FBPase-2）</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    <span class="u-double">奥赛重点</span>：① 糖异生是耗能过程（6 ATP + 2 GTP）；② 4 个关键酶；③ Cori 循环不能净产 ATP，但能清除乳酸；④ 乙醇通过抑制糖异生（消耗 NAD⁺）引发低血糖——这就是"酒后低血糖"机制。
+  </div>
+</div>
+
+<div class="subtopic-header"><h4>4.4 蔗糖、淀粉的合成</h4></div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>植物中糖的合成：</p>
+    <ul>
+      <li><span class="u">蔗糖</span>：UDP-葡萄糖 + 果糖 → 蔗糖 + UDP（蔗糖合酶）；或 F6P + UDP-葡萄糖 → 蔗糖-6-P（磷酸蔗糖合酶）→ 蔗糖</li>
+      <li><span class="u">淀粉</span>：ADPG（ADP-葡萄糖，由 ADPG 焦磷酸化酶合成）+ 葡聚糖引物 → 淀粉合酶催化 α-1,4 糖苷键延伸</li>
+      <li>ADPG 焦磷酸化酶是<span class="key-point">淀粉合成的限速酶</span>，受 3-磷酸甘油酸激活、Pi 抑制</li>
+    </ul>
+  </div>
+</div>
+
+<div class="subtopic-header"><h4>4.5 葡糖醛酸代谢途径</h4></div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>UDP-葡糖醛酸（UDPGA）是葡萄糖的活化形式，参与：</p>
+    <ul>
+      <li>肝<span class="key-point">生物转化第二相反应（结合反应）</span>—— 将亲脂性毒物/药物与葡糖醛酸结合 → 排泄</li>
+      <li>透明质酸、硫酸软骨素、肝素等糖胺聚糖的合成</li>
+      <li>胆红素代谢（结合胆红素）</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ========== 本节小结 ========== -->
+<div class="summary-box">
+  <h4>📌 ch1-1-8 拓展要点 · 本节小结</h4>
+  <ol>
+    <li><span class="u-double">新陈代谢研究方法</span>：同位素示踪（¹⁴C、³H、³²P）、酶抑制剂、基因敲除、代谢组学。</li>
+    <li><span class="u-double">高能化合物</span>：ATP（-30.5 kJ/mol）是通用能量货币，UTP 用于糖合成、GTP 用于蛋白合成、CTP 用于脂合成、乙酰-CoA 硫酯键（-31.4 kJ/mol）是碳骨架载体。</li>
+    <li><span class="u-double">呼吸链 4 大复合体</span>：Ⅰ（NADH→Q，泵 H⁺）、Ⅱ（琥珀酸→Q，不泵 H⁺）、Ⅲ（Q→cyt c，泵 H⁺）、Ⅳ（cyt c→O₂，泵 H⁺）。NADH P/O = 2.5，FADH₂ P/O = 1.5。</li>
+    <li><span class="u-double">化学渗透假说</span>（Mitchell 1961/1978 诺奖）：电子传递驱动 H⁺ 跨膜 → 质子动力势 → H⁺ 通过 ATP 合酶 F₀F₁ 顺流回基质驱动 ATP 合成。Boyer 结合变构机制（1997 诺奖）。</li>
+    <li><span class="u-double">呼吸链与氧化磷酸化抑制剂</span>：① 复合体Ⅰ→鱼藤酮/安密妥；② 复合体Ⅱ→丙二酸（琥珀酸类似物）；③ 复合体Ⅲ→抗霉素A；④ 复合体Ⅳ→CN⁻/CO/N₃⁻（作用于 cyt a₃）；⑤ ATP合酶→寡霉素（F₀）；⑥ 解偶联剂→DNP（质子载体，电子传递正常但ATP合成停止）；⑦ 离子载体→缬氨霉素（K⁺）。UCP 为棕色脂肪天然解偶联蛋白。</li>
+    <li><span class="u-double">苍术苷（Atractyloside）</span>：专一抑制 ADP/ATP 转运载体（ANT）→ 线粒体ATP无法运出 → ATP蓄积抑制ATP合酶 → 质子梯度增大 → 电子传递受阻 → O₂不能被还原 → 呼吸停止。2018全国联赛真题。</li>
+    <li><span class="u-double">胞质 NADH 穿梭</span>：甘油-3-磷酸穿梭（骨骼肌，1.5 ATP）+ 苹果酸-天冬氨酸穿梭（心肌/肝，2.5 ATP）。</li>
+    <li><span class="u-double">糖酵解 10 步反应</span>：净产 2 ATP + 2 NADH。3 个关键酶：HK（GK）/ PFK-1（限速酶）/ PK。PFK-1 受 ATP/柠檬酸抑制、AMP/果糖-2,6-BP 激活。GAPDH 是糖酵解中唯一以游离 Pi 为直接底物的酶（2025 联赛真题）。</li>
+    <li><span class="u-double">底物水平磷酸化 3 步</span>：① 1,3-BPG→3-PG（PGK，糖酵解）；② PEP→丙酮酸（PK，糖酵解）；③ 琥珀酰-CoA→琥珀酸（琥珀酰CoA合成酶，TCA）。不经过电子传递链直接产 ATP/GTP。</li>
+    <li><span class="u-double">PDH 复合体</span>：3 种酶 60 亚基（最大多酶复合体），5 种辅酶（TPP/硫辛酸/CoA/FAD/NAD⁺）协同工作。PDH 激酶磷酸化失活 E1α，PDH 磷酸酶去磷酸化激活。</li>
+    <li><span class="u-double">TCA 循环 8 步</span>：每乙酰-CoA 产 2 CO₂ + 3 NADH + 1 FADH₂ + 1 GTP（= 10 ATP）。3 个不可逆关键酶：柠檬酸合酶 / 异柠檬酸脱氢酶 / α-KG 脱氢酶。琥珀酸脱氢酶（复合体Ⅱ）是唯一嵌入内膜的酶。</li>
+    <li><span class="u-double">每分子葡萄糖完全氧化总产 30~32 ATP</span>：2（糖酵解 ATP）+ 2（TCA GTP）+ 25（10 NADH × 2.5）+ 3（2 FADH₂ × 1.5）= 32（苹果酸-天冬氨酸穿梭）或 30（甘油-3-磷酸穿梭）。</li>
+    <li><span class="u-double">磷酸戊糖途径（PPP）</span>：G6PD 催化 G6P 脱氢（限速酶）→ 产 NADPH + 核糖-5-P。转酮醇酶辅酶为 TPP。NADPH 用于还原性生物合成和维持 GSH 还原态（抗氧化）。PPP 连接糖酵解和糖异生。<strong>G6PD 缺乏症（蚕豆病）</strong>：NADPH 不足 → GSH 维持困难 → 红细胞膜氧化损伤 → 溶血（联赛高频考点）。</li>
+    <li><span class="u-double">糖原代谢</span>：糖原合酶（合成，a 活/b 无活）+ 糖原磷酸化酶（分解，a 活/b 无活）。PKA 通过磷酸化双向调节：合酶失活 + 磷酸化酶激活。</li>
+    <li><span class="u-double">糖异生 4 个关键酶</span>：丙酮酸羧化酶（PC）/ PEPCK / 果糖-1,6-二磷酸酶 / 葡萄糖-6-磷酸酶。耗能 6 ATP + 2 GTP。仅肝/肾有 G6P 酶。</li>
+    <li><span class="u-double">Cori 循环</span>：肌乳酸 → 肝糖异生 → 葡萄糖回肌肉。不能净产 ATP，但清除乳酸 + 间接供能。</li>
+    <li><span class="u-double">乙酰-CoA 是三大物质代谢的"十字路口"</span>：糖→乙酰-CoA（PDH）、脂→乙酰-CoA（β-氧化）、氨基酸→乙酰-CoA。乙酰-CoA 去向：TCA / 脂肪酸合成 / 胆固醇合成 / 酮体 / 乙酰胆碱 / 肝 N-乙酰化。</li>
+  </ol>
+</div>
+
+</div>
+
+<footer><a href="index.html" style="color:var(--accent);text-decoration:none;margin-right:1rem;">← 返回目录</a>
+生物化学讲义 · 参考张丽萍《生物化学简明教程》第六版第8-9章 · 适用于有人教版高中生物学基础的生物竞赛生<br>
+本章关键词：ATP 呼吸链 化学渗透 氧化磷酸化 P/O比 解偶联剂 鱼藤酮 抗霉素A 寡霉素 DNP 缬氨霉素 苍术苷 底物水平磷酸化 糖酵解 PFK-1 PDH GAPDH Pi 柠檬酸循环 PPP G6PD 蚕豆病 转酮醇酶 TPP 糖原 糖异生 Cori循环
+</footer>
+
+</body>
+</html>

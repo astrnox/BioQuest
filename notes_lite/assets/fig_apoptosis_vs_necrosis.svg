@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 578" style="font-family: sans-serif;">
+  <rect x="0" y="0" width="820" height="578" fill="#fdfbf7"/>
+  <text x="410" y="30" text-anchor="middle" font-size="20" font-weight="700" fill="#2c2416">细胞凋亡 vs 细胞坏死 (Apoptosis vs Necrosis)</text>
+  <text x="410" y="51" text-anchor="middle" font-size="12.5" fill="#7a6e5e">凋亡:程序性、主动、耗能、被吞噬清除(不炎症)　|　坏死:被动、无序、膜破裂、内容物外溢(发炎)</text>
+
+  <!-- 列标题 -->
+  <text x="205" y="74" text-anchor="middle" font-size="16" font-weight="700" fill="#c0392b">细胞凋亡 Apoptosis</text>
+  <text x="615" y="74" text-anchor="middle" font-size="16" font-weight="700" fill="#8b4513">细胞坏死 Necrosis</text>
+
+  <!-- ============ 凋亡细胞 (cx≈205) ============ -->
+  <g>
+    <!-- 主体(皱缩) + 起泡 -->
+    <circle cx="205" cy="180" r="40" fill="#f5cccc" stroke="#c0392b" stroke-width="2"/>
+    <circle cx="168" cy="152" r="9" fill="#f5cccc" stroke="#c0392b" stroke-width="1.6"/>
+    <circle cx="172" cy="208" r="8" fill="#f5cccc" stroke="#c0392b" stroke-width="1.6"/>
+    <circle cx="240" cy="155" r="8" fill="#f5cccc" stroke="#c0392b" stroke-width="1.6"/>
+    <circle cx="243" cy="198" r="9" fill="#f5cccc" stroke="#c0392b" stroke-width="1.6"/>
+    <circle cx="205" cy="140" r="7" fill="#f5cccc" stroke="#c0392b" stroke-width="1.6"/>
+    <!-- 核:染色质边集凝缩 -->
+    <circle cx="205" cy="180" r="18" fill="#fff8e7" stroke="#2c2416" stroke-width="1.4"/>
+    <path d="M 191,172 A 17 17 0 0 1 219,172" stroke="#2c2416" stroke-width="5" fill="none"/>
+    <path d="M 191,188 A 17 17 0 0 0 219,188" stroke="#2c2416" stroke-width="5" fill="none"/>
+    <!-- 凋亡小体(膜完整,可含核碎片) -->
+    <circle cx="120" cy="208" r="12" fill="#f5cccc" stroke="#c0392b" stroke-width="1.6"/>
+    <circle cx="122" cy="210" r="4" fill="#2c2416"/>
+    <circle cx="150" cy="250" r="9" fill="#f5cccc" stroke="#c0392b" stroke-width="1.6"/>
+    <!-- 吞噬细胞 -->
+    <path d="M 295,250 C 268,205 282,198 312,202 C 350,208 358,236 346,262 C 332,290 302,283 295,250 Z" fill="#d9e8cf" stroke="#4a7c3a" stroke-width="2"/>
+    <circle cx="322" cy="240" r="10" fill="#f5cccc" stroke="#c0392b" stroke-width="1.4"/>
+    <text x="312" y="278" text-anchor="middle" font-size="10" fill="#4a7c3a">吞噬细胞</text>
+    <!-- 标注 -->
+    <text x="205" y="100" text-anchor="middle" font-size="11" fill="#c0392b">细胞皱缩</text>
+    <line x1="205" y1="104" x2="205" y2="138" stroke="#c0392b" stroke-width="1"/>
+    <text x="80" y="150" font-size="11" fill="#c0392b">胞膜起泡</text>
+    <line x1="115" y1="154" x2="160" y2="150" stroke="#c0392b" stroke-width="1"/>
+    <text x="80" y="190" font-size="11" fill="#c0392b">染色质凝缩</text>
+    <text x="80" y="204" font-size="11" fill="#c0392b">边集</text>
+    <line x1="120" y1="186" x2="188" y2="176" stroke="#c0392b" stroke-width="1"/>
+    <text x="118" y="232" font-size="11" fill="#c0392b">凋亡小体</text>
+    <line x1="128" y1="222" x2="118" y2="214" stroke="#c0392b" stroke-width="1"/>
+    <text x="205" y="266" text-anchor="middle" font-size="11" font-weight="700" fill="#4a7c3a">膜完整·不引发炎症</text>
+  </g>
+
+  <!-- ============ 坏死细胞 (cx≈615) ============ -->
+  <g>
+    <!-- 肿胀细胞(膜破裂) -->
+    <circle cx="615" cy="178" r="55" fill="#fff8e7" stroke="#c0392b" stroke-width="2"/>
+    <!-- 破裂缺口 -->
+    <path d="M 585,230 Q 615,244 645,228" stroke="#fdfbf7" stroke-width="7" fill="none"/>
+    <path d="M 585,230 Q 615,244 645,228" stroke="#c0392b" stroke-width="1.4" fill="none" stroke-dasharray="3 3"/>
+    <!-- 肿胀细胞器 -->
+    <ellipse cx="598" cy="160" rx="11" ry="7" fill="#d6ccc0" stroke="#8b4513" stroke-width="1.2"/>
+    <ellipse cx="635" cy="185" rx="10" ry="6" fill="#d6ccc0" stroke="#8b4513" stroke-width="1.2"/>
+    <ellipse cx="600" cy="200" rx="8" ry="5" fill="#d6ccc0" stroke="#8b4513" stroke-width="1.2"/>
+    <!-- 核溶解(淡,弥散) -->
+    <circle cx="612" cy="175" r="17" fill="#f5cccc" opacity="0.45" stroke="#c0392b" stroke-width="1" stroke-dasharray="2 2"/>
+    <circle cx="608" cy="170" r="2.2" fill="#c0392b" opacity="0.5"/>
+    <circle cx="618" cy="178" r="1.8" fill="#c0392b" opacity="0.5"/>
+    <circle cx="613" cy="182" r="2" fill="#c0392b" opacity="0.4"/>
+    <!-- 内容物外溢 -->
+    <circle cx="588" cy="250" r="3.5" fill="#d6ccc0" stroke="#8b4513" stroke-width="0.8"/>
+    <circle cx="602" cy="262" r="3" fill="#d6ccc0" stroke="#8b4513" stroke-width="0.8"/>
+    <circle cx="620" cy="258" r="3.5" fill="#d6ccc0" stroke="#8b4513" stroke-width="0.8"/>
+    <circle cx="636" cy="250" r="3" fill="#d6ccc0" stroke="#8b4513" stroke-width="0.8"/>
+    <!-- 中性粒细胞(炎症) -->
+    <circle cx="545" cy="235" r="12" fill="#fff8e7" stroke="#4a7c3a" stroke-width="1.4"/>
+    <path d="M 538,231 q 3,-4 6,0 q 3,4 6,0" stroke="#4a7c3a" stroke-width="2" fill="none"/>
+    <circle cx="688" cy="200" r="12" fill="#fff8e7" stroke="#4a7c3a" stroke-width="1.4"/>
+    <path d="M 681,196 q 3,-4 6,0 q 3,4 6,0" stroke="#4a7c3a" stroke-width="2" fill="none"/>
+    <text x="545" y="262" text-anchor="middle" font-size="10" fill="#4a7c3a">中性粒细胞</text>
+    <text x="688" y="227" text-anchor="middle" font-size="10" fill="#4a7c3a">中性粒细胞</text>
+    <!-- 标注 -->
+    <text x="615" y="100" text-anchor="middle" font-size="11" fill="#8b4513">细胞肿胀</text>
+    <line x1="615" y1="104" x2="615" y2="122" stroke="#8b4513" stroke-width="1"/>
+    <text x="500" y="150" font-size="11" fill="#8b4513">细胞器肿胀</text>
+    <line x1="540" y1="154" x2="588" y2="160" stroke="#8b4513" stroke-width="1"/>
+    <text x="500" y="186" font-size="11" fill="#8b4513">核溶解</text>
+    <line x1="528" y1="183" x2="595" y2="176" stroke="#8b4513" stroke-width="1"/>
+    <text x="700" y="148" font-size="11" fill="#8b4513">膜破裂</text>
+    <line x1="697" y1="152" x2="650" y2="225" stroke="#8b4513" stroke-width="1"/>
+    <text x="615" y="280" text-anchor="middle" font-size="11" font-weight="700" fill="#c0392b">内容物外溢·引发炎症</text>
+  </g>
+
+  <!-- ============ 对比表 ============ -->
+  <text x="410" y="298" text-anchor="middle" font-size="14" font-weight="700" fill="#2c2416">形态与特征对比</text>
+  <!-- 表格外框 -->
+  <rect x="30" y="310" width="760" height="232" fill="none" stroke="#d6ccc0" stroke-width="1.5"/>
+  <!-- 列分隔 -->
+  <line x1="175" y1="310" x2="175" y2="542" stroke="#d6ccc0" stroke-width="1.5"/>
+  <line x1="490" y1="310" x2="490" y2="542" stroke="#d6ccc0" stroke-width="1.5"/>
+  <!-- 表头 -->
+  <rect x="30" y="310" width="760" height="26" fill="#e8d8c4"/>
+  <text x="102" y="328" text-anchor="middle" font-size="12.5" font-weight="700" fill="#2c2416">特征</text>
+  <text x="332" y="328" text-anchor="middle" font-size="12.5" font-weight="700" fill="#c0392b">细胞凋亡 Apoptosis</text>
+  <text x="640" y="328" text-anchor="middle" font-size="12.5" font-weight="700" fill="#8b4513">细胞坏死 Necrosis</text>
+  <line x1="30" y1="336" x2="790" y2="336" stroke="#d6ccc0" stroke-width="1.2"/>
+
+  <!-- 行数据 -->
+  <g font-size="11.5" fill="#2c2416">
+    <text x="40" y="354">性质</text><text x="185" y="354">程序性、主动死亡</text><text x="500" y="354">意外、被动死亡</text>
+    <line x1="30" y1="360" x2="790" y2="360" stroke="#eee5d8" stroke-width="1"/>
+    <text x="40" y="376">诱因</text><text x="185" y="376">生理性(发育/稳态)或温和病理</text><text x="500" y="376">强烈损伤(缺氧/毒素/创伤)</text>
+    <line x1="30" y1="382" x2="790" y2="382" stroke="#eee5d8" stroke-width="1"/>
+    <text x="40" y="398">调控/能量</text><text x="185" y="398">基因调控、caspase依赖、耗 ATP</text><text x="500" y="398">无序、不耗能、无基因调控</text>
+    <line x1="30" y1="404" x2="790" y2="404" stroke="#eee5d8" stroke-width="1"/>
+    <text x="40" y="420">细胞体积</text><text x="185" y="420">皱缩(shrinkage)</text><text x="500" y="420">肿胀(swelling)</text>
+    <line x1="30" y1="426" x2="790" y2="426" stroke="#eee5d8" stroke-width="1"/>
+    <text x="40" y="442">细胞膜</text><text x="185" y="442">完整,形成凋亡小体</text><text x="500" y="442">破裂、通透性增加</text>
+    <line x1="30" y1="448" x2="790" y2="448" stroke="#eee5d8" stroke-width="1"/>
+    <text x="40" y="464">细胞核</text><text x="185" y="464">染色质凝缩边集 → 核碎裂</text><text x="500" y="464">核固缩 → 核溶解(karyolysis)</text>
+    <line x1="30" y1="470" x2="790" y2="470" stroke="#eee5d8" stroke-width="1"/>
+    <text x="40" y="486">内容物</text><text x="185" y="486">不外溢</text><text x="500" y="486">外溢</text>
+    <line x1="30" y1="492" x2="790" y2="492" stroke="#eee5d8" stroke-width="1"/>
+    <text x="40" y="508">炎症反应</text><text x="185" y="508">无,被吞噬细胞清除</text><text x="500" y="508">有,中性粒细胞浸润</text>
+    <line x1="30" y1="514" x2="790" y2="514" stroke="#eee5d8" stroke-width="1"/>
+    <text x="40" y="530">影响范围</text><text x="185" y="530">散在单个细胞"安静"清除</text><text x="500" y="530">成片细胞坏死、组织损伤</text>
+  </g>
+
+  <!-- 凋亡通路脚注 -->
+  <text x="410" y="560" text-anchor="middle" font-size="11" fill="#7a6e5e">凋亡执行通路:外源性(FasL→Fas→FADD→caspase-8→caspase-3) | 内源性(线粒体细胞色素c释放→Apaf-1→凋亡体→caspase-9→caspase-3) | Bcl-2 家族调控线粒体通路</text>
+</svg>

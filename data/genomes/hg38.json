@@ -1,0 +1,40 @@
+{
+  "id": "hg38",
+  "name": "Human (GRCh38/hg38)",
+  "fastaURL": "",
+  "indexURL": "",
+  "cytobandURL": "",
+  "aliasURL": "",
+  "chromOrder": [
+    "chr1","chr2","chr3","chr4","chr5","chr6","chr7","chr8","chr9","chr10",
+    "chr11","chr12","chr13","chr14","chr15","chr16","chr17","chr18","chr19","chr20",
+    "chr21","chr22","chrX","chrY","chrM"
+  ],
+  "chromosomes": [
+    {"name": "chr1", "bpLength": 248956422},
+    {"name": "chr2", "bpLength": 242193529},
+    {"name": "chr3", "bpLength": 198295559},
+    {"name": "chr4", "bpLength": 190214555},
+    {"name": "chr5", "bpLength": 181538259},
+    {"name": "chr6", "bpLength": 170805979},
+    {"name": "chr7", "bpLength": 159345973},
+    {"name": "chr8", "bpLength": 145138636},
+    {"name": "chr9", "bpLength": 138394717},
+    {"name": "chr10","bpLength": 133797422},
+    {"name": "chr11","bpLength": 135086622},
+    {"name": "chr12","bpLength": 133275309},
+    {"name": "chr13","bpLength": 114364328},
+    {"name": "chr14","bpLength": 107043718},
+    {"name": "chr15","bpLength": 101991189},
+    {"name": "chr16","bpLength":  90338345},
+    {"name": "chr17","bpLength":  83257441},
+    {"name": "chr18","bpLength":  80373285},
+    {"name": "chr19","bpLength":  58617616},
+    {"name": "chr20","bpLength":  64444167},
+    {"name": "chr21","bpLength":  46709983},
+    {"name": "chr22","bpLength":  50818468},
+    {"name": "chrX", "bpLength": 156040895},
+    {"name": "chrY", "bpLength":  57227415},
+    {"name": "chrM", "bpLength":     16569}
+  ]
+}

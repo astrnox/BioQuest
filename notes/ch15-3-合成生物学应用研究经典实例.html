@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第十五章 合成生物学 · 第三节 合成生物学应用研究经典实例 — 生物集训营笔记</title>
+<style>
+:root {
+  --bg: #fdfbf7; --bg2: #f5f0e8; --ink: #2c2416; --muted: #7a6e5e;
+  --rule: #d6ccc0; --accent: #c0392b; --accent2: #8b4513;
+  --highlight: #fff3cd; --note-bg: #fff8e7; --note-border: #e8c84a;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: "Noto Sans CJK SC", "WenQuanYi Micro Hei", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  font-size: 16px; line-height: 1.8; color: var(--ink); background: var(--bg);
+}
+.cover { text-align: center; padding: 4rem 2rem 3rem; border-bottom: 3px double var(--rule); margin-bottom: 0; background: linear-gradient(180deg, var(--bg2) 0%, var(--bg) 100%); }
+.cover .ch-num { font-size: 1rem; color: var(--accent); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 0.3rem; }
+.cover h1 { font-size: 2.2rem; font-weight: 800; color: var(--ink); margin-bottom: 0.5rem; letter-spacing: 0.03em; }
+.cover .subtitle { font-size: 1rem; color: var(--muted); }
+.cover .meta { margin-top: 1.2rem; font-size: 0.85rem; color: var(--muted); display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
+.main-layout { max-width: 1060px; margin: 0 auto; padding: 0 1.5rem; }
+.section-header { border-bottom: 3px solid var(--accent); padding: 2rem 0 0.6rem; margin-bottom: 1.5rem; }
+.section-header .sec-num { font-size: 0.9rem; color: var(--accent); font-weight: 700; letter-spacing: 0.08em; }
+.section-header h2 { font-size: 1.6rem; font-weight: 800; color: var(--ink); margin-top: 0.15rem; }
+.topic-header { margin: 2rem 0 1rem; padding-left: 0.8rem; border-left: 4px solid var(--accent); }
+.topic-header h3 { font-size: 1.25rem; font-weight: 700; color: var(--ink); }
+.subtopic-header { margin: 1.5rem 0 0.8rem; }
+.subtopic-header h4 { font-size: 1.1rem; font-weight: 700; color: var(--accent2); }
+.note-block { display: flex; gap: 1.5rem; margin-bottom: 1.2rem; align-items: flex-start; }
+.note-content { flex: 1; padding: 0.8rem 1rem; background: var(--bg2); border-radius: 6px; border: 1px solid var(--rule); }
+.note-content p { margin-bottom: 0.5rem; }
+.note-content p:last-child { margin-bottom: 0; }
+.note-content ul, .note-content ol { padding-left: 1.5rem; margin: 0.4rem 0; }
+.note-content li { margin-bottom: 0.25rem; }
+.annotation { width: 240px; flex-shrink: 0; background: var(--note-bg); border: 1px solid var(--note-border); border-radius: 6px; padding: 0.6rem 0.8rem; font-size: 0.82rem; line-height: 1.6; color: var(--accent2); align-self: flex-start; }
+.annotation::before { content: "📝 批注"; display: block; font-size: 0.7rem; font-weight: 700; color: var(--accent); letter-spacing: 0.06em; margin-bottom: 0.3rem; text-transform: uppercase; }
+.u { text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 2px; text-underline-offset: 3px; font-weight: 600; }
+.u-double { text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 2px; text-underline-offset: 3px; text-decoration-style: double; font-weight: 700; }
+.key-point { background: var(--highlight); padding: 0.1em 0.3em; border-radius: 3px; font-weight: 600; border-bottom: 1.5px solid var(--accent); }
+.table-wrap { overflow-x: auto; overflow-y: auto; max-height: 600px; margin: 1.5rem 0; border: 1px solid var(--rule); border-radius: 6px; }
+table { width: 100%; border-collapse: collapse; font-size: 0.9rem; min-width: 800px; }
+table thead th { background: var(--accent); color: #fff; padding: 0.6rem 0.8rem; font-weight: 700; text-align: center; white-space: nowrap; }
+table tbody td { padding: 0.5rem 0.8rem; border-bottom: 1px solid var(--rule); vertical-align: top; }
+table tbody tr:nth-child(even) { background: var(--bg2); }
+table tbody tr:last-child td { border-bottom: none; }
+table tbody td:first-child { font-weight: 600; white-space: nowrap; text-align: center; background: var(--bg2); }
+figcaption { text-align: center; font-size: 0.85rem; color: var(--muted); margin-top: 0.4rem; }
+.diagram { margin: 1.2rem 0; text-align: center; }
+.diagram img { max-width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 4px; }
+.summary-box { background: linear-gradient(135deg, #fdf2f2 0%, #fef9e7 100%); border: 2px solid var(--accent); border-radius: 8px; padding: 1.2rem 1.5rem; margin: 2rem 0; }
+.summary-box h4 { color: var(--accent); font-size: 1rem; margin-bottom: 0.6rem; }
+.expand-block { background: #f0f7f4; border: 1px dashed #7cb342; border-radius: 6px; padding: 0.5rem 0.9rem; margin: 0.6rem 0 0; font-size: 0.83rem; line-height: 1.6; color: #3e6b3e; }
+.expand-block::before { content: "🔍 拓展"; display: block; font-size: 0.7rem; font-weight: 700; color: #558b2f; letter-spacing: 0.06em; margin-bottom: 0.2rem; }
+.flow-box { background: var(--bg); border: 1px solid var(--rule); border-radius: 8px; padding: 1.2rem; margin: 1.2rem 0; text-align: center; }
+.flow-box .flow-title { font-size: 0.85rem; font-weight: 700; color: var(--accent); margin-bottom: 0.8rem; }
+.flow-row { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 0.3rem; font-size: 0.85rem; }
+.flow-item { background: var(--bg2); border: 1px solid var(--rule); border-radius: 4px; padding: 0.25rem 0.6rem; white-space: nowrap; }
+.flow-arrow { color: var(--accent); font-weight: 700; font-size: 1.1rem; }
+footer { margin-top: 3rem; padding: 1.5rem; border-top: 1px solid var(--rule); text-align: center; font-size: 0.8rem; color: var(--muted); }
+@media (max-width: 768px) {
+  .cover h1 { font-size: 1.5rem; }
+  .note-block { flex-direction: column; }
+  .annotation { width: 100%; }
+  .main-layout { padding: 0 0.8rem; }
+  table { font-size: 0.78rem; min-width: 600px; }
+}
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div class="ch-num">高中生物竞赛讲义 · 集训营</div>
+  <h1>第十五章 合成生物学</h1>
+  <div class="subtitle">第三节 合成生物学应用研究经典实例</div>
+  <div class="meta">
+    <span>青蒿素微生物工厂</span><span>半合成青蒿素</span><span>大肠杆菌成像系统</span><span>生物制造</span>
+    <span>📅 整理日期: 2026年7月6日</span>
+  </div>
+</div>
+
+<div class="main-layout">
+
+<div class="section-header">
+  <div class="sec-num">第三节</div>
+  <h2>合成生物学应用研究经典实例</h2>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>本节通过 2 个经典实例展示合成生物学"基础研究→工业应用"的转化能力：</p>
+    <ol>
+      <li><span class="key-point">合成青蒿素的微生物工厂</span>（Keasling lab, 2003–2013）：将青蒿素前体的合成通路从黄花蒿移植到大肠杆菌/酵母，实现工业化半合成青蒿素。</li>
+      <li><span class="key-point">大肠杆菌成像系统</span>（MIT 2010s）：用工程化大肠杆菌群体实现黑白/彩色图像显示。</li>
+    </ol>
+  </div>
+  <div class="annotation">
+    <strong>合成生物学 = "工程化生命"</strong>。两大应用方向：① 高价值化合物生产；② 程序化生物系统（成像、计算、治疗）。
+  </div>
+</div>
+
+<!-- ====== 一、青蒿素微生物工厂 ====== -->
+<div class="topic-header">
+  <h3>一、合成青蒿素的微生物工厂</h3>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><span class="u-double">青蒿素（artemisinin）</span>是 <em>黄花蒿（<em>Artemisia annua</em>）</em> 中提取的 <span class="u-double">倍半萜内酯</span>，是治疗疟疾的特效药（屠呦呦 2015 诺贝尔生理学或医学奖）。</p>
+    <p>传统生产：</p>
+    <ul>
+      <li>从黄花蒿叶片中提取青蒿素；</li>
+      <li>受气候、土地、病虫害影响严重，供应不稳定；</li>
+      <li>价格波动大，疟疾流行区（非洲、东南亚）的患者难以负担。</li>
+    </ul>
+    <p><span class="u-double">合成生物学方案（Keasling lab, UC Berkeley / Amyris）</span>：</p>
+    <ul>
+      <li>2003 年：在大肠杆菌中构建青蒿素前体 <em>amorphadiene</em> 合成途径；</li>
+      <li>2006 年：转用酵母底盘，提高产量；</li>
+      <li>2006 年：<em>Ro, Paradise, Keasling 2006, Nature</em>——优化酵母途径，amorphadiene 产量达 100 g/L；</li>
+      <li>2013 年：<span class="key-point">半合成青蒿素（semi-synthetic artemisinin, SSA）实现工业化生产</span>，由赛诺菲（Sanofi）大规模生产，年产 50–60 吨，可满足全球需求的一半以上。</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    <strong>半合成青蒿素（SSA）</strong> 是合成生物学 <em>最大的商业成功案例</em>。Jay Keasling 是该领域奠基人。
+  </div>
+</div>
+
+<div class="subtopic-header">
+  <h4>青蒿素生物合成途径</h4>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>青蒿素生物合成的关键酶与基因：</p>
+    <ol>
+      <li><span class="key-point">甲羟戊酸途径（MVA pathway）</span>：所有萜类化合物的共同前体 IPP（异戊烯基焦磷酸）和 DMAPP（二甲基烯丙基焦磷酸）的合成通路。在酵母中天然存在，在大肠杆菌中需要异源导入。</li>
+      <li><span class="key-point">紫穗槐-4,11-二烯合酶（ADS, amorphadiene synthase）</span>：将 FPP（法尼基焦磷酸）环化为 <em>amorphadiene</em>，是青蒿素特异性途径的第一步。来自黄花蒿。</li>
+      <li><span class="key-point">CYP71AV1</span>：细胞色素 P450 单加氧酶，氧化 amorphadiene 为 <em>artemisinic acid</em>。来自黄花蒿。</li>
+      <li><span class="key-point">ADH1（醇脱氢酶）</span>：将青蒿醛还原为 <em>artemisinic alcohol</em>（相当于 ADH1 在酵母中将乙醛还原为乙醇的发酵方向）。来自黄花蒿。</li>
+    </ol>
+    <p>合成路径：</p>
+    <p style="text-align: center; padding: 0.6rem; background: var(--bg); border: 1px solid var(--rule); border-radius: 4px; font-family: monospace; font-size: 0.9rem;">
+      乙酰辅酶 A → MVA 途径 → IPP / DMAPP → FPP → ADS → <strong>amorphadiene</strong> → CYP71AV1 → artemisinic acid → 化学合成 → <strong>artemisinin</strong>
+    </p>
+  </div>
+  <div class="annotation">
+    异源表达 <strong>ADS + CYP71AV1</strong> 是工程化青蒿素途径的核心，二者均来自黄花蒿。
+  </div>
+</div>
+
+<div class="diagram">
+<svg viewBox="0 0 942 420" style="width:100%;max-width:700px;margin:1rem auto;display:block;font-family:sans-serif;">
+  <rect x="0" y="0" width="800" height="420" fill="#fdfbf7" stroke="#d6ccc0" rx="8"/>
+  <text x="400" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="#2c2416">图 15-3-1　青蒿素合成途径工程图（Keasling lab）</text>
+  <!-- pathway boxes -->
+  <rect x="20" y="55" width="100" height="40" fill="#e8dcc8" stroke="#8b4513" rx="4"/>
+  <text x="70" y="72" text-anchor="middle" font-size="10" font-weight="700" fill="#8b4513">乙酰辅酶A</text>
+  <text x="70" y="86" text-anchor="middle" font-size="10" fill="#7a6e5e">Acetyl-CoA</text>
+  <line x1="120" y1="75" x2="140" y2="75" stroke="#c0392b" stroke-width="2"/>
+  <polygon points="140,75 132,70 132,80" fill="#c0392b"/>
+  <rect x="145" y="50" width="120" height="50" fill="#fff8e7" stroke="#c0392b" stroke-width="1.5" rx="4"/>
+  <text x="205" y="68" text-anchor="middle" font-size="10" font-weight="700" fill="#c0392b">MVA 途径</text>
+  <text x="205" y="82" text-anchor="middle" font-size="10" fill="#7a6e5e">酵母来源（6基因）</text>
+  <text x="205" y="94" text-anchor="middle" font-size="10" fill="#8b4513">ERG8/10/12/13/19/20</text>
+  <line x1="265" y1="75" x2="285" y2="75" stroke="#c0392b" stroke-width="2"/>
+  <polygon points="285,75 277,70 277,80" fill="#c0392b"/>
+  <rect x="290" y="55" width="80" height="40" fill="#e8dcc8" stroke="#8b4513" rx="4"/>
+  <text x="330" y="72" text-anchor="middle" font-size="10" font-weight="700" fill="#8b4513">IPP/DMAPP</text>
+  <text x="330" y="86" text-anchor="middle" font-size="10" fill="#7a6e5e">异戊烯基焦磷酸</text>
+  <line x1="370" y1="75" x2="390" y2="75" stroke="#c0392b" stroke-width="2"/>
+  <polygon points="390,75 382,70 382,80" fill="#c0392b"/>
+  <rect x="395" y="55" width="60" height="40" fill="#e8dcc8" stroke="#8b4513" rx="4"/>
+  <text x="425" y="72" text-anchor="middle" font-size="10" font-weight="700" fill="#8b4513">FPP</text>
+  <text x="425" y="86" text-anchor="middle" font-size="10" fill="#7a6e5e">法尼基焦磷酸</text>
+  <line x1="455" y1="75" x2="475" y2="75" stroke="#c0392b" stroke-width="2"/>
+  <polygon points="475,75 467,70 467,80" fill="#c0392b"/>
+  <rect x="480" y="50" width="100" height="50" fill="#fdecea" stroke="#c0392b" stroke-width="2" rx="4"/>
+  <text x="530" y="68" text-anchor="middle" font-size="9" font-weight="700" fill="#c0392b">ADS</text>
+  <text x="530" y="80" text-anchor="middle" font-size="10" fill="#8b4513">紫穗槐二烯合酶</text>
+  <text x="530" y="92" text-anchor="middle" font-size="10" fill="#8b4513">来自黄花蒿</text>
+  <line x1="580" y1="75" x2="600" y2="75" stroke="#c0392b" stroke-width="2"/>
+  <polygon points="600,75 592,70 592,80" fill="#c0392b"/>
+  <rect x="605" y="55" width="90" height="40" fill="#e8dcc8" stroke="#8b4513" rx="4"/>
+  <text x="650" y="72" text-anchor="middle" font-size="9" font-weight="700" fill="#8b4513">amorphadiene</text>
+  <text x="650" y="86" text-anchor="middle" font-size="10" fill="#7a6e5e">紫穗槐-4,11-二烯</text>
+  <line x1="695" y1="75" x2="715" y2="75" stroke="#c0392b" stroke-width="2"/>
+  <polygon points="715,75 707,70 707,80" fill="#c0392b"/>
+  <rect x="720" y="50" width="60" height="50" fill="#fdecea" stroke="#c0392b" stroke-width="2" rx="4"/>
+  <text x="750" y="68" text-anchor="middle" font-size="10" font-weight="700" fill="#c0392b">CYP71AV1</text>
+  <text x="750" y="80" text-anchor="middle" font-size="10" fill="#8b4513">P450</text>
+  <text x="750" y="92" text-anchor="middle" font-size="10" fill="#8b4513">单加氧酶</text>
+  <!-- second row -->
+  <line x1="750" y1="100" x2="750" y2="130" stroke="#c0392b" stroke-width="2"/>
+  <polygon points="750,130 745,122 755,122" fill="#c0392b"/>
+  <rect x="690" y="135" width="120" height="40" fill="#e8dcc8" stroke="#8b4513" rx="4"/>
+  <text x="750" y="152" text-anchor="middle" font-size="10" font-weight="700" fill="#8b4513">artemisinic acid</text>
+  <text x="750" y="166" text-anchor="middle" font-size="10" fill="#7a6e5e">青蒿酸</text>
+  <line x1="690" y1="155" x2="670" y2="155" stroke="#2c2416" stroke-width="2" stroke-dasharray="5,3"/>
+  <polygon points="670,155 678,150 678,160" fill="#2c2416"/>
+  <text x="680" y="148" text-anchor="middle" font-size="10" fill="#7a6e5e">化学合成</text>
+  <rect x="510" y="135" width="150" height="40" fill="#2e7d32" opacity="0.2" stroke="#2e7d32" stroke-width="2" rx="4"/>
+  <text x="585" y="152" text-anchor="middle" font-size="12" font-weight="700" fill="#2e7d32">artemisinin 青蒿素</text>
+  <text x="585" y="166" text-anchor="middle" font-size="9" fill="#2e7d32">成品药物</text>
+  <!-- chassis info -->
+  <rect x="20" y="135" width="460" height="90" fill="#fff8e7" stroke="#e8c84a" rx="4"/>
+  <text x="250" y="155" text-anchor="middle" font-size="12" font-weight="700" fill="#2c2416">工程改造要点</text>
+  <text x="35" y="175" font-size="10" fill="#8b4513">① 酵母底盘：天然有 MVA 途径，只需导入 ADS + CYP71AV1</text>
+  <text x="35" y="192" font-size="10" fill="#8b4513">② 大肠杆菌底盘：需异源导入完整 MVA 途径（6 基因）+ ADS</text>
+  <text x="35" y="209" font-size="10" fill="#8b4513">③ 关键优化：提高 FPP 通量、降低旁路消耗、密码子优化</text>
+  <text x="35" y="222" font-size="10" fill="#c0392b" font-weight="700">产量提升：24 μg/L → >100 g/L（1 000 万倍）</text>
+  <!-- timeline -->
+  <rect x="20" y="245" width="760" height="80" fill="#fff8e7" stroke="#e8c84a" rx="4"/>
+  <text x="400" y="265" text-anchor="middle" font-size="12" font-weight="700" fill="#2c2416">研发时间线（Keasling lab / Amyris / Sanofi）</text>
+  <line x1="60" y1="290" x2="740" y2="290" stroke="#c0392b" stroke-width="2"/>
+  <circle cx="120" cy="290" r="5" fill="#c0392b"/>
+  <text x="120" y="280" text-anchor="middle" font-size="9" font-weight="700" fill="#c0392b">2003</text>
+  <text x="120" y="305" text-anchor="middle" font-size="10" fill="#2c2416">大肠杆菌</text>
+  <text x="120" y="316" text-anchor="middle" font-size="10" fill="#7a6e5e">构建途径</text>
+  <circle cx="260" cy="290" r="5" fill="#c0392b"/>
+  <text x="260" y="280" text-anchor="middle" font-size="9" font-weight="700" fill="#c0392b">2006</text>
+  <text x="260" y="305" text-anchor="middle" font-size="10" fill="#2c2416">转用酵母</text>
+  <text x="260" y="316" text-anchor="middle" font-size="10" fill="#7a6e5e">提高产量</text>
+  <circle cx="400" cy="290" r="5" fill="#c0392b"/>
+  <text x="400" y="280" text-anchor="middle" font-size="9" font-weight="700" fill="#c0392b">2008</text>
+  <text x="400" y="305" text-anchor="middle" font-size="10" fill="#2c2416">100 g/L</text>
+  <text x="400" y="316" text-anchor="middle" font-size="10" fill="#7a6e5e">Nature 发表</text>
+  <circle cx="540" cy="290" r="6" fill="#c0392b"/>
+  <text x="540" y="278" text-anchor="middle" font-size="9" font-weight="700" fill="#c0392b">2013</text>
+  <text x="540" y="305" text-anchor="middle" font-size="10" fill="#2c2416">Sanofi 工业化</text>
+  <text x="540" y="316" text-anchor="middle" font-size="10" fill="#c0392b" font-weight="700">50-60 吨/年</text>
+  <circle cx="680" cy="290" r="5" fill="#8b4513"/>
+  <text x="680" y="280" text-anchor="middle" font-size="9" font-weight="700" fill="#8b4513">至今</text>
+  <text x="680" y="305" text-anchor="middle" font-size="10" fill="#2c2416">全球供应</text>
+  <text x="680" y="316" text-anchor="middle" font-size="10" fill="#7a6e5e">疟疾治疗</text>
+  <text x="400" y="360" text-anchor="middle" font-size="11" fill="#c0392b" font-weight="700">奥赛考点：半合成青蒿素 SSA = 合成生物学最大商业成功案例；Keasling；ADS + CYP71AV1 来自黄花蒿</text>
+  <text x="400" y="378" text-anchor="middle" font-size="10" fill="#8b4513">屠呦呦 2015 诺贝尔奖（青蒿素提取）；Keasling（合成生物学半合成）—— 两条路径</text>
+</svg>
+<figcaption>图 15-3-1　青蒿素合成途径工程图：乙酰CoA→MVA途径→IPP/DMAPP→FPP→(ADS)amorphadiene→(CYP71AV1)青蒿酸→化学合成→青蒿素，产量提升1000万倍</figcaption>
+</div>
+
+<div class="subtopic-header">
+  <h4>人工构建大肠杆菌 Amorphadiene 合成途径</h4>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>在大肠杆菌（<em>E. coli</em>）中构建 <span class="u-double">amorphadiene 合成途径</span> 的步骤：</p>
+    <ol>
+      <li><span class="key-point">导入酵母 MVA 途径上半段</span>：从酵母（<em>S. cerevisiae</em>）克隆 ERG8、ERG10、ERG12、ERG13、ERG19、tHMG1（截短型 HMG1，编码 HMG-CoA 还原酶的可溶性活性域，为限速步骤关键基因）等 6 个基因，组装成 <em>upper MVA pathway</em>，将乙酰辅酶 A 转化为 IPP。</li>
+      <li><span class="key-point">导入黄花蒿 ADS 基因</span>：将 FPP 转化为 amorphadiene。</li>
+      <li><span class="key-point">优化 IPP → FPP 流量</span>：过表达 <em>ispA</em>（FPP 合酶），增加 FPP 池。</li>
+      <li><span class="key-point">优化培养条件</span>：调整温度（30℃）、诱导剂浓度（IPTG 0.1 mM）、碳源（甘油优于葡萄糖）、补料分批发酵。</li>
+    </ol>
+    <p>关键成果：</p>
+    <ul>
+      <li>首例报道（2003, <em>Nat Biotechnol</em>）：amorphadiene 产量 ~24 μg/L；</li>
+      <li>2007 年优化：~0.5 g/L；</li>
+      <li>后转用酵母（2006 至今）：最终 >100 g/L，比首例提高 <span class="key-point">1000 万倍</span>。</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    合成生物学的"超能力"：<strong>20 年产量提高 10^7 倍</strong>——融合基因工程、代谢工程、定向进化。
+  </div>
+</div>
+
+<div class="subtopic-header">
+  <h4>商业化生产</h4>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>工业化进程：</p>
+    <ul>
+      <li>2008 年，Amyris 公司获得 4250 万美元投资，建设 amorphadiene 商业化生产装置。</li>
+      <li>2013 年，赛诺菲（Sanofi）开始商业化生产 <span class="u-double">半合成青蒿素（semi-synthetic artemisinin, SSA）</span>。</li>
+      <li>2014 年，每年生产 50–60 吨 SSA，可治疗约 7 千万患者。</li>
+      <li>SSA 价格：约 350–400 美元/kg，比植物提取（700–1100 美元/kg）便宜 50% 以上。</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    合成生物学是 <em>高价值天然产物</em> 的有效工业化路径：解决"种药材"难题。
+  </div>
+</div>
+
+<div class="expand-block">
+  <strong>青蒿素 3 大供应来源：</strong>① 植物提取（黄花蒿，中国、越南主产）—— 仍占 50%+ 市场；② 半合成青蒿素（酵母/大肠杆菌）—— 工业补充；③ 全化学合成 —— 成本高，难以工业化。WHO 推荐使用 ACT（artemisinin-based combination therapy，青蒿素联合疗法），但 SSA 比植物提取批次稳定、纯度高。
+</div>
+
+<!-- ====== 二、大肠杆菌成像系统 ====== -->
+<div class="topic-header">
+  <h3>二、大肠杆菌成像系统</h3>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><span class="u-double">大肠杆菌成像系统</span> 是合成生物学"程序化生物显示"的开创性应用：将工程化大肠杆菌菌落放在琼脂平板上，<span class="u-double">控制不同区域的细菌表达不同颜色荧光蛋白</span>，形成"活体照片"或"菌落照片"。</p>
+    <p>研究意义：</p>
+    <ul>
+      <li>证明 <span class="u-double">合成生物学可以制造具有空间信息处理能力的系统</span>；</li>
+      <li>为 <em>活体生物材料</em>、<em>生物计算显示</em> 铺平道路；</li>
+      <li>为 <em>组织工程</em>、<em>再生医学</em> 提供新思路（细胞自发组织成功能结构）。</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    大肠杆菌成像系统是 <strong>合成发育生物学（synthetic developmental biology）</strong> 的雏形。
+  </div>
+</div>
+
+<div class="subtopic-header">
+  <h4>大肠杆菌成像系统构建原理</h4>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>核心原理：</p>
+    <ol>
+      <li><span class="key-point">"光敏"基因线路</span>：将 <em>λ噬菌体 cI 阻遏蛋白（cI）等转录抑制子</em> 与光敏启动子结合，使工程化大肠杆菌在 <em>特定波长的光照下</em> 改变基因表达状态。</li>
+      <li><span class="key-point">光罩投影</span>：用光罩（photo-mask）或数字光投影仪（DLP）将目标图像（如人像）投射到琼脂平板上，<em>照到的区域表达荧光蛋白，未照的区域不表达</em>。</li>
+      <li><span class="key-point">多色叠加</span>：多次曝光 + 不同颜色光（如蓝光 + UV）实现 RGB 三色叠加，形成彩色图像。</li>
+    </ol>
+  </div>
+  <div class="annotation">
+    原理类似 <strong>胶片摄影</strong>：光照控制"曝光"，细菌群作为"生物胶片"。
+  </div>
+</div>
+
+<div class="subtopic-header">
+  <h4>实验演示</h4>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>经典实验（<span class="key-point">Levskaya et al. 2005, Nature</span>）：</p>
+    <ul>
+      <li>构建 <em>E. coli</em> 工程菌，含光敏启动子 <em>PhysrA</em>（受绿光激活）和 <em>gfp</em> 报告基因；</li>
+      <li>用 DLP 投影仪将图像（如 <em>MIT</em> 字母、<em>Vera Rubin 肖像</em>）投射到菌落上；</li>
+      <li>菌落上 <em>被照区域发绿光，未照区域保持暗</em>，复现图像。</li>
+      <li>后来（<em>Tabor 2009, Science</em>）实现 <span class="key-point">RGB 三色成像</span>，呈现彩色图像。</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    <strong>Levskaya 2005</strong> 在 <em>Nature</em> 发表了首个"活体照相"系统；<strong>Tabor 2009</strong> 实现彩色成像。
+  </div>
+</div>
+
+<div class="expand-block">
+  <strong>延伸应用：</strong>① 活体生物材料（biofabrication）；② 可编程生物膜（Living materials）；③ 微生物计算显示（microbial display）；④ 合成发育生物学（人工胚胎样结构）；⑤ 治疗性生物材料（伤口敷料中植入工程化菌，根据炎症信号释放抗生素）。
+</div>
+
+<!-- ====== 三、其他重要应用实例 ====== -->
+<div class="topic-header">
+  <h3>三、其他重要应用实例（拓展）</h3>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>除青蒿素和大肠杆菌成像外，合成生物学还孵化了许多重要应用：</p>
+  </div>
+  <div class="annotation">
+    合成生物学应用 4 大方向：<strong>医药 / 能源 / 材料 / 农业</strong>。
+  </div>
+</div>
+
+<div class="table-wrap">
+<table>
+  <thead>
+    <tr><th>应用方向</th><th>代表实例</th><th>核心要点</th><th>公司/机构</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>医药</td>
+      <td>半合成青蒿素 SSA</td>
+      <td>酵母工程化生产，2013 商业化</td>
+      <td>Amyris, Sanofi</td>
+    </tr>
+    <tr>
+      <td>医药</td>
+      <td>工程化噬菌体（治疗细菌耐药）</td>
+      <td>合成噬菌体基因组，针对耐药菌</td>
+      <td>Eligo Biosciences</td>
+    </tr>
+    <tr>
+      <td>医药</td>
+      <td>CAR-T 细胞治疗</td>
+      <td>合成嵌合抗原受体，改造 T 细胞</td>
+      <td>诺华 Kymriah, 吉利德 Yescarta</td>
+    </tr>
+    <tr>
+      <td>医药</td>
+      <td>活体药物（live biotherapeutic）</td>
+      <td>工程化益生菌诊断/治疗</td>
+      <td>Synlogic</td>
+    </tr>
+    <tr>
+      <td>能源</td>
+      <td>生物丁醇 / 异丁醇</td>
+      <td>梭菌或酵母发酵生产生物燃料</td>
+      <td>Gevo, Butamax</td>
+    </tr>
+    <tr>
+      <td>能源</td>
+      <td>蓝藻生物柴油</td>
+      <td>光合底盘直接产油</td>
+      <td>Joule Unlimited, Synthetic Genomics</td>
+    </tr>
+    <tr>
+      <td>材料</td>
+      <td>蜘蛛丝蛋白（spider silk）</td>
+      <td>将蛛丝基因导入大肠杆菌/酵母</td>
+      <td>Bolt Threads, Spiber</td>
+    </tr>
+    <tr>
+      <td>材料</td>
+      <td>生物可降解塑料 PHA</td>
+      <td>聚羟基脂肪酸酯，工程菌发酵</td>
+      <td>Newlight, Danimer Scientific</td>
+    </tr>
+    <tr>
+      <td>材料</td>
+      <td>活体混凝土（living concrete）</td>
+      <td>工程化蓝藻 + 沙粒 + 明胶，自愈材料</td>
+      <td>犹他大学 Wil Srubar lab 2020</td>
+    </tr>
+    <tr>
+      <td>农业</td>
+      <td>固氮菌工程化</td>
+      <td>改造根际菌，减少氮肥使用</td>
+      <td>Pivot Bio</td>
+    </tr>
+    <tr>
+      <td>农业</td>
+      <td>工程化噬菌体（防治作物病害）</td>
+      <td>针对作物病原菌</td>
+      <td>Acronis, Phagelux</td>
+    </tr>
+  </tbody>
+</table>
+<figcaption>表 15-3-1　合成生物学主要应用实例</figcaption>
+</div>
+
+<div class="diagram">
+<svg viewBox="0 0 800 460" style="width:100%;max-width:700px;margin:1rem auto;display:block;font-family:sans-serif;">
+  <rect x="0" y="0" width="800" height="460" fill="#fdfbf7" stroke="#d6ccc0" rx="8"/>
+  <text x="400" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="#2c2416">图 15-3-2　工程化微生物主要应用领域</text>
+  <!-- center node -->
+  <rect x="300" y="55" width="200" height="50" fill="#c0392b" rx="8"/>
+  <text x="400" y="78" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">工程化微生物</text>
+  <text x="400" y="95" text-anchor="middle" font-size="9" fill="#fff">Engineered Microbes</text>
+  <!-- 6 application fields -->
+  <line x1="400" y1="105" x2="400" y2="125" stroke="#8b4513" stroke-width="2"/>
+  <line x1="100" y1="125" x2="700" y2="125" stroke="#8b4513" stroke-width="2"/>
+  <!-- field 1: 医药 -->
+  <line x1="100" y1="125" x2="100" y2="145" stroke="#8b4513" stroke-width="2"/>
+  <rect x="35" y="145" width="130" height="80" fill="#fff8e7" stroke="#c0392b" stroke-width="1.5" rx="6"/>
+  <text x="100" y="165" text-anchor="middle" font-size="12" font-weight="700" fill="#c0392b">医药健康</text>
+  <text x="100" y="182" text-anchor="middle" font-size="9" fill="#8b4513">半合成青蒿素</text>
+  <text x="100" y="196" text-anchor="middle" font-size="9" fill="#8b4513">胰岛素/疫苗</text>
+  <text x="100" y="210" text-anchor="middle" font-size="9" fill="#8b4513">工程化益生菌</text>
+  <text x="100" y="222" text-anchor="middle" font-size="10" fill="#7a6e5e">Keasling / Sanofi</text>
+  <!-- field 2: 能源 -->
+  <line x1="220" y1="125" x2="220" y2="145" stroke="#8b4513" stroke-width="2"/>
+  <rect x="155" y="145" width="130" height="80" fill="#fff8e7" stroke="#1565c0" stroke-width="1.5" rx="6"/>
+  <text x="220" y="165" text-anchor="middle" font-size="12" font-weight="700" fill="#1565c0">生物能源</text>
+  <text x="220" y="182" text-anchor="middle" font-size="9" fill="#8b4513">生物乙醇/丁醇</text>
+  <text x="220" y="196" text-anchor="middle" font-size="9" fill="#8b4513">生物柴油</text>
+  <text x="220" y="210" text-anchor="middle" font-size="9" fill="#8b4513">氢气/甲烷</text>
+  <text x="220" y="222" text-anchor="middle" font-size="10" fill="#7a6e5e">LS9 / Joule</text>
+  <!-- field 3: 环境 -->
+  <line x1="340" y1="125" x2="340" y2="145" stroke="#8b4513" stroke-width="2"/>
+  <rect x="275" y="145" width="130" height="80" fill="#fff8e7" stroke="#2e7d32" stroke-width="1.5" rx="6"/>
+  <text x="340" y="165" text-anchor="middle" font-size="12" font-weight="700" fill="#2e7d32">环境保护</text>
+  <text x="340" y="182" text-anchor="middle" font-size="9" fill="#8b4513">重金属生物吸附</text>
+  <text x="340" y="196" text-anchor="middle" font-size="9" fill="#8b4513">塑料降解菌</text>
+  <text x="340" y="210" text-anchor="middle" font-size="9" fill="#8b4513">污水处理</text>
+  <text x="340" y="222" text-anchor="middle" font-size="10" fill="#7a6e5e">PETase / 检测菌</text>
+  <!-- field 4: 材料 -->
+  <line x1="460" y1="125" x2="460" y2="145" stroke="#8b4513" stroke-width="2"/>
+  <rect x="395" y="145" width="130" height="80" fill="#fff8e7" stroke="#8b4513" stroke-width="1.5" rx="6"/>
+  <text x="460" y="165" text-anchor="middle" font-size="12" font-weight="700" fill="#8b4513">生物材料</text>
+  <text x="460" y="182" text-anchor="middle" font-size="9" fill="#8b4513">细菌纤维素</text>
+  <text x="460" y="196" text-anchor="middle" font-size="9" fill="#8b4513">蛛丝蛋白</text>
+  <text x="460" y="210" text-anchor="middle" font-size="9" fill="#8b4513">PHA 生物塑料</text>
+  <text x="460" y="222" text-anchor="middle" font-size="10" fill="#7a6e5e">Bolt Threads</text>
+  <!-- field 5: 农业 -->
+  <line x1="580" y1="125" x2="580" y2="145" stroke="#8b4513" stroke-width="2"/>
+  <rect x="515" y="145" width="130" height="80" fill="#fff8e7" stroke="#6a1b9a" stroke-width="1.5" rx="6"/>
+  <text x="580" y="165" text-anchor="middle" font-size="12" font-weight="700" fill="#6a1b9a">现代农业</text>
+  <text x="580" y="182" text-anchor="middle" font-size="9" fill="#8b4513">生物固氮菌</text>
+  <text x="580" y="196" text-anchor="middle" font-size="9" fill="#8b4513">抗病工程菌</text>
+  <text x="580" y="210" text-anchor="middle" font-size="9" fill="#8b4513">生物农药</text>
+  <text x="580" y="222" text-anchor="middle" font-size="10" fill="#7a6e5e">Pivot Bio</text>
+  <!-- field 6: 检测 -->
+  <line x1="700" y1="125" x2="700" y2="145" stroke="#8b4513" stroke-width="2"/>
+  <rect x="635" y="145" width="130" height="80" fill="#fff8e7" stroke="#00838f" stroke-width="1.5" rx="6"/>
+  <text x="700" y="165" text-anchor="middle" font-size="12" font-weight="700" fill="#00838f">检测与计算</text>
+  <text x="700" y="182" text-anchor="middle" font-size="9" fill="#8b4513">生物传感器</text>
+  <text x="700" y="196" text-anchor="middle" font-size="9" fill="#8b4513">细胞计算机</text>
+  <text x="700" y="210" text-anchor="middle" font-size="9" fill="#8b4513">活体成像系统</text>
+  <text x="700" y="222" text-anchor="middle" font-size="10" fill="#7a6e5e">大肠杆菌成像</text>
+  <!-- key points box -->
+  <rect x="35" y="245" width="730" height="100" fill="#fff8e7" stroke="#e8c84a" rx="6"/>
+  <text x="400" y="268" text-anchor="middle" font-size="12" font-weight="700" fill="#2c2416">合成生物学应用特征</text>
+  <text x="55" y="290" font-size="10" fill="#8b4513">① 高价值化合物生产：将天然产物合成途径移植到微生物底盘（青蒿素、紫杉醇、阿片类）</text>
+  <text x="55" y="308" font-size="10" fill="#8b4513">② 程序化生物系统：用基因线路让细胞"按指令工作"（成像、计算、治疗、检测）</text>
+  <text x="55" y="326" font-size="10" fill="#8b4513">③ 底盘选择原则：酵母适合真核产物（需翻译后修饰）；大肠杆菌适合原核产物（生长快）</text>
+  <!-- competition key point -->
+  <rect x="35" y="360" width="730" height="80" fill="#fdecea" stroke="#c0392b" stroke-width="2" rx="6"/>
+  <text x="400" y="383" text-anchor="middle" font-size="11" font-weight="700" fill="#c0392b">奥赛考点：合成生物学应用 = "生物制造" + "生物计算"</text>
+  <text x="55" y="403" font-size="10" fill="#2c2416">生物制造：以微生物为"细胞工厂"，替代化学合成 + 植物提取，绿色、可持续、可规模化</text>
+  <text x="55" y="421" font-size="10" fill="#2c2416">生物计算：以基因线路实现逻辑运算、信号处理、模式识别，活体细胞 = "湿计算机"</text>
+</svg>
+<figcaption>图 15-3-2　工程化微生物主要应用领域：涵盖医药、能源、环境、材料、农业、检测六大方向，体现合成生物学"生物制造+生物计算"双驱动</figcaption>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>中国"十四五"国家重点研发计划重点专项：<span class="u-double">合成生物学</span> 已被列为 <span class="key-point">生物经济的关键支撑技术</span>。深圳、天津、上海建有合成生物学研究院；天津大学、清华大学、上海交通大学等设有合成生物学专业或研究中心。</p>
+    <p>iGEM（International Genetically Engineered Machine competition，国际基因工程机器大赛）：自 2003 年起每年由 MIT 主办，中国队伍（北京、上海、深圳等）2017 年起多次获金奖与单项冠军。</p>
+  </div>
+  <div class="annotation">
+    <strong>iGEM</strong> 是合成生物学领域的"奥林匹克"，是 <em>奥赛学生</em> 的绝佳锻炼平台。
+  </div>
+</div>
+
+<div class="diagram">
+<svg viewBox="0 0 800 460" style="width:100%;max-width:700px;margin:1rem auto;display:block;font-family:sans-serif;">
+  <rect x="0" y="0" width="800" height="460" fill="#fdfbf7" stroke="#d6ccc0" rx="8"/>
+  <text x="400" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="#2c2416">图 15-3-3　iGEM 国际基因工程机器大赛流程</text>
+  <!-- phase 1: 组队 -->
+  <rect x="30" y="55" width="130" height="55" fill="#fff8e7" stroke="#c0392b" stroke-width="1.5" rx="6"/>
+  <text x="95" y="76" text-anchor="middle" font-size="11" font-weight="700" fill="#c0392b">1. 组队注册</text>
+  <text x="95" y="92" text-anchor="middle" font-size="9" fill="#8b4513">1—3月</text>
+  <text x="95" y="104" text-anchor="middle" font-size="10" fill="#7a6e5e">学生队+导师队</text>
+  <line x1="160" y1="82" x2="180" y2="82" stroke="#c0392b" stroke-width="2"/>
+  <polygon points="180,82 172,77 172,87" fill="#c0392b"/>
+  <!-- phase 2: 选题 -->
+  <rect x="185" y="55" width="130" height="55" fill="#fff8e7" stroke="#c0392b" stroke-width="1.5" rx="6"/>
+  <text x="250" y="76" text-anchor="middle" font-size="11" font-weight="700" fill="#c0392b">2. 选题设计</text>
+  <text x="250" y="92" text-anchor="middle" font-size="9" fill="#8b4513">3—5月</text>
+  <text x="250" y="104" text-anchor="middle" font-size="10" fill="#7a6e5e">提出项目创意</text>
+  <line x1="315" y1="82" x2="335" y2="82" stroke="#c0392b" stroke-width="2"/>
+  <polygon points="335,82 327,77 327,87" fill="#c0392b"/>
+  <!-- phase 3: 获取Parts -->
+  <rect x="340" y="55" width="130" height="55" fill="#fff8e7" stroke="#c0392b" stroke-width="1.5" rx="6"/>
+  <text x="405" y="76" text-anchor="middle" font-size="11" font-weight="700" fill="#c0392b">3. 获取Parts</text>
+  <text x="405" y="92" text-anchor="middle" font-size="9" fill="#8b4513">5—6月</text>
+  <text x="405" y="104" text-anchor="middle" font-size="10" fill="#7a6e5e">从Registry领取</text>
+  <line x1="470" y1="82" x2="490" y2="82" stroke="#c0392b" stroke-width="2"/>
+  <polygon points="490,82 482,77 482,87" fill="#c0392b"/>
+  <!-- phase 4: 实验构建 -->
+  <rect x="495" y="55" width="130" height="55" fill="#fff8e7" stroke="#c0392b" stroke-width="1.5" rx="6"/>
+  <text x="560" y="76" text-anchor="middle" font-size="11" font-weight="700" fill="#c0392b">4. 实验构建</text>
+  <text x="560" y="92" text-anchor="middle" font-size="9" fill="#8b4513">6—9月</text>
+  <text x="560" y="104" text-anchor="middle" font-size="10" fill="#7a6e5e">组装Devices</text>
+  <line x1="625" y1="82" x2="645" y2="82" stroke="#c0392b" stroke-width="2"/>
+  <polygon points="645,82 637,77 637,87" fill="#c0392b"/>
+  <!-- phase 5: 建模验证 -->
+  <rect x="650" y="55" width="130" height="55" fill="#fff8e7" stroke="#c0392b" stroke-width="1.5" rx="6"/>
+  <text x="715" y="76" text-anchor="middle" font-size="11" font-weight="700" fill="#c0392b">5. 建模验证</text>
+  <text x="715" y="92" text-anchor="middle" font-size="9" fill="#8b4513">9—10月</text>
+  <text x="715" y="104" text-anchor="middle" font-size="10" fill="#7a6e5e">数学建模+表征</text>
+  <!-- arrow down -->
+  <line x1="715" y1="110" x2="715" y2="140" stroke="#c0392b" stroke-width="2"/>
+  <polygon points="715,140 710,132 720,132" fill="#c0392b"/>
+  <!-- phase 6: Wiki -->
+  <rect x="650" y="145" width="130" height="55" fill="#fff8e7" stroke="#c0392b" stroke-width="1.5" rx="6"/>
+  <text x="715" y="166" text-anchor="middle" font-size="11" font-weight="700" fill="#c0392b">6. Wiki撰写</text>
+  <text x="715" y="182" text-anchor="middle" font-size="9" fill="#8b4513">10月</text>
+  <text x="715" y="194" text-anchor="middle" font-size="10" fill="#7a6e5e">项目文档在线发布</text>
+  <line x1="650" y1="172" x2="630" y2="172" stroke="#c0392b" stroke-width="2"/>
+  <polygon points="630,172 638,167 638,177" fill="#c0392b"/>
+  <!-- phase 7: Giant Jamboree -->
+  <rect x="495" y="145" width="130" height="55" fill="#fdecea" stroke="#c0392b" stroke-width="2.5" rx="6"/>
+  <text x="560" y="166" text-anchor="middle" font-size="11" font-weight="700" fill="#c0392b">7. Giant Jamboree</text>
+  <text x="560" y="182" text-anchor="middle" font-size="9" fill="#8b4513">10—11月</text>
+  <text x="560" y="194" text-anchor="middle" font-size="10" fill="#7a6e5e">波士顿总决赛季</text>
+  <line x1="495" y1="172" x2="475" y2="172" stroke="#c0392b" stroke-width="2"/>
+  <polygon points="475,172 483,167 483,177" fill="#c0392b"/>
+  <!-- phase 8: 评审颁奖 -->
+  <rect x="340" y="145" width="130" height="55" fill="#fff8e7" stroke="#c0392b" stroke-width="1.5" rx="6"/>
+  <text x="405" y="166" text-anchor="middle" font-size="11" font-weight="700" fill="#c0392b">8. 评审颁奖</text>
+  <text x="405" y="182" text-anchor="middle" font-size="9" fill="#8b4513">11月</text>
+  <text x="405" y="194" text-anchor="middle" font-size="10" fill="#7a6e5e">金/银/铜+单项奖</text>
+  <!-- iGEM key features box -->
+  <rect x="30" y="225" width="370" height="100" fill="#fff8e7" stroke="#e8c84a" rx="6"/>
+  <text x="215" y="248" text-anchor="middle" font-size="12" font-weight="700" fill="#2c2416">iGEM 核心要素</text>
+  <text x="45" y="268" font-size="10" fill="#8b4513">● Registry of Standard Biological Parts：标准化生物部件库</text>
+  <text x="45" y="285" font-size="10" fill="#8b4513">● BioBrick 标准：统一的组装标准（RFC 10 等）</text>
+  <text x="45" y="302" font-size="10" fill="#8b4513">● 标准前缀/后缀：Prefix(EcoRI/XbaI) + Suffix(SpeI/PstI)</text>
+  <text x="45" y="319" font-size="10" fill="#8b4513">● Human Practices：项目需考虑社会/伦理影响</text>
+  <!-- 奖项说明 -->
+  <rect x="410" y="225" width="370" height="100" fill="#fff8e7" stroke="#e8c84a" rx="6"/>
+  <text x="595" y="248" text-anchor="middle" font-size="12" font-weight="700" fill="#2c2416">奖项体系</text>
+  <text x="425" y="268" font-size="10" fill="#8b4513">● 铜牌：完成基本要求（Registry 提交 + Wiki + 展示）</text>
+  <text x="425" y="285" font-size="10" fill="#8b4513">● 银牌：完成项目验证 + Human Practices</text>
+  <text x="425" y="302" font-size="10" fill="#8b4513">● 金牌：在银牌基础上新增创新性工作</text>
+  <text x="425" y="319" font-size="10" fill="#8b4513">● 单项奖：Best Project / Best Part / Best Model 等</text>
+  <!-- 奥赛考点 -->
+  <rect x="30" y="340" width="740" height="100" fill="#fdecea" stroke="#c0392b" stroke-width="2" rx="6"/>
+  <text x="400" y="363" text-anchor="middle" font-size="12" font-weight="700" fill="#c0392b">奥赛考点：iGEM = 合成生物学标准化理念的集中体现</text>
+  <text x="45" y="385" font-size="10" fill="#2c2416">① BioBrick 标准化组装：所有 Parts 用统一酶切位点拼接，实现"即插即用"的模块化设计</text>
+  <text x="45" y="403" font-size="10" fill="#2c2416">② Parts → Devices → Systems：iGEM 项目本身就是合成生物学工程化思想的实践（含建模、表征）</text>
+  <text x="45" y="421" font-size="10" fill="#2c2416">③ 中国队伍：清华、北大、上交、天大、深大等多次获金奖，体现中国合成生物学实力崛起</text>
+</svg>
+<figcaption>图 15-3-3　iGEM 竞赛流程：组队→选题→获取Parts→实验构建→建模→Wiki→Giant Jamboree→评审，体现合成生物学标准化、模块化、工程化理念</figcaption>
+</div>
+
+<!-- ====== 总结 ====== -->
+<div class="summary-box">
+  <h4>本节核心要点</h4>
+  <ul>
+    <li><strong>半合成青蒿素（SSA）</strong>：Keasling lab 2003–2013，将黄花蒿 ADS、CYP71AV1 等基因导入酵母，amorphadiene 产量从 24 μg/L 提高到 >100 g/L（1000 万倍），2013 年 Sanofi 商业化生产。</li>
+    <li><strong>青蒿素合成途径</strong>：乙酰 CoA → MVA 途径 → IPP / DMAPP → FPP → ADS（amorphadiene）→ CYP71AV1（artemisinic acid）→ 化学合成 → 青蒿素。</li>
+    <li><strong>大肠杆菌成像系统</strong>：Levskaya 2005 用光敏启动子 + DLP 投影实现"活体照相"，Tabor 2009 实现 RGB 彩色成像。</li>
+    <li><strong>4 大应用方向</strong>：医药（青蒿素、CAR-T）、能源（生物燃料）、材料（蜘蛛丝、PHA）、农业（固氮菌）。</li>
+    <li><strong>中国布局</strong>：合成生物学列为"十四五"重点专项；iGEM 中国队多次获奖。</li>
+  </ul>
+</div>
+
+</div>
+
+<footer><a href="index.html" style="color:var(--accent);text-decoration:none;margin-right:1rem;">← 返回目录</a>
+  第十五章 合成生物学 · 第三节 合成生物学应用研究经典实例 · 参考高中生物奥赛讲义 · 整理日期 2026年7月6日
+</footer>
+
+</body>
+</html>

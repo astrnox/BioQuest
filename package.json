@@ -1,0 +1,28 @@
+{
+  "name": "workspace",
+  "version": "1.0.0",
+  "description": "面向生物竞赛（联赛）备考的全栈学习平台，集知识卡片、模拟试题、学习分析、社区讨论于一体。",
+  "main": "import-data.js",
+  "scripts": {
+    "test": "jest --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pinesis688/bioquest.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "CC-BY-NC-SA-4.0",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/pinesis688/bioquest/issues"
+  },
+  "homepage": "https://github.com/pinesis688/bioquest#readme",
+  "devDependencies": {
+    "jest": "^30.4.2",
+    "jsdom": "^29.1.1"
+  },
+  "dependencies": {
+    "agent-browser": "^0.31.1"
+  }
+}

@@ -1,0 +1,71 @@
+/**
+ * ============================================================
+ * BioQuest — PRD §5-49：全局错误恢复机制
+ * 捕获 JS 运行时错误，记录日志，尝试恢复页面状态
+ * ============================================================
+ */
+(function () {
+  'use strict';
+
+  var MAX_ERRORS = 5;
+  var ERROR_WINDOW_MS = 10000; // 10秒内超过5个错误触发恢复
+  var errorTimestamps = [];
+  var errorLog = [];
+
+  function pruneOldErrors() {
+    var now = Date.now();
+    errorTimestamps = errorTimestamps.filter(function (t) { return now - t < ERROR_WINDOW_MS; });
+  }
+
+  function logError(message, source, lineno, colno, error) {
+    errorLog.push({
+      time: new Date().toISOString(),
+      message: message,
+      source: source,
+      lineno: lineno,
+      colno: colno,
+      stack: error && error.stack ? error.stack : ''
+    });
+    // 只保留最近20条
+    if (errorLog.length > 20) errorLog.shift();
+    try {
+      localStorage.setItem('bioquest_error_log', JSON.stringify(errorLog.slice(-10)));
+    } catch (e) {}
+  }
+
+  function attemptRecovery() {
+    try {
+      // 检查页面主要内容是否为空
+      var root = document.getElementById('page-content');
+      if (root && root.innerHTML.trim() === '') {
+        root.innerHTML =
+          '<div style="text-align:center;padding:80px 24px;max-width:600px;margin:0 auto;">' +
+          '<div style="font-size:3rem;margin-bottom:16px;">🧬</div>' +
+          '<p style="font-size:1.1rem;color:var(--text-primary);margin-bottom:8px;">页面遇到了一些问题</p>' +
+          '<p style="font-size:0.9rem;color:var(--text-muted);margin-bottom:24px;">别担心，你的数据已保存在本地</p>' +
+          '<button onclick="location.reload()" style="padding:10px 28px;background:var(--color-sage,#5a7d5c);color:#fff;border:none;border-radius:20px;cursor:pointer;font-size:0.95rem;">刷新页面</button>' +
+          '</div>';
+      }
+    } catch (e2) {}
+  }
+
+  // 全局错误捕获
+  window.addEventListener('error', function (event) {
+    pruneOldErrors();
+    errorTimestamps.push(Date.now());
+    logError(event.message, event.filename, event.lineno, event.colno, event.error);
+    if (errorTimestamps.length >= MAX_ERRORS) {
+      attemptRecovery();
+    }
+  });
+
+  // 未处理的 Promise 拒绝
+  window.addEventListener('unhandledrejection', function (event) {
+    var reason = event.reason;
+    var msg = reason && reason.message ? reason.message : String(reason);
+    logError('[UnhandledRejection] ' + msg, '', 0, 0, reason);
+    console.warn('[BioQuest] 未处理的 Promise 拒绝:', msg);
+  });
+
+  console.log('[BioQuest] 全局错误恢复机制已启动');
+})();

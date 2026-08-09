@@ -1,0 +1,187 @@
+/* ============================================
+ * 导航栏样式
+ * ============================================ */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--header-height, 64px);
+  background: rgba(26, 47, 29, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  z-index: 100;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.header-brand {
+  font-family: var(--font-serif, 'Noto Serif SC', serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+/* 桌面导航栏隐藏（所有导航移入汉堡菜单） */
+.header-nav {
+  display: none;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+/* 注：.auth-btn 样式由 globals.css 统一定义（避免与 globals.css 重复定义导致
+   padding/font-weight 冲突），此处不再覆盖。 */
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger-line {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 1px;
+  transition: all 0.3s ease;
+}
+
+.hamburger.active .hamburger-line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active .hamburger-line:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* 移动端侧边导航 */
+.mobile-nav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  z-index: 200;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.mobile-nav-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 280px;
+  max-width: 85vw;
+  height: 100%;
+  background-color: var(--color-surface);
+  background-image: none;
+  z-index: 201;
+  transform: translateX(100%);
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-lg, -4px 0 24px rgba(0, 0, 0, 0.15));
+}
+
+.mobile-nav.active {
+  transform: translateX(0);
+}
+
+/* 可滚动区域 */
+.mobile-nav-scroll {
+  flex: 1;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 8px 0;
+}
+
+.mobile-nav-scroll a {
+  display: flex;
+  align-items: center;
+  padding: 14px 24px;
+  color: var(--color-text, #2d2d2d);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  border-left: 3px solid transparent;
+}
+
+.mobile-nav-scroll a:hover,
+.mobile-nav-scroll a.active {
+  background: rgba(90, 125, 92, 0.12);
+  color: var(--color-primary, #3a6b4a);
+  border-left-color: var(--color-primary, #3a6b4a);
+}
+
+.theme-toggle-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 24px;
+  border-top: 1px solid var(--color-border-light, #e5e5e5);
+  margin-top: auto;
+  font-size: 0.9rem;
+  color: var(--color-text, #2d2d2d);
+}
+
+.mobile-nav-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0,0,0,0.06);
+  color: #333;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin: 12px 16px 4px auto;
+}
+.mobile-nav-close:hover {
+  background: rgba(0,0,0,0.1);
+}
+
+@media (max-width: 900px) {
+  .logo-text {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 0 12px;
+  }
+
+  .header-brand {
+    font-size: 1.1rem;
+  }
+}

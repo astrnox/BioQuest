@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第一章 生物化学 · 氨基酸代谢与蛋白质合成 — 生物集训营笔记</title>
+<style>
+:root {
+  --bg: #fdfbf7; --bg2: #f5f0e8; --ink: #2c2416; --muted: #7a6e5e;
+  --rule: #d6ccc0; --accent: #c0392b; --accent2: #8b4513;
+  --highlight: #fff3cd; --note-bg: #fff8e7; --note-border: #e8c84a;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: "Noto Sans CJK SC", "WenQuanYi Micro Hei", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  font-size: 16px; line-height: 1.8; color: var(--ink); background: var(--bg);
+}
+.cover { text-align: center; padding: 4rem 2rem 3rem; border-bottom: 3px double var(--rule); margin-bottom: 0; background: linear-gradient(180deg, var(--bg2) 0%, var(--bg) 100%); }
+.cover .ch-num { font-size: 1rem; color: var(--accent); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 0.3rem; }
+.cover h1 { font-size: 2.2rem; font-weight: 800; color: var(--ink); margin-bottom: 0.5rem; letter-spacing: 0.03em; }
+.cover .subtitle { font-size: 1rem; color: var(--muted); }
+.cover .meta { margin-top: 1.2rem; font-size: 0.85rem; color: var(--muted); display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
+.main-layout { max-width: 1060px; margin: 0 auto; padding: 0 1.5rem; }
+.section-header { border-bottom: 3px solid var(--accent); padding: 2rem 0 0.6rem; margin-bottom: 1.5rem; }
+.section-header .sec-num { font-size: 0.9rem; color: var(--accent); font-weight: 700; letter-spacing: 0.08em; }
+.section-header h2 { font-size: 1.6rem; font-weight: 800; color: var(--ink); margin-top: 0.15rem; }
+.topic-header { margin: 2rem 0 1rem; padding-left: 0.8rem; border-left: 4px solid var(--accent); }
+.topic-header h3 { font-size: 1.25rem; font-weight: 700; color: var(--ink); }
+.subtopic-header { margin: 1.5rem 0 0.8rem; }
+.subtopic-header h4 { font-size: 1.1rem; font-weight: 700; color: var(--accent2); }
+.note-block { display: flex; gap: 1.5rem; margin-bottom: 1.2rem; align-items: flex-start; }
+.note-content { flex: 1; padding: 0.8rem 1rem; background: var(--bg2); border-radius: 6px; border: 1px solid var(--rule); }
+.note-content p { margin-bottom: 0.5rem; }
+.note-content p:last-child { margin-bottom: 0; }
+.note-content ul, .note-content ol { padding-left: 1.5rem; margin: 0.4rem 0; }
+.note-content li { margin-bottom: 0.25rem; }
+.annotation { width: 240px; flex-shrink: 0; background: var(--note-bg); border: 1px solid var(--note-border); border-radius: 6px; padding: 0.6rem 0.8rem; font-size: 0.82rem; line-height: 1.6; color: var(--accent2); align-self: flex-start; }
+.annotation::before { content: "📝 批注"; display: block; font-size: 0.7rem; font-weight: 700; color: var(--accent); letter-spacing: 0.06em; margin-bottom: 0.3rem; text-transform: uppercase; }
+.u { text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 2px; text-underline-offset: 3px; font-weight: 600; }
+.u-double { text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 2px; text-underline-offset: 3px; text-decoration-style: double; font-weight: 700; }
+.key-point { background: var(--highlight); padding: 0.1em 0.3em; border-radius: 3px; font-weight: 600; border-bottom: 1.5px solid var(--accent); }
+.table-wrap { overflow-x: auto; overflow-y: auto; max-height: 600px; margin: 1.5rem 0; border: 1px solid var(--rule); border-radius: 6px; }
+table { width: 100%; border-collapse: collapse; font-size: 0.9rem; min-width: 800px; }
+table thead th { background: var(--accent); color: #fff; padding: 0.6rem 0.8rem; font-weight: 700; text-align: center; white-space: nowrap; }
+table tbody td { padding: 0.5rem 0.8rem; border-bottom: 1px solid var(--rule); vertical-align: top; }
+table tbody tr:nth-child(even) { background: var(--bg2); }
+table tbody tr:last-child td { border-bottom: none; }
+table tbody td:first-child { font-weight: 600; white-space: nowrap; text-align: center; background: var(--bg2); }
+figcaption { text-align: center; font-size: 0.85rem; color: var(--muted); margin-top: 0.4rem; }
+.diagram { margin: 1.2rem 0; text-align: center; }
+.diagram img { max-width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 4px; }
+.summary-box { background: linear-gradient(135deg, #fdf2f2 0%, #fef9e7 100%); border: 2px solid var(--accent); border-radius: 8px; padding: 1.2rem 1.5rem; margin: 2rem 0; }
+.summary-box h4 { color: var(--accent); font-size: 1rem; margin-bottom: 0.6rem; }
+.expand-block { background: #f0f7f4; border: 1px dashed #7cb342; border-radius: 6px; padding: 0.5rem 0.9rem; margin: 0.6rem 0 0; font-size: 0.83rem; line-height: 1.6; color: #3e6b3e; }
+.expand-block::before { content: "🔍 拓展"; display: block; font-size: 0.7rem; font-weight: 700; color: #558b2f; letter-spacing: 0.06em; margin-bottom: 0.2rem; }
+.flow-box { background: var(--bg); border: 1px solid var(--rule); border-radius: 8px; padding: 1.2rem; margin: 1.2rem 0; text-align: center; }
+.flow-box .flow-title { font-size: 0.85rem; font-weight: 700; color: var(--accent); margin-bottom: 0.8rem; }
+.flow-row { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 0.3rem; font-size: 0.85rem; }
+.flow-item { background: var(--bg2); border: 1px solid var(--rule); border-radius: 4px; padding: 0.25rem 0.6rem; white-space: nowrap; }
+.flow-arrow { color: var(--accent); font-weight: 700; font-size: 1.1rem; }
+.math-box { background: #fef9e7; border-left: 3px solid var(--accent2); padding: 0.7rem 1rem; margin: 0.8rem 0; border-radius: 0 4px 4px 0; font-family: "Cambria Math", "STIX Two Math", Georgia, serif; font-size: 1.0rem; color: #1a1a1a; }
+footer { margin-top: 3rem; padding: 1.5rem; border-top: 1px solid var(--rule); text-align: center; font-size: 0.8rem; color: var(--muted); }
+@media (max-width: 768px) {
+  .cover h1 { font-size: 1.5rem; }
+  .note-block { flex-direction: column; }
+  .annotation { width: 100%; }
+  .main-layout { padding: 0 0.8rem; }
+  table { font-size: 0.78rem; min-width: 600px; }
+}
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div class="ch-num">高中生物竞赛讲义 · 集训营</div>
+  <h1>第一章 生物化学 · 氨基酸代谢与蛋白质合成</h1>
+  <div class="subtitle">蛋白质降解 · 氨基酸分解 · 尿素循环 · 一碳单位 · 翻译机制</div>
+  <div class="meta">
+    <span>20种氨基酸</span><span>必需氨基酸</span><span>转氨作用</span><span>尿素循环</span>
+    <span>泛素-蛋白酶体</span><span>翻译</span><span>翻译后修饰</span>
+    <span>📅 整理日期: 2026年7月7日</span>
+  </div>
+</div>
+
+<div class="main-layout">
+
+<div class="section-header">
+  <div class="sec-num">第一节 · 蛋白质降解与氨基酸代谢</div>
+  <h2>从蛋白质分解到尿素排出 · 翻译机制与后修饰</h2>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>本节是 <span class="key-point">ch1-1-3 蛋白质·氨基酸</span> 与 <span class="key-point">ch1-1-4 蛋白质·结构层次</span> 的深度补充,参考张丽萍《生物化学简明教程》第六版第 11 章 <span class="u">蛋白质的降解和氨基酸代谢</span>(P235-255),针对仅有高中人教版生物学基础的竞赛生重写,详细解释每个概念的反应过程与分子机制。重点内容:</p>
+    <ol>
+      <li>细胞内蛋白质的<span class="u">两条降解途径</span>(溶酶体 vs 泛素-蛋白酶体)</li>
+      <li>消化道中蛋白酶的级联激活机制</li>
+      <li>氨基酸的<span class="u">脱氨基</span>(氧化/转氨/联合/嘌呤核苷酸循环)</li>
+      <li>氨基酸的<span class="u">脱羧基</span>与生物活性胺</li>
+      <li>氨的去路:<span class="u-double">尿素循环</span>(5 步反应 + 2 ATP 消耗)</li>
+      <li>α-酮酸的命运(生糖/生酮/再氨基化)</li>
+      <li>8 种<span class="u">必需氨基酸</span>与碳骨架来源</li>
+      <li><span class="u">一碳单位</span>代谢与四氢叶酸(FH4)/SAM</li>
+      <li>氨基酸衍生的重要生物活性物质</li>
+      <li>翻译机制(起始/延伸/终止)与翻译后修饰</li>
+    </ol>
+  </div>
+  <div class="annotation">
+    高中衔接:高中提到"蛋白质是生命活动的主要承担者"、"氨基酸是构成蛋白质的基本单位",但没讲"细胞如何降解蛋白质"、"氨基酸如何被分解"、"产生的氨如何解毒"。本章在高中基础上展开完整路径,是奥赛必考内容。
+  </div>
+</div>
+
+<!-- ========== 11.1 蛋白质降解 ========== -->
+<div class="topic-header"><h3>一、细胞内蛋白质的降解——UPS vs 溶酶体</h3></div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>真核细胞内蛋白质有两个主要的降解系统,二者在<span class="key-point">选择性、调控、能量依赖性</span>上差异巨大:</p>
+    <ol>
+      <li><span class="u-double">溶酶体途径</span>(非选择性)——含约 50 种水解酶,pH ~5(酸性),含多种蛋白酶(组织蛋白酶 cathepsins),降解<span class="key-point">长寿蛋白、细胞器、胞外蛋白</span>;通过<span class="u">自噬</span>清理受损细胞器</li>
+      <li><span class="u-double">泛素-蛋白酶体途径(UPS,ubiquitin-proteasome system)</span>(选择性、ATP 依赖)——降解<span class="key-point">短寿蛋白、异常蛋白、调控蛋白</span>,精确调控细胞周期、信号转导</li>
+    </ol>
+    <p>UPS 系统的关键分子:</p>
+    <ul>
+      <li><span class="u">泛素(ubiquitin)</span>:76 aa 高度保守多肽,真核生物中几乎所有蛋白都以此标记</li>
+      <li><span class="u">E1 激活酶</span>(ubiquitin-activating enzyme):消耗 ATP 将泛素 C 端 Gly 活化</li>
+      <li><span class="u">E2 结合酶</span>(ubiquitin-conjugating enzyme):接受活化的泛素</li>
+      <li><span class="u">E3 连接酶</span>(ubiquitin ligase):识别底物,将泛素从 E2 转移到靶蛋白 Lys 残基的 ε-NH₂ 上</li>
+      <li><span class="u-double">26S 蛋白酶体</span>:由 20S 核心(蛋白水解活性,桶状结构)+ 两个 19S 调节帽(识别泛素化底物、去泛素化、展开底物)组成</li>
+    </ul>
+    <p>UPS 降解流程:E1 活化泛素(ATP 依赖)→ E2 接受泛素 → E3 识别底物并催化泛素 C 端 Gly 与底物 Lys 形成异肽键 → 形成 K48 连接的泛素链(≥4 个泛素)→ 被 26S 蛋白酶体识别 → 底物被水解为短肽(7-9 aa)+ 泛素回收</p>
+  </div>
+  <div class="annotation">
+    高中衔接:2004 年诺贝尔化学奖授予 Ciechanover、Hershko、Rose 表彰他们发现"泛素介导的蛋白质降解机制"——这是细胞质量控制的核心机制。高中课本没讲,竞赛生必须掌握。临床应用:万艾可(伟哥)治疗勃起障碍、bortezomib(硼替佐米)治疗多发性骨髓瘤,都作用于 UPS 系统。
+  </div>
+</div>
+
+<div class="subtopic-header"><h4>1.1 蛋白质半衰期的决定因素</h4></div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>不同蛋白质在细胞内的寿命差异巨大(从数分钟到数天),主要决定因素:</p>
+    <ul>
+      <li><span class="u-double">N-末端规则(N-end rule)</span>:N 端氨基酸决定半衰期
+        <ul>
+          <li>不稳定(半衰期 2-3 分钟):<span class="key-point">Asp、Arg、Leu、Lys、Phe</span></li>
+          <li>稳定(原核 >10 小时,真核 >20 小时):<span class="key-point">Ala、Gly、Met、Ser、Val</span></li>
+        </ul>
+      </li>
+      <li><span class="u">PEST 序列</span>(富含 Pro-Glu-Ser-Thr 的区域):促进降解</li>
+      <li>异常/损伤蛋白(氧化、变性):暴露出<span class="u">疏水残基</span>或 PEST 序列,被快速识别降解</li>
+      <li>特定信号(磷酸化、糖基化、破坏框)调控识别</li>
+    </ul>
+    <p>📌 <span class="key-point">关键概念</span>:UPS 是真核细胞"精确调控蛋白浓度"的核心机制——通过可控降解短寿调控蛋白(如细胞周期蛋白 cyclin、肿瘤抑制因子 p53、转录因子 NF-κB 抑制剂 IκB),实现快速、不可逆的调控。</p>
+  </div>
+</div>
+
+<div class="subtopic-header"><h4>1.2 消化道中外源蛋白质的酶促降解</h4></div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>外源蛋白质的消化是一个<span class="key-point">"胃-肠-肠粘膜"三段式级联</span>过程,各种蛋白酶的专一性互补,最终把蛋白质切成氨基酸才能被吸收:</p>
+  </div>
+</div>
+
+<div class="table-wrap">
+<table>
+<thead>
+<tr><th>部位</th><th>酶</th><th>来源</th><th>最适 pH</th><th>作用位点</th><th>产物</th></tr>
+</thead>
+<tbody>
+<tr><td>胃</td><td>胃蛋白酶(pepsin)</td><td>胃主细胞分泌胃蛋白酶原(zymogen),HCl 激活</td><td>1.5-2.5</td><td>切割 Phe、Tyr、Trp 等疏水氨基酸的氨基端肽键(偏好芳香族)</td><td>多肽</td></tr>
+<tr><td>小肠</td><td>胰蛋白酶(trypsin)</td><td>胰腺分泌胰蛋白酶原;被肠激酶(enterokinase)激活</td><td>7-9</td><td>切割 Lys、Arg 羧基端肽键(碱性氨基酸)</td><td>多肽</td></tr>
+<tr><td>小肠</td><td>胰凝乳蛋白酶(chymotrypsin)</td><td>胰腺分泌胰凝乳蛋白酶原;被胰蛋白酶激活</td><td>7-9</td><td>切割 Phe、Trp、Tyr 等芳香族氨基酸羧基端</td><td>多肽</td></tr>
+<tr><td>小肠</td><td>弹性蛋白酶(elastase)</td><td>胰腺分泌酶原;被胰蛋白酶激活</td><td>7-9</td><td>切割 Ala、Gly、Ser 等小侧链氨基酸</td><td>多肽</td></tr>
+<tr><td>小肠</td><td>羧肽酶 A</td><td>胰腺分泌酶原</td><td>7-9</td><td>从 C 端依次切下芳香族/支链脂肪族氨基酸</td><td>氨基酸+肽</td></tr>
+<tr><td>小肠</td><td>羧肽酶 B</td><td>胰腺分泌酶原</td><td>7-9</td><td>从 C 端切下碱性氨基酸(Arg、Lys)</td><td>氨基酸+肽</td></tr>
+<tr><td>小肠</td><td>氨肽酶(aminopeptidase)</td><td>小肠粘膜</td><td>7-9</td><td>从 N 端依次切下氨基酸</td><td>二肽+氨基酸</td></tr>
+<tr><td>小肠</td><td>二肽酶(dipeptidase)</td><td>小肠粘膜</td><td>7-9</td><td>水解二肽</td><td>2 个氨基酸</td></tr>
+</tbody>
+</table>
+</div>
+<figcaption>表 1 消化道中各类蛋白酶的来源、专一性与最适 pH</figcaption>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><span class="u-double">激活级联(避免胰腺自身消化)</span>:</p>
+    <div class="flow-box">
+      <div class="flow-title">胰腺蛋白酶的级联激活</div>
+      <div class="flow-row">
+        <span class="flow-item">肠激酶(肠粘膜)</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-item">激活胰蛋白酶原</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-item">胰蛋白酶</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-item">激活胰凝乳蛋白酶原</span>
+      </div>
+      <div class="flow-row" style="margin-top:0.4rem;">
+        <span class="flow-item">激活弹性蛋白酶原</span>
+        <span class="flow-arrow">+</span>
+        <span class="flow-item">激活羧肽酶原</span>
+        <span class="flow-arrow">+</span>
+        <span class="flow-item">激活更多胰蛋白酶原(正反馈)</span>
+      </div>
+    </div>
+    <p>⚠️ <span class="key-point">临床关联</span>:</p>
+    <ul>
+      <li><span class="u">急性胰腺炎</span>:胰蛋白酶原在胰腺内被异常激活,自我消化胰腺组织</li>
+      <li><span class="u">囊性纤维化</span>:CFTR 基因突变导致胰液粘稠,消化酶不能进入肠道</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    高中延伸:高中提到"酶的专一性",这里给出了专一性的具体表现:胰蛋白酶只切碱性氨基酸后面,胰凝乳蛋白酶只切芳香族氨基酸后面,羧肽酶从 C 端切,氨肽酶从 N 端切——协同把蛋白质切成氨基酸。酶原激活机制(避免自我消化)是 ch1-1-7 提到的级联激活的典型例子。
+  </div>
+</div>
+
+<!-- ========== 11.2 氨基酸分解代谢 ========== -->
+<div class="topic-header"><h3>二、氨基酸分解代谢总览</h3></div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>氨基酸分解的两大反应:</p>
+    <ol>
+      <li><span class="u-double">脱氨基作用</span>(主要):产生 α-酮酸 + 氨(NH₃)</li>
+      <li><span class="u-double">脱羧基作用</span>(次要,但产物有重要生理活性):产生胺 + CO₂</li>
+    </ol>
+    <p>两种反应的<span class="key-point">辅酶</span>都是<span class="u-double">磷酸吡哆醛(PLP,维生素 B6 的活化形式)</span>——这是为什么"几乎所有 B 族维生素都参与氨基酸代谢"的根源。PLP 与氨基酸形成<span class="u">希夫碱(Schiff base)</span>中间体,把氨基酸的氨基"接管"过来。</p>
+  </div>
+</div>
+
+<div class="subtopic-header"><h4>2.1 氨基酸的脱氨基方式</h4></div>
+
+<div class="table-wrap">
+<table>
+<thead>
+<tr><th>方式</th><th>反应</th><th>酶/辅因子</th><th>评价</th></tr>
+</thead>
+<tbody>
+<tr><td>氧化脱氨基</td><td>氨基酸 → α-亚氨基酸 → α-酮酸 + NH₄⁺</td><td>L-氨基酸氧化酶(FMN/FAD)、<b>L-谷氨酸脱氢酶(NAD⁺/NADP⁺)</b></td><td><b>L-谷氨酸脱氢酶最重要</b>(肝、肾、脑;催化可逆反应)</td></tr>
+<tr><td>转氨基(主要方式)</td><td>氨基酸1 + α-酮酸2 → α-酮酸1 + 氨基酸2</td><td><b>转氨酶(aminotransferase)</b>,辅酶为 PLP</td><td><b>不产生游离氨</b>;氨基从一种氨基酸转到另一种酮酸上</td></tr>
+<tr><td>联合脱氨基(动物主要途径)</td><td>转氨基(把氨基集中到 α-酮戊二酸上→谷氨酸)+ L-谷氨酸脱氢酶氧化脱氨</td><td>两种酶协同</td><td><b>真实细胞内氨基酸脱氨的主要方式</b></td></tr>
+<tr><td>嘌呤核苷酸循环(肌肉/脑主要)</td><td>谷氨酸与草酰乙酸转氨 → 天冬氨酸 + α-酮戊二酸 → 天冬氨酸进入嘌呤核苷酸循环放氨</td><td>7 步循环酶</td><td><b>肌肉、脑等组织不能用 L-谷氨酸脱氢酶,改用此途径</b></td></tr>
+</tbody>
+</table>
+</div>
+<figcaption>表 2 氨基酸脱氨基的四种方式比较</figcaption>
+
+<svg viewBox="0 0 800 360" style="width:100%;max-width:720px;margin:1.2rem auto;display:block;font-family:sans-serif;">
+  <rect x="0" y="0" width="800" height="360" fill="#fdfbf7" stroke="#d6ccc0" rx="8"/>
+  <text x="400" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="#2c2416">氨基酸脱氨方式对比（氧化/转氨/联合/非氧化）</text>
+
+  <rect x="20" y="50" width="760" height="34" fill="#8b4513" rx="4"/>
+  <text x="100" y="72" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">脱氨方式</text>
+  <text x="280" y="72" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">机制</text>
+  <text x="480" y="72" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">部位/酶</text>
+  <text x="680" y="72" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">特点</text>
+
+  <rect x="20" y="88" width="760" height="62" fill="#fdf2f2" stroke="#e8c84a" rx="3"/>
+  <text x="100" y="116" text-anchor="middle" font-size="11" font-weight="700" fill="#c0392b">氧化脱氨</text>
+  <text x="100" y="134" text-anchor="middle" font-size="9" fill="#7a6e5e">Oxidative</text>
+  <text x="280" y="110" text-anchor="middle" font-size="10" fill="#2c2416">氨基酸+NAD(P)⁺→</text>
+  <text x="280" y="126" text-anchor="middle" font-size="10" fill="#2c2416">α-酮酸+NH₄⁺+NAD(P)H</text>
+  <text x="480" y="116" text-anchor="middle" font-size="10" fill="#2c2416">L-谷氨酸脱氢酶</text>
+  <text x="480" y="132" text-anchor="middle" font-size="9" fill="#7a6e5e">(线粒体基质)</text>
+  <text x="680" y="110" text-anchor="middle" font-size="10" fill="#2c2416">主要作用于Glu</text>
+  <text x="680" y="128" text-anchor="middle" font-size="10" font-weight="700" fill="#c0392b">可逆,需NAD⁺</text>
+
+  <rect x="20" y="154" width="760" height="62" fill="#fff8e7" stroke="#e8c84a" rx="3"/>
+  <text x="100" y="182" text-anchor="middle" font-size="11" font-weight="700" fill="#c0392b">转氨基</text>
+  <text x="100" y="200" text-anchor="middle" font-size="9" fill="#7a6e5e">Transamination</text>
+  <text x="280" y="176" text-anchor="middle" font-size="10" fill="#2c2416">AA+α-酮戊二酸→</text>
+  <text x="280" y="192" text-anchor="middle" font-size="10" fill="#2c2416">α-酮酸+谷氨酸</text>
+  <text x="280" y="208" text-anchor="middle" font-size="9" fill="#7a6e5e">(氨基转移,不脱氨)</text>
+  <text x="480" y="182" text-anchor="middle" font-size="10" fill="#2c2416">转氨酶(ALT/AST)</text>
+  <text x="480" y="198" text-anchor="middle" font-size="9" fill="#7a6e5e">辅酶:PLP(VB₆)</text>
+  <text x="680" y="182" text-anchor="middle" font-size="10" fill="#2c2416">不产生游离NH₃</text>
+  <text x="680" y="200" text-anchor="middle" font-size="10" font-weight="700" fill="#c0392b">可逆反应</text>
+
+  <rect x="20" y="220" width="760" height="62" fill="#fdf2f2" stroke="#e8c84a" rx="3"/>
+  <text x="100" y="248" text-anchor="middle" font-size="11" font-weight="700" fill="#c0392b">联合脱氨</text>
+  <text x="100" y="266" text-anchor="middle" font-size="9" fill="#7a6e5e">Transdeamination</text>
+  <text x="280" y="242" text-anchor="middle" font-size="10" fill="#2c2416">转氨→Glu→</text>
+  <text x="280" y="258" text-anchor="middle" font-size="10" fill="#2c2416">氧化脱氨(集中脱氨)</text>
+  <text x="280" y="274" text-anchor="middle" font-size="9" fill="#7a6e5e">α-KG=氨基集散中心</text>
+  <text x="480" y="248" text-anchor="middle" font-size="10" fill="#2c2416">转氨酶+谷氨酸脱氢酶</text>
+  <text x="480" y="264" text-anchor="middle" font-size="9" fill="#7a6e5e">肝/肾为主</text>
+  <text x="680" y="248" text-anchor="middle" font-size="10" font-weight="700" fill="#c0392b">主要脱氨途径</text>
+  <text x="680" y="266" text-anchor="middle" font-size="10" fill="#2c2416">骨骼肌活性低</text>
+
+  <rect x="20" y="286" width="760" height="62" fill="#fff8e7" stroke="#e8c84a" rx="3"/>
+  <text x="100" y="314" text-anchor="middle" font-size="11" font-weight="700" fill="#c0392b">嘌呤核苷酸循环</text>
+  <text x="100" y="332" text-anchor="middle" font-size="9" fill="#7a6e5e">骨骼肌特有</text>
+  <text x="280" y="308" text-anchor="middle" font-size="10" fill="#2c2416">AA→IMP→AMP→</text>
+  <text x="280" y="324" text-anchor="middle" font-size="10" fill="#2c2416">AMP脱氨→IMP+NH₄⁺</text>
+  <text x="280" y="340" text-anchor="middle" font-size="9" fill="#7a6e5e">以AMP为氨基载体</text>
+  <text x="480" y="314" text-anchor="middle" font-size="10" fill="#2c2416">腺苷酸脱氨酶</text>
+  <text x="480" y="330" text-anchor="middle" font-size="9" fill="#7a6e5e">骨骼肌/心肌</text>
+  <text x="680" y="314" text-anchor="middle" font-size="10" font-weight="700" fill="#c0392b">骨骼肌主要方式</text>
+  <text x="680" y="332" text-anchor="middle" font-size="9" fill="#7a6e5e">谷氨酸脱氢酶活性低</text>
+</svg>
+<figcaption>氨基酸脱氨方式对比（氧化/转氨/联合/非氧化）</figcaption>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>🧬 <span class="key-point">联合脱氨基作用</span>的真实反应链:</p>
+    <div class="math-box">
+      氨基酸 + α-酮戊二酸 ⇌ 谷氨酸 + α-酮酸 &nbsp;&nbsp;(转氨酶,PLP)<br>
+      谷氨酸 + NAD(P)⁺ + H₂O ⇌ α-酮戊二酸 + NH₄⁺ + NAD(P)H &nbsp;&nbsp;(L-谷氨酸脱氢酶)<br>
+      ────────────────────────────────────────<br>
+      净反应:氨基酸 + NAD(P)⁺ + H₂O → α-酮酸 + NH₄⁺ + NAD(P)H
+    </div>
+    <p>绝大多数氨基酸的氨基都通过"<span class="u">先转氨给 α-酮戊二酸变成谷氨酸,再由 L-谷氨酸脱氢酶集中脱氨</span>"的方式被清除——<span class="u-double">α-酮戊二酸是"氨基的集散中心"</span>。</p>
+    <p>L-谷氨酸脱氢酶的关键特征:</p>
+    <ul>
+      <li>辅酶:NAD⁺ 或 NADP⁺(双辅酶)</li>
+      <li><span class="u">变构调节</span>:GTP、ATP、NADH 抑制;ADP、GDP 激活</li>
+      <li><span class="u">可逆反应</span>:既能脱氨(分解),又能加氨(合成)</li>
+      <li>部位:肝、肾、脑线粒体基质</li>
+    </ul>
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>📌 <span class="key-point">脱氨基方式小结与竞赛要点(凌云计划)</span>:</p>
+    <ul>
+      <li><span class="u-double">氧化脱氨基</span>:<b>L-谷氨酸脱氢酶</b>是体内唯一活跃的氧化脱氨酶,需 NAD⁺/NADP⁺ 作辅酶(双辅酶)。</li>
+      <li><span class="u-double">转氨基</span>:由<b>转氨酶(ALT/AST)</b>催化,辅酶为<b>磷酸吡哆醛(PLP,维生素 B6 辅酶)</b>;反应<b>可逆</b>,不产生游离氨。</li>
+      <li><span class="u-double">联合脱氨基</span>:转氨基 + L-谷氨酸脱氢酶氧化脱氨,是动物细胞内氨基酸脱氨的<b>主要方式</b>。</li>
+      <li><span class="u-double">嘌呤核苷酸循环</span>:IMP→AMP→IMP+NH₃,是肌肉组织中主要的脱氨方式。</li>
+    </ul>
+    <p>🧠 <span class="key-point">组织特异性(高频考点)</span>:<b>肝脏以联合脱氨基为主</b>(L-谷氨酸脱氢酶活性高);<b>骨骼肌以嘌呤核苷酸循环为主</b>(L-谷氨酸脱氢酶活性低,需借助嘌呤核苷酸循环间接脱氨)。这一"肝脏 vs 骨骼肌"的组织差异是竞赛常考点。</p>
+  </div>
+  <div class="annotation">
+    凌云计划要点:脱氨方式的组织分工——肝脏=联合脱氨基(主),骨骼肌=嘌呤核苷酸循环(主)。原因:骨骼肌中 L-谷氨酸脱氢酶活性低,无法直接氧化脱氨,故改用嘌呤核苷酸循环把氨基"伪装"成天冬氨酸经 AMP 脱氨酶释放。PLP(VitB6)是转氨酶辅酶,L-谷氨酸脱氢酶是唯一活跃的氧化脱氨酶——这两个细节常考。
+  </div>
+</div>
+
+<div class="subtopic-header"><h4>2.2 重要的转氨酶(临床标志物)</h4></div>
+
+<div class="table-wrap">
+<table>
+<thead>
+<tr><th>转氨酶</th><th>反应</th><th>临床意义</th></tr>
+</thead>
+<tbody>
+<tr><td><b>谷丙转氨酶(ALT/GPT)</b></td><td>丙氨酸 + α-酮戊二酸 ⇌ 丙酮酸 + 谷氨酸</td><td>肝中活性最高;<b>肝损伤时血中 ALT 升高</b></td></tr>
+<tr><td><b>谷草转氨酶(AST/GOT)</b></td><td>天冬氨酸 + α-酮戊二酸 ⇌ 草酰乙酸 + 谷氨酸</td><td>心肌中活性最高,其次是肝;<b>心肌梗死/肝病时血中 AST 升高</b></td></tr>
+</tbody>
+</table>
+</div>
+<figcaption>表 3 两种重要的转氨酶(体检常查)</figcaption>
+
+<div class="subtopic-header"><h4>2.3 嘌呤核苷酸循环(肌肉/脑组织)</h4></div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>肌肉和脑组织中 L-谷氨酸脱氢酶活性低,改用<span class="u-double">嘌呤核苷酸循环</span>脱氨。流程:</p>
+    <div class="math-box">
+      ① 氨基酸 + α-酮戊二酸 → 谷氨酸 + α-酮酸 &nbsp;&nbsp;(转氨酶)<br>
+      ② 谷氨酸 + 草酰乙酸 → α-酮戊二酸 + 天冬氨酸 &nbsp;&nbsp;(谷草转氨酶)<br>
+      ③ 天冬氨酸 + IMP + GTP → 腺苷酸琥珀酸 + GDP + Pi &nbsp;&nbsp;(腺苷酸琥珀酸合成酶)<br>
+      ④ 腺苷酸琥珀酸 → AMP + 延胡索酸<br>
+      ⑤ AMP + H₂O → IMP + NH₄⁺ &nbsp;&nbsp;(<b>AMP 脱氨酶</b>)<br>
+      ⑥ 延胡索酸 → 苹果酸 → 草酰乙酸(进入柠檬酸循环)
+    </div>
+    <p>总效果:把氨基"伪装"成天冬氨酸进入嘌呤核苷酸循环,以<span class="u">延胡索酸</span>形式回到柠檬酸循环;同时在 AMP 脱氨酶作用下释放氨。这是 ch1-1-8 中"嘌呤核苷酸循环"在氨基酸代谢中的具体应用。</p>
+  </div>
+</div>
+
+<div class="subtopic-header"><h4>2.4 氨基酸的脱羧基作用与生物胺</h4></div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>氨基酸脱羧 → CO₂ + <span class="u-double">生物胺</span>(许多生物活性物质):</p>
+    <div class="math-box">
+      R-CH(NH₃⁺)-COO⁻ → R-CH₂-NH₂ + CO₂ &nbsp;&nbsp;(氨基酸脱羧酶,辅酶 PLP)
+    </div>
+    <p>例外:<span class="key-point">组氨酸脱羧酶不需要 PLP</span>(使用丙酮酰基辅酶)。</p>
+  </div>
+</div>
+
+<div class="table-wrap">
+<table>
+<thead>
+<tr><th>氨基酸</th><th>脱羧产物</th><th>生理作用</th></tr>
+</thead>
+<tbody>
+<tr><td>谷氨酸</td><td><b>γ-氨基丁酸(GABA)</b></td><td><b>重要的抑制性神经递质</b></td></tr>
+<tr><td>天冬氨酸</td><td>β-丙氨酸</td><td>辅酶 A、泛酸的成分</td></tr>
+<tr><td>组氨酸</td><td>组胺(histamine)</td><td>血管舒张剂;胃酸分泌刺激;<b>过敏反应介质</b></td></tr>
+<tr><td>色氨酸</td><td><b>5-羟色胺(5-HT,血清素)</b></td><td>神经递质,影响情绪/睡眠/食欲</td></tr>
+<tr><td>酪氨酸</td><td>酪胺</td><td>血管收缩;升压</td></tr>
+<tr><td>半胱氨酸</td><td>牛磺酸</td><td>胆汁酸结合;抗氧化</td></tr>
+<tr><td>鸟氨酸</td><td>腐胺 → 亚精胺 → <b>精胺(多胺)</b></td><td>细胞增殖调节</td></tr>
+</tbody>
+</table>
+</div>
+<figcaption>表 4 重要的生物胺及其生理作用</figcaption>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>📌 <span class="key-point">生物胺的氧化解毒</span>(避免积累):</p>
+    <div class="math-box">
+      R-CH₂-NH₂ + O₂ + H₂O →(胺氧化酶)→ R-CHO + H₂O₂ + NH₃<br>
+      R-CHO + ½ O₂ →(醛脱氢酶)→ R-COO⁻ + H⁺
+    </div>
+    <p>最终产物 R-COOH(脂肪酸)进入 β-氧化。<span class="u">单胺氧化酶(MAO)抑制剂</span>是抗抑郁药物的作用靶点之一。</p>
+  </div>
+</div>
+
+<!-- ========== 11.3 氨的代谢去路 ========== -->
+<div class="topic-header"><h3>三、氨的代谢去路——重点中的重点</h3></div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>氨(NH₃)对中枢神经系统<span class="u-double">剧毒</span>(尤其脑):血氨水平 5 倍以上即引起<span class="u">肝性脑病(肝昏迷)</span>。因此氨必须迅速清除。</p>
+  </div>
+</div>
+
+<div class="subtopic-header"><h4>3.1 氨的运输方式</h4></div>
+
+<div class="table-wrap">
+<table>
+<thead>
+<tr><th>运输方式</th><th>反应</th><th>特点</th></tr>
+</thead>
+<tbody>
+<tr><td><b>丙氨酸-葡萄糖循环(Cahill 循环)</b></td><td>肌肉:氨基酸把氨基转给丙酮酸 → 丙氨酸 → 血液 → 肝:丙氨酸转氨给 α-酮戊二酸 → 谷氨酸 → 释放氨;丙酮酸糖异生 → 葡萄糖 → 血液 → 肌肉</td><td>把"氨基"和"丙酮酸骨架"绑在一起运输,实现肌肉产氨到肝脏解毒;<b>饥饿时为肝提供糖异生前体</b></td></tr>
+<tr><td><b>谷氨酰胺运氨</b></td><td>谷氨酸 + NH₃ + ATP → 谷氨酰胺 + ADP + Pi(谷氨酰胺合成酶);谷氨酰胺运到肝/肾后由<b>谷氨酰胺酶</b>水解放氨</td><td>谷氨酰胺是血液中<b>主要的氨载体</b>(无毒)</td></tr>
+</tbody>
+</table>
+</div>
+<figcaption>表 5 氨的两种主要运输方式比较</figcaption>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>🧬 <span class="key-point">葡萄糖-丙氨酸循环(Cahill 循环)详解</span>:该循环实现"氨的运输"与"糖异生前体的运输"双重功能,其完整流程如下:</p>
+    <div class="flow-box">
+      <div class="flow-title">葡萄糖-丙氨酸循环(Cahill 循环)</div>
+      <div class="flow-row">
+        <span class="flow-item">肌肉:氨基酸的氨基转给丙酮酸 → 丙氨酸(转氨基,ALT/转氨酶)</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-item">丙氨酸经血液运输</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-item">肝脏</span>
+      </div>
+      <div class="flow-row" style="margin-top:0.4rem;">
+        <span class="flow-item">肝脏:丙氨酸 + α-酮戊二酸 → 丙酮酸 + 谷氨酸(ALT 催化)</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-item">丙酮酸 → 糖异生 → 葡萄糖</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-item">血液 → 回到肌肉</span>
+      </div>
+    </div>
+    <p>📌 <span class="key-point">循环意义</span>:</p>
+    <ul>
+      <li><b>氨的安全运输</b>:将肌肉中氨基酸脱下的氨基以无毒的丙氨酸形式运到肝脏,在肝脏释放氨进行尿素合成解毒——避免肌肉局部氨积累。</li>
+      <li><b>糖异生前体供应</b>:丙氨酸在肝脏转氨后产生的丙酮酸,可作为糖异生前体合成葡萄糖,葡萄糖再回到肌肉供能——形成"肌肉→肝→肌肉"的碳骨架闭环。</li>
+    </ul>
+    <p>📌 <span class="key-point">竞赛要点</span>:葡萄糖-丙氨酸循环 = <b>氨的运输 + 糖异生前体的运输</b>。关键酶为 <b>ALT(谷丙转氨酶)</b>——既催化肌肉中丙酮酸→丙氨酸(加氨),也催化肝脏中丙氨酸→丙酮酸(脱氨),是双向运转的核心酶。</p>
+  </div>
+  <div class="annotation">
+    凌云计划要点:Cahill 循环是饥饿/运动状态下的重要代谢途径。肌肉分解蛋白质产能时,氨基不能就地堆积(有毒),必须以丙氨酸形式运走;肝脏则利用运来的丙酮酸进行糖异生维持血糖。ALT 是连接两端的关键酶。注意与谷氨酰胺运氨区分:谷氨酰胺是血液中"主要氨载体"(量最大),丙氨酸循环则侧重"肌肉→肝"定向运输。
+  </div>
+</div>
+
+<div class="subtopic-header"><h4>3.2 尿素循环(Ornithine Cycle)——核心</h4></div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>高中提到"肝脏是解毒器官"——<span class="u-double">肝脏把有毒的氨转变成无毒的尿素</span>就是最典型的解毒过程。<span class="key-point">Krebs 一生提出两次循环</span>(柠檬酸循环 + 尿素循环),是生物化学的奠基人之一。</p>
+    <p>总反应:</p>
+    <div class="math-box">
+      2 NH₃ + CO₂ + 3 ATP + 天冬氨酸 → 尿素 + 延胡索酸 + 2 ADP + AMP + 4 Pi
+    </div>
+  </div>
+</div>
+
+<div class="table-wrap">
+<table>
+<thead>
+<tr><th>步骤</th><th>反应</th><th>酶</th><th>部位</th><th>能量/辅因子</th></tr>
+</thead>
+<tbody>
+<tr><td>①</td><td>NH₃ + CO₂ + 2 ATP → 氨基甲酰磷酸 + 2 ADP + Pi</td><td><b>氨基甲酰磷酸合酶 I(CPS I)</b></td><td>线粒体基质</td><td>消耗 2 ATP;<b>N-乙酰谷氨酸(AGA)为变构激活剂</b></td></tr>
+<tr><td>②</td><td>氨基甲酰磷酸 + 鸟氨酸 → 瓜氨酸 + Pi</td><td>鸟氨酸氨基甲酰转移酶(OTC)</td><td>线粒体基质</td><td>不可逆</td></tr>
+<tr><td>③</td><td>瓜氨酸 + 天冬氨酸 + ATP → 精氨酸代琥珀酸 + AMP + PPi</td><td>精氨酸代琥珀酸合成酶</td><td>细胞质</td><td>消耗 1 ATP(等价 2 高能键);<b>天冬氨酸提供第二个氨基</b></td></tr>
+<tr><td>④</td><td>精氨酸代琥珀酸 → 精氨酸 + 延胡索酸</td><td>精氨酸代琥珀酸裂解酶</td><td>细胞质</td><td>延胡索酸进入柠檬酸循环</td></tr>
+<tr><td>⑤</td><td>精氨酸 + H₂O → 鸟氨酸 + 尿素</td><td>精氨酸酶</td><td>细胞质</td><td>鸟氨酸回到线粒体进入下一轮循环</td></tr>
+</tbody>
+</table>
+</div>
+<figcaption>表 6 尿素循环的 5 步反应(2 步在线粒体 + 3 步在细胞质)</figcaption>
+
+<div class="diagram">
+<svg viewBox="0 0 800 430" style="width:100%;max-width:720px;margin:1.2rem auto;display:block;font-family:sans-serif;">
+  <rect x="0" y="0" width="800" height="430" fill="#fdfbf7" stroke="#d6ccc0" rx="8"/>
+  <text x="400" y="26" text-anchor="middle" font-size="16" font-weight="700" fill="#2c2416">尿素循环（鸟氨酸循环）</text>
+
+  <!-- 线粒体区 -->
+  <rect x="20" y="44" width="760" height="130" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.5" rx="6"/>
+  <text x="40" y="64" font-size="12" font-weight="700" fill="#1565c0">线粒体</text>
+  <!-- CPS-I step -->
+  <rect x="40" y="78" width="130" height="40" fill="#fff" stroke="#1565c0" rx="4"/>
+  <text x="105" y="96" text-anchor="middle" font-size="11" font-weight="700" fill="#1565c0">NH₄⁺ + HCO₃⁻</text>
+  <text x="105" y="110" text-anchor="middle" font-size="10" fill="#7a6e5e">+ 2ATP</text>
+  <text x="190" y="103" text-anchor="middle" font-size="10" fill="#c0392b" font-weight="700">CPS-I</text>
+  <text x="190" y="116" text-anchor="middle" font-size="9" fill="#7a6e5e">需NAG激活</text>
+  <line x1="172" y1="98" x2="225" y2="98" stroke="#c0392b" stroke-width="2" marker-end="url(#ucArr)"/>
+  <rect x="228" y="78" width="110" height="40" fill="#fff" stroke="#1565c0" rx="4"/>
+  <text x="283" y="103" text-anchor="middle" font-size="11" font-weight="700" fill="#2c2416">氨甲酰磷酸</text>
+  <!-- OTC step -->
+  <rect x="470" y="78" width="90" height="40" fill="#fff8e7" stroke="#8b4513" rx="4"/>
+  <text x="515" y="103" text-anchor="middle" font-size="11" font-weight="700" fill="#8b4513">鸟氨酸</text>
+  <text x="360" y="103" text-anchor="middle" font-size="10" fill="#c0392b" font-weight="700">OTC</text>
+  <line x1="340" y1="98" x2="465" y2="98" stroke="#c0392b" stroke-width="2" marker-end="url(#ucArr)"/>
+  <line x1="515" y1="118" x2="515" y2="135" stroke="#8b4513" stroke-width="2"/>
+  <line x1="515" y1="135" x2="360" y2="135" stroke="#8b4513" stroke-width="2"/>
+  <rect x="575" y="78" width="90" height="40" fill="#fff" stroke="#1565c0" rx="4"/>
+  <text x="620" y="103" text-anchor="middle" font-size="11" font-weight="700" fill="#2c2416">瓜氨酸</text>
+  <line x1="475" y1="98" x2="570" y2="98" stroke="#c0392b" stroke-width="2" marker-end="url(#ucArr)"/>
+  <!-- 瓜氨酸出线粒体 -->
+  <line x1="620" y1="118" x2="620" y2="185" stroke="#1565c0" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#ucArr)"/>
+  <text x="635" y="155" font-size="10" fill="#1565c0">出线粒体</text>
+
+  <!-- 细胞质区 -->
+  <rect x="20" y="190" width="760" height="215" fill="#fff8e7" stroke="#e8c84a" stroke-width="1.5" rx="6"/>
+  <text x="40" y="210" font-size="12" font-weight="700" fill="#8b4513">细胞质</text>
+
+  <!-- 瓜氨酸(细胞质) -->
+  <rect x="50" y="225" width="90" height="40" fill="#fff" stroke="#8b4513" rx="4"/>
+  <text x="95" y="250" text-anchor="middle" font-size="11" font-weight="700" fill="#2c2416">瓜氨酸</text>
+  <!-- ASS step -->
+  <text x="180" y="240" text-anchor="middle" font-size="10" fill="#c0392b" font-weight="700">ASS</text>
+  <text x="180" y="254" text-anchor="middle" font-size="9" fill="#7a6e5e">+天冬氨酸</text>
+  <text x="180" y="266" text-anchor="middle" font-size="9" fill="#7a6e5e">ATP→AMP</text>
+  <line x1="142" y1="245" x2="230" y2="245" stroke="#c0392b" stroke-width="2" marker-end="url(#ucArr)"/>
+  <rect x="233" y="225" width="110" height="40" fill="#fff" stroke="#8b4513" rx="4"/>
+  <text x="288" y="250" text-anchor="middle" font-size="11" font-weight="700" fill="#2c2416">精氨琥珀酸</text>
+  <!-- ASL step -->
+  <text x="375" y="240" text-anchor="middle" font-size="10" fill="#c0392b" font-weight="700">ASL</text>
+  <text x="375" y="254" text-anchor="middle" font-size="9" fill="#7a6e5e">→延胡索酸</text>
+  <text x="375" y="266" text-anchor="middle" font-size="9" fill="#7a6e5e">(连TCA)</text>
+  <line x1="345" y1="245" x2="430" y2="245" stroke="#c0392b" stroke-width="2" marker-end="url(#ucArr)"/>
+  <rect x="433" y="225" width="90" height="40" fill="#fff" stroke="#8b4513" rx="4"/>
+  <text x="478" y="250" text-anchor="middle" font-size="11" font-weight="700" fill="#2c2416">精氨酸</text>
+  <!-- 精氨酸酶 step -->
+  <text x="560" y="240" text-anchor="middle" font-size="10" fill="#c0392b" font-weight="700">精氨酸酶</text>
+  <text x="560" y="254" text-anchor="middle" font-size="9" fill="#7a6e5e">(肝特有)</text>
+  <line x1="525" y1="245" x2="615" y2="245" stroke="#c0392b" stroke-width="2" marker-end="url(#ucArr)"/>
+
+  <!-- 尿素 + 鸟氨酸 产物 -->
+  <rect x="620" y="225" width="90" height="40" fill="#fdf2f2" stroke="#c0392b" stroke-width="2" rx="4"/>
+  <text x="665" y="250" text-anchor="middle" font-size="11" font-weight="700" fill="#c0392b">尿素</text>
+  <text x="665" y="285" text-anchor="middle" font-size="10" fill="#c0392b">↓ 经肾排出</text>
+
+  <!-- 鸟氨酸回到线粒体 -->
+  <rect x="433" y="320" width="90" height="40" fill="#fff8e7" stroke="#8b4513" rx="4"/>
+  <text x="478" y="345" text-anchor="middle" font-size="11" font-weight="700" fill="#8b4513">鸟氨酸</text>
+  <line x1="478" y1="265" x2="478" y2="318" stroke="#8b4513" stroke-width="2" stroke-dasharray="4,2"/>
+  <text x="495" y="295" font-size="9" fill="#8b4513">再生</text>
+  <!-- 鸟氨酸回路箭头 -->
+  <path d="M 433 340 L 95 340 L 95 78" fill="none" stroke="#8b4513" stroke-width="2" stroke-dasharray="6,3" marker-end="url(#ucArr)"/>
+  <text x="250" y="332" text-anchor="middle" font-size="10" font-weight="700" fill="#8b4513">鸟氨酸回线粒体（循环再生）</text>
+
+  <!-- 底部要点 -->
+  <rect x="40" y="375" width="720" height="42" fill="#fdf2f2" stroke="#c0392b" rx="4"/>
+  <text x="50" y="394" font-size="11" fill="#c0392b" font-weight="700">★ 竞赛要点</text>
+  <text x="50" y="410" font-size="10" fill="#2c2416">① 2步线粒体(CPS-I/OTC) + 3步细胞质(ASS/ASL/精氨酸酶) | ② 消耗3ATP=4高能磷酸键 | ③ 第二个N来自天冬氨酸非NH₃ | ④ 延胡索酸连接TCA(Krebs双循环)</text>
+
+  <defs>
+    <marker id="ucArr" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <polygon points="0,0 8,4 0,8" fill="#c0392b"/>
+    </marker>
+  </defs>
+</svg>
+  <figcaption>图1：尿素循环——2步线粒体（CPS I、OTC）+3步细胞质（ASS、ASL、ARG），将2分子氨（1来自游离NH₃，1来自天冬氨酸）转化为1分子尿素排出</figcaption>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>📌 <span class="key-point">能量总结</span>:1 分子尿素消耗 <span class="u-double">3 ATP(等价 4 高能磷酸键)</span>——2 ATP 用于氨基甲酰磷酸合成,1 ATP 消耗于精氨酸代琥珀酸合成(ATP → AMP + PPi)。</p>
+    <p>📌 <span class="key-point">常考点</span>:<span class="u">第二个氮的来源不是第二个 NH₃,而是天冬氨酸</span>——这是精氨酸代琥珀酸合成酶催化的反应,把"氨基"以"酰胺基"形式接入。</p>
+    <p>📌 <span class="key-point">CPS I 与 CPS II 的对比</span>:</p>
+    <table style="min-width:600px; font-size:0.85rem;">
+    <thead><tr><th>特征</th><th>CPS I</th><th>CPS II</th></tr></thead>
+    <tbody>
+    <tr><td>部位</td><td>线粒体</td><td>细胞质</td></tr>
+    <tr><td>底物</td><td>游离 NH₃</td><td>谷氨酰胺的酰胺氮</td></tr>
+    <tr><td>用途</td><td><b>尿素循环</b></td><td><b>嘧啶合成</b></td></tr>
+    <tr><td>激活剂</td><td>N-乙酰谷氨酸(AGA)</td><td>无</td></tr>
+    </tbody>
+    </table>
+    <p>⚠️ <span class="key-point">临床关联</span>:</p>
+    <ul>
+      <li><span class="u">高氨血症/肝昏迷</span>:肝功能衰竭 → 氨不能转化为尿素 → 血氨升高 → 中枢神经毒性</li>
+      <li><span class="u">OTC 缺陷</span>:尿素循环最常见的遗传病(X 连锁),新生儿期即出现高氨血症</li>
+      <li><span class="u">精氨酸是必需氨基酸(对尿素循环障碍者)</span>——因为精氨酸降解产生的鸟氨酸/瓜氨酸可促进尿素循环残存功能</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    高中延伸:这一节把"蛋白质分解"和"尿素排出"两个高中没讲清楚的过程完全串起来——"吃进去的蛋白质 → 氨基酸 → 脱氨 → 氨 → 肝脏尿素循环 → 尿素 → 肾脏排出"。这是奥赛必考内容,常考"第二个 N 来自天冬氨酸"、"CPS I vs CPS II"等。
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>📌 <span class="key-point">竞赛要点速记(尿素循环)</span>:</p>
+    <ul>
+      <li><span class="u-double">限速酶</span>:<b>CPS-I(氨甲酰磷酸合成酶 I)</b>——尿素循环的关键调控点。</li>
+      <li><span class="u">正反馈调控</span>:<b>精氨酸</b>可激活 N-乙酰谷氨酸合成酶(NAGS)→ 促进 <b>N-乙酰谷氨酸(NAG)</b> 合成 → NAG 是 CPS-I 的别构激活剂 → 加速尿素合成。即"精氨酸 → NAG → CPS-I"正反馈环路。</li>
+      <li><span class="u">尿素中两个 N 的来源</span>:<b>一个来自游离 NH₃</b>(第①步 CPS-I 反应),<b>另一个来自天冬氨酸</b>(第③步精氨酸代琥珀酸合成酶反应)——这是高频考点。</li>
+      <li><span class="u">能量消耗</span>:合成 1 分子尿素消耗 <b>3 个 ATP(等价 4 个高能磷酸键)</b>——第①步用 2 ATP,第③步 ATP→AMP+PPi(等价 2 个高能磷酸键)。</li>
+      <li><span class="u">精氨酸酶需 Mn²⁺</span>:第⑤步精氨酸酶(arginase)是<span class="key-point">锰金属酶</span>,需 Mn²⁺ 作为辅因子。</li>
+    </ul>
+    <p>🧬 <span class="key-point">尿素循环-TCA 双循环(两循环偶联)</span>:尿素循环产生的<b>延胡索酸</b>并非废弃产物,而是进入柠檬酸循环:</p>
+    <div class="flow-box">
+      <div class="flow-title">尿素循环与 TCA 循环的偶联("双循环")</div>
+      <div class="flow-row">
+        <span class="flow-item">延胡索酸(尿素循环第④步)</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-item">苹果酸</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-item">草酰乙酸(OAA)</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-item">天冬氨酸(转氨)</span>
+      </div>
+      <div class="flow-row" style="margin-top:0.4rem;">
+        <span class="flow-item">天冬氨酸回到尿素循环第③步</span>
+        <span class="flow-arrow">⇌</span>
+        <span class="flow-item">形成"尿素循环-TCA 双循环"</span>
+      </div>
+    </div>
+    <p>这一偶联使<b>延胡索酸→苹果酸→OAA→天冬氨酸</b>的代谢链把两个循环连接起来——天冬氨酸既是尿素循环的第二个 N 来源,又通过 TCA 循环再生,构成代谢"桥梁"。</p>
+  </div>
+  <div class="annotation">
+    凌云计划要点:尿素循环的调控是竞赛高频考点。重点掌握:① CPS-I 是限速酶;② NAG 是 CPS-I 的正调节剂,精氨酸通过激活 NAGS 形成正反馈;③ 尿素两个 N 分别来自 NH₃ 和天冬氨酸;④ 消耗 3 ATP(4 高能磷酸键);⑤ 精氨酸酶需 Mn²⁺;⑥ 尿素循环-TCA 双循环通过延胡索酸-天冬氨酸偶联。
+  </div>
+</div>
+
+<div class="subtopic-header"><h4>3.3 α-酮酸的代谢去路</h4></div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>氨基酸脱氨后产生的 α-酮酸有<span class="u-double">三类命运</span>:</p>
+  </div>
+</div>
+
+<div class="table-wrap">
+<table>
+<thead>
+<tr><th>命运</th><th>方式</th><th>产物</th><th>例子</th></tr>
+</thead>
+<tbody>
+<tr><td>① <b>再氨基化</b></td><td>α-酮酸 + NH₃ → 新的非必需氨基酸</td><td>非必需氨基酸</td><td>丙酮酸 → 丙氨酸;草酰乙酸 → 天冬氨酸;α-酮戊二酸 → 谷氨酸</td></tr>
+<tr><td>② <b>转变成糖</b>(糖异生)</td><td>α-酮酸 → 柠檬酸循环中间物 → 草酰乙酸 → PEP → 葡萄糖</td><td>糖</td><td>丙酮酸、草酰乙酸、α-酮戊二酸</td></tr>
+<tr><td>③ <b>转变成酮体</b>(生成乙酰 CoA 或酮体)</td><td>α-酮酸 → 乙酰 CoA/乙酰乙酰 CoA</td><td>酮体</td><td>亮氨酸、赖氨酸</td></tr>
+</tbody>
+</table>
+</div>
+<figcaption>表 7 α-酮酸的三类代谢去路</figcaption>
+
+<div class="table-wrap">
+<table>
+<thead>
+<tr><th>类型</th><th>含义</th><th>氨基酸</th><th>备注</th></tr>
+</thead>
+<tbody>
+<tr><td><b>生糖氨基酸</b>(glucogenic)</td><td>碳骨架能转变成糖</td><td>几乎所有氨基酸(除亮氨酸、赖氨酸外)</td><td>饥饿时通过糖异生维持血糖</td></tr>
+<tr><td><b>生酮氨基酸</b>(ketogenic)</td><td>碳骨架转变成酮体</td><td><b>亮氨酸、赖氨酸</b></td><td></td></tr>
+<tr><td><b>双重类</b></td><td>既能生糖又能生酮</td><td><b>异亮氨酸、苯丙氨酸、酪氨酸、色氨酸、苏氨酸</b></td><td></td></tr>
+</tbody>
+</table>
+</div>
+<figcaption>表 8 氨基酸按碳骨架去路的分类(口诀:亮赖是酮,异苯酪色苏)</figcaption>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>📌 <span class="key-point">生糖/生酮氨基酸完整分类(竞赛必背)</span>:</p>
+    <ul>
+      <li><span class="u-double">纯生酮氨基酸(2 种)</span>:<b>Leu(亮氨酸)、Lys(赖氨酸)</b>——只能转变成乙酰 CoA/酮体,不能净生成糖。</li>
+      <li><span class="u-double">既生糖又生酮氨基酸(5 种)</span>:<b>Ile(异亮)、Phe(苯丙)、Tyr(酪)、Trp(色)、Thr(苏)</b>——碳骨架既能生糖又能生酮。</li>
+      <li><span class="u-double">纯生糖氨基酸(其余 13 种)</span>:<b>Ala、Arg、Asn、Asp、Cys、Gln、Glu、Gly、His、Met、Pro、Ser、Val</b>——碳骨架可经糖异生生糖。</li>
+    </ul>
+    <p>🧠 <span class="key-point">竞赛口诀</span>:<b>"两酮亮赖,五兼异苯酪色苏"</b>——即 2 种纯生酮(亮、赖),5 种兼性(异亮、苯丙、酪、色、苏),其余均为纯生糖。</p>
+    <div class="expand-block">
+      <b>2025 联赛真题考点</b>:生糖生酮氨基酸的分类曾在 2025 年生物联赛中考查,要求准确判断某氨基酸属于纯生糖、纯生酮还是兼性。务必牢记"亮赖纯生酮,异苯酪色苏兼性",其余皆为纯生糖。
+    </div>
+  </div>
+  <div class="annotation">
+    凌云计划要点:判断依据看碳骨架的代谢出口——若只生成乙酰 CoA(不能净生糖)则为生酮;若生成丙酮酸或 TCA 中间物(OAA、α-KG 等)则为生糖;两者皆有则兼性。亮、赖是唯二纯生酮;异亮、苯丙、酪、色、苏是 5 种兼性;其余 13 种纯生糖。
+  </div>
+</div>
+
+<svg viewBox="0 0 800 380" style="width:100%;max-width:720px;margin:1.2rem auto;display:block;font-family:sans-serif;">
+  <rect x="0" y="0" width="800" height="380" fill="#fdfbf7" stroke="#d6ccc0" rx="8"/>
+  <text x="400" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="#2c2416">生糖 vs 生酮氨基酸分类表</text>
+
+  <g transform="translate(20,55)">
+    <rect x="0" y="0" width="240" height="300" fill="#fdf2f2" stroke="#c0392b" stroke-width="2" rx="6"/>
+    <rect x="0" y="0" width="240" height="32" fill="#c0392b" rx="6"/>
+    <text x="120" y="22" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">纯生酮氨基酸 (2种)</text>
+    <text x="120" y="60" text-anchor="middle" font-size="28" font-weight="700" fill="#c0392b">Leu · Lys</text>
+    <text x="120" y="80" text-anchor="middle" font-size="11" fill="#7a6e5e">亮氨酸 · 赖氨酸</text>
+    <line x1="20" y1="100" x2="220" y2="100" stroke="#d6ccc0"/>
+    <text x="120" y="124" text-anchor="middle" font-size="12" font-weight="700" fill="#c0392b">代谢出口：</text>
+    <text x="120" y="146" text-anchor="middle" font-size="11" fill="#2c2416">→ 乙酰CoA / 乙酰乙酰CoA</text>
+    <text x="120" y="164" text-anchor="middle" font-size="11" fill="#2c2416">→ 酮体</text>
+    <text x="120" y="194" text-anchor="middle" font-size="11" font-weight="700" fill="#c0392b">不可净生糖</text>
+    <text x="120" y="216" text-anchor="middle" font-size="10" fill="#7a6e5e">（丙酮酸→乙酰CoA不可逆）</text>
+    <rect x="20" y="236" width="200" height="50" fill="#fff8e7" stroke="#e8c84a" rx="4"/>
+    <text x="120" y="256" text-anchor="middle" font-size="10" font-weight="700" fill="#c0392b">记忆口诀</text>
+    <text x="120" y="274" text-anchor="middle" font-size="11" fill="#2c2416">"亮赖纯生酮"</text>
+  </g>
+
+  <g transform="translate(280,55)">
+    <rect x="0" y="0" width="240" height="300" fill="#fff8e7" stroke="#e8c84a" stroke-width="2" rx="6"/>
+    <rect x="0" y="0" width="240" height="32" fill="#8b4513" rx="6"/>
+    <text x="120" y="22" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">兼性(生糖+生酮) (5种)</text>
+    <text x="120" y="56" text-anchor="middle" font-size="14" font-weight="700" fill="#8b4513">Ile · Phe</text>
+    <text x="120" y="78" text-anchor="middle" font-size="14" font-weight="700" fill="#8b4513">Tyr · Trp · Thr</text>
+    <text x="120" y="96" text-anchor="middle" font-size="10" fill="#7a6e5e">异亮·苯丙·酪·色·苏</text>
+    <line x1="20" y1="112" x2="220" y2="112" stroke="#d6ccc0"/>
+    <text x="120" y="134" text-anchor="middle" font-size="12" font-weight="700" fill="#c0392b">代谢出口：</text>
+    <text x="120" y="154" text-anchor="middle" font-size="11" fill="#2c2416">→ 乙酰CoA (生酮)</text>
+    <text x="120" y="172" text-anchor="middle" font-size="11" fill="#2c2416">+ 延胡索酸/丙酮酸 (生糖)</text>
+    <text x="120" y="200" text-anchor="middle" font-size="11" font-weight="700" fill="#8b4513">两路均可</text>
+    <rect x="20" y="220" width="200" height="50" fill="#fff8e7" stroke="#e8c84a" rx="4"/>
+    <text x="120" y="240" text-anchor="middle" font-size="10" font-weight="700" fill="#c0392b">记忆口诀</text>
+    <text x="120" y="258" text-anchor="middle" font-size="11" fill="#2c2416">"异苯酪色苏"</text>
+    <text x="120" y="282" text-anchor="middle" font-size="9" fill="#7a6e5e">芳香族(Phe/Tyr/Trp)均为兼性</text>
+  </g>
+
+  <g transform="translate(540,55)">
+    <rect x="0" y="0" width="240" height="300" fill="#f0f7f4" stroke="#27ae60" stroke-width="2" rx="6"/>
+    <rect x="0" y="0" width="240" height="32" fill="#27ae60" rx="6"/>
+    <text x="120" y="22" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">纯生糖氨基酸 (13种)</text>
+    <text x="20" y="54" font-size="10" font-weight="700" fill="#27ae60">Ala Arg Asn Asp</text>
+    <text x="20" y="72" font-size="10" font-weight="700" fill="#27ae60">Cys Gln Glu Gly</text>
+    <text x="20" y="90" font-size="10" font-weight="700" fill="#27ae60">His Met Pro Ser Val</text>
+    <text x="20" y="108" font-size="9" fill="#7a6e5e">丙·精·天胺·天冬·半胱·谷胺·谷·甘·组·甲硫·脯·丝·缬</text>
+    <line x1="20" y1="124" x2="220" y2="124" stroke="#d6ccc0"/>
+    <text x="120" y="146" text-anchor="middle" font-size="12" font-weight="700" fill="#c0392b">代谢出口：</text>
+    <text x="120" y="166" text-anchor="middle" font-size="11" fill="#2c2416">→ 丙酮酸</text>
+    <text x="120" y="182" text-anchor="middle" font-size="11" fill="#2c2416">→ α-酮戊二酸</text>
+    <text x="120" y="198" text-anchor="middle" font-size="11" fill="#2c2416">→ 草酰乙酸/琥珀酰CoA</text>
+    <text x="120" y="214" text-anchor="middle" font-size="11" fill="#2c2416">→ 延胡索酸</text>
+    <text x="120" y="240" text-anchor="middle" font-size="11" font-weight="700" fill="#27ae60">→ 糖异生→葡萄糖</text>
+    <rect x="20" y="258" width="200" height="30" fill="#fff8e7" stroke="#e8c84a" rx="4"/>
+    <text x="120" y="278" text-anchor="middle" font-size="10" font-weight="700" fill="#c0392b">记忆：除亮赖+异苯酪色苏外</text>
+  </g>
+</svg>
+<figcaption>生糖 vs 生酮氨基酸分类表</figcaption>
+
+<!-- ========== 11.4 氨基酸合成代谢 ========== -->
+<div class="topic-header"><h3>四、氨基酸的合成代谢</h3></div>
+
+<div class="subtopic-header"><h4>4.1 必需氨基酸与非必需氨基酸</h4></div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>高中没有"必需氨基酸"概念。本节引入:<span class="u-double">人体只能合成 12 种非必需氨基酸</span>,另外 <span class="u-double">8 种必需氨基酸必须从食物中获取</span>(因为人体缺乏相应合成途径/合成酶)。</p>
+    <p><span class="u-double">8 种必需氨基酸(人体不能合成,需从食物摄取)</span>:</p>
+    <p><span class="key-point">口诀"赖甲苏亮异色缬苯"</span>:<b>Lys(赖氨酸)、Met(甲硫氨酸)、Thr(苏氨酸)、Leu(亮氨酸)、Ile(异亮氨酸)、Trp(色氨酸)、Val(缬氨酸)、Phe(苯丙氨酸)</b></p>
+    <p>🧠 <span class="key-point">替代口诀</span>:<b>"苯缬亮异赖蛋苏色"</b>(Phe、Val、Leu、Ile、Lys、Met、Thr、Trp);谐音口诀<b>"一家携两三本淡色书来"</b>(异亮-甲硫-缬-亮-苏-苯丙-蛋-色-赖)。</p>
+    <p>特殊:<span class="u">His(组氨酸)</span>婴儿必需,成人半必需;<span class="u">Arg(精氨酸)</span>虽能合成但量不足,半必需——<b>婴幼儿对 Arg、His 合成不足,需额外补充</b>(共 9 种)。</p>
+    <p>📌 <span class="key-point">竞赛要点</span>:<b>必需氨基酸 = 人体不能合成的氨基酸(缺乏相应合成途径)</b>。判断标准不是"营养必需",而是"人体是否具备从头合成该氨基酸碳骨架的酶系"。8 种必需 + His(婴儿)= 9 种。半必需氨基酸指 Arg、His(合成量不足)。</p>
+  </div>
+  <div class="annotation">
+    凌云计划要点:必需氨基酸的本质是"人体缺乏其合成途径",必须从食物摄取。8 种:"赖甲苏亮异色缬苯"或"苯缬亮异赖蛋苏色"。婴儿还需 His(共 9 种)。Arg、His 为半必需(婴幼儿合成不足)。注意区分"必需氨基酸"与"生糖/生酮氨基酸"——前者按"能否合成"分类,后者按"碳骨架去路"分类,是两套独立的分类体系。
+  </div>
+</div>
+
+<div class="subtopic-header"><h4>4.2 氨基酸碳骨架的来源</h4></div>
+
+<div class="table-wrap">
+<table>
+<thead>
+<tr><th>糖代谢中间物</th><th>生成的氨基酸</th></tr>
+</thead>
+<tbody>
+<tr><td>丙酮酸</td><td>Ala(丙氨酸)、Val(缬氨酸)、Leu(亮氨酸)</td></tr>
+<tr><td>α-酮戊二酸</td><td>Glu(谷氨酸)、Gln(谷氨酰胺)、Arg(精氨酸)、Pro(脯氨酸)、His(组氨酸)</td></tr>
+<tr><td>草酰乙酸</td><td>Asp(天冬氨酸)、Asn(天冬酰胺)、Met(甲硫氨酸)、Thr(苏氨酸)、Lys(赖氨酸)</td></tr>
+<tr><td>3-磷酸甘油酸</td><td>Ser(丝氨酸)、Gly(甘氨酸)、Cys(半胱氨酸)</td></tr>
+<tr><td>磷酸烯醇式丙酮酸 + 赤藓糖-4-磷酸</td><td>Phe(苯丙氨酸)、Trp(色氨酸)、Tyr(酪氨酸)</td></tr>
+<tr><td>5-磷酸核糖</td><td>His(组氨酸)</td></tr>
+</tbody>
+</table>
+</div>
+<figcaption>表 9 氨基酸碳骨架的来源(均来自糖代谢中间物)</figcaption>
+
+<div class="subtopic-header"><h4>4.3 一碳单位代谢</h4></div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><span class="u-double">一碳单位(one-carbon unit)</span>:含有一个碳原子的基团(甲基 —CH₃、亚甲基 —CH₂—、次甲基 =CH—、甲酰基 —CHO、亚胺甲基 —CH=NH、羟甲基 —CH₂OH 等)。它们在代谢中以<span class="u-double">四氢叶酸(FH4)</span>为载体,在<span class="u">维生素 B12</span>参与下进行转移。</p>
+  </div>
+</div>
+
+<div class="table-wrap">
+<table>
+<thead>
+<tr><th>氨基酸</th><th>提供的一碳单位形式</th><th>备注</th></tr>
+</thead>
+<tbody>
+<tr><td><b>丝氨酸</b></td><td><b>N5,N10-亚甲基 FH4</b>(主要来源)</td><td>丝氨酸 + FH4 → 甘氨酸 + N5,N10-亚甲基 FH4</td></tr>
+<tr><td>甘氨酸</td><td>N5,N10-亚甲基 FH4(同上)</td><td></td></tr>
+<tr><td>组氨酸</td><td>N5-亚氨甲基 FH4(降解为 N5,N10-次甲基 FH4)</td><td></td></tr>
+<tr><td>色氨酸</td><td>N10-甲酰 FH4</td><td></td></tr>
+<tr><td>甲硫氨酸</td><td><b>S-腺苷甲硫氨酸(SAM)</b>——通用甲基供体</td><td>不经 FH4 载体</td></tr>
+</tbody>
+</table>
+</div>
+<figcaption>表 10 一碳单位的来源(丝氨酸最重要)</figcaption>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>一碳单位的代谢意义:</p>
+    <ul>
+      <li><span class="u">嘌呤合成</span>:C2、C8 来自 N10-甲酰 FH4</li>
+      <li><span class="u">嘧啶合成</span>:胸腺嘧啶的甲基来自 N5,N10-亚甲基 FH4</li>
+      <li>氨基酸代谢:多种相互转化</li>
+      <li><span class="u">S-腺苷甲硫氨酸(SAM)</span>:体内最重要的<span class="key-point">甲基供体</span>——参与肌酸、磷脂、肾上腺素等的合成</li>
+    </ul>
+    <p>⚠️ <span class="key-point">临床延伸</span>:<span class="u">叶酸拮抗剂</span>(如甲氨蝶呤)抑制二氢叶酸还原酶,阻断一碳单位代谢,用于癌症化疗;<span class="u">磺胺类药物</span>抑制细菌叶酸合成,起抗菌作用。</p>
+  </div>
+</div>
+
+<div class="subtopic-header"><h4>4.4 氨基酸衍生的重要生物活性物质</h4></div>
+
+<div class="table-wrap">
+<table>
+<thead>
+<tr><th>生物活性物质</th><th>氨基酸前体</th><th>关键反应/辅酶</th><th>生理功能</th></tr>
+</thead>
+<tbody>
+<tr><td><b>儿茶酚胺</b>(catecholamine)</td><td><b>酪氨酸</b></td><td>酪氨酸羟化酶(限速,需 BH4)→ L-DOPA → 多巴 → 多巴胺 → 去甲肾上腺素 → <b>肾上腺素</b></td><td>神经递质/激素</td></tr>
+<tr><td><b>黑色素</b>(melanin)</td><td>酪氨酸</td><td>酪氨酸酶(含铜)→ DOPA → 多巴醌 → 黑色素</td><td>皮肤、毛发色素;缺乏→<b>白化病</b></td></tr>
+<tr><td><b>肌酸</b>(creatine)</td><td>甘氨酸 + 精氨酸 + SAM</td><td>甘氨酸 + 精氨酸 → 胍基乙酸 → 接受 SAM 的甲基 → 肌酸</td><td>肌肉能量储备(<b>磷酸肌酸</b>)</td></tr>
+<tr><td><b>肌酐</b>(creatinine)</td><td>磷酸肌酸(非酶促)</td><td>磷酸肌酸自发环化 → 肌酐</td><td>临床<b>肾功能指标</b></td></tr>
+<tr><td><b>血红素</b>(heme)</td><td>甘氨酸 + 琥珀酰 CoA</td><td>ALA 合酶(限速,需 PLP)→ ALA → 胆色素原 → 尿卟啉原 → 粪卟啉原 → 原卟啉 IX → 亚铁血红素</td><td>血红蛋白、肌红蛋白、细胞色素辅基</td></tr>
+<tr><td><b>胆色素</b>(bile pigments)</td><td>血红素降解</td><td>血红素 → 胆绿素 → 胆红素 → 尿胆素原/粪胆素(黄褐色)</td><td>红细胞破坏产物;黄疸发生机制</td></tr>
+<tr><td>嘌呤核苷酸</td><td>甘氨酸 + 天冬氨酸 + 谷氨酰胺 + 一碳单位 + CO₂</td><td>从头合成途径(PRPP 为起始);补救合成途径</td><td>DNA、RNA、ATP、辅酶前体</td></tr>
+<tr><td>嘧啶核苷酸</td><td>天冬氨酸 + 谷氨酰胺 + CO₂</td><td>CPS II 起始;从 PRPP 开始</td><td></td></tr>
+<tr><td><b>甲状腺激素</b></td><td><b>酪氨酸</b>(甲状腺球蛋白上)</td><td>碘化 + 偶联 → T3、T4</td><td>调节基础代谢</td></tr>
+<tr><td><b>谷胱甘肽(GSH)</b></td><td>谷氨酸 + 半胱氨酸 + 甘氨酸</td><td>γ-谷氨酰半胱氨酸合成酶 + 谷胱甘肽合成酶</td><td>细胞抗氧化;<b>还原型/氧化型比值</b>反映氧化应激</td></tr>
+</tbody>
+</table>
+</div>
+<figcaption>表 11 氨基酸衍生的重要生物活性物质(奥赛常考)</figcaption>
+
+<!-- ========== 翻译机制 ========== -->
+<div class="topic-header"><h3>五、蛋白质的生物合成——翻译</h3></div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><span class="u-double">翻译(translation)</span>:以 mRNA 为模板,tRNA 携带氨基酸,在核糖体上合成多肽链的过程。翻译是<span class="key-point">中心法则的最后一步</span>,把核酸语言"翻译"成蛋白质语言。</p>
+  </div>
+</div>
+
+<div class="subtopic-header"><h4>5.1 参与翻译的关键分子</h4></div>
+
+<div class="table-wrap">
+<table>
+<thead>
+<tr><th>分子</th><th>功能</th></tr>
+</thead>
+<tbody>
+<tr><td><b>mRNA</b>(信使 RNA)</td><td>翻译模板;密码子(每 3 个核苷酸=1 个密码子)决定氨基酸序列</td></tr>
+<tr><td><b>tRNA</b>(转运 RNA)</td><td>携带氨基酸;反密码子(anticodon)识别 mRNA 密码子</td></tr>
+<tr <td><b>核糖体</b>(ribosome)</td><td>翻译机器;<b>原核 70S(50S 大亚基 + 30S 小亚基),真核 80S(60S 大亚基 + 40S 小亚基)</b></td></tr>
+<tr><td>氨酰 tRNA 合成酶(aminoacyl-tRNA synthetase)</td><td><b>氨基酸与 tRNA 连接的酶</b>;每种氨基酸有专一的合成酶(<b>20 种</b>);反应消耗 2 ATP(实际 2 高能键)</td></tr>
+<tr><td>起始/延伸/终止因子</td><td>真核:起始因子 eIF、延伸因子 eEF、终止因子 eRF</td></tr>
+<tr><td>GTP、ATP</td><td>提供能量</td></tr>
+</tbody>
+</table>
+</div>
+<figcaption>表 12 参与翻译的关键分子</figcaption>
+
+<div class="subtopic-header"><h4>5.2 遗传密码(genetic code)</h4></div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>遗传密码有 64 个密码子(4³ = 64),编码 20 种氨基酸 + 终止信号:</p>
+    <ul>
+      <li><span class="u">通用性</span>:几乎所有生物共用同一套密码子(线粒体、叶绿体有少数例外)</li>
+      <li><span class="u">简并性(degeneracy)</span>:多数氨基酸有多个密码子(密码子的第三位碱基专一性较低,称为"<span class="key-point">摆动(wobble)</span>")</li>
+      <li><span class="u">方向性</span>:5' → 3' 读码,翻译 N 端 → C 端</li>
+      <li><span class="u">起始密码子</span>:AUG(编码 Met,真核生物中 fMet 在原核生物中起始)</li>
+      <li><span class="u">终止密码子</span>:UAA、UAG、UGA(无对应的 tRNA,称为"无义密码子")</li>
+    </ul>
+    <p>🧬 <span class="key-point">摆动配对</span>:tRNA 反密码子第一位(5'端)与 mRNA 密码子第三位(3'端)配对时允许"<span class="u">非标准配对</span>"(G-U 配对等),这解释了为什么一种 tRNA 可以识别多个密码子。</p>
+  </div>
+</div>
+
+<div class="subtopic-header"><h4>5.3 翻译的三个阶段</h4></div>
+
+<div class="table-wrap">
+<table>
+<thead>
+<tr><th>阶段</th><th>关键事件</th><th>能量消耗</th></tr>
+</thead>
+<tbody>
+<tr><td><b>起始</b>(initiation)</td><td>① 30S 小亚基 + mRNA + fMet-tRNA<sup>fMet</sup>形成 30S 起始复合物<br>② 50S 大亚基结合形成 70S 起始复合物</td><td>消耗 1 GTP</td></tr>
+<tr><td><b>延伸</b>(elongation)</td><td>每加 1 个氨基酸需要:<br>① 进位:氨酰 tRNA 进入 A 位(消耗 1 GTP,需 EF-Tu)<br>② 转肽:肽酰转移酶催化肽键形成(23S rRNA 核酶催化)<br>③ 移位:核糖体沿 mRNA 移动一个密码子(消耗 1 GTP,需 EF-G)</td><td>每加 1 个氨基酸消耗 2 GTP(共 4 高能键,含氨酰 tRNA 合成的 2 ATP)</td></tr>
+<tr><td><b>终止</b>(termination)</td><td>① 终止密码子进入 A 位<br>② 释放因子(RF)识别终止密码子<br>③ 肽链释放<br>④ 核糖体解离</td><td>消耗 1 GTP</td></tr>
+</tbody>
+</table>
+</div>
+<figcaption>表 13 翻译的三个阶段(原核生物为例)</figcaption>
+
+<svg viewBox="0 0 800 430" style="width:100%;max-width:720px;margin:1.2rem auto;display:block;font-family:sans-serif;">
+  <rect x="0" y="0" width="800" height="430" fill="#fdfbf7" stroke="#d6ccc0" rx="8"/>
+  <text x="400" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="#2c2416">翻译过程示意图（起始 / 延伸 / 终止）</text>
+
+  <!-- 核糖体示意 -->
+  <text x="400" y="55" text-anchor="middle" font-size="11" fill="#7a6e5e">原核 70S = 50S大亚基 + 30S小亚基 ｜ 真核 80S = 60S大亚基 + 40S小亚基</text>
+
+  <!-- 起始 -->
+  <g transform="translate(20,70)">
+    <rect x="0" y="0" width="240" height="340" fill="#fdf2f2" stroke="#c0392b" rx="6"/>
+    <rect x="0" y="0" width="240" height="28" fill="#c0392b" rx="6"/>
+    <text x="120" y="19" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">① 起始 (Initiation)</text>
+    <text x="120" y="50" text-anchor="middle" font-size="10" font-weight="700" fill="#c0392b">消耗 1 GTP</text>
+    <!-- 30S -->
+    <ellipse cx="120" cy="90" rx="80" ry="20" fill="#fef9e7" stroke="#8b4513" stroke-width="1.5"/>
+    <text x="120" y="94" text-anchor="middle" font-size="10" fill="#8b4513">30S小亚基 + mRNA</text>
+    <!-- fMet-tRNA -->
+    <rect x="90" y="115" width="60" height="22" fill="#c0392b" rx="3"/>
+    <text x="120" y="130" text-anchor="middle" font-size="9" fill="#fff">fMet-tRNA</text>
+    <text x="120" y="148" text-anchor="middle" font-size="10" fill="#7a6e5e">识别AUG(S-D序列)</text>
+    <text x="120" y="170" text-anchor="middle" font-size="14" fill="#c0392b">↓</text>
+    <!-- 50S -->
+    <ellipse cx="120" cy="195" rx="85" ry="22" fill="#fdf2f2" stroke="#c0392b" stroke-width="1.5"/>
+    <text x="120" y="199" text-anchor="middle" font-size="10" font-weight="700" fill="#c0392b">50S大亚基结合</text>
+    <text x="60" y="226" text-anchor="middle" font-size="9" fill="#2c2416">P位</text>
+    <text x="180" y="226" text-anchor="middle" font-size="9" fill="#2c2416">A位</text>
+    <text x="60" y="240" text-anchor="middle" font-size="10" fill="#c0392b">fMet</text>
+    <text x="180" y="240" text-anchor="middle" font-size="10" fill="#7a6e5e">(空)</text>
+    <rect x="20" y="258" width="200" height="72" fill="#fff8e7" stroke="#e8c84a" rx="4"/>
+    <text x="120" y="276" text-anchor="middle" font-size="10" font-weight="700" fill="#c0392b">要点：</text>
+    <text x="30" y="294" font-size="9" fill="#2c2416">• 原核: fMet(甲酰甲硫)</text>
+    <text x="30" y="308" font-size="9" fill="#2c2416">• 真核: Met(未甲酰化)</text>
+    <text x="30" y="322" font-size="9" fill="#2c2416">• IF1/IF2/IF3参与</text>
+  </g>
+
+  <!-- 延伸 -->
+  <g transform="translate(280,70)">
+    <rect x="0" y="0" width="240" height="340" fill="#fff8e7" stroke="#e8c84a" rx="6"/>
+    <rect x="0" y="0" width="240" height="28" fill="#8b4513" rx="6"/>
+    <text x="120" y="19" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">② 延伸 (Elongation)</text>
+    <text x="120" y="50" text-anchor="middle" font-size="10" font-weight="700" fill="#c0392b">每加1aa消耗 2 GTP</text>
+    <!-- 步骤1 进位 -->
+    <rect x="15" y="62" width="210" height="55" fill="#fef9e7" stroke="#8b4513" rx="4"/>
+    <text x="120" y="80" text-anchor="middle" font-size="10" font-weight="700" fill="#c0392b">a. 进位 (EF-Tu, 1 GTP)</text>
+    <text x="120" y="96" text-anchor="middle" font-size="9" fill="#2c2416">氨酰-tRNA进入A位</text>
+    <text x="120" y="110" text-anchor="middle" font-size="9" fill="#7a6e5e">密码子-反密码子配对</text>
+    <!-- 步骤2 转肽 -->
+    <rect x="15" y="125" width="210" height="55" fill="#fef9e7" stroke="#8b4513" rx="4"/>
+    <text x="120" y="143" text-anchor="middle" font-size="10" font-weight="700" fill="#c0392b">b. 转肽 (肽酰转移酶)</text>
+    <text x="120" y="159" text-anchor="middle" font-size="9" fill="#2c2416">P位肽酰→A位氨基酸</text>
+    <text x="120" y="173" text-anchor="middle" font-size="9" fill="#c0392b">23S rRNA核酶催化!</text>
+    <!-- 步骤3 移位 -->
+    <rect x="15" y="188" width="210" height="55" fill="#fef9e7" stroke="#8b4513" rx="4"/>
+    <text x="120" y="206" text-anchor="middle" font-size="10" font-weight="700" fill="#c0392b">c. 移位 (EF-G, 1 GTP)</text>
+    <text x="120" y="222" text-anchor="middle" font-size="9" fill="#2c2416">核糖体移动1密码子</text>
+    <text x="120" y="236" text-anchor="middle" font-size="9" fill="#7a6e5e">A→P→E位, 肽链延长</text>
+    <rect x="15" y="255" width="210" height="75" fill="#fff8e7" stroke="#e8c84a" rx="4"/>
+    <text x="120" y="273" text-anchor="middle" font-size="10" font-weight="700" fill="#c0392b">要点：</text>
+    <text x="25" y="291" font-size="9" fill="#2c2416">• 方向: 5'→3', N端→C端</text>
+    <text x="25" y="305" font-size="9" fill="#2c2416">• 每aa共耗4高能键</text>
+    <text x="25" y="319" font-size="9" fill="#2c2416">  (2ATP活化+2GTP延伸)</text>
+    <text x="25" y="325" font-size="9" fill="#7a6e5e"></text>
+  </g>
+
+  <!-- 终止 -->
+  <g transform="translate(540,70)">
+    <rect x="0" y="0" width="240" height="340" fill="#f0f7f4" stroke="#27ae60" rx="6"/>
+    <rect x="0" y="0" width="240" height="28" fill="#27ae60" rx="6"/>
+    <text x="120" y="19" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">③ 终止 (Termination)</text>
+    <text x="120" y="50" text-anchor="middle" font-size="10" font-weight="700" fill="#c0392b">消耗 1 GTP</text>
+    <ellipse cx="120" cy="90" rx="85" ry="22" fill="#fef9e7" stroke="#8b4513" stroke-width="1.5"/>
+    <text x="120" y="94" text-anchor="middle" font-size="10" fill="#2c2416">终止密码子入A位</text>
+    <text x="120" y="120" text-anchor="middle" font-size="12" font-weight="700" fill="#c0392b">UAA / UAG / UGA</text>
+    <text x="120" y="142" text-anchor="middle" font-size="14" fill="#27ae60">↓</text>
+    <rect x="40" y="150" width="160" height="40" fill="#fdf2f2" stroke="#c0392b" rx="4"/>
+    <text x="120" y="168" text-anchor="middle" font-size="10" font-weight="700" fill="#c0392b">释放因子RF识别</text>
+    <text x="120" y="182" text-anchor="middle" font-size="9" fill="#7a6e5e">RF1(UAA/UAG) RF2(UAA/UGA)</text>
+    <text x="120" y="205" text-anchor="middle" font-size="14" fill="#27ae60">↓</text>
+    <rect x="40" y="213" width="160" height="40" fill="#fdf2f2" stroke="#c0392b" rx="4"/>
+    <text x="120" y="231" text-anchor="middle" font-size="10" font-weight="700" fill="#c0392b">肽链释放+核糖体解离</text>
+    <text x="120" y="245" text-anchor="middle" font-size="9" fill="#7a6e5e">50S+30S+mRNA分离</text>
+    <rect x="15" y="265" width="210" height="65" fill="#fff8e7" stroke="#e8c84a" rx="4"/>
+    <text x="120" y="283" text-anchor="middle" font-size="10" font-weight="700" fill="#c0392b">要点：</text>
+    <text x="25" y="301" font-size="9" fill="#2c2416">• 3个终止密码子无对应tRNA</text>
+    <text x="25" y="315" font-size="9" fill="#2c2416">• RF3催化GTP水解</text>
+    <text x="25" y="325" font-size="9" fill="#2c2416">• 多聚核糖体提高效率</text>
+  </g>
+</svg>
+<figcaption>翻译过程示意图（起始 / 延伸 / 终止）</figcaption>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>📌 <span class="key-point">真核生物 vs 原核生物翻译的差异</span>:</p>
+    <ul>
+      <li>核糖体大小:真核 80S(60S + 40S);原核 70S(50S + 30S)</li>
+      <li>起始氨基酸:真核 Met;原核 fMet(甲酰甲硫氨酸)</li>
+      <li>起始密码子位置识别:真核通过 5' 帽和 Kozak 序列;原核通过 SD 序列(Shine-Dalgarno)</li>
+      <li>转录-翻译偶联:原核可以(无核膜);真核不能(转录在核内,翻译在胞质)</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    高中延伸:高中"中心法则"讲转录翻译,但没讲机制细节。竞赛生需要掌握:① 翻译方向 5'→3' / N 端→C 端;② 遗传密码 64 套 20 种;③ 原核 70S 与真核 80S 核糖体差异;④ 23S rRNA 是核酶(催化肽键形成)——与 ch1-1-7 核酶内容呼应。
+  </div>
+</div>
+
+<div class="subtopic-header"><h4>5.4 翻译后修饰(post-translational modification, PTM)</h4></div>
+
+<div class="table-wrap">
+<table>
+<thead>
+<tr><th>修饰类型</th><th>反应</th><th>意义</th></tr>
+</thead>
+<tbody>
+<tr><td><b>切除 N 端 fMet/Met</b></td><td>氨肽酶切除 N 端第 1 个氨基酸</td><td>形成成熟蛋白</td></tr>
+<tr><td><b>切除信号肽</b></td><td>信号肽酶切除 N 端信号序列(15-30 aa)</td><td>蛋白质定位(分泌到胞外)</td></tr>
+<tr><td><b>切割活化</b></td><td>前体蛋白被切割为成熟形式(如胰岛素原→胰岛素)</td><td>产生活性蛋白</td></tr>
+<tr><td><b>乙酰化</b>(acetylation)</td><td>N 端 α-NH₂ 乙酰化(最常见)</td><td>保护蛋白;调控稳定性;组蛋白乙酰化调控基因表达</td></tr>
+<tr><td><b>磷酸化</b>(phosphorylation)</td><td>Ser/Thr/Tyr 残基被激酶磷酸化</td><td>活性调控(开/关);信号转导核心机制</td></tr>
+<tr><td><b>糖基化</b>(glycosylation)</td><td>Asn(N-连接)或 Ser/Thr(O-连接)残基加糖链</td><td>细胞识别;蛋白折叠;膜蛋白稳定性</td></tr>
+<tr><td><b>羟基化</b>(hydroxylation)</td><td>Pro 残基被羟基化(需维生素 C)</td><td>胶原蛋白结构必需;缺乏 VC→坏血病</td></tr>
+<tr><td><b>泛素化</b>(ubiquitination)</td><td>Lys 残基接泛素链</td><td>标记降解(见 11.1)</td></tr>
+<tr><td><b>二硫键形成</b></td><td>两个 Cys 之间形成 —S—S— 键</td><td>稳定蛋白三级结构(尤其分泌蛋白)</td></tr>
+<tr><td><b>脂质修饰</b></td><td>加脂肪酸链(豆蔻酰化、法尼基化等)</td><td>膜定位;信号转导</td></tr>
+</tbody>
+</table>
+</div>
+<figcaption>表 14 常见翻译后修饰类型(奥赛常考)</figcaption>
+
+<!-- ========== 11.6 整合与拓展 ========== -->
+<div class="topic-header"><h3>六、氨基酸代谢与其他代谢网络的整合</h3></div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>氨基酸代谢不是孤立的——它与糖、脂、核酸代谢通过共同中间物紧密连接:</p>
+    <div class="flow-box">
+      <div class="flow-title">氨基酸代谢与其他代谢的连接</div>
+      <div class="flow-row">
+        <span class="flow-item">糖代谢</span>
+        <span class="flow-arrow">↔</span>
+        <span class="flow-item">丙酮酸、草酰乙酸、α-酮戊二酸</span>
+        <span class="flow-arrow">↔</span>
+        <span class="flow-item">生糖氨基酸</span>
+      </div>
+      <div class="flow-row" style="margin-top:0.4rem;">
+        <span class="flow-item">脂代谢</span>
+        <span class="flow-arrow">↔</span>
+        <span class="flow-item">乙酰 CoA、乙酰乙酰 CoA</span>
+        <span class="flow-arrow">↔</span>
+        <span class="flow-item">生酮氨基酸</span>
+      </div>
+      <div class="flow-row" style="margin-top:0.4rem;">
+        <span class="flow-item">核苷酸代谢</span>
+        <span class="flow-arrow">↔</span>
+        <span class="flow-item">甘氨酸、天冬氨酸、谷氨酰胺</span>
+        <span class="flow-arrow">↔</span>
+        <span class="flow-item">嘌呤/嘧啶合成</span>
+      </div>
+      <div class="flow-row" style="margin-top:0.4rem;">
+        <span class="flow-item">一碳单位</span>
+        <span class="flow-arrow">↔</span>
+        <span class="flow-item">FH4、SAM</span>
+        <span class="flow-arrow">↔</span>
+        <span class="flow-item">核酸甲基化</span>
+      </div>
+    </div>
+    <p>💡 <span class="key-point">核心概念</span>:<span class="u">α-酮戊二酸</span>是氨基代谢的中心(接受氨基变成谷氨酸);<span class="u">乙酰 CoA</span>是碳骨架代谢的中心(进入 TCA 循环);<span class="u">SAM</span>是甲基代谢的中心(通用甲基供体)。</p>
+  </div>
+</div>
+
+<!-- ========== 总结 ========== -->
+<div class="summary-box">
+  <h4>📌 ch1-1-10 拓展要点 · 本节小结</h4>
+  <ol>
+    <li><b>UPS 是真核细胞精确调控蛋白浓度的核心机制</b>——E1/E2/E3 三酶级联 + 26S 蛋白酶体,2004 年诺贝尔化学奖;Ciechanover 等发现。</li>
+    <li><b>消化道蛋白酶的激活级联</b>:肠激酶→胰蛋白酶→其他酶原激活——避免胰腺自我消化,这是酶原激活的典型例子。</li>
+    <li><b>联合脱氨基是动物细胞的主要脱氨方式</b>——先转氨(把氨基集中到 α-酮戊二酸变成谷氨酸),再由 L-谷氨酸脱氢酶(唯一活跃的氧化脱氨酶)集中脱氨;α-酮戊二酸是氨基集散中心。<b>组织特异性:肝脏以联合脱氨基为主,骨骼肌以嘌呤核苷酸循环为主</b>。</li>
+    <li><b>嘌呤核苷酸循环</b>(IMP→AMP→IMP+NH₃)是肌肉、脑等 L-谷氨酸脱氢酶活性低的组织的替代脱氨途径。转氨酶辅酶为 PLP(VitB6)。</li>
+    <li><b>生物胺</b>由氨基酸脱羧产生:谷氨酸→GABA(抑制性神经递质)、组氨酸→组胺(过敏介质)、色氨酸→5-HT(血清素)等。</li>
+    <li><b>氨的去路</b>:丙氨酸-葡萄糖循环(Cahill 循环,ALT 催化,= 氨运输 + 糖异生前体运输)+ 谷氨酰胺运氨(血液主要氨载体)+ <b>尿素循环(肝脏主要解毒)</b>。</li>
+    <li><b>尿素循环 5 步</b>——<b>限速酶 CPS-I</b>(线粒体,NAG 激活;精氨酸→NAGS→NAG→CPS-I 正反馈)+ OTC + 精氨酸代琥珀酸合成酶(第二个 N 来自天冬氨酸)+ 精氨酸代琥珀酸裂解酶 + 精氨酸酶(<b>需 Mn²⁺</b>);消耗 3 ATP(等价 4 高能键)。<b>尿素循环-TCA 双循环</b>:延胡索酸→苹果酸→OAA→天冬氨酸回到尿素循环。</li>
+    <li><b>CPS I vs CPS II</b>:CPS I 线粒体、用游离 NH₃、参与尿素循环; CPS II 细胞质、用谷氨酰胺酰胺氮、参与嘧啶合成——常考比较。</li>
+    <li><b>生酮氨基酸只有 Leu、Lys 两种</b>;纯生糖 13 种(Ala、Arg、Asn、Asp、Cys、Gln、Glu、Gly、His、Met、Pro、Ser、Val);兼性 5 种(异亮、苯丙、酪、色、苏)——口诀"两酮亮赖,五兼异苯酪色苏";<b>2025 联赛考过该分类</b>。</li>
+    <li><b>8 种必需氨基酸</b>"赖甲苏亮异色缬苯"或"苯缬亮异赖蛋苏色"(Lys、Met、Thr、Leu、Ile、Trp、Val、Phe)——人体缺乏合成途径,需从食物摄取;婴儿还需 His(共 9 种);Arg、His 为半必需。</li>
+    <li><b>一碳单位</b>由 FH4 携带,丝氨酸是主要来源;SAM 是不经 FH4 的通用甲基供体(ATP 代谢、肌酸合成等)。</li>
+    <li><b>翻译三阶段</b>(起始/延伸/终止):每加 1 个氨基酸消耗 2 ATP(氨酰 tRNA 合成)+ 2 GTP(进位 + 移位)= 4 高能键;23S rRNA 是核酶,催化肽键形成。</li>
+    <li><b>翻译后修饰</b>对蛋白功能至关重要:磷酸化(信号)、糖基化(识别)、乙酰化(组蛋白调控)、羟基化(胶原蛋白,需 VC)、泛素化(降解)、二硫键(稳定结构)。</li>
+    <li><b>氨基酸代谢连接网络</b>:α-酮戊二酸(氨基集散中心)+ 乙酰 CoA(碳骨架中心)+ SAM(甲基中心)——三大枢纽分子将氨基酸与糖、脂、核苷酸代谢连接。</li>
+  </ol>
+</div>
+
+<footer><a href="index.html" style="color:var(--accent);text-decoration:none;margin-right:1rem;">← 返回目录</a>
+  生物化学讲义 · 参考张丽萍《生物化学简明教程》第六版第 11 章 蛋白质的降解和氨基酸代谢(P235-255)<br>
+  整理日期: 2026年7月7日 · 高中生物竞赛集训营
+</footer>
+
+</div>
+</body>
+</html>

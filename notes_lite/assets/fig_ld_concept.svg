@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 420" style="font-family: 'Noto Sans CJK SC', sans-serif;">
+  <rect x="0" y="0" width="780" height="420" fill="#fdfbf7"/>
+  <text x="390" y="30" text-anchor="middle" font-size="16" font-weight="700" fill="#c0392b">连锁不平衡（Linkage Disequilibrium, LD）概念示意图</text>
+
+  <!-- 染色体图示 -->
+  <text x="60" y="65" font-size="12" font-weight="700" fill="#8b4513">A. 染色体上的两个基因座</text>
+  <line x1="60" y1="80" x2="720" y2="80" stroke="#2c2416" stroke-width="3"/>
+  <text x="280" y="105" text-anchor="middle" font-size="11" fill="#8b4513">基因座 A（等位基因 A/a）</text>
+  <text x="520" y="105" text-anchor="middle" font-size="11" fill="#8b4513">基因座 B（等位基因 B/b）</text>
+  <line x1="280" y1="80" x2="280" y2="70" stroke="#c0392b" stroke-width="2"/>
+  <line x1="520" y1="80" x2="520" y2="70" stroke="#c0392b" stroke-width="2"/>
+
+  <!-- B. 四种单倍型 -->
+  <text x="60" y="140" font-size="12" font-weight="700" fill="#8b4513">B. 四种可能的单倍型</text>
+  <g transform="translate(60, 155)">
+    <rect x="0" y="0" width="150" height="40" rx="6" fill="#fef0e0" stroke="#c0392b" stroke-width="1.5"/>
+    <text x="75" y="24" text-anchor="middle" font-size="11" font-weight="700" fill="#2c2416">AB（频率 P_AB）</text>
+  </g>
+  <g transform="translate(225, 155)">
+    <rect x="0" y="0" width="150" height="40" rx="6" fill="#f0f7f4" stroke="#4a7c3a" stroke-width="1.5"/>
+    <text x="75" y="24" text-anchor="middle" font-size="11" font-weight="700" fill="#2c2416">Ab（频率 P_Ab）</text>
+  </g>
+  <g transform="translate(390, 155)">
+    <rect x="0" y="0" width="150" height="40" rx="6" fill="#f0f7f4" stroke="#4a7c3a" stroke-width="1.5"/>
+    <text x="75" y="24" text-anchor="middle" font-size="11" font-weight="700" fill="#2c2416">aB（频率 P_aB）</text>
+  </g>
+  <g transform="translate(555, 155)">
+    <rect x="0" y="0" width="150" height="40" rx="6" fill="#fef0e0" stroke="#c0392b" stroke-width="1.5"/>
+    <text x="75" y="24" text-anchor="middle" font-size="11" font-weight="700" fill="#2c2416">ab（频率 P_ab）</text>
+  </g>
+
+  <!-- C. LD计算公式 -->
+  <text x="60" y="225" font-size="12" font-weight="700" fill="#8b4513">C. LD 度量 D 的计算</text>
+  <g transform="translate(60, 240)">
+    <rect x="0" y="0" width="660" height="50" rx="8" fill="#fff8f0" stroke="#8b4513" stroke-width="1.5"/>
+    <text x="330" y="20" text-anchor="middle" font-size="11" fill="#2c2416">D = P_AB - P_A x P_B</text>
+    <text x="330" y="40" text-anchor="middle" font-size="10" fill="#7a6e5e">D=0 → 连锁平衡（随机关联）  |  D≠0 → 连锁不平衡（非随机关联）</text>
+  </g>
+
+  <!-- D. LD随时间衰减 -->
+  <text x="60" y="310" font-size="12" font-weight="700" fill="#8b4513">D. LD 随时间衰减（重组打破LD）</text>
+  <g transform="translate(60, 325)">
+    <rect x="0" y="0" width="660" height="50" rx="8" fill="#f0f7f4" stroke="#4a7c3a" stroke-width="1.5"/>
+    <text x="330" y="20" text-anchor="middle" font-size="11" fill="#2c2416">D_t = D_0 x (1 - r)^t</text>
+    <text x="330" y="40" text-anchor="middle" font-size="10" fill="#7a6e5e">r = 重组率  |  t = 世代数  |  衰减速率取决于重组率和时间</text>
+  </g>
+
+  <!-- 衰减曲线示意图 -->
+  <g transform="translate(60, 385)">
+    <polyline points="0,25 30,22 60,18 100,13 150,8 220,5 300,3 400,2 520,1 660,0.5" fill="none" stroke="#c0392b" stroke-width="2.5"/>
+    <text x="330" y="12" text-anchor="middle" font-size="9" fill="#c0392b">D 值随时间衰减（指数衰减曲线）</text>
+    <line x1="0" y1="25" x2="660" y2="25" stroke="#d6ccc0" stroke-width="1"/>
+    <text x="670" y="14" font-size="9" fill="#7a6e5e">D&#x2192;0</text>
+  </g>
+
+  <!-- 底部应用 -->
+  <rect x="60" y="400" width="660" height="16" rx="4" fill="#f0f7f4" stroke="#4a7c3a" stroke-width="1"/>
+  <text x="390" y="412" text-anchor="middle" font-size="9" font-weight="600" fill="#4a7c3a">竞赛应用：精细定位疾病基因 | 推断群体历史（混合/瓶颈） | 全基因组关联分析（GWAS）</text>
+</svg>

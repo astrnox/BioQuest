@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 420" style="font-family: 'Noto Sans CJK SC', sans-serif;">
+  <rect x="0" y="0" width="780" height="420" fill="#fdfbf7"/>
+  <text x="390" y="28" text-anchor="middle" font-size="15" font-weight="700" fill="#c0392b">政和八闽鸟（Baminornis zhenghensis）与早期鸟类演化时间轴</text>
+
+  <!-- 时间轴 -->
+  <text x="30" y="55" font-size="11" font-weight="700" fill="#8b4513">A. 鸟类早期演化时间轴</text>
+  <line x1="50" y1="80" x2="730" y2="80" stroke="#8b4513" stroke-width="3"/>
+
+  <!-- 时间标记 -->
+  <text x="50" y="72" text-anchor="middle" font-size="9" fill="#8b4513">2.5亿年</text>
+  <text x="200" y="72" text-anchor="middle" font-size="9" fill="#8b4513">2.0亿年</text>
+  <text x="350" y="72" text-anchor="middle" font-size="9" fill="#8b4513">1.5亿年</text>
+  <text x="500" y="72" text-anchor="middle" font-size="9" fill="#8b4513">1.0亿年</text>
+  <text x="650" y="72" text-anchor="middle" font-size="9" fill="#8b4513">0.5亿年</text>
+  <text x="730" y="72" text-anchor="middle" font-size="9" fill="#8b4513">现代</text>
+
+  <!-- 地质年代 -->
+  <text x="125" y="95" text-anchor="middle" font-size="9" fill="#7a6e5e">三叠纪</text>
+  <text x="275" y="95" text-anchor="middle" font-size="9" fill="#7a6e5e">侏罗纪</text>
+  <text x="425" y="95" text-anchor="middle" font-size="9" fill="#7a6e5e">白垩纪</text>
+  <text x="575" y="95" text-anchor="middle" font-size="9" fill="#7a6e5e">古近纪</text>
+  <text x="700" y="95" text-anchor="middle" font-size="9" fill="#7a6e5e">新近纪</text>
+
+  <!-- 政和八闽鸟 -->
+  <line x1="350" y1="80" x2="350" y2="180" stroke="#c0392b" stroke-width="2" stroke-dasharray="4,2"/>
+  <text x="350" y="120" text-anchor="end" font-size="10" font-weight="700" fill="#c0392b">&#x25C6; 政和八闽鸟</text>
+  <text x="360" y="135" font-size="9" fill="#c0392b">晚侏罗世 ~1.5亿年</text>
+  <text x="360" y="150" font-size="9" fill="#c0392b">福建政和县</text>
+
+  <!-- 始祖鸟 -->
+  <line x1="340" y1="80" x2="340" y2="195" stroke="#8b4513" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <text x="330" y="195" text-anchor="end" font-size="9" font-weight="700" fill="#8b4513">始祖鸟 ~1.5亿年</text>
+  <text x="330" y="210" text-anchor="end" font-size="8" fill="#7a6e5e">德国索尔恩霍芬</text>
+
+  <!-- 孔子鸟 -->
+  <line x1="470" y1="80" x2="470" y2="180" stroke="#4a7c3a" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <text x="480" y="170" font-size="9" font-weight="700" fill="#4a7c3a">&#x25C6; 孔子鸟</text>
+  <text x="480" y="185" font-size="8" fill="#4a7c3a">早白垩世 ~1.25亿年</text>
+  <text x="480" y="200" font-size="8" fill="#7a6e5e">热河生物群（辽宁）</text>
+
+  <!-- 热河生物群标注 -->
+  <rect x="440" y="215" width="200" height="40" rx="6" fill="#f0f7f4" stroke="#4a7c3a" stroke-width="1.5"/>
+  <text x="540" y="230" text-anchor="middle" font-size="10" font-weight="700" fill="#4a7c3a">热河生物群（Jehol Biota）</text>
+  <text x="540" y="246" text-anchor="middle" font-size="9" fill="#2c2416">早白垩世 ~1.3-1.2亿年 | 辽宁、河北、内蒙古</text>
+
+  <!-- 热河生物群代表性化石 -->
+  <text x="30" y="275" font-size="11" font-weight="700" fill="#8b4513">B. 热河生物群代表性化石（中国早期鸟类）</text>
+  <g transform="translate(30, 288)">
+    <rect x="0" y="0" width="220" height="50" rx="6" fill="#fef0e0" stroke="#c0392b" stroke-width="1.5"/>
+    <text x="110" y="18" text-anchor="middle" font-size="10" font-weight="700" fill="#c0392b">孔子鸟（Confuciusornis）</text>
+    <text x="110" y="34" text-anchor="middle" font-size="9" fill="#2c2416">最早具角质喙的鸟类</text>
+    <text x="110" y="48" text-anchor="middle" font-size="8" fill="#7a6e5e">无牙齿，长尾羽</text>
+  </g>
+  <g transform="translate(280, 288)">
+    <rect x="0" y="0" width="220" height="50" rx="6" fill="#f0f7f4" stroke="#4a7c3a" stroke-width="1.5"/>
+    <text x="110" y="18" text-anchor="middle" font-size="10" font-weight="700" fill="#4a7c3a">中华龙鸟（Sinosauropteryx）</text>
+    <text x="110" y="34" text-anchor="middle" font-size="9" fill="#2c2416">第一件带羽毛恐龙化石</text>
+    <text x="110" y="48" text-anchor="middle" font-size="8" fill="#7a6e5e">原始羽毛（原羽）</text>
+  </g>
+  <g transform="translate(530, 288)">
+    <rect x="0" y="0" width="220" height="50" rx="6" fill="#f0f7f4" stroke="#4a7c3a" stroke-width="1.5"/>
+    <text x="110" y="18" text-anchor="middle" font-size="10" font-weight="700" fill="#4a7c3a">顾氏小盗龙（Microraptor gui）</text>
+    <text x="110" y="34" text-anchor="middle" font-size="9" fill="#2c2416">四翼恐龙（前后肢均有羽毛）</text>
+    <text x="110" y="48" text-anchor="middle" font-size="8" fill="#7a6e5e">树栖滑翔假说证据</text>
+  </g>
+
+  <!-- 竞赛意义 -->
+  <text x="30" y="360" font-size="11" font-weight="700" fill="#8b4513">C. 八闽鸟的竞赛意义</text>
+  <g transform="translate(30, 373)">
+    <rect x="0" y="0" width="720" height="42" rx="6" fill="#fff8f0" stroke="#8b4513" stroke-width="1.5"/>
+    <text x="360" y="16" text-anchor="middle" font-size="10" fill="#2c2416">填补东亚晚侏罗世鸟类化石空白 | 证明鸟类早期演化在东亚也有重要分支</text>
+    <text x="360" y="34" text-anchor="middle" font-size="10" fill="#2c2416">与始祖鸟同期&#x2192;鸟类在侏罗纪已有广泛古地理分布 | 为鸟类起源于兽脚类恐龙提供新证据</text>
+  </g>
+
+  <!-- 竞赛考点 -->
+  <rect x="30" y="395" width="720" height="20" rx="4" fill="#fef5f0" stroke="#c0392b" stroke-width="1.5"/>
+  <text x="390" y="410" text-anchor="middle" font-size="10" font-weight="700" fill="#c0392b">GGBO第41题：政和八闽鸟晚侏罗世 ~1.5亿年 | 热河生物群早白垩世 | 孔子鸟+中华龙鸟+小盗龙</text>
+</svg>

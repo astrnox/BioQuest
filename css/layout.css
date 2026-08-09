@@ -1,0 +1,432 @@
+/* ============================================================
+ * BioQuest — 布局与导航样式
+ * ============================================================ */
+
+/* ----- 顶部导航栏 ----- */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--header-height);
+  background: rgba(26, 58, 42, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+  z-index: 100;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.header-brand {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  transition: opacity var(--transition-fast);
+}
+
+.header-brand:hover {
+  opacity: 0.85;
+  color: var(--color-white);
+}
+
+.header-brand svg {
+  flex-shrink: 0;
+}
+
+.header-nav {
+  display: flex;
+  gap: 4px;
+}
+
+.header-nav a {
+  color: rgba(255, 255, 255, 0.68);
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: var(--radius-sm);
+  transition: background-color var(--transition-fast),
+              color var(--transition-fast);
+}
+
+.header-nav a:hover {
+  color: var(--color-white);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.header-nav a.active,
+.header-nav a[aria-current="page"] {
+  color: var(--color-white);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.header-nav a:focus-visible {
+  box-shadow: 0 0 0 2px rgba(196, 149, 106, 0.6);
+  outline: none;
+}
+
+/* 主题切换按钮 */
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color var(--transition-fast),
+              color var(--transition-fast),
+              border-color var(--transition-fast);
+  margin-left: 12px;
+  flex-shrink: 0;
+}
+
+.theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--color-white);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.theme-toggle:focus-visible {
+  box-shadow: 0 0 0 2px rgba(196, 149, 106, 0.6);
+  outline: none;
+}
+
+.theme-toggle svg {
+  width: 18px;
+  height: 18px;
+  display: none;
+}
+
+html[data-theme="light"] .theme-toggle .icon-moon,
+.theme-toggle .icon-moon { display: block; }
+html[data-theme="light"] .theme-toggle .icon-sun { display: none; }
+html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+html[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ----- 汉堡菜单按钮 ----- */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  z-index: 110;
+  transition: transform var(--transition-base);
+}
+
+.hamburger:hover {
+  transform: scale(1.08);
+}
+
+.hamburger:active {
+  transform: scale(0.95);
+}
+
+.hamburger-line {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 2px;
+  transition: transform var(--transition-base),
+              opacity var(--transition-base),
+              width var(--transition-base),
+              background-color var(--transition-base);
+  transform-origin: center;
+}
+
+/* 汉堡 → X 动画 */
+.hamburger.active .hamburger-line:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+  width: 24px;
+}
+
+.hamburger.active .hamburger-line:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.hamburger.active .hamburger-line:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+  width: 24px;
+}
+
+/* 汉堡线呼吸动画（未激活时） */
+@keyframes hamburgerBreathe {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 1; }
+}
+
+.hamburger:not(.active):hover .hamburger-line {
+  animation: hamburgerBreathe 1.2s ease-in-out infinite;
+}
+
+.hamburger:not(.active):hover .hamburger-line:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.hamburger:not(.active):hover .hamburger-line:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+/* ----- 移动端导航覆盖层 ----- */
+/* 样式由 debug-fix.css 统一管理（支持过渡动画） */
+.mobile-nav-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 95;
+}
+
+/* 移动端导航菜单 */
+/* 基础定位由 debug-fix.css 管理，此处仅定义非动画相关样式 */
+.mobile-nav {
+  position: fixed;
+  top: var(--header-height);
+  left: 0;
+  right: 0;
+  background-color: var(--color-surface);
+  background-image: none;
+  z-index: 99;
+  padding: 16px 20px 24px;
+  flex-direction: column;
+  gap: 4px;
+  border-bottom: 1px solid var(--color-border-light, rgba(0, 0, 0, 0.08));
+  box-shadow: var(--shadow-md, 0 4px 12px rgba(0, 0, 0, 0.1));
+}
+
+.mobile-nav a {
+  display: block;
+  color: var(--color-text, #2d2d2d);
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 14px 16px;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  transition: background-color var(--transition-fast),
+              color var(--transition-fast),
+              transform var(--transition-fast),
+              opacity var(--transition-fast);
+  opacity: 0;
+  transform: translateX(-12px);
+}
+
+.mobile-nav.active a {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* 导航链接交错入场 */
+.mobile-nav.active a:nth-child(1) { transition-delay: 0.05s; }
+.mobile-nav.active a:nth-child(2) { transition-delay: 0.08s; }
+.mobile-nav.active a:nth-child(3) { transition-delay: 0.11s; }
+.mobile-nav.active a:nth-child(4) { transition-delay: 0.14s; }
+.mobile-nav.active a:nth-child(5) { transition-delay: 0.17s; }
+.mobile-nav.active a:nth-child(6) { transition-delay: 0.20s; }
+.mobile-nav.active a:nth-child(7) { transition-delay: 0.23s; }
+.mobile-nav.active a:nth-child(8) { transition-delay: 0.26s; }
+.mobile-nav.active .theme-toggle-row { transition-delay: 0.29s; }
+
+.mobile-nav a:hover,
+.mobile-nav a.active {
+  color: var(--color-primary, #3a6b4a);
+  background: rgba(90, 125, 92, 0.12);
+}
+
+.mobile-nav .theme-toggle-row {
+  margin-top: 12px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--color-text, #2d2d2d);
+  font-size: 0.875rem;
+  border-top: 1px solid var(--color-border-light, rgba(255, 255, 255, 0.1));
+}
+
+/* ----- 页面内容区域 ----- */
+.page-content {
+  padding-top: calc(var(--header-height) + 32px);
+  padding-bottom: 48px;
+  min-height: calc(100vh - var(--header-height) - 200px);
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding-left: var(--content-padding);
+  padding-right: var(--content-padding);
+}
+
+.page-content--full {
+  padding-top: var(--header-height);
+  max-width: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.page-content--home {
+  padding-top: 0;
+  padding-left: 0;
+  padding-right: 0;
+  max-width: none;
+}
+
+/* ============================================================
+ * layout.css 底部页脚之后添加布局辅助样式
+ * ============================================================ */
+
+/* ----- Stats Strip 布局辅助 ----- */
+.stats-strip .container {
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: 0 var(--content-padding);
+}
+
+/* ----- Process Steps 布局辅助 ----- */
+.process-steps {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.process-connector {
+  display: flex;
+  align-items: flex-start;
+  padding-top: 60px;
+  color: var(--border-default);
+}
+
+@media (max-width: 1024px) {
+  .process-connector {
+    display: none;
+  }
+}
+
+/* ----- Footer ----- */
+.footer {
+  background: var(--color-deep);
+  padding: 44px 0;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-content {
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: 0 var(--content-padding);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-brand {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.footer-links {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.45);
+  text-decoration: none;
+  font-size: 0.8rem;
+  transition: color var(--transition-fast);
+}
+
+.footer-links a:hover {
+  color: var(--color-amber);
+}
+
+.footer-copyright {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.25);
+}
+
+/* ============================================================
+ * 响应式设计
+ * ============================================================ */
+
+/* 平板及以下 — 显示汉堡菜单 */
+@media (max-width: 768px) {
+  .header {
+    padding: 0 20px;
+  }
+
+  .header-brand {
+    font-size: 1.1rem;
+  }
+
+  .header-nav {
+    display: none;
+  }
+
+  .theme-toggle {
+    display: none;
+  }
+
+  .header-right {
+    gap: 4px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .mobile-nav-overlay {
+    display: block;
+  }
+
+  .mobile-nav {
+    display: flex;
+  }
+
+  .footer-content {
+    padding: 0 20px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* 手机 */
+@media (max-width: 640px) {
+  .page-content {
+    padding-top: calc(var(--header-height) + 20px);
+    padding-bottom: 32px;
+  }
+}

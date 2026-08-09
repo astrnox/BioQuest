@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第十四章 生物系统学基础 · 第三节 生物分类等级和生物系统树 — 生物集训营笔记</title>
+<style>
+:root {
+  --bg: #fdfbf7; --bg2: #f5f0e8; --ink: #2c2416; --muted: #7a6e5e;
+  --rule: #d6ccc0; --accent: #c0392b; --accent2: #8b4513;
+  --highlight: #fff3cd; --note-bg: #fff8e7; --note-border: #e8c84a;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: "Noto Sans CJK SC", "WenQuanYi Micro Hei", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  font-size: 16px; line-height: 1.8; color: var(--ink); background: var(--bg);
+}
+.cover { text-align: center; padding: 4rem 2rem 3rem; border-bottom: 3px double var(--rule); margin-bottom: 0; background: linear-gradient(180deg, var(--bg2) 0%, var(--bg) 100%); }
+.cover .ch-num { font-size: 1rem; color: var(--accent); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 0.3rem; }
+.cover h1 { font-size: 2.2rem; font-weight: 800; color: var(--ink); margin-bottom: 0.5rem; letter-spacing: 0.03em; }
+.cover .subtitle { font-size: 1rem; color: var(--muted); }
+.cover .meta { margin-top: 1.2rem; font-size: 0.85rem; color: var(--muted); display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
+.main-layout { max-width: 1060px; margin: 0 auto; padding: 0 1.5rem; }
+.section-header { border-bottom: 3px solid var(--accent); padding: 2rem 0 0.6rem; margin-bottom: 1.5rem; }
+.section-header .sec-num { font-size: 0.9rem; color: var(--accent); font-weight: 700; letter-spacing: 0.08em; }
+.section-header h2 { font-size: 1.6rem; font-weight: 800; color: var(--ink); margin-top: 0.15rem; }
+.topic-header { margin: 2rem 0 1rem; padding-left: 0.8rem; border-left: 4px solid var(--accent); }
+.topic-header h3 { font-size: 1.25rem; font-weight: 700; color: var(--ink); }
+.subtopic-header { margin: 1.5rem 0 0.8rem; }
+.subtopic-header h4 { font-size: 1.1rem; font-weight: 700; color: var(--accent2); }
+.note-block { display: flex; gap: 1.5rem; margin-bottom: 1.2rem; align-items: flex-start; }
+.note-content { flex: 1; padding: 0.8rem 1rem; background: var(--bg2); border-radius: 6px; border: 1px solid var(--rule); }
+.note-content p { margin-bottom: 0.5rem; }
+.note-content p:last-child { margin-bottom: 0; }
+.note-content ul, .note-content ol { padding-left: 1.5rem; margin: 0.4rem 0; }
+.note-content li { margin-bottom: 0.25rem; }
+.annotation { width: 240px; flex-shrink: 0; background: var(--note-bg); border: 1px solid var(--note-border); border-radius: 6px; padding: 0.6rem 0.8rem; font-size: 0.82rem; line-height: 1.6; color: var(--accent2); align-self: flex-start; }
+.annotation::before { content: "📝 批注"; display: block; font-size: 0.7rem; font-weight: 700; color: var(--accent); letter-spacing: 0.06em; margin-bottom: 0.3rem; text-transform: uppercase; }
+.u { text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 2px; text-underline-offset: 3px; font-weight: 600; }
+.u-double { text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 2px; text-underline-offset: 3px; text-decoration-style: double; font-weight: 700; }
+.key-point { background: var(--highlight); padding: 0.1em 0.3em; border-radius: 3px; font-weight: 600; border-bottom: 1.5px solid var(--accent); }
+.table-wrap { overflow-x: auto; overflow-y: auto; max-height: 600px; margin: 1.5rem 0; border: 1px solid var(--rule); border-radius: 6px; }
+table { width: 100%; border-collapse: collapse; font-size: 0.9rem; min-width: 800px; }
+table thead th { background: var(--accent); color: #fff; padding: 0.6rem 0.8rem; font-weight: 700; text-align: center; white-space: nowrap; }
+table tbody td { padding: 0.5rem 0.8rem; border-bottom: 1px solid var(--rule); vertical-align: top; }
+table tbody tr:nth-child(even) { background: var(--bg2); }
+table tbody tr:last-child td { border-bottom: none; }
+table tbody td:first-child { font-weight: 600; white-space: nowrap; text-align: center; background: var(--bg2); }
+figcaption { text-align: center; font-size: 0.85rem; color: var(--muted); margin-top: 0.4rem; }
+.diagram { margin: 1.2rem 0; text-align: center; }
+.diagram img { max-width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 4px; }
+.summary-box { background: linear-gradient(135deg, #fdf2f2 0%, #fef9e7 100%); border: 2px solid var(--accent); border-radius: 8px; padding: 1.2rem 1.5rem; margin: 2rem 0; }
+.summary-box h4 { color: var(--accent); font-size: 1rem; margin-bottom: 0.6rem; }
+.expand-block { background: #f0f7f4; border: 1px dashed #7cb342; border-radius: 6px; padding: 0.5rem 0.9rem; margin: 0.6rem 0 0; font-size: 0.83rem; line-height: 1.6; color: #3e6b3e; }
+.expand-block::before { content: "🔍 拓展"; display: block; font-size: 0.7rem; font-weight: 700; color: #558b2f; letter-spacing: 0.06em; margin-bottom: 0.2rem; }
+.flow-box { background: var(--bg); border: 1px solid var(--rule); border-radius: 8px; padding: 1.2rem; margin: 1.2rem 0; text-align: center; }
+.flow-box .flow-title { font-size: 0.85rem; font-weight: 700; color: var(--accent); margin-bottom: 0.8rem; }
+.flow-row { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 0.3rem; font-size: 0.85rem; }
+.flow-item { background: var(--bg2); border: 1px solid var(--rule); border-radius: 4px; padding: 0.25rem 0.6rem; white-space: nowrap; }
+.flow-arrow { color: var(--accent); font-weight: 700; font-size: 1.1rem; }
+.tree-box { background: var(--bg); border: 1px solid var(--rule); border-radius: 8px; padding: 1.5rem; margin: 1.5rem 0; font-family: "Courier New", monospace; font-size: 0.9rem; line-height: 1.5; white-space: pre; overflow-x: auto; color: var(--ink); }
+footer { margin-top: 3rem; padding: 1.5rem; border-top: 1px solid var(--rule); text-align: center; font-size: 0.8rem; color: var(--muted); }
+@media (max-width: 768px) {
+  .cover h1 { font-size: 1.5rem; }
+  .note-block { flex-direction: column; }
+  .annotation { width: 100%; }
+  .main-layout { padding: 0 0.8rem; }
+  table { font-size: 0.78rem; min-width: 600px; }
+}
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div class="ch-num">高中生物竞赛讲义 · 集训营</div>
+  <h1>第十四章 生物系统学基础</h1>
+  <div class="subtitle">第三节 生物分类等级和生物系统树</div>
+  <div class="meta">
+    <span>分类等级</span><span>种的概念</span><span>亚种变种</span><span>系统树</span>
+    <span>📅 整理日期: 2026年7月6日</span>
+  </div>
+</div>
+
+<div class="main-layout">
+
+<div class="section-header">
+  <div class="sec-num">第三节</div>
+  <h2>生物分类等级和生物系统树</h2>
+</div>
+
+<!-- ====== 一、分类等级 ====== -->
+<div class="topic-header">
+  <h3>一、分类等级（taxonomic ranks）</h3>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><span class="u-double">林奈的分类系统</span>最初只包括 <span class="key-point">纲（classis）、目（ordo）、属（genus）、种（species）</span> 4 个等级。</p>
+    <p>现代分类学已扩展为 <span class="u-double">7 个基本等级</span>（由高到低）：</p>
+    <ul>
+      <li><span class="key-point">界（Regnum / Kingdom）</span></li>
+      <li><span class="key-point">门（Phylum / Divisio）</span>（植物用 Divisio）</li>
+      <li><span class="key-point">纲（Classis / Class）</span></li>
+      <li><span class="key-point">目（Ordo / Order）</span></li>
+      <li><span class="key-point">科（Familia / Family）</span></li>
+      <li><span class="key-point">属（Genus）</span></li>
+      <li><span class="key-point">种（Species）</span></li>
+    </ul>
+    <p>每一级之下都可插入 <span class="u">亚级（sub-）</span>，如亚界、亚门、亚纲、亚目、亚科、亚属、亚种。有时在特别庞大的阶元前还可加 <span class="u">超级（super-）</span>，如超目、超科；或加 <span class="u">下级（infra-）</span>，如下纲、下目。</p>
+  </div>
+  <div class="annotation">
+    奥赛必记 <strong>七级分类</strong>：界门纲目科属种。口诀："<strong>界门纲目科属种</strong>"，由高到低。
+  </div>
+</div>
+
+<div class="flow-box">
+  <div class="flow-title">图 14-3-1　七级分类系统（由高到低）</div>
+  <div class="flow-row">
+    <span class="flow-item"><strong>界</strong><br><small>Kingdom</small></span>
+    <span class="flow-arrow">↓</span>
+    <span class="flow-item"><strong>门</strong><br><small>Phylum</small></span>
+    <span class="flow-arrow">↓</span>
+    <span class="flow-item"><strong>纲</strong><br><small>Class</small></span>
+    <span class="flow-arrow">↓</span>
+    <span class="flow-item"><strong>目</strong><br><small>Order</small></span>
+    <span class="flow-arrow">↓</span>
+    <span class="flow-item"><strong>科</strong><br><small>Family</small></span>
+    <span class="flow-arrow">↓</span>
+    <span class="flow-item"><strong>属</strong><br><small>Genus</small></span>
+    <span class="flow-arrow">↓</span>
+    <span class="flow-item"><strong>种</strong><br><small>Species</small></span>
+  </div>
+</div>
+
+<div class="diagram">
+<svg viewBox="0 0 800 460" style="width:100%;max-width:700px;margin:1rem auto;display:block;font-family:sans-serif;">
+  <rect x="0" y="0" width="800" height="460" fill="#fdfbf7" stroke="#d6ccc0" rx="8"/>
+  <text x="400" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="#2c2416">图 14-3-1B　生物分类等级层级图（以智人 Homo sapiens 为例）</text>
+  <text x="160" y="52" text-anchor="middle" font-size="11" font-weight="700" fill="#c0392b">分类等级</text>
+  <text x="560" y="52" text-anchor="middle" font-size="11" font-weight="700" fill="#c0392b">人的分类位置</text>
+  <text x="560" y="64" text-anchor="middle" font-size="9" fill="#7a6e5e">（范围由大到小递减）</text>
+  <rect x="40" y="74" width="240" height="38" fill="#c0392b" rx="3"/>
+  <text x="160" y="98" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">域 Domain（最高级）</text>
+  <rect x="440" y="74" width="240" height="38" fill="#fdecea" stroke="#c0392b" rx="3"/>
+  <text x="560" y="92" text-anchor="middle" font-size="12" font-weight="700" fill="#c0392b">真核域 Eukarya</text>
+  <text x="560" y="106" text-anchor="middle" font-size="9" fill="#7a6e5e">有核膜、线粒体</text>
+  <rect x="50" y="117" width="220" height="38" fill="#c0392b" rx="3" opacity="0.92"/>
+  <text x="160" y="141" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">界 Kingdom</text>
+  <rect x="450" y="117" width="220" height="38" fill="#fdecea" stroke="#c0392b" rx="3"/>
+  <text x="560" y="135" text-anchor="middle" font-size="12" font-weight="700" fill="#c0392b">动物界 Animalia</text>
+  <text x="560" y="149" text-anchor="middle" font-size="9" fill="#7a6e5e">异养、无细胞壁、有神经</text>
+  <rect x="60" y="160" width="200" height="38" fill="#c0392b" rx="3" opacity="0.84"/>
+  <text x="160" y="184" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">门 Phylum</text>
+  <rect x="460" y="160" width="200" height="38" fill="#fdecea" stroke="#c0392b" rx="3"/>
+  <text x="560" y="178" text-anchor="middle" font-size="12" font-weight="700" fill="#c0392b">脊索动物门 Chordata</text>
+  <text x="560" y="192" text-anchor="middle" font-size="9" fill="#7a6e5e">有脊索、背神经管</text>
+  <rect x="70" y="203" width="180" height="38" fill="#c0392b" rx="3" opacity="0.76"/>
+  <text x="160" y="227" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">纲 Class</text>
+  <rect x="470" y="203" width="180" height="38" fill="#fdecea" stroke="#c0392b" rx="3"/>
+  <text x="560" y="221" text-anchor="middle" font-size="12" font-weight="700" fill="#c0392b">哺乳纲 Mammalia</text>
+  <text x="560" y="235" text-anchor="middle" font-size="9" fill="#7a6e5e">胎生、哺乳、毛发</text>
+  <rect x="80" y="246" width="160" height="38" fill="#c0392b" rx="3" opacity="0.68"/>
+  <text x="160" y="270" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">目 Order</text>
+  <rect x="480" y="246" width="160" height="38" fill="#fdecea" stroke="#c0392b" rx="3"/>
+  <text x="560" y="264" text-anchor="middle" font-size="11" font-weight="700" fill="#c0392b">灵长目 Primates</text>
+  <text x="560" y="278" text-anchor="middle" font-size="9" fill="#7a6e5e">拇指对握、双眼向前</text>
+  <rect x="90" y="289" width="140" height="38" fill="#c0392b" rx="3" opacity="0.60"/>
+  <text x="160" y="313" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">科 Family</text>
+  <rect x="490" y="289" width="140" height="38" fill="#fdecea" stroke="#c0392b" rx="3"/>
+  <text x="560" y="307" text-anchor="middle" font-size="11" font-weight="700" fill="#c0392b">人科 Hominidae</text>
+  <text x="560" y="321" text-anchor="middle" font-size="9" fill="#7a6e5e">直立行走</text>
+  <rect x="100" y="332" width="120" height="38" fill="#c0392b" rx="3" opacity="0.52"/>
+  <text x="160" y="356" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">属 Genus</text>
+  <rect x="500" y="332" width="120" height="38" fill="#fdecea" stroke="#c0392b" rx="3"/>
+  <text x="560" y="350" text-anchor="middle" font-size="12" font-weight="700" fill="#c0392b">人属 Homo</text>
+  <text x="560" y="364" text-anchor="middle" font-size="9" fill="#7a6e5e">脑容量大</text>
+  <rect x="110" y="375" width="100" height="38" fill="#c0392b" rx="3" opacity="0.44"/>
+  <text x="160" y="399" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">种 Species</text>
+  <rect x="510" y="375" width="100" height="38" fill="#fdecea" stroke="#c0392b" stroke-width="2" rx="3"/>
+  <text x="560" y="393" text-anchor="middle" font-size="12" font-weight="700" fill="#c0392b">智人 H. sapiens</text>
+  <text x="560" y="407" text-anchor="middle" font-size="9" fill="#7a6e5e">物种 = 基本单位</text>
+  <path d="M 280 400 Q 420 400 440 400" stroke="#d6ccc0" stroke-width="1.5" stroke-dasharray="4,3" fill="none"/>
+  <polygon points="440,400 432,395 432,405" fill="#d6ccc0"/>
+  <text x="360" y="392" text-anchor="middle" font-size="9" fill="#7a6e5e">范围递减</text>
+  <rect x="40" y="425" width="720" height="25" fill="#fff8e7" stroke="#e8c84a" rx="4"/>
+  <text x="400" y="443" text-anchor="middle" font-size="10" fill="#8b4513">等级越低，亲缘关系越近；域（Domain）是 Woese 1977 提出的最高等级，林奈七级（界→种）是经典核心</text>
+</svg>
+<figcaption>图 14-3-1B　八级生物分类等级层级图（域→界→门→纲→目→科→属→种），以智人 Homo sapiens 为例展示分类位置</figcaption>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>附加单元：</p>
+    <ul>
+      <li><span class="key-point">亚种（subspecies）</span>：种下的分类阶元，是种内因地理隔离分化形成的个体群。</li>
+      <li><span class="key-point">变种（variety, varietas）</span>：种内的种型或个体变异，<em>不是法定的分类阶元</em>。</li>
+      <li><span class="key-point">品种（cultivar / breed）</span>：人为通过培育形成的种群，<em>非分类阶元</em>，仅用于农业畜牧。</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    亚种、变种、品种三者易混。<strong>亚种</strong> 是分类阶元；<strong>变种</strong> 是种内变异；<strong>品种</strong> 是人工培育的产物。
+  </div>
+</div>
+
+<!-- ====== 二、种的概念 ====== -->
+<div class="topic-header">
+  <h3>二、种（species）的概念</h3>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>不同专业的生物学家对"种"的概念有不同的理解，争论焦点主要有二：</p>
+    <ol>
+      <li><span class="key-point">形态学种（morphological species）/ 分类学种（taxonomic species）</span>：把物种定义为形态结构相似的个体群。</li>
+      <li><span class="key-point">生物学种（biological species）</span>：强调种间 <em>生殖隔离（reproductive isolation）</em> 的机制。</li>
+    </ol>
+    <p>随着科学发展，提出了 <span class="u-double">多维性种（multidimensional species）</span> 的概念：<em>"种是形态、生理、行为和生殖的动态群"</em>。</p>
+    <p><span class="u-double">陈世骧（1905–1988）</span> 我国著名昆虫学家、分类学家，对物种的定义：</p>
+    <blockquote style="border-left: 3px solid var(--accent); padding-left: 1rem; margin: 0.6rem 0; color: var(--accent2); font-style: italic;">
+      "种是由种群所组成的生殖单元，在自然界占有一定的生境，在系谱上代表一定的分支。"
+    </blockquote>
+    <p>该定义包括 <span class="u-double">种的四个标准</span>：</p>
+    <ul>
+      <li><span class="key-point">① 种群组成</span>：由若干种群组成。</li>
+      <li><span class="key-point">② 生殖隔离</span>：与其他种不能交配或交配后不能产生可育后代。</li>
+      <li><span class="key-point">③ 生境地位</span>：在自然界占有一定生态位。</li>
+      <li><span class="key-point">④ 系谱分支</span>：在进化树上代表一条独立分支。</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    <strong>陈世骧</strong>（中国科学院院士）的种定义在国际分类学界被广泛接受，是奥赛常考的人名概念。
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>种是<span class="u-double">客观存在的，又是进化发展的</span>。一个种通过遗传、变异和自然选择，可能会发展成另一个新种；现在地球上的众多物种，就是由共同祖先逐渐演化而来的。</p>
+    <p>其他物种概念（奥赛拓展）：</p>
+    <ul>
+      <li><span class="key-point">进化种（evolutionary species）</span>：Simpson 1951 提出，一个种是一条独立进化的世系，具有自己独特的进化历史和趋势。</li>
+      <li><span class="key-point">系统发育种（phylogenetic species）</span>：Cracraft 1983 提出，一个最小可诊断的单系群（monophyletic group）。</li>
+      <li><span class="key-point">生态种（ecological species）</span>：Van Valen 1976 提出，占据独特生态适应区的生物类群。</li>
+      <li><span class="key-point">无融合种（agamospecies）</span>：对无性繁殖生物使用，与形态学种类似。</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    4 大物种概念（奥赛重难点）：<strong>生物学种 / 进化种 / 系统发育种 / 生态种</strong>，各有所长也各有所短。
+  </div>
+</div>
+
+<!-- ====== 三、亚种、变种、品种的区别 ====== -->
+<div class="topic-header">
+  <h3>三、亚种、变种、品种的区别</h3>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>种下还有 <span class="u-double">亚种</span>、<span class="u-double">变种</span>、<span class="u-double">品种</span> 三个易混概念，区别如下：</p>
+  </div>
+  <div class="annotation">
+    三者关系：<strong>种 = 亚种 × n</strong>；<strong>变种</strong> 是种内变异；<strong>品种</strong> 是人工培育的。
+  </div>
+</div>
+
+<div class="table-wrap">
+<table>
+  <thead>
+    <tr><th>项目</th><th>亚种（subspecies）</th><th>变种（variety, var.）</th><th>品种（cultivar, cv.）</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>性质</td><td>分类阶元（法定的）</td><td>非分类阶元（种内变异）</td><td>非分类阶元（人工产物）</td></tr>
+    <tr><td>形成原因</td><td>地理隔离 + 长期分化</td><td>基因突变 + 自然选择</td><td>人工选择 + 培育</td></tr>
+    <tr><td>分布</td><td>不同的地理区域</td><td>同一区域内可并存</td><td>由人类决定</td></tr>
+    <tr><td>遗传差异</td><td>较大，已达亚种级</td><td>较小，基因频率差异</td><td>人为定向选育</td></tr>
+    <tr><td>举例</td><td>东北虎 / 华南虎</td><td>高豌豆 / 矮豌豆（种内）</td><td>金鱼犬、富士苹果</td></tr>
+    <tr><td>学名</td><td><em>Canis lupus familiaris</em></td><td><em>Pisum sativum var. pumilio</em></td><td><em>Malus pumila</em> 'Fuji'</td></tr>
+  </tbody>
+</table>
+<figcaption>表 14-3-1　亚种、变种、品种的对比</figcaption>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>举例说明：</p>
+    <ul>
+      <li><span class="key-point">东北虎 vs 华南虎</span>：是虎（<em>Panthera tigris</em>）的两个亚种，长期地理隔离有可能会进化成两个不同的种。</li>
+      <li><span class="key-point">北京人 vs 现代人</span>：周口店"北京人"是直立人（<em>Homo erectus</em>）的一个亚种，学名 <em>Homo erectus pekinensis</em>（北京直立人）。他和现代人同属（<em>Homo</em>），但不同种（<em>erectus</em> vs <em>sapiens</em>）。</li>
+      <li><span class="key-point">高茎豌豆 vs 矮茎豌豆</span>：高茎豌豆种群中出现了矮茎豌豆植株，这些矮茎豌豆植株就是 <em>变种</em>。若把矮茎豌豆人工培育成大种群，则和原始种各成一个 <em>品种</em>。</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    变种 × 培育 → 品种。变种是天然的，品种是人工的，这是判断的关键。
+  </div>
+</div>
+
+<!-- ====== 四、生物系统树 ====== -->
+<div class="topic-header">
+  <h3>四、生物系统树（phylogenetic tree）</h3>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><span class="u-double">图 6-3-1 生物系统树</span> 是以古生物学、比较形态学等方面资料为基础，同时吸收了分子生物学的一些研究结果而建成的 <span class="u">以门类为单位的系统树</span>。这个系统树反映生命进化先后经历三个阶段：</p>
+    <ol>
+      <li><span class="key-point">原核生物阶段</span>：细菌、蓝藻等原核生物。</li>
+      <li><span class="key-point">真核单细胞阶段</span>：原生生物（草履虫、变形虫、眼虫等）。</li>
+      <li><span class="key-point">真核多细胞阶段</span>：植物界、真菌界、动物界。</li>
+    </ol>
+  </div>
+  <div class="annotation">
+    <strong>三阶段</strong>：原核 → 真核单细胞 → 真核多细胞。这是 Whittaker 五界系统（1969）的纵向演化轴。
+  </div>
+</div>
+
+<div class="tree-box">图 14-3-2　生物系统树（以门类为单位；仿"图 6-3-1"）
+
+                                                    ┌── 被子植物
+                                                    ├── 裸子植物
+                                          ┌─ 植物界┤├── 苔藓
+                                          │        ├── 蕨
+                                          │        ├── 红藻 / 绿藻 / 团藻 / 硅藻 / 衣藻 / 金藻 / 褐藻
+                          ┌─ 真核生物 ────┤
+                          │    (Eukaryota) │        ┌── 脊索动物
+                          │                ├─ 动物界┤├── 节肢动物
+                          │                │        ├── 软体动物 / 棘皮动物 / 扁形动物 / 腔肠动物 / 海绵
+                          │                │        └── 原生动物
+                          │                │
+                          │                ├─ 真菌界 ── 真菌 / 黏菌 / 酵母菌
+                          │                │
+                          │                └─ 原生生物（单核真核）
+                          │
+        古原核生物（共同祖先）
+                          │
+                          └─ 原核生物 ─┬── 细菌 ── 蓝藻 / 原绿藻
+                                       └── 古细菌</div>
+
+<figcaption>图 14-3-2　生物系统树（五大类群：植物界、动物界、真菌界、原生生物、原核生物）</figcaption>
+
+<div class="diagram">
+  <img src="assets/fig_evo_three_domains.jpg" alt="三域系统发育树" style="max-width:100%;border:1px solid var(--rule);border-radius:4px;">
+  <figcaption>图 14-3-3　三域系统发育树（Woese 1990）：基于 16S rRNA 序列，生物分为细菌域（Bacteria）、古菌域（Archaea）和真核域（Eukarya）。注意古菌与真核的亲缘关系比与细菌更近</figcaption>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>系统树是生物界的 <span class="u-double">"家谱"</span>，是生物的种类繁多、历史久远、彼此之间关系十分复杂的视觉化体现。</p>
+    <p>系统树反映的内容：</p>
+    <ul>
+      <li><span class="key-point">分支关系</span>：亲缘关系越近，分类位置越近。</li>
+      <li><span class="key-point">时间方向</span>：根在左（旧），叶在右（新）。</li>
+      <li><span class="key-point">进化程度</span>：越靠近末端的类群通常越高等。</li>
+    </ul>
+    <p>比较生物化学、免疫学等多学科的研究不断为探寻生物亲缘关系提供新资料，生物系统树也从而不断地得到补充和修正。</p>
+  </div>
+  <div class="annotation">
+    系统树是 <em>假说性</em> 的：随着新证据（特别是分子证据）的出现，系统树会不断调整。
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>系统树构建的常用方法：</p>
+    <ul>
+      <li><span class="key-point">距离法（distance-based）</span>：邻接法（Neighbor-Joining, NJ, Saitou & Nei 1987）、最小进化法（ME）、UPGMA（最早，但常给出错误的有根树）。</li>
+      <li><span class="key-point">最大简约法（Maximum Parsimony, MP）</span>：寻找所需进化改变最少的树。</li>
+      <li><span class="key-point">最大似然法（Maximum Likelihood, ML）</span>：Felsenstein 1981 提出，依据特定进化模型计算似然值。</li>
+      <li><span class="key-point">贝叶斯法（Bayesian Inference, BI）</span>：用马尔可夫链蒙特卡罗（MCMC）采样后验分布。</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    4 大建树方法：<strong>距离（NJ/UPGMA）/ 简约（MP）/ 似然（ML）/ 贝叶斯（BI）</strong>。奥赛重在 NJ 和 MP。
+  </div>
+</div>
+
+<div class="diagram">
+<svg viewBox="0 0 800 440" style="width:100%;max-width:700px;margin:1rem auto;display:block;font-family:sans-serif;">
+  <rect x="0" y="0" width="800" height="440" fill="#fdfbf7" stroke="#d6ccc0" rx="8"/>
+  <text x="400" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="#2c2416">图 14-3-4　系统树构建基本步骤</text>
+  <!-- Step 1 -->
+  <rect x="40" y="55" width="200" height="55" fill="#fdecea" stroke="#c0392b" stroke-width="1.5" rx="6"/>
+  <text x="140" y="78" text-anchor="middle" font-size="12" font-weight="700" fill="#c0392b">① 获取序列数据</text>
+  <text x="140" y="96" text-anchor="middle" font-size="9" fill="#7a6e5e">DNA / RNA / 蛋白质序列</text>
+  <text x="140" y="108" text-anchor="middle" font-size="9" fill="#7a6e5e">如 16S rRNA / Cyt c</text>
+  <line x1="240" y1="82" x2="280" y2="82" stroke="#c0392b" stroke-width="2"/>
+  <polygon points="280,82 272,77 272,87" fill="#c0392b"/>
+  <!-- Step 2 -->
+  <rect x="290" y="55" width="200" height="55" fill="#fdecea" stroke="#c0392b" stroke-width="1.5" rx="6"/>
+  <text x="390" y="78" text-anchor="middle" font-size="12" font-weight="700" fill="#c0392b">② 多序列比对</text>
+  <text x="390" y="96" text-anchor="middle" font-size="9" fill="#7a6e5e">ClustalW / MUSCLE</text>
+  <text x="390" y="108" text-anchor="middle" font-size="9" fill="#7a6e5e">找出同源位点</text>
+  <line x1="490" y1="82" x2="530" y2="82" stroke="#c0392b" stroke-width="2"/>
+  <polygon points="530,82 522,77 522,87" fill="#c0392b"/>
+  <!-- Step 3 -->
+  <rect x="540" y="55" width="220" height="55" fill="#fdecea" stroke="#c0392b" stroke-width="1.5" rx="6"/>
+  <text x="650" y="78" text-anchor="middle" font-size="12" font-weight="700" fill="#c0392b">③ 选择替代模型</text>
+  <text x="650" y="96" text-anchor="middle" font-size="9" fill="#7a6e5e">JC / K2P / GTR + Γ</text>
+  <text x="650" y="108" text-anchor="middle" font-size="9" fill="#7a6e5e">描述序列变异规律</text>
+  <!-- arrow down -->
+  <line x1="650" y1="110" x2="650" y2="140" stroke="#c0392b" stroke-width="2"/>
+  <polygon points="650,140 645,132 655,132" fill="#c0392b"/>
+  <!-- Step 4 -->
+  <rect x="540" y="145" width="220" height="55" fill="#fdecea" stroke="#c0392b" stroke-width="1.5" rx="6"/>
+  <text x="650" y="168" text-anchor="middle" font-size="12" font-weight="700" fill="#c0392b">④ 选择建树方法</text>
+  <text x="650" y="186" text-anchor="middle" font-size="9" fill="#7a6e5e">NJ / UPGMA / MP</text>
+  <text x="650" y="198" text-anchor="middle" font-size="9" fill="#7a6e5e">ML / 贝叶斯（BI）</text>
+  <line x1="540" y1="172" x2="500" y2="172" stroke="#c0392b" stroke-width="2"/>
+  <polygon points="500,172 508,167 508,177" fill="#c0392b"/>
+  <!-- Step 5 -->
+  <rect x="290" y="145" width="200" height="55" fill="#fdecea" stroke="#c0392b" stroke-width="1.5" rx="6"/>
+  <text x="390" y="168" text-anchor="middle" font-size="12" font-weight="700" fill="#c0392b">⑤ 评估可靠性</text>
+  <text x="390" y="186" text-anchor="middle" font-size="9" fill="#7a6e5e">Bootstrap ≥70%（节点）</text>
+  <text x="390" y="198" text-anchor="middle" font-size="9" fill="#7a6e5e">后验概率 ≥0.95</text>
+  <line x1="290" y1="172" x2="250" y2="172" stroke="#c0392b" stroke-width="2"/>
+  <polygon points="250,172 258,167 258,177" fill="#c0392b"/>
+  <!-- Step 6 -->
+  <rect x="40" y="145" width="200" height="55" fill="#fdecea" stroke="#c0392b" stroke-width="1.5" rx="6"/>
+  <text x="140" y="168" text-anchor="middle" font-size="12" font-weight="700" fill="#c0392b">⑥ 确定树根</text>
+  <text x="140" y="186" text-anchor="middle" font-size="9" fill="#7a6e5e">外群法 / 中点法</text>
+  <text x="140" y="198" text-anchor="middle" font-size="9" fill="#7a6e5e">分子钟标定</text>
+  <line x1="140" y1="200" x2="140" y2="230" stroke="#c0392b" stroke-width="2"/>
+  <polygon points="140,230 135,222 145,222" fill="#c0392b"/>
+  <!-- Step 7 -->
+  <rect x="40" y="235" width="720" height="55" fill="#fff8e7" stroke="#8b4513" stroke-width="1.5" rx="6"/>
+  <text x="400" y="258" text-anchor="middle" font-size="12" font-weight="700" fill="#8b4513">⑦ 解读系统树</text>
+  <text x="400" y="276" text-anchor="middle" font-size="10" fill="#2c2416">节点 = 共同祖先；分支长度 = 进化距离；拓扑结构反映亲缘关系；需区分 rooted / unrooted</text>
+  <!-- methods comparison -->
+  <rect x="40" y="310" width="720" height="115" fill="#fff8e7" stroke="#e8c84a" rx="4"/>
+  <text x="400" y="330" text-anchor="middle" font-size="11" font-weight="700" fill="#8b4513">四大建树方法对比</text>
+  <text x="140" y="350" text-anchor="middle" font-size="10" fill="#2c2416">距离法（NJ）</text>
+  <text x="140" y="366" text-anchor="middle" font-size="9" fill="#7a6e5e">快速，基于遗传距离</text>
+  <text x="310" y="350" text-anchor="middle" font-size="10" fill="#2c2416">简约法（MP）</text>
+  <text x="310" y="366" text-anchor="middle" font-size="9" fill="#7a6e5e">最少突变步数</text>
+  <text x="490" y="350" text-anchor="middle" font-size="10" fill="#2c2416">似然法（ML）</text>
+  <text x="490" y="366" text-anchor="middle" font-size="9" fill="#7a6e5e">最大似然，较准</text>
+  <text x="660" y="350" text-anchor="middle" font-size="10" fill="#2c2416">贝叶斯（BI）</text>
+  <text x="660" y="366" text-anchor="middle" font-size="9" fill="#7a6e5e">后验概率，最精确</text>
+  <text x="400" y="395" text-anchor="middle" font-size="10" fill="#8b4513">可靠性指标：Bootstrap ≥70%（MP/ML/NJ）；后验概率 ≥0.95（BI）</text>
+  <text x="400" y="412" text-anchor="middle" font-size="10" fill="#c0392b">奥赛考点：NJ 和 MP 为主流考点；rooted tree 才能反映进化方向</text>
+</svg>
+<figcaption>图 14-3-4　系统树构建基本步骤：获取序列→多序列比对→选择模型→建树（NJ/MP/ML/BI）→评估可靠性→定根→解读</figcaption>
+</div>
+
+<div class="expand-block">
+  <strong>根（root）</strong> 的确定：① 外群法（outgroup）：选择一个明显外群的物种作为外群，确定树根位置；② 中点法（midpoint rooting）：将根定在最长分支的中点；③ 分子钟定根：用已知分歧时间的化石标定点来定根。
+</div>
+
+<div class="diagram">
+<svg viewBox="0 0 800 440" style="width:100%;max-width:700px;margin:1rem auto;display:block;font-family:sans-serif;">
+  <rect x="0" y="0" width="800" height="440" fill="#fdfbf7" stroke="#d6ccc0" rx="8"/>
+  <text x="400" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="#2c2416">图 14-3-5　单系群 / 并系群 / 多系群对比</text>
+  <!-- Monophyletic -->
+  <rect x="20" y="50" width="245" height="320" fill="#fff8e7" stroke="#2e7d32" stroke-width="2" rx="6"/>
+  <text x="142" y="75" text-anchor="middle" font-size="14" font-weight="700" fill="#2e7d32">单系群 Monophyletic</text>
+  <text x="142" y="92" text-anchor="middle" font-size="10" fill="#7a6e5e">最完整、最自然</text>
+  <!-- tree: ancestor + ALL descendants -->
+  <circle cx="142" cy="130" r="6" fill="#2e7d32"/>
+  <line x1="142" y1="136" x2="92" y2="180" stroke="#8b4513" stroke-width="1.5"/>
+  <line x1="142" y1="136" x2="192" y2="180" stroke="#8b4513" stroke-width="1.5"/>
+  <line x1="92" y1="180" x2="72" y2="220" stroke="#8b4513" stroke-width="1.5"/>
+  <line x1="92" y1="180" x2="112" y2="220" stroke="#8b4513" stroke-width="1.5"/>
+  <line x1="192" y1="180" x2="172" y2="220" stroke="#8b4513" stroke-width="1.5"/>
+  <line x1="192" y1="180" x2="212" y2="220" stroke="#8b4513" stroke-width="1.5"/>
+  <rect x="55" y="220" width="34" height="20" fill="#2e7d32" rx="3" opacity="0.6"/>
+  <rect x="95" y="220" width="34" height="20" fill="#2e7d32" rx="3" opacity="0.6"/>
+  <rect x="155" y="220" width="34" height="20" fill="#2e7d32" rx="3" opacity="0.6"/>
+  <rect x="195" y="220" width="34" height="20" fill="#2e7d32" rx="3" opacity="0.6"/>
+  <ellipse cx="142" cy="130" rx="110" ry="75" fill="none" stroke="#2e7d32" stroke-width="2" stroke-dasharray="5,3"/>
+  <text x="142" y="270" text-anchor="middle" font-size="11" font-weight="700" fill="#2c2416">定义</text>
+  <text x="142" y="288" text-anchor="middle" font-size="10" fill="#8b4513">共同祖先 + 全部后代</text>
+  <text x="142" y="310" text-anchor="middle" font-size="11" font-weight="700" fill="#2c2416">例子</text>
+  <text x="142" y="328" text-anchor="middle" font-size="10" fill="#8b4513">哺乳动物（含所有物种）</text>
+  <text x="142" y="348" text-anchor="middle" font-size="10" fill="#2e7d32" font-weight="700">✔ 正确分类单元</text>
+  <!-- Paraphyletic -->
+  <rect x="277" y="50" width="245" height="320" fill="#fff8e7" stroke="#e65100" stroke-width="2" rx="6"/>
+  <text x="399" y="75" text-anchor="middle" font-size="14" font-weight="700" fill="#e65100">并系群 Paraphyletic</text>
+  <text x="399" y="92" text-anchor="middle" font-size="10" fill="#7a6e5e">不完整（少了部分后代）</text>
+  <circle cx="399" cy="130" r="6" fill="#e65100"/>
+  <line x1="399" y1="136" x2="349" y2="180" stroke="#8b4513" stroke-width="1.5"/>
+  <line x1="399" y1="136" x2="449" y2="180" stroke="#8b4513" stroke-width="1.5"/>
+  <line x1="349" y1="180" x2="329" y2="220" stroke="#8b4513" stroke-width="1.5"/>
+  <line x1="349" y1="180" x2="369" y2="220" stroke="#8b4513" stroke-width="1.5"/>
+  <line x1="449" y1="180" x2="429" y2="220" stroke="#8b4513" stroke-width="1.5"/>
+  <line x1="449" y1="180" x2="469" y2="220" stroke="#8b4513" stroke-width="1.5"/>
+  <rect x="312" y="220" width="34" height="20" fill="#e65100" rx="3" opacity="0.6"/>
+  <rect x="352" y="220" width="34" height="20" fill="#e65100" rx="3" opacity="0.6"/>
+  <rect x="412" y="220" width="34" height="20" fill="#e0e0e0" rx="3" stroke="#bbb"/>
+  <rect x="452" y="220" width="34" height="20" fill="#e65100" rx="3" opacity="0.6"/>
+  <text x="429" y="255" text-anchor="middle" font-size="9" fill="#bbb">排除</text>
+  <ellipse cx="399" cy="170" rx="100" ry="50" fill="none" stroke="#e65100" stroke-width="2" stroke-dasharray="5,3"/>
+  <text x="399" y="270" text-anchor="middle" font-size="11" font-weight="700" fill="#2c2416">定义</text>
+  <text x="399" y="288" text-anchor="middle" font-size="10" fill="#8b4513">共同祖先 + 部分后代</text>
+  <text x="399" y="310" text-anchor="middle" font-size="11" font-weight="700" fill="#2c2416">例子</text>
+  <text x="399" y="328" text-anchor="middle" font-size="10" fill="#8b4513">爬行类（不含鸟类）</text>
+  <text x="399" y="348" text-anchor="middle" font-size="10" fill="#e65100" font-weight="700">⚠ 传统分类</text>
+  <!-- Polyphyletic -->
+  <rect x="534" y="50" width="245" height="320" fill="#fff8e7" stroke="#c0392b" stroke-width="2" rx="6"/>
+  <text x="656" y="75" text-anchor="middle" font-size="14" font-weight="700" fill="#c0392b">多系群 Polyphyletic</text>
+  <text x="656" y="92" text-anchor="middle" font-size="10" fill="#7a6e5e">错误（趋同特征误判）</text>
+  <circle cx="606" cy="130" r="5" fill="#bbb"/>
+  <line x1="606" y1="135" x2="580" y2="165" stroke="#bbb" stroke-width="1.5"/>
+  <line x1="606" y1="135" x2="630" y2="165" stroke="#bbb" stroke-width="1.5"/>
+  <circle cx="706" cy="130" r="5" fill="#bbb"/>
+  <line x1="706" y1="135" x2="680" y2="165" stroke="#bbb" stroke-width="1.5"/>
+  <line x1="706" y1="135" x2="730" y2="165" stroke="#bbb" stroke-width="1.5"/>
+  <line x1="580" y1="165" x2="565" y2="195" stroke="#bbb" stroke-width="1.5"/>
+  <line x1="630" y1="165" x2="615" y2="195" stroke="#bbb" stroke-width="1.5"/>
+  <line x1="680" y1="165" x2="665" y2="195" stroke="#bbb" stroke-width="1.5"/>
+  <line x1="730" y1="165" x2="715" y2="195" stroke="#bbb" stroke-width="1.5"/>
+  <rect x="548" y="195" width="34" height="20" fill="#c0392b" rx="3" opacity="0.6"/>
+  <rect x="700" y="195" width="34" height="20" fill="#c0392b" rx="3" opacity="0.6"/>
+  <rect x="598" y="195" width="34" height="20" fill="#e0e0e0" rx="3" stroke="#bbb"/>
+  <rect x="648" y="195" width="34" height="20" fill="#e0e0e0" rx="3" stroke="#bbb"/>
+  <path d="M 565 220 Q 656 250 715 220" fill="none" stroke="#c0392b" stroke-width="2" stroke-dasharray="5,3"/>
+  <text x="656" y="248" text-anchor="middle" font-size="10" fill="#c0392b">趋同特征</text>
+  <text x="656" y="270" text-anchor="middle" font-size="11" font-weight="700" fill="#2c2416">定义</text>
+  <text x="656" y="288" text-anchor="middle" font-size="10" fill="#8b4513">不含最近共同祖先</text>
+  <text x="656" y="310" text-anchor="middle" font-size="11" font-weight="700" fill="#2c2416">例子</text>
+  <text x="656" y="328" text-anchor="middle" font-size="10" fill="#8b4513">温血动物（鸟+哺乳）</text>
+  <text x="656" y="348" text-anchor="middle" font-size="10" fill="#c0392b" font-weight="700">✘ 应避免</text>
+  <rect x="20" y="385" width="759" height="45" fill="#fff8e7" stroke="#e8c84a" rx="4"/>
+  <text x="400" y="405" text-anchor="middle" font-size="11" fill="#8b4513">奥赛要点：分支系统学（Hennig）只承认单系群为合法分类单元；并系群（如"爬行类"）和多系群在现代分类中应被修正。</text>
+  <text x="400" y="423" text-anchor="middle" font-size="11" fill="#c0392b">"共同衍征"（synapomorphy）是判断单系群的核心依据。</text>
+</svg>
+<figcaption>图 14-3-5　单系群（共同祖先+全部后代，正确）、并系群（部分后代，如爬行类）、多系群（不含共同祖先，趋同误判）对比</figcaption>
+</div>
+
+<!-- ====== 总结 ====== -->
+<div class="summary-box">
+  <h4>本节核心要点</h4>
+  <ul>
+    <li><strong>七级分类</strong>：界门纲目科属种。亚级前缀"亚"或"下"；超级前缀"超"。</li>
+    <li><strong>种的概念</strong>（陈世骧定义）：由种群组成的生殖单元，占据一定生境，代表系谱分支。包括四个标准：种群组成、生殖隔离、生境地位、系谱分支。</li>
+    <li><strong>种下阶元</strong>：亚种（分类阶元，地理隔离） / 变种（非阶元，种内变异） / 品种（非阶元，人工培育）。</li>
+    <li><strong>生物系统树</strong>：以门类为单位，反映三阶段进化（原核 → 真核单细胞 → 真核多细胞）。</li>
+    <li><strong>建树方法</strong>：距离法（NJ/UPGMA）、最大简约法（MP）、最大似然法（ML）、贝叶斯法（BI）。</li>
+  </ul>
+</div>
+
+</div>
+
+<footer><a href="index.html" style="color:var(--accent);text-decoration:none;margin-right:1rem;">← 返回目录</a>
+  第十四章 生物系统学基础 · 第三节 生物分类等级和生物系统树 · 参考高中生物奥赛讲义 · 整理日期 2026年7月6日
+</footer>
+
+</body>
+</html>

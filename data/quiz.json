@@ -1,0 +1,4002 @@
+[
+  {
+    "type": "mtf",
+    "question": "在一个遗传平衡的人群中，某常染色体隐性遗传病患者占 1/2500。下表是基因型频率推算表，正确的是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "致病基因 a 的频率为 1/50",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "携带者频率为 2/2500",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "正常人群中纯合子频率为 98/100",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "随机婚配子代一定患病",
+        "answer": false
+      }
+    ],
+    "explanation": "根据哈迪—温伯格定律，aa=q²=1/2500，故 q=1/50，p=49/50，携带者 Aa=2pq≈2/50=1/25；正常人群中 AA 占 p²≈0.96。",
+    "subject": "遗传学",
+    "concept": "遗传平衡",
+    "difficulty": "league",
+    "chart": "| 基因型 | AA | Aa | aa |\n|---|---|---|---|\n| 频率 | ? | ? | 1/2500 |",
+    "year": null,
+    "module": "module_3",
+    "target": "competition",
+    "tags": [
+      "module_3",
+      "遗传学",
+      "遗传平衡",
+      "图表题"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "某同学统计了显微镜视野下根尖分生区各时期的细胞数，结果如下表。下列叙述正确的是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "间期在细胞周期中所占时间最长",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "分裂期细胞总数多于间期",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "细胞周期各时期时间大致相等",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "由表无法判断各时期相对时长",
+        "answer": false
+      }
+    ],
+    "explanation": "某时期细胞数所占比例大致与该时期在细胞周期中的时间成正比，间期细胞数远多于其他时期，说明间期时间最长。",
+    "subject": "细胞生物学",
+    "concept": "细胞分裂期统计",
+    "difficulty": "basic",
+    "chart": "| 时期 | 间期 | 前期 | 中期 | 后期 | 末期 |\n|---|---|---|---|---|---|\n| 细胞数 | 880 | 55 | 30 | 20 | 15 |",
+    "year": null,
+    "module": "module_1",
+    "target": "high_school",
+    "tags": [
+      "module_1",
+      "细胞生物学",
+      "细胞分裂期统计",
+      "图表题"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "某生态系统各营养级的年同化量数据如下表。下列叙述正确的是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "相邻营养级间能量传递效率约为 20%",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "该生态系统处于不稳定状态",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "次级消费者同化量全部用于呼吸消耗",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "三级消费者数量最少是因为能量传递效率逐段上升",
+        "answer": false
+      }
+    ],
+    "explanation": "2400/12000=20%，480/2400=20%，96/480=20%，各营养级间能量传递效率都约为 20%；能量单向流动、逐级递减，使最高营养级个体数量通常最少。",
+    "subject": "生态学",
+    "concept": "生态系统能量流动",
+    "difficulty": "national",
+    "chart": "| 营养级 | 生产者 | 初级消费者 | 次级消费者 | 三级消费者 |\n|---|---|---|---|---|\n| 同化量(J·m⁻²·a⁻¹) | 12000 | 2400 | 480 | 96 |",
+    "year": null,
+    "module": "module_4",
+    "target": "competition",
+    "tags": [
+      "module_4",
+      "生态学",
+      "生态系统能量流动",
+      "图表题"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "下列关于细胞学说及其建立过程的叙述，错误的是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "所有生物都由细胞构成",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "一切动植物都由细胞发育而来",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "新细胞可以从老细胞中产生",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "细胞是一个相对独立的单位",
+        "answer": false
+      }
+    ],
+    "explanation": "细胞学说揭示了动物和植物的统一性；病毒没有细胞结构，因此并非所有生物都由细胞构成。",
+    "subject": "细胞生物学",
+    "concept": "细胞学说",
+    "difficulty": "basic",
+    "chart": null,
+    "year": null,
+    "module": "module_1",
+    "target": "high_school",
+    "tags": [
+      "module_1",
+      "细胞生物学",
+      "细胞学说",
+      "high_school"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "关于细胞学说的理解，正确的是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "一切动植物都由细胞发育而来",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "所有生物都由细胞构成",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "新细胞可以从老细胞中产生",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "细胞是一个相对独立的单位",
+        "answer": false
+      }
+    ],
+    "explanation": "细胞学说揭示了动物和植物的统一性；病毒没有细胞结构，因此并非所有生物都由细胞构成。",
+    "subject": "细胞生物学",
+    "concept": "细胞学说",
+    "difficulty": "basic",
+    "chart": null,
+    "year": null,
+    "module": "module_1",
+    "target": "high_school",
+    "tags": [
+      "module_1",
+      "细胞生物学",
+      "细胞学说",
+      "high_school"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "下列叙述中不属于细胞学说要点的是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "细胞是一个相对独立的单位",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "所有生物都由细胞构成",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "一切动植物都由细胞发育而来",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "新细胞可以从老细胞中产生",
+        "answer": false
+      }
+    ],
+    "explanation": "细胞学说揭示了动物和植物的统一性；病毒没有细胞结构，因此并非所有生物都由细胞构成。",
+    "subject": "细胞生物学",
+    "concept": "细胞学说",
+    "difficulty": "basic",
+    "chart": null,
+    "year": null,
+    "module": "module_1",
+    "target": "high_school",
+    "tags": [
+      "module_1",
+      "细胞生物学",
+      "细胞学说",
+      "high_school"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "细胞学说的建立揭示了",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "新细胞可以从老细胞中产生",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "一切动植物都由细胞发育而来",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "细胞是一个相对独立的单位",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "所有生物都由细胞构成",
+        "answer": true
+      }
+    ],
+    "explanation": "细胞学说揭示了动物和植物的统一性；病毒没有细胞结构，因此并非所有生物都由细胞构成。",
+    "subject": "细胞生物学",
+    "concept": "细胞学说",
+    "difficulty": "basic",
+    "chart": null,
+    "year": null,
+    "module": "module_1",
+    "target": "high_school",
+    "tags": [
+      "module_1",
+      "细胞生物学",
+      "细胞学说",
+      "high_school"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "关于原核细胞和真核细胞的比较，正确的是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "原核细胞没有任何细胞器",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "真核生物都是多细胞生物",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "真核细胞的染色体位于细胞质中",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "原核细胞没有核膜包被的细胞核",
+        "answer": true
+      }
+    ],
+    "explanation": "原核细胞只有核糖体一种细胞器；真核细胞的染色体位于细胞核内；真核生物也包括单细胞生物（如酵母菌）。",
+    "subject": "细胞生物学",
+    "concept": "原核细胞与真核细胞",
+    "difficulty": "basic",
+    "chart": null,
+    "year": null,
+    "module": "module_1",
+    "target": "high_school",
+    "tags": [
+      "module_1",
+      "细胞生物学",
+      "原核细胞与真核细胞",
+      "high_school"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "下列有关蓝藻与酵母菌的叙述，正确的是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "原核细胞没有核膜包被的细胞核",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "真核细胞的染色体位于细胞质中",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "真核生物都是多细胞生物",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "原核细胞没有任何细胞器",
+        "answer": false
+      }
+    ],
+    "explanation": "原核细胞只有核糖体一种细胞器；真核细胞的染色体位于细胞核内；真核生物也包括单细胞生物（如酵母菌）。",
+    "subject": "细胞生物学",
+    "concept": "原核细胞与真核细胞",
+    "difficulty": "basic",
+    "chart": null,
+    "year": null,
+    "module": "module_1",
+    "target": "high_school",
+    "tags": [
+      "module_1",
+      "细胞生物学",
+      "原核细胞与真核细胞",
+      "high_school"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "下列关于原核生物的叙述，错误的是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "真核细胞的染色体位于细胞质中",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "原核细胞没有核膜包被的细胞核",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "原核细胞没有任何细胞器",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "真核生物都是多细胞生物",
+        "answer": false
+      }
+    ],
+    "explanation": "原核细胞只有核糖体一种细胞器；真核细胞的染色体位于细胞核内；真核生物也包括单细胞生物（如酵母菌）。",
+    "subject": "细胞生物学",
+    "concept": "原核细胞与真核细胞",
+    "difficulty": "basic",
+    "chart": null,
+    "year": null,
+    "module": "module_1",
+    "target": "high_school",
+    "tags": [
+      "module_1",
+      "细胞生物学",
+      "原核细胞与真核细胞",
+      "high_school"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "下列关于细胞膜结构和功能的叙述，正确的是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "糖被主要分布于细胞膜内侧",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "膜上的蛋白质都不可以运动",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "磷脂双分子层构成膜的基本支架",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "细胞膜的功能主要由磷脂决定",
+        "answer": false
+      }
+    ],
+    "explanation": "磷脂双分子层构成细胞膜的基本支架；膜蛋白大多可以运动；糖被（糖蛋白）主要分布于细胞膜外侧，参与识别。",
+    "subject": "细胞生物学",
+    "concept": "细胞膜的结构与功能",
+    "difficulty": "basic",
+    "chart": null,
+    "year": null,
+    "module": "module_1",
+    "target": "high_school",
+    "tags": [
+      "module_1",
+      "细胞生物学",
+      "细胞膜的结构与功能",
+      "high_school"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "关于细胞膜流动性的叙述，错误的是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "磷脂双分子层构成膜的基本支架",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "膜上的蛋白质都不可以运动",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "细胞膜的功能主要由磷脂决定",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "糖被主要分布于细胞膜内侧",
+        "answer": false
+      }
+    ],
+    "explanation": "磷脂双分子层构成细胞膜的基本支架；膜蛋白大多可以运动；糖被（糖蛋白）主要分布于细胞膜外侧，参与识别。",
+    "subject": "细胞生物学",
+    "concept": "细胞膜的结构与功能",
+    "difficulty": "basic",
+    "chart": null,
+    "year": null,
+    "module": "module_1",
+    "target": "high_school",
+    "tags": [
+      "module_1",
+      "细胞生物学",
+      "细胞膜的结构与功能",
+      "high_school"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "细胞膜功能的复杂程度主要取决于",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "膜上的蛋白质都不可以运动",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "磷脂双分子层构成膜的基本支架",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "细胞膜的功能主要由磷脂决定",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "糖被主要分布于细胞膜内侧",
+        "answer": false
+      }
+    ],
+    "explanation": "磷脂双分子层构成细胞膜的基本支架；膜蛋白大多可以运动；糖被（糖蛋白）主要分布于细胞膜外侧，参与识别。",
+    "subject": "细胞生物学",
+    "concept": "细胞膜的结构与功能",
+    "difficulty": "basic",
+    "chart": null,
+    "year": null,
+    "module": "module_1",
+    "target": "high_school",
+    "tags": [
+      "module_1",
+      "细胞生物学",
+      "细胞膜的结构与功能",
+      "high_school"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "关于线粒体的叙述，错误的是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "所有真核细胞都含有线粒体",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "线粒体内膜向内折叠形成嵴增大膜面积",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "线粒体是有氧呼吸的主要场所",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "线粒体内部含有少量的 DNA 和核糖体",
+        "answer": false
+      }
+    ],
+    "explanation": "厌氧型真核生物的某些细胞可能不含线粒体（如哺乳动物成熟红细胞）。",
+    "subject": "细胞生物学",
+    "concept": "主要细胞器的结构与功能",
+    "difficulty": "basic",
+    "chart": null,
+    "year": null,
+    "module": "module_1",
+    "target": "high_school",
+    "tags": [
+      "module_1",
+      "细胞生物学",
+      "主要细胞器的结构与功能",
+      "high_school"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "下列细胞器与功能对应正确的是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "所有真核细胞都含有线粒体",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "线粒体是有氧呼吸的主要场所",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "线粒体内膜向内折叠形成嵴增大膜面积",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "线粒体内部含有少量的 DNA 和核糖体",
+        "answer": false
+      }
+    ],
+    "explanation": "厌氧型真核生物的某些细胞可能不含线粒体（如哺乳动物成熟红细胞）。",
+    "subject": "细胞生物学",
+    "concept": "主要细胞器的结构与功能",
+    "difficulty": "basic",
+    "chart": null,
+    "year": null,
+    "module": "module_1",
+    "target": "high_school",
+    "tags": [
+      "module_1",
+      "细胞生物学",
+      "主要细胞器的结构与功能",
+      "high_school"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "下列具有双层膜结构的细胞器是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "线粒体是有氧呼吸的主要场所",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "所有真核细胞都含有线粒体",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "线粒体内部含有少量的 DNA 和核糖体",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "线粒体内膜向内折叠形成嵴增大膜面积",
+        "answer": false
+      }
+    ],
+    "explanation": "厌氧型真核生物的某些细胞可能不含线粒体（如哺乳动物成熟红细胞）。",
+    "subject": "细胞生物学",
+    "concept": "主要细胞器的结构与功能",
+    "difficulty": "basic",
+    "chart": null,
+    "year": null,
+    "module": "module_1",
+    "target": "high_school",
+    "tags": [
+      "module_1",
+      "细胞生物学",
+      "主要细胞器的结构与功能",
+      "high_school"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "关于物质跨膜运输方式的叙述，正确的是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "自由扩散不需要载体也不消耗能量",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "协助扩散需要消耗 ATP",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "主动运输只能顺浓度梯度进行",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "胞吞胞吐不消耗能量",
+        "answer": false
+      }
+    ],
+    "explanation": "自由扩散顺浓度梯度，不需载体不耗能；协助扩散需载体但不耗能；主动运输逆浓度梯度且耗能。",
+    "subject": "细胞生物学",
+    "concept": "物质跨膜运输",
+    "difficulty": "basic",
+    "chart": null,
+    "year": null,
+    "module": "module_1",
+    "target": "high_school",
+    "tags": [
+      "module_1",
+      "细胞生物学",
+      "物质跨膜运输",
+      "high_school"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "下列属于主动运输的是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "协助扩散需要消耗 ATP",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "主动运输只能顺浓度梯度进行",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "胞吞胞吐不消耗能量",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "自由扩散不需要载体也不消耗能量",
+        "answer": true
+      }
+    ],
+    "explanation": "自由扩散顺浓度梯度，不需载体不耗能；协助扩散需载体但不耗能；主动运输逆浓度梯度且耗能。",
+    "subject": "细胞生物学",
+    "concept": "物质跨膜运输",
+    "difficulty": "basic",
+    "chart": null,
+    "year": null,
+    "module": "module_1",
+    "target": "high_school",
+    "tags": [
+      "module_1",
+      "细胞生物学",
+      "物质跨膜运输",
+      "high_school"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "下列关于渗透作用的叙述，错误的是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "胞吞胞吐不消耗能量",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "自由扩散不需要载体也不消耗能量",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "主动运输只能顺浓度梯度进行",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "协助扩散需要消耗 ATP",
+        "answer": false
+      }
+    ],
+    "explanation": "自由扩散顺浓度梯度，不需载体不耗能；协助扩散需载体但不耗能；主动运输逆浓度梯度且耗能。",
+    "subject": "细胞生物学",
+    "concept": "物质跨膜运输",
+    "difficulty": "basic",
+    "chart": null,
+    "year": null,
+    "module": "module_1",
+    "target": "high_school",
+    "tags": [
+      "module_1",
+      "细胞生物学",
+      "物质跨膜运输",
+      "high_school"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "下列关于 ATP 的叙述，错误的是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "酶的催化效率随温度升高不断上升",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "酶具有高效性、专一性",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "酶是由活细胞产生的具有催化作用的蛋白质",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "酶在反应前后性质会发生改变",
+        "answer": false
+      }
+    ],
+    "explanation": "酶多数是蛋白质，少数是 RNA；酶在反应前后性质不变；高温、过酸、过碱会使酶失活。",
+    "subject": "生物化学",
+    "concept": "酶与 ATP",
+    "difficulty": "basic",
+    "chart": null,
+    "year": null,
+    "module": "module_1",
+    "target": "high_school",
+    "tags": [
+      "module_1",
+      "生物化学",
+      "酶与 ATP",
+      "high_school"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "酶的活性受哪些因素影响",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "酶在反应前后性质会发生改变",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "酶具有高效性、专一性",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "酶的催化效率随温度升高不断上升",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "酶是由活细胞产生的具有催化作用的蛋白质",
+        "answer": false
+      }
+    ],
+    "explanation": "酶多数是蛋白质，少数是 RNA；酶在反应前后性质不变；高温、过酸、过碱会使酶失活。",
+    "subject": "生物化学",
+    "concept": "酶与 ATP",
+    "difficulty": "basic",
+    "chart": null,
+    "year": null,
+    "module": "module_1",
+    "target": "high_school",
+    "tags": [
+      "module_1",
+      "生物化学",
+      "酶与 ATP",
+      "high_school"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "细胞呼吸过程中，产生 CO2 的场所是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "氧气直接与葡萄糖结合",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "有氧呼吸不产生还原氢",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "有氧呼吸的三个阶段都在线粒体中进行",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "有氧呼吸第一阶段在细胞质基质中进行",
+        "answer": true
+      }
+    ],
+    "explanation": "有氧呼吸第一阶段发生在细胞质基质，二、三阶段在线粒体；[H] 在第一、二阶段产生。",
+    "subject": "细胞生物学",
+    "concept": "细胞呼吸",
+    "difficulty": "basic",
+    "chart": null,
+    "year": null,
+    "module": "module_1",
+    "target": "high_school",
+    "tags": [
+      "module_1",
+      "细胞生物学",
+      "细胞呼吸",
+      "high_school"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "关于光合作用过程的叙述，正确的是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "CO2 的固定需要消耗 ATP",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "暗反应（卡尔文循环）需要光反应提供的 ATP 和 NADPH",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "光反应在叶绿体基质中进行",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "光合作用产生的 O2 来自 CO2",
+        "answer": false
+      }
+    ],
+    "explanation": "光反应在类囊体薄膜上进行，产生 O2、ATP 和 NADPH；O2 来自水的光解；CO2 固定不消耗 ATP，C3 的还原才消耗。",
+    "subject": "植物生理学",
+    "concept": "光合作用",
+    "difficulty": "basic",
+    "chart": null,
+    "year": null,
+    "module": "module_2",
+    "target": "high_school",
+    "tags": [
+      "module_2",
+      "植物生理学",
+      "光合作用",
+      "high_school"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "光合作用中光反应的场所是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "光合作用产生的 O2 来自 CO2",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "CO2 的固定需要消耗 ATP",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "暗反应（卡尔文循环）需要光反应提供的 ATP 和 NADPH",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "光反应在叶绿体基质中进行",
+        "answer": false
+      }
+    ],
+    "explanation": "光反应在类囊体薄膜上进行，产生 O2、ATP 和 NADPH；O2 来自水的光解；CO2 固定不消耗 ATP，C3 的还原才消耗。",
+    "subject": "植物生理学",
+    "concept": "光合作用",
+    "difficulty": "basic",
+    "chart": null,
+    "year": null,
+    "module": "module_2",
+    "target": "high_school",
+    "tags": [
+      "module_2",
+      "植物生理学",
+      "光合作用",
+      "high_school"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "下列关于有丝分裂的叙述，错误的是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "细胞周期从分裂期开始计算",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "细胞周期包括分裂间期和分裂期",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "分裂期比分裂间期时间长",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "所有细胞都能进行有丝分裂",
+        "answer": false
+      }
+    ],
+    "explanation": "只有连续分裂的细胞才有细胞周期；细胞周期从一次分裂完成时开始到下一次分裂完成时结束；间期占时较长。",
+    "subject": "细胞生物学",
+    "concept": "细胞增殖与细胞周期",
+    "difficulty": "basic",
+    "chart": null,
+    "year": null,
+    "module": "module_1",
+    "target": "high_school",
+    "tags": [
+      "module_1",
+      "细胞生物学",
+      "细胞增殖与细胞周期",
+      "high_school"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "有丝分裂中染色体数:DNA 数=1:2 的时期是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "细胞周期包括分裂间期和分裂期",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "所有细胞都能进行有丝分裂",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "分裂期比分裂间期时间长",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "细胞周期从分裂期开始计算",
+        "answer": false
+      }
+    ],
+    "explanation": "只有连续分裂的细胞才有细胞周期；细胞周期从一次分裂完成时开始到下一次分裂完成时结束；间期占时较长。",
+    "subject": "细胞生物学",
+    "concept": "细胞增殖与细胞周期",
+    "difficulty": "basic",
+    "chart": null,
+    "year": null,
+    "module": "module_1",
+    "target": "high_school",
+    "tags": [
+      "module_1",
+      "细胞生物学",
+      "细胞增殖与细胞周期",
+      "high_school"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "下列关于植物组织的叙述，正确的是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "分生区细胞具有较大的液泡",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "导管是活细胞构成的输导组织",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "筛管负责运输有机物，是死细胞",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "成熟区是根尖吸收水分和无机盐最活跃的部位",
+        "answer": true
+      }
+    ],
+    "explanation": "导管是死细胞，负责运输水和无机盐；筛管是活细胞，运输有机物；分生区细胞分裂旺盛，没有大液泡。",
+    "subject": "植物学",
+    "concept": "植物组织与器官",
+    "difficulty": "basic",
+    "chart": null,
+    "year": null,
+    "module": "module_2",
+    "target": "high_school",
+    "tags": [
+      "module_2",
+      "植物学",
+      "植物组织与器官",
+      "high_school"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "植物茎中进行输导作用的主要结构是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "成熟区是根尖吸收水分和无机盐最活跃的部位",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "导管是活细胞构成的输导组织",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "分生区细胞具有较大的液泡",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "筛管负责运输有机物，是死细胞",
+        "answer": false
+      }
+    ],
+    "explanation": "导管是死细胞，负责运输水和无机盐；筛管是活细胞，运输有机物；分生区细胞分裂旺盛，没有大液泡。",
+    "subject": "植物学",
+    "concept": "植物组织与器官",
+    "difficulty": "basic",
+    "chart": null,
+    "year": null,
+    "module": "module_2",
+    "target": "high_school",
+    "tags": [
+      "module_2",
+      "植物学",
+      "植物组织与器官",
+      "high_school"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "下列关于植物根尖结构的叙述，错误的是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "成熟区是根尖吸收水分和无机盐最活跃的部位",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "筛管负责运输有机物，是死细胞",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "导管是活细胞构成的输导组织",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "分生区细胞具有较大的液泡",
+        "answer": false
+      }
+    ],
+    "explanation": "导管是死细胞，负责运输水和无机盐；筛管是活细胞，运输有机物；分生区细胞分裂旺盛，没有大液泡。",
+    "subject": "植物学",
+    "concept": "植物组织与器官",
+    "difficulty": "basic",
+    "chart": null,
+    "year": null,
+    "module": "module_2",
+    "target": "high_school",
+    "tags": [
+      "module_2",
+      "植物学",
+      "植物组织与器官",
+      "high_school"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "关于生长素的叙述，正确的是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "生长素只能从形态学上端运输到下端",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "生长素的化学本质是蛋白质",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "生长素的作用只表现为促进生长",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "胚芽鞘感受光刺激的部位是尖端",
+        "answer": true
+      }
+    ],
+    "explanation": "生长素主要是极性运输（形态学上端→下端），但也有非极性运输；具有两重性；化学本质为吲哚乙酸（IAA）；感受光刺激的部位是胚芽鞘尖端。",
+    "subject": "植物生理学",
+    "concept": "植物激素调节",
+    "difficulty": "basic",
+    "chart": null,
+    "year": null,
+    "module": "module_2",
+    "target": "high_school",
+    "tags": [
+      "module_2",
+      "植物生理学",
+      "植物激素调节",
+      "high_school"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "下列植物激素中，能促进果实成熟的是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "生长素只能从形态学上端运输到下端",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "胚芽鞘感受光刺激的部位是尖端",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "生长素的化学本质是蛋白质",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "生长素的作用只表现为促进生长",
+        "answer": false
+      }
+    ],
+    "explanation": "生长素主要是极性运输（形态学上端→下端），但也有非极性运输；具有两重性；化学本质为吲哚乙酸（IAA）；感受光刺激的部位是胚芽鞘尖端。",
+    "subject": "植物生理学",
+    "concept": "植物激素调节",
+    "difficulty": "basic",
+    "chart": null,
+    "year": null,
+    "module": "module_2",
+    "target": "high_school",
+    "tags": [
+      "module_2",
+      "植物生理学",
+      "植物激素调节",
+      "high_school"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "下列关于植物激素的叙述，错误的是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "生长素的作用只表现为促进生长",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "生长素只能从形态学上端运输到下端",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "生长素的化学本质是蛋白质",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "胚芽鞘感受光刺激的部位是尖端",
+        "answer": true
+      }
+    ],
+    "explanation": "生长素主要是极性运输（形态学上端→下端），但也有非极性运输；具有两重性；化学本质为吲哚乙酸（IAA）；感受光刺激的部位是胚芽鞘尖端。",
+    "subject": "植物生理学",
+    "concept": "植物激素调节",
+    "difficulty": "basic",
+    "chart": null,
+    "year": null,
+    "module": "module_2",
+    "target": "high_school",
+    "tags": [
+      "module_2",
+      "植物生理学",
+      "植物激素调节",
+      "high_school"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "关于绿色植物光合作用和呼吸作用的叙述，正确的是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "光合作用只在白天进行，呼吸作用只在夜晚进行",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "光合作用产生的 O2 可被呼吸作用利用",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "光合作用的暗反应不消耗能量",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "光合作用和呼吸作用产生的 ATP 用途相同",
+        "answer": false
+      }
+    ],
+    "explanation": "光合作用产生的 O2 可被呼吸作用消耗；呼吸作用昼夜都进行；光合产生的 ATP 主要用于暗反应；呼吸产生的 ATP 为各种生命活动供能。",
+    "subject": "植物生理学",
+    "concept": "光合与呼吸综合",
+    "difficulty": "basic",
+    "chart": null,
+    "year": null,
+    "module": "module_2",
+    "target": "high_school",
+    "tags": [
+      "module_2",
+      "植物生理学",
+      "光合与呼吸综合",
+      "high_school"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "关于叶肉细胞能量代谢的叙述，错误的是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "光合作用只在白天进行，呼吸作用只在夜晚进行",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "光合作用产生的 O2 可被呼吸作用利用",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "光合作用的暗反应不消耗能量",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "光合作用和呼吸作用产生的 ATP 用途相同",
+        "answer": false
+      }
+    ],
+    "explanation": "光合作用产生的 O2 可被呼吸作用消耗；呼吸作用昼夜都进行；光合产生的 ATP 主要用于暗反应；呼吸产生的 ATP 为各种生命活动供能。",
+    "subject": "植物生理学",
+    "concept": "光合与呼吸综合",
+    "difficulty": "basic",
+    "chart": null,
+    "year": null,
+    "module": "module_2",
+    "target": "high_school",
+    "tags": [
+      "module_2",
+      "植物生理学",
+      "光合与呼吸综合",
+      "high_school"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "下列关于细菌的叙述，正确的是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "细菌细胞中没有核糖体",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "所有细菌都有荚膜",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "所有细菌都是异养生物",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "细菌的细胞壁主要成分是肽聚糖",
+        "answer": true
+      }
+    ],
+    "explanation": "细菌主要由肽聚糖构成细胞壁；含核糖体；存在光合细菌和化能合成细菌（自养）；荚膜并非所有细菌都有。",
+    "subject": "微生物学",
+    "concept": "微生物的种类与培养",
+    "difficulty": "basic",
+    "chart": null,
+    "year": null,
+    "module": "module_2",
+    "target": "high_school",
+    "tags": [
+      "module_2",
+      "微生物学",
+      "微生物的种类与培养",
+      "high_school"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "下列不属于内环境组成成分的是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "内环境中不含有任何蛋白质",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "内环境主要包括血浆、组织液和淋巴",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "稳态只通过神经调节维持",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "细胞内液属于内环境",
+        "answer": false
+      }
+    ],
+    "explanation": "内环境由细胞外液构成，包括血浆、组织液、淋巴；血浆中含大量蛋白质；稳态通过神经—体液—免疫调节共同维持。",
+    "subject": "动物生理学",
+    "concept": "内环境与稳态",
+    "difficulty": "basic",
+    "chart": null,
+    "year": null,
+    "module": "module_3",
+    "target": "high_school",
+    "tags": [
+      "module_3",
+      "动物生理学",
+      "内环境与稳态",
+      "high_school"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "下列关于血浆、组织液、淋巴的关系，错误的是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "稳态只通过神经调节维持",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "细胞内液属于内环境",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "内环境中不含有任何蛋白质",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "内环境主要包括血浆、组织液和淋巴",
+        "answer": true
+      }
+    ],
+    "explanation": "内环境由细胞外液构成，包括血浆、组织液、淋巴；血浆中含大量蛋白质；稳态通过神经—体液—免疫调节共同维持。",
+    "subject": "动物生理学",
+    "concept": "内环境与稳态",
+    "difficulty": "basic",
+    "chart": null,
+    "year": null,
+    "module": "module_3",
+    "target": "high_school",
+    "tags": [
+      "module_3",
+      "动物生理学",
+      "内环境与稳态",
+      "high_school"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "关于神经调节的叙述，正确的是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "神经调节的基本方式是反射",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "反射弧由感受器、传入神经、神经中枢、传出神经、效应器组成",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "兴奋在突触处的传递是双向的",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "神经纤维上兴奋以电信号形式传导",
+        "answer": false
+      }
+    ],
+    "explanation": "由于神经递质只能由突触前膜释放并作用于突触后膜，兴奋在突触处单向传递。",
+    "subject": "动物生理学",
+    "concept": "神经调节",
+    "difficulty": "basic",
+    "chart": null,
+    "year": null,
+    "module": "module_3",
+    "target": "high_school",
+    "tags": [
+      "module_3",
+      "动物生理学",
+      "神经调节",
+      "high_school"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "关于兴奋在神经纤维上传导的叙述，错误的是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "兴奋在突触处的传递是双向的",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "反射弧由感受器、传入神经、神经中枢、传出神经、效应器组成",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "神经调节的基本方式是反射",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "神经纤维上兴奋以电信号形式传导",
+        "answer": false
+      }
+    ],
+    "explanation": "由于神经递质只能由突触前膜释放并作用于突触后膜，兴奋在突触处单向传递。",
+    "subject": "动物生理学",
+    "concept": "神经调节",
+    "difficulty": "basic",
+    "chart": null,
+    "year": null,
+    "module": "module_3",
+    "target": "high_school",
+    "tags": [
+      "module_3",
+      "动物生理学",
+      "神经调节",
+      "high_school"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "突触传递的特点是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "神经调节的基本方式是反射",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "反射弧由感受器、传入神经、神经中枢、传出神经、效应器组成",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "神经纤维上兴奋以电信号形式传导",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "兴奋在突触处的传递是双向的",
+        "answer": true
+      }
+    ],
+    "explanation": "由于神经递质只能由突触前膜释放并作用于突触后膜，兴奋在突触处单向传递。",
+    "subject": "动物生理学",
+    "concept": "神经调节",
+    "difficulty": "basic",
+    "chart": null,
+    "year": null,
+    "module": "module_3",
+    "target": "high_school",
+    "tags": [
+      "module_3",
+      "动物生理学",
+      "神经调节",
+      "high_school"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "下列关于甲状腺激素的叙述，错误的是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "激素调节具有微量高效、通过体液运输、作用于靶器官靶细胞的特点",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "激素由内分泌腺分泌后通过导管运输",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "激素可以直接参与细胞代谢",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "所有激素都是蛋白质",
+        "answer": false
+      }
+    ],
+    "explanation": "内分泌腺无导管，激素直接进入血液；激素只起调节作用，不参与细胞代谢；激素种类包括固醇（如性激素）、氨基酸衍生物（甲状腺激素）、蛋白质类（胰岛素）等。",
+    "subject": "动物生理学",
+    "concept": "体液调节",
+    "difficulty": "basic",
+    "chart": null,
+    "year": null,
+    "module": "module_3",
+    "target": "high_school",
+    "tags": [
+      "module_3",
+      "动物生理学",
+      "体液调节",
+      "high_school"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "血糖调节中，能降低血糖的激素是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "激素可以直接参与细胞代谢",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "激素由内分泌腺分泌后通过导管运输",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "激素调节具有微量高效、通过体液运输、作用于靶器官靶细胞的特点",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "所有激素都是蛋白质",
+        "answer": false
+      }
+    ],
+    "explanation": "内分泌腺无导管，激素直接进入血液；激素只起调节作用，不参与细胞代谢；激素种类包括固醇（如性激素）、氨基酸衍生物（甲状腺激素）、蛋白质类（胰岛素）等。",
+    "subject": "动物生理学",
+    "concept": "体液调节",
+    "difficulty": "basic",
+    "chart": null,
+    "year": null,
+    "module": "module_3",
+    "target": "high_school",
+    "tags": [
+      "module_3",
+      "动物生理学",
+      "体液调节",
+      "high_school"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "关于人体免疫的叙述，正确的是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "体液免疫不产生记忆细胞",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "吞噬细胞只参与非特异性免疫",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "第一道防线由皮肤和黏膜构成",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "T 细胞不参与任何免疫反应",
+        "answer": false
+      }
+    ],
+    "explanation": "皮肤黏膜是第一道防线；吞噬细胞既参与非特异性免疫也参与特异性免疫；体液免疫和细胞免疫都能产生记忆细胞。",
+    "subject": "动物生理学",
+    "concept": "免疫调节",
+    "difficulty": "basic",
+    "chart": null,
+    "year": null,
+    "module": "module_3",
+    "target": "high_school",
+    "tags": [
+      "module_3",
+      "动物生理学",
+      "免疫调节",
+      "high_school"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "下列属于特异性免疫的是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "体液免疫不产生记忆细胞",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "T 细胞不参与任何免疫反应",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "吞噬细胞只参与非特异性免疫",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "第一道防线由皮肤和黏膜构成",
+        "answer": true
+      }
+    ],
+    "explanation": "皮肤黏膜是第一道防线；吞噬细胞既参与非特异性免疫也参与特异性免疫；体液免疫和细胞免疫都能产生记忆细胞。",
+    "subject": "动物生理学",
+    "concept": "免疫调节",
+    "difficulty": "basic",
+    "chart": null,
+    "year": null,
+    "module": "module_3",
+    "target": "high_school",
+    "tags": [
+      "module_3",
+      "动物生理学",
+      "免疫调节",
+      "high_school"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "关于抗体的叙述，错误的是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "T 细胞不参与任何免疫反应",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "吞噬细胞只参与非特异性免疫",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "第一道防线由皮肤和黏膜构成",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "体液免疫不产生记忆细胞",
+        "answer": false
+      }
+    ],
+    "explanation": "皮肤黏膜是第一道防线；吞噬细胞既参与非特异性免疫也参与特异性免疫；体液免疫和细胞免疫都能产生记忆细胞。",
+    "subject": "动物生理学",
+    "concept": "免疫调节",
+    "difficulty": "basic",
+    "chart": null,
+    "year": null,
+    "module": "module_3",
+    "target": "high_school",
+    "tags": [
+      "module_3",
+      "动物生理学",
+      "免疫调节",
+      "high_school"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "关于种群的叙述，正确的是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "所有种群的增长都呈'J'型",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "性别比例与种群数量无关",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "年龄组成不影响种群密度",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "种群密度是种群最基本的数量特征",
+        "answer": true
+      }
+    ],
+    "explanation": "种群密度是最基本的数量特征；年龄组成、性别比例、出生率死亡率等均影响种群密度；自然条件下一般呈'S'型增长。",
+    "subject": "生态学",
+    "concept": "种群、群落与生态系统",
+    "difficulty": "basic",
+    "chart": null,
+    "year": null,
+    "module": "module_3",
+    "target": "high_school",
+    "tags": [
+      "module_3",
+      "生态学",
+      "种群、群落与生态系统",
+      "high_school"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "下列关于生态系统能量流动的叙述，错误的是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "所有种群的增长都呈'J'型",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "性别比例与种群数量无关",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "种群密度是种群最基本的数量特征",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "年龄组成不影响种群密度",
+        "answer": false
+      }
+    ],
+    "explanation": "种群密度是最基本的数量特征；年龄组成、性别比例、出生率死亡率等均影响种群密度；自然条件下一般呈'S'型增长。",
+    "subject": "生态学",
+    "concept": "种群、群落与生态系统",
+    "difficulty": "basic",
+    "chart": null,
+    "year": null,
+    "module": "module_3",
+    "target": "high_school",
+    "tags": [
+      "module_3",
+      "生态学",
+      "种群、群落与生态系统",
+      "high_school"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "生态系统的物质循环具有的特点是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "所有种群的增长都呈'J'型",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "种群密度是种群最基本的数量特征",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "性别比例与种群数量无关",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "年龄组成不影响种群密度",
+        "answer": false
+      }
+    ],
+    "explanation": "种群密度是最基本的数量特征；年龄组成、性别比例、出生率死亡率等均影响种群密度；自然条件下一般呈'S'型增长。",
+    "subject": "生态学",
+    "concept": "种群、群落与生态系统",
+    "difficulty": "basic",
+    "chart": null,
+    "year": null,
+    "module": "module_3",
+    "target": "high_school",
+    "tags": [
+      "module_3",
+      "生态学",
+      "种群、群落与生态系统",
+      "high_school"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "关于 DNA 双螺旋结构的叙述，正确的是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "脱氧核糖与碱基交替连接构成基本骨架",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "碱基配对原则是 A-G、T-C",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "DNA 的基本单位是脱氧核苷酸",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "两条链方向相同",
+        "answer": false
+      }
+    ],
+    "explanation": "DNA 两条脱氧核苷酸链反向平行；碱基通过氢键互补配对（A-T、G-C）；脱氧核糖和磷酸交替连接构成基本骨架。",
+    "subject": "分子生物学",
+    "concept": "DNA 的结构与复制",
+    "difficulty": "basic",
+    "chart": null,
+    "year": null,
+    "module": "module_4",
+    "target": "high_school",
+    "tags": [
+      "module_4",
+      "分子生物学",
+      "DNA 的结构与复制",
+      "high_school"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "关于 DNA 复制的叙述，错误的是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "脱氧核糖与碱基交替连接构成基本骨架",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "DNA 的基本单位是脱氧核苷酸",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "碱基配对原则是 A-G、T-C",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "两条链方向相同",
+        "answer": false
+      }
+    ],
+    "explanation": "DNA 两条脱氧核苷酸链反向平行；碱基通过氢键互补配对（A-T、G-C）；脱氧核糖和磷酸交替连接构成基本骨架。",
+    "subject": "分子生物学",
+    "concept": "DNA 的结构与复制",
+    "difficulty": "basic",
+    "chart": null,
+    "year": null,
+    "module": "module_4",
+    "target": "high_school",
+    "tags": [
+      "module_4",
+      "分子生物学",
+      "DNA 的结构与复制",
+      "high_school"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "一个 DNA 分子中 A+T 占 60%，则 G 占",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "两条链方向相同",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "DNA 的基本单位是脱氧核苷酸",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "碱基配对原则是 A-G、T-C",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "脱氧核糖与碱基交替连接构成基本骨架",
+        "answer": false
+      }
+    ],
+    "explanation": "DNA 两条脱氧核苷酸链反向平行；碱基通过氢键互补配对（A-T、G-C）；脱氧核糖和磷酸交替连接构成基本骨架。",
+    "subject": "分子生物学",
+    "concept": "DNA 的结构与复制",
+    "difficulty": "basic",
+    "chart": null,
+    "year": null,
+    "module": "module_4",
+    "target": "high_school",
+    "tags": [
+      "module_4",
+      "分子生物学",
+      "DNA 的结构与复制",
+      "high_school"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "关于转录和翻译的叙述，正确的是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "一个基因只能转录一种 mRNA",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "翻译过程中 tRNA 携带氨基酸到核糖体",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "转录发生在细胞质中",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "mRNA 上的反密码子与 tRNA 上的密码子配对",
+        "answer": false
+      }
+    ],
+    "explanation": "转录发生在细胞核（真核）；mRNA 上有密码子，tRNA 上有反密码子；一个基因通过可变剪接可产生多种 mRNA。",
+    "subject": "分子生物学",
+    "concept": "基因的表达",
+    "difficulty": "basic",
+    "chart": null,
+    "year": null,
+    "module": "module_4",
+    "target": "high_school",
+    "tags": [
+      "module_4",
+      "分子生物学",
+      "基因的表达",
+      "high_school"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "下列关于中心法则的叙述，错误的是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "翻译过程中 tRNA 携带氨基酸到核糖体",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "一个基因只能转录一种 mRNA",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "mRNA 上的反密码子与 tRNA 上的密码子配对",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "转录发生在细胞质中",
+        "answer": false
+      }
+    ],
+    "explanation": "转录发生在细胞核（真核）；mRNA 上有密码子，tRNA 上有反密码子；一个基因通过可变剪接可产生多种 mRNA。",
+    "subject": "分子生物学",
+    "concept": "基因的表达",
+    "difficulty": "basic",
+    "chart": null,
+    "year": null,
+    "module": "module_4",
+    "target": "high_school",
+    "tags": [
+      "module_4",
+      "分子生物学",
+      "基因的表达",
+      "high_school"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "密码子位于",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "翻译过程中 tRNA 携带氨基酸到核糖体",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "mRNA 上的反密码子与 tRNA 上的密码子配对",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "转录发生在细胞质中",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "一个基因只能转录一种 mRNA",
+        "answer": false
+      }
+    ],
+    "explanation": "转录发生在细胞核（真核）；mRNA 上有密码子，tRNA 上有反密码子；一个基因通过可变剪接可产生多种 mRNA。",
+    "subject": "分子生物学",
+    "concept": "基因的表达",
+    "difficulty": "basic",
+    "chart": null,
+    "year": null,
+    "module": "module_4",
+    "target": "high_school",
+    "tags": [
+      "module_4",
+      "分子生物学",
+      "基因的表达",
+      "high_school"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "下列关于孟德尔遗传规律的叙述，正确的是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "孟德尔遗传规律适用于所有生物",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "分离定律的实质是等位基因随同源染色体的分离而分开",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "自由组合定律指的是配子的自由组合",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "基因的自由组合发生在受精作用过程中",
+        "answer": false
+      }
+    ],
+    "explanation": "孟德尔遗传规律适用于真核生物有性生殖过程中核基因的遗传；自由组合发生在减数分裂形成配子时。",
+    "subject": "遗传学",
+    "concept": "孟德尔遗传规律",
+    "difficulty": "basic",
+    "chart": null,
+    "year": null,
+    "module": "module_4",
+    "target": "high_school",
+    "tags": [
+      "module_4",
+      "遗传学",
+      "孟德尔遗传规律",
+      "high_school"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "一对相对性状的杂合子自交，后代的性状分离比是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "分离定律的实质是等位基因随同源染色体的分离而分开",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "基因的自由组合发生在受精作用过程中",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "孟德尔遗传规律适用于所有生物",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "自由组合定律指的是配子的自由组合",
+        "answer": false
+      }
+    ],
+    "explanation": "孟德尔遗传规律适用于真核生物有性生殖过程中核基因的遗传；自由组合发生在减数分裂形成配子时。",
+    "subject": "遗传学",
+    "concept": "孟德尔遗传规律",
+    "difficulty": "basic",
+    "chart": null,
+    "year": null,
+    "module": "module_4",
+    "target": "high_school",
+    "tags": [
+      "module_4",
+      "遗传学",
+      "孟德尔遗传规律",
+      "high_school"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "两对相对性状独立遗传时，F2 的表现型比例为",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "自由组合定律指的是配子的自由组合",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "孟德尔遗传规律适用于所有生物",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "基因的自由组合发生在受精作用过程中",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "分离定律的实质是等位基因随同源染色体的分离而分开",
+        "answer": true
+      }
+    ],
+    "explanation": "孟德尔遗传规律适用于真核生物有性生殖过程中核基因的遗传；自由组合发生在减数分裂形成配子时。",
+    "subject": "遗传学",
+    "concept": "孟德尔遗传规律",
+    "difficulty": "basic",
+    "chart": null,
+    "year": null,
+    "module": "module_4",
+    "target": "high_school",
+    "tags": [
+      "module_4",
+      "遗传学",
+      "孟德尔遗传规律",
+      "high_school"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "关于伴 X 染色体隐性遗传病的叙述，正确的是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "父亲患病，女儿一定患病",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "母亲患病，儿子一定患病",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "男性患者多于女性患者",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "致病基因可以从父亲传递给儿子",
+        "answer": false
+      }
+    ],
+    "explanation": "伴 X 隐性遗传：母亲患病（XaXa）→儿子必患病（XaY）；父亲的 X 只传给女儿。",
+    "subject": "遗传学",
+    "concept": "伴性遗传",
+    "difficulty": "basic",
+    "chart": null,
+    "year": null,
+    "module": "module_4",
+    "target": "high_school",
+    "tags": [
+      "module_4",
+      "遗传学",
+      "伴性遗传",
+      "high_school"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "关于红绿色盲遗传的叙述，错误的是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "母亲患病，儿子一定患病",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "男性患者多于女性患者",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "父亲患病，女儿一定患病",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "致病基因可以从父亲传递给儿子",
+        "answer": false
+      }
+    ],
+    "explanation": "伴 X 隐性遗传：母亲患病（XaXa）→儿子必患病（XaY）；父亲的 X 只传给女儿。",
+    "subject": "遗传学",
+    "concept": "伴性遗传",
+    "difficulty": "basic",
+    "chart": null,
+    "year": null,
+    "module": "module_4",
+    "target": "high_school",
+    "tags": [
+      "module_4",
+      "遗传学",
+      "伴性遗传",
+      "high_school"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "关于现代生物进化理论的叙述，正确的是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "变异是定向的",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "自然选择决定生物进化的方向",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "地理隔离必然导致生殖隔离",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "生物进化的实质是种群基因型频率的改变",
+        "answer": false
+      }
+    ],
+    "explanation": "进化的实质是种群基因频率的定向改变；变异是不定向的；自然选择决定方向；生殖隔离是新物种形成的标志。",
+    "subject": "进化生物学",
+    "concept": "现代生物进化理论",
+    "difficulty": "basic",
+    "chart": null,
+    "year": null,
+    "module": "module_4",
+    "target": "high_school",
+    "tags": [
+      "module_4",
+      "进化生物学",
+      "现代生物进化理论",
+      "high_school"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "下列不属于生物进化原材料的是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "变异是定向的",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "地理隔离必然导致生殖隔离",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "生物进化的实质是种群基因型频率的改变",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "自然选择决定生物进化的方向",
+        "answer": true
+      }
+    ],
+    "explanation": "进化的实质是种群基因频率的定向改变；变异是不定向的；自然选择决定方向；生殖隔离是新物种形成的标志。",
+    "subject": "进化生物学",
+    "concept": "现代生物进化理论",
+    "difficulty": "basic",
+    "chart": null,
+    "year": null,
+    "module": "module_4",
+    "target": "high_school",
+    "tags": [
+      "module_4",
+      "进化生物学",
+      "现代生物进化理论",
+      "high_school"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "新物种形成的标志是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "自然选择决定生物进化的方向",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "生物进化的实质是种群基因型频率的改变",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "变异是定向的",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "地理隔离必然导致生殖隔离",
+        "answer": false
+      }
+    ],
+    "explanation": "进化的实质是种群基因频率的定向改变；变异是不定向的；自然选择决定方向；生殖隔离是新物种形成的标志。",
+    "subject": "进化生物学",
+    "concept": "现代生物进化理论",
+    "difficulty": "basic",
+    "chart": null,
+    "year": null,
+    "module": "module_4",
+    "target": "high_school",
+    "tags": [
+      "module_4",
+      "进化生物学",
+      "现代生物进化理论",
+      "high_school"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "下列关于基因工程的叙述，正确的是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "限制性内切酶能识别特定的 DNA 序列并切割",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "DNA 连接酶只能连接具有互补黏性末端的 DNA 片段",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "基因工程不能用于生产药物",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "质粒是存在于真核生物细胞核中的 DNA",
+        "answer": false
+      }
+    ],
+    "explanation": "限制酶识别特定 DNA 序列（回文序列）；DNA 连接酶也可以连接平末端；质粒多为细菌中的环状 DNA；基因工程广泛用于生产胰岛素、干扰素等。",
+    "subject": "生物信息学",
+    "concept": "基因工程与生物技术",
+    "difficulty": "basic",
+    "chart": null,
+    "year": null,
+    "module": "module_4",
+    "target": "high_school",
+    "tags": [
+      "module_4",
+      "生物信息学",
+      "基因工程与生物技术",
+      "high_school"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "基因工程中常用的工具酶不包括",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "基因工程不能用于生产药物",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "质粒是存在于真核生物细胞核中的 DNA",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "限制性内切酶能识别特定的 DNA 序列并切割",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "DNA 连接酶只能连接具有互补黏性末端的 DNA 片段",
+        "answer": false
+      }
+    ],
+    "explanation": "限制酶识别特定 DNA 序列（回文序列）；DNA 连接酶也可以连接平末端；质粒多为细菌中的环状 DNA；基因工程广泛用于生产胰岛素、干扰素等。",
+    "subject": "生物信息学",
+    "concept": "基因工程与生物技术",
+    "difficulty": "basic",
+    "chart": null,
+    "year": null,
+    "module": "module_4",
+    "target": "high_school",
+    "tags": [
+      "module_4",
+      "生物信息学",
+      "基因工程与生物技术",
+      "high_school"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "PCR 技术的主要步骤是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "限制性内切酶能识别特定的 DNA 序列并切割",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "DNA 连接酶只能连接具有互补黏性末端的 DNA 片段",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "基因工程不能用于生产药物",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "质粒是存在于真核生物细胞核中的 DNA",
+        "answer": false
+      }
+    ],
+    "explanation": "限制酶识别特定 DNA 序列（回文序列）；DNA 连接酶也可以连接平末端；质粒多为细菌中的环状 DNA；基因工程广泛用于生产胰岛素、干扰素等。",
+    "subject": "生物信息学",
+    "concept": "基因工程与生物技术",
+    "difficulty": "basic",
+    "chart": null,
+    "year": null,
+    "module": "module_4",
+    "target": "high_school",
+    "tags": [
+      "module_4",
+      "生物信息学",
+      "基因工程与生物技术",
+      "high_school"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "下表为某胞内酶在不同 pH 条件下测得的相对活性。根据表格判断下列叙述正确的是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "pH 对酶活性没有显著影响",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "该酶的最适 pH 约为 7.5",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "酶在 pH=9.0 时一定不可逆失活",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "该酶在 pH=5.0 时活性仍较高",
+        "answer": false
+      }
+    ],
+    "explanation": "酶活性在 pH=7.5 时达到最大值 100，呈钟形曲线；pH=9.0 时活性下降，但不一定不可逆失活。",
+    "subject": "细胞生物学",
+    "concept": "酶的活性曲线",
+    "difficulty": "basic",
+    "chart": "| pH | 相对活性 |\n|----|---------|\n| 5.0 | 15 |\n| 6.0 | 45 |\n| 7.0 | 92 |\n| 7.5 | 100 |\n| 8.0 | 88 |\n| 9.0 | 20 |",
+    "year": null,
+    "module": "module_1",
+    "target": "high_school",
+    "tags": [
+      "module_1",
+      "细胞生物学",
+      "酶的活性曲线",
+      "high_school"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "下表为某胞内酶在不同 pH 条件下测得的相对活性。根据表格判断下列叙述正确的是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "该酶在 pH=5.0 时活性仍较高",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "pH 对酶活性没有显著影响",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "酶在 pH=9.0 时一定不可逆失活",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "该酶的最适 pH 约为 7.5",
+        "answer": true
+      }
+    ],
+    "explanation": "酶活性在 pH=7.5 时达到最大值 100，呈钟形曲线；pH=9.0 时活性下降，但不一定不可逆失活。",
+    "subject": "细胞生物学",
+    "concept": "酶的活性曲线",
+    "difficulty": "basic",
+    "chart": "| pH | 相对活性 |\n|----|---------|\n| 5.0 | 15 |\n| 6.0 | 45 |\n| 7.0 | 92 |\n| 7.5 | 100 |\n| 8.0 | 88 |\n| 9.0 | 20 |",
+    "year": null,
+    "module": "module_1",
+    "target": "high_school",
+    "tags": [
+      "module_1",
+      "细胞生物学",
+      "酶的活性曲线",
+      "high_school"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "下表为某植物叶片在不同光照强度下测得的净光合速率（CO2 吸收量，单位省略）。下列判断正确的是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "该植物的光补偿点约为 100",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "光照强度为 50 时光合速率等于呼吸速率",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "该植物不会达到光饱和点",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "光照强度 600→1000 光合速率大幅提高",
+        "answer": false
+      }
+    ],
+    "explanation": "净光合速率=0 时光合速率=呼吸速率，此时对应光照强度 50，即光补偿点；600→1000 时净光合不再上升，已达光饱和。",
+    "subject": "植物生理学",
+    "concept": "光合作用速率",
+    "difficulty": "basic",
+    "chart": "| 光照强度 | 净光合速率 |\n|----------|-----------|\n| 0 | -4 |\n| 20 | -2 |\n| 50 | 0 |\n| 100 | 6 |\n| 300 | 14 |\n| 600 | 18 |\n| 1000 | 18 |",
+    "year": null,
+    "module": "module_2",
+    "target": "high_school",
+    "tags": [
+      "module_2",
+      "植物生理学",
+      "光合作用速率",
+      "high_school"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "下表为某植物叶片在不同光照强度下测得的净光合速率（CO2 吸收量，单位省略）。下列判断正确的是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "光照强度 600→1000 光合速率大幅提高",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "光照强度为 50 时光合速率等于呼吸速率",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "该植物的光补偿点约为 100",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "该植物不会达到光饱和点",
+        "answer": false
+      }
+    ],
+    "explanation": "净光合速率=0 时光合速率=呼吸速率，此时对应光照强度 50，即光补偿点；600→1000 时净光合不再上升，已达光饱和。",
+    "subject": "植物生理学",
+    "concept": "光合作用速率",
+    "difficulty": "basic",
+    "chart": "| 光照强度 | 净光合速率 |\n|----------|-----------|\n| 0 | -4 |\n| 20 | -2 |\n| 50 | 0 |\n| 100 | 6 |\n| 300 | 14 |\n| 600 | 18 |\n| 1000 | 18 |",
+    "year": null,
+    "module": "module_2",
+    "target": "high_school",
+    "tags": [
+      "module_2",
+      "植物生理学",
+      "光合作用速率",
+      "high_school"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "某草原生态系统中野兔种群数量随年份变化如下表。下列叙述正确的是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "2015-2017 种群数量呈指数增长",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "2021-2023 种群增长缓慢，可能接近环境容纳量",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "环境容纳量一定是 200",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "该种群将无限增长",
+        "answer": false
+      }
+    ],
+    "explanation": "种群数量增长放缓，接近稳定，说明接近 K（环境容纳量）；无限增长只在理想条件下发生。",
+    "subject": "生态学",
+    "concept": "种群增长曲线",
+    "difficulty": "basic",
+    "chart": "| 年份 | 种群数量（只/km2） |\n|------|-------------------|\n| 2015 | 20 |\n| 2017 | 80 |\n| 2019 | 180 |\n| 2021 | 240 |\n| 2023 | 250 |",
+    "year": null,
+    "module": "module_3",
+    "target": "high_school",
+    "tags": [
+      "module_3",
+      "生态学",
+      "种群增长曲线",
+      "high_school"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "下列示意图表示中心法则及其扩展。据图判断正确的是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "逆转录需要逆转录酶，某些病毒能进行",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "RNA 复制发生在所有细胞中",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "所有生物的遗传信息都从 DNA 流向 DNA",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "翻译在细胞核中进行",
+        "answer": false
+      }
+    ],
+    "explanation": "逆转录存在于逆转录病毒（如 HIV），需逆转录酶；正常细胞以 DNA 复制、转录、翻译为主。",
+    "subject": "分子生物学",
+    "concept": "中心法则",
+    "difficulty": "basic",
+    "chart": "DNA →(转录) RNA →(翻译) 蛋白质\n      ↑(逆转录)     ↑(RNA 复制)\n      RNA            RNA",
+    "year": null,
+    "module": "module_4",
+    "target": "high_school",
+    "tags": [
+      "module_4",
+      "分子生物学",
+      "中心法则",
+      "high_school"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "下列示意图表示中心法则及其扩展。据图判断正确的是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "所有生物的遗传信息都从 DNA 流向 DNA",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "逆转录需要逆转录酶，某些病毒能进行",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "RNA 复制发生在所有细胞中",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "翻译在细胞核中进行",
+        "answer": false
+      }
+    ],
+    "explanation": "逆转录存在于逆转录病毒（如 HIV），需逆转录酶；正常细胞以 DNA 复制、转录、翻译为主。",
+    "subject": "分子生物学",
+    "concept": "中心法则",
+    "difficulty": "basic",
+    "chart": "DNA →(转录) RNA →(翻译) 蛋白质\n      ↑(逆转录)     ↑(RNA 复制)\n      RNA            RNA",
+    "year": null,
+    "module": "module_4",
+    "target": "high_school",
+    "tags": [
+      "module_4",
+      "分子生物学",
+      "中心法则",
+      "high_school"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "健康人进食后血糖浓度变化如下表。下列叙述错误的是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "血糖升高会刺激胰岛 B 细胞分泌胰岛素",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "血糖调节只受激素调节，与神经无关",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "进食后 30 min 血糖升高是由于糖类消化吸收",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "120 min 后血糖恢复正常主要依靠胰高血糖素",
+        "answer": false
+      }
+    ],
+    "explanation": "血糖调节为神经—体液共同调节，下丘脑通过传出神经控制胰岛和肾上腺。",
+    "subject": "动物生理学",
+    "concept": "血糖调节",
+    "difficulty": "basic",
+    "chart": "| 时间（min） | 血糖（mmol/L） |\n|-----------|---------------|\n| 0（空腹） | 5.1 |\n| 30 | 7.8 |\n| 60 | 7.2 |\n| 120 | 5.5 |\n| 180 | 5.0 |",
+    "year": null,
+    "module": "module_3",
+    "target": "high_school",
+    "tags": [
+      "module_3",
+      "动物生理学",
+      "血糖调节",
+      "high_school"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "健康人进食后血糖浓度变化如下表。下列叙述错误的是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "血糖调节只受激素调节，与神经无关",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "进食后 30 min 血糖升高是由于糖类消化吸收",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "120 min 后血糖恢复正常主要依靠胰高血糖素",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "血糖升高会刺激胰岛 B 细胞分泌胰岛素",
+        "answer": false
+      }
+    ],
+    "explanation": "血糖调节为神经—体液共同调节，下丘脑通过传出神经控制胰岛和肾上腺。",
+    "subject": "动物生理学",
+    "concept": "血糖调节",
+    "difficulty": "basic",
+    "chart": "| 时间（min） | 血糖（mmol/L） |\n|-----------|---------------|\n| 0（空腹） | 5.1 |\n| 30 | 7.8 |\n| 60 | 7.2 |\n| 120 | 5.5 |\n| 180 | 5.0 |",
+    "year": null,
+    "module": "module_3",
+    "target": "high_school",
+    "tags": [
+      "module_3",
+      "动物生理学",
+      "血糖调节",
+      "high_school"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "下表为某酶在不同底物浓度下测得的初速率（v）。根据米氏方程，下列推断正确的是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "Vmax 约为 40",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "Km 大约在 [S]=1.0 ~ 2.0 之间",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "随着 [S] 增大 v 持续线性上升",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "该酶不遵循米氏方程",
+        "answer": false
+      }
+    ],
+    "explanation": "v=Vmax/2 时 [S]=Km，由表 v≈50 时 [S]≈1~2；Vmax 趋近 100。",
+    "subject": "生物化学",
+    "concept": "酶动力学",
+    "difficulty": "league",
+    "chart": "| [S] | v |\n|-----|---|\n| 0.2 | 12 |\n| 0.5 | 25 |\n| 1.0 | 40 |\n| 2.0 | 60 |\n| 5.0 | 88 |\n| 10.0 | 96 |\n| 20.0 | 99 |",
+    "year": null,
+    "module": "module_1",
+    "target": "competition",
+    "tags": [
+      "module_1",
+      "生物化学",
+      "酶动力学",
+      "competition"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "下表为某酶在不同底物浓度下测得的初速率（v）。根据米氏方程，下列推断正确的是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "Km 大约在 [S]=1.0 ~ 2.0 之间",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "该酶不遵循米氏方程",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "随着 [S] 增大 v 持续线性上升",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "Vmax 约为 40",
+        "answer": false
+      }
+    ],
+    "explanation": "v=Vmax/2 时 [S]=Km，由表 v≈50 时 [S]≈1~2；Vmax 趋近 100。",
+    "subject": "生物化学",
+    "concept": "酶动力学",
+    "difficulty": "league",
+    "chart": "| [S] | v |\n|-----|---|\n| 0.2 | 12 |\n| 0.5 | 25 |\n| 1.0 | 40 |\n| 2.0 | 60 |\n| 5.0 | 88 |\n| 10.0 | 96 |\n| 20.0 | 99 |",
+    "year": null,
+    "module": "module_1",
+    "target": "competition",
+    "tags": [
+      "module_1",
+      "生物化学",
+      "酶动力学",
+      "competition"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "测交后代四种表型数量如下表（双杂合 × 双隐性）。下列判断正确的是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "无法判断是否连锁",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "A 与 B 位于同一染色体，相距约 5 个图距单位",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "两对基因独立遗传",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "A 与 B 完全连锁",
+        "answer": false
+      }
+    ],
+    "explanation": "亲本型（AB、ab）远多于重组型（Ab、aB），说明 A-B 连锁；重组率=(20+20)/800=5%，约 5 cM。",
+    "subject": "遗传学",
+    "concept": "基因连锁与交换",
+    "difficulty": "league",
+    "chart": "| 表型 | AB | Ab | aB | ab |\n|------|----|----|----|----|\n| 数量 | 380 | 20 | 20 | 380 |",
+    "year": null,
+    "module": "module_4",
+    "target": "competition",
+    "tags": [
+      "module_4",
+      "遗传学",
+      "基因连锁与交换",
+      "competition"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "测交后代四种表型数量如下表（双杂合 × 双隐性）。下列判断正确的是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "A 与 B 完全连锁",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "A 与 B 位于同一染色体，相距约 5 个图距单位",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "两对基因独立遗传",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "无法判断是否连锁",
+        "answer": false
+      }
+    ],
+    "explanation": "亲本型（AB、ab）远多于重组型（Ab、aB），说明 A-B 连锁；重组率=(20+20)/800=5%，约 5 cM。",
+    "subject": "遗传学",
+    "concept": "基因连锁与交换",
+    "difficulty": "league",
+    "chart": "| 表型 | AB | Ab | aB | ab |\n|------|----|----|----|----|\n| 数量 | 380 | 20 | 20 | 380 |",
+    "year": null,
+    "module": "module_4",
+    "target": "competition",
+    "tags": [
+      "module_4",
+      "遗传学",
+      "基因连锁与交换",
+      "competition"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "某草原生态系统各营养级能量（单位：kJ·m-2·a-1）如下表。下列叙述正确的是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "第一→第二营养级传递效率约 11%",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "第三营养级个体数量一定多于第四营养级",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "能量可以循环利用",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "第二营养级呼吸消耗为 1800",
+        "answer": false
+      }
+    ],
+    "explanation": "能量传递效率=下一营养级同化量/上一营养级同化量=2200/20000=11%；能量单向流动逐级递减，不能循环利用。",
+    "subject": "生态学",
+    "concept": "营养级能量传递",
+    "difficulty": "league",
+    "chart": "| 营养级 | 能量 |\n|--------|------|\n| 生产者 | 20000 |\n| 初级消费者 | 2200 |\n| 次级消费者 | 240 |\n| 三级消费者 | 25 |",
+    "year": null,
+    "module": "module_3",
+    "target": "competition",
+    "tags": [
+      "module_3",
+      "生态学",
+      "营养级能量传递",
+      "competition"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "某草原生态系统各营养级能量（单位：kJ·m-2·a-1）如下表。下列叙述正确的是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "能量可以循环利用",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "第一→第二营养级传递效率约 11%",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "第三营养级个体数量一定多于第四营养级",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "第二营养级呼吸消耗为 1800",
+        "answer": false
+      }
+    ],
+    "explanation": "能量传递效率=下一营养级同化量/上一营养级同化量=2200/20000=11%；能量单向流动逐级递减，不能循环利用。",
+    "subject": "生态学",
+    "concept": "营养级能量传递",
+    "difficulty": "league",
+    "chart": "| 营养级 | 能量 |\n|--------|------|\n| 生产者 | 20000 |\n| 初级消费者 | 2200 |\n| 次级消费者 | 240 |\n| 三级消费者 | 25 |",
+    "year": null,
+    "module": "module_3",
+    "target": "competition",
+    "tags": [
+      "module_3",
+      "生态学",
+      "营养级能量传递",
+      "competition"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "关于糖酵解与糖异生的调控，下列叙述正确的是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "果糖-2,6-二磷酸是 PFK-1 的强抑制剂",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "胰岛素抑制糖酵解",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "丙酮酸激酶受 ATP 变构激活",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "胰高血糖素可降低果糖-2,6-二磷酸水平从而抑制糖酵解",
+        "answer": true
+      }
+    ],
+    "explanation": "胰高血糖素升高 cAMP，激活 PKA，使双功能酶磷酸化后磷酸酶活性升高，果糖-2,6-二磷酸水平下降，从而抑制 PFK-1，糖酵解减弱。",
+    "subject": "生物化学",
+    "concept": "糖代谢调控",
+    "difficulty": "league",
+    "chart": null,
+    "year": null,
+    "module": "module_1",
+    "target": "competition",
+    "tags": [
+      "module_1",
+      "生物化学",
+      "糖代谢调控",
+      "competition"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "关于糖酵解与糖异生的调控，下列叙述正确的是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "果糖-2,6-二磷酸是 PFK-1 的强抑制剂",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "胰岛素抑制糖酵解",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "胰高血糖素可降低果糖-2,6-二磷酸水平从而抑制糖酵解",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "丙酮酸激酶受 ATP 变构激活",
+        "answer": false
+      }
+    ],
+    "explanation": "胰高血糖素升高 cAMP，激活 PKA，使双功能酶磷酸化后磷酸酶活性升高，果糖-2,6-二磷酸水平下降，从而抑制 PFK-1，糖酵解减弱。",
+    "subject": "生物化学",
+    "concept": "糖代谢调控",
+    "difficulty": "league",
+    "chart": null,
+    "year": null,
+    "module": "module_1",
+    "target": "competition",
+    "tags": [
+      "module_1",
+      "生物化学",
+      "糖代谢调控",
+      "competition"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "关于真核生物染色质重塑与基因表达的关系，正确的是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "组蛋白 H3K4me3 通常与活跃启动子相关联",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "DNA 甲基化普遍促进转录",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "组蛋白去乙酰化促进转录",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "组蛋白乙酰化一般抑制转录",
+        "answer": false
+      }
+    ],
+    "explanation": "组蛋白乙酰化一般松弛染色质促进转录；H3K4me3 是活跃启动子的标志；DNA 甲基化通常抑制转录。",
+    "subject": "分子生物学",
+    "concept": "基因表达调控",
+    "difficulty": "national",
+    "chart": null,
+    "year": null,
+    "module": "module_4",
+    "target": "competition",
+    "tags": [
+      "module_4",
+      "分子生物学",
+      "基因表达调控",
+      "competition"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "关于真核生物染色质重塑与基因表达的关系，正确的是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "组蛋白乙酰化一般抑制转录",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "DNA 甲基化普遍促进转录",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "组蛋白去乙酰化促进转录",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "组蛋白 H3K4me3 通常与活跃启动子相关联",
+        "answer": true
+      }
+    ],
+    "explanation": "组蛋白乙酰化一般松弛染色质促进转录；H3K4me3 是活跃启动子的标志；DNA 甲基化通常抑制转录。",
+    "subject": "分子生物学",
+    "concept": "基因表达调控",
+    "difficulty": "national",
+    "chart": null,
+    "year": null,
+    "module": "module_4",
+    "target": "competition",
+    "tags": [
+      "module_4",
+      "分子生物学",
+      "基因表达调控",
+      "competition"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "关于肾小管重吸收与尿液浓缩机制，错误的是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "抗利尿激素（ADH）增加集合管对水的通透性",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "集合管始终对水高度通透",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "髓质高渗梯度由尿素再循环与 NaCl 逆流倍增共同维持",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "髓袢升支粗段主动转运 NaCl 出肾小管",
+        "answer": false
+      }
+    ],
+    "explanation": "集合管对水的通透性受 ADH 调节，并非始终高度通透；缺水时 ADH 升高，尿液高度浓缩。",
+    "subject": "动物生理学",
+    "concept": "肾脏渗透压调节",
+    "difficulty": "league",
+    "chart": null,
+    "year": null,
+    "module": "module_3",
+    "target": "competition",
+    "tags": [
+      "module_3",
+      "动物生理学",
+      "肾脏渗透压调节",
+      "competition"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "关于肾小管重吸收与尿液浓缩机制，错误的是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "抗利尿激素（ADH）增加集合管对水的通透性",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "髓袢升支粗段主动转运 NaCl 出肾小管",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "髓质高渗梯度由尿素再循环与 NaCl 逆流倍增共同维持",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "集合管始终对水高度通透",
+        "answer": true
+      }
+    ],
+    "explanation": "集合管对水的通透性受 ADH 调节，并非始终高度通透；缺水时 ADH 升高，尿液高度浓缩。",
+    "subject": "动物生理学",
+    "concept": "肾脏渗透压调节",
+    "difficulty": "league",
+    "chart": null,
+    "year": null,
+    "module": "module_3",
+    "target": "competition",
+    "tags": [
+      "module_3",
+      "动物生理学",
+      "肾脏渗透压调节",
+      "competition"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "关于光合电子传递与光合磷酸化，正确的是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "线性电子传递不产生 ATP",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "PSII 主要负责还原 NADP+",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "PQ 不参与质子转运",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "循环电子传递只产生 ATP 不产生 NADPH",
+        "answer": true
+      }
+    ],
+    "explanation": "循环电子传递仅在 PSI 侧循环，通过质子梯度产生 ATP，但不裂解水也不产生 NADPH；线性电子传递同时产生 ATP 与 NADPH。",
+    "subject": "植物生理学",
+    "concept": "光合磷酸化",
+    "difficulty": "national",
+    "chart": null,
+    "year": null,
+    "module": "module_2",
+    "target": "competition",
+    "tags": [
+      "module_2",
+      "植物生理学",
+      "光合磷酸化",
+      "competition"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "关于光合电子传递与光合磷酸化，正确的是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "线性电子传递不产生 ATP",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "循环电子传递只产生 ATP 不产生 NADPH",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "PQ 不参与质子转运",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "PSII 主要负责还原 NADP+",
+        "answer": false
+      }
+    ],
+    "explanation": "循环电子传递仅在 PSI 侧循环，通过质子梯度产生 ATP，但不裂解水也不产生 NADPH；线性电子传递同时产生 ATP 与 NADPH。",
+    "subject": "植物生理学",
+    "concept": "光合磷酸化",
+    "difficulty": "national",
+    "chart": null,
+    "year": null,
+    "module": "module_2",
+    "target": "competition",
+    "tags": [
+      "module_2",
+      "植物生理学",
+      "光合磷酸化",
+      "competition"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "某数量性状由 3 对独立遗传基因控制，基因型 AABBCC 表现型最高。若两纯合亲本 AABBCC × aabbcc 杂交，F1 自交，F2 中与 AABBCC 表现型相同的比例约为",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "1/16",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "1/32",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "1/4",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "1/64",
+        "answer": true
+      }
+    ],
+    "explanation": "多基因（加性）遗传中，F2 中获得所有 6 个显性等位基因的概率为 (1/4)^3 = 1/64（每对基因获得 AA 的概率为 1/4）。",
+    "subject": "遗传学",
+    "concept": "数量遗传",
+    "difficulty": "national",
+    "chart": null,
+    "year": null,
+    "module": "module_4",
+    "target": "competition",
+    "tags": [
+      "module_4",
+      "遗传学",
+      "数量遗传",
+      "competition"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "某数量性状由 3 对独立遗传基因控制，基因型 AABBCC 表现型最高。若两纯合亲本 AABBCC × aabbcc 杂交，F1 自交，F2 中与 AABBCC 表现型相同的比例约为",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "1/64",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "1/16",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "1/4",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "1/32",
+        "answer": false
+      }
+    ],
+    "explanation": "多基因（加性）遗传中，F2 中获得所有 6 个显性等位基因的概率为 (1/4)^3 = 1/64（每对基因获得 AA 的概率为 1/4）。",
+    "subject": "遗传学",
+    "concept": "数量遗传",
+    "difficulty": "national",
+    "chart": null,
+    "year": null,
+    "module": "module_4",
+    "target": "competition",
+    "tags": [
+      "module_4",
+      "遗传学",
+      "数量遗传",
+      "competition"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "关于 MPF（成熟促进因子）的叙述，正确的是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "MPF 在 G1 期活性最高",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "MPF 催化底物磷酸化推动细胞进入 M 期",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "MPF 由 Cyclin D 与 CDK4 组成",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "MPF 在 M 期结束时活性升高",
+        "answer": false
+      }
+    ],
+    "explanation": "MPF = Cyclin B + CDK1（Cdc2），在 G2/M 转换期活性最高；通过磷酸化多种底物推动有丝分裂；M 末 Cyclin B 降解，MPF 失活。",
+    "subject": "细胞生物学",
+    "concept": "细胞周期调控",
+    "difficulty": "national",
+    "chart": null,
+    "year": null,
+    "module": "module_1",
+    "target": "competition",
+    "tags": [
+      "module_1",
+      "细胞生物学",
+      "细胞周期调控",
+      "competition"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "关于 MPF（成熟促进因子）的叙述，正确的是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "MPF 在 M 期结束时活性升高",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "MPF 由 Cyclin D 与 CDK4 组成",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "MPF 催化底物磷酸化推动细胞进入 M 期",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "MPF 在 G1 期活性最高",
+        "answer": false
+      }
+    ],
+    "explanation": "MPF = Cyclin B + CDK1（Cdc2），在 G2/M 转换期活性最高；通过磷酸化多种底物推动有丝分裂；M 末 Cyclin B 降解，MPF 失活。",
+    "subject": "细胞生物学",
+    "concept": "细胞周期调控",
+    "difficulty": "national",
+    "chart": null,
+    "year": null,
+    "module": "module_1",
+    "target": "competition",
+    "tags": [
+      "module_1",
+      "细胞生物学",
+      "细胞周期调控",
+      "competition"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "在一个大的随机交配群体中，若 AA:Aa:aa=0.36:0.48:0.16，下列叙述正确的是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "a 基因频率为 0.4，下一代 aa 频率会升高",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "该群体处于哈迪-温伯格平衡",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "下一代 AA 频率必然下降",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "该群体一定正在进行自然选择",
+        "answer": false
+      }
+    ],
+    "explanation": "p = f(A) = 0.36 + 0.24 = 0.6，q = 0.4；预期 AA=p²=0.36，Aa=2pq=0.48，aa=q²=0.16，与观察值一致，说明符合哈迪-温伯格平衡。",
+    "subject": "进化生物学",
+    "concept": "种群遗传学",
+    "difficulty": "league",
+    "chart": null,
+    "year": null,
+    "module": "module_4",
+    "target": "competition",
+    "tags": [
+      "module_4",
+      "进化生物学",
+      "种群遗传学",
+      "competition"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "在一个大的随机交配群体中，若 AA:Aa:aa=0.36:0.48:0.16，下列叙述正确的是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "a 基因频率为 0.4，下一代 aa 频率会升高",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "该群体一定正在进行自然选择",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "该群体处于哈迪-温伯格平衡",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "下一代 AA 频率必然下降",
+        "answer": false
+      }
+    ],
+    "explanation": "p = f(A) = 0.36 + 0.24 = 0.6，q = 0.4；预期 AA=p²=0.36，Aa=2pq=0.48，aa=q²=0.16，与观察值一致，说明符合哈迪-温伯格平衡。",
+    "subject": "进化生物学",
+    "concept": "种群遗传学",
+    "difficulty": "league",
+    "chart": null,
+    "year": null,
+    "module": "module_4",
+    "target": "competition",
+    "tags": [
+      "module_4",
+      "进化生物学",
+      "种群遗传学",
+      "competition"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "关于大肠杆菌 lac 操纵子的调节，下列叙述正确的是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "既无葡萄糖又有乳糖时操纵子表达最高",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "有葡萄糖时 lac 操纵子始终高水平表达",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "葡萄糖存在时 cAMP-CAP 复合物结合 DNA 能力最强",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "乳糖存在时阻遏蛋白结合操纵序列",
+        "answer": false
+      }
+    ],
+    "explanation": "乳糖（异构乳糖）结合阻遏蛋白使其脱离操纵序列；葡萄糖缺乏时 cAMP 升高，cAMP-CAP 结合 CAP 位点激活转录；双重控制下'无葡萄糖有乳糖'时表达最强。",
+    "subject": "微生物学",
+    "concept": "细菌代谢与基因调控",
+    "difficulty": "league",
+    "chart": null,
+    "year": null,
+    "module": "module_2",
+    "target": "competition",
+    "tags": [
+      "module_2",
+      "微生物学",
+      "细菌代谢与基因调控",
+      "competition"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "关于大肠杆菌 lac 操纵子的调节，下列叙述正确的是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "乳糖存在时阻遏蛋白结合操纵序列",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "既无葡萄糖又有乳糖时操纵子表达最高",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "有葡萄糖时 lac 操纵子始终高水平表达",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "葡萄糖存在时 cAMP-CAP 复合物结合 DNA 能力最强",
+        "answer": false
+      }
+    ],
+    "explanation": "乳糖（异构乳糖）结合阻遏蛋白使其脱离操纵序列；葡萄糖缺乏时 cAMP 升高，cAMP-CAP 结合 CAP 位点激活转录；双重控制下'无葡萄糖有乳糖'时表达最强。",
+    "subject": "微生物学",
+    "concept": "细菌代谢与基因调控",
+    "difficulty": "league",
+    "chart": null,
+    "year": null,
+    "module": "module_2",
+    "target": "competition",
+    "tags": [
+      "module_2",
+      "微生物学",
+      "细菌代谢与基因调控",
+      "competition"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "下图为某酶在有无抑制剂 I 时的 Lineweaver-Burk 图（1/v 对 1/[S]）。判断抑制剂类型与参数变化",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "竞争性抑制：Km 增大，Vmax 不变",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "不可逆抑制",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "非竞争性抑制：Km 不变，Vmax 减小",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "反竞争性抑制：Km 减小，Vmax 减小",
+        "answer": false
+      }
+    ],
+    "explanation": "两条直线 1/v 轴截距不同（无 I 截距 2，有 I 截距 4）说明 Vmax 减小；但两直线 1/[S] 轴截距相同（外推 x=-1 时交于 -2），说明 Km 不变，符合非竞争性抑制。",
+    "subject": "生物化学",
+    "concept": "竞争性抑制动力学",
+    "difficulty": "national",
+    "chart": "| 1/[S]（x） | 无 I 的 1/v | 有 I 的 1/v |\n|------------|-------------|-------------|\n| -2 | 0.5 | 1.0 |\n| -1 | 1.0 | 2.0 |\n| 0 | 2.0 | 4.0 |\n| 1 | 3.0 | 6.0 |",
+    "year": null,
+    "module": "module_1",
+    "target": "competition",
+    "tags": [
+      "module_1",
+      "生物化学",
+      "竞争性抑制动力学",
+      "competition"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "下图为某酶在有无抑制剂 I 时的 Lineweaver-Burk 图（1/v 对 1/[S]）。判断抑制剂类型与参数变化",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "反竞争性抑制：Km 减小，Vmax 减小",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "非竞争性抑制：Km 不变，Vmax 减小",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "竞争性抑制：Km 增大，Vmax 不变",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "不可逆抑制",
+        "answer": false
+      }
+    ],
+    "explanation": "两条直线 1/v 轴截距不同（无 I 截距 2，有 I 截距 4）说明 Vmax 减小；但两直线 1/[S] 轴截距相同（外推 x=-1 时交于 -2），说明 Km 不变，符合非竞争性抑制。",
+    "subject": "生物化学",
+    "concept": "竞争性抑制动力学",
+    "difficulty": "national",
+    "chart": "| 1/[S]（x） | 无 I 的 1/v | 有 I 的 1/v |\n|------------|-------------|-------------|\n| -2 | 0.5 | 1.0 |\n| -1 | 1.0 | 2.0 |\n| 0 | 2.0 | 4.0 |\n| 1 | 3.0 | 6.0 |",
+    "year": null,
+    "module": "module_1",
+    "target": "competition",
+    "tags": [
+      "module_1",
+      "生物化学",
+      "竞争性抑制动力学",
+      "competition"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "某地三种食虫鸟在同一棵树上的捕食高度（m）分布如下表。下列叙述最合理的是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "甲一定被其他物种排挤",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "三者生态位完全重叠，将发生竞争排除",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "三者必然属于同一物种",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "它们通过空间生态位分化减少竞争",
+        "answer": true
+      }
+    ],
+    "explanation": "三种鸟通过取食高度（空间生态位）分化并选择不同猎物，减少种间竞争实现共存，这是经典生态位分化。",
+    "subject": "生态学",
+    "concept": "生态位分化",
+    "difficulty": "league",
+    "chart": "| 物种 | 主要捕食高度 | 猎物类型 |\n|------|--------------|---------|\n| 甲 | 0-2 | 地面昆虫 |\n| 乙 | 2-6 | 树干昆虫 |\n| 丙 | 6-12 | 树冠昆虫 |",
+    "year": null,
+    "module": "module_3",
+    "target": "competition",
+    "tags": [
+      "module_3",
+      "生态学",
+      "生态位分化",
+      "competition"
+    ]
+  },
+  {
+    "type": "mtf",
+    "question": "某地三种食虫鸟在同一棵树上的捕食高度（m）分布如下表。下列叙述最合理的是",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "甲一定被其他物种排挤",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "三者必然属于同一物种",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "三者生态位完全重叠，将发生竞争排除",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "它们通过空间生态位分化减少竞争",
+        "answer": true
+      }
+    ],
+    "explanation": "三种鸟通过取食高度（空间生态位）分化并选择不同猎物，减少种间竞争实现共存，这是经典生态位分化。",
+    "subject": "生态学",
+    "concept": "生态位分化",
+    "difficulty": "league",
+    "chart": "| 物种 | 主要捕食高度 | 猎物类型 |\n|------|--------------|---------|\n| 甲 | 0-2 | 地面昆虫 |\n| 乙 | 2-6 | 树干昆虫 |\n| 丙 | 6-12 | 树冠昆虫 |",
+    "year": null,
+    "module": "module_3",
+    "target": "competition",
+    "tags": [
+      "module_3",
+      "生态学",
+      "生态位分化",
+      "competition"
+    ]
+  }
+]

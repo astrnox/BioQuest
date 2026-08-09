@@ -1,0 +1,208 @@
+============================================================
+ BioQuest — 第三方库许可证声明
+ 最后更新：2026-07-23
+============================================================
+
+本项目（BioQuest）在 js/vendor/ 目录下打包了以下第三方开源库。
+所有库均通过 CDN 下载并存储为本地副本，遵守各自许可证条款。
+
+------------------------------------------------------------
+1. ts-fsrs (MIT License)
+   文件：ts-fsrs.umd.min.js
+   来源：https://github.com/open-spaced-repetition/ts-fsrs
+   用途：FSRS-5 间隔重复算法引擎
+   版权：Copyright (c) 2023 Ishiki
+
+------------------------------------------------------------
+2. DOMPurify (MPL-2.0 OR Apache-2.0)
+   文件：purify.min.js
+   来源：https://github.com/cure53/DOMPurify
+   用途：HTML/SVG XSS 防御清洗器
+   版权：Copyright (c) 2015, 2017, 2017 Mario Heiderich
+
+------------------------------------------------------------
+3. KaTeX (MIT License)
+   文件：katex.min.js, katex.min.css
+   来源：https://github.com/KaTeX/KaTeX
+   用途：数学公式渲染
+   版权：Copyright (c) 2014 Khan Academy & The KaTeX Contributors
+
+------------------------------------------------------------
+4. mhchem (Apache License 2.0)
+   文件：mhchem.min.js
+   来源：https://github.com/KaTeX/KaTeX/tree/main/contrib/mhchem
+   用途：KaTeX 化学方程式扩展
+   版权：Copyright (c) 2015 Gert-Ludwig Ingold
+
+------------------------------------------------------------
+5. Dexie.js (Apache License 2.0)
+   文件：dexie.min.js
+   来源：https://github.com/dexie/Dexie.js
+   用途：IndexedDB ORM
+   版权：Copyright (c) 2014 David Fahlander
+
+------------------------------------------------------------
+6. Chart.js (MIT License)
+   文件：chart.umd.min.js
+   来源：https://github.com/chartjs/Chart.js
+   用途：学习数据可视化
+   版权：Copyright (c) 2013-2024 Chart.js Contributors
+
+------------------------------------------------------------
+7. Cytoscape.js (MIT License)
+   文件：cytoscape.min.js
+   来源：https://github.com/cytoscape/cytoscape.js
+   用途：知识图谱可视化
+   版权：Copyright (c) The Cytoscape Consortium
+
+------------------------------------------------------------
+8. Mermaid (MIT License)
+   文件：mermaid.min.js
+   来源：https://github.com/mermaid-js/mermaid
+   用途：文本转图表（流程图/时序图）
+   版权：Copyright (c) 2014-2024 Knut Sveidqvist
+
+------------------------------------------------------------
+9. GSAP (MIT License)
+   文件：gsap.min.js
+   来源：https://github.com/greensock/GSAP
+   用途：高性能动画引擎
+   版权：Copyright (c) 2008-2024 GreenSock
+
+------------------------------------------------------------
+10. Three.js (MIT License)
+    文件：three.min.js
+    来源：https://github.com/mrdoob/three.js
+    用途：3D WebGL 渲染（细胞结构、分子结构）
+    版权：Copyright (c) 2010-2024 three.js authors
+
+------------------------------------------------------------
+11. 3Dmol.js (BSD 3-Clause License)
+    文件：3Dmol-min.js
+    来源：https://github.com/3dmol/3Dmol.js
+    用途：3D 分子查看器（PDB 格式）
+    版权：Copyright (c) 2015-2024 David Koes and contributors
+
+------------------------------------------------------------
+12. JSZip (MIT License)
+    文件：jszip.min.js
+    来源：https://github.com/Stuk/jszip
+    用途：ZIP 文件压缩/解压（学习数据导出）
+    版权：Copyright (c) 2009-2016 Stuart Knightley
+
+------------------------------------------------------------
+13. mammoth.js (BSD 2-Clause License)
+    文件：mammoth.browser.min.js
+    来源：https://github.com/mwilliamson/mammoth.js
+    用途：Word .docx 转 HTML
+    版权：Copyright (c) 2014 Michael Williamson
+
+------------------------------------------------------------
+14. cal-heatmap (MIT License)
+    文件：cal-heatmap.min.js, cal-heatmap.css
+    来源：https://github.com/wa0x6e/cal-heatmap
+    用途：GitHub 风格学习记录热力图
+    版权：Copyright (c) 2013-2024 Wan
+
+------------------------------------------------------------
+15. PDF.js (Apache License 2.0)
+    文件：pdf.min.js, pdf.worker.min.js
+    来源：https://github.com/mozilla/pdf.js
+    用途：PDF 文档解析与渲染
+    版权：Copyright (c) Mozilla Foundation
+
+------------------------------------------------------------
+16. KAPLAY (MIT License)
+    文件：kaplay.js
+    来源：https://github.com/kaplayjs/kaplay
+    用途：2D 教育游戏引擎（细胞/器官拼装游戏）
+    版权：Copyright (c) 2024 KAPLAY Team
+
+------------------------------------------------------------
+17. @geekie/irt (MIT License)
+    文件：irt.umd.js
+    来源：https://github.com/geekie/irt
+    用途：3PL 项目反应理论（能力估计）
+    版权：Copyright (c) 2024 Geekie
+
+------------------------------------------------------------
+18. @rdkit/rdkit (BSD 3-Clause License)
+    文件：RDKit_minimal.js, RDKit_minimal.wasm
+    来源：https://github.com/rdkit/rdkit-js
+    用途：SMILES → 2D 分子结构绘制
+    版权：Copyright (c) 2001-2024 Greg Landrum and RDKit contributors
+
+------------------------------------------------------------
+19. React (MIT License)
+    文件：react.production.min.js, react-dom.production.min.js
+    来源：https://github.com/facebook/react
+    用途：UI 框架（Excalidraw 依赖）
+    版权：Copyright (c) Meta Platforms, Inc. and its affiliates
+
+------------------------------------------------------------
+20. react-jsx-runtime polyfill (自实现, MIT)
+    文件：react-jsx-runtime-polyfill.js
+    来源：本仓库自行实现
+    用途：为 Excalidraw UMD 提供 React 18 jsx-runtime 兼容层
+    版权：Copyright (c) 2024 BioQuest
+    注：将 jsx()/jsxs() 映射到 React.createElement()，
+       无外部代码，无许可证冲突。
+
+------------------------------------------------------------
+21. Excalidraw (MIT License)
+    文件：excalidraw.production.min.js
+    来源：https://github.com/excalidraw/excalidraw
+    用途：手绘风格白板（生物结构草图）
+    版权：Copyright (c) 2020 Excalidraw
+
+------------------------------------------------------------
+22. quikchat (BSD 2-Clause License)
+    文件：quikchat.umd.min.js
+    来源：https://github.com/oviava/quikchat
+    用途：实时聊天 UI（社区模块）
+    版权：Copyright (c) 2024 quikchat contributors
+
+------------------------------------------------------------
+23. marked (MIT License)
+   文件：marked.umd.js
+   来源：https://github.com/markedjs/marked
+   用途：Markdown 解析（AI 对话流式渲染）
+   版权：Copyright (c) 2011-2024 Christopher Jeffrey
+
+------------------------------------------------------------
+24. igv.js (MIT License)
+   文件：igv.min.js
+   来源：https://github.com/igvteam/igv.js
+   用途：交互式基因组浏览器（染色体/基因/变异可视化）
+   版权：Copyright (c) 2014-2025 Broad Institute of MIT and Harvard,
+          Regents of the University of California
+   集成方式：路由级懒加载，访问 #/genome 时动态注入，
+             不阻塞首屏；js/integrations/genome-browser.js 为本仓库自实现封装层
+
+
+============================================================
+ 已移除的库（精简优化）
+============================================================
+以下库已从项目中移除（详见 2026-07-23 依赖精简）：
+- canvas-confetti (ISC) — 测验庆祝动画，纯装饰，已删除
+- Popper.js (MIT) — tooltip 定位工具，已用原生 CSS 替代
+- highlight.js (BSD-3) — 代码语法高亮，生物竞赛场景不需要
+- giscus (MIT) — GitHub Discussions 评论区，与 quikchat 重复
+- p5.js (LGPL-2.1) — 首页 hero 动画，已用纯 CSS 替代
+
+
+============================================================
+ 许可证全文获取
+============================================================
+以上许可证全文可在各项目 GitHub 仓库根目录的 LICENSE 文件中
+查看，或访问对应的 opensource.org 许可证页面：
+
+- MIT:        https://opensource.org/license/MIT
+- Apache-2.0: https://opensource.org/license/Apache-2.0
+- BSD-2:      https://opensource.org/license/BSD-2-Clause
+- BSD-3:      https://opensource.org/license/BSD-3-Clause
+- MPL-2.0:    https://opensource.org/license/MPL-2.0
+- ISC:        https://opensource.org/license/ISC
+
+BioQuest 项目本身采用 CC-BY-NC-SA-4.0（知识共享 署名-非商业性使用-相同方式共享 4.0 国际）许可证。
+详见：https://creativecommons.org/licenses/by-nc-sa/4.0/

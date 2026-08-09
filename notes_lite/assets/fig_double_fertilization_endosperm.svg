@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 480" style="font-family: 'Noto Sans CJK SC', sans-serif;">
+  <rect x="0" y="0" width="780" height="480" fill="#fdfbf7"/>
+  <text x="390" y="28" text-anchor="middle" font-size="15" font-weight="700" fill="#c0392b">双受精胚乳基因型推导——以 Aabb x aaBb 为例</text>
+
+  <!-- 双受精基本过程 -->
+  <text x="30" y="55" font-size="11" font-weight="700" fill="#8b4513">A. 双受精基本过程</text>
+  <g transform="translate(30, 65)">
+    <rect x="0" y="0" width="355" height="55" rx="8" fill="#fef0e0" stroke="#c0392b" stroke-width="1.5"/>
+    <text x="177" y="16" text-anchor="middle" font-size="10" font-weight="700" fill="#c0392b">花粉粒（雄配子体）</text>
+    <text x="177" y="32" text-anchor="middle" font-size="9" fill="#2c2416">2个精细胞（n）+ 1个营养核（n）</text>
+    <text x="177" y="48" text-anchor="middle" font-size="9" fill="#7a6e5e">花粉管萌发 &#x2192; 进入胚囊</text>
+  </g>
+  <g transform="translate(395, 65)">
+    <rect x="0" y="0" width="355" height="55" rx="8" fill="#f0f7f4" stroke="#4a7c3a" stroke-width="1.5"/>
+    <text x="177" y="16" text-anchor="middle" font-size="10" font-weight="700" fill="#4a7c3a">胚囊（雌配子体）</text>
+    <text x="177" y="32" text-anchor="middle" font-size="9" fill="#2c2416">1卵（n）+ 2极核（n）+ 2助细胞（n）+ 3反足细胞（n）</text>
+    <text x="177" y="48" text-anchor="middle" font-size="9" fill="#7a6e5e">1次减数 + 3次有丝 = 8核（7细胞）</text>
+  </g>
+
+  <!-- 精子去向 -->
+  <text x="30" y="145" font-size="11" font-weight="700" fill="#8b4513">B. 两个精子的去向</text>
+  <g transform="translate(30, 155)">
+    <rect x="0" y="0" width="355" height="50" rx="8" fill="#fdecea" stroke="#c0392b" stroke-width="2"/>
+    <text x="177" y="18" text-anchor="middle" font-size="10" font-weight="700" fill="#c0392b">精子1（n）+ 卵细胞（n）&#x2192; 合子（2n）&#x2192; 胚</text>
+    <text x="177" y="38" text-anchor="middle" font-size="9" fill="#7a6e5e">胚基因型 = 父1份 + 母1份（正常二倍体遗传）</text>
+  </g>
+  <g transform="translate(395, 155)">
+    <rect x="0" y="0" width="355" height="50" rx="8" fill="#fdecea" stroke="#c0392b" stroke-width="2"/>
+    <text x="177" y="18" text-anchor="middle" font-size="10" font-weight="700" fill="#c0392b">精子2（n）+ 2个极核（n+n）&#x2192; 受精极核（3n）&#x2192; 胚乳</text>
+    <text x="177" y="38" text-anchor="middle" font-size="9" fill="#c0392b">胚乳基因型 = 父1份 + 母2份（三倍体遗传！）</text>
+  </g>
+
+  <!-- 经典例题：Aabb x aaBb -->
+  <text x="30" y="230" font-size="11" font-weight="700" fill="#c0392b">C. 经典例题：Aabb（父）x aaBb（母）&#x2192; 胚乳基因型推导</text>
+
+  <!-- 父本配子 -->
+  <g transform="translate(30, 245)">
+    <rect x="0" y="0" width="720" height="28" rx="6" fill="#fef5f0" stroke="#c0392b" stroke-width="1.5"/>
+    <text x="360" y="19" text-anchor="middle" font-size="10" font-weight="700" fill="#c0392b">父本（Aabb）产生精子：Ab（1/2）和 ab（1/2）</text>
+  </g>
+
+  <!-- 母本极核 -->
+  <g transform="translate(30, 280)">
+    <rect x="0" y="0" width="720" height="28" rx="6" fill="#f0f7f4" stroke="#4a7c3a" stroke-width="1.5"/>
+    <text x="360" y="19" text-anchor="middle" font-size="10" font-weight="700" fill="#4a7c3a">母本（aaBb）大孢子母细胞&#x2192;减数分裂&#x2192;大孢子&#x2192;有丝分裂&#x2192;极核：aB（1/2）和 ab（1/2）</text>
+  </g>
+
+  <!-- 胚乳基因型组合表 -->
+  <text x="30" y="325" font-size="11" font-weight="700" fill="#8b4513">D. 胚乳基因型组合（精子 x 2个极核）</text>
+
+  <!-- 表头 -->
+  <g transform="translate(30, 338)">
+    <rect x="0" y="0" width="140" height="22" rx="3" fill="#8b4513"/>
+    <text x="70" y="15" text-anchor="middle" font-size="9" font-weight="700" fill="#fff">精子（父）</text>
+    <rect x="140" y="0" width="200" height="22" rx="0" fill="#8b4513"/>
+    <text x="240" y="15" text-anchor="middle" font-size="9" font-weight="700" fill="#fff">极核（母，2份）</text>
+    <rect x="340" y="0" width="200" height="22" rx="0" fill="#8b4513"/>
+    <text x="440" y="15" text-anchor="middle" font-size="9" font-weight="700" fill="#fff">胚乳基因型（3n）</text>
+    <rect x="540" y="0" width="100" height="22" rx="3" fill="#8b4513"/>
+    <text x="590" y="15" text-anchor="middle" font-size="9" font-weight="700" fill="#fff">概率</text>
+  </g>
+
+  <!-- 行1 -->
+  <g transform="translate(30, 360)">
+    <rect x="0" y="0" width="140" height="22" rx="0" fill="#fef5f0" stroke="#d6ccc0" stroke-width="0.5"/>
+    <text x="70" y="15" text-anchor="middle" font-size="10" fill="#c0392b">Ab</text>
+    <rect x="140" y="0" width="200" height="22" rx="0" fill="#f0f7f4" stroke="#d6ccc0" stroke-width="0.5"/>
+    <text x="240" y="15" text-anchor="middle" font-size="10" fill="#4a7c3a">aB + aB</text>
+    <rect x="340" y="0" width="200" height="22" rx="0" fill="#fff8f0" stroke="#d6ccc0" stroke-width="0.5"/>
+    <text x="440" y="15" text-anchor="middle" font-size="10" font-weight="700" fill="#2c2416">AaaBBb</text>
+    <rect x="540" y="0" width="100" height="22" rx="0" fill="#fff8f0" stroke="#d6ccc0" stroke-width="0.5"/>
+    <text x="590" y="15" text-anchor="middle" font-size="10" fill="#2c2416">1/4</text>
+  </g>
+
+  <!-- 行2 -->
+  <g transform="translate(30, 382)">
+    <rect x="0" y="0" width="140" height="22" rx="0" fill="#fef5f0" stroke="#d6ccc0" stroke-width="0.5"/>
+    <text x="70" y="15" text-anchor="middle" font-size="10" fill="#c0392b">Ab</text>
+    <rect x="140" y="0" width="200" height="22" rx="0" fill="#f0f7f4" stroke="#d6ccc0" stroke-width="0.5"/>
+    <text x="240" y="15" text-anchor="middle" font-size="10" fill="#4a7c3a">ab + ab</text>
+    <rect x="340" y="0" width="200" height="22" rx="0" fill="#fff8f0" stroke="#d6ccc0" stroke-width="0.5"/>
+    <text x="440" y="15" text-anchor="middle" font-size="10" font-weight="700" fill="#2c2416">Aaabbb</text>
+    <rect x="540" y="0" width="100" height="22" rx="0" fill="#fff8f0" stroke="#d6ccc0" stroke-width="0.5"/>
+    <text x="590" y="15" text-anchor="middle" font-size="10" fill="#2c2416">1/4</text>
+  </g>
+
+  <!-- 行3 -->
+  <g transform="translate(30, 404)">
+    <rect x="0" y="0" width="140" height="22" rx="0" fill="#fef5f0" stroke="#d6ccc0" stroke-width="0.5"/>
+    <text x="70" y="15" text-anchor="middle" font-size="10" fill="#c0392b">ab</text>
+    <rect x="140" y="0" width="200" height="22" rx="0" fill="#f0f7f4" stroke="#d6ccc0" stroke-width="0.5"/>
+    <text x="240" y="15" text-anchor="middle" font-size="10" fill="#4a7c3a">aB + aB</text>
+    <rect x="340" y="0" width="200" height="22" rx="0" fill="#fff8f0" stroke="#d6ccc0" stroke-width="0.5"/>
+    <text x="440" y="15" text-anchor="middle" font-size="10" font-weight="700" fill="#2c2416">aaaBBb</text>
+    <rect x="540" y="0" width="100" height="22" rx="0" fill="#fff8f0" stroke="#d6ccc0" stroke-width="0.5"/>
+    <text x="590" y="15" text-anchor="middle" font-size="10" fill="#2c2416">1/4</text>
+  </g>
+
+  <!-- 行4 -->
+  <g transform="translate(30, 426)">
+    <rect x="0" y="0" width="140" height="22" rx="0" fill="#fef5f0" stroke="#d6ccc0" stroke-width="0.5"/>
+    <text x="70" y="15" text-anchor="middle" font-size="10" fill="#c0392b">ab</text>
+    <rect x="140" y="0" width="200" height="22" rx="0" fill="#f0f7f4" stroke="#d6ccc0" stroke-width="0.5"/>
+    <text x="240" y="15" text-anchor="middle" font-size="10" fill="#4a7c3a">ab + ab</text>
+    <rect x="340" y="0" width="200" height="22" rx="0" fill="#fff8f0" stroke="#d6ccc0" stroke-width="0.5"/>
+    <text x="440" y="15" text-anchor="middle" font-size="10" font-weight="700" fill="#2c2416">aaabbb</text>
+    <rect x="540" y="0" width="100" height="22" rx="0" fill="#fff8f0" stroke="#d6ccc0" stroke-width="0.5"/>
+    <text x="590" y="15" text-anchor="middle" font-size="10" fill="#2c2416">1/4</text>
+  </g>
+
+  <!-- 竞赛易错点 -->
+  <rect x="30" y="455" width="720" height="20" rx="4" fill="#fef5f0" stroke="#c0392b" stroke-width="1.5"/>
+  <text x="390" y="470" text-anchor="middle" font-size="10" font-weight="700" fill="#c0392b">竞赛易错：胚乳3n（非2n）| 极核基因型需经减数分裂 | 胚(2n)和胚乳(3n)分开计算 | 4种胚乳基因型各1/4</text>
+</svg>

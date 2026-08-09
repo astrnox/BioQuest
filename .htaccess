@@ -1,0 +1,56 @@
+# ============================================================
+# BioQuest — .htaccess 安全配置
+# 上传到站点根目录 bioquest.dada.im/
+# ============================================================
+# 如果服务器使用 Apache，此文件生效
+# 如果使用 Nginx，需要手动配置 Nginx 规则
+# 如果使用彩虹云自带 WAF，参考下方 WAF 正则
+# ============================================================
+
+# 禁止目录列表
+Options -Indexes
+
+# 默认首页
+DirectoryIndex index.html
+
+# ============================================================
+# 禁止访问敏感文件类型
+# ============================================================
+<FilesMatch "\.(py|pyc|sql|env|md|yml|yaml|log|gitignore|editorconfig|DS_Store)$">
+    Require all denied
+</FilesMatch>
+
+# 禁止访问隐藏文件（.env, .git 等）
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>
+
+# 禁止访问敏感目录
+RewriteEngine On
+RewriteRule ^backend/ - [F,L]
+RewriteRule ^__pycache__/ - [F,L]
+RewriteRule ^sql/ - [F,L]
+RewriteRule ^quiz_data/ - [F,L]
+RewriteRule ^\.git/ - [F,L]
+RewriteRule ^\.vscode/ - [F,L]
+RewriteRule \.py$ - [F,L]
+RewriteRule \.sql$ - [F,L]
+RewriteRule \.env$ - [F,L]
+RewriteRule \.yml$ - [F,L]
+RewriteRule \.yaml$ - [F,L]
+RewriteRule \.md$ - [F,L]
+
+# ============================================================
+# 安全 Header
+# ============================================================
+<IfModule mod_headers.c>
+    # 防止 MIME 嗅探
+    Header set X-Content-Type-Options "nosniff"
+    # 防止点击劫持
+    Header set X-Frame-Options "SAMEORIGIN"
+    # 禁止引用来源泄露
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+    # Content-Security-Policy：限制脚本/样式/图片来源，防御 XSS
+    # 允许：自身、CDN（jsdelivr/cdnjs/unpkg）、内联样式（现有代码依赖）、Supabase API、内联图片
+    Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://unpkg.com; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; img-src 'self' data: https: blob:; font-src 'self' data:; connect-src 'self' https://*.supabase.co https://api.deepseek.com https://api.siliconflow.cn https://open.bigmodel.cn https://api.minimax.chat https://dashscope.aliyuncs.com https://api.moonshot.cn https://integrate.api.nvidia.com https://metaso.cn; frame-src 'self' https://phet.colorado.edu https://embed.diagrams.net; object-src 'none'; base-uri 'self'"
+</IfModule>

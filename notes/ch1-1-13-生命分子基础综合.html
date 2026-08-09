@@ -1,0 +1,1656 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第一章 生物化学 · 第十一节 生命分子基础综合 — 生物集训营笔记</title>
+<style>
+:root {
+  --bg: #fdfbf7; --bg2: #f5f0e8; --ink: #2c2416; --muted: #7a6e5e;
+  --rule: #d6ccc0; --accent: #c0392b; --accent2: #8b4513;
+  --highlight: #fff3cd; --note-bg: #fff8e7; --note-border: #e8c84a;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: "Noto Sans CJK SC", "WenQuanYi Micro Hei", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  font-size: 16px; line-height: 1.8; color: var(--ink); background: var(--bg);
+}
+.cover { text-align: center; padding: 4rem 2rem 3rem; border-bottom: 3px double var(--rule); margin-bottom: 0; background: linear-gradient(180deg, var(--bg2) 0%, var(--bg) 100%); }
+.cover .ch-num { font-size: 1rem; color: var(--accent); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 0.3rem; }
+.cover h1 { font-size: 2.2rem; font-weight: 800; color: var(--ink); margin-bottom: 0.5rem; letter-spacing: 0.03em; }
+.cover .subtitle { font-size: 1rem; color: var(--muted); }
+.cover .meta { margin-top: 1.2rem; font-size: 0.85rem; color: var(--muted); display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
+.main-layout { max-width: 1060px; margin: 0 auto; padding: 0 1.5rem; }
+.section-header { border-bottom: 3px solid var(--accent); padding: 2rem 0 0.6rem; margin-bottom: 1.5rem; }
+.section-header .sec-num { font-size: 0.9rem; color: var(--accent); font-weight: 700; letter-spacing: 0.08em; }
+.section-header h2 { font-size: 1.6rem; font-weight: 800; color: var(--ink); margin-top: 0.15rem; }
+.topic-header { margin: 2rem 0 1rem; padding-left: 0.8rem; border-left: 4px solid var(--accent); }
+.topic-header h3 { font-size: 1.25rem; font-weight: 700; color: var(--ink); }
+.subtopic-header { margin: 1.5rem 0 0.8rem; }
+.subtopic-header h4 { font-size: 1.1rem; font-weight: 700; color: var(--accent2); }
+.note-block { display: flex; gap: 1.5rem; margin-bottom: 1.2rem; align-items: flex-start; }
+.note-content { flex: 1; padding: 0.8rem 1rem; background: var(--bg2); border-radius: 6px; border: 1px solid var(--rule); }
+.note-content p { margin-bottom: 0.5rem; }
+.note-content p:last-child { margin-bottom: 0; }
+.note-content ul, .note-content ol { padding-left: 1.5rem; margin: 0.4rem 0; }
+.note-content li { margin-bottom: 0.25rem; }
+.annotation { width: 240px; flex-shrink: 0; background: var(--note-bg); border: 1px solid var(--note-border); border-radius: 6px; padding: 0.6rem 0.8rem; font-size: 0.82rem; line-height: 1.6; color: var(--accent2); align-self: flex-start; }
+.annotation::before { content: "📝 批注"; display: block; font-size: 0.7rem; font-weight: 700; color: var(--accent); letter-spacing: 0.06em; margin-bottom: 0.3rem; text-transform: uppercase; }
+.u { text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 2px; text-underline-offset: 3px; font-weight: 600; }
+.u-double { text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 2px; text-underline-offset: 3px; text-decoration-style: double; font-weight: 700; }
+.key-point { background: var(--highlight); padding: 0.1em 0.3em; border-radius: 3px; font-weight: 600; border-bottom: 1.5px solid var(--accent); }
+.table-wrap { overflow-x: auto; overflow-y: auto; max-height: 600px; margin: 1.5rem 0; border: 1px solid var(--rule); border-radius: 6px; }
+table { width: 100%; border-collapse: collapse; font-size: 0.9rem; min-width: 800px; }
+table thead th { background: var(--accent); color: #fff; padding: 0.6rem 0.8rem; font-weight: 700; text-align: center; white-space: nowrap; }
+table tbody td { padding: 0.5rem 0.8rem; border-bottom: 1px solid var(--rule); vertical-align: top; }
+table tbody tr:nth-child(even) { background: var(--bg2); }
+table tbody tr:last-child td { border-bottom: none; }
+table tbody td:first-child { font-weight: 600; white-space: nowrap; text-align: center; background: var(--bg2); }
+figcaption { text-align: center; font-size: 0.85rem; color: var(--muted); margin-top: 0.4rem; }
+.diagram { margin: 1.2rem 0; text-align: center; }
+.diagram img { max-width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 4px; }
+.summary-box { background: linear-gradient(135deg, #fdf2f2 0%, #fef9e7 100%); border: 2px solid var(--accent); border-radius: 8px; padding: 1.2rem 1.5rem; margin: 2rem 0; }
+.summary-box h4 { color: var(--accent); font-size: 1rem; margin-bottom: 0.6rem; }
+.expand-block { background: #f0f7f4; border: 1px dashed #7cb342; border-radius: 6px; padding: 0.5rem 0.9rem; margin: 0.6rem 0 0; font-size: 0.83rem; line-height: 1.6; color: #3e6b3e; }
+.expand-block::before { content: "🔍 拓展"; display: block; font-size: 0.7rem; font-weight: 700; color: #558b2f; letter-spacing: 0.06em; margin-bottom: 0.2rem; }
+.flow-box { background: var(--bg); border: 1px solid var(--rule); border-radius: 8px; padding: 1.2rem; margin: 1.2rem 0; text-align: center; }
+.flow-box .flow-title { font-size: 0.85rem; font-weight: 700; color: var(--accent); margin-bottom: 0.8rem; }
+.flow-row { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 0.3rem; font-size: 0.85rem; }
+.flow-item { background: var(--bg2); border: 1px solid var(--rule); border-radius: 4px; padding: 0.25rem 0.6rem; white-space: nowrap; }
+.flow-arrow { color: var(--accent); font-weight: 700; font-size: 1.1rem; }
+.math-box { background: #f8f9fc; border-left: 3px solid #5b6cff; padding: 0.8rem 1.2rem; margin: 0.8rem 0; font-family: "Cambria Math", "Latin Modern Math", Georgia, serif; font-size: 0.95rem; }
+footer { margin-top: 3rem; padding: 1.5rem; border-top: 1px solid var(--rule); text-align: center; font-size: 0.8rem; color: var(--muted); }
+@media (max-width: 768px) {
+  .cover h1 { font-size: 1.5rem; }
+  .note-block { flex-direction: column; }
+  .annotation { width: 100%; }
+  .main-layout { padding: 0 0.8rem; }
+  table { font-size: 0.78rem; min-width: 600px; }
+}
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div class="ch-num">高中生物竞赛讲义 · 集训营</div>
+  <h1>第一章 生物化学 · 第十一节</h1>
+  <div class="subtitle">生命分子基础综合（讲义 + PPT 融合）</div>
+  <div class="meta">
+    <span>水·无机盐</span><span>糖类 Fischer 投影</span><span>脂类·鞘脂·萜类</span>
+    <span>氨基酸 20+Sec+Pyl</span><span>二级结构αβ</span><span>DNA H-DNA/超螺旋</span>
+    <span>酶 EC 编号</span><span>维生素 B 族结构</span>
+    <span>📅 整理日期: 2026年7月6日</span>
+  </div>
+</div>
+
+<div class="main-layout">
+
+<div class="section-header">
+  <div class="sec-num">第一章 第十一节</div>
+  <h2>生命分子基础综合（讲义 + PPT 融合）</h2>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>本节是<span class="u-double">"讲义翻拍照片 + 联赛生物化学 PPT"</span>的融合版。讲义侧重**结构示意、原始数据、表格细节**（如水分子氢键、Fischer 投影、20 种氨基酸分类表、酶 EC 编号、维生素化学结构式等），PPT 侧重**机理计算、代谢通量、联赛拔高**（如软脂酸 106 ATP、PCR 三步、Western Blot 等）。两者互补构成本节内容。</p>
+    <p>章节安排：</p>
+    <ol>
+      <li>水与无机盐（讲义独有）</li>
+      <li>糖类（Fischer 投影 + 化学性质）</li>
+      <li>脂类（鞘脂 + 萜类 + 维生素 ADEK）</li>
+      <li>蛋白质（20 种氨基酸 + Sec/Pyl + 结构层次）</li>
+      <li>核酸（5 种碱基 + 辅酶 + H-DNA/超螺旋）</li>
+      <li>酶（EC 编号 + 米氏方程 + 调节）</li>
+      <li>维生素（化学结构 + 辅酶对应）</li>
+    </ol>
+  </div>
+  <div class="annotation">
+    本节是"教材式"梳理，更适合赛前系统复习。各小节末尾的"📌 ch1-1-13 拓展要点"汇总本节新增 / 拔高的内容，便于回归。
+  </div>
+</div>
+
+<!-- ====== 一、水与无机盐 ====== -->
+<div class="topic-header">
+  <h3>一、水与无机盐（讲义第一二节补充）</h3>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><strong>（一）生命物质基础</strong></p>
+    <p><span class="u-double">人体 25 种元素</span>含量排序（表 1-1，讲义 P1）：</p>
+    <ul>
+      <li>O 65%（最多）→ C 18.5% → H 9.5% → N 3.3% → Ca 1.5% → P 1.0%</li>
+      <li>组成四大基本元素：<span class="key-point">C、H、O、N（占 96.3%）</span></li>
+    </ul>
+    <p>碳原子的核心地位：<span class="u">碳有 4 个共价键，能形成长链、分支、环</span>，是生物大分子的骨架。</p>
+    <p><strong>（二）水的关键理化性质</strong></p>
+    <ul>
+      <li>比热容 4.2 J/(g·℃)（很大）→ 调节体温</li>
+      <li>蒸发热 2400 J/g（很大）→ 出汗散热</li>
+      <li>水分子间形成<span class="u-double">3-4 个氢键</span>（每个水分子 4 个 H 键，氧 2 孤对、氢 2 极性）</li>
+      <li>极性分子 → 良好溶剂（"水是生命溶剂"）</li>
+    </ul>
+    <p><strong>（三）自由水 vs 结合水</strong></p>
+    <ul>
+      <li><span class="key-point">自由水</span>（约 95%）：以游离形式存在，参与代谢</li>
+      <li><span class="key-point">结合水</span>（约 4.5%）：与蛋白质、多糖等亲水基团结合，不流动、不参与代谢（作为结构水）</li>
+    </ul>
+    <p>比例与代谢/抗逆性关系：</p>
+    <ul>
+      <li><span class="u">自由水 / 结合水比值 ↑</span> → 代谢旺盛、生长快、抗逆性弱（如幼芽）</li>
+      <li><span class="u">自由水 / 结合水比值 ↓</span> → 代谢缓慢、生长慢、抗逆性强（休眠种子、越冬植物）</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    测定含水量方法：<span class="u">烘干法（直接测失水）+ 蔗糖渗透法（间接）</span>。结合水不蒸发、不结冰、不解离、不流动，是细胞结构的组成部分（如水母含水量 95%，仍能维持形态）。
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><strong>（四）无机盐的 4 大功能</strong>（讲义 P4）</p>
+    <ol>
+      <li><span class="key-point">合成原料</span>：PO₄³⁻ 合成磷脂、核酸、ATP</li>
+      <li><span class="key-point">酶/蛋白活化因子</span>：K⁺、Ca²⁺、Mg²⁺ 等金属离子是多种酶的辅因子</li>
+      <li><span class="key-point">维持渗透压</span>：Na⁺、Cl⁻、K⁺ 维持体液渗透压平衡</li>
+      <li><span class="key-point">缓冲对</span>：<br>
+        ① 血浆：<span class="u">H₂CO₃ / HCO₃⁻（pH 7.35-7.45，碳酸氢盐缓冲系）</span><br>
+        ② 红细胞内：<span class="u">H₂PO₄⁻ / HPO₄²⁻（磷酸盐缓冲系）</span><br>
+        ③ 蛋白质 / 血红蛋白（两性）</li>
+    </ol>
+    <p>缓冲对的作用机制：<span class="u">酸来 HCO₃⁻ + H⁺ → H₂CO₃ → H₂O + CO₂（呼出）；碱来 H₂CO₃ + OH⁻ → HCO₃⁻ + H₂O</span>。</p>
+  </div>
+  <div class="annotation">
+    "微量元素"是奥赛常考概念，指含量 < 体重 0.01% 的元素（如 Fe、I、Cu、Mn、Zn、Co、Mo、Se、V、Ni、Cr、Sn、F、Si、As 等 15 种）。Fe 是血红素辅基中心；I 是甲状腺激素的关键元素；Se 是谷胱甘肽过氧化物酶辅因子；F 是骨/牙的成分（CaF₂）；Zn 是胰岛素结晶和 DNA 聚合酶辅因子。
+  </div>
+</div>
+
+<div class="summary-box">
+<h4>📌 ch1-1-13 拓展要点 ① 水与无机盐</h4>
+<ul>
+<li>人体 25 种元素，C/H/O/N 占 96.3%</li>
+<li>自由水/结合水比值与代谢/抗逆性反向相关</li>
+<li>磷酸盐 vs 碳酸氢盐两套缓冲对</li>
+<li>15 种微量元素的辅酶/辅因子功能</li>
+</ul>
+</div>
+
+<svg viewBox="0 0 800 540" style="width:100%;max-width:720px;margin:1.2rem auto;display:block;font-family:sans-serif;">
+  <rect x="0" y="0" width="800" height="540" fill="#fdfbf7" stroke="#d6ccc0" rx="8"/>
+  <text x="400" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="#2c2416">四大生物大分子对比总览表</text>
+
+  <!-- 表头 -->
+  <rect x="20" y="48" width="760" height="36" fill="#c0392b" rx="4"/>
+  <text x="100" y="71" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">特征</text>
+  <text x="250" y="71" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">糖类</text>
+  <text x="400" y="71" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">脂类</text>
+  <text x="550" y="71" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">蛋白质</text>
+  <text x="700" y="71" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">核酸</text>
+
+  <!-- 行1: 单体 -->
+  <rect x="20" y="88" width="760" height="38" fill="#fff8e7" stroke="#d6ccc0"/>
+  <text x="100" y="112" text-anchor="middle" font-size="11" font-weight="700" fill="#8b4513">单体</text>
+  <text x="250" y="112" text-anchor="middle" font-size="10" fill="#2c2416">单糖(葡萄糖等)</text>
+  <text x="400" y="112" text-anchor="middle" font-size="10" fill="#2c2416">脂肪酸+甘油</text>
+  <text x="550" y="112" text-anchor="middle" font-size="10" fill="#2c2416">氨基酸(20种)</text>
+  <text x="700" y="112" text-anchor="middle" font-size="10" fill="#2c2416">核苷酸(A/T/G/C/U)</text>
+
+  <!-- 行2: 连接键 -->
+  <rect x="20" y="130" width="760" height="38" fill="#f5f0e8" stroke="#d6ccc0"/>
+  <text x="100" y="154" text-anchor="middle" font-size="11" font-weight="700" fill="#8b4513">连接键</text>
+  <text x="250" y="154" text-anchor="middle" font-size="10" fill="#2c2416">糖苷键(α/β-1,4/1,6)</text>
+  <text x="400" y="154" text-anchor="middle" font-size="10" fill="#2c2416">酯键(非聚合)</text>
+  <text x="550" y="154" text-anchor="middle" font-size="10" fill="#2c2416">肽键(酰胺键)</text>
+  <text x="700" y="154" text-anchor="middle" font-size="10" fill="#2c2416">3',5'-磷酸二酯键</text>
+
+  <!-- 行3: 主要功能 -->
+  <rect x="20" y="172" width="760" height="38" fill="#fff8e7" stroke="#d6ccc0"/>
+  <text x="100" y="196" text-anchor="middle" font-size="11" font-weight="700" fill="#8b4513">主要功能</text>
+  <text x="250" y="190" text-anchor="middle" font-size="10" fill="#2c2416">供能(主要)</text>
+  <text x="250" y="204" text-anchor="middle" font-size="10" fill="#2c2416">结构/识别</text>
+  <text x="400" y="190" text-anchor="middle" font-size="10" fill="#2c2416">储能/膜结构</text>
+  <text x="400" y="204" text-anchor="middle" font-size="10" fill="#2c2416">信号/保温</text>
+  <text x="550" y="190" text-anchor="middle" font-size="10" fill="#2c2416">催化(酶)/结构</text>
+  <text x="550" y="204" text-anchor="middle" font-size="10" fill="#2c2416">运输/免疫/调控</text>
+  <text x="700" y="190" text-anchor="middle" font-size="10" fill="#2c2416">遗传信息储存</text>
+  <text x="700" y="204" text-anchor="middle" font-size="10" fill="#2c2416">传递与表达</text>
+
+  <!-- 行4: 元素组成 -->
+  <rect x="20" y="214" width="760" height="38" fill="#f5f0e8" stroke="#d6ccc0"/>
+  <text x="100" y="238" text-anchor="middle" font-size="11" font-weight="700" fill="#8b4513">元素组成</text>
+  <text x="250" y="238" text-anchor="middle" font-size="10" fill="#2c2416">C H O</text>
+  <text x="400" y="238" text-anchor="middle" font-size="10" fill="#2c2416">C H O (P, N)</text>
+  <text x="550" y="238" text-anchor="middle" font-size="10" fill="#2c2416">C H O N (S)</text>
+  <text x="700" y="238" text-anchor="middle" font-size="10" fill="#2c2416">C H O N P</text>
+
+  <!-- 行5: 分子量 -->
+  <rect x="20" y="256" width="760" height="38" fill="#fff8e7" stroke="#d6ccc0"/>
+  <text x="100" y="280" text-anchor="middle" font-size="11" font-weight="700" fill="#8b4513">分子量范围</text>
+  <text x="250" y="280" text-anchor="middle" font-size="10" fill="#2c2416">10³~10⁷ Da</text>
+  <text x="400" y="280" text-anchor="middle" font-size="10" fill="#2c2416">10²~10⁴ Da</text>
+  <text x="550" y="280" text-anchor="middle" font-size="10" fill="#2c2416">10³~10⁶ Da</text>
+  <text x="700" y="280" text-anchor="middle" font-size="10" fill="#2c2416">10⁴~10¹⁰ Da</text>
+
+  <!-- 行6: 水溶性 -->
+  <rect x="20" y="298" width="760" height="38" fill="#f5f0e8" stroke="#d6ccc0"/>
+  <text x="100" y="322" text-anchor="middle" font-size="11" font-weight="700" fill="#8b4513">水溶性</text>
+  <text x="250" y="322" text-anchor="middle" font-size="10" fill="#27ae60">易溶于水(小分子)</text>
+  <text x="400" y="322" text-anchor="middle" font-size="10" fill="#c0392b">不溶于水(疏水)</text>
+  <text x="550" y="322" text-anchor="middle" font-size="10" fill="#27ae60">多溶于水(亲水)</text>
+  <text x="700" y="322" text-anchor="middle" font-size="10" fill="#27ae60">溶于水(强酸)</text>
+
+  <!-- 行7: 变性 -->
+  <rect x="20" y="340" width="760" height="38" fill="#fff8e7" stroke="#d6ccc0"/>
+  <text x="100" y="364" text-anchor="middle" font-size="11" font-weight="700" fill="#8b4513">变性特点</text>
+  <text x="250" y="364" text-anchor="middle" font-size="10" fill="#7a6e5e">不易变性</text>
+  <text x="400" y="364" text-anchor="middle" font-size="10" fill="#7a6e5e">不易变性</text>
+  <text x="550" y="364" text-anchor="middle" font-size="10" fill="#c0392b">高温/酸碱变性</text>
+  <text x="700" y="364" text-anchor="middle" font-size="10" fill="#c0392b">高温变性(Tm值)</text>
+
+  <!-- 行8: 显色反应 -->
+  <rect x="20" y="382" width="760" height="38" fill="#f5f0e8" stroke="#d6ccc0"/>
+  <text x="100" y="406" text-anchor="middle" font-size="11" font-weight="700" fill="#8b4513">显色鉴定</text>
+  <text x="250" y="406" text-anchor="middle" font-size="10" fill="#2c2416">Molisch(α-萘酚)</text>
+  <text x="400" y="406" text-anchor="middle" font-size="10" fill="#2c2416">苏丹Ⅲ(红色)</text>
+  <text x="550" y="406" text-anchor="middle" font-size="10" fill="#2c2416">双缩脲(紫色)</text>
+  <text x="700" y="406" text-anchor="middle" font-size="10" fill="#2c2416">二苯胺(蓝色)</text>
+
+  <!-- 竞赛要点 -->
+  <rect x="20" y="436" width="760" height="90" fill="#fff3cd" stroke="#e8c84a" rx="6"/>
+  <text x="400" y="458" text-anchor="middle" font-size="13" font-weight="700" fill="#c0392b">竞赛要点</text>
+  <text x="35" y="478" font-size="11" fill="#2c2416">1. <tspan font-weight="700">糖和核酸含C/H/O</tspan>;蛋白质额外含N(有的含S);脂类含C/H/O(磷脂含P,N);核酸额外含P — 元素组成是分类题常考点</text>
+  <text x="35" y="496" font-size="11" fill="#2c2416">2. <tspan font-weight="700">聚合方式</tspan>:糖(糖苷键)、蛋白质(肽键)、核酸(磷酸二酯键)均为脱水缩合;脂类不是真正的高聚物</text>
+  <text x="35" y="514" font-size="11" fill="#2c2416">3. <tspan font-weight="700">功能多样性</tspan>:蛋白质功能最多样(催化/结构/运输/免疫/调控);核酸功能专一(遗传信息);糖类功能最灵活(供能/结构/识别)</text>
+</svg>
+<figcaption>四大生物大分子对比总览表</figcaption>
+
+<!-- ====== 二、糖类 Fischer 投影 ====== -->
+<div class="topic-header">
+  <h3>二、糖类——Fischer 投影与构型</h3>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><strong>（一）单糖的 Fischer 投影</strong>（讲义 P5）</p>
+    <p>Fischer 投影是<span class="u-double">手性中心（手性碳）的二维表示法</span>：水平键伸向纸面前方，垂直键伸向纸面后方。醛糖的最长链竖直放置，醛基（—CHO）置顶，编号从上到下。</p>
+    <p><strong>D-甘油醛（最简单醛糖）</strong>：CHO 在顶，C2 上 OH 在右（2R 构型）。D/L 构型：<span class="key-point">最下方手性碳（编号最高的手性碳）的 OH 在右为 D 型，在左为 L 型</span>。</p>
+    <p>碳数与糖：</p>
+    <ul>
+      <li>丙糖（3C）：D-甘油醛、二羟丙酮（DHAP）</li>
+      <li>戊糖（5C）：<span class="key-point">D-核糖（RNA）、D-2-脱氧核糖（DNA）、核酮糖（光合）、木糖、L-阿拉伯糖</span></li>
+      <li>己糖（6C）：D-葡萄糖、D-果糖、D-半乳糖、D-甘露糖</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    Fischer 投影 vs Haworth 透视式：Fischer 是开链的 2D 投影，Haworth 是环状的立体投影（Pyranose 6 圆环 / Furanose 5 圆环）。Haworth 中 C1 异头碳的 —OH 与 C6 的 —CH₂OH 同侧为 α 型，异侧为 β 型。变旋现象：α 和 β 在水溶液中可互变（开链过渡态）→ 平衡时比旋光度稳定。
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><strong>（二）旋光性与比旋光度</strong>（讲义 P6）</p>
+    <p>平面偏振光通过含手性分子的溶液时，<span class="u-double">偏振面会旋转</span>，旋转的角度 α 称为旋光角。</p>
+    <p>比旋光度公式：</p>
+    <div class="math-box">
+      [α]<sub>D</sub><sup>t</sup> = α / (c · L)<br>
+      <small>α：实测旋光角（度）；c：浓度（g/mL）；L：管长（dm）；D：钠光 D 线（589.3 nm）；t：温度</small>
+    </div>
+    <p><strong>右旋（dextrorotatory, +）</strong>与左旋（levorotatory, −）：</p>
+    <ul>
+      <li>D-葡萄糖：[α] = +52.7°（右旋）</li>
+      <li>D-果糖：[α] = −92.0°（左旋，更强）</li>
+      <li>D-半乳糖：[α] = +80.2°</li>
+    </ul>
+    <p><strong>（三）变旋现象（mutarotation）</strong></p>
+    <p>α-D-葡萄糖（+112°）溶于水后，比旋光度逐渐下降至 +52.7°；β-D-葡萄糖（+18.7°）则上升至 +52.7°。原因是水溶液中 α 和 β 通过开链形式互变，最终达到平衡（α : β ≈ 36 : 64）。</p>
+  </div>
+  <div class="annotation">
+    旋光性是手性的直接表现。氨基酸的 D/L 构型根据 α-碳的 L-α 氨基/L-α 羧基判定（生物界几乎都是 L 型）。糖的 D/L 构型根据最远端手性碳的 —OH 位置判定。
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><strong>（四）Lobry de Bruyn 转化（酮-烯醇互变）</strong>（讲义 P8）</p>
+    <p>在弱碱催化下，D-葡萄糖、D-果糖、D-甘露糖可通过<span class="u-double">共同的烯二醇中间体</span>互变：</p>
+    <div class="flow-box">
+      <div class="flow-title">酮-烯醇互变（Lobry de Bruyn 转化）</div>
+      <div class="flow-row">
+        <span class="flow-item">D-葡萄糖</span>
+        <span class="flow-arrow">⇌</span>
+        <span class="flow-item">1,2-烯二醇</span>
+        <span class="flow-arrow">⇌</span>
+        <span class="flow-item">D-果糖</span>
+        <span class="flow-arrow">⇌</span>
+        <span class="flow-item">D-甘露糖</span>
+      </div>
+    </div>
+    <p>这 3 种糖在 C2 位互为<span class="key-point">差向异构体（epimer）</span>。该反应是糖的碱性变旋基础，也是 Fehling 试剂检测还原糖的化学基础。</p>
+  </div>
+  <div class="annotation">
+    C2 差向异构：只差在 C2 一个手性碳的构型。类似地，C4 差向异构（如葡萄糖和半乳糖）也是常见。DNA/RNA 提取中常用的测序酶处理碱基也涉及烯醇互变。
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><strong>（五）糖苷键与寡糖（讲义 P9-10）</strong></p>
+    <p>两个单糖脱水形成<span class="u-double">糖苷键（glycosidic bond）</span>，方向为"<span class="key-point">半缩醛羟基（C1 异头碳）+ 其他糖的羟基（2/4/6 位）</span>"。糖苷键按异头碳的 α/β 区分。</p>
+    <p>常见二糖：</p>
+  </div>
+  <div class="annotation">
+    "还原糖 vs 非还原糖"判断：含游离半缩醛羟基（异头碳）= 还原糖。蔗糖（葡萄糖 + 果糖，α,β-1,2）的两个异头碳都参与糖苷键 → 非还原糖；麦芽糖（α-1,4）、乳糖（β-1,4）保留一个异头碳 → 还原糖。
+  </div>
+</div>
+
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>二糖</th><th>组成</th><th>糖苷键</th><th>还原性</th><th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>麦芽糖</td><td>α-Glc + α-Glc</td><td>α-1,4</td><td>还原糖</td><td>淀粉水解</td></tr>
+<tr><td>纤维二糖</td><td>β-Glc + β-Glc</td><td>β-1,4</td><td>还原糖</td><td>纤维素水解</td></tr>
+<tr><td>乳糖</td><td>β-Gal + α-Glc</td><td>β-1,4</td><td>还原糖</td><td>乳汁</td></tr>
+<tr><td>蔗糖</td><td>α-Glc + β-Fru</td><td>α,β-1,2</td><td>非还原糖</td><td>甘蔗、甜菜</td></tr>
+<tr><td>棉子糖</td><td>α-Gal + Suc</td><td>α-1,6（半乳糖）</td><td>非还原糖</td><td>棉子、甜菜</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><strong>（六）多糖——同多糖</strong>（讲义 P10-11）</p>
+    <ul>
+      <li><span class="key-point">直链淀粉（amylose）</span>：α-Glc 1→4 直链，螺旋，遇 I₂ → <span class="u-double">蓝色</span></li>
+      <li><span class="key-point">支链淀粉（amylopectin）</span>：α-Glc 1→4 主链 + α-1,6 分支（约每 24-30 残基一分支），遇 I₂ → 红棕色</li>
+      <li><span class="key-point">糖原（glycogen）</span>：类似支链淀粉但分支更密（每 8-12 残基一分支），遇 I₂ → 红棕色。存在于动物肝、肌肉</li>
+      <li><span class="key-point">纤维素（cellulose）</span>：β-Glc 1→4 直链，<span class="u-double">人体无β-糖苷酶，不能消化</span>，但提供膳食纤维</li>
+      <li><span class="key-point">壳多糖 / 几丁质（chitin）</span>：N-乙酰-D-氨基葡萄糖 β-1,4 聚合物，<span class="u-double">昆虫外骨骼、甲壳类壳、真菌细胞壁</span></li>
+    </ul>
+  </div>
+  <div class="annotation">
+    淀粉-碘反应机理：直链淀粉的螺旋内径恰好容纳 I₂/I₃⁻ 多碘离子 → 形成蓝色复合物。支链淀粉的螺旋短且分支频繁 → 红棕色。糖原分支最密 → 红棕色。变性淀粉的螺旋解开 → 不与碘显色。
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><strong>（七）杂多糖</strong>（讲义 P12）</p>
+    <ul>
+      <li><span class="key-point">果胶（pectin）</span>：<span class="u">D-半乳糖醛酸</span>通过 α-1,4 键连接。植物细胞壁成分。原果胶 → 果胶 → 果胶酸 → β-半乳糖醛酸</li>
+      <li><span class="key-point">糖胺聚糖（GAG）</span>：重复二糖单位（氨基糖 + 糖醛酸），如透明质酸、硫酸软骨素、肝素、硫酸角质素</li>
+      <li><span class="key-point">琼脂</span>：半乳糖和半乳糖醛酸聚合物（红藻细胞壁）</li>
+      <li><span class="key-point">半纤维素</span>：木糖、甘露糖等多糖杂聚物（植物细胞壁）</li>
+    </ul>
+    <p><strong>（八）糖蛋白 vs 蛋白聚糖</strong>（讲义 P12-13）</p>
+    <ul>
+      <li><span class="key-point">糖蛋白（glycoprotein）</span>：<span class="u">蛋白为主，糖链为辅（糖 < 蛋白）</span>。如红细胞膜糖蛋白（血型物质）</li>
+      <li><span class="key-point">蛋白聚糖（proteoglycan）</span>：<span class="u">糖链为主（> 95%），蛋白为骨架</span>。如软骨基质、细胞外基质</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    糖脂、脂多糖（LPS）也是糖结合物（详见脂质节）。糖类通过糖苷键与蛋白/脂质结合的功能：① 血型物质（ABO）；② 精卵识别（糖链是关键识别标记）；③ 补体溶细胞；④ 细胞粘附；⑤ 抗原性。
+  </div>
+</div>
+
+<div class="summary-box">
+<h4>📌 ch1-1-13 拓展要点 ② 糖类</h4>
+<ul>
+<li>8 种主要单糖的 Fischer 投影 + 构型</li>
+<li>比旋光度公式 [α] = α/(cL)，D/L 构型 = 最远手性碳 OH 位置</li>
+<li>变旋现象：α 与 β 经开链互变，平衡 α : β ≈ 36 : 64</li>
+<li>Lobry de Bruyn 转化：C2 差向异构（C2 OH 位置不同）</li>
+<li>5 种二糖：麦芽糖（α-1,4）、纤维二糖（β-1,4）、乳糖（β-1,4）、蔗糖（α,β-1,2）、棉子糖</li>
+<li>4 种多糖：直链淀粉/支链淀粉/糖原 + 纤维素/几丁质</li>
+<li>糖蛋白 vs 蛋白聚糖区别（蛋白为主 vs 糖为主）</li>
+<li>N-糖苷键（Asn）/ O-糖苷键（Ser/Thr）</li>
+</ul>
+</div>
+
+<!-- ====== 三、脂类 ====== -->
+<div class="topic-header">
+  <h3>三、脂类——鞘脂、萜类与维生素 ADEK</h3>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><strong>（一）油脂的理化性质（讲义 P15）</strong></p>
+    <ul>
+      <li>甘油三酯：<span class="u-double">1 甘油 + 3 脂肪酸 + 3 H₂O 脱去 3 分子水</span></li>
+      <li>饱和脂肪酸：长直链，分子间紧密 → <span class="key-point">熔点高，常温固态</span>（动物脂肪：硬脂酸、软脂酸）</li>
+      <li>不饱和脂肪酸：顺式双键使链弯曲，分子不能紧密排列 → <span class="key-point">熔点低，常温液态</span>（植物油：油酸、亚油酸）</li>
+      <li><span class="u">反式脂肪酸</span>（部分氢化植物油）：熔点高、人体难代谢，是心血管疾病风险因素</li>
+    </ul>
+    <p><strong>（二）Fenton 反应（讲义 P15）</strong></p>
+    <div class="math-box">
+      Fe²⁺ + H₂O₂ → Fe³⁺ + ·OH + OH⁻<br>
+      <small>Fenton 反应生成<span class="u-double">羟自由基 ·OH</span>，是氧化应激的关键反应</small>
+    </div>
+    <p>脂质过氧化（lipid peroxidation）：·OH 攻击多不饱和脂肪酸 → 脂自由基 → 链式反应 → 损伤生物膜。</p>
+  </div>
+  <div class="annotation">
+    抗氧化剂（如维生素 E、谷胱甘肽、超氧化物歧化酶 SOD、过氧化氢酶）清除自由基。Fenton 反应是生物体内 ROS（活性氧）的主要来源之一，是衰老、动脉粥样硬化、神经退行性疾病的共同基础。
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><strong>（三）磷脂的两亲性与 4 种排列</strong>（讲义 P16）</p>
+    <p>磷脂分子 = 极性头部（磷酸 + 胆碱/乙醇胺/丝氨酸）+ 2 条非极性烃链尾巴 → <span class="u-double">两亲性分子（amphipathic / amphiphilic）</span>。</p>
+    <p>在水中的 4 种排列（图 1-3-3）：</p>
+    <ol>
+      <li><span class="key-point">单分子层（monolayer）</span>：在空气-水界面</li>
+      <li><span class="key-point">微团（micelle）</span>：浓度低时，疏水尾巴聚拢成球形内核，亲水头朝外</li>
+      <li><span class="key-point">双分子层（bilayer）</span>：浓度高时，<span class="u-double">两条分子尾对尾形成双层</span>，是生物膜的基础</li>
+      <li><span class="key-point">脂质体（liposome）</span>：闭合双层（囊泡），可作药物载体</li>
+    </ol>
+    <p>三种甘油磷脂：</p>
+    <ul>
+      <li><span class="key-point">卵磷脂（PC，磷脂酰胆碱）</span>：胆碱（—O—CH₂CH₂N⁺(CH₃)₃）</li>
+      <li><span class="key-point">脑磷脂（PE，磷脂酰乙醇胺）</span>：乙醇胺（—O—CH₂CH₂NH₂）</li>
+      <li><span class="key-point">丝氨酸磷脂（PS）</span>：丝氨酸（—O—CH₂CH(NH₂)COOH）</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    胆汁酸盐的"清洁剂"作用：胆汁酸盐是两亲性（亲水/疏水两端）→ 乳化脂肪 → 增大脂肪酶的接触面积 → 加速脂肪消化。
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><strong>（四）鞘脂类</strong>（讲义 P17）</p>
+    <p>鞘脂以<span class="key-point">鞘氨醇（sphingosine）</span>为骨架（不是甘油），是动物细胞膜（尤其神经髓鞘）的重要成分。</p>
+    <p>鞘脂家族：</p>
+    <ul>
+      <li><span class="key-point">神经酰胺（ceramide）</span>：鞘氨醇 + 脂酸（酰胺键）—— 母体</li>
+      <li><span class="key-point">鞘磷脂（sphingomyelin）</span>：神经酰胺 + 磷酸胆碱</li>
+      <li><span class="key-point">鞘糖脂（glycosphingolipid）</span>：神经酰胺 + 糖基（β-糖苷键）<br>
+        ① 脑苷脂：单糖<br>
+        ② 硫苷脂：糖 + 硫酸基<br>
+        ③ 神经节苷脂：含唾液酸（<span class="u-double">GM1 是霍乱毒素受体</span>）</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    鞘脂代谢病：① 戈谢病（β-葡萄糖脑苷脂酶缺陷）；② 尼曼-匹克病（鞘磷脂酶缺陷）；③ Tay-Sachs 病（氨基己糖苷酶 A 缺陷，GM2 堆积）—— 均是常染色体隐性遗传溶酶体贮积病。
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><strong>（五）异戊二烯系脂质</strong>（讲义 P18）</p>
+    <p>异戊二烯（isoprene, C₅H₈）是萜类和类固醇的共同结构单元，<span class="u-double">由乙酰 CoA 经甲羟戊酸途径（MVA）合成</span>。</p>
+    <p>两种类型：</p>
+    <ul>
+      <li><span class="key-point">类固醇（甾体）</span>：<span class="u">环戊烷多氢菲母核</span>，如胆固醇、胆汁酸、类固醇激素、维生素 D</li>
+      <li><span class="key-point">萜类（terpenes）</span>：<span class="u">2-异戊二烯为基本单位（IPP/DMAPP）</span>，如维生素 A/E/K、单萜、倍半萜</li>
+    </ul>
+    <p>四类脂溶性维生素（讲义 P18, P69）：</p>
+  </div>
+</div>
+
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>维生素</th><th>化学本质</th><th>活性形式</th><th>生理功能</th><th>缺乏症</th>
+</tr>
+</thead>
+<tbody>
+<tr><td><strong>VA（视黄醇）</strong></td><td>萜类（异戊二烯聚合）</td><td>视黄醇 / 视黄醛 / 视黄酸</td><td>视觉（视紫红质）、上皮分化、生长</td><td>夜盲、干眼</td></tr>
+<tr><td><strong>VD（钙化醇）</strong></td><td>开环类固醇</td><td>1,25-(OH)₂-D₃（钙三醇）</td><td>钙磷代谢、骨骼钙化</td><td>佝偻病（儿）、软骨病（成）</td></tr>
+<tr><td><strong>VE（生育酚）</strong></td><td>苯骈二氢吡喃环 + 异戊二烯侧链</td><td>α-生育酚</td><td>抗氧化（断脂质过氧化链）</td><td>肌肉萎缩、不育（动物）</td></tr>
+<tr><td><strong>VK（凝血维生素）</strong></td><td>萘醌 + 异戊二烯侧链</td><td>叶绿醌（VK₁）/ 甲萘醌（VK₂）</td><td>γ-谷氨酰羧化酶辅因子（凝血因子 II、VII、IX、X）</td><td>凝血障碍、新生儿出血</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><strong>（六）LPS 脂多糖</strong>（讲义 P19）</p>
+    <p>革兰氏阴性菌（<span class="u-double">G⁻</span>）外膜的特征成分，<span class="key-point">是内毒素（endotoxin）</span>，由三部分组成：</p>
+    <ul>
+      <li><span class="key-point">脂质 A（Lipid A）</span>：保守的糖脂结构，毒性中心（被 TLR4 识别）</li>
+      <li><span class="key-point">核心多糖（core polysaccharide）</span>：含 KDO（3-脱氧-D-甘露辛酮糖酸）、庚糖（Hep）</li>
+      <li><span class="key-point">O-特异侧链（O-antigen）</span>：菌体抗原决定簇（O 抗原）</li>
+    </ul>
+    <p>生理效应（败血症休克）：LPS → TLR4/MyD88 → NF-κB → TNF-α、IL-1、IL-6 等炎症因子大量释放 → 发热、低血压、DIC（弥散性血管内凝血）→ 休克。</p>
+  </div>
+  <div class="annotation">
+    革兰氏阳性菌（G⁺）无 LPS，但有<span class="u-double">磷壁酸（teichoic acid）</span>作为细胞壁特征。LPS 与磷壁酸都是"病原相关分子模式"（PAMP），被免疫系统识别后引发炎症反应。
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><strong>（七）血浆脂蛋白（讲义 P19-20）</strong></p>
+    <p>4 类脂蛋白按密度由低到高：</p>
+  </div>
+  <div class="annotation">
+    脂蛋白的"好/坏"分类：<span class="u-double">HDL 是"好胆固醇"（逆向转运胆固醇回肝）；LDL 是"坏胆固醇"（运胆固醇到血管壁）</span>。但这是临床简化，从生理功能看 LDL 在正常范围内是必要的（运胆固醇到外周组织）。
+  </div>
+</div>
+
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>脂蛋白</th><th>密度 (g/mL)</th><th>主要载脂蛋白</th><th>主要脂质</th><th>来源 / 走向</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>CM（乳糜微粒）</td><td>&lt; 0.95</td><td>apoB-48, apoE</td><td>TAG（85%）</td><td>小肠 → 运外源脂肪到组织</td></tr>
+<tr><td>VLDL</td><td>0.95-1.006</td><td>apoB-100, apoE</td><td>TAG（55%）</td><td>肝 → 运内源脂肪到组织</td></tr>
+<tr><td>IDL</td><td>1.006-1.019</td><td>apoB-100, apoE</td><td>胆固醇酯 + TAG</td><td>VLDL 中间代谢物</td></tr>
+<tr><td>LDL</td><td>1.019-1.063</td><td>apoB-100</td><td>胆固醇酯（50%）</td><td>运胆固醇到外周</td></tr>
+<tr><td>HDL</td><td>1.063-1.210</td><td>apoA-I, apoA-II</td><td>磷脂、胆固醇酯</td><td>从外周回收胆固醇（"好脂蛋白"）</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><strong>（八）PIP₂ 信号通路</strong>（讲义 P20）</p>
+    <p>磷脂酰肌醇 4,5-二磷酸（PIP₂）位于细胞膜内叶，<span class="u-double">是重要信号前体</span>，可被磷脂酶 C（PLC）水解为两个第二信使：</p>
+    <ul>
+      <li><span class="key-point">IP₃（肌醇 1,4,5-三磷酸）</span>：扩散入胞质 → 结合内质网 IP₃ 受体 → 释放 Ca²⁺ → 激活 CaM、PKC</li>
+      <li><span class="key-point">DAG（二酰甘油）</span>：留在膜上 → 激活 PKC（需 Ca²⁺）</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    PIP₂ → IP₃ + DAG 是"双叉信号"：一个前体产生两个第二信使，分别激活 Ca²⁺ 通路和 PKC 通路。PKC 进一步磷酸化底物 → 调节细胞增殖、分化、凋亡。
+  </div>
+</div>
+
+<div class="summary-box">
+<h4>📌 ch1-1-13 拓展要点 ③ 脂类</h4>
+<ul>
+<li>甘油三酯 + 3 H₂O 脱水（酯化反应）</li>
+<li>Fenton 反应：Fe²⁺ + H₂O₂ → Fe³⁺ + ·OH + OH⁻</li>
+<li>磷脂两亲性 + 4 种排列（单层、微团、双层、脂质体）</li>
+<li>鞘脂家族：神经酰胺（母体）→ 鞘磷脂/鞘糖脂（脑苷脂/硫苷脂/神经节苷脂）</li>
+<li>异戊二烯系：萜类（VA/VE/VK）+ 类固醇（VD）</li>
+<li>LPS 脂多糖：脂质 A + 核心多糖 + O-特异侧链；TLR4 识别引发败血症休克</li>
+<li>5 类脂蛋白：CM/VLDL/IDL/LDL/HDL（密度梯度排序）</li>
+<li>PIP₂ → IP₃ + DAG 双叉信号（PLC 切割）</li>
+</ul>
+</div>
+
+<!-- ====== 四、蛋白质 20 种 + Sec + Pyl ====== -->
+<div class="topic-header">
+  <h3>四、蛋白质——20 种氨基酸 + Sec + Pyl + 二硫键</h3>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><strong>（一）α-氨基酸通式（Fischer 投影）</strong>（讲义 P22）</p>
+    <p>α-碳连接 4 个基团：—NH₂、—COOH、—H、—R。Fischer 投影中 —COOH 在顶、—R 在下、—NH₂ 在左或右（对应 L 或 D）。</p>
+    <p>蛋白质元素组成（凯氏定氮法）：<span class="u-double">C 50-55% / H 6-8% / O 20-23% / N 15-18% / S 0-4%</span>。平均氮含量 16%（凯氏常数）→ 蛋白质含量 ≈ 氮含量 × 6.25。</p>
+    <p><strong>（二）20 种氨基酸的 R 基分类（讲义 P24）</strong></p>
+    <p>按 R 基极性 + 电荷分 5 类：</p>
+  </div>
+  <div class="annotation">
+    凯氏定氮法（Kjeldahl method）原理：浓硫酸消化蛋白质 → NH₃ → 蒸馏 → 滴定。蛋白质中 N 含量较稳定（约 16%），所以用 N 含量 × 6.25 ≈ 蛋白含量。但 N 含量因蛋白种类而异（如角蛋白 N 高、胶原蛋白更低）。
+  </div>
+</div>
+
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>类别</th><th>数量</th><th>R 基特点</th><th>氨基酸</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>非极性疏水</td><td>9</td><td>烃基或芳香环</td><td>Gly、Ala、Val、Leu、Ile、Pro、Phe、Trp、Met</td></tr>
+<tr><td>极性不带电</td><td>6</td><td>含 —OH、—SH、—CONH₂</td><td>Ser、Thr、Cys、Tyr、Asn、Gln</td></tr>
+<tr><td>酸性（带负电）</td><td>2</td><td>R 基含 —COOH</td><td>Asp、Glu</td></tr>
+<tr><td>碱性（带正电）</td><td>3</td><td>R 基含 —NH₂ 或胍基</td><td>Lys、Arg、His</td></tr>
+<tr><td>亚氨基酸</td><td>1</td><td>α-氨基成环</td><td>Pro（特殊：α-碳不是手性）</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><strong>（三）含硫氨基酸</strong>（讲义 P24）</p>
+    <ul>
+      <li><span class="key-point">半胱氨酸 Cys（C）</span>：R 基 = —CH₂SH（巯基）</li>
+      <li><span class="key-point">甲硫氨酸 Met（M）</span>：R 基 = —CH₂CH₂SCH₃（甲硫基/甲硫醚）</li>
+    </ul>
+    <p>胱氨酸（cystine）：<span class="u-double">两分子半胱氨酸的巯基氧化形成二硫键（—S—S—）→ 胱氨酸</span>。二硫键是共价键，<span class="u">稳定蛋白质三级结构</span>（如胰岛素有 1 个二硫键，IgG 有多个，牛胰核糖核酸酶有 4 个）。</p>
+    <p><strong>（四）含羟基氨基酸</strong></p>
+    <ul>
+      <li><span class="key-point">丝氨酸 Ser（S）</span>：R 基 = —CH₂OH</li>
+      <li><span class="key-point">苏氨酸 Thr（T）</span>：R 基 = —CH(OH)CH₃</li>
+      <li><span class="key-point">酪氨酸 Tyr（Y）</span>：R 基 = 对羟基苯基 —C₆H₄—OH</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    Ser/Thr/Tyr 是蛋白激酶磷酸化的主要靶残基（也含 His，但少见）。磷酸吡哆醛（PLP, VitB₆ 的活性形式）通过 Schiff 碱与氨基酸 α-氨基结合，是转氨酶、脱羧酶的共同辅基。
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><strong>（五）稀有氨基酸——第 21、22 种</strong>（讲义 P23）</p>
+    <p>近年发现的两种特殊氨基酸，<span class="u-double">由终止密码子重新编码</span>而来：</p>
+    <ul>
+      <li><span class="key-point">硒代半胱氨酸（Sec, U, 第 21 种）</span>：含 Se 而非 S 的 Cys 同系物，由 <span class="u">UGA（通常是终止密码）</span> 在 SECIS 元件存在下重新编码。存在于谷胱甘肽过氧化物酶（GPx）、硫氧还蛋白还原酶等</li>
+      <li><span class="key-point">吡咯赖氨酸（Pyl, O, 第 22 种）</span>：含吡咯环的赖氨酸衍生物，由 <span class="u">UAG（通常是终止密码）</span> 重新编码。仅存在于产甲烷古菌中</li>
+    </ul>
+    <p>硒代半胱氨酸是<span class="u-double">第 21 种标准氨基酸</span>，已被 IUPAC 正式确认。</p>
+  </div>
+  <div class="annotation">
+    "标准氨基酸 20 + 特殊编码 2 (Sec + Pyl)" 是 2020 年后的最新分类。在 IBO 联赛中常作为"拔高"考题（如问"组成蛋白质的标准氨基酸有几种"答案可能是 20 或 22，取决于是否含特殊编码）。
+  </div>
+</div>
+
+<div class="summary-box">
+<h4>📌 ch1-1-13 拓展要点 ④ 稀有氨基酸</h4>
+<ul>
+<li>硒代半胱氨酸（Sec, U）：第 21 种，UGA 重新编码</li>
+<li>吡咯赖氨酸（Pyl, O）：第 22 种，UAG 重新编码</li>
+<li>胱氨酸 = 2 Cys 通过 —S—S— 二硫键连接</li>
+<li>含硫：Cys（—SH）、Met（—SCH₃）、Sec（—SeH）</li>
+<li>含羟基：Ser、Thr、Tyr（可磷酸化）</li>
+</ul>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><strong>（六）pI 计算公式（讲义 P25）</strong></p>
+    <p>等电点（pI）是氨基酸或蛋白质净电荷为 0 时的 pH。三类氨基酸 pI 计算：</p>
+  </div>
+  <div class="annotation">
+    "pI = (pKa₁ + pKa₂) / 2" 中 pKa₁ 是最酸基团的 pKa，pKa₂ 是次酸基团。丙氨酸的两个 pKa 是 α-COOH (2.3) 和 α-NH₃⁺ (9.7)，pI = (2.3 + 9.7) / 2 = 6.0。Asp 多了一个 R-COOH (3.9) → pI = (2.3 + 3.9) / 2 = 3.1。
+  </div>
+</div>
+
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>类型</th><th>pI 计算</th><th>例子</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>中性氨基酸（α-COOH + α-NH₂）</td><td>pI = (pKa₁ + pKa₂) / 2</td><td>Ala pI = (2.3 + 9.7) / 2 = 6.0</td></tr>
+<tr><td>酸性氨基酸（α-COOH + R-COOH）</td><td>pI = (pKa₁ + pKR) / 2</td><td>Asp pI = (2.3 + 3.9) / 2 = 3.1</td></tr>
+<tr><td>碱性氨基酸（α-NH₂ + R-NH₂）</td><td>pI = (pKα + pKR) / 2</td><td>Lys pI = (8.9 + 10.5) / 2 = 9.7</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><strong>（七）肽键形成</strong>（讲义 P26）</p>
+    <p>两分子氨基酸脱水：<span class="u-double">一个氨基酸的 —COOH 与另一个的 —NH₂ 脱水 → 肽键（—CO—NH—）</span>，形成二肽。</p>
+    <p>特点：</p>
+    <ul>
+      <li><span class="key-point">酰胺键</span>（peptide bond）</li>
+      <li>部分双键性质（<span class="u">C—N 不可自由旋转</span>），构象受限</li>
+      <li><span class="u-double">反式构型</span>（trans）为主，稳定</li>
+    </ul>
+    <p>10 个氨基酸以下称寡肽，10-50 称多肽，50 以上称蛋白质。生物活性肽多在 3-30 个氨基酸（如催产素 9aa、加压素 9aa、谷胱甘肽 3aa）。</p>
+  </div>
+  <div class="annotation">
+    多肽书写方向：N 端 → C 端（左 → 右）。谷胱甘肽（GSH）：γ-Glu-Cys-Gly，<span class="u-double">是 γ-肽键（不是 α-肽键，因为 Glu 用 γ-COOH 连接）</span>，是细胞内最重要的抗氧化剂。
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><strong>（八）蛋白质的二级结构</strong>（讲义 P27, P31）</p>
+    <p><span class="u-double">α-螺旋（α-helix）</span>：</p>
+    <ul>
+      <li><span class="key-point">右手螺旋</span>（绝大多数）</li>
+      <li>每螺旋 <span class="u-double">3.6 个氨基酸残基</span>，螺距 <span class="u-double">0.54 nm</span>，每残基沿轴上升 0.15 nm</li>
+      <li>氢键：<span class="u">n 位 C=O 与 n+4 位 N-H</span> 形成氢键（每个 C=O 和 N-H 都参与）</li>
+      <li>侧链 R 基伸向螺旋外侧</li>
+      <li>破坏剂：Pro（亚氨基酸不能形成 H 键，破坏螺旋）、Gly（柔性好，熵代价大）</li>
+    </ul>
+    <p><span class="u-double">β-折叠（β-sheet）</span>：</p>
+    <ul>
+      <li>主链几乎完全伸展（锯齿形）</li>
+      <li>链间氢键：相邻链的 C=O 与 N-H 相互形成</li>
+      <li><span class="key-point">平行</span>（parallel，链 N→C 方向相同）<br>
+        <span class="key-point">反平行</span>（antiparallel，链方向相反，更稳定）</li>
+      <li>例：丝心蛋白（fibroin）是反平行 β-折叠</li>
+    </ul>
+    <p><span class="key-point">β-转角（β-turn）</span>：4 个残基，180° 反转（常见于球蛋白表面）。<br>
+    <span class="key-point">无规则卷曲（random coil）</span>：无规律。</p>
+  </div>
+  <div class="annotation">
+    二级结构中的"螺距"和"残基/圈"是常考数据：α-螺旋 3.6 aa/圈、0.54 nm/圈、0.15 nm/aa。胶原蛋白是<span class="u-double">左手三股螺旋</span>（特殊），富含 Gly-Pro-Hyp。α-角蛋白（毛发、指甲）是典型的 α-螺旋束，β-角蛋白（蚕丝）是反平行 β-折叠。
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><strong>（九）三级结构与稳定力</strong>（讲义 P29）</p>
+    <p>三级结构 = 二级结构在三维空间中的进一步折叠。包括<span class="u-double">结构域（domain）</span>：蛋白质中独立折叠的功能单位。</p>
+    <p>稳定三级结构的 6 种化学键（图 1-4-8）：</p>
+    <ol>
+      <li><span class="key-point">氢键</span>（极性基团间，如 —OH 与 O=C、—NH 与 O=C）</li>
+      <li><span class="key-point">离子键（盐桥）</span>（带电基团间，如 —COO⁻ 与 —NH₃⁺）</li>
+      <li><span class="key-point">疏水键</span>（疏水 R 基聚拢，远离水相，是主要稳定力）</li>
+      <li><span class="key-point">范德华力</span>（弱，非特异）</li>
+      <li><span class="key-point">二硫键（—S—S—）</span>（共价键，最强，常见于分泌蛋白）</li>
+      <li><span class="key-point">酯键</span>（如 P 与 Ser 的磷酸酯键，少数）</li>
+    </ol>
+  </div>
+  <div class="annotation">
+    二硫键的还原断裂：β-巯基乙醇（β-ME）、二硫苏糖醇（DTT）可还原二硫键（用于 SDS-PAGE 样品处理）。细胞质蛋白（高还原环境）很少有二硫键；分泌蛋白和膜外部分蛋白（氧化环境）有多个二硫键稳定结构。
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><strong>（十）四级结构与代表蛋白</strong>（讲义 P30-31）</p>
+    <p><strong>抹香鲸肌红蛋白（myoglobin）</strong>：</p>
+    <ul>
+      <li>单链（153 aa），无四级结构</li>
+      <li>含 1 个<span class="u-double">血红素（heme）辅基</span>：Fe²⁺ + 卟啉环（4 个吡咯环）</li>
+      <li>8 段 α-螺旋（标号 A-H）</li>
+      <li>功能：储存 O₂（肌肉）</li>
+    </ul>
+    <p><strong>血红蛋白（hemoglobin, Hb）</strong>：</p>
+    <ul>
+      <li>四聚体：<span class="u-double">2α + 2β 亚基</span>（成人 HbA）；还有 HbA₂ (2α+2δ)、HbF (2α+2γ, 胎儿)</li>
+      <li>每亚基含 1 个血红素（4 分子/全酶）</li>
+      <li><span class="key-point">协同效应</span>：O₂ 与一个亚基结合 → 其他亚基对 O₂ 亲和力 ↑（正协同，S 形 O₂ 解离曲线）</li>
+      <li>调节因子：2,3-BPG、CO₂、H⁺（Bohr 效应）</li>
+    </ul>
+    <p><strong>X 射线晶体学（X-ray crystallography）</strong>：</p>
+    <ul>
+      <li><span class="u-double">Max Perutz 用 X 射线衍射解析血红蛋白结构（1962 Nobel 化学奖）</span></li>
+      <li>PDB 数据库：蛋白质结构的标准存储库</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    Perutz 1959 完成 Hb 结构。AlphaFold2（DeepMind, 2020）用深度学习预测蛋白质结构，<span class="u-double">CASP14 中位数 92.4 分</span>，达到实验级精度。AlphaFold 数据库（AFDB）已包含 2 亿+ 预测结构。
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><strong>（十一）4 种颜色反应</strong>（讲义 P33）</p>
+    <p>鉴别蛋白质的 4 种经典颜色反应：</p>
+    <ol>
+      <li><span class="key-point">双缩脲反应（biuret test）</span>：双缩脲 H₂N-CO-NH-CO-NH₂ + CuSO₄ 强碱 → 紫红色。≥ 2 个肽键蛋白可反应，用于蛋白质定量（0.5-10 mg/mL）</li>
+      <li><span class="key-point">酚试剂反应（Lowry 法）</span>：Folin-Ciocalteu 试剂 + 蛋白（酪氨酸残基还原磷钼酸/磷钨酸）→ 蓝色。灵敏度比双缩脲高 100 倍</li>
+      <li><span class="key-point">米伦氏反应（Millon test）</span>：Hg(NO₃)₂ + 蛋白（含 Tyr 残基）→ 红色沉淀。检测 Tyr</li>
+      <li><span class="key-point">乙醛酸反应（Hopkins-Cole test）</span>：乙醛酸 + 蛋白（含 Trp 残基） + 浓硫酸 → 紫色环。检测 Trp</li>
+    </ol>
+  </div>
+  <div class="annotation">
+    Bradford 法（考马斯亮蓝 G-250）灵敏度更高，且不依赖 Tyr/Trp 含量；BCA 法是另一常用方法。紫外吸收法在 280 nm 测蛋白（Trp/Tyr 贡献），简单快速但特异性低。凯氏定氮是"总氮"法，反映蛋白总量（× 6.25）。
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><strong>（十二）蛋白质的胶体性质与沉淀</strong>（讲义 P32）</p>
+    <p><span class="u-double">蛋白质胶体稳定的 3 个条件</span>：</p>
+    <ol>
+      <li>粒径 1-100 nm（胶体范围）</li>
+      <li>水化膜（亲水 R 基与水形成氢键）</li>
+      <li>同性电荷（取决于 pH 与 pI 关系）</li>
+    </ol>
+    <p>破坏任一条件 → 沉淀。</p>
+    <p><strong>4 种沉淀方法</strong>：</p>
+    <ul>
+      <li><span class="key-point">盐析</span>：高浓度中性盐（硫酸铵、Na₂SO₄）→ 破坏水化膜。最温和，<span class="u">不变性</span></li>
+      <li><span class="key-point">有机溶剂沉淀</span>：丙酮、乙醇等降低水的介电常数 → 蛋白失水化膜。易变性</li>
+      <li><span class="key-point">重金属盐沉淀</span>：pH &gt; pI 时，蛋白带负电，与 Hg²⁺、Pb²⁺、Cu²⁺ 结合沉淀（<span class="u">抢救重金属中毒用生鸡蛋清</span>）</li>
+      <li><span class="key-point">生物碱试剂沉淀</span>：pH &lt; pI 时，蛋白带正电，与苦味酸、鞣酸、钨酸结合沉淀</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    "盐溶 vs 盐析"对比：低浓度盐（NaCl 0.1 M 以下）增加蛋白溶解度（盐溶，破坏蛋白间静电相互作用）；高浓度盐降低溶解度（盐析，破坏水化膜）。Hofmeister 序列：硫酸根是强盐析离子，硫氰酸根是强助溶离子。
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><strong>（十三）变性 vs 变构</strong>（讲义 P32）</p>
+    <p><span class="key-point">变性（denaturation）</span>：蛋白质天然构象破坏，<span class="u">生物活性丧失</span>。可逆/不可逆。</p>
+    <p>变性因素：</p>
+    <ul>
+      <li>物理：高温（70-100℃）、紫外线、X 射线、超声</li>
+      <li>化学：强酸强碱、重金属盐、有机溶剂、尿素、β-ME（断二硫键）</li>
+    </ul>
+    <p>复性：某些简单蛋白（如核糖核酸酶）变性后<span class="u">可缓慢恢复天然构象（血红蛋白复性率 50%）</span>，复杂蛋白不可逆。</p>
+    <p><span class="key-point">变构（allosteric transition）</span>：天然构象改变但<span class="u">不破坏</span>，活性调节（与变性本质不同）。</p>
+  </div>
+  <div class="annotation">
+    蛋白变性的例子：① 鸡蛋煮熟（卵白蛋白变性凝固，不可逆）；② 牛奶酸奶（酪蛋白变性凝固）；③ 消毒（高温变性菌体蛋白）；④ 75% 酒精杀菌（变性菌体蛋白 + 溶解脂质）。
+  </div>
+</div>
+
+<div class="summary-box">
+<h4>📌 ch1-1-13 拓展要点 ⑤ 蛋白质</h4>
+<ul>
+<li>5 类氨基酸 R 基（疏水 9 / 极性 6 / 酸性 2 / 碱性 3 / 亚氨基 1）</li>
+<li>含硫：Cys/Met/Sec；含羟基：Ser/Thr/Tyr（可磷酸化）</li>
+<li>第 21/22 种氨基酸：Sec (UGA) / Pyl (UAG)</li>
+<li>pI 公式：中性 (pKa₁+pKa₂)/2；酸性 (pKa₁+pKR)/2；碱性 (pKα+pKR)/2</li>
+<li>α-螺旋 3.6 aa/圈、0.54 nm/圈、0.15 nm/aa，氢键 n→n+4</li>
+<li>β-折叠（平行/反平行）+ β-转角（180°）+ 无规则卷曲</li>
+<li>三级结构稳定力 6 种：氢键/离子键/疏水键/范德华/二硫键/酯键</li>
+<li>Hb 4 聚体（2α+2β）+ 4 血红素 + 正协同 + Bohr 效应 + 2,3-BPG</li>
+<li>Perutz 1962 Nobel 化学奖（Hb X 衍射）</li>
+<li>4 种颜色反应：双缩脲（肽键）、Lowry（Tyr）、Millon（Tyr）、Hopkins-Cole（Trp）</li>
+<li>3 大沉淀法：盐析（不变性）、重金属、生物碱试剂；4 种变性因素</li>
+</ul>
+</div>
+
+<!-- ====== 五、核酸——碱基、辅酶、DNA 结构 ====== -->
+<div class="topic-header">
+  <h3>五、核酸——碱基、辅酶、DNA 高级结构</h3>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><strong>（一）5 种碱基的结构</strong>（讲义 P34）</p>
+    <p>碱基分嘌呤（双环）和嘧啶（单环）两类：</p>
+    <ul>
+      <li><span class="key-point">嘌呤（purine）</span>：双环结构（嘧啶环 + 咪唑环融合），编号 N1-N9<br>
+        ① 腺嘌呤 <span class="u-double">A（adenine）</span>：6 位 —NH₂，N9 接糖<br>
+        ② 鸟嘌呤 <span class="u-double">G（guanine）</span>：6 位 =O，2 位 —NH₂，N9 接糖</li>
+      <li><span class="key-point">嘧啶（pyrimidine）</span>：单环结构<br>
+        ① 胞嘧啶 <span class="u-double">C（cytosine）</span>：4 位 —NH₂，2 位 =O，N1 接糖<br>
+        ② 胸腺嘧啶 <span class="u-double">T（thymine）</span>：仅 DNA，5 位 —CH₃，2,4 位 =O<br>
+        ③ 尿嘧啶 <span class="u-double">U（uracil）</span>：仅 RNA，无 5-CH₃</li>
+    </ul>
+    <p>互变异构：氨基 ↔ 亚氨基、酮式 ↔ 烯醇式。这是碱基突变（misincorporation）的化学基础。</p>
+  </div>
+  <div class="annotation">
+    "亚氨基 + 烯醇" 互变体可与不正确的碱基配对：例如 C 的亚氨基形式可与 A 配对（C·A 错配是突变的常见来源）。5-甲基胞嘧啶（5mC）是真核 DNA 甲基化标志（表观遗传学）。
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><strong>（二）核苷酸的连接：糖苷键</strong>（讲义 P34-35）</p>
+    <p>碱基与戊糖通过 <span class="u-double">N-糖苷键</span>连接：</p>
+    <ul>
+      <li>嘌呤：N9 — C1'</li>
+      <li>嘧啶：N1 — C1'</li>
+    </ul>
+    <p>核苷 = 碱基 + 戊糖；<span class="key-point">核苷酸 = 碱基 + 戊糖 + 磷酸</span>（磷酸连在戊糖 C5'）。</p>
+    <p><strong>（三）ATP / ADP / AMP</strong>（讲义 P35）</p>
+    <p>ATP = 腺嘌呤 + 核糖 + 3 个磷酸（α、β、γ）</p>
+    <div class="math-box">
+      A-P~P~P<br>
+      α&nbsp;&nbsp;β&nbsp;&nbsp;γ<br>
+      <small>~ = 高能磷酸键（水解 ΔG°' ≈ -30.5 kJ/mol 或 -7.3 kcal/mol）</small>
+    </div>
+    <p>ATP 水解：ATP + H₂O ⇌ ADP + Pi + 能量（释放用于细胞做功）<br>
+    ATP 合成：ADP + Pi + 能量 → ATP（光合、氧化磷酸化、底物水平磷酸化）</p>
+    <p><strong>（四）环化核苷酸 cAMP / cGMP</strong>（讲义 P36）</p>
+    <p>cAMP（环腺苷酸）= AMP 的 3',5'-环磷酸，<span class="u-double">是经典的"第二信使"</span>（first messenger 是激素本身）。cAMP 由腺苷酸环化酶（AC）从 ATP 合成，被磷酸二酯酶（PDE）水解。</p>
+    <p>信号通路：激素 → 受体 → Gs → AC ↑ → cAMP ↑ → PKA 激活 → 底物磷酸化 → 生理效应</p>
+  </div>
+  <div class="annotation">
+    cAMP 是 Sutherland 1950 年代发现"第二信使"概念的开端（获 1971 Nobel）。cGMP 也有类似作用（一氧化氮 NO → 鸟苷酸环化酶 → cGMP → 血管舒张）。
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><strong>（五）NAD⁺/NADP⁺/FMN/FAD 辅酶</strong>（讲义 P36-37）</p>
+    <p>这些辅酶的核心结构含<span class="u-double">维生素</span>：</p>
+  </div>
+  <div class="annotation">
+    烟酸（PP）→ NAD⁺/NADP⁺；核黄素（B₂）→ FMN/FAD。这两个是氢/电子载体（ox-red 辅酶），与脱氢酶共同作用。
+  </div>
+</div>
+
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>辅酶</th><th>来源维生素</th><th>氧化形式</th><th>还原形式</th><th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>NAD⁺</td><td>烟酸（VitB₃/PP）</td><td>NAD⁺</td><td>NADH + H⁺</td><td>递氢（吡啶环还原）</td></tr>
+<tr><td>NADP⁺</td><td>烟酸</td><td>NADP⁺</td><td>NADPH + H⁺</td><td>递氢（还原合成）</td></tr>
+<tr><td>FMN</td><td>核黄素（VitB₂）</td><td>FMN</td><td>FMNH₂</td><td>递氢（异咯嗪环）</td></tr>
+<tr><td>FAD</td><td>核黄素（VitB₂）</td><td>FAD</td><td>FADH₂</td><td>递氢</td></tr>
+<tr><td>CoA-SH</td><td>泛酸（VitB₅）</td><td>CoA-S—CO—R</td><td>—</td><td>酰基载体</td></tr>
+<tr><td>PLP</td><td>VitB₆</td><td>—</td><td>—</td><td>转氨酶、脱羧酶辅基</td></tr>
+<tr><td>FH₄</td><td>叶酸（VitB₉）</td><td>—</td><td>—</td><td>一碳单位载体</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><strong>（六）3',5'-磷酸二酯键</strong>（讲义 P37）</p>
+    <p>DNA/RNA 链由<span class="u-double">3',5'-磷酸二酯键</span>连接：</p>
+    <ul>
+      <li>一个核苷酸的 <span class="key-point">3'-OH</span> 与下一个核苷酸的 <span class="key-point">5'-磷酸</span> 缩合</li>
+      <li>方向性：<span class="u-double">5' → 3'</span>（左 5'、右 3'）</li>
+      <li>两条链 <span class="u-double">反向平行（antiparallel）</span></li>
+    </ul>
+  </div>
+  <div class="annotation">
+    核酸方向性是 5'→3'（N 端 → C 端类比），所以书写 DNA 序列时左 5'、右 3'。DNA 聚合酶只能 5'→3' 合成（不能 3'→5'），这就是为什么 DNA 复制是半不连续（前导链连续、滞后链不连续）。
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><strong>（七）DNA 双螺旋</strong>（讲义 P38-39）</p>
+    <p>Watson-Crick 1953 年提出。结构要点：</p>
+    <ul>
+      <li><span class="u-double">右手螺旋</span>（B 型）</li>
+      <li>每螺旋 <span class="key-point">10 bp（10.5 bp）</span>，螺距 <span class="key-point">3.4 nm</span>，碱基间距 <span class="key-point">0.34 nm</span></li>
+      <li>碱基对在内、糖-磷酸骨架在外</li>
+      <li><span class="u-double">A = T（2 个氢键）</span>，<span class="u-double">G ≡ C（3 个氢键）</span></li>
+      <li>两条链反向平行</li>
+      <li>大沟和小沟（蛋白质结合位点）</li>
+    </ul>
+    <p>三种 DNA 构象对比（表 1-5-2）：</p>
+  </div>
+  <div class="annotation">
+    氢键配对的原子：A-T：N1(A)···N3(T)、N6(A)···O4(T)；G-C：O6(G)···N4(C)、N1(G)···N3(C)、N2(G)···O2(C)。GC 配对多一个氢键，所以 GC 含量高的 DNA 熔解温度 Tm 更高。
+  </div>
+</div>
+
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>构象</th><th>螺旋方向</th><th>bp/圈</th><th>螺距 (nm)</th><th>直径 (nm)</th><th>序列偏好</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>A-DNA</td><td>右手</td><td>11</td><td>2.8</td><td>2.3</td><td>脱水、RNA-DNA 杂交</td></tr>
+<tr><td>B-DNA</td><td>右手</td><td>10.5</td><td>3.4</td><td>2.0</td><td><span class="u-double">生理条件主要形式</span></td></tr>
+<tr><td>Z-DNA</td><td><span class="u-double">左手</span></td><td>12</td><td>4.5</td><td>1.8</td><td>嘧啶-嘌呤交替（CG重复）</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><strong>（八）DNA 其他二级结构</strong>（讲义 P40-41）</p>
+    <ul>
+      <li><span class="key-point">发夹结构（hairpin）</span>：单链 DNA 自身回折，<span class="u-double">回文序列（palindrome）</span>形成对称的双链茎（5'-GAATTC-3' 是 EcoRI 识别位点）</li>
+      <li><span class="key-point">十字架结构（cruciform）</span>：发夹结构在双链 DNA 中出现</li>
+      <li><span class="key-point">H-DNA（三股螺旋）</span>：1963 年 Hoogsteen 发现，<span class="u-double">第三条链通过 Hoogsteen 配对（不是 Watson-Crick 配对）</span> 插入大沟</li>
+      <li><span class="key-point">G-四链体（G-quadruplex, G4）</span>：富含 G 的序列（端粒、启动子），4 链 G-G-G-G 平面</li>
+    </ul>
+    <p><strong>（九）DNA 超螺旋与拓扑学</strong>（讲义 P41-43）</p>
+    <p>超螺旋（supercoiling）= DNA 双螺旋进一步盘绕。</p>
+    <ul>
+      <li><span class="u-double">连环数 L = 扭转数 T + 缠绕数 W</span>（Fuller 公式）</li>
+      <li>L 为拓扑不变量（不变），T 和 W 可互换</li>
+      <li><span class="key-point">负超螺旋</span>：W 减小（更易解链），原核生物主要形式</li>
+      <li><span class="key-point">正超螺旋</span>：W 增大（更紧）</li>
+    </ul>
+    <p><span class="u-double">拓扑异构酶</span>：调整 L 值。</p>
+    <ul>
+      <li>拓扑异构酶 I（Topo I）：切开单链 → 旋转 → 重接，<span class="u-double">L 改变 ±1</span></li>
+      <li>拓扑异构酶 II（Topo II / 旋转酶 gyrase）：切开双链 → 另一双链穿过 → 重接，<span class="u-double">L 改变 ±2</span>，<span class="u">需要 ATP</span></li>
+    </ul>
+    <p>抗肿瘤药：</p>
+    <ul>
+      <li><span class="key-point">依托泊苷（etoposide）</span>：抑制 Topo II → 双链断裂 → 癌细胞凋亡</li>
+      <li><span class="key-point">喜树碱（camptothecin）</span>：抑制 Topo I</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    拓扑学 vs 构象学：构型异构涉及共价键变化（L 变），构象异构仅非共价变化（L 不变，T 和 W 互变）。例如 pUC19 质粒 L = 28/30/31 三种拓扑异构体。
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><strong>（十）人类基因组组成（讲义 P44，图 1-5-15）</strong></p>
+    <p>HGSC 2004 年完成：</p>
+    <ul>
+      <li>核基因组：<span class="u-double">30.6 亿 bp（约 3.2 Gb）</span></li>
+      <li>线粒体基因组：16.6 kb</li>
+      <li>编码序列：<span class="u-double">仅约 5%</span>；非编码序列：约 95%</li>
+      <li>卫星 DNA（重复）分类：<br>
+        ① <span class="key-point">卫星 DNA</span>：100-500 kb 大重复<br>
+        ② <span class="key-point">小卫星 DNA</span>：0.1-20 kb<br>
+        ③ <span class="key-point">微卫星 DNA</span>：1-6 bp（短串联重复，STR，法医 DNA 鉴定）</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    "DNA 指纹"原理：每个个体微卫星 DNA 的重复数不同 → PCR 扩增 + 电泳 → 唯一条带图谱。法医 DNA 鉴定（STR profiling）就是基于此。CODIS 数据库（美国）已收录 1300+ 万犯罪 DNA 样本。
+  </div>
+</div>
+
+<div class="summary-box">
+<h4>📌 ch1-1-13 拓展要点 ⑥ 核酸</h4>
+<ul>
+<li>5 种碱基：嘌呤双环 (A, G) + 嘧啶单环 (C, T, U)</li>
+<li>糖苷键：嘌呤 N9-C1'，嘧啶 N1-C1'</li>
+<li>ATP A-P~P~P，高能磷酸键 ~30.5 kJ/mol</li>
+<li>辅酶：NAD⁺/NADP⁺（烟酸） + FMN/FAD（核黄素 B₂）+ CoA（泛酸 B₅）+ PLP（B₆）+ FH₄（叶酸 B₉）</li>
+<li>3',5'-磷酸二酯键 + 反向平行 + 5'→3' 方向</li>
+<li>DNA 双螺旋：右手（B 型）、10.5 bp/圈、3.4 nm 螺距、0.34 nm 间距</li>
+<li>A=T（2 氢键）/ G≡C（3 氢键）</li>
+<li>三种 DNA 构象：A / B / Z（左手）</li>
+<li>Chargaff 规则：A=T, G=C</li>
+<li>回文序列、发夹、H-DNA（Hoogsteen）、G4</li>
+<li>超螺旋 L=T+W；负超螺旋利于解链</li>
+<li>Topo I（L±1）vs Topo II（L±2，耗 ATP）</li>
+<li>人类基因组 30.6 亿 bp，编码 5%，重复序列 95%</li>
+</ul>
+</div>
+
+<!-- ====== 六、酶 EC 编号与动力学 ====== -->
+<div class="topic-header">
+  <h3>六、酶——EC 编号、米氏方程与调节</h3>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><strong>（一）酶的命名与 EC 编号</strong>（讲义 P51）</p>
+    <p><span class="u-double">EC 编号（Enzyme Commission number）</span>是国际酶学委员会（IEC）制定的标准编号：<span class="key-point">EC x.x.x.x</span>，4 个数字分别表示：</p>
+    <ol>
+      <li>大类（6 类之一）</li>
+      <li>亚类</li>
+      <li>亚亚类</li>
+      <li>酶在该亚亚类中的序号</li>
+    </ol>
+    <p>酶的 6 大类：</p>
+  </div>
+</div>
+
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>类别</th><th>反应通式</th><th>例</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>1. 氧化还原酶（oxidoreductase）</td><td>AH₂ + B ⇌ A + BH₂</td><td>脱氢酶、氧化酶</td></tr>
+<tr><td>2. 转移酶（transferase）</td><td>AR + B ⇌ A + BR</td><td>氨基转移酶（转氨酶）、激酶</td></tr>
+<tr><td>3. 水解酶（hydrolase）</td><td>AB + H₂O ⇌ AOH + BH</td><td>蛋白酶、脂肪酶、糖苷酶</td></tr>
+<tr><td>4. 裂合酶（lyase）</td><td>AB ⇌ A + B</td><td>醛缩酶、脱水酶、脱羧酶</td></tr>
+<tr><td>5. 异构酶（isomerase）</td><td>A ⇌ A'</td><td>磷酸丙糖异构酶、消旋酶</td></tr>
+<tr><td>6. 合成酶（ligase）</td><td>A + B + ATP ⇌ AB</td><td>DNA 连接酶、氨酰-tRNA 合成酶</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><strong>（二）酶结构与活性中心</strong>（讲义 P54）</p>
+    <p>酶的结构层级：</p>
+    <ul>
+      <li><span class="key-point">单体酶（monomer）</span>：单条多肽链（如溶菌酶 129 aa）</li>
+      <li><span class="key-point">寡聚酶（oligomer）</span>：多条亚基（如 Hb 4 亚基）</li>
+      <li><span class="key-point">多酶复合体（multienzyme complex）</span>：多种酶紧密集合（如丙酮酸脱氢酶复合体 PDH）</li>
+    </ul>
+    <p><span class="u-double">活性中心（active site）</span>：</p>
+    <ul>
+      <li><span class="key-point">结合部位（binding site）</span>：与底物结合（决定专一性）</li>
+      <li><span class="key-point">催化部位（catalytic site）</span>：催化反应（决定活性）</li>
+    </ul>
+    <p>必需基团（参与催化的化学基团）：</p>
+    <ul>
+      <li>Ser —OH、Thr —OH、Tyr —OH</li>
+      <li>His 咪唑基（pKa ≈ 6，最适质子穿梭）</li>
+      <li>Cys —SH（强亲核）</li>
+      <li>Asp/Glu —COOH（酸碱催化）</li>
+      <li>Lys ε-NH₂</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    酶活性单位：1 IU（国际单位）= 在最适条件下、25℃、1 min 内催化 1 μmol 底物转化。比活力 = 总活力 / 总蛋白 = IU/mg，是酶纯度指标。
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><strong>（三）酶-底物复合物学说</strong>（讲义 P55）</p>
+    <p>两种经典模型：</p>
+    <ul>
+      <li><span class="key-point">钥匙-锁模型（lock-and-key, 1890, Fischer）</span>：酶活性中心与底物结构严密匹配，像钥匙插锁</li>
+      <li><span class="u-double">诱导-契合模型（induced-fit, 1958, Koshland）</span>：底物与酶结合时，<span class="u-double">酶构象发生改变</span>，活性中心更好地匹配底物</li>
+    </ul>
+    <p>诱导契合是现代主流模型，更准确地解释了酶的催化效率（同种酶对不同底物的差异）。<span class="key-point">同工酶（isozyme）</span>是催化相同反应但氨基酸序列不同的酶（如 LDH₁-₅）。</p>
+  </div>
+  <div class="annotation">
+    "同工酶"是奥赛常考概念。乳酸脱氢酶（LDH）有 5 种同工酶（由 M、H 亚基组合），不同组织分布不同：心肌 LDH₁ (H₄)、肝 LDH₅ (M₄)、骨骼肌 LDH₅。临床用 LDH 同工酶谱判断组织损伤。
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><strong>（四）酶高效催化的 4 种机制</strong>（讲义 P56）</p>
+    <ol>
+      <li><span class="key-point">邻近与定向效应（proximity & orientation）</span>：底物与酶结合后，反应基团空间上接近，反应熵减少</li>
+      <li><span class="key-point">张力与形变（strain / distortion）</span>：底物被酶"挤压"成过渡态构象，活化能降低</li>
+      <li><span class="key-point">酸碱催化（acid-base catalysis）</span>：His、Asp/Glu 充当质子供体/受体（"质子穿梭"）</li>
+      <li><span class="key-point">共价催化（covalent catalysis）</span>：酶的亲核基团（Ser —OH、Cys —SH、His 咪唑）与底物形成短暂共价键（酰基-酶中间体）</li>
+    </ol>
+    <p>辅因子（金属离子）的 5 种催化作用：</p>
+    <ul>
+      <li>作为 Lewis 酸（接受电子对）</li>
+      <li>通过电荷屏蔽促进反应</li>
+      <li>参与氧化还原（Fe, Cu, Mn）</li>
+      <li>稳定过渡态</li>
+      <li>促进底物定向</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    酶的催化效率：10⁶-10¹² 倍加速。例如：碳酸酐酶 10⁶/s 分子，β-内酰胺酶 10³/s，催化抗体（abzyme）也可达 10⁶-10⁷。溶菌酶是经典的"诱导契合 + 酸碱催化"模型。
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><strong>（五）米氏方程（Michaelis-Menten 方程）</strong>（讲义 P58）</p>
+    <p>由 <span class="u-double">Michaelis & Menten 1913 年提出</span>，基于稳态假设：</p>
+    <div class="math-box">
+      E + S ⇌ ES → E + P<br>
+      v = V<sub>max</sub>·[S] / (K<sub>m</sub> + [S])<br>
+      <small>v：反应速率；V<sub>max</sub>：最大速率；[S]：底物浓度；K<sub>m</sub>：米氏常数</small>
+    </div>
+    <p>Km 的意义：</p>
+    <ul>
+      <li>当 <span class="u-double">v = Vmax/2 时，[S] = Km</span></li>
+      <li>Km = 酶-底物解离常数（Kd）的近似值，<span class="key-point">Km 越小，亲和力越大</span></li>
+      <li>不同底物对应不同 Km 值（酶对最适底物 Km 最小）</li>
+      <li>同一酶在不同条件下 Km 可能变化（受 pH、温度、离子影响）</li>
+    </ul>
+    <p>两种极端情况：</p>
+    <ul>
+      <li>[S] &lt;&lt; Km 时，<span class="u-double">v ≈ (Vmax/Km)·[S]</span>，一级反应（[E] 远低于 [S]）</li>
+      <li>[S] &gt;&gt; Km 时，<span class="u-double">v ≈ Vmax</span>，零级反应（酶被底物饱和）</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    Briggs-Haldane 1942 改良米氏方程：使用稳态假设（[ES] 不变），不要求快速平衡假设。Lineweaver-Burk 双倒数作图 1/v = (Km/Vmax)·1/[S] + 1/Vmax 可同时求 Km 和 Vmax，并区分抑制剂类型。
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><strong>（六）温度、pH 对酶活性的影响</strong>（讲义 P59）</p>
+    <ul>
+      <li><span class="key-point">最适温度</span>：35-40℃（哺乳动物酶）；<span class="u">嗜热菌 Taq 酶最适 70-75℃</span></li>
+      <li><span class="key-point">最适 pH</span>：6-8（多数酶）；胃蛋白酶 pH 1.5-2；碱性磷酸酶 pH 9-10</li>
+    </ul>
+    <p>DNA 熔解温度 Tm 公式：</p>
+    <div class="math-box">
+      T<sub>m</sub> = 69.3 + 0.41 · (%G + %C)<br>
+      <small>（适用于 0.15 M NaCl 缓冲液中的长链 DNA）</small>
+    </div>
+  </div>
+  <div class="annotation">
+    Tm 是 DNA 双链 50% 解链时的温度，受 GC 含量、离子强度、序列均一性影响。PCR 引物设计常用更精确公式：Tm = 64.9 + 41·(G+C-16.4/N)，N 为引物长度。嗜热菌 Taq 酶 70-75℃ 最适，让 PCR 扩增可使用 95℃ 变性而不损失酶活性。
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><strong>（七）酶活性的调控</strong>（讲义 P60-65）</p>
+    <ol>
+      <li><span class="key-point">激活剂（activator）</span>：金属离子 K⁺、Na⁺、Mg²⁺、Mn²⁺、Zn²⁺、Fe²⁺、Ca²⁺；阴离子 Cl⁻ 等</li>
+      <li><span class="key-point">酶原激活</span>：合成时无活性，需经切割激活（胰蛋白酶原 → 胰蛋白酶，肠激酶切）</li>
+      <li><span class="u-double">别构调节</span>：<span class="key-point">调节物（别构剂）结合调节部位（非活性中心）→ 改变酶构象 → 改变活性</span>。S 形曲线（非米氏曲线）<br>
+        同促效应：底物本身调节；异促效应：其他分子调节</li>
+      <li><span class="u-double">共价修饰</span>：磷酸化/去磷酸化是<span class="key-point">最常见的可逆共价调节</span>。"高高低低"原则：糖原磷酸化酶（被磷酸化激活 → 糖原分解↑），糖原合酶（被磷酸化失活 → 糖原合成↓）</li>
+    </ol>
+    <p>3 类可逆抑制剂：</p>
+  </div>
+  <div class="annotation">
+    酶原激活的级联放大：1 个肠激酶可激活 1 个胰蛋白酶，1 个胰蛋白酶可激活多个胰凝乳蛋白酶原、羧肽酶原、弹性蛋白酶原。这种级联是消化、凝血、信号转导的共同机制。
+  </div>
+</div>
+
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>抑制剂类型</th><th>结合部位</th><th>Km</th><th>Vmax</th><th>Lineweaver-Burk 特征</th>
+</tr>
+</thead>
+<tbody>
+<tr><td><span class="key-point">竞争性抑制</span></td><td>活性中心</td><td>↑</td><td>不变</td><td>直线交 y 轴</td></tr>
+<tr><td><span class="key-point">非竞争性抑制</span></td><td>非活性中心</td><td>不变</td><td>↓</td><td>直线交 x 轴</td></tr>
+<tr><td><span class="key-point">反竞争性抑制</span></td><td>ES 复合物</td><td>↓</td><td>↓</td><td>平行线</td></tr>
+<tr><td><span class="key-point">不可逆抑制</span></td><td>共价结合必需基团</td><td>—</td><td>↓</td><td>v 永远达不到 Vmax</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><strong>（八）共价修饰级联放大（讲义 P68，图 1-6-22）</strong></p>
+    <p>肾上腺素激活糖原分解的级联：</p>
+    <div class="flow-box">
+      <div class="flow-title">肾上腺素信号级联放大（糖原分解）</div>
+      <div class="flow-row">
+        <span class="flow-item">肾上腺素（激素）</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-item">β-肾上腺素能受体</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-item">G 蛋白 (Gs α 亚基)</span>
+      </div>
+      <div class="flow-row" style="margin-top:0.5rem;">
+        <span class="flow-item">腺苷酸环化酶 AC</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-item">cAMP ↑</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-item">蛋白激酶 PKA 激活</span>
+      </div>
+      <div class="flow-row" style="margin-top:0.5rem;">
+        <span class="flow-item">磷酸化酶激酶 (b → a)</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-item">糖原磷酸化酶 (b → a)</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-item">糖原分解</span>
+      </div>
+    </div>
+    <p>每级"激活"可放大数倍到数十倍，<span class="u-double">整个级联可放大 10⁶-10⁸ 倍</span>。</p>
+  </div>
+  <div class="annotation">
+    类似的级联：凝血级联（FXII → FXI → FIX → FX → FII 凝血酶 → 纤维蛋白原 → 纤维蛋白），补体激活（经典途径 C1 → C4 → C2 → C3 → C5 → C6-9）。这些级联是"低信号→强反应"的关键机制。
+  </div>
+</div>
+
+<div class="summary-box">
+<h4>📌 ch1-1-13 拓展要点 ⑦ 酶</h4>
+<ul>
+<li>EC 编号 EC x.x.x.x，6 类：氧化还原/转移/水解/裂合/异构/合成</li>
+<li>活性中心：结合部位（专一性）+ 催化部位（活性）</li>
+<li>必需基团：Ser/Thr/Tyr/His/Cys/Asp/Glu/Lys</li>
+<li>诱导契合模型（Koshland 1958）取代钥匙-锁模型</li>
+<li>4 种催化机制：邻近/张力/酸碱/共价</li>
+<li>米氏方程 v = Vmax[S]/(Km+[S])，Km = v=Vmax/2 时的 [S]</li>
+<li>Lineweaver-Burk 双倒数作图</li>
+<li>最适温度 35-40℃（Taq 70-75℃），最适 pH 6-8</li>
+<li>Tm = 69.3 + 0.41·(%G+%C)</li>
+<li>3 类可逆抑制：竞争性 (Km↑ Vmax不变) / 非竞争性 (Km不变 Vmax↓) / 反竞争性 (Km↓ Vmax↓)</li>
+<li>共价修饰级联放大：肾上腺素 → cAMP → PKA → 磷酸化酶激酶 → 糖原磷酸化酶</li>
+</ul>
+</div>
+
+<!-- ====== 七、维生素 ====== -->
+<div class="topic-header">
+  <h3>七、维生素——水溶与脂溶性</h3>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><strong>（一）维生素总览</strong>（讲义 P67，表 1-7-1）</p>
+    <p>维生素是<span class="u-double">人和动物不能合成、必须从食物中获得</span>的微量有机物。按溶解性分两大类：</p>
+    <ul>
+      <li><span class="key-point">脂溶性维生素（A、D、E、K）</span>：溶于脂肪，与脂质共存于食物中；可储存于肝；过多积累致中毒</li>
+      <li><span class="key-point">水溶性维生素（B 族 + C）</span>：溶于水，不储存（多食多排）；缺乏症出现快</li>
+    </ul>
+    <p>主要维生素与缺乏症：</p>
+  </div>
+  <div class="annotation">
+    维生素是"生命必需微量有机物"，不是能源也不是结构物质，主要作为<span class="u-double">辅酶/辅基的成分</span>参与代谢。B 族维生素多与能量代谢、神经功能、血液功能相关；ADEK 多与特化功能（视觉、钙代谢、抗氧化、凝血）相关。
+  </div>
+</div>
+
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>维生素</th><th>化学名</th><th>辅酶/活性形式</th><th>主要功能</th><th>缺乏症</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>VA</td><td>视黄醇</td><td>视黄醛（11-顺）</td><td>视觉（视紫红质）、上皮</td><td>夜盲、干眼</td></tr>
+<tr><td>VB₁</td><td>硫胺素</td><td>TPP（硫胺素焦磷酸）</td><td>丙酮酸脱羧、α-酮戊二酸脱氢</td><td>脚气病、Wernicke 脑病</td></tr>
+<tr><td>VB₂</td><td>核黄素</td><td>FMN, FAD</td><td>氧化还原递氢</td><td>口角炎、舌炎</td></tr>
+<tr><td>VB₃ / PP</td><td>烟酸 / 烟酰胺</td><td>NAD⁺, NADP⁺</td><td>氧化还原递氢</td><td>癞皮病（3D：皮炎、腹泻、痴呆）</td></tr>
+<tr><td>VB₅</td><td>泛酸</td><td>CoA-SH, ACP</td><td>酰基载体</td><td>少见（广泛存在）</td></tr>
+<tr><td>VB₆</td><td>吡哆醇 / 醛 / 胺</td><td>PLP, PMP</td><td>转氨、脱羧、消旋</td><td>皮炎、贫血、抽搐</td></tr>
+<tr><td>VB₇ / H</td><td>生物素</td><td>生物素</td><td>羧化酶辅基</td><td>皮炎、脱发</td></tr>
+<tr><td>VB₉</td><td>叶酸</td><td>FH₄（四氢叶酸）</td><td>一碳单位载体</td><td>巨幼红细胞贫血、神经管缺陷</td></tr>
+<tr><td>VB₁₂</td><td>钴胺素</td><td>甲钴胺素、腺苷钴胺素</td><td>甲基转移、变位酶</td><td>恶性贫血、神经症状</td></tr>
+<tr><td>VC</td><td>抗坏血酸</td><td>抗坏血酸</td><td>羟化反应辅因子、抗氧化</td><td>坏血病</td></tr>
+<tr><td>VD</td><td>钙化醇</td><td>1,25-(OH)₂-D₃</td><td>钙磷代谢</td><td>佝偻病、软骨病</td></tr>
+<tr><td>VE</td><td>生育酚</td><td>α-生育酚</td><td>抗氧化、保护膜脂</td><td>溶血、肌萎缩</td></tr>
+<tr><td>VK</td><td>凝血维生素</td><td>叶绿醌 VK₁ / 甲萘醌 VK₂</td><td>γ-谷氨酰羧化</td><td>出血、凝血障碍</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><strong>（二）8 种水溶性维生素结构</strong>（讲义 P68，图 1-7-1）</p>
+    <ol>
+      <li><span class="key-point">VC（抗坏血酸）</span>：L-抗坏血酸（γ-内酯），强还原性</li>
+      <li><span class="key-point">叶酸</span>：蝶啶 + 对氨基苯甲酸 + 谷氨酸</li>
+      <li><span class="key-point">烟酸 / 烟酰胺</span>：吡啶环（3 位 —COOH / —CONH₂）</li>
+      <li><span class="key-point">泛酸</span>：β-丙氨酸 + 二羟基二甲基丁酸</li>
+      <li><span class="key-point">VB₁（硫胺素）</span>：嘧啶 + 噻唑（+ 焦磷酸 = TPP）</li>
+      <li><span class="key-point">VB₂（核黄素）</span>：异咯嗪环 + 核糖醇（+ AMP = FMN；+ ADP-AMP = FAD）</li>
+      <li><span class="key-point">VB₆（吡哆醇/醛/胺）</span>：吡啶环（+ 5'-磷酸 = PLP）</li>
+    </ol>
+  </div>
+  <div class="annotation">
+    维生素缺乏症的典型例子：① 长期吃精米 → 缺乏 VB₁ → 脚气病（湿性：心衰；干性：神经炎；Wernicke 脑病）；② 玉米为主食 → 缺乏烟酸 → 癞皮病（3D 病）；③ 北方冬季儿童 → 缺乏 VD → 佝偻病；④ 抗生素滥用 → 杀肠道菌 → 缺乏 VK → 出血倾向。
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><strong>（三）脂溶性维生素详解（讲义 P69）</strong></p>
+    <ul>
+      <li><strong>VA（视黄醇）</strong>：来自 β-胡萝卜素（双分子视黄醇）；3 形式：视黄醇、视黄醛、视黄酸；含 β-紫罗酮环 + 异戊二烯侧链</li>
+      <li><strong>VD（钙化醇）</strong>：<br>
+        ① 皮肤中：7-脱氢胆固醇 + UV → 维生素 D₃（cholecalciferol）<br>
+        ② 肝：25-羟化酶 → 25-(OH)-D₃<br>
+        ③ 肾：1α-羟化酶 → 1,25-(OH)₂-D₃（活性形式，钙三醇）</li>
+      <li><strong>VE（生育酚）</strong>：苯骈二氢吡喃环 + 异戊二烯侧链；强抗氧化剂，保护细胞膜不饱和脂质</li>
+      <li><strong>VK（凝血维生素）</strong>：VK₁（叶绿醌，植物）+ VK₂（甲萘醌，肠道菌合成）；<span class="u-double">γ-谷氨酰羧化酶辅因子</span>，使凝血因子 II、VII、IX、X 谷氨酸残基 γ-羧化（结合 Ca²⁺）</li>
+    </ul>
+    <p><strong>（四）钴胺素（VB₁₂）</strong></p>
+    <p>VB₁₂ 是<span class="u-double">唯一含金属（钴）的维生素</span>，含咕啉环（类似血红素，但 Co 替代 Fe，环更大）。</p>
+    <p>两种辅酶形式：</p>
+    <ul>
+      <li><span class="key-point">甲钴胺素</span>：与甲基四氢叶酸合作，参与甲硫氨酸合成（同型半胱氨酸 → Met）</li>
+      <li><span class="key-point">腺苷钴胺素</span>：参与甲基丙二酸单酰 CoA 变位酶（丙酰 CoA → 琥珀酰 CoA）</li>
+    </ul>
+    <p>吸收：<span class="u">胃壁细胞分泌内因子（Castle intrinsic factor）</span> → VB₁₂-内因子复合物在回肠被吸收。</p>
+  </div>
+  <div class="annotation">
+    VB₁₂ 缺乏导致恶性贫血：① 胃壁细胞萎缩 → 内因子分泌不足 → VB₁₂ 吸收不良 → 巨幼红细胞性贫血（红细胞不能成熟）；② 神经脱髓鞘（手麻、共济失调）。Schilling 试验检测 VB₁₂ 吸收。叶酸只能治贫血不能治神经症状。
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><strong>（五）CoA（辅酶 A）</strong></p>
+    <p>CoA-SH 是<span class="key-point">泛酸（VB₅） + 3'-磷酸-ADP + 巯基乙胺</span>组成。结构特点：</p>
+    <ul>
+      <li>末端 <span class="u-double">—SH</span>（巯基）是活性基团</li>
+      <li>CoA-S—CO—R（硫酯键，能量高）</li>
+    </ul>
+    <p>参与：乙酰 CoA（糖、脂、氨基酸代谢共同产物）、脂酰 CoA（β-氧化）、琥珀酰 CoA（TCA）等。</p>
+  </div>
+  <div class="annotation">
+    CoA 分子量 ~767，结构核心是 3'-磷酸 ADP。辅酶 A 的发现（1946 年 Fritz Lipmann）解决了"乙酰基如何转运"的核心问题，Lipmann 因此获 1953 Nobel 生理学或医学奖。
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><strong>（六）FH₄（四氢叶酸）</strong></p>
+    <p>叶酸（VB₉）→ 二氢叶酸（DHF）→ <span class="u-double">四氢叶酸（FH₄, tetrahydrofolate）</span>（活性形式）。</p>
+    <p>FH₄ 是<span class="u-double">一碳单位（1C）的载体</span>，参与：</p>
+    <ul>
+      <li>甲基化反应：N⁵-甲基-FH₄</li>
+      <li>亚甲基（—CH₂—）转移：N⁵,N¹⁰-亚甲基-FH₄（胸苷合成）</li>
+      <li>亚胺甲基（—CH=NH）转移：N⁵-亚胺甲基-FH₄（组氨酸代谢）</li>
+      <li>甲酰基（—CHO）转移：N¹⁰-甲酰-FH₄（嘌呤合成）</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    抗叶酸药物：① 甲氨蝶呤（methotrexate）抑制二氢叶酸还原酶（DHFR）→ 阻止 DHF → FH₄ → 抑制嘌呤、胸苷合成 → 抗肿瘤；② 磺胺类（如 SD, SMZ）抑制二氢叶酸合成酶 → 抑菌。孕妇补充叶酸预防胎儿神经管缺陷。
+  </div>
+</div>
+
+<div class="summary-box">
+<h4>📌 ch1-1-13 拓展要点 ⑧ 维生素</h4>
+<ul>
+<li>水溶 B 族：C、B1-B12；脂溶：ADEK</li>
+<li>8 种水溶性维生素化学结构（VC、叶酸、烟酸/烟酰胺、泛酸、VB1、VB2、VB6）</li>
+<li>VB12 唯一含金属（Co）的维生素，咕啉环 + Castle 内因子吸收</li>
+<li>CoA 末端 —SH，泛酸 + 3'-P-ADP + 巯基乙胺组成</li>
+<li>FH4 是"一碳单位载体"（甲基、亚甲基、亚胺甲基、甲酰基）</li>
+<li>VD3 经 肝 25-羟化 + 肾 1α-羟化 → 1,25-(OH)2-D3</li>
+<li>VK 是 γ-谷氨酰羧化酶辅因子（凝血因子 II、VII、IX、X）</li>
+<li>VE 抗氧化、VA 视觉、VC 羟化反应</li>
+</ul>
+</div>
+
+<!-- ====== 八、综合复盘 ====== -->
+<div class="topic-header">
+  <h3>八、本节综合复盘</h3>
+</div>
+
+<svg viewBox="0 0 800 560" style="width:100%;max-width:720px;margin:1.2rem auto;display:block;font-family:sans-serif;">
+  <rect x="0" y="0" width="800" height="560" fill="#fdfbf7" stroke="#d6ccc0" rx="8"/>
+  <text x="400" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="#2c2416">碳/氮/磷循环中的生物分子</text>
+
+  <!-- ====== 碳循环 ====== -->
+  <rect x="20" y="48" width="240" height="490" fill="#f0f7f4" stroke="#7cb342" rx="6"/>
+  <text x="140" y="72" text-anchor="middle" font-size="14" font-weight="700" fill="#558b2f">碳循环(C循环)</text>
+  <line x1="30" y1="82" x2="250" y2="82" stroke="#7cb342" stroke-width="1"/>
+
+  <!-- 光合作用 -->
+  <rect x="35" y="95" width="210" height="55" fill="#fff" stroke="#7cb342" rx="4"/>
+  <text x="140" y="113" text-anchor="middle" font-size="11" font-weight="700" fill="#558b2f">光合作用</text>
+  <text x="140" y="128" text-anchor="middle" font-size="9" fill="#2c2416">CO₂ + H₂O → 糖类</text>
+  <text x="140" y="142" text-anchor="middle" font-size="9" fill="#7a6e5e">叶绿体·Calvin循环</text>
+
+  <line x1="140" y1="153" x2="140" y2="168" stroke="#558b2f" stroke-width="1.5" marker-end="url(#arC)"/>
+
+  <!-- 糖类 -->
+  <rect x="35" y="170" width="210" height="50" fill="#fff8e7" stroke="#e8c84a" rx="4"/>
+  <text x="140" y="190" text-anchor="middle" font-size="11" font-weight="700" fill="#8b4513">糖类(葡萄糖/淀粉/纤维素)</text>
+  <text x="140" y="207" text-anchor="middle" font-size="9" fill="#7a6e5e">动物摄食·微生物分解</text>
+
+  <line x1="140" y1="223" x2="140" y2="238" stroke="#558b2f" stroke-width="1.5" marker-end="url(#arC)"/>
+
+  <!-- 糖代谢 -->
+  <rect x="35" y="240" width="210" height="55" fill="#fff" stroke="#7cb342" rx="4"/>
+  <text x="140" y="258" text-anchor="middle" font-size="11" font-weight="700" fill="#558b2f">糖代谢(EMP/TCA/ETC)</text>
+  <text x="140" y="273" text-anchor="middle" font-size="9" fill="#2c2416">糖 → 丙酮酸 → 乙酰CoA</text>
+  <text x="140" y="287" text-anchor="middle" font-size="9" fill="#7a6e5e">→ CO₂ + H₂O + ATP</text>
+
+  <line x1="140" y1="298" x2="140" y2="313" stroke="#558b2f" stroke-width="1.5" marker-end="url(#arC)"/>
+
+  <!-- 脂类/氨基酸 -->
+  <rect x="35" y="315" width="210" height="55" fill="#fff" stroke="#7cb342" rx="4"/>
+  <text x="140" y="333" text-anchor="middle" font-size="11" font-weight="700" fill="#558b2f">转化为其他生物分子</text>
+  <text x="140" y="348" text-anchor="middle" font-size="9" fill="#2c2416">乙酰CoA → 脂肪酸/胆固醇</text>
+  <text x="140" y="362" text-anchor="middle" font-size="9" fill="#2c2416">丙酮酸 → 丙氨酸(转氨)</text>
+
+  <line x1="140" y1="373" x2="140" y2="388" stroke="#558b2f" stroke-width="1.5" marker-end="url(#arC)"/>
+
+  <!-- 呼吸/分解 -->
+  <rect x="35" y="390" width="210" height="50" fill="#fdf2f2" stroke="#c0392b" rx="4"/>
+  <text x="140" y="408" text-anchor="middle" font-size="11" font-weight="700" fill="#c0392b">呼吸作用/分解</text>
+  <text x="140" y="425" text-anchor="middle" font-size="9" fill="#2c2416">生物分子 + O₂ → CO₂↑</text>
+
+  <!-- 回到CO2箭头 -->
+  <path d="M 140 442 Q 30 470, 30 110 L 35 110" fill="none" stroke="#558b2f" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arC)"/>
+  <text x="35" y="465" font-size="9" fill="#558b2f">CO₂回归大气</text>
+
+  <!-- 竞赛重点 -->
+  <text x="140" y="490" text-anchor="middle" font-size="9" font-weight="700" fill="#c0392b">碳骨架流动核心</text>
+  <text x="140" y="506" text-anchor="middle" font-size="9" fill="#2c2416">葡萄糖↔丙酮酸↔乙酰CoA</text>
+  <text x="140" y="520" text-anchor="middle" font-size="9" fill="#2c2416">↔脂肪酸/氨基酸/酮体</text>
+
+  <!-- ====== 氮循环 ====== -->
+  <rect x="280" y="48" width="240" height="490" fill="#fef9e7" stroke="#8b4513" rx="6"/>
+  <text x="400" y="72" text-anchor="middle" font-size="14" font-weight="700" fill="#8b4513">氮循环(N循环)</text>
+  <line x1="290" y1="82" x2="510" y2="82" stroke="#8b4513" stroke-width="1"/>
+
+  <!-- 固氮 -->
+  <rect x="295" y="95" width="210" height="55" fill="#fff" stroke="#8b4513" rx="4"/>
+  <text x="400" y="113" text-anchor="middle" font-size="11" font-weight="700" fill="#8b4513">生物固氮</text>
+  <text x="400" y="128" text-anchor="middle" font-size="9" fill="#2c2416">N₂ → NH₃( NH₄⁺ )</text>
+  <text x="400" y="142" text-anchor="middle" font-size="9" fill="#7a6e5e">根瘤菌·固氮酶(Fe-Mo)</text>
+
+  <line x1="400" y1="153" x2="400" y2="168" stroke="#8b4513" stroke-width="1.5" marker-end="url(#arN)"/>
+
+  <!-- 氨基酸合成 -->
+  <rect x="295" y="170" width="210" height="55" fill="#fff" stroke="#8b4513" rx="4"/>
+  <text x="400" y="188" text-anchor="middle" font-size="11" font-weight="700" fill="#8b4513">氨基酸合成(转氨)</text>
+  <text x="400" y="203" text-anchor="middle" font-size="9" fill="#2c2416">NH₃ + α-酮戊二酸</text>
+  <text x="400" y="217" text-anchor="middle" font-size="9" fill="#2c2416">→ 谷氨酸(Glu) → 其他AA</text>
+
+  <line x1="400" y1="228" x2="400" y2="243" stroke="#8b4513" stroke-width="1.5" marker-end="url(#arN)"/>
+
+  <!-- 蛋白质 -->
+  <rect x="295" y="245" width="210" height="50" fill="#fff8e7" stroke="#e8c84a" rx="4"/>
+  <text x="400" y="265" text-anchor="middle" font-size="11" font-weight="700" fill="#8b4513">蛋白质(肽键聚合)</text>
+  <text x="400" y="282" text-anchor="middle" font-size="9" fill="#7a6e5e">氨基酸 → 多肽 → 蛋白质</text>
+
+  <line x1="400" y1="298" x2="400" y2="313" stroke="#8b4513" stroke-width="1.5" marker-end="url(#arN)"/>
+
+  <!-- 蛋白质分解 -->
+  <rect x="295" y="315" width="210" height="55" fill="#fff" stroke="#8b4513" rx="4"/>
+  <text x="400" y="333" text-anchor="middle" font-size="11" font-weight="700" fill="#8b4513">蛋白质降解(脱氨)</text>
+  <text x="400" y="348" text-anchor="middle" font-size="9" fill="#2c2416">蛋白质 → 氨基酸</text>
+  <text x="400" y="362" text-anchor="middle" font-size="9" fill="#2c2416">→ NH₃ + α-酮酸</text>
+
+  <line x1="400" y1="373" x2="400" y2="388" stroke="#8b4513" stroke-width="1.5" marker-end="url(#arN)"/>
+
+  <!-- 尿素循环 -->
+  <rect x="295" y="390" width="210" height="55" fill="#fdf2f2" stroke="#c0392b" rx="4"/>
+  <text x="400" y="408" text-anchor="middle" font-size="11" font-weight="700" fill="#c0392b">尿素循环(肝脏)</text>
+  <text x="400" y="423" text-anchor="middle" font-size="9" fill="#2c2416">2NH₃ + CO₂ → 尿素</text>
+  <text x="400" y="437" text-anchor="middle" font-size="9" fill="#7a6e5e">CPS I → 鸟氨酸 → 精氨酸</text>
+
+  <!-- 回到环境 -->
+  <path d="M 400 448 Q 290 475, 290 110 L 295 110" fill="none" stroke="#8b4513" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arN)"/>
+  <text x="290" y="470" font-size="9" fill="#8b4513">尿素→NH₃→N₂</text>
+
+  <!-- 竞赛重点 -->
+  <text x="400" y="490" text-anchor="middle" font-size="9" font-weight="700" fill="#c0392b">氮流动核心</text>
+  <text x="400" y="506" text-anchor="middle" font-size="9" fill="#2c2416">N₂→NH₃→Glu→氨基酸</text>
+  <text x="400" y="520" text-anchor="middle" font-size="9" fill="#2c2416">→蛋白质→尿素→N₂</text>
+
+  <!-- ====== 磷循环 ====== -->
+  <rect x="540" y="48" width="240" height="490" fill="#fdf2f2" stroke="#c0392b" rx="6"/>
+  <text x="660" y="72" text-anchor="middle" font-size="14" font-weight="700" fill="#c0392b">磷循环(P循环)</text>
+  <line x1="550" y1="82" x2="770" y2="82" stroke="#c0392b" stroke-width="1"/>
+
+  <!-- 岩石风化 -->
+  <rect x="555" y="95" width="210" height="55" fill="#fff" stroke="#c0392b" rx="4"/>
+  <text x="660" y="113" text-anchor="middle" font-size="11" font-weight="700" fill="#c0392b">岩石风化</text>
+  <text x="660" y="128" text-anchor="middle" font-size="9" fill="#2c2416">磷酸钙 Ca₃(PO₄)₂</text>
+  <text x="660" y="142" text-anchor="middle" font-size="9" fill="#7a6e5e">→ 溶解为 PO₄³⁻</text>
+
+  <line x1="660" y1="153" x2="660" y2="168" stroke="#c0392b" stroke-width="1.5" marker-end="url(#arP)"/>
+
+  <!-- 植物吸收 -->
+  <rect x="555" y="170" width="210" height="50" fill="#fff" stroke="#c0392b" rx="4"/>
+  <text x="660" y="190" text-anchor="middle" font-size="11" font-weight="700" fill="#c0392b">植物吸收Pi</text>
+  <text x="660" y="207" text-anchor="middle" font-size="9" fill="#7a6e5e">→ 核苷酸/ATP/磷脂</text>
+
+  <line x1="660" y1="223" x2="660" y2="238" stroke="#c0392b" stroke-width="1.5" marker-end="url(#arP)"/>
+
+  <!-- 核酸/ATP/磷脂 -->
+  <rect x="555" y="240" width="210" height="60" fill="#fff8e7" stroke="#e8c84a" rx="4"/>
+  <text x="660" y="258" text-anchor="middle" font-size="11" font-weight="700" fill="#8b4513">含磷生物分子</text>
+  <text x="660" y="273" text-anchor="middle" font-size="9" fill="#2c2416">核酸(DNA/RNA磷酸骨架)</text>
+  <text x="660" y="287" text-anchor="middle" font-size="9" fill="#2c2416">ATP/磷脂/磷酸化蛋白</text>
+
+  <line x1="660" y1="303" x2="660" y2="318" stroke="#c0392b" stroke-width="1.5" marker-end="url(#arP)"/>
+
+  <!-- 动物摄食 -->
+  <rect x="555" y="320" width="210" height="50" fill="#fff" stroke="#c0392b" rx="4"/>
+  <text x="660" y="340" text-anchor="middle" font-size="11" font-weight="700" fill="#c0392b">动物摄食吸收</text>
+  <text x="660" y="357" text-anchor="middle" font-size="9" fill="#7a6e5e">→ 骨骼/牙齿/核酸/ATP</text>
+
+  <line x1="660" y1="373" x2="660" y2="388" stroke="#c0392b" stroke-width="1.5" marker-end="url(#arP)"/>
+
+  <!-- 分解回归 -->
+  <rect x="555" y="390" width="210" height="50" fill="#f0f7f4" stroke="#7cb342" rx="4"/>
+  <text x="660" y="408" text-anchor="middle" font-size="11" font-weight="700" fill="#558b2f">分解/排泄</text>
+  <text x="660" y="425" text-anchor="middle" font-size="9" fill="#2c2416">遗体/粪便 → PO₄³⁻ → 土壤</text>
+
+  <!-- 回到环境 -->
+  <path d="M 660 442 Q 550 475, 550 110 L 555 110" fill="none" stroke="#c0392b" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arP)"/>
+  <text x="550" y="465" font-size="9" fill="#c0392b">Pi回归土壤/水体</text>
+
+  <!-- 竞赛重点 -->
+  <text x="660" y="490" text-anchor="middle" font-size="9" font-weight="700" fill="#c0392b">磷流动核心</text>
+  <text x="660" y="506" text-anchor="middle" font-size="9" fill="#2c2416">PO₄³⁻→ATP/核酸/磷脂</text>
+  <text x="660" y="520" text-anchor="middle" font-size="9" fill="#2c2416">→遗体→PO₄³⁻(无气态)</text>
+
+  <defs>
+    <marker id="arC" markerWidth="8" markerHeight="8" refX="4" refY="6" orient="auto">
+      <path d="M0,0 L8,6 L0,12 Z" fill="#558b2f"/>
+    </marker>
+    <marker id="arN" markerWidth="8" markerHeight="8" refX="4" refY="6" orient="auto">
+      <path d="M0,0 L8,6 L0,12 Z" fill="#8b4513"/>
+    </marker>
+    <marker id="arP" markerWidth="8" markerHeight="8" refX="4" refY="6" orient="auto">
+      <path d="M0,0 L8,6 L0,12 Z" fill="#c0392b"/>
+    </marker>
+  </defs>
+</svg>
+<figcaption>碳/氮/磷循环中的生物分子</figcaption>
+
+<div class="summary-box">
+<h4>📌 ch1-1-13 关键点总览（"讲义 + PPT 融合"新增 / 拔高）</h4>
+<ol>
+<li><strong>水/无机盐</strong>：人体 25 种元素、O/C/H/N 占 96.3%；自由水/结合水；缓冲对 H₂CO₃/HCO₃⁻ + H₂PO₄⁻/HPO₄²⁻</li>
+<li><strong>8 种单糖 Fischer 投影</strong>：D-甘油醛、二羟丙酮、D-核糖/脱氧核糖/核酮糖/木糖/L-阿拉伯糖、葡萄糖/果糖/半乳糖</li>
+<li><strong>比旋光度</strong>：[α] = α/(cL)，D/L 构型 = 最远手性碳 OH 位置</li>
+<li><strong>变旋现象</strong>：α 与 β 经开链互变，平衡 α : β ≈ 36 : 64</li>
+<li><strong>Lobry de Bruyn 转化</strong>：C2 差向异构（Glc ↔ Fru ↔ Man）</li>
+<li><strong>5 种二糖</strong>：麦芽糖 (α-1,4)、纤维二糖 (β-1,4)、乳糖 (β-1,4)、蔗糖 (α,β-1,2)、棉子糖</li>
+<li><strong>4 种多糖</strong>：直链/支链淀粉、糖原、纤维素、几丁质</li>
+<li><strong>糖蛋白 vs 蛋白聚糖</strong>（蛋白为主 vs 糖为主）</li>
+<li><strong>鞘脂家族</strong>：神经酰胺（母体）→ 鞘磷脂/鞘糖脂（脑苷脂/硫苷脂/神经节苷脂）</li>
+<li><strong>异戊二烯系</strong>：萜类（VA/VE/VK）+ 类固醇（VD/胆固醇/激素/胆汁酸）</li>
+<li><strong>4 种脂溶性维生素</strong>：VA 视觉、VD 钙代谢、VE 抗氧化、VK 凝血</li>
+<li><strong>LPS 脂多糖</strong>：脂质 A + 核心多糖 + O-特异侧链；TLR4 识别</li>
+<li><strong>5 类脂蛋白</strong>：CM/VLDL/IDL/LDL/HDL（密度梯度排序）</li>
+<li><strong>PIP₂ → IP₃ + DAG</strong> 双叉信号（PLC 切割）</li>
+<li><strong>第 21/22 种氨基酸</strong>：Sec (UGA 重新编码) / Pyl (UAG 重新编码)</li>
+<li><strong>pI 公式</strong>：中性 (pKa₁+pKa₂)/2；酸性 (pKa₁+pKR)/2；碱性 (pKα+pKR)/2</li>
+<li><strong>α-螺旋</strong>：3.6 aa/圈、0.54 nm/圈、0.15 nm/aa，氢键 n→n+4</li>
+<li><strong>Hb 4 聚体</strong>：2α+2β + 4 血红素 + 正协同 + Bohr 效应 + 2,3-BPG</li>
+<li><strong>Perutz 1962 Nobel</strong>（Hb X 衍射）</li>
+<li><strong>4 种颜色反应</strong>：双缩脲（肽键）、Lowry（Tyr）、Millon（Tyr）、Hopkins-Cole（Trp）</li>
+<li><strong>3 种沉淀法</strong>：盐析（不变性）、重金属（pH>pI）、生物碱试剂（pH<pI）</li>
+<li><strong>5 种碱基 + 互变异构</strong>（氨基↔亚氨基、酮↔烯醇）</li>
+<li><strong>辅酶</strong>：NAD⁺/NADP⁺（烟酸） + FMN/FAD（核黄素 B₂）+ CoA（泛酸 B₅）+ PLP（B₆）+ FH₄（叶酸 B₉）</li>
+<li><strong>A/B/Z-DNA 构象对比</strong>（B 10.5 bp/圈 3.4 nm；Z 左手）</li>
+<li><strong>Chargaff 规则</strong>：A=T, G=C</li>
+<li><strong>回文序列 + 发夹 + H-DNA + G4</strong></li>
+<li><strong>超螺旋 L=T+W</strong>；负超螺旋利于解链</li>
+<li><strong>Topo I（L±1）vs Topo II（L±2，耗 ATP）</strong>；抗肿瘤药：依托泊苷、喜树碱</li>
+<li><strong>人类基因组 30.6 亿 bp，编码 5%，重复 95%</strong></li>
+<li><strong>EC 编号 EC x.x.x.x，6 大类酶</strong>（氧化还原/转移/水解/裂合/异构/合成）</li>
+<li><strong>诱导契合</strong>（Koshland 1958）取代钥匙-锁</li>
+<li><strong>4 种催化机制</strong>：邻近/张力/酸碱/共价</li>
+<li><strong>米氏方程</strong>：v = Vmax[S]/(Km+[S])；Km = v=Vmax/2 时的 [S]</li>
+<li><strong>Lineweaver-Burk 双倒数作图</strong></li>
+<li><strong>最适温度 35-40℃（Taq 70-75℃）</strong>，最适 pH 6-8</li>
+<li><strong>Tm 公式</strong>：Tm = 69.3 + 0.41·(%G+%C)</li>
+<li><strong>3 类可逆抑制</strong>：竞争性 (Km↑ Vmax不变) / 非竞争性 (Km不变 Vmax↓) / 反竞争性 (Km↓ Vmax↓)</li>
+<li><strong>共价修饰级联放大</strong>：肾上腺素 → cAMP → PKA → 磷酸化酶激酶 → 糖原磷酸化酶</li>
+<li><strong>13 种维生素与辅酶对应</strong>（VA-VD-VE-VK + VC + 8 种 B 族）</li>
+<li><strong>VB₁₂ 唯一含金属</strong>，咕啉环 + Castle 内因子吸收</li>
+<li><strong>CoA 末端 —SH</strong>，泛酸 + 3'-P-ADP + 巯基乙胺</li>
+<li><strong>FH₄ 是"一碳单位载体"</strong></li>
+</ol>
+</div>
+
+<div class="expand-block">
+<strong>本节使用建议：</strong>
+<br>① 作为"赛前回归"使用，先看每节标题和"📌 拓展要点"清单，再回到正文
+<br>② 重点记忆：8 种单糖 Fischer 投影 / 20 种氨基酸 R 基 / 13 种维生素辅酶对应 / 米氏方程推导 / EC 编号 6 类
+<br>③ 化学结构（Fischer 投影、α-螺旋、H-DNA、辅酶、维生素）建议配合讲义照片复习
+<br>④ 联赛相关题可对照 ch1-1-12 联赛真题汇编
+</div>
+
+</div>
+
+<footer><a href="index.html" style="color:var(--accent);text-decoration:none;margin-right:1rem;">← 返回目录</a>
+第一章 生物化学 · 第十一节 生命分子基础综合（讲义 + PPT 融合） · 整合 69 张讲义照片与生物化学 PPT · 参考高中生物竞赛讲义、戴灼华《遗传学》、Berg《Biochemistry》 · 整理日期 2026年7月6日
+</footer>
+
+</body>
+</html>
