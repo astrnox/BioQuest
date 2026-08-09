@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>知识卡片 - BioQuest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>@font-face{font-family:'LXGW WenKai';src:url('fonts/lxgw-wenkai.ttf?v=1.522') format('truetype');font-weight:100 900;font-display:swap;}</style>
+  <link rel="stylesheet" href="css/globals.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/cards.css?v=20260618a">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-client.js?v=20260722a"></script>
+  <script src="js/supabase.js?v=20260618a"></script>
+  <script src="js/utils.js?v=20260806a"></script>
+  <script src="js/vendor/ts-fsrs.umd.min.js?v=20260722a"></script>
+  <script src="js/fsrs-algorithm.js?v=20260722a"></script>
+  <script src="js/cards.js?v=20260722a"></script>
+</head>
+<body>
+  <header class="header">
+    <a href="index.html" class="header-brand">
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+        <circle cx="14" cy="14" r="12" stroke="#e8a830" stroke-width="2"/>
+        <circle cx="14" cy="14" r="4" fill="#e8a830"/>
+      </svg>
+      BioQuest
+    </a>
+    <div class="header-right">
+      <button class="hamburger" id="hamburgerBtn" aria-label="菜单">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-nav-overlay" id="mobileOverlay"></div>
+  <nav class="mobile-nav" id="mobileNav">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid var(--border-light);">
+      <div style="display:flex;align-items:center;gap:10px;">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+          <circle cx="14" cy="14" r="12" stroke="#e8a830" stroke-width="2"/>
+          <circle cx="14" cy="14" r="4" fill="#e8a830"/>
+          <path d="M14 2v4M14 22v4M2 14h4M22 14h4" stroke="#5a7d5c" stroke-width="1.5"/>
+        </svg>
+        <span style="font-weight:700;font-size:1.1rem;color:var(--color-deep);">BioQuest</span>
+      </div>
+      <button id="mobileNavClose" style="background:none;border:none;font-size:22px;cursor:pointer;color:var(--text-muted);padding:4px 8px;">✕</button>
+    </div>
+    <div class="mobile-nav-scroll">
+      <a href="index.html">首页</a>
+      <a href="index.html#/practice" class="nav-highlight">练习</a>
+      <a href="index.html#/exam" class="nav-highlight">模考</a>
+      <a href="study.html">学习</a>
+      <a href="biology-history.html">生物学史</a>
+      <a href="cards.html" class="active">卡片</a>
+      <a href="quiz.html">试题</a>
+      <a href="resources.html">资源</a>
+      <a href="index.html#/knowledge-graph">图谱</a>
+      <a href="index.html#/diagnosis">诊断</a>
+      <a href="index.html#/pomodoro">专注</a>
+      <a href="index.html#/habits">习惯</a>
+      <a href="index.html#/review">复习</a>
+      <a href="index.html#/bounties">悬赏</a>
+      <a href="index.html#/community">社区</a>
+      <a href="index.html#/analytics">分析</a>
+      <a href="index.html#/user">我的</a>
+    </div>
+  </nav>
+
+  <main style="padding-top: calc(var(--header-height, 64px) + 40px);">
+    <section class="section">
+      <div class="container">
+
+        <!-- 页面标题 -->
+        <div class="anki-page-header">
+          <div class="section-label">SPACED REPETITION</div>
+          <h2 class="section-title">间隔重复记忆卡</h2>
+          <p class="section-desc">基于 FSRS-4.5 + BKT 贝叶斯知识追踪的智能复习系统 · 选择牌组开始学习</p>
+        </div>
+
+        <!-- 牌组选择器（动态渲染） -->
+        <div id="anki-deck-selector"></div>
+
+        <!-- 卡片学习区域 -->
+        <div id="anki-card-area">
+          <div class="anki-card-container" id="anki-card-area-inner">
+            <!-- 3D 翻转卡片 -->
+            <div class="anki-card" id="anki-card">
+              <!-- 正面：问题 -->
+              <div class="anki-face anki-front-face" id="anki-front"></div>
+              <!-- 背面：答案 + 评分按钮 -->
+              <div class="anki-face anki-back-face" id="anki-back"></div>
+            </div>
+          </div>
+
+          <!-- 底部进度条 -->
+          <div class="anki-progress-bar" id="anki-progress-bar"></div>
+        </div>
+
+        <!-- 键盘快捷键提示 -->
+        <div class="anki-shortcut-hint">
+          <span><kbd>空格</kbd> 翻转</span>
+          <span><kbd>1</kbd> 再来</span>
+          <span><kbd>2</kbd> 困难</span>
+          <span><kbd>3</kbd> 一般</span>
+          <span><kbd>4</kbd> 简单</span>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-brand">BioQuest — 生物竞赛学习平台</div>
+      <div class="footer-links">
+        <a href="cards.html">知识卡片</a>
+        <a href="quiz.html">模拟试题</a>
+        <a href="resources.html">学习资源</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // 汉堡菜单
+    (function() {
+      var btn = document.getElementById('hamburgerBtn');
+      var nav = document.getElementById('mobileNav');
+      var overlay = document.getElementById('mobileOverlay');
+      var closeBtn = document.getElementById('mobileNavClose');
+      function toggle() {
+        nav.classList.toggle('active');
+        overlay.classList.toggle('active');
+        btn.classList.toggle('active');
+      }
+      if (btn) btn.addEventListener('click', toggle);
+      if (overlay) overlay.addEventListener('click', toggle);
+      if (closeBtn) closeBtn.addEventListener('click', toggle);
+    })();
+    // 初始化 Supabase 并更新认证状态
+    (async function() {
+      try {
+        if (typeof window.getSupabase === 'function' && window.getSupabase()) {
+          await window.restoreSession();
+          if (window.isLoggedIn()) {
+            var links = document.querySelectorAll('.header-auth-link');
+            for (var i = 0; i < links.length; i++) {
+              var user = window.getCurrentUser();
+              links[i].textContent = user.display_name || user.username || '用户';
+              links[i].href = 'index.html#/user';
+            }
+          }
+        }
+      } catch(e) {}
+    })();
+  </script>
+</body>
+</html>

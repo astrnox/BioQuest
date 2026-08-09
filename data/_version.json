@@ -1,0 +1,37 @@
+{
+  "version": "4.1.0",
+  "updated_at": "2026-07-22",
+  "changes": [
+    {
+      "date": "2026-07-22",
+      "version": "4.1.0",
+      "description": "P0 修复：FSRS 算法替换为官方 ts-fsrs (MIT)，移除自研实现及 SM-2 回退；清除硬编码 API Key；数据层统一走 Supabase（localStorage 仅作离线缓存）；quiz_auto_generated.json 移除 749 条 _needs_review 污染题目，保留 97 条有效题目（8 匹配题 + 89 填空题）。"
+    },
+    {
+      "date": "2026-07-19",
+      "version": "4.0.0",
+      "description": "BioQuest v4.0 复赛优化：仪表盘 /forecast 本地兜底、虚拟实验室参数控件与 Canvas 渲染、PWA Service Worker 注册及缓存键去查询参数、全站模态可访问性（role/aria-modal/aria-label + trapFocus）、habits/wrongbook 错题模态焦点陷阱、Playwright 回归测试覆盖。"
+    },
+    {
+      "date": "2026-06-28",
+      "version": "2.0.0",
+      "description": "P0-4 题库清洗：crawled_competition.json 移除 2017/2019 年题目及含图题目（272 题留存），109 题无解析的补全 AI 引导提示；quiz_auto_generated.json 749 题全量标记 _needs_review（选项污染待人工校验）"
+    }
+  ],
+  "active_sources": [
+    "pool.json (330 题，联赛真题)",
+    "data/questions.json",
+    "data/quiz.json",
+    "data/quiz_m1.json",
+    "data/quiz_m2.json",
+    "data/quiz_m3.json",
+    "data/quiz_m4.json",
+    "data/exam_sample.json",
+    "data/logic_questions.json",
+    "data/cards.json (200 张知识卡片)",
+    "data/crawled_competition.json (272 题，已清洗验证)"
+  ],
+  "quarantined_sources": [
+    "data/quiz_auto_generated.json 题库部分（749 条 _needs_review 污染题目已于 2026-07-22 移除，仅保留 8 匹配题 + 89 填空题）"
+  ]
+}

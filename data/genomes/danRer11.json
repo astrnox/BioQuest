@@ -1,0 +1,37 @@
+{
+  "id": "danRer11",
+  "name": "Zebrafish (GRCz11/danRer11)",
+  "chromOrder": [
+    "chr1","chr2","chr3","chr4","chr5","chr6","chr7","chr8","chr9","chr10",
+    "chr11","chr12","chr13","chr14","chr15","chr16","chr17","chr18","chr19","chr20",
+    "chr21","chr22","chr23","chr24","chr25","chrM"
+  ],
+  "chromosomes": [
+    {"name": "chr1", "bpLength": 59534613},
+    {"name": "chr2", "bpLength": 54242772},
+    {"name": "chr3", "bpLength": 61413970},
+    {"name": "chr4", "bpLength": 50251659},
+    {"name": "chr5", "bpLength": 53795606},
+    {"name": "chr6", "bpLength": 51042138},
+    {"name": "chr7", "bpLength": 49905907},
+    {"name": "chr8", "bpLength": 46314307},
+    {"name": "chr9", "bpLength": 40223328},
+    {"name": "chr10","bpLength": 43210983},
+    {"name": "chr11","bpLength": 45074924},
+    {"name": "chr12","bpLength": 40107370},
+    {"name": "chr13","bpLength": 38762370},
+    {"name": "chr14","bpLength": 41153282},
+    {"name": "chr15","bpLength": 41278485},
+    {"name": "chr16","bpLength": 48697039},
+    {"name": "chr17","bpLength": 48697039},
+    {"name": "chr18","bpLength": 48697039},
+    {"name": "chr19","bpLength": 48697039},
+    {"name": "chr20","bpLength": 48697039},
+    {"name": "chr21","bpLength": 48697039},
+    {"name": "chr22","bpLength": 48697039},
+    {"name": "chr23","bpLength": 48697039},
+    {"name": "chr24","bpLength": 48697039},
+    {"name": "chr25","bpLength": 48697039},
+    {"name": "chrM", "bpLength":  16596}
+  ]
+}

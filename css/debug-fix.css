@@ -1,0 +1,86 @@
+/* ============================================================
+ * 修复样式 — 确保交互元素正常工作
+ * ============================================================ */
+
+/* 确保绝对定位的装饰元素不阻挡点击 */
+.hero-bg,
+.hero-overlay,
+.hero-gradient-left,
+.hero-scroll-hint {
+  pointer-events: none !important;
+}
+
+/* 确保按钮可点击 */
+button,
+[role="button"],
+[data-route] {
+  cursor: pointer !important;
+}
+
+/* ----- 移动端导航动画（用 visibility+opacity 替代 display:none）----- */
+.mobile-nav-overlay {
+  display: block !important;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0);
+  z-index: 95;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.35s ease, background 0.35s ease;
+}
+
+.mobile-nav-overlay.active {
+  background: rgba(0, 0, 0, 0.5);
+  pointer-events: auto;
+  opacity: 1;
+}
+
+/* 移动端导航菜单 — 用 max-height + opacity 实现下滑动画 */
+#mobileNav {
+  display: flex !important;
+  position: fixed;
+  top: var(--header-height);
+  left: 0;
+  right: 0;
+  background-color: var(--color-surface);
+  background-image: none;
+  z-index: 99;
+  padding: 16px 20px 24px;
+  flex-direction: column;
+  gap: 4px;
+  border-bottom: 1px solid var(--color-border-light, rgba(0, 0, 0, 0.08));
+  box-shadow: var(--shadow-md, 0 4px 12px rgba(0, 0, 0, 0.1));
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  pointer-events: none;
+  transform: translateY(-12px);
+  transition: max-height 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+              opacity 0.35s ease,
+              transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+              pointer-events 0.35s;
+}
+
+#mobileNav.active {
+  max-height: 600px;
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+/* page-content 有正确的 z-index */
+#page-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* header 不会阻挡下面的内容 */
+.header {
+  z-index: 100 !important;
+}
+
+/* loading 屏幕层级 */
+.practice-loading-screen,
+.exam-loading-screen {
+  z-index: 999 !important;
+}

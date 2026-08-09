@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 450" style="font-family: 'Noto Sans CJK SC', sans-serif;">
+  <rect x="0" y="0" width="780" height="450" fill="#fdfbf7"/>
+  <text x="390" y="28" text-anchor="middle" font-size="15" font-weight="700" fill="#c0392b">图灵斑图（Turing Pattern）反应-扩散模型示意图</text>
+
+  <!-- 反应-扩散核心机制 -->
+  <text x="30" y="55" font-size="11" font-weight="700" fill="#8b4513">A. 反应-扩散核心机制（Turing, 1952）</text>
+
+  <!-- 激活子 -->
+  <g transform="translate(30, 70)">
+    <rect x="0" y="0" width="220" height="70" rx="8" fill="#fef0e0" stroke="#c0392b" stroke-width="2"/>
+    <text x="110" y="18" text-anchor="middle" font-size="11" font-weight="700" fill="#c0392b">激活子（Activator）</text>
+    <text x="110" y="34" text-anchor="middle" font-size="9" fill="#2c2416">短程自催化激活</text>
+    <text x="110" y="48" text-anchor="middle" font-size="9" fill="#2c2416">促进自身 + 抑制子产生</text>
+    <text x="110" y="62" text-anchor="middle" font-size="9" fill="#7a6e5e">扩散速率：慢（Ds）</text>
+  </g>
+
+  <!-- 箭头 -->
+  <text x="260" y="108" text-anchor="middle" font-size="14" fill="#c0392b">&#x2194;</text>
+
+  <!-- 抑制子 -->
+  <g transform="translate(280, 70)">
+    <rect x="0" y="0" width="220" height="70" rx="8" fill="#f0f7f4" stroke="#4a7c3a" stroke-width="2"/>
+    <text x="110" y="18" text-anchor="middle" font-size="11" font-weight="700" fill="#4a7c3a">抑制子（Inhibitor）</text>
+    <text x="110" y="34" text-anchor="middle" font-size="9" fill="#2c2416">长程扩散抑制</text>
+    <text x="110" y="48" text-anchor="middle" font-size="9" fill="#2c2416">抑制激活子产生</text>
+    <text x="110" y="62" text-anchor="middle" font-size="9" fill="#7a6e5e">扩散速率：快（Di >> Ds）</text>
+  </g>
+
+  <!-- 关键条件 -->
+  <g transform="translate(530, 70)">
+    <rect x="0" y="0" width="220" height="70" rx="8" fill="#fff3cd" stroke="#e8c84a" stroke-width="2"/>
+    <text x="110" y="18" text-anchor="middle" font-size="11" font-weight="700" fill="#8b4513">图灵斑图形成条件</text>
+    <text x="110" y="34" text-anchor="middle" font-size="9" fill="#2c2416">Di >> Ds（抑制子扩散</text>
+    <text x="110" y="48" text-anchor="middle" font-size="9" fill="#2c2416">远快于激活子）</text>
+    <text x="110" y="62" text-anchor="middle" font-size="9" fill="#c0392b">→ 自发产生周期图案</text>
+  </g>
+
+  <!-- 斑图类型 -->
+  <text x="30" y="165" font-size="11" font-weight="700" fill="#8b4513">B. 三种典型斑图（参数变化产生不同图案）</text>
+
+  <!-- 斑点 -->
+  <g transform="translate(30, 178)">
+    <rect x="0" y="0" width="220" height="50" rx="6" fill="#fef5f0" stroke="#c0392b" stroke-width="1.5"/>
+    <text x="110" y="20" text-anchor="middle" font-size="10" font-weight="700" fill="#c0392b">斑点（Spots）</text>
+    <text x="110" y="38" text-anchor="middle" font-size="9" fill="#2c2416">高激活子区域被低激活子包围</text>
+  </g>
+
+  <!-- 条纹 -->
+  <g transform="translate(280, 178)">
+    <rect x="0" y="0" width="220" height="50" rx="6" fill="#f0f7f4" stroke="#4a7c3a" stroke-width="1.5"/>
+    <text x="110" y="20" text-anchor="middle" font-size="10" font-weight="700" fill="#4a7c3a">条纹（Stripes）</text>
+    <text x="110" y="38" text-anchor="middle" font-size="9" fill="#2c2416">激活子沿一个方向延伸</text>
+  </g>
+
+  <!-- 迷宫 -->
+  <g transform="translate(530, 178)">
+    <rect x="0" y="0" width="220" height="50" rx="6" fill="#f0f0f8" stroke="#7a6e5e" stroke-width="1.5"/>
+    <text x="110" y="20" text-anchor="middle" font-size="10" font-weight="700" fill="#8b4513">迷宫状（Labyrinth）</text>
+    <text x="110" y="38" text-anchor="middle" font-size="9" fill="#2c2416">斑点与条纹的中间过渡状态</text>
+  </g>
+
+  <!-- 动物界实例 -->
+  <text x="30" y="255" font-size="11" font-weight="700" fill="#8b4513">C. 图灵斑图在动物界的实例</text>
+  <g transform="translate(30, 268)">
+    <rect x="0" y="0" width="720" height="80" rx="6" fill="#f0f7f4" stroke="#4a7c3a" stroke-width="1.5"/>
+    <text x="360" y="16" text-anchor="middle" font-size="10" font-weight="700" fill="#2c2416">鱼类</text>
+    <text x="360" y="32" text-anchor="middle" font-size="9" fill="#2c2416">斑马鱼条纹（间距~0.5mm恒定） | 色素细胞排列遵循反应-扩散</text>
+    <text x="360" y="48" text-anchor="middle" font-size="10" font-weight="700" fill="#2c2416">哺乳动物</text>
+    <text x="360" y="64" text-anchor="middle" font-size="9" fill="#2c2416">猎豹斑点、斑马条纹、长颈鹿斑块 | 胚胎期色素细胞前体决定</text>
+    <text x="360" y="78" text-anchor="middle" font-size="10" font-weight="700" fill="#2c2416">软体动物+头足类</text>
+  </g>
+
+  <!-- 贝壳花纹 -->
+  <g transform="translate(30, 352)">
+    <rect x="0" y="0" width="355" height="30" rx="5" fill="#fef5f0" stroke="#c0392b" stroke-width="1"/>
+    <text x="177" y="20" text-anchor="middle" font-size="9" fill="#2c2416">贝壳花纹（锥螺/芋螺）→外套膜边缘图灵机制</text>
+  </g>
+  <g transform="translate(395, 352)">
+    <rect x="0" y="0" width="355" height="30" rx="5" fill="#fef5f0" stroke="#c0392b" stroke-width="1"/>
+    <text x="177" y="20" text-anchor="middle" font-size="9" fill="#2c2416">蓝纹章鱼蓝环→虹彩色素细胞图灵机制</text>
+  </g>
+
+  <!-- 实验验证 -->
+  <rect x="30" y="395" width="720" height="20" rx="4" fill="#fff3cd" stroke="#e8c84a" stroke-width="1"/>
+  <text x="390" y="410" text-anchor="middle" font-size="9" font-weight="600" fill="#8b4513">实验验证：Kondo &amp; Miura (2012) 斑马鱼条纹 | Economou et al. (2015) 小鼠腭褶</text>
+
+  <!-- 竞赛考点 -->
+  <rect x="30" y="420" width="720" height="24" rx="4" fill="#fff8f0" stroke="#8b4513" stroke-width="1.5"/>
+  <text x="390" y="436" text-anchor="middle" font-size="10" font-weight="700" fill="#c0392b">GGBO第42题核心：激活子短程自催化 + 抑制子长程扩散 → 反应-扩散 → 周期图案（Turing 1952）</text>
+</svg>

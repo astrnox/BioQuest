@@ -1,0 +1,66 @@
+# 依赖
+node_modules/
+package-lock.json
+yarn.lock
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.venv/
+venv/
+env/
+ENV/
+
+# 环境变量与密钥（绝不提交）
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+secrets.json
+
+# 本地数据
+pool.json
+server.log
+*.log
+logs/
+
+# IDE / 编辑器
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# 构建产物
+dist/
+build/
+.cache/
+
+# 临时文件
+*.tmp
+*.bak
+*.orig
+
+# 项目特定
+lxgw-wenkai-v1.522/
+website-de-ai-prd/
+bioquest-redesign/
+test_screenshots/
+__tests__/
+pool.json.bak
+waf-rules.txt
+
+# GGBO 高中生物竞赛（独立项目，不属于 BioQuest 主仓库）
+ggbo-answer/
+ggbo_*.json
+summer-plan/
+
+# 本地审计/调试产物
+__audit_shots__/
+__audit_*.py
+__final_audit.py

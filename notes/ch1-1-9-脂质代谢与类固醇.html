@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第一章 生物化学 · 脂质代谢与类固醇 — 生物集训营笔记</title>
+<style>
+:root {
+  --bg: #fdfbf7; --bg2: #f5f0e8; --ink: #2c2416; --muted: #7a6e5e;
+  --rule: #d6ccc0; --accent: #c0392b; --accent2: #8b4513;
+  --highlight: #fff3cd; --note-bg: #fff8e7; --note-border: #e8c84a;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: "Noto Sans CJK SC", "WenQuanYi Micro Hei", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  font-size: 16px; line-height: 1.8; color: var(--ink); background: var(--bg);
+}
+.cover { text-align: center; padding: 4rem 2rem 3rem; border-bottom: 3px double var(--rule); margin-bottom: 0; background: linear-gradient(180deg, var(--bg2) 0%, var(--bg) 100%); }
+.cover .ch-num { font-size: 1rem; color: var(--accent); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 0.3rem; }
+.cover h1 { font-size: 2.2rem; font-weight: 800; color: var(--ink); margin-bottom: 0.5rem; letter-spacing: 0.03em; }
+.cover .subtitle { font-size: 1rem; color: var(--muted); }
+.cover .meta { margin-top: 1.2rem; font-size: 0.85rem; color: var(--muted); display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
+.main-layout { max-width: 1060px; margin: 0 auto; padding: 0 1.5rem; }
+.section-header { border-bottom: 3px solid var(--accent); padding: 2rem 0 0.6rem; margin-bottom: 1.5rem; }
+.section-header .sec-num { font-size: 0.9rem; color: var(--accent); font-weight: 700; letter-spacing: 0.08em; }
+.section-header h2 { font-size: 1.6rem; font-weight: 800; color: var(--ink); margin-top: 0.15rem; }
+.topic-header { margin: 2rem 0 1rem; padding-left: 0.8rem; border-left: 4px solid var(--accent); }
+.topic-header h3 { font-size: 1.25rem; font-weight: 700; color: var(--ink); }
+.subtopic-header { margin: 1.5rem 0 0.8rem; }
+.subtopic-header h4 { font-size: 1.1rem; font-weight: 700; color: var(--accent2); }
+.note-block { display: flex; gap: 1.5rem; margin-bottom: 1.2rem; align-items: flex-start; }
+.note-content { flex: 1; padding: 0.8rem 1rem; background: var(--bg2); border-radius: 6px; border: 1px solid var(--rule); }
+.note-content p { margin-bottom: 0.5rem; }
+.note-content p:last-child { margin-bottom: 0; }
+.note-content ul, .note-content ol { padding-left: 1.5rem; margin: 0.4rem 0; }
+.note-content li { margin-bottom: 0.25rem; }
+.annotation { width: 240px; flex-shrink: 0; background: var(--note-bg); border: 1px solid var(--note-border); border-radius: 6px; padding: 0.6rem 0.8rem; font-size: 0.82rem; line-height: 1.6; color: var(--accent2); align-self: flex-start; }
+.annotation::before { content: "📝 批注"; display: block; font-size: 0.7rem; font-weight: 700; color: var(--accent); letter-spacing: 0.06em; margin-bottom: 0.3rem; text-transform: uppercase; }
+.u { text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 2px; text-underline-offset: 3px; font-weight: 600; }
+.u-double { text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 2px; text-underline-offset: 3px; text-decoration-style: double; font-weight: 700; }
+.key-point { background: var(--highlight); padding: 0.1em 0.3em; border-radius: 3px; font-weight: 600; border-bottom: 1.5px solid var(--accent); }
+.table-wrap { overflow-x: auto; overflow-y: auto; max-height: 600px; margin: 1.5rem 0; border: 1px solid var(--rule); border-radius: 6px; }
+table { width: 100%; border-collapse: collapse; font-size: 0.9rem; min-width: 800px; }
+table thead th { background: var(--accent); color: #fff; padding: 0.6rem 0.8rem; font-weight: 700; text-align: center; white-space: nowrap; }
+table tbody td { padding: 0.5rem 0.8rem; border-bottom: 1px solid var(--rule); vertical-align: top; }
+table tbody tr:nth-child(even) { background: var(--bg2); }
+table tbody tr:last-child td { border-bottom: none; }
+table tbody td:first-child { font-weight: 600; white-space: nowrap; text-align: center; background: var(--bg2); }
+figcaption { text-align: center; font-size: 0.85rem; color: var(--muted); margin-top: 0.4rem; }
+.diagram { margin: 1.2rem 0; text-align: center; }
+.diagram img { max-width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 4px; }
+.summary-box { background: linear-gradient(135deg, #fdf2f2 0%, #fef9e7 100%); border: 2px solid var(--accent); border-radius: 8px; padding: 1.2rem 1.5rem; margin: 2rem 0; }
+.summary-box h4 { color: var(--accent); font-size: 1rem; margin-bottom: 0.6rem; }
+.expand-block { background: #f0f7f4; border: 1px dashed #7cb342; border-radius: 6px; padding: 0.5rem 0.9rem; margin: 0.6rem 0 0; font-size: 0.83rem; line-height: 1.6; color: #3e6b3e; }
+.expand-block::before { content: "🔍 拓展"; display: block; font-size: 0.7rem; font-weight: 700; color: #558b2f; letter-spacing: 0.06em; margin-bottom: 0.2rem; }
+.flow-box { background: var(--bg); border: 1px solid var(--rule); border-radius: 8px; padding: 1.2rem; margin: 1.2rem 0; text-align: center; }
+.flow-box .flow-title { font-size: 0.85rem; font-weight: 700; color: var(--accent); margin-bottom: 0.8rem; }
+.flow-row { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 0.3rem; font-size: 0.85rem; }
+.flow-item { background: var(--bg2); border: 1px solid var(--rule); border-radius: 4px; padding: 0.25rem 0.6rem; white-space: nowrap; }
+.flow-arrow { color: var(--accent); font-weight: 700; font-size: 1.1rem; }
+.math-box { background: #fef9e7; border-left: 3px solid var(--accent2); padding: 0.7rem 1rem; margin: 0.8rem 0; border-radius: 0 4px 4px 0; font-family: "Cambria Math", "STIX Two Math", Georgia, serif; font-size: 1.0rem; color: #1a1a1a; }
+footer { margin-top: 3rem; padding: 1.5rem; border-top: 1px solid var(--rule); text-align: center; font-size: 0.8rem; color: var(--muted); }
+@media (max-width: 768px) {
+  .cover h1 { font-size: 1.5rem; }
+  .note-block { flex-direction: column; }
+  .annotation { width: 100%; }
+  .main-layout { padding: 0 0.8rem; }
+  table { font-size: 0.78rem; min-width: 600px; }
+}
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div class="ch-num">高中生物竞赛讲义 · 集训营</div>
+  <h1>第一章 生物化学 · 脂质代谢与类固醇</h1>
+  <div class="subtitle">脂肪水解 · 甘油代谢 · 脂肪酸 β-氧化 · 酮体 · 脂肪酸合成 · 胆固醇 · 磷脂</div>
+  <div class="meta">
+    <span>β-氧化 4 步循环</span><span>酮体</span><span>乙酰-CoA 羧化酶</span><span>FAS 复合体</span>
+    <span>甲羟戊酸途径</span><span>磷脂 Kennedy 途径</span><span>📅 整理日期: 2026年7月7日</span>
+  </div>
+</div>
+
+<div class="main-layout">
+
+<div class="section-header">
+  <div class="sec-num">第一节 · 脂质代谢与类固醇</div>
+  <h2>脂肪水解 · 脂肪酸 β-氧化 · 酮体 · 脂肪酸合成 · 胆固醇代谢</h2>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>本节是 <span class="key-point">ch1-1-5 脂质</span> 的深度补充，参考张丽萍《生物化学简明教程》第六版第10章 <span class="u">脂质代谢</span>（P214-234），针对仅有高中人教版生物学基础的竞赛生重写，详细解释每步反应、催化酶、能量计算、调控机制。重点内容：</p>
+    <ol>
+      <li>脂质的酶促水解（脂肪酶 + 4 类磷脂酶）</li>
+      <li>三酰甘油分解代谢（甘油 → DHAP；脂肪酸 β-氧化 4 步循环）</li>
+      <li>特殊脂肪酸的氧化（奇数碳、不饱和、支链）</li>
+      <li>酮体的生成（HMG-CoA 途径）与利用</li>
+      <li>脂肪酸合成（柠檬酸穿梭、ACC、FAS、ACP 摆臂）</li>
+      <li>三酰甘油合成（甘油-3-磷酸途径）</li>
+      <li>磷脂代谢（CDP-胆碱/乙醇胺 Kennedy 途径）</li>
+      <li>胆固醇代谢（甲羟戊酸途径、HMG-CoA 还原酶、他汀类药）</li>
+    </ol>
+  </div>
+  <div class="annotation">
+    高中衔接：高中必修一学过"脂肪是细胞内良好的储能物质""脂肪由甘油和脂肪酸组成"，但没学过"脂肪酸怎么被分解""酮体怎么生成""胆固醇怎么合成"。本节要把脂质代谢的<span class="key-point">β-氧化 4 步循环</span>和<span class="key-point">胆固醇合成的甲羟戊酸途径</span>讲清楚——这是奥赛生化最常考的代谢途径之一。
+  </div>
+</div>
+
+<!-- ========== 10.1 脂肪酶促水解 ========== -->
+<div class="topic-header"><h3>一、脂质的酶促水解</h3></div>
+
+<div class="subtopic-header"><h4>1.1 三酰甘油脂肪酶</h4></div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><span class="u-double">三酰甘油脂肪酶（triacylglycerol lipase）</span>催化三酰甘油逐步水解：</p>
+    <ol>
+      <li>三酰甘油 → 二酰甘油 + 脂肪酸（脂肪酶）</li>
+      <li>二酰甘油 → 单酰甘油 + 脂肪酸（脂肪酶）</li>
+      <li>单酰甘油 → 甘油 + 脂肪酸（单酰甘油脂肪酶）</li>
+    </ol>
+    <p>⚠️ <span class="u-double">激素敏感性脂肪酶（HSL）</span>是脂解的限速酶，受 PKA 磷酸化激活。肾上腺素/胰高血糖素 → cAMP ↑ → PKA → HSL 磷酸化激活 → 脂解加速。</p>
+  </div>
+</div>
+
+<div class="subtopic-header"><h4>1.2 磷脂酶（4 类）</h4></div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>磷脂在 4 个不同位置可被水解，催化酶分别为：</p>
+    <div class="table-wrap">
+    <table>
+    <thead>
+    <tr><th>磷脂酶</th><th>水解位置</th><th>产物</th><th>生理意义</th></tr>
+    </thead>
+    <tbody>
+    <tr><td>磷脂酶 A1（PLA1）</td><td>C1 酰基</td><td>溶血磷脂 + 脂肪酸</td><td>磷脂重塑</td></tr>
+    <tr><td><span class="u-double">磷脂酶 A2（PLA2）</span></td><td>C2 酰基</td><td>溶血磷脂 + <span class="key-point">花生四烯酸</span></td><td>花生四烯酸是前列腺素/白三烯前体（炎症介质）</td></tr>
+    <tr><td>磷脂酶 C（PLC）</td><td>磷酸酯键</td><td>二酰甘油（DAG）+ 磷酸化头基</td><td>PI-PLC 水解 PIP₂ → DAG + IP₃（细胞信号双信使）</td></tr>
+    <tr><td>磷脂酶 D（PLD）</td><td>磷酸-头基键</td><td>磷脂酸 + 头基（胆碱/乙醇胺）</td><td>信号转导</td></tr>
+    </tbody>
+    </table>
+    </div>
+    <figcaption>表 1 4 类磷脂酶的作用位点</figcaption>
+  </div>
+  <div class="annotation">
+    <span class="u-double">奥赛必背</span>：PLA2 的产物花生四烯酸（arachidonic acid）是前列腺素（PG）、白三烯（LT）、血栓素（TXA₂）的前体。阿司匹林通过<span class="key-point">乙酰化 COX-1/COX-2</span>（环氧合酶）抑制花生四烯酸→PG/H₂，起到抗炎、抗血小板作用。
+  </div>
+</div>
+
+<!-- ========== 10.2 三酰甘油分解 ========== -->
+<div class="topic-header"><h3>二、三酰甘油的分解代谢</h3></div>
+
+<div class="subtopic-header"><h4>2.1 甘油的氧化</h4></div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>甘油经 4 步反应进入糖酵解：</p>
+    <ol>
+      <li>甘油 + ATP → 甘油-3-磷酸（<span class="u">甘油激酶</span>，肝/肾）</li>
+      <li>甘油-3-磷酸 + NAD⁺ → DHAP + NADH（甘油-3-磷酸脱氢酶）</li>
+      <li>DHAP → 糖酵解/糖异生</li>
+    </ol>
+  </div>
+</div>
+
+<div class="subtopic-header"><h4>2.2 脂肪酸的 β-氧化（核心内容）</h4></div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><span class="u-double">β-氧化（β-oxidation）</span>是脂肪酸分解的核心途径，在<span class="key-point">线粒体基质</span>中进行。每次循环从脂肪酸的 β-碳（从羧基 C1 起的第 3 个碳）开始氧化，最终产生 <span class="key-point">1 乙酰-CoA + 1 FADH₂ + 1 NADH</span>，并使脂肪酸链缩短 2 个碳。</p>
+    <p><span class="u-double">β-氧化前准备：脂肪酸活化 + 肉碱转运</span></p>
+    <ol>
+      <li><span class="u">脂肪酸活化</span>（胞质）：脂肪酸 + CoA + ATP → <span class="key-point">脂酰-CoA</span> + AMP + PPi（脂酰-CoA 合成酶，消耗 2 个高能键）</li>
+      <li><span class="u-double">肉碱转运系统</span>（关键步骤）：
+        <ul>
+          <li>脂酰-CoA + 肉碱 → 脂酰-肉碱 + CoA（<span class="key-point">肉碱脂酰转移酶 I（CPT I）</span>，位于线粒体外膜）</li>
+          <li>脂酰-肉碱经<span class="u">肉碱-脂酰肉碱转位酶</span>进入线粒体基质</li>
+          <li>脂酰-肉碱 + CoA → 脂酰-CoA + 肉碱（<span class="key-point">肉碱脂酰转移酶 II（CPT II）</span>，位于内膜内侧）</li>
+        </ul>
+        ⚠️ <span class="u-double">CPT I 是 β-氧化的限速酶</span>，被丙二酰-CoA 强烈抑制（这样脂肪酸合成时不会同时被氧化）
+      </li>
+    </ol>
+    <p><span class="u-double">β-氧化 4 步循环</span>（每轮）：</p>
+    <div class="table-wrap">
+    <table>
+    <thead>
+    <tr><th>步骤</th><th>反应</th><th>催化酶</th><th>产物/能量</th></tr>
+    </thead>
+    <tbody>
+    <tr><td>1 <span class="u">脱氢</span></td><td>脂酰-CoA → Δ²-反烯脂酰-CoA</td><td><span class="key-point">脂酰-CoA 脱氢酶</span>（FAD 辅基）</td><td>1 FADH₂</td></tr>
+    <tr><td>2 <span class="u">水合</span></td><td>Δ²-反烯脂酰-CoA + H₂O → L-β-羟脂酰-CoA</td><td>烯脂酰-CoA 水合酶</td><td>—</td></tr>
+    <tr><td>3 <span class="u">再脱氢</span></td><td>L-β-羟脂酰-CoA → β-酮脂酰-CoA</td><td>β-羟脂酰-CoA 脱氢酶（NAD⁺ 辅酶）</td><td>1 NADH</td></tr>
+    <tr><td>4 <span class="u-double">硫解</span></td><td>β-酮脂酰-CoA + HSCoA → 乙酰-CoA + 缩短的脂酰-CoA</td><td>β-酮脂酰-CoA 硫解酶</td><td>1 乙酰-CoA</td></tr>
+    </tbody>
+    </table>
+    </div>
+    <figcaption>表 2 β-氧化 4 步循环（FADH₂ 来自第一步，NADH 来自第三步，乙酰-CoA 来自第四步）</figcaption>
+    <p><span class="u-double">能量计算</span>：</p>
+    <ul>
+      <li>每轮 β-氧化产生 1 FADH₂（≈1.5 ATP）+ 1 NADH（≈2.5 ATP）= <span class="key-point">4 ATP</span></li>
+      <li>最终产生的乙酰-CoA 每次进入 TCA 循环产 10 ATP</li>
+      <li>每轮最终净产 = 4 + 10 = 14 ATP（乙酰-CoA 计入）？不对，乙酰-CoA 是终产物（10 ATP 在下一轮才计）</li>
+      <li><span class="u-double">以软脂酸（C16:0）为例</span>：
+        <ul>
+          <li>C16 → 7 轮 β-氧化（每轮缩短 2C）→ 8 乙酰-CoA</li>
+          <li>活化消耗 2 ATP</li>
+          <li>7 轮 × (1 FADH₂ + 1 NADH) = 7 × 4 = 28 ATP</li>
+          <li>8 乙酰-CoA × 10 ATP = 80 ATP</li>
+          <li><span class="u-double">净产 28 + 80 - 2 = 106 ATP</span></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div class="annotation">
+    <span class="u-double">奥赛必背</span>：软脂酸 C16:0 完全氧化净产 106 ATP（注意 16/2 - 1 = 7 轮 β-氧化，产生 8 乙酰-CoA）。记忆："软脂酸 106 葡糖 30/32"。
+  </div>
+</div>
+
+<svg viewBox="0 0 800 420" style="width:100%;max-width:720px;margin:1.2rem auto;display:block;font-family:sans-serif;">
+  <rect x="0" y="0" width="800" height="420" fill="#fdfbf7" stroke="#d6ccc0" rx="8"/>
+  <text x="400" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="#2c2416">脂肪酸 β-氧化过程图</text>
+
+  <!-- 准备阶段 -->
+  <rect x="20" y="50" width="760" height="80" fill="#fff8e7" stroke="#e8c84a" rx="6"/>
+  <text x="40" y="72" font-size="12" font-weight="700" fill="#c0392b">准备阶段（胞质→线粒体基质）</text>
+  <rect x="40" y="85" width="140" height="34" fill="#fef9e7" stroke="#8b4513" rx="4"/>
+  <text x="110" y="106" text-anchor="middle" font-size="10" fill="#2c2416">脂肪酸+CoA+ATP</text>
+  <text x="195" y="106" font-size="14" fill="#c0392b">→</text>
+  <rect x="215" y="85" width="120" height="34" fill="#fdf2f2" stroke="#c0392b" rx="4"/>
+  <text x="275" y="100" text-anchor="middle" font-size="10" font-weight="700" fill="#c0392b">脂酰-CoA</text>
+  <text x="275" y="113" text-anchor="middle" font-size="10" fill="#7a6e5e">消耗2高能键(AMP+PPi)</text>
+  <text x="350" y="106" font-size="14" fill="#c0392b">→</text>
+  <rect x="370" y="85" width="180" height="34" fill="#fef9e7" stroke="#8b4513" rx="4"/>
+  <text x="460" y="100" text-anchor="middle" font-size="10" font-weight="700" fill="#c0392b">肉碱转运系统</text>
+  <text x="460" y="113" text-anchor="middle" font-size="10" fill="#7a6e5e">CPT I(限速酶)→转位酶→CPT II</text>
+  <text x="565" y="106" font-size="14" fill="#c0392b">→</text>
+  <rect x="585" y="85" width="140" height="34" fill="#fdf2f2" stroke="#c0392b" rx="4"/>
+  <text x="655" y="100" text-anchor="middle" font-size="10" font-weight="700" fill="#c0392b">脂酰-CoA(基质)</text>
+  <text x="655" y="113" text-anchor="middle" font-size="10" fill="#7a6e5e">进入β-氧化循环</text>
+
+  <!-- β-氧化4步循环 -->
+  <text x="400" y="156" text-anchor="middle" font-size="13" font-weight="700" fill="#c0392b">β-氧化 4 步循环（每轮缩短2C）</text>
+
+  <!-- 循环框 -->
+  <rect x="40" y="170" width="720" height="160" fill="#fdf2f2" stroke="#c0392b" stroke-width="1.5" rx="8"/>
+  <!-- 步骤1 脱氢 -->
+  <rect x="60" y="190" width="150" height="120" fill="#fef9e7" stroke="#8b4513" rx="5"/>
+  <text x="135" y="210" text-anchor="middle" font-size="11" font-weight="700" fill="#c0392b">① 脱氢</text>
+  <text x="135" y="232" text-anchor="middle" font-size="9" fill="#2c2416">脂酰-CoA</text>
+  <text x="135" y="248" text-anchor="middle" font-size="9" fill="#2c2416">→Δ²-反烯脂酰-CoA</text>
+  <text x="135" y="270" text-anchor="middle" font-size="9" fill="#8b4513">脂酰-CoA脱氢酶</text>
+  <text x="135" y="285" text-anchor="middle" font-size="9" fill="#7a6e5e">辅基: FAD</text>
+  <rect x="95" y="295" width="80" height="14" fill="#c0392b" rx="3"/>
+  <text x="135" y="306" text-anchor="middle" font-size="9" font-weight="700" fill="#fff">产 1 FADH₂</text>
+
+  <text x="220" y="250" font-size="16" fill="#c0392b">→</text>
+
+  <!-- 步骤2 水合 -->
+  <rect x="240" y="190" width="150" height="120" fill="#fef9e7" stroke="#8b4513" rx="5"/>
+  <text x="315" y="210" text-anchor="middle" font-size="11" font-weight="700" fill="#c0392b">② 水合</text>
+  <text x="315" y="232" text-anchor="middle" font-size="9" fill="#2c2416">Δ²-反烯脂酰-CoA</text>
+  <text x="315" y="248" text-anchor="middle" font-size="9" fill="#2c2416">+H₂O→</text>
+  <text x="315" y="264" text-anchor="middle" font-size="9" fill="#2c2416">L-β-羟脂酰-CoA</text>
+  <text x="315" y="285" text-anchor="middle" font-size="9" fill="#8b4513">烯脂酰-CoA水合酶</text>
+  <text x="315" y="306" text-anchor="middle" font-size="9" fill="#7a6e5e">立体专一: L型</text>
+
+  <text x="400" y="250" font-size="16" fill="#c0392b">→</text>
+
+  <!-- 步骤3 再脱氢 -->
+  <rect x="420" y="190" width="150" height="120" fill="#fef9e7" stroke="#8b4513" rx="5"/>
+  <text x="495" y="210" text-anchor="middle" font-size="11" font-weight="700" fill="#c0392b">③ 再脱氢</text>
+  <text x="495" y="232" text-anchor="middle" font-size="9" fill="#2c2416">L-β-羟脂酰-CoA</text>
+  <text x="495" y="248" text-anchor="middle" font-size="9" fill="#2c2416">→β-酮脂酰-CoA</text>
+  <text x="495" y="270" text-anchor="middle" font-size="9" fill="#8b4513">β-羟脂酰-CoA脱氢酶</text>
+  <text x="495" y="285" text-anchor="middle" font-size="9" fill="#7a6e5e">辅酶: NAD⁺</text>
+  <rect x="455" y="295" width="80" height="14" fill="#c0392b" rx="3"/>
+  <text x="495" y="306" text-anchor="middle" font-size="9" font-weight="700" fill="#fff">产 1 NADH</text>
+
+  <text x="580" y="250" font-size="16" fill="#c0392b">→</text>
+
+  <!-- 步骤4 硫解 -->
+  <rect x="600" y="190" width="140" height="120" fill="#fef9e7" stroke="#8b4513" rx="5"/>
+  <text x="670" y="210" text-anchor="middle" font-size="11" font-weight="700" fill="#c0392b">④ 硫解</text>
+  <text x="670" y="232" text-anchor="middle" font-size="9" fill="#2c2416">β-酮脂酰-CoA</text>
+  <text x="670" y="248" text-anchor="middle" font-size="9" fill="#2c2416">+CoA→</text>
+  <text x="670" y="264" text-anchor="middle" font-size="9" fill="#2c2416">乙酰-CoA</text>
+  <text x="670" y="280" text-anchor="middle" font-size="9" fill="#2c2416">+缩短的脂酰-CoA</text>
+  <text x="670" y="300" text-anchor="middle" font-size="9" fill="#8b4513">β-酮硫解酶</text>
+  <rect x="630" y="306" width="80" height="12" fill="#c0392b" rx="3"/>
+  <text x="670" y="316" text-anchor="middle" font-size="10" font-weight="700" fill="#fff">产 1 乙酰-CoA</text>
+
+  <!-- 能量总结 -->
+  <rect x="20" y="345" width="760" height="60" fill="#fff8e7" stroke="#e8c84a" rx="5"/>
+  <text x="40" y="368" font-size="12" font-weight="700" fill="#c0392b">能量总结（以软脂酸 C16:0 为例）：</text>
+  <text x="40" y="388" font-size="11" fill="#2c2416">8轮β-氧化 → 8乙酰-CoA + 8 FADH₂ + 8 NADH = 8×10 + 8×1.5 + 8×2.5 = 80 + 12 + 20 = 112 ATP</text>
+  <text x="40" y="402" font-size="11" font-weight="700" fill="#c0392b">减去活化消耗2 ATP → 净产 110 ATP（对比葡萄糖 30~32 ATP，单位质量脂肪酸产能约为葡萄糖的2倍）</text>
+</svg>
+<figcaption>脂肪酸 β-氧化过程图</figcaption>
+
+<div class="subtopic-header"><h4>2.3 特殊脂肪酸的氧化</h4></div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><span class="u">奇数碳脂肪酸</span>：经 β-氧化最终产生 1 分子<span class="u-double">丙酰-CoA</span>（3 碳），再经 3 步反应转化为琥珀酰-CoA 进入 TCA：</p>
+    <ol>
+      <li>丙酰-CoA + CO₂ → 甲基丙二酰-CoA（<span class="u-double">丙酰-CoA 羧化酶</span>，生物素辅基）</li>
+      <li>甲基丙二酰-CoA → 琥珀酰-CoA（<span class="key-point">甲基丙二酰-CoA 变位酶，需 B₁₂ 辅酶</span>，adoB₁₂）</li>
+    </ol>
+    <p>⚠️ <span class="key-point">B₁₂ 缺乏</span>时，甲基丙二酰-CoA 不能转化为琥珀酰-CoA，会引起<span class="u">甲基丙二酸尿症（MMA）</span>。</p>
+    <p><span class="u">不饱和脂肪酸</span>（含双键）：需要额外的酶：</p>
+    <ul>
+      <li>Δ³,⁵-Δ²,⁴-二烯脂酰-CoA 异构酶（处理顺式双键）</li>
+      <li>2,4-二烯脂酰-CoA 还原酶（处理共轭双键，需 NADPH）</li>
+    </ul>
+    <p>因此不饱和脂肪酸氧化产能较少（双键位置影响）。</p>
+    <p><span class="u">支链脂肪酸</span>：如植烷酸（含 3-甲基支链），需先经 α-氧化去掉 1 个碳，再进行 β-氧化。<span class="key-point">Refsum 病</span>：α-氧化酶缺陷导致植烷酸堆积。</p>
+    <p><span class="u">极长链脂肪酸（VLCFA，&gt;C22）</span>：先在<span class="u">过氧化物酶体</span>中进行 β-氧化（缩短到 C8~10 后转运到线粒体继续）。<span class="key-point">Zellweger 综合征</span>：过氧化物酶体生物合成缺陷导致 VLCFA 堆积。</p>
+  </div>
+</div>
+
+<div class="subtopic-header"><h4>2.4 酮体的生成和利用</h4></div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><span class="u-double">酮体（ketone bodies）</span>是<span class="key-point">乙酰-CoA 在肝线粒体中生成的小分子中间代谢物</span>，包括：</p>
+    <ol>
+      <li><span class="u">乙酰乙酸（acetoacetate）</span>：主要酮体</li>
+      <li><span class="u">β-羟丁酸（β-hydroxybutyrate）</span>：乙酰乙酸还原产物（含量最多）</li>
+      <li><span class="u">丙酮（acetone）</span>：乙酰乙酸自发脱羧产物（挥发性，从呼吸道排出）</li>
+    </ol>
+    <p><span class="u-double">酮体生成（HMG-CoA 途径）</span>：</p>
+    <ol>
+      <li>2 乙酰-CoA → 乙酰乙酰-CoA（硫解酶，逆反应）</li>
+      <li>乙酰乙酰-CoA + 乙酰-CoA → <span class="key-point">HMG-CoA（3-羟基-3-甲基戊二酰-CoA）</span>（<span class="u-double">HMG-CoA 合酶</span>，限速酶，仅肝线粒体）</li>
+      <li>HMG-CoA → 乙酰乙酸 + CoA（<span class="u">HMG-CoA 裂解酶</span>）</li>
+      <li>乙酰乙酸 + NADH → β-羟丁酸（β-羟丁酸脱氢酶）</li>
+      <li>乙酰乙酸 → 丙酮 + CO₂（自发脱羧）</li>
+    </ol>
+    <p><span class="u-double">酮体的利用（在外周组织线粒体）</span>：</p>
+    <ol>
+      <li>β-羟丁酸 → 乙酰乙酸（β-羟丁酸脱氢酶）</li>
+      <li>乙酰乙酸 + 琥珀酰-CoA → 乙酰乙酰-CoA + 琥珀酸（<span class="key-point">琥珀酰-CoA 转硫酶</span>，心/脑/肾）</li>
+      <li>乙酰乙酰-CoA + CoA → 2 乙酰-CoA（硫解酶）→ 进入 TCA</li>
+    </ol>
+    <p>⚠️ <span class="u-double">肝生酮，肝不用酮</span>：肝缺乏转硫酶，产生的酮体不能被自己利用；心/脑/肾/骨骼肌有转硫酶可利用酮体。</p>
+    <p><span class="u-double">酮体生成的调控</span>：</p>
+    <ul>
+      <li><span class="u">饥饿/糖尿病/高脂低糖饮食</span>：肝糖原耗尽 → 大量脂解 → 脂肪酸 β-氧化 ↑ → 乙酰-CoA 堆积 → 进入 TCA 受限（OAA 被消耗）→ 转向酮体生成</li>
+      <li><span class="u-double">临床意义</span>：
+        <ul>
+          <li><span class="key-point">饥饿性酮症</span>：长期饥饿（&gt;3 天）→ 脑从葡萄糖供能转为酮体供能（脑每天消耗 120 g 葡萄糖 → 饥饿时节省 80 g）</li>
+          <li><span class="key-point">糖尿病酮症酸中毒</span>：胰岛素缺乏 → 脂肪大量动员 → 酮体生成过多 → 血液 pH &lt; 7.3 → 危及生命</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div class="annotation">
+    <span class="u-double">奥赛必背</span>：① 酮体 3 种：乙酰乙酸/β-羟丁酸/丙酮，含量 β-羟丁酸 &gt; 乙酰乙酸 &gt; 丙酮；② 饥饿时脑的主要能量来源是 β-羟丁酸（不是葡萄糖！）；③ 糖尿病酮症酸中毒：呼吸有"烂苹果味"（丙酮挥发）；④ 饥饿 3 天后脂肪成为主要能量来源（&gt;60%）。
+  </div>
+</div>
+
+<svg viewBox="0 0 800 380" style="width:100%;max-width:720px;margin:1.2rem auto;display:block;font-family:sans-serif;">
+  <rect x="0" y="0" width="800" height="380" fill="#fdfbf7" stroke="#d6ccc0" rx="8"/>
+  <text x="400" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="#2c2416">酮体代谢途径（肝生酮，肝不用酮）</text>
+
+  <!-- 肝(生成) -->
+  <rect x="20" y="50" width="360" height="310" fill="#fdf2f2" stroke="#c0392b" stroke-width="1.5" rx="6"/>
+  <text x="200" y="74" text-anchor="middle" font-size="13" font-weight="700" fill="#c0392b">肝线粒体（生成酮体）</text>
+
+  <rect x="40" y="90" width="120" height="30" fill="#fef9e7" stroke="#8b4513" rx="3"/>
+  <text x="100" y="109" text-anchor="middle" font-size="10" fill="#2c2416">2 乙酰-CoA</text>
+  <text x="175" y="109" font-size="12" fill="#c0392b">→</text>
+  <rect x="195" y="90" width="150" height="30" fill="#fef9e7" stroke="#8b4513" rx="3"/>
+  <text x="270" y="104" text-anchor="middle" font-size="9" fill="#2c2416">乙酰乙酰-CoA</text>
+  <text x="270" y="115" text-anchor="middle" font-size="10" fill="#7a6e5e">硫解酶(逆反应)</text>
+
+  <text x="270" y="135" font-size="12" fill="#c0392b">↓ +乙酰-CoA</text>
+
+  <rect x="120" y="145" width="220" height="36" fill="#fdf2f2" stroke="#c0392b" stroke-width="2" rx="4"/>
+  <text x="230" y="160" text-anchor="middle" font-size="11" font-weight="700" fill="#c0392b">HMG-CoA</text>
+  <text x="230" y="174" text-anchor="middle" font-size="9" fill="#7a6e5e">HMG-CoA合酶(限速酶,仅肝)</text>
+
+  <text x="230" y="196" font-size="12" fill="#c0392b">↓ HMG-CoA裂解酶</text>
+
+  <rect x="120" y="205" width="100" height="30" fill="#fef9e7" stroke="#c0392b" rx="3"/>
+  <text x="170" y="224" text-anchor="middle" font-size="10" font-weight="700" fill="#c0392b">乙酰乙酸</text>
+
+  <text x="175" y="250" font-size="10" fill="#7a6e5e">↙ NADH ↘ 自发脱羧</text>
+
+  <rect x="40" y="262" width="120" height="30" fill="#fff8e7" stroke="#8b4513" rx="3"/>
+  <text x="100" y="281" text-anchor="middle" font-size="10" font-weight="700" fill="#8b4513">β-羟丁酸</text>
+  <text x="100" y="305" text-anchor="middle" font-size="9" fill="#7a6e5e">(含量最多)</text>
+
+  <rect x="200" y="262" width="120" height="30" fill="#fff8e7" stroke="#8b4513" rx="3"/>
+  <text x="260" y="281" text-anchor="middle" font-size="10" font-weight="700" fill="#8b4513">丙酮</text>
+  <text x="260" y="305" text-anchor="middle" font-size="9" fill="#7a6e5e">(挥发,烂苹果味)</text>
+
+  <text x="200" y="340" text-anchor="middle" font-size="10" font-weight="700" fill="#c0392b">⚠ 肝缺转硫酶→不能利用酮体</text>
+
+  <!-- 血液运输 -->
+  <line x1="385" y1="200" x2="415" y2="200" stroke="#2c2416" stroke-width="3"/>
+  <polygon points="415,200 408,195 408,205" fill="#2c2416"/>
+  <text x="400" y="190" text-anchor="middle" font-size="9" fill="#7a6e5e">血液运输</text>
+
+  <!-- 外周组织(利用) -->
+  <rect x="420" y="50" width="360" height="310" fill="#f0f7f4" stroke="#27ae60" stroke-width="1.5" rx="6"/>
+  <text x="600" y="74" text-anchor="middle" font-size="13" font-weight="700" fill="#27ae60">外周组织线粒体（利用酮体）</text>
+  <text x="600" y="92" text-anchor="middle" font-size="10" fill="#7a6e5e">心/脑/肾/骨骼肌（有转硫酶）</text>
+
+  <rect x="440" y="105" width="120" height="30" fill="#fff8e7" stroke="#8b4513" rx="3"/>
+  <text x="500" y="124" text-anchor="middle" font-size="10" font-weight="700" fill="#8b4513">β-羟丁酸</text>
+  <text x="575" y="124" font-size="10" fill="#27ae60">→脱氢酶→</text>
+  <rect x="660" y="105" width="100" height="30" fill="#fef9e7" stroke="#c0392b" rx="3"/>
+  <text x="710" y="124" text-anchor="middle" font-size="10" fill="#2c2416">乙酰乙酸</text>
+
+  <text x="600" y="160" text-anchor="middle" font-size="10" fill="#27ae60">↓ +琥珀酰-CoA（转硫酶）</text>
+
+  <rect x="480" y="170" width="240" height="34" fill="#fef9e7" stroke="#c0392b" rx="4"/>
+  <text x="600" y="185" text-anchor="middle" font-size="10" fill="#2c2416">乙酰乙酰-CoA + 琥珀酸</text>
+  <text x="600" y="198" text-anchor="middle" font-size="9" fill="#7a6e5e">琥珀酰-CoA转硫酶(心/脑/肾)</text>
+
+  <text x="600" y="224" text-anchor="middle" font-size="10" fill="#27ae60">↓ 硫解酶 + CoA</text>
+
+  <rect x="500" y="234" width="200" height="34" fill="#fdf2f2" stroke="#c0392b" stroke-width="2" rx="4"/>
+  <text x="600" y="256" text-anchor="middle" font-size="12" font-weight="700" fill="#c0392b">2 乙酰-CoA → TCA循环</text>
+
+  <rect x="440" y="285" width="320" height="55" fill="#fff8e7" stroke="#e8c84a" rx="4"/>
+  <text x="600" y="305" text-anchor="middle" font-size="11" font-weight="700" fill="#c0392b">生理意义</text>
+  <text x="600" y="324" text-anchor="middle" font-size="10" fill="#2c2416">饥饿时脑从葡萄糖→酮体供能(节省葡萄糖)</text>
+  <text x="600" y="338" text-anchor="middle" font-size="10" fill="#2c2416">水溶性→比脂肪酸更易通过血脑屏障</text>
+</svg>
+<figcaption>酮体代谢途径（肝生酮，肝不用酮）</figcaption>
+
+<!-- ========== 10.3 三酰甘油合成 ========== -->
+<div class="topic-header"><h3>三、三酰甘油的合成代谢</h3></div>
+
+<div class="subtopic-header"><h4>3.1 乙酰-CoA 跨膜转运（柠檬酸穿梭）</h4></div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>脂肪酸合成在<span class="u-double">胞质</span>中进行，但乙酰-CoA 在线粒体基质内产生。线粒体内膜<span class="key-point">不允许乙酰-CoA 自由通过</span>，需经<span class="u-double">柠檬酸穿梭</span>：</p>
+    <ol>
+      <li>线粒体内：乙酰-CoA + OAA → 柠檬酸（柠檬酸合酶）</li>
+      <li>柠檬酸经<span class="u">柠檬酸载体</span>运到胞质</li>
+      <li>胞质中：柠檬酸 + ATP → 乙酰-CoA + OAA + ADP + Pi（<span class="key-point">ATP-柠檬酸裂解酶</span>，同时产生 NADPH）</li>
+      <li>OAA → 苹果酸（胞质苹果酸脱氢酶）</li>
+      <li>苹果酸 → 丙酮酸 + CO₂ + NADPH（<span class="u">苹果酸酶</span>，"苹果酸酶"途径）</li>
+    </ol>
+    <p>总效应：1 柠檬酸 → 1 乙酰-CoA + 1 NADPH（ATP-柠檬酸裂解酶）+ 1 NADPH（苹果酸酶）= <span class="u-double">1 乙酰-CoA + 2 NADPH</span>（脂肪酸合成需要的"装配原料"）</p>
+  </div>
+</div>
+
+<div class="subtopic-header"><h4>3.2 脂肪酸合成（FA Synthase 系统）</h4></div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><span class="u-double">软脂酸（C16:0）的合成</span>：</p>
+    <p><span class="u">第一步：乙酰-CoA → 丙二酰-CoA</span>（<span class="key-point">限速步骤</span>）</p>
+    <div class="math-box">
+      乙酰-CoA + CO₂ + ATP → 丙二酰-CoA + ADP + Pi<br>
+      （<span class="u-double">乙酰-CoA 羧化酶（ACC）</span>，生物素辅基）
+    </div>
+    <p><span class="u-double">ACC 调控</span>：</p>
+    <ul>
+      <li>变构激活：<span class="u">柠檬酸</span></li>
+      <li>变构抑制：<span class="u">长链脂酰-CoA</span>（终产物反馈）</li>
+      <li>共价调节：<span class="u">磷酸化失活，去磷酸化激活</span>（AMPK 介导）</li>
+    </ul>
+    <p><span class="u">第二步：脂肪酸合酶（FAS）复合体催化循环</span></p>
+    <p>真核生物 FAS 是<span class="key-point">α₂（同源二聚体）多功能大分子</span>，含 7 种酶活性 + ACP（酰基载体蛋白）。原核生物 FAS 是 7 种独立酶 + ACP。</p>
+    <p><span class="u-double">FAS 循环 4 步</span>（每轮延长 2C）：</p>
+    <ol>
+      <li><span class="u">缩合</span>：乙酰-ACP + 丙二酰-ACP → 乙酰乙酰-ACP + CO₂（<span class="key-point">β-酮脂酰-ACP 合酶（KS）</span>）</li>
+      <li><span class="u">还原</span>：乙酰乙酰-ACP → D-β-羟脂酰-ACP（β-酮脂酰-ACP 还原酶，NADPH 供氢）</li>
+      <li><span class="u">脱水</span>：D-β-羟脂酰-ACP → Δ²-反烯脂酰-ACP（脱水酶）</li>
+      <li><span class="u">再还原</span>：Δ²-反烯脂酰-ACP → 脂酰-ACP（烯脂酰-ACP 还原酶，NADPH 供氢）</li>
+    </ol>
+    <p>循环 7 次（共 8 乙酰-CoA：1 起始 + 7 丙二酰-CoA）→ 软脂酰-ACP → 软脂酸（C16:0）</p>
+    <p><span class="u-double">总反应（合成 1 软脂酸）</span>：</p>
+    <div class="math-box">
+      8 乙酰-CoA + 7 ATP + 14 NADPH → 软脂酸 + 8 CoA + 7 ADP + 7 Pi + 14 NADP⁺ + 7 CO₂ + 6 H₂O
+    </div>
+    <p>14 NADPH 来源：6 来自磷酸戊糖途径（G6PD），8 来自苹果酸酶（柠檬酸穿梭）。</p>
+  </div>
+  <div class="annotation">
+    <span class="u-double">奥赛必背</span>：① ACC 是脂肪酸合成的限速酶，受<span class="key-point">柠檬酸激活、脂酰-CoA 抑制、磷酸化失活</span>；② FAS 的 ACP 摆臂机制使底物在酶活性中心之间穿梭（类似 PDH 的硫辛酸摆臂）；③ 7 轮循环生成 C16:0；④ 软脂酸的延长（C16→C18）由<span class="u">内质网延长酶系统</span>（ELOVL）催化；⑤ 软脂酸的去饱和（引入双键）由<span class="u">硬脂酰-CoA 去饱和酶</span>催化（需 O₂、NADPH、细胞色素 b₅），动物不能引入 Δ9 以上的双键——这就是"必需脂肪酸"亚油酸（Δ9,12 C18:2）和亚麻酸（Δ9,12,15 C18:3）的来源。
+  </div>
+</div>
+
+<div class="subtopic-header"><h4>3.3 三酰甘油合成</h4></div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>三酰甘油（TAG）合成步骤：</p>
+    <ol>
+      <li>甘油-3-磷酸 + 脂酰-CoA → 溶血磷脂酸 + CoA（甘油-3-磷酸酰基转移酶，GPAT）</li>
+      <li>溶血磷脂酸 + 脂酰-CoA → 磷脂酸 + CoA（1-脂酰甘油-3-磷酸酰基转移酶，AGPAT）</li>
+      <li>磷脂酸 + H₂O → 二酰甘油 + Pi（磷脂酸磷酸酶）</li>
+      <li>二酰甘油 + 脂酰-CoA → 三酰甘油 + CoA（<span class="key-point">二酰甘油酰基转移酶（DGAT）</span>）</li>
+    </ol>
+    <p>甘油-3-磷酸来源：① 糖酵解的 DHAP（被 G3P 脱氢酶还原）；② 甘油被甘油激酶磷酸化（仅肝/肾）。</p>
+  </div>
+</div>
+
+<svg viewBox="0 0 800 400" style="width:100%;max-width:720px;margin:1.2rem auto;display:block;font-family:sans-serif;">
+  <rect x="0" y="0" width="800" height="400" fill="#fdfbf7" stroke="#d6ccc0" rx="8"/>
+  <text x="400" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="#2c2416">脂肪酸合成 vs 分解 对比表</text>
+
+  <rect x="20" y="50" width="760" height="34" fill="#8b4513" rx="4"/>
+  <text x="120" y="72" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">对比项</text>
+  <text x="400" y="72" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">脂肪酸合成</text>
+  <text x="660" y="72" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">脂肪酸β-氧化（分解）</text>
+
+  <rect x="20" y="88" width="760" height="42" fill="#fdf2f2" stroke="#e8c84a" rx="3"/>
+  <text x="120" y="114" text-anchor="middle" font-size="12" font-weight="700" fill="#c0392b">部位</text>
+  <text x="400" y="114" text-anchor="middle" font-size="12" fill="#2c2416">胞质</text>
+  <text x="660" y="114" text-anchor="middle" font-size="12" fill="#2c2416">线粒体基质</text>
+
+  <rect x="20" y="134" width="760" height="42" fill="#fff8e7" stroke="#e8c84a" rx="3"/>
+  <text x="120" y="160" text-anchor="middle" font-size="12" font-weight="700" fill="#c0392b">酰基载体</text>
+  <text x="400" y="160" text-anchor="middle" font-size="12" fill="#2c2416">ACP（酰基载体蛋白）</text>
+  <text x="660" y="160" text-anchor="middle" font-size="12" fill="#2c2416">CoA</text>
+
+  <rect x="20" y="180" width="760" height="42" fill="#fdf2f2" stroke="#e8c84a" rx="3"/>
+  <text x="120" y="206" text-anchor="middle" font-size="12" font-weight="700" fill="#c0392b">电子供体/受体</text>
+  <text x="400" y="206" text-anchor="middle" font-size="12" fill="#2c2416">NADPH（供氢）</text>
+  <text x="660" y="206" text-anchor="middle" font-size="12" fill="#2c2416">NAD⁺ / FAD（受氢）</text>
+
+  <rect x="20" y="226" width="760" height="42" fill="#fff8e7" stroke="#e8c84a" rx="3"/>
+  <text x="120" y="252" text-anchor="middle" font-size="12" font-weight="700" fill="#c0392b">限速酶</text>
+  <text x="400" y="252" text-anchor="middle" font-size="12" font-weight="700" fill="#c0392b">乙酰-CoA羧化酶(ACC)</text>
+  <text x="660" y="252" text-anchor="middle" font-size="12" font-weight="700" fill="#c0392b">CPT I(肉碱转运)</text>
+
+  <rect x="20" y="272" width="760" height="42" fill="#fdf2f2" stroke="#e8c84a" rx="3"/>
+  <text x="120" y="298" text-anchor="middle" font-size="12" font-weight="700" fill="#c0392b">2C单位</text>
+  <text x="400" y="298" text-anchor="middle" font-size="12" fill="#2c2416">丙二酰-CoA(加2C)</text>
+  <text x="660" y="298" text-anchor="middle" font-size="12" fill="#2c2416">乙酰-CoA(减2C)</text>
+
+  <rect x="20" y="318" width="760" height="42" fill="#fff8e7" stroke="#e8c84a" rx="3"/>
+  <text x="120" y="344" text-anchor="middle" font-size="12" font-weight="700" fill="#c0392b">能量</text>
+  <text x="400" y="344" text-anchor="middle" font-size="12" fill="#2c2416">耗能(7ATP+14NADPH/C16)</text>
+  <text x="660" y="344" text-anchor="middle" font-size="12" fill="#2c2416">产能(净产110ATP/C16)</text>
+
+  <text x="400" y="384" text-anchor="middle" font-size="11" font-weight="700" fill="#c0392b">关键调控：丙二酰-CoA抑制CPT I → 合成时不会同时分解（避免无效循环）</text>
+</svg>
+<figcaption>脂肪酸合成 vs 分解 对比表</figcaption>
+
+<!-- ========== 10.4 磷脂代谢 ========== -->
+<div class="topic-header"><h3>四、磷脂代谢（Kennedy 途径）</h3></div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><span class="u-double">Kennedy 途径</span>是磷脂合成的经典途径，以 CDP-胆碱/乙醇胺为活化中间物。例：卵磷脂（磷脂酰胆碱，PC）合成：</p>
+    <ol>
+      <li>胆碱 + ATP → 磷酸胆碱 + ADP（胆碱激酶）</li>
+      <li>磷酸胆碱 + CTP → <span class="key-point">CDP-胆碱</span> + PPi（CTP-磷酸胆碱胞苷酰转移酶，限速酶）</li>
+      <li>CDP-胆碱 + 二酰甘油 → 卵磷脂 + CMP（<span class="u-double">胆碱磷酸转移酶</span>，位于内质网）</li>
+    </ol>
+    <p>脑磷脂（磷脂酰乙醇胺，PE）合成类似（用 CDP-乙醇胺）。</p>
+    <p>记忆："<span class="key-point">C→P→CDP→P</span>"：胆碱/乙醇胺 → 磷酸胆碱/乙醇胺 → CDP-胆碱/乙醇胺 → 磷脂。</p>
+  </div>
+</div>
+
+<!-- ========== 10.5 胆固醇代谢 ========== -->
+<div class="topic-header"><h3>五、胆固醇代谢</h3></div>
+
+<div class="subtopic-header"><h4>5.1 胆固醇的合成（甲羟戊酸途径）</h4></div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>胆固醇（cholesterol）27 碳，<span class="u-double">所有动物细胞都能合成</span>，主要在<span class="key-point">肝</span>（合成量 50%）。从乙酰-CoA 出发，分 5 阶段：</p>
+    <div class="flow-box">
+      <div class="flow-title">胆固醇合成流程</div>
+      <div class="flow-row">
+        <span class="flow-item">乙酰-CoA</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-item">HMG-CoA</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-item">甲羟戊酸（MVA）</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-item">异戊烯焦磷酸（IPP）</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-item">鲨烯</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-item">胆固醇</span>
+      </div>
+    </div>
+    <ol>
+      <li><span class="u">3 乙酰-CoA → HMG-CoA</span>（与酮体生成前两步相同，但在线粒体 vs 胞质分别进行）</li>
+      <li><span class="u-double">HMG-CoA → 甲羟戊酸（MVA）</span>（<span class="key-point">HMG-CoA 还原酶（HMGCR）</span>，限速酶，2 NADPH 供氢）</li>
+      <li>MVA → IPP（异戊烯焦磷酸）（MVA 激酶 + MVA 磷酸激酶 + MVA 焦磷酸脱羧酶，消耗 3 ATP）</li>
+      <li>IPP ↔ DMAPP（异构酶）→ GPP → FPP → <span class="u">鲨烯</span>（2 FPP 缩合）</li>
+      <li>鲨烯 → 羊毛甾醇 → 胆固醇（环化 + 多次氧化还原）</li>
+    </ol>
+    <p>⚠️ <span class="u-double">HMG-CoA 还原酶（HMGCR）是限速酶</span>，催化：</p>
+    <div class="math-box">
+      HMG-CoA + 2 NADPH + 2 H⁺ → MVA + 2 NADP⁺ + CoA
+    </div>
+    <p>这是不可逆的还原反应，是<span class="u-double">胆固醇合成的关键调控点</span>。</p>
+  </div>
+  <div class="annotation">
+    <span class="u-double">奥赛必背</span>：<span class="key-point">HMG-CoA 还原酶</span>是所有降胆固醇药（他汀类）的作用靶点——抑制 HMGCR → 减少胆固醇合成 → 肝 LDL 受体上调 → 血 LDL 降低。常见他汀：洛伐他汀、辛伐他汀、阿托伐他汀等。
+  </div>
+</div>
+
+<svg viewBox="0 0 800 360" style="width:100%;max-width:720px;margin:1.2rem auto;display:block;font-family:sans-serif;">
+  <rect x="0" y="0" width="800" height="360" fill="#fdfbf7" stroke="#d6ccc0" rx="8"/>
+  <text x="400" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="#2c2416">胆固醇合成关键步骤（甲羟戊酸途径）</text>
+
+  <!-- 流程链 -->
+  <rect x="20" y="55" width="110" height="50" fill="#fef9e7" stroke="#8b4513" rx="4"/>
+  <text x="75" y="78" text-anchor="middle" font-size="10" font-weight="700" fill="#2c2416">3 乙酰-CoA</text>
+  <text x="75" y="94" text-anchor="middle" font-size="10" fill="#7a6e5e">C2×3</text>
+
+  <text x="140" y="82" font-size="14" fill="#c0392b">→</text>
+
+  <rect x="155" y="55" width="100" height="50" fill="#fdf2f2" stroke="#c0392b" rx="4"/>
+  <text x="205" y="78" text-anchor="middle" font-size="10" font-weight="700" fill="#c0392b">HMG-CoA</text>
+  <text x="205" y="94" text-anchor="middle" font-size="10" fill="#7a6e5e">C6</text>
+
+  <text x="265" y="82" font-size="14" fill="#c0392b">→</text>
+
+  <rect x="280" y="55" width="110" height="50" fill="#fdf2f2" stroke="#c0392b" stroke-width="2.5" rx="4"/>
+  <text x="335" y="76" text-anchor="middle" font-size="10" font-weight="700" fill="#c0392b">甲羟戊酸 MVA</text>
+  <text x="335" y="92" text-anchor="middle" font-size="10" fill="#c0392b">★限速步骤★</text>
+  <text x="335" y="102" text-anchor="middle" font-size="10" fill="#7a6e5e">C6</text>
+
+  <text x="400" y="82" font-size="14" fill="#c0392b">→</text>
+
+  <rect x="415" y="55" width="110" height="50" fill="#fef9e7" stroke="#8b4513" rx="4"/>
+  <text x="470" y="78" text-anchor="middle" font-size="10" font-weight="700" fill="#2c2416">IPP/DMAPP</text>
+  <text x="470" y="94" text-anchor="middle" font-size="10" fill="#7a6e5e">C5异戊烯单位</text>
+
+  <text x="535" y="82" font-size="14" fill="#c0392b">→</text>
+
+  <rect x="550" y="55" width="100" height="50" fill="#fef9e7" stroke="#8b4513" rx="4"/>
+  <text x="600" y="78" text-anchor="middle" font-size="10" font-weight="700" fill="#2c2416">鲨烯</text>
+  <text x="600" y="94" text-anchor="middle" font-size="10" fill="#7a6e5e">C30</text>
+
+  <text x="660" y="82" font-size="14" fill="#c0392b">→</text>
+
+  <rect x="675" y="55" width="105" height="50" fill="#fdf2f2" stroke="#c0392b" rx="4"/>
+  <text x="727" y="78" text-anchor="middle" font-size="10" font-weight="700" fill="#c0392b">胆固醇</text>
+  <text x="727" y="94" text-anchor="middle" font-size="10" fill="#7a6e5e">C27</text>
+
+  <!-- 关键酶标注 -->
+  <rect x="20" y="125" width="760" height="110" fill="#fff8e7" stroke="#e8c84a" rx="6"/>
+  <text x="40" y="148" font-size="12" font-weight="700" fill="#c0392b">关键酶与辅因子：</text>
+  <text x="40" y="170" font-size="11" fill="#2c2416">① HMG-CoA合酶：3乙酰-CoA→HMG-CoA（与酮体生成共用此步，但部位不同：胆固醇在胞质，酮体在线粒体）</text>
+  <text x="40" y="190" font-size="11" font-weight="700" fill="#c0392b">② HMG-CoA还原酶(HMGCR)：HMG-CoA→MVA 【限速酶】2NADPH供氢，不可逆，他汀类药物靶点</text>
+  <text x="40" y="210" font-size="11" fill="#2c2416">③ MVA→IPP：消耗3ATP，经MVA激酶→MVA磷酸激酶→MVA焦磷酸脱羧酶</text>
+  <text x="40" y="228" font-size="11" fill="#2c2416">④ 鲨烯合酶：2FPP→鲨烯(2分子C15→C30)</text>
+
+  <!-- 调控与去路 -->
+  <rect x="20" y="250" width="370" height="95" fill="#fdf2f2" stroke="#c0392b" rx="6"/>
+  <text x="205" y="272" text-anchor="middle" font-size="12" font-weight="700" fill="#c0392b">HMGCR的调控</text>
+  <text x="40" y="294" font-size="11" fill="#2c2416">• 胆固醇↓/胰岛素/甲状腺素→激活</text>
+  <text x="40" y="312" font-size="11" fill="#2c2416">• 胆固醇↑/胰高血糖素/饥饿→抑制</text>
+  <text x="40" y="330" font-size="11" fill="#2c2416">• 磷酸化(失活)/去磷酸化(激活)</text>
+  <text x="40" y="342" font-size="10" font-weight="700" fill="#c0392b">他汀类: 竞争性抑制HMGCR</text>
+
+  <rect x="410" y="250" width="370" height="95" fill="#f0f7f4" stroke="#27ae60" rx="6"/>
+  <text x="595" y="272" text-anchor="middle" font-size="12" font-weight="700" fill="#c0392b">胆固醇的代谢去路</text>
+  <text x="430" y="294" font-size="11" fill="#2c2416">→ 胆汁酸(7α-羟化酶,限速)</text>
+  <text x="430" y="312" font-size="11" fill="#2c2416">→ 类固醇激素(孕烯醇酮前体)</text>
+  <text x="430" y="330" font-size="11" fill="#2c2416">→ 维生素D₃(7-DHC→UV→D₃)</text>
+  <text x="430" y="342" font-size="11" fill="#2c2416">→ 胆固醇酯(ACAT催化储存)</text>
+</svg>
+<figcaption>胆固醇合成关键步骤（甲羟戊酸途径）</figcaption>
+
+<div class="subtopic-header"><h4>5.2 胆固醇的代谢去路</h4></div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>胆固醇的去路：</p>
+    <ol>
+      <li><span class="u">胆汁酸</span>：肝中胆固醇经 7α-羟化酶（限速酶）催化生成<span class="u-double">胆酸（cholic acid）</span>和<span class="u">鹅去氧胆酸</span>，与甘氨酸/牛磺酸结合形成胆汁酸盐，促进脂质消化吸收</li>
+      <li><span class="u">类固醇激素</span>：肾上腺皮质激素（醛固酮、皮质醇）、性激素（雌激素、雄激素、孕激素）——前体是胆固醇经孕烯醇酮 → 各种激素</li>
+      <li><span class="u">维生素 D₃</span>：胆固醇 → 7-脱氢胆固醇（7-DHC）→ 紫外线 → 维生素 D₃</li>
+      <li><span class="u">胆固醇酯</span>：ACAT（脂酰-CoA-胆固醇酰基转移酶）催化胆固醇 + 脂酰-CoA → 胆固醇酯（储存于脂滴或 HDL/LDL 内）</li>
+      <li><span class="u">胆色素</span>：血红素分解产物（间接胆红素）</li>
+    </ol>
+  </div>
+</div>
+
+<div class="subtopic-header"><h4>5.3 胆固醇的转运：LDL/HDL</h4></div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><span class="u-double">胆固醇通过脂蛋白在血液中运输</span>。主要脂蛋白：</p>
+    <div class="table-wrap">
+    <table>
+    <thead>
+    <tr><th>脂蛋白</th><th>密度 (g/mL)</th><th>直径 (nm)</th><th>主要功能</th></tr>
+    </thead>
+    <tbody>
+    <tr><td>乳糜微粒（CM）</td><td>&lt; 0.95</td><td>80~1200</td><td>从小肠运甘油三酯到外周组织</td></tr>
+    <tr><td>VLDL</td><td>0.95~1.006</td><td>30~80</td><td>从肝运甘油三酯到外周组织</td></tr>
+    <tr><td>IDL</td><td>1.006~1.019</td><td>25~35</td><td>VLDL → LDL 的中间体</td></tr>
+    <tr><td><span class="u-double">LDL</span></td><td>1.019~1.063</td><td>18~25</td><td><span class="u-double">运胆固醇到外周组织（"坏胆固醇"）</span></td></tr>
+    <tr><td><span class="u-double">HDL</span></td><td>1.063~1.21</td><td>5~17</td><td><span class="u-double">从外周组织回收胆固醇回肝（"好胆固醇"）</span></td></tr>
+    </tbody>
+    </table>
+    </div>
+    <p>⚠️ <span class="key-point">LDL 受体</span>：介导细胞摄取 LDL 颗粒（含 apoB-100）。<span class="u-double">家族性高胆固醇血症（FH）</span>：LDL 受体基因突变导致 LDL 不能被摄取 → 血胆固醇极高 → 早发动脉粥样硬化。Brown 和 Goldstein 因发现 LDL 受体获 1985 年诺贝尔奖。</p>
+  </div>
+</div>
+
+<!-- ========== 10.6 脂代谢的整合 ========== -->
+<div class="topic-header"><h3>六、脂代谢与其他代谢的整合</h3></div>
+
+<div class="subtopic-header"><h4>6.1 饥饿时的代谢适应</h4></div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><span class="u-double">饥饿时</span>（&gt;12 小时未进食）的代谢调整：</p>
+    <ol>
+      <li><span class="u">0~4 小时</span>（吸收期）：血糖↑ → 胰岛素↑ → 糖原合成↑、脂质合成↑</li>
+      <li><span class="u">4~16 小时</span>（糖原分解期）：血糖↓ → 胰高血糖素↑ → 肝糖原分解↑</li>
+      <li><span class="u">16~48 小时</span>（糖异生期）：肝糖原耗尽 → 糖异生↑（氨基酸、甘油 → 葡萄糖）</li>
+      <li><span class="u">2~3 天后</span>（酮体期）：脂肪大量动员 → β-氧化↑ → 乙酰-CoA↑ → 酮体↑ → 脑开始利用酮体</li>
+      <li><span class="u">长期饥饿（&gt;5 天）</span>：肾糖异生↑、蛋白分解↓（保氮）、脑主要靠酮体（节省葡萄糖）</li>
+    </ol>
+  </div>
+</div>
+
+<div class="subtopic-header"><h4>6.2 糖尿病时的代谢异常</h4></div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><span class="u">1 型糖尿病</span>（胰岛素绝对缺乏）：</p>
+    <ul>
+      <li>血糖↑（不能被细胞摄取）</li>
+      <li>脂肪大量动员 → 肝 β-氧化↑ → 乙酰-CoA↑ → 酮体↑ → <span class="u-double">酮症酸中毒</span></li>
+      <li>蛋白分解↑ → 肌肉萎缩</li>
+      <li>糖异生↑ → 血糖进一步升高</li>
+    </ul>
+    <p><span class="u">2 型糖尿病</span>（胰岛素抵抗）：常伴肥胖、高血压、高血脂（"代谢综合征"）。</p>
+  </div>
+</div>
+
+<!-- ========== 本节小结 ========== -->
+<div class="summary-box">
+  <h4>📌 ch1-1-9 拓展要点 · 本节小结</h4>
+  <ol>
+    <li><span class="u-double">4 类磷脂酶</span>：PLA1（C1 酰基）/ PLA2（C2 酰基，释花生四烯酸）/ PLC（磷酸酯键，释 DAG + IP₃）/ PLD（磷酸-头基键）。PLA2 产物是 PG/LT/TXA 前体；阿司匹林抑制 COX。</li>
+    <li><span class="u-double">β-氧化 4 步循环</span>：脱氢（FADH₂）+ 水合 + 再脱氢（NADH）+ 硫解（乙酰-CoA）。每轮 4 ATP（1.5 + 2.5），最终乙酰-CoA 进 TCA 产 10 ATP。软脂酸 C16:0 净产 110 ATP。</li>
+    <li><span class="u-double">CPT I 是 β-氧化限速酶</span>（位于线粒体外膜），被丙二酰-CoA 强抑制。肉碱转运是脂酰-CoA 进入线粒体的关键步骤。</li>
+    <li><span class="u-double">奇数碳 / 不饱和 / 支链脂肪酸</span>：奇数碳最终产生丙酰-CoA → 甲基丙二酰-CoA → 琥珀酰-CoA（需 B₁₂ 辅酶）。不饱和脂肪酸需要额外异构酶/还原酶。植烷酸需先 α-氧化（Refsum 病）。VLCFA 先在过氧化物酶体氧化（Zellweger 综合征）。</li>
+    <li><span class="u-double">酮体 3 种</span>：乙酰乙酸 / β-羟丁酸 / 丙酮。HMG-CoA 合酶是肝线粒体生酮的限速酶。肝生酮、肝不用酮（缺转硫酶）。饥饿/糖尿病时酮体↑，脑从葡萄糖供能转为酮体供能。</li>
+    <li><span class="u-double">脂肪酸合成（FA Synthase）</span>：① 乙酰-CoA → 丙二酰-CoA（ACC 催化，限速步骤）；② FAS 循环 4 步（缩合/还原/脱水/再还原）7 轮产生 C16:0；③ ACP 摆臂机制；④ 总反应：8 乙酰-CoA + 7 ATP + 14 NADPH → 软脂酸。</li>
+    <li><span class="u-double">ACC 调控</span>：柠檬酸激活、脂酰-CoA 抑制、磷酸化失活（AMPK 介导）。</li>
+    <li><span class="u-double">Kennedy 途径（磷脂合成）</span>：胆碱/乙醇胺 → 磷酸胆碱/乙醇胺 → CDP-胆碱/乙醇胺 → 磷脂。CTP-磷酸胆碱胞苷酰转移酶是限速酶。</li>
+    <li><span class="u-double">胆固醇合成（甲羟戊酸途径）</span>：乙酰-CoA → HMG-CoA → MVA → IPP → 鲨烯 → 胆固醇。HMGCR（限速酶）是降胆固醇药（他汀类）靶点。</li>
+    <li><span class="u-double">胆固醇代谢去路</span>：胆汁酸（7α-羟化酶）/ 类固醇激素 / 维生素 D₃ / 胆固醇酯 / 胆色素。7-DHC 经 UV 照射 → 维生素 D₃。</li>
+    <li><span class="u-double">脂蛋白转运</span>：CM（肠→外周）/ VLDL（肝→外周）/ LDL（外周，apoB-100）/ HDL（外周→肝）。Brown & Goldstein 1985 诺奖（LDL 受体，FH 病）。</li>
+    <li><span class="u-double">饥饿代谢适应</span>：0-4h 吸收 → 4-16h 糖原分解 → 16-48h 糖异生 → 2-3 天后酮体（脑节能）→ &gt;5 天肾糖异生↑、保氮。</li>
+    <li><span class="u-double">乙酰-CoA 是三大物质代谢的"十字路口"</span>：糖→乙酰-CoA（PDH）、脂→乙酰-CoA（β-氧化）、氨基酸→乙酰-CoA。乙酰-CoA 去向：TCA / 脂肪酸合成 / 胆固醇合成 / 酮体 / 乙酰胆碱 / N-乙酰化。</li>
+  </ol>
+</div>
+
+</div>
+
+<footer><a href="index.html" style="color:var(--accent);text-decoration:none;margin-right:1rem;">← 返回目录</a>
+生物化学讲义 · 参考张丽萍《生物化学简明教程》第六版第10章 · 适用于有人教版高中生物学基础的生物竞赛生<br>
+本章关键词：磷脂酶 β-氧化 肉碱 CPT-I 酮体 HMG-CoA 乙酰-CoA羧化酶 FAS ACP 甲羟戊酸 HMG-CoA还原酶 LDL HDL
+</footer>
+
+</body>
+</html>

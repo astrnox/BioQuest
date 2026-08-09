@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第五章 细胞的生命历程 · 第三节 细胞的衰老与死亡 — 生物集训营笔记</title>
+<style>
+:root { --bg: #fdfbf7; --bg2: #f5f0e8; --ink: #2c2416; --muted: #7a6e5e; --rule: #d6ccc0; --accent: #c0392b; --accent2: #8b4513; --highlight: #fff3cd; --note-bg: #fff8e7; --note-border: #e8c84a; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: "Noto Sans CJK SC", "WenQuanYi Micro Hei", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; font-size: 16px; line-height: 1.8; color: var(--ink); background: var(--bg); }
+.cover { text-align: center; padding: 4rem 2rem 3rem; border-bottom: 3px double var(--rule); margin-bottom: 0; background: linear-gradient(180deg, var(--bg2) 0%, var(--bg) 100%); }
+.cover .ch-num { font-size: 1rem; color: var(--accent); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 0.3rem; }
+.cover h1 { font-size: 2.2rem; font-weight: 800; color: var(--ink); margin-bottom: 0.5rem; letter-spacing: 0.03em; }
+.cover .subtitle { font-size: 1rem; color: var(--muted); }
+.cover .meta { margin-top: 1.2rem; font-size: 0.85rem; color: var(--muted); display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
+.main-layout { max-width: 1060px; margin: 0 auto; padding: 0 1.5rem; }
+.section-header { border-bottom: 3px solid var(--accent); padding: 2rem 0 0.6rem; margin-bottom: 1.5rem; }
+.section-header .sec-num { font-size: 0.9rem; color: var(--accent); font-weight: 700; letter-spacing: 0.08em; }
+.section-header h2 { font-size: 1.6rem; font-weight: 800; color: var(--ink); margin-top: 0.15rem; }
+.topic-header { margin: 2rem 0 1rem; padding-left: 0.8rem; border-left: 4px solid var(--accent); }
+.topic-header h3 { font-size: 1.25rem; font-weight: 700; color: var(--ink); }
+.subtopic-header { margin: 1.5rem 0 0.8rem; }
+.subtopic-header h4 { font-size: 1.1rem; font-weight: 700; color: var(--accent2); }
+.note-block { display: flex; gap: 1.5rem; margin-bottom: 1.2rem; align-items: flex-start; }
+.note-content { flex: 1; padding: 0.8rem 1rem; background: var(--bg2); border-radius: 6px; border: 1px solid var(--rule); }
+.note-content p { margin-bottom: 0.5rem; }
+.note-content p:last-child { margin-bottom: 0; }
+.note-content ul, .note-content ol { padding-left: 1.5rem; margin: 0.4rem 0; }
+.note-content li { margin-bottom: 0.25rem; }
+.annotation { width: 240px; flex-shrink: 0; background: var(--note-bg); border: 1px solid var(--note-border); border-radius: 6px; padding: 0.6rem 0.8rem; font-size: 0.82rem; line-height: 1.6; color: var(--accent2); align-self: flex-start; }
+.annotation::before { content: "📝 批注"; display: block; font-size: 0.7rem; font-weight: 700; color: var(--accent); letter-spacing: 0.06em; margin-bottom: 0.3rem; text-transform: uppercase; }
+.u { text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 2px; text-underline-offset: 3px; font-weight: 600; }
+.u-double { text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 2px; text-underline-offset: 3px; text-decoration-style: double; font-weight: 700; }
+.key-point { background: var(--highlight); padding: 0.1em 0.3em; border-radius: 3px; font-weight: 600; border-bottom: 1.5px solid var(--accent); }
+.table-wrap { overflow-x: auto; overflow-y: auto; max-height: 600px; margin: 1.5rem 0; border: 1px solid var(--rule); border-radius: 6px; }
+table { width: 100%; border-collapse: collapse; font-size: 0.9rem; min-width: 800px; }
+table thead th { background: var(--accent); color: #fff; padding: 0.6rem 0.8rem; font-weight: 700; text-align: center; white-space: nowrap; }
+table tbody td { padding: 0.5rem 0.8rem; border-bottom: 1px solid var(--rule); vertical-align: top; }
+table tbody tr:nth-child(even) { background: var(--bg2); }
+table tbody tr:last-child td { border-bottom: none; }
+table tbody td:first-child { font-weight: 600; white-space: nowrap; text-align: center; background: var(--bg2); }
+figcaption { text-align: center; font-size: 0.85rem; color: var(--muted); margin-top: 0.4rem; }
+.diagram { margin: 1.2rem 0; text-align: center; }
+.diagram img { max-width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 4px; }
+.summary-box { background: linear-gradient(135deg, #fdf2f2 0%, #fef9e7 100%); border: 2px solid var(--accent); border-radius: 8px; padding: 1.2rem 1.5rem; margin: 2rem 0; }
+.summary-box h4 { color: var(--accent); font-size: 1rem; margin-bottom: 0.6rem; }
+.expand-block { background: #f0f7f4; border: 1px dashed #7cb342; border-radius: 6px; padding: 0.5rem 0.9rem; margin: 0.6rem 0 0; font-size: 0.83rem; line-height: 1.6; color: #3e6b3e; }
+.expand-block::before { content: "🔍 拓展"; display: block; font-size: 0.7rem; font-weight: 700; color: #558b2f; letter-spacing: 0.06em; margin-bottom: 0.2rem; }
+footer { margin-top: 3rem; padding: 1.5rem; border-top: 1px solid var(--rule); text-align: center; font-size: 0.8rem; color: var(--muted); }
+@media (max-width: 768px) { .cover h1 { font-size: 1.5rem; } .note-block { flex-direction: column; } .annotation { width: 100%; } .main-layout { padding: 0 0.8rem; } table { font-size: 0.78rem; min-width: 600px; } }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div class="ch-num">高中生物竞赛讲义 · 集训营</div>
+  <h1>第五章 细胞的生命历程</h1>
+  <div class="subtitle">第三节 细胞的衰老与死亡</div>
+  <div class="meta">
+    <span>泛素-蛋白酶体</span><span>细胞衰老理论</span><span>细胞凋亡</span><span>细胞焦亡</span><span>铁死亡</span><span>程序性坏死</span><span>细胞自噬</span>
+    <span>📅 整理日期: 2026年7月6日</span>
+  </div>
+</div>
+
+<div class="main-layout">
+
+<div class="section-header">
+  <div class="sec-num">第三节</div>
+  <h2>细胞的衰老与死亡</h2>
+</div>
+
+<!-- ====== 一、细胞成分与结构的更新 ====== -->
+<div class="topic-header"><h3>一、细胞成分与结构的更新</h3></div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>细胞是动态的生命系统，<span class="u-double">细胞内的各种成分和结构不断更新</span>——旧的成分降解，新的成分合成。</p>
+    <p>蛋白质是细胞功能的主要执行者，蛋白质的更新主要通过两个系统：</p>
+    <ul>
+      <li><span class="key-point">① 溶酶体降解系统</span>：长寿命蛋白、细胞器碎片通过自噬（autophagy）途径被溶酶体降解</li>
+      <li><span class="key-point">② 泛素-蛋白酶体系统（ubiquitin-proteasome system, UPS）</span>：短寿命蛋白、错误折叠蛋白、调控蛋白通过泛素标记后由 26S 蛋白酶体降解</li>
+    </ul>
+    <p><strong>泛素-蛋白酶体系统的工作流程：</strong></p>
+    <ol>
+      <li>泛素激活酶 E1 激活泛素（消耗 ATP）</li>
+      <li>泛素结合酶 E2 接收泛素</li>
+      <li>泛素连接酶 E3 识别靶蛋白，将泛素转移至靶蛋白赖氨酸残基</li>
+      <li>形成 K48 多聚泛素化标签（至少 4 个泛素分子）</li>
+      <li>26S 蛋白酶体识别泛素标签，将靶蛋白降解为短肽（5-20 个氨基酸）</li>
+      <li>泛素被释放和回收</li>
+    </ol>
+    <p><strong>26S 蛋白酶体结构：</strong>20S 核心颗粒（中空圆柱形，含 α 环和 β 环） + 19S 调节颗粒（盖子和底座）</p>
+  </div>
+  <div class="annotation">
+    UPS 是"细胞垃圾处理厂"，每分钟清除数百万蛋白质。E3 决定底物特异性。蛋白酶体抑制剂（如 Bortezomib）用于治疗多发性骨髓瘤。
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><strong>细胞自噬（autophagy）：</strong></p>
+    <ul>
+      <li>① <span class="key-point">巨自噬（macroautophagy）</span>：双层膜自噬体包裹细胞器或蛋白聚集体 → 与溶酶体融合 → 降解</li>
+      <li>② <span class="key-point">微自噬（microautophagy）</span>：溶酶体膜直接内吞胞质成分</li>
+      <li>③ <span class="key-point">分子伴侣介导的自噬（CMA）</span>：Hsc70 等分子伴侣识别 KFERQ 序列的底物 → 通过 LAMP-2A 转运至溶酶体内</li>
+    </ul>
+    <p>细胞内主要蛋白质的"半衰期"：组蛋白 ~ 3 天，细胞色素 c ~ 5 天，醛缩酶 ~ 12 小时，糖酵解酶系 ~ 12 小时。蛋白质的快速周转保证了细胞对环境的快速适应。</p>
+  </div>
+  <div class="annotation">
+    蛋白质的"半衰期"是其更新速率的体现。短寿命蛋白（如 cyclin）通过 UPS 降解调控细胞周期；长寿命蛋白通过溶酶体降解。
+  </div>
+</div>
+
+<!-- ====== 二、细胞的衰老 ====== -->
+<div class="topic-header"><h3>二、细胞的衰老</h3></div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><span class="u-double">细胞衰老（cell senescence）</span>是细胞内多种分子累积损伤导致细胞功能逐渐退化的过程，是生物体衰老的细胞学基础。</p>
+    <p><strong>（一）细胞的寿限：</strong></p>
+    <ul>
+      <li><span class="key-point">① Hayflick 界限（Hayflick limit）</span>：1961 年 Hayflick 发现，正常人成纤维细胞在体外培养时只能分裂有限次数（约 50 次）后停止分裂。说明细胞也有"寿命"</li>
+      <li><span class="key-point">② Hayflick 实验</span>：取胎儿肺成纤维细胞连续培养 50 代左右停止分裂；成年人的成纤维细胞只能传代 20-30 次；老年人则更少（10 代左右）</li>
+      <li><span class="key-point">③ 极限：</span>不同物种的细胞分裂极限不同，与物种寿命正相关。人的极限约 50 次（2⁵⁰ ≈ 1.2 × 10¹⁵ 个细胞，足够人体一生使用）</li>
+    </ul>
+
+    <p><strong>不同类型细胞的寿命（成年小鼠）：</strong></p>
+    <div class="table-wrap">
+    <table>
+      <thead><tr><th>接近或等于动物整体寿命的细胞</th><th>缓慢更新的细胞</th><th>快速更新的细胞</th></tr></thead>
+      <tbody>
+        <tr><td>神经元、心肌细胞、横纹肌细胞、骨细胞、肝细胞、肾细胞、肾上腺皮质细胞</td><td>胃壁细胞、皮肤表皮细胞、肠绒毛上皮细胞（5 天）、内皮细胞、结缔组织成纤维细胞</td><td>口腔和胃肠道上皮细胞（部分 1-3 天）、红细胞（120 天）、白细胞、血小板、毛囊细胞、角膜上皮细胞</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p><strong>生理性衰老 vs 病理性衰老 vs 心理性衰老：</strong></p>
+    <ul>
+      <li><span class="u">生理性衰老</span>：正常生命活动中的衰老（自然衰老）</li>
+      <li><span class="u">病理性衰老</span>：疾病引起的衰老（早衰症、Hutchinson-Gilford 早衰综合征）</li>
+      <li><span class="u">心理性衰老</span>：精神状态导致的衰老加速</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    Hayflick 界限是细胞衰老的"分子时钟"基础。50 次分裂的极限源于端粒的缩短（详见端粒学说）。G₀ 期细胞中，干细胞可重新进入周期；终末细胞永久退出。
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><strong>（二）细胞衰老的分子机制——6 大理论：</strong></p>
+    <p><span class="u-double">1. 端粒学说（telomere theory）：</span></p>
+    <ul>
+      <li>端粒（telomere）：染色体末端的 TTAGGG 重复序列 + 端粒结合蛋白</li>
+      <li>功能：保护染色体末端，防止降解和融合</li>
+      <li>"<span class="u-double">末端复制问题</span>"：DNA 半保留复制时，5' 端引物被切除后留下 3' 端缩短（8-12 bp/次分裂）</li>
+      <li>端粒酶（telomerase）：<span class="u">含 RNA 模板的逆转录酶</span>，以自身 RNA 为模板合成端粒 DNA 重复序列</li>
+      <li>体细胞：端粒酶活性极低，端粒逐渐缩短 → Hayflick 界限</li>
+      <li>生殖细胞、干细胞、癌细胞：端粒酶活性高，端粒不缩短，可无限分裂</li>
+      <li>海弗利克：端粒缩短是细胞衰老的"分子钟"</li>
+    </ul>
+
+    <p><span class="u-double">2. 自由基理论（free radical theory）：</span></p>
+    <ul>
+      <li>自由基（free radical）：含未配对电子的原子或分子。生物体内主要活性氧自由基：<span class="key-point">超氧阴离子 O₂⁻·、羟自由基 ·OH、过氧自由基 ROO·、单线态氧 ¹O₂</span></li>
+      <li>过氧化氢 H₂O₂ 虽不是自由基，但是重要的活性氧（ROS）</li>
+      <li>来源：线粒体呼吸链（电子漏出）、叶绿体光系统、酶促反应、辐射、污染物</li>
+      <li>伤害：① 膜脂过氧化（损伤膜结构）；② 蛋白质变性（-SH 氧化为 -S-S-）；③ DNA 损伤（8-氧代鸟嘌呤）；④ mtDNA 损伤（积累突变）</li>
+      <li>抗氧化系统：<span class="u">酶系统</span>（SOD、CAT、POD、GPX）+ <span class="u">物质系统</span>（维生素 C、E、β-胡萝卜素、谷胱甘肽、半胱氨酸）</li>
+      <li>臭氧（O₃）也是氧化剂</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    端粒 = 分子时钟；自由基 = 损伤引擎。抗氧化剂（维 C、维 E）通过清除 ROS 延缓衰老。SOD 是第一道防线。O₂⁻ + SOD → H₂O₂ + O₂；H₂O₂ + CAT → H₂O + O₂。
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><span class="u-double">3. 线粒体 DNA 损伤论：</span>线粒体 DNA（mtDNA）是裸露的环状 DNA，缺乏组蛋白保护，靠近呼吸链产生大量自由基 → mtDNA 突变率高 → 编码的呼吸链复合物亚基异常 → 自由基产生更多 → 恶性循环</p>
+    <p><span class="u-double">4. 细胞突变论：</span>DNA 复制错误、辐射/化学物质引起的突变在细胞内累积 → 蛋白质异常 → 细胞功能失调</p>
+    <p><span class="u-double">5. 错误成灾论（error catastrophe theory）：</span>蛋白质合成的精确性下降（如 tRNA、氨酰-tRNA 合成酶的误差）→ 错误蛋白积累 → 进一步影响蛋白质合成精确性 → 错误雪崩式增加 → 细胞功能崩溃</p>
+    <p><span class="u-double">6. 基因控制理论：</span>衰老基因（senescence gene）激活、rRNA 转录和翻译功能丧失</p>
+    <p><strong>其他相关机制：</strong>DNA 甲基化模式改变、染色体畸变、转座子激活、蛋白质错误修饰、溶酶体自噬下降、泛素-蛋白质降解系统功能降低。</p>
+  </div>
+  <div class="annotation">
+    6 大学说并不互斥，细胞衰老是多因素叠加的结果。mtDNA 损伤论与自由基理论相互关联——mtDNA 突变 → 呼吸链异常 → 更多自由基 → 进一步 mtDNA 损伤。
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><strong>（三）细胞衰老的形态学和代谢变化：</strong></p>
+    <ul>
+      <li><span class="key-point">① 细胞核变化</span>：核膜内折、染色质凝聚、固缩、碎裂、溶解；核内出现包含物</li>
+      <li><span class="key-point">② 内质网变化</span>：内质网排列无序、肿胀、空泡化；粗面内质网减少、核糖体脱落 → 蛋白质合成↓</li>
+      <li><span class="key-point">③ 线粒体变化</span>：线粒体数量减少、体积增大、嵴退化、mtDNA 突变积累 → 能量供应↓</li>
+      <li><span class="key-point">④ 致密体（脂褐质）</span>生成：在细胞质内积累的不溶性褐色色素颗粒，<span class="u">即"老年斑"</span>，由脂质过氧化产物和溶酶体消化后的残渣组成</li>
+      <li><span class="key-point">⑤ 膜系统变化</span>：膜脂相变（液晶↔凝胶↔固相）→ 膜流动性↓、膜透性↑</li>
+      <li><span class="key-point">⑥ 细胞水分减少</span>：自由水/结合水比值↓，结合水相对增加（不溶性蛋白、晶体水）</li>
+    </ul>
+    <p><strong>其他代谢变化：</strong>ADP/ATP 转换能力↓、产能↓；不溶性蛋白质↑（如胶原蛋白交联）；色素积累（褐色素、脂褐质）；细胞间隙连接消失。</p>
+  </div>
+  <div class="annotation">
+    细胞衰老的"六变"：核+内质网+线粒体+致密体+膜+水分。老年斑的本质是脂褐质——溶酶体消化不了的过氧化脂质残渣。
+  </div>
+</div>
+
+<!-- ====== 三、细胞凋亡 ====== -->
+<div class="topic-header"><h3>三、细胞凋亡（Apoptosis）</h3></div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><span class="u-double">细胞凋亡（apoptosis）</span>是<span class="u-double">由基因决定的细胞程序性死亡（PCD, programmed cell death）</span>过程，是<span class="u">主动的、正常的生理性细胞死亡</span>。</p>
+    <p>2002 年诺贝尔生理学或医学奖授予 <span class="key-point">Brenner、Sulston、Horvitz</span>，表彰他们在细胞凋亡遗传机制研究中的贡献（线虫 C. elegans）。</p>
+
+    <p><strong>（一）细胞凋亡的概念：</strong></p>
+    <ul>
+      <li>细胞凋亡是<span class="u-double">基因决定的程序性死亡</span>，是正常的生命现象</li>
+      <li>凋亡是<span class="u-double">主动的生理过程</span>，需要信号刺激和基因表达</li>
+      <li>凋亡过程是被<span class="u-double">精确调控的</span>（启动、执行、清除）</li>
+    </ul>
+
+    <p><strong>（二）细胞凋亡的首要条件——信号刺激：</strong></p>
+    <ul>
+      <li><span class="key-point">生理性信号</span>：生长因子缺乏（如 NGF 撤除 → 神经元凋亡）、糖皮质激素、TNF 家族（Fas 配体）</li>
+      <li><span class="key-point">病理性信号</span>：DNA 损伤、氧化应激、病毒感染、癌基因激活</li>
+      <li>信号转导通路：<span class="u">死亡受体通路</span>（Fas-FasL、TNF-TNFR）和<span class="u">线粒体通路</span>（细胞色素 c 释放）</li>
+    </ul>
+
+    <p><strong>（三）细胞凋亡的形态学特征：</strong></p>
+    <ol>
+      <li>染色质固缩、凝集</li>
+      <li>核仁裂解、核膜破裂</li>
+      <li>DNA 断裂（180 bp 倍数，形成"梯状条带"，是凋亡的特征）</li>
+      <li>细胞膜皱缩、微绒毛消失、细胞间连接消失</li>
+      <li>内折的胞膜包围染色体片段和细胞器 → <span class="u-double">凋亡小体（apoptotic body）形成</span></li>
+      <li>凋亡小体被邻近细胞或巨噬细胞吞噬（<span class="u">无炎症反应</span>，因为内容物不外泄）</li>
+    </ol>
+  </div>
+  <div class="annotation">
+    凋亡 vs 坏死的本质区别：凋亡是"自杀"，主动、有序、不引发炎症；坏死是"他杀"，被动、混乱、引发炎症。DNA 梯状条带是凋亡的电泳标志。
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><strong>（四）细胞凋亡的分子机制：</strong></p>
+    <p><span class="u-double">关键酶：半胱氨酸蛋白酶（caspase）家族。</span></p>
+    <p>caspase 是一组<span class="u-double">含半胱氨酸的蛋白酶</span>，在 Asp 残基后切割靶蛋白：</p>
+    <ul>
+      <li><span class="key-point">启动 caspase</span>：caspase-2、8、9、10（启动凋亡）</li>
+      <li><span class="key-point">执行 caspase</span>：caspase-3、6、7（执行凋亡）</li>
+    </ul>
+
+    <p><strong>两条主要通路：</strong></p>
+    <ul>
+      <li><span class="key-point">① 内源性通路（线粒体通路）</span>：DNA 损伤、氧化应激等 → Bcl-2 家族蛋白（促凋亡 Bax/ Bak vs 抗凋亡 Bcl-2/Bcl-xL）调控线粒体膜透性 → 细胞色素 c 释放 → 与 Apaf-1 形成凋亡体（apoptosome）→ 激活 caspase-9 → 激活 caspase-3/7 → 凋亡</li>
+      <li><span class="key-point">② 外源性通路（死亡受体通路）</span>：Fas 配体/Fas 受体结合 → FADD 接头蛋白 → 激活 caspase-8 → 直接激活 caspase-3/7 或切割 Bid 启动内源通路</li>
+    </ul>
+
+    <p><strong>细胞凋亡与疾病：</strong></p>
+    <ul>
+      <li>凋亡不足：肿瘤（细胞不死亡）、自身免疫病</li>
+      <li>凋亡过度：神经退行性疾病（阿尔茨海默病、帕金森病）、心肌梗死、卒中</li>
+      <li>凋亡异常是疾病发生的重要机制</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    caspase 是"刽子手"，Bcl-2 家族是"决策者"（抗凋亡 Bcl-2 vs 促凋亡 Bax）。细胞色素 c 从线粒体释放是内源性通路的"扳机"。PARP 是 caspase-3 的主要底物。
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><strong>（五）细胞凋亡的生物学意义：</strong></p>
+    <ul>
+      <li>① <span class="u">胚胎发育</span>：手指/脚趾间隙消失、蝌蚪尾巴消失、神经系统发育、视网膜发育</li>
+      <li>② <span class="u">正常组织更新</span>：清除衰老细胞、过剩细胞</li>
+      <li>③ <span class="u">免疫系统</span>：T 细胞成熟（清除自身反应 T 细胞）、B 细胞选择、清除病原体感染细胞</li>
+      <li>④ <span class="u">肿瘤抑制</span>：清除癌变细胞、突变细胞（p53 介导的"基因组卫士"机制）</li>
+    </ul>
+
+    <p><strong>（六）细胞凋亡与衰老的关系：</strong></p>
+    <ul>
+      <li>衰老细胞倾向于发生凋亡（p53 介导）</li>
+      <li>凋亡过少 → 衰老细胞累积 → 组织功能下降</li>
+      <li>凋亡过多 → 组织损伤（如神经退行性疾病）</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    凋亡是"塑造形态"的关键——手指缝的消失、蝌蚪尾巴的消失都是凋亡的结果。凋亡率过高或过低都会引起疾病。
+  </div>
+</div>
+
+<!-- ====== 四、细胞凋亡与坏死的比较 ====== -->
+<div class="topic-header"><h3>四、细胞坏死（Necrosis）</h3></div>
+
+<div class="note-block">
+  <div class="note-content">
+    <figure class="diagram">
+      <img src="assets/fig_apoptosis_vs_necrosis.svg" alt="细胞凋亡与细胞坏死的比较示意图">
+      <figcaption>图 5-3-1：细胞凋亡与细胞坏死的比较。左侧为细胞坏死（病理性、被动、膜破裂、引发炎症），右侧为细胞凋亡（生理性、主动、形成凋亡小体、不引发炎症）。（原创矢量示意图）</figcaption>
+    </figure>
+
+    <p><span class="u-double">细胞坏死是细胞在病理性刺激下发生的被动死亡</span>，是<span class="u">非程序性的、混乱的</span>死亡过程。</p>
+    <p><strong>（一）细胞坏死的现象：</strong></p>
+    <ul>
+      <li>① 细胞肿胀、变形</li>
+      <li>② 细胞膜破裂（这是坏死的标志）</li>
+      <li>③ 内质网扩张、线粒体肿胀破裂</li>
+      <li>④ 溶酶体酶释放 → 细胞自溶</li>
+      <li>⑤ <span class="u-double">细胞内容物释放</span>，引发<span class="u-double">炎症反应</span>（与凋亡的本质区别）</li>
+      <li>⑥ 染色体 DNA 随机降解（不是 180 bp 倍数）</li>
+    </ul>
+
+    <p><strong>（二）细胞坏死的机制：</strong></p>
+    <ul>
+      <li>① 病理性刺激（缺血、高温、机械损伤、化学毒物）</li>
+      <li>② ATP 浓度下降 → 离子泵失活 → Na⁺/Ca²⁺ 内流 → 细胞水肿</li>
+      <li>③ 膜脂质过氧化 → 膜破裂</li>
+      <li>④ 溶酶体破裂 → 蛋白酶释放 → 细胞自溶</li>
+      <li>⑤ PARP（聚 ADP 核糖聚合酶）过度激活 → NAD⁺耗竭 → ATP 枯竭</li>
+    </ul>
+
+    <p><strong>细胞凋亡 vs 细胞坏死的核心比较：</strong></p>
+    <div class="table-wrap">
+    <table>
+      <thead><tr><th>特征</th><th>细胞凋亡（apoptosis）</th><th>细胞坏死（necrosis）</th></tr></thead>
+      <tbody>
+        <tr><td>诱因</td><td>生理性或病理性</td><td>病理性（损伤、缺血、毒素）</td></tr>
+        <tr><td>性质</td><td>主动、程序性</td><td>被动、非程序性</td></tr>
+        <tr><td>能量需求</td><td>需要 ATP</td><td>不需要 ATP</td></tr>
+        <tr><td>细胞形态</td><td>皱缩、变小</td><td>肿胀、变大</td></tr>
+        <tr><td>细胞膜</td><td>保持完整</td><td>破裂</td></tr>
+        <tr><td>染色质</td><td>固缩、180 bp 梯状</td><td>随机降解</td></tr>
+        <tr><td>细胞器</td><td>完整</td><td>肿胀、破裂</td></tr>
+        <tr><td>凋亡小体</td><td>有（重要特征）</td><td>无</td></tr>
+        <tr><td>炎症反应</td><td>无（被吞噬）</td><td>有（内容物释放）</td></tr>
+        <tr><td>对机体影响</td><td>有利（程序性清除）</td><td>有害（引发炎症）</td></tr>
+        <tr><td>关键分子</td><td>caspase、Bcl-2、细胞色素 c</td><td>PARP、NAD⁺耗竭</td></tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+  <div class="annotation">
+    凋亡 vs 坏死的"5 个关键区别"：① 主动性（凋亡=主动，坏死=被动）；② 膜完整性（凋亡=完整，坏死=破裂）；③ 凋亡小体（凋亡=有，坏死=无）；④ 炎症（凋亡=无，坏死=有）；⑤ 对机体（凋亡=有利，坏死=有害）。
+  </div>
+</div>
+
+<!-- ====== 五、细胞焦亡（Pyroptosis） ====== -->
+<div class="topic-header"><h3>五、细胞焦亡（Pyroptosis）</h3></div>
+
+<div class="note-block">
+  <div class="note-content">
+    <figure class="diagram">
+      <img src="assets/fig_pyroptosis.svg" alt="细胞焦亡分子机制示意图">
+      <figcaption>图 5-3-2：细胞焦亡（Pyroptosis）分子机制示意图。经典途径通过炎症小体激活 caspase-1，非经典途径通过 LPS 激活 caspase-4/5/11，两条通路均切割 GSDMD，其 N 端结构域在细胞膜上打孔，导致细胞肿胀破裂并释放 IL-1β、IL-18 等促炎因子。（原创矢量示意图）</figcaption>
+    </figure>
+
+    <p><span class="u-double">细胞焦亡（pyroptosis）</span>是一种<span class="u-double">程序性的、炎症性的细胞死亡方式</span>，区别于凋亡（无炎症）和坏死（非程序性），是机体抗感染免疫的重要机制。</p>
+
+    <p><strong>（一）定义与发现：</strong></p>
+    <ul>
+      <li>2001 年由 Brennan 和 Cookson 首次提出 "pyroptosis" 一词（pyro = 火/热 + ptosis = 脱落），强调其促炎特性</li>
+      <li>属于<span class="key-point">程序性细胞死亡（PCD）</span>的一种，但伴随强烈的炎症反应</li>
+      <li>主要发生在巨噬细胞、树突状细胞等免疫细胞中</li>
+    </ul>
+
+    <p><strong>（二）形态学特征：</strong></p>
+    <ul>
+      <li><span class="key-point">① 细胞肿胀</span>：细胞体积增大、膨胀（不同于凋亡的细胞皱缩）</li>
+      <li><span class="key-point">② 细胞膜破裂</span>：膜上形成孔洞，细胞膜完整性丧失（类似坏死）</li>
+      <li><span class="key-point">③ 内容物释放</span>：胞质内容物外溢，包括促炎细胞因子</li>
+      <li><span class="key-point">④ 促炎症反应</span>：释放 IL-1β、IL-18 等促炎因子，招募免疫细胞</li>
+      <li>⑤ DNA 损伤但非梯状：有 DNA 断裂，但不是典型的 180 bp 梯状条带</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    <strong>竞赛易错点：</strong>焦亡 ≠ 坏死。焦亡是程序性的（依赖 caspase 切割 GSDMD），坏死是被动的。焦亡有炎症，凋亡无炎症。"焦" = 火热的炎症反应。
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><strong>（三）分子机制——两条途径：</strong></p>
+
+    <p><span class="u-double">1. 经典途径（canonical pathway）：</span></p>
+    <div class="flow-box">
+      <div class="flow-title">经典途径：炎症小体 → caspase-1 → GSDMD → 膜孔</div>
+      <div class="flow-row">
+        <span class="flow-item">PAMP/DAMP 信号</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-item">炎症小体组装</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-item">pro-caspase-1 激活</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-item">切割 GSDMD</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-item">GSDMD-N 打孔</span>
+      </div>
+    </div>
+    <ul>
+      <li><span class="key-point">炎症小体（inflammasome）</span>：胞质内多蛋白复合物，由传感器（NLRP3、NLRC4、AIM2 等）、接头蛋白 ASC、效应蛋白 pro-caspase-1 组成</li>
+      <li>激活信号：病原体相关分子模式（PAMP，如细菌 LPS、鞭毛蛋白）、损伤相关分子模式（DAMP，如 ATP、尿酸结晶）</li>
+      <li>激活的 caspase-1 同时切割 pro-IL-1β 和 pro-IL-18，使其成熟并释放</li>
+    </ul>
+
+    <p><span class="u-double">2. 非经典途径（non-canonical pathway）：</span></p>
+    <div class="flow-box">
+      <div class="flow-title">非经典途径：LPS → caspase-4/5/11 → GSDMD → 膜孔</div>
+      <div class="flow-row">
+        <span class="flow-item">革兰氏阴性菌</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-item">LPS 进入胞质</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-item">caspase-4/5/11 激活</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-item">切割 GSDMD</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-item">膜孔形成</span>
+      </div>
+    </div>
+    <ul>
+      <li>人：caspase-4、caspase-5；小鼠：caspase-11</li>
+      <li>直接识别胞质内的 <span class="key-point">LPS（脂多糖）</span>，不依赖炎症小体</li>
+      <li>下游同样切割 GSDMD 形成膜孔</li>
+    </ul>
+
+    <p><strong>（四）核心执行分子——GSDMD：</strong></p>
+    <ul>
+      <li><span class="key-point">Gasdermin D（GSDMD）</span>：焦亡的执行蛋白，含 N 端结构域（GSDMD-N，打孔活性）和 C 端结构域（GSDMD-C，自抑制）</li>
+      <li>静息状态：GSDMD-C 抑制 GSDMD-N 的活性</li>
+      <li>激活：caspase 切割 GSDMD 中间连接区 → 释放 GSDMD-N → 结合膜磷脂并寡聚化 → 形成直径约 10-20 nm 的膜孔</li>
+      <li>膜孔导致离子失衡、细胞肿胀、最终破裂</li>
+    </ul>
+
+    <p><strong>（五）生理意义与病理联系：</strong></p>
+    <ul>
+      <li>① <span class="u">抗感染免疫</span>：通过裂解被感染细胞+释放炎症因子，清除胞内病原体（细菌、病毒）</li>
+      <li>② <span class="u">炎症性疾病</span>：过度焦亡参与脓毒症、痛风、动脉粥样硬化、神经退行性疾病</li>
+      <li>③ <span class="u">肿瘤</span>：焦亡可抑制肿瘤发生发展，也可促进肿瘤炎症微环境</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    GSDMD 是焦亡的"打孔器"——被 caspase 切割后 N 端像铆钉一样扎进细胞膜。经典途径 = caspase-1 + 炎症小体；非经典途径 = caspase-4/5/11 + 直接识别LPS。两条路汇合于 GSDMD。
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><strong>（六）焦亡与凋亡的区别对比：</strong></p>
+    <div class="table-wrap">
+    <table>
+      <thead><tr><th>特征</th><th>细胞凋亡（Apoptosis）</th><th>细胞焦亡（Pyroptosis）</th></tr></thead>
+      <tbody>
+        <tr><td>性质</td><td>程序性细胞死亡（I型PCD）</td><td>程序性细胞死亡（炎性PCD）</td></tr>
+        <tr><td>关键酶</td><td>caspase-3、-6、-7（执行型）</td><td>caspase-1、-4、-5、-11（炎性caspase）</td></tr>
+        <tr><td>执行分子</td><td>DNA酶、PARP等底物切割</td><td>GSDMD 打孔</td></tr>
+        <tr><td>细胞形态</td><td>皱缩、变小</td><td>肿胀、变大</td></tr>
+        <tr><td>细胞膜</td><td>保持完整（形成凋亡小体）</td><td>破裂（膜孔形成）</td></tr>
+        <tr><td>凋亡小体</td><td>有</td><td>无</td></tr>
+        <tr><td>炎症反应</td><td>无（被吞噬清除）</td><td>有（促炎因子释放）</td></tr>
+        <tr><td>DNA降解</td><td>180 bp梯状条带（特征性）</td><td>随机断裂，非梯状</td></tr>
+        <tr><td>主要细胞</td><td>广泛存在于各种细胞</td><td>主要在巨噬细胞等免疫细胞</td></tr>
+        <tr><td>生理功能</td><td>发育、稳态、肿瘤抑制</td><td>抗感染免疫、炎症反应</td></tr>
+        <tr><td>caspase抑制剂</td><td>Z-VAD 可抑制</td><td>不被 Z-VAD 完全抑制（非经典途径）</td></tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+  <div class="annotation">
+    <strong>竞赛记忆口诀：</strong>凋亡 = "萎缩+安静自杀"；焦亡 = "肿胀+火爆死亡"。膜完整性和炎症反应是最核心的两个区别点。GSDMD 是焦亡的特有分子标志。
+  </div>
+</div>
+
+<!-- ====== 六、铁死亡（Ferroptosis） ====== -->
+<div class="topic-header"><h3>六、铁死亡（Ferroptosis）</h3></div>
+
+<div class="note-block">
+  <div class="note-content">
+    <figure class="diagram">
+      <img src="assets/fig_ferroptosis.svg" alt="铁死亡机制示意图">
+      <figcaption>图 5-3-3：铁死亡（Ferroptosis）机制示意图。铁积累通过 Fenton 反应产生 ROS，引发多不饱和脂肪酸（PUFA）的脂质过氧化，导致细胞膜损伤。GPX4（谷胱甘肽过氧化物酶4）以 GSH 为辅因子降解脂质过氧化物，是铁死亡的核心防御机制。Erastin 和 RSL3 为诱导剂，Ferrostatin-1 和去铁胺为抑制剂。（原创矢量示意图）</figcaption>
+    </figure>
+
+    <p><span class="u-double">铁死亡（ferroptosis）</span>是一种<span class="u-double">铁依赖性的、由脂质过氧化驱动的程序性细胞死亡</span>方式，在形态、生化和遗传上均不同于凋亡、坏死和自噬。</p>
+
+    <p><strong>（一）发现与定义：</strong></p>
+    <ul>
+      <li><span class="key-point">2012 年由 Stockwell 实验室正式命名</span>（ferro = 铁 + ptosis = 死亡）</li>
+      <li>最初在筛选杀伤 RAS 突变肿瘤细胞的化合物时发现（erastin、RSL3）</li>
+      <li>核心特征：<span class="u-double">铁离子积累 + 脂质活性氧（lipid ROS）积累</span></li>
+      <li>铁死亡是一种调节性细胞死亡（RCD, regulated cell death），受精确的分子机制调控</li>
+    </ul>
+
+    <p><strong>（二）形态学特征：</strong></p>
+    <ul>
+      <li><span class="key-point">① 线粒体皱缩</span>：线粒体体积变小、膜密度增加、嵴减少或消失（最显著的形态特征）</li>
+      <li><span class="key-point">② 细胞膜完整</span>：早期细胞膜保持完整（不同于坏死的膜破裂）</li>
+      <li><span class="key-point">③ 无凋亡小体</span>：不形成凋亡小体（不同于凋亡）</li>
+      <li>④ 细胞核正常：核形态基本正常，无染色质固缩</li>
+      <li>⑤ 无自噬特征性空泡（早期）</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    <strong>竞赛易错点：</strong>铁死亡的"铁"是铁离子依赖，不是"铁血"的意思。线粒体皱缩是铁死亡最特征的形态学标志——凋亡的线粒体正常，坏死的线粒体肿胀，铁死亡的线粒体皱缩变小。
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><strong>（三）分子机制——三要素：</strong></p>
+
+    <p><span class="u-double">1. 铁代谢失调——铁积累：</span></p>
+    <ul>
+      <li>细胞内游离 Fe²⁺ 浓度升高（铁稳态失衡）</li>
+      <li><span class="key-point">Fenton 反应</span>：Fe²⁺ + H₂O₂ → Fe³⁺ + ·OH + OH⁻，产生高活性羟自由基（·OH）</li>
+      <li>铁来源：转铁蛋白受体介导的铁摄入、铁蛋白降解（ferritinophagy）释放铁</li>
+    </ul>
+
+    <p><span class="u-double">2. 脂质过氧化——核心驱动：</span></p>
+    <ul>
+      <li><span class="key-point">多不饱和脂肪酸（PUFA）</span>：细胞膜磷脂中的 PUFA 是脂质过氧化的主要底物</li>
+      <li>ROS（尤其是羟自由基 ·OH）攻击 PUFA → 脂质自由基 → 脂质过氧化物（PUFA-OH、MDA、4-HNE）</li>
+      <li>脂质过氧化链式反应：一个自由基可引发多个 PUFA 分子的过氧化（放大效应）</li>
+      <li>最终导致细胞膜结构破坏、通透性增加、细胞死亡</li>
+    </ul>
+
+    <p><span class="u-double">3. 抗氧化防御失效——GPX4 失活：</span></p>
+    <div class="flow-box">
+      <div class="flow-title">GPX4 防御通路：System Xc⁻ → GSH → GPX4 → 清除脂质过氧化物</div>
+      <div class="flow-row">
+        <span class="flow-item">System Xc⁻</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-item">半胱氨酸摄入</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-item">GSH 合成</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-item">GPX4 活性</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-item">降解脂质ROOH</span>
+      </div>
+    </div>
+    <ul>
+      <li><span class="key-point">System Xc⁻</span>：细胞膜上的胱氨酸/谷氨酸逆向转运体，摄入胱氨酸（合成 GSH 的原料）</li>
+      <li><span class="key-point">GSH（谷胱甘肽）</span>：细胞内主要抗氧化剂，GPX4 的必需辅因子</li>
+      <li><span class="key-point">GPX4（谷胱甘肽过氧化物酶4）</span>：特异性降解脂质过氧化物的酶，是铁死亡的"守门人"</li>
+      <li>GPX4 失活 → 脂质过氧化物无法清除 → 铁死亡</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    铁死亡的"三重奏"：铁（催化剂）+ 脂（底物）+ GPX4失效（防御崩溃）。记住 Fenton 反应产 ROS，ROS 攻击 PUFA，GPX4 负责救火。
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><strong>（四）诱导剂与抑制剂：</strong></p>
+    <div class="table-wrap">
+    <table>
+      <thead><tr><th>类别</th><th>代表物质</th><th>作用机制</th></tr></thead>
+      <tbody>
+        <tr><td rowspan="2"><span class="key-point">诱导剂</span></td><td>Erastin</td><td>抑制 System Xc⁻ → 减少胱氨酸摄入 → GSH 耗竭 → GPX4 间接失活</td></tr>
+        <tr><td>RSL3</td><td>直接结合并抑制 GPX4 活性（最经典的 GPX4 抑制剂）</td></tr>
+        <tr><td rowspan="2"><span class="key-point">抑制剂</span></td><td>Ferrostatin-1（Fer-1）</td><td>脂质自由基捕获剂（lipid radical scavenger），直接阻断脂质过氧化链反应</td></tr>
+        <tr><td>去铁胺（DFO, Deferoxamine）</td><td>铁螯合剂，结合游离 Fe²⁺，抑制 Fenton 反应</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <p><strong>（五）生理意义与病理联系：</strong></p>
+    <ul>
+      <li>① <span class="u">肿瘤抑制</span>：铁死亡可杀伤肿瘤细胞，尤其对 p53 介导的肿瘤抑制有重要作用</li>
+      <li>② <span class="u">神经退行性疾病</span>：帕金森病、阿尔茨海默病、亨廷顿病中均有铁死亡参与</li>
+      <li>③ <span class="u">缺血再灌注损伤</span>：心、脑、肾缺血再灌注时的组织损伤与铁死亡有关</li>
+      <li>④ <span class="u">肝脏疾病</span>：脂肪肝、肝纤维化、肝癌中均涉及铁死亡</li>
+      <li>⑤ <span class="u">免疫系统</span>：参与 T 细胞免疫应答、肿瘤免疫监视</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    <strong>竞赛记忆法：</strong>Erastin 抑制 System Xc⁻（间接），RSL3 直接抑制 GPX4。Ferrostatin-1 抓自由基，去铁胺抓铁离子。GPX4 是铁死亡的核心靶标。
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><strong>（六）铁死亡与其他细胞死亡方式的区别：</strong></p>
+    <div class="table-wrap">
+    <table>
+      <thead><tr><th>特征</th><th>凋亡</th><th>焦亡</th><th>铁死亡</th><th>坏死</th></tr></thead>
+      <tbody>
+        <tr><td>性质</td><td>程序性</td><td>程序性</td><td>程序性（调节性）</td><td>非程序性</td></tr>
+        <tr><td>关键触发</td><td>caspase-3/7</td><td>caspase-1/4/5/11 + GSDMD</td><td>铁 + 脂质过氧化 + GPX4↓</td><td>ATP耗竭</td></tr>
+        <tr><td>细胞形态</td><td>皱缩、凋亡小体</td><td>肿胀、膜孔</td><td>线粒体皱缩</td><td>肿胀、膜破裂</td></tr>
+        <tr><td>细胞膜</td><td>完整</td><td>破裂（GSDMD孔）</td><td>完整（早期）</td><td>破裂</td></tr>
+        <tr><td>线粒体</td><td>正常→释放cyt c</td><td>正常</td><td>皱缩变小（特征）</td><td>肿胀破裂</td></tr>
+        <tr><td>炎症反应</td><td>无</td><td>有（促炎）</td><td>无/弱</td><td>有</td></tr>
+        <tr><td>DNA</td><td>180bp梯状</td><td>非梯状断裂</td><td>无明显变化</td><td>随机降解</td></tr>
+        <tr><td>铁依赖</td><td>否</td><td>否</td><td>是（特征）</td><td>否</td></tr>
+        <tr><td>特异性抑制剂</td><td>Z-VAD-fmk</td><td>caspase-1抑制剂</td><td>Fer-1、DFO</td><td>无</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="expand-block">
+      竞赛提醒：铁死亡是近年研究热点，2023 年前后多篇 CNS 顶刊聚焦铁死亡在肿瘤、神经疾病中的作用。注意"铁依赖"和"线粒体皱缩"是铁死亡区别于其他死亡方式的两个最核心特征。
+    </div>
+  </div>
+  <div class="annotation">
+    四种死亡的"一句话总结"：凋亡 = caspase 切割底物 + 凋亡小体；焦亡 = GSDMD 打孔 + 炎症；铁死亡 = 铁 + 脂质过氧化 + GPX4；坏死 = ATP耗竭 + 膜破裂。
+  </div>
+</div>
+
+<!-- ====== 七、程序性坏死（Necroptosis） ====== -->
+<div class="topic-header"><h3>七、程序性坏死（Necroptosis）</h3></div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><span class="u-double">程序性坏死（necroptosis）</span>是一种<span class="u-double">程序性的、具有坏死形态学特征的细胞死亡</span>方式——虽然形态像坏死，但由特定的信号通路调控，属于调节性细胞死亡（RCD）。</p>
+
+    <p><strong>（一）定义与发现：</strong></p>
+    <ul>
+      <li>1980 年代发现某些情况下，即使 caspase 被抑制，TNF 仍可诱导细胞死亡</li>
+      <li>2005 年 Yuan 实验室正式提出 "necroptosis" 概念，并发现 Necrostatin-1（Nec-1）可特异性抑制</li>
+      <li>形态上与坏死相似（细胞肿胀、膜破裂），但机制上受精确调控</li>
+      <li><span class="key-point">关键特征：caspase 非依赖 + 坏死样形态</span></li>
+    </ul>
+
+    <p><strong>（二）分子机制——RIPK1/RIPK3/MLKL 通路：</strong></p>
+    <div class="flow-box">
+      <div class="flow-title">程序性坏死通路：TNF → TNFR → RIPK1 → RIPK3 → MLKL → 膜破裂</div>
+      <div class="flow-row">
+        <span class="flow-item">TNF / FasL</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-item">TNFR 激活</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-item">RIPK1 磷酸化</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-item">RIPK3 激活</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-item">MLKL 磷酸化</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-item">膜打孔/破裂</span>
+      </div>
+    </div>
+    <ul>
+      <li><span class="key-point">RIPK1（受体相互作用蛋白激酶1）</span>：信号整合分子，参与细胞存活、凋亡、程序性坏死的命运决定</li>
+      <li><span class="key-point">RIPK3（受体相互作用蛋白激酶3）</span>：程序性坏死的关键激酶，与 RIPK1 形成 <span class="u-double">坏死小体（necrosome）</span></li>
+      <li><span class="key-point">MLKL（混合谱系激酶结构域样蛋白）</span>：程序性坏死的执行分子，被 RIPK3 磷酸化后寡聚化 → 转位到细胞膜 → 形成膜孔 → 细胞破裂</li>
+    </ul>
+
+    <p><strong>（三）凋亡 vs 程序性坏死的切换：</strong></p>
+    <ul>
+      <li>正常情况：TNF + TNFR → 激活 NF-κB（促存活）或激活 caspase-8（凋亡）</li>
+      <li><span class="u-double">当 caspase-8 被抑制时</span>（如病毒蛋白 vICA/crmA 抑制 caspase-8），细胞转向程序性坏死</li>
+      <li>RIPK1 的不同修饰（泛素化、磷酸化）决定细胞命运：存活 / 凋亡 / 程序性坏死</li>
+      <li>caspase-8 通常切割 RIPK1/RIPK3 抑制程序性坏死——所以 caspase 被抑制时程序性坏死才发生</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    <strong>竞赛记忆：</strong>程序性坏死 = "坏死的外表，程序的内心"。通路记住 RIPK1 → RIPK3 → MLKL 三件套。当凋亡通路被阻断时（caspase-8抑制），程序性坏死作为"备份"死亡方式启动。
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><strong>（四）形态学特征：</strong></p>
+    <ul>
+      <li>① 细胞肿胀（与坏死相似，与凋亡的皱缩相反）</li>
+      <li>② 细胞膜破裂（与坏死相似）</li>
+      <li>③ 细胞器肿胀、内质网扩张</li>
+      <li>④ 细胞内容物释放 → 引发炎症反应</li>
+      <li>⑤ 细胞核形态基本正常（无固缩、无梯状 DNA）</li>
+      <li>⑥ 无凋亡小体</li>
+    </ul>
+
+    <p><strong>（五）生理意义与病理联系：</strong></p>
+    <ul>
+      <li>① <span class="u">抗病毒免疫</span>：病毒常编码 caspase 抑制剂（如痘病毒 crmA）以阻止凋亡，程序性坏死作为"备份"机制清除被感染细胞</li>
+      <li>② <span class="u">抗菌免疫</span>：参与抵抗某些胞内病原体</li>
+      <li>③ <span class="u">炎症性疾病</span>：参与系统性炎症反应综合征（SIRS）、炎症性肠病、银屑病</li>
+      <li>④ <span class="u">缺血再灌注损伤</span>：心、脑、肾等器官缺血再灌注损伤</li>
+      <li>⑤ <span class="u">肿瘤</span>：在肿瘤发生发展中具有双重作用</li>
+    </ul>
+
+    <p><strong>（六）五种细胞死亡方式的全面比较：</strong></p>
+    <div class="table-wrap">
+    <table>
+      <thead><tr><th>特征</th><th>凋亡</th><th>焦亡</th><th>铁死亡</th><th>程序性坏死</th><th>坏死</th></tr></thead>
+      <tbody>
+        <tr><td>类型</td><td>I型PCD</td><td>炎性PCD</td><td>调节性死亡</td><td>坏死样PCD</td><td>被动死亡</td></tr>
+        <tr><td>程序性</td><td>是</td><td>是</td><td>是</td><td>是</td><td>否</td></tr>
+        <tr><td>关键分子</td><td>caspase-3/7</td><td>caspase-1 + GSDMD</td><td>GPX4 + 铁</td><td>RIPK3 + MLKL</td><td>ATP耗竭</td></tr>
+        <tr><td>细胞形态</td><td>皱缩·凋亡小体</td><td>肿胀·膜孔</td><td>线粒体皱缩</td><td>肿胀·膜破裂</td><td>肿胀·膜破裂</td></tr>
+        <tr><td>细胞膜</td><td>完整</td><td>破裂（GSDMD）</td><td>完整（早期）</td><td>破裂（MLKL）</td><td>破裂</td></tr>
+        <tr><td>炎症</td><td>无</td><td>强（IL-1β/18）</td><td>无/弱</td><td>有</td><td>有</td></tr>
+        <tr><td>caspase依赖</td><td>是</td><td>是（炎性caspase）</td><td>否</td><td>否</td><td>否</td></tr>
+        <tr><td>特异性抑制剂</td><td>Z-VAD</td><td>caspase-1抑制剂</td><td>Fer-1、DFO</td><td>Nec-1（RIPK1）</td><td>无</td></tr>
+        <tr><td>主要生理功能</td><td>发育·免疫·肿瘤</td><td>抗感染</td><td>肿瘤抑制</td><td>抗病毒</td><td>病理损伤</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <figure class="diagram">
+      <img src="assets/fig_cell_death_comparison.svg" alt="五种细胞死亡类型总览对比图">
+      <figcaption>图 5-3-4：五种细胞死亡类型总览对比图。凋亡、焦亡、铁死亡、程序性坏死均为程序性（调节性）细胞死亡，仅坏死为被动非程序性死亡。各死亡方式在细胞形态、关键分子、炎症反应等方面存在显著差异。（原创矢量示意图）</figcaption>
+    </figure>
+    <div class="expand-block">
+      竞赛高分提示：细胞死亡分类是近年奥赛热点。记住"4 种程序性 + 1 种被动"：凋亡（I型）、自噬性死亡（II型）、焦亡（炎性）、程序性坏死（坏死样）均为程序性；坏死为被动。铁死亡属于调节性细胞死亡（RCD）。
+    </div>
+  </div>
+  <div class="annotation">
+    死亡方式"四大金刚"+ 一个"路人"：凋亡（管家）、焦亡（抗感染）、铁死亡（抑肿瘤）、程序性坏死（抗病毒）四大程序死亡 + 坏死（被动病理）。每种都有特征分子标志，务必区分清楚。
+  </div>
+</div>
+
+<!-- ====== 八、细胞自噬深化与自噬性细胞死亡 ====== -->
+<div class="topic-header"><h3>八、细胞自噬深化与自噬性细胞死亡</h3></div>
+
+<div class="note-block">
+  <div class="note-content">
+    <figure class="diagram">
+      <img src="assets/fig_autophagy_process.svg" alt="巨自噬过程示意图">
+      <figcaption>图 5-3-5：巨自噬（Macroautophagy）过程示意图。从吞噬泡形成→自噬体形成→自噬溶酶体融合→降解产物回收，共四个阶段。mTOR 通路抑制自噬，AMPK 通路激活自噬。下方列出巨自噬、微自噬、CMA 三种类型的比较。（原创矢量示意图）</figcaption>
+    </figure>
+
+    <p><span class="u-double">细胞自噬（autophagy）</span>是真核细胞中<span class="u-double">通过溶酶体降解自身成分的保守过程</span>。适度自噬是细胞的自我保护机制；过度激活则导致 <span class="key-point">自噬性细胞死亡（II型程序性死亡）</span>。</p>
+
+    <p><strong>（一）自噬的三种类型：</strong></p>
+    <div class="table-wrap">
+    <table>
+      <thead><tr><th>类型</th><th>巨自噬（Macroautophagy）</th><th>微自噬（Microautophagy）</th><th>分子伴侣介导的自噬（CMA）</th></tr></thead>
+      <tbody>
+        <tr><td>特点</td><td>最主要形式，双层膜包裹</td><td>溶酶体膜直接内吞</td><td>分子伴侣识别后转运</td></tr>
+        <tr><td>底物</td><td>细胞器、蛋白聚集体、病原体</td><td>胞质可溶性成分、小颗粒</td><td>含 KFERQ 序列的可溶性蛋白</td></tr>
+        <tr><td>关键结构</td><td>自噬体（autophagosome）</td><td>溶酶体内陷</td><td>LAMP-2A 转运通道</td></tr>
+        <tr><td>分子伴侣</td><td>不依赖（非选择性）</td><td>不依赖</td><td>Hsc70 等分子伴侣</td></tr>
+        <tr><td>选择性</td><td>可选择（如线粒体自噬）</td><td>非选择性</td><td>高度选择性</td></tr>
+        <tr><td>主要功能</td><td>饥饿应答、清除大底物</td><td>溶酶体直接吞噬</td><td>选择性降解可溶性蛋白</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <p><strong>（二）巨自噬的过程——四阶段：</strong></p>
+    <div class="flow-box">
+      <div class="flow-title">巨自噬流程：吞噬泡 → 自噬体 → 自噬溶酶体 → 降解回收</div>
+      <div class="flow-row">
+        <span class="flow-item">① 吞噬泡成核</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-item">② 自噬体延伸闭合</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-item">③ 溶酶体融合</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-item">④ 降解产物回收</span>
+      </div>
+    </div>
+    <ul>
+      <li><span class="key-point">① 启动/成核阶段</span>：
+        <ul>
+          <li>信号：饥饿、缺氧、能量不足 → mTOR 抑制 / AMPK 激活</li>
+          <li><span class="key-point">ULK1 复合物</span>（ULK1 + Atg13 + FIP200）激活 → 启动自噬</li>
+          <li><span class="key-point">Beclin-1 / VPS34 复合物</span>产生 PI3P → 形成吞噬泡（phagophore）</li>
+        </ul>
+      </li>
+      <li><span class="key-point">② 延伸阶段</span>：
+        <ul>
+          <li>两条泛素样结合系统：Atg12-Atg5-Atg16L 复合物 + LC3 脂化系统</li>
+          <li><span class="key-point">LC3（微管相关蛋白轻链3）</span>：胞质型 LC3-I → 脂化型 LC3-II（结合到自噬体膜上）</li>
+          <li>LC3-II 是<span class="u-double">自噬体的经典标志物</span></li>
+          <li>吞噬泡不断延伸 → 闭合形成完整的双层膜自噬体</li>
+        </ul>
+      </li>
+      <li><span class="key-point">③ 融合阶段</span>：
+        <ul>
+          <li>自噬体外膜与溶酶体膜融合 → 自噬溶酶体（autolysosome）</li>
+          <li>自噬体内膜及内容物暴露于溶酶体酶</li>
+        </ul>
+      </li>
+      <li><span class="key-point">④ 降解与回收阶段</span>：
+        <ul>
+          <li>溶酶体水解酶降解内容物 → 氨基酸、核苷酸、脂质、糖类</li>
+          <li>降解产物通过通透酶转运回胞质 → 重新利用（循环供能）</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div class="annotation">
+    <strong>竞赛记忆：</strong>自噬三步法——"包起来、融进去、消化掉"。LC3-II 是自噬体的"身份证"（实验检测自噬的金标准）。Beclin-1 是成核关键，ULK1 是启动开关。
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><strong>（三）关键分子——ATG 蛋白家族：</strong></p>
+    <ul>
+      <li><span class="key-point">ATG（autophagy-related gene）</span>：自噬相关基因，目前已发现 40 余种 ATG 基因</li>
+      <li>ULK1/Atg1 复合物：自噬启动的最上游激酶</li>
+      <li>Beclin-1/Atg6：PI3K 复合物亚基，参与成核</li>
+      <li>Atg5、Atg7、Atg12、Atg16L：参与泛素样结合系统</li>
+      <li>LC3/Atg8：自噬体膜标记物（最常用的自噬检测指标）</li>
+      <li>Atg9：跨膜蛋白，参与膜运输</li>
+    </ul>
+
+    <p><strong>（四）调控通路——两大核心：</strong></p>
+    <div class="table-wrap">
+    <table>
+      <thead><tr><th>调控通路</th><th>作用</th><th>激活条件</th><th>关键分子</th></tr></thead>
+      <tbody>
+        <tr><td><span class="key-point">mTOR 通路</span></td><td><span class="u-double">抑制自噬</span></td><td>营养充足、生长因子刺激</td><td>mTORC1 → 磷酸化 ULK1 → 失活</td></tr>
+        <tr><td><span class="key-point">AMPK 通路</span></td><td><span class="u-double">激活自噬</span></td><td>能量不足（AMP/ATP↑）、饥饿</td><td>AMPK → 磷酸化 ULK1 → 激活</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <ul>
+      <li>mTOR（哺乳动物雷帕霉素靶蛋白）：自噬的"刹车"——营养充足时踩刹车，饥饿时松开</li>
+      <li>AMPK（AMP 激活的蛋白激酶）：自噬的"油门"——能量不足时踩油门</li>
+      <li>雷帕霉素（rapamycin）：mTOR 抑制剂 → 诱导自噬（实验常用自噬诱导剂）</li>
+      <li>3-MA（3-甲基腺嘌呤）：PI3K 抑制剂 → 抑制自噬（实验常用自噬抑制剂）</li>
+    </ul>
+
+    <p><strong>（五）选择性自噬：</strong></p>
+    <ul>
+      <li><span class="key-point">线粒体自噬（mitophagy）</span>：选择性清除受损线粒体（PINK1/Parkin 通路）</li>
+      <li><span class="key-point">内质网自噬（reticulophagy）</span>：清除受损内质网</li>
+      <li><span class="key-point">过氧化物酶体自噬（pexophagy）</span>：清除过氧化物酶体</li>
+      <li><span class="key-point">异体自噬（xenophagy）</span>：清除入侵的病原体（细菌、病毒）</li>
+      <li>选择性自噬通过自噬受体（如 p62/SQSTM1）识别底物并连接 LC3</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    mTOR 与 AMPK 是自噬的"阴阳"调控——一个抑制、一个激活。雷帕霉素抑制 mTOR = 促进自噬；3-MA 抑制 PI3K = 抑制自噬。LC3-II 与 p62 是实验检测自噬流的两个核心指标。
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><strong>（六）生理功能与病理意义：</strong></p>
+    <ul>
+      <li>① <span class="u">饥饿应答</span>：营养缺乏时降解自身成分提供能量和原料（最原始功能）</li>
+      <li>② <span class="u">质量控制</span>：清除错误折叠蛋白、受损细胞器（维持细胞稳态）</li>
+      <li>③ <span class="u">防御病原体</span>：异体自噬清除胞内菌、病毒</li>
+      <li>④ <span class="u">发育与分化</span>：参与细胞重塑、形态发生（如蝌蚪尾巴退化）</li>
+      <li>⑤ <span class="u">衰老与长寿</span>：自噬功能随衰老下降；增强自噬可延长模式生物寿命</li>
+      <li>⑥ <span class="u">肿瘤</span>：自噬在肿瘤中具有双重作用——早期抑制肿瘤，晚期促进肿瘤存活</li>
+    </ul>
+
+    <p><strong>（七）自噬性细胞死亡（II型 PCD）：</strong></p>
+    <ul>
+      <li>当自噬过度激活 → 过度降解必需细胞器和蛋白 → 细胞死亡</li>
+      <li>形态特征：胞质内大量自噬体和自噬溶酶体积累，细胞核变化不明显（早期）</li>
+      <li>与凋亡的区别：无 caspase 激活、无凋亡小体、无染色质固缩</li>
+      <li>注意：自噬性细胞死亡在发育中较少见，更多是自噬先于凋亡发生，或与凋亡协同</li>
+    </ul>
+
+    <p><strong>自噬与其他细胞死亡方式的比较：</strong></p>
+    <div class="table-wrap">
+    <table>
+      <thead><tr><th>特征</th><th>凋亡（I型）</th><th>自噬性死亡（II型）</th><th>焦亡</th><th>铁死亡</th><th>坏死</th></tr></thead>
+      <tbody>
+        <tr><td>关键分子</td><td>caspase-3/7</td><td>ATG、Beclin-1、LC3</td><td>GSDMD、caspase-1</td><td>GPX4、铁</td><td>ATP耗竭</td></tr>
+        <tr><td>细胞形态</td><td>皱缩、凋亡小体</td><td>自噬体大量积累</td><td>肿胀、膜孔</td><td>线粒体皱缩</td><td>肿胀、破裂</td></tr>
+        <tr><td>膜完整性</td><td>完整</td><td>完整（早期）</td><td>破裂</td><td>完整（早期）</td><td>破裂</td></tr>
+        <tr><td>炎症</td><td>无</td><td>无</td><td>有（强）</td><td>无/弱</td><td>有</td></tr>
+        <tr><td>溶酶体</td><td>不参与</td><td>核心参与</td><td>不参与</td><td>不参与</td><td>破裂释放酶</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="expand-block">
+      竞赛拓展：大隅良典（Yoshinori Ohsumi）因发现细胞自噬的分子机制获得 2016 年诺贝尔生理学或医学奖。他利用酵母遗传筛选发现了 ATG 基因，奠定了自噬研究的基础。这是近年诺奖中最可能出竞赛题的知识点之一。
+    </div>
+  </div>
+  <div class="annotation">
+    <strong>2016 诺奖考点：</strong>大隅良典 + 酵母 + ATG 基因 + 自噬机制。自噬 = "自己吃自己"，是溶酶体介导的降解途径。双刃剑：适度=保护，过度=死亡。
+  </div>
+</div>
+
+<!-- ====== GGBO竞赛补充：GSDMD在细胞焦亡中的详细机制 ====== -->
+<div class="topic-header"><h3>GSDMD在细胞焦亡中的详细机制（GGBO竞赛前沿）</h3></div>
+<div class="note-block">
+  <div class="note-content">
+    <p><span class="u-double">GSDMD（Gasdermin D）的结构与激活</span>：</p>
+    <ul>
+      <li><span class="key-point">GSDMD结构</span>：全长GSDMD由N端结构域（GSDMD-N）和C端结构域（GSDMD-C）组成。在静息状态下，GSDMD-C通过自抑制机制与GSDMD-N结合，阻止其寡聚化和膜打孔活性。</li>
+      <li><span class="key-point">Caspase切割激活</span>：炎症性caspase（caspase-1/4/5/11）在GSDMD的N端和C端之间的连接区进行切割，释放具有打孔活性的GSDMD-N片段。GSDMD-C片段被释放后不参与孔道形成。</li>
+      <li><span class="key-point">GSDMD-N的寡聚化</span>：被切割释放的GSDMD-N片段在细胞膜内侧发生寡聚化，形成四聚体（tetramer）等寡聚体形式。GSDMD-N四聚体插入细胞膜，形成直径约10-20 nm的孔道。注意：只有GSDMD-N片段发生寡聚化，GSDMD-C片段不参与寡聚化。</li>
+    </ul>
+    <p><span class="u-double">GSDMD孔道的功能</span>：</p>
+    <ul>
+      <li>①细胞膜孔道形成→细胞内外离子平衡破坏→水分子内流→细胞肿胀→细胞膜破裂→细胞内容物释放。</li>
+      <li>②孔道介导IL-1β和IL-18等促炎细胞因子的成熟形式释放到胞外，引发强烈的炎症反应。</li>
+      <li>③GSDMD打孔不是简单的"爆破"，而是受调控的寡聚化过程，类似于MLKL在程序性坏死（necroptosis）中的寡聚化打孔机制。</li>
+    </ul>
+    <p><span class="u-double">GSDMD研究的实验方法（GGBO考点）</span>：</p>
+    <ul>
+      <li>使用不同浓度Nig（nigericin，尼日利亚菌素，NLRP3炎性小体激活剂）诱导焦亡→通过Flag标签免疫印迹检测GSDMD的寡聚化状态。</li>
+      <li>若使用野生型细胞回补带有Flag标签的GSDMD，内源GSDMD蛋白会与外源Flag-GSDMD竞争结合caspase-1，导致外源GSDMD剪切效率下降。同时内源蛋白会与外源蛋白混合形成异源寡聚体，无法区分内外来源蛋白。</li>
+    </ul>  </div>
+  <div class="annotation">
+    GSDMD是GGBO竞赛第14题核心考点：①GSDMD-N四聚体打孔，GSDMD-C不参与；②tetramer由GSDMD-N片段形成；③内源GSDMD与外源Flag-GSDMD的竞争和异源寡聚化问题；④焦亡孔道形成类似MLKL寡聚化（坏死性凋亡）。记忆："GSDMD-N寡聚打孔，GSDMD-C自抑不参与"。
+  </div>
+</div>
+
+<!-- ====== GGBO竞赛补充：炎性小体的组装和激活 ====== -->
+<div class="topic-header"><h3>炎性小体（Inflammasome）的组装和激活（GGBO竞赛前沿）</h3></div>
+<div class="note-block">
+  <div class="note-content">
+    <p><span class="u-double">炎性小体的定义与组成</span>：</p>
+    <ul>
+      <li><span class="key-point">炎性小体（Inflammasome）</span>是细胞内多蛋白复合物，由模式识别受体（PRR）、接头蛋白ASC和效应蛋白caspase-1前体组装而成。是先天性免疫系统的核心组分。</li>
+      <li><strong>主要类型</strong>：①<span class="key-point">NLRP3炎性小体</span>（最经典，被多种DAMPs/PAMPs激活）；②NLRP1炎性小体；③NLRC4炎性小体；④AIM2炎性小体（识别胞质dsDNA）；⑤Pyrin炎性小体。</li>
+    </ul>
+    <p><span class="u-double">NLRP3炎性小体的经典激活通路</span>：</p>
+    <ul>
+      <li><strong>第一信号（启动信号/Priming）</strong>：TLR配体（如LPS）→NF-κB活化→上调NLRP3和pro-IL-1β的转录水平。</li>
+      <li><strong>第二信号（激活信号/Activation）</strong>：多种刺激（ATP、尼日利亚菌素Nigericin、尿酸晶体、明矾等）→NLRP3构象变化→NLRP3通过NACHT结构域寡聚化→通过PYD结构域招募ASC→ASC通过CARD结构域招募pro-caspase-1→形成NLRP3炎性小体→pro-caspase-1自剪切激活→活性caspase-1。</li>
+      <li><strong>下游效应</strong>：活性caspase-1→①切割GSDMD→GSDMD-N打孔→细胞焦亡；②切割pro-IL-1β和pro-IL-18→成熟IL-1β和IL-18释放。</li>
+    </ul>
+    <p><span class="u-double">非经典焦亡通路</span>：</p>
+    <ul>
+      <li>胞内LPS直接结合并激活caspase-4/5（人）或caspase-11（小鼠）→这些caspase直接切割GSDMD→焦亡。此通路不依赖NLRP3炎性小体，但GSDMD打孔后钾离子外流可以间接激活NLRP3炎性小体导致IL-1β成熟。</li>
+    </ul>  </div>
+  <div class="annotation">
+    炎性小体是GGBO竞赛第13-14题核心考点：①NLRP3炎性小体=两信号模型（LPS启动+Nig激活）；②ASC桥接NLRP3和caspase-1；③Nigericin(Nig)是经典NLRP3激活剂；④非经典通路：caspase-4/5/11直接识别胞内LPS；⑤焦亡早期呈凋亡样特征，晚期转为膜破裂释放促炎物质。记忆："NLRP3+ASC+caspase-1→GSDMD→打孔"。
+  </div>
+</div>
+
+<div class="diagram">
+  <img src="assets/fig_inflammasome_assembly.svg" alt="炎性小体组装与激活通路示意图" style="max-width:100%;border:1px solid var(--rule);border-radius:4px;">
+  <figcaption>图：炎性小体（Inflammasome）组装与激活通路——NLRP3→ASC→caspase-1逐步组装、两信号模型、下游GSDMD/IL-1β效应（来源：自制SVG，GGBO第13-14题竞赛要点）</figcaption>
+</div>
+
+<!-- ====== GGBO竞赛补充：TDP-43在液-液相分离中的作用 ====== -->
+<div class="topic-header"><h3>TDP-43在液-液相分离（LLPS）中的作用（GGBO竞赛前沿）</h3></div>
+<div class="note-block">
+  <div class="note-content">
+    <p><span class="u-double">TDP-43的结构域与功能</span>：</p>
+    <ul>
+      <li><span class="key-point">TDP-43（TAR DNA-binding protein 43）</span>是一种RNA结合蛋白（RBP），由414个氨基酸组成，包含以下结构域：</li>
+      <li>①NTD（N端结构域）——介导TDP-43的寡聚化；②<span class="key-point">RRM1和RRM2（RNA识别基序）</span>——负责结合RNA/DNA；③IDR1和IDR2（内在无序区）——富含甘氨酸、丝氨酸等，是液-液相分离（LLPS）的关键区域；④CR（C端区域）——包含保守的螺旋结构，富含疏水氨基酸，是LLPS的核心驱动区域。</li>
+    </ul>
+    <p><span class="u-double">TDP-43的液-液相分离（LLPS）</span>：</p>
+    <ul>
+      <li><span class="key-point">LLPS定义</span>：蛋白质在特定条件下从溶液中分离出来，形成高浓度的液滴状凝聚体，类似于油滴在水中的分离。LLPS是形成无膜细胞器（如应激颗粒、P小体等）的物理基础。</li>
+      <li><span class="key-point">TDP-43的LLPS驱动力</span>：CR区（C端区域）的疏水氨基酸和IDR区的低复杂度序列通过弱多价相互作用（π-π堆积、疏水作用、静电作用等）驱动液-液相分离。完整的CR是出现正常LLPS的必要条件。</li>
+      <li><span class="key-point">病理意义</span>：TDP-43的C端结构域突变（如ALS相关突变）可能改变LLPS性质，使液滴从可逆的动态状态转变为不可逆的固态聚集（淀粉样纤维），这被认为是肌萎缩侧索硬化症（ALS）和额颞叶痴呆（FTD）的病理机制之一。</li>
+    </ul>
+    <p><span class="u-double">GGBO实验分析</span>：</p>
+    <ul>
+      <li>删除CR区→LLPS消失；删除IDR1或IDR2→LLPS减弱但未完全消失。说明CR+IDR1或IDR2是LLPS的充分条件，而完整的CR是必要条件。</li>
+      <li>DIC显微镜（微分干涉相差显微镜）可用于观察液滴形成。</li>
+    </ul>  </div>
+  <div class="annotation">
+    TDP-43 LLPS是GGBO第15题（实际为第17题）：①CR区保守→富含疏水氨基酸→驱动LLPS；②完整CR是LLPS必要条件；③CR+IDR1或IDR2是LLPS充分条件；④TDP-43突变→LLPS异常→固态聚集→ALS/FTD；⑤LLPS是形成无膜细胞器的基础。记忆："TDP-43 CR疏水驱相分离，突变致ALS"。
+  </div>
+</div>
+
+<!-- ====== 总结 ====== -->
+<div class="summary-box">
+<h4>第三节核心要点回顾：</h4>
+<ul>
+<li><strong>细胞成分更新</strong>：UPS（短寿命蛋白）+ 溶酶体（长寿命/自噬）。E1-E2-E3 泛素化系统</li>
+<li><strong>细胞衰老</strong>：Hayflick 界限 50 次。端粒学说（端粒酶 + 端粒缩短）+ 自由基理论 + mtDNA 损伤论等 6 大理论</li>
+<li><strong>细胞衰老的形态学变化</strong>：核+内质网+线粒体+致密体（脂褐质）+膜相变+水分减少</li>
+<li><strong>细胞凋亡（apoptosis）</strong>：I型 PCD，主动死亡。caspase 家族为关键酶。两条通路：内源（线粒体-细胞色素 c）+ 外源（死亡受体 Fas-FasL）。2002 年诺奖</li>
+<li><strong>细胞坏死（necrosis）</strong>：病理性被动死亡，膜破裂→炎症。ATP 耗竭导致</li>
+<li><strong>细胞焦亡（pyroptosis）</strong>：炎性 PCD。caspase-1/4/5/11 → GSDMD 打孔 → IL-1β/IL-18 释放。经典途径+非经典途径</li>
+<li><strong>铁死亡（ferroptosis）</strong>：铁依赖 + 脂质过氧化驱动。GPX4 是守门人。Stockwell 2012 年命名。诱导剂 erastin/RSL3，抑制剂 Fer-1/DFO</li>
+<li><strong>程序性坏死（necroptosis）</strong>：坏死样 PCD。RIPK1 → RIPK3 → MLKL → 膜破裂。caspase-8 被抑制时启动。抗病毒免疫</li>
+<li><strong>自噬性细胞死亡</strong>：II 型 PCD。mTOR-ULK1-Beclin-1-LC3 通路。2016 年诺奖（大隅良典）。三大类型 + 选择性自噬</li>
+<li><strong>5种死亡对比</strong>：凋亡/焦亡/铁死亡/程序性坏死/自噬性死亡均为程序性，仅坏死为被动。膜完整性和炎症反应是关键区别点</li>
+</ul>
+</div>
+
+</div>
+
+<footer><a href="index.html" style="color:var(--accent);text-decoration:none;margin-right:1rem;">← 返回目录</a>
+<p>本章基于《高中生物奥赛讲义》第五章第三节整理 · 生物集训营笔记</p>
+<p>参考：翟中和《细胞生物学》第 4 版 · Brenner/Sulston/Horvitz 2002 诺奖 · Hayflick 1961 经典实验 · Ohsumi 2016 诺奖（自噬） · Stockwell 2012 铁死亡 · 细胞焦亡/程序性坏死研究进展</p>
+</footer>
+
+</body>
+</html>

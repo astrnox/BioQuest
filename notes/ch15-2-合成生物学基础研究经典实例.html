@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第十五章 合成生物学 · 第二节 合成生物学基础研究经典实例 — 生物集训营笔记</title>
+<style>
+:root {
+  --bg: #fdfbf7; --bg2: #f5f0e8; --ink: #2c2416; --muted: #7a6e5e;
+  --rule: #d6ccc0; --accent: #c0392b; --accent2: #8b4513;
+  --highlight: #fff3cd; --note-bg: #fff8e7; --note-border: #e8c84a;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: "Noto Sans CJK SC", "WenQuanYi Micro Hei", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  font-size: 16px; line-height: 1.8; color: var(--ink); background: var(--bg);
+}
+.cover { text-align: center; padding: 4rem 2rem 3rem; border-bottom: 3px double var(--rule); margin-bottom: 0; background: linear-gradient(180deg, var(--bg2) 0%, var(--bg) 100%); }
+.cover .ch-num { font-size: 1rem; color: var(--accent); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 0.3rem; }
+.cover h1 { font-size: 2.2rem; font-weight: 800; color: var(--ink); margin-bottom: 0.5rem; letter-spacing: 0.03em; }
+.cover .subtitle { font-size: 1rem; color: var(--muted); }
+.cover .meta { margin-top: 1.2rem; font-size: 0.85rem; color: var(--muted); display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
+.main-layout { max-width: 1060px; margin: 0 auto; padding: 0 1.5rem; }
+.section-header { border-bottom: 3px solid var(--accent); padding: 2rem 0 0.6rem; margin-bottom: 1.5rem; }
+.section-header .sec-num { font-size: 0.9rem; color: var(--accent); font-weight: 700; letter-spacing: 0.08em; }
+.section-header h2 { font-size: 1.6rem; font-weight: 800; color: var(--ink); margin-top: 0.15rem; }
+.topic-header { margin: 2rem 0 1rem; padding-left: 0.8rem; border-left: 4px solid var(--accent); }
+.topic-header h3 { font-size: 1.25rem; font-weight: 700; color: var(--ink); }
+.subtopic-header { margin: 1.5rem 0 0.8rem; }
+.subtopic-header h4 { font-size: 1.1rem; font-weight: 700; color: var(--accent2); }
+.note-block { display: flex; gap: 1.5rem; margin-bottom: 1.2rem; align-items: flex-start; }
+.note-content { flex: 1; padding: 0.8rem 1rem; background: var(--bg2); border-radius: 6px; border: 1px solid var(--rule); }
+.note-content p { margin-bottom: 0.5rem; }
+.note-content p:last-child { margin-bottom: 0; }
+.note-content ul, .note-content ol { padding-left: 1.5rem; margin: 0.4rem 0; }
+.note-content li { margin-bottom: 0.25rem; }
+.annotation { width: 240px; flex-shrink: 0; background: var(--note-bg); border: 1px solid var(--note-border); border-radius: 6px; padding: 0.6rem 0.8rem; font-size: 0.82rem; line-height: 1.6; color: var(--accent2); align-self: flex-start; }
+.annotation::before { content: "📝 批注"; display: block; font-size: 0.7rem; font-weight: 700; color: var(--accent); letter-spacing: 0.06em; margin-bottom: 0.3rem; text-transform: uppercase; }
+.u { text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 2px; text-underline-offset: 3px; font-weight: 600; }
+.u-double { text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 2px; text-underline-offset: 3px; text-decoration-style: double; font-weight: 700; }
+.key-point { background: var(--highlight); padding: 0.1em 0.3em; border-radius: 3px; font-weight: 600; border-bottom: 1.5px solid var(--accent); }
+.table-wrap { overflow-x: auto; overflow-y: auto; max-height: 600px; margin: 1.5rem 0; border: 1px solid var(--rule); border-radius: 6px; }
+table { width: 100%; border-collapse: collapse; font-size: 0.9rem; min-width: 800px; }
+table thead th { background: var(--accent); color: #fff; padding: 0.6rem 0.8rem; font-weight: 700; text-align: center; white-space: nowrap; }
+table tbody td { padding: 0.5rem 0.8rem; border-bottom: 1px solid var(--rule); vertical-align: top; }
+table tbody tr:nth-child(even) { background: var(--bg2); }
+table tbody tr:last-child td { border-bottom: none; }
+table tbody td:first-child { font-weight: 600; white-space: nowrap; text-align: center; background: var(--bg2); }
+figcaption { text-align: center; font-size: 0.85rem; color: var(--muted); margin-top: 0.4rem; }
+.diagram { margin: 1.2rem 0; text-align: center; }
+.diagram img { max-width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 4px; }
+.summary-box { background: linear-gradient(135deg, #fdf2f2 0%, #fef9e7 100%); border: 2px solid var(--accent); border-radius: 8px; padding: 1.2rem 1.5rem; margin: 2rem 0; }
+.summary-box h4 { color: var(--accent); font-size: 1rem; margin-bottom: 0.6rem; }
+.expand-block { background: #f0f7f4; border: 1px dashed #7cb342; border-radius: 6px; padding: 0.5rem 0.9rem; margin: 0.6rem 0 0; font-size: 0.83rem; line-height: 1.6; color: #3e6b3e; }
+.expand-block::before { content: "🔍 拓展"; display: block; font-size: 0.7rem; font-weight: 700; color: #558b2f; letter-spacing: 0.06em; margin-bottom: 0.2rem; }
+.flow-box { background: var(--bg); border: 1px solid var(--rule); border-radius: 8px; padding: 1.2rem; margin: 1.2rem 0; text-align: center; }
+.flow-box .flow-title { font-size: 0.85rem; font-weight: 700; color: var(--accent); margin-bottom: 0.8rem; }
+.flow-row { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 0.3rem; font-size: 0.85rem; }
+.flow-item { background: var(--bg2); border: 1px solid var(--rule); border-radius: 4px; padding: 0.25rem 0.6rem; white-space: nowrap; }
+.flow-arrow { color: var(--accent); font-weight: 700; font-size: 1.1rem; }
+footer { margin-top: 3rem; padding: 1.5rem; border-top: 1px solid var(--rule); text-align: center; font-size: 0.8rem; color: var(--muted); }
+@media (max-width: 768px) {
+  .cover h1 { font-size: 1.5rem; }
+  .note-block { flex-direction: column; }
+  .annotation { width: 100%; }
+  .main-layout { padding: 0 0.8rem; }
+  table { font-size: 0.78rem; min-width: 600px; }
+}
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div class="ch-num">高中生物竞赛讲义 · 集训营</div>
+  <h1>第十五章 合成生物学</h1>
+  <div class="subtitle">第二节 合成生物学基础研究经典实例</div>
+  <div class="meta">
+    <span>双稳态开关</span><span>Repressilator 振荡器</span><span>逻辑门</span><span>多细胞图案</span>
+    <span>📅 整理日期: 2026年7月6日</span>
+  </div>
+</div>
+
+<div class="main-layout">
+
+<div class="section-header">
+  <div class="sec-num">第二节</div>
+  <h2>合成生物学基础研究经典实例</h2>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>本节通过 4 个经典实例展示合成生物学"理性设计→建模→构建→验证"的标准流程：</p>
+    <ol>
+      <li><span class="key-point">双稳态开关</span>：Gardner 2000，<em>Nature</em>。</li>
+      <li><span class="key-point">Repressilator 振荡器</span>：Elowitz & Leibler 2000，<em>Nature</em>。</li>
+      <li><span class="key-point">逻辑门（AND / OR）</span>：基因线路的逻辑运算。</li>
+      <li><span class="key-point">人工多细胞图案系统</span>：Weiss 2005，<em>Nature</em>。</li>
+    </ol>
+  </div>
+  <div class="annotation">
+    2000 年是合成生物学 <em>元年</em>：Gardner 与 Elowitz 同期在 <em>Nature</em> 发表开山论文。
+  </div>
+</div>
+
+<!-- ====== 一、双稳态开关 ====== -->
+<div class="topic-header">
+  <h3>一、在大肠杆菌中构建双稳态开关（Toggle Switch）</h3>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><span class="u-double">双稳态开关（toggle switch）</span>由 <span class="key-point">Gardner, Cantor, Collins 2000</span> 在 <em>Nature</em> 上发表（DOI: 10.1038/35002131），是大肠杆菌中第一个"工程化基因线路"。</p>
+    <p>研究意义：</p>
+    <ul>
+      <li>首次在活细胞中实现 <span class="u-double">双稳态（bistability）</span>，相当于电子工程中的"SR 锁存器"。</li>
+      <li>证明基因线路可以具有 <em>记忆</em> 能力——细胞"记住"上一次的诱导信号。</li>
+      <li>开启了合成生物学"基因线路"研究方向。</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    双稳态 = 两个稳定状态 + 状态间的可切换性。<strong>Gardner 2000</strong> 是基因线路的开山之作。
+  </div>
+</div>
+
+<div class="subtopic-header">
+  <h4>（一）基因线路设计</h4>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>双稳态开关由 <span class="u-double">两个相互抑制的转录抑制子</span> 组成：</p>
+    <ul>
+      <li><span class="key-point">lacI</span>（乳糖操纵子抑制子）抑制 <em>tetR</em> 启动子 Ptrc-2 → 控制 <em>tetR</em> 表达；</li>
+      <li><span class="key-point">tetR</span>（四环素操纵子抑制子）抑制 <em>lacI</em> 启动子 PLlacO-1 → 控制 <em>lacI</em> 表达；</li>
+      <li>每个抑制子也控制一个报告基因（<em>gfp</em> 或 <em>lacZ</em>）。</li>
+    </ul>
+    <p>结果：</p>
+    <ul>
+      <li><span class="u-double">高 lacI / 低 tetR</span> 状态 = "绿"状态（GFP 亮）</li>
+      <li><span class="u-double">低 lacI / 高 tetR</span> 状态 = "暗"状态（GFP 暗）</li>
+      <li>两个状态都稳定，细胞群呈现"全亮"或"全暗"两种表型。</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    <strong>lacI ⊣ tetR，tetR ⊣ lacI</strong>：两个抑制子互相抑制，形成正反馈 + 负反馈的混合环路。
+  </div>
+</div>
+
+<div class="diagram">
+<svg viewBox="0 0 800 420" style="width:100%;max-width:700px;margin:1rem auto;display:block;font-family:sans-serif;">
+  <rect x="0" y="0" width="800" height="420" fill="#fdfbf7" stroke="#d6ccc0" rx="8"/>
+  <text x="400" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="#2c2416">图 15-2-1　Toggle Switch 双稳态开关设计原理（Gardner 2000）</text>
+  <!-- gene 1: lacI -->
+  <rect x="40" y="55" width="310" height="80" fill="#fff8e7" stroke="#c0392b" stroke-width="1.5" rx="6"/>
+  <text x="195" y="75" text-anchor="middle" font-size="12" font-weight="700" fill="#c0392b">基因 1：lacI 表达盒</text>
+  <rect x="55" y="90" width="80" height="30" fill="#fdecea" stroke="#c0392b" rx="3"/>
+  <text x="95" y="110" text-anchor="middle" font-size="10" font-weight="700" fill="#c0392b">PLlacO-1</text>
+  <text x="155" y="110" text-anchor="middle" font-size="10" fill="#2c2416">→</text>
+  <rect x="170" y="90" width="60" height="30" fill="#e8dcc8" stroke="#8b4513" rx="3"/>
+  <text x="200" y="110" text-anchor="middle" font-size="10" font-weight="700" fill="#8b4513">lacI</text>
+  <text x="245" y="110" text-anchor="middle" font-size="10" fill="#2c2416">→</text>
+  <rect x="260" y="90" width="70" height="30" fill="#2e7d32" opacity="0.3" stroke="#2e7d32" rx="3"/>
+  <text x="295" y="110" text-anchor="middle" font-size="10" font-weight="700" fill="#2e7d32">GFP</text>
+  <text x="195" y="130" text-anchor="middle" font-size="9" fill="#7a6e5e">启动子受 TetR 抑制</text>
+  <!-- gene 2: tetR -->
+  <rect x="450" y="55" width="310" height="80" fill="#fff8e7" stroke="#1565c0" stroke-width="1.5" rx="6"/>
+  <text x="605" y="75" text-anchor="middle" font-size="12" font-weight="700" fill="#1565c0">基因 2：tetR 表达盒</text>
+  <rect x="465" y="90" width="80" height="30" fill="#e3f2fd" stroke="#1565c0" rx="3"/>
+  <text x="505" y="110" text-anchor="middle" font-size="10" font-weight="700" fill="#1565c0">Ptrc-2</text>
+  <text x="565" y="110" text-anchor="middle" font-size="10" fill="#2c2416">→</text>
+  <rect x="580" y="90" width="60" height="30" fill="#e8dcc8" stroke="#8b4513" rx="3"/>
+  <text x="610" y="110" text-anchor="middle" font-size="10" font-weight="700" fill="#8b4513">tetR</text>
+  <text x="655" y="110" text-anchor="middle" font-size="10" fill="#2c2416">→</text>
+  <rect x="670" y="90" width="70" height="30" fill="#2e7d32" opacity="0.3" stroke="#2e7d32" rx="3"/>
+  <text x="705" y="110" text-anchor="middle" font-size="10" font-weight="700" fill="#2e7d32">LacZ</text>
+  <text x="605" y="130" text-anchor="middle" font-size="9" fill="#7a6e5e">启动子受 LacI 抑制</text>
+  <!-- mutual repression arrows -->
+  <path d="M 200 95 Q 300 35 505 95" fill="none" stroke="#c0392b" stroke-width="2" marker-end="url(#arrow1)"/>
+  <text x="350" y="40" text-anchor="middle" font-size="10" font-weight="700" fill="#c0392b">LacI ⊣ Ptrc-2</text>
+  <path d="M 505 135 Q 400 195 200 135" fill="none" stroke="#1565c0" stroke-width="2" marker-end="url(#arrow2)"/>
+  <text x="350" y="185" text-anchor="middle" font-size="10" font-weight="700" fill="#1565c0">TetR ⊣ PLlacO-1</text>
+  <defs>
+    <marker id="arrow1" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#c0392b"/>
+    </marker>
+    <marker id="arrow2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <!-- two stable states -->
+  <rect x="40" y="210" width="350" height="100" fill="#fff8e7" stroke="#2e7d32" stroke-width="1.5" rx="6"/>
+  <text x="215" y="232" text-anchor="middle" font-size="12" font-weight="700" fill="#2e7d32">状态 A："亮"（GFP 高）</text>
+  <text x="60" y="255" font-size="10" fill="#2c2416">LacI 高 → 抑制 tetR → TetR 低</text>
+  <text x="60" y="272" font-size="10" fill="#2c2416">→ PLlacO-1 解阻遏 → LacI 更高</text>
+  <text x="60" y="295" font-size="10" fill="#2e7d32" font-weight="700">GFP 表达 → 细胞发绿光</text>
+  <text x="60" y="310" font-size="9" fill="#7a6e5e">诱导剂 aTc（抑制 TetR）→ 切换到此状态</text>
+  <rect x="410" y="210" width="350" height="100" fill="#fff8e7" stroke="#2c2416" stroke-width="1.5" rx="6"/>
+  <text x="585" y="232" text-anchor="middle" font-size="12" font-weight="700" fill="#2c2416">状态 B："暗"（GFP 低）</text>
+  <text x="430" y="255" font-size="10" fill="#2c2416">TetR 高 → 抑制 lacI → LacI 低</text>
+  <text x="430" y="272" font-size="10" fill="#2c2416">→ Ptrc-2 解阻遏 → TetR 更高</text>
+  <text x="430" y="295" font-size="10" fill="#2c2416" font-weight="700">GFP 不表达 → 细胞无荧光</text>
+  <text x="430" y="310" font-size="9" fill="#7a6e5e">诱导剂 IPTG（抑制 LacI）→ 切换到此状态</text>
+  <!-- bistability curve -->
+  <rect x="40" y="325" width="720" height="80" fill="#fff8e7" stroke="#e8c84a" rx="4"/>
+  <text x="400" y="345" text-anchor="middle" font-size="11" font-weight="700" fill="#8b4513">双稳态原理：正反馈产生两个稳定吸引子（A/B），类似 SR 锁存器</text>
+  <text x="400" y="363" text-anchor="middle" font-size="10" fill="#2c2416">无诱导剂时保持上一状态（记忆）；IPTG/aTc 可强制切换</text>
+  <text x="400" y="383" text-anchor="middle" font-size="10" fill="#c0392b" font-weight="700">奥赛要点：互抑结构 = 双稳态 = 基因记忆；Gardner 2000 Nature = 合成生物学开山之作</text>
+</svg>
+<figcaption>图 15-2-1　Toggle Switch 双稳态开关设计原理：lacI 与 tetR 互相抑制，形成两个稳定状态（亮/暗），IPTG 和 aTc 分别切换状态，实现基因记忆</figcaption>
+</div>
+
+<div class="expand-block">
+  <strong>分子机理：</strong>lacI 蛋白结合 PLlacO-1 启动子阻遏 tetR 转录；tetR 蛋白结合 Ptrc-2 启动子阻遏 lacI 转录。当一个抑制子升高，会进一步抑制另一个，形成"互抑"的双稳态结构。这种互抑结构在数学上等价于"非单调动力学的双吸引子"。
+</div>
+
+<div class="subtopic-header">
+  <h4>（二）基因线路实现</h4>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>为了实现设计的基因线路逻辑功能，<span class="u-double">必须选择恰当的基因功能模块</span>：</p>
+    <ul>
+      <li><span class="key-point">抑制子选择</span>：选择 <em>lacI</em> 和 <em>tetR</em> 这两个相互正交的转录抑制子，互不干扰。</li>
+      <li><span class="key-point">启动子选择</span>：PLlacO-1 启动子（含 lacO 操纵位点）受 lacI 抑制；Ptrc-2 启动子（含 tetO 操纵位点）受 tetR 抑制。</li>
+      <li><span class="key-point">诱导剂</span>：用 IPTG 抑制 lacI（解阻遏 tetR）；用 aTc（无水四环素）抑制 tetR（解阻遏 lacI）。</li>
+      <li><span class="key-point">质粒系统</span>：两个独立的相容性质粒（pIKE 质粒系统），分别表达 lacI/PLlacO 调控单元和 tetR/Ptrc 调控单元。</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    <strong>正交化（orthogonalization）</strong>：选择的两个抑制子互不干扰，是合成生物学 <em>模块化</em> 的基础。
+  </div>
+</div>
+
+<div class="subtopic-header">
+  <h4>（三）数学模型建立</h4>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>用 <span class="u-double">ODE 模型</span> 描述双稳态：</p>
+    <ul>
+      <li>设 <em>u</em> = lacI 浓度，<em>v</em> = tetR 浓度；</li>
+      <li><em>du/dt</em> = α₁ / (1 + vⁿ) - <em>u</em></li>
+      <li><em>dv/dt</em> = α₂ / (1 + uⁿ) - <em>v</em></li>
+      <li>其中 α₁, α₂ 为基础转录速率，n 为 Hill 系数，<em>·</em> 表示归一化降解。</li>
+    </ul>
+    <p>双稳态特性：</p>
+    <ul>
+      <li>当 α₁ = α₂ 且 n > 1 时，系统有两个稳定平衡点（对称双稳态）；</li>
+      <li>在外界诱导下，可在两个稳定点之间切换；</li>
+      <li>这与电子工程中的 <span class="key-point">施密特触发器（Schmitt trigger）</span> 类似。</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    <strong>Hill 系数 n > 1</strong>：协同结合，是双稳态出现的关键参数。
+  </div>
+</div>
+
+<div class="subtopic-header">
+  <h4>（四）功能检测</h4>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>用 <span class="u-double">流式细胞仪（flow cytometry）</span> 检测 GFP 荧光分布，实验结果：</p>
+    <ul>
+      <li>未经诱导：细胞群呈 <span class="key-point">双峰分布</span>，一部分亮、一部分暗（自发的双稳态）；</li>
+      <li>IPTG 诱导：所有细胞切换到"亮"状态（lacI 被抑制 → tetR 表达 → 抑制解除 → GFP 表达）；</li>
+      <li>aTc 诱导：所有细胞切换到"暗"状态；</li>
+      <li>诱导去除后：细胞保持新状态数小时甚至数代——证明 <span class="u-double">遗传记忆（genetic memory）</span>。</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    双稳态开关是 <strong>细胞存储器</strong> 的雏形：去诱导剂后状态可保持多代。
+  </div>
+</div>
+
+<!-- ====== 二、Repressilator 振荡器 ====== -->
+<div class="topic-header">
+  <h3>二、构建 Repressilator 基因振荡器</h3>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><span class="u-double">Repressilator</span>（合成振荡器）由 <span class="key-point">Elowitz & Leibler 2000</span> 在 <em>Nature</em> 上发表（DOI: 10.1038/35002125），是合成生物学的另一开山之作。</p>
+    <p>研究意义：</p>
+    <ul>
+      <li>首次在活细胞中实现 <span class="u-double">自激振荡（self-sustained oscillation）</span>。</li>
+      <li>证明 <span class="u-double">合成的转录调控网络</span> 也能产生节律性行为。</li>
+      <li>为人工合成昼夜节律（circadian rhythm）系统铺平道路。</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    Repressilator 名称来自 <strong>repress</strong>（抑制）+ <strong>oscillator</strong>（振荡器），后缀 -ilator 模仿 oscillator。
+  </div>
+</div>
+
+<div class="subtopic-header">
+  <h4>（一）基因线路设计</h4>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>Repressilator 由 <span class="u-double">三个转录抑制子首尾相连</span> 形成 <span class="u-double">自激振荡环（repressilator ring）</span>：</p>
+    <ul>
+      <li>tetR → 抑制 <em>lacI</em> 启动子；</li>
+      <li>lacI → 抑制 <em>cI</em> 启动子（λ 噬菌体抑制子）；</li>
+      <li>cI → 抑制 <em>tetR</em> 启动子。</li>
+    </ul>
+    <p>动力学：</p>
+    <ul>
+      <li>tetR 升高 → 抑制 lacI → lacI 降低 → 解阻遏 cI → cI 升高 → 抑制 tetR → tetR 降低 → 解阻遏 lacI → lacI 升高 → 抑制 cI → cI 降低 → 解阻遏 tetR → tetR 升高……循环。</li>
+      <li>三个蛋白浓度随时间正弦振荡，周期约 2–3 小时（远慢于细胞分裂 30 min，因此可以观察到完整周期）。</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    三节点环是 <em>最小</em> 的转录振荡器，奇数节点才会振荡（偶数节点会稳定在某一状态）。
+  </div>
+</div>
+
+<div class="diagram">
+<svg viewBox="0 0 967 440" style="width:100%;max-width:700px;margin:1rem auto;display:block;font-family:sans-serif;">
+  <rect x="0" y="0" width="800" height="440" fill="#fdfbf7" stroke="#d6ccc0" rx="8"/>
+  <text x="400" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="#2c2416">图 15-2-2　Repressilator 阻遏振荡器设计（Elowitz 2000）</text>
+  <!-- ring structure -->
+  <text x="250" y="60" text-anchor="middle" font-size="13" font-weight="700" fill="#c0392b">三节点抑制环（Repressilator Ring）</text>
+  <!-- tetR node -->
+  <circle cx="250" cy="130" r="40" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
+  <text x="250" y="128" text-anchor="middle" font-size="14" font-weight="700" fill="#1565c0">TetR</text>
+  <text x="250" y="144" text-anchor="middle" font-size="9" fill="#7a6e5e">Ptrc-2 启动子</text>
+  <!-- lacI node -->
+  <circle cx="150" cy="260" r="40" fill="#fdecea" stroke="#c0392b" stroke-width="2"/>
+  <text x="150" y="258" text-anchor="middle" font-size="14" font-weight="700" fill="#c0392b">LacI</text>
+  <text x="150" y="274" text-anchor="middle" font-size="9" fill="#7a6e5e">PLlacO-1 启动子</text>
+  <!-- cI node -->
+  <circle cx="350" cy="260" r="40" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
+  <text x="350" y="258" text-anchor="middle" font-size="14" font-weight="700" fill="#e65100">cI</text>
+  <text x="350" y="274" text-anchor="middle" font-size="9" fill="#7a6e5e">λ PR 启动子</text>
+  <!-- repression arrows (circular) -->
+  <path d="M 220 160 Q 175 200 175 222" fill="none" stroke="#2c2416" stroke-width="2"/>
+  <polygon points="175,222 170,212 180,212" fill="#2c2416"/>
+  <text x="170" y="195" text-anchor="middle" font-size="9" fill="#2c2416">⊣</text>
+  <path d="M 185 260 Q 270 250 312 260" fill="none" stroke="#2c2416" stroke-width="2"/>
+  <polygon points="312,260 302,255 302,265" fill="#2c2416"/>
+  <text x="250" y="250" text-anchor="middle" font-size="9" fill="#2c2416">⊣</text>
+  <path d="M 350 222 Q 350 175 285 155" fill="none" stroke="#2c2416" stroke-width="2"/>
+  <polygon points="285,155 295,152 290,162" fill="#2c2416"/>
+  <text x="330" y="195" text-anchor="middle" font-size="9" fill="#2c2416">⊣</text>
+  <text x="250" y="330" text-anchor="middle" font-size="10" fill="#8b4513">TetR ⊣ LacI ⊣ cI ⊣ TetR（首尾相连的抑制环）</text>
+  <text x="250" y="348" text-anchor="middle" font-size="10" fill="#c0392b" font-weight="700">奇数节点 → 振荡；偶数节点 → 双稳态</text>
+  <!-- oscillation graph -->
+  <text x="580" y="60" text-anchor="middle" font-size="13" font-weight="700" fill="#c0392b">振荡曲线（周期 ~150 min）</text>
+  <rect x="470" y="70" width="280" height="180" fill="#fff8e7" stroke="#d6ccc0" rx="4"/>
+  <line x1="490" y1="240" x2="740" y2="240" stroke="#2c2416" stroke-width="1"/>
+  <line x1="490" y1="90" x2="490" y2="240" stroke="#2c2416" stroke-width="1"/>
+  <text x="485" y="95" text-anchor="end" font-size="10" fill="#7a6e5e">高</text>
+  <text x="485" y="240" text-anchor="end" font-size="10" fill="#7a6e5e">低</text>
+  <text x="745" y="244" font-size="10" fill="#7a6e5e">时间</text>
+  <!-- tetR sine wave -->
+  <path d="M 490 165 Q 515 110 540 165 Q 565 220 590 165 Q 615 110 640 165 Q 665 220 690 165 Q 715 110 740 165" fill="none" stroke="#1565c0" stroke-width="2"/>
+  <text x="752" y="168" font-size="10" fill="#1565c0">TetR</text>
+  <!-- lacI sine wave (phase shifted) -->
+  <path d="M 490 165 Q 515 220 540 165 Q 565 110 590 165 Q 615 220 640 165 Q 665 110 690 165 Q 715 220 740 165" fill="none" stroke="#c0392b" stroke-width="2" stroke-dasharray="4,2"/>
+  <text x="752" y="142" font-size="10" fill="#c0392b">LacI</text>
+  <!-- cI sine wave (phase shifted) -->
+  <path d="M 490 110 Q 515 165 540 220 Q 565 165 590 110 Q 615 165 640 220 Q 665 165 690 110 Q 715 165 740 220" fill="none" stroke="#e65100" stroke-width="2" stroke-dasharray="2,2"/>
+  <text x="752" y="195" font-size="10" fill="#e65100">cI</text>
+  <text x="615" y="265" text-anchor="middle" font-size="10" fill="#8b4513">三个蛋白相位差 120°，交替振荡</text>
+  <text x="615" y="280" text-anchor="middle" font-size="9" fill="#7a6e5e">周期 ~150 min（远 > 细胞分裂 30 min）</text>
+  <!-- bottom features -->
+  <rect x="20" y="360" width="760" height="65" fill="#fff8e7" stroke="#e8c84a" rx="4"/>
+  <text x="400" y="382" text-anchor="middle" font-size="11" font-weight="700" fill="#8b4513">关键设计要点</text>
+  <text x="400" y="400" text-anchor="middle" font-size="10" fill="#2c2416">① 三个抑制子基因首尾相连成环；② 每个启动子受前一个抑制子调控；③ ssrA 降解标签加速蛋白周转</text>
+  <text x="400" y="416" text-anchor="middle" font-size="10" fill="#c0392b" font-weight="700">奥赛考点：三节点环 = 最小振荡器；Elowitz &amp; Leibler 2000 Nature；GFP 报告基因检测振荡</text>
+</svg>
+<figcaption>图 15-2-2　Repressilator 阻遏振荡器设计：TetR⊣LacI⊣cI⊣TetR 三节点抑制环，三个蛋白浓度交替正弦振荡（周期~150 min），是合成振荡器原型</figcaption>
+</div>
+
+<div class="subtopic-header">
+  <h4>（二）功能检测</h4>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>在三个基因下游分别加 <span class="u-double">荧光报告基因（gfp / cfp / yfp）</span>，用流式细胞仪 + 时间序列显微镜观察：</p>
+    <ul>
+      <li><span class="key-point">荧光检测结果</span>：在不考虑细胞分裂因素的情况下，GFP 荧光随时间呈正弦振荡，周期约 150 min。</li>
+      <li><span class="key-point">细胞间同步性</span>：早期实验仅约 40% 细胞同步振荡，提示噪声（noise）是合成振荡器的主要挑战。</li>
+      <li><span class="key-point">后继改进</span>：<em>Elowitz 2002</em> 通过引入正反馈 + 加快蛋白降解（<em>ssrA</em> 降解标签）提高同步性；<em>Stricker 2008</em> 实现周期约 13 min 的快速振荡；<em>Danino 2010</em> 实现群体同步的"群体振荡器"。</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    Repressilator 是 <strong>合成节律系统</strong> 的原型，对研究昼夜节律、细胞周期有启发意义。
+  </div>
+</div>
+
+<!-- ====== 三、逻辑门 ====== -->
+<div class="topic-header">
+  <h3>三、逻辑门功能基因线路</h3>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>用基因线路实现 <span class="u-double">电子工程中的逻辑运算</span>（AND、OR、NOT、NAND 等），是合成生物学"程序化细胞"的基础。常见逻辑门：</p>
+    <ul>
+      <li><span class="key-point">与门（AND）</span>：两个输入信号（A AND B）同时存在时，输出激活。</li>
+      <li><span class="key-point">或门（OR）</span>：两个输入信号（A OR B）任一存在时，输出激活。</li>
+      <li><span class="key-point">非门（NOT）</span>：输入信号存在时，输出被抑制；输入不存在时，输出默认激活。</li>
+      <li><span class="key-point">与非门（NAND）</span>：NOT(AND)，全宇宙通用逻辑门——任何布尔函数都可由 NAND 复合而成。</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    <strong>NAND 完备性</strong>：NAND 是 <em>功能完备</em> 的逻辑元件，理论上可组成任何数字电路。
+  </div>
+</div>
+
+<div class="subtopic-header">
+  <h4>逻辑"与"门（AND gate）</h4>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>经典设计（<em>Anderson 2007, Weiss lab</em>）：</p>
+    <ul>
+      <li>两个启动子分别响应输入 A 和输入 B（正交的转录激活）；</li>
+      <li>每个启动子下游表达一个转录激活子（act1 和 act2）；</li>
+      <li>输出基因的启动子需要 act1 和 act2 共同结合才能激活（类似 <span class="key-point">真核增强子</span> 机制）。</li>
+    </ul>
+    <p>真值表：</p>
+    <ul>
+      <li>A=0, B=0 → 输出 0</li>
+      <li>A=1, B=0 → 输出 0</li>
+      <li>A=0, B=1 → 输出 0</li>
+      <li>A=1, B=1 → 输出 1</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    <strong>AND gate</strong>：两信号 <em>协同</em> 才能激活输出，类似真核基因的"双重增强子"。
+  </div>
+</div>
+
+<div class="subtopic-header">
+  <h4>逻辑"或"门（OR gate）</h4>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>经典设计：</p>
+    <ul>
+      <li>两个启动子分别响应输入 A 和输入 B；</li>
+      <li>两个启动子分别独立驱动 <em>同一个输出基因</em>；</li>
+      <li>任一启动子激活即可表达输出。</li>
+    </ul>
+    <p>真值表：</p>
+    <ul>
+      <li>A=0, B=0 → 输出 0</li>
+      <li>A=1, B=0 → 输出 1</li>
+      <li>A=0, B=1 → 输出 1</li>
+      <li>A=1, B=1 → 输出 1</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    <strong>OR gate</strong>：两信号 <em>任一</em> 即可激活输出，是最简单的合成门。
+  </div>
+</div>
+
+<div class="expand-block">
+  <strong>其他常见逻辑门：</strong>① NOT gate（抑制子 + 启动子）；② NAND（两个 NOT 的串联 + 整合）；③ NOR（NOT 抑制子 + 双输入启动子）；④ XOR（异或，需要更复杂线路，如可逆启动子开关）。MIT 的 <em>Cello</em> 软件 2016 年可自动设计 60+ 逻辑门线路。
+</div>
+
+<!-- ====== 四、人工多细胞图案系统 ====== -->
+<div class="topic-header">
+  <h3>四、人工多细胞图案系统</h3>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><span class="u-double">人工多细胞图案系统（synthetic multicellular pattern）</span> 由 <span class="key-point">Weiss Lab 2005</span>（Basu, Gerchman, Collins 等）在 <em>Nature</em> 上发表（DOI: 10.1038/nature04311）。</p>
+    <p>研究意义：</p>
+    <ul>
+      <li>首次在 <em>大肠杆菌菌落</em> 上实现 <span class="u-double">人工图案（synthetic pattern）</span>——如条纹、斑马纹、棋盘格等。</li>
+      <li>证明 <span class="u-double">群体感应（quorum sensing, QS）</span> 系统可被工程化用于细胞间通讯。</li>
+      <li>为 <em>合成发育生物学</em>、<em>合成组织工程</em> 铺平道路。</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    <strong>群体感应（QS）</strong>：细胞通过分泌/感应小分子（AHL、AI-2）实现"细胞数"感知。是 <em>原核版的细胞通讯</em>。
+  </div>
+</div>
+
+<div class="subtopic-header">
+  <h4>基因线路设计</h4>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>两种工程化菌株 + 群体感应：</p>
+    <ul>
+      <li><span class="key-point">"发送者"菌（sender）</span>：合成群体感应分子 AHL（乙酰高丝氨酸内酯），受阿拉伯糖启动子 PBAD 控制。</li>
+      <li><span class="key-point">"接收者"菌（receiver）</span>：在 AHL 浓度足够时激活 <em>gfp</em> 表达。</li>
+    </ul>
+    <p>机理：</p>
+    <ul>
+      <li>Sender 持续产生 AHL，AHL 在琼脂平板上扩散形成浓度梯度；</li>
+      <li>Receiver 距离 sender 越近，AHL 浓度越高，GFP 越亮；</li>
+      <li>距离越远，GFP 越暗；</li>
+      <li>在混合菌落（sender + receiver）上形成 <span class="u-double">空间 GFP 梯度</span>，呈现条纹、圆环等图案。</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    <strong>AHL 扩散 + 阈值响应</strong> = 经典 Turing 形态发生模式（reaction-diffusion）。
+  </div>
+</div>
+
+<div class="subtopic-header">
+  <h4>功能检测</h4>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>实验结果：</p>
+    <ul>
+      <li>在混合 sender + receiver 的琼脂平板上，<span class="u-double">可见绿色荧光环</span>，环宽约 1–2 mm；</li>
+      <li>改变阿拉伯糖浓度、菌落密度、AHL 合成酶拷贝数等参数，可获得多种形状颜色区域；</li>
+      <li>在双色实验中（GFP + RFP），可形成 <span class="u-double">红绿相间的棋盘格</span>。</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    Turing 1952 提出"反应-扩散"形态发生模型，<strong>Basu 2005</strong> 用合成生物学验证了该模型。
+  </div>
+</div>
+
+<div class="diagram">
+<svg viewBox="0 0 967 440" style="width:100%;max-width:700px;margin:1rem auto;display:block;font-family:sans-serif;">
+  <rect x="0" y="0" width="800" height="440" fill="#fdfbf7" stroke="#d6ccc0" rx="8"/>
+  <text x="400" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="#2c2416">图 15-2-3　合成生物学元件层次：Parts → Devices → Systems</text>
+  <!-- Level 1: Parts -->
+  <rect x="30" y="50" width="220" height="310" fill="#fff8e7" stroke="#c0392b" stroke-width="2" rx="6"/>
+  <rect x="30" y="50" width="220" height="32" fill="#c0392b" rx="6"/>
+  <text x="140" y="72" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">Level 1: Parts（零件）</text>
+  <text x="140" y="98" text-anchor="middle" font-size="10" fill="#7a6e5e">标准化生物功能元件</text>
+  <rect x="45" y="110" width="190" height="30" fill="#fdecea" stroke="#c0392b" rx="3"/>
+  <text x="140" y="130" text-anchor="middle" font-size="10" font-weight="700" fill="#c0392b">启动子 Promoter（BBa_R0040）</text>
+  <rect x="45" y="145" width="190" height="30" fill="#fdecea" stroke="#c0392b" rx="3"/>
+  <text x="140" y="165" text-anchor="middle" font-size="10" font-weight="700" fill="#c0392b">RBS 核糖体结合位点</text>
+  <rect x="45" y="180" width="190" height="30" fill="#fdecea" stroke="#c0392b" rx="3"/>
+  <text x="140" y="200" text-anchor="middle" font-size="10" font-weight="700" fill="#c0392b">CDS 编码序列（tetR, gfp）</text>
+  <rect x="45" y="215" width="190" height="30" fill="#fdecea" stroke="#c0392b" rx="3"/>
+  <text x="140" y="235" text-anchor="middle" font-size="10" font-weight="700" fill="#c0392b">终止子 Terminator</text>
+  <text x="140" y="265" text-anchor="middle" font-size="10" fill="#8b4513">BioBrick 标准组装</text>
+  <text x="140" y="282" text-anchor="middle" font-size="9" fill="#7a6e5e">前缀 EcoRI + XbaI</text>
+  <text x="140" y="298" text-anchor="middle" font-size="9" fill="#7a6e5e">后缀 SpeI + PstI</text>
+  <text x="140" y="325" text-anchor="middle" font-size="10" fill="#2c2416">类比：电子元件（电阻/电容）</text>
+  <text x="140" y="342" text-anchor="middle" font-size="9" fill="#7a6e5e">注册：iGEM Registry</text>
+  <text x="260" y="205" text-anchor="middle" font-size="22" fill="#c0392b" font-weight="700">→</text>
+  <!-- Level 2: Devices -->
+  <rect x="290" y="50" width="220" height="310" fill="#fff8e7" stroke="#1565c0" stroke-width="2" rx="6"/>
+  <rect x="290" y="50" width="220" height="32" fill="#1565c0" rx="6"/>
+  <text x="400" y="72" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">Level 2: Devices（装置）</text>
+  <text x="400" y="98" text-anchor="middle" font-size="10" fill="#7a6e5e">多个 Part 组合的功能单元</text>
+  <rect x="305" y="110" width="190" height="30" fill="#e3f2fd" stroke="#1565c0" rx="3"/>
+  <text x="400" y="130" text-anchor="middle" font-size="10" font-weight="700" fill="#1565c0">逻辑门（AND/OR/NOT）</text>
+  <rect x="305" y="145" width="190" height="30" fill="#e3f2fd" stroke="#1565c0" rx="3"/>
+  <text x="400" y="165" text-anchor="middle" font-size="10" font-weight="700" fill="#1565c0">Toggle Switch（双稳态）</text>
+  <rect x="305" y="180" width="190" height="30" fill="#e3f2fd" stroke="#1565c0" rx="3"/>
+  <text x="400" y="200" text-anchor="middle" font-size="10" font-weight="700" fill="#1565c0">Repressilator（振荡器）</text>
+  <rect x="305" y="215" width="190" height="30" fill="#e3f2fd" stroke="#1565c0" rx="3"/>
+  <text x="400" y="235" text-anchor="middle" font-size="10" font-weight="700" fill="#1565c0">传感器（报告基因线路）</text>
+  <text x="400" y="265" text-anchor="middle" font-size="10" fill="#8b4513">由 Parts 组装而成</text>
+  <text x="400" y="282" text-anchor="middle" font-size="9" fill="#7a6e5e">启动子+RBS+CDS+终止子</text>
+  <text x="400" y="298" text-anchor="middle" font-size="9" fill="#7a6e5e">→ 功能基因线路</text>
+  <text x="400" y="325" text-anchor="middle" font-size="10" fill="#2c2416">类比：逻辑电路（门电路）</text>
+  <text x="400" y="342" text-anchor="middle" font-size="9" fill="#7a6e5e">可实现信息存储/运算</text>
+  <text x="520" y="205" text-anchor="middle" font-size="22" fill="#1565c0" font-weight="700">→</text>
+  <!-- Level 3: Systems -->
+  <rect x="550" y="50" width="220" height="310" fill="#fff8e7" stroke="#2e7d32" stroke-width="2" rx="6"/>
+  <rect x="550" y="50" width="220" height="32" fill="#2e7d32" rx="6"/>
+  <text x="660" y="72" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">Level 3: Systems（系统）</text>
+  <text x="660" y="98" text-anchor="middle" font-size="10" fill="#7a6e5e">多装置协同的复杂系统</text>
+  <rect x="565" y="110" width="190" height="30" fill="#e8f5e9" stroke="#2e7d32" rx="3"/>
+  <text x="660" y="130" text-anchor="middle" font-size="10" font-weight="700" fill="#2e7d32">代谢通路（青蒿素合成）</text>
+  <rect x="565" y="145" width="190" height="30" fill="#e8f5e9" stroke="#2e7d32" rx="3"/>
+  <text x="660" y="165" text-anchor="middle" font-size="10" font-weight="700" fill="#2e7d32">多细胞图案系统</text>
+  <rect x="565" y="180" width="190" height="30" fill="#e8f5e9" stroke="#2e7d32" rx="3"/>
+  <text x="660" y="200" text-anchor="middle" font-size="10" font-weight="700" fill="#2e7d32">生物传感器</text>
+  <rect x="565" y="215" width="190" height="30" fill="#e8f5e9" stroke="#2e7d32" rx="3"/>
+  <text x="660" y="235" text-anchor="middle" font-size="10" font-weight="700" fill="#2e7d32">计数器/分级响应</text>
+  <text x="660" y="265" text-anchor="middle" font-size="10" fill="#8b4513">由 Devices 组装而成</text>
+  <text x="660" y="282" text-anchor="middle" font-size="9" fill="#7a6e5e">群体感应+多装置协同</text>
+  <text x="660" y="298" text-anchor="middle" font-size="9" fill="#7a6e5e">→ 完整生物系统</text>
+  <text x="660" y="325" text-anchor="middle" font-size="10" fill="#2c2416">类比：CPU / 主板</text>
+  <text x="660" y="342" text-anchor="middle" font-size="9" fill="#7a6e5e">底盘：大肠杆菌/酵母</text>
+  <!-- bottom note -->
+  <rect x="30" y="375" width="740" height="50" fill="#fff8e7" stroke="#e8c84a" rx="4"/>
+  <text x="400" y="395" text-anchor="middle" font-size="11" fill="#8b4513">核心思想：像电子工程一样，从标准化零件→功能装置→复杂系统，逐层组装生物系统</text>
+  <text x="400" y="413" text-anchor="middle" font-size="11" fill="#c0392b" font-weight="700">奥赛考点：BioBricks 标准化组装（EcoRI-XbaI-SpeI-PstI）；iGEM Registry 零件注册</text>
+</svg>
+<figcaption>图 15-2-3　合成生物学元件层次 Parts→Devices→Systems：Parts（启动子/RBS/CDS/终止子）→ Devices（逻辑门/Toggle Switch/Repressilator）→ Systems（代谢通路/多细胞图案/传感器），类比电子工程从元件到系统</figcaption>
+</div>
+
+<!-- ====== 总结 ====== -->
+<div class="summary-box">
+  <h4>本节核心要点</h4>
+  <ul>
+    <li><strong>双稳态开关</strong>（Gardner 2000）：两个互抑抑制子（lacI ⊣ tetR，tetR ⊣ lacI），具有遗传记忆，是合成生物学开山之作。</li>
+    <li><strong>Repressilator</strong>（Elowitz 2000）：三节点环（tetR → lacI → cI → tetR），周期约 150 min，是合成振荡器原型。</li>
+    <li><strong>逻辑门</strong>：AND（双重激活）、OR（任一激活）、NAND（功能完备）、XOR（异或）。MIT Cello 2016 自动设计 60+ 逻辑门。</li>
+    <li><strong>多细胞图案</strong>（Basu 2005）：sender 产 AHL + receiver 感应 AHL + GFP 报告，菌落上呈现条纹、圆环、棋盘格图案，验证 Turing 反应-扩散模型。</li>
+  </ul>
+</div>
+
+</div>
+
+<footer><a href="index.html" style="color:var(--accent);text-decoration:none;margin-right:1rem;">← 返回目录</a>
+  第十五章 合成生物学 · 第二节 合成生物学基础研究经典实例 · 参考高中生物奥赛讲义 · 整理日期 2026年7月6日
+</footer>
+
+</body>
+</html>

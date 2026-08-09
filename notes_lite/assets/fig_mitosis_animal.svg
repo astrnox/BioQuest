@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 330" style="font-family: sans-serif;">
+  <rect x="0" y="0" width="920" height="330" fill="#fdfbf7"/>
+  <text x="460" y="30" text-anchor="middle" font-size="19" font-weight="700" fill="#2c2416">动物细胞有丝分裂过程 (Mitosis)</text>
+  <text x="460" y="51" text-anchor="middle" font-size="12.5" fill="#7a6e5e">前期 → 前中期 → 中期 → 后期 → 末期 → 胞质分裂　(2n → 2n,子细胞染色体数与母细胞相同)</text>
+
+  <defs>
+    <marker id="marr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#c0392b"/></marker>
+    <marker id="farrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#7a6e5e"/></marker>
+  </defs>
+
+  <!-- 阶段间流向箭头 -->
+  <path d="M158,165 L 177,165" stroke="#7a6e5e" stroke-width="2" marker-end="url(#farrow)"/>
+  <path d="M303,165 L 322,165" stroke="#7a6e5e" stroke-width="2" marker-end="url(#farrow)"/>
+  <path d="M448,165 L 467,165" stroke="#7a6e5e" stroke-width="2" marker-end="url(#farrow)"/>
+  <path d="M593,165 L 612,165" stroke="#7a6e5e" stroke-width="2" marker-end="url(#farrow)"/>
+  <path d="M738,165 L 757,165" stroke="#7a6e5e" stroke-width="2" marker-end="url(#farrow)"/>
+
+  <!-- ============ 1. 前期 (cx=95) ============ -->
+  <g>
+    <circle cx="95" cy="165" r="58" fill="#fdfbf7" stroke="#8b4513" stroke-width="2"/>
+    <!-- 核膜(完整) -->
+    <circle cx="95" cy="165" r="34" fill="#fff8e7" stroke="#2c2416" stroke-width="1.6"/>
+    <!-- 核仁(渐消失) -->
+    <circle cx="103" cy="158" r="6" fill="#d6ccc0" stroke="#8b4513" stroke-width="1" opacity="0.6"/>
+    <!-- 凝缩染色体 (X形) -->
+    <path d="M83,150 L91,158 M83,158 L91,150" stroke="#c0392b" stroke-width="3" stroke-linecap="round"/>
+    <path d="M99,172 L107,180 M99,180 L107,172" stroke="#c0392b" stroke-width="3" stroke-linecap="round"/>
+    <!-- 中心体 + 星体微管 -->
+    <circle cx="68" cy="138" r="4" fill="#4a7c3a"/>
+    <circle cx="122" cy="192" r="4" fill="#4a7c3a"/>
+    <path d="M68,138 l -10,-6 M68,138 l -12,2 M68,138 l -4,-12" stroke="#4a7c3a" stroke-width="1.2"/>
+    <path d="M122,192 l 10,6 M122,192 l 12,-2 M122,192 l 4,12" stroke="#4a7c3a" stroke-width="1.2"/>
+  </g>
+
+  <!-- ============ 2. 前中期 (cx=240) ============ -->
+  <g>
+    <circle cx="240" cy="165" r="58" fill="#fdfbf7" stroke="#8b4513" stroke-width="2"/>
+    <!-- 核膜(破裂,虚线碎片) -->
+    <path d="M210,140 A 34 34 0 0 1 266,150" fill="none" stroke="#2c2416" stroke-width="1.6" stroke-dasharray="4 4"/>
+    <path d="M214,192 A 34 34 0 0 0 264,186" fill="none" stroke="#2c2416" stroke-width="1.6" stroke-dasharray="4 4"/>
+    <!-- 中心体(两极) -->
+    <circle cx="195" cy="165" r="4" fill="#4a7c3a"/>
+    <circle cx="285" cy="165" r="4" fill="#4a7c3a"/>
+    <!-- 纺锤体微管 + 染色体(被捕获,向赤道移动) -->
+    <path d="M195,165 L 224,150 M195,165 L 230,168 M195,165 L 226,182" stroke="#4a7c3a" stroke-width="1.1"/>
+    <path d="M285,165 L 256,150 M285,165 L 250,168 M285,165 L 254,182" stroke="#4a7c3a" stroke-width="1.1"/>
+    <path d="M224,150 L232,158 M224,158 L232,150" stroke="#c0392b" stroke-width="3" stroke-linecap="round"/>
+    <path d="M248,178 L256,186 M248,186 L256,178" stroke="#c0392b" stroke-width="3" stroke-linecap="round"/>
+    <path d="M218,165 L226,173 M218,173 L226,165" stroke="#c0392b" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- ============ 3. 中期 (cx=385) ============ -->
+  <g>
+    <circle cx="385" cy="165" r="58" fill="#fdfbf7" stroke="#8b4513" stroke-width="2"/>
+    <!-- 赤道板辅助线 -->
+    <line x1="385" y1="113" x2="385" y2="217" stroke="#d6ccc0" stroke-width="1" stroke-dasharray="3 3"/>
+    <!-- 中心体(两极) -->
+    <circle cx="335" cy="165" r="4" fill="#4a7c3a"/>
+    <circle cx="435" cy="165" r="4" fill="#4a7c3a"/>
+    <!-- 双极纺锤体:从两极到赤道板染色体 -->
+    <path d="M335,165 L 380,140 M335,165 L 380,160 M335,165 L 380,180 M335,165 L 380,190" stroke="#4a7c3a" stroke-width="1.1"/>
+    <path d="M435,165 L 390,140 M435,165 L 390,160 M435,165 L 390,180 M435,165 L 390,190" stroke="#4a7c3a" stroke-width="1.1"/>
+    <!-- 极微管(两极间) -->
+    <path d="M335,165 L 435,165" stroke="#4a7c3a" stroke-width="0.9" opacity="0.5"/>
+    <!-- 染色体排列于赤道板 -->
+    <path d="M380,140 L390,148 M380,148 L390,140" stroke="#c0392b" stroke-width="3" stroke-linecap="round"/>
+    <path d="M380,160 L390,168 M380,168 L390,160" stroke="#c0392b" stroke-width="3" stroke-linecap="round"/>
+    <path d="M380,180 L390,188 M380,188 L390,180" stroke="#c0392b" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- ============ 4. 后期 (cx=530) ============ -->
+  <g>
+    <circle cx="530" cy="165" r="58" fill="#fdfbf7" stroke="#8b4513" stroke-width="2"/>
+    <!-- 中心体(两极,略分开) -->
+    <circle cx="478" cy="165" r="4" fill="#4a7c3a"/>
+    <circle cx="582" cy="165" r="4" fill="#4a7c3a"/>
+    <!-- 后期A:染色单体向两极移动 (V形,着丝粒在前) -->
+    <path d="M498,140 L503,150 L493,150 Z" fill="none" stroke="#c0392b" stroke-width="2.4" stroke-linejoin="round"/>
+    <path d="M498,165 L503,175 L493,175 Z" fill="none" stroke="#c0392b" stroke-width="2.4" stroke-linejoin="round"/>
+    <path d="M498,185 L503,195 L493,195 Z" fill="none" stroke="#c0392b" stroke-width="2.4" stroke-linejoin="round"/>
+    <path d="M562,140 L557,150 L567,150 Z" fill="none" stroke="#c0392b" stroke-width="2.4" stroke-linejoin="round"/>
+    <path d="M562,165 L557,175 L567,175 Z" fill="none" stroke="#c0392b" stroke-width="2.4" stroke-linejoin="round"/>
+    <path d="M562,185 L557,195 L567,195 Z" fill="none" stroke="#c0392b" stroke-width="2.4" stroke-linejoin="round"/>
+    <!-- 微管缩短 -->
+    <path d="M478,165 L 498,150 M478,165 L 498,165 M478,165 L 498,185" stroke="#4a7c3a" stroke-width="1.1"/>
+    <path d="M582,165 L 562,150 M582,165 L 562,165 M582,165 L 562,185" stroke="#4a7c3a" stroke-width="1.1"/>
+    <!-- 移动方向箭头 -->
+    <path d="M515,165 L 505,165" stroke="#c0392b" stroke-width="1.6" marker-end="url(#marr)"/>
+    <path d="M545,165 L 555,165" stroke="#c0392b" stroke-width="1.6" marker-end="url(#marr)"/>
+  </g>
+
+  <!-- ============ 5. 末期 (cx=675) ============ -->
+  <g>
+    <circle cx="675" cy="165" r="58" fill="#fdfbf7" stroke="#8b4513" stroke-width="2"/>
+    <!-- 两个新核膜重建 -->
+    <circle cx="650" cy="165" r="26" fill="#fff8e7" stroke="#2c2416" stroke-width="1.6"/>
+    <circle cx="700" cy="165" r="26" fill="#fff8e7" stroke="#2c2416" stroke-width="1.6"/>
+    <!-- 染色体解聚(松散细线) -->
+    <path d="M640,155 Q648,150 656,158 M642,170 Q650,175 658,168" stroke="#c0392b" stroke-width="1.6" fill="none"/>
+    <path d="M690,155 Q698,150 706,158 M692,170 Q700,175 708,168" stroke="#c0392b" stroke-width="1.6" fill="none"/>
+    <!-- 核仁重现 -->
+    <circle cx="648" cy="162" r="4" fill="#d6ccc0" stroke="#8b4513" stroke-width="0.8"/>
+    <circle cx="702" cy="162" r="4" fill="#d6ccc0" stroke="#8b4513" stroke-width="0.8"/>
+  </g>
+
+  <!-- ============ 6. 胞质分裂 (cx=820) ============ -->
+  <g>
+    <!-- 缢缩的细胞膜(花生形) -->
+    <path d="M762,165 C 762,120 762,108 795,108 C 805,108 812,132 820,140 C 828,132 835,108 845,108 C 878,108 878,120 878,165 C 878,210 878,222 845,222 C 835,222 828,198 820,190 C 812,198 805,222 795,222 C 762,222 762,210 762,165 Z" fill="#fdfbf7" stroke="#8b4513" stroke-width="2"/>
+    <!-- 收缩环 -->
+    <path d="M812,140 Q820,165 812,190 M828,140 Q820,165 828,190" stroke="#c0392b" stroke-width="1.6" fill="none"/>
+    <!-- 两个子核 -->
+    <circle cx="795" cy="165" r="20" fill="#fff8e7" stroke="#2c2416" stroke-width="1.4"/>
+    <circle cx="845" cy="165" r="20" fill="#fff8e7" stroke="#2c2416" stroke-width="1.4"/>
+    <path d="M787,158 Q795,154 803,160 M789,170 Q795,174 803,168" stroke="#c0392b" stroke-width="1.3" fill="none"/>
+    <path d="M837,158 Q845,154 853,160 M839,170 Q845,174 853,168" stroke="#c0392b" stroke-width="1.3" fill="none"/>
+  </g>
+
+  <!-- 阶段标签 -->
+  <text x="95" y="252" text-anchor="middle" font-size="14" font-weight="700" fill="#c0392b">① 前期</text>
+  <text x="95" y="271" text-anchor="middle" font-size="11" fill="#2c2416">染色体凝缩·核仁解体</text>
+  <text x="95" y="287" text-anchor="middle" font-size="11" fill="#2c2416">中心体分离·纺锤体装配</text>
+
+  <text x="240" y="252" text-anchor="middle" font-size="14" font-weight="700" fill="#c0392b">② 前中期</text>
+  <text x="240" y="271" text-anchor="middle" font-size="11" fill="#2c2416">核膜崩解·染色体被捕获</text>
+  <text x="240" y="287" text-anchor="middle" font-size="11" fill="#2c2416">向赤道板移动(双极附着)</text>
+
+  <text x="385" y="252" text-anchor="middle" font-size="14" font-weight="700" fill="#c0392b">③ 中期</text>
+  <text x="385" y="271" text-anchor="middle" font-size="11" fill="#2c2416">染色体着丝粒排列赤道板</text>
+  <text x="385" y="287" text-anchor="middle" font-size="11" fill="#2c2416">SAC 检验点监控附着</text>
+
+  <text x="530" y="252" text-anchor="middle" font-size="14" font-weight="700" fill="#c0392b">④ 后期</text>
+  <text x="530" y="271" text-anchor="middle" font-size="11" fill="#2c2416">姐妹染色单体分离</text>
+  <text x="530" y="287" text-anchor="middle" font-size="11" fill="#2c2416">后期A(拉)+后期B(推)</text>
+
+  <text x="675" y="252" text-anchor="middle" font-size="14" font-weight="700" fill="#c0392b">⑤ 末期</text>
+  <text x="675" y="271" text-anchor="middle" font-size="11" fill="#2c2416">染色体解聚·核膜重建</text>
+  <text x="675" y="287" text-anchor="middle" font-size="11" fill="#2c2416">核仁重现·纺锤体解体</text>
+
+  <text x="820" y="252" text-anchor="middle" font-size="14" font-weight="700" fill="#c0392b">⑥ 胞质分裂</text>
+  <text x="820" y="271" text-anchor="middle" font-size="11" fill="#2c2416">收缩环(肌动蛋白+肌球蛋白)</text>
+  <text x="820" y="287" text-anchor="middle" font-size="11" fill="#2c2416">缢缩形成两个子细胞</text>
+
+  <text x="460" y="318" text-anchor="middle" font-size="11" fill="#7a6e5e">动物细胞特点:有中心体(星体)·胞质分裂靠收缩环缢缩(植物靠细胞板)　|　后期分离由 APC/C→separase→切割 cohesin 触发</text>
+</svg>

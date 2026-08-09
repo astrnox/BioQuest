@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>生物奥赛笔记 · 联赛精简版</title>
+<style>
+:root {
+  --bg: #fdfbf7;
+  --bg2: #f5f0e8;
+  --ink: #2c2416;
+  --muted: #7a6e5e;
+  --rule: #d6ccc0;
+  --accent: #c0392b;
+  --accent2: #8b4513;
+  --highlight: #fff3cd;
+  --note-bg: #fff8e7;
+  --note-border: #e8c84a;
+  --green-bg: #f0f7f4;
+  --green-border: #7cb342;
+  --green-text: #3e6b3e;
+  --green-label: #558b2f;
+  --summary-from: #fdf2f2;
+  --summary-to: #fef9e7;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Noto Sans CJK SC", "WenQuanYi Micro Hei", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  font-size: 16px; line-height: 1.8;
+  color: var(--ink); background: var(--bg);
+}
+
+/* ===== COVER ===== */
+.cover {
+  text-align: center; padding: 3rem 2rem 2rem;
+  border-bottom: 3px double var(--rule);
+  background: linear-gradient(180deg, var(--bg2) 0%, var(--bg) 100%);
+}
+.cover .ch-num { font-size: 1rem; color: var(--accent); letter-spacing: 0.15em; }
+.cover h1 { font-size: 2.2rem; font-weight: 800; color: var(--ink); letter-spacing: 0.03em; }
+.cover .subtitle { font-size: 1rem; color: var(--muted); margin-top: 0.3rem; }
+.cover .meta { margin-top: 1rem; font-size: 0.85rem; color: var(--muted); display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
+
+.main-layout { max-width: 960px; margin: 0 auto; padding: 0 1.5rem 3rem; }
+
+/* ===== CHAPTER CARD ===== */
+.chapter-card {
+  margin: 2rem 0;
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+}
+.chapter-header {
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: space-between;
+  user-select: none;
+  transition: background 0.2s;
+}
+.chapter-header:hover { background: var(--bg2); }
+.chapter-header .ch-title { flex: 1; }
+.chapter-header .ch-num {
+  font-size: 0.8rem; color: var(--accent); font-weight: 700; letter-spacing: 0.08em;
+}
+.chapter-header h2 {
+  font-size: 1.3rem; font-weight: 800; color: var(--ink); margin-top: 0.1rem;
+}
+.chapter-header .ch-count {
+  font-size: 0.85rem; color: var(--muted); white-space: nowrap;
+}
+.chapter-header .toggle {
+  font-size: 1.2rem; color: var(--muted); margin-left: 1rem; transition: transform 0.3s;
+}
+.chapter-header.open .toggle { transform: rotate(90deg); }
+
+.chapter-body {
+  display: none;
+  border-top: 1px solid var(--rule);
+  padding: 0.5rem 1.5rem 1rem;
+}
+.chapter-body.open { display: block; }
+
+/* Section group */
+.sec-group { margin: 0.8rem 0; }
+.sec-group .sec-label {
+  font-size: 0.8rem; font-weight: 700; color: var(--accent2);
+  padding: 0.3rem 0; border-bottom: 1px dashed var(--rule);
+  margin-bottom: 0.4rem;
+}
+.sec-group ul {
+  list-style: none; padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 0.15rem 1rem;
+}
+.sec-group li { font-size: 0.9rem; }
+.sec-group a {
+  color: var(--ink); text-decoration: none;
+  display: block; padding: 0.25rem 0.5rem; border-radius: 4px;
+  transition: background 0.15s;
+}
+.sec-group a:hover {
+  background: var(--highlight);
+  color: var(--accent);
+}
+.sec-group a .file-num {
+  color: var(--muted); font-size: 0.75rem; margin-right: 0.5rem;
+}
+
+/* ===== STATS ===== */
+.stats {
+  display: flex; gap: 1.5rem; justify-content: center;
+  flex-wrap: wrap; margin: 1.5rem 0;
+}
+.stat-item {
+  text-align: center;
+  padding: 0.8rem 1.5rem;
+  background: var(--bg2);
+  border-radius: 8px;
+  border: 1px solid var(--rule);
+}
+.stat-item .num {
+  font-size: 2rem; font-weight: 800; color: var(--accent);
+}
+.stat-item .label {
+  font-size: 0.8rem; color: var(--muted); margin-top: 0.2rem;
+}
+
+/* ===== ACCESSIBILITY ===== */
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  margin-top: 3rem; padding: 1.5rem;
+  border-top: 1px solid var(--rule);
+  text-align: center; font-size: 0.8rem;
+  color: var(--muted);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .cover h1 { font-size: 1.5rem; }
+  .sec-group ul { grid-template-columns: 1fr; }
+  .main-layout { padding: 0 0.8rem; }
+  .chapter-header { flex-wrap: wrap; }
+}
+
+/* ===== PRINT ===== */
+@media print {
+  body { font-size: 12pt; color: #000; background: #fff; }
+  .cover { padding: 1rem; border-bottom: 1px solid #000; background: none; }
+  .cover h1 { font-size: 18pt; }
+  .chapter-body { display: block !important; }
+  .chapter-header .toggle { display: none; }
+  .chapter-card { break-inside: avoid; border: 1px solid #ccc; }
+  a { color: #000; text-decoration: underline; }
+  footer { border-top: 1px solid #000; }
+}
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div class="ch-num">BIOLOGY OLYMPIAD · 联赛精简版</div>
+  <h1>生物奥赛笔记 · 联赛精简版</h1>
+  <div class="subtitle">联赛精简版 · 保留全部联赛考点与必要示意图，删除超出联赛范围的拓展内容与非必要图片 · 涵盖生化/细胞/代谢/细胞生命历程/遗传/微生物/生态与植物/进化/植物生理/人体解剖与无脊椎/脊椎动物分类/动物生理与行为/系统学/合成生物学 · 共 15 章 191 节</div>
+  <div class="stats">
+    <div class="stat-item"><div class="num">15</div><div class="label">章</div></div>
+    <div class="stat-item"><div class="num">191</div><div class="label">节</div></div>
+    <div class="stat-item"><div class="num">36</div><div class="label">示意图</div></div>
+  </div>
+</div>
+
+<div class="main-layout" id="toc"></div>
+
+<footer>
+  生物奥赛笔记 · 优化版 · 参考王镜岩《生物化学》、翟中和《细胞生物学》、戴灼华《遗传学》、周德庆《微生物学教程》、孙儒泳《基础生态学》、沈银柱《进化生物学》等大学教材及教师授课PPT · OpenStax / CC BY 配图 · 2026年7月
+</footer>
+
+<script>
+// Chapter data
+const data = [
+  {
+    ch: 1, title: '生物化学',
+    sections: [
+      { label: '第一节 生物大分子', files: [
+        ['1-1', '糖类'],
+        ['1-2', '脂类'],
+        ['1-3', '蛋白质·氨基酸'],
+        ['1-4', '蛋白质·结构层次'],
+        ['1-5', '酶'],
+        ['1-6', '核酸'],
+      ]},
+      { label: '第二节 深化与拓展（联赛拔高）', files: [
+        ['1-7', '酶动力学与抑制'],
+        ['1-8', '糖代谢与生物氧化'],
+        ['1-9', '脂质代谢与类固醇'],
+        ['1-10', '氨基酸代谢与蛋白质生物合成'],
+        ['1-11', '核酸与分子生物学核心技术'],
+        ['1-12', '联赛真题汇编·生化'],
+        ['1-13', '生命分子基础综合'],
+        ['1-14', '生物技术'],
+      ]}
+    ]
+  },
+  {
+    ch: 2, title: '细胞生物学',
+    sections: [
+      { label: '第一节 细胞概述', files: [
+        ['1-1', '细胞生物学发展简史'],
+        ['1-2', '细胞的类型与基本结构'],
+      ]}
+    ]
+  },
+  {
+    ch: 3, title: '细胞的结构与功能',
+    sections: [
+      { label: '第一节 细胞结构与功能', files: [
+        ['2-1', '细胞膜'],
+        ['2-2a', '细胞质基质与内质网'],
+        ['2-2b', '高尔基体与溶酶体'],
+        ['2-3', '线粒体'],
+        ['2-4', '叶绿体与质体'],
+        ['2-5', '细胞骨架'],
+        ['2-6', '细胞核与染色质'],
+        ['2-7', '蛋白质分选与膜泡运输'],
+        ['2-8', '核糖体'],
+        ['2-9', '细胞信号转导'],
+        ['2-10', '细胞连接与细胞外基质'],
+      ]}
+    ]
+  },
+  {
+    ch: 4, title: '细胞代谢',
+    sections: [
+      { label: '第一节 物质运输与呼吸', files: [
+        ['3-1', '物质跨膜运输'],
+        ['3-2', '细胞呼吸·糖酵解'],
+        ['3-3', '细胞呼吸·三羧酸循环与氧化磷酸化'],
+        ['3-4', '光合作用·概述与光反应'],
+        ['3-5', '光合作用·暗反应与C3-C4-CAM'],
+      ]},
+      { label: '第二节 基因表达与代谢', files: [
+        ['4-1', '蛋白质代谢与氨基酸代谢'],
+        ['4-2', '核酸代谢与基因表达概述'],
+        ['4-3', '基因表达·翻译'],
+        ['4-4', '基因表达·转录与调控'],
+      ]}
+    ]
+  },
+  {
+    ch: 5, title: '细胞的生命历程',
+    sections: [
+      { label: '第一节 细胞增殖及其调控', files: [
+        ['1', '细胞增殖及其调控'],
+      ]},
+      { label: '第二节 细胞生长与分化', files: [
+        ['2', '细胞生长与分化'],
+      ]},
+      { label: '第三节 细胞的衰老与死亡', files: [
+        ['3', '细胞衰老与死亡'],
+      ]},
+      { label: '第四节 细胞癌变', files: [
+        ['4', '细胞癌变'],
+      ]}
+    ]
+  },
+  {
+    ch: 6, title: '遗传学',
+    sections: [
+      { label: '第一节 遗传学基础与拓展', files: [
+        ['1-1', '孟德尔遗传定律'],
+        ['1-2', '染色体遗传与连锁交换'],
+        ['1-3', '分子遗传学基础'],
+        ['1-4', '基因表达调控'],
+        ['1-5', '群体遗传学与进化遗传'],
+        ['1-6', '数量性状遗传'],
+        ['1-7', '细菌和噬菌体遗传'],
+        ['1-8', '核外遗传与表观遗传'],
+        ['1-9', '遗传学真题汇编'],
+      ]}
+    ]
+  },
+  {
+    ch: 7, title: '微生物学',
+    sections: [
+      { label: '第一节 微生物学', files: [
+        ['1-0', '微生物学绪论与分类总论'],
+        ['1-1', '病毒'],
+        ['1-2', '原核生物·细菌'],
+        ['1-3', '原核生物·蓝藻与古菌'],
+        ['1-4', '真菌'],
+        ['1-5', '微生物营养生长与代谢'],
+        ['1-6', '微生物遗传与基因工程'],
+        ['1-7', '微生物生态'],
+        ['1-8', '微生物感染与免疫'],
+      ]}
+    ]
+  },
+  {
+    ch: 8, title: '生态学与植物界',
+    sections: [
+      { label: '第一节 生态学', files: [
+        ['1-0', '生物与环境(生态因子)'],
+        ['1-1', '种群生态学'],
+        ['1-2', '种间关系'],
+        ['1-3', '群落生态学'],
+        ['1-4', '生态系统'],
+        ['1-5', '大尺度生态与保护生物学'],
+      ]},
+      { label: '第二节 植物界的类群与分类', files: [
+        ['0', '藻类植物'],
+        ['3-1', '植物界的基本类群和分类'],
+      ]},
+      { label: '第三节 植物解剖', files: [
+        ['2-1', '植物组织'],
+        ['2-2', '根的解剖结构'],
+        ['2-3', '茎的解剖结构'],
+        ['2-4', '叶的解剖结构'],
+        ['2-5', '花果实种子与繁殖'],
+      ]}
+    ]
+  },
+  {
+    ch: 9, title: '进化生物学',
+    sections: [
+      { label: '第一节 进化', files: [
+        ['1-1', '进化理论的发展'],
+        ['1-2', '物种形成'],
+        ['1-3', '分子进化与系统发育'],
+        ['1-4', '生物信息学基础'],
+      ]}
+    ]
+  },
+  {
+    ch: 10, title: '植物生理',
+    sections: [
+      { label: '第一节 植物代谢', files: [
+        ['1-1', '植物体的水分代谢'],
+        ['1-2', '植物的矿质营养'],
+        ['1-3', '植物体的气体交换'],
+        ['1-4', '植物体内的物质运输'],
+      ]},
+      { label: '第二节 植物生长发育', files: [
+        ['2-1', '种子的萌发和幼苗的形成'],
+        ['2-2', '植物的繁殖'],
+        ['2-3', '植物生长发育的规律和特点'],
+        ['2-4', '植物激素与植物生长物质'],
+        ['2-5', '植物的成熟、衰老与抗性生理'],
+      ]}
+    ]
+  },
+  {
+    ch: 11, title: '人体/哺乳动物解剖 + 动物学（无脊椎）',
+    sections: [
+      { label: '第一节 人体概述', files: [
+        ['1-1', '人体的分部'],
+        ['1-2', '人体的体腔'],
+      ]},
+      { label: '第二节 基本组织', files: [
+        ['2-1', '上皮组织'],
+        ['2-2', '结缔组织'],
+        ['2-3', '肌肉组织'],
+        ['2-4', '神经组织'],
+      ]},
+      { label: '第三节 皮肤', files: [
+        ['3-1', '皮肤的结构'],
+        ['3-2', '皮肤的附属器'],
+        ['3-3', '皮肤及其衍生物的比较解剖'],
+      ]},
+      { label: '第四节 运动系统', files: [
+        ['4-1', '骨'],
+        ['4-2', '骨连结'],
+        ['4-3', '骨骼肌'],
+        ['4-4', '脊椎动物骨骼系统的比较解剖'],
+      ]},
+      { label: '第五节 循环系统', files: [
+        ['5-1', '血管'],
+        ['5-2', '心脏'],
+        ['5-3', '心脏与动脉弓的演化'],
+        ['5-4', '淋巴系统'],
+      ]},
+      { label: '第六节 免疫系统', files: [
+        ['6-1', '免疫细胞'],
+        ['6-2', '淋巴器官'],
+        ['6-3', '免疫应答'],
+      ]},
+      { label: '第七节 消化系统', files: [
+        ['7-1', '消化管'],
+        ['7-2', '消化腺'],
+        ['7-3', '牙齿与胃的演化'],
+      ]},
+      { label: '第八节 呼吸系统', files: [
+        ['8-1', '呼吸道的组成'],
+        ['8-2', '呼吸器官的演化'],
+      ]},
+      { label: '第九节 泌尿系统', files: [
+        ['9-1', '泌尿系统组成'],
+        ['9-2', '肾脏的演化'],
+      ]},
+      { label: '第十节 生殖系统', files: [
+        ['10-1', '男性生殖系统'],
+        ['10-2', '女性生殖系统'],
+        ['10-3', '生殖系统的比较解剖'],
+      ]},
+      { label: '第十一节 内分泌', files: [
+        ['11-1', '内分泌系统'],
+      ]},
+      { label: '第十二节 感觉器官', files: [
+        ['12-1', '感受器'],
+        ['12-2', '视觉器官——眼'],
+        ['12-3', '前庭蜗器——耳'],
+        ['12-4', '感觉器官的比较解剖'],
+      ]},
+      { label: '第十三节 神经系统', files: [
+        ['13-1', '神经系统概述'],
+        ['13-2', '中枢神经系统——脊髓'],
+        ['13-3', '中枢神经系统——脑'],
+        ['13-4', '脑膜、脑脊液与血脑屏障'],
+        ['13-5', '周围神经系统'],
+        ['13-6', '传导通路'],
+        ['13-7', '神经系统的比较解剖与演化'],
+      ]},
+      { label: '第十四节 动物学（无脊椎）', files: [
+        ['14-1', '原生动物门'],
+        ['14-2', '腔肠动物门'],
+        ['14-3', '扁形动物门与环节动物门'],
+        ['14-4', '软体动物门'],
+        ['14-5', '节肢动物门·甲壳亚门'],
+        ['14-6', '节肢动物门·昆虫纲'],
+        ['14-7', '棘皮动物门与无脊椎动物总结'],
+        ['14-8', '原索动物与无脊椎小结'],
+      ]}
+    ]
+  },
+  {
+    ch: 12, title: '动物界的基本类群和分类',
+    sections: [
+      { label: '第一节 公式参考', files: [
+        ['1-1', '生物奥赛公式大全与推导'],
+      ]},
+      { label: '第二节 脊索动物', files: [
+        ['12-1', '脊索动物门的主要特征'],
+        ['12-2', '尾索动物亚门'],
+        ['12-3', '头索动物亚门'],
+        ['12-4', '脊椎动物亚门概述'],
+        ['12-5', '脊索动物起源'],
+      ]},
+      { label: '第三节 圆口纲', files: [
+        ['13-1', '圆口纲的主要特征'],
+        ['13-2', '圆口纲分类'],
+      ]},
+      { label: '第四节 鱼类', files: [
+        ['14-1', '鱼类主要特征'],
+        ['14-2', '软骨鱼纲'],
+        ['14-3', '硬骨鱼纲'],
+        ['14-4', '软骨鱼与硬骨鱼比较'],
+      ]},
+      { label: '第五节 两栖纲', files: [
+        ['15-1', '水生到陆生的转变'],
+        ['15-2', '两栖纲的主要特征'],
+        ['15-3', '两栖纲分类'],
+      ]},
+      { label: '第六节 爬行纲', files: [
+        ['16-1', '爬行纲的主要特征'],
+        ['16-2', '羊膜卵'],
+        ['16-3', '爬行纲分类'],
+      ]},
+      { label: '第七节 鸟纲', files: [
+        ['17-1', '鸟纲适应飞翔的特征'],
+        ['17-2', '鸟纲分类'],
+        ['17-3', '鸟类繁殖与起源'],
+      ]},
+      { label: '第八节 哺乳纲', files: [
+        ['18-1', '哺乳纲的主要特征'],
+        ['18-2', '哺乳纲的分类'],
+        ['18-3', '哺乳动物的起源'],
+      ]},
+    ]
+  },
+  {
+    ch: 13, title: '动物生理与行为',
+    sections: [
+      { label: '第一节 神经与肌肉', files: [
+        ['1-1', '动物身体的支持'],
+        ['1-2', '动物身体的运动'],
+        ['1-3', '神经生理：静息电位与动作电位'],
+        ['1-4', '肌肉收缩的生理机制'],
+      ]},
+      { label: '第二节 各系统生理', files: [
+        ['2-1', '消化和营养'],
+        ['2-2', '呼吸'],
+        ['2-3', '呼吸生理学'],
+        ['2-4', '动物体内的运输'],
+        ['2-5', '循环生理学'],
+        ['2-6', '排泄和渗透调节'],
+        ['2-7', '渗透调节生理学'],
+        ['2-8', '能量代谢和体温'],
+      ]},
+      { label: '第三节 生殖与发育', files: [
+        ['3-1', '生殖的概述'],
+        ['3-2', '雄性哺乳动物的生殖机能'],
+        ['3-3', '雌性哺乳动物的生殖机能'],
+        ['3-4', '哺乳动物受精、着床、妊娠与哺乳'],
+        ['3-5', '生殖生理学'],
+        ['3-6', '发育生理学'],
+      ]},
+      { label: '第四节 调节与稳态', files: [
+        ['4-1', '自身调节'],
+        ['4-2', '神经调节'],
+        ['4-3', '体液调节'],
+        ['4-4', '内分泌生理学'],
+        ['4-5', '免疫调节'],
+        ['4-6', '生命活动的分级调节与联合调节'],
+        ['4-7', '稳态生理学'],
+      ]},
+      { label: '第五节 动物行为学', files: [
+        ['5-1', '动物行为学'],
+      ]},
+    ]
+  },
+  {
+    ch: 14, title: '生物系统学基础',
+    sections: [
+      { label: '第一节 生物多样性', files: [
+        ['1', '生物多样性'],
+      ]},
+      { label: '第二节 生物分类学的发展', files: [
+        ['2', '生物分类学的发展'],
+      ]},
+      { label: '第三节 生物分类等级和生物系统树', files: [
+        ['3', '生物分类等级和生物系统树'],
+      ]},
+      { label: '第四节 生物的分界', files: [
+        ['4', '生物的分界'],
+      ]}
+    ]
+  },
+  {
+    ch: 15, title: '合成生物学',
+    sections: [
+      { label: '第一节 合成生物学概述', files: [
+        ['1', '合成生物学概述'],
+      ]},
+      { label: '第二节 合成生物学基础研究经典实例', files: [
+        ['2', '合成生物学基础研究经典实例'],
+      ]},
+      { label: '第三节 合成生物学应用研究经典实例', files: [
+        ['3', '合成生物学应用研究经典实例'],
+      ]}
+    ]
+  },
+];
+
+// Render
+function render() {
+  const toc = document.getElementById('toc');
+  const isMobile = window.innerWidth < 768;
+
+  data.forEach((ch, i) => {
+    const card = document.createElement('div');
+    card.className = 'chapter-card';
+
+    const header = document.createElement('div');
+    header.className = 'chapter-header' + (isMobile ? '' : ' open');
+    header.innerHTML = `
+      <div class="ch-title">
+        <div class="ch-num">CHAPTER ${ch.ch}</div>
+        <h2>第${ch.ch}章 ${ch.title}</h2>
+      </div>
+      <div class="ch-count">${ch.sections.reduce((s,sec) => s + sec.files.length, 0)} 节</div>
+      <span class="toggle">▶</span>
+    `;
+
+    const body = document.createElement('div');
+    body.className = 'chapter-body' + (isMobile ? '' : ' open');
+
+    ch.sections.forEach(sec => {
+      const group = document.createElement('div');
+      group.className = 'sec-group';
+      group.innerHTML = `
+        <div class="sec-label">${sec.label}</div>
+        <ul>
+          ${sec.files.map(f => {
+            const href = `ch${ch.ch}-${f[0]}-${f[1]}.html`;
+            // 处理中文字符：拆开 file-num 与标题，只对中文部分编码
+            const num = `${ch.ch}-${f[0]}`;
+            const safeHref = encodeURI(href).replace(/%2F/g, '/');
+            return `<li><a href="${safeHref}"><span class="file-num">${num}</span>${f[1]}</a></li>`;
+          }).join('')}
+        </ul>
+      `;
+      body.appendChild(group);
+    });
+
+    header.addEventListener('click', () => {
+      header.classList.toggle('open');
+      body.classList.toggle('open');
+    });
+
+    card.appendChild(header);
+    card.appendChild(body);
+    toc.appendChild(card);
+  });
+}
+
+render();
+</script>
+
+</body>
+</html>

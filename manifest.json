@@ -1,0 +1,58 @@
+{
+  "name": "BioQuest - 生物竞赛智能学习平台",
+  "short_name": "BioQuest",
+  "description": "基于间隔重复算法和知识图谱的生物竞赛备考平台",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#1a3a2a",
+  "theme_color": "#5a7d5c",
+  "orientation": "portrait-primary",
+  "lang": "zh-CN",
+  "dir": "ltr",
+  "scope": "./",
+  "categories": ["education", "books", "productivity"],
+  "icons": [
+    {
+      "src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiB2aWV3Qm94PSIwIDAgMTI4IDEyOCI+PHJlY3Qgd2lkdGg9IjEyOCIgaGVpZ2h0PSIxMjgiIGZpbGw9IiM1YTdkNWMiIHJ4PSIyNCIvPjxjaXJjbGUgY3g9IjY0IiBjeT0iNjQiIHI9IjMyIiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMyIvPjxjaXJjbGUgY3g9IjY0IiBjeT0iNjQiIHI9IjE2IiBmaWxsPSIjZmZmIi8+PC9zdmc+",
+      "sizes": "128x128",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOTIiIGhlaWdodD0iMTkyIiB2aWV3Qm94PSIwIDAgMTkyIDE5MiI+PHJlY3Qgd2lkdGg9IjE5MiIgaGVpZ2h0PSIxOTIiIGZpbGw9IiM1YTdkNWMiIHJ4PSIzNiIvPjxjaXJjbGUgY3g9Ijk2IiBjeT0iOTYiIHI9IjQ4IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iNCIvPjxjaXJjbGUgY3g9Ijk2IiBjeT0iOTYiIHI9IjI0IiBmaWxsPSIjZmZmIi8+PC9zdmc+",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PHJlY3Qgd2lkdGg9IjUxMiIgaGVpZ2h0PSI1MTIiIGZpbGw9IiM1YTdkNWMiIHJ4PSI5NiIvPjxjaXJjbGUgY3g9IjI1NiIgY3k9IjI1NiIgcj0iMTI4IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMTAiLz48Y2lyY2xlIGN4PSIyNTYiIGN5PSIyNTYiIHI9IjY0IiBmaWxsPSIjZmZmIi8+PC9zdmc+",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "知识卡片",
+      "short_name": "卡片",
+      "description": "复习知识卡片",
+      "url": "./index.html?page=cards",
+      "icons": [{ "sizes": "192x192", "src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4Ij48cmVjdCB3aWR0aD0iMTI4IiBoZWlnaHQ9IjEyOCIgZmlsbD0iIzVhN2Q1YyIgcng9IjI0Ii8+PC9zdmc+" }]
+    },
+    {
+      "name": "模拟练习",
+      "short_name": "练习",
+      "description": "开始模拟练习",
+      "url": "./index.html?page=quiz",
+      "icons": [{ "sizes": "192x192", "src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4Ij48cmVjdCB3aWR0aD0iMTI4IiBoZWlnaHQ9IjEyOCIgZmlsbD0iIzVhN2Q1YyIgcng9IjI0Ii8+PC9zdmc+" }]
+    },
+    {
+      "name": "智能诊断",
+      "short_name": "诊断",
+      "description": "查看学习诊断",
+      "url": "./index.html?page=diagnosis",
+      "icons": [{ "sizes": "192x192", "src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4Ij48cmVjdCB3aWR0aD0iMTI4IiBoZWlnaHQ9IjEyOCIgZmlsbD0iIzVhN2Q1YyIgcng9IjI0Ii8+PC9zdmc+" }]
+    }
+  ],
+  "prefer_related_applications": false
+}

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1a2f1d">
+  <title>电子书 - BioQuest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/globals.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/ebook.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-client.js?v=20260608d"></script>
+  <script src="js/supabase.js?v=20260608d"></script>
+</head>
+<body>
+  <header class="header">
+    <a href="index.html" class="header-brand">
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+        <circle cx="14" cy="14" r="12" stroke="#e8a830" stroke-width="2"/>
+        <circle cx="14" cy="14" r="4" fill="#e8a830"/>
+      </svg>
+      BioQuest
+    </a>
+    <nav class="header-nav">
+      <a href="index.html">首页</a>
+      <a href="study.html">学习</a>
+      <a href="cards.html">知识卡片</a>
+      <a href="quiz.html">模拟试题</a>
+      <a href="ebook.html" class="active">电子书</a>
+      <a href="resources.html">学习资源</a>
+      <a href="javascript:void(0)" id="nav-leaderboard-btn" onclick="window.open('index.html','_self');return false;">排行榜</a>
+      <a href="#/community" data-route="/community" onclick="location.href='index.html#/community';return false;">社区</a>
+      <a href="index.html#/user" class="header-auth-link" data-route="/user" onclick="location.href='index.html#/user';return false;">登录</a>
+    </nav>
+  </header>
+
+  <div class="ebook-layout">
+    <!-- 移动端侧边栏遮罩 -->
+    <div class="ebook-sidebar-overlay" id="ebookSidebarOverlay" onclick="toggleSidebar()"></div>
+
+    <!-- 左侧目录面板 -->
+    <aside class="ebook-sidebar" id="ebookSidebar">
+      <div class="ebook-sidebar-header">
+        <!-- 书籍选择器 -->
+        <div class="ebook-selector">
+          <select id="ebookBookSelector" onchange="switchBook(this.value)">
+            <option value="0">陈阅增普通生物学</option>
+            <option value="1">陈祖洞遗传学</option>
+            <option value="2">植物生理学</option>
+            <option value="3">微生物学</option>
+            <option value="4">王镜岩生物化学</option>
+            <option value="5">动物生物学</option>
+          </select>
+        </div>
+        <div class="ebook-sidebar-title" id="ebookTitle">陈阅增普通生物学</div>
+        <div class="ebook-sidebar-edition" id="ebookEdition">第4版 · 吴相钰 主编</div>
+        <div class="ebook-sidebar-progress">
+          <div class="ebook-progress-bar">
+            <div class="ebook-progress-fill" id="ebookProgressFill" style="width: 0%"></div>
+          </div>
+          <span class="ebook-progress-text" id="ebookProgressText">0%</span>
+        </div>
+      </div>
+      <div class="ebook-toc" id="ebookToc"></div>
+    </aside>
+
+    <!-- 右侧阅读区域 -->
+    <div class="ebook-main">
+      <!-- 统计栏 -->
+      <div class="ebook-stats-bar">
+        <div class="ebook-stat-item">
+          已读章节 <span class="ebook-stat-value" id="ebookStatRead">0/0</span>
+        </div>
+        <div class="ebook-stat-item">
+          阅读进度 <span class="ebook-stat-value" id="ebookStatPercent">0%</span>
+        </div>
+      </div>
+
+      <!-- 工具栏 -->
+      <div class="ebook-toolbar">
+        <button class="ebook-toolbar-toggle" onclick="toggleSidebar()" title="切换目录">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+
+        <div class="ebook-toolbar-breadcrumb" id="ebookBreadcrumb"></div>
+
+        <div class="ebook-toolbar-actions">
+          <!-- 搜索 -->
+          <div class="ebook-search-wrapper">
+            <span class="ebook-search-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"/>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+              </svg>
+            </span>
+            <input type="text" class="ebook-search-input" id="ebookSearchInput" placeholder="搜索知识点..." autocomplete="off">
+            <div class="ebook-search-results" id="ebookSearchResults"></div>
+          </div>
+
+          <!-- 字号 -->
+          <div class="ebook-font-controls">
+            <button class="ebook-font-btn" data-size="small" onclick="setFontSize('small')" title="小字号">A-</button>
+            <span class="ebook-font-size-label" id="ebookFontSizeLabel">中</span>
+            <button class="ebook-font-btn" data-size="large" onclick="setFontSize('large')" title="大字号">A+</button>
+          </div>
+
+          <!-- 夜间模式 -->
+          <button class="ebook-toolbar-btn" id="ebookNightBtn" onclick="toggleNightMode()" title="夜间模式">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+            <span>夜间</span>
+          </button>
+
+          <!-- 书签面板 -->
+          <button class="ebook-toolbar-btn" id="ebookBookmarkPanelBtn" onclick="toggleBookmarksPanel()" title="书签列表">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/>
+            </svg>
+            <span>书签</span>
+          </button>
+
+          <!-- 下载原版PDF -->
+          <button class="ebook-toolbar-btn" id="ebookPdfBtn" onclick="downloadBookPdf(typeof currentBookIndex !== 'undefined' ? currentBookIndex : 0)" title="下载原版PDF">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+              <polyline points="7 10 12 15 17 10"/>
+              <line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+            <span>PDF</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- 阅读内容 -->
+      <div class="ebook-content" id="ebookContent" data-font-size="medium">
+      </div>
+    </div>
+  </div>
+
+  <!-- 书签侧边面板 -->
+  <div class="ebook-bookmarks-panel" id="ebookBookmarksPanel">
+    <div class="ebook-bookmarks-header">
+      <div class="ebook-bookmarks-title">我的书签</div>
+      <button class="ebook-bookmarks-close" onclick="toggleBookmarksPanel()">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+    <div class="ebook-bookmarks-list" id="ebookBookmarksList"></div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-brand">BioQuest — 生物竞赛学习平台</div>
+      <div class="footer-links">
+        <a href="study.html">学习模块</a>
+        <a href="cards.html">知识卡片</a>
+        <a href="quiz.html">模拟试题</a>
+        <a href="ebook.html">电子书</a>
+        <a href="resources.html">学习资源</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/utils.js?v=20260806a"></script>
+  <script src="js/ebook.js?v=20260806a"></script>
+  <script>
+    // 初始化 Supabase 并更新认证状态
+    (async function() {
+      try {
+        if (typeof window.getSupabase === 'function' && window.getSupabase()) {
+          await window.restoreSession();
+          if (window.isLoggedIn()) {
+            var links = document.querySelectorAll('.header-auth-link');
+            for (var i = 0; i < links.length; i++) {
+              var user = window.getCurrentUser();
+              links[i].textContent = user.display_name || user.username || '用户';
+              links[i].href = 'index.html#/user';
+            }
+          }
+        }
+      } catch(e) {}
+    })();
+  </script>
+</body>
+</html>

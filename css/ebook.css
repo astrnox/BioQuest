@@ -1,0 +1,1097 @@
+/* ============================================
+ * 电子书模块样式
+ * ============================================ */
+
+/* ----- 布局 ----- */
+.ebook-layout {
+  display: flex;
+  min-height: calc(100vh - var(--header-height, 64px) - 80px);
+  padding-top: var(--header-height, 64px);
+}
+
+/* ----- 左侧目录面板 ----- */
+.ebook-sidebar {
+  width: 280px;
+  min-width: 280px;
+  background: var(--surface-primary);
+  border-right: 1px solid var(--border-light);
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: var(--header-height, 64px);
+  height: calc(100vh - var(--header-height, 64px));
+  overflow: hidden;
+  transition: width var(--transition-base), min-width var(--transition-base), transform var(--transition-base);
+  z-index: 10;
+}
+
+.ebook-sidebar.collapsed {
+  width: 0;
+  min-width: 0;
+  border-right: none;
+  overflow: hidden;
+}
+
+.ebook-sidebar-header {
+  padding: 20px 20px 12px;
+  border-bottom: 1px solid var(--border-light);
+  flex-shrink: 0;
+}
+
+.ebook-selector {
+  margin-bottom: 12px;
+}
+
+.ebook-selector select {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  background: var(--surface-secondary);
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  cursor: pointer;
+  outline: none;
+  transition: all var(--transition-fast);
+}
+
+.ebook-selector select:hover {
+  border-color: var(--color-sage);
+}
+
+.ebook-selector select:focus {
+  border-color: var(--color-sage);
+  box-shadow: 0 0 0 3px rgba(106, 141, 109, 0.15);
+}
+
+.ebook-sidebar-title {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-deep);
+  margin-bottom: 2px;
+}
+
+.ebook-sidebar-edition {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+.ebook-sidebar-progress {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ebook-progress-bar {
+  flex: 1;
+  height: 4px;
+  background: var(--surface-tertiary);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.ebook-progress-fill {
+  height: 100%;
+  background: var(--color-sage);
+  border-radius: var(--radius-full);
+  transition: width var(--transition-base);
+}
+
+.ebook-progress-text {
+  font-size: 0.72rem;
+  font-family: var(--font-mono);
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+/* 目录列表 */
+.ebook-toc {
+  flex: 1;
+  overflow-y: auto;
+  padding: 8px 0;
+}
+
+.ebook-toc::-webkit-scrollbar {
+  width: 4px;
+}
+
+.ebook-toc::-webkit-scrollbar-thumb {
+  background: var(--border-default);
+  border-radius: var(--radius-full);
+}
+
+/* 篇 */
+.ebook-toc-part {
+  margin-bottom: 4px;
+}
+
+.ebook-toc-part-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--color-deep);
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+  user-select: none;
+}
+
+.ebook-toc-part-title:hover {
+  background: var(--surface-secondary);
+}
+
+.ebook-toc-part-arrow {
+  font-size: 0.65rem;
+  transition: transform var(--transition-base);
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.ebook-toc-part.expanded .ebook-toc-part-arrow {
+  transform: rotate(90deg);
+}
+
+/* 章 */
+.ebook-toc-chapters {
+  display: none;
+}
+
+.ebook-toc-part.expanded .ebook-toc-chapters {
+  display: block;
+}
+
+.ebook-toc-chapter {
+  position: relative;
+}
+
+.ebook-toc-chapter-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 20px 8px 32px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+  position: relative;
+}
+
+.ebook-toc-chapter-title::before {
+  content: '';
+  position: absolute;
+  left: 22px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--border-light);
+}
+
+.ebook-toc-chapter-title:hover {
+  background: var(--surface-secondary);
+  color: var(--color-deep);
+}
+
+.ebook-toc-chapter-title.active {
+  color: var(--color-sage);
+  background: rgba(90, 125, 92, 0.06);
+  font-weight: 600;
+}
+
+.ebook-toc-chapter-arrow {
+  font-size: 0.6rem;
+  transition: transform var(--transition-base);
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.ebook-toc-chapter.expanded .ebook-toc-chapter-arrow {
+  transform: rotate(90deg);
+}
+
+/* 小节 */
+.ebook-toc-sections {
+  display: none;
+}
+
+.ebook-toc-chapter.expanded .ebook-toc-sections {
+  display: block;
+}
+
+.ebook-toc-section {
+  position: relative;
+}
+
+.ebook-toc-section-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 20px 6px 46px;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+  position: relative;
+}
+
+.ebook-toc-section-title::before {
+  content: '';
+  position: absolute;
+  left: 36px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--border-light);
+}
+
+.ebook-toc-section-title:hover {
+  background: var(--surface-secondary);
+  color: var(--text-secondary);
+}
+
+.ebook-toc-section-title.active {
+  color: var(--color-sage);
+  background: rgba(90, 125, 92, 0.06);
+  font-weight: 600;
+}
+
+/* 已读标记 */
+.ebook-toc-read-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-sage);
+  flex-shrink: 0;
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.ebook-toc-section-title.read .ebook-toc-read-dot {
+  opacity: 1;
+}
+
+/* 书签标记 */
+.ebook-toc-bookmark-icon {
+  font-size: 0.65rem;
+  color: var(--color-amber);
+  flex-shrink: 0;
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.ebook-toc-section-title.bookmarked .ebook-toc-bookmark-icon {
+  opacity: 1;
+}
+
+/* ----- 右侧阅读区域 ----- */
+.ebook-main {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 工具栏 */
+.ebook-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 32px;
+  background: var(--surface-primary);
+  border-bottom: 1px solid var(--border-light);
+  position: sticky;
+  top: var(--header-height, 64px);
+  z-index: 9;
+  flex-wrap: wrap;
+}
+
+.ebook-toolbar-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.ebook-toolbar-toggle:hover {
+  background: var(--surface-secondary);
+  color: var(--color-deep);
+}
+
+.ebook-toolbar-breadcrumb {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  flex: 1;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ebook-toolbar-breadcrumb span {
+  color: var(--text-secondary);
+}
+
+.ebook-toolbar-breadcrumb .current {
+  color: var(--color-deep);
+  font-weight: 500;
+}
+
+.ebook-toolbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.ebook-toolbar-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  height: 34px;
+  padding: 0 12px;
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.ebook-toolbar-btn:hover {
+  background: var(--surface-secondary);
+  color: var(--color-deep);
+  border-color: var(--border-default);
+}
+
+.ebook-toolbar-btn.active {
+  background: rgba(90, 125, 92, 0.08);
+  color: var(--color-sage);
+  border-color: var(--color-sage);
+}
+
+.ebook-toolbar-btn svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* 搜索框 */
+.ebook-search-wrapper {
+  position: relative;
+}
+
+.ebook-search-input {
+  height: 34px;
+  padding: 0 12px 0 32px;
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-sm);
+  background: var(--surface-primary);
+  color: var(--text-primary);
+  font-size: 0.82rem;
+  width: 180px;
+  transition: all var(--transition-fast);
+  outline: none;
+}
+
+.ebook-search-input:focus {
+  border-color: var(--color-sage);
+  box-shadow: 0 0 0 3px rgba(90, 125, 92, 0.1);
+  width: 240px;
+}
+
+.ebook-search-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  pointer-events: none;
+}
+
+.ebook-search-icon svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* 搜索结果下拉 */
+.ebook-search-results {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  min-width: 320px;
+  background: var(--surface-primary);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  max-height: 360px;
+  overflow-y: auto;
+  display: none;
+  z-index: 50;
+}
+
+.ebook-search-results.visible {
+  display: block;
+}
+
+.ebook-search-result-item {
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.ebook-search-result-item:last-child {
+  border-bottom: none;
+}
+
+.ebook-search-result-item:hover {
+  background: var(--surface-secondary);
+}
+
+.ebook-search-result-title {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+}
+
+.ebook-search-result-preview {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.ebook-search-result-item mark {
+  background: rgba(90, 125, 92, 0.2);
+  color: inherit;
+  padding: 0 1px;
+  border-radius: 2px;
+}
+
+.ebook-search-empty {
+  padding: 20px;
+  text-align: center;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+/* 字号控制 */
+.ebook-font-controls {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.ebook-font-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border: none;
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.ebook-font-btn:hover {
+  background: var(--surface-secondary);
+  color: var(--color-deep);
+}
+
+.ebook-font-size-label {
+  font-size: 0.72rem;
+  font-family: var(--font-mono);
+  color: var(--text-muted);
+  padding: 0 4px;
+  min-width: 28px;
+  text-align: center;
+}
+
+/* ----- 阅读内容区 ----- */
+.ebook-content {
+  flex: 1;
+  padding: 40px 48px 60px;
+  max-width: 860px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.ebook-content[data-font-size="small"] {
+  font-size: 0.9rem;
+}
+
+.ebook-content[data-font-size="medium"] {
+  font-size: 1rem;
+}
+
+.ebook-content[data-font-size="large"] {
+  font-size: 1.12rem;
+}
+
+.ebook-content[data-font-size="xlarge"] {
+  font-size: 1.24rem;
+}
+
+/* 空状态 */
+.ebook-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  text-align: center;
+}
+
+.ebook-empty-icon {
+  margin-bottom: 16px;
+  opacity: 0.4;
+}
+
+.ebook-empty-icon svg {
+  width: 64px;
+  height: 64px;
+  color: var(--color-olive);
+}
+
+.ebook-empty-text {
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+.ebook-empty-hint {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  opacity: 0.7;
+}
+
+/* 章节标题 */
+.ebook-section-header {
+  margin-bottom: 28px;
+  animation: fadeInUp 0.4s ease;
+}
+
+.ebook-section-part {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-sage);
+  margin-bottom: 6px;
+}
+
+.ebook-section-title {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--color-deep);
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.ebook-section-subtitle {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* 内容正文 */
+.ebook-section-body {
+  animation: fadeInUp 0.4s ease;
+}
+
+.ebook-section-content {
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin-bottom: 32px;
+}
+
+.ebook-section-content p {
+  margin-bottom: 16px;
+  text-indent: 2em;
+}
+
+.ebook-section-content p:first-child {
+  text-indent: 0;
+}
+
+/* 核心考点卡片 */
+.ebook-key-points {
+  margin-bottom: 32px;
+}
+
+.ebook-key-points-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-deep);
+  margin-bottom: 14px;
+}
+
+.ebook-key-points-title svg {
+  width: 18px;
+  height: 18px;
+  color: var(--color-amber);
+}
+
+.ebook-key-point-card {
+  background: #fdf8ed;
+  border: 1px solid #f0e4c8;
+  border-left: 4px solid var(--color-amber);
+  border-radius: var(--radius-sm);
+  padding: 14px 18px;
+  margin-bottom: 10px;
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  transition: box-shadow var(--transition-fast);
+}
+
+.ebook-key-point-card:hover {
+  box-shadow: var(--shadow-sm);
+}
+
+/* 关联知识点 */
+.ebook-related {
+  margin-top: 32px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-light);
+}
+
+.ebook-related-title {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+
+.ebook-related-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.ebook-related-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 500;
+  background: rgba(90, 125, 92, 0.08);
+  color: var(--color-sage);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+}
+
+.ebook-related-tag:hover {
+  background: rgba(90, 125, 92, 0.16);
+  color: var(--color-mid);
+}
+
+.ebook-related-tag svg {
+  width: 12px;
+  height: 12px;
+}
+
+/* 底部导航 */
+.ebook-section-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border-light);
+}
+
+.ebook-nav-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-sm);
+  background: var(--surface-primary);
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+  max-width: 45%;
+}
+
+.ebook-nav-btn:hover {
+  border-color: var(--color-sage);
+  color: var(--color-sage);
+  background: rgba(90, 125, 92, 0.04);
+}
+
+.ebook-nav-btn svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.ebook-nav-btn-label {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  margin-bottom: 2px;
+}
+
+.ebook-nav-btn-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 书签按钮（阅读区内） */
+.ebook-bookmark-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-full);
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  margin-bottom: 20px;
+}
+
+.ebook-bookmark-btn:hover {
+  border-color: var(--color-amber);
+  color: var(--color-amber);
+}
+
+.ebook-bookmark-btn.active {
+  background: rgba(196, 149, 106, 0.1);
+  border-color: var(--color-amber);
+  color: var(--color-amber);
+}
+
+.ebook-bookmark-btn svg {
+  width: 14px;
+  height: 14px;
+}
+
+.ebook-pdf-btn {
+  margin-left: 8px;
+  border-color: rgba(59, 130, 246, 0.3);
+  color: #3b82f6;
+}
+
+.ebook-pdf-btn:hover {
+  background: rgba(59, 130, 246, 0.1);
+  border-color: #3b82f6;
+  color: #2563eb;
+}
+
+/* ----- 书签侧边栏 ----- */
+.ebook-bookmarks-panel {
+  position: fixed;
+  top: var(--header-height, 64px);
+  right: 0;
+  width: 320px;
+  height: calc(100vh - var(--header-height, 64px));
+  background: var(--surface-primary);
+  border-left: 1px solid var(--border-light);
+  box-shadow: var(--shadow-lg);
+  z-index: 20;
+  transform: translateX(100%);
+  transition: transform var(--transition-base);
+  display: flex;
+  flex-direction: column;
+}
+
+.ebook-bookmarks-panel.visible {
+  transform: translateX(0);
+}
+
+.ebook-bookmarks-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.ebook-bookmarks-title {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-deep);
+}
+
+.ebook-bookmarks-close {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.ebook-bookmarks-close:hover {
+  background: var(--surface-secondary);
+  color: var(--text-primary);
+}
+
+.ebook-bookmarks-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 8px;
+}
+
+.ebook-bookmark-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 12px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.ebook-bookmark-item:hover {
+  background: var(--surface-secondary);
+}
+
+.ebook-bookmark-item-icon {
+  color: var(--color-amber);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.ebook-bookmark-item-icon svg {
+  width: 14px;
+  height: 14px;
+}
+
+.ebook-bookmark-item-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.ebook-bookmark-item-title {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ebook-bookmark-item-meta {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.ebook-bookmark-item-remove {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  flex-shrink: 0;
+  opacity: 0;
+  transition: all var(--transition-fast);
+}
+
+.ebook-bookmark-item:hover .ebook-bookmark-item-remove {
+  opacity: 1;
+}
+
+.ebook-bookmark-item-remove:hover {
+  background: rgba(192, 85, 58, 0.08);
+  color: var(--color-error);
+}
+
+.ebook-bookmarks-empty {
+  padding: 40px 20px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+/* ----- 阅读统计 ----- */
+.ebook-stats-bar {
+  display: flex;
+  gap: 16px;
+  padding: 12px 32px;
+  background: var(--surface-secondary);
+  border-bottom: 1px solid var(--border-light);
+  flex-wrap: wrap;
+}
+
+.ebook-stat-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.ebook-stat-value {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  color: var(--color-sage);
+}
+
+/* ----- 夜间模式 ----- */
+.ebook-night-mode .ebook-sidebar {
+  background: var(--surface-primary);
+}
+
+.ebook-night-mode .ebook-content {
+  color: var(--text-secondary);
+}
+
+.ebook-night-mode .ebook-key-point-card {
+  background: rgba(196, 149, 106, 0.08);
+  border-color: rgba(196, 149, 106, 0.2);
+  border-left-color: var(--color-amber);
+}
+
+/* ----- 响应式 ----- */
+/* 移动端侧边栏遮罩 */
+.ebook-sidebar-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  top: var(--header-height, 64px);
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 40;
+  transition: opacity var(--transition-base);
+}
+
+@media (max-width: 1024px) {
+  .ebook-sidebar-overlay.visible {
+    display: block;
+  }
+
+  .ebook-content {
+    padding: 32px 28px 48px;
+  }
+
+  .ebook-sidebar {
+    position: fixed;
+    left: 0;
+    top: var(--header-height, 64px);
+    height: calc(100vh - var(--header-height, 64px));
+    width: 280px;
+    min-width: 280px;
+    box-shadow: var(--shadow-lg);
+    transform: translateX(-100%);
+    z-index: 50;
+    transition: transform var(--transition-base);
+  }
+
+  .ebook-sidebar:not(.collapsed) {
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .ebook-toolbar {
+    padding: 10px 16px;
+    gap: 6px;
+  }
+
+  .ebook-search-input {
+    width: 120px;
+  }
+
+  .ebook-search-input:focus {
+    width: 160px;
+  }
+
+  .ebook-content {
+    padding: 24px 16px 40px;
+  }
+
+  .ebook-section-title {
+    font-size: 1.4rem;
+  }
+
+  .ebook-toolbar-breadcrumb {
+    display: none;
+  }
+
+  .ebook-stats-bar {
+    padding: 10px 16px;
+    gap: 10px;
+  }
+
+  .ebook-section-nav {
+    flex-direction: column;
+  }
+
+  .ebook-nav-btn {
+    max-width: 100%;
+  }
+
+  .ebook-bookmarks-panel {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .ebook-toolbar-btn span {
+    display: none;
+  }
+
+  .ebook-toolbar-btn {
+    padding: 0 8px;
+  }
+
+  .ebook-font-size-label {
+    display: none;
+  }
+}

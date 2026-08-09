@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 540" style="font-family: sans-serif;">
+  <rect x="0" y="0" width="860" height="540" fill="#fdfbf7"/>
+  <text x="430" y="28" text-anchor="middle" font-size="18" font-weight="700" fill="#2c2416">细菌(原核)细胞结构解剖图</text>
+  <text x="430" y="48" text-anchor="middle" font-size="11" fill="#8b4513">无典型细胞核(核区/拟核),无膜包细胞器,70S核糖体</text>
+
+  <!-- 荚膜(最外层) -->
+  <rect x="120" y="130" width="430" height="240" rx="100" fill="#d6ccc0" opacity="0.4" stroke="#8b4513" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <!-- 细胞壁 -->
+  <rect x="145" y="150" width="380" height="200" rx="80" fill="#fff8e7" stroke="#8b4513" stroke-width="2.5"/>
+  <!-- 细胞膜 -->
+  <rect x="160" y="163" width="350" height="174" rx="70" fill="#fff3cd" opacity="0.5" stroke="#c0392b" stroke-width="2"/>
+  <!-- 细胞质(内部) -->
+  <rect x="175" y="176" width="320" height="148" rx="60" fill="#f0f7f4" opacity="0.6"/>
+
+  <!-- 拟核(核区) - 纠缠的DNA,无膜 -->
+  <ellipse cx="280" cy="250" rx="75" ry="48" fill="none" stroke="#4a7c3a" stroke-width="2"/>
+  <path d="M 230,240 q 20,-15 40,-5 q 25,12 50,0 q 20,-12 40,5 q 15,15 -5,25 q -25,12 -50,5 q -30,-8 -55,2 q -20,8 -25,-10 q -3,-15 10,-22 Z" fill="none" stroke="#4a7c3a" stroke-width="1.5"/>
+  <path d="M 250,260 q 15,-10 35,-3 q 25,8 45,-5" fill="none" stroke="#4a7c3a" stroke-width="1.2"/>
+  <text x="280" y="255" text-anchor="middle" font-size="10" fill="#4a7c3a" font-weight="700">拟核(核区)</text>
+
+  <!-- 质粒(小环状DNA) -->
+  <ellipse cx="420" cy="225" rx="22" ry="12" fill="none" stroke="#c0392b" stroke-width="2"/>
+  <text x="420" y="229" text-anchor="middle" font-size="10" fill="#c0392b">质粒</text>
+
+  <!-- 70S核糖体(散布) -->
+  <circle cx="380" cy="270" r="7" fill="#8b4513" opacity="0.8"/>
+  <circle cx="398" cy="285" r="6" fill="#8b4513" opacity="0.8"/>
+  <circle cx="370" cy="295" r="6" fill="#8b4513" opacity="0.8"/>
+  <circle cx="420" cy="280" r="6" fill="#8b4513" opacity="0.8"/>
+  <circle cx="408" cy="300" r="5" fill="#8b4513" opacity="0.8"/>
+
+  <!-- 内含颗粒 -->
+  <circle cx="440" cy="255" r="9" fill="#e8c84a" opacity="0.7" stroke="#8b4513"/>
+  <circle cx="240" cy="290" r="7" fill="#e8c84a" opacity="0.6" stroke="#8b4513"/>
+
+  <!-- 鞭毛(从一端伸出) -->
+  <path d="M 165,200 Q 100,180 60,210 Q 30,230 50,260 Q 80,250 100,275 Q 70,290 95,315" fill="none" stroke="#8b4513" stroke-width="2"/>
+  <!-- 鞭毛基体 -->
+  <circle cx="172" cy="205" r="5" fill="#c0392b"/>
+  <rect x="168" y="195" width="8" height="20" fill="#c0392b" opacity="0.6"/>
+
+  <!-- 菌毛(短直) -->
+  <line x1="250" y1="170" x2="240" y2="150" stroke="#8b4513" stroke-width="1.2"/>
+  <line x1="270" y1="170" x2="268" y2="148" stroke="#8b4513" stroke-width="1.2"/>
+  <line x1="290" y1="170" x2="294" y2="150" stroke="#8b4513" stroke-width="1.2"/>
+  <line x1="310" y1="170" x2="316" y2="152" stroke="#8b4513" stroke-width="1.2"/>
+  <!-- 性菌毛(较长) -->
+  <line x1="340" y1="170" x2="345" y2="138" stroke="#c0392b" stroke-width="2"/>
+
+  <!-- 标注引线和文字 -->
+  <!-- 荚膜 -->
+  <line x1="335" y1="135" x2="470" y2="100" stroke="#7a6e5e" stroke-width="1"/>
+  <text x="475" y="95" font-size="11" fill="#8b4513" font-weight="700">荚膜/糖萼</text>
+  <text x="475" y="110" font-size="9" fill="#7a6e5e">多糖,抗吞噬,黏附</text>
+
+  <!-- 细胞壁 -->
+  <line x1="150" y1="155" x2="80" y2="115" stroke="#7a6e5e" stroke-width="1"/>
+  <text x="20" y="110" font-size="11" fill="#8b4513" font-weight="700">细胞壁</text>
+  <text x="20" y="125" font-size="9" fill="#7a6e5e">肽聚糖,维持形态</text>
+
+  <!-- 细胞膜 -->
+  <line x1="165" y1="170" x2="80" y2="180" stroke="#7a6e5e" stroke-width="1"/>
+  <text x="20" y="175" font-size="11" fill="#c0392b" font-weight="700">细胞膜</text>
+  <text x="20" y="190" font-size="9" fill="#7a6e5e">磷脂双分子层+蛋白</text>
+  <text x="20" y="203" font-size="9" fill="#7a6e5e">呼吸链/电子传递</text>
+
+  <!-- 拟核 -->
+  <line x1="280" y1="298" x2="280" y2="340" stroke="#7a6e5e" stroke-width="1"/>
+  <text x="280" y="358" text-anchor="middle" font-size="11" fill="#4a7c3a" font-weight="700">拟核(核区) Nucleoid</text>
+  <text x="280" y="373" text-anchor="middle" font-size="9" fill="#7a6e5e">环状双链DNA,无核膜</text>
+  <text x="280" y="386" text-anchor="middle" font-size="9" fill="#7a6e5e">无组蛋白(少数有类组蛋白)</text>
+
+  <!-- 质粒 -->
+  <line x1="442" y1="225" x2="540" y2="200" stroke="#7a6e5e" stroke-width="1"/>
+  <text x="545" y="195" font-size="11" fill="#c0392b" font-weight="700">质粒 Plasmid</text>
+  <text x="545" y="210" font-size="9" fill="#7a6e5e">小环状DNA,自主复制</text>
+  <text x="545" y="223" font-size="9" fill="#7a6e5e">抗药性/致病性基因</text>
+
+  <!-- 核糖体 -->
+  <line x1="398" y1="290" x2="540" y2="290" stroke="#7a6e5e" stroke-width="1"/>
+  <text x="545" y="285" font-size="11" fill="#8b4513" font-weight="700">70S核糖体</text>
+  <text x="545" y="300" font-size="9" fill="#7a6e5e">30S小亚基+50S大亚基</text>
+  <text x="545" y="313" font-size="9" fill="#7a6e5e">对氯霉素/链霉素敏感</text>
+
+  <!-- 颗粒 -->
+  <line x1="440" y1="255" x2="540" y2="245" stroke="#7a6e5e" stroke-width="1"/>
+  <text x="545" y="240" font-size="11" fill="#8b4513" font-weight="700">内含物颗粒</text>
+  <text x="545" y="255" font-size="9" fill="#7a6e5e">糖原/聚β-羟丁酸等储藏物</text>
+
+  <!-- 鞭毛 -->
+  <line x1="90" y1="250" x2="60" y2="300" stroke="#7a6e5e" stroke-width="1"/>
+  <text x="20" y="295" font-size="11" fill="#8b4513" font-weight="700">鞭毛 Flagellum</text>
+  <text x="20" y="310" font-size="9" fill="#7a6e5e">运动器官,基体+钩+丝</text>
+  <text x="20" y="323" font-size="9" fill="#7a6e5e">鞭毛蛋白(flagellin)</text>
+
+  <!-- 菌毛 -->
+  <line x1="290" y1="150" x2="290" y2="90" stroke="#7a6e5e" stroke-width="1"/>
+  <text x="250" y="80" font-size="11" fill="#8b4513" font-weight="700">菌毛 Fimbriae</text>
+  <text x="250" y="68" font-size="9" fill="#7a6e5e">短细,黏附宿主</text>
+
+  <!-- 性菌毛 -->
+  <line x1="345" y1="138" x2="380" y2="90" stroke="#7a6e5e" stroke-width="1"/>
+  <text x="385" y="80" font-size="11" fill="#c0392b" font-weight="700">性菌毛(接合)</text>
+  <text x="385" y="68" font-size="9" fill="#7a6e5e">传递DNA(接合)</text>
+
+  <!-- 底部要点 -->
+  <rect x="20" y="420" width="820" height="105" rx="6" fill="#fdf2f2" stroke="#c0392b" stroke-width="1.2"/>
+  <text x="35" y="444" font-size="12" font-weight="700" fill="#c0392b">原核细胞 vs 真核细胞 关键区别</text>
+  <text x="35" y="466" font-size="10" fill="#2c2416">·核区无核膜、无核仁 → 拟核(nucleoid); DNA环状裸露(无组蛋白缠绕成核小体)</text>
+  <text x="35" y="486" font-size="10" fill="#2c2416">·无膜包细胞器(无线粒体/叶绿体/内质网/高尔基体); 仅有70S核糖体(30S+50S)</text>
+  <text x="35" y="506" font-size="10" fill="#2c2416">·细胞壁含肽聚糖(真核真菌为几丁质,植物为纤维素); 鞭毛结构为"旋转马达"而非真核的"9+2"微管滑动</text>
+</svg>

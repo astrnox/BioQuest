@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第十五章 合成生物学 · 第一节 合成生物学概述 — 生物集训营笔记</title>
+<style>
+:root {
+  --bg: #fdfbf7; --bg2: #f5f0e8; --ink: #2c2416; --muted: #7a6e5e;
+  --rule: #d6ccc0; --accent: #c0392b; --accent2: #8b4513;
+  --highlight: #fff3cd; --note-bg: #fff8e7; --note-border: #e8c84a;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: "Noto Sans CJK SC", "WenQuanYi Micro Hei", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  font-size: 16px; line-height: 1.8; color: var(--ink); background: var(--bg);
+}
+.cover { text-align: center; padding: 4rem 2rem 3rem; border-bottom: 3px double var(--rule); margin-bottom: 0; background: linear-gradient(180deg, var(--bg2) 0%, var(--bg) 100%); }
+.cover .ch-num { font-size: 1rem; color: var(--accent); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 0.3rem; }
+.cover h1 { font-size: 2.2rem; font-weight: 800; color: var(--ink); margin-bottom: 0.5rem; letter-spacing: 0.03em; }
+.cover .subtitle { font-size: 1rem; color: var(--muted); }
+.cover .meta { margin-top: 1.2rem; font-size: 0.85rem; color: var(--muted); display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
+.main-layout { max-width: 1060px; margin: 0 auto; padding: 0 1.5rem; }
+.section-header { border-bottom: 3px solid var(--accent); padding: 2rem 0 0.6rem; margin-bottom: 1.5rem; }
+.section-header .sec-num { font-size: 0.9rem; color: var(--accent); font-weight: 700; letter-spacing: 0.08em; }
+.section-header h2 { font-size: 1.6rem; font-weight: 800; color: var(--ink); margin-top: 0.15rem; }
+.topic-header { margin: 2rem 0 1rem; padding-left: 0.8rem; border-left: 4px solid var(--accent); }
+.topic-header h3 { font-size: 1.25rem; font-weight: 700; color: var(--ink); }
+.subtopic-header { margin: 1.5rem 0 0.8rem; }
+.subtopic-header h4 { font-size: 1.1rem; font-weight: 700; color: var(--accent2); }
+.note-block { display: flex; gap: 1.5rem; margin-bottom: 1.2rem; align-items: flex-start; }
+.note-content { flex: 1; padding: 0.8rem 1rem; background: var(--bg2); border-radius: 6px; border: 1px solid var(--rule); }
+.note-content p { margin-bottom: 0.5rem; }
+.note-content p:last-child { margin-bottom: 0; }
+.note-content ul, .note-content ol { padding-left: 1.5rem; margin: 0.4rem 0; }
+.note-content li { margin-bottom: 0.25rem; }
+.annotation { width: 240px; flex-shrink: 0; background: var(--note-bg); border: 1px solid var(--note-border); border-radius: 6px; padding: 0.6rem 0.8rem; font-size: 0.82rem; line-height: 1.6; color: var(--accent2); align-self: flex-start; }
+.annotation::before { content: "📝 批注"; display: block; font-size: 0.7rem; font-weight: 700; color: var(--accent); letter-spacing: 0.06em; margin-bottom: 0.3rem; text-transform: uppercase; }
+.u { text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 2px; text-underline-offset: 3px; font-weight: 600; }
+.u-double { text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 2px; text-underline-offset: 3px; text-decoration-style: double; font-weight: 700; }
+.key-point { background: var(--highlight); padding: 0.1em 0.3em; border-radius: 3px; font-weight: 600; border-bottom: 1.5px solid var(--accent); }
+.table-wrap { overflow-x: auto; overflow-y: auto; max-height: 600px; margin: 1.5rem 0; border: 1px solid var(--rule); border-radius: 6px; }
+table { width: 100%; border-collapse: collapse; font-size: 0.9rem; min-width: 800px; }
+table thead th { background: var(--accent); color: #fff; padding: 0.6rem 0.8rem; font-weight: 700; text-align: center; white-space: nowrap; }
+table tbody td { padding: 0.5rem 0.8rem; border-bottom: 1px solid var(--rule); vertical-align: top; }
+table tbody tr:nth-child(even) { background: var(--bg2); }
+table tbody tr:last-child td { border-bottom: none; }
+table tbody td:first-child { font-weight: 600; white-space: nowrap; text-align: center; background: var(--bg2); }
+figcaption { text-align: center; font-size: 0.85rem; color: var(--muted); margin-top: 0.4rem; }
+.diagram { margin: 1.2rem 0; text-align: center; }
+.diagram img { max-width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 4px; }
+.summary-box { background: linear-gradient(135deg, #fdf2f2 0%, #fef9e7 100%); border: 2px solid var(--accent); border-radius: 8px; padding: 1.2rem 1.5rem; margin: 2rem 0; }
+.summary-box h4 { color: var(--accent); font-size: 1rem; margin-bottom: 0.6rem; }
+.expand-block { background: #f0f7f4; border: 1px dashed #7cb342; border-radius: 6px; padding: 0.5rem 0.9rem; margin: 0.6rem 0 0; font-size: 0.83rem; line-height: 1.6; color: #3e6b3e; }
+.expand-block::before { content: "🔍 拓展"; display: block; font-size: 0.7rem; font-weight: 700; color: #558b2f; letter-spacing: 0.06em; margin-bottom: 0.2rem; }
+.flow-box { background: var(--bg); border: 1px solid var(--rule); border-radius: 8px; padding: 1.2rem; margin: 1.2rem 0; text-align: center; }
+.flow-box .flow-title { font-size: 0.85rem; font-weight: 700; color: var(--accent); margin-bottom: 0.8rem; }
+.flow-row { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 0.3rem; font-size: 0.85rem; }
+.flow-item { background: var(--bg2); border: 1px solid var(--rule); border-radius: 4px; padding: 0.25rem 0.6rem; white-space: nowrap; }
+.flow-arrow { color: var(--accent); font-weight: 700; font-size: 1.1rem; }
+footer { margin-top: 3rem; padding: 1.5rem; border-top: 1px solid var(--rule); text-align: center; font-size: 0.8rem; color: var(--muted); }
+@media (max-width: 768px) {
+  .cover h1 { font-size: 1.5rem; }
+  .note-block { flex-direction: column; }
+  .annotation { width: 100%; }
+  .main-layout { padding: 0 0.8rem; }
+  table { font-size: 0.78rem; min-width: 600px; }
+}
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div class="ch-num">高中生物竞赛讲义 · 集训营</div>
+  <h1>第十五章 合成生物学</h1>
+  <div class="subtitle">第一节 合成生物学概述</div>
+  <div class="meta">
+    <span>合成生物学定义</span><span>工程本质</span><span>生物部件</span><span>生物装置</span><span>生物系统</span>
+    <span>📅 整理日期: 2026年7月6日</span>
+  </div>
+</div>
+
+<div class="main-layout">
+
+<div class="section-header">
+  <div class="sec-num">第一节</div>
+  <h2>合成生物学概述</h2>
+</div>
+
+<!-- ====== 一、定义 ====== -->
+<div class="topic-header">
+  <h3>一、合成生物学的定义</h3>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><span class="u-double">合成生物学（Synthetic Biology）</span> 是按照一定的规律和已有的知识：</p>
+    <ol>
+      <li><span class="key-point">① 设计和建造</span> 新的生物零件（part）、装置（device）和系统（system）；</li>
+      <li><span class="key-point">② 重新设计</span> 已有的天然生物系统为人类的特殊目的服务。</li>
+    </ol>
+    <p>英文定义（Synthetic Biology is）：</p>
+    <blockquote style="border-left: 3px solid var(--accent); padding-left: 1rem; margin: 0.6rem 0; color: var(--accent2); font-style: italic;">
+      "A) the design and construction of new biological parts, devices, and systems, and<br>
+      B) the re-design of existing, natural biological systems for useful purposes."
+    </blockquote>
+    <p>简单地说，合成生物学是<span class="u-double">工程学思想 + 生物学知识</span>的交叉学科，旨在把生物系统当作可设计、可组装、可预测的"工程产品"来构建。</p>
+  </div>
+  <div class="annotation">
+    合成生物学 <em>≠</em> 基因工程。基因工程只是单个基因层面的剪接；合成生物学是 <strong>系统层面</strong> 的人工设计。
+  </div>
+</div>
+
+<div class="diagram">
+<svg viewBox="0 0 800 400" style="width:100%;max-width:700px;margin:1rem auto;display:block;font-family:sans-serif;">
+  <rect x="0" y="0" width="800" height="400" fill="#fdfbf7" stroke="#d6ccc0" rx="8"/>
+  <text x="400" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="#2c2416">图 15-1-1　合成生物学定义与核心概念</text>
+  <!-- center: 合成生物学 -->
+  <rect x="290" y="55" width="220" height="65" fill="#c0392b" rx="8"/>
+  <text x="400" y="82" text-anchor="middle" font-size="16" font-weight="700" fill="#fff">合成生物学</text>
+  <text x="400" y="102" text-anchor="middle" font-size="10" fill="#fff">Synthetic Biology</text>
+  <text x="400" y="114" text-anchor="middle" font-size="9" fill="#fff">工程学思想 + 生物学知识</text>
+  <!-- left: 生物学 -->
+  <rect x="30" y="55" width="180" height="65" fill="#fff8e7" stroke="#8b4513" stroke-width="1.5" rx="6"/>
+  <text x="120" y="82" text-anchor="middle" font-size="13" font-weight="700" fill="#8b4513">生物学（理解自然）</text>
+  <text x="120" y="100" text-anchor="middle" font-size="10" fill="#7a6e5e">分析已有生物系统</text>
+  <text x="120" y="114" text-anchor="middle" font-size="9" fill="#7a6e5e">"这个系统怎么运作？"</text>
+  <!-- right: 工程学 -->
+  <rect x="590" y="55" width="180" height="65" fill="#fff8e7" stroke="#1565c0" stroke-width="1.5" rx="6"/>
+  <text x="680" y="82" text-anchor="middle" font-size="13" font-weight="700" fill="#1565c0">工程学（设计构建）</text>
+  <text x="680" y="100" text-anchor="middle" font-size="10" fill="#7a6e5e">标准化、模块化、可预测</text>
+  <text x="680" y="114" text-anchor="middle" font-size="9" fill="#7a6e5e">"如何设计一个新系统？"</text>
+  <line x1="210" y1="87" x2="290" y2="87" stroke="#c0392b" stroke-width="2"/>
+  <line x1="510" y1="87" x2="590" y2="87" stroke="#c0392b" stroke-width="2"/>
+  <text x="250" y="80" text-anchor="middle" font-size="9" fill="#7a6e5e">知识基础</text>
+  <text x="550" y="80" text-anchor="middle" font-size="9" fill="#7a6e5e">方法论</text>
+  <!-- two approaches -->
+  <rect x="30" y="145" width="370" height="110" fill="#fff8e7" stroke="#c0392b" stroke-width="1.5" rx="6"/>
+  <text x="215" y="168" text-anchor="middle" font-size="13" font-weight="700" fill="#c0392b">① 设计和建造新系统</text>
+  <text x="45" y="190" font-size="10" fill="#8b4513">构建自然界不存在的生物零件、</text>
+  <text x="45" y="206" font-size="10" fill="#8b4513">装置和系统</text>
+  <text x="45" y="228" font-size="10" fill="#2c2416">例：Toggle Switch、Repressilator</text>
+  <text x="45" y="244" font-size="10" fill="#2c2416">　　人工基因线路、合成代谢通路</text>
+  <rect x="400" y="145" width="370" height="110" fill="#fff8e7" stroke="#8b4513" stroke-width="1.5" rx="6"/>
+  <text x="585" y="168" text-anchor="middle" font-size="13" font-weight="700" fill="#8b4513">② 重新设计天然系统</text>
+  <text x="415" y="190" font-size="10" fill="#8b4513">改造已有生物系统，使其服务于</text>
+  <text x="415" y="206" font-size="10" fill="#8b4513">人类特殊目的</text>
+  <text x="415" y="228" font-size="10" fill="#2c2416">例：青蒿素合成、最小基因组</text>
+  <text x="415" y="244" font-size="10" fill="#2c2416">　　底盘简化、代谢工程</text>
+  <!-- hierarchy -->
+  <rect x="30" y="275" width="740" height="105" fill="#fff8e7" stroke="#e8c84a" rx="4"/>
+  <text x="400" y="297" text-anchor="middle" font-size="13" font-weight="700" fill="#2c2416">核心层次结构（借鉴电子工程）</text>
+  <rect x="60" y="310" width="100" height="40" fill="#fdecea" stroke="#c0392b" rx="4"/>
+  <text x="110" y="330" text-anchor="middle" font-size="11" font-weight="700" fill="#c0392b">Parts</text>
+  <text x="110" y="344" text-anchor="middle" font-size="9" fill="#7a6e5e">零件（启动子等）</text>
+  <text x="170" y="333" text-anchor="middle" font-size="16" fill="#c0392b">→</text>
+  <rect x="195" y="310" width="100" height="40" fill="#fdecea" stroke="#c0392b" rx="4"/>
+  <text x="245" y="330" text-anchor="middle" font-size="11" font-weight="700" fill="#c0392b">Devices</text>
+  <text x="245" y="344" text-anchor="middle" font-size="9" fill="#7a6e5e">装置（逻辑门）</text>
+  <text x="305" y="333" text-anchor="middle" font-size="16" fill="#c0392b">→</text>
+  <rect x="330" y="310" width="100" height="40" fill="#fdecea" stroke="#c0392b" rx="4"/>
+  <text x="380" y="330" text-anchor="middle" font-size="11" font-weight="700" fill="#c0392b">Systems</text>
+  <text x="380" y="344" text-anchor="middle" font-size="9" fill="#7a6e5e">系统（生物线路）</text>
+  <text x="440" y="333" text-anchor="middle" font-size="16" fill="#c0392b">→</text>
+  <rect x="465" y="310" width="130" height="40" fill="#fdecea" stroke="#c0392b" rx="4"/>
+  <text x="530" y="330" text-anchor="middle" font-size="11" font-weight="700" fill="#c0392b">多细胞系统</text>
+  <text x="530" y="344" text-anchor="middle" font-size="9" fill="#7a6e5e">群体感应</text>
+  <text x="605" y="333" text-anchor="middle" font-size="16" fill="#c0392b">≈</text>
+  <rect x="630" y="310" width="120" height="40" fill="#e3f2fd" stroke="#1565c0" rx="4"/>
+  <text x="690" y="330" text-anchor="middle" font-size="10" font-weight="700" fill="#1565c0">晶体管→CPU</text>
+  <text x="690" y="344" text-anchor="middle" font-size="9" fill="#7a6e5e">电子工程类比</text>
+</svg>
+<figcaption>图 15-1-1　合成生物学定义与核心概念：生物学（理解）+ 工程学（设计）的交叉学科，两大任务（建造新系统/重设计天然系统），核心层次 Parts→Devices→Systems→多细胞</figcaption>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>合成生物学与若干学科的关系：</p>
+    <ul>
+      <li><span class="key-point">合成生物学 vs 基因工程</span>：基因工程以"插入单基因"为特征，合成生物学则以"组装完整生物线路/系统"为特征。</li>
+      <li><span class="key-point">合成生物学 vs 系统生物学</span>：系统生物学是"理解"已有生物系统（自下而上解析），合成生物学是"构建"新生物系统（自上而下设计）。</li>
+      <li><span class="key-point">合成生物学 vs 分子生物学</span>：分子生物学研究天然分子的结构功能，合成生物学则创造自然界中不存在的分子或线路。</li>
+      <li><span class="key-point">合成生物学 vs 进化工程（directed evolution）</span>：进化工程依赖随机突变+筛选，合成生物学依赖理性设计+模块组装。</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    合成生物学的两大基石：<strong>DNA 合成技术</strong>（可任意合成 1 kb–1 Mb 长度 DNA）+ <strong>数学建模</strong>（ODE 模型预测线路行为）。
+  </div>
+</div>
+
+<div class="diagram">
+<svg viewBox="0 0 800 420" style="width:100%;max-width:700px;margin:1rem auto;display:block;font-family:sans-serif;">
+  <rect x="0" y="0" width="800" height="420" fill="#fdfbf7" stroke="#d6ccc0" rx="8"/>
+  <text x="400" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="#2c2416">图 15-1-2　传统生物学 vs 基因工程 vs 合成生物学对比</text>
+  <!-- header -->
+  <rect x="20" y="50" width="120" height="45" fill="#2c2416" rx="4"/>
+  <text x="80" y="78" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">对比项</text>
+  <rect x="150" y="50" width="195" height="45" fill="#8b4513" rx="4"/>
+  <text x="247" y="70" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">传统生物学</text>
+  <text x="247" y="85" text-anchor="middle" font-size="9" fill="#fff">Traditional Biology</text>
+  <rect x="355" y="50" width="195" height="45" fill="#1565c0" rx="4"/>
+  <text x="452" y="70" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">基因工程</text>
+  <text x="452" y="85" text-anchor="middle" font-size="9" fill="#fff">Genetic Engineering</text>
+  <rect x="560" y="50" width="220" height="45" fill="#c0392b" rx="4"/>
+  <text x="670" y="70" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">合成生物学</text>
+  <text x="670" y="85" text-anchor="middle" font-size="9" fill="#fff">Synthetic Biology</text>
+  <!-- row 1: 核心目标 -->
+  <rect x="20" y="100" width="120" height="50" fill="#fff8e7" stroke="#d6ccc0"/>
+  <text x="80" y="130" text-anchor="middle" font-size="11" font-weight="700" fill="#2c2416">核心目标</text>
+  <text x="247" y="125" text-anchor="middle" font-size="10" fill="#2c2416">理解自然</text>
+  <text x="247" y="141" text-anchor="middle" font-size="9" fill="#7a6e5e">"怎么运作？"</text>
+  <text x="452" y="125" text-anchor="middle" font-size="10" fill="#2c2416">改造单基因</text>
+  <text x="452" y="141" text-anchor="middle" font-size="9" fill="#7a6e5e">"插入一个基因"</text>
+  <text x="670" y="125" text-anchor="middle" font-size="10" fill="#c0392b" font-weight="700">设计完整系统</text>
+  <text x="670" y="141" text-anchor="middle" font-size="9" fill="#7a6e5e">"从头构建"</text>
+  <!-- row 2: 操作层次 -->
+  <rect x="20" y="155" width="120" height="50" fill="#fff8e7" stroke="#d6ccc0"/>
+  <text x="80" y="185" text-anchor="middle" font-size="11" font-weight="700" fill="#2c2416">操作层次</text>
+  <text x="247" y="180" text-anchor="middle" font-size="10" fill="#2c2416">分子 / 细胞</text>
+  <text x="247" y="196" text-anchor="middle" font-size="9" fill="#7a6e5e">观察分析</text>
+  <text x="452" y="180" text-anchor="middle" font-size="10" fill="#2c2416">单基因</text>
+  <text x="452" y="196" text-anchor="middle" font-size="9" fill="#7a6e5e">剪接/插入</text>
+  <text x="670" y="180" text-anchor="middle" font-size="10" fill="#c0392b" font-weight="700">系统层面</text>
+  <text x="670" y="196" text-anchor="middle" font-size="9" fill="#7a6e5e">Part→Device→System</text>
+  <!-- row 3: 方法论 -->
+  <rect x="20" y="210" width="120" height="50" fill="#fff8e7" stroke="#d6ccc0"/>
+  <text x="80" y="240" text-anchor="middle" font-size="11" font-weight="700" fill="#2c2416">方法论</text>
+  <text x="247" y="235" text-anchor="middle" font-size="10" fill="#2c2416">假说驱动</text>
+  <text x="247" y="251" text-anchor="middle" font-size="9" fill="#7a6e5e">还原论</text>
+  <text x="452" y="235" text-anchor="middle" font-size="10" fill="#2c2416">限制酶切+连接</text>
+  <text x="452" y="251" text-anchor="middle" font-size="9" fill="#7a6e5e">质粒载体</text>
+  <text x="670" y="235" text-anchor="middle" font-size="10" fill="#c0392b" font-weight="700">理性设计+建模</text>
+  <text x="670" y="251" text-anchor="middle" font-size="9" fill="#7a6e5e">标准化组装</text>
+  <!-- row 4: 可预测性 -->
+  <rect x="20" y="265" width="120" height="50" fill="#fff8e7" stroke="#d6ccc0"/>
+  <text x="80" y="295" text-anchor="middle" font-size="11" font-weight="700" fill="#2c2416">可预测性</text>
+  <text x="247" y="290" text-anchor="middle" font-size="10" fill="#8b4513">低</text>
+  <text x="247" y="306" text-anchor="middle" font-size="9" fill="#7a6e5e">定性描述</text>
+  <text x="452" y="290" text-anchor="middle" font-size="10" fill="#1565c0">中</text>
+  <text x="452" y="306" text-anchor="middle" font-size="9" fill="#7a6e5e">部分可预测</text>
+  <text x="670" y="290" text-anchor="middle" font-size="10" fill="#2e7d32" font-weight="700">高（工程化）</text>
+  <text x="670" y="306" text-anchor="middle" font-size="9" fill="#7a6e5e">ODE 定量建模</text>
+  <!-- row 5: 标准化 -->
+  <rect x="20" y="320" width="120" height="50" fill="#fff8e7" stroke="#d6ccc0"/>
+  <text x="80" y="350" text-anchor="middle" font-size="11" font-weight="700" fill="#2c2416">标准化</text>
+  <text x="247" y="345" text-anchor="middle" font-size="10" fill="#c0392b">无</text>
+  <text x="247" y="361" text-anchor="middle" font-size="9" fill="#7a6e5e">各自为政</text>
+  <text x="452" y="345" text-anchor="middle" font-size="10" fill="#8b4513">部分</text>
+  <text x="452" y="361" text-anchor="middle" font-size="9" fill="#7a6e5e">载体标准化</text>
+  <text x="670" y="345" text-anchor="middle" font-size="10" fill="#c0392b" font-weight="700">核心要求</text>
+  <text x="670" y="361" text-anchor="middle" font-size="9" fill="#7a6e5e">BioBricks / iGEM</text>
+  <!-- bottom note -->
+  <rect x="20" y="380" width="760" height="30" fill="#fff8e7" stroke="#e8c84a" rx="4"/>
+  <text x="400" y="398" text-anchor="middle" font-size="10" fill="#c0392b" font-weight="700">关键区别：基因工程=单基因操作；合成生物学=系统层面理性设计+标准化+可预测建模（工程化范式）</text>
+  <text x="400" y="408" text-anchor="middle" font-size="9" fill="#7a6e5e">合成生物学的两大基石：DNA 合成技术 + 数学建模（ODE）</text>
+</svg>
+<figcaption>图 15-1-2　传统生物学（理解）、基因工程（单基因改造）、合成生物学（系统设计）三者对比：合成生物学强调标准化、可预测性和工程化范式</figcaption>
+</div>
+
+<div class="expand-block">
+  <strong>发展简史：</strong>合成生物学作为一个独立学科名词出现在 2000 年。标志性事件：① 2000 年 Gardner, Cantor, Collins <em>Nature</em> 论文"Toggle Switch"——大肠杆菌双稳态开关；② 2000 年 Elowitz, Leibler <em>Nature</em> 论文"Repressilator"——首个人工基因振荡器；③ 2003 年 iGEM（国际基因工程机器大赛）创立于 MIT；④ 2010 年 Drew Endy & Jay Keasling 等提出 BioFAB 标准化部件；⑤ 2013–2017 年 Keasling 实验室将青蒿素前体在大肠杆菌中的产率提高 1000 万倍。
+</div>
+
+<!-- ====== 二、工程本质 ====== -->
+<div class="topic-header">
+  <h3>二、合成生物学的工程本质：层次化结构设计</h3>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>生物系统的 <span class="u-double">层次化结构设计</span>（hierarchical design）是合成生物学 <span class="u-double">工程化本质</span> 的典型体现。这种"自下而上"的层次化抽象借鉴了电子工程的思想：</p>
+    <ul>
+      <li>电子工程：<span class="u">晶体管</span> → <span class="u">逻辑门</span> → <span class="u">模块</span> → <span class="u">CPU</span> → <span class="u">计算机</span></li>
+      <li>合成生物学：<span class="u">生物部件 part</span> → <span class="u">生物装置 device</span> → <span class="u">生物系统 system</span> → <span class="u">多细胞系统</span></li>
+    </ul>
+  </div>
+  <div class="annotation">
+    合成生物学的"工程化"思维是它区别于传统分子生物学的核心特征。
+  </div>
+</div>
+
+<div class="flow-box">
+  <div class="flow-title">图 15-1-1　合成生物学的层次化结构（自下而上）</div>
+  <div class="flow-row">
+    <span class="flow-item"><strong>Part</strong><br><small>生物部件<br>（启动子/基因/终止子）</small></span>
+    <span class="flow-arrow">→</span>
+    <span class="flow-item"><strong>Device</strong><br><small>生物装置<br>（双稳态开关/振荡器）</small></span>
+    <span class="flow-arrow">→</span>
+    <span class="flow-item"><strong>System</strong><br><small>生物系统<br>（代谢通路/图案）</small></span>
+    <span class="flow-arrow">→</span>
+    <span class="flow-item"><strong>Multi-cell</strong><br><small>多细胞系统<br>（菌群协同）</small></span>
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>详细说明：</p>
+    <ul>
+      <li><span class="key-point">生物部件（Part）</span>：具有一定功能的 DNA 序列。是最简单的合成生物学构件，例如：启动子（promoter）、核糖结合位点（RBS）、编码序列（CDS）、终止子（terminator）、蛋白质标签（tag）等。标准化部件在 iGEM 部件库（Parts Registry）中编号，如 BBa_J23100（组成型启动子）。</li>
+      <li><span class="key-point">生物装置（Device）</span>：不同功能的生物部件按照一定的 <em>逻辑</em> 和 <em>物理</em> 连接组成，完成特定生物学功能的单元。例如：双稳态开关、振荡器、逻辑门、传感器。</li>
+      <li><span class="key-point">生物系统（System）</span>：不同功能的 device 协同运作完成更复杂任务的集合。例如：合成代谢通路、信号传导网络、基因表达调控网络。</li>
+      <li><span class="key-point">多细胞生物系统</span>：含有多种不同功能 system 的生物体彼此通讯、互相协调组成更复杂的多细胞生物系统。例如：人工多细胞图案系统、菌群协同生物膜。</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    <strong>Part → Device → System</strong> 三层结构是合成生物学的"基本词汇表"。
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>工程化的两个核心原则：</p>
+    <ol>
+      <li><span class="key-point">标准化（standardization）</span>：每个 part 有统一的接口（如 RBS、CDS 边界序列为固定 6 bp 序列），可像积木一样插拔。</li>
+      <li><span class="key-point">解耦（decoupling）</span>：将 part 的内部序列与外部接口分离，使不同 part 可独立优化和组合。</li>
+    </ol>
+    <p>工程化的目标是：<span class="u-double">让生物系统的构建像搭乐高积木一样可预测、可重复、可扩展</span>。</p>
+  </div>
+  <div class="annotation">
+    标准化（standardization）+ 解耦（decoupling）是合成生物学的两个 <em>工程灵魂</em>，由 Drew Endy 2005 年提出。
+  </div>
+</div>
+
+<!-- ====== 三、研究内容 ====== -->
+<div class="topic-header">
+  <h3>三、合成生物学的研究内容</h3>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>合成生物学的研究内容可大致分为 <span class="u-double">六大方向</span>：</p>
+  </div>
+  <div class="annotation">
+    六个方向：<strong>分子模块化 / 底盘简化 / 基因线路 / 合成代谢 / 多细胞系统 / 数学模拟</strong>。
+  </div>
+</div>
+
+<div class="subtopic-header">
+  <h4>（一）生物分子的合成与模块化</h4>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><span class="key-point">1. 蛋白质的人工合成与模块化</span></p>
+    <ul>
+      <li>人工合成具有特定结构与功能的蛋白质；</li>
+      <li>将蛋白质的结构域（domain）作为"模块"重新组合：例如把荧光蛋白（GFP）的发光域与目标蛋白连接，构建融合蛋白；</li>
+      <li>典型应用：抗体-药物偶联（ADC）、荧光标记蛋白、酶工程。</li>
+    </ul>
+    <p><span class="key-point">2. 核酸分子的人工合成</span></p>
+    <ul>
+      <li>DNA 化学合成（固相亚磷酰胺法，可合成 200 nt 长度寡核苷酸）；</li>
+      <li>基因拼接（gene synthesis）：把多个寡核苷酸拼接成 1 kb–10 kb 的完整基因；</li>
+      <li>全基因组合成：2010 年 Venter 团队合成 <em>Mycoplasma mycoides</em> 全基因组（~1.08 Mb）；2014 年合成酵母 SynIII（3 号染色体，~0.27 Mb），是人类首次合成真核染色体。</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    全基因组合成的里程碑：<strong>Venter 2010 JCVI-syn1.0</strong>（支原体基因组）和 <strong>Bake/Shen 2014 SynIII</strong>（酵母 3 号染色体）。
+  </div>
+</div>
+
+<div class="subtopic-header">
+  <h4>（二）生物底盘的简化与模块化</h4>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><span class="key-point">生物底盘（chassis）</span>：承载合成生物学线路的宿主细胞，需要满足：</p>
+    <ul>
+      <li>生长快、易培养；</li>
+      <li>遗传操作成熟；</li>
+      <li>代谢背景清晰；</li>
+      <li>最好基因组已被 <em>最小化（minimal genome）</em>。</li>
+    </ul>
+    <p>底盘简化的目标是：<span class="u-double">去除非必需基因，使代谢流向目标产物</span>。</p>
+    <p>典型底盘：</p>
+    <ul>
+      <li><span class="key-point">大肠杆菌（<em>E. coli</em>）</span>：最常用，生长快，遗传工具丰富；2016 年 Hutchison 等构建 <em>M. mycoides</em> JCVI-syn3.0（仅 473 个基因），是最小细菌基因组。</li>
+      <li><span class="key-point">酿酒酵母（<em>S. cerevisiae</em>）</span>：真核生物底盘，适合真核蛋白表达与复杂代谢通路。</li>
+      <li><span class="key-point">枯草芽孢杆菌（<em>B. subtilis</em>）</span>：革兰氏阳性菌，适合分泌表达。</li>
+      <li><span class="key-point">蓝细菌（<em>Synechocystis</em>）</span>：光合底盘，适合太阳能驱动的生物制造。</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    <strong>JCVI-syn3.0</strong>（2016）：仅 473 个基因的最小细菌，是合成生物学"精简底盘"的里程碑。
+  </div>
+</div>
+
+<div class="subtopic-header">
+  <h4>（三）基因线路的设计与构建</h4>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>基因线路（genetic circuit）由 DNA 元件通过调控关系连接而成，能在细胞内实现 <span class="u-double">逻辑运算、信号处理、动力学行为</span> 等功能。常见类型：</p>
+    <ul>
+      <li><span class="key-point">开关（toggle switch / switch）</span>：双稳态，有两个稳定状态，可由外界信号切换。</li>
+      <li><span class="key-point">振荡器（oscillator）</span>：自激振荡环、阻尼振荡、抑制型振荡。</li>
+      <li><span class="key-point">逻辑门（logic gate）</span>：与门（AND）、或门（OR）、非门（NOT）、与非（NAND）等。</li>
+      <li><span class="key-point">计数器（counter）</span>：累积一定数量信号后激活下游。</li>
+      <li><span class="key-point">滤波器（filter）</span>：低通滤波、高通滤波、带通滤波。</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    基因线路是合成生物学的"程序设计"——线路越复杂，细胞功能越"智能"。
+  </div>
+</div>
+
+<div class="subtopic-header">
+  <h4>（四）合成代谢网络</h4>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>将外源代谢基因（来自植物、动物、微生物）整合到底盘细胞中，构建 <span class="u-double">天然不存在的代谢通路</span>，使细胞生产高价值化合物：</p>
+    <ul>
+      <li><span class="key-point">青蒿素前体（amorphadiene / artemisinic acid）</span>：Keasling 实验室 2003/2006/2008，将黄花蒿的 ADS 酶基因导入酵母，2013 年达到工业化生产规模（半合成青蒿素）。</li>
+      <li><span class="key-point">紫杉醇前体（taxadiene）</span>：红豆杉的紫杉二烯合酶基因导入酵母或大肠杆菌。</li>
+      <li><span class="key-point">生物乙醇 / 生物丁醇 / 异丁醇 / 脂肪酸 / 萜烯</span>：替代石油的生物燃料。</li>
+      <li><span class="key-point">氨基酸、有机酸、维生素</span>：食品与饲料添加剂。</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    合成代谢 = 代谢工程 + 基因线路。Jay Keasling 是该领域奠基人。
+  </div>
+</div>
+
+<div class="subtopic-header">
+  <h4>（五）多细胞系统研究</h4>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>利用 <span class="u-double">群体感应（quorum sensing, QS）</span>、扩散信号分子等机制，<span class="u-double">让不同工程菌彼此通讯</span>，协同完成单细胞难以完成的复杂任务：</p>
+    <ul>
+      <li><span class="key-point">多细胞图案</span>：不同菌在不同空间位置表达不同荧光，形成斑马纹、棋盘格等图案（Weiss Lab 2005）。</li>
+      <li><span class="key-point">生物膜（biofilm）</span>：构建具有特定结构的工程生物膜。</li>
+      <li><span class="key-point">分工合作</span>：将一条长代谢通路拆给多个菌，每个菌负责一段，最后协同完成产物合成。</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    多细胞合成生物学 = 群体感应 + 空间组织，是合成生物学的 <em>新兴前沿</em>。
+  </div>
+</div>
+
+<div class="subtopic-header">
+  <h4>（六）数学模拟和功能预测</h4>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>用 <span class="u-double">ODE（常微分方程）模型</span> 描述基因线路的动力学：</p>
+    <ul>
+      <li>每种 mRNA / 蛋白质浓度 → 一个 ODE；</li>
+      <li>调控关系（转录、翻译、降解）→ 方程中的耦合项；</li>
+      <li>用 Hill 函数描述转录调控，Michaelis-Menten 描述酶动力学；</li>
+      <li>求解得到稳态、振荡、分叉等行为。</li>
+    </ul>
+    <p>常用工具：</p>
+    <ul>
+      <li><span class="key-point">MATLAB / Octave</span>：通用数值求解。</li>
+      <li><span class="key-point">COPASI</span>：生化网络建模专用。</li>
+      <li><span class="key-point">PySB / Tellurium</span>：Python 生态。</li>
+      <li><span class="key-point">Cello</span>（2016, MIT）：从 Verilog 硬件描述语言直接编译为 DNA 序列。</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    <strong>Cello</strong>（2016, MIT）：将电子工程中的硬件描述语言（Verilog）直接编译为 DNA 序列，让生物学家像电子工程师一样设计基因线路。
+  </div>
+</div>
+
+<div class="diagram">
+<svg viewBox="0 0 984 440" style="width:100%;max-width:700px;margin:1rem auto;display:block;font-family:sans-serif;">
+  <rect x="0" y="0" width="800" height="440" fill="#fdfbf7" stroke="#d6ccc0" rx="8"/>
+  <text x="400" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="#2c2416">图 15-1-3　合成生物学关键技术时间线</text>
+  <line x1="60" y1="210" x2="740" y2="210" stroke="#c0392b" stroke-width="3"/>
+  <polygon points="740,210 728,203 728,217" fill="#c0392b"/>
+  <!-- 1953 -->
+  <circle cx="80" cy="210" r="6" fill="#8b4513"/>
+  <text x="80" y="188" text-anchor="middle" font-size="10" font-weight="700" fill="#8b4513">1953</text>
+  <text x="80" y="232" text-anchor="middle" font-size="9" fill="#2c2416">DNA 双螺旋</text>
+  <text x="80" y="245" text-anchor="middle" font-size="10" fill="#7a6e5e">Watson &amp; Crick</text>
+  <!-- 1973 -->
+  <circle cx="175" cy="210" r="6" fill="#8b4513"/>
+  <text x="175" y="188" text-anchor="middle" font-size="10" font-weight="700" fill="#8b4513">1973</text>
+  <text x="175" y="232" text-anchor="middle" font-size="9" fill="#2c2416">重组 DNA</text>
+  <text x="175" y="245" text-anchor="middle" font-size="10" fill="#7a6e5e">Cohen &amp; Boyer</text>
+  <!-- 1985 -->
+  <circle cx="265" cy="210" r="6" fill="#8b4513"/>
+  <text x="265" y="188" text-anchor="middle" font-size="10" font-weight="700" fill="#8b4513">1985</text>
+  <text x="265" y="232" text-anchor="middle" font-size="9" fill="#2c2416">PCR 技术</text>
+  <text x="265" y="245" text-anchor="middle" font-size="10" fill="#7a6e5e">Mullis</text>
+  <!-- 2000 Toggle Switch -->
+  <circle cx="355" cy="210" r="8" fill="#c0392b"/>
+  <text x="355" y="160" text-anchor="middle" font-size="10" font-weight="700" fill="#c0392b">2000</text>
+  <text x="355" y="145" text-anchor="middle" font-size="9" fill="#c0392b" font-weight="700">学科诞生</text>
+  <text x="355" y="178" text-anchor="middle" font-size="9" fill="#2c2416">Toggle Switch</text>
+  <text x="355" y="232" text-anchor="middle" font-size="9" fill="#2c2416">Repressilator</text>
+  <text x="355" y="245" text-anchor="middle" font-size="10" fill="#7a6e5e">Gardner / Elowitz</text>
+  <!-- 2003 iGEM -->
+  <circle cx="440" cy="210" r="7" fill="#c0392b"/>
+  <text x="440" y="160" text-anchor="middle" font-size="10" font-weight="700" fill="#c0392b">2003</text>
+  <text x="440" y="178" text-anchor="middle" font-size="9" fill="#2c2416">iGEM 创立</text>
+  <text x="440" y="232" text-anchor="middle" font-size="9" fill="#2c2416">BioBricks</text>
+  <text x="440" y="245" text-anchor="middle" font-size="10" fill="#7a6e5e">MIT / Endy</text>
+  <!-- 2004 -->
+  <circle cx="510" cy="210" r="6" fill="#8b4513"/>
+  <text x="510" y="188" text-anchor="middle" font-size="10" font-weight="700" fill="#8b4513">2004</text>
+  <text x="510" y="232" text-anchor="middle" font-size="9" fill="#2c2416">SB 1.0 会议</text>
+  <text x="510" y="245" text-anchor="middle" font-size="10" fill="#7a6e5e">MIT 首届</text>
+  <!-- 2010 Venter -->
+  <circle cx="580" cy="210" r="8" fill="#c0392b"/>
+  <text x="580" y="160" text-anchor="middle" font-size="10" font-weight="700" fill="#c0392b">2010</text>
+  <text x="580" y="178" text-anchor="middle" font-size="9" fill="#2c2416">JCVI-syn1.0</text>
+  <text x="580" y="232" text-anchor="middle" font-size="9" fill="#2c2416">人造支原体</text>
+  <text x="580" y="245" text-anchor="middle" font-size="10" fill="#7a6e5e">Venter</text>
+  <!-- 2013 青蒿素 -->
+  <circle cx="650" cy="210" r="7" fill="#c0392b"/>
+  <text x="650" y="160" text-anchor="middle" font-size="10" font-weight="700" fill="#c0392b">2013</text>
+  <text x="650" y="178" text-anchor="middle" font-size="9" fill="#2c2416">青蒿素工业化</text>
+  <text x="650" y="232" text-anchor="middle" font-size="9" fill="#2c2416">代谢工程</text>
+  <text x="650" y="245" text-anchor="middle" font-size="10" fill="#7a6e5e">Keasling</text>
+  <!-- 2016 Cello -->
+  <circle cx="710" cy="210" r="7" fill="#c0392b"/>
+  <text x="710" y="160" text-anchor="middle" font-size="10" font-weight="700" fill="#c0392b">2016</text>
+  <text x="710" y="178" text-anchor="middle" font-size="9" fill="#2c2416">Cello</text>
+  <text x="710" y="232" text-anchor="middle" font-size="9" fill="#2c2416">Verilog→DNA</text>
+  <text x="710" y="245" text-anchor="middle" font-size="10" fill="#7a6e5e">MIT</text>
+  <!-- era bands -->
+  <rect x="60" y="280" width="245" height="3" fill="#8b4513"/>
+  <text x="182" y="300" text-anchor="middle" font-size="11" font-weight="700" fill="#8b4513">技术奠基期</text>
+  <text x="182" y="315" text-anchor="middle" font-size="9" fill="#7a6e5e">分子生物学工具</text>
+  <rect x="320" y="280" width="180" height="3" fill="#c0392b"/>
+  <text x="410" y="300" text-anchor="middle" font-size="11" font-weight="700" fill="#c0392b">学科诞生期</text>
+  <text x="410" y="315" text-anchor="middle" font-size="9" fill="#7a6e5e">基因线路+标准化</text>
+  <rect x="515" y="280" width="225" height="3" fill="#c0392b"/>
+  <text x="627" y="300" text-anchor="middle" font-size="11" font-weight="700" fill="#c0392b">应用爆发期</text>
+  <text x="627" y="315" text-anchor="middle" font-size="9" fill="#7a6e5e">基因组合成+代谢工程</text>
+  <!-- key milestones -->
+  <rect x="20" y="340" width="760" height="85" fill="#fff8e7" stroke="#e8c84a" rx="4"/>
+  <text x="400" y="362" text-anchor="middle" font-size="12" font-weight="700" fill="#c0392b">四大里程碑（奥赛高频）</text>
+  <text x="400" y="382" text-anchor="middle" font-size="10" fill="#8b4513">① 2000 Toggle Switch（Gardner, Collins）— 双稳态开关</text>
+  <text x="400" y="398" text-anchor="middle" font-size="10" fill="#8b4513">② 2000 Repressilator（Elowitz, Leibler）— 阻遏振荡器</text>
+  <text x="400" y="414" text-anchor="middle" font-size="10" fill="#8b4513">③ 2010 JCVI-syn1.0（Venter）— 首个人造基因组生物 　④ 2013 Keasling — 青蒿素半合成工业化</text>
+</svg>
+<figcaption>图 15-1-3　合成生物学关键技术时间线：1953（DNA结构）→1973（重组DNA）→1985（PCR）→2000（学科诞生：Toggle Switch/Repressilator）→2003（iGEM）→2010（人造基因组）→2013（青蒿素）→2016（Cello）</figcaption>
+</div>
+
+<!-- ====== 总结 ====== -->
+<div class="summary-box">
+  <h4>本节核心要点</h4>
+  <ul>
+    <li><strong>合成生物学定义</strong>：① 设计和建造新的生物零件、装置和系统；② 重新设计已有的天然生物系统为人类的特殊目的服务。</li>
+    <li><strong>工程化本质</strong>：层次化结构（Part → Device → System → 多细胞系统），借鉴电子工程的模块化设计思想。</li>
+    <li><strong>标准化 + 解耦</strong>：合成生物学的两个工程灵魂（Drew Endy 2005）。</li>
+    <li><strong>六大研究方向</strong>：① 生物分子合成与模块化；② 底盘简化与模块化；③ 基因线路设计与构建；④ 合成代谢网络；⑤ 多细胞系统；⑥ 数学模拟和功能预测。</li>
+    <li><strong>四大里程碑</strong>：2000 Gardner 双稳态开关；2000 Elowitz Repressilator；2010 Venter JCVI-syn1.0；2013 Keasling 半合成青蒿素工业化。</li>
+  </ul>
+</div>
+
+</div>
+
+<footer><a href="index.html" style="color:var(--accent);text-decoration:none;margin-right:1rem;">← 返回目录</a>
+  第十五章 合成生物学 · 第一节 合成生物学概述 · 参考高中生物奥赛讲义 · 整理日期 2026年7月6日
+</footer>
+
+</body>
+</html>

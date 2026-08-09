@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 660" style="font-family: sans-serif;">
+  <rect x="0" y="0" width="880" height="660" fill="#fdfbf7"/>
+  <text x="440" y="26" text-anchor="middle" font-size="18" font-weight="700" fill="#2c2416">减数分裂各时期示意图</text>
+  <text x="440" y="46" text-anchor="middle" font-size="11" fill="#8b4513">减数分裂Ⅰ(减数分裂):同源染色体分离,2n→n | 减数分裂Ⅱ(等数分裂):姐妹染色单体分离</text>
+
+  <defs>
+    <marker id="ar" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#2c2416"/></marker>
+  </defs>
+
+  <!-- ====== 减数分裂I ====== -->
+  <rect x="20" y="60" width="840" height="270" rx="6" fill="#fff8e7" opacity="0.4"/>
+  <text x="40" y="80" font-size="13" font-weight="700" fill="#c0392b">减数分裂Ⅰ(减数分裂) — 同源染色体分离</text>
+
+  <!-- 细胞1: 前期I (联会/交叉互换) -->
+  <ellipse cx="120" cy="180" rx="55" ry="60" fill="none" stroke="#8b4513" stroke-width="1.5"/>
+  <!-- 同源染色体配对(四分体) -->
+  <path d="M 100,150 Q 108,165 100,180 Q 108,195 100,210" fill="none" stroke="#c0392b" stroke-width="3"/>
+  <path d="M 115,150 Q 123,165 115,180 Q 123,195 115,210" fill="none" stroke="#4a7c3a" stroke-width="3"/>
+  <!-- 交叉点 -->
+  <circle cx="107" cy="180" r="4" fill="#e8c84a" stroke="#8b4513"/>
+  <text x="120" y="265" text-anchor="middle" font-size="10" font-weight="700" fill="#2c2416">前期Ⅰ</text>
+  <text x="120" y="280" text-anchor="middle" font-size="10" fill="#7a6e5e">联会(synapsis)</text>
+  <text x="120" y="292" text-anchor="middle" font-size="10" fill="#7a6e5e">四分体/二价体</text>
+  <text x="120" y="304" text-anchor="middle" font-size="10" fill="#c0392b">交叉互换(粗线期)</text>
+  <text x="120" y="316" text-anchor="middle" font-size="10" fill="#7a6e5e">细→偶→粗→双→终</text>
+
+  <line x1="180" y1="180" x2="210" y2="180" stroke="#2c2416" stroke-width="1.5" marker-end="url(#ar)"/>
+
+  <!-- 细胞2: 中期I (二价体排列赤道板) -->
+  <ellipse cx="270" cy="180" rx="55" ry="60" fill="none" stroke="#8b4513" stroke-width="1.5"/>
+  <line x1="220" y1="180" x2="320" y2="180" stroke="#7a6e5e" stroke-width="0.8" stroke-dasharray="3,2"/>
+  <!-- 同源成对排在赤道板 -->
+  <path d="M 245,160 Q 253,170 245,180 Q 253,190 245,200" fill="none" stroke="#c0392b" stroke-width="3"/>
+  <path d="M 260,160 Q 268,170 260,180 Q 268,190 260,200" fill="none" stroke="#4a7c3a" stroke-width="3"/>
+  <path d="M 280,160 Q 288,170 280,180 Q 288,190 280,200" fill="none" stroke="#c0392b" stroke-width="2.5" opacity="0.7"/>
+  <path x="280" y1="160" d="M 295,160 Q 303,170 295,180 Q 303,190 295,200" fill="none" stroke="#4a7c3a" stroke-width="2.5" opacity="0.7"/>
+  <text x="270" y="265" text-anchor="middle" font-size="10" font-weight="700" fill="#2c2416">中期Ⅰ</text>
+  <text x="270" y="280" text-anchor="middle" font-size="10" fill="#7a6e5e">二价体排赤道板</text>
+  <text x="270" y="292" text-anchor="middle" font-size="10" fill="#7a6e5e">同源染色体成对</text>
+  <text x="270" y="304" text-anchor="middle" font-size="10" fill="#c0392b">着丝粒分列两侧</text>
+
+  <line x1="330" y1="180" x2="360" y2="180" stroke="#2c2416" stroke-width="1.5" marker-end="url(#ar)"/>
+
+  <!-- 细胞3: 后期I (同源分离!关键) -->
+  <ellipse cx="420" cy="180" rx="55" ry="60" fill="none" stroke="#8b4513" stroke-width="1.5"/>
+  <!-- 纺锤丝 -->
+  <line x1="395" y1="125" x2="400" y2="170" stroke="#7a6e5e" stroke-width="0.6"/>
+  <line x1="445" y1="125" x2="440" y2="170" stroke="#7a6e5e" stroke-width="0.6"/>
+  <line x1="395" y1="235" x2="400" y2="190" stroke="#7a6e5e" stroke-width="0.6"/>
+  <line x1="445" y1="235" x2="440" y2="190" stroke="#7a6e5e" stroke-width="0.6"/>
+  <!-- 同源分别移向两极(整条,姐妹未分) -->
+  <path d="M 400,150 Q 408,160 400,170 Q 408,180 400,190" fill="none" stroke="#c0392b" stroke-width="3"/>
+  <path d="M 440,150 Q 448,160 440,170 Q 448,180 440,190" fill="none" stroke="#4a7c3a" stroke-width="3"/>
+  <text x="420" y="265" text-anchor="middle" font-size="10" font-weight="700" fill="#2c2416">后期Ⅰ</text>
+  <text x="420" y="280" text-anchor="middle" font-size="10" fill="#7a6e5e">同源染色体分离</text>
+  <text x="420" y="292" text-anchor="middle" font-size="10" fill="#c0392b">★减数分裂(2n→n)</text>
+  <text x="420" y="304" text-anchor="middle" font-size="10" fill="#7a6e5e">姐妹染色单体不分离</text>
+
+  <line x1="480" y1="180" x2="510" y2="180" stroke="#2c2416" stroke-width="1.5" marker-end="url(#ar)"/>
+
+  <!-- 细胞4: 末期I (2个单倍体细胞,染色体仍双份) -->
+  <ellipse cx="560" cy="150" rx="38" ry="32" fill="none" stroke="#8b4513" stroke-width="1.2"/>
+  <path d="M 548,135 Q 555,145 548,155 Q 555,165 548,170" fill="none" stroke="#c0392b" stroke-width="2.5"/>
+  <path d="M 568,135 Q 575,145 568,155 Q 575,165 568,170" fill="none" stroke="#4a7c3a" stroke-width="2.5"/>
+  <ellipse cx="560" cy="215" rx="38" ry="32" fill="none" stroke="#8b4513" stroke-width="1.2"/>
+  <path d="M 548,200 Q 555,210 548,220 Q 555,230 548,235" fill="none" stroke="#4a7c3a" stroke-width="2.5"/>
+  <path d="M 568,200 Q 575,210 568,220 Q 575,230 568,235" fill="none" stroke="#c0392b" stroke-width="2.5"/>
+  <text x="560" y="265" text-anchor="middle" font-size="10" font-weight="700" fill="#2c2416">末期Ⅰ</text>
+  <text x="560" y="280" text-anchor="middle" font-size="10" fill="#7a6e5e">2个单倍体细胞(n)</text>
+  <text x="560" y="292" text-anchor="middle" font-size="10" fill="#7a6e5e">染色体仍含2条单体</text>
+  <text x="560" y="304" text-anchor="middle" font-size="10" fill="#7a6e5e">可能不进行DNA复制</text>
+
+  <line x1="610" y1="180" x2="640" y2="180" stroke="#2c2416" stroke-width="1.5" marker-end="url(#ar)"/>
+
+  <!-- 减数分裂I结束标识 -->
+  <rect x="650" y="130" width="170" height="100" rx="6" fill="#fdf2f2" stroke="#c0392b"/>
+  <text x="735" y="155" text-anchor="middle" font-size="11" font-weight="700" fill="#c0392b">减数分裂Ⅰ结果</text>
+  <text x="735" y="175" text-anchor="middle" font-size="9" fill="#2c2416">2个单倍体子细胞</text>
+  <text x="735" y="190" text-anchor="middle" font-size="9" fill="#2c2416">染色体数减半(2n→n)</text>
+  <text x="735" y="205" text-anchor="middle" font-size="9" fill="#2c2416">DNA含量: 4C→2C</text>
+  <text x="735" y="220" text-anchor="middle" font-size="9" fill="#8b4513">同源染色体已分离</text>
+
+  <!-- ====== 减数分裂II ====== -->
+  <rect x="20" y="345" width="840" height="280" rx="6" fill="#f0f7f4" opacity="0.4"/>
+  <text x="40" y="365" font-size="13" font-weight="700" fill="#4a7c3a">减数分裂Ⅱ(等数分裂) — 姐妹染色单体分离(类似有丝分裂)</text>
+
+  <!-- 中期II -->
+  <ellipse cx="150" cy="455" rx="55" ry="55" fill="none" stroke="#8b4513" stroke-width="1.5"/>
+  <line x1="100" y1="455" x2="200" y2="455" stroke="#7a6e5e" stroke-width="0.8" stroke-dasharray="3,2"/>
+  <path d="M 132,435 Q 140,445 132,455 Q 140,465 132,475" fill="none" stroke="#c0392b" stroke-width="3"/>
+  <path d="M 168,435 Q 176,445 168,455 Q 176,465 168,475" fill="none" stroke="#4a7c3a" stroke-width="3"/>
+  <text x="150" y="530" text-anchor="middle" font-size="10" font-weight="700" fill="#2c2416">中期Ⅱ</text>
+  <text x="150" y="545" text-anchor="middle" font-size="10" fill="#7a6e5e">染色体排赤道板</text>
+  <text x="150" y="557" text-anchor="middle" font-size="10" fill="#7a6e5e">着丝粒在赤道面上</text>
+  <text x="150" y="569" text-anchor="middle" font-size="10" fill="#7a6e5e">无同源染色体</text>
+
+  <line x1="210" y1="455" x2="240" y2="455" stroke="#2c2416" stroke-width="1.5" marker-end="url(#ar)"/>
+
+  <!-- 后期II (姐妹分离) -->
+  <ellipse cx="300" cy="455" rx="55" ry="55" fill="none" stroke="#8b4513" stroke-width="1.5"/>
+  <line x1="275" y1="405" x2="280" y2="445" stroke="#7a6e5e" stroke-width="0.6"/>
+  <line x1="325" y1="405" x2="320" y2="445" stroke="#7a6e5e" stroke-width="0.6"/>
+  <line x1="275" y1="505" x2="280" y2="465" stroke="#7a6e5e" stroke-width="0.6"/>
+  <line x1="325" y1="505" x2="320" y2="465" stroke="#7a6e5e" stroke-width="0.6"/>
+  <path d="M 282,425 Q 290,432 282,440" fill="none" stroke="#c0392b" stroke-width="3"/>
+  <path d="M 318,425 Q 310,432 318,440" fill="none" stroke="#c0392b" stroke-width="3"/>
+  <path d="M 282,470 Q 290,478 282,485" fill="none" stroke="#4a7c3a" stroke-width="3"/>
+  <path d="M 318,470 Q 310,478 318,485" fill="none" stroke="#4a7c3a" stroke-width="3"/>
+  <text x="300" y="530" text-anchor="middle" font-size="10" font-weight="700" fill="#2c2416">后期Ⅱ</text>
+  <text x="300" y="545" text-anchor="middle" font-size="10" fill="#7a6e5e">姐妹染色单体分离</text>
+  <text x="300" y="557" text-anchor="middle" font-size="10" fill="#4a7c3a">★等数分裂(n→n)</text>
+  <text x="300" y="569" text-anchor="middle" font-size="10" fill="#7a6e5e">着丝粒分裂</text>
+
+  <line x1="360" y1="455" x2="390" y2="455" stroke="#2c2416" stroke-width="1.5" marker-end="url(#ar)"/>
+
+  <!-- 末期II (4个单倍体细胞) -->
+  <ellipse cx="430" cy="420" rx="30" ry="26" fill="none" stroke="#8b4513" stroke-width="1.2"/>
+  <path d="M 422,408 Q 428,415 422,422 Q 428,430 422,435" fill="none" stroke="#c0392b" stroke-width="2.5"/>
+  <ellipse cx="480" cy="420" rx="30" ry="26" fill="none" stroke="#8b4513" stroke-width="1.2"/>
+  <path d="M 472,408 Q 478,415 472,422 Q 478,430 472,435" fill="none" stroke="#4a7c3a" stroke-width="2.5"/>
+  <ellipse cx="430" cy="485" rx="30" ry="26" fill="none" stroke="#8b4513" stroke-width="1.2"/>
+  <path d="M 422,473 Q 428,480 422,487 Q 428,495 422,500" fill="none" stroke="#4a7c3a" stroke-width="2.5"/>
+  <ellipse cx="480" cy="485" rx="30" ry="26" fill="none" stroke="#8b4513" stroke-width="1.2"/>
+  <path d="M 472,473 Q 478,480 472,487 Q 478,495 472,500" fill="none" stroke="#c0392b" stroke-width="2.5"/>
+  <text x="455" y="530" text-anchor="middle" font-size="10" font-weight="700" fill="#2c2416">末期Ⅱ</text>
+  <text x="455" y="545" text-anchor="middle" font-size="10" fill="#7a6e5e">4个单倍体子细胞(n)</text>
+  <text x="455" y="557" text-anchor="middle" font-size="10" fill="#7a6e5e">染色体含1条染色单体</text>
+  <text x="455" y="569" text-anchor="middle" font-size="10" fill="#7a6e5e">DNA: 2C→1C</text>
+
+  <line x1="525" y1="455" x2="555" y2="455" stroke="#2c2416" stroke-width="1.5" marker-end="url(#ar)"/>
+
+  <!-- 减数分裂II结果 -->
+  <rect x="565" y="395" width="180" height="120" rx="6" fill="#f0f7f4" stroke="#4a7c3a"/>
+  <text x="655" y="420" text-anchor="middle" font-size="11" font-weight="700" fill="#4a7c3a">减数分裂总结果</text>
+  <text x="655" y="442" text-anchor="middle" font-size="9" fill="#2c2416">1个二倍体(2n)细胞</text>
+  <text x="655" y="456" text-anchor="middle" font-size="9" fill="#2c2416">→ 4个单倍体(n)配子</text>
+  <text x="655" y="474" text-anchor="middle" font-size="9" fill="#c0392b">染色体数减半</text>
+  <text x="655" y="488" text-anchor="middle" font-size="9" fill="#c0392b">DNA: 4C→1C</text>
+  <text x="655" y="506" text-anchor="middle" font-size="9" fill="#8b4513">遗传变异来源:</text>
+
+  <text x="770" y="420" font-size="9" fill="#2c2416">①交叉互换</text>
+  <text x="770" y="438" font-size="9" fill="#2c2416">(前期Ⅰ)</text>
+  <text x="770" y="460" font-size="9" fill="#2c2416">②自由组合</text>
+  <text x="770" y="478" font-size="9" fill="#2c2416">(后期Ⅰ)</text>
+  <text x="770" y="500" font-size="9" fill="#2c2416">③配子随机</text>
+  <text x="770" y="518" font-size="9" fill="#2c2416">受精</text>
+
+  <!-- 关键对比提示 -->
+  <text x="440" y="640" text-anchor="middle" font-size="10" fill="#c0392b" font-weight="700">★与有丝分裂的关键区别: 后期Ⅰ分离的是同源染色体(减数), 后期Ⅱ/有丝分裂后期分离的是姐妹染色单体(等数)</text>
+</svg>

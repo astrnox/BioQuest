@@ -1,0 +1,1588 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第一章 生物化学 · 核酸与分子生物学核心技术 — 生物集训营笔记</title>
+<style>
+:root {
+  --bg: #fdfbf7; --bg2: #f5f0e8; --ink: #2c2416; --muted: #7a6e5e;
+  --rule: #d6ccc0; --accent: #c0392b; --accent2: #8b4513;
+  --highlight: #fff3cd; --note-bg: #fff8e7; --note-border: #e8c84a;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: "Noto Sans CJK SC", "WenQuanYi Micro Hei", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  font-size: 16px; line-height: 1.8; color: var(--ink); background: var(--bg);
+}
+.cover { text-align: center; padding: 4rem 2rem 3rem; border-bottom: 3px double var(--rule); margin-bottom: 0; background: linear-gradient(180deg, var(--bg2) 0%, var(--bg) 100%); }
+.cover .ch-num { font-size: 1rem; color: var(--accent); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 0.3rem; }
+.cover h1 { font-size: 2.2rem; font-weight: 800; color: var(--ink); margin-bottom: 0.5rem; letter-spacing: 0.03em; }
+.cover .subtitle { font-size: 1rem; color: var(--muted); }
+.cover .meta { margin-top: 1.2rem; font-size: 0.85rem; color: var(--muted); display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
+.main-layout { max-width: 1060px; margin: 0 auto; padding: 0 1.5rem; }
+.section-header { border-bottom: 3px solid var(--accent); padding: 2rem 0 0.6rem; margin-bottom: 1.5rem; }
+.section-header .sec-num { font-size: 0.9rem; color: var(--accent); font-weight: 700; letter-spacing: 0.08em; }
+.section-header h2 { font-size: 1.6rem; font-weight: 800; color: var(--ink); margin-top: 0.15rem; }
+.topic-header { margin: 2rem 0 1rem; padding-left: 0.8rem; border-left: 4px solid var(--accent); }
+.topic-header h3 { font-size: 1.25rem; font-weight: 700; color: var(--ink); }
+.subtopic-header { margin: 1.5rem 0 0.8rem; }
+.subtopic-header h4 { font-size: 1.1rem; font-weight: 700; color: var(--accent2); }
+.note-block { display: flex; gap: 1.5rem; margin-bottom: 1.2rem; align-items: flex-start; }
+.note-content { flex: 1; padding: 0.8rem 1rem; background: var(--bg2); border-radius: 6px; border: 1px solid var(--rule); }
+.note-content p { margin-bottom: 0.5rem; }
+.note-content p:last-child { margin-bottom: 0; }
+.note-content ul, .note-content ol { padding-left: 1.5rem; margin: 0.4rem 0; }
+.note-content li { margin-bottom: 0.25rem; }
+.annotation { width: 240px; flex-shrink: 0; background: var(--note-bg); border: 1px solid var(--note-border); border-radius: 6px; padding: 0.6rem 0.8rem; font-size: 0.82rem; line-height: 1.6; color: var(--accent2); align-self: flex-start; }
+.annotation::before { content: "📝 批注"; display: block; font-size: 0.7rem; font-weight: 700; color: var(--accent); letter-spacing: 0.06em; margin-bottom: 0.3rem; text-transform: uppercase; }
+.u { text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 2px; text-underline-offset: 3px; font-weight: 600; }
+.u-double { text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 2px; text-underline-offset: 3px; text-decoration-style: double; font-weight: 700; }
+.key-point { background: var(--highlight); padding: 0.1em 0.3em; border-radius: 3px; font-weight: 600; border-bottom: 1.5px solid var(--accent); }
+.table-wrap { overflow-x: auto; overflow-y: auto; max-height: 600px; margin: 1.5rem 0; border: 1px solid var(--rule); border-radius: 6px; }
+table { width: 100%; border-collapse: collapse; font-size: 0.9rem; min-width: 800px; }
+table thead th { background: var(--accent); color: #fff; padding: 0.6rem 0.8rem; font-weight: 700; text-align: center; white-space: nowrap; }
+table tbody td { padding: 0.5rem 0.8rem; border-bottom: 1px solid var(--rule); vertical-align: top; }
+table tbody tr:nth-child(even) { background: var(--bg2); }
+table tbody tr:last-child td { border-bottom: none; }
+table tbody td:first-child { font-weight: 600; white-space: nowrap; text-align: center; background: var(--bg2); }
+figcaption { text-align: center; font-size: 0.85rem; color: var(--muted); margin-top: 0.4rem; }
+.diagram { margin: 1.2rem 0; text-align: center; }
+.diagram img { max-width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 4px; }
+.summary-box { background: linear-gradient(135deg, #fdf2f2 0%, #fef9e7 100%); border: 2px solid var(--accent); border-radius: 8px; padding: 1.2rem 1.5rem; margin: 2rem 0; }
+.summary-box h4 { color: var(--accent); font-size: 1rem; margin-bottom: 0.6rem; }
+.expand-block { background: #f0f7f4; border: 1px dashed #7cb342; border-radius: 6px; padding: 0.5rem 0.9rem; margin: 0.6rem 0 0; font-size: 0.83rem; line-height: 1.6; color: #3e6b3e; }
+.expand-block::before { content: "🔍 拓展"; display: block; font-size: 0.7rem; font-weight: 700; color: #558b2f; letter-spacing: 0.06em; margin-bottom: 0.2rem; }
+.flow-box { background: var(--bg); border: 1px solid var(--rule); border-radius: 8px; padding: 1.2rem; margin: 1.2rem 0; text-align: center; }
+.flow-box .flow-title { font-size: 0.85rem; font-weight: 700; color: var(--accent); margin-bottom: 0.8rem; }
+.flow-row { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 0.3rem; font-size: 0.85rem; }
+.flow-item { background: var(--bg2); border: 1px solid var(--rule); border-radius: 4px; padding: 0.25rem 0.6rem; white-space: nowrap; }
+.flow-arrow { color: var(--accent); font-weight: 700; font-size: 1.1rem; }
+.math-box { background: #fef9e7; border-left: 3px solid var(--accent2); padding: 0.7rem 1rem; margin: 0.8rem 0; border-radius: 0 4px 4px 0; font-family: "Cambria Math", "STIX Two Math", Georgia, serif; font-size: 1.0rem; color: #1a1a1a; }
+footer { margin-top: 3rem; padding: 1.5rem; border-top: 1px solid var(--rule); text-align: center; font-size: 0.8rem; color: var(--muted); }
+@media (max-width: 768px) {
+  .cover h1 { font-size: 1.5rem; }
+  .note-block { flex-direction: column; }
+  .annotation { width: 100%; }
+  .main-layout { padding: 0 0.8rem; }
+  table { font-size: 0.78rem; min-width: 600px; }
+}
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div class="ch-num">高中生物竞赛讲义 · 集训营</div>
+  <h1>第一章 生物化学 · 核酸与分子生物学核心技术</h1>
+  <div class="subtitle">DNA双螺旋 · 复制与转录 · PCR · 测序 · 蛋白互作 · 表观遗传</div>
+  <div class="meta">
+    <span>DNA双螺旋</span><span>RNA类型</span><span>DNA复制</span><span>转录</span><span>端粒</span>
+    <span>PCR</span><span>测序技术</span><span>蛋白互作</span><span>表观遗传</span>
+    <span>📅 整理日期: 2026年7月7日</span>
+  </div>
+</div>
+
+<div class="main-layout">
+
+<div class="section-header">
+  <div class="sec-num">第一节 · 核酸与分子生物学核心技术</div>
+  <h2>DNA结构 · 复制 · 转录 · 现代分子生物学方法</h2>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>本节是 <span class="key-point">ch1-1-6 核酸</span> 的深度补充,参考张丽萍《生物化学简明教程》第六版第 3 章 <span class="u">核酸</span>(P49-79)和第 13-15 章 <span class="u">DNA 合成、RNA 合成、蛋白质合成</span>(P274-337),针对仅有高中人教版生物学基础的竞赛生重写,详细解释每个概念的反应过程与分子机制。重点内容:</p>
+    <ol>
+      <li>DNA 双螺旋结构(B/A/Z 三大构型 + Watson-Crick 碱基配对)</li>
+      <li>DNA 的拓扑性质(超螺旋、拓扑异构酶)</li>
+      <li>原核 vs 真核 DNA <span class="u">复制机制</span>(起始/延伸/终止)</li>
+      <li><span class="u">端粒</span>与端粒酶(衰老与癌症的核心)</li>
+      <li>DNA 损伤与修复(错配/切除/光复活/SOS)</li>
+      <li>原核 vs 真核 <span class="u">转录机制</span>(RNA 聚合酶 + 启动子)</li>
+      <li>RNA 的类型与加工(mRNA/tRNA/rRNA/snoRNA/miRNA)</li>
+      <li><span class="u">分子生物学核心技术</span>:PCR、qPCR、测序(一代/二代/三代)、Blotting、ChIP、EMSA、Y2H</li>
+      <li><span class="u">表观遗传</span>:DNA 甲基化、组蛋白修饰、染色质重塑</li>
+    </ol>
+  </div>
+  <div class="annotation">
+    高中衔接:高中提到"DNA 是主要的遗传物质"、"DNA 双螺旋结构"、中心法则"DNA→RNA→蛋白质",但没讲"DNA 如何复制""转录如何启动""端粒如何与衰老相关"。本章在高中基础上展开完整机制,是奥赛必考内容,也是现代分子生物学实验技术的核心。
+  </div>
+</div>
+
+<!-- ========== 3.1 DNA结构 ========== -->
+<div class="topic-header"><h3>一、DNA 的高级结构</h3></div>
+
+<div class="subtopic-header"><h4>1.1 DNA 的三种双螺旋构型</h4></div>
+
+<div class="table-wrap">
+<table>
+<thead>
+<tr><th>构型</th><th>螺距</th><th>每圈碱基对</th><th>沟</th><th>存在条件</th><th>功能</th></tr>
+</thead>
+<tbody>
+<tr><td><b>B-DNA(最常见)</b></td><td>3.4 nm</td><td>10.5 bp</td><td>大沟(宽深) + 小沟(窄浅)</td><td>生理条件(高湿度,低盐)</td><td>标准 Watson-Crick 模型</td></tr>
+<tr><td><b>A-DNA</b></td><td>2.8 nm</td><td>11 bp</td><td>大沟(深窄) + 小沟(浅宽)</td><td>脱水条件(75% 乙醇)</td><td>RNA 双链、RNA-DNA 杂交链</td></tr>
+<tr><td><b>Z-DNA</b></td><td>4.5 nm</td><td>12 bp</td><td>只有窄沟</td><td>嘌呤-嘧啶交替序列(CG)n</td><td>基因表达调控</td></tr>
+</tbody>
+</table>
+</div>
+<figcaption>表 1 DNA 的三种双螺旋构型比较</figcaption>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>🧬 <span class="key-point">B-DNA 详细参数(1953 年 Watson & Crick 提出,1962 年诺奖)</span>:</p>
+    <ul>
+      <li>直径:2 nm;螺距:3.4 nm;每圈 10.5 bp</li>
+      <li>碱基间距:0.34 nm;碱基与螺旋轴垂直</li>
+      <li>糖-磷酸骨架在外,碱基在内,堆积形成疏水核心</li>
+      <li><span class="u-double">反向平行(antiparallel)</span>:5'→3' 与 3'←5'</li>
+      <li>碱基配对:<span class="u">A=T(2 个氢键),G≡C(3 个氢键)</span>——Chargaff 规则</li>
+      <li>右手螺旋(双螺旋),但 Z-DNA 是左手螺旋</li>
+    </ul>
+    <p>📌 <span class="key-point">重要概念:大沟 vs 小沟</span>:大沟宽 2.2 nm、深 1.2 nm,小沟宽 1.2 nm、深 0.8 nm。<span class="u">大沟富含碱基配对信息</span>(氢键供体/受体),是<span class="u">蛋白质识别 DNA 序列的"窗口"</span>(如转录因子、限制酶主要读大沟)。</p>
+  </div>
+</div>
+
+<div class="subtopic-header"><h4>1.2 DNA 的拓扑性质与超螺旋</h4></div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><span class="u-double">超螺旋(supercoiling)</span>:DNA 双链在拓扑应力下的进一步螺旋化,是 DNA 在细胞内的真实存在形式。</p>
+    <ul>
+      <li><span class="u">正超螺旋</span>(positive):过旋,DNA 缠绕更紧(原核生物 DNA 在体内主要为负超螺旋)</li>
+      <li><span class="u">负超螺旋</span>(negative):欠旋,有利于 DNA 双链解开(转录/复制需要)</li>
+      <li><span class="u-double">链接数(Linking Number, Lk)</span> = 扭转数(Twist, Tw) + 超螺旋数(Writhe, Wr)</li>
+    </ul>
+    <p><span class="u-double">拓扑异构酶(topoisomerase)</span>:改变 DNA 链接数,缓解拓扑应力,分为两类:</p>
+    <ul>
+      <li><span class="u">拓扑异构酶 I(Topo I)</span>:切开 DNA 单链,改变 Lk ±1,不需要 ATP——缓解负超螺旋</li>
+      <li><span class="u">拓扑异构酶 II(Topo II, 又称旋转酶 gyrase 在原核)</span>:切开 DNA 双链,改变 Lk ±2,需要 ATP——引入负超螺旋,也是解旋酶</li>
+    </ul>
+    <p>⚠️ <span class="key-point">临床应用</span>:</p>
+    <ul>
+      <li>抗肿瘤药:<span class="u">喜树碱</span>抑制 Topo I;<span class="u">阿霉素、依托泊苷</span>抑制 Topo II</li>
+      <li>抗菌药:<span class="u">喹诺酮类(环丙沙星)</span>抑制细菌 DNA 旋转酶</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    高中延伸:高中只说"DNA 是双螺旋",但 DNA 在细胞内实际是<span class="key-point">超螺旋</span>形式(类似电话线被拧紧)。超螺旋是 DNA 的"应力状态",拓扑异构酶是"松弛应力"的酶,转录/复制必须先解旋——这就是为什么需要拓扑酶。
+  </div>
+</div>
+
+<!-- ========== DNA复制 ========== -->
+<div class="topic-header"><h3>二、DNA 复制——遗传信息准确传递</h3></div>
+
+<div class="subtopic-header"><h4>2.1 复制的核心特征</h4></div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>DNA 复制是<span class="u-double">半保留复制(semiconservative replication)</span>(Meselson & Stahl 1958 年实验证明),核心特征:</p>
+    <ol>
+      <li><span class="u">半保留</span>:每条新链由一条旧链 + 一条新链组成</li>
+      <li><span class="u">半不连续</span>:前导链连续合成,滞后链不连续(冈崎片段)合成</li>
+      <li><span class="u">从 5'→3'</span>:新链只能从 5' 端向 3' 端合成(因为 DNA 聚合酶只能加到 3'-OH 上)</li>
+      <li><span class="u">需要引物</span>:DNA 聚合酶不能从头起始,需要 RNA 引物(由引物酶 primase 合成)</li>
+      <li><span class="u">双向复制</span>:从复制起点(ori)向两个方向进行(原核 1 个 ori,真核多个 ori)</li>
+      <li><span class="u">高保真性</span>:错配率仅 10⁻⁹~10⁻¹⁰(自带校对 + 错配修复)</li>
+    </ol>
+  </div>
+</div>
+
+<div class="subtopic-header"><h4>2.2 复制的酶学体系(原核 vs 真核)</h4></div>
+
+<div class="table-wrap">
+<table>
+<thead>
+<tr><th>功能</th><th>原核生物(E. coli)</th><th>真核生物</th></tr>
+</thead>
+<tbody>
+<tr><td>解旋酶</td><td>DnaB(六聚体,ATP 依赖)</td><td>MCM2-7 复合体</td></tr>
+<tr><td>单链结合蛋白(SSB)</td><td>SSB 蛋白</td><td>RPA 蛋白</td></tr>
+<tr><td>引物酶</td><td>DnaG(合成 RNA 引物)</td><td>Pol α-引物酶复合体</td></tr>
+<tr><td>DNA 聚合酶(主)</td><td><b>Pol III</b>(β 滑动夹 + 多个亚基)</td><td><b>Pol δ(滞后链)、Pol ε(前导链)</b></td></tr>
+<tr><td>DNA 聚合酶(辅)</td><td>Pol I(切除引物 + 填补)</td><td>Pol α、β</td></tr>
+<tr><td>拓扑异构酶</td><td>旋转酶(gyrase)</td><td>Topo I、Topo II</td></tr>
+<tr><td>DNA 连接酶</td><td>DNA Ligase(NAD⁺ 依赖)</td><td>DNA Ligase I(ATP 依赖)</td></tr>
+<tr><td>滑动夹</td><td>β 亚基</td><td>PCNA(三聚体)</td></tr>
+</tbody>
+</table>
+</div>
+<figcaption>表 2 DNA 复制的主要酶学体系(原核 vs 真核)</figcaption>
+
+<div class="subtopic-header"><h4>2.3 复制的三个阶段</h4></div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><span class="u-double">(1) 起始(initiation)</span>:</p>
+    <ul>
+      <li>原核:<span class="u">DnaA</span>蛋白识别 oriC 起点(4 个 9-mer)→ 打开 AT 富集区(13-mer)→ DnaB 装载,DNA 拓扑异构酶缓解超螺旋</li>
+      <li>真核:ORC(起源识别复合物)结合 ori → Cdc6、Cdt1 装载 MCM → 形成预复制复合物(pre-RC)→ 激活后形成复制泡</li>
+    </ul>
+    <p><span class="u-double">(2) 延伸(elongation)</span>——半不连续复制:</p>
+    <div class="flow-box">
+      <div class="flow-title">DNA 复制的延伸过程</div>
+      <div class="flow-row">
+        <span class="flow-item">解旋酶打开双链</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-item">SSB 稳定单链</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-item">引物酶合成 RNA 引物</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-item">DNA Pol 加 dNTP</span>
+      </div>
+      <div class="flow-row" style="margin-top:0.4rem;">
+        <span class="flow-item"><b>前导链</b></span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-item">连续合成(5'→3')</span>
+        <span class="flow-arrow">;</span>
+        <span class="flow-item"><b>滞后链</b></span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-item">不连续合成(冈崎片段)</span>
+      </div>
+    </div>
+    <p><span class="u-double">(3) 终止(termination)</span>:</p>
+    <ul>
+      <li>原核:Ter 位点被 Tus 蛋白识别,形成"复制叉陷阱",两个复制叉相遇停止</li>
+      <li>真核:相邻复制泡相遇时停止;端粒问题需要端粒酶解决(见 2.4)</li>
+      <li>DNA Ligase 缝合所有冈崎片段形成完整链</li>
+    </ul>
+  </div>
+</div>
+
+<div class="subtopic-header"><h4>2.4 端粒与端粒酶——衰老与癌症</h4></div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><span class="u-double">端粒(telomere)</span>:真核生物染色体末端的<span class="u">TTAGGG 重复序列</span>(人类约 5-15 kb),结合端粒结合蛋白形成 T-loop,保护染色体末端不被降解或融合。</p>
+    <p>📌 <span class="key-point">复制难题</span>:</p>
+    <ol>
+      <li>滞后链的<span class="u">末端引物被切除后</span>,DNA 聚合酶无法填补 5' 端缺口——每次复制损失 50-200 bp</li>
+      <li>如果不解决,染色体将越来越短,最终导致细胞衰老(海弗利克极限 Hayflick limit)</li>
+    </ol>
+    <p><span class="u-double">端粒酶(telomerase)</span>:由 <span class="u">RNA 模板 + 逆转录酶(TERT)</span>组成的核糖核蛋白,补偿端粒缩短:</p>
+    <ul>
+      <li>RNA 模板:人类约 451 nt,含 5'-CUAACCCUAAC-3' 重复</li>
+      <li>TERT(端粒酶逆转录酶):以自身 RNA 为模板合成端粒 DNA,添加到 3' 端</li>
+    </ul>
+    <p>⚠️ <span class="key-point">生物学意义</span>:</p>
+    <ul>
+      <li><span class="u">生殖细胞、干细胞</span>:端粒酶活性高,维持端粒长度</li>
+      <li><span class="u">体细胞</span>:端粒酶活性极低,端粒随分裂逐渐缩短 → <b>细胞衰老</b>(海弗利克极限约 50-70 代)</li>
+      <li><span class="u">癌细胞</span>:约 85-90% 的癌细胞<span class="u-double">重新激活端粒酶</span>(约 10% 用 ALT 替代途径),实现"永生化"</li>
+    </ul>
+    <p>📌 <span class="key-point">临床应用</span>:</p>
+    <ul>
+      <li>端粒酶抑制剂是抗肿瘤药物研发的热点</li>
+      <li>端粒长度可作为细胞衰老的生物标志物</li>
+      <li>2009 年诺贝尔生理学/医学奖授予 Blackburn、Greider、Szostak 表彰"端粒与端粒酶的发现"</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    高中延伸:高中提到"染色体"但没讲"染色体末端如何不被降解"。端粒是染色体末端的"保护帽",端粒酶是"修补帽"的酶。癌细胞激活端粒酶实现永生化——这是抗肿瘤药物的经典靶点。竞赛常考"端粒酶是核糖核蛋白,含 RNA 模板和逆转录酶"。
+  </div>
+</div>
+
+<div class="subtopic-header"><h4>2.5 DNA 损伤与修复</h4></div>
+
+<div class="table-wrap">
+<table>
+<thead>
+<tr><th>损伤类型</th><th>原因</th><th>修复机制</th><th>相关疾病</th></tr>
+</thead>
+<tbody>
+<tr><td><b>错配</b>(mismatch)</td><td>复制错误(1/10⁹ bp)</td><td>错配修复(MMR):MutS/MutL/MutH</td><td>遗传性非息肉病性结直肠癌(HNPCC)</td></tr>
+<tr><td><b>脱嘌呤/脱嘧啶</b>(AP 位点)</td><td>自发水解(每天~10000/细胞)</td><td>碱基切除修复(BER):DNA 糖基化酶 + AP 内切酶</td></tr>
+<tr><td><b>嘧啶二聚体</b>(T-T)</td><td>紫外线照射</td><td><b>光复活</b>(光复活酶)+ 核苷酸切除修复(NER)</td><td>着色性干皮病(XP):NER 缺陷,UV 致皮肤癌</td></tr>
+<tr><td><b>碱基烷基化</b></td><td>化学诱变剂(EMS 等)</td><td>BER 途径:O⁶-甲基鸟嘌呤-DNA 甲基转移酶直接修复</td></tr>
+<tr><td><b>DNA 双链断裂</b>(DSB)</td><td>电离辐射、复制叉崩溃</td><td><b>同源重组修复</b>(HDR,需姐妹染色单体)+ <b>非同源末端连接</b>(NHEJ)</td><td>共济失调毛细血管扩张症(ATM 缺陷)</td></tr>
+<tr><td><b>DNA 交联</b></td><td>丝裂霉素 C、铂类化疗药</td><td>FA(Fanconi anemia)途径 + 重组修复</td><td>范可尼贫血</td></tr>
+</tbody>
+</table>
+</div>
+<figcaption>表 3 主要 DNA 损伤类型与修复机制</figcaption>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>📌 <span class="key-point">关键概念:NER 的步骤</span>(以人类着色性干皮病为例):</p>
+    <ol>
+      <li>XPC 识别损伤 → 招募转录因子 TFIIH(含 XPB、XPD 解旋酶)</li>
+      <li>XPB、XPD 解开损伤区两端(约 30 bp)</li>
+      <li>XPA 验证损伤 → XPF-ERCC1 + XPG 切除损伤寡核苷酸(24-32 nt)</li>
+      <li>Pol δ/ε 填补缺口 → DNA Ligase III 缝合</li>
+    </ol>
+    <p>📌 <span class="key-point">光复活(光修复)</span>:是<span class="u">最简单的修复</span>机制,光复活酶直接逆转嘧啶二聚体(吸收可见光能量,打断环丁烷环)。植物和低等生物主要使用,哺乳动物主要用 NER。</p>
+  </div>
+</div>
+
+<!-- ========== 转录 ========== -->
+<div class="topic-header"><h3>三、转录——DNA 指导的 RNA 合成</h3></div>
+
+<div class="subtopic-header"><h4>3.1 转录与复制的对比</h4></div>
+
+<div class="table-wrap">
+<table>
+<thead>
+<tr><th>对比项</th><th>DNA 复制</th><th>转录</th></tr>
+</thead>
+<tbody>
+<tr><td>模板</td><td>DNA 双链</td><td>DNA <b>单链</b>(模板链 / 反义链)</td></tr>
+<tr><td>原料</td><td>dNTPs</td><td><b>NTPs</b>(含 U 而非 T)</td></tr>
+<tr><td>引物</td><td>需要 RNA 引物</td><td><b>不需要引物</b></td></tr>
+<tr><td>产物</td><td>双链 DNA</td><td><b>单链 RNA</b></td></tr>
+<tr><td>主要酶</td><td>DNA 聚合酶</td><td><b>RNA 聚合酶</b></td></tr>
+<tr><td>碱基配对</td><td>A-T, G-C</td><td>A-U(在 RNA 中), G-C, T-A</td></tr>
+<tr><td>忠实度</td><td>10⁻⁹~10⁻¹⁰(校对+修复)</td><td>10⁻⁴~10⁻⁵(无校对,有错容)</td></tr>
+</tbody>
+</table>
+</div>
+<figcaption>表 4 DNA 复制与转录的关键区别</figcaption>
+
+<div class="subtopic-header"><h4>3.2 RNA 聚合酶(原核 vs 真核)</h4></div>
+
+<div class="table-wrap">
+<table>
+<thead>
+<tr><th>生物类型</th><th>RNA 聚合酶</th><th>结构</th><th>产物</th></tr>
+</thead>
+<tbody>
+<tr><td><b>原核</b>(E. coli)</td><td>单一 RNA Pol</td><td>核心酶 α₂ββ'ω + σ 因子</td><td>所有 RNA(mRNA、rRNA、tRNA)</td></tr>
+<tr><td rowspan="3"><b>真核</b></td><td><b>RNA Pol I</b></td><td>14 个亚基</td><td>45S rRNA 前体(18S、5.8S、28S rRNA)</td></tr>
+<tr><td><b>RNA Pol II</b></td><td>12 个亚基</td><td>mRNA + 大多数 snRNA、miRNA</td></tr>
+<tr><td><b>RNA Pol III</b></td><td>17 个亚基</td><td>tRNA + 5S rRNA + U6 snRNA</td></tr>
+</tbody>
+</table>
+</div>
+<figcaption>表 5 原核与真核 RNA 聚合酶的对比(α-鹅膏蕈碱 α-amanitin 抑制 Pol II/III)</figcaption>
+
+<div class="subtopic-header"><h4>3.3 转录的三个阶段(原核为例)</h4></div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><span class="u-double">(1) 起始(initiation)</span>:</p>
+    <ul>
+      <li><span class="u">σ 因子(σ70)</span>识别启动子 -35 区(TTGACA)和 -10 区(TATAAT,Pribnow 框)</li>
+      <li>RNA Pol 全酶结合启动子形成<span class="u">闭合复合物</span>(closed complex)</li>
+      <li>解链 -10 区形成<span class="u">开放复合物</span>(open complex),模板链进入活性中心</li>
+      <li>合成第一段 9-12 nt 的 RNA(无需引物),σ 因子解离</li>
+    </ul>
+    <p><span class="u-double">(2) 延伸(elongation)</span>:</p>
+    <ul>
+      <li>RNA Pol 核心酶沿 DNA 移动,合成 RNA(5'→3')</li>
+      <li>形成<span class="u">转录泡</span>(约 17 bp)</li>
+      <li>ρ 因子或茎环结构介导转录终止</li>
+    </ul>
+    <p><span class="u-double">(3) 终止(termination)</span>:</p>
+    <ul>
+      <li><span class="u">ρ 依赖型终止</span>:ρ 蛋白(ATP 依赖解旋酶)追赶 RNA Pol,促进 RNA 释放</li>
+      <li><span class="u">ρ 不依赖型终止</span>:RNA 形成 GC 富集的发夹结构 + 后续 U 串,引发 RNA Pol 解离</li>
+    </ul>
+  </div>
+</div>
+
+<div class="subtopic-header"><h4>3.4 真核转录的特点</h4></div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>真核转录比原核复杂得多,核心特点:</p>
+    <ol>
+      <li><span class="u-double">三种 RNA Pol 分别负责不同 RNA 合成</span>(见表 5)</li>
+      <li><span class="u">转录因子(TF)</span>辅助 RNA Pol II 结合启动子(真核 Pol II 不能直接识别启动子)
+        <ul>
+          <li><span class="u">TFIID</span>(含 TBP + TAF)识别 TATA 框</li>
+          <li>TFIIA、TFIIB、TFIIE、TFIIF、TFIIH 依次加入,形成<span class="u">前起始复合物(PIC)</span></li>
+        </ul>
+      </li>
+      <li><span class="u">转录发生在细胞核内</span>(与翻译在空间上分隔),便于复杂的调控</li>
+      <li><span class="u">转录后加工</span>复杂(见 3.5)</li>
+    </ol>
+  </div>
+</div>
+
+<div class="subtopic-header"><h4>3.5 RNA 的类型与转录后加工</h4></div>
+
+<div class="table-wrap">
+<table>
+<thead>
+<tr><th>RNA 类型</th><th>大小</th><th>功能</th><th>加工过程</th></tr>
+</thead>
+<tbody>
+<tr><td><b>mRNA</b>(信使)</td><td>500-5000 nt</td><td>翻译模板</td><td>5' 帽 + 3' polyA + 剪接(去除内含子)</td></tr>
+<tr><td><b>tRNA</b>(转运)</td><td>~75 nt</td><td>携带氨基酸</td><td>切除 + 加 CCA 尾 + 修饰碱基(假尿嘧啶等)</td></tr>
+<tr><td><b>rRNA</b>(核糖体)</td><td>120-4700 nt</td><td>核糖体结构与催化</td><td>前体切割 + 甲基化(2'-O-甲基 + 碱基甲基化)+ 假尿嘧啶化</td></tr>
+<tr><td><b>snRNA</b>(核小 RNA)</td><td>100-200 nt</td><td>剪接体组分</td><td>加工成熟 + 蛋白结合形成 snRNP</td></tr>
+<tr><td><b>miRNA</b>(微小)</td><td>~22 nt</td><td>转录后基因沉默(动物)</td><td>前体 → 短发夹 → Dicer 切割 → 成熟</td></tr>
+<tr><td><b>lncRNA</b>(长非编码)</td><td>&gt;200 nt</td><td>染色质/转录调控、支架</td><td>可变剪接、加帽加尾</td></tr>
+<tr><td><b>snoRNA</b>(核仁小)</td><td>60-300 nt</td><td>rRNA 修饰(2'-O-甲基、假尿嘧啶化)</td><td>从内含子切割</td></tr>
+<tr><td><b>siRNA</b>(小干扰)</td><td>~21 nt</td><td>RNA 干扰(植物与低等生物为主)</td><td>Dicer 切割双链 RNA</td></tr>
+</tbody>
+</table>
+</div>
+<figcaption>表 6 各类 RNA 的特征与加工(奥赛常考)</figcaption>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>📌 <span class="key-point">mRNA 转录后加工的"三件套"</span>(真核):</p>
+    <ol>
+      <li><span class="u">5' 加帽</span>(capping):加 7-甲基鸟嘌呤帽(m⁷G),保护 5' 端,促进翻译起始、协助核外输出</li>
+      <li><span class="u">3' 加尾</span>(polyadenylation):AAUAAA 信号 → 内切酶切割 → 加 100-250 个 A(polyA 尾),保护 3' 端,促进翻译</li>
+      <li><span class="u-double">RNA 剪接(splicing)</span>:剪接体(spliceosome, snRNP 复合物)识别 GU-AG 规则,切除内含子(intron),连接外显子(exon)。<span class="key-point">可变剪接(alternative splicing)</span>是真核基因表达调控的关键——一个基因可产生多种 mRNA(人类约 95% 基因有可变剪接)</li>
+    </ol>
+    <p>📌 <span class="key-point">催化 RNA 剪接的核酶</span>:<span class="u">I 类自剪接内含子</span>(如四膜虫 rRNA 前体)和<span class="u">II 类自剪接内含子</span>是核酶,无需蛋白质酶参与——与 ch1-1-7 核酶内容呼应。</p>
+    <p>📌 <span class="key-point">tRNA 加工的重要修饰</span>:</p>
+    <ul>
+      <li>反密码子环(读 mRNA 密码子)</li>
+      <li>3' 端加 CCA 序列(连接氨基酸)</li>
+      <li>多种稀有碱基:<span class="u">假尿嘧啶(ψ)、二氢尿嘧啶(D)、次黄嘌呤(I)</span>等</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ========== 分子生物学技术 ========== -->
+<div class="topic-header"><h3>四、分子生物学核心技术</h3></div>
+
+<div class="subtopic-header"><h4>4.1 PCR——聚合酶链反应</h4></div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><span class="u-double">PCR(Polymerase Chain Reaction)</span>由 Kary Mullis 1983 年发明,1993 年获诺贝尔化学奖。基本原理:通过<span class="key-point">变性-退火-延伸</span>三步循环,体外指数扩增特定 DNA 序列。</p>
+    <div class="flow-box">
+      <div class="flow-title">PCR 三步循环</div>
+      <div class="flow-row">
+        <span class="flow-item"><b>① 变性</b><br>95°C 30s<br>DNA 双链解开</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-item"><b>② 退火</b><br>50-65°C 30s<br>引物结合</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-item"><b>③ 延伸</b><br>72°C 30-60s/kb<br>Taq 聚合酶合成</span>
+      </div>
+      <div class="flow-row" style="margin-top:0.4rem;">
+        <span class="flow-item">循环 1 次:2 拷贝</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-item">循环 n 次:<b>2ⁿ 拷贝</b></span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-item">30 次:~10⁹ 拷贝</span>
+      </div>
+    </div>
+    <p>关键成分:</p>
+    <ul>
+      <li><span class="u">模板 DNA</span>:待扩增片段</li>
+      <li><span class="u">引物</span>(primer):18-30 nt 寡核苷酸,设计在靶序列两端</li>
+      <li><span class="u">耐热 DNA 聚合酶</span>:<span class="key-point">Taq 聚合酶</span>(来自温泉细菌 Thermus aquaticus,最适 72°C)</li>
+      <li>dNTPs(等摩尔 dATP、dTTP、dGTP、dCTP)</li>
+      <li>含 Mg²⁺ 的缓冲液</li>
+    </ul>
+  </div>
+</div>
+
+<div class="table-wrap">
+<table>
+<thead>
+<tr><th>PCR 变体</th><th>特点</th><th>应用</th></tr>
+</thead>
+<tbody>
+<tr><td><b>RT-PCR</b></td><td>逆转录酶先反转录 mRNA → cDNA,再 PCR</td><td>RNA 检测、cDNA 克隆</td></tr>
+<tr><td><b>qPCR(实时定量 PCR)</b></td><td>加荧光染料(SYBR Green)或探针(TaqMan),实时监测扩增</td><td>基因表达定量、病原体检测</td></tr>
+<tr><td><b>巢式 PCR</b>(nested PCR)</td><td>用第一轮 PCR 产物作模板,用内侧引物再扩增</td><td>提高灵敏度与特异性(临床诊断)</td></tr>
+<tr><td><b>多重 PCR</b>(multiplex)</td><td>多个引物对同时扩增多个靶标</td><td>病原体多重检测、法医鉴定</td></tr>
+<tr><td><b>数字 PCR</b>(dPCR)</td><td>将样品分到数万个微反应单元独立扩增,绝对定量</td><td>稀有突变检测、拷贝数变异</td></tr>
+</tbody>
+</table>
+</div>
+<figcaption>表 7 PCR 的主要变体与应用</figcaption>
+
+<svg viewBox="0 0 800 380" style="width:100%;max-width:720px;margin:1.2rem auto;display:block;font-family:sans-serif;">
+  <rect x="0" y="0" width="800" height="380" fill="#fdfbf7" stroke="#d6ccc0" rx="8"/>
+  <text x="400" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="#2c2416">PCR 循环过程（变性 / 退火 / 延伸）</text>
+
+  <!-- 三个步骤 -->
+  <g transform="translate(30,55)">
+    <rect x="0" y="0" width="230" height="180" fill="#fdf2f2" stroke="#c0392b" stroke-width="2" rx="6"/>
+    <rect x="0" y="0" width="230" height="28" fill="#c0392b" rx="6"/>
+    <text x="115" y="19" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">① 变性 (Denaturation)</text>
+    <text x="115" y="56" text-anchor="middle" font-size="22" font-weight="700" fill="#c0392b">95°C</text>
+    <text x="115" y="80" text-anchor="middle" font-size="11" fill="#2c2416">双链DNA解链为单链</text>
+    <!-- 示意 -->
+    <line x1="80" y1="100" x2="150" y2="100" stroke="#2c2416" stroke-width="2"/>
+    <text x="65" y="104" font-size="9" fill="#2c2416">5'</text>
+    <text x="155" y="104" font-size="9" fill="#2c2416">3'</text>
+    <text x="115" y="118" text-anchor="middle" font-size="16" fill="#c0392b">⤴ ⤵</text>
+    <line x1="80" y1="145" x2="150" y2="145" stroke="#8b4513" stroke-width="2" stroke-dasharray="4,2"/>
+    <line x1="80" y1="160" x2="150" y2="160" stroke="#8b4513" stroke-width="2" stroke-dasharray="4,2"/>
+    <text x="115" y="176" text-anchor="middle" font-size="9" fill="#7a6e5e">→ 两条单链</text>
+    <text x="115" y="190" text-anchor="middle" font-size="10" fill="#7a6e5e">30 sec</text>
+  </g>
+
+  <g transform="translate(285,55)">
+    <rect x="0" y="0" width="230" height="180" fill="#fff8e7" stroke="#e8c84a" stroke-width="2" rx="6"/>
+    <rect x="0" y="0" width="230" height="28" fill="#8b4513" rx="6"/>
+    <text x="115" y="19" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">② 退火 (Annealing)</text>
+    <text x="115" y="56" text-anchor="middle" font-size="22" font-weight="700" fill="#c0392b">50-65°C</text>
+    <text x="115" y="80" text-anchor="middle" font-size="11" fill="#2c2416">引物与模板单链结合</text>
+    <!-- 示意 -->
+    <line x1="80" y1="100" x2="150" y2="100" stroke="#8b4513" stroke-width="2" stroke-dasharray="4,2"/>
+    <text x="65" y="104" font-size="9" fill="#8b4513">3'</text>
+    <line x1="80" y1="120" x2="110" y2="120" stroke="#c0392b" stroke-width="3"/>
+    <text x="85" y="134" font-size="10" fill="#c0392b">引物5'→3'</text>
+    <line x1="80" y1="160" x2="150" y2="160" stroke="#8b4513" stroke-width="2" stroke-dasharray="4,2"/>
+    <line x1="120" y1="150" x2="150" y2="150" stroke="#c0392b" stroke-width="3"/>
+    <text x="125" y="145" font-size="10" fill="#c0392b">引物</text>
+    <text x="115" y="178" text-anchor="middle" font-size="10" fill="#7a6e5e">温度=Tm-5°C, 30sec</text>
+  </g>
+
+  <g transform="translate(540,55)">
+    <rect x="0" y="0" width="230" height="180" fill="#f0f7f4" stroke="#27ae60" stroke-width="2" rx="6"/>
+    <rect x="0" y="0" width="230" height="28" fill="#27ae60" rx="6"/>
+    <text x="115" y="19" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">③ 延伸 (Extension)</text>
+    <text x="115" y="56" text-anchor="middle" font-size="22" font-weight="700" fill="#c0392b">72°C</text>
+    <text x="115" y="80" text-anchor="middle" font-size="11" fill="#2c2416">Taq聚合酶合成新链</text>
+    <!-- 示意 -->
+    <line x1="80" y1="100" x2="150" y2="100" stroke="#8b4513" stroke-width="2" stroke-dasharray="4,2"/>
+    <line x1="80" y1="115" x2="150" y2="115" stroke="#2c2416" stroke-width="2.5"/>
+    <text x="70" y="118" font-size="10" fill="#2c2416">5'</text>
+    <text x="115" y="135" text-anchor="middle" font-size="9" fill="#c0392b">Taq DNA Pol</text>
+    <text x="115" y="150" text-anchor="middle" font-size="9" fill="#7a6e5e">5'→3'方向延伸</text>
+    <text x="115" y="172" text-anchor="middle" font-size="10" fill="#7a6e5e">1kb/min, 时间依片段长度</text>
+  </g>
+
+  <!-- 扩增公式 -->
+  <rect x="30" y="260" width="740" height="100" fill="#fff8e7" stroke="#e8c84a" rx="6"/>
+  <text x="400" y="284" text-anchor="middle" font-size="13" font-weight="700" fill="#c0392b">指数扩增：N = N₀ × 2ⁿ （n=循环数）</text>
+  <text x="50" y="308" font-size="11" fill="#2c2416">• 30个循环 → 扩增约10⁹倍（理论上2³⁰≈10⁹）</text>
+  <text x="50" y="328" font-size="11" fill="#2c2416">• Taq酶来源：水生栖热菌(Thermus aquaticus)，耐95°C高温，最适72°C</text>
+  <text x="50" y="348" font-size="11" font-weight="700" fill="#c0392b">关键：引物决定特异性 ｜ 退火温度决定特异性 ｜ 延伸时间决定最长产物</text>
+</svg>
+<figcaption>PCR 循环过程（变性 / 退火 / 延伸）</figcaption>
+
+<div class="subtopic-header"><h4>4.2 DNA 测序技术</h4></div>
+
+<div class="table-wrap">
+<table>
+<thead>
+<tr><th>测序技术</th><th>原理</th><th>读长</th><th>通量</th><th>应用</th></tr>
+</thead>
+<tbody>
+<tr><td><b>Sanger 测序(一代)</b></td><td>双脱氧核苷酸(ddNTP)链终止法</td><td>500-1000 bp</td><td>低</td><td>人类基因组计划(HGP, 1990-2003);临床验证</td></tr>
+<tr><td><b>Illumina(二代,NGS)</b></td><td>桥式 PCR + 可逆终止子 + 荧光成像</td><td>50-300 bp</td><td>极高(GB/run)</td><td>全基因组、外显子组、转录组</td></tr>
+<tr><td><b>PacBio(三代,SMRT)</b></td><td>单分子实时测序(SMRT Cell,ZMW)</td><td>10-25 kb</td><td>高</td><td>完整转录本、结构变异、甲基化</td></tr>
+<tr><td><b>Nanopore(三代)</b></td><td>纳米孔电流变化(碱基不同→电流不同)</td><td>>1 Mb(理论)</td><td>高</td><td>长读长、快速现场测序(Ebola 爆发监控)</td></tr>
+</tbody>
+</table>
+</div>
+<figcaption>表 8 三代 DNA 测序技术对比</figcaption>
+
+<svg viewBox="0 0 800 380" style="width:100%;max-width:720px;margin:1.2rem auto;display:block;font-family:sans-serif;">
+  <rect x="0" y="0" width="800" height="380" fill="#fdfbf7" stroke="#d6ccc0" rx="8"/>
+  <text x="400" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="#2c2416">DNA测序方法对比（Sanger vs 高通量测序）</text>
+
+  <!-- Sanger -->
+  <g transform="translate(20,55)">
+    <rect x="0" y="0" width="370" height="310" fill="#fdf2f2" stroke="#c0392b" stroke-width="2" rx="6"/>
+    <rect x="0" y="0" width="370" height="30" fill="#c0392b" rx="6"/>
+    <text x="185" y="20" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">Sanger测序（一代）双脱氧链终止法</text>
+    <text x="20" y="54" font-size="11" font-weight="700" fill="#c0392b">原理：ddNTP终止延伸</text>
+    <!-- 4个反应管 -->
+    <rect x="20" y="64" width="70" height="34" fill="#fef9e7" stroke="#8b4513" rx="3"/>
+    <text x="55" y="78" text-anchor="middle" font-size="9" font-weight="700" fill="#c0392b">ddATP管</text>
+    <text x="55" y="92" text-anchor="middle" font-size="10" fill="#7a6e5e">→A处终止</text>
+    <rect x="100" y="64" width="70" height="34" fill="#fef9e7" stroke="#8b4513" rx="3"/>
+    <text x="135" y="78" text-anchor="middle" font-size="9" font-weight="700" fill="#c0392b">ddTTP管</text>
+    <text x="135" y="92" text-anchor="middle" font-size="10" fill="#7a6e5e">→T处终止</text>
+    <rect x="180" y="64" width="70" height="34" fill="#fef9e7" stroke="#8b4513" rx="3"/>
+    <text x="215" y="78" text-anchor="middle" font-size="9" font-weight="700" fill="#c0392b">ddGTP管</text>
+    <text x="215" y="92" text-anchor="middle" font-size="10" fill="#7a6e5e">→G处终止</text>
+    <rect x="260" y="64" width="70" height="34" fill="#fef9e7" stroke="#8b4513" rx="3"/>
+    <text x="295" y="78" text-anchor="middle" font-size="9" font-weight="700" fill="#c0392b">ddCTP管</text>
+    <text x="295" y="92" text-anchor="middle" font-size="10" fill="#7a6e5e">→C处终止</text>
+    <!-- 电泳示意 -->
+    <text x="185" y="118" text-anchor="middle" font-size="10" font-weight="700" fill="#8b4513">↓ 毛细管电泳分离</text>
+    <line x1="30" y1="130" x2="30" y2="240" stroke="#2c2416" stroke-width="1"/>
+    <text x="25" y="135" font-size="10" fill="#2c2416">+</text>
+    <text x="25" y="245" font-size="10" fill="#2c2416">−</text>
+    <line x1="80" y1="140" x2="120" y2="140" stroke="#c0392b" stroke-width="3"/>
+    <line x1="60" y1="160" x2="120" y2="160" stroke="#c0392b" stroke-width="3"/>
+    <line x1="90" y1="180" x2="120" y2="180" stroke="#c0392b" stroke-width="3"/>
+    <line x1="70" y1="200" x2="120" y2="200" stroke="#c0392b" stroke-width="3"/>
+    <line x1="100" y1="220" x2="120" y2="220" stroke="#c0392b" stroke-width="3"/>
+    <text x="340" y="180" font-size="9" fill="#7a6e5e">荧光读取</text>
+    <text x="20" y="262" font-size="10" fill="#2c2416">• 读长：500-1000 bp</text>
+    <text x="20" y="280" font-size="10" fill="#2c2416">• 通量：低，一次1条</text>
+    <text x="20" y="298" font-size="10" fill="#2c2416">• 准确率：99.99%（金标准）</text>
+    <text x="20" y="316" font-size="10" font-weight="700" fill="#c0392b">• 应用：验证、HGP、临床诊断</text>
+  </g>
+
+  <!-- 高通量 -->
+  <g transform="translate(410,55)">
+    <rect x="0" y="0" width="370" height="310" fill="#fff8e7" stroke="#e8c84a" stroke-width="2" rx="6"/>
+    <rect x="0" y="0" width="370" height="30" fill="#8b4513" rx="6"/>
+    <text x="185" y="20" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">高通量测序（二代NGS / 三代）</text>
+    <text x="20" y="54" font-size="11" font-weight="700" fill="#c0392b">二代Illumina：桥式PCR+可逆终止子</text>
+    <!-- flow cell -->
+    <rect x="20" y="64" width="160" height="50" fill="#fef9e7" stroke="#8b4513" rx="3"/>
+    <text x="100" y="80" text-anchor="middle" font-size="9" fill="#2c2416">DNA片段+接头</text>
+    <text x="100" y="94" text-anchor="middle" font-size="9" fill="#2c2416">→结合流动槽</text>
+    <text x="100" y="108" text-anchor="middle" font-size="9" fill="#c0392b">→桥式PCR成簇(~1000拷贝)</text>
+    <rect x="200" y="64" width="150" height="50" fill="#fdf2f2" stroke="#c0392b" rx="3"/>
+    <text x="275" y="80" text-anchor="middle" font-size="9" fill="#2c2416">4色荧光可逆终止子</text>
+    <text x="275" y="94" text-anchor="middle" font-size="9" fill="#2c2416">→激光成像</text>
+    <text x="275" y="108" text-anchor="middle" font-size="9" fill="#c0392b">→切荧光+去终止→循环</text>
+
+    <text x="185" y="135" text-anchor="middle" font-size="11" font-weight="700" fill="#8b4513">三代：单分子测序</text>
+    <rect x="20" y="145" width="160" height="55" fill="#f0f7f4" stroke="#27ae60" rx="3"/>
+    <text x="100" y="162" text-anchor="middle" font-size="9" font-weight="700" fill="#27ae60">PacBio SMRT</text>
+    <text x="100" y="176" text-anchor="middle" font-size="10" fill="#2c2416">ZMW孔内单分子实时</text>
+    <text x="100" y="190" text-anchor="middle" font-size="10" fill="#7a6e5e">读长10-25kb</text>
+    <rect x="200" y="145" width="150" height="55" fill="#f0f7f4" stroke="#27ae60" rx="3"/>
+    <text x="275" y="162" text-anchor="middle" font-size="9" font-weight="700" fill="#27ae60">Nanopore纳米孔</text>
+    <text x="275" y="176" text-anchor="middle" font-size="10" fill="#2c2416">电流变化检测碱基</text>
+    <text x="275" y="190" text-anchor="middle" font-size="10" fill="#7a6e5e">读长>1Mb(超长)</text>
+
+    <text x="20" y="222" font-size="10" fill="#2c2416">• 二代读长：50-300bp，通量极高(GB/run)</text>
+    <text x="20" y="240" font-size="10" fill="#2c2416">• 三代：长读长，无需PCR扩增</text>
+    <text x="20" y="258" font-size="10" fill="#2c2416">• 准确率：二代>三代(错误模式不同)</text>
+    <text x="20" y="276" font-size="10" font-weight="700" fill="#c0392b">• 应用：WGS/WES/转录组/宏基因组</text>
+    <text x="20" y="298" font-size="10" font-weight="700" fill="#c0392b">三代优势：结构变异/甲基化/完整转录本</text>
+  </g>
+</svg>
+<figcaption>DNA测序方法对比（Sanger vs 高通量测序）</figcaption>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>📌 <span class="key-point">Sanger 测序的"双脱氧链终止"原理</span>:</p>
+    <p>在 DNA 合成体系中加入 <span class="u">2',3'-双脱氧核苷三磷酸(ddNTP)</span>,其 3' 位是 H 而非 OH。一旦掺入,DNA 链延伸立即终止(因为无法形成 3'→5' 磷酸二酯键)。通过 4 个独立反应(A、T、G、C)分别加入一种 ddNTP,产生一系列长度不同的片段,凝胶电泳分离后读出序列。</p>
+    <p>📌 <span class="key-point">Illumina 测序的桥式扩增</span>:</p>
+    <p>DNA 片段加接头 → 变性 → 单链结合到流动槽表面 → 桥式 PCR 扩增成簇(每簇~1000 拷贝)→ 加 4 种不同荧光标记的可逆终止子 → 激光激发成像 → 切荧光 + 去终止 → 循环。</p>
+  </div>
+</div>
+
+<div class="subtopic-header"><h4>4.3 印迹技术(Blotting)</h4></div>
+
+<div class="table-wrap">
+<table>
+<thead>
+<tr><th>技术</th><th>检测对象</th><th>核心步骤</th><th>应用</th></tr>
+</thead>
+<tbody>
+<tr><td><b>Southern blot</b></td><td>DNA</td><td>限制酶切 → 电泳 → 转膜 → 标记探针杂交 → 显影</td><td>基因拷贝数、缺失/重排检测</td></tr>
+<tr><td><b>Northern blot</b></td><td>RNA</td><td>RNA 电泳 → 转膜 → 标记探针杂交 → 显影</td><td>基因表达水平、可变剪接、RNA 大小</td></tr>
+<tr><td><b>Western blot</b></td><td>蛋白质</td><td>SDS-PAGE → 转膜 → 抗体孵育 → 化学发光/酶显色</td><td>蛋白表达、修饰、大小检测</td></tr>
+<tr><td><b>Eastern blot</b></td><td>糖链/脂质</td><td>类似 Western,用凝集素或脂质结合探针</td><td>糖基化、脂质修饰</td></tr>
+</tbody>
+</table>
+</div>
+<figcaption>表 9 印迹技术四大金刚(奥赛常考 Southern/Northern/Western 的发明者 Edwin Southern 是 1975 年)</figcaption>
+
+<div class="subtopic-header"><h4>4.3.1 Western Blot 工作流程详解</h4></div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><span class="u-double">Western Blot（蛋白质印迹）</span>是检测蛋白质表达水平和性质的核心技术，由 Towbin 等人于 1979 年建立。其基本原理是利用<span class="key-point">抗原-抗体特异性结合</span>检测目标蛋白。</p>
+    <p><span class="u">完整工作流程</span>（七大步骤）：</p>
+    <ol>
+      <li><strong>样品制备（Sample Preparation）</strong>：收集细胞或组织 → 加入裂解液（含蛋白酶抑制剂 PMSF、cocktail 等）裂解 → 离心取上清 → BCA/ Bradford 法定量蛋白浓度。</li>
+      <li><strong>SDS-PAGE 电泳</strong>：蛋白样品与上样缓冲液（含 SDS + β-巯基乙醇/DTT）混合 → 煮沸变性（5-10 min）→ 上样 → 浓缩胶（5%，积层作用，80V）→ 分离胶（10-15%，按分子量选择，120V）→ 电泳至溴酚蓝到达胶底。</li>
+      <li><strong>转膜（Transfer）</strong>：将凝胶上的蛋白转移到固相支持膜上。两种方式：<span class="key-point">湿转（wet transfer）</span>——凝胶和膜夹在滤纸中浸入转膜缓冲液，恒流 300mA / 60-90 min，适合大分子量蛋白，效率高；<span class="key-point">半干转（semi-dry transfer）</span>——凝胶和膜夹在浸湿的滤纸间，恒压 15-25V / 15-30 min，快速省时。常用膜：<span class="key-point">PVDF 膜</span>（聚偏氟乙烯，机械强度高，需甲醇活化，适合抗体孵育和重新孵育）和<span class="key-point">NC 膜</span>（硝酸纤维素，使用方便，脆性大）。</li>
+      <li><strong>丽春红染色（Ponceau S Staining）</strong>：转膜后用丽春红 S 染膜 → 可见红色蛋白条带 → 水洗脱色。这是<span class="key-point">验证转膜效率</span>的关键步骤，也可作为上样量的参考（尤其是内参抗体效果不佳时）。</li>
+      <li><strong>封闭（Blocking）</strong>：用 5% 脱脂奶粉或 3-5% BSA 室温封闭 1 h（或 4°C 过夜），封闭膜上未结合蛋白的位点，减少抗体非特异性结合。注意：磷酸化蛋白检测用 BSA 封闭（奶粉含磷酸化蛋白干扰）。</li>
+      <li><strong>一抗孵育（Primary Antibody Incubation）</strong>：加入稀释的一抗（识别靶蛋白） → 4°C 摇床孵育过夜（或室温 1-2 h）→ TBST 洗膜 3×10 min。一抗的稀释比例和孵育条件是实验成败关键。</li>
+      <li><strong>二抗孵育与显影（Secondary Antibody & Detection）</strong>：加入 HRP（辣根过氧化物酶）或 AP（碱性磷酸酶）标记的二抗（识别一抗恒定区） → 室温孵育 1 h → TBST 洗膜 3×10 min → 加入化学发光底物（ECL） → 暗室压片显影或化学发光成像仪采集图像。</li>
+    </ol>
+    <p><span class="u-double">关键试剂与作用</span>：</p>
+    <ul>
+      <li><span class="key-point">SDS（十二烷基硫酸钠）</span>：阴离子去污剂，使蛋白质变性并带上大量负电荷（约 1.4 g SDS/g 蛋白），使蛋白迁移率仅取决于分子量，与电荷和形状无关。</li>
+      <li><span class="key-point">β-巯基乙醇（β-ME）/ DTT（二硫苏糖醇）</span>：还原剂，断裂蛋白质分子内和分子间的二硫键（-S-S- → -SH + HS-），使蛋白完全解聚为亚基。</li>
+      <li><span class="key-point">内参蛋白（Loading Control）</span>：用于校正上样量差异，验证实验系统的可靠性。常用内参：<span class="u">GAPDH</span>（甘油醛-3-磷酸脱氢酶，~37 kDa，胞质蛋白）、<span class="u">β-actin</span>（β-肌动蛋白，~42 kDa，细胞骨架蛋白）、<span class="u">β-tubulin</span>（~55 kDa，微管蛋白）、核蛋白内参 <span class="u">Lamin B</span>（~67 kDa）。选择原则：分子量与靶蛋白有差异；表达量稳定不受实验处理影响。</li>
+    </ul>
+    <p><span class="u-double">常见问题与原因分析</span>：</p>
+    <ul>
+      <li><strong>条带弥散（Smearing）</strong>：蛋白降解（样品处理不当、缺蛋白酶抑制剂）；上样量过大；凝胶浓度不合适；电泳电压过高。</li>
+      <li><strong>无信号（No Signal）</strong>：抗体浓度太低或孵育时间不足；蛋白未充分转移到膜上；靶蛋白表达量过低；抗体不识别变性蛋白（某些抗体仅识别天然构象）；ECL 底物失活。</li>
+      <li><strong>非特异带 / 多条带</strong>：一抗特异性差；封闭不充分；一抗浓度过高；蛋白存在多种修饰形式（磷酸化、糖基化等）或剪切变体。</li>
+      <li><strong>背景过高（High Background）</strong>：封闭不足；一抗/二抗浓度过高；洗膜不充分；膜干燥过。</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    竞赛高频考点：①Western Blot 检测对象=蛋白质，用抗体（抗原-抗体特异性）；②SDS 使蛋白带负电→迁移率仅取决于分子量；③β-巯基乙醇/DTT 还原二硫键→蛋白解聚；④PVDF vs NC 膜的区别（PVDF 需甲醇活化、可重孵育、机械强度高）；⑤内参蛋白 GAPDH/β-actin 的作用——校正上样量，验证系统可靠性；⑥转膜方式：湿转（高效，大蛋白）vs 半干转（快速）；⑦丽春红染色=验证转膜效率的快速方法。记忆："SDS变性带负电，巯基乙醇断二硫，PVDF转膜丽春红验，一抗靶标二抗显，内参校正最关键"。
+  </div>
+</div>
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 982 420" style="width:100%;max-width:740px;margin:1.2rem auto;display:block;font-family:'Noto Sans CJK SC',sans-serif;">
+  <rect x="0" y="0" width="780" height="420" fill="#fdfbf7"/>
+  <text x="390" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="#2c2416">Western Blot 工作流程图</text>
+  
+  <!-- Step 1: 样品制备 -->
+  <rect x="20" y="55" width="90" height="70" rx="6" fill="#fff8e7" stroke="#e8c84a" stroke-width="1.5"/>
+  <text x="65" y="78" text-anchor="middle" font-size="11" font-weight="700" fill="#c0392b">①样品制备</text>
+  <text x="65" y="95" text-anchor="middle" font-size="9" fill="#2c2416">细胞/组织裂解</text>
+  <text x="65" y="108" text-anchor="middle" font-size="9" fill="#2c2416">蛋白定量(BCA)</text>
+  <!-- 细胞图示 -->
+  <circle cx="65" cy="118" r="4" fill="#8b4513" opacity="0.5"/>
+  <circle cx="75" cy="120" r="3" fill="#8b4513" opacity="0.5"/>
+  <circle cx="55" cy="120" r="3" fill="#8b4513" opacity="0.5"/>
+  
+  <!-- Arrow 1→2 -->
+  <line x1="115" y1="90" x2="140" y2="90" stroke="#c0392b" stroke-width="2" marker-end="url(#wb-arr)"/>
+  
+  <!-- Step 2: SDS-PAGE -->
+  <rect x="145" y="55" width="90" height="70" rx="6" fill="#fef9e7" stroke="#8b4513" stroke-width="1.5"/>
+  <text x="190" y="78" text-anchor="middle" font-size="11" font-weight="700" fill="#c0392b">②SDS-PAGE</text>
+  <text x="190" y="95" text-anchor="middle" font-size="9" fill="#2c2416">SDS+β-ME变性</text>
+  <text x="190" y="108" text-anchor="middle" font-size="9" fill="#2c2416">电泳分离</text>
+  <!-- 凝胶条带 -->
+  <rect x="175" y="114" width="6" height="10" fill="#c0392b" opacity="0.7"/>
+  <rect x="185" y="117" width="6" height="7" fill="#8b4513" opacity="0.6"/>
+  <rect x="195" y="119" width="6" height="5" fill="#8b4513" opacity="0.5"/>
+  <rect x="205" y="120" width="6" height="4" fill="#7a6e5e" opacity="0.5"/>
+  
+  <!-- Arrow 2→3 -->
+  <line x1="240" y1="90" x2="265" y2="90" stroke="#c0392b" stroke-width="2" marker-end="url(#wb-arr)"/>
+  
+  <!-- Step 3: 转膜 -->
+  <rect x="270" y="55" width="90" height="70" rx="6" fill="#fff8e7" stroke="#e8c84a" stroke-width="1.5"/>
+  <text x="315" y="78" text-anchor="middle" font-size="11" font-weight="700" fill="#c0392b">③转膜</text>
+  <text x="315" y="95" text-anchor="middle" font-size="9" fill="#2c2416">湿转/半干转</text>
+  <text x="315" y="108" text-anchor="middle" font-size="9" fill="#2c2416">PVDF/NC膜</text>
+  <!-- 膜图示 -->
+  <rect x="290" y="114" width="50" height="10" fill="#f5f0e8" stroke="#d6ccc0" stroke-width="1"/>
+  <rect x="298" y="116" width="5" height="6" fill="#c0392b" opacity="0.6"/>
+  <rect x="308" y="117" width="4" height="5" fill="#8b4513" opacity="0.5"/>
+  <rect x="318" y="118" width="4" height="4" fill="#7a6e5e" opacity="0.5"/>
+  
+  <!-- Arrow 3→4 -->
+  <line x1="365" y1="90" x2="390" y2="90" stroke="#c0392b" stroke-width="2" marker-end="url(#wb-arr)"/>
+  
+  <!-- Step 4: 丽春红染色 -->
+  <rect x="395" y="55" width="90" height="70" rx="6" fill="#fdf2f2" stroke="#c0392b" stroke-width="1.5"/>
+  <text x="440" y="78" text-anchor="middle" font-size="11" font-weight="700" fill="#c0392b">④丽春红染色</text>
+  <text x="440" y="95" text-anchor="middle" font-size="9" fill="#2c2416">验证转膜效率</text>
+  <text x="440" y="108" text-anchor="middle" font-size="9" fill="#2c2416">水洗脱色</text>
+  <!-- 红色条带 -->
+  <rect x="410" y="114" width="60" height="10" fill="#c0392b" opacity="0.3"/>
+  <line x1="415" y1="119" x2="465" y2="119" stroke="#c0392b" stroke-width="1" stroke-dasharray="2,2"/>
+  
+  <!-- Arrow 4→5 -->
+  <line x1="490" y1="90" x2="515" y2="90" stroke="#c0392b" stroke-width="2" marker-end="url(#wb-arr)"/>
+  
+  <!-- Step 5: 封闭 -->
+  <rect x="520" y="55" width="90" height="70" rx="6" fill="#f0f7f4" stroke="#7cb342" stroke-width="1.5"/>
+  <text x="565" y="78" text-anchor="middle" font-size="11" font-weight="700" fill="#558b2f">⑤封闭</text>
+  <text x="565" y="95" text-anchor="middle" font-size="9" fill="#2c2416">5%脱脂奶粉</text>
+  <text x="565" y="108" text-anchor="middle" font-size="9" fill="#2c2416">或BSA 1h</text>
+  
+  <!-- Arrow 5→6 -->
+  <line x1="615" y1="90" x2="640" y2="90" stroke="#c0392b" stroke-width="2" marker-end="url(#wb-arr)"/>
+  
+  <!-- Step 6: 一抗 -->
+  <rect x="645" y="55" width="115" height="70" rx="6" fill="#fff8e7" stroke="#e8c84a" stroke-width="1.5"/>
+  <text x="702" y="78" text-anchor="middle" font-size="11" font-weight="700" fill="#c0392b">⑥一抗孵育</text>
+  <text x="702" y="95" text-anchor="middle" font-size="9" fill="#2c2416">4°C过夜 识别靶蛋白</text>
+  <text x="702" y="108" text-anchor="middle" font-size="9" fill="#2c2416">洗膜 3×10min</text>
+  <!-- Y型抗体 -->
+  <path d="M 670 118 L 665 128 L 675 128 Z" fill="#c0392b" opacity="0.7"/>
+  <path d="M 680 118 L 675 128 L 685 128 Z" fill="#c0392b" opacity="0.7"/>
+  <path d="M 675 120 L 675 128" stroke="#c0392b" stroke-width="1.5"/>
+  
+  <!-- Step 7: 二抗+显影 -->
+  <rect x="270" y="170" width="240" height="80" rx="6" fill="#fdf2f2" stroke="#c0392b" stroke-width="2"/>
+  <text x="390" y="195" text-anchor="middle" font-size="13" font-weight="700" fill="#c0392b">⑦ 二抗孵育 + 化学发光显影</text>
+  <text x="390" y="213" text-anchor="middle" font-size="10" fill="#2c2416">HRP标记二抗 → ECL底物 → 化学发光成像</text>
+  <text x="390" y="228" text-anchor="middle" font-size="10" fill="#2c2416">条带灰度值定量 = 靶蛋白 / 内参蛋白</text>
+  <!-- 显影条带示意 -->
+  <rect x="310" y="235" width="160" height="10" fill="#f5f0e8" stroke="#d6ccc0" stroke-width="1"/>
+  <rect x="320" y="237" width="30" height="6" fill="#c0392b" opacity="0.8"/>
+  <rect x="360" y="239" width="20" height="4" fill="#8b4513" opacity="0.7"/>
+  <rect x="390" y="238" width="25" height="5" fill="#c0392b" opacity="0.6"/>
+  <text x="335" y="236" font-size="8" fill="#fff" text-anchor="middle">靶蛋白</text>
+  <text x="402" y="237" font-size="8" fill="#fff" text-anchor="middle">内参</text>
+  
+  <!-- 从步骤6向下箭头 -->
+  <path d="M 702 125 L 702 150 L 390 150 L 390 170" fill="none" stroke="#c0392b" stroke-width="2" marker-end="url(#wb-arr)"/>
+  
+  <!-- 内参说明框 -->
+  <rect x="20" y="175" width="200" height="90" rx="6" fill="#fff3cd" stroke="#e8c84a" stroke-width="1.5"/>
+  <text x="120" y="195" text-anchor="middle" font-size="11" font-weight="700" fill="#8b4513">内参蛋白（Loading Control）</text>
+  <text x="30" y="212" font-size="9" fill="#2c2416">• GAPDH (37 kDa) — 糖酵解酶</text>
+  <text x="30" y="226" font-size="9" fill="#2c2416">• β-actin (42 kDa) — 细胞骨架</text>
+  <text x="30" y="240" font-size="9" fill="#2c2416">• β-tubulin (55 kDa) — 微管</text>
+  <text x="30" y="254" font-size="9" fill="#c0392b">作用：校正上样量差异</text>
+  
+  <!-- 常见问题 -->
+  <rect x="540" y="175" width="220" height="140" rx="6" fill="#f5f0e8" stroke="#d6ccc0" stroke-width="1.5"/>
+  <text x="650" y="195" text-anchor="middle" font-size="11" font-weight="700" fill="#8b4513">常见问题与原因</text>
+  <text x="550" y="212" font-size="9" fill="#c0392b">⚠ 条带弥散：</text>
+  <text x="600" y="212" font-size="9" fill="#2c2416">蛋白降解 / 上样过量</text>
+  <text x="550" y="226" font-size="9" fill="#c0392b">⚠ 无信号：</text>
+  <text x="588" y="226" font-size="9" fill="#2c2416">抗体浓度低 / 转膜不全</text>
+  <text x="550" y="240" font-size="9" fill="#c0392b">⚠ 非特异带：</text>
+  <text x="600" y="240" font-size="9" fill="#2c2416">抗体特异性差 / 封闭不足</text>
+  <text x="550" y="254" font-size="9" fill="#c0392b">⚠ 背景高：</text>
+  <text x="592" y="254" font-size="9" fill="#2c2416">封闭不够 / 洗膜不充分</text>
+  <text x="550" y="268" font-size="9" fill="#c0392b">⚠ 条带弯曲：</text>
+  <text x="600" y="268" font-size="9" fill="#2c2416">凝胶聚合不均 / 电压不稳</text>
+  <text x="550" y="282" font-size="9" fill="#c0392b">⚠ 分子量不准：</text>
+  <text x="610" y="282" font-size="9" fill="#2c2416">未加还原剂 / 糖基化修饰</text>
+  
+  <!-- 关键试剂 -->
+  <rect x="20" y="285" width="490" height="65" rx="6" fill="#f0f7f4" stroke="#7cb342" stroke-width="1.5"/>
+  <text x="265" y="305" text-anchor="middle" font-size="11" font-weight="700" fill="#558b2f">关键试剂与作用</text>
+  <text x="35" y="322" font-size="9" fill="#2c2416"><tspan font-weight="700" fill="#c0392b">SDS</tspan>：变性+负电荷 → 迁移率仅取决于分子量</text>
+  <text x="280" y="322" font-size="9" fill="#2c2416"><tspan font-weight="700" fill="#c0392b">β-巯基乙醇/DTT</tspan>：还原二硫键 → 蛋白解聚</text>
+  <text x="35" y="338" font-size="9" fill="#2c2416"><tspan font-weight="700" fill="#c0392b">PVDF膜</tspan>：机械强度高，可重孵育，需甲醇活化</text>
+  <text x="280" y="338" font-size="9" fill="#2c2416"><tspan font-weight="700" fill="#c0392b">丽春红S</tspan>：可逆染色，验证转膜效率</text>
+  
+  <!-- 底部竞赛考点 -->
+  <rect x="20" y="365" width="740" height="40" rx="6" fill="#fff8e7" stroke="#e8c84a" stroke-width="2"/>
+  <text x="390" y="382" text-anchor="middle" font-size="11" font-weight="700" fill="#c0392b">竞赛考点速记</text>
+  <text x="390" y="400" text-anchor="middle" font-size="10" fill="#2c2416">检测蛋白用抗体 | SDS变性+还原剂 | 内参校正上样量 | PVDF/NC膜选择 | 湿转高效半干快</text>
+  
+  <defs>
+    <marker id="wb-arr" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <polygon points="0,0 8,4 0,8" fill="#c0392b"/>
+    </marker>
+  </defs>
+</svg>
+<figcaption>图：Western Blot 完整工作流程——样品制备→SDS-PAGE电泳→转膜（湿转/半干转，PVDF/NC膜）→丽春红染色验证→封闭→一抗孵育→二抗孵育+化学发光显影。关键试剂：SDS（变性）、β-巯基乙醇/DTT（还原二硫键）、内参蛋白（GAPDH/β-actin校正上样量）。</figcaption>
+
+<svg viewBox="0 0 800 520" style="width:100%;max-width:720px;margin:1.2rem auto;display:block;font-family:sans-serif;">
+  <rect x="0" y="0" width="800" height="520" fill="#fdfbf7" stroke="#d6ccc0" rx="8"/>
+  <text x="400" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="#2c2416">分子克隆流程图（重组DNA技术）</text>
+
+  <!-- Step 1: 获取目的基因 -->
+  <rect x="30" y="50" width="170" height="80" fill="#fff8e7" stroke="#e8c84a" rx="6"/>
+  <text x="115" y="72" text-anchor="middle" font-size="13" font-weight="700" fill="#c0392b">① 获取目的基因</text>
+  <text x="115" y="90" text-anchor="middle" font-size="10" fill="#2c2416">PCR扩增 / RT-PCR</text>
+  <text x="115" y="104" text-anchor="middle" font-size="10" fill="#2c2416">逆转录cDNA</text>
+  <text x="115" y="118" text-anchor="middle" font-size="10" fill="#2c2416">化学合成 / 文库筛选</text>
+
+  <!-- Arrow -->
+  <line x1="205" y1="90" x2="230" y2="90" stroke="#c0392b" stroke-width="2" marker-end="url(#arrow1)"/>
+
+  <!-- Step 2: 限制酶切 -->
+  <rect x="235" y="50" width="150" height="80" fill="#fef9e7" stroke="#8b4513" rx="6"/>
+  <text x="310" y="72" text-anchor="middle" font-size="13" font-weight="700" fill="#c0392b">② 限制酶切</text>
+  <text x="310" y="92" text-anchor="middle" font-size="10" fill="#2c2416">同一种限制酶</text>
+  <text x="310" y="106" text-anchor="middle" font-size="10" fill="#2c2416">切割目的基因+载体</text>
+  <text x="310" y="120" text-anchor="middle" font-size="9" fill="#7a6e5e">产生黏性末端( EcoRI等 )</text>
+
+  <line x1="390" y1="90" x2="415" y2="90" stroke="#c0392b" stroke-width="2" marker-end="url(#arrow1)"/>
+
+  <!-- Step 3: DNA连接 -->
+  <rect x="420" y="50" width="150" height="80" fill="#fef9e7" stroke="#8b4513" rx="6"/>
+  <text x="495" y="72" text-anchor="middle" font-size="13" font-weight="700" fill="#c0392b">③ DNA连接</text>
+  <text x="495" y="92" text-anchor="middle" font-size="10" fill="#2c2416">T4 DNA连接酶</text>
+  <text x="495" y="106" text-anchor="middle" font-size="10" fill="#2c2416">目的基因+载体</text>
+  <text x="495" y="120" text-anchor="middle" font-size="10" fill="#2c2416">→ 重组DNA分子</text>
+
+  <line x1="575" y1="90" x2="600" y2="90" stroke="#c0392b" stroke-width="2" marker-end="url(#arrow1)"/>
+
+  <!-- Step 4: 转化 -->
+  <rect x="605" y="50" width="165" height="80" fill="#fff8e7" stroke="#e8c84a" rx="6"/>
+  <text x="687" y="72" text-anchor="middle" font-size="13" font-weight="700" fill="#c0392b">④ 转化导入宿主</text>
+  <text x="687" y="92" text-anchor="middle" font-size="10" fill="#2c2416">CaCl₂热激(大肠杆菌)</text>
+  <text x="687" y="106" text-anchor="middle" font-size="10" fill="#2c2416">电穿孔 / 显微注射</text>
+  <text x="687" y="120" text-anchor="middle" font-size="10" fill="#2c2416">农杆菌转化(植物)</text>
+
+  <!-- Arrow down -->
+  <line x1="687" y1="135" x2="687" y2="165" stroke="#c0392b" stroke-width="2" marker-end="url(#arrow1)"/>
+
+  <!-- Step 5: 筛选 -->
+  <rect x="605" y="170" width="165" height="80" fill="#fef9e7" stroke="#8b4513" rx="6"/>
+  <text x="687" y="192" text-anchor="middle" font-size="13" font-weight="700" fill="#c0392b">⑤ 筛选阳性克隆</text>
+  <text x="687" y="212" text-anchor="middle" font-size="10" fill="#2c2416">蓝白斑筛选(α互补)</text>
+  <text x="687" y="226" text-anchor="middle" font-size="10" fill="#2c2416">抗生素筛选(Ampⁱ)</text>
+  <text x="687" y="240" text-anchor="middle" font-size="10" fill="#2c2416">菌落PCR / 酶切鉴定</text>
+
+  <!-- Arrow left -->
+  <line x1="600" y1="210" x2="575" y2="210" stroke="#c0392b" stroke-width="2" marker-end="url(#arrow1)"/>
+
+  <!-- Step 6: 扩增/表达 -->
+  <rect x="420" y="170" width="150" height="80" fill="#fdf2f2" stroke="#c0392b" rx="6"/>
+  <text x="495" y="192" text-anchor="middle" font-size="13" font-weight="700" fill="#c0392b">⑥ 扩增与表达</text>
+  <text x="495" y="212" text-anchor="middle" font-size="10" fill="#2c2416">大量培养重组菌</text>
+  <text x="495" y="226" text-anchor="middle" font-size="10" fill="#2c2416">诱导表达蛋白</text>
+  <text x="495" y="240" text-anchor="middle" font-size="10" fill="#2c2416">纯化目的蛋白</text>
+
+  <!-- 载体类型 box -->
+  <rect x="30" y="280" width="370" height="100" fill="#f0f7f4" stroke="#7cb342" rx="6"/>
+  <text x="215" y="302" text-anchor="middle" font-size="12" font-weight="700" fill="#558b2f">常用载体类型</text>
+  <text x="45" y="322" font-size="10" fill="#3e6b3e">• 质粒载体(pUC18/19):多克隆位点MCS + Ampⁱ + lacZ'α互补</text>
+  <text x="45" y="338" font-size="10" fill="#3e6b3e">• 噬菌体载体(λ噬菌体):容量大,适合文库构建</text>
+  <text x="45" y="354" font-size="10" fill="#3e6b3e">• 黏粒(cosmid):质粒+λ cos位点,容量30-45 kb</text>
+  <text x="45" y="370" font-size="10" fill="#3e6b3e">• BAC/YAC:细菌/酵母人工染色体,容量100-2000 kb</text>
+
+  <!-- 关键酶 box -->
+  <rect x="420" y="280" width="350" height="100" fill="#fdf2f2" stroke="#c0392b" rx="6"/>
+  <text x="595" y="302" text-anchor="middle" font-size="12" font-weight="700" fill="#c0392b">关键工具酶</text>
+  <text x="435" y="322" font-size="10" fill="#2c2416">• <tspan font-weight="700">限制性内切酶(Ⅱ型)</tspan>:识别特异序列,如 EcoRI(G↓AATTC)</text>
+  <text x="435" y="338" font-size="10" fill="#2c2416">• <tspan font-weight="700">T4 DNA连接酶</tspan>:连接黏性/平末端,需ATP</text>
+  <text x="435" y="354" font-size="10" fill="#2c2416">• <tspan font-weight="700">碱性磷酸酶</tspan>:去载体5'磷酸,防自身环化</text>
+  <text x="435" y="370" font-size="10" fill="#2c2416">• <tspan font-weight="700">Taq聚合酶/逆转录酶</tspan>:PCR与cDNA合成</text>
+
+  <!-- 竞赛重点 -->
+  <rect x="30" y="400" width="740" height="105" fill="#fff3cd" stroke="#e8c84a" rx="6"/>
+  <text x="400" y="422" text-anchor="middle" font-size="13" font-weight="700" fill="#c0392b">竞赛重点</text>
+  <text x="45" y="442" font-size="11" fill="#2c2416">1. <tspan font-weight="700">同一种限制酶</tspan>切割目的基因和载体 → 产生互补黏性末端 → T4连接酶连接(奥赛常考"为什么用同一种酶")</text>
+  <text x="45" y="460" font-size="11" fill="#2c2416">2. <tspan font-weight="700">蓝白斑筛选</tspan>:X-gal + IPTG,lacZ'互补 → 蓝色菌落(空载体),白色菌落(重组子)</text>
+  <text x="45" y="478" font-size="11" fill="#2c2416">3. <tspan font-weight="700">抗生素筛选</tspan>:载体带Ampⁱ基因 → 只有含载体的细菌才能在含氨苄平板上生长</text>
+  <text x="45" y="496" font-size="11" fill="#2c2416">4. <tspan font-weight="700">黏性末端 vs 平末端</tspan>:黏性末端连接效率高、方向性强;平末端可用T-A克隆</text>
+
+  <defs>
+    <marker id="arrow1" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#c0392b"/>
+    </marker>
+  </defs>
+</svg>
+<figcaption>分子克隆流程图（重组DNA技术）</figcaption>
+
+<div class="subtopic-header"><h4>4.4 蛋白-核酸互作研究</h4></div>
+
+<div class="table-wrap">
+<table>
+<thead>
+<tr><th>技术</th><th>原理</th><th>应用</th></tr>
+</thead>
+<tbody>
+<tr><td><b>EMSA(电泳迁移率变动)</b></td><td>蛋白结合 DNA 后迁移变慢,凝胶电泳检测</td><td>转录因子-DNA 结合、特异性验证</td></tr>
+<tr><td><b>ChIP(染色质免疫沉淀)</b></td><td>蛋白-DNA 交联 → 抗体沉淀 → 测序(ChIP-seq)/qPCR(ChIP-qPCR)</td><td>全基因组定位转录因子结合位点、组蛋白修饰</td></tr>
+<tr><td><b>DNase I 足迹实验</b></td><td>DNase I 部分消化,蛋白结合区不被切(空白带)</td><td>精确定位 DNA-蛋白结合序列</td></tr>
+<tr><td><b>酵母双杂交(Y2H)</b></td><td>诱饵蛋白 + 猎物蛋白,激活报告基因</td><td>蛋白-蛋白互作筛选、互作网络</td></tr>
+<tr><td><b>Co-IP(免疫共沉淀)</b></td><td>抗体沉淀目标蛋白及其互作复合物</td><td>验证蛋白复合体</td></tr>
+<tr><td><b>BiFC(双分子荧光互补)</b></td><td>荧光蛋白两半,只有互作才发荧光</td><td>活细胞内蛋白互作定位</td></tr>
+</tbody>
+</table>
+</div>
+<figcaption>表 10 蛋白-核酸互作研究的主要技术</figcaption>
+
+<div class="subtopic-header"><h4>4.5 基因编辑技术</h4></div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>📌 <span class="key-point">CRISPR/Cas9 系统</span>(2020 年诺贝尔化学奖颁给 Charpentier 和 Doudna):</p>
+    <ul>
+      <li>源自细菌"获得性免疫"——细菌用 CRISPR 系统记录并切割入侵噬菌体的 DNA</li>
+      <li><span class="u">sgRNA</span>(单向导 RNA,约 20 nt 序列 + 支架)识别目标 DNA</li>
+      <li><span class="u">Cas9 核酸酶</span>在 PAM(NGG)上游约 3 bp 处切割双链 DNA,产生 DSB</li>
+      <li>细胞通过 NHEJ(非同源末端连接,易出错)或 HDR(同源重组,精确)修复</li>
+      <li>应用:基因敲除、敲入、激活、抑制、碱基编辑、单碱基替换、CRISPRa/i、表观编辑</li>
+    </ul>
+    <p>其他基因编辑技术:</p>
+    <ul>
+      <li><span class="u">ZFN(锌指核酸酶)</span>:第一代基因编辑工具,模块化锌指蛋白 + FokI 核酸酶</li>
+      <li><span class="u">TALEN(转录激活样效应物核酸酶)</span>:第二代,识别效率更高</li>
+      <li><span class="u">CRISPR/Cas9</span>:第三代,操作简便,成本低,应用最广</li>
+      <li><span class="u">CRISPR/Cas12a(Cpf1)</span>:产生黏性末端,适合基因敲入</li>
+      <li><span class="u">CRISPR/Cas13</span>:切割 RNA 而非 DNA,用于 RNA 编辑</li>
+      <li><span class="u">碱基编辑器(ABE/CBE)</span>:单碱基替换,无需 DSB</li>
+      <li><span class="u">先导编辑(Prime Editing)</span>:更精准的"搜索替换"工具</li>
+    </ul>
+  </div>
+</div>
+
+<svg viewBox="0 0 800 500" style="width:100%;max-width:720px;margin:1.2rem auto;display:block;font-family:sans-serif;">
+  <rect x="0" y="0" width="800" height="500" fill="#fdfbf7" stroke="#d6ccc0" rx="8"/>
+  <text x="400" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="#2c2416">CRISPR-Cas9 基因编辑机制图</text>
+
+  <!-- DNA双链 -->
+  <text x="60" y="62" font-size="11" font-weight="700" fill="#2c2416">目标DNA(基因组)</text>
+  <line x1="50" y1="75" x2="500" y2="75" stroke="#2c2416" stroke-width="2.5"/>
+  <line x1="50" y1="92" x2="500" y2="92" stroke="#7a6e5e" stroke-width="2.5"/>
+  <text x="30" y="80" font-size="9" fill="#7a6e5e">5'</text>
+  <text x="30" y="97" font-size="9" fill="#7a6e5e">3'</text>
+  <!-- PAM -->
+  <rect x="200" y="68" width="42" height="30" fill="#fff8e7" stroke="#e8c84a" stroke-width="1.5"/>
+  <text x="221" y="88" text-anchor="middle" font-size="10" font-weight="700" fill="#8b4513">PAM</text>
+  <text x="221" y="100" text-anchor="middle" font-size="10" fill="#7a6e5e">NGG</text>
+  <!-- 切割位点 -->
+  <line x1="183" y1="72" x2="183" y2="96" stroke="#c0392b" stroke-width="2" stroke-dasharray="3,2"/>
+  <line x1="190" y1="72" x2="190" y2="96" stroke="#c0392b" stroke-width="2" stroke-dasharray="3,2"/>
+  <text x="186" y="64" text-anchor="middle" font-size="10" fill="#c0392b">DSB切割</text>
+  <text x="186" y="110" text-anchor="middle" font-size="10" fill="#c0392b">PAM上游3bp</text>
+
+  <!-- sgRNA -->
+  <path d="M 150 140 Q 200 120, 250 140 L 250 175 Q 200 185, 150 175 Z" fill="#fef9e7" stroke="#8b4513" stroke-width="1.5"/>
+  <text x="200" y="155" text-anchor="middle" font-size="11" font-weight="700" fill="#8b4513">sgRNA</text>
+  <text x="200" y="170" text-anchor="middle" font-size="10" fill="#7a6e5e">20nt引导序列+支架</text>
+  <!-- 碱基配对虚线 -->
+  <line x1="180" y1="138" x2="180" y2="93" stroke="#27ae60" stroke-width="1" stroke-dasharray="2,2"/>
+  <line x1="195" y1="138" x2="195" y2="93" stroke="#27ae60" stroke-width="1" stroke-dasharray="2,2"/>
+  <line x1="210" y1="138" x2="210" y2="93" stroke="#27ae60" stroke-width="1" stroke-dasharray="2,2"/>
+  <text x="165" y="120" font-size="10" fill="#27ae60">碱基配对</text>
+
+  <!-- Cas9 -->
+  <ellipse cx="200" cy="215" rx="75" ry="50" fill="#fdf2f2" stroke="#c0392b" stroke-width="2"/>
+  <text x="200" y="210" text-anchor="middle" font-size="13" font-weight="700" fill="#c0392b">Cas9</text>
+  <text x="200" y="225" text-anchor="middle" font-size="9" fill="#7a6e5e">核酸酶(HNH + RuvC)</text>
+  <text x="200" y="238" text-anchor="middle" font-size="9" fill="#7a6e5e">双结构域切割双链</text>
+
+  <!-- 步骤标题 -->
+  <text x="400" y="52" text-anchor="middle" font-size="12" font-weight="700" fill="#c0392b">① 识别与切割</text>
+  <text x="400" y="66" text-anchor="middle" font-size="10" fill="#2c2416">sgRNA引导Cas9定位 → PAM识别 → 双链切割(DSB)</text>
+
+  <!-- 修复途径 -->
+  <text x="400" y="155" text-anchor="middle" font-size="12" font-weight="700" fill="#c0392b">② DNA修复(双链断裂后)</text>
+  <line x1="300" y1="140" x2="500" y2="140" stroke="#d6ccc0" stroke-width="1"/>
+
+  <!-- NHEJ -->
+  <rect x="310" y="170" width="180" height="100" fill="#fff8e7" stroke="#e8c84a" rx="6"/>
+  <text x="400" y="192" text-anchor="middle" font-size="12" font-weight="700" fill="#8b4513">NHEJ 非同源末端连接</text>
+  <text x="400" y="210" text-anchor="middle" font-size="9" fill="#2c2416">• 不需要模板,直接连接</text>
+  <text x="400" y="224" text-anchor="middle" font-size="9" fill="#2c2416">• 易出错(indel突变)</text>
+  <text x="400" y="238" text-anchor="middle" font-size="9" fill="#2c2416">• → 基因敲除(Knockout)</text>
+  <text x="400" y="258" text-anchor="middle" font-size="9" font-weight="700" fill="#c0392b">效率高,但不可控</text>
+
+  <!-- HDR -->
+  <rect x="510" y="170" width="180" height="100" fill="#f0f7f4" stroke="#7cb342" rx="6"/>
+  <text x="600" y="192" text-anchor="middle" font-size="12" font-weight="700" fill="#558b2f">HDR 同源重组修复</text>
+  <text x="600" y="210" text-anchor="middle" font-size="9" fill="#2c2416">• 需要同源模板(DNA供体)</text>
+  <text x="600" y="224" text-anchor="middle" font-size="9" fill="#2c2416">• 精确修复,可引入序列</text>
+  <text x="600" y="238" text-anchor="middle" font-size="9" fill="#2c2416">• → 基因敲入(Knock-in)</text>
+  <text x="600" y="258" text-anchor="middle" font-size="9" font-weight="700" fill="#558b2f">精确,但效率低</text>
+
+  <!-- 分叉箭头 -->
+  <line x1="400" y1="140" x2="400" y2="160" stroke="#c0392b" stroke-width="2"/>
+  <line x1="400" y1="160" x2="400" y2="170" stroke="#e8c84a" stroke-width="2" marker-end="url(#arr2)"/>
+  <line x1="400" y1="160" x2="600" y2="170" stroke="#7cb342" stroke-width="2" marker-end="url(#arr3)"/>
+
+  <!-- Cas9变体 -->
+  <rect x="30" y="300" width="370" height="80" fill="#fdf2f2" stroke="#c0392b" rx="6"/>
+  <text x="215" y="322" text-anchor="middle" font-size="12" font-weight="700" fill="#c0392b">Cas9变体与应用拓展</text>
+  <text x="45" y="342" font-size="10" fill="#2c2416">• <tspan font-weight="700">dCas9(死酶)</tspan>:失去切割活性,保留DNA结合 → CRISPRa/i(激活/抑制)</text>
+  <text x="45" y="358" font-size="10" fill="#2c2416">• <tspan font-weight="700">Cas9 nickase</tspan>:单链切口 → 提高精确度,降低脱靶</text>
+  <text x="45" y="374" font-size="10" fill="#2c2416">• <tspan font-weight="700">碱基编辑器(ABE/CBE)</tspan>:dCas9+脱氨酶 → 无需DSB即可单碱基替换</text>
+
+  <!-- 优势与局限 -->
+  <rect x="420" y="300" width="350" height="80" fill="#fff8e7" stroke="#e8c84a" rx="6"/>
+  <text x="595" y="322" text-anchor="middle" font-size="12" font-weight="700" fill="#8b4513">优势 vs 局限</text>
+  <text x="435" y="342" font-size="10" fill="#3e6b3e">✓ 简便快捷(只需设计sgRNA),成本低</text>
+  <text x="435" y="358" font-size="10" fill="#3e6b3e">✓ 可同时编辑多个基因(多路复用)</text>
+  <text x="435" y="374" font-size="10" fill="#c0392b">✗ 脱靶效应(off-target);PAM序列限制</text>
+
+  <!-- 竞赛重点 -->
+  <rect x="30" y="400" width="740" height="85" fill="#fff3cd" stroke="#e8c84a" rx="6"/>
+  <text x="400" y="422" text-anchor="middle" font-size="13" font-weight="700" fill="#c0392b">竞赛重点</text>
+  <text x="45" y="442" font-size="11" fill="#2c2416">1. <tspan font-weight="700">sgRNA的20nt序列</tspan>决定靶向特异性;PAM(NGG)是Cas9识别的必要条件,位于目标序列3'端</text>
+  <text x="45" y="460" font-size="11" fill="#2c2416">2. NHEJ → 基因敲除(移码突变);HDR → 基因敲入(需供体模板)— 两种修复途径的产物和用途不同</text>
+  <text x="45" y="478" font-size="11" fill="#2c2416">3. <tspan font-weight="700">2020年诺贝尔化学奖</tspan>:Charpentier和Doudna(开发CRISPR-Cas9基因编辑方法)</text>
+
+  <defs>
+    <marker id="arr2" markerWidth="8" markerHeight="8" refX="4" refY="6" orient="auto">
+      <path d="M0,0 L8,6 L0,12 Z" fill="#e8c84a"/>
+    </marker>
+    <marker id="arr3" markerWidth="8" markerHeight="8" refX="4" refY="6" orient="auto">
+      <path d="M0,0 L8,6 L0,12 Z" fill="#7cb342"/>
+    </marker>
+  </defs>
+</svg>
+<figcaption>CRISPR-Cas9 基因编辑机制图</figcaption>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><span class="u-double">Cas9 蛋白结构域与切割机制</span>：Cas9 核酸酶含两个核酸酶结构域，分别切割 DNA 的一条链：</p>
+    <ul>
+      <li><span class="key-point">HNH 结构域</span>：切割与 sgRNA 互补的那条 DNA 链（靶向链），产生平末端切口。</li>
+      <li><span class="key-point">RuvC 结构域</span>：切割非互补链（非靶向链），同样产生平末端。</li>
+      <li>两个结构域协同作用，在 PAM 序列上游约 3 bp 处产生<span class="u">双链断裂（DSB, Double-Strand Break）</span>，切口为平末端（blunt end）。</li>
+      <li>若仅突变一个结构域（如 D10A 突变使 RuvC 失活），则 Cas9 成为<span class="key-point">切口酶（nickase）</span>，仅产生单链切口，可用于提高编辑特异性（双切口策略）。</li>
+    </ul>
+    <p><span class="u-double">sgRNA 的结构与设计</span>：</p>
+    <ul>
+      <li>天然 CRISPR 系统中，引导 RNA 由两种 RNA 组成：<span class="key-point">crRNA</span>（CRISPR RNA，含 ~20 nt 靶向互补序列）和 <span class="key-point">tracrRNA</span>（trans-activating crRNA，与 crRNA 配对形成双链结构，招募 Cas9）。</li>
+      <li>基因工程中，将 crRNA 和 tracrRNA 融合为一条<span class="key-point">sgRNA（single-guide RNA，单向导 RNA）</span>，约 100 nt，包含 5' 端 ~20 nt 靶向序列（决定特异性）+ 3' 端支架序列（scaffold，结合 Cas9）。</li>
+      <li>PAM（Protospacer Adjacent Motif，原间隔序列邻近基序）：Cas9 识别的必需序列，最常用的 SpCas9（化脓性链球菌 Cas9）识别 <span class="key-point">5'-NGG-3'</span>（N 为任意碱基），位于靶序列的 3' 端。PAM 是 Cas9 区分自身 DNA 与外源 DNA 的标志（细菌自身 CRISPR 阵列不含 PAM）。</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    竞赛考点深化：①Cas9 双结构域——HNH切靶向链、RuvC切非靶向链→平末端DSB；②sgRNA = crRNA + tracrRNA 融合，5'端20nt决定靶向特异性；③PAM(NGG)是Cas9识别的必要条件，位于靶序列3'端；④nickase（单结构域突变）→单链切口→双切口策略降低脱靶；⑤CRISPR是细菌"获得性免疫"→记录噬菌体DNA→后续感染时切割。记忆："HNH切互补链，RuvC切非互补，平端DSB在PAM上游3bp处"。
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><span class="u-double">CRISPR/Cas9 与限制性内切酶的区别</span>（竞赛高频辨析题）：</p>
+    <div class="table-wrap">
+    <table>
+    <thead>
+    <tr><th>比较项目</th><th>CRISPR/Cas9</th><th>限制性内切酶（II型）</th></tr>
+    </thead>
+    <tbody>
+    <tr><td>识别方式</td><td>RNA-DNA 碱基互补配对（sgRNA 引导）</td><td>蛋白质-DNA 直接识别（蛋白结构域结合特定序列）</td></tr>
+    <tr><td>识别序列长度</td><td>~20 bp + PAM（NGG），特异性极高</td><td>通常 4-8 bp（如 EcoRI 识别 6 bp GAATTC）</td></tr>
+    <tr><td>靶向灵活性</td><td>只需改变 sgRNA 的 20 nt 序列即可重靶向，简便快速</td><td>识别序列固定，不可编程（每种酶识别特定序列）</td></tr>
+    <tr><td>切割末端</td><td>平末端（blunt end），PAM 上游 3 bp 处</td><td>多数为黏性末端（sticky end），少数平末端</td></tr>
+    <tr><td>切割结构域</td><td>HNH + RuvC 两个结构域各切一条链</td><td>通常同源二聚体，每个亚基切一条链</td></tr>
+    <tr><td>生物学来源</td><td>细菌和古菌的适应性免疫系统（抵御噬菌体）</td><td>细菌的限制-修饰系统（抵御外源DNA）</td></tr>
+    <tr><td>应用场景</td><td>基因组编辑（敲除/敲入/碱基编辑/表观编辑）</td><td>分子克隆（酶切/连接）、RFLP、Southern blot</td></tr>
+    <tr><td>脱靶效应</td><td>存在脱靶（sgRNA 结合部分互补序列）</td><td>特异性高（星号活性*除外）</td></tr>
+    </tbody>
+    </table>
+    </div>
+    <p><span class="u-double">易错点提示</span>：</p>
+    <ul>
+      <li>限制酶识别的是<span class="key-point">DNA 回文序列</span>（palindrome），CRISPR 识别的是 sgRNA 与靶 DNA 的互补序列，不是回文。</li>
+      <li>限制酶是<span class="key-point">限制-修饰系统</span>的一部分（限制酶切外源 DNA，甲基化酶修饰自身 DNA 以防被切）；CRISPR 是<span class="key-point">适应性免疫</span>（有"记忆"，可遗传给后代）。</li>
+      <li>CRISPR 的"可编程性"是其革命性所在——只需改变 20 nt 的 sgRNA 序列，而无需改造蛋白本身。</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    竞赛易错辨析：①CRISPR=RNA引导（可编程），限制酶=蛋白识别（固定序列）；②CRISPR识别~20bp+PAM，限制酶识别4-8bp回文；③CRISPR产平末端，限制酶多产黏性末端；④两者都源自细菌防御系统，但CRISPR是"适应性免疫"（有记忆），限制酶是"先天免疫"（限制-修饰系统）；⑤CRISPR可重靶向（只需换sgRNA），限制酶不可编程。记忆："CRISPR靠RNA引导可编程，限制酶靠蛋白识别序列定"。
+  </div>
+</div>
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 982 420" style="width:100%;max-width:740px;margin:1.2rem auto;display:block;font-family:'Noto Sans CJK SC',sans-serif;">
+  <rect x="0" y="0" width="780" height="420" fill="#fdfbf7"/>
+  <text x="390" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="#2c2416">CRISPR/Cas9 作用机制示意图</text>
+  
+  <!-- 左半部分：Cas9结构与sgRNA -->
+  <text x="200" y="55" text-anchor="middle" font-size="13" font-weight="700" fill="#c0392b">Cas9-sgRNA 复合物结构</text>
+  
+  <!-- Cas9蛋白主体 -->
+  <ellipse cx="200" cy="180" rx="100" ry="70" fill="#fdf2f2" stroke="#c0392b" stroke-width="2"/>
+  <text x="200" y="170" text-anchor="middle" font-size="14" font-weight="700" fill="#c0392b">Cas9 核酸酶</text>
+  
+  <!-- HNH结构域 -->
+  <ellipse cx="150" cy="200" rx="35" ry="22" fill="#fff8e7" stroke="#e8c84a" stroke-width="1.5"/>
+  <text x="150" y="198" text-anchor="middle" font-size="10" font-weight="700" fill="#8b4513">HNH</text>
+  <text x="150" y="212" text-anchor="middle" font-size="8" fill="#2c2416">切靶向链</text>
+  
+  <!-- RuvC结构域 -->
+  <ellipse cx="250" cy="200" rx="35" ry="22" fill="#f0f7f4" stroke="#7cb342" stroke-width="1.5"/>
+  <text x="250" y="198" text-anchor="middle" font-size="10" font-weight="700" fill="#558b2f">RuvC</text>
+  <text x="250" y="212" text-anchor="middle" font-size="8" fill="#2c2416">切非靶向链</text>
+  
+  <!-- sgRNA -->
+  <path d="M 130 110 Q 200 90 270 110 L 270 130 Q 200 115 130 130 Z" fill="#fef9e7" stroke="#8b4513" stroke-width="1.5"/>
+  <text x="200" y="126" text-anchor="middle" font-size="10" font-weight="700" fill="#8b4513">sgRNA (单向导RNA)</text>
+  
+  <!-- sgRNA结构标注 -->
+  <line x1="135" y1="100" x2="185" y2="100" stroke="#c0392b" stroke-width="1.5"/>
+  <text x="160" y="92" text-anchor="middle" font-size="9" fill="#c0392b">20nt 靶向序列</text>
+  <line x1="215" y1="100" x2="265" y2="100" stroke="#4a7c3a" stroke-width="1.5"/>
+  <text x="240" y="92" text-anchor="middle" font-size="9" fill="#4a7c3a">支架序列</text>
+  
+  <!-- sgRNA = crRNA + tracrRNA 说明 -->
+  <rect x="30" y="50" width="110" height="45" rx="4" fill="#fff8e7" stroke="#e8c84a" stroke-width="1"/>
+  <text x="85" y="67" text-anchor="middle" font-size="9" font-weight="600" fill="#8b4513">天然系统：</text>
+  <text x="85" y="82" text-anchor="middle" font-size="9" fill="#2c2416">crRNA + tracrRNA</text>
+  <text x="85" y="93" text-anchor="middle" font-size="8" fill="#7a6e5e">→ 融合为 sgRNA</text>
+  <path d="M 120 72 L 145 100" stroke="#e8c84a" stroke-width="1.5" fill="none" stroke-dasharray="3,2"/>
+  
+  <!-- 右半部分：DNA切割 -->
+  <text x="580" y="55" text-anchor="middle" font-size="13" font-weight="700" fill="#c0392b">靶向 DNA 切割机制</text>
+  
+  <!-- DNA双链 -->
+  <line x1="470" y1="150" x2="700" y2="150" stroke="#2c2416" stroke-width="3"/>
+  <line x1="470" y1="170" x2="700" y2="170" stroke="#7a6e5e" stroke-width="3"/>
+  <text x="450" y="148" font-size="9" fill="#2c2416">5'</text>
+  <text x="710" y="148" font-size="9" fill="#2c2416">3'</text>
+  <text x="450" y="172" font-size="9" fill="#7a6e5e">3'</text>
+  <text x="710" y="172" font-size="9" fill="#7a6e5e">5'</text>
+  
+  <!-- 靶向序列区 -->
+  <rect x="540" y="145" width="80" height="30" fill="#fef9e7" stroke="#8b4513" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <text x="580" y="163" text-anchor="middle" font-size="9" font-weight="600" fill="#8b4513">20bp 靶序列</text>
+  
+  <!-- PAM -->
+  <rect x="620" y="145" width="45" height="30" fill="#fff8e7" stroke="#e8c84a" stroke-width="2"/>
+  <text x="642" y="163" text-anchor="middle" font-size="10" font-weight="700" fill="#c0392b">PAM</text>
+  <text x="642" y="175" text-anchor="middle" font-size="8" fill="#8b4513">NGG</text>
+  
+  <!-- 切割位点 -->
+  <line x1="613" y1="142" x2="613" y2="178" stroke="#c0392b" stroke-width="2" stroke-dasharray="3,2"/>
+  <text x="613" y="138" text-anchor="middle" font-size="9" fill="#c0392b">DSB</text>
+  <text x="613" y="188" text-anchor="middle" font-size="8" fill="#c0392b">PAM上游3bp</text>
+  
+  <!-- sgRNA与DNA碱基配对 -->
+  <path d="M 545 130 Q 580 115 615 130" fill="none" stroke="#4a7c3a" stroke-width="2"/>
+  <text x="580" y="110" text-anchor="middle" font-size="9" fill="#4a7c3a">sgRNA-DNA 碱基配对</text>
+  
+  <!-- 平末端产物 -->
+  <text x="580" y="220" text-anchor="middle" font-size="11" font-weight="700" fill="#c0392b">切割产物：平末端（blunt end）</text>
+  <line x1="490" y1="235" x2="605" y2="235" stroke="#2c2416" stroke-width="2.5"/>
+  <line x1="615" y1="235" x2="680" y2="235" stroke="#2c2416" stroke-width="2.5"/>
+  <line x1="490" y1="255" x2="605" y2="255" stroke="#7a6e5e" stroke-width="2.5"/>
+  <line x1="615" y1="255" x2="680" y2="255" stroke="#7a6e5e" stroke-width="2.5"/>
+  <text x="610" y="248" text-anchor="middle" font-size="9" fill="#c0392b">平末端</text>
+  
+  <!-- 底部：NHEJ vs HDR -->
+  <rect x="20" y="280" width="360" height="120" rx="6" fill="#fff8e7" stroke="#e8c84a" stroke-width="1.5"/>
+  <text x="200" y="300" text-anchor="middle" font-size="12" font-weight="700" fill="#8b4513">NHEJ 非同源末端连接</text>
+  <text x="35" y="318" font-size="10" fill="#2c2416">• 不需要模板，直接连接断裂末端</text>
+  <text x="35" y="334" font-size="10" fill="#2c2416">• 易出错，产生 indel（插入/缺失）</text>
+  <text x="35" y="350" font-size="10" fill="#2c2416">• 移码突变 → 基因敲除（KO）</text>
+  <text x="35" y="366" font-size="10" fill="#2c2416">• 效率高（细胞主要修复途径）</text>
+  <text x="35" y="382" font-size="9" fill="#c0392b">G1期主要途径 | 易错</text>
+  <rect x="20" y="280" width="360" height="22" rx="6" fill="#fff3cd" stroke="#e8c84a"/>
+  <text x="200" y="295" text-anchor="middle" font-size="11" font-weight="700" fill="#8b4513">NHEJ 非同源末端连接</text>
+  <text x="35" y="322" font-size="9.5" fill="#2c2416">• 不需要模板，Ku70/Ku80 识别末端</text>
+  <text x="35" y="338" font-size="9.5" fill="#2c2416">• 易出错 → indel 突变 → 移码</text>
+  <text x="35" y="354" font-size="9.5" fill="#2c2416">• 用途：基因敲除（Knockout）</text>
+  <text x="35" y="370" font-size="9.5" fill="#2c2416">• 效率高（细胞主要修复途径）</text>
+  <text x="35" y="386" font-size="9" fill="#c0392b">G1期活跃 | 易错 | 无需模板</text>
+  
+  <rect x="400" y="280" width="360" height="120" rx="6" fill="#f0f7f4" stroke="#7cb342" stroke-width="1.5"/>
+  <rect x="400" y="280" width="360" height="22" rx="6" fill="#f0f7f4" stroke="#7cb342"/>
+  <text x="580" y="295" text-anchor="middle" font-size="11" font-weight="700" fill="#558b2f">HDR 同源重组修复</text>
+  <text x="415" y="322" font-size="9.5" fill="#2c2416">• 需要同源供体模板（donor DNA）</text>
+  <text x="415" y="338" font-size="9.5" fill="#2c2416">• 精确修复，可引入特定突变</text>
+  <text x="415" y="354" font-size="9.5" fill="#2c2416">• 用途：基因敲入（Knock-in）</text>
+  <text x="415" y="370" font-size="9.5" fill="#2c2416">• 效率低（仅 S/G2 期活跃）</text>
+  <text x="415" y="386" font-size="9" fill="#558b2f">S/G2期活跃 | 精确 | 需供体模板</text>
+  
+  <defs>
+    <marker id="crispr-arr" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <polygon points="0,0 8,4 0,8" fill="#c0392b"/>
+    </marker>
+  </defs>
+</svg>
+<figcaption>图：CRISPR/Cas9 作用机制——Cas9含HNH（切靶向链）和RuvC（切非靶向链）两个核酸酶结构域；sgRNA由crRNA与tracrRNA融合而成，5'端20nt决定靶向特异性；PAM（NGG）是识别必需序列；DSB发生在PAM上游3bp处，产生平末端；细胞通过NHEJ（易错→基因敲除）或HDR（精确→基因敲入）修复。</figcaption>
+
+<div class="subtopic-header"><h4>4.6 单细胞测序技术</h4></div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><span class="u-double">单细胞测序（Single-cell Sequencing）</span>是在单个细胞水平上对基因组或转录组进行测序分析的技术，解决了传统 bulk 测序（大量细胞混合测序）掩盖细胞异质性的问题。2013 年被《Science》评为年度技术突破。</p>
+    <p><span class="u">scRNA-seq（单细胞 RNA 测序）基本原理</span>：</p>
+    <ol>
+      <li><strong>单细胞分离</strong>：将组织消化为单细胞悬液。方法包括：有限稀释法、显微操作法、流式细胞分选（FACS）、激光捕获显微切割（LCM）、微流控技术等。</li>
+      <li><strong>mRNA 捕获</strong>：利用带有 oligo(dT) 的微珠或凝胶珠捕获 mRNA 的 polyA 尾。每个细胞的 mRNA 被带有独特<span class="key-point">细胞条形码（Cell Barcode）</span>的引物捕获，用于后续识别细胞来源。</li>
+      <li><strong>逆转录</strong>：在单个细胞内将 mRNA 逆转录为 cDNA。利用<span class="key-point">UMI（Unique Molecular Identifier，唯一分子标识符）</span>标记每条原始 mRNA 分子，用于后续精确定量（消除 PCR 扩增偏差）。</li>
+      <li><strong>扩增</strong>：通过 PCR（如 SMART-seq）或体外转录（IVT）扩增 cDNA，获得足够量的测序文库。</li>
+      <li><strong>建库与测序</strong>：构建测序文库，进行二代测序（通常 Illumina 平台）。</li>
+      <li><strong>数据分析</strong>：序列比对 → 细胞条形码拆分 → UMI 去重定量 → 降维聚类（t-SNE/UMAP）→ 细胞类型鉴定 → 差异表达分析 → 轨迹分析/拟时序分析。</li>
+    </ol>
+    <p><span class="u-double">10x Genomics 技术路线（微流控+油包水）</span>：</p>
+    <ul>
+      <li>核心原理：<span class="key-point">油包水微滴（Gel Bead-in-Emulsion, GEM）</span>技术。利用微流控芯片将单个细胞、单个凝胶珠（Gel Bead，带有数百万条相同 barcode 的引物）和反应试剂包裹在同一个油滴中。</li>
+      <li>每个凝胶珠带有独特的 10x Barcode（细胞条形码，~70 万种）+ UMI（每个引物分子唯一）+ oligo(dT)。</li>
+      <li>细胞在油滴中裂解 → mRNA 被凝胶珠上的 oligo(dT) 捕获 → 逆转录合成带 Barcode 和 UMI 的 cDNA → 破油滴 → 扩增建库 → 测序。</li>
+      <li>优势：通量极高（一次可测 1000-10000+ 个细胞）、成本相对较低、操作简单。是目前应用最广泛的单细胞转录组平台。</li>
+      <li>局限：检测灵敏度较低（每个细胞检测到约 2000-5000 个基因），3' 端偏好（主要测 mRNA 3' 端序列）。</li>
+    </ul>
+    <p><span class="u-double">主要应用</span>：</p>
+    <ul>
+      <li><strong>细胞分型</strong>：绘制组织/器官的细胞图谱（如 Human Cell Atlas 计划），发现新的细胞类型和细胞状态。</li>
+      <li><strong>发育生物学</strong>：追踪细胞分化轨迹（拟时序分析 pseudotime），重建发育过程中的基因表达动态。</li>
+      <li><strong>肿瘤异质性</strong>：揭示肿瘤内部的细胞亚群（如肿瘤干细胞、耐药细胞），指导精准治疗。</li>
+      <li><strong>免疫研究</strong>：分析免疫细胞亚群（T 细胞、B 细胞、髓系细胞等）的组成和状态，研究免疫应答机制。</li>
+      <li><strong>神经科学</strong>：绘制大脑神经元和胶质细胞的细胞类型图谱。</li>
+    </ul>
+    <p><span class="u-double">扩展技术</span>：scATAC-seq（单细胞染色质可及性测序）、scWGBS（单细胞全基因组甲基化测序）、空间转录组（Spatial Transcriptomics，保留空间位置信息）、多组学单细胞测序（同时测转录组+蛋白组+表观组）。</p>
+  </div>
+  <div class="annotation">
+    竞赛高频考点：①单细胞测序=在单个细胞水平测序，解决细胞异质性问题；②10x Genomics核心=微流控+油包水(GEM)+细胞条形码(Cell Barcode)+UMI；③UMI的作用=消除PCR扩增偏差，精确定量原始mRNA分子数；④应用：细胞分型、发育轨迹、肿瘤异质性；⑤scRNA-seq vs bulk RNA-seq：bulk测群体平均，scRNA-seq揭示异质性；⑥降维方法：t-SNE/UMAP可视化高维数据。记忆："单细胞，辨异质，10x油包水，Barcode认细胞，UMI去偏差"。
+  </div>
+</div>
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 982 420" style="width:100%;max-width:740px;margin:1.2rem auto;display:block;font-family:'Noto Sans CJK SC',sans-serif;">
+  <rect x="0" y="0" width="780" height="420" fill="#fdfbf7"/>
+  <text x="390" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="#2c2416">单细胞测序（10x Genomics）工作原理示意图</text>
+  
+  <!-- Step 1: 单细胞悬液 -->
+  <rect x="20" y="50" width="110" height="75" rx="6" fill="#fff8e7" stroke="#e8c84a" stroke-width="1.5"/>
+  <text x="75" y="72" text-anchor="middle" font-size="11" font-weight="700" fill="#c0392b">①单细胞悬液</text>
+  <text x="75" y="90" text-anchor="middle" font-size="9" fill="#2c2416">组织消化</text>
+  <text x="75" y="103" text-anchor="middle" font-size="9" fill="#2c2416">获得单个细胞</text>
+  <!-- 细胞图示 -->
+  <circle cx="50" cy="115" r="6" fill="#8b4513" opacity="0.5"/>
+  <circle cx="75" cy="117" r="5" fill="#c0392b" opacity="0.5"/>
+  <circle cx="100" cy="114" r="6" fill="#7a6e5e" opacity="0.5"/>
+  <circle cx="60" cy="122" r="4" fill="#8b4513" opacity="0.4"/>
+  <circle cx="90" cy="122" r="5" fill="#c0392b" opacity="0.4"/>
+  
+  <!-- Arrow 1→2 -->
+  <line x1="135" y1="87" x2="165" y2="87" stroke="#c0392b" stroke-width="2" marker-end="url(#sc-arr)"/>
+  
+  <!-- Step 2: 微流控芯片 -->
+  <rect x="170" y="50" width="120" height="75" rx="6" fill="#fef9e7" stroke="#8b4513" stroke-width="1.5"/>
+  <text x="230" y="72" text-anchor="middle" font-size="11" font-weight="700" fill="#c0392b">②微流控芯片</text>
+  <text x="230" y="90" text-anchor="middle" font-size="9" fill="#2c2416">细胞+凝胶珠+油相</text>
+  <text x="230" y="103" text-anchor="middle" font-size="9" fill="#2c2416">形成油包水微滴</text>
+  <!-- 微流控通道示意 -->
+  <rect x="185" y="112" width="30" height="10" fill="#d6ccc0" stroke="#7a6e5e" stroke-width="0.5"/>
+  <circle cx="200" cy="117" r="3" fill="#c0392b" opacity="0.6"/>
+  <circle cx="225" cy="117" r="4" fill="#8b4513" opacity="0.5"/>
+  <circle cx="248" cy="117" r="3" fill="#7a6e5e" opacity="0.5"/>
+  <path d="M 180 117 L 280 117" stroke="#7a6e5e" stroke-width="0.5" stroke-dasharray="2,2"/>
+  
+  <!-- Arrow 2→3 -->
+  <line x1="295" y1="87" x2="325" y2="87" stroke="#c0392b" stroke-width="2" marker-end="url(#sc-arr)"/>
+  
+  <!-- Step 3: GEM油包水 -->
+  <rect x="330" y="50" width="130" height="95" rx="6" fill="#fdf2f2" stroke="#c0392b" stroke-width="1.5"/>
+  <text x="395" y="72" text-anchor="middle" font-size="11" font-weight="700" fill="#c0392b">③ GEM 油包水微滴</text>
+  <text x="395" y="88" text-anchor="middle" font-size="9" fill="#2c2416">1个细胞 + 1个凝胶珠</text>
+  <text x="395" y="101" text-anchor="middle" font-size="9" fill="#2c2416">+ 反应试剂 / 油滴</text>
+  <!-- 油滴图示 -->
+  <circle cx="355" cy="125" r="14" fill="none" stroke="#8b4513" stroke-width="1.5" opacity="0.7"/>
+  <circle cx="350" cy="122" r="5" fill="#c0392b" opacity="0.6"/>
+  <circle cx="362" cy="130" r="6" fill="#e8c84a" opacity="0.5"/>
+  <text x="355" y="148" text-anchor="middle" font-size="8" fill="#7a6e5e">GEM-1</text>
+  
+  <circle cx="410" cy="125" r="14" fill="none" stroke="#8b4513" stroke-width="1.5" opacity="0.7"/>
+  <circle cx="405" cy="122" r="5" fill="#7a6e5e" opacity="0.6"/>
+  <circle cx="417" cy="130" r="6" fill="#e8c84a" opacity="0.5"/>
+  <text x="410" y="148" text-anchor="middle" font-size="8" fill="#7a6e5e">GEM-2</text>
+  
+  <!-- Arrow 3→4 -->
+  <line x1="465" y1="95" x2="495" y2="95" stroke="#c0392b" stroke-width="2" marker-end="url(#sc-arr)"/>
+  
+  <!-- Step 4: 细胞裂解+逆转录 -->
+  <rect x="500" y="50" width="130" height="95" rx="6" fill="#f0f7f4" stroke="#7cb342" stroke-width="1.5"/>
+  <text x="565" y="72" text-anchor="middle" font-size="11" font-weight="700" fill="#558b2f">④ 细胞裂解 + 逆转录</text>
+  <text x="565" y="88" text-anchor="middle" font-size="9" fill="#2c2416">凝胶珠溶解 → Barcode引物</text>
+  <text x="565" y="101" text-anchor="middle" font-size="9" fill="#2c2416">mRNA捕获 → cDNA合成</text>
+  <text x="565" y="114" text-anchor="middle" font-size="9" fill="#2c2416">cDNA带Cell Barcode+UMI</text>
+  <!-- 凝胶珠溶解示意 -->
+  <circle cx="530" cy="130" r="8" fill="#e8c84a" opacity="0.3" stroke="#e8c84a" stroke-width="1" stroke-dasharray="2,2"/>
+  <line x1="525" y1="125" x2="545" y2="135" stroke="#c0392b" stroke-width="1"/>
+  <text x="540" y="143" font-size="8" fill="#c0392b">cDNA</text>
+  
+  <!-- Arrow 4→5 -->
+  <line x1="635" y1="95" x2="665" y2="95" stroke="#c0392b" stroke-width="2" marker-end="url(#sc-arr)"/>
+  
+  <!-- Step 5: 建库测序 -->
+  <rect x="670" y="50" width="95" height="95" rx="6" fill="#fff8e7" stroke="#e8c84a" stroke-width="1.5"/>
+  <text x="717" y="72" text-anchor="middle" font-size="11" font-weight="700" fill="#c0392b">⑤建库测序</text>
+  <text x="717" y="88" text-anchor="middle" font-size="9" fill="#2c2416">破油滴 → 扩增</text>
+  <text x="717" y="101" text-anchor="middle" font-size="9" fill="#2c2416">构建文库 → NGS</text>
+  <text x="717" y="114" text-anchor="middle" font-size="9" fill="#2c2416">Illumina测序</text>
+  <!-- 测序仪示意 -->
+  <rect x="685" y="123" width="64" height="18" fill="#2c2416" opacity="0.3" rx="2"/>
+  <line x1="690" y1="130" x2="744" y2="130" stroke="#4a7c3a" stroke-width="1" stroke-dasharray="2,1"/>
+  
+  <!-- 下部分：数据分析 -->
+  <text x="390" y="175" text-anchor="middle" font-size="13" font-weight="700" fill="#c0392b">⑥ 数据分析流程</text>
+  
+  <!-- 数据分析步骤 -->
+  <rect x="30" y="185" width="130" height="55" rx="6" fill="#fff8e7" stroke="#e8c84a" stroke-width="1.5"/>
+  <text x="95" y="205" text-anchor="middle" font-size="10" font-weight="700" fill="#8b4513">Barcode 拆分</text>
+  <text x="95" y="220" text-anchor="middle" font-size="9" fill="#2c2416">按细胞条形码分群</text>
+  <text x="95" y="233" text-anchor="middle" font-size="9" fill="#2c2416">识别每个细胞的reads</text>
+  
+  <line x1="165" y1="212" x2="190" y2="212" stroke="#c0392b" stroke-width="2" marker-end="url(#sc-arr)"/>
+  
+  <rect x="195" y="185" width="130" height="55" rx="6" fill="#fef9e7" stroke="#8b4513" stroke-width="1.5"/>
+  <text x="260" y="205" text-anchor="middle" font-size="10" font-weight="700" fill="#8b4513">UMI 去重定量</text>
+  <text x="260" y="220" text-anchor="middle" font-size="9" fill="#2c2416">消除PCR扩增偏差</text>
+  <text x="260" y="233" text-anchor="middle" font-size="9" fill="#2c2416">精确计数mRNA分子</text>
+  
+  <line x1="330" y1="212" x2="355" y2="212" stroke="#c0392b" stroke-width="2" marker-end="url(#sc-arr)"/>
+  
+  <rect x="360" y="185" width="130" height="55" rx="6" fill="#fdf2f2" stroke="#c0392b" stroke-width="1.5"/>
+  <text x="425" y="205" text-anchor="middle" font-size="10" font-weight="700" fill="#c0392b">降维聚类</text>
+  <text x="425" y="220" text-anchor="middle" font-size="9" fill="#2c2416">t-SNE / UMAP</text>
+  <text x="425" y="233" text-anchor="middle" font-size="9" fill="#2c2416">细胞类型鉴定</text>
+  
+  <line x1="495" y1="212" x2="520" y2="212" stroke="#c0392b" stroke-width="2" marker-end="url(#sc-arr)"/>
+  
+  <rect x="525" y="185" width="120" height="55" rx="6" fill="#f0f7f4" stroke="#7cb342" stroke-width="1.5"/>
+  <text x="585" y="205" text-anchor="middle" font-size="10" font-weight="700" fill="#558b2f">下游分析</text>
+  <text x="585" y="220" text-anchor="middle" font-size="9" fill="#2c2416">差异表达/拟时序</text>
+  <text x="585" y="233" text-anchor="middle" font-size="9" fill="#2c2416">细胞通讯/富集分析</text>
+  
+  <!-- UMAP散点图示意 -->
+  <rect x="660" y="185" width="100" height="100" rx="6" fill="#fdfbf7" stroke="#d6ccc0" stroke-width="1.5"/>
+  <text x="710" y="200" text-anchor="middle" font-size="9" font-weight="600" fill="#8b4513">UMAP 可视化</text>
+  <circle cx="680" cy="220" r="4" fill="#c0392b" opacity="0.7"/>
+  <circle cx="690" cy="215" r="4" fill="#c0392b" opacity="0.7"/>
+  <circle cx="675" cy="230" r="4" fill="#c0392b" opacity="0.7"/>
+  <circle cx="685" cy="235" r="3" fill="#c0392b" opacity="0.7"/>
+  <circle cx="720" cy="220" r="4" fill="#4a7c3a" opacity="0.7"/>
+  <circle cx="730" cy="215" r="4" fill="#4a7c3a" opacity="0.7"/>
+  <circle cx="725" cy="232" r="3" fill="#4a7c3a" opacity="0.7"/>
+  <circle cx="700" cy="260" r="4" fill="#8b4513" opacity="0.7"/>
+  <circle cx="715" cy="265" r="4" fill="#8b4513" opacity="0.7"/>
+  <circle cx="690" cy="270" r="3" fill="#8b4513" opacity="0.7"/>
+  
+  <!-- 应用领域 -->
+  <rect x="20" y="295" width="740" height="60" rx="6" fill="#fff8e7" stroke="#e8c84a" stroke-width="1.5"/>
+  <text x="390" y="315" text-anchor="middle" font-size="12" font-weight="700" fill="#c0392b">主要应用领域</text>
+  <text x="100" y="335" text-anchor="middle" font-size="10" fill="#2c2416">🧬 细胞分型</text>
+  <text x="100" y="348" text-anchor="middle" font-size="9" fill="#7a6e5e">发现新细胞类型</text>
+  <text x="240" y="335" text-anchor="middle" font-size="10" fill="#2c2416">🌱 发育轨迹</text>
+  <text x="240" y="348" text-anchor="middle" font-size="9" fill="#7a6e5e">拟时序分析</text>
+  <text x="390" y="335" text-anchor="middle" font-size="10" fill="#2c2416">🎗️ 肿瘤异质性</text>
+  <text x="390" y="348" text-anchor="middle" font-size="9" fill="#7a6e5e">肿瘤亚群鉴定</text>
+  <text x="540" y="335" text-anchor="middle" font-size="10" fill="#2c2416">🛡️ 免疫研究</text>
+  <text x="540" y="348" text-anchor="middle" font-size="9" fill="#7a6e5e">免疫细胞图谱</text>
+  <text x="680" y="335" text-anchor="middle" font-size="10" fill="#2c2416">🧠 神经科学</text>
+  <text x="680" y="348" text-anchor="middle" font-size="9" fill="#7a6e5e">脑细胞图谱</text>
+  
+  <!-- 底部考点 -->
+  <rect x="20" y="370" width="740" height="38" rx="6" fill="#fff3cd" stroke="#e8c84a" stroke-width="2"/>
+  <text x="390" y="388" text-anchor="middle" font-size="11" font-weight="700" fill="#c0392b">竞赛核心：10x Genomics = 微流控 + 油包水(GEM) + Cell Barcode(细胞识别) + UMI(精确定量)</text>
+  <text x="390" y="405" text-anchor="middle" font-size="10" fill="#2c2416">scRNA-seq 解决 bulk 测序的细胞异质性问题 | 每个细胞~2000-5000基因 | t-SNE/UMAP降维可视化</text>
+  
+  <defs>
+    <marker id="sc-arr" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <polygon points="0,0 8,4 0,8" fill="#c0392b"/>
+    </marker>
+  </defs>
+</svg>
+<figcaption>图：单细胞测序（10x Genomics）工作原理——单细胞悬液→微流控芯片→油包水微滴（GEM，1细胞+1凝胶珠+试剂）→细胞裂解与逆转录（cDNA带Cell Barcode+UMI）→建库测序→数据分析（Barcode拆分→UMI去重→t-SNE/UMAP降维聚类→下游分析）。核心技术：微流控+油包水+细胞条形码+唯一分子标识符。</figcaption>
+
+<!-- ========== 表观遗传 ========== -->
+<div class="topic-header"><h3>五、表观遗传——不改变 DNA 序列的遗传</h3></div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><span class="u-double">表观遗传(epigenetics)</span>:DNA 序列不变的情况下,基因表达发生可遗传的变化。主要机制包括:</p>
+    <ol>
+      <li><span class="u-double">DNA 甲基化</span>(5-甲基胞嘧啶,5mC)</li>
+      <li><span class="u-double">组蛋白修饰</span>(乙酰化、甲基化、磷酸化、泛素化等)</li>
+      <li><span class="u-double">染色质重塑</span>(核小体定位变化)</li>
+      <li><span class="u">非编码 RNA 调控</span>(miRNA、lncRNA)</li>
+    </ol>
+  </div>
+</div>
+
+<div class="subtopic-header"><h4>5.1 DNA 甲基化</h4></div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>哺乳动物中,DNA 甲基化主要发生在 <span class="u-double">CpG 岛的胞嘧啶(C → 5-甲基胞嘧啶,5mC)</span>。</p>
+    <ul>
+      <li><span class="u">维持甲基化</span>:<span class="u">DNMT1</span>(DNA 甲基转移酶 1)在复制后识别半甲基化 DNA,甲基化子链</li>
+      <li><span class="u">从头甲基化</span>:<span class="u">DNMT3a/3b</span>在发育早期建立新的甲基化模式</li>
+      <li><span class="u">去甲基化</span>:被动(复制时不维持)+ 主动(<span class="u">TET 酶</span>将 5mC 氧化为 5hmC、5fC、5caC,再通过 BER 途径切除)</li>
+    </ul>
+    <p>📌 <span class="key-point">功能</span>:</p>
+    <ul>
+      <li>启动子区 CpG 岛甲基化 → <b>基因沉默</b>(如 X 染色体失活、基因印记)</li>
+      <li>基因组印记:父本/母本等位基因的差异甲基化导致单等位基因表达(如 IGF2、Igf2r)</li>
+      <li><b>基因组印迹紊乱</b>导致 Prader-Willi 综合征(父本缺失)/ Angelman 综合征(母本缺失)</li>
+      <li>癌细胞普遍存在<span class="u">全基因组低甲基化</span>+ 启动子<span class="u">高甲基化</span>(抑癌基因沉默)</li>
+    </ul>
+  </div>
+</div>
+
+<div class="subtopic-header"><h4>5.2 组蛋白修饰——"组蛋白密码"</h4></div>
+
+<div class="table-wrap">
+<table>
+<thead>
+<tr><th>修饰</th><th>主要位点</th><th>效应</th><th>相关酶</th></tr>
+</thead>
+<tbody>
+<tr><td><b>乙酰化</b>(acetylation)</td><td>H3K9、H3K14、H3K27、H4K5、K8、K12、K16</td><td><b>激活转录</b>(中和正电荷,松开 DNA)</td><td>HAT(组蛋白乙酰转移酶)/ HDAC(组蛋白去乙酰酶)</td></tr>
+<tr><td><b>甲基化</b>(methylation)</td><td>H3K4、H3K9、H3K27、H3K79、H4K20</td><td>激活或抑制(取决于位点):<br>H3K4me3 = 激活<br>H3K9me3、H3K27me3 = 抑制</td><td>HMT(组蛋白甲基转移酶)/ HDM(组蛋白去甲基酶)</td></tr>
+<tr><td><b>磷酸化</b>(phosphorylation)</td><td>H2A.X(S139,γH2AX)、H3S10、H3S28</td><td>DNA 损伤修复(γH2AX);有丝分裂浓缩(H3S10)</td><td>激酶/磷酸酶</td></tr>
+<tr><td><b>泛素化</b>(ubiquitination)</td><td>H2A(K119)、H2B(K120)</td><td>H2A 泛素化常抑制;H2B 泛素化常激活</td><td>E1/E2/E3(同 UPS 系统)</td></tr>
+<tr><td><b>SUMO 化</b>(SUMOylation)</td><td>多种位点</td><td>通常抑制转录、调控核质运输</td><td>SUMO E1/E2/E3</td></tr>
+</tbody>
+</table>
+</div>
+<figcaption>表 11 主要组蛋白修饰类型(组蛋白密码)</figcaption>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>📌 <span class="key-point">关键概念:异染色质 vs 常染色质</span>:</p>
+    <ul>
+      <li><span class="u">常染色质(euchromatin)</span>:松散,H3K9/K14 乙酰化,H3K4me3,转录活跃</li>
+      <li><span class="u">异染色质(heterochromatin)</span>:紧密,H3K9me3、H3K27me3,转录沉默
+        <ul>
+          <li><b>组成型异染色质</b>:着丝粒、端粒(始终沉默)</li>
+          <li><b>兼性异染色质</b>:X 染色体失活、发育调控基因(可转换)</li>
+        </ul>
+      </li>
+    </ul>
+    <p>📌 <span class="key-point">染色质重塑复合物</span>:</p>
+    <ul>
+      <li><span class="u">SWI/SNF 家族</span>:用 ATP 水解能量滑动/置换核小体</li>
+      <li><span class="u">ISWI 家族</span>:核小体间距调控</li>
+      <li><span class="u">CHD 家族</span>:含染色体域,识别甲基化组蛋白</li>
+      <li><span class="u">INO80 家族</span>:参与 DNA 损伤修复</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    高中延伸:高中提到"基因表达受调控",但只讲了"基因开关"。表观遗传告诉我们,即使 DNA 序列不变,组蛋白修饰和 DNA 甲基化也能"打开"或"关闭"基因,而且这种改变可以遗传给子代细胞。这是"获得性遗传"的分子基础,也是肿瘤、衰老、发育异常的核心机制。
+  </div>
+</div>
+
+<div class="subtopic-header"><h4>5.3 非编码 RNA 与基因沉默</h4></div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>🧬 <span class="key-point">RNA 干扰(RNAi)与 miRNA/siRNA</span>:</p>
+    <ul>
+      <li><span class="u">miRNA(微小 RNA)</span>:内源 ~22 nt,动物中通过与 mRNA 3' UTR 不完全互补抑制翻译;植物中完全配对切割 mRNA</li>
+      <li><span class="u">siRNA(小干扰 RNA)</span>:外源 dsRNA(Dicer 切割产物),完全配对切割 mRNA(植物、低等生物)</li>
+      <li>2006 年诺贝尔生理学/医学奖授予 Fire 和 Mello 表彰"RNA 干扰机制"</li>
+    </ul>
+    <p>🧬 <span class="key-point">lncRNA 的调控功能</span>:</p>
+    <ul>
+      <li>XIST:X 染色体失活的关键 lncRNA,介导 Xist RNA 包裹 X 染色体</li>
+      <li>HOTAIR:招募 PRC2 复合物沉默 HOX 基因</li>
+      <li>NEAT1:构成核旁斑,调控基因表达</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ========== 6. 整合 ========== -->
+<div class="topic-header"><h3>六、整合与拓展——中心法则的现代理解</h3></div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>现代分子生物学对中心法则的扩展:</p>
+    <div class="flow-box">
+      <div class="flow-title">扩展的中心法则(1970 年 Crick 提出后不断完善)</div>
+      <div class="flow-row">
+        <span class="flow-item">DNA</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-item">DNA(复制)</span>
+      </div>
+      <div class="flow-row" style="margin-top:0.4rem;">
+        <span class="flow-item">DNA</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-item">RNA(转录)</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-item">蛋白质(翻译)</span>
+      </div>
+      <div class="flow-row" style="margin-top:0.4rem;">
+        <span class="flow-item">RNA</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-item">RNA(RNA 复制,部分病毒)</span>
+      </div>
+      <div class="flow-row" style="margin-top:0.4rem;">
+        <span class="flow-item">RNA</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-item">DNA(逆转录,逆转录病毒/端粒酶)</span>
+      </div>
+      <div class="flow-row" style="margin-top:0.4rem;">
+        <span class="flow-item">RNA</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-item">蛋白质(无模板翻译,某些抗生素)</span>
+      </div>
+    </div>
+    <p>💡 <span class="key-point">核心概念</span>:现代分子生物学的核心问题是理解"基因如何在正确的时间、正确的组织、正确的细胞中以正确的水平表达"——DNA 复制、转录、翻译、表观遗传、RNA 调控共同构成一个高度复杂、动态可调的网络。</p>
+  </div>
+</div>
+
+<!-- ========== 总结 ========== -->
+<div class="summary-box">
+  <h4>📌 ch1-1-11 拓展要点 · 本节小结</h4>
+  <ol>
+    <li><b>DNA 双螺旋的三大构型</b>:B-DNA(标准,右手,10.5 bp/圈)、A-DNA(干燥环境,RNA 双链)、Z-DNA(左手,CG 交替序列)——大沟富含碱基配对信息,是蛋白质识别 DNA 的"窗口"。</li>
+    <li><b>超螺旋与拓扑异构酶</b>:DNA 体内为超螺旋状态;Topo I 切单链(松弛负超螺旋),Topo II(旋转酶)切双链(引入负超螺旋)——抗肿瘤药(喜树碱、阿霉素)与抗菌药(喹诺酮)都作用于拓扑酶。</li>
+    <li><b>DNA 复制特征</b>:半保留、半不连续(前导链连续+滞后链冈崎片段)、5'→3'、需 RNA 引物、双向、高保真(10⁻⁹);原核 Pol III,真核 Pol δ/ε;滑动夹原核 β,真核 PCNA。</li>
+    <li><b>端粒与端粒酶</b>:端粒是染色体末端 TTAGGG 重复,保护末端;端粒酶(RNA 模板+逆转录酶 TERT)补偿端粒缩短;癌细胞 85-90% 重新激活端粒酶——2009 年诺奖。</li>
+    <li><b>DNA 损伤修复</b>:错配修复(MMR)、碱基切除修复(BER)、核苷酸切除修复(NER,修复嘧啶二聚体)、光复活(直接逆转)、同源重组(DSB 精确修复);NER 缺陷→着色性干皮病(XP)。</li>
+    <li><b>转录 vs 复制</b>:转录用单链模板、NTPs(无引物)、RNA 聚合酶(无校对,10⁻⁴~10⁻⁵ 错配),产物单链 RNA;原核单一 RNA Pol + σ 因子,真核 Pol I(rRNA)/II(mRNA)/III(tRNA+5S rRNA)。</li>
+    <li><b>真核 mRNA 加工三件套</b>:5' 加帽(m⁷G,保护+翻译)+ 3' polyA 尾(AAUAAA 信号)+ RNA 剪接(去除内含子);可变剪接使人类 95% 基因产生多种 mRNA。</li>
+    <li><b>8 类 RNA 与功能</b>:mRNA(翻译)、tRNA(携带氨基酸)、rRNA(核糖体催化)、snRNA(剪接)、miRNA(基因沉默)、lncRNA(调控)、snoRNA(rRNA 修饰)、siRNA(RNA 干扰)。</li>
+    <li><b>PCR 三步循环</b>(变性-退火-延伸)+ Taq 聚合酶(耐热);30 循环产生 ~10⁹ 拷贝;变体:RT-PCR、qPCR(实时定量,荧光探针)、巢式 PCR(提高特异性)、数字 PCR(绝对定量)。</li>
+    <li><b>三代测序技术</b>:Sanger(双脱氧链终止,1 代,500-1000 bp)、Illumina(桥式 PCR+荧光,2 代,50-300 bp,通量极高)、PacBio(SMRT,3 代,10-25 kb)、Nanopore(电流变化,3 代,长读长)。</li>
+    <li><b>印迹技术</b>:Southern(DNA)、Northern(RNA)、Western(蛋白,用抗体);1975 年 Edwin Southern 发明 Southern blot 是"印迹之父"。</li>
+    <li><b>CRISPR/Cas9</b>(2020 诺奖):sgRNA 引导 Cas9 在 PAM(NGG)上游切割双链 DNA;细胞通过 NHEJ(易错)或 HDR(精确)修复;基因编辑革命性工具。</li>
+    <li><b>表观遗传</b>:DNA 甲基化(5mC,DNMT1 维持,DNMT3 从头,TET 主动去甲基)+ 组蛋白修饰("组蛋白密码":乙酰化激活、甲基化多变)+ 染色质重塑(SWI/SNF 复合物)+ 非编码 RNA。</li>
+    <li><b>异染色质 vs 常染色质</b>:异染色质紧密、沉默(H3K9me3/H3K27me3,着丝粒、端粒、X 染色体失活);常染色质松散、活跃(H3K4me3/乙酰化);组蛋白修饰与染色质状态紧密关联。</li>
+    <li><b>扩展的中心法则</b>:DNA→DNA(复制)、DNA→RNA→蛋白(经典)、RNA→RNA(部分病毒)、RNA→DNA(逆转录,逆转录病毒+端粒酶)、RNA→蛋白(无模板翻译,某些抗生素)。</li>
+  </ol>
+</div>
+
+<footer><a href="index.html" style="color:var(--accent);text-decoration:none;margin-right:1rem;">← 返回目录</a>
+  生物化学讲义 · 参考张丽萍《生物化学简明教程》第六版第 3 章 核酸(P49-79)、第 13 章 DNA 合成(P274-297)、第 14 章 RNA 合成(P298-318)<br>
+  整理日期: 2026年7月7日 · 高中生物竞赛集训营
+</footer>
+
+</div>
+</body>
+</html>

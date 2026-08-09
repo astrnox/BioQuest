@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 560" style="font-family: sans-serif;">
+  <rect x="0" y="0" width="860" height="560" fill="#fdfbf7"/>
+  <text x="430" y="28" text-anchor="middle" font-size="18" font-weight="700" fill="#2c2416">染色体形态结构与着丝粒类型</text>
+  <text x="430" y="48" text-anchor="middle" font-size="11" fill="#8b4513">按着丝粒位置分为四种类型 | p=短臂, q=长臂</text>
+
+  <!-- ====== 上方:一条详细标注的染色体 ====== -->
+  <text x="200" y="80" text-anchor="middle" font-size="13" font-weight="700" fill="#c0392b">染色体各部分结构</text>
+
+  <!-- 染色体主体(亚中着丝粒,典型) -->
+  <!-- q臂(长) -->
+  <rect x="180" y="100" width="36" height="180" rx="6" fill="#c0392b" opacity="0.7" stroke="#8b4513" stroke-width="1.5"/>
+  <!-- 着丝粒(主缢痕) -->
+  <rect x="172" y="278" width="52" height="18" rx="3" fill="#4a7c3a" stroke="#2c2416" stroke-width="1.5"/>
+  <!-- p臂(短) -->
+  <rect x="160" y="294" width="28" height="80" rx="6" fill="#8b4513" opacity="0.7" stroke="#8b4513" stroke-width="1.5"/>
+  <!-- 另一p臂(姐妹染色单体) -->
+  <rect x="208" y="294" width="28" height="80" rx="6" fill="#8b4513" opacity="0.7" stroke="#8b4513" stroke-width="1.5"/>
+  <!-- 另一q臂 -->
+  <rect x="220" y="100" width="36" height="180" rx="6" fill="#c0392b" opacity="0.7" stroke="#8b4513" stroke-width="1.5"/>
+
+  <!-- 端粒 -->
+  <ellipse cx="218" cy="98" rx="20" ry="5" fill="#e8c84a" stroke="#8b4513"/>
+  <text x="218" y="86" text-anchor="middle" font-size="9" fill="#8b4513">端粒</text>
+
+  <!-- 染色粒(横纹) -->
+  <line x1="180" y1="130" x2="216" y2="130" stroke="#2c2416" stroke-width="0.8"/>
+  <line x1="180" y1="150" x2="216" y2="150" stroke="#2c2416" stroke-width="0.8"/>
+  <line x1="180" y1="200" x2="216" y2="200" stroke="#2c2416" stroke-width="0.8"/>
+  <line x1="180" y1="230" x2="216" y2="230" stroke="#2c2416" stroke-width="0.8"/>
+
+  <!-- 次缢痕+随体(p臂末端) -->
+  <rect x="160" y="350" width="28" height="8" fill="#fdfbf7" stroke="#8b4513" stroke-width="1"/>
+  <circle cx="174" cy="365" r="8" fill="#d6ccc0" stroke="#8b4513"/>
+  <rect x="208" y="350" width="28" height="8" fill="#fdfbf7" stroke="#8b4513" stroke-width="1"/>
+  <circle cx="222" cy="365" r="8" fill="#d6ccc0" stroke="#8b4513"/>
+
+  <!-- 标注 -->
+  <line x1="160" y1="320" x2="110" y2="330" stroke="#7a6e5e" stroke-width="1"/>
+  <text x="40" y="328" font-size="10" fill="#8b4513" font-weight="700">p臂(短臂)</text>
+  <text x="40" y="340" font-size="10" fill="#7a6e5e">petit(法:小)</text>
+
+  <line x1="180" y1="180" x2="110" y2="190" stroke="#7a6e5e" stroke-width="1"/>
+  <text x="30" y="186" font-size="10" fill="#c0392b" font-weight="700">q臂(长臂)</text>
+  <text x="30" y="198" font-size="10" fill="#7a6e5e">字母q(p的下一个)</text>
+
+  <line x1="224" y1="287" x2="290" y2="280" stroke="#7a6e5e" stroke-width="1"/>
+  <text x="295" y="278" font-size="10" fill="#4a7c3a" font-weight="700">着丝粒</text>
+  <text x="295" y="290" font-size="10" fill="#7a6e5e">(主缢痕,纺锤丝附着)</text>
+
+  <line x1="188" y1="354" x2="290" y2="345" stroke="#7a6e5e" stroke-width="1"/>
+  <text x="295" y="343" font-size="10" fill="#8b4513" font-weight="700">次缢痕</text>
+  <text x="295" y="355" font-size="10" fill="#7a6e5e">(核仁组织区NOR)</text>
+
+  <line x1="174" y1="370" x2="290" y2="375" stroke="#7a6e5e" stroke-width="1"/>
+  <text x="295" y="373" font-size="10" fill="#8b4513" font-weight="700">随体 satellite</text>
+  <text x="295" y="385" font-size="10" fill="#7a6e5e">次缢痕末端球形段</text>
+
+  <line x1="180" y1="145" x2="110" y2="140" stroke="#7a6e5e" stroke-width="1"/>
+  <text x="30" y="138" font-size="10" fill="#2c2416" font-weight="700">染色粒</text>
+  <text x="30" y="150" font-size="10" fill="#7a6e5e">染色质凝缩颗粒</text>
+
+  <line x1="218" y1="95" x2="290" y2="100" stroke="#7a6e5e" stroke-width="1"/>
+  <text x="295" y="98" font-size="10" fill="#8b4513" font-weight="700">端粒 telomere</text>
+  <text x="295" y="110" font-size="10" fill="#7a6e5e">TTAGGG重复,保护末端</text>
+
+  <line x1="216" y1="270" x2="295" y2="240" stroke="#7a6e5e" stroke-width="1"/>
+  <text x="300" y="238" font-size="10" fill="#c0392b" font-weight="700">姐妹染色单体</text>
+  <text x="300" y="250" font-size="10" fill="#7a6e5e">复制后由着丝粒连接</text>
+
+  <!-- ====== 下方:四种着丝粒类型 ====== -->
+  <text x="430" y="425" text-anchor="middle" font-size="14" font-weight="700" fill="#c0392b">按着丝粒位置分类</text>
+
+  <!-- 中着丝粒 metacentric -->
+  <rect x="400" y="445" width="22" height="70" rx="5" fill="#c0392b" opacity="0.7" stroke="#8b4513"/>
+  <rect x="428" y="445" width="22" height="70" rx="5" fill="#c0392b" opacity="0.7" stroke="#8b4513"/>
+  <ellipse cx="425" cy="480" rx="16" ry="5" fill="#4a7c3a"/>
+  <text x="425" y="528" text-anchor="middle" font-size="10" fill="#2c2416" font-weight="700">中着丝粒</text>
+  <text x="425" y="542" text-anchor="middle" font-size="10" fill="#7a6e5e">metacentric</text>
+  <text x="425" y="554" text-anchor="middle" font-size="10" fill="#7a6e5e">p≈q (中部)</text>
+
+  <!-- 亚中着丝粒 submetacentric -->
+  <rect x="500" y="445" width="22" height="50" rx="5" fill="#8b4513" opacity="0.7" stroke="#8b4513"/>
+  <rect x="528" y="445" width="22" height="50" rx="5" fill="#8b4513" opacity="0.7" stroke="#8b4513"/>
+  <rect x="500" y="500" width="22" height="45" rx="5" fill="#c0392b" opacity="0.7" stroke="#8b4513"/>
+  <rect x="528" y="500" width="22" height="45" rx="5" fill="#c0392b" opacity="0.7" stroke="#8b4513"/>
+  <ellipse cx="525" cy="498" rx="16" ry="5" fill="#4a7c3a"/>
+  <text x="525" y="528" text-anchor="middle" font-size="10" fill="#2c2416" font-weight="700">亚中着丝粒</text>
+  <text x="525" y="542" text-anchor="middle" font-size="10" fill="#7a6e5e">submetacentric</text>
+  <text x="525" y="554" text-anchor="middle" font-size="10" fill="#7a6e5e">p&lt;q (偏中部)</text>
+
+  <!-- 近端着丝粒 acrocentric -->
+  <rect x="600" y="445" width="20" height="20" rx="4" fill="#8b4513" opacity="0.7" stroke="#8b4513"/>
+  <rect x="626" y="445" width="20" height="20" rx="4" fill="#8b4513" opacity="0.7" stroke="#8b4513"/>
+  <rect x="600" y="470" width="20" height="75" rx="5" fill="#c0392b" opacity="0.7" stroke="#8b4513"/>
+  <rect x="626" y="470" width="20" height="75" rx="5" fill="#c0392b" opacity="0.7" stroke="#8b4513"/>
+  <ellipse cx="623" cy="468" rx="15" ry="5" fill="#4a7c3a"/>
+  <text x="623" y="528" text-anchor="middle" font-size="10" fill="#2c2416" font-weight="700">近端着丝粒</text>
+  <text x="623" y="542" text-anchor="middle" font-size="10" fill="#7a6e5e">acrocentric</text>
+  <text x="623" y="554" text-anchor="middle" font-size="10" fill="#7a6e5e">p极短&lt;&lt;q</text>
+
+  <!-- 端着丝粒 telocentric -->
+  <rect x="720" y="450" width="24" height="95" rx="5" fill="#c0392b" opacity="0.7" stroke="#8b4513"/>
+  <rect x="748" y="450" width="24" height="95" rx="5" fill="#c0392b" opacity="0.7" stroke="#8b4513"/>
+  <ellipse cx="746" cy="450" rx="18" ry="5" fill="#4a7c3a"/>
+  <text x="746" y="528" text-anchor="middle" font-size="10" fill="#2c2416" font-weight="700">端着丝粒</text>
+  <text x="746" y="542" text-anchor="middle" font-size="10" fill="#7a6e5e">telocentric</text>
+  <text x="746" y="554" text-anchor="middle" font-size="10" fill="#7a6e5e">仅q臂(末端)</text>
+
+  <!-- 类型标题 -->
+  <text x="660" y="425" text-anchor="middle" font-size="9" fill="#8b4513">着丝粒比值(臂比) = 长臂/短臂</text>
+</svg>

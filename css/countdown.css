@@ -1,0 +1,102 @@
+/* ============================================================
+ * BioQuest — 倒计时横幅高级样式
+ * ============================================================ */
+
+.countdown-banner {
+  background: linear-gradient(180deg, #0c1810 0%, #1a2f1d 100%);
+  padding: 48px 0;
+  border-top: 1px solid rgba(196, 149, 106, 0.12);
+  border-bottom: 1px solid rgba(196, 149, 106, 0.12);
+}
+
+.countdown-inner {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 var(--content-padding);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+}
+
+.countdown-head {
+  text-align: center;
+}
+
+.countdown-label {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85);
+  letter-spacing: 0.05em;
+  margin-bottom: 6px;
+}
+
+.countdown-date {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--marigold);
+  letter-spacing: 0.08em;
+  opacity: 0.8;
+}
+
+.countdown-digits {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+}
+
+.countdown-unit {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.countdown-num {
+  font-family: var(--font-mono);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 600;
+  color: #fff;
+  min-width: 72px;
+  line-height: 1;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 16px 12px;
+  transition: border-color 0.3s ease;
+}
+
+.countdown-unit:hover .countdown-num {
+  border-color: rgba(196, 149, 106, 0.4);
+}
+
+.countdown-unit-label {
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.35);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.countdown-sep {
+  color: rgba(196, 149, 106, 0.4);
+  flex-shrink: 0;
+  margin-top: -20px;
+}
+
+@media (max-width: 768px) {
+  .countdown-banner {
+    padding: 36px 0;
+  }
+
+  .countdown-digits {
+    gap: 16px;
+  }
+
+  .countdown-num {
+    min-width: 56px;
+    padding: 12px 8px;
+    font-size: 1.6rem;
+  }
+}

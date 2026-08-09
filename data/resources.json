@@ -1,0 +1,24 @@
+{
+  "资源库": [
+    {"id":1,"source":"中国大学MOOC","title":"《细胞生物学》— 北京大学","link":"https://www.icourse163.org/course/PKU-1001928001","excerpt":"系统讲解细胞结构、信号转导、细胞周期等核心内容，配套课后习题。","tag":"视频课","category":"细胞生物学"},
+    {"id":2,"source":"Nature","title":"CRISPR-Cas9 最新研究综述","link":"https://www.nature.com/articles/s41586-024-07124-3","excerpt":"基因编辑技术在植物与动物中的应用进展及伦理讨论。","tag":"论文","category":"分子生物学"},
+    {"id":3,"source":"知乎专栏","title":"竞赛生必背的100个名词解释","link":"https://zhuanlan.zhihu.com/p/689734521","excerpt":"汇总了近十年联赛高频出现的术语，附带英文与助记。","tag":"笔记","category":"通用"},
+    {"id":4,"source":"B站","title":"细胞呼吸与光合作用动画合集","link":"https://www.bilibili.com/video/BV17x411F74P","excerpt":"直观易懂的生化过程动画，帮你攻克代谢难题。","tag":"视频","category":"生物化学"},
+    {"id":5,"source":"PubMed","title":"植物激素信号通路研究","link":"https://pubmed.ncbi.nlm.nih.gov/38212345","excerpt":"生长素、赤霉素、乙烯等信号转导的分子机制经典文献。","tag":"文献","category":"植物学"},
+    {"id":6,"source":"可汗学院","title":"遗传学与进化论完整课程","link":"https://www.khanacademy.org/science/ap-biology/heredity","excerpt":"从孟德尔定律到群体遗传学，全程英文讲解配字幕。","tag":"教程","category":"遗传学"},
+    {"id":7,"source":"Coursera","title":"分子生物学基础课程","link":"https://www.coursera.org/learn/molecular-biology","excerpt":"DNA复制、转录、翻译全流程详解。","tag":"课程","category":"分子生物学"},
+    {"id":8,"source":"网易公开课","title":"动物行为学全套视频","link":"https://open.163.com/newview/movie/courseintro?newurl=course%2Fbnu%2F1000003","excerpt":"经典动物行为案例分析，附实验设计思路。","tag":"视频","category":"动物学"},
+    {"id":9,"source":"人教版教材","title":"高中生物必修一至三电子版","link":"https://www.pep.com.cn/gzsw/jshzhx/kbjc/","excerpt":"官方教材配套资源，含知识梳理与习题。","tag":"教材","category":"通用"},
+    {"id":10,"source":"Cell Press","title":"2024年神经科学十大突破","link":"https://www.cell.com/neuron/fulltext/S0896-6273(24)00045-1","excerpt":"神经递质、突触可塑性、前额叶皮层研究进展。","tag":"综述","category":"动物学"},
+    {"id":11,"source":"Science Advances","title":"表观遗传学最新研究","link":"https://www.science.org/doi/10.1126/sciadv.abf2864","excerpt":"DNA甲基化、组蛋白修饰在发育与疾病中的作用。","tag":"论文","category":"分子生物学"},
+    {"id":12,"source":"BioRxiv","title":"光合作用光系统II结构解析","link":"https://www.biorxiv.org/content/10.1101/2024.01.15.576021v1","excerpt":"冷冻电镜解析光合作用光系统II高清结构。","tag":"研究","category":"植物学"},
+    {"id":13,"source":"实验万事通","title":"生物实验操作规范视频","link":"https://www.bilibili.com/video/BV1xt411o7Xn","excerpt":"显微镜使用、切片制作、染色技术实操演示。","tag":"视频","category":"实验技术"},
+    {"id":14,"source":"生物学通报","title":"竞赛重点知识图谱","link":"https://zgswtb.cbpt.cnki.net/kns8/kns/brief/result.aspx?dbprefix=CJFQ&dbcode=CJFD","excerpt":"联赛高频考点思维导图，覆盖四大模块。","tag":"笔记","category":"通用"},
+    {"id":15,"source":"PNAS","title":"微生物群落与人体健康","link":"https://www.pnas.org/doi/10.1073/pnas.2318762121","excerpt":"肠道菌群与代谢、免疫、神经系统的相互作用。","tag":"论文","category":"微生物学"},
+    {"id":16,"source":"ELIFE","title":"细胞凋亡与自噬机制","link":"https://elifesciences.org/articles/87654","excerpt":"凋亡与自噬的分子调控网络研究。","tag":"研究","category":"细胞生物学"},
+    {"id":17,"source":"edX","title":"生物信息学入门教程","link":"https://www.edx.org/course/bioinformatics-introduction","excerpt":"R语言与Python在基因组数据分析中的应用。","tag":"教程","category":"生物信息"},
+    {"id":18,"source":"Annual Reviews","title":"生态学年度综述合集","link":"https://www.annualreviews.org/journal/ecolsys","excerpt":"种群生态、群落生态、生态系统研究进展。","tag":"综述","category":"生态学"},
+    {"id":19,"source":"诺贝尔奖官网","title":"生理学或医学奖解读","link":"https://www.nobelprize.org/prizes/medicine/2023/press-release/","excerpt":"近十年诺贝尔生理学或医学奖深度解析。","tag":"专题","category":"通用"},
+    {"id":20,"source":"MIT OpenCourseWare","title":"生物学原理完整课程","link":"https://ocw.mit.edu/courses/biology/7-01sc-fundamentals-of-biology-fall-2011/","excerpt":"麻省理工生物学本科核心课程，含课件与习题。","tag":"课程","category":"通用"}
+  ]
+}

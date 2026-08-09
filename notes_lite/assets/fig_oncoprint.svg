@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 440" style="font-family: 'Noto Sans CJK SC', sans-serif;">
+  <rect x="0" y="0" width="780" height="440" fill="#fdfbf7"/>
+  <text x="390" y="28" text-anchor="middle" font-size="15" font-weight="700" fill="#c0392b">Oncoprint 癌症基因组学可视化示意图</text>
+
+  <!-- 行列标签 -->
+  <text x="390" y="50" text-anchor="middle" font-size="10" fill="#7a6e5e">列 = 患者样本（S1-S10）  |  行 = 基因（每行一个基因）  |  颜色 = 突变类型</text>
+
+  <!-- 样本标签（列） -->
+  <text x="100" y="80" text-anchor="middle" font-size="9" font-weight="600" fill="#8b4513">S1</text>
+  <text x="160" y="80" text-anchor="middle" font-size="9" font-weight="600" fill="#8b4513">S2</text>
+  <text x="220" y="80" text-anchor="middle" font-size="9" font-weight="600" fill="#8b4513">S3</text>
+  <text x="280" y="80" text-anchor="middle" font-size="9" font-weight="600" fill="#8b4513">S4</text>
+  <text x="340" y="80" text-anchor="middle" font-size="9" font-weight="600" fill="#8b4513">S5</text>
+  <text x="400" y="80" text-anchor="middle" font-size="9" font-weight="600" fill="#8b4513">S6</text>
+  <text x="460" y="80" text-anchor="middle" font-size="9" font-weight="600" fill="#8b4513">S7</text>
+  <text x="520" y="80" text-anchor="middle" font-size="9" font-weight="600" fill="#8b4513">S8</text>
+  <text x="580" y="80" text-anchor="middle" font-size="9" font-weight="600" fill="#8b4513">S9</text>
+  <text x="640" y="80" text-anchor="middle" font-size="9" font-weight="600" fill="#8b4513">S10</text>
+
+  <!-- 基因1: TP53 -->
+  <text x="55" y="100" text-anchor="end" font-size="10" font-weight="700" fill="#2c2416">TP53</text>
+  <rect x="70" y="88" width="45" height="18" rx="3" fill="#33a02c"/>
+  <rect x="130" y="88" width="45" height="18" rx="3" fill="#33a02c"/>
+  <rect x="190" y="88" width="45" height="18" rx="3" fill="#33a02c"/>
+  <rect x="250" y="88" width="45" height="18" rx="3" fill="#33a02c"/>
+  <rect x="310" y="88" width="45" height="18" rx="3" fill="#33a02c"/>
+  <rect x="370" y="88" width="45" height="18" rx="3" fill="#33a02c"/>
+  <rect x="430" y="88" width="45" height="18" rx="3" fill="#33a02c"/>
+  <rect x="490" y="88" width="45" height="18" rx="3" fill="#33a02c"/>
+  <rect x="550" y="88" width="45" height="18" rx="3" fill="#33a02c"/>
+  <rect x="610" y="88" width="45" height="18" rx="3" fill="#33a02c"/>
+
+  <!-- 基因2: KRAS -->
+  <text x="55" y="123" text-anchor="end" font-size="10" font-weight="700" fill="#2c2416">KRAS</text>
+  <rect x="70" y="111" width="45" height="18" rx="3" fill="#33a02c"/>
+  <rect x="130" y="111" width="45" height="18" rx="3" fill="#33a02c"/>
+  <rect x="190" y="111" width="45" height="18" rx="3" fill="#e31a1c"/>
+  <rect x="250" y="111" width="45" height="18" rx="3" fill="#33a02c"/>
+  <rect x="310" y="111" width="45" height="18" rx="3" fill="#e31a1c"/>
+  <rect x="370" y="111" width="45" height="18" rx="3" fill="#33a02c"/>
+  <rect x="430" y="111" width="45" height="18" rx="3" fill="#e31a1c"/>
+  <rect x="490" y="111" width="45" height="18" rx="3" fill="#33a02c"/>
+  <rect x="550" y="111" width="45" height="18" rx="3" fill="#e31a1c"/>
+  <rect x="610" y="111" width="45" height="18" rx="3" fill="#33a02c"/>
+
+  <!-- 基因3: BRAF -->
+  <text x="55" y="146" text-anchor="end" font-size="10" font-weight="700" fill="#2c2416">BRAF</text>
+  <rect x="70" y="134" width="45" height="18" rx="3" fill="#d6ccc0"/>
+  <rect x="130" y="134" width="45" height="18" rx="3" fill="#d6ccc0"/>
+  <rect x="190" y="134" width="45" height="18" rx="3" fill="#d6ccc0"/>
+  <rect x="250" y="134" width="45" height="18" rx="3" fill="#33a02c"/>
+  <rect x="310" y="134" width="45" height="18" rx="3" fill="#d6ccc0"/>
+  <rect x="370" y="134" width="45" height="18" rx="3" fill="#d6ccc0"/>
+  <rect x="430" y="134" width="45" height="18" rx="3" fill="#d6ccc0"/>
+  <rect x="490" y="134" width="45" height="18" rx="3" fill="#d6ccc0"/>
+  <rect x="550" y="134" width="45" height="18" rx="3" fill="#d6ccc0"/>
+  <rect x="610" y="134" width="45" height="18" rx="3" fill="#33a02c"/>
+
+  <!-- 基因4: EGFR -->
+  <text x="55" y="169" text-anchor="end" font-size="10" font-weight="700" fill="#2c2416">EGFR</text>
+  <rect x="70" y="157" width="45" height="18" rx="3" fill="#d6ccc0"/>
+  <rect x="130" y="157" width="45" height="18" rx="3" fill="#e31a1c"/>
+  <rect x="190" y="157" width="45" height="18" rx="3" fill="#e31a1c"/>
+  <rect x="250" y="157" width="45" height="18" rx="3" fill="#d6ccc0"/>
+  <rect x="310" y="157" width="45" height="18" rx="3" fill="#e31a1c"/>
+  <rect x="370" y="157" width="45" height="18" rx="3" fill="#d6ccc0"/>
+  <rect x="430" y="157" width="45" height="18" rx="3" fill="#d6ccc0"/>
+  <rect x="490" y="157" width="45" height="18" rx="3" fill="#d6ccc0"/>
+  <rect x="550" y="157" width="45" height="18" rx="3" fill="#e31a1c"/>
+  <rect x="610" y="157" width="45" height="18" rx="3" fill="#d6ccc0"/>
+
+  <!-- 基因5: IDH1 -->
+  <text x="55" y="192" text-anchor="end" font-size="10" font-weight="700" fill="#2c2416">IDH1</text>
+  <rect x="70" y="180" width="45" height="18" rx="3" fill="#d6ccc0"/>
+  <rect x="130" y="180" width="45" height="18" rx="3" fill="#d6ccc0"/>
+  <rect x="190" y="180" width="45" height="18" rx="3" fill="#1f78b4"/>
+  <rect x="250" y="180" width="45" height="18" rx="3" fill="#d6ccc0"/>
+  <rect x="310" y="180" width="45" height="18" rx="3" fill="#d6ccc0"/>
+  <rect x="370" y="180" width="45" height="18" rx="3" fill="#d6ccc0"/>
+  <rect x="430" y="180" width="45" height="18" rx="3" fill="#1f78b4"/>
+  <rect x="490" y="180" width="45" height="18" rx="3" fill="#d6ccc0"/>
+  <rect x="550" y="180" width="45" height="18" rx="3" fill="#d6ccc0"/>
+  <rect x="610" y="180" width="45" height="18" rx="3" fill="#d6ccc0"/>
+
+  <!-- 基因6: PTEN -->
+  <text x="55" y="215" text-anchor="end" font-size="10" font-weight="700" fill="#2c2416">PTEN</text>
+  <rect x="70" y="203" width="45" height="18" rx="3" fill="#d6ccc0"/>
+  <rect x="130" y="203" width="45" height="18" rx="3" fill="#d6ccc0"/>
+  <rect x="190" y="203" width="45" height="18" rx="3" fill="#d6ccc0"/>
+  <rect x="250" y="203" width="45" height="18" rx="3" fill="#d6ccc0"/>
+  <rect x="310" y="203" width="45" height="18" rx="3" fill="#1f78b4"/>
+  <rect x="370" y="203" width="45" height="18" rx="3" fill="#d6ccc0"/>
+  <rect x="430" y="203" width="45" height="18" rx="3" fill="#d6ccc0"/>
+  <rect x="490" y="203" width="45" height="18" rx="3" fill="#1f78b4"/>
+  <rect x="550" y="203" width="45" height="18" rx="3" fill="#d6ccc0"/>
+  <rect x="610" y="203" width="45" height="18" rx="3" fill="#d6ccc0"/>
+
+  <!-- 右侧突变频率 -->
+  <text x="690" y="100" text-anchor="start" font-size="9" fill="#c0392b" font-weight="600">100%</text>
+  <text x="690" y="123" text-anchor="start" font-size="9" fill="#c0392b" font-weight="600">50%</text>
+  <text x="690" y="146" text-anchor="start" font-size="9" fill="#c0392b" font-weight="600">20%</text>
+  <text x="690" y="169" text-anchor="start" font-size="9" fill="#c0392b" font-weight="600">40%</text>
+  <text x="690" y="192" text-anchor="start" font-size="9" fill="#c0392b" font-weight="600">20%</text>
+  <text x="690" y="215" text-anchor="start" font-size="9" fill="#c0392b" font-weight="600">20%</text>
+
+  <!-- 图例 -->
+  <text x="55" y="245" font-size="11" font-weight="700" fill="#8b4513">突变类型图例：</text>
+  <rect x="55" y="255" width="14" height="14" rx="2" fill="#33a02c"/>
+  <text x="74" y="267" font-size="10" fill="#2c2416">错义突变（missense）</text>
+  <rect x="200" y="255" width="14" height="14" rx="2" fill="#8b4513"/>
+  <text x="219" y="267" font-size="10" fill="#2c2416">无义突变（nonsense）</text>
+  <rect x="345" y="255" width="14" height="14" rx="2" fill="#1f78b4"/>
+  <text x="364" y="267" font-size="10" fill="#2c2416">移码/缺失（frameshift/del）</text>
+  <rect x="530" y="255" width="14" height="14" rx="2" fill="#e31a1c"/>
+  <text x="549" y="267" font-size="10" fill="#2c2416">扩增（amplification）</text>
+  <rect x="55" y="275" width="14" height="14" rx="2" fill="#ff7f00"/>
+  <text x="74" y="287" font-size="10" fill="#2c2416">剪接位点突变（splice）</text>
+  <rect x="200" y="275" width="14" height="14" rx="2" fill="#808080"/>
+  <text x="219" y="287" font-size="10" fill="#2c2416">多重突变（multiple）</text>
+  <rect x="345" y="275" width="14" height="14" rx="2" fill="#d6ccc0"/>
+  <text x="364" y="287" font-size="10" fill="#2c2416">无突变/未检测</text>
+
+  <!-- Oncoprint 特征说明 -->
+  <text x="55" y="315" font-size="11" font-weight="700" fill="#8b4513">Oncoprint 关键特征：</text>
+  <g transform="translate(55, 325)">
+    <rect x="0" y="0" width="665" height="55" rx="6" fill="#f0f7f4" stroke="#4a7c3a" stroke-width="1.5"/>
+    <text x="332" y="16" text-anchor="middle" font-size="10" fill="#2c2416">行 = 基因（每行一个基因） | 列 = 患者样本 | 颜色编码突变类型</text>
+    <text x="332" y="32" text-anchor="middle" font-size="10" fill="#2c2416">可展示：共突变关系（如TP53+KRAS共突变） | 互斥突变（如KRAS和BRAF互斥）</text>
+    <text x="332" y="48" text-anchor="middle" font-size="10" fill="#c0392b">限制：不展示基因表达水平、不展示突变具体位点、不展示表观遗传信息</text>
+  </g>
+
+  <!-- 底部 -->
+  <rect x="55" y="390" width="665" height="16" rx="4" fill="#fff8f0" stroke="#8b4513" stroke-width="1"/>
+  <text x="387" y="402" text-anchor="middle" font-size="9" font-weight="600" fill="#8b4513">竞赛考点：cBioPortal广泛使用 | Oncoprint看突变不看表达 | 行基因列样本</text>
+
+  <!-- 应用 -->
+  <rect x="55" y="415" width="665" height="20" rx="4" fill="#fef5f0" stroke="#c0392b" stroke-width="1"/>
+  <text x="387" y="429" text-anchor="middle" font-size="10" font-weight="600" fill="#c0392b">应用：识别突变热点基因 | 共突变/互斥模式分析 | 靶向药物临床决策支持</text>
+</svg>

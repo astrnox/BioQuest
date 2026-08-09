@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 620" style="font-family: sans-serif;">
+  <rect x="0" y="0" width="860" height="620" fill="#fdfbf7"/>
+  <text x="430" y="28" text-anchor="middle" font-size="18" font-weight="700" fill="#2c2416">核心代谢途径总览(以乙酰CoA为枢纽)</text>
+
+  <defs>
+    <marker id="ar" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#2c2416"/></marker>
+    <marker id="arR" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#c0392b"/></marker>
+    <marker id="arG" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#4a7c3a"/></marker>
+    <marker id="arB" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#8b4513"/></marker>
+  </defs>
+
+  <!-- 糖原(储存) 左上分支 -->
+  <rect x="40" y="80" width="120" height="34" rx="4" fill="#d6ccc0" stroke="#8b4513"/>
+  <text x="100" y="102" text-anchor="middle" font-size="12" font-weight="600" fill="#2c2416">糖原(储存)</text>
+  <line x1="160" y1="105" x2="200" y2="135" stroke="#8b4513" stroke-width="1.5" marker-end="url(#arB)"/>
+  <text x="138" y="120" font-size="9" fill="#8b4513">糖原磷酸化酶</text>
+
+  <!-- 葡萄糖 -->
+  <rect x="200" y="120" width="140" height="36" rx="4" fill="#c0392b" opacity="0.85"/>
+  <text x="270" y="143" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">葡萄糖 Glucose</text>
+  <line x1="200" y1="135" x2="160" y2="105" stroke="#8b4513" stroke-width="1.5" marker-end="url(#arB)"/>
+  <text x="138" y="128" font-size="9" fill="#8b4513">糖原合酶</text>
+
+  <!-- 糖酵解 EMP -->
+  <line x1="270" y1="160" x2="270" y2="200" stroke="#c0392b" stroke-width="2.5" marker-end="url(#arR)"/>
+  <text x="285" y="185" font-size="11" fill="#c0392b" font-weight="700">糖酵解EMP</text>
+  <text x="285" y="198" font-size="9" fill="#7a6e5e">10步,胞质</text>
+
+  <!-- 磷酸戊糖途径 PPP 分支 -->
+  <rect x="40" y="180" width="120" height="32" rx="4" fill="#f0f7f4" stroke="#4a7c3a"/>
+  <text x="100" y="200" text-anchor="middle" font-size="11" font-weight="600" fill="#4a7c3a">磷酸戊糖PPP</text>
+  <line x1="160" y1="195" x2="200" y2="170" stroke="#4a7c3a" stroke-width="1.5" marker-end="url(#arG)"/>
+  <text x="120" y="172" font-size="9" fill="#4a7c3a">G6P→核糖-5-P</text>
+  <text x="120" y="184" font-size="9" fill="#4a7c3a">+NADPH</text>
+
+  <!-- G6P -->
+  <rect x="210" y="205" width="120" height="28" rx="4" fill="#fff3cd" stroke="#8b4513"/>
+  <text x="270" y="224" text-anchor="middle" font-size="11" fill="#2c2416">6-磷酸葡萄糖</text>
+
+  <!-- ... 糖酵解继续 -->
+  <line x1="270" y1="233" x2="270" y2="275" stroke="#2c2416" stroke-width="1.5" marker-end="url(#ar)"/>
+  <text x="285" y="258" font-size="9" fill="#7a6e5e">F6P→F1,6BP→...</text>
+
+  <!-- 丙酮酸 Pyruvate -->
+  <rect x="200" y="280" width="140" height="36" rx="4" fill="#c0392b" opacity="0.85"/>
+  <text x="270" y="303" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">丙酮酸 Pyruvate(3C)</text>
+
+  <!-- 乳酸(无氧) 分支 -->
+  <rect x="40" y="280" width="110" height="32" rx="4" fill="#d6ccc0" stroke="#8b4513"/>
+  <text x="95" y="300" text-anchor="middle" font-size="11" fill="#2c2416">乳酸(无氧)</text>
+  <line x1="200" y1="295" x2="150" y2="296" stroke="#8b4513" stroke-width="1.5" marker-end="url(#arB)"/>
+  <text x="150" y="285" font-size="9" fill="#8b4513">LDH,NADH→NAD&#8314;</text>
+
+  <!-- 乙醇(发酵) 分支 -->
+  <rect x="40" y="330" width="110" height="32" rx="4" fill="#d6ccc0" stroke="#8b4513"/>
+  <text x="95" y="350" text-anchor="middle" font-size="11" fill="#2c2416">乙醇(发酵)</text>
+  <line x1="220" y1="316" x2="150" y2="345" stroke="#8b4513" stroke-width="1.5" marker-end="url(#arB)"/>
+
+  <!-- 丙酮酸→乙酰CoA (PDH复合体,线粒体) -->
+  <line x1="270" y1="320" x2="270" y2="370" stroke="#c0392b" stroke-width="2.5" marker-end="url(#arR)"/>
+  <text x="285" y="345" font-size="10" fill="#c0392b" font-weight="700">丙酮酸脱氢酶</text>
+  <text x="285" y="358" font-size="9" fill="#7a6e5e">复合体(线粒体)</text>
+  <text x="285" y="370" font-size="9" fill="#7a6e5e">脱羧,NADH,CoA</text>
+
+  <!-- 乙酰CoA 核心枢纽 -->
+  <rect x="185" y="375" width="170" height="42" rx="6" fill="#c0392b" stroke="#8b4513" stroke-width="2"/>
+  <text x="270" y="395" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">乙酰CoA(2C)</text>
+  <text x="270" y="411" text-anchor="middle" font-size="10" fill="#fff">核心代谢枢纽</text>
+
+  <!-- 脂肪酸β氧化(反向,进入乙酰CoA) -->
+  <rect x="40" y="385" width="130" height="32" rx="4" fill="#fff8e7" stroke="#8b4513"/>
+  <text x="105" y="405" text-anchor="middle" font-size="11" fill="#8b4513" font-weight="600">脂肪酸β-氧化</text>
+  <line x1="170" y1="400" x2="185" y2="395" stroke="#8b4513" stroke-width="1.5" marker-end="url(#arB)"/>
+
+  <!-- 脂肪酸合成(乙酰CoA→FA) -->
+  <rect x="40" y="430" width="130" height="32" rx="4" fill="#f0f7f4" stroke="#4a7c3a"/>
+  <text x="105" y="450" text-anchor="middle" font-size="11" fill="#4a7c3a" font-weight="600">脂肪酸合成</text>
+  <line x1="185" y1="410" x2="170" y2="435" stroke="#4a7c3a" stroke-width="1.5" marker-end="url(#arG)"/>
+
+  <!-- 酮体生成 -->
+  <rect x="40" y="475" width="130" height="30" rx="4" fill="#d6ccc0" stroke="#8b4513"/>
+  <text x="105" y="494" text-anchor="middle" font-size="11" fill="#2c2416">酮体(肝)</text>
+  <line x1="200" y1="415" x2="150" y2="480" stroke="#8b4513" stroke-width="1.2" marker-end="url(#arB)"/>
+
+  <!-- 乙酰CoA→TCA -->
+  <line x1="270" y1="417" x2="270" y2="470" stroke="#c0392b" stroke-width="2.5" marker-end="url(#arR)"/>
+  <text x="285" y="445" font-size="10" fill="#c0392b" font-weight="700">柠檬酸合酶</text>
+
+  <!-- TCA循环 -->
+  <ellipse cx="270" cy="510" rx="85" ry="38" fill="#fff3cd" stroke="#8b4513" stroke-width="2"/>
+  <text x="270" y="505" text-anchor="middle" font-size="13" font-weight="700" fill="#c0392b">TCA循环</text>
+  <text x="270" y="522" text-anchor="middle" font-size="9" fill="#2c2416">3NADH+1FADH&#8322;</text>
+  <text x="270" y="536" text-anchor="middle" font-size="9" fill="#2c2416">+1GTP+2CO&#8322;</text>
+
+  <!-- CO2 释放 -->
+  <text x="270" y="572" text-anchor="middle" font-size="11" fill="#8b4513" font-weight="700">↓ CO&#8322; (完全氧化)</text>
+
+  <!-- NADH/FADH2 → ETC → ATP (右侧) -->
+  <rect x="420" y="460" width="180" height="34" rx="4" fill="#4a7c3a" opacity="0.85"/>
+  <text x="510" y="482" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">NADH/FADH&#8322;</text>
+  <line x1="355" y1="510" x2="420" y2="485" stroke="#4a7c3a" stroke-width="1.5" marker-end="url(#arG)"/>
+  <line x1="355" y1="170" x2="420" y2="180" stroke="#4a7c3a" stroke-width="1.5" marker-end="url(#arG)"/>
+  <text x="375" y="180" font-size="9" fill="#4a7c3a">糖酵解NADH</text>
+
+  <line x1="510" y1="494" x2="510" y2="528" stroke="#4a7c3a" stroke-width="2" marker-end="url(#arG)"/>
+  <text x="525" y="515" font-size="10" fill="#4a7c3a" font-weight="700">呼吸链ETC</text>
+  <rect x="420" y="530" width="180" height="34" rx="4" fill="#c0392b" opacity="0.85"/>
+  <text x="510" y="552" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">ATP(能量货币)</text>
+  <text x="510" y="588" text-anchor="middle" font-size="10" fill="#8b4513">1葡萄糖完全氧化≈30-32 ATP</text>
+
+  <!-- 氨基酸代谢 联系 -->
+  <rect x="640" y="280" width="160" height="34" rx="4" fill="#fff8e7" stroke="#8b4513"/>
+  <text x="720" y="302" text-anchor="middle" font-size="11" fill="#8b4513" font-weight="600">氨基酸代谢</text>
+  <line x1="340" y1="295" x2="640" y2="295" stroke="#8b4513" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#arB)"/>
+  <text x="430" y="288" font-size="9" fill="#7a6e5e">丙氨酸→丙酮酸(转氨基)</text>
+  <line x1="355" y1="395" x2="640" y2="320" stroke="#8b4513" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#arB)"/>
+  <text x="450" y="360" font-size="9" fill="#7a6e5e">生酮/生糖氨基酸</text>
+  <line x1="355" y1="510" x2="640" y2="345" stroke="#8b4513" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#arB)"/>
+  <text x="430" y="430" font-size="9" fill="#7a6e5e">TCA中间物↔氨基酸</text>
+
+  <!-- 图例 -->
+  <rect x="640" y="80" width="190" height="180" rx="6" fill="#fff8e7" stroke="#d6ccc0"/>
+  <text x="735" y="102" text-anchor="middle" font-size="12" font-weight="700" fill="#c0392b">三大代谢联系</text>
+  <text x="655" y="124" font-size="10" fill="#c0392b" font-weight="700">糖代谢</text>
+  <text x="655" y="140" font-size="9" fill="#2c2416">糖原↔葡萄糖→丙酮酸→乙酰CoA</text>
+  <text x="655" y="164" font-size="10" fill="#8b4513" font-weight="700">脂代谢</text>
+  <text x="655" y="180" font-size="9" fill="#2c2416">脂肪酸β氧化→乙酰CoA</text>
+  <text x="655" y="194" font-size="9" fill="#2c2416">乙酰CoA→脂肪酸合成</text>
+  <text x="655" y="216" font-size="10" fill="#4a7c3a" font-weight="700">蛋白质代谢</text>
+  <text x="655" y="232" font-size="9" fill="#2c2416">氨基酸↔丙酮酸/乙酰CoA</text>
+  <text x="655" y="246" font-size="9" fill="#2c2416">↔TCA中间物</text>
+</svg>

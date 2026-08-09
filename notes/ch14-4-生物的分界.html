@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第十四章 生物系统学基础 · 第四节 生物的分界 — 生物集训营笔记</title>
+<style>
+:root {
+  --bg: #fdfbf7; --bg2: #f5f0e8; --ink: #2c2416; --muted: #7a6e5e;
+  --rule: #d6ccc0; --accent: #c0392b; --accent2: #8b4513;
+  --highlight: #fff3cd; --note-bg: #fff8e7; --note-border: #e8c84a;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: "Noto Sans CJK SC", "WenQuanYi Micro Hei", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  font-size: 16px; line-height: 1.8; color: var(--ink); background: var(--bg);
+}
+.cover { text-align: center; padding: 4rem 2rem 3rem; border-bottom: 3px double var(--rule); margin-bottom: 0; background: linear-gradient(180deg, var(--bg2) 0%, var(--bg) 100%); }
+.cover .ch-num { font-size: 1rem; color: var(--accent); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 0.3rem; }
+.cover h1 { font-size: 2.2rem; font-weight: 800; color: var(--ink); margin-bottom: 0.5rem; letter-spacing: 0.03em; }
+.cover .subtitle { font-size: 1rem; color: var(--muted); }
+.cover .meta { margin-top: 1.2rem; font-size: 0.85rem; color: var(--muted); display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
+.main-layout { max-width: 1060px; margin: 0 auto; padding: 0 1.5rem; }
+.section-header { border-bottom: 3px solid var(--accent); padding: 2rem 0 0.6rem; margin-bottom: 1.5rem; }
+.section-header .sec-num { font-size: 0.9rem; color: var(--accent); font-weight: 700; letter-spacing: 0.08em; }
+.section-header h2 { font-size: 1.6rem; font-weight: 800; color: var(--ink); margin-top: 0.15rem; }
+.topic-header { margin: 2rem 0 1rem; padding-left: 0.8rem; border-left: 4px solid var(--accent); }
+.topic-header h3 { font-size: 1.25rem; font-weight: 700; color: var(--ink); }
+.subtopic-header { margin: 1.5rem 0 0.8rem; }
+.subtopic-header h4 { font-size: 1.1rem; font-weight: 700; color: var(--accent2); }
+.note-block { display: flex; gap: 1.5rem; margin-bottom: 1.2rem; align-items: flex-start; }
+.note-content { flex: 1; padding: 0.8rem 1rem; background: var(--bg2); border-radius: 6px; border: 1px solid var(--rule); }
+.note-content p { margin-bottom: 0.5rem; }
+.note-content p:last-child { margin-bottom: 0; }
+.note-content ul, .note-content ol { padding-left: 1.5rem; margin: 0.4rem 0; }
+.note-content li { margin-bottom: 0.25rem; }
+.annotation { width: 240px; flex-shrink: 0; background: var(--note-bg); border: 1px solid var(--note-border); border-radius: 6px; padding: 0.6rem 0.8rem; font-size: 0.82rem; line-height: 1.6; color: var(--accent2); align-self: flex-start; }
+.annotation::before { content: "📝 批注"; display: block; font-size: 0.7rem; font-weight: 700; color: var(--accent); letter-spacing: 0.06em; margin-bottom: 0.3rem; text-transform: uppercase; }
+.u { text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 2px; text-underline-offset: 3px; font-weight: 600; }
+.u-double { text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 2px; text-underline-offset: 3px; text-decoration-style: double; font-weight: 700; }
+.key-point { background: var(--highlight); padding: 0.1em 0.3em; border-radius: 3px; font-weight: 600; border-bottom: 1.5px solid var(--accent); }
+.table-wrap { overflow-x: auto; overflow-y: auto; max-height: 600px; margin: 1.5rem 0; border: 1px solid var(--rule); border-radius: 6px; }
+table { width: 100%; border-collapse: collapse; font-size: 0.9rem; min-width: 800px; }
+table thead th { background: var(--accent); color: #fff; padding: 0.6rem 0.8rem; font-weight: 700; text-align: center; white-space: nowrap; }
+table tbody td { padding: 0.5rem 0.8rem; border-bottom: 1px solid var(--rule); vertical-align: top; }
+table tbody tr:nth-child(even) { background: var(--bg2); }
+table tbody tr:last-child td { border-bottom: none; }
+table tbody td:first-child { font-weight: 600; white-space: nowrap; text-align: center; background: var(--bg2); }
+figcaption { text-align: center; font-size: 0.85rem; color: var(--muted); margin-top: 0.4rem; }
+.diagram { margin: 1.2rem 0; text-align: center; }
+.diagram img { max-width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 4px; }
+.summary-box { background: linear-gradient(135deg, #fdf2f2 0%, #fef9e7 100%); border: 2px solid var(--accent); border-radius: 8px; padding: 1.2rem 1.5rem; margin: 2rem 0; }
+.summary-box h4 { color: var(--accent); font-size: 1rem; margin-bottom: 0.6rem; }
+.expand-block { background: #f0f7f4; border: 1px dashed #7cb342; border-radius: 6px; padding: 0.5rem 0.9rem; margin: 0.6rem 0 0; font-size: 0.83rem; line-height: 1.6; color: #3e6b3e; }
+.expand-block::before { content: "🔍 拓展"; display: block; font-size: 0.7rem; font-weight: 700; color: #558b2f; letter-spacing: 0.06em; margin-bottom: 0.2rem; }
+.flow-box { background: var(--bg); border: 1px solid var(--rule); border-radius: 8px; padding: 1.2rem; margin: 1.2rem 0; text-align: center; }
+.flow-box .flow-title { font-size: 0.85rem; font-weight: 700; color: var(--accent); margin-bottom: 0.8rem; }
+.flow-row { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 0.3rem; font-size: 0.85rem; }
+.flow-item { background: var(--bg2); border: 1px solid var(--rule); border-radius: 4px; padding: 0.25rem 0.6rem; white-space: nowrap; }
+.flow-arrow { color: var(--accent); font-weight: 700; font-size: 1.1rem; }
+.timeline { position: relative; padding: 1rem 0; margin: 1.5rem 0; }
+.timeline::before { content: ''; position: absolute; left: 50%; top: 0; bottom: 0; width: 2px; background: var(--accent); transform: translateX(-50%); }
+.timeline-item { position: relative; width: 45%; padding: 0.6rem 1rem; background: var(--bg2); border: 1px solid var(--rule); border-radius: 6px; margin-bottom: 1rem; }
+.timeline-item.left { margin-left: 0; margin-right: auto; }
+.timeline-item.right { margin-left: auto; margin-right: 0; }
+.timeline-item .tl-year { font-weight: 800; color: var(--accent); font-size: 1.1rem; }
+.timeline-item .tl-title { font-weight: 700; color: var(--accent2); margin-top: 0.2rem; }
+.timeline-item .tl-content { font-size: 0.85rem; margin-top: 0.3rem; }
+footer { margin-top: 3rem; padding: 1.5rem; border-top: 1px solid var(--rule); text-align: center; font-size: 0.8rem; color: var(--muted); }
+@media (max-width: 768px) {
+  .cover h1 { font-size: 1.5rem; }
+  .note-block { flex-direction: column; }
+  .annotation { width: 100%; }
+  .main-layout { padding: 0 0.8rem; }
+  table { font-size: 0.78rem; min-width: 600px; }
+  .timeline::before { left: 16px; }
+  .timeline-item { width: calc(100% - 40px); margin-left: 40px !important; margin-right: 0 !important; }
+}
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div class="ch-num">高中生物竞赛讲义 · 集训营</div>
+  <h1>第十四章 生物系统学基础</h1>
+  <div class="subtitle">第四节 生物的分界</div>
+  <div class="meta">
+    <span>二界系统</span><span>三界系统</span><span>四界系统</span><span>五界系统</span><span>六界系统</span><span>八界系统</span>
+    <span>📅 整理日期: 2026年7月6日</span>
+  </div>
+</div>
+
+<div class="main-layout">
+
+<div class="section-header">
+  <div class="sec-num">第四节</div>
+  <h2>生物的分界（kingdom systems）</h2>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>生物的分界方案并非一蹴而就。从 1753 年林奈的 <span class="u-double">二界系统</span>，到 1989 年 Cavalier-Smith 的 <span class="u-double">八界系统</span>，经历了近 250 年的演变。每一次扩展都反映了科学进步（显微镜、电子显微镜、分子生物学）带来的新认识。</p>
+  </div>
+  <div class="annotation">
+    本节是奥赛常考点。口诀：<strong>二三四五六八</strong>，对应林奈、海克尔、科帕兰、Whittaker、陈世骧、Cavalier-Smith。
+  </div>
+</div>
+
+<div class="diagram">
+<svg viewBox="0 0 800 290" style="width:100%;max-width:700px;margin:1rem auto;display:block;font-family:sans-serif;">
+  <rect x="0" y="0" width="800" height="290" fill="#fdfbf7" stroke="#d6ccc0" rx="8"/>
+  <text x="400" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="#2c2416">图 14-4-1　生物分界系统演化路径</text>
+  <rect x="20" y="48" width="115" height="150" fill="#fff8e7" stroke="#8b4513" stroke-width="1.5" rx="5"/>
+  <text x="77" y="70" text-anchor="middle" font-size="11" font-weight="700" fill="#8b4513">二界系统</text>
+  <text x="77" y="85" text-anchor="middle" font-size="9" fill="#7a6e5e">Linnaeus 1735</text>
+  <rect x="30" y="96" width="95" height="20" fill="#e8dcc8" stroke="#d6ccc0" rx="3"/>
+  <text x="77" y="110" text-anchor="middle" font-size="10" fill="#2c2416">植物界</text>
+  <rect x="30" y="120" width="95" height="20" fill="#e8dcc8" stroke="#d6ccc0" rx="3"/>
+  <text x="77" y="134" text-anchor="middle" font-size="10" fill="#2c2416">动物界</text>
+  <text x="77" y="165" text-anchor="middle" font-size="10" fill="#7a6e5e">运动能力分类</text>
+  <text x="77" y="180" text-anchor="middle" font-size="10" fill="#7a6e5e">最古老</text>
+  <line x1="135" y1="123" x2="150" y2="123" stroke="#c0392b" stroke-width="2"/>
+  <polygon points="150,123 143,118 143,128" fill="#c0392b"/>
+  <rect x="155" y="48" width="115" height="150" fill="#fff8e7" stroke="#8b4513" stroke-width="1.5" rx="5"/>
+  <text x="212" y="70" text-anchor="middle" font-size="11" font-weight="700" fill="#8b4513">三界系统</text>
+  <text x="212" y="85" text-anchor="middle" font-size="9" fill="#7a6e5e">Haeckel 1866</text>
+  <rect x="165" y="96" width="95" height="20" fill="#e8dcc8" stroke="#d6ccc0" rx="3"/>
+  <text x="212" y="110" text-anchor="middle" font-size="10" fill="#2c2416">植物界</text>
+  <rect x="165" y="120" width="95" height="20" fill="#e8dcc8" stroke="#d6ccc0" rx="3"/>
+  <text x="212" y="134" text-anchor="middle" font-size="10" fill="#2c2416">动物界</text>
+  <rect x="165" y="144" width="95" height="20" fill="#c0392b" opacity="0.2" stroke="#c0392b" rx="3"/>
+  <text x="212" y="158" text-anchor="middle" font-size="10" font-weight="700" fill="#c0392b">+原生生物界</text>
+  <text x="212" y="180" text-anchor="middle" font-size="10" fill="#7a6e5e">显微镜发现</text>
+  <line x1="270" y1="123" x2="285" y2="123" stroke="#c0392b" stroke-width="2"/>
+  <polygon points="285,123 278,118 278,128" fill="#c0392b"/>
+  <rect x="290" y="48" width="115" height="150" fill="#fff8e7" stroke="#8b4513" stroke-width="1.5" rx="5"/>
+  <text x="347" y="70" text-anchor="middle" font-size="11" font-weight="700" fill="#8b4513">四界系统</text>
+  <text x="347" y="85" text-anchor="middle" font-size="9" fill="#7a6e5e">Copeland 1956</text>
+  <rect x="300" y="96" width="95" height="18" fill="#e8dcc8" stroke="#d6ccc0" rx="3"/>
+  <text x="347" y="109" text-anchor="middle" font-size="10" fill="#2c2416">植物界</text>
+  <rect x="300" y="117" width="95" height="18" fill="#e8dcc8" stroke="#d6ccc0" rx="3"/>
+  <text x="347" y="130" text-anchor="middle" font-size="10" fill="#2c2416">动物界</text>
+  <rect x="300" y="138" width="95" height="18" fill="#e8dcc8" stroke="#d6ccc0" rx="3"/>
+  <text x="347" y="151" text-anchor="middle" font-size="9" fill="#2c2416">原生生物界</text>
+  <rect x="300" y="158" width="95" height="18" fill="#c0392b" opacity="0.2" stroke="#c0392b" rx="3"/>
+   <text x="347" y="171" text-anchor="middle" font-size="9" font-weight="700" fill="#c0392b">+菌界(原核)</text>
+  <text x="347" y="190" text-anchor="middle" font-size="10" fill="#7a6e5e">原核/真核分离</text>
+  <line x1="405" y1="123" x2="420" y2="123" stroke="#c0392b" stroke-width="2"/>
+  <polygon points="420,123 413,118 413,128" fill="#c0392b"/>
+  <rect x="425" y="48" width="115" height="150" fill="#fff8e7" stroke="#c0392b" stroke-width="2" rx="5"/>
+  <text x="482" y="70" text-anchor="middle" font-size="11" font-weight="700" fill="#c0392b">五界系统</text>
+  <text x="482" y="85" text-anchor="middle" font-size="9" fill="#7a6e5e">Whittaker 1969</text>
+  <rect x="435" y="94" width="95" height="18" fill="#fdecea" stroke="#c0392b" rx="3"/>
+  <text x="482" y="107" text-anchor="middle" font-size="9" fill="#2c2416">原核生物界</text>
+  <rect x="435" y="114" width="95" height="18" fill="#fdecea" stroke="#c0392b" rx="3"/>
+  <text x="482" y="127" text-anchor="middle" font-size="9" fill="#2c2416">原生生物界</text>
+  <rect x="435" y="134" width="95" height="18" fill="#c0392b" opacity="0.25" stroke="#c0392b" rx="3"/>
+  <text x="482" y="147" text-anchor="middle" font-size="9" font-weight="700" fill="#c0392b">+真菌界</text>
+  <rect x="435" y="154" width="95" height="18" fill="#fdecea" stroke="#c0392b" rx="3"/>
+  <text x="482" y="167" text-anchor="middle" font-size="9" fill="#2c2416">植物/动物界</text>
+  <text x="482" y="190" text-anchor="middle" font-size="10" fill="#c0392b" font-weight="700">奥赛重点</text>
+  <line x1="540" y1="123" x2="555" y2="123" stroke="#c0392b" stroke-width="2"/>
+  <polygon points="555,123 548,118 548,128" fill="#c0392b"/>
+  <rect x="560" y="48" width="105" height="150" fill="#fff8e7" stroke="#8b4513" stroke-width="1.5" rx="5"/>
+  <text x="612" y="70" text-anchor="middle" font-size="11" font-weight="700" fill="#8b4513">六界系统</text>
+  <text x="612" y="85" text-anchor="middle" font-size="9" fill="#7a6e5e">陈世骧 1979</text>
+  <rect x="568" y="96" width="89" height="18" fill="#c0392b" opacity="0.2" stroke="#c0392b" rx="3"/>
+  <text x="612" y="109" text-anchor="middle" font-size="9" font-weight="700" fill="#c0392b">真细菌界</text>
+  <rect x="568" y="117" width="89" height="18" fill="#c0392b" opacity="0.2" stroke="#c0392b" rx="3"/>
+  <text x="612" y="130" text-anchor="middle" font-size="9" font-weight="700" fill="#c0392b">古细菌界</text>
+  <text x="612" y="150" text-anchor="middle" font-size="9" fill="#2c2416">原生/真菌/</text>
+  <text x="612" y="163" text-anchor="middle" font-size="9" fill="#2c2416">植物/动物</text>
+  <text x="612" y="185" text-anchor="middle" font-size="10" fill="#7a6e5e">原核界拆分</text>
+  <line x1="665" y1="123" x2="680" y2="123" stroke="#c0392b" stroke-width="2"/>
+  <polygon points="680,123 673,118 673,128" fill="#c0392b"/>
+  <rect x="685" y="48" width="95" height="150" fill="#fff8e7" stroke="#c0392b" stroke-width="2" rx="5"/>
+  <text x="732" y="70" text-anchor="middle" font-size="11" font-weight="700" fill="#c0392b">三域系统</text>
+  <text x="732" y="85" text-anchor="middle" font-size="9" fill="#7a6e5e">Woese 1977</text>
+  <rect x="693" y="100" width="79" height="20" fill="#fdecea" stroke="#c0392b" rx="3"/>
+  <text x="732" y="115" text-anchor="middle" font-size="10" fill="#c0392b">细菌域</text>
+  <rect x="693" y="124" width="79" height="20" fill="#fdecea" stroke="#c0392b" rx="3"/>
+  <text x="732" y="139" text-anchor="middle" font-size="10" fill="#c0392b">古菌域</text>
+  <rect x="693" y="148" width="79" height="20" fill="#fdecea" stroke="#c0392b" rx="3"/>
+  <text x="732" y="163" text-anchor="middle" font-size="10" fill="#c0392b">真核域</text>
+  <text x="732" y="185" text-anchor="middle" font-size="10" fill="#c0392b" font-weight="700">16S rRNA</text>
+  <rect x="20" y="215" width="760" height="60" fill="#fff8e7" stroke="#e8c84a" rx="4"/>
+  <text x="400" y="237" text-anchor="middle" font-size="11" fill="#8b4513">演化逻辑：二界→三界（发现单细胞）→四界（原核分离）→五界（真菌独立）→六界（原核拆分）→三域（分子证据）</text>
+  <text x="400" y="257" text-anchor="middle" font-size="11" fill="#c0392b" font-weight="700">奥赛重点：五界（Whittaker 1969）+ 三域（Woese 1977）</text>
+  <text x="400" y="272" text-anchor="middle" font-size="10" fill="#7a6e5e">分界依据：形态/运动 → 细胞结构/营养 → 分子序列，逐步精确</text>
+</svg>
+<figcaption>图 14-4-1　生物分界系统演化路径：二界→三界→四界→五界→六界→三域，分界依据从形态到分子不断精确</figcaption>
+</div>
+
+<!-- ====== 一、二界系统 ====== -->
+<div class="topic-header">
+  <h3>一、二界系统（Two-kingdom system）</h3>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>人们对生物最早的观察就注意到生物可区分为两大类群——<span class="u-double">固着不动的植物</span> 和 <span class="u-double">能行动的动物</span>。</p>
+    <p>1753 年，<span class="key-point">林奈（Linnaeus）</span> 在其分类系统中将生物分为 <span class="u-double">植物界（Plantae）+ 动物界（Animalia）</span> 两界。</p>
+    <p>评价：二界系统最简单、直观，符合日常经验，但是粗糙的：</p>
+    <ul>
+      <li>细菌、蓝藻等单细胞生物归属不清——按能否运动分入动物界？还是按光合作用分入植物界？</li>
+      <li>真菌（fungi）地衣（lichens）应放入哪一界？</li>
+      <li>病毒是细胞外生命形式，二界完全无法归类。</li>
+    </ul>
+    <p>现一些教科书相沿成习，仍在采用二界系统（如小学、初中生物教材）。</p>
+  </div>
+  <div class="annotation">
+    二界是 <em>最古老</em> 的分界，反映日常观察。<strong>林奈 1753</strong> 年完成。
+  </div>
+</div>
+
+<!-- ====== 二、三界系统 ====== -->
+<div class="topic-header">
+  <h3>二、三界系统（Three-kingdom system）</h3>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>1859 年 <span class="key-point">达尔文（Darwin）《物种起源》</span> 出版，同时由于显微镜的广泛使用，人们发现有些单细胞生物（如眼虫）兼有 <span class="u">动物</span> 和 <span class="u">植物</span> 的双重特征——眼虫有叶绿体能光合（植物特征），但有鞭毛能游动（动物特征）。</p>
+    <p>1866 年，德国生物学家、进化论者 <span class="u-double">海克尔（E. Haeckel, 1834–1919）</span> 提出一个力求反映生物亲缘关系的新分类系统：</p>
+    <ul>
+      <li><span class="key-point">植物界（Plantae）</span></li>
+      <li><span class="key-point">动物界（Animalia）</span></li>
+      <li><span class="key-point">原生生物界（Protista）</span>：所有单细胞生物及一些简单的多细胞动物和植物</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    三界系统由 <strong>Haeckel 1866</strong> 提出，首次承认"原生生物"这一中间类群。但其内部的异质性大，包括真核 + 一些原核。
+  </div>
+</div>
+
+<!-- ====== 三、四界系统 ====== -->
+<div class="topic-header">
+  <h3>三、四界系统（Four-kingdom system）</h3>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>1938 年，美国的 <span class="u-double">科帕兰（Copeland）</span> 根据有机体的 <span class="u">细胞结构</span> 和 <span class="u">组织水平</span>，主张建立四界系统：</p>
+    <ul>
+      <li><span class="key-point">原核生物界（Monera）</span>：细菌和蓝藻等原核生物。</li>
+      <li><span class="key-point">原始有核界（Protoctista）</span>：低等的真核藻类、原生动物和真核菌类。</li>
+      <li><span class="key-point">后生植物界（Metaphyta）</span>：多细胞植物。</li>
+      <li><span class="key-point">后生动物界（Metazoa）</span>：多细胞动物。</li>
+    </ul>
+    <p>科帕兰的关键贡献是将 <span class="u-double">原核生物（Monera）</span> 独立成界，第一次把原核生物从真核生物中分离出来。</p>
+  </div>
+  <div class="annotation">
+    <strong>Copeland 1938</strong> 创立四界系统，关键贡献：把 <em>原核</em> 独立成界。
+  </div>
+</div>
+
+<!-- ====== 四、五界系统 ====== -->
+<div class="topic-header">
+  <h3>四、五界系统（Five-kingdom system）</h3>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>电子显微技术的发展和完善，以及生化知识的积累，使生物学家有可能揭示细菌、蓝藻细胞的细微结构，提出了 <span class="u-double">原核生物（prokaryote）</span> 和 <span class="u-double">真核生物（eukaryote）</span> 的概念。</p>
+    <p>1969 年，美国的 <span class="u-double">R. Whittaker（1924–1980）</span> 根据 <span class="u">细胞结构</span> 和 <span class="u">营养类型</span> 将生物分为 <span class="u-double">五界（Five-kingdom system）</span>（表 6-4-1, 2）：</p>
+    <ul>
+      <li><span class="key-point">原核生物界（Monera）</span>：细菌、蓝藻等原核生物。</li>
+      <li><span class="key-point">原生生物界（Protista）</span>：单细胞真核生物及群体单细胞生物。</li>
+      <li><span class="key-point">植物界（Plantae）</span>：多细胞光合自养真核生物。</li>
+      <li><span class="key-point">真菌界（Fungi）</span>：多细胞腐食营养真核生物。</li>
+      <li><span class="key-point">动物界（Animalia）</span>：多细胞吞噬营养真核生物。</li>
+    </ul>
+    <p>各界现存物种数大致比例（<span class="u-double">图 6-4-1 扇形图</span>）：动物界最大，原核生物界和原生生物界最小。</p>
+  </div>
+  <div class="annotation">
+    <strong>Whittaker 1969</strong> 五界系统是 <em>最经典、最常用</em> 的分界方案。Whittaker 1980 因病去世，年仅 56。
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>五界系统可进一步归属为 <span class="u-double">2 个总界（Superkingdom）</span>：</p>
+    <ul>
+      <li><span class="key-point">① 原核生物总界（Prokaryota）</span>：只含原核生物一界。</li>
+      <li><span class="key-point">② 真核生物总界（Eukaryota）</span>：包括原生生物界、植物界、真菌界、动物界等四界。</li>
+    </ul>
+    <p>真核生物四界的营养方式：</p>
+    <ul>
+      <li><span class="u-double">植物</span>：光合自养（photoautotroph）</li>
+      <li><span class="u-double">真菌</span>：腐食营养 / 吸收营养（absorptive heterotroph）</li>
+      <li><span class="u-double">动物</span>：吞噬营养（phagotroph / ingestive heterotroph）</li>
+      <li><span class="u-double">原生生物</span>：光合、吸收、吞噬三种方式皆有</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    <strong>光合自养 / 吸收营养 / 吞噬营养</strong> —— 真核三界三种营养方式，原生生物是"集大成者"。
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>在二界系统中，细菌和蓝藻属于植物界。但它们的细胞结构显然处于较低水平——<span class="u-double">没有完整的细胞核</span>，也没有 <span class="u-double">线粒体、高尔基体等细胞器</span>。蓝藻和某些细菌虽能进行光合作用，但这只说明生命在进化到原核生物阶段就有利用日光能、进行光合作用的能力。所以 Whittaker 根据细胞结构的显著差异把细菌和蓝藻放在原核生物界中是可取的。</p>
+    <p>原生生物界是一庞杂的类群：</p>
+    <ul>
+      <li>有些显然应属于动物，如草履虫、变形虫等。</li>
+      <li>有些显然应属于植物，如衣藻、团藻等绿藻。</li>
+      <li>还有些种类既有植物的特征，又有真菌或动物的特征，如眼虫。</li>
+      <li><span class="key-point">黏菌（slime mold）</span>：有孢子，从形态上看很像真菌；但有变形虫阶段，是吞噬营养的——又是动物的特征。</li>
+    </ul>
+    <p>这种情况说明 <span class="u-double">植物、真菌和动物都是进化的产物</span>，它们彼此都有亲缘关系；这些同时具有植物、真菌或动物特征的生物正说明了 <em>生物在低级阶段时是没有清晰界限的</em>。海克尔和 Whittaker 将这些保存了低级特征的生物并为 <em>原生生物界</em> 是合理的。</p>
+    <p>但不少人反对这种分类，主张把这些生物分别放到植物界或动物界中；对于那些具有植物和动物两方面特征的生物可同时收入植物界和动物界，承认它们的 <span class="u-double">"双重身份"</span>。实际上，动物学家和植物学家一般都是按后面的意见，把生物界仍旧分为动物和植物两界的。</p>
+  </div>
+  <div class="annotation">
+    黏菌的归属争论：分子证据将其归入 <strong>变形虫总界（Amoebozoa）</strong>，与真菌、植物、动物三者都不是近亲。
+  </div>
+</div>
+
+<!-- ====== 五、五界系统详细特征对比（表 6-4-1） ====== -->
+<div class="topic-header">
+  <h3>五、五界系统详细特征对比（表 6-4-1）</h3>
+</div>
+
+<div class="table-wrap">
+<table>
+  <thead>
+    <tr>
+      <th rowspan="2">特征</th>
+      <th rowspan="2">原核生物<br>（细菌、蓝藻、原绿藻）</th>
+      <th colspan="4">真核生物</th>
+    </tr>
+    <tr>
+      <th>原生生物</th>
+      <th>真菌</th>
+      <th>植物</th>
+      <th>动物</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>细胞结构</td>
+      <td>原核细胞</td>
+      <td>真核细胞</td>
+      <td>真核细胞</td>
+      <td>真核细胞</td>
+      <td>真核细胞</td>
+    </tr>
+    <tr>
+      <td>叶绿体</td>
+      <td>无，只有类囊体</td>
+      <td>有或无</td>
+      <td>无</td>
+      <td>有</td>
+      <td>无</td>
+    </tr>
+    <tr>
+      <td>细胞壁</td>
+      <td>胞壁酸构成的肽聚糖（细菌）</td>
+      <td>有或无</td>
+      <td>几丁质和多糖，无纤维素</td>
+      <td>纤维素和其他多糖</td>
+      <td>无</td>
+    </tr>
+    <tr>
+      <td>纤毛或鞭毛</td>
+      <td>细菌鞭毛</td>
+      <td>9(2)+2</td>
+      <td>如有，9(2)+2</td>
+      <td>配子若有鞭毛 9(2)+2</td>
+      <td>如有，9(2)+2</td>
+    </tr>
+    <tr>
+      <td>细胞数</td>
+      <td>单细胞或群体</td>
+      <td>单细胞或群体</td>
+      <td>多细胞</td>
+      <td>多细胞</td>
+      <td>多细胞</td>
+    </tr>
+    <tr>
+      <td>神经系统</td>
+      <td>无</td>
+      <td>无</td>
+      <td>无</td>
+      <td>无</td>
+      <td>有</td>
+    </tr>
+    <tr>
+      <td>营养方式</td>
+      <td>化能异养、光合异养、<br>光合自养、化能自养</td>
+      <td>光合自养、异养<br>（吸收及吞噬）</td>
+      <td>异养<br>（吸收营养）</td>
+      <td>光合自养</td>
+      <td>异养<br>（吞噬）</td>
+    </tr>
+    <tr>
+      <td>基因重组方式</td>
+      <td>细菌：转导、转化、接合</td>
+      <td>接合、受精、减数分裂<br>或无基因交流</td>
+      <td>受精、减数分裂<br>或无基因交流</td>
+      <td>受精、减数分裂</td>
+      <td>受精、减数分裂</td>
+    </tr>
+  </tbody>
+</table>
+<figcaption>表 6-4-1　生物五界系统（Whittaker 1969）<br>注：鞭毛 9(2)+2 = 9 组二联微管 + 中央 2 条微管，典型真核鞭毛结构</figcaption>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>关键观察：</p>
+    <ul>
+      <li><span class="key-point">原核 vs 真核</span>：最本质的差异在细胞核 + 细胞器。</li>
+      <li><span class="key-point">鞭毛结构</span>：原核鞭毛由鞭毛蛋白组成，本质是细胞膜外伸的螺旋结构（直径 12–20 nm）；真核鞭毛是 9(2)+2 微管结构（直径 200 nm），有完全不同的进化起源。</li>
+      <li><span class="key-point">细胞壁</span>：原核（肽聚糖）vs 真菌（几丁质）vs 植物（纤维素）vs 动物（无），四者化学组成完全不同。</li>
+      <li><span class="key-point">神经系统</span>：动物界特有，是动物界作为最高等真核界的标志。</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    真核鞭毛 <strong>9(2)+2 微管</strong>：外周 9 组二联微管 + 中央 2 条单微管，是 9+2 轴丝的核心结构。
+  </div>
+</div>
+
+<div class="diagram">
+<svg viewBox="0 0 800 440" style="width:100%;max-width:700px;margin:1rem auto;display:block;font-family:sans-serif;">
+  <rect x="0" y="0" width="800" height="440" fill="#fdfbf7" stroke="#d6ccc0" rx="8"/>
+  <text x="400" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="#2c2416">图 14-4-3　五界特征对比表（Whittaker 1969）</text>
+  <!-- header -->
+  <rect x="20" y="50" width="100" height="45" fill="#c0392b" rx="4"/>
+  <text x="70" y="70" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">特征</text>
+  <text x="70" y="85" text-anchor="middle" font-size="9" fill="#fff">Feature</text>
+  <rect x="130" y="50" width="130" height="45" fill="#8b4513" rx="4"/>
+  <text x="195" y="70" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">原核生物界</text>
+  <text x="195" y="85" text-anchor="middle" font-size="9" fill="#fff">Monera</text>
+  <rect x="270" y="50" width="130" height="45" fill="#1565c0" rx="4"/>
+  <text x="335" y="70" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">原生生物界</text>
+  <text x="335" y="85" text-anchor="middle" font-size="9" fill="#fff">Protista</text>
+  <rect x="410" y="50" width="125" height="45" fill="#6d4c41" rx="4"/>
+  <text x="472" y="70" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">真菌界</text>
+  <text x="472" y="85" text-anchor="middle" font-size="9" fill="#fff">Fungi</text>
+  <rect x="545" y="50" width="115" height="45" fill="#2e7d32" rx="4"/>
+  <text x="602" y="70" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">植物界</text>
+  <text x="602" y="85" text-anchor="middle" font-size="9" fill="#fff">Plantae</text>
+  <rect x="670" y="50" width="110" height="45" fill="#c0392b" rx="4"/>
+  <text x="725" y="70" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">动物界</text>
+  <text x="725" y="85" text-anchor="middle" font-size="9" fill="#fff">Animalia</text>
+  <!-- row 1: 细胞类型 -->
+  <rect x="20" y="100" width="100" height="48" fill="#fff8e7" stroke="#d6ccc0"/>
+  <text x="70" y="129" text-anchor="middle" font-size="11" font-weight="700" fill="#2c2416">细胞类型</text>
+  <text x="195" y="122" text-anchor="middle" font-size="10" fill="#c0392b" font-weight="700">原核细胞</text>
+  <text x="195" y="138" text-anchor="middle" font-size="9" fill="#7a6e5e">无核膜</text>
+  <text x="335" y="129" text-anchor="middle" font-size="10" fill="#2c2416">真核细胞</text>
+  <text x="472" y="129" text-anchor="middle" font-size="10" fill="#2c2416">真核细胞</text>
+  <text x="602" y="129" text-anchor="middle" font-size="10" fill="#2c2416">真核细胞</text>
+  <text x="725" y="129" text-anchor="middle" font-size="10" fill="#2c2416">真核细胞</text>
+  <!-- row 2: 细胞数 -->
+  <rect x="20" y="153" width="100" height="48" fill="#fff8e7" stroke="#d6ccc0"/>
+  <text x="70" y="182" text-anchor="middle" font-size="11" font-weight="700" fill="#2c2416">细胞数</text>
+  <text x="195" y="175" text-anchor="middle" font-size="10" fill="#2c2416">单细胞</text>
+  <text x="195" y="191" text-anchor="middle" font-size="9" fill="#7a6e5e">/群体</text>
+  <text x="335" y="175" text-anchor="middle" font-size="10" fill="#2c2416">单细胞</text>
+  <text x="335" y="191" text-anchor="middle" font-size="9" fill="#7a6e5e">/群体/多细胞</text>
+  <text x="472" y="175" text-anchor="middle" font-size="10" fill="#2c2416">单/多细胞</text>
+  <text x="472" y="191" text-anchor="middle" font-size="9" fill="#7a6e5e">菌丝体</text>
+  <text x="602" y="175" text-anchor="middle" font-size="10" fill="#2c2416">多细胞</text>
+  <text x="602" y="191" text-anchor="middle" font-size="9" fill="#7a6e5e">分化组织</text>
+  <text x="725" y="175" text-anchor="middle" font-size="10" fill="#2c2416">多细胞</text>
+  <text x="725" y="191" text-anchor="middle" font-size="9" fill="#7a6e5e">器官系统</text>
+  <!-- row 3: 细胞壁 -->
+  <rect x="20" y="206" width="100" height="48" fill="#fff8e7" stroke="#d6ccc0"/>
+  <text x="70" y="235" text-anchor="middle" font-size="11" font-weight="700" fill="#2c2416">细胞壁</text>
+  <text x="195" y="228" text-anchor="middle" font-size="10" fill="#2c2416">肽聚糖</text>
+  <text x="195" y="244" text-anchor="middle" font-size="9" fill="#7a6e5e">（革兰氏±）</text>
+  <text x="335" y="228" text-anchor="middle" font-size="10" fill="#2c2416">有或无</text>
+  <text x="335" y="244" text-anchor="middle" font-size="9" fill="#7a6e5e">多样</text>
+  <text x="472" y="228" text-anchor="middle" font-size="10" fill="#2c2416">几丁质</text>
+  <text x="472" y="244" text-anchor="middle" font-size="9" fill="#7a6e5e">（N-乙酰葡糖胺）</text>
+  <text x="602" y="228" text-anchor="middle" font-size="10" fill="#2c2416">纤维素</text>
+  <text x="602" y="244" text-anchor="middle" font-size="9" fill="#7a6e5e">+果胶</text>
+  <text x="725" y="235" text-anchor="middle" font-size="10" fill="#c0392b" font-weight="700">无</text>
+  <!-- row 4: 营养方式 -->
+  <rect x="20" y="259" width="100" height="48" fill="#fff8e7" stroke="#d6ccc0"/>
+  <text x="70" y="288" text-anchor="middle" font-size="11" font-weight="700" fill="#2c2416">营养方式</text>
+  <text x="195" y="281" text-anchor="middle" font-size="10" fill="#2c2416">自养/异养</text>
+  <text x="195" y="297" text-anchor="middle" font-size="9" fill="#7a6e5e">多样</text>
+  <text x="335" y="281" text-anchor="middle" font-size="10" fill="#2c2416">自养/异养</text>
+  <text x="335" y="297" text-anchor="middle" font-size="9" fill="#7a6e5e">光合/吞噬</text>
+  <text x="472" y="281" text-anchor="middle" font-size="10" fill="#2c2416">异养</text>
+  <text x="472" y="297" text-anchor="middle" font-size="9" fill="#7a6e5e">吸收营养</text>
+  <text x="602" y="281" text-anchor="middle" font-size="10" fill="#2c2416">自养</text>
+  <text x="602" y="297" text-anchor="middle" font-size="9" fill="#7a6e5e">光合作用</text>
+  <text x="725" y="281" text-anchor="middle" font-size="10" fill="#2c2416">异养</text>
+  <text x="725" y="297" text-anchor="middle" font-size="9" fill="#7a6e5e">吞噬营养</text>
+  <!-- row 5: 代表生物 -->
+  <rect x="20" y="312" width="100" height="48" fill="#fff8e7" stroke="#d6ccc0"/>
+  <text x="70" y="341" text-anchor="middle" font-size="11" font-weight="700" fill="#2c2416">代表</text>
+  <text x="195" y="334" text-anchor="middle" font-size="10" fill="#2c2416">大肠杆菌</text>
+  <text x="195" y="350" text-anchor="middle" font-size="9" fill="#7a6e5e">蓝藻</text>
+  <text x="335" y="334" text-anchor="middle" font-size="10" fill="#2c2416">草履虫</text>
+  <text x="335" y="350" text-anchor="middle" font-size="9" fill="#7a6e5e">衣藻/变形虫</text>
+  <text x="472" y="334" text-anchor="middle" font-size="10" fill="#2c2416">酵母菌</text>
+  <text x="472" y="350" text-anchor="middle" font-size="9" fill="#7a6e5e">蘑菇/霉菌</text>
+  <text x="602" y="334" text-anchor="middle" font-size="10" fill="#2c2416">被子植物</text>
+  <text x="602" y="350" text-anchor="middle" font-size="9" fill="#7a6e5e">苔藓/蕨类</text>
+  <text x="725" y="334" text-anchor="middle" font-size="10" fill="#2c2416">人</text>
+  <text x="725" y="350" text-anchor="middle" font-size="9" fill="#7a6e5e">昆虫/鱼</text>
+  <!-- row 6: 运动能力 -->
+  <rect x="20" y="365" width="100" height="40" fill="#fff8e7" stroke="#d6ccc0"/>
+  <text x="70" y="390" text-anchor="middle" font-size="11" font-weight="700" fill="#2c2416">运动</text>
+  <text x="195" y="390" text-anchor="middle" font-size="10" fill="#2c2416">有/无（鞭毛）</text>
+  <text x="335" y="390" text-anchor="middle" font-size="10" fill="#2c2416">有/无</text>
+  <text x="472" y="390" text-anchor="middle" font-size="10" fill="#c0392b" font-weight="700">一般不运动</text>
+  <text x="602" y="390" text-anchor="middle" font-size="10" fill="#c0392b" font-weight="700">不运动</text>
+  <text x="725" y="390" text-anchor="middle" font-size="10" fill="#2e7d32" font-weight="700">能运动</text>
+  <!-- bottom note -->
+  <rect x="20" y="415" width="760" height="18" fill="#fff8e7" stroke="#e8c84a" rx="4"/>
+  <text x="400" y="428" text-anchor="middle" font-size="10" fill="#c0392b" font-weight="700">奥赛口诀：细胞壁（肽聚糖→无→几丁质→纤维素→无）；营养（自/异→自/异→吸收→光合→吞噬）</text>
+</svg>
+<figcaption>图 14-4-3　五界特征对比表：原核生物界（原核/肽聚糖）、原生生物界（真核/多样）、真菌界（几丁质/吸收）、植物界（纤维素/光合）、动物界（无壁/吞噬）</figcaption>
+</div>
+
+<!-- ====== 六、六界系统 ====== -->
+<div class="topic-header">
+  <h3>六、六界系统（Six-kingdom system）</h3>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>1979 年，我国生物学家 <span class="u-double">陈世骧（Chén Shìxiāng, 1905–1988）</span> 提出了一个 <span class="u-double">六界系统</span>，把生物界分为 <span class="u-double">3 个总界</span>：</p>
+    <ul>
+      <li><span class="key-point">① 非细胞生物总界</span>：<span class="u-double">病毒界（Vira）</span></li>
+      <li><span class="key-point">② 原核生物总界</span>：<span class="u-double">细菌界 + 蓝藻界</span> 两界</li>
+      <li><span class="key-point">③ 真核生物总界</span>：<span class="u-double">植物界 + 真菌界 + 动物界</span> 三界</li>
+    </ul>
+    <p>陈世骧的关键改变：</p>
+    <ul>
+      <li>把 <span class="u">病毒</span> 独立成界（病毒不具细胞结构，独立于原核-真核二分）。</li>
+      <li>把 <span class="u">原核生物</span> 拆为细菌界和蓝藻界（两者生理、生化差异显著）。</li>
+      <li>删除了 Whittaker 的原生生物界（认为这是异质的"杂物间"）。</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    <strong>陈世骧 1979</strong> 六界系统，<em>中国本土科学家</em> 的贡献。病毒独立成界是最大特色。
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>另一种六界系统：</p>
+    <p>还有人主张在 Whittaker 的五界系统之下，加一个 <span class="u-double">病毒界</span>，构成另一个六界系统。但一般认为 <span class="u">病毒不是最原始的生命形态</span>（可能是某些生物基因片段的"逃逸者"），因此这种六界系统未受到重视。</p>
+  </div>
+  <div class="annotation">
+    病毒起源 <em>三大假说</em>：① 退化假说（来自细菌）；② 逃逸假说（来自细胞基因组）；③ 共进化假说（与细胞共同起源）。
+  </div>
+</div>
+
+<div class="table-wrap">
+<table>
+  <thead>
+    <tr>
+      <th colspan="2">五界系统（Whittaker 1969）</th>
+      <th colspan="2">六界系统（陈世骧 1979）</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="2">Ⅰ. 原核阶段</td>
+      <td rowspan="2">1. 原核生物界</td>
+      <td>Ⅰ. 非细胞生物</td>
+      <td>1. 病毒界</td>
+    </tr>
+    <tr>
+      <td rowspan="2">Ⅱ. 原核生物</td>
+      <td>2. 细菌界</td>
+    </tr>
+    <tr>
+      <td>Ⅱ. 真核单细胞阶段</td>
+      <td>2. 原生生物界</td>
+      <td>3. 蓝藻界</td>
+    </tr>
+    <tr>
+      <td rowspan="3">Ⅲ. 真核多细胞阶段</td>
+      <td>3. 植物界</td>
+      <td rowspan="3">Ⅲ. 真核生物</td>
+      <td>4. 植物界</td>
+    </tr>
+    <tr>
+      <td>4. 真菌界</td>
+      <td>5. 真菌界</td>
+    </tr>
+    <tr>
+      <td>5. 动物界</td>
+      <td>6. 动物界</td>
+    </tr>
+  </tbody>
+</table>
+<figcaption>表 6-4-2　生物的界级分类（引自陈世骧）</figcaption>
+</div>
+
+<!-- ====== 七、八界系统 ====== -->
+<div class="topic-header">
+  <h3>七、八界系统（Eight-kingdom system）</h3>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>1989 年，英国生物学家 <span class="u-double">卡瓦里—史密斯（Cavalier-Smith, 1942–）</span> 提出了 <span class="u-double">八界系统</span>：</p>
+    <ul>
+      <li><span class="key-point">1. 古细菌界（Archaebacteria）</span></li>
+      <li><span class="key-point">2. 真细菌界（Eubacteria）</span></li>
+      <li><span class="key-point">3. 古真核生物界（Archezoa）</span>：无典型线粒体的原始真核生物（已部分被否定）</li>
+      <li><span class="key-point">4. 原生动物界（Protozoa）</span></li>
+      <li><span class="key-point">5. 藻界（Chromista）</span>：含叶绿体内质网膜的藻类（如褐藻、硅藻、甲藻）</li>
+      <li><span class="key-point">6. 植物界（Plantae）</span></li>
+      <li><span class="key-point">7. 真菌界（Fungi）</span></li>
+      <li><span class="key-point">8. 动物界（Animalia）</span></li>
+    </ul>
+    <p>Cavalier-Smith 的关键贡献：</p>
+    <ul>
+      <li>将 <span class="u">原核生物</span> 拆为古细菌界和真细菌界（基于 16S rRNA 系统发育）。</li>
+      <li>将 <span class="u">藻类</span> 拆为藻界（Chromista）+ 植物界（Plantae）——含叶绿体内质网膜的藻类归入 Chromista。</li>
+      <li>将 <span class="u">原生生物</span> 拆为原生动物界 + 藻界 + 古真核生物界。</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    <strong>Cavalier-Smith 1989</strong> 八界系统，分子系统学时代的产物，<em>更细致但也更复杂</em>。
+  </div>
+</div>
+
+<!-- ====== 八、生物分界的发展史脉络 ====== -->
+<div class="topic-header">
+  <h3>八、生物分界的发展史脉络</h3>
+</div>
+
+<div class="timeline">
+  <div class="timeline-item left">
+    <div class="tl-year">1753 年</div>
+    <div class="tl-title">林奈 · 二界系统</div>
+    <div class="tl-content">植物界 + 动物界。最早的正式分界方案。</div>
+  </div>
+  <div class="timeline-item right">
+    <div class="tl-year">1866 年</div>
+    <div class="tl-title">海克尔 · 三界系统</div>
+    <div class="tl-content">增加原生生物界，把单细胞生物归入此界。</div>
+  </div>
+  <div class="timeline-item left">
+    <div class="tl-year">1938 年</div>
+    <div class="tl-title">科帕兰 · 四界系统</div>
+    <div class="tl-content">原核生物独立成界，区分原核与真核。</div>
+  </div>
+  <div class="timeline-item right">
+    <div class="tl-year">1969 年</div>
+    <div class="tl-title">Whittaker · 五界系统</div>
+    <div class="tl-content">原核、原生、真菌、植物、动物五界。最经典、最常用。</div>
+  </div>
+  <div class="timeline-item left">
+    <div class="tl-year">1977 年</div>
+    <div class="tl-title">Woese · 三域系统</div>
+    <div class="tl-content">基于 16S rRNA，把原核拆为古细菌 + 真细菌；提出 Bacteria / Archaea / Eukarya 三域（domain）。</div>
+  </div>
+  <div class="timeline-item right">
+    <div class="tl-year">1979 年</div>
+    <div class="tl-title">陈世骧 · 六界系统</div>
+    <div class="tl-content">病毒独立成界，原核拆为细菌和蓝藻两界，删除原生生物界。</div>
+  </div>
+  <div class="timeline-item left">
+    <div class="tl-year">1989 年</div>
+    <div class="tl-title">Cavalier-Smith · 八界系统</div>
+    <div class="tl-content">原核拆为古细菌 + 真细菌，原生生物拆为原生动物 + 藻类 + 古真核生物。</div>
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p><span class="u-double">Woese 三域系统（1977）</span> 是另一个重要分界框架，常与五界系统并列：</p>
+    <ul>
+      <li><span class="key-point">细菌域（Bacteria）</span>：包括几乎所有原核生物。</li>
+      <li><span class="key-point">古菌域（Archaea）</span>：极端环境古细菌（产甲烷菌、嗜盐菌、嗜热菌）。</li>
+      <li><span class="key-point">真核域（Eukarya）</span>：原生生物、真菌、植物、动物。</li>
+    </ul>
+    <p>三域系统基于 <span class="u">rRNA 序列</span>（尤其是 16S rRNA），揭示古菌与真核的亲缘关系比古菌与细菌更近（这是分子系统学最重要的发现之一）。</p>
+  </div>
+  <div class="annotation">
+    <strong>三域 vs 五界</strong>：三域 = 1（细菌）+ 1（古菌）+ 1（真核 = 五界的 4 界合并）。两者并非冲突，而是不同层次的分类。
+  </div>
+</div>
+
+<!-- ====== 九、各界物种大致比例（扇形图） ====== -->
+<div class="topic-header">
+  <h3>九、各界物种大致比例（扇形图）</h3>
+</div>
+
+<div class="note-block">
+  <div class="note-content">
+    <p>依据 Whittaker 估计，五界系统各界的现存物种数大致比例为（图 6-4-1）：</p>
+    <ul>
+      <li><span class="key-point">动物界</span>：最大，约占 60% 以上（约 150 万已描述种，估计总数 700–1000 万）</li>
+      <li><span class="key-point">植物界</span>：约 25% 以上（约 30 万已描述种）</li>
+      <li><span class="key-point">真菌界</span>：约 8% （约 10 万已描述种，估计 150 万）</li>
+      <li><span class="key-point">原生生物界</span>：约 5% （约 5 万已描述种，估计 20 万）</li>
+      <li><span class="key-point">原核生物界</span>：最小，约 1% （约 1 万已描述种，估计 100 万–10 亿）</li>
+    </ul>
+  </div>
+  <div class="annotation">
+    <strong>原核生物</strong> 实际物种数远多于已描述的 1 万种，分子方法（宏基因组）显示每克土壤可能含数千种原核生物。
+  </div>
+</div>
+
+<div class="diagram">
+<svg viewBox="0 0 800 440" style="width:100%;max-width:700px;margin:1rem auto;display:block;font-family:sans-serif;">
+  <rect x="0" y="0" width="800" height="440" fill="#fdfbf7" stroke="#d6ccc0" rx="8"/>
+  <text x="400" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="#2c2416">图 14-4-4　病毒分类地位讨论</text>
+  <!-- virus structure (simplified) -->
+  <circle cx="120" cy="110" r="32" fill="none" stroke="#c0392b" stroke-width="2"/>
+  <polygon points="120,78 112,88 128,88" fill="#c0392b"/>
+  <line x1="90" y1="100" x2="150" y2="100" stroke="#8b4513" stroke-width="1" stroke-dasharray="3,2"/>
+  <line x1="90" y1="120" x2="150" y2="120" stroke="#8b4513" stroke-width="1" stroke-dasharray="3,2"/>
+  <line x1="100" y1="85" x2="100" y2="135" stroke="#8b4513" stroke-width="1" stroke-dasharray="3,2"/>
+  <line x1="140" y1="85" x2="140" y2="135" stroke="#8b4513" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="120" y="160" text-anchor="middle" font-size="10" fill="#c0392b">病毒颗粒</text>
+  <text x="120" y="175" text-anchor="middle" font-size="9" fill="#7a6e5e">蛋白质壳+核酸</text>
+  <!-- left: 病毒特征 -->
+  <rect x="200" y="55" width="270" height="140" fill="#fff8e7" stroke="#c0392b" stroke-width="1.5" rx="6"/>
+  <text x="335" y="78" text-anchor="middle" font-size="13" font-weight="700" fill="#c0392b">病毒特征</text>
+  <text x="215" y="100" font-size="10" fill="#8b4513">• 无细胞结构（非细胞生物）</text>
+  <text x="215" y="118" font-size="10" fill="#8b4513">• 仅含一种核酸（DNA 或 RNA）</text>
+  <text x="215" y="136" font-size="10" fill="#8b4513">• 无核糖体、无代谢酶系统</text>
+  <text x="215" y="154" font-size="10" fill="#8b4513">• 不能独立代谢，必须寄生</text>
+  <text x="215" y="172" font-size="10" fill="#8b4513">• 无细胞分裂，以复制方式增殖</text>
+  <text x="215" y="190" font-size="10" fill="#c0392b" font-weight="700">→ 不符合"细胞生物"定义</text>
+  <!-- right: 分类地位 -->
+  <rect x="490" y="55" width="290" height="140" fill="#fff8e7" stroke="#8b4513" stroke-width="1.5" rx="6"/>
+  <text x="635" y="78" text-anchor="middle" font-size="13" font-weight="700" fill="#8b4513">为何不归入五界/三域？</text>
+  <text x="505" y="100" font-size="10" fill="#2c2416">五界系统：基于细胞结构分界</text>
+  <text x="505" y="116" font-size="10" fill="#c0392b">→ 病毒无细胞结构，不适用</text>
+  <text x="505" y="136" font-size="10" fill="#2c2416">三域系统：基于 16S rRNA</text>
+  <text x="505" y="152" font-size="10" fill="#c0392b">→ 病毒无核糖体 RNA，不适用</text>
+  <text x="505" y="172" font-size="10" fill="#2c2416">结论：病毒独立于细胞分类系统</text>
+  <text x="505" y="190" font-size="10" fill="#8b4513" font-weight="700">→ ICTV 单独分类系统</text>
+  <!-- bottom: 病毒分类 -->
+  <rect x="20" y="210" width="760" height="120" fill="#fff8e7" stroke="#e8c84a" rx="4"/>
+  <text x="400" y="232" text-anchor="middle" font-size="13" font-weight="700" fill="#2c2416">ICTV 病毒分类系统（独立于五界/三域）</text>
+  <text x="60" y="255" font-size="10" fill="#8b4513">分类依据：基因组类型（DNA/RNA，单链/双链，正链/负链）+ 形态结构 + 宿主范围</text>
+  <text x="60" y="275" font-size="10" fill="#2c2416">分类等级：域 → 界 → 门 → 纲 → 目 → 科 → 属 → 种（2020 年后增设域级：核糖病毒域 Riboviria）</text>
+  <text x="60" y="295" font-size="10" fill="#2c2416">例：烟草花叶病毒 → 光滑病毒科 → 马特诺病毒目 → 囊泡病毒纲 → </text>
+  <text x="220" y="295" font-size="10" fill="#c0392b">核糖病毒域</text>
+  <text x="60" y="315" font-size="10" fill="#8b4513">常见科：噬菌体科、痘病毒科、流感病毒科（正黏）、HIV（逆转录病毒科）</text>
+  <!-- debate -->
+  <rect x="20" y="345" width="760" height="80" fill="#fdecea" stroke="#c0392b" rx="4"/>
+  <text x="400" y="367" text-anchor="middle" font-size="12" font-weight="700" fill="#c0392b">争议：病毒是否算"生物"？</text>
+  <text x="400" y="388" text-anchor="middle" font-size="10" fill="#2c2416">支持：能复制遗传信息、有变异和进化、有宿主特异性</text>
+  <text x="400" y="406" text-anchor="middle" font-size="10" fill="#2c2416">反对：无细胞结构、无独立代谢、离开宿主无生命活动（"生命边缘实体"）</text>
+  <text x="400" y="420" text-anchor="middle" font-size="10" fill="#c0392b" font-weight="700">奥赛观点：病毒不属于五界/三域任何分类单元，是特殊的生物实体</text>
+</svg>
+<figcaption>图 14-4-4　病毒分类地位讨论：病毒因无细胞结构、无核糖体而不归入五界或三域系统，由 ICTV 独立分类（核糖病毒域 Riboviria）</figcaption>
+</div>
+
+<!-- ====== 总结 ====== -->
+<div class="summary-box">
+  <h4>本节核心要点</h4>
+  <ul>
+    <li><strong>二界系统</strong>（林奈 1753）：植物界 + 动物界。</li>
+    <li><strong>三界系统</strong>（海克尔 1866）：植物界 + 动物界 + 原生生物界。</li>
+    <li><strong>四界系统</strong>（科帕兰 1938）：原核生物界 + 原始有核界 + 后生植物界 + 后生动物界。首次把原核独立成界。</li>
+    <li><strong>五界系统</strong>（Whittaker 1969）：原核、原生、真菌、植物、动物。<em>最经典、最常用</em>。</li>
+    <li><strong>六界系统</strong>（陈世骧 1979）：3 总界 = 非细胞（病毒）+ 原核（细菌、蓝藻）+ 真核（植物、真菌、动物）。</li>
+    <li><strong>八界系统</strong>（Cavalier-Smith 1989）：古细菌、真细菌、古真核生物、原生动物、藻界、植物界、真菌界、动物界。</li>
+    <li><strong>三域系统</strong>（Woese 1977）：细菌 + 古菌 + 真核，分子系统学的现代分界。</li>
+  </ul>
+</div>
+
+</div>
+
+<footer><a href="index.html" style="color:var(--accent);text-decoration:none;margin-right:1rem;">← 返回目录</a>
+  第十四章 生物系统学基础 · 第四节 生物的分界 · 参考高中生物奥赛讲义 · 整理日期 2026年7月6日
+</footer>
+
+</body>
+</html>

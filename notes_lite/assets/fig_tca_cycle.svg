@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 720" style="font-family: sans-serif;">
+  <rect x="0" y="0" width="860" height="720" fill="#fdfbf7"/>
+  <text x="430" y="28" text-anchor="middle" font-size="18" font-weight="700" fill="#2c2416">三羧酸循环(TCA/柠檬酸循环) 8步反应</text>
+  <text x="430" y="48" text-anchor="middle" font-size="11" fill="#8b4513">场所:线粒体基质 | 每循环1个乙酰CoA: 3NADH + 1FADH&#8322; + 1GTP + 2CO&#8322;</text>
+
+  <defs>
+    <marker id="ar" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#2c2416"/></marker>
+    <marker id="arR" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#c0392b"/></marker>
+    <marker id="arG" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#4a7c3a"/></marker>
+  </defs>
+
+  <!-- 中心圆 -->
+  <circle cx="430" cy="400" r="95" fill="#fff8e7" stroke="#d6ccc0" stroke-dasharray="4,3"/>
+  <text x="430" y="385" text-anchor="middle" font-size="13" font-weight="700" fill="#c0392b">TCA循环</text>
+  <text x="430" y="405" text-anchor="middle" font-size="10" fill="#8b4513">Krebs循环</text>
+  <text x="430" y="425" text-anchor="middle" font-size="9" fill="#7a6e5e">1937年Hans Krebs</text>
+
+  <!-- 8个中间产物(顺时针,顶部为OAA) -->
+  <!-- OAA (4C) 顶部 -->
+  <rect x="370" y="190" width="120" height="32" rx="4" fill="#c0392b" opacity="0.85"/>
+  <text x="430" y="210" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">草酰乙酸 OAA(4C)</text>
+  <!-- 乙酰CoA入口 -->
+  <rect x="540" y="120" width="130" height="30" rx="4" fill="#4a7c3a" opacity="0.85"/>
+  <text x="605" y="140" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">乙酰CoA(2C)</text>
+  <line x1="555" y1="152" x2="470" y2="195" stroke="#4a7c3a" stroke-width="2" marker-end="url(#arG)"/>
+  <text x="520" y="170" font-size="9" fill="#4a7c3a">+CoA-SH释出</text>
+
+  <!-- ①柠檬酸合酶 OAA→Citrate -->
+  <line x1="490" y1="222" x2="555" y2="248" stroke="#c0392b" stroke-width="2" marker-end="url(#arR)"/>
+  <text x="525" y="248" font-size="9" fill="#c0392b" font-weight="700">①柠檬酸合酶</text>
+  <!-- Citrate(6C) 右上 -->
+  <rect x="500" y="258" width="120" height="30" rx="4" fill="#fff3cd" stroke="#8b4513"/>
+  <text x="560" y="278" text-anchor="middle" font-size="12" font-weight="600" fill="#2c2416">柠檬酸 Citrate(6C)</text>
+
+  <!-- ②乌头酸酶 -->
+  <line x1="595" y1="290" x2="615" y2="328" stroke="#2c2416" stroke-width="1.5" marker-end="url(#ar)"/>
+  <text x="618" y="312" font-size="9" fill="#2c2416">②乌头酸酶</text>
+  <!-- Isocitrate(6C) 右 -->
+  <rect x="555" y="334" width="120" height="30" rx="4" fill="#fff3cd" stroke="#8b4513"/>
+  <text x="615" y="354" text-anchor="middle" font-size="12" font-weight="600" fill="#2c2416">异柠檬酸(6C)</text>
+
+  <!-- ③异柠檬酸脱氢酶 ★限速 (脱羧+NADH) -->
+  <line x1="600" y1="368" x2="575" y2="425" stroke="#c0392b" stroke-width="2.5" marker-end="url(#arR)"/>
+  <text x="610" y="400" font-size="9" fill="#c0392b" font-weight="700">③异柠檬酸脱氢酶★</text>
+  <text x="610" y="412" font-size="9" fill="#7a6e5e">NAD&#8314;→NADH, CO&#8322;</text>
+  <text x="660" y="392" font-size="10" fill="#4a7c3a" font-weight="700">↑NADH</text>
+  <text x="660" y="406" font-size="10" fill="#8b4513" font-weight="700">↑CO&#8322;</text>
+  <!-- α-KG(5C) 右下 -->
+  <rect x="490" y="430" width="140" height="30" rx="4" fill="#fff3cd" stroke="#8b4513"/>
+  <text x="560" y="450" text-anchor="middle" font-size="11" font-weight="600" fill="#2c2416">α-酮戊二酸 α-KG(5C)</text>
+
+  <!-- ④α-KG脱氢酶复合体 (脱羧+NADH) -->
+  <line x1="495" y1="464" x2="465" y2="498" stroke="#c0392b" stroke-width="2" marker-end="url(#arR)"/>
+  <text x="375" y="478" font-size="9" fill="#c0392b" font-weight="700">④α-KG脱氢酶</text>
+  <text x="375" y="490" font-size="9" fill="#7a6e5e">NAD&#8314;→NADH,CO&#8322;,CoA</text>
+  <text x="320" y="478" font-size="10" fill="#4a7c3a" font-weight="700">↑NADH</text>
+  <text x="320" y="492" font-size="10" fill="#8b4513" font-weight="700">↑CO&#8322;</text>
+  <!-- Succinyl-CoA(4C) 底部 -->
+  <rect x="355" y="505" width="150" height="30" rx="4" fill="#fff3cd" stroke="#8b4513"/>
+  <text x="430" y="525" text-anchor="middle" font-size="11" font-weight="600" fill="#2c2416">琥珀酰CoA(4C)</text>
+
+  <!-- ⑤琥珀酰CoA合成酶 (底物水平磷酸化 GTP) -->
+  <line x1="355" y1="528" x2="295" y2="498" stroke="#c0392b" stroke-width="2" marker-end="url(#arR)"/>
+  <text x="225" y="528" font-size="9" fill="#c0392b" font-weight="700">⑤琥珀酰CoA合成酶</text>
+  <text x="225" y="540" font-size="9" fill="#7a6e5e">底物水平,GDP→GTP</text>
+  <text x="180" y="500" font-size="10" fill="#c0392b" font-weight="700">↑GTP</text>
+  <!-- Succinate(4C) 左下 -->
+  <rect x="235" y="455" width="120" height="30" rx="4" fill="#fff3cd" stroke="#8b4513"/>
+  <text x="295" y="475" text-anchor="middle" font-size="12" font-weight="600" fill="#2c2416">琥珀酸(4C)</text>
+
+  <!-- ⑥琥珀酸脱氢酶(=复合体Ⅱ) FADH2 -->
+  <line x1="235" y1="445" x2="205" y2="410" stroke="#4a7c3a" stroke-width="2" marker-end="url(#arG)"/>
+  <text x="120" y="430" font-size="9" fill="#4a7c3a" font-weight="700">⑥琥珀酸脱氢酶</text>
+  <text x="120" y="442" font-size="9" fill="#7a6e5e">(=ETC复合体Ⅱ)</text>
+  <text x="120" y="454" font-size="9" fill="#7a6e5e">FAD→FADH&#8322;</text>
+  <text x="135" y="400" font-size="10" fill="#8b4513" font-weight="700">↑FADH&#8322;</text>
+  <!-- Fumarate(4C) 左 -->
+  <rect x="160" y="370" width="110" height="30" rx="4" fill="#fff3cd" stroke="#8b4513"/>
+  <text x="215" y="390" text-anchor="middle" font-size="12" font-weight="600" fill="#2c2416">延胡索酸(4C)</text>
+
+  <!-- ⑦延胡索酸酶(加水) -->
+  <line x1="225" y1="368" x2="265" y2="328" stroke="#2c2416" stroke-width="1.5" marker-end="url(#ar)"/>
+  <text x="120" y="345" font-size="9" fill="#2c2416">⑦延胡索酸酶(+H&#8322;O)</text>
+  <!-- Malate(4C) 左上 -->
+  <rect x="225" y="298" width="110" height="30" rx="4" fill="#fff3cd" stroke="#8b4513"/>
+  <text x="280" y="318" text-anchor="middle" font-size="12" font-weight="600" fill="#2c2416">苹果酸(4C)</text>
+
+  <!-- ⑧苹果酸脱氢酶 NADH → 回到OAA -->
+  <line x1="335" y1="300" x2="375" y2="240" stroke="#4a7c3a" stroke-width="2" marker-end="url(#arG)"/>
+  <text x="250" y="265" font-size="9" fill="#4a7c3a" font-weight="700">⑧苹果酸脱氢酶</text>
+  <text x="250" y="277" font-size="9" fill="#7a6e5e">NAD&#8314;→NADH</text>
+  <text x="345" y="265" font-size="10" fill="#4a7c3a" font-weight="700">↑NADH</text>
+
+  <!-- 底部总结 -->
+  <rect x="40" y="580" width="780" height="125" rx="6" fill="#fdf2f2" stroke="#c0392b" stroke-width="1.5"/>
+  <text x="55" y="604" font-size="13" font-weight="700" fill="#c0392b">每循环1个乙酰CoA(2C)的产物总结</text>
+  <text x="55" y="628" font-size="11" fill="#2c2416">脱羧(释放CO&#8322;): 步骤③④各1个 → 共 <b>2 CO&#8322;</b> (即乙酰CoA的2个碳以CO&#8322;形式放出)</text>
+  <text x="55" y="650" font-size="11" fill="#2c2416">还原当量: 步骤③④⑧各1 NADH + 步骤⑥1 FADH&#8322; → 共 <b>3 NADH + 1 FADH&#8322;</b></text>
+  <text x="55" y="672" font-size="11" fill="#2c2416">底物水平磷酸化: 步骤⑤ → <b>1 GTP(=1 ATP)</b></text>
+  <text x="55" y="694" font-size="11" font-weight="700" fill="#c0392b">关键调控: ③异柠檬酸脱氢酶(主要限速酶)、④α-KG脱氢酶、①柠檬酸合酶 | ⑥琥珀酸脱氢酶是TCA与ETC的唯一交汇点</text>
+</svg>

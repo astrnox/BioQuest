@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>生物学史 - BioQuest</title>
+  <meta name="description" content="从林奈到 AlphaFold，回顾改变生物学的关键时刻。BioQuest 生物学史时间轴以滑动方式展现生命科学的重大里程碑。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>@font-face{font-family:'LXGW WenKai';src:url('fonts/lxgw-wenkai.ttf?v=1.522') format('truetype');font-weight:100 900;font-display:swap;}</style>
+  <link rel="stylesheet" href="css/globals.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/home.css">
+  <style>
+    .biology-history-page {
+      min-height: 100vh;
+      padding-top: calc(var(--header-height, 64px));
+      background:
+        radial-gradient(ellipse at 15% 20%, rgba(90, 125, 92, 0.08) 0%, transparent 45%),
+        radial-gradient(ellipse at 85% 80%, rgba(232, 168, 48, 0.06) 0%, transparent 45%),
+        var(--bg-primary, #faf7f2);
+    }
+    .biology-history-page .biology-history-section {
+      margin: 0;
+      padding: 64px 0 120px;
+    }
+    .bio-history-toc {
+      position: sticky;
+      top: calc(var(--header-height, 64px));
+      z-index: 10;
+      background: rgba(250, 247, 242, 0.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border-light, rgba(0,0,0,0.06));
+      padding: 12px 0;
+      margin: 0 0 32px;
+    }
+    .bio-history-toc-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .bio-history-toc-label {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-muted, #888);
+      margin-right: 6px;
+    }
+    .bio-history-toc a {
+      display: inline-block;
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      color: var(--text-secondary, #555);
+      background: rgba(90, 125, 92, 0.08);
+      text-decoration: none;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+    .bio-history-toc a:hover,
+    .bio-history-toc a.active {
+      background: var(--color-sage, #5a7d5c);
+      color: #fff;
+    }
+    html[data-theme="dark"] .bio-history-toc {
+      background: rgba(26, 28, 24, 0.92);
+      border-bottom-color: rgba(255,255,255,0.08);
+    }
+    @media (max-width: 768px) {
+      .bio-history-toc-inner {
+        padding: 0 16px;
+        gap: 6px;
+      }
+      .bio-history-toc a {
+        padding: 5px 10px;
+        font-size: 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <a href="index.html" class="header-brand">
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+        <circle cx="14" cy="14" r="12" stroke="#e8a830" stroke-width="2"/>
+        <circle cx="14" cy="14" r="4" fill="#e8a830"/>
+      </svg>
+      BioQuest
+    </a>
+    <div class="header-right">
+      <button class="hamburger" id="hamburgerBtn" aria-label="菜单">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-nav-overlay" id="mobileOverlay"></div>
+  <nav class="mobile-nav" id="mobileNav">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid var(--border-light);">
+      <div style="display:flex;align-items:center;gap:10px;">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+          <circle cx="14" cy="14" r="12" stroke="#e8a830" stroke-width="2"/>
+          <circle cx="14" cy="14" r="4" fill="#e8a830"/>
+          <path d="M14 2v4M14 22v4M2 14h4M22 14h4" stroke="#5a7d5c" stroke-width="1.5"/>
+        </svg>
+        <span style="font-weight:700;font-size:1.1rem;color:var(--color-deep);">BioQuest</span>
+      </div>
+      <button id="mobileNavClose" style="background:none;border:none;font-size:22px;cursor:pointer;color:var(--text-muted);padding:4px 8px;">✕</button>
+    </div>
+    <div class="mobile-nav-scroll">
+      <a href="index.html" data-route="/">首页</a>
+      <a href="index.html#/practice" data-route="/practice" class="nav-highlight">练习</a>
+      <a href="index.html#/exam" data-route="/exam" class="nav-highlight">模考</a>
+      <a href="study.html">学习</a>
+      <a href="biology-history.html" class="active">生物学史</a>
+      <a href="cards.html">卡片</a>
+      <a href="quiz.html">试题</a>
+      <a href="resources.html">资源</a>
+      <a href="index.html#/knowledge-graph" data-route="/knowledge-graph">图谱</a>
+      <a href="index.html#/diagnosis" data-route="/diagnosis">诊断</a>
+      <a href="index.html#/pomodoro" data-route="/pomodoro">专注</a>
+      <a href="index.html#/habits" data-route="/habits">习惯</a>
+      <a href="index.html#/review" data-route="/review">复习</a>
+      <a href="index.html#/bounties" data-route="/bounties">悬赏</a>
+      <a href="index.html#/community" data-route="/community">社区</a>
+      <a href="index.html#/analytics" data-route="/analytics">分析</a>
+      <a href="index.html#/user" data-route="/user">我的</a>
+      <div class="theme-toggle-row">
+        <span>主题模式</span>
+        <button class="theme-toggle theme-toggle--mobile" id="themeToggleMobile" aria-label="切换主题">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;">
+            <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="biology-history-page">
+    <section class="biology-history-section" id="biologyHistorySection" data-section="biology-history" aria-label="生物学史时间轴">
+      <div class="biology-history-header">
+        <div class="biology-history-label">TIMELINE OF LIFE SCIENCE</div>
+        <h2 class="biology-history-title-main">改变生物学的瞬间</h2>
+        <p class="biology-history-subtitle">从林奈给万物起名，到 AI 预测蛋白质结构。100 个关键节点，覆盖陈阅增《普通生物学》核心领域。</p>
+      </div>
+      <nav class="bio-history-toc" id="bioHistoryToc" aria-label="生物学史分类导航">
+        <div class="bio-history-toc-inner" id="bioHistoryTocInner">
+          <span class="bio-history-toc-label">快速跳转：</span>
+        </div>
+      </nav>
+      <div class="biology-history-vertical" id="biologyHistoryVertical">
+          <!-- js/biology-history.js 会在这里渲染竖向时间轴 -->
+        </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-brand">BioQuest — 生物竞赛学习平台</div>
+      <div class="footer-links">
+        <a href="study.html">学习模块</a>
+        <a href="cards.html">知识卡片</a>
+        <a href="quiz.html">模拟试题</a>
+        <a href="biology-history.html">生物学史</a>
+        <a href="resources.html">学习资源</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/utils.js?v=20260806a"></script>
+  <script src="js/biology-history.js?v=20260806a"></script>
+  <script>
+    (function() {
+      var section = document.getElementById('biologyHistorySection');
+      if (section && typeof window.initBiologyTimeline === 'function') {
+        window.initBiologyTimeline(section);
+      }
+    })();
+
+    // 汉堡菜单
+    (function() {
+      var btn = document.getElementById('hamburgerBtn');
+      var nav = document.getElementById('mobileNav');
+      var overlay = document.getElementById('mobileOverlay');
+      var closeBtn = document.getElementById('mobileNavClose');
+      function toggle() {
+        nav.classList.toggle('active');
+        overlay.classList.toggle('active');
+        btn.classList.toggle('active');
+      }
+      if (btn) btn.addEventListener('click', toggle);
+      if (overlay) overlay.addEventListener('click', toggle);
+      if (closeBtn) closeBtn.addEventListener('click', toggle);
+    })();
+  </script>
+</body>
+</html>
