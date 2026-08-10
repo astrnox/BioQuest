@@ -710,6 +710,10 @@
   <script src="js/vendor/pdf.min.js?v=20260723d" defer></script>
   <!-- v5.0 Tier1 集成模块 -->
   <script src="js/integrations/vendor-init.js?v=20260723d" defer></script>
+  <!-- OCR 多引擎抽象层：Vision → ONNX PaddleOCR → Tesseract → OCRad 四级降级；
+       photo-quiz.js / wrongbook.js / 社区发帖图片等模块均通过 window.OcrEngine 调用。
+       文件本身非常轻（仅调度与懒加载框架），真正的引擎 CDN 在使用时按需下载。 -->
+  <script src="js/integrations/ocr-engine.js?v=20260809a" defer></script>
   <script src="js/integrations/study-heatmap.js?v=20260723d" defer></script>
   <script src="js/integrations/analytics-charts.js?v=20260723d" defer></script>
   <script src="js/integrations/diagram-renderer.js?v=20260723d" defer></script>

@@ -410,8 +410,49 @@
       imgEl.src = imgData;
       imgEl.onload = function() { statusEl.textContent = '识别中...'; };
 
-      // ===== 策略 1：优先使用视觉多模态模型 OCR（准确率最高，支持斜体） =====
-      if (window.AiClient && typeof window.AiClient.visionRecognize === 'function' && window.AiClient.hasVisionSupport()) {
+      var COLOR_SUCCESS = 'var(--color-sage,#3a6b4a)';
+      var COLOR_WARN    = 'var(--color-amber,#c4956a)';
+      var COLOR_ERROR   = 'var(--color-error,#c0553a)';
+
+      var setStatus = function (txt, color) {
+        statusEl.textContent = txt;
+        statusEl.style.color = color || '';
+      };
+      var setProgress = function (p) { progressFill.style.width = p + '%'; };
+
+      // =====【新路径】OcrEngine 统一4级降级：Vision → PaddleOCR → Tesseract → OCRad =====
+      if (window.OcrEngine && typeof window.OcrEngine.recognize === 'function') {
+        window.OcrEngine.recognize(imgData, { minTextLength: 3 }, {
+          setText: function (t, kind) {
+            var c = '';
+            if (kind === 'success') c = COLOR_SUCCESS;
+            else if (kind === 'warn') c = COLOR_WARN;
+            else if (kind === 'error') c = COLOR_ERROR;
+            setStatus(t, c);
+            if (typeof showToast === 'function' && (kind === 'success' || kind === 'error')) {
+              // 只在"完成/最终失败"弹 toast，中间进度不刷屏
+              showToast(t.replace(/^\[L\d\/\d\]\s*(✓|✗)?\s*/, ''));
+            }
+          },
+          setProgress: setProgress
+        }, function (result) {
+          if (result && result.text) {
+            if (qEl) qEl.value = result.text;
+            try { sessionStorage.setItem('bioquest_ocr_last_engine', result.engine || ''); } catch (e) {}
+            return;
+          }
+          // OcrEngine 全失败 → 最终再兜底一次 _runTesseractOcr
+          console.warn('[wrongbook] OcrEngine 多级未命中，最后兜底原生 Tesseract');
+          setStatus('多级引擎未识别，最终兜底识别中...', COLOR_WARN);
+          _runTesseractOcr(imgData, imgEl, progressFill, statusEl, qEl);
+        });
+        return;
+      }
+
+      // =====【回退路径】OcrEngine 未就绪时走原有 Vision+Tesseract 两级逻辑 =====
+      console.warn('[wrongbook] OcrEngine 未就绪，走旧版 Vision+Tesseract 双级逻辑');
+      if (window.AiClient && typeof window.AiClient.visionRecognize === 'function' &&
+          (typeof window.AiClient.hasVisionSupport !== 'function' || window.AiClient.hasVisionSupport())) {
         progressFill.style.width = '30%';
         statusEl.textContent = '使用视觉模型识别中（准确率最高）...';
         if (typeof showToast === 'function') showToast('使用 AI 视觉模型识别中...');
@@ -423,18 +464,16 @@
             if (qEl) qEl.value = text || '';
             progressFill.style.width = '100%';
             statusEl.textContent = text ? '✓ AI 视觉识别完成，请校对后保存' : '✗ 未识别到文本，正在回退到本地 OCR...';
-            statusEl.style.color = text ? 'var(--color-sage,#3a6b4a)' : 'var(--color-amber,#c4956a)';
+            statusEl.style.color = text ? COLOR_SUCCESS : COLOR_WARN;
             if (text) {
               if (typeof showToast === 'function') showToast('AI 视觉识别完成，请校对后保存');
               return;
             }
-            // 视觉模型未返回文本，回退到 Tesseract
             _runTesseractOcr(imgData, imgEl, progressFill, statusEl, qEl);
           },
           onError: function(err) {
-            console.warn('[wrongbook] 视觉 OCR 失败，回退到 Tesseract:', err.message);
-            statusEl.textContent = '视觉 OCR 失败，正在回退到本地引擎...';
-            statusEl.style.color = 'var(--color-amber,#c4956a)';
+            console.warn('[wrongbook] 视觉 OCR 失败，回退到 Tesseract:', err && err.message);
+            setStatus('视觉 OCR 失败，正在回退到本地引擎...', COLOR_WARN);
             _runTesseractOcr(imgData, imgEl, progressFill, statusEl, qEl);
           }
         }).catch(function(err) {
@@ -442,7 +481,6 @@
           _runTesseractOcr(imgData, imgEl, progressFill, statusEl, qEl);
         });
       } else {
-        // ===== 策略 2：未配置 AI Key，使用 Tesseract + 图像预处理 =====
         if (typeof showToast === 'function') showToast('未配置 AI API Key，使用本地 OCR（建议在「我的 → 设置」配置 API Key 以获得更好效果）');
         _runTesseractOcr(imgData, imgEl, progressFill, statusEl, qEl);
       }

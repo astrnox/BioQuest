@@ -173,21 +173,60 @@
 
   // 拍照录题 OCR 主入口
   // imgData: dataURL；ui: { statusEl, progressFill, statusEl } 用于更新 UI
+  // 【最小侵入】优先走 OcrEngine（4级降级流水线），不可用时回退原有 Vision+Tesseract 两级
   function _ocrImage(imgData, ui, onDone) {
     var statusEl = ui.statusEl;
     var progressFill = ui.progressFill;
+    var COLOR_SUCCESS = 'var(--color-sage,#3a6b4a)';
+    var COLOR_WARN    = 'var(--color-amber,#c4956a)';
+    var COLOR_ERROR   = 'var(--color-error,#c0553a)';
+
     var setText = function(t, color) {
       if (statusEl) {
         statusEl.textContent = t;
-        if (color) statusEl.style.color = color;
+        statusEl.style.color = color || '';
       }
     };
     var setProgress = function(p) {
       if (progressFill) progressFill.style.width = p + '%';
     };
 
+    // ---------- 新路径：OcrEngine 统一4级降级（L1 Vision → L2 PaddleOCR → L3 Tesseract → L4 OCRad） ----------
+    if (window.OcrEngine && typeof window.OcrEngine.recognize === 'function') {
+      window.OcrEngine.recognize(imgData, {
+        // 生物题目常见长度：题干+选项通常超过10字，严格一点可避免无意义识别结果被误当"成功"
+        minTextLength: 3
+      }, {
+        setText: function (t, kind) {
+          var c = '';
+          if (kind === 'success') c = COLOR_SUCCESS;
+          else if (kind === 'warn') c = COLOR_WARN;
+          else if (kind === 'error') c = COLOR_ERROR;
+          setText(t, c);
+        },
+        setProgress: setProgress,
+        setEngine: function (engineName) {
+          // 可扩展：显示当前正在使用的引擎徽标
+          try { sessionStorage.setItem('bioquest_ocr_last_engine', engineName); } catch (e) {}
+        }
+      }, function (result) {
+        if (result && result.text) {
+          onDone(result.text, result.engine || 'ocr-engine');
+          return;
+        }
+        // OcrEngine 全失败（极端情况），再用原实现的 _ocrTesseract 最后兜底一次
+        console.warn('[photo-quiz] OcrEngine 全级未命中，最后兜底：原生 Tesseract');
+        setText('多级引擎未识别，最终兜底识别中...', COLOR_WARN);
+        _ocrTesseract(imgData, ui, onDone);
+      });
+      return;
+    }
+
+    // ---------- 回退路径：OcrEngine 未加载时走原有两级逻辑（Vision + Tesseract） ----------
+    console.warn('[photo-quiz] OcrEngine 未就绪，走旧版 Vision+Tesseract 双级逻辑');
     // 策略 1：优先使用视觉多模态 OCR（最佳准确率，支持斜体）
-    if (window.AiClient && typeof window.AiClient.visionRecognize === 'function' && window.AiClient.hasVisionSupport()) {
+    if (window.AiClient && typeof window.AiClient.visionRecognize === 'function' &&
+        (typeof window.AiClient.hasVisionSupport !== 'function' || window.AiClient.hasVisionSupport())) {
       setProgress(30);
       setText('使用 AI 视觉模型识别中（准确率最高，支持斜体）...');
 
@@ -197,18 +236,16 @@
           text = (text || '').trim();
           if (text) {
             setProgress(100);
-            setText('✓ AI 视觉识别完成，请校对');
-            setText('✓ AI 视觉识别完成，请校对', 'var(--color-sage,#3a6b4a)');
+            setText('✓ AI 视觉识别完成，请校对', COLOR_SUCCESS);
             onDone(text, 'vision');
             return;
           }
-          // 视觉未返回文本，回退 Tesseract
-          setText('AI 未识别到文本，回退本地 OCR...', 'var(--color-amber,#c4956a)');
+          setText('AI 未识别到文本，回退本地 OCR...', COLOR_WARN);
           _ocrTesseract(imgData, ui, onDone);
         },
         onError: function(err) {
-          console.warn('[photo-quiz] 视觉 OCR 失败，回退 Tesseract:', err.message);
-          setText('视觉 OCR 失败，回退本地 OCR...', 'var(--color-amber,#c4956a)');
+          console.warn('[photo-quiz] 视觉 OCR 失败，回退 Tesseract:', err && err.message);
+          setText('视觉 OCR 失败，回退本地 OCR...', COLOR_WARN);
           _ocrTesseract(imgData, ui, onDone);
         }
       }).catch(function(err) {
@@ -217,7 +254,7 @@
       });
     } else {
       // 策略 2：未配置 AI Key，使用 Tesseract
-      setText('未配置 AI Key，使用本地 OCR（建议在「我的 → 设置」配置 API Key 以获得更好效果）', 'var(--color-amber,#c4956a)');
+      setText('未配置 AI Key，使用本地 OCR（建议在「我的 → 设置」配置 API Key 以获得更好效果）', COLOR_WARN);
       _ocrTesseract(imgData, ui, onDone);
     }
   }
