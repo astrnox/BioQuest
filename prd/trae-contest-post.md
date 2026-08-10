@@ -73,7 +73,7 @@
 
 在线体验：[https://bio.dada.im](https://bio.dada.im)
 
-GitHub：[https://github.com/pinesis688/trae_bio](https://github.com/pinesis688/trae_bio)
+GitHub：[https://github.com/astrnox/BioQuest](https://github.com/astrnox/BioQuest)
 
 开源协议：**CC BY-NC-SA 4.0**（Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International）——个人学习、教学、非商业用途可以自由使用和修改，不能拿去卖钱；基于它改的版本必须用同样协议开源，并且注明原作者。希望有同学能基于这个框架做出化学版、物理版，教育资源这种东西越开放越好。
 
