@@ -5260,47 +5260,99 @@ window.showToast = showToast;
 })();
 
 // ============================================================
-// PRD §5-31：Service Worker 更新提示
+// PRD §5-31：Service Worker 更新提示（防挂起版）
+// ----------------------------------------------------------------
+// 修复：首次进入 navigator.serviceWorker.ready 可能永远 pending（新用户没有
+// controller 时），必须加超时安全网 + controllerchange 双保险，避免
+// 监听 updatefound 的回调永远注册不上导致用户感知"卡住/要刷新"。
 // ============================================================
 (function () {
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.ready.then(function (reg) {
-      reg.addEventListener('updatefound', function () {
-        var newWorker = reg.installing;
-        if (!newWorker) return;
-        newWorker.addEventListener('statechange', function () {
-          if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
-            // 新版本已安装，提示用户
-            var banner = document.createElement('div');
-            banner.id = 'sw-update-banner';
-            banner.style.cssText = [
-              'position:fixed',
-              'bottom:80px',
-              'left:50%',
-              'transform:translateX(-50%)',
-              'z-index:99999',
-              'background:rgba(26,58,42,0.95)',
-              'color:#fff',
-              'padding:12px 24px',
-              'border-radius:16px',
-              'font-size:0.9rem',
-              'box-shadow:0 4px 20px rgba(0,0,0,0.3)',
-              'border:1px solid rgba(58,140,92,0.3)',
-              'display:flex',
-              'align-items:center',
-              'gap:12px',
-              'max-width:90vw',
-              'animation:toastSlideUp 0.3s ease'
-            ].join(';');
-            banner.innerHTML = '<span>新版本可用</span>' +
-              '<button onclick="location.reload()" style="padding:6px 16px;border-radius:8px;border:none;background:#5a7d5c;color:#fff;cursor:pointer;font-size:0.85rem;font-weight:600;white-space:nowrap;">刷新</button>' +
-              '<button onclick="this.parentNode.remove()" style="padding:6px 10px;border-radius:8px;border:none;background:transparent;color:#999;cursor:pointer;font-size:0.85rem;">✕</button>';
-            document.body.appendChild(banner);
-          }
-        });
-      });
+  if (!('serviceWorker' in navigator)) return;
+
+  var bannerShown = false;
+  function showUpdateBanner() {
+    if (bannerShown) return;
+    bannerShown = true;
+    // 延迟插入，避免阻塞首屏关键渲染路径（首帧之后再显示提示，不会白屏闪烁）
+    requestAnimationFrame(function () {
+      setTimeout(function () {
+        if (!document.body) return;
+        var banner = document.createElement('div');
+        banner.id = 'sw-update-banner';
+        banner.style.cssText = [
+          'position:fixed',
+          'bottom:80px',
+          'left:50%',
+          'transform:translateX(-50%)',
+          'z-index:99999',
+          'background:rgba(26,58,42,0.95)',
+          'color:#fff',
+          'padding:12px 24px',
+          'border-radius:16px',
+          'font-size:0.9rem',
+          'box-shadow:0 4px 20px rgba(0,0,0,0.3)',
+          'border:1px solid rgba(58,140,92,0.3)',
+          'display:flex',
+          'align-items:center',
+          'gap:12px',
+          'max-width:90vw',
+          'animation:toastSlideUp 0.3s ease'
+        ].join(';');
+        banner.innerHTML = '<span>新版本可用</span>' +
+          '<button onclick="location.reload()" style="padding:6px 16px;border-radius:8px;border:none;background:#5a7d5c;color:#fff;cursor:pointer;font-size:0.85rem;font-weight:600;white-space:nowrap;">刷新</button>' +
+          '<button onclick="this.parentNode.remove()" style="padding:6px 10px;border-radius:8px;border:none;background:transparent;color:#999;cursor:pointer;font-size:0.85rem;">✕</button>';
+        document.body.appendChild(banner);
+      }, 0);
     });
   }
+
+  function wireUpdateFound(reg) {
+    if (!reg) return;
+    // 已有 installing worker，直接跟踪（例如 register 时立刻进入 install）
+    trackWorker(reg.installing);
+    reg.addEventListener('updatefound', function () {
+      trackWorker(reg.installing);
+    });
+  }
+
+  function trackWorker(worker) {
+    if (!worker) return;
+    worker.addEventListener('statechange', function () {
+      // installed 且当前已有 controller → 新旧并存，提示刷新即可激活新版本
+      if (worker.state === 'installed' && navigator.serviceWorker.controller) {
+        showUpdateBanner();
+      }
+    });
+  }
+
+  // 保险1：ready promise + 3s 硬超时兜底（避免首次启动 pending 到天荒地老）
+  var safetyDone = false;
+  var safetyTimer = setTimeout(function () {
+    if (safetyDone) return;
+    safetyDone = true;
+    // ready 超时：直接从 getRegistrations 拿现有 registration
+    if (navigator.serviceWorker.getRegistrations) {
+      navigator.serviceWorker.getRegistrations().then(function (regs) {
+        (regs || []).forEach(wireUpdateFound);
+      }).catch(function () {});
+    }
+  }, 3000);
+
+  navigator.serviceWorker.ready.then(function (reg) {
+    if (safetyDone) return;
+    clearTimeout(safetyTimer);
+    safetyDone = true;
+    wireUpdateFound(reg);
+  }).catch(function () {
+    /* ready 拒绝不算错误，静默忽略 */
+  });
+
+  // 保险2：controller 变化（SW claim 之后）也重新尝试绑定
+  navigator.serviceWorker.addEventListener('controllerchange', function () {
+    if (navigator.serviceWorker.getRegistration) {
+      navigator.serviceWorker.getRegistration().then(wireUpdateFound).catch(function () {});
+    }
+  });
 })();
 
 document.addEventListener('DOMContentLoaded', initApp);

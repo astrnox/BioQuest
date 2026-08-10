@@ -2,13 +2,161 @@
 <html lang="zh-CN" data-theme="light">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="theme-color" content="#1a2f1d">
   <meta name="color-scheme" content="light dark">
   <link rel="manifest" href="manifest.json">
   <!-- 内联 SVG favicon：避免浏览器默认请求 /favicon.ico 产生 404 -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%235a7d5c' rx='12'/%3E%3Ccircle cx='32' cy='32' r='16' fill='none' stroke='%23fff' stroke-width='2'/%3E%3Ccircle cx='32' cy='32' r='8' fill='%23fff'/%3E%3C/svg%3E">
+
+  <!-- ================================================================
+       首屏防白边 / 防缩放闪烁 / 防 FOUC / 防主题闪烁（内联，渲染前必执行）
+       ----------------------------------------------------------------
+       修复用户报告的两个体验问题：
+       1) 页面先缩小两边有白色边框 → 几秒后才正常
+       2) 新用户首次进入加载很久、卡住、有时需要手动刷新
+       ================================================================ -->
+  <style>
+    /* ① 尺寸锁定：在 CSS/JS 没加载完前先锁死视口宽高与内边距，
+       避免 iOS 移动端默认 980px layout viewport → width=device-width
+       过程中产生"内容缩小 → 两边留白边 → 几秒后再撑满"的 CLS 闪烁 */
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      min-height: 100vh;
+      /* 用 color-scheme 提前告知浏览器预期背景色，避免亮→暗切换时白闪 */
+      background: #faf8f5;
+      color: #2c3e30;
+      /* 防止任何子元素水平溢出造成左右白条 */
+      overflow-x: hidden;
+    }
+    /* 根容器立刻占满宽度，max-width 稍后由 CSS 变量接管，
+       不会出现"先 980px → 两边留白 → 再撑满"的过程 */
+    #page-content, .page-content, main, .container {
+      width: 100%;
+      box-sizing: border-box;
+    }
+    /* ② 字体替换防 CLS：霞鹜文楷 (LXGW WenKai) 是 ~7.7MB woff2，
+       用 font-display:swap + 字体度量近似的系统 fallback 堆叠，
+       保证替换前后字符宽度/行距变化尽量小，减少"两边白边"型 CLS */
+    :root {
+      --font-sans: 'LXGW WenKai', -apple-system, BlinkMacSystemFont,
+        'PingFang SC', 'Microsoft YaHei', 'Hiragino Sans GB',
+        'Noto Sans CJK SC', 'Source Han Sans SC', 'Segoe UI', sans-serif;
+      --font-serif: 'LXGW WenKai', 'Noto Serif SC', 'Songti SC',
+        'SimSun', 'Source Han Serif SC', 'STSong', Georgia, serif;
+    }
+    /* ③ 主题防闪：DOMContentLoaded 之前就同步读 localStorage 并设置
+       data-theme，避免 paint 出浅色 → 下一帧又变深色造成白屏闪烁。
+       这三行由 <script> 在本 style 之后立即同步写入 data-theme。*/
+    html[data-theme="dark"],
+    :root:not([data-theme="light"])[data-theme="dark"] {
+      background: #141a16;
+      color: #e0e8e2;
+    }
+    /* ④ 首屏骨架加载遮罩：稳定背景色 + 居中 logo，
+       保证"刚进入页面 → 脚本执行 → 页面渲染"的空档期不会出现
+       空白/缩放错位/两边白边，也取代"裸 HTML"状态  */
+    #bq-boot-mask {
+      position: fixed;
+      inset: 0;
+      z-index: 99999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 16px;
+      background: radial-gradient(ellipse at 20% 20%, #f5f0e8 0%, #faf8f5 40%, #faf8f5 100%);
+      /* 防止 mask 卸载时产生闪烁 */
+      transition: opacity 0.35s ease, visibility 0.35s ease;
+      -webkit-user-select: none;
+      user-select: none;
+      pointer-events: none;
+    }
+    html[data-theme="dark"] #bq-boot-mask {
+      background: radial-gradient(ellipse at 20% 20%, #1a1f1c 0%, #141a16 40%, #141a16 100%);
+    }
+    #bq-boot-logo {
+      width: 56px;
+      height: 56px;
+      border-radius: 16px;
+      background: #5a7d5c;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 20px rgba(90, 125, 92, 0.28);
+      animation: bqBootPulse 1.4s ease-in-out infinite;
+    }
+    #bq-boot-logo::after {
+      content: "";
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      border: 2px solid #ffffff;
+      box-sizing: border-box;
+      position: relative;
+    }
+    #bq-boot-logo::before {
+      content: "";
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: #ffffff;
+      position: absolute;
+      z-index: 1;
+    }
+    #bq-boot-label {
+      font-family: var(--font-serif);
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #2c3e30;
+      letter-spacing: 0.02em;
+    }
+    html[data-theme="dark"] #bq-boot-label { color: #e0e8e2; }
+    #bq-boot-spinner {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      border: 2px solid rgba(90, 125, 92, 0.18);
+      border-top-color: #5a7d5c;
+      animation: bqBootSpin 0.9s linear infinite;
+    }
+    html[data-theme="dark"] #bq-boot-spinner {
+      border-color: rgba(107, 196, 142, 0.22);
+      border-top-color: #6bc48e;
+    }
+    /* 动画声明（只放这里，不依赖外部 CSS 文件加载） */
+    @keyframes bqBootSpin { to { transform: rotate(360deg); } }
+    @keyframes bqBootPulse {
+      0%, 100% { transform: scale(1);    box-shadow: 0 6px 20px rgba(90, 125, 92, 0.28); }
+      50%      { transform: scale(1.04); box-shadow: 0 10px 32px rgba(90, 125, 92, 0.40); }
+    }
+    html[data-theme="dark"] #bq-boot-logo {
+      background: #3a7a4c;
+      box-shadow: 0 6px 20px rgba(107, 196, 142, 0.35);
+    }
+    /* 卸载 mask：通过 classList.add('is-ready') 平滑淡出，避免"忽然切走" */
+    #bq-boot-mask.is-ready { opacity: 0; visibility: hidden; }
+  </style>
+  <script>
+    // 同步初始化主题（必须放在 body 渲染前，否则首帧会显示浅色再切深色造成白屏闪烁）
+    (function () {
+      try {
+        var t = localStorage.getItem('bioquest-theme');
+        if (t === 'dark' || t === 'light') {
+          document.documentElement.setAttribute('data-theme', t);
+        } else {
+          // 用户没设就跟随系统，避免 paint 一次再被 CSS 覆盖
+          var mql = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)');
+          if (mql && mql.matches) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+          }
+        }
+      } catch (e) {}
+    })();
+  </script>
 
   <!-- Primary SEO -->
   <title>BioQuest — 生物竞赛刷题平台 | 全真模拟 · 专项练习 · 错题本</title>
@@ -131,6 +279,46 @@
   <noscript><link rel="stylesheet" href="css/daily-billion.css?v=20260809a"></noscript>
 </head>
 <body>
+  <!-- 首屏骨架遮罩：在 JS/CSS 加载前立即渲染，避免"缩小/两边白边/空白几秒"的现象 -->
+  <div id="bq-boot-mask" aria-hidden="true">
+    <div id="bq-boot-logo" aria-hidden="true"></div>
+    <div id="bq-boot-label">BioQuest · 生物竞赛刷题</div>
+    <div id="bq-boot-spinner" aria-hidden="true"></div>
+  </div>
+  <script>
+    // 首屏骨架遮罩自动淡出：页面真正 ready 之后平滑消失
+    // 三条信号任意一条达成就退出（避免某条卡死导致永久遮罩）
+    (function () {
+      var mask = document.getElementById('bq-boot-mask');
+      if (!mask) return;
+      var done = false;
+      function hide() {
+        if (done) return;
+        done = true;
+        // 等下一轮 paint，保证页面已有可渲染内容再淡出遮罩
+        requestAnimationFrame(function () {
+          requestAnimationFrame(function () {
+            mask.classList.add('is-ready');
+            // 淡出结束后从 DOM 移除，省 z-index 成本
+            setTimeout(function () {
+              if (mask && mask.parentNode) mask.parentNode.removeChild(mask);
+            }, 500);
+          });
+        });
+      }
+      // 信号1：DOMContentLoaded（首屏 HTML/CSS 基本就位）
+      if (document.readyState === 'interactive' || document.readyState === 'complete') {
+        setTimeout(hide, 60);
+      } else {
+        document.addEventListener('DOMContentLoaded', function () { setTimeout(hide, 60); });
+      }
+      // 信号2：window load（所有图片/资源完成，兜底）
+      window.addEventListener('load', function () { setTimeout(hide, 0); });
+      // 信号3：5.5s 硬超时（任何异常都不会让遮罩永久存在）
+      setTimeout(hide, 5500);
+    })();
+  </script>
+
   <a href="#page-content" class="skip-link">跳到主要内容</a>
 
   <header class="header">
@@ -663,19 +851,46 @@
     }
   });
   </script>
-  <!-- PWA Service Worker 注册 -->
+  <!-- PWA Service Worker 注册：DOMContentLoaded 立即启动，避免 window load 太晚导致
+       SW install/warmup 被图片/字体等大资源挤占下载带宽；配 6s 硬超时兜底
+       防止首次启动时 SW 注册 pending 导致用户感知"卡住/需手动刷新" -->
   <script>
   (function() {
     if ('serviceWorker' in navigator) {
-      window.addEventListener('load', function() {
-        navigator.serviceWorker.register('sw.js')
-          .then(function(registration) {
-            console.log('[SW] 注册成功:', registration.scope);
-          })
-          .catch(function(error) {
-            console.warn('[SW] 注册失败:', error);
-          });
-      });
+      var registerFn = function() {
+        // 低电量 / 2G / 用户明确设置 reduce-data 时就不注册 SW，避免"慢"
+        var conn = (navigator.connection || navigator.mozConnection || navigator.webkitConnection);
+        if (conn && (conn.saveData ||
+          (conn.effectiveType && /^2g$/.test(conn.effectiveType)) ||
+          (conn.downlink != null && conn.downlink < 0.4))) {
+          console.info('[SW] 低带宽/省流模式，跳过 SW 注册');
+          return;
+        }
+        // 超时保护：navigator.serviceWorker.register 理论上永不超时，
+        // 这里 AbortController 不能作用于它，用 Promise.race + 标记跳过即可
+        var timeoutMs = 6000;
+        var timedOut = false;
+        var timer = setTimeout(function () {
+          timedOut = true;
+          console.warn('[SW] 注册超过 ' + timeoutMs + 'ms，暂时放弃，不阻塞页面');
+        }, timeoutMs);
+        var regPromise = navigator.serviceWorker.register('sw.js');
+        regPromise.then(function(registration) {
+          if (timedOut) return;
+          clearTimeout(timer);
+          console.log('[SW] 注册成功:', registration.scope);
+        }).catch(function(error) {
+          if (timedOut) return;
+          clearTimeout(timer);
+          console.warn('[SW] 注册失败:', error);
+        });
+      };
+      // DOMContentLoaded 立即开始，不再等 window load（那会被 7.7MB woff2 等阻塞）
+      if (document.readyState === 'interactive' || document.readyState === 'complete') {
+        setTimeout(registerFn, 0);
+      } else {
+        document.addEventListener('DOMContentLoaded', function () { setTimeout(registerFn, 0); });
+      }
     }
   })();
   </script>
