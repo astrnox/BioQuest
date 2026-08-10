@@ -8,16 +8,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/pinesis688/bioquest.git"
+    "url": "https://github.com/astrnox/BioQuest.git"
   },
   "keywords": [],
   "author": "",
   "license": "CC-BY-NC-SA-4.0",
   "type": "commonjs",
   "bugs": {
-    "url": "https://github.com/pinesis688/bioquest/issues"
+    "url": "https://github.com/astrnox/BioQuest/issues"
   },
-  "homepage": "https://github.com/pinesis688/bioquest#readme",
+  "homepage": "https://github.com/astrnox/BioQuest#readme",
   "devDependencies": {
     "jest": "^30.4.2",
     "jsdom": "^29.1.1"

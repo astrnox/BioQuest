@@ -6,13 +6,13 @@
 
 **从联赛备考到高考模拟，一个网站搞定你的生物练习**
 
-[🌐 在线 Demo](https://bio.sumalink.cn/) · [📝 开始刷题](https://bio.sumalink.cn/#/practice) · [💬 反馈问题](https://github.com/pinesis688/bioquest/issues)(现在没钱买服务器了，去看看GitHubpage吧...)
+[🌐 在线 Demo](https://bio.sumalink.cn/) · [📝 开始刷题](https://bio.sumalink.cn/#/practice) · [💬 反馈问题](https://github.com/astrnox/BioQuest/issues)(现在没钱买服务器了，去看看GitHubpage吧...)
 
 [![Platform](https://img.shields.io/badge/platform-Web-blue?style=flat-square)]()
 [![License](https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-green?style=flat-square)](./LICENSE)
 [![Status](https://img.shields.io/badge/status-Active-success?style=flat-square)]()
 [![PWA](https://img.shields.io/badge/PWA-Supported-purple?style=flat-square)]()
-[![GitHub Stars](https://img.shields.io/github/stars/pinesis688/bioquest?style=flat-square)]()
+[![GitHub Stars](https://img.shields.io/github/stars/astrnox/BioQuest?style=flat-square)]()
 
 </div>
 
@@ -39,7 +39,7 @@ BioQuest 是一个专门给高中生做的生物学习网站。不管你是准�
 
 ```bash
 # 1. 克隆仓库
-git clone https://github.com/pinesis688/bioquest.git
+git clone https://github.com/astrnox/BioQuest.git
 cd bioquest
 
 # 2. 本地预览（选一个就行）
