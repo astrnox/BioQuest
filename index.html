@@ -29,8 +29,10 @@
       /* 用 color-scheme 提前告知浏览器预期背景色，避免亮→暗切换时白闪 */
       background: #faf8f5;
       color: #2c3e30;
-      /* 防止任何子元素水平溢出造成左右白条 */
-      overflow-x: hidden;
+      /* 防水平溢出造成左右白条：用 overflow-x:clip 而非 hidden。
+         hidden 会在 iOS 上创建滚动容器，导致"首次下拉不动、再拉才好"的滚动冻结；
+         clip 不创建滚动容器，可正常纵向滚动且仍能裁掉水平溢出。 */
+      overflow-x: clip;
     }
     /* 根容器立刻占满宽度，max-width 稍后由 CSS 变量接管，
        不会出现"先 980px → 两边留白 → 再撑满"的过程 */
@@ -253,8 +255,7 @@
   <link rel="preload" href="css/countdown.css" as="style" onload="this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="css/countdown.css"></noscript>
   <!-- debug-fix.css 非首屏关键，异步加载 -->
-  <link rel="preload" href="css/debug-fix.css?v=20260723e" as="style" onload="this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="css/debug-fix.css?v=20260723e"></noscript>
+  <link rel="stylesheet" href="css/debug-fix.css?v=20260811h">
 
   <!-- 非首屏 CSS：异步加载，不阻塞首次渲染 -->
   <link rel="preload" href="css/practice.css?v=20260723e" as="style" onload="this.rel='stylesheet'">
@@ -317,9 +318,17 @@
             requestAnimationFrame(function () {
               setTimeout(function () {
                 mask.classList.add('is-ready');
-                setTimeout(function () {
+                // 淡出过渡结束后立即从 DOM 移除，避免残留的 fixed 遮罩干扰移动端首次滚动
+                var removed = false;
+                function removeMask() {
+                  if (removed) return;
+                  removed = true;
                   if (mask && mask.parentNode) mask.parentNode.removeChild(mask);
-                }, 500);
+                }
+                mask.addEventListener('transitionend', function onEnd(e) {
+                  if (e.propertyName === 'opacity' || e.propertyName === 'visibility') removeMask();
+                });
+                setTimeout(removeMask, 400); // 兜底：过渡结束后即便没触发 transitionend 也移除
               }, 30);
             });
           });

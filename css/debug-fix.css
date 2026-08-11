@@ -42,6 +42,9 @@ button,
   top: var(--header-height);
   left: 0;
   right: 0;
+  width: auto;
+  max-width: none;
+  height: auto;
   background-color: var(--color-surface);
   background-image: none;
   z-index: 99;
@@ -62,10 +65,25 @@ button,
 }
 
 #mobileNav.active {
-  max-height: 600px;
+  max-height: min(70vh, 600px);
   opacity: 1;
   pointer-events: auto;
   transform: translateY(0);
+}
+
+/* 分类列表：min-height:0 允许 flex 子项在父容器 max-height 内收缩并滚动，
+   否则在手机上内容会被父容器 overflow:hidden 裁掉，底部"分类不见了"。
+   同时强制链接在菜单打开时可见（覆盖 layout.css 的 opacity:0 默认值）。 */
+#mobileNav .mobile-nav-scroll {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+#mobileNav .mobile-nav-scroll a {
+  opacity: 1 !important;
+  transform: none !important;
 }
 
 /* page-content 有正确的 z-index */
