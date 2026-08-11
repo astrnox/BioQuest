@@ -1399,6 +1399,11 @@ function handleRoute(route) {
   function finishRouting() {
     _routingInProgress = false;
     _flushPendingRoute();
+    // 首次路由渲染完成 → 通知首屏骨架遮罩淡出（只在首次触发一次）
+    if (!AppState._appReadyDispatched) {
+      AppState._appReadyDispatched = true;
+      try { document.dispatchEvent(new CustomEvent('bioquest:app-ready')); } catch (e) {}
+    }
   }
 
   function showModuleError(modName, err) {

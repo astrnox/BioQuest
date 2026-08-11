@@ -45,17 +45,15 @@
     if (_overlay) return;
     _overlay = document.createElement('div');
     _overlay.id = 'bioquest-onboarding-overlay';
+    // 非全屏：顶部居中的小卡片容器，不盖住主页、不阻挡滚动。
     _overlay.style.cssText = [
       'position:fixed',
-      'top:0',
-      'left:0',
-      'right:0',
-      'bottom:0',
+      'top:88px',
+      'left:50%',
+      'transform:translateX(-50%)',
+      'width:min(92%, 380px)',
       'z-index:99998',
-      'background:rgba(0,0,0,0.6)',
-      'display:flex',
-      'align-items:center',
-      'justify-content:center',
+      'pointer-events:none',
       'font-family:system-ui,-apple-system,sans-serif'
     ].join(';');
     document.body.appendChild(_overlay);
@@ -67,13 +65,16 @@
     _tooltip = document.createElement('div');
     _tooltip.id = 'bioquest-onboarding-tooltip';
 
-    var html = '<div style="background:#fff;border-radius:16px;padding:24px 28px;max-width:400px;width:90%;box-shadow:0 20px 60px rgba(0,0,0,0.3);text-align:center;">';
-    html += '<div style="font-size:2rem;margin-bottom:8px;">🧬</div>';
-    html += '<h2 style="font-size:1.2rem;font-weight:700;color:#1a1a1a;margin:0 0 8px 0;">' + step.title + '</h2>';
-    html += '<p style="font-size:0.95rem;color:#555;line-height:1.6;margin:0 0 20px 0;">' + step.text + '</p>';
+    var html = '<div style="background:#fff;border-radius:16px;padding:20px 22px;box-shadow:0 12px 40px rgba(0,0,0,0.18);border:1px solid rgba(0,0,0,0.06);text-align:center;">';
+    html += '<div style="display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:6px;">';
+    html += '<span style="font-size:1.4rem;">🧬</span>';
+    html += '<button class="onboarding-close-x" aria-label="关闭" style="padding:2px 8px;border:none;background:none;color:#999;cursor:pointer;font-size:1rem;line-height:1;">✕</button>';
+    html += '</div>';
+    html += '<h2 style="font-size:1.1rem;font-weight:700;color:#1a1a1a;margin:0 0 6px 0;">' + step.title + '</h2>';
+    html += '<p style="font-size:0.9rem;color:#555;line-height:1.55;margin:0 0 14px 0;">' + step.text + '</p>';
 
     // 进度点
-    html += '<div style="display:flex;justify-content:center;gap:8px;margin-bottom:16px;">';
+    html += '<div style="display:flex;justify-content:center;gap:8px;margin-bottom:14px;">';
     for (var i = 0; i < STEPS.length; i++) {
       html += '<div style="width:8px;height:8px;border-radius:50%;' +
         (i === _currentStep ? 'background:#5a7d5c;width:24px;border-radius:4px;' : 'background:#ddd;') +
@@ -83,7 +84,7 @@
 
     html += '<div style="display:flex;gap:8px;justify-content:center;">';
     if (_currentStep < STEPS.length - 1) {
-      html += '<button class="onboarding-skip" style="padding:8px 16px;border-radius:10px;border:1px solid #ddd;background:#fff;color:#666;cursor:pointer;font-size:0.85rem;">跳过引导</button>';
+      html += '<button class="onboarding-skip" style="padding:8px 14px;border-radius:10px;border:1px solid #ddd;background:#fff;color:#666;cursor:pointer;font-size:0.85rem;">跳过</button>';
       html += '<button class="onboarding-next" style="padding:8px 20px;border-radius:10px;border:none;background:#5a7d5c;color:#fff;cursor:pointer;font-size:0.85rem;font-weight:600;">下一步</button>';
     } else {
       html += '<button class="onboarding-finish" style="padding:8px 24px;border-radius:10px;border:none;background:#5a7d5c;color:#fff;cursor:pointer;font-size:0.85rem;font-weight:600;">开始学习</button>';
@@ -91,13 +92,15 @@
     html += '</div></div>';
 
     _tooltip.innerHTML = html;
-    _tooltip.style.cssText = 'position:relative;z-index:99999;';
+    // 卡片本身可交互，不拦截外层页面的滚动/点击
+    _tooltip.style.cssText = 'position:relative;z-index:99999;pointer-events:auto;max-height:calc(100vh - 120px);overflow:auto;';
 
     _overlay.appendChild(_tooltip);
 
     // 事件绑定
     _tooltip.querySelector('.onboarding-skip')?.addEventListener('click', finish);
     _tooltip.querySelector('.onboarding-next')?.addEventListener('click', next);
+    _tooltip.querySelector('.onboarding-close-x')?.addEventListener('click', finish);
     _tooltip.querySelector('.onboarding-finish')?.addEventListener('click', finish);
   }
 
