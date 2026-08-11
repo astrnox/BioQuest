@@ -1419,6 +1419,8 @@ function handleRoute(route) {
   function finishRouting() {
     _routingInProgress = false;
     _flushPendingRoute();
+    // 每次路由渲染完成都广播，供"回到顶部按钮"等按路由变化的组件刷新状态
+    try { document.dispatchEvent(new CustomEvent('bioquest:route-change')); } catch (e) {}
     // 首次路由渲染完成 → 通知首屏骨架遮罩淡出（只在首次触发一次）
     if (!AppState._appReadyDispatched) {
       var route = AppState.currentRoute || (window.location.hash || '#/').replace(/^#/, '') || '/';
@@ -5209,7 +5211,9 @@ window.handleFeedbackSubmit = handleFeedbackSubmit;
 window.showToast = showToast;
 
 // ============================================================
-// PRD §5-25：回到顶部按钮
+// PRD §5-25：回到顶部/底部按钮
+// 点击平滑滚动到页面顶部或底部（在顶部时切到滚动到底部）。
+// 只要页面可滚动（如社区等长内容模块）就显示，避免要长滑动的模块里找不到快捷按钮。
 // ============================================================
 (function () {
   var btn = document.createElement('button');
@@ -5218,7 +5222,7 @@ window.showToast = showToast;
   btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>';
   btn.style.cssText = [
     'position:fixed',
-    'bottom:24px',
+    'bottom:76px',
     'right:24px',
     'z-index:9990',
     'width:44px',
@@ -5236,22 +5240,66 @@ window.showToast = showToast;
     'opacity:0.8'
   ].join(';');
 
+  var UP_ICON = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>';
+  var DOWN_ICON = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>';
+
   btn.addEventListener('mouseenter', function () { btn.style.opacity = '1'; });
   btn.addEventListener('mouseleave', function () { btn.style.opacity = '0.8'; });
+
+  // 判断当前滚动容器是否已滑到底部
+  function atBottom() {
+    var doc = document.documentElement;
+    var max = Math.max(doc.scrollHeight, document.body ? document.body.scrollHeight : 0) - window.innerHeight;
+    return max > 0 && window.scrollY >= max - 4;
+  }
+  function atTop() {
+    return (window.scrollY || window.pageYOffset || 0) <= 4;
+  }
+
   btn.addEventListener('click', function () {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (atBottom()) {
+      // 已在底部 → 平滑回到顶部
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      // 未在底部 → 平滑滚到底部（顶部时也滚到底部）
+      var doc = document.documentElement;
+      var max = Math.max(doc.scrollHeight, document.body ? document.body.scrollHeight : 0) - window.innerHeight;
+      window.scrollTo({ top: Math.max(0, max), behavior: 'smooth' });
+    }
   });
 
   document.body.appendChild(btn);
 
+  function refresh() {
+    var doc = document.documentElement;
+    var scrollable = (doc.scrollHeight || (document.body ? document.body.scrollHeight : 0)) > window.innerHeight + 80;
+    var y = window.scrollY || window.pageYOffset || 0;
+    if (!scrollable) {
+      btn.style.display = 'none';
+      return;
+    }
+    btn.style.display = 'flex';
+    if (atBottom()) {
+      btn.innerHTML = UP_ICON;
+      btn.setAttribute('aria-label', '回到顶部');
+    } else {
+      btn.innerHTML = DOWN_ICON;
+      btn.setAttribute('aria-label', '滚动到底部');
+    }
+  }
+
   var _scrollTimer = null;
-  window.addEventListener('scroll', function () {
+  function onScroll() {
     if (_scrollTimer) cancelAnimationFrame(_scrollTimer);
-    _scrollTimer = requestAnimationFrame(function () {
-      var shouldShow = window.scrollY > window.innerHeight * 2;
-      btn.style.display = shouldShow ? 'flex' : 'none';
-    });
-  }, { passive: true });
+    _scrollTimer = requestAnimationFrame(refresh);
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll, { passive: true });
+  // 路由切换后重新计算（内容变化可能让页面变可滚动，如进入社区）
+  document.addEventListener('bioquest:route-change', function () {
+    setTimeout(refresh, 50);
+  });
+  setTimeout(refresh, 300);
 })();
 
 // ============================================================

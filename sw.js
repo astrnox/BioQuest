@@ -7,7 +7,7 @@
 
 // 版本号策略：CSS/JS 缓存与页面解耦（剥离 ?v= 参数匹配），
 // 因此每次修改任何 JS/CSS 后必须 bump 此版本号，触发预缓存刷新与旧缓存清理。
-var CACHE_VERSION = 'bioquest-20260811g';
+var CACHE_VERSION = 'bioquest-20260811h';
 var CACHE_NAME = 'bioquest-cache-' + CACHE_VERSION;
 
 /* ========================================================================
