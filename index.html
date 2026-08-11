@@ -29,8 +29,10 @@
       /* 用 color-scheme 提前告知浏览器预期背景色，避免亮→暗切换时白闪 */
       background: #faf8f5;
       color: #2c3e30;
-      /* 防止任何子元素水平溢出造成左右白条 */
-      overflow-x: hidden;
+      /* 防水平溢出造成左右白条：用 overflow-x:clip 而非 hidden。
+         hidden 会在 iOS 上创建滚动容器，导致"首次下拉不动、再拉才好"的滚动冻结；
+         clip 不创建滚动容器，可正常纵向滚动且仍能裁掉水平溢出。 */
+      overflow-x: clip;
     }
     /* 根容器立刻占满宽度，max-width 稍后由 CSS 变量接管，
        不会出现"先 980px → 两边留白 → 再撑满"的过程 */
@@ -244,7 +246,7 @@
   </script>
 
   <!-- 首屏关键 CSS：同步加载 -->
-  <link rel="stylesheet" href="css/globals.css?v=20260723e">
+  <link rel="stylesheet" href="css/globals.css?v=20260811h">
   <link rel="stylesheet" href="css/layout.css?v=20260723e">
   <link rel="stylesheet" href="css/header.css?v=20260723e">
   <link rel="stylesheet" href="css/learning-hub.css?v=20260809a">
@@ -253,8 +255,7 @@
   <link rel="preload" href="css/countdown.css" as="style" onload="this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="css/countdown.css"></noscript>
   <!-- debug-fix.css 非首屏关键，异步加载 -->
-  <link rel="preload" href="css/debug-fix.css?v=20260723e" as="style" onload="this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="css/debug-fix.css?v=20260723e"></noscript>
+  <link rel="stylesheet" href="css/debug-fix.css?v=20260811h">
 
   <!-- 非首屏 CSS：异步加载，不阻塞首次渲染 -->
   <link rel="preload" href="css/practice.css?v=20260723e" as="style" onload="this.rel='stylesheet'">
@@ -286,36 +287,77 @@
     <div id="bq-boot-spinner" aria-hidden="true"></div>
   </div>
   <script>
-    // 首屏骨架遮罩自动淡出：页面真正 ready 之后平滑消失
-    // 三条信号任意一条达成就退出（避免某条卡死导致永久遮罩）
+    // 首屏骨架遮罩：加载动画展示 → 等应用首屏渲染完成（Hero/倒计时/布局已提交） → 平滑淡出进入主页面。
+    // 遮罩在页面内容真正就绪后才消失，避免"内容还没渲染就过早撤遮罩"导致的卡顿/空白/下拉卡一下。
     (function () {
       var mask = document.getElementById('bq-boot-mask');
       if (!mask) return;
       var done = false;
-      function hide() {
+      var startTime = Date.now();
+      function fadeOut() {
         if (done) return;
         done = true;
-        // 等下一轮 paint，保证页面已有可渲染内容再淡出遮罩
+        // 核心：确保撤遮罩前，浏览器已完成首屏布局与绘制。
+        // 两轮 rAF 保证至少一次 layout + paint 已提交；再强制一次 reflow 读取，
+        // 确保页面高度/滚动条已存在，避免"进主页后拉不动一会"的现象。
         requestAnimationFrame(function () {
           requestAnimationFrame(function () {
-            mask.classList.add('is-ready');
-            // 淡出结束后从 DOM 移除，省 z-index 成本
-            setTimeout(function () {
-              if (mask && mask.parentNode) mask.parentNode.removeChild(mask);
-            }, 500);
+            try {
+              // 强制 reflow：读取首屏元素尺寸，触发浏览器完成 layout 计算
+              var h = document.getElementById('main-content') || document.querySelector('.hero');
+              if (h) void h.offsetHeight;
+              var pc = document.getElementById('page-content');
+              if (pc) void pc.scrollHeight;
+              // 确保 body 可滚动
+              document.body.style.overflowY = '';
+              if (document.documentElement) {
+                document.documentElement.style.overflowY = '';
+              }
+            } catch (e) {}
+            // 再加一轮 rAF + 微延迟，给移动端布局提交留缓冲
+            requestAnimationFrame(function () {
+              setTimeout(function () {
+                mask.classList.add('is-ready');
+                // 淡出过渡结束后立即从 DOM 移除，避免残留的 fixed 遮罩干扰移动端首次滚动
+                var removed = false;
+                function removeMask() {
+                  if (removed) return;
+                  removed = true;
+                  if (mask && mask.parentNode) mask.parentNode.removeChild(mask);
+                }
+                mask.addEventListener('transitionend', function onEnd(e) {
+                  if (e.propertyName === 'opacity' || e.propertyName === 'visibility') removeMask();
+                });
+                setTimeout(removeMask, 400); // 兜底：过渡结束后即便没触发 transitionend 也移除
+              }, 30);
+            });
           });
         });
       }
-      // 信号1：DOMContentLoaded（首屏 HTML/CSS 基本就位）
-      if (document.readyState === 'interactive' || document.readyState === 'complete') {
-        setTimeout(hide, 60);
-      } else {
-        document.addEventListener('DOMContentLoaded', function () { setTimeout(hide, 60); });
+      function hideWhenAppReady() {
+        // 保证加载动画至少可见约 800ms，既让用户看到"在加载"，
+        // 又给 app.js 里的 Hero/倒计时/滚动动画初始化留足时间，
+        // 真正做到"加载界面加载完之后 → 进主页"。
+        var elapsed = Date.now() - startTime;
+        var MIN_VISIBLE = 800;
+        if (elapsed >= MIN_VISIBLE) fadeOut();
+        else setTimeout(fadeOut, MIN_VISIBLE - elapsed);
       }
-      // 信号2：window load（所有图片/资源完成，兜底）
-      window.addEventListener('load', function () { setTimeout(hide, 0); });
-      // 信号3：5.5s 硬超时（任何异常都不会让遮罩永久存在）
-      setTimeout(hide, 5500);
+
+      // 主信号：应用首屏渲染完成后派发（app.js finishRouting + reinitHomeComponents rAF 双重确认）
+      document.addEventListener('bioquest:app-ready', hideWhenAppReady);
+
+      // 兜底信号：DOMContentLoaded / window load / 硬超时，任何异常都不会让遮罩永久存在
+      if (document.readyState === 'interactive' || document.readyState === 'complete') {
+        setTimeout(function () { if (!done) hideWhenAppReady(); }, 1600);
+      } else {
+        document.addEventListener('DOMContentLoaded', function () {
+          setTimeout(function () { if (!done) hideWhenAppReady(); }, 1600);
+        });
+      }
+      window.addEventListener('load', function () { setTimeout(function () { if (!done) hideWhenAppReady(); }, 0); });
+      // 终极兜底：超过 6 秒无论如何淡出，避免遮罩卡死
+      setTimeout(fadeOut, 6000);
     })();
   </script>
 
@@ -369,63 +411,85 @@
   </header>
 
   <div class="mobile-nav-overlay" id="mobileOverlay"></div>
-  <nav class="mobile-nav" id="mobileNav">
-    <div style="display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid var(--border-light);">
-      <div style="display:flex;align-items:center;gap:10px;">
-        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+  <nav class="mobile-nav" id="mobileNav" aria-label="导航菜单">
+    <div class="mn-header">
+      <div class="mn-brand">
+        <svg width="30" height="30" viewBox="0 0 28 28" fill="none" aria-hidden="true">
           <circle cx="14" cy="14" r="12" stroke="#e8a830" stroke-width="2"/>
           <circle cx="14" cy="14" r="4" fill="#e8a830"/>
           <path d="M14 2v4M14 22v4M2 14h4M22 14h4" stroke="#5a7d5c" stroke-width="1.5"/>
         </svg>
-        <span style="font-weight:700;font-size:1.1rem;color:var(--color-deep);">BioQuest</span>
+        <span class="mn-brand-name">BioQuest</span>
       </div>
-      <button id="mobileNavClose" style="background:none;border:none;font-size:22px;cursor:pointer;color:var(--text-muted);padding:4px 8px;">✕</button>
+      <button id="mobileNavClose" class="mn-close" aria-label="关闭菜单">✕</button>
     </div>
-    <div class="mobile-nav-scroll">
-      <a href="#/" data-route="/">首页</a>
-      <a href="#/dashboard" data-route="/dashboard">仪表盘</a>
-      <a href="#/trends" data-route="/trends">趋势</a>
-      <a href="#/tutor" data-route="/tutor">AI 对话</a>
-      <a href="#/study?tab=hub" data-route="/study">学习管理</a>
-      <a href="#/practice" data-route="/practice">练习</a>
-      <a href="#/exam" data-route="/exam">模考</a>
-      <a href="#/bio-animation" data-route="/bio-animation">生物动画</a>
-      <a href="biology-history.html">生物学史</a>
-      <a href="cards.html">卡片</a>
-      <a href="quiz.html">试题</a>
-      <a href="#/knowledge-graph" data-route="/knowledge-graph">图谱</a>
-      <a href="#/bio-lab" data-route="/bio-lab">实验室</a>
-      <a href="#/phet-sims" data-route="/phet-sims">PhET 模拟</a>
-      <a href="#/sketch" data-route="/sketch">画板</a>
-      <a href="#/smiles" data-route="/smiles">SMILES</a>
-      <a href="#/molecules" data-route="/molecules">3D 分子</a>
-      <a href="#/genome" data-route="/genome" style="color:var(--color-sage,#4a7c59);font-weight:600;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:4px"><path d="M4 4c4 4 12 4 16 0M4 20c4-4 12-4 16 0M4 4v16M20 4v16M8 8h8M8 16h8M6 12h12"/></svg>基因组</a>
-      <a href="#/study" data-route="/study">学习</a>
-      <a href="#/wrongbook" data-route="/wrongbook">错题录题</a>
-      <a href="#/community" data-route="/community">社区</a>
-      <a href="#/daily-billion" data-route="/daily-billion" style="color:var(--color-amber,#c4956a);font-weight:600;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:4px"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>每日亿题</a>
-      <a href="#/teacher" data-route="/teacher">教师</a>
-      <a href="javascript:void(0)" id="nav-leaderboard-btn">排行</a>
-      <a href="#/user" data-route="/user">我的</a>
-      <div class="theme-toggle-row">
-        <span>主题模式</span>
-        <button class="theme-toggle theme-toggle--mobile" id="themeToggleMobile" aria-label="切换主题">
-          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-          </svg>
-          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="5"/>
-            <line x1="12" y1="1" x2="12" y2="3"/>
-            <line x1="12" y1="21" x2="12" y2="23"/>
-            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
-            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
-            <line x1="1" y1="12" x2="3" y2="12"/>
-            <line x1="21" y1="12" x2="23" y2="12"/>
-            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
-            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
-          </svg>
-        </button>
+
+    <div class="mn-body">
+      <a href="#/" data-route="/" class="mn-home">首页</a>
+
+      <div class="mn-section">
+        <div class="mn-section-label">学习</div>
+        <a href="#/study?tab=hub" data-route="/study">学习管理</a>
+        <a href="#/practice" data-route="/practice">练习</a>
+        <a href="#/exam" data-route="/exam">模考</a>
+        <a href="#/wrongbook" data-route="/wrongbook">错题录题</a>
       </div>
+
+      <div class="mn-section">
+        <div class="mn-section-label">题库</div>
+        <a href="quiz.html">试题</a>
+        <a href="cards.html">卡片</a>
+      </div>
+
+      <div class="mn-section">
+        <div class="mn-section-label">探索</div>
+        <a href="#/bio-animation" data-route="/bio-animation">生物动画</a>
+        <a href="biology-history.html">生物学史</a>
+        <a href="#/knowledge-graph" data-route="/knowledge-graph">图谱</a>
+        <a href="#/bio-lab" data-route="/bio-lab">实验室</a>
+        <a href="#/phet-sims" data-route="/phet-sims">PhET 模拟</a>
+        <a href="#/sketch" data-route="/sketch">画板</a>
+        <a href="#/smiles" data-route="/smiles">SMILES</a>
+        <a href="#/molecules" data-route="/molecules">3D 分子</a>
+        <a href="#/genome" data-route="/genome" class="mn-featured sag"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4c4 4 12 4 16 0M4 20c4-4 12-4 16 0M4 4v16M20 4v16M8 8h8M8 16h8M6 12h12"/></svg>基因组</a>
+      </div>
+
+      <div class="mn-section">
+        <div class="mn-section-label">智能与社区</div>
+        <a href="#/tutor" data-route="/tutor">AI 对话</a>
+        <a href="#/community" data-route="/community">社区</a>
+        <a href="#/daily-billion" data-route="/daily-billion" class="mn-featured amber"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>每日亿题</a>
+        <a href="javascript:void(0)" id="nav-leaderboard-btn">排行</a>
+      </div>
+
+      <div class="mn-section">
+        <div class="mn-section-label">账户</div>
+        <a href="#/dashboard" data-route="/dashboard">仪表盘</a>
+        <a href="#/trends" data-route="/trends">趋势</a>
+        <a href="#/teacher" data-route="/teacher">教师</a>
+        <a href="#/user" data-route="/user">我的</a>
+      </div>
+    </div>
+
+    <div class="theme-toggle-row">
+      <span>主题模式</span>
+      <button class="theme-toggle theme-toggle--mobile" id="themeToggleMobile" aria-label="切换主题">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="5"/>
+          <line x1="12" y1="1" x2="12" y2="3"/>
+          <line x1="12" y1="21" x2="12" y2="23"/>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+          <line x1="1" y1="12" x2="3" y2="12"/>
+          <line x1="21" y1="12" x2="23" y2="12"/>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+      </button>
+    </div>
   </nav>
 
   <main id="app-main">
@@ -587,7 +651,7 @@
       <section class="cta-section" data-section="cta">
         <div class="container">
           <div class="cta-block">
-            <h2 class="cta-title">准备好征服生物竞赛了吗？</h2>
+            <h2 class="cta-title">准备好感受生命的魅力了吗？</h2>
             <p class="cta-subtitle">无论是系统复习还是考前冲刺，BioQuest 为你提供最科学的学习路径</p>
             <div class="cta-actions">
               <button class="btn-primary-hero btn-primary-hero--lg" data-route="/exam">
@@ -710,6 +774,10 @@
   <script src="js/vendor/pdf.min.js?v=20260723d" defer></script>
   <!-- v5.0 Tier1 集成模块 -->
   <script src="js/integrations/vendor-init.js?v=20260723d" defer></script>
+  <!-- OCR 多引擎抽象层：Vision → ONNX PaddleOCR → Tesseract → OCRad 四级降级；
+       photo-quiz.js / wrongbook.js / 社区发帖图片等模块均通过 window.OcrEngine 调用。
+       文件本身非常轻（仅调度与懒加载框架），真正的引擎 CDN 在使用时按需下载。 -->
+  <script src="js/integrations/ocr-engine.js?v=20260809a" defer></script>
   <script src="js/integrations/study-heatmap.js?v=20260723d" defer></script>
   <script src="js/integrations/analytics-charts.js?v=20260723d" defer></script>
   <script src="js/integrations/diagram-renderer.js?v=20260723d" defer></script>
@@ -797,11 +865,13 @@
   <script src="js/mood-tracker.js?v=20260719v4" defer></script>
   <script src="js/a11y-utils.js?v=20260719v4" defer></script>
   <script src="js/community.js?v=20260725final" defer></script>
+  <!-- 社区回帖通知：收到回帖弹窗提示 + 我的-通知列表 -->
+  <script src="js/notifications.js?v=20260811g" defer></script>
   <!-- admin.js 改为 async：管理后台是按需访问的，让它独立加载不阻塞首屏 -->
   <script src="js/admin.js?v=20260806a" async></script>
   <script src="js/learning-hub.js?v=20260809f" defer></script>
   <script src="js/daily-billion.js?v=20260809c" defer></script>
-  <script src="js/app.js?v=20260809i" defer></script>
+  <script src="js/app.js?v=20260811h" defer></script>
   <!-- PRD §5 补全模块 -->
   <script src="js/micro-details.js?v=20260803a" defer></script>
   <script src="js/sync-tabs.js?v=20260803a" defer></script>
