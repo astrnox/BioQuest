@@ -411,63 +411,85 @@
   </header>
 
   <div class="mobile-nav-overlay" id="mobileOverlay"></div>
-  <nav class="mobile-nav" id="mobileNav">
-    <div style="display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid var(--border-light);">
-      <div style="display:flex;align-items:center;gap:10px;">
-        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+  <nav class="mobile-nav" id="mobileNav" aria-label="导航菜单">
+    <div class="mn-header">
+      <div class="mn-brand">
+        <svg width="30" height="30" viewBox="0 0 28 28" fill="none" aria-hidden="true">
           <circle cx="14" cy="14" r="12" stroke="#e8a830" stroke-width="2"/>
           <circle cx="14" cy="14" r="4" fill="#e8a830"/>
           <path d="M14 2v4M14 22v4M2 14h4M22 14h4" stroke="#5a7d5c" stroke-width="1.5"/>
         </svg>
-        <span style="font-weight:700;font-size:1.1rem;color:var(--color-deep);">BioQuest</span>
+        <span class="mn-brand-name">BioQuest</span>
       </div>
-      <button id="mobileNavClose" style="background:none;border:none;font-size:22px;cursor:pointer;color:var(--text-muted);padding:4px 8px;">✕</button>
+      <button id="mobileNavClose" class="mn-close" aria-label="关闭菜单">✕</button>
     </div>
-    <div class="mobile-nav-scroll">
-      <a href="#/" data-route="/">首页</a>
-      <a href="#/dashboard" data-route="/dashboard">仪表盘</a>
-      <a href="#/trends" data-route="/trends">趋势</a>
-      <a href="#/tutor" data-route="/tutor">AI 对话</a>
-      <a href="#/study?tab=hub" data-route="/study">学习管理</a>
-      <a href="#/practice" data-route="/practice">练习</a>
-      <a href="#/exam" data-route="/exam">模考</a>
-      <a href="#/bio-animation" data-route="/bio-animation">生物动画</a>
-      <a href="biology-history.html">生物学史</a>
-      <a href="cards.html">卡片</a>
-      <a href="quiz.html">试题</a>
-      <a href="#/knowledge-graph" data-route="/knowledge-graph">图谱</a>
-      <a href="#/bio-lab" data-route="/bio-lab">实验室</a>
-      <a href="#/phet-sims" data-route="/phet-sims">PhET 模拟</a>
-      <a href="#/sketch" data-route="/sketch">画板</a>
-      <a href="#/smiles" data-route="/smiles">SMILES</a>
-      <a href="#/molecules" data-route="/molecules">3D 分子</a>
-      <a href="#/genome" data-route="/genome" style="color:var(--color-sage,#4a7c59);font-weight:600;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:4px"><path d="M4 4c4 4 12 4 16 0M4 20c4-4 12-4 16 0M4 4v16M20 4v16M8 8h8M8 16h8M6 12h12"/></svg>基因组</a>
-      <a href="#/study" data-route="/study">学习</a>
-      <a href="#/wrongbook" data-route="/wrongbook">错题录题</a>
-      <a href="#/community" data-route="/community">社区</a>
-      <a href="#/daily-billion" data-route="/daily-billion" style="color:var(--color-amber,#c4956a);font-weight:600;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:4px"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>每日亿题</a>
-      <a href="#/teacher" data-route="/teacher">教师</a>
-      <a href="javascript:void(0)" id="nav-leaderboard-btn">排行</a>
-      <a href="#/user" data-route="/user">我的</a>
-      <div class="theme-toggle-row">
-        <span>主题模式</span>
-        <button class="theme-toggle theme-toggle--mobile" id="themeToggleMobile" aria-label="切换主题">
-          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-          </svg>
-          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="5"/>
-            <line x1="12" y1="1" x2="12" y2="3"/>
-            <line x1="12" y1="21" x2="12" y2="23"/>
-            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
-            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
-            <line x1="1" y1="12" x2="3" y2="12"/>
-            <line x1="21" y1="12" x2="23" y2="12"/>
-            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
-            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
-          </svg>
-        </button>
+
+    <div class="mn-body">
+      <a href="#/" data-route="/" class="mn-home">首页</a>
+
+      <div class="mn-section">
+        <div class="mn-section-label">学习</div>
+        <a href="#/study?tab=hub" data-route="/study">学习管理</a>
+        <a href="#/practice" data-route="/practice">练习</a>
+        <a href="#/exam" data-route="/exam">模考</a>
+        <a href="#/wrongbook" data-route="/wrongbook">错题录题</a>
       </div>
+
+      <div class="mn-section">
+        <div class="mn-section-label">题库</div>
+        <a href="quiz.html">试题</a>
+        <a href="cards.html">卡片</a>
+      </div>
+
+      <div class="mn-section">
+        <div class="mn-section-label">探索</div>
+        <a href="#/bio-animation" data-route="/bio-animation">生物动画</a>
+        <a href="biology-history.html">生物学史</a>
+        <a href="#/knowledge-graph" data-route="/knowledge-graph">图谱</a>
+        <a href="#/bio-lab" data-route="/bio-lab">实验室</a>
+        <a href="#/phet-sims" data-route="/phet-sims">PhET 模拟</a>
+        <a href="#/sketch" data-route="/sketch">画板</a>
+        <a href="#/smiles" data-route="/smiles">SMILES</a>
+        <a href="#/molecules" data-route="/molecules">3D 分子</a>
+        <a href="#/genome" data-route="/genome" class="mn-featured sag"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4c4 4 12 4 16 0M4 20c4-4 12-4 16 0M4 4v16M20 4v16M8 8h8M8 16h8M6 12h12"/></svg>基因组</a>
+      </div>
+
+      <div class="mn-section">
+        <div class="mn-section-label">智能与社区</div>
+        <a href="#/tutor" data-route="/tutor">AI 对话</a>
+        <a href="#/community" data-route="/community">社区</a>
+        <a href="#/daily-billion" data-route="/daily-billion" class="mn-featured amber"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>每日亿题</a>
+        <a href="javascript:void(0)" id="nav-leaderboard-btn">排行</a>
+      </div>
+
+      <div class="mn-section">
+        <div class="mn-section-label">账户</div>
+        <a href="#/dashboard" data-route="/dashboard">仪表盘</a>
+        <a href="#/trends" data-route="/trends">趋势</a>
+        <a href="#/teacher" data-route="/teacher">教师</a>
+        <a href="#/user" data-route="/user">我的</a>
+      </div>
+    </div>
+
+    <div class="theme-toggle-row">
+      <span>主题模式</span>
+      <button class="theme-toggle theme-toggle--mobile" id="themeToggleMobile" aria-label="切换主题">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="5"/>
+          <line x1="12" y1="1" x2="12" y2="3"/>
+          <line x1="12" y1="21" x2="12" y2="23"/>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+          <line x1="1" y1="12" x2="3" y2="12"/>
+          <line x1="21" y1="12" x2="23" y2="12"/>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+      </button>
+    </div>
   </nav>
 
   <main id="app-main">
