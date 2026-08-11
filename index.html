@@ -286,8 +286,8 @@
     <div id="bq-boot-spinner" aria-hidden="true"></div>
   </div>
   <script>
-    // 首屏骨架遮罩：加载动画展示 → 等应用首屏渲染完成 → 平滑淡出进入主页面。
-    // 遮罩在页面内容真正就绪后才消失，避免"内容还没渲染就过早撤遮罩"导致的卡顿/空白。
+    // 首屏骨架遮罩：加载动画展示 → 等应用首屏渲染完成（Hero/倒计时/布局已提交） → 平滑淡出进入主页面。
+    // 遮罩在页面内容真正就绪后才消失，避免"内容还没渲染就过早撤遮罩"导致的卡顿/空白/下拉卡一下。
     (function () {
       var mask = document.getElementById('bq-boot-mask');
       if (!mask) return;
@@ -296,34 +296,59 @@
       function fadeOut() {
         if (done) return;
         done = true;
-        // 等下一轮 paint，保证页面已有可渲染内容再淡出遮罩
+        // 核心：确保撤遮罩前，浏览器已完成首屏布局与绘制。
+        // 两轮 rAF 保证至少一次 layout + paint 已提交；再强制一次 reflow 读取，
+        // 确保页面高度/滚动条已存在，避免"进主页后拉不动一会"的现象。
         requestAnimationFrame(function () {
           requestAnimationFrame(function () {
-            mask.classList.add('is-ready');
-            setTimeout(function () {
-              if (mask && mask.parentNode) mask.parentNode.removeChild(mask);
-            }, 500);
+            try {
+              // 强制 reflow：读取首屏元素尺寸，触发浏览器完成 layout 计算
+              var h = document.getElementById('main-content') || document.querySelector('.hero');
+              if (h) void h.offsetHeight;
+              var pc = document.getElementById('page-content');
+              if (pc) void pc.scrollHeight;
+              // 确保 body 可滚动
+              document.body.style.overflowY = '';
+              if (document.documentElement) {
+                document.documentElement.style.overflowY = '';
+              }
+            } catch (e) {}
+            // 再加一轮 rAF + 微延迟，给移动端布局提交留缓冲
+            requestAnimationFrame(function () {
+              setTimeout(function () {
+                mask.classList.add('is-ready');
+                setTimeout(function () {
+                  if (mask && mask.parentNode) mask.parentNode.removeChild(mask);
+                }, 500);
+              }, 30);
+            });
           });
         });
       }
       function hideWhenAppReady() {
-        // 保证加载动画至少可见约 600ms，避免秒开时"看不到加载动画"
+        // 保证加载动画至少可见约 800ms，既让用户看到"在加载"，
+        // 又给 app.js 里的 Hero/倒计时/滚动动画初始化留足时间，
+        // 真正做到"加载界面加载完之后 → 进主页"。
         var elapsed = Date.now() - startTime;
-        if (elapsed >= 600) fadeOut();
-        else setTimeout(fadeOut, 600 - elapsed);
+        var MIN_VISIBLE = 800;
+        if (elapsed >= MIN_VISIBLE) fadeOut();
+        else setTimeout(fadeOut, MIN_VISIBLE - elapsed);
       }
 
-      // 主信号：应用首屏渲染完成后派发（app.js 在首次路由渲染结束时触发）
+      // 主信号：应用首屏渲染完成后派发（app.js finishRouting + reinitHomeComponents rAF 双重确认）
       document.addEventListener('bioquest:app-ready', hideWhenAppReady);
 
       // 兜底信号：DOMContentLoaded / window load / 硬超时，任何异常都不会让遮罩永久存在
       if (document.readyState === 'interactive' || document.readyState === 'complete') {
-        setTimeout(fadeOut, 1200);
+        setTimeout(function () { if (!done) hideWhenAppReady(); }, 1600);
       } else {
-        document.addEventListener('DOMContentLoaded', function () { setTimeout(fadeOut, 1200); });
+        document.addEventListener('DOMContentLoaded', function () {
+          setTimeout(function () { if (!done) hideWhenAppReady(); }, 1600);
+        });
       }
-      window.addEventListener('load', function () { setTimeout(fadeOut, 0); });
-      setTimeout(fadeOut, 5500);
+      window.addEventListener('load', function () { setTimeout(function () { if (!done) hideWhenAppReady(); }, 0); });
+      // 终极兜底：超过 6 秒无论如何淡出，避免遮罩卡死
+      setTimeout(fadeOut, 6000);
     })();
   </script>
 
@@ -810,7 +835,7 @@
   <script src="js/a11y-utils.js?v=20260719v4" defer></script>
   <script src="js/community.js?v=20260725final" defer></script>
   <!-- 社区回帖通知：收到回帖弹窗提示 + 我的-通知列表 -->
-  <script src="js/notifications.js?v=20260811f" defer></script>
+  <script src="js/notifications.js?v=20260811g" defer></script>
   <!-- admin.js 改为 async：管理后台是按需访问的，让它独立加载不阻塞首屏 -->
   <script src="js/admin.js?v=20260806a" async></script>
   <script src="js/learning-hub.js?v=20260809f" defer></script>
