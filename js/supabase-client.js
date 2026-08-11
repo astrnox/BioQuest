@@ -2271,30 +2271,50 @@ async function checkAchievement(type, value) {
  */
 function _showAchievementNotification(ach, tierInfo) {
   try {
-    var notif = document.createElement('div');
-    notif.style.cssText = 'position:fixed;top:20px;right:20px;z-index:10000;background:linear-gradient(135deg,#1a3a2a,#2d6a47);color:#fff;padding:16px 24px;border-radius:12px;box-shadow:0 8px 32px rgba(0,0,0,0.3);font-family:system-ui,sans-serif;max-width:320px;animation:achieveSlideIn 0.5s ease;border-left:4px solid ' + (tierInfo.color || '#ffd700') + ';';
-
-    notif.innerHTML = '<div style="font-size:0.7rem;color:' + (tierInfo.color || '#ffd700') + ';text-transform:uppercase;letter-spacing:1px;margin-bottom:4px;">' + (tierInfo.label || '') + ' 成就解锁</div>' +
-      '<div style="display:flex;align-items:center;gap:10px;">' +
-        '<span style="display:inline-flex;align-items:center;justify-content:center;width:2.4rem;height:2.4rem;border-radius:50%;background:' + (tierInfo.color || '#ffd700') + ';color:#fff;font-size:1rem;font-weight:700;">' + (ach.name ? ach.name.charAt(0) : '') + '</span>' +
-        '<div><div style="font-size:1rem;font-weight:700;">' + ach.name + '</div>' +
-        '<div style="font-size:0.8rem;opacity:0.8;">' + ach.desc + '</div></div>' +
-      '</div>';
-
-    // 添加动画样式
     if (!document.getElementById('achieve-notif-style')) {
-      var style = document.createElement('style');
-      style.id = 'achieve-notif-style';
-      style.textContent = '@keyframes achieveSlideIn{from{transform:translateX(120%);opacity:0}to{transform:translateX(0);opacity:1}}@keyframes achieveSlideOut{from{transform:translateX(0);opacity:1}to{transform:translateX(120%);opacity:0}}';
-      document.head.appendChild(style);
+      var st = document.createElement('style');
+      st.id = 'achieve-notif-style';
+      st.textContent = [
+        '.ach-notif{position:fixed;top:20px;right:20px;z-index:10000;display:flex;align-items:center;gap:14px;max-width:340px;padding:14px 18px 14px 14px;border-radius:16px;overflow:hidden;color:var(--color-text,#2c3e30);background:linear-gradient(180deg,var(--color-surface,#fff),var(--color-surface-sunken,#f7f4f0));border:1px solid rgba(196,149,106,.35);box-shadow:0 14px 44px rgba(20,30,20,.18),0 2px 8px rgba(0,0,0,.06),inset 0 1px 0 rgba(255,255,255,.7);font-family:var(--font-sans,system-ui,sans-serif);animation:achIn .55s cubic-bezier(.22,1,.36,1)}',
+        '.ach-notif.out{animation:achOut .45s ease forwards}',
+        '.ach-notif-icon{flex-shrink:0;width:54px;height:54px;display:flex;align-items:center;justify-content:center;border-radius:15px;background:radial-gradient(circle at 30% 22%,rgba(255,255,255,.9),rgba(241,232,214,.5));box-shadow:inset 0 0 0 1px rgba(196,149,106,.35),0 4px 14px rgba(0,0,0,.08)}',
+        '.ach-notif-body{min-width:0}',
+        '.ach-notif-tier{font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;margin-bottom:3px}',
+        '.ach-notif-name{font-family:var(--font-serif,\'Noto Serif SC\',serif);font-size:1.05rem;font-weight:700;line-height:1.3;color:var(--color-deep,#1a2f1d)}',
+        '.ach-notif-desc{font-size:.78rem;color:var(--color-text-muted,#8a8578);margin-top:3px;line-height:1.45}',
+        '.ach-notif-shine{position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,rgba(201,169,106,.55),transparent)}',
+        '@keyframes achIn{from{transform:translateX(120%) scale(.96);opacity:0}to{transform:translateX(0) scale(1);opacity:1}}',
+        '@keyframes achOut{to{transform:translateX(120%) scale(.96);opacity:0}}',
+        '@media(prefers-reduced-motion:reduce){.ach-notif{animation:none}}'
+      ].join('\n');
+      document.head.appendChild(st);
     }
 
+    var tierColor = (tierInfo && tierInfo.color) || '#c4956a';
+    var tierLabel = (tierInfo && tierInfo.label) || '成就';
+    var badge = '';
+    if (typeof window.renderBadgeSvg === 'function') {
+      try { badge = window.renderBadgeSvg(ach.key, { size: 46, earned: true }); } catch (e) { badge = ''; }
+    }
+
+    var notif = document.createElement('div');
+    notif.className = 'ach-notif';
+    notif.setAttribute('role', 'status');
+    notif.innerHTML =
+      '<div class="ach-notif-icon">' +
+        (badge || '<span class="ach-notif-fallback">' + (ach.name ? ach.name.charAt(0) : '') + '</span>') +
+      '</div>' +
+      '<div class="ach-notif-body">' +
+        '<div class="ach-notif-tier" style="color:' + tierColor + '">' + tierLabel + ' · 解锁成就</div>' +
+        '<div class="ach-notif-name">' + ach.name + '</div>' +
+        '<div class="ach-notif-desc">' + ach.desc + '</div>' +
+      '</div>' +
+      '<div class="ach-notif-shine"></div>';
     document.body.appendChild(notif);
 
-    // ACHIEVE_NOTIF_DISPLAY_MS 后自动消失
-    setTimeout(function() {
-      notif.style.animation = 'achieveSlideOut 0.5s ease forwards';
-      setTimeout(function() {
+    setTimeout(function () {
+      notif.classList.add('out');
+      setTimeout(function () {
         if (notif.parentNode) notif.parentNode.removeChild(notif);
       }, ACHIEVE_NOTIF_FADE_MS);
     }, ACHIEVE_NOTIF_DISPLAY_MS);
