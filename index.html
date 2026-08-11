@@ -286,36 +286,44 @@
     <div id="bq-boot-spinner" aria-hidden="true"></div>
   </div>
   <script>
-    // 首屏骨架遮罩自动淡出：页面真正 ready 之后平滑消失
-    // 三条信号任意一条达成就退出（避免某条卡死导致永久遮罩）
+    // 首屏骨架遮罩：加载动画展示 → 等应用首屏渲染完成 → 平滑淡出进入主页面。
+    // 遮罩在页面内容真正就绪后才消失，避免"内容还没渲染就过早撤遮罩"导致的卡顿/空白。
     (function () {
       var mask = document.getElementById('bq-boot-mask');
       if (!mask) return;
       var done = false;
-      function hide() {
+      var startTime = Date.now();
+      function fadeOut() {
         if (done) return;
         done = true;
         // 等下一轮 paint，保证页面已有可渲染内容再淡出遮罩
         requestAnimationFrame(function () {
           requestAnimationFrame(function () {
             mask.classList.add('is-ready');
-            // 淡出结束后从 DOM 移除，省 z-index 成本
             setTimeout(function () {
               if (mask && mask.parentNode) mask.parentNode.removeChild(mask);
             }, 500);
           });
         });
       }
-      // 信号1：DOMContentLoaded（首屏 HTML/CSS 基本就位）
-      if (document.readyState === 'interactive' || document.readyState === 'complete') {
-        setTimeout(hide, 60);
-      } else {
-        document.addEventListener('DOMContentLoaded', function () { setTimeout(hide, 60); });
+      function hideWhenAppReady() {
+        // 保证加载动画至少可见约 600ms，避免秒开时"看不到加载动画"
+        var elapsed = Date.now() - startTime;
+        if (elapsed >= 600) fadeOut();
+        else setTimeout(fadeOut, 600 - elapsed);
       }
-      // 信号2：window load（所有图片/资源完成，兜底）
-      window.addEventListener('load', function () { setTimeout(hide, 0); });
-      // 信号3：5.5s 硬超时（任何异常都不会让遮罩永久存在）
-      setTimeout(hide, 5500);
+
+      // 主信号：应用首屏渲染完成后派发（app.js 在首次路由渲染结束时触发）
+      document.addEventListener('bioquest:app-ready', hideWhenAppReady);
+
+      // 兜底信号：DOMContentLoaded / window load / 硬超时，任何异常都不会让遮罩永久存在
+      if (document.readyState === 'interactive' || document.readyState === 'complete') {
+        setTimeout(fadeOut, 1200);
+      } else {
+        document.addEventListener('DOMContentLoaded', function () { setTimeout(fadeOut, 1200); });
+      }
+      window.addEventListener('load', function () { setTimeout(fadeOut, 0); });
+      setTimeout(fadeOut, 5500);
     })();
   </script>
 
@@ -801,6 +809,8 @@
   <script src="js/mood-tracker.js?v=20260719v4" defer></script>
   <script src="js/a11y-utils.js?v=20260719v4" defer></script>
   <script src="js/community.js?v=20260725final" defer></script>
+  <!-- 社区回帖通知：收到回帖弹窗提示 + 我的-通知列表 -->
+  <script src="js/notifications.js?v=20260811f" defer></script>
   <!-- admin.js 改为 async：管理后台是按需访问的，让它独立加载不阻塞首屏 -->
   <script src="js/admin.js?v=20260806a" async></script>
   <script src="js/learning-hub.js?v=20260809f" defer></script>

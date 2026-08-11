@@ -2335,6 +2335,12 @@ function renderUserPage(target) {
 
         <!-- 功能列表（点击进入独立子页面） -->
         <div class="user-list-group" id="userListGroup">
+          <div class="user-list-item" onclick="_showUserSubPage('notifications')">
+            <div class="user-list-icon" style="background:#8a5ac4;">🔔</div>
+            <div class="user-list-info"><div class="user-list-title">通知</div><div class="user-list-desc">社区回帖和系统通知</div></div>
+            <span class="user-notif-badge" id="userNotifBadge" style="display:none;">0</span>
+            <svg class="user-list-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          </div>
           <div class="user-list-item" onclick="_showUserSubPage('streak')">
             <div class="user-list-icon" style="background:#c4956a;">🔥</div>
             <div class="user-list-info"><div class="user-list-title">打卡与成就</div><div class="user-list-desc">连续打卡天数与成就徽章</div></div>
@@ -2402,6 +2408,9 @@ function renderUserPage(target) {
       else if (typeof window.refreshCreditBadge === 'function') window.refreshCreditBadge();
     } catch (_) {}
 
+    // 刷新通知未读角标
+    try { _updateNotifBadge(); } catch (_) {}
+
     // 绑定密钥复制按钮
     var copyKeyBtn = document.getElementById('user-copy-key-btn');
     if (copyKeyBtn) {
@@ -2456,7 +2465,7 @@ window.refreshCreditBadge = refreshCreditBadge;
 
 // 子页面切换逻辑
 var _userSubPageTitles = {
-  streak: '打卡与成就', records: '学习记录', favorites: '收藏夹',
+  notifications: '通知', streak: '打卡与成就', records: '学习记录', favorites: '收藏夹',
   settings: '设置', data: '数据管理', storage: '存储与账号'
 };
 function _showUserSubPage(key) {
@@ -2494,6 +2503,8 @@ function _showUserSubPage(key) {
         bodyEl.innerHTML = '<div id="userStorageContainer"></div><div id="userAccountActionsContainer" style="margin-top:16px;text-align:center;"></div>';
         renderStorageInfo(document.getElementById('userStorageContainer'));
         renderAccountActions(document.getElementById('userAccountActionsContainer'));
+      } else if (key === 'notifications') {
+        renderNotificationsPanel(bodyEl);
       }
     } catch (e) {
       console.warn('[BioQuest] 子页面渲染失败:', key, e);
@@ -2512,6 +2523,68 @@ function _hideUserSubPage() {
 }
 window._showUserSubPage = _showUserSubPage;
 window._hideUserSubPage = _hideUserSubPage;
+
+/* ============== 通知中心（我的 → 通知） ============== */
+function _updateNotifBadge() {
+  try {
+    var badge = document.getElementById('userNotifBadge');
+    if (!badge) return;
+    var n = (typeof window.BioQuestNotifications === 'object' && typeof window.BioQuestNotifications.unreadCount === 'function')
+      ? window.BioQuestNotifications.unreadCount() : 0;
+    if (n > 0) {
+      badge.style.display = 'inline-flex';
+      badge.textContent = n > 99 ? '99+' : String(n);
+    } else {
+      badge.style.display = 'none';
+    }
+  } catch (e) {}
+}
+
+function renderNotificationsPanel(bodyEl) {
+  // 打开通知中心时视为已读
+  var list = (window.BioQuestNotifications && typeof window.BioQuestNotifications.markAllRead === 'function')
+    ? window.BioQuestNotifications.markAllRead() : [];
+  _updateNotifBadge();
+
+  var html = '<div class="user-notif-actions">' +
+    '<span class="user-notif-count">共 ' + list.length + ' 条通知</span>' +
+    '<button class="user-notif-clear" onclick="BioQuestNotifications.clear();renderNotificationsPanel(document.getElementById(\'userSubPageBody\'))">清空</button>' +
+    '</div>';
+  if (!list.length) {
+    html += '<div class="user-empty-state" style="padding:48px 20px;text-align:center;color:var(--text-muted,#8a8a8a);"><div style="font-size:2.2rem;margin-bottom:10px;">🔕</div><p>暂无通知</p><p style="font-size:0.82rem;margin-top:6px;">当有人回复你的社区帖子时，会在这里提醒你</p></div>';
+  } else {
+    html += '<div class="notif-list">' + list.map(function (n) {
+      var time = formatNotifTime(n.time);
+      return '<div class="notif-item">' +
+        '<div class="notif-icon">💬</div>' +
+        '<div class="notif-body">' +
+          '<div class="notif-title">' + escapeHtml(n.commenter || '同学') + ' 回复了你</div>' +
+          '<div class="notif-post">' + escapeHtml(n.postPreview || '你的帖子') + '</div>' +
+          '<div class="notif-comment">' + escapeHtml(n.comment || '') + '</div>' +
+          '<div class="notif-time">' + time + '</div>' +
+        '</div>' +
+      '</div>';
+    }).join('') + '</div>';
+  }
+  bodyEl.innerHTML = html;
+}
+
+function formatNotifTime(iso) {
+  try {
+    var d = new Date(iso);
+    if (isNaN(d.getTime())) return '';
+    var now = Date.now();
+    var diff = now - d.getTime();
+    if (diff < 60000) return '刚刚';
+    if (diff < 3600000) return Math.floor(diff / 60000) + ' 分钟前';
+    if (diff < 86400000) return Math.floor(diff / 3600000) + ' 小时前';
+    if (diff < 172800000) return '昨天';
+    var m = ('0' + (d.getMonth() + 1)).slice(-2);
+    var day = ('0' + d.getDate()).slice(-2);
+    return (d.getFullYear() + '-' + m + '-' + day);
+  } catch (e) { return ''; }
+}
+window._updateNotifBadge = _updateNotifBadge;
 
 /* ============== 管理员入口（需密码验证） ============== */
 function _userAdminEntry() {
