@@ -3603,10 +3603,10 @@ mark.search-highlight {
 }
 
 /* ============================================================
-   移动端底部标签栏
+   底部标签栏（悬浮胶囊，所有屏幕尺寸常驻，避免"导航栏不见了"）
    ============================================================ */
 .bottom-tab-bar {
-  display: none;
+  display: flex;
   position: fixed;
   bottom: 14px;
   left: 50%;
@@ -3625,12 +3625,6 @@ mark.search-highlight {
   justify-content: space-around;
   align-items: center;
   gap: 0;
-}
-
-@media (max-width: 768px) {
-  .bottom-tab-bar {
-    display: flex;
-  }
 }
 
 .bottom-tab {
@@ -3821,21 +3815,11 @@ mark.search-highlight {
   margin-top: 6px;
 }
 
-/* 移动端显示底部标签栏时，页面底部留出空间 */
-@media (max-width: 768px) {
-  .bottom-tab-bar {
-    display: flex;
-    z-index: 1000;
-  }
-
-  /* 给页面主内容留出底部标签栏的空间 */
-  #page-content {
-    padding-bottom: 70px;
-  }
-
-  /* 移动端隐藏桌面页脚（已被底部标签栏替代，避免遮挡） */
-  .footer {
-    display: none;
-  }
+/* 底部标签栏常驻：给页面主内容留出底部空间，隐藏桌面页脚避免遮挡 */
+#page-content {
+  padding-bottom: 84px;
+}
+.footer {
+  display: none;
 }
 
