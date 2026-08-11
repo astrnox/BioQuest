@@ -1012,7 +1012,9 @@ var escapeHtml = (typeof window !== 'undefined' && typeof window.escapeHtml === 
 
 /**
  * 重新初始化首页关键组件（倒计时、Hero 动画、滚动动画）
- * 这些组件位于首屏或影响全局交互，需要立即执行
+ * 这些组件位于首屏或影响全局交互，需要立即执行。
+ * 首次进入时会标记 AppState._homePaintedReady，
+ * 配合 finishRouting → bioquest:app-ready 实现"加载界面期间就加载好"。
  */
 function reinitHomeComponents() {
   const daysEl = document.getElementById('cd-days');
@@ -1041,11 +1043,29 @@ function reinitHomeComponents() {
   }
 
   if (typeof initHeroSketch === 'function') {
-    setTimeout(function () { initHeroSketch(); }, 150);
+    try { initHeroSketch(); } catch (e) { console.warn('[BioQuest] Hero sketch init failed:', e); }
   }
 
   // 初始化平滑滚动动画（全局，首屏可见元素立即触发动画）
   initScrollAnimations();
+
+  // 标记首页渲染完成（Hero 画布 + 倒计时数字 + 滚动动画已启动）
+  // 下一帧再确认高度>0，确保布局已写入，避免撤遮罩后"还没撑开页面 → 下拉卡一下"
+  requestAnimationFrame(function () {
+    requestAnimationFrame(function () {
+      var hero = document.getElementById('main-content') || document.querySelector('.hero');
+      if (hero) {
+        // 触发一次 reflow 读取，强制浏览器完成布局
+        void hero.offsetHeight;
+      }
+      AppState._homePaintedReady = true;
+      // 若 finishRouting 已经执行过，则这里补发 app-ready 信号（解除遮罩等待）
+      if (AppState._homeRouteRendered && !AppState._appReadyDispatched) {
+        AppState._appReadyDispatched = true;
+        try { document.dispatchEvent(new CustomEvent('bioquest:app-ready')); } catch (e) {}
+      }
+    });
+  });
 
   // 非关键模块延迟执行，避免阻塞首屏交互
   scheduleIdleWork(initNonCriticalHomeModules, { delay: 80 });
@@ -1399,6 +1419,34 @@ function handleRoute(route) {
   function finishRouting() {
     _routingInProgress = false;
     _flushPendingRoute();
+    // 每次路由渲染完成都广播，供"回到顶部按钮"等按路由变化的组件刷新状态
+    try { document.dispatchEvent(new CustomEvent('bioquest:route-change')); } catch (e) {}
+    // 首次路由渲染完成 → 通知首屏骨架遮罩淡出（只在首次触发一次）
+    if (!AppState._appReadyDispatched) {
+      var route = AppState.currentRoute || (window.location.hash || '#/').replace(/^#/, '') || '/';
+      var isHome = (route === '/' || route === '' || route === '/index.html');
+      if (isHome) {
+        // 首页：等 reinitHomeComponents 把 Hero/倒计时/滚动动画都绘制完成（见 reinitHomeComponents rAF 回调）
+        AppState._homeRouteRendered = true;
+        // 保险兜底：若 reinitHomeComponents 没被调用或超时，500ms 后仍会发 app-ready，不让遮罩卡住
+        var safetyTimer = setTimeout(function () {
+          if (!AppState._appReadyDispatched) {
+            AppState._appReadyDispatched = true;
+            try { document.dispatchEvent(new CustomEvent('bioquest:app-ready')); } catch (e) {}
+          }
+        }, 1500);
+        // 若已提前 ready（非典型路径），立刻派发并清定时器
+        if (AppState._homePaintedReady) {
+          clearTimeout(safetyTimer);
+          AppState._appReadyDispatched = true;
+          try { document.dispatchEvent(new CustomEvent('bioquest:app-ready')); } catch (e) {}
+        }
+      } else {
+        // 非首页路由：首次路由渲染完即可撤遮罩
+        AppState._appReadyDispatched = true;
+        try { document.dispatchEvent(new CustomEvent('bioquest:app-ready')); } catch (e) {}
+      }
+    }
   }
 
   function showModuleError(modName, err) {
@@ -5161,52 +5209,6 @@ window.showFeedbackModal = showFeedbackModal;
 window.closeFeedbackModal = closeFeedbackModal;
 window.handleFeedbackSubmit = handleFeedbackSubmit;
 window.showToast = showToast;
-
-// ============================================================
-// PRD §5-25：回到顶部按钮
-// ============================================================
-(function () {
-  var btn = document.createElement('button');
-  btn.id = 'back-to-top-btn';
-  btn.setAttribute('aria-label', '回到顶部');
-  btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>';
-  btn.style.cssText = [
-    'position:fixed',
-    'bottom:24px',
-    'right:24px',
-    'z-index:9990',
-    'width:44px',
-    'height:44px',
-    'border-radius:50%',
-    'background:var(--color-sage,#5a7d5c)',
-    'color:#fff',
-    'border:none',
-    'cursor:pointer',
-    'display:none',
-    'align-items:center',
-    'justify-content:center',
-    'box-shadow:0 4px 16px rgba(0,0,0,0.2)',
-    'transition:opacity 0.3s ease,transform 0.3s ease',
-    'opacity:0.8'
-  ].join(';');
-
-  btn.addEventListener('mouseenter', function () { btn.style.opacity = '1'; });
-  btn.addEventListener('mouseleave', function () { btn.style.opacity = '0.8'; });
-  btn.addEventListener('click', function () {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-
-  document.body.appendChild(btn);
-
-  var _scrollTimer = null;
-  window.addEventListener('scroll', function () {
-    if (_scrollTimer) cancelAnimationFrame(_scrollTimer);
-    _scrollTimer = requestAnimationFrame(function () {
-      var shouldShow = window.scrollY > window.innerHeight * 2;
-      btn.style.display = shouldShow ? 'flex' : 'none';
-    });
-  }, { passive: true });
-})();
 
 // ============================================================
 // PRD §5-30：网络状态指示器

@@ -446,7 +446,8 @@ body {
   font-size: 1.05rem;
   color: var(--text-secondary);
   max-width: 520px;
-  margin-bottom: 48px;
+  margin: 0 auto 48px;
+  text-align: center;
 }
 
 /* ============================================================
@@ -3603,29 +3604,28 @@ mark.search-highlight {
 }
 
 /* ============================================================
-   移动端底部标签栏
+   底部标签栏（悬浮胶囊，所有屏幕尺寸常驻，避免"导航栏不见了"）
    ============================================================ */
 .bottom-tab-bar {
-  display: none;
+  display: flex;
   position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 900;
-  background: var(--surface-primary, #ffffff);
-  border-top: 1px solid var(--border-light, #ece8e1);
-  padding: 4px 0;
-  padding-bottom: max(4px, env(safe-area-inset-bottom));
-  box-shadow: 0 -2px 12px rgba(26, 58, 42, 0.06);
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(92%, 420px);
+  box-sizing: border-box;
+  z-index: 1000;
+  background: rgba(18, 26, 21, 0.82);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 6px 10px;
+  padding-bottom: calc(6px + env(safe-area-inset-bottom, 0px));
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
   justify-content: space-around;
   align-items: center;
   gap: 0;
-}
-
-@media (max-width: 768px) {
-  .bottom-tab-bar {
-    display: flex;
-  }
 }
 
 .bottom-tab {
@@ -3636,7 +3636,7 @@ mark.search-highlight {
   gap: 2px;
   padding: 6px 12px;
   text-decoration: none;
-  color: var(--text-muted, #8a8a8a);
+  color: rgba(255, 255, 255, 0.72);
   transition: color 0.2s ease;
   min-width: 56px;
   flex: 1;
@@ -3657,32 +3657,170 @@ mark.search-highlight {
 
 .bottom-tab:hover,
 .bottom-tab:active {
-  color: var(--color-sage, #5a7d5c);
+  color: #ffffff;
 }
 
 .bottom-tab.active {
-  color: var(--color-deep, #1a3a2a);
+  color: #ffffff;
 }
 
 .bottom-tab.active svg {
   transform: scale(1.05);
 }
 
-/* 移动端显示底部标签栏时，页面底部留出空间 */
-@media (max-width: 768px) {
-  .bottom-tab-bar {
-    display: flex;
-    z-index: 1000;
-  }
+/* 通知弹窗（右上角收到回帖提示） */
+.bq-notify-popup {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 10050;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  width: min(340px, calc(100vw - 32px));
+  box-sizing: border-box;
+  padding: 14px 16px;
+  background: var(--surface-primary, #ffffff);
+  color: var(--text-primary, #1a1a1a);
+  border: 1px solid var(--border-light, #ece8e1);
+  border-radius: 14px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.16);
+  cursor: pointer;
+  animation: bqNotifyIn 0.3s ease;
+}
+@keyframes bqNotifyIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.bq-notify-icon {
+  font-size: 1.3rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+.bq-notify-body { flex: 1; min-width: 0; }
+.bq-notify-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+.bq-notify-post {
+  font-size: 0.8rem;
+  color: var(--text-muted, #8a8a8a);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 2px;
+}
+.bq-notify-comment {
+  font-size: 0.82rem;
+  color: var(--text-secondary, #555);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.bq-notify-close {
+  border: none;
+  background: none;
+  color: var(--text-muted, #999);
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding: 2px 4px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+.bq-notify-close:hover { color: var(--text-primary, #1a1a1a); }
 
-  /* 给页面主内容留出底部标签栏的空间 */
-  #page-content {
-    padding-bottom: 70px;
-  }
+/* 我的 → 通知 */
+.user-notif-badge {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 6px;
+  box-sizing: border-box;
+  border-radius: 12px;
+  background: #e0555a;
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 600;
+  line-height: 1;
+  flex-shrink: 0;
+}
+.user-notif-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 2px 14px;
+}
+.user-notif-count {
+  font-size: 0.82rem;
+  color: var(--text-muted, #8a8a8a);
+}
+.user-notif-clear {
+  border: 1px solid var(--border-light, #e3e0d8);
+  background: transparent;
+  color: var(--text-secondary, #555);
+  font-size: 0.8rem;
+  padding: 4px 12px;
+  border-radius: 14px;
+  cursor: pointer;
+}
+.user-notif-clear:hover {
+  background: var(--surface-secondary, #faf7f2);
+}
+.notif-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.notif-item {
+  display: flex;
+  gap: 12px;
+  padding: 14px;
+  border: 1px solid var(--border-light, #ece8e1);
+  border-radius: 14px;
+  background: var(--surface-primary, #ffffff);
+}
+.notif-icon {
+  font-size: 1.2rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+.notif-body { flex: 1; min-width: 0; }
+.notif-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+.notif-post {
+  font-size: 0.8rem;
+  color: var(--text-muted, #8a8a8a);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 2px;
+}
+.notif-comment {
+  font-size: 0.82rem;
+  color: var(--text-secondary, #555);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.notif-time {
+  font-size: 0.72rem;
+  color: var(--text-muted, #aaa);
+  margin-top: 6px;
+}
 
-  /* 移动端隐藏桌面页脚（已被底部标签栏替代，避免遮挡） */
-  .footer {
-    display: none;
-  }
+/* 底部标签栏常驻：给页面主内容留出底部空间，隐藏桌面页脚避免遮挡 */
+#page-content {
+  padding-bottom: 84px;
+}
+.footer {
+  display: none;
 }
 
