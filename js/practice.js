@@ -319,6 +319,45 @@ function injectPracticeStyles() {
       line-height: 1.6;
       padding-top: 2px;
     }
+
+    .practice-shortcut-hint {
+      margin-top: 14px;
+      padding: 10px 14px;
+      border: 1px dashed var(--border-light, #ece8e1);
+      border-radius: 10px;
+      background: var(--surface-secondary, rgba(0,0,0,0.02));
+      font-size: 0.78rem;
+      color: var(--text-muted, #8a8a8a);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 14px;
+      align-items: center;
+      line-height: 1.8;
+    }
+    .practice-shortcut-hint kbd {
+      display: inline-block;
+      min-width: 1.2em;
+      padding: 1px 6px;
+      border: 1px solid var(--border-light, #d8d4cc);
+      border-bottom-width: 2px;
+      border-radius: 5px;
+      background: var(--surface-primary, #fff);
+      color: var(--text-secondary, #555);
+      font-family: var(--font-mono, ui-monospace, monospace);
+      font-size: 0.74rem;
+      line-height: 1.4;
+      text-align: center;
+      white-space: nowrap;
+    }
+    .practice-shortcut-hint .sh-sep {
+      color: var(--border-light, #d0ccc4);
+    }
+    @media (max-width: 640px) {
+      .practice-shortcut-hint {
+        font-size: 0.72rem;
+        gap: 4px 10px;
+      }
+    }
   `;
 
   document.head.appendChild(style);
@@ -1890,6 +1929,18 @@ function renderQuiz() {
         <span>已答：<strong>${PracticeState.totalAnswered}</strong> 题</span>
         <span>正确率：<strong>${PracticeState.totalAnswered > 0 ? calcAccuracyStr() : '--'}</strong></span>
       </div>
+
+      <div class="practice-shortcut-hint" aria-label="键盘快捷键提示">
+        ${(isLogicQuestion || isStandardChoice)
+          ? '<span><kbd>1</kbd><kbd>2</kbd><kbd>3</kbd><kbd>4</kbd> 选答案</span>'
+          : ''
+        }
+        <span><kbd>Space</kbd>/<kbd>Enter</kbd> ${PracticeState.submitted ? '下一题' : '提交答案'}</span>
+        <span><kbd>R</kbd> 重做本题</span>
+        <span><kbd>Esc</kbd> 返回列表</span>
+        <span class="sh-sep">·</span>
+        <span><kbd>?</kbd> 全部快捷键</span>
+      </div>
     </div>
   `;
 
@@ -2576,9 +2627,9 @@ function handlePracticeKeydown(e) {
   }
 
   // Space / Enter → 提交答案 / 下一题
+  // 统一 preventDefault：无论焦点在哪个按钮，Space/Enter 都固定走提交/下一题，
+  // 避免点完收藏/错题按钮后焦点停留导致 Space 误触发该按钮
   if (!typing && (key === ' ' || key === 'Spacebar' || key === 'Enter')) {
-    // 焦点在按钮上时让原生 click 触发，避免与提交/下一题重复执行
-    if (active && active.tagName === 'BUTTON') return;
     e.preventDefault();
     if (!PracticeState.submitted) {
       handleSubmitAnswer();
