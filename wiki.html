@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#1a2f1d">
+  <meta name="color-scheme" content="light dark">
+  <title>百科 - BioQuest</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%235a7d5c' rx='12'/%3E%3Cpath d='M18 20h28M18 32h28M18 44h18' stroke='%23fff' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+  <style>
+    /* 首屏防闪烁，与全站一致 */
+    html, body { margin:0; padding:0; background:#faf8f5; color:#2c3e30; overflow-x:clip; }
+    html[data-theme="dark"], html[data-theme="dark"] body { background:#141a16; color:#e0e8e2; }
+  </style>
+  <script>
+    // 渲染前同步读主题，防白闪
+    try {
+      var t = localStorage.getItem('bioquest_theme') || 'light';
+      document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  </script>
+  <link rel="stylesheet" href="css/globals.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/wiki.css">
+</head>
+<body>
+  <header class="header">
+    <a href="index.html" class="header-brand">
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+        <circle cx="14" cy="14" r="12" stroke="#e8a830" stroke-width="2"/>
+        <circle cx="14" cy="14" r="4" fill="#e8a830"/>
+      </svg>
+      BioQuest
+    </a>
+    <div class="header-right">
+      <button class="hamburger" id="hamburgerBtn" aria-label="菜单">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-nav-overlay" id="mobileOverlay"></div>
+  <nav class="mobile-nav" id="mobileNav">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid var(--border-light);">
+      <div style="display:flex;align-items:center;gap:10px;">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+          <circle cx="14" cy="14" r="12" stroke="#e8a830" stroke-width="2"/>
+          <circle cx="14" cy="14" r="4" fill="#e8a830"/>
+          <path d="M14 2v4M14 22v4M2 14h4M22 14h4" stroke="#5a7d5c" stroke-width="1.5"/>
+        </svg>
+        <span style="font-weight:700;font-size:1.1rem;color:var(--color-deep);">BioQuest</span>
+      </div>
+      <button id="mobileNavClose" style="background:none;border:none;font-size:22px;cursor:pointer;color:var(--text-muted);padding:4px 8px;">✕</button>
+    </div>
+    <div class="mobile-nav-scroll">
+      <a href="index.html">首页</a>
+      <a href="index.html#/practice" class="nav-highlight">练习</a>
+      <a href="index.html#/exam" class="nav-highlight">模考</a>
+      <a href="study.html">学习</a>
+      <a href="biology-history.html">生物学史</a>
+      <a href="cards.html">卡片</a>
+      <a href="ebook.html">电子书</a>
+      <a href="quiz.html">试题</a>
+      <a href="resources.html">资源</a>
+      <a href="wiki.html" class="active">百科</a>
+      <a href="index.html#/knowledge-graph">图谱</a>
+      <a href="index.html#/diagnosis">诊断</a>
+      <a href="index.html#/pomodoro">专注</a>
+      <a href="index.html#/habits">习惯</a>
+      <a href="index.html#/review">复习</a>
+      <a href="index.html#/community">社区</a>
+      <a href="index.html#/analytics">分析</a>
+      <a href="index.html#/user">我的</a>
+    </div>
+  </nav>
+
+  <main style="padding-top: calc(var(--header-height, 64px) + 32px);">
+    <section class="section">
+      <div class="container">
+        <div class="section-label">BIOLOGY WIKI</div>
+        <h2 class="section-title">BioQuest 百科</h2>
+        <p class="section-desc">协作编纂的生物学词条库。支持从维基百科 / 百度百科一键抓取导入，也可手动创建编辑。所有数据保存在本地浏览器。</p>
+
+        <div class="wiki-toolbar">
+          <div class="wiki-search-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="11" cy="11" r="7"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" id="wikiSearch" class="wiki-search-input" placeholder="搜索词条标题、摘要、正文、标签…">
+          </div>
+          <div class="wiki-toolbar-actions">
+            <button id="wikiImportOpenBtn" class="wiki-btn wiki-btn-ghost" title="从维基百科 / 百度百科抓取">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              <span>从维基导入</span>
+            </button>
+            <button id="wikiNewBtn" class="wiki-btn wiki-btn-primary" title="新建词条">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              <span>新建词条</span>
+            </button>
+            <button id="wikiExportBtn" class="wiki-btn wiki-btn-ghost wiki-btn-icon" title="导出备份 JSON" aria-label="导出备份">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="wiki-filter-row">
+          <span class="wiki-filter-label">分类：</span>
+          <div id="wikiCategoryFilters" class="wiki-chips"></div>
+        </div>
+        <div class="wiki-filter-row">
+          <span class="wiki-filter-label">标签：</span>
+          <div id="wikiTagFilters" class="wiki-chips"></div>
+        </div>
+
+        <div class="wiki-meta">
+          <span>共 <strong id="wikiCount">0</strong> 条词条</span>
+        </div>
+
+        <div class="wiki-grid" id="wikiGrid"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-brand">BioQuest — 生物竞赛学习平台</div>
+      <div class="footer-links">
+        <a href="cards.html">知识卡片</a>
+        <a href="quiz.html">模拟试题</a>
+        <a href="resources.html">学习资源</a>
+        <a href="wiki.html">百科</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ====== 详情模态 ====== -->
+  <div class="wiki-modal" id="wikiDetailModal" aria-hidden="true">
+    <div class="wiki-modal-backdrop"></div>
+    <div class="wiki-modal-panel wiki-modal-panel-lg" role="dialog" aria-modal="true" aria-labelledby="wikiDetailTitle">
+      <button class="wiki-modal-close" aria-label="关闭">&times;</button>
+      <div class="wiki-modal-body" id="wikiDetailBody"></div>
+      <div class="wiki-modal-footer">
+        <button class="wiki-btn wiki-btn-danger" id="wikiDetailDelete">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6M14 11v6"/><path d="M9 6V4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/></svg>
+          <span>删除</span>
+        </button>
+        <button class="wiki-btn wiki-btn-primary" id="wikiDetailEdit">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+          <span>编辑</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== 编辑器模态 ====== -->
+  <div class="wiki-modal" id="wikiEditorModal" aria-hidden="true">
+    <div class="wiki-modal-backdrop"></div>
+    <div class="wiki-modal-panel wiki-modal-panel-lg" role="dialog" aria-modal="true">
+      <button class="wiki-modal-close" aria-label="关闭">&times;</button>
+      <div class="wiki-modal-head">
+        <h3 id="wikiEditorTitle">新建词条</h3>
+        <div class="wiki-md-toolbar">
+          <button type="button" class="wiki-md-btn" data-md-insert="h2" title="二级标题">H2</button>
+          <button type="button" class="wiki-md-btn" data-md-insert="h3" title="三级标题">H3</button>
+          <button type="button" class="wiki-md-btn" data-md-insert="bold" title="粗体"><b>B</b></button>
+          <button type="button" class="wiki-md-btn" data-md-insert="italic" title="斜体"><i>I</i></button>
+          <button type="button" class="wiki-md-btn" data-md-insert="code" title="行内代码">&lt;/&gt;</button>
+          <button type="button" class="wiki-md-btn" data-md-insert="list" title="列表">•</button>
+          <button type="button" class="wiki-md-btn" data-md-insert="quote" title="引用">❝</button>
+          <button type="button" class="wiki-md-btn" data-md-insert="link" title="链接">🔗</button>
+        </div>
+      </div>
+      <form id="wikiEditorForm" class="wiki-modal-body wiki-editor-form">
+        <div class="wiki-field-row">
+          <label class="wiki-field">
+            <span class="wiki-field-label">标题 <em>*</em></span>
+            <input type="text" name="title" maxlength="80" placeholder="如：线粒体" required>
+          </label>
+          <label class="wiki-field wiki-field-sm">
+            <span class="wiki-field-label">分类</span>
+            <select name="category">
+              <option value="">未分类</option>
+              <option>细胞生物学</option>
+              <option>分子生物学</option>
+              <option>生物化学</option>
+              <option>遗传学</option>
+              <option>动物学</option>
+              <option>植物学</option>
+              <option>微生物学</option>
+              <option>生态学</option>
+            </select>
+          </label>
+        </div>
+        <div class="wiki-field-row">
+          <label class="wiki-field">
+            <span class="wiki-field-label">别名（用、或逗号分隔）</span>
+            <input type="text" name="aliases" placeholder="如：mitochondrion、动力工厂">
+          </label>
+          <label class="wiki-field">
+            <span class="wiki-field-label">标签（用、或逗号分隔）</span>
+            <input type="text" name="tags" placeholder="如：细胞器、能量代谢">
+          </label>
+        </div>
+        <label class="wiki-field">
+          <span class="wiki-field-label">摘要（一句话概述）</span>
+          <input type="text" name="summary" maxlength="200" placeholder="一句话概括该词条">
+        </label>
+        <div class="wiki-field">
+          <span class="wiki-field-label">正文（Markdown）<em>*</em></span>
+          <div class="wiki-editor-split">
+            <textarea name="content" rows="14" placeholder="支持 Markdown：## 标题、**粗体**、- 列表、[链接](url)、$$公式$$ 等" required></textarea>
+            <div class="wiki-editor-preview" id="wikiEditorPreview"></div>
+          </div>
+        </div>
+      </form>
+      <div class="wiki-modal-footer">
+        <button type="button" class="wiki-btn wiki-btn-ghost" id="wikiEditorCancel">取消</button>
+        <button type="submit" class="wiki-btn wiki-btn-primary" form="wikiEditorForm">保存</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== 导入模态 ====== -->
+  <div class="wiki-modal" id="wikiImportModal" aria-hidden="true">
+    <div class="wiki-modal-backdrop"></div>
+    <div class="wiki-modal-panel" role="dialog" aria-modal="true">
+      <button class="wiki-modal-close" aria-label="关闭">&times;</button>
+      <div class="wiki-modal-head"><h3>从外部百科导入</h3></div>
+      <form id="wikiImportForm" class="wiki-modal-body">
+        <label class="wiki-field">
+          <span class="wiki-field-label">数据来源</span>
+          <select name="source">
+            <option value="zh">维基百科（中文）</option>
+            <option value="en">维基百科（English）</option>
+            <option value="baidu">百度百科（实验性）</option>
+            <option value="manual">手动粘贴 Markdown</option>
+          </select>
+        </label>
+        <div id="wikiImportTitleBox">
+          <label class="wiki-field">
+            <span class="wiki-field-label">词条名称</span>
+            <input type="text" name="title" placeholder="如：减数分裂 / Meiosis">
+          </label>
+          <p class="wiki-import-hint">输入精确的百科词条名，系统会自动抓取摘要与正文并转为 Markdown，导入后可在编辑器中修改分类与标签。</p>
+        </div>
+        <div id="wikiManualBox" style="display:none">
+          <label class="wiki-field">
+            <span class="wiki-field-label">标题 <em>*</em></span>
+            <input type="text" name="manualTitle" placeholder="词条标题">
+          </label>
+          <label class="wiki-field">
+            <span class="wiki-field-label">正文（Markdown）<em>*</em></span>
+            <textarea name="manualContent" rows="10" placeholder="粘贴 Markdown 内容…"></textarea>
+          </label>
+        </div>
+        <div class="wiki-import-status" id="wikiImportStatus"></div>
+      </form>
+      <div class="wiki-modal-footer">
+        <button type="button" class="wiki-btn wiki-btn-ghost" id="wikiImportCancel">取消</button>
+        <button type="submit" class="wiki-btn wiki-btn-primary" id="wikiImportBtn" form="wikiImportForm">
+          <span class="wiki-btn-spinner"></span>
+          <span>抓取并导入</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- DOMPurify：对导入/用户编写的 Markdown 做最终消毒，防 XSS -->
+  <script src="js/vendor/purify.min.js"></script>
+  <script src="js/utils.js?v=20260812a"></script>
+  <script src="js/wiki.js?v=20260812a"></script>
+  <script>
+    // 汉堡菜单
+    (function() {
+      var btn = document.getElementById('hamburgerBtn');
+      var nav = document.getElementById('mobileNav');
+      var overlay = document.getElementById('mobileOverlay');
+      var closeBtn = document.getElementById('mobileNavClose');
+      function toggle() {
+        nav.classList.toggle('active');
+        overlay.classList.toggle('active');
+        btn.classList.toggle('active');
+      }
+      if (btn) btn.addEventListener('click', toggle);
+      if (overlay) overlay.addEventListener('click', toggle);
+      if (closeBtn) closeBtn.addEventListener('click', toggle);
+    })();
+    // 主题切换：点击 logo 切换明暗（与全站习惯一致，简单实现）
+    (function () {
+      // 预留：若全站有统一主题切换按钮可移除
+    })();
+  </script>
+</body>
+</html>
