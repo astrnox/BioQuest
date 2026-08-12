@@ -1497,6 +1497,45 @@ if (typeof window !== 'undefined') {
   window.ALL_BOOKS = ALL_BOOKS;
 }
 
+/* ============================================================
+ * 关联知识点 Topic 字典
+ * 数据来源：data/topics.json（覆盖 ALL_BOOKS 中所有 relatedTopics 引用的 ID）
+ * 异步加载，失败时回退到空字典（renderContent 会以 ID 兜底显示）
+ * ============================================================ */
+const EBOOK_TOPICS = {
+  topics: {},
+  moduleLabels: {},
+  loaded: false,
+};
+
+function _loadTopics(callback) {
+  if (EBOOK_TOPICS.loaded) { if (callback) callback(); return; }
+  fetch('data/topics.json?v=20260812a', { cache: 'no-cache' })
+    .then(function (resp) { if (!resp.ok) throw new Error('HTTP ' + resp.status); return resp.json(); })
+    .then(function (data) {
+      if (data && data.topics) EBOOK_TOPICS.topics = data.topics;
+      if (data && data.moduleLabels) EBOOK_TOPICS.moduleLabels = data.moduleLabels;
+      EBOOK_TOPICS.loaded = true;
+      if (callback) callback();
+    })
+    .catch(function (err) {
+      console.warn('[ebook] 加载 data/topics.json 失败:', err.message, '—— 关联知识点将以 ID 兜底显示');
+      EBOOK_TOPICS.loaded = true;
+      if (callback) callback();
+    });
+}
+
+// 查询单个 topic 元数据，未命中时返回 null
+function getTopicMeta(topicId) {
+  if (!topicId) return null;
+  return EBOOK_TOPICS.topics[topicId] || null;
+}
+
+if (typeof window !== 'undefined') {
+  window.EBOOK_TOPICS = EBOOK_TOPICS;
+  window.getTopicMeta = getTopicMeta;
+}
+
 // 当前选择的书
 let currentBookIndex = 0;
 
@@ -1566,6 +1605,36 @@ function saveToStorage(key, value) {
 
 function getReadSections() {
   return loadFromStorage(STORAGE_KEYS.READ_SECTIONS, []);
+}
+
+// HTML 属性转义，避免 topic 描述中的引号破坏 title="..."
+function _escapeAttr(s) {
+  if (s == null) return '';
+  return String(s)
+    .replace(/&/g, '&amp;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+}
+
+// 将中文分类名转为 CSS 类安全 slug（细胞生物学 -> cell-biology 风格不可行，直接用 hash）
+// 这里采用「cat-」+ 去掉非汉字字母数字后的简化形式，便于 CSS 按 [data-category] 着色
+function _categorySlug(category) {
+  if (!category) return 'misc';
+  // 直接用 category 的字符拼接，CSS 中通过 [data-category="..."] 着色更可靠
+  // 这里返回一个稳定的短 id 用于附加 class
+  var map = {
+    '细胞生物学': 'cell',
+    '分子生物学': 'molbio',
+    '生物化学': 'biochem',
+    '遗传学': 'genetics',
+    '动物学': 'zoology',
+    '植物学': 'botany',
+    '微生物学': 'micro',
+    '生态学': 'eco'
+  };
+  return map[category] || 'misc';
 }
 
 function markAsRead(sectionId) {
@@ -1755,10 +1824,26 @@ function renderContent(sectionId) {
     relatedHtml = `<div class="ebook-related">`;
     relatedHtml += `<div class="ebook-related-title">关联知识点</div>`;
     relatedHtml += `<div class="ebook-related-tags">`;
-    for (const topic of section.relatedTopics) {
-      relatedHtml += `<a class="ebook-related-tag" href="cards.html" title="跳转到知识卡片">`;
+    for (const topicId of section.relatedTopics) {
+      const meta = getTopicMeta(topicId);
+      const displayName = meta ? meta.name : topicId;
+      const category = meta ? meta.category : '';
+      const moduleKey = meta ? meta.module : '';
+      const moduleLabel = (moduleKey && EBOOK_TOPICS.moduleLabels[moduleKey]) || '';
+      const desc = meta ? meta.description : '';
+      // 拼装 tooltip：分类 / 模块 / 描述
+      const tipParts = [];
+      if (category) tipParts.push(category);
+      if (moduleLabel) tipParts.push(moduleLabel);
+      if (desc) tipParts.push(desc);
+      const tip = tipParts.join(' · ');
+      // data-* 用于 CSS 分类着色与检索
+      relatedHtml += `<a class="ebook-related-tag${category ? ' cat-' + _categorySlug(category) : ''}" href="cards.html" title="${_escapeAttr(tip)}" data-topic-id="${_escapeAttr(topicId)}"${category ? ` data-category="${_escapeAttr(category)}"` : ''}${moduleKey ? ` data-module="${_escapeAttr(moduleKey)}"` : ''}>`;
       relatedHtml += `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>`;
-      relatedHtml += `${topic}`;
+      if (category) {
+        relatedHtml += `<span class="ebook-related-tag-cat">${category}</span>`;
+      }
+      relatedHtml += `<span class="ebook-related-tag-name">${displayName}</span>`;
       relatedHtml += `</a>`;
     }
     relatedHtml += `</div></div>`;
@@ -2201,10 +2286,13 @@ async function loadCustomEbooks() {
 
 /* ----- 初始化 ----- */
 function initEbook() {
-  // 先加载自定义书籍，再初始化
-  loadCustomEbooks().then(function() {
+  // 先并行加载关联知识点字典与自定义书籍，再初始化
+  Promise.all([
+    new Promise(function (resolve) { _loadTopics(resolve); }),
+    loadCustomEbooks().catch(function () { /* 已有 catch 兜底 */ }),
+  ]).then(function () {
     _initEbookCore();
-  }).catch(function() {
+  }).catch(function () {
     _initEbookCore();
   });
 }
