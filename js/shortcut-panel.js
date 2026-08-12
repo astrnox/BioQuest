@@ -14,15 +14,16 @@
     {
       section: '答题',
       keys: [
-        { key: '1-5 / A-E', desc: '选择对应选项' },
-        { key: 'Space / Enter', desc: '下一题 / 提交答案' }
+        { key: '1 / 2 / 3 / 4', desc: '选择 A / B / C / D（单选题）' },
+        { key: 'Space / Enter', desc: '提交答案，自动跳下一题' },
+        { key: 'R', desc: '重做当前题目' }
       ]
     },
     {
       section: '导航',
       keys: [
         { key: '?', desc: '显示/隐藏快捷键面板' },
-        { key: 'Esc', desc: '关闭弹窗 / 面板' }
+        { key: 'Esc', desc: '关闭弹窗 / 返回题目列表' }
       ]
     },
     {
