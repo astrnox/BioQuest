@@ -1,0 +1,25 @@
+name: Update Star Chart
+on:
+  schedule:
+    - cron: '0 */3 * * *'  # 每3小时自动更新一次
+  workflow_dispatch:        # 支持手动触发
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: 生成 star 趋势图
+        run: |
+          npm install -g star-history
+          star-history generate astrnox/bioquest --output star-chart.svg --token ${{ secrets.GITHUB_TOKEN }}
+      - name: 提交并更新图片
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add star-chart.svg
+          git commit -m "auto: update star chart" || exit 0
+          git push
