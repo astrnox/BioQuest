@@ -319,6 +319,45 @@ function injectPracticeStyles() {
       line-height: 1.6;
       padding-top: 2px;
     }
+
+    .practice-shortcut-hint {
+      margin-top: 14px;
+      padding: 10px 14px;
+      border: 1px dashed var(--border-light, #ece8e1);
+      border-radius: 10px;
+      background: var(--surface-secondary, rgba(0,0,0,0.02));
+      font-size: 0.78rem;
+      color: var(--text-muted, #8a8a8a);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 14px;
+      align-items: center;
+      line-height: 1.8;
+    }
+    .practice-shortcut-hint kbd {
+      display: inline-block;
+      min-width: 1.2em;
+      padding: 1px 6px;
+      border: 1px solid var(--border-light, #d8d4cc);
+      border-bottom-width: 2px;
+      border-radius: 5px;
+      background: var(--surface-primary, #fff);
+      color: var(--text-secondary, #555);
+      font-family: var(--font-mono, ui-monospace, monospace);
+      font-size: 0.74rem;
+      line-height: 1.4;
+      text-align: center;
+      white-space: nowrap;
+    }
+    .practice-shortcut-hint .sh-sep {
+      color: var(--border-light, #d0ccc4);
+    }
+    @media (max-width: 640px) {
+      .practice-shortcut-hint {
+        font-size: 0.72rem;
+        gap: 4px 10px;
+      }
+    }
   `;
 
   document.head.appendChild(style);
@@ -650,6 +689,7 @@ function initNewSession() {
   PracticeState.currentSet = generateQuestionSet();
   PracticeState.currentIndex = 0;
   PracticeState.userAnswers = {};
+  PracticeState._counted = {};
   PracticeState.submitted = false;
   PracticeState.wrongMarked = new Set();
   PracticeState.totalScore = 0;
@@ -858,9 +898,15 @@ function handleSubmitAnswer() {
   }
 
   PracticeState.submitted = true;
-  updateStatsForQuestion(q, userAnswers);
-  // 每提交一题后检查是否需要同步分数到服务器
-  checkAndSyncScore();
+  // 统计仅在首次提交时计入：R 键重做后再次提交不会重复计数
+  // （bio_score / 错题本 / 成就 / 难度统计均只触发一次）
+  if (!PracticeState._counted) PracticeState._counted = {};
+  if (!PracticeState._counted[PracticeState.currentIndex]) {
+    PracticeState._counted[PracticeState.currentIndex] = true;
+    updateStatsForQuestion(q, userAnswers);
+    // 每提交一题后检查是否需要同步分数到服务器
+    checkAndSyncScore();
+  }
   renderQuiz();
 }
 
@@ -1603,6 +1649,7 @@ function bindWrongPracticeEntry() {
       PracticeState.totalAnswered = 0;
       PracticeState.totalScore = 0;
       PracticeState.userAnswers = {};
+      PracticeState._counted = {};
       PracticeState.submitted = false;
       PracticeState.wrongMarked = new Set();
       PracticeState.moduleStats = {};
@@ -1881,6 +1928,18 @@ function renderQuiz() {
         <span>累计得分：<strong>${PracticeState.totalScore.toFixed(1)}</strong> 分</span>
         <span>已答：<strong>${PracticeState.totalAnswered}</strong> 题</span>
         <span>正确率：<strong>${PracticeState.totalAnswered > 0 ? calcAccuracyStr() : '--'}</strong></span>
+      </div>
+
+      <div class="practice-shortcut-hint" aria-label="键盘快捷键提示">
+        ${(isLogicQuestion || isStandardChoice)
+          ? '<span><kbd>1</kbd><kbd>2</kbd><kbd>3</kbd><kbd>4</kbd> 选答案</span>'
+          : ''
+        }
+        <span><kbd>Space</kbd>/<kbd>Enter</kbd> ${PracticeState.submitted ? '下一题' : '提交答案'}</span>
+        <span><kbd>R</kbd> 重做本题</span>
+        <span><kbd>Esc</kbd> 返回列表</span>
+        <span class="sh-sep">·</span>
+        <span><kbd>?</kbd> 全部快捷键</span>
       </div>
     </div>
   `;
@@ -2283,6 +2342,7 @@ function startRedoSession(questions) {
   PracticeState.currentSet = questions;
   PracticeState.currentIndex = 0;
   PracticeState.userAnswers = {};
+  PracticeState._counted = {};
   PracticeState.submitted = false;
   PracticeState.wrongMarked = new Set();
   PracticeState.totalScore = 0;
@@ -2445,3 +2505,143 @@ window.initPractice = initPractice;
 window.enableHeaderAutoHide = enableHeaderAutoHide;
 window.disableHeaderAutoHide = disableHeaderAutoHide;
 window.showLastQuestionEffect = showLastQuestionEffect;
+
+// ============================================================
+// PRD §5-40：答题键盘快捷键（仅练习答题流程生效）
+//   1 / 2 / 3 / 4 → 选 A / B / C / D（单选题：标准单选 & 逻辑推理）
+//   Space / Enter → 提交答案，已提交则跳下一题
+//   R → 重做当前题目（清空作答，可重新作答；统计仅计首次）
+//   Esc → 返回筛选（题目列表）
+// ============================================================
+var _practiceKbBound = false;
+
+function _practiceOverlayOpen() {
+  // 反馈弹窗（关闭即 remove，存在即打开）
+  if (document.querySelector('.q-feedback-overlay')) return true;
+  // 移动端导航菜单
+  var mnav = document.getElementById('mobileNav');
+  if (mnav && mnav.classList.contains('active')) return true;
+  // 原生 <dialog open>
+  if (document.querySelector('dialog[open]')) return true;
+  // 任意 aria-modal 对话框：需实际可见（关闭后常残留在 DOM，靠 display/visibility 判定）
+  var dialogs = document.querySelectorAll('[aria-modal="true"]');
+  for (var i = 0; i < dialogs.length; i++) {
+    var cs = window.getComputedStyle(dialogs[i]);
+    if (cs.display !== 'none' && cs.visibility !== 'hidden') return true;
+  }
+  // 快捷键面板可见时也让出
+  var sp = document.getElementById('bioquest-shortcut-panel');
+  if (sp && window.getComputedStyle(sp).visibility === 'visible') {
+    return true;
+  }
+  return false;
+}
+
+function _practiceIsTyping(el) {
+  if (!el) return false;
+  var tag = el.tagName;
+  if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return true;
+  return !!el.isContentEditable;
+}
+
+function _practiceInQuiz() {
+  // 答题进行中（存在提交 / 下一题按钮），排除小结页与筛选页
+  return !!(document.getElementById('practice-submit-btn') ||
+            document.getElementById('practice-next-btn'));
+}
+
+function _practiceSelectChoice(numKey) {
+  var q = PracticeState.currentSet[PracticeState.currentIndex];
+  if (!q) return;
+  var isLogic = q.category === 'logic' && Array.isArray(q.options);
+  var isStd = q.options && typeof q.options === 'object' &&
+              !Array.isArray(q.options) && q.answer;
+  if (!isLogic && !isStd) return; // MTF 题型不适用数字键选 A/B/C/D
+  var idx = parseInt(numKey, 10) - 1; // 1..4 → 0..3
+  if (idx < 0) return;
+  var qIdx = PracticeState.currentIndex;
+  if (!PracticeState.userAnswers[qIdx]) {
+    PracticeState.userAnswers[qIdx] = {};
+  }
+  if (isStd) {
+    var keys = Object.keys(q.options).sort();
+    if (idx >= keys.length) return;
+    PracticeState.userAnswers[qIdx][0] = keys[idx]; // 'A'/'B'/'C'/'D'
+  } else {
+    if (idx >= q.options.length) return;
+    PracticeState.userAnswers[qIdx][0] = idx; // 逻辑题存索引 0..4
+  }
+  renderQuiz();
+}
+
+function _practiceRedoCurrent() {
+  var qIdx = PracticeState.currentIndex;
+  PracticeState.userAnswers[qIdx] = {};
+  PracticeState.submitted = false;
+  // 不重置 _counted：本题已统计过的话，重做再提交不会重复计数
+  renderQuiz();
+}
+
+function _practiceBackToList() {
+  PracticeState.started = false;
+  PracticeState.submitted = false;
+  if (typeof showFilterPanel === 'function') {
+    showFilterPanel();
+  }
+}
+
+function handlePracticeKeydown(e) {
+  // 仅练习答题流程生效
+  if (!PracticeState.started) return;
+  // 任意弹窗 / 面板 / 移动导航打开时全部让出
+  if (_practiceOverlayOpen()) return;
+
+  var key = e.key;
+  var active = document.activeElement;
+  var typing = _practiceIsTyping(active);
+
+  // Esc → 返回筛选（题目列表）
+  if (key === 'Escape') {
+    if (typing) return; // 输入框内由原生处理
+    e.preventDefault();
+    _practiceBackToList();
+    return;
+  }
+
+  // 以下快捷键仅在答题进行中生效（小结页 / 筛选页不触发）
+  if (!_practiceInQuiz()) return;
+
+  // 数字键 1-4 → 选 A/B/C/D
+  if (!typing && (key === '1' || key === '2' || key === '3' || key === '4')) {
+    if (PracticeState.submitted) return; // 已提交不可改答
+    e.preventDefault();
+    _practiceSelectChoice(key);
+    return;
+  }
+
+  // R → 重做当前题
+  if (!typing && (key === 'r' || key === 'R')) {
+    e.preventDefault();
+    _practiceRedoCurrent();
+    return;
+  }
+
+  // Space / Enter → 提交答案 / 下一题
+  // 统一 preventDefault：无论焦点在哪个按钮，Space/Enter 都固定走提交/下一题，
+  // 避免点完收藏/错题按钮后焦点停留导致 Space 误触发该按钮
+  if (!typing && (key === ' ' || key === 'Spacebar' || key === 'Enter')) {
+    e.preventDefault();
+    if (!PracticeState.submitted) {
+      handleSubmitAnswer();
+    } else {
+      handleNextQuestion();
+    }
+    return;
+  }
+}
+
+(function _bindPracticeKeyboard() {
+  if (_practiceKbBound) return;
+  _practiceKbBound = true;
+  document.addEventListener('keydown', handlePracticeKeydown);
+})();
