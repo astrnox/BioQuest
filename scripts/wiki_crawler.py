@@ -485,7 +485,7 @@ def already_exists(entries, title):
     return any(e.get("title") == title for e in entries)
 
 
-def run(terms, limit=None, only=None, prefer="zh", use_baidu=True, use_wikipedia=True, out=DEFAULT_OUT):
+def run(terms, limit=None, only=None, prefer="zh", use_baidu=True, use_wikipedia=True, out=DEFAULT_OUT, upload=False):
     fetcher = Fetcher()
     # 读取现有种子，保留已有词条
     out_path = Path(out)
@@ -547,6 +547,8 @@ def run(terms, limit=None, only=None, prefer="zh", use_baidu=True, use_wikipedia
     print(f"  新增: {ok}   失败: {fail}   跳过(已存在): {skipped}")
     print(f"  当前 word 条数: {len(entries)}")
     print(f"  输出: {out_path}")
+    if upload:
+        upload_to_supabase(entries, os.environ.get("SUPABASE_SERVICE_ROLE_KEY", ""))
     return ok, fail, skipped
 
 
@@ -563,19 +565,69 @@ def write_seed(out_path: Path, entries):
     os.replace(tmp, out_path)
 
 
+SB_URL = os.environ.get("SUPABASE_URL", "https://pgkjpuowpxngmxjjlfil.supabase.co")
+
+
+def upload_to_supabase(entries, service_key: str, batch_size: int = 50) -> int:
+    """把词条 upsert 到 Supabase 的 wiki_entries 表（需 service_role key）。"""
+    if not service_key:
+        print("[WARN] 未提供 SUPABASE_SERVICE_ROLE_KEY，跳过上传")
+        return 0
+    rows = []
+    for e in entries:
+        rows.append({
+            "id": e.get("id"),
+            "title": e.get("title"),
+            "aliases": e.get("aliases") or [],
+            "summary": e.get("summary") or "",
+            "content": e.get("content") or "",
+            "category": e.get("category") or "",
+            "tags": e.get("tags") or [],
+            "source": e.get("source") or "manual",
+            "source_url": e.get("sourceUrl") or "",
+        })
+    url = f"{SB_URL}/rest/v1/wiki_entries"
+    ok = 0
+    for i in range(0, len(rows), batch_size):
+        batch = rows[i:i + batch_size]
+        body = json.dumps(batch, ensure_ascii=False).encode("utf-8")
+        req = urllib.request.Request(
+            url,
+            data=body,
+            method="POST",
+            headers={
+                "apikey": service_key,
+                "Authorization": "Bearer " + service_key,
+                "Content-Type": "application/json",
+                "Prefer": "resolution=merge-duplicates,return=minimal",
+            },
+        )
+        try:
+            with urllib.request.urlopen(req, timeout=30) as r:
+                if r.status in (200, 201, 204):
+                    ok += len(batch)
+                    print(f"  [上传] {i + len(batch)}/{len(rows)} 已写入 wiki_entries")
+        except Exception as e:
+            print(f"  [上传失败] 批次 {i}-{i + len(batch)}: {e}")
+        time.sleep(0.2)
+    print(f"[上传完成] {ok}/{len(rows)} 条已写入 Supabase wiki_entries")
+    return ok
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--limit", type=int, default=None, help="只抓前 N 条")
     ap.add_argument("--only", choices=["wikipedia", "baidu"], default=None, help="只从单一来源抓取（默认两者都试）")
     ap.add_argument("--source", choices=["zh", "baidu"], default="zh", help="首选来源：zh=维基中文优先, baidu=百度优先")
     ap.add_argument("--out", type=str, default=DEFAULT_OUT, help="输出 json 路径")
+    ap.add_argument("--upload", action="store_true", help="抓取后上传到 Supabase wiki_entries（需 SUPABASE_SERVICE_ROLE_KEY 环境变量）")
     args = ap.parse_args()
 
     use_wiki = args.only != "baidu"
     use_baidu = args.only != "wikipedia"
     prefer = "zh" if args.source == "zh" else "baidu"
     run(TERMS, limit=args.limit, only=args.only, prefer=prefer,
-        use_baidu=use_baidu, use_wikipedia=use_wiki, out=args.out)
+        use_baidu=use_baidu, use_wikipedia=use_wiki, out=args.out, upload=args.upload)
 
 
 if __name__ == "__main__":

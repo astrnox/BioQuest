@@ -25,6 +25,11 @@
   var SEED_FLAG_KEY = 'bioquest_wiki_seeded_v1';
   var SEED_URL = 'data/wiki-seed.json?v=20260812a';
 
+  // Supabase 配置（匿名 key 公开，仅用于公开读取词条；表结构见 sql/wiki_entries.sql）
+  var SB_URL = 'https://pgkjpuowpxngmxjjlfil.supabase.co';
+  var SB_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBna2pwdW93cHhuZ214ampsZmlsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA2ODM2MzIsImV4cCI6MjA5NjI1OTYzMn0.lgfxN9htgo1i4tX_KwEehW47uqOwj3Jfwy-ljsjQnx4';
+  var SB_TABLE = 'wiki_entries';
+
   // 学科分类（与 topics.json / knowledge-graph 配色保持一致）
   var CATEGORIES = [
     '细胞生物学', '分子生物学', '生物化学', '遗传学',
@@ -76,30 +81,74 @@
     }
   }
 
-  // ===== 种子初始化（首次访问加载示范词条）=====
+  // 从 Supabase 读取词条（公开读）。失败或表不存在时返回 null，交由本地种子兜底。
+  function loadSupabaseEntries() {
+    var url = SB_URL + '/rest/v1/' + SB_TABLE + '?select=id,title,aliases,summary,content,category,tags,source,source_url,created_at,updated_at&order=title.asc&limit=1000';
+    return fetch(url, {
+      headers: { 'apikey': SB_KEY, 'Authorization': 'Bearer ' + SB_KEY }
+    })
+      .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+      .then(function (rows) {
+        if (!rows || !rows.length) return null;
+        return rows.map(function (row) {
+          return {
+            id: row.id,
+            title: row.title,
+            aliases: row.aliases || [],
+            summary: row.summary || '',
+            content: row.content || '',
+            category: row.category || '',
+            tags: row.tags || [],
+            source: row.source || 'wikipedia',
+            sourceUrl: row.source_url || '',
+            createdAt: row.created_at ? new Date(row.created_at).getTime() : Date.now(),
+            updatedAt: row.updated_at ? new Date(row.updated_at).getTime() : Date.now()
+          };
+        });
+      })
+      .catch(function () { return null; });
+  }
+
+  // 从本地种子文件加载
+  function loadLocalSeed() {
+    return fetch(SEED_URL, { cache: 'no-cache' })
+      .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+      .then(function (data) {
+        var seeds = (data && data.entries) || [];
+        var now = Date.now();
+        seeds.forEach(function (e, i) {
+          e.createdAt = now - (seeds.length - i) * 86400000;
+          e.updatedAt = e.createdAt;
+        });
+        return seeds;
+      })
+      .catch(function () { return []; });
+  }
+
+  // ===== 种子初始化（首次访问：优先 Supabase，其次本地种子文件） =====
   function ensureSeed() {
     if (localStorage.getItem(SEED_FLAG_KEY)) {
       state.entries = loadEntries();
       return;
     }
-    // 没有种子标记：尝试加载种子文件
-    fetch(SEED_URL, { cache: 'no-cache' })
-      .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
-      .then(function (data) {
-        var seeds = (data && data.entries) || [];
-        var now = Date.now();
-        // 注入时间戳
-        seeds.forEach(function (e, i) {
-          e.createdAt = now - (seeds.length - i) * 86400000;
-          e.updatedAt = e.createdAt;
-        });
-        state.entries = seeds;
+    // 优先从 Supabase 取数；失败/为空则回退到本地种子文件
+    loadSupabaseEntries()
+      .then(function (supabaseEntries) {
+        if (supabaseEntries && supabaseEntries.length) {
+          state.entries = supabaseEntries;
+        } else {
+          return loadLocalSeed().then(function (local) {
+            state.entries = local;
+          });
+        }
+      })
+      .then(function () {
         saveEntries();
         localStorage.setItem(SEED_FLAG_KEY, '1');
         renderAll();
       })
       .catch(function (err) {
-        console.warn('[Wiki] 种子加载失败，以空 Wiki 启动:', err.message);
+        console.warn('[Wiki] 种子加载失败，以空 Wiki 启动:', (err && err.message) || err);
         state.entries = [];
         localStorage.setItem(SEED_FLAG_KEY, '1');
         renderAll();
