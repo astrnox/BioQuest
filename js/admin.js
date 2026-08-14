@@ -2167,7 +2167,7 @@ function renderUsersTab(container, users) {
               <th>答题数</th>
               <th>正确数</th>
               <th>准确率</th>
-              <th>积分</th>
+              <th>信用</th>
               <th>用户组</th>
               <th>操作</th>
             </tr>
@@ -2201,7 +2201,7 @@ function renderUsersTab(container, users) {
                       编辑
                     </button>
                     <button class="admin-btn admin-btn--ghost" onclick="handleAdjustUserPoints('${uid}', ${typeof user.points === 'number' ? user.points : 0})">
-                      调整积分
+                      调整信用
                     </button>
                     <button class="admin-btn admin-btn--ghost" onclick="handleResetPassword('${uid}')">
                       重置密码
@@ -2244,7 +2244,7 @@ function renderUsersTab(container, users) {
             <input type="number" class="admin-form-input" id="edit-bio-score" min="0" max="100">
           </div>
           <div class="admin-form-group">
-            <label class="admin-form-label">积分</label>
+            <label class="admin-form-label">信用</label>
             <input type="number" class="admin-form-input" id="edit-points" min="0">
           </div>
           <div class="admin-form-group">
@@ -3463,7 +3463,7 @@ window.handleDeleteUser = async function(userId) {
 };
 
 window.handleAdjustUserPoints = async function(userId, currentPoints) {
-  const amountStr = prompt('调整该用户的积分\n\n当前积分：' + currentPoints + '\n输入正数增加，输入负数扣除，例如：+10 或 -5');
+  const amountStr = prompt('调整该用户的信用\n\n当前信用：' + currentPoints + '\n输入正数增加，输入负数扣除，例如：+10 或 -5');
   if (!amountStr) return;
   const amount = parseInt(amountStr, 10);
   if (isNaN(amount) || amount === 0) {
@@ -3478,13 +3478,13 @@ window.handleAdjustUserPoints = async function(userId, currentPoints) {
     } else if (typeof adjustUserPoints === 'function') {
       result = await adjustUserPoints(amount, reason, { userId: userId, source: 'admin' });
     } else {
-      showAdminToast('积分调整功能未加载', 'error');
+      showAdminToast('信用调整功能未加载', 'error');
       return;
     }
     if (result && result.ok) {
       const crCell = document.getElementById('points-' + userId);
       if (crCell) crCell.textContent = result.points;
-      showAdminToast('已调整用户积分为 ' + result.points, 'success');
+      showAdminToast('已调整用户信用为 ' + result.points, 'success');
     } else {
       showAdminToast('调整失败：' + (result && result.error ? result.error : '未知错误'), 'error');
     }
@@ -3504,7 +3504,7 @@ window.handleResolveAppeal = async function(appealId, action) {
     }
     var result = await resolveFn(appealId, action, adminNote);
     if (result && result.ok) {
-      showAdminToast(action === 'approve' ? '申诉已通过，已恢复用户积分' : '申诉已驳回', 'success');
+      showAdminToast(action === 'approve' ? '申诉已通过，已恢复用户信用' : '申诉已驳回', 'success');
       // 刷新当前标签
       var contentEl = document.getElementById('admin-tab-content');
       if (contentEl) renderAppealsTab(contentEl);
@@ -5126,7 +5126,7 @@ async function renderFeedbacksTab(container) {
   container.innerHTML = html;
 }
 
-/* ===== 积分申诉管理标签 ===== */
+/* ===== 信用申诉管理标签 ===== */
 async function renderAppealsTab(container) {
   container.innerHTML = `<div class="admin-loading"><div class="admin-spinner"></div><div class="admin-loading-text">加载申诉中...</div></div>`;
 
@@ -5173,7 +5173,7 @@ async function renderAppealsTab(container) {
       <div class="admin-section-header">
         <div class="admin-section-title">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          积分申诉列表
+          信用申诉列表
         </div>
         <span class="admin-section-badge">${appeals.length} 条</span>
       </div>

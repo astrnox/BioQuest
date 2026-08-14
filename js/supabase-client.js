@@ -25,48 +25,54 @@ function _localDateStr(date) {
   return y + '-' + m + '-' + d;
 }
 
-// ===== 用户积分（Points）系统配置 =====
-// 积分：不衰减、可累积、可扣除、可消耗（兑换）。等级/称号由累计总积分阈值推导。
+// ===== 用户信用指数（Trust / Credit）系统配置 =====
+// 信用点（CR）不是经验值、不是货币，而是社区对用户信任程度的量化。
+// 通过符合社区期望的行为获得信任，消费信任以做出对社区影响更大的行为；
+// 信任具有时效性（自然衰减），违规则直接扣减。
 
-var POINTS_DEFAULT = 0;
+var POINTS_DEFAULT = 100;
 
-// 1. 积极行为获得积分规则
+// 1. 信任自然衰减参数
+// 信用指数随时间指数衰减：CR_decayed = CR * exp(-lambda * deltaDays)
+// lambda = 0.01005 对应每日衰减约 1%，半衰期约 69 天
+var CR_DECAY = {
+  lambda: 0.01005,
+  halfLifeDays: 69
+};
+
+// 2. 符合社区期望的行为 → 获得信任增量
 var POINTS_EARN_RULES = {
-  daily_checkin: { base: 2, reason: '每日打卡' },
-  online_time: { base: 1, reason: '在线时长奖励' },
-  practice_milestone: { base: 1, reason: '刷题奖励（每10题）' },
-  suggestion_feedback: { base: 10, reason: '提交建议反馈' },
-  valid_report: { base: 5, reason: '有效举报/反馈' }
+  daily_checkin: { base: 0.3, reason: '每日打卡' },
+  online_time: { base: 0.1, reason: '在线时长奖励' },
+  practice_milestone: { base: 0.1, reason: '刷题奖励（每10题）' },
+  suggestion_feedback: { base: 2, reason: '提交建议反馈' },
+  valid_report: { base: 1, reason: '有效举报/反馈' }
 };
 
-// 2. 高影响操作消费积分规则（需同时满足门槛）
-// 已消耗积分 = 总积分 - cost
+// 3. 消费信任（高影响操作）规则（需同时满足门槛）
 var POINTS_ACTION_COSTS = {
-  comment: { threshold: 10, cost: 1, reason: '发表评论' },
+  comment: { threshold: 20, cost: 1, reason: '发表评论' },
   post: { threshold: 30, cost: 2, reason: '发布帖子' },
-  report_question: { threshold: 50, cost: 5, reason: '举报题目' },
-  special_permission: { threshold: 80, cost: 20, reason: '申请特殊权限' }
+  report_question: { threshold: 50, cost: 2, reason: '举报题目' },
+  special_permission: { threshold: 80, cost: 10, reason: '申请特殊权限' }
 };
 
-// 3. 违规惩罚规则
+// 4. 违规惩罚规则（直接扣减，永久）
 var POINTS_PENALTIES = {
   question_feedback_invalid: { amount: -5, reason: '无效题目反馈/举报' },
-  uncivil_post: { amount: -10, reason: '发布不文明内容' },
+  uncivil_post: { amount: -15, reason: '发布不文明内容' },
   uncivil_comment: { amount: -10, reason: '评论不文明内容' },
-  spam: { amount: -15, reason: '刷屏/垃圾内容' }
+  spam: { amount: -20, reason: '刷屏/垃圾内容' }
 };
 
-// 4. 等级/称号阈值（与本地 POINTS_LEVELS 保持一致）
+// 5. 信任等级（由当前信用指数推导；指数越高，社区信任越高）
 var POINTS_LEVELS = [
-  { min: 0,     label: '新芽', title: '生物新芽', color: '#8a8a8a', icon: '🌱' },
-  { min: 100,   label: '幼苗', title: '探索幼苗', color: '#5a7d5c', icon: '🌿' },
-  { min: 300,   label: '青苗', title: '求知青苗', color: '#4a9c6a', icon: '🌳' },
-  { min: 800,   label: '茁壮', title: '茁壮学者', color: '#3a8c5c', icon: '🔬' },
-  { min: 2000,  label: '园丁', title: '知识园丁', color: '#2d6a47', icon: '🧑‍🌾' },
-  { min: 5000,  label: '学者', title: '生物学者', color: '#c4956a', icon: '🎓' },
-  { min: 10000, label: '大师', title: '生物大师', color: '#8a5ac4', icon: '🏆' },
-  { min: 20000, label: '宗师', title: '生物宗师', color: '#c0553a', icon: '👑' },
-  { min: 50000, label: '传奇', title: '传奇权威', color: '#ff6b35', icon: '🌟' }
+  { min: 0,   label: '不受信任', title: '不受信任', color: '#c0553a', icon: '🚫' },
+  { min: 10,  label: '极低信任', title: '极低信任', color: '#d47030', icon: '⚠️' },
+  { min: 30,  label: '有限信任', title: '有限信任', color: '#c49b30', icon: '🙂' },
+  { min: 50,  label: '基本信任', title: '基本信任', color: '#5a7d5c', icon: '👍' },
+  { min: 80,  label: '高度信任', title: '高度信任', color: '#3a8c5c', icon: '🌟' },
+  { min: 100, label: '极高信任', title: '极高信任', color: '#ffd700', icon: '💎' }
 ];
 
 var _UNCIVIL_WORDS = ['傻逼','脑残','nmsl','你妈','草泥马','滚','去死','废物','垃圾','贱','sb','cnm','tmd','mdzz','智障','混蛋','狗屎','屎','烂','白痴','蠢货','婊子','娘炮','死全家','杀了你','操','肏','日你妈','麻痹','特么','马勒戈壁','法克','fuck','shit','bitch'];
@@ -1267,7 +1273,7 @@ async function updateBioScore(bioScore, stats) {
     };
     await sb.from('profiles').upsert({ id: _currentUser.id, ...updates, device_id: localStorage.getItem('bioquest_device_id') || 'unknown' }, { onConflict: 'id' });
 
-    // 刷题奖励：每答满10题获得积分
+    // 刷题奖励：每答满10题获得信用
     try {
       var answered = stats.total_answered || 0;
       var milestone = Math.floor(answered / 10);
@@ -1430,10 +1436,10 @@ async function getLeaderboard(tab, limit) {
   return inflightPromise;
 }
 
-// ===== 用户积分（Points）=====
+// ===== 用户信用（Trust / Credit）=====
 
 /**
- * 获取积分等级信息（由累计总积分阈值推导）
+ * 获取信用等级信息（由当前信用指数阈值推导）
  */
 function getPointsLevel(points) {
   var score = typeof points === 'number' ? points : POINTS_DEFAULT;
@@ -1456,6 +1462,20 @@ function getPointsLevel(points) {
     nextAt: next ? nxtMin : null,
     progress: Math.round(progress * 1000) / 1000
   };
+}
+
+/**
+ * 计算自然衰减后的信用指数
+ * CR_decayed = CR * exp(-lambda * deltaDays)
+ */
+function calculateDecayedPoints(currentPoints, lastUpdatedAt) {
+  if (typeof currentPoints !== 'number' || currentPoints <= 0) return 0;
+  if (!lastUpdatedAt) return currentPoints;
+  var now = Date.now();
+  var last = new Date(lastUpdatedAt).getTime();
+  var deltaDays = (now - last) / (24 * 60 * 60 * 1000);
+  if (deltaDays <= 0) return currentPoints;
+  return currentPoints * Math.exp(-CR_DECAY.lambda * deltaDays);
 }
 
 /**
@@ -1513,7 +1533,7 @@ async function getBehaviorCount(userId, source, windowDays) {
 }
 
 /**
- * 计算积极行为获得的积分（固定基础值，不衰减）
+ * 计算积极行为获得的信用增量（会随时间衰减）
  */
 async function calculateEarnedPoints(ruleKey, userId) {
   var rule = POINTS_EARN_RULES[ruleKey];
@@ -1524,19 +1544,19 @@ async function calculateEarnedPoints(ruleKey, userId) {
 }
 
 /**
- * 检查用户是否有足够积分执行某高影响操作
+ * 检查用户是否有足够信用执行某高影响操作
  */
 function canPerformAction(points, actionKey) {
   var action = POINTS_ACTION_COSTS[actionKey];
   if (!action) return { ok: false, error: '未知操作' };
   if (typeof points !== 'number' || points < action.threshold) {
-    return { ok: false, error: '积分不足（需要 ' + action.threshold + '，当前 ' + (points || 0) + '）' };
+    return { ok: false, error: '信用不足（需要 ' + action.threshold + '，当前 ' + (points || 0) + '）' };
   }
   return { ok: true, cost: action.cost };
 }
 
 /**
- * 创建积分申诉记录
+ * 创建信用申诉记录
  * @param {Object} params - { content, detected_word, amount, reason, source, user_note }
  */
 async function createCRAppeal(params) {
@@ -1560,9 +1580,9 @@ async function createCRAppeal(params) {
   } catch (e) {
     // 表不存在时静默降级（cr_appeals 表未创建），仅 console.warn
     if (e.message && e.message.indexOf('schema cache') >= 0) {
-      console.warn('[积分] cr_appeals 表未创建，申诉功能降级');
+      console.warn('[信用] cr_appeals 表未创建，申诉功能降级');
     } else {
-      console.error('[积分] 创建申诉失败:', e.message);
+      console.error('[信用] 创建申诉失败:', e.message);
     }
     return null;
   }
@@ -1624,7 +1644,7 @@ async function getPendingCRAppeals() {
 }
 
 /**
- * 处理积分申诉（管理员用）
+ * 处理信用申诉（管理员用）
  * @param {string} appealId
  * @param {string} action - 'approve' 或 'reject'
  * @param {string} adminNote
@@ -1641,9 +1661,9 @@ async function resolveCRAppeal(appealId, action, adminNote) {
     if (!appeal) return { ok: false, error: '申诉不存在' };
     if (appeal.status !== 'pending') return { ok: false, error: '该申诉已处理' };
 
-    // 如果批准，恢复被扣除的积分
+    // 如果批准，恢复被扣除的信用
     if (action === 'approve') {
-      await adjustUserPoints(Math.abs(appeal.amount), '申诉通过：恢复积分', { userId: appeal.user_id, source: 'appeal' });
+      await adjustUserPoints(Math.abs(appeal.amount), '申诉通过：恢复信用', { userId: appeal.user_id, source: 'appeal' });
     }
 
     var { error } = await sb.from('cr_appeals')
@@ -1662,7 +1682,7 @@ async function resolveCRAppeal(appealId, action, adminNote) {
 }
 
 /**
- * 获取用户当前积分（不衰减）
+ * 获取用户当前信用指数（含自然衰减）
  */
 async function getUserPoints(userId) {
   var sb = getSupabase();
@@ -1676,15 +1696,17 @@ async function getUserPoints(userId) {
       .eq('id', uid)
       .maybeSingle();
     if (error) throw error;
-    var points = (data && typeof data.points === 'number') ? data.points : POINTS_DEFAULT;
-    return { points: points, level: getPointsLevel(points), user_group: data ? data.user_group : 'member' };
+    var raw = (data && typeof data.points === 'number') ? data.points : POINTS_DEFAULT;
+    // 应用自然衰减：信用指数随时间衰减
+    var points = calculateDecayedPoints(raw, data && data.points_updated_at ? data.points_updated_at : null);
+    return { points: Math.round(points * 10) / 10, level: getPointsLevel(points), user_group: data ? data.user_group : 'member' };
   } catch (e) {
     return { points: (_currentUser && typeof _currentUser.points === 'number') ? _currentUser.points : POINTS_DEFAULT, level: getPointsLevel(_currentUser && _currentUser.points) };
   }
 }
 
 /**
- * 调整用户积分（普通用户仅能通过任务/违规被动调整；管理员可主动修改他人）
+ * 调整用户信用指数（普通用户仅能通过任务/违规被动调整；管理员可主动修改他人）
  * @param {number} amount - 变化量（正为增加，负为扣除）
  * @param {string} reason - 原因
  * @param {Object} [options] - { userId, source }
@@ -1703,8 +1725,9 @@ async function adjustUserPoints(amount, reason, options) {
     if (fetchError) throw fetchError;
 
     var rawPoints = (profile && typeof profile.points === 'number') ? profile.points : POINTS_DEFAULT;
-    // 不衰减，直接应用本次调整（profiles.points 字段为 integer，四舍五入到整数，下限 0）
-    var newPoints = Math.max(0, Math.round(rawPoints + amount));
+    // 先应用自然衰减，再应用本次调整（profiles.points 字段为 numeric，保留 1 位小数，下限 0）
+    var decayedPoints = calculateDecayedPoints(rawPoints, profile && profile.points_updated_at ? profile.points_updated_at : null);
+    var newPoints = Math.max(0, Math.round((decayedPoints + amount) * 10) / 10);
 
     var { error: updateError } = await sb.from('profiles')
       .update({ points: newPoints, points_updated_at: new Date().toISOString() })
@@ -1742,8 +1765,8 @@ async function adjustUserPoints(amount, reason, options) {
 }
 
 /**
- * 将本地积分同步到云端（登录状态下回写，取本地与云端较高者）
- * @param {number} points - 本地最新总积分
+ * 将本地信用同步到云端（登录状态下回写，取本地与云端较高者）
+ * @param {number} points - 本地最新信用指数
  */
 async function syncPointsToCloud(points) {
   var sb = getSupabase();
@@ -1770,7 +1793,7 @@ async function syncPointsToCloud(points) {
 }
 
 /**
- * 获取积分排行榜（按 profiles.points 降序）
+ * 获取信用排行榜（按 profiles.points 降序）
  * @param {number} [limit] - 返回条数，默认 50
  */
 async function getPointsLeaderboard(limit) {
@@ -1800,7 +1823,7 @@ async function getPointsLeaderboard(limit) {
 
 /**
  * 在线时长奖励跟踪
- * 每5分钟活跃奖励1 积分，每天最多12分
+ * 每5分钟活跃奖励1 信用，每天最多12点
  */
 var _onlineTracker = {
   lastActive: Date.now(),
@@ -1945,12 +1968,12 @@ async function createCommunityPost(content, tags) {
       });
       return {
         ok: false,
-        error: '检测到不文明用语（' + check.word + '），已扣除 ' + Math.abs(POINTS_PENALTIES.uncivil_post.amount) + ' 积分',
+        error: '检测到不文明用语（' + check.word + '），已扣除 ' + Math.abs(POINTS_PENALTIES.uncivil_post.amount) + ' 信用',
         appeal_id: appeal && appeal.id ? appeal.id : null
       };
     }
 
-    // 2. 检查发帖权限并消费积分
+    // 2. 检查发帖权限并消费信用
     var crInfo = await getUserPoints();
     var actionCheck = canPerformAction(crInfo.points, 'post');
     if (!actionCheck.ok) {
@@ -2079,12 +2102,12 @@ async function addPostComment(postId, content) {
       });
       return {
         ok: false,
-        error: '检测到不文明用语（' + check.word + '），已扣除 ' + Math.abs(POINTS_PENALTIES.uncivil_comment.amount) + ' 积分',
+        error: '检测到不文明用语（' + check.word + '），已扣除 ' + Math.abs(POINTS_PENALTIES.uncivil_comment.amount) + ' 信用',
         appeal_id: appeal && appeal.id ? appeal.id : null
       };
     }
 
-    // 2. 检查评论权限并消费积分
+    // 2. 检查评论权限并消费信用
     var crInfo = await getUserPoints();
     var actionCheck = canPerformAction(crInfo.points, 'comment');
     if (!actionCheck.ok) {
@@ -2491,7 +2514,7 @@ async function recordDailyCheckIn() {
       last_checkin: today
     });
 
-    // 打卡加积分
+    // 打卡加信用
     try {
       var delta = await calculateEarnedPoints('daily_checkin');
       if (delta > 0) {
@@ -2933,7 +2956,7 @@ async function reviewQuestion(questionId, rating) {
 
     if (error) throw error;
 
-    // 复习成功奖励少量积分
+    // 复习成功奖励少量信用
     var delta = await calculateEarnedPoints('practice_milestone');
     if (delta > 0) {
       await adjustUserPoints(delta, '完成错题复习', { source: 'review' });
@@ -3759,17 +3782,17 @@ async function createBounty(title, content, pointsReward, tags, expiresDays) {
   if (!sb) return { ok: false, error: 'Supabase 未初始化' };
 
   var reward = parseInt(pointsReward, 10);
-  if (isNaN(reward) || reward < 5) return { ok: false, error: '悬赏积分不能少于 5' };
+  if (isNaN(reward) || reward < 5) return { ok: false, error: '悬赏信用不能少于 5' };
 
   try {
-    // 检查积分并扣除
+    // 检查信用并扣除
     var crInfo = await getUserPoints();
     if (crInfo.points < reward) {
-      return { ok: false, error: '积分不足，无法发布悬赏' };
+      return { ok: false, error: '信用不足，无法发布悬赏' };
     }
-    var costResult = await adjustUserPoints(-reward, '发布问答悬赏消耗积分：' + title, { source: 'bounty_create' });
+    var costResult = await adjustUserPoints(-reward, '发布问答悬赏消耗信用：' + title, { source: 'bounty_create' });
     if (!costResult || !costResult.ok) {
-      return { ok: false, error: '扣除积分失败' };
+      return { ok: false, error: '扣除信用失败' };
     }
 
     var expiresAt = null;
@@ -3933,7 +3956,7 @@ async function acceptBountyAnswer(bountyId, answerId) {
       .update({ is_accepted: true })
       .eq('id', answerId);
 
-    // 悬赏发布者和回答者都获得额外积分奖励
+    // 悬赏发布者和回答者都获得额外信用奖励
     var bonusDelta = await calculateEarnedPoints('valid_report');
     if (bonusDelta > 0) {
       await adjustUserPoints(bonusDelta, '成功发布悬赏', { userId: bounty.user_id, source: 'bounty_bonus' });
