@@ -146,13 +146,23 @@ const Routes = {
     module: 'leaderboard'
   },
   '/points-leaderboard': {
-    title: '积分排行榜',
-    render: 'renderPointsLeaderboardPage',
+    title: '信用排行榜',
+    render: 'renderCreditLeaderboardPage',
+    module: 'points-ui'
+  },
+  '/credit-leaderboard': {
+    title: '信用排行榜',
+    render: 'renderCreditLeaderboardPage',
     module: 'points-ui'
   },
   '/points-shop': {
-    title: '积分商城',
-    render: 'renderPointsShopPage',
+    title: '信用中心',
+    render: 'renderCreditCenterPage',
+    module: 'points-ui'
+  },
+  '/credit': {
+    title: '信用中心',
+    render: 'renderCreditCenterPage',
     module: 'points-ui'
   },
   '/knowledge-graph': {
@@ -1830,17 +1840,19 @@ function doRouteRender(route, target) {
         renderLeaderboardPage(target);
         break;
       case '/points-leaderboard':
-        // points-ui.js -> window.initPointsLeaderboard
-        if (typeof window.initPointsLeaderboard === 'function') {
-          window.initPointsLeaderboard(target);
+      case '/credit-leaderboard':
+        // points-ui.js -> window.initCreditLeaderboard
+        if (typeof window.initCreditLeaderboard === 'function') {
+          window.initCreditLeaderboard(target);
         } else {
           _renderModuleError(target, route, new Error('points-ui 模块未加载'));
         }
         break;
       case '/points-shop':
-        // points-ui.js -> window.initPointsShop
-        if (typeof window.initPointsShop === 'function') {
-          window.initPointsShop(target);
+      case '/credit':
+        // points-ui.js -> window.initCreditCenter
+        if (typeof window.initCreditCenter === 'function') {
+          window.initCreditCenter(target);
         } else {
           _renderModuleError(target, route, new Error('points-ui 模块未加载'));
         }

@@ -157,7 +157,7 @@
       return { ok: false, error: '今日反馈次数已用完（每日' + MAX_FEEDBACKS_PER_DAY + '次），请明天再反馈' };
     }
 
-    // 举报/反馈题目需要消耗积分并满足门槛
+    // 举报/反馈题目需要消耗信用并满足门槛
     if (typeof window.isLoggedIn === 'function' && window.isLoggedIn()) {
       var crCheck = { ok: true };
       try {
@@ -172,11 +172,11 @@
           }
           var costResult = await adjustCR(-crCheck.cost, '举报/反馈题目', { source: 'report_question_cost' });
           if (!costResult || !costResult.ok) {
-            return { ok: false, error: '积分扣费失败，请稍后重试' };
+            return { ok: false, error: '信用扣费失败，请稍后重试' };
           }
         }
       } catch (e) {
-        return { ok: false, error: '积分检查失败：' + (e.message || '未知错误') };
+        return { ok: false, error: '信用检查失败：' + (e.message || '未知错误') };
       }
     }
 

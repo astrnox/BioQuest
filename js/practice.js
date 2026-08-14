@@ -854,12 +854,12 @@ function updateStatsForQuestion(q, userAnswers) {
     } catch (e) { /* 静默 */ }
   }
 
-  // 积分：每次答题"全部正确 +5 / 未全对 +1"奖励（走 user.js 的积分系统）
+  // 信用：每次答题"全部正确 +5 / 未全对 +1"奖励（走 user.js 的信用系统）
   try {
     if (typeof window.addPoints === 'function') {
       window.addPoints(isFullyCorrect ? 'ANSWER_CORRECT' : 'ANSWER_WRONG');
     }
-  } catch (_) { /* 积分挂钩失败不影响练习主流程 */ }
+  } catch (_) { /* 信用挂钩失败不影响练习主流程 */ }
 }
 
 function handleSubmitAnswer() {

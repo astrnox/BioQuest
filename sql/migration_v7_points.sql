@@ -1,8 +1,9 @@
 -- ============================================================
--- BioQuest 数据库迁移 v7：信用点 CR → 积分 Points
+-- BioQuest 数据库迁移 v7：信用点 CR → 信用指数（points）
+-- 说明：信用点（CR / points）是社区对用户信任程度的量化，不是经验值、货币。
 -- 1. profiles.cr / cr_updated_at → points / points_updated_at（数据迁移）
 -- 2. q_bounties.cr_reward / extra_reward → points_reward / extra_points
--- 3. 等级触发器改为基于 points 阈值
+-- 3. 用户组自动升降级触发器改为基于信用指数阈值
 -- ============================================================
 
 BEGIN;
@@ -68,10 +69,10 @@ EXCEPTION WHEN OTHERS THEN
     RAISE NOTICE '跳过 q_bounties.extra_reward 重命名: %', SQLERRM;
 END $$;
 
--- 4. 基于 points 自动升级用户组（仅 member/verified/premium 之间升降）
---   - points >= 10000（大师）自动升级为 premium
---   - points >= 2000（园丁）自动升级为 verified
---   - points < 2000 降级为 member（admin 不受影响）
+-- 4. 基于信用指数自动升级用户组（仅 member/verified/premium 之间升降）
+--   - 信用指数 >= 100（极高信任）自动升级为 premium
+--   - 信用指数 >= 80（高度信任）自动升级为 verified
+--   - 信用指数 < 80 降级为 member（admin 不受影响）
 CREATE OR REPLACE FUNCTION public.upgrade_user_group_by_points()
 RETURNS trigger AS $$
 BEGIN
@@ -79,11 +80,11 @@ BEGIN
         RETURN NEW;
     END IF;
 
-    IF NEW.points >= 10000 AND NEW.user_group IN ('member', 'guest') THEN
+    IF NEW.points >= 100 AND NEW.user_group IN ('member', 'guest') THEN
         NEW.user_group := 'premium';
-    ELSIF NEW.points >= 2000 AND NEW.user_group IN ('member', 'guest') THEN
+    ELSIF NEW.points >= 80 AND NEW.user_group IN ('member', 'guest') THEN
         NEW.user_group := 'verified';
-    ELSIF NEW.points < 2000 AND NEW.user_group IN ('verified', 'premium') THEN
+    ELSIF NEW.points < 80 AND NEW.user_group IN ('verified', 'premium') THEN
         NEW.user_group := 'member';
     END IF;
 
@@ -97,14 +98,14 @@ CREATE TRIGGER on_points_updated
     FOR EACH ROW
     EXECUTE FUNCTION public.upgrade_user_group_by_points();
 
--- 初次运行：根据现有 points 校正用户组
+-- 初次运行：根据现有信用指数校正用户组
 DO $$
 BEGIN
     UPDATE profiles
     SET user_group = CASE
-        WHEN points >= 10000 AND user_group != 'admin' THEN 'premium'
-        WHEN points >= 2000 AND user_group NOT IN ('admin', 'premium') THEN 'verified'
-        WHEN points < 2000 AND user_group NOT IN ('admin') THEN 'member'
+        WHEN points >= 100 AND user_group != 'admin' THEN 'premium'
+        WHEN points >= 80 AND user_group NOT IN ('admin', 'premium') THEN 'verified'
+        WHEN points < 80 AND user_group NOT IN ('admin') THEN 'member'
         ELSE user_group
     END;
 END $$;
