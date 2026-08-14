@@ -1,0 +1,944 @@
+{
+  "version": "1.0.0",
+  "updated_at": "2026-08-12",
+  "description": "BioQuest 电子书关联知识点 Topic 字典。每条记录对应 ebook.js 中 section.relatedTopics 引用的 ID，提供名称、学科分类、所属模块、描述与关键词，供「关联知识点」渲染与检索使用。",
+  "moduleLabels": {
+    "module1": "模块一 · 细胞与分子",
+    "module2": "模块二 · 植物与微生物",
+    "module3": "模块三 · 动物与生态",
+    "module4": "模块四 · 遗传与进化"
+  },
+  "topics": {
+    "cell-intro-1": {
+      "name": "生物界的划分",
+      "category": "细胞生物学",
+      "module": "module1",
+      "description": "两界/五界/三域系统的划分依据，Whittaker 五界分类与 Woese 三域系统，病毒不属于任何一界。",
+      "keywords": ["五界系统", "三域系统", "Whittaker", "Woese", "原核生物", "真核生物", "病毒"]
+    },
+    "cell-intro-2": {
+      "name": "生物学研究方法",
+      "category": "细胞生物学",
+      "module": "module1",
+      "description": "科学方法的基本步骤、对照实验设计原则（单一变量/对照/重复/随机）、模式生物与现代生物学技术。",
+      "keywords": ["科学方法", "假说", "对照实验", "模式生物", "果蝇", "大肠杆菌", "PCR"]
+    },
+    "cell-chem-1": {
+      "name": "原子、分子与水的性质",
+      "category": "生物化学",
+      "module": "module1",
+      "description": "C/H/O/N 等核心元素，共价键/离子键/氢键，水分子的极性与氢键决定的高比热容、密度异常等特性。",
+      "keywords": ["元素", "共价键", "离子键", "氢键", "水的性质", "极性"]
+    },
+    "cell-chem-2": {
+      "name": "糖类",
+      "category": "生物化学",
+      "module": "module1",
+      "description": "单糖、二糖与多糖的结构与功能，糖苷键类型决定淀粉与纤维素的功能差异。",
+      "keywords": ["葡萄糖", "蔗糖", "淀粉", "糖原", "纤维素", "糖苷键"]
+    },
+    "cell-chem-3": {
+      "name": "脂质",
+      "category": "生物化学",
+      "module": "module1",
+      "description": "脂肪、磷脂与固醇类化合物的结构与功能，磷脂亲水头疏水尾是生物膜的基础。",
+      "keywords": ["脂肪", "磷脂", "固醇", "胆固醇", "双分子层"]
+    },
+    "cell-chem-4": {
+      "name": "蛋白质",
+      "category": "生物化学",
+      "module": "module1",
+      "description": "20 种氨基酸通过肽键构成蛋白质，蛋白质具有四级结构层次。",
+      "keywords": ["氨基酸", "肽键", "蛋白质", "二级结构", "三级结构", "四级结构"]
+    },
+    "cell-chem-5": {
+      "name": "核酸",
+      "category": "分子生物学",
+      "module": "module1",
+      "description": "DNA 与 RNA 作为遗传信息载体，Watson-Crick 双螺旋结构，脱氧核糖与核糖、T 与 U 的差异。",
+      "keywords": ["DNA", "RNA", "核苷酸", "双螺旋", "Watson", "Crick"]
+    },
+    "cell-chem-6": {
+      "name": "酶与生物催化剂",
+      "category": "生物化学",
+      "module": "module1",
+      "description": "酶的高效性、专一性与温和性，诱导契合模型，米氏方程与 Km，竞争性/非竞争性抑制。",
+      "keywords": ["酶", "诱导契合", "米氏方程", "Km", "竞争性抑制", "非竞争性抑制"]
+    },
+    "cell-struct-1": {
+      "name": "原核与真核细胞",
+      "category": "细胞生物学",
+      "module": "module1",
+      "description": "原核与真核细胞的根本差异，表面积/体积比限制细胞大小。",
+      "keywords": ["原核细胞", "真核细胞", "拟核", "细胞核", "表面积体积比"]
+    },
+    "cell-struct-2": {
+      "name": "细胞膜与跨膜运输",
+      "category": "细胞生物学",
+      "module": "module1",
+      "description": "流动镶嵌模型，膜蛋白与膜脂的流动性和不对称性，自由扩散、协助扩散、主动运输与膜泡运输。",
+      "keywords": ["流动镶嵌模型", "磷脂双分子层", "自由扩散", "协助扩散", "主动运输", "Na+/K+泵"]
+    },
+    "cell-struct-3": {
+      "name": "内膜系统与蛋白质分选",
+      "category": "细胞生物学",
+      "module": "module1",
+      "description": "内质网、高尔基体、溶酶体的协作，信号肽与 SRP 引导蛋白质定位。",
+      "keywords": ["内质网", "高尔基体", "溶酶体", "信号肽", "SRP", "糖基化"]
+    },
+    "cell-struct-4": {
+      "name": "线粒体与叶绿体",
+      "category": "细胞生物学",
+      "module": "module1",
+      "description": "线粒体的双层膜与嵴、叶绿体的类囊体与基粒，内共生起源学说及其证据。",
+      "keywords": ["线粒体", "嵴", "叶绿体", "类囊体", "基粒", "内共生", "母系遗传"]
+    },
+    "cell-struct-5": {
+      "name": "细胞骨架",
+      "category": "细胞生物学",
+      "module": "module1",
+      "description": "微管、微丝与中间纤维的组成及功能，马达蛋白、纺锤体与纤毛/鞭毛运动。",
+      "keywords": ["微管", "微丝", "中间纤维", "肌动蛋白", "微管蛋白", "kinesin", "dynein"]
+    },
+    "cell-struct-6": {
+      "name": "细胞连接与通讯",
+      "category": "细胞生物学",
+      "module": "module1",
+      "description": "紧密连接、锚定连接与间隙连接，G 蛋白偶联受体与受体酪氨酸激酶信号转导，第二信使。",
+      "keywords": ["紧密连接", "桥粒", "间隙连接", "GPCR", "RTK", "cAMP", "第二信使"]
+    },
+    "cell-metab-1": {
+      "name": "糖酵解",
+      "category": "生物化学",
+      "module": "module1",
+      "description": "葡萄糖在细胞质分解为丙酮酸，净产 2 ATP 和 2 NADH，限速酶 PFK-1。",
+      "keywords": ["糖酵解", "EMP", "丙酮酸", "PFK-1", "底物水平磷酸化"]
+    },
+    "cell-metab-2": {
+      "name": "柠檬酸循环",
+      "category": "生物化学",
+      "module": "module1",
+      "description": "TCA/Krebs 循环在线粒体基质进行，每轮产 3 NADH、1 FADH₂、1 GTP 和 2 CO₂。",
+      "keywords": ["TCA循环", "Krebs", "柠檬酸循环", "乙酰CoA", "三羧酸循环"]
+    },
+    "cell-metab-3": {
+      "name": "氧化磷酸化",
+      "category": "生物化学",
+      "module": "module1",
+      "description": "电子传递链与化学渗透假说，ATP 合酶利用质子梯度合成 ATP。",
+      "keywords": ["电子传递链", "化学渗透", "ATP合酶", "质子梯度", "Mitchell", "氧化磷酸化"]
+    },
+    "cell-metab-4": {
+      "name": "细胞呼吸总览",
+      "category": "生物化学",
+      "module": "module1",
+      "description": "1 分子葡萄糖完全氧化约产生 30~32 ATP，糖酵解、TCA、氧化磷酸化三阶段协同。",
+      "keywords": ["细胞呼吸", "ATP产量", "有氧呼吸", "能量代谢"]
+    },
+    "cell-metab-5": {
+      "name": "光合作用光反应",
+      "category": "植物学",
+      "module": "module2",
+      "description": "PSII 与 PSI 协同进行非循环电子传递，水的光解产 O₂，生成 ATP 与 NADPH。",
+      "keywords": ["光反应", "PSII", "PSI", "P680", "P700", "类囊体", "NADPH"]
+    },
+    "cell-metab-6": {
+      "name": "Calvin 循环与碳同化",
+      "category": "植物学",
+      "module": "module2",
+      "description": "卡尔文循环的羧化、还原、再生三阶段，C3/C4/CAM 植物的碳同化策略，光呼吸。",
+      "keywords": ["Calvin循环", "暗反应", "RuBisCO", "C3", "C4", "CAM", "光呼吸"]
+    },
+    "cell-div-1": {
+      "name": "细胞周期与有丝分裂",
+      "category": "细胞生物学",
+      "module": "module1",
+      "description": "G1/S/G2/M 各期特征，有丝分裂四时期，CDK/cyclin 调控与 G1/S、G2/M 检查点，p53。",
+      "keywords": ["细胞周期", "有丝分裂", "CDK", "cyclin", "检查点", "p53", "赤道板"]
+    },
+    "cell-div-2": {
+      "name": "减数分裂",
+      "category": "细胞生物学",
+      "module": "module1",
+      "description": "减数分裂Ⅰ与Ⅱ，联会、交叉互换、同源染色体分离与非同源染色体自由组合，遗传多样性来源。",
+      "keywords": ["减数分裂", "联会", "交叉互换", "二价体", "自由组合", "配子"]
+    },
+    "cell-div-3": {
+      "name": "细胞分化与干细胞",
+      "category": "细胞生物学",
+      "module": "module1",
+      "description": "基因选择性表达是分化本质，干细胞分类与 iPS 细胞，细胞凋亡的形态特征与 Caspase 级联。",
+      "keywords": ["细胞分化", "干细胞", "iPS", "Yamanaka", "细胞凋亡", "Caspase", "凋亡小体"]
+    },
+    "animal-struct-1": {
+      "name": "动物组织与器官系统",
+      "category": "动物学",
+      "module": "module3",
+      "description": "上皮、结缔、肌肉、神经四种基本组织，11 个器官系统，结构与功能相适应。",
+      "keywords": ["上皮组织", "结缔组织", "肌肉组织", "神经组织", "器官系统"]
+    },
+    "animal-struct-2": {
+      "name": "稳态与反馈调节",
+      "category": "动物学",
+      "module": "module3",
+      "description": "内环境与稳态概念，负反馈与正反馈，体温调节与血糖调节的拮抗机制。",
+      "keywords": ["稳态", "内环境", "负反馈", "正反馈", "胰岛素", "胰高血糖素", "下丘脑"]
+    },
+    "animal-digest-1": {
+      "name": "动物的营养需求",
+      "category": "动物学",
+      "module": "module3",
+      "description": "宏量与微量营养素，水溶性/脂溶性维生素，8 种必需氨基酸，能量物质的产热量。",
+      "keywords": ["营养", "维生素", "必需氨基酸", "必需脂肪酸", "矿物质"]
+    },
+    "animal-digest-2": {
+      "name": "消化系统与吸收",
+      "category": "动物学",
+      "module": "module3",
+      "description": "消化道与消化腺的分工，小肠皱襞/绒毛/微绒毛扩大吸收面积 600 倍，胆汁乳化脂肪。",
+      "keywords": ["消化", "小肠", "绒毛", "胆汁", "胃蛋白酶", "胰液"]
+    },
+    "animal-circ-1": {
+      "name": "血液组成与功能",
+      "category": "动物学",
+      "module": "module3",
+      "description": "血浆与血细胞，凝血三阶段与内外源途径，ABO 与 Rh 血型及输血原则。",
+      "keywords": ["血浆", "红细胞", "白细胞", "血小板", "凝血", "ABO血型", "Rh血型"]
+    },
+    "animal-circ-2": {
+      "name": "循环系统",
+      "category": "动物学",
+      "module": "module3",
+      "description": "体循环与肺循环路径，心脏四腔与瓣膜功能，血压、组织液与淋巴的形成。",
+      "keywords": ["体循环", "肺循环", "心脏", "房室瓣", "动脉瓣", "血压", "组织液", "淋巴"]
+    },
+    "animal-resp-1": {
+      "name": "呼吸系统结构",
+      "category": "动物学",
+      "module": "module3",
+      "description": "呼吸道与肺泡结构，II 型肺泡细胞分泌表面活性物质防止肺泡塌陷，呼吸运动机制。",
+      "keywords": ["呼吸道", "肺泡", "表面活性物质", "膈肌", "胸膜腔负压"]
+    },
+    "animal-resp-2": {
+      "name": "气体交换机制",
+      "category": "动物学",
+      "module": "module3",
+      "description": "气体分压差驱动扩散，O₂ 以氧合血红蛋白运输，Bohr 效应，CO₂ 三种运输形式。",
+      "keywords": ["气体交换", "分压差", "血红蛋白", "Bohr效应", "碳酸氢盐", "碳酸酐酶"]
+    },
+    "animal-excret-1": {
+      "name": "渗透调节",
+      "category": "动物学",
+      "module": "module3",
+      "description": "淡水鱼与海水鱼的渗透调节策略，ADH 调节水重吸收，醛固酮保 Na⁺ 排 K⁺。",
+      "keywords": ["渗透调节", "ADH", "醛固酮", "肾素-血管紧张素", "ANP"]
+    },
+    "animal-excret-2": {
+      "name": "排泄系统与尿生成",
+      "category": "动物学",
+      "module": "module3",
+      "description": "肾单位结构，尿生成三过程（滤过/重吸收/分泌），逆流倍增机制与尿浓缩。",
+      "keywords": ["肾单位", "肾小球", "肾小管", "逆流倍增", "髓袢", "原尿"]
+    },
+    "animal-immune-1": {
+      "name": "固有免疫",
+      "category": "动物学",
+      "module": "module3",
+      "description": "三道防线，吞噬细胞与 NK 细胞，炎症反应，补体系统的三条激活途径，PRR 识别 PAMP。",
+      "keywords": ["固有免疫", "吞噬细胞", "NK细胞", "补体", "PRR", "PAMP", "TLR", "炎症"]
+    },
+    "animal-immune-2": {
+      "name": "适应性免疫",
+      "category": "动物学",
+      "module": "module3",
+      "description": "细胞免疫与体液免疫，MHC I/II 类分子呈递途径，5 类免疫球蛋白的功能与免疫耐受。",
+      "keywords": ["适应性免疫", "T细胞", "B细胞", "MHC", "抗体", "IgG", "IgM", "IgA", "免疫耐受"]
+    },
+    "animal-endo-1": {
+      "name": "激素作用机制",
+      "category": "动物学",
+      "module": "module3",
+      "description": "含氮激素与类固醇激素的不同作用机制，第二信使学说，下丘脑-垂体-靶腺轴与负反馈。",
+      "keywords": ["激素", "含氮激素", "类固醇激素", "第二信使", "cAMP", "下丘脑-垂体轴"]
+    },
+    "animal-endo-2": {
+      "name": "主要内分泌腺与激素",
+      "category": "动物学",
+      "module": "module3",
+      "description": "腺垂体与神经垂体激素，甲状腺激素与呆小症，胰岛素与胰高血糖素的拮抗调节。",
+      "keywords": ["垂体", "甲状腺", "肾上腺", "胰岛", "胰岛素", "甲状腺激素", "呆小症"]
+    },
+    "animal-nervous-1": {
+      "name": "神经元与动作电位",
+      "category": "动物学",
+      "module": "module3",
+      "description": "静息电位与 Na⁺/K⁺ 泵，动作电位全或无定律，不应期与有髓纤维的跳跃式传导。",
+      "keywords": ["神经元", "静息电位", "动作电位", "Na+/K+泵", "全或无", "郎飞结", "跳跃传导"]
+    },
+    "animal-nervous-2": {
+      "name": "突触传递",
+      "category": "动物学",
+      "module": "module3",
+      "description": "化学突触传递过程，EPSP 与 IPSP 的空间/时间总和，常见神经递质。",
+      "keywords": ["突触", "神经递质", "乙酰胆碱", "EPSP", "IPSP", "总和", "SNARE"]
+    },
+    "animal-nervous-3": {
+      "name": "神经系统结构",
+      "category": "动物学",
+      "module": "module3",
+      "description": "反射弧五部分，大脑皮层功能定位，自主神经系统的交感与副交感拮抗。",
+      "keywords": ["反射弧", "大脑皮层", "小脑", "延髓", "下丘脑", "交感神经", "副交感神经"]
+    },
+    "animal-sense-1": {
+      "name": "视觉",
+      "category": "动物学",
+      "module": "module3",
+      "description": "眼球结构与折光系统，视杆与视锥细胞，色觉三原色学说，光信号转导机制。",
+      "keywords": ["视觉", "视网膜", "视杆细胞", "视锥细胞", "视紫红质", "色觉", "维生素A"]
+    },
+    "animal-sense-2": {
+      "name": "听觉与其他感觉",
+      "category": "动物学",
+      "module": "module3",
+      "description": "耳蜗柯蒂氏器与毛细胞，基底膜音调定位，前庭器官与平衡觉，味觉、嗅觉与皮肤感觉。",
+      "keywords": ["听觉", "耳蜗", "柯蒂氏器", "毛细胞", "基底膜", "前庭", "味觉", "嗅觉"]
+    },
+    "animal-motor-1": {
+      "name": "骨骼与肌肉结构",
+      "category": "动物学",
+      "module": "module3",
+      "description": "中轴与附肢骨骼，长骨结构，骨骼肌肌节组成，粗肌丝（肌球蛋白）与细肌丝的成分。",
+      "keywords": ["骨骼", "长骨", "关节", "骨骼肌", "肌节", "肌球蛋白", "肌动蛋白"]
+    },
+    "animal-motor-2": {
+      "name": "肌肉收缩与运动调控",
+      "category": "动物学",
+      "module": "module3",
+      "description": "滑动学说与 Ca²⁺ 的作用，运动单位与精细运动，肌梭与腱器官的本体感受。",
+      "keywords": ["滑动学说", "肌钙蛋白", "原肌球蛋白", "运动单位", "肌梭", "腱器官", "强直收缩"]
+    },
+    "animal-repro-1": {
+      "name": "生殖方式",
+      "category": "动物学",
+      "module": "module3",
+      "description": "无性生殖与有性生殖的优劣，精子发生过程，卵子发生的特点与减数分裂停滞。",
+      "keywords": ["无性生殖", "有性生殖", "精子发生", "卵子发生", "减数分裂", "受精"]
+    },
+    "animal-repro-2": {
+      "name": "胚胎发育",
+      "category": "动物学",
+      "module": "module3",
+      "description": "卵裂→囊胚→原肠胚→器官发生，三胚层分化，Spemann 组织者，胎盘结构与月经周期。",
+      "keywords": ["胚胎发育", "原肠胚", "三胚层", "组织者", "Spemann", "胎盘", "月经周期"]
+    },
+    "plant-struct-1": {
+      "name": "植物组织",
+      "category": "植物学",
+      "module": "module2",
+      "description": "分生组织（顶端/侧生/居间）与成熟组织（保护/薄壁/机械/输导/分泌），导管、管胞与筛管的区别。",
+      "keywords": ["分生组织", "保护组织", "薄壁组织", "厚角组织", "厚壁组织", "导管", "筛管"]
+    },
+    "plant-struct-2": {
+      "name": "根茎叶结构",
+      "category": "植物学",
+      "module": "module2",
+      "description": "根尖四区与凯氏带，双子叶茎的次生生长与年轮，C4 植物的花环结构。",
+      "keywords": ["根尖", "凯氏带", "维管束", "次生生长", "年轮", "花环结构", "气孔"]
+    },
+    "plant-struct-3": {
+      "name": "花的结构与生殖",
+      "category": "植物学",
+      "module": "module2",
+      "description": "花的结构，被子植物双受精过程，胚珠→种子、子房→果实，单子叶与双子叶种子差异。",
+      "keywords": ["花", "双受精", "胚珠", "种子", "果实", "子叶", "假果"]
+    },
+    "plant-nutr-1": {
+      "name": "水分与矿物质吸收",
+      "category": "植物学",
+      "module": "module2",
+      "description": "水势与渗透/吸胀吸水，根压与蒸腾拉力，17 种必需元素及缺素症状，菌根与根瘤菌固氮。",
+      "keywords": ["水势", "渗透势", "根压", "蒸腾拉力", "必需元素", "缺素症", "根瘤菌"]
+    },
+    "plant-nutr-2": {
+      "name": "蒸腾作用",
+      "category": "植物学",
+      "module": "module2",
+      "description": "蒸腾作用的意义与影响因素，气孔开闭的 K⁺ 泵假说，ABA 促进气孔关闭，CAM 植物适应。",
+      "keywords": ["蒸腾作用", "气孔", "保卫细胞", "K+泵", "ABA", "CAM", "Fick定律"]
+    },
+    "plant-reg-1": {
+      "name": "植物激素",
+      "category": "植物学",
+      "module": "module2",
+      "description": "六大类植物激素（生长素、赤霉素、细胞分裂素、脱落酸、乙烯、油菜素内酯）的功能与酸生长假说。",
+      "keywords": ["生长素", "赤霉素", "细胞分裂素", "脱落酸", "乙烯", "酸生长假说", "极性运输"]
+    },
+    "plant-reg-2": {
+      "name": "光周期与开花",
+      "category": "植物学",
+      "module": "module2",
+      "description": "长日/短日/日中性植物，光敏色素 Pr/Pfr 可逆转化，暗期闪光实验，春化与花器官 ABC 模型。",
+      "keywords": ["光周期", "长日植物", "短日植物", "光敏色素", "Pr", "Pfr", "春化", "ABC模型"]
+    },
+    "gen-basic-1": {
+      "name": "分离定律",
+      "category": "遗传学",
+      "module": "module4",
+      "description": "等位基因在形成配子时分离，F2 表型 3:1、基因型 1:2:1，测交用于确定基因型。",
+      "keywords": ["分离定律", "等位基因", "3:1", "测交", "显隐性", "孟德尔"]
+    },
+    "gen-basic-2": {
+      "name": "自由组合定律",
+      "category": "遗传学",
+      "module": "module4",
+      "description": "非同源染色体上非等位基因独立分配，F2 表型 9:3:3:1，概率的乘法与加法法则。",
+      "keywords": ["自由组合定律", "9:3:3:1", "概率", "乘法法则", "加法法则"]
+    },
+    "gen-basic-3": {
+      "name": "连锁与交换",
+      "category": "遗传学",
+      "module": "module4",
+      "description": "完全与不完全连锁，重组率与遗传距离（cM），三点测验与并发系数，伴性遗传特点。",
+      "keywords": ["连锁", "交换", "重组率", "厘摩", "三点测验", "并发系数", "伴性遗传"]
+    },
+    "gen-basic-4": {
+      "name": "性染色体与伴性遗传",
+      "category": "遗传学",
+      "module": "module4",
+      "description": "XY/ZW/XO/倍数性别决定，SRY 基因，X 连锁隐性/显性遗传特点，Lyon 假说与巴氏小体。",
+      "keywords": ["性染色体", "XY型", "ZW型", "SRY", "X连锁", "Lyon假说", "巴氏小体", "剂量补偿"]
+    },
+    "gen-mol-1": {
+      "name": "DNA 复制",
+      "category": "分子生物学",
+      "module": "module1",
+      "description": "半保留复制与 Meselson-Stahl 实验，前导链与滞后链、冈崎片段，端粒酶与末端复制问题。",
+      "keywords": ["半保留复制", "Meselson-Stahl", "复制叉", "冈崎片段", "DNA聚合酶", "端粒酶"]
+    },
+    "gen-mol-2": {
+      "name": "转录与 mRNA 加工",
+      "category": "分子生物学",
+      "module": "module1",
+      "description": "真核三种 RNA 聚合酶，启动子，mRNA 加工（5'加帽、3'加尾、内含子剪接），可变剪接。",
+      "keywords": ["转录", "RNA聚合酶", "启动子", "5'帽", "polyA尾", "剪接体", "内含子", "外显子", "可变剪接"]
+    },
+    "gen-mol-3": {
+      "name": "翻译与遗传密码",
+      "category": "分子生物学",
+      "module": "module1",
+      "description": "核糖体 A/P/E 位，tRNA 反密码子配对，遗传密码的简并性、通用性与无标点性。",
+      "keywords": ["翻译", "核糖体", "tRNA", "密码子", "反密码子", "遗传密码", "简并性", "AUG"]
+    },
+    "gen-reg-1": {
+      "name": "原核基因调控",
+      "category": "分子生物学",
+      "module": "module1",
+      "description": "乳糖操纵子双重调控（阻遏蛋白负控 + CAP-cAMP 正控），色氨酸操纵子衰减子机制。",
+      "keywords": ["乳糖操纵子", "lacI", "CAP", "cAMP", "阻遏蛋白", "色氨酸操纵子", "衰减子"]
+    },
+    "gen-reg-2": {
+      "name": "真核基因调控",
+      "category": "分子生物学",
+      "module": "module1",
+      "description": "顺式作用元件与反式作用因子，增强子，RNA 干扰，表观遗传调控（DNA 甲基化、组蛋白修饰）。",
+      "keywords": ["增强子", "转录因子", "锌指", "RNAi", "miRNA", "DNA甲基化", "组蛋白修饰", "表观遗传"]
+    },
+    "gen-recomb-1": {
+      "name": "限制酶与载体",
+      "category": "分子生物学",
+      "module": "module1",
+      "description": "II 型限制酶与粘性末端，质粒/λ噬菌体/黏粒/BAC/YAC 等载体容量，蓝白斑筛选。",
+      "keywords": ["限制酶", "EcoRI", "粘性末端", "质粒", "载体", "蓝白斑筛选", "感受态"]
+    },
+    "gen-recomb-2": {
+      "name": "PCR 与基因工程应用",
+      "category": "分子生物学",
+      "module": "module1",
+      "description": "PCR 三步骤与 Taq 酶，RT-PCR 与 qPCR，转基因生物、基因治疗与 CRISPR-Cas9。",
+      "keywords": ["PCR", "Taq酶", "RT-PCR", "qPCR", "CRISPR", "Cas9", "基因治疗", "转基因"]
+    },
+    "evo-1": {
+      "name": "自然选择学说",
+      "category": "生态学",
+      "module": "module3",
+      "description": "达尔文自然选择四要点，同源器官与同功器官，现代综合进化论要点。",
+      "keywords": ["自然选择", "达尔文", "过度繁殖", "适者生存", "同源器官", "同功器官", "现代综合进化论"]
+    },
+    "evo-2": {
+      "name": "群体遗传学基础",
+      "category": "遗传学",
+      "module": "module4",
+      "description": "Hardy-Weinberg 平衡条件与 p²+2pq+q²=1 公式，突变、遗传漂变、瓶颈效应、奠基者效应。",
+      "keywords": ["Hardy-Weinberg", "基因频率", "遗传漂变", "瓶颈效应", "奠基者效应", "选择模式"]
+    },
+    "evo-3": {
+      "name": "物种概念",
+      "category": "生态学",
+      "module": "module3",
+      "description": "生物学物种概念与其它物种概念，合子前与合子后生殖隔离机制，骡子不育的原因。",
+      "keywords": ["物种", "生物学物种概念", "生殖隔离", "合子前隔离", "合子后隔离", "骡子"]
+    },
+    "evo-4": {
+      "name": "物种形成方式",
+      "category": "生态学",
+      "module": "module3",
+      "description": "异域、同域与邻域物种形成，多倍体与同域物种形成，普通小麦的异源多倍体起源。",
+      "keywords": ["物种形成", "异域", "同域", "多倍体", "异源多倍体", "普通小麦", "间断平衡"]
+    },
+    "evo-5": {
+      "name": "宏进化模式",
+      "category": "生态学",
+      "module": "module3",
+      "description": "趋同、趋异与平行进化，五次大灭绝，适应辐射，活化石，间断平衡论。",
+      "keywords": ["宏进化", "趋同进化", "趋异进化", "适应辐射", "大灭绝", "活化石", "间断平衡"]
+    },
+    "evo-6": {
+      "name": "系统发育与分类",
+      "category": "生态学",
+      "module": "module3",
+      "description": "系统发育树构建方法（MP/ML/贝叶斯），单系群/并系群/多系群，共有衍征与同塑性。",
+      "keywords": ["系统发育", "进化树", "最大简约法", "最大似然法", "单系群", "共有衍征", "同塑性", "支序分类"]
+    },
+    "eco-env-1": {
+      "name": "环境因子与生态幅",
+      "category": "生态学",
+      "module": "module3",
+      "description": "生态因子作用特点，Shelford 耐受性定律，Liebig 最小因子定律，限制因子。",
+      "keywords": ["生态因子", "生态幅", "耐受性定律", "Shelford", "最小因子定律", "Liebig", "限制因子"]
+    },
+    "eco-env-2": {
+      "name": "生物对环境的适应",
+      "category": "生态学",
+      "module": "module3",
+      "description": "Bergmann/Allen/Gloger 规律，保护色、警戒色与拟态，适应与驯化的区别，生物钟。",
+      "keywords": ["Bergmann", "Allen", "Gloger", "保护色", "警戒色", "拟态", "驯化", "生物钟"]
+    },
+    "eco-pop-1": {
+      "name": "种群特征与动态",
+      "category": "生态学",
+      "module": "module3",
+      "description": "种群密度调查方法（样方法/标志重捕法），年龄结构三型，分布型，密度制约因素。",
+      "keywords": ["种群", "种群密度", "标志重捕法", "年龄结构", "性比", "分布型", "密度制约"]
+    },
+    "eco-pop-2": {
+      "name": "种群增长模型",
+      "category": "生态学",
+      "module": "module3",
+      "description": "J 型指数增长与 S 型逻辑斯谛增长，环境容纳量 K，r-选择与 K-选择策略，种群周期波动。",
+      "keywords": ["指数增长", "逻辑斯谛增长", "环境容纳量", "K值", "r-选择", "K-选择", "内禀增长率"]
+    },
+    "eco-comm-1": {
+      "name": "群落结构",
+      "category": "生态学",
+      "module": "module3",
+      "description": "物种多样性指数（Shannon-Wiener），优势种与关键种，垂直分层与水平结构，竞争排斥与生态位分化。",
+      "keywords": ["群落", "物种多样性", "Shannon-Wiener", "关键种", "垂直分层", "竞争排斥", "生态位"]
+    },
+    "eco-comm-2": {
+      "name": "群落演替",
+      "category": "生态学",
+      "module": "module3",
+      "description": "初生与次生演替，演替三种机制模型，顶极群落，中度干扰假说。",
+      "keywords": ["群落演替", "初生演替", "次生演替", "顶极群落", "中度干扰假说"]
+    },
+    "eco-ecosystem-1": {
+      "name": "生态系统能量流动",
+      "category": "生态学",
+      "module": "module3",
+      "description": "GPP 与 NPP 关系，林德曼效率 10%~20%，三种生态金字塔，食物链与食物网。",
+      "keywords": ["生态系统", "GPP", "NPP", "林德曼效率", "能量金字塔", "食物链", "食物网", "营养级"]
+    },
+    "eco-ecosystem-2": {
+      "name": "物质循环",
+      "category": "生态学",
+      "module": "module3",
+      "description": "气相型与沉积型循环，碳循环与温室效应，氮循环五步骤，磷循环与富营养化。",
+      "keywords": ["物质循环", "碳循环", "氮循环", "磷循环", "固氮", "硝化", "反硝化", "富营养化"]
+    },
+    "gen-mendel-1": {
+      "name": "分离定律（遗传学）",
+      "category": "遗传学",
+      "module": "module4",
+      "description": "孟德尔豌豆杂交实验，F1 显性、F2 3:1 分离，等位基因分离是减数分裂的细胞学基础。",
+      "keywords": ["孟德尔", "分离定律", "豌豆", "3:1", "等位基因", "测交", "纯合子"]
+    },
+    "gen-mendel-2": {
+      "name": "自由组合定律（遗传学）",
+      "category": "遗传学",
+      "module": "module4",
+      "description": "F2 表型 9:3:3:1，非同源染色体自由组合的细胞学基础，概率的乘法与加法定律。",
+      "keywords": ["自由组合定律", "9:3:3:1", "非同源染色体", "概率", "乘法定律", "加法定律"]
+    },
+    "gen-linkage-1": {
+      "name": "连锁与交换（遗传学）",
+      "category": "遗传学",
+      "module": "module4",
+      "description": "摩尔根果蝇实验，完全与不完全连锁，重组率与厘摩（cM）作为遗传距离单位。",
+      "keywords": ["连锁", "摩尔根", "果蝇", "交换", "重组率", "厘摩", "cM"]
+    },
+    "gen-linkage-2": {
+      "name": "连锁遗传图",
+      "category": "遗传学",
+      "module": "module4",
+      "description": "三点测交确定基因顺序与双交换率，Haldane 作图函数，遗传图（cM）与物理图（bp）的区别。",
+      "keywords": ["连锁遗传图", "三点测交", "双交换", "Haldane", "作图函数", "遗传图距", "物理图距"]
+    },
+    "gen-dna-1": {
+      "name": "遗传物质的发现",
+      "category": "分子生物学",
+      "module": "module1",
+      "description": "Griffith 转化实验、Avery 酶解实验、Hershey-Chase 噬菌体实验，TMV 重建实验证明 RNA 也可作遗传物质。",
+      "keywords": ["Griffith", "Avery", "Hershey-Chase", "转化实验", "噬菌体", "TMV", "肺炎链球菌"]
+    },
+    "gen-dna-2": {
+      "name": "DNA 结构与复制（遗传学）",
+      "category": "分子生物学",
+      "module": "module1",
+      "description": "Watson-Crick 双螺旋结构，反向平行与碱基配对，半保留复制与复制叉，前导链与滞后链。",
+      "keywords": ["DNA双螺旋", "Watson", "Crick", "半保留复制", "复制叉", "前导链", "滞后链", "冈崎片段"]
+    },
+    "gen-transcription-1": {
+      "name": "转录（遗传学）",
+      "category": "分子生物学",
+      "module": "module1",
+      "description": "RNA 聚合酶与 σ 因子识别启动子，原核 -10/-35 区，真核 mRNA 加工（加帽、加尾、剪接）。",
+      "keywords": ["转录", "RNA聚合酶", "σ因子", "启动子", "Pribnow盒", "5'帽", "polyA尾", "剪接体"]
+    },
+    "gen-translation-1": {
+      "name": "翻译（遗传学）",
+      "category": "分子生物学",
+      "module": "module1",
+      "description": "64 种密码子与 3 个终止密码子，遗传密码的简并性与通用性，tRNA 与氨酰 tRNA合成酶。",
+      "keywords": ["翻译", "密码子", "终止密码子", "简并性", "通用性", "tRNA", "反密码子", "氨酰tRNA合成酶"]
+    },
+    "gen-mutation-1": {
+      "name": "基因突变类型与机制",
+      "category": "遗传学",
+      "module": "module4",
+      "description": "碱基替换（转换/颠换）、移码突变，自发与诱发突变，紫外线致胸腺嘧啶二聚体，Ames 试验。",
+      "keywords": ["基因突变", "碱基替换", "移码突变", "转换", "颠换", "胸腺嘧啶二聚体", "Ames试验"]
+    },
+    "gen-mutation-2": {
+      "name": "突变检测与 DNA 修复",
+      "category": "遗传学",
+      "module": "module4",
+      "description": "光修复、切除修复（BER/NER）、错配修复、重组修复、SOS 修复，XP 与 HNPCC 等修复缺陷疾病。",
+      "keywords": ["DNA修复", "光修复", "切除修复", "错配修复", "SOS修复", "着色性干皮病", "HNPCC"]
+    },
+    "gen-chromosome-1": {
+      "name": "染色体结构变异",
+      "category": "遗传学",
+      "module": "module4",
+      "description": "缺失、重复、倒位（臂内/臂间）、易位（相互/罗伯逊），倒位环与重组抑制，人类 2 号染色体起源。",
+      "keywords": ["染色体变异", "缺失", "重复", "倒位", "易位", "罗伯逊易位", "倒位环"]
+    },
+    "gen-chromosome-2": {
+      "name": "染色体数目变异",
+      "category": "遗传学",
+      "module": "module4",
+      "description": "整倍体（单倍体/多倍体）与非整倍体（单体/三体/缺体），Down/Edwards/Patau/Turner/Klinefelter 综合征。",
+      "keywords": ["整倍体", "非整倍体", "多倍体", "三体", "Down综合征", "Turner综合征", "Klinefelter综合征", "不分离"]
+    },
+    "gen-population-1": {
+      "name": "基因频率与 H-W 平衡（遗传学）",
+      "category": "遗传学",
+      "module": "module4",
+      "description": "基因频率与基因型频率，Hardy-Weinberg 平衡条件，p²+2pq+q²=1 应用于携带者频率计算。",
+      "keywords": ["基因频率", "基因型频率", "Hardy-Weinberg", "p²+2pq+q²", "携带者频率", "遗传咨询"]
+    },
+    "gen-population-2": {
+      "name": "影响基因频率的因素",
+      "category": "遗传学",
+      "module": "module4",
+      "description": "突变与选择的平衡，适合度与选择系数，遗传漂变与瓶颈效应，近交系数与近交衰退。",
+      "keywords": ["自然选择", "适合度", "选择系数", "遗传漂变", "基因流", "近交系数", "近交衰退"]
+    },
+    "gen-evolution-1": {
+      "name": "分子进化与系统发育",
+      "category": "遗传学",
+      "module": "module4",
+      "description": "分子钟假说与中性学说（Kimura），系统发育树构建方法，直系同源与旁系同源，16S rRNA。",
+      "keywords": ["分子进化", "分子钟", "中性学说", "Kimura", "系统发育树", "直系同源", "旁系同源", "16S rRNA"]
+    },
+    "gen-quantitative-1": {
+      "name": "数量性状与遗传力",
+      "category": "遗传学",
+      "module": "module4",
+      "description": "数量性状与 QTL，广义遗传力 H² 与狭义遗传力 h²，选择响应 R = h² × S。",
+      "keywords": ["数量性状", "QTL", "广义遗传力", "狭义遗传力", "选择响应", "加性方差", "育种"]
+    },
+    "gen-development-1": {
+      "name": "基因与发育调控",
+      "category": "遗传学",
+      "module": "module4",
+      "description": "Hox 基因与同源异形框，形态发生素梯度（Bicoid），母体效应基因与体节基因级联，决定与分化。",
+      "keywords": ["Hox基因", "同源异形框", "形态发生素", "Bicoid", "母体效应基因", "决定", "分化"]
+    },
+    "plant-water-1": {
+      "name": "水分生理（植物生理学）",
+      "category": "植物学",
+      "module": "module2",
+      "description": "水在植物生命活动中的意义，水势组成（ψs/ψp/ψm），渗透吸水与吸胀吸水。",
+      "keywords": ["水势", "溶质势", "压力势", "衬质势", "渗透吸水", "吸胀吸水"]
+    },
+    "plant-water-2": {
+      "name": "蒸腾作用（植物生理学）",
+      "category": "植物学",
+      "module": "module2",
+      "description": "蒸腾作用的意义，气孔由保卫细胞构成，光照/CO₂/温度/水分对气孔运动的影响。",
+      "keywords": ["蒸腾作用", "气孔", "保卫细胞", "蒸腾拉力", "蓝光", "叶温"]
+    },
+    "plant-photo-1": {
+      "name": "光合色素与光反应（植物生理学）",
+      "category": "植物学",
+      "module": "module2",
+      "description": "叶绿素 a/b 与类胡萝卜素的吸收光谱，PSII 与 PSI 协同进行非循环电子传递。",
+      "keywords": ["光合色素", "叶绿素", "类胡萝卜素", "PSII", "PSI", "细胞色素b6f", "ATP合酶"]
+    },
+    "plant-photo-2": {
+      "name": "Calvin 循环与光呼吸（植物生理学）",
+      "category": "植物学",
+      "module": "module2",
+      "description": "卡尔文循环三阶段，C3/C4/CAM 植物的碳同化策略，RuBisCO 加氧酶活性导致光呼吸。",
+      "keywords": ["卡尔文循环", "RuBisCO", "RuBP", "C3", "C4", "CAM", "光呼吸", "花环结构"]
+    },
+    "plant-hormone-1": {
+      "name": "植物激素概述（植物生理学）",
+      "category": "植物学",
+      "module": "module2",
+      "description": "五大经典植物激素与新型激素，激素的多效性与协同性，CTK/IAA 比值决定生根或生芽。",
+      "keywords": ["植物激素", "生长素", "赤霉素", "细胞分裂素", "脱落酸", "乙烯", "多效性", "协同性"]
+    },
+    "plant-hormone-2": {
+      "name": "生长素与赤霉素（植物生理学）",
+      "category": "植物学",
+      "module": "module2",
+      "description": "生长素的极性运输（PIN 蛋白）与顶端优势，赤霉素诱导 α-淀粉酶合成促进种子萌发。",
+      "keywords": ["生长素", "IAA", "极性运输", "PIN蛋白", "顶端优势", "赤霉素", "α-淀粉酶", "糊粉层"]
+    },
+    "plant-growth-1": {
+      "name": "营养器官生长（植物生理学）",
+      "category": "植物学",
+      "module": "module2",
+      "description": "初生与次生生长，维管形成层产生年轮，顶端优势现象，植物生长的 S 型曲线。",
+      "keywords": ["初生生长", "次生生长", "维管形成层", "年轮", "早材", "晚材", "顶端优势", "S型曲线"]
+    },
+    "plant-growth-2": {
+      "name": "生殖生长（植物生理学）",
+      "category": "植物学",
+      "module": "module2",
+      "description": "春化作用与光周期现象，长日/短日/日中性植物，光敏色素，FT 蛋白成花信号，ABC 模型。",
+      "keywords": ["春化", "光周期", "长日植物", "短日植物", "光敏色素", "FT蛋白", "成花素", "ABC模型"]
+    },
+    "plant-stress-1": {
+      "name": "干旱与盐胁迫",
+      "category": "植物学",
+      "module": "module2",
+      "description": "渗透调节（脯氨酸/甜菜碱），Na⁺ 区隔化与排盐，ABA 促进气孔关闭，ROS 清除系统。",
+      "keywords": ["干旱胁迫", "盐胁迫", "渗透调节", "脯氨酸", "LEA蛋白", "ABA", "ROS", "SOD"]
+    },
+    "plant-stress-2": {
+      "name": "温度胁迫",
+      "category": "植物学",
+      "module": "module2",
+      "description": "热激蛋白（HSP）作为分子伴侣，冷害与冻害的区别，膜脂不饱和度与耐冷性，CBF/DREB1 途径。",
+      "keywords": ["热害", "冷害", "冻害", "热激蛋白", "HSP", "抗冻蛋白", "CBF", "DREB1", "交叉适应"]
+    },
+    "micro-bacteria-1": {
+      "name": "细菌",
+      "category": "微生物学",
+      "module": "module2",
+      "description": "细菌基本形态与结构，革兰氏阳性/阴性菌细胞壁差异，芽孢的抗逆性，二分裂与菌落。",
+      "keywords": ["细菌", "革兰氏染色", "肽聚糖", "脂多糖", "芽孢", "二分裂", "菌落"]
+    },
+    "micro-bacteria-2": {
+      "name": "放线菌与蓝细菌",
+      "category": "微生物学",
+      "module": "module2",
+      "description": "放线菌以孢子繁殖、产生抗生素（链霉菌），蓝细菌产氧光合与固氮，异形胞，水华。",
+      "keywords": ["放线菌", "链霉菌", "抗生素", "蓝细菌", "叶绿素a", "藻胆素", "异形胞", "固氮", "水华"]
+    },
+    "micro-virus-1": {
+      "name": "病毒的基本特征",
+      "category": "微生物学",
+      "module": "module2",
+      "description": "病毒的非细胞结构（核酸 + 衣壳），增殖过程（吸附/侵入/脱壳/合成/组装/释放），烈性与温和噬菌体。",
+      "keywords": ["病毒", "衣壳", "包膜", "噬菌体", "增殖周期", "烈性噬菌体", "温和噬菌体", "原噬菌体"]
+    },
+    "micro-virus-2": {
+      "name": "重要病毒与疫苗",
+      "category": "微生物学",
+      "module": "module2",
+      "description": "流感、HIV、冠状病毒等致病病毒，疫苗类型（灭活/减毒/亚单位/mRNA），病毒与癌症（HPV、HBV）。",
+      "keywords": ["流感病毒", "HIV", "冠状病毒", "疫苗", "mRNA疫苗", "HPV", "HBV", "病毒致癌"]
+    },
+    "micro-metabolism-1": {
+      "name": "微生物营养类型",
+      "category": "微生物学",
+      "module": "module2",
+      "description": "四种营养类型（光能自养/光能异养/化能自养/化能异养），碳源/能源/氮源/生长因子，培养基类型。",
+      "keywords": ["营养类型", "光能自养", "化能自养", "化能异养", "碳源", "氮源", "培养基", "选择培养基", "鉴别培养基"]
+    },
+    "micro-metabolism-2": {
+      "name": "微生物代谢途径",
+      "category": "微生物学",
+      "module": "module2",
+      "description": "EMP/ED/HMP 途径，TCA 循环，发酵类型（同型乳酸/酒精），化能自养菌的无机物氧化获能。",
+      "keywords": ["EMP", "ED途径", "HMP", "TCA循环", "发酵", "同型乳酸发酵", "酒精发酵", "硝化细菌"]
+    },
+    "micro-genetics-1": {
+      "name": "微生物基因转移",
+      "category": "微生物学",
+      "module": "module2",
+      "description": "转化、接合（F⁺/Hfr）、转导（普遍性/局限性）三种基因转移机制，与抗生素抗性传播。",
+      "keywords": ["转化", "接合", "F质粒", "Hfr", "转导", "普遍性转导", "局限性转导", "λ噬菌体"]
+    },
+    "micro-genetics-2": {
+      "name": "微生物基因重组",
+      "category": "微生物学",
+      "module": "module2",
+      "description": "同源重组与 RecA，Holliday 模型，转座子（IS/复合转座子/TnA），质粒（F/R/Col）。",
+      "keywords": ["同源重组", "RecA", "Holliday模型", "转座子", "IS序列", "TnA", "质粒", "R质粒"]
+    },
+    "micro-infection-1": {
+      "name": "病原微生物",
+      "category": "微生物学",
+      "module": "module2",
+      "description": "胞外/兼性胞内/专性胞内病原，外毒素与内毒素的差异，Koch 法则，ID₅₀ 与 LD₅₀。",
+      "keywords": ["病原菌", "外毒素", "内毒素", "LPS", "Koch法则", "侵袭力", "毒力", "ID50", "LD50"]
+    },
+    "micro-infection-2": {
+      "name": "免疫防御（微生物学）",
+      "category": "微生物学",
+      "module": "module2",
+      "description": "天然免疫与获得性免疫，五种免疫球蛋白（IgG/IgM/IgA/IgD/IgE），黏膜免疫与 sIgA，疫苗原理。",
+      "keywords": ["天然免疫", "获得性免疫", "免疫球蛋白", "IgG", "IgM", "sIgA", "黏膜免疫", "补体", "NK细胞"]
+    },
+    "micro-biotech-1": {
+      "name": "微生物生物技术",
+      "category": "微生物学",
+      "module": "module2",
+      "description": "发酵生产食品与抗生素，基因工程重组蛋白药物（胰岛素/疫苗），环境微生物与极端微生物酶。",
+      "keywords": ["发酵", "抗生素", "基因工程", "胰岛素", "Taq酶", "生物修复", "极端微生物", "固氮"]
+    },
+    "biochem-protein-1": {
+      "name": "氨基酸与肽",
+      "category": "生物化学",
+      "module": "module1",
+      "description": "20 种标准氨基酸的分类，肽键的部分双键性质，等电点 pI 时蛋白质溶解度最小。",
+      "keywords": ["氨基酸", "肽键", "α-氨基酸", "L型", "等电点", "pI", "必需氨基酸"]
+    },
+    "biochem-protein-2": {
+      "name": "蛋白质结构与功能",
+      "category": "生物化学",
+      "module": "module1",
+      "description": "蛋白质四级结构层次与稳定力，Anfinsen 实验，分子伴侣，Hb 的协同效应与 Bohr 效应。",
+      "keywords": ["二级结构", "α螺旋", "β折叠", "三级结构", "四级结构", "Anfinsen", "分子伴侣", "血红蛋白", "Bohr效应", "BPG"]
+    },
+    "biochem-nucleic-1": {
+      "name": "核酸的化学组成",
+      "category": "分子生物学",
+      "module": "module1",
+      "description": "核苷酸由碱基/戊糖/磷酸组成，3',5'-磷酸二酯键，Chargaff 规则，ATP/cAMP/NAD⁺/FAD 的独立功能。",
+      "keywords": ["核苷酸", "磷酸二酯键", "Chargaff规则", "ATP", "cAMP", "NAD+", "FAD", "脱氧核糖"]
+    },
+    "biochem-nucleic-2": {
+      "name": "DNA 高级结构",
+      "category": "分子生物学",
+      "module": "module1",
+      "description": "B-DNA 双螺旋参数，A-DNA/Z-DNA 构象，超螺旋与拓扑异构酶，Lk = Tw + Wr。",
+      "keywords": ["B-DNA", "A-DNA", "Z-DNA", "大沟", "小沟", "超螺旋", "拓扑异构酶", "连接数"]
+    },
+    "biochem-enzyme-1": {
+      "name": "酶的结构与功能",
+      "category": "生物化学",
+      "module": "module1",
+      "description": "活性中心与辅助因子（辅酶/辅基/金属离子），全酶 = 酶蛋白 + 辅助因子，EC 六大类分类。",
+      "keywords": ["活性中心", "辅酶", "辅基", "全酶", "EC分类", "氧化还原酶", "转移酶", "水解酶", "裂合酶", "异构酶", "连接酶"]
+    },
+    "biochem-enzyme-2": {
+      "name": "酶动力学与调控",
+      "category": "生物化学",
+      "module": "module1",
+      "description": "米氏方程与 Km、kcat，竞争性/非竞争性/反竞争性抑制，别构酶与共价修饰，酶原激活。",
+      "keywords": ["米氏方程", "Km", "kcat", "Vmax", "竞争性抑制", "非竞争性抑制", "反竞争性抑制", "别构酶", "酶原激活"]
+    },
+    "biochem-carb-1": {
+      "name": "糖酵解与糖异生",
+      "category": "生物化学",
+      "module": "module1",
+      "description": "糖酵解三步不可逆反应与 PFK-1 限速酶，糖异生的「绕过」策略，Cori 循环。",
+      "keywords": ["糖酵解", "PFK-1", "丙酮酸激酶", "糖异生", "丙酮酸羧化酶", "底物循环", "Cori循环"]
+    },
+    "biochem-carb-2": {
+      "name": "TCA 循环与氧化磷酸化（生化）",
+      "category": "生物化学",
+      "module": "module1",
+      "description": "PDH 复合体与五种辅酶，TCA 循环产能，化学渗透学说与 ATP 合酶，解偶联蛋白 UCP1 产热。",
+      "keywords": ["PDH", "TPP", "硫辛酸", "TCA循环", "柠檬酸合酶", "化学渗透", "ATP合酶", "P/O比", "UCP1", "棕色脂肪"]
+    },
+    "biochem-lipid-1": {
+      "name": "脂肪酸氧化与酮体",
+      "category": "生物化学",
+      "module": "module1",
+      "description": "β-氧化四步反应（脱氢/水化/再脱氢/硫解），棕榈酸完全氧化约产 106 ATP，酮体的生成与利用。",
+      "keywords": ["β-氧化", "乙酰CoA", "酮体", "乙酰乙酸", "β-羟丁酸", "酮症", "代谢区室化"]
+    },
+    "biochem-amino-1": {
+      "name": "氨基酸降解与尿素循环",
+      "category": "生物化学",
+      "module": "module1",
+      "description": "联合脱氨（转氨 + 氧化脱氨），尿素循环（鸟氨酸循环）五步反应与 CPS-I 限速酶，生糖/生酮氨基酸。",
+      "keywords": ["转氨作用", "ALT", "AST", "氧化脱氨", "尿素循环", "鸟氨酸循环", "CPS-I", "NAG", "生糖氨基酸", "生酮氨基酸"]
+    },
+    "animal-invert-1": {
+      "name": "原生动物与海绵动物",
+      "category": "动物学",
+      "module": "module3",
+      "description": "原生动物四大纲（鞭毛/肉足/孢子/纤毛），草履虫双核系统，海绵的水沟系与胚层逆转。",
+      "keywords": ["原生动物", "眼虫", "变形虫", "疟原虫", "草履虫", "接合生殖", "海绵", "领细胞", "胚层逆转", "骨针"]
+    },
+    "animal-invert-2": {
+      "name": "扁形动物与假体腔动物",
+      "category": "动物学",
+      "module": "module3",
+      "description": "扁形动物三纲（涡虫/吸虫/绦虫），两侧对称与三胚层，线虫的假体腔，C. elegans 模式生物。",
+      "keywords": ["扁形动物", "涡虫", "吸虫", "绦虫", "两侧对称", "三胚层", "线虫", "假体腔", "秀丽隐杆线虫"]
+    },
+    "animal-invert-3": {
+      "name": "软体动物",
+      "category": "动物学",
+      "module": "module3",
+      "description": "软体动物七大纲，腹足纲扭转现象，头足纲神经系统集中与闭管式循环，真体腔退化与血窦。",
+      "keywords": ["软体动物", "腹足纲", "双壳纲", "头足纲", "扭转", "外套膜", "乌贼", "章鱼", "开管式循环"]
+    },
+    "animal-invert-4": {
+      "name": "节肢动物",
+      "category": "动物学",
+      "module": "module3",
+      "description": "节肢动物四大特征（异律分节/外骨骼/分节附肢/混合体腔），四大纲，昆虫完全变态与不完全变态。",
+      "keywords": ["节肢动物", "异律分节", "几丁质外骨骼", "蜕皮", "甲壳纲", "蛛形纲", "多足纲", "昆虫纲", "完全变态"]
+    },
+    "animal-vert-1": {
+      "name": "鱼类",
+      "category": "动物学",
+      "module": "module3",
+      "description": "软骨鱼与硬骨鱼差异，鳃的逆流交换，鳔的进化意义，鱼类洄游（产卵/索饵/越冬）。",
+      "keywords": ["鱼类", "软骨鱼", "硬骨鱼", "鳃", "逆流交换", "鳔", "侧线", "洄游", "中华鲟"]
+    },
+    "animal-vert-2": {
+      "name": "两栖与爬行类",
+      "category": "动物学",
+      "module": "module3",
+      "description": "两栖类水陆过渡的不完全适应，五趾型附肢与中耳，爬行类羊膜卵与角质化皮肤，变温动物。",
+      "keywords": ["两栖类", "变态发育", "羊膜卵", "爬行类", "角质化", "颞窝", "三腔心", "变温动物"]
+    },
+    "animal-vert-3": {
+      "name": "鸟类与哺乳类",
+      "category": "动物学",
+      "module": "module3",
+      "description": "鸟类适应飞行的特征与双重呼吸，四腔心，哺乳类特征（毛/乳腺/胎生/异型齿），三个亚纲。",
+      "keywords": ["鸟类", "羽毛", "双重呼吸", "气囊", "恒温", "哺乳类", "胎盘", "异型齿", "单孔类", "有袋类"]
+    }
+  }
+}

@@ -726,7 +726,64 @@
 .ebook-related-tag svg {
   width: 12px;
   height: 12px;
+  flex-shrink: 0;
 }
+
+/* 增强的关联知识点标签：分类色 + 内部结构 */
+.ebook-related-tag {
+  padding: 5px 11px 5px 9px;
+  gap: 6px;
+  flex-direction: row-reverse;
+}
+
+.ebook-related-tag-cat {
+  font-size: 0.66rem;
+  font-weight: 600;
+  padding: 1px 6px;
+  border-radius: var(--radius-full, 999px);
+  background: rgba(255, 255, 255, 0.55);
+  color: inherit;
+  opacity: 0.85;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.ebook-related-tag-name {
+  font-size: 0.78rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+/* 按学科分类着色（与 knowledge-graph.js 配色保持一致） */
+.ebook-related-tag.cat-cell      { background: rgba(90, 123, 196, 0.12);  color: #3a5ba4; }
+.ebook-related-tag.cat-cell:hover{ background: rgba(90, 123, 196, 0.22);  color: #2a4a94; }
+.ebook-related-tag.cat-molbio    { background: rgba(138, 106, 196, 0.12); color: #6a4aa4; }
+.ebook-related-tag.cat-molbio:hover{ background: rgba(138, 106, 196, 0.22); color: #5a3a94; }
+.ebook-related-tag.cat-biochem   { background: rgba(196, 154, 74, 0.14);  color: #a47a2a; }
+.ebook-related-tag.cat-biochem:hover{ background: rgba(196, 154, 74, 0.24); color: #845a1a; }
+.ebook-related-tag.cat-genetics  { background: rgba(196, 122, 74, 0.12);  color: #a45a2a; }
+.ebook-related-tag.cat-genetics:hover{ background: rgba(196, 122, 74, 0.22); color: #844a1a; }
+.ebook-related-tag.cat-zoology   { background: rgba(196, 90, 122, 0.12);  color: #a43a5a; }
+.ebook-related-tag.cat-zoology:hover{ background: rgba(196, 90, 122, 0.22); color: #842a4a; }
+.ebook-related-tag.cat-botany    { background: rgba(90, 170, 90, 0.12);   color: #3a8a3a; }
+.ebook-related-tag.cat-botany:hover{ background: rgba(90, 170, 90, 0.22); color: #2a7a2a; }
+.ebook-related-tag.cat-micro     { background: rgba(74, 170, 196, 0.12);  color: #2a8aa4; }
+.ebook-related-tag.cat-micro:hover{ background: rgba(74, 170, 196, 0.22); color: #1a7a94; }
+.ebook-related-tag.cat-eco       { background: rgba(74, 156, 106, 0.12);  color: #2a7c4a; }
+.ebook-related-tag.cat-eco:hover { background: rgba(74, 156, 106, 0.22);  color: #1a6c3a; }
+.ebook-related-tag.cat-misc      { background: rgba(90, 125, 92, 0.08);   color: var(--color-sage); }
+.ebook-related-tag.cat-misc:hover{ background: rgba(90, 125, 92, 0.16);   color: var(--color-mid); }
+
+/* 夜间模式适配：分类色降低亮度、提升对比 */
+.ebook-night-mode .ebook-related-tag-cat { background: rgba(0, 0, 0, 0.25); opacity: 0.9; }
+.ebook-night-mode .ebook-related-tag.cat-cell     { background: rgba(90, 123, 196, 0.22);  color: #8aacde; }
+.ebook-night-mode .ebook-related-tag.cat-molbio   { background: rgba(138, 106, 196, 0.22); color: #ac8ade; }
+.ebook-night-mode .ebook-related-tag.cat-biochem  { background: rgba(196, 154, 74, 0.24);  color: #dcb066; }
+.ebook-night-mode .ebook-related-tag.cat-genetics { background: rgba(196, 122, 74, 0.22);  color: #dc9466; }
+.ebook-night-mode .ebook-related-tag.cat-zoology  { background: rgba(196, 90, 122, 0.22);  color: #dc6a8a; }
+.ebook-night-mode .ebook-related-tag.cat-botany   { background: rgba(90, 170, 90, 0.22);   color: #7ace7a; }
+.ebook-night-mode .ebook-related-tag.cat-micro    { background: rgba(74, 170, 196, 0.22);  color: #6abace; }
+.ebook-night-mode .ebook-related-tag.cat-eco      { background: rgba(74, 156, 106, 0.22);  color: #6ab48a; }
 
 /* 底部导航 */
 .ebook-section-nav {
