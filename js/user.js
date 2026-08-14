@@ -478,7 +478,7 @@ function injectUserStyles() {
       gap: 10px;
       flex-wrap: wrap;
     }
-    .user-profile-meta-credit {
+    .user-profile-meta-points {
       display: inline-flex;
       align-items: center;
       gap: 4px;
@@ -491,7 +491,7 @@ function injectUserStyles() {
       border: 1px solid rgba(196, 149, 106, 0.3);
       white-space: nowrap;
     }
-    .user-profile-meta-credit[data-low="true"] {
+    .user-profile-meta-points[data-low="true"] {
       background: linear-gradient(135deg, rgba(255, 107, 107, 0.12), rgba(255, 165, 100, 0.12));
       color: #c0392b;
       border-color: rgba(255, 107, 107, 0.35);
@@ -907,12 +907,12 @@ function renderProfilePanel(container) {
   var groupLabel = groupLabels[group] || group;
   var groupColor = groupColors[group] || '#8a8a8a';
 
-  // 信用等级（优先使用用户对象缓存，稍后异步刷新）
-  var cr = (typeof user !== 'undefined' && user && typeof user.cr === 'number') ? user.cr : 50;
-  var levelInfo = (typeof getCreditLevelInfo === 'function')
-    ? getCreditLevelInfo(cr)
-    : { label: '良好', color: '#5a7d5c', badge: 'good' };
-  var crPercent = Math.min(100, Math.max(0, cr));
+  // 积分等级（优先使用本地积分，稍后异步刷新云端）
+  var points = (typeof window.getPoints === 'function') ? window.getPoints() : 0;
+  var levelInfo = (typeof window.getPointsLevel === 'function')
+    ? window.getPointsLevel(points)
+    : { label: '新芽', title: '生物新芽', color: '#8a8a8a', icon: '🌱' };
+  var ptsPercent = levelInfo.nextAt ? Math.round(levelInfo.progress * 100) : 100;
 
   var upgradeHint = '';
   if (group === 'member') {
@@ -938,37 +938,34 @@ function renderProfilePanel(container) {
       </div>
       <div style="min-width:180px;flex:1;max-width:320px;">
         <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;">
-          <span style="font-size:0.85rem;font-weight:600;color:var(--text-primary,#1a1a1a);">信用分</span>
-          <span style="font-size:0.85rem;font-weight:700;color:${levelInfo.color};" id="user-cr-score">${cr}</span>
+          <span style="font-size:0.85rem;font-weight:600;color:var(--text-primary,#1a1a1a);">积分</span>
+          <span style="font-size:0.85rem;font-weight:700;color:${levelInfo.color};" id="user-points-score">${points}</span>
         </div>
         <div style="height:8px;background:var(--border-light,#ece8e1);border-radius:9999px;overflow:hidden;margin-bottom:6px;">
-          <div id="user-cr-bar" style="width:${crPercent}%;height:100%;background:${levelInfo.color};border-radius:9999px;transition:width 0.4s ease;"></div>
+          <div id="user-points-bar" style="width:${ptsPercent}%;height:100%;background:${levelInfo.color};border-radius:9999px;transition:width 0.4s ease;"></div>
         </div>
         <div style="display:flex;align-items:center;justify-content:space-between;">
-          <span style="font-size:0.78rem;color:var(--text-muted,#8a8a8a);" id="user-cr-level">${levelInfo.label}</span>
-          <span style="font-size:0.75rem;color:var(--text-muted,#8a8a8a);">CR</span>
+          <span style="font-size:0.78rem;color:var(--text-muted,#8a8a8a);" id="user-points-level">${levelInfo.icon} ${levelInfo.title}</span>
+          <span style="font-size:0.75rem;color:var(--text-muted,#8a8a8a);">积分</span>
         </div>
       </div>
     </div>
   `;
 
-  // 异步刷新最新 CR
-  if (typeof getUserCR === 'function') {
-    getUserCR().then(function(info) {
-      if (!info || typeof info.cr !== 'number') return;
-      var scoreEl = document.getElementById('user-cr-score');
-      var barEl = document.getElementById('user-cr-bar');
-      var levelEl = document.getElementById('user-cr-level');
-      if (scoreEl) scoreEl.textContent = info.cr;
-      if (barEl) {
-        barEl.style.width = Math.min(100, Math.max(0, info.cr)) + '%';
-        barEl.style.background = info.level.color;
+  // 异步刷新最新积分（云端为准）
+  if (typeof window.getUserPoints === 'function') {
+    window.getUserPoints().then(function(info) {
+      if (!info || typeof info.points !== 'number') return;
+      var scoreEl = document.getElementById('user-points-score');
+      var barEl = document.getElementById('user-points-bar');
+      var levelEl = document.getElementById('user-points-level');
+      var lv = (typeof window.getPointsLevel === 'function') ? window.getPointsLevel(info.points) : null;
+      if (scoreEl) scoreEl.textContent = info.points;
+      if (barEl && lv) {
+        barEl.style.width = (lv.nextAt ? Math.round(lv.progress * 100) : 100) + '%';
+        barEl.style.background = lv.color;
       }
-      if (levelEl) levelEl.textContent = info.level.label;
-      if (user && typeof user === 'object') {
-        user.cr = info.cr;
-        if (info.user_group) user.user_group = info.user_group;
-      }
+      if (levelEl && lv) levelEl.textContent = lv.icon + ' ' + lv.title;
     }).catch(function() {});
   }
 
@@ -1267,10 +1264,18 @@ function _getApiKeyDailyUsage() {
   }
 }
 
+// 积分商城兑换的 AI 额度加成（叠加到每日上限之上）
+function _getAiQuotaBonus() {
+  try {
+    return parseInt(localStorage.getItem('bioquest_ai_quota_bonus') || '0', 10) || 0;
+  } catch (e) { return 0; }
+}
+
 // 自增用量（调用 AI 前调用），返回 true 表示可继续，false 表示已达上限
 function _incrementAiUsage() {
   var data = _getApiKeyDailyUsage();
-  if (data.count >= _AI_DAILY_LIMIT) return false;
+  var limit = _AI_DAILY_LIMIT + _getAiQuotaBonus();
+  if (data.count >= limit) return false;
   data.count += 1;
   try {
     localStorage.setItem(_AI_USAGE_STORAGE, JSON.stringify(data));
@@ -1282,9 +1287,10 @@ function _incrementAiUsage() {
 // 未配置自定义 Key 的用户可使用平台默认 Key，但同样受每日上限限制
 function _canUseAi() {
   var usage = _getApiKeyDailyUsage();
-  if (usage.count >= _AI_DAILY_LIMIT) {
+  var limit = _AI_DAILY_LIMIT + _getAiQuotaBonus();
+  if (usage.count >= limit) {
     if (typeof showToast === 'function') {
-      showToast('今日 AI 调用已达上限（' + _AI_DAILY_LIMIT + ' 次），明日 0:00 重置。配置自定义 API Key 可解锁更多额度。');
+      showToast('今日 AI 调用已达上限（' + limit + ' 次），明日 0:00 重置。配置自定义 API Key 可解锁更多额度。');
     }
     return false;
   }
@@ -1462,257 +1468,226 @@ window._getUserKey = _getUserKey;
 window._isValidUserKey = _isValidUserKey;
 
 /* ============================================================
- * 信用点 (Credit / CR) 系统
- *  - 初始 100 点 = 基础值，不随时间衰减
- *  - 积极行为增加的是"增量值"，会随时间线性衰减回 0（衰减期默认 90 天）
- *  - 恶意行为：直接从总值扣（最多扣到 0），并会同步拉低增量的"已积累部分"
- *  - 持久化：localStorage.bioquest_credit_state = { base, bonus:[{ts,delta,remaining}], decayDays, lastDecayTs, history:[...] }
- *  - 显示：header 紧凑资料卡，保留 1 位小数
+ * 积分（Points）系统
+ *  - 不衰减、可累积、可扣除、可消耗（兑换）
+ *  - 持久化：localStorage.bioquest_points_state = { total, history:[{ts,type,amount,reason,note}], lastSyncTs }
+ *  - 等级/称号由累计总积分阈值推导（POINTS_LEVELS）
+ *  - 显示：header 紧凑资料卡 + 用户中心
  * ============================================================ */
-var _CREDIT_STORAGE = 'bioquest_credit_state';
-var _CREDIT_DEFAULTS = {
-  BASE: 100,                  // 基础信用点，不随时间减少
-  DECAY_DAYS: 90,             // 增量奖励经过多久全部清零（线性衰减）
-  MIN: 0,                     // 下限
-  // 积极行为每次奖励的增量（会进入衰减队列）
+var _POINTS_STORAGE = 'bioquest_points_state';
+var _POINTS_DEFAULTS = {
+  MIN: 0,
+  // 获取积分（正向）
   REWARD: {
-    POST: 2.0,                // 发帖
-    COMMENT: 0.8,             // 评论
-    ANSWER_CORRECT: 0.5,      // 单次答题正确
-    ANSWER_WRONG: 0.1,        // 单次答题错误（也有鼓励分）
-    DAILY_LOGIN: 0.3          // 每日首启
+    POST: 10,               // 发帖
+    COMMENT: 3,             // 评论
+    ANSWER_CORRECT: 5,      // 单次答题正确
+    ANSWER_WRONG: 1,        // 单次答题错误（也有鼓励分）
+    DAILY_LOGIN: 2          // 每日首启
   },
-  // 恶意行为每次扣多少（直接从总值扣；同时额外扣未衰减的奖励）
+  // 恶意行为扣分（负向，最低到 0）
   PENALTY: {
-    SPAM: 15,                 // 恶意灌水
-    BAD_SPEECH: 25,           // 不当言论
-    FALSE_REPORT_SINGLE: 3,   // 异常举报（单次）
-    FALSE_REPORT_REPEAT: 10   // 多次异常举报
+    SPAM: 50,               // 恶意灌水
+    BAD_SPEECH: 80,         // 不当言论
+    FALSE_REPORT_SINGLE: 20, // 异常举报（单次）
+    FALSE_REPORT_REPEAT: 40  // 多次异常举报
+  },
+  // 消耗（兑换）
+  SPEND: {
+    AI_QUOTA_10: 20,        // 兑换 10 次 AI 额度
+    AVATAR_FRAME: 100,      // 头像框
+    TITLE: 200              // 专属称号
   }
 };
 
-function _getCreditState() {
+// 等级阈值（由累计总积分推导，升序）
+var _POINTS_LEVELS = [
+  { min: 0,     label: '新芽', title: '生物新芽', color: '#8a8a8a', icon: '🌱' },
+  { min: 100,   label: '幼苗', title: '探索幼苗', color: '#5a7d5c', icon: '🌿' },
+  { min: 300,   label: '青苗', title: '求知青苗', color: '#4a9c6a', icon: '🌳' },
+  { min: 800,   label: '茁壮', title: '茁壮学者', color: '#3a8c5c', icon: '🔬' },
+  { min: 2000,  label: '园丁', title: '知识园丁', color: '#2d6a47', icon: '🧑‍🌾' },
+  { min: 5000,  label: '学者', title: '生物学者', color: '#c4956a', icon: '🎓' },
+  { min: 10000, label: '大师', title: '生物大师', color: '#8a5ac4', icon: '🏆' },
+  { min: 20000, label: '宗师', title: '生物宗师', color: '#c0553a', icon: '👑' },
+  { min: 50000, label: '传奇', title: '传奇权威', color: '#ff6b35', icon: '🌟' }
+];
+
+function _getPointsState() {
   try {
-    var raw = localStorage.getItem(_CREDIT_STORAGE);
+    var raw = localStorage.getItem(_POINTS_STORAGE);
     var st = raw ? JSON.parse(raw) : null;
     if (!st || typeof st !== 'object') throw new Error('empty');
-    if (typeof st.base !== 'number') st.base = _CREDIT_DEFAULTS.BASE;
-    if (!Array.isArray(st.bonus)) st.bonus = [];
-    if (typeof st.decayDays !== 'number') st.decayDays = _CREDIT_DEFAULTS.DECAY_DAYS;
-    if (typeof st.lastDecayTs !== 'number') st.lastDecayTs = Date.now();
+    if (typeof st.total !== 'number' || !isFinite(st.total)) st.total = 0;
     if (!Array.isArray(st.history)) st.history = [];
+    if (typeof st.lastSyncTs !== 'number') st.lastSyncTs = 0;
     return st;
   } catch (e) {
-    return {
-      base: _CREDIT_DEFAULTS.BASE,
-      bonus: [],                 // 每笔未完全衰减的奖励: { ts, delta, remaining }
-      decayDays: _CREDIT_DEFAULTS.DECAY_DAYS,
-      lastDecayTs: Date.now(),
-      history: []                // 最近 50 条变更日志
-    };
+    return { total: 0, history: [], lastSyncTs: 0 };
   }
 }
 
-function _saveCreditState(st) {
+function _savePointsState(st) {
   try {
-    // history 限长 50
-    if (Array.isArray(st.history) && st.history.length > 50) {
-      st.history = st.history.slice(st.history.length - 50);
+    // history 限长 200
+    if (Array.isArray(st.history) && st.history.length > 200) {
+      st.history = st.history.slice(st.history.length - 200);
     }
-    localStorage.setItem(_CREDIT_STORAGE, JSON.stringify(st));
+    localStorage.setItem(_POINTS_STORAGE, JSON.stringify(st));
   } catch (e) {}
 }
 
-/**
- * 对奖励队列做"时间线性衰减"：每笔奖励在 decayDays 天后 remaining 从 delta → 0
- * 每次读取/变更前都会调用一次，保证数字真实；只在内部使用
- */
-function _applyCreditDecay(st) {
-  var now = Date.now();
-  var totalMs = Math.max(1, st.decayDays) * 24 * 60 * 60 * 1000;
-  var elapsed = Math.max(0, now - (st.lastDecayTs || now));
-  if (elapsed <= 0 || !Array.isArray(st.bonus) || st.bonus.length === 0) {
-    st.lastDecayTs = now;
-    return st;
-  }
-  // 每笔按加入时间独立计算衰减比例：从 ts 起，经过 (now - ts) / totalMs 后归零
-  var newBonus = [];
-  for (var i = 0; i < st.bonus.length; i++) {
-    var b = st.bonus[i];
-    if (!b || typeof b.delta !== 'number' || b.delta <= 0) continue;
-    var age = now - (b.ts || now);
-    var ratio = Math.min(1, Math.max(0, age / totalMs));
-    var remaining = Math.max(0, b.delta * (1 - ratio));
-    if (remaining > 0.001) {
-      newBonus.push({ ts: b.ts, delta: b.delta, remaining: remaining });
-    }
-  }
-  st.bonus = newBonus;
-  st.lastDecayTs = now;
-  return st;
-}
-
-/** 计算当前总信用点 = base + Σ(bonus.remaining)，结果 ≥ MIN */
-function _computeCreditTotal(st) {
-  var bonusSum = 0;
-  for (var i = 0; i < st.bonus.length; i++) {
-    bonusSum += (st.bonus[i] && st.bonus[i].remaining) || 0;
-  }
-  var total = st.base + bonusSum;
-  return Math.max(_CREDIT_DEFAULTS.MIN, total);
-}
-
-function _getCreditDecayed() {
-  var st = _getCreditState();
-  _applyCreditDecay(st);
-  _saveCreditState(st);
-  var total = _computeCreditTotal(st);
-  var bonusSum = 0;
-  for (var i = 0; i < st.bonus.length; i++) {
-    bonusSum += (st.bonus[i] && st.bonus[i].remaining) || 0;
-  }
-  return {
-    state: st,
-    total: total,
-    base: st.base,
-    bonus: bonusSum
-  };
-}
-
-/** 对外：获取当前信用点数字（保留 1 位小数） */
-function getCredit() {
-  var dec = _getCreditDecayed();
-  return Math.round(dec.total * 10) / 10;
-}
-
-/** 对外：获取带明细的对象（仪表盘展示明细可能用到） */
-function getCreditDetail() {
-  var dec = _getCreditDecayed();
-  return {
-    total: Math.round(dec.total * 10) / 10,
-    base: Math.round(dec.base * 10) / 10,
-    bonus: Math.round(dec.bonus * 10) / 10,
-    decayDays: dec.state.decayDays,
-    history: dec.state.history || []
-  };
-}
-
-function _appendCreditHistory(st, type, amount, reason) {
+function _appendPointsHistory(st, type, amount, reason, note) {
   try {
-    st.history.push({
-      ts: Date.now(),
-      type: type,             // 'reward' | 'penalty' | 'decay'
-      amount: amount,         // 带正负号
-      reason: reason || ''
-    });
+    st.history.push({ ts: Date.now(), type: type, amount: amount, reason: reason || '', note: note || '' });
   } catch (e) {}
 }
 
+function _clampPoints(total) {
+  return Math.max(_POINTS_DEFAULTS.MIN, total);
+}
+
+/** 对外：获取当前总积分 */
+function getPoints() {
+  var st = _getPointsState();
+  return _clampPoints(st.total);
+}
+
+/** 对外：获取带明细的对象（积分详情页展示用） */
+function getPointsDetail() {
+  var st = _getPointsState();
+  var total = _clampPoints(st.total);
+  st.total = total; // 保证非负
+  var level = getPointsLevel(total);
+  var history = (st.history || []).slice().reverse(); // 时间倒序
+  return { total: total, level: level, history: history };
+}
+
+/** 等级推导：由累计总积分阈值推导 */
+function getPointsLevel(points) {
+  var total = (typeof points === 'number' && isFinite(points)) ? Math.max(0, points) : getPoints();
+  var current = _POINTS_LEVELS[0];
+  var next = null;
+  for (var i = 0; i < _POINTS_LEVELS.length; i++) {
+    var lv = _POINTS_LEVELS[i];
+    if (total >= lv.min) { current = lv; next = _POINTS_LEVELS[i + 1] || null; }
+  }
+  var curMin = current.min;
+  var nxtMin = next ? next.min : curMin;
+  var span = Math.max(1, nxtMin - curMin);
+  var progress = next ? Math.min(1, Math.max(0, (total - curMin) / span)) : 1;
+  return {
+    label: current.label,
+    title: current.title,
+    color: current.color,
+    icon: current.icon,
+    min: curMin,
+    nextAt: next ? nxtMin : null,
+    progress: Math.round(progress * 1000) / 1000
+  };
+}
+
 /**
- * 奖励信用点（积极行为）
+ * 增加积分（积极行为）
  * @param {string} reasonKey - 'POST' | 'COMMENT' | 'ANSWER_CORRECT' | 'ANSWER_WRONG' | 'DAILY_LOGIN'
- * @param {number} [customAmount] - 可选，覆盖默认值
- * @returns {number} 最新总信用点（保留 1 位小数）
+ * @param {number} [amount] - 可选，覆盖默认值
+ * @returns {number} 最新总积分
  */
-function rewardCredit(reasonKey, customAmount) {
-  var st = _getCreditState();
-  _applyCreditDecay(st);
-  var def = _CREDIT_DEFAULTS.REWARD;
-  var amount = typeof customAmount === 'number' ? customAmount : (def[reasonKey] || 0);
-  if (amount > 0) {
-    st.bonus.push({ ts: Date.now(), delta: amount, remaining: amount });
-    _appendCreditHistory(st, 'reward', amount, reasonKey || '');
+function addPoints(reasonKey, amount) {
+  var st = _getPointsState();
+  var def = _POINTS_DEFAULTS.REWARD;
+  var amt = (typeof amount === 'number' && isFinite(amount)) ? amount : (def[reasonKey] || 0);
+  if (amt > 0) {
+    st.total = _clampPoints(st.total + amt);
+    _appendPointsHistory(st, 'reward', amt, reasonKey || '');
   }
-  _saveCreditState(st);
-  var total = _computeCreditTotal(st);
-  // 刷新头部显示（若函数已注册）
-  if (typeof window.refreshCreditBadge === 'function') {
-    try { window.refreshCreditBadge(); } catch (e) {}
-  }
-  return Math.round(total * 10) / 10;
+  _savePointsState(st);
+  _trySyncPointsToCloud();
+  _tryRefreshPointsBadge();
+  return st.total;
 }
 
 /**
- * 扣信用点（恶意行为）
- *  - 直接从 total 中扣：优先扣 bonus 增量（加速"奖励部分清零"），不够再扣 base
- *  - base 最多扣到 MIN；扣 base 是永久损失
+ * 扣除/消耗积分（兑换、悬赏）
+ * @param {string} reasonKey - 如 'AI_QUOTA_10' | 'AVATAR_FRAME' | 'TITLE' | 'BOUNTY'
+ * @param {number} [amount] - 可选，覆盖默认值
+ * @returns {number} 最新总积分
+ */
+function deductPoints(reasonKey, amount) {
+  var st = _getPointsState();
+  var amt = (typeof amount === 'number' && isFinite(amount)) ? amount : (_POINTS_DEFAULTS.SPEND[reasonKey] || 0);
+  if (amt <= 0) { _savePointsState(st); return st.total; }
+  st.total = _clampPoints(st.total - amt);
+  _appendPointsHistory(st, 'spend', -amt, reasonKey || '');
+  _savePointsState(st);
+  _trySyncPointsToCloud();
+  _tryRefreshPointsBadge();
+  return st.total;
+}
+
+/**
+ * 扣分（恶意行为）
  * @param {string} reasonKey - 'SPAM' | 'BAD_SPEECH' | 'FALSE_REPORT_SINGLE' | 'FALSE_REPORT_REPEAT'
- * @param {number} [customAmount]
- * @returns {number} 最新总信用点（保留 1 位小数）
+ * @param {number} [amount]
+ * @returns {number} 最新总积分
  */
-function penalizeCredit(reasonKey, customAmount) {
-  var st = _getCreditState();
-  _applyCreditDecay(st);
-  var def = _CREDIT_DEFAULTS.PENALTY;
-  var amount = Math.max(0, typeof customAmount === 'number' ? customAmount : (def[reasonKey] || 0));
-  if (amount <= 0) {
-    _saveCreditState(st);
-    return Math.round(_computeCreditTotal(st) * 10) / 10;
-  }
-  var remaining = amount;
-  // 1) 先加速把增量奖励 remaining 扣光（按最老的优先清零）
-  for (var i = 0; i < st.bonus.length && remaining > 0; i++) {
-    var b = st.bonus[i];
-    if (!b) continue;
-    if (b.remaining <= remaining) {
-      remaining -= b.remaining;
-      b.remaining = 0;
-    } else {
-      b.remaining -= remaining;
-      remaining = 0;
-    }
-  }
-  st.bonus = st.bonus.filter(function (b) { return b && b.remaining > 0.001; });
-  // 2) 还不够扣 → 扣 base（永久，不随时间恢复）
-  if (remaining > 0) {
-    st.base = Math.max(_CREDIT_DEFAULTS.MIN, st.base - remaining);
-  }
-  _appendCreditHistory(st, 'penalty', -amount, reasonKey || '');
-  _saveCreditState(st);
-  var total = _computeCreditTotal(st);
-  if (typeof window.refreshCreditBadge === 'function') {
-    try { window.refreshCreditBadge(); } catch (e) {}
-  }
-  return Math.round(total * 10) / 10;
+function penalizePoints(reasonKey, amount) {
+  var st = _getPointsState();
+  var amt = (typeof amount === 'number' && isFinite(amount)) ? amount : (_POINTS_DEFAULTS.PENALTY[reasonKey] || 0);
+  if (amt <= 0) { _savePointsState(st); return st.total; }
+  st.total = _clampPoints(st.total - amt);
+  _appendPointsHistory(st, 'penalty', -amt, reasonKey || '');
+  _savePointsState(st);
+  _trySyncPointsToCloud();
+  _tryRefreshPointsBadge();
+  return st.total;
 }
 
 /**
- * 手动重置信用点（管理员/初始化用；普通用户直接调用会重置 base=100、清奖励）
+ * 手动重置积分（管理员/初始化用）
  */
-function resetCredit() {
-  var st = {
-    base: _CREDIT_DEFAULTS.BASE,
-    bonus: [],
-    decayDays: _CREDIT_DEFAULTS.DECAY_DAYS,
-    lastDecayTs: Date.now(),
-    history: []
-  };
-  _saveCreditState(st);
-  if (typeof window.refreshCreditBadge === 'function') {
-    try { window.refreshCreditBadge(); } catch (e) {}
-  }
-  return st.base;
+function resetPoints() {
+  var st = { total: 0, history: [], lastSyncTs: 0 };
+  _savePointsState(st);
+  _tryRefreshPointsBadge();
+  return 0;
 }
 
-window.getCredit = getCredit;
-window.getCreditDetail = getCreditDetail;
-window.rewardCredit = rewardCredit;
-window.penalizeCredit = penalizeCredit;
-window.resetCredit = resetCredit;
-window.CREDIT_DEFAULTS = _CREDIT_DEFAULTS;
-
-// 每日首次启动奖励 0.3
-(function _creditDailyLoginReward() {
+/** 云端同步：本地积分变更后调用（函数在 supabase-client.js 中挂载，未挂载则静默） */
+function _trySyncPointsToCloud() {
   try {
-    var LAST_KEY = 'bioquest_credit_last_login_day';
+    if (typeof window.syncPointsToCloud === 'function') window.syncPointsToCloud(getPoints());
+  } catch (e) {}
+}
+
+function _tryRefreshPointsBadge() {
+  try {
+    if (typeof window.refreshPointsBadge === 'function') window.refreshPointsBadge();
+  } catch (e) {}
+}
+
+window.getPoints = getPoints;
+window.getPointsDetail = getPointsDetail;
+window.getPointsLevel = getPointsLevel;
+window.addPoints = addPoints;
+window.deductPoints = deductPoints;
+window.penalizePoints = penalizePoints;
+window.resetPoints = resetPoints;
+window.POINTS_DEFAULTS = _POINTS_DEFAULTS;
+window.POINTS_LEVELS = _POINTS_LEVELS;
+
+// 每日首次启动奖励 2 积分
+(function _pointsDailyLoginReward() {
+  try {
+    var LAST_KEY = 'bioquest_points_last_login_day';
     var today = new Date();
     var tag = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
     var last = localStorage.getItem(LAST_KEY);
     if (last !== tag) {
       localStorage.setItem(LAST_KEY, tag);
-      // 给 rewardCredit 一点时间等 getCredit 挂好
+      // 给 addPoints 一点时间等 getPoints 挂好
       setTimeout(function () {
-        try { rewardCredit('DAILY_LOGIN'); } catch (e) {}
+        try { addPoints('DAILY_LOGIN'); } catch (e) {}
       }, 2000);
     }
   } catch (e) {}
@@ -2302,7 +2277,7 @@ function renderUserPage(target) {
           <div class="user-profile-info">
             <div class="user-profile-name">${escapeHtml(displayName)} <span class="user-profile-badge">${groupLabels[userGroup] || '会员'}</span></div>
             <div class="user-profile-meta">
-              <span class="user-profile-meta-credit" id="userCompactCreditBadge" title="信用点（基础100 + 活跃奖励增量会随时间衰减回0）">💳 CR&nbsp;<span class="user-credit-val">100.0</span></span>
+              <span class="user-profile-meta-points" id="userCompactPointsBadge" title="积分：可累积、可消耗，等级称号由总积分决定">⭐ 积分&nbsp;<span class="user-points-val">0</span></span>
               <span class="user-profile-meta-arrow">点击查看仪表盘 →</span>
             </div>
           </div>
@@ -2376,6 +2351,11 @@ function renderUserPage(target) {
             <div class="user-list-info"><div class="user-list-title">加入班级</div><div class="user-list-desc">输入班级码和密钥加入教师班级</div></div>
             <svg class="user-list-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
           </div>
+          <div class="user-list-item" onclick="navigateTo('/points-shop')">
+            <div class="user-list-icon" style="background:#c4956a;">⭐</div>
+            <div class="user-list-info"><div class="user-list-title">积分中心</div><div class="user-list-desc">积分余额、等级称号、商城兑换与排行</div></div>
+            <svg class="user-list-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          </div>
           ${userGroup === 'admin' ? `
           <div class="user-list-item" onclick="_userAdminEntry()">
             <div class="user-list-icon" style="background:#ff6b6b;">🛡️</div>
@@ -2402,10 +2382,9 @@ function renderUserPage(target) {
     // 绑定头像上传逻辑
     setupAvatarUpload();
 
-    // 渲染后立刻刷新信用点徽标（刷新 localStorage 里的数字到 DOM）
+    // 渲染后立刻刷新积分徽标（刷新 localStorage 里的数字到 DOM）
     try {
-      if (typeof refreshCreditBadge === 'function') refreshCreditBadge();
-      else if (typeof window.refreshCreditBadge === 'function') window.refreshCreditBadge();
+      if (typeof window.refreshPointsBadge === 'function') window.refreshPointsBadge();
     } catch (_) {}
 
     // 刷新通知未读角标
@@ -2439,29 +2418,28 @@ function renderUserPage(target) {
 }
 
 /**
- * 刷新头部紧凑资料卡上的"信用点"数字
- *  - rewardCredit / penalizeCredit 变更后都会自动调用
+ * 刷新头部紧凑资料卡上的"积分"数字
+ *  - addPoints / deductPoints / penalizePoints 变更后都会自动调用
  *  - 也会在每次页面初始化时被调用
  *  - 找不到 DOM 就静默跳过（不会 crash）
  */
-function refreshCreditBadge() {
+function refreshPointsBadge() {
   try {
-    var badge = document.getElementById('userCompactCreditBadge');
-    var valEl = badge ? badge.querySelector('.user-credit-val') : null;
-    var total = (typeof window.getCredit === 'function') ? window.getCredit() : null;
-    if (total === null || typeof total !== 'number' || !isFinite(total)) total = _CREDIT_DEFAULTS.BASE;
-    var text = (Math.round(total * 10) / 10).toFixed(1);
-    if (valEl) valEl.textContent = text;
+    var badge = document.getElementById('userCompactPointsBadge');
+    var valEl = badge ? badge.querySelector('.user-points-val') : null;
+    var total = (typeof window.getPoints === 'function') ? window.getPoints() : 0;
+    if (total === null || typeof total !== 'number' || !isFinite(total)) total = 0;
+    if (valEl) valEl.textContent = String(Math.round(total));
     if (badge) {
-      badge.setAttribute('data-low', total < 80 ? 'true' : 'false');
+      badge.setAttribute('data-low', total < 20 ? 'true' : 'false');
       badge.setAttribute('title',
-        '信用点 ' + text + '（基础100 + 活跃奖励增量会随时间衰减，扣分会永久降低基础值）');
+        '积分 ' + Math.round(total) + '（可累积、可消耗，等级称号由总积分决定）');
     }
   } catch (e) {
     // 不对外抛错，避免破坏 initUser 主流程
   }
 }
-window.refreshCreditBadge = refreshCreditBadge;
+window.refreshPointsBadge = refreshPointsBadge;
 
 // 子页面切换逻辑
 var _userSubPageTitles = {
