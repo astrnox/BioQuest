@@ -478,7 +478,7 @@ function injectUserStyles() {
       gap: 10px;
       flex-wrap: wrap;
     }
-    .user-profile-meta-credit {
+    .user-profile-meta-points {
       display: inline-flex;
       align-items: center;
       gap: 4px;
@@ -491,7 +491,7 @@ function injectUserStyles() {
       border: 1px solid rgba(196, 149, 106, 0.3);
       white-space: nowrap;
     }
-    .user-profile-meta-credit[data-low="true"] {
+    .user-profile-meta-points[data-low="true"] {
       background: linear-gradient(135deg, rgba(255, 107, 107, 0.12), rgba(255, 165, 100, 0.12));
       color: #c0392b;
       border-color: rgba(255, 107, 107, 0.35);
@@ -907,12 +907,12 @@ function renderProfilePanel(container) {
   var groupLabel = groupLabels[group] || group;
   var groupColor = groupColors[group] || '#8a8a8a';
 
-  // 信用等级（优先使用用户对象缓存，稍后异步刷新）
-  var cr = (typeof user !== 'undefined' && user && typeof user.cr === 'number') ? user.cr : 50;
-  var levelInfo = (typeof getCreditLevelInfo === 'function')
-    ? getCreditLevelInfo(cr)
-    : { label: '良好', color: '#5a7d5c', badge: 'good' };
-  var crPercent = Math.min(100, Math.max(0, cr));
+  // 信用指数（优先使用本地信用，稍后异步刷新云端）
+  var points = (typeof window.getPoints === 'function') ? window.getPoints() : _POINTS_DEFAULTS.BASE;
+  var levelInfo = (typeof window.getPointsLevel === 'function')
+    ? window.getPointsLevel(points)
+    : { label: '基本信任', title: '基本信任', color: '#5a7d5c', icon: '👍' };
+  var ptsPercent = levelInfo.nextAt ? Math.round(levelInfo.progress * 100) : 100;
 
   var upgradeHint = '';
   if (group === 'member') {
@@ -938,37 +938,34 @@ function renderProfilePanel(container) {
       </div>
       <div style="min-width:180px;flex:1;max-width:320px;">
         <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;">
-          <span style="font-size:0.85rem;font-weight:600;color:var(--text-primary,#1a1a1a);">信用分</span>
-          <span style="font-size:0.85rem;font-weight:700;color:${levelInfo.color};" id="user-cr-score">${cr}</span>
+          <span style="font-size:0.85rem;font-weight:600;color:var(--text-primary,#1a1a1a);">信用指数</span>
+          <span style="font-size:0.85rem;font-weight:700;color:${levelInfo.color};" id="user-points-score">${points}</span>
         </div>
         <div style="height:8px;background:var(--border-light,#ece8e1);border-radius:9999px;overflow:hidden;margin-bottom:6px;">
-          <div id="user-cr-bar" style="width:${crPercent}%;height:100%;background:${levelInfo.color};border-radius:9999px;transition:width 0.4s ease;"></div>
+          <div id="user-points-bar" style="width:${ptsPercent}%;height:100%;background:${levelInfo.color};border-radius:9999px;transition:width 0.4s ease;"></div>
         </div>
         <div style="display:flex;align-items:center;justify-content:space-between;">
-          <span style="font-size:0.78rem;color:var(--text-muted,#8a8a8a);" id="user-cr-level">${levelInfo.label}</span>
-          <span style="font-size:0.75rem;color:var(--text-muted,#8a8a8a);">CR</span>
+          <span style="font-size:0.78rem;color:var(--text-muted,#8a8a8a);" id="user-points-level">${levelInfo.icon} ${levelInfo.title}</span>
+          <span style="font-size:0.75rem;color:var(--text-muted,#8a8a8a);">信用</span>
         </div>
       </div>
     </div>
   `;
 
-  // 异步刷新最新 CR
-  if (typeof getUserCR === 'function') {
-    getUserCR().then(function(info) {
-      if (!info || typeof info.cr !== 'number') return;
-      var scoreEl = document.getElementById('user-cr-score');
-      var barEl = document.getElementById('user-cr-bar');
-      var levelEl = document.getElementById('user-cr-level');
-      if (scoreEl) scoreEl.textContent = info.cr;
-      if (barEl) {
-        barEl.style.width = Math.min(100, Math.max(0, info.cr)) + '%';
-        barEl.style.background = info.level.color;
+  // 异步刷新最新信用指数（云端为准）
+  if (typeof window.getUserPoints === 'function') {
+    window.getUserPoints().then(function(info) {
+      if (!info || typeof info.points !== 'number') return;
+      var scoreEl = document.getElementById('user-points-score');
+      var barEl = document.getElementById('user-points-bar');
+      var levelEl = document.getElementById('user-points-level');
+      var lv = (typeof window.getPointsLevel === 'function') ? window.getPointsLevel(info.points) : null;
+      if (scoreEl) scoreEl.textContent = info.points;
+      if (barEl && lv) {
+        barEl.style.width = (lv.nextAt ? Math.round(lv.progress * 100) : 100) + '%';
+        barEl.style.background = lv.color;
       }
-      if (levelEl) levelEl.textContent = info.level.label;
-      if (user && typeof user === 'object') {
-        user.cr = info.cr;
-        if (info.user_group) user.user_group = info.user_group;
-      }
+      if (levelEl && lv) levelEl.textContent = lv.icon + ' ' + lv.title;
     }).catch(function() {});
   }
 
@@ -1462,247 +1459,260 @@ window._getUserKey = _getUserKey;
 window._isValidUserKey = _isValidUserKey;
 
 /* ============================================================
- * 信用点 (Credit / CR) 系统
- *  - 初始 100 点 = 基础值，不随时间衰减
- *  - 积极行为增加的是"增量值"，会随时间线性衰减回 0（衰减期默认 90 天）
- *  - 恶意行为：直接从总值扣（最多扣到 0），并会同步拉低增量的"已积累部分"
- *  - 持久化：localStorage.bioquest_credit_state = { base, bonus:[{ts,delta,remaining}], decayDays, lastDecayTs, history:[...] }
- *  - 显示：header 紧凑资料卡，保留 1 位小数
+ * 信用指数（Trust / Credit）系统
+ *  - 信用点（CR）不是经验值、不是货币，而是社区对用户信任程度的量化
+ *  - 通过符合社区期望的行为获得信任增量；信任增量会随时间线性衰减回 0
+ *  - 消费信任以做出对社区影响更大的行为（发帖/评论/悬赏/举报）
+ *  - 违规行为直接扣减总量，并同步拉低未衰减的信任增量
+ *  - 持久化：localStorage.bioquest_credit_state =
+ *      { base, fragments:[{ts,delta,remaining}], decayDays, lastDecayTs, history:[...] }
  * ============================================================ */
-var _CREDIT_STORAGE = 'bioquest_credit_state';
-var _CREDIT_DEFAULTS = {
-  BASE: 100,                  // 基础信用点，不随时间减少
-  DECAY_DAYS: 90,             // 增量奖励经过多久全部清零（线性衰减）
-  MIN: 0,                     // 下限
-  // 积极行为每次奖励的增量（会进入衰减队列）
+var _POINTS_STORAGE = 'bioquest_credit_state';
+var _POINTS_DEFAULTS = {
+  BASE: 100,                 // 基础信任值，不随时间衰减
+  DECAY_DAYS: 90,            // 信任增量经过多久全部清零（线性衰减）
+  MIN: 0,                    // 下限
+  // 符合社区期望的行为 → 获得信任增量（会随时间衰减）
   REWARD: {
-    POST: 2.0,                // 发帖
-    COMMENT: 0.8,             // 评论
-    ANSWER_CORRECT: 0.5,      // 单次答题正确
-    ANSWER_WRONG: 0.1,        // 单次答题错误（也有鼓励分）
-    DAILY_LOGIN: 0.3          // 每日首启
+    POST: 2.0,               // 发帖
+    COMMENT: 0.8,            // 评论
+    ANSWER_CORRECT: 0.5,     // 单次答题正确
+    ANSWER_WRONG: 0.1,       // 单次答题错误（也有微弱鼓励）
+    DAILY_LOGIN: 0.3         // 每日首启
   },
-  // 恶意行为每次扣多少（直接从总值扣；同时额外扣未衰减的奖励）
+  // 违规行为 → 直接扣减（永久，不受时间恢复）
   PENALTY: {
-    SPAM: 15,                 // 恶意灌水
-    BAD_SPEECH: 25,           // 不当言论
-    FALSE_REPORT_SINGLE: 3,   // 异常举报（单次）
-    FALSE_REPORT_REPEAT: 10   // 多次异常举报
+    SPAM: 15,
+    BAD_SPEECH: 25,
+    FALSE_REPORT_SINGLE: 3,
+    FALSE_REPORT_REPEAT: 10
   }
 };
 
-function _getCreditState() {
+// 信任等级（由当前信用指数推导；指数越高，社区信任越高）
+var _POINTS_LEVELS = [
+  { min: 0,   label: '不受信任', title: '不受信任', color: '#c0553a', icon: '🚫' },
+  { min: 10,  label: '极低信任', title: '极低信任', color: '#d47030', icon: '⚠️' },
+  { min: 30,  label: '有限信任', title: '有限信任', color: '#c49b30', icon: '🙂' },
+  { min: 50,  label: '基本信任', title: '基本信任', color: '#5a7d5c', icon: '👍' },
+  { min: 80,  label: '高度信任', title: '高度信任', color: '#3a8c5c', icon: '🌟' },
+  { min: 100, label: '极高信任', title: '极高信任', color: '#ffd700', icon: '💎' }
+];
+
+function _getPointsState() {
   try {
-    var raw = localStorage.getItem(_CREDIT_STORAGE);
+    var raw = localStorage.getItem(_POINTS_STORAGE);
     var st = raw ? JSON.parse(raw) : null;
     if (!st || typeof st !== 'object') throw new Error('empty');
-    if (typeof st.base !== 'number') st.base = _CREDIT_DEFAULTS.BASE;
-    if (!Array.isArray(st.bonus)) st.bonus = [];
-    if (typeof st.decayDays !== 'number') st.decayDays = _CREDIT_DEFAULTS.DECAY_DAYS;
+    if (typeof st.base !== 'number' || !isFinite(st.base)) st.base = _POINTS_DEFAULTS.BASE;
+    if (!Array.isArray(st.fragments)) st.fragments = [];
+    if (typeof st.decayDays !== 'number') st.decayDays = _POINTS_DEFAULTS.DECAY_DAYS;
     if (typeof st.lastDecayTs !== 'number') st.lastDecayTs = Date.now();
     if (!Array.isArray(st.history)) st.history = [];
     return st;
   } catch (e) {
-    return {
-      base: _CREDIT_DEFAULTS.BASE,
-      bonus: [],                 // 每笔未完全衰减的奖励: { ts, delta, remaining }
-      decayDays: _CREDIT_DEFAULTS.DECAY_DAYS,
-      lastDecayTs: Date.now(),
-      history: []                // 最近 50 条变更日志
-    };
+    return { base: _POINTS_DEFAULTS.BASE, fragments: [], decayDays: _POINTS_DEFAULTS.DECAY_DAYS, lastDecayTs: Date.now(), history: [] };
   }
 }
 
-function _saveCreditState(st) {
+function _savePointsState(st) {
   try {
-    // history 限长 50
-    if (Array.isArray(st.history) && st.history.length > 50) {
-      st.history = st.history.slice(st.history.length - 50);
+    // history 限长 200
+    if (Array.isArray(st.history) && st.history.length > 200) {
+      st.history = st.history.slice(st.history.length - 200);
     }
-    localStorage.setItem(_CREDIT_STORAGE, JSON.stringify(st));
+    localStorage.setItem(_POINTS_STORAGE, JSON.stringify(st));
   } catch (e) {}
 }
 
-/**
- * 对奖励队列做"时间线性衰减"：每笔奖励在 decayDays 天后 remaining 从 delta → 0
- * 每次读取/变更前都会调用一次，保证数字真实；只在内部使用
- */
-function _applyCreditDecay(st) {
+function _appendPointsHistory(st, type, amount, reason, note) {
+  try {
+    st.history.push({ ts: Date.now(), type: type, amount: amount, reason: reason || '', note: note || '' });
+  } catch (e) {}
+}
+
+// 对信任增量做线性衰减：每笔在 decayDays 天后 remaining 从 delta → 0
+function _applyPointsDecay(st) {
   var now = Date.now();
   var totalMs = Math.max(1, st.decayDays) * 24 * 60 * 60 * 1000;
-  var elapsed = Math.max(0, now - (st.lastDecayTs || now));
-  if (elapsed <= 0 || !Array.isArray(st.bonus) || st.bonus.length === 0) {
-    st.lastDecayTs = now;
-    return st;
-  }
-  // 每笔按加入时间独立计算衰减比例：从 ts 起，经过 (now - ts) / totalMs 后归零
-  var newBonus = [];
-  for (var i = 0; i < st.bonus.length; i++) {
-    var b = st.bonus[i];
-    if (!b || typeof b.delta !== 'number' || b.delta <= 0) continue;
-    var age = now - (b.ts || now);
+  var newFrag = [];
+  for (var i = 0; i < st.fragments.length; i++) {
+    var f = st.fragments[i];
+    if (!f || typeof f.delta !== 'number' || f.delta <= 0) continue;
+    var age = now - (f.ts || now);
     var ratio = Math.min(1, Math.max(0, age / totalMs));
-    var remaining = Math.max(0, b.delta * (1 - ratio));
-    if (remaining > 0.001) {
-      newBonus.push({ ts: b.ts, delta: b.delta, remaining: remaining });
-    }
+    var remaining = Math.max(0, f.delta * (1 - ratio));
+    if (remaining > 0.001) newFrag.push({ ts: f.ts, delta: f.delta, remaining: remaining });
   }
-  st.bonus = newBonus;
+  st.fragments = newFrag;
   st.lastDecayTs = now;
   return st;
 }
 
-/** 计算当前总信用点 = base + Σ(bonus.remaining)，结果 ≥ MIN */
-function _computeCreditTotal(st) {
-  var bonusSum = 0;
-  for (var i = 0; i < st.bonus.length; i++) {
-    bonusSum += (st.bonus[i] && st.bonus[i].remaining) || 0;
-  }
-  var total = st.base + bonusSum;
-  return Math.max(_CREDIT_DEFAULTS.MIN, total);
+// 当前信用指数 = base + Σ(fragment.remaining)，结果 ≥ MIN
+function _computePointsTotal(st) {
+  var sum = 0;
+  for (var i = 0; i < st.fragments.length; i++) sum += (st.fragments[i] && st.fragments[i].remaining) || 0;
+  return Math.max(_POINTS_DEFAULTS.MIN, st.base + sum);
 }
 
-function _getCreditDecayed() {
-  var st = _getCreditState();
-  _applyCreditDecay(st);
-  _saveCreditState(st);
-  var total = _computeCreditTotal(st);
-  var bonusSum = 0;
-  for (var i = 0; i < st.bonus.length; i++) {
-    bonusSum += (st.bonus[i] && st.bonus[i].remaining) || 0;
-  }
+function _getPointsDecayed() {
+  var st = _getPointsState();
+  _applyPointsDecay(st);
+  _savePointsState(st);
+  return { state: st, total: _computePointsTotal(st) };
+}
+
+/** 对外：获取当前信用指数（保留 1 位小数） */
+function getPoints() {
+  return Math.round(_getPointsDecayed().total * 10) / 10;
+}
+
+/** 对外：获取带明细的对象（信用中心展示用） */
+function getPointsDetail() {
+  var d = _getPointsDecayed();
+  var total = Math.round(d.total * 10) / 10;
   return {
-    state: st,
     total: total,
-    base: st.base,
-    bonus: bonusSum
+    base: d.state.base,
+    level: getPointsLevel(total),
+    history: (d.state.history || []).slice().reverse()
   };
 }
 
-/** 对外：获取当前信用点数字（保留 1 位小数） */
-function getCredit() {
-  var dec = _getCreditDecayed();
-  return Math.round(dec.total * 10) / 10;
-}
-
-/** 对外：获取带明细的对象（仪表盘展示明细可能用到） */
-function getCreditDetail() {
-  var dec = _getCreditDecayed();
+/** 信任等级推导：由当前信用指数阈值推导 */
+function getPointsLevel(points) {
+  var total = (typeof points === 'number' && isFinite(points)) ? Math.max(0, points) : getPoints();
+  var current = _POINTS_LEVELS[0];
+  var next = null;
+  for (var i = 0; i < _POINTS_LEVELS.length; i++) {
+    var lv = _POINTS_LEVELS[i];
+    if (total >= lv.min) { current = lv; next = _POINTS_LEVELS[i + 1] || null; }
+  }
+  var curMin = current.min;
+  var nxtMin = next ? next.min : curMin;
+  var span = Math.max(1, nxtMin - curMin);
+  var progress = next ? Math.min(1, Math.max(0, (total - curMin) / span)) : 1;
   return {
-    total: Math.round(dec.total * 10) / 10,
-    base: Math.round(dec.base * 10) / 10,
-    bonus: Math.round(dec.bonus * 10) / 10,
-    decayDays: dec.state.decayDays,
-    history: dec.state.history || []
+    label: current.label,
+    title: current.title,
+    color: current.color,
+    icon: current.icon,
+    min: curMin,
+    nextAt: next ? nxtMin : null,
+    progress: Math.round(progress * 1000) / 1000
   };
 }
 
-function _appendCreditHistory(st, type, amount, reason) {
-  try {
-    st.history.push({
-      ts: Date.now(),
-      type: type,             // 'reward' | 'penalty' | 'decay'
-      amount: amount,         // 带正负号
-      reason: reason || ''
-    });
-  } catch (e) {}
-}
-
 /**
- * 奖励信用点（积极行为）
+ * 获得信任增量（符合社区期望的行为）
  * @param {string} reasonKey - 'POST' | 'COMMENT' | 'ANSWER_CORRECT' | 'ANSWER_WRONG' | 'DAILY_LOGIN'
- * @param {number} [customAmount] - 可选，覆盖默认值
- * @returns {number} 最新总信用点（保留 1 位小数）
+ * @param {number} [amount] - 可选，覆盖默认值
+ * @returns {number} 最新信用指数
  */
-function rewardCredit(reasonKey, customAmount) {
-  var st = _getCreditState();
-  _applyCreditDecay(st);
-  var def = _CREDIT_DEFAULTS.REWARD;
-  var amount = typeof customAmount === 'number' ? customAmount : (def[reasonKey] || 0);
-  if (amount > 0) {
-    st.bonus.push({ ts: Date.now(), delta: amount, remaining: amount });
-    _appendCreditHistory(st, 'reward', amount, reasonKey || '');
+function addPoints(reasonKey, amount) {
+  var d = _getPointsDecayed();
+  var st = d.state;
+  var def = _POINTS_DEFAULTS.REWARD;
+  var amt = (typeof amount === 'number' && isFinite(amount)) ? amount : (def[reasonKey] || 0);
+  if (amt > 0) {
+    st.fragments.push({ ts: Date.now(), delta: amt, remaining: amt });
+    _appendPointsHistory(st, 'reward', amt, reasonKey || '');
   }
-  _saveCreditState(st);
-  var total = _computeCreditTotal(st);
-  // 刷新头部显示（若函数已注册）
-  if (typeof window.refreshCreditBadge === 'function') {
-    try { window.refreshCreditBadge(); } catch (e) {}
-  }
-  return Math.round(total * 10) / 10;
+  _savePointsState(st);
+  _trySyncPointsToCloud();
+  _tryRefreshPointsBadge();
+  return getPoints();
 }
 
 /**
- * 扣信用点（恶意行为）
- *  - 直接从 total 中扣：优先扣 bonus 增量（加速"奖励部分清零"），不够再扣 base
- *  - base 最多扣到 MIN；扣 base 是永久损失
+ * 消费信任（做出对社区影响更大的行为：发帖/评论/悬赏/举报）
+ * 优先扣减未衰减的信任增量，不够再扣基础值（永久）
+ * @param {string} reasonKey
+ * @param {number} [amount] - 可选，覆盖默认值
+ * @returns {number} 最新信用指数
+ */
+function deductPoints(reasonKey, amount) {
+  var d = _getPointsDecayed();
+  var st = d.state;
+  var amt = (typeof amount === 'number' && isFinite(amount)) ? amount : 0;
+  var remaining = amt;
+  for (var i = 0; i < st.fragments.length && remaining > 0; i++) {
+    var f = st.fragments[i];
+    if (!f) continue;
+    if (f.remaining <= remaining) { remaining -= f.remaining; f.remaining = 0; }
+    else { f.remaining -= remaining; remaining = 0; }
+  }
+  st.fragments = st.fragments.filter(function (f) { return f && f.remaining > 0.001; });
+  if (remaining > 0) st.base = Math.max(_POINTS_DEFAULTS.MIN, st.base - remaining);
+  if (amt > 0) _appendPointsHistory(st, 'spend', -amt, reasonKey || '');
+  _savePointsState(st);
+  _trySyncPointsToCloud();
+  _tryRefreshPointsBadge();
+  return getPoints();
+}
+
+/**
+ * 违规扣减（恶意行为，永久）
  * @param {string} reasonKey - 'SPAM' | 'BAD_SPEECH' | 'FALSE_REPORT_SINGLE' | 'FALSE_REPORT_REPEAT'
- * @param {number} [customAmount]
- * @returns {number} 最新总信用点（保留 1 位小数）
+ * @param {number} [amount]
+ * @returns {number} 最新信用指数
  */
-function penalizeCredit(reasonKey, customAmount) {
-  var st = _getCreditState();
-  _applyCreditDecay(st);
-  var def = _CREDIT_DEFAULTS.PENALTY;
-  var amount = Math.max(0, typeof customAmount === 'number' ? customAmount : (def[reasonKey] || 0));
-  if (amount <= 0) {
-    _saveCreditState(st);
-    return Math.round(_computeCreditTotal(st) * 10) / 10;
+function penalizePoints(reasonKey, amount) {
+  var d = _getPointsDecayed();
+  var st = d.state;
+  var amt = (typeof amount === 'number' && isFinite(amount)) ? amount : (_POINTS_DEFAULTS.PENALTY[reasonKey] || 0);
+  var remaining = amt;
+  for (var i = 0; i < st.fragments.length && remaining > 0; i++) {
+    var f = st.fragments[i];
+    if (!f) continue;
+    if (f.remaining <= remaining) { remaining -= f.remaining; f.remaining = 0; }
+    else { f.remaining -= remaining; remaining = 0; }
   }
-  var remaining = amount;
-  // 1) 先加速把增量奖励 remaining 扣光（按最老的优先清零）
-  for (var i = 0; i < st.bonus.length && remaining > 0; i++) {
-    var b = st.bonus[i];
-    if (!b) continue;
-    if (b.remaining <= remaining) {
-      remaining -= b.remaining;
-      b.remaining = 0;
-    } else {
-      b.remaining -= remaining;
-      remaining = 0;
-    }
-  }
-  st.bonus = st.bonus.filter(function (b) { return b && b.remaining > 0.001; });
-  // 2) 还不够扣 → 扣 base（永久，不随时间恢复）
-  if (remaining > 0) {
-    st.base = Math.max(_CREDIT_DEFAULTS.MIN, st.base - remaining);
-  }
-  _appendCreditHistory(st, 'penalty', -amount, reasonKey || '');
-  _saveCreditState(st);
-  var total = _computeCreditTotal(st);
-  if (typeof window.refreshCreditBadge === 'function') {
-    try { window.refreshCreditBadge(); } catch (e) {}
-  }
-  return Math.round(total * 10) / 10;
+  st.fragments = st.fragments.filter(function (f) { return f && f.remaining > 0.001; });
+  if (remaining > 0) st.base = Math.max(_POINTS_DEFAULTS.MIN, st.base - remaining);
+  if (amt > 0) _appendPointsHistory(st, 'penalty', -amt, reasonKey || '');
+  _savePointsState(st);
+  _trySyncPointsToCloud();
+  _tryRefreshPointsBadge();
+  return getPoints();
 }
 
 /**
- * 手动重置信用点（管理员/初始化用；普通用户直接调用会重置 base=100、清奖励）
+ * 手动重置信用指数（管理员/初始化用）
  */
-function resetCredit() {
-  var st = {
-    base: _CREDIT_DEFAULTS.BASE,
-    bonus: [],
-    decayDays: _CREDIT_DEFAULTS.DECAY_DAYS,
-    lastDecayTs: Date.now(),
-    history: []
-  };
-  _saveCreditState(st);
-  if (typeof window.refreshCreditBadge === 'function') {
-    try { window.refreshCreditBadge(); } catch (e) {}
-  }
+function resetPoints() {
+  var st = { base: _POINTS_DEFAULTS.BASE, fragments: [], decayDays: _POINTS_DEFAULTS.DECAY_DAYS, lastDecayTs: Date.now(), history: [] };
+  _savePointsState(st);
+  _tryRefreshPointsBadge();
   return st.base;
 }
 
-window.getCredit = getCredit;
-window.getCreditDetail = getCreditDetail;
-window.rewardCredit = rewardCredit;
-window.penalizeCredit = penalizeCredit;
-window.resetCredit = resetCredit;
-window.CREDIT_DEFAULTS = _CREDIT_DEFAULTS;
+/** 云端同步：本地信用指数变更后调用（函数在 supabase-client.js 中挂载，未挂载则静默） */
+function _trySyncPointsToCloud() {
+  try {
+    if (typeof window.syncPointsToCloud === 'function') window.syncPointsToCloud(getPoints());
+  } catch (e) {}
+}
 
-// 每日首次启动奖励 0.3
-(function _creditDailyLoginReward() {
+function _tryRefreshPointsBadge() {
+  try {
+    if (typeof window.refreshPointsBadge === 'function') window.refreshPointsBadge();
+  } catch (e) {}
+}
+
+window.getPoints = getPoints;
+window.getPointsDetail = getPointsDetail;
+window.getPointsLevel = getPointsLevel;
+window.addPoints = addPoints;
+window.deductPoints = deductPoints;
+window.penalizePoints = penalizePoints;
+window.resetPoints = resetPoints;
+window.POINTS_DEFAULTS = _POINTS_DEFAULTS;
+window.POINTS_LEVELS = _POINTS_LEVELS;
+
+// 每日首次启动 → 微弱信任增量
+(function _pointsDailyLoginReward() {
   try {
     var LAST_KEY = 'bioquest_credit_last_login_day';
     var today = new Date();
@@ -1710,9 +1720,9 @@ window.CREDIT_DEFAULTS = _CREDIT_DEFAULTS;
     var last = localStorage.getItem(LAST_KEY);
     if (last !== tag) {
       localStorage.setItem(LAST_KEY, tag);
-      // 给 rewardCredit 一点时间等 getCredit 挂好
+      // 给 addPoints 一点时间等 getPoints 挂好
       setTimeout(function () {
-        try { rewardCredit('DAILY_LOGIN'); } catch (e) {}
+        try { addPoints('DAILY_LOGIN'); } catch (e) {}
       }, 2000);
     }
   } catch (e) {}
@@ -2302,7 +2312,7 @@ function renderUserPage(target) {
           <div class="user-profile-info">
             <div class="user-profile-name">${escapeHtml(displayName)} <span class="user-profile-badge">${groupLabels[userGroup] || '会员'}</span></div>
             <div class="user-profile-meta">
-              <span class="user-profile-meta-credit" id="userCompactCreditBadge" title="信用点（基础100 + 活跃奖励增量会随时间衰减回0）">💳 CR&nbsp;<span class="user-credit-val">100.0</span></span>
+              <span class="user-profile-meta-points" id="userCompactPointsBadge" title="信用指数（CR）：社区对用户的信任程度，随时间衰减">⭐ 信用&nbsp;<span class="user-points-val">100</span></span>
               <span class="user-profile-meta-arrow">点击查看仪表盘 →</span>
             </div>
           </div>
@@ -2376,6 +2386,11 @@ function renderUserPage(target) {
             <div class="user-list-info"><div class="user-list-title">加入班级</div><div class="user-list-desc">输入班级码和密钥加入教师班级</div></div>
             <svg class="user-list-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
           </div>
+          <div class="user-list-item" onclick="navigateTo('/credit')">
+            <div class="user-list-icon" style="background:#c4956a;">⭐</div>
+            <div class="user-list-info"><div class="user-list-title">信用中心</div><div class="user-list-desc">信用指数、信任等级、明细与社区信任排行</div></div>
+            <svg class="user-list-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          </div>
           ${userGroup === 'admin' ? `
           <div class="user-list-item" onclick="_userAdminEntry()">
             <div class="user-list-icon" style="background:#ff6b6b;">🛡️</div>
@@ -2402,10 +2417,9 @@ function renderUserPage(target) {
     // 绑定头像上传逻辑
     setupAvatarUpload();
 
-    // 渲染后立刻刷新信用点徽标（刷新 localStorage 里的数字到 DOM）
+    // 渲染后立刻刷新信用徽标（刷新 localStorage 里的数字到 DOM）
     try {
-      if (typeof refreshCreditBadge === 'function') refreshCreditBadge();
-      else if (typeof window.refreshCreditBadge === 'function') window.refreshCreditBadge();
+      if (typeof window.refreshPointsBadge === 'function') window.refreshPointsBadge();
     } catch (_) {}
 
     // 刷新通知未读角标
@@ -2439,29 +2453,28 @@ function renderUserPage(target) {
 }
 
 /**
- * 刷新头部紧凑资料卡上的"信用点"数字
- *  - rewardCredit / penalizeCredit 变更后都会自动调用
+ * 刷新头部紧凑资料卡上的"信用指数"数字
+ *  - addPoints / deductPoints / penalizePoints 变更后都会自动调用
  *  - 也会在每次页面初始化时被调用
  *  - 找不到 DOM 就静默跳过（不会 crash）
  */
-function refreshCreditBadge() {
+function refreshPointsBadge() {
   try {
-    var badge = document.getElementById('userCompactCreditBadge');
-    var valEl = badge ? badge.querySelector('.user-credit-val') : null;
-    var total = (typeof window.getCredit === 'function') ? window.getCredit() : null;
-    if (total === null || typeof total !== 'number' || !isFinite(total)) total = _CREDIT_DEFAULTS.BASE;
-    var text = (Math.round(total * 10) / 10).toFixed(1);
-    if (valEl) valEl.textContent = text;
+    var badge = document.getElementById('userCompactPointsBadge');
+    var valEl = badge ? badge.querySelector('.user-points-val') : null;
+    var total = (typeof window.getPoints === 'function') ? window.getPoints() : _POINTS_DEFAULTS.BASE;
+    if (total === null || typeof total !== 'number' || !isFinite(total)) total = _POINTS_DEFAULTS.BASE;
+    if (valEl) valEl.textContent = String(Math.round(total * 10) / 10);
     if (badge) {
       badge.setAttribute('data-low', total < 80 ? 'true' : 'false');
       badge.setAttribute('title',
-        '信用点 ' + text + '（基础100 + 活跃奖励增量会随时间衰减，扣分会永久降低基础值）');
+        '信用指数（CR）' + (Math.round(total * 10) / 10) + '：社区信任度，随活跃衰减，违规扣减');
     }
   } catch (e) {
     // 不对外抛错，避免破坏 initUser 主流程
   }
 }
-window.refreshCreditBadge = refreshCreditBadge;
+window.refreshPointsBadge = refreshPointsBadge;
 
 // 子页面切换逻辑
 var _userSubPageTitles = {

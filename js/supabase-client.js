@@ -25,55 +25,54 @@ function _localDateStr(date) {
   return y + '-' + m + '-' + d;
 }
 
-// ===== 用户信用系统（CR）配置 =====
-// CR 是社区信任度的量化，非经验值/货币。通过符合社区期望的行为获得信任，
-// 消费信任以执行对社区有更大影响的操作，并随时间自然衰减。
+// ===== 用户信用指数（Trust / Credit）系统配置 =====
+// 信用点（CR）不是经验值、不是货币，而是社区对用户信任程度的量化。
+// 通过符合社区期望的行为获得信任，消费信任以做出对社区影响更大的行为；
+// 信任具有时效性（自然衰减），违规则直接扣减。
 
-var CR_DEFAULT = 100;
+var POINTS_DEFAULT = 100;
 
-// 1. 自然衰减参数
-// CR_decayed = CR_old * exp(-lambda * deltaDays)
+// 1. 信任自然衰减参数
+// 信用指数随时间指数衰减：CR_decayed = CR * exp(-lambda * deltaDays)
 // lambda = 0.01005 对应每日衰减约 1%，半衰期约 69 天
 var CR_DECAY = {
   lambda: 0.01005,
   halfLifeDays: 69
 };
 
-// 2. 积极行为获得 CR 规则（带边际递减）
-// deltaCR = base / (1 + beta * n^gamma)
-// n 为最近 windowDays 天内该类行为发生次数
-var CR_EARN_RULES = {
-  daily_checkin: { base: 2, beta: 0.15, gamma: 1, windowDays: 7, reason: '每日打卡' },
-  online_time: { base: 1, beta: 0.10, gamma: 1, windowDays: 1, reason: '在线时长奖励' },
-  practice_milestone: { base: 1, beta: 0.05, gamma: 1, windowDays: 1, reason: '刷题奖励（每10题）' },
-  suggestion_feedback: { base: 10, beta: 0.30, gamma: 1, windowDays: 30, reason: '提交建议反馈' },
-  valid_report: { base: 5, beta: 0.20, gamma: 1, windowDays: 7, reason: '有效举报/反馈' }
+// 2. 符合社区期望的行为 → 获得信任增量
+var POINTS_EARN_RULES = {
+  daily_checkin: { base: 0.3, reason: '每日打卡' },
+  online_time: { base: 0.1, reason: '在线时长奖励' },
+  practice_milestone: { base: 0.1, reason: '刷题奖励（每10题）' },
+  suggestion_feedback: { base: 2, reason: '提交建议反馈' },
+  valid_report: { base: 1, reason: '有效举报/反馈' }
 };
 
-// 3. 高影响操作消费 CR 规则（需同时满足门槛）
-// CR_after = CR_before - cost
-var CR_ACTION_COSTS = {
-  comment: { threshold: 10, cost: 1, reason: '发表评论' },
+// 3. 消费信任（高影响操作）规则（需同时满足门槛）
+var POINTS_ACTION_COSTS = {
+  comment: { threshold: 20, cost: 1, reason: '发表评论' },
   post: { threshold: 30, cost: 2, reason: '发布帖子' },
-  report_question: { threshold: 50, cost: 5, reason: '举报题目' },
-  special_permission: { threshold: 80, cost: 20, reason: '申请特殊权限' }
+  report_question: { threshold: 50, cost: 2, reason: '举报题目' },
+  special_permission: { threshold: 80, cost: 10, reason: '申请特殊权限' }
 };
 
-// 4. 违规惩罚规则
-var CR_PENALTIES = {
+// 4. 违规惩罚规则（直接扣减，永久）
+var POINTS_PENALTIES = {
   question_feedback_invalid: { amount: -5, reason: '无效题目反馈/举报' },
-  uncivil_post: { amount: -10, reason: '发布不文明内容' },
+  uncivil_post: { amount: -15, reason: '发布不文明内容' },
   uncivil_comment: { amount: -10, reason: '评论不文明内容' },
-  spam: { amount: -15, reason: '刷屏/垃圾内容' }
+  spam: { amount: -20, reason: '刷屏/垃圾内容' }
 };
 
-var CR_LEVELS = [
-  { min: 100, label: '极高信任', color: '#ffd700', badge: 'gold' },
-  { min: 80, label: '高度信任', color: '#3a8c5c', badge: 'excellent' },
-  { min: 50, label: '基本信任', color: '#5a7d5c', badge: 'good' },
-  { min: 30, label: '有限信任', color: '#c49b30', badge: 'normal' },
-  { min: 10, label: '极低信任', color: '#d47030', badge: 'poor' },
-  { min: 0, label: '不受信任', color: '#c0553a', badge: 'bad' }
+// 5. 信任等级（由当前信用指数推导；指数越高，社区信任越高）
+var POINTS_LEVELS = [
+  { min: 0,   label: '不受信任', title: '不受信任', color: '#c0553a', icon: '🚫' },
+  { min: 10,  label: '极低信任', title: '极低信任', color: '#d47030', icon: '⚠️' },
+  { min: 30,  label: '有限信任', title: '有限信任', color: '#c49b30', icon: '🙂' },
+  { min: 50,  label: '基本信任', title: '基本信任', color: '#5a7d5c', icon: '👍' },
+  { min: 80,  label: '高度信任', title: '高度信任', color: '#3a8c5c', icon: '🌟' },
+  { min: 100, label: '极高信任', title: '极高信任', color: '#ffd700', icon: '💎' }
 ];
 
 var _UNCIVIL_WORDS = ['傻逼','脑残','nmsl','你妈','草泥马','滚','去死','废物','垃圾','贱','sb','cnm','tmd','mdzz','智障','混蛋','狗屎','屎','烂','白痴','蠢货','婊子','娘炮','死全家','杀了你','操','肏','日你妈','麻痹','特么','马勒戈壁','法克','fuck','shit','bitch'];
@@ -198,7 +197,7 @@ function _setupAuthListener() {
                   display_name: (profile && profile.display_name) || authUser.email.split('@')[0],
                   email: authUser.email,
                   bio_score: (profile && profile.bio_score) || 0,
-                  cr: (profile && profile.cr) || CR_DEFAULT,
+                  points: (profile && profile.points) || POINTS_DEFAULT,
                   user_group: (profile && profile.user_group) || 'member',
                   email_verified: !!isVerified
                 };
@@ -562,7 +561,7 @@ async function registerUser(username, password, displayName, email) {
       // 邮箱验证注册：此时 user 已在 auth.users 中，但 profiles 可能还没
       // 尝试写入 profiles 以便后续登录时能查到 username/email
       try {
-        var upsertData = { id: data.user.id, username: username, display_name: displayName || username, user_group: 'member', cr: CR_DEFAULT };
+        var upsertData = { id: data.user.id, username: username, display_name: displayName || username, user_group: 'member', points: POINTS_DEFAULT };
         try { upsertData.email = email; } catch (e) {}
         try { upsertData.device_id = deviceId; } catch (e) {}
         await sb.from('profiles').upsert(upsertData, { onConflict: 'id' });
@@ -570,7 +569,7 @@ async function registerUser(username, password, displayName, email) {
       } catch (e1) {
         try {
           await sb.from('profiles').upsert({
-            id: data.user.id, username: username, display_name: displayName || username, user_group: 'member', cr: CR_DEFAULT
+            id: data.user.id, username: username, display_name: displayName || username, user_group: 'member', points: POINTS_DEFAULT
           }, { onConflict: 'id' });
         } catch (e2) {
           console.warn('[BioQuest] profiles upsert 失败（邮箱验证前，非致命）:', e2 && e2.message);
@@ -591,7 +590,7 @@ async function registerUser(username, password, displayName, email) {
           username: username,
           display_name: displayName || username,
           email: email,
-          cr: CR_DEFAULT,
+          points: POINTS_DEFAULT,
           user_group: 'member',
           email_verified: false,
           user_key: uk1
@@ -610,20 +609,20 @@ async function registerUser(username, password, displayName, email) {
         username: username,
         display_name: displayName || username,
         email: email,
-        cr: CR_DEFAULT,
+        points: POINTS_DEFAULT,
         user_group: initialGroup,
         email_verified: true
       };
 
       try {
-        var upsertData = { id: data.user.id, username: username, display_name: displayName || username, user_group: initialGroup, cr: CR_DEFAULT };
+        var upsertData = { id: data.user.id, username: username, display_name: displayName || username, user_group: initialGroup, points: POINTS_DEFAULT };
         try { upsertData.email = email; } catch (e) {}
         try { upsertData.device_id = deviceId; } catch (e) {}
         await sb.from('profiles').upsert(upsertData, { onConflict: 'id' });
       } catch (e1) {
         try {
           await sb.from('profiles').upsert({
-            id: data.user.id, username: username, display_name: displayName || username, user_group: initialGroup, cr: CR_DEFAULT
+            id: data.user.id, username: username, display_name: displayName || username, user_group: initialGroup, points: POINTS_DEFAULT
           }, { onConflict: 'id' });
         } catch (e2) {
           console.warn('[BioQuest] profiles upsert 失败（已尝试回退）:', e2 && e2.message);
@@ -747,7 +746,7 @@ async function loginUser(usernameOrEmail, password) {
       display_name: profile?.display_name || usernameOrEmail.split('@')[0],
       email: email,
       bio_score: profile?.bio_score || 0,
-      cr: profile?.cr || CR_DEFAULT,
+      points: profile?.points || POINTS_DEFAULT,
       user_group: profile?.user_group || 'member',
       email_verified: false
     };
@@ -804,7 +803,7 @@ function guestLogin(password, username) {
     display_name: guestDisplayName || guestUsername,
     email: guestUsername + '@bioquest.local',
     bio_score: 0,
-    cr: CR_DEFAULT,
+    points: POINTS_DEFAULT,
     user_group: 'guest',
     email_verified: false,
     isGuest: true
@@ -839,7 +838,7 @@ function guestLogin(password, username) {
       id: guestId,
       username: guestUsername,
       display_name: _currentUser.display_name,
-      cr: _currentUser.cr,
+      points: _currentUser.points,
       createdAt: Date.now()
     }));
   } catch (e) { /* 静默 */ }
@@ -894,7 +893,7 @@ function restoreGuestSession() {
       display_name: session.display_name || '游客',
       email: (session.username || 'guest') + '@bioquest.local',
       bio_score: 0,
-      cr: session.cr || CR_DEFAULT,
+      points: session.points || POINTS_DEFAULT,
       user_group: 'guest',
       email_verified: false,
       isGuest: true
@@ -1167,7 +1166,7 @@ async function _doRestoreSession() {
         username: profile?.username || 'user',
         display_name: profile?.display_name || 'User',
         bio_score: profile?.bio_score || 0,
-        cr: profile?.cr || CR_DEFAULT,
+        points: profile?.points || POINTS_DEFAULT,
         user_group: profile?.user_group || 'member',
         email_verified: false
       };
@@ -1274,21 +1273,21 @@ async function updateBioScore(bioScore, stats) {
     };
     await sb.from('profiles').upsert({ id: _currentUser.id, ...updates, device_id: localStorage.getItem('bioquest_device_id') || 'unknown' }, { onConflict: 'id' });
 
-    // 刷题奖励：每答满10题按边际递减规则获得 CR
+    // 刷题奖励：每答满10题获得信用
     try {
       var answered = stats.total_answered || 0;
       var milestone = Math.floor(answered / 10);
       var lastMilestone = 0;
-      try { lastMilestone = parseInt(localStorage.getItem('bioquest_cr_practice_milestone') || '0', 10); } catch (e) {}
+      try { lastMilestone = parseInt(localStorage.getItem('bioquest_points_practice_milestone') || '0', 10); } catch (e) {}
       if (milestone > lastMilestone) {
         var rewardSteps = milestone - lastMilestone;
         for (var i = 0; i < rewardSteps; i++) {
-          var delta = await calculateEarnedCR('practice_milestone');
+          var delta = await calculateEarnedPoints('practice_milestone');
           if (delta > 0) {
-            await adjustUserCR(delta, CR_EARN_RULES.practice_milestone.reason, { source: 'practice' });
+            await adjustUserPoints(delta, POINTS_EARN_RULES.practice_milestone.reason, { source: 'practice' });
           }
         }
-        localStorage.setItem('bioquest_cr_practice_milestone', String(milestone));
+        localStorage.setItem('bioquest_points_practice_milestone', String(milestone));
       }
     } catch (e) { /* 静默 */ }
   } catch (e) {
@@ -1437,17 +1436,46 @@ async function getLeaderboard(tab, limit) {
   return inflightPromise;
 }
 
-// ===== 用户信用系统（CR）=====
+// ===== 用户信用（Trust / Credit）=====
 
 /**
- * 获取信用等级信息
+ * 获取信用等级信息（由当前信用指数阈值推导）
  */
-function getCreditLevelInfo(cr) {
-  var score = typeof cr === 'number' ? cr : CR_DEFAULT;
-  for (var i = 0; i < CR_LEVELS.length; i++) {
-    if (score >= CR_LEVELS[i].min) return CR_LEVELS[i];
+function getPointsLevel(points) {
+  var score = typeof points === 'number' ? points : POINTS_DEFAULT;
+  var current = POINTS_LEVELS[0];
+  var next = null;
+  for (var i = 0; i < POINTS_LEVELS.length; i++) {
+    var lv = POINTS_LEVELS[i];
+    if (score >= lv.min) { current = lv; next = POINTS_LEVELS[i + 1] || null; }
   }
-  return CR_LEVELS[CR_LEVELS.length - 1];
+  var curMin = current.min;
+  var nxtMin = next ? next.min : curMin;
+  var span = Math.max(1, nxtMin - curMin);
+  var progress = next ? Math.min(1, Math.max(0, (score - curMin) / span)) : 1;
+  return {
+    label: current.label,
+    title: current.title,
+    color: current.color,
+    icon: current.icon,
+    min: curMin,
+    nextAt: next ? nxtMin : null,
+    progress: Math.round(progress * 1000) / 1000
+  };
+}
+
+/**
+ * 计算自然衰减后的信用指数
+ * CR_decayed = CR * exp(-lambda * deltaDays)
+ */
+function calculateDecayedPoints(currentPoints, lastUpdatedAt) {
+  if (typeof currentPoints !== 'number' || currentPoints <= 0) return 0;
+  if (!lastUpdatedAt) return currentPoints;
+  var now = Date.now();
+  var last = new Date(lastUpdatedAt).getTime();
+  var deltaDays = (now - last) / (24 * 60 * 60 * 1000);
+  if (deltaDays <= 0) return currentPoints;
+  return currentPoints * Math.exp(-CR_DECAY.lambda * deltaDays);
 }
 
 /**
@@ -1478,20 +1506,6 @@ function isUncivilContent(text) {
 }
 
 /**
- * 计算自然衰减后的 CR
- * CR_decayed = CR_old * exp(-lambda * deltaDays)
- */
-function calculateDecayedCR(currentCR, lastUpdatedAt) {
-  if (typeof currentCR !== 'number' || currentCR <= 0) return 0;
-  if (!lastUpdatedAt) return currentCR;
-  var now = Date.now();
-  var last = new Date(lastUpdatedAt).getTime();
-  var deltaDays = (now - last) / (24 * 60 * 60 * 1000);
-  if (deltaDays <= 0) return currentCR;
-  return currentCR * Math.exp(-CR_DECAY.lambda * deltaDays);
-}
-
-/**
  * 查询某用户最近 windowDays 天内某类行为的次数
  * 静默失败：所有异常（表不存在/RLS拒绝/网络中断/超时）返回 0，不冒泡到控制台
  */
@@ -1519,32 +1533,30 @@ async function getBehaviorCount(userId, source, windowDays) {
 }
 
 /**
- * 计算积极行为的边际递减后 CR 增量
- * deltaCR = base / (1 + beta * n^gamma)
+ * 计算积极行为获得的信用增量（会随时间衰减）
  */
-async function calculateEarnedCR(ruleKey, userId) {
-  var rule = CR_EARN_RULES[ruleKey];
+async function calculateEarnedPoints(ruleKey, userId) {
+  var rule = POINTS_EARN_RULES[ruleKey];
   if (!rule) return 0;
   var uid = userId || (_currentUser ? _currentUser.id : null);
   if (!uid) return 0;
-  var n = await getBehaviorCount(uid, ruleKey, rule.windowDays);
-  return rule.base / (1 + rule.beta * Math.pow(n, rule.gamma));
+  return rule.base;
 }
 
 /**
- * 检查用户是否有足够 CR 执行某高影响操作
+ * 检查用户是否有足够信用执行某高影响操作
  */
-function canPerformAction(cr, actionKey) {
-  var action = CR_ACTION_COSTS[actionKey];
+function canPerformAction(points, actionKey) {
+  var action = POINTS_ACTION_COSTS[actionKey];
   if (!action) return { ok: false, error: '未知操作' };
-  if (typeof cr !== 'number' || cr < action.threshold) {
-    return { ok: false, error: '信用分不足（需要 ' + action.threshold + '，当前 ' + (cr || 0) + '）' };
+  if (typeof points !== 'number' || points < action.threshold) {
+    return { ok: false, error: '信用不足（需要 ' + action.threshold + '，当前 ' + (points || 0) + '）' };
   }
   return { ok: true, cost: action.cost };
 }
 
 /**
- * 创建 CR 申诉记录
+ * 创建信用申诉记录
  * @param {Object} params - { content, detected_word, amount, reason, source, user_note }
  */
 async function createCRAppeal(params) {
@@ -1568,9 +1580,9 @@ async function createCRAppeal(params) {
   } catch (e) {
     // 表不存在时静默降级（cr_appeals 表未创建），仅 console.warn
     if (e.message && e.message.indexOf('schema cache') >= 0) {
-      console.warn('[CR] cr_appeals 表未创建，申诉功能降级');
+      console.warn('[信用] cr_appeals 表未创建，申诉功能降级');
     } else {
-      console.error('[CR] 创建申诉失败:', e.message);
+      console.error('[信用] 创建申诉失败:', e.message);
     }
     return null;
   }
@@ -1598,7 +1610,7 @@ async function updateCRAppeal(appealId, userNote) {
 /**
  * 获取当前用户的申诉记录
  */
-async function getUserCRAppeals() {
+async function getUserPointsAppeals() {
   var sb = getSupabase();
   if (!sb || !_currentUser) return [];
   try {
@@ -1632,7 +1644,7 @@ async function getPendingCRAppeals() {
 }
 
 /**
- * 处理 CR 申诉（管理员用）
+ * 处理信用申诉（管理员用）
  * @param {string} appealId
  * @param {string} action - 'approve' 或 'reject'
  * @param {string} adminNote
@@ -1649,9 +1661,9 @@ async function resolveCRAppeal(appealId, action, adminNote) {
     if (!appeal) return { ok: false, error: '申诉不存在' };
     if (appeal.status !== 'pending') return { ok: false, error: '该申诉已处理' };
 
-    // 如果批准，恢复被扣除的 CR
+    // 如果批准，恢复被扣除的信用
     if (action === 'approve') {
-      await adjustUserCR(Math.abs(appeal.amount), '申诉通过：恢复信用分', { userId: appeal.user_id, source: 'appeal' });
+      await adjustUserPoints(Math.abs(appeal.amount), '申诉通过：恢复信用', { userId: appeal.user_id, source: 'appeal' });
     }
 
     var { error } = await sb.from('cr_appeals')
@@ -1670,35 +1682,36 @@ async function resolveCRAppeal(appealId, action, adminNote) {
 }
 
 /**
- * 获取用户当前 CR
+ * 获取用户当前信用指数（含自然衰减）
  */
-async function getUserCR(userId) {
+async function getUserPoints(userId) {
   var sb = getSupabase();
   var uid = userId || (_currentUser ? _currentUser.id : null);
   if (!sb || !uid) {
-    return { cr: (_currentUser && typeof _currentUser.cr === 'number') ? _currentUser.cr : CR_DEFAULT, level: getCreditLevelInfo(_currentUser && _currentUser.cr) };
+    return { points: (_currentUser && typeof _currentUser.points === 'number') ? _currentUser.points : POINTS_DEFAULT, level: getPointsLevel(_currentUser && _currentUser.points) };
   }
   try {
     var { data, error } = await sb.from('profiles')
-      .select('cr, cr_updated_at, user_group')
+      .select('points, points_updated_at, user_group')
       .eq('id', uid)
       .maybeSingle();
     if (error) throw error;
-    var rawCR = (data && typeof data.cr === 'number') ? data.cr : CR_DEFAULT;
-    var cr = calculateDecayedCR(rawCR, data && data.cr_updated_at ? data.cr_updated_at : null);
-    return { cr: cr, level: getCreditLevelInfo(cr), user_group: data ? data.user_group : 'member' };
+    var raw = (data && typeof data.points === 'number') ? data.points : POINTS_DEFAULT;
+    // 应用自然衰减：信用指数随时间衰减
+    var points = calculateDecayedPoints(raw, data && data.points_updated_at ? data.points_updated_at : null);
+    return { points: Math.round(points * 10) / 10, level: getPointsLevel(points), user_group: data ? data.user_group : 'member' };
   } catch (e) {
-    return { cr: (_currentUser && typeof _currentUser.cr === 'number') ? _currentUser.cr : CR_DEFAULT, level: getCreditLevelInfo(_currentUser && _currentUser.cr) };
+    return { points: (_currentUser && typeof _currentUser.points === 'number') ? _currentUser.points : POINTS_DEFAULT, level: getPointsLevel(_currentUser && _currentUser.points) };
   }
 }
 
 /**
- * 调整用户 CR（普通用户仅能通过任务/违规被动调整；管理员可主动修改他人）
+ * 调整用户信用指数（普通用户仅能通过任务/违规被动调整；管理员可主动修改他人）
  * @param {number} amount - 变化量（正为增加，负为扣除）
  * @param {string} reason - 原因
  * @param {Object} [options] - { userId, source }
  */
-async function adjustUserCR(amount, reason, options) {
+async function adjustUserPoints(amount, reason, options) {
   options = options || {};
   var sb = getSupabase();
   var userId = options.userId || (_currentUser ? _currentUser.id : null);
@@ -1706,20 +1719,18 @@ async function adjustUserCR(amount, reason, options) {
 
   try {
     var { data: profile, error: fetchError } = await sb.from('profiles')
-      .select('cr, cr_updated_at, user_group')
+      .select('points, points_updated_at, user_group')
       .eq('id', userId)
       .maybeSingle();
     if (fetchError) throw fetchError;
 
-    var rawCR = (profile && typeof profile.cr === 'number') ? profile.cr : CR_DEFAULT;
-    var lastUpdate = profile && profile.cr_updated_at ? profile.cr_updated_at : null;
-    // 先应用自然衰减
-    var decayedCR = calculateDecayedCR(rawCR, lastUpdate);
-    // 再应用本次调整（profiles.cr 字段为 integer，四舍五入到整数）
-    var newCR = Math.max(0, Math.round(decayedCR + amount));
+    var rawPoints = (profile && typeof profile.points === 'number') ? profile.points : POINTS_DEFAULT;
+    // 先应用自然衰减，再应用本次调整（profiles.points 字段为 numeric，保留 1 位小数，下限 0）
+    var decayedPoints = calculateDecayedPoints(rawPoints, profile && profile.points_updated_at ? profile.points_updated_at : null);
+    var newPoints = Math.max(0, Math.round((decayedPoints + amount) * 10) / 10);
 
     var { error: updateError } = await sb.from('profiles')
-      .update({ cr: newCR, cr_updated_at: new Date().toISOString() })
+      .update({ points: newPoints, points_updated_at: new Date().toISOString() })
       .eq('id', userId);
     if (updateError) throw updateError;
 
@@ -1735,27 +1746,84 @@ async function adjustUserCR(amount, reason, options) {
 
     // 重新读取，获取触发器可能更新的 user_group
     var { data: updated } = await sb.from('profiles')
-      .select('cr, user_group')
+      .select('points, user_group')
       .eq('id', userId)
       .maybeSingle();
-    var finalCR = (updated && typeof updated.cr === 'number') ? updated.cr : newCR;
+    var finalPoints = (updated && typeof updated.points === 'number') ? updated.points : newPoints;
     var finalGroup = (updated && updated.user_group) ? updated.user_group : (profile && profile.user_group) || 'member';
 
     if (_currentUser && _currentUser.id === userId) {
-      _currentUser.cr = finalCR;
+      _currentUser.points = finalPoints;
       _currentUser.user_group = finalGroup;
     }
 
-    return { ok: true, cr: finalCR, user_group: finalGroup };
+    return { ok: true, points: finalPoints, user_group: finalGroup };
   } catch (e) {
-    console.error('[CR] 调整失败:', e.message);
+    console.error('[Points] 调整失败:', e.message);
     return { ok: false, error: e.message };
   }
 }
 
 /**
+ * 将本地信用同步到云端（登录状态下回写，取本地与云端较高者）
+ * @param {number} points - 本地最新信用指数
+ */
+async function syncPointsToCloud(points) {
+  var sb = getSupabase();
+  if (!sb || !_currentUser || _currentUser.isGuest) return { ok: false, error: '未登录' };
+  var val = (typeof points === 'number' && isFinite(points)) ? Math.max(0, Math.round(points)) : 0;
+  try {
+    var { data } = await sb.from('profiles')
+      .select('points')
+      .eq('id', _currentUser.id)
+      .maybeSingle();
+    var cloudPoints = (data && typeof data.points === 'number') ? data.points : 0;
+    var target = Math.max(cloudPoints, val);
+    if (target !== cloudPoints) {
+      var { error } = await sb.from('profiles')
+        .update({ points: target, points_updated_at: new Date().toISOString() })
+        .eq('id', _currentUser.id);
+      if (error) throw error;
+    }
+    _currentUser.points = target;
+    return { ok: true, points: target };
+  } catch (e) {
+    return { ok: false, error: e.message };
+  }
+}
+
+/**
+ * 获取信用排行榜（按 profiles.points 降序）
+ * @param {number} [limit] - 返回条数，默认 50
+ */
+async function getPointsLeaderboard(limit) {
+  var sb = getSupabase();
+  var n = limit || 50;
+  if (!sb) return [];
+  try {
+    var { data, error } = await sb.from('profiles')
+      .select('id, username, display_name, points, user_group')
+      .order('points', { ascending: false })
+      .limit(n);
+    if (error) throw error;
+    return (data || []).map(function(p) {
+      return {
+        id: p.id,
+        username: p.username,
+        display_name: p.display_name,
+        points: (typeof p.points === 'number') ? Math.max(0, p.points) : 0,
+        user_group: p.user_group || 'member',
+        level: getPointsLevel(p.points)
+      };
+    });
+  } catch (e) {
+    return [];
+  }
+}
+
+/**
  * 在线时长奖励跟踪
- * 每5分钟活跃奖励1 CR，每天最多12分
+ * 每5分钟活跃奖励1 信用，每天最多12点
  */
 var _onlineTracker = {
   lastActive: Date.now(),
@@ -1767,7 +1835,7 @@ function startOnlineTimeTracking() {
   if (_onlineTracker.heartbeatTimer || !_currentUser || _currentUser.isGuest) return;
   _onlineTracker.lastActive = Date.now();
 
-  var keys = { date: 'bioquest_cr_online_date', count: 'bioquest_cr_online_count' };
+  var keys = { date: 'bioquest_points_online_date', count: 'bioquest_points_online_count' };
   try {
     var today = _localDateStr();
     var savedDate = localStorage.getItem(keys.date);
@@ -1783,9 +1851,9 @@ function startOnlineTimeTracking() {
     if (!_currentUser || _currentUser.isGuest || _onlineTracker.rewardedToday >= ONLINE_TIME_DAILY_CAP) return;
     var inactive = Date.now() - _onlineTracker.lastActive;
     if (inactive > ONLINE_TIME_INACTIVE_THRESHOLD_MS) return;
-    var delta = await calculateEarnedCR('online_time');
+    var delta = await calculateEarnedPoints('online_time');
     if (delta <= 0) return;
-    adjustUserCR(delta, CR_EARN_RULES.online_time.reason, { source: 'online_time' }).then(function(result) {
+    adjustUserPoints(delta, POINTS_EARN_RULES.online_time.reason, { source: 'online_time' }).then(function(result) {
       if (result.ok) {
         _onlineTracker.rewardedToday++;
         try {
@@ -1889,29 +1957,29 @@ async function createCommunityPost(content, tags) {
     // 1. 不文明内容检测（零成本拦截）
     var check = isUncivilContent(content);
     if (check.uncivil) {
-      await adjustUserCR(CR_PENALTIES.uncivil_post.amount, CR_PENALTIES.uncivil_post.reason, { source: 'community' });
+      await adjustUserPoints(POINTS_PENALTIES.uncivil_post.amount, POINTS_PENALTIES.uncivil_post.reason, { source: 'community' });
       // 自动生成申诉记录，方便用户误触时申请复核
       var appeal = await createCRAppeal({
         content: content,
         detected_word: check.word,
-        amount: CR_PENALTIES.uncivil_post.amount,
-        reason: CR_PENALTIES.uncivil_post.reason,
+        amount: POINTS_PENALTIES.uncivil_post.amount,
+        reason: POINTS_PENALTIES.uncivil_post.reason,
         source: 'community_post'
       });
       return {
         ok: false,
-        error: '检测到不文明用语（' + check.word + '），已扣除 ' + Math.abs(CR_PENALTIES.uncivil_post.amount) + ' 信用分',
+        error: '检测到不文明用语（' + check.word + '），已扣除 ' + Math.abs(POINTS_PENALTIES.uncivil_post.amount) + ' 信用',
         appeal_id: appeal && appeal.id ? appeal.id : null
       };
     }
 
-    // 2. 检查发帖权限并消费 CR
-    var crInfo = await getUserCR();
-    var actionCheck = canPerformAction(crInfo.cr, 'post');
+    // 2. 检查发帖权限并消费信用
+    var crInfo = await getUserPoints();
+    var actionCheck = canPerformAction(crInfo.points, 'post');
     if (!actionCheck.ok) {
       return { ok: false, error: actionCheck.error };
     }
-    await adjustUserCR(-CR_ACTION_COSTS.post.cost, CR_ACTION_COSTS.post.reason, { source: 'post_cost' });
+    await adjustUserPoints(-POINTS_ACTION_COSTS.post.cost, POINTS_ACTION_COSTS.post.reason, { source: 'post_cost' });
 
     var { error } = await sb.from('community_posts')
       .insert({
@@ -2023,29 +2091,29 @@ async function addPostComment(postId, content) {
     // 1. 不文明内容检测（零成本拦截）
     var check = isUncivilContent(content);
     if (check.uncivil) {
-      await adjustUserCR(CR_PENALTIES.uncivil_comment.amount, CR_PENALTIES.uncivil_comment.reason, { source: 'community' });
+      await adjustUserPoints(POINTS_PENALTIES.uncivil_comment.amount, POINTS_PENALTIES.uncivil_comment.reason, { source: 'community' });
       // 自动生成申诉记录
       var appeal = await createCRAppeal({
         content: content,
         detected_word: check.word,
-        amount: CR_PENALTIES.uncivil_comment.amount,
-        reason: CR_PENALTIES.uncivil_comment.reason,
+        amount: POINTS_PENALTIES.uncivil_comment.amount,
+        reason: POINTS_PENALTIES.uncivil_comment.reason,
         source: 'community_comment'
       });
       return {
         ok: false,
-        error: '检测到不文明用语（' + check.word + '），已扣除 ' + Math.abs(CR_PENALTIES.uncivil_comment.amount) + ' 信用分',
+        error: '检测到不文明用语（' + check.word + '），已扣除 ' + Math.abs(POINTS_PENALTIES.uncivil_comment.amount) + ' 信用',
         appeal_id: appeal && appeal.id ? appeal.id : null
       };
     }
 
-    // 2. 检查评论权限并消费 CR
-    var crInfo = await getUserCR();
-    var actionCheck = canPerformAction(crInfo.cr, 'comment');
+    // 2. 检查评论权限并消费信用
+    var crInfo = await getUserPoints();
+    var actionCheck = canPerformAction(crInfo.points, 'comment');
     if (!actionCheck.ok) {
       return { ok: false, error: actionCheck.error };
     }
-    await adjustUserCR(-CR_ACTION_COSTS.comment.cost, CR_ACTION_COSTS.comment.reason, { source: 'comment_cost' });
+    await adjustUserPoints(-POINTS_ACTION_COSTS.comment.cost, POINTS_ACTION_COSTS.comment.reason, { source: 'comment_cost' });
 
     var { error } = await sb.from('community_comments')
       .insert({
@@ -2446,11 +2514,11 @@ async function recordDailyCheckIn() {
       last_checkin: today
     });
 
-    // 打卡加 CR（边际递减）
+    // 打卡加信用
     try {
-      var delta = await calculateEarnedCR('daily_checkin');
+      var delta = await calculateEarnedPoints('daily_checkin');
       if (delta > 0) {
-        await adjustUserCR(delta, CR_EARN_RULES.daily_checkin.reason, { source: 'checkin' });
+        await adjustUserPoints(delta, POINTS_EARN_RULES.daily_checkin.reason, { source: 'checkin' });
       }
     } catch (e) { /* 静默 */ }
 
@@ -2888,10 +2956,10 @@ async function reviewQuestion(questionId, rating) {
 
     if (error) throw error;
 
-    // 复习成功奖励少量 CR（边际递减）
-    var delta = await calculateEarnedCR('practice_milestone');
+    // 复习成功奖励少量信用
+    var delta = await calculateEarnedPoints('practice_milestone');
     if (delta > 0) {
-      await adjustUserCR(delta, '完成错题复习', { source: 'review' });
+      await adjustUserPoints(delta, '完成错题复习', { source: 'review' });
     }
 
     return { ok: true, nextDue: newState.dueDate };
@@ -3708,23 +3776,23 @@ async function deleteScheduleItem(id) {
 /**
  * 发布悬赏
  */
-async function createBounty(title, content, crReward, tags, expiresDays) {
+async function createBounty(title, content, pointsReward, tags, expiresDays) {
   if (!_currentUser || _currentUser.isGuest) return { ok: false, error: '未登录' };
   var sb = getSupabase();
   if (!sb) return { ok: false, error: 'Supabase 未初始化' };
 
-  var reward = parseInt(crReward, 10);
-  if (isNaN(reward) || reward < 5) return { ok: false, error: '悬赏 CR 不能少于 5' };
+  var reward = parseInt(pointsReward, 10);
+  if (isNaN(reward) || reward < 5) return { ok: false, error: '悬赏信用不能少于 5' };
 
   try {
-    // 检查 CR 并冻结
-    var crInfo = await getUserCR();
-    if (crInfo.cr < reward) {
-      return { ok: false, error: 'CR 不足，无法发布悬赏' };
+    // 检查信用并扣除
+    var crInfo = await getUserPoints();
+    if (crInfo.points < reward) {
+      return { ok: false, error: '信用不足，无法发布悬赏' };
     }
-    var costResult = await adjustUserCR(-reward, '发布问答悬赏冻结 CR：' + title, { source: 'bounty_create' });
+    var costResult = await adjustUserPoints(-reward, '发布问答悬赏消耗信用：' + title, { source: 'bounty_create' });
     if (!costResult || !costResult.ok) {
-      return { ok: false, error: '冻结 CR 失败' };
+      return { ok: false, error: '扣除信用失败' };
     }
 
     var expiresAt = null;
@@ -3738,8 +3806,8 @@ async function createBounty(title, content, crReward, tags, expiresDays) {
         title: title,
         content: content,
         tags: tags || [],
-        cr_reward: reward,
-        extra_reward: 0,
+        points_reward: reward,
+        extra_points: 0,
         status: 'open',
         expires_at: expiresAt
       })
@@ -3850,7 +3918,7 @@ async function acceptBountyAnswer(bountyId, answerId) {
 
   try {
     var { data: bounty, error: bError } = await sb.from('q_bounties')
-      .select('id, user_id, cr_reward, extra_reward, status')
+      .select('id, user_id, points_reward, extra_points, status')
       .eq('id', bountyId)
       .single();
     if (bError) throw bError;
@@ -3867,11 +3935,11 @@ async function acceptBountyAnswer(bountyId, answerId) {
     if (!answer) return { ok: false, error: '回答不存在' };
     if (answer.is_accepted) return { ok: false, error: '该回答已被采纳' };
 
-    var totalReward = (bounty.cr_reward || 0) + (bounty.extra_reward || 0);
+    var totalReward = (bounty.points_reward || 0) + (bounty.extra_points || 0);
 
     // 转给回答者
     if (totalReward > 0) {
-      var rewardResult = await adjustUserCR(totalReward, '悬赏回答被采纳：' + bounty.title, { userId: answer.user_id, source: 'bounty_reward' });
+      var rewardResult = await adjustUserPoints(totalReward, '悬赏回答被采纳：' + bounty.title, { userId: answer.user_id, source: 'bounty_reward' });
       if (!rewardResult || !rewardResult.ok) {
         return { ok: false, error: '奖励发放失败' };
       }
@@ -3888,11 +3956,11 @@ async function acceptBountyAnswer(bountyId, answerId) {
       .update({ is_accepted: true })
       .eq('id', answerId);
 
-    // 悬赏发布者和回答者都获得额外 CR 奖励
-    var bonusDelta = await calculateEarnedCR('valid_report');
+    // 悬赏发布者和回答者都获得额外信用奖励
+    var bonusDelta = await calculateEarnedPoints('valid_report');
     if (bonusDelta > 0) {
-      await adjustUserCR(bonusDelta, '成功发布悬赏', { userId: bounty.user_id, source: 'bounty_bonus' });
-      await adjustUserCR(bonusDelta, '优质悬赏回答', { userId: answer.user_id, source: 'bounty_bonus' });
+      await adjustUserPoints(bonusDelta, '成功发布悬赏', { userId: bounty.user_id, source: 'bounty_bonus' });
+      await adjustUserPoints(bonusDelta, '优质悬赏回答', { userId: answer.user_id, source: 'bounty_bonus' });
     }
 
     return { ok: true, reward: totalReward };
@@ -3992,17 +4060,18 @@ window.getAchievementTiers = getAchievementTiers;
 window.getAchievementCategories = getAchievementCategories;
 window.recordDailyCheckIn = recordDailyCheckIn;
 window.getCheckInData = getCheckInData;
-window.getUserCR = getUserCR;
-window.adjustUserCR = adjustUserCR;
-window.getCreditLevelInfo = getCreditLevelInfo;
+window.getUserPoints = getUserPoints;
+window.adjustUserPoints = adjustUserPoints;
+window.getPointsLevel = getPointsLevel;
 window.isUncivilContent = isUncivilContent;
-window.calculateDecayedCR = calculateDecayedCR;
 window.getBehaviorCount = getBehaviorCount;
-window.calculateEarnedCR = calculateEarnedCR;
+window.calculateEarnedPoints = calculateEarnedPoints;
 window.canPerformAction = canPerformAction;
+window.syncPointsToCloud = syncPointsToCloud;
+window.getPointsLeaderboard = getPointsLeaderboard;
 window.createCRAppeal = createCRAppeal;
 window.updateCRAppeal = updateCRAppeal;
-window.getUserCRAppeals = getUserCRAppeals;
+window.getUserPointsAppeals = getUserPointsAppeals;
 window.getPendingCRAppeals = getPendingCRAppeals;
 window.resolveCRAppeal = resolveCRAppeal;
 window.startOnlineTimeTracking = startOnlineTimeTracking;

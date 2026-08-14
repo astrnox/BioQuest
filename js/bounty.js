@@ -1,7 +1,7 @@
 /**
  * ============================================================
  * BioQuest — 问答悬赏模块
- * 用 CR 发布悬赏，优质回答获得奖励
+ * 用信用发布悬赏，优质回答获得奖励
  * ============================================================
  */
 
@@ -73,8 +73,8 @@
               '<div style="font-size:0.85rem;color:var(--text-muted);line-height:1.5;">' + escapeHtml((b.content || '').slice(0, 120)) + ((b.content || '').length > 120 ? '...' : '') + '</div>' +
             '</div>' +
             '<div style="text-align:center;min-width:70px;">' +
-              '<div style="font-size:1.1rem;font-weight:700;color:var(--color-sage);">' + (b.cr_reward + (b.extra_reward || 0)) + '</div>' +
-              '<div style="font-size:0.7rem;color:var(--text-muted);">CR</div>' +
+              '<div style="font-size:1.1rem;font-weight:700;color:var(--color-sage);">' + (b.points_reward + (b.extra_points || 0)) + '</div>' +
+              '<div style="font-size:0.7rem;color:var(--text-muted);">信用</div>' +
             '</div>' +
           '</div>' +
           '<div style="display:flex;justify-content:space-between;align-items:center;margin-top:12px;font-size:0.78rem;color:var(--text-muted);">' +
@@ -122,7 +122,7 @@
       '</div>' +
       '<div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px;">' +
         '<div>' +
-          '<label style="display:block;font-size:0.85rem;color:var(--text-muted);margin-bottom:6px;">悬赏 CR（最少 5）</label>' +
+          '<label style="display:block;font-size:0.85rem;color:var(--text-muted);margin-bottom:6px;">悬赏信用（最少 5）</label>' +
           '<input id="bounty-reward" type="number" min="5" value="10" style="width:100%;padding:10px;border:1px solid var(--border-light);border-radius:10px;box-sizing:border-box;">' +
         '</div>' +
         '<div>' +
@@ -182,8 +182,8 @@
         '<div style="display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:12px;">' +
           '<h2 style="margin:0;color:var(--color-deep);">' + escapeHtml(bounty.title) + '</h2>' +
           '<div style="text-align:center;min-width:80px;">' +
-            '<div style="font-size:1.3rem;font-weight:700;color:var(--color-sage);">' + (bounty.cr_reward + (bounty.extra_reward || 0)) + '</div>' +
-            '<div style="font-size:0.75rem;color:var(--text-muted);">CR 悬赏</div>' +
+            '<div style="font-size:1.3rem;font-weight:700;color:var(--color-sage);">' + (bounty.points_reward + (bounty.extra_points || 0)) + '</div>' +
+            '<div style="font-size:0.75rem;color:var(--text-muted);">信用悬赏</div>' +
           '</div>' +
         '</div>' +
         '<div style="line-height:1.7;color:var(--text-primary);white-space:pre-wrap;margin-bottom:16px;">' + escapeHtml(bounty.content) + '</div>' +
@@ -270,7 +270,7 @@
 
     target.innerHTML = '<div class="page-header" style="padding:24px 20px;text-align:center;">' +
       '<h1 style="margin:0;font-family:var(--font-serif,serif);color:var(--color-deep);">问答悬赏</h1>' +
-      '<p style="margin:8px 0 0;color:var(--text-muted);font-size:0.9rem;">用 CR 提问，用知识赚取 CR</p>' +
+      '<p style="margin:8px 0 0;color:var(--text-muted);font-size:0.9rem;">用信用提问，用知识赚取信用</p>' +
       '</div>' +
       '<div id="bounty-container" style="padding:20px;">' +
         '<div style="text-align:center;padding:60px 20px;color:var(--text-muted);">加载中...</div>' +
