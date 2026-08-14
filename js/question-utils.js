@@ -157,26 +157,26 @@
       return { ok: false, error: '今日反馈次数已用完（每日' + MAX_FEEDBACKS_PER_DAY + '次），请明天再反馈' };
     }
 
-    // 举报/反馈题目需要消耗 CR 并满足门槛
+    // 举报/反馈题目需要消耗积分并满足门槛
     if (typeof window.isLoggedIn === 'function' && window.isLoggedIn()) {
       var crCheck = { ok: true };
       try {
-        var getCR = (typeof window.getUserCR === 'function') ? window.getUserCR : null;
-        var adjustCR = (typeof window.adjustUserCR === 'function') ? window.adjustUserCR : null;
+        var getCR = (typeof window.getUserPoints === 'function') ? window.getUserPoints : null;
+        var adjustCR = (typeof window.adjustUserPoints === 'function') ? window.adjustUserPoints : null;
         var canAct = (typeof window.canPerformAction === 'function') ? window.canPerformAction : null;
         if (getCR && adjustCR && canAct) {
           var crInfo = await getCR();
-          crCheck = canAct(crInfo.cr, 'report_question');
+          crCheck = canAct(crInfo.points, 'report_question');
           if (!crCheck.ok) {
             return { ok: false, error: crCheck.error };
           }
           var costResult = await adjustCR(-crCheck.cost, '举报/反馈题目', { source: 'report_question_cost' });
           if (!costResult || !costResult.ok) {
-            return { ok: false, error: 'CR 扣费失败，请稍后重试' };
+            return { ok: false, error: '积分扣费失败，请稍后重试' };
           }
         }
       } catch (e) {
-        return { ok: false, error: '信用检查失败：' + (e.message || '未知错误') };
+        return { ok: false, error: '积分检查失败：' + (e.message || '未知错误') };
       }
     }
 

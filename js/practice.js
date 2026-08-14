@@ -854,12 +854,12 @@ function updateStatsForQuestion(q, userAnswers) {
     } catch (e) { /* 静默 */ }
   }
 
-  // 信用点：每次答题"全部正确 +0.5 / 未全对 +0.1"奖励（走 user.js 的时间衰减系统）
+  // 积分：每次答题"全部正确 +5 / 未全对 +1"奖励（走 user.js 的积分系统）
   try {
-    if (typeof window.rewardCredit === 'function') {
-      window.rewardCredit(isFullyCorrect ? 'ANSWER_CORRECT' : 'ANSWER_WRONG');
+    if (typeof window.addPoints === 'function') {
+      window.addPoints(isFullyCorrect ? 'ANSWER_CORRECT' : 'ANSWER_WRONG');
     }
-  } catch (_) { /* 信用点挂钩失败不影响练习主流程 */ }
+  } catch (_) { /* 积分挂钩失败不影响练习主流程 */ }
 }
 
 function handleSubmitAnswer() {

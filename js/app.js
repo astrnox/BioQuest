@@ -145,6 +145,16 @@ const Routes = {
     render: 'renderLeaderboardPage',
     module: 'leaderboard'
   },
+  '/points-leaderboard': {
+    title: '积分排行榜',
+    render: 'renderPointsLeaderboardPage',
+    module: 'points-ui'
+  },
+  '/points-shop': {
+    title: '积分商城',
+    render: 'renderPointsShopPage',
+    module: 'points-ui'
+  },
   '/knowledge-graph': {
     title: '知识图谱',
     render: 'renderKnowledgeGraphPage',
@@ -1818,6 +1828,22 @@ function doRouteRender(route, target) {
         break;
       case '/leaderboard':
         renderLeaderboardPage(target);
+        break;
+      case '/points-leaderboard':
+        // points-ui.js -> window.initPointsLeaderboard
+        if (typeof window.initPointsLeaderboard === 'function') {
+          window.initPointsLeaderboard(target);
+        } else {
+          _renderModuleError(target, route, new Error('points-ui 模块未加载'));
+        }
+        break;
+      case '/points-shop':
+        // points-ui.js -> window.initPointsShop
+        if (typeof window.initPointsShop === 'function') {
+          window.initPointsShop(target);
+        } else {
+          _renderModuleError(target, route, new Error('points-ui 模块未加载'));
+        }
         break;
       case '/knowledge-graph':
         _safeInit('initKnowledgeGraph', route, target);
