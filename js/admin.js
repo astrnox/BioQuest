@@ -2167,7 +2167,7 @@ function renderUsersTab(container, users) {
               <th>答题数</th>
               <th>正确数</th>
               <th>准确率</th>
-              <th>CR</th>
+              <th>信用</th>
               <th>用户组</th>
               <th>操作</th>
             </tr>
@@ -2185,7 +2185,7 @@ function renderUsersTab(container, users) {
                 <td>${user.total_answered || 0}</td>
                 <td>${user.total_correct || 0}</td>
                 <td>${(user.accuracy || 0)}%</td>
-                <td id="cr-${uid}" style="font-weight:700;color:var(--color-deep,#1a3a2a);">${typeof user.cr === 'number' ? user.cr : 50}</td>
+                <td id="points-${uid}" style="font-weight:700;color:var(--color-deep,#1a3a2a);">${typeof user.points === 'number' ? user.points : 0}</td>
                 <td>
                   <select class="admin-form-select" style="padding:4px 8px;font-size:0.8rem;min-width:80px;" onchange="handleChangeUserGroup('${uid}', this.value)">
                     <option value="admin" ${user.user_group === 'admin' ? 'selected' : ''}>管理员</option>
@@ -2197,11 +2197,11 @@ function renderUsersTab(container, users) {
                 </td>
                 <td>
                   <div class="admin-table-actions">
-                    <button class="admin-btn admin-btn--primary" onclick="handleEditUser('${uid}', '${(uname || '').replace(/'/g, "\\'")}', '${(dname || '').replace(/'/g, "\\'")}', ${user.bio_score || 0}, ${user.total_answered || 0}, ${user.total_correct || 0}, ${user.accuracy || 0}, ${typeof user.cr === 'number' ? user.cr : 50})">
+                    <button class="admin-btn admin-btn--primary" onclick="handleEditUser('${uid}', '${(uname || '').replace(/'/g, "\\'")}', '${(dname || '').replace(/'/g, "\\'")}', ${user.bio_score || 0}, ${user.total_answered || 0}, ${user.total_correct || 0}, ${user.accuracy || 0}, ${typeof user.points === 'number' ? user.points : 0})">
                       编辑
                     </button>
-                    <button class="admin-btn admin-btn--ghost" onclick="handleAdjustUserCR('${uid}', ${typeof user.cr === 'number' ? user.cr : 50})">
-                      调整 CR
+                    <button class="admin-btn admin-btn--ghost" onclick="handleAdjustUserPoints('${uid}', ${typeof user.points === 'number' ? user.points : 0})">
+                      调整信用
                     </button>
                     <button class="admin-btn admin-btn--ghost" onclick="handleResetPassword('${uid}')">
                       重置密码
@@ -2244,8 +2244,8 @@ function renderUsersTab(container, users) {
             <input type="number" class="admin-form-input" id="edit-bio-score" min="0" max="100">
           </div>
           <div class="admin-form-group">
-            <label class="admin-form-label">信用分 (CR)</label>
-            <input type="number" class="admin-form-input" id="edit-cr" min="0">
+            <label class="admin-form-label">信用</label>
+            <input type="number" class="admin-form-input" id="edit-points" min="0">
           </div>
           <div class="admin-form-group">
             <label class="admin-form-label">总答题数</label>
@@ -3462,8 +3462,8 @@ window.handleDeleteUser = async function(userId) {
   }
 };
 
-window.handleAdjustUserCR = async function(userId, currentCR) {
-  const amountStr = prompt('调整该用户的信用分（CR）\n\n当前 CR：' + currentCR + '\n输入正数增加，输入负数扣除，例如：+10 或 -5');
+window.handleAdjustUserPoints = async function(userId, currentPoints) {
+  const amountStr = prompt('调整该用户的信用\n\n当前信用：' + currentPoints + '\n输入正数增加，输入负数扣除，例如：+10 或 -5');
   if (!amountStr) return;
   const amount = parseInt(amountStr, 10);
   if (isNaN(amount) || amount === 0) {
@@ -3473,18 +3473,18 @@ window.handleAdjustUserCR = async function(userId, currentCR) {
   const reason = prompt('调整原因（必填）：') || '管理员手动调整';
   try {
     var result;
-    if (typeof window.adjustUserCR === 'function') {
-      result = await window.adjustUserCR(amount, reason, { userId: userId, source: 'admin' });
-    } else if (typeof adjustUserCR === 'function') {
-      result = await adjustUserCR(amount, reason, { userId: userId, source: 'admin' });
+    if (typeof window.adjustUserPoints === 'function') {
+      result = await window.adjustUserPoints(amount, reason, { userId: userId, source: 'admin' });
+    } else if (typeof adjustUserPoints === 'function') {
+      result = await adjustUserPoints(amount, reason, { userId: userId, source: 'admin' });
     } else {
-      showAdminToast('CR 调整功能未加载', 'error');
+      showAdminToast('信用调整功能未加载', 'error');
       return;
     }
     if (result && result.ok) {
-      const crCell = document.getElementById('cr-' + userId);
-      if (crCell) crCell.textContent = result.cr;
-      showAdminToast('已调整用户 CR 为 ' + result.cr, 'success');
+      const crCell = document.getElementById('points-' + userId);
+      if (crCell) crCell.textContent = result.points;
+      showAdminToast('已调整用户信用为 ' + result.points, 'success');
     } else {
       showAdminToast('调整失败：' + (result && result.error ? result.error : '未知错误'), 'error');
     }
@@ -3504,7 +3504,7 @@ window.handleResolveAppeal = async function(appealId, action) {
     }
     var result = await resolveFn(appealId, action, adminNote);
     if (result && result.ok) {
-      showAdminToast(action === 'approve' ? '申诉已通过，已恢复用户 CR' : '申诉已驳回', 'success');
+      showAdminToast(action === 'approve' ? '申诉已通过，已恢复用户信用' : '申诉已驳回', 'success');
       // 刷新当前标签
       var contentEl = document.getElementById('admin-tab-content');
       if (contentEl) renderAppealsTab(contentEl);
@@ -3516,13 +3516,13 @@ window.handleResolveAppeal = async function(appealId, action) {
   }
 };
 
-window.handleEditUser = function(userId, username, displayName, bioScore, totalAnswered, totalCorrect, accuracy, cr) {
+window.handleEditUser = function(userId, username, displayName, bioScore, totalAnswered, totalCorrect, accuracy, points) {
   const modal = document.getElementById('admin-user-modal');
   if (!modal) return;
   document.getElementById('edit-username').value = username || '';
   document.getElementById('edit-display-name').value = displayName || '';
   document.getElementById('edit-bio-score').value = bioScore;
-  document.getElementById('edit-cr').value = (typeof cr === 'number') ? cr : 50;
+  document.getElementById('edit-points').value = (typeof points === 'number') ? points : 0;
   document.getElementById('edit-total-answered').value = totalAnswered;
   document.getElementById('edit-total-correct').value = totalCorrect;
   document.getElementById('edit-accuracy').value = accuracy;
@@ -3543,7 +3543,7 @@ window.handleEditUser = function(userId, username, displayName, bioScore, totalA
       username: newUsername || undefined,
       display_name: newDisplayName || undefined,
       bio_score: parseInt(document.getElementById('edit-bio-score').value),
-      cr: parseInt(document.getElementById('edit-cr').value),
+      points: parseInt(document.getElementById('edit-points').value),
       total_answered: parseInt(document.getElementById('edit-total-answered').value),
       total_correct: parseInt(document.getElementById('edit-total-correct').value),
       accuracy: parseFloat(document.getElementById('edit-accuracy').value)
@@ -3551,7 +3551,7 @@ window.handleEditUser = function(userId, username, displayName, bioScore, totalA
     // 移除空字符串字段，避免覆盖为空
     if (!newUsername) delete updates.username;
     if (!newDisplayName) delete updates.display_name;
-    if (isNaN(updates.cr)) delete updates.cr;
+    if (isNaN(updates.points)) delete updates.points;
     try {
       var { error } = await sb.from('profiles').update(updates).eq('id', userId);
       if (error) { showAdminToast('更新失败: ' + parseSupabaseError(error), 'error'); return; }
@@ -5126,7 +5126,7 @@ async function renderFeedbacksTab(container) {
   container.innerHTML = html;
 }
 
-/* ===== CR 申诉管理标签 ===== */
+/* ===== 信用申诉管理标签 ===== */
 async function renderAppealsTab(container) {
   container.innerHTML = `<div class="admin-loading"><div class="admin-spinner"></div><div class="admin-loading-text">加载申诉中...</div></div>`;
 
@@ -5173,7 +5173,7 @@ async function renderAppealsTab(container) {
       <div class="admin-section-header">
         <div class="admin-section-title">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          CR 申诉列表
+          信用申诉列表
         </div>
         <span class="admin-section-badge">${appeals.length} 条</span>
       </div>

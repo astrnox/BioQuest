@@ -86,7 +86,7 @@
         }
         var result = await updateFn(appealId, note);
         if (result && result.ok) {
-          _showToast('申诉已提交，管理员复核后将恢复信用分');
+          _showToast('申诉已提交，管理员复核后将恢复信用');
         } else {
           _showToast('申诉提交失败：' + (result && result.error ? result.error : '未知错误'));
         }

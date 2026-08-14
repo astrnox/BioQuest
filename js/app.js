@@ -145,6 +145,26 @@ const Routes = {
     render: 'renderLeaderboardPage',
     module: 'leaderboard'
   },
+  '/points-leaderboard': {
+    title: '信用排行榜',
+    render: 'renderCreditLeaderboardPage',
+    module: 'points-ui'
+  },
+  '/credit-leaderboard': {
+    title: '信用排行榜',
+    render: 'renderCreditLeaderboardPage',
+    module: 'points-ui'
+  },
+  '/points-shop': {
+    title: '信用中心',
+    render: 'renderCreditCenterPage',
+    module: 'points-ui'
+  },
+  '/credit': {
+    title: '信用中心',
+    render: 'renderCreditCenterPage',
+    module: 'points-ui'
+  },
   '/knowledge-graph': {
     title: '知识图谱',
     render: 'renderKnowledgeGraphPage',
@@ -1818,6 +1838,24 @@ function doRouteRender(route, target) {
         break;
       case '/leaderboard':
         renderLeaderboardPage(target);
+        break;
+      case '/points-leaderboard':
+      case '/credit-leaderboard':
+        // points-ui.js -> window.initCreditLeaderboard
+        if (typeof window.initCreditLeaderboard === 'function') {
+          window.initCreditLeaderboard(target);
+        } else {
+          _renderModuleError(target, route, new Error('points-ui 模块未加载'));
+        }
+        break;
+      case '/points-shop':
+      case '/credit':
+        // points-ui.js -> window.initCreditCenter
+        if (typeof window.initCreditCenter === 'function') {
+          window.initCreditCenter(target);
+        } else {
+          _renderModuleError(target, route, new Error('points-ui 模块未加载'));
+        }
         break;
       case '/knowledge-graph':
         _safeInit('initKnowledgeGraph', route, target);
