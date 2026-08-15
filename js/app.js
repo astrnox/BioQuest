@@ -1746,7 +1746,7 @@ function _safeInit(initFnName, route, target) {
     if (moduleFile) {
       _showModuleLoading(target, initFnName);
       var _script = document.createElement('script');
-      _script.src = 'js/' + moduleFile + '?v=20260809i';
+      _script.src = 'js/' + moduleFile + '?v=20260814c';
       _script.onload = function() {
         if (typeof window[initFnName] === 'function') {
           try { window[initFnName](target); } catch (e) { console.error(e); }
@@ -2251,6 +2251,30 @@ window.testSupabaseAPI = async function() {
  * 初始化 Supabase 云端同步
  * 先动态加载 supabase 相关脚本（首屏不加载，节省 ~140KB）
  */
+// ============================================================
+// 全局「认证就绪」信号
+// 修复：「我的」等需要登录的页面在整页加载时，会先于 Supabase 会话恢复
+// 而渲染，导致 isLoggedIn() 误判为未登录。通过该 Promise 让这些页面
+// 等待会话恢复完成后再判断登录态，实现「登录一次全局生效」。
+// ============================================================
+var _authReadyResolve = null;
+var _authReadyPromise = new Promise(function (res) { _authReadyResolve = res; });
+window._authReadyPromise = _authReadyPromise;
+
+/**
+ * 等待认证状态初始化完成（会话恢复 / 游客恢复 / 降级本地模式均已结束）。
+ * 供 initUser 等需要判断登录态的模块调用，避免竞态导致的「重新登录」。
+ */
+window.waitAuthReady = function () { return _authReadyPromise; };
+
+function _resolveAuthReady() {
+  if (_authReadyResolve) {
+    _authReadyResolve = null;
+    _authReadyPromise = Promise.resolve();
+    window._authReadyPromise = _authReadyPromise;
+  }
+}
+
 async function initSupabase() {
   try {
     // 等待 Supabase SDK 加载完成（由 HTML 中的 requestIdleCallback 触发加载）
@@ -2263,11 +2287,12 @@ async function initSupabase() {
       console.warn('[BioQuest] Supabase SDK 加载超时，使用本地模式');
       showStorageStatus('local');
       updateAuthUI();
+      _resolveAuthReady();
       return;
     }
 
     // 动态加载 supabase 相关脚本（按依赖顺序）
-    var v = '20260809b';
+    var v = '20260814c';
     var supabaseScripts = [
       __jsBase + 'js/supabase-client.js?v=' + v,
       __jsBase + 'js/supabase.js?v=' + v,
@@ -2288,6 +2313,7 @@ async function initSupabase() {
       showStorageStatus('cloud');
       updateAuthUI();
       await mergeCloudData();
+      _resolveAuthReady();
       return;
     }
 
@@ -2296,6 +2322,7 @@ async function initSupabase() {
 
       showStorageStatus('local');
       updateAuthUI();
+      _resolveAuthReady();
       return;
     }
 
@@ -2306,6 +2333,7 @@ async function initSupabase() {
     showStorageStatus('local');
   }
   updateAuthUI();
+  _resolveAuthReady();
 }
 
 /**

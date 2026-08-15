@@ -184,6 +184,278 @@
 
   function nowIso() { return new Date().toISOString(); }
 
+  // ===== 提交历史 & 作者 & Diff 统计 =====
+
+  /**
+   * 获取当前编辑者信息（头像 + 用户名/昵称）
+   * 优先取全局登录用户；当前页面未加载登录模块时，回退读取
+   * localStorage「bioquest_user_info」（由登录页写入），未登录则标记为「游客」
+   */
+  function getCurrentAuthor() {
+    var author = { username: '游客', display_name: '游客', avatar: '' };
+    try {
+      if (typeof window.isLoggedIn === 'function' && window.isLoggedIn()) {
+        var u = typeof window.getCurrentUser === 'function' ? window.getCurrentUser() : null;
+        if (u) {
+          author.username = u.username || u.email || '用户';
+          author.display_name = u.display_name || u.username || '用户';
+          if (typeof window.getAvatarUrl === 'function') {
+            try { author.avatar = window.getAvatarUrl() || ''; } catch (e) { author.avatar = ''; }
+          }
+          return author;
+        }
+      }
+    } catch (e) { /* 静默 */ }
+    // 轻页面（如 wiki.html 未加载 supabase-client）回退读取持久化用户信息
+    try {
+      var raw = localStorage.getItem('bioquest_user_info');
+      if (raw) {
+        var info = JSON.parse(raw);
+        if (info && (info.display_name || info.username)) {
+          author.display_name = info.display_name || info.username || '用户';
+          author.username = info.username || author.display_name || '用户';
+          author.avatar = info.avatar || '';
+        }
+      }
+    } catch (e) { /* 静默 */ }
+    return author;
+  }
+
+  /**
+   * 行级差量统计：返回新增行数与删除行数（类似 GitHub 的 +N / -N）
+   * 空字符串视为 0 行，忽略空行，避免「新建」时产生虚假的删除计数。
+   */
+  function diffStats(oldText, newText) {
+    function splitLines(s) {
+      if (!String(s)) return [];
+      return String(s).split('\n').filter(function (l) { return l.length > 0; });
+    }
+    var o = splitLines(oldText);
+    var n = splitLines(newText);
+    var om = {}, nm = {};
+    o.forEach(function (l) { om[l] = (om[l] || 0) + 1; });
+    n.forEach(function (l) { nm[l] = (nm[l] || 0) + 1; });
+    var added = 0, deleted = 0;
+    var seen = {};
+    function visit(l) {
+      if (seen[l]) return;
+      seen[l] = 1;
+      var d = (nm[l] || 0) - (om[l] || 0);
+      if (d > 0) added += d; else deleted += -d;
+    }
+    Object.keys(om).forEach(visit);
+    Object.keys(nm).forEach(visit);
+    return { added: added, deleted: deleted };
+  }
+
+  // 简易 MD5（用于生成维基共享资源缩略图 URL）
+  function md5(string) {
+    function RotateLeft(lValue, iShiftBits) {
+      return (lValue << iShiftBits) | (lValue >>> (32 - iShiftBits));
+    }
+    function AddUnsigned(lX, lY) {
+      var lX4, lY4, lX8, lY8, lResult;
+      lX8 = (lX & 0x80000000);
+      lY8 = (lY & 0x80000000);
+      lX4 = (lX & 0x40000000);
+      lY4 = (lY & 0x40000000);
+      lResult = (lX & 0x3FFFFFFF) + (lY & 0x3FFFFFFF);
+      if (lX4 & lY4) return (lResult ^ 0x80000000 ^ lX8 ^ lY8);
+      if (lX4 | lY4) {
+        if (lResult & 0x40000000) return (lResult ^ 0xC0000000 ^ lX8 ^ lY8);
+        else return (lResult ^ 0x40000000 ^ lX8 ^ lY8);
+      } else return (lResult ^ lX8 ^ lY8);
+    }
+    function F(x, y, z) { return (x & y) | ((~x) & z); }
+    function G(x, y, z) { return (x & z) | (y & (~z)); }
+    function H(x, y, z) { return (x ^ y ^ z); }
+    function I(x, y, z) { return (y ^ (x | (~z))); }
+    function FF(a, b, c, d, x, s, ac) { a = AddUnsigned(a, AddUnsigned(AddUnsigned(F(b, c, d), x), ac)); return AddUnsigned(RotateLeft(a, s), b); }
+    function GG(a, b, c, d, x, s, ac) { a = AddUnsigned(a, AddUnsigned(AddUnsigned(G(b, c, d), x), ac)); return AddUnsigned(RotateLeft(a, s), b); }
+    function HH(a, b, c, d, x, s, ac) { a = AddUnsigned(a, AddUnsigned(AddUnsigned(H(b, c, d), x), ac)); return AddUnsigned(RotateLeft(a, s), b); }
+    function II(a, b, c, d, x, s, ac) { a = AddUnsigned(a, AddUnsigned(AddUnsigned(I(b, c, d), x), ac)); return AddUnsigned(RotateLeft(a, s), b); }
+    function ConvertToWordArray(string) {
+      var lWordCount;
+      var lMessageLength = string.length;
+      var lNumberOfWords_temp1 = lMessageLength + 8;
+      var lNumberOfWords_temp2 = (lNumberOfWords_temp1 - (lNumberOfWords_temp1 % 64)) / 64;
+      var lNumberOfWords = (lNumberOfWords_temp2 + 1) * 16;
+      var lWordArray = Array(lNumberOfWords - 1);
+      var lBytePosition = 0;
+      var lByteCount = 0;
+      while (lByteCount < lMessageLength) {
+        lWordCount = (lByteCount - (lByteCount % 4)) / 4;
+        lBytePosition = (lByteCount % 4) * 8;
+        lWordArray[lWordCount] = (lWordArray[lWordCount] | (string.charCodeAt(lByteCount) << lBytePosition));
+        lByteCount++;
+      }
+      lWordCount = (lByteCount - (lByteCount % 4)) / 4;
+      lBytePosition = (lByteCount % 4) * 8;
+      lWordArray[lWordCount] = lWordArray[lWordCount] | (0x80 << lBytePosition);
+      lWordArray[lNumberOfWords - 2] = lMessageLength << 3;
+      lWordArray[lNumberOfWords - 1] = lMessageLength >>> 29;
+      return lWordArray;
+    }
+    function WordToHex(lValue) {
+      var WordToHexValue = "", WordToHexValue_temp = "", lByte, lCount;
+      for (lCount = 0; lCount <= 3; lCount++) {
+        lByte = (lValue >>> (lCount * 8)) & 255;
+        WordToHexValue_temp = "0" + lByte.toString(16);
+        WordToHexValue = WordToHexValue + WordToHexValue_temp.substr(WordToHexValue_temp.length - 2, 2);
+      }
+      return WordToHexValue;
+    }
+    var x = [];
+    var k, AA, BB, CC, DD, a, b, c, d;
+    var S11 = 7, S12 = 12, S13 = 17, S14 = 22;
+    var S21 = 5, S22 = 9, S23 = 14, S24 = 20;
+    var S31 = 4, S32 = 11, S33 = 16, S34 = 23;
+    var S41 = 6, S42 = 10, S43 = 15, S44 = 21;
+    string = unescape(encodeURIComponent(string));
+    x = ConvertToWordArray(string);
+    a = 0x67452301; b = 0xEFCDAB89; c = 0x98BADCFE; d = 0x10325476;
+    for (k = 0; k < x.length; k += 16) {
+      AA = a; BB = b; CC = c; DD = d;
+      a = FF(a, b, c, d, x[k + 0], S11, 0xD76AA478);
+      d = FF(d, a, b, c, x[k + 1], S12, 0xE8C7B756);
+      c = FF(c, d, a, b, x[k + 2], S13, 0x242070DB);
+      b = FF(b, c, d, a, x[k + 3], S14, 0xC1BDCEEE);
+      a = FF(a, b, c, d, x[k + 4], S11, 0xF57C0FAF);
+      d = FF(d, a, b, c, x[k + 5], S12, 0x4787C62A);
+      c = FF(c, d, a, b, x[k + 6], S13, 0xA8304613);
+      b = FF(b, c, d, a, x[k + 7], S14, 0xFD469501);
+      a = FF(a, b, c, d, x[k + 8], S11, 0x698098D8);
+      d = FF(d, a, b, c, x[k + 9], S12, 0x8B44F7AF);
+      c = FF(c, d, a, b, x[k + 10], S13, 0xFFFF5BB1);
+      b = FF(b, c, d, a, x[k + 11], S14, 0x895CD7BE);
+      a = FF(a, b, c, d, x[k + 12], S11, 0x6B901122);
+      d = FF(d, a, b, c, x[k + 13], S12, 0xFD987193);
+      c = FF(c, d, a, b, x[k + 14], S13, 0xA679438E);
+      b = FF(b, c, d, a, x[k + 15], S14, 0x49B40821);
+      a = GG(a, b, c, d, x[k + 1], S21, 0xF61E2562);
+      d = GG(d, a, b, c, x[k + 6], S22, 0xC040B340);
+      c = GG(c, d, a, b, x[k + 11], S23, 0x265E5A51);
+      b = GG(b, c, d, a, x[k + 0], S24, 0xE9B6C7AA);
+      a = GG(a, b, c, d, x[k + 5], S21, 0xD62F105D);
+      d = GG(d, a, b, c, x[k + 10], S22, 0x2441453);
+      c = GG(c, d, a, b, x[k + 15], S23, 0xD8A1E681);
+      b = GG(b, c, d, a, x[k + 4], S24, 0xE7D3FBC8);
+      a = GG(a, b, c, d, x[k + 9], S21, 0x21E1CDE6);
+      d = GG(d, a, b, c, x[k + 14], S22, 0xC33707D6);
+      c = GG(c, d, a, b, x[k + 3], S23, 0xF4D50D87);
+      b = GG(b, c, d, a, x[k + 8], S24, 0x455A14ED);
+      a = GG(a, b, c, d, x[k + 13], S21, 0xA9E3E905);
+      d = GG(d, a, b, c, x[k + 2], S22, 0xFCEFA3F8);
+      c = GG(c, d, a, b, x[k + 7], S23, 0x676F02D9);
+      b = GG(b, c, d, a, x[k + 12], S24, 0x8D2A4C8A);
+      a = HH(a, b, c, d, x[k + 5], S31, 0xFFFA3942);
+      d = HH(d, a, b, c, x[k + 8], S32, 0x8771F681);
+      c = HH(c, d, a, b, x[k + 11], S33, 0x6D9D6122);
+      b = HH(b, c, d, a, x[k + 14], S34, 0xFDE5380C);
+      a = HH(a, b, c, d, x[k + 1], S31, 0xA4BEEA44);
+      d = HH(d, a, b, c, x[k + 4], S32, 0x4BDECFA9);
+      c = HH(c, d, a, b, x[k + 7], S33, 0xF6BB4B60);
+      b = HH(b, c, d, a, x[k + 10], S34, 0xBEBFBC70);
+      a = HH(a, b, c, d, x[k + 13], S31, 0x289B7EC6);
+      d = HH(d, a, b, c, x[k + 0], S32, 0xEAA127FA);
+      c = HH(c, d, a, b, x[k + 3], S33, 0xD4EF3085);
+      b = HH(b, c, d, a, x[k + 6], S34, 0x4881D05);
+      a = HH(a, b, c, d, x[k + 9], S31, 0xD9D4D039);
+      d = HH(d, a, b, c, x[k + 12], S32, 0xE6DB99E5);
+      c = HH(c, d, a, b, x[k + 15], S33, 0x1FA27CF8);
+      b = HH(b, c, d, a, x[k + 2], S34, 0xC4AC5665);
+      a = II(a, b, c, d, x[k + 0], S41, 0xF4292244);
+      d = II(d, a, b, c, x[k + 7], S42, 0x432AFF97);
+      c = II(c, d, a, b, x[k + 14], S43, 0xAB9423A7);
+      b = II(b, c, d, a, x[k + 5], S44, 0xFC93A039);
+      a = II(a, b, c, d, x[k + 12], S41, 0x655B59C3);
+      d = II(d, a, b, c, x[k + 3], S42, 0x8F0CCC92);
+      c = II(c, d, a, b, x[k + 10], S43, 0xFFEFF47D);
+      b = II(b, c, d, a, x[k + 1], S44, 0x85845DD1);
+      a = II(a, b, c, d, x[k + 8], S41, 0x6FA87E4F);
+      d = II(d, a, b, c, x[k + 15], S42, 0xFE2CE6E0);
+      c = II(c, d, a, b, x[k + 6], S43, 0xA3014314);
+      b = II(b, c, d, a, x[k + 13], S44, 0x4E0811A1);
+      a = II(a, b, c, d, x[k + 4], S41, 0xF7537E82);
+      d = II(d, a, b, c, x[k + 11], S42, 0xBD3AF235);
+      c = II(c, d, a, b, x[k + 2], S43, 0x2AD7D2BB);
+      b = II(b, c, d, a, x[k + 9], S44, 0xEB86D391);
+      a = AddUnsigned(a, AA);
+      b = AddUnsigned(b, BB);
+      c = AddUnsigned(c, CC);
+      d = AddUnsigned(d, DD);
+    }
+    return (WordToHex(a) + WordToHex(b) + WordToHex(c) + WordToHex(d)).toLowerCase();
+  }
+
+  // 根据维基文件名生成 upload.wikimedia.org 缩略图 URL
+  function wikimediaThumbUrl(fileName, width) {
+    var name = String(fileName || '').replace(/\s+/g, '_');
+    if (!name) return '';
+    width = width || 400;
+    var hash = md5(unescape(encodeURIComponent(name)));
+    var enc = encodeURIComponent(name).replace(/%2F/gi, '/');
+    var base = 'https://upload.wikimedia.org/wikipedia/commons/';
+    return base + hash.charAt(0) + '/' + hash.slice(0, 2) + '/' + enc + '/' + width + 'px-' + enc;
+  }
+
+  // 将维基表格 {| ... |} 转为 Markdown 表格
+  function wikitableToMarkdown(tbl) {
+    var lines = String(tbl || '').split('\n');
+    var rows = [], cur = null;
+    for (var i = 0; i < lines.length; i++) {
+      var ln = lines[i].trim();
+      if (!ln) continue;
+      if (ln.indexOf('{|') === 0) continue;
+      if (ln.indexOf('|}') === 0) break;
+      if (ln.indexOf('|-') === 0) { if (cur) rows.push(cur); cur = null; continue; }
+      var ch = ln.charAt(0);
+      if (ch === '|' || ch === '!') {
+        var isHeadRow = ch === '!';
+        var rest = ln.slice(1);
+        // 去掉 style="..." 属性
+        rest = rest.replace(/^style="[^"]*"\s*/i, '').replace(/^style=[\w-]+/i, '').trim();
+        // 去掉行尾的单个 |（行终止符），再按内联分隔符拆分
+        rest = rest.replace(/\s*\|\s*$/, '');
+        var sepRe = isHeadRow ? /\s*!!\s*/ : /\s*\|\|\s*/;
+        var cellArr = rest.split(sepRe);
+        cellArr.forEach(function (cell) {
+          cell = String(cell).trim();
+          // 内嵌 [[链接]] / 粗体等简单清理
+          cell = cell.replace(/\[\[(?:\s*[^\]|]*\|)?([^\]]+)\]\]/g, '$1').replace(/'''([^']+)'''/g, '$1').replace(/''([^']+)''/g, '$1');
+          if (!cur) cur = [];
+          cur.push({ text: cell, head: isHeadRow });
+        });
+      }
+    }
+    if (cur) rows.push(cur);
+    if (!rows.length) return '';
+    var header = rows.shift();
+    var hdr = '| ' + header.map(function (c) { return c.text.replace(/\|/g, '\\|'); }).join(' | ') + ' |';
+    var sep = '| ' + header.map(function () { return '---'; }).join(' | ') + ' |';
+    var body = rows.map(function (r) {
+      return '| ' + r.map(function (c) { return c.text.replace(/\|/g, '\\|'); }).join(' | ') + ' |';
+    }).join('\n');
+    return hdr + '\n' + sep + (body ? '\n' + body : '');
+  }
+
+  // 从维基文本中抽取表格与图片
+  function parseWikitextMedia(wt) {
+    var tables = [];
+    var images = [];
+    var t = String(wt || '');
+    t = t.replace(/\{\|[\s\S]*?\|\}/g, function (tbl) {
+      var md = wikitableToMarkdown(tbl);
+      if (md) tables.push(md);
+      return '';
+    });
+    t = t.replace(/\[\[(?:File|Image|文件):\s*([^\]|]+)(?:\|[^\]]*)?\]\]/gi, function (_m, name) {
+      images.push(name.trim());
+      return '';
+    });
+    return { tables: tables.join('\n\n'), images: images };
+  }
+
   function findEntry(id) {
     for (var i = 0; i < state.entries.length; i++) {
       if (state.entries[i].id === id) return state.entries[i];
@@ -330,6 +602,37 @@
   }
 
   // ===== 渲染：详情 =====
+  // 渲染词条编辑历史（头像 + 用户名/昵称 + 增删统计，类似 GitHub）
+  function renderHistoryHtml(e) {
+    var hist = (e && Array.isArray(e.history)) ? e.history.slice().reverse() : [];
+    if (!hist.length) return '';
+    var items = hist.map(function (r) {
+      var author = r.author || { display_name: '游客', username: '游客', avatar: '' };
+      var name = author.display_name || author.username || '游客';
+      var avatarHtml = author.avatar
+        ? '<img src="' + esc(author.avatar) + '" alt="" referrerpolicy="no-referrer">'
+        : esc(name.charAt(0));
+      var add = r.added || 0, del = r.deleted || 0;
+      return '<div class="wiki-hist-item">' +
+        '<div class="wiki-hist-avatar">' + avatarHtml + '</div>' +
+        '<div class="wiki-hist-main">' +
+          '<div class="wiki-hist-name">' + esc(name) +
+            '<span class="wiki-hist-msg">' + esc(r.message || '') + '</span>' +
+            '<span class="wiki-hist-diff">' +
+              (add ? '<span class="wiki-diff-add">+' + add + '</span>' : '') +
+              (del ? '<span class="wiki-diff-del">−' + del + '</span>' : '') +
+            '</span>' +
+          '</div>' +
+          '<div class="wiki-hist-time">' + esc(relTime(r.ts) || '') + '</div>' +
+        '</div>' +
+      '</div>';
+    }).join('');
+    return '<div class="wiki-history">' +
+      '<div class="wiki-history-title">编辑历史</div>' +
+      items +
+    '</div>';
+  }
+
   function openDetail(id) {
     var e = findEntry(id);
     if (!e) return;
@@ -352,7 +655,8 @@
       '<div class="wiki-detail-content">' + renderMd(e.content || '') + '</div>' +
       (tagsHtml ? '<div class="wiki-card-tags">' + tagsHtml + '</div>' : '') +
       (e.sourceUrl ? '<p class="wiki-detail-source">来源链接：<a href="' + esc(safeUrl(e.sourceUrl)) + '" target="_blank" rel="noopener noreferrer">' + esc(e.sourceUrl) + '</a></p>' : '') +
-      '<p class="wiki-detail-time">最后更新：' + esc(relTime(e.updatedAt) || '—') + '</p>';
+      '<p class="wiki-detail-time">最后更新：' + esc(relTime(e.updatedAt) || '—') + '</p>' +
+      renderHistoryHtml(e);
 
     // 绑定操作按钮
     var editBtn = $('#wikiDetailEdit');
@@ -399,6 +703,18 @@
     var tags = splitByDelim(f.tags.value);
     var aliases = splitByDelim(f.aliases.value);
 
+    // 记录本次提交（作者头像/昵称 + 增删统计），类似 GitHub 提交历史
+    var wasNew = !entry;
+    var oldContent = entry ? entry.content : '';
+    var stats = diffStats(oldContent, content);
+    var revision = {
+      ts: now,
+      message: wasNew ? '新建词条' : '编辑内容',
+      added: stats.added,
+      deleted: stats.deleted,
+      author: getCurrentAuthor()
+    };
+
     if (entry) {
       entry.title = title;
       entry.aliases = aliases;
@@ -407,6 +723,8 @@
       entry.summary = f.summary.value.trim();
       entry.content = content;
       entry.updatedAt = now;
+      if (!Array.isArray(entry.history)) entry.history = [];
+      entry.history.push(revision);
     } else {
       entry = {
         id: newId(),
@@ -419,7 +737,8 @@
         source: 'manual',
         sourceUrl: '',
         createdAt: now,
-        updatedAt: now
+        updatedAt: now,
+        history: [revision]
       };
       state.entries.unshift(entry);
     }
@@ -513,6 +832,28 @@
       });
   }
 
+  // 获取维基原文 wikitext（含表格与图片标记），用于补全导入的表格/图片
+  function fetchWikipediaWikitext(title, lang) {
+    lang = lang || 'zh';
+    var api = 'https://' + lang + '.wikipedia.org/w/api.php';
+    var url = api + '?action=query&format=json&prop=revisions&rvprop=content&rvslots=main&redirects=1' +
+      '&titles=' + encodeURIComponent(title) + '&origin=*';
+    return fetch(url, { cache: 'no-cache' })
+      .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+      .then(function (data) {
+        var pages = (data && data.query && data.query.pages) || {};
+        var keys = Object.keys(pages);
+        if (!keys.length) return '';
+        var p = pages[keys[0]];
+        if (p.missing !== undefined) return '';
+        var rev = p.revisions && p.revisions[0];
+        var slot = rev && rev.slots && rev.slots.main;
+        if (slot) return slot['*'] || slot.content || '';
+        if (rev) return rev['*'] || '';
+        return '';
+      });
+  }
+
   // Wikipedia REST API：获取摘要 + 缩略图（更友好的 summary）
   function fetchWikipediaSummary(title, lang) {
     lang = lang || 'zh';
@@ -578,34 +919,42 @@
     statusEl.textContent = '正在抓取「' + (title || '手动内容') + '」…';
 
     var promise;
-    if (source === 'zh') {
-      promise = Promise.all([fetchWikipediaSummary(title, 'zh'), fetchWikipediaExtract(title, 'zh')])
-        .then(function (arr) {
-          var sum = arr[0], ext = arr[1];
-          return {
-            title: ext.title || sum.title || title,
-            summary: sum.summary || '',
-            content: wikiTextToMd(ext.extract) || '',
-            category: '',
-            source: 'wikipedia',
-            sourceUrl: ext.url || sum.url,
-            thumbnail: sum.thumbnail
-          };
+    if (source === 'zh' || source === 'en') {
+      var lang = source === 'zh' ? 'zh' : 'en';
+      // 同时抓取：摘要 + 纯文本正文 + 原文（补全表格与图片）
+      promise = Promise.all([
+        fetchWikipediaSummary(title, lang),
+        fetchWikipediaExtract(title, lang),
+        fetchWikipediaWikitext(title, lang)
+      ]).then(function (arr) {
+        var sum = arr[0], ext = arr[1], wt = arr[2];
+        var media = parseWikitextMedia(wt);
+        var parts = [];
+        // 词条主图（来自 REST 摘要缩略图）
+        if (sum.thumbnail) parts.push('![图片来源：' + (ext.title || title) + '](' + sum.thumbnail + ')');
+        // 正文纯文本
+        var body = wikiTextToMd(ext.extract) || '';
+        if (body) parts.push(body);
+        // 表格（转成 Markdown 表格）
+        if (media.tables) parts.push(media.tables);
+        // 图片（生成维基共享资源缩略图链接）
+        var imgs = [];
+        (media.images || []).slice(0, 8).forEach(function (fn) {
+          var u = wikimediaThumbUrl(fn, 400);
+          if (u) imgs.push('![' + fn.replace(/\.(jpg|jpeg|png|gif|svg|webp)$/i, '') + '](' + u + ')');
         });
-    } else if (source === 'en') {
-      promise = Promise.all([fetchWikipediaSummary(title, 'en'), fetchWikipediaExtract(title, 'en')])
-        .then(function (arr) {
-          var sum = arr[0], ext = arr[1];
-          return {
-            title: ext.title || sum.title || title,
-            summary: sum.summary || '',
-            content: wikiTextToMd(ext.extract) || '',
-            category: '',
-            source: 'wikipedia_en',
-            sourceUrl: ext.url || sum.url,
-            thumbnail: sum.thumbnail
-          };
-        });
+        if (imgs.length) parts.push(imgs.join('\n'));
+        var content = parts.filter(Boolean).join('\n\n');
+        return {
+          title: ext.title || sum.title || title,
+          summary: sum.summary || '',
+          content: content,
+          category: '',
+          source: source === 'zh' ? 'wikipedia' : 'wikipedia_en',
+          sourceUrl: ext.url || sum.url,
+          thumbnail: sum.thumbnail
+        };
+      });
     } else if (source === 'baidu') {
       promise = fetchBaiduViaReader(title).then(function (r) {
         return {

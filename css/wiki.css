@@ -454,6 +454,86 @@
 .wiki-detail-source a { color: var(--color-primary); }
 .wiki-detail-time { font-size: var(--font-size-xs); color: var(--color-text-muted); margin: 4px 0 0; }
 
+/* ===== 表格（Markdown 渲染）===== */
+.wiki-detail-content .bq-table-wrap, .wiki-editor-preview .bq-table-wrap { margin: 14px 0; }
+.wiki-detail-content .bq-table, .wiki-editor-preview .bq-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--font-size-sm);
+}
+.wiki-detail-content .bq-table th, .wiki-detail-content .bq-table td,
+.wiki-editor-preview .bq-table th, .wiki-editor-preview .bq-table td {
+  border: 1px solid var(--color-border-light);
+  padding: 8px 12px;
+  text-align: left;
+}
+.wiki-detail-content .bq-table thead th, .wiki-editor-preview .bq-table thead th {
+  background: var(--color-surface-secondary);
+  font-weight: 600;
+}
+.wiki-detail-content .bq-table tbody tr:nth-child(even), .wiki-editor-preview .bq-table tbody tr:nth-child(even) {
+  background: var(--color-surface-secondary);
+}
+
+/* ===== 编辑历史（GitHub 风格）===== */
+.wiki-history {
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid var(--color-border-light);
+}
+.wiki-history-title {
+  font-family: var(--font-serif);
+  font-size: var(--font-size-md);
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 12px;
+}
+.wiki-hist-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px dashed var(--color-border-light);
+}
+.wiki-hist-item:last-child { border-bottom: none; }
+.wiki-hist-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.wiki-hist-avatar img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+.wiki-hist-main { flex: 1; min-width: 0; }
+.wiki-hist-name {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-text);
+}
+.wiki-hist-msg { font-weight: 400; color: var(--color-text-muted); }
+.wiki-hist-diff { display: inline-flex; gap: 6px; align-items: center; }
+.wiki-diff-add, .wiki-diff-del {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  padding: 1px 8px;
+  border-radius: 6px;
+}
+.wiki-diff-add { color: var(--color-success); background: rgba(58,140,92,0.12); }
+.wiki-diff-del { color: var(--color-error); background: rgba(192,85,58,0.12); }
+.wiki-hist-time { font-size: var(--font-size-xs); color: var(--color-text-muted); margin-top: 2px; }
+
 /* ===== 编辑器 ===== */
 .wiki-md-toolbar {
   display: flex;
