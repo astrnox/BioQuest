@@ -71,10 +71,15 @@ __final_audit.py
 # 命名含 _temp_ 的临时文件（脚本/数据）
 _temp_*
 Temp/*.bin
-# 一次性/迭代遗留脚本（保留源码，但明确标注为历史产物）
+
+# 注：js/vendor/RDKit_minimal.wasm 是运行时必需依赖，需保留在 git 中，
+# 因此不全局忽略 *.wasm。
+
+# ===== 一次性/迭代遗留脚本（已归档到 scripts/legacy/）=====
 data/_DATA_PART1.py
 data/_step1_zz.py
 data/_phase1_zz.py
 
-# 注：js/vendor/RDKit_minimal.wasm 是运行时必需依赖，需保留在 git 中，
-# 因此不全局忽略 *.wasm。
+# ===== IDE 分享包 / QA 测试中间产物（不入库）=====
+.trae-html-share-packages/
+coverage/

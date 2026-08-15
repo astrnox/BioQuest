@@ -1,5 +1,7 @@
 # BioQuest — 高中生生物学习平台
 
+> 🌐 [English Version](./README-en.md) · [中文版](./README.md)
+
 <div align="center">
 
 ![BioQuest 首页截图](screenshots/home-final.png)
@@ -55,7 +57,7 @@ npx serve .                  # Node.js
 - 数据库：去 [Supabase](https://supabase.com) 建个免费项目，跑一下 `sql/` 里的 SQL 文件，然后把地址和 key 填到 `js/supabase-client.js` 里（不配也行，会自动用浏览器本地存储）
 - AI 功能：用户自己在「我的 → 设置」里填 API Key，开发者不用管
 
-详细部署说明看 [DEPLOYMENT.md](./DEPLOYMENT.md)。
+详细部署说明看 [DEPLOYMENT.md](./prd/DEPLOYMENT.md)。
 
 ---
 

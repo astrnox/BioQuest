@@ -1,0 +1,262 @@
+{
+  "issues": [
+    {
+      "id": "ISSUE-001",
+      "level": "P1",
+      "page": "dashboard",
+      "message": "console.error x1: Failed to load resource: the server responded with a status of 501 (Unsupported method ('POST'))",
+      "evidence": null,
+      "timestamp": "2026-07-23T10:25:58.560Z"
+    },
+    {
+      "id": "ISSUE-002",
+      "level": "P1",
+      "page": "games",
+      "message": "KAPLAY canvas 未渲染",
+      "evidence": null,
+      "timestamp": "2026-07-23T10:26:08.945Z"
+    },
+    {
+      "id": "ISSUE-003",
+      "level": "P1",
+      "page": "sketch",
+      "message": "console.error x1: TypeError: Cannot create property 'saveFileToDisk' on boolean 'true'\n    at Ge (http://localhost:8765/js/vendor/excalidraw.production.min.js?v=20260723d:2:1038219)\n    at mf (http://localhost:8765/js/vendor/react-dom.production.min.js?v=20260723d:105:412)\n    at Qk (http://localhost:8765/js/vendor/r",
+      "evidence": null,
+      "timestamp": "2026-07-23T10:26:11.528Z"
+    },
+    {
+      "id": "ISSUE-004",
+      "level": "P0",
+      "page": "sketch",
+      "message": "JS 异常 x1: Cannot create property 'saveFileToDisk' on boolean 'true'",
+      "evidence": null,
+      "timestamp": "2026-07-23T10:26:11.528Z"
+    },
+    {
+      "id": "ISSUE-005",
+      "level": "P1",
+      "page": "sketch",
+      "message": "excalidraw 未注入 DOM",
+      "evidence": null,
+      "timestamp": "2026-07-23T10:26:13.541Z"
+    },
+    {
+      "id": "ISSUE-006",
+      "level": "P2",
+      "page": "home",
+      "message": "主题切换后背景色未变化（可能切换无效或同一颜色）",
+      "evidence": null,
+      "timestamp": "2026-07-23T10:27:07.550Z"
+    }
+  ],
+  "pages": [
+    {
+      "route": "/dashboard",
+      "name": "dashboard",
+      "label": "仪表盘",
+      "url": "http://localhost:8765/#/dashboard",
+      "textLen": 482,
+      "consoleErrors": 1,
+      "pageErrors": 0,
+      "failedRequests": 0,
+      "screenshot": "/workspace/qa-output/screenshots/dashboard.png"
+    },
+    {
+      "route": "/practice",
+      "name": "practice",
+      "label": "练习",
+      "url": "http://localhost:8765/#/practice",
+      "textLen": 1723,
+      "consoleErrors": 0,
+      "pageErrors": 0,
+      "failedRequests": 0,
+      "screenshot": "/workspace/qa-output/screenshots/practice.png"
+    },
+    {
+      "route": "/community",
+      "name": "community",
+      "label": "社区（老）",
+      "url": "http://localhost:8765/#/community",
+      "textLen": 1920,
+      "consoleErrors": 0,
+      "pageErrors": 0,
+      "failedRequests": 0,
+      "screenshot": "/workspace/qa-output/screenshots/community.png"
+    },
+    {
+      "route": "/community-enhanced",
+      "name": "community-enhanced",
+      "label": "社区（增强）",
+      "url": "http://localhost:8765/#/community-enhanced",
+      "textLen": 420,
+      "consoleErrors": 0,
+      "pageErrors": 0,
+      "failedRequests": 0,
+      "screenshot": "/workspace/qa-output/screenshots/community-enhanced.png"
+    },
+    {
+      "route": "/games",
+      "name": "games",
+      "label": "互动游戏",
+      "url": "http://localhost:8765/#/games",
+      "textLen": 137,
+      "consoleErrors": 0,
+      "pageErrors": 0,
+      "failedRequests": 0,
+      "screenshot": "/workspace/qa-output/screenshots/games.png"
+    },
+    {
+      "route": "/sketch",
+      "name": "sketch",
+      "label": "画板",
+      "url": "http://localhost:8765/#/sketch",
+      "textLen": 79,
+      "consoleErrors": 1,
+      "pageErrors": 1,
+      "failedRequests": 0,
+      "screenshot": "/workspace/qa-output/screenshots/sketch.png"
+    },
+    {
+      "route": "/smiles",
+      "name": "smiles",
+      "label": "SMILES",
+      "url": "http://localhost:8765/#/smiles",
+      "textLen": 342,
+      "consoleErrors": 0,
+      "pageErrors": 0,
+      "failedRequests": 0,
+      "screenshot": "/workspace/qa-output/screenshots/smiles.png"
+    },
+    {
+      "route": "/molecules",
+      "name": "molecules",
+      "label": "3D 分子",
+      "url": "http://localhost:8765/#/molecules",
+      "textLen": 275,
+      "consoleErrors": 0,
+      "pageErrors": 0,
+      "failedRequests": 0,
+      "screenshot": "/workspace/qa-output/screenshots/molecules.png"
+    },
+    {
+      "route": "/bio-lab",
+      "name": "bio-lab",
+      "label": "实验室",
+      "url": "http://localhost:8765/#/bio-lab",
+      "textLen": 190,
+      "consoleErrors": 0,
+      "pageErrors": 0,
+      "failedRequests": 0,
+      "screenshot": "/workspace/qa-output/screenshots/bio-lab.png"
+    },
+    {
+      "route": "/knowledge-graph",
+      "name": "knowledge-graph",
+      "label": "图谱",
+      "url": "http://localhost:8765/#/knowledge-graph",
+      "textLen": 374,
+      "consoleErrors": 0,
+      "pageErrors": 0,
+      "failedRequests": 0,
+      "screenshot": "/workspace/qa-output/screenshots/knowledge-graph.png"
+    },
+    {
+      "route": "/tutor",
+      "name": "tutor",
+      "label": "AI 对话",
+      "url": "http://localhost:8765/#/tutor",
+      "textLen": 66,
+      "consoleErrors": 0,
+      "pageErrors": 0,
+      "failedRequests": 0,
+      "screenshot": "/workspace/qa-output/screenshots/tutor.png"
+    },
+    {
+      "route": "/wrongbook",
+      "name": "wrongbook",
+      "label": "错题录题",
+      "url": "http://localhost:8765/#/wrongbook",
+      "textLen": 94,
+      "consoleErrors": 0,
+      "pageErrors": 0,
+      "failedRequests": 0,
+      "screenshot": "/workspace/qa-output/screenshots/wrongbook.png"
+    },
+    {
+      "route": "/user",
+      "name": "user",
+      "label": "我的",
+      "url": "http://localhost:8765/#/user",
+      "textLen": 59,
+      "consoleErrors": 0,
+      "pageErrors": 0,
+      "failedRequests": 0,
+      "screenshot": "/workspace/qa-output/screenshots/user.png"
+    }
+  ],
+  "summary": {
+    "cssVars": {
+      "--color-primary": "#4a7c59",
+      "--color-deep": "#1a2f1d",
+      "--color-sage": "#4a7c59",
+      "--color-amber": "#c4956a",
+      "--surface-primary": "#ffffff",
+      "--surface-secondary": "#f5f0e8",
+      "--text-primary": "#2c3e30",
+      "--text-secondary": "#5a6b5e",
+      "--text-muted": "#8a9a8e",
+      "--border-light": "#ede9e3",
+      "--font-serif": "'LXGW WenKai', 'Noto Serif SC', 'Songti SC', 'SimSun', 'STSong', 'Noto Serif CJK SC', Georgia, 'Times New Roman', serif",
+      "--font-sans": "'LXGW WenKai', -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', 'Segoe UI', sans-serif",
+      "--radius-lg": "12px",
+      "--radius-md": "8px",
+      "--radius-sm": "4px"
+    },
+    "fonts": {
+      "h1": "\"LXGW WenKai\", \"Noto Serif SC\", \"Songti SC\", SimSun, STSong, \"Noto Serif CJK SC\", Georgia, \"Times New Roman\", serif",
+      "h2": "\"LXGW WenKai\", \"Noto Serif SC\", \"Songti SC\", SimSun, STSong, \"Noto Serif CJK SC\", Georgia, \"Times New Roman\", serif",
+      "p": "\"LXGW WenKai\", -apple-system, BlinkMacSystemFont, \"PingFang SC\", \"Microsoft YaHei\", \"Noto Sans CJK SC\", \"Segoe UI\", sans-serif",
+      "btn": "\"LXGW WenKai\", -apple-system, BlinkMacSystemFont, \"PingFang SC\", \"Microsoft YaHei\", \"Noto Sans CJK SC\", \"Segoe UI\", sans-serif"
+    },
+    "radius": {
+      "buttons": [
+        {
+          "cls": "active",
+          "radius": "4px"
+        },
+        {
+          "cls": "",
+          "radius": "4px"
+        },
+        {
+          "cls": "",
+          "radius": "4px"
+        },
+        {
+          "cls": "",
+          "radius": "4px"
+        },
+        {
+          "cls": "",
+          "radius": "4px"
+        }
+      ],
+      "cards": [
+        {
+          "cls": "daily-question-card",
+          "radius": "16px"
+        }
+      ]
+    },
+    "consoleErrors": 2,
+    "pageErrors": 4,
+    "failedRequests": 0,
+    "routeCount": 13,
+    "totalIssues": 6,
+    "byLevel": {
+      "P1": 4,
+      "P0": 1,
+      "P2": 1
+    }
+  }
+}

@@ -1,6 +1,0 @@
-[
-  {
-    "text": "[KaplayGames] 启动失败: TypeError: c.canvas.getContext is not a function\n    at Qa (http://localhost:8765/js/vendor/kaplay.js?v=20260723d:56:77707)\n    at startCellBuilder (http://localhost:8765/js/integrations/kaplay-games.js?v=20260723d:272:20)\n    at http://localhost:8765/js/integrations/kaplay-games.js?v=20260723d:73:27",
-    "url": "http://localhost:8765/#/games"
-  }
-]
