@@ -1,0 +1,48 @@
+# BioQuest 持续集成
+# 每次 push / PR 自动运行：
+#   1. JS 语法检查（node --check 全部 js）
+#   2. 单元测试（Jest：IRT / FSRS 核心算法）
+#   3. jsdom 烟雾测试（Wiki 模块）
+#
+# 说明：Playwright 浏览器回归测试（tests/qa-test*.js）需要真实浏览器 + 本地服务，
+# 开销较大，未纳入默认 CI，可单独运行本地开发命令执行。
+
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+
+jobs:
+  test:
+    name: lint + unit + smoke
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: JS 语法检查
+        run: |
+          fail=0
+          for f in $(git ls-files 'js/*.js' 'tests/*.js' 'tests/*.cjs'); do
+            node --check "$f" || { echo "SYNTAX FAIL: $f"; fail=1; }
+          done
+          exit $fail
+
+      - name: 单元测试（IRT / FSRS）
+        run: npm run test:unit
+
+      - name: 烟雾测试（Wiki）
+        run: npm run test:smoke

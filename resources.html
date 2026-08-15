@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="css/resources.css">
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script src="js/supabase-client.js?v=20260608d"></script>
+  <script src="js/supabase-client.js?v=20260814c"></script>
   <script src="js/supabase.js?v=20260608d"></script>
 </head>
 <body>
@@ -126,24 +126,15 @@
     </div>
   </footer>
 
-  <script src="js/utils.js?v=20260806a"></script>
+  <script src="js/utils.js?v=20260814b"></script>
+  <script src="js/hamburger.js?v=20260814b"></script>
   <script src="js/resources.js?v=20260806a"></script>
   <script>
-    // 汉堡菜单
-    (function() {
-      var btn = document.getElementById('hamburgerBtn');
-      var nav = document.getElementById('mobileNav');
-      var overlay = document.getElementById('mobileOverlay');
-      var closeBtn = document.getElementById('mobileNavClose');
-      function toggle() {
-        nav.classList.toggle('active');
-        overlay.classList.toggle('active');
-        btn.classList.toggle('active');
-      }
-      if (btn) btn.addEventListener('click', toggle);
-      if (overlay) overlay.addEventListener('click', toggle);
-      if (closeBtn) closeBtn.addEventListener('click', toggle);
-    })();
+    // 统一汉堡菜单（与主页一致）：注入主页导航结构并绑定交互
+    if (window.BioQuestHamburger) {
+      window.BioQuestHamburger.render();
+      window.BioQuestHamburger.init();
+    }
     // 初始化 Supabase 并更新认证状态
     (async function() {
       try {

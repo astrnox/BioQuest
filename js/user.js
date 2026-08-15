@@ -2104,14 +2104,16 @@ async function renderStreakPanel(container) {
 
   var data = await (typeof getCheckInData === 'function' ? getCheckInData() : Promise.resolve({ current_streak: 0, longest_streak: 0, total_checkins: 0, calendar: [] }));
 
-  var today = new Date().toISOString().split('T')[0];
+  // 统一使用本地时区日期（与 recordDailyCheckIn/getCheckInData 的 _localDateStr 一致），
+  // 避免 toISOString() 的 UTC 日期导致「今日已打卡」判断与日历错位。
+  var today = _localDateStrP(new Date());
   var checkedToday = data.last_checkin === today;
 
   // Build 30-day calendar
   var calHtml = '<div style="display:flex;flex-wrap:wrap;gap:4px;margin:16px 0;">';
   for (var i = 29; i >= 0; i--) {
     var d = new Date(Date.now() - i * 86400000);
-    var dateStr = d.toISOString().split('T')[0];
+    var dateStr = _localDateStrP(d);
     var isChecked = data.calendar && data.calendar.some(function(c) { return c.checkin_date === dateStr; });
     var isToday = dateStr === today;
     var bg = isChecked ? 'var(--color-sage,#3a8c5c)' : 'var(--border-light,#ece8e1)';
@@ -2150,11 +2152,23 @@ async function renderStreakPanel(container) {
       if (result) {
         renderStreakPanel(container);
       } else {
-        checkInBtn.textContent = '打卡失败，重试';
+        // 游客没有云端账号，无法写入云端打卡表，给出友好提示
+        var isGuest = false;
+        try { isGuest = !!(window.getCurrentUser && window.getCurrentUser() && window.getCurrentUser().isGuest); } catch (e) {}
+        checkInBtn.textContent = isGuest ? '游客暂不支持云端打卡，请注册登录后使用' : '打卡失败，重试';
         checkInBtn.disabled = false;
       }
     });
   }
+}
+
+// 本地时区日期字符串 YYYY-MM-DD（与 supabase-client 的 _localDateStr 一致）
+function _localDateStrP(date) {
+  date = date || new Date();
+  var y = date.getFullYear();
+  var m = String(date.getMonth() + 1).padStart(2, '0');
+  var d = String(date.getDate()).padStart(2, '0');
+  return y + '-' + m + '-' + d;
 }
 
 async function renderAchievementsPanel(container) {
@@ -2750,7 +2764,18 @@ function initUser(target) {
     }
   }
 
-  renderUserPage(target);
+  // 修复：等待全局认证状态恢复完成后再判断登录态。
+  // 整页加载到「我的」时，若立即渲染，_currentUser 尚未恢复，会误判为未登录而要求重新登录。
+  // 登录一次后，这里会等到会话恢复，从而正确显示已登录的用户中心。
+  var authReady = (typeof window.waitAuthReady === 'function')
+    ? window.waitAuthReady()
+    : Promise.resolve();
+  var timeout = new Promise(function (res) { setTimeout(res, 8000); });
+  Promise.race([authReady, timeout]).then(function () {
+    renderUserPage(target);
+  }).catch(function () {
+    renderUserPage(target);
+  });
 }
 
 /**

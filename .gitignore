@@ -64,3 +64,17 @@ summer-plan/
 __audit_shots__/
 __audit_*.py
 __final_audit.py
+
+# ===== 构建管线中间产物（不应入库）=====
+# Python 数据集生成过程的 pickle 中间文件
+*.pkl
+# 命名含 _temp_ 的临时文件（脚本/数据）
+_temp_*
+Temp/*.bin
+# 一次性/迭代遗留脚本（保留源码，但明确标注为历史产物）
+data/_DATA_PART1.py
+data/_step1_zz.py
+data/_phase1_zz.py
+
+# 注：js/vendor/RDKit_minimal.wasm 是运行时必需依赖，需保留在 git 中，
+# 因此不全局忽略 *.wasm。

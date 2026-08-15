@@ -508,6 +508,37 @@ if (typeof window !== 'undefined') {
     // 把水平分隔线替换成占位（空行包围）
     raw = raw.replace(/^[ \t]*(?:[-*_])[ \t]*(?:[-*_])[ \t]*(?:[-*_])[ \t\-*_]*$/gm, '\n\n__BQ_HR__\n\n');
 
+    // ========= Step 1.1. 表格（GitHub-Flavored Markdown）==========
+    // 连续以 | 开头的行，第二行为分隔行（|---|）时识别为表格。
+    // 通过占位符 __BQ_TABLE_n 在行循环中作为块级元素输出（避免被 <p> 包裹）。
+    var _tables = [];
+    raw = raw.replace(/((?:^[ \t]*\|[^\n]*\n?)+)/gm, function (block) {
+      var tblLines = block.replace(/\n$/, '').split('\n');
+      if (tblLines.length < 2) return block;   // 至少 表头 + 分隔行
+      var sep = tblLines[1].trim();
+      if (sep.indexOf('|') === -1) return block;
+      var sepClean = sep.replace(/[|\s:]/g, '');
+      if (!/^-+$/.test(sepClean)) return block; // 第二行必须是 --- 分隔行
+      function cells(line) {
+        var l = line.trim();
+        if (l.charAt(0) === '|') l = l.slice(1);
+        if (l.charAt(l.length - 1) === '|') l = l.slice(0, -1);
+        return l.split('|').map(function (c) { return c.trim(); });
+      }
+      var header = cells(tblLines[0]);
+      var body = tblLines.slice(2).filter(function (l) { return l.trim().length > 0; }).map(cells);
+      var html = '<div class="bq-table-wrap" style="overflow-x:auto;margin:14px 0;">' +
+        '<table class="bq-table">' +
+        '<thead><tr>' + header.map(function (c) { return '<th>' + inlineMd(c) + '</th>'; }).join('') + '</tr></thead>' +
+        '<tbody>';
+      body.forEach(function (row) {
+        html += '<tr>' + row.map(function (c) { return '<td>' + inlineMd(c) + '</td>'; }).join('') + '</tr>';
+      });
+      html += '</tbody></table></div>';
+      _tables.push(html);
+      return '\n\n__BQ_TABLE__' + (_tables.length - 1) + '\n\n';
+    });
+
     var lines = raw.split('\n');
     var out = [];
     var inList = null;      // {tag:'ul'|'ol', buffer:[]}
@@ -538,6 +569,15 @@ if (typeof window !== 'undefined') {
       if (trimmed === '__BQ_HR__') {
         closeList(); closeQuote();
         out.push('<hr/>');
+        continue;
+      }
+
+      // 表格占位符 → 直接输出块级表格 HTML
+      var tblM = /^__BQ_TABLE__(\d+)$/.exec(trimmed);
+      if (tblM) {
+        closeList(); closeQuote();
+        var _ti = +tblM[1];
+        if (_tables[_ti]) out.push(_tables[_ti]);
         continue;
       }
 
