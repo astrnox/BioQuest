@@ -206,9 +206,7 @@ finalEl.innerHTML = DOMPurify.sanitize(marked.parse(text));  // 完成后渲染
 - 感谢 Open Spaced Repetition 社区的 FSRS 算法
 - 感谢所有开源库的作者们
 - 感谢 [PhET Interactive Simulations](https://phet.colorado.edu)（科罗拉多大学博尔德分校）提供的优质互动模拟
-- 感谢每一个用 BioQuest 学生物的你，祝大家都能考出好成绩 🎓
-## ⭐ Star 增长趋势
-![Star Trend](./star-trend.png)
+- 感谢每一个用 BioQuest 学生物的你，祝大家都能考出好成绩 
 ---
 对了，我是高中牲，可能反馈issue要用好久（比较忙）
 <div align="center">
