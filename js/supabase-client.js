@@ -211,6 +211,7 @@ function _setupAuthListener() {
                 if (typeof window.saveUserKeyIfNeeded === 'function') {
                   window.saveUserKeyIfNeeded();
                 }
+                _persistUserInfo();
               })
               .catch(function(e) {
                 console.warn('[BioQuest] onAuthStateChange 获取 profile 失败:', e);
@@ -220,6 +221,7 @@ function _setupAuthListener() {
       } else if (event === 'SIGNED_OUT') {
         // 登出事件
         _currentUser = null;
+        _persistUserInfo();
         // 清除管理员认证状态
         if (typeof window._onAuthUserLoaded === 'function') {
           window._onAuthUserLoaded(null);
@@ -249,6 +251,26 @@ function getCurrentUser() {
  */
 function isLoggedIn() {
   return _currentUser !== null;
+}
+
+// 将当前用户的可展示信息（昵称/用户名/头像）持久化到 localStorage，
+// 供其它页面（如 wiki.html 这类轻页面）读取，从而在提交历史中显示作者头像与昵称。
+var _USER_INFO_KEY = 'bioquest_user_info';
+function _persistUserInfo() {
+  try {
+    var u = _currentUser;
+    if (u) {
+      var avatar = '';
+      try { avatar = localStorage.getItem('bioquest_avatar') || ''; } catch (e) {}
+      localStorage.setItem(_USER_INFO_KEY, JSON.stringify({
+        username: u.username || u.email || '',
+        display_name: u.display_name || u.username || '',
+        avatar: avatar
+      }));
+    } else {
+      localStorage.removeItem(_USER_INFO_KEY);
+    }
+  } catch (e) { /* 静默 */ }
 }
 
 /**
@@ -754,6 +776,9 @@ async function loginUser(usernameOrEmail, password) {
     // 检查邮箱验证状态，自动升级用户组
     _currentUser = await checkEmailVerification(_currentUser, data.user);
 
+    // 持久化用户展示信息（供 wiki 等轻页面读取作者身份）
+    _persistUserInfo();
+
     // 启动在线时长跟踪
     startOnlineTimeTracking();
 
@@ -848,6 +873,9 @@ function guestLogin(password, username) {
     checkAchievement('login', 1);
   }
 
+  // 持久化用户展示信息（供 wiki 等轻页面读取作者身份）
+  _persistUserInfo();
+
   return { ok: true, user: _currentUser };
 }
 
@@ -898,6 +926,7 @@ function restoreGuestSession() {
       email_verified: false,
       isGuest: true
     };
+    _persistUserInfo();
     return true;
   } catch (e) {
     return false;
@@ -1194,6 +1223,9 @@ async function _doRestoreSession() {
           window._onAuthUserLoaded(_currentUser);
         }
       }
+
+      // 持久化用户展示信息（供 wiki 等轻页面读取作者身份）
+      _persistUserInfo();
 
       return true;
     }
@@ -2508,11 +2540,27 @@ async function recordDailyCheckIn() {
 
     if (!insertResult.ok) return null;
 
-    // 更新 profiles 表的 streak 信息
-    await sbFetchRest('PATCH', 'profiles', 'id=eq.' + encodeURIComponent(userId), {
+    // 更新 profiles 表的 streak 信息（同时维护最长连续打卡，避免「最长连续」恒为 0）
+    var longestStreak = streakCount;
+    try {
+      var longestRes = await sbFetchRest('GET', 'profiles',
+        'id=eq.' + encodeURIComponent(userId) + '&select=longest_streak');
+      var longestData = (longestRes.ok && Array.isArray(longestRes.data) && longestRes.data.length > 0)
+        ? longestRes.data[0] : null;
+      if (longestData && typeof longestData.longest_streak === 'number' && longestData.longest_streak > longestStreak) {
+        longestStreak = longestData.longest_streak;
+      }
+    } catch (e) { /* 静默 */ }
+
+    var patchResult = await sbFetchRest('PATCH', 'profiles', 'id=eq.' + encodeURIComponent(userId), {
       current_streak: streakCount,
+      longest_streak: longestStreak,
       last_checkin: today
     });
+    if (!patchResult.ok) {
+      // profiles 更新失败不应阻断打卡本身，仅记录
+      console.warn('[BioQuest] 打卡后更新 profiles 失败:', patchResult.status);
+    }
 
     // 打卡加信用
     try {
