@@ -1,0 +1,899 @@
+{
+ "BQ-linkage-b5c781f6b227": {
+  "tags": [
+   "linkage",
+   "module_4",
+   "遗传学",
+   "基因连锁与交换",
+   "competition"
+  ],
+  "diff": "league",
+  "len": 33,
+  "src": "linkage",
+  "year": null,
+  "module": "module_4"
+ },
+ "BQ-linkage-1bb8254b94a3": {
+  "tags": [
+   "linkage",
+   "module_4",
+   "遗传学",
+   "基因连锁与交换",
+   "competition"
+  ],
+  "diff": "league",
+  "len": 33,
+  "src": "linkage",
+  "year": null,
+  "module": "module_4"
+ },
+ "BQ-linkage-14c0d20aad73": {
+  "tags": [
+   "linkage",
+   "逻辑推理",
+   "数据解读",
+   "连锁分析"
+  ],
+  "diff": 4,
+  "len": 164,
+  "src": "linkage",
+  "year": null,
+  "module": "module_4"
+ },
+ "BQ-linkage-3ac35f800d9b": {
+  "tags": [
+   "linkage",
+   "module_4",
+   "遗传学",
+   "连锁与交换",
+   "league",
+   "competition",
+   "http://www.botany.org.cn/swxjs/swxls/202605/t20260518_838211.html",
+   "2026"
+  ],
+  "diff": "league",
+  "len": 43,
+  "src": "linkage",
+  "year": 2026,
+  "module": "module_4"
+ },
+ "BQ-linkage-6e12f5dc2bce": {
+  "tags": [
+   "linkage",
+   "module_4",
+   "遗传学",
+   "连锁与交换",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2024/art_f5fe44f36762455fb9f8f99b9e0bf2e2.html",
+   "2024"
+  ],
+  "diff": "league",
+  "len": 24,
+  "src": "linkage",
+  "year": 2024,
+  "module": "module_4"
+ },
+ "BQ-linkage-1a23663d913d": {
+  "tags": [
+   "linkage",
+   "module_4",
+   "遗传学",
+   "连锁与交换",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2025/art_b153fd076f3f4fe282acfc333c4d4ab6.html",
+   "2025"
+  ],
+  "diff": "league",
+  "len": 131,
+  "src": "linkage",
+  "year": 2025,
+  "module": "module_4"
+ },
+ "BQ-linkage-6b26d2a27a54": {
+  "tags": [
+   "linkage",
+   "module_4",
+   "遗传学",
+   "连锁与交换",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2024/art_f5fe44f36762455fb9f8f99b9e0bf2e2.html",
+   "2024"
+  ],
+  "diff": "league",
+  "len": 23,
+  "src": "linkage",
+  "year": 2024,
+  "module": "module_4"
+ },
+ "BQ-linkage-a457dff021b1": {
+  "tags": [
+   "linkage",
+   "module_4",
+   "遗传学",
+   "连锁与交换",
+   "league",
+   "competition",
+   "http://www.botany.org.cn/swxjs/swxls/202605/t20260518_838211.html",
+   "2026"
+  ],
+  "diff": "league",
+  "len": 118,
+  "src": "linkage",
+  "year": 2026,
+  "module": "module_4"
+ },
+ "BQ-linkage-8c51a696b676": {
+  "tags": [
+   "linkage",
+   "module_4",
+   "遗传学",
+   "连锁与交换",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2015/art_1c13e648d84d4e38b94e2dfd5e5b1b0b.html",
+   "2015"
+  ],
+  "diff": "league",
+  "len": 119,
+  "src": "linkage",
+  "year": 2015,
+  "module": "module_4"
+ },
+ "BQ-linkage-71973ead8689": {
+  "tags": [
+   "linkage",
+   "module_4",
+   "遗传学",
+   "连锁与交换",
+   "league",
+   "competition",
+   "http://www.botany.org.cn/swxjs/swxls/202605/t20260518_838211.html",
+   "2026"
+  ],
+  "diff": "league",
+  "len": 84,
+  "src": "linkage",
+  "year": 2026,
+  "module": "module_4"
+ },
+ "BQ-linkage-90d8beb9019e": {
+  "tags": [
+   "linkage",
+   "module_4",
+   "遗传学",
+   "连锁与交换",
+   "league",
+   "competition",
+   "http://www.botany.org.cn/swxjs/swxls/202605/t20260518_838211.html",
+   "2026"
+  ],
+  "diff": "league",
+  "len": 142,
+  "src": "linkage",
+  "year": 2026,
+  "module": "module_4"
+ },
+ "BQ-linkage-e6868bd736dd": {
+  "tags": [
+   "linkage"
+  ],
+  "diff": "hard",
+  "len": 57,
+  "src": "linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-linkage-ebe6d9bc6225": {
+  "tags": [
+   "linkage"
+  ],
+  "diff": "hard",
+  "len": 57,
+  "src": "linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-linkage-f8aca56bc492": {
+  "tags": [
+   "linkage"
+  ],
+  "diff": "hard",
+  "len": 57,
+  "src": "linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-linkage-1963094b3f31": {
+  "tags": [
+   "linkage"
+  ],
+  "diff": "hard",
+  "len": 57,
+  "src": "linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-linkage-0af41dc67645": {
+  "tags": [
+   "linkage"
+  ],
+  "diff": "hard",
+  "len": 57,
+  "src": "linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-linkage-c95fa7bc3963": {
+  "tags": [
+   "linkage"
+  ],
+  "diff": "hard",
+  "len": 57,
+  "src": "linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-linkage-c2f3300981e3": {
+  "tags": [
+   "linkage"
+  ],
+  "diff": "hard",
+  "len": 57,
+  "src": "linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-linkage-34124ab3e2dd": {
+  "tags": [
+   "linkage"
+  ],
+  "diff": "hard",
+  "len": 57,
+  "src": "linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-linkage-ba667c242d5d": {
+  "tags": [
+   "linkage"
+  ],
+  "diff": "hard",
+  "len": 57,
+  "src": "linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-linkage-6faf2f24585e": {
+  "tags": [
+   "linkage"
+  ],
+  "diff": "hard",
+  "len": 57,
+  "src": "linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-linkage-7d4f415bd3c9": {
+  "tags": [
+   "linkage"
+  ],
+  "diff": "hard",
+  "len": 57,
+  "src": "linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-linkage-1f0697a97cb6": {
+  "tags": [
+   "linkage"
+  ],
+  "diff": "hard",
+  "len": 57,
+  "src": "linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-linkage-3ea9c3935b0b": {
+  "tags": [
+   "linkage"
+  ],
+  "diff": "hard",
+  "len": 57,
+  "src": "linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-linkage-dd7e47891cad": {
+  "tags": [
+   "linkage"
+  ],
+  "diff": "hard",
+  "len": 57,
+  "src": "linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-linkage-3b75e0e352b1": {
+  "tags": [
+   "linkage"
+  ],
+  "diff": "hard",
+  "len": 57,
+  "src": "linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-linkage-c4e0f866a759": {
+  "tags": [
+   "linkage"
+  ],
+  "diff": "hard",
+  "len": 57,
+  "src": "linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-linkage-534ab72d0b18": {
+  "tags": [
+   "linkage"
+  ],
+  "diff": "hard",
+  "len": 57,
+  "src": "linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-linkage-b224ad5b4d10": {
+  "tags": [
+   "linkage"
+  ],
+  "diff": "hard",
+  "len": 57,
+  "src": "linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-linkage-b59cf38c0723": {
+  "tags": [
+   "linkage"
+  ],
+  "diff": "hard",
+  "len": 57,
+  "src": "linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-linkage-ae742b9a6caa": {
+  "tags": [
+   "linkage"
+  ],
+  "diff": "hard",
+  "len": 57,
+  "src": "linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-linkage-7d0dfdea6f0e": {
+  "tags": [
+   "linkage"
+  ],
+  "diff": "hard",
+  "len": 57,
+  "src": "linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-linkage-ad8987c35a9e": {
+  "tags": [
+   "linkage"
+  ],
+  "diff": "hard",
+  "len": 57,
+  "src": "linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-linkage-1ab6b66df5d3": {
+  "tags": [
+   "linkage"
+  ],
+  "diff": "hard",
+  "len": 57,
+  "src": "linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-linkage-326ef82f7373": {
+  "tags": [
+   "linkage"
+  ],
+  "diff": "hard",
+  "len": 57,
+  "src": "linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-linkage-95d31d404ddd": {
+  "tags": [
+   "linkage"
+  ],
+  "diff": "medium",
+  "len": 27,
+  "src": "linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-linkage-5b8dad8ce77e": {
+  "tags": [
+   "linkage"
+  ],
+  "diff": "medium",
+  "len": 27,
+  "src": "linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-linkage-9255e203d156": {
+  "tags": [
+   "linkage"
+  ],
+  "diff": "medium",
+  "len": 27,
+  "src": "linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-linkage-297e0bea5626": {
+  "tags": [
+   "linkage"
+  ],
+  "diff": "medium",
+  "len": 27,
+  "src": "linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-linkage-2069c395f872": {
+  "tags": [
+   "linkage"
+  ],
+  "diff": "medium",
+  "len": 27,
+  "src": "linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-linkage-af6a73633cfd": {
+  "tags": [
+   "linkage"
+  ],
+  "diff": "medium",
+  "len": 27,
+  "src": "linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-linkage-9ae834643310": {
+  "tags": [
+   "linkage"
+  ],
+  "diff": "medium",
+  "len": 27,
+  "src": "linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-linkage-d2eefb423f0b": {
+  "tags": [
+   "linkage"
+  ],
+  "diff": "medium",
+  "len": 27,
+  "src": "linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-linkage-d3800a91d5f8": {
+  "tags": [
+   "linkage"
+  ],
+  "diff": "medium",
+  "len": 27,
+  "src": "linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-linkage-b553c932be33": {
+  "tags": [
+   "linkage"
+  ],
+  "diff": "medium",
+  "len": 27,
+  "src": "linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-linkage-34bc97ef3447": {
+  "tags": [
+   "linkage"
+  ],
+  "diff": "medium",
+  "len": 27,
+  "src": "linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-linkage-4b64a1e5befd": {
+  "tags": [
+   "linkage"
+  ],
+  "diff": "medium",
+  "len": 27,
+  "src": "linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-linkage-c02cc8ed8fe6": {
+  "tags": [
+   "linkage"
+  ],
+  "diff": "medium",
+  "len": 27,
+  "src": "linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-linkage-c7cd42911203": {
+  "tags": [
+   "linkage"
+  ],
+  "diff": "medium",
+  "len": 27,
+  "src": "linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-linkage-63d2e25d1e0b": {
+  "tags": [
+   "linkage"
+  ],
+  "diff": "medium",
+  "len": 27,
+  "src": "linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-linkage-a199fb0119a0": {
+  "tags": [
+   "linkage"
+  ],
+  "diff": "medium",
+  "len": 27,
+  "src": "linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-linkage-bb56ff60e2c7": {
+  "tags": [
+   "linkage"
+  ],
+  "diff": "medium",
+  "len": 27,
+  "src": "linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-linkage-1900f14ae88b": {
+  "tags": [
+   "linkage"
+  ],
+  "diff": "medium",
+  "len": 27,
+  "src": "linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-linkage-471693b3e3d8": {
+  "tags": [
+   "linkage"
+  ],
+  "diff": "medium",
+  "len": 27,
+  "src": "linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-linkage-b8501b285f54": {
+  "tags": [
+   "linkage"
+  ],
+  "diff": "medium",
+  "len": 27,
+  "src": "linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-linkage-d033bd23eca4": {
+  "tags": [
+   "linkage"
+  ],
+  "diff": "medium",
+  "len": 27,
+  "src": "linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-linkage-aa407a054b57": {
+  "tags": [
+   "linkage"
+  ],
+  "diff": "medium",
+  "len": 27,
+  "src": "linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-linkage-6dc0068fac0c": {
+  "tags": [
+   "linkage"
+  ],
+  "diff": "medium",
+  "len": 27,
+  "src": "linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-linkage-5e6c2304679b": {
+  "tags": [
+   "linkage"
+  ],
+  "diff": "medium",
+  "len": 27,
+  "src": "linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-linkage-7bc097a2cb2e": {
+  "tags": [
+   "linkage"
+  ],
+  "diff": "hard",
+  "len": 18,
+  "src": "linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-linkage-73f5ff1d55b7": {
+  "tags": [
+   "linkage"
+  ],
+  "diff": "hard",
+  "len": 18,
+  "src": "linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-linkage-d69cfea6e51e": {
+  "tags": [
+   "linkage"
+  ],
+  "diff": "hard",
+  "len": 18,
+  "src": "linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-linkage-02c34fce77b9": {
+  "tags": [
+   "linkage"
+  ],
+  "diff": "hard",
+  "len": 18,
+  "src": "linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-linkage-24c143a3fc6a": {
+  "tags": [
+   "linkage"
+  ],
+  "diff": "hard",
+  "len": 18,
+  "src": "linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-linkage-523bba35f2d2": {
+  "tags": [
+   "linkage"
+  ],
+  "diff": "hard",
+  "len": 18,
+  "src": "linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-linkage-291bf8f08463": {
+  "tags": [
+   "linkage"
+  ],
+  "diff": "hard",
+  "len": 18,
+  "src": "linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-linkage-eab249e8324d": {
+  "tags": [
+   "linkage"
+  ],
+  "diff": "hard",
+  "len": 18,
+  "src": "linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-linkage-083d8b10aa20": {
+  "tags": [
+   "linkage"
+  ],
+  "diff": "hard",
+  "len": 18,
+  "src": "linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-linkage-93f845cd2859": {
+  "tags": [
+   "linkage"
+  ],
+  "diff": "hard",
+  "len": 18,
+  "src": "linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-linkage-28e1976d4721": {
+  "tags": [
+   "linkage"
+  ],
+  "diff": "hard",
+  "len": 18,
+  "src": "linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-linkage-8914573dcb7a": {
+  "tags": [
+   "linkage"
+  ],
+  "diff": "hard",
+  "len": 18,
+  "src": "linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-linkage-f968662311c8": {
+  "tags": [
+   "linkage"
+  ],
+  "diff": "hard",
+  "len": 18,
+  "src": "linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-linkage-a4e55fc9d45e": {
+  "tags": [
+   "linkage"
+  ],
+  "diff": "hard",
+  "len": 18,
+  "src": "linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-linkage-073815f1e10e": {
+  "tags": [
+   "linkage"
+  ],
+  "diff": "hard",
+  "len": 18,
+  "src": "linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-linkage-4be7c86a2212": {
+  "tags": [
+   "linkage"
+  ],
+  "diff": "hard",
+  "len": 18,
+  "src": "linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-linkage-a075f03e981c": {
+  "tags": [
+   "linkage"
+  ],
+  "diff": "hard",
+  "len": 18,
+  "src": "linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-linkage-d16e55cbeef7": {
+  "tags": [
+   "linkage"
+  ],
+  "diff": "hard",
+  "len": 18,
+  "src": "linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-linkage-7310bfcf722c": {
+  "tags": [
+   "linkage"
+  ],
+  "diff": "hard",
+  "len": 18,
+  "src": "linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-linkage-3f21fb6b094d": {
+  "tags": [
+   "linkage"
+  ],
+  "diff": "hard",
+  "len": 18,
+  "src": "linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-linkage-42d7e3b59534": {
+  "tags": [
+   "linkage"
+  ],
+  "diff": "hard",
+  "len": 18,
+  "src": "linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-linkage-862de2e4de2d": {
+  "tags": [
+   "linkage"
+  ],
+  "diff": "hard",
+  "len": 18,
+  "src": "linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-linkage-7650f99200f2": {
+  "tags": [
+   "linkage"
+  ],
+  "diff": "hard",
+  "len": 18,
+  "src": "linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-linkage-72cc97a395d1": {
+  "tags": [
+   "linkage"
+  ],
+  "diff": "hard",
+  "len": 18,
+  "src": "linkage",
+  "year": 2025,
+  "module": 4
+ }
+}

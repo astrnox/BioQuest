@@ -1,0 +1,4202 @@
+{
+ "BQ-transcriptomics-87a7423fdbdc": {
+  "type": "mtf",
+  "question": "关于RNA-seq差异表达分析中的批次效应，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "ComBat-seq和RUVseq是去除RNA-seq数据批次效应的方法",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "只要测序深度足够批次数应就会自然消失",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "实验设计时随机分配样本到各批次可以有效控制批次效应",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "批次效应指与生物学问题无关的技术性变异来源",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:批次效应源于实验执行日期、操作人员、试剂批号等系统性差异,增加测序深度无法消除,需通过统计校正或实验设计控制。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "批次效应",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "88733658",
+  "tags": []
+ },
+ "BQ-transcriptomics-2e1f22d4ec63": {
+  "type": "mtf",
+  "question": "关于RNA-seq差异表达分析中的批次效应，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "ComBat-seq和RUVseq是去除RNA-seq数据批次效应的方法",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "只要测序深度足够批次数应就会自然消失",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "批次效应指与生物学问题无关的技术性变异来源",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "实验设计时随机分配样本到各批次可以有效控制批次效应",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:批次效应源于实验执行日期、操作人员、试剂批号等系统性差异,增加测序深度无法消除,需通过统计校正或实验设计控制。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "批次效应",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "88733658",
+  "tags": []
+ },
+ "BQ-transcriptomics-5a7959386d79": {
+  "type": "mtf",
+  "question": "关于RNA-seq差异表达分析中的批次效应，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "ComBat-seq和RUVseq是去除RNA-seq数据批次效应的方法",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "实验设计时随机分配样本到各批次可以有效控制批次效应",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "只要测序深度足够批次数应就会自然消失",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "批次效应指与生物学问题无关的技术性变异来源",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:批次效应源于实验执行日期、操作人员、试剂批号等系统性差异,增加测序深度无法消除,需通过统计校正或实验设计控制。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "批次效应",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "88733658",
+  "tags": []
+ },
+ "BQ-transcriptomics-2f7e8806c787": {
+  "type": "mtf",
+  "question": "关于RNA-seq差异表达分析中的批次效应，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "ComBat-seq和RUVseq是去除RNA-seq数据批次效应的方法",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "实验设计时随机分配样本到各批次可以有效控制批次效应",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "批次效应指与生物学问题无关的技术性变异来源",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "只要测序深度足够批次数应就会自然消失",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:批次效应源于实验执行日期、操作人员、试剂批号等系统性差异,增加测序深度无法消除,需通过统计校正或实验设计控制。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "批次效应",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "88733658",
+  "tags": []
+ },
+ "BQ-transcriptomics-c793968c34ef": {
+  "type": "mtf",
+  "question": "关于RNA-seq差异表达分析中的批次效应，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "ComBat-seq和RUVseq是去除RNA-seq数据批次效应的方法",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "批次效应指与生物学问题无关的技术性变异来源",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "只要测序深度足够批次数应就会自然消失",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "实验设计时随机分配样本到各批次可以有效控制批次效应",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:批次效应源于实验执行日期、操作人员、试剂批号等系统性差异,增加测序深度无法消除,需通过统计校正或实验设计控制。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "批次效应",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "88733658",
+  "tags": []
+ },
+ "BQ-transcriptomics-d927241a8312": {
+  "type": "mtf",
+  "question": "关于RNA-seq差异表达分析中的批次效应，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "ComBat-seq和RUVseq是去除RNA-seq数据批次效应的方法",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "批次效应指与生物学问题无关的技术性变异来源",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "实验设计时随机分配样本到各批次可以有效控制批次效应",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "只要测序深度足够批次数应就会自然消失",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:批次效应源于实验执行日期、操作人员、试剂批号等系统性差异,增加测序深度无法消除,需通过统计校正或实验设计控制。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "批次效应",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "88733658",
+  "tags": []
+ },
+ "BQ-transcriptomics-c4e1fb3ffb82": {
+  "type": "mtf",
+  "question": "关于RNA-seq差异表达分析中的批次效应，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "只要测序深度足够批次数应就会自然消失",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "ComBat-seq和RUVseq是去除RNA-seq数据批次效应的方法",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "实验设计时随机分配样本到各批次可以有效控制批次效应",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "批次效应指与生物学问题无关的技术性变异来源",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:批次效应源于实验执行日期、操作人员、试剂批号等系统性差异,增加测序深度无法消除,需通过统计校正或实验设计控制。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "批次效应",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "88733658",
+  "tags": []
+ },
+ "BQ-transcriptomics-10de8c939e40": {
+  "type": "mtf",
+  "question": "关于RNA-seq差异表达分析中的批次效应，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "只要测序深度足够批次数应就会自然消失",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "ComBat-seq和RUVseq是去除RNA-seq数据批次效应的方法",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "批次效应指与生物学问题无关的技术性变异来源",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "实验设计时随机分配样本到各批次可以有效控制批次效应",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:批次效应源于实验执行日期、操作人员、试剂批号等系统性差异,增加测序深度无法消除,需通过统计校正或实验设计控制。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "批次效应",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "88733658",
+  "tags": []
+ },
+ "BQ-transcriptomics-b9362fddb273": {
+  "type": "mtf",
+  "question": "关于RNA-seq差异表达分析中的批次效应，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "只要测序深度足够批次数应就会自然消失",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "实验设计时随机分配样本到各批次可以有效控制批次效应",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "ComBat-seq和RUVseq是去除RNA-seq数据批次效应的方法",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "批次效应指与生物学问题无关的技术性变异来源",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:批次效应源于实验执行日期、操作人员、试剂批号等系统性差异,增加测序深度无法消除,需通过统计校正或实验设计控制。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "批次效应",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "88733658",
+  "tags": []
+ },
+ "BQ-transcriptomics-07ec66fa8288": {
+  "type": "mtf",
+  "question": "关于RNA-seq差异表达分析中的批次效应，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "只要测序深度足够批次数应就会自然消失",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "实验设计时随机分配样本到各批次可以有效控制批次效应",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "批次效应指与生物学问题无关的技术性变异来源",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "ComBat-seq和RUVseq是去除RNA-seq数据批次效应的方法",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:批次效应源于实验执行日期、操作人员、试剂批号等系统性差异,增加测序深度无法消除,需通过统计校正或实验设计控制。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "批次效应",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "88733658",
+  "tags": []
+ },
+ "BQ-transcriptomics-50a327ef3b43": {
+  "type": "mtf",
+  "question": "关于RNA-seq差异表达分析中的批次效应，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "只要测序深度足够批次数应就会自然消失",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "批次效应指与生物学问题无关的技术性变异来源",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "ComBat-seq和RUVseq是去除RNA-seq数据批次效应的方法",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "实验设计时随机分配样本到各批次可以有效控制批次效应",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:批次效应源于实验执行日期、操作人员、试剂批号等系统性差异,增加测序深度无法消除,需通过统计校正或实验设计控制。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "批次效应",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "88733658",
+  "tags": []
+ },
+ "BQ-transcriptomics-d9a35bf98dbc": {
+  "type": "mtf",
+  "question": "关于RNA-seq差异表达分析中的批次效应，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "只要测序深度足够批次数应就会自然消失",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "批次效应指与生物学问题无关的技术性变异来源",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "实验设计时随机分配样本到各批次可以有效控制批次效应",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "ComBat-seq和RUVseq是去除RNA-seq数据批次效应的方法",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:批次效应源于实验执行日期、操作人员、试剂批号等系统性差异,增加测序深度无法消除,需通过统计校正或实验设计控制。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "批次效应",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "88733658",
+  "tags": []
+ },
+ "BQ-transcriptomics-0cc9891b69ea": {
+  "type": "mtf",
+  "question": "关于RNA-seq差异表达分析中的批次效应，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "实验设计时随机分配样本到各批次可以有效控制批次效应",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "ComBat-seq和RUVseq是去除RNA-seq数据批次效应的方法",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "只要测序深度足够批次数应就会自然消失",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "批次效应指与生物学问题无关的技术性变异来源",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:批次效应源于实验执行日期、操作人员、试剂批号等系统性差异,增加测序深度无法消除,需通过统计校正或实验设计控制。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "批次效应",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "88733658",
+  "tags": []
+ },
+ "BQ-transcriptomics-9a94f97dabd0": {
+  "type": "mtf",
+  "question": "关于RNA-seq差异表达分析中的批次效应，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "实验设计时随机分配样本到各批次可以有效控制批次效应",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "ComBat-seq和RUVseq是去除RNA-seq数据批次效应的方法",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "批次效应指与生物学问题无关的技术性变异来源",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "只要测序深度足够批次数应就会自然消失",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:批次效应源于实验执行日期、操作人员、试剂批号等系统性差异,增加测序深度无法消除,需通过统计校正或实验设计控制。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "批次效应",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "88733658",
+  "tags": []
+ },
+ "BQ-transcriptomics-e4501c49c6e2": {
+  "type": "mtf",
+  "question": "关于RNA-seq差异表达分析中的批次效应，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "实验设计时随机分配样本到各批次可以有效控制批次效应",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "只要测序深度足够批次数应就会自然消失",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "ComBat-seq和RUVseq是去除RNA-seq数据批次效应的方法",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "批次效应指与生物学问题无关的技术性变异来源",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:批次效应源于实验执行日期、操作人员、试剂批号等系统性差异,增加测序深度无法消除,需通过统计校正或实验设计控制。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "批次效应",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "88733658",
+  "tags": []
+ },
+ "BQ-transcriptomics-025ed020e3da": {
+  "type": "mtf",
+  "question": "关于RNA-seq差异表达分析中的批次效应，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "实验设计时随机分配样本到各批次可以有效控制批次效应",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "只要测序深度足够批次数应就会自然消失",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "批次效应指与生物学问题无关的技术性变异来源",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "ComBat-seq和RUVseq是去除RNA-seq数据批次效应的方法",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:批次效应源于实验执行日期、操作人员、试剂批号等系统性差异,增加测序深度无法消除,需通过统计校正或实验设计控制。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "批次效应",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "88733658",
+  "tags": []
+ },
+ "BQ-transcriptomics-200af83f5ca9": {
+  "type": "mtf",
+  "question": "关于RNA-seq差异表达分析中的批次效应，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "实验设计时随机分配样本到各批次可以有效控制批次效应",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "批次效应指与生物学问题无关的技术性变异来源",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "ComBat-seq和RUVseq是去除RNA-seq数据批次效应的方法",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "只要测序深度足够批次数应就会自然消失",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:批次效应源于实验执行日期、操作人员、试剂批号等系统性差异,增加测序深度无法消除,需通过统计校正或实验设计控制。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "批次效应",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "88733658",
+  "tags": []
+ },
+ "BQ-transcriptomics-70951d4578c6": {
+  "type": "mtf",
+  "question": "关于RNA-seq差异表达分析中的批次效应，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "实验设计时随机分配样本到各批次可以有效控制批次效应",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "批次效应指与生物学问题无关的技术性变异来源",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "只要测序深度足够批次数应就会自然消失",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "ComBat-seq和RUVseq是去除RNA-seq数据批次效应的方法",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:批次效应源于实验执行日期、操作人员、试剂批号等系统性差异,增加测序深度无法消除,需通过统计校正或实验设计控制。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "批次效应",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "88733658",
+  "tags": []
+ },
+ "BQ-transcriptomics-79686aba0c04": {
+  "type": "mtf",
+  "question": "关于RNA-seq差异表达分析中的批次效应，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "批次效应指与生物学问题无关的技术性变异来源",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "ComBat-seq和RUVseq是去除RNA-seq数据批次效应的方法",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "只要测序深度足够批次数应就会自然消失",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "实验设计时随机分配样本到各批次可以有效控制批次效应",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:批次效应源于实验执行日期、操作人员、试剂批号等系统性差异,增加测序深度无法消除,需通过统计校正或实验设计控制。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "批次效应",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "88733658",
+  "tags": []
+ },
+ "BQ-transcriptomics-1323209a6d45": {
+  "type": "mtf",
+  "question": "关于RNA-seq差异表达分析中的批次效应，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "批次效应指与生物学问题无关的技术性变异来源",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "ComBat-seq和RUVseq是去除RNA-seq数据批次效应的方法",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "实验设计时随机分配样本到各批次可以有效控制批次效应",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "只要测序深度足够批次数应就会自然消失",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:批次效应源于实验执行日期、操作人员、试剂批号等系统性差异,增加测序深度无法消除,需通过统计校正或实验设计控制。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "批次效应",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "88733658",
+  "tags": []
+ },
+ "BQ-transcriptomics-5b9a1a588665": {
+  "type": "mtf",
+  "question": "关于RNA-seq差异表达分析中的批次效应，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "批次效应指与生物学问题无关的技术性变异来源",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "只要测序深度足够批次数应就会自然消失",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "ComBat-seq和RUVseq是去除RNA-seq数据批次效应的方法",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "实验设计时随机分配样本到各批次可以有效控制批次效应",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:批次效应源于实验执行日期、操作人员、试剂批号等系统性差异,增加测序深度无法消除,需通过统计校正或实验设计控制。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "批次效应",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "88733658",
+  "tags": []
+ },
+ "BQ-transcriptomics-351a5e91a90f": {
+  "type": "mtf",
+  "question": "关于RNA-seq差异表达分析中的批次效应，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "批次效应指与生物学问题无关的技术性变异来源",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "只要测序深度足够批次数应就会自然消失",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "实验设计时随机分配样本到各批次可以有效控制批次效应",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "ComBat-seq和RUVseq是去除RNA-seq数据批次效应的方法",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:批次效应源于实验执行日期、操作人员、试剂批号等系统性差异,增加测序深度无法消除,需通过统计校正或实验设计控制。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "批次效应",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "88733658",
+  "tags": []
+ },
+ "BQ-transcriptomics-37f7042d783e": {
+  "type": "mtf",
+  "question": "关于RNA-seq差异表达分析中的批次效应，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "批次效应指与生物学问题无关的技术性变异来源",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "实验设计时随机分配样本到各批次可以有效控制批次效应",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "ComBat-seq和RUVseq是去除RNA-seq数据批次效应的方法",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "只要测序深度足够批次数应就会自然消失",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:批次效应源于实验执行日期、操作人员、试剂批号等系统性差异,增加测序深度无法消除,需通过统计校正或实验设计控制。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "批次效应",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "88733658",
+  "tags": []
+ },
+ "BQ-transcriptomics-ad858a015fc2": {
+  "type": "mtf",
+  "question": "关于RNA-seq差异表达分析中的批次效应，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "批次效应指与生物学问题无关的技术性变异来源",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "实验设计时随机分配样本到各批次可以有效控制批次效应",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "只要测序深度足够批次数应就会自然消失",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "ComBat-seq和RUVseq是去除RNA-seq数据批次效应的方法",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:批次效应源于实验执行日期、操作人员、试剂批号等系统性差异,增加测序深度无法消除,需通过统计校正或实验设计控制。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "批次效应",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "88733658",
+  "tags": []
+ },
+ "BQ-transcriptomics-2b01e1f9ee60": {
+  "type": "mtf",
+  "question": "关于基因共表达网络分析，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "WGCNA(权重基因共表达网络分析)利用基因表达模式的相似性构建无尺度网络并识别共表达模块",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "共表达关系等同于直接的物理相互作用",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "共表达网络中的核心基因(hub gene)往往在相应生物过程中具有重要调控功能",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "在共表达网络中，与目标性状最相关的模块可能富集了参与该性状调控的关键基因",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确:WGCNA原理。D正确:模块-性状关联。C正确:hub基因的功能重要性。B错误:共表达反映转录层面的相关性，可能是间接的(由共同的转录因子或信号通路调控)，不等于物理互作。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "共表达网络",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1535855328",
+  "tags": []
+ },
+ "BQ-transcriptomics-599649eb998a": {
+  "type": "mtf",
+  "question": "关于基因共表达网络分析，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "WGCNA(权重基因共表达网络分析)利用基因表达模式的相似性构建无尺度网络并识别共表达模块",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "共表达关系等同于直接的物理相互作用",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "在共表达网络中，与目标性状最相关的模块可能富集了参与该性状调控的关键基因",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "共表达网络中的核心基因(hub gene)往往在相应生物过程中具有重要调控功能",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确:WGCNA原理。C正确:模块-性状关联。D正确:hub基因的功能重要性。B错误:共表达反映转录层面的相关性，可能是间接的(由共同的转录因子或信号通路调控)，不等于物理互作。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "共表达网络",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1535855328",
+  "tags": []
+ },
+ "BQ-transcriptomics-4d366cef4f1b": {
+  "type": "mtf",
+  "question": "关于基因共表达网络分析，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "WGCNA(权重基因共表达网络分析)利用基因表达模式的相似性构建无尺度网络并识别共表达模块",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "共表达网络中的核心基因(hub gene)往往在相应生物过程中具有重要调控功能",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "共表达关系等同于直接的物理相互作用",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "在共表达网络中，与目标性状最相关的模块可能富集了参与该性状调控的关键基因",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确:WGCNA原理。D正确:模块-性状关联。B正确:hub基因的功能重要性。C错误:共表达反映转录层面的相关性，可能是间接的(由共同的转录因子或信号通路调控)，不等于物理互作。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "共表达网络",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1535855328",
+  "tags": []
+ },
+ "BQ-transcriptomics-67226e9b3f60": {
+  "type": "mtf",
+  "question": "关于基因共表达网络分析，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "WGCNA(权重基因共表达网络分析)利用基因表达模式的相似性构建无尺度网络并识别共表达模块",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "共表达网络中的核心基因(hub gene)往往在相应生物过程中具有重要调控功能",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "在共表达网络中，与目标性状最相关的模块可能富集了参与该性状调控的关键基因",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "共表达关系等同于直接的物理相互作用",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确:WGCNA原理。C正确:模块-性状关联。B正确:hub基因的功能重要性。D错误:共表达反映转录层面的相关性，可能是间接的(由共同的转录因子或信号通路调控)，不等于物理互作。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "共表达网络",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1535855328",
+  "tags": []
+ },
+ "BQ-transcriptomics-5f09ebea1c5b": {
+  "type": "mtf",
+  "question": "关于基因共表达网络分析，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "WGCNA(权重基因共表达网络分析)利用基因表达模式的相似性构建无尺度网络并识别共表达模块",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "在共表达网络中，与目标性状最相关的模块可能富集了参与该性状调控的关键基因",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "共表达关系等同于直接的物理相互作用",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "共表达网络中的核心基因(hub gene)往往在相应生物过程中具有重要调控功能",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确:WGCNA原理。B正确:模块-性状关联。D正确:hub基因的功能重要性。C错误:共表达反映转录层面的相关性，可能是间接的(由共同的转录因子或信号通路调控)，不等于物理互作。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "共表达网络",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1535855328",
+  "tags": []
+ },
+ "BQ-transcriptomics-3e720adaf01a": {
+  "type": "mtf",
+  "question": "关于基因共表达网络分析，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "WGCNA(权重基因共表达网络分析)利用基因表达模式的相似性构建无尺度网络并识别共表达模块",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "在共表达网络中，与目标性状最相关的模块可能富集了参与该性状调控的关键基因",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "共表达网络中的核心基因(hub gene)往往在相应生物过程中具有重要调控功能",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "共表达关系等同于直接的物理相互作用",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确:WGCNA原理。B正确:模块-性状关联。C正确:hub基因的功能重要性。D错误:共表达反映转录层面的相关性，可能是间接的(由共同的转录因子或信号通路调控)，不等于物理互作。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "共表达网络",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1535855328",
+  "tags": []
+ },
+ "BQ-transcriptomics-bb7f8bc79fc6": {
+  "type": "mtf",
+  "question": "关于基因共表达网络分析，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "共表达关系等同于直接的物理相互作用",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "WGCNA(权重基因共表达网络分析)利用基因表达模式的相似性构建无尺度网络并识别共表达模块",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "共表达网络中的核心基因(hub gene)往往在相应生物过程中具有重要调控功能",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "在共表达网络中，与目标性状最相关的模块可能富集了参与该性状调控的关键基因",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确:WGCNA原理。D正确:模块-性状关联。C正确:hub基因的功能重要性。A错误:共表达反映转录层面的相关性，可能是间接的(由共同的转录因子或信号通路调控)，不等于物理互作。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "共表达网络",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1535855328",
+  "tags": []
+ },
+ "BQ-transcriptomics-dd9f3ecc0d3c": {
+  "type": "mtf",
+  "question": "关于基因共表达网络分析，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "共表达关系等同于直接的物理相互作用",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "WGCNA(权重基因共表达网络分析)利用基因表达模式的相似性构建无尺度网络并识别共表达模块",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "在共表达网络中，与目标性状最相关的模块可能富集了参与该性状调控的关键基因",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "共表达网络中的核心基因(hub gene)往往在相应生物过程中具有重要调控功能",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确:WGCNA原理。C正确:模块-性状关联。D正确:hub基因的功能重要性。A错误:共表达反映转录层面的相关性，可能是间接的(由共同的转录因子或信号通路调控)，不等于物理互作。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "共表达网络",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1535855328",
+  "tags": []
+ },
+ "BQ-transcriptomics-20c73cf0c214": {
+  "type": "mtf",
+  "question": "关于基因共表达网络分析，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "共表达关系等同于直接的物理相互作用",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "共表达网络中的核心基因(hub gene)往往在相应生物过程中具有重要调控功能",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "WGCNA(权重基因共表达网络分析)利用基因表达模式的相似性构建无尺度网络并识别共表达模块",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "在共表达网络中，与目标性状最相关的模块可能富集了参与该性状调控的关键基因",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确:WGCNA原理。D正确:模块-性状关联。B正确:hub基因的功能重要性。A错误:共表达反映转录层面的相关性，可能是间接的(由共同的转录因子或信号通路调控)，不等于物理互作。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "共表达网络",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1535855328",
+  "tags": []
+ },
+ "BQ-transcriptomics-f34156b67768": {
+  "type": "mtf",
+  "question": "关于基因共表达网络分析，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "共表达关系等同于直接的物理相互作用",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "共表达网络中的核心基因(hub gene)往往在相应生物过程中具有重要调控功能",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "在共表达网络中，与目标性状最相关的模块可能富集了参与该性状调控的关键基因",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "WGCNA(权重基因共表达网络分析)利用基因表达模式的相似性构建无尺度网络并识别共表达模块",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确:WGCNA原理。C正确:模块-性状关联。B正确:hub基因的功能重要性。A错误:共表达反映转录层面的相关性，可能是间接的(由共同的转录因子或信号通路调控)，不等于物理互作。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "共表达网络",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1535855328",
+  "tags": []
+ },
+ "BQ-transcriptomics-9fb9e96dc498": {
+  "type": "mtf",
+  "question": "关于基因共表达网络分析，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "共表达关系等同于直接的物理相互作用",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "在共表达网络中，与目标性状最相关的模块可能富集了参与该性状调控的关键基因",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "WGCNA(权重基因共表达网络分析)利用基因表达模式的相似性构建无尺度网络并识别共表达模块",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "共表达网络中的核心基因(hub gene)往往在相应生物过程中具有重要调控功能",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确:WGCNA原理。B正确:模块-性状关联。D正确:hub基因的功能重要性。A错误:共表达反映转录层面的相关性，可能是间接的(由共同的转录因子或信号通路调控)，不等于物理互作。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "共表达网络",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1535855328",
+  "tags": []
+ },
+ "BQ-transcriptomics-928404602ee2": {
+  "type": "mtf",
+  "question": "关于基因共表达网络分析，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "共表达关系等同于直接的物理相互作用",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "在共表达网络中，与目标性状最相关的模块可能富集了参与该性状调控的关键基因",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "共表达网络中的核心基因(hub gene)往往在相应生物过程中具有重要调控功能",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "WGCNA(权重基因共表达网络分析)利用基因表达模式的相似性构建无尺度网络并识别共表达模块",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确:WGCNA原理。B正确:模块-性状关联。C正确:hub基因的功能重要性。A错误:共表达反映转录层面的相关性，可能是间接的(由共同的转录因子或信号通路调控)，不等于物理互作。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "共表达网络",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1535855328",
+  "tags": []
+ },
+ "BQ-transcriptomics-1eaa7b34549e": {
+  "type": "mtf",
+  "question": "关于基因共表达网络分析，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "共表达网络中的核心基因(hub gene)往往在相应生物过程中具有重要调控功能",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "WGCNA(权重基因共表达网络分析)利用基因表达模式的相似性构建无尺度网络并识别共表达模块",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "共表达关系等同于直接的物理相互作用",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "在共表达网络中，与目标性状最相关的模块可能富集了参与该性状调控的关键基因",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确:WGCNA原理。D正确:模块-性状关联。A正确:hub基因的功能重要性。C错误:共表达反映转录层面的相关性，可能是间接的(由共同的转录因子或信号通路调控)，不等于物理互作。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "共表达网络",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1535855328",
+  "tags": []
+ },
+ "BQ-transcriptomics-352ed185d821": {
+  "type": "mtf",
+  "question": "关于基因共表达网络分析，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "共表达网络中的核心基因(hub gene)往往在相应生物过程中具有重要调控功能",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "WGCNA(权重基因共表达网络分析)利用基因表达模式的相似性构建无尺度网络并识别共表达模块",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "在共表达网络中，与目标性状最相关的模块可能富集了参与该性状调控的关键基因",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "共表达关系等同于直接的物理相互作用",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确:WGCNA原理。C正确:模块-性状关联。A正确:hub基因的功能重要性。D错误:共表达反映转录层面的相关性，可能是间接的(由共同的转录因子或信号通路调控)，不等于物理互作。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "共表达网络",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1535855328",
+  "tags": []
+ },
+ "BQ-transcriptomics-2f52c5becac9": {
+  "type": "mtf",
+  "question": "关于基因共表达网络分析，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "共表达网络中的核心基因(hub gene)往往在相应生物过程中具有重要调控功能",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "共表达关系等同于直接的物理相互作用",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "WGCNA(权重基因共表达网络分析)利用基因表达模式的相似性构建无尺度网络并识别共表达模块",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "在共表达网络中，与目标性状最相关的模块可能富集了参与该性状调控的关键基因",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确:WGCNA原理。D正确:模块-性状关联。A正确:hub基因的功能重要性。B错误:共表达反映转录层面的相关性，可能是间接的(由共同的转录因子或信号通路调控)，不等于物理互作。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "共表达网络",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1535855328",
+  "tags": []
+ },
+ "BQ-transcriptomics-a27f19cb3e62": {
+  "type": "mtf",
+  "question": "关于基因共表达网络分析，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "共表达网络中的核心基因(hub gene)往往在相应生物过程中具有重要调控功能",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "共表达关系等同于直接的物理相互作用",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "在共表达网络中，与目标性状最相关的模块可能富集了参与该性状调控的关键基因",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "WGCNA(权重基因共表达网络分析)利用基因表达模式的相似性构建无尺度网络并识别共表达模块",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确:WGCNA原理。C正确:模块-性状关联。A正确:hub基因的功能重要性。B错误:共表达反映转录层面的相关性，可能是间接的(由共同的转录因子或信号通路调控)，不等于物理互作。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "共表达网络",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1535855328",
+  "tags": []
+ },
+ "BQ-transcriptomics-10e58416a99d": {
+  "type": "mtf",
+  "question": "关于基因共表达网络分析，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "共表达网络中的核心基因(hub gene)往往在相应生物过程中具有重要调控功能",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "在共表达网络中，与目标性状最相关的模块可能富集了参与该性状调控的关键基因",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "WGCNA(权重基因共表达网络分析)利用基因表达模式的相似性构建无尺度网络并识别共表达模块",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "共表达关系等同于直接的物理相互作用",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确:WGCNA原理。B正确:模块-性状关联。A正确:hub基因的功能重要性。D错误:共表达反映转录层面的相关性，可能是间接的(由共同的转录因子或信号通路调控)，不等于物理互作。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "共表达网络",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1535855328",
+  "tags": []
+ },
+ "BQ-transcriptomics-27a837a16258": {
+  "type": "mtf",
+  "question": "关于基因共表达网络分析，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "共表达网络中的核心基因(hub gene)往往在相应生物过程中具有重要调控功能",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "在共表达网络中，与目标性状最相关的模块可能富集了参与该性状调控的关键基因",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "共表达关系等同于直接的物理相互作用",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "WGCNA(权重基因共表达网络分析)利用基因表达模式的相似性构建无尺度网络并识别共表达模块",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确:WGCNA原理。B正确:模块-性状关联。A正确:hub基因的功能重要性。C错误:共表达反映转录层面的相关性，可能是间接的(由共同的转录因子或信号通路调控)，不等于物理互作。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "共表达网络",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1535855328",
+  "tags": []
+ },
+ "BQ-transcriptomics-35d74db0f5f2": {
+  "type": "mtf",
+  "question": "关于基因共表达网络分析，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "在共表达网络中，与目标性状最相关的模块可能富集了参与该性状调控的关键基因",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "WGCNA(权重基因共表达网络分析)利用基因表达模式的相似性构建无尺度网络并识别共表达模块",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "共表达关系等同于直接的物理相互作用",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "共表达网络中的核心基因(hub gene)往往在相应生物过程中具有重要调控功能",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确:WGCNA原理。A正确:模块-性状关联。D正确:hub基因的功能重要性。C错误:共表达反映转录层面的相关性，可能是间接的(由共同的转录因子或信号通路调控)，不等于物理互作。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "共表达网络",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1535855328",
+  "tags": []
+ },
+ "BQ-transcriptomics-f34f9ac0eacd": {
+  "type": "mtf",
+  "question": "关于基因共表达网络分析，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "在共表达网络中，与目标性状最相关的模块可能富集了参与该性状调控的关键基因",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "WGCNA(权重基因共表达网络分析)利用基因表达模式的相似性构建无尺度网络并识别共表达模块",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "共表达网络中的核心基因(hub gene)往往在相应生物过程中具有重要调控功能",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "共表达关系等同于直接的物理相互作用",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确:WGCNA原理。A正确:模块-性状关联。C正确:hub基因的功能重要性。D错误:共表达反映转录层面的相关性，可能是间接的(由共同的转录因子或信号通路调控)，不等于物理互作。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "共表达网络",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1535855328",
+  "tags": []
+ },
+ "BQ-transcriptomics-679a9e76a87c": {
+  "type": "mtf",
+  "question": "关于基因共表达网络分析，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "在共表达网络中，与目标性状最相关的模块可能富集了参与该性状调控的关键基因",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "共表达关系等同于直接的物理相互作用",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "WGCNA(权重基因共表达网络分析)利用基因表达模式的相似性构建无尺度网络并识别共表达模块",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "共表达网络中的核心基因(hub gene)往往在相应生物过程中具有重要调控功能",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确:WGCNA原理。A正确:模块-性状关联。D正确:hub基因的功能重要性。B错误:共表达反映转录层面的相关性，可能是间接的(由共同的转录因子或信号通路调控)，不等于物理互作。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "共表达网络",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1535855328",
+  "tags": []
+ },
+ "BQ-transcriptomics-e51f940ba59e": {
+  "type": "mtf",
+  "question": "关于基因共表达网络分析，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "在共表达网络中，与目标性状最相关的模块可能富集了参与该性状调控的关键基因",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "共表达关系等同于直接的物理相互作用",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "共表达网络中的核心基因(hub gene)往往在相应生物过程中具有重要调控功能",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "WGCNA(权重基因共表达网络分析)利用基因表达模式的相似性构建无尺度网络并识别共表达模块",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确:WGCNA原理。A正确:模块-性状关联。C正确:hub基因的功能重要性。B错误:共表达反映转录层面的相关性，可能是间接的(由共同的转录因子或信号通路调控)，不等于物理互作。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "共表达网络",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1535855328",
+  "tags": []
+ },
+ "BQ-transcriptomics-c8cb74fe5cc3": {
+  "type": "mtf",
+  "question": "关于基因共表达网络分析，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "在共表达网络中，与目标性状最相关的模块可能富集了参与该性状调控的关键基因",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "共表达网络中的核心基因(hub gene)往往在相应生物过程中具有重要调控功能",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "WGCNA(权重基因共表达网络分析)利用基因表达模式的相似性构建无尺度网络并识别共表达模块",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "共表达关系等同于直接的物理相互作用",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确:WGCNA原理。A正确:模块-性状关联。B正确:hub基因的功能重要性。D错误:共表达反映转录层面的相关性，可能是间接的(由共同的转录因子或信号通路调控)，不等于物理互作。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "共表达网络",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1535855328",
+  "tags": []
+ },
+ "BQ-transcriptomics-38f66adf2110": {
+  "type": "mtf",
+  "question": "关于基因共表达网络分析，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "在共表达网络中，与目标性状最相关的模块可能富集了参与该性状调控的关键基因",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "共表达网络中的核心基因(hub gene)往往在相应生物过程中具有重要调控功能",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "共表达关系等同于直接的物理相互作用",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "WGCNA(权重基因共表达网络分析)利用基因表达模式的相似性构建无尺度网络并识别共表达模块",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确:WGCNA原理。A正确:模块-性状关联。B正确:hub基因的功能重要性。C错误:共表达反映转录层面的相关性，可能是间接的(由共同的转录因子或信号通路调控)，不等于物理互作。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "共表达网络",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1535855328",
+  "tags": []
+ },
+ "BQ-transcriptomics-568586954198": {
+  "type": "mtf",
+  "question": "关于基因表达数据的聚类分析，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "K-means聚类需要预先指定聚类的簇数K",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "层次聚类生成树状图，根据基因表达模式的相似性将基因分组",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "热图是基因表达谱数据可视化的常用方法，颜色深浅表示表达量的高低",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "聚类分析可以确定基因之间的因果关系",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确：层次聚类的原理。A正确：K-means的特征。C正确：热图可视化的原理。D错误：聚类分析仅揭示基因表达模式的相关性（共表达模式），不能推断因果关系。因果推断需要基因扰动实验（如敲除、过表达）和后续的效应分析。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "基因表达聚类",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "978056368",
+  "tags": []
+ },
+ "BQ-transcriptomics-31306595613c": {
+  "type": "mtf",
+  "question": "关于基因表达数据的聚类分析，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "K-means聚类需要预先指定聚类的簇数K",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "层次聚类生成树状图，根据基因表达模式的相似性将基因分组",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "聚类分析可以确定基因之间的因果关系",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "热图是基因表达谱数据可视化的常用方法，颜色深浅表示表达量的高低",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：层次聚类的原理。A正确：K-means的特征。D正确：热图可视化的原理。C错误：聚类分析仅揭示基因表达模式的相关性（共表达模式），不能推断因果关系。因果推断需要基因扰动实验（如敲除、过表达）和后续的效应分析。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "基因表达聚类",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "978056368",
+  "tags": []
+ },
+ "BQ-transcriptomics-6c5cf6f27665": {
+  "type": "mtf",
+  "question": "关于基因表达数据的聚类分析，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "K-means聚类需要预先指定聚类的簇数K",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "热图是基因表达谱数据可视化的常用方法，颜色深浅表示表达量的高低",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "层次聚类生成树状图，根据基因表达模式的相似性将基因分组",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "聚类分析可以确定基因之间的因果关系",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确：层次聚类的原理。A正确：K-means的特征。B正确：热图可视化的原理。D错误：聚类分析仅揭示基因表达模式的相关性（共表达模式），不能推断因果关系。因果推断需要基因扰动实验（如敲除、过表达）和后续的效应分析。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "基因表达聚类",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "978056368",
+  "tags": []
+ },
+ "BQ-transcriptomics-bbe608a75d76": {
+  "type": "mtf",
+  "question": "关于基因表达数据的聚类分析，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "K-means聚类需要预先指定聚类的簇数K",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "热图是基因表达谱数据可视化的常用方法，颜色深浅表示表达量的高低",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "聚类分析可以确定基因之间的因果关系",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "层次聚类生成树状图，根据基因表达模式的相似性将基因分组",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：层次聚类的原理。A正确：K-means的特征。B正确：热图可视化的原理。C错误：聚类分析仅揭示基因表达模式的相关性（共表达模式），不能推断因果关系。因果推断需要基因扰动实验（如敲除、过表达）和后续的效应分析。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "基因表达聚类",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "978056368",
+  "tags": []
+ },
+ "BQ-transcriptomics-426b0b5c19bc": {
+  "type": "mtf",
+  "question": "关于基因表达数据的聚类分析，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "K-means聚类需要预先指定聚类的簇数K",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "聚类分析可以确定基因之间的因果关系",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "层次聚类生成树状图，根据基因表达模式的相似性将基因分组",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "热图是基因表达谱数据可视化的常用方法，颜色深浅表示表达量的高低",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：层次聚类的原理。A正确：K-means的特征。D正确：热图可视化的原理。B错误：聚类分析仅揭示基因表达模式的相关性（共表达模式），不能推断因果关系。因果推断需要基因扰动实验（如敲除、过表达）和后续的效应分析。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "基因表达聚类",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "978056368",
+  "tags": []
+ },
+ "BQ-transcriptomics-1c045f212d6c": {
+  "type": "mtf",
+  "question": "关于基因表达数据的聚类分析，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "K-means聚类需要预先指定聚类的簇数K",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "聚类分析可以确定基因之间的因果关系",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "热图是基因表达谱数据可视化的常用方法，颜色深浅表示表达量的高低",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "层次聚类生成树状图，根据基因表达模式的相似性将基因分组",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：层次聚类的原理。A正确：K-means的特征。C正确：热图可视化的原理。B错误：聚类分析仅揭示基因表达模式的相关性（共表达模式），不能推断因果关系。因果推断需要基因扰动实验（如敲除、过表达）和后续的效应分析。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "基因表达聚类",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "978056368",
+  "tags": []
+ },
+ "BQ-transcriptomics-0dab62b0d322": {
+  "type": "mtf",
+  "question": "关于基因表达数据的聚类分析，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "层次聚类生成树状图，根据基因表达模式的相似性将基因分组",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "K-means聚类需要预先指定聚类的簇数K",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "热图是基因表达谱数据可视化的常用方法，颜色深浅表示表达量的高低",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "聚类分析可以确定基因之间的因果关系",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确：层次聚类的原理。B正确：K-means的特征。C正确：热图可视化的原理。D错误：聚类分析仅揭示基因表达模式的相关性（共表达模式），不能推断因果关系。因果推断需要基因扰动实验（如敲除、过表达）和后续的效应分析。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "基因表达聚类",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "978056368",
+  "tags": []
+ },
+ "BQ-transcriptomics-b9cd9552d651": {
+  "type": "mtf",
+  "question": "关于基因表达数据的聚类分析，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "层次聚类生成树状图，根据基因表达模式的相似性将基因分组",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "K-means聚类需要预先指定聚类的簇数K",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "聚类分析可以确定基因之间的因果关系",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "热图是基因表达谱数据可视化的常用方法，颜色深浅表示表达量的高低",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：层次聚类的原理。B正确：K-means的特征。D正确：热图可视化的原理。C错误：聚类分析仅揭示基因表达模式的相关性（共表达模式），不能推断因果关系。因果推断需要基因扰动实验（如敲除、过表达）和后续的效应分析。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "基因表达聚类",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "978056368",
+  "tags": []
+ },
+ "BQ-transcriptomics-e77eefa6fc79": {
+  "type": "mtf",
+  "question": "关于基因表达数据的聚类分析，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "层次聚类生成树状图，根据基因表达模式的相似性将基因分组",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "热图是基因表达谱数据可视化的常用方法，颜色深浅表示表达量的高低",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "K-means聚类需要预先指定聚类的簇数K",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "聚类分析可以确定基因之间的因果关系",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确：层次聚类的原理。C正确：K-means的特征。B正确：热图可视化的原理。D错误：聚类分析仅揭示基因表达模式的相关性（共表达模式），不能推断因果关系。因果推断需要基因扰动实验（如敲除、过表达）和后续的效应分析。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "基因表达聚类",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "978056368",
+  "tags": []
+ },
+ "BQ-transcriptomics-c7898527a2d4": {
+  "type": "mtf",
+  "question": "关于基因表达数据的聚类分析，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "层次聚类生成树状图，根据基因表达模式的相似性将基因分组",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "热图是基因表达谱数据可视化的常用方法，颜色深浅表示表达量的高低",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "聚类分析可以确定基因之间的因果关系",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "K-means聚类需要预先指定聚类的簇数K",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：层次聚类的原理。D正确：K-means的特征。B正确：热图可视化的原理。C错误：聚类分析仅揭示基因表达模式的相关性（共表达模式），不能推断因果关系。因果推断需要基因扰动实验（如敲除、过表达）和后续的效应分析。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "基因表达聚类",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "978056368",
+  "tags": []
+ },
+ "BQ-transcriptomics-5bc561361d67": {
+  "type": "mtf",
+  "question": "关于基因表达数据的聚类分析，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "层次聚类生成树状图，根据基因表达模式的相似性将基因分组",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "聚类分析可以确定基因之间的因果关系",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "K-means聚类需要预先指定聚类的簇数K",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "热图是基因表达谱数据可视化的常用方法，颜色深浅表示表达量的高低",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：层次聚类的原理。C正确：K-means的特征。D正确：热图可视化的原理。B错误：聚类分析仅揭示基因表达模式的相关性（共表达模式），不能推断因果关系。因果推断需要基因扰动实验（如敲除、过表达）和后续的效应分析。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "基因表达聚类",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "978056368",
+  "tags": []
+ },
+ "BQ-transcriptomics-56b779072b19": {
+  "type": "mtf",
+  "question": "关于基因表达数据的聚类分析，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "层次聚类生成树状图，根据基因表达模式的相似性将基因分组",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "聚类分析可以确定基因之间的因果关系",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "热图是基因表达谱数据可视化的常用方法，颜色深浅表示表达量的高低",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "K-means聚类需要预先指定聚类的簇数K",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：层次聚类的原理。D正确：K-means的特征。C正确：热图可视化的原理。B错误：聚类分析仅揭示基因表达模式的相关性（共表达模式），不能推断因果关系。因果推断需要基因扰动实验（如敲除、过表达）和后续的效应分析。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "基因表达聚类",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "978056368",
+  "tags": []
+ },
+ "BQ-transcriptomics-b26580710800": {
+  "type": "mtf",
+  "question": "关于基因表达数据的聚类分析，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "热图是基因表达谱数据可视化的常用方法，颜色深浅表示表达量的高低",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "K-means聚类需要预先指定聚类的簇数K",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "层次聚类生成树状图，根据基因表达模式的相似性将基因分组",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "聚类分析可以确定基因之间的因果关系",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确：层次聚类的原理。B正确：K-means的特征。A正确：热图可视化的原理。D错误：聚类分析仅揭示基因表达模式的相关性（共表达模式），不能推断因果关系。因果推断需要基因扰动实验（如敲除、过表达）和后续的效应分析。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "基因表达聚类",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "978056368",
+  "tags": []
+ },
+ "BQ-transcriptomics-ac9b7ed633fd": {
+  "type": "mtf",
+  "question": "关于基因表达数据的聚类分析，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "热图是基因表达谱数据可视化的常用方法，颜色深浅表示表达量的高低",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "K-means聚类需要预先指定聚类的簇数K",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "聚类分析可以确定基因之间的因果关系",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "层次聚类生成树状图，根据基因表达模式的相似性将基因分组",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：层次聚类的原理。B正确：K-means的特征。A正确：热图可视化的原理。C错误：聚类分析仅揭示基因表达模式的相关性（共表达模式），不能推断因果关系。因果推断需要基因扰动实验（如敲除、过表达）和后续的效应分析。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "基因表达聚类",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "978056368",
+  "tags": []
+ },
+ "BQ-transcriptomics-d51f6e461568": {
+  "type": "mtf",
+  "question": "关于基因表达数据的聚类分析，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "热图是基因表达谱数据可视化的常用方法，颜色深浅表示表达量的高低",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "层次聚类生成树状图，根据基因表达模式的相似性将基因分组",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "K-means聚类需要预先指定聚类的簇数K",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "聚类分析可以确定基因之间的因果关系",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确：层次聚类的原理。C正确：K-means的特征。A正确：热图可视化的原理。D错误：聚类分析仅揭示基因表达模式的相关性（共表达模式），不能推断因果关系。因果推断需要基因扰动实验（如敲除、过表达）和后续的效应分析。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "基因表达聚类",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "978056368",
+  "tags": []
+ },
+ "BQ-transcriptomics-5adf61be41e4": {
+  "type": "mtf",
+  "question": "关于基因表达数据的聚类分析，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "热图是基因表达谱数据可视化的常用方法，颜色深浅表示表达量的高低",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "层次聚类生成树状图，根据基因表达模式的相似性将基因分组",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "聚类分析可以确定基因之间的因果关系",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "K-means聚类需要预先指定聚类的簇数K",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：层次聚类的原理。D正确：K-means的特征。A正确：热图可视化的原理。C错误：聚类分析仅揭示基因表达模式的相关性（共表达模式），不能推断因果关系。因果推断需要基因扰动实验（如敲除、过表达）和后续的效应分析。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "基因表达聚类",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "978056368",
+  "tags": []
+ },
+ "BQ-transcriptomics-e09cd63eafee": {
+  "type": "mtf",
+  "question": "关于基因表达数据的聚类分析，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "热图是基因表达谱数据可视化的常用方法，颜色深浅表示表达量的高低",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "聚类分析可以确定基因之间的因果关系",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "K-means聚类需要预先指定聚类的簇数K",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "层次聚类生成树状图，根据基因表达模式的相似性将基因分组",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：层次聚类的原理。C正确：K-means的特征。A正确：热图可视化的原理。B错误：聚类分析仅揭示基因表达模式的相关性（共表达模式），不能推断因果关系。因果推断需要基因扰动实验（如敲除、过表达）和后续的效应分析。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "基因表达聚类",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "978056368",
+  "tags": []
+ },
+ "BQ-transcriptomics-eefb0cfca98d": {
+  "type": "mtf",
+  "question": "关于基因表达数据的聚类分析，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "热图是基因表达谱数据可视化的常用方法，颜色深浅表示表达量的高低",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "聚类分析可以确定基因之间的因果关系",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "层次聚类生成树状图，根据基因表达模式的相似性将基因分组",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "K-means聚类需要预先指定聚类的簇数K",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：层次聚类的原理。D正确：K-means的特征。A正确：热图可视化的原理。B错误：聚类分析仅揭示基因表达模式的相关性（共表达模式），不能推断因果关系。因果推断需要基因扰动实验（如敲除、过表达）和后续的效应分析。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "基因表达聚类",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "978056368",
+  "tags": []
+ },
+ "BQ-transcriptomics-035fb433647d": {
+  "type": "mtf",
+  "question": "关于基因表达数据的聚类分析，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "聚类分析可以确定基因之间的因果关系",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "K-means聚类需要预先指定聚类的簇数K",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "层次聚类生成树状图，根据基因表达模式的相似性将基因分组",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "热图是基因表达谱数据可视化的常用方法，颜色深浅表示表达量的高低",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：层次聚类的原理。B正确：K-means的特征。D正确：热图可视化的原理。A错误：聚类分析仅揭示基因表达模式的相关性（共表达模式），不能推断因果关系。因果推断需要基因扰动实验（如敲除、过表达）和后续的效应分析。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "基因表达聚类",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "978056368",
+  "tags": []
+ },
+ "BQ-transcriptomics-c61905c48fae": {
+  "type": "mtf",
+  "question": "关于基因表达数据的聚类分析，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "聚类分析可以确定基因之间的因果关系",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "K-means聚类需要预先指定聚类的簇数K",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "热图是基因表达谱数据可视化的常用方法，颜色深浅表示表达量的高低",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "层次聚类生成树状图，根据基因表达模式的相似性将基因分组",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：层次聚类的原理。B正确：K-means的特征。C正确：热图可视化的原理。A错误：聚类分析仅揭示基因表达模式的相关性（共表达模式），不能推断因果关系。因果推断需要基因扰动实验（如敲除、过表达）和后续的效应分析。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "基因表达聚类",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "978056368",
+  "tags": []
+ },
+ "BQ-transcriptomics-bd977cc8886e": {
+  "type": "mtf",
+  "question": "关于基因表达数据的聚类分析，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "聚类分析可以确定基因之间的因果关系",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "层次聚类生成树状图，根据基因表达模式的相似性将基因分组",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "K-means聚类需要预先指定聚类的簇数K",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "热图是基因表达谱数据可视化的常用方法，颜色深浅表示表达量的高低",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：层次聚类的原理。C正确：K-means的特征。D正确：热图可视化的原理。A错误：聚类分析仅揭示基因表达模式的相关性（共表达模式），不能推断因果关系。因果推断需要基因扰动实验（如敲除、过表达）和后续的效应分析。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "基因表达聚类",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "978056368",
+  "tags": []
+ },
+ "BQ-transcriptomics-2a4a7d546955": {
+  "type": "mtf",
+  "question": "关于基因表达数据的聚类分析，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "聚类分析可以确定基因之间的因果关系",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "层次聚类生成树状图，根据基因表达模式的相似性将基因分组",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "热图是基因表达谱数据可视化的常用方法，颜色深浅表示表达量的高低",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "K-means聚类需要预先指定聚类的簇数K",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：层次聚类的原理。D正确：K-means的特征。C正确：热图可视化的原理。A错误：聚类分析仅揭示基因表达模式的相关性（共表达模式），不能推断因果关系。因果推断需要基因扰动实验（如敲除、过表达）和后续的效应分析。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "基因表达聚类",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "978056368",
+  "tags": []
+ },
+ "BQ-transcriptomics-eaa6b74b5e31": {
+  "type": "mtf",
+  "question": "关于基因表达数据的聚类分析，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "聚类分析可以确定基因之间的因果关系",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "热图是基因表达谱数据可视化的常用方法，颜色深浅表示表达量的高低",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "K-means聚类需要预先指定聚类的簇数K",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "层次聚类生成树状图，根据基因表达模式的相似性将基因分组",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：层次聚类的原理。C正确：K-means的特征。B正确：热图可视化的原理。A错误：聚类分析仅揭示基因表达模式的相关性（共表达模式），不能推断因果关系。因果推断需要基因扰动实验（如敲除、过表达）和后续的效应分析。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "基因表达聚类",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "978056368",
+  "tags": []
+ },
+ "BQ-transcriptomics-506dfad6eca9": {
+  "type": "mtf",
+  "question": "关于基因表达数据的聚类分析，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "聚类分析可以确定基因之间的因果关系",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "热图是基因表达谱数据可视化的常用方法，颜色深浅表示表达量的高低",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "层次聚类生成树状图，根据基因表达模式的相似性将基因分组",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "K-means聚类需要预先指定聚类的簇数K",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：层次聚类的原理。D正确：K-means的特征。B正确：热图可视化的原理。A错误：聚类分析仅揭示基因表达模式的相关性（共表达模式），不能推断因果关系。因果推断需要基因扰动实验（如敲除、过表达）和后续的效应分析。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "基因表达聚类",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "978056368",
+  "tags": []
+ },
+ "BQ-transcriptomics-2f418e6e4535": {
+  "type": "mtf",
+  "question": "关于转录组学与基因表达分析，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "FPKM和TPM是RNA-seq表达量定量的常用单位，TPM在各样本间具有更好的可比性",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "RNA-seq可以直接测定所有蛋白质的表达水平",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "RNA-seq的基本流程包括：RNA提取→mRNA富集→cDNA合成→文库构建→高通量测序→读数比对到参考基因组→表达量定量",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "差异表达分析中，p值和Fold Change是两个关键指标：Fold Change表示表达量的变化倍数，p值表示差异的统计学显著性",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：RNA-seq的标准实验和分析流程。A正确：TPM消除了总读数和基因长度的影响，适合跨样本比较。D正确：差异表达分析的双重筛选标准。B错误：RNA-seq测定的是mRNA转录水平，蛋白质水平受翻译调控和降解等多层调控影响，mRNA水平与蛋白质水平并不总是线性相关。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "转录组学",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "381925610",
+  "tags": []
+ },
+ "BQ-transcriptomics-6a347294efee": {
+  "type": "mtf",
+  "question": "关于转录组学与基因表达分析，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "FPKM和TPM是RNA-seq表达量定量的常用单位，TPM在各样本间具有更好的可比性",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "RNA-seq可以直接测定所有蛋白质的表达水平",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "差异表达分析中，p值和Fold Change是两个关键指标：Fold Change表示表达量的变化倍数，p值表示差异的统计学显著性",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "RNA-seq的基本流程包括：RNA提取→mRNA富集→cDNA合成→文库构建→高通量测序→读数比对到参考基因组→表达量定量",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：RNA-seq的标准实验和分析流程。A正确：TPM消除了总读数和基因长度的影响，适合跨样本比较。C正确：差异表达分析的双重筛选标准。B错误：RNA-seq测定的是mRNA转录水平，蛋白质水平受翻译调控和降解等多层调控影响，mRNA水平与蛋白质水平并不总是线性相关。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "转录组学",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "381925610",
+  "tags": []
+ },
+ "BQ-transcriptomics-73a6b87ee130": {
+  "type": "mtf",
+  "question": "关于转录组学与基因表达分析，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "FPKM和TPM是RNA-seq表达量定量的常用单位，TPM在各样本间具有更好的可比性",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "RNA-seq的基本流程包括：RNA提取→mRNA富集→cDNA合成→文库构建→高通量测序→读数比对到参考基因组→表达量定量",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "RNA-seq可以直接测定所有蛋白质的表达水平",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "差异表达分析中，p值和Fold Change是两个关键指标：Fold Change表示表达量的变化倍数，p值表示差异的统计学显著性",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：RNA-seq的标准实验和分析流程。A正确：TPM消除了总读数和基因长度的影响，适合跨样本比较。D正确：差异表达分析的双重筛选标准。C错误：RNA-seq测定的是mRNA转录水平，蛋白质水平受翻译调控和降解等多层调控影响，mRNA水平与蛋白质水平并不总是线性相关。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "转录组学",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "381925610",
+  "tags": []
+ },
+ "BQ-transcriptomics-b093a7c998e4": {
+  "type": "mtf",
+  "question": "关于转录组学与基因表达分析，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "FPKM和TPM是RNA-seq表达量定量的常用单位，TPM在各样本间具有更好的可比性",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "RNA-seq的基本流程包括：RNA提取→mRNA富集→cDNA合成→文库构建→高通量测序→读数比对到参考基因组→表达量定量",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "差异表达分析中，p值和Fold Change是两个关键指标：Fold Change表示表达量的变化倍数，p值表示差异的统计学显著性",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "RNA-seq可以直接测定所有蛋白质的表达水平",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确：RNA-seq的标准实验和分析流程。A正确：TPM消除了总读数和基因长度的影响，适合跨样本比较。C正确：差异表达分析的双重筛选标准。D错误：RNA-seq测定的是mRNA转录水平，蛋白质水平受翻译调控和降解等多层调控影响，mRNA水平与蛋白质水平并不总是线性相关。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "转录组学",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "381925610",
+  "tags": []
+ },
+ "BQ-transcriptomics-da60f4b293be": {
+  "type": "mtf",
+  "question": "关于转录组学与基因表达分析，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "FPKM和TPM是RNA-seq表达量定量的常用单位，TPM在各样本间具有更好的可比性",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "差异表达分析中，p值和Fold Change是两个关键指标：Fold Change表示表达量的变化倍数，p值表示差异的统计学显著性",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "RNA-seq可以直接测定所有蛋白质的表达水平",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "RNA-seq的基本流程包括：RNA提取→mRNA富集→cDNA合成→文库构建→高通量测序→读数比对到参考基因组→表达量定量",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：RNA-seq的标准实验和分析流程。A正确：TPM消除了总读数和基因长度的影响，适合跨样本比较。B正确：差异表达分析的双重筛选标准。C错误：RNA-seq测定的是mRNA转录水平，蛋白质水平受翻译调控和降解等多层调控影响，mRNA水平与蛋白质水平并不总是线性相关。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "转录组学",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "381925610",
+  "tags": []
+ },
+ "BQ-transcriptomics-9309f99bb507": {
+  "type": "mtf",
+  "question": "关于转录组学与基因表达分析，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "FPKM和TPM是RNA-seq表达量定量的常用单位，TPM在各样本间具有更好的可比性",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "差异表达分析中，p值和Fold Change是两个关键指标：Fold Change表示表达量的变化倍数，p值表示差异的统计学显著性",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "RNA-seq的基本流程包括：RNA提取→mRNA富集→cDNA合成→文库构建→高通量测序→读数比对到参考基因组→表达量定量",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "RNA-seq可以直接测定所有蛋白质的表达水平",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确：RNA-seq的标准实验和分析流程。A正确：TPM消除了总读数和基因长度的影响，适合跨样本比较。B正确：差异表达分析的双重筛选标准。D错误：RNA-seq测定的是mRNA转录水平，蛋白质水平受翻译调控和降解等多层调控影响，mRNA水平与蛋白质水平并不总是线性相关。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "转录组学",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "381925610",
+  "tags": []
+ },
+ "BQ-transcriptomics-0b795b785b1d": {
+  "type": "mtf",
+  "question": "关于转录组学与基因表达分析，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "RNA-seq可以直接测定所有蛋白质的表达水平",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "FPKM和TPM是RNA-seq表达量定量的常用单位，TPM在各样本间具有更好的可比性",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "RNA-seq的基本流程包括：RNA提取→mRNA富集→cDNA合成→文库构建→高通量测序→读数比对到参考基因组→表达量定量",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "差异表达分析中，p值和Fold Change是两个关键指标：Fold Change表示表达量的变化倍数，p值表示差异的统计学显著性",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：RNA-seq的标准实验和分析流程。B正确：TPM消除了总读数和基因长度的影响，适合跨样本比较。D正确：差异表达分析的双重筛选标准。A错误：RNA-seq测定的是mRNA转录水平，蛋白质水平受翻译调控和降解等多层调控影响，mRNA水平与蛋白质水平并不总是线性相关。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "转录组学",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "381925610",
+  "tags": []
+ },
+ "BQ-transcriptomics-eded8bf3f505": {
+  "type": "mtf",
+  "question": "关于转录组学与基因表达分析，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "RNA-seq可以直接测定所有蛋白质的表达水平",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "FPKM和TPM是RNA-seq表达量定量的常用单位，TPM在各样本间具有更好的可比性",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "差异表达分析中，p值和Fold Change是两个关键指标：Fold Change表示表达量的变化倍数，p值表示差异的统计学显著性",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "RNA-seq的基本流程包括：RNA提取→mRNA富集→cDNA合成→文库构建→高通量测序→读数比对到参考基因组→表达量定量",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：RNA-seq的标准实验和分析流程。B正确：TPM消除了总读数和基因长度的影响，适合跨样本比较。C正确：差异表达分析的双重筛选标准。A错误：RNA-seq测定的是mRNA转录水平，蛋白质水平受翻译调控和降解等多层调控影响，mRNA水平与蛋白质水平并不总是线性相关。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "转录组学",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "381925610",
+  "tags": []
+ },
+ "BQ-transcriptomics-5e8bb8578fa0": {
+  "type": "mtf",
+  "question": "关于转录组学与基因表达分析，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "RNA-seq可以直接测定所有蛋白质的表达水平",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "RNA-seq的基本流程包括：RNA提取→mRNA富集→cDNA合成→文库构建→高通量测序→读数比对到参考基因组→表达量定量",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "FPKM和TPM是RNA-seq表达量定量的常用单位，TPM在各样本间具有更好的可比性",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "差异表达分析中，p值和Fold Change是两个关键指标：Fold Change表示表达量的变化倍数，p值表示差异的统计学显著性",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：RNA-seq的标准实验和分析流程。C正确：TPM消除了总读数和基因长度的影响，适合跨样本比较。D正确：差异表达分析的双重筛选标准。A错误：RNA-seq测定的是mRNA转录水平，蛋白质水平受翻译调控和降解等多层调控影响，mRNA水平与蛋白质水平并不总是线性相关。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "转录组学",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "381925610",
+  "tags": []
+ },
+ "BQ-transcriptomics-e64f1f418d52": {
+  "type": "mtf",
+  "question": "关于转录组学与基因表达分析，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "RNA-seq可以直接测定所有蛋白质的表达水平",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "RNA-seq的基本流程包括：RNA提取→mRNA富集→cDNA合成→文库构建→高通量测序→读数比对到参考基因组→表达量定量",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "差异表达分析中，p值和Fold Change是两个关键指标：Fold Change表示表达量的变化倍数，p值表示差异的统计学显著性",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "FPKM和TPM是RNA-seq表达量定量的常用单位，TPM在各样本间具有更好的可比性",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：RNA-seq的标准实验和分析流程。D正确：TPM消除了总读数和基因长度的影响，适合跨样本比较。C正确：差异表达分析的双重筛选标准。A错误：RNA-seq测定的是mRNA转录水平，蛋白质水平受翻译调控和降解等多层调控影响，mRNA水平与蛋白质水平并不总是线性相关。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "转录组学",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "381925610",
+  "tags": []
+ },
+ "BQ-transcriptomics-312433bfd1e1": {
+  "type": "mtf",
+  "question": "关于转录组学与基因表达分析，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "RNA-seq可以直接测定所有蛋白质的表达水平",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "差异表达分析中，p值和Fold Change是两个关键指标：Fold Change表示表达量的变化倍数，p值表示差异的统计学显著性",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "FPKM和TPM是RNA-seq表达量定量的常用单位，TPM在各样本间具有更好的可比性",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "RNA-seq的基本流程包括：RNA提取→mRNA富集→cDNA合成→文库构建→高通量测序→读数比对到参考基因组→表达量定量",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：RNA-seq的标准实验和分析流程。C正确：TPM消除了总读数和基因长度的影响，适合跨样本比较。B正确：差异表达分析的双重筛选标准。A错误：RNA-seq测定的是mRNA转录水平，蛋白质水平受翻译调控和降解等多层调控影响，mRNA水平与蛋白质水平并不总是线性相关。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "转录组学",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "381925610",
+  "tags": []
+ },
+ "BQ-transcriptomics-baed5e5e10a3": {
+  "type": "mtf",
+  "question": "关于转录组学与基因表达分析，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "RNA-seq可以直接测定所有蛋白质的表达水平",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "差异表达分析中，p值和Fold Change是两个关键指标：Fold Change表示表达量的变化倍数，p值表示差异的统计学显著性",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "RNA-seq的基本流程包括：RNA提取→mRNA富集→cDNA合成→文库构建→高通量测序→读数比对到参考基因组→表达量定量",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "FPKM和TPM是RNA-seq表达量定量的常用单位，TPM在各样本间具有更好的可比性",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：RNA-seq的标准实验和分析流程。D正确：TPM消除了总读数和基因长度的影响，适合跨样本比较。B正确：差异表达分析的双重筛选标准。A错误：RNA-seq测定的是mRNA转录水平，蛋白质水平受翻译调控和降解等多层调控影响，mRNA水平与蛋白质水平并不总是线性相关。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "转录组学",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "381925610",
+  "tags": []
+ },
+ "BQ-transcriptomics-399d1f6fed04": {
+  "type": "mtf",
+  "question": "关于转录组学与基因表达分析，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "RNA-seq的基本流程包括：RNA提取→mRNA富集→cDNA合成→文库构建→高通量测序→读数比对到参考基因组→表达量定量",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "FPKM和TPM是RNA-seq表达量定量的常用单位，TPM在各样本间具有更好的可比性",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "RNA-seq可以直接测定所有蛋白质的表达水平",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "差异表达分析中，p值和Fold Change是两个关键指标：Fold Change表示表达量的变化倍数，p值表示差异的统计学显著性",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：RNA-seq的标准实验和分析流程。B正确：TPM消除了总读数和基因长度的影响，适合跨样本比较。D正确：差异表达分析的双重筛选标准。C错误：RNA-seq测定的是mRNA转录水平，蛋白质水平受翻译调控和降解等多层调控影响，mRNA水平与蛋白质水平并不总是线性相关。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "转录组学",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "381925610",
+  "tags": []
+ },
+ "BQ-transcriptomics-0f1ad01b596d": {
+  "type": "mtf",
+  "question": "关于转录组学与基因表达分析，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "RNA-seq的基本流程包括：RNA提取→mRNA富集→cDNA合成→文库构建→高通量测序→读数比对到参考基因组→表达量定量",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "FPKM和TPM是RNA-seq表达量定量的常用单位，TPM在各样本间具有更好的可比性",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "差异表达分析中，p值和Fold Change是两个关键指标：Fold Change表示表达量的变化倍数，p值表示差异的统计学显著性",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "RNA-seq可以直接测定所有蛋白质的表达水平",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确：RNA-seq的标准实验和分析流程。B正确：TPM消除了总读数和基因长度的影响，适合跨样本比较。C正确：差异表达分析的双重筛选标准。D错误：RNA-seq测定的是mRNA转录水平，蛋白质水平受翻译调控和降解等多层调控影响，mRNA水平与蛋白质水平并不总是线性相关。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "转录组学",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "381925610",
+  "tags": []
+ },
+ "BQ-transcriptomics-2c484d39531a": {
+  "type": "mtf",
+  "question": "关于转录组学与基因表达分析，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "RNA-seq的基本流程包括：RNA提取→mRNA富集→cDNA合成→文库构建→高通量测序→读数比对到参考基因组→表达量定量",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "RNA-seq可以直接测定所有蛋白质的表达水平",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "FPKM和TPM是RNA-seq表达量定量的常用单位，TPM在各样本间具有更好的可比性",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "差异表达分析中，p值和Fold Change是两个关键指标：Fold Change表示表达量的变化倍数，p值表示差异的统计学显著性",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：RNA-seq的标准实验和分析流程。C正确：TPM消除了总读数和基因长度的影响，适合跨样本比较。D正确：差异表达分析的双重筛选标准。B错误：RNA-seq测定的是mRNA转录水平，蛋白质水平受翻译调控和降解等多层调控影响，mRNA水平与蛋白质水平并不总是线性相关。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "转录组学",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "381925610",
+  "tags": []
+ },
+ "BQ-transcriptomics-80acd664ef31": {
+  "type": "mtf",
+  "question": "关于转录组学与基因表达分析，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "RNA-seq的基本流程包括：RNA提取→mRNA富集→cDNA合成→文库构建→高通量测序→读数比对到参考基因组→表达量定量",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "RNA-seq可以直接测定所有蛋白质的表达水平",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "差异表达分析中，p值和Fold Change是两个关键指标：Fold Change表示表达量的变化倍数，p值表示差异的统计学显著性",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "FPKM和TPM是RNA-seq表达量定量的常用单位，TPM在各样本间具有更好的可比性",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：RNA-seq的标准实验和分析流程。D正确：TPM消除了总读数和基因长度的影响，适合跨样本比较。C正确：差异表达分析的双重筛选标准。B错误：RNA-seq测定的是mRNA转录水平，蛋白质水平受翻译调控和降解等多层调控影响，mRNA水平与蛋白质水平并不总是线性相关。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "转录组学",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "381925610",
+  "tags": []
+ },
+ "BQ-transcriptomics-efefe864478a": {
+  "type": "mtf",
+  "question": "关于转录组学与基因表达分析，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "RNA-seq的基本流程包括：RNA提取→mRNA富集→cDNA合成→文库构建→高通量测序→读数比对到参考基因组→表达量定量",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "差异表达分析中，p值和Fold Change是两个关键指标：Fold Change表示表达量的变化倍数，p值表示差异的统计学显著性",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "FPKM和TPM是RNA-seq表达量定量的常用单位，TPM在各样本间具有更好的可比性",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "RNA-seq可以直接测定所有蛋白质的表达水平",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确：RNA-seq的标准实验和分析流程。C正确：TPM消除了总读数和基因长度的影响，适合跨样本比较。B正确：差异表达分析的双重筛选标准。D错误：RNA-seq测定的是mRNA转录水平，蛋白质水平受翻译调控和降解等多层调控影响，mRNA水平与蛋白质水平并不总是线性相关。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "转录组学",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "381925610",
+  "tags": []
+ },
+ "BQ-transcriptomics-ccacecc9c203": {
+  "type": "mtf",
+  "question": "关于转录组学与基因表达分析，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "RNA-seq的基本流程包括：RNA提取→mRNA富集→cDNA合成→文库构建→高通量测序→读数比对到参考基因组→表达量定量",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "差异表达分析中，p值和Fold Change是两个关键指标：Fold Change表示表达量的变化倍数，p值表示差异的统计学显著性",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "RNA-seq可以直接测定所有蛋白质的表达水平",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "FPKM和TPM是RNA-seq表达量定量的常用单位，TPM在各样本间具有更好的可比性",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：RNA-seq的标准实验和分析流程。D正确：TPM消除了总读数和基因长度的影响，适合跨样本比较。B正确：差异表达分析的双重筛选标准。C错误：RNA-seq测定的是mRNA转录水平，蛋白质水平受翻译调控和降解等多层调控影响，mRNA水平与蛋白质水平并不总是线性相关。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "转录组学",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "381925610",
+  "tags": []
+ },
+ "BQ-transcriptomics-18bc3235444b": {
+  "type": "mtf",
+  "question": "关于转录组学与基因表达分析，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "差异表达分析中，p值和Fold Change是两个关键指标：Fold Change表示表达量的变化倍数，p值表示差异的统计学显著性",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "FPKM和TPM是RNA-seq表达量定量的常用单位，TPM在各样本间具有更好的可比性",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "RNA-seq可以直接测定所有蛋白质的表达水平",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "RNA-seq的基本流程包括：RNA提取→mRNA富集→cDNA合成→文库构建→高通量测序→读数比对到参考基因组→表达量定量",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：RNA-seq的标准实验和分析流程。B正确：TPM消除了总读数和基因长度的影响，适合跨样本比较。A正确：差异表达分析的双重筛选标准。C错误：RNA-seq测定的是mRNA转录水平，蛋白质水平受翻译调控和降解等多层调控影响，mRNA水平与蛋白质水平并不总是线性相关。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "转录组学",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "381925610",
+  "tags": []
+ },
+ "BQ-transcriptomics-4d22b310b6e9": {
+  "type": "mtf",
+  "question": "关于转录组学与基因表达分析，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "差异表达分析中，p值和Fold Change是两个关键指标：Fold Change表示表达量的变化倍数，p值表示差异的统计学显著性",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "FPKM和TPM是RNA-seq表达量定量的常用单位，TPM在各样本间具有更好的可比性",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "RNA-seq的基本流程包括：RNA提取→mRNA富集→cDNA合成→文库构建→高通量测序→读数比对到参考基因组→表达量定量",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "RNA-seq可以直接测定所有蛋白质的表达水平",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确：RNA-seq的标准实验和分析流程。B正确：TPM消除了总读数和基因长度的影响，适合跨样本比较。A正确：差异表达分析的双重筛选标准。D错误：RNA-seq测定的是mRNA转录水平，蛋白质水平受翻译调控和降解等多层调控影响，mRNA水平与蛋白质水平并不总是线性相关。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "转录组学",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "381925610",
+  "tags": []
+ },
+ "BQ-transcriptomics-eb82d758f251": {
+  "type": "mtf",
+  "question": "关于转录组学与基因表达分析，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "差异表达分析中，p值和Fold Change是两个关键指标：Fold Change表示表达量的变化倍数，p值表示差异的统计学显著性",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "RNA-seq可以直接测定所有蛋白质的表达水平",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "FPKM和TPM是RNA-seq表达量定量的常用单位，TPM在各样本间具有更好的可比性",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "RNA-seq的基本流程包括：RNA提取→mRNA富集→cDNA合成→文库构建→高通量测序→读数比对到参考基因组→表达量定量",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：RNA-seq的标准实验和分析流程。C正确：TPM消除了总读数和基因长度的影响，适合跨样本比较。A正确：差异表达分析的双重筛选标准。B错误：RNA-seq测定的是mRNA转录水平，蛋白质水平受翻译调控和降解等多层调控影响，mRNA水平与蛋白质水平并不总是线性相关。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "转录组学",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "381925610",
+  "tags": []
+ },
+ "BQ-transcriptomics-56ec9616ef71": {
+  "type": "mtf",
+  "question": "关于转录组学与基因表达分析，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "差异表达分析中，p值和Fold Change是两个关键指标：Fold Change表示表达量的变化倍数，p值表示差异的统计学显著性",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "RNA-seq可以直接测定所有蛋白质的表达水平",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "RNA-seq的基本流程包括：RNA提取→mRNA富集→cDNA合成→文库构建→高通量测序→读数比对到参考基因组→表达量定量",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "FPKM和TPM是RNA-seq表达量定量的常用单位，TPM在各样本间具有更好的可比性",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：RNA-seq的标准实验和分析流程。D正确：TPM消除了总读数和基因长度的影响，适合跨样本比较。A正确：差异表达分析的双重筛选标准。B错误：RNA-seq测定的是mRNA转录水平，蛋白质水平受翻译调控和降解等多层调控影响，mRNA水平与蛋白质水平并不总是线性相关。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "转录组学",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "381925610",
+  "tags": []
+ },
+ "BQ-transcriptomics-76db4bae8fed": {
+  "type": "mtf",
+  "question": "关于转录组学与基因表达分析，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "差异表达分析中，p值和Fold Change是两个关键指标：Fold Change表示表达量的变化倍数，p值表示差异的统计学显著性",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "RNA-seq的基本流程包括：RNA提取→mRNA富集→cDNA合成→文库构建→高通量测序→读数比对到参考基因组→表达量定量",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "FPKM和TPM是RNA-seq表达量定量的常用单位，TPM在各样本间具有更好的可比性",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "RNA-seq可以直接测定所有蛋白质的表达水平",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确：RNA-seq的标准实验和分析流程。C正确：TPM消除了总读数和基因长度的影响，适合跨样本比较。A正确：差异表达分析的双重筛选标准。D错误：RNA-seq测定的是mRNA转录水平，蛋白质水平受翻译调控和降解等多层调控影响，mRNA水平与蛋白质水平并不总是线性相关。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "转录组学",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "381925610",
+  "tags": []
+ },
+ "BQ-transcriptomics-1828ae8823c5": {
+  "type": "mtf",
+  "question": "关于转录组学与基因表达分析，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "差异表达分析中，p值和Fold Change是两个关键指标：Fold Change表示表达量的变化倍数，p值表示差异的统计学显著性",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "RNA-seq的基本流程包括：RNA提取→mRNA富集→cDNA合成→文库构建→高通量测序→读数比对到参考基因组→表达量定量",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "RNA-seq可以直接测定所有蛋白质的表达水平",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "FPKM和TPM是RNA-seq表达量定量的常用单位，TPM在各样本间具有更好的可比性",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：RNA-seq的标准实验和分析流程。D正确：TPM消除了总读数和基因长度的影响，适合跨样本比较。A正确：差异表达分析的双重筛选标准。C错误：RNA-seq测定的是mRNA转录水平，蛋白质水平受翻译调控和降解等多层调控影响，mRNA水平与蛋白质水平并不总是线性相关。",
+  "module": 4,
+  "subject": "生物信息学",
+  "concept": "转录组学",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "381925610",
+  "tags": []
+ },
+ "BQ-transcriptomics-52d89d2dbe9f": {
+  "type": "mtf",
+  "question": "某实验用FRET（荧光共振能量转移）技术检测活细胞中两种蛋白质的相互作用。将CFP融合蛋白A和YFP融合蛋白B共表达，检测到显著的FRET信号。判断以下推断的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "FRET信号表明蛋白A和蛋白B在活细胞中存在直接的物理相互作用或距离非常接近（<10nm）",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "FRET检测到的相互作用意味着这两个蛋白一定位于同一个亚细胞区域",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "若添加已知的竞争性抑制剂后FRET信号消失，说明蛋白A-B的相互作用具有特异性",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "若进行FRET受体光漂白实验，光漂白后供体的荧光强度增加，可进一步验证FRET信号的特异性",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：FRET是近距离（1-10nm）蛋白互作的金标准检测方法。C正确：竞争性抑制是验证特异性的常用策略。B错误：FRET检测到互作意味着两蛋白在同一位置距离足够近，但显像的并不是亚细胞区域分辨率，只是间接证实它们在同一个复合物中。D正确：受体光漂白FRET实验（acceptor photobleaching）中，漂白受体后供体荧光去猝灭而增加，这是验证FRET的经典方法。这是一道实验技术分析题。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "蛋白互作技术",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "882791694",
+  "tags": []
+ },
+ "BQ-transcriptomics-dbbc97aa77bd": {
+  "type": "mtf",
+  "question": "某实验用FRET（荧光共振能量转移）技术检测活细胞中两种蛋白质的相互作用。将CFP融合蛋白A和YFP融合蛋白B共表达，检测到显著的FRET信号。判断以下推断的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "FRET信号表明蛋白A和蛋白B在活细胞中存在直接的物理相互作用或距离非常接近（<10nm）",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "FRET检测到的相互作用意味着这两个蛋白一定位于同一个亚细胞区域",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "若进行FRET受体光漂白实验，光漂白后供体的荧光强度增加，可进一步验证FRET信号的特异性",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "若添加已知的竞争性抑制剂后FRET信号消失，说明蛋白A-B的相互作用具有特异性",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：FRET是近距离（1-10nm）蛋白互作的金标准检测方法。D正确：竞争性抑制是验证特异性的常用策略。B错误：FRET检测到互作意味着两蛋白在同一位置距离足够近，但显像的并不是亚细胞区域分辨率，只是间接证实它们在同一个复合物中。C正确：受体光漂白FRET实验（acceptor photobleaching）中，漂白受体后供体荧光去猝灭而增加，这是验证FRET的经典方法。这是一道实验技术分析题。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "蛋白互作技术",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "882791694",
+  "tags": []
+ },
+ "BQ-transcriptomics-5d2b58a7ee20": {
+  "type": "mtf",
+  "question": "某实验用FRET（荧光共振能量转移）技术检测活细胞中两种蛋白质的相互作用。将CFP融合蛋白A和YFP融合蛋白B共表达，检测到显著的FRET信号。判断以下推断的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "FRET信号表明蛋白A和蛋白B在活细胞中存在直接的物理相互作用或距离非常接近（<10nm）",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "若添加已知的竞争性抑制剂后FRET信号消失，说明蛋白A-B的相互作用具有特异性",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "FRET检测到的相互作用意味着这两个蛋白一定位于同一个亚细胞区域",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "若进行FRET受体光漂白实验，光漂白后供体的荧光强度增加，可进一步验证FRET信号的特异性",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：FRET是近距离（1-10nm）蛋白互作的金标准检测方法。B正确：竞争性抑制是验证特异性的常用策略。C错误：FRET检测到互作意味着两蛋白在同一位置距离足够近，但显像的并不是亚细胞区域分辨率，只是间接证实它们在同一个复合物中。D正确：受体光漂白FRET实验（acceptor photobleaching）中，漂白受体后供体荧光去猝灭而增加，这是验证FRET的经典方法。这是一道实验技术分析题。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "蛋白互作技术",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "882791694",
+  "tags": []
+ },
+ "BQ-transcriptomics-3f8637c81ec9": {
+  "type": "mtf",
+  "question": "某实验用FRET（荧光共振能量转移）技术检测活细胞中两种蛋白质的相互作用。将CFP融合蛋白A和YFP融合蛋白B共表达，检测到显著的FRET信号。判断以下推断的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "FRET信号表明蛋白A和蛋白B在活细胞中存在直接的物理相互作用或距离非常接近（<10nm）",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "若添加已知的竞争性抑制剂后FRET信号消失，说明蛋白A-B的相互作用具有特异性",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "若进行FRET受体光漂白实验，光漂白后供体的荧光强度增加，可进一步验证FRET信号的特异性",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "FRET检测到的相互作用意味着这两个蛋白一定位于同一个亚细胞区域",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确：FRET是近距离（1-10nm）蛋白互作的金标准检测方法。B正确：竞争性抑制是验证特异性的常用策略。D错误：FRET检测到互作意味着两蛋白在同一位置距离足够近，但显像的并不是亚细胞区域分辨率，只是间接证实它们在同一个复合物中。C正确：受体光漂白FRET实验（acceptor photobleaching）中，漂白受体后供体荧光去猝灭而增加，这是验证FRET的经典方法。这是一道实验技术分析题。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "蛋白互作技术",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "882791694",
+  "tags": []
+ },
+ "BQ-transcriptomics-1ae6d1f29f2c": {
+  "type": "mtf",
+  "question": "某实验用FRET（荧光共振能量转移）技术检测活细胞中两种蛋白质的相互作用。将CFP融合蛋白A和YFP融合蛋白B共表达，检测到显著的FRET信号。判断以下推断的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "FRET信号表明蛋白A和蛋白B在活细胞中存在直接的物理相互作用或距离非常接近（<10nm）",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "若进行FRET受体光漂白实验，光漂白后供体的荧光强度增加，可进一步验证FRET信号的特异性",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "FRET检测到的相互作用意味着这两个蛋白一定位于同一个亚细胞区域",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "若添加已知的竞争性抑制剂后FRET信号消失，说明蛋白A-B的相互作用具有特异性",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：FRET是近距离（1-10nm）蛋白互作的金标准检测方法。D正确：竞争性抑制是验证特异性的常用策略。C错误：FRET检测到互作意味着两蛋白在同一位置距离足够近，但显像的并不是亚细胞区域分辨率，只是间接证实它们在同一个复合物中。B正确：受体光漂白FRET实验（acceptor photobleaching）中，漂白受体后供体荧光去猝灭而增加，这是验证FRET的经典方法。这是一道实验技术分析题。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "蛋白互作技术",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "882791694",
+  "tags": []
+ },
+ "BQ-transcriptomics-199af86bab1a": {
+  "type": "mtf",
+  "question": "某实验用FRET（荧光共振能量转移）技术检测活细胞中两种蛋白质的相互作用。将CFP融合蛋白A和YFP融合蛋白B共表达，检测到显著的FRET信号。判断以下推断的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "FRET信号表明蛋白A和蛋白B在活细胞中存在直接的物理相互作用或距离非常接近（<10nm）",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "若进行FRET受体光漂白实验，光漂白后供体的荧光强度增加，可进一步验证FRET信号的特异性",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "若添加已知的竞争性抑制剂后FRET信号消失，说明蛋白A-B的相互作用具有特异性",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "FRET检测到的相互作用意味着这两个蛋白一定位于同一个亚细胞区域",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确：FRET是近距离（1-10nm）蛋白互作的金标准检测方法。C正确：竞争性抑制是验证特异性的常用策略。D错误：FRET检测到互作意味着两蛋白在同一位置距离足够近，但显像的并不是亚细胞区域分辨率，只是间接证实它们在同一个复合物中。B正确：受体光漂白FRET实验（acceptor photobleaching）中，漂白受体后供体荧光去猝灭而增加，这是验证FRET的经典方法。这是一道实验技术分析题。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "蛋白互作技术",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "882791694",
+  "tags": []
+ },
+ "BQ-transcriptomics-98e866707e68": {
+  "type": "mtf",
+  "question": "某实验用FRET（荧光共振能量转移）技术检测活细胞中两种蛋白质的相互作用。将CFP融合蛋白A和YFP融合蛋白B共表达，检测到显著的FRET信号。判断以下推断的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "FRET检测到的相互作用意味着这两个蛋白一定位于同一个亚细胞区域",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "FRET信号表明蛋白A和蛋白B在活细胞中存在直接的物理相互作用或距离非常接近（<10nm）",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "若添加已知的竞争性抑制剂后FRET信号消失，说明蛋白A-B的相互作用具有特异性",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "若进行FRET受体光漂白实验，光漂白后供体的荧光强度增加，可进一步验证FRET信号的特异性",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：FRET是近距离（1-10nm）蛋白互作的金标准检测方法。C正确：竞争性抑制是验证特异性的常用策略。A错误：FRET检测到互作意味着两蛋白在同一位置距离足够近，但显像的并不是亚细胞区域分辨率，只是间接证实它们在同一个复合物中。D正确：受体光漂白FRET实验（acceptor photobleaching）中，漂白受体后供体荧光去猝灭而增加，这是验证FRET的经典方法。这是一道实验技术分析题。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "蛋白互作技术",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "882791694",
+  "tags": []
+ },
+ "BQ-transcriptomics-4a2dfcc1f075": {
+  "type": "mtf",
+  "question": "某实验用FRET（荧光共振能量转移）技术检测活细胞中两种蛋白质的相互作用。将CFP融合蛋白A和YFP融合蛋白B共表达，检测到显著的FRET信号。判断以下推断的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "FRET检测到的相互作用意味着这两个蛋白一定位于同一个亚细胞区域",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "FRET信号表明蛋白A和蛋白B在活细胞中存在直接的物理相互作用或距离非常接近（<10nm）",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "若进行FRET受体光漂白实验，光漂白后供体的荧光强度增加，可进一步验证FRET信号的特异性",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "若添加已知的竞争性抑制剂后FRET信号消失，说明蛋白A-B的相互作用具有特异性",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：FRET是近距离（1-10nm）蛋白互作的金标准检测方法。D正确：竞争性抑制是验证特异性的常用策略。A错误：FRET检测到互作意味着两蛋白在同一位置距离足够近，但显像的并不是亚细胞区域分辨率，只是间接证实它们在同一个复合物中。C正确：受体光漂白FRET实验（acceptor photobleaching）中，漂白受体后供体荧光去猝灭而增加，这是验证FRET的经典方法。这是一道实验技术分析题。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "蛋白互作技术",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "882791694",
+  "tags": []
+ },
+ "BQ-transcriptomics-7e2460cffb1d": {
+  "type": "mtf",
+  "question": "某实验用FRET（荧光共振能量转移）技术检测活细胞中两种蛋白质的相互作用。将CFP融合蛋白A和YFP融合蛋白B共表达，检测到显著的FRET信号。判断以下推断的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "FRET检测到的相互作用意味着这两个蛋白一定位于同一个亚细胞区域",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "若添加已知的竞争性抑制剂后FRET信号消失，说明蛋白A-B的相互作用具有特异性",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "FRET信号表明蛋白A和蛋白B在活细胞中存在直接的物理相互作用或距离非常接近（<10nm）",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "若进行FRET受体光漂白实验，光漂白后供体的荧光强度增加，可进一步验证FRET信号的特异性",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：FRET是近距离（1-10nm）蛋白互作的金标准检测方法。B正确：竞争性抑制是验证特异性的常用策略。A错误：FRET检测到互作意味着两蛋白在同一位置距离足够近，但显像的并不是亚细胞区域分辨率，只是间接证实它们在同一个复合物中。D正确：受体光漂白FRET实验（acceptor photobleaching）中，漂白受体后供体荧光去猝灭而增加，这是验证FRET的经典方法。这是一道实验技术分析题。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "蛋白互作技术",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "882791694",
+  "tags": []
+ },
+ "BQ-transcriptomics-ef471ed12c22": {
+  "type": "mtf",
+  "question": "某实验用FRET（荧光共振能量转移）技术检测活细胞中两种蛋白质的相互作用。将CFP融合蛋白A和YFP融合蛋白B共表达，检测到显著的FRET信号。判断以下推断的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "FRET检测到的相互作用意味着这两个蛋白一定位于同一个亚细胞区域",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "若添加已知的竞争性抑制剂后FRET信号消失，说明蛋白A-B的相互作用具有特异性",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "若进行FRET受体光漂白实验，光漂白后供体的荧光强度增加，可进一步验证FRET信号的特异性",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "FRET信号表明蛋白A和蛋白B在活细胞中存在直接的物理相互作用或距离非常接近（<10nm）",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：FRET是近距离（1-10nm）蛋白互作的金标准检测方法。B正确：竞争性抑制是验证特异性的常用策略。A错误：FRET检测到互作意味着两蛋白在同一位置距离足够近，但显像的并不是亚细胞区域分辨率，只是间接证实它们在同一个复合物中。C正确：受体光漂白FRET实验（acceptor photobleaching）中，漂白受体后供体荧光去猝灭而增加，这是验证FRET的经典方法。这是一道实验技术分析题。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "蛋白互作技术",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "882791694",
+  "tags": []
+ },
+ "BQ-transcriptomics-4f7852391027": {
+  "type": "mtf",
+  "question": "某实验用FRET（荧光共振能量转移）技术检测活细胞中两种蛋白质的相互作用。将CFP融合蛋白A和YFP融合蛋白B共表达，检测到显著的FRET信号。判断以下推断的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "FRET检测到的相互作用意味着这两个蛋白一定位于同一个亚细胞区域",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "若进行FRET受体光漂白实验，光漂白后供体的荧光强度增加，可进一步验证FRET信号的特异性",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "FRET信号表明蛋白A和蛋白B在活细胞中存在直接的物理相互作用或距离非常接近（<10nm）",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "若添加已知的竞争性抑制剂后FRET信号消失，说明蛋白A-B的相互作用具有特异性",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：FRET是近距离（1-10nm）蛋白互作的金标准检测方法。D正确：竞争性抑制是验证特异性的常用策略。A错误：FRET检测到互作意味着两蛋白在同一位置距离足够近，但显像的并不是亚细胞区域分辨率，只是间接证实它们在同一个复合物中。B正确：受体光漂白FRET实验（acceptor photobleaching）中，漂白受体后供体荧光去猝灭而增加，这是验证FRET的经典方法。这是一道实验技术分析题。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "蛋白互作技术",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "882791694",
+  "tags": []
+ },
+ "BQ-transcriptomics-c458b6063e39": {
+  "type": "mtf",
+  "question": "某实验用FRET（荧光共振能量转移）技术检测活细胞中两种蛋白质的相互作用。将CFP融合蛋白A和YFP融合蛋白B共表达，检测到显著的FRET信号。判断以下推断的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "FRET检测到的相互作用意味着这两个蛋白一定位于同一个亚细胞区域",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "若进行FRET受体光漂白实验，光漂白后供体的荧光强度增加，可进一步验证FRET信号的特异性",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "若添加已知的竞争性抑制剂后FRET信号消失，说明蛋白A-B的相互作用具有特异性",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "FRET信号表明蛋白A和蛋白B在活细胞中存在直接的物理相互作用或距离非常接近（<10nm）",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：FRET是近距离（1-10nm）蛋白互作的金标准检测方法。C正确：竞争性抑制是验证特异性的常用策略。A错误：FRET检测到互作意味着两蛋白在同一位置距离足够近，但显像的并不是亚细胞区域分辨率，只是间接证实它们在同一个复合物中。B正确：受体光漂白FRET实验（acceptor photobleaching）中，漂白受体后供体荧光去猝灭而增加，这是验证FRET的经典方法。这是一道实验技术分析题。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "蛋白互作技术",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "882791694",
+  "tags": []
+ },
+ "BQ-transcriptomics-f0bb5d13fd04": {
+  "type": "mtf",
+  "question": "某实验用FRET（荧光共振能量转移）技术检测活细胞中两种蛋白质的相互作用。将CFP融合蛋白A和YFP融合蛋白B共表达，检测到显著的FRET信号。判断以下推断的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "若添加已知的竞争性抑制剂后FRET信号消失，说明蛋白A-B的相互作用具有特异性",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "FRET信号表明蛋白A和蛋白B在活细胞中存在直接的物理相互作用或距离非常接近（<10nm）",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "FRET检测到的相互作用意味着这两个蛋白一定位于同一个亚细胞区域",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "若进行FRET受体光漂白实验，光漂白后供体的荧光强度增加，可进一步验证FRET信号的特异性",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：FRET是近距离（1-10nm）蛋白互作的金标准检测方法。A正确：竞争性抑制是验证特异性的常用策略。C错误：FRET检测到互作意味着两蛋白在同一位置距离足够近，但显像的并不是亚细胞区域分辨率，只是间接证实它们在同一个复合物中。D正确：受体光漂白FRET实验（acceptor photobleaching）中，漂白受体后供体荧光去猝灭而增加，这是验证FRET的经典方法。这是一道实验技术分析题。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "蛋白互作技术",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "882791694",
+  "tags": []
+ },
+ "BQ-transcriptomics-4f3ec1a69f65": {
+  "type": "mtf",
+  "question": "某实验用FRET（荧光共振能量转移）技术检测活细胞中两种蛋白质的相互作用。将CFP融合蛋白A和YFP融合蛋白B共表达，检测到显著的FRET信号。判断以下推断的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "若添加已知的竞争性抑制剂后FRET信号消失，说明蛋白A-B的相互作用具有特异性",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "FRET信号表明蛋白A和蛋白B在活细胞中存在直接的物理相互作用或距离非常接近（<10nm）",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "若进行FRET受体光漂白实验，光漂白后供体的荧光强度增加，可进一步验证FRET信号的特异性",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "FRET检测到的相互作用意味着这两个蛋白一定位于同一个亚细胞区域",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确：FRET是近距离（1-10nm）蛋白互作的金标准检测方法。A正确：竞争性抑制是验证特异性的常用策略。D错误：FRET检测到互作意味着两蛋白在同一位置距离足够近，但显像的并不是亚细胞区域分辨率，只是间接证实它们在同一个复合物中。C正确：受体光漂白FRET实验（acceptor photobleaching）中，漂白受体后供体荧光去猝灭而增加，这是验证FRET的经典方法。这是一道实验技术分析题。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "蛋白互作技术",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "882791694",
+  "tags": []
+ },
+ "BQ-transcriptomics-9b62d39b775f": {
+  "type": "mtf",
+  "question": "某实验用FRET（荧光共振能量转移）技术检测活细胞中两种蛋白质的相互作用。将CFP融合蛋白A和YFP融合蛋白B共表达，检测到显著的FRET信号。判断以下推断的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "若添加已知的竞争性抑制剂后FRET信号消失，说明蛋白A-B的相互作用具有特异性",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "FRET检测到的相互作用意味着这两个蛋白一定位于同一个亚细胞区域",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "FRET信号表明蛋白A和蛋白B在活细胞中存在直接的物理相互作用或距离非常接近（<10nm）",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "若进行FRET受体光漂白实验，光漂白后供体的荧光强度增加，可进一步验证FRET信号的特异性",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：FRET是近距离（1-10nm）蛋白互作的金标准检测方法。A正确：竞争性抑制是验证特异性的常用策略。B错误：FRET检测到互作意味着两蛋白在同一位置距离足够近，但显像的并不是亚细胞区域分辨率，只是间接证实它们在同一个复合物中。D正确：受体光漂白FRET实验（acceptor photobleaching）中，漂白受体后供体荧光去猝灭而增加，这是验证FRET的经典方法。这是一道实验技术分析题。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "蛋白互作技术",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "882791694",
+  "tags": []
+ },
+ "BQ-transcriptomics-4a3e85e3c260": {
+  "type": "mtf",
+  "question": "某实验用FRET（荧光共振能量转移）技术检测活细胞中两种蛋白质的相互作用。将CFP融合蛋白A和YFP融合蛋白B共表达，检测到显著的FRET信号。判断以下推断的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "若添加已知的竞争性抑制剂后FRET信号消失，说明蛋白A-B的相互作用具有特异性",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "FRET检测到的相互作用意味着这两个蛋白一定位于同一个亚细胞区域",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "若进行FRET受体光漂白实验，光漂白后供体的荧光强度增加，可进一步验证FRET信号的特异性",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "FRET信号表明蛋白A和蛋白B在活细胞中存在直接的物理相互作用或距离非常接近（<10nm）",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：FRET是近距离（1-10nm）蛋白互作的金标准检测方法。A正确：竞争性抑制是验证特异性的常用策略。B错误：FRET检测到互作意味着两蛋白在同一位置距离足够近，但显像的并不是亚细胞区域分辨率，只是间接证实它们在同一个复合物中。C正确：受体光漂白FRET实验（acceptor photobleaching）中，漂白受体后供体荧光去猝灭而增加，这是验证FRET的经典方法。这是一道实验技术分析题。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "蛋白互作技术",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "882791694",
+  "tags": []
+ },
+ "BQ-transcriptomics-04470a17142d": {
+  "type": "mtf",
+  "question": "某实验用FRET（荧光共振能量转移）技术检测活细胞中两种蛋白质的相互作用。将CFP融合蛋白A和YFP融合蛋白B共表达，检测到显著的FRET信号。判断以下推断的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "若添加已知的竞争性抑制剂后FRET信号消失，说明蛋白A-B的相互作用具有特异性",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "若进行FRET受体光漂白实验，光漂白后供体的荧光强度增加，可进一步验证FRET信号的特异性",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "FRET信号表明蛋白A和蛋白B在活细胞中存在直接的物理相互作用或距离非常接近（<10nm）",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "FRET检测到的相互作用意味着这两个蛋白一定位于同一个亚细胞区域",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确：FRET是近距离（1-10nm）蛋白互作的金标准检测方法。A正确：竞争性抑制是验证特异性的常用策略。D错误：FRET检测到互作意味着两蛋白在同一位置距离足够近，但显像的并不是亚细胞区域分辨率，只是间接证实它们在同一个复合物中。B正确：受体光漂白FRET实验（acceptor photobleaching）中，漂白受体后供体荧光去猝灭而增加，这是验证FRET的经典方法。这是一道实验技术分析题。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "蛋白互作技术",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "882791694",
+  "tags": []
+ },
+ "BQ-transcriptomics-28fe5907c4cf": {
+  "type": "mtf",
+  "question": "某实验用FRET（荧光共振能量转移）技术检测活细胞中两种蛋白质的相互作用。将CFP融合蛋白A和YFP融合蛋白B共表达，检测到显著的FRET信号。判断以下推断的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "若添加已知的竞争性抑制剂后FRET信号消失，说明蛋白A-B的相互作用具有特异性",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "若进行FRET受体光漂白实验，光漂白后供体的荧光强度增加，可进一步验证FRET信号的特异性",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "FRET检测到的相互作用意味着这两个蛋白一定位于同一个亚细胞区域",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "FRET信号表明蛋白A和蛋白B在活细胞中存在直接的物理相互作用或距离非常接近（<10nm）",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：FRET是近距离（1-10nm）蛋白互作的金标准检测方法。A正确：竞争性抑制是验证特异性的常用策略。C错误：FRET检测到互作意味着两蛋白在同一位置距离足够近，但显像的并不是亚细胞区域分辨率，只是间接证实它们在同一个复合物中。B正确：受体光漂白FRET实验（acceptor photobleaching）中，漂白受体后供体荧光去猝灭而增加，这是验证FRET的经典方法。这是一道实验技术分析题。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "蛋白互作技术",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "882791694",
+  "tags": []
+ },
+ "BQ-transcriptomics-f484324d4ddc": {
+  "type": "mtf",
+  "question": "某实验用FRET（荧光共振能量转移）技术检测活细胞中两种蛋白质的相互作用。将CFP融合蛋白A和YFP融合蛋白B共表达，检测到显著的FRET信号。判断以下推断的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "若进行FRET受体光漂白实验，光漂白后供体的荧光强度增加，可进一步验证FRET信号的特异性",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "FRET信号表明蛋白A和蛋白B在活细胞中存在直接的物理相互作用或距离非常接近（<10nm）",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "FRET检测到的相互作用意味着这两个蛋白一定位于同一个亚细胞区域",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "若添加已知的竞争性抑制剂后FRET信号消失，说明蛋白A-B的相互作用具有特异性",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：FRET是近距离（1-10nm）蛋白互作的金标准检测方法。D正确：竞争性抑制是验证特异性的常用策略。C错误：FRET检测到互作意味着两蛋白在同一位置距离足够近，但显像的并不是亚细胞区域分辨率，只是间接证实它们在同一个复合物中。A正确：受体光漂白FRET实验（acceptor photobleaching）中，漂白受体后供体荧光去猝灭而增加，这是验证FRET的经典方法。这是一道实验技术分析题。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "蛋白互作技术",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "882791694",
+  "tags": []
+ },
+ "BQ-transcriptomics-77c36c44d7de": {
+  "type": "mtf",
+  "question": "某实验用FRET（荧光共振能量转移）技术检测活细胞中两种蛋白质的相互作用。将CFP融合蛋白A和YFP融合蛋白B共表达，检测到显著的FRET信号。判断以下推断的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "若进行FRET受体光漂白实验，光漂白后供体的荧光强度增加，可进一步验证FRET信号的特异性",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "FRET信号表明蛋白A和蛋白B在活细胞中存在直接的物理相互作用或距离非常接近（<10nm）",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "若添加已知的竞争性抑制剂后FRET信号消失，说明蛋白A-B的相互作用具有特异性",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "FRET检测到的相互作用意味着这两个蛋白一定位于同一个亚细胞区域",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确：FRET是近距离（1-10nm）蛋白互作的金标准检测方法。C正确：竞争性抑制是验证特异性的常用策略。D错误：FRET检测到互作意味着两蛋白在同一位置距离足够近，但显像的并不是亚细胞区域分辨率，只是间接证实它们在同一个复合物中。A正确：受体光漂白FRET实验（acceptor photobleaching）中，漂白受体后供体荧光去猝灭而增加，这是验证FRET的经典方法。这是一道实验技术分析题。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "蛋白互作技术",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "882791694",
+  "tags": []
+ },
+ "BQ-transcriptomics-9bd1563271a0": {
+  "type": "mtf",
+  "question": "某实验用FRET（荧光共振能量转移）技术检测活细胞中两种蛋白质的相互作用。将CFP融合蛋白A和YFP融合蛋白B共表达，检测到显著的FRET信号。判断以下推断的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "若进行FRET受体光漂白实验，光漂白后供体的荧光强度增加，可进一步验证FRET信号的特异性",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "FRET检测到的相互作用意味着这两个蛋白一定位于同一个亚细胞区域",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "FRET信号表明蛋白A和蛋白B在活细胞中存在直接的物理相互作用或距离非常接近（<10nm）",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "若添加已知的竞争性抑制剂后FRET信号消失，说明蛋白A-B的相互作用具有特异性",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：FRET是近距离（1-10nm）蛋白互作的金标准检测方法。D正确：竞争性抑制是验证特异性的常用策略。B错误：FRET检测到互作意味着两蛋白在同一位置距离足够近，但显像的并不是亚细胞区域分辨率，只是间接证实它们在同一个复合物中。A正确：受体光漂白FRET实验（acceptor photobleaching）中，漂白受体后供体荧光去猝灭而增加，这是验证FRET的经典方法。这是一道实验技术分析题。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "蛋白互作技术",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "882791694",
+  "tags": []
+ },
+ "BQ-transcriptomics-4b5ec840cdaa": {
+  "type": "mtf",
+  "question": "某实验用FRET（荧光共振能量转移）技术检测活细胞中两种蛋白质的相互作用。将CFP融合蛋白A和YFP融合蛋白B共表达，检测到显著的FRET信号。判断以下推断的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "若进行FRET受体光漂白实验，光漂白后供体的荧光强度增加，可进一步验证FRET信号的特异性",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "FRET检测到的相互作用意味着这两个蛋白一定位于同一个亚细胞区域",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "若添加已知的竞争性抑制剂后FRET信号消失，说明蛋白A-B的相互作用具有特异性",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "FRET信号表明蛋白A和蛋白B在活细胞中存在直接的物理相互作用或距离非常接近（<10nm）",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：FRET是近距离（1-10nm）蛋白互作的金标准检测方法。C正确：竞争性抑制是验证特异性的常用策略。B错误：FRET检测到互作意味着两蛋白在同一位置距离足够近，但显像的并不是亚细胞区域分辨率，只是间接证实它们在同一个复合物中。A正确：受体光漂白FRET实验（acceptor photobleaching）中，漂白受体后供体荧光去猝灭而增加，这是验证FRET的经典方法。这是一道实验技术分析题。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "蛋白互作技术",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "882791694",
+  "tags": []
+ },
+ "BQ-transcriptomics-fefd39dfea98": {
+  "type": "mtf",
+  "question": "某实验用FRET（荧光共振能量转移）技术检测活细胞中两种蛋白质的相互作用。将CFP融合蛋白A和YFP融合蛋白B共表达，检测到显著的FRET信号。判断以下推断的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "若进行FRET受体光漂白实验，光漂白后供体的荧光强度增加，可进一步验证FRET信号的特异性",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "若添加已知的竞争性抑制剂后FRET信号消失，说明蛋白A-B的相互作用具有特异性",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "FRET信号表明蛋白A和蛋白B在活细胞中存在直接的物理相互作用或距离非常接近（<10nm）",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "FRET检测到的相互作用意味着这两个蛋白一定位于同一个亚细胞区域",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确：FRET是近距离（1-10nm）蛋白互作的金标准检测方法。B正确：竞争性抑制是验证特异性的常用策略。D错误：FRET检测到互作意味着两蛋白在同一位置距离足够近，但显像的并不是亚细胞区域分辨率，只是间接证实它们在同一个复合物中。A正确：受体光漂白FRET实验（acceptor photobleaching）中，漂白受体后供体荧光去猝灭而增加，这是验证FRET的经典方法。这是一道实验技术分析题。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "蛋白互作技术",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "882791694",
+  "tags": []
+ },
+ "BQ-transcriptomics-7c967a7b36fb": {
+  "type": "mtf",
+  "question": "某实验用FRET（荧光共振能量转移）技术检测活细胞中两种蛋白质的相互作用。将CFP融合蛋白A和YFP融合蛋白B共表达，检测到显著的FRET信号。判断以下推断的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "若进行FRET受体光漂白实验，光漂白后供体的荧光强度增加，可进一步验证FRET信号的特异性",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "若添加已知的竞争性抑制剂后FRET信号消失，说明蛋白A-B的相互作用具有特异性",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "FRET检测到的相互作用意味着这两个蛋白一定位于同一个亚细胞区域",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "FRET信号表明蛋白A和蛋白B在活细胞中存在直接的物理相互作用或距离非常接近（<10nm）",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：FRET是近距离（1-10nm）蛋白互作的金标准检测方法。B正确：竞争性抑制是验证特异性的常用策略。C错误：FRET检测到互作意味着两蛋白在同一位置距离足够近，但显像的并不是亚细胞区域分辨率，只是间接证实它们在同一个复合物中。A正确：受体光漂白FRET实验（acceptor photobleaching）中，漂白受体后供体荧光去猝灭而增加，这是验证FRET的经典方法。这是一道实验技术分析题。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "蛋白互作技术",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "882791694",
+  "tags": []
+ }
+}

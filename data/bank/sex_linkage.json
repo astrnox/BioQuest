@@ -1,0 +1,1954 @@
+{
+ "BQ-sex_linkage-9b97c4d450d2": {
+  "type": "mtf",
+  "question": "一个抗维生素 D 佝偻病男性（XᴴY）与一正常女性（XʰXʰ）结婚，子女中患者情况为",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "1/2",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "1/4",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "3/4",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "1",
+    "answer": false
+   }
+  ],
+  "explanation": "父母基因型应为 XᴮY × XᴮXᵇ；子代女儿全部正常；儿子 1/2 正常、1/2 色盲；总体子代色盲概率 1/4。",
+  "subject": "遗传学",
+  "concept": "伴性遗传",
+  "difficulty": "league",
+  "chart": null,
+  "year": null,
+  "module": "module_3",
+  "target": "high_school",
+  "tags": [
+   "module_3",
+   "遗传学",
+   "伴性遗传",
+   "high_school"
+  ],
+  "oldId": "65116866"
+ },
+ "BQ-sex_linkage-ba0fa6739847": {
+  "type": "mtf",
+  "question": "一个红绿色盲男性（XᵇY）与一个视觉正常的女性（XᴮXᵇ）结婚，下列说法正确的是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "儿子全部色盲",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "女儿全部色盲",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "儿子中一半正常，一半色盲",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "女儿中一半为色盲，一半为携带者",
+    "answer": false
+   }
+  ],
+  "explanation": "父母基因型为 XᵇY × XᴮXᵇ，子代儿子为 XᴮY（正常）或 XᵇY（色盲），各占 50%；女儿为 XᴮXᵇ（携带）或 XᵇXᵇ（色盲）。",
+  "subject": "遗传学",
+  "concept": "伴性遗传",
+  "difficulty": "basic",
+  "chart": null,
+  "year": null,
+  "module": "module_3",
+  "target": "high_school",
+  "tags": [
+   "module_3",
+   "遗传学",
+   "伴性遗传",
+   "高考"
+  ],
+  "oldId": "1370853136"
+ },
+ "BQ-sex_linkage-078415f5ce80": {
+  "type": "mtf",
+  "question": "关于伴性遗传的叙述，正确的是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "1/2",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "1/4",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "3/4",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "1",
+    "answer": false
+   }
+  ],
+  "explanation": "父母基因型应为 XᴮY × XᴮXᵇ；子代女儿全部正常；儿子 1/2 正常、1/2 色盲；总体子代色盲概率 1/4。",
+  "subject": "遗传学",
+  "concept": "伴性遗传",
+  "difficulty": "league",
+  "chart": null,
+  "year": null,
+  "module": "module_3",
+  "target": "high_school",
+  "tags": [
+   "module_3",
+   "遗传学",
+   "伴性遗传",
+   "high_school"
+  ],
+  "oldId": "670927686"
+ },
+ "BQ-sex_linkage-af1a14d20993": {
+  "type": "mtf",
+  "question": "红绿色盲是 X 染色体隐性遗传病。一对视觉正常的夫妇，生了一个色盲儿子，再生一个色盲孩子的概率是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "1/2",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "1/4",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "3/4",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "1",
+    "answer": false
+   }
+  ],
+  "explanation": "父母基因型应为 XᴮY × XᴮXᵇ；子代女儿全部正常；儿子 1/2 正常、1/2 色盲；总体子代色盲概率 1/4。",
+  "subject": "遗传学",
+  "concept": "伴性遗传",
+  "difficulty": "league",
+  "chart": null,
+  "year": null,
+  "module": "module_3",
+  "target": "high_school",
+  "tags": [
+   "module_3",
+   "遗传学",
+   "伴性遗传",
+   "high_school"
+  ],
+  "oldId": "2044689833"
+ },
+ "BQ-sex_linkage-68c86347e7f5": {
+  "type": "mtf",
+  "question": "关于伴 X 染色体隐性遗传病的叙述，正确的是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "父亲患病，女儿一定患病",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "母亲患病，儿子一定患病",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "男性患者多于女性患者",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "致病基因可以从父亲传递给儿子",
+    "answer": false
+   }
+  ],
+  "explanation": "伴 X 隐性遗传：母亲患病（XaXa）→儿子必患病（XaY）；父亲的 X 只传给女儿。",
+  "subject": "遗传学",
+  "concept": "伴性遗传",
+  "difficulty": "basic",
+  "chart": null,
+  "year": null,
+  "module": "module_4",
+  "target": "high_school",
+  "tags": [
+   "module_4",
+   "遗传学",
+   "伴性遗传",
+   "high_school"
+  ],
+  "oldId": "1597786205"
+ },
+ "BQ-sex_linkage-fa4212f75e97": {
+  "type": "mtf",
+  "question": "关于红绿色盲遗传的叙述，错误的是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "母亲患病，儿子一定患病",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "男性患者多于女性患者",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "父亲患病，女儿一定患病",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "致病基因可以从父亲传递给儿子",
+    "answer": false
+   }
+  ],
+  "explanation": "伴 X 隐性遗传：母亲患病（XaXa）→儿子必患病（XaY）；父亲的 X 只传给女儿。",
+  "subject": "遗传学",
+  "concept": "伴性遗传",
+  "difficulty": "basic",
+  "chart": null,
+  "year": null,
+  "module": "module_4",
+  "target": "high_school",
+  "tags": [
+   "module_4",
+   "遗传学",
+   "伴性遗传",
+   "high_school"
+  ],
+  "oldId": "1102231185"
+ },
+ "BQ-sex_linkage-65cb34d13f02": {
+  "type": "single",
+  "question": "某人群中红绿色盲（X染色体隐性）男性发病率为8%。一对表型正常夫妇，女方父亲患红绿色盲。连续生育3个孩子都正常的概率最接近：",
+  "options": [
+   "0.42",
+   "0.50",
+   "0.58",
+   "0.64"
+  ],
+  "answer": 0,
+  "explanation": "女方父亲患色盲（XᶜY），女方一定从父亲获得Xᶜ，表型正常所以基因型确定为XᶜXᶜ（携带者）。男方表型正常，基因型XᶜY。后代：XᶜXᶜ(1/4,正常女)、XᶜY(1/4,正常男)、XᶜY(1/4,色盲男)。注意女儿从父亲获得Xᶜ，所以女儿一定正常（XᶜXᶜ正常，XᶜXᶜ也是正常因为C对c显性）。每个孩子正常概率：男孩正常1/4÷(1/4+1/4)=1/2（男孩中一半正常），女孩正常1/2（全部正常）。综合：每个孩子正常概率=1/4(正常男)+1/2(正常女)=3/4。3个都正常=(3/4)³=27/64≈0.42。",
+  "subject": "遗传学",
+  "concept": "伴性遗传概率推理",
+  "difficulty": 4,
+  "tags": [
+   "逻辑推理",
+   "概率计算",
+   "伴性遗传"
+  ],
+  "module": "module_4",
+  "category": "logic",
+  "oldId": "232555673",
+  "subQuestions": [],
+  "chart": null,
+  "year": null
+ },
+ "BQ-sex_linkage-a43cdae4a7b9": {
+  "type": "mtf",
+  "question": "关于X染色体失活机制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "Tsix是Xist的反义转录物,在活性X染色体上表达,拮抗Xist的功能",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "Xist是一个长非编码RNA,从未失活X染色体上表达,顺式覆盖该染色体启动沉默",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "X染色体上所有基因都在失活过程中被沉默",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "X染色体失活涉及组蛋白修饰(H3K27me3等)和DNA甲基化的多步骤过程",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:X染色体上约15%的基因逃逸X失活(在不同个体和组织中不同),这些基因中的一部分在Y染色体上有同源物(伪常染色体区),其他逃逸基因分布在X染色体各处。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "X失活",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "726582734",
+  "tags": []
+ },
+ "BQ-sex_linkage-53436510d80e": {
+  "type": "mtf",
+  "question": "关于X染色体失活机制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "Tsix是Xist的反义转录物,在活性X染色体上表达,拮抗Xist的功能",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "Xist是一个长非编码RNA,从未失活X染色体上表达,顺式覆盖该染色体启动沉默",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "X染色体失活涉及组蛋白修饰(H3K27me3等)和DNA甲基化的多步骤过程",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "X染色体上所有基因都在失活过程中被沉默",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:X染色体上约15%的基因逃逸X失活(在不同个体和组织中不同),这些基因中的一部分在Y染色体上有同源物(伪常染色体区),其他逃逸基因分布在X染色体各处。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "X失活",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "726582734",
+  "tags": []
+ },
+ "BQ-sex_linkage-77dd9474564c": {
+  "type": "mtf",
+  "question": "关于X染色体失活机制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "Tsix是Xist的反义转录物,在活性X染色体上表达,拮抗Xist的功能",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "X染色体上所有基因都在失活过程中被沉默",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "Xist是一个长非编码RNA,从未失活X染色体上表达,顺式覆盖该染色体启动沉默",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "X染色体失活涉及组蛋白修饰(H3K27me3等)和DNA甲基化的多步骤过程",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:X染色体上约15%的基因逃逸X失活(在不同个体和组织中不同),这些基因中的一部分在Y染色体上有同源物(伪常染色体区),其他逃逸基因分布在X染色体各处。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "X失活",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "726582734",
+  "tags": []
+ },
+ "BQ-sex_linkage-5b138ddd9e1b": {
+  "type": "mtf",
+  "question": "关于X染色体失活机制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "Tsix是Xist的反义转录物,在活性X染色体上表达,拮抗Xist的功能",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "X染色体上所有基因都在失活过程中被沉默",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "X染色体失活涉及组蛋白修饰(H3K27me3等)和DNA甲基化的多步骤过程",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "Xist是一个长非编码RNA,从未失活X染色体上表达,顺式覆盖该染色体启动沉默",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:X染色体上约15%的基因逃逸X失活(在不同个体和组织中不同),这些基因中的一部分在Y染色体上有同源物(伪常染色体区),其他逃逸基因分布在X染色体各处。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "X失活",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "726582734",
+  "tags": []
+ },
+ "BQ-sex_linkage-9c93430f8f45": {
+  "type": "mtf",
+  "question": "关于X染色体失活机制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "Tsix是Xist的反义转录物,在活性X染色体上表达,拮抗Xist的功能",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "X染色体失活涉及组蛋白修饰(H3K27me3等)和DNA甲基化的多步骤过程",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "Xist是一个长非编码RNA,从未失活X染色体上表达,顺式覆盖该染色体启动沉默",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "X染色体上所有基因都在失活过程中被沉默",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:X染色体上约15%的基因逃逸X失活(在不同个体和组织中不同),这些基因中的一部分在Y染色体上有同源物(伪常染色体区),其他逃逸基因分布在X染色体各处。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "X失活",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "726582734",
+  "tags": []
+ },
+ "BQ-sex_linkage-7e6bc19ea294": {
+  "type": "mtf",
+  "question": "关于X染色体失活机制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "Tsix是Xist的反义转录物,在活性X染色体上表达,拮抗Xist的功能",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "X染色体失活涉及组蛋白修饰(H3K27me3等)和DNA甲基化的多步骤过程",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "X染色体上所有基因都在失活过程中被沉默",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "Xist是一个长非编码RNA,从未失活X染色体上表达,顺式覆盖该染色体启动沉默",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:X染色体上约15%的基因逃逸X失活(在不同个体和组织中不同),这些基因中的一部分在Y染色体上有同源物(伪常染色体区),其他逃逸基因分布在X染色体各处。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "X失活",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "726582734",
+  "tags": []
+ },
+ "BQ-sex_linkage-670c0c1f1a54": {
+  "type": "mtf",
+  "question": "关于X染色体失活机制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "Xist是一个长非编码RNA,从未失活X染色体上表达,顺式覆盖该染色体启动沉默",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "Tsix是Xist的反义转录物,在活性X染色体上表达,拮抗Xist的功能",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "X染色体上所有基因都在失活过程中被沉默",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "X染色体失活涉及组蛋白修饰(H3K27me3等)和DNA甲基化的多步骤过程",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:X染色体上约15%的基因逃逸X失活(在不同个体和组织中不同),这些基因中的一部分在Y染色体上有同源物(伪常染色体区),其他逃逸基因分布在X染色体各处。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "X失活",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "726582734",
+  "tags": []
+ },
+ "BQ-sex_linkage-f9a5b84a6674": {
+  "type": "mtf",
+  "question": "关于X染色体失活机制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "Xist是一个长非编码RNA,从未失活X染色体上表达,顺式覆盖该染色体启动沉默",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "Tsix是Xist的反义转录物,在活性X染色体上表达,拮抗Xist的功能",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "X染色体失活涉及组蛋白修饰(H3K27me3等)和DNA甲基化的多步骤过程",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "X染色体上所有基因都在失活过程中被沉默",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:X染色体上约15%的基因逃逸X失活(在不同个体和组织中不同),这些基因中的一部分在Y染色体上有同源物(伪常染色体区),其他逃逸基因分布在X染色体各处。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "X失活",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "726582734",
+  "tags": []
+ },
+ "BQ-sex_linkage-1ea650488937": {
+  "type": "mtf",
+  "question": "关于X染色体失活机制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "Xist是一个长非编码RNA,从未失活X染色体上表达,顺式覆盖该染色体启动沉默",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "X染色体上所有基因都在失活过程中被沉默",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "Tsix是Xist的反义转录物,在活性X染色体上表达,拮抗Xist的功能",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "X染色体失活涉及组蛋白修饰(H3K27me3等)和DNA甲基化的多步骤过程",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:X染色体上约15%的基因逃逸X失活(在不同个体和组织中不同),这些基因中的一部分在Y染色体上有同源物(伪常染色体区),其他逃逸基因分布在X染色体各处。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "X失活",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "726582734",
+  "tags": []
+ },
+ "BQ-sex_linkage-d397c47de558": {
+  "type": "mtf",
+  "question": "关于X染色体失活机制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "Xist是一个长非编码RNA,从未失活X染色体上表达,顺式覆盖该染色体启动沉默",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "X染色体上所有基因都在失活过程中被沉默",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "X染色体失活涉及组蛋白修饰(H3K27me3等)和DNA甲基化的多步骤过程",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "Tsix是Xist的反义转录物,在活性X染色体上表达,拮抗Xist的功能",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:X染色体上约15%的基因逃逸X失活(在不同个体和组织中不同),这些基因中的一部分在Y染色体上有同源物(伪常染色体区),其他逃逸基因分布在X染色体各处。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "X失活",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "726582734",
+  "tags": []
+ },
+ "BQ-sex_linkage-0203a19f8bc5": {
+  "type": "mtf",
+  "question": "关于X染色体失活机制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "Xist是一个长非编码RNA,从未失活X染色体上表达,顺式覆盖该染色体启动沉默",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "X染色体失活涉及组蛋白修饰(H3K27me3等)和DNA甲基化的多步骤过程",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "Tsix是Xist的反义转录物,在活性X染色体上表达,拮抗Xist的功能",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "X染色体上所有基因都在失活过程中被沉默",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:X染色体上约15%的基因逃逸X失活(在不同个体和组织中不同),这些基因中的一部分在Y染色体上有同源物(伪常染色体区),其他逃逸基因分布在X染色体各处。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "X失活",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "726582734",
+  "tags": []
+ },
+ "BQ-sex_linkage-8bf96db10c40": {
+  "type": "mtf",
+  "question": "关于X染色体失活机制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "Xist是一个长非编码RNA,从未失活X染色体上表达,顺式覆盖该染色体启动沉默",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "X染色体失活涉及组蛋白修饰(H3K27me3等)和DNA甲基化的多步骤过程",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "X染色体上所有基因都在失活过程中被沉默",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "Tsix是Xist的反义转录物,在活性X染色体上表达,拮抗Xist的功能",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:X染色体上约15%的基因逃逸X失活(在不同个体和组织中不同),这些基因中的一部分在Y染色体上有同源物(伪常染色体区),其他逃逸基因分布在X染色体各处。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "X失活",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "726582734",
+  "tags": []
+ },
+ "BQ-sex_linkage-f41b93acd3c1": {
+  "type": "mtf",
+  "question": "关于X染色体失活机制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "X染色体上所有基因都在失活过程中被沉默",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "Tsix是Xist的反义转录物,在活性X染色体上表达,拮抗Xist的功能",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "Xist是一个长非编码RNA,从未失活X染色体上表达,顺式覆盖该染色体启动沉默",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "X染色体失活涉及组蛋白修饰(H3K27me3等)和DNA甲基化的多步骤过程",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:X染色体上约15%的基因逃逸X失活(在不同个体和组织中不同),这些基因中的一部分在Y染色体上有同源物(伪常染色体区),其他逃逸基因分布在X染色体各处。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "X失活",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "726582734",
+  "tags": []
+ },
+ "BQ-sex_linkage-3c39a6bc1eea": {
+  "type": "mtf",
+  "question": "关于X染色体失活机制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "X染色体上所有基因都在失活过程中被沉默",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "Tsix是Xist的反义转录物,在活性X染色体上表达,拮抗Xist的功能",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "X染色体失活涉及组蛋白修饰(H3K27me3等)和DNA甲基化的多步骤过程",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "Xist是一个长非编码RNA,从未失活X染色体上表达,顺式覆盖该染色体启动沉默",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:X染色体上约15%的基因逃逸X失活(在不同个体和组织中不同),这些基因中的一部分在Y染色体上有同源物(伪常染色体区),其他逃逸基因分布在X染色体各处。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "X失活",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "726582734",
+  "tags": []
+ },
+ "BQ-sex_linkage-4a7f8ee6f419": {
+  "type": "mtf",
+  "question": "关于X染色体失活机制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "X染色体上所有基因都在失活过程中被沉默",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "Xist是一个长非编码RNA,从未失活X染色体上表达,顺式覆盖该染色体启动沉默",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "Tsix是Xist的反义转录物,在活性X染色体上表达,拮抗Xist的功能",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "X染色体失活涉及组蛋白修饰(H3K27me3等)和DNA甲基化的多步骤过程",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:X染色体上约15%的基因逃逸X失活(在不同个体和组织中不同),这些基因中的一部分在Y染色体上有同源物(伪常染色体区),其他逃逸基因分布在X染色体各处。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "X失活",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "726582734",
+  "tags": []
+ },
+ "BQ-sex_linkage-10c13bdc3fbd": {
+  "type": "mtf",
+  "question": "关于X染色体失活机制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "X染色体上所有基因都在失活过程中被沉默",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "Xist是一个长非编码RNA,从未失活X染色体上表达,顺式覆盖该染色体启动沉默",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "X染色体失活涉及组蛋白修饰(H3K27me3等)和DNA甲基化的多步骤过程",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "Tsix是Xist的反义转录物,在活性X染色体上表达,拮抗Xist的功能",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:X染色体上约15%的基因逃逸X失活(在不同个体和组织中不同),这些基因中的一部分在Y染色体上有同源物(伪常染色体区),其他逃逸基因分布在X染色体各处。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "X失活",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "726582734",
+  "tags": []
+ },
+ "BQ-sex_linkage-92836820180c": {
+  "type": "mtf",
+  "question": "关于X染色体失活机制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "X染色体上所有基因都在失活过程中被沉默",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "X染色体失活涉及组蛋白修饰(H3K27me3等)和DNA甲基化的多步骤过程",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "Tsix是Xist的反义转录物,在活性X染色体上表达,拮抗Xist的功能",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "Xist是一个长非编码RNA,从未失活X染色体上表达,顺式覆盖该染色体启动沉默",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:X染色体上约15%的基因逃逸X失活(在不同个体和组织中不同),这些基因中的一部分在Y染色体上有同源物(伪常染色体区),其他逃逸基因分布在X染色体各处。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "X失活",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "726582734",
+  "tags": []
+ },
+ "BQ-sex_linkage-4bcfdacfb52a": {
+  "type": "mtf",
+  "question": "关于X染色体失活机制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "X染色体上所有基因都在失活过程中被沉默",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "X染色体失活涉及组蛋白修饰(H3K27me3等)和DNA甲基化的多步骤过程",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "Xist是一个长非编码RNA,从未失活X染色体上表达,顺式覆盖该染色体启动沉默",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "Tsix是Xist的反义转录物,在活性X染色体上表达,拮抗Xist的功能",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:X染色体上约15%的基因逃逸X失活(在不同个体和组织中不同),这些基因中的一部分在Y染色体上有同源物(伪常染色体区),其他逃逸基因分布在X染色体各处。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "X失活",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "726582734",
+  "tags": []
+ },
+ "BQ-sex_linkage-08f4aa2c49ac": {
+  "type": "mtf",
+  "question": "关于X染色体失活机制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "X染色体失活涉及组蛋白修饰(H3K27me3等)和DNA甲基化的多步骤过程",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "Tsix是Xist的反义转录物,在活性X染色体上表达,拮抗Xist的功能",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "Xist是一个长非编码RNA,从未失活X染色体上表达,顺式覆盖该染色体启动沉默",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "X染色体上所有基因都在失活过程中被沉默",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:X染色体上约15%的基因逃逸X失活(在不同个体和组织中不同),这些基因中的一部分在Y染色体上有同源物(伪常染色体区),其他逃逸基因分布在X染色体各处。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "X失活",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "726582734",
+  "tags": []
+ },
+ "BQ-sex_linkage-579199c2a5b6": {
+  "type": "mtf",
+  "question": "关于X染色体失活机制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "X染色体失活涉及组蛋白修饰(H3K27me3等)和DNA甲基化的多步骤过程",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "Tsix是Xist的反义转录物,在活性X染色体上表达,拮抗Xist的功能",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "X染色体上所有基因都在失活过程中被沉默",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "Xist是一个长非编码RNA,从未失活X染色体上表达,顺式覆盖该染色体启动沉默",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:X染色体上约15%的基因逃逸X失活(在不同个体和组织中不同),这些基因中的一部分在Y染色体上有同源物(伪常染色体区),其他逃逸基因分布在X染色体各处。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "X失活",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "726582734",
+  "tags": []
+ },
+ "BQ-sex_linkage-b17eea0e4d34": {
+  "type": "mtf",
+  "question": "关于X染色体失活机制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "X染色体失活涉及组蛋白修饰(H3K27me3等)和DNA甲基化的多步骤过程",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "Xist是一个长非编码RNA,从未失活X染色体上表达,顺式覆盖该染色体启动沉默",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "Tsix是Xist的反义转录物,在活性X染色体上表达,拮抗Xist的功能",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "X染色体上所有基因都在失活过程中被沉默",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:X染色体上约15%的基因逃逸X失活(在不同个体和组织中不同),这些基因中的一部分在Y染色体上有同源物(伪常染色体区),其他逃逸基因分布在X染色体各处。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "X失活",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "726582734",
+  "tags": []
+ },
+ "BQ-sex_linkage-33f4918cdbd5": {
+  "type": "mtf",
+  "question": "关于X染色体失活机制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "X染色体失活涉及组蛋白修饰(H3K27me3等)和DNA甲基化的多步骤过程",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "Xist是一个长非编码RNA,从未失活X染色体上表达,顺式覆盖该染色体启动沉默",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "X染色体上所有基因都在失活过程中被沉默",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "Tsix是Xist的反义转录物,在活性X染色体上表达,拮抗Xist的功能",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:X染色体上约15%的基因逃逸X失活(在不同个体和组织中不同),这些基因中的一部分在Y染色体上有同源物(伪常染色体区),其他逃逸基因分布在X染色体各处。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "X失活",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "726582734",
+  "tags": []
+ },
+ "BQ-sex_linkage-fb2cbf4be3e4": {
+  "type": "mtf",
+  "question": "关于X染色体失活机制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "X染色体失活涉及组蛋白修饰(H3K27me3等)和DNA甲基化的多步骤过程",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "X染色体上所有基因都在失活过程中被沉默",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "Tsix是Xist的反义转录物,在活性X染色体上表达,拮抗Xist的功能",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "Xist是一个长非编码RNA,从未失活X染色体上表达,顺式覆盖该染色体启动沉默",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:X染色体上约15%的基因逃逸X失活(在不同个体和组织中不同),这些基因中的一部分在Y染色体上有同源物(伪常染色体区),其他逃逸基因分布在X染色体各处。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "X失活",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "726582734",
+  "tags": []
+ },
+ "BQ-sex_linkage-657fa665268b": {
+  "type": "mtf",
+  "question": "关于X染色体失活机制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "X染色体失活涉及组蛋白修饰(H3K27me3等)和DNA甲基化的多步骤过程",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "X染色体上所有基因都在失活过程中被沉默",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "Xist是一个长非编码RNA,从未失活X染色体上表达,顺式覆盖该染色体启动沉默",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "Tsix是Xist的反义转录物,在活性X染色体上表达,拮抗Xist的功能",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:X染色体上约15%的基因逃逸X失活(在不同个体和组织中不同),这些基因中的一部分在Y染色体上有同源物(伪常染色体区),其他逃逸基因分布在X染色体各处。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "X失活",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "726582734",
+  "tags": []
+ },
+ "BQ-sex_linkage-2bc082c713dd": {
+  "type": "mtf",
+  "question": "关于遗传学中的性别决定，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "哺乳动物的性别决定由Y染色体上的SRY基因启动",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "所有生物的性别决定机制都是遗传性的",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "有些爬行动物(如一些龟鳖类和鳄类)的性别由孵化温度决定",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "果蝇的性别决定基于X染色体与常染色体的比值(X:A),SRY同源物不参与",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确:SRY基因。D正确:果蝇的X:A比值系统。C正确:温度依赖的性别决定(TSD)。B错误:环境性别决定(ESD)在多种动物中存在，包括温度、光周期和社会因素等。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "性别决定",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "287685068",
+  "tags": []
+ },
+ "BQ-sex_linkage-1830b3bc2d18": {
+  "type": "mtf",
+  "question": "关于遗传学中的性别决定，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "哺乳动物的性别决定由Y染色体上的SRY基因启动",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "所有生物的性别决定机制都是遗传性的",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "果蝇的性别决定基于X染色体与常染色体的比值(X:A),SRY同源物不参与",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "有些爬行动物(如一些龟鳖类和鳄类)的性别由孵化温度决定",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确:SRY基因。C正确:果蝇的X:A比值系统。D正确:温度依赖的性别决定(TSD)。B错误:环境性别决定(ESD)在多种动物中存在，包括温度、光周期和社会因素等。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "性别决定",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "287685068",
+  "tags": []
+ },
+ "BQ-sex_linkage-7a3371b56450": {
+  "type": "mtf",
+  "question": "关于遗传学中的性别决定，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "哺乳动物的性别决定由Y染色体上的SRY基因启动",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "有些爬行动物(如一些龟鳖类和鳄类)的性别由孵化温度决定",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "所有生物的性别决定机制都是遗传性的",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "果蝇的性别决定基于X染色体与常染色体的比值(X:A),SRY同源物不参与",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确:SRY基因。D正确:果蝇的X:A比值系统。B正确:温度依赖的性别决定(TSD)。C错误:环境性别决定(ESD)在多种动物中存在，包括温度、光周期和社会因素等。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "性别决定",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "287685068",
+  "tags": []
+ },
+ "BQ-sex_linkage-b57e5036447d": {
+  "type": "mtf",
+  "question": "关于遗传学中的性别决定，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "哺乳动物的性别决定由Y染色体上的SRY基因启动",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "有些爬行动物(如一些龟鳖类和鳄类)的性别由孵化温度决定",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "果蝇的性别决定基于X染色体与常染色体的比值(X:A),SRY同源物不参与",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "所有生物的性别决定机制都是遗传性的",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确:SRY基因。C正确:果蝇的X:A比值系统。B正确:温度依赖的性别决定(TSD)。D错误:环境性别决定(ESD)在多种动物中存在，包括温度、光周期和社会因素等。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "性别决定",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "287685068",
+  "tags": []
+ },
+ "BQ-sex_linkage-a25b05e7bf63": {
+  "type": "mtf",
+  "question": "关于遗传学中的性别决定，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "哺乳动物的性别决定由Y染色体上的SRY基因启动",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "果蝇的性别决定基于X染色体与常染色体的比值(X:A),SRY同源物不参与",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "所有生物的性别决定机制都是遗传性的",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "有些爬行动物(如一些龟鳖类和鳄类)的性别由孵化温度决定",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确:SRY基因。B正确:果蝇的X:A比值系统。D正确:温度依赖的性别决定(TSD)。C错误:环境性别决定(ESD)在多种动物中存在，包括温度、光周期和社会因素等。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "性别决定",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "287685068",
+  "tags": []
+ },
+ "BQ-sex_linkage-310c50d9e538": {
+  "type": "mtf",
+  "question": "关于遗传学中的性别决定，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "哺乳动物的性别决定由Y染色体上的SRY基因启动",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "果蝇的性别决定基于X染色体与常染色体的比值(X:A),SRY同源物不参与",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "有些爬行动物(如一些龟鳖类和鳄类)的性别由孵化温度决定",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "所有生物的性别决定机制都是遗传性的",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确:SRY基因。B正确:果蝇的X:A比值系统。C正确:温度依赖的性别决定(TSD)。D错误:环境性别决定(ESD)在多种动物中存在，包括温度、光周期和社会因素等。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "性别决定",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "287685068",
+  "tags": []
+ },
+ "BQ-sex_linkage-64bdb174c09d": {
+  "type": "mtf",
+  "question": "关于遗传学中的性别决定，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "所有生物的性别决定机制都是遗传性的",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "哺乳动物的性别决定由Y染色体上的SRY基因启动",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "有些爬行动物(如一些龟鳖类和鳄类)的性别由孵化温度决定",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "果蝇的性别决定基于X染色体与常染色体的比值(X:A),SRY同源物不参与",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确:SRY基因。D正确:果蝇的X:A比值系统。C正确:温度依赖的性别决定(TSD)。A错误:环境性别决定(ESD)在多种动物中存在，包括温度、光周期和社会因素等。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "性别决定",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "287685068",
+  "tags": []
+ },
+ "BQ-sex_linkage-7d358908b08e": {
+  "type": "mtf",
+  "question": "关于遗传学中的性别决定，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "所有生物的性别决定机制都是遗传性的",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "哺乳动物的性别决定由Y染色体上的SRY基因启动",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "果蝇的性别决定基于X染色体与常染色体的比值(X:A),SRY同源物不参与",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "有些爬行动物(如一些龟鳖类和鳄类)的性别由孵化温度决定",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确:SRY基因。C正确:果蝇的X:A比值系统。D正确:温度依赖的性别决定(TSD)。A错误:环境性别决定(ESD)在多种动物中存在，包括温度、光周期和社会因素等。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "性别决定",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "287685068",
+  "tags": []
+ },
+ "BQ-sex_linkage-be460e9ac4ee": {
+  "type": "mtf",
+  "question": "关于遗传学中的性别决定，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "所有生物的性别决定机制都是遗传性的",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "有些爬行动物(如一些龟鳖类和鳄类)的性别由孵化温度决定",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "哺乳动物的性别决定由Y染色体上的SRY基因启动",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "果蝇的性别决定基于X染色体与常染色体的比值(X:A),SRY同源物不参与",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确:SRY基因。D正确:果蝇的X:A比值系统。B正确:温度依赖的性别决定(TSD)。A错误:环境性别决定(ESD)在多种动物中存在，包括温度、光周期和社会因素等。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "性别决定",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "287685068",
+  "tags": []
+ },
+ "BQ-sex_linkage-9ba898321774": {
+  "type": "mtf",
+  "question": "关于遗传学中的性别决定，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "所有生物的性别决定机制都是遗传性的",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "有些爬行动物(如一些龟鳖类和鳄类)的性别由孵化温度决定",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "果蝇的性别决定基于X染色体与常染色体的比值(X:A),SRY同源物不参与",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "哺乳动物的性别决定由Y染色体上的SRY基因启动",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确:SRY基因。C正确:果蝇的X:A比值系统。B正确:温度依赖的性别决定(TSD)。A错误:环境性别决定(ESD)在多种动物中存在，包括温度、光周期和社会因素等。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "性别决定",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "287685068",
+  "tags": []
+ },
+ "BQ-sex_linkage-114330b3cfa9": {
+  "type": "mtf",
+  "question": "关于遗传学中的性别决定，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "所有生物的性别决定机制都是遗传性的",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "果蝇的性别决定基于X染色体与常染色体的比值(X:A),SRY同源物不参与",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "哺乳动物的性别决定由Y染色体上的SRY基因启动",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "有些爬行动物(如一些龟鳖类和鳄类)的性别由孵化温度决定",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确:SRY基因。B正确:果蝇的X:A比值系统。D正确:温度依赖的性别决定(TSD)。A错误:环境性别决定(ESD)在多种动物中存在，包括温度、光周期和社会因素等。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "性别决定",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "287685068",
+  "tags": []
+ },
+ "BQ-sex_linkage-308f0c73ed45": {
+  "type": "mtf",
+  "question": "关于遗传学中的性别决定，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "所有生物的性别决定机制都是遗传性的",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "果蝇的性别决定基于X染色体与常染色体的比值(X:A),SRY同源物不参与",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "有些爬行动物(如一些龟鳖类和鳄类)的性别由孵化温度决定",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "哺乳动物的性别决定由Y染色体上的SRY基因启动",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确:SRY基因。B正确:果蝇的X:A比值系统。C正确:温度依赖的性别决定(TSD)。A错误:环境性别决定(ESD)在多种动物中存在，包括温度、光周期和社会因素等。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "性别决定",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "287685068",
+  "tags": []
+ },
+ "BQ-sex_linkage-465446a14655": {
+  "type": "mtf",
+  "question": "关于遗传学中的性别决定，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "有些爬行动物(如一些龟鳖类和鳄类)的性别由孵化温度决定",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "哺乳动物的性别决定由Y染色体上的SRY基因启动",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "所有生物的性别决定机制都是遗传性的",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "果蝇的性别决定基于X染色体与常染色体的比值(X:A),SRY同源物不参与",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确:SRY基因。D正确:果蝇的X:A比值系统。A正确:温度依赖的性别决定(TSD)。C错误:环境性别决定(ESD)在多种动物中存在，包括温度、光周期和社会因素等。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "性别决定",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "287685068",
+  "tags": []
+ },
+ "BQ-sex_linkage-8b0aff911627": {
+  "type": "mtf",
+  "question": "关于遗传学中的性别决定，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "有些爬行动物(如一些龟鳖类和鳄类)的性别由孵化温度决定",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "哺乳动物的性别决定由Y染色体上的SRY基因启动",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "果蝇的性别决定基于X染色体与常染色体的比值(X:A),SRY同源物不参与",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "所有生物的性别决定机制都是遗传性的",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确:SRY基因。C正确:果蝇的X:A比值系统。A正确:温度依赖的性别决定(TSD)。D错误:环境性别决定(ESD)在多种动物中存在，包括温度、光周期和社会因素等。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "性别决定",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "287685068",
+  "tags": []
+ },
+ "BQ-sex_linkage-362713e9fa85": {
+  "type": "mtf",
+  "question": "关于遗传学中的性别决定，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "有些爬行动物(如一些龟鳖类和鳄类)的性别由孵化温度决定",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "所有生物的性别决定机制都是遗传性的",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "哺乳动物的性别决定由Y染色体上的SRY基因启动",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "果蝇的性别决定基于X染色体与常染色体的比值(X:A),SRY同源物不参与",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确:SRY基因。D正确:果蝇的X:A比值系统。A正确:温度依赖的性别决定(TSD)。B错误:环境性别决定(ESD)在多种动物中存在，包括温度、光周期和社会因素等。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "性别决定",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "287685068",
+  "tags": []
+ },
+ "BQ-sex_linkage-551714fc9cd4": {
+  "type": "mtf",
+  "question": "关于遗传学中的性别决定，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "有些爬行动物(如一些龟鳖类和鳄类)的性别由孵化温度决定",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "所有生物的性别决定机制都是遗传性的",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "果蝇的性别决定基于X染色体与常染色体的比值(X:A),SRY同源物不参与",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "哺乳动物的性别决定由Y染色体上的SRY基因启动",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确:SRY基因。C正确:果蝇的X:A比值系统。A正确:温度依赖的性别决定(TSD)。B错误:环境性别决定(ESD)在多种动物中存在，包括温度、光周期和社会因素等。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "性别决定",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "287685068",
+  "tags": []
+ },
+ "BQ-sex_linkage-cb1177acde5e": {
+  "type": "mtf",
+  "question": "关于遗传学中的性别决定，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "有些爬行动物(如一些龟鳖类和鳄类)的性别由孵化温度决定",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "果蝇的性别决定基于X染色体与常染色体的比值(X:A),SRY同源物不参与",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "哺乳动物的性别决定由Y染色体上的SRY基因启动",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "所有生物的性别决定机制都是遗传性的",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确:SRY基因。B正确:果蝇的X:A比值系统。A正确:温度依赖的性别决定(TSD)。D错误:环境性别决定(ESD)在多种动物中存在，包括温度、光周期和社会因素等。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "性别决定",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "287685068",
+  "tags": []
+ },
+ "BQ-sex_linkage-383168b55c9b": {
+  "type": "mtf",
+  "question": "关于遗传学中的性别决定，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "有些爬行动物(如一些龟鳖类和鳄类)的性别由孵化温度决定",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "果蝇的性别决定基于X染色体与常染色体的比值(X:A),SRY同源物不参与",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "所有生物的性别决定机制都是遗传性的",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "哺乳动物的性别决定由Y染色体上的SRY基因启动",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确:SRY基因。B正确:果蝇的X:A比值系统。A正确:温度依赖的性别决定(TSD)。C错误:环境性别决定(ESD)在多种动物中存在，包括温度、光周期和社会因素等。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "性别决定",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "287685068",
+  "tags": []
+ },
+ "BQ-sex_linkage-0ad0d62b74ac": {
+  "type": "mtf",
+  "question": "关于遗传学中的性别决定，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "果蝇的性别决定基于X染色体与常染色体的比值(X:A),SRY同源物不参与",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "哺乳动物的性别决定由Y染色体上的SRY基因启动",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "所有生物的性别决定机制都是遗传性的",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "有些爬行动物(如一些龟鳖类和鳄类)的性别由孵化温度决定",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确:SRY基因。A正确:果蝇的X:A比值系统。D正确:温度依赖的性别决定(TSD)。C错误:环境性别决定(ESD)在多种动物中存在，包括温度、光周期和社会因素等。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "性别决定",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "287685068",
+  "tags": []
+ },
+ "BQ-sex_linkage-7ed5fc746fd4": {
+  "type": "mtf",
+  "question": "关于遗传学中的性别决定，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "果蝇的性别决定基于X染色体与常染色体的比值(X:A),SRY同源物不参与",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "哺乳动物的性别决定由Y染色体上的SRY基因启动",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "有些爬行动物(如一些龟鳖类和鳄类)的性别由孵化温度决定",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "所有生物的性别决定机制都是遗传性的",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确:SRY基因。A正确:果蝇的X:A比值系统。C正确:温度依赖的性别决定(TSD)。D错误:环境性别决定(ESD)在多种动物中存在，包括温度、光周期和社会因素等。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "性别决定",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "287685068",
+  "tags": []
+ },
+ "BQ-sex_linkage-c29829068694": {
+  "type": "mtf",
+  "question": "关于遗传学中的性别决定，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "果蝇的性别决定基于X染色体与常染色体的比值(X:A),SRY同源物不参与",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "所有生物的性别决定机制都是遗传性的",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "哺乳动物的性别决定由Y染色体上的SRY基因启动",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "有些爬行动物(如一些龟鳖类和鳄类)的性别由孵化温度决定",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确:SRY基因。A正确:果蝇的X:A比值系统。D正确:温度依赖的性别决定(TSD)。B错误:环境性别决定(ESD)在多种动物中存在，包括温度、光周期和社会因素等。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "性别决定",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "287685068",
+  "tags": []
+ },
+ "BQ-sex_linkage-2f51df892d18": {
+  "type": "mtf",
+  "question": "关于遗传学中的性别决定，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "果蝇的性别决定基于X染色体与常染色体的比值(X:A),SRY同源物不参与",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "所有生物的性别决定机制都是遗传性的",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "有些爬行动物(如一些龟鳖类和鳄类)的性别由孵化温度决定",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "哺乳动物的性别决定由Y染色体上的SRY基因启动",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确:SRY基因。A正确:果蝇的X:A比值系统。C正确:温度依赖的性别决定(TSD)。B错误:环境性别决定(ESD)在多种动物中存在，包括温度、光周期和社会因素等。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "性别决定",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "287685068",
+  "tags": []
+ },
+ "BQ-sex_linkage-6001cf90423b": {
+  "type": "mtf",
+  "question": "关于遗传学中的性别决定，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "果蝇的性别决定基于X染色体与常染色体的比值(X:A),SRY同源物不参与",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "有些爬行动物(如一些龟鳖类和鳄类)的性别由孵化温度决定",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "哺乳动物的性别决定由Y染色体上的SRY基因启动",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "所有生物的性别决定机制都是遗传性的",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确:SRY基因。A正确:果蝇的X:A比值系统。B正确:温度依赖的性别决定(TSD)。D错误:环境性别决定(ESD)在多种动物中存在，包括温度、光周期和社会因素等。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "性别决定",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "287685068",
+  "tags": []
+ },
+ "BQ-sex_linkage-93f2f1c3b858": {
+  "type": "mtf",
+  "question": "关于遗传学中的性别决定，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "果蝇的性别决定基于X染色体与常染色体的比值(X:A),SRY同源物不参与",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "有些爬行动物(如一些龟鳖类和鳄类)的性别由孵化温度决定",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "所有生物的性别决定机制都是遗传性的",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "哺乳动物的性别决定由Y染色体上的SRY基因启动",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确:SRY基因。A正确:果蝇的X:A比值系统。B正确:温度依赖的性别决定(TSD)。C错误:环境性别决定(ESD)在多种动物中存在，包括温度、光周期和社会因素等。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "性别决定",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "287685068",
+  "tags": []
+ }
+}

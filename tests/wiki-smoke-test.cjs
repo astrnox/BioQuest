@@ -6,7 +6,7 @@ const fs = require('fs');
 const path = require('path');
 const { JSDOM } = require('jsdom');
 
-const WS = '/workspace';
+const WS = path.resolve(__dirname, '..');
 const html = fs.readFileSync(path.join(WS, 'wiki.html'), 'utf8');
 const utilsJs = fs.readFileSync(path.join(WS, 'js/utils.js'), 'utf8');
 const wikiJs = fs.readFileSync(path.join(WS, 'js/wiki.js'), 'utf8');

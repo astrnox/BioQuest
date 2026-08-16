@@ -1,0 +1,3512 @@
+{
+ "BQ-glycolysis-8dbd52cc950f": {
+  "type": "mtf",
+  "question": "关于糖酵解与糖异生的调控，下列叙述正确的是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "果糖-2,6-二磷酸是 PFK-1 的强抑制剂",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "胰岛素抑制糖酵解",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "丙酮酸激酶受 ATP 变构激活",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "胰高血糖素可降低果糖-2,6-二磷酸水平从而抑制糖酵解",
+    "answer": true
+   }
+  ],
+  "explanation": "胰高血糖素升高 cAMP，激活 PKA，使双功能酶磷酸化后磷酸酶活性升高，果糖-2,6-二磷酸水平下降，从而抑制 PFK-1，糖酵解减弱。",
+  "subject": "生物化学",
+  "concept": "糖代谢调控",
+  "difficulty": "league",
+  "chart": null,
+  "year": null,
+  "module": "module_1",
+  "target": "competition",
+  "tags": [
+   "module_1",
+   "生物化学",
+   "糖代谢调控",
+   "competition"
+  ],
+  "oldId": "475432786"
+ },
+ "BQ-glycolysis-d13f5d3deb27": {
+  "type": "mtf",
+  "question": "关于糖酵解与糖异生的调控，下列叙述正确的是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "果糖-2,6-二磷酸是 PFK-1 的强抑制剂",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "胰岛素抑制糖酵解",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "胰高血糖素可降低果糖-2,6-二磷酸水平从而抑制糖酵解",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "丙酮酸激酶受 ATP 变构激活",
+    "answer": false
+   }
+  ],
+  "explanation": "胰高血糖素升高 cAMP，激活 PKA，使双功能酶磷酸化后磷酸酶活性升高，果糖-2,6-二磷酸水平下降，从而抑制 PFK-1，糖酵解减弱。",
+  "subject": "生物化学",
+  "concept": "糖代谢调控",
+  "difficulty": "league",
+  "chart": null,
+  "year": null,
+  "module": "module_1",
+  "target": "competition",
+  "tags": [
+   "module_1",
+   "生物化学",
+   "糖代谢调控",
+   "competition"
+  ],
+  "oldId": "475432786"
+ },
+ "BQ-glycolysis-dc1df9cc3d5e": {
+  "stem": "为了研究肝脏与骨骼肌中糖原代谢的不同调节，研究人员采用了各种技术。关于不同方法适用于比较这两\n种组织之间糖原合成调节机制的适用性，请对以下陈述进行正误判断：",
+  "options": {
+   "A": "利用13C–葡萄糖进行稳定同位素示踪，以量化组织特异性糖原合成速率，可以直接测量肝脏和肌肉中不同\n调节策略的功能结果",
+   "B": "通过 RNA-seq 比较糖原合酶同工型（肌肉中的 GYS1，肝脏中的 GYS2）的 mRNA 表达水平，可以全\n面了解这些组织中糖原合成活性的差异调节",
+   "C": "测量葡萄糖给药后培养的原代肝细胞和肌管中糖原合酶 (GYS) 的磷酸化状态，可以直接评估控制酶活性\n的关键翻译后调节机制",
+   "D": "使用过碘酸-希夫反应(PAS)糖原染色进行组织学分析可以精确量化肝脏和肌肉组织切片中的糖原合成速率"
+  },
+  "answer": {
+   "A": true,
+   "B": false,
+   "C": false,
+   "D": false
+  },
+  "analysis": "正确答案：A。详细解析请通过 AI 导师获取（在 AI 对话中粘贴本题题干即可）。",
+  "knowledge": [
+   "module_1",
+   "生物化学"
+  ],
+  "module": "module_1",
+  "difficulty": "league",
+  "target": "competition",
+  "subject": "生物化学",
+  "concept": "生物化学",
+  "tags": [
+   "module_1",
+   "生物化学",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2025/art_b153fd076f3f4fe282acfc333c4d4ab6.html",
+   "2025"
+  ],
+  "weight": 1,
+  "fb_good": 0,
+  "fb_bad": 0,
+  "created_at": 1782028596.2297523,
+  "source": "https://www.czs.org.cn/swjs/lsstxz/art/2025/art_b153fd076f3f4fe282acfc333c4d4ab6.html",
+  "year": 2025,
+  "_analysis_sparse": true,
+  "_review_reason": "解析为 AI 引导提示，待人工补充详细解析",
+  "type": "multi_judge",
+  "question": "为了研究肝脏与骨骼肌中糖原代谢的不同调节，研究人员采用了各种技术。关于不同方法适用于比较这两\n种组织之间糖原合成调节机制的适用性，请对以下陈述进行正误判断：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "利用13C–葡萄糖进行稳定同位素示踪，以量化组织特异性糖原合成速率，可以直接测量肝脏和肌肉中不同\n调节策略的功能结果",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "通过 RNA-seq 比较糖原合酶同工型（肌肉中的 GYS1，肝脏中的 GYS2）的 mRNA 表达水平，可以全\n面了解这些组织中糖原合成活性的差异调节",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "测量葡萄糖给药后培养的原代肝细胞和肌管中糖原合酶 (GYS) 的磷酸化状态，可以直接评估控制酶活性\n的关键翻译后调节机制",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "使用过碘酸-希夫反应(PAS)糖原染色进行组织学分析可以精确量化肝脏和肌肉组织切片中的糖原合成速率",
+    "answer": false
+   }
+  ],
+  "explanation": "正确答案：A。详细解析请通过 AI 导师获取（在 AI 对话中粘贴本题题干即可）。",
+  "chart": null,
+  "oldId": "crawled_1782028596229_3094"
+ },
+ "BQ-glycolysis-84bf2242e91c": {
+  "type": "mtf",
+  "question": "下列关于糖代谢关键步骤的陈述，判断正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "丙酮酸脱氢酶复合体催化丙酮酸转化为乙酰辅酶A的反应发生在细胞质中",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "磷酸戊糖途径产生NADPH和核糖-5-磷酸，前者用于脂肪酸合成等还原性生物合成",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "糖异生途径是糖酵解的简单逆反应，使用完全相同的酶",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "糖酵解中磷酸果糖激酶-1（PFK-1）是该途径最重要的限速酶，受ATP和柠檬酸的反馈抑制",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：PFK-1是糖酵解的关键调控点，ATP和柠檬酸是负反馈信号。C错误：糖酵解的3个不可逆步骤（己糖激酶、PFK-1、丙酮酸激酶）在糖异生中由不同的酶绕行。B正确：磷酸戊糖途径的生理意义即提供NADPH和核糖。A错误：该反应发生在线粒体基质中，丙酮酸需先进入线粒体。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "糖代谢",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1134948888",
+  "tags": []
+ },
+ "BQ-glycolysis-71695cbe00fe": {
+  "type": "mtf",
+  "question": "下列关于糖代谢关键步骤的陈述，判断正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "丙酮酸脱氢酶复合体催化丙酮酸转化为乙酰辅酶A的反应发生在细胞质中",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "磷酸戊糖途径产生NADPH和核糖-5-磷酸，前者用于脂肪酸合成等还原性生物合成",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "糖酵解中磷酸果糖激酶-1（PFK-1）是该途径最重要的限速酶，受ATP和柠檬酸的反馈抑制",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "糖异生途径是糖酵解的简单逆反应，使用完全相同的酶",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确：PFK-1是糖酵解的关键调控点，ATP和柠檬酸是负反馈信号。D错误：糖酵解的3个不可逆步骤（己糖激酶、PFK-1、丙酮酸激酶）在糖异生中由不同的酶绕行。B正确：磷酸戊糖途径的生理意义即提供NADPH和核糖。A错误：该反应发生在线粒体基质中，丙酮酸需先进入线粒体。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "糖代谢",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1134948888",
+  "tags": []
+ },
+ "BQ-glycolysis-ba23fb0a6261": {
+  "type": "mtf",
+  "question": "下列关于糖代谢关键步骤的陈述，判断正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "丙酮酸脱氢酶复合体催化丙酮酸转化为乙酰辅酶A的反应发生在细胞质中",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "糖异生途径是糖酵解的简单逆反应，使用完全相同的酶",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "磷酸戊糖途径产生NADPH和核糖-5-磷酸，前者用于脂肪酸合成等还原性生物合成",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "糖酵解中磷酸果糖激酶-1（PFK-1）是该途径最重要的限速酶，受ATP和柠檬酸的反馈抑制",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：PFK-1是糖酵解的关键调控点，ATP和柠檬酸是负反馈信号。B错误：糖酵解的3个不可逆步骤（己糖激酶、PFK-1、丙酮酸激酶）在糖异生中由不同的酶绕行。C正确：磷酸戊糖途径的生理意义即提供NADPH和核糖。A错误：该反应发生在线粒体基质中，丙酮酸需先进入线粒体。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "糖代谢",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1134948888",
+  "tags": []
+ },
+ "BQ-glycolysis-57885808c258": {
+  "type": "mtf",
+  "question": "下列关于糖代谢关键步骤的陈述，判断正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "丙酮酸脱氢酶复合体催化丙酮酸转化为乙酰辅酶A的反应发生在细胞质中",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "糖异生途径是糖酵解的简单逆反应，使用完全相同的酶",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "糖酵解中磷酸果糖激酶-1（PFK-1）是该途径最重要的限速酶，受ATP和柠檬酸的反馈抑制",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "磷酸戊糖途径产生NADPH和核糖-5-磷酸，前者用于脂肪酸合成等还原性生物合成",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：PFK-1是糖酵解的关键调控点，ATP和柠檬酸是负反馈信号。B错误：糖酵解的3个不可逆步骤（己糖激酶、PFK-1、丙酮酸激酶）在糖异生中由不同的酶绕行。D正确：磷酸戊糖途径的生理意义即提供NADPH和核糖。A错误：该反应发生在线粒体基质中，丙酮酸需先进入线粒体。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "糖代谢",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1134948888",
+  "tags": []
+ },
+ "BQ-glycolysis-925c40d767f0": {
+  "type": "mtf",
+  "question": "下列关于糖代谢关键步骤的陈述，判断正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "丙酮酸脱氢酶复合体催化丙酮酸转化为乙酰辅酶A的反应发生在细胞质中",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "糖酵解中磷酸果糖激酶-1（PFK-1）是该途径最重要的限速酶，受ATP和柠檬酸的反馈抑制",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "磷酸戊糖途径产生NADPH和核糖-5-磷酸，前者用于脂肪酸合成等还原性生物合成",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "糖异生途径是糖酵解的简单逆反应，使用完全相同的酶",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确：PFK-1是糖酵解的关键调控点，ATP和柠檬酸是负反馈信号。D错误：糖酵解的3个不可逆步骤（己糖激酶、PFK-1、丙酮酸激酶）在糖异生中由不同的酶绕行。C正确：磷酸戊糖途径的生理意义即提供NADPH和核糖。A错误：该反应发生在线粒体基质中，丙酮酸需先进入线粒体。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "糖代谢",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1134948888",
+  "tags": []
+ },
+ "BQ-glycolysis-183bd0978f6e": {
+  "type": "mtf",
+  "question": "下列关于糖代谢关键步骤的陈述，判断正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "丙酮酸脱氢酶复合体催化丙酮酸转化为乙酰辅酶A的反应发生在细胞质中",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "糖酵解中磷酸果糖激酶-1（PFK-1）是该途径最重要的限速酶，受ATP和柠檬酸的反馈抑制",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "糖异生途径是糖酵解的简单逆反应，使用完全相同的酶",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "磷酸戊糖途径产生NADPH和核糖-5-磷酸，前者用于脂肪酸合成等还原性生物合成",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：PFK-1是糖酵解的关键调控点，ATP和柠檬酸是负反馈信号。C错误：糖酵解的3个不可逆步骤（己糖激酶、PFK-1、丙酮酸激酶）在糖异生中由不同的酶绕行。D正确：磷酸戊糖途径的生理意义即提供NADPH和核糖。A错误：该反应发生在线粒体基质中，丙酮酸需先进入线粒体。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "糖代谢",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1134948888",
+  "tags": []
+ },
+ "BQ-glycolysis-d5a50878d250": {
+  "type": "mtf",
+  "question": "下列关于糖代谢关键步骤的陈述，判断正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "磷酸戊糖途径产生NADPH和核糖-5-磷酸，前者用于脂肪酸合成等还原性生物合成",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "丙酮酸脱氢酶复合体催化丙酮酸转化为乙酰辅酶A的反应发生在细胞质中",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "糖异生途径是糖酵解的简单逆反应，使用完全相同的酶",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "糖酵解中磷酸果糖激酶-1（PFK-1）是该途径最重要的限速酶，受ATP和柠檬酸的反馈抑制",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：PFK-1是糖酵解的关键调控点，ATP和柠檬酸是负反馈信号。C错误：糖酵解的3个不可逆步骤（己糖激酶、PFK-1、丙酮酸激酶）在糖异生中由不同的酶绕行。A正确：磷酸戊糖途径的生理意义即提供NADPH和核糖。B错误：该反应发生在线粒体基质中，丙酮酸需先进入线粒体。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "糖代谢",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1134948888",
+  "tags": []
+ },
+ "BQ-glycolysis-521ee8124482": {
+  "type": "mtf",
+  "question": "下列关于糖代谢关键步骤的陈述，判断正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "磷酸戊糖途径产生NADPH和核糖-5-磷酸，前者用于脂肪酸合成等还原性生物合成",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "丙酮酸脱氢酶复合体催化丙酮酸转化为乙酰辅酶A的反应发生在细胞质中",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "糖酵解中磷酸果糖激酶-1（PFK-1）是该途径最重要的限速酶，受ATP和柠檬酸的反馈抑制",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "糖异生途径是糖酵解的简单逆反应，使用完全相同的酶",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确：PFK-1是糖酵解的关键调控点，ATP和柠檬酸是负反馈信号。D错误：糖酵解的3个不可逆步骤（己糖激酶、PFK-1、丙酮酸激酶）在糖异生中由不同的酶绕行。A正确：磷酸戊糖途径的生理意义即提供NADPH和核糖。B错误：该反应发生在线粒体基质中，丙酮酸需先进入线粒体。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "糖代谢",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1134948888",
+  "tags": []
+ },
+ "BQ-glycolysis-323d1bbe661f": {
+  "type": "mtf",
+  "question": "下列关于糖代谢关键步骤的陈述，判断正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "磷酸戊糖途径产生NADPH和核糖-5-磷酸，前者用于脂肪酸合成等还原性生物合成",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "糖异生途径是糖酵解的简单逆反应，使用完全相同的酶",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "丙酮酸脱氢酶复合体催化丙酮酸转化为乙酰辅酶A的反应发生在细胞质中",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "糖酵解中磷酸果糖激酶-1（PFK-1）是该途径最重要的限速酶，受ATP和柠檬酸的反馈抑制",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：PFK-1是糖酵解的关键调控点，ATP和柠檬酸是负反馈信号。B错误：糖酵解的3个不可逆步骤（己糖激酶、PFK-1、丙酮酸激酶）在糖异生中由不同的酶绕行。A正确：磷酸戊糖途径的生理意义即提供NADPH和核糖。C错误：该反应发生在线粒体基质中，丙酮酸需先进入线粒体。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "糖代谢",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1134948888",
+  "tags": []
+ },
+ "BQ-glycolysis-3ed89de8370c": {
+  "type": "mtf",
+  "question": "下列关于糖代谢关键步骤的陈述，判断正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "磷酸戊糖途径产生NADPH和核糖-5-磷酸，前者用于脂肪酸合成等还原性生物合成",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "糖异生途径是糖酵解的简单逆反应，使用完全相同的酶",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "糖酵解中磷酸果糖激酶-1（PFK-1）是该途径最重要的限速酶，受ATP和柠檬酸的反馈抑制",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "丙酮酸脱氢酶复合体催化丙酮酸转化为乙酰辅酶A的反应发生在细胞质中",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确：PFK-1是糖酵解的关键调控点，ATP和柠檬酸是负反馈信号。B错误：糖酵解的3个不可逆步骤（己糖激酶、PFK-1、丙酮酸激酶）在糖异生中由不同的酶绕行。A正确：磷酸戊糖途径的生理意义即提供NADPH和核糖。D错误：该反应发生在线粒体基质中，丙酮酸需先进入线粒体。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "糖代谢",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1134948888",
+  "tags": []
+ },
+ "BQ-glycolysis-5fc1c76433b9": {
+  "type": "mtf",
+  "question": "下列关于糖代谢关键步骤的陈述，判断正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "磷酸戊糖途径产生NADPH和核糖-5-磷酸，前者用于脂肪酸合成等还原性生物合成",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "糖酵解中磷酸果糖激酶-1（PFK-1）是该途径最重要的限速酶，受ATP和柠檬酸的反馈抑制",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "丙酮酸脱氢酶复合体催化丙酮酸转化为乙酰辅酶A的反应发生在细胞质中",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "糖异生途径是糖酵解的简单逆反应，使用完全相同的酶",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确：PFK-1是糖酵解的关键调控点，ATP和柠檬酸是负反馈信号。D错误：糖酵解的3个不可逆步骤（己糖激酶、PFK-1、丙酮酸激酶）在糖异生中由不同的酶绕行。A正确：磷酸戊糖途径的生理意义即提供NADPH和核糖。C错误：该反应发生在线粒体基质中，丙酮酸需先进入线粒体。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "糖代谢",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1134948888",
+  "tags": []
+ },
+ "BQ-glycolysis-bad5801f3b37": {
+  "type": "mtf",
+  "question": "下列关于糖代谢关键步骤的陈述，判断正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "磷酸戊糖途径产生NADPH和核糖-5-磷酸，前者用于脂肪酸合成等还原性生物合成",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "糖酵解中磷酸果糖激酶-1（PFK-1）是该途径最重要的限速酶，受ATP和柠檬酸的反馈抑制",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "糖异生途径是糖酵解的简单逆反应，使用完全相同的酶",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "丙酮酸脱氢酶复合体催化丙酮酸转化为乙酰辅酶A的反应发生在细胞质中",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确：PFK-1是糖酵解的关键调控点，ATP和柠檬酸是负反馈信号。C错误：糖酵解的3个不可逆步骤（己糖激酶、PFK-1、丙酮酸激酶）在糖异生中由不同的酶绕行。A正确：磷酸戊糖途径的生理意义即提供NADPH和核糖。D错误：该反应发生在线粒体基质中，丙酮酸需先进入线粒体。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "糖代谢",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1134948888",
+  "tags": []
+ },
+ "BQ-glycolysis-622d387f96ee": {
+  "type": "mtf",
+  "question": "下列关于糖代谢关键步骤的陈述，判断正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "糖异生途径是糖酵解的简单逆反应，使用完全相同的酶",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "丙酮酸脱氢酶复合体催化丙酮酸转化为乙酰辅酶A的反应发生在细胞质中",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "磷酸戊糖途径产生NADPH和核糖-5-磷酸，前者用于脂肪酸合成等还原性生物合成",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "糖酵解中磷酸果糖激酶-1（PFK-1）是该途径最重要的限速酶，受ATP和柠檬酸的反馈抑制",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：PFK-1是糖酵解的关键调控点，ATP和柠檬酸是负反馈信号。A错误：糖酵解的3个不可逆步骤（己糖激酶、PFK-1、丙酮酸激酶）在糖异生中由不同的酶绕行。C正确：磷酸戊糖途径的生理意义即提供NADPH和核糖。B错误：该反应发生在线粒体基质中，丙酮酸需先进入线粒体。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "糖代谢",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1134948888",
+  "tags": []
+ },
+ "BQ-glycolysis-0fc25551a2d7": {
+  "type": "mtf",
+  "question": "下列关于糖代谢关键步骤的陈述，判断正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "糖异生途径是糖酵解的简单逆反应，使用完全相同的酶",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "丙酮酸脱氢酶复合体催化丙酮酸转化为乙酰辅酶A的反应发生在细胞质中",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "糖酵解中磷酸果糖激酶-1（PFK-1）是该途径最重要的限速酶，受ATP和柠檬酸的反馈抑制",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "磷酸戊糖途径产生NADPH和核糖-5-磷酸，前者用于脂肪酸合成等还原性生物合成",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：PFK-1是糖酵解的关键调控点，ATP和柠檬酸是负反馈信号。A错误：糖酵解的3个不可逆步骤（己糖激酶、PFK-1、丙酮酸激酶）在糖异生中由不同的酶绕行。D正确：磷酸戊糖途径的生理意义即提供NADPH和核糖。B错误：该反应发生在线粒体基质中，丙酮酸需先进入线粒体。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "糖代谢",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1134948888",
+  "tags": []
+ },
+ "BQ-glycolysis-6ee25cb54249": {
+  "type": "mtf",
+  "question": "下列关于糖代谢关键步骤的陈述，判断正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "糖异生途径是糖酵解的简单逆反应，使用完全相同的酶",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "磷酸戊糖途径产生NADPH和核糖-5-磷酸，前者用于脂肪酸合成等还原性生物合成",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "丙酮酸脱氢酶复合体催化丙酮酸转化为乙酰辅酶A的反应发生在细胞质中",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "糖酵解中磷酸果糖激酶-1（PFK-1）是该途径最重要的限速酶，受ATP和柠檬酸的反馈抑制",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：PFK-1是糖酵解的关键调控点，ATP和柠檬酸是负反馈信号。A错误：糖酵解的3个不可逆步骤（己糖激酶、PFK-1、丙酮酸激酶）在糖异生中由不同的酶绕行。B正确：磷酸戊糖途径的生理意义即提供NADPH和核糖。C错误：该反应发生在线粒体基质中，丙酮酸需先进入线粒体。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "糖代谢",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1134948888",
+  "tags": []
+ },
+ "BQ-glycolysis-781d1f5dea57": {
+  "type": "mtf",
+  "question": "下列关于糖代谢关键步骤的陈述，判断正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "糖异生途径是糖酵解的简单逆反应，使用完全相同的酶",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "磷酸戊糖途径产生NADPH和核糖-5-磷酸，前者用于脂肪酸合成等还原性生物合成",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "糖酵解中磷酸果糖激酶-1（PFK-1）是该途径最重要的限速酶，受ATP和柠檬酸的反馈抑制",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "丙酮酸脱氢酶复合体催化丙酮酸转化为乙酰辅酶A的反应发生在细胞质中",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确：PFK-1是糖酵解的关键调控点，ATP和柠檬酸是负反馈信号。A错误：糖酵解的3个不可逆步骤（己糖激酶、PFK-1、丙酮酸激酶）在糖异生中由不同的酶绕行。B正确：磷酸戊糖途径的生理意义即提供NADPH和核糖。D错误：该反应发生在线粒体基质中，丙酮酸需先进入线粒体。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "糖代谢",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1134948888",
+  "tags": []
+ },
+ "BQ-glycolysis-875d508da1cb": {
+  "type": "mtf",
+  "question": "下列关于糖代谢关键步骤的陈述，判断正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "糖异生途径是糖酵解的简单逆反应，使用完全相同的酶",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "糖酵解中磷酸果糖激酶-1（PFK-1）是该途径最重要的限速酶，受ATP和柠檬酸的反馈抑制",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "丙酮酸脱氢酶复合体催化丙酮酸转化为乙酰辅酶A的反应发生在细胞质中",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "磷酸戊糖途径产生NADPH和核糖-5-磷酸，前者用于脂肪酸合成等还原性生物合成",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：PFK-1是糖酵解的关键调控点，ATP和柠檬酸是负反馈信号。A错误：糖酵解的3个不可逆步骤（己糖激酶、PFK-1、丙酮酸激酶）在糖异生中由不同的酶绕行。D正确：磷酸戊糖途径的生理意义即提供NADPH和核糖。C错误：该反应发生在线粒体基质中，丙酮酸需先进入线粒体。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "糖代谢",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1134948888",
+  "tags": []
+ },
+ "BQ-glycolysis-6bf5a361fcab": {
+  "type": "mtf",
+  "question": "下列关于糖代谢关键步骤的陈述，判断正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "糖异生途径是糖酵解的简单逆反应，使用完全相同的酶",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "糖酵解中磷酸果糖激酶-1（PFK-1）是该途径最重要的限速酶，受ATP和柠檬酸的反馈抑制",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "磷酸戊糖途径产生NADPH和核糖-5-磷酸，前者用于脂肪酸合成等还原性生物合成",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "丙酮酸脱氢酶复合体催化丙酮酸转化为乙酰辅酶A的反应发生在细胞质中",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确：PFK-1是糖酵解的关键调控点，ATP和柠檬酸是负反馈信号。A错误：糖酵解的3个不可逆步骤（己糖激酶、PFK-1、丙酮酸激酶）在糖异生中由不同的酶绕行。C正确：磷酸戊糖途径的生理意义即提供NADPH和核糖。D错误：该反应发生在线粒体基质中，丙酮酸需先进入线粒体。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "糖代谢",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1134948888",
+  "tags": []
+ },
+ "BQ-glycolysis-48dd78ea8fe4": {
+  "type": "mtf",
+  "question": "下列关于糖代谢关键步骤的陈述，判断正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "糖酵解中磷酸果糖激酶-1（PFK-1）是该途径最重要的限速酶，受ATP和柠檬酸的反馈抑制",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "丙酮酸脱氢酶复合体催化丙酮酸转化为乙酰辅酶A的反应发生在细胞质中",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "磷酸戊糖途径产生NADPH和核糖-5-磷酸，前者用于脂肪酸合成等还原性生物合成",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "糖异生途径是糖酵解的简单逆反应，使用完全相同的酶",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确：PFK-1是糖酵解的关键调控点，ATP和柠檬酸是负反馈信号。D错误：糖酵解的3个不可逆步骤（己糖激酶、PFK-1、丙酮酸激酶）在糖异生中由不同的酶绕行。C正确：磷酸戊糖途径的生理意义即提供NADPH和核糖。B错误：该反应发生在线粒体基质中，丙酮酸需先进入线粒体。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "糖代谢",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1134948888",
+  "tags": []
+ },
+ "BQ-glycolysis-51dcaf07f9bd": {
+  "type": "mtf",
+  "question": "下列关于糖代谢关键步骤的陈述，判断正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "糖酵解中磷酸果糖激酶-1（PFK-1）是该途径最重要的限速酶，受ATP和柠檬酸的反馈抑制",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "丙酮酸脱氢酶复合体催化丙酮酸转化为乙酰辅酶A的反应发生在细胞质中",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "糖异生途径是糖酵解的简单逆反应，使用完全相同的酶",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "磷酸戊糖途径产生NADPH和核糖-5-磷酸，前者用于脂肪酸合成等还原性生物合成",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：PFK-1是糖酵解的关键调控点，ATP和柠檬酸是负反馈信号。C错误：糖酵解的3个不可逆步骤（己糖激酶、PFK-1、丙酮酸激酶）在糖异生中由不同的酶绕行。D正确：磷酸戊糖途径的生理意义即提供NADPH和核糖。B错误：该反应发生在线粒体基质中，丙酮酸需先进入线粒体。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "糖代谢",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1134948888",
+  "tags": []
+ },
+ "BQ-glycolysis-c0365ff18864": {
+  "type": "mtf",
+  "question": "下列关于糖代谢关键步骤的陈述，判断正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "糖酵解中磷酸果糖激酶-1（PFK-1）是该途径最重要的限速酶，受ATP和柠檬酸的反馈抑制",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "磷酸戊糖途径产生NADPH和核糖-5-磷酸，前者用于脂肪酸合成等还原性生物合成",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "丙酮酸脱氢酶复合体催化丙酮酸转化为乙酰辅酶A的反应发生在细胞质中",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "糖异生途径是糖酵解的简单逆反应，使用完全相同的酶",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确：PFK-1是糖酵解的关键调控点，ATP和柠檬酸是负反馈信号。D错误：糖酵解的3个不可逆步骤（己糖激酶、PFK-1、丙酮酸激酶）在糖异生中由不同的酶绕行。B正确：磷酸戊糖途径的生理意义即提供NADPH和核糖。C错误：该反应发生在线粒体基质中，丙酮酸需先进入线粒体。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "糖代谢",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1134948888",
+  "tags": []
+ },
+ "BQ-glycolysis-5b663ef2372f": {
+  "type": "mtf",
+  "question": "下列关于糖代谢关键步骤的陈述，判断正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "糖酵解中磷酸果糖激酶-1（PFK-1）是该途径最重要的限速酶，受ATP和柠檬酸的反馈抑制",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "磷酸戊糖途径产生NADPH和核糖-5-磷酸，前者用于脂肪酸合成等还原性生物合成",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "糖异生途径是糖酵解的简单逆反应，使用完全相同的酶",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "丙酮酸脱氢酶复合体催化丙酮酸转化为乙酰辅酶A的反应发生在细胞质中",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确：PFK-1是糖酵解的关键调控点，ATP和柠檬酸是负反馈信号。C错误：糖酵解的3个不可逆步骤（己糖激酶、PFK-1、丙酮酸激酶）在糖异生中由不同的酶绕行。B正确：磷酸戊糖途径的生理意义即提供NADPH和核糖。D错误：该反应发生在线粒体基质中，丙酮酸需先进入线粒体。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "糖代谢",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1134948888",
+  "tags": []
+ },
+ "BQ-glycolysis-540927bb0daa": {
+  "type": "mtf",
+  "question": "下列关于糖代谢关键步骤的陈述，判断正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "糖酵解中磷酸果糖激酶-1（PFK-1）是该途径最重要的限速酶，受ATP和柠檬酸的反馈抑制",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "糖异生途径是糖酵解的简单逆反应，使用完全相同的酶",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "丙酮酸脱氢酶复合体催化丙酮酸转化为乙酰辅酶A的反应发生在细胞质中",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "磷酸戊糖途径产生NADPH和核糖-5-磷酸，前者用于脂肪酸合成等还原性生物合成",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：PFK-1是糖酵解的关键调控点，ATP和柠檬酸是负反馈信号。B错误：糖酵解的3个不可逆步骤（己糖激酶、PFK-1、丙酮酸激酶）在糖异生中由不同的酶绕行。D正确：磷酸戊糖途径的生理意义即提供NADPH和核糖。C错误：该反应发生在线粒体基质中，丙酮酸需先进入线粒体。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "糖代谢",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1134948888",
+  "tags": []
+ },
+ "BQ-glycolysis-67815ccdda2d": {
+  "type": "mtf",
+  "question": "下列关于糖代谢关键步骤的陈述，判断正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "糖酵解中磷酸果糖激酶-1（PFK-1）是该途径最重要的限速酶，受ATP和柠檬酸的反馈抑制",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "糖异生途径是糖酵解的简单逆反应，使用完全相同的酶",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "磷酸戊糖途径产生NADPH和核糖-5-磷酸，前者用于脂肪酸合成等还原性生物合成",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "丙酮酸脱氢酶复合体催化丙酮酸转化为乙酰辅酶A的反应发生在细胞质中",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确：PFK-1是糖酵解的关键调控点，ATP和柠檬酸是负反馈信号。B错误：糖酵解的3个不可逆步骤（己糖激酶、PFK-1、丙酮酸激酶）在糖异生中由不同的酶绕行。C正确：磷酸戊糖途径的生理意义即提供NADPH和核糖。D错误：该反应发生在线粒体基质中，丙酮酸需先进入线粒体。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "糖代谢",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1134948888",
+  "tags": []
+ },
+ "BQ-glycolysis-c4db160f8286": {
+  "type": "mtf",
+  "question": "关于戊糖磷酸途径的调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "G6PD缺乏症(蚕豆病)患者因NADPH不足导致红细胞对氧化损伤敏感",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "当细胞需要核糖-5-磷酸多于NADPH时，戊糖磷酸途径的非氧化阶段逆向运转产生核糖-5-磷酸",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "戊糖磷酸途径与糖酵解共享所有酶",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "葡萄糖-6-磷酸脱氢酶(G6PD)是戊糖磷酸途径的限速酶，受NADPH/NADP⁺比值调控",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确:G6PD是PPP的关键调控点。B正确:非氧化阶段的灵活性。A正确:G6PD缺乏导致GSH再生受阻是蚕豆病的分子基础。C错误:PPP有独特酶系。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "戊糖磷酸途径",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "741130970",
+  "tags": []
+ },
+ "BQ-glycolysis-cb528548e5ec": {
+  "type": "mtf",
+  "question": "关于戊糖磷酸途径的调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "G6PD缺乏症(蚕豆病)患者因NADPH不足导致红细胞对氧化损伤敏感",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "当细胞需要核糖-5-磷酸多于NADPH时，戊糖磷酸途径的非氧化阶段逆向运转产生核糖-5-磷酸",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "葡萄糖-6-磷酸脱氢酶(G6PD)是戊糖磷酸途径的限速酶，受NADPH/NADP⁺比值调控",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "戊糖磷酸途径与糖酵解共享所有酶",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确:G6PD是PPP的关键调控点。B正确:非氧化阶段的灵活性。A正确:G6PD缺乏导致GSH再生受阻是蚕豆病的分子基础。D错误:PPP有独特酶系。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "戊糖磷酸途径",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "741130970",
+  "tags": []
+ },
+ "BQ-glycolysis-26142c20c896": {
+  "type": "mtf",
+  "question": "关于戊糖磷酸途径的调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "G6PD缺乏症(蚕豆病)患者因NADPH不足导致红细胞对氧化损伤敏感",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "戊糖磷酸途径与糖酵解共享所有酶",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "当细胞需要核糖-5-磷酸多于NADPH时，戊糖磷酸途径的非氧化阶段逆向运转产生核糖-5-磷酸",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "葡萄糖-6-磷酸脱氢酶(G6PD)是戊糖磷酸途径的限速酶，受NADPH/NADP⁺比值调控",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确:G6PD是PPP的关键调控点。C正确:非氧化阶段的灵活性。A正确:G6PD缺乏导致GSH再生受阻是蚕豆病的分子基础。B错误:PPP有独特酶系。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "戊糖磷酸途径",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "741130970",
+  "tags": []
+ },
+ "BQ-glycolysis-52255c09d14f": {
+  "type": "mtf",
+  "question": "关于戊糖磷酸途径的调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "G6PD缺乏症(蚕豆病)患者因NADPH不足导致红细胞对氧化损伤敏感",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "戊糖磷酸途径与糖酵解共享所有酶",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "葡萄糖-6-磷酸脱氢酶(G6PD)是戊糖磷酸途径的限速酶，受NADPH/NADP⁺比值调控",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "当细胞需要核糖-5-磷酸多于NADPH时，戊糖磷酸途径的非氧化阶段逆向运转产生核糖-5-磷酸",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确:G6PD是PPP的关键调控点。D正确:非氧化阶段的灵活性。A正确:G6PD缺乏导致GSH再生受阻是蚕豆病的分子基础。B错误:PPP有独特酶系。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "戊糖磷酸途径",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "741130970",
+  "tags": []
+ },
+ "BQ-glycolysis-18a58e6bb3ab": {
+  "type": "mtf",
+  "question": "关于戊糖磷酸途径的调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "G6PD缺乏症(蚕豆病)患者因NADPH不足导致红细胞对氧化损伤敏感",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "葡萄糖-6-磷酸脱氢酶(G6PD)是戊糖磷酸途径的限速酶，受NADPH/NADP⁺比值调控",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "当细胞需要核糖-5-磷酸多于NADPH时，戊糖磷酸途径的非氧化阶段逆向运转产生核糖-5-磷酸",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "戊糖磷酸途径与糖酵解共享所有酶",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确:G6PD是PPP的关键调控点。C正确:非氧化阶段的灵活性。A正确:G6PD缺乏导致GSH再生受阻是蚕豆病的分子基础。D错误:PPP有独特酶系。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "戊糖磷酸途径",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "741130970",
+  "tags": []
+ },
+ "BQ-glycolysis-2e6d9d25d8f5": {
+  "type": "mtf",
+  "question": "关于戊糖磷酸途径的调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "G6PD缺乏症(蚕豆病)患者因NADPH不足导致红细胞对氧化损伤敏感",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "葡萄糖-6-磷酸脱氢酶(G6PD)是戊糖磷酸途径的限速酶，受NADPH/NADP⁺比值调控",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "戊糖磷酸途径与糖酵解共享所有酶",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "当细胞需要核糖-5-磷酸多于NADPH时，戊糖磷酸途径的非氧化阶段逆向运转产生核糖-5-磷酸",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确:G6PD是PPP的关键调控点。D正确:非氧化阶段的灵活性。A正确:G6PD缺乏导致GSH再生受阻是蚕豆病的分子基础。C错误:PPP有独特酶系。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "戊糖磷酸途径",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "741130970",
+  "tags": []
+ },
+ "BQ-glycolysis-3f471954cc27": {
+  "type": "mtf",
+  "question": "关于戊糖磷酸途径的调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "当细胞需要核糖-5-磷酸多于NADPH时，戊糖磷酸途径的非氧化阶段逆向运转产生核糖-5-磷酸",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "G6PD缺乏症(蚕豆病)患者因NADPH不足导致红细胞对氧化损伤敏感",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "戊糖磷酸途径与糖酵解共享所有酶",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "葡萄糖-6-磷酸脱氢酶(G6PD)是戊糖磷酸途径的限速酶，受NADPH/NADP⁺比值调控",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确:G6PD是PPP的关键调控点。A正确:非氧化阶段的灵活性。B正确:G6PD缺乏导致GSH再生受阻是蚕豆病的分子基础。C错误:PPP有独特酶系。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "戊糖磷酸途径",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "741130970",
+  "tags": []
+ },
+ "BQ-glycolysis-1ee65793f6a0": {
+  "type": "mtf",
+  "question": "关于戊糖磷酸途径的调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "当细胞需要核糖-5-磷酸多于NADPH时，戊糖磷酸途径的非氧化阶段逆向运转产生核糖-5-磷酸",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "G6PD缺乏症(蚕豆病)患者因NADPH不足导致红细胞对氧化损伤敏感",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "葡萄糖-6-磷酸脱氢酶(G6PD)是戊糖磷酸途径的限速酶，受NADPH/NADP⁺比值调控",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "戊糖磷酸途径与糖酵解共享所有酶",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确:G6PD是PPP的关键调控点。A正确:非氧化阶段的灵活性。B正确:G6PD缺乏导致GSH再生受阻是蚕豆病的分子基础。D错误:PPP有独特酶系。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "戊糖磷酸途径",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "741130970",
+  "tags": []
+ },
+ "BQ-glycolysis-ccf95e72d546": {
+  "type": "mtf",
+  "question": "关于戊糖磷酸途径的调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "当细胞需要核糖-5-磷酸多于NADPH时，戊糖磷酸途径的非氧化阶段逆向运转产生核糖-5-磷酸",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "戊糖磷酸途径与糖酵解共享所有酶",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "G6PD缺乏症(蚕豆病)患者因NADPH不足导致红细胞对氧化损伤敏感",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "葡萄糖-6-磷酸脱氢酶(G6PD)是戊糖磷酸途径的限速酶，受NADPH/NADP⁺比值调控",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确:G6PD是PPP的关键调控点。A正确:非氧化阶段的灵活性。C正确:G6PD缺乏导致GSH再生受阻是蚕豆病的分子基础。B错误:PPP有独特酶系。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "戊糖磷酸途径",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "741130970",
+  "tags": []
+ },
+ "BQ-glycolysis-ecb85be6fd59": {
+  "type": "mtf",
+  "question": "关于戊糖磷酸途径的调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "当细胞需要核糖-5-磷酸多于NADPH时，戊糖磷酸途径的非氧化阶段逆向运转产生核糖-5-磷酸",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "戊糖磷酸途径与糖酵解共享所有酶",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "葡萄糖-6-磷酸脱氢酶(G6PD)是戊糖磷酸途径的限速酶，受NADPH/NADP⁺比值调控",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "G6PD缺乏症(蚕豆病)患者因NADPH不足导致红细胞对氧化损伤敏感",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确:G6PD是PPP的关键调控点。A正确:非氧化阶段的灵活性。D正确:G6PD缺乏导致GSH再生受阻是蚕豆病的分子基础。B错误:PPP有独特酶系。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "戊糖磷酸途径",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "741130970",
+  "tags": []
+ },
+ "BQ-glycolysis-d4a12c6bc411": {
+  "type": "mtf",
+  "question": "关于戊糖磷酸途径的调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "当细胞需要核糖-5-磷酸多于NADPH时，戊糖磷酸途径的非氧化阶段逆向运转产生核糖-5-磷酸",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "葡萄糖-6-磷酸脱氢酶(G6PD)是戊糖磷酸途径的限速酶，受NADPH/NADP⁺比值调控",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "G6PD缺乏症(蚕豆病)患者因NADPH不足导致红细胞对氧化损伤敏感",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "戊糖磷酸途径与糖酵解共享所有酶",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确:G6PD是PPP的关键调控点。A正确:非氧化阶段的灵活性。C正确:G6PD缺乏导致GSH再生受阻是蚕豆病的分子基础。D错误:PPP有独特酶系。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "戊糖磷酸途径",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "741130970",
+  "tags": []
+ },
+ "BQ-glycolysis-0f96e65ec17d": {
+  "type": "mtf",
+  "question": "关于戊糖磷酸途径的调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "当细胞需要核糖-5-磷酸多于NADPH时，戊糖磷酸途径的非氧化阶段逆向运转产生核糖-5-磷酸",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "葡萄糖-6-磷酸脱氢酶(G6PD)是戊糖磷酸途径的限速酶，受NADPH/NADP⁺比值调控",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "戊糖磷酸途径与糖酵解共享所有酶",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "G6PD缺乏症(蚕豆病)患者因NADPH不足导致红细胞对氧化损伤敏感",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确:G6PD是PPP的关键调控点。A正确:非氧化阶段的灵活性。D正确:G6PD缺乏导致GSH再生受阻是蚕豆病的分子基础。C错误:PPP有独特酶系。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "戊糖磷酸途径",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "741130970",
+  "tags": []
+ },
+ "BQ-glycolysis-de4ce386b2bb": {
+  "type": "mtf",
+  "question": "关于戊糖磷酸途径的调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "戊糖磷酸途径与糖酵解共享所有酶",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "G6PD缺乏症(蚕豆病)患者因NADPH不足导致红细胞对氧化损伤敏感",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "当细胞需要核糖-5-磷酸多于NADPH时，戊糖磷酸途径的非氧化阶段逆向运转产生核糖-5-磷酸",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "葡萄糖-6-磷酸脱氢酶(G6PD)是戊糖磷酸途径的限速酶，受NADPH/NADP⁺比值调控",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确:G6PD是PPP的关键调控点。C正确:非氧化阶段的灵活性。B正确:G6PD缺乏导致GSH再生受阻是蚕豆病的分子基础。A错误:PPP有独特酶系。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "戊糖磷酸途径",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "741130970",
+  "tags": []
+ },
+ "BQ-glycolysis-0b2b965de62f": {
+  "type": "mtf",
+  "question": "关于戊糖磷酸途径的调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "戊糖磷酸途径与糖酵解共享所有酶",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "G6PD缺乏症(蚕豆病)患者因NADPH不足导致红细胞对氧化损伤敏感",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "葡萄糖-6-磷酸脱氢酶(G6PD)是戊糖磷酸途径的限速酶，受NADPH/NADP⁺比值调控",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "当细胞需要核糖-5-磷酸多于NADPH时，戊糖磷酸途径的非氧化阶段逆向运转产生核糖-5-磷酸",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确:G6PD是PPP的关键调控点。D正确:非氧化阶段的灵活性。B正确:G6PD缺乏导致GSH再生受阻是蚕豆病的分子基础。A错误:PPP有独特酶系。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "戊糖磷酸途径",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "741130970",
+  "tags": []
+ },
+ "BQ-glycolysis-98b2ec7c05bf": {
+  "type": "mtf",
+  "question": "关于戊糖磷酸途径的调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "戊糖磷酸途径与糖酵解共享所有酶",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "当细胞需要核糖-5-磷酸多于NADPH时，戊糖磷酸途径的非氧化阶段逆向运转产生核糖-5-磷酸",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "G6PD缺乏症(蚕豆病)患者因NADPH不足导致红细胞对氧化损伤敏感",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "葡萄糖-6-磷酸脱氢酶(G6PD)是戊糖磷酸途径的限速酶，受NADPH/NADP⁺比值调控",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确:G6PD是PPP的关键调控点。B正确:非氧化阶段的灵活性。C正确:G6PD缺乏导致GSH再生受阻是蚕豆病的分子基础。A错误:PPP有独特酶系。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "戊糖磷酸途径",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "741130970",
+  "tags": []
+ },
+ "BQ-glycolysis-93a5c391b9db": {
+  "type": "mtf",
+  "question": "关于戊糖磷酸途径的调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "戊糖磷酸途径与糖酵解共享所有酶",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "当细胞需要核糖-5-磷酸多于NADPH时，戊糖磷酸途径的非氧化阶段逆向运转产生核糖-5-磷酸",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "葡萄糖-6-磷酸脱氢酶(G6PD)是戊糖磷酸途径的限速酶，受NADPH/NADP⁺比值调控",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "G6PD缺乏症(蚕豆病)患者因NADPH不足导致红细胞对氧化损伤敏感",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确:G6PD是PPP的关键调控点。B正确:非氧化阶段的灵活性。D正确:G6PD缺乏导致GSH再生受阻是蚕豆病的分子基础。A错误:PPP有独特酶系。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "戊糖磷酸途径",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "741130970",
+  "tags": []
+ },
+ "BQ-glycolysis-a4e1c50333a0": {
+  "type": "mtf",
+  "question": "关于戊糖磷酸途径的调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "戊糖磷酸途径与糖酵解共享所有酶",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "葡萄糖-6-磷酸脱氢酶(G6PD)是戊糖磷酸途径的限速酶，受NADPH/NADP⁺比值调控",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "G6PD缺乏症(蚕豆病)患者因NADPH不足导致红细胞对氧化损伤敏感",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "当细胞需要核糖-5-磷酸多于NADPH时，戊糖磷酸途径的非氧化阶段逆向运转产生核糖-5-磷酸",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确:G6PD是PPP的关键调控点。D正确:非氧化阶段的灵活性。C正确:G6PD缺乏导致GSH再生受阻是蚕豆病的分子基础。A错误:PPP有独特酶系。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "戊糖磷酸途径",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "741130970",
+  "tags": []
+ },
+ "BQ-glycolysis-e1182681d152": {
+  "type": "mtf",
+  "question": "关于戊糖磷酸途径的调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "戊糖磷酸途径与糖酵解共享所有酶",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "葡萄糖-6-磷酸脱氢酶(G6PD)是戊糖磷酸途径的限速酶，受NADPH/NADP⁺比值调控",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "当细胞需要核糖-5-磷酸多于NADPH时，戊糖磷酸途径的非氧化阶段逆向运转产生核糖-5-磷酸",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "G6PD缺乏症(蚕豆病)患者因NADPH不足导致红细胞对氧化损伤敏感",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确:G6PD是PPP的关键调控点。C正确:非氧化阶段的灵活性。D正确:G6PD缺乏导致GSH再生受阻是蚕豆病的分子基础。A错误:PPP有独特酶系。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "戊糖磷酸途径",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "741130970",
+  "tags": []
+ },
+ "BQ-glycolysis-c9384ddde5a3": {
+  "type": "mtf",
+  "question": "关于戊糖磷酸途径的调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "葡萄糖-6-磷酸脱氢酶(G6PD)是戊糖磷酸途径的限速酶，受NADPH/NADP⁺比值调控",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "G6PD缺乏症(蚕豆病)患者因NADPH不足导致红细胞对氧化损伤敏感",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "当细胞需要核糖-5-磷酸多于NADPH时，戊糖磷酸途径的非氧化阶段逆向运转产生核糖-5-磷酸",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "戊糖磷酸途径与糖酵解共享所有酶",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确:G6PD是PPP的关键调控点。C正确:非氧化阶段的灵活性。B正确:G6PD缺乏导致GSH再生受阻是蚕豆病的分子基础。D错误:PPP有独特酶系。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "戊糖磷酸途径",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "741130970",
+  "tags": []
+ },
+ "BQ-glycolysis-c02502171edd": {
+  "type": "mtf",
+  "question": "关于戊糖磷酸途径的调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "葡萄糖-6-磷酸脱氢酶(G6PD)是戊糖磷酸途径的限速酶，受NADPH/NADP⁺比值调控",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "G6PD缺乏症(蚕豆病)患者因NADPH不足导致红细胞对氧化损伤敏感",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "戊糖磷酸途径与糖酵解共享所有酶",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "当细胞需要核糖-5-磷酸多于NADPH时，戊糖磷酸途径的非氧化阶段逆向运转产生核糖-5-磷酸",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确:G6PD是PPP的关键调控点。D正确:非氧化阶段的灵活性。B正确:G6PD缺乏导致GSH再生受阻是蚕豆病的分子基础。C错误:PPP有独特酶系。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "戊糖磷酸途径",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "741130970",
+  "tags": []
+ },
+ "BQ-glycolysis-4b4b48964a81": {
+  "type": "mtf",
+  "question": "关于戊糖磷酸途径的调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "葡萄糖-6-磷酸脱氢酶(G6PD)是戊糖磷酸途径的限速酶，受NADPH/NADP⁺比值调控",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "当细胞需要核糖-5-磷酸多于NADPH时，戊糖磷酸途径的非氧化阶段逆向运转产生核糖-5-磷酸",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "G6PD缺乏症(蚕豆病)患者因NADPH不足导致红细胞对氧化损伤敏感",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "戊糖磷酸途径与糖酵解共享所有酶",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确:G6PD是PPP的关键调控点。B正确:非氧化阶段的灵活性。C正确:G6PD缺乏导致GSH再生受阻是蚕豆病的分子基础。D错误:PPP有独特酶系。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "戊糖磷酸途径",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "741130970",
+  "tags": []
+ },
+ "BQ-glycolysis-b83d8197b5b4": {
+  "type": "mtf",
+  "question": "关于戊糖磷酸途径的调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "葡萄糖-6-磷酸脱氢酶(G6PD)是戊糖磷酸途径的限速酶，受NADPH/NADP⁺比值调控",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "当细胞需要核糖-5-磷酸多于NADPH时，戊糖磷酸途径的非氧化阶段逆向运转产生核糖-5-磷酸",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "戊糖磷酸途径与糖酵解共享所有酶",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "G6PD缺乏症(蚕豆病)患者因NADPH不足导致红细胞对氧化损伤敏感",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确:G6PD是PPP的关键调控点。B正确:非氧化阶段的灵活性。D正确:G6PD缺乏导致GSH再生受阻是蚕豆病的分子基础。C错误:PPP有独特酶系。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "戊糖磷酸途径",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "741130970",
+  "tags": []
+ },
+ "BQ-glycolysis-93ffc6d7adf2": {
+  "type": "mtf",
+  "question": "关于戊糖磷酸途径的调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "葡萄糖-6-磷酸脱氢酶(G6PD)是戊糖磷酸途径的限速酶，受NADPH/NADP⁺比值调控",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "戊糖磷酸途径与糖酵解共享所有酶",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "G6PD缺乏症(蚕豆病)患者因NADPH不足导致红细胞对氧化损伤敏感",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "当细胞需要核糖-5-磷酸多于NADPH时，戊糖磷酸途径的非氧化阶段逆向运转产生核糖-5-磷酸",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确:G6PD是PPP的关键调控点。D正确:非氧化阶段的灵活性。C正确:G6PD缺乏导致GSH再生受阻是蚕豆病的分子基础。B错误:PPP有独特酶系。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "戊糖磷酸途径",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "741130970",
+  "tags": []
+ },
+ "BQ-glycolysis-ed277e690eda": {
+  "type": "mtf",
+  "question": "关于戊糖磷酸途径的调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "葡萄糖-6-磷酸脱氢酶(G6PD)是戊糖磷酸途径的限速酶，受NADPH/NADP⁺比值调控",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "戊糖磷酸途径与糖酵解共享所有酶",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "当细胞需要核糖-5-磷酸多于NADPH时，戊糖磷酸途径的非氧化阶段逆向运转产生核糖-5-磷酸",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "G6PD缺乏症(蚕豆病)患者因NADPH不足导致红细胞对氧化损伤敏感",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确:G6PD是PPP的关键调控点。C正确:非氧化阶段的灵活性。D正确:G6PD缺乏导致GSH再生受阻是蚕豆病的分子基础。B错误:PPP有独特酶系。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "戊糖磷酸途径",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "741130970",
+  "tags": []
+ },
+ "BQ-glycolysis-c09d331d942b": {
+  "type": "mtf",
+  "question": "关于糖原代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "分支酶催化α-1,6-糖苷键的形成，脱支酶则水解α-1,6-糖苷键",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "糖原合成酶催化UDP-葡萄糖的葡萄糖基转移到糖原引物的非还原端，形成α-1,4-糖苷键",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "糖原磷酸化酶从糖原链的非还原端切下葡萄糖-1-磷酸，是糖原降解的关键酶",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "糖原降解产物葡萄糖-6-磷酸可以在所有组织中释放游离葡萄糖进入血液",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确：糖原合成的机制。C正确：糖原磷酸化酶的功能。A正确：分支酶和脱支酶的作用。D错误：肌肉中缺乏葡萄糖-6-磷酸酶，不能将G-6-P转化为游离葡萄糖输出；只有肝脏和肾脏具有此酶，可向血液输出葡萄糖维持血糖。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "糖原代谢",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1287536850",
+  "tags": []
+ },
+ "BQ-glycolysis-42365cb3e1e4": {
+  "type": "mtf",
+  "question": "关于糖原代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "分支酶催化α-1,6-糖苷键的形成，脱支酶则水解α-1,6-糖苷键",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "糖原合成酶催化UDP-葡萄糖的葡萄糖基转移到糖原引物的非还原端，形成α-1,4-糖苷键",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "糖原降解产物葡萄糖-6-磷酸可以在所有组织中释放游离葡萄糖进入血液",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "糖原磷酸化酶从糖原链的非还原端切下葡萄糖-1-磷酸，是糖原降解的关键酶",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：糖原合成的机制。D正确：糖原磷酸化酶的功能。A正确：分支酶和脱支酶的作用。C错误：肌肉中缺乏葡萄糖-6-磷酸酶，不能将G-6-P转化为游离葡萄糖输出；只有肝脏和肾脏具有此酶，可向血液输出葡萄糖维持血糖。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "糖原代谢",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1287536850",
+  "tags": []
+ },
+ "BQ-glycolysis-713586514a16": {
+  "type": "mtf",
+  "question": "关于糖原代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "分支酶催化α-1,6-糖苷键的形成，脱支酶则水解α-1,6-糖苷键",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "糖原磷酸化酶从糖原链的非还原端切下葡萄糖-1-磷酸，是糖原降解的关键酶",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "糖原合成酶催化UDP-葡萄糖的葡萄糖基转移到糖原引物的非还原端，形成α-1,4-糖苷键",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "糖原降解产物葡萄糖-6-磷酸可以在所有组织中释放游离葡萄糖进入血液",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确：糖原合成的机制。B正确：糖原磷酸化酶的功能。A正确：分支酶和脱支酶的作用。D错误：肌肉中缺乏葡萄糖-6-磷酸酶，不能将G-6-P转化为游离葡萄糖输出；只有肝脏和肾脏具有此酶，可向血液输出葡萄糖维持血糖。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "糖原代谢",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1287536850",
+  "tags": []
+ },
+ "BQ-glycolysis-bb5e0fbcc3c8": {
+  "type": "mtf",
+  "question": "关于糖原代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "分支酶催化α-1,6-糖苷键的形成，脱支酶则水解α-1,6-糖苷键",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "糖原磷酸化酶从糖原链的非还原端切下葡萄糖-1-磷酸，是糖原降解的关键酶",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "糖原降解产物葡萄糖-6-磷酸可以在所有组织中释放游离葡萄糖进入血液",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "糖原合成酶催化UDP-葡萄糖的葡萄糖基转移到糖原引物的非还原端，形成α-1,4-糖苷键",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：糖原合成的机制。B正确：糖原磷酸化酶的功能。A正确：分支酶和脱支酶的作用。C错误：肌肉中缺乏葡萄糖-6-磷酸酶，不能将G-6-P转化为游离葡萄糖输出；只有肝脏和肾脏具有此酶，可向血液输出葡萄糖维持血糖。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "糖原代谢",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1287536850",
+  "tags": []
+ },
+ "BQ-glycolysis-af3997e3a4cd": {
+  "type": "mtf",
+  "question": "关于糖原代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "分支酶催化α-1,6-糖苷键的形成，脱支酶则水解α-1,6-糖苷键",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "糖原降解产物葡萄糖-6-磷酸可以在所有组织中释放游离葡萄糖进入血液",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "糖原合成酶催化UDP-葡萄糖的葡萄糖基转移到糖原引物的非还原端，形成α-1,4-糖苷键",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "糖原磷酸化酶从糖原链的非还原端切下葡萄糖-1-磷酸，是糖原降解的关键酶",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：糖原合成的机制。D正确：糖原磷酸化酶的功能。A正确：分支酶和脱支酶的作用。B错误：肌肉中缺乏葡萄糖-6-磷酸酶，不能将G-6-P转化为游离葡萄糖输出；只有肝脏和肾脏具有此酶，可向血液输出葡萄糖维持血糖。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "糖原代谢",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1287536850",
+  "tags": []
+ },
+ "BQ-glycolysis-a71feb9f623b": {
+  "type": "mtf",
+  "question": "关于糖原代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "分支酶催化α-1,6-糖苷键的形成，脱支酶则水解α-1,6-糖苷键",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "糖原降解产物葡萄糖-6-磷酸可以在所有组织中释放游离葡萄糖进入血液",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "糖原磷酸化酶从糖原链的非还原端切下葡萄糖-1-磷酸，是糖原降解的关键酶",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "糖原合成酶催化UDP-葡萄糖的葡萄糖基转移到糖原引物的非还原端，形成α-1,4-糖苷键",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：糖原合成的机制。C正确：糖原磷酸化酶的功能。A正确：分支酶和脱支酶的作用。B错误：肌肉中缺乏葡萄糖-6-磷酸酶，不能将G-6-P转化为游离葡萄糖输出；只有肝脏和肾脏具有此酶，可向血液输出葡萄糖维持血糖。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "糖原代谢",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1287536850",
+  "tags": []
+ },
+ "BQ-glycolysis-42518924d393": {
+  "type": "mtf",
+  "question": "关于糖原代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "糖原合成酶催化UDP-葡萄糖的葡萄糖基转移到糖原引物的非还原端，形成α-1,4-糖苷键",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "分支酶催化α-1,6-糖苷键的形成，脱支酶则水解α-1,6-糖苷键",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "糖原磷酸化酶从糖原链的非还原端切下葡萄糖-1-磷酸，是糖原降解的关键酶",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "糖原降解产物葡萄糖-6-磷酸可以在所有组织中释放游离葡萄糖进入血液",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确：糖原合成的机制。C正确：糖原磷酸化酶的功能。B正确：分支酶和脱支酶的作用。D错误：肌肉中缺乏葡萄糖-6-磷酸酶，不能将G-6-P转化为游离葡萄糖输出；只有肝脏和肾脏具有此酶，可向血液输出葡萄糖维持血糖。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "糖原代谢",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1287536850",
+  "tags": []
+ },
+ "BQ-glycolysis-f4183e5330c4": {
+  "type": "mtf",
+  "question": "关于糖原代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "糖原合成酶催化UDP-葡萄糖的葡萄糖基转移到糖原引物的非还原端，形成α-1,4-糖苷键",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "分支酶催化α-1,6-糖苷键的形成，脱支酶则水解α-1,6-糖苷键",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "糖原降解产物葡萄糖-6-磷酸可以在所有组织中释放游离葡萄糖进入血液",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "糖原磷酸化酶从糖原链的非还原端切下葡萄糖-1-磷酸，是糖原降解的关键酶",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：糖原合成的机制。D正确：糖原磷酸化酶的功能。B正确：分支酶和脱支酶的作用。C错误：肌肉中缺乏葡萄糖-6-磷酸酶，不能将G-6-P转化为游离葡萄糖输出；只有肝脏和肾脏具有此酶，可向血液输出葡萄糖维持血糖。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "糖原代谢",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1287536850",
+  "tags": []
+ },
+ "BQ-glycolysis-521d10e488e2": {
+  "type": "mtf",
+  "question": "关于糖原代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "糖原合成酶催化UDP-葡萄糖的葡萄糖基转移到糖原引物的非还原端，形成α-1,4-糖苷键",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "糖原磷酸化酶从糖原链的非还原端切下葡萄糖-1-磷酸，是糖原降解的关键酶",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "分支酶催化α-1,6-糖苷键的形成，脱支酶则水解α-1,6-糖苷键",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "糖原降解产物葡萄糖-6-磷酸可以在所有组织中释放游离葡萄糖进入血液",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确：糖原合成的机制。B正确：糖原磷酸化酶的功能。C正确：分支酶和脱支酶的作用。D错误：肌肉中缺乏葡萄糖-6-磷酸酶，不能将G-6-P转化为游离葡萄糖输出；只有肝脏和肾脏具有此酶，可向血液输出葡萄糖维持血糖。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "糖原代谢",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1287536850",
+  "tags": []
+ },
+ "BQ-glycolysis-10226763e3bc": {
+  "type": "mtf",
+  "question": "关于糖原代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "糖原合成酶催化UDP-葡萄糖的葡萄糖基转移到糖原引物的非还原端，形成α-1,4-糖苷键",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "糖原磷酸化酶从糖原链的非还原端切下葡萄糖-1-磷酸，是糖原降解的关键酶",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "糖原降解产物葡萄糖-6-磷酸可以在所有组织中释放游离葡萄糖进入血液",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "分支酶催化α-1,6-糖苷键的形成，脱支酶则水解α-1,6-糖苷键",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：糖原合成的机制。B正确：糖原磷酸化酶的功能。D正确：分支酶和脱支酶的作用。C错误：肌肉中缺乏葡萄糖-6-磷酸酶，不能将G-6-P转化为游离葡萄糖输出；只有肝脏和肾脏具有此酶，可向血液输出葡萄糖维持血糖。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "糖原代谢",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1287536850",
+  "tags": []
+ },
+ "BQ-glycolysis-b0981b28cfd1": {
+  "type": "mtf",
+  "question": "关于糖原代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "糖原合成酶催化UDP-葡萄糖的葡萄糖基转移到糖原引物的非还原端，形成α-1,4-糖苷键",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "糖原降解产物葡萄糖-6-磷酸可以在所有组织中释放游离葡萄糖进入血液",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "分支酶催化α-1,6-糖苷键的形成，脱支酶则水解α-1,6-糖苷键",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "糖原磷酸化酶从糖原链的非还原端切下葡萄糖-1-磷酸，是糖原降解的关键酶",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：糖原合成的机制。D正确：糖原磷酸化酶的功能。C正确：分支酶和脱支酶的作用。B错误：肌肉中缺乏葡萄糖-6-磷酸酶，不能将G-6-P转化为游离葡萄糖输出；只有肝脏和肾脏具有此酶，可向血液输出葡萄糖维持血糖。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "糖原代谢",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1287536850",
+  "tags": []
+ },
+ "BQ-glycolysis-955cb34cd336": {
+  "type": "mtf",
+  "question": "关于糖原代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "糖原合成酶催化UDP-葡萄糖的葡萄糖基转移到糖原引物的非还原端，形成α-1,4-糖苷键",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "糖原降解产物葡萄糖-6-磷酸可以在所有组织中释放游离葡萄糖进入血液",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "糖原磷酸化酶从糖原链的非还原端切下葡萄糖-1-磷酸，是糖原降解的关键酶",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "分支酶催化α-1,6-糖苷键的形成，脱支酶则水解α-1,6-糖苷键",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：糖原合成的机制。C正确：糖原磷酸化酶的功能。D正确：分支酶和脱支酶的作用。B错误：肌肉中缺乏葡萄糖-6-磷酸酶，不能将G-6-P转化为游离葡萄糖输出；只有肝脏和肾脏具有此酶，可向血液输出葡萄糖维持血糖。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "糖原代谢",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1287536850",
+  "tags": []
+ },
+ "BQ-glycolysis-f54b70eeaf5e": {
+  "type": "mtf",
+  "question": "关于糖原代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "糖原磷酸化酶从糖原链的非还原端切下葡萄糖-1-磷酸，是糖原降解的关键酶",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "分支酶催化α-1,6-糖苷键的形成，脱支酶则水解α-1,6-糖苷键",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "糖原合成酶催化UDP-葡萄糖的葡萄糖基转移到糖原引物的非还原端，形成α-1,4-糖苷键",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "糖原降解产物葡萄糖-6-磷酸可以在所有组织中释放游离葡萄糖进入血液",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确：糖原合成的机制。A正确：糖原磷酸化酶的功能。B正确：分支酶和脱支酶的作用。D错误：肌肉中缺乏葡萄糖-6-磷酸酶，不能将G-6-P转化为游离葡萄糖输出；只有肝脏和肾脏具有此酶，可向血液输出葡萄糖维持血糖。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "糖原代谢",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1287536850",
+  "tags": []
+ },
+ "BQ-glycolysis-e0c4639084ad": {
+  "type": "mtf",
+  "question": "关于糖原代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "糖原磷酸化酶从糖原链的非还原端切下葡萄糖-1-磷酸，是糖原降解的关键酶",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "分支酶催化α-1,6-糖苷键的形成，脱支酶则水解α-1,6-糖苷键",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "糖原降解产物葡萄糖-6-磷酸可以在所有组织中释放游离葡萄糖进入血液",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "糖原合成酶催化UDP-葡萄糖的葡萄糖基转移到糖原引物的非还原端，形成α-1,4-糖苷键",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：糖原合成的机制。A正确：糖原磷酸化酶的功能。B正确：分支酶和脱支酶的作用。C错误：肌肉中缺乏葡萄糖-6-磷酸酶，不能将G-6-P转化为游离葡萄糖输出；只有肝脏和肾脏具有此酶，可向血液输出葡萄糖维持血糖。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "糖原代谢",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1287536850",
+  "tags": []
+ },
+ "BQ-glycolysis-9ded8a6796d3": {
+  "type": "mtf",
+  "question": "关于糖原代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "糖原磷酸化酶从糖原链的非还原端切下葡萄糖-1-磷酸，是糖原降解的关键酶",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "糖原合成酶催化UDP-葡萄糖的葡萄糖基转移到糖原引物的非还原端，形成α-1,4-糖苷键",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "分支酶催化α-1,6-糖苷键的形成，脱支酶则水解α-1,6-糖苷键",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "糖原降解产物葡萄糖-6-磷酸可以在所有组织中释放游离葡萄糖进入血液",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确：糖原合成的机制。A正确：糖原磷酸化酶的功能。C正确：分支酶和脱支酶的作用。D错误：肌肉中缺乏葡萄糖-6-磷酸酶，不能将G-6-P转化为游离葡萄糖输出；只有肝脏和肾脏具有此酶，可向血液输出葡萄糖维持血糖。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "糖原代谢",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1287536850",
+  "tags": []
+ },
+ "BQ-glycolysis-2f17e4847cdb": {
+  "type": "mtf",
+  "question": "关于糖原代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "糖原磷酸化酶从糖原链的非还原端切下葡萄糖-1-磷酸，是糖原降解的关键酶",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "糖原合成酶催化UDP-葡萄糖的葡萄糖基转移到糖原引物的非还原端，形成α-1,4-糖苷键",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "糖原降解产物葡萄糖-6-磷酸可以在所有组织中释放游离葡萄糖进入血液",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "分支酶催化α-1,6-糖苷键的形成，脱支酶则水解α-1,6-糖苷键",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：糖原合成的机制。A正确：糖原磷酸化酶的功能。D正确：分支酶和脱支酶的作用。C错误：肌肉中缺乏葡萄糖-6-磷酸酶，不能将G-6-P转化为游离葡萄糖输出；只有肝脏和肾脏具有此酶，可向血液输出葡萄糖维持血糖。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "糖原代谢",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1287536850",
+  "tags": []
+ },
+ "BQ-glycolysis-09245b75b1b9": {
+  "type": "mtf",
+  "question": "关于糖原代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "糖原磷酸化酶从糖原链的非还原端切下葡萄糖-1-磷酸，是糖原降解的关键酶",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "糖原降解产物葡萄糖-6-磷酸可以在所有组织中释放游离葡萄糖进入血液",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "分支酶催化α-1,6-糖苷键的形成，脱支酶则水解α-1,6-糖苷键",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "糖原合成酶催化UDP-葡萄糖的葡萄糖基转移到糖原引物的非还原端，形成α-1,4-糖苷键",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：糖原合成的机制。A正确：糖原磷酸化酶的功能。C正确：分支酶和脱支酶的作用。B错误：肌肉中缺乏葡萄糖-6-磷酸酶，不能将G-6-P转化为游离葡萄糖输出；只有肝脏和肾脏具有此酶，可向血液输出葡萄糖维持血糖。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "糖原代谢",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1287536850",
+  "tags": []
+ },
+ "BQ-glycolysis-d54c47daa05c": {
+  "type": "mtf",
+  "question": "关于糖原代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "糖原磷酸化酶从糖原链的非还原端切下葡萄糖-1-磷酸，是糖原降解的关键酶",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "糖原降解产物葡萄糖-6-磷酸可以在所有组织中释放游离葡萄糖进入血液",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "糖原合成酶催化UDP-葡萄糖的葡萄糖基转移到糖原引物的非还原端，形成α-1,4-糖苷键",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "分支酶催化α-1,6-糖苷键的形成，脱支酶则水解α-1,6-糖苷键",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：糖原合成的机制。A正确：糖原磷酸化酶的功能。D正确：分支酶和脱支酶的作用。B错误：肌肉中缺乏葡萄糖-6-磷酸酶，不能将G-6-P转化为游离葡萄糖输出；只有肝脏和肾脏具有此酶，可向血液输出葡萄糖维持血糖。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "糖原代谢",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1287536850",
+  "tags": []
+ },
+ "BQ-glycolysis-8b917a33de4c": {
+  "type": "mtf",
+  "question": "关于糖原代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "糖原降解产物葡萄糖-6-磷酸可以在所有组织中释放游离葡萄糖进入血液",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "分支酶催化α-1,6-糖苷键的形成，脱支酶则水解α-1,6-糖苷键",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "糖原合成酶催化UDP-葡萄糖的葡萄糖基转移到糖原引物的非还原端，形成α-1,4-糖苷键",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "糖原磷酸化酶从糖原链的非还原端切下葡萄糖-1-磷酸，是糖原降解的关键酶",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：糖原合成的机制。D正确：糖原磷酸化酶的功能。B正确：分支酶和脱支酶的作用。A错误：肌肉中缺乏葡萄糖-6-磷酸酶，不能将G-6-P转化为游离葡萄糖输出；只有肝脏和肾脏具有此酶，可向血液输出葡萄糖维持血糖。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "糖原代谢",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1287536850",
+  "tags": []
+ },
+ "BQ-glycolysis-9a982b5c3c17": {
+  "type": "mtf",
+  "question": "关于糖原代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "糖原降解产物葡萄糖-6-磷酸可以在所有组织中释放游离葡萄糖进入血液",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "分支酶催化α-1,6-糖苷键的形成，脱支酶则水解α-1,6-糖苷键",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "糖原磷酸化酶从糖原链的非还原端切下葡萄糖-1-磷酸，是糖原降解的关键酶",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "糖原合成酶催化UDP-葡萄糖的葡萄糖基转移到糖原引物的非还原端，形成α-1,4-糖苷键",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：糖原合成的机制。C正确：糖原磷酸化酶的功能。B正确：分支酶和脱支酶的作用。A错误：肌肉中缺乏葡萄糖-6-磷酸酶，不能将G-6-P转化为游离葡萄糖输出；只有肝脏和肾脏具有此酶，可向血液输出葡萄糖维持血糖。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "糖原代谢",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1287536850",
+  "tags": []
+ },
+ "BQ-glycolysis-8d3ec017fc3f": {
+  "type": "mtf",
+  "question": "关于糖原代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "糖原降解产物葡萄糖-6-磷酸可以在所有组织中释放游离葡萄糖进入血液",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "糖原合成酶催化UDP-葡萄糖的葡萄糖基转移到糖原引物的非还原端，形成α-1,4-糖苷键",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "分支酶催化α-1,6-糖苷键的形成，脱支酶则水解α-1,6-糖苷键",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "糖原磷酸化酶从糖原链的非还原端切下葡萄糖-1-磷酸，是糖原降解的关键酶",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：糖原合成的机制。D正确：糖原磷酸化酶的功能。C正确：分支酶和脱支酶的作用。A错误：肌肉中缺乏葡萄糖-6-磷酸酶，不能将G-6-P转化为游离葡萄糖输出；只有肝脏和肾脏具有此酶，可向血液输出葡萄糖维持血糖。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "糖原代谢",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1287536850",
+  "tags": []
+ },
+ "BQ-glycolysis-cbfe30fa5bba": {
+  "type": "mtf",
+  "question": "关于糖原代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "糖原降解产物葡萄糖-6-磷酸可以在所有组织中释放游离葡萄糖进入血液",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "糖原合成酶催化UDP-葡萄糖的葡萄糖基转移到糖原引物的非还原端，形成α-1,4-糖苷键",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "糖原磷酸化酶从糖原链的非还原端切下葡萄糖-1-磷酸，是糖原降解的关键酶",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "分支酶催化α-1,6-糖苷键的形成，脱支酶则水解α-1,6-糖苷键",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：糖原合成的机制。C正确：糖原磷酸化酶的功能。D正确：分支酶和脱支酶的作用。A错误：肌肉中缺乏葡萄糖-6-磷酸酶，不能将G-6-P转化为游离葡萄糖输出；只有肝脏和肾脏具有此酶，可向血液输出葡萄糖维持血糖。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "糖原代谢",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1287536850",
+  "tags": []
+ },
+ "BQ-glycolysis-4e36db2aa063": {
+  "type": "mtf",
+  "question": "关于糖原代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "糖原降解产物葡萄糖-6-磷酸可以在所有组织中释放游离葡萄糖进入血液",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "糖原磷酸化酶从糖原链的非还原端切下葡萄糖-1-磷酸，是糖原降解的关键酶",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "分支酶催化α-1,6-糖苷键的形成，脱支酶则水解α-1,6-糖苷键",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "糖原合成酶催化UDP-葡萄糖的葡萄糖基转移到糖原引物的非还原端，形成α-1,4-糖苷键",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：糖原合成的机制。B正确：糖原磷酸化酶的功能。C正确：分支酶和脱支酶的作用。A错误：肌肉中缺乏葡萄糖-6-磷酸酶，不能将G-6-P转化为游离葡萄糖输出；只有肝脏和肾脏具有此酶，可向血液输出葡萄糖维持血糖。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "糖原代谢",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1287536850",
+  "tags": []
+ },
+ "BQ-glycolysis-e58c1e5a4c23": {
+  "type": "mtf",
+  "question": "关于糖原代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "糖原降解产物葡萄糖-6-磷酸可以在所有组织中释放游离葡萄糖进入血液",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "糖原磷酸化酶从糖原链的非还原端切下葡萄糖-1-磷酸，是糖原降解的关键酶",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "糖原合成酶催化UDP-葡萄糖的葡萄糖基转移到糖原引物的非还原端，形成α-1,4-糖苷键",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "分支酶催化α-1,6-糖苷键的形成，脱支酶则水解α-1,6-糖苷键",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：糖原合成的机制。B正确：糖原磷酸化酶的功能。D正确：分支酶和脱支酶的作用。A错误：肌肉中缺乏葡萄糖-6-磷酸酶，不能将G-6-P转化为游离葡萄糖输出；只有肝脏和肾脏具有此酶，可向血液输出葡萄糖维持血糖。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "糖原代谢",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1287536850",
+  "tags": []
+ },
+ "BQ-glycolysis-46d0198116c3": {
+  "type": "mtf",
+  "question": "关于糖异生作用，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "PEP羧激酶催化草酰乙酸直接转化为PEP，此反应发生在线粒体中",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "丙酮酸羧化酶催化丙酮酸转化为草酰乙酸，这一步需要生物素作为辅酶",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "果糖-1,6-二磷酸酶是糖异生的关键调控酶之一，受AMP抑制、ATP激活",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "糖异生的主要场所是肝脏，其次为肾脏皮质",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：肝是糖异生的主要器官。B正确：丙酮酸羧化酶含生物素辅基。A错误：草酰乙酸需先还原为苹果酸或转氨基为天冬氨酸才能从线粒体转运到胞质，在胞质中再氧化为草酰乙酸，然后PEP羧激酶催化转化为PEP。C正确：FBPase-1的调控方式与PFK-1相反。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "糖异生",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1719917686",
+  "tags": []
+ },
+ "BQ-glycolysis-e5d9c8298bc9": {
+  "type": "mtf",
+  "question": "关于糖异生作用，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "PEP羧激酶催化草酰乙酸直接转化为PEP，此反应发生在线粒体中",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "丙酮酸羧化酶催化丙酮酸转化为草酰乙酸，这一步需要生物素作为辅酶",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "糖异生的主要场所是肝脏，其次为肾脏皮质",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "果糖-1,6-二磷酸酶是糖异生的关键调控酶之一，受AMP抑制、ATP激活",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：肝是糖异生的主要器官。B正确：丙酮酸羧化酶含生物素辅基。A错误：草酰乙酸需先还原为苹果酸或转氨基为天冬氨酸才能从线粒体转运到胞质，在胞质中再氧化为草酰乙酸，然后PEP羧激酶催化转化为PEP。D正确：FBPase-1的调控方式与PFK-1相反。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "糖异生",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1719917686",
+  "tags": []
+ },
+ "BQ-glycolysis-8acb58367f67": {
+  "type": "mtf",
+  "question": "关于糖异生作用，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "PEP羧激酶催化草酰乙酸直接转化为PEP，此反应发生在线粒体中",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "果糖-1,6-二磷酸酶是糖异生的关键调控酶之一，受AMP抑制、ATP激活",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "丙酮酸羧化酶催化丙酮酸转化为草酰乙酸，这一步需要生物素作为辅酶",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "糖异生的主要场所是肝脏，其次为肾脏皮质",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：肝是糖异生的主要器官。C正确：丙酮酸羧化酶含生物素辅基。A错误：草酰乙酸需先还原为苹果酸或转氨基为天冬氨酸才能从线粒体转运到胞质，在胞质中再氧化为草酰乙酸，然后PEP羧激酶催化转化为PEP。B正确：FBPase-1的调控方式与PFK-1相反。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "糖异生",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1719917686",
+  "tags": []
+ },
+ "BQ-glycolysis-cc9e48be4d84": {
+  "type": "mtf",
+  "question": "关于糖异生作用，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "PEP羧激酶催化草酰乙酸直接转化为PEP，此反应发生在线粒体中",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "果糖-1,6-二磷酸酶是糖异生的关键调控酶之一，受AMP抑制、ATP激活",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "糖异生的主要场所是肝脏，其次为肾脏皮质",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "丙酮酸羧化酶催化丙酮酸转化为草酰乙酸，这一步需要生物素作为辅酶",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：肝是糖异生的主要器官。D正确：丙酮酸羧化酶含生物素辅基。A错误：草酰乙酸需先还原为苹果酸或转氨基为天冬氨酸才能从线粒体转运到胞质，在胞质中再氧化为草酰乙酸，然后PEP羧激酶催化转化为PEP。B正确：FBPase-1的调控方式与PFK-1相反。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "糖异生",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1719917686",
+  "tags": []
+ },
+ "BQ-glycolysis-421f1d835fe0": {
+  "type": "mtf",
+  "question": "关于糖异生作用，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "PEP羧激酶催化草酰乙酸直接转化为PEP，此反应发生在线粒体中",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "糖异生的主要场所是肝脏，其次为肾脏皮质",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "丙酮酸羧化酶催化丙酮酸转化为草酰乙酸，这一步需要生物素作为辅酶",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "果糖-1,6-二磷酸酶是糖异生的关键调控酶之一，受AMP抑制、ATP激活",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：肝是糖异生的主要器官。C正确：丙酮酸羧化酶含生物素辅基。A错误：草酰乙酸需先还原为苹果酸或转氨基为天冬氨酸才能从线粒体转运到胞质，在胞质中再氧化为草酰乙酸，然后PEP羧激酶催化转化为PEP。D正确：FBPase-1的调控方式与PFK-1相反。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "糖异生",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1719917686",
+  "tags": []
+ },
+ "BQ-glycolysis-6248e2db1080": {
+  "type": "mtf",
+  "question": "关于糖异生作用，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "PEP羧激酶催化草酰乙酸直接转化为PEP，此反应发生在线粒体中",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "糖异生的主要场所是肝脏，其次为肾脏皮质",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "果糖-1,6-二磷酸酶是糖异生的关键调控酶之一，受AMP抑制、ATP激活",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "丙酮酸羧化酶催化丙酮酸转化为草酰乙酸，这一步需要生物素作为辅酶",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：肝是糖异生的主要器官。D正确：丙酮酸羧化酶含生物素辅基。A错误：草酰乙酸需先还原为苹果酸或转氨基为天冬氨酸才能从线粒体转运到胞质，在胞质中再氧化为草酰乙酸，然后PEP羧激酶催化转化为PEP。C正确：FBPase-1的调控方式与PFK-1相反。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "糖异生",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1719917686",
+  "tags": []
+ },
+ "BQ-glycolysis-cbabc7bcc347": {
+  "type": "mtf",
+  "question": "关于糖异生作用，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "丙酮酸羧化酶催化丙酮酸转化为草酰乙酸，这一步需要生物素作为辅酶",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "PEP羧激酶催化草酰乙酸直接转化为PEP，此反应发生在线粒体中",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "果糖-1,6-二磷酸酶是糖异生的关键调控酶之一，受AMP抑制、ATP激活",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "糖异生的主要场所是肝脏，其次为肾脏皮质",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：肝是糖异生的主要器官。A正确：丙酮酸羧化酶含生物素辅基。B错误：草酰乙酸需先还原为苹果酸或转氨基为天冬氨酸才能从线粒体转运到胞质，在胞质中再氧化为草酰乙酸，然后PEP羧激酶催化转化为PEP。C正确：FBPase-1的调控方式与PFK-1相反。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "糖异生",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1719917686",
+  "tags": []
+ },
+ "BQ-glycolysis-d185ec9c6a07": {
+  "type": "mtf",
+  "question": "关于糖异生作用，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "丙酮酸羧化酶催化丙酮酸转化为草酰乙酸，这一步需要生物素作为辅酶",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "PEP羧激酶催化草酰乙酸直接转化为PEP，此反应发生在线粒体中",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "糖异生的主要场所是肝脏，其次为肾脏皮质",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "果糖-1,6-二磷酸酶是糖异生的关键调控酶之一，受AMP抑制、ATP激活",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：肝是糖异生的主要器官。A正确：丙酮酸羧化酶含生物素辅基。B错误：草酰乙酸需先还原为苹果酸或转氨基为天冬氨酸才能从线粒体转运到胞质，在胞质中再氧化为草酰乙酸，然后PEP羧激酶催化转化为PEP。D正确：FBPase-1的调控方式与PFK-1相反。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "糖异生",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1719917686",
+  "tags": []
+ },
+ "BQ-glycolysis-10650885e506": {
+  "type": "mtf",
+  "question": "关于糖异生作用，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "丙酮酸羧化酶催化丙酮酸转化为草酰乙酸，这一步需要生物素作为辅酶",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "果糖-1,6-二磷酸酶是糖异生的关键调控酶之一，受AMP抑制、ATP激活",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "PEP羧激酶催化草酰乙酸直接转化为PEP，此反应发生在线粒体中",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "糖异生的主要场所是肝脏，其次为肾脏皮质",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：肝是糖异生的主要器官。A正确：丙酮酸羧化酶含生物素辅基。C错误：草酰乙酸需先还原为苹果酸或转氨基为天冬氨酸才能从线粒体转运到胞质，在胞质中再氧化为草酰乙酸，然后PEP羧激酶催化转化为PEP。B正确：FBPase-1的调控方式与PFK-1相反。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "糖异生",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1719917686",
+  "tags": []
+ },
+ "BQ-glycolysis-18f4e372389d": {
+  "type": "mtf",
+  "question": "关于糖异生作用，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "丙酮酸羧化酶催化丙酮酸转化为草酰乙酸，这一步需要生物素作为辅酶",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "果糖-1,6-二磷酸酶是糖异生的关键调控酶之一，受AMP抑制、ATP激活",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "糖异生的主要场所是肝脏，其次为肾脏皮质",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "PEP羧激酶催化草酰乙酸直接转化为PEP，此反应发生在线粒体中",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确：肝是糖异生的主要器官。A正确：丙酮酸羧化酶含生物素辅基。D错误：草酰乙酸需先还原为苹果酸或转氨基为天冬氨酸才能从线粒体转运到胞质，在胞质中再氧化为草酰乙酸，然后PEP羧激酶催化转化为PEP。B正确：FBPase-1的调控方式与PFK-1相反。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "糖异生",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1719917686",
+  "tags": []
+ },
+ "BQ-glycolysis-7ebbb6ba5b12": {
+  "type": "mtf",
+  "question": "关于糖异生作用，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "丙酮酸羧化酶催化丙酮酸转化为草酰乙酸，这一步需要生物素作为辅酶",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "糖异生的主要场所是肝脏，其次为肾脏皮质",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "PEP羧激酶催化草酰乙酸直接转化为PEP，此反应发生在线粒体中",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "果糖-1,6-二磷酸酶是糖异生的关键调控酶之一，受AMP抑制、ATP激活",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：肝是糖异生的主要器官。A正确：丙酮酸羧化酶含生物素辅基。C错误：草酰乙酸需先还原为苹果酸或转氨基为天冬氨酸才能从线粒体转运到胞质，在胞质中再氧化为草酰乙酸，然后PEP羧激酶催化转化为PEP。D正确：FBPase-1的调控方式与PFK-1相反。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "糖异生",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1719917686",
+  "tags": []
+ },
+ "BQ-glycolysis-a34b7eab31a4": {
+  "type": "mtf",
+  "question": "关于糖异生作用，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "丙酮酸羧化酶催化丙酮酸转化为草酰乙酸，这一步需要生物素作为辅酶",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "糖异生的主要场所是肝脏，其次为肾脏皮质",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "果糖-1,6-二磷酸酶是糖异生的关键调控酶之一，受AMP抑制、ATP激活",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "PEP羧激酶催化草酰乙酸直接转化为PEP，此反应发生在线粒体中",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确：肝是糖异生的主要器官。A正确：丙酮酸羧化酶含生物素辅基。D错误：草酰乙酸需先还原为苹果酸或转氨基为天冬氨酸才能从线粒体转运到胞质，在胞质中再氧化为草酰乙酸，然后PEP羧激酶催化转化为PEP。C正确：FBPase-1的调控方式与PFK-1相反。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "糖异生",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1719917686",
+  "tags": []
+ },
+ "BQ-glycolysis-f48d8d009835": {
+  "type": "mtf",
+  "question": "关于糖异生作用，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "果糖-1,6-二磷酸酶是糖异生的关键调控酶之一，受AMP抑制、ATP激活",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "PEP羧激酶催化草酰乙酸直接转化为PEP，此反应发生在线粒体中",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "丙酮酸羧化酶催化丙酮酸转化为草酰乙酸，这一步需要生物素作为辅酶",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "糖异生的主要场所是肝脏，其次为肾脏皮质",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：肝是糖异生的主要器官。C正确：丙酮酸羧化酶含生物素辅基。B错误：草酰乙酸需先还原为苹果酸或转氨基为天冬氨酸才能从线粒体转运到胞质，在胞质中再氧化为草酰乙酸，然后PEP羧激酶催化转化为PEP。A正确：FBPase-1的调控方式与PFK-1相反。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "糖异生",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1719917686",
+  "tags": []
+ },
+ "BQ-glycolysis-6ddddfa9c56e": {
+  "type": "mtf",
+  "question": "关于糖异生作用，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "果糖-1,6-二磷酸酶是糖异生的关键调控酶之一，受AMP抑制、ATP激活",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "PEP羧激酶催化草酰乙酸直接转化为PEP，此反应发生在线粒体中",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "糖异生的主要场所是肝脏，其次为肾脏皮质",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "丙酮酸羧化酶催化丙酮酸转化为草酰乙酸，这一步需要生物素作为辅酶",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：肝是糖异生的主要器官。D正确：丙酮酸羧化酶含生物素辅基。B错误：草酰乙酸需先还原为苹果酸或转氨基为天冬氨酸才能从线粒体转运到胞质，在胞质中再氧化为草酰乙酸，然后PEP羧激酶催化转化为PEP。A正确：FBPase-1的调控方式与PFK-1相反。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "糖异生",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1719917686",
+  "tags": []
+ },
+ "BQ-glycolysis-5364663493b0": {
+  "type": "mtf",
+  "question": "关于糖异生作用，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "果糖-1,6-二磷酸酶是糖异生的关键调控酶之一，受AMP抑制、ATP激活",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "丙酮酸羧化酶催化丙酮酸转化为草酰乙酸，这一步需要生物素作为辅酶",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "PEP羧激酶催化草酰乙酸直接转化为PEP，此反应发生在线粒体中",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "糖异生的主要场所是肝脏，其次为肾脏皮质",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：肝是糖异生的主要器官。B正确：丙酮酸羧化酶含生物素辅基。C错误：草酰乙酸需先还原为苹果酸或转氨基为天冬氨酸才能从线粒体转运到胞质，在胞质中再氧化为草酰乙酸，然后PEP羧激酶催化转化为PEP。A正确：FBPase-1的调控方式与PFK-1相反。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "糖异生",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1719917686",
+  "tags": []
+ },
+ "BQ-glycolysis-f3c740a734d2": {
+  "type": "mtf",
+  "question": "关于糖异生作用，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "果糖-1,6-二磷酸酶是糖异生的关键调控酶之一，受AMP抑制、ATP激活",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "丙酮酸羧化酶催化丙酮酸转化为草酰乙酸，这一步需要生物素作为辅酶",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "糖异生的主要场所是肝脏，其次为肾脏皮质",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "PEP羧激酶催化草酰乙酸直接转化为PEP，此反应发生在线粒体中",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确：肝是糖异生的主要器官。B正确：丙酮酸羧化酶含生物素辅基。D错误：草酰乙酸需先还原为苹果酸或转氨基为天冬氨酸才能从线粒体转运到胞质，在胞质中再氧化为草酰乙酸，然后PEP羧激酶催化转化为PEP。A正确：FBPase-1的调控方式与PFK-1相反。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "糖异生",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1719917686",
+  "tags": []
+ },
+ "BQ-glycolysis-67e4296e4b2d": {
+  "type": "mtf",
+  "question": "关于糖异生作用，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "果糖-1,6-二磷酸酶是糖异生的关键调控酶之一，受AMP抑制、ATP激活",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "糖异生的主要场所是肝脏，其次为肾脏皮质",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "PEP羧激酶催化草酰乙酸直接转化为PEP，此反应发生在线粒体中",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "丙酮酸羧化酶催化丙酮酸转化为草酰乙酸，这一步需要生物素作为辅酶",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：肝是糖异生的主要器官。D正确：丙酮酸羧化酶含生物素辅基。C错误：草酰乙酸需先还原为苹果酸或转氨基为天冬氨酸才能从线粒体转运到胞质，在胞质中再氧化为草酰乙酸，然后PEP羧激酶催化转化为PEP。A正确：FBPase-1的调控方式与PFK-1相反。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "糖异生",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1719917686",
+  "tags": []
+ },
+ "BQ-glycolysis-20212ad5586b": {
+  "type": "mtf",
+  "question": "关于糖异生作用，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "果糖-1,6-二磷酸酶是糖异生的关键调控酶之一，受AMP抑制、ATP激活",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "糖异生的主要场所是肝脏，其次为肾脏皮质",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "丙酮酸羧化酶催化丙酮酸转化为草酰乙酸，这一步需要生物素作为辅酶",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "PEP羧激酶催化草酰乙酸直接转化为PEP，此反应发生在线粒体中",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确：肝是糖异生的主要器官。C正确：丙酮酸羧化酶含生物素辅基。D错误：草酰乙酸需先还原为苹果酸或转氨基为天冬氨酸才能从线粒体转运到胞质，在胞质中再氧化为草酰乙酸，然后PEP羧激酶催化转化为PEP。A正确：FBPase-1的调控方式与PFK-1相反。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "糖异生",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1719917686",
+  "tags": []
+ },
+ "BQ-glycolysis-ecb38db73d4f": {
+  "type": "mtf",
+  "question": "关于糖异生作用，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "糖异生的主要场所是肝脏，其次为肾脏皮质",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "PEP羧激酶催化草酰乙酸直接转化为PEP，此反应发生在线粒体中",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "丙酮酸羧化酶催化丙酮酸转化为草酰乙酸，这一步需要生物素作为辅酶",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "果糖-1,6-二磷酸酶是糖异生的关键调控酶之一，受AMP抑制、ATP激活",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：肝是糖异生的主要器官。C正确：丙酮酸羧化酶含生物素辅基。B错误：草酰乙酸需先还原为苹果酸或转氨基为天冬氨酸才能从线粒体转运到胞质，在胞质中再氧化为草酰乙酸，然后PEP羧激酶催化转化为PEP。D正确：FBPase-1的调控方式与PFK-1相反。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "糖异生",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1719917686",
+  "tags": []
+ },
+ "BQ-glycolysis-1969ed938839": {
+  "type": "mtf",
+  "question": "关于糖异生作用，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "糖异生的主要场所是肝脏，其次为肾脏皮质",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "PEP羧激酶催化草酰乙酸直接转化为PEP，此反应发生在线粒体中",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "果糖-1,6-二磷酸酶是糖异生的关键调控酶之一，受AMP抑制、ATP激活",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "丙酮酸羧化酶催化丙酮酸转化为草酰乙酸，这一步需要生物素作为辅酶",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：肝是糖异生的主要器官。D正确：丙酮酸羧化酶含生物素辅基。B错误：草酰乙酸需先还原为苹果酸或转氨基为天冬氨酸才能从线粒体转运到胞质，在胞质中再氧化为草酰乙酸，然后PEP羧激酶催化转化为PEP。C正确：FBPase-1的调控方式与PFK-1相反。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "糖异生",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1719917686",
+  "tags": []
+ },
+ "BQ-glycolysis-bfe0185f12db": {
+  "type": "mtf",
+  "question": "关于糖异生作用，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "糖异生的主要场所是肝脏，其次为肾脏皮质",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "丙酮酸羧化酶催化丙酮酸转化为草酰乙酸，这一步需要生物素作为辅酶",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "PEP羧激酶催化草酰乙酸直接转化为PEP，此反应发生在线粒体中",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "果糖-1,6-二磷酸酶是糖异生的关键调控酶之一，受AMP抑制、ATP激活",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：肝是糖异生的主要器官。B正确：丙酮酸羧化酶含生物素辅基。C错误：草酰乙酸需先还原为苹果酸或转氨基为天冬氨酸才能从线粒体转运到胞质，在胞质中再氧化为草酰乙酸，然后PEP羧激酶催化转化为PEP。D正确：FBPase-1的调控方式与PFK-1相反。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "糖异生",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1719917686",
+  "tags": []
+ },
+ "BQ-glycolysis-26bd61b24320": {
+  "type": "mtf",
+  "question": "关于糖异生作用，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "糖异生的主要场所是肝脏，其次为肾脏皮质",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "丙酮酸羧化酶催化丙酮酸转化为草酰乙酸，这一步需要生物素作为辅酶",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "果糖-1,6-二磷酸酶是糖异生的关键调控酶之一，受AMP抑制、ATP激活",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "PEP羧激酶催化草酰乙酸直接转化为PEP，此反应发生在线粒体中",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确：肝是糖异生的主要器官。B正确：丙酮酸羧化酶含生物素辅基。D错误：草酰乙酸需先还原为苹果酸或转氨基为天冬氨酸才能从线粒体转运到胞质，在胞质中再氧化为草酰乙酸，然后PEP羧激酶催化转化为PEP。C正确：FBPase-1的调控方式与PFK-1相反。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "糖异生",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1719917686",
+  "tags": []
+ },
+ "BQ-glycolysis-91d2164b87ff": {
+  "type": "mtf",
+  "question": "关于糖异生作用，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "糖异生的主要场所是肝脏，其次为肾脏皮质",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "果糖-1,6-二磷酸酶是糖异生的关键调控酶之一，受AMP抑制、ATP激活",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "PEP羧激酶催化草酰乙酸直接转化为PEP，此反应发生在线粒体中",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "丙酮酸羧化酶催化丙酮酸转化为草酰乙酸，这一步需要生物素作为辅酶",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：肝是糖异生的主要器官。D正确：丙酮酸羧化酶含生物素辅基。C错误：草酰乙酸需先还原为苹果酸或转氨基为天冬氨酸才能从线粒体转运到胞质，在胞质中再氧化为草酰乙酸，然后PEP羧激酶催化转化为PEP。B正确：FBPase-1的调控方式与PFK-1相反。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "糖异生",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1719917686",
+  "tags": []
+ },
+ "BQ-glycolysis-8ebb0b7ba1cc": {
+  "type": "mtf",
+  "question": "关于糖异生作用，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "糖异生的主要场所是肝脏，其次为肾脏皮质",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "果糖-1,6-二磷酸酶是糖异生的关键调控酶之一，受AMP抑制、ATP激活",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "丙酮酸羧化酶催化丙酮酸转化为草酰乙酸，这一步需要生物素作为辅酶",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "PEP羧激酶催化草酰乙酸直接转化为PEP，此反应发生在线粒体中",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确：肝是糖异生的主要器官。C正确：丙酮酸羧化酶含生物素辅基。D错误：草酰乙酸需先还原为苹果酸或转氨基为天冬氨酸才能从线粒体转运到胞质，在胞质中再氧化为草酰乙酸，然后PEP羧激酶催化转化为PEP。B正确：FBPase-1的调控方式与PFK-1相反。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "糖异生",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1719917686",
+  "tags": []
+ }
+}

@@ -28,7 +28,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
 
       - name: Install dependencies
         run: npm install
@@ -41,8 +40,33 @@ jobs:
           done
           exit $fail
 
+      - name: 题库分片一致性校验（Issue #10）
+        # 校验 manifest/index/bank 三层分片：SHA-256 完整性、bioID 全局唯一、
+        # 内容寻址反向复算（抗漂移）、index/bank 双向一致、bioid-map 迁移映射完备
+        run: node scripts/verify-bio-shards.js
+
+      - name: 题库重建确定性与一致性（Issue #10）
+        # 重新生成分片，断言内容分片（bank/index/bioid-map）与提交前完全一致：
+        # 1) 证明生成器确定性（同输入→同输出，无隐式随机/顺序依赖）；
+        # 2) 证明已提交数据与生成器逻辑完全同步（数据非陈旧）。
+        # 采用「再生前/后 sha256 哈希比对」而非 git diff：分片文件可能尚未跟踪，
+        # git diff 对未跟踪文件是空操作（此前为真实缺陷），而哈希比对与 git 状态无关。
+        # manifest.json 的 updated_at 是日期元数据，不参与比对；
+        # 其 SHA-256 完整性已由 verify-bio-shards.js 校验。
+        run: |
+          sha256sum data/bank/*.json data/index/*.json data/bioid-map.json > /tmp/shards-before.sha
+          node scripts/generate-bio-shards.js >/dev/null
+          sha256sum data/bank/*.json data/index/*.json data/bioid-map.json > /tmp/shards-after.sha
+          diff /tmp/shards-before.sha /tmp/shards-after.sha \
+            || { echo "题库分片与生成器不一致：请运行 node scripts/generate-bio-shards.js 并提交结果"; exit 1; }
+
       - name: 单元测试（IRT / FSRS）
         run: npm run test:unit
 
       - name: 烟雾测试（Wiki）
         run: npm run test:smoke
+
+      - name: 烟雾测试（bioID 集成 — Issue #10）
+        # 验证 quiz.js 中 bioID 映射、getQuestionBioId 解析、
+        # 错题本兜底 localStorage 写入稳定 bioID 等全流程
+        run: npm run test:bioid

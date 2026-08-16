@@ -1,0 +1,1587 @@
+{
+ "BQ-community_eco-9d1d17926067": {
+  "tags": [
+   "community_eco",
+   "生态学",
+   "物种间关系",
+   "high_school"
+  ],
+  "diff": "league",
+  "len": 44,
+  "src": "community_eco",
+  "year": null,
+  "module": "module_3"
+ },
+ "BQ-community_eco-2df82ff39d64": {
+  "tags": [
+   "community_eco",
+   "生态学",
+   "物种间关系",
+   "high_school"
+  ],
+  "diff": "league",
+  "len": 43,
+  "src": "community_eco",
+  "year": null,
+  "module": "module_3"
+ },
+ "BQ-community_eco-8855d629b3ec": {
+  "tags": [
+   "community_eco",
+   "生态学",
+   "物种间关系",
+   "high_school"
+  ],
+  "diff": "league",
+  "len": 44,
+  "src": "community_eco",
+  "year": null,
+  "module": "module_3"
+ },
+ "BQ-community_eco-22f80cad5dd7": {
+  "tags": [
+   "community_eco",
+   "生态学",
+   "物种间关系",
+   "high_school"
+  ],
+  "diff": "league",
+  "len": 43,
+  "src": "community_eco",
+  "year": null,
+  "module": "module_3"
+ },
+ "BQ-community_eco-82b2d6a65df4": {
+  "tags": [
+   "community_eco",
+   "生态学",
+   "捕食者-被捕食者关系",
+   "high_school"
+  ],
+  "diff": "league",
+  "len": 44,
+  "src": "community_eco",
+  "year": null,
+  "module": "module_3"
+ },
+ "BQ-community_eco-bed2a9988c6f": {
+  "tags": [
+   "community_eco",
+   "module_3",
+   "生态学",
+   "生态位分化",
+   "competition"
+  ],
+  "diff": "league",
+  "len": 36,
+  "src": "community_eco",
+  "year": null,
+  "module": "module_3"
+ },
+ "BQ-community_eco-fc9a99f66bec": {
+  "tags": [
+   "community_eco",
+   "module_3",
+   "生态学",
+   "生态位分化",
+   "competition"
+  ],
+  "diff": "league",
+  "len": 36,
+  "src": "community_eco",
+  "year": null,
+  "module": "module_3"
+ },
+ "BQ-community_eco-e7047049ef76": {
+  "tags": [
+   "community_eco",
+   "选择性必修二",
+   "easy"
+  ],
+  "diff": "basic",
+  "len": 51,
+  "src": "community_eco",
+  "year": null,
+  "module": "module3"
+ },
+ "BQ-community_eco-8f7002d00bce": {
+  "tags": [
+   "community_eco",
+   "选择性必修二",
+   "easy"
+  ],
+  "diff": "basic",
+  "len": 56,
+  "src": "community_eco",
+  "year": null,
+  "module": "module3"
+ },
+ "BQ-community_eco-d47fa8dc2231": {
+  "tags": [
+   "community_eco",
+   "选择性必修二",
+   "medium"
+  ],
+  "diff": "league",
+  "len": 55,
+  "src": "community_eco",
+  "year": null,
+  "module": "module3"
+ },
+ "BQ-community_eco-543cd97c1b77": {
+  "tags": [
+   "community_eco",
+   "选择性必修二",
+   "easy"
+  ],
+  "diff": "basic",
+  "len": 52,
+  "src": "community_eco",
+  "year": null,
+  "module": "module3"
+ },
+ "BQ-community_eco-0c40c8212677": {
+  "tags": [
+   "community_eco",
+   "选择性必修二",
+   "hard"
+  ],
+  "diff": "national",
+  "len": 59,
+  "src": "community_eco",
+  "year": null,
+  "module": "module3"
+ },
+ "BQ-community_eco-2451a7a17206": {
+  "tags": [
+   "community_eco",
+   "选择性必修二",
+   "easy"
+  ],
+  "diff": "basic",
+  "len": 50,
+  "src": "community_eco",
+  "year": null,
+  "module": "module3"
+ },
+ "BQ-community_eco-7d0a6ca83df3": {
+  "tags": [
+   "community_eco",
+   "选择性必修二",
+   "hard"
+  ],
+  "diff": "national",
+  "len": 65,
+  "src": "community_eco",
+  "year": null,
+  "module": "module3"
+ },
+ "BQ-community_eco-251f215a9030": {
+  "tags": [
+   "community_eco",
+   "选择性必修二",
+   "hard"
+  ],
+  "diff": "national",
+  "len": 55,
+  "src": "community_eco",
+  "year": null,
+  "module": "module3"
+ },
+ "BQ-community_eco-31ace5a0f916": {
+  "tags": [
+   "community_eco",
+   "选择性必修二",
+   "hard"
+  ],
+  "diff": "national",
+  "len": 57,
+  "src": "community_eco",
+  "year": null,
+  "module": "module3"
+ },
+ "BQ-community_eco-c3ae4111aa14": {
+  "tags": [
+   "community_eco",
+   "module_3",
+   "hard"
+  ],
+  "diff": "national",
+  "len": 49,
+  "src": "community_eco",
+  "year": null,
+  "module": "module_3"
+ },
+ "BQ-community_eco-0a5c8253ec1f": {
+  "tags": [
+   "community_eco",
+   "module_3",
+   "hard"
+  ],
+  "diff": "national",
+  "len": 54,
+  "src": "community_eco",
+  "year": null,
+  "module": "module_3"
+ },
+ "BQ-community_eco-2dfa2dda7179": {
+  "tags": [
+   "community_eco",
+   "生态学",
+   "捕食者和被捕食者关系",
+   "high_school"
+  ],
+  "diff": "basic",
+  "len": 95,
+  "src": "community_eco",
+  "year": null,
+  "module": "module_3"
+ },
+ "BQ-community_eco-44d9639b2276": {
+  "tags": [
+   "community_eco",
+   "module_3",
+   "easy"
+  ],
+  "diff": "basic",
+  "len": 52,
+  "src": "community_eco",
+  "year": null,
+  "module": "module_3"
+ },
+ "BQ-community_eco-9d0b3f873980": {
+  "tags": [
+   "community_eco",
+   "module_4",
+   "生态学",
+   "种间关系",
+   "高考"
+  ],
+  "diff": "basic",
+  "len": 27,
+  "src": "community_eco",
+  "year": null,
+  "module": "module_4"
+ },
+ "BQ-community_eco-c8af386b452a": {
+  "tags": [
+   "community_eco",
+   "module_4",
+   "生态学",
+   "种群与群落",
+   "high_school"
+  ],
+  "diff": "basic",
+  "len": 14,
+  "src": "community_eco",
+  "year": null,
+  "module": "module_4"
+ },
+ "BQ-community_eco-d112040754b5": {
+  "tags": [
+   "community_eco",
+   "逻辑推理",
+   "实验分析",
+   "群落生态"
+  ],
+  "diff": 3,
+  "len": 107,
+  "src": "community_eco",
+  "year": null,
+  "module": "module_3"
+ },
+ "BQ-community_eco-93493a9fe419": {
+  "tags": [
+   "community_eco",
+   "逻辑推理",
+   "数据解读",
+   "种群动态"
+  ],
+  "diff": 4,
+  "len": 127,
+  "src": "community_eco",
+  "year": null,
+  "module": "module_3"
+ },
+ "BQ-community_eco-44af9f7c90db": {
+  "tags": [
+   "community_eco",
+   "逻辑推理",
+   "实验分析",
+   "生态位"
+  ],
+  "diff": 4,
+  "len": 112,
+  "src": "community_eco",
+  "year": null,
+  "module": "module_3"
+ },
+ "BQ-community_eco-2e1c85bc4124": {
+  "tags": [
+   "community_eco",
+   "module_3",
+   "生态学",
+   "群落生态",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2015/art_1c13e648d84d4e38b94e2dfd5e5b1b0b.html",
+   "2015"
+  ],
+  "diff": "league",
+  "len": 38,
+  "src": "community_eco",
+  "year": 2015,
+  "module": "module_3"
+ },
+ "BQ-community_eco-d0795c524d3d": {
+  "tags": [
+   "community_eco",
+   "module_3",
+   "生态学",
+   "群落生态",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2015/art_1c13e648d84d4e38b94e2dfd5e5b1b0b.html",
+   "2015"
+  ],
+  "diff": "league",
+  "len": 71,
+  "src": "community_eco",
+  "year": 2015,
+  "module": "module_3"
+ },
+ "BQ-community_eco-8062a271edcc": {
+  "tags": [
+   "community_eco",
+   "module_3",
+   "生态学",
+   "群落生态",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2024/art_f5fe44f36762455fb9f8f99b9e0bf2e2.html",
+   "2024"
+  ],
+  "diff": "league",
+  "len": 93,
+  "src": "community_eco",
+  "year": 2024,
+  "module": "module_3"
+ },
+ "BQ-community_eco-ca677c132f1b": {
+  "tags": [
+   "community_eco",
+   "module_3",
+   "生态学",
+   "群落生态",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2024/art_f5fe44f36762455fb9f8f99b9e0bf2e2.html",
+   "2024"
+  ],
+  "diff": "league",
+  "len": 170,
+  "src": "community_eco",
+  "year": 2024,
+  "module": "module_3"
+ },
+ "BQ-community_eco-c82a89da9f0a": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 74,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-3a1b61353ac1": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 74,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-6f0a6c19cc28": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 74,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-9c1b70a74ba2": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 74,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-709f3704b0ca": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 74,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-ce8be24d6de9": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 74,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-29f1ab4eb8df": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 74,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-2c053047cbe7": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 74,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-4f7e4ec4569e": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 74,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-6fe205194506": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 74,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-4a10da9e03d1": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 74,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-7390b2888aa5": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 74,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-8208a70c4938": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 74,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-ed946ad33dae": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 74,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-35c4c109579c": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 74,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-e4e1b7bfc27b": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 74,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-0ab252906db0": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 74,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-b2cd14c91c3f": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 74,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-e6e36bca5702": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 74,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-863abd35643e": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 74,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-8528a2fc77a6": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 74,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-d63488f61113": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 74,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-75806087a64a": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 74,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-67495265f865": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 74,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-dc62072a9c6d": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-41083194e7cf": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-7baea9cdb53b": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-5ea4f264671b": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-ca66a20bce2d": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-599edbf6ed9c": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-1bec4dc79cf5": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-b027f37a06f5": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-b486c8ed78ca": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-7384b01a12bf": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-8e87ba107796": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-486232ac3778": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-c87214396dd7": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-1c336549fb00": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-f245817725ee": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-fef34ddfbf43": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-e961a4a9109c": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-aabda571f1c3": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-930e9cf79c5c": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-817c9abe1b9a": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-2a1c73ebd826": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-8f4af821144e": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-fefeac9bc99f": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-e92f9dc57ca8": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-3a574c051161": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-8f99d60705bb": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-636d26dd9d0c": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-4f7896be84fc": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-4a5674d978f5": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-ed639b1ab5c7": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-b4fa53689dbf": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-9986b7074e50": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-56ec46fa3722": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-06d5b6fa3cf3": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-df9f176d2f26": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-a3c00cd202a6": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-541767433b6c": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-19c6a88b3185": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-97c5eefb11c2": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-e6ce6b2327bf": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-2000b91a87ce": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-42bbcbbeb5cb": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-42c0cb884075": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-a211ea88dd1b": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-4d47e4f5c951": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-c8ffbe11185a": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-589aaf7a8dfc": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-8ae1439447e6": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-746155e81d33": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "hard",
+  "len": 25,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-8fec268a003a": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "hard",
+  "len": 25,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-a8a1e47fc7d5": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "hard",
+  "len": 25,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-3b4a4c445d5a": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "hard",
+  "len": 25,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-8e8c40175fbf": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "hard",
+  "len": 25,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-85fd62df06f9": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "hard",
+  "len": 25,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-daecd7e984e3": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "hard",
+  "len": 25,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-d4337d4d1dc3": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "hard",
+  "len": 25,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-2804c16f1bec": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "hard",
+  "len": 25,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-73c475ca00e3": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "hard",
+  "len": 25,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-4aa4ff3934de": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "hard",
+  "len": 25,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-6b8e6fff1188": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "hard",
+  "len": 25,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-9da426f824bc": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "hard",
+  "len": 25,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-685363332a29": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "hard",
+  "len": 25,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-b86b5a5d7042": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "hard",
+  "len": 25,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-45d542ce066e": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "hard",
+  "len": 25,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-33e1d115dbe9": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "hard",
+  "len": 25,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-ccac9478b02b": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "hard",
+  "len": 25,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-2712ad0bd3d2": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "hard",
+  "len": 25,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-ac48d26b8511": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "hard",
+  "len": 25,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-fc44074ac526": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "hard",
+  "len": 25,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-62e12a554f23": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "hard",
+  "len": 25,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-cb0b343aae34": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "hard",
+  "len": 25,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-99c3b1df4a9a": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "hard",
+  "len": 25,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-44439070c92c": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 18,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-807084e7efee": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 18,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-a06fd0837f65": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 18,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-bdf67006b5a5": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 18,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-89bcb0da1f88": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 18,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-c4761934aa8c": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 18,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-17c13cd584ad": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 18,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-a4f886307a7a": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 18,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-c2fe618cf62e": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 18,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-55ddc63c0f45": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 18,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-a373bb75c9d5": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 18,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-3e103c03df5a": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 18,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-0c6234826fa6": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 18,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-aef643e1efdc": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 18,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-1773dca5a051": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 18,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-3e123622e5c9": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 18,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-6387dbc356b8": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 18,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-13aacceedd80": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 18,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-a97511c19d4c": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 18,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-62d101b64d91": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 18,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-3813cd603e5b": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 18,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-abd0b1842e02": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 18,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-9bd0ec666127": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 18,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-community_eco-72c3f65d84d2": {
+  "tags": [
+   "community_eco"
+  ],
+  "diff": "easy",
+  "len": 18,
+  "src": "community_eco",
+  "year": 2025,
+  "module": 3
+ }
+}

@@ -1,0 +1,1870 @@
+{
+ "BQ-cell_metabolism-0b6f58843606": {
+  "type": "mtf",
+  "question": "关于 ATP 的叙述，错误的是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "ATP 的结构简式可表示为 A—P～P～P",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "ATP 中的高能磷酸键储存的能量多且很不稳定",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "细胞中 ATP 与 ADP 的相互转化处于动态平衡",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "ATP 是细胞生命活动的唯一能量来源",
+    "answer": true
+   }
+  ],
+  "explanation": "ATP 是细胞生命活动的直接能源物质，但不是唯一能源物质（如 GTP、UTP、CTP 也可参与特定过程）。",
+  "subject": "生物化学",
+  "concept": "ATP 与代谢",
+  "difficulty": "basic",
+  "chart": null,
+  "year": null,
+  "module": "module_1",
+  "target": "high_school",
+  "tags": [
+   "module_1",
+   "生物化学",
+   "ATP 与代谢",
+   "高考"
+  ],
+  "oldId": "1108644304"
+ },
+ "BQ-cell_metabolism-5240dee81887": {
+  "type": "mtf",
+  "question": "在研究细胞代谢时，科学家们经常使用下列哪种方法来研究细胞内 ATP 的生成和消耗？",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "测量 ATP 的浓度",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "测量 NADH 的浓度",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "测量 ATPase 的活性",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "测量细胞呼吸速率",
+    "answer": true
+   }
+  ],
+  "explanation": "选项 D 正确。测量细胞呼吸速率可以间接反映细胞内 ATP 的生成和消耗情况。选项 A 不正确，因为测量 ATP 的浓度只能反映 ATP 的静态水平，而不能反映动态变化。选项 B 不正确，因为测量 NADH 的浓度只能反映电子传递链的状态，而不能反映 ATP 的生成和消耗。选项 C 不正确，因为测量 ATPase 的活性只能反映 ATP 的消耗情况，而不能反映 ATP 的生成情况。",
+  "subject": "生物化学",
+  "concept": "细胞代谢",
+  "difficulty": "basic",
+  "chart": null,
+  "year": null,
+  "module": "module_1",
+  "target": "competition",
+  "tags": [
+   "生物化学",
+   "细胞代谢",
+   "competition"
+  ],
+  "oldId": "1583706734"
+ },
+ "BQ-cell_metabolism-cdb2f35c8e4d": {
+  "type": "multi_judge",
+  "question": "研究者在体外重构真核细胞线粒体有氧呼吸体系，加入丙酮酸、ADP、无机磷酸及完整线粒体，并通入氧气。若向该体系特异性加入寡霉素（ATP 合酶抑制剂），下列推断正确的是？",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "线粒体内膜两侧仍会建立质子梯度，但无法合成 ATP。",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "丙酮酸在线粒体基质中被彻底分解为二氧化碳的过程立即停止。",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "氧气作为最终电子受体被消耗，但电子传递链速率显著下降。",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "加入解偶联剂后，体系耗氧速率会进一步降低直至完全停止。",
+    "answer": false
+   }
+  ],
+  "explanation": "A 正确：寡霉素阻断 ATP 合酶，质子无法回流，但电子传递泵出质子仍可建立梯度。B 错误：三羧酸循环（丙酮酸分解）不直接依赖 ATP 合酶，仅在质子梯度过高导致电子传递停滞时间接受影响，不会立即停止。C 正确：氧气仍参与反应，但因质子梯度积累产生 back-pressure，导致电子传递受阻，速率下降。D 错误：解偶联剂消除质子梯度，解除对电子传递的抑制，耗氧速率反而会显著上升而非降低。",
+  "subject": "细胞生物学",
+  "concept": "有氧呼吸机制",
+  "difficulty": "national",
+  "chart": null,
+  "year": null,
+  "module": "",
+  "target": "competition",
+  "tags": [
+   "必修一",
+   "hard"
+  ],
+  "oldId": "666689385"
+ },
+ "BQ-cell_metabolism-a2d7c85cbd85": {
+  "stem": "苍木苷是一种有毒的植物糖苷，能专一地抑制 ADP/ATP 转运载体。当用苍木苷处理呼吸活跃的细胞时，\n下列哪些现象将会发生？（多选）",
+  "options": {
+   "A": "线粒体基质中的ATP/ADP 比值保持不变",
+   "B": "胞质中的ATP/ADP 比值显著下降",
+   "C": "呼吸作用将停止",
+   "D": "电子传递正常进行"
+  },
+  "answer": {
+   "A": false,
+   "B": true,
+   "C": true,
+   "D": false
+  },
+  "analysis": "正确答案：BCE",
+  "knowledge": [
+   "module_1",
+   "细胞生物学"
+  ],
+  "module": "module_1",
+  "difficulty": "league",
+  "target": "competition",
+  "subject": "细胞生物学",
+  "concept": "细胞生物学",
+  "tags": [
+   "module_1",
+   "细胞生物学",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2024/art_f5fe44f36762455fb9f8f99b9e0bf2e2.html",
+   "2024"
+  ],
+  "weight": 1,
+  "fb_good": 0,
+  "fb_bad": 0,
+  "created_at": 1782028590.062659,
+  "source": "https://www.czs.org.cn/swjs/lsstxz/art/2024/art_f5fe44f36762455fb9f8f99b9e0bf2e2.html",
+  "year": 2024,
+  "_analysis_sparse": true,
+  "_review_reason": "解析为 AI 引导提示，待人工补充详细解析",
+  "type": "multi_judge",
+  "question": "苍木苷是一种有毒的植物糖苷，能专一地抑制 ADP/ATP 转运载体。当用苍木苷处理呼吸活跃的细胞时，\n下列哪些现象将会发生？（多选）",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "线粒体基质中的ATP/ADP 比值保持不变",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "胞质中的ATP/ADP 比值显著下降",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "呼吸作用将停止",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "电子传递正常进行",
+    "answer": false
+   }
+  ],
+  "explanation": "正确答案：BCE",
+  "chart": null,
+  "oldId": "crawled_1782028590062_9586"
+ },
+ "BQ-cell_metabolism-a1a976d716ad": {
+  "type": "mtf",
+  "question": "【实验数据】测定5种动物单位体重的标准代谢率(SMR,mlO₂/g·h):小鼠=3.5,大鼠=1.2,兔=0.6,狗=0.3,马=0.15。判断以下推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "代谢率随体重增大而降低,符合Kleiber定律(代谢率∝体重^0.75)",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "小型动物有更高的相对代谢率是因为其表面积/体积比更大,散热更快",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "这组数据反映了异速生长的普遍规律",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "马的心脏代谢率最高的绝对值大于小鼠心脏",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:马的绝对总代谢率远大于小鼠(马体重>>小鼠),但单位体重代谢率更小。Kleiber定律:总代谢率∝M^0.75,单位体重代谢率∝M^-0.25。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "能量代谢",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1337664762",
+  "tags": []
+ },
+ "BQ-cell_metabolism-fb4cf840e528": {
+  "type": "mtf",
+  "question": "【实验数据】测定5种动物单位体重的标准代谢率(SMR,mlO₂/g·h):小鼠=3.5,大鼠=1.2,兔=0.6,狗=0.3,马=0.15。判断以下推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "代谢率随体重增大而降低,符合Kleiber定律(代谢率∝体重^0.75)",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "小型动物有更高的相对代谢率是因为其表面积/体积比更大,散热更快",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "马的心脏代谢率最高的绝对值大于小鼠心脏",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "这组数据反映了异速生长的普遍规律",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:马的绝对总代谢率远大于小鼠(马体重>>小鼠),但单位体重代谢率更小。Kleiber定律:总代谢率∝M^0.75,单位体重代谢率∝M^-0.25。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "能量代谢",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1337664762",
+  "tags": []
+ },
+ "BQ-cell_metabolism-16e590ebe455": {
+  "type": "mtf",
+  "question": "【实验数据】测定5种动物单位体重的标准代谢率(SMR,mlO₂/g·h):小鼠=3.5,大鼠=1.2,兔=0.6,狗=0.3,马=0.15。判断以下推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "代谢率随体重增大而降低,符合Kleiber定律(代谢率∝体重^0.75)",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "这组数据反映了异速生长的普遍规律",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "小型动物有更高的相对代谢率是因为其表面积/体积比更大,散热更快",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "马的心脏代谢率最高的绝对值大于小鼠心脏",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:马的绝对总代谢率远大于小鼠(马体重>>小鼠),但单位体重代谢率更小。Kleiber定律:总代谢率∝M^0.75,单位体重代谢率∝M^-0.25。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "能量代谢",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1337664762",
+  "tags": []
+ },
+ "BQ-cell_metabolism-41446c9affc4": {
+  "type": "mtf",
+  "question": "【实验数据】测定5种动物单位体重的标准代谢率(SMR,mlO₂/g·h):小鼠=3.5,大鼠=1.2,兔=0.6,狗=0.3,马=0.15。判断以下推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "代谢率随体重增大而降低,符合Kleiber定律(代谢率∝体重^0.75)",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "这组数据反映了异速生长的普遍规律",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "马的心脏代谢率最高的绝对值大于小鼠心脏",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "小型动物有更高的相对代谢率是因为其表面积/体积比更大,散热更快",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:马的绝对总代谢率远大于小鼠(马体重>>小鼠),但单位体重代谢率更小。Kleiber定律:总代谢率∝M^0.75,单位体重代谢率∝M^-0.25。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "能量代谢",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1337664762",
+  "tags": []
+ },
+ "BQ-cell_metabolism-d349c3cf6783": {
+  "type": "mtf",
+  "question": "【实验数据】测定5种动物单位体重的标准代谢率(SMR,mlO₂/g·h):小鼠=3.5,大鼠=1.2,兔=0.6,狗=0.3,马=0.15。判断以下推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "代谢率随体重增大而降低,符合Kleiber定律(代谢率∝体重^0.75)",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "马的心脏代谢率最高的绝对值大于小鼠心脏",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "小型动物有更高的相对代谢率是因为其表面积/体积比更大,散热更快",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "这组数据反映了异速生长的普遍规律",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:马的绝对总代谢率远大于小鼠(马体重>>小鼠),但单位体重代谢率更小。Kleiber定律:总代谢率∝M^0.75,单位体重代谢率∝M^-0.25。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "能量代谢",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1337664762",
+  "tags": []
+ },
+ "BQ-cell_metabolism-9429202eb73a": {
+  "type": "mtf",
+  "question": "【实验数据】测定5种动物单位体重的标准代谢率(SMR,mlO₂/g·h):小鼠=3.5,大鼠=1.2,兔=0.6,狗=0.3,马=0.15。判断以下推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "代谢率随体重增大而降低,符合Kleiber定律(代谢率∝体重^0.75)",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "马的心脏代谢率最高的绝对值大于小鼠心脏",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "这组数据反映了异速生长的普遍规律",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "小型动物有更高的相对代谢率是因为其表面积/体积比更大,散热更快",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:马的绝对总代谢率远大于小鼠(马体重>>小鼠),但单位体重代谢率更小。Kleiber定律:总代谢率∝M^0.75,单位体重代谢率∝M^-0.25。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "能量代谢",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1337664762",
+  "tags": []
+ },
+ "BQ-cell_metabolism-b7d3004ee14b": {
+  "type": "mtf",
+  "question": "【实验数据】测定5种动物单位体重的标准代谢率(SMR,mlO₂/g·h):小鼠=3.5,大鼠=1.2,兔=0.6,狗=0.3,马=0.15。判断以下推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "小型动物有更高的相对代谢率是因为其表面积/体积比更大,散热更快",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "代谢率随体重增大而降低,符合Kleiber定律(代谢率∝体重^0.75)",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "这组数据反映了异速生长的普遍规律",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "马的心脏代谢率最高的绝对值大于小鼠心脏",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:马的绝对总代谢率远大于小鼠(马体重>>小鼠),但单位体重代谢率更小。Kleiber定律:总代谢率∝M^0.75,单位体重代谢率∝M^-0.25。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "能量代谢",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1337664762",
+  "tags": []
+ },
+ "BQ-cell_metabolism-b8e76ca2a10b": {
+  "type": "mtf",
+  "question": "【实验数据】测定5种动物单位体重的标准代谢率(SMR,mlO₂/g·h):小鼠=3.5,大鼠=1.2,兔=0.6,狗=0.3,马=0.15。判断以下推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "小型动物有更高的相对代谢率是因为其表面积/体积比更大,散热更快",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "代谢率随体重增大而降低,符合Kleiber定律(代谢率∝体重^0.75)",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "马的心脏代谢率最高的绝对值大于小鼠心脏",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "这组数据反映了异速生长的普遍规律",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:马的绝对总代谢率远大于小鼠(马体重>>小鼠),但单位体重代谢率更小。Kleiber定律:总代谢率∝M^0.75,单位体重代谢率∝M^-0.25。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "能量代谢",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1337664762",
+  "tags": []
+ },
+ "BQ-cell_metabolism-2452b84e1a93": {
+  "type": "mtf",
+  "question": "【实验数据】测定5种动物单位体重的标准代谢率(SMR,mlO₂/g·h):小鼠=3.5,大鼠=1.2,兔=0.6,狗=0.3,马=0.15。判断以下推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "小型动物有更高的相对代谢率是因为其表面积/体积比更大,散热更快",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "这组数据反映了异速生长的普遍规律",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "代谢率随体重增大而降低,符合Kleiber定律(代谢率∝体重^0.75)",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "马的心脏代谢率最高的绝对值大于小鼠心脏",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:马的绝对总代谢率远大于小鼠(马体重>>小鼠),但单位体重代谢率更小。Kleiber定律:总代谢率∝M^0.75,单位体重代谢率∝M^-0.25。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "能量代谢",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1337664762",
+  "tags": []
+ },
+ "BQ-cell_metabolism-7d641b2322c4": {
+  "type": "mtf",
+  "question": "【实验数据】测定5种动物单位体重的标准代谢率(SMR,mlO₂/g·h):小鼠=3.5,大鼠=1.2,兔=0.6,狗=0.3,马=0.15。判断以下推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "小型动物有更高的相对代谢率是因为其表面积/体积比更大,散热更快",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "这组数据反映了异速生长的普遍规律",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "马的心脏代谢率最高的绝对值大于小鼠心脏",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "代谢率随体重增大而降低,符合Kleiber定律(代谢率∝体重^0.75)",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:马的绝对总代谢率远大于小鼠(马体重>>小鼠),但单位体重代谢率更小。Kleiber定律:总代谢率∝M^0.75,单位体重代谢率∝M^-0.25。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "能量代谢",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1337664762",
+  "tags": []
+ },
+ "BQ-cell_metabolism-1ead2810be67": {
+  "type": "mtf",
+  "question": "【实验数据】测定5种动物单位体重的标准代谢率(SMR,mlO₂/g·h):小鼠=3.5,大鼠=1.2,兔=0.6,狗=0.3,马=0.15。判断以下推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "小型动物有更高的相对代谢率是因为其表面积/体积比更大,散热更快",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "马的心脏代谢率最高的绝对值大于小鼠心脏",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "代谢率随体重增大而降低,符合Kleiber定律(代谢率∝体重^0.75)",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "这组数据反映了异速生长的普遍规律",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:马的绝对总代谢率远大于小鼠(马体重>>小鼠),但单位体重代谢率更小。Kleiber定律:总代谢率∝M^0.75,单位体重代谢率∝M^-0.25。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "能量代谢",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1337664762",
+  "tags": []
+ },
+ "BQ-cell_metabolism-298c397bdd56": {
+  "type": "mtf",
+  "question": "【实验数据】测定5种动物单位体重的标准代谢率(SMR,mlO₂/g·h):小鼠=3.5,大鼠=1.2,兔=0.6,狗=0.3,马=0.15。判断以下推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "小型动物有更高的相对代谢率是因为其表面积/体积比更大,散热更快",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "马的心脏代谢率最高的绝对值大于小鼠心脏",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "这组数据反映了异速生长的普遍规律",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "代谢率随体重增大而降低,符合Kleiber定律(代谢率∝体重^0.75)",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:马的绝对总代谢率远大于小鼠(马体重>>小鼠),但单位体重代谢率更小。Kleiber定律:总代谢率∝M^0.75,单位体重代谢率∝M^-0.25。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "能量代谢",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1337664762",
+  "tags": []
+ },
+ "BQ-cell_metabolism-dbf09b17a27b": {
+  "type": "mtf",
+  "question": "【实验数据】测定5种动物单位体重的标准代谢率(SMR,mlO₂/g·h):小鼠=3.5,大鼠=1.2,兔=0.6,狗=0.3,马=0.15。判断以下推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "这组数据反映了异速生长的普遍规律",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "代谢率随体重增大而降低,符合Kleiber定律(代谢率∝体重^0.75)",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "小型动物有更高的相对代谢率是因为其表面积/体积比更大,散热更快",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "马的心脏代谢率最高的绝对值大于小鼠心脏",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:马的绝对总代谢率远大于小鼠(马体重>>小鼠),但单位体重代谢率更小。Kleiber定律:总代谢率∝M^0.75,单位体重代谢率∝M^-0.25。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "能量代谢",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1337664762",
+  "tags": []
+ },
+ "BQ-cell_metabolism-689d1276e9d9": {
+  "type": "mtf",
+  "question": "【实验数据】测定5种动物单位体重的标准代谢率(SMR,mlO₂/g·h):小鼠=3.5,大鼠=1.2,兔=0.6,狗=0.3,马=0.15。判断以下推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "这组数据反映了异速生长的普遍规律",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "代谢率随体重增大而降低,符合Kleiber定律(代谢率∝体重^0.75)",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "马的心脏代谢率最高的绝对值大于小鼠心脏",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "小型动物有更高的相对代谢率是因为其表面积/体积比更大,散热更快",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:马的绝对总代谢率远大于小鼠(马体重>>小鼠),但单位体重代谢率更小。Kleiber定律:总代谢率∝M^0.75,单位体重代谢率∝M^-0.25。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "能量代谢",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1337664762",
+  "tags": []
+ },
+ "BQ-cell_metabolism-63fa74f1bef9": {
+  "type": "mtf",
+  "question": "【实验数据】测定5种动物单位体重的标准代谢率(SMR,mlO₂/g·h):小鼠=3.5,大鼠=1.2,兔=0.6,狗=0.3,马=0.15。判断以下推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "这组数据反映了异速生长的普遍规律",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "小型动物有更高的相对代谢率是因为其表面积/体积比更大,散热更快",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "代谢率随体重增大而降低,符合Kleiber定律(代谢率∝体重^0.75)",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "马的心脏代谢率最高的绝对值大于小鼠心脏",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:马的绝对总代谢率远大于小鼠(马体重>>小鼠),但单位体重代谢率更小。Kleiber定律:总代谢率∝M^0.75,单位体重代谢率∝M^-0.25。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "能量代谢",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1337664762",
+  "tags": []
+ },
+ "BQ-cell_metabolism-accdb504dbf9": {
+  "type": "mtf",
+  "question": "【实验数据】测定5种动物单位体重的标准代谢率(SMR,mlO₂/g·h):小鼠=3.5,大鼠=1.2,兔=0.6,狗=0.3,马=0.15。判断以下推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "这组数据反映了异速生长的普遍规律",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "小型动物有更高的相对代谢率是因为其表面积/体积比更大,散热更快",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "马的心脏代谢率最高的绝对值大于小鼠心脏",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "代谢率随体重增大而降低,符合Kleiber定律(代谢率∝体重^0.75)",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:马的绝对总代谢率远大于小鼠(马体重>>小鼠),但单位体重代谢率更小。Kleiber定律:总代谢率∝M^0.75,单位体重代谢率∝M^-0.25。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "能量代谢",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1337664762",
+  "tags": []
+ },
+ "BQ-cell_metabolism-ca085853be97": {
+  "type": "mtf",
+  "question": "【实验数据】测定5种动物单位体重的标准代谢率(SMR,mlO₂/g·h):小鼠=3.5,大鼠=1.2,兔=0.6,狗=0.3,马=0.15。判断以下推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "这组数据反映了异速生长的普遍规律",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "马的心脏代谢率最高的绝对值大于小鼠心脏",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "代谢率随体重增大而降低,符合Kleiber定律(代谢率∝体重^0.75)",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "小型动物有更高的相对代谢率是因为其表面积/体积比更大,散热更快",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:马的绝对总代谢率远大于小鼠(马体重>>小鼠),但单位体重代谢率更小。Kleiber定律:总代谢率∝M^0.75,单位体重代谢率∝M^-0.25。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "能量代谢",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1337664762",
+  "tags": []
+ },
+ "BQ-cell_metabolism-7df61251cb4a": {
+  "type": "mtf",
+  "question": "【实验数据】测定5种动物单位体重的标准代谢率(SMR,mlO₂/g·h):小鼠=3.5,大鼠=1.2,兔=0.6,狗=0.3,马=0.15。判断以下推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "这组数据反映了异速生长的普遍规律",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "马的心脏代谢率最高的绝对值大于小鼠心脏",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "小型动物有更高的相对代谢率是因为其表面积/体积比更大,散热更快",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "代谢率随体重增大而降低,符合Kleiber定律(代谢率∝体重^0.75)",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:马的绝对总代谢率远大于小鼠(马体重>>小鼠),但单位体重代谢率更小。Kleiber定律:总代谢率∝M^0.75,单位体重代谢率∝M^-0.25。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "能量代谢",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1337664762",
+  "tags": []
+ },
+ "BQ-cell_metabolism-0b71ccfc2576": {
+  "type": "mtf",
+  "question": "【实验数据】测定5种动物单位体重的标准代谢率(SMR,mlO₂/g·h):小鼠=3.5,大鼠=1.2,兔=0.6,狗=0.3,马=0.15。判断以下推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "马的心脏代谢率最高的绝对值大于小鼠心脏",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "代谢率随体重增大而降低,符合Kleiber定律(代谢率∝体重^0.75)",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "小型动物有更高的相对代谢率是因为其表面积/体积比更大,散热更快",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "这组数据反映了异速生长的普遍规律",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:马的绝对总代谢率远大于小鼠(马体重>>小鼠),但单位体重代谢率更小。Kleiber定律:总代谢率∝M^0.75,单位体重代谢率∝M^-0.25。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "能量代谢",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1337664762",
+  "tags": []
+ },
+ "BQ-cell_metabolism-e2353299e2c3": {
+  "type": "mtf",
+  "question": "【实验数据】测定5种动物单位体重的标准代谢率(SMR,mlO₂/g·h):小鼠=3.5,大鼠=1.2,兔=0.6,狗=0.3,马=0.15。判断以下推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "马的心脏代谢率最高的绝对值大于小鼠心脏",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "代谢率随体重增大而降低,符合Kleiber定律(代谢率∝体重^0.75)",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "这组数据反映了异速生长的普遍规律",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "小型动物有更高的相对代谢率是因为其表面积/体积比更大,散热更快",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:马的绝对总代谢率远大于小鼠(马体重>>小鼠),但单位体重代谢率更小。Kleiber定律:总代谢率∝M^0.75,单位体重代谢率∝M^-0.25。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "能量代谢",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1337664762",
+  "tags": []
+ },
+ "BQ-cell_metabolism-ed86e435cc4d": {
+  "type": "mtf",
+  "question": "【实验数据】测定5种动物单位体重的标准代谢率(SMR,mlO₂/g·h):小鼠=3.5,大鼠=1.2,兔=0.6,狗=0.3,马=0.15。判断以下推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "马的心脏代谢率最高的绝对值大于小鼠心脏",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "小型动物有更高的相对代谢率是因为其表面积/体积比更大,散热更快",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "代谢率随体重增大而降低,符合Kleiber定律(代谢率∝体重^0.75)",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "这组数据反映了异速生长的普遍规律",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:马的绝对总代谢率远大于小鼠(马体重>>小鼠),但单位体重代谢率更小。Kleiber定律:总代谢率∝M^0.75,单位体重代谢率∝M^-0.25。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "能量代谢",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1337664762",
+  "tags": []
+ },
+ "BQ-cell_metabolism-cdecebad94a3": {
+  "type": "mtf",
+  "question": "【实验数据】测定5种动物单位体重的标准代谢率(SMR,mlO₂/g·h):小鼠=3.5,大鼠=1.2,兔=0.6,狗=0.3,马=0.15。判断以下推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "马的心脏代谢率最高的绝对值大于小鼠心脏",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "小型动物有更高的相对代谢率是因为其表面积/体积比更大,散热更快",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "这组数据反映了异速生长的普遍规律",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "代谢率随体重增大而降低,符合Kleiber定律(代谢率∝体重^0.75)",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:马的绝对总代谢率远大于小鼠(马体重>>小鼠),但单位体重代谢率更小。Kleiber定律:总代谢率∝M^0.75,单位体重代谢率∝M^-0.25。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "能量代谢",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1337664762",
+  "tags": []
+ },
+ "BQ-cell_metabolism-663c3f9869c7": {
+  "type": "mtf",
+  "question": "【实验数据】测定5种动物单位体重的标准代谢率(SMR,mlO₂/g·h):小鼠=3.5,大鼠=1.2,兔=0.6,狗=0.3,马=0.15。判断以下推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "马的心脏代谢率最高的绝对值大于小鼠心脏",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "这组数据反映了异速生长的普遍规律",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "代谢率随体重增大而降低,符合Kleiber定律(代谢率∝体重^0.75)",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "小型动物有更高的相对代谢率是因为其表面积/体积比更大,散热更快",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:马的绝对总代谢率远大于小鼠(马体重>>小鼠),但单位体重代谢率更小。Kleiber定律:总代谢率∝M^0.75,单位体重代谢率∝M^-0.25。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "能量代谢",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1337664762",
+  "tags": []
+ },
+ "BQ-cell_metabolism-64f603f41a8a": {
+  "type": "mtf",
+  "question": "【实验数据】测定5种动物单位体重的标准代谢率(SMR,mlO₂/g·h):小鼠=3.5,大鼠=1.2,兔=0.6,狗=0.3,马=0.15。判断以下推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "马的心脏代谢率最高的绝对值大于小鼠心脏",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "这组数据反映了异速生长的普遍规律",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "小型动物有更高的相对代谢率是因为其表面积/体积比更大,散热更快",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "代谢率随体重增大而降低,符合Kleiber定律(代谢率∝体重^0.75)",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:马的绝对总代谢率远大于小鼠(马体重>>小鼠),但单位体重代谢率更小。Kleiber定律:总代谢率∝M^0.75,单位体重代谢率∝M^-0.25。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "能量代谢",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1337664762",
+  "tags": []
+ },
+ "BQ-cell_metabolism-7188f691b9f7": {
+  "type": "mtf",
+  "question": "关于代谢途径的区室化，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "尿素循环在线粒体和细胞质两个区室之间分布",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "所有代谢途径都在同一亚细胞区室中完成",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "糖酵解发生在细胞质中，三羧酸循环发生在线粒体基质中",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "脂肪酸合成发生在细胞质中，脂肪酸β-氧化主要在线粒体基质中进行",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确:糖酵解和TCA的定位。D正确:脂肪酸合成与氧化的区室分离。A正确:尿素循环的双区室分布。B错误:代谢的区室化是真核细胞的重要组织原则。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "代谢区室化",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1568428946",
+  "tags": []
+ },
+ "BQ-cell_metabolism-64a440fe0836": {
+  "type": "mtf",
+  "question": "关于代谢途径的区室化，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "尿素循环在线粒体和细胞质两个区室之间分布",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "所有代谢途径都在同一亚细胞区室中完成",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "脂肪酸合成发生在细胞质中，脂肪酸β-氧化主要在线粒体基质中进行",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "糖酵解发生在细胞质中，三羧酸循环发生在线粒体基质中",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确:糖酵解和TCA的定位。C正确:脂肪酸合成与氧化的区室分离。A正确:尿素循环的双区室分布。B错误:代谢的区室化是真核细胞的重要组织原则。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "代谢区室化",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1568428946",
+  "tags": []
+ },
+ "BQ-cell_metabolism-2fd32794ca77": {
+  "type": "mtf",
+  "question": "关于代谢途径的区室化，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "尿素循环在线粒体和细胞质两个区室之间分布",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "糖酵解发生在细胞质中，三羧酸循环发生在线粒体基质中",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "所有代谢途径都在同一亚细胞区室中完成",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "脂肪酸合成发生在细胞质中，脂肪酸β-氧化主要在线粒体基质中进行",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确:糖酵解和TCA的定位。D正确:脂肪酸合成与氧化的区室分离。A正确:尿素循环的双区室分布。C错误:代谢的区室化是真核细胞的重要组织原则。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "代谢区室化",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1568428946",
+  "tags": []
+ },
+ "BQ-cell_metabolism-196d57a27f36": {
+  "type": "mtf",
+  "question": "关于代谢途径的区室化，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "尿素循环在线粒体和细胞质两个区室之间分布",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "糖酵解发生在细胞质中，三羧酸循环发生在线粒体基质中",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "脂肪酸合成发生在细胞质中，脂肪酸β-氧化主要在线粒体基质中进行",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "所有代谢途径都在同一亚细胞区室中完成",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确:糖酵解和TCA的定位。C正确:脂肪酸合成与氧化的区室分离。A正确:尿素循环的双区室分布。D错误:代谢的区室化是真核细胞的重要组织原则。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "代谢区室化",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1568428946",
+  "tags": []
+ },
+ "BQ-cell_metabolism-ca07f3e84fad": {
+  "type": "mtf",
+  "question": "关于代谢途径的区室化，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "尿素循环在线粒体和细胞质两个区室之间分布",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "脂肪酸合成发生在细胞质中，脂肪酸β-氧化主要在线粒体基质中进行",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "所有代谢途径都在同一亚细胞区室中完成",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "糖酵解发生在细胞质中，三羧酸循环发生在线粒体基质中",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确:糖酵解和TCA的定位。B正确:脂肪酸合成与氧化的区室分离。A正确:尿素循环的双区室分布。C错误:代谢的区室化是真核细胞的重要组织原则。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "代谢区室化",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1568428946",
+  "tags": []
+ },
+ "BQ-cell_metabolism-af4c084ecc52": {
+  "type": "mtf",
+  "question": "关于代谢途径的区室化，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "尿素循环在线粒体和细胞质两个区室之间分布",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "脂肪酸合成发生在细胞质中，脂肪酸β-氧化主要在线粒体基质中进行",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "糖酵解发生在细胞质中，三羧酸循环发生在线粒体基质中",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "所有代谢途径都在同一亚细胞区室中完成",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确:糖酵解和TCA的定位。B正确:脂肪酸合成与氧化的区室分离。A正确:尿素循环的双区室分布。D错误:代谢的区室化是真核细胞的重要组织原则。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "代谢区室化",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1568428946",
+  "tags": []
+ },
+ "BQ-cell_metabolism-3a10e3fc376c": {
+  "type": "mtf",
+  "question": "关于代谢途径的区室化，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "所有代谢途径都在同一亚细胞区室中完成",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "尿素循环在线粒体和细胞质两个区室之间分布",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "糖酵解发生在细胞质中，三羧酸循环发生在线粒体基质中",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "脂肪酸合成发生在细胞质中，脂肪酸β-氧化主要在线粒体基质中进行",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确:糖酵解和TCA的定位。D正确:脂肪酸合成与氧化的区室分离。B正确:尿素循环的双区室分布。A错误:代谢的区室化是真核细胞的重要组织原则。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "代谢区室化",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1568428946",
+  "tags": []
+ },
+ "BQ-cell_metabolism-d41c5ac2ff7e": {
+  "type": "mtf",
+  "question": "关于代谢途径的区室化，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "所有代谢途径都在同一亚细胞区室中完成",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "尿素循环在线粒体和细胞质两个区室之间分布",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "脂肪酸合成发生在细胞质中，脂肪酸β-氧化主要在线粒体基质中进行",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "糖酵解发生在细胞质中，三羧酸循环发生在线粒体基质中",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确:糖酵解和TCA的定位。C正确:脂肪酸合成与氧化的区室分离。B正确:尿素循环的双区室分布。A错误:代谢的区室化是真核细胞的重要组织原则。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "代谢区室化",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1568428946",
+  "tags": []
+ },
+ "BQ-cell_metabolism-c20352151c30": {
+  "type": "mtf",
+  "question": "关于代谢途径的区室化，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "所有代谢途径都在同一亚细胞区室中完成",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "糖酵解发生在细胞质中，三羧酸循环发生在线粒体基质中",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "尿素循环在线粒体和细胞质两个区室之间分布",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "脂肪酸合成发生在细胞质中，脂肪酸β-氧化主要在线粒体基质中进行",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确:糖酵解和TCA的定位。D正确:脂肪酸合成与氧化的区室分离。C正确:尿素循环的双区室分布。A错误:代谢的区室化是真核细胞的重要组织原则。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "代谢区室化",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1568428946",
+  "tags": []
+ },
+ "BQ-cell_metabolism-0578adcd9543": {
+  "type": "mtf",
+  "question": "关于代谢途径的区室化，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "所有代谢途径都在同一亚细胞区室中完成",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "糖酵解发生在细胞质中，三羧酸循环发生在线粒体基质中",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "脂肪酸合成发生在细胞质中，脂肪酸β-氧化主要在线粒体基质中进行",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "尿素循环在线粒体和细胞质两个区室之间分布",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确:糖酵解和TCA的定位。C正确:脂肪酸合成与氧化的区室分离。D正确:尿素循环的双区室分布。A错误:代谢的区室化是真核细胞的重要组织原则。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "代谢区室化",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1568428946",
+  "tags": []
+ },
+ "BQ-cell_metabolism-522a38c567fc": {
+  "type": "mtf",
+  "question": "关于代谢途径的区室化，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "所有代谢途径都在同一亚细胞区室中完成",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "脂肪酸合成发生在细胞质中，脂肪酸β-氧化主要在线粒体基质中进行",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "尿素循环在线粒体和细胞质两个区室之间分布",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "糖酵解发生在细胞质中，三羧酸循环发生在线粒体基质中",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确:糖酵解和TCA的定位。B正确:脂肪酸合成与氧化的区室分离。C正确:尿素循环的双区室分布。A错误:代谢的区室化是真核细胞的重要组织原则。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "代谢区室化",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1568428946",
+  "tags": []
+ },
+ "BQ-cell_metabolism-460020a2468f": {
+  "type": "mtf",
+  "question": "关于代谢途径的区室化，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "所有代谢途径都在同一亚细胞区室中完成",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "脂肪酸合成发生在细胞质中，脂肪酸β-氧化主要在线粒体基质中进行",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "糖酵解发生在细胞质中，三羧酸循环发生在线粒体基质中",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "尿素循环在线粒体和细胞质两个区室之间分布",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确:糖酵解和TCA的定位。B正确:脂肪酸合成与氧化的区室分离。D正确:尿素循环的双区室分布。A错误:代谢的区室化是真核细胞的重要组织原则。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "代谢区室化",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1568428946",
+  "tags": []
+ },
+ "BQ-cell_metabolism-f372f8c2b987": {
+  "type": "mtf",
+  "question": "关于代谢途径的区室化，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "糖酵解发生在细胞质中，三羧酸循环发生在线粒体基质中",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "尿素循环在线粒体和细胞质两个区室之间分布",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "所有代谢途径都在同一亚细胞区室中完成",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "脂肪酸合成发生在细胞质中，脂肪酸β-氧化主要在线粒体基质中进行",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确:糖酵解和TCA的定位。D正确:脂肪酸合成与氧化的区室分离。B正确:尿素循环的双区室分布。C错误:代谢的区室化是真核细胞的重要组织原则。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "代谢区室化",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1568428946",
+  "tags": []
+ },
+ "BQ-cell_metabolism-904e8e556a01": {
+  "type": "mtf",
+  "question": "关于代谢途径的区室化，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "糖酵解发生在细胞质中，三羧酸循环发生在线粒体基质中",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "尿素循环在线粒体和细胞质两个区室之间分布",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "脂肪酸合成发生在细胞质中，脂肪酸β-氧化主要在线粒体基质中进行",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "所有代谢途径都在同一亚细胞区室中完成",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确:糖酵解和TCA的定位。C正确:脂肪酸合成与氧化的区室分离。B正确:尿素循环的双区室分布。D错误:代谢的区室化是真核细胞的重要组织原则。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "代谢区室化",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1568428946",
+  "tags": []
+ },
+ "BQ-cell_metabolism-835aad04691e": {
+  "type": "mtf",
+  "question": "关于代谢途径的区室化，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "糖酵解发生在细胞质中，三羧酸循环发生在线粒体基质中",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "所有代谢途径都在同一亚细胞区室中完成",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "尿素循环在线粒体和细胞质两个区室之间分布",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "脂肪酸合成发生在细胞质中，脂肪酸β-氧化主要在线粒体基质中进行",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确:糖酵解和TCA的定位。D正确:脂肪酸合成与氧化的区室分离。C正确:尿素循环的双区室分布。B错误:代谢的区室化是真核细胞的重要组织原则。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "代谢区室化",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1568428946",
+  "tags": []
+ },
+ "BQ-cell_metabolism-af7bd1710689": {
+  "type": "mtf",
+  "question": "关于代谢途径的区室化，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "糖酵解发生在细胞质中，三羧酸循环发生在线粒体基质中",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "所有代谢途径都在同一亚细胞区室中完成",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "脂肪酸合成发生在细胞质中，脂肪酸β-氧化主要在线粒体基质中进行",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "尿素循环在线粒体和细胞质两个区室之间分布",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确:糖酵解和TCA的定位。C正确:脂肪酸合成与氧化的区室分离。D正确:尿素循环的双区室分布。B错误:代谢的区室化是真核细胞的重要组织原则。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "代谢区室化",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1568428946",
+  "tags": []
+ },
+ "BQ-cell_metabolism-7e96162b2c38": {
+  "type": "mtf",
+  "question": "关于代谢途径的区室化，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "糖酵解发生在细胞质中，三羧酸循环发生在线粒体基质中",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "脂肪酸合成发生在细胞质中，脂肪酸β-氧化主要在线粒体基质中进行",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "尿素循环在线粒体和细胞质两个区室之间分布",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "所有代谢途径都在同一亚细胞区室中完成",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确:糖酵解和TCA的定位。B正确:脂肪酸合成与氧化的区室分离。C正确:尿素循环的双区室分布。D错误:代谢的区室化是真核细胞的重要组织原则。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "代谢区室化",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1568428946",
+  "tags": []
+ },
+ "BQ-cell_metabolism-eb7e9ab08424": {
+  "type": "mtf",
+  "question": "关于代谢途径的区室化，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "糖酵解发生在细胞质中，三羧酸循环发生在线粒体基质中",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "脂肪酸合成发生在细胞质中，脂肪酸β-氧化主要在线粒体基质中进行",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "所有代谢途径都在同一亚细胞区室中完成",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "尿素循环在线粒体和细胞质两个区室之间分布",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确:糖酵解和TCA的定位。B正确:脂肪酸合成与氧化的区室分离。D正确:尿素循环的双区室分布。C错误:代谢的区室化是真核细胞的重要组织原则。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "代谢区室化",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1568428946",
+  "tags": []
+ },
+ "BQ-cell_metabolism-f509af4f70c5": {
+  "type": "mtf",
+  "question": "关于代谢途径的区室化，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "脂肪酸合成发生在细胞质中，脂肪酸β-氧化主要在线粒体基质中进行",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "尿素循环在线粒体和细胞质两个区室之间分布",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "所有代谢途径都在同一亚细胞区室中完成",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "糖酵解发生在细胞质中，三羧酸循环发生在线粒体基质中",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确:糖酵解和TCA的定位。A正确:脂肪酸合成与氧化的区室分离。B正确:尿素循环的双区室分布。C错误:代谢的区室化是真核细胞的重要组织原则。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "代谢区室化",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1568428946",
+  "tags": []
+ },
+ "BQ-cell_metabolism-28ac737e7d9b": {
+  "type": "mtf",
+  "question": "关于代谢途径的区室化，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "脂肪酸合成发生在细胞质中，脂肪酸β-氧化主要在线粒体基质中进行",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "尿素循环在线粒体和细胞质两个区室之间分布",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "糖酵解发生在细胞质中，三羧酸循环发生在线粒体基质中",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "所有代谢途径都在同一亚细胞区室中完成",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确:糖酵解和TCA的定位。A正确:脂肪酸合成与氧化的区室分离。B正确:尿素循环的双区室分布。D错误:代谢的区室化是真核细胞的重要组织原则。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "代谢区室化",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1568428946",
+  "tags": []
+ },
+ "BQ-cell_metabolism-654ea5eed35d": {
+  "type": "mtf",
+  "question": "关于代谢途径的区室化，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "脂肪酸合成发生在细胞质中，脂肪酸β-氧化主要在线粒体基质中进行",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "所有代谢途径都在同一亚细胞区室中完成",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "尿素循环在线粒体和细胞质两个区室之间分布",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "糖酵解发生在细胞质中，三羧酸循环发生在线粒体基质中",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确:糖酵解和TCA的定位。A正确:脂肪酸合成与氧化的区室分离。C正确:尿素循环的双区室分布。B错误:代谢的区室化是真核细胞的重要组织原则。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "代谢区室化",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1568428946",
+  "tags": []
+ },
+ "BQ-cell_metabolism-dca65a77d2a0": {
+  "type": "mtf",
+  "question": "关于代谢途径的区室化，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "脂肪酸合成发生在细胞质中，脂肪酸β-氧化主要在线粒体基质中进行",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "所有代谢途径都在同一亚细胞区室中完成",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "糖酵解发生在细胞质中，三羧酸循环发生在线粒体基质中",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "尿素循环在线粒体和细胞质两个区室之间分布",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确:糖酵解和TCA的定位。A正确:脂肪酸合成与氧化的区室分离。D正确:尿素循环的双区室分布。B错误:代谢的区室化是真核细胞的重要组织原则。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "代谢区室化",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1568428946",
+  "tags": []
+ },
+ "BQ-cell_metabolism-f48ea47dff07": {
+  "type": "mtf",
+  "question": "关于代谢途径的区室化，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "脂肪酸合成发生在细胞质中，脂肪酸β-氧化主要在线粒体基质中进行",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "糖酵解发生在细胞质中，三羧酸循环发生在线粒体基质中",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "尿素循环在线粒体和细胞质两个区室之间分布",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "所有代谢途径都在同一亚细胞区室中完成",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确:糖酵解和TCA的定位。A正确:脂肪酸合成与氧化的区室分离。C正确:尿素循环的双区室分布。D错误:代谢的区室化是真核细胞的重要组织原则。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "代谢区室化",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1568428946",
+  "tags": []
+ },
+ "BQ-cell_metabolism-a7609b1f122c": {
+  "type": "mtf",
+  "question": "关于代谢途径的区室化，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "脂肪酸合成发生在细胞质中，脂肪酸β-氧化主要在线粒体基质中进行",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "糖酵解发生在细胞质中，三羧酸循环发生在线粒体基质中",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "所有代谢途径都在同一亚细胞区室中完成",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "尿素循环在线粒体和细胞质两个区室之间分布",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确:糖酵解和TCA的定位。A正确:脂肪酸合成与氧化的区室分离。D正确:尿素循环的双区室分布。C错误:代谢的区室化是真核细胞的重要组织原则。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "代谢区室化",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1568428946",
+  "tags": []
+ }
+}

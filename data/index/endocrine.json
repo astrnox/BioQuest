@@ -1,0 +1,99 @@
+{
+ "BQ-endocrine-76ed94663a05": {
+  "tags": [
+   "endocrine",
+   "module_2",
+   "hard"
+  ],
+  "diff": "national",
+  "len": 44,
+  "src": "endocrine",
+  "year": null,
+  "module": "module_2"
+ },
+ "BQ-endocrine-4de8ee580c32": {
+  "tags": [
+   "endocrine",
+   "module_3",
+   "动物学",
+   "内分泌系统",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2024/art_f5fe44f36762455fb9f8f99b9e0bf2e2.html",
+   "2024"
+  ],
+  "diff": "league",
+  "len": 139,
+  "src": "endocrine",
+  "year": 2024,
+  "module": "module_3"
+ },
+ "BQ-endocrine-cf48f61d36a0": {
+  "tags": [
+   "endocrine",
+   "module_3",
+   "动物学",
+   "内分泌系统",
+   "league",
+   "competition",
+   "http://www.botany.org.cn/swxjs/swxls/202405/t20240521_586284.html",
+   "2024"
+  ],
+  "diff": "league",
+  "len": 21,
+  "src": "endocrine",
+  "year": 2024,
+  "module": "module_3"
+ },
+ "BQ-endocrine-3334aa31d36c": {
+  "tags": [
+   "endocrine",
+   "module_3",
+   "动物学",
+   "内分泌系统",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2024/art_f5fe44f36762455fb9f8f99b9e0bf2e2.html",
+   "2024"
+  ],
+  "diff": "league",
+  "len": 38,
+  "src": "endocrine",
+  "year": 2024,
+  "module": "module_3"
+ },
+ "BQ-endocrine-bd4a2300e22f": {
+  "tags": [
+   "endocrine",
+   "module_3",
+   "动物学",
+   "内分泌系统",
+   "league",
+   "competition",
+   "http://www.botany.org.cn/swxjs/swxls/202605/t20260518_838211.html",
+   "2026"
+  ],
+  "diff": "league",
+  "len": 24,
+  "src": "endocrine",
+  "year": 2026,
+  "module": "module_3"
+ },
+ "BQ-endocrine-d69fe69a198d": {
+  "tags": [
+   "endocrine",
+   "module_3",
+   "动物学",
+   "内分泌系统",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2015/art_1c13e648d84d4e38b94e2dfd5e5b1b0b.html",
+   "2015"
+  ],
+  "diff": "league",
+  "len": 39,
+  "src": "endocrine",
+  "year": 2015,
+  "module": "module_3"
+ }
+}

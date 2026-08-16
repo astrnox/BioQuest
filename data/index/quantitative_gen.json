@@ -1,0 +1,536 @@
+{
+ "BQ-quantitative_gen-a9c187296825": {
+  "tags": [
+   "quantitative_gen",
+   "遗传学",
+   "基因芯片技术",
+   "high_school"
+  ],
+  "diff": "basic",
+  "len": 45,
+  "src": "quantitative_gen",
+  "year": null,
+  "module": "module_4"
+ },
+ "BQ-quantitative_gen-4d52d98b7d31": {
+  "tags": [
+   "quantitative_gen",
+   "遗传学",
+   "分子标记技术",
+   "high_school"
+  ],
+  "diff": "basic",
+  "len": 41,
+  "src": "quantitative_gen",
+  "year": null,
+  "module": "module_4"
+ },
+ "BQ-quantitative_gen-58dac0f7da89": {
+  "tags": [
+   "quantitative_gen",
+   "module_4",
+   "遗传学",
+   "数量遗传",
+   "competition"
+  ],
+  "diff": "national",
+  "len": 91,
+  "src": "quantitative_gen",
+  "year": null,
+  "module": "module_4"
+ },
+ "BQ-quantitative_gen-169da59a8aef": {
+  "tags": [
+   "quantitative_gen",
+   "module_4",
+   "遗传学",
+   "数量遗传",
+   "competition"
+  ],
+  "diff": "national",
+  "len": 91,
+  "src": "quantitative_gen",
+  "year": null,
+  "module": "module_4"
+ },
+ "BQ-quantitative_gen-febb402ff974": {
+  "tags": [
+   "quantitative_gen"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "quantitative_gen",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-quantitative_gen-5eeb960b54b3": {
+  "tags": [
+   "quantitative_gen"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "quantitative_gen",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-quantitative_gen-fc181580f6d4": {
+  "tags": [
+   "quantitative_gen"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "quantitative_gen",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-quantitative_gen-cb64c64ff040": {
+  "tags": [
+   "quantitative_gen"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "quantitative_gen",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-quantitative_gen-122d7a992b6f": {
+  "tags": [
+   "quantitative_gen"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "quantitative_gen",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-quantitative_gen-6f27816720db": {
+  "tags": [
+   "quantitative_gen"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "quantitative_gen",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-quantitative_gen-697091ac9863": {
+  "tags": [
+   "quantitative_gen"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "quantitative_gen",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-quantitative_gen-fb5190b87c98": {
+  "tags": [
+   "quantitative_gen"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "quantitative_gen",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-quantitative_gen-0633797bd9b7": {
+  "tags": [
+   "quantitative_gen"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "quantitative_gen",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-quantitative_gen-bfb6836d474b": {
+  "tags": [
+   "quantitative_gen"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "quantitative_gen",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-quantitative_gen-b27e1c88ffa6": {
+  "tags": [
+   "quantitative_gen"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "quantitative_gen",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-quantitative_gen-bdb1d9bf5606": {
+  "tags": [
+   "quantitative_gen"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "quantitative_gen",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-quantitative_gen-55e7966f5275": {
+  "tags": [
+   "quantitative_gen"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "quantitative_gen",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-quantitative_gen-971d74d3dc8e": {
+  "tags": [
+   "quantitative_gen"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "quantitative_gen",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-quantitative_gen-dc8060fea8a7": {
+  "tags": [
+   "quantitative_gen"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "quantitative_gen",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-quantitative_gen-57b82403e400": {
+  "tags": [
+   "quantitative_gen"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "quantitative_gen",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-quantitative_gen-1834077b598e": {
+  "tags": [
+   "quantitative_gen"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "quantitative_gen",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-quantitative_gen-ea7e6248e6fb": {
+  "tags": [
+   "quantitative_gen"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "quantitative_gen",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-quantitative_gen-5fad1fc476ee": {
+  "tags": [
+   "quantitative_gen"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "quantitative_gen",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-quantitative_gen-d50e9b2bca21": {
+  "tags": [
+   "quantitative_gen"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "quantitative_gen",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-quantitative_gen-567c77850906": {
+  "tags": [
+   "quantitative_gen"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "quantitative_gen",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-quantitative_gen-0f98e2f5d000": {
+  "tags": [
+   "quantitative_gen"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "quantitative_gen",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-quantitative_gen-8af4d55cc20a": {
+  "tags": [
+   "quantitative_gen"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "quantitative_gen",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-quantitative_gen-3bd5bcec64c6": {
+  "tags": [
+   "quantitative_gen"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "quantitative_gen",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-quantitative_gen-fef90518a2b6": {
+  "tags": [
+   "quantitative_gen"
+  ],
+  "diff": "medium",
+  "len": 19,
+  "src": "quantitative_gen",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-quantitative_gen-9eb997ab7d5b": {
+  "tags": [
+   "quantitative_gen"
+  ],
+  "diff": "medium",
+  "len": 19,
+  "src": "quantitative_gen",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-quantitative_gen-1ecc8f300dd6": {
+  "tags": [
+   "quantitative_gen"
+  ],
+  "diff": "medium",
+  "len": 19,
+  "src": "quantitative_gen",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-quantitative_gen-6e1af61f9f5f": {
+  "tags": [
+   "quantitative_gen"
+  ],
+  "diff": "medium",
+  "len": 19,
+  "src": "quantitative_gen",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-quantitative_gen-03cabf41660d": {
+  "tags": [
+   "quantitative_gen"
+  ],
+  "diff": "medium",
+  "len": 19,
+  "src": "quantitative_gen",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-quantitative_gen-7572362a291e": {
+  "tags": [
+   "quantitative_gen"
+  ],
+  "diff": "medium",
+  "len": 19,
+  "src": "quantitative_gen",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-quantitative_gen-0ead2fefca4c": {
+  "tags": [
+   "quantitative_gen"
+  ],
+  "diff": "medium",
+  "len": 19,
+  "src": "quantitative_gen",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-quantitative_gen-27f45e74996f": {
+  "tags": [
+   "quantitative_gen"
+  ],
+  "diff": "medium",
+  "len": 19,
+  "src": "quantitative_gen",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-quantitative_gen-41e20add1651": {
+  "tags": [
+   "quantitative_gen"
+  ],
+  "diff": "medium",
+  "len": 19,
+  "src": "quantitative_gen",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-quantitative_gen-335298908f14": {
+  "tags": [
+   "quantitative_gen"
+  ],
+  "diff": "medium",
+  "len": 19,
+  "src": "quantitative_gen",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-quantitative_gen-bb2514257326": {
+  "tags": [
+   "quantitative_gen"
+  ],
+  "diff": "medium",
+  "len": 19,
+  "src": "quantitative_gen",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-quantitative_gen-907b61230bbc": {
+  "tags": [
+   "quantitative_gen"
+  ],
+  "diff": "medium",
+  "len": 19,
+  "src": "quantitative_gen",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-quantitative_gen-b129ec5d1bd9": {
+  "tags": [
+   "quantitative_gen"
+  ],
+  "diff": "medium",
+  "len": 19,
+  "src": "quantitative_gen",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-quantitative_gen-b5badd734593": {
+  "tags": [
+   "quantitative_gen"
+  ],
+  "diff": "medium",
+  "len": 19,
+  "src": "quantitative_gen",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-quantitative_gen-add50acaa0e3": {
+  "tags": [
+   "quantitative_gen"
+  ],
+  "diff": "medium",
+  "len": 19,
+  "src": "quantitative_gen",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-quantitative_gen-1f27b5b4d961": {
+  "tags": [
+   "quantitative_gen"
+  ],
+  "diff": "medium",
+  "len": 19,
+  "src": "quantitative_gen",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-quantitative_gen-6241fce6d3ce": {
+  "tags": [
+   "quantitative_gen"
+  ],
+  "diff": "medium",
+  "len": 19,
+  "src": "quantitative_gen",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-quantitative_gen-9e2ccfb91068": {
+  "tags": [
+   "quantitative_gen"
+  ],
+  "diff": "medium",
+  "len": 19,
+  "src": "quantitative_gen",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-quantitative_gen-1364acedea35": {
+  "tags": [
+   "quantitative_gen"
+  ],
+  "diff": "medium",
+  "len": 19,
+  "src": "quantitative_gen",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-quantitative_gen-68164765b544": {
+  "tags": [
+   "quantitative_gen"
+  ],
+  "diff": "medium",
+  "len": 19,
+  "src": "quantitative_gen",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-quantitative_gen-3cc460786a46": {
+  "tags": [
+   "quantitative_gen"
+  ],
+  "diff": "medium",
+  "len": 19,
+  "src": "quantitative_gen",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-quantitative_gen-bc599a59bc7b": {
+  "tags": [
+   "quantitative_gen"
+  ],
+  "diff": "medium",
+  "len": 19,
+  "src": "quantitative_gen",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-quantitative_gen-95586a9d5613": {
+  "tags": [
+   "quantitative_gen"
+  ],
+  "diff": "medium",
+  "len": 19,
+  "src": "quantitative_gen",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-quantitative_gen-1e23b9e09a75": {
+  "tags": [
+   "quantitative_gen"
+  ],
+  "diff": "medium",
+  "len": 19,
+  "src": "quantitative_gen",
+  "year": 2025,
+  "module": 4
+ }
+}

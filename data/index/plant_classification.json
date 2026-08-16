@@ -1,0 +1,3906 @@
+{
+ "BQ-plant_classification-bfd0bc0da5a4": {
+  "tags": [
+   "plant_classification",
+   "module_1",
+   "生物学",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2025/art_b153fd076f3f4fe282acfc333c4d4ab6.html",
+   "2025"
+  ],
+  "diff": "league",
+  "len": 27,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": "module_1"
+ },
+ "BQ-plant_classification-ff612445366f": {
+  "tags": [
+   "plant_classification",
+   "module_4",
+   "遗传学",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2025/art_b153fd076f3f4fe282acfc333c4d4ab6.html",
+   "2025"
+  ],
+  "diff": "league",
+  "len": 214,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": "module_4"
+ },
+ "BQ-plant_classification-1a3ee79428c0": {
+  "tags": [
+   "plant_classification",
+   "module_2",
+   "植物学",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2025/art_b153fd076f3f4fe282acfc333c4d4ab6.html",
+   "2025"
+  ],
+  "diff": "league",
+  "len": 79,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": "module_2"
+ },
+ "BQ-plant_classification-cabf802f5b43": {
+  "tags": [
+   "plant_classification",
+   "module_2",
+   "植物学",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2024/art_f5fe44f36762455fb9f8f99b9e0bf2e2.html",
+   "2024"
+  ],
+  "diff": "league",
+  "len": 92,
+  "src": "plant_classification",
+  "year": 2024,
+  "module": "module_2"
+ },
+ "BQ-plant_classification-282602e81936": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 60,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-8c5fe71fc813": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 60,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-afffe5e01417": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 60,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-742cf9b376b5": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 60,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-dabf0b050af5": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 60,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-dbe7afb75d84": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 60,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-7ab7487e726c": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 60,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-86d200d9aee6": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 60,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-b9d1f32333b8": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 60,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-7d1d78402ff7": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 60,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-85c119148ab7": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 60,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-cde86bf53d39": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 60,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-77f29aeec05f": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 60,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-697d7e69c3cc": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 60,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-d8354362b168": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 60,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-fb8aa581a8e3": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 60,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-bcdc02d58358": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 60,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-5d94d2d1d53a": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 60,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-17db507ea5b9": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 60,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-3d0c8ae18d1a": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 60,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-d0fe89f1f1e3": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 60,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-62360bbf4197": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 60,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-9bcc86f14cbe": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 60,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-264763f36581": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 60,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-c9d53a54dc2e": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 61,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-4e543b1dd988": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 61,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-1dbd6a4fd8e8": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 61,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-87a710f8051e": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 61,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-fea9e45e73e1": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 61,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-18fae3eae9c1": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 61,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-b47557ca41b6": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 61,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-1b831a5cf8d3": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 61,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-2e1d1df2bb85": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 61,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-839de8adbac8": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 61,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-0d4cec08fa77": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 61,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-f545610fde83": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 61,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-7c388536c7c6": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 61,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-3c177254234c": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 61,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-238f32e1b41c": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 61,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-6fb55a43fbe9": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 61,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-51728f324027": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 61,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-518c082f4b1a": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 61,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-d005442040b2": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 61,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-5a71ce379ef7": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 61,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-ff6d99accd51": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 61,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-db1cb889ab92": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 61,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-8ab7a790973a": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 61,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-284ee0b01c98": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 61,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-0d6464793748": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 17,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-4a8bdf08eccd": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 17,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-6f7d5b050227": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 17,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-67700568f395": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 17,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-12e4be9ec9e8": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 17,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-358b58dc4734": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 17,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-5271fa7a3930": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 17,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-0117831b574e": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 17,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-8d9951318723": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 17,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-8104096b69a0": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 17,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-db9147289f51": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 17,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-708a94fedd16": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 17,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-c8b74c280cf4": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 17,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-5eaa53c1a767": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 17,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-532529af1e74": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 17,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-6284b6762038": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 17,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-0575c28fc169": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 17,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-89b6116fbb9e": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 17,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-5cdae01568fb": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 17,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-69175b959c18": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 17,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-da6f46de8607": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 17,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-c659946663cb": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 17,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-c2a7492ac755": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 17,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-fea3c2c4c028": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 17,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-554ddf4156c2": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-a428e4de31b0": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-17654d94615f": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-2b107cf6c442": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-90bef4e56afd": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-955e8082ac4a": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-b895d0fd3204": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-8f068a8c82b6": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-cc3c40738266": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-6569ef402378": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-63b6547c7c6b": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-3a276853b31f": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-4d10e4d372ef": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-ae1541d2e6cb": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-f0c4e0863c1d": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-b35b5c205124": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-e6a136bd9f81": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-8088a7c23e7e": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-9dd467d3f6c6": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-3d37a50ec8c7": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-631bd371d5b7": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-cb59ddcad18d": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-2904ae47d8e5": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-abf2baadd025": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-38afbfc332a2": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-ae8b672ec805": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-147d700a0292": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-5bf7630068f7": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-075e28940215": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-1fc6ee2659c4": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-ebda981688fe": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-0f2ca8e9e879": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-41dfbd7f7023": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-61505976a4f4": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-3e8f140726d1": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-cd3899f2afd2": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-480d831e9f41": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-6ef9f8ffdfd0": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-8197c929a8e0": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-fe61602215e1": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-b690a35b2f62": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-bf1710798290": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-ec733ff25aee": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-79c489b94f6b": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-6b5d267afd55": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-26d36207a95b": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-341d6abaf26b": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-f76c8b37488c": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-7ba6843c6b1e": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-35622c5f2382": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-1a04dbed066a": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-dddce0e5cae9": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-695292282937": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-e04a7709a86a": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-746130495373": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-7def45a0107c": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-dee3223c9aba": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-5a19d3d5dc01": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-8256dc071ed7": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-f1c2c538b549": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-6357a164b650": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-ebce8dd704e6": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-ba99b2688bdd": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-6af41131ca7a": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-ac9bdfd5015b": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-3b92f1a270db": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-ba754f6b260c": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-1ccba730359c": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-ec842ac5ab9c": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-3701cea7e501": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-a0e8da9f8057": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-bde4629b7052": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-ba6cd900bb4e": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-62ce168b1481": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-3b633adfa466": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-26b3e52426f4": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-4c41f78d7e80": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-741dabe346ad": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-5a29d8a0e5c8": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-a63c53ed2389": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-b16e6e45f525": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-8794705bbe68": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-a6ffaba8f2a0": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-00e690296927": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-e080d61796b5": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-01ad8bb4641a": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-620093ab0027": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-2029b6c12ded": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-9eacee950f70": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-26c243a75142": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-3c35631384ec": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-f3da1f9a582d": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-e56e4ca97658": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-3bfc24843165": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-e12590d73373": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-c155646d8d26": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-d32d56c7cdee": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-e6864b069778": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-32ec7196195c": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-c13e4969a858": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-e1a642a0b847": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-8cf5012bbc6e": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-bffa1757cbcb": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-8b717d686dec": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-d8531fd8b98c": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-f3f7a0c7efe9": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-ca90221a3b9f": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-260039699849": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-09c44787d284": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-513e6038cebe": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-344abee213c6": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-4b85b3029e6e": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-255dc5189fc0": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-5ce0ca662110": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-8e149be00a87": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-44ca6a93db63": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-6e254f923355": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-30fcd9eebfb1": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-ff7fefd46a08": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-9d0ce24bab65": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-af526923b765": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-acff430f1c12": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-bffc29c89ec1": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-aaf633b59080": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-dba8c7c274f8": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-b249fcc83050": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-6d167ea808c5": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-10860d5d9c53": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-af68ee06add2": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-1411d7204123": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-bf6a83fcb276": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-056fea51fda6": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-151447d84dfa": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-e54337f83a91": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-758ec748383e": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-4948cdb3ef30": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-7f43ad942ce8": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-6ae353b5a0a5": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-53de10eea093": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-75c3a6f766d3": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-f9256928b01c": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-c391bf5e0de8": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-5a2f22b00805": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-10c5b5e061ee": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-3b9cb71b1dde": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-95d9d5c3ad74": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-19e5ca99ca1b": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-da3d37fe77fc": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-a7d0b3e8a71f": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-e6c0a86f9fab": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-bef602bc74ad": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-7293c773cda1": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-f2edbe5f356a": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-492a744c2902": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-8d5889718c85": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-998bc6d3f2da": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-1222e6b46559": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-711efb03f7bc": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-8994c3e0d44f": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-0307a9740d53": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-7d0a6644dcec": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-9ad25687cd39": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-0b53ee28b061": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-834c51f1356d": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-108210914d8a": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-e3fe1796877a": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-222d54c9d63b": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-63d6795acd5e": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-b3e8b8bd11d2": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 22,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-7b28522e3489": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 22,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-fa9c51cc0978": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 22,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-441ec8e8a301": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 22,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-c89b139a6449": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 22,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-0545eaf725d1": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 22,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-785272031797": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 22,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-226ecf42309f": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 22,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-e4aa0d464e34": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 22,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-d9b1625ba8dc": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 22,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-b5d2872e01d6": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 22,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-6d1efd17805d": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 22,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-1e7a5c14aa35": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 22,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-cf5fb6fb3bf5": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 22,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-468737fa3e2b": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 22,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-55368dc210a7": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 22,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-fc84526a3bc4": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 22,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-3f16fc06846c": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 22,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-265ecf172034": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 22,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-c989fc041d45": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 22,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-e73023f681d9": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 22,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-e9e6fbb3c5c4": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 22,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-bff54ce0da47": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 22,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-5d4732b85977": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 22,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-46302181b9cb": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-bd6b6f661c5f": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-9fb5fad01d2f": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-7df65e460eac": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-fb3b8d641fb2": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-f0925e6d37ec": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-03e6ecc5c9e5": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-5d97718c4b86": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-fa35fc2eff8e": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-eb00b462e6f9": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-eb2b53fb1051": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-6d80ef275570": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-3daac2efc05c": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-02ede1bc42a4": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-ab61d291d998": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-b1a889b37b4a": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-e3d0043f9741": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-0f1fed634bc8": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-d4e56f7bb520": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-d7fbd0b840f4": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-266262e0a00f": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-32481d54e9a1": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-d662a5be7674": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-64f2434a919b": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 21,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-8dc307303587": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-50e61298629d": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-acad4c81312f": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-efdd19fa0671": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-83f642ab9a72": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-e2bc13f0dcf5": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-2c00868c292d": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-5750138950bc": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-12338c1125d0": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-0dcfb0873e02": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-b74fcd6aff42": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-b24e28c0d25b": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-20b5951bd6be": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-aca7af389196": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-6c500aa45f21": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-52e7084b2eab": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-dd4e33dbcd5e": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-36d51c17809b": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-445df91102f2": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-4563a282f271": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-9f78dba1b8a3": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-c5998501d8a5": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-c3539c6d3bb9": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-603ea1d2e914": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_classification-c248672c9dd0": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 22,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-977d3392158b": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 22,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-251da4d44725": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 22,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-b8a84b1164c3": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 22,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-2b34e8094ed7": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 22,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-10a8b913485e": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 22,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-19f49966d98a": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 22,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-1b40dc6257d5": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 22,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-343a77034615": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 22,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-327590e790ed": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 22,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-42c244700209": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 22,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-b662e3a62946": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 22,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-1c5d1f35ccb9": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 22,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-52f4ccce7c69": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 22,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-368c5ec22771": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 22,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-eb285a42d6fc": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 22,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-a9cc143117bc": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 22,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-e4d221bdb53d": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 22,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-946540a8ae0a": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 22,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-e476d9a66daa": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 22,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-a9792dde2277": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 22,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-f6f316d00aa2": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 22,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-bdae06792766": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 22,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-6914979a83aa": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 22,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-9cec1b32afec": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-8d3dade50ee7": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-a388ce864d19": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-2682b455b041": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-f60fa747a5b8": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-3a40fb2d6c86": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-0653409e4e77": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-4bd80a14e58e": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-82b4d966bb5b": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-c8b7484c285b": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-60d43b6a5cf8": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-89099fa3b489": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-1b834ab23ed3": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-a67793af2e5d": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-8e762b172a5c": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-6ba204dc13f8": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-97995fba4e16": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-dd6abd124f89": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-ec865c2dfaba": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-ff336d619f25": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-5b344be85eca": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-54d3409c312d": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-3fff92fe1fae": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-06d89dfc383d": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "hard",
+  "len": 23,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-1db7028f6492": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-b8cf89846ba6": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-d6c8c6bb75d2": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-0afe18330d56": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-55f25dec0912": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-d006d08b30f5": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-cb28ac482820": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-87faa86b4ed3": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-8f8af35c8fc5": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-a810124e9100": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-7f734348cebb": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-7c735a9b63e4": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-e78aa38f40aa": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-ecb3bcfb88ed": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-0f5eee9b3a24": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-69a8f162e64c": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-b4e735f8cbf4": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-deba630abc94": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-b6483aaa6da4": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-c40f0298ac16": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-7aca13e63de0": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-e46e05ee707a": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-42a41670eacd": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-plant_classification-6861e5dadab0": {
+  "tags": [
+   "plant_classification"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "plant_classification",
+  "year": 2025,
+  "module": 4
+ }
+}

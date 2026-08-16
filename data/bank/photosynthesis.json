@@ -1,0 +1,3796 @@
+{
+ "BQ-photosynthesis-54bffa4085a3": {
+  "type": "mtf",
+  "question": "在光合作用中，光系统 II 的主要功能是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "将光能转化为 ATP",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "将光能转化为 NADPH",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "将水分子分解为氧气和氢离子",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "将 CO2 转化为有机化合物",
+    "answer": false
+   }
+  ],
+  "explanation": "C 正确，光系统 II 的主要功能是将水分子分解为氧气和氢离子。A 和 B 是光系统 I 的功能。D 是碳固定阶段的功能。",
+  "subject": "生物化学",
+  "concept": "光合作用",
+  "difficulty": "basic",
+  "chart": null,
+  "year": null,
+  "module": "module_1",
+  "target": "high_school",
+  "tags": [
+   "生物化学",
+   "光合作用",
+   "high_school"
+  ],
+  "oldId": "1608005005"
+ },
+ "BQ-photosynthesis-2c0467efbddc": {
+  "type": "mtf",
+  "question": "下列关于光合作用的叙述，错误的是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "光反应在叶绿体类囊体薄膜上进行",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "暗反应（碳反应）在叶绿体基质中进行",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "光合作用释放的氧气全部来自水",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "光合作用的产物葡萄糖中的氧全部来自 CO₂ 和 H₂O",
+    "answer": true
+   }
+  ],
+  "explanation": "通过同位素示踪实验证实，光合产物葡萄糖中的氧主要来自 CO₂，而不是 H₂O；氧气中的氧则全部来自水。",
+  "subject": "植物学",
+  "concept": "光合作用",
+  "difficulty": "basic",
+  "chart": null,
+  "year": null,
+  "module": "module_2",
+  "target": "high_school",
+  "tags": [
+   "module_2",
+   "植物学",
+   "光合作用",
+   "高考"
+  ],
+  "oldId": "1286309647"
+ },
+ "BQ-photosynthesis-47a3045eed8b": {
+  "type": "mtf",
+  "question": "下表为某植物叶片在不同光照强度下测得的净光合速率（CO2 吸收量，单位省略）。下列判断正确的是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "光照强度 600→1000 光合速率大幅提高",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "光照强度为 50 时光合速率等于呼吸速率",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "该植物的光补偿点约为 100",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "该植物不会达到光饱和点",
+    "answer": false
+   }
+  ],
+  "explanation": "净光合速率=0 时光合速率=呼吸速率，此时对应光照强度 50，即光补偿点；600→1000 时净光合不再上升，已达光饱和。",
+  "subject": "植物生理学",
+  "concept": "光合作用速率",
+  "difficulty": "basic",
+  "chart": "| 光照强度 | 净光合速率 |\n|----------|-----------|\n| 0 | -4 |\n| 20 | -2 |\n| 50 | 0 |\n| 100 | 6 |\n| 300 | 14 |\n| 600 | 18 |\n| 1000 | 18 |",
+  "year": null,
+  "module": "module_2",
+  "target": "high_school",
+  "tags": [
+   "module_2",
+   "植物生理学",
+   "光合作用速率",
+   "high_school"
+  ],
+  "oldId": "500516313"
+ },
+ "BQ-photosynthesis-8c110102991b": {
+  "type": "mtf",
+  "question": "下表为某植物叶片在不同光照强度下测得的净光合速率（CO2 吸收量，单位省略）。下列判断正确的是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "该植物的光补偿点约为 100",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "光照强度为 50 时光合速率等于呼吸速率",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "该植物不会达到光饱和点",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "光照强度 600→1000 光合速率大幅提高",
+    "answer": false
+   }
+  ],
+  "explanation": "净光合速率=0 时光合速率=呼吸速率，此时对应光照强度 50，即光补偿点；600→1000 时净光合不再上升，已达光饱和。",
+  "subject": "植物生理学",
+  "concept": "光合作用速率",
+  "difficulty": "basic",
+  "chart": "| 光照强度 | 净光合速率 |\n|----------|-----------|\n| 0 | -4 |\n| 20 | -2 |\n| 50 | 0 |\n| 100 | 6 |\n| 300 | 14 |\n| 600 | 18 |\n| 1000 | 18 |",
+  "year": null,
+  "module": "module_2",
+  "target": "high_school",
+  "tags": [
+   "module_2",
+   "植物生理学",
+   "光合作用速率",
+   "high_school"
+  ],
+  "oldId": "500516313"
+ },
+ "BQ-photosynthesis-4ff60976cc12": {
+  "type": "mtf",
+  "question": "光合作用中光反应的场所是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "光合作用产生的 O2 来自 CO2",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "CO2 的固定需要消耗 ATP",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "暗反应（卡尔文循环）需要光反应提供的 ATP 和 NADPH",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "光反应在叶绿体基质中进行",
+    "answer": false
+   }
+  ],
+  "explanation": "光反应在类囊体薄膜上进行，产生 O2、ATP 和 NADPH；O2 来自水的光解；CO2 固定不消耗 ATP，C3 的还原才消耗。",
+  "subject": "植物生理学",
+  "concept": "光合作用",
+  "difficulty": "basic",
+  "chart": null,
+  "year": null,
+  "module": "module_2",
+  "target": "high_school",
+  "tags": [
+   "module_2",
+   "植物生理学",
+   "光合作用",
+   "high_school"
+  ],
+  "oldId": "1585765730"
+ },
+ "BQ-photosynthesis-00ab8cc560af": {
+  "type": "mtf",
+  "question": "光合作用的光反应与暗反应的关系，下列说法错误的是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "光反应在叶绿体基质中进行",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "暗反应不需要光，在任何条件下都能进行",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "光反应为暗反应提供 ATP 和 NADPH",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "暗反应的产物只有葡萄糖",
+    "answer": false
+   }
+  ],
+  "explanation": "光反应发生在类囊体薄膜，产生 O₂、ATP 和 NADPH；暗反应在叶绿体基质中进行，需要光反应提供的 ATP 和 NADPH 才能持续进行。",
+  "subject": "植物学",
+  "concept": "光合作用",
+  "difficulty": "basic",
+  "chart": null,
+  "year": null,
+  "module": "module_2",
+  "target": "high_school",
+  "tags": [
+   "module_2",
+   "植物学",
+   "光合作用",
+   "high_school"
+  ],
+  "oldId": "609000640"
+ },
+ "BQ-photosynthesis-a721936bbf73": {
+  "type": "mtf",
+  "question": "光合作用过程中，能量转化的大致途径是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "光反应在叶绿体基质中进行",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "暗反应不需要光，在任何条件下都能进行",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "光反应为暗反应提供 ATP 和 NADPH",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "暗反应的产物只有葡萄糖",
+    "answer": false
+   }
+  ],
+  "explanation": "光反应发生在类囊体薄膜，产生 O₂、ATP 和 NADPH；暗反应在叶绿体基质中进行，需要光反应提供的 ATP 和 NADPH 才能持续进行。",
+  "subject": "植物学",
+  "concept": "光合作用",
+  "difficulty": "basic",
+  "chart": null,
+  "year": null,
+  "module": "module_2",
+  "target": "high_school",
+  "tags": [
+   "module_2",
+   "植物学",
+   "光合作用",
+   "high_school"
+  ],
+  "oldId": "1287692797"
+ },
+ "BQ-photosynthesis-da2f1643daf2": {
+  "type": "mtf",
+  "question": "关于光合作用的叙述，正确的是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "光反应在叶绿体基质中进行",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "暗反应不需要光，在任何条件下都能进行",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "光反应为暗反应提供 ATP 和 NADPH",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "暗反应的产物只有葡萄糖",
+    "answer": false
+   }
+  ],
+  "explanation": "光反应发生在类囊体薄膜，产生 O₂、ATP 和 NADPH；暗反应在叶绿体基质中进行，需要光反应提供的 ATP 和 NADPH 才能持续进行。",
+  "subject": "植物学",
+  "concept": "光合作用",
+  "difficulty": "basic",
+  "chart": null,
+  "year": null,
+  "module": "module_2",
+  "target": "high_school",
+  "tags": [
+   "module_2",
+   "植物学",
+   "光合作用",
+   "high_school"
+  ],
+  "oldId": "1394112600"
+ },
+ "BQ-photosynthesis-e1f5fd4fbe6b": {
+  "type": "mtf",
+  "question": "关于光合作用过程的叙述，正确的是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "CO2 的固定需要消耗 ATP",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "暗反应（卡尔文循环）需要光反应提供的 ATP 和 NADPH",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "光反应在叶绿体基质中进行",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "光合作用产生的 O2 来自 CO2",
+    "answer": false
+   }
+  ],
+  "explanation": "光反应在类囊体薄膜上进行，产生 O2、ATP 和 NADPH；O2 来自水的光解；CO2 固定不消耗 ATP，C3 的还原才消耗。",
+  "subject": "植物生理学",
+  "concept": "光合作用",
+  "difficulty": "basic",
+  "chart": null,
+  "year": null,
+  "module": "module_2",
+  "target": "high_school",
+  "tags": [
+   "module_2",
+   "植物生理学",
+   "光合作用",
+   "high_school"
+  ],
+  "oldId": "1730100228"
+ },
+ "BQ-photosynthesis-90cc6665b77b": {
+  "type": "mtf",
+  "question": "关于光合电子传递与光合磷酸化，正确的是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "线性电子传递不产生 ATP",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "PSII 主要负责还原 NADP+",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "PQ 不参与质子转运",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "循环电子传递只产生 ATP 不产生 NADPH",
+    "answer": true
+   }
+  ],
+  "explanation": "循环电子传递仅在 PSI 侧循环，通过质子梯度产生 ATP，但不裂解水也不产生 NADPH；线性电子传递同时产生 ATP 与 NADPH。",
+  "subject": "植物生理学",
+  "concept": "光合磷酸化",
+  "difficulty": "national",
+  "chart": null,
+  "year": null,
+  "module": "module_2",
+  "target": "competition",
+  "tags": [
+   "module_2",
+   "植物生理学",
+   "光合磷酸化",
+   "competition"
+  ],
+  "oldId": "1268566467"
+ },
+ "BQ-photosynthesis-d541f3cd0d09": {
+  "type": "mtf",
+  "question": "关于光合电子传递与光合磷酸化，正确的是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "线性电子传递不产生 ATP",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "循环电子传递只产生 ATP 不产生 NADPH",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "PQ 不参与质子转运",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "PSII 主要负责还原 NADP+",
+    "answer": false
+   }
+  ],
+  "explanation": "循环电子传递仅在 PSI 侧循环，通过质子梯度产生 ATP，但不裂解水也不产生 NADPH；线性电子传递同时产生 ATP 与 NADPH。",
+  "subject": "植物生理学",
+  "concept": "光合磷酸化",
+  "difficulty": "national",
+  "chart": null,
+  "year": null,
+  "module": "module_2",
+  "target": "competition",
+  "tags": [
+   "module_2",
+   "植物生理学",
+   "光合磷酸化",
+   "competition"
+  ],
+  "oldId": "1268566467"
+ },
+ "BQ-photosynthesis-7b08b5a8d09f": {
+  "type": "mtf",
+  "question": "关于叶肉细胞能量代谢的叙述，错误的是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "光合作用只在白天进行，呼吸作用只在夜晚进行",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "光合作用产生的 O2 可被呼吸作用利用",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "光合作用的暗反应不消耗能量",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "光合作用和呼吸作用产生的 ATP 用途相同",
+    "answer": false
+   }
+  ],
+  "explanation": "光合作用产生的 O2 可被呼吸作用消耗；呼吸作用昼夜都进行；光合产生的 ATP 主要用于暗反应；呼吸产生的 ATP 为各种生命活动供能。",
+  "subject": "植物生理学",
+  "concept": "光合与呼吸综合",
+  "difficulty": "basic",
+  "chart": null,
+  "year": null,
+  "module": "module_2",
+  "target": "high_school",
+  "tags": [
+   "module_2",
+   "植物生理学",
+   "光合与呼吸综合",
+   "high_school"
+  ],
+  "oldId": "409719406"
+ },
+ "BQ-photosynthesis-f0ea9c747c0b": {
+  "type": "mtf",
+  "question": "在光合作用的暗反应阶段，RuBP 与 CO2 发生反应的酶是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "RuBP羧化酶",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "RuBP氧化酶",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "RuBP还原酶",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "RuBP合成酶",
+    "answer": false
+   }
+  ],
+  "explanation": "A 为正确，RuBP羧化酶是暗反应阶段RuBP与CO2发生反应的酶。B、C、D 为错误，RuBP氧化酶、RuBP还原酶和RuBP合成酶不是暗反应阶段RuBP与CO2发生反应的酶。",
+  "subject": "植物生理学",
+  "concept": "光合作用",
+  "difficulty": "basic",
+  "chart": null,
+  "year": null,
+  "module": "module_2",
+  "target": "high_school",
+  "tags": [
+   "植物生理学",
+   "光合作用",
+   "high_school"
+  ],
+  "oldId": "938659880"
+ },
+ "BQ-photosynthesis-69311bd72e23": {
+  "type": "mtf",
+  "question": "在植物的光合过程中，光系统II的主要功能是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "将光能转化为 ATP",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "将光能转化为 NADPH",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "将水分子光解为电子和氧气",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "将 CO2 转化为有机化合物",
+    "answer": false
+   }
+  ],
+  "explanation": "光系统II的主要功能是将水分子光解为电子和氧气，这是光合作用的第一个阶段。选项A和B是光系统I的功能，选项D是暗反应的功能。因此，选项C是正确的。",
+  "subject": "植物学",
+  "concept": "光合",
+  "difficulty": "basic",
+  "chart": null,
+  "year": null,
+  "module": "module_2",
+  "target": "high_school",
+  "tags": [
+   "植物学",
+   "光合",
+   "high_school"
+  ],
+  "oldId": "1489101297"
+ },
+ "BQ-photosynthesis-b5e1eadd3df6": {
+  "type": "multi_judge",
+  "question": "将 C4 植物玉米幼苗置于低 CO2、高光强及高温干旱胁迫下，检测其叶肉细胞与维管束鞘细胞的生理指标变化。",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "叶肉细胞中 PEP 羧化酶活性相对较高，以高效固定低浓度 CO2。",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "维管束鞘细胞因缺乏光系统 II，无法进行水的光解产生氧气。",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "高温导致气孔关闭，叶肉细胞内 C3 途径关键酶 Rubisco 活性显著受抑。",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "该条件下玉米光合速率下降幅度显著大于同环境下的 C3 植物小麦。",
+    "answer": false
+   }
+  ],
+  "explanation": "A 正确：C4 植物叶肉细胞的 PEP 羧化酶对 CO2 亲和力极高，能在低 CO2 浓度下有效固定碳。B 正确：C4 植物维管束鞘细胞通常无基粒或缺乏 PSII，不进行水的光解，氧气主要在叶肉细胞产生。C 错误：Rubisco 主要分布于维管束鞘细胞而非叶肉细胞，且 C4 机制通过 CO2 泵维持鞘细胞高 CO2 浓度，减轻了 Rubisco 受抑情况。D 错误：在高温、强光、干旱（低 CO2）条件下，C4 植物因光呼吸极低且水分利用率高，其光合速率下降幅度远小于 C3 植物。",
+  "subject": "植物生理学",
+  "concept": "C4 植物光合机制",
+  "difficulty": "national",
+  "chart": null,
+  "year": null,
+  "module": "module_2",
+  "target": "competition",
+  "tags": [
+   "module_2",
+   "hard"
+  ],
+  "oldId": "360915208"
+ },
+ "BQ-photosynthesis-afd1e9c0de20": {
+  "type": "multi_judge",
+  "question": "将新鲜菠菜叶片置于密闭透明容器中，给予适宜光照。一段时间后，检测容器内气体成分及叶片生理状态的变化。",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "容器内氧气浓度升高，二氧化碳浓度降低。",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "叶片细胞间隙中氧气分压升高会抑制光呼吸。",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "若突然停止光照，短时间内 C3 化合物含量将上升。",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "该过程中叶绿体产生的 ATP 可直接用于细胞分裂。",
+    "answer": false
+   }
+  ],
+  "explanation": "A 正确：适宜光照下光合速率大于呼吸速率，植物吸收 CO2 释放 O2，导致容器内 O2 升、CO2 降。B 错误：高氧环境会促进 Rubisco 的加氧酶活性，从而促进而非抑制光呼吸。C 正确：停光导致光反应停止，ATP 和 NADPH 减少，C3 还原受阻但 CO2 固定仍在进行，故 C3 积累。D 错误：光反应产生的 ATP 仅用于暗反应中 C3 的还原，不能运出叶绿体用于其他生命活动如细胞分裂。",
+  "subject": "植物生理学",
+  "concept": "光合作用过程",
+  "difficulty": "basic",
+  "chart": null,
+  "year": null,
+  "module": "module_2",
+  "target": "competition",
+  "tags": [
+   "module_2",
+   "easy"
+  ],
+  "oldId": "1474922165"
+ },
+ "BQ-photosynthesis-305fcea5daf6": {
+  "type": "multi_judge",
+  "question": "将某 C3 植物从光饱和点移至黑暗环境，短时间内叶绿体基质中 C3 化合物与 C5 化合物的含量变化及原因分析。",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "C3 化合物含量上升，因 CO2 固定仍在进行而还原受阻。",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "C5 化合物含量上升，因光反应停止导致其消耗速率降低。",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "ATP 和 NADPH 含量迅速下降，导致 C3 还原过程无法进行。",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "Rubisco 酶活性因光照消失而立即失活，导致 CO2 固定停止。",
+    "answer": false
+   }
+  ],
+  "explanation": "A 正确：黑暗中光反应停止，ATP 和 NADPH 缺乏，C3 还原受阻，但 CO2 固定短期内仍消耗 C5 生成 C3，故 C3 积累。B 错误：C5 因继续参与 CO2 固定被消耗，且无法通过 C3 还原再生，故含量下降而非上升。C 正确：光反应产物 ATP 和 NADPH 寿命短，无光时迅速耗尽，直接抑制卡尔文循环中 C3 的还原。D 错误：Rubisco 酶活性不直接依赖光照，光照消失不会使其立即失活，CO2 固定短期内仍可进行。",
+  "subject": "植物生理学",
+  "concept": "光合作用暗反应",
+  "difficulty": "league",
+  "chart": null,
+  "year": null,
+  "module": "module_2",
+  "target": "competition",
+  "tags": [
+   "module_2",
+   "medium"
+  ],
+  "oldId": "1436613542"
+ },
+ "BQ-photosynthesis-d4e3f39ac402": {
+  "type": "multi_judge",
+  "question": "将正常生长的 C3 植物突然从光照转入黑暗，并维持适宜温度。短时间内，叶绿体基质中 RuBP 含量下降，而 3-磷酸甘油酸（3-PGA）含量上升。",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "黑暗中光反应停止，导致 ATP 和 NADPH 合成中断，限制了 3-PGA 的还原。",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "RuBP 含量下降是因为暗反应中 CO2 的固定过程在黑暗条件下立即完全停止。",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "3-PGA 的积累是由于其生成速率暂时大于消耗速率，导致代谢库充盈。",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "若同时提高环境 CO2 浓度，可完全抵消黑暗对 RuBP 再生的抑制作用。",
+    "answer": false
+   }
+  ],
+  "explanation": "A 正确：黑暗导致光反应停止，ATP 和 NADPH 匮乏，3-PGA 还原受阻。B 错误：CO2 固定由 Rubisco 催化，不需光，短时间内仍在进行，RuBP 下降是因再生受阻而非固定停止。C 正确：因还原受阻（消耗少）而固定仍在进行（生成多），导致 3-PGA 积累。D 错误：RuBP 再生依赖光反应产物 ATP 和 NADPH，提高 CO2 无法解决能量和还原力缺失问题。",
+  "subject": "植物生理学",
+  "concept": "光合作用暗反应调控",
+  "difficulty": "league",
+  "chart": null,
+  "year": null,
+  "module": "module_2",
+  "target": "competition",
+  "tags": [
+   "module_2",
+   "medium"
+  ],
+  "oldId": "245066610"
+ },
+ "BQ-photosynthesis-71cb1d37d585": {
+  "type": "multi_judge",
+  "question": "将正常生长的玉米幼苗移至缺镁培养液中培养一段时间，观察叶片颜色变化并测定光合色素含量及光合速率。",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "老叶先出现失绿黄化现象，因为镁在植物体内可移动。",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "缺镁直接导致叶绿素 b 无法合成，但对叶绿素 a 合成无影响。",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "缺镁会导致光反应产生的 ATP 和 NADPH 减少，进而抑制暗反应。",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "由于类胡萝卜素含量增加，缺镁叶片最终会呈现鲜艳的橙黄色。",
+    "answer": false
+   }
+  ],
+  "explanation": "A 正确：镁是可再利用元素，缺镁时老叶中的镁会转移至新叶，故老叶先黄化。B 错误：镁是叶绿素分子的中心原子，缺镁会同时阻碍叶绿素 a 和 b 的合成，并非只影响 b。C 正确：叶绿素减少导致光能吸收转化效率降低，光反应产物 ATP 和 NADPH 生成减少，从而限制暗反应中 C3 的还原。D 错误：缺镁时叶绿素分解，类胡萝卜素相对比例上升使叶片显黄色，但类胡萝卜素总量通常不会显著增加，且‘鲜艳橙黄’描述不准确，多为淡黄或黄白。",
+  "subject": "植物生理学",
+  "concept": "矿质营养与光合作用",
+  "difficulty": "league",
+  "chart": null,
+  "year": null,
+  "module": "module_2",
+  "target": "competition",
+  "tags": [
+   "module_2",
+   "medium"
+  ],
+  "oldId": "1056452318"
+ },
+ "BQ-photosynthesis-197ea15f9c8b": {
+  "type": "multi_judge",
+  "question": "将水生植物黑藻置于低 CO2 环境并强光照射，检测其光合速率及细胞内代谢物变化。",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "叶绿体基质中 RuBP 含量暂时上升，3-PGA 含量下降。",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "类囊体腔内 pH 值显著升高，驱动 ATP 合酶高效运转。",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "光反应产生的 NADPH 因暗反应受阻而在基质中积累。",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "低 CO2 直接抑制光系统 II 的水裂解酶活性导致放氧停止。",
+    "answer": false
+   }
+  ],
+  "explanation": "A 正确：CO2 不足导致 RuBP 羧化受阻，消耗减少而积累，3-PGA 生成减少。B 错误：强光下电子传递活跃，H+ 泵入类囊体腔，腔内 pH 应降低而非升高。C 正确：暗反应碳固定减慢，NADPH 消耗减少，导致其在基质中相对积累。D 错误：水裂解主要受光照和电子受体影响，低 CO2 不直接抑制放氧，初期放氧仍可进行。",
+  "subject": "植物生理学",
+  "concept": "光合作用调控机制",
+  "difficulty": "national",
+  "chart": null,
+  "year": null,
+  "module": "module_2",
+  "target": "competition",
+  "tags": [
+   "module_2",
+   "hard"
+  ],
+  "oldId": "188493383"
+ },
+ "BQ-photosynthesis-0b89a75b0e52": {
+  "type": "multi_judge",
+  "question": "将生长状况一致的某植物幼苗置于密闭透明容器中，给予适宜光照。一段时间后，检测到容器内 CO2 浓度显著下降，O2 浓度上升。",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "该过程中植物叶肉细胞叶绿体类囊体膜上发生了水的光解。",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "容器内 CO2 浓度的降低直接证明了植物只进行光合作用未进行呼吸作用。",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "若突然停止光照，短时间内叶绿体基质中 C3 化合物的含量将升高。",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "该实验条件下，植物根尖细胞是产生氧气的主要场所。",
+    "answer": false
+   }
+  ],
+  "explanation": "A 正确：光反应阶段在类囊体膜上进行，包含水的光解产生 O2 和 H+。B 错误：CO2 下降仅说明光合速率大于呼吸速率，植物时刻都在进行呼吸作用。C 正确：停光导致 ATP 和 NADPH 减少，C3 还原受阻但生成仍在继续，故 C3 积累。D 错误：根尖细胞无叶绿体，不能进行光合作用产生氧气，氧气主要来自叶肉细胞。",
+  "subject": "植物生理学",
+  "concept": "光合作用过程",
+  "difficulty": "basic",
+  "chart": null,
+  "year": null,
+  "module": "module_2",
+  "target": "competition",
+  "tags": [
+   "module_2",
+   "easy"
+  ],
+  "oldId": "872325493"
+ },
+ "BQ-photosynthesis-a987968490aa": {
+  "type": "multi_judge",
+  "question": "将离体叶绿体置于含 DCIP（氧化态蓝色，还原态无色）的缓冲液中光照，DCIP 褪色且检测到氧气释放。",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "该实验现象证明光反应中水被光解产生了电子和氧气。",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "DCIP 在此实验中模拟了 NADP+ 的作用，接受电子后被氧化。",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "若加入解偶联剂破坏类囊体膜质子梯度，ATP 合成将受阻。",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "该体系在无光照条件下，DCIP 仍能迅速褪色并释放氧气。",
+    "answer": false
+   }
+  ],
+  "explanation": "A 正确：光照下 DCIP 褪色说明接受了电子，同时释放氧气，证明水的光解提供了电子和氧气。B 错误：DCIP 作为人工电子受体，模拟 NADP+ 接受电子，但接受电子后是被还原（褪色），而非被氧化。C 正确：光合磷酸化依赖类囊体膜两侧的质子梯度，解偶联剂消除梯度会抑制 ATP 合成。D 错误：光反应必须有光能驱动，无光条件下水不能光解，电子传递链停止，DCIP 不会褪色且无氧气释放。",
+  "subject": "植物生理学",
+  "concept": "光合作用光反应",
+  "difficulty": "league",
+  "chart": null,
+  "year": null,
+  "module": "module_2",
+  "target": "competition",
+  "tags": [
+   "module_2",
+   "medium"
+  ],
+  "oldId": "2040108988"
+ },
+ "BQ-photosynthesis-051d01d40272": {
+  "type": "multi_judge",
+  "question": "将离体叶绿体置于含 DCPIP 的缓冲液中光照，DCPIP 被还原褪色。若加入解偶联剂尼日利亚菌素，下列推断正确的是？",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "电子传递链功能正常，DCPIP 仍能接受电子而褪色",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "ATP 合成效率因质子梯度增强而显著提高",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "水的光解过程不受影响，持续释放氧气",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "NADPH 的生成量会因解偶联作用而大幅增加",
+    "answer": false
+   }
+  ],
+  "explanation": "尼日利亚菌素作为 K+/H+ 逆向转运体，消除类囊体膜内外质子梯度。A 正确：电子传递依赖氧化还原电势差，不直接依赖质子梯度，故 DCPIP 仍可被还原。B 错误：解偶联剂破坏质子梯度，导致 ATP 合酶无法工作，ATP 合成停止而非提高。C 正确：水的光解由光系统 II 反应中心驱动，与质子梯度无直接因果关系。D 错误：电子传递速率虽可能因解除反馈抑制而加快，但 NADPH 生成受限于电子受体和酶活性，不会‘大幅’增加，且题干未暗示此效应。",
+  "subject": "植物生理学",
+  "concept": "光合磷酸化解偶联",
+  "difficulty": "league",
+  "chart": null,
+  "year": null,
+  "module": "module_2",
+  "target": "competition",
+  "tags": [
+   "module_2",
+   "medium"
+  ],
+  "oldId": "1206247687"
+ },
+ "BQ-photosynthesis-b241cee873ff": {
+  "type": "multi_judge",
+  "question": "将离体叶绿体置于含 DCPIP 的缓冲液中光照，发现 DCPIP 褪色且无氧气产生。若加入解偶联剂，下列推断正确的是？",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "DCPIP 褪色说明光系统 II 发生了水的光解并释放电子。",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "无氧气产生表明该实验体系阻断了水作为电子供体的途径。",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "加入解偶联剂会显著抑制 DCPIP 的还原速率导致褪色变慢。",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "该体系仍能进行循环光合磷酸化并合成大量 ATP 供暗反应。",
+    "answer": false
+   }
+  ],
+  "explanation": "A 错：DCPIP 褪色仅证明有电子传递，因无氧气产生，电子并非来自水的光解，可能来自外源供体或 PS I 循环。B 对：氧气是水光解产物，无氧气说明水未被裂解，电子供体被阻断或替换。C 错：解偶联剂消除质子梯度，解除对电子传递的限制，通常会加快而非抑制电子传递速率。D 错：DCPIP 作为人工受体截获了电子，阻断了循环电子流，且非循环光合磷酸化因无水光解无法进行，故不能合成 ATP。",
+  "subject": "植物生理学",
+  "concept": "光合电子传递",
+  "difficulty": "league",
+  "chart": null,
+  "year": null,
+  "module": "module_2",
+  "target": "competition",
+  "tags": [
+   "module_2",
+   "medium"
+  ],
+  "oldId": "1049328042"
+ },
+ "BQ-photosynthesis-cba98710b549": {
+  "type": "multi_judge",
+  "question": "将离体叶绿体置于含 DCPIP（人工电子受体）的缓冲液中光照，发现 DCPIP 褪色且无氧气产生；若加入铁氧还蛋白和 NADP+，则检测到 NADPH 生成。",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "DCPIP 褪色证明光反应中水的光解被完全抑制。",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "该实验体系证明了希尔反应中电子传递可独立于碳同化。",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "加入铁氧还蛋白和 NADP+后，体系恢复了非循环光合磷酸化能力。",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "DCPIP 作为电子受体时，其还原电位低于天然受体 NADP+。",
+    "answer": true
+   }
+  ],
+  "explanation": "A 错：DCPIP 褪色说明其接受了电子，水的光解仍在进行并提供电子，只是电子传给了 DCPIP 而非 NADP+，且题目称无氧气产生描述有误或指特定条件，但核心错在‘水光解被抑制’。B 对：希尔反应本质即离体叶绿体在光下分解水并还原电子受体，无需碳反应参与。C 对：补充铁氧还蛋白和 NADP+重建了从 PSII 到 NADP+的完整电子链，伴随 ATP 生成，即非循环光合磷酸化。D 错：DCPIP 能竞争性接受电子，说明其氧化态更容易被还原，即其氧化还原电位高于（更正：更易接受电子意味着电位更正/高，或者说作为人工受体它拦截了电子，通常 DCPIP 电位介于 PQ 和 PC 之间或特定设计，但关键误解在于学生常混淆电位高低与电子流向，此处 DCPIP 替代 NADP+是因为它在特定步骤拦截电子，实际上 NADP+/NADPH 电位很负，DCPIP 电位相对较高，故电子自发流向 DCPIP，陈述说 DCPIP 电位低于是错误的，应该是高于 NADP+才容易抢电子或者在特定位置拦截）。注：DCPIP 标准电位约 +0.22V，NADP+约 -0.32V，电子从低电位流向高电位（势能角度），DCPIP 电位远高于 NADP+，故易被还原。",
+  "subject": "植物生理学",
+  "concept": "光反应与希尔反应",
+  "difficulty": "league",
+  "chart": null,
+  "year": null,
+  "module": "module_2",
+  "target": "competition",
+  "tags": [
+   "module_2",
+   "medium"
+  ],
+  "oldId": "263328032"
+ },
+ "BQ-photosynthesis-53292a4c7630": {
+  "type": "multi_judge",
+  "question": "将离体叶绿体置于含 DCPIP（人工电子受体）的缓冲液中光照，发现 DCPIP 褪色且无氧气产生。若加入解偶联剂，下列推断正确的是？",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "DCPIP 褪色证明光系统 II 发生了水的光解并释放了电子。",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "无氧气产生是因为 DCPIP 在光系统 I 处接受了电子，阻断了向氧的传递。",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "加入解偶联剂会加速 DCPIP 的褪色速率，因为消除了质子梯度对电子传递的反馈抑制。",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "该体系中 ATP 的合成量会因解偶联剂的加入而显著增加，促进卡尔文循环。",
+    "answer": false
+   }
+  ],
+  "explanation": "A 错：DCPIP 通常替代光系统 I 末端的铁氧还蛋白或介于 PSII 与 PSI 之间接受电子，其褪色仅证明有电子流出，若未检测到氧气，说明水的光解可能被抑制或电子来源非水（如使用了人工供氢者），或者题目情境暗示电子传递链被截断在产氧步骤之前。更准确地说，若 DCPIP 作为希尔反应试剂，它接受来自 PSII 的电子，此时应有氧气产生；若题目设定无氧气，则暗示实验条件特殊（如使用了非水电子供体或 PSII 受损），故不能直接推断发生了水的光解。B 错：DCPIP 主要作为光系统 II 之后、光系统 I 之前的人工电子受体（希尔反应），它接受电子后褪色，此时电子不再传递给 NADP+，更不涉及向氧的传递阻断，无氧气产生是因为离体叶绿体悬浮液中若缺乏完整电子供体或特定条件，或者 DCPIP 直接截获了电子导致后续反应改变，但核心错误在于 DCPIP 的作用位点描述。C 对：电子传递速率受跨膜质子梯度（ΔpH）的反馈调节（呼吸控制类似机制）。加入解偶联剂破坏质子梯度，消除了这种限制，电子传递链全速运转，从而加速 DCPIP 的还原（褪色）。D 错：解偶联剂使质子不通过 ATP 合酶直接回流，破坏了质子动力势，导致光合磷酸化停止，ATP 合成量急剧下降甚至为零，无法促进依赖 ATP 的卡尔文循环。",
+  "subject": "植物生理学",
+  "concept": "光合电子传递与光合磷酸化",
+  "difficulty": "national",
+  "chart": null,
+  "year": null,
+  "module": "module_2",
+  "target": "competition",
+  "tags": [
+   "module_2",
+   "hard"
+  ],
+  "oldId": "380457125"
+ },
+ "BQ-photosynthesis-e62d3d088948": {
+  "type": "multi_judge",
+  "question": "将离体叶绿体置于含 DCPIP（蓝色，还原后无色）的缓冲液中光照。若添加解偶联剂 CCCP，观察气泡产生及溶液褪色情况。",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "CCCP 会抑制 ATP 合成，但光反应电子传递仍可进行。",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "加入 CCCP 后，DCPIP 褪色速度将显著快于未加组。",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "该实验现象证明电子传递与磷酸化过程可被解偶联。",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "CCCP 通过破坏类囊体膜结构导致光反应完全停止。",
+    "answer": false
+   }
+  ],
+  "explanation": "A 正确：CCCP 是质子载体，消除跨膜质子梯度从而抑制 ATP 合成，但不直接阻断电子传递链。B 错误：因缺乏质子梯度驱动，电子传递受反馈抑制或速率下降，DCPIP 褪色速度通常减慢而非加快。C 正确：实验显示在 ATP 合成受阻时电子传递（表现为 DCPIP 褪色）仍能发生，证实两者可解偶联。D 错误：CCCP 作用是消除质子梯度而非物理破坏膜结构，且光反应（电子传递）并未完全停止。",
+  "subject": "植物生理学",
+  "concept": "光合磷酸化解偶联",
+  "difficulty": "league",
+  "chart": null,
+  "year": null,
+  "module": "module_2",
+  "target": "competition",
+  "tags": [
+   "module_2",
+   "medium"
+  ],
+  "oldId": "1825776737"
+ },
+ "BQ-photosynthesis-2437c168d4fa": {
+  "type": "multi_judge",
+  "question": "将离体叶绿体置于含 DCPIP（蓝色氧化剂）的缓冲液中光照，溶液褪色且无氧气释放；若加入铁氧还蛋白和 NADP+，则产生氧气。",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "DCPIP 替代了光系统 II 中的最终电子受体 NADP+。",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "溶液褪色证明光反应中发生了水的光解和电子传递。",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "未加铁氧还蛋白时，电子传递链在质体醌处被阻断。",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "加入 NADP+后产生氧气，表明完整电子链恢复了放氧复合体功能。",
+    "answer": true
+   }
+  ],
+  "explanation": "A 错：DCPIP 替代的是铁氧还蛋白或 NADP+作为人工电子受体，而非 PSII 的受体（PSII 受体是质体醌）。B 对：DCPIP 被还原褪色，说明电子从水经 PSII 传递给了 DCPIP，证明发生了水的光解。C 错：DCPIP 可直接接受来自 PSII 后（如细胞色素 b6f 或 PC 处）的电子，电子链未在质体醌处完全阻断，只是未传至 NADP+。D 对：加入天然电子载体后，电子能正常传至 NADP+，解除对 PSII 的反馈抑制或恢复完整路径，使放氧复合体持续工作产生氧气。",
+  "subject": "植物生理学",
+  "concept": "光合作用电子传递",
+  "difficulty": "league",
+  "chart": null,
+  "year": null,
+  "module": "module_2",
+  "target": "competition",
+  "tags": [
+   "module_2",
+   "medium"
+  ],
+  "oldId": "662708648"
+ },
+ "BQ-photosynthesis-95b9f189b8f7": {
+  "type": "multi_judge",
+  "question": "将豌豆幼苗置于含放射性 CO2 的密闭容器中光照。追踪发现放射性首先出现在叶绿体基质，随后在维管束鞘细胞的淀粉粒中大量积累。",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "该植物属于 C4 植物，其 CO2 固定过程涉及两种不同细胞类型的协作。",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "放射性碳最初被固定的产物是三碳化合物（3-磷酸甘油酸）。",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "维管束鞘细胞中淀粉粒的积累表明卡尔文循环主要在此处进行。",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "若突然停止光照，叶绿体基质中 RuBP 的含量会立即显著上升。",
+    "answer": false
+   }
+  ],
+  "explanation": "A 正确：题干描述放射性碳先在叶肉细胞固定后转移至维管束鞘细胞积累淀粉，这是典型的 C4 植物花环结构特征。B 错误：C4 植物 CO2 受体是 PEP，最初产物是四碳化合物（草酰乙酸），而非三碳化合物。C 正确：C4 植物中，CO2 的浓缩和卡尔文循环发生在维管束鞘细胞，故淀粉在此合成。D 错误：停止光照导致 ATP 和 NADPH 供应中断，3-PGA 无法还原，RuBP 再生受阻，且 RuBP 继续被消耗固定 CO2，故其含量会下降而非上升。",
+  "subject": "植物生理学",
+  "concept": "C4 植物光合途径",
+  "difficulty": "national",
+  "chart": null,
+  "year": null,
+  "module": "module_2",
+  "target": "competition",
+  "tags": [
+   "module_2",
+   "hard"
+  ],
+  "oldId": "398518040"
+ },
+ "BQ-photosynthesis-677a6e727137": {
+  "type": "multi_judge",
+  "question": "某 C4 植物在炎热干旱条件下气孔部分关闭，叶肉细胞中 PEP 羧化酶活性维持高位，而维管束鞘细胞内 Rubisco 周围环境 CO2 浓度显著升高。",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "该机制通过空间分离浓缩 CO2，有效抑制了 Rubisco 的加氧酶活性。",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "气孔关闭导致叶肉细胞间隙 CO2 浓度降低，直接限制了 PEP 羧化酶的催化效率。",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "维管束鞘细胞中较高的 CO2/O2 比值，显著减少了光呼吸造成的能量损耗。",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "在此条件下，C4 途径因额外消耗 ATP 导致其净光合速率必然低于 C3 植物。",
+    "answer": false
+   }
+  ],
+  "explanation": "A 正确：C4 植物通过叶肉细胞固定 CO2 形成四碳化合物，运输至维管束鞘细胞释放高浓度 CO2，抑制 Rubisco 加氧活性。B 错误：PEP 羧化酶对 CO2 亲和力极高，即使低浓度 CO2 也能高效固定，不受气孔关闭的显著限制。C 正确：高 CO2/O2 比值抑制光呼吸，提高了光合效率，这是 C4 植物适应高温干旱的关键。D 错误：虽然 C4 途径多消耗 ATP，但在高温干旱导致光呼吸增强时，C3 植物损耗更大，C4 植物净光合速率通常高于 C3 植物。",
+  "subject": "植物生理学",
+  "concept": "C4 植物光合机制",
+  "difficulty": "national",
+  "chart": null,
+  "year": null,
+  "module": "module_2",
+  "target": "competition",
+  "tags": [
+   "module_2",
+   "hard"
+  ],
+  "oldId": "1915676914"
+ },
+ "BQ-photosynthesis-265aa9be2183": {
+  "type": "mtf",
+  "question": "植物的光合作用过程中，光能被转换为？",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "化学能",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "热能",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "电能",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "机械能",
+    "answer": false
+   }
+  ],
+  "explanation": "植物的光合作用过程中，光能被转换为化学能，储存在葡萄糖分子中。选项B热能是光能转换的副产品，选项C电能不是光合作用的直接产物，选项D机械能与光合作用无关。因此，选项A是正确答案。",
+  "subject": "植物生理学",
+  "concept": "光合作用",
+  "difficulty": "basic",
+  "chart": null,
+  "year": null,
+  "module": "module_2",
+  "target": "high_school",
+  "tags": [
+   "植物生理学",
+   "光合作用",
+   "high_school"
+  ],
+  "oldId": "917822969"
+ },
+ "BQ-photosynthesis-19a5cf6cc41d": {
+  "type": "multi_judge",
+  "question": "研究者利用离体叶绿体进行希尔反应，加入 DCIP 作为人工电子受体。若向体系中添加 DCMU（阻断 PSII 至 PQ 电子传递）或解偶联剂，检测光合磷酸化效率。",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "添加 DCMU 后，DCIP 还原反应被抑制，同时 ATP 合成停止。",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "添加解偶联剂后，电子传递链受阻，导致氧气释放量显著下降。",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "在无 DCMU 条件下，光照可驱动水裂解并伴随跨膜质子梯度的建立。",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "DCIP 在反应中充当最终电子供体，其氧化态颜色随反应进行加深。",
+    "answer": false
+   }
+  ],
+  "explanation": "A 正确：DCMU 阻断 PSII 到 PQ 的电子流，电子无法传递给 DCIP，且无电子流则无质子梯度，ATP 合成停止。B 错误：解偶联剂消除质子梯度但不阻断电子传递，甚至因解除反馈抑制而加速电子传递和放氧。C 正确：正常光照下，PSII 裂解水释放电子和质子，建立跨膜质子梯度驱动 ATP 合成。D 错误：DCIP 是人工电子受体（被还原），其氧化态为蓝色，还原后变为无色，故颜色应变浅而非加深。",
+  "subject": "植物生理学",
+  "concept": "光合电子传递与磷酸化",
+  "difficulty": "national",
+  "chart": null,
+  "year": null,
+  "module": "module_2",
+  "target": "competition",
+  "tags": [
+   "module_2",
+   "hard"
+  ],
+  "oldId": "326611023"
+ },
+ "BQ-photosynthesis-7fb07abe425b": {
+  "type": "mtf",
+  "question": "【数据解释】某C3植物和C4植物在30°C下的CO₂补偿点(Γ)测定结果分别为45ppm和5ppm。判断推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "C3植物的光呼吸活性导致其CO₂补偿点较高",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "C4植物较低的CO₂补偿点反映了其CO₂浓缩机制的高效性",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "CO₂补偿点是光合速率等于零时的CO₂浓度",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "在低CO₂浓度环境中C4植物较C3植物有竞争优势",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:CO₂补偿点是净光合速率为零时(即光合CO₂吸收=呼吸CO₂释放)的CO₂浓度,而非光合速率为零。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光合特性",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "173123710",
+  "tags": []
+ },
+ "BQ-photosynthesis-63425849ae0e": {
+  "type": "mtf",
+  "question": "【数据解释】某C3植物和C4植物在30°C下的CO₂补偿点(Γ)测定结果分别为45ppm和5ppm。判断推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "C3植物的光呼吸活性导致其CO₂补偿点较高",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "C4植物较低的CO₂补偿点反映了其CO₂浓缩机制的高效性",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "在低CO₂浓度环境中C4植物较C3植物有竞争优势",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "CO₂补偿点是光合速率等于零时的CO₂浓度",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:CO₂补偿点是净光合速率为零时(即光合CO₂吸收=呼吸CO₂释放)的CO₂浓度,而非光合速率为零。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光合特性",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "173123710",
+  "tags": []
+ },
+ "BQ-photosynthesis-aee0d46b4f8f": {
+  "type": "mtf",
+  "question": "【数据解释】某C3植物和C4植物在30°C下的CO₂补偿点(Γ)测定结果分别为45ppm和5ppm。判断推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "C3植物的光呼吸活性导致其CO₂补偿点较高",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "CO₂补偿点是光合速率等于零时的CO₂浓度",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "C4植物较低的CO₂补偿点反映了其CO₂浓缩机制的高效性",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "在低CO₂浓度环境中C4植物较C3植物有竞争优势",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:CO₂补偿点是净光合速率为零时(即光合CO₂吸收=呼吸CO₂释放)的CO₂浓度,而非光合速率为零。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光合特性",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "173123710",
+  "tags": []
+ },
+ "BQ-photosynthesis-1b2a925a88fd": {
+  "type": "mtf",
+  "question": "【数据解释】某C3植物和C4植物在30°C下的CO₂补偿点(Γ)测定结果分别为45ppm和5ppm。判断推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "C3植物的光呼吸活性导致其CO₂补偿点较高",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "CO₂补偿点是光合速率等于零时的CO₂浓度",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "在低CO₂浓度环境中C4植物较C3植物有竞争优势",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "C4植物较低的CO₂补偿点反映了其CO₂浓缩机制的高效性",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:CO₂补偿点是净光合速率为零时(即光合CO₂吸收=呼吸CO₂释放)的CO₂浓度,而非光合速率为零。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光合特性",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "173123710",
+  "tags": []
+ },
+ "BQ-photosynthesis-e0f094f32e4c": {
+  "type": "mtf",
+  "question": "【数据解释】某C3植物和C4植物在30°C下的CO₂补偿点(Γ)测定结果分别为45ppm和5ppm。判断推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "C3植物的光呼吸活性导致其CO₂补偿点较高",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "在低CO₂浓度环境中C4植物较C3植物有竞争优势",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "C4植物较低的CO₂补偿点反映了其CO₂浓缩机制的高效性",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "CO₂补偿点是光合速率等于零时的CO₂浓度",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:CO₂补偿点是净光合速率为零时(即光合CO₂吸收=呼吸CO₂释放)的CO₂浓度,而非光合速率为零。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光合特性",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "173123710",
+  "tags": []
+ },
+ "BQ-photosynthesis-bf5df0c919a9": {
+  "type": "mtf",
+  "question": "【数据解释】某C3植物和C4植物在30°C下的CO₂补偿点(Γ)测定结果分别为45ppm和5ppm。判断推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "C3植物的光呼吸活性导致其CO₂补偿点较高",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "在低CO₂浓度环境中C4植物较C3植物有竞争优势",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "CO₂补偿点是光合速率等于零时的CO₂浓度",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "C4植物较低的CO₂补偿点反映了其CO₂浓缩机制的高效性",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:CO₂补偿点是净光合速率为零时(即光合CO₂吸收=呼吸CO₂释放)的CO₂浓度,而非光合速率为零。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光合特性",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "173123710",
+  "tags": []
+ },
+ "BQ-photosynthesis-bd4f7d29352f": {
+  "type": "mtf",
+  "question": "【数据解释】某C3植物和C4植物在30°C下的CO₂补偿点(Γ)测定结果分别为45ppm和5ppm。判断推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "C4植物较低的CO₂补偿点反映了其CO₂浓缩机制的高效性",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "C3植物的光呼吸活性导致其CO₂补偿点较高",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "CO₂补偿点是光合速率等于零时的CO₂浓度",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "在低CO₂浓度环境中C4植物较C3植物有竞争优势",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:CO₂补偿点是净光合速率为零时(即光合CO₂吸收=呼吸CO₂释放)的CO₂浓度,而非光合速率为零。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光合特性",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "173123710",
+  "tags": []
+ },
+ "BQ-photosynthesis-8302d41baa00": {
+  "type": "mtf",
+  "question": "【数据解释】某C3植物和C4植物在30°C下的CO₂补偿点(Γ)测定结果分别为45ppm和5ppm。判断推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "C4植物较低的CO₂补偿点反映了其CO₂浓缩机制的高效性",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "C3植物的光呼吸活性导致其CO₂补偿点较高",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "在低CO₂浓度环境中C4植物较C3植物有竞争优势",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "CO₂补偿点是光合速率等于零时的CO₂浓度",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:CO₂补偿点是净光合速率为零时(即光合CO₂吸收=呼吸CO₂释放)的CO₂浓度,而非光合速率为零。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光合特性",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "173123710",
+  "tags": []
+ },
+ "BQ-photosynthesis-2ad7be294738": {
+  "type": "mtf",
+  "question": "【数据解释】某C3植物和C4植物在30°C下的CO₂补偿点(Γ)测定结果分别为45ppm和5ppm。判断推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "C4植物较低的CO₂补偿点反映了其CO₂浓缩机制的高效性",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "CO₂补偿点是光合速率等于零时的CO₂浓度",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "C3植物的光呼吸活性导致其CO₂补偿点较高",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "在低CO₂浓度环境中C4植物较C3植物有竞争优势",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:CO₂补偿点是净光合速率为零时(即光合CO₂吸收=呼吸CO₂释放)的CO₂浓度,而非光合速率为零。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光合特性",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "173123710",
+  "tags": []
+ },
+ "BQ-photosynthesis-04588a5061d2": {
+  "type": "mtf",
+  "question": "【数据解释】某C3植物和C4植物在30°C下的CO₂补偿点(Γ)测定结果分别为45ppm和5ppm。判断推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "C4植物较低的CO₂补偿点反映了其CO₂浓缩机制的高效性",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "CO₂补偿点是光合速率等于零时的CO₂浓度",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "在低CO₂浓度环境中C4植物较C3植物有竞争优势",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "C3植物的光呼吸活性导致其CO₂补偿点较高",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:CO₂补偿点是净光合速率为零时(即光合CO₂吸收=呼吸CO₂释放)的CO₂浓度,而非光合速率为零。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光合特性",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "173123710",
+  "tags": []
+ },
+ "BQ-photosynthesis-251f31d20e1a": {
+  "type": "mtf",
+  "question": "【数据解释】某C3植物和C4植物在30°C下的CO₂补偿点(Γ)测定结果分别为45ppm和5ppm。判断推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "C4植物较低的CO₂补偿点反映了其CO₂浓缩机制的高效性",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "在低CO₂浓度环境中C4植物较C3植物有竞争优势",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "C3植物的光呼吸活性导致其CO₂补偿点较高",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "CO₂补偿点是光合速率等于零时的CO₂浓度",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:CO₂补偿点是净光合速率为零时(即光合CO₂吸收=呼吸CO₂释放)的CO₂浓度,而非光合速率为零。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光合特性",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "173123710",
+  "tags": []
+ },
+ "BQ-photosynthesis-fe53263d3bfe": {
+  "type": "mtf",
+  "question": "【数据解释】某C3植物和C4植物在30°C下的CO₂补偿点(Γ)测定结果分别为45ppm和5ppm。判断推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "C4植物较低的CO₂补偿点反映了其CO₂浓缩机制的高效性",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "在低CO₂浓度环境中C4植物较C3植物有竞争优势",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "CO₂补偿点是光合速率等于零时的CO₂浓度",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "C3植物的光呼吸活性导致其CO₂补偿点较高",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:CO₂补偿点是净光合速率为零时(即光合CO₂吸收=呼吸CO₂释放)的CO₂浓度,而非光合速率为零。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光合特性",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "173123710",
+  "tags": []
+ },
+ "BQ-photosynthesis-70a4e5e69b31": {
+  "type": "mtf",
+  "question": "【数据解释】某C3植物和C4植物在30°C下的CO₂补偿点(Γ)测定结果分别为45ppm和5ppm。判断推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "CO₂补偿点是光合速率等于零时的CO₂浓度",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "C3植物的光呼吸活性导致其CO₂补偿点较高",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "C4植物较低的CO₂补偿点反映了其CO₂浓缩机制的高效性",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "在低CO₂浓度环境中C4植物较C3植物有竞争优势",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:CO₂补偿点是净光合速率为零时(即光合CO₂吸收=呼吸CO₂释放)的CO₂浓度,而非光合速率为零。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光合特性",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "173123710",
+  "tags": []
+ },
+ "BQ-photosynthesis-01911bf23c88": {
+  "type": "mtf",
+  "question": "【数据解释】某C3植物和C4植物在30°C下的CO₂补偿点(Γ)测定结果分别为45ppm和5ppm。判断推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "CO₂补偿点是光合速率等于零时的CO₂浓度",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "C3植物的光呼吸活性导致其CO₂补偿点较高",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "在低CO₂浓度环境中C4植物较C3植物有竞争优势",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "C4植物较低的CO₂补偿点反映了其CO₂浓缩机制的高效性",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:CO₂补偿点是净光合速率为零时(即光合CO₂吸收=呼吸CO₂释放)的CO₂浓度,而非光合速率为零。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光合特性",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "173123710",
+  "tags": []
+ },
+ "BQ-photosynthesis-5af45aed5bf7": {
+  "type": "mtf",
+  "question": "【数据解释】某C3植物和C4植物在30°C下的CO₂补偿点(Γ)测定结果分别为45ppm和5ppm。判断推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "CO₂补偿点是光合速率等于零时的CO₂浓度",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "C4植物较低的CO₂补偿点反映了其CO₂浓缩机制的高效性",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "C3植物的光呼吸活性导致其CO₂补偿点较高",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "在低CO₂浓度环境中C4植物较C3植物有竞争优势",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:CO₂补偿点是净光合速率为零时(即光合CO₂吸收=呼吸CO₂释放)的CO₂浓度,而非光合速率为零。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光合特性",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "173123710",
+  "tags": []
+ },
+ "BQ-photosynthesis-0f5099a11469": {
+  "type": "mtf",
+  "question": "【数据解释】某C3植物和C4植物在30°C下的CO₂补偿点(Γ)测定结果分别为45ppm和5ppm。判断推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "CO₂补偿点是光合速率等于零时的CO₂浓度",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "C4植物较低的CO₂补偿点反映了其CO₂浓缩机制的高效性",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "在低CO₂浓度环境中C4植物较C3植物有竞争优势",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "C3植物的光呼吸活性导致其CO₂补偿点较高",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:CO₂补偿点是净光合速率为零时(即光合CO₂吸收=呼吸CO₂释放)的CO₂浓度,而非光合速率为零。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光合特性",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "173123710",
+  "tags": []
+ },
+ "BQ-photosynthesis-bc7916620c83": {
+  "type": "mtf",
+  "question": "【数据解释】某C3植物和C4植物在30°C下的CO₂补偿点(Γ)测定结果分别为45ppm和5ppm。判断推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "CO₂补偿点是光合速率等于零时的CO₂浓度",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "在低CO₂浓度环境中C4植物较C3植物有竞争优势",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "C3植物的光呼吸活性导致其CO₂补偿点较高",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "C4植物较低的CO₂补偿点反映了其CO₂浓缩机制的高效性",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:CO₂补偿点是净光合速率为零时(即光合CO₂吸收=呼吸CO₂释放)的CO₂浓度,而非光合速率为零。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光合特性",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "173123710",
+  "tags": []
+ },
+ "BQ-photosynthesis-50a06e69b8de": {
+  "type": "mtf",
+  "question": "【数据解释】某C3植物和C4植物在30°C下的CO₂补偿点(Γ)测定结果分别为45ppm和5ppm。判断推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "CO₂补偿点是光合速率等于零时的CO₂浓度",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "在低CO₂浓度环境中C4植物较C3植物有竞争优势",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "C4植物较低的CO₂补偿点反映了其CO₂浓缩机制的高效性",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "C3植物的光呼吸活性导致其CO₂补偿点较高",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:CO₂补偿点是净光合速率为零时(即光合CO₂吸收=呼吸CO₂释放)的CO₂浓度,而非光合速率为零。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光合特性",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "173123710",
+  "tags": []
+ },
+ "BQ-photosynthesis-8ea2bf8366bb": {
+  "type": "mtf",
+  "question": "【数据解释】某C3植物和C4植物在30°C下的CO₂补偿点(Γ)测定结果分别为45ppm和5ppm。判断推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "在低CO₂浓度环境中C4植物较C3植物有竞争优势",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "C3植物的光呼吸活性导致其CO₂补偿点较高",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "C4植物较低的CO₂补偿点反映了其CO₂浓缩机制的高效性",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "CO₂补偿点是光合速率等于零时的CO₂浓度",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:CO₂补偿点是净光合速率为零时(即光合CO₂吸收=呼吸CO₂释放)的CO₂浓度,而非光合速率为零。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光合特性",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "173123710",
+  "tags": []
+ },
+ "BQ-photosynthesis-55470f3d14eb": {
+  "type": "mtf",
+  "question": "【数据解释】某C3植物和C4植物在30°C下的CO₂补偿点(Γ)测定结果分别为45ppm和5ppm。判断推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "在低CO₂浓度环境中C4植物较C3植物有竞争优势",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "C3植物的光呼吸活性导致其CO₂补偿点较高",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "CO₂补偿点是光合速率等于零时的CO₂浓度",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "C4植物较低的CO₂补偿点反映了其CO₂浓缩机制的高效性",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:CO₂补偿点是净光合速率为零时(即光合CO₂吸收=呼吸CO₂释放)的CO₂浓度,而非光合速率为零。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光合特性",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "173123710",
+  "tags": []
+ },
+ "BQ-photosynthesis-2979a5b6458a": {
+  "type": "mtf",
+  "question": "【数据解释】某C3植物和C4植物在30°C下的CO₂补偿点(Γ)测定结果分别为45ppm和5ppm。判断推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "在低CO₂浓度环境中C4植物较C3植物有竞争优势",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "C4植物较低的CO₂补偿点反映了其CO₂浓缩机制的高效性",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "C3植物的光呼吸活性导致其CO₂补偿点较高",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "CO₂补偿点是光合速率等于零时的CO₂浓度",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:CO₂补偿点是净光合速率为零时(即光合CO₂吸收=呼吸CO₂释放)的CO₂浓度,而非光合速率为零。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光合特性",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "173123710",
+  "tags": []
+ },
+ "BQ-photosynthesis-712bc2107119": {
+  "type": "mtf",
+  "question": "【数据解释】某C3植物和C4植物在30°C下的CO₂补偿点(Γ)测定结果分别为45ppm和5ppm。判断推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "在低CO₂浓度环境中C4植物较C3植物有竞争优势",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "C4植物较低的CO₂补偿点反映了其CO₂浓缩机制的高效性",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "CO₂补偿点是光合速率等于零时的CO₂浓度",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "C3植物的光呼吸活性导致其CO₂补偿点较高",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:CO₂补偿点是净光合速率为零时(即光合CO₂吸收=呼吸CO₂释放)的CO₂浓度,而非光合速率为零。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光合特性",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "173123710",
+  "tags": []
+ },
+ "BQ-photosynthesis-1b96ff5f99c3": {
+  "type": "mtf",
+  "question": "【数据解释】某C3植物和C4植物在30°C下的CO₂补偿点(Γ)测定结果分别为45ppm和5ppm。判断推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "在低CO₂浓度环境中C4植物较C3植物有竞争优势",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "CO₂补偿点是光合速率等于零时的CO₂浓度",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "C3植物的光呼吸活性导致其CO₂补偿点较高",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "C4植物较低的CO₂补偿点反映了其CO₂浓缩机制的高效性",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:CO₂补偿点是净光合速率为零时(即光合CO₂吸收=呼吸CO₂释放)的CO₂浓度,而非光合速率为零。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光合特性",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "173123710",
+  "tags": []
+ },
+ "BQ-photosynthesis-e600a09bb137": {
+  "type": "mtf",
+  "question": "【数据解释】某C3植物和C4植物在30°C下的CO₂补偿点(Γ)测定结果分别为45ppm和5ppm。判断推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "在低CO₂浓度环境中C4植物较C3植物有竞争优势",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "CO₂补偿点是光合速率等于零时的CO₂浓度",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "C4植物较低的CO₂补偿点反映了其CO₂浓缩机制的高效性",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "C3植物的光呼吸活性导致其CO₂补偿点较高",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:CO₂补偿点是净光合速率为零时(即光合CO₂吸收=呼吸CO₂释放)的CO₂浓度,而非光合速率为零。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光合特性",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "173123710",
+  "tags": []
+ },
+ "BQ-photosynthesis-785adf5965b5": {
+  "type": "mtf",
+  "question": "关于植物光合作用，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "C4植物的CO₂浓缩机制使维管束鞘细胞内的CO₂浓度升高，从而抑制光呼吸提高光合效率",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "CAM植物夜间开放气孔固定CO₂为苹果酸，白天气孔关闭利用储存的CO₂进行光合作用",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "光系统II（PSII）裂解水释放O₂，其反应中心色素为P680",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "质体醌（PQ）在传递电子时同时将质子从类囊体腔侧转运到基质侧",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确：PSII介导水光解放氧。D错误：PQ将质子从基质侧（stroma）转运到类囊体腔侧（lumen），而非相反，这样才能建立跨膜质子梯度。A正确：C4途径的CO₂泵效应。B正确：景天酸代谢途径（CAM）是肉质植物的节水适应。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光合作用",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1055871158",
+  "tags": []
+ },
+ "BQ-photosynthesis-6a245bafcaa5": {
+  "type": "mtf",
+  "question": "关于植物光合作用，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "C4植物的CO₂浓缩机制使维管束鞘细胞内的CO₂浓度升高，从而抑制光呼吸提高光合效率",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "CAM植物夜间开放气孔固定CO₂为苹果酸，白天气孔关闭利用储存的CO₂进行光合作用",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "质体醌（PQ）在传递电子时同时将质子从类囊体腔侧转运到基质侧",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "光系统II（PSII）裂解水释放O₂，其反应中心色素为P680",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：PSII介导水光解放氧。C错误：PQ将质子从基质侧（stroma）转运到类囊体腔侧（lumen），而非相反，这样才能建立跨膜质子梯度。A正确：C4途径的CO₂泵效应。B正确：景天酸代谢途径（CAM）是肉质植物的节水适应。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光合作用",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1055871158",
+  "tags": []
+ },
+ "BQ-photosynthesis-44a1c664db06": {
+  "type": "mtf",
+  "question": "关于植物光合作用，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "C4植物的CO₂浓缩机制使维管束鞘细胞内的CO₂浓度升高，从而抑制光呼吸提高光合效率",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "光系统II（PSII）裂解水释放O₂，其反应中心色素为P680",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "CAM植物夜间开放气孔固定CO₂为苹果酸，白天气孔关闭利用储存的CO₂进行光合作用",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "质体醌（PQ）在传递电子时同时将质子从类囊体腔侧转运到基质侧",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确：PSII介导水光解放氧。D错误：PQ将质子从基质侧（stroma）转运到类囊体腔侧（lumen），而非相反，这样才能建立跨膜质子梯度。A正确：C4途径的CO₂泵效应。C正确：景天酸代谢途径（CAM）是肉质植物的节水适应。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光合作用",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1055871158",
+  "tags": []
+ },
+ "BQ-photosynthesis-da3925ec1554": {
+  "type": "mtf",
+  "question": "关于植物光合作用，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "C4植物的CO₂浓缩机制使维管束鞘细胞内的CO₂浓度升高，从而抑制光呼吸提高光合效率",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "光系统II（PSII）裂解水释放O₂，其反应中心色素为P680",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "质体醌（PQ）在传递电子时同时将质子从类囊体腔侧转运到基质侧",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "CAM植物夜间开放气孔固定CO₂为苹果酸，白天气孔关闭利用储存的CO₂进行光合作用",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：PSII介导水光解放氧。C错误：PQ将质子从基质侧（stroma）转运到类囊体腔侧（lumen），而非相反，这样才能建立跨膜质子梯度。A正确：C4途径的CO₂泵效应。D正确：景天酸代谢途径（CAM）是肉质植物的节水适应。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光合作用",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1055871158",
+  "tags": []
+ },
+ "BQ-photosynthesis-c0294e1bf5ac": {
+  "type": "mtf",
+  "question": "关于植物光合作用，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "C4植物的CO₂浓缩机制使维管束鞘细胞内的CO₂浓度升高，从而抑制光呼吸提高光合效率",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "质体醌（PQ）在传递电子时同时将质子从类囊体腔侧转运到基质侧",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "CAM植物夜间开放气孔固定CO₂为苹果酸，白天气孔关闭利用储存的CO₂进行光合作用",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "光系统II（PSII）裂解水释放O₂，其反应中心色素为P680",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：PSII介导水光解放氧。B错误：PQ将质子从基质侧（stroma）转运到类囊体腔侧（lumen），而非相反，这样才能建立跨膜质子梯度。A正确：C4途径的CO₂泵效应。C正确：景天酸代谢途径（CAM）是肉质植物的节水适应。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光合作用",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1055871158",
+  "tags": []
+ },
+ "BQ-photosynthesis-b6d84cd78436": {
+  "type": "mtf",
+  "question": "关于植物光合作用，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "C4植物的CO₂浓缩机制使维管束鞘细胞内的CO₂浓度升高，从而抑制光呼吸提高光合效率",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "质体醌（PQ）在传递电子时同时将质子从类囊体腔侧转运到基质侧",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "光系统II（PSII）裂解水释放O₂，其反应中心色素为P680",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "CAM植物夜间开放气孔固定CO₂为苹果酸，白天气孔关闭利用储存的CO₂进行光合作用",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：PSII介导水光解放氧。B错误：PQ将质子从基质侧（stroma）转运到类囊体腔侧（lumen），而非相反，这样才能建立跨膜质子梯度。A正确：C4途径的CO₂泵效应。D正确：景天酸代谢途径（CAM）是肉质植物的节水适应。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光合作用",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1055871158",
+  "tags": []
+ },
+ "BQ-photosynthesis-f0d4c43ee540": {
+  "type": "mtf",
+  "question": "关于植物光合作用，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "CAM植物夜间开放气孔固定CO₂为苹果酸，白天气孔关闭利用储存的CO₂进行光合作用",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "C4植物的CO₂浓缩机制使维管束鞘细胞内的CO₂浓度升高，从而抑制光呼吸提高光合效率",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "光系统II（PSII）裂解水释放O₂，其反应中心色素为P680",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "质体醌（PQ）在传递电子时同时将质子从类囊体腔侧转运到基质侧",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确：PSII介导水光解放氧。D错误：PQ将质子从基质侧（stroma）转运到类囊体腔侧（lumen），而非相反，这样才能建立跨膜质子梯度。B正确：C4途径的CO₂泵效应。A正确：景天酸代谢途径（CAM）是肉质植物的节水适应。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光合作用",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1055871158",
+  "tags": []
+ },
+ "BQ-photosynthesis-52610756c8ca": {
+  "type": "mtf",
+  "question": "关于植物光合作用，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "CAM植物夜间开放气孔固定CO₂为苹果酸，白天气孔关闭利用储存的CO₂进行光合作用",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "C4植物的CO₂浓缩机制使维管束鞘细胞内的CO₂浓度升高，从而抑制光呼吸提高光合效率",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "质体醌（PQ）在传递电子时同时将质子从类囊体腔侧转运到基质侧",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "光系统II（PSII）裂解水释放O₂，其反应中心色素为P680",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：PSII介导水光解放氧。C错误：PQ将质子从基质侧（stroma）转运到类囊体腔侧（lumen），而非相反，这样才能建立跨膜质子梯度。B正确：C4途径的CO₂泵效应。A正确：景天酸代谢途径（CAM）是肉质植物的节水适应。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光合作用",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1055871158",
+  "tags": []
+ },
+ "BQ-photosynthesis-52b7a902caa6": {
+  "type": "mtf",
+  "question": "关于植物光合作用，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "CAM植物夜间开放气孔固定CO₂为苹果酸，白天气孔关闭利用储存的CO₂进行光合作用",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "光系统II（PSII）裂解水释放O₂，其反应中心色素为P680",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "C4植物的CO₂浓缩机制使维管束鞘细胞内的CO₂浓度升高，从而抑制光呼吸提高光合效率",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "质体醌（PQ）在传递电子时同时将质子从类囊体腔侧转运到基质侧",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确：PSII介导水光解放氧。D错误：PQ将质子从基质侧（stroma）转运到类囊体腔侧（lumen），而非相反，这样才能建立跨膜质子梯度。C正确：C4途径的CO₂泵效应。A正确：景天酸代谢途径（CAM）是肉质植物的节水适应。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光合作用",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1055871158",
+  "tags": []
+ },
+ "BQ-photosynthesis-e4f2099f0aea": {
+  "type": "mtf",
+  "question": "关于植物光合作用，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "CAM植物夜间开放气孔固定CO₂为苹果酸，白天气孔关闭利用储存的CO₂进行光合作用",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "光系统II（PSII）裂解水释放O₂，其反应中心色素为P680",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "质体醌（PQ）在传递电子时同时将质子从类囊体腔侧转运到基质侧",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "C4植物的CO₂浓缩机制使维管束鞘细胞内的CO₂浓度升高，从而抑制光呼吸提高光合效率",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：PSII介导水光解放氧。C错误：PQ将质子从基质侧（stroma）转运到类囊体腔侧（lumen），而非相反，这样才能建立跨膜质子梯度。D正确：C4途径的CO₂泵效应。A正确：景天酸代谢途径（CAM）是肉质植物的节水适应。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光合作用",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1055871158",
+  "tags": []
+ },
+ "BQ-photosynthesis-64c5312af5ff": {
+  "type": "mtf",
+  "question": "关于植物光合作用，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "CAM植物夜间开放气孔固定CO₂为苹果酸，白天气孔关闭利用储存的CO₂进行光合作用",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "质体醌（PQ）在传递电子时同时将质子从类囊体腔侧转运到基质侧",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "C4植物的CO₂浓缩机制使维管束鞘细胞内的CO₂浓度升高，从而抑制光呼吸提高光合效率",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "光系统II（PSII）裂解水释放O₂，其反应中心色素为P680",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：PSII介导水光解放氧。B错误：PQ将质子从基质侧（stroma）转运到类囊体腔侧（lumen），而非相反，这样才能建立跨膜质子梯度。C正确：C4途径的CO₂泵效应。A正确：景天酸代谢途径（CAM）是肉质植物的节水适应。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光合作用",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1055871158",
+  "tags": []
+ },
+ "BQ-photosynthesis-75f1c5af1a60": {
+  "type": "mtf",
+  "question": "关于植物光合作用，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "CAM植物夜间开放气孔固定CO₂为苹果酸，白天气孔关闭利用储存的CO₂进行光合作用",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "质体醌（PQ）在传递电子时同时将质子从类囊体腔侧转运到基质侧",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "光系统II（PSII）裂解水释放O₂，其反应中心色素为P680",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "C4植物的CO₂浓缩机制使维管束鞘细胞内的CO₂浓度升高，从而抑制光呼吸提高光合效率",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：PSII介导水光解放氧。B错误：PQ将质子从基质侧（stroma）转运到类囊体腔侧（lumen），而非相反，这样才能建立跨膜质子梯度。D正确：C4途径的CO₂泵效应。A正确：景天酸代谢途径（CAM）是肉质植物的节水适应。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光合作用",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1055871158",
+  "tags": []
+ },
+ "BQ-photosynthesis-5d35d5185811": {
+  "type": "mtf",
+  "question": "关于植物光合作用，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "光系统II（PSII）裂解水释放O₂，其反应中心色素为P680",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "C4植物的CO₂浓缩机制使维管束鞘细胞内的CO₂浓度升高，从而抑制光呼吸提高光合效率",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "CAM植物夜间开放气孔固定CO₂为苹果酸，白天气孔关闭利用储存的CO₂进行光合作用",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "质体醌（PQ）在传递电子时同时将质子从类囊体腔侧转运到基质侧",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确：PSII介导水光解放氧。D错误：PQ将质子从基质侧（stroma）转运到类囊体腔侧（lumen），而非相反，这样才能建立跨膜质子梯度。B正确：C4途径的CO₂泵效应。C正确：景天酸代谢途径（CAM）是肉质植物的节水适应。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光合作用",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1055871158",
+  "tags": []
+ },
+ "BQ-photosynthesis-bc065028366b": {
+  "type": "mtf",
+  "question": "关于植物光合作用，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "光系统II（PSII）裂解水释放O₂，其反应中心色素为P680",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "C4植物的CO₂浓缩机制使维管束鞘细胞内的CO₂浓度升高，从而抑制光呼吸提高光合效率",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "质体醌（PQ）在传递电子时同时将质子从类囊体腔侧转运到基质侧",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "CAM植物夜间开放气孔固定CO₂为苹果酸，白天气孔关闭利用储存的CO₂进行光合作用",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：PSII介导水光解放氧。C错误：PQ将质子从基质侧（stroma）转运到类囊体腔侧（lumen），而非相反，这样才能建立跨膜质子梯度。B正确：C4途径的CO₂泵效应。D正确：景天酸代谢途径（CAM）是肉质植物的节水适应。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光合作用",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1055871158",
+  "tags": []
+ },
+ "BQ-photosynthesis-e2df22d5dc86": {
+  "type": "mtf",
+  "question": "关于植物光合作用，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "光系统II（PSII）裂解水释放O₂，其反应中心色素为P680",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "CAM植物夜间开放气孔固定CO₂为苹果酸，白天气孔关闭利用储存的CO₂进行光合作用",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "C4植物的CO₂浓缩机制使维管束鞘细胞内的CO₂浓度升高，从而抑制光呼吸提高光合效率",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "质体醌（PQ）在传递电子时同时将质子从类囊体腔侧转运到基质侧",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确：PSII介导水光解放氧。D错误：PQ将质子从基质侧（stroma）转运到类囊体腔侧（lumen），而非相反，这样才能建立跨膜质子梯度。C正确：C4途径的CO₂泵效应。B正确：景天酸代谢途径（CAM）是肉质植物的节水适应。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光合作用",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1055871158",
+  "tags": []
+ },
+ "BQ-photosynthesis-abebb126df61": {
+  "type": "mtf",
+  "question": "关于植物光合作用，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "光系统II（PSII）裂解水释放O₂，其反应中心色素为P680",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "CAM植物夜间开放气孔固定CO₂为苹果酸，白天气孔关闭利用储存的CO₂进行光合作用",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "质体醌（PQ）在传递电子时同时将质子从类囊体腔侧转运到基质侧",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "C4植物的CO₂浓缩机制使维管束鞘细胞内的CO₂浓度升高，从而抑制光呼吸提高光合效率",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：PSII介导水光解放氧。C错误：PQ将质子从基质侧（stroma）转运到类囊体腔侧（lumen），而非相反，这样才能建立跨膜质子梯度。D正确：C4途径的CO₂泵效应。B正确：景天酸代谢途径（CAM）是肉质植物的节水适应。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光合作用",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1055871158",
+  "tags": []
+ },
+ "BQ-photosynthesis-45de8ca40521": {
+  "type": "mtf",
+  "question": "关于植物光合作用，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "光系统II（PSII）裂解水释放O₂，其反应中心色素为P680",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "质体醌（PQ）在传递电子时同时将质子从类囊体腔侧转运到基质侧",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "C4植物的CO₂浓缩机制使维管束鞘细胞内的CO₂浓度升高，从而抑制光呼吸提高光合效率",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "CAM植物夜间开放气孔固定CO₂为苹果酸，白天气孔关闭利用储存的CO₂进行光合作用",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：PSII介导水光解放氧。B错误：PQ将质子从基质侧（stroma）转运到类囊体腔侧（lumen），而非相反，这样才能建立跨膜质子梯度。C正确：C4途径的CO₂泵效应。D正确：景天酸代谢途径（CAM）是肉质植物的节水适应。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光合作用",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1055871158",
+  "tags": []
+ },
+ "BQ-photosynthesis-d1867c1bb364": {
+  "type": "mtf",
+  "question": "关于植物光合作用，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "光系统II（PSII）裂解水释放O₂，其反应中心色素为P680",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "质体醌（PQ）在传递电子时同时将质子从类囊体腔侧转运到基质侧",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "CAM植物夜间开放气孔固定CO₂为苹果酸，白天气孔关闭利用储存的CO₂进行光合作用",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "C4植物的CO₂浓缩机制使维管束鞘细胞内的CO₂浓度升高，从而抑制光呼吸提高光合效率",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：PSII介导水光解放氧。B错误：PQ将质子从基质侧（stroma）转运到类囊体腔侧（lumen），而非相反，这样才能建立跨膜质子梯度。D正确：C4途径的CO₂泵效应。C正确：景天酸代谢途径（CAM）是肉质植物的节水适应。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光合作用",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1055871158",
+  "tags": []
+ },
+ "BQ-photosynthesis-4a6f1f20fc8a": {
+  "type": "mtf",
+  "question": "关于植物光合作用，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "质体醌（PQ）在传递电子时同时将质子从类囊体腔侧转运到基质侧",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "C4植物的CO₂浓缩机制使维管束鞘细胞内的CO₂浓度升高，从而抑制光呼吸提高光合效率",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "CAM植物夜间开放气孔固定CO₂为苹果酸，白天气孔关闭利用储存的CO₂进行光合作用",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "光系统II（PSII）裂解水释放O₂，其反应中心色素为P680",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：PSII介导水光解放氧。A错误：PQ将质子从基质侧（stroma）转运到类囊体腔侧（lumen），而非相反，这样才能建立跨膜质子梯度。B正确：C4途径的CO₂泵效应。C正确：景天酸代谢途径（CAM）是肉质植物的节水适应。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光合作用",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1055871158",
+  "tags": []
+ },
+ "BQ-photosynthesis-0fcf54ebb848": {
+  "type": "mtf",
+  "question": "关于植物光合作用，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "质体醌（PQ）在传递电子时同时将质子从类囊体腔侧转运到基质侧",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "C4植物的CO₂浓缩机制使维管束鞘细胞内的CO₂浓度升高，从而抑制光呼吸提高光合效率",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "光系统II（PSII）裂解水释放O₂，其反应中心色素为P680",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "CAM植物夜间开放气孔固定CO₂为苹果酸，白天气孔关闭利用储存的CO₂进行光合作用",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：PSII介导水光解放氧。A错误：PQ将质子从基质侧（stroma）转运到类囊体腔侧（lumen），而非相反，这样才能建立跨膜质子梯度。B正确：C4途径的CO₂泵效应。D正确：景天酸代谢途径（CAM）是肉质植物的节水适应。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光合作用",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1055871158",
+  "tags": []
+ },
+ "BQ-photosynthesis-49eb600c6505": {
+  "type": "mtf",
+  "question": "关于植物光合作用，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "质体醌（PQ）在传递电子时同时将质子从类囊体腔侧转运到基质侧",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "CAM植物夜间开放气孔固定CO₂为苹果酸，白天气孔关闭利用储存的CO₂进行光合作用",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "C4植物的CO₂浓缩机制使维管束鞘细胞内的CO₂浓度升高，从而抑制光呼吸提高光合效率",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "光系统II（PSII）裂解水释放O₂，其反应中心色素为P680",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：PSII介导水光解放氧。A错误：PQ将质子从基质侧（stroma）转运到类囊体腔侧（lumen），而非相反，这样才能建立跨膜质子梯度。C正确：C4途径的CO₂泵效应。B正确：景天酸代谢途径（CAM）是肉质植物的节水适应。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光合作用",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1055871158",
+  "tags": []
+ },
+ "BQ-photosynthesis-625f87830e72": {
+  "type": "mtf",
+  "question": "关于植物光合作用，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "质体醌（PQ）在传递电子时同时将质子从类囊体腔侧转运到基质侧",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "CAM植物夜间开放气孔固定CO₂为苹果酸，白天气孔关闭利用储存的CO₂进行光合作用",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "光系统II（PSII）裂解水释放O₂，其反应中心色素为P680",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "C4植物的CO₂浓缩机制使维管束鞘细胞内的CO₂浓度升高，从而抑制光呼吸提高光合效率",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：PSII介导水光解放氧。A错误：PQ将质子从基质侧（stroma）转运到类囊体腔侧（lumen），而非相反，这样才能建立跨膜质子梯度。D正确：C4途径的CO₂泵效应。B正确：景天酸代谢途径（CAM）是肉质植物的节水适应。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光合作用",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1055871158",
+  "tags": []
+ },
+ "BQ-photosynthesis-5d41fd073b9c": {
+  "type": "mtf",
+  "question": "关于植物光合作用，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "质体醌（PQ）在传递电子时同时将质子从类囊体腔侧转运到基质侧",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "光系统II（PSII）裂解水释放O₂，其反应中心色素为P680",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "C4植物的CO₂浓缩机制使维管束鞘细胞内的CO₂浓度升高，从而抑制光呼吸提高光合效率",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "CAM植物夜间开放气孔固定CO₂为苹果酸，白天气孔关闭利用储存的CO₂进行光合作用",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：PSII介导水光解放氧。A错误：PQ将质子从基质侧（stroma）转运到类囊体腔侧（lumen），而非相反，这样才能建立跨膜质子梯度。C正确：C4途径的CO₂泵效应。D正确：景天酸代谢途径（CAM）是肉质植物的节水适应。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光合作用",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1055871158",
+  "tags": []
+ },
+ "BQ-photosynthesis-e4c91fd99862": {
+  "type": "mtf",
+  "question": "关于植物光合作用，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "质体醌（PQ）在传递电子时同时将质子从类囊体腔侧转运到基质侧",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "光系统II（PSII）裂解水释放O₂，其反应中心色素为P680",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "CAM植物夜间开放气孔固定CO₂为苹果酸，白天气孔关闭利用储存的CO₂进行光合作用",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "C4植物的CO₂浓缩机制使维管束鞘细胞内的CO₂浓度升高，从而抑制光呼吸提高光合效率",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：PSII介导水光解放氧。A错误：PQ将质子从基质侧（stroma）转运到类囊体腔侧（lumen），而非相反，这样才能建立跨膜质子梯度。D正确：C4途径的CO₂泵效应。C正确：景天酸代谢途径（CAM）是肉质植物的节水适应。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光合作用",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1055871158",
+  "tags": []
+ },
+ "BQ-photosynthesis-d4a696ac55eb": {
+  "type": "mtf",
+  "question": "某实验测定在25°C和35°C条件下某植物叶片的光合速率和呼吸速率，结果如下：25°C时光合速率12 μmol CO₂·m⁻²·s⁻¹、呼吸速率2 μmol CO₂·m⁻²·s⁻¹；35°C时光合速率8 μmol CO₂·m⁻²·s⁻¹、呼吸速率4 μmol CO₂·m⁻²·s⁻¹。判断以下推断的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "35°C时净光合速率的下降可能是因为光呼吸随温度升高而增强",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "35°C时该植物的净光合速率低于25°C",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "温度从25°C升至35°C后呼吸速率翻倍，说明该植物属于冷敏感物种",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "该植物的最适光合温度低于25°C",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确：35°C净光合=8-4=4，25°C净光合=12-2=10，前者低于后者。D错误：25°C时光合速率(12)比35°C(8)高，但不能直接推知最适温度低于25°C，需要更多温度梯度数据。A正确：高温下RuBisCO加氧酶活性相对增强，光呼吸增加是净光合下降的机制之一。C错误：呼吸速率随温度升高而增加是普遍的生理规律，Q₁₀≈2不代表冷敏感。这是一道数据分析题。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光合速率测定",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "181215997",
+  "tags": []
+ },
+ "BQ-photosynthesis-bc44dee9b858": {
+  "type": "mtf",
+  "question": "某实验测定在25°C和35°C条件下某植物叶片的光合速率和呼吸速率，结果如下：25°C时光合速率12 μmol CO₂·m⁻²·s⁻¹、呼吸速率2 μmol CO₂·m⁻²·s⁻¹；35°C时光合速率8 μmol CO₂·m⁻²·s⁻¹、呼吸速率4 μmol CO₂·m⁻²·s⁻¹。判断以下推断的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "35°C时净光合速率的下降可能是因为光呼吸随温度升高而增强",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "35°C时该植物的净光合速率低于25°C",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "该植物的最适光合温度低于25°C",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "温度从25°C升至35°C后呼吸速率翻倍，说明该植物属于冷敏感物种",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确：35°C净光合=8-4=4，25°C净光合=12-2=10，前者低于后者。C错误：25°C时光合速率(12)比35°C(8)高，但不能直接推知最适温度低于25°C，需要更多温度梯度数据。A正确：高温下RuBisCO加氧酶活性相对增强，光呼吸增加是净光合下降的机制之一。D错误：呼吸速率随温度升高而增加是普遍的生理规律，Q₁₀≈2不代表冷敏感。这是一道数据分析题。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光合速率测定",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "181215997",
+  "tags": []
+ },
+ "BQ-photosynthesis-41a39809749f": {
+  "type": "mtf",
+  "question": "某实验测定在25°C和35°C条件下某植物叶片的光合速率和呼吸速率，结果如下：25°C时光合速率12 μmol CO₂·m⁻²·s⁻¹、呼吸速率2 μmol CO₂·m⁻²·s⁻¹；35°C时光合速率8 μmol CO₂·m⁻²·s⁻¹、呼吸速率4 μmol CO₂·m⁻²·s⁻¹。判断以下推断的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "35°C时净光合速率的下降可能是因为光呼吸随温度升高而增强",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "温度从25°C升至35°C后呼吸速率翻倍，说明该植物属于冷敏感物种",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "35°C时该植物的净光合速率低于25°C",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "该植物的最适光合温度低于25°C",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确：35°C净光合=8-4=4，25°C净光合=12-2=10，前者低于后者。D错误：25°C时光合速率(12)比35°C(8)高，但不能直接推知最适温度低于25°C，需要更多温度梯度数据。A正确：高温下RuBisCO加氧酶活性相对增强，光呼吸增加是净光合下降的机制之一。B错误：呼吸速率随温度升高而增加是普遍的生理规律，Q₁₀≈2不代表冷敏感。这是一道数据分析题。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光合速率测定",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "181215997",
+  "tags": []
+ },
+ "BQ-photosynthesis-e8b9b2191d3d": {
+  "type": "mtf",
+  "question": "某实验测定在25°C和35°C条件下某植物叶片的光合速率和呼吸速率，结果如下：25°C时光合速率12 μmol CO₂·m⁻²·s⁻¹、呼吸速率2 μmol CO₂·m⁻²·s⁻¹；35°C时光合速率8 μmol CO₂·m⁻²·s⁻¹、呼吸速率4 μmol CO₂·m⁻²·s⁻¹。判断以下推断的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "35°C时净光合速率的下降可能是因为光呼吸随温度升高而增强",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "温度从25°C升至35°C后呼吸速率翻倍，说明该植物属于冷敏感物种",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "该植物的最适光合温度低于25°C",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "35°C时该植物的净光合速率低于25°C",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：35°C净光合=8-4=4，25°C净光合=12-2=10，前者低于后者。C错误：25°C时光合速率(12)比35°C(8)高，但不能直接推知最适温度低于25°C，需要更多温度梯度数据。A正确：高温下RuBisCO加氧酶活性相对增强，光呼吸增加是净光合下降的机制之一。B错误：呼吸速率随温度升高而增加是普遍的生理规律，Q₁₀≈2不代表冷敏感。这是一道数据分析题。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光合速率测定",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "181215997",
+  "tags": []
+ },
+ "BQ-photosynthesis-0139283b7d1c": {
+  "type": "mtf",
+  "question": "某实验测定在25°C和35°C条件下某植物叶片的光合速率和呼吸速率，结果如下：25°C时光合速率12 μmol CO₂·m⁻²·s⁻¹、呼吸速率2 μmol CO₂·m⁻²·s⁻¹；35°C时光合速率8 μmol CO₂·m⁻²·s⁻¹、呼吸速率4 μmol CO₂·m⁻²·s⁻¹。判断以下推断的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "35°C时净光合速率的下降可能是因为光呼吸随温度升高而增强",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "该植物的最适光合温度低于25°C",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "35°C时该植物的净光合速率低于25°C",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "温度从25°C升至35°C后呼吸速率翻倍，说明该植物属于冷敏感物种",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确：35°C净光合=8-4=4，25°C净光合=12-2=10，前者低于后者。B错误：25°C时光合速率(12)比35°C(8)高，但不能直接推知最适温度低于25°C，需要更多温度梯度数据。A正确：高温下RuBisCO加氧酶活性相对增强，光呼吸增加是净光合下降的机制之一。D错误：呼吸速率随温度升高而增加是普遍的生理规律，Q₁₀≈2不代表冷敏感。这是一道数据分析题。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光合速率测定",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "181215997",
+  "tags": []
+ },
+ "BQ-photosynthesis-47a772f4d7a8": {
+  "type": "mtf",
+  "question": "某实验测定在25°C和35°C条件下某植物叶片的光合速率和呼吸速率，结果如下：25°C时光合速率12 μmol CO₂·m⁻²·s⁻¹、呼吸速率2 μmol CO₂·m⁻²·s⁻¹；35°C时光合速率8 μmol CO₂·m⁻²·s⁻¹、呼吸速率4 μmol CO₂·m⁻²·s⁻¹。判断以下推断的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "35°C时净光合速率的下降可能是因为光呼吸随温度升高而增强",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "该植物的最适光合温度低于25°C",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "温度从25°C升至35°C后呼吸速率翻倍，说明该植物属于冷敏感物种",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "35°C时该植物的净光合速率低于25°C",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：35°C净光合=8-4=4，25°C净光合=12-2=10，前者低于后者。B错误：25°C时光合速率(12)比35°C(8)高，但不能直接推知最适温度低于25°C，需要更多温度梯度数据。A正确：高温下RuBisCO加氧酶活性相对增强，光呼吸增加是净光合下降的机制之一。C错误：呼吸速率随温度升高而增加是普遍的生理规律，Q₁₀≈2不代表冷敏感。这是一道数据分析题。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光合速率测定",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "181215997",
+  "tags": []
+ },
+ "BQ-photosynthesis-80e8745b4974": {
+  "type": "mtf",
+  "question": "某实验测定在25°C和35°C条件下某植物叶片的光合速率和呼吸速率，结果如下：25°C时光合速率12 μmol CO₂·m⁻²·s⁻¹、呼吸速率2 μmol CO₂·m⁻²·s⁻¹；35°C时光合速率8 μmol CO₂·m⁻²·s⁻¹、呼吸速率4 μmol CO₂·m⁻²·s⁻¹。判断以下推断的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "35°C时该植物的净光合速率低于25°C",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "35°C时净光合速率的下降可能是因为光呼吸随温度升高而增强",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "温度从25°C升至35°C后呼吸速率翻倍，说明该植物属于冷敏感物种",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "该植物的最适光合温度低于25°C",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确：35°C净光合=8-4=4，25°C净光合=12-2=10，前者低于后者。D错误：25°C时光合速率(12)比35°C(8)高，但不能直接推知最适温度低于25°C，需要更多温度梯度数据。B正确：高温下RuBisCO加氧酶活性相对增强，光呼吸增加是净光合下降的机制之一。C错误：呼吸速率随温度升高而增加是普遍的生理规律，Q₁₀≈2不代表冷敏感。这是一道数据分析题。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光合速率测定",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "181215997",
+  "tags": []
+ },
+ "BQ-photosynthesis-34012856aef7": {
+  "type": "mtf",
+  "question": "某实验测定在25°C和35°C条件下某植物叶片的光合速率和呼吸速率，结果如下：25°C时光合速率12 μmol CO₂·m⁻²·s⁻¹、呼吸速率2 μmol CO₂·m⁻²·s⁻¹；35°C时光合速率8 μmol CO₂·m⁻²·s⁻¹、呼吸速率4 μmol CO₂·m⁻²·s⁻¹。判断以下推断的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "35°C时该植物的净光合速率低于25°C",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "35°C时净光合速率的下降可能是因为光呼吸随温度升高而增强",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "该植物的最适光合温度低于25°C",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "温度从25°C升至35°C后呼吸速率翻倍，说明该植物属于冷敏感物种",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确：35°C净光合=8-4=4，25°C净光合=12-2=10，前者低于后者。C错误：25°C时光合速率(12)比35°C(8)高，但不能直接推知最适温度低于25°C，需要更多温度梯度数据。B正确：高温下RuBisCO加氧酶活性相对增强，光呼吸增加是净光合下降的机制之一。D错误：呼吸速率随温度升高而增加是普遍的生理规律，Q₁₀≈2不代表冷敏感。这是一道数据分析题。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光合速率测定",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "181215997",
+  "tags": []
+ },
+ "BQ-photosynthesis-3683d653bfbc": {
+  "type": "mtf",
+  "question": "某实验测定在25°C和35°C条件下某植物叶片的光合速率和呼吸速率，结果如下：25°C时光合速率12 μmol CO₂·m⁻²·s⁻¹、呼吸速率2 μmol CO₂·m⁻²·s⁻¹；35°C时光合速率8 μmol CO₂·m⁻²·s⁻¹、呼吸速率4 μmol CO₂·m⁻²·s⁻¹。判断以下推断的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "35°C时该植物的净光合速率低于25°C",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "温度从25°C升至35°C后呼吸速率翻倍，说明该植物属于冷敏感物种",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "35°C时净光合速率的下降可能是因为光呼吸随温度升高而增强",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "该植物的最适光合温度低于25°C",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确：35°C净光合=8-4=4，25°C净光合=12-2=10，前者低于后者。D错误：25°C时光合速率(12)比35°C(8)高，但不能直接推知最适温度低于25°C，需要更多温度梯度数据。C正确：高温下RuBisCO加氧酶活性相对增强，光呼吸增加是净光合下降的机制之一。B错误：呼吸速率随温度升高而增加是普遍的生理规律，Q₁₀≈2不代表冷敏感。这是一道数据分析题。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光合速率测定",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "181215997",
+  "tags": []
+ },
+ "BQ-photosynthesis-05685bdb8ef7": {
+  "type": "mtf",
+  "question": "某实验测定在25°C和35°C条件下某植物叶片的光合速率和呼吸速率，结果如下：25°C时光合速率12 μmol CO₂·m⁻²·s⁻¹、呼吸速率2 μmol CO₂·m⁻²·s⁻¹；35°C时光合速率8 μmol CO₂·m⁻²·s⁻¹、呼吸速率4 μmol CO₂·m⁻²·s⁻¹。判断以下推断的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "35°C时该植物的净光合速率低于25°C",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "温度从25°C升至35°C后呼吸速率翻倍，说明该植物属于冷敏感物种",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "该植物的最适光合温度低于25°C",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "35°C时净光合速率的下降可能是因为光呼吸随温度升高而增强",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：35°C净光合=8-4=4，25°C净光合=12-2=10，前者低于后者。C错误：25°C时光合速率(12)比35°C(8)高，但不能直接推知最适温度低于25°C，需要更多温度梯度数据。D正确：高温下RuBisCO加氧酶活性相对增强，光呼吸增加是净光合下降的机制之一。B错误：呼吸速率随温度升高而增加是普遍的生理规律，Q₁₀≈2不代表冷敏感。这是一道数据分析题。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光合速率测定",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "181215997",
+  "tags": []
+ },
+ "BQ-photosynthesis-39f8f9d44cdb": {
+  "type": "mtf",
+  "question": "某实验测定在25°C和35°C条件下某植物叶片的光合速率和呼吸速率，结果如下：25°C时光合速率12 μmol CO₂·m⁻²·s⁻¹、呼吸速率2 μmol CO₂·m⁻²·s⁻¹；35°C时光合速率8 μmol CO₂·m⁻²·s⁻¹、呼吸速率4 μmol CO₂·m⁻²·s⁻¹。判断以下推断的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "35°C时该植物的净光合速率低于25°C",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "该植物的最适光合温度低于25°C",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "35°C时净光合速率的下降可能是因为光呼吸随温度升高而增强",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "温度从25°C升至35°C后呼吸速率翻倍，说明该植物属于冷敏感物种",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确：35°C净光合=8-4=4，25°C净光合=12-2=10，前者低于后者。B错误：25°C时光合速率(12)比35°C(8)高，但不能直接推知最适温度低于25°C，需要更多温度梯度数据。C正确：高温下RuBisCO加氧酶活性相对增强，光呼吸增加是净光合下降的机制之一。D错误：呼吸速率随温度升高而增加是普遍的生理规律，Q₁₀≈2不代表冷敏感。这是一道数据分析题。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光合速率测定",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "181215997",
+  "tags": []
+ },
+ "BQ-photosynthesis-351ed7e6bcd2": {
+  "type": "mtf",
+  "question": "某实验测定在25°C和35°C条件下某植物叶片的光合速率和呼吸速率，结果如下：25°C时光合速率12 μmol CO₂·m⁻²·s⁻¹、呼吸速率2 μmol CO₂·m⁻²·s⁻¹；35°C时光合速率8 μmol CO₂·m⁻²·s⁻¹、呼吸速率4 μmol CO₂·m⁻²·s⁻¹。判断以下推断的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "35°C时该植物的净光合速率低于25°C",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "该植物的最适光合温度低于25°C",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "温度从25°C升至35°C后呼吸速率翻倍，说明该植物属于冷敏感物种",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "35°C时净光合速率的下降可能是因为光呼吸随温度升高而增强",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：35°C净光合=8-4=4，25°C净光合=12-2=10，前者低于后者。B错误：25°C时光合速率(12)比35°C(8)高，但不能直接推知最适温度低于25°C，需要更多温度梯度数据。D正确：高温下RuBisCO加氧酶活性相对增强，光呼吸增加是净光合下降的机制之一。C错误：呼吸速率随温度升高而增加是普遍的生理规律，Q₁₀≈2不代表冷敏感。这是一道数据分析题。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光合速率测定",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "181215997",
+  "tags": []
+ },
+ "BQ-photosynthesis-b98292395110": {
+  "type": "mtf",
+  "question": "某实验测定在25°C和35°C条件下某植物叶片的光合速率和呼吸速率，结果如下：25°C时光合速率12 μmol CO₂·m⁻²·s⁻¹、呼吸速率2 μmol CO₂·m⁻²·s⁻¹；35°C时光合速率8 μmol CO₂·m⁻²·s⁻¹、呼吸速率4 μmol CO₂·m⁻²·s⁻¹。判断以下推断的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "温度从25°C升至35°C后呼吸速率翻倍，说明该植物属于冷敏感物种",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "35°C时净光合速率的下降可能是因为光呼吸随温度升高而增强",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "35°C时该植物的净光合速率低于25°C",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "该植物的最适光合温度低于25°C",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确：35°C净光合=8-4=4，25°C净光合=12-2=10，前者低于后者。D错误：25°C时光合速率(12)比35°C(8)高，但不能直接推知最适温度低于25°C，需要更多温度梯度数据。B正确：高温下RuBisCO加氧酶活性相对增强，光呼吸增加是净光合下降的机制之一。A错误：呼吸速率随温度升高而增加是普遍的生理规律，Q₁₀≈2不代表冷敏感。这是一道数据分析题。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光合速率测定",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "181215997",
+  "tags": []
+ },
+ "BQ-photosynthesis-2ad5c27ea7e6": {
+  "type": "mtf",
+  "question": "某实验测定在25°C和35°C条件下某植物叶片的光合速率和呼吸速率，结果如下：25°C时光合速率12 μmol CO₂·m⁻²·s⁻¹、呼吸速率2 μmol CO₂·m⁻²·s⁻¹；35°C时光合速率8 μmol CO₂·m⁻²·s⁻¹、呼吸速率4 μmol CO₂·m⁻²·s⁻¹。判断以下推断的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "温度从25°C升至35°C后呼吸速率翻倍，说明该植物属于冷敏感物种",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "35°C时净光合速率的下降可能是因为光呼吸随温度升高而增强",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "该植物的最适光合温度低于25°C",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "35°C时该植物的净光合速率低于25°C",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：35°C净光合=8-4=4，25°C净光合=12-2=10，前者低于后者。C错误：25°C时光合速率(12)比35°C(8)高，但不能直接推知最适温度低于25°C，需要更多温度梯度数据。B正确：高温下RuBisCO加氧酶活性相对增强，光呼吸增加是净光合下降的机制之一。A错误：呼吸速率随温度升高而增加是普遍的生理规律，Q₁₀≈2不代表冷敏感。这是一道数据分析题。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光合速率测定",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "181215997",
+  "tags": []
+ },
+ "BQ-photosynthesis-be1708beac7b": {
+  "type": "mtf",
+  "question": "某实验测定在25°C和35°C条件下某植物叶片的光合速率和呼吸速率，结果如下：25°C时光合速率12 μmol CO₂·m⁻²·s⁻¹、呼吸速率2 μmol CO₂·m⁻²·s⁻¹；35°C时光合速率8 μmol CO₂·m⁻²·s⁻¹、呼吸速率4 μmol CO₂·m⁻²·s⁻¹。判断以下推断的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "温度从25°C升至35°C后呼吸速率翻倍，说明该植物属于冷敏感物种",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "35°C时该植物的净光合速率低于25°C",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "35°C时净光合速率的下降可能是因为光呼吸随温度升高而增强",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "该植物的最适光合温度低于25°C",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确：35°C净光合=8-4=4，25°C净光合=12-2=10，前者低于后者。D错误：25°C时光合速率(12)比35°C(8)高，但不能直接推知最适温度低于25°C，需要更多温度梯度数据。C正确：高温下RuBisCO加氧酶活性相对增强，光呼吸增加是净光合下降的机制之一。A错误：呼吸速率随温度升高而增加是普遍的生理规律，Q₁₀≈2不代表冷敏感。这是一道数据分析题。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光合速率测定",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "181215997",
+  "tags": []
+ },
+ "BQ-photosynthesis-a52afde70a6a": {
+  "type": "mtf",
+  "question": "某实验测定在25°C和35°C条件下某植物叶片的光合速率和呼吸速率，结果如下：25°C时光合速率12 μmol CO₂·m⁻²·s⁻¹、呼吸速率2 μmol CO₂·m⁻²·s⁻¹；35°C时光合速率8 μmol CO₂·m⁻²·s⁻¹、呼吸速率4 μmol CO₂·m⁻²·s⁻¹。判断以下推断的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "温度从25°C升至35°C后呼吸速率翻倍，说明该植物属于冷敏感物种",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "35°C时该植物的净光合速率低于25°C",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "该植物的最适光合温度低于25°C",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "35°C时净光合速率的下降可能是因为光呼吸随温度升高而增强",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：35°C净光合=8-4=4，25°C净光合=12-2=10，前者低于后者。C错误：25°C时光合速率(12)比35°C(8)高，但不能直接推知最适温度低于25°C，需要更多温度梯度数据。D正确：高温下RuBisCO加氧酶活性相对增强，光呼吸增加是净光合下降的机制之一。A错误：呼吸速率随温度升高而增加是普遍的生理规律，Q₁₀≈2不代表冷敏感。这是一道数据分析题。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光合速率测定",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "181215997",
+  "tags": []
+ },
+ "BQ-photosynthesis-dd60e5022310": {
+  "type": "mtf",
+  "question": "某实验测定在25°C和35°C条件下某植物叶片的光合速率和呼吸速率，结果如下：25°C时光合速率12 μmol CO₂·m⁻²·s⁻¹、呼吸速率2 μmol CO₂·m⁻²·s⁻¹；35°C时光合速率8 μmol CO₂·m⁻²·s⁻¹、呼吸速率4 μmol CO₂·m⁻²·s⁻¹。判断以下推断的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "温度从25°C升至35°C后呼吸速率翻倍，说明该植物属于冷敏感物种",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "该植物的最适光合温度低于25°C",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "35°C时净光合速率的下降可能是因为光呼吸随温度升高而增强",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "35°C时该植物的净光合速率低于25°C",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：35°C净光合=8-4=4，25°C净光合=12-2=10，前者低于后者。B错误：25°C时光合速率(12)比35°C(8)高，但不能直接推知最适温度低于25°C，需要更多温度梯度数据。C正确：高温下RuBisCO加氧酶活性相对增强，光呼吸增加是净光合下降的机制之一。A错误：呼吸速率随温度升高而增加是普遍的生理规律，Q₁₀≈2不代表冷敏感。这是一道数据分析题。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光合速率测定",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "181215997",
+  "tags": []
+ },
+ "BQ-photosynthesis-f797eb6e9933": {
+  "type": "mtf",
+  "question": "某实验测定在25°C和35°C条件下某植物叶片的光合速率和呼吸速率，结果如下：25°C时光合速率12 μmol CO₂·m⁻²·s⁻¹、呼吸速率2 μmol CO₂·m⁻²·s⁻¹；35°C时光合速率8 μmol CO₂·m⁻²·s⁻¹、呼吸速率4 μmol CO₂·m⁻²·s⁻¹。判断以下推断的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "温度从25°C升至35°C后呼吸速率翻倍，说明该植物属于冷敏感物种",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "该植物的最适光合温度低于25°C",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "35°C时该植物的净光合速率低于25°C",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "35°C时净光合速率的下降可能是因为光呼吸随温度升高而增强",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：35°C净光合=8-4=4，25°C净光合=12-2=10，前者低于后者。B错误：25°C时光合速率(12)比35°C(8)高，但不能直接推知最适温度低于25°C，需要更多温度梯度数据。D正确：高温下RuBisCO加氧酶活性相对增强，光呼吸增加是净光合下降的机制之一。A错误：呼吸速率随温度升高而增加是普遍的生理规律，Q₁₀≈2不代表冷敏感。这是一道数据分析题。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光合速率测定",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "181215997",
+  "tags": []
+ },
+ "BQ-photosynthesis-345067e727ab": {
+  "type": "mtf",
+  "question": "某实验测定在25°C和35°C条件下某植物叶片的光合速率和呼吸速率，结果如下：25°C时光合速率12 μmol CO₂·m⁻²·s⁻¹、呼吸速率2 μmol CO₂·m⁻²·s⁻¹；35°C时光合速率8 μmol CO₂·m⁻²·s⁻¹、呼吸速率4 μmol CO₂·m⁻²·s⁻¹。判断以下推断的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "该植物的最适光合温度低于25°C",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "35°C时净光合速率的下降可能是因为光呼吸随温度升高而增强",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "35°C时该植物的净光合速率低于25°C",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "温度从25°C升至35°C后呼吸速率翻倍，说明该植物属于冷敏感物种",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确：35°C净光合=8-4=4，25°C净光合=12-2=10，前者低于后者。A错误：25°C时光合速率(12)比35°C(8)高，但不能直接推知最适温度低于25°C，需要更多温度梯度数据。B正确：高温下RuBisCO加氧酶活性相对增强，光呼吸增加是净光合下降的机制之一。D错误：呼吸速率随温度升高而增加是普遍的生理规律，Q₁₀≈2不代表冷敏感。这是一道数据分析题。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光合速率测定",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "181215997",
+  "tags": []
+ },
+ "BQ-photosynthesis-cba807d0ef23": {
+  "type": "mtf",
+  "question": "某实验测定在25°C和35°C条件下某植物叶片的光合速率和呼吸速率，结果如下：25°C时光合速率12 μmol CO₂·m⁻²·s⁻¹、呼吸速率2 μmol CO₂·m⁻²·s⁻¹；35°C时光合速率8 μmol CO₂·m⁻²·s⁻¹、呼吸速率4 μmol CO₂·m⁻²·s⁻¹。判断以下推断的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "该植物的最适光合温度低于25°C",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "35°C时净光合速率的下降可能是因为光呼吸随温度升高而增强",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "温度从25°C升至35°C后呼吸速率翻倍，说明该植物属于冷敏感物种",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "35°C时该植物的净光合速率低于25°C",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：35°C净光合=8-4=4，25°C净光合=12-2=10，前者低于后者。A错误：25°C时光合速率(12)比35°C(8)高，但不能直接推知最适温度低于25°C，需要更多温度梯度数据。B正确：高温下RuBisCO加氧酶活性相对增强，光呼吸增加是净光合下降的机制之一。C错误：呼吸速率随温度升高而增加是普遍的生理规律，Q₁₀≈2不代表冷敏感。这是一道数据分析题。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光合速率测定",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "181215997",
+  "tags": []
+ },
+ "BQ-photosynthesis-84e2cde65dfe": {
+  "type": "mtf",
+  "question": "某实验测定在25°C和35°C条件下某植物叶片的光合速率和呼吸速率，结果如下：25°C时光合速率12 μmol CO₂·m⁻²·s⁻¹、呼吸速率2 μmol CO₂·m⁻²·s⁻¹；35°C时光合速率8 μmol CO₂·m⁻²·s⁻¹、呼吸速率4 μmol CO₂·m⁻²·s⁻¹。判断以下推断的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "该植物的最适光合温度低于25°C",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "35°C时该植物的净光合速率低于25°C",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "35°C时净光合速率的下降可能是因为光呼吸随温度升高而增强",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "温度从25°C升至35°C后呼吸速率翻倍，说明该植物属于冷敏感物种",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确：35°C净光合=8-4=4，25°C净光合=12-2=10，前者低于后者。A错误：25°C时光合速率(12)比35°C(8)高，但不能直接推知最适温度低于25°C，需要更多温度梯度数据。C正确：高温下RuBisCO加氧酶活性相对增强，光呼吸增加是净光合下降的机制之一。D错误：呼吸速率随温度升高而增加是普遍的生理规律，Q₁₀≈2不代表冷敏感。这是一道数据分析题。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光合速率测定",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "181215997",
+  "tags": []
+ },
+ "BQ-photosynthesis-dd461f7ba149": {
+  "type": "mtf",
+  "question": "某实验测定在25°C和35°C条件下某植物叶片的光合速率和呼吸速率，结果如下：25°C时光合速率12 μmol CO₂·m⁻²·s⁻¹、呼吸速率2 μmol CO₂·m⁻²·s⁻¹；35°C时光合速率8 μmol CO₂·m⁻²·s⁻¹、呼吸速率4 μmol CO₂·m⁻²·s⁻¹。判断以下推断的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "该植物的最适光合温度低于25°C",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "35°C时该植物的净光合速率低于25°C",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "温度从25°C升至35°C后呼吸速率翻倍，说明该植物属于冷敏感物种",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "35°C时净光合速率的下降可能是因为光呼吸随温度升高而增强",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：35°C净光合=8-4=4，25°C净光合=12-2=10，前者低于后者。A错误：25°C时光合速率(12)比35°C(8)高，但不能直接推知最适温度低于25°C，需要更多温度梯度数据。D正确：高温下RuBisCO加氧酶活性相对增强，光呼吸增加是净光合下降的机制之一。C错误：呼吸速率随温度升高而增加是普遍的生理规律，Q₁₀≈2不代表冷敏感。这是一道数据分析题。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光合速率测定",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "181215997",
+  "tags": []
+ },
+ "BQ-photosynthesis-6cc195655b35": {
+  "type": "mtf",
+  "question": "某实验测定在25°C和35°C条件下某植物叶片的光合速率和呼吸速率，结果如下：25°C时光合速率12 μmol CO₂·m⁻²·s⁻¹、呼吸速率2 μmol CO₂·m⁻²·s⁻¹；35°C时光合速率8 μmol CO₂·m⁻²·s⁻¹、呼吸速率4 μmol CO₂·m⁻²·s⁻¹。判断以下推断的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "该植物的最适光合温度低于25°C",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "温度从25°C升至35°C后呼吸速率翻倍，说明该植物属于冷敏感物种",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "35°C时净光合速率的下降可能是因为光呼吸随温度升高而增强",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "35°C时该植物的净光合速率低于25°C",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：35°C净光合=8-4=4，25°C净光合=12-2=10，前者低于后者。A错误：25°C时光合速率(12)比35°C(8)高，但不能直接推知最适温度低于25°C，需要更多温度梯度数据。C正确：高温下RuBisCO加氧酶活性相对增强，光呼吸增加是净光合下降的机制之一。B错误：呼吸速率随温度升高而增加是普遍的生理规律，Q₁₀≈2不代表冷敏感。这是一道数据分析题。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光合速率测定",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "181215997",
+  "tags": []
+ },
+ "BQ-photosynthesis-e44d7761b1b7": {
+  "type": "mtf",
+  "question": "某实验测定在25°C和35°C条件下某植物叶片的光合速率和呼吸速率，结果如下：25°C时光合速率12 μmol CO₂·m⁻²·s⁻¹、呼吸速率2 μmol CO₂·m⁻²·s⁻¹；35°C时光合速率8 μmol CO₂·m⁻²·s⁻¹、呼吸速率4 μmol CO₂·m⁻²·s⁻¹。判断以下推断的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "该植物的最适光合温度低于25°C",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "温度从25°C升至35°C后呼吸速率翻倍，说明该植物属于冷敏感物种",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "35°C时该植物的净光合速率低于25°C",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "35°C时净光合速率的下降可能是因为光呼吸随温度升高而增强",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：35°C净光合=8-4=4，25°C净光合=12-2=10，前者低于后者。A错误：25°C时光合速率(12)比35°C(8)高，但不能直接推知最适温度低于25°C，需要更多温度梯度数据。D正确：高温下RuBisCO加氧酶活性相对增强，光呼吸增加是净光合下降的机制之一。B错误：呼吸速率随温度升高而增加是普遍的生理规律，Q₁₀≈2不代表冷敏感。这是一道数据分析题。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光合速率测定",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "181215997",
+  "tags": []
+ }
+}

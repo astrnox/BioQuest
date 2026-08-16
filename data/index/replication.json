@@ -1,0 +1,1238 @@
+{
+ "BQ-replication-c5ec28be0760": {
+  "tags": [
+   "replication",
+   "分子生物学",
+   "DNA 复制",
+   "high_school"
+  ],
+  "diff": "basic",
+  "len": 21,
+  "src": "replication",
+  "year": null,
+  "module": "module_1"
+ },
+ "BQ-replication-1112bf949c75": {
+  "tags": [
+   "replication",
+   "module_1",
+   "分子生物学",
+   "DNA 复制与结构",
+   "high_school"
+  ],
+  "diff": "basic",
+  "len": 18,
+  "src": "replication",
+  "year": null,
+  "module": "module_1"
+ },
+ "BQ-replication-5f6813b9d934": {
+  "tags": [
+   "replication",
+   "module_1",
+   "hard"
+  ],
+  "diff": "national",
+  "len": 85,
+  "src": "replication",
+  "year": null,
+  "module": "module_1"
+ },
+ "BQ-replication-e1b123b77e18": {
+  "tags": [
+   "replication",
+   "module_1",
+   "medium"
+  ],
+  "diff": "league",
+  "len": 52,
+  "src": "replication",
+  "year": null,
+  "module": "module_1"
+ },
+ "BQ-replication-0b1290205131": {
+  "tags": [
+   "replication",
+   "module_1",
+   "hard"
+  ],
+  "diff": "national",
+  "len": 52,
+  "src": "replication",
+  "year": null,
+  "module": "module_1"
+ },
+ "BQ-replication-f4d00fe7805c": {
+  "tags": [
+   "replication",
+   "module_1",
+   "分子生物学",
+   "DNA 复制与结构",
+   "high_school"
+  ],
+  "diff": "basic",
+  "len": 19,
+  "src": "replication",
+  "year": null,
+  "module": "module_1"
+ },
+ "BQ-replication-0dc753310054": {
+  "tags": [
+   "replication",
+   "module_1",
+   "分子生物学",
+   "DNA 复制与结构",
+   "high_school"
+  ],
+  "diff": "basic",
+  "len": 17,
+  "src": "replication",
+  "year": null,
+  "module": "module_1"
+ },
+ "BQ-replication-3bbca03ef39e": {
+  "tags": [
+   "replication",
+   "module_1",
+   "分子生物学",
+   "DNA 复制",
+   "高考"
+  ],
+  "diff": "basic",
+  "len": 17,
+  "src": "replication",
+  "year": null,
+  "module": "module_1"
+ },
+ "BQ-replication-015625ffed73": {
+  "tags": [
+   "replication",
+   "module_1",
+   "easy"
+  ],
+  "diff": "basic",
+  "len": 60,
+  "src": "replication",
+  "year": null,
+  "module": "module_1"
+ },
+ "BQ-replication-ac64185e19bf": {
+  "tags": [
+   "replication",
+   "module_1",
+   "easy"
+  ],
+  "diff": "basic",
+  "len": 60,
+  "src": "replication",
+  "year": null,
+  "module": "module_1"
+ },
+ "BQ-replication-5323bbf3f55c": {
+  "tags": [
+   "replication",
+   "module_1",
+   "easy"
+  ],
+  "diff": "basic",
+  "len": 64,
+  "src": "replication",
+  "year": null,
+  "module": "module_1"
+ },
+ "BQ-replication-6fb463dc5892": {
+  "tags": [
+   "replication",
+   "细胞生物学",
+   "DNA 复制",
+   "high_school"
+  ],
+  "diff": "basic",
+  "len": 21,
+  "src": "replication",
+  "year": null,
+  "module": "module_1"
+ },
+ "BQ-replication-7bf847bc3de1": {
+  "tags": [
+   "replication",
+   "module_1",
+   "easy"
+  ],
+  "diff": "basic",
+  "len": 51,
+  "src": "replication",
+  "year": null,
+  "module": "module_1"
+ },
+ "BQ-replication-2a7cf8ceda1d": {
+  "tags": [
+   "replication",
+   "module_1",
+   "easy"
+  ],
+  "diff": "basic",
+  "len": 67,
+  "src": "replication",
+  "year": null,
+  "module": "module_1"
+ },
+ "BQ-replication-af657f1137c7": {
+  "tags": [
+   "replication",
+   "module_3",
+   "分子生物学",
+   "DNA 半保留复制",
+   "图表题"
+  ],
+  "diff": "league",
+  "len": 46,
+  "src": "replication",
+  "year": null,
+  "module": "module_3"
+ },
+ "BQ-replication-b2e739257a31": {
+  "tags": [
+   "replication",
+   "module_4",
+   "分子生物学",
+   "DNA 的结构与复制",
+   "high_school"
+  ],
+  "diff": "basic",
+  "len": 26,
+  "src": "replication",
+  "year": null,
+  "module": "module_4"
+ },
+ "BQ-replication-0de51e3f185a": {
+  "tags": [
+   "replication",
+   "module_4",
+   "分子生物学",
+   "DNA 的结构与复制",
+   "high_school"
+  ],
+  "diff": "basic",
+  "len": 20,
+  "src": "replication",
+  "year": null,
+  "module": "module_4"
+ },
+ "BQ-replication-b8dbf1c1d31c": {
+  "tags": [
+   "replication",
+   "module_4",
+   "分子生物学",
+   "DNA 的结构与复制",
+   "high_school"
+  ],
+  "diff": "basic",
+  "len": 17,
+  "src": "replication",
+  "year": null,
+  "module": "module_4"
+ },
+ "BQ-replication-103828ea51a4": {
+  "tags": [
+   "replication",
+   "遗传学",
+   "遗传信息传递",
+   "high_school"
+  ],
+  "diff": "basic",
+  "len": 51,
+  "src": "replication",
+  "year": null,
+  "module": "module_4"
+ },
+ "BQ-replication-30e23dc92f9f": {
+  "tags": [
+   "replication",
+   "逻辑推理",
+   "实验分析",
+   "DNA复制"
+  ],
+  "diff": 4,
+  "len": 132,
+  "src": "replication",
+  "year": null,
+  "module": "module_1"
+ },
+ "BQ-replication-84b2155600fb": {
+  "tags": [
+   "replication",
+   "module_1",
+   "生物学",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2015/art_1c13e648d84d4e38b94e2dfd5e5b1b0b.html",
+   "2015"
+  ],
+  "diff": "league",
+  "len": 13,
+  "src": "replication",
+  "year": 2015,
+  "module": "module_1"
+ },
+ "BQ-replication-01bbda8afb98": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "easy",
+  "len": 18,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-76e1e50d840a": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "easy",
+  "len": 18,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-c51cc8ba606d": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "easy",
+  "len": 18,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-3340ca4fe062": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "easy",
+  "len": 18,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-4801b09b277e": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "easy",
+  "len": 18,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-f2b189c96576": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "easy",
+  "len": 18,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-0a10f3d5e4aa": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "easy",
+  "len": 18,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-960a5bead905": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "easy",
+  "len": 18,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-11a928d15149": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "easy",
+  "len": 18,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-7dd66c23c9e4": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "easy",
+  "len": 18,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-c5287a79ab1c": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "easy",
+  "len": 18,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-6ad9f3b33d53": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "easy",
+  "len": 18,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-e5db7bafc327": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "easy",
+  "len": 18,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-1c4d9b61a404": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "easy",
+  "len": 18,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-808e67cd56a0": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "easy",
+  "len": 18,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-8094da72fca9": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "easy",
+  "len": 18,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-74af8255cac0": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "easy",
+  "len": 18,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-447b77d82a0d": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "easy",
+  "len": 18,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-2aab6d1a30d4": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "easy",
+  "len": 18,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-6e8b8c64f63c": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "easy",
+  "len": 18,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-49609d0a3ce2": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "easy",
+  "len": 18,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-23bfd52504c5": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "easy",
+  "len": 18,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-559f5b38e2b5": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "easy",
+  "len": 18,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-7b11b910cb23": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "easy",
+  "len": 18,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-9d19e3f35f0b": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-c3c2d0f69c02": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-70f860c7a24f": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-dd3b4641e307": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-29a3842674df": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-05c83cba0bd2": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-2efe704e47d3": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-00dd2b311bc6": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-db8935e34c5c": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-fd95528b0d8f": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-a5da21d3d67e": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-7085ec848f4d": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-ad31d9a103d4": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-1bc1234ea10c": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-15c47badf7f1": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-589152634b2e": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-437ad88d8267": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-9d0071360e25": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-d427f4b3ee4d": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-5315918bc771": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-85020cff7ccb": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-d4e89cb44008": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-4e1d26b31d88": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-d27725f9d43e": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-be947c580fb7": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "medium",
+  "len": 19,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-0b57e798b93e": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "medium",
+  "len": 19,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-361666e9956b": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "medium",
+  "len": 19,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-ffc5d1976a9d": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "medium",
+  "len": 19,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-7a025141b1d0": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "medium",
+  "len": 19,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-3b4de34091cc": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "medium",
+  "len": 19,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-60b573004d67": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "medium",
+  "len": 19,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-34f719ad1624": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "medium",
+  "len": 19,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-d86ca4d13f27": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "medium",
+  "len": 19,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-48b023f7bb00": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "medium",
+  "len": 19,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-85ff640fba05": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "medium",
+  "len": 19,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-8275eb50c0fa": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "medium",
+  "len": 19,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-60d658fe9928": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "medium",
+  "len": 19,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-831cfaffc2bf": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "medium",
+  "len": 19,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-d708395d9969": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "medium",
+  "len": 19,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-07044f696de9": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "medium",
+  "len": 19,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-d8917dd1aa10": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "medium",
+  "len": 19,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-72ee27764b61": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "medium",
+  "len": 19,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-024889f0420a": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "medium",
+  "len": 19,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-05832d6fe4dc": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "medium",
+  "len": 19,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-eb7ca4368e9b": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "medium",
+  "len": 19,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-94e4e65e9e56": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "medium",
+  "len": 19,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-487bee92cb03": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "medium",
+  "len": 19,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-b33c2d21817c": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "medium",
+  "len": 19,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-82a824d702c4": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-3af28ff56fd9": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-e7f3f2ac0d08": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-fbdf074e5eee": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-ac702d8dbff8": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-6cc79cca8102": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-a4c12557ed8d": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-7f0924741c02": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-7e98c2e2bc11": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-85d094c35669": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-abf404da6892": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-667a0e83a507": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-39c63ecef503": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-5bea010136e8": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-38b51054e487": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-00a6608076a8": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-512afb84112b": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-96fb96dc03e2": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-52ff6d1f0fbf": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-e78845dc911b": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-5b8eb5999e82": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-1fe31882f4aa": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-92dcf32c339d": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-replication-9c1b08da270b": {
+  "tags": [
+   "replication"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "replication",
+  "year": 2025,
+  "module": 1
+ }
+}
