@@ -7,8 +7,9 @@ import json
 import os
 import sys
 
-POOL_PATH = "/workspace/pool.json"
-DATA_DIR = "/workspace/data"
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+POOL_PATH = os.path.join(ROOT, "pool.json")
+DATA_DIR = os.path.join(ROOT, "data")
 
 
 def convert_one(q):

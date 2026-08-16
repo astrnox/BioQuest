@@ -20,7 +20,7 @@ from pathlib import Path
 
 # ---------- 1. 加载 .env ----------
 def load_env():
-    env_path = Path(__file__).resolve().parent.parent / ".env"
+    env_path = Path(__file__).resolve().parent.parent.parent / ".env"
     if not env_path.exists():
         return
     for line in env_path.read_text("utf-8").splitlines():
@@ -44,8 +44,8 @@ if not SERVICE_KEY:
 os.environ["SUPABASE_KEY"] = SERVICE_KEY
 
 # ---------- 2. import server.py 复用校验函数 ----------
-ROOT = Path(__file__).resolve().parent.parent
-sys.path.insert(0, str(ROOT))
+ROOT = Path(__file__).resolve().parent.parent.parent
+sys.path.insert(0, str(ROOT / "tools" / "python"))
 
 import server
 from server import (
@@ -351,7 +351,7 @@ def ai_fix(q, reason):
 # ---------- 6. 主流程 ----------
 def main():
     # 读取转换后题目的 id 集合（任务范围：仅重审这 346 道转换题）
-    conv_path = Path(__file__).resolve().parent / "converted-questions.json"
+    conv_path = Path(__file__).resolve().parent.parent.parent / "scripts" / "converted-questions.json"
     conv_ids = set()
     if conv_path.exists():
         try:

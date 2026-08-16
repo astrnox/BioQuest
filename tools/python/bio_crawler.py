@@ -53,8 +53,8 @@ logging.basicConfig(
 log = logging.getLogger("bio_crawler")
 
 # 复用 server.py 的 Supabase 工具（credentials、sb_request、_build_record 等）
-PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-sys.path.insert(0, PROJECT_ROOT)
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.insert(0, os.path.join(PROJECT_ROOT, 'tools', 'python'))
 try:
     from server import sb_request, _build_record, sb_upsert_batch
     HAS_SERVER = True
