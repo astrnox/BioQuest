@@ -1,0 +1,3879 @@
+{
+ "BQ-gene_mutation-637d69adc19d": {
+  "type": "mtf",
+  "question": "下列变异属于染色体结构变异的是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "基因突变只发生在减数分裂时",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "基因突变一定会引起生物性状改变",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "基因突变是生物变异的根本来源",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "体细胞的基因突变一定不能遗传给后代",
+    "answer": false
+   }
+  ],
+  "explanation": "基因突变可发生在 DNA 复制时（有丝分裂和减数分裂）；由于密码子简并性、非编码区突变等原因，不一定改变性状；植物体细胞突变可通过无性繁殖遗传。",
+  "subject": "遗传学",
+  "concept": "基因突变与染色体变异",
+  "difficulty": "basic",
+  "chart": null,
+  "year": null,
+  "module": "module_3",
+  "target": "high_school",
+  "tags": [
+   "module_3",
+   "遗传学",
+   "基因突变与染色体变异",
+   "high_school"
+  ],
+  "oldId": "2001490113"
+ },
+ "BQ-gene_mutation-5e86e367e6b4": {
+  "type": "mtf",
+  "question": "关于基因突变的叙述，正确的是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "基因突变只发生在减数分裂时",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "基因突变一定会引起生物性状改变",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "基因突变是生物变异的根本来源",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "体细胞的基因突变一定不能遗传给后代",
+    "answer": false
+   }
+  ],
+  "explanation": "基因突变可发生在 DNA 复制时（有丝分裂和减数分裂）；由于密码子简并性、非编码区突变等原因，不一定改变性状；植物体细胞突变可通过无性繁殖遗传。",
+  "subject": "遗传学",
+  "concept": "基因突变与染色体变异",
+  "difficulty": "basic",
+  "chart": null,
+  "year": null,
+  "module": "module_3",
+  "target": "high_school",
+  "tags": [
+   "module_3",
+   "遗传学",
+   "基因突变与染色体变异",
+   "high_school"
+  ],
+  "oldId": "694147020"
+ },
+ "BQ-gene_mutation-9c57ef55d3b2": {
+  "type": "mtf",
+  "question": "关于基因突变的叙述，正确的是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "基因突变只发生在减数分裂过程中",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "基因突变一定会导致生物性状的改变",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "基因突变是生物变异的根本来源",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "基因突变不能发生在体细胞中",
+    "answer": false
+   }
+  ],
+  "explanation": "基因突变可发生在有丝分裂和减数分裂的 DNA 复制时；由于密码子简并性等原因，突变不一定引起性状改变；体细胞突变一般不遗传给后代。",
+  "subject": "遗传学",
+  "concept": "基因突变",
+  "difficulty": "basic",
+  "chart": null,
+  "year": null,
+  "module": "module_3",
+  "target": "high_school",
+  "tags": [
+   "module_3",
+   "遗传学",
+   "基因突变",
+   "高考"
+  ],
+  "oldId": "1202067780"
+ },
+ "BQ-gene_mutation-36c0707070ba": {
+  "type": "mtf",
+  "question": "关于染色体组的叙述，正确的是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "基因突变只发生在减数分裂时",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "基因突变一定会引起生物性状改变",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "基因突变是生物变异的根本来源",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "体细胞的基因突变一定不能遗传给后代",
+    "answer": false
+   }
+  ],
+  "explanation": "基因突变可发生在 DNA 复制时（有丝分裂和减数分裂）；由于密码子简并性、非编码区突变等原因，不一定改变性状；植物体细胞突变可通过无性繁殖遗传。",
+  "subject": "遗传学",
+  "concept": "基因突变与染色体变异",
+  "difficulty": "basic",
+  "chart": null,
+  "year": null,
+  "module": "module_3",
+  "target": "high_school",
+  "tags": [
+   "module_3",
+   "遗传学",
+   "基因突变与染色体变异",
+   "high_school"
+  ],
+  "oldId": "1507305985"
+ },
+ "BQ-gene_mutation-ca26e024d5fc": {
+  "type": "multi_judge",
+  "question": "某二倍体种群中，一新发显性突变最初仅存在于一个杂合个体。该突变完全致死（显性纯合与杂合均无法存活至繁殖）。",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "该突变基因频率在下一代将直接降为零，无法传递。",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "若该突变为隐性致死，其基因频率下降速度将快于显性致死。",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "自然选择对显性致死等位基因的清除效率高于隐性致死。",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "遗传漂变在大规模种群中比在小种群中更易固定该致死突变。",
+    "answer": false
+   }
+  ],
+  "explanation": "A 正确：显性致死突变在杂合子即表达致死效应，携带者无法繁殖，基因无法传递，频率即刻归零。B 错误：隐性致死基因可隐藏在杂合子中逃避选择，下降速度远慢于显性致死。C 正确：显性致死基因完全暴露于选择压力下，清除效率最高；隐性基因因杂合子保护而难以清除。D 错误：遗传漂变强度与种群大小成反比，小种群中漂变作用强，才可能偶然固定有害突变，大种群中主要受选择支配。",
+  "subject": "群体遗传学",
+  "concept": "致死突变与选择效率",
+  "difficulty": "national",
+  "chart": null,
+  "year": null,
+  "module": "module_4",
+  "target": "competition",
+  "tags": [
+   "module_4",
+   "hard"
+  ],
+  "oldId": "1602680398"
+ },
+ "BQ-gene_mutation-787fee4c9dba": {
+  "type": "mtf",
+  "question": "研究人员利用 CRISPR-Cas9 基因编辑技术在小鼠中敲除了一种参与 DNA 修复的酶。结果发现敲除该酶的小鼠在暴露于 UV 辐射后，细胞中 DNA 损伤显著增加。以下关于该酶的功能的描述中，错误的是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "该酶参与核苷酸切除修复（NER）途径",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "该酶能够识别并切除 UV 辐射引起的 DNA 损伤",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "该酶是 DNA 修复过程中的关键酶",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "该酶能够直接修复 DNA 损伤",
+    "answer": true
+   }
+  ],
+  "explanation": "选项 A、B 和 C 都是正确的，该酶参与核苷酸切除修复（NER）途径，能够识别并切除 UV 辐射引起的 DNA 损伤，是 DNA 修复过程中的关键酶。选项 D 是错误的，该酶不能直接修复 DNA 损伤，而是通过参与 NER 途径来修复 DNA 损伤。",
+  "subject": "遗传学",
+  "concept": "DNA 修复",
+  "difficulty": "national",
+  "chart": null,
+  "year": null,
+  "module": "module_4",
+  "target": "competition",
+  "tags": [
+   "遗传学",
+   "DNA 修复",
+   "competition"
+  ],
+  "oldId": "1363851730"
+ },
+ "BQ-gene_mutation-d8eb2f99a7b4": {
+  "stem": "Stickler 综合征I 型是由12 号染色体上COL2A1 基因突变引起的遗传病。一个受该病影响的家庭希望通过分\n子生物学方法进行检测。对以下关于可用于研究COL2A1 基因及其表达产物的分子遗传学检测技术的陈述进行\n正误判断：",
+  "options": {
+   "A": "Western 印迹法可以通过检测COL2A1 蛋白量的变化来协助推断启动子功能是否异常，但不能确定启动子\nDNA 的具体序列改变",
+   "B": "Southern 印迹法检测启动子区域DNA 变异的能力依赖于突变是否改变了限制性内切酶识别位点或导致了较\n大的结构变化",
+   "C": "定量RT-PCR 技术可用于测量COL2A1 mRNA 的丰度，从而评估mRNA 序列不变时启动子突变对基因转录\n活性的影响，但不能直接鉴定DNA 序列突变",
+   "D": "利用COL2A1 基因探针进行荧光原位杂交(FISH)，可以通过分析杂交信号强度的细微变化来直接识别启动\n子区域具体的DNA 序列突变类型"
+  },
+  "answer": {
+   "A": true,
+   "B": false,
+   "C": false,
+   "D": false
+  },
+  "analysis": "正确答案：A。详细解析请通过 AI 导师获取（在 AI 对话中粘贴本题题干即可）。",
+  "knowledge": [
+   "module_4",
+   "遗传学"
+  ],
+  "module": "module_4",
+  "difficulty": "league",
+  "target": "competition",
+  "subject": "遗传学",
+  "concept": "基因突变",
+  "tags": [
+   "module_4",
+   "遗传学",
+   "基因突变",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2025/art_b153fd076f3f4fe282acfc333c4d4ab6.html",
+   "2025"
+  ],
+  "weight": 1,
+  "fb_good": 0,
+  "fb_bad": 0,
+  "created_at": 1782028596.2316976,
+  "source": "https://www.czs.org.cn/swjs/lsstxz/art/2025/art_b153fd076f3f4fe282acfc333c4d4ab6.html",
+  "year": 2025,
+  "_analysis_sparse": true,
+  "_review_reason": "解析为 AI 引导提示，待人工补充详细解析",
+  "type": "multi_judge",
+  "question": "Stickler 综合征I 型是由12 号染色体上COL2A1 基因突变引起的遗传病。一个受该病影响的家庭希望通过分\n子生物学方法进行检测。对以下关于可用于研究COL2A1 基因及其表达产物的分子遗传学检测技术的陈述进行\n正误判断：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "Western 印迹法可以通过检测COL2A1 蛋白量的变化来协助推断启动子功能是否异常，但不能确定启动子\nDNA 的具体序列改变",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "Southern 印迹法检测启动子区域DNA 变异的能力依赖于突变是否改变了限制性内切酶识别位点或导致了较\n大的结构变化",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "定量RT-PCR 技术可用于测量COL2A1 mRNA 的丰度，从而评估mRNA 序列不变时启动子突变对基因转录\n活性的影响，但不能直接鉴定DNA 序列突变",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "利用COL2A1 基因探针进行荧光原位杂交(FISH)，可以通过分析杂交信号强度的细微变化来直接识别启动\n子区域具体的DNA 序列突变类型",
+    "answer": false
+   }
+  ],
+  "explanation": "正确答案：A。详细解析请通过 AI 导师获取（在 AI 对话中粘贴本题题干即可）。",
+  "chart": null,
+  "oldId": "crawled_1782028596231_9881"
+ },
+ "BQ-gene_mutation-13dfc5ec03cb": {
+  "stem": "在某一种果蝇中，野生型的果蝇眼睛为红色。w 基因的纯合突变的果蝇品系中眼睛颜色为白色。在另一个y\n突变纯合的突变品系中眼睛颜色为黄色。让一个纯合的白眼突变果蝇与纯合的黄眼突变果蝇杂交，后代均为红\n眼。让这些后代再自由交配，他们产生红：黄：白=9：3：4。那么下面描述中正确的是：",
+  "options": {
+   "A": "w 基因对y 基因是上位的",
+   "B": "y 基因对w 基因是上位的",
+   "C": "w 基因对y 基因是显性的",
+   "D": "y 基因对w 基因是显性的"
+  },
+  "answer": {
+   "A": true,
+   "B": false,
+   "C": false,
+   "D": false
+  },
+  "analysis": "正确答案：A",
+  "knowledge": [
+   "module_1",
+   "生物学"
+  ],
+  "module": "module_1",
+  "difficulty": "league",
+  "target": "competition",
+  "subject": "生物学",
+  "concept": "生物学",
+  "tags": [
+   "module_1",
+   "生物学",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2024/art_f5fe44f36762455fb9f8f99b9e0bf2e2.html",
+   "2024"
+  ],
+  "weight": 1,
+  "fb_good": 0,
+  "fb_bad": 0,
+  "created_at": 1782028590.0688398,
+  "source": "https://www.czs.org.cn/swjs/lsstxz/art/2024/art_f5fe44f36762455fb9f8f99b9e0bf2e2.html",
+  "year": 2024,
+  "_analysis_sparse": true,
+  "_review_reason": "解析为 AI 引导提示，待人工补充详细解析",
+  "type": "multi_judge",
+  "question": "在某一种果蝇中，野生型的果蝇眼睛为红色。w 基因的纯合突变的果蝇品系中眼睛颜色为白色。在另一个y\n突变纯合的突变品系中眼睛颜色为黄色。让一个纯合的白眼突变果蝇与纯合的黄眼突变果蝇杂交，后代均为红\n眼。让这些后代再自由交配，他们产生红：黄：白=9：3：4。那么下面描述中正确的是：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "w 基因对y 基因是上位的",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "y 基因对w 基因是上位的",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "w 基因对y 基因是显性的",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "y 基因对w 基因是显性的",
+    "answer": false
+   }
+  ],
+  "explanation": "正确答案：A",
+  "chart": null,
+  "oldId": "crawled_1782028590068_0757"
+ },
+ "BQ-gene_mutation-13f462e1c7ad": {
+  "stem": "沃纳综合征（Werner Syndrome）是由WRN 基因突变导致的成人早老症。WRN 蛋白是一种DNA 解旋酶，在\nDNA 复制、修复、转录和端粒维持中发挥作用。沃纳综合征患者常表现出身高低于正常人。研究人员利用斑马\n鱼模型探究其机制：敲除斑马鱼wrn 基因（WRN 同源基因）导致斑马鱼身长缩短和软骨发育异常；RNA 测序显\n示，敲除个体中SHOX 基因表达量显著下调；在敲除个体中过表达SHOX 能部分缓解软骨发育异常。对以下基\n于这些研究信息的陈述进行正误判断：",
+  "options": {
+   "A": "实验结果表明，SHOX 基因的表达水平直接调控WRN 蛋白的活性",
+   "B": "实验结果支持WRN 基因的功能对于维持正常的SHOX 基因表达是必需的",
+   "C": "这些发现说明，SHOX 基因发生突变是引发沃纳综合征中WRN 蛋白功能异常的根本原因",
+   "D": "利用抗WRN 蛋白的抗体进行染色质免疫共沉淀（ChIP）是研究WRN 蛋白直接调控靶基因的可行方法"
+  },
+  "answer": {
+   "A": true,
+   "B": false,
+   "C": false,
+   "D": false
+  },
+  "analysis": "正确答案：A。详细解析请通过 AI 导师获取（在 AI 对话中粘贴本题题干即可）。",
+  "knowledge": [
+   "module_4",
+   "遗传学"
+  ],
+  "module": "module_4",
+  "difficulty": "league",
+  "target": "competition",
+  "subject": "遗传学",
+  "concept": "基因突变",
+  "tags": [
+   "module_4",
+   "遗传学",
+   "基因突变",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2025/art_b153fd076f3f4fe282acfc333c4d4ab6.html",
+   "2025"
+  ],
+  "weight": 1,
+  "fb_good": 0,
+  "fb_bad": 0,
+  "created_at": 1782028596.2316976,
+  "source": "https://www.czs.org.cn/swjs/lsstxz/art/2025/art_b153fd076f3f4fe282acfc333c4d4ab6.html",
+  "year": 2025,
+  "_analysis_sparse": true,
+  "_review_reason": "解析为 AI 引导提示，待人工补充详细解析",
+  "type": "multi_judge",
+  "question": "沃纳综合征（Werner Syndrome）是由WRN 基因突变导致的成人早老症。WRN 蛋白是一种DNA 解旋酶，在\nDNA 复制、修复、转录和端粒维持中发挥作用。沃纳综合征患者常表现出身高低于正常人。研究人员利用斑马\n鱼模型探究其机制：敲除斑马鱼wrn 基因（WRN 同源基因）导致斑马鱼身长缩短和软骨发育异常；RNA 测序显\n示，敲除个体中SHOX 基因表达量显著下调；在敲除个体中过表达SHOX 能部分缓解软骨发育异常。对以下基\n于这些研究信息的陈述进行正误判断：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "实验结果表明，SHOX 基因的表达水平直接调控WRN 蛋白的活性",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "实验结果支持WRN 基因的功能对于维持正常的SHOX 基因表达是必需的",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "这些发现说明，SHOX 基因发生突变是引发沃纳综合征中WRN 蛋白功能异常的根本原因",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "利用抗WRN 蛋白的抗体进行染色质免疫共沉淀（ChIP）是研究WRN 蛋白直接调控靶基因的可行方法",
+    "answer": false
+   }
+  ],
+  "explanation": "正确答案：A。详细解析请通过 AI 导师获取（在 AI 对话中粘贴本题题干即可）。",
+  "chart": null,
+  "oldId": "crawled_1782028596231_2468"
+ },
+ "BQ-gene_mutation-16ded2b28089": {
+  "stem": "玉米vp2、vp5、vp7、vp14 突变体会发生胎萌现象，原因是在这些突变体中缺乏：（单选）",
+  "options": {
+   "A": "脱落酸",
+   "B": "赤霉素",
+   "C": "细胞分裂素",
+   "D": "乙烯"
+  },
+  "answer": {
+   "A": true,
+   "B": false,
+   "C": false,
+   "D": false
+  },
+  "analysis": "正确答案：A",
+  "knowledge": [
+   "module_1",
+   "生物学"
+  ],
+  "module": "module_1",
+  "difficulty": "league",
+  "target": "competition",
+  "subject": "生物学",
+  "concept": "生物学",
+  "tags": [
+   "module_1",
+   "生物学",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2015/art_1c13e648d84d4e38b94e2dfd5e5b1b0b.html",
+   "2015"
+  ],
+  "weight": 1,
+  "fb_good": 0,
+  "fb_bad": 0,
+  "created_at": 1782028584.5795977,
+  "source": "https://www.czs.org.cn/swjs/lsstxz/art/2015/art_1c13e648d84d4e38b94e2dfd5e5b1b0b.html",
+  "year": 2015,
+  "_analysis_sparse": true,
+  "_review_reason": "解析为 AI 引导提示，待人工补充详细解析",
+  "type": "multi_judge",
+  "question": "玉米vp2、vp5、vp7、vp14 突变体会发生胎萌现象，原因是在这些突变体中缺乏：（单选）",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "脱落酸",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "赤霉素",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "细胞分裂素",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "乙烯",
+    "answer": false
+   }
+  ],
+  "explanation": "正确答案：A",
+  "chart": null,
+  "oldId": "crawled_1782028584579_8650"
+ },
+ "BQ-gene_mutation-29ecbeb14852": {
+  "type": "mtf",
+  "question": "关于DNA损伤修复，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "DNA损伤修复通路完全冗余且相互独立，一种通路失活不会影响细胞对DNA损伤的响应",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "同源重组修复（HR）利用同源染色体或姐妹染色单体作为修复模板，保真度高于非同源末端连接（NHEJ）",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "核苷酸切除修复（NER）识别并切除含有DNA损伤的寡核苷酸片段，可修复紫外诱导的嘧啶二聚体",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "碱基切除修复（BER）主要修复单个受损碱基，由DNA糖苷酶识别并切除异常碱基",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：BER的机制。C正确：NER修复大范围DNA损伤。B正确：HR vs NHEJ的保真度差异。A错误：不同修复通路之间存在交叉和补偿，但并非完全冗余。如NER缺陷导致着色性干皮病；HR缺陷（如BRCA突变）可增加癌症风险。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "DNA修复",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1584536937",
+  "tags": []
+ },
+ "BQ-gene_mutation-3f83a2d64845": {
+  "type": "mtf",
+  "question": "关于DNA损伤修复，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "DNA损伤修复通路完全冗余且相互独立，一种通路失活不会影响细胞对DNA损伤的响应",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "同源重组修复（HR）利用同源染色体或姐妹染色单体作为修复模板，保真度高于非同源末端连接（NHEJ）",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "碱基切除修复（BER）主要修复单个受损碱基，由DNA糖苷酶识别并切除异常碱基",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "核苷酸切除修复（NER）识别并切除含有DNA损伤的寡核苷酸片段，可修复紫外诱导的嘧啶二聚体",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：BER的机制。D正确：NER修复大范围DNA损伤。B正确：HR vs NHEJ的保真度差异。A错误：不同修复通路之间存在交叉和补偿，但并非完全冗余。如NER缺陷导致着色性干皮病；HR缺陷（如BRCA突变）可增加癌症风险。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "DNA修复",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1584536937",
+  "tags": []
+ },
+ "BQ-gene_mutation-c968b35861cb": {
+  "type": "mtf",
+  "question": "关于DNA损伤修复，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "DNA损伤修复通路完全冗余且相互独立，一种通路失活不会影响细胞对DNA损伤的响应",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "核苷酸切除修复（NER）识别并切除含有DNA损伤的寡核苷酸片段，可修复紫外诱导的嘧啶二聚体",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "同源重组修复（HR）利用同源染色体或姐妹染色单体作为修复模板，保真度高于非同源末端连接（NHEJ）",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "碱基切除修复（BER）主要修复单个受损碱基，由DNA糖苷酶识别并切除异常碱基",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：BER的机制。B正确：NER修复大范围DNA损伤。C正确：HR vs NHEJ的保真度差异。A错误：不同修复通路之间存在交叉和补偿，但并非完全冗余。如NER缺陷导致着色性干皮病；HR缺陷（如BRCA突变）可增加癌症风险。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "DNA修复",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1584536937",
+  "tags": []
+ },
+ "BQ-gene_mutation-5d544567c34b": {
+  "type": "mtf",
+  "question": "关于DNA损伤修复，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "DNA损伤修复通路完全冗余且相互独立，一种通路失活不会影响细胞对DNA损伤的响应",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "核苷酸切除修复（NER）识别并切除含有DNA损伤的寡核苷酸片段，可修复紫外诱导的嘧啶二聚体",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "碱基切除修复（BER）主要修复单个受损碱基，由DNA糖苷酶识别并切除异常碱基",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "同源重组修复（HR）利用同源染色体或姐妹染色单体作为修复模板，保真度高于非同源末端连接（NHEJ）",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：BER的机制。B正确：NER修复大范围DNA损伤。D正确：HR vs NHEJ的保真度差异。A错误：不同修复通路之间存在交叉和补偿，但并非完全冗余。如NER缺陷导致着色性干皮病；HR缺陷（如BRCA突变）可增加癌症风险。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "DNA修复",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1584536937",
+  "tags": []
+ },
+ "BQ-gene_mutation-64f2b45ff987": {
+  "type": "mtf",
+  "question": "关于DNA损伤修复，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "DNA损伤修复通路完全冗余且相互独立，一种通路失活不会影响细胞对DNA损伤的响应",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "碱基切除修复（BER）主要修复单个受损碱基，由DNA糖苷酶识别并切除异常碱基",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "同源重组修复（HR）利用同源染色体或姐妹染色单体作为修复模板，保真度高于非同源末端连接（NHEJ）",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "核苷酸切除修复（NER）识别并切除含有DNA损伤的寡核苷酸片段，可修复紫外诱导的嘧啶二聚体",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：BER的机制。D正确：NER修复大范围DNA损伤。C正确：HR vs NHEJ的保真度差异。A错误：不同修复通路之间存在交叉和补偿，但并非完全冗余。如NER缺陷导致着色性干皮病；HR缺陷（如BRCA突变）可增加癌症风险。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "DNA修复",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1584536937",
+  "tags": []
+ },
+ "BQ-gene_mutation-44dddc84dd26": {
+  "type": "mtf",
+  "question": "关于DNA损伤修复，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "DNA损伤修复通路完全冗余且相互独立，一种通路失活不会影响细胞对DNA损伤的响应",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "碱基切除修复（BER）主要修复单个受损碱基，由DNA糖苷酶识别并切除异常碱基",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "核苷酸切除修复（NER）识别并切除含有DNA损伤的寡核苷酸片段，可修复紫外诱导的嘧啶二聚体",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "同源重组修复（HR）利用同源染色体或姐妹染色单体作为修复模板，保真度高于非同源末端连接（NHEJ）",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：BER的机制。C正确：NER修复大范围DNA损伤。D正确：HR vs NHEJ的保真度差异。A错误：不同修复通路之间存在交叉和补偿，但并非完全冗余。如NER缺陷导致着色性干皮病；HR缺陷（如BRCA突变）可增加癌症风险。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "DNA修复",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1584536937",
+  "tags": []
+ },
+ "BQ-gene_mutation-16a43dd64b47": {
+  "type": "mtf",
+  "question": "关于DNA损伤修复，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "同源重组修复（HR）利用同源染色体或姐妹染色单体作为修复模板，保真度高于非同源末端连接（NHEJ）",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "DNA损伤修复通路完全冗余且相互独立，一种通路失活不会影响细胞对DNA损伤的响应",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "核苷酸切除修复（NER）识别并切除含有DNA损伤的寡核苷酸片段，可修复紫外诱导的嘧啶二聚体",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "碱基切除修复（BER）主要修复单个受损碱基，由DNA糖苷酶识别并切除异常碱基",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：BER的机制。C正确：NER修复大范围DNA损伤。A正确：HR vs NHEJ的保真度差异。B错误：不同修复通路之间存在交叉和补偿，但并非完全冗余。如NER缺陷导致着色性干皮病；HR缺陷（如BRCA突变）可增加癌症风险。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "DNA修复",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1584536937",
+  "tags": []
+ },
+ "BQ-gene_mutation-1ad2561a10f1": {
+  "type": "mtf",
+  "question": "关于DNA损伤修复，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "同源重组修复（HR）利用同源染色体或姐妹染色单体作为修复模板，保真度高于非同源末端连接（NHEJ）",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "DNA损伤修复通路完全冗余且相互独立，一种通路失活不会影响细胞对DNA损伤的响应",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "碱基切除修复（BER）主要修复单个受损碱基，由DNA糖苷酶识别并切除异常碱基",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "核苷酸切除修复（NER）识别并切除含有DNA损伤的寡核苷酸片段，可修复紫外诱导的嘧啶二聚体",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：BER的机制。D正确：NER修复大范围DNA损伤。A正确：HR vs NHEJ的保真度差异。B错误：不同修复通路之间存在交叉和补偿，但并非完全冗余。如NER缺陷导致着色性干皮病；HR缺陷（如BRCA突变）可增加癌症风险。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "DNA修复",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1584536937",
+  "tags": []
+ },
+ "BQ-gene_mutation-c0122a1ee598": {
+  "type": "mtf",
+  "question": "关于DNA损伤修复，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "同源重组修复（HR）利用同源染色体或姐妹染色单体作为修复模板，保真度高于非同源末端连接（NHEJ）",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "核苷酸切除修复（NER）识别并切除含有DNA损伤的寡核苷酸片段，可修复紫外诱导的嘧啶二聚体",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "DNA损伤修复通路完全冗余且相互独立，一种通路失活不会影响细胞对DNA损伤的响应",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "碱基切除修复（BER）主要修复单个受损碱基，由DNA糖苷酶识别并切除异常碱基",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：BER的机制。B正确：NER修复大范围DNA损伤。A正确：HR vs NHEJ的保真度差异。C错误：不同修复通路之间存在交叉和补偿，但并非完全冗余。如NER缺陷导致着色性干皮病；HR缺陷（如BRCA突变）可增加癌症风险。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "DNA修复",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1584536937",
+  "tags": []
+ },
+ "BQ-gene_mutation-4ec9f7e11b36": {
+  "type": "mtf",
+  "question": "关于DNA损伤修复，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "同源重组修复（HR）利用同源染色体或姐妹染色单体作为修复模板，保真度高于非同源末端连接（NHEJ）",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "核苷酸切除修复（NER）识别并切除含有DNA损伤的寡核苷酸片段，可修复紫外诱导的嘧啶二聚体",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "碱基切除修复（BER）主要修复单个受损碱基，由DNA糖苷酶识别并切除异常碱基",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "DNA损伤修复通路完全冗余且相互独立，一种通路失活不会影响细胞对DNA损伤的响应",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确：BER的机制。B正确：NER修复大范围DNA损伤。A正确：HR vs NHEJ的保真度差异。D错误：不同修复通路之间存在交叉和补偿，但并非完全冗余。如NER缺陷导致着色性干皮病；HR缺陷（如BRCA突变）可增加癌症风险。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "DNA修复",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1584536937",
+  "tags": []
+ },
+ "BQ-gene_mutation-eae009161649": {
+  "type": "mtf",
+  "question": "关于DNA损伤修复，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "同源重组修复（HR）利用同源染色体或姐妹染色单体作为修复模板，保真度高于非同源末端连接（NHEJ）",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "碱基切除修复（BER）主要修复单个受损碱基，由DNA糖苷酶识别并切除异常碱基",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "DNA损伤修复通路完全冗余且相互独立，一种通路失活不会影响细胞对DNA损伤的响应",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "核苷酸切除修复（NER）识别并切除含有DNA损伤的寡核苷酸片段，可修复紫外诱导的嘧啶二聚体",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：BER的机制。D正确：NER修复大范围DNA损伤。A正确：HR vs NHEJ的保真度差异。C错误：不同修复通路之间存在交叉和补偿，但并非完全冗余。如NER缺陷导致着色性干皮病；HR缺陷（如BRCA突变）可增加癌症风险。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "DNA修复",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1584536937",
+  "tags": []
+ },
+ "BQ-gene_mutation-85879e464192": {
+  "type": "mtf",
+  "question": "关于DNA损伤修复，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "同源重组修复（HR）利用同源染色体或姐妹染色单体作为修复模板，保真度高于非同源末端连接（NHEJ）",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "碱基切除修复（BER）主要修复单个受损碱基，由DNA糖苷酶识别并切除异常碱基",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "核苷酸切除修复（NER）识别并切除含有DNA损伤的寡核苷酸片段，可修复紫外诱导的嘧啶二聚体",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "DNA损伤修复通路完全冗余且相互独立，一种通路失活不会影响细胞对DNA损伤的响应",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确：BER的机制。C正确：NER修复大范围DNA损伤。A正确：HR vs NHEJ的保真度差异。D错误：不同修复通路之间存在交叉和补偿，但并非完全冗余。如NER缺陷导致着色性干皮病；HR缺陷（如BRCA突变）可增加癌症风险。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "DNA修复",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1584536937",
+  "tags": []
+ },
+ "BQ-gene_mutation-735c099277fd": {
+  "type": "mtf",
+  "question": "关于DNA损伤修复，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "核苷酸切除修复（NER）识别并切除含有DNA损伤的寡核苷酸片段，可修复紫外诱导的嘧啶二聚体",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "DNA损伤修复通路完全冗余且相互独立，一种通路失活不会影响细胞对DNA损伤的响应",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "同源重组修复（HR）利用同源染色体或姐妹染色单体作为修复模板，保真度高于非同源末端连接（NHEJ）",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "碱基切除修复（BER）主要修复单个受损碱基，由DNA糖苷酶识别并切除异常碱基",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：BER的机制。A正确：NER修复大范围DNA损伤。C正确：HR vs NHEJ的保真度差异。B错误：不同修复通路之间存在交叉和补偿，但并非完全冗余。如NER缺陷导致着色性干皮病；HR缺陷（如BRCA突变）可增加癌症风险。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "DNA修复",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1584536937",
+  "tags": []
+ },
+ "BQ-gene_mutation-088911742a18": {
+  "type": "mtf",
+  "question": "关于DNA损伤修复，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "核苷酸切除修复（NER）识别并切除含有DNA损伤的寡核苷酸片段，可修复紫外诱导的嘧啶二聚体",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "DNA损伤修复通路完全冗余且相互独立，一种通路失活不会影响细胞对DNA损伤的响应",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "碱基切除修复（BER）主要修复单个受损碱基，由DNA糖苷酶识别并切除异常碱基",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "同源重组修复（HR）利用同源染色体或姐妹染色单体作为修复模板，保真度高于非同源末端连接（NHEJ）",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：BER的机制。A正确：NER修复大范围DNA损伤。D正确：HR vs NHEJ的保真度差异。B错误：不同修复通路之间存在交叉和补偿，但并非完全冗余。如NER缺陷导致着色性干皮病；HR缺陷（如BRCA突变）可增加癌症风险。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "DNA修复",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1584536937",
+  "tags": []
+ },
+ "BQ-gene_mutation-f64cfda5289a": {
+  "type": "mtf",
+  "question": "关于DNA损伤修复，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "核苷酸切除修复（NER）识别并切除含有DNA损伤的寡核苷酸片段，可修复紫外诱导的嘧啶二聚体",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "同源重组修复（HR）利用同源染色体或姐妹染色单体作为修复模板，保真度高于非同源末端连接（NHEJ）",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "DNA损伤修复通路完全冗余且相互独立，一种通路失活不会影响细胞对DNA损伤的响应",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "碱基切除修复（BER）主要修复单个受损碱基，由DNA糖苷酶识别并切除异常碱基",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：BER的机制。A正确：NER修复大范围DNA损伤。B正确：HR vs NHEJ的保真度差异。C错误：不同修复通路之间存在交叉和补偿，但并非完全冗余。如NER缺陷导致着色性干皮病；HR缺陷（如BRCA突变）可增加癌症风险。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "DNA修复",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1584536937",
+  "tags": []
+ },
+ "BQ-gene_mutation-15ff02bb6534": {
+  "type": "mtf",
+  "question": "关于DNA损伤修复，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "核苷酸切除修复（NER）识别并切除含有DNA损伤的寡核苷酸片段，可修复紫外诱导的嘧啶二聚体",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "同源重组修复（HR）利用同源染色体或姐妹染色单体作为修复模板，保真度高于非同源末端连接（NHEJ）",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "碱基切除修复（BER）主要修复单个受损碱基，由DNA糖苷酶识别并切除异常碱基",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "DNA损伤修复通路完全冗余且相互独立，一种通路失活不会影响细胞对DNA损伤的响应",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确：BER的机制。A正确：NER修复大范围DNA损伤。B正确：HR vs NHEJ的保真度差异。D错误：不同修复通路之间存在交叉和补偿，但并非完全冗余。如NER缺陷导致着色性干皮病；HR缺陷（如BRCA突变）可增加癌症风险。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "DNA修复",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1584536937",
+  "tags": []
+ },
+ "BQ-gene_mutation-a67e5366929e": {
+  "type": "mtf",
+  "question": "关于DNA损伤修复，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "核苷酸切除修复（NER）识别并切除含有DNA损伤的寡核苷酸片段，可修复紫外诱导的嘧啶二聚体",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "碱基切除修复（BER）主要修复单个受损碱基，由DNA糖苷酶识别并切除异常碱基",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "DNA损伤修复通路完全冗余且相互独立，一种通路失活不会影响细胞对DNA损伤的响应",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "同源重组修复（HR）利用同源染色体或姐妹染色单体作为修复模板，保真度高于非同源末端连接（NHEJ）",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：BER的机制。A正确：NER修复大范围DNA损伤。D正确：HR vs NHEJ的保真度差异。C错误：不同修复通路之间存在交叉和补偿，但并非完全冗余。如NER缺陷导致着色性干皮病；HR缺陷（如BRCA突变）可增加癌症风险。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "DNA修复",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1584536937",
+  "tags": []
+ },
+ "BQ-gene_mutation-0304c4c728b2": {
+  "type": "mtf",
+  "question": "关于DNA损伤修复，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "核苷酸切除修复（NER）识别并切除含有DNA损伤的寡核苷酸片段，可修复紫外诱导的嘧啶二聚体",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "碱基切除修复（BER）主要修复单个受损碱基，由DNA糖苷酶识别并切除异常碱基",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "同源重组修复（HR）利用同源染色体或姐妹染色单体作为修复模板，保真度高于非同源末端连接（NHEJ）",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "DNA损伤修复通路完全冗余且相互独立，一种通路失活不会影响细胞对DNA损伤的响应",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确：BER的机制。A正确：NER修复大范围DNA损伤。C正确：HR vs NHEJ的保真度差异。D错误：不同修复通路之间存在交叉和补偿，但并非完全冗余。如NER缺陷导致着色性干皮病；HR缺陷（如BRCA突变）可增加癌症风险。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "DNA修复",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1584536937",
+  "tags": []
+ },
+ "BQ-gene_mutation-14927af523fd": {
+  "type": "mtf",
+  "question": "关于DNA损伤修复，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "碱基切除修复（BER）主要修复单个受损碱基，由DNA糖苷酶识别并切除异常碱基",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "DNA损伤修复通路完全冗余且相互独立，一种通路失活不会影响细胞对DNA损伤的响应",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "同源重组修复（HR）利用同源染色体或姐妹染色单体作为修复模板，保真度高于非同源末端连接（NHEJ）",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "核苷酸切除修复（NER）识别并切除含有DNA损伤的寡核苷酸片段，可修复紫外诱导的嘧啶二聚体",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：BER的机制。D正确：NER修复大范围DNA损伤。C正确：HR vs NHEJ的保真度差异。B错误：不同修复通路之间存在交叉和补偿，但并非完全冗余。如NER缺陷导致着色性干皮病；HR缺陷（如BRCA突变）可增加癌症风险。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "DNA修复",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1584536937",
+  "tags": []
+ },
+ "BQ-gene_mutation-bbfe03a4b9a3": {
+  "type": "mtf",
+  "question": "关于DNA损伤修复，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "碱基切除修复（BER）主要修复单个受损碱基，由DNA糖苷酶识别并切除异常碱基",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "DNA损伤修复通路完全冗余且相互独立，一种通路失活不会影响细胞对DNA损伤的响应",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "核苷酸切除修复（NER）识别并切除含有DNA损伤的寡核苷酸片段，可修复紫外诱导的嘧啶二聚体",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "同源重组修复（HR）利用同源染色体或姐妹染色单体作为修复模板，保真度高于非同源末端连接（NHEJ）",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：BER的机制。C正确：NER修复大范围DNA损伤。D正确：HR vs NHEJ的保真度差异。B错误：不同修复通路之间存在交叉和补偿，但并非完全冗余。如NER缺陷导致着色性干皮病；HR缺陷（如BRCA突变）可增加癌症风险。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "DNA修复",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1584536937",
+  "tags": []
+ },
+ "BQ-gene_mutation-0bd8043b3266": {
+  "type": "mtf",
+  "question": "关于DNA损伤修复，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "碱基切除修复（BER）主要修复单个受损碱基，由DNA糖苷酶识别并切除异常碱基",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "同源重组修复（HR）利用同源染色体或姐妹染色单体作为修复模板，保真度高于非同源末端连接（NHEJ）",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "DNA损伤修复通路完全冗余且相互独立，一种通路失活不会影响细胞对DNA损伤的响应",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "核苷酸切除修复（NER）识别并切除含有DNA损伤的寡核苷酸片段，可修复紫外诱导的嘧啶二聚体",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：BER的机制。D正确：NER修复大范围DNA损伤。B正确：HR vs NHEJ的保真度差异。C错误：不同修复通路之间存在交叉和补偿，但并非完全冗余。如NER缺陷导致着色性干皮病；HR缺陷（如BRCA突变）可增加癌症风险。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "DNA修复",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1584536937",
+  "tags": []
+ },
+ "BQ-gene_mutation-959d58c2bcc5": {
+  "type": "mtf",
+  "question": "关于DNA损伤修复，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "碱基切除修复（BER）主要修复单个受损碱基，由DNA糖苷酶识别并切除异常碱基",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "同源重组修复（HR）利用同源染色体或姐妹染色单体作为修复模板，保真度高于非同源末端连接（NHEJ）",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "核苷酸切除修复（NER）识别并切除含有DNA损伤的寡核苷酸片段，可修复紫外诱导的嘧啶二聚体",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "DNA损伤修复通路完全冗余且相互独立，一种通路失活不会影响细胞对DNA损伤的响应",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确：BER的机制。C正确：NER修复大范围DNA损伤。B正确：HR vs NHEJ的保真度差异。D错误：不同修复通路之间存在交叉和补偿，但并非完全冗余。如NER缺陷导致着色性干皮病；HR缺陷（如BRCA突变）可增加癌症风险。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "DNA修复",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1584536937",
+  "tags": []
+ },
+ "BQ-gene_mutation-a794ce1a9ad9": {
+  "type": "mtf",
+  "question": "关于DNA损伤修复，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "碱基切除修复（BER）主要修复单个受损碱基，由DNA糖苷酶识别并切除异常碱基",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "核苷酸切除修复（NER）识别并切除含有DNA损伤的寡核苷酸片段，可修复紫外诱导的嘧啶二聚体",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "DNA损伤修复通路完全冗余且相互独立，一种通路失活不会影响细胞对DNA损伤的响应",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "同源重组修复（HR）利用同源染色体或姐妹染色单体作为修复模板，保真度高于非同源末端连接（NHEJ）",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：BER的机制。B正确：NER修复大范围DNA损伤。D正确：HR vs NHEJ的保真度差异。C错误：不同修复通路之间存在交叉和补偿，但并非完全冗余。如NER缺陷导致着色性干皮病；HR缺陷（如BRCA突变）可增加癌症风险。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "DNA修复",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1584536937",
+  "tags": []
+ },
+ "BQ-gene_mutation-cb8da1eeb1c6": {
+  "type": "mtf",
+  "question": "关于DNA损伤修复，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "碱基切除修复（BER）主要修复单个受损碱基，由DNA糖苷酶识别并切除异常碱基",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "核苷酸切除修复（NER）识别并切除含有DNA损伤的寡核苷酸片段，可修复紫外诱导的嘧啶二聚体",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "同源重组修复（HR）利用同源染色体或姐妹染色单体作为修复模板，保真度高于非同源末端连接（NHEJ）",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "DNA损伤修复通路完全冗余且相互独立，一种通路失活不会影响细胞对DNA损伤的响应",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确：BER的机制。B正确：NER修复大范围DNA损伤。C正确：HR vs NHEJ的保真度差异。D错误：不同修复通路之间存在交叉和补偿，但并非完全冗余。如NER缺陷导致着色性干皮病；HR缺陷（如BRCA突变）可增加癌症风险。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "DNA修复",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1584536937",
+  "tags": []
+ },
+ "BQ-gene_mutation-85e160ff53c6": {
+  "type": "mtf",
+  "question": "关于体细胞突变与癌症演化，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "乘客突变不赋予癌症生长优势,但可作为诊断标志物",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "所有体细胞突变都是驱动突变(driver mutation)",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "癌症可被视为达尔文式体细胞演化——具有遗传异质性的细胞群中自然选择作用于适合度差异",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "肿瘤内异质性是靶向治疗耐药的关键原因",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:只有少数体细胞突变为驱动突变(赋予生长优势),大多数为乘客突变(中性)。肿瘤中约2-8个驱动突变即可完成恶性转化。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "癌症演化",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "970493638",
+  "tags": []
+ },
+ "BQ-gene_mutation-27b8d283a3df": {
+  "type": "mtf",
+  "question": "关于体细胞突变与癌症演化，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "乘客突变不赋予癌症生长优势,但可作为诊断标志物",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "所有体细胞突变都是驱动突变(driver mutation)",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "肿瘤内异质性是靶向治疗耐药的关键原因",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "癌症可被视为达尔文式体细胞演化——具有遗传异质性的细胞群中自然选择作用于适合度差异",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:只有少数体细胞突变为驱动突变(赋予生长优势),大多数为乘客突变(中性)。肿瘤中约2-8个驱动突变即可完成恶性转化。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "癌症演化",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "970493638",
+  "tags": []
+ },
+ "BQ-gene_mutation-30a632d89bb1": {
+  "type": "mtf",
+  "question": "关于体细胞突变与癌症演化，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "乘客突变不赋予癌症生长优势,但可作为诊断标志物",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "癌症可被视为达尔文式体细胞演化——具有遗传异质性的细胞群中自然选择作用于适合度差异",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "所有体细胞突变都是驱动突变(driver mutation)",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "肿瘤内异质性是靶向治疗耐药的关键原因",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:只有少数体细胞突变为驱动突变(赋予生长优势),大多数为乘客突变(中性)。肿瘤中约2-8个驱动突变即可完成恶性转化。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "癌症演化",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "970493638",
+  "tags": []
+ },
+ "BQ-gene_mutation-5729dc1d258d": {
+  "type": "mtf",
+  "question": "关于体细胞突变与癌症演化，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "乘客突变不赋予癌症生长优势,但可作为诊断标志物",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "癌症可被视为达尔文式体细胞演化——具有遗传异质性的细胞群中自然选择作用于适合度差异",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "肿瘤内异质性是靶向治疗耐药的关键原因",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "所有体细胞突变都是驱动突变(driver mutation)",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:只有少数体细胞突变为驱动突变(赋予生长优势),大多数为乘客突变(中性)。肿瘤中约2-8个驱动突变即可完成恶性转化。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "癌症演化",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "970493638",
+  "tags": []
+ },
+ "BQ-gene_mutation-18e90eeb0f4b": {
+  "type": "mtf",
+  "question": "关于体细胞突变与癌症演化，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "乘客突变不赋予癌症生长优势,但可作为诊断标志物",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "肿瘤内异质性是靶向治疗耐药的关键原因",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "所有体细胞突变都是驱动突变(driver mutation)",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "癌症可被视为达尔文式体细胞演化——具有遗传异质性的细胞群中自然选择作用于适合度差异",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:只有少数体细胞突变为驱动突变(赋予生长优势),大多数为乘客突变(中性)。肿瘤中约2-8个驱动突变即可完成恶性转化。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "癌症演化",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "970493638",
+  "tags": []
+ },
+ "BQ-gene_mutation-74e63c769a17": {
+  "type": "mtf",
+  "question": "关于体细胞突变与癌症演化，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "乘客突变不赋予癌症生长优势,但可作为诊断标志物",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "肿瘤内异质性是靶向治疗耐药的关键原因",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "癌症可被视为达尔文式体细胞演化——具有遗传异质性的细胞群中自然选择作用于适合度差异",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "所有体细胞突变都是驱动突变(driver mutation)",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:只有少数体细胞突变为驱动突变(赋予生长优势),大多数为乘客突变(中性)。肿瘤中约2-8个驱动突变即可完成恶性转化。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "癌症演化",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "970493638",
+  "tags": []
+ },
+ "BQ-gene_mutation-d78954051c76": {
+  "type": "mtf",
+  "question": "关于体细胞突变与癌症演化，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "所有体细胞突变都是驱动突变(driver mutation)",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "乘客突变不赋予癌症生长优势,但可作为诊断标志物",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "癌症可被视为达尔文式体细胞演化——具有遗传异质性的细胞群中自然选择作用于适合度差异",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "肿瘤内异质性是靶向治疗耐药的关键原因",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:只有少数体细胞突变为驱动突变(赋予生长优势),大多数为乘客突变(中性)。肿瘤中约2-8个驱动突变即可完成恶性转化。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "癌症演化",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "970493638",
+  "tags": []
+ },
+ "BQ-gene_mutation-802ba5fb32ab": {
+  "type": "mtf",
+  "question": "关于体细胞突变与癌症演化，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "所有体细胞突变都是驱动突变(driver mutation)",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "乘客突变不赋予癌症生长优势,但可作为诊断标志物",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "肿瘤内异质性是靶向治疗耐药的关键原因",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "癌症可被视为达尔文式体细胞演化——具有遗传异质性的细胞群中自然选择作用于适合度差异",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:只有少数体细胞突变为驱动突变(赋予生长优势),大多数为乘客突变(中性)。肿瘤中约2-8个驱动突变即可完成恶性转化。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "癌症演化",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "970493638",
+  "tags": []
+ },
+ "BQ-gene_mutation-787dd9971c13": {
+  "type": "mtf",
+  "question": "关于体细胞突变与癌症演化，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "所有体细胞突变都是驱动突变(driver mutation)",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "癌症可被视为达尔文式体细胞演化——具有遗传异质性的细胞群中自然选择作用于适合度差异",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "乘客突变不赋予癌症生长优势,但可作为诊断标志物",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "肿瘤内异质性是靶向治疗耐药的关键原因",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:只有少数体细胞突变为驱动突变(赋予生长优势),大多数为乘客突变(中性)。肿瘤中约2-8个驱动突变即可完成恶性转化。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "癌症演化",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "970493638",
+  "tags": []
+ },
+ "BQ-gene_mutation-5466d0d67026": {
+  "type": "mtf",
+  "question": "关于体细胞突变与癌症演化，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "所有体细胞突变都是驱动突变(driver mutation)",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "癌症可被视为达尔文式体细胞演化——具有遗传异质性的细胞群中自然选择作用于适合度差异",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "肿瘤内异质性是靶向治疗耐药的关键原因",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "乘客突变不赋予癌症生长优势,但可作为诊断标志物",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:只有少数体细胞突变为驱动突变(赋予生长优势),大多数为乘客突变(中性)。肿瘤中约2-8个驱动突变即可完成恶性转化。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "癌症演化",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "970493638",
+  "tags": []
+ },
+ "BQ-gene_mutation-fd2c6403f8be": {
+  "type": "mtf",
+  "question": "关于体细胞突变与癌症演化，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "所有体细胞突变都是驱动突变(driver mutation)",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "肿瘤内异质性是靶向治疗耐药的关键原因",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "乘客突变不赋予癌症生长优势,但可作为诊断标志物",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "癌症可被视为达尔文式体细胞演化——具有遗传异质性的细胞群中自然选择作用于适合度差异",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:只有少数体细胞突变为驱动突变(赋予生长优势),大多数为乘客突变(中性)。肿瘤中约2-8个驱动突变即可完成恶性转化。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "癌症演化",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "970493638",
+  "tags": []
+ },
+ "BQ-gene_mutation-d93d9113d924": {
+  "type": "mtf",
+  "question": "关于体细胞突变与癌症演化，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "所有体细胞突变都是驱动突变(driver mutation)",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "肿瘤内异质性是靶向治疗耐药的关键原因",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "癌症可被视为达尔文式体细胞演化——具有遗传异质性的细胞群中自然选择作用于适合度差异",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "乘客突变不赋予癌症生长优势,但可作为诊断标志物",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:只有少数体细胞突变为驱动突变(赋予生长优势),大多数为乘客突变(中性)。肿瘤中约2-8个驱动突变即可完成恶性转化。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "癌症演化",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "970493638",
+  "tags": []
+ },
+ "BQ-gene_mutation-52d603b50eb7": {
+  "type": "mtf",
+  "question": "关于体细胞突变与癌症演化，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "癌症可被视为达尔文式体细胞演化——具有遗传异质性的细胞群中自然选择作用于适合度差异",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "乘客突变不赋予癌症生长优势,但可作为诊断标志物",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "所有体细胞突变都是驱动突变(driver mutation)",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "肿瘤内异质性是靶向治疗耐药的关键原因",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:只有少数体细胞突变为驱动突变(赋予生长优势),大多数为乘客突变(中性)。肿瘤中约2-8个驱动突变即可完成恶性转化。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "癌症演化",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "970493638",
+  "tags": []
+ },
+ "BQ-gene_mutation-ba502406a2f3": {
+  "type": "mtf",
+  "question": "关于体细胞突变与癌症演化，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "癌症可被视为达尔文式体细胞演化——具有遗传异质性的细胞群中自然选择作用于适合度差异",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "乘客突变不赋予癌症生长优势,但可作为诊断标志物",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "肿瘤内异质性是靶向治疗耐药的关键原因",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "所有体细胞突变都是驱动突变(driver mutation)",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:只有少数体细胞突变为驱动突变(赋予生长优势),大多数为乘客突变(中性)。肿瘤中约2-8个驱动突变即可完成恶性转化。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "癌症演化",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "970493638",
+  "tags": []
+ },
+ "BQ-gene_mutation-31d39592ed1f": {
+  "type": "mtf",
+  "question": "关于体细胞突变与癌症演化，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "癌症可被视为达尔文式体细胞演化——具有遗传异质性的细胞群中自然选择作用于适合度差异",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "所有体细胞突变都是驱动突变(driver mutation)",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "乘客突变不赋予癌症生长优势,但可作为诊断标志物",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "肿瘤内异质性是靶向治疗耐药的关键原因",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:只有少数体细胞突变为驱动突变(赋予生长优势),大多数为乘客突变(中性)。肿瘤中约2-8个驱动突变即可完成恶性转化。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "癌症演化",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "970493638",
+  "tags": []
+ },
+ "BQ-gene_mutation-9e3e4d216173": {
+  "type": "mtf",
+  "question": "关于体细胞突变与癌症演化，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "癌症可被视为达尔文式体细胞演化——具有遗传异质性的细胞群中自然选择作用于适合度差异",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "所有体细胞突变都是驱动突变(driver mutation)",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "肿瘤内异质性是靶向治疗耐药的关键原因",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "乘客突变不赋予癌症生长优势,但可作为诊断标志物",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:只有少数体细胞突变为驱动突变(赋予生长优势),大多数为乘客突变(中性)。肿瘤中约2-8个驱动突变即可完成恶性转化。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "癌症演化",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "970493638",
+  "tags": []
+ },
+ "BQ-gene_mutation-453e8931a5eb": {
+  "type": "mtf",
+  "question": "关于体细胞突变与癌症演化，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "癌症可被视为达尔文式体细胞演化——具有遗传异质性的细胞群中自然选择作用于适合度差异",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "肿瘤内异质性是靶向治疗耐药的关键原因",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "乘客突变不赋予癌症生长优势,但可作为诊断标志物",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "所有体细胞突变都是驱动突变(driver mutation)",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:只有少数体细胞突变为驱动突变(赋予生长优势),大多数为乘客突变(中性)。肿瘤中约2-8个驱动突变即可完成恶性转化。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "癌症演化",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "970493638",
+  "tags": []
+ },
+ "BQ-gene_mutation-ff32af558067": {
+  "type": "mtf",
+  "question": "关于体细胞突变与癌症演化，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "癌症可被视为达尔文式体细胞演化——具有遗传异质性的细胞群中自然选择作用于适合度差异",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "肿瘤内异质性是靶向治疗耐药的关键原因",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "所有体细胞突变都是驱动突变(driver mutation)",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "乘客突变不赋予癌症生长优势,但可作为诊断标志物",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:只有少数体细胞突变为驱动突变(赋予生长优势),大多数为乘客突变(中性)。肿瘤中约2-8个驱动突变即可完成恶性转化。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "癌症演化",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "970493638",
+  "tags": []
+ },
+ "BQ-gene_mutation-c4f5adcde5d7": {
+  "type": "mtf",
+  "question": "关于体细胞突变与癌症演化，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "肿瘤内异质性是靶向治疗耐药的关键原因",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "乘客突变不赋予癌症生长优势,但可作为诊断标志物",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "所有体细胞突变都是驱动突变(driver mutation)",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "癌症可被视为达尔文式体细胞演化——具有遗传异质性的细胞群中自然选择作用于适合度差异",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:只有少数体细胞突变为驱动突变(赋予生长优势),大多数为乘客突变(中性)。肿瘤中约2-8个驱动突变即可完成恶性转化。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "癌症演化",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "970493638",
+  "tags": []
+ },
+ "BQ-gene_mutation-5dbc718f211c": {
+  "type": "mtf",
+  "question": "关于体细胞突变与癌症演化，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "肿瘤内异质性是靶向治疗耐药的关键原因",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "乘客突变不赋予癌症生长优势,但可作为诊断标志物",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "癌症可被视为达尔文式体细胞演化——具有遗传异质性的细胞群中自然选择作用于适合度差异",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "所有体细胞突变都是驱动突变(driver mutation)",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:只有少数体细胞突变为驱动突变(赋予生长优势),大多数为乘客突变(中性)。肿瘤中约2-8个驱动突变即可完成恶性转化。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "癌症演化",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "970493638",
+  "tags": []
+ },
+ "BQ-gene_mutation-b4b4e8a83a73": {
+  "type": "mtf",
+  "question": "关于体细胞突变与癌症演化，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "肿瘤内异质性是靶向治疗耐药的关键原因",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "所有体细胞突变都是驱动突变(driver mutation)",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "乘客突变不赋予癌症生长优势,但可作为诊断标志物",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "癌症可被视为达尔文式体细胞演化——具有遗传异质性的细胞群中自然选择作用于适合度差异",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:只有少数体细胞突变为驱动突变(赋予生长优势),大多数为乘客突变(中性)。肿瘤中约2-8个驱动突变即可完成恶性转化。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "癌症演化",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "970493638",
+  "tags": []
+ },
+ "BQ-gene_mutation-8e158359ba57": {
+  "type": "mtf",
+  "question": "关于体细胞突变与癌症演化，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "肿瘤内异质性是靶向治疗耐药的关键原因",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "所有体细胞突变都是驱动突变(driver mutation)",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "癌症可被视为达尔文式体细胞演化——具有遗传异质性的细胞群中自然选择作用于适合度差异",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "乘客突变不赋予癌症生长优势,但可作为诊断标志物",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:只有少数体细胞突变为驱动突变(赋予生长优势),大多数为乘客突变(中性)。肿瘤中约2-8个驱动突变即可完成恶性转化。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "癌症演化",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "970493638",
+  "tags": []
+ },
+ "BQ-gene_mutation-f5ff416a5746": {
+  "type": "mtf",
+  "question": "关于体细胞突变与癌症演化，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "肿瘤内异质性是靶向治疗耐药的关键原因",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "癌症可被视为达尔文式体细胞演化——具有遗传异质性的细胞群中自然选择作用于适合度差异",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "乘客突变不赋予癌症生长优势,但可作为诊断标志物",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "所有体细胞突变都是驱动突变(driver mutation)",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:只有少数体细胞突变为驱动突变(赋予生长优势),大多数为乘客突变(中性)。肿瘤中约2-8个驱动突变即可完成恶性转化。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "癌症演化",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "970493638",
+  "tags": []
+ },
+ "BQ-gene_mutation-9748bb0ec962": {
+  "type": "mtf",
+  "question": "关于体细胞突变与癌症演化，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "肿瘤内异质性是靶向治疗耐药的关键原因",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "癌症可被视为达尔文式体细胞演化——具有遗传异质性的细胞群中自然选择作用于适合度差异",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "所有体细胞突变都是驱动突变(driver mutation)",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "乘客突变不赋予癌症生长优势,但可作为诊断标志物",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:只有少数体细胞突变为驱动突变(赋予生长优势),大多数为乘客突变(中性)。肿瘤中约2-8个驱动突变即可完成恶性转化。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "癌症演化",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "970493638",
+  "tags": []
+ },
+ "BQ-gene_mutation-a0d962f97fc8": {
+  "type": "mtf",
+  "question": "关于基因突变，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "所有基因突变都会对生物体的适合度产生有害影响",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "无义突变将一个编码氨基酸的密码子变为终止密码子，导致翻译提前终止",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "碱基插入或缺失可能导致移码突变，从突变点开始所有后续氨基酸序列发生改变",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "错义突变导致一个氨基酸被替换为另一个氨基酸，可能引起蛋白质功能的改变",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：错义突变的定义。B正确：无义突变产生截短蛋白。C正确：移码突变的后果。A错误：多数突变是中性或近中性的（中性学说）；有些突变可能是有益的，如镰刀型细胞贫血的杂合子对疟疾有抗性。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "基因突变",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1526861874",
+  "tags": []
+ },
+ "BQ-gene_mutation-2be1a0c298a3": {
+  "type": "mtf",
+  "question": "关于基因突变，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "所有基因突变都会对生物体的适合度产生有害影响",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "无义突变将一个编码氨基酸的密码子变为终止密码子，导致翻译提前终止",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "错义突变导致一个氨基酸被替换为另一个氨基酸，可能引起蛋白质功能的改变",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "碱基插入或缺失可能导致移码突变，从突变点开始所有后续氨基酸序列发生改变",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：错义突变的定义。B正确：无义突变产生截短蛋白。D正确：移码突变的后果。A错误：多数突变是中性或近中性的（中性学说）；有些突变可能是有益的，如镰刀型细胞贫血的杂合子对疟疾有抗性。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "基因突变",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1526861874",
+  "tags": []
+ },
+ "BQ-gene_mutation-631520b99adc": {
+  "type": "mtf",
+  "question": "关于基因突变，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "所有基因突变都会对生物体的适合度产生有害影响",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "碱基插入或缺失可能导致移码突变，从突变点开始所有后续氨基酸序列发生改变",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "无义突变将一个编码氨基酸的密码子变为终止密码子，导致翻译提前终止",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "错义突变导致一个氨基酸被替换为另一个氨基酸，可能引起蛋白质功能的改变",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：错义突变的定义。C正确：无义突变产生截短蛋白。B正确：移码突变的后果。A错误：多数突变是中性或近中性的（中性学说）；有些突变可能是有益的，如镰刀型细胞贫血的杂合子对疟疾有抗性。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "基因突变",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1526861874",
+  "tags": []
+ },
+ "BQ-gene_mutation-3d3f4a0fff46": {
+  "type": "mtf",
+  "question": "关于基因突变，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "所有基因突变都会对生物体的适合度产生有害影响",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "碱基插入或缺失可能导致移码突变，从突变点开始所有后续氨基酸序列发生改变",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "错义突变导致一个氨基酸被替换为另一个氨基酸，可能引起蛋白质功能的改变",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "无义突变将一个编码氨基酸的密码子变为终止密码子，导致翻译提前终止",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：错义突变的定义。D正确：无义突变产生截短蛋白。B正确：移码突变的后果。A错误：多数突变是中性或近中性的（中性学说）；有些突变可能是有益的，如镰刀型细胞贫血的杂合子对疟疾有抗性。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "基因突变",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1526861874",
+  "tags": []
+ },
+ "BQ-gene_mutation-a5660a5e874a": {
+  "type": "mtf",
+  "question": "关于基因突变，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "所有基因突变都会对生物体的适合度产生有害影响",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "错义突变导致一个氨基酸被替换为另一个氨基酸，可能引起蛋白质功能的改变",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "无义突变将一个编码氨基酸的密码子变为终止密码子，导致翻译提前终止",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "碱基插入或缺失可能导致移码突变，从突变点开始所有后续氨基酸序列发生改变",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：错义突变的定义。C正确：无义突变产生截短蛋白。D正确：移码突变的后果。A错误：多数突变是中性或近中性的（中性学说）；有些突变可能是有益的，如镰刀型细胞贫血的杂合子对疟疾有抗性。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "基因突变",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1526861874",
+  "tags": []
+ },
+ "BQ-gene_mutation-94b4a586d676": {
+  "type": "mtf",
+  "question": "关于基因突变，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "所有基因突变都会对生物体的适合度产生有害影响",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "错义突变导致一个氨基酸被替换为另一个氨基酸，可能引起蛋白质功能的改变",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "碱基插入或缺失可能导致移码突变，从突变点开始所有后续氨基酸序列发生改变",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "无义突变将一个编码氨基酸的密码子变为终止密码子，导致翻译提前终止",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：错义突变的定义。D正确：无义突变产生截短蛋白。C正确：移码突变的后果。A错误：多数突变是中性或近中性的（中性学说）；有些突变可能是有益的，如镰刀型细胞贫血的杂合子对疟疾有抗性。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "基因突变",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1526861874",
+  "tags": []
+ },
+ "BQ-gene_mutation-f5d0c9a9aa60": {
+  "type": "mtf",
+  "question": "关于基因突变，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "无义突变将一个编码氨基酸的密码子变为终止密码子，导致翻译提前终止",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "所有基因突变都会对生物体的适合度产生有害影响",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "碱基插入或缺失可能导致移码突变，从突变点开始所有后续氨基酸序列发生改变",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "错义突变导致一个氨基酸被替换为另一个氨基酸，可能引起蛋白质功能的改变",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：错义突变的定义。A正确：无义突变产生截短蛋白。C正确：移码突变的后果。B错误：多数突变是中性或近中性的（中性学说）；有些突变可能是有益的，如镰刀型细胞贫血的杂合子对疟疾有抗性。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "基因突变",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1526861874",
+  "tags": []
+ },
+ "BQ-gene_mutation-1c0f0d42250c": {
+  "type": "mtf",
+  "question": "关于基因突变，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "无义突变将一个编码氨基酸的密码子变为终止密码子，导致翻译提前终止",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "所有基因突变都会对生物体的适合度产生有害影响",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "错义突变导致一个氨基酸被替换为另一个氨基酸，可能引起蛋白质功能的改变",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "碱基插入或缺失可能导致移码突变，从突变点开始所有后续氨基酸序列发生改变",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：错义突变的定义。A正确：无义突变产生截短蛋白。D正确：移码突变的后果。B错误：多数突变是中性或近中性的（中性学说）；有些突变可能是有益的，如镰刀型细胞贫血的杂合子对疟疾有抗性。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "基因突变",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1526861874",
+  "tags": []
+ },
+ "BQ-gene_mutation-1474f085910b": {
+  "type": "mtf",
+  "question": "关于基因突变，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "无义突变将一个编码氨基酸的密码子变为终止密码子，导致翻译提前终止",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "碱基插入或缺失可能导致移码突变，从突变点开始所有后续氨基酸序列发生改变",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "所有基因突变都会对生物体的适合度产生有害影响",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "错义突变导致一个氨基酸被替换为另一个氨基酸，可能引起蛋白质功能的改变",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：错义突变的定义。A正确：无义突变产生截短蛋白。B正确：移码突变的后果。C错误：多数突变是中性或近中性的（中性学说）；有些突变可能是有益的，如镰刀型细胞贫血的杂合子对疟疾有抗性。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "基因突变",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1526861874",
+  "tags": []
+ },
+ "BQ-gene_mutation-987ebc2d05a7": {
+  "type": "mtf",
+  "question": "关于基因突变，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "无义突变将一个编码氨基酸的密码子变为终止密码子，导致翻译提前终止",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "碱基插入或缺失可能导致移码突变，从突变点开始所有后续氨基酸序列发生改变",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "错义突变导致一个氨基酸被替换为另一个氨基酸，可能引起蛋白质功能的改变",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "所有基因突变都会对生物体的适合度产生有害影响",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确：错义突变的定义。A正确：无义突变产生截短蛋白。B正确：移码突变的后果。D错误：多数突变是中性或近中性的（中性学说）；有些突变可能是有益的，如镰刀型细胞贫血的杂合子对疟疾有抗性。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "基因突变",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1526861874",
+  "tags": []
+ },
+ "BQ-gene_mutation-fd19166ee338": {
+  "type": "mtf",
+  "question": "关于基因突变，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "无义突变将一个编码氨基酸的密码子变为终止密码子，导致翻译提前终止",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "错义突变导致一个氨基酸被替换为另一个氨基酸，可能引起蛋白质功能的改变",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "所有基因突变都会对生物体的适合度产生有害影响",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "碱基插入或缺失可能导致移码突变，从突变点开始所有后续氨基酸序列发生改变",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：错义突变的定义。A正确：无义突变产生截短蛋白。D正确：移码突变的后果。C错误：多数突变是中性或近中性的（中性学说）；有些突变可能是有益的，如镰刀型细胞贫血的杂合子对疟疾有抗性。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "基因突变",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1526861874",
+  "tags": []
+ },
+ "BQ-gene_mutation-9af31e57ecdc": {
+  "type": "mtf",
+  "question": "关于基因突变，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "无义突变将一个编码氨基酸的密码子变为终止密码子，导致翻译提前终止",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "错义突变导致一个氨基酸被替换为另一个氨基酸，可能引起蛋白质功能的改变",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "碱基插入或缺失可能导致移码突变，从突变点开始所有后续氨基酸序列发生改变",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "所有基因突变都会对生物体的适合度产生有害影响",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确：错义突变的定义。A正确：无义突变产生截短蛋白。C正确：移码突变的后果。D错误：多数突变是中性或近中性的（中性学说）；有些突变可能是有益的，如镰刀型细胞贫血的杂合子对疟疾有抗性。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "基因突变",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1526861874",
+  "tags": []
+ },
+ "BQ-gene_mutation-21f52a436c00": {
+  "type": "mtf",
+  "question": "关于基因突变，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "碱基插入或缺失可能导致移码突变，从突变点开始所有后续氨基酸序列发生改变",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "所有基因突变都会对生物体的适合度产生有害影响",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "无义突变将一个编码氨基酸的密码子变为终止密码子，导致翻译提前终止",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "错义突变导致一个氨基酸被替换为另一个氨基酸，可能引起蛋白质功能的改变",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：错义突变的定义。C正确：无义突变产生截短蛋白。A正确：移码突变的后果。B错误：多数突变是中性或近中性的（中性学说）；有些突变可能是有益的，如镰刀型细胞贫血的杂合子对疟疾有抗性。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "基因突变",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1526861874",
+  "tags": []
+ },
+ "BQ-gene_mutation-d0a9e3d3920b": {
+  "type": "mtf",
+  "question": "关于基因突变，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "碱基插入或缺失可能导致移码突变，从突变点开始所有后续氨基酸序列发生改变",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "所有基因突变都会对生物体的适合度产生有害影响",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "错义突变导致一个氨基酸被替换为另一个氨基酸，可能引起蛋白质功能的改变",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "无义突变将一个编码氨基酸的密码子变为终止密码子，导致翻译提前终止",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：错义突变的定义。D正确：无义突变产生截短蛋白。A正确：移码突变的后果。B错误：多数突变是中性或近中性的（中性学说）；有些突变可能是有益的，如镰刀型细胞贫血的杂合子对疟疾有抗性。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "基因突变",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1526861874",
+  "tags": []
+ },
+ "BQ-gene_mutation-2f41a78a1612": {
+  "type": "mtf",
+  "question": "关于基因突变，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "碱基插入或缺失可能导致移码突变，从突变点开始所有后续氨基酸序列发生改变",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "无义突变将一个编码氨基酸的密码子变为终止密码子，导致翻译提前终止",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "所有基因突变都会对生物体的适合度产生有害影响",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "错义突变导致一个氨基酸被替换为另一个氨基酸，可能引起蛋白质功能的改变",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：错义突变的定义。B正确：无义突变产生截短蛋白。A正确：移码突变的后果。C错误：多数突变是中性或近中性的（中性学说）；有些突变可能是有益的，如镰刀型细胞贫血的杂合子对疟疾有抗性。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "基因突变",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1526861874",
+  "tags": []
+ },
+ "BQ-gene_mutation-51c5973876cc": {
+  "type": "mtf",
+  "question": "关于基因突变，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "碱基插入或缺失可能导致移码突变，从突变点开始所有后续氨基酸序列发生改变",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "无义突变将一个编码氨基酸的密码子变为终止密码子，导致翻译提前终止",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "错义突变导致一个氨基酸被替换为另一个氨基酸，可能引起蛋白质功能的改变",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "所有基因突变都会对生物体的适合度产生有害影响",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确：错义突变的定义。B正确：无义突变产生截短蛋白。A正确：移码突变的后果。D错误：多数突变是中性或近中性的（中性学说）；有些突变可能是有益的，如镰刀型细胞贫血的杂合子对疟疾有抗性。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "基因突变",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1526861874",
+  "tags": []
+ },
+ "BQ-gene_mutation-7c72be246d8a": {
+  "type": "mtf",
+  "question": "关于基因突变，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "碱基插入或缺失可能导致移码突变，从突变点开始所有后续氨基酸序列发生改变",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "错义突变导致一个氨基酸被替换为另一个氨基酸，可能引起蛋白质功能的改变",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "所有基因突变都会对生物体的适合度产生有害影响",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "无义突变将一个编码氨基酸的密码子变为终止密码子，导致翻译提前终止",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：错义突变的定义。D正确：无义突变产生截短蛋白。A正确：移码突变的后果。C错误：多数突变是中性或近中性的（中性学说）；有些突变可能是有益的，如镰刀型细胞贫血的杂合子对疟疾有抗性。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "基因突变",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1526861874",
+  "tags": []
+ },
+ "BQ-gene_mutation-17e09a95240f": {
+  "type": "mtf",
+  "question": "关于基因突变，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "碱基插入或缺失可能导致移码突变，从突变点开始所有后续氨基酸序列发生改变",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "错义突变导致一个氨基酸被替换为另一个氨基酸，可能引起蛋白质功能的改变",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "无义突变将一个编码氨基酸的密码子变为终止密码子，导致翻译提前终止",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "所有基因突变都会对生物体的适合度产生有害影响",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确：错义突变的定义。C正确：无义突变产生截短蛋白。A正确：移码突变的后果。D错误：多数突变是中性或近中性的（中性学说）；有些突变可能是有益的，如镰刀型细胞贫血的杂合子对疟疾有抗性。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "基因突变",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1526861874",
+  "tags": []
+ },
+ "BQ-gene_mutation-ef04ec33b589": {
+  "type": "mtf",
+  "question": "关于基因突变，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "错义突变导致一个氨基酸被替换为另一个氨基酸，可能引起蛋白质功能的改变",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "所有基因突变都会对生物体的适合度产生有害影响",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "无义突变将一个编码氨基酸的密码子变为终止密码子，导致翻译提前终止",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "碱基插入或缺失可能导致移码突变，从突变点开始所有后续氨基酸序列发生改变",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：错义突变的定义。C正确：无义突变产生截短蛋白。D正确：移码突变的后果。B错误：多数突变是中性或近中性的（中性学说）；有些突变可能是有益的，如镰刀型细胞贫血的杂合子对疟疾有抗性。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "基因突变",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1526861874",
+  "tags": []
+ },
+ "BQ-gene_mutation-cc7d2441e62a": {
+  "type": "mtf",
+  "question": "关于基因突变，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "错义突变导致一个氨基酸被替换为另一个氨基酸，可能引起蛋白质功能的改变",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "所有基因突变都会对生物体的适合度产生有害影响",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "碱基插入或缺失可能导致移码突变，从突变点开始所有后续氨基酸序列发生改变",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "无义突变将一个编码氨基酸的密码子变为终止密码子，导致翻译提前终止",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：错义突变的定义。D正确：无义突变产生截短蛋白。C正确：移码突变的后果。B错误：多数突变是中性或近中性的（中性学说）；有些突变可能是有益的，如镰刀型细胞贫血的杂合子对疟疾有抗性。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "基因突变",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1526861874",
+  "tags": []
+ },
+ "BQ-gene_mutation-9c68dee442db": {
+  "type": "mtf",
+  "question": "关于基因突变，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "错义突变导致一个氨基酸被替换为另一个氨基酸，可能引起蛋白质功能的改变",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "无义突变将一个编码氨基酸的密码子变为终止密码子，导致翻译提前终止",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "所有基因突变都会对生物体的适合度产生有害影响",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "碱基插入或缺失可能导致移码突变，从突变点开始所有后续氨基酸序列发生改变",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：错义突变的定义。B正确：无义突变产生截短蛋白。D正确：移码突变的后果。C错误：多数突变是中性或近中性的（中性学说）；有些突变可能是有益的，如镰刀型细胞贫血的杂合子对疟疾有抗性。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "基因突变",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1526861874",
+  "tags": []
+ },
+ "BQ-gene_mutation-58fc77596d05": {
+  "type": "mtf",
+  "question": "关于基因突变，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "错义突变导致一个氨基酸被替换为另一个氨基酸，可能引起蛋白质功能的改变",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "无义突变将一个编码氨基酸的密码子变为终止密码子，导致翻译提前终止",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "碱基插入或缺失可能导致移码突变，从突变点开始所有后续氨基酸序列发生改变",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "所有基因突变都会对生物体的适合度产生有害影响",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确：错义突变的定义。B正确：无义突变产生截短蛋白。C正确：移码突变的后果。D错误：多数突变是中性或近中性的（中性学说）；有些突变可能是有益的，如镰刀型细胞贫血的杂合子对疟疾有抗性。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "基因突变",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1526861874",
+  "tags": []
+ },
+ "BQ-gene_mutation-31b314221e5b": {
+  "type": "mtf",
+  "question": "关于基因突变，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "错义突变导致一个氨基酸被替换为另一个氨基酸，可能引起蛋白质功能的改变",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "碱基插入或缺失可能导致移码突变，从突变点开始所有后续氨基酸序列发生改变",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "所有基因突变都会对生物体的适合度产生有害影响",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "无义突变将一个编码氨基酸的密码子变为终止密码子，导致翻译提前终止",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：错义突变的定义。D正确：无义突变产生截短蛋白。B正确：移码突变的后果。C错误：多数突变是中性或近中性的（中性学说）；有些突变可能是有益的，如镰刀型细胞贫血的杂合子对疟疾有抗性。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "基因突变",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1526861874",
+  "tags": []
+ },
+ "BQ-gene_mutation-673aa6d59bef": {
+  "type": "mtf",
+  "question": "关于基因突变，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "错义突变导致一个氨基酸被替换为另一个氨基酸，可能引起蛋白质功能的改变",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "碱基插入或缺失可能导致移码突变，从突变点开始所有后续氨基酸序列发生改变",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "无义突变将一个编码氨基酸的密码子变为终止密码子，导致翻译提前终止",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "所有基因突变都会对生物体的适合度产生有害影响",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确：错义突变的定义。C正确：无义突变产生截短蛋白。B正确：移码突变的后果。D错误：多数突变是中性或近中性的（中性学说）；有些突变可能是有益的，如镰刀型细胞贫血的杂合子对疟疾有抗性。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "基因突变",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1526861874",
+  "tags": []
+ },
+ "BQ-gene_mutation-4b838a548ed6": {
+  "type": "mtf",
+  "question": "关于突变率的测定，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "Ames试验利用沙门氏菌组氨酸营养缺陷型回复突变来检测化学物质的致突变性",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "Luria-Delbrück波动实验利用噬菌体抗性突变证明了细菌突变的自发性和随机性",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "波动实验中不同平行培养物间抗性菌落数的方差远大于平均值，支持了随机突变假说",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "突变率在所有基因和所有生物中都是恒定的",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确:波动实验的意义(1943年)。C正确:方差>>均值是随机突变的统计证据。A正确:Ames试验的原理。D错误:突变率因基因、生物种类和环境条件而异，雄性生殖细胞突变率通常高于雌性。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "突变检测",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1000017969",
+  "tags": []
+ },
+ "BQ-gene_mutation-aa22d7add54c": {
+  "type": "mtf",
+  "question": "关于突变率的测定，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "Ames试验利用沙门氏菌组氨酸营养缺陷型回复突变来检测化学物质的致突变性",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "Luria-Delbrück波动实验利用噬菌体抗性突变证明了细菌突变的自发性和随机性",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "突变率在所有基因和所有生物中都是恒定的",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "波动实验中不同平行培养物间抗性菌落数的方差远大于平均值，支持了随机突变假说",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确:波动实验的意义(1943年)。D正确:方差>>均值是随机突变的统计证据。A正确:Ames试验的原理。C错误:突变率因基因、生物种类和环境条件而异，雄性生殖细胞突变率通常高于雌性。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "突变检测",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1000017969",
+  "tags": []
+ },
+ "BQ-gene_mutation-0328d6cfd384": {
+  "type": "mtf",
+  "question": "关于突变率的测定，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "Ames试验利用沙门氏菌组氨酸营养缺陷型回复突变来检测化学物质的致突变性",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "波动实验中不同平行培养物间抗性菌落数的方差远大于平均值，支持了随机突变假说",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "Luria-Delbrück波动实验利用噬菌体抗性突变证明了细菌突变的自发性和随机性",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "突变率在所有基因和所有生物中都是恒定的",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确:波动实验的意义(1943年)。B正确:方差>>均值是随机突变的统计证据。A正确:Ames试验的原理。D错误:突变率因基因、生物种类和环境条件而异，雄性生殖细胞突变率通常高于雌性。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "突变检测",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1000017969",
+  "tags": []
+ },
+ "BQ-gene_mutation-87703b5a9faa": {
+  "type": "mtf",
+  "question": "关于突变率的测定，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "Ames试验利用沙门氏菌组氨酸营养缺陷型回复突变来检测化学物质的致突变性",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "波动实验中不同平行培养物间抗性菌落数的方差远大于平均值，支持了随机突变假说",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "突变率在所有基因和所有生物中都是恒定的",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "Luria-Delbrück波动实验利用噬菌体抗性突变证明了细菌突变的自发性和随机性",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确:波动实验的意义(1943年)。B正确:方差>>均值是随机突变的统计证据。A正确:Ames试验的原理。C错误:突变率因基因、生物种类和环境条件而异，雄性生殖细胞突变率通常高于雌性。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "突变检测",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1000017969",
+  "tags": []
+ },
+ "BQ-gene_mutation-7c5f85f5042a": {
+  "type": "mtf",
+  "question": "关于突变率的测定，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "Ames试验利用沙门氏菌组氨酸营养缺陷型回复突变来检测化学物质的致突变性",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "突变率在所有基因和所有生物中都是恒定的",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "Luria-Delbrück波动实验利用噬菌体抗性突变证明了细菌突变的自发性和随机性",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "波动实验中不同平行培养物间抗性菌落数的方差远大于平均值，支持了随机突变假说",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确:波动实验的意义(1943年)。D正确:方差>>均值是随机突变的统计证据。A正确:Ames试验的原理。B错误:突变率因基因、生物种类和环境条件而异，雄性生殖细胞突变率通常高于雌性。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "突变检测",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1000017969",
+  "tags": []
+ },
+ "BQ-gene_mutation-0a98c03b8abb": {
+  "type": "mtf",
+  "question": "关于突变率的测定，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "Ames试验利用沙门氏菌组氨酸营养缺陷型回复突变来检测化学物质的致突变性",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "突变率在所有基因和所有生物中都是恒定的",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "波动实验中不同平行培养物间抗性菌落数的方差远大于平均值，支持了随机突变假说",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "Luria-Delbrück波动实验利用噬菌体抗性突变证明了细菌突变的自发性和随机性",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确:波动实验的意义(1943年)。C正确:方差>>均值是随机突变的统计证据。A正确:Ames试验的原理。B错误:突变率因基因、生物种类和环境条件而异，雄性生殖细胞突变率通常高于雌性。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "突变检测",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1000017969",
+  "tags": []
+ },
+ "BQ-gene_mutation-f2cfb7205f5c": {
+  "type": "mtf",
+  "question": "关于突变率的测定，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "Luria-Delbrück波动实验利用噬菌体抗性突变证明了细菌突变的自发性和随机性",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "Ames试验利用沙门氏菌组氨酸营养缺陷型回复突变来检测化学物质的致突变性",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "波动实验中不同平行培养物间抗性菌落数的方差远大于平均值，支持了随机突变假说",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "突变率在所有基因和所有生物中都是恒定的",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确:波动实验的意义(1943年)。C正确:方差>>均值是随机突变的统计证据。B正确:Ames试验的原理。D错误:突变率因基因、生物种类和环境条件而异，雄性生殖细胞突变率通常高于雌性。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "突变检测",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1000017969",
+  "tags": []
+ },
+ "BQ-gene_mutation-6c3e2ea92b4d": {
+  "type": "mtf",
+  "question": "关于突变率的测定，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "Luria-Delbrück波动实验利用噬菌体抗性突变证明了细菌突变的自发性和随机性",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "Ames试验利用沙门氏菌组氨酸营养缺陷型回复突变来检测化学物质的致突变性",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "突变率在所有基因和所有生物中都是恒定的",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "波动实验中不同平行培养物间抗性菌落数的方差远大于平均值，支持了随机突变假说",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确:波动实验的意义(1943年)。D正确:方差>>均值是随机突变的统计证据。B正确:Ames试验的原理。C错误:突变率因基因、生物种类和环境条件而异，雄性生殖细胞突变率通常高于雌性。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "突变检测",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1000017969",
+  "tags": []
+ },
+ "BQ-gene_mutation-08bd95eac384": {
+  "type": "mtf",
+  "question": "关于突变率的测定，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "Luria-Delbrück波动实验利用噬菌体抗性突变证明了细菌突变的自发性和随机性",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "波动实验中不同平行培养物间抗性菌落数的方差远大于平均值，支持了随机突变假说",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "Ames试验利用沙门氏菌组氨酸营养缺陷型回复突变来检测化学物质的致突变性",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "突变率在所有基因和所有生物中都是恒定的",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确:波动实验的意义(1943年)。B正确:方差>>均值是随机突变的统计证据。C正确:Ames试验的原理。D错误:突变率因基因、生物种类和环境条件而异，雄性生殖细胞突变率通常高于雌性。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "突变检测",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1000017969",
+  "tags": []
+ },
+ "BQ-gene_mutation-12f7a5d378ca": {
+  "type": "mtf",
+  "question": "关于突变率的测定，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "Luria-Delbrück波动实验利用噬菌体抗性突变证明了细菌突变的自发性和随机性",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "波动实验中不同平行培养物间抗性菌落数的方差远大于平均值，支持了随机突变假说",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "突变率在所有基因和所有生物中都是恒定的",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "Ames试验利用沙门氏菌组氨酸营养缺陷型回复突变来检测化学物质的致突变性",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确:波动实验的意义(1943年)。B正确:方差>>均值是随机突变的统计证据。D正确:Ames试验的原理。C错误:突变率因基因、生物种类和环境条件而异，雄性生殖细胞突变率通常高于雌性。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "突变检测",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1000017969",
+  "tags": []
+ },
+ "BQ-gene_mutation-e5554696083f": {
+  "type": "mtf",
+  "question": "关于突变率的测定，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "Luria-Delbrück波动实验利用噬菌体抗性突变证明了细菌突变的自发性和随机性",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "突变率在所有基因和所有生物中都是恒定的",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "Ames试验利用沙门氏菌组氨酸营养缺陷型回复突变来检测化学物质的致突变性",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "波动实验中不同平行培养物间抗性菌落数的方差远大于平均值，支持了随机突变假说",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确:波动实验的意义(1943年)。D正确:方差>>均值是随机突变的统计证据。C正确:Ames试验的原理。B错误:突变率因基因、生物种类和环境条件而异，雄性生殖细胞突变率通常高于雌性。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "突变检测",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1000017969",
+  "tags": []
+ },
+ "BQ-gene_mutation-86cee408e113": {
+  "type": "mtf",
+  "question": "关于突变率的测定，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "Luria-Delbrück波动实验利用噬菌体抗性突变证明了细菌突变的自发性和随机性",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "突变率在所有基因和所有生物中都是恒定的",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "波动实验中不同平行培养物间抗性菌落数的方差远大于平均值，支持了随机突变假说",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "Ames试验利用沙门氏菌组氨酸营养缺陷型回复突变来检测化学物质的致突变性",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确:波动实验的意义(1943年)。C正确:方差>>均值是随机突变的统计证据。D正确:Ames试验的原理。B错误:突变率因基因、生物种类和环境条件而异，雄性生殖细胞突变率通常高于雌性。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "突变检测",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1000017969",
+  "tags": []
+ },
+ "BQ-gene_mutation-a1c914552e64": {
+  "type": "mtf",
+  "question": "关于突变率的测定，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "波动实验中不同平行培养物间抗性菌落数的方差远大于平均值，支持了随机突变假说",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "Ames试验利用沙门氏菌组氨酸营养缺陷型回复突变来检测化学物质的致突变性",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "Luria-Delbrück波动实验利用噬菌体抗性突变证明了细菌突变的自发性和随机性",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "突变率在所有基因和所有生物中都是恒定的",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确:波动实验的意义(1943年)。A正确:方差>>均值是随机突变的统计证据。B正确:Ames试验的原理。D错误:突变率因基因、生物种类和环境条件而异，雄性生殖细胞突变率通常高于雌性。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "突变检测",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1000017969",
+  "tags": []
+ },
+ "BQ-gene_mutation-f769b98589a0": {
+  "type": "mtf",
+  "question": "关于突变率的测定，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "波动实验中不同平行培养物间抗性菌落数的方差远大于平均值，支持了随机突变假说",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "Ames试验利用沙门氏菌组氨酸营养缺陷型回复突变来检测化学物质的致突变性",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "突变率在所有基因和所有生物中都是恒定的",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "Luria-Delbrück波动实验利用噬菌体抗性突变证明了细菌突变的自发性和随机性",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确:波动实验的意义(1943年)。A正确:方差>>均值是随机突变的统计证据。B正确:Ames试验的原理。C错误:突变率因基因、生物种类和环境条件而异，雄性生殖细胞突变率通常高于雌性。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "突变检测",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1000017969",
+  "tags": []
+ },
+ "BQ-gene_mutation-257528ed7f25": {
+  "type": "mtf",
+  "question": "关于突变率的测定，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "波动实验中不同平行培养物间抗性菌落数的方差远大于平均值，支持了随机突变假说",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "Luria-Delbrück波动实验利用噬菌体抗性突变证明了细菌突变的自发性和随机性",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "Ames试验利用沙门氏菌组氨酸营养缺陷型回复突变来检测化学物质的致突变性",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "突变率在所有基因和所有生物中都是恒定的",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确:波动实验的意义(1943年)。A正确:方差>>均值是随机突变的统计证据。C正确:Ames试验的原理。D错误:突变率因基因、生物种类和环境条件而异，雄性生殖细胞突变率通常高于雌性。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "突变检测",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1000017969",
+  "tags": []
+ },
+ "BQ-gene_mutation-89c35402ccbf": {
+  "type": "mtf",
+  "question": "关于突变率的测定，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "波动实验中不同平行培养物间抗性菌落数的方差远大于平均值，支持了随机突变假说",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "Luria-Delbrück波动实验利用噬菌体抗性突变证明了细菌突变的自发性和随机性",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "突变率在所有基因和所有生物中都是恒定的",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "Ames试验利用沙门氏菌组氨酸营养缺陷型回复突变来检测化学物质的致突变性",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确:波动实验的意义(1943年)。A正确:方差>>均值是随机突变的统计证据。D正确:Ames试验的原理。C错误:突变率因基因、生物种类和环境条件而异，雄性生殖细胞突变率通常高于雌性。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "突变检测",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1000017969",
+  "tags": []
+ },
+ "BQ-gene_mutation-e3c7aa589e4a": {
+  "type": "mtf",
+  "question": "关于突变率的测定，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "波动实验中不同平行培养物间抗性菌落数的方差远大于平均值，支持了随机突变假说",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "突变率在所有基因和所有生物中都是恒定的",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "Ames试验利用沙门氏菌组氨酸营养缺陷型回复突变来检测化学物质的致突变性",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "Luria-Delbrück波动实验利用噬菌体抗性突变证明了细菌突变的自发性和随机性",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确:波动实验的意义(1943年)。A正确:方差>>均值是随机突变的统计证据。C正确:Ames试验的原理。B错误:突变率因基因、生物种类和环境条件而异，雄性生殖细胞突变率通常高于雌性。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "突变检测",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1000017969",
+  "tags": []
+ },
+ "BQ-gene_mutation-40773bc6111e": {
+  "type": "mtf",
+  "question": "关于突变率的测定，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "波动实验中不同平行培养物间抗性菌落数的方差远大于平均值，支持了随机突变假说",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "突变率在所有基因和所有生物中都是恒定的",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "Luria-Delbrück波动实验利用噬菌体抗性突变证明了细菌突变的自发性和随机性",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "Ames试验利用沙门氏菌组氨酸营养缺陷型回复突变来检测化学物质的致突变性",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确:波动实验的意义(1943年)。A正确:方差>>均值是随机突变的统计证据。D正确:Ames试验的原理。B错误:突变率因基因、生物种类和环境条件而异，雄性生殖细胞突变率通常高于雌性。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "突变检测",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1000017969",
+  "tags": []
+ },
+ "BQ-gene_mutation-1c5f61e7a3e7": {
+  "type": "mtf",
+  "question": "关于突变率的测定，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "突变率在所有基因和所有生物中都是恒定的",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "Ames试验利用沙门氏菌组氨酸营养缺陷型回复突变来检测化学物质的致突变性",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "Luria-Delbrück波动实验利用噬菌体抗性突变证明了细菌突变的自发性和随机性",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "波动实验中不同平行培养物间抗性菌落数的方差远大于平均值，支持了随机突变假说",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确:波动实验的意义(1943年)。D正确:方差>>均值是随机突变的统计证据。B正确:Ames试验的原理。A错误:突变率因基因、生物种类和环境条件而异，雄性生殖细胞突变率通常高于雌性。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "突变检测",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1000017969",
+  "tags": []
+ },
+ "BQ-gene_mutation-32138993690f": {
+  "type": "mtf",
+  "question": "关于突变率的测定，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "突变率在所有基因和所有生物中都是恒定的",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "Ames试验利用沙门氏菌组氨酸营养缺陷型回复突变来检测化学物质的致突变性",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "波动实验中不同平行培养物间抗性菌落数的方差远大于平均值，支持了随机突变假说",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "Luria-Delbrück波动实验利用噬菌体抗性突变证明了细菌突变的自发性和随机性",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确:波动实验的意义(1943年)。C正确:方差>>均值是随机突变的统计证据。B正确:Ames试验的原理。A错误:突变率因基因、生物种类和环境条件而异，雄性生殖细胞突变率通常高于雌性。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "突变检测",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1000017969",
+  "tags": []
+ },
+ "BQ-gene_mutation-ff4f447eb495": {
+  "type": "mtf",
+  "question": "关于突变率的测定，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "突变率在所有基因和所有生物中都是恒定的",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "Luria-Delbrück波动实验利用噬菌体抗性突变证明了细菌突变的自发性和随机性",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "Ames试验利用沙门氏菌组氨酸营养缺陷型回复突变来检测化学物质的致突变性",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "波动实验中不同平行培养物间抗性菌落数的方差远大于平均值，支持了随机突变假说",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确:波动实验的意义(1943年)。D正确:方差>>均值是随机突变的统计证据。C正确:Ames试验的原理。A错误:突变率因基因、生物种类和环境条件而异，雄性生殖细胞突变率通常高于雌性。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "突变检测",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1000017969",
+  "tags": []
+ },
+ "BQ-gene_mutation-81edd5f49231": {
+  "type": "mtf",
+  "question": "关于突变率的测定，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "突变率在所有基因和所有生物中都是恒定的",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "Luria-Delbrück波动实验利用噬菌体抗性突变证明了细菌突变的自发性和随机性",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "波动实验中不同平行培养物间抗性菌落数的方差远大于平均值，支持了随机突变假说",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "Ames试验利用沙门氏菌组氨酸营养缺陷型回复突变来检测化学物质的致突变性",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确:波动实验的意义(1943年)。C正确:方差>>均值是随机突变的统计证据。D正确:Ames试验的原理。A错误:突变率因基因、生物种类和环境条件而异，雄性生殖细胞突变率通常高于雌性。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "突变检测",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1000017969",
+  "tags": []
+ },
+ "BQ-gene_mutation-343c2c94010f": {
+  "type": "mtf",
+  "question": "关于突变率的测定，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "突变率在所有基因和所有生物中都是恒定的",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "波动实验中不同平行培养物间抗性菌落数的方差远大于平均值，支持了随机突变假说",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "Ames试验利用沙门氏菌组氨酸营养缺陷型回复突变来检测化学物质的致突变性",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "Luria-Delbrück波动实验利用噬菌体抗性突变证明了细菌突变的自发性和随机性",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确:波动实验的意义(1943年)。B正确:方差>>均值是随机突变的统计证据。C正确:Ames试验的原理。A错误:突变率因基因、生物种类和环境条件而异，雄性生殖细胞突变率通常高于雌性。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "突变检测",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1000017969",
+  "tags": []
+ },
+ "BQ-gene_mutation-18737b74e50b": {
+  "type": "mtf",
+  "question": "关于突变率的测定，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "突变率在所有基因和所有生物中都是恒定的",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "波动实验中不同平行培养物间抗性菌落数的方差远大于平均值，支持了随机突变假说",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "Luria-Delbrück波动实验利用噬菌体抗性突变证明了细菌突变的自发性和随机性",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "Ames试验利用沙门氏菌组氨酸营养缺陷型回复突变来检测化学物质的致突变性",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确:波动实验的意义(1943年)。B正确:方差>>均值是随机突变的统计证据。D正确:Ames试验的原理。A错误:突变率因基因、生物种类和环境条件而异，雄性生殖细胞突变率通常高于雌性。",
+  "module": 4,
+  "subject": "遗传学",
+  "concept": "突变检测",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1000017969",
+  "tags": []
+ }
+}

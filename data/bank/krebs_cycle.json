@@ -1,0 +1,842 @@
+{
+ "BQ-krebs_cycle-8f98139087bf": {
+  "type": "mtf",
+  "question": "关于三羧酸循环（柠檬酸循环），判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "三羧酸循环不仅是分解代谢的核心，其中间产物也是氨基酸和卟啉等生物合成的前体",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "循环中唯一的底物水平磷酸化发生在琥珀酰辅酶A转化为琥珀酸这一步，产物是GTP（动物）或ATP（植物）",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "柠檬酸循环发生在线粒体基质中，是糖、脂肪和氨基酸三大营养物质氧化分解的共同终末途径",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "草酰乙酸在每一轮循环后被消耗，因此需要不断从丙酮酸补充",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确：TCA循环的枢纽地位。B正确：琥珀酰辅酶A合成酶催化的底物水平磷酸化。D错误：草酰乙酸在循环中被再生，理论上不需要净消耗。但中间产物用于其他合成途径时需通过回补反应补充。A正确：TCA循环的两用性（分解代谢+提供合成前体）。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "三羧酸循环",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1188546994",
+  "tags": []
+ },
+ "BQ-krebs_cycle-d6d452482c68": {
+  "type": "mtf",
+  "question": "关于三羧酸循环（柠檬酸循环），判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "三羧酸循环不仅是分解代谢的核心，其中间产物也是氨基酸和卟啉等生物合成的前体",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "循环中唯一的底物水平磷酸化发生在琥珀酰辅酶A转化为琥珀酸这一步，产物是GTP（动物）或ATP（植物）",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "草酰乙酸在每一轮循环后被消耗，因此需要不断从丙酮酸补充",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "柠檬酸循环发生在线粒体基质中，是糖、脂肪和氨基酸三大营养物质氧化分解的共同终末途径",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：TCA循环的枢纽地位。B正确：琥珀酰辅酶A合成酶催化的底物水平磷酸化。C错误：草酰乙酸在循环中被再生，理论上不需要净消耗。但中间产物用于其他合成途径时需通过回补反应补充。A正确：TCA循环的两用性（分解代谢+提供合成前体）。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "三羧酸循环",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1188546994",
+  "tags": []
+ },
+ "BQ-krebs_cycle-6c3a65d522cb": {
+  "type": "mtf",
+  "question": "关于三羧酸循环（柠檬酸循环），判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "三羧酸循环不仅是分解代谢的核心，其中间产物也是氨基酸和卟啉等生物合成的前体",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "柠檬酸循环发生在线粒体基质中，是糖、脂肪和氨基酸三大营养物质氧化分解的共同终末途径",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "循环中唯一的底物水平磷酸化发生在琥珀酰辅酶A转化为琥珀酸这一步，产物是GTP（动物）或ATP（植物）",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "草酰乙酸在每一轮循环后被消耗，因此需要不断从丙酮酸补充",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确：TCA循环的枢纽地位。C正确：琥珀酰辅酶A合成酶催化的底物水平磷酸化。D错误：草酰乙酸在循环中被再生，理论上不需要净消耗。但中间产物用于其他合成途径时需通过回补反应补充。A正确：TCA循环的两用性（分解代谢+提供合成前体）。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "三羧酸循环",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1188546994",
+  "tags": []
+ },
+ "BQ-krebs_cycle-2e2dc1be5aa5": {
+  "type": "mtf",
+  "question": "关于三羧酸循环（柠檬酸循环），判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "三羧酸循环不仅是分解代谢的核心，其中间产物也是氨基酸和卟啉等生物合成的前体",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "柠檬酸循环发生在线粒体基质中，是糖、脂肪和氨基酸三大营养物质氧化分解的共同终末途径",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "草酰乙酸在每一轮循环后被消耗，因此需要不断从丙酮酸补充",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "循环中唯一的底物水平磷酸化发生在琥珀酰辅酶A转化为琥珀酸这一步，产物是GTP（动物）或ATP（植物）",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：TCA循环的枢纽地位。D正确：琥珀酰辅酶A合成酶催化的底物水平磷酸化。C错误：草酰乙酸在循环中被再生，理论上不需要净消耗。但中间产物用于其他合成途径时需通过回补反应补充。A正确：TCA循环的两用性（分解代谢+提供合成前体）。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "三羧酸循环",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1188546994",
+  "tags": []
+ },
+ "BQ-krebs_cycle-62f86734697b": {
+  "type": "mtf",
+  "question": "关于三羧酸循环（柠檬酸循环），判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "三羧酸循环不仅是分解代谢的核心，其中间产物也是氨基酸和卟啉等生物合成的前体",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "草酰乙酸在每一轮循环后被消耗，因此需要不断从丙酮酸补充",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "循环中唯一的底物水平磷酸化发生在琥珀酰辅酶A转化为琥珀酸这一步，产物是GTP（动物）或ATP（植物）",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "柠檬酸循环发生在线粒体基质中，是糖、脂肪和氨基酸三大营养物质氧化分解的共同终末途径",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：TCA循环的枢纽地位。C正确：琥珀酰辅酶A合成酶催化的底物水平磷酸化。B错误：草酰乙酸在循环中被再生，理论上不需要净消耗。但中间产物用于其他合成途径时需通过回补反应补充。A正确：TCA循环的两用性（分解代谢+提供合成前体）。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "三羧酸循环",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1188546994",
+  "tags": []
+ },
+ "BQ-krebs_cycle-a9293c13126c": {
+  "type": "mtf",
+  "question": "关于三羧酸循环（柠檬酸循环），判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "三羧酸循环不仅是分解代谢的核心，其中间产物也是氨基酸和卟啉等生物合成的前体",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "草酰乙酸在每一轮循环后被消耗，因此需要不断从丙酮酸补充",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "柠檬酸循环发生在线粒体基质中，是糖、脂肪和氨基酸三大营养物质氧化分解的共同终末途径",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "循环中唯一的底物水平磷酸化发生在琥珀酰辅酶A转化为琥珀酸这一步，产物是GTP（动物）或ATP（植物）",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：TCA循环的枢纽地位。D正确：琥珀酰辅酶A合成酶催化的底物水平磷酸化。B错误：草酰乙酸在循环中被再生，理论上不需要净消耗。但中间产物用于其他合成途径时需通过回补反应补充。A正确：TCA循环的两用性（分解代谢+提供合成前体）。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "三羧酸循环",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1188546994",
+  "tags": []
+ },
+ "BQ-krebs_cycle-93767d4111c1": {
+  "type": "mtf",
+  "question": "关于三羧酸循环（柠檬酸循环），判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "循环中唯一的底物水平磷酸化发生在琥珀酰辅酶A转化为琥珀酸这一步，产物是GTP（动物）或ATP（植物）",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "三羧酸循环不仅是分解代谢的核心，其中间产物也是氨基酸和卟啉等生物合成的前体",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "柠檬酸循环发生在线粒体基质中，是糖、脂肪和氨基酸三大营养物质氧化分解的共同终末途径",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "草酰乙酸在每一轮循环后被消耗，因此需要不断从丙酮酸补充",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确：TCA循环的枢纽地位。A正确：琥珀酰辅酶A合成酶催化的底物水平磷酸化。D错误：草酰乙酸在循环中被再生，理论上不需要净消耗。但中间产物用于其他合成途径时需通过回补反应补充。B正确：TCA循环的两用性（分解代谢+提供合成前体）。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "三羧酸循环",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1188546994",
+  "tags": []
+ },
+ "BQ-krebs_cycle-5c3311fed258": {
+  "type": "mtf",
+  "question": "关于三羧酸循环（柠檬酸循环），判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "循环中唯一的底物水平磷酸化发生在琥珀酰辅酶A转化为琥珀酸这一步，产物是GTP（动物）或ATP（植物）",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "三羧酸循环不仅是分解代谢的核心，其中间产物也是氨基酸和卟啉等生物合成的前体",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "草酰乙酸在每一轮循环后被消耗，因此需要不断从丙酮酸补充",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "柠檬酸循环发生在线粒体基质中，是糖、脂肪和氨基酸三大营养物质氧化分解的共同终末途径",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：TCA循环的枢纽地位。A正确：琥珀酰辅酶A合成酶催化的底物水平磷酸化。C错误：草酰乙酸在循环中被再生，理论上不需要净消耗。但中间产物用于其他合成途径时需通过回补反应补充。B正确：TCA循环的两用性（分解代谢+提供合成前体）。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "三羧酸循环",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1188546994",
+  "tags": []
+ },
+ "BQ-krebs_cycle-4aab460d8c7b": {
+  "type": "mtf",
+  "question": "关于三羧酸循环（柠檬酸循环），判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "循环中唯一的底物水平磷酸化发生在琥珀酰辅酶A转化为琥珀酸这一步，产物是GTP（动物）或ATP（植物）",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "柠檬酸循环发生在线粒体基质中，是糖、脂肪和氨基酸三大营养物质氧化分解的共同终末途径",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "三羧酸循环不仅是分解代谢的核心，其中间产物也是氨基酸和卟啉等生物合成的前体",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "草酰乙酸在每一轮循环后被消耗，因此需要不断从丙酮酸补充",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确：TCA循环的枢纽地位。A正确：琥珀酰辅酶A合成酶催化的底物水平磷酸化。D错误：草酰乙酸在循环中被再生，理论上不需要净消耗。但中间产物用于其他合成途径时需通过回补反应补充。C正确：TCA循环的两用性（分解代谢+提供合成前体）。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "三羧酸循环",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1188546994",
+  "tags": []
+ },
+ "BQ-krebs_cycle-a99e2f997813": {
+  "type": "mtf",
+  "question": "关于三羧酸循环（柠檬酸循环），判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "循环中唯一的底物水平磷酸化发生在琥珀酰辅酶A转化为琥珀酸这一步，产物是GTP（动物）或ATP（植物）",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "柠檬酸循环发生在线粒体基质中，是糖、脂肪和氨基酸三大营养物质氧化分解的共同终末途径",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "草酰乙酸在每一轮循环后被消耗，因此需要不断从丙酮酸补充",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "三羧酸循环不仅是分解代谢的核心，其中间产物也是氨基酸和卟啉等生物合成的前体",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：TCA循环的枢纽地位。A正确：琥珀酰辅酶A合成酶催化的底物水平磷酸化。C错误：草酰乙酸在循环中被再生，理论上不需要净消耗。但中间产物用于其他合成途径时需通过回补反应补充。D正确：TCA循环的两用性（分解代谢+提供合成前体）。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "三羧酸循环",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1188546994",
+  "tags": []
+ },
+ "BQ-krebs_cycle-3d9732f1fc6f": {
+  "type": "mtf",
+  "question": "关于三羧酸循环（柠檬酸循环），判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "循环中唯一的底物水平磷酸化发生在琥珀酰辅酶A转化为琥珀酸这一步，产物是GTP（动物）或ATP（植物）",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "草酰乙酸在每一轮循环后被消耗，因此需要不断从丙酮酸补充",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "三羧酸循环不仅是分解代谢的核心，其中间产物也是氨基酸和卟啉等生物合成的前体",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "柠檬酸循环发生在线粒体基质中，是糖、脂肪和氨基酸三大营养物质氧化分解的共同终末途径",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：TCA循环的枢纽地位。A正确：琥珀酰辅酶A合成酶催化的底物水平磷酸化。B错误：草酰乙酸在循环中被再生，理论上不需要净消耗。但中间产物用于其他合成途径时需通过回补反应补充。C正确：TCA循环的两用性（分解代谢+提供合成前体）。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "三羧酸循环",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1188546994",
+  "tags": []
+ },
+ "BQ-krebs_cycle-c9761b118cf3": {
+  "type": "mtf",
+  "question": "关于三羧酸循环（柠檬酸循环），判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "循环中唯一的底物水平磷酸化发生在琥珀酰辅酶A转化为琥珀酸这一步，产物是GTP（动物）或ATP（植物）",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "草酰乙酸在每一轮循环后被消耗，因此需要不断从丙酮酸补充",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "柠檬酸循环发生在线粒体基质中，是糖、脂肪和氨基酸三大营养物质氧化分解的共同终末途径",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "三羧酸循环不仅是分解代谢的核心，其中间产物也是氨基酸和卟啉等生物合成的前体",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：TCA循环的枢纽地位。A正确：琥珀酰辅酶A合成酶催化的底物水平磷酸化。B错误：草酰乙酸在循环中被再生，理论上不需要净消耗。但中间产物用于其他合成途径时需通过回补反应补充。D正确：TCA循环的两用性（分解代谢+提供合成前体）。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "三羧酸循环",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1188546994",
+  "tags": []
+ },
+ "BQ-krebs_cycle-1195cb27ef97": {
+  "type": "mtf",
+  "question": "关于三羧酸循环（柠檬酸循环），判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "柠檬酸循环发生在线粒体基质中，是糖、脂肪和氨基酸三大营养物质氧化分解的共同终末途径",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "三羧酸循环不仅是分解代谢的核心，其中间产物也是氨基酸和卟啉等生物合成的前体",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "循环中唯一的底物水平磷酸化发生在琥珀酰辅酶A转化为琥珀酸这一步，产物是GTP（动物）或ATP（植物）",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "草酰乙酸在每一轮循环后被消耗，因此需要不断从丙酮酸补充",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确：TCA循环的枢纽地位。C正确：琥珀酰辅酶A合成酶催化的底物水平磷酸化。D错误：草酰乙酸在循环中被再生，理论上不需要净消耗。但中间产物用于其他合成途径时需通过回补反应补充。B正确：TCA循环的两用性（分解代谢+提供合成前体）。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "三羧酸循环",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1188546994",
+  "tags": []
+ },
+ "BQ-krebs_cycle-42f719c28588": {
+  "type": "mtf",
+  "question": "关于三羧酸循环（柠檬酸循环），判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "柠檬酸循环发生在线粒体基质中，是糖、脂肪和氨基酸三大营养物质氧化分解的共同终末途径",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "三羧酸循环不仅是分解代谢的核心，其中间产物也是氨基酸和卟啉等生物合成的前体",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "草酰乙酸在每一轮循环后被消耗，因此需要不断从丙酮酸补充",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "循环中唯一的底物水平磷酸化发生在琥珀酰辅酶A转化为琥珀酸这一步，产物是GTP（动物）或ATP（植物）",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：TCA循环的枢纽地位。D正确：琥珀酰辅酶A合成酶催化的底物水平磷酸化。C错误：草酰乙酸在循环中被再生，理论上不需要净消耗。但中间产物用于其他合成途径时需通过回补反应补充。B正确：TCA循环的两用性（分解代谢+提供合成前体）。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "三羧酸循环",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1188546994",
+  "tags": []
+ },
+ "BQ-krebs_cycle-878dfc52ed08": {
+  "type": "mtf",
+  "question": "关于三羧酸循环（柠檬酸循环），判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "柠檬酸循环发生在线粒体基质中，是糖、脂肪和氨基酸三大营养物质氧化分解的共同终末途径",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "循环中唯一的底物水平磷酸化发生在琥珀酰辅酶A转化为琥珀酸这一步，产物是GTP（动物）或ATP（植物）",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "三羧酸循环不仅是分解代谢的核心，其中间产物也是氨基酸和卟啉等生物合成的前体",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "草酰乙酸在每一轮循环后被消耗，因此需要不断从丙酮酸补充",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确：TCA循环的枢纽地位。B正确：琥珀酰辅酶A合成酶催化的底物水平磷酸化。D错误：草酰乙酸在循环中被再生，理论上不需要净消耗。但中间产物用于其他合成途径时需通过回补反应补充。C正确：TCA循环的两用性（分解代谢+提供合成前体）。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "三羧酸循环",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1188546994",
+  "tags": []
+ },
+ "BQ-krebs_cycle-46ace7642cfa": {
+  "type": "mtf",
+  "question": "关于三羧酸循环（柠檬酸循环），判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "柠檬酸循环发生在线粒体基质中，是糖、脂肪和氨基酸三大营养物质氧化分解的共同终末途径",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "循环中唯一的底物水平磷酸化发生在琥珀酰辅酶A转化为琥珀酸这一步，产物是GTP（动物）或ATP（植物）",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "草酰乙酸在每一轮循环后被消耗，因此需要不断从丙酮酸补充",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "三羧酸循环不仅是分解代谢的核心，其中间产物也是氨基酸和卟啉等生物合成的前体",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：TCA循环的枢纽地位。B正确：琥珀酰辅酶A合成酶催化的底物水平磷酸化。C错误：草酰乙酸在循环中被再生，理论上不需要净消耗。但中间产物用于其他合成途径时需通过回补反应补充。D正确：TCA循环的两用性（分解代谢+提供合成前体）。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "三羧酸循环",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1188546994",
+  "tags": []
+ },
+ "BQ-krebs_cycle-25a04c1c41f8": {
+  "type": "mtf",
+  "question": "关于三羧酸循环（柠檬酸循环），判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "柠檬酸循环发生在线粒体基质中，是糖、脂肪和氨基酸三大营养物质氧化分解的共同终末途径",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "草酰乙酸在每一轮循环后被消耗，因此需要不断从丙酮酸补充",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "三羧酸循环不仅是分解代谢的核心，其中间产物也是氨基酸和卟啉等生物合成的前体",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "循环中唯一的底物水平磷酸化发生在琥珀酰辅酶A转化为琥珀酸这一步，产物是GTP（动物）或ATP（植物）",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：TCA循环的枢纽地位。D正确：琥珀酰辅酶A合成酶催化的底物水平磷酸化。B错误：草酰乙酸在循环中被再生，理论上不需要净消耗。但中间产物用于其他合成途径时需通过回补反应补充。C正确：TCA循环的两用性（分解代谢+提供合成前体）。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "三羧酸循环",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1188546994",
+  "tags": []
+ },
+ "BQ-krebs_cycle-c967615b0b84": {
+  "type": "mtf",
+  "question": "关于三羧酸循环（柠檬酸循环），判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "柠檬酸循环发生在线粒体基质中，是糖、脂肪和氨基酸三大营养物质氧化分解的共同终末途径",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "草酰乙酸在每一轮循环后被消耗，因此需要不断从丙酮酸补充",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "循环中唯一的底物水平磷酸化发生在琥珀酰辅酶A转化为琥珀酸这一步，产物是GTP（动物）或ATP（植物）",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "三羧酸循环不仅是分解代谢的核心，其中间产物也是氨基酸和卟啉等生物合成的前体",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：TCA循环的枢纽地位。C正确：琥珀酰辅酶A合成酶催化的底物水平磷酸化。B错误：草酰乙酸在循环中被再生，理论上不需要净消耗。但中间产物用于其他合成途径时需通过回补反应补充。D正确：TCA循环的两用性（分解代谢+提供合成前体）。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "三羧酸循环",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1188546994",
+  "tags": []
+ },
+ "BQ-krebs_cycle-e8bc0935a1cc": {
+  "type": "mtf",
+  "question": "关于三羧酸循环（柠檬酸循环），判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "草酰乙酸在每一轮循环后被消耗，因此需要不断从丙酮酸补充",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "三羧酸循环不仅是分解代谢的核心，其中间产物也是氨基酸和卟啉等生物合成的前体",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "循环中唯一的底物水平磷酸化发生在琥珀酰辅酶A转化为琥珀酸这一步，产物是GTP（动物）或ATP（植物）",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "柠檬酸循环发生在线粒体基质中，是糖、脂肪和氨基酸三大营养物质氧化分解的共同终末途径",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：TCA循环的枢纽地位。C正确：琥珀酰辅酶A合成酶催化的底物水平磷酸化。A错误：草酰乙酸在循环中被再生，理论上不需要净消耗。但中间产物用于其他合成途径时需通过回补反应补充。B正确：TCA循环的两用性（分解代谢+提供合成前体）。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "三羧酸循环",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1188546994",
+  "tags": []
+ },
+ "BQ-krebs_cycle-911638422b5f": {
+  "type": "mtf",
+  "question": "关于三羧酸循环（柠檬酸循环），判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "草酰乙酸在每一轮循环后被消耗，因此需要不断从丙酮酸补充",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "三羧酸循环不仅是分解代谢的核心，其中间产物也是氨基酸和卟啉等生物合成的前体",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "柠檬酸循环发生在线粒体基质中，是糖、脂肪和氨基酸三大营养物质氧化分解的共同终末途径",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "循环中唯一的底物水平磷酸化发生在琥珀酰辅酶A转化为琥珀酸这一步，产物是GTP（动物）或ATP（植物）",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：TCA循环的枢纽地位。D正确：琥珀酰辅酶A合成酶催化的底物水平磷酸化。A错误：草酰乙酸在循环中被再生，理论上不需要净消耗。但中间产物用于其他合成途径时需通过回补反应补充。B正确：TCA循环的两用性（分解代谢+提供合成前体）。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "三羧酸循环",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1188546994",
+  "tags": []
+ },
+ "BQ-krebs_cycle-30ba3a06182b": {
+  "type": "mtf",
+  "question": "关于三羧酸循环（柠檬酸循环），判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "草酰乙酸在每一轮循环后被消耗，因此需要不断从丙酮酸补充",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "循环中唯一的底物水平磷酸化发生在琥珀酰辅酶A转化为琥珀酸这一步，产物是GTP（动物）或ATP（植物）",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "三羧酸循环不仅是分解代谢的核心，其中间产物也是氨基酸和卟啉等生物合成的前体",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "柠檬酸循环发生在线粒体基质中，是糖、脂肪和氨基酸三大营养物质氧化分解的共同终末途径",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：TCA循环的枢纽地位。B正确：琥珀酰辅酶A合成酶催化的底物水平磷酸化。A错误：草酰乙酸在循环中被再生，理论上不需要净消耗。但中间产物用于其他合成途径时需通过回补反应补充。C正确：TCA循环的两用性（分解代谢+提供合成前体）。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "三羧酸循环",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1188546994",
+  "tags": []
+ },
+ "BQ-krebs_cycle-82f5325c1fdb": {
+  "type": "mtf",
+  "question": "关于三羧酸循环（柠檬酸循环），判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "草酰乙酸在每一轮循环后被消耗，因此需要不断从丙酮酸补充",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "循环中唯一的底物水平磷酸化发生在琥珀酰辅酶A转化为琥珀酸这一步，产物是GTP（动物）或ATP（植物）",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "柠檬酸循环发生在线粒体基质中，是糖、脂肪和氨基酸三大营养物质氧化分解的共同终末途径",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "三羧酸循环不仅是分解代谢的核心，其中间产物也是氨基酸和卟啉等生物合成的前体",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：TCA循环的枢纽地位。B正确：琥珀酰辅酶A合成酶催化的底物水平磷酸化。A错误：草酰乙酸在循环中被再生，理论上不需要净消耗。但中间产物用于其他合成途径时需通过回补反应补充。D正确：TCA循环的两用性（分解代谢+提供合成前体）。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "三羧酸循环",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1188546994",
+  "tags": []
+ },
+ "BQ-krebs_cycle-3e5a774e65ab": {
+  "type": "mtf",
+  "question": "关于三羧酸循环（柠檬酸循环），判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "草酰乙酸在每一轮循环后被消耗，因此需要不断从丙酮酸补充",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "柠檬酸循环发生在线粒体基质中，是糖、脂肪和氨基酸三大营养物质氧化分解的共同终末途径",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "三羧酸循环不仅是分解代谢的核心，其中间产物也是氨基酸和卟啉等生物合成的前体",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "循环中唯一的底物水平磷酸化发生在琥珀酰辅酶A转化为琥珀酸这一步，产物是GTP（动物）或ATP（植物）",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：TCA循环的枢纽地位。D正确：琥珀酰辅酶A合成酶催化的底物水平磷酸化。A错误：草酰乙酸在循环中被再生，理论上不需要净消耗。但中间产物用于其他合成途径时需通过回补反应补充。C正确：TCA循环的两用性（分解代谢+提供合成前体）。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "三羧酸循环",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1188546994",
+  "tags": []
+ },
+ "BQ-krebs_cycle-c64b49452c52": {
+  "type": "mtf",
+  "question": "关于三羧酸循环（柠檬酸循环），判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "草酰乙酸在每一轮循环后被消耗，因此需要不断从丙酮酸补充",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "柠檬酸循环发生在线粒体基质中，是糖、脂肪和氨基酸三大营养物质氧化分解的共同终末途径",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "循环中唯一的底物水平磷酸化发生在琥珀酰辅酶A转化为琥珀酸这一步，产物是GTP（动物）或ATP（植物）",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "三羧酸循环不仅是分解代谢的核心，其中间产物也是氨基酸和卟啉等生物合成的前体",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：TCA循环的枢纽地位。C正确：琥珀酰辅酶A合成酶催化的底物水平磷酸化。A错误：草酰乙酸在循环中被再生，理论上不需要净消耗。但中间产物用于其他合成途径时需通过回补反应补充。D正确：TCA循环的两用性（分解代谢+提供合成前体）。",
+  "module": 1,
+  "subject": "生物化学",
+  "concept": "三羧酸循环",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1188546994",
+  "tags": []
+ }
+}

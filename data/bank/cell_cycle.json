@@ -1,0 +1,3394 @@
+{
+ "BQ-cell_cycle-618d2578f4c9": {
+  "type": "mtf",
+  "question": "下列关于有丝分裂的叙述，错误的是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "细胞周期从分裂期开始计算",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "细胞周期包括分裂间期和分裂期",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "分裂期比分裂间期时间长",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "所有细胞都能进行有丝分裂",
+    "answer": false
+   }
+  ],
+  "explanation": "只有连续分裂的细胞才有细胞周期；细胞周期从一次分裂完成时开始到下一次分裂完成时结束；间期占时较长。",
+  "subject": "细胞生物学",
+  "concept": "细胞增殖与细胞周期",
+  "difficulty": "basic",
+  "chart": null,
+  "year": null,
+  "module": "module_1",
+  "target": "high_school",
+  "tags": [
+   "module_1",
+   "细胞生物学",
+   "细胞增殖与细胞周期",
+   "high_school"
+  ],
+  "oldId": "1923398724"
+ },
+ "BQ-cell_cycle-ade14522f56d": {
+  "type": "mtf",
+  "question": "下列关于细胞周期的叙述，正确的是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "机体内所有的体细胞都处于细胞周期中",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "细胞周期包括间期、前期、中期、后期和末期",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "DNA 的复制发生在细胞分裂间期",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "抑制 DNA 的合成，细胞将停留在分裂期",
+    "answer": false
+   }
+  ],
+  "explanation": "细胞周期中 DNA 的复制发生在分裂间期的 S 期；只有连续分裂的细胞才具有细胞周期；抑制 DNA 合成将使细胞停留在间期而非分裂期。",
+  "subject": "细胞生物学",
+  "concept": "细胞周期",
+  "difficulty": "basic",
+  "chart": null,
+  "year": null,
+  "module": "module_1",
+  "target": "high_school",
+  "tags": [
+   "module_1",
+   "细胞生物学",
+   "细胞周期",
+   "高考"
+  ],
+  "oldId": "1281791220"
+ },
+ "BQ-cell_cycle-69969b81ee27": {
+  "type": "mtf",
+  "question": "下列关于细胞有丝分裂的叙述，错误的是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "机体内所有体细胞都处于细胞周期中",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "DNA 的复制发生在分裂期",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "细胞周期包括间期和分裂期",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "抑制 DNA 合成细胞将停留在分裂后期",
+    "answer": false
+   }
+  ],
+  "explanation": "只有连续分裂的细胞才具有细胞周期；DNA 复制发生在 S 期（间期）；细胞周期包括间期和分裂期。",
+  "subject": "细胞生物学",
+  "concept": "细胞周期与有丝分裂",
+  "difficulty": "league",
+  "chart": null,
+  "year": null,
+  "module": "module_1",
+  "target": "high_school",
+  "tags": [
+   "module_1",
+   "细胞生物学",
+   "细胞周期与有丝分裂",
+   "high_school"
+  ],
+  "oldId": "1227786926"
+ },
+ "BQ-cell_cycle-e11678923c11": {
+  "type": "mtf",
+  "question": "关于 MPF（成熟促进因子）的叙述，正确的是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "MPF 在 G1 期活性最高",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "MPF 催化底物磷酸化推动细胞进入 M 期",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "MPF 由 Cyclin D 与 CDK4 组成",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "MPF 在 M 期结束时活性升高",
+    "answer": false
+   }
+  ],
+  "explanation": "MPF = Cyclin B + CDK1（Cdc2），在 G2/M 转换期活性最高；通过磷酸化多种底物推动有丝分裂；M 末 Cyclin B 降解，MPF 失活。",
+  "subject": "细胞生物学",
+  "concept": "细胞周期调控",
+  "difficulty": "national",
+  "chart": null,
+  "year": null,
+  "module": "module_1",
+  "target": "competition",
+  "tags": [
+   "module_1",
+   "细胞生物学",
+   "细胞周期调控",
+   "competition"
+  ],
+  "oldId": "1701806434"
+ },
+ "BQ-cell_cycle-a107dce28c81": {
+  "type": "mtf",
+  "question": "关于 MPF（成熟促进因子）的叙述，正确的是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "MPF 在 M 期结束时活性升高",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "MPF 由 Cyclin D 与 CDK4 组成",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "MPF 催化底物磷酸化推动细胞进入 M 期",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "MPF 在 G1 期活性最高",
+    "answer": false
+   }
+  ],
+  "explanation": "MPF = Cyclin B + CDK1（Cdc2），在 G2/M 转换期活性最高；通过磷酸化多种底物推动有丝分裂；M 末 Cyclin B 降解，MPF 失活。",
+  "subject": "细胞生物学",
+  "concept": "细胞周期调控",
+  "difficulty": "national",
+  "chart": null,
+  "year": null,
+  "module": "module_1",
+  "target": "competition",
+  "tags": [
+   "module_1",
+   "细胞生物学",
+   "细胞周期调控",
+   "competition"
+  ],
+  "oldId": "1701806434"
+ },
+ "BQ-cell_cycle-a148344d8c49": {
+  "type": "mtf",
+  "question": "关于细胞周期的叙述，正确的是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "机体内所有体细胞都处于细胞周期中",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "DNA 的复制发生在分裂期",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "细胞周期包括间期和分裂期",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "抑制 DNA 合成细胞将停留在分裂后期",
+    "answer": false
+   }
+  ],
+  "explanation": "只有连续分裂的细胞才具有细胞周期；DNA 复制发生在 S 期（间期）；细胞周期包括间期和分裂期。",
+  "subject": "细胞生物学",
+  "concept": "细胞周期与有丝分裂",
+  "difficulty": "league",
+  "chart": null,
+  "year": null,
+  "module": "module_1",
+  "target": "high_school",
+  "tags": [
+   "module_1",
+   "细胞生物学",
+   "细胞周期与有丝分裂",
+   "high_school"
+  ],
+  "oldId": "1099912478"
+ },
+ "BQ-cell_cycle-e9ab761213ad": {
+  "type": "multi_judge",
+  "question": "向同步化于 G1 期的哺乳动物细胞培养液中加入羟基脲（抑制核糖核苷酸还原酶），阻断 dNTP 合成，随后检测细胞周期分布及 DNA 状态。",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "细胞将主要停滞在 G1/S 检验点，无法启动 DNA 复制。",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "若强行诱导复制，新合成 DNA 链中将错误掺入核糖核苷酸。",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "长期阻断将激活 p53 依赖途径，诱导细胞凋亡或衰老。",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "该处理会导致染色体在未复制情况下直接进入有丝分裂。",
+    "answer": false
+   }
+  ],
+  "explanation": "A 正确：dNTP 缺乏导致 DNA 聚合酶无法工作，S 期无法启动，细胞停滞在 G1/S 交界。B 错误：DNA 聚合酶具有底物特异性，只结合 dNTP，即使 rNTP 浓度高也不会大量掺入 DNA。C 正确：复制压力激活检查点，p53 介导细胞周期阻滞或凋亡以防基因组不稳定。D 错误：S 期未完成会激活 S 期检查点，阻止细胞进入 M 期，不会发生未复制即分裂。",
+  "subject": "细胞生物学",
+  "concept": "细胞周期调控",
+  "difficulty": "league",
+  "chart": null,
+  "year": null,
+  "module": "module_1",
+  "target": "competition",
+  "tags": [
+   "module_1",
+   "medium"
+  ],
+  "oldId": "802890907"
+ },
+ "BQ-cell_cycle-0ad86a48598d": {
+  "type": "mtf",
+  "question": "在一个细胞周期中，染色体数目加倍发生在",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "机体内所有体细胞都处于细胞周期中",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "DNA 的复制发生在分裂期",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "细胞周期包括间期和分裂期",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "抑制 DNA 合成细胞将停留在分裂后期",
+    "answer": false
+   }
+  ],
+  "explanation": "只有连续分裂的细胞才具有细胞周期；DNA 复制发生在 S 期（间期）；细胞周期包括间期和分裂期。",
+  "subject": "细胞生物学",
+  "concept": "细胞周期与有丝分裂",
+  "difficulty": "league",
+  "chart": null,
+  "year": null,
+  "module": "module_1",
+  "target": "high_school",
+  "tags": [
+   "module_1",
+   "细胞生物学",
+   "细胞周期与有丝分裂",
+   "high_school"
+  ],
+  "oldId": "475937364"
+ },
+ "BQ-cell_cycle-bf047d530243": {
+  "type": "multi_judge",
+  "question": "将同步化于 G1 期的哺乳动物细胞置于含放射性标记胸腺嘧啶的培养基中，随后加入 CDK1 特异性抑制剂阻断其进入 M 期。",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "细胞内 DNA 含量将增加至 G1 期的两倍，但染色体数目保持不变。",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "放射性标记主要掺入到新合成的核 DNA 中，线粒体 DNA 无标记信号。",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "被阻断的细胞核膜保持完整，染色质未发生高度螺旋化形成染色体。",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "该处理导致细胞停滞在 G2 期，此时细胞内 CDK1 激酶活性处于最高水平。",
+    "answer": false
+   }
+  ],
+  "explanation": "A 正确：S 期完成 DNA 复制，DNA 含量加倍，但着丝粒未分裂，染色体数目不变。B 错误：胸腺嘧啶也会掺入线粒体 DNA 的复制中，线粒体会有标记。C 正确：CDK1 抑制剂阻止进入 M 期，细胞停滞在 G2 期，核膜未解体，染色质未螺旋化。D 错误：虽然细胞停滞在 G2 期，但 CDK1 特异性抑制剂会结合并抑制 CDK1 活性，故此时 CDK1 活性被抑制而非最高。",
+  "subject": "细胞生物学",
+  "concept": "细胞周期调控",
+  "difficulty": "national",
+  "chart": null,
+  "year": null,
+  "module": "module_1",
+  "target": "competition",
+  "tags": [
+   "module_1",
+   "hard"
+  ],
+  "oldId": "916622818"
+ },
+ "BQ-cell_cycle-981033af07fc": {
+  "type": "mtf",
+  "question": "有丝分裂中染色体数:DNA 数=1:2 的时期是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "细胞周期包括分裂间期和分裂期",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "所有细胞都能进行有丝分裂",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "分裂期比分裂间期时间长",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "细胞周期从分裂期开始计算",
+    "answer": false
+   }
+  ],
+  "explanation": "只有连续分裂的细胞才有细胞周期；细胞周期从一次分裂完成时开始到下一次分裂完成时结束；间期占时较长。",
+  "subject": "细胞生物学",
+  "concept": "细胞增殖与细胞周期",
+  "difficulty": "basic",
+  "chart": null,
+  "year": null,
+  "module": "module_1",
+  "target": "high_school",
+  "tags": [
+   "module_1",
+   "细胞生物学",
+   "细胞增殖与细胞周期",
+   "high_school"
+  ],
+  "oldId": "1471090589"
+ },
+ "BQ-cell_cycle-a6188b6a3a7b": {
+  "type": "mtf",
+  "question": "某同学统计了显微镜视野下根尖分生区各时期的细胞数，结果如下表。下列叙述正确的是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "间期在细胞周期中所占时间最长",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "分裂期细胞总数多于间期",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "细胞周期各时期时间大致相等",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "由表无法判断各时期相对时长",
+    "answer": false
+   }
+  ],
+  "explanation": "某时期细胞数所占比例大致与该时期在细胞周期中的时间成正比，间期细胞数远多于其他时期，说明间期时间最长。",
+  "subject": "细胞生物学",
+  "concept": "细胞分裂期统计",
+  "difficulty": "basic",
+  "chart": "| 时期 | 间期 | 前期 | 中期 | 后期 | 末期 |\n|---|---|---|---|---|---|\n| 细胞数 | 880 | 55 | 30 | 20 | 15 |",
+  "year": null,
+  "module": "module_1",
+  "target": "high_school",
+  "tags": [
+   "module_1",
+   "细胞生物学",
+   "细胞分裂期统计",
+   "图表题"
+  ],
+  "oldId": "758486954"
+ },
+ "BQ-cell_cycle-2c48011879c5": {
+  "type": "mtf",
+  "question": "观察某动物睾丸细胞分裂装片，统计不同分裂时期的细胞数如表。正确的是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "间期所占时间最长",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "分裂期细胞总数多于间期",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "细胞周期中各时期时间相等",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "无法通过细胞数判断各时期相对时长",
+    "answer": false
+   }
+  ],
+  "explanation": "某时期细胞数占比与该时期在细胞周期中的时间占比相关，间期细胞数最多说明其时间最长。",
+  "subject": "细胞生物学",
+  "concept": "细胞分裂",
+  "difficulty": "league",
+  "chart": "| 时期 | 间期 | 前期 | 中期 | 后期 | 末期 |\n|---|---|---|---|---|---|\n| 细胞数 | 850 | 55 | 35 | 40 | 20 |",
+  "year": null,
+  "module": "module_1",
+  "target": "both",
+  "tags": [
+   "module_1",
+   "细胞生物学",
+   "细胞分裂",
+   "图表题"
+  ],
+  "oldId": "1347679556"
+ },
+ "BQ-cell_cycle-d0b2c310b354": {
+  "type": "multi_judge",
+  "question": "取洋葱根尖分生区细胞进行有丝分裂观察实验，经解离、漂洗、染色及制片后，在显微镜下分析细胞周期各时期特征。",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "解离步骤使用盐酸和酒精混合液，目的是使组织细胞相互分离。",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "漂洗步骤使用清水，主要目的是洗去染色液以防止背景过深。",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "染色体形态最固定、数目最清晰的时期是细胞分裂的中期。",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "在视野中可观察到某个细胞从前期连续变化至末期的动态过程。",
+    "answer": false
+   }
+  ],
+  "explanation": "A 正确：解离液（盐酸 + 酒精）能溶解果胶，使细胞分散。B 错误：漂洗是用清水洗去解离液（盐酸），防止其影响碱性染料染色，而非洗去染色液。C 正确：中期染色体着丝点排列在赤道板，形态稳定、数目清晰，是观察最佳时期。D 错误：解离步骤已杀死细胞，细胞分裂停止在特定时期，无法观察到连续的动态变化过程。",
+  "subject": "细胞生物学",
+  "concept": "有丝分裂观察实验",
+  "difficulty": "basic",
+  "chart": null,
+  "year": null,
+  "module": "module_2",
+  "target": "competition",
+  "tags": [
+   "module_2",
+   "easy"
+  ],
+  "oldId": "253810944"
+ },
+ "BQ-cell_cycle-9059f9e63829": {
+  "stem": "以下关于有丝分裂和减数分裂的描述中正确的是：",
+  "options": {
+   "A": "有丝分裂的过程中，等位基因通常会发生重组",
+   "B": "有丝分裂的过程中通常包含同源染色体的配对",
+   "C": "减数分裂中两次核分裂的间隔时期，通常会发生DNA 复制",
+   "D": "减数分裂的过程中通常包含同源染色体的配对"
+  },
+  "answer": {
+   "A": false,
+   "B": false,
+   "C": false,
+   "D": true
+  },
+  "analysis": "正确答案：D",
+  "knowledge": [
+   "module_1",
+   "细胞生物学"
+  ],
+  "module": "module_1",
+  "difficulty": "league",
+  "target": "competition",
+  "subject": "细胞生物学",
+  "concept": "细胞周期",
+  "tags": [
+   "module_1",
+   "细胞生物学",
+   "细胞周期",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2024/art_f5fe44f36762455fb9f8f99b9e0bf2e2.html",
+   "2024"
+  ],
+  "weight": 1,
+  "fb_good": 0,
+  "fb_bad": 0,
+  "created_at": 1782028590.0678043,
+  "source": "https://www.czs.org.cn/swjs/lsstxz/art/2024/art_f5fe44f36762455fb9f8f99b9e0bf2e2.html",
+  "year": 2024,
+  "_analysis_sparse": true,
+  "_review_reason": "解析为 AI 引导提示，待人工补充详细解析",
+  "type": "multi_judge",
+  "question": "以下关于有丝分裂和减数分裂的描述中正确的是：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "有丝分裂的过程中，等位基因通常会发生重组",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "有丝分裂的过程中通常包含同源染色体的配对",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "减数分裂中两次核分裂的间隔时期，通常会发生DNA 复制",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "减数分裂的过程中通常包含同源染色体的配对",
+    "answer": true
+   }
+  ],
+  "explanation": "正确答案：D",
+  "chart": null,
+  "oldId": "crawled_1782028590067_6834"
+ },
+ "BQ-cell_cycle-7db41319d646": {
+  "stem": "减数分裂和有丝分裂是真核细胞的两种重要分裂方式。对以下关于两者比较的陈述进行正误判断：",
+  "options": {
+   "A": "减数分裂通常发生在体细胞中，而有丝分裂发生在生殖细胞形成过程中",
+   "B": "两种分裂方式在分裂期开始前，染色体都只复制一次",
+   "C": "减数分裂包含两次连续的细胞分裂，而有丝分裂只有一次",
+   "D": "减数分裂结束后产生的子细胞染色体数目是亲代细胞的一半"
+  },
+  "answer": {
+   "A": true,
+   "B": false,
+   "C": false,
+   "D": false
+  },
+  "analysis": "正确答案：A。详细解析请通过 AI 导师获取（在 AI 对话中粘贴本题题干即可）。",
+  "knowledge": [
+   "module_1",
+   "细胞生物学"
+  ],
+  "module": "module_1",
+  "difficulty": "league",
+  "target": "competition",
+  "subject": "细胞生物学",
+  "concept": "细胞周期",
+  "tags": [
+   "module_1",
+   "细胞生物学",
+   "细胞周期",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2025/art_b153fd076f3f4fe282acfc333c4d4ab6.html",
+   "2025"
+  ],
+  "weight": 1,
+  "fb_good": 0,
+  "fb_bad": 0,
+  "created_at": 1782028596.2268097,
+  "source": "https://www.czs.org.cn/swjs/lsstxz/art/2025/art_b153fd076f3f4fe282acfc333c4d4ab6.html",
+  "year": 2025,
+  "_analysis_sparse": true,
+  "_review_reason": "解析为 AI 引导提示，待人工补充详细解析",
+  "type": "multi_judge",
+  "question": "减数分裂和有丝分裂是真核细胞的两种重要分裂方式。对以下关于两者比较的陈述进行正误判断：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "减数分裂通常发生在体细胞中，而有丝分裂发生在生殖细胞形成过程中",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "两种分裂方式在分裂期开始前，染色体都只复制一次",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "减数分裂包含两次连续的细胞分裂，而有丝分裂只有一次",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "减数分裂结束后产生的子细胞染色体数目是亲代细胞的一半",
+    "answer": false
+   }
+  ],
+  "explanation": "正确答案：A。详细解析请通过 AI 导师获取（在 AI 对话中粘贴本题题干即可）。",
+  "chart": null,
+  "oldId": "crawled_1782028596225_3709"
+ },
+ "BQ-cell_cycle-c86e7837344b": {
+  "stem": "果蝇的棒眼突变表型与染色体特定区域的重复拷贝数有关，这种现象源于减数分裂中同源序列的异\n位重组（非对等交换）。判断以下陈述的正误：",
+  "options": {
+   "A": "异位重组的发生率与该区域的重组率通常呈正相关；",
+   "B": "异位重组是染色体微缺失产生的主要诱因之一；",
+   "C": "该过程仅限于基因组的编码区，内含子或非编码重复序列不会介导此类重组；",
+   "D": "重复产生的额外拷贝为新功能的产生提供了原材料，受到纯化选择作用。"
+  },
+  "answer": {
+   "A": true,
+   "B": false,
+   "C": false,
+   "D": false
+  },
+  "analysis": "正确答案：A。详细解析请通过 AI 导师获取（在 AI 对话中粘贴本题题干即可）。",
+  "knowledge": [
+   "module_1",
+   "细胞生物学"
+  ],
+  "module": "module_1",
+  "difficulty": "league",
+  "target": "competition",
+  "subject": "细胞生物学",
+  "concept": "细胞周期",
+  "tags": [
+   "module_1",
+   "细胞生物学",
+   "细胞周期",
+   "league",
+   "competition",
+   "http://www.botany.org.cn/swxjs/swxls/202605/t20260518_838211.html",
+   "2026"
+  ],
+  "weight": 1,
+  "fb_good": 0,
+  "fb_bad": 0,
+  "created_at": 1782028626.8299181,
+  "source": "http://www.botany.org.cn/swxjs/swxls/202605/t20260518_838211.html",
+  "year": 2026,
+  "_analysis_sparse": true,
+  "_review_reason": "解析为 AI 引导提示，待人工补充详细解析",
+  "type": "multi_judge",
+  "question": "果蝇的棒眼突变表型与染色体特定区域的重复拷贝数有关，这种现象源于减数分裂中同源序列的异\n位重组（非对等交换）。判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "异位重组的发生率与该区域的重组率通常呈正相关；",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "异位重组是染色体微缺失产生的主要诱因之一；",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "该过程仅限于基因组的编码区，内含子或非编码重复序列不会介导此类重组；",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "重复产生的额外拷贝为新功能的产生提供了原材料，受到纯化选择作用。",
+    "answer": false
+   }
+  ],
+  "explanation": "正确答案：A。详细解析请通过 AI 导师获取（在 AI 对话中粘贴本题题干即可）。",
+  "chart": null,
+  "oldId": "crawled_1782028626829_5525"
+ },
+ "BQ-cell_cycle-52c82917e978": {
+  "stem": "研究人员为筛选X 染色体上的突变，对XY 雄蝇进行了诱变处理，随后将其与未经诱变处理的X-XY 雌蝇\n相交。（X-XY 雌蝇中两条X 染色体相连，减数分裂时两条X 染色体会进入同一个配子；X-XY 果蝇通常会产生\n包含X-X 或Y 的两种配子。）在得到的子一代果蝇中，为进一步追踪经诱变处理后可能包含突变的X 染色体，\n应重点关注子一代中的：",
+  "options": {
+   "A": "雄蝇",
+   "B": "雌蝇",
+   "C": "A 和B 都对",
+   "D": "无法判断"
+  },
+  "answer": {
+   "A": true,
+   "B": false,
+   "C": false,
+   "D": false
+  },
+  "analysis": "正确答案：A",
+  "knowledge": [
+   "module_1",
+   "细胞生物学"
+  ],
+  "module": "module_1",
+  "difficulty": "league",
+  "target": "competition",
+  "subject": "细胞生物学",
+  "concept": "细胞周期",
+  "tags": [
+   "module_1",
+   "细胞生物学",
+   "细胞周期",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2024/art_f5fe44f36762455fb9f8f99b9e0bf2e2.html",
+   "2024"
+  ],
+  "weight": 1,
+  "fb_good": 0,
+  "fb_bad": 0,
+  "created_at": 1782028590.0678043,
+  "source": "https://www.czs.org.cn/swjs/lsstxz/art/2024/art_f5fe44f36762455fb9f8f99b9e0bf2e2.html",
+  "year": 2024,
+  "_analysis_sparse": true,
+  "_review_reason": "解析为 AI 引导提示，待人工补充详细解析",
+  "type": "multi_judge",
+  "question": "研究人员为筛选X 染色体上的突变，对XY 雄蝇进行了诱变处理，随后将其与未经诱变处理的X-XY 雌蝇\n相交。（X-XY 雌蝇中两条X 染色体相连，减数分裂时两条X 染色体会进入同一个配子；X-XY 果蝇通常会产生\n包含X-X 或Y 的两种配子。）在得到的子一代果蝇中，为进一步追踪经诱变处理后可能包含突变的X 染色体，\n应重点关注子一代中的：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "雄蝇",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "雌蝇",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "A 和B 都对",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "无法判断",
+    "answer": false
+   }
+  ],
+  "explanation": "正确答案：A",
+  "chart": null,
+  "oldId": "crawled_1782028590067_8513"
+ },
+ "BQ-cell_cycle-370595b76e87": {
+  "stem": "细胞分化发生在细胞周期哪一阶段：\n（单选）",
+  "options": {
+   "A": "细胞分裂前期",
+   "B": "细胞分裂间期",
+   "C": "细胞分裂中期",
+   "D": "细胞分裂末期"
+  },
+  "answer": {
+   "A": false,
+   "B": true,
+   "C": false,
+   "D": false
+  },
+  "analysis": "正确答案：B",
+  "knowledge": [
+   "module_1",
+   "细胞生物学"
+  ],
+  "module": "module_1",
+  "difficulty": "league",
+  "target": "competition",
+  "subject": "细胞生物学",
+  "concept": "细胞周期",
+  "tags": [
+   "module_1",
+   "细胞生物学",
+   "细胞周期",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2015/art_1c13e648d84d4e38b94e2dfd5e5b1b0b.html",
+   "2015"
+  ],
+  "weight": 1,
+  "fb_good": 0,
+  "fb_bad": 0,
+  "created_at": 1782028584.5755377,
+  "source": "https://www.czs.org.cn/swjs/lsstxz/art/2015/art_1c13e648d84d4e38b94e2dfd5e5b1b0b.html",
+  "year": 2015,
+  "_analysis_sparse": true,
+  "_review_reason": "解析为 AI 引导提示，待人工补充详细解析",
+  "type": "multi_judge",
+  "question": "细胞分化发生在细胞周期哪一阶段：\n（单选）",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "细胞分裂前期",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "细胞分裂间期",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "细胞分裂中期",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "细胞分裂末期",
+    "answer": false
+   }
+  ],
+  "explanation": "正确答案：B",
+  "chart": null,
+  "oldId": "crawled_1782028584575_0494"
+ },
+ "BQ-cell_cycle-2e618fb82950": {
+  "type": "mtf",
+  "question": "关于细胞分裂，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "MPF（成熟促进因子）由cyclin B和Cdk1组成，其活性在M期达到峰值",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "减数第一次分裂后期发生姐妹染色单体分离",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "有丝分裂后期，姐妹染色单体的分离是由着丝粒处黏连蛋白的切割触发的",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "细胞周期的G1/S检查点检查DNA是否损伤，决定细胞是否进入S期",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：G1/S检查点由p53-p21通路调控，检测DNA完整性。C正确：APC/C激活separase，切割cohesin，释放姐妹染色单体分离。B错误：减I后期是同源染色体分离，减II后期才是姐妹染色单体分离。A正确：MPF是调控细胞进入M期的关键激酶复合体。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "细胞分裂",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2053899438",
+  "tags": []
+ },
+ "BQ-cell_cycle-b52d9159708a": {
+  "type": "mtf",
+  "question": "关于细胞分裂，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "MPF（成熟促进因子）由cyclin B和Cdk1组成，其活性在M期达到峰值",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "减数第一次分裂后期发生姐妹染色单体分离",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "细胞周期的G1/S检查点检查DNA是否损伤，决定细胞是否进入S期",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "有丝分裂后期，姐妹染色单体的分离是由着丝粒处黏连蛋白的切割触发的",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：G1/S检查点由p53-p21通路调控，检测DNA完整性。D正确：APC/C激活separase，切割cohesin，释放姐妹染色单体分离。B错误：减I后期是同源染色体分离，减II后期才是姐妹染色单体分离。A正确：MPF是调控细胞进入M期的关键激酶复合体。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "细胞分裂",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2053899438",
+  "tags": []
+ },
+ "BQ-cell_cycle-d8c98504504e": {
+  "type": "mtf",
+  "question": "关于细胞分裂，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "MPF（成熟促进因子）由cyclin B和Cdk1组成，其活性在M期达到峰值",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "有丝分裂后期，姐妹染色单体的分离是由着丝粒处黏连蛋白的切割触发的",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "减数第一次分裂后期发生姐妹染色单体分离",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "细胞周期的G1/S检查点检查DNA是否损伤，决定细胞是否进入S期",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：G1/S检查点由p53-p21通路调控，检测DNA完整性。B正确：APC/C激活separase，切割cohesin，释放姐妹染色单体分离。C错误：减I后期是同源染色体分离，减II后期才是姐妹染色单体分离。A正确：MPF是调控细胞进入M期的关键激酶复合体。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "细胞分裂",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2053899438",
+  "tags": []
+ },
+ "BQ-cell_cycle-f382c86cac62": {
+  "type": "mtf",
+  "question": "关于细胞分裂，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "MPF（成熟促进因子）由cyclin B和Cdk1组成，其活性在M期达到峰值",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "有丝分裂后期，姐妹染色单体的分离是由着丝粒处黏连蛋白的切割触发的",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "细胞周期的G1/S检查点检查DNA是否损伤，决定细胞是否进入S期",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "减数第一次分裂后期发生姐妹染色单体分离",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确：G1/S检查点由p53-p21通路调控，检测DNA完整性。B正确：APC/C激活separase，切割cohesin，释放姐妹染色单体分离。D错误：减I后期是同源染色体分离，减II后期才是姐妹染色单体分离。A正确：MPF是调控细胞进入M期的关键激酶复合体。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "细胞分裂",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2053899438",
+  "tags": []
+ },
+ "BQ-cell_cycle-20e18167b42f": {
+  "type": "mtf",
+  "question": "关于细胞分裂，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "MPF（成熟促进因子）由cyclin B和Cdk1组成，其活性在M期达到峰值",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "细胞周期的G1/S检查点检查DNA是否损伤，决定细胞是否进入S期",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "减数第一次分裂后期发生姐妹染色单体分离",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "有丝分裂后期，姐妹染色单体的分离是由着丝粒处黏连蛋白的切割触发的",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：G1/S检查点由p53-p21通路调控，检测DNA完整性。D正确：APC/C激活separase，切割cohesin，释放姐妹染色单体分离。C错误：减I后期是同源染色体分离，减II后期才是姐妹染色单体分离。A正确：MPF是调控细胞进入M期的关键激酶复合体。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "细胞分裂",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2053899438",
+  "tags": []
+ },
+ "BQ-cell_cycle-f56cb8e50765": {
+  "type": "mtf",
+  "question": "关于细胞分裂，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "MPF（成熟促进因子）由cyclin B和Cdk1组成，其活性在M期达到峰值",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "细胞周期的G1/S检查点检查DNA是否损伤，决定细胞是否进入S期",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "有丝分裂后期，姐妹染色单体的分离是由着丝粒处黏连蛋白的切割触发的",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "减数第一次分裂后期发生姐妹染色单体分离",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确：G1/S检查点由p53-p21通路调控，检测DNA完整性。C正确：APC/C激活separase，切割cohesin，释放姐妹染色单体分离。D错误：减I后期是同源染色体分离，减II后期才是姐妹染色单体分离。A正确：MPF是调控细胞进入M期的关键激酶复合体。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "细胞分裂",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2053899438",
+  "tags": []
+ },
+ "BQ-cell_cycle-67fa290b9ebe": {
+  "type": "mtf",
+  "question": "关于细胞分裂，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "减数第一次分裂后期发生姐妹染色单体分离",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "MPF（成熟促进因子）由cyclin B和Cdk1组成，其活性在M期达到峰值",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "有丝分裂后期，姐妹染色单体的分离是由着丝粒处黏连蛋白的切割触发的",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "细胞周期的G1/S检查点检查DNA是否损伤，决定细胞是否进入S期",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：G1/S检查点由p53-p21通路调控，检测DNA完整性。C正确：APC/C激活separase，切割cohesin，释放姐妹染色单体分离。A错误：减I后期是同源染色体分离，减II后期才是姐妹染色单体分离。B正确：MPF是调控细胞进入M期的关键激酶复合体。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "细胞分裂",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2053899438",
+  "tags": []
+ },
+ "BQ-cell_cycle-785c48a53716": {
+  "type": "mtf",
+  "question": "关于细胞分裂，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "减数第一次分裂后期发生姐妹染色单体分离",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "MPF（成熟促进因子）由cyclin B和Cdk1组成，其活性在M期达到峰值",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "细胞周期的G1/S检查点检查DNA是否损伤，决定细胞是否进入S期",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "有丝分裂后期，姐妹染色单体的分离是由着丝粒处黏连蛋白的切割触发的",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：G1/S检查点由p53-p21通路调控，检测DNA完整性。D正确：APC/C激活separase，切割cohesin，释放姐妹染色单体分离。A错误：减I后期是同源染色体分离，减II后期才是姐妹染色单体分离。B正确：MPF是调控细胞进入M期的关键激酶复合体。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "细胞分裂",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2053899438",
+  "tags": []
+ },
+ "BQ-cell_cycle-ce9b649f4cae": {
+  "type": "mtf",
+  "question": "关于细胞分裂，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "减数第一次分裂后期发生姐妹染色单体分离",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "有丝分裂后期，姐妹染色单体的分离是由着丝粒处黏连蛋白的切割触发的",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "MPF（成熟促进因子）由cyclin B和Cdk1组成，其活性在M期达到峰值",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "细胞周期的G1/S检查点检查DNA是否损伤，决定细胞是否进入S期",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：G1/S检查点由p53-p21通路调控，检测DNA完整性。B正确：APC/C激活separase，切割cohesin，释放姐妹染色单体分离。A错误：减I后期是同源染色体分离，减II后期才是姐妹染色单体分离。C正确：MPF是调控细胞进入M期的关键激酶复合体。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "细胞分裂",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2053899438",
+  "tags": []
+ },
+ "BQ-cell_cycle-d6f1918adcf2": {
+  "type": "mtf",
+  "question": "关于细胞分裂，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "减数第一次分裂后期发生姐妹染色单体分离",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "有丝分裂后期，姐妹染色单体的分离是由着丝粒处黏连蛋白的切割触发的",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "细胞周期的G1/S检查点检查DNA是否损伤，决定细胞是否进入S期",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "MPF（成熟促进因子）由cyclin B和Cdk1组成，其活性在M期达到峰值",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：G1/S检查点由p53-p21通路调控，检测DNA完整性。B正确：APC/C激活separase，切割cohesin，释放姐妹染色单体分离。A错误：减I后期是同源染色体分离，减II后期才是姐妹染色单体分离。D正确：MPF是调控细胞进入M期的关键激酶复合体。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "细胞分裂",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2053899438",
+  "tags": []
+ },
+ "BQ-cell_cycle-f2fe0197d673": {
+  "type": "mtf",
+  "question": "关于细胞分裂，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "减数第一次分裂后期发生姐妹染色单体分离",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "细胞周期的G1/S检查点检查DNA是否损伤，决定细胞是否进入S期",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "MPF（成熟促进因子）由cyclin B和Cdk1组成，其活性在M期达到峰值",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "有丝分裂后期，姐妹染色单体的分离是由着丝粒处黏连蛋白的切割触发的",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：G1/S检查点由p53-p21通路调控，检测DNA完整性。D正确：APC/C激活separase，切割cohesin，释放姐妹染色单体分离。A错误：减I后期是同源染色体分离，减II后期才是姐妹染色单体分离。C正确：MPF是调控细胞进入M期的关键激酶复合体。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "细胞分裂",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2053899438",
+  "tags": []
+ },
+ "BQ-cell_cycle-0f697be162ca": {
+  "type": "mtf",
+  "question": "关于细胞分裂，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "减数第一次分裂后期发生姐妹染色单体分离",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "细胞周期的G1/S检查点检查DNA是否损伤，决定细胞是否进入S期",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "有丝分裂后期，姐妹染色单体的分离是由着丝粒处黏连蛋白的切割触发的",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "MPF（成熟促进因子）由cyclin B和Cdk1组成，其活性在M期达到峰值",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：G1/S检查点由p53-p21通路调控，检测DNA完整性。C正确：APC/C激活separase，切割cohesin，释放姐妹染色单体分离。A错误：减I后期是同源染色体分离，减II后期才是姐妹染色单体分离。D正确：MPF是调控细胞进入M期的关键激酶复合体。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "细胞分裂",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2053899438",
+  "tags": []
+ },
+ "BQ-cell_cycle-9a07a8df698b": {
+  "type": "mtf",
+  "question": "关于细胞分裂，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "有丝分裂后期，姐妹染色单体的分离是由着丝粒处黏连蛋白的切割触发的",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "MPF（成熟促进因子）由cyclin B和Cdk1组成，其活性在M期达到峰值",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "减数第一次分裂后期发生姐妹染色单体分离",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "细胞周期的G1/S检查点检查DNA是否损伤，决定细胞是否进入S期",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：G1/S检查点由p53-p21通路调控，检测DNA完整性。A正确：APC/C激活separase，切割cohesin，释放姐妹染色单体分离。C错误：减I后期是同源染色体分离，减II后期才是姐妹染色单体分离。B正确：MPF是调控细胞进入M期的关键激酶复合体。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "细胞分裂",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2053899438",
+  "tags": []
+ },
+ "BQ-cell_cycle-57b37dc4c3f1": {
+  "type": "mtf",
+  "question": "关于细胞分裂，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "有丝分裂后期，姐妹染色单体的分离是由着丝粒处黏连蛋白的切割触发的",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "MPF（成熟促进因子）由cyclin B和Cdk1组成，其活性在M期达到峰值",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "细胞周期的G1/S检查点检查DNA是否损伤，决定细胞是否进入S期",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "减数第一次分裂后期发生姐妹染色单体分离",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确：G1/S检查点由p53-p21通路调控，检测DNA完整性。A正确：APC/C激活separase，切割cohesin，释放姐妹染色单体分离。D错误：减I后期是同源染色体分离，减II后期才是姐妹染色单体分离。B正确：MPF是调控细胞进入M期的关键激酶复合体。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "细胞分裂",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2053899438",
+  "tags": []
+ },
+ "BQ-cell_cycle-d328f9f9d584": {
+  "type": "mtf",
+  "question": "关于细胞分裂，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "有丝分裂后期，姐妹染色单体的分离是由着丝粒处黏连蛋白的切割触发的",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "减数第一次分裂后期发生姐妹染色单体分离",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "MPF（成熟促进因子）由cyclin B和Cdk1组成，其活性在M期达到峰值",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "细胞周期的G1/S检查点检查DNA是否损伤，决定细胞是否进入S期",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：G1/S检查点由p53-p21通路调控，检测DNA完整性。A正确：APC/C激活separase，切割cohesin，释放姐妹染色单体分离。B错误：减I后期是同源染色体分离，减II后期才是姐妹染色单体分离。C正确：MPF是调控细胞进入M期的关键激酶复合体。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "细胞分裂",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2053899438",
+  "tags": []
+ },
+ "BQ-cell_cycle-050b29f8b487": {
+  "type": "mtf",
+  "question": "关于细胞分裂，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "有丝分裂后期，姐妹染色单体的分离是由着丝粒处黏连蛋白的切割触发的",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "减数第一次分裂后期发生姐妹染色单体分离",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "细胞周期的G1/S检查点检查DNA是否损伤，决定细胞是否进入S期",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "MPF（成熟促进因子）由cyclin B和Cdk1组成，其活性在M期达到峰值",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：G1/S检查点由p53-p21通路调控，检测DNA完整性。A正确：APC/C激活separase，切割cohesin，释放姐妹染色单体分离。B错误：减I后期是同源染色体分离，减II后期才是姐妹染色单体分离。D正确：MPF是调控细胞进入M期的关键激酶复合体。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "细胞分裂",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2053899438",
+  "tags": []
+ },
+ "BQ-cell_cycle-00f1724ffd79": {
+  "type": "mtf",
+  "question": "关于细胞分裂，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "有丝分裂后期，姐妹染色单体的分离是由着丝粒处黏连蛋白的切割触发的",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "细胞周期的G1/S检查点检查DNA是否损伤，决定细胞是否进入S期",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "MPF（成熟促进因子）由cyclin B和Cdk1组成，其活性在M期达到峰值",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "减数第一次分裂后期发生姐妹染色单体分离",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确：G1/S检查点由p53-p21通路调控，检测DNA完整性。A正确：APC/C激活separase，切割cohesin，释放姐妹染色单体分离。D错误：减I后期是同源染色体分离，减II后期才是姐妹染色单体分离。C正确：MPF是调控细胞进入M期的关键激酶复合体。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "细胞分裂",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2053899438",
+  "tags": []
+ },
+ "BQ-cell_cycle-d39dd444d184": {
+  "type": "mtf",
+  "question": "关于细胞分裂，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "有丝分裂后期，姐妹染色单体的分离是由着丝粒处黏连蛋白的切割触发的",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "细胞周期的G1/S检查点检查DNA是否损伤，决定细胞是否进入S期",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "减数第一次分裂后期发生姐妹染色单体分离",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "MPF（成熟促进因子）由cyclin B和Cdk1组成，其活性在M期达到峰值",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：G1/S检查点由p53-p21通路调控，检测DNA完整性。A正确：APC/C激活separase，切割cohesin，释放姐妹染色单体分离。C错误：减I后期是同源染色体分离，减II后期才是姐妹染色单体分离。D正确：MPF是调控细胞进入M期的关键激酶复合体。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "细胞分裂",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2053899438",
+  "tags": []
+ },
+ "BQ-cell_cycle-c6036882d82f": {
+  "type": "mtf",
+  "question": "关于细胞分裂，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "细胞周期的G1/S检查点检查DNA是否损伤，决定细胞是否进入S期",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "MPF（成熟促进因子）由cyclin B和Cdk1组成，其活性在M期达到峰值",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "减数第一次分裂后期发生姐妹染色单体分离",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "有丝分裂后期，姐妹染色单体的分离是由着丝粒处黏连蛋白的切割触发的",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：G1/S检查点由p53-p21通路调控，检测DNA完整性。D正确：APC/C激活separase，切割cohesin，释放姐妹染色单体分离。C错误：减I后期是同源染色体分离，减II后期才是姐妹染色单体分离。B正确：MPF是调控细胞进入M期的关键激酶复合体。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "细胞分裂",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2053899438",
+  "tags": []
+ },
+ "BQ-cell_cycle-dcb82f1df2dd": {
+  "type": "mtf",
+  "question": "关于细胞分裂，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "细胞周期的G1/S检查点检查DNA是否损伤，决定细胞是否进入S期",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "MPF（成熟促进因子）由cyclin B和Cdk1组成，其活性在M期达到峰值",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "有丝分裂后期，姐妹染色单体的分离是由着丝粒处黏连蛋白的切割触发的",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "减数第一次分裂后期发生姐妹染色单体分离",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确：G1/S检查点由p53-p21通路调控，检测DNA完整性。C正确：APC/C激活separase，切割cohesin，释放姐妹染色单体分离。D错误：减I后期是同源染色体分离，减II后期才是姐妹染色单体分离。B正确：MPF是调控细胞进入M期的关键激酶复合体。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "细胞分裂",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2053899438",
+  "tags": []
+ },
+ "BQ-cell_cycle-5958fcc9d3a5": {
+  "type": "mtf",
+  "question": "关于细胞分裂，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "细胞周期的G1/S检查点检查DNA是否损伤，决定细胞是否进入S期",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "减数第一次分裂后期发生姐妹染色单体分离",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "MPF（成熟促进因子）由cyclin B和Cdk1组成，其活性在M期达到峰值",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "有丝分裂后期，姐妹染色单体的分离是由着丝粒处黏连蛋白的切割触发的",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：G1/S检查点由p53-p21通路调控，检测DNA完整性。D正确：APC/C激活separase，切割cohesin，释放姐妹染色单体分离。B错误：减I后期是同源染色体分离，减II后期才是姐妹染色单体分离。C正确：MPF是调控细胞进入M期的关键激酶复合体。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "细胞分裂",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2053899438",
+  "tags": []
+ },
+ "BQ-cell_cycle-25660272e426": {
+  "type": "mtf",
+  "question": "关于细胞分裂，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "细胞周期的G1/S检查点检查DNA是否损伤，决定细胞是否进入S期",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "减数第一次分裂后期发生姐妹染色单体分离",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "有丝分裂后期，姐妹染色单体的分离是由着丝粒处黏连蛋白的切割触发的",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "MPF（成熟促进因子）由cyclin B和Cdk1组成，其活性在M期达到峰值",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：G1/S检查点由p53-p21通路调控，检测DNA完整性。C正确：APC/C激活separase，切割cohesin，释放姐妹染色单体分离。B错误：减I后期是同源染色体分离，减II后期才是姐妹染色单体分离。D正确：MPF是调控细胞进入M期的关键激酶复合体。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "细胞分裂",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2053899438",
+  "tags": []
+ },
+ "BQ-cell_cycle-6538e0bb86f7": {
+  "type": "mtf",
+  "question": "关于细胞分裂，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "细胞周期的G1/S检查点检查DNA是否损伤，决定细胞是否进入S期",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "有丝分裂后期，姐妹染色单体的分离是由着丝粒处黏连蛋白的切割触发的",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "MPF（成熟促进因子）由cyclin B和Cdk1组成，其活性在M期达到峰值",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "减数第一次分裂后期发生姐妹染色单体分离",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确：G1/S检查点由p53-p21通路调控，检测DNA完整性。B正确：APC/C激活separase，切割cohesin，释放姐妹染色单体分离。D错误：减I后期是同源染色体分离，减II后期才是姐妹染色单体分离。C正确：MPF是调控细胞进入M期的关键激酶复合体。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "细胞分裂",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2053899438",
+  "tags": []
+ },
+ "BQ-cell_cycle-dd7980d03258": {
+  "type": "mtf",
+  "question": "关于细胞分裂，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "细胞周期的G1/S检查点检查DNA是否损伤，决定细胞是否进入S期",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "有丝分裂后期，姐妹染色单体的分离是由着丝粒处黏连蛋白的切割触发的",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "减数第一次分裂后期发生姐妹染色单体分离",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "MPF（成熟促进因子）由cyclin B和Cdk1组成，其活性在M期达到峰值",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：G1/S检查点由p53-p21通路调控，检测DNA完整性。B正确：APC/C激活separase，切割cohesin，释放姐妹染色单体分离。C错误：减I后期是同源染色体分离，减II后期才是姐妹染色单体分离。D正确：MPF是调控细胞进入M期的关键激酶复合体。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "细胞分裂",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2053899438",
+  "tags": []
+ },
+ "BQ-cell_cycle-3fdab93ddd8a": {
+  "type": "mtf",
+  "question": "关于细胞周期蛋白依赖性激酶（CDK）的调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "Cdc25磷酸酶通过去磷酸化CDK的抑制性磷酸位点来激活CDK",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "CDK的活性需要与cyclin结合，cyclin的水平在细胞周期中振荡变化",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "p53直接抑制CDK-cyclin复合物的激酶活性",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "Wee1激酶通过磷酸化CDK的抑制性位点来阻止CDK活性",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：cyclin-CDK调控的基本原理。D正确：Wee1的抑制性磷酸化。A正确：Cdc25的激活功能。C错误：p53通过转录激活p21（CKI）来间接抑制CDK活性，而非直接抑制CDK-cyclin复合物。p21是CDK抑制剂（CKI），直接结合并抑制CDK。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "CDK调控",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "821361002",
+  "tags": []
+ },
+ "BQ-cell_cycle-9acdcf0aeb24": {
+  "type": "mtf",
+  "question": "关于细胞周期蛋白依赖性激酶（CDK）的调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "Cdc25磷酸酶通过去磷酸化CDK的抑制性磷酸位点来激活CDK",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "CDK的活性需要与cyclin结合，cyclin的水平在细胞周期中振荡变化",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "Wee1激酶通过磷酸化CDK的抑制性位点来阻止CDK活性",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "p53直接抑制CDK-cyclin复合物的激酶活性",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确：cyclin-CDK调控的基本原理。C正确：Wee1的抑制性磷酸化。A正确：Cdc25的激活功能。D错误：p53通过转录激活p21（CKI）来间接抑制CDK活性，而非直接抑制CDK-cyclin复合物。p21是CDK抑制剂（CKI），直接结合并抑制CDK。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "CDK调控",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "821361002",
+  "tags": []
+ },
+ "BQ-cell_cycle-e98d31c7b7fd": {
+  "type": "mtf",
+  "question": "关于细胞周期蛋白依赖性激酶（CDK）的调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "Cdc25磷酸酶通过去磷酸化CDK的抑制性磷酸位点来激活CDK",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "p53直接抑制CDK-cyclin复合物的激酶活性",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "CDK的活性需要与cyclin结合，cyclin的水平在细胞周期中振荡变化",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "Wee1激酶通过磷酸化CDK的抑制性位点来阻止CDK活性",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：cyclin-CDK调控的基本原理。D正确：Wee1的抑制性磷酸化。A正确：Cdc25的激活功能。B错误：p53通过转录激活p21（CKI）来间接抑制CDK活性，而非直接抑制CDK-cyclin复合物。p21是CDK抑制剂（CKI），直接结合并抑制CDK。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "CDK调控",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "821361002",
+  "tags": []
+ },
+ "BQ-cell_cycle-15e24f7f671f": {
+  "type": "mtf",
+  "question": "关于细胞周期蛋白依赖性激酶（CDK）的调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "Cdc25磷酸酶通过去磷酸化CDK的抑制性磷酸位点来激活CDK",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "p53直接抑制CDK-cyclin复合物的激酶活性",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "Wee1激酶通过磷酸化CDK的抑制性位点来阻止CDK活性",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "CDK的活性需要与cyclin结合，cyclin的水平在细胞周期中振荡变化",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：cyclin-CDK调控的基本原理。C正确：Wee1的抑制性磷酸化。A正确：Cdc25的激活功能。B错误：p53通过转录激活p21（CKI）来间接抑制CDK活性，而非直接抑制CDK-cyclin复合物。p21是CDK抑制剂（CKI），直接结合并抑制CDK。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "CDK调控",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "821361002",
+  "tags": []
+ },
+ "BQ-cell_cycle-096e465c50ee": {
+  "type": "mtf",
+  "question": "关于细胞周期蛋白依赖性激酶（CDK）的调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "Cdc25磷酸酶通过去磷酸化CDK的抑制性磷酸位点来激活CDK",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "Wee1激酶通过磷酸化CDK的抑制性位点来阻止CDK活性",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "CDK的活性需要与cyclin结合，cyclin的水平在细胞周期中振荡变化",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "p53直接抑制CDK-cyclin复合物的激酶活性",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确：cyclin-CDK调控的基本原理。B正确：Wee1的抑制性磷酸化。A正确：Cdc25的激活功能。D错误：p53通过转录激活p21（CKI）来间接抑制CDK活性，而非直接抑制CDK-cyclin复合物。p21是CDK抑制剂（CKI），直接结合并抑制CDK。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "CDK调控",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "821361002",
+  "tags": []
+ },
+ "BQ-cell_cycle-b88dff17eddc": {
+  "type": "mtf",
+  "question": "关于细胞周期蛋白依赖性激酶（CDK）的调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "Cdc25磷酸酶通过去磷酸化CDK的抑制性磷酸位点来激活CDK",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "Wee1激酶通过磷酸化CDK的抑制性位点来阻止CDK活性",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "p53直接抑制CDK-cyclin复合物的激酶活性",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "CDK的活性需要与cyclin结合，cyclin的水平在细胞周期中振荡变化",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：cyclin-CDK调控的基本原理。B正确：Wee1的抑制性磷酸化。A正确：Cdc25的激活功能。C错误：p53通过转录激活p21（CKI）来间接抑制CDK活性，而非直接抑制CDK-cyclin复合物。p21是CDK抑制剂（CKI），直接结合并抑制CDK。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "CDK调控",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "821361002",
+  "tags": []
+ },
+ "BQ-cell_cycle-b816bd8b8b6c": {
+  "type": "mtf",
+  "question": "关于细胞周期蛋白依赖性激酶（CDK）的调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "CDK的活性需要与cyclin结合，cyclin的水平在细胞周期中振荡变化",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "Cdc25磷酸酶通过去磷酸化CDK的抑制性磷酸位点来激活CDK",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "p53直接抑制CDK-cyclin复合物的激酶活性",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "Wee1激酶通过磷酸化CDK的抑制性位点来阻止CDK活性",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：cyclin-CDK调控的基本原理。D正确：Wee1的抑制性磷酸化。B正确：Cdc25的激活功能。C错误：p53通过转录激活p21（CKI）来间接抑制CDK活性，而非直接抑制CDK-cyclin复合物。p21是CDK抑制剂（CKI），直接结合并抑制CDK。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "CDK调控",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "821361002",
+  "tags": []
+ },
+ "BQ-cell_cycle-c2afc3cddc6b": {
+  "type": "mtf",
+  "question": "关于细胞周期蛋白依赖性激酶（CDK）的调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "CDK的活性需要与cyclin结合，cyclin的水平在细胞周期中振荡变化",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "Cdc25磷酸酶通过去磷酸化CDK的抑制性磷酸位点来激活CDK",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "Wee1激酶通过磷酸化CDK的抑制性位点来阻止CDK活性",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "p53直接抑制CDK-cyclin复合物的激酶活性",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确：cyclin-CDK调控的基本原理。C正确：Wee1的抑制性磷酸化。B正确：Cdc25的激活功能。D错误：p53通过转录激活p21（CKI）来间接抑制CDK活性，而非直接抑制CDK-cyclin复合物。p21是CDK抑制剂（CKI），直接结合并抑制CDK。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "CDK调控",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "821361002",
+  "tags": []
+ },
+ "BQ-cell_cycle-5674dc8b29a5": {
+  "type": "mtf",
+  "question": "关于细胞周期蛋白依赖性激酶（CDK）的调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "CDK的活性需要与cyclin结合，cyclin的水平在细胞周期中振荡变化",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "p53直接抑制CDK-cyclin复合物的激酶活性",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "Cdc25磷酸酶通过去磷酸化CDK的抑制性磷酸位点来激活CDK",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "Wee1激酶通过磷酸化CDK的抑制性位点来阻止CDK活性",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：cyclin-CDK调控的基本原理。D正确：Wee1的抑制性磷酸化。C正确：Cdc25的激活功能。B错误：p53通过转录激活p21（CKI）来间接抑制CDK活性，而非直接抑制CDK-cyclin复合物。p21是CDK抑制剂（CKI），直接结合并抑制CDK。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "CDK调控",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "821361002",
+  "tags": []
+ },
+ "BQ-cell_cycle-2d24a37111bf": {
+  "type": "mtf",
+  "question": "关于细胞周期蛋白依赖性激酶（CDK）的调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "CDK的活性需要与cyclin结合，cyclin的水平在细胞周期中振荡变化",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "p53直接抑制CDK-cyclin复合物的激酶活性",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "Wee1激酶通过磷酸化CDK的抑制性位点来阻止CDK活性",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "Cdc25磷酸酶通过去磷酸化CDK的抑制性磷酸位点来激活CDK",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：cyclin-CDK调控的基本原理。C正确：Wee1的抑制性磷酸化。D正确：Cdc25的激活功能。B错误：p53通过转录激活p21（CKI）来间接抑制CDK活性，而非直接抑制CDK-cyclin复合物。p21是CDK抑制剂（CKI），直接结合并抑制CDK。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "CDK调控",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "821361002",
+  "tags": []
+ },
+ "BQ-cell_cycle-670eacf1d54d": {
+  "type": "mtf",
+  "question": "关于细胞周期蛋白依赖性激酶（CDK）的调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "CDK的活性需要与cyclin结合，cyclin的水平在细胞周期中振荡变化",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "Wee1激酶通过磷酸化CDK的抑制性位点来阻止CDK活性",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "Cdc25磷酸酶通过去磷酸化CDK的抑制性磷酸位点来激活CDK",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "p53直接抑制CDK-cyclin复合物的激酶活性",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确：cyclin-CDK调控的基本原理。B正确：Wee1的抑制性磷酸化。C正确：Cdc25的激活功能。D错误：p53通过转录激活p21（CKI）来间接抑制CDK活性，而非直接抑制CDK-cyclin复合物。p21是CDK抑制剂（CKI），直接结合并抑制CDK。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "CDK调控",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "821361002",
+  "tags": []
+ },
+ "BQ-cell_cycle-6440a822689d": {
+  "type": "mtf",
+  "question": "关于细胞周期蛋白依赖性激酶（CDK）的调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "CDK的活性需要与cyclin结合，cyclin的水平在细胞周期中振荡变化",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "Wee1激酶通过磷酸化CDK的抑制性位点来阻止CDK活性",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "p53直接抑制CDK-cyclin复合物的激酶活性",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "Cdc25磷酸酶通过去磷酸化CDK的抑制性磷酸位点来激活CDK",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：cyclin-CDK调控的基本原理。B正确：Wee1的抑制性磷酸化。D正确：Cdc25的激活功能。C错误：p53通过转录激活p21（CKI）来间接抑制CDK活性，而非直接抑制CDK-cyclin复合物。p21是CDK抑制剂（CKI），直接结合并抑制CDK。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "CDK调控",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "821361002",
+  "tags": []
+ },
+ "BQ-cell_cycle-90f3a46083e9": {
+  "type": "mtf",
+  "question": "关于细胞周期蛋白依赖性激酶（CDK）的调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "p53直接抑制CDK-cyclin复合物的激酶活性",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "Cdc25磷酸酶通过去磷酸化CDK的抑制性磷酸位点来激活CDK",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "CDK的活性需要与cyclin结合，cyclin的水平在细胞周期中振荡变化",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "Wee1激酶通过磷酸化CDK的抑制性位点来阻止CDK活性",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：cyclin-CDK调控的基本原理。D正确：Wee1的抑制性磷酸化。B正确：Cdc25的激活功能。A错误：p53通过转录激活p21（CKI）来间接抑制CDK活性，而非直接抑制CDK-cyclin复合物。p21是CDK抑制剂（CKI），直接结合并抑制CDK。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "CDK调控",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "821361002",
+  "tags": []
+ },
+ "BQ-cell_cycle-594a403c97aa": {
+  "type": "mtf",
+  "question": "关于细胞周期蛋白依赖性激酶（CDK）的调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "p53直接抑制CDK-cyclin复合物的激酶活性",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "Cdc25磷酸酶通过去磷酸化CDK的抑制性磷酸位点来激活CDK",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "Wee1激酶通过磷酸化CDK的抑制性位点来阻止CDK活性",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "CDK的活性需要与cyclin结合，cyclin的水平在细胞周期中振荡变化",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：cyclin-CDK调控的基本原理。C正确：Wee1的抑制性磷酸化。B正确：Cdc25的激活功能。A错误：p53通过转录激活p21（CKI）来间接抑制CDK活性，而非直接抑制CDK-cyclin复合物。p21是CDK抑制剂（CKI），直接结合并抑制CDK。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "CDK调控",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "821361002",
+  "tags": []
+ },
+ "BQ-cell_cycle-5d6cfa7b70a0": {
+  "type": "mtf",
+  "question": "关于细胞周期蛋白依赖性激酶（CDK）的调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "p53直接抑制CDK-cyclin复合物的激酶活性",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "CDK的活性需要与cyclin结合，cyclin的水平在细胞周期中振荡变化",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "Cdc25磷酸酶通过去磷酸化CDK的抑制性磷酸位点来激活CDK",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "Wee1激酶通过磷酸化CDK的抑制性位点来阻止CDK活性",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：cyclin-CDK调控的基本原理。D正确：Wee1的抑制性磷酸化。C正确：Cdc25的激活功能。A错误：p53通过转录激活p21（CKI）来间接抑制CDK活性，而非直接抑制CDK-cyclin复合物。p21是CDK抑制剂（CKI），直接结合并抑制CDK。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "CDK调控",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "821361002",
+  "tags": []
+ },
+ "BQ-cell_cycle-9216fba4897f": {
+  "type": "mtf",
+  "question": "关于细胞周期蛋白依赖性激酶（CDK）的调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "p53直接抑制CDK-cyclin复合物的激酶活性",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "CDK的活性需要与cyclin结合，cyclin的水平在细胞周期中振荡变化",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "Wee1激酶通过磷酸化CDK的抑制性位点来阻止CDK活性",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "Cdc25磷酸酶通过去磷酸化CDK的抑制性磷酸位点来激活CDK",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：cyclin-CDK调控的基本原理。C正确：Wee1的抑制性磷酸化。D正确：Cdc25的激活功能。A错误：p53通过转录激活p21（CKI）来间接抑制CDK活性，而非直接抑制CDK-cyclin复合物。p21是CDK抑制剂（CKI），直接结合并抑制CDK。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "CDK调控",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "821361002",
+  "tags": []
+ },
+ "BQ-cell_cycle-24ff9c609716": {
+  "type": "mtf",
+  "question": "关于细胞周期蛋白依赖性激酶（CDK）的调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "p53直接抑制CDK-cyclin复合物的激酶活性",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "Wee1激酶通过磷酸化CDK的抑制性位点来阻止CDK活性",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "Cdc25磷酸酶通过去磷酸化CDK的抑制性磷酸位点来激活CDK",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "CDK的活性需要与cyclin结合，cyclin的水平在细胞周期中振荡变化",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：cyclin-CDK调控的基本原理。B正确：Wee1的抑制性磷酸化。C正确：Cdc25的激活功能。A错误：p53通过转录激活p21（CKI）来间接抑制CDK活性，而非直接抑制CDK-cyclin复合物。p21是CDK抑制剂（CKI），直接结合并抑制CDK。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "CDK调控",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "821361002",
+  "tags": []
+ },
+ "BQ-cell_cycle-f66cbffa8113": {
+  "type": "mtf",
+  "question": "关于细胞周期蛋白依赖性激酶（CDK）的调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "p53直接抑制CDK-cyclin复合物的激酶活性",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "Wee1激酶通过磷酸化CDK的抑制性位点来阻止CDK活性",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "CDK的活性需要与cyclin结合，cyclin的水平在细胞周期中振荡变化",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "Cdc25磷酸酶通过去磷酸化CDK的抑制性磷酸位点来激活CDK",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：cyclin-CDK调控的基本原理。B正确：Wee1的抑制性磷酸化。D正确：Cdc25的激活功能。A错误：p53通过转录激活p21（CKI）来间接抑制CDK活性，而非直接抑制CDK-cyclin复合物。p21是CDK抑制剂（CKI），直接结合并抑制CDK。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "CDK调控",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "821361002",
+  "tags": []
+ },
+ "BQ-cell_cycle-85f0730a81a6": {
+  "type": "mtf",
+  "question": "关于细胞周期蛋白依赖性激酶（CDK）的调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "Wee1激酶通过磷酸化CDK的抑制性位点来阻止CDK活性",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "Cdc25磷酸酶通过去磷酸化CDK的抑制性磷酸位点来激活CDK",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "CDK的活性需要与cyclin结合，cyclin的水平在细胞周期中振荡变化",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "p53直接抑制CDK-cyclin复合物的激酶活性",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确：cyclin-CDK调控的基本原理。A正确：Wee1的抑制性磷酸化。B正确：Cdc25的激活功能。D错误：p53通过转录激活p21（CKI）来间接抑制CDK活性，而非直接抑制CDK-cyclin复合物。p21是CDK抑制剂（CKI），直接结合并抑制CDK。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "CDK调控",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "821361002",
+  "tags": []
+ },
+ "BQ-cell_cycle-f9d539f1400b": {
+  "type": "mtf",
+  "question": "关于细胞周期蛋白依赖性激酶（CDK）的调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "Wee1激酶通过磷酸化CDK的抑制性位点来阻止CDK活性",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "Cdc25磷酸酶通过去磷酸化CDK的抑制性磷酸位点来激活CDK",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "p53直接抑制CDK-cyclin复合物的激酶活性",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "CDK的活性需要与cyclin结合，cyclin的水平在细胞周期中振荡变化",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：cyclin-CDK调控的基本原理。A正确：Wee1的抑制性磷酸化。B正确：Cdc25的激活功能。C错误：p53通过转录激活p21（CKI）来间接抑制CDK活性，而非直接抑制CDK-cyclin复合物。p21是CDK抑制剂（CKI），直接结合并抑制CDK。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "CDK调控",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "821361002",
+  "tags": []
+ },
+ "BQ-cell_cycle-943230365797": {
+  "type": "mtf",
+  "question": "关于细胞周期蛋白依赖性激酶（CDK）的调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "Wee1激酶通过磷酸化CDK的抑制性位点来阻止CDK活性",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "CDK的活性需要与cyclin结合，cyclin的水平在细胞周期中振荡变化",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "Cdc25磷酸酶通过去磷酸化CDK的抑制性磷酸位点来激活CDK",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "p53直接抑制CDK-cyclin复合物的激酶活性",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确：cyclin-CDK调控的基本原理。A正确：Wee1的抑制性磷酸化。C正确：Cdc25的激活功能。D错误：p53通过转录激活p21（CKI）来间接抑制CDK活性，而非直接抑制CDK-cyclin复合物。p21是CDK抑制剂（CKI），直接结合并抑制CDK。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "CDK调控",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "821361002",
+  "tags": []
+ },
+ "BQ-cell_cycle-0d0bbd187719": {
+  "type": "mtf",
+  "question": "关于细胞周期蛋白依赖性激酶（CDK）的调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "Wee1激酶通过磷酸化CDK的抑制性位点来阻止CDK活性",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "CDK的活性需要与cyclin结合，cyclin的水平在细胞周期中振荡变化",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "p53直接抑制CDK-cyclin复合物的激酶活性",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "Cdc25磷酸酶通过去磷酸化CDK的抑制性磷酸位点来激活CDK",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：cyclin-CDK调控的基本原理。A正确：Wee1的抑制性磷酸化。D正确：Cdc25的激活功能。C错误：p53通过转录激活p21（CKI）来间接抑制CDK活性，而非直接抑制CDK-cyclin复合物。p21是CDK抑制剂（CKI），直接结合并抑制CDK。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "CDK调控",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "821361002",
+  "tags": []
+ },
+ "BQ-cell_cycle-57abf03a66bb": {
+  "type": "mtf",
+  "question": "关于细胞周期蛋白依赖性激酶（CDK）的调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "Wee1激酶通过磷酸化CDK的抑制性位点来阻止CDK活性",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "p53直接抑制CDK-cyclin复合物的激酶活性",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "Cdc25磷酸酶通过去磷酸化CDK的抑制性磷酸位点来激活CDK",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "CDK的活性需要与cyclin结合，cyclin的水平在细胞周期中振荡变化",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：cyclin-CDK调控的基本原理。A正确：Wee1的抑制性磷酸化。C正确：Cdc25的激活功能。B错误：p53通过转录激活p21（CKI）来间接抑制CDK活性，而非直接抑制CDK-cyclin复合物。p21是CDK抑制剂（CKI），直接结合并抑制CDK。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "CDK调控",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "821361002",
+  "tags": []
+ },
+ "BQ-cell_cycle-7eeb2e3544fe": {
+  "type": "mtf",
+  "question": "关于细胞周期蛋白依赖性激酶（CDK）的调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "Wee1激酶通过磷酸化CDK的抑制性位点来阻止CDK活性",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "p53直接抑制CDK-cyclin复合物的激酶活性",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "CDK的活性需要与cyclin结合，cyclin的水平在细胞周期中振荡变化",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "Cdc25磷酸酶通过去磷酸化CDK的抑制性磷酸位点来激活CDK",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：cyclin-CDK调控的基本原理。A正确：Wee1的抑制性磷酸化。D正确：Cdc25的激活功能。B错误：p53通过转录激活p21（CKI）来间接抑制CDK活性，而非直接抑制CDK-cyclin复合物。p21是CDK抑制剂（CKI），直接结合并抑制CDK。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "CDK调控",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "821361002",
+  "tags": []
+ },
+ "BQ-cell_cycle-8103ba47437e": {
+  "type": "mtf",
+  "question": "关于细胞增殖的接触抑制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "接触抑制与细胞表面黏附分子和信号通路(如Hippo/YAP通路)有关",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "接触抑制在所有细胞类型中表现相同",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "正常成纤维细胞在培养中形成单层后停止分裂,称为接触抑制",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "癌细胞丧失接触抑制,可多层生长形成病灶",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:神经元等不可分裂的细胞不表现此现象;上皮细胞有接触抑制而间质细胞更为侵袭性;培养条件影响接触抑制程度。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "接触抑制",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2117394804",
+  "tags": []
+ },
+ "BQ-cell_cycle-0a2c2821fc90": {
+  "type": "mtf",
+  "question": "关于细胞增殖的接触抑制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "接触抑制与细胞表面黏附分子和信号通路(如Hippo/YAP通路)有关",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "接触抑制在所有细胞类型中表现相同",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "癌细胞丧失接触抑制,可多层生长形成病灶",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "正常成纤维细胞在培养中形成单层后停止分裂,称为接触抑制",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:神经元等不可分裂的细胞不表现此现象;上皮细胞有接触抑制而间质细胞更为侵袭性;培养条件影响接触抑制程度。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "接触抑制",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2117394804",
+  "tags": []
+ },
+ "BQ-cell_cycle-69e1a61757d7": {
+  "type": "mtf",
+  "question": "关于细胞增殖的接触抑制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "接触抑制与细胞表面黏附分子和信号通路(如Hippo/YAP通路)有关",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "正常成纤维细胞在培养中形成单层后停止分裂,称为接触抑制",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "接触抑制在所有细胞类型中表现相同",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "癌细胞丧失接触抑制,可多层生长形成病灶",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:神经元等不可分裂的细胞不表现此现象;上皮细胞有接触抑制而间质细胞更为侵袭性;培养条件影响接触抑制程度。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "接触抑制",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2117394804",
+  "tags": []
+ },
+ "BQ-cell_cycle-e87f8993de6a": {
+  "type": "mtf",
+  "question": "关于细胞增殖的接触抑制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "接触抑制与细胞表面黏附分子和信号通路(如Hippo/YAP通路)有关",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "正常成纤维细胞在培养中形成单层后停止分裂,称为接触抑制",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "癌细胞丧失接触抑制,可多层生长形成病灶",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "接触抑制在所有细胞类型中表现相同",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:神经元等不可分裂的细胞不表现此现象;上皮细胞有接触抑制而间质细胞更为侵袭性;培养条件影响接触抑制程度。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "接触抑制",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2117394804",
+  "tags": []
+ },
+ "BQ-cell_cycle-2d69ecb47236": {
+  "type": "mtf",
+  "question": "关于细胞增殖的接触抑制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "接触抑制与细胞表面黏附分子和信号通路(如Hippo/YAP通路)有关",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "癌细胞丧失接触抑制,可多层生长形成病灶",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "接触抑制在所有细胞类型中表现相同",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "正常成纤维细胞在培养中形成单层后停止分裂,称为接触抑制",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:神经元等不可分裂的细胞不表现此现象;上皮细胞有接触抑制而间质细胞更为侵袭性;培养条件影响接触抑制程度。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "接触抑制",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2117394804",
+  "tags": []
+ },
+ "BQ-cell_cycle-a116b25b7065": {
+  "type": "mtf",
+  "question": "关于细胞增殖的接触抑制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "接触抑制与细胞表面黏附分子和信号通路(如Hippo/YAP通路)有关",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "癌细胞丧失接触抑制,可多层生长形成病灶",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "正常成纤维细胞在培养中形成单层后停止分裂,称为接触抑制",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "接触抑制在所有细胞类型中表现相同",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:神经元等不可分裂的细胞不表现此现象;上皮细胞有接触抑制而间质细胞更为侵袭性;培养条件影响接触抑制程度。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "接触抑制",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2117394804",
+  "tags": []
+ },
+ "BQ-cell_cycle-3a52370830c1": {
+  "type": "mtf",
+  "question": "关于细胞增殖的接触抑制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "接触抑制在所有细胞类型中表现相同",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "接触抑制与细胞表面黏附分子和信号通路(如Hippo/YAP通路)有关",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "正常成纤维细胞在培养中形成单层后停止分裂,称为接触抑制",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "癌细胞丧失接触抑制,可多层生长形成病灶",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:神经元等不可分裂的细胞不表现此现象;上皮细胞有接触抑制而间质细胞更为侵袭性;培养条件影响接触抑制程度。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "接触抑制",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2117394804",
+  "tags": []
+ },
+ "BQ-cell_cycle-b06d7f74f434": {
+  "type": "mtf",
+  "question": "关于细胞增殖的接触抑制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "接触抑制在所有细胞类型中表现相同",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "接触抑制与细胞表面黏附分子和信号通路(如Hippo/YAP通路)有关",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "癌细胞丧失接触抑制,可多层生长形成病灶",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "正常成纤维细胞在培养中形成单层后停止分裂,称为接触抑制",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:神经元等不可分裂的细胞不表现此现象;上皮细胞有接触抑制而间质细胞更为侵袭性;培养条件影响接触抑制程度。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "接触抑制",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2117394804",
+  "tags": []
+ },
+ "BQ-cell_cycle-ae80c18c3e8c": {
+  "type": "mtf",
+  "question": "关于细胞增殖的接触抑制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "接触抑制在所有细胞类型中表现相同",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "正常成纤维细胞在培养中形成单层后停止分裂,称为接触抑制",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "接触抑制与细胞表面黏附分子和信号通路(如Hippo/YAP通路)有关",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "癌细胞丧失接触抑制,可多层生长形成病灶",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:神经元等不可分裂的细胞不表现此现象;上皮细胞有接触抑制而间质细胞更为侵袭性;培养条件影响接触抑制程度。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "接触抑制",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2117394804",
+  "tags": []
+ },
+ "BQ-cell_cycle-f519446a91ff": {
+  "type": "mtf",
+  "question": "关于细胞增殖的接触抑制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "接触抑制在所有细胞类型中表现相同",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "正常成纤维细胞在培养中形成单层后停止分裂,称为接触抑制",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "癌细胞丧失接触抑制,可多层生长形成病灶",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "接触抑制与细胞表面黏附分子和信号通路(如Hippo/YAP通路)有关",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:神经元等不可分裂的细胞不表现此现象;上皮细胞有接触抑制而间质细胞更为侵袭性;培养条件影响接触抑制程度。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "接触抑制",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2117394804",
+  "tags": []
+ },
+ "BQ-cell_cycle-12202282699f": {
+  "type": "mtf",
+  "question": "关于细胞增殖的接触抑制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "接触抑制在所有细胞类型中表现相同",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "癌细胞丧失接触抑制,可多层生长形成病灶",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "接触抑制与细胞表面黏附分子和信号通路(如Hippo/YAP通路)有关",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "正常成纤维细胞在培养中形成单层后停止分裂,称为接触抑制",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:神经元等不可分裂的细胞不表现此现象;上皮细胞有接触抑制而间质细胞更为侵袭性;培养条件影响接触抑制程度。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "接触抑制",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2117394804",
+  "tags": []
+ },
+ "BQ-cell_cycle-df75e3b95911": {
+  "type": "mtf",
+  "question": "关于细胞增殖的接触抑制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "接触抑制在所有细胞类型中表现相同",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "癌细胞丧失接触抑制,可多层生长形成病灶",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "正常成纤维细胞在培养中形成单层后停止分裂,称为接触抑制",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "接触抑制与细胞表面黏附分子和信号通路(如Hippo/YAP通路)有关",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:神经元等不可分裂的细胞不表现此现象;上皮细胞有接触抑制而间质细胞更为侵袭性;培养条件影响接触抑制程度。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "接触抑制",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2117394804",
+  "tags": []
+ },
+ "BQ-cell_cycle-c16aa6897109": {
+  "type": "mtf",
+  "question": "关于细胞增殖的接触抑制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "正常成纤维细胞在培养中形成单层后停止分裂,称为接触抑制",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "接触抑制与细胞表面黏附分子和信号通路(如Hippo/YAP通路)有关",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "接触抑制在所有细胞类型中表现相同",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "癌细胞丧失接触抑制,可多层生长形成病灶",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:神经元等不可分裂的细胞不表现此现象;上皮细胞有接触抑制而间质细胞更为侵袭性;培养条件影响接触抑制程度。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "接触抑制",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2117394804",
+  "tags": []
+ },
+ "BQ-cell_cycle-f5364f721401": {
+  "type": "mtf",
+  "question": "关于细胞增殖的接触抑制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "正常成纤维细胞在培养中形成单层后停止分裂,称为接触抑制",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "接触抑制与细胞表面黏附分子和信号通路(如Hippo/YAP通路)有关",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "癌细胞丧失接触抑制,可多层生长形成病灶",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "接触抑制在所有细胞类型中表现相同",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:神经元等不可分裂的细胞不表现此现象;上皮细胞有接触抑制而间质细胞更为侵袭性;培养条件影响接触抑制程度。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "接触抑制",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2117394804",
+  "tags": []
+ },
+ "BQ-cell_cycle-c31d8ad90bb7": {
+  "type": "mtf",
+  "question": "关于细胞增殖的接触抑制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "正常成纤维细胞在培养中形成单层后停止分裂,称为接触抑制",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "接触抑制在所有细胞类型中表现相同",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "接触抑制与细胞表面黏附分子和信号通路(如Hippo/YAP通路)有关",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "癌细胞丧失接触抑制,可多层生长形成病灶",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:神经元等不可分裂的细胞不表现此现象;上皮细胞有接触抑制而间质细胞更为侵袭性;培养条件影响接触抑制程度。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "接触抑制",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2117394804",
+  "tags": []
+ },
+ "BQ-cell_cycle-cbc4ec2e0348": {
+  "type": "mtf",
+  "question": "关于细胞增殖的接触抑制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "正常成纤维细胞在培养中形成单层后停止分裂,称为接触抑制",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "接触抑制在所有细胞类型中表现相同",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "癌细胞丧失接触抑制,可多层生长形成病灶",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "接触抑制与细胞表面黏附分子和信号通路(如Hippo/YAP通路)有关",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:神经元等不可分裂的细胞不表现此现象;上皮细胞有接触抑制而间质细胞更为侵袭性;培养条件影响接触抑制程度。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "接触抑制",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2117394804",
+  "tags": []
+ },
+ "BQ-cell_cycle-e1fe841d3fe7": {
+  "type": "mtf",
+  "question": "关于细胞增殖的接触抑制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "正常成纤维细胞在培养中形成单层后停止分裂,称为接触抑制",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "癌细胞丧失接触抑制,可多层生长形成病灶",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "接触抑制与细胞表面黏附分子和信号通路(如Hippo/YAP通路)有关",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "接触抑制在所有细胞类型中表现相同",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:神经元等不可分裂的细胞不表现此现象;上皮细胞有接触抑制而间质细胞更为侵袭性;培养条件影响接触抑制程度。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "接触抑制",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2117394804",
+  "tags": []
+ },
+ "BQ-cell_cycle-f77ed5bd8643": {
+  "type": "mtf",
+  "question": "关于细胞增殖的接触抑制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "正常成纤维细胞在培养中形成单层后停止分裂,称为接触抑制",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "癌细胞丧失接触抑制,可多层生长形成病灶",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "接触抑制在所有细胞类型中表现相同",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "接触抑制与细胞表面黏附分子和信号通路(如Hippo/YAP通路)有关",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:神经元等不可分裂的细胞不表现此现象;上皮细胞有接触抑制而间质细胞更为侵袭性;培养条件影响接触抑制程度。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "接触抑制",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2117394804",
+  "tags": []
+ },
+ "BQ-cell_cycle-7cc72283f146": {
+  "type": "mtf",
+  "question": "关于细胞增殖的接触抑制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "癌细胞丧失接触抑制,可多层生长形成病灶",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "接触抑制与细胞表面黏附分子和信号通路(如Hippo/YAP通路)有关",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "接触抑制在所有细胞类型中表现相同",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "正常成纤维细胞在培养中形成单层后停止分裂,称为接触抑制",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:神经元等不可分裂的细胞不表现此现象;上皮细胞有接触抑制而间质细胞更为侵袭性;培养条件影响接触抑制程度。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "接触抑制",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2117394804",
+  "tags": []
+ },
+ "BQ-cell_cycle-be0365bbf91c": {
+  "type": "mtf",
+  "question": "关于细胞增殖的接触抑制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "癌细胞丧失接触抑制,可多层生长形成病灶",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "接触抑制与细胞表面黏附分子和信号通路(如Hippo/YAP通路)有关",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "正常成纤维细胞在培养中形成单层后停止分裂,称为接触抑制",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "接触抑制在所有细胞类型中表现相同",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:神经元等不可分裂的细胞不表现此现象;上皮细胞有接触抑制而间质细胞更为侵袭性;培养条件影响接触抑制程度。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "接触抑制",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2117394804",
+  "tags": []
+ },
+ "BQ-cell_cycle-7e0f78abfd6d": {
+  "type": "mtf",
+  "question": "关于细胞增殖的接触抑制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "癌细胞丧失接触抑制,可多层生长形成病灶",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "接触抑制在所有细胞类型中表现相同",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "接触抑制与细胞表面黏附分子和信号通路(如Hippo/YAP通路)有关",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "正常成纤维细胞在培养中形成单层后停止分裂,称为接触抑制",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:神经元等不可分裂的细胞不表现此现象;上皮细胞有接触抑制而间质细胞更为侵袭性;培养条件影响接触抑制程度。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "接触抑制",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2117394804",
+  "tags": []
+ },
+ "BQ-cell_cycle-063d83f768a4": {
+  "type": "mtf",
+  "question": "关于细胞增殖的接触抑制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "癌细胞丧失接触抑制,可多层生长形成病灶",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "接触抑制在所有细胞类型中表现相同",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "正常成纤维细胞在培养中形成单层后停止分裂,称为接触抑制",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "接触抑制与细胞表面黏附分子和信号通路(如Hippo/YAP通路)有关",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:神经元等不可分裂的细胞不表现此现象;上皮细胞有接触抑制而间质细胞更为侵袭性;培养条件影响接触抑制程度。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "接触抑制",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2117394804",
+  "tags": []
+ },
+ "BQ-cell_cycle-78e325327dd5": {
+  "type": "mtf",
+  "question": "关于细胞增殖的接触抑制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "癌细胞丧失接触抑制,可多层生长形成病灶",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "正常成纤维细胞在培养中形成单层后停止分裂,称为接触抑制",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "接触抑制与细胞表面黏附分子和信号通路(如Hippo/YAP通路)有关",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "接触抑制在所有细胞类型中表现相同",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:神经元等不可分裂的细胞不表现此现象;上皮细胞有接触抑制而间质细胞更为侵袭性;培养条件影响接触抑制程度。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "接触抑制",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2117394804",
+  "tags": []
+ },
+ "BQ-cell_cycle-d31bce5d15ac": {
+  "type": "mtf",
+  "question": "关于细胞增殖的接触抑制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "癌细胞丧失接触抑制,可多层生长形成病灶",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "正常成纤维细胞在培养中形成单层后停止分裂,称为接触抑制",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "接触抑制在所有细胞类型中表现相同",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "接触抑制与细胞表面黏附分子和信号通路(如Hippo/YAP通路)有关",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:神经元等不可分裂的细胞不表现此现象;上皮细胞有接触抑制而间质细胞更为侵袭性;培养条件影响接触抑制程度。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "接触抑制",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2117394804",
+  "tags": []
+ }
+}

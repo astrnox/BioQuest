@@ -1,0 +1,693 @@
+{
+ "BQ-cell_membrane-2f6a65ef3108": {
+  "tags": [
+   "cell_membrane",
+   "module_1",
+   "细胞生物学",
+   "物质跨膜运输",
+   "high_school"
+  ],
+  "diff": "basic",
+  "len": 16,
+  "src": "cell_membrane",
+  "year": null,
+  "module": "module_1"
+ },
+ "BQ-cell_membrane-6cd86cb074e4": {
+  "tags": [
+   "cell_membrane",
+   "module_1",
+   "细胞生物学",
+   "细胞膜的结构与功能",
+   "high_school"
+  ],
+  "diff": "basic",
+  "len": 20,
+  "src": "cell_membrane",
+  "year": null,
+  "module": "module_1"
+ },
+ "BQ-cell_membrane-6dbee1383dfb": {
+  "tags": [
+   "cell_membrane",
+   "module_1",
+   "细胞生物学",
+   "细胞膜结构",
+   "高考"
+  ],
+  "diff": "basic",
+  "len": 20,
+  "src": "cell_membrane",
+  "year": null,
+  "module": "module_1"
+ },
+ "BQ-cell_membrane-b9613d5355ee": {
+  "tags": [
+   "cell_membrane",
+   "module_1",
+   "细胞生物学",
+   "物质跨膜运输",
+   "high_school"
+  ],
+  "diff": "basic",
+  "len": 10,
+  "src": "cell_membrane",
+  "year": null,
+  "module": "module_1"
+ },
+ "BQ-cell_membrane-c9bfd00589fa": {
+  "tags": [
+   "cell_membrane",
+   "module_1",
+   "细胞生物学",
+   "细胞膜结构",
+   "high_school"
+  ],
+  "diff": "basic",
+  "len": 18,
+  "src": "cell_membrane",
+  "year": null,
+  "module": "module_1"
+ },
+ "BQ-cell_membrane-c5338c28e7db": {
+  "tags": [
+   "cell_membrane",
+   "module_1",
+   "细胞生物学",
+   "物质跨膜运输",
+   "high_school"
+  ],
+  "diff": "basic",
+  "len": 18,
+  "src": "cell_membrane",
+  "year": null,
+  "module": "module_1"
+ },
+ "BQ-cell_membrane-0d5f2cf78ed8": {
+  "tags": [
+   "cell_membrane",
+   "module_1",
+   "细胞生物学",
+   "细胞膜结构",
+   "high_school"
+  ],
+  "diff": "basic",
+  "len": 15,
+  "src": "cell_membrane",
+  "year": null,
+  "module": "module_1"
+ },
+ "BQ-cell_membrane-54395b0f870f": {
+  "tags": [
+   "cell_membrane",
+   "module_1",
+   "细胞生物学",
+   "细胞膜的结构与功能",
+   "high_school"
+  ],
+  "diff": "basic",
+  "len": 16,
+  "src": "cell_membrane",
+  "year": null,
+  "module": "module_1"
+ },
+ "BQ-cell_membrane-15631d850364": {
+  "tags": [
+   "cell_membrane",
+   "module_1",
+   "easy"
+  ],
+  "diff": "basic",
+  "len": 52,
+  "src": "cell_membrane",
+  "year": null,
+  "module": "module_1"
+ },
+ "BQ-cell_membrane-07735672126e": {
+  "tags": [
+   "cell_membrane",
+   "必修一",
+   "easy"
+  ],
+  "diff": "basic",
+  "len": 44,
+  "src": "cell_membrane",
+  "year": null,
+  "module": "module1"
+ },
+ "BQ-cell_membrane-809ee4166018": {
+  "tags": [
+   "cell_membrane",
+   "必修一",
+   "easy"
+  ],
+  "diff": "basic",
+  "len": 61,
+  "src": "cell_membrane",
+  "year": null,
+  "module": "module1"
+ },
+ "BQ-cell_membrane-e5e25aa6c6b0": {
+  "tags": [
+   "cell_membrane",
+   "必修一",
+   "medium"
+  ],
+  "diff": "league",
+  "len": 54,
+  "src": "cell_membrane",
+  "year": null,
+  "module": "module1"
+ },
+ "BQ-cell_membrane-b3fc3d93f940": {
+  "tags": [
+   "cell_membrane",
+   "必修一",
+   "medium"
+  ],
+  "diff": "league",
+  "len": 52,
+  "src": "cell_membrane",
+  "year": null,
+  "module": "module1"
+ },
+ "BQ-cell_membrane-2cdcd902d86a": {
+  "tags": [
+   "cell_membrane",
+   "module_1",
+   "hard"
+  ],
+  "diff": "national",
+  "len": 90,
+  "src": "cell_membrane",
+  "year": null,
+  "module": "module_1"
+ },
+ "BQ-cell_membrane-8b5ab5029404": {
+  "tags": [
+   "cell_membrane",
+   "module_1",
+   "细胞生物学",
+   "细胞膜的结构与功能",
+   "high_school"
+  ],
+  "diff": "basic",
+  "len": 15,
+  "src": "cell_membrane",
+  "year": null,
+  "module": "module_1"
+ },
+ "BQ-cell_membrane-9dd3e6a4d58f": {
+  "tags": [
+   "cell_membrane",
+   "module_1",
+   "easy"
+  ],
+  "diff": "basic",
+  "len": 12,
+  "src": "cell_membrane",
+  "year": null,
+  "module": "module_1"
+ },
+ "BQ-cell_membrane-f91c36d78321": {
+  "tags": [
+   "cell_membrane",
+   "module_2",
+   "easy"
+  ],
+  "diff": "basic",
+  "len": 49,
+  "src": "cell_membrane",
+  "year": null,
+  "module": "module_2"
+ },
+ "BQ-cell_membrane-4767cfae922a": {
+  "tags": [
+   "cell_membrane",
+   "module_2",
+   "easy"
+  ],
+  "diff": "basic",
+  "len": 44,
+  "src": "cell_membrane",
+  "year": null,
+  "module": "module_2"
+ },
+ "BQ-cell_membrane-cc5ecdaeea32": {
+  "tags": [
+   "cell_membrane",
+   "module_2",
+   "easy"
+  ],
+  "diff": "basic",
+  "len": 51,
+  "src": "cell_membrane",
+  "year": null,
+  "module": "module_2"
+ },
+ "BQ-cell_membrane-9dc47d61f91f": {
+  "tags": [
+   "cell_membrane",
+   "module_2",
+   "easy"
+  ],
+  "diff": "basic",
+  "len": 43,
+  "src": "cell_membrane",
+  "year": null,
+  "module": "module_2"
+ },
+ "BQ-cell_membrane-1e2154fe3e62": {
+  "tags": [
+   "cell_membrane",
+   "module_2",
+   "easy"
+  ],
+  "diff": "basic",
+  "len": 52,
+  "src": "cell_membrane",
+  "year": null,
+  "module": "module_2"
+ },
+ "BQ-cell_membrane-01082d87215f": {
+  "tags": [
+   "cell_membrane",
+   "module_2",
+   "easy"
+  ],
+  "diff": "basic",
+  "len": 42,
+  "src": "cell_membrane",
+  "year": null,
+  "module": "module_2"
+ },
+ "BQ-cell_membrane-a5664d931292": {
+  "tags": [
+   "cell_membrane",
+   "module_2",
+   "easy"
+  ],
+  "diff": "basic",
+  "len": 43,
+  "src": "cell_membrane",
+  "year": null,
+  "module": "module_2"
+ },
+ "BQ-cell_membrane-7b37e3683885": {
+  "tags": [
+   "cell_membrane",
+   "module_2",
+   "easy"
+  ],
+  "diff": "basic",
+  "len": 52,
+  "src": "cell_membrane",
+  "year": null,
+  "module": "module_2"
+ },
+ "BQ-cell_membrane-82e4327fdbc6": {
+  "tags": [
+   "cell_membrane",
+   "逻辑推理",
+   "数据解读",
+   "膜转运"
+  ],
+  "diff": 4,
+  "len": 136,
+  "src": "cell_membrane",
+  "year": null,
+  "module": "module_1"
+ },
+ "BQ-cell_membrane-71824335d274": {
+  "tags": [
+   "cell_membrane",
+   "module_2",
+   "植物学",
+   "植物物质运输",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2015/art_1c13e648d84d4e38b94e2dfd5e5b1b0b.html",
+   "2015"
+  ],
+  "diff": "league",
+  "len": 25,
+  "src": "cell_membrane",
+  "year": 2015,
+  "module": "module_2"
+ },
+ "BQ-cell_membrane-51102853e5f8": {
+  "tags": [
+   "cell_membrane",
+   "module_1",
+   "细胞生物学",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2015/art_1c13e648d84d4e38b94e2dfd5e5b1b0b.html",
+   "2015"
+  ],
+  "diff": "league",
+  "len": 156,
+  "src": "cell_membrane",
+  "year": 2015,
+  "module": "module_1"
+ },
+ "BQ-cell_membrane-aec512bdc823": {
+  "tags": [
+   "cell_membrane",
+   "module_1",
+   "细胞生物学",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2015/art_1c13e648d84d4e38b94e2dfd5e5b1b0b.html",
+   "2015"
+  ],
+  "diff": "league",
+  "len": 37,
+  "src": "cell_membrane",
+  "year": 2015,
+  "module": "module_1"
+ },
+ "BQ-cell_membrane-1b02fa0ca524": {
+  "tags": [
+   "cell_membrane",
+   "module_1",
+   "细胞生物学",
+   "细胞膜",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2015/art_1c13e648d84d4e38b94e2dfd5e5b1b0b.html",
+   "2015"
+  ],
+  "diff": "league",
+  "len": 32,
+  "src": "cell_membrane",
+  "year": 2015,
+  "module": "module_1"
+ },
+ "BQ-cell_membrane-4b631178d5b8": {
+  "tags": [
+   "cell_membrane",
+   "module_1",
+   "细胞生物学",
+   "细胞膜",
+   "league",
+   "competition",
+   "http://www.botany.org.cn/swxjs/swxls/202605/t20260518_838211.html",
+   "2026"
+  ],
+  "diff": "league",
+  "len": 23,
+  "src": "cell_membrane",
+  "year": 2026,
+  "module": "module_1"
+ },
+ "BQ-cell_membrane-3cffdcd2c46d": {
+  "tags": [
+   "cell_membrane",
+   "module_1",
+   "生物学",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2015/art_1c13e648d84d4e38b94e2dfd5e5b1b0b.html",
+   "2015"
+  ],
+  "diff": "league",
+  "len": 72,
+  "src": "cell_membrane",
+  "year": 2015,
+  "module": "module_1"
+ },
+ "BQ-cell_membrane-711b90b141b4": {
+  "tags": [
+   "cell_membrane",
+   "module_1",
+   "细胞生物学",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2015/art_1c13e648d84d4e38b94e2dfd5e5b1b0b.html",
+   "2015"
+  ],
+  "diff": "league",
+  "len": 67,
+  "src": "cell_membrane",
+  "year": 2015,
+  "module": "module_1"
+ },
+ "BQ-cell_membrane-fe5755229bf1": {
+  "tags": [
+   "cell_membrane",
+   "module_1",
+   "细胞生物学",
+   "细胞膜",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2015/art_1c13e648d84d4e38b94e2dfd5e5b1b0b.html",
+   "2015"
+  ],
+  "diff": "league",
+  "len": 36,
+  "src": "cell_membrane",
+  "year": 2015,
+  "module": "module_1"
+ },
+ "BQ-cell_membrane-7fb11d44224c": {
+  "tags": [
+   "cell_membrane"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "cell_membrane",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_membrane-a91531d6847e": {
+  "tags": [
+   "cell_membrane"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "cell_membrane",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_membrane-c7d2cdb86783": {
+  "tags": [
+   "cell_membrane"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "cell_membrane",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_membrane-a826e27b76ab": {
+  "tags": [
+   "cell_membrane"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "cell_membrane",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_membrane-37cdfc8e7f6b": {
+  "tags": [
+   "cell_membrane"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "cell_membrane",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_membrane-4611128a5aa2": {
+  "tags": [
+   "cell_membrane"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "cell_membrane",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_membrane-6479778638f9": {
+  "tags": [
+   "cell_membrane"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "cell_membrane",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_membrane-153c35eb5a59": {
+  "tags": [
+   "cell_membrane"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "cell_membrane",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_membrane-ccbff2c66b4d": {
+  "tags": [
+   "cell_membrane"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "cell_membrane",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_membrane-6c05c7d0fcf9": {
+  "tags": [
+   "cell_membrane"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "cell_membrane",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_membrane-2e54d0bca48d": {
+  "tags": [
+   "cell_membrane"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "cell_membrane",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_membrane-90a381392131": {
+  "tags": [
+   "cell_membrane"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "cell_membrane",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_membrane-e46de2ef1895": {
+  "tags": [
+   "cell_membrane"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "cell_membrane",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_membrane-f7f9fd33d14b": {
+  "tags": [
+   "cell_membrane"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "cell_membrane",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_membrane-1c1119b96169": {
+  "tags": [
+   "cell_membrane"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "cell_membrane",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_membrane-28e5b89bb26b": {
+  "tags": [
+   "cell_membrane"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "cell_membrane",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_membrane-1664d482a4a2": {
+  "tags": [
+   "cell_membrane"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "cell_membrane",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_membrane-17beab31c48d": {
+  "tags": [
+   "cell_membrane"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "cell_membrane",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_membrane-1e71ac1ca23f": {
+  "tags": [
+   "cell_membrane"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "cell_membrane",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_membrane-53777f27c2c3": {
+  "tags": [
+   "cell_membrane"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "cell_membrane",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_membrane-a6b491fd15aa": {
+  "tags": [
+   "cell_membrane"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "cell_membrane",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_membrane-620c23f13312": {
+  "tags": [
+   "cell_membrane"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "cell_membrane",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_membrane-41fb3bbb3e07": {
+  "tags": [
+   "cell_membrane"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "cell_membrane",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_membrane-5aa3f9d31c9d": {
+  "tags": [
+   "cell_membrane"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "cell_membrane",
+  "year": 2025,
+  "module": 1
+ }
+}

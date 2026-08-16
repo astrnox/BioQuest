@@ -1,0 +1,579 @@
+{
+ "BQ-sex_linkage-9b97c4d450d2": {
+  "tags": [
+   "sex_linkage",
+   "module_3",
+   "遗传学",
+   "伴性遗传",
+   "high_school"
+  ],
+  "diff": "league",
+  "len": 42,
+  "src": "sex_linkage",
+  "year": null,
+  "module": "module_3"
+ },
+ "BQ-sex_linkage-ba0fa6739847": {
+  "tags": [
+   "sex_linkage",
+   "module_3",
+   "遗传学",
+   "伴性遗传",
+   "高考"
+  ],
+  "diff": "basic",
+  "len": 40,
+  "src": "sex_linkage",
+  "year": null,
+  "module": "module_3"
+ },
+ "BQ-sex_linkage-078415f5ce80": {
+  "tags": [
+   "sex_linkage",
+   "module_3",
+   "遗传学",
+   "伴性遗传",
+   "high_school"
+  ],
+  "diff": "league",
+  "len": 14,
+  "src": "sex_linkage",
+  "year": null,
+  "module": "module_3"
+ },
+ "BQ-sex_linkage-af1a14d20993": {
+  "tags": [
+   "sex_linkage",
+   "module_3",
+   "遗传学",
+   "伴性遗传",
+   "high_school"
+  ],
+  "diff": "league",
+  "len": 48,
+  "src": "sex_linkage",
+  "year": null,
+  "module": "module_3"
+ },
+ "BQ-sex_linkage-68c86347e7f5": {
+  "tags": [
+   "sex_linkage",
+   "module_4",
+   "遗传学",
+   "伴性遗传",
+   "high_school"
+  ],
+  "diff": "basic",
+  "len": 22,
+  "src": "sex_linkage",
+  "year": null,
+  "module": "module_4"
+ },
+ "BQ-sex_linkage-fa4212f75e97": {
+  "tags": [
+   "sex_linkage",
+   "module_4",
+   "遗传学",
+   "伴性遗传",
+   "high_school"
+  ],
+  "diff": "basic",
+  "len": 16,
+  "src": "sex_linkage",
+  "year": null,
+  "module": "module_4"
+ },
+ "BQ-sex_linkage-65cb34d13f02": {
+  "tags": [
+   "sex_linkage",
+   "逻辑推理",
+   "概率计算",
+   "伴性遗传"
+  ],
+  "diff": 4,
+  "len": 62,
+  "src": "sex_linkage",
+  "year": null,
+  "module": "module_4"
+ },
+ "BQ-sex_linkage-a43cdae4a7b9": {
+  "tags": [
+   "sex_linkage"
+  ],
+  "diff": "hard",
+  "len": 21,
+  "src": "sex_linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-sex_linkage-53436510d80e": {
+  "tags": [
+   "sex_linkage"
+  ],
+  "diff": "hard",
+  "len": 21,
+  "src": "sex_linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-sex_linkage-77dd9474564c": {
+  "tags": [
+   "sex_linkage"
+  ],
+  "diff": "hard",
+  "len": 21,
+  "src": "sex_linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-sex_linkage-5b138ddd9e1b": {
+  "tags": [
+   "sex_linkage"
+  ],
+  "diff": "hard",
+  "len": 21,
+  "src": "sex_linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-sex_linkage-9c93430f8f45": {
+  "tags": [
+   "sex_linkage"
+  ],
+  "diff": "hard",
+  "len": 21,
+  "src": "sex_linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-sex_linkage-7e6bc19ea294": {
+  "tags": [
+   "sex_linkage"
+  ],
+  "diff": "hard",
+  "len": 21,
+  "src": "sex_linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-sex_linkage-670c0c1f1a54": {
+  "tags": [
+   "sex_linkage"
+  ],
+  "diff": "hard",
+  "len": 21,
+  "src": "sex_linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-sex_linkage-f9a5b84a6674": {
+  "tags": [
+   "sex_linkage"
+  ],
+  "diff": "hard",
+  "len": 21,
+  "src": "sex_linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-sex_linkage-1ea650488937": {
+  "tags": [
+   "sex_linkage"
+  ],
+  "diff": "hard",
+  "len": 21,
+  "src": "sex_linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-sex_linkage-d397c47de558": {
+  "tags": [
+   "sex_linkage"
+  ],
+  "diff": "hard",
+  "len": 21,
+  "src": "sex_linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-sex_linkage-0203a19f8bc5": {
+  "tags": [
+   "sex_linkage"
+  ],
+  "diff": "hard",
+  "len": 21,
+  "src": "sex_linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-sex_linkage-8bf96db10c40": {
+  "tags": [
+   "sex_linkage"
+  ],
+  "diff": "hard",
+  "len": 21,
+  "src": "sex_linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-sex_linkage-f41b93acd3c1": {
+  "tags": [
+   "sex_linkage"
+  ],
+  "diff": "hard",
+  "len": 21,
+  "src": "sex_linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-sex_linkage-3c39a6bc1eea": {
+  "tags": [
+   "sex_linkage"
+  ],
+  "diff": "hard",
+  "len": 21,
+  "src": "sex_linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-sex_linkage-4a7f8ee6f419": {
+  "tags": [
+   "sex_linkage"
+  ],
+  "diff": "hard",
+  "len": 21,
+  "src": "sex_linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-sex_linkage-10c13bdc3fbd": {
+  "tags": [
+   "sex_linkage"
+  ],
+  "diff": "hard",
+  "len": 21,
+  "src": "sex_linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-sex_linkage-92836820180c": {
+  "tags": [
+   "sex_linkage"
+  ],
+  "diff": "hard",
+  "len": 21,
+  "src": "sex_linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-sex_linkage-4bcfdacfb52a": {
+  "tags": [
+   "sex_linkage"
+  ],
+  "diff": "hard",
+  "len": 21,
+  "src": "sex_linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-sex_linkage-08f4aa2c49ac": {
+  "tags": [
+   "sex_linkage"
+  ],
+  "diff": "hard",
+  "len": 21,
+  "src": "sex_linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-sex_linkage-579199c2a5b6": {
+  "tags": [
+   "sex_linkage"
+  ],
+  "diff": "hard",
+  "len": 21,
+  "src": "sex_linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-sex_linkage-b17eea0e4d34": {
+  "tags": [
+   "sex_linkage"
+  ],
+  "diff": "hard",
+  "len": 21,
+  "src": "sex_linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-sex_linkage-33f4918cdbd5": {
+  "tags": [
+   "sex_linkage"
+  ],
+  "diff": "hard",
+  "len": 21,
+  "src": "sex_linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-sex_linkage-fb2cbf4be3e4": {
+  "tags": [
+   "sex_linkage"
+  ],
+  "diff": "hard",
+  "len": 21,
+  "src": "sex_linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-sex_linkage-657fa665268b": {
+  "tags": [
+   "sex_linkage"
+  ],
+  "diff": "hard",
+  "len": 21,
+  "src": "sex_linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-sex_linkage-2bc082c713dd": {
+  "tags": [
+   "sex_linkage"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "sex_linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-sex_linkage-1830b3bc2d18": {
+  "tags": [
+   "sex_linkage"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "sex_linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-sex_linkage-7a3371b56450": {
+  "tags": [
+   "sex_linkage"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "sex_linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-sex_linkage-b57e5036447d": {
+  "tags": [
+   "sex_linkage"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "sex_linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-sex_linkage-a25b05e7bf63": {
+  "tags": [
+   "sex_linkage"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "sex_linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-sex_linkage-310c50d9e538": {
+  "tags": [
+   "sex_linkage"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "sex_linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-sex_linkage-64bdb174c09d": {
+  "tags": [
+   "sex_linkage"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "sex_linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-sex_linkage-7d358908b08e": {
+  "tags": [
+   "sex_linkage"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "sex_linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-sex_linkage-be460e9ac4ee": {
+  "tags": [
+   "sex_linkage"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "sex_linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-sex_linkage-9ba898321774": {
+  "tags": [
+   "sex_linkage"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "sex_linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-sex_linkage-114330b3cfa9": {
+  "tags": [
+   "sex_linkage"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "sex_linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-sex_linkage-308f0c73ed45": {
+  "tags": [
+   "sex_linkage"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "sex_linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-sex_linkage-465446a14655": {
+  "tags": [
+   "sex_linkage"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "sex_linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-sex_linkage-8b0aff911627": {
+  "tags": [
+   "sex_linkage"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "sex_linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-sex_linkage-362713e9fa85": {
+  "tags": [
+   "sex_linkage"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "sex_linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-sex_linkage-551714fc9cd4": {
+  "tags": [
+   "sex_linkage"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "sex_linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-sex_linkage-cb1177acde5e": {
+  "tags": [
+   "sex_linkage"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "sex_linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-sex_linkage-383168b55c9b": {
+  "tags": [
+   "sex_linkage"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "sex_linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-sex_linkage-0ad0d62b74ac": {
+  "tags": [
+   "sex_linkage"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "sex_linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-sex_linkage-7ed5fc746fd4": {
+  "tags": [
+   "sex_linkage"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "sex_linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-sex_linkage-c29829068694": {
+  "tags": [
+   "sex_linkage"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "sex_linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-sex_linkage-2f51df892d18": {
+  "tags": [
+   "sex_linkage"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "sex_linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-sex_linkage-6001cf90423b": {
+  "tags": [
+   "sex_linkage"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "sex_linkage",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-sex_linkage-93f2f1c3b858": {
+  "tags": [
+   "sex_linkage"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "sex_linkage",
+  "year": 2025,
+  "module": 4
+ }
+}

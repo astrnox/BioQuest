@@ -1,0 +1,7178 @@
+{
+ "BQ-homeostasis-2f3d5dce0ec8": {
+  "type": "multi_judge",
+  "question": "将健康成年人从平原迅速移至高海拔低氧环境，初期机体发生一系列生理调节以维持内环境稳态。",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "颈动脉体化学感受器兴奋，反射性引起呼吸加深加快。",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "肾脏立即大量分泌促红细胞生成素，使红细胞数量当天显著增加。",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "交感神经兴奋性增强，导致心率加快以维持组织供氧。",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "血红蛋白与氧气的亲和力显著增强，以利于在组织中释放氧气。",
+    "answer": false
+   }
+  ],
+  "explanation": "A 正确：低氧刺激颈动脉体外周化学感受器，反射性引起呼吸中枢兴奋，使呼吸加深加快。B 错误：虽然低氧诱导因子会启动 EPO 基因表达，但红细胞生成需要数天至数周，当天数量不会显著增加。C 正确：低氧初期交感神经兴奋，释放去甲肾上腺素，使心率加快、心输出量增加。D 错误：为了在组织中释放更多氧气，血红蛋白与氧的亲和力应降低（如 2,3-DPG 增加导致氧解离曲线右移），而非增强。",
+  "subject": "动物生理学",
+  "concept": "低氧环境的生理调节",
+  "difficulty": "basic",
+  "chart": null,
+  "year": null,
+  "module": "module_2",
+  "target": "competition",
+  "tags": [
+   "module_2",
+   "easy"
+  ],
+  "oldId": "1630409455"
+ },
+ "BQ-homeostasis-ad5c71afc2d5": {
+  "type": "multi_judge",
+  "question": "将健康成年人从平原迅速移至高海拔低氧环境，初期机体发生一系列生理调节以维持内环境稳态。下列关于该过程叙述正确的是？",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "颈动脉体化学感受器兴奋，反射性引起呼吸加深加快。",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "肺部毛细血管收缩导致肺动脉压降低，以减少液体渗出。",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "肾脏加速分泌促红细胞生成素，促进骨髓造血功能。",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "血红蛋白与氧的亲和力显著增强，以利于组织释放氧气。",
+    "answer": false
+   }
+  ],
+  "explanation": "A 正确：低氧刺激颈动脉体化学感受器，反射性引起呼吸中枢兴奋，使呼吸加深加快以增加通气量。B 错误：低氧会引起肺血管收缩（缺氧性肺血管收缩），导致肺动脉压升高而非降低，这是高原肺水肿的诱因之一。C 正确：肾脏感知低氧后，间质细胞分泌促红细胞生成素（EPO）增加，刺激骨髓生成红细胞以提高携氧能力。D 错误：为了在组织中释放更多氧气，红细胞内 2,3-二磷酸甘油酸（2,3-DPG）含量增加，导致血红蛋白与氧的亲和力降低（氧离曲线右移），而非增强。",
+  "subject": "动物生理学",
+  "concept": "高原低氧适应",
+  "difficulty": "basic",
+  "chart": null,
+  "year": null,
+  "module": "module_2",
+  "target": "competition",
+  "tags": [
+   "module_2",
+   "easy"
+  ],
+  "oldId": "2071930062"
+ },
+ "BQ-homeostasis-73148abf4577": {
+  "type": "mtf",
+  "question": "下列不属于内环境组成成分的是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "内环境中不含有任何蛋白质",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "内环境主要包括血浆、组织液和淋巴",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "稳态只通过神经调节维持",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "细胞内液属于内环境",
+    "answer": false
+   }
+  ],
+  "explanation": "内环境由细胞外液构成，包括血浆、组织液、淋巴；血浆中含大量蛋白质；稳态通过神经—体液—免疫调节共同维持。",
+  "subject": "动物生理学",
+  "concept": "内环境与稳态",
+  "difficulty": "basic",
+  "chart": null,
+  "year": null,
+  "module": "module_3",
+  "target": "high_school",
+  "tags": [
+   "module_3",
+   "动物生理学",
+   "内环境与稳态",
+   "high_school"
+  ],
+  "oldId": "1712684200"
+ },
+ "BQ-homeostasis-766c0c271007": {
+  "type": "mtf",
+  "question": "下列关于甲状腺激素的叙述，错误的是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "激素调节具有微量高效、通过体液运输、作用于靶器官靶细胞的特点",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "激素由内分泌腺分泌后通过导管运输",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "激素可以直接参与细胞代谢",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "所有激素都是蛋白质",
+    "answer": false
+   }
+  ],
+  "explanation": "内分泌腺无导管，激素直接进入血液；激素只起调节作用，不参与细胞代谢；激素种类包括固醇（如性激素）、氨基酸衍生物（甲状腺激素）、蛋白质类（胰岛素）等。",
+  "subject": "动物生理学",
+  "concept": "体液调节",
+  "difficulty": "basic",
+  "chart": null,
+  "year": null,
+  "module": "module_3",
+  "target": "high_school",
+  "tags": [
+   "module_3",
+   "动物生理学",
+   "体液调节",
+   "high_school"
+  ],
+  "oldId": "48569023"
+ },
+ "BQ-homeostasis-64114df83b59": {
+  "type": "mtf",
+  "question": "下列关于血浆、组织液、淋巴的关系，错误的是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "稳态只通过神经调节维持",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "细胞内液属于内环境",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "内环境中不含有任何蛋白质",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "内环境主要包括血浆、组织液和淋巴",
+    "answer": true
+   }
+  ],
+  "explanation": "内环境由细胞外液构成，包括血浆、组织液、淋巴；血浆中含大量蛋白质；稳态通过神经—体液—免疫调节共同维持。",
+  "subject": "动物生理学",
+  "concept": "内环境与稳态",
+  "difficulty": "basic",
+  "chart": null,
+  "year": null,
+  "module": "module_3",
+  "target": "high_school",
+  "tags": [
+   "module_3",
+   "动物生理学",
+   "内环境与稳态",
+   "high_school"
+  ],
+  "oldId": "2067932493"
+ },
+ "BQ-homeostasis-3c3f86176a25": {
+  "type": "mtf",
+  "question": "下列属于特异性免疫的是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "体液免疫不产生记忆细胞",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "T 细胞不参与任何免疫反应",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "吞噬细胞只参与非特异性免疫",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "第一道防线由皮肤和黏膜构成",
+    "answer": true
+   }
+  ],
+  "explanation": "皮肤黏膜是第一道防线；吞噬细胞既参与非特异性免疫也参与特异性免疫；体液免疫和细胞免疫都能产生记忆细胞。",
+  "subject": "动物生理学",
+  "concept": "免疫调节",
+  "difficulty": "basic",
+  "chart": null,
+  "year": null,
+  "module": "module_3",
+  "target": "high_school",
+  "tags": [
+   "module_3",
+   "动物生理学",
+   "免疫调节",
+   "high_school"
+  ],
+  "oldId": "845924024"
+ },
+ "BQ-homeostasis-073cda456f12": {
+  "type": "mtf",
+  "question": "健康人进食后血糖浓度变化如下表。下列叙述错误的是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "血糖升高会刺激胰岛 B 细胞分泌胰岛素",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "血糖调节只受激素调节，与神经无关",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "进食后 30 min 血糖升高是由于糖类消化吸收",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "120 min 后血糖恢复正常主要依靠胰高血糖素",
+    "answer": false
+   }
+  ],
+  "explanation": "血糖调节为神经—体液共同调节，下丘脑通过传出神经控制胰岛和肾上腺。",
+  "subject": "动物生理学",
+  "concept": "血糖调节",
+  "difficulty": "basic",
+  "chart": "| 时间（min） | 血糖（mmol/L） |\n|-----------|---------------|\n| 0（空腹） | 5.1 |\n| 30 | 7.8 |\n| 60 | 7.2 |\n| 120 | 5.5 |\n| 180 | 5.0 |",
+  "year": null,
+  "module": "module_3",
+  "target": "high_school",
+  "tags": [
+   "module_3",
+   "动物生理学",
+   "血糖调节",
+   "high_school"
+  ],
+  "oldId": "1064345659"
+ },
+ "BQ-homeostasis-0a8e3c1a6768": {
+  "type": "mtf",
+  "question": "健康人进食后血糖浓度变化如下表。下列叙述错误的是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "血糖调节只受激素调节，与神经无关",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "进食后 30 min 血糖升高是由于糖类消化吸收",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "120 min 后血糖恢复正常主要依靠胰高血糖素",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "血糖升高会刺激胰岛 B 细胞分泌胰岛素",
+    "answer": false
+   }
+  ],
+  "explanation": "血糖调节为神经—体液共同调节，下丘脑通过传出神经控制胰岛和肾上腺。",
+  "subject": "动物生理学",
+  "concept": "血糖调节",
+  "difficulty": "basic",
+  "chart": "| 时间（min） | 血糖（mmol/L） |\n|-----------|---------------|\n| 0（空腹） | 5.1 |\n| 30 | 7.8 |\n| 60 | 7.2 |\n| 120 | 5.5 |\n| 180 | 5.0 |",
+  "year": null,
+  "module": "module_3",
+  "target": "high_school",
+  "tags": [
+   "module_3",
+   "动物生理学",
+   "血糖调节",
+   "high_school"
+  ],
+  "oldId": "1064345659"
+ },
+ "BQ-homeostasis-9b6b5ebf9e97": {
+  "type": "mtf",
+  "question": "关于人体免疫的叙述，正确的是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "体液免疫不产生记忆细胞",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "吞噬细胞只参与非特异性免疫",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "第一道防线由皮肤和黏膜构成",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "T 细胞不参与任何免疫反应",
+    "answer": false
+   }
+  ],
+  "explanation": "皮肤黏膜是第一道防线；吞噬细胞既参与非特异性免疫也参与特异性免疫；体液免疫和细胞免疫都能产生记忆细胞。",
+  "subject": "动物生理学",
+  "concept": "免疫调节",
+  "difficulty": "basic",
+  "chart": null,
+  "year": null,
+  "module": "module_3",
+  "target": "high_school",
+  "tags": [
+   "module_3",
+   "动物生理学",
+   "免疫调节",
+   "high_school"
+  ],
+  "oldId": "968956810"
+ },
+ "BQ-homeostasis-0fdebacb5767": {
+  "type": "mtf",
+  "question": "关于抗体的叙述，错误的是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "T 细胞不参与任何免疫反应",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "吞噬细胞只参与非特异性免疫",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "第一道防线由皮肤和黏膜构成",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "体液免疫不产生记忆细胞",
+    "answer": false
+   }
+  ],
+  "explanation": "皮肤黏膜是第一道防线；吞噬细胞既参与非特异性免疫也参与特异性免疫；体液免疫和细胞免疫都能产生记忆细胞。",
+  "subject": "动物生理学",
+  "concept": "免疫调节",
+  "difficulty": "basic",
+  "chart": null,
+  "year": null,
+  "module": "module_3",
+  "target": "high_school",
+  "tags": [
+   "module_3",
+   "动物生理学",
+   "免疫调节",
+   "high_school"
+  ],
+  "oldId": "231153670"
+ },
+ "BQ-homeostasis-7d5c46d73eda": {
+  "type": "mtf",
+  "question": "关于肾小管重吸收与尿液浓缩机制，错误的是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "抗利尿激素（ADH）增加集合管对水的通透性",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "集合管始终对水高度通透",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "髓质高渗梯度由尿素再循环与 NaCl 逆流倍增共同维持",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "髓袢升支粗段主动转运 NaCl 出肾小管",
+    "answer": false
+   }
+  ],
+  "explanation": "集合管对水的通透性受 ADH 调节，并非始终高度通透；缺水时 ADH 升高，尿液高度浓缩。",
+  "subject": "动物生理学",
+  "concept": "肾脏渗透压调节",
+  "difficulty": "league",
+  "chart": null,
+  "year": null,
+  "module": "module_3",
+  "target": "competition",
+  "tags": [
+   "module_3",
+   "动物生理学",
+   "肾脏渗透压调节",
+   "competition"
+  ],
+  "oldId": "3150063"
+ },
+ "BQ-homeostasis-fcb9cf78fe4c": {
+  "type": "mtf",
+  "question": "关于肾小管重吸收与尿液浓缩机制，错误的是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "抗利尿激素（ADH）增加集合管对水的通透性",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "髓袢升支粗段主动转运 NaCl 出肾小管",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "髓质高渗梯度由尿素再循环与 NaCl 逆流倍增共同维持",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "集合管始终对水高度通透",
+    "answer": true
+   }
+  ],
+  "explanation": "集合管对水的通透性受 ADH 调节，并非始终高度通透；缺水时 ADH 升高，尿液高度浓缩。",
+  "subject": "动物生理学",
+  "concept": "肾脏渗透压调节",
+  "difficulty": "league",
+  "chart": null,
+  "year": null,
+  "module": "module_3",
+  "target": "competition",
+  "tags": [
+   "module_3",
+   "动物生理学",
+   "肾脏渗透压调节",
+   "competition"
+  ],
+  "oldId": "3150063"
+ },
+ "BQ-homeostasis-5edd8ad41ef4": {
+  "type": "multi_judge",
+  "question": "将一只健康成年雄性家兔从 25℃室温环境突然转移至 0℃寒冷环境中，短时间内其体温调节机制发生相应变化。",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "下丘脑体温调节中枢兴奋，促甲状腺激素释放激素分泌量增加。",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "皮肤毛细血管舒张，血流量增加以减少体内热量散失。",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "骨骼肌发生不自主战栗，导致细胞呼吸增强，产热量增加。",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "肾上腺素和胰岛素分泌均显著增加，共同促进代谢产热。",
+    "answer": false
+   }
+  ],
+  "explanation": "A 正确：寒冷刺激下，下丘脑分泌 TRH 增加，促进垂体分泌 TSH，进而促进甲状腺激素分泌以增加产热。B 错误：寒冷时皮肤毛细血管应收缩，减少血流量以降低散热，而非舒张。C 正确：骨骼肌战栗是寒冷环境下重要的物理性产热方式，伴随有氧呼吸增强。D 错误：寒冷时肾上腺素分泌增加促进产热，但胰岛素主要降低血糖，此时胰高血糖素和肾上腺素应增加以维持血糖，胰岛素不会显著增加。",
+  "subject": "动物生理学",
+  "concept": "体温调节机制",
+  "difficulty": "basic",
+  "chart": null,
+  "year": null,
+  "module": "module_3",
+  "target": "competition",
+  "tags": [
+   "module_3",
+   "easy"
+  ],
+  "oldId": "1707787034"
+ },
+ "BQ-homeostasis-01a8dedff4e5": {
+  "type": "multi_judge",
+  "question": "将健康小鼠从 25℃环境移至 0℃冷库，其体温维持恒定。关于该过程中小鼠的生理调节与行为变化，下列叙述正确的是？",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "皮肤毛细血管收缩，血流量减少以减少散热。",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "下丘脑体温调节中枢兴奋，产生冷觉并启动调节。",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "甲状腺激素和肾上腺素分泌增加，促进代谢产热。",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "为减少散热，小鼠汗腺分泌活动显著增强。",
+    "answer": false
+   }
+  ],
+  "explanation": "A 正确：寒冷刺激下，皮肤血管收缩减少血流量，从而降低体表温度，减少辐射和对流散热。B 错误：冷觉是在大脑皮层产生的，下丘脑是体温调节中枢，不负责产生感觉。C 正确：寒冷时，甲状腺激素和肾上腺素分泌增多，提高细胞代谢速率，增加产热。D 错误：汗腺分泌增强是炎热环境下的散热机制，寒冷环境下汗腺分泌减少或停止。",
+  "subject": "动物生理学",
+  "concept": "体温调节机制",
+  "difficulty": "basic",
+  "chart": null,
+  "year": null,
+  "module": "module_3",
+  "target": "competition",
+  "tags": [
+   "module_3",
+   "easy"
+  ],
+  "oldId": "2022723398"
+ },
+ "BQ-homeostasis-562d01ccc1ae": {
+  "type": "multi_judge",
+  "question": "将健康小鼠置于 4℃低温环境中一段时间后，检测其甲状腺激素分泌量、皮肤血流量及耗氧量的变化。",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "甲状腺激素分泌量增加，以促进细胞代谢产热。",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "皮肤血流量增加，以加速体内热量向外界散失。",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "耗氧量显著上升，因为机体需氧化分解更多有机物。",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "下丘脑体温调节中枢受到抑制，导致产热减少。",
+    "answer": false
+   }
+  ],
+  "explanation": "A 正确：低温刺激下，甲状腺激素分泌增加，提高细胞代谢速率以增加产热。B 错误：为减少散热，皮肤毛细血管应收缩，血流量减少而非增加。C 正确：代谢增强需要消耗更多氧气来氧化分解有机物释放能量。D 错误：低温会兴奋下丘脑体温调节中枢，通过神经 - 体液调节增加产热、减少散热，而非受抑制。",
+  "subject": "动物生理学",
+  "concept": "体温调节机制",
+  "difficulty": "basic",
+  "chart": null,
+  "year": null,
+  "module": "module_3",
+  "target": "competition",
+  "tags": [
+   "module_3",
+   "easy"
+  ],
+  "oldId": "1493173298"
+ },
+ "BQ-homeostasis-47f33da672b0": {
+  "type": "multi_judge",
+  "question": "将健康成年雄性家兔从 25℃室温突然转移至 0℃寒冷环境，短时间内其体温调节机制发生相应变化。",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "皮肤冷觉感受器兴奋，经传入神经将信号传至下丘脑体温调节中枢。",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "下丘脑直接通过副交感神经促进肾上腺髓质分泌肾上腺素以增加产热。",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "骨骼肌发生不自主战栗，同时皮肤血管收缩以减少散热维持体温。",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "甲状腺激素分泌量瞬间急剧升高，作为快速反应机制主导初期产热。",
+    "answer": false
+   }
+  ],
+  "explanation": "A 正确：寒冷刺激皮肤冷觉感受器，兴奋沿传入神经传至下丘脑体温调节中枢。B 错误：肾上腺髓质受交感神经直接支配，而非副交感神经；且寒冷时交感神经兴奋。C 正确：寒冷时骨骼肌战栗增加产热，皮肤血管收缩减少散热，是主要的快速调节方式。D 错误：甲状腺激素分泌增加需经分级调节，过程较慢，不能作为‘瞬间’快速反应的主导机制，初期主要靠神经调节和肾上腺素。",
+  "subject": "动物生理学",
+  "concept": "体温调节机制",
+  "difficulty": "national",
+  "chart": null,
+  "year": null,
+  "module": "module_3",
+  "target": "competition",
+  "tags": [
+   "module_3",
+   "hard"
+  ],
+  "oldId": "1427009065"
+ },
+ "BQ-homeostasis-bc1bdc2adf81": {
+  "type": "multi_judge",
+  "question": "某人剧烈运动后大量出汗，此时体内发生一系列调节反应以维持稳态。下列关于该过程中神经 - 体液调节的叙述，正确的是？",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "下丘脑渗透压感受器兴奋，抗利尿激素分泌增加",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "副交感神经兴奋导致汗腺分泌增加以散热",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "胰岛 A 细胞分泌胰高血糖素增加以补充血糖",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "肾上腺髓质分泌醛固酮增加以促进钠离子重吸收",
+    "answer": true
+   }
+  ],
+  "explanation": "A 正确：大量出汗导致细胞外液渗透压升高，刺激下丘脑渗透压感受器，促使垂体释放抗利尿激素增加。B 错误：支配汗腺分泌的是交感神经，而非副交感神经。C 正确：剧烈运动消耗大量葡萄糖，血糖有下降趋势，胰高血糖素分泌增加以促进肝糖原分解。D 错误：醛固酮由肾上腺皮质分泌，而非肾上腺髓质；髓质主要分泌肾上腺素。",
+  "subject": "动物生理学",
+  "concept": "水盐平衡与血糖调节",
+  "difficulty": "basic",
+  "chart": null,
+  "year": null,
+  "module": "",
+  "target": "competition",
+  "tags": [
+   "选择性必修一",
+   "easy"
+  ],
+  "oldId": "217830144"
+ },
+ "BQ-homeostasis-bbe2f6aef259": {
+  "type": "multi_judge",
+  "question": "某人剧烈运动后大量出汗，此时其体内血浆渗透压升高，抗利尿激素分泌增加，同时骨骼肌细胞进行无氧呼吸产生乳酸。",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "抗利尿激素促进肾小管和集合管对水的重吸收",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "血浆中乳酸增多会导致血浆 pH 值显著下降",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "下丘脑渗透压感受器兴奋并传至大脑皮层产生渴觉",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "此时副交感神经兴奋导致心跳加快、支气管扩张",
+    "answer": true
+   }
+  ],
+  "explanation": "A 正确：抗利尿激素作用于肾小管和集合管，促进水分重吸收，降低渗透压。B 错误：血浆中存在缓冲物质（如 HCO3-），能中和乳酸，维持 pH 相对稳定，不会显著下降。C 正确：细胞外液渗透压升高刺激下丘脑渗透压感受器，信号传至大脑皮层产生渴觉。D 错误：剧烈运动时交感神经兴奋，使心跳加快、支气管扩张，而非副交感神经。",
+  "subject": "动物生理学",
+  "concept": "内环境稳态调节",
+  "difficulty": "basic",
+  "chart": null,
+  "year": null,
+  "module": "",
+  "target": "competition",
+  "tags": [
+   "选择性必修一",
+   "easy"
+  ],
+  "oldId": "471557564"
+ },
+ "BQ-homeostasis-91a4507f2951": {
+  "type": "multi_judge",
+  "question": "某人剧烈运动后大量出汗，随后饮用适量淡盐水。关于此过程中人体内环境稳态的调节机制，下列叙述正确的是？",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "出汗导致细胞外液渗透压升高，刺激下丘脑渗透压感受器。",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "抗利尿激素分泌增加，促进肾小管和集合管对无机盐的重吸收。",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "饮用淡盐水有助于补充丢失的水分和无机盐，维持渗透压平衡。",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "剧烈运动时产热剧增，主要通过骨骼肌战栗来增加散热以维持体温。",
+    "answer": false
+   }
+  ],
+  "explanation": "A 正确：大量出汗失水多于失盐，导致细胞外液渗透压升高，刺激下丘脑渗透压感受器。B 错误：抗利尿激素的作用是促进肾小管和集合管对水的重吸收，而非无机盐。C 正确：淡盐水成分与细胞外液相近，能有效补充水和无机盐，维持稳态。D 错误：剧烈运动时主要通过汗液蒸发和皮肤毛细血管舒张散热，骨骼肌战栗是寒冷环境下增加产热的方式。",
+  "subject": "动物生理学",
+  "concept": "水盐平衡调节",
+  "difficulty": "basic",
+  "chart": null,
+  "year": null,
+  "module": "",
+  "target": "competition",
+  "tags": [
+   "选择性必修一",
+   "easy"
+  ],
+  "oldId": "1948613613"
+ },
+ "BQ-homeostasis-824beb9823b5": {
+  "type": "multi_judge",
+  "question": "某高纬度湖泊中，一种鱼类在春季水温上升时启动繁殖，其排卵受光周期与温度协同调控。研究发现该鱼视上核神经元对特定波长光照敏感。",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "光信号经视网膜传导至视上核，直接刺激垂体释放催乳素诱导排卵。",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "该鱼繁殖行为体现了非条件反射，其神经中枢位于脊髓而非大脑皮层。",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "若人为延长光照时间，可通过神经 - 体液调节提前启动该鱼的性腺发育。",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "水温升高作为非特异性应激原，通过抑制下丘脑活动从而阻断繁殖行为。",
+    "answer": false
+   }
+  ],
+  "explanation": "A 错误：脊椎动物排卵主要受促性腺激素（GtH）调控，而非催乳素；且光信号需经下丘脑整合。B 错误：复杂的季节性繁殖行为属于本能行为，涉及下丘脑等高级中枢，并非简单的脊髓反射。C 正确：光周期是重要的环境信号，通过神经 - 内分泌系统（HPG 轴）调节性激素分泌，进而调控性腺发育。D 错误：适宜的水温升高是特异性生态因子，作为启动信号促进而非抑制下丘脑 - 垂体 - 性腺轴的活动，只有极端温度才构成应激抑制。",
+  "subject": "动物生理学与生态学",
+  "concept": "神经体液调节与繁殖",
+  "difficulty": "national",
+  "chart": null,
+  "year": null,
+  "module": "module_3",
+  "target": "competition",
+  "tags": [
+   "module_3",
+   "hard"
+  ],
+  "oldId": "1380806392"
+ },
+ "BQ-homeostasis-20954c2f2ad8": {
+  "type": "multi_judge",
+  "question": "研究者在高海拔地区监测某小型哺乳动物种群，发现其基础代谢率显著高于低海拔同类，且体内褐色脂肪组织比例增加。",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "褐色脂肪组织增加主要通过非颤抖性产热维持体温。",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "高代谢率完全由甲状腺激素分泌量增加单独引起。",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "该性状可能是自然选择对低温低氧环境的适应结果。",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "若移至低海拔，该种群代谢率会立即恢复至低海拔水平。",
+    "answer": false
+   }
+  ],
+  "explanation": "A 正确：褐色脂肪组织富含线粒体和解偶联蛋白，通过非颤抖性产热高效维持体温。B 错误：代谢调节是神经 - 体液共同作用，除甲状腺激素外，肾上腺素等也参与，并非单一激素引起。C 正确：高海拔低温低氧，高代谢和褐色脂肪增加有利于生存，是自然选择形成的适应性特征。D 错误：代谢率的改变涉及生理调节甚至遗传适应，移至低海拔后不会‘立即’恢复，需经历驯化或进化过程。",
+  "subject": "动物生理学",
+  "concept": "体温调节与适应",
+  "difficulty": "league",
+  "chart": null,
+  "year": null,
+  "module": "module_3",
+  "target": "competition",
+  "tags": [
+   "module_3",
+   "medium"
+  ],
+  "oldId": "1635153658"
+ },
+ "BQ-homeostasis-e19c211c7ba1": {
+  "type": "multi_judge",
+  "question": "研究者对迁徙鸟类注射放射性标记的促甲状腺激素释放激素（TRH），并监测其迁徙前的生理变化及脂肪沉积情况。",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "TRH 直接作用于脂肪细胞促进脂质合成以储备迁徙能量。",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "TRH 刺激垂体前叶分泌促甲状腺激素，进而调节基础代谢率。",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "若切除垂体，注射外源性甲状腺激素可部分恢复其代谢准备。",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "迁徙行为完全由遗传决定，激素水平变化仅是行为的被动结果。",
+    "answer": false
+   }
+  ],
+  "explanation": "A 错：TRH 作用于垂体，不直接作用于脂肪细胞，脂代谢受下游甲状腺激素等调节。B 对：TRH 促进垂体分泌 TSH，TSH 刺激甲状腺分泌甲状腺激素，提高代谢率。C 对：切除垂体阻断了 TSH 来源，但直接补充甲状腺激素可绕过垂体直接作用于靶器官恢复代谢。D 错：迁徙是遗传与环境互作的结果，激素不仅是结果，更是启动和调节迁徙生理准备（如脂肪沉积、肌肉肥大）的关键主动因素。",
+  "subject": "动物生理学",
+  "concept": "激素分级调节与迁徙",
+  "difficulty": "national",
+  "chart": null,
+  "year": null,
+  "module": "module_3",
+  "target": "competition",
+  "tags": [
+   "module_3",
+   "hard"
+  ],
+  "oldId": "144721510"
+ },
+ "BQ-homeostasis-2316f9edcf96": {
+  "type": "multi_judge",
+  "question": "科学家追踪某洄游性鲑鱼从海洋返回淡水河流产卵的过程，发现其血浆渗透压显著下降，尿量大幅增加且尿液中几乎不含盐分。",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "该鱼在淡水中通过主动运输从外界吸收盐分以维持体内平衡。",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "该鱼肾脏肾小球滤过率降低，以减少水分排出从而防止脱水。",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "该鱼鳃部氯细胞的功能由排盐转变为吸盐，适应低渗环境。",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "该鱼在淡水中主要通过大量饮水来补充因渗透作用流失的水分。",
+    "answer": false
+   }
+  ],
+  "explanation": "A 正确：淡水鱼体液渗透压高于环境，水分渗入盐分流失，需通过鳃主动吸收盐分。B 错误：淡水鱼为排出多余水分，肾小球滤过率应升高而非降低，从而产生大量稀尿。C 正确：洄游鱼类从海入淡，鳃部氯细胞功能逆转，由排盐改为吸盐以维持离子平衡。D 错误：淡水鱼水分是被动渗入体内的，不需要也不应该主动大量饮水，否则会导致水中毒。",
+  "subject": "动物生理学",
+  "concept": "渗透压调节机制",
+  "difficulty": "league",
+  "chart": null,
+  "year": null,
+  "module": "module_3",
+  "target": "competition",
+  "tags": [
+   "module_3",
+   "medium"
+  ],
+  "oldId": "851070396"
+ },
+ "BQ-homeostasis-75caad5feabc": {
+  "type": "multi_judge",
+  "question": "给健康志愿者静脉注射适量高渗葡萄糖溶液，随后检测其血浆渗透压、胰岛素含量、尿量及下丘脑相关活动变化。",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "血浆渗透压升高，刺激下丘脑渗透压感受器产生兴奋。",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "胰岛 B 细胞分泌胰岛素增加，促进肾小管对葡萄糖的重吸收。",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "抗利尿激素分泌增加，促进肾小管和集合管对水的重吸收。",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "大脑皮层产生渴觉属于非条件反射，由下丘脑直接控制完成。",
+    "answer": false
+   }
+  ],
+  "explanation": "A 正确：注射高渗溶液使血浆渗透压升高，刺激下丘脑渗透压感受器。B 错误：胰岛素的作用是促进组织细胞摄取、利用和储存葡萄糖，而非直接促进肾小管重吸收葡萄糖。C 正确：血浆渗透压升高会促使垂体释放抗利尿激素，增加水的重吸收以维持水平衡。D 错误：渴觉产生于大脑皮层，但感觉的产生不属于反射（反射需经过完整反射弧），且非条件反射通常指生来就有的反应，此处描述概念混淆。",
+  "subject": "动物生理学",
+  "concept": "水盐平衡与血糖调节",
+  "difficulty": "league",
+  "chart": null,
+  "year": null,
+  "module": "",
+  "target": "competition",
+  "tags": [
+   "选择性必修一",
+   "medium"
+  ],
+  "oldId": "332798808"
+ },
+ "BQ-homeostasis-06b1117fb505": {
+  "type": "mtf",
+  "question": "血糖调节中，能降低血糖的激素是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "激素可以直接参与细胞代谢",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "激素由内分泌腺分泌后通过导管运输",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "激素调节具有微量高效、通过体液运输、作用于靶器官靶细胞的特点",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "所有激素都是蛋白质",
+    "answer": false
+   }
+  ],
+  "explanation": "内分泌腺无导管，激素直接进入血液；激素只起调节作用，不参与细胞代谢；激素种类包括固醇（如性激素）、氨基酸衍生物（甲状腺激素）、蛋白质类（胰岛素）等。",
+  "subject": "动物生理学",
+  "concept": "体液调节",
+  "difficulty": "basic",
+  "chart": null,
+  "year": null,
+  "module": "module_3",
+  "target": "high_school",
+  "tags": [
+   "module_3",
+   "动物生理学",
+   "体液调节",
+   "high_school"
+  ],
+  "oldId": "1843529961"
+ },
+ "BQ-homeostasis-9686994bc1ab": {
+  "type": "mtf",
+  "question": "关于体温调节的叙述，错误的是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "激素都是蛋白质类物质",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "激素通过体液运输，作用于靶器官和靶细胞",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "激素直接参与细胞代谢",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "激素调节没有负反馈机制",
+    "answer": false
+   }
+  ],
+  "explanation": "激素是信息分子，通过体液运输后作用于靶器官、靶细胞，不直接参与细胞代谢；激素调节普遍存在负反馈。",
+  "subject": "动物生理学",
+  "concept": "体液调节与稳态",
+  "difficulty": "basic",
+  "chart": null,
+  "year": null,
+  "module": "module_4",
+  "target": "high_school",
+  "tags": [
+   "module_4",
+   "动物生理学",
+   "体液调节与稳态",
+   "high_school"
+  ],
+  "oldId": "1644854652"
+ },
+ "BQ-homeostasis-9516cbc56cab": {
+  "type": "mtf",
+  "question": "关于内环境稳态的叙述，正确的是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "内环境稳态指细胞内液的理化性质相对稳定",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "内环境稳态是神经-体液-免疫调节的结果",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "内环境稳态一旦被破坏，机体一定会生病",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "内环境稳态与外界环境变化无关",
+    "answer": false
+   }
+  ],
+  "explanation": "内环境指细胞外液（血浆、组织液、淋巴）；稳态是在神经-体液-免疫调节网络下维持的相对稳定；剧烈破坏会引起疾病，但程度较轻时机体仍能代偿。",
+  "subject": "动物生理学",
+  "concept": "内环境稳态",
+  "difficulty": "basic",
+  "chart": null,
+  "year": null,
+  "module": "module_4",
+  "target": "high_school",
+  "tags": [
+   "module_4",
+   "动物生理学",
+   "内环境稳态",
+   "高考"
+  ],
+  "oldId": "449018484"
+ },
+ "BQ-homeostasis-f522481914b7": {
+  "type": "mtf",
+  "question": "关于内环境稳态的叙述，正确的是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "激素都是蛋白质类物质",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "激素通过体液运输，作用于靶器官和靶细胞",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "激素直接参与细胞代谢",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "激素调节没有负反馈机制",
+    "answer": false
+   }
+  ],
+  "explanation": "激素是信息分子，通过体液运输后作用于靶器官、靶细胞，不直接参与细胞代谢；激素调节普遍存在负反馈。",
+  "subject": "动物生理学",
+  "concept": "体液调节与稳态",
+  "difficulty": "basic",
+  "chart": null,
+  "year": null,
+  "module": "module_4",
+  "target": "high_school",
+  "tags": [
+   "module_4",
+   "动物生理学",
+   "体液调节与稳态",
+   "high_school"
+  ],
+  "oldId": "138901397"
+ },
+ "BQ-homeostasis-84dc57d400f2": {
+  "type": "mtf",
+  "question": "关于激素调节的叙述，正确的是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "激素都是蛋白质",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "激素作用具有特异性，只能作用于靶器官和靶细胞",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "激素可以直接参与细胞内的代谢活动",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "激素调节不存在负反馈调节机制",
+    "answer": false
+   }
+  ],
+  "explanation": "激素包括蛋白质/多肽、类固醇、氨基酸衍生物等；激素通过与受体结合传递信息，不直接参与代谢；负反馈是激素调节的重要机制。",
+  "subject": "动物生理学",
+  "concept": "体液调节",
+  "difficulty": "basic",
+  "chart": null,
+  "year": null,
+  "module": "module_4",
+  "target": "high_school",
+  "tags": [
+   "module_4",
+   "动物生理学",
+   "体液调节",
+   "高考"
+  ],
+  "oldId": "1437251681"
+ },
+ "BQ-homeostasis-7a92f7c47712": {
+  "type": "mtf",
+  "question": "关于激素调节的叙述，正确的是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "激素都是蛋白质类物质",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "激素通过体液运输，作用于靶器官和靶细胞",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "激素直接参与细胞代谢",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "激素调节没有负反馈机制",
+    "answer": false
+   }
+  ],
+  "explanation": "激素是信息分子，通过体液运输后作用于靶器官、靶细胞，不直接参与细胞代谢；激素调节普遍存在负反馈。",
+  "subject": "动物生理学",
+  "concept": "体液调节与稳态",
+  "difficulty": "basic",
+  "chart": null,
+  "year": null,
+  "module": "module_4",
+  "target": "high_school",
+  "tags": [
+   "module_4",
+   "动物生理学",
+   "体液调节与稳态",
+   "high_school"
+  ],
+  "oldId": "615657795"
+ },
+ "BQ-homeostasis-fdd9e3ecef0e": {
+  "type": "single",
+  "question": "给禁食大鼠注射胰岛素后，血糖30分钟内从5.0 mM降至2.5 mM，骨骼肌糖原增加40%，肝脏糖原增加60%。同时注射肾上腺素（β受体激动剂）后，血糖仅降至4.2 mM，骨骼肌糖原增加10%，肝脏糖原下降20%。推断肾上腺素对糖代谢的调控机制：",
+  "options": [
+   "肾上腺素仅促进肝脏糖原分解，不影响骨骼肌糖原合成",
+   "肾上腺素同时促进肝脏糖原分解和抑制骨骼肌糖原合成，两者共同对抗胰岛素的降血糖效应",
+   "肾上腺素仅抑制胰岛素的分泌",
+   "肾上腺素促进外周组织对葡萄糖的利用"
+  ],
+  "answer": 1,
+  "explanation": "单独胰岛素：血糖大幅下降，骨骼肌和肝脏糖原均增加（胰岛素促进葡萄糖摄取和糖原合成）。胰岛素+肾上腺素：血糖下降幅度减小，说明肾上腺素对抗了胰岛素的降血糖效应。肝脏糖原下降20%（vs单独胰岛素时增加60%），说明肾上腺素强烈促进肝糖原分解（β受体→cAMP→PKA→糖原磷酸化酶）。骨骼肌糖原仅增加10%（vs40%），说明肾上腺素也抑制了骨骼肌糖原合成（PKA磷酸化抑制糖原合酶）。选项1不完整，选项3不正确（已注射外源胰岛素），选项4与血糖下降幅度减小矛盾。",
+  "subject": "动物生理学",
+  "concept": "血糖调控的激素拮抗",
+  "difficulty": 4,
+  "tags": [
+   "逻辑推理",
+   "实验分析",
+   "内分泌"
+  ],
+  "module": "module_3",
+  "category": "logic",
+  "oldId": "344538941",
+  "subQuestions": [],
+  "chart": null,
+  "year": null
+ },
+ "BQ-homeostasis-54e671549551": {
+  "stem": "长链非编码RNA (lncRNA) 可通过多种机制调节基\n因表达，并在多种生物学过程中发挥重要作用。对以下关于长链非编码RNA (lncRNA) 的陈述进行正误判断：",
+  "options": {
+   "A": "lncRNA 在细胞中主要作为信使RNA 发挥作用，指导蛋白质合成",
+   "B": "lncRNA 可以结合特定的蛋白质分子，这是其发挥调控作用的一种方式",
+   "C": "lncRNA 在细胞中的分布位置（如细胞核或细胞质）通常与其具体功能有",
+   "D": "所有的lncRNA 都通过与DNA 序列互补配对来抑制基因转录"
+  },
+  "answer": {
+   "A": true,
+   "B": false,
+   "C": false,
+   "D": false
+  },
+  "analysis": "正确答案：A。详细解析请通过 AI 导师获取（在 AI 对话中粘贴本题题干即可）。",
+  "knowledge": [
+   "module_1",
+   "分子生物学"
+  ],
+  "module": "module_1",
+  "difficulty": "league",
+  "target": "competition",
+  "subject": "分子生物学",
+  "concept": "分子生物学",
+  "tags": [
+   "module_1",
+   "分子生物学",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2025/art_b153fd076f3f4fe282acfc333c4d4ab6.html",
+   "2025"
+  ],
+  "weight": 1,
+  "fb_good": 0,
+  "fb_bad": 0,
+  "created_at": 1782028596.2316976,
+  "source": "https://www.czs.org.cn/swjs/lsstxz/art/2025/art_b153fd076f3f4fe282acfc333c4d4ab6.html",
+  "year": 2025,
+  "_analysis_sparse": true,
+  "_review_reason": "解析为 AI 引导提示，待人工补充详细解析",
+  "type": "multi_judge",
+  "question": "长链非编码RNA (lncRNA) 可通过多种机制调节基\n因表达，并在多种生物学过程中发挥重要作用。对以下关于长链非编码RNA (lncRNA) 的陈述进行正误判断：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "lncRNA 在细胞中主要作为信使RNA 发挥作用，指导蛋白质合成",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "lncRNA 可以结合特定的蛋白质分子，这是其发挥调控作用的一种方式",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "lncRNA 在细胞中的分布位置（如细胞核或细胞质）通常与其具体功能有",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "所有的lncRNA 都通过与DNA 序列互补配对来抑制基因转录",
+    "answer": false
+   }
+  ],
+  "explanation": "正确答案：A。详细解析请通过 AI 导师获取（在 AI 对话中粘贴本题题干即可）。",
+  "chart": null,
+  "oldId": "crawled_1782028596231_8813"
+ },
+ "BQ-homeostasis-28dd10e27adf": {
+  "type": "mtf",
+  "question": "【数据分析】在一个浅水湖泊中,大型水生植物覆盖率与叶绿素a浓度的回归关系为log(chl-a)=2.1-0.8×log(coverage),R²=0.72。判断推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "大型植物可能通过与浮游植物竞争营养和光来抑制其生长",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "大型水生植物覆盖率增加1%时叶绿素a浓度降低约0.8%",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "该关系说明大型水生植物和浮游植物可以无限共存",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "这种负相关在稳态浅水湖泊理论中是被预测的——植物占优的清水态vs浮游植物占优的浊水态",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:log覆盖率和log chl-a呈负相关(R²=0.72),即在植物覆盖率高的地方浮游植物少。稳态浅水湖泊理论预测两种替代稳态——清水态(大型植物主导)或浊水态(浮游植物主导)。",
+  "module": 3,
+  "subject": "生态学",
+  "concept": "湖泊稳态",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1233633926",
+  "tags": []
+ },
+ "BQ-homeostasis-b9458238df03": {
+  "type": "mtf",
+  "question": "【数据分析】在一个浅水湖泊中,大型水生植物覆盖率与叶绿素a浓度的回归关系为log(chl-a)=2.1-0.8×log(coverage),R²=0.72。判断推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "大型植物可能通过与浮游植物竞争营养和光来抑制其生长",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "大型水生植物覆盖率增加1%时叶绿素a浓度降低约0.8%",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "这种负相关在稳态浅水湖泊理论中是被预测的——植物占优的清水态vs浮游植物占优的浊水态",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "该关系说明大型水生植物和浮游植物可以无限共存",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:log覆盖率和log chl-a呈负相关(R²=0.72),即在植物覆盖率高的地方浮游植物少。稳态浅水湖泊理论预测两种替代稳态——清水态(大型植物主导)或浊水态(浮游植物主导)。",
+  "module": 3,
+  "subject": "生态学",
+  "concept": "湖泊稳态",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1233633926",
+  "tags": []
+ },
+ "BQ-homeostasis-d5f61e03c7bf": {
+  "type": "mtf",
+  "question": "【数据分析】在一个浅水湖泊中,大型水生植物覆盖率与叶绿素a浓度的回归关系为log(chl-a)=2.1-0.8×log(coverage),R²=0.72。判断推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "大型植物可能通过与浮游植物竞争营养和光来抑制其生长",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "该关系说明大型水生植物和浮游植物可以无限共存",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "大型水生植物覆盖率增加1%时叶绿素a浓度降低约0.8%",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "这种负相关在稳态浅水湖泊理论中是被预测的——植物占优的清水态vs浮游植物占优的浊水态",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:log覆盖率和log chl-a呈负相关(R²=0.72),即在植物覆盖率高的地方浮游植物少。稳态浅水湖泊理论预测两种替代稳态——清水态(大型植物主导)或浊水态(浮游植物主导)。",
+  "module": 3,
+  "subject": "生态学",
+  "concept": "湖泊稳态",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1233633926",
+  "tags": []
+ },
+ "BQ-homeostasis-df9524726f5c": {
+  "type": "mtf",
+  "question": "【数据分析】在一个浅水湖泊中,大型水生植物覆盖率与叶绿素a浓度的回归关系为log(chl-a)=2.1-0.8×log(coverage),R²=0.72。判断推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "大型植物可能通过与浮游植物竞争营养和光来抑制其生长",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "该关系说明大型水生植物和浮游植物可以无限共存",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "这种负相关在稳态浅水湖泊理论中是被预测的——植物占优的清水态vs浮游植物占优的浊水态",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "大型水生植物覆盖率增加1%时叶绿素a浓度降低约0.8%",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:log覆盖率和log chl-a呈负相关(R²=0.72),即在植物覆盖率高的地方浮游植物少。稳态浅水湖泊理论预测两种替代稳态——清水态(大型植物主导)或浊水态(浮游植物主导)。",
+  "module": 3,
+  "subject": "生态学",
+  "concept": "湖泊稳态",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1233633926",
+  "tags": []
+ },
+ "BQ-homeostasis-b1a7a537e73f": {
+  "type": "mtf",
+  "question": "【数据分析】在一个浅水湖泊中,大型水生植物覆盖率与叶绿素a浓度的回归关系为log(chl-a)=2.1-0.8×log(coverage),R²=0.72。判断推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "大型植物可能通过与浮游植物竞争营养和光来抑制其生长",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "这种负相关在稳态浅水湖泊理论中是被预测的——植物占优的清水态vs浮游植物占优的浊水态",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "大型水生植物覆盖率增加1%时叶绿素a浓度降低约0.8%",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "该关系说明大型水生植物和浮游植物可以无限共存",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:log覆盖率和log chl-a呈负相关(R²=0.72),即在植物覆盖率高的地方浮游植物少。稳态浅水湖泊理论预测两种替代稳态——清水态(大型植物主导)或浊水态(浮游植物主导)。",
+  "module": 3,
+  "subject": "生态学",
+  "concept": "湖泊稳态",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1233633926",
+  "tags": []
+ },
+ "BQ-homeostasis-1ed8a4c22d94": {
+  "type": "mtf",
+  "question": "【数据分析】在一个浅水湖泊中,大型水生植物覆盖率与叶绿素a浓度的回归关系为log(chl-a)=2.1-0.8×log(coverage),R²=0.72。判断推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "大型植物可能通过与浮游植物竞争营养和光来抑制其生长",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "这种负相关在稳态浅水湖泊理论中是被预测的——植物占优的清水态vs浮游植物占优的浊水态",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "该关系说明大型水生植物和浮游植物可以无限共存",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "大型水生植物覆盖率增加1%时叶绿素a浓度降低约0.8%",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:log覆盖率和log chl-a呈负相关(R²=0.72),即在植物覆盖率高的地方浮游植物少。稳态浅水湖泊理论预测两种替代稳态——清水态(大型植物主导)或浊水态(浮游植物主导)。",
+  "module": 3,
+  "subject": "生态学",
+  "concept": "湖泊稳态",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1233633926",
+  "tags": []
+ },
+ "BQ-homeostasis-8acf96c38ab9": {
+  "type": "mtf",
+  "question": "【数据分析】在一个浅水湖泊中,大型水生植物覆盖率与叶绿素a浓度的回归关系为log(chl-a)=2.1-0.8×log(coverage),R²=0.72。判断推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "大型水生植物覆盖率增加1%时叶绿素a浓度降低约0.8%",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "大型植物可能通过与浮游植物竞争营养和光来抑制其生长",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "该关系说明大型水生植物和浮游植物可以无限共存",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "这种负相关在稳态浅水湖泊理论中是被预测的——植物占优的清水态vs浮游植物占优的浊水态",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:log覆盖率和log chl-a呈负相关(R²=0.72),即在植物覆盖率高的地方浮游植物少。稳态浅水湖泊理论预测两种替代稳态——清水态(大型植物主导)或浊水态(浮游植物主导)。",
+  "module": 3,
+  "subject": "生态学",
+  "concept": "湖泊稳态",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1233633926",
+  "tags": []
+ },
+ "BQ-homeostasis-ee9c421b5e32": {
+  "type": "mtf",
+  "question": "【数据分析】在一个浅水湖泊中,大型水生植物覆盖率与叶绿素a浓度的回归关系为log(chl-a)=2.1-0.8×log(coverage),R²=0.72。判断推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "大型水生植物覆盖率增加1%时叶绿素a浓度降低约0.8%",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "大型植物可能通过与浮游植物竞争营养和光来抑制其生长",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "这种负相关在稳态浅水湖泊理论中是被预测的——植物占优的清水态vs浮游植物占优的浊水态",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "该关系说明大型水生植物和浮游植物可以无限共存",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:log覆盖率和log chl-a呈负相关(R²=0.72),即在植物覆盖率高的地方浮游植物少。稳态浅水湖泊理论预测两种替代稳态——清水态(大型植物主导)或浊水态(浮游植物主导)。",
+  "module": 3,
+  "subject": "生态学",
+  "concept": "湖泊稳态",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1233633926",
+  "tags": []
+ },
+ "BQ-homeostasis-307a03fe02f3": {
+  "type": "mtf",
+  "question": "【数据分析】在一个浅水湖泊中,大型水生植物覆盖率与叶绿素a浓度的回归关系为log(chl-a)=2.1-0.8×log(coverage),R²=0.72。判断推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "大型水生植物覆盖率增加1%时叶绿素a浓度降低约0.8%",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "该关系说明大型水生植物和浮游植物可以无限共存",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "大型植物可能通过与浮游植物竞争营养和光来抑制其生长",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "这种负相关在稳态浅水湖泊理论中是被预测的——植物占优的清水态vs浮游植物占优的浊水态",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:log覆盖率和log chl-a呈负相关(R²=0.72),即在植物覆盖率高的地方浮游植物少。稳态浅水湖泊理论预测两种替代稳态——清水态(大型植物主导)或浊水态(浮游植物主导)。",
+  "module": 3,
+  "subject": "生态学",
+  "concept": "湖泊稳态",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1233633926",
+  "tags": []
+ },
+ "BQ-homeostasis-3e704cacd6a9": {
+  "type": "mtf",
+  "question": "【数据分析】在一个浅水湖泊中,大型水生植物覆盖率与叶绿素a浓度的回归关系为log(chl-a)=2.1-0.8×log(coverage),R²=0.72。判断推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "大型水生植物覆盖率增加1%时叶绿素a浓度降低约0.8%",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "该关系说明大型水生植物和浮游植物可以无限共存",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "这种负相关在稳态浅水湖泊理论中是被预测的——植物占优的清水态vs浮游植物占优的浊水态",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "大型植物可能通过与浮游植物竞争营养和光来抑制其生长",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:log覆盖率和log chl-a呈负相关(R²=0.72),即在植物覆盖率高的地方浮游植物少。稳态浅水湖泊理论预测两种替代稳态——清水态(大型植物主导)或浊水态(浮游植物主导)。",
+  "module": 3,
+  "subject": "生态学",
+  "concept": "湖泊稳态",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1233633926",
+  "tags": []
+ },
+ "BQ-homeostasis-61d705c618cb": {
+  "type": "mtf",
+  "question": "【数据分析】在一个浅水湖泊中,大型水生植物覆盖率与叶绿素a浓度的回归关系为log(chl-a)=2.1-0.8×log(coverage),R²=0.72。判断推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "大型水生植物覆盖率增加1%时叶绿素a浓度降低约0.8%",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "这种负相关在稳态浅水湖泊理论中是被预测的——植物占优的清水态vs浮游植物占优的浊水态",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "大型植物可能通过与浮游植物竞争营养和光来抑制其生长",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "该关系说明大型水生植物和浮游植物可以无限共存",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:log覆盖率和log chl-a呈负相关(R²=0.72),即在植物覆盖率高的地方浮游植物少。稳态浅水湖泊理论预测两种替代稳态——清水态(大型植物主导)或浊水态(浮游植物主导)。",
+  "module": 3,
+  "subject": "生态学",
+  "concept": "湖泊稳态",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1233633926",
+  "tags": []
+ },
+ "BQ-homeostasis-8d3eead753c0": {
+  "type": "mtf",
+  "question": "【数据分析】在一个浅水湖泊中,大型水生植物覆盖率与叶绿素a浓度的回归关系为log(chl-a)=2.1-0.8×log(coverage),R²=0.72。判断推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "大型水生植物覆盖率增加1%时叶绿素a浓度降低约0.8%",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "这种负相关在稳态浅水湖泊理论中是被预测的——植物占优的清水态vs浮游植物占优的浊水态",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "该关系说明大型水生植物和浮游植物可以无限共存",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "大型植物可能通过与浮游植物竞争营养和光来抑制其生长",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:log覆盖率和log chl-a呈负相关(R²=0.72),即在植物覆盖率高的地方浮游植物少。稳态浅水湖泊理论预测两种替代稳态——清水态(大型植物主导)或浊水态(浮游植物主导)。",
+  "module": 3,
+  "subject": "生态学",
+  "concept": "湖泊稳态",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1233633926",
+  "tags": []
+ },
+ "BQ-homeostasis-cd8ae2248497": {
+  "type": "mtf",
+  "question": "【数据分析】在一个浅水湖泊中,大型水生植物覆盖率与叶绿素a浓度的回归关系为log(chl-a)=2.1-0.8×log(coverage),R²=0.72。判断推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "该关系说明大型水生植物和浮游植物可以无限共存",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "大型植物可能通过与浮游植物竞争营养和光来抑制其生长",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "大型水生植物覆盖率增加1%时叶绿素a浓度降低约0.8%",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "这种负相关在稳态浅水湖泊理论中是被预测的——植物占优的清水态vs浮游植物占优的浊水态",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:log覆盖率和log chl-a呈负相关(R²=0.72),即在植物覆盖率高的地方浮游植物少。稳态浅水湖泊理论预测两种替代稳态——清水态(大型植物主导)或浊水态(浮游植物主导)。",
+  "module": 3,
+  "subject": "生态学",
+  "concept": "湖泊稳态",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1233633926",
+  "tags": []
+ },
+ "BQ-homeostasis-6e41bff9d3c1": {
+  "type": "mtf",
+  "question": "【数据分析】在一个浅水湖泊中,大型水生植物覆盖率与叶绿素a浓度的回归关系为log(chl-a)=2.1-0.8×log(coverage),R²=0.72。判断推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "该关系说明大型水生植物和浮游植物可以无限共存",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "大型植物可能通过与浮游植物竞争营养和光来抑制其生长",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "这种负相关在稳态浅水湖泊理论中是被预测的——植物占优的清水态vs浮游植物占优的浊水态",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "大型水生植物覆盖率增加1%时叶绿素a浓度降低约0.8%",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:log覆盖率和log chl-a呈负相关(R²=0.72),即在植物覆盖率高的地方浮游植物少。稳态浅水湖泊理论预测两种替代稳态——清水态(大型植物主导)或浊水态(浮游植物主导)。",
+  "module": 3,
+  "subject": "生态学",
+  "concept": "湖泊稳态",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1233633926",
+  "tags": []
+ },
+ "BQ-homeostasis-d9a44d6ce6fa": {
+  "type": "mtf",
+  "question": "【数据分析】在一个浅水湖泊中,大型水生植物覆盖率与叶绿素a浓度的回归关系为log(chl-a)=2.1-0.8×log(coverage),R²=0.72。判断推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "该关系说明大型水生植物和浮游植物可以无限共存",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "大型水生植物覆盖率增加1%时叶绿素a浓度降低约0.8%",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "大型植物可能通过与浮游植物竞争营养和光来抑制其生长",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "这种负相关在稳态浅水湖泊理论中是被预测的——植物占优的清水态vs浮游植物占优的浊水态",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:log覆盖率和log chl-a呈负相关(R²=0.72),即在植物覆盖率高的地方浮游植物少。稳态浅水湖泊理论预测两种替代稳态——清水态(大型植物主导)或浊水态(浮游植物主导)。",
+  "module": 3,
+  "subject": "生态学",
+  "concept": "湖泊稳态",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1233633926",
+  "tags": []
+ },
+ "BQ-homeostasis-2823d67e1984": {
+  "type": "mtf",
+  "question": "【数据分析】在一个浅水湖泊中,大型水生植物覆盖率与叶绿素a浓度的回归关系为log(chl-a)=2.1-0.8×log(coverage),R²=0.72。判断推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "该关系说明大型水生植物和浮游植物可以无限共存",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "大型水生植物覆盖率增加1%时叶绿素a浓度降低约0.8%",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "这种负相关在稳态浅水湖泊理论中是被预测的——植物占优的清水态vs浮游植物占优的浊水态",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "大型植物可能通过与浮游植物竞争营养和光来抑制其生长",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:log覆盖率和log chl-a呈负相关(R²=0.72),即在植物覆盖率高的地方浮游植物少。稳态浅水湖泊理论预测两种替代稳态——清水态(大型植物主导)或浊水态(浮游植物主导)。",
+  "module": 3,
+  "subject": "生态学",
+  "concept": "湖泊稳态",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1233633926",
+  "tags": []
+ },
+ "BQ-homeostasis-35dd45508dfb": {
+  "type": "mtf",
+  "question": "【数据分析】在一个浅水湖泊中,大型水生植物覆盖率与叶绿素a浓度的回归关系为log(chl-a)=2.1-0.8×log(coverage),R²=0.72。判断推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "该关系说明大型水生植物和浮游植物可以无限共存",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "这种负相关在稳态浅水湖泊理论中是被预测的——植物占优的清水态vs浮游植物占优的浊水态",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "大型植物可能通过与浮游植物竞争营养和光来抑制其生长",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "大型水生植物覆盖率增加1%时叶绿素a浓度降低约0.8%",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:log覆盖率和log chl-a呈负相关(R²=0.72),即在植物覆盖率高的地方浮游植物少。稳态浅水湖泊理论预测两种替代稳态——清水态(大型植物主导)或浊水态(浮游植物主导)。",
+  "module": 3,
+  "subject": "生态学",
+  "concept": "湖泊稳态",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1233633926",
+  "tags": []
+ },
+ "BQ-homeostasis-69f6983ac2ed": {
+  "type": "mtf",
+  "question": "【数据分析】在一个浅水湖泊中,大型水生植物覆盖率与叶绿素a浓度的回归关系为log(chl-a)=2.1-0.8×log(coverage),R²=0.72。判断推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "该关系说明大型水生植物和浮游植物可以无限共存",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "这种负相关在稳态浅水湖泊理论中是被预测的——植物占优的清水态vs浮游植物占优的浊水态",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "大型水生植物覆盖率增加1%时叶绿素a浓度降低约0.8%",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "大型植物可能通过与浮游植物竞争营养和光来抑制其生长",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:log覆盖率和log chl-a呈负相关(R²=0.72),即在植物覆盖率高的地方浮游植物少。稳态浅水湖泊理论预测两种替代稳态——清水态(大型植物主导)或浊水态(浮游植物主导)。",
+  "module": 3,
+  "subject": "生态学",
+  "concept": "湖泊稳态",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1233633926",
+  "tags": []
+ },
+ "BQ-homeostasis-295b3df9e103": {
+  "type": "mtf",
+  "question": "【数据分析】在一个浅水湖泊中,大型水生植物覆盖率与叶绿素a浓度的回归关系为log(chl-a)=2.1-0.8×log(coverage),R²=0.72。判断推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "这种负相关在稳态浅水湖泊理论中是被预测的——植物占优的清水态vs浮游植物占优的浊水态",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "大型植物可能通过与浮游植物竞争营养和光来抑制其生长",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "大型水生植物覆盖率增加1%时叶绿素a浓度降低约0.8%",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "该关系说明大型水生植物和浮游植物可以无限共存",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:log覆盖率和log chl-a呈负相关(R²=0.72),即在植物覆盖率高的地方浮游植物少。稳态浅水湖泊理论预测两种替代稳态——清水态(大型植物主导)或浊水态(浮游植物主导)。",
+  "module": 3,
+  "subject": "生态学",
+  "concept": "湖泊稳态",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1233633926",
+  "tags": []
+ },
+ "BQ-homeostasis-2b91c182e733": {
+  "type": "mtf",
+  "question": "【数据分析】在一个浅水湖泊中,大型水生植物覆盖率与叶绿素a浓度的回归关系为log(chl-a)=2.1-0.8×log(coverage),R²=0.72。判断推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "这种负相关在稳态浅水湖泊理论中是被预测的——植物占优的清水态vs浮游植物占优的浊水态",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "大型植物可能通过与浮游植物竞争营养和光来抑制其生长",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "该关系说明大型水生植物和浮游植物可以无限共存",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "大型水生植物覆盖率增加1%时叶绿素a浓度降低约0.8%",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:log覆盖率和log chl-a呈负相关(R²=0.72),即在植物覆盖率高的地方浮游植物少。稳态浅水湖泊理论预测两种替代稳态——清水态(大型植物主导)或浊水态(浮游植物主导)。",
+  "module": 3,
+  "subject": "生态学",
+  "concept": "湖泊稳态",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1233633926",
+  "tags": []
+ },
+ "BQ-homeostasis-f829560ae949": {
+  "type": "mtf",
+  "question": "【数据分析】在一个浅水湖泊中,大型水生植物覆盖率与叶绿素a浓度的回归关系为log(chl-a)=2.1-0.8×log(coverage),R²=0.72。判断推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "这种负相关在稳态浅水湖泊理论中是被预测的——植物占优的清水态vs浮游植物占优的浊水态",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "大型水生植物覆盖率增加1%时叶绿素a浓度降低约0.8%",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "大型植物可能通过与浮游植物竞争营养和光来抑制其生长",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "该关系说明大型水生植物和浮游植物可以无限共存",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:log覆盖率和log chl-a呈负相关(R²=0.72),即在植物覆盖率高的地方浮游植物少。稳态浅水湖泊理论预测两种替代稳态——清水态(大型植物主导)或浊水态(浮游植物主导)。",
+  "module": 3,
+  "subject": "生态学",
+  "concept": "湖泊稳态",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1233633926",
+  "tags": []
+ },
+ "BQ-homeostasis-751452fb9c2f": {
+  "type": "mtf",
+  "question": "【数据分析】在一个浅水湖泊中,大型水生植物覆盖率与叶绿素a浓度的回归关系为log(chl-a)=2.1-0.8×log(coverage),R²=0.72。判断推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "这种负相关在稳态浅水湖泊理论中是被预测的——植物占优的清水态vs浮游植物占优的浊水态",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "大型水生植物覆盖率增加1%时叶绿素a浓度降低约0.8%",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "该关系说明大型水生植物和浮游植物可以无限共存",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "大型植物可能通过与浮游植物竞争营养和光来抑制其生长",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:log覆盖率和log chl-a呈负相关(R²=0.72),即在植物覆盖率高的地方浮游植物少。稳态浅水湖泊理论预测两种替代稳态——清水态(大型植物主导)或浊水态(浮游植物主导)。",
+  "module": 3,
+  "subject": "生态学",
+  "concept": "湖泊稳态",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1233633926",
+  "tags": []
+ },
+ "BQ-homeostasis-8cd61cf435d1": {
+  "type": "mtf",
+  "question": "【数据分析】在一个浅水湖泊中,大型水生植物覆盖率与叶绿素a浓度的回归关系为log(chl-a)=2.1-0.8×log(coverage),R²=0.72。判断推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "这种负相关在稳态浅水湖泊理论中是被预测的——植物占优的清水态vs浮游植物占优的浊水态",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "该关系说明大型水生植物和浮游植物可以无限共存",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "大型植物可能通过与浮游植物竞争营养和光来抑制其生长",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "大型水生植物覆盖率增加1%时叶绿素a浓度降低约0.8%",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:log覆盖率和log chl-a呈负相关(R²=0.72),即在植物覆盖率高的地方浮游植物少。稳态浅水湖泊理论预测两种替代稳态——清水态(大型植物主导)或浊水态(浮游植物主导)。",
+  "module": 3,
+  "subject": "生态学",
+  "concept": "湖泊稳态",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1233633926",
+  "tags": []
+ },
+ "BQ-homeostasis-b90275ff02ca": {
+  "type": "mtf",
+  "question": "【数据分析】在一个浅水湖泊中,大型水生植物覆盖率与叶绿素a浓度的回归关系为log(chl-a)=2.1-0.8×log(coverage),R²=0.72。判断推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "这种负相关在稳态浅水湖泊理论中是被预测的——植物占优的清水态vs浮游植物占优的浊水态",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "该关系说明大型水生植物和浮游植物可以无限共存",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "大型水生植物覆盖率增加1%时叶绿素a浓度降低约0.8%",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "大型植物可能通过与浮游植物竞争营养和光来抑制其生长",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:log覆盖率和log chl-a呈负相关(R²=0.72),即在植物覆盖率高的地方浮游植物少。稳态浅水湖泊理论预测两种替代稳态——清水态(大型植物主导)或浊水态(浮游植物主导)。",
+  "module": 3,
+  "subject": "生态学",
+  "concept": "湖泊稳态",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1233633926",
+  "tags": []
+ },
+ "BQ-homeostasis-35ef1bbdab6b": {
+  "type": "mtf",
+  "question": "关于体温调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "下丘脑的视前区是哺乳动物的体温调节中枢，整合来自皮肤和核心部位的温度信息",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "发热时体温调定点升高，机体通过寒战和血管收缩来使体温达到新的调定点",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "变温动物完全无法调节自身体温",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "褐色脂肪组织通过解偶联蛋白UCP1将质子动力转化为热，是非战栗产热的主要来源",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：视前区的体温调控功能。D正确：BAT产热的分子机制。B正确：发热的体温调定点理论。C错误：变温动物可通过行为调节体温（如蜥蜴晒太阳），一些变温动物也可通过代谢产热在短时间内维持高于环境的体温（如某些大型鱼类和昆虫飞行时的内生热）。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "体温调节",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1105170738",
+  "tags": []
+ },
+ "BQ-homeostasis-d095a1bb78e2": {
+  "type": "mtf",
+  "question": "关于体温调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "下丘脑的视前区是哺乳动物的体温调节中枢，整合来自皮肤和核心部位的温度信息",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "发热时体温调定点升高，机体通过寒战和血管收缩来使体温达到新的调定点",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "褐色脂肪组织通过解偶联蛋白UCP1将质子动力转化为热，是非战栗产热的主要来源",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "变温动物完全无法调节自身体温",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确：视前区的体温调控功能。C正确：BAT产热的分子机制。B正确：发热的体温调定点理论。D错误：变温动物可通过行为调节体温（如蜥蜴晒太阳），一些变温动物也可通过代谢产热在短时间内维持高于环境的体温（如某些大型鱼类和昆虫飞行时的内生热）。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "体温调节",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1105170738",
+  "tags": []
+ },
+ "BQ-homeostasis-b180d3b76abc": {
+  "type": "mtf",
+  "question": "关于体温调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "下丘脑的视前区是哺乳动物的体温调节中枢，整合来自皮肤和核心部位的温度信息",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "变温动物完全无法调节自身体温",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "发热时体温调定点升高，机体通过寒战和血管收缩来使体温达到新的调定点",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "褐色脂肪组织通过解偶联蛋白UCP1将质子动力转化为热，是非战栗产热的主要来源",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：视前区的体温调控功能。D正确：BAT产热的分子机制。C正确：发热的体温调定点理论。B错误：变温动物可通过行为调节体温（如蜥蜴晒太阳），一些变温动物也可通过代谢产热在短时间内维持高于环境的体温（如某些大型鱼类和昆虫飞行时的内生热）。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "体温调节",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1105170738",
+  "tags": []
+ },
+ "BQ-homeostasis-e576d2b17d61": {
+  "type": "mtf",
+  "question": "关于体温调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "下丘脑的视前区是哺乳动物的体温调节中枢，整合来自皮肤和核心部位的温度信息",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "变温动物完全无法调节自身体温",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "褐色脂肪组织通过解偶联蛋白UCP1将质子动力转化为热，是非战栗产热的主要来源",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "发热时体温调定点升高，机体通过寒战和血管收缩来使体温达到新的调定点",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：视前区的体温调控功能。C正确：BAT产热的分子机制。D正确：发热的体温调定点理论。B错误：变温动物可通过行为调节体温（如蜥蜴晒太阳），一些变温动物也可通过代谢产热在短时间内维持高于环境的体温（如某些大型鱼类和昆虫飞行时的内生热）。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "体温调节",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1105170738",
+  "tags": []
+ },
+ "BQ-homeostasis-4e7f4a432d22": {
+  "type": "mtf",
+  "question": "关于体温调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "下丘脑的视前区是哺乳动物的体温调节中枢，整合来自皮肤和核心部位的温度信息",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "褐色脂肪组织通过解偶联蛋白UCP1将质子动力转化为热，是非战栗产热的主要来源",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "发热时体温调定点升高，机体通过寒战和血管收缩来使体温达到新的调定点",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "变温动物完全无法调节自身体温",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确：视前区的体温调控功能。B正确：BAT产热的分子机制。C正确：发热的体温调定点理论。D错误：变温动物可通过行为调节体温（如蜥蜴晒太阳），一些变温动物也可通过代谢产热在短时间内维持高于环境的体温（如某些大型鱼类和昆虫飞行时的内生热）。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "体温调节",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1105170738",
+  "tags": []
+ },
+ "BQ-homeostasis-9d47a43ee76f": {
+  "type": "mtf",
+  "question": "关于体温调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "下丘脑的视前区是哺乳动物的体温调节中枢，整合来自皮肤和核心部位的温度信息",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "褐色脂肪组织通过解偶联蛋白UCP1将质子动力转化为热，是非战栗产热的主要来源",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "变温动物完全无法调节自身体温",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "发热时体温调定点升高，机体通过寒战和血管收缩来使体温达到新的调定点",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：视前区的体温调控功能。B正确：BAT产热的分子机制。D正确：发热的体温调定点理论。C错误：变温动物可通过行为调节体温（如蜥蜴晒太阳），一些变温动物也可通过代谢产热在短时间内维持高于环境的体温（如某些大型鱼类和昆虫飞行时的内生热）。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "体温调节",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1105170738",
+  "tags": []
+ },
+ "BQ-homeostasis-7fbf08a7ce6d": {
+  "type": "mtf",
+  "question": "关于体温调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "发热时体温调定点升高，机体通过寒战和血管收缩来使体温达到新的调定点",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "下丘脑的视前区是哺乳动物的体温调节中枢，整合来自皮肤和核心部位的温度信息",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "变温动物完全无法调节自身体温",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "褐色脂肪组织通过解偶联蛋白UCP1将质子动力转化为热，是非战栗产热的主要来源",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：视前区的体温调控功能。D正确：BAT产热的分子机制。A正确：发热的体温调定点理论。C错误：变温动物可通过行为调节体温（如蜥蜴晒太阳），一些变温动物也可通过代谢产热在短时间内维持高于环境的体温（如某些大型鱼类和昆虫飞行时的内生热）。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "体温调节",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1105170738",
+  "tags": []
+ },
+ "BQ-homeostasis-9fd53e7c0593": {
+  "type": "mtf",
+  "question": "关于体温调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "发热时体温调定点升高，机体通过寒战和血管收缩来使体温达到新的调定点",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "下丘脑的视前区是哺乳动物的体温调节中枢，整合来自皮肤和核心部位的温度信息",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "褐色脂肪组织通过解偶联蛋白UCP1将质子动力转化为热，是非战栗产热的主要来源",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "变温动物完全无法调节自身体温",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确：视前区的体温调控功能。C正确：BAT产热的分子机制。A正确：发热的体温调定点理论。D错误：变温动物可通过行为调节体温（如蜥蜴晒太阳），一些变温动物也可通过代谢产热在短时间内维持高于环境的体温（如某些大型鱼类和昆虫飞行时的内生热）。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "体温调节",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1105170738",
+  "tags": []
+ },
+ "BQ-homeostasis-d8c40cd8be07": {
+  "type": "mtf",
+  "question": "关于体温调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "发热时体温调定点升高，机体通过寒战和血管收缩来使体温达到新的调定点",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "变温动物完全无法调节自身体温",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "下丘脑的视前区是哺乳动物的体温调节中枢，整合来自皮肤和核心部位的温度信息",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "褐色脂肪组织通过解偶联蛋白UCP1将质子动力转化为热，是非战栗产热的主要来源",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：视前区的体温调控功能。D正确：BAT产热的分子机制。A正确：发热的体温调定点理论。B错误：变温动物可通过行为调节体温（如蜥蜴晒太阳），一些变温动物也可通过代谢产热在短时间内维持高于环境的体温（如某些大型鱼类和昆虫飞行时的内生热）。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "体温调节",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1105170738",
+  "tags": []
+ },
+ "BQ-homeostasis-81a4b45dd0c3": {
+  "type": "mtf",
+  "question": "关于体温调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "发热时体温调定点升高，机体通过寒战和血管收缩来使体温达到新的调定点",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "变温动物完全无法调节自身体温",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "褐色脂肪组织通过解偶联蛋白UCP1将质子动力转化为热，是非战栗产热的主要来源",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "下丘脑的视前区是哺乳动物的体温调节中枢，整合来自皮肤和核心部位的温度信息",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：视前区的体温调控功能。C正确：BAT产热的分子机制。A正确：发热的体温调定点理论。B错误：变温动物可通过行为调节体温（如蜥蜴晒太阳），一些变温动物也可通过代谢产热在短时间内维持高于环境的体温（如某些大型鱼类和昆虫飞行时的内生热）。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "体温调节",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1105170738",
+  "tags": []
+ },
+ "BQ-homeostasis-123642d02741": {
+  "type": "mtf",
+  "question": "关于体温调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "发热时体温调定点升高，机体通过寒战和血管收缩来使体温达到新的调定点",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "褐色脂肪组织通过解偶联蛋白UCP1将质子动力转化为热，是非战栗产热的主要来源",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "下丘脑的视前区是哺乳动物的体温调节中枢，整合来自皮肤和核心部位的温度信息",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "变温动物完全无法调节自身体温",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确：视前区的体温调控功能。B正确：BAT产热的分子机制。A正确：发热的体温调定点理论。D错误：变温动物可通过行为调节体温（如蜥蜴晒太阳），一些变温动物也可通过代谢产热在短时间内维持高于环境的体温（如某些大型鱼类和昆虫飞行时的内生热）。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "体温调节",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1105170738",
+  "tags": []
+ },
+ "BQ-homeostasis-22af28b88e2e": {
+  "type": "mtf",
+  "question": "关于体温调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "发热时体温调定点升高，机体通过寒战和血管收缩来使体温达到新的调定点",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "褐色脂肪组织通过解偶联蛋白UCP1将质子动力转化为热，是非战栗产热的主要来源",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "变温动物完全无法调节自身体温",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "下丘脑的视前区是哺乳动物的体温调节中枢，整合来自皮肤和核心部位的温度信息",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：视前区的体温调控功能。B正确：BAT产热的分子机制。A正确：发热的体温调定点理论。C错误：变温动物可通过行为调节体温（如蜥蜴晒太阳），一些变温动物也可通过代谢产热在短时间内维持高于环境的体温（如某些大型鱼类和昆虫飞行时的内生热）。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "体温调节",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1105170738",
+  "tags": []
+ },
+ "BQ-homeostasis-86454178e74f": {
+  "type": "mtf",
+  "question": "关于体温调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "变温动物完全无法调节自身体温",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "下丘脑的视前区是哺乳动物的体温调节中枢，整合来自皮肤和核心部位的温度信息",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "发热时体温调定点升高，机体通过寒战和血管收缩来使体温达到新的调定点",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "褐色脂肪组织通过解偶联蛋白UCP1将质子动力转化为热，是非战栗产热的主要来源",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：视前区的体温调控功能。D正确：BAT产热的分子机制。C正确：发热的体温调定点理论。A错误：变温动物可通过行为调节体温（如蜥蜴晒太阳），一些变温动物也可通过代谢产热在短时间内维持高于环境的体温（如某些大型鱼类和昆虫飞行时的内生热）。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "体温调节",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1105170738",
+  "tags": []
+ },
+ "BQ-homeostasis-909939530497": {
+  "type": "mtf",
+  "question": "关于体温调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "变温动物完全无法调节自身体温",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "下丘脑的视前区是哺乳动物的体温调节中枢，整合来自皮肤和核心部位的温度信息",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "褐色脂肪组织通过解偶联蛋白UCP1将质子动力转化为热，是非战栗产热的主要来源",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "发热时体温调定点升高，机体通过寒战和血管收缩来使体温达到新的调定点",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：视前区的体温调控功能。C正确：BAT产热的分子机制。D正确：发热的体温调定点理论。A错误：变温动物可通过行为调节体温（如蜥蜴晒太阳），一些变温动物也可通过代谢产热在短时间内维持高于环境的体温（如某些大型鱼类和昆虫飞行时的内生热）。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "体温调节",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1105170738",
+  "tags": []
+ },
+ "BQ-homeostasis-c23a7c890238": {
+  "type": "mtf",
+  "question": "关于体温调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "变温动物完全无法调节自身体温",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "发热时体温调定点升高，机体通过寒战和血管收缩来使体温达到新的调定点",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "下丘脑的视前区是哺乳动物的体温调节中枢，整合来自皮肤和核心部位的温度信息",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "褐色脂肪组织通过解偶联蛋白UCP1将质子动力转化为热，是非战栗产热的主要来源",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：视前区的体温调控功能。D正确：BAT产热的分子机制。B正确：发热的体温调定点理论。A错误：变温动物可通过行为调节体温（如蜥蜴晒太阳），一些变温动物也可通过代谢产热在短时间内维持高于环境的体温（如某些大型鱼类和昆虫飞行时的内生热）。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "体温调节",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1105170738",
+  "tags": []
+ },
+ "BQ-homeostasis-8cd0ff47493e": {
+  "type": "mtf",
+  "question": "关于体温调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "变温动物完全无法调节自身体温",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "发热时体温调定点升高，机体通过寒战和血管收缩来使体温达到新的调定点",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "褐色脂肪组织通过解偶联蛋白UCP1将质子动力转化为热，是非战栗产热的主要来源",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "下丘脑的视前区是哺乳动物的体温调节中枢，整合来自皮肤和核心部位的温度信息",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：视前区的体温调控功能。C正确：BAT产热的分子机制。B正确：发热的体温调定点理论。A错误：变温动物可通过行为调节体温（如蜥蜴晒太阳），一些变温动物也可通过代谢产热在短时间内维持高于环境的体温（如某些大型鱼类和昆虫飞行时的内生热）。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "体温调节",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1105170738",
+  "tags": []
+ },
+ "BQ-homeostasis-c571d0f6e4cb": {
+  "type": "mtf",
+  "question": "关于体温调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "变温动物完全无法调节自身体温",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "褐色脂肪组织通过解偶联蛋白UCP1将质子动力转化为热，是非战栗产热的主要来源",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "下丘脑的视前区是哺乳动物的体温调节中枢，整合来自皮肤和核心部位的温度信息",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "发热时体温调定点升高，机体通过寒战和血管收缩来使体温达到新的调定点",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：视前区的体温调控功能。B正确：BAT产热的分子机制。D正确：发热的体温调定点理论。A错误：变温动物可通过行为调节体温（如蜥蜴晒太阳），一些变温动物也可通过代谢产热在短时间内维持高于环境的体温（如某些大型鱼类和昆虫飞行时的内生热）。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "体温调节",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1105170738",
+  "tags": []
+ },
+ "BQ-homeostasis-3375f71666ab": {
+  "type": "mtf",
+  "question": "关于体温调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "变温动物完全无法调节自身体温",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "褐色脂肪组织通过解偶联蛋白UCP1将质子动力转化为热，是非战栗产热的主要来源",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "发热时体温调定点升高，机体通过寒战和血管收缩来使体温达到新的调定点",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "下丘脑的视前区是哺乳动物的体温调节中枢，整合来自皮肤和核心部位的温度信息",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：视前区的体温调控功能。B正确：BAT产热的分子机制。C正确：发热的体温调定点理论。A错误：变温动物可通过行为调节体温（如蜥蜴晒太阳），一些变温动物也可通过代谢产热在短时间内维持高于环境的体温（如某些大型鱼类和昆虫飞行时的内生热）。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "体温调节",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1105170738",
+  "tags": []
+ },
+ "BQ-homeostasis-c513b9b20959": {
+  "type": "mtf",
+  "question": "关于体温调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "褐色脂肪组织通过解偶联蛋白UCP1将质子动力转化为热，是非战栗产热的主要来源",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "下丘脑的视前区是哺乳动物的体温调节中枢，整合来自皮肤和核心部位的温度信息",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "发热时体温调定点升高，机体通过寒战和血管收缩来使体温达到新的调定点",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "变温动物完全无法调节自身体温",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确：视前区的体温调控功能。A正确：BAT产热的分子机制。C正确：发热的体温调定点理论。D错误：变温动物可通过行为调节体温（如蜥蜴晒太阳），一些变温动物也可通过代谢产热在短时间内维持高于环境的体温（如某些大型鱼类和昆虫飞行时的内生热）。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "体温调节",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1105170738",
+  "tags": []
+ },
+ "BQ-homeostasis-c2fa893dd8ff": {
+  "type": "mtf",
+  "question": "关于体温调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "褐色脂肪组织通过解偶联蛋白UCP1将质子动力转化为热，是非战栗产热的主要来源",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "下丘脑的视前区是哺乳动物的体温调节中枢，整合来自皮肤和核心部位的温度信息",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "变温动物完全无法调节自身体温",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "发热时体温调定点升高，机体通过寒战和血管收缩来使体温达到新的调定点",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：视前区的体温调控功能。A正确：BAT产热的分子机制。D正确：发热的体温调定点理论。C错误：变温动物可通过行为调节体温（如蜥蜴晒太阳），一些变温动物也可通过代谢产热在短时间内维持高于环境的体温（如某些大型鱼类和昆虫飞行时的内生热）。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "体温调节",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1105170738",
+  "tags": []
+ },
+ "BQ-homeostasis-29a6dd1a046b": {
+  "type": "mtf",
+  "question": "关于体温调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "褐色脂肪组织通过解偶联蛋白UCP1将质子动力转化为热，是非战栗产热的主要来源",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "发热时体温调定点升高，机体通过寒战和血管收缩来使体温达到新的调定点",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "下丘脑的视前区是哺乳动物的体温调节中枢，整合来自皮肤和核心部位的温度信息",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "变温动物完全无法调节自身体温",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确：视前区的体温调控功能。A正确：BAT产热的分子机制。B正确：发热的体温调定点理论。D错误：变温动物可通过行为调节体温（如蜥蜴晒太阳），一些变温动物也可通过代谢产热在短时间内维持高于环境的体温（如某些大型鱼类和昆虫飞行时的内生热）。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "体温调节",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1105170738",
+  "tags": []
+ },
+ "BQ-homeostasis-93489d553dd8": {
+  "type": "mtf",
+  "question": "关于体温调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "褐色脂肪组织通过解偶联蛋白UCP1将质子动力转化为热，是非战栗产热的主要来源",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "发热时体温调定点升高，机体通过寒战和血管收缩来使体温达到新的调定点",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "变温动物完全无法调节自身体温",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "下丘脑的视前区是哺乳动物的体温调节中枢，整合来自皮肤和核心部位的温度信息",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：视前区的体温调控功能。A正确：BAT产热的分子机制。B正确：发热的体温调定点理论。C错误：变温动物可通过行为调节体温（如蜥蜴晒太阳），一些变温动物也可通过代谢产热在短时间内维持高于环境的体温（如某些大型鱼类和昆虫飞行时的内生热）。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "体温调节",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1105170738",
+  "tags": []
+ },
+ "BQ-homeostasis-e8210a44ecac": {
+  "type": "mtf",
+  "question": "关于体温调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "褐色脂肪组织通过解偶联蛋白UCP1将质子动力转化为热，是非战栗产热的主要来源",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "变温动物完全无法调节自身体温",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "下丘脑的视前区是哺乳动物的体温调节中枢，整合来自皮肤和核心部位的温度信息",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "发热时体温调定点升高，机体通过寒战和血管收缩来使体温达到新的调定点",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：视前区的体温调控功能。A正确：BAT产热的分子机制。D正确：发热的体温调定点理论。B错误：变温动物可通过行为调节体温（如蜥蜴晒太阳），一些变温动物也可通过代谢产热在短时间内维持高于环境的体温（如某些大型鱼类和昆虫飞行时的内生热）。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "体温调节",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1105170738",
+  "tags": []
+ },
+ "BQ-homeostasis-6b2dcf112c56": {
+  "type": "mtf",
+  "question": "关于体温调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "褐色脂肪组织通过解偶联蛋白UCP1将质子动力转化为热，是非战栗产热的主要来源",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "变温动物完全无法调节自身体温",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "发热时体温调定点升高，机体通过寒战和血管收缩来使体温达到新的调定点",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "下丘脑的视前区是哺乳动物的体温调节中枢，整合来自皮肤和核心部位的温度信息",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：视前区的体温调控功能。A正确：BAT产热的分子机制。C正确：发热的体温调定点理论。B错误：变温动物可通过行为调节体温（如蜥蜴晒太阳），一些变温动物也可通过代谢产热在短时间内维持高于环境的体温（如某些大型鱼类和昆虫飞行时的内生热）。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "体温调节",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1105170738",
+  "tags": []
+ },
+ "BQ-homeostasis-0b3f252d7e2d": {
+  "type": "mtf",
+  "question": "关于内分泌系统的正反馈调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "LH峰触发排卵是经典的正反馈——高雌激素水平刺激LH大量释放",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "催产素诱导宫缩并进一步刺激催产素释放(分娩中的正反馈循环)",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "正反馈是内分泌调控中最常见的调节机制",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "正反馈通常导致系统走向极端状态(如分娩完成后终止)",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:负反馈是内分泌调控中更常见的机制(如甲状腺素抑制TSH、皮质醇抑制ACTH)。正反馈仅在某些特定生理事件(排卵、分娩)中运作。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "正反馈",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "574678654",
+  "tags": []
+ },
+ "BQ-homeostasis-4716f32fb5c1": {
+  "type": "mtf",
+  "question": "关于内分泌系统的正反馈调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "LH峰触发排卵是经典的正反馈——高雌激素水平刺激LH大量释放",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "催产素诱导宫缩并进一步刺激催产素释放(分娩中的正反馈循环)",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "正反馈通常导致系统走向极端状态(如分娩完成后终止)",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "正反馈是内分泌调控中最常见的调节机制",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:负反馈是内分泌调控中更常见的机制(如甲状腺素抑制TSH、皮质醇抑制ACTH)。正反馈仅在某些特定生理事件(排卵、分娩)中运作。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "正反馈",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "574678654",
+  "tags": []
+ },
+ "BQ-homeostasis-d0163d590f79": {
+  "type": "mtf",
+  "question": "关于内分泌系统的正反馈调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "LH峰触发排卵是经典的正反馈——高雌激素水平刺激LH大量释放",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "正反馈是内分泌调控中最常见的调节机制",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "催产素诱导宫缩并进一步刺激催产素释放(分娩中的正反馈循环)",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "正反馈通常导致系统走向极端状态(如分娩完成后终止)",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:负反馈是内分泌调控中更常见的机制(如甲状腺素抑制TSH、皮质醇抑制ACTH)。正反馈仅在某些特定生理事件(排卵、分娩)中运作。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "正反馈",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "574678654",
+  "tags": []
+ },
+ "BQ-homeostasis-7fbf2410260f": {
+  "type": "mtf",
+  "question": "关于内分泌系统的正反馈调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "LH峰触发排卵是经典的正反馈——高雌激素水平刺激LH大量释放",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "正反馈是内分泌调控中最常见的调节机制",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "正反馈通常导致系统走向极端状态(如分娩完成后终止)",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "催产素诱导宫缩并进一步刺激催产素释放(分娩中的正反馈循环)",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:负反馈是内分泌调控中更常见的机制(如甲状腺素抑制TSH、皮质醇抑制ACTH)。正反馈仅在某些特定生理事件(排卵、分娩)中运作。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "正反馈",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "574678654",
+  "tags": []
+ },
+ "BQ-homeostasis-8db087223b4a": {
+  "type": "mtf",
+  "question": "关于内分泌系统的正反馈调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "LH峰触发排卵是经典的正反馈——高雌激素水平刺激LH大量释放",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "正反馈通常导致系统走向极端状态(如分娩完成后终止)",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "催产素诱导宫缩并进一步刺激催产素释放(分娩中的正反馈循环)",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "正反馈是内分泌调控中最常见的调节机制",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:负反馈是内分泌调控中更常见的机制(如甲状腺素抑制TSH、皮质醇抑制ACTH)。正反馈仅在某些特定生理事件(排卵、分娩)中运作。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "正反馈",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "574678654",
+  "tags": []
+ },
+ "BQ-homeostasis-034a2a9d6ac6": {
+  "type": "mtf",
+  "question": "关于内分泌系统的正反馈调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "LH峰触发排卵是经典的正反馈——高雌激素水平刺激LH大量释放",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "正反馈通常导致系统走向极端状态(如分娩完成后终止)",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "正反馈是内分泌调控中最常见的调节机制",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "催产素诱导宫缩并进一步刺激催产素释放(分娩中的正反馈循环)",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:负反馈是内分泌调控中更常见的机制(如甲状腺素抑制TSH、皮质醇抑制ACTH)。正反馈仅在某些特定生理事件(排卵、分娩)中运作。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "正反馈",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "574678654",
+  "tags": []
+ },
+ "BQ-homeostasis-16f9eca4cde3": {
+  "type": "mtf",
+  "question": "关于内分泌系统的正反馈调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "催产素诱导宫缩并进一步刺激催产素释放(分娩中的正反馈循环)",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "LH峰触发排卵是经典的正反馈——高雌激素水平刺激LH大量释放",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "正反馈是内分泌调控中最常见的调节机制",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "正反馈通常导致系统走向极端状态(如分娩完成后终止)",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:负反馈是内分泌调控中更常见的机制(如甲状腺素抑制TSH、皮质醇抑制ACTH)。正反馈仅在某些特定生理事件(排卵、分娩)中运作。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "正反馈",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "574678654",
+  "tags": []
+ },
+ "BQ-homeostasis-9ff07e85003f": {
+  "type": "mtf",
+  "question": "关于内分泌系统的正反馈调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "催产素诱导宫缩并进一步刺激催产素释放(分娩中的正反馈循环)",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "LH峰触发排卵是经典的正反馈——高雌激素水平刺激LH大量释放",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "正反馈通常导致系统走向极端状态(如分娩完成后终止)",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "正反馈是内分泌调控中最常见的调节机制",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:负反馈是内分泌调控中更常见的机制(如甲状腺素抑制TSH、皮质醇抑制ACTH)。正反馈仅在某些特定生理事件(排卵、分娩)中运作。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "正反馈",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "574678654",
+  "tags": []
+ },
+ "BQ-homeostasis-d6a0d7309323": {
+  "type": "mtf",
+  "question": "关于内分泌系统的正反馈调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "催产素诱导宫缩并进一步刺激催产素释放(分娩中的正反馈循环)",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "正反馈是内分泌调控中最常见的调节机制",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "LH峰触发排卵是经典的正反馈——高雌激素水平刺激LH大量释放",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "正反馈通常导致系统走向极端状态(如分娩完成后终止)",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:负反馈是内分泌调控中更常见的机制(如甲状腺素抑制TSH、皮质醇抑制ACTH)。正反馈仅在某些特定生理事件(排卵、分娩)中运作。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "正反馈",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "574678654",
+  "tags": []
+ },
+ "BQ-homeostasis-95ae0f6e50ae": {
+  "type": "mtf",
+  "question": "关于内分泌系统的正反馈调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "催产素诱导宫缩并进一步刺激催产素释放(分娩中的正反馈循环)",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "正反馈是内分泌调控中最常见的调节机制",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "正反馈通常导致系统走向极端状态(如分娩完成后终止)",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "LH峰触发排卵是经典的正反馈——高雌激素水平刺激LH大量释放",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:负反馈是内分泌调控中更常见的机制(如甲状腺素抑制TSH、皮质醇抑制ACTH)。正反馈仅在某些特定生理事件(排卵、分娩)中运作。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "正反馈",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "574678654",
+  "tags": []
+ },
+ "BQ-homeostasis-2805d94faafa": {
+  "type": "mtf",
+  "question": "关于内分泌系统的正反馈调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "催产素诱导宫缩并进一步刺激催产素释放(分娩中的正反馈循环)",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "正反馈通常导致系统走向极端状态(如分娩完成后终止)",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "LH峰触发排卵是经典的正反馈——高雌激素水平刺激LH大量释放",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "正反馈是内分泌调控中最常见的调节机制",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:负反馈是内分泌调控中更常见的机制(如甲状腺素抑制TSH、皮质醇抑制ACTH)。正反馈仅在某些特定生理事件(排卵、分娩)中运作。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "正反馈",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "574678654",
+  "tags": []
+ },
+ "BQ-homeostasis-bd653f526664": {
+  "type": "mtf",
+  "question": "关于内分泌系统的正反馈调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "催产素诱导宫缩并进一步刺激催产素释放(分娩中的正反馈循环)",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "正反馈通常导致系统走向极端状态(如分娩完成后终止)",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "正反馈是内分泌调控中最常见的调节机制",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "LH峰触发排卵是经典的正反馈——高雌激素水平刺激LH大量释放",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:负反馈是内分泌调控中更常见的机制(如甲状腺素抑制TSH、皮质醇抑制ACTH)。正反馈仅在某些特定生理事件(排卵、分娩)中运作。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "正反馈",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "574678654",
+  "tags": []
+ },
+ "BQ-homeostasis-69f77e1cf423": {
+  "type": "mtf",
+  "question": "关于内分泌系统的正反馈调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "正反馈是内分泌调控中最常见的调节机制",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "LH峰触发排卵是经典的正反馈——高雌激素水平刺激LH大量释放",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "催产素诱导宫缩并进一步刺激催产素释放(分娩中的正反馈循环)",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "正反馈通常导致系统走向极端状态(如分娩完成后终止)",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:负反馈是内分泌调控中更常见的机制(如甲状腺素抑制TSH、皮质醇抑制ACTH)。正反馈仅在某些特定生理事件(排卵、分娩)中运作。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "正反馈",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "574678654",
+  "tags": []
+ },
+ "BQ-homeostasis-b7d566380d4e": {
+  "type": "mtf",
+  "question": "关于内分泌系统的正反馈调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "正反馈是内分泌调控中最常见的调节机制",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "LH峰触发排卵是经典的正反馈——高雌激素水平刺激LH大量释放",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "正反馈通常导致系统走向极端状态(如分娩完成后终止)",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "催产素诱导宫缩并进一步刺激催产素释放(分娩中的正反馈循环)",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:负反馈是内分泌调控中更常见的机制(如甲状腺素抑制TSH、皮质醇抑制ACTH)。正反馈仅在某些特定生理事件(排卵、分娩)中运作。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "正反馈",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "574678654",
+  "tags": []
+ },
+ "BQ-homeostasis-e8f50d601435": {
+  "type": "mtf",
+  "question": "关于内分泌系统的正反馈调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "正反馈是内分泌调控中最常见的调节机制",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "催产素诱导宫缩并进一步刺激催产素释放(分娩中的正反馈循环)",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "LH峰触发排卵是经典的正反馈——高雌激素水平刺激LH大量释放",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "正反馈通常导致系统走向极端状态(如分娩完成后终止)",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:负反馈是内分泌调控中更常见的机制(如甲状腺素抑制TSH、皮质醇抑制ACTH)。正反馈仅在某些特定生理事件(排卵、分娩)中运作。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "正反馈",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "574678654",
+  "tags": []
+ },
+ "BQ-homeostasis-12bbfe07a849": {
+  "type": "mtf",
+  "question": "关于内分泌系统的正反馈调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "正反馈是内分泌调控中最常见的调节机制",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "催产素诱导宫缩并进一步刺激催产素释放(分娩中的正反馈循环)",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "正反馈通常导致系统走向极端状态(如分娩完成后终止)",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "LH峰触发排卵是经典的正反馈——高雌激素水平刺激LH大量释放",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:负反馈是内分泌调控中更常见的机制(如甲状腺素抑制TSH、皮质醇抑制ACTH)。正反馈仅在某些特定生理事件(排卵、分娩)中运作。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "正反馈",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "574678654",
+  "tags": []
+ },
+ "BQ-homeostasis-921b83db37fd": {
+  "type": "mtf",
+  "question": "关于内分泌系统的正反馈调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "正反馈是内分泌调控中最常见的调节机制",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "正反馈通常导致系统走向极端状态(如分娩完成后终止)",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "LH峰触发排卵是经典的正反馈——高雌激素水平刺激LH大量释放",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "催产素诱导宫缩并进一步刺激催产素释放(分娩中的正反馈循环)",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:负反馈是内分泌调控中更常见的机制(如甲状腺素抑制TSH、皮质醇抑制ACTH)。正反馈仅在某些特定生理事件(排卵、分娩)中运作。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "正反馈",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "574678654",
+  "tags": []
+ },
+ "BQ-homeostasis-3b3d06413ae5": {
+  "type": "mtf",
+  "question": "关于内分泌系统的正反馈调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "正反馈是内分泌调控中最常见的调节机制",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "正反馈通常导致系统走向极端状态(如分娩完成后终止)",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "催产素诱导宫缩并进一步刺激催产素释放(分娩中的正反馈循环)",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "LH峰触发排卵是经典的正反馈——高雌激素水平刺激LH大量释放",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:负反馈是内分泌调控中更常见的机制(如甲状腺素抑制TSH、皮质醇抑制ACTH)。正反馈仅在某些特定生理事件(排卵、分娩)中运作。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "正反馈",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "574678654",
+  "tags": []
+ },
+ "BQ-homeostasis-ac6ff80427d1": {
+  "type": "mtf",
+  "question": "关于内分泌系统的正反馈调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "正反馈通常导致系统走向极端状态(如分娩完成后终止)",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "LH峰触发排卵是经典的正反馈——高雌激素水平刺激LH大量释放",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "催产素诱导宫缩并进一步刺激催产素释放(分娩中的正反馈循环)",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "正反馈是内分泌调控中最常见的调节机制",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:负反馈是内分泌调控中更常见的机制(如甲状腺素抑制TSH、皮质醇抑制ACTH)。正反馈仅在某些特定生理事件(排卵、分娩)中运作。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "正反馈",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "574678654",
+  "tags": []
+ },
+ "BQ-homeostasis-fd26ee223bb7": {
+  "type": "mtf",
+  "question": "关于内分泌系统的正反馈调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "正反馈通常导致系统走向极端状态(如分娩完成后终止)",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "LH峰触发排卵是经典的正反馈——高雌激素水平刺激LH大量释放",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "正反馈是内分泌调控中最常见的调节机制",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "催产素诱导宫缩并进一步刺激催产素释放(分娩中的正反馈循环)",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:负反馈是内分泌调控中更常见的机制(如甲状腺素抑制TSH、皮质醇抑制ACTH)。正反馈仅在某些特定生理事件(排卵、分娩)中运作。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "正反馈",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "574678654",
+  "tags": []
+ },
+ "BQ-homeostasis-50f5f187fb3f": {
+  "type": "mtf",
+  "question": "关于内分泌系统的正反馈调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "正反馈通常导致系统走向极端状态(如分娩完成后终止)",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "催产素诱导宫缩并进一步刺激催产素释放(分娩中的正反馈循环)",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "LH峰触发排卵是经典的正反馈——高雌激素水平刺激LH大量释放",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "正反馈是内分泌调控中最常见的调节机制",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:负反馈是内分泌调控中更常见的机制(如甲状腺素抑制TSH、皮质醇抑制ACTH)。正反馈仅在某些特定生理事件(排卵、分娩)中运作。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "正反馈",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "574678654",
+  "tags": []
+ },
+ "BQ-homeostasis-1bf9bfc72aa7": {
+  "type": "mtf",
+  "question": "关于内分泌系统的正反馈调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "正反馈通常导致系统走向极端状态(如分娩完成后终止)",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "催产素诱导宫缩并进一步刺激催产素释放(分娩中的正反馈循环)",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "正反馈是内分泌调控中最常见的调节机制",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "LH峰触发排卵是经典的正反馈——高雌激素水平刺激LH大量释放",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:负反馈是内分泌调控中更常见的机制(如甲状腺素抑制TSH、皮质醇抑制ACTH)。正反馈仅在某些特定生理事件(排卵、分娩)中运作。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "正反馈",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "574678654",
+  "tags": []
+ },
+ "BQ-homeostasis-9ac56a28414e": {
+  "type": "mtf",
+  "question": "关于内分泌系统的正反馈调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "正反馈通常导致系统走向极端状态(如分娩完成后终止)",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "正反馈是内分泌调控中最常见的调节机制",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "LH峰触发排卵是经典的正反馈——高雌激素水平刺激LH大量释放",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "催产素诱导宫缩并进一步刺激催产素释放(分娩中的正反馈循环)",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:负反馈是内分泌调控中更常见的机制(如甲状腺素抑制TSH、皮质醇抑制ACTH)。正反馈仅在某些特定生理事件(排卵、分娩)中运作。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "正反馈",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "574678654",
+  "tags": []
+ },
+ "BQ-homeostasis-d78a288d2856": {
+  "type": "mtf",
+  "question": "关于内分泌系统的正反馈调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "正反馈通常导致系统走向极端状态(如分娩完成后终止)",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "正反馈是内分泌调控中最常见的调节机制",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "催产素诱导宫缩并进一步刺激催产素释放(分娩中的正反馈循环)",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "LH峰触发排卵是经典的正反馈——高雌激素水平刺激LH大量释放",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:负反馈是内分泌调控中更常见的机制(如甲状腺素抑制TSH、皮质醇抑制ACTH)。正反馈仅在某些特定生理事件(排卵、分娩)中运作。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "正反馈",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "574678654",
+  "tags": []
+ },
+ "BQ-homeostasis-24cfc4bf2f8a": {
+  "type": "mtf",
+  "question": "关于心血管系统的神经体液调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "压力感受性反射(窦弓反射)通过监测颈动脉窦和主动脉弓的压力变化来快速调节血压",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "心房钠尿肽(ANP)由心房肌细胞分泌，促进钠水排出、降低血压",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "心血管系统的所有调节反应都在数秒内完成",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "肾素-血管紧张素-醛固酮系统(RAAS)是血压长期调控的重要体液机制",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确:压力反射。D正确:RAAS系统。B正确:ANP功能。C错误:压力反射在数秒内响应；RAAS在数分钟到数天的时间尺度上作用；长期血压调控涉及肾脏对体液容量的调节。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "心血管调节",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1521994724",
+  "tags": []
+ },
+ "BQ-homeostasis-dc39890e4c1e": {
+  "type": "mtf",
+  "question": "关于心血管系统的神经体液调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "压力感受性反射(窦弓反射)通过监测颈动脉窦和主动脉弓的压力变化来快速调节血压",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "心房钠尿肽(ANP)由心房肌细胞分泌，促进钠水排出、降低血压",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "肾素-血管紧张素-醛固酮系统(RAAS)是血压长期调控的重要体液机制",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "心血管系统的所有调节反应都在数秒内完成",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确:压力反射。C正确:RAAS系统。B正确:ANP功能。D错误:压力反射在数秒内响应；RAAS在数分钟到数天的时间尺度上作用；长期血压调控涉及肾脏对体液容量的调节。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "心血管调节",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1521994724",
+  "tags": []
+ },
+ "BQ-homeostasis-1a239b86c429": {
+  "type": "mtf",
+  "question": "关于心血管系统的神经体液调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "压力感受性反射(窦弓反射)通过监测颈动脉窦和主动脉弓的压力变化来快速调节血压",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "心血管系统的所有调节反应都在数秒内完成",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "心房钠尿肽(ANP)由心房肌细胞分泌，促进钠水排出、降低血压",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "肾素-血管紧张素-醛固酮系统(RAAS)是血压长期调控的重要体液机制",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确:压力反射。D正确:RAAS系统。C正确:ANP功能。B错误:压力反射在数秒内响应；RAAS在数分钟到数天的时间尺度上作用；长期血压调控涉及肾脏对体液容量的调节。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "心血管调节",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1521994724",
+  "tags": []
+ },
+ "BQ-homeostasis-51ae2ec4c67e": {
+  "type": "mtf",
+  "question": "关于心血管系统的神经体液调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "压力感受性反射(窦弓反射)通过监测颈动脉窦和主动脉弓的压力变化来快速调节血压",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "心血管系统的所有调节反应都在数秒内完成",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "肾素-血管紧张素-醛固酮系统(RAAS)是血压长期调控的重要体液机制",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "心房钠尿肽(ANP)由心房肌细胞分泌，促进钠水排出、降低血压",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确:压力反射。C正确:RAAS系统。D正确:ANP功能。B错误:压力反射在数秒内响应；RAAS在数分钟到数天的时间尺度上作用；长期血压调控涉及肾脏对体液容量的调节。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "心血管调节",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1521994724",
+  "tags": []
+ },
+ "BQ-homeostasis-879d4c0650a3": {
+  "type": "mtf",
+  "question": "关于心血管系统的神经体液调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "压力感受性反射(窦弓反射)通过监测颈动脉窦和主动脉弓的压力变化来快速调节血压",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "肾素-血管紧张素-醛固酮系统(RAAS)是血压长期调控的重要体液机制",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "心房钠尿肽(ANP)由心房肌细胞分泌，促进钠水排出、降低血压",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "心血管系统的所有调节反应都在数秒内完成",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确:压力反射。B正确:RAAS系统。C正确:ANP功能。D错误:压力反射在数秒内响应；RAAS在数分钟到数天的时间尺度上作用；长期血压调控涉及肾脏对体液容量的调节。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "心血管调节",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1521994724",
+  "tags": []
+ },
+ "BQ-homeostasis-161cae3ceb52": {
+  "type": "mtf",
+  "question": "关于心血管系统的神经体液调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "压力感受性反射(窦弓反射)通过监测颈动脉窦和主动脉弓的压力变化来快速调节血压",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "肾素-血管紧张素-醛固酮系统(RAAS)是血压长期调控的重要体液机制",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "心血管系统的所有调节反应都在数秒内完成",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "心房钠尿肽(ANP)由心房肌细胞分泌，促进钠水排出、降低血压",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确:压力反射。B正确:RAAS系统。D正确:ANP功能。C错误:压力反射在数秒内响应；RAAS在数分钟到数天的时间尺度上作用；长期血压调控涉及肾脏对体液容量的调节。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "心血管调节",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1521994724",
+  "tags": []
+ },
+ "BQ-homeostasis-1c59069ed3ec": {
+  "type": "mtf",
+  "question": "关于心血管系统的神经体液调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "心房钠尿肽(ANP)由心房肌细胞分泌，促进钠水排出、降低血压",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "压力感受性反射(窦弓反射)通过监测颈动脉窦和主动脉弓的压力变化来快速调节血压",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "心血管系统的所有调节反应都在数秒内完成",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "肾素-血管紧张素-醛固酮系统(RAAS)是血压长期调控的重要体液机制",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确:压力反射。D正确:RAAS系统。A正确:ANP功能。C错误:压力反射在数秒内响应；RAAS在数分钟到数天的时间尺度上作用；长期血压调控涉及肾脏对体液容量的调节。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "心血管调节",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1521994724",
+  "tags": []
+ },
+ "BQ-homeostasis-01566c6a66ef": {
+  "type": "mtf",
+  "question": "关于心血管系统的神经体液调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "心房钠尿肽(ANP)由心房肌细胞分泌，促进钠水排出、降低血压",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "压力感受性反射(窦弓反射)通过监测颈动脉窦和主动脉弓的压力变化来快速调节血压",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "肾素-血管紧张素-醛固酮系统(RAAS)是血压长期调控的重要体液机制",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "心血管系统的所有调节反应都在数秒内完成",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确:压力反射。C正确:RAAS系统。A正确:ANP功能。D错误:压力反射在数秒内响应；RAAS在数分钟到数天的时间尺度上作用；长期血压调控涉及肾脏对体液容量的调节。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "心血管调节",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1521994724",
+  "tags": []
+ },
+ "BQ-homeostasis-8ace251e9b68": {
+  "type": "mtf",
+  "question": "关于心血管系统的神经体液调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "心房钠尿肽(ANP)由心房肌细胞分泌，促进钠水排出、降低血压",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "心血管系统的所有调节反应都在数秒内完成",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "压力感受性反射(窦弓反射)通过监测颈动脉窦和主动脉弓的压力变化来快速调节血压",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "肾素-血管紧张素-醛固酮系统(RAAS)是血压长期调控的重要体液机制",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确:压力反射。D正确:RAAS系统。A正确:ANP功能。B错误:压力反射在数秒内响应；RAAS在数分钟到数天的时间尺度上作用；长期血压调控涉及肾脏对体液容量的调节。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "心血管调节",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1521994724",
+  "tags": []
+ },
+ "BQ-homeostasis-6eab1d2ab0a7": {
+  "type": "mtf",
+  "question": "关于心血管系统的神经体液调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "心房钠尿肽(ANP)由心房肌细胞分泌，促进钠水排出、降低血压",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "心血管系统的所有调节反应都在数秒内完成",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "肾素-血管紧张素-醛固酮系统(RAAS)是血压长期调控的重要体液机制",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "压力感受性反射(窦弓反射)通过监测颈动脉窦和主动脉弓的压力变化来快速调节血压",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确:压力反射。C正确:RAAS系统。A正确:ANP功能。B错误:压力反射在数秒内响应；RAAS在数分钟到数天的时间尺度上作用；长期血压调控涉及肾脏对体液容量的调节。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "心血管调节",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1521994724",
+  "tags": []
+ },
+ "BQ-homeostasis-086bc49e6d61": {
+  "type": "mtf",
+  "question": "关于心血管系统的神经体液调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "心房钠尿肽(ANP)由心房肌细胞分泌，促进钠水排出、降低血压",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "肾素-血管紧张素-醛固酮系统(RAAS)是血压长期调控的重要体液机制",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "压力感受性反射(窦弓反射)通过监测颈动脉窦和主动脉弓的压力变化来快速调节血压",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "心血管系统的所有调节反应都在数秒内完成",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确:压力反射。B正确:RAAS系统。A正确:ANP功能。D错误:压力反射在数秒内响应；RAAS在数分钟到数天的时间尺度上作用；长期血压调控涉及肾脏对体液容量的调节。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "心血管调节",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1521994724",
+  "tags": []
+ },
+ "BQ-homeostasis-dafd148f84f0": {
+  "type": "mtf",
+  "question": "关于心血管系统的神经体液调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "心房钠尿肽(ANP)由心房肌细胞分泌，促进钠水排出、降低血压",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "肾素-血管紧张素-醛固酮系统(RAAS)是血压长期调控的重要体液机制",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "心血管系统的所有调节反应都在数秒内完成",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "压力感受性反射(窦弓反射)通过监测颈动脉窦和主动脉弓的压力变化来快速调节血压",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确:压力反射。B正确:RAAS系统。A正确:ANP功能。C错误:压力反射在数秒内响应；RAAS在数分钟到数天的时间尺度上作用；长期血压调控涉及肾脏对体液容量的调节。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "心血管调节",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1521994724",
+  "tags": []
+ },
+ "BQ-homeostasis-4cc538f609e0": {
+  "type": "mtf",
+  "question": "关于心血管系统的神经体液调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "心血管系统的所有调节反应都在数秒内完成",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "压力感受性反射(窦弓反射)通过监测颈动脉窦和主动脉弓的压力变化来快速调节血压",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "心房钠尿肽(ANP)由心房肌细胞分泌，促进钠水排出、降低血压",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "肾素-血管紧张素-醛固酮系统(RAAS)是血压长期调控的重要体液机制",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确:压力反射。D正确:RAAS系统。C正确:ANP功能。A错误:压力反射在数秒内响应；RAAS在数分钟到数天的时间尺度上作用；长期血压调控涉及肾脏对体液容量的调节。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "心血管调节",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1521994724",
+  "tags": []
+ },
+ "BQ-homeostasis-951a1381900f": {
+  "type": "mtf",
+  "question": "关于心血管系统的神经体液调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "心血管系统的所有调节反应都在数秒内完成",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "压力感受性反射(窦弓反射)通过监测颈动脉窦和主动脉弓的压力变化来快速调节血压",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "肾素-血管紧张素-醛固酮系统(RAAS)是血压长期调控的重要体液机制",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "心房钠尿肽(ANP)由心房肌细胞分泌，促进钠水排出、降低血压",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确:压力反射。C正确:RAAS系统。D正确:ANP功能。A错误:压力反射在数秒内响应；RAAS在数分钟到数天的时间尺度上作用；长期血压调控涉及肾脏对体液容量的调节。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "心血管调节",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1521994724",
+  "tags": []
+ },
+ "BQ-homeostasis-4b6b416865a8": {
+  "type": "mtf",
+  "question": "关于心血管系统的神经体液调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "心血管系统的所有调节反应都在数秒内完成",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "心房钠尿肽(ANP)由心房肌细胞分泌，促进钠水排出、降低血压",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "压力感受性反射(窦弓反射)通过监测颈动脉窦和主动脉弓的压力变化来快速调节血压",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "肾素-血管紧张素-醛固酮系统(RAAS)是血压长期调控的重要体液机制",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确:压力反射。D正确:RAAS系统。B正确:ANP功能。A错误:压力反射在数秒内响应；RAAS在数分钟到数天的时间尺度上作用；长期血压调控涉及肾脏对体液容量的调节。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "心血管调节",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1521994724",
+  "tags": []
+ },
+ "BQ-homeostasis-76f5a0134f8e": {
+  "type": "mtf",
+  "question": "关于心血管系统的神经体液调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "心血管系统的所有调节反应都在数秒内完成",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "心房钠尿肽(ANP)由心房肌细胞分泌，促进钠水排出、降低血压",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "肾素-血管紧张素-醛固酮系统(RAAS)是血压长期调控的重要体液机制",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "压力感受性反射(窦弓反射)通过监测颈动脉窦和主动脉弓的压力变化来快速调节血压",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确:压力反射。C正确:RAAS系统。B正确:ANP功能。A错误:压力反射在数秒内响应；RAAS在数分钟到数天的时间尺度上作用；长期血压调控涉及肾脏对体液容量的调节。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "心血管调节",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1521994724",
+  "tags": []
+ },
+ "BQ-homeostasis-6c9680dbff0d": {
+  "type": "mtf",
+  "question": "关于心血管系统的神经体液调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "心血管系统的所有调节反应都在数秒内完成",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "肾素-血管紧张素-醛固酮系统(RAAS)是血压长期调控的重要体液机制",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "压力感受性反射(窦弓反射)通过监测颈动脉窦和主动脉弓的压力变化来快速调节血压",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "心房钠尿肽(ANP)由心房肌细胞分泌，促进钠水排出、降低血压",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确:压力反射。B正确:RAAS系统。D正确:ANP功能。A错误:压力反射在数秒内响应；RAAS在数分钟到数天的时间尺度上作用；长期血压调控涉及肾脏对体液容量的调节。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "心血管调节",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1521994724",
+  "tags": []
+ },
+ "BQ-homeostasis-657aa8ccdb7d": {
+  "type": "mtf",
+  "question": "关于心血管系统的神经体液调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "心血管系统的所有调节反应都在数秒内完成",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "肾素-血管紧张素-醛固酮系统(RAAS)是血压长期调控的重要体液机制",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "心房钠尿肽(ANP)由心房肌细胞分泌，促进钠水排出、降低血压",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "压力感受性反射(窦弓反射)通过监测颈动脉窦和主动脉弓的压力变化来快速调节血压",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确:压力反射。B正确:RAAS系统。C正确:ANP功能。A错误:压力反射在数秒内响应；RAAS在数分钟到数天的时间尺度上作用；长期血压调控涉及肾脏对体液容量的调节。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "心血管调节",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1521994724",
+  "tags": []
+ },
+ "BQ-homeostasis-6a83e3ff0c48": {
+  "type": "mtf",
+  "question": "关于心血管系统的神经体液调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "肾素-血管紧张素-醛固酮系统(RAAS)是血压长期调控的重要体液机制",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "压力感受性反射(窦弓反射)通过监测颈动脉窦和主动脉弓的压力变化来快速调节血压",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "心房钠尿肽(ANP)由心房肌细胞分泌，促进钠水排出、降低血压",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "心血管系统的所有调节反应都在数秒内完成",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确:压力反射。A正确:RAAS系统。C正确:ANP功能。D错误:压力反射在数秒内响应；RAAS在数分钟到数天的时间尺度上作用；长期血压调控涉及肾脏对体液容量的调节。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "心血管调节",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1521994724",
+  "tags": []
+ },
+ "BQ-homeostasis-a03238b0d955": {
+  "type": "mtf",
+  "question": "关于心血管系统的神经体液调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "肾素-血管紧张素-醛固酮系统(RAAS)是血压长期调控的重要体液机制",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "压力感受性反射(窦弓反射)通过监测颈动脉窦和主动脉弓的压力变化来快速调节血压",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "心血管系统的所有调节反应都在数秒内完成",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "心房钠尿肽(ANP)由心房肌细胞分泌，促进钠水排出、降低血压",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确:压力反射。A正确:RAAS系统。D正确:ANP功能。C错误:压力反射在数秒内响应；RAAS在数分钟到数天的时间尺度上作用；长期血压调控涉及肾脏对体液容量的调节。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "心血管调节",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1521994724",
+  "tags": []
+ },
+ "BQ-homeostasis-88386b773f3f": {
+  "type": "mtf",
+  "question": "关于心血管系统的神经体液调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "肾素-血管紧张素-醛固酮系统(RAAS)是血压长期调控的重要体液机制",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "心房钠尿肽(ANP)由心房肌细胞分泌，促进钠水排出、降低血压",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "压力感受性反射(窦弓反射)通过监测颈动脉窦和主动脉弓的压力变化来快速调节血压",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "心血管系统的所有调节反应都在数秒内完成",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确:压力反射。A正确:RAAS系统。B正确:ANP功能。D错误:压力反射在数秒内响应；RAAS在数分钟到数天的时间尺度上作用；长期血压调控涉及肾脏对体液容量的调节。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "心血管调节",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1521994724",
+  "tags": []
+ },
+ "BQ-homeostasis-47f600c60052": {
+  "type": "mtf",
+  "question": "关于心血管系统的神经体液调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "肾素-血管紧张素-醛固酮系统(RAAS)是血压长期调控的重要体液机制",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "心房钠尿肽(ANP)由心房肌细胞分泌，促进钠水排出、降低血压",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "心血管系统的所有调节反应都在数秒内完成",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "压力感受性反射(窦弓反射)通过监测颈动脉窦和主动脉弓的压力变化来快速调节血压",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确:压力反射。A正确:RAAS系统。B正确:ANP功能。C错误:压力反射在数秒内响应；RAAS在数分钟到数天的时间尺度上作用；长期血压调控涉及肾脏对体液容量的调节。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "心血管调节",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1521994724",
+  "tags": []
+ },
+ "BQ-homeostasis-8f1e1ace279e": {
+  "type": "mtf",
+  "question": "关于心血管系统的神经体液调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "肾素-血管紧张素-醛固酮系统(RAAS)是血压长期调控的重要体液机制",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "心血管系统的所有调节反应都在数秒内完成",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "压力感受性反射(窦弓反射)通过监测颈动脉窦和主动脉弓的压力变化来快速调节血压",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "心房钠尿肽(ANP)由心房肌细胞分泌，促进钠水排出、降低血压",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确:压力反射。A正确:RAAS系统。D正确:ANP功能。B错误:压力反射在数秒内响应；RAAS在数分钟到数天的时间尺度上作用；长期血压调控涉及肾脏对体液容量的调节。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "心血管调节",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1521994724",
+  "tags": []
+ },
+ "BQ-homeostasis-c6a2720d754a": {
+  "type": "mtf",
+  "question": "关于心血管系统的神经体液调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "肾素-血管紧张素-醛固酮系统(RAAS)是血压长期调控的重要体液机制",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "心血管系统的所有调节反应都在数秒内完成",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "心房钠尿肽(ANP)由心房肌细胞分泌，促进钠水排出、降低血压",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "压力感受性反射(窦弓反射)通过监测颈动脉窦和主动脉弓的压力变化来快速调节血压",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确:压力反射。A正确:RAAS系统。C正确:ANP功能。B错误:压力反射在数秒内响应；RAAS在数分钟到数天的时间尺度上作用；长期血压调控涉及肾脏对体液容量的调节。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "心血管调节",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1521994724",
+  "tags": []
+ },
+ "BQ-homeostasis-b5722466f5b1": {
+  "type": "mtf",
+  "question": "关于肾素-血管紧张素系统与血压调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "ACE抑制剂(如卡托普利)阻断AngI→AngII的转换,用于治疗高血压",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "AngII仅通过收缩血管升高血压",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "肾小球旁器细胞在低血压或低Na⁺刺激下分泌肾素",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "血管紧张素II是强效的血管收缩剂,并刺激醛固酮分泌",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:AngII有多重效应——血管收缩、刺激醛固酮→Na⁺重吸收、刺激渴觉中枢→饮水、刺激ADH释放等多途径升高血压。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "血压调节",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2029604007",
+  "tags": []
+ },
+ "BQ-homeostasis-25e1715d80d7": {
+  "type": "mtf",
+  "question": "关于肾素-血管紧张素系统与血压调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "ACE抑制剂(如卡托普利)阻断AngI→AngII的转换,用于治疗高血压",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "AngII仅通过收缩血管升高血压",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "血管紧张素II是强效的血管收缩剂,并刺激醛固酮分泌",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "肾小球旁器细胞在低血压或低Na⁺刺激下分泌肾素",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:AngII有多重效应——血管收缩、刺激醛固酮→Na⁺重吸收、刺激渴觉中枢→饮水、刺激ADH释放等多途径升高血压。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "血压调节",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2029604007",
+  "tags": []
+ },
+ "BQ-homeostasis-b24bace5ba15": {
+  "type": "mtf",
+  "question": "关于肾素-血管紧张素系统与血压调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "ACE抑制剂(如卡托普利)阻断AngI→AngII的转换,用于治疗高血压",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "肾小球旁器细胞在低血压或低Na⁺刺激下分泌肾素",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "AngII仅通过收缩血管升高血压",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "血管紧张素II是强效的血管收缩剂,并刺激醛固酮分泌",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:AngII有多重效应——血管收缩、刺激醛固酮→Na⁺重吸收、刺激渴觉中枢→饮水、刺激ADH释放等多途径升高血压。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "血压调节",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2029604007",
+  "tags": []
+ },
+ "BQ-homeostasis-2d2814e0dd3b": {
+  "type": "mtf",
+  "question": "关于肾素-血管紧张素系统与血压调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "ACE抑制剂(如卡托普利)阻断AngI→AngII的转换,用于治疗高血压",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "肾小球旁器细胞在低血压或低Na⁺刺激下分泌肾素",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "血管紧张素II是强效的血管收缩剂,并刺激醛固酮分泌",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "AngII仅通过收缩血管升高血压",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:AngII有多重效应——血管收缩、刺激醛固酮→Na⁺重吸收、刺激渴觉中枢→饮水、刺激ADH释放等多途径升高血压。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "血压调节",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2029604007",
+  "tags": []
+ },
+ "BQ-homeostasis-4826043b8de6": {
+  "type": "mtf",
+  "question": "关于肾素-血管紧张素系统与血压调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "ACE抑制剂(如卡托普利)阻断AngI→AngII的转换,用于治疗高血压",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "血管紧张素II是强效的血管收缩剂,并刺激醛固酮分泌",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "AngII仅通过收缩血管升高血压",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "肾小球旁器细胞在低血压或低Na⁺刺激下分泌肾素",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:AngII有多重效应——血管收缩、刺激醛固酮→Na⁺重吸收、刺激渴觉中枢→饮水、刺激ADH释放等多途径升高血压。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "血压调节",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2029604007",
+  "tags": []
+ },
+ "BQ-homeostasis-4f619d802a0a": {
+  "type": "mtf",
+  "question": "关于肾素-血管紧张素系统与血压调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "ACE抑制剂(如卡托普利)阻断AngI→AngII的转换,用于治疗高血压",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "血管紧张素II是强效的血管收缩剂,并刺激醛固酮分泌",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "肾小球旁器细胞在低血压或低Na⁺刺激下分泌肾素",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "AngII仅通过收缩血管升高血压",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:AngII有多重效应——血管收缩、刺激醛固酮→Na⁺重吸收、刺激渴觉中枢→饮水、刺激ADH释放等多途径升高血压。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "血压调节",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2029604007",
+  "tags": []
+ },
+ "BQ-homeostasis-f7385abe7037": {
+  "type": "mtf",
+  "question": "关于肾素-血管紧张素系统与血压调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "AngII仅通过收缩血管升高血压",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "ACE抑制剂(如卡托普利)阻断AngI→AngII的转换,用于治疗高血压",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "肾小球旁器细胞在低血压或低Na⁺刺激下分泌肾素",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "血管紧张素II是强效的血管收缩剂,并刺激醛固酮分泌",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:AngII有多重效应——血管收缩、刺激醛固酮→Na⁺重吸收、刺激渴觉中枢→饮水、刺激ADH释放等多途径升高血压。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "血压调节",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2029604007",
+  "tags": []
+ },
+ "BQ-homeostasis-3414cbc152ff": {
+  "type": "mtf",
+  "question": "关于肾素-血管紧张素系统与血压调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "AngII仅通过收缩血管升高血压",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "ACE抑制剂(如卡托普利)阻断AngI→AngII的转换,用于治疗高血压",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "血管紧张素II是强效的血管收缩剂,并刺激醛固酮分泌",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "肾小球旁器细胞在低血压或低Na⁺刺激下分泌肾素",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:AngII有多重效应——血管收缩、刺激醛固酮→Na⁺重吸收、刺激渴觉中枢→饮水、刺激ADH释放等多途径升高血压。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "血压调节",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2029604007",
+  "tags": []
+ },
+ "BQ-homeostasis-e545042d54c8": {
+  "type": "mtf",
+  "question": "关于肾素-血管紧张素系统与血压调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "AngII仅通过收缩血管升高血压",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "肾小球旁器细胞在低血压或低Na⁺刺激下分泌肾素",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "ACE抑制剂(如卡托普利)阻断AngI→AngII的转换,用于治疗高血压",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "血管紧张素II是强效的血管收缩剂,并刺激醛固酮分泌",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:AngII有多重效应——血管收缩、刺激醛固酮→Na⁺重吸收、刺激渴觉中枢→饮水、刺激ADH释放等多途径升高血压。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "血压调节",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2029604007",
+  "tags": []
+ },
+ "BQ-homeostasis-f7249cb3c047": {
+  "type": "mtf",
+  "question": "关于肾素-血管紧张素系统与血压调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "AngII仅通过收缩血管升高血压",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "肾小球旁器细胞在低血压或低Na⁺刺激下分泌肾素",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "血管紧张素II是强效的血管收缩剂,并刺激醛固酮分泌",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "ACE抑制剂(如卡托普利)阻断AngI→AngII的转换,用于治疗高血压",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:AngII有多重效应——血管收缩、刺激醛固酮→Na⁺重吸收、刺激渴觉中枢→饮水、刺激ADH释放等多途径升高血压。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "血压调节",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2029604007",
+  "tags": []
+ },
+ "BQ-homeostasis-822f98d634cc": {
+  "type": "mtf",
+  "question": "关于肾素-血管紧张素系统与血压调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "AngII仅通过收缩血管升高血压",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "血管紧张素II是强效的血管收缩剂,并刺激醛固酮分泌",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "ACE抑制剂(如卡托普利)阻断AngI→AngII的转换,用于治疗高血压",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "肾小球旁器细胞在低血压或低Na⁺刺激下分泌肾素",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:AngII有多重效应——血管收缩、刺激醛固酮→Na⁺重吸收、刺激渴觉中枢→饮水、刺激ADH释放等多途径升高血压。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "血压调节",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2029604007",
+  "tags": []
+ },
+ "BQ-homeostasis-fc7f1d08535b": {
+  "type": "mtf",
+  "question": "关于肾素-血管紧张素系统与血压调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "AngII仅通过收缩血管升高血压",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "血管紧张素II是强效的血管收缩剂,并刺激醛固酮分泌",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "肾小球旁器细胞在低血压或低Na⁺刺激下分泌肾素",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "ACE抑制剂(如卡托普利)阻断AngI→AngII的转换,用于治疗高血压",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:AngII有多重效应——血管收缩、刺激醛固酮→Na⁺重吸收、刺激渴觉中枢→饮水、刺激ADH释放等多途径升高血压。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "血压调节",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2029604007",
+  "tags": []
+ },
+ "BQ-homeostasis-94de34a5e6b8": {
+  "type": "mtf",
+  "question": "关于肾素-血管紧张素系统与血压调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "肾小球旁器细胞在低血压或低Na⁺刺激下分泌肾素",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "ACE抑制剂(如卡托普利)阻断AngI→AngII的转换,用于治疗高血压",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "AngII仅通过收缩血管升高血压",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "血管紧张素II是强效的血管收缩剂,并刺激醛固酮分泌",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:AngII有多重效应——血管收缩、刺激醛固酮→Na⁺重吸收、刺激渴觉中枢→饮水、刺激ADH释放等多途径升高血压。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "血压调节",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2029604007",
+  "tags": []
+ },
+ "BQ-homeostasis-a001f81fec1a": {
+  "type": "mtf",
+  "question": "关于肾素-血管紧张素系统与血压调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "肾小球旁器细胞在低血压或低Na⁺刺激下分泌肾素",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "ACE抑制剂(如卡托普利)阻断AngI→AngII的转换,用于治疗高血压",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "血管紧张素II是强效的血管收缩剂,并刺激醛固酮分泌",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "AngII仅通过收缩血管升高血压",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:AngII有多重效应——血管收缩、刺激醛固酮→Na⁺重吸收、刺激渴觉中枢→饮水、刺激ADH释放等多途径升高血压。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "血压调节",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2029604007",
+  "tags": []
+ },
+ "BQ-homeostasis-fcaa118f84d6": {
+  "type": "mtf",
+  "question": "关于肾素-血管紧张素系统与血压调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "肾小球旁器细胞在低血压或低Na⁺刺激下分泌肾素",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "AngII仅通过收缩血管升高血压",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "ACE抑制剂(如卡托普利)阻断AngI→AngII的转换,用于治疗高血压",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "血管紧张素II是强效的血管收缩剂,并刺激醛固酮分泌",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:AngII有多重效应——血管收缩、刺激醛固酮→Na⁺重吸收、刺激渴觉中枢→饮水、刺激ADH释放等多途径升高血压。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "血压调节",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2029604007",
+  "tags": []
+ },
+ "BQ-homeostasis-0eac5ed2ef8b": {
+  "type": "mtf",
+  "question": "关于肾素-血管紧张素系统与血压调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "肾小球旁器细胞在低血压或低Na⁺刺激下分泌肾素",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "AngII仅通过收缩血管升高血压",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "血管紧张素II是强效的血管收缩剂,并刺激醛固酮分泌",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "ACE抑制剂(如卡托普利)阻断AngI→AngII的转换,用于治疗高血压",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:AngII有多重效应——血管收缩、刺激醛固酮→Na⁺重吸收、刺激渴觉中枢→饮水、刺激ADH释放等多途径升高血压。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "血压调节",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2029604007",
+  "tags": []
+ },
+ "BQ-homeostasis-c309e58da0b0": {
+  "type": "mtf",
+  "question": "关于肾素-血管紧张素系统与血压调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "肾小球旁器细胞在低血压或低Na⁺刺激下分泌肾素",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "血管紧张素II是强效的血管收缩剂,并刺激醛固酮分泌",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "ACE抑制剂(如卡托普利)阻断AngI→AngII的转换,用于治疗高血压",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "AngII仅通过收缩血管升高血压",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:AngII有多重效应——血管收缩、刺激醛固酮→Na⁺重吸收、刺激渴觉中枢→饮水、刺激ADH释放等多途径升高血压。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "血压调节",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2029604007",
+  "tags": []
+ },
+ "BQ-homeostasis-8b4cd619fcb3": {
+  "type": "mtf",
+  "question": "关于肾素-血管紧张素系统与血压调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "肾小球旁器细胞在低血压或低Na⁺刺激下分泌肾素",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "血管紧张素II是强效的血管收缩剂,并刺激醛固酮分泌",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "AngII仅通过收缩血管升高血压",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "ACE抑制剂(如卡托普利)阻断AngI→AngII的转换,用于治疗高血压",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:AngII有多重效应——血管收缩、刺激醛固酮→Na⁺重吸收、刺激渴觉中枢→饮水、刺激ADH释放等多途径升高血压。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "血压调节",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2029604007",
+  "tags": []
+ },
+ "BQ-homeostasis-2e3cc4a91180": {
+  "type": "mtf",
+  "question": "关于肾素-血管紧张素系统与血压调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "血管紧张素II是强效的血管收缩剂,并刺激醛固酮分泌",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "ACE抑制剂(如卡托普利)阻断AngI→AngII的转换,用于治疗高血压",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "AngII仅通过收缩血管升高血压",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "肾小球旁器细胞在低血压或低Na⁺刺激下分泌肾素",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:AngII有多重效应——血管收缩、刺激醛固酮→Na⁺重吸收、刺激渴觉中枢→饮水、刺激ADH释放等多途径升高血压。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "血压调节",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2029604007",
+  "tags": []
+ },
+ "BQ-homeostasis-aebfbdfdf7fe": {
+  "type": "mtf",
+  "question": "关于肾素-血管紧张素系统与血压调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "血管紧张素II是强效的血管收缩剂,并刺激醛固酮分泌",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "ACE抑制剂(如卡托普利)阻断AngI→AngII的转换,用于治疗高血压",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "肾小球旁器细胞在低血压或低Na⁺刺激下分泌肾素",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "AngII仅通过收缩血管升高血压",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:AngII有多重效应——血管收缩、刺激醛固酮→Na⁺重吸收、刺激渴觉中枢→饮水、刺激ADH释放等多途径升高血压。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "血压调节",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2029604007",
+  "tags": []
+ },
+ "BQ-homeostasis-742df4f99e60": {
+  "type": "mtf",
+  "question": "关于肾素-血管紧张素系统与血压调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "血管紧张素II是强效的血管收缩剂,并刺激醛固酮分泌",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "AngII仅通过收缩血管升高血压",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "ACE抑制剂(如卡托普利)阻断AngI→AngII的转换,用于治疗高血压",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "肾小球旁器细胞在低血压或低Na⁺刺激下分泌肾素",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:AngII有多重效应——血管收缩、刺激醛固酮→Na⁺重吸收、刺激渴觉中枢→饮水、刺激ADH释放等多途径升高血压。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "血压调节",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2029604007",
+  "tags": []
+ },
+ "BQ-homeostasis-21c0910b2270": {
+  "type": "mtf",
+  "question": "关于肾素-血管紧张素系统与血压调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "血管紧张素II是强效的血管收缩剂,并刺激醛固酮分泌",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "AngII仅通过收缩血管升高血压",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "肾小球旁器细胞在低血压或低Na⁺刺激下分泌肾素",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "ACE抑制剂(如卡托普利)阻断AngI→AngII的转换,用于治疗高血压",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:AngII有多重效应——血管收缩、刺激醛固酮→Na⁺重吸收、刺激渴觉中枢→饮水、刺激ADH释放等多途径升高血压。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "血压调节",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2029604007",
+  "tags": []
+ },
+ "BQ-homeostasis-69ff656ab903": {
+  "type": "mtf",
+  "question": "关于肾素-血管紧张素系统与血压调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "血管紧张素II是强效的血管收缩剂,并刺激醛固酮分泌",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "肾小球旁器细胞在低血压或低Na⁺刺激下分泌肾素",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "ACE抑制剂(如卡托普利)阻断AngI→AngII的转换,用于治疗高血压",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "AngII仅通过收缩血管升高血压",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:AngII有多重效应——血管收缩、刺激醛固酮→Na⁺重吸收、刺激渴觉中枢→饮水、刺激ADH释放等多途径升高血压。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "血压调节",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2029604007",
+  "tags": []
+ },
+ "BQ-homeostasis-52ee8da3a863": {
+  "type": "mtf",
+  "question": "关于肾素-血管紧张素系统与血压调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "血管紧张素II是强效的血管收缩剂,并刺激醛固酮分泌",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "肾小球旁器细胞在低血压或低Na⁺刺激下分泌肾素",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "AngII仅通过收缩血管升高血压",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "ACE抑制剂(如卡托普利)阻断AngI→AngII的转换,用于治疗高血压",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:AngII有多重效应——血管收缩、刺激醛固酮→Na⁺重吸收、刺激渴觉中枢→饮水、刺激ADH释放等多途径升高血压。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "血压调节",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2029604007",
+  "tags": []
+ },
+ "BQ-homeostasis-be2a1e6c42f7": {
+  "type": "mtf",
+  "question": "关于肾脏对酸碱平衡的调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "所有肾单位的酸碱调节功能完全相同",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "谷氨酰胺在肾小管上皮细胞中脱氨产生NH₃和HCO₃⁻，NH₃弥散入管腔缓冲分泌的H⁺形成NH₄⁺",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "近端小管通过Na⁺-H⁺交换体和H⁺-ATPase分泌H⁺，同时重吸收HCO₃⁻",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "集合管闰细胞中的A型闰细胞分泌H⁺，B型闰细胞分泌HCO₃⁻",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确:近端小管的酸碱转运。D正确:闰细胞的分型。B正确:氨生成在酸碱调节中的作用。A错误:皮质肾单位和近髓肾单位在结构和功能上有差异。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "酸碱平衡",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "335365157",
+  "tags": []
+ },
+ "BQ-homeostasis-52795a27cae6": {
+  "type": "mtf",
+  "question": "关于肾脏对酸碱平衡的调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "所有肾单位的酸碱调节功能完全相同",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "谷氨酰胺在肾小管上皮细胞中脱氨产生NH₃和HCO₃⁻，NH₃弥散入管腔缓冲分泌的H⁺形成NH₄⁺",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "集合管闰细胞中的A型闰细胞分泌H⁺，B型闰细胞分泌HCO₃⁻",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "近端小管通过Na⁺-H⁺交换体和H⁺-ATPase分泌H⁺，同时重吸收HCO₃⁻",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确:近端小管的酸碱转运。C正确:闰细胞的分型。B正确:氨生成在酸碱调节中的作用。A错误:皮质肾单位和近髓肾单位在结构和功能上有差异。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "酸碱平衡",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "335365157",
+  "tags": []
+ },
+ "BQ-homeostasis-3f011ff599c6": {
+  "type": "mtf",
+  "question": "关于肾脏对酸碱平衡的调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "所有肾单位的酸碱调节功能完全相同",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "近端小管通过Na⁺-H⁺交换体和H⁺-ATPase分泌H⁺，同时重吸收HCO₃⁻",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "谷氨酰胺在肾小管上皮细胞中脱氨产生NH₃和HCO₃⁻，NH₃弥散入管腔缓冲分泌的H⁺形成NH₄⁺",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "集合管闰细胞中的A型闰细胞分泌H⁺，B型闰细胞分泌HCO₃⁻",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确:近端小管的酸碱转运。D正确:闰细胞的分型。C正确:氨生成在酸碱调节中的作用。A错误:皮质肾单位和近髓肾单位在结构和功能上有差异。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "酸碱平衡",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "335365157",
+  "tags": []
+ },
+ "BQ-homeostasis-2a01ca5e7fce": {
+  "type": "mtf",
+  "question": "关于肾脏对酸碱平衡的调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "所有肾单位的酸碱调节功能完全相同",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "近端小管通过Na⁺-H⁺交换体和H⁺-ATPase分泌H⁺，同时重吸收HCO₃⁻",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "集合管闰细胞中的A型闰细胞分泌H⁺，B型闰细胞分泌HCO₃⁻",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "谷氨酰胺在肾小管上皮细胞中脱氨产生NH₃和HCO₃⁻，NH₃弥散入管腔缓冲分泌的H⁺形成NH₄⁺",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确:近端小管的酸碱转运。C正确:闰细胞的分型。D正确:氨生成在酸碱调节中的作用。A错误:皮质肾单位和近髓肾单位在结构和功能上有差异。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "酸碱平衡",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "335365157",
+  "tags": []
+ },
+ "BQ-homeostasis-d16e59926be5": {
+  "type": "mtf",
+  "question": "关于肾脏对酸碱平衡的调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "所有肾单位的酸碱调节功能完全相同",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "集合管闰细胞中的A型闰细胞分泌H⁺，B型闰细胞分泌HCO₃⁻",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "谷氨酰胺在肾小管上皮细胞中脱氨产生NH₃和HCO₃⁻，NH₃弥散入管腔缓冲分泌的H⁺形成NH₄⁺",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "近端小管通过Na⁺-H⁺交换体和H⁺-ATPase分泌H⁺，同时重吸收HCO₃⁻",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确:近端小管的酸碱转运。B正确:闰细胞的分型。C正确:氨生成在酸碱调节中的作用。A错误:皮质肾单位和近髓肾单位在结构和功能上有差异。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "酸碱平衡",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "335365157",
+  "tags": []
+ },
+ "BQ-homeostasis-72592abd3353": {
+  "type": "mtf",
+  "question": "关于肾脏对酸碱平衡的调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "所有肾单位的酸碱调节功能完全相同",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "集合管闰细胞中的A型闰细胞分泌H⁺，B型闰细胞分泌HCO₃⁻",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "近端小管通过Na⁺-H⁺交换体和H⁺-ATPase分泌H⁺，同时重吸收HCO₃⁻",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "谷氨酰胺在肾小管上皮细胞中脱氨产生NH₃和HCO₃⁻，NH₃弥散入管腔缓冲分泌的H⁺形成NH₄⁺",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确:近端小管的酸碱转运。B正确:闰细胞的分型。D正确:氨生成在酸碱调节中的作用。A错误:皮质肾单位和近髓肾单位在结构和功能上有差异。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "酸碱平衡",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "335365157",
+  "tags": []
+ },
+ "BQ-homeostasis-0b79aacbc957": {
+  "type": "mtf",
+  "question": "关于肾脏对酸碱平衡的调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "谷氨酰胺在肾小管上皮细胞中脱氨产生NH₃和HCO₃⁻，NH₃弥散入管腔缓冲分泌的H⁺形成NH₄⁺",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "所有肾单位的酸碱调节功能完全相同",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "近端小管通过Na⁺-H⁺交换体和H⁺-ATPase分泌H⁺，同时重吸收HCO₃⁻",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "集合管闰细胞中的A型闰细胞分泌H⁺，B型闰细胞分泌HCO₃⁻",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确:近端小管的酸碱转运。D正确:闰细胞的分型。A正确:氨生成在酸碱调节中的作用。B错误:皮质肾单位和近髓肾单位在结构和功能上有差异。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "酸碱平衡",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "335365157",
+  "tags": []
+ },
+ "BQ-homeostasis-21e983b26e36": {
+  "type": "mtf",
+  "question": "关于肾脏对酸碱平衡的调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "谷氨酰胺在肾小管上皮细胞中脱氨产生NH₃和HCO₃⁻，NH₃弥散入管腔缓冲分泌的H⁺形成NH₄⁺",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "所有肾单位的酸碱调节功能完全相同",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "集合管闰细胞中的A型闰细胞分泌H⁺，B型闰细胞分泌HCO₃⁻",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "近端小管通过Na⁺-H⁺交换体和H⁺-ATPase分泌H⁺，同时重吸收HCO₃⁻",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确:近端小管的酸碱转运。C正确:闰细胞的分型。A正确:氨生成在酸碱调节中的作用。B错误:皮质肾单位和近髓肾单位在结构和功能上有差异。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "酸碱平衡",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "335365157",
+  "tags": []
+ },
+ "BQ-homeostasis-bd74c30537a1": {
+  "type": "mtf",
+  "question": "关于肾脏对酸碱平衡的调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "谷氨酰胺在肾小管上皮细胞中脱氨产生NH₃和HCO₃⁻，NH₃弥散入管腔缓冲分泌的H⁺形成NH₄⁺",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "近端小管通过Na⁺-H⁺交换体和H⁺-ATPase分泌H⁺，同时重吸收HCO₃⁻",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "所有肾单位的酸碱调节功能完全相同",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "集合管闰细胞中的A型闰细胞分泌H⁺，B型闰细胞分泌HCO₃⁻",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确:近端小管的酸碱转运。D正确:闰细胞的分型。A正确:氨生成在酸碱调节中的作用。C错误:皮质肾单位和近髓肾单位在结构和功能上有差异。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "酸碱平衡",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "335365157",
+  "tags": []
+ },
+ "BQ-homeostasis-b0519a888dfa": {
+  "type": "mtf",
+  "question": "关于肾脏对酸碱平衡的调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "谷氨酰胺在肾小管上皮细胞中脱氨产生NH₃和HCO₃⁻，NH₃弥散入管腔缓冲分泌的H⁺形成NH₄⁺",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "近端小管通过Na⁺-H⁺交换体和H⁺-ATPase分泌H⁺，同时重吸收HCO₃⁻",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "集合管闰细胞中的A型闰细胞分泌H⁺，B型闰细胞分泌HCO₃⁻",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "所有肾单位的酸碱调节功能完全相同",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确:近端小管的酸碱转运。C正确:闰细胞的分型。A正确:氨生成在酸碱调节中的作用。D错误:皮质肾单位和近髓肾单位在结构和功能上有差异。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "酸碱平衡",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "335365157",
+  "tags": []
+ },
+ "BQ-homeostasis-f8de8537e2cd": {
+  "type": "mtf",
+  "question": "关于肾脏对酸碱平衡的调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "谷氨酰胺在肾小管上皮细胞中脱氨产生NH₃和HCO₃⁻，NH₃弥散入管腔缓冲分泌的H⁺形成NH₄⁺",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "集合管闰细胞中的A型闰细胞分泌H⁺，B型闰细胞分泌HCO₃⁻",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "所有肾单位的酸碱调节功能完全相同",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "近端小管通过Na⁺-H⁺交换体和H⁺-ATPase分泌H⁺，同时重吸收HCO₃⁻",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确:近端小管的酸碱转运。B正确:闰细胞的分型。A正确:氨生成在酸碱调节中的作用。C错误:皮质肾单位和近髓肾单位在结构和功能上有差异。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "酸碱平衡",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "335365157",
+  "tags": []
+ },
+ "BQ-homeostasis-96f988ada5b7": {
+  "type": "mtf",
+  "question": "关于肾脏对酸碱平衡的调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "谷氨酰胺在肾小管上皮细胞中脱氨产生NH₃和HCO₃⁻，NH₃弥散入管腔缓冲分泌的H⁺形成NH₄⁺",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "集合管闰细胞中的A型闰细胞分泌H⁺，B型闰细胞分泌HCO₃⁻",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "近端小管通过Na⁺-H⁺交换体和H⁺-ATPase分泌H⁺，同时重吸收HCO₃⁻",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "所有肾单位的酸碱调节功能完全相同",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确:近端小管的酸碱转运。B正确:闰细胞的分型。A正确:氨生成在酸碱调节中的作用。D错误:皮质肾单位和近髓肾单位在结构和功能上有差异。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "酸碱平衡",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "335365157",
+  "tags": []
+ },
+ "BQ-homeostasis-8668f0f74291": {
+  "type": "mtf",
+  "question": "关于肾脏对酸碱平衡的调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "近端小管通过Na⁺-H⁺交换体和H⁺-ATPase分泌H⁺，同时重吸收HCO₃⁻",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "所有肾单位的酸碱调节功能完全相同",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "谷氨酰胺在肾小管上皮细胞中脱氨产生NH₃和HCO₃⁻，NH₃弥散入管腔缓冲分泌的H⁺形成NH₄⁺",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "集合管闰细胞中的A型闰细胞分泌H⁺，B型闰细胞分泌HCO₃⁻",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确:近端小管的酸碱转运。D正确:闰细胞的分型。C正确:氨生成在酸碱调节中的作用。B错误:皮质肾单位和近髓肾单位在结构和功能上有差异。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "酸碱平衡",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "335365157",
+  "tags": []
+ },
+ "BQ-homeostasis-3199c4f8bb2e": {
+  "type": "mtf",
+  "question": "关于肾脏对酸碱平衡的调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "近端小管通过Na⁺-H⁺交换体和H⁺-ATPase分泌H⁺，同时重吸收HCO₃⁻",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "所有肾单位的酸碱调节功能完全相同",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "集合管闰细胞中的A型闰细胞分泌H⁺，B型闰细胞分泌HCO₃⁻",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "谷氨酰胺在肾小管上皮细胞中脱氨产生NH₃和HCO₃⁻，NH₃弥散入管腔缓冲分泌的H⁺形成NH₄⁺",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确:近端小管的酸碱转运。C正确:闰细胞的分型。D正确:氨生成在酸碱调节中的作用。B错误:皮质肾单位和近髓肾单位在结构和功能上有差异。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "酸碱平衡",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "335365157",
+  "tags": []
+ },
+ "BQ-homeostasis-737b74f309d3": {
+  "type": "mtf",
+  "question": "关于肾脏对酸碱平衡的调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "近端小管通过Na⁺-H⁺交换体和H⁺-ATPase分泌H⁺，同时重吸收HCO₃⁻",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "谷氨酰胺在肾小管上皮细胞中脱氨产生NH₃和HCO₃⁻，NH₃弥散入管腔缓冲分泌的H⁺形成NH₄⁺",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "所有肾单位的酸碱调节功能完全相同",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "集合管闰细胞中的A型闰细胞分泌H⁺，B型闰细胞分泌HCO₃⁻",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确:近端小管的酸碱转运。D正确:闰细胞的分型。B正确:氨生成在酸碱调节中的作用。C错误:皮质肾单位和近髓肾单位在结构和功能上有差异。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "酸碱平衡",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "335365157",
+  "tags": []
+ },
+ "BQ-homeostasis-f8b3337557bb": {
+  "type": "mtf",
+  "question": "关于肾脏对酸碱平衡的调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "近端小管通过Na⁺-H⁺交换体和H⁺-ATPase分泌H⁺，同时重吸收HCO₃⁻",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "谷氨酰胺在肾小管上皮细胞中脱氨产生NH₃和HCO₃⁻，NH₃弥散入管腔缓冲分泌的H⁺形成NH₄⁺",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "集合管闰细胞中的A型闰细胞分泌H⁺，B型闰细胞分泌HCO₃⁻",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "所有肾单位的酸碱调节功能完全相同",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确:近端小管的酸碱转运。C正确:闰细胞的分型。B正确:氨生成在酸碱调节中的作用。D错误:皮质肾单位和近髓肾单位在结构和功能上有差异。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "酸碱平衡",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "335365157",
+  "tags": []
+ },
+ "BQ-homeostasis-43c00b6ea2fc": {
+  "type": "mtf",
+  "question": "关于肾脏对酸碱平衡的调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "近端小管通过Na⁺-H⁺交换体和H⁺-ATPase分泌H⁺，同时重吸收HCO₃⁻",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "集合管闰细胞中的A型闰细胞分泌H⁺，B型闰细胞分泌HCO₃⁻",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "所有肾单位的酸碱调节功能完全相同",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "谷氨酰胺在肾小管上皮细胞中脱氨产生NH₃和HCO₃⁻，NH₃弥散入管腔缓冲分泌的H⁺形成NH₄⁺",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确:近端小管的酸碱转运。B正确:闰细胞的分型。D正确:氨生成在酸碱调节中的作用。C错误:皮质肾单位和近髓肾单位在结构和功能上有差异。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "酸碱平衡",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "335365157",
+  "tags": []
+ },
+ "BQ-homeostasis-9c0f6952d984": {
+  "type": "mtf",
+  "question": "关于肾脏对酸碱平衡的调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "近端小管通过Na⁺-H⁺交换体和H⁺-ATPase分泌H⁺，同时重吸收HCO₃⁻",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "集合管闰细胞中的A型闰细胞分泌H⁺，B型闰细胞分泌HCO₃⁻",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "谷氨酰胺在肾小管上皮细胞中脱氨产生NH₃和HCO₃⁻，NH₃弥散入管腔缓冲分泌的H⁺形成NH₄⁺",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "所有肾单位的酸碱调节功能完全相同",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确:近端小管的酸碱转运。B正确:闰细胞的分型。C正确:氨生成在酸碱调节中的作用。D错误:皮质肾单位和近髓肾单位在结构和功能上有差异。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "酸碱平衡",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "335365157",
+  "tags": []
+ },
+ "BQ-homeostasis-01d5de9e08c1": {
+  "type": "mtf",
+  "question": "关于肾脏对酸碱平衡的调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "集合管闰细胞中的A型闰细胞分泌H⁺，B型闰细胞分泌HCO₃⁻",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "所有肾单位的酸碱调节功能完全相同",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "谷氨酰胺在肾小管上皮细胞中脱氨产生NH₃和HCO₃⁻，NH₃弥散入管腔缓冲分泌的H⁺形成NH₄⁺",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "近端小管通过Na⁺-H⁺交换体和H⁺-ATPase分泌H⁺，同时重吸收HCO₃⁻",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确:近端小管的酸碱转运。A正确:闰细胞的分型。C正确:氨生成在酸碱调节中的作用。B错误:皮质肾单位和近髓肾单位在结构和功能上有差异。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "酸碱平衡",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "335365157",
+  "tags": []
+ },
+ "BQ-homeostasis-455ed7944d65": {
+  "type": "mtf",
+  "question": "关于肾脏对酸碱平衡的调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "集合管闰细胞中的A型闰细胞分泌H⁺，B型闰细胞分泌HCO₃⁻",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "所有肾单位的酸碱调节功能完全相同",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "近端小管通过Na⁺-H⁺交换体和H⁺-ATPase分泌H⁺，同时重吸收HCO₃⁻",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "谷氨酰胺在肾小管上皮细胞中脱氨产生NH₃和HCO₃⁻，NH₃弥散入管腔缓冲分泌的H⁺形成NH₄⁺",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确:近端小管的酸碱转运。A正确:闰细胞的分型。D正确:氨生成在酸碱调节中的作用。B错误:皮质肾单位和近髓肾单位在结构和功能上有差异。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "酸碱平衡",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "335365157",
+  "tags": []
+ },
+ "BQ-homeostasis-6757b06f279b": {
+  "type": "mtf",
+  "question": "关于肾脏对酸碱平衡的调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "集合管闰细胞中的A型闰细胞分泌H⁺，B型闰细胞分泌HCO₃⁻",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "谷氨酰胺在肾小管上皮细胞中脱氨产生NH₃和HCO₃⁻，NH₃弥散入管腔缓冲分泌的H⁺形成NH₄⁺",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "所有肾单位的酸碱调节功能完全相同",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "近端小管通过Na⁺-H⁺交换体和H⁺-ATPase分泌H⁺，同时重吸收HCO₃⁻",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确:近端小管的酸碱转运。A正确:闰细胞的分型。B正确:氨生成在酸碱调节中的作用。C错误:皮质肾单位和近髓肾单位在结构和功能上有差异。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "酸碱平衡",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "335365157",
+  "tags": []
+ },
+ "BQ-homeostasis-fc2b492020b0": {
+  "type": "mtf",
+  "question": "关于肾脏对酸碱平衡的调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "集合管闰细胞中的A型闰细胞分泌H⁺，B型闰细胞分泌HCO₃⁻",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "谷氨酰胺在肾小管上皮细胞中脱氨产生NH₃和HCO₃⁻，NH₃弥散入管腔缓冲分泌的H⁺形成NH₄⁺",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "近端小管通过Na⁺-H⁺交换体和H⁺-ATPase分泌H⁺，同时重吸收HCO₃⁻",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "所有肾单位的酸碱调节功能完全相同",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确:近端小管的酸碱转运。A正确:闰细胞的分型。B正确:氨生成在酸碱调节中的作用。D错误:皮质肾单位和近髓肾单位在结构和功能上有差异。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "酸碱平衡",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "335365157",
+  "tags": []
+ },
+ "BQ-homeostasis-61b27513fb34": {
+  "type": "mtf",
+  "question": "关于肾脏对酸碱平衡的调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "集合管闰细胞中的A型闰细胞分泌H⁺，B型闰细胞分泌HCO₃⁻",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "近端小管通过Na⁺-H⁺交换体和H⁺-ATPase分泌H⁺，同时重吸收HCO₃⁻",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "所有肾单位的酸碱调节功能完全相同",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "谷氨酰胺在肾小管上皮细胞中脱氨产生NH₃和HCO₃⁻，NH₃弥散入管腔缓冲分泌的H⁺形成NH₄⁺",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确:近端小管的酸碱转运。A正确:闰细胞的分型。D正确:氨生成在酸碱调节中的作用。C错误:皮质肾单位和近髓肾单位在结构和功能上有差异。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "酸碱平衡",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "335365157",
+  "tags": []
+ },
+ "BQ-homeostasis-8e90c5ba186f": {
+  "type": "mtf",
+  "question": "关于肾脏对酸碱平衡的调节，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "集合管闰细胞中的A型闰细胞分泌H⁺，B型闰细胞分泌HCO₃⁻",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "近端小管通过Na⁺-H⁺交换体和H⁺-ATPase分泌H⁺，同时重吸收HCO₃⁻",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "谷氨酰胺在肾小管上皮细胞中脱氨产生NH₃和HCO₃⁻，NH₃弥散入管腔缓冲分泌的H⁺形成NH₄⁺",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "所有肾单位的酸碱调节功能完全相同",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确:近端小管的酸碱转运。A正确:闰细胞的分型。C正确:氨生成在酸碱调节中的作用。D错误:皮质肾单位和近髓肾单位在结构和功能上有差异。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "酸碱平衡",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "335365157",
+  "tags": []
+ },
+ "BQ-homeostasis-47b4c8cd5985": {
+  "type": "mtf",
+  "question": "关于骨的重塑与钙稳态，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "活性维生素D(1,25-(OH)₂-D₃)促进肠道吸收钙和磷",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "甲状旁腺激素(PTH)刺激破骨细胞活性,促进骨吸收以升高血钙",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "降钙素抑制破骨细胞活性,降低血钙",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "骨是钙和磷储存的唯一器官",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:骨是钙磷的主要储库(~99%钙在骨中),但牙齿也储存钙,且细胞内质网和线粒体也储存部分钙离子。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "钙稳态",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "45463790",
+  "tags": []
+ },
+ "BQ-homeostasis-cef6a589a0d7": {
+  "type": "mtf",
+  "question": "关于骨的重塑与钙稳态，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "活性维生素D(1,25-(OH)₂-D₃)促进肠道吸收钙和磷",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "甲状旁腺激素(PTH)刺激破骨细胞活性,促进骨吸收以升高血钙",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "骨是钙和磷储存的唯一器官",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "降钙素抑制破骨细胞活性,降低血钙",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:骨是钙磷的主要储库(~99%钙在骨中),但牙齿也储存钙,且细胞内质网和线粒体也储存部分钙离子。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "钙稳态",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "45463790",
+  "tags": []
+ },
+ "BQ-homeostasis-433ce7c94926": {
+  "type": "mtf",
+  "question": "关于骨的重塑与钙稳态，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "活性维生素D(1,25-(OH)₂-D₃)促进肠道吸收钙和磷",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "降钙素抑制破骨细胞活性,降低血钙",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "甲状旁腺激素(PTH)刺激破骨细胞活性,促进骨吸收以升高血钙",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "骨是钙和磷储存的唯一器官",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:骨是钙磷的主要储库(~99%钙在骨中),但牙齿也储存钙,且细胞内质网和线粒体也储存部分钙离子。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "钙稳态",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "45463790",
+  "tags": []
+ },
+ "BQ-homeostasis-28e04ce4e16a": {
+  "type": "mtf",
+  "question": "关于骨的重塑与钙稳态，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "活性维生素D(1,25-(OH)₂-D₃)促进肠道吸收钙和磷",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "降钙素抑制破骨细胞活性,降低血钙",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "骨是钙和磷储存的唯一器官",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "甲状旁腺激素(PTH)刺激破骨细胞活性,促进骨吸收以升高血钙",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:骨是钙磷的主要储库(~99%钙在骨中),但牙齿也储存钙,且细胞内质网和线粒体也储存部分钙离子。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "钙稳态",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "45463790",
+  "tags": []
+ },
+ "BQ-homeostasis-471bb2eefe57": {
+  "type": "mtf",
+  "question": "关于骨的重塑与钙稳态，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "活性维生素D(1,25-(OH)₂-D₃)促进肠道吸收钙和磷",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "骨是钙和磷储存的唯一器官",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "甲状旁腺激素(PTH)刺激破骨细胞活性,促进骨吸收以升高血钙",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "降钙素抑制破骨细胞活性,降低血钙",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:骨是钙磷的主要储库(~99%钙在骨中),但牙齿也储存钙,且细胞内质网和线粒体也储存部分钙离子。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "钙稳态",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "45463790",
+  "tags": []
+ },
+ "BQ-homeostasis-940bb99ba2d3": {
+  "type": "mtf",
+  "question": "关于骨的重塑与钙稳态，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "活性维生素D(1,25-(OH)₂-D₃)促进肠道吸收钙和磷",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "骨是钙和磷储存的唯一器官",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "降钙素抑制破骨细胞活性,降低血钙",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "甲状旁腺激素(PTH)刺激破骨细胞活性,促进骨吸收以升高血钙",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:骨是钙磷的主要储库(~99%钙在骨中),但牙齿也储存钙,且细胞内质网和线粒体也储存部分钙离子。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "钙稳态",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "45463790",
+  "tags": []
+ },
+ "BQ-homeostasis-a1ad416a06c0": {
+  "type": "mtf",
+  "question": "关于骨的重塑与钙稳态，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "甲状旁腺激素(PTH)刺激破骨细胞活性,促进骨吸收以升高血钙",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "活性维生素D(1,25-(OH)₂-D₃)促进肠道吸收钙和磷",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "降钙素抑制破骨细胞活性,降低血钙",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "骨是钙和磷储存的唯一器官",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:骨是钙磷的主要储库(~99%钙在骨中),但牙齿也储存钙,且细胞内质网和线粒体也储存部分钙离子。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "钙稳态",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "45463790",
+  "tags": []
+ },
+ "BQ-homeostasis-63232769b2e5": {
+  "type": "mtf",
+  "question": "关于骨的重塑与钙稳态，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "甲状旁腺激素(PTH)刺激破骨细胞活性,促进骨吸收以升高血钙",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "活性维生素D(1,25-(OH)₂-D₃)促进肠道吸收钙和磷",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "骨是钙和磷储存的唯一器官",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "降钙素抑制破骨细胞活性,降低血钙",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:骨是钙磷的主要储库(~99%钙在骨中),但牙齿也储存钙,且细胞内质网和线粒体也储存部分钙离子。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "钙稳态",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "45463790",
+  "tags": []
+ },
+ "BQ-homeostasis-6293d01a5b7c": {
+  "type": "mtf",
+  "question": "关于骨的重塑与钙稳态，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "甲状旁腺激素(PTH)刺激破骨细胞活性,促进骨吸收以升高血钙",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "降钙素抑制破骨细胞活性,降低血钙",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "活性维生素D(1,25-(OH)₂-D₃)促进肠道吸收钙和磷",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "骨是钙和磷储存的唯一器官",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:骨是钙磷的主要储库(~99%钙在骨中),但牙齿也储存钙,且细胞内质网和线粒体也储存部分钙离子。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "钙稳态",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "45463790",
+  "tags": []
+ },
+ "BQ-homeostasis-8101fe222f68": {
+  "type": "mtf",
+  "question": "关于骨的重塑与钙稳态，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "甲状旁腺激素(PTH)刺激破骨细胞活性,促进骨吸收以升高血钙",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "降钙素抑制破骨细胞活性,降低血钙",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "骨是钙和磷储存的唯一器官",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "活性维生素D(1,25-(OH)₂-D₃)促进肠道吸收钙和磷",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:骨是钙磷的主要储库(~99%钙在骨中),但牙齿也储存钙,且细胞内质网和线粒体也储存部分钙离子。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "钙稳态",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "45463790",
+  "tags": []
+ },
+ "BQ-homeostasis-0659223491f9": {
+  "type": "mtf",
+  "question": "关于骨的重塑与钙稳态，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "甲状旁腺激素(PTH)刺激破骨细胞活性,促进骨吸收以升高血钙",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "骨是钙和磷储存的唯一器官",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "活性维生素D(1,25-(OH)₂-D₃)促进肠道吸收钙和磷",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "降钙素抑制破骨细胞活性,降低血钙",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:骨是钙磷的主要储库(~99%钙在骨中),但牙齿也储存钙,且细胞内质网和线粒体也储存部分钙离子。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "钙稳态",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "45463790",
+  "tags": []
+ },
+ "BQ-homeostasis-a11ca7906c30": {
+  "type": "mtf",
+  "question": "关于骨的重塑与钙稳态，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "甲状旁腺激素(PTH)刺激破骨细胞活性,促进骨吸收以升高血钙",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "骨是钙和磷储存的唯一器官",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "降钙素抑制破骨细胞活性,降低血钙",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "活性维生素D(1,25-(OH)₂-D₃)促进肠道吸收钙和磷",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:骨是钙磷的主要储库(~99%钙在骨中),但牙齿也储存钙,且细胞内质网和线粒体也储存部分钙离子。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "钙稳态",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "45463790",
+  "tags": []
+ },
+ "BQ-homeostasis-2a104057d118": {
+  "type": "mtf",
+  "question": "关于骨的重塑与钙稳态，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "降钙素抑制破骨细胞活性,降低血钙",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "活性维生素D(1,25-(OH)₂-D₃)促进肠道吸收钙和磷",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "甲状旁腺激素(PTH)刺激破骨细胞活性,促进骨吸收以升高血钙",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "骨是钙和磷储存的唯一器官",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:骨是钙磷的主要储库(~99%钙在骨中),但牙齿也储存钙,且细胞内质网和线粒体也储存部分钙离子。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "钙稳态",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "45463790",
+  "tags": []
+ },
+ "BQ-homeostasis-2fa970735d7b": {
+  "type": "mtf",
+  "question": "关于骨的重塑与钙稳态，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "降钙素抑制破骨细胞活性,降低血钙",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "活性维生素D(1,25-(OH)₂-D₃)促进肠道吸收钙和磷",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "骨是钙和磷储存的唯一器官",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "甲状旁腺激素(PTH)刺激破骨细胞活性,促进骨吸收以升高血钙",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:骨是钙磷的主要储库(~99%钙在骨中),但牙齿也储存钙,且细胞内质网和线粒体也储存部分钙离子。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "钙稳态",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "45463790",
+  "tags": []
+ },
+ "BQ-homeostasis-d679380246c7": {
+  "type": "mtf",
+  "question": "关于骨的重塑与钙稳态，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "降钙素抑制破骨细胞活性,降低血钙",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "甲状旁腺激素(PTH)刺激破骨细胞活性,促进骨吸收以升高血钙",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "活性维生素D(1,25-(OH)₂-D₃)促进肠道吸收钙和磷",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "骨是钙和磷储存的唯一器官",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:骨是钙磷的主要储库(~99%钙在骨中),但牙齿也储存钙,且细胞内质网和线粒体也储存部分钙离子。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "钙稳态",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "45463790",
+  "tags": []
+ },
+ "BQ-homeostasis-b5e6d683a7ad": {
+  "type": "mtf",
+  "question": "关于骨的重塑与钙稳态，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "降钙素抑制破骨细胞活性,降低血钙",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "甲状旁腺激素(PTH)刺激破骨细胞活性,促进骨吸收以升高血钙",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "骨是钙和磷储存的唯一器官",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "活性维生素D(1,25-(OH)₂-D₃)促进肠道吸收钙和磷",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:骨是钙磷的主要储库(~99%钙在骨中),但牙齿也储存钙,且细胞内质网和线粒体也储存部分钙离子。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "钙稳态",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "45463790",
+  "tags": []
+ },
+ "BQ-homeostasis-534ba4bfd8ee": {
+  "type": "mtf",
+  "question": "关于骨的重塑与钙稳态，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "降钙素抑制破骨细胞活性,降低血钙",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "骨是钙和磷储存的唯一器官",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "活性维生素D(1,25-(OH)₂-D₃)促进肠道吸收钙和磷",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "甲状旁腺激素(PTH)刺激破骨细胞活性,促进骨吸收以升高血钙",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:骨是钙磷的主要储库(~99%钙在骨中),但牙齿也储存钙,且细胞内质网和线粒体也储存部分钙离子。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "钙稳态",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "45463790",
+  "tags": []
+ },
+ "BQ-homeostasis-f0a6cdbe396c": {
+  "type": "mtf",
+  "question": "关于骨的重塑与钙稳态，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "降钙素抑制破骨细胞活性,降低血钙",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "骨是钙和磷储存的唯一器官",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "甲状旁腺激素(PTH)刺激破骨细胞活性,促进骨吸收以升高血钙",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "活性维生素D(1,25-(OH)₂-D₃)促进肠道吸收钙和磷",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:骨是钙磷的主要储库(~99%钙在骨中),但牙齿也储存钙,且细胞内质网和线粒体也储存部分钙离子。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "钙稳态",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "45463790",
+  "tags": []
+ },
+ "BQ-homeostasis-c37f976c7e8f": {
+  "type": "mtf",
+  "question": "关于骨的重塑与钙稳态，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "骨是钙和磷储存的唯一器官",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "活性维生素D(1,25-(OH)₂-D₃)促进肠道吸收钙和磷",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "甲状旁腺激素(PTH)刺激破骨细胞活性,促进骨吸收以升高血钙",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "降钙素抑制破骨细胞活性,降低血钙",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:骨是钙磷的主要储库(~99%钙在骨中),但牙齿也储存钙,且细胞内质网和线粒体也储存部分钙离子。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "钙稳态",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "45463790",
+  "tags": []
+ },
+ "BQ-homeostasis-f82d8442f42c": {
+  "type": "mtf",
+  "question": "关于骨的重塑与钙稳态，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "骨是钙和磷储存的唯一器官",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "活性维生素D(1,25-(OH)₂-D₃)促进肠道吸收钙和磷",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "降钙素抑制破骨细胞活性,降低血钙",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "甲状旁腺激素(PTH)刺激破骨细胞活性,促进骨吸收以升高血钙",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:骨是钙磷的主要储库(~99%钙在骨中),但牙齿也储存钙,且细胞内质网和线粒体也储存部分钙离子。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "钙稳态",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "45463790",
+  "tags": []
+ },
+ "BQ-homeostasis-827597ec18ae": {
+  "type": "mtf",
+  "question": "关于骨的重塑与钙稳态，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "骨是钙和磷储存的唯一器官",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "甲状旁腺激素(PTH)刺激破骨细胞活性,促进骨吸收以升高血钙",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "活性维生素D(1,25-(OH)₂-D₃)促进肠道吸收钙和磷",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "降钙素抑制破骨细胞活性,降低血钙",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:骨是钙磷的主要储库(~99%钙在骨中),但牙齿也储存钙,且细胞内质网和线粒体也储存部分钙离子。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "钙稳态",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "45463790",
+  "tags": []
+ },
+ "BQ-homeostasis-f8ad0db8a30b": {
+  "type": "mtf",
+  "question": "关于骨的重塑与钙稳态，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "骨是钙和磷储存的唯一器官",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "甲状旁腺激素(PTH)刺激破骨细胞活性,促进骨吸收以升高血钙",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "降钙素抑制破骨细胞活性,降低血钙",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "活性维生素D(1,25-(OH)₂-D₃)促进肠道吸收钙和磷",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:骨是钙磷的主要储库(~99%钙在骨中),但牙齿也储存钙,且细胞内质网和线粒体也储存部分钙离子。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "钙稳态",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "45463790",
+  "tags": []
+ },
+ "BQ-homeostasis-b5457ec707c1": {
+  "type": "mtf",
+  "question": "关于骨的重塑与钙稳态，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "骨是钙和磷储存的唯一器官",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "降钙素抑制破骨细胞活性,降低血钙",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "活性维生素D(1,25-(OH)₂-D₃)促进肠道吸收钙和磷",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "甲状旁腺激素(PTH)刺激破骨细胞活性,促进骨吸收以升高血钙",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:骨是钙磷的主要储库(~99%钙在骨中),但牙齿也储存钙,且细胞内质网和线粒体也储存部分钙离子。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "钙稳态",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "45463790",
+  "tags": []
+ },
+ "BQ-homeostasis-ed6302ad7cc4": {
+  "type": "mtf",
+  "question": "关于骨的重塑与钙稳态，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "骨是钙和磷储存的唯一器官",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "降钙素抑制破骨细胞活性,降低血钙",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "甲状旁腺激素(PTH)刺激破骨细胞活性,促进骨吸收以升高血钙",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "活性维生素D(1,25-(OH)₂-D₃)促进肠道吸收钙和磷",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:骨是钙磷的主要储库(~99%钙在骨中),但牙齿也储存钙,且细胞内质网和线粒体也储存部分钙离子。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "钙稳态",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "45463790",
+  "tags": []
+ }
+}

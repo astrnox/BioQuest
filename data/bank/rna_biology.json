@@ -1,0 +1,2522 @@
+{
+ "BQ-rna_biology-071bced244dc": {
+  "type": "mtf",
+  "question": "关于RNA干扰的机制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "Dicer酶将长双链RNA切割为21-23nt的siRNA片段",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "RISC复合物中的Argonaute蛋白具有内切核酸酶活性，可切割与siRNA互补的靶mRNA",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "RNAi现象仅存在于植物和线虫中，哺乳动物中不存在",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "shRNA通过质粒或病毒载体在细胞内表达后经Dicer加工为siRNA，实现稳定的基因沉默",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确:Dicer的加工功能。B正确:Ago2的Slicer活性。C错误:RNAi在哺乳动物中也存在，只是长dsRNA会激活PKR/干扰素反应，因此需使用siRNA或shRNA。D正确:shRNA的应用原理。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA干扰",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "58212814",
+  "tags": []
+ },
+ "BQ-rna_biology-54962ac1400e": {
+  "type": "mtf",
+  "question": "关于RNA干扰的机制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "Dicer酶将长双链RNA切割为21-23nt的siRNA片段",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "RISC复合物中的Argonaute蛋白具有内切核酸酶活性，可切割与siRNA互补的靶mRNA",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "shRNA通过质粒或病毒载体在细胞内表达后经Dicer加工为siRNA，实现稳定的基因沉默",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "RNAi现象仅存在于植物和线虫中，哺乳动物中不存在",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确:Dicer的加工功能。B正确:Ago2的Slicer活性。D错误:RNAi在哺乳动物中也存在，只是长dsRNA会激活PKR/干扰素反应，因此需使用siRNA或shRNA。C正确:shRNA的应用原理。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA干扰",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "58212814",
+  "tags": []
+ },
+ "BQ-rna_biology-589d55d5722d": {
+  "type": "mtf",
+  "question": "关于RNA干扰的机制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "Dicer酶将长双链RNA切割为21-23nt的siRNA片段",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "RNAi现象仅存在于植物和线虫中，哺乳动物中不存在",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "RISC复合物中的Argonaute蛋白具有内切核酸酶活性，可切割与siRNA互补的靶mRNA",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "shRNA通过质粒或病毒载体在细胞内表达后经Dicer加工为siRNA，实现稳定的基因沉默",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确:Dicer的加工功能。C正确:Ago2的Slicer活性。B错误:RNAi在哺乳动物中也存在，只是长dsRNA会激活PKR/干扰素反应，因此需使用siRNA或shRNA。D正确:shRNA的应用原理。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA干扰",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "58212814",
+  "tags": []
+ },
+ "BQ-rna_biology-9d71ccca2e4d": {
+  "type": "mtf",
+  "question": "关于RNA干扰的机制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "Dicer酶将长双链RNA切割为21-23nt的siRNA片段",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "RNAi现象仅存在于植物和线虫中，哺乳动物中不存在",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "shRNA通过质粒或病毒载体在细胞内表达后经Dicer加工为siRNA，实现稳定的基因沉默",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "RISC复合物中的Argonaute蛋白具有内切核酸酶活性，可切割与siRNA互补的靶mRNA",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确:Dicer的加工功能。D正确:Ago2的Slicer活性。B错误:RNAi在哺乳动物中也存在，只是长dsRNA会激活PKR/干扰素反应，因此需使用siRNA或shRNA。C正确:shRNA的应用原理。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA干扰",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "58212814",
+  "tags": []
+ },
+ "BQ-rna_biology-75813d4edd83": {
+  "type": "mtf",
+  "question": "关于RNA干扰的机制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "Dicer酶将长双链RNA切割为21-23nt的siRNA片段",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "shRNA通过质粒或病毒载体在细胞内表达后经Dicer加工为siRNA，实现稳定的基因沉默",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "RISC复合物中的Argonaute蛋白具有内切核酸酶活性，可切割与siRNA互补的靶mRNA",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "RNAi现象仅存在于植物和线虫中，哺乳动物中不存在",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确:Dicer的加工功能。C正确:Ago2的Slicer活性。D错误:RNAi在哺乳动物中也存在，只是长dsRNA会激活PKR/干扰素反应，因此需使用siRNA或shRNA。B正确:shRNA的应用原理。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA干扰",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "58212814",
+  "tags": []
+ },
+ "BQ-rna_biology-ef18f0959292": {
+  "type": "mtf",
+  "question": "关于RNA干扰的机制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "Dicer酶将长双链RNA切割为21-23nt的siRNA片段",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "shRNA通过质粒或病毒载体在细胞内表达后经Dicer加工为siRNA，实现稳定的基因沉默",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "RNAi现象仅存在于植物和线虫中，哺乳动物中不存在",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "RISC复合物中的Argonaute蛋白具有内切核酸酶活性，可切割与siRNA互补的靶mRNA",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确:Dicer的加工功能。D正确:Ago2的Slicer活性。C错误:RNAi在哺乳动物中也存在，只是长dsRNA会激活PKR/干扰素反应，因此需使用siRNA或shRNA。B正确:shRNA的应用原理。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA干扰",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "58212814",
+  "tags": []
+ },
+ "BQ-rna_biology-be1d07aaae69": {
+  "type": "mtf",
+  "question": "关于RNA干扰的机制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "RISC复合物中的Argonaute蛋白具有内切核酸酶活性，可切割与siRNA互补的靶mRNA",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "Dicer酶将长双链RNA切割为21-23nt的siRNA片段",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "RNAi现象仅存在于植物和线虫中，哺乳动物中不存在",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "shRNA通过质粒或病毒载体在细胞内表达后经Dicer加工为siRNA，实现稳定的基因沉默",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确:Dicer的加工功能。A正确:Ago2的Slicer活性。C错误:RNAi在哺乳动物中也存在，只是长dsRNA会激活PKR/干扰素反应，因此需使用siRNA或shRNA。D正确:shRNA的应用原理。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA干扰",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "58212814",
+  "tags": []
+ },
+ "BQ-rna_biology-88746e7a4fb0": {
+  "type": "mtf",
+  "question": "关于RNA干扰的机制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "RISC复合物中的Argonaute蛋白具有内切核酸酶活性，可切割与siRNA互补的靶mRNA",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "Dicer酶将长双链RNA切割为21-23nt的siRNA片段",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "shRNA通过质粒或病毒载体在细胞内表达后经Dicer加工为siRNA，实现稳定的基因沉默",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "RNAi现象仅存在于植物和线虫中，哺乳动物中不存在",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确:Dicer的加工功能。A正确:Ago2的Slicer活性。D错误:RNAi在哺乳动物中也存在，只是长dsRNA会激活PKR/干扰素反应，因此需使用siRNA或shRNA。C正确:shRNA的应用原理。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA干扰",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "58212814",
+  "tags": []
+ },
+ "BQ-rna_biology-c3852ff297c7": {
+  "type": "mtf",
+  "question": "关于RNA干扰的机制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "RISC复合物中的Argonaute蛋白具有内切核酸酶活性，可切割与siRNA互补的靶mRNA",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "RNAi现象仅存在于植物和线虫中，哺乳动物中不存在",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "Dicer酶将长双链RNA切割为21-23nt的siRNA片段",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "shRNA通过质粒或病毒载体在细胞内表达后经Dicer加工为siRNA，实现稳定的基因沉默",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确:Dicer的加工功能。A正确:Ago2的Slicer活性。B错误:RNAi在哺乳动物中也存在，只是长dsRNA会激活PKR/干扰素反应，因此需使用siRNA或shRNA。D正确:shRNA的应用原理。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA干扰",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "58212814",
+  "tags": []
+ },
+ "BQ-rna_biology-981c5f601e4f": {
+  "type": "mtf",
+  "question": "关于RNA干扰的机制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "RISC复合物中的Argonaute蛋白具有内切核酸酶活性，可切割与siRNA互补的靶mRNA",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "RNAi现象仅存在于植物和线虫中，哺乳动物中不存在",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "shRNA通过质粒或病毒载体在细胞内表达后经Dicer加工为siRNA，实现稳定的基因沉默",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "Dicer酶将长双链RNA切割为21-23nt的siRNA片段",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确:Dicer的加工功能。A正确:Ago2的Slicer活性。B错误:RNAi在哺乳动物中也存在，只是长dsRNA会激活PKR/干扰素反应，因此需使用siRNA或shRNA。C正确:shRNA的应用原理。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA干扰",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "58212814",
+  "tags": []
+ },
+ "BQ-rna_biology-014449c8fcfd": {
+  "type": "mtf",
+  "question": "关于RNA干扰的机制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "RISC复合物中的Argonaute蛋白具有内切核酸酶活性，可切割与siRNA互补的靶mRNA",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "shRNA通过质粒或病毒载体在细胞内表达后经Dicer加工为siRNA，实现稳定的基因沉默",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "Dicer酶将长双链RNA切割为21-23nt的siRNA片段",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "RNAi现象仅存在于植物和线虫中，哺乳动物中不存在",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确:Dicer的加工功能。A正确:Ago2的Slicer活性。D错误:RNAi在哺乳动物中也存在，只是长dsRNA会激活PKR/干扰素反应，因此需使用siRNA或shRNA。B正确:shRNA的应用原理。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA干扰",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "58212814",
+  "tags": []
+ },
+ "BQ-rna_biology-bd8400d9194c": {
+  "type": "mtf",
+  "question": "关于RNA干扰的机制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "RISC复合物中的Argonaute蛋白具有内切核酸酶活性，可切割与siRNA互补的靶mRNA",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "shRNA通过质粒或病毒载体在细胞内表达后经Dicer加工为siRNA，实现稳定的基因沉默",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "RNAi现象仅存在于植物和线虫中，哺乳动物中不存在",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "Dicer酶将长双链RNA切割为21-23nt的siRNA片段",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确:Dicer的加工功能。A正确:Ago2的Slicer活性。C错误:RNAi在哺乳动物中也存在，只是长dsRNA会激活PKR/干扰素反应，因此需使用siRNA或shRNA。B正确:shRNA的应用原理。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA干扰",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "58212814",
+  "tags": []
+ },
+ "BQ-rna_biology-1b717d954fa6": {
+  "type": "mtf",
+  "question": "关于RNA干扰的机制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "RNAi现象仅存在于植物和线虫中，哺乳动物中不存在",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "Dicer酶将长双链RNA切割为21-23nt的siRNA片段",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "RISC复合物中的Argonaute蛋白具有内切核酸酶活性，可切割与siRNA互补的靶mRNA",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "shRNA通过质粒或病毒载体在细胞内表达后经Dicer加工为siRNA，实现稳定的基因沉默",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确:Dicer的加工功能。C正确:Ago2的Slicer活性。A错误:RNAi在哺乳动物中也存在，只是长dsRNA会激活PKR/干扰素反应，因此需使用siRNA或shRNA。D正确:shRNA的应用原理。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA干扰",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "58212814",
+  "tags": []
+ },
+ "BQ-rna_biology-6ad5eaa2888f": {
+  "type": "mtf",
+  "question": "关于RNA干扰的机制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "RNAi现象仅存在于植物和线虫中，哺乳动物中不存在",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "Dicer酶将长双链RNA切割为21-23nt的siRNA片段",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "shRNA通过质粒或病毒载体在细胞内表达后经Dicer加工为siRNA，实现稳定的基因沉默",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "RISC复合物中的Argonaute蛋白具有内切核酸酶活性，可切割与siRNA互补的靶mRNA",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确:Dicer的加工功能。D正确:Ago2的Slicer活性。A错误:RNAi在哺乳动物中也存在，只是长dsRNA会激活PKR/干扰素反应，因此需使用siRNA或shRNA。C正确:shRNA的应用原理。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA干扰",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "58212814",
+  "tags": []
+ },
+ "BQ-rna_biology-7711830b0d81": {
+  "type": "mtf",
+  "question": "关于RNA干扰的机制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "RNAi现象仅存在于植物和线虫中，哺乳动物中不存在",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "RISC复合物中的Argonaute蛋白具有内切核酸酶活性，可切割与siRNA互补的靶mRNA",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "Dicer酶将长双链RNA切割为21-23nt的siRNA片段",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "shRNA通过质粒或病毒载体在细胞内表达后经Dicer加工为siRNA，实现稳定的基因沉默",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确:Dicer的加工功能。B正确:Ago2的Slicer活性。A错误:RNAi在哺乳动物中也存在，只是长dsRNA会激活PKR/干扰素反应，因此需使用siRNA或shRNA。D正确:shRNA的应用原理。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA干扰",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "58212814",
+  "tags": []
+ },
+ "BQ-rna_biology-6836dcf64df1": {
+  "type": "mtf",
+  "question": "关于RNA干扰的机制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "RNAi现象仅存在于植物和线虫中，哺乳动物中不存在",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "RISC复合物中的Argonaute蛋白具有内切核酸酶活性，可切割与siRNA互补的靶mRNA",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "shRNA通过质粒或病毒载体在细胞内表达后经Dicer加工为siRNA，实现稳定的基因沉默",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "Dicer酶将长双链RNA切割为21-23nt的siRNA片段",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确:Dicer的加工功能。B正确:Ago2的Slicer活性。A错误:RNAi在哺乳动物中也存在，只是长dsRNA会激活PKR/干扰素反应，因此需使用siRNA或shRNA。C正确:shRNA的应用原理。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA干扰",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "58212814",
+  "tags": []
+ },
+ "BQ-rna_biology-b22ea53e8321": {
+  "type": "mtf",
+  "question": "关于RNA干扰的机制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "RNAi现象仅存在于植物和线虫中，哺乳动物中不存在",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "shRNA通过质粒或病毒载体在细胞内表达后经Dicer加工为siRNA，实现稳定的基因沉默",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "Dicer酶将长双链RNA切割为21-23nt的siRNA片段",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "RISC复合物中的Argonaute蛋白具有内切核酸酶活性，可切割与siRNA互补的靶mRNA",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确:Dicer的加工功能。D正确:Ago2的Slicer活性。A错误:RNAi在哺乳动物中也存在，只是长dsRNA会激活PKR/干扰素反应，因此需使用siRNA或shRNA。B正确:shRNA的应用原理。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA干扰",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "58212814",
+  "tags": []
+ },
+ "BQ-rna_biology-5530610e287d": {
+  "type": "mtf",
+  "question": "关于RNA干扰的机制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "RNAi现象仅存在于植物和线虫中，哺乳动物中不存在",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "shRNA通过质粒或病毒载体在细胞内表达后经Dicer加工为siRNA，实现稳定的基因沉默",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "RISC复合物中的Argonaute蛋白具有内切核酸酶活性，可切割与siRNA互补的靶mRNA",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "Dicer酶将长双链RNA切割为21-23nt的siRNA片段",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确:Dicer的加工功能。C正确:Ago2的Slicer活性。A错误:RNAi在哺乳动物中也存在，只是长dsRNA会激活PKR/干扰素反应，因此需使用siRNA或shRNA。B正确:shRNA的应用原理。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA干扰",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "58212814",
+  "tags": []
+ },
+ "BQ-rna_biology-20328426ec1f": {
+  "type": "mtf",
+  "question": "关于RNA干扰的机制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "shRNA通过质粒或病毒载体在细胞内表达后经Dicer加工为siRNA，实现稳定的基因沉默",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "Dicer酶将长双链RNA切割为21-23nt的siRNA片段",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "RISC复合物中的Argonaute蛋白具有内切核酸酶活性，可切割与siRNA互补的靶mRNA",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "RNAi现象仅存在于植物和线虫中，哺乳动物中不存在",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确:Dicer的加工功能。C正确:Ago2的Slicer活性。D错误:RNAi在哺乳动物中也存在，只是长dsRNA会激活PKR/干扰素反应，因此需使用siRNA或shRNA。A正确:shRNA的应用原理。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA干扰",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "58212814",
+  "tags": []
+ },
+ "BQ-rna_biology-ce4de15abf11": {
+  "type": "mtf",
+  "question": "关于RNA干扰的机制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "shRNA通过质粒或病毒载体在细胞内表达后经Dicer加工为siRNA，实现稳定的基因沉默",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "Dicer酶将长双链RNA切割为21-23nt的siRNA片段",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "RNAi现象仅存在于植物和线虫中，哺乳动物中不存在",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "RISC复合物中的Argonaute蛋白具有内切核酸酶活性，可切割与siRNA互补的靶mRNA",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确:Dicer的加工功能。D正确:Ago2的Slicer活性。C错误:RNAi在哺乳动物中也存在，只是长dsRNA会激活PKR/干扰素反应，因此需使用siRNA或shRNA。A正确:shRNA的应用原理。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA干扰",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "58212814",
+  "tags": []
+ },
+ "BQ-rna_biology-beab3a3efa64": {
+  "type": "mtf",
+  "question": "关于RNA干扰的机制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "shRNA通过质粒或病毒载体在细胞内表达后经Dicer加工为siRNA，实现稳定的基因沉默",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "RISC复合物中的Argonaute蛋白具有内切核酸酶活性，可切割与siRNA互补的靶mRNA",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "Dicer酶将长双链RNA切割为21-23nt的siRNA片段",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "RNAi现象仅存在于植物和线虫中，哺乳动物中不存在",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确:Dicer的加工功能。B正确:Ago2的Slicer活性。D错误:RNAi在哺乳动物中也存在，只是长dsRNA会激活PKR/干扰素反应，因此需使用siRNA或shRNA。A正确:shRNA的应用原理。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA干扰",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "58212814",
+  "tags": []
+ },
+ "BQ-rna_biology-49b0453c4638": {
+  "type": "mtf",
+  "question": "关于RNA干扰的机制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "shRNA通过质粒或病毒载体在细胞内表达后经Dicer加工为siRNA，实现稳定的基因沉默",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "RISC复合物中的Argonaute蛋白具有内切核酸酶活性，可切割与siRNA互补的靶mRNA",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "RNAi现象仅存在于植物和线虫中，哺乳动物中不存在",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "Dicer酶将长双链RNA切割为21-23nt的siRNA片段",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确:Dicer的加工功能。B正确:Ago2的Slicer活性。C错误:RNAi在哺乳动物中也存在，只是长dsRNA会激活PKR/干扰素反应，因此需使用siRNA或shRNA。A正确:shRNA的应用原理。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA干扰",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "58212814",
+  "tags": []
+ },
+ "BQ-rna_biology-5c014ac17d4a": {
+  "type": "mtf",
+  "question": "关于RNA干扰的机制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "shRNA通过质粒或病毒载体在细胞内表达后经Dicer加工为siRNA，实现稳定的基因沉默",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "RNAi现象仅存在于植物和线虫中，哺乳动物中不存在",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "Dicer酶将长双链RNA切割为21-23nt的siRNA片段",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "RISC复合物中的Argonaute蛋白具有内切核酸酶活性，可切割与siRNA互补的靶mRNA",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确:Dicer的加工功能。D正确:Ago2的Slicer活性。B错误:RNAi在哺乳动物中也存在，只是长dsRNA会激活PKR/干扰素反应，因此需使用siRNA或shRNA。A正确:shRNA的应用原理。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA干扰",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "58212814",
+  "tags": []
+ },
+ "BQ-rna_biology-9f724dedb563": {
+  "type": "mtf",
+  "question": "关于RNA干扰的机制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "shRNA通过质粒或病毒载体在细胞内表达后经Dicer加工为siRNA，实现稳定的基因沉默",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "RNAi现象仅存在于植物和线虫中，哺乳动物中不存在",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "RISC复合物中的Argonaute蛋白具有内切核酸酶活性，可切割与siRNA互补的靶mRNA",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "Dicer酶将长双链RNA切割为21-23nt的siRNA片段",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确:Dicer的加工功能。C正确:Ago2的Slicer活性。B错误:RNAi在哺乳动物中也存在，只是长dsRNA会激活PKR/干扰素反应，因此需使用siRNA或shRNA。A正确:shRNA的应用原理。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA干扰",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "58212814",
+  "tags": []
+ },
+ "BQ-rna_biology-5f491057ecdb": {
+  "type": "mtf",
+  "question": "关于siRNA与shRNA的比较，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "shRNA可实现稳定的长效基因沉默，适合构建稳转细胞系",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "shRNA通过质粒或病毒载体表达，在核内转录为发夹结构RNA后经Dicer加工",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "siRNA和shRNA的作用机制完全不同",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "siRNA是合成的双链RNA(21-23bp)，直接转染进入细胞",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:两者最终都汇入RISC复合物通过相同的RNAi机制沉默靶基因，区别在于递送方式和持续时间。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA干扰方法",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "52093233",
+  "tags": []
+ },
+ "BQ-rna_biology-e7ca486ac4b3": {
+  "type": "mtf",
+  "question": "关于siRNA与shRNA的比较，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "shRNA可实现稳定的长效基因沉默，适合构建稳转细胞系",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "shRNA通过质粒或病毒载体表达，在核内转录为发夹结构RNA后经Dicer加工",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "siRNA是合成的双链RNA(21-23bp)，直接转染进入细胞",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "siRNA和shRNA的作用机制完全不同",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:两者最终都汇入RISC复合物通过相同的RNAi机制沉默靶基因，区别在于递送方式和持续时间。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA干扰方法",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "52093233",
+  "tags": []
+ },
+ "BQ-rna_biology-244541d31927": {
+  "type": "mtf",
+  "question": "关于siRNA与shRNA的比较，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "shRNA可实现稳定的长效基因沉默，适合构建稳转细胞系",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "siRNA和shRNA的作用机制完全不同",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "shRNA通过质粒或病毒载体表达，在核内转录为发夹结构RNA后经Dicer加工",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "siRNA是合成的双链RNA(21-23bp)，直接转染进入细胞",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:两者最终都汇入RISC复合物通过相同的RNAi机制沉默靶基因，区别在于递送方式和持续时间。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA干扰方法",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "52093233",
+  "tags": []
+ },
+ "BQ-rna_biology-35d03817417d": {
+  "type": "mtf",
+  "question": "关于siRNA与shRNA的比较，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "shRNA可实现稳定的长效基因沉默，适合构建稳转细胞系",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "siRNA和shRNA的作用机制完全不同",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "siRNA是合成的双链RNA(21-23bp)，直接转染进入细胞",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "shRNA通过质粒或病毒载体表达，在核内转录为发夹结构RNA后经Dicer加工",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:两者最终都汇入RISC复合物通过相同的RNAi机制沉默靶基因，区别在于递送方式和持续时间。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA干扰方法",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "52093233",
+  "tags": []
+ },
+ "BQ-rna_biology-46a79925d411": {
+  "type": "mtf",
+  "question": "关于siRNA与shRNA的比较，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "shRNA可实现稳定的长效基因沉默，适合构建稳转细胞系",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "siRNA是合成的双链RNA(21-23bp)，直接转染进入细胞",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "shRNA通过质粒或病毒载体表达，在核内转录为发夹结构RNA后经Dicer加工",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "siRNA和shRNA的作用机制完全不同",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:两者最终都汇入RISC复合物通过相同的RNAi机制沉默靶基因，区别在于递送方式和持续时间。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA干扰方法",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "52093233",
+  "tags": []
+ },
+ "BQ-rna_biology-bff23f51926a": {
+  "type": "mtf",
+  "question": "关于siRNA与shRNA的比较，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "shRNA可实现稳定的长效基因沉默，适合构建稳转细胞系",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "siRNA是合成的双链RNA(21-23bp)，直接转染进入细胞",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "siRNA和shRNA的作用机制完全不同",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "shRNA通过质粒或病毒载体表达，在核内转录为发夹结构RNA后经Dicer加工",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:两者最终都汇入RISC复合物通过相同的RNAi机制沉默靶基因，区别在于递送方式和持续时间。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA干扰方法",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "52093233",
+  "tags": []
+ },
+ "BQ-rna_biology-e3f250dde4ba": {
+  "type": "mtf",
+  "question": "关于siRNA与shRNA的比较，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "shRNA通过质粒或病毒载体表达，在核内转录为发夹结构RNA后经Dicer加工",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "shRNA可实现稳定的长效基因沉默，适合构建稳转细胞系",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "siRNA和shRNA的作用机制完全不同",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "siRNA是合成的双链RNA(21-23bp)，直接转染进入细胞",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:两者最终都汇入RISC复合物通过相同的RNAi机制沉默靶基因，区别在于递送方式和持续时间。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA干扰方法",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "52093233",
+  "tags": []
+ },
+ "BQ-rna_biology-17e8b3930d6e": {
+  "type": "mtf",
+  "question": "关于siRNA与shRNA的比较，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "shRNA通过质粒或病毒载体表达，在核内转录为发夹结构RNA后经Dicer加工",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "shRNA可实现稳定的长效基因沉默，适合构建稳转细胞系",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "siRNA是合成的双链RNA(21-23bp)，直接转染进入细胞",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "siRNA和shRNA的作用机制完全不同",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:两者最终都汇入RISC复合物通过相同的RNAi机制沉默靶基因，区别在于递送方式和持续时间。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA干扰方法",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "52093233",
+  "tags": []
+ },
+ "BQ-rna_biology-f9b75ca68537": {
+  "type": "mtf",
+  "question": "关于siRNA与shRNA的比较，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "shRNA通过质粒或病毒载体表达，在核内转录为发夹结构RNA后经Dicer加工",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "siRNA和shRNA的作用机制完全不同",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "shRNA可实现稳定的长效基因沉默，适合构建稳转细胞系",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "siRNA是合成的双链RNA(21-23bp)，直接转染进入细胞",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:两者最终都汇入RISC复合物通过相同的RNAi机制沉默靶基因，区别在于递送方式和持续时间。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA干扰方法",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "52093233",
+  "tags": []
+ },
+ "BQ-rna_biology-868951a14cea": {
+  "type": "mtf",
+  "question": "关于siRNA与shRNA的比较，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "shRNA通过质粒或病毒载体表达，在核内转录为发夹结构RNA后经Dicer加工",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "siRNA和shRNA的作用机制完全不同",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "siRNA是合成的双链RNA(21-23bp)，直接转染进入细胞",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "shRNA可实现稳定的长效基因沉默，适合构建稳转细胞系",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:两者最终都汇入RISC复合物通过相同的RNAi机制沉默靶基因，区别在于递送方式和持续时间。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA干扰方法",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "52093233",
+  "tags": []
+ },
+ "BQ-rna_biology-c464b094e601": {
+  "type": "mtf",
+  "question": "关于siRNA与shRNA的比较，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "shRNA通过质粒或病毒载体表达，在核内转录为发夹结构RNA后经Dicer加工",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "siRNA是合成的双链RNA(21-23bp)，直接转染进入细胞",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "shRNA可实现稳定的长效基因沉默，适合构建稳转细胞系",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "siRNA和shRNA的作用机制完全不同",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:两者最终都汇入RISC复合物通过相同的RNAi机制沉默靶基因，区别在于递送方式和持续时间。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA干扰方法",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "52093233",
+  "tags": []
+ },
+ "BQ-rna_biology-fa0745b2ae8b": {
+  "type": "mtf",
+  "question": "关于siRNA与shRNA的比较，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "shRNA通过质粒或病毒载体表达，在核内转录为发夹结构RNA后经Dicer加工",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "siRNA是合成的双链RNA(21-23bp)，直接转染进入细胞",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "siRNA和shRNA的作用机制完全不同",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "shRNA可实现稳定的长效基因沉默，适合构建稳转细胞系",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:两者最终都汇入RISC复合物通过相同的RNAi机制沉默靶基因，区别在于递送方式和持续时间。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA干扰方法",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "52093233",
+  "tags": []
+ },
+ "BQ-rna_biology-7ec9ad669d22": {
+  "type": "mtf",
+  "question": "关于siRNA与shRNA的比较，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "siRNA和shRNA的作用机制完全不同",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "shRNA可实现稳定的长效基因沉默，适合构建稳转细胞系",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "shRNA通过质粒或病毒载体表达，在核内转录为发夹结构RNA后经Dicer加工",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "siRNA是合成的双链RNA(21-23bp)，直接转染进入细胞",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:两者最终都汇入RISC复合物通过相同的RNAi机制沉默靶基因，区别在于递送方式和持续时间。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA干扰方法",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "52093233",
+  "tags": []
+ },
+ "BQ-rna_biology-a6760b959d3e": {
+  "type": "mtf",
+  "question": "关于siRNA与shRNA的比较，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "siRNA和shRNA的作用机制完全不同",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "shRNA可实现稳定的长效基因沉默，适合构建稳转细胞系",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "siRNA是合成的双链RNA(21-23bp)，直接转染进入细胞",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "shRNA通过质粒或病毒载体表达，在核内转录为发夹结构RNA后经Dicer加工",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:两者最终都汇入RISC复合物通过相同的RNAi机制沉默靶基因，区别在于递送方式和持续时间。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA干扰方法",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "52093233",
+  "tags": []
+ },
+ "BQ-rna_biology-44cb36ebd0aa": {
+  "type": "mtf",
+  "question": "关于siRNA与shRNA的比较，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "siRNA和shRNA的作用机制完全不同",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "shRNA通过质粒或病毒载体表达，在核内转录为发夹结构RNA后经Dicer加工",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "shRNA可实现稳定的长效基因沉默，适合构建稳转细胞系",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "siRNA是合成的双链RNA(21-23bp)，直接转染进入细胞",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:两者最终都汇入RISC复合物通过相同的RNAi机制沉默靶基因，区别在于递送方式和持续时间。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA干扰方法",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "52093233",
+  "tags": []
+ },
+ "BQ-rna_biology-0c3204911dab": {
+  "type": "mtf",
+  "question": "关于siRNA与shRNA的比较，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "siRNA和shRNA的作用机制完全不同",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "shRNA通过质粒或病毒载体表达，在核内转录为发夹结构RNA后经Dicer加工",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "siRNA是合成的双链RNA(21-23bp)，直接转染进入细胞",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "shRNA可实现稳定的长效基因沉默，适合构建稳转细胞系",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:两者最终都汇入RISC复合物通过相同的RNAi机制沉默靶基因，区别在于递送方式和持续时间。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA干扰方法",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "52093233",
+  "tags": []
+ },
+ "BQ-rna_biology-90980ccc84ee": {
+  "type": "mtf",
+  "question": "关于siRNA与shRNA的比较，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "siRNA和shRNA的作用机制完全不同",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "siRNA是合成的双链RNA(21-23bp)，直接转染进入细胞",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "shRNA可实现稳定的长效基因沉默，适合构建稳转细胞系",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "shRNA通过质粒或病毒载体表达，在核内转录为发夹结构RNA后经Dicer加工",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:两者最终都汇入RISC复合物通过相同的RNAi机制沉默靶基因，区别在于递送方式和持续时间。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA干扰方法",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "52093233",
+  "tags": []
+ },
+ "BQ-rna_biology-8a021a801a33": {
+  "type": "mtf",
+  "question": "关于siRNA与shRNA的比较，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "siRNA和shRNA的作用机制完全不同",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "siRNA是合成的双链RNA(21-23bp)，直接转染进入细胞",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "shRNA通过质粒或病毒载体表达，在核内转录为发夹结构RNA后经Dicer加工",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "shRNA可实现稳定的长效基因沉默，适合构建稳转细胞系",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:两者最终都汇入RISC复合物通过相同的RNAi机制沉默靶基因，区别在于递送方式和持续时间。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA干扰方法",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "52093233",
+  "tags": []
+ },
+ "BQ-rna_biology-869eb02ba076": {
+  "type": "mtf",
+  "question": "关于siRNA与shRNA的比较，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "siRNA是合成的双链RNA(21-23bp)，直接转染进入细胞",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "shRNA可实现稳定的长效基因沉默，适合构建稳转细胞系",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "shRNA通过质粒或病毒载体表达，在核内转录为发夹结构RNA后经Dicer加工",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "siRNA和shRNA的作用机制完全不同",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:两者最终都汇入RISC复合物通过相同的RNAi机制沉默靶基因，区别在于递送方式和持续时间。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA干扰方法",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "52093233",
+  "tags": []
+ },
+ "BQ-rna_biology-64fac7cf4152": {
+  "type": "mtf",
+  "question": "关于siRNA与shRNA的比较，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "siRNA是合成的双链RNA(21-23bp)，直接转染进入细胞",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "shRNA可实现稳定的长效基因沉默，适合构建稳转细胞系",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "siRNA和shRNA的作用机制完全不同",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "shRNA通过质粒或病毒载体表达，在核内转录为发夹结构RNA后经Dicer加工",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:两者最终都汇入RISC复合物通过相同的RNAi机制沉默靶基因，区别在于递送方式和持续时间。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA干扰方法",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "52093233",
+  "tags": []
+ },
+ "BQ-rna_biology-7882d24e1219": {
+  "type": "mtf",
+  "question": "关于siRNA与shRNA的比较，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "siRNA是合成的双链RNA(21-23bp)，直接转染进入细胞",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "shRNA通过质粒或病毒载体表达，在核内转录为发夹结构RNA后经Dicer加工",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "shRNA可实现稳定的长效基因沉默，适合构建稳转细胞系",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "siRNA和shRNA的作用机制完全不同",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:两者最终都汇入RISC复合物通过相同的RNAi机制沉默靶基因，区别在于递送方式和持续时间。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA干扰方法",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "52093233",
+  "tags": []
+ },
+ "BQ-rna_biology-7cef4f30ae0e": {
+  "type": "mtf",
+  "question": "关于siRNA与shRNA的比较，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "siRNA是合成的双链RNA(21-23bp)，直接转染进入细胞",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "shRNA通过质粒或病毒载体表达，在核内转录为发夹结构RNA后经Dicer加工",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "siRNA和shRNA的作用机制完全不同",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "shRNA可实现稳定的长效基因沉默，适合构建稳转细胞系",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:两者最终都汇入RISC复合物通过相同的RNAi机制沉默靶基因，区别在于递送方式和持续时间。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA干扰方法",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "52093233",
+  "tags": []
+ },
+ "BQ-rna_biology-802a62d3e46e": {
+  "type": "mtf",
+  "question": "关于siRNA与shRNA的比较，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "siRNA是合成的双链RNA(21-23bp)，直接转染进入细胞",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "siRNA和shRNA的作用机制完全不同",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "shRNA可实现稳定的长效基因沉默，适合构建稳转细胞系",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "shRNA通过质粒或病毒载体表达，在核内转录为发夹结构RNA后经Dicer加工",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:两者最终都汇入RISC复合物通过相同的RNAi机制沉默靶基因，区别在于递送方式和持续时间。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA干扰方法",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "52093233",
+  "tags": []
+ },
+ "BQ-rna_biology-3d213032f7aa": {
+  "type": "mtf",
+  "question": "关于siRNA与shRNA的比较，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "siRNA是合成的双链RNA(21-23bp)，直接转染进入细胞",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "siRNA和shRNA的作用机制完全不同",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "shRNA通过质粒或病毒载体表达，在核内转录为发夹结构RNA后经Dicer加工",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "shRNA可实现稳定的长效基因沉默，适合构建稳转细胞系",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:两者最终都汇入RISC复合物通过相同的RNAi机制沉默靶基因，区别在于递送方式和持续时间。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA干扰方法",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "52093233",
+  "tags": []
+ },
+ "BQ-rna_biology-9a44249e2a3c": {
+  "type": "mtf",
+  "question": "关于转录后加工中的RNA编辑，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "A-to-I编辑(ADAR介导)是最常见的RNA编辑形式,可改变密码子含义",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "C-to-U编辑由APOBEC家族胞苷脱氨酶催化",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "RNA编辑在所有转录本上均匀发生",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "RNA编辑是改变RNA序列中特定核苷酸的转录后过程",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:RNA编辑具有高度位点特异性——主要发生在非编码区Alu元件等处,编码区的编辑(如GluR2的Q/R位点)对蛋白功能有重大影响。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA编辑",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1809104435",
+  "tags": []
+ },
+ "BQ-rna_biology-eed91cc5d300": {
+  "type": "mtf",
+  "question": "关于转录后加工中的RNA编辑，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "A-to-I编辑(ADAR介导)是最常见的RNA编辑形式,可改变密码子含义",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "C-to-U编辑由APOBEC家族胞苷脱氨酶催化",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "RNA编辑是改变RNA序列中特定核苷酸的转录后过程",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "RNA编辑在所有转录本上均匀发生",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:RNA编辑具有高度位点特异性——主要发生在非编码区Alu元件等处,编码区的编辑(如GluR2的Q/R位点)对蛋白功能有重大影响。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA编辑",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1809104435",
+  "tags": []
+ },
+ "BQ-rna_biology-5c94332229c5": {
+  "type": "mtf",
+  "question": "关于转录后加工中的RNA编辑，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "A-to-I编辑(ADAR介导)是最常见的RNA编辑形式,可改变密码子含义",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "RNA编辑在所有转录本上均匀发生",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "C-to-U编辑由APOBEC家族胞苷脱氨酶催化",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "RNA编辑是改变RNA序列中特定核苷酸的转录后过程",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:RNA编辑具有高度位点特异性——主要发生在非编码区Alu元件等处,编码区的编辑(如GluR2的Q/R位点)对蛋白功能有重大影响。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA编辑",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1809104435",
+  "tags": []
+ },
+ "BQ-rna_biology-a671dfafaa9e": {
+  "type": "mtf",
+  "question": "关于转录后加工中的RNA编辑，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "A-to-I编辑(ADAR介导)是最常见的RNA编辑形式,可改变密码子含义",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "RNA编辑在所有转录本上均匀发生",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "RNA编辑是改变RNA序列中特定核苷酸的转录后过程",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "C-to-U编辑由APOBEC家族胞苷脱氨酶催化",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:RNA编辑具有高度位点特异性——主要发生在非编码区Alu元件等处,编码区的编辑(如GluR2的Q/R位点)对蛋白功能有重大影响。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA编辑",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1809104435",
+  "tags": []
+ },
+ "BQ-rna_biology-7da32adf0506": {
+  "type": "mtf",
+  "question": "关于转录后加工中的RNA编辑，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "A-to-I编辑(ADAR介导)是最常见的RNA编辑形式,可改变密码子含义",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "RNA编辑是改变RNA序列中特定核苷酸的转录后过程",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "C-to-U编辑由APOBEC家族胞苷脱氨酶催化",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "RNA编辑在所有转录本上均匀发生",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:RNA编辑具有高度位点特异性——主要发生在非编码区Alu元件等处,编码区的编辑(如GluR2的Q/R位点)对蛋白功能有重大影响。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA编辑",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1809104435",
+  "tags": []
+ },
+ "BQ-rna_biology-3afdd8fd8deb": {
+  "type": "mtf",
+  "question": "关于转录后加工中的RNA编辑，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "A-to-I编辑(ADAR介导)是最常见的RNA编辑形式,可改变密码子含义",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "RNA编辑是改变RNA序列中特定核苷酸的转录后过程",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "RNA编辑在所有转录本上均匀发生",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "C-to-U编辑由APOBEC家族胞苷脱氨酶催化",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:RNA编辑具有高度位点特异性——主要发生在非编码区Alu元件等处,编码区的编辑(如GluR2的Q/R位点)对蛋白功能有重大影响。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA编辑",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1809104435",
+  "tags": []
+ },
+ "BQ-rna_biology-1ceead7dafbe": {
+  "type": "mtf",
+  "question": "关于转录后加工中的RNA编辑，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "C-to-U编辑由APOBEC家族胞苷脱氨酶催化",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "A-to-I编辑(ADAR介导)是最常见的RNA编辑形式,可改变密码子含义",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "RNA编辑在所有转录本上均匀发生",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "RNA编辑是改变RNA序列中特定核苷酸的转录后过程",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:RNA编辑具有高度位点特异性——主要发生在非编码区Alu元件等处,编码区的编辑(如GluR2的Q/R位点)对蛋白功能有重大影响。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA编辑",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1809104435",
+  "tags": []
+ },
+ "BQ-rna_biology-515cb3de581d": {
+  "type": "mtf",
+  "question": "关于转录后加工中的RNA编辑，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "C-to-U编辑由APOBEC家族胞苷脱氨酶催化",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "A-to-I编辑(ADAR介导)是最常见的RNA编辑形式,可改变密码子含义",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "RNA编辑是改变RNA序列中特定核苷酸的转录后过程",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "RNA编辑在所有转录本上均匀发生",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:RNA编辑具有高度位点特异性——主要发生在非编码区Alu元件等处,编码区的编辑(如GluR2的Q/R位点)对蛋白功能有重大影响。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA编辑",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1809104435",
+  "tags": []
+ },
+ "BQ-rna_biology-196591c3c8b4": {
+  "type": "mtf",
+  "question": "关于转录后加工中的RNA编辑，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "C-to-U编辑由APOBEC家族胞苷脱氨酶催化",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "RNA编辑在所有转录本上均匀发生",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "A-to-I编辑(ADAR介导)是最常见的RNA编辑形式,可改变密码子含义",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "RNA编辑是改变RNA序列中特定核苷酸的转录后过程",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:RNA编辑具有高度位点特异性——主要发生在非编码区Alu元件等处,编码区的编辑(如GluR2的Q/R位点)对蛋白功能有重大影响。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA编辑",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1809104435",
+  "tags": []
+ },
+ "BQ-rna_biology-f02a733170c9": {
+  "type": "mtf",
+  "question": "关于转录后加工中的RNA编辑，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "C-to-U编辑由APOBEC家族胞苷脱氨酶催化",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "RNA编辑在所有转录本上均匀发生",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "RNA编辑是改变RNA序列中特定核苷酸的转录后过程",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "A-to-I编辑(ADAR介导)是最常见的RNA编辑形式,可改变密码子含义",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:RNA编辑具有高度位点特异性——主要发生在非编码区Alu元件等处,编码区的编辑(如GluR2的Q/R位点)对蛋白功能有重大影响。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA编辑",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1809104435",
+  "tags": []
+ },
+ "BQ-rna_biology-f2e1ea4691e4": {
+  "type": "mtf",
+  "question": "关于转录后加工中的RNA编辑，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "C-to-U编辑由APOBEC家族胞苷脱氨酶催化",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "RNA编辑是改变RNA序列中特定核苷酸的转录后过程",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "A-to-I编辑(ADAR介导)是最常见的RNA编辑形式,可改变密码子含义",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "RNA编辑在所有转录本上均匀发生",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:RNA编辑具有高度位点特异性——主要发生在非编码区Alu元件等处,编码区的编辑(如GluR2的Q/R位点)对蛋白功能有重大影响。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA编辑",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1809104435",
+  "tags": []
+ },
+ "BQ-rna_biology-34deb64ed227": {
+  "type": "mtf",
+  "question": "关于转录后加工中的RNA编辑，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "C-to-U编辑由APOBEC家族胞苷脱氨酶催化",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "RNA编辑是改变RNA序列中特定核苷酸的转录后过程",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "RNA编辑在所有转录本上均匀发生",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "A-to-I编辑(ADAR介导)是最常见的RNA编辑形式,可改变密码子含义",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:RNA编辑具有高度位点特异性——主要发生在非编码区Alu元件等处,编码区的编辑(如GluR2的Q/R位点)对蛋白功能有重大影响。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA编辑",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1809104435",
+  "tags": []
+ },
+ "BQ-rna_biology-8aedacae35a3": {
+  "type": "mtf",
+  "question": "关于转录后加工中的RNA编辑，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "RNA编辑在所有转录本上均匀发生",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "A-to-I编辑(ADAR介导)是最常见的RNA编辑形式,可改变密码子含义",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "C-to-U编辑由APOBEC家族胞苷脱氨酶催化",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "RNA编辑是改变RNA序列中特定核苷酸的转录后过程",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:RNA编辑具有高度位点特异性——主要发生在非编码区Alu元件等处,编码区的编辑(如GluR2的Q/R位点)对蛋白功能有重大影响。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA编辑",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1809104435",
+  "tags": []
+ },
+ "BQ-rna_biology-18559103bf18": {
+  "type": "mtf",
+  "question": "关于转录后加工中的RNA编辑，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "RNA编辑在所有转录本上均匀发生",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "A-to-I编辑(ADAR介导)是最常见的RNA编辑形式,可改变密码子含义",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "RNA编辑是改变RNA序列中特定核苷酸的转录后过程",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "C-to-U编辑由APOBEC家族胞苷脱氨酶催化",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:RNA编辑具有高度位点特异性——主要发生在非编码区Alu元件等处,编码区的编辑(如GluR2的Q/R位点)对蛋白功能有重大影响。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA编辑",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1809104435",
+  "tags": []
+ },
+ "BQ-rna_biology-88818240ee4d": {
+  "type": "mtf",
+  "question": "关于转录后加工中的RNA编辑，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "RNA编辑在所有转录本上均匀发生",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "C-to-U编辑由APOBEC家族胞苷脱氨酶催化",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "A-to-I编辑(ADAR介导)是最常见的RNA编辑形式,可改变密码子含义",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "RNA编辑是改变RNA序列中特定核苷酸的转录后过程",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:RNA编辑具有高度位点特异性——主要发生在非编码区Alu元件等处,编码区的编辑(如GluR2的Q/R位点)对蛋白功能有重大影响。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA编辑",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1809104435",
+  "tags": []
+ },
+ "BQ-rna_biology-f1b9371dc275": {
+  "type": "mtf",
+  "question": "关于转录后加工中的RNA编辑，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "RNA编辑在所有转录本上均匀发生",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "C-to-U编辑由APOBEC家族胞苷脱氨酶催化",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "RNA编辑是改变RNA序列中特定核苷酸的转录后过程",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "A-to-I编辑(ADAR介导)是最常见的RNA编辑形式,可改变密码子含义",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:RNA编辑具有高度位点特异性——主要发生在非编码区Alu元件等处,编码区的编辑(如GluR2的Q/R位点)对蛋白功能有重大影响。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA编辑",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1809104435",
+  "tags": []
+ },
+ "BQ-rna_biology-49410667648a": {
+  "type": "mtf",
+  "question": "关于转录后加工中的RNA编辑，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "RNA编辑在所有转录本上均匀发生",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "RNA编辑是改变RNA序列中特定核苷酸的转录后过程",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "A-to-I编辑(ADAR介导)是最常见的RNA编辑形式,可改变密码子含义",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "C-to-U编辑由APOBEC家族胞苷脱氨酶催化",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:RNA编辑具有高度位点特异性——主要发生在非编码区Alu元件等处,编码区的编辑(如GluR2的Q/R位点)对蛋白功能有重大影响。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA编辑",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1809104435",
+  "tags": []
+ },
+ "BQ-rna_biology-b66856956f84": {
+  "type": "mtf",
+  "question": "关于转录后加工中的RNA编辑，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "RNA编辑在所有转录本上均匀发生",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "RNA编辑是改变RNA序列中特定核苷酸的转录后过程",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "C-to-U编辑由APOBEC家族胞苷脱氨酶催化",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "A-to-I编辑(ADAR介导)是最常见的RNA编辑形式,可改变密码子含义",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:RNA编辑具有高度位点特异性——主要发生在非编码区Alu元件等处,编码区的编辑(如GluR2的Q/R位点)对蛋白功能有重大影响。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA编辑",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1809104435",
+  "tags": []
+ },
+ "BQ-rna_biology-bc0ff4cbd00b": {
+  "type": "mtf",
+  "question": "关于转录后加工中的RNA编辑，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "RNA编辑是改变RNA序列中特定核苷酸的转录后过程",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "A-to-I编辑(ADAR介导)是最常见的RNA编辑形式,可改变密码子含义",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "C-to-U编辑由APOBEC家族胞苷脱氨酶催化",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "RNA编辑在所有转录本上均匀发生",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:RNA编辑具有高度位点特异性——主要发生在非编码区Alu元件等处,编码区的编辑(如GluR2的Q/R位点)对蛋白功能有重大影响。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA编辑",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1809104435",
+  "tags": []
+ },
+ "BQ-rna_biology-ca273473d72f": {
+  "type": "mtf",
+  "question": "关于转录后加工中的RNA编辑，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "RNA编辑是改变RNA序列中特定核苷酸的转录后过程",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "A-to-I编辑(ADAR介导)是最常见的RNA编辑形式,可改变密码子含义",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "RNA编辑在所有转录本上均匀发生",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "C-to-U编辑由APOBEC家族胞苷脱氨酶催化",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:RNA编辑具有高度位点特异性——主要发生在非编码区Alu元件等处,编码区的编辑(如GluR2的Q/R位点)对蛋白功能有重大影响。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA编辑",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1809104435",
+  "tags": []
+ },
+ "BQ-rna_biology-39ead6d999bc": {
+  "type": "mtf",
+  "question": "关于转录后加工中的RNA编辑，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "RNA编辑是改变RNA序列中特定核苷酸的转录后过程",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "C-to-U编辑由APOBEC家族胞苷脱氨酶催化",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "A-to-I编辑(ADAR介导)是最常见的RNA编辑形式,可改变密码子含义",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "RNA编辑在所有转录本上均匀发生",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:RNA编辑具有高度位点特异性——主要发生在非编码区Alu元件等处,编码区的编辑(如GluR2的Q/R位点)对蛋白功能有重大影响。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA编辑",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1809104435",
+  "tags": []
+ },
+ "BQ-rna_biology-c325380547d5": {
+  "type": "mtf",
+  "question": "关于转录后加工中的RNA编辑，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "RNA编辑是改变RNA序列中特定核苷酸的转录后过程",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "C-to-U编辑由APOBEC家族胞苷脱氨酶催化",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "RNA编辑在所有转录本上均匀发生",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "A-to-I编辑(ADAR介导)是最常见的RNA编辑形式,可改变密码子含义",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:RNA编辑具有高度位点特异性——主要发生在非编码区Alu元件等处,编码区的编辑(如GluR2的Q/R位点)对蛋白功能有重大影响。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA编辑",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1809104435",
+  "tags": []
+ },
+ "BQ-rna_biology-59b4c9e13103": {
+  "type": "mtf",
+  "question": "关于转录后加工中的RNA编辑，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "RNA编辑是改变RNA序列中特定核苷酸的转录后过程",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "RNA编辑在所有转录本上均匀发生",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "A-to-I编辑(ADAR介导)是最常见的RNA编辑形式,可改变密码子含义",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "C-to-U编辑由APOBEC家族胞苷脱氨酶催化",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:RNA编辑具有高度位点特异性——主要发生在非编码区Alu元件等处,编码区的编辑(如GluR2的Q/R位点)对蛋白功能有重大影响。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA编辑",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1809104435",
+  "tags": []
+ },
+ "BQ-rna_biology-29e04fa11440": {
+  "type": "mtf",
+  "question": "关于转录后加工中的RNA编辑，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "RNA编辑是改变RNA序列中特定核苷酸的转录后过程",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "RNA编辑在所有转录本上均匀发生",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "C-to-U编辑由APOBEC家族胞苷脱氨酶催化",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "A-to-I编辑(ADAR介导)是最常见的RNA编辑形式,可改变密码子含义",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:RNA编辑具有高度位点特异性——主要发生在非编码区Alu元件等处,编码区的编辑(如GluR2的Q/R位点)对蛋白功能有重大影响。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA编辑",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1809104435",
+  "tags": []
+ }
+}

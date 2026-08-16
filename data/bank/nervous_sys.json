@@ -1,0 +1,6338 @@
+{
+ "BQ-nervous_sys-c5f0a782b8c2": {
+  "type": "mtf",
+  "question": "关于兴奋在神经纤维上传导的叙述，错误的是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "兴奋在突触处的传递是双向的",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "反射弧由感受器、传入神经、神经中枢、传出神经、效应器组成",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "神经调节的基本方式是反射",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "神经纤维上兴奋以电信号形式传导",
+    "answer": false
+   }
+  ],
+  "explanation": "由于神经递质只能由突触前膜释放并作用于突触后膜，兴奋在突触处单向传递。",
+  "subject": "动物生理学",
+  "concept": "神经调节",
+  "difficulty": "basic",
+  "chart": null,
+  "year": null,
+  "module": "module_3",
+  "target": "high_school",
+  "tags": [
+   "module_3",
+   "动物生理学",
+   "神经调节",
+   "high_school"
+  ],
+  "oldId": "1654197743"
+ },
+ "BQ-nervous_sys-6a2c4102ea32": {
+  "type": "mtf",
+  "question": "关于神经调节的叙述，正确的是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "神经调节的基本方式是反射",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "反射弧由感受器、传入神经、神经中枢、传出神经、效应器组成",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "兴奋在突触处的传递是双向的",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "神经纤维上兴奋以电信号形式传导",
+    "answer": false
+   }
+  ],
+  "explanation": "由于神经递质只能由突触前膜释放并作用于突触后膜，兴奋在突触处单向传递。",
+  "subject": "动物生理学",
+  "concept": "神经调节",
+  "difficulty": "basic",
+  "chart": null,
+  "year": null,
+  "module": "module_3",
+  "target": "high_school",
+  "tags": [
+   "module_3",
+   "动物生理学",
+   "神经调节",
+   "high_school"
+  ],
+  "oldId": "1592640930"
+ },
+ "BQ-nervous_sys-79bd8d601d8c": {
+  "type": "multi_judge",
+  "question": "将群居型蝗虫若虫饲养于高密度环境，其体色变黑、聚集行为增强。检测发现脑部神经分泌细胞活性显著提升。",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "高密度刺激诱导脑部分泌血清素，作为关键信号触发群居型表型转化。",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "该表型可塑性主要由遗传突变引起，需经多代自然选择才能在群体中固定。",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "群居型个体代谢率升高且脂肪积累减少，以适应长距离迁飞的能量需求。",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "若将群居型若虫立即隔离饲养，其体色和行为将在一次蜕皮内完全恢复散居型。",
+    "answer": false
+   }
+  ],
+  "explanation": "A 正确：高密度机械刺激激活中枢神经系统，促使血清素（5-HT）释放，这是启动群居型表型的关键分子开关。B 错误：这是典型的非遗传性表型可塑性（相变），由环境诱导而非基因突变，无需多代选择。C 正确：群居型为适应迁飞，代谢模式转向碳水化合物快速供能，脂肪储备相对减少以减轻体重。D 错误：相变具有滞后性，群居型转散居型通常需要经过多次蜕皮甚至成虫期才能完全逆转，不会在一次蜕皮内完成。",
+  "subject": "动物生理学与生态学",
+  "concept": "昆虫相变机制",
+  "difficulty": "national",
+  "chart": null,
+  "year": null,
+  "module": "module_3",
+  "target": "competition",
+  "tags": [
+   "module_3",
+   "hard"
+  ],
+  "oldId": "1509132869"
+ },
+ "BQ-nervous_sys-0954c86508d3": {
+  "type": "multi_judge",
+  "question": "某研究组对迁徙鸟类进行实验：切断其三叉神经后，鸟类在强磁场中迷失方向；若仅遮蔽双眼，鸟类仍能利用磁场导航。",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "该实验证明鸟类磁感应存在基于磁铁矿的机械受体机制。",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "实验结果表明视网膜隐花色素是鸟类感知磁场强度的唯一受体。",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "三叉神经传入信号可能源自喙部含有磁铁矿颗粒的感觉神经元。",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "遮蔽双眼导致迷失说明光依赖性自由基对机制不参与磁导航。",
+    "answer": false
+   }
+  ],
+  "explanation": "A 正确：三叉神经切断导致迷失，提示存在非光依赖的机械磁受体（通常认为含磁铁矿）。B 错误：隐花色素介导光依赖机制，但实验显示遮眼仍能导航，且“唯一”表述绝对化。C 正确：鸟类喙部富含磁铁矿，通过三叉神经传递磁强度信息，符合实验现象。D 错误：遮眼后仍能导航，恰恰说明光依赖机制（自由基对）不是唯一途径，或该实验条件下非光依赖机制起主导作用，而非不参与。",
+  "subject": "动物生理学",
+  "concept": "动物磁导航机制",
+  "difficulty": "national",
+  "chart": null,
+  "year": null,
+  "module": "module_3",
+  "target": "competition",
+  "tags": [
+   "module_3",
+   "hard"
+  ],
+  "oldId": "996277637"
+ },
+ "BQ-nervous_sys-ef6d7df5f64f": {
+  "type": "multi_judge",
+  "question": "研究者对某洞穴盲鱼种群进行实验：将其幼鱼置于持续光照下饲养，发现其视网膜退化加速；若切除松果体，该加速效应消失。",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "持续光照通过松果体介导的信号通路加速了视网膜退化。",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "松果体在黑暗中分泌褪黑素，光照会促进其大量分泌。",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "该实验表明环境因子可诱导发育可塑性甚至表型改变。",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "切除松果体后鱼体完全丧失了对光周期的感知与响应能力。",
+    "answer": false
+   }
+  ],
+  "explanation": "A 正确：切除松果体后光照加速退化效应消失，说明该过程依赖松果体介导。B 错误：松果体通常在黑暗中分泌褪黑素，光照会抑制其分泌而非促进。C 正确：环境光照改变了原本适应黑暗的退化进程，体现了发育可塑性。D 错误：切除松果体仅消除了特定的加速退化效应，鱼类仍可通过视网膜或其他光感受器感知光线，并非完全丧失感光能力。",
+  "subject": "动物生理学",
+  "concept": "神经内分泌调节",
+  "difficulty": "league",
+  "chart": null,
+  "year": null,
+  "module": "module_3",
+  "target": "competition",
+  "tags": [
+   "module_3",
+   "medium"
+  ],
+  "oldId": "691858585"
+ },
+ "BQ-nervous_sys-0e6c7dbca842": {
+  "type": "mtf",
+  "question": "突触传递的特点是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "神经调节的基本方式是反射",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "反射弧由感受器、传入神经、神经中枢、传出神经、效应器组成",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "神经纤维上兴奋以电信号形式传导",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "兴奋在突触处的传递是双向的",
+    "answer": true
+   }
+  ],
+  "explanation": "由于神经递质只能由突触前膜释放并作用于突触后膜，兴奋在突触处单向传递。",
+  "subject": "动物生理学",
+  "concept": "神经调节",
+  "difficulty": "basic",
+  "chart": null,
+  "year": null,
+  "module": "module_3",
+  "target": "high_school",
+  "tags": [
+   "module_3",
+   "动物生理学",
+   "神经调节",
+   "high_school"
+  ],
+  "oldId": "431070638"
+ },
+ "BQ-nervous_sys-dff22eba07ec": {
+  "type": "mtf",
+  "question": "关于反射与反射弧的叙述，正确的是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "静息电位表现为膜内正、膜外负",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "动作电位的产生主要与 Na⁺ 大量内流有关",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "兴奋在神经纤维上只能单向传导",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "神经冲动传导与 K⁺ 无关",
+    "answer": false
+   }
+  ],
+  "explanation": "静息电位由 K⁺ 外流维持，表现为外正内负；动作电位由 Na⁺ 内流引起；在离体神经纤维上兴奋可双向传导。",
+  "subject": "动物生理学",
+  "concept": "神经调节",
+  "difficulty": "league",
+  "chart": null,
+  "year": null,
+  "module": "module_4",
+  "target": "high_school",
+  "tags": [
+   "module_4",
+   "动物生理学",
+   "神经调节",
+   "high_school"
+  ],
+  "oldId": "1164983477"
+ },
+ "BQ-nervous_sys-d2fabe480628": {
+  "type": "mtf",
+  "question": "关于神经冲动传导的叙述，正确的是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "静息电位表现为膜内正、膜外负",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "动作电位的产生主要与 Na⁺ 大量内流有关",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "兴奋在神经纤维上只能单向传导",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "神经冲动传导与 K⁺ 无关",
+    "answer": false
+   }
+  ],
+  "explanation": "静息电位由 K⁺ 外流维持，表现为外正内负；动作电位由 Na⁺ 内流引起；在离体神经纤维上兴奋可双向传导。",
+  "subject": "动物生理学",
+  "concept": "神经调节",
+  "difficulty": "league",
+  "chart": null,
+  "year": null,
+  "module": "module_4",
+  "target": "high_school",
+  "tags": [
+   "module_4",
+   "动物生理学",
+   "神经调节",
+   "high_school"
+  ],
+  "oldId": "471268907"
+ },
+ "BQ-nervous_sys-96d66f075382": {
+  "type": "mtf",
+  "question": "关于神经冲动传导的叙述，错误的是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "神经纤维上兴奋传导的方向与膜内局部电流方向一致",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "兴奋在突触处的传递是单向的",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "静息电位主要由 K⁺ 外流维持",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "动作电位的产生主要与 Cl⁻ 内流有关",
+    "answer": true
+   }
+  ],
+  "explanation": "动作电位主要由 Na⁺ 大量内流形成；静息电位主要由 K⁺ 外流维持。",
+  "subject": "动物生理学",
+  "concept": "神经调节",
+  "difficulty": "basic",
+  "chart": null,
+  "year": null,
+  "module": "module_4",
+  "target": "high_school",
+  "tags": [
+   "module_4",
+   "动物生理学",
+   "神经调节",
+   "高考"
+  ],
+  "oldId": "1936175584"
+ },
+ "BQ-nervous_sys-77d39ca814a5": {
+  "type": "mtf",
+  "question": "关于突触的叙述，错误的是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "静息电位表现为膜内正、膜外负",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "动作电位的产生主要与 Na⁺ 大量内流有关",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "兴奋在神经纤维上只能单向传导",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "神经冲动传导与 K⁺ 无关",
+    "answer": false
+   }
+  ],
+  "explanation": "静息电位由 K⁺ 外流维持，表现为外正内负；动作电位由 Na⁺ 内流引起；在离体神经纤维上兴奋可双向传导。",
+  "subject": "动物生理学",
+  "concept": "神经调节",
+  "difficulty": "league",
+  "chart": null,
+  "year": null,
+  "module": "module_4",
+  "target": "high_school",
+  "tags": [
+   "module_4",
+   "动物生理学",
+   "神经调节",
+   "high_school"
+  ],
+  "oldId": "648908002"
+ },
+ "BQ-nervous_sys-77de2852ff18": {
+  "type": "single",
+  "question": "ON中心型视网膜神经节细胞：小光点单独刺激感受野中心，发放频率30 spikes/s；单独刺激周围，5 spikes/s（低于自发活动10 spikes/s）；同时刺激中心和周围，18 spikes/s。改用红光（仅激活L型视锥）同时刺激中心和周围，发放频率变为25 spikes/s。推断该细胞感受野中心和周围的色觉输入特征：",
+  "options": [
+   "中心和周围都接收L型视锥输入，但周围还接收M型视锥拮抗输入",
+   "中心接收L型视锥输入，周围接收M+S型视锥输入",
+   "中心和周围都仅接收L型视锥输入，无色觉拮抗",
+   "中心接收L+M型视锥输入，周围接收S型视锥输入"
+  ],
+  "answer": 0,
+  "explanation": "白光同时刺激中心和周围时发放18 spikes/s，低于仅刺激中心时的30，说明周围对中心有拮抗（侧抑制）。改用红光（仅激活L型视锥）时发放升至25，比白光条件下的18更高，说明红光下周围拮抗效应减弱了。白光激活所有视锥类型（L、M、S），红光仅激活L型。红光下周围拮抗减弱，说明白光下周围的拮抗部分来自M型和/或S型视锥的输入。因此，中心接收L型输入（ON），周围接收L型输入（OFF）加上M型拮抗输入。红光刺激时周围只有L型被激活（OFF），M型未被激活，拮抗效应比白光时弱，因此发放频率更高。",
+  "subject": "动物生理学",
+  "concept": "视觉信息处理推理",
+  "difficulty": 5,
+  "tags": [
+   "逻辑推理",
+   "实验分析",
+   "神经生理"
+  ],
+  "module": "module_3",
+  "category": "logic",
+  "oldId": "2141863529",
+  "subQuestions": [],
+  "chart": null,
+  "year": null
+ },
+ "BQ-nervous_sys-410429b4b9b6": {
+  "type": "single",
+  "question": "在研究神经肌肉接头时，单次神经刺激引起EPP约40 mV（远超阈值），肌肉收缩。低浓度筒箭毒碱（竞争性nAChR拮抗剂）处理后，单次刺激EPP降至8 mV（低于阈值），肌肉不收缩。但高频刺激（50 Hz持续1秒）后肌肉产生了收缩。最合理的解释是：",
+  "options": [
+   "高频刺激使筒箭毒碱从受体上解离",
+   "高频刺激导致突触前膜释放更多ACh，在受体处累积浓度足以部分克服竞争性拮抗",
+   "高频刺激直接激活了肌肉细胞膜上的电压门控Na⁺通道",
+   "高频刺激使nAChR对ACh的亲和力增加"
+  ],
+  "answer": 1,
+  "explanation": "筒箭毒碱是竞争性拮抗剂，抑制程度取决于[ACh]/[筒箭毒碱]比值。单次刺激时ACh短暂升高后迅速被乙酰胆碱酯酶水解，有效[ACh]不足以克服拮抗。高频刺激时突触前膜持续释放ACh，突触间隙ACh平均浓度升高（累积效应），[ACh]/[筒箭毒碱]比值增大，更多nAChR被ACh激活，EPP总和后可达阈值。筒箭毒碱解离速率不因高频刺激改变（排除选项1），肌肉收缩需EPP达阈值引发动作电位，不能绕过nAChR（排除选项3），受体亲和力不会因刺激频率改变（排除选项4）。",
+  "subject": "动物生理学",
+  "concept": "神经肌肉接头与竞争性拮抗",
+  "difficulty": 4,
+  "tags": [
+   "逻辑推理",
+   "实验分析",
+   "神经生理"
+  ],
+  "module": "module_3",
+  "category": "logic",
+  "oldId": "2069817395",
+  "subQuestions": [],
+  "chart": null,
+  "year": null
+ },
+ "BQ-nervous_sys-8a96a89a0bc4": {
+  "type": "mtf",
+  "question": "【数据】心率变异性(HRV)分析:运动训练后LF/HF比值从2.5降至1.2。判断推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "LF/HF比值反映的是交感与副交感神经活动的平衡",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "LF/HF比值降低提示迷走神经(副交感)张力增强",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "较低的LF/HF比值与较低的心血管疾病风险相关",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "长期运动训练改善了自主神经平衡",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。HRV中LF/HF反映自主神经平衡。运动训练降低LF/HF反映副交感优势增强,心脏自主调控改善。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "自主神经",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2021133977",
+  "tags": []
+ },
+ "BQ-nervous_sys-80a9c96ff393": {
+  "type": "mtf",
+  "question": "【数据】心率变异性(HRV)分析:运动训练后LF/HF比值从2.5降至1.2。判断推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "LF/HF比值反映的是交感与副交感神经活动的平衡",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "LF/HF比值降低提示迷走神经(副交感)张力增强",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "长期运动训练改善了自主神经平衡",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "较低的LF/HF比值与较低的心血管疾病风险相关",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。HRV中LF/HF反映自主神经平衡。运动训练降低LF/HF反映副交感优势增强,心脏自主调控改善。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "自主神经",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2021133977",
+  "tags": []
+ },
+ "BQ-nervous_sys-75c8c1d3536e": {
+  "type": "mtf",
+  "question": "【数据】心率变异性(HRV)分析:运动训练后LF/HF比值从2.5降至1.2。判断推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "LF/HF比值反映的是交感与副交感神经活动的平衡",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "较低的LF/HF比值与较低的心血管疾病风险相关",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "LF/HF比值降低提示迷走神经(副交感)张力增强",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "长期运动训练改善了自主神经平衡",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。HRV中LF/HF反映自主神经平衡。运动训练降低LF/HF反映副交感优势增强,心脏自主调控改善。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "自主神经",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2021133977",
+  "tags": []
+ },
+ "BQ-nervous_sys-1c8d7580e9e9": {
+  "type": "mtf",
+  "question": "【数据】心率变异性(HRV)分析:运动训练后LF/HF比值从2.5降至1.2。判断推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "LF/HF比值反映的是交感与副交感神经活动的平衡",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "较低的LF/HF比值与较低的心血管疾病风险相关",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "长期运动训练改善了自主神经平衡",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "LF/HF比值降低提示迷走神经(副交感)张力增强",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。HRV中LF/HF反映自主神经平衡。运动训练降低LF/HF反映副交感优势增强,心脏自主调控改善。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "自主神经",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2021133977",
+  "tags": []
+ },
+ "BQ-nervous_sys-2a55085a8e40": {
+  "type": "mtf",
+  "question": "【数据】心率变异性(HRV)分析:运动训练后LF/HF比值从2.5降至1.2。判断推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "LF/HF比值反映的是交感与副交感神经活动的平衡",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "长期运动训练改善了自主神经平衡",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "LF/HF比值降低提示迷走神经(副交感)张力增强",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "较低的LF/HF比值与较低的心血管疾病风险相关",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。HRV中LF/HF反映自主神经平衡。运动训练降低LF/HF反映副交感优势增强,心脏自主调控改善。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "自主神经",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2021133977",
+  "tags": []
+ },
+ "BQ-nervous_sys-435a3beb0843": {
+  "type": "mtf",
+  "question": "【数据】心率变异性(HRV)分析:运动训练后LF/HF比值从2.5降至1.2。判断推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "LF/HF比值反映的是交感与副交感神经活动的平衡",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "长期运动训练改善了自主神经平衡",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "较低的LF/HF比值与较低的心血管疾病风险相关",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "LF/HF比值降低提示迷走神经(副交感)张力增强",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。HRV中LF/HF反映自主神经平衡。运动训练降低LF/HF反映副交感优势增强,心脏自主调控改善。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "自主神经",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2021133977",
+  "tags": []
+ },
+ "BQ-nervous_sys-3db8e592951c": {
+  "type": "mtf",
+  "question": "【数据】心率变异性(HRV)分析:运动训练后LF/HF比值从2.5降至1.2。判断推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "LF/HF比值降低提示迷走神经(副交感)张力增强",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "LF/HF比值反映的是交感与副交感神经活动的平衡",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "较低的LF/HF比值与较低的心血管疾病风险相关",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "长期运动训练改善了自主神经平衡",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。HRV中LF/HF反映自主神经平衡。运动训练降低LF/HF反映副交感优势增强,心脏自主调控改善。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "自主神经",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2021133977",
+  "tags": []
+ },
+ "BQ-nervous_sys-349f80d0f82a": {
+  "type": "mtf",
+  "question": "【数据】心率变异性(HRV)分析:运动训练后LF/HF比值从2.5降至1.2。判断推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "LF/HF比值降低提示迷走神经(副交感)张力增强",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "LF/HF比值反映的是交感与副交感神经活动的平衡",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "长期运动训练改善了自主神经平衡",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "较低的LF/HF比值与较低的心血管疾病风险相关",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。HRV中LF/HF反映自主神经平衡。运动训练降低LF/HF反映副交感优势增强,心脏自主调控改善。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "自主神经",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2021133977",
+  "tags": []
+ },
+ "BQ-nervous_sys-76e6834eab41": {
+  "type": "mtf",
+  "question": "【数据】心率变异性(HRV)分析:运动训练后LF/HF比值从2.5降至1.2。判断推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "LF/HF比值降低提示迷走神经(副交感)张力增强",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "较低的LF/HF比值与较低的心血管疾病风险相关",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "LF/HF比值反映的是交感与副交感神经活动的平衡",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "长期运动训练改善了自主神经平衡",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。HRV中LF/HF反映自主神经平衡。运动训练降低LF/HF反映副交感优势增强,心脏自主调控改善。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "自主神经",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2021133977",
+  "tags": []
+ },
+ "BQ-nervous_sys-a535e543fe9d": {
+  "type": "mtf",
+  "question": "【数据】心率变异性(HRV)分析:运动训练后LF/HF比值从2.5降至1.2。判断推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "LF/HF比值降低提示迷走神经(副交感)张力增强",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "较低的LF/HF比值与较低的心血管疾病风险相关",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "长期运动训练改善了自主神经平衡",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "LF/HF比值反映的是交感与副交感神经活动的平衡",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。HRV中LF/HF反映自主神经平衡。运动训练降低LF/HF反映副交感优势增强,心脏自主调控改善。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "自主神经",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2021133977",
+  "tags": []
+ },
+ "BQ-nervous_sys-4ff4bd90f2fc": {
+  "type": "mtf",
+  "question": "【数据】心率变异性(HRV)分析:运动训练后LF/HF比值从2.5降至1.2。判断推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "LF/HF比值降低提示迷走神经(副交感)张力增强",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "长期运动训练改善了自主神经平衡",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "LF/HF比值反映的是交感与副交感神经活动的平衡",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "较低的LF/HF比值与较低的心血管疾病风险相关",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。HRV中LF/HF反映自主神经平衡。运动训练降低LF/HF反映副交感优势增强,心脏自主调控改善。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "自主神经",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2021133977",
+  "tags": []
+ },
+ "BQ-nervous_sys-d7658e883648": {
+  "type": "mtf",
+  "question": "【数据】心率变异性(HRV)分析:运动训练后LF/HF比值从2.5降至1.2。判断推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "LF/HF比值降低提示迷走神经(副交感)张力增强",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "长期运动训练改善了自主神经平衡",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "较低的LF/HF比值与较低的心血管疾病风险相关",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "LF/HF比值反映的是交感与副交感神经活动的平衡",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。HRV中LF/HF反映自主神经平衡。运动训练降低LF/HF反映副交感优势增强,心脏自主调控改善。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "自主神经",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2021133977",
+  "tags": []
+ },
+ "BQ-nervous_sys-7c1e62f654f4": {
+  "type": "mtf",
+  "question": "【数据】心率变异性(HRV)分析:运动训练后LF/HF比值从2.5降至1.2。判断推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "较低的LF/HF比值与较低的心血管疾病风险相关",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "LF/HF比值反映的是交感与副交感神经活动的平衡",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "LF/HF比值降低提示迷走神经(副交感)张力增强",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "长期运动训练改善了自主神经平衡",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。HRV中LF/HF反映自主神经平衡。运动训练降低LF/HF反映副交感优势增强,心脏自主调控改善。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "自主神经",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2021133977",
+  "tags": []
+ },
+ "BQ-nervous_sys-1f5a866f9f50": {
+  "type": "mtf",
+  "question": "【数据】心率变异性(HRV)分析:运动训练后LF/HF比值从2.5降至1.2。判断推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "较低的LF/HF比值与较低的心血管疾病风险相关",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "LF/HF比值反映的是交感与副交感神经活动的平衡",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "长期运动训练改善了自主神经平衡",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "LF/HF比值降低提示迷走神经(副交感)张力增强",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。HRV中LF/HF反映自主神经平衡。运动训练降低LF/HF反映副交感优势增强,心脏自主调控改善。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "自主神经",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2021133977",
+  "tags": []
+ },
+ "BQ-nervous_sys-caccf5094fd8": {
+  "type": "mtf",
+  "question": "【数据】心率变异性(HRV)分析:运动训练后LF/HF比值从2.5降至1.2。判断推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "较低的LF/HF比值与较低的心血管疾病风险相关",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "LF/HF比值降低提示迷走神经(副交感)张力增强",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "LF/HF比值反映的是交感与副交感神经活动的平衡",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "长期运动训练改善了自主神经平衡",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。HRV中LF/HF反映自主神经平衡。运动训练降低LF/HF反映副交感优势增强,心脏自主调控改善。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "自主神经",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2021133977",
+  "tags": []
+ },
+ "BQ-nervous_sys-a8598c4e3c80": {
+  "type": "mtf",
+  "question": "【数据】心率变异性(HRV)分析:运动训练后LF/HF比值从2.5降至1.2。判断推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "较低的LF/HF比值与较低的心血管疾病风险相关",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "LF/HF比值降低提示迷走神经(副交感)张力增强",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "长期运动训练改善了自主神经平衡",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "LF/HF比值反映的是交感与副交感神经活动的平衡",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。HRV中LF/HF反映自主神经平衡。运动训练降低LF/HF反映副交感优势增强,心脏自主调控改善。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "自主神经",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2021133977",
+  "tags": []
+ },
+ "BQ-nervous_sys-c6439a64e9dc": {
+  "type": "mtf",
+  "question": "【数据】心率变异性(HRV)分析:运动训练后LF/HF比值从2.5降至1.2。判断推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "较低的LF/HF比值与较低的心血管疾病风险相关",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "长期运动训练改善了自主神经平衡",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "LF/HF比值反映的是交感与副交感神经活动的平衡",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "LF/HF比值降低提示迷走神经(副交感)张力增强",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。HRV中LF/HF反映自主神经平衡。运动训练降低LF/HF反映副交感优势增强,心脏自主调控改善。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "自主神经",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2021133977",
+  "tags": []
+ },
+ "BQ-nervous_sys-719fa1d04791": {
+  "type": "mtf",
+  "question": "【数据】心率变异性(HRV)分析:运动训练后LF/HF比值从2.5降至1.2。判断推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "较低的LF/HF比值与较低的心血管疾病风险相关",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "长期运动训练改善了自主神经平衡",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "LF/HF比值降低提示迷走神经(副交感)张力增强",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "LF/HF比值反映的是交感与副交感神经活动的平衡",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。HRV中LF/HF反映自主神经平衡。运动训练降低LF/HF反映副交感优势增强,心脏自主调控改善。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "自主神经",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2021133977",
+  "tags": []
+ },
+ "BQ-nervous_sys-55bbc8461017": {
+  "type": "mtf",
+  "question": "【数据】心率变异性(HRV)分析:运动训练后LF/HF比值从2.5降至1.2。判断推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "长期运动训练改善了自主神经平衡",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "LF/HF比值反映的是交感与副交感神经活动的平衡",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "LF/HF比值降低提示迷走神经(副交感)张力增强",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "较低的LF/HF比值与较低的心血管疾病风险相关",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。HRV中LF/HF反映自主神经平衡。运动训练降低LF/HF反映副交感优势增强,心脏自主调控改善。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "自主神经",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2021133977",
+  "tags": []
+ },
+ "BQ-nervous_sys-0d6a25799d89": {
+  "type": "mtf",
+  "question": "【数据】心率变异性(HRV)分析:运动训练后LF/HF比值从2.5降至1.2。判断推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "长期运动训练改善了自主神经平衡",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "LF/HF比值反映的是交感与副交感神经活动的平衡",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "较低的LF/HF比值与较低的心血管疾病风险相关",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "LF/HF比值降低提示迷走神经(副交感)张力增强",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。HRV中LF/HF反映自主神经平衡。运动训练降低LF/HF反映副交感优势增强,心脏自主调控改善。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "自主神经",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2021133977",
+  "tags": []
+ },
+ "BQ-nervous_sys-21a9d35ed938": {
+  "type": "mtf",
+  "question": "【数据】心率变异性(HRV)分析:运动训练后LF/HF比值从2.5降至1.2。判断推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "长期运动训练改善了自主神经平衡",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "LF/HF比值降低提示迷走神经(副交感)张力增强",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "LF/HF比值反映的是交感与副交感神经活动的平衡",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "较低的LF/HF比值与较低的心血管疾病风险相关",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。HRV中LF/HF反映自主神经平衡。运动训练降低LF/HF反映副交感优势增强,心脏自主调控改善。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "自主神经",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2021133977",
+  "tags": []
+ },
+ "BQ-nervous_sys-65795b2fc0a7": {
+  "type": "mtf",
+  "question": "【数据】心率变异性(HRV)分析:运动训练后LF/HF比值从2.5降至1.2。判断推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "长期运动训练改善了自主神经平衡",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "LF/HF比值降低提示迷走神经(副交感)张力增强",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "较低的LF/HF比值与较低的心血管疾病风险相关",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "LF/HF比值反映的是交感与副交感神经活动的平衡",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。HRV中LF/HF反映自主神经平衡。运动训练降低LF/HF反映副交感优势增强,心脏自主调控改善。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "自主神经",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2021133977",
+  "tags": []
+ },
+ "BQ-nervous_sys-1a91137aeafa": {
+  "type": "mtf",
+  "question": "【数据】心率变异性(HRV)分析:运动训练后LF/HF比值从2.5降至1.2。判断推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "长期运动训练改善了自主神经平衡",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "较低的LF/HF比值与较低的心血管疾病风险相关",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "LF/HF比值反映的是交感与副交感神经活动的平衡",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "LF/HF比值降低提示迷走神经(副交感)张力增强",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。HRV中LF/HF反映自主神经平衡。运动训练降低LF/HF反映副交感优势增强,心脏自主调控改善。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "自主神经",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2021133977",
+  "tags": []
+ },
+ "BQ-nervous_sys-e4a87a202199": {
+  "type": "mtf",
+  "question": "【数据】心率变异性(HRV)分析:运动训练后LF/HF比值从2.5降至1.2。判断推论：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "长期运动训练改善了自主神经平衡",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "较低的LF/HF比值与较低的心血管疾病风险相关",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "LF/HF比值降低提示迷走神经(副交感)张力增强",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "LF/HF比值反映的是交感与副交感神经活动的平衡",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。HRV中LF/HF反映自主神经平衡。运动训练降低LF/HF反映副交感优势增强,心脏自主调控改善。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "自主神经",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2021133977",
+  "tags": []
+ },
+ "BQ-nervous_sys-208eaac5486f": {
+  "type": "mtf",
+  "question": "关于听觉的传导通路，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "听觉信号经听神经→耳蜗核→上橄榄核→下丘→内侧膝状体→听觉皮层的通路上传",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "声波经外耳道→鼓膜→听小骨链→卵圆窗→蜗管内淋巴液振动的传导通路到达听觉感受器",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "左右耳的听觉信息在脑干水平不发生交叉",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "柯蒂氏器（螺旋器）中的毛细胞是听觉的感受器细胞",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：声波传导通路。D正确：柯蒂氏器的功能。A正确：听觉中枢通路。C错误：听觉通路在脑干多处发生交叉和双侧投射——上橄榄核接受双侧耳蜗核的输入，这是声音定位的基础。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "听觉通路",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1745452574",
+  "tags": []
+ },
+ "BQ-nervous_sys-a0ba15894f21": {
+  "type": "mtf",
+  "question": "关于听觉的传导通路，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "听觉信号经听神经→耳蜗核→上橄榄核→下丘→内侧膝状体→听觉皮层的通路上传",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "声波经外耳道→鼓膜→听小骨链→卵圆窗→蜗管内淋巴液振动的传导通路到达听觉感受器",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "柯蒂氏器（螺旋器）中的毛细胞是听觉的感受器细胞",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "左右耳的听觉信息在脑干水平不发生交叉",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确：声波传导通路。C正确：柯蒂氏器的功能。A正确：听觉中枢通路。D错误：听觉通路在脑干多处发生交叉和双侧投射——上橄榄核接受双侧耳蜗核的输入，这是声音定位的基础。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "听觉通路",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1745452574",
+  "tags": []
+ },
+ "BQ-nervous_sys-f3be82c76d2e": {
+  "type": "mtf",
+  "question": "关于听觉的传导通路，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "听觉信号经听神经→耳蜗核→上橄榄核→下丘→内侧膝状体→听觉皮层的通路上传",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "左右耳的听觉信息在脑干水平不发生交叉",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "声波经外耳道→鼓膜→听小骨链→卵圆窗→蜗管内淋巴液振动的传导通路到达听觉感受器",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "柯蒂氏器（螺旋器）中的毛细胞是听觉的感受器细胞",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：声波传导通路。D正确：柯蒂氏器的功能。A正确：听觉中枢通路。B错误：听觉通路在脑干多处发生交叉和双侧投射——上橄榄核接受双侧耳蜗核的输入，这是声音定位的基础。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "听觉通路",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1745452574",
+  "tags": []
+ },
+ "BQ-nervous_sys-8f50aa289d58": {
+  "type": "mtf",
+  "question": "关于听觉的传导通路，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "听觉信号经听神经→耳蜗核→上橄榄核→下丘→内侧膝状体→听觉皮层的通路上传",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "左右耳的听觉信息在脑干水平不发生交叉",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "柯蒂氏器（螺旋器）中的毛细胞是听觉的感受器细胞",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "声波经外耳道→鼓膜→听小骨链→卵圆窗→蜗管内淋巴液振动的传导通路到达听觉感受器",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：声波传导通路。C正确：柯蒂氏器的功能。A正确：听觉中枢通路。B错误：听觉通路在脑干多处发生交叉和双侧投射——上橄榄核接受双侧耳蜗核的输入，这是声音定位的基础。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "听觉通路",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1745452574",
+  "tags": []
+ },
+ "BQ-nervous_sys-777efe8c3a5e": {
+  "type": "mtf",
+  "question": "关于听觉的传导通路，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "听觉信号经听神经→耳蜗核→上橄榄核→下丘→内侧膝状体→听觉皮层的通路上传",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "柯蒂氏器（螺旋器）中的毛细胞是听觉的感受器细胞",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "声波经外耳道→鼓膜→听小骨链→卵圆窗→蜗管内淋巴液振动的传导通路到达听觉感受器",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "左右耳的听觉信息在脑干水平不发生交叉",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确：声波传导通路。B正确：柯蒂氏器的功能。A正确：听觉中枢通路。D错误：听觉通路在脑干多处发生交叉和双侧投射——上橄榄核接受双侧耳蜗核的输入，这是声音定位的基础。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "听觉通路",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1745452574",
+  "tags": []
+ },
+ "BQ-nervous_sys-df7617421044": {
+  "type": "mtf",
+  "question": "关于听觉的传导通路，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "听觉信号经听神经→耳蜗核→上橄榄核→下丘→内侧膝状体→听觉皮层的通路上传",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "柯蒂氏器（螺旋器）中的毛细胞是听觉的感受器细胞",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "左右耳的听觉信息在脑干水平不发生交叉",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "声波经外耳道→鼓膜→听小骨链→卵圆窗→蜗管内淋巴液振动的传导通路到达听觉感受器",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：声波传导通路。B正确：柯蒂氏器的功能。A正确：听觉中枢通路。C错误：听觉通路在脑干多处发生交叉和双侧投射——上橄榄核接受双侧耳蜗核的输入，这是声音定位的基础。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "听觉通路",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1745452574",
+  "tags": []
+ },
+ "BQ-nervous_sys-b5352e4f6c05": {
+  "type": "mtf",
+  "question": "关于听觉的传导通路，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "声波经外耳道→鼓膜→听小骨链→卵圆窗→蜗管内淋巴液振动的传导通路到达听觉感受器",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "听觉信号经听神经→耳蜗核→上橄榄核→下丘→内侧膝状体→听觉皮层的通路上传",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "左右耳的听觉信息在脑干水平不发生交叉",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "柯蒂氏器（螺旋器）中的毛细胞是听觉的感受器细胞",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：声波传导通路。D正确：柯蒂氏器的功能。B正确：听觉中枢通路。C错误：听觉通路在脑干多处发生交叉和双侧投射——上橄榄核接受双侧耳蜗核的输入，这是声音定位的基础。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "听觉通路",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1745452574",
+  "tags": []
+ },
+ "BQ-nervous_sys-53249d4a840f": {
+  "type": "mtf",
+  "question": "关于听觉的传导通路，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "声波经外耳道→鼓膜→听小骨链→卵圆窗→蜗管内淋巴液振动的传导通路到达听觉感受器",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "听觉信号经听神经→耳蜗核→上橄榄核→下丘→内侧膝状体→听觉皮层的通路上传",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "柯蒂氏器（螺旋器）中的毛细胞是听觉的感受器细胞",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "左右耳的听觉信息在脑干水平不发生交叉",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确：声波传导通路。C正确：柯蒂氏器的功能。B正确：听觉中枢通路。D错误：听觉通路在脑干多处发生交叉和双侧投射——上橄榄核接受双侧耳蜗核的输入，这是声音定位的基础。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "听觉通路",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1745452574",
+  "tags": []
+ },
+ "BQ-nervous_sys-6d63a789eeff": {
+  "type": "mtf",
+  "question": "关于听觉的传导通路，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "声波经外耳道→鼓膜→听小骨链→卵圆窗→蜗管内淋巴液振动的传导通路到达听觉感受器",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "左右耳的听觉信息在脑干水平不发生交叉",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "听觉信号经听神经→耳蜗核→上橄榄核→下丘→内侧膝状体→听觉皮层的通路上传",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "柯蒂氏器（螺旋器）中的毛细胞是听觉的感受器细胞",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：声波传导通路。D正确：柯蒂氏器的功能。C正确：听觉中枢通路。B错误：听觉通路在脑干多处发生交叉和双侧投射——上橄榄核接受双侧耳蜗核的输入，这是声音定位的基础。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "听觉通路",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1745452574",
+  "tags": []
+ },
+ "BQ-nervous_sys-da847482728b": {
+  "type": "mtf",
+  "question": "关于听觉的传导通路，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "声波经外耳道→鼓膜→听小骨链→卵圆窗→蜗管内淋巴液振动的传导通路到达听觉感受器",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "左右耳的听觉信息在脑干水平不发生交叉",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "柯蒂氏器（螺旋器）中的毛细胞是听觉的感受器细胞",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "听觉信号经听神经→耳蜗核→上橄榄核→下丘→内侧膝状体→听觉皮层的通路上传",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：声波传导通路。C正确：柯蒂氏器的功能。D正确：听觉中枢通路。B错误：听觉通路在脑干多处发生交叉和双侧投射——上橄榄核接受双侧耳蜗核的输入，这是声音定位的基础。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "听觉通路",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1745452574",
+  "tags": []
+ },
+ "BQ-nervous_sys-dbe787498047": {
+  "type": "mtf",
+  "question": "关于听觉的传导通路，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "声波经外耳道→鼓膜→听小骨链→卵圆窗→蜗管内淋巴液振动的传导通路到达听觉感受器",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "柯蒂氏器（螺旋器）中的毛细胞是听觉的感受器细胞",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "听觉信号经听神经→耳蜗核→上橄榄核→下丘→内侧膝状体→听觉皮层的通路上传",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "左右耳的听觉信息在脑干水平不发生交叉",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确：声波传导通路。B正确：柯蒂氏器的功能。C正确：听觉中枢通路。D错误：听觉通路在脑干多处发生交叉和双侧投射——上橄榄核接受双侧耳蜗核的输入，这是声音定位的基础。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "听觉通路",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1745452574",
+  "tags": []
+ },
+ "BQ-nervous_sys-cd6a40fa52bd": {
+  "type": "mtf",
+  "question": "关于听觉的传导通路，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "声波经外耳道→鼓膜→听小骨链→卵圆窗→蜗管内淋巴液振动的传导通路到达听觉感受器",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "柯蒂氏器（螺旋器）中的毛细胞是听觉的感受器细胞",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "左右耳的听觉信息在脑干水平不发生交叉",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "听觉信号经听神经→耳蜗核→上橄榄核→下丘→内侧膝状体→听觉皮层的通路上传",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：声波传导通路。B正确：柯蒂氏器的功能。D正确：听觉中枢通路。C错误：听觉通路在脑干多处发生交叉和双侧投射——上橄榄核接受双侧耳蜗核的输入，这是声音定位的基础。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "听觉通路",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1745452574",
+  "tags": []
+ },
+ "BQ-nervous_sys-0fa14c9962ca": {
+  "type": "mtf",
+  "question": "关于听觉的传导通路，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "左右耳的听觉信息在脑干水平不发生交叉",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "听觉信号经听神经→耳蜗核→上橄榄核→下丘→内侧膝状体→听觉皮层的通路上传",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "声波经外耳道→鼓膜→听小骨链→卵圆窗→蜗管内淋巴液振动的传导通路到达听觉感受器",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "柯蒂氏器（螺旋器）中的毛细胞是听觉的感受器细胞",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：声波传导通路。D正确：柯蒂氏器的功能。B正确：听觉中枢通路。A错误：听觉通路在脑干多处发生交叉和双侧投射——上橄榄核接受双侧耳蜗核的输入，这是声音定位的基础。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "听觉通路",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1745452574",
+  "tags": []
+ },
+ "BQ-nervous_sys-aacd8d29e613": {
+  "type": "mtf",
+  "question": "关于听觉的传导通路，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "左右耳的听觉信息在脑干水平不发生交叉",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "听觉信号经听神经→耳蜗核→上橄榄核→下丘→内侧膝状体→听觉皮层的通路上传",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "柯蒂氏器（螺旋器）中的毛细胞是听觉的感受器细胞",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "声波经外耳道→鼓膜→听小骨链→卵圆窗→蜗管内淋巴液振动的传导通路到达听觉感受器",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：声波传导通路。C正确：柯蒂氏器的功能。B正确：听觉中枢通路。A错误：听觉通路在脑干多处发生交叉和双侧投射——上橄榄核接受双侧耳蜗核的输入，这是声音定位的基础。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "听觉通路",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1745452574",
+  "tags": []
+ },
+ "BQ-nervous_sys-72da492a3dbf": {
+  "type": "mtf",
+  "question": "关于听觉的传导通路，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "左右耳的听觉信息在脑干水平不发生交叉",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "声波经外耳道→鼓膜→听小骨链→卵圆窗→蜗管内淋巴液振动的传导通路到达听觉感受器",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "听觉信号经听神经→耳蜗核→上橄榄核→下丘→内侧膝状体→听觉皮层的通路上传",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "柯蒂氏器（螺旋器）中的毛细胞是听觉的感受器细胞",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：声波传导通路。D正确：柯蒂氏器的功能。C正确：听觉中枢通路。A错误：听觉通路在脑干多处发生交叉和双侧投射——上橄榄核接受双侧耳蜗核的输入，这是声音定位的基础。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "听觉通路",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1745452574",
+  "tags": []
+ },
+ "BQ-nervous_sys-b13e3205370f": {
+  "type": "mtf",
+  "question": "关于听觉的传导通路，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "左右耳的听觉信息在脑干水平不发生交叉",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "声波经外耳道→鼓膜→听小骨链→卵圆窗→蜗管内淋巴液振动的传导通路到达听觉感受器",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "柯蒂氏器（螺旋器）中的毛细胞是听觉的感受器细胞",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "听觉信号经听神经→耳蜗核→上橄榄核→下丘→内侧膝状体→听觉皮层的通路上传",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：声波传导通路。C正确：柯蒂氏器的功能。D正确：听觉中枢通路。A错误：听觉通路在脑干多处发生交叉和双侧投射——上橄榄核接受双侧耳蜗核的输入，这是声音定位的基础。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "听觉通路",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1745452574",
+  "tags": []
+ },
+ "BQ-nervous_sys-b24e843a817b": {
+  "type": "mtf",
+  "question": "关于听觉的传导通路，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "左右耳的听觉信息在脑干水平不发生交叉",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "柯蒂氏器（螺旋器）中的毛细胞是听觉的感受器细胞",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "听觉信号经听神经→耳蜗核→上橄榄核→下丘→内侧膝状体→听觉皮层的通路上传",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "声波经外耳道→鼓膜→听小骨链→卵圆窗→蜗管内淋巴液振动的传导通路到达听觉感受器",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：声波传导通路。B正确：柯蒂氏器的功能。C正确：听觉中枢通路。A错误：听觉通路在脑干多处发生交叉和双侧投射——上橄榄核接受双侧耳蜗核的输入，这是声音定位的基础。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "听觉通路",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1745452574",
+  "tags": []
+ },
+ "BQ-nervous_sys-99cb3d19349c": {
+  "type": "mtf",
+  "question": "关于听觉的传导通路，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "左右耳的听觉信息在脑干水平不发生交叉",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "柯蒂氏器（螺旋器）中的毛细胞是听觉的感受器细胞",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "声波经外耳道→鼓膜→听小骨链→卵圆窗→蜗管内淋巴液振动的传导通路到达听觉感受器",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "听觉信号经听神经→耳蜗核→上橄榄核→下丘→内侧膝状体→听觉皮层的通路上传",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：声波传导通路。B正确：柯蒂氏器的功能。D正确：听觉中枢通路。A错误：听觉通路在脑干多处发生交叉和双侧投射——上橄榄核接受双侧耳蜗核的输入，这是声音定位的基础。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "听觉通路",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1745452574",
+  "tags": []
+ },
+ "BQ-nervous_sys-9cd3d460bede": {
+  "type": "mtf",
+  "question": "关于听觉的传导通路，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "柯蒂氏器（螺旋器）中的毛细胞是听觉的感受器细胞",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "听觉信号经听神经→耳蜗核→上橄榄核→下丘→内侧膝状体→听觉皮层的通路上传",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "声波经外耳道→鼓膜→听小骨链→卵圆窗→蜗管内淋巴液振动的传导通路到达听觉感受器",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "左右耳的听觉信息在脑干水平不发生交叉",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确：声波传导通路。A正确：柯蒂氏器的功能。B正确：听觉中枢通路。D错误：听觉通路在脑干多处发生交叉和双侧投射——上橄榄核接受双侧耳蜗核的输入，这是声音定位的基础。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "听觉通路",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1745452574",
+  "tags": []
+ },
+ "BQ-nervous_sys-f4da22205794": {
+  "type": "mtf",
+  "question": "关于听觉的传导通路，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "柯蒂氏器（螺旋器）中的毛细胞是听觉的感受器细胞",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "听觉信号经听神经→耳蜗核→上橄榄核→下丘→内侧膝状体→听觉皮层的通路上传",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "左右耳的听觉信息在脑干水平不发生交叉",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "声波经外耳道→鼓膜→听小骨链→卵圆窗→蜗管内淋巴液振动的传导通路到达听觉感受器",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：声波传导通路。A正确：柯蒂氏器的功能。B正确：听觉中枢通路。C错误：听觉通路在脑干多处发生交叉和双侧投射——上橄榄核接受双侧耳蜗核的输入，这是声音定位的基础。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "听觉通路",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1745452574",
+  "tags": []
+ },
+ "BQ-nervous_sys-12f5a305d27c": {
+  "type": "mtf",
+  "question": "关于听觉的传导通路，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "柯蒂氏器（螺旋器）中的毛细胞是听觉的感受器细胞",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "声波经外耳道→鼓膜→听小骨链→卵圆窗→蜗管内淋巴液振动的传导通路到达听觉感受器",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "听觉信号经听神经→耳蜗核→上橄榄核→下丘→内侧膝状体→听觉皮层的通路上传",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "左右耳的听觉信息在脑干水平不发生交叉",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确：声波传导通路。A正确：柯蒂氏器的功能。C正确：听觉中枢通路。D错误：听觉通路在脑干多处发生交叉和双侧投射——上橄榄核接受双侧耳蜗核的输入，这是声音定位的基础。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "听觉通路",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1745452574",
+  "tags": []
+ },
+ "BQ-nervous_sys-2fa80e83397a": {
+  "type": "mtf",
+  "question": "关于听觉的传导通路，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "柯蒂氏器（螺旋器）中的毛细胞是听觉的感受器细胞",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "声波经外耳道→鼓膜→听小骨链→卵圆窗→蜗管内淋巴液振动的传导通路到达听觉感受器",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "左右耳的听觉信息在脑干水平不发生交叉",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "听觉信号经听神经→耳蜗核→上橄榄核→下丘→内侧膝状体→听觉皮层的通路上传",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：声波传导通路。A正确：柯蒂氏器的功能。D正确：听觉中枢通路。C错误：听觉通路在脑干多处发生交叉和双侧投射——上橄榄核接受双侧耳蜗核的输入，这是声音定位的基础。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "听觉通路",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1745452574",
+  "tags": []
+ },
+ "BQ-nervous_sys-fb789734af2e": {
+  "type": "mtf",
+  "question": "关于听觉的传导通路，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "柯蒂氏器（螺旋器）中的毛细胞是听觉的感受器细胞",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "左右耳的听觉信息在脑干水平不发生交叉",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "听觉信号经听神经→耳蜗核→上橄榄核→下丘→内侧膝状体→听觉皮层的通路上传",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "声波经外耳道→鼓膜→听小骨链→卵圆窗→蜗管内淋巴液振动的传导通路到达听觉感受器",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：声波传导通路。A正确：柯蒂氏器的功能。C正确：听觉中枢通路。B错误：听觉通路在脑干多处发生交叉和双侧投射——上橄榄核接受双侧耳蜗核的输入，这是声音定位的基础。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "听觉通路",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1745452574",
+  "tags": []
+ },
+ "BQ-nervous_sys-77d3fc7a841a": {
+  "type": "mtf",
+  "question": "关于听觉的传导通路，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "柯蒂氏器（螺旋器）中的毛细胞是听觉的感受器细胞",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "左右耳的听觉信息在脑干水平不发生交叉",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "声波经外耳道→鼓膜→听小骨链→卵圆窗→蜗管内淋巴液振动的传导通路到达听觉感受器",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "听觉信号经听神经→耳蜗核→上橄榄核→下丘→内侧膝状体→听觉皮层的通路上传",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：声波传导通路。A正确：柯蒂氏器的功能。D正确：听觉中枢通路。B错误：听觉通路在脑干多处发生交叉和双侧投射——上橄榄核接受双侧耳蜗核的输入，这是声音定位的基础。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "听觉通路",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1745452574",
+  "tags": []
+ },
+ "BQ-nervous_sys-2a0333994248": {
+  "type": "mtf",
+  "question": "关于感觉生理学，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "味觉中五种基本味觉（甜、酸、苦、咸、鲜）的感受机制完全相同",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "嗅觉感受器神经元上的气味受体属于GPCR超家族，每个神经元仅表达一种气味受体",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "视网膜中的视杆细胞对光高度敏感，负责暗光下的视觉，但无色彩分辨能力",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "耳蜗中的基底膜对不同频率的声音产生不同位置的共振，高频声引起基部、低频声引起顶部附近的最大位移",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：视杆细胞的功能特征。D正确：基底膜的频率定位（tonotopy）。B正确：嗅觉的「一个神经元一个受体」规则。2004年诺贝尔奖获得者Buck和Axel因发现气味受体和嗅觉系统组织获奖。A错误：甜、苦、鲜通过GPCR信号通路；酸和咸通过离子通道直接介导（酸-质子通道，咸-Na⁺通道）。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "感觉生理",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "66048860",
+  "tags": []
+ },
+ "BQ-nervous_sys-55e3d2316447": {
+  "type": "mtf",
+  "question": "关于感觉生理学，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "味觉中五种基本味觉（甜、酸、苦、咸、鲜）的感受机制完全相同",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "嗅觉感受器神经元上的气味受体属于GPCR超家族，每个神经元仅表达一种气味受体",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "耳蜗中的基底膜对不同频率的声音产生不同位置的共振，高频声引起基部、低频声引起顶部附近的最大位移",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "视网膜中的视杆细胞对光高度敏感，负责暗光下的视觉，但无色彩分辨能力",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：视杆细胞的功能特征。C正确：基底膜的频率定位（tonotopy）。B正确：嗅觉的「一个神经元一个受体」规则。2004年诺贝尔奖获得者Buck和Axel因发现气味受体和嗅觉系统组织获奖。A错误：甜、苦、鲜通过GPCR信号通路；酸和咸通过离子通道直接介导（酸-质子通道，咸-Na⁺通道）。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "感觉生理",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "66048860",
+  "tags": []
+ },
+ "BQ-nervous_sys-73945a41438e": {
+  "type": "mtf",
+  "question": "关于感觉生理学，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "味觉中五种基本味觉（甜、酸、苦、咸、鲜）的感受机制完全相同",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "视网膜中的视杆细胞对光高度敏感，负责暗光下的视觉，但无色彩分辨能力",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "嗅觉感受器神经元上的气味受体属于GPCR超家族，每个神经元仅表达一种气味受体",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "耳蜗中的基底膜对不同频率的声音产生不同位置的共振，高频声引起基部、低频声引起顶部附近的最大位移",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：视杆细胞的功能特征。D正确：基底膜的频率定位（tonotopy）。C正确：嗅觉的「一个神经元一个受体」规则。2004年诺贝尔奖获得者Buck和Axel因发现气味受体和嗅觉系统组织获奖。A错误：甜、苦、鲜通过GPCR信号通路；酸和咸通过离子通道直接介导（酸-质子通道，咸-Na⁺通道）。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "感觉生理",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "66048860",
+  "tags": []
+ },
+ "BQ-nervous_sys-58db9da672b3": {
+  "type": "mtf",
+  "question": "关于感觉生理学，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "味觉中五种基本味觉（甜、酸、苦、咸、鲜）的感受机制完全相同",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "视网膜中的视杆细胞对光高度敏感，负责暗光下的视觉，但无色彩分辨能力",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "耳蜗中的基底膜对不同频率的声音产生不同位置的共振，高频声引起基部、低频声引起顶部附近的最大位移",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "嗅觉感受器神经元上的气味受体属于GPCR超家族，每个神经元仅表达一种气味受体",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：视杆细胞的功能特征。C正确：基底膜的频率定位（tonotopy）。D正确：嗅觉的「一个神经元一个受体」规则。2004年诺贝尔奖获得者Buck和Axel因发现气味受体和嗅觉系统组织获奖。A错误：甜、苦、鲜通过GPCR信号通路；酸和咸通过离子通道直接介导（酸-质子通道，咸-Na⁺通道）。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "感觉生理",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "66048860",
+  "tags": []
+ },
+ "BQ-nervous_sys-ecab371fadfb": {
+  "type": "mtf",
+  "question": "关于感觉生理学，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "味觉中五种基本味觉（甜、酸、苦、咸、鲜）的感受机制完全相同",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "耳蜗中的基底膜对不同频率的声音产生不同位置的共振，高频声引起基部、低频声引起顶部附近的最大位移",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "嗅觉感受器神经元上的气味受体属于GPCR超家族，每个神经元仅表达一种气味受体",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "视网膜中的视杆细胞对光高度敏感，负责暗光下的视觉，但无色彩分辨能力",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：视杆细胞的功能特征。B正确：基底膜的频率定位（tonotopy）。C正确：嗅觉的「一个神经元一个受体」规则。2004年诺贝尔奖获得者Buck和Axel因发现气味受体和嗅觉系统组织获奖。A错误：甜、苦、鲜通过GPCR信号通路；酸和咸通过离子通道直接介导（酸-质子通道，咸-Na⁺通道）。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "感觉生理",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "66048860",
+  "tags": []
+ },
+ "BQ-nervous_sys-639db35269c4": {
+  "type": "mtf",
+  "question": "关于感觉生理学，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "味觉中五种基本味觉（甜、酸、苦、咸、鲜）的感受机制完全相同",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "耳蜗中的基底膜对不同频率的声音产生不同位置的共振，高频声引起基部、低频声引起顶部附近的最大位移",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "视网膜中的视杆细胞对光高度敏感，负责暗光下的视觉，但无色彩分辨能力",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "嗅觉感受器神经元上的气味受体属于GPCR超家族，每个神经元仅表达一种气味受体",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：视杆细胞的功能特征。B正确：基底膜的频率定位（tonotopy）。D正确：嗅觉的「一个神经元一个受体」规则。2004年诺贝尔奖获得者Buck和Axel因发现气味受体和嗅觉系统组织获奖。A错误：甜、苦、鲜通过GPCR信号通路；酸和咸通过离子通道直接介导（酸-质子通道，咸-Na⁺通道）。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "感觉生理",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "66048860",
+  "tags": []
+ },
+ "BQ-nervous_sys-4ed16973fbac": {
+  "type": "mtf",
+  "question": "关于感觉生理学，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "嗅觉感受器神经元上的气味受体属于GPCR超家族，每个神经元仅表达一种气味受体",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "味觉中五种基本味觉（甜、酸、苦、咸、鲜）的感受机制完全相同",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "视网膜中的视杆细胞对光高度敏感，负责暗光下的视觉，但无色彩分辨能力",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "耳蜗中的基底膜对不同频率的声音产生不同位置的共振，高频声引起基部、低频声引起顶部附近的最大位移",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：视杆细胞的功能特征。D正确：基底膜的频率定位（tonotopy）。A正确：嗅觉的「一个神经元一个受体」规则。2004年诺贝尔奖获得者Buck和Axel因发现气味受体和嗅觉系统组织获奖。B错误：甜、苦、鲜通过GPCR信号通路；酸和咸通过离子通道直接介导（酸-质子通道，咸-Na⁺通道）。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "感觉生理",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "66048860",
+  "tags": []
+ },
+ "BQ-nervous_sys-d0cda940687b": {
+  "type": "mtf",
+  "question": "关于感觉生理学，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "嗅觉感受器神经元上的气味受体属于GPCR超家族，每个神经元仅表达一种气味受体",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "味觉中五种基本味觉（甜、酸、苦、咸、鲜）的感受机制完全相同",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "耳蜗中的基底膜对不同频率的声音产生不同位置的共振，高频声引起基部、低频声引起顶部附近的最大位移",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "视网膜中的视杆细胞对光高度敏感，负责暗光下的视觉，但无色彩分辨能力",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：视杆细胞的功能特征。C正确：基底膜的频率定位（tonotopy）。A正确：嗅觉的「一个神经元一个受体」规则。2004年诺贝尔奖获得者Buck和Axel因发现气味受体和嗅觉系统组织获奖。B错误：甜、苦、鲜通过GPCR信号通路；酸和咸通过离子通道直接介导（酸-质子通道，咸-Na⁺通道）。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "感觉生理",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "66048860",
+  "tags": []
+ },
+ "BQ-nervous_sys-35aa8a4b3438": {
+  "type": "mtf",
+  "question": "关于感觉生理学，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "嗅觉感受器神经元上的气味受体属于GPCR超家族，每个神经元仅表达一种气味受体",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "视网膜中的视杆细胞对光高度敏感，负责暗光下的视觉，但无色彩分辨能力",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "味觉中五种基本味觉（甜、酸、苦、咸、鲜）的感受机制完全相同",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "耳蜗中的基底膜对不同频率的声音产生不同位置的共振，高频声引起基部、低频声引起顶部附近的最大位移",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：视杆细胞的功能特征。D正确：基底膜的频率定位（tonotopy）。A正确：嗅觉的「一个神经元一个受体」规则。2004年诺贝尔奖获得者Buck和Axel因发现气味受体和嗅觉系统组织获奖。C错误：甜、苦、鲜通过GPCR信号通路；酸和咸通过离子通道直接介导（酸-质子通道，咸-Na⁺通道）。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "感觉生理",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "66048860",
+  "tags": []
+ },
+ "BQ-nervous_sys-b0872e94dd0d": {
+  "type": "mtf",
+  "question": "关于感觉生理学，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "嗅觉感受器神经元上的气味受体属于GPCR超家族，每个神经元仅表达一种气味受体",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "视网膜中的视杆细胞对光高度敏感，负责暗光下的视觉，但无色彩分辨能力",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "耳蜗中的基底膜对不同频率的声音产生不同位置的共振，高频声引起基部、低频声引起顶部附近的最大位移",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "味觉中五种基本味觉（甜、酸、苦、咸、鲜）的感受机制完全相同",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确：视杆细胞的功能特征。C正确：基底膜的频率定位（tonotopy）。A正确：嗅觉的「一个神经元一个受体」规则。2004年诺贝尔奖获得者Buck和Axel因发现气味受体和嗅觉系统组织获奖。D错误：甜、苦、鲜通过GPCR信号通路；酸和咸通过离子通道直接介导（酸-质子通道，咸-Na⁺通道）。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "感觉生理",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "66048860",
+  "tags": []
+ },
+ "BQ-nervous_sys-d5f6ca8dfe91": {
+  "type": "mtf",
+  "question": "关于感觉生理学，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "嗅觉感受器神经元上的气味受体属于GPCR超家族，每个神经元仅表达一种气味受体",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "耳蜗中的基底膜对不同频率的声音产生不同位置的共振，高频声引起基部、低频声引起顶部附近的最大位移",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "味觉中五种基本味觉（甜、酸、苦、咸、鲜）的感受机制完全相同",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "视网膜中的视杆细胞对光高度敏感，负责暗光下的视觉，但无色彩分辨能力",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：视杆细胞的功能特征。B正确：基底膜的频率定位（tonotopy）。A正确：嗅觉的「一个神经元一个受体」规则。2004年诺贝尔奖获得者Buck和Axel因发现气味受体和嗅觉系统组织获奖。C错误：甜、苦、鲜通过GPCR信号通路；酸和咸通过离子通道直接介导（酸-质子通道，咸-Na⁺通道）。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "感觉生理",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "66048860",
+  "tags": []
+ },
+ "BQ-nervous_sys-fbde1521796c": {
+  "type": "mtf",
+  "question": "关于感觉生理学，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "嗅觉感受器神经元上的气味受体属于GPCR超家族，每个神经元仅表达一种气味受体",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "耳蜗中的基底膜对不同频率的声音产生不同位置的共振，高频声引起基部、低频声引起顶部附近的最大位移",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "视网膜中的视杆细胞对光高度敏感，负责暗光下的视觉，但无色彩分辨能力",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "味觉中五种基本味觉（甜、酸、苦、咸、鲜）的感受机制完全相同",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确：视杆细胞的功能特征。B正确：基底膜的频率定位（tonotopy）。A正确：嗅觉的「一个神经元一个受体」规则。2004年诺贝尔奖获得者Buck和Axel因发现气味受体和嗅觉系统组织获奖。D错误：甜、苦、鲜通过GPCR信号通路；酸和咸通过离子通道直接介导（酸-质子通道，咸-Na⁺通道）。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "感觉生理",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "66048860",
+  "tags": []
+ },
+ "BQ-nervous_sys-5f3cb6809002": {
+  "type": "mtf",
+  "question": "关于感觉生理学，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "视网膜中的视杆细胞对光高度敏感，负责暗光下的视觉，但无色彩分辨能力",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "味觉中五种基本味觉（甜、酸、苦、咸、鲜）的感受机制完全相同",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "嗅觉感受器神经元上的气味受体属于GPCR超家族，每个神经元仅表达一种气味受体",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "耳蜗中的基底膜对不同频率的声音产生不同位置的共振，高频声引起基部、低频声引起顶部附近的最大位移",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：视杆细胞的功能特征。D正确：基底膜的频率定位（tonotopy）。C正确：嗅觉的「一个神经元一个受体」规则。2004年诺贝尔奖获得者Buck和Axel因发现气味受体和嗅觉系统组织获奖。B错误：甜、苦、鲜通过GPCR信号通路；酸和咸通过离子通道直接介导（酸-质子通道，咸-Na⁺通道）。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "感觉生理",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "66048860",
+  "tags": []
+ },
+ "BQ-nervous_sys-79e3e6374ce2": {
+  "type": "mtf",
+  "question": "关于感觉生理学，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "视网膜中的视杆细胞对光高度敏感，负责暗光下的视觉，但无色彩分辨能力",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "味觉中五种基本味觉（甜、酸、苦、咸、鲜）的感受机制完全相同",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "耳蜗中的基底膜对不同频率的声音产生不同位置的共振，高频声引起基部、低频声引起顶部附近的最大位移",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "嗅觉感受器神经元上的气味受体属于GPCR超家族，每个神经元仅表达一种气味受体",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：视杆细胞的功能特征。C正确：基底膜的频率定位（tonotopy）。D正确：嗅觉的「一个神经元一个受体」规则。2004年诺贝尔奖获得者Buck和Axel因发现气味受体和嗅觉系统组织获奖。B错误：甜、苦、鲜通过GPCR信号通路；酸和咸通过离子通道直接介导（酸-质子通道，咸-Na⁺通道）。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "感觉生理",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "66048860",
+  "tags": []
+ },
+ "BQ-nervous_sys-6bd8395dc8a0": {
+  "type": "mtf",
+  "question": "关于感觉生理学，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "视网膜中的视杆细胞对光高度敏感，负责暗光下的视觉，但无色彩分辨能力",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "嗅觉感受器神经元上的气味受体属于GPCR超家族，每个神经元仅表达一种气味受体",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "味觉中五种基本味觉（甜、酸、苦、咸、鲜）的感受机制完全相同",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "耳蜗中的基底膜对不同频率的声音产生不同位置的共振，高频声引起基部、低频声引起顶部附近的最大位移",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：视杆细胞的功能特征。D正确：基底膜的频率定位（tonotopy）。B正确：嗅觉的「一个神经元一个受体」规则。2004年诺贝尔奖获得者Buck和Axel因发现气味受体和嗅觉系统组织获奖。C错误：甜、苦、鲜通过GPCR信号通路；酸和咸通过离子通道直接介导（酸-质子通道，咸-Na⁺通道）。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "感觉生理",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "66048860",
+  "tags": []
+ },
+ "BQ-nervous_sys-baaf03617d06": {
+  "type": "mtf",
+  "question": "关于感觉生理学，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "视网膜中的视杆细胞对光高度敏感，负责暗光下的视觉，但无色彩分辨能力",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "嗅觉感受器神经元上的气味受体属于GPCR超家族，每个神经元仅表达一种气味受体",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "耳蜗中的基底膜对不同频率的声音产生不同位置的共振，高频声引起基部、低频声引起顶部附近的最大位移",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "味觉中五种基本味觉（甜、酸、苦、咸、鲜）的感受机制完全相同",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确：视杆细胞的功能特征。C正确：基底膜的频率定位（tonotopy）。B正确：嗅觉的「一个神经元一个受体」规则。2004年诺贝尔奖获得者Buck和Axel因发现气味受体和嗅觉系统组织获奖。D错误：甜、苦、鲜通过GPCR信号通路；酸和咸通过离子通道直接介导（酸-质子通道，咸-Na⁺通道）。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "感觉生理",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "66048860",
+  "tags": []
+ },
+ "BQ-nervous_sys-4307c195ca8c": {
+  "type": "mtf",
+  "question": "关于感觉生理学，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "视网膜中的视杆细胞对光高度敏感，负责暗光下的视觉，但无色彩分辨能力",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "耳蜗中的基底膜对不同频率的声音产生不同位置的共振，高频声引起基部、低频声引起顶部附近的最大位移",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "味觉中五种基本味觉（甜、酸、苦、咸、鲜）的感受机制完全相同",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "嗅觉感受器神经元上的气味受体属于GPCR超家族，每个神经元仅表达一种气味受体",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：视杆细胞的功能特征。B正确：基底膜的频率定位（tonotopy）。D正确：嗅觉的「一个神经元一个受体」规则。2004年诺贝尔奖获得者Buck和Axel因发现气味受体和嗅觉系统组织获奖。C错误：甜、苦、鲜通过GPCR信号通路；酸和咸通过离子通道直接介导（酸-质子通道，咸-Na⁺通道）。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "感觉生理",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "66048860",
+  "tags": []
+ },
+ "BQ-nervous_sys-40e090c7aa45": {
+  "type": "mtf",
+  "question": "关于感觉生理学，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "视网膜中的视杆细胞对光高度敏感，负责暗光下的视觉，但无色彩分辨能力",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "耳蜗中的基底膜对不同频率的声音产生不同位置的共振，高频声引起基部、低频声引起顶部附近的最大位移",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "嗅觉感受器神经元上的气味受体属于GPCR超家族，每个神经元仅表达一种气味受体",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "味觉中五种基本味觉（甜、酸、苦、咸、鲜）的感受机制完全相同",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确：视杆细胞的功能特征。B正确：基底膜的频率定位（tonotopy）。C正确：嗅觉的「一个神经元一个受体」规则。2004年诺贝尔奖获得者Buck和Axel因发现气味受体和嗅觉系统组织获奖。D错误：甜、苦、鲜通过GPCR信号通路；酸和咸通过离子通道直接介导（酸-质子通道，咸-Na⁺通道）。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "感觉生理",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "66048860",
+  "tags": []
+ },
+ "BQ-nervous_sys-6e803154fc92": {
+  "type": "mtf",
+  "question": "关于感觉生理学，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "耳蜗中的基底膜对不同频率的声音产生不同位置的共振，高频声引起基部、低频声引起顶部附近的最大位移",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "味觉中五种基本味觉（甜、酸、苦、咸、鲜）的感受机制完全相同",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "嗅觉感受器神经元上的气味受体属于GPCR超家族，每个神经元仅表达一种气味受体",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "视网膜中的视杆细胞对光高度敏感，负责暗光下的视觉，但无色彩分辨能力",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：视杆细胞的功能特征。A正确：基底膜的频率定位（tonotopy）。C正确：嗅觉的「一个神经元一个受体」规则。2004年诺贝尔奖获得者Buck和Axel因发现气味受体和嗅觉系统组织获奖。B错误：甜、苦、鲜通过GPCR信号通路；酸和咸通过离子通道直接介导（酸-质子通道，咸-Na⁺通道）。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "感觉生理",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "66048860",
+  "tags": []
+ },
+ "BQ-nervous_sys-fb076cb9a051": {
+  "type": "mtf",
+  "question": "关于感觉生理学，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "耳蜗中的基底膜对不同频率的声音产生不同位置的共振，高频声引起基部、低频声引起顶部附近的最大位移",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "味觉中五种基本味觉（甜、酸、苦、咸、鲜）的感受机制完全相同",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "视网膜中的视杆细胞对光高度敏感，负责暗光下的视觉，但无色彩分辨能力",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "嗅觉感受器神经元上的气味受体属于GPCR超家族，每个神经元仅表达一种气味受体",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：视杆细胞的功能特征。A正确：基底膜的频率定位（tonotopy）。D正确：嗅觉的「一个神经元一个受体」规则。2004年诺贝尔奖获得者Buck和Axel因发现气味受体和嗅觉系统组织获奖。B错误：甜、苦、鲜通过GPCR信号通路；酸和咸通过离子通道直接介导（酸-质子通道，咸-Na⁺通道）。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "感觉生理",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "66048860",
+  "tags": []
+ },
+ "BQ-nervous_sys-d38b84a425fd": {
+  "type": "mtf",
+  "question": "关于感觉生理学，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "耳蜗中的基底膜对不同频率的声音产生不同位置的共振，高频声引起基部、低频声引起顶部附近的最大位移",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "嗅觉感受器神经元上的气味受体属于GPCR超家族，每个神经元仅表达一种气味受体",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "味觉中五种基本味觉（甜、酸、苦、咸、鲜）的感受机制完全相同",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "视网膜中的视杆细胞对光高度敏感，负责暗光下的视觉，但无色彩分辨能力",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：视杆细胞的功能特征。A正确：基底膜的频率定位（tonotopy）。B正确：嗅觉的「一个神经元一个受体」规则。2004年诺贝尔奖获得者Buck和Axel因发现气味受体和嗅觉系统组织获奖。C错误：甜、苦、鲜通过GPCR信号通路；酸和咸通过离子通道直接介导（酸-质子通道，咸-Na⁺通道）。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "感觉生理",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "66048860",
+  "tags": []
+ },
+ "BQ-nervous_sys-e60f489b0bbc": {
+  "type": "mtf",
+  "question": "关于感觉生理学，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "耳蜗中的基底膜对不同频率的声音产生不同位置的共振，高频声引起基部、低频声引起顶部附近的最大位移",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "嗅觉感受器神经元上的气味受体属于GPCR超家族，每个神经元仅表达一种气味受体",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "视网膜中的视杆细胞对光高度敏感，负责暗光下的视觉，但无色彩分辨能力",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "味觉中五种基本味觉（甜、酸、苦、咸、鲜）的感受机制完全相同",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确：视杆细胞的功能特征。A正确：基底膜的频率定位（tonotopy）。B正确：嗅觉的「一个神经元一个受体」规则。2004年诺贝尔奖获得者Buck和Axel因发现气味受体和嗅觉系统组织获奖。D错误：甜、苦、鲜通过GPCR信号通路；酸和咸通过离子通道直接介导（酸-质子通道，咸-Na⁺通道）。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "感觉生理",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "66048860",
+  "tags": []
+ },
+ "BQ-nervous_sys-a816a169b8da": {
+  "type": "mtf",
+  "question": "关于感觉生理学，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "耳蜗中的基底膜对不同频率的声音产生不同位置的共振，高频声引起基部、低频声引起顶部附近的最大位移",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "视网膜中的视杆细胞对光高度敏感，负责暗光下的视觉，但无色彩分辨能力",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "味觉中五种基本味觉（甜、酸、苦、咸、鲜）的感受机制完全相同",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "嗅觉感受器神经元上的气味受体属于GPCR超家族，每个神经元仅表达一种气味受体",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：视杆细胞的功能特征。A正确：基底膜的频率定位（tonotopy）。D正确：嗅觉的「一个神经元一个受体」规则。2004年诺贝尔奖获得者Buck和Axel因发现气味受体和嗅觉系统组织获奖。C错误：甜、苦、鲜通过GPCR信号通路；酸和咸通过离子通道直接介导（酸-质子通道，咸-Na⁺通道）。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "感觉生理",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "66048860",
+  "tags": []
+ },
+ "BQ-nervous_sys-c74798aaf4b7": {
+  "type": "mtf",
+  "question": "关于感觉生理学，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "耳蜗中的基底膜对不同频率的声音产生不同位置的共振，高频声引起基部、低频声引起顶部附近的最大位移",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "视网膜中的视杆细胞对光高度敏感，负责暗光下的视觉，但无色彩分辨能力",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "嗅觉感受器神经元上的气味受体属于GPCR超家族，每个神经元仅表达一种气味受体",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "味觉中五种基本味觉（甜、酸、苦、咸、鲜）的感受机制完全相同",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确：视杆细胞的功能特征。A正确：基底膜的频率定位（tonotopy）。C正确：嗅觉的「一个神经元一个受体」规则。2004年诺贝尔奖获得者Buck和Axel因发现气味受体和嗅觉系统组织获奖。D错误：甜、苦、鲜通过GPCR信号通路；酸和咸通过离子通道直接介导（酸-质子通道，咸-Na⁺通道）。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "感觉生理",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "66048860",
+  "tags": []
+ },
+ "BQ-nervous_sys-f8b79a61b1a4": {
+  "type": "mtf",
+  "question": "关于神经生理学，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "交感神经兴奋时心率加快、瞳孔扩大、支气管扩张、消化道蠕动增强",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "兴奋性突触后电位（EPSP）是突触后膜的局部去极化，具有空间总和和时间总和特性",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "动作电位的去极化相主要由电压门控Na⁺通道开放、Na⁺内流引起；复极化相主要由电压门控K⁺通道开放、K⁺外流引起",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "帕金森病的主要病理改变是黑质-纹状体系统中多巴胺能神经元的进行性变性死亡",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：动作电位的离子基础。B正确：EPSP的突触整合特性。A错误：交感神经兴奋时消化道蠕动减弱而非增强，这是「fight or flight」反应的组成部分。副交感神经兴奋时消化道蠕动增强。D正确：帕金森病的核心病理机制。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "神经生理",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1281086350",
+  "tags": []
+ },
+ "BQ-nervous_sys-ed211cd24518": {
+  "type": "mtf",
+  "question": "关于神经生理学，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "交感神经兴奋时心率加快、瞳孔扩大、支气管扩张、消化道蠕动增强",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "兴奋性突触后电位（EPSP）是突触后膜的局部去极化，具有空间总和和时间总和特性",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "帕金森病的主要病理改变是黑质-纹状体系统中多巴胺能神经元的进行性变性死亡",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "动作电位的去极化相主要由电压门控Na⁺通道开放、Na⁺内流引起；复极化相主要由电压门控K⁺通道开放、K⁺外流引起",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：动作电位的离子基础。B正确：EPSP的突触整合特性。A错误：交感神经兴奋时消化道蠕动减弱而非增强，这是「fight or flight」反应的组成部分。副交感神经兴奋时消化道蠕动增强。C正确：帕金森病的核心病理机制。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "神经生理",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1281086350",
+  "tags": []
+ },
+ "BQ-nervous_sys-94bd14da6b27": {
+  "type": "mtf",
+  "question": "关于神经生理学，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "交感神经兴奋时心率加快、瞳孔扩大、支气管扩张、消化道蠕动增强",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "动作电位的去极化相主要由电压门控Na⁺通道开放、Na⁺内流引起；复极化相主要由电压门控K⁺通道开放、K⁺外流引起",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "兴奋性突触后电位（EPSP）是突触后膜的局部去极化，具有空间总和和时间总和特性",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "帕金森病的主要病理改变是黑质-纹状体系统中多巴胺能神经元的进行性变性死亡",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：动作电位的离子基础。C正确：EPSP的突触整合特性。A错误：交感神经兴奋时消化道蠕动减弱而非增强，这是「fight or flight」反应的组成部分。副交感神经兴奋时消化道蠕动增强。D正确：帕金森病的核心病理机制。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "神经生理",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1281086350",
+  "tags": []
+ },
+ "BQ-nervous_sys-1d06a369f80c": {
+  "type": "mtf",
+  "question": "关于神经生理学，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "交感神经兴奋时心率加快、瞳孔扩大、支气管扩张、消化道蠕动增强",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "动作电位的去极化相主要由电压门控Na⁺通道开放、Na⁺内流引起；复极化相主要由电压门控K⁺通道开放、K⁺外流引起",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "帕金森病的主要病理改变是黑质-纹状体系统中多巴胺能神经元的进行性变性死亡",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "兴奋性突触后电位（EPSP）是突触后膜的局部去极化，具有空间总和和时间总和特性",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：动作电位的离子基础。D正确：EPSP的突触整合特性。A错误：交感神经兴奋时消化道蠕动减弱而非增强，这是「fight or flight」反应的组成部分。副交感神经兴奋时消化道蠕动增强。C正确：帕金森病的核心病理机制。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "神经生理",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1281086350",
+  "tags": []
+ },
+ "BQ-nervous_sys-ac47c1b1fae1": {
+  "type": "mtf",
+  "question": "关于神经生理学，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "交感神经兴奋时心率加快、瞳孔扩大、支气管扩张、消化道蠕动增强",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "帕金森病的主要病理改变是黑质-纹状体系统中多巴胺能神经元的进行性变性死亡",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "兴奋性突触后电位（EPSP）是突触后膜的局部去极化，具有空间总和和时间总和特性",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "动作电位的去极化相主要由电压门控Na⁺通道开放、Na⁺内流引起；复极化相主要由电压门控K⁺通道开放、K⁺外流引起",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：动作电位的离子基础。C正确：EPSP的突触整合特性。A错误：交感神经兴奋时消化道蠕动减弱而非增强，这是「fight or flight」反应的组成部分。副交感神经兴奋时消化道蠕动增强。B正确：帕金森病的核心病理机制。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "神经生理",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1281086350",
+  "tags": []
+ },
+ "BQ-nervous_sys-160bd26a94fc": {
+  "type": "mtf",
+  "question": "关于神经生理学，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "交感神经兴奋时心率加快、瞳孔扩大、支气管扩张、消化道蠕动增强",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "帕金森病的主要病理改变是黑质-纹状体系统中多巴胺能神经元的进行性变性死亡",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "动作电位的去极化相主要由电压门控Na⁺通道开放、Na⁺内流引起；复极化相主要由电压门控K⁺通道开放、K⁺外流引起",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "兴奋性突触后电位（EPSP）是突触后膜的局部去极化，具有空间总和和时间总和特性",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：动作电位的离子基础。D正确：EPSP的突触整合特性。A错误：交感神经兴奋时消化道蠕动减弱而非增强，这是「fight or flight」反应的组成部分。副交感神经兴奋时消化道蠕动增强。B正确：帕金森病的核心病理机制。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "神经生理",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1281086350",
+  "tags": []
+ },
+ "BQ-nervous_sys-1a304efa68fb": {
+  "type": "mtf",
+  "question": "关于神经生理学，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "兴奋性突触后电位（EPSP）是突触后膜的局部去极化，具有空间总和和时间总和特性",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "交感神经兴奋时心率加快、瞳孔扩大、支气管扩张、消化道蠕动增强",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "动作电位的去极化相主要由电压门控Na⁺通道开放、Na⁺内流引起；复极化相主要由电压门控K⁺通道开放、K⁺外流引起",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "帕金森病的主要病理改变是黑质-纹状体系统中多巴胺能神经元的进行性变性死亡",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：动作电位的离子基础。A正确：EPSP的突触整合特性。B错误：交感神经兴奋时消化道蠕动减弱而非增强，这是「fight or flight」反应的组成部分。副交感神经兴奋时消化道蠕动增强。D正确：帕金森病的核心病理机制。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "神经生理",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1281086350",
+  "tags": []
+ },
+ "BQ-nervous_sys-ad071325c319": {
+  "type": "mtf",
+  "question": "关于神经生理学，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "兴奋性突触后电位（EPSP）是突触后膜的局部去极化，具有空间总和和时间总和特性",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "交感神经兴奋时心率加快、瞳孔扩大、支气管扩张、消化道蠕动增强",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "帕金森病的主要病理改变是黑质-纹状体系统中多巴胺能神经元的进行性变性死亡",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "动作电位的去极化相主要由电压门控Na⁺通道开放、Na⁺内流引起；复极化相主要由电压门控K⁺通道开放、K⁺外流引起",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：动作电位的离子基础。A正确：EPSP的突触整合特性。B错误：交感神经兴奋时消化道蠕动减弱而非增强，这是「fight or flight」反应的组成部分。副交感神经兴奋时消化道蠕动增强。C正确：帕金森病的核心病理机制。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "神经生理",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1281086350",
+  "tags": []
+ },
+ "BQ-nervous_sys-c6b53af731c2": {
+  "type": "mtf",
+  "question": "关于神经生理学，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "兴奋性突触后电位（EPSP）是突触后膜的局部去极化，具有空间总和和时间总和特性",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "动作电位的去极化相主要由电压门控Na⁺通道开放、Na⁺内流引起；复极化相主要由电压门控K⁺通道开放、K⁺外流引起",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "交感神经兴奋时心率加快、瞳孔扩大、支气管扩张、消化道蠕动增强",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "帕金森病的主要病理改变是黑质-纹状体系统中多巴胺能神经元的进行性变性死亡",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：动作电位的离子基础。A正确：EPSP的突触整合特性。C错误：交感神经兴奋时消化道蠕动减弱而非增强，这是「fight or flight」反应的组成部分。副交感神经兴奋时消化道蠕动增强。D正确：帕金森病的核心病理机制。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "神经生理",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1281086350",
+  "tags": []
+ },
+ "BQ-nervous_sys-2e0c8aefdf80": {
+  "type": "mtf",
+  "question": "关于神经生理学，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "兴奋性突触后电位（EPSP）是突触后膜的局部去极化，具有空间总和和时间总和特性",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "动作电位的去极化相主要由电压门控Na⁺通道开放、Na⁺内流引起；复极化相主要由电压门控K⁺通道开放、K⁺外流引起",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "帕金森病的主要病理改变是黑质-纹状体系统中多巴胺能神经元的进行性变性死亡",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "交感神经兴奋时心率加快、瞳孔扩大、支气管扩张、消化道蠕动增强",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确：动作电位的离子基础。A正确：EPSP的突触整合特性。D错误：交感神经兴奋时消化道蠕动减弱而非增强，这是「fight or flight」反应的组成部分。副交感神经兴奋时消化道蠕动增强。C正确：帕金森病的核心病理机制。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "神经生理",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1281086350",
+  "tags": []
+ },
+ "BQ-nervous_sys-3179e47954ef": {
+  "type": "mtf",
+  "question": "关于神经生理学，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "兴奋性突触后电位（EPSP）是突触后膜的局部去极化，具有空间总和和时间总和特性",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "帕金森病的主要病理改变是黑质-纹状体系统中多巴胺能神经元的进行性变性死亡",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "交感神经兴奋时心率加快、瞳孔扩大、支气管扩张、消化道蠕动增强",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "动作电位的去极化相主要由电压门控Na⁺通道开放、Na⁺内流引起；复极化相主要由电压门控K⁺通道开放、K⁺外流引起",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：动作电位的离子基础。A正确：EPSP的突触整合特性。C错误：交感神经兴奋时消化道蠕动减弱而非增强，这是「fight or flight」反应的组成部分。副交感神经兴奋时消化道蠕动增强。B正确：帕金森病的核心病理机制。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "神经生理",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1281086350",
+  "tags": []
+ },
+ "BQ-nervous_sys-90f462b25e9b": {
+  "type": "mtf",
+  "question": "关于神经生理学，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "兴奋性突触后电位（EPSP）是突触后膜的局部去极化，具有空间总和和时间总和特性",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "帕金森病的主要病理改变是黑质-纹状体系统中多巴胺能神经元的进行性变性死亡",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "动作电位的去极化相主要由电压门控Na⁺通道开放、Na⁺内流引起；复极化相主要由电压门控K⁺通道开放、K⁺外流引起",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "交感神经兴奋时心率加快、瞳孔扩大、支气管扩张、消化道蠕动增强",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确：动作电位的离子基础。A正确：EPSP的突触整合特性。D错误：交感神经兴奋时消化道蠕动减弱而非增强，这是「fight or flight」反应的组成部分。副交感神经兴奋时消化道蠕动增强。B正确：帕金森病的核心病理机制。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "神经生理",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1281086350",
+  "tags": []
+ },
+ "BQ-nervous_sys-709e5e909aec": {
+  "type": "mtf",
+  "question": "关于神经生理学，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "动作电位的去极化相主要由电压门控Na⁺通道开放、Na⁺内流引起；复极化相主要由电压门控K⁺通道开放、K⁺外流引起",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "交感神经兴奋时心率加快、瞳孔扩大、支气管扩张、消化道蠕动增强",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "兴奋性突触后电位（EPSP）是突触后膜的局部去极化，具有空间总和和时间总和特性",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "帕金森病的主要病理改变是黑质-纹状体系统中多巴胺能神经元的进行性变性死亡",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：动作电位的离子基础。C正确：EPSP的突触整合特性。B错误：交感神经兴奋时消化道蠕动减弱而非增强，这是「fight or flight」反应的组成部分。副交感神经兴奋时消化道蠕动增强。D正确：帕金森病的核心病理机制。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "神经生理",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1281086350",
+  "tags": []
+ },
+ "BQ-nervous_sys-ede9c6b24006": {
+  "type": "mtf",
+  "question": "关于神经生理学，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "动作电位的去极化相主要由电压门控Na⁺通道开放、Na⁺内流引起；复极化相主要由电压门控K⁺通道开放、K⁺外流引起",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "交感神经兴奋时心率加快、瞳孔扩大、支气管扩张、消化道蠕动增强",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "帕金森病的主要病理改变是黑质-纹状体系统中多巴胺能神经元的进行性变性死亡",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "兴奋性突触后电位（EPSP）是突触后膜的局部去极化，具有空间总和和时间总和特性",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：动作电位的离子基础。D正确：EPSP的突触整合特性。B错误：交感神经兴奋时消化道蠕动减弱而非增强，这是「fight or flight」反应的组成部分。副交感神经兴奋时消化道蠕动增强。C正确：帕金森病的核心病理机制。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "神经生理",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1281086350",
+  "tags": []
+ },
+ "BQ-nervous_sys-a5e0818f8661": {
+  "type": "mtf",
+  "question": "关于神经生理学，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "动作电位的去极化相主要由电压门控Na⁺通道开放、Na⁺内流引起；复极化相主要由电压门控K⁺通道开放、K⁺外流引起",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "兴奋性突触后电位（EPSP）是突触后膜的局部去极化，具有空间总和和时间总和特性",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "交感神经兴奋时心率加快、瞳孔扩大、支气管扩张、消化道蠕动增强",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "帕金森病的主要病理改变是黑质-纹状体系统中多巴胺能神经元的进行性变性死亡",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：动作电位的离子基础。B正确：EPSP的突触整合特性。C错误：交感神经兴奋时消化道蠕动减弱而非增强，这是「fight or flight」反应的组成部分。副交感神经兴奋时消化道蠕动增强。D正确：帕金森病的核心病理机制。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "神经生理",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1281086350",
+  "tags": []
+ },
+ "BQ-nervous_sys-74aa88fcf945": {
+  "type": "mtf",
+  "question": "关于神经生理学，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "动作电位的去极化相主要由电压门控Na⁺通道开放、Na⁺内流引起；复极化相主要由电压门控K⁺通道开放、K⁺外流引起",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "兴奋性突触后电位（EPSP）是突触后膜的局部去极化，具有空间总和和时间总和特性",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "帕金森病的主要病理改变是黑质-纹状体系统中多巴胺能神经元的进行性变性死亡",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "交感神经兴奋时心率加快、瞳孔扩大、支气管扩张、消化道蠕动增强",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确：动作电位的离子基础。B正确：EPSP的突触整合特性。D错误：交感神经兴奋时消化道蠕动减弱而非增强，这是「fight or flight」反应的组成部分。副交感神经兴奋时消化道蠕动增强。C正确：帕金森病的核心病理机制。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "神经生理",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1281086350",
+  "tags": []
+ },
+ "BQ-nervous_sys-18c76967289d": {
+  "type": "mtf",
+  "question": "关于神经生理学，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "动作电位的去极化相主要由电压门控Na⁺通道开放、Na⁺内流引起；复极化相主要由电压门控K⁺通道开放、K⁺外流引起",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "帕金森病的主要病理改变是黑质-纹状体系统中多巴胺能神经元的进行性变性死亡",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "交感神经兴奋时心率加快、瞳孔扩大、支气管扩张、消化道蠕动增强",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "兴奋性突触后电位（EPSP）是突触后膜的局部去极化，具有空间总和和时间总和特性",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：动作电位的离子基础。D正确：EPSP的突触整合特性。C错误：交感神经兴奋时消化道蠕动减弱而非增强，这是「fight or flight」反应的组成部分。副交感神经兴奋时消化道蠕动增强。B正确：帕金森病的核心病理机制。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "神经生理",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1281086350",
+  "tags": []
+ },
+ "BQ-nervous_sys-4851bdb6417a": {
+  "type": "mtf",
+  "question": "关于神经生理学，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "动作电位的去极化相主要由电压门控Na⁺通道开放、Na⁺内流引起；复极化相主要由电压门控K⁺通道开放、K⁺外流引起",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "帕金森病的主要病理改变是黑质-纹状体系统中多巴胺能神经元的进行性变性死亡",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "兴奋性突触后电位（EPSP）是突触后膜的局部去极化，具有空间总和和时间总和特性",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "交感神经兴奋时心率加快、瞳孔扩大、支气管扩张、消化道蠕动增强",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确：动作电位的离子基础。C正确：EPSP的突触整合特性。D错误：交感神经兴奋时消化道蠕动减弱而非增强，这是「fight or flight」反应的组成部分。副交感神经兴奋时消化道蠕动增强。B正确：帕金森病的核心病理机制。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "神经生理",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1281086350",
+  "tags": []
+ },
+ "BQ-nervous_sys-fc33cf72d92e": {
+  "type": "mtf",
+  "question": "关于神经生理学，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "帕金森病的主要病理改变是黑质-纹状体系统中多巴胺能神经元的进行性变性死亡",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "交感神经兴奋时心率加快、瞳孔扩大、支气管扩张、消化道蠕动增强",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "兴奋性突触后电位（EPSP）是突触后膜的局部去极化，具有空间总和和时间总和特性",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "动作电位的去极化相主要由电压门控Na⁺通道开放、Na⁺内流引起；复极化相主要由电压门控K⁺通道开放、K⁺外流引起",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：动作电位的离子基础。C正确：EPSP的突触整合特性。B错误：交感神经兴奋时消化道蠕动减弱而非增强，这是「fight or flight」反应的组成部分。副交感神经兴奋时消化道蠕动增强。A正确：帕金森病的核心病理机制。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "神经生理",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1281086350",
+  "tags": []
+ },
+ "BQ-nervous_sys-6db0236b40dc": {
+  "type": "mtf",
+  "question": "关于神经生理学，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "帕金森病的主要病理改变是黑质-纹状体系统中多巴胺能神经元的进行性变性死亡",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "交感神经兴奋时心率加快、瞳孔扩大、支气管扩张、消化道蠕动增强",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "动作电位的去极化相主要由电压门控Na⁺通道开放、Na⁺内流引起；复极化相主要由电压门控K⁺通道开放、K⁺外流引起",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "兴奋性突触后电位（EPSP）是突触后膜的局部去极化，具有空间总和和时间总和特性",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：动作电位的离子基础。D正确：EPSP的突触整合特性。B错误：交感神经兴奋时消化道蠕动减弱而非增强，这是「fight or flight」反应的组成部分。副交感神经兴奋时消化道蠕动增强。A正确：帕金森病的核心病理机制。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "神经生理",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1281086350",
+  "tags": []
+ },
+ "BQ-nervous_sys-a4e0cf8a4385": {
+  "type": "mtf",
+  "question": "关于神经生理学，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "帕金森病的主要病理改变是黑质-纹状体系统中多巴胺能神经元的进行性变性死亡",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "兴奋性突触后电位（EPSP）是突触后膜的局部去极化，具有空间总和和时间总和特性",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "交感神经兴奋时心率加快、瞳孔扩大、支气管扩张、消化道蠕动增强",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "动作电位的去极化相主要由电压门控Na⁺通道开放、Na⁺内流引起；复极化相主要由电压门控K⁺通道开放、K⁺外流引起",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：动作电位的离子基础。B正确：EPSP的突触整合特性。C错误：交感神经兴奋时消化道蠕动减弱而非增强，这是「fight or flight」反应的组成部分。副交感神经兴奋时消化道蠕动增强。A正确：帕金森病的核心病理机制。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "神经生理",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1281086350",
+  "tags": []
+ },
+ "BQ-nervous_sys-1b1a5c994a86": {
+  "type": "mtf",
+  "question": "关于神经生理学，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "帕金森病的主要病理改变是黑质-纹状体系统中多巴胺能神经元的进行性变性死亡",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "兴奋性突触后电位（EPSP）是突触后膜的局部去极化，具有空间总和和时间总和特性",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "动作电位的去极化相主要由电压门控Na⁺通道开放、Na⁺内流引起；复极化相主要由电压门控K⁺通道开放、K⁺外流引起",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "交感神经兴奋时心率加快、瞳孔扩大、支气管扩张、消化道蠕动增强",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确：动作电位的离子基础。B正确：EPSP的突触整合特性。D错误：交感神经兴奋时消化道蠕动减弱而非增强，这是「fight or flight」反应的组成部分。副交感神经兴奋时消化道蠕动增强。A正确：帕金森病的核心病理机制。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "神经生理",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1281086350",
+  "tags": []
+ },
+ "BQ-nervous_sys-28354357dd81": {
+  "type": "mtf",
+  "question": "关于神经生理学，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "帕金森病的主要病理改变是黑质-纹状体系统中多巴胺能神经元的进行性变性死亡",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "动作电位的去极化相主要由电压门控Na⁺通道开放、Na⁺内流引起；复极化相主要由电压门控K⁺通道开放、K⁺外流引起",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "交感神经兴奋时心率加快、瞳孔扩大、支气管扩张、消化道蠕动增强",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "兴奋性突触后电位（EPSP）是突触后膜的局部去极化，具有空间总和和时间总和特性",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：动作电位的离子基础。D正确：EPSP的突触整合特性。C错误：交感神经兴奋时消化道蠕动减弱而非增强，这是「fight or flight」反应的组成部分。副交感神经兴奋时消化道蠕动增强。A正确：帕金森病的核心病理机制。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "神经生理",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1281086350",
+  "tags": []
+ },
+ "BQ-nervous_sys-b39ed82c106a": {
+  "type": "mtf",
+  "question": "关于神经生理学，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "帕金森病的主要病理改变是黑质-纹状体系统中多巴胺能神经元的进行性变性死亡",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "动作电位的去极化相主要由电压门控Na⁺通道开放、Na⁺内流引起；复极化相主要由电压门控K⁺通道开放、K⁺外流引起",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "兴奋性突触后电位（EPSP）是突触后膜的局部去极化，具有空间总和和时间总和特性",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "交感神经兴奋时心率加快、瞳孔扩大、支气管扩张、消化道蠕动增强",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确：动作电位的离子基础。C正确：EPSP的突触整合特性。D错误：交感神经兴奋时消化道蠕动减弱而非增强，这是「fight or flight」反应的组成部分。副交感神经兴奋时消化道蠕动增强。A正确：帕金森病的核心病理机制。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "神经生理",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1281086350",
+  "tags": []
+ },
+ "BQ-nervous_sys-bf700c95a164": {
+  "type": "mtf",
+  "question": "关于神经肌肉接头的信息传递，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "ACh与肌细胞终板膜上的烟碱型ACh受体结合→Na⁺内流→终板电位",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "动作电位到达运动神经末梢→电压门控Ca²⁺通道开放→Ca²⁺内流触发ACh囊泡胞吐",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "终板电位达到阈值后激活肌膜上的电压门控Na⁺通道→动作电位→肌肉收缩",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "肉毒杆菌毒素抑制ACh囊泡与突触前膜的融合导致肌肉痉挛",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:肉毒杆菌毒素抑制ACh释放导致松弛性麻痹,而非痉挛。破伤风毒素抑制抑制性递质释放才导致痉挛性麻痹。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "神经肌肉",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1900612815",
+  "tags": []
+ },
+ "BQ-nervous_sys-263b17e38ebb": {
+  "type": "mtf",
+  "question": "关于神经肌肉接头的信息传递，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "ACh与肌细胞终板膜上的烟碱型ACh受体结合→Na⁺内流→终板电位",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "动作电位到达运动神经末梢→电压门控Ca²⁺通道开放→Ca²⁺内流触发ACh囊泡胞吐",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "肉毒杆菌毒素抑制ACh囊泡与突触前膜的融合导致肌肉痉挛",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "终板电位达到阈值后激活肌膜上的电压门控Na⁺通道→动作电位→肌肉收缩",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:肉毒杆菌毒素抑制ACh释放导致松弛性麻痹,而非痉挛。破伤风毒素抑制抑制性递质释放才导致痉挛性麻痹。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "神经肌肉",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1900612815",
+  "tags": []
+ },
+ "BQ-nervous_sys-2379149f342e": {
+  "type": "mtf",
+  "question": "关于神经肌肉接头的信息传递，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "ACh与肌细胞终板膜上的烟碱型ACh受体结合→Na⁺内流→终板电位",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "终板电位达到阈值后激活肌膜上的电压门控Na⁺通道→动作电位→肌肉收缩",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "动作电位到达运动神经末梢→电压门控Ca²⁺通道开放→Ca²⁺内流触发ACh囊泡胞吐",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "肉毒杆菌毒素抑制ACh囊泡与突触前膜的融合导致肌肉痉挛",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:肉毒杆菌毒素抑制ACh释放导致松弛性麻痹,而非痉挛。破伤风毒素抑制抑制性递质释放才导致痉挛性麻痹。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "神经肌肉",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1900612815",
+  "tags": []
+ },
+ "BQ-nervous_sys-b9ee4831b5e5": {
+  "type": "mtf",
+  "question": "关于神经肌肉接头的信息传递，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "ACh与肌细胞终板膜上的烟碱型ACh受体结合→Na⁺内流→终板电位",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "终板电位达到阈值后激活肌膜上的电压门控Na⁺通道→动作电位→肌肉收缩",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "肉毒杆菌毒素抑制ACh囊泡与突触前膜的融合导致肌肉痉挛",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "动作电位到达运动神经末梢→电压门控Ca²⁺通道开放→Ca²⁺内流触发ACh囊泡胞吐",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:肉毒杆菌毒素抑制ACh释放导致松弛性麻痹,而非痉挛。破伤风毒素抑制抑制性递质释放才导致痉挛性麻痹。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "神经肌肉",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1900612815",
+  "tags": []
+ },
+ "BQ-nervous_sys-a1a830dc13f2": {
+  "type": "mtf",
+  "question": "关于神经肌肉接头的信息传递，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "ACh与肌细胞终板膜上的烟碱型ACh受体结合→Na⁺内流→终板电位",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "肉毒杆菌毒素抑制ACh囊泡与突触前膜的融合导致肌肉痉挛",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "动作电位到达运动神经末梢→电压门控Ca²⁺通道开放→Ca²⁺内流触发ACh囊泡胞吐",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "终板电位达到阈值后激活肌膜上的电压门控Na⁺通道→动作电位→肌肉收缩",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:肉毒杆菌毒素抑制ACh释放导致松弛性麻痹,而非痉挛。破伤风毒素抑制抑制性递质释放才导致痉挛性麻痹。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "神经肌肉",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1900612815",
+  "tags": []
+ },
+ "BQ-nervous_sys-e47f67f99d26": {
+  "type": "mtf",
+  "question": "关于神经肌肉接头的信息传递，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "ACh与肌细胞终板膜上的烟碱型ACh受体结合→Na⁺内流→终板电位",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "肉毒杆菌毒素抑制ACh囊泡与突触前膜的融合导致肌肉痉挛",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "终板电位达到阈值后激活肌膜上的电压门控Na⁺通道→动作电位→肌肉收缩",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "动作电位到达运动神经末梢→电压门控Ca²⁺通道开放→Ca²⁺内流触发ACh囊泡胞吐",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:肉毒杆菌毒素抑制ACh释放导致松弛性麻痹,而非痉挛。破伤风毒素抑制抑制性递质释放才导致痉挛性麻痹。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "神经肌肉",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1900612815",
+  "tags": []
+ },
+ "BQ-nervous_sys-cea06f79cdd8": {
+  "type": "mtf",
+  "question": "关于神经肌肉接头的信息传递，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "动作电位到达运动神经末梢→电压门控Ca²⁺通道开放→Ca²⁺内流触发ACh囊泡胞吐",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "ACh与肌细胞终板膜上的烟碱型ACh受体结合→Na⁺内流→终板电位",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "终板电位达到阈值后激活肌膜上的电压门控Na⁺通道→动作电位→肌肉收缩",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "肉毒杆菌毒素抑制ACh囊泡与突触前膜的融合导致肌肉痉挛",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:肉毒杆菌毒素抑制ACh释放导致松弛性麻痹,而非痉挛。破伤风毒素抑制抑制性递质释放才导致痉挛性麻痹。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "神经肌肉",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1900612815",
+  "tags": []
+ },
+ "BQ-nervous_sys-73b0c1126e87": {
+  "type": "mtf",
+  "question": "关于神经肌肉接头的信息传递，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "动作电位到达运动神经末梢→电压门控Ca²⁺通道开放→Ca²⁺内流触发ACh囊泡胞吐",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "ACh与肌细胞终板膜上的烟碱型ACh受体结合→Na⁺内流→终板电位",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "肉毒杆菌毒素抑制ACh囊泡与突触前膜的融合导致肌肉痉挛",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "终板电位达到阈值后激活肌膜上的电压门控Na⁺通道→动作电位→肌肉收缩",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:肉毒杆菌毒素抑制ACh释放导致松弛性麻痹,而非痉挛。破伤风毒素抑制抑制性递质释放才导致痉挛性麻痹。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "神经肌肉",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1900612815",
+  "tags": []
+ },
+ "BQ-nervous_sys-b70ca35faece": {
+  "type": "mtf",
+  "question": "关于神经肌肉接头的信息传递，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "动作电位到达运动神经末梢→电压门控Ca²⁺通道开放→Ca²⁺内流触发ACh囊泡胞吐",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "终板电位达到阈值后激活肌膜上的电压门控Na⁺通道→动作电位→肌肉收缩",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "ACh与肌细胞终板膜上的烟碱型ACh受体结合→Na⁺内流→终板电位",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "肉毒杆菌毒素抑制ACh囊泡与突触前膜的融合导致肌肉痉挛",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:肉毒杆菌毒素抑制ACh释放导致松弛性麻痹,而非痉挛。破伤风毒素抑制抑制性递质释放才导致痉挛性麻痹。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "神经肌肉",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1900612815",
+  "tags": []
+ },
+ "BQ-nervous_sys-85e72b80ac6c": {
+  "type": "mtf",
+  "question": "关于神经肌肉接头的信息传递，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "动作电位到达运动神经末梢→电压门控Ca²⁺通道开放→Ca²⁺内流触发ACh囊泡胞吐",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "终板电位达到阈值后激活肌膜上的电压门控Na⁺通道→动作电位→肌肉收缩",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "肉毒杆菌毒素抑制ACh囊泡与突触前膜的融合导致肌肉痉挛",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "ACh与肌细胞终板膜上的烟碱型ACh受体结合→Na⁺内流→终板电位",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:肉毒杆菌毒素抑制ACh释放导致松弛性麻痹,而非痉挛。破伤风毒素抑制抑制性递质释放才导致痉挛性麻痹。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "神经肌肉",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1900612815",
+  "tags": []
+ },
+ "BQ-nervous_sys-fbc46b86fe72": {
+  "type": "mtf",
+  "question": "关于神经肌肉接头的信息传递，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "动作电位到达运动神经末梢→电压门控Ca²⁺通道开放→Ca²⁺内流触发ACh囊泡胞吐",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "肉毒杆菌毒素抑制ACh囊泡与突触前膜的融合导致肌肉痉挛",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "ACh与肌细胞终板膜上的烟碱型ACh受体结合→Na⁺内流→终板电位",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "终板电位达到阈值后激活肌膜上的电压门控Na⁺通道→动作电位→肌肉收缩",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:肉毒杆菌毒素抑制ACh释放导致松弛性麻痹,而非痉挛。破伤风毒素抑制抑制性递质释放才导致痉挛性麻痹。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "神经肌肉",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1900612815",
+  "tags": []
+ },
+ "BQ-nervous_sys-df9a5803fbb9": {
+  "type": "mtf",
+  "question": "关于神经肌肉接头的信息传递，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "动作电位到达运动神经末梢→电压门控Ca²⁺通道开放→Ca²⁺内流触发ACh囊泡胞吐",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "肉毒杆菌毒素抑制ACh囊泡与突触前膜的融合导致肌肉痉挛",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "终板电位达到阈值后激活肌膜上的电压门控Na⁺通道→动作电位→肌肉收缩",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "ACh与肌细胞终板膜上的烟碱型ACh受体结合→Na⁺内流→终板电位",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:肉毒杆菌毒素抑制ACh释放导致松弛性麻痹,而非痉挛。破伤风毒素抑制抑制性递质释放才导致痉挛性麻痹。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "神经肌肉",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1900612815",
+  "tags": []
+ },
+ "BQ-nervous_sys-1bb365265bf0": {
+  "type": "mtf",
+  "question": "关于神经肌肉接头的信息传递，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "终板电位达到阈值后激活肌膜上的电压门控Na⁺通道→动作电位→肌肉收缩",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "ACh与肌细胞终板膜上的烟碱型ACh受体结合→Na⁺内流→终板电位",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "动作电位到达运动神经末梢→电压门控Ca²⁺通道开放→Ca²⁺内流触发ACh囊泡胞吐",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "肉毒杆菌毒素抑制ACh囊泡与突触前膜的融合导致肌肉痉挛",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:肉毒杆菌毒素抑制ACh释放导致松弛性麻痹,而非痉挛。破伤风毒素抑制抑制性递质释放才导致痉挛性麻痹。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "神经肌肉",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1900612815",
+  "tags": []
+ },
+ "BQ-nervous_sys-82a39b0768a4": {
+  "type": "mtf",
+  "question": "关于神经肌肉接头的信息传递，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "终板电位达到阈值后激活肌膜上的电压门控Na⁺通道→动作电位→肌肉收缩",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "ACh与肌细胞终板膜上的烟碱型ACh受体结合→Na⁺内流→终板电位",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "肉毒杆菌毒素抑制ACh囊泡与突触前膜的融合导致肌肉痉挛",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "动作电位到达运动神经末梢→电压门控Ca²⁺通道开放→Ca²⁺内流触发ACh囊泡胞吐",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:肉毒杆菌毒素抑制ACh释放导致松弛性麻痹,而非痉挛。破伤风毒素抑制抑制性递质释放才导致痉挛性麻痹。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "神经肌肉",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1900612815",
+  "tags": []
+ },
+ "BQ-nervous_sys-acffac2a2df2": {
+  "type": "mtf",
+  "question": "关于神经肌肉接头的信息传递，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "终板电位达到阈值后激活肌膜上的电压门控Na⁺通道→动作电位→肌肉收缩",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "动作电位到达运动神经末梢→电压门控Ca²⁺通道开放→Ca²⁺内流触发ACh囊泡胞吐",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "ACh与肌细胞终板膜上的烟碱型ACh受体结合→Na⁺内流→终板电位",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "肉毒杆菌毒素抑制ACh囊泡与突触前膜的融合导致肌肉痉挛",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:肉毒杆菌毒素抑制ACh释放导致松弛性麻痹,而非痉挛。破伤风毒素抑制抑制性递质释放才导致痉挛性麻痹。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "神经肌肉",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1900612815",
+  "tags": []
+ },
+ "BQ-nervous_sys-4e0befe26a55": {
+  "type": "mtf",
+  "question": "关于神经肌肉接头的信息传递，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "终板电位达到阈值后激活肌膜上的电压门控Na⁺通道→动作电位→肌肉收缩",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "动作电位到达运动神经末梢→电压门控Ca²⁺通道开放→Ca²⁺内流触发ACh囊泡胞吐",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "肉毒杆菌毒素抑制ACh囊泡与突触前膜的融合导致肌肉痉挛",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "ACh与肌细胞终板膜上的烟碱型ACh受体结合→Na⁺内流→终板电位",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:肉毒杆菌毒素抑制ACh释放导致松弛性麻痹,而非痉挛。破伤风毒素抑制抑制性递质释放才导致痉挛性麻痹。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "神经肌肉",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1900612815",
+  "tags": []
+ },
+ "BQ-nervous_sys-0ebe88686436": {
+  "type": "mtf",
+  "question": "关于神经肌肉接头的信息传递，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "终板电位达到阈值后激活肌膜上的电压门控Na⁺通道→动作电位→肌肉收缩",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "肉毒杆菌毒素抑制ACh囊泡与突触前膜的融合导致肌肉痉挛",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "ACh与肌细胞终板膜上的烟碱型ACh受体结合→Na⁺内流→终板电位",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "动作电位到达运动神经末梢→电压门控Ca²⁺通道开放→Ca²⁺内流触发ACh囊泡胞吐",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:肉毒杆菌毒素抑制ACh释放导致松弛性麻痹,而非痉挛。破伤风毒素抑制抑制性递质释放才导致痉挛性麻痹。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "神经肌肉",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1900612815",
+  "tags": []
+ },
+ "BQ-nervous_sys-1b51f26e3334": {
+  "type": "mtf",
+  "question": "关于神经肌肉接头的信息传递，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "终板电位达到阈值后激活肌膜上的电压门控Na⁺通道→动作电位→肌肉收缩",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "肉毒杆菌毒素抑制ACh囊泡与突触前膜的融合导致肌肉痉挛",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "动作电位到达运动神经末梢→电压门控Ca²⁺通道开放→Ca²⁺内流触发ACh囊泡胞吐",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "ACh与肌细胞终板膜上的烟碱型ACh受体结合→Na⁺内流→终板电位",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:肉毒杆菌毒素抑制ACh释放导致松弛性麻痹,而非痉挛。破伤风毒素抑制抑制性递质释放才导致痉挛性麻痹。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "神经肌肉",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1900612815",
+  "tags": []
+ },
+ "BQ-nervous_sys-0dca2afa1b6a": {
+  "type": "mtf",
+  "question": "关于神经肌肉接头的信息传递，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "肉毒杆菌毒素抑制ACh囊泡与突触前膜的融合导致肌肉痉挛",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "ACh与肌细胞终板膜上的烟碱型ACh受体结合→Na⁺内流→终板电位",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "动作电位到达运动神经末梢→电压门控Ca²⁺通道开放→Ca²⁺内流触发ACh囊泡胞吐",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "终板电位达到阈值后激活肌膜上的电压门控Na⁺通道→动作电位→肌肉收缩",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:肉毒杆菌毒素抑制ACh释放导致松弛性麻痹,而非痉挛。破伤风毒素抑制抑制性递质释放才导致痉挛性麻痹。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "神经肌肉",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1900612815",
+  "tags": []
+ },
+ "BQ-nervous_sys-0c463fd0fc1f": {
+  "type": "mtf",
+  "question": "关于神经肌肉接头的信息传递，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "肉毒杆菌毒素抑制ACh囊泡与突触前膜的融合导致肌肉痉挛",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "ACh与肌细胞终板膜上的烟碱型ACh受体结合→Na⁺内流→终板电位",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "终板电位达到阈值后激活肌膜上的电压门控Na⁺通道→动作电位→肌肉收缩",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "动作电位到达运动神经末梢→电压门控Ca²⁺通道开放→Ca²⁺内流触发ACh囊泡胞吐",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:肉毒杆菌毒素抑制ACh释放导致松弛性麻痹,而非痉挛。破伤风毒素抑制抑制性递质释放才导致痉挛性麻痹。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "神经肌肉",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1900612815",
+  "tags": []
+ },
+ "BQ-nervous_sys-1cdb7f93262f": {
+  "type": "mtf",
+  "question": "关于神经肌肉接头的信息传递，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "肉毒杆菌毒素抑制ACh囊泡与突触前膜的融合导致肌肉痉挛",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "动作电位到达运动神经末梢→电压门控Ca²⁺通道开放→Ca²⁺内流触发ACh囊泡胞吐",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "ACh与肌细胞终板膜上的烟碱型ACh受体结合→Na⁺内流→终板电位",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "终板电位达到阈值后激活肌膜上的电压门控Na⁺通道→动作电位→肌肉收缩",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:肉毒杆菌毒素抑制ACh释放导致松弛性麻痹,而非痉挛。破伤风毒素抑制抑制性递质释放才导致痉挛性麻痹。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "神经肌肉",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1900612815",
+  "tags": []
+ },
+ "BQ-nervous_sys-d5fb0381445c": {
+  "type": "mtf",
+  "question": "关于神经肌肉接头的信息传递，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "肉毒杆菌毒素抑制ACh囊泡与突触前膜的融合导致肌肉痉挛",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "动作电位到达运动神经末梢→电压门控Ca²⁺通道开放→Ca²⁺内流触发ACh囊泡胞吐",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "终板电位达到阈值后激活肌膜上的电压门控Na⁺通道→动作电位→肌肉收缩",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "ACh与肌细胞终板膜上的烟碱型ACh受体结合→Na⁺内流→终板电位",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:肉毒杆菌毒素抑制ACh释放导致松弛性麻痹,而非痉挛。破伤风毒素抑制抑制性递质释放才导致痉挛性麻痹。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "神经肌肉",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1900612815",
+  "tags": []
+ },
+ "BQ-nervous_sys-629b0b9e17da": {
+  "type": "mtf",
+  "question": "关于神经肌肉接头的信息传递，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "肉毒杆菌毒素抑制ACh囊泡与突触前膜的融合导致肌肉痉挛",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "终板电位达到阈值后激活肌膜上的电压门控Na⁺通道→动作电位→肌肉收缩",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "ACh与肌细胞终板膜上的烟碱型ACh受体结合→Na⁺内流→终板电位",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "动作电位到达运动神经末梢→电压门控Ca²⁺通道开放→Ca²⁺内流触发ACh囊泡胞吐",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:肉毒杆菌毒素抑制ACh释放导致松弛性麻痹,而非痉挛。破伤风毒素抑制抑制性递质释放才导致痉挛性麻痹。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "神经肌肉",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1900612815",
+  "tags": []
+ },
+ "BQ-nervous_sys-218d99e725b1": {
+  "type": "mtf",
+  "question": "关于神经肌肉接头的信息传递，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "肉毒杆菌毒素抑制ACh囊泡与突触前膜的融合导致肌肉痉挛",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "终板电位达到阈值后激活肌膜上的电压门控Na⁺通道→动作电位→肌肉收缩",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "动作电位到达运动神经末梢→电压门控Ca²⁺通道开放→Ca²⁺内流触发ACh囊泡胞吐",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "ACh与肌细胞终板膜上的烟碱型ACh受体结合→Na⁺内流→终板电位",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:肉毒杆菌毒素抑制ACh释放导致松弛性麻痹,而非痉挛。破伤风毒素抑制抑制性递质释放才导致痉挛性麻痹。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "神经肌肉",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1900612815",
+  "tags": []
+ },
+ "BQ-nervous_sys-c853a7312813": {
+  "type": "mtf",
+  "question": "关于突触可塑性，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "AMPA受体在LTP表达阶段被磷酸化并插入突触后膜，增加突触传递效率",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "LTP一旦建立就是永久性的，不会减弱",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "NMDA受体是LTP诱导的关键分子，其活化需要突触前释放的谷氨酸和突触后膜去极化同时发生",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "长时程增强（LTP）是学习和记忆的重要细胞机制，在海马CA1区最为经典",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：LTP在学习和记忆中的角色。C正确：NMDA受体的符合检测器功能。A正确：AMPA受体转运是LTP表达的关键机制。B错误：LTP可被长时程抑制（LTD）逆转。突触可塑性是双向的，LTP和LTD共同调节突触强度。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "突触可塑性",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2114880728",
+  "tags": []
+ },
+ "BQ-nervous_sys-682a3d468dd4": {
+  "type": "mtf",
+  "question": "关于突触可塑性，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "AMPA受体在LTP表达阶段被磷酸化并插入突触后膜，增加突触传递效率",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "LTP一旦建立就是永久性的，不会减弱",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "长时程增强（LTP）是学习和记忆的重要细胞机制，在海马CA1区最为经典",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "NMDA受体是LTP诱导的关键分子，其活化需要突触前释放的谷氨酸和突触后膜去极化同时发生",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：LTP在学习和记忆中的角色。D正确：NMDA受体的符合检测器功能。A正确：AMPA受体转运是LTP表达的关键机制。B错误：LTP可被长时程抑制（LTD）逆转。突触可塑性是双向的，LTP和LTD共同调节突触强度。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "突触可塑性",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2114880728",
+  "tags": []
+ },
+ "BQ-nervous_sys-ba32098e28f2": {
+  "type": "mtf",
+  "question": "关于突触可塑性，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "AMPA受体在LTP表达阶段被磷酸化并插入突触后膜，增加突触传递效率",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "NMDA受体是LTP诱导的关键分子，其活化需要突触前释放的谷氨酸和突触后膜去极化同时发生",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "LTP一旦建立就是永久性的，不会减弱",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "长时程增强（LTP）是学习和记忆的重要细胞机制，在海马CA1区最为经典",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：LTP在学习和记忆中的角色。B正确：NMDA受体的符合检测器功能。A正确：AMPA受体转运是LTP表达的关键机制。C错误：LTP可被长时程抑制（LTD）逆转。突触可塑性是双向的，LTP和LTD共同调节突触强度。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "突触可塑性",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2114880728",
+  "tags": []
+ },
+ "BQ-nervous_sys-b687bef692f7": {
+  "type": "mtf",
+  "question": "关于突触可塑性，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "AMPA受体在LTP表达阶段被磷酸化并插入突触后膜，增加突触传递效率",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "NMDA受体是LTP诱导的关键分子，其活化需要突触前释放的谷氨酸和突触后膜去极化同时发生",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "长时程增强（LTP）是学习和记忆的重要细胞机制，在海马CA1区最为经典",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "LTP一旦建立就是永久性的，不会减弱",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确：LTP在学习和记忆中的角色。B正确：NMDA受体的符合检测器功能。A正确：AMPA受体转运是LTP表达的关键机制。D错误：LTP可被长时程抑制（LTD）逆转。突触可塑性是双向的，LTP和LTD共同调节突触强度。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "突触可塑性",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2114880728",
+  "tags": []
+ },
+ "BQ-nervous_sys-ed6be289663a": {
+  "type": "mtf",
+  "question": "关于突触可塑性，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "AMPA受体在LTP表达阶段被磷酸化并插入突触后膜，增加突触传递效率",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "长时程增强（LTP）是学习和记忆的重要细胞机制，在海马CA1区最为经典",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "LTP一旦建立就是永久性的，不会减弱",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "NMDA受体是LTP诱导的关键分子，其活化需要突触前释放的谷氨酸和突触后膜去极化同时发生",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：LTP在学习和记忆中的角色。D正确：NMDA受体的符合检测器功能。A正确：AMPA受体转运是LTP表达的关键机制。C错误：LTP可被长时程抑制（LTD）逆转。突触可塑性是双向的，LTP和LTD共同调节突触强度。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "突触可塑性",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2114880728",
+  "tags": []
+ },
+ "BQ-nervous_sys-1e9664b4faeb": {
+  "type": "mtf",
+  "question": "关于突触可塑性，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "AMPA受体在LTP表达阶段被磷酸化并插入突触后膜，增加突触传递效率",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "长时程增强（LTP）是学习和记忆的重要细胞机制，在海马CA1区最为经典",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "NMDA受体是LTP诱导的关键分子，其活化需要突触前释放的谷氨酸和突触后膜去极化同时发生",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "LTP一旦建立就是永久性的，不会减弱",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确：LTP在学习和记忆中的角色。C正确：NMDA受体的符合检测器功能。A正确：AMPA受体转运是LTP表达的关键机制。D错误：LTP可被长时程抑制（LTD）逆转。突触可塑性是双向的，LTP和LTD共同调节突触强度。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "突触可塑性",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2114880728",
+  "tags": []
+ },
+ "BQ-nervous_sys-e755e3d830c4": {
+  "type": "mtf",
+  "question": "关于突触可塑性，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "LTP一旦建立就是永久性的，不会减弱",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "AMPA受体在LTP表达阶段被磷酸化并插入突触后膜，增加突触传递效率",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "NMDA受体是LTP诱导的关键分子，其活化需要突触前释放的谷氨酸和突触后膜去极化同时发生",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "长时程增强（LTP）是学习和记忆的重要细胞机制，在海马CA1区最为经典",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：LTP在学习和记忆中的角色。C正确：NMDA受体的符合检测器功能。B正确：AMPA受体转运是LTP表达的关键机制。A错误：LTP可被长时程抑制（LTD）逆转。突触可塑性是双向的，LTP和LTD共同调节突触强度。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "突触可塑性",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2114880728",
+  "tags": []
+ },
+ "BQ-nervous_sys-bcdbe20b1d74": {
+  "type": "mtf",
+  "question": "关于突触可塑性，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "LTP一旦建立就是永久性的，不会减弱",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "AMPA受体在LTP表达阶段被磷酸化并插入突触后膜，增加突触传递效率",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "长时程增强（LTP）是学习和记忆的重要细胞机制，在海马CA1区最为经典",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "NMDA受体是LTP诱导的关键分子，其活化需要突触前释放的谷氨酸和突触后膜去极化同时发生",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：LTP在学习和记忆中的角色。D正确：NMDA受体的符合检测器功能。B正确：AMPA受体转运是LTP表达的关键机制。A错误：LTP可被长时程抑制（LTD）逆转。突触可塑性是双向的，LTP和LTD共同调节突触强度。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "突触可塑性",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2114880728",
+  "tags": []
+ },
+ "BQ-nervous_sys-4baa066b767b": {
+  "type": "mtf",
+  "question": "关于突触可塑性，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "LTP一旦建立就是永久性的，不会减弱",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "NMDA受体是LTP诱导的关键分子，其活化需要突触前释放的谷氨酸和突触后膜去极化同时发生",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "AMPA受体在LTP表达阶段被磷酸化并插入突触后膜，增加突触传递效率",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "长时程增强（LTP）是学习和记忆的重要细胞机制，在海马CA1区最为经典",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：LTP在学习和记忆中的角色。B正确：NMDA受体的符合检测器功能。C正确：AMPA受体转运是LTP表达的关键机制。A错误：LTP可被长时程抑制（LTD）逆转。突触可塑性是双向的，LTP和LTD共同调节突触强度。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "突触可塑性",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2114880728",
+  "tags": []
+ },
+ "BQ-nervous_sys-af3d80bbf1b7": {
+  "type": "mtf",
+  "question": "关于突触可塑性，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "LTP一旦建立就是永久性的，不会减弱",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "NMDA受体是LTP诱导的关键分子，其活化需要突触前释放的谷氨酸和突触后膜去极化同时发生",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "长时程增强（LTP）是学习和记忆的重要细胞机制，在海马CA1区最为经典",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "AMPA受体在LTP表达阶段被磷酸化并插入突触后膜，增加突触传递效率",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：LTP在学习和记忆中的角色。B正确：NMDA受体的符合检测器功能。D正确：AMPA受体转运是LTP表达的关键机制。A错误：LTP可被长时程抑制（LTD）逆转。突触可塑性是双向的，LTP和LTD共同调节突触强度。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "突触可塑性",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2114880728",
+  "tags": []
+ },
+ "BQ-nervous_sys-05238ec8bf3d": {
+  "type": "mtf",
+  "question": "关于突触可塑性，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "LTP一旦建立就是永久性的，不会减弱",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "长时程增强（LTP）是学习和记忆的重要细胞机制，在海马CA1区最为经典",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "AMPA受体在LTP表达阶段被磷酸化并插入突触后膜，增加突触传递效率",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "NMDA受体是LTP诱导的关键分子，其活化需要突触前释放的谷氨酸和突触后膜去极化同时发生",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：LTP在学习和记忆中的角色。D正确：NMDA受体的符合检测器功能。C正确：AMPA受体转运是LTP表达的关键机制。A错误：LTP可被长时程抑制（LTD）逆转。突触可塑性是双向的，LTP和LTD共同调节突触强度。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "突触可塑性",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2114880728",
+  "tags": []
+ },
+ "BQ-nervous_sys-1d8601f68699": {
+  "type": "mtf",
+  "question": "关于突触可塑性，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "LTP一旦建立就是永久性的，不会减弱",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "长时程增强（LTP）是学习和记忆的重要细胞机制，在海马CA1区最为经典",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "NMDA受体是LTP诱导的关键分子，其活化需要突触前释放的谷氨酸和突触后膜去极化同时发生",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "AMPA受体在LTP表达阶段被磷酸化并插入突触后膜，增加突触传递效率",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：LTP在学习和记忆中的角色。C正确：NMDA受体的符合检测器功能。D正确：AMPA受体转运是LTP表达的关键机制。A错误：LTP可被长时程抑制（LTD）逆转。突触可塑性是双向的，LTP和LTD共同调节突触强度。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "突触可塑性",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2114880728",
+  "tags": []
+ },
+ "BQ-nervous_sys-9be26727d634": {
+  "type": "mtf",
+  "question": "关于突触可塑性，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "NMDA受体是LTP诱导的关键分子，其活化需要突触前释放的谷氨酸和突触后膜去极化同时发生",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "AMPA受体在LTP表达阶段被磷酸化并插入突触后膜，增加突触传递效率",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "LTP一旦建立就是永久性的，不会减弱",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "长时程增强（LTP）是学习和记忆的重要细胞机制，在海马CA1区最为经典",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：LTP在学习和记忆中的角色。A正确：NMDA受体的符合检测器功能。B正确：AMPA受体转运是LTP表达的关键机制。C错误：LTP可被长时程抑制（LTD）逆转。突触可塑性是双向的，LTP和LTD共同调节突触强度。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "突触可塑性",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2114880728",
+  "tags": []
+ },
+ "BQ-nervous_sys-a0d5714b83e6": {
+  "type": "mtf",
+  "question": "关于突触可塑性，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "NMDA受体是LTP诱导的关键分子，其活化需要突触前释放的谷氨酸和突触后膜去极化同时发生",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "AMPA受体在LTP表达阶段被磷酸化并插入突触后膜，增加突触传递效率",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "长时程增强（LTP）是学习和记忆的重要细胞机制，在海马CA1区最为经典",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "LTP一旦建立就是永久性的，不会减弱",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确：LTP在学习和记忆中的角色。A正确：NMDA受体的符合检测器功能。B正确：AMPA受体转运是LTP表达的关键机制。D错误：LTP可被长时程抑制（LTD）逆转。突触可塑性是双向的，LTP和LTD共同调节突触强度。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "突触可塑性",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2114880728",
+  "tags": []
+ },
+ "BQ-nervous_sys-629a28edd2e4": {
+  "type": "mtf",
+  "question": "关于突触可塑性，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "NMDA受体是LTP诱导的关键分子，其活化需要突触前释放的谷氨酸和突触后膜去极化同时发生",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "LTP一旦建立就是永久性的，不会减弱",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "AMPA受体在LTP表达阶段被磷酸化并插入突触后膜，增加突触传递效率",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "长时程增强（LTP）是学习和记忆的重要细胞机制，在海马CA1区最为经典",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：LTP在学习和记忆中的角色。A正确：NMDA受体的符合检测器功能。C正确：AMPA受体转运是LTP表达的关键机制。B错误：LTP可被长时程抑制（LTD）逆转。突触可塑性是双向的，LTP和LTD共同调节突触强度。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "突触可塑性",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2114880728",
+  "tags": []
+ },
+ "BQ-nervous_sys-566d5a7b2ff2": {
+  "type": "mtf",
+  "question": "关于突触可塑性，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "NMDA受体是LTP诱导的关键分子，其活化需要突触前释放的谷氨酸和突触后膜去极化同时发生",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "LTP一旦建立就是永久性的，不会减弱",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "长时程增强（LTP）是学习和记忆的重要细胞机制，在海马CA1区最为经典",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "AMPA受体在LTP表达阶段被磷酸化并插入突触后膜，增加突触传递效率",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：LTP在学习和记忆中的角色。A正确：NMDA受体的符合检测器功能。D正确：AMPA受体转运是LTP表达的关键机制。B错误：LTP可被长时程抑制（LTD）逆转。突触可塑性是双向的，LTP和LTD共同调节突触强度。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "突触可塑性",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2114880728",
+  "tags": []
+ },
+ "BQ-nervous_sys-6ff0a0dc6512": {
+  "type": "mtf",
+  "question": "关于突触可塑性，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "NMDA受体是LTP诱导的关键分子，其活化需要突触前释放的谷氨酸和突触后膜去极化同时发生",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "长时程增强（LTP）是学习和记忆的重要细胞机制，在海马CA1区最为经典",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "AMPA受体在LTP表达阶段被磷酸化并插入突触后膜，增加突触传递效率",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "LTP一旦建立就是永久性的，不会减弱",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确：LTP在学习和记忆中的角色。A正确：NMDA受体的符合检测器功能。C正确：AMPA受体转运是LTP表达的关键机制。D错误：LTP可被长时程抑制（LTD）逆转。突触可塑性是双向的，LTP和LTD共同调节突触强度。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "突触可塑性",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2114880728",
+  "tags": []
+ },
+ "BQ-nervous_sys-4a76c6026dc4": {
+  "type": "mtf",
+  "question": "关于突触可塑性，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "NMDA受体是LTP诱导的关键分子，其活化需要突触前释放的谷氨酸和突触后膜去极化同时发生",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "长时程增强（LTP）是学习和记忆的重要细胞机制，在海马CA1区最为经典",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "LTP一旦建立就是永久性的，不会减弱",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "AMPA受体在LTP表达阶段被磷酸化并插入突触后膜，增加突触传递效率",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：LTP在学习和记忆中的角色。A正确：NMDA受体的符合检测器功能。D正确：AMPA受体转运是LTP表达的关键机制。C错误：LTP可被长时程抑制（LTD）逆转。突触可塑性是双向的，LTP和LTD共同调节突触强度。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "突触可塑性",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2114880728",
+  "tags": []
+ },
+ "BQ-nervous_sys-99ab7d0358b4": {
+  "type": "mtf",
+  "question": "关于突触可塑性，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "长时程增强（LTP）是学习和记忆的重要细胞机制，在海马CA1区最为经典",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "AMPA受体在LTP表达阶段被磷酸化并插入突触后膜，增加突触传递效率",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "LTP一旦建立就是永久性的，不会减弱",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "NMDA受体是LTP诱导的关键分子，其活化需要突触前释放的谷氨酸和突触后膜去极化同时发生",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：LTP在学习和记忆中的角色。D正确：NMDA受体的符合检测器功能。B正确：AMPA受体转运是LTP表达的关键机制。C错误：LTP可被长时程抑制（LTD）逆转。突触可塑性是双向的，LTP和LTD共同调节突触强度。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "突触可塑性",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2114880728",
+  "tags": []
+ },
+ "BQ-nervous_sys-52e9f7a6fdcc": {
+  "type": "mtf",
+  "question": "关于突触可塑性，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "长时程增强（LTP）是学习和记忆的重要细胞机制，在海马CA1区最为经典",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "AMPA受体在LTP表达阶段被磷酸化并插入突触后膜，增加突触传递效率",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "NMDA受体是LTP诱导的关键分子，其活化需要突触前释放的谷氨酸和突触后膜去极化同时发生",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "LTP一旦建立就是永久性的，不会减弱",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确：LTP在学习和记忆中的角色。C正确：NMDA受体的符合检测器功能。B正确：AMPA受体转运是LTP表达的关键机制。D错误：LTP可被长时程抑制（LTD）逆转。突触可塑性是双向的，LTP和LTD共同调节突触强度。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "突触可塑性",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2114880728",
+  "tags": []
+ },
+ "BQ-nervous_sys-444bad8bb679": {
+  "type": "mtf",
+  "question": "关于突触可塑性，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "长时程增强（LTP）是学习和记忆的重要细胞机制，在海马CA1区最为经典",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "LTP一旦建立就是永久性的，不会减弱",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "AMPA受体在LTP表达阶段被磷酸化并插入突触后膜，增加突触传递效率",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "NMDA受体是LTP诱导的关键分子，其活化需要突触前释放的谷氨酸和突触后膜去极化同时发生",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：LTP在学习和记忆中的角色。D正确：NMDA受体的符合检测器功能。C正确：AMPA受体转运是LTP表达的关键机制。B错误：LTP可被长时程抑制（LTD）逆转。突触可塑性是双向的，LTP和LTD共同调节突触强度。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "突触可塑性",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2114880728",
+  "tags": []
+ },
+ "BQ-nervous_sys-4a271af8a53d": {
+  "type": "mtf",
+  "question": "关于突触可塑性，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "长时程增强（LTP）是学习和记忆的重要细胞机制，在海马CA1区最为经典",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "LTP一旦建立就是永久性的，不会减弱",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "NMDA受体是LTP诱导的关键分子，其活化需要突触前释放的谷氨酸和突触后膜去极化同时发生",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "AMPA受体在LTP表达阶段被磷酸化并插入突触后膜，增加突触传递效率",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：LTP在学习和记忆中的角色。C正确：NMDA受体的符合检测器功能。D正确：AMPA受体转运是LTP表达的关键机制。B错误：LTP可被长时程抑制（LTD）逆转。突触可塑性是双向的，LTP和LTD共同调节突触强度。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "突触可塑性",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2114880728",
+  "tags": []
+ },
+ "BQ-nervous_sys-22ff649d69ac": {
+  "type": "mtf",
+  "question": "关于突触可塑性，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "长时程增强（LTP）是学习和记忆的重要细胞机制，在海马CA1区最为经典",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "NMDA受体是LTP诱导的关键分子，其活化需要突触前释放的谷氨酸和突触后膜去极化同时发生",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "AMPA受体在LTP表达阶段被磷酸化并插入突触后膜，增加突触传递效率",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "LTP一旦建立就是永久性的，不会减弱",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确：LTP在学习和记忆中的角色。B正确：NMDA受体的符合检测器功能。C正确：AMPA受体转运是LTP表达的关键机制。D错误：LTP可被长时程抑制（LTD）逆转。突触可塑性是双向的，LTP和LTD共同调节突触强度。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "突触可塑性",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2114880728",
+  "tags": []
+ },
+ "BQ-nervous_sys-45ddbcb11dc8": {
+  "type": "mtf",
+  "question": "关于突触可塑性，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "长时程增强（LTP）是学习和记忆的重要细胞机制，在海马CA1区最为经典",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "NMDA受体是LTP诱导的关键分子，其活化需要突触前释放的谷氨酸和突触后膜去极化同时发生",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "LTP一旦建立就是永久性的，不会减弱",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "AMPA受体在LTP表达阶段被磷酸化并插入突触后膜，增加突触传递效率",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：LTP在学习和记忆中的角色。B正确：NMDA受体的符合检测器功能。D正确：AMPA受体转运是LTP表达的关键机制。C错误：LTP可被长时程抑制（LTD）逆转。突触可塑性是双向的，LTP和LTD共同调节突触强度。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "突触可塑性",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2114880728",
+  "tags": []
+ },
+ "BQ-nervous_sys-59699947a756": {
+  "type": "mtf",
+  "question": "关于自主神经系统的递质与受体，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "交感神经节后支配汗腺的纤维释放乙酰胆碱而非去甲肾上腺素",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "交感神经节后纤维释放去甲肾上腺素作用于α和β肾上腺素受体",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "副交感神经节后纤维释放乙酰胆碱作用于毒蕈碱型受体",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "自主神经节的节前纤维递质均为乙酰胆碱",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:交感节后的一般递质。B:副交感节后递质。C:汗腺的交感支配是例外。D:交感和副交感节前纤维均释放ACh。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "自主神经递质",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "356616148",
+  "tags": []
+ },
+ "BQ-nervous_sys-3a333ae37934": {
+  "type": "mtf",
+  "question": "关于自主神经系统的递质与受体，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "交感神经节后支配汗腺的纤维释放乙酰胆碱而非去甲肾上腺素",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "交感神经节后纤维释放去甲肾上腺素作用于α和β肾上腺素受体",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "自主神经节的节前纤维递质均为乙酰胆碱",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "副交感神经节后纤维释放乙酰胆碱作用于毒蕈碱型受体",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:交感节后的一般递质。B:副交感节后递质。C:汗腺的交感支配是例外。D:交感和副交感节前纤维均释放ACh。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "自主神经递质",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "356616148",
+  "tags": []
+ },
+ "BQ-nervous_sys-d5947c193aae": {
+  "type": "mtf",
+  "question": "关于自主神经系统的递质与受体，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "交感神经节后支配汗腺的纤维释放乙酰胆碱而非去甲肾上腺素",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "副交感神经节后纤维释放乙酰胆碱作用于毒蕈碱型受体",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "交感神经节后纤维释放去甲肾上腺素作用于α和β肾上腺素受体",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "自主神经节的节前纤维递质均为乙酰胆碱",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:交感节后的一般递质。B:副交感节后递质。C:汗腺的交感支配是例外。D:交感和副交感节前纤维均释放ACh。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "自主神经递质",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "356616148",
+  "tags": []
+ },
+ "BQ-nervous_sys-10a5490c317c": {
+  "type": "mtf",
+  "question": "关于自主神经系统的递质与受体，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "交感神经节后支配汗腺的纤维释放乙酰胆碱而非去甲肾上腺素",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "副交感神经节后纤维释放乙酰胆碱作用于毒蕈碱型受体",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "自主神经节的节前纤维递质均为乙酰胆碱",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "交感神经节后纤维释放去甲肾上腺素作用于α和β肾上腺素受体",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:交感节后的一般递质。B:副交感节后递质。C:汗腺的交感支配是例外。D:交感和副交感节前纤维均释放ACh。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "自主神经递质",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "356616148",
+  "tags": []
+ },
+ "BQ-nervous_sys-b123af8548f4": {
+  "type": "mtf",
+  "question": "关于自主神经系统的递质与受体，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "交感神经节后支配汗腺的纤维释放乙酰胆碱而非去甲肾上腺素",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "自主神经节的节前纤维递质均为乙酰胆碱",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "交感神经节后纤维释放去甲肾上腺素作用于α和β肾上腺素受体",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "副交感神经节后纤维释放乙酰胆碱作用于毒蕈碱型受体",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:交感节后的一般递质。B:副交感节后递质。C:汗腺的交感支配是例外。D:交感和副交感节前纤维均释放ACh。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "自主神经递质",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "356616148",
+  "tags": []
+ },
+ "BQ-nervous_sys-03229bb79af1": {
+  "type": "mtf",
+  "question": "关于自主神经系统的递质与受体，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "交感神经节后支配汗腺的纤维释放乙酰胆碱而非去甲肾上腺素",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "自主神经节的节前纤维递质均为乙酰胆碱",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "副交感神经节后纤维释放乙酰胆碱作用于毒蕈碱型受体",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "交感神经节后纤维释放去甲肾上腺素作用于α和β肾上腺素受体",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:交感节后的一般递质。B:副交感节后递质。C:汗腺的交感支配是例外。D:交感和副交感节前纤维均释放ACh。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "自主神经递质",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "356616148",
+  "tags": []
+ },
+ "BQ-nervous_sys-70933387fc1b": {
+  "type": "mtf",
+  "question": "关于自主神经系统的递质与受体，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "交感神经节后纤维释放去甲肾上腺素作用于α和β肾上腺素受体",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "交感神经节后支配汗腺的纤维释放乙酰胆碱而非去甲肾上腺素",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "副交感神经节后纤维释放乙酰胆碱作用于毒蕈碱型受体",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "自主神经节的节前纤维递质均为乙酰胆碱",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:交感节后的一般递质。B:副交感节后递质。C:汗腺的交感支配是例外。D:交感和副交感节前纤维均释放ACh。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "自主神经递质",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "356616148",
+  "tags": []
+ },
+ "BQ-nervous_sys-3d581572c26e": {
+  "type": "mtf",
+  "question": "关于自主神经系统的递质与受体，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "交感神经节后纤维释放去甲肾上腺素作用于α和β肾上腺素受体",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "交感神经节后支配汗腺的纤维释放乙酰胆碱而非去甲肾上腺素",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "自主神经节的节前纤维递质均为乙酰胆碱",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "副交感神经节后纤维释放乙酰胆碱作用于毒蕈碱型受体",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:交感节后的一般递质。B:副交感节后递质。C:汗腺的交感支配是例外。D:交感和副交感节前纤维均释放ACh。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "自主神经递质",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "356616148",
+  "tags": []
+ },
+ "BQ-nervous_sys-a7dbdd6748bd": {
+  "type": "mtf",
+  "question": "关于自主神经系统的递质与受体，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "交感神经节后纤维释放去甲肾上腺素作用于α和β肾上腺素受体",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "副交感神经节后纤维释放乙酰胆碱作用于毒蕈碱型受体",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "交感神经节后支配汗腺的纤维释放乙酰胆碱而非去甲肾上腺素",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "自主神经节的节前纤维递质均为乙酰胆碱",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:交感节后的一般递质。B:副交感节后递质。C:汗腺的交感支配是例外。D:交感和副交感节前纤维均释放ACh。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "自主神经递质",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "356616148",
+  "tags": []
+ },
+ "BQ-nervous_sys-1e8490465a45": {
+  "type": "mtf",
+  "question": "关于自主神经系统的递质与受体，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "交感神经节后纤维释放去甲肾上腺素作用于α和β肾上腺素受体",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "副交感神经节后纤维释放乙酰胆碱作用于毒蕈碱型受体",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "自主神经节的节前纤维递质均为乙酰胆碱",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "交感神经节后支配汗腺的纤维释放乙酰胆碱而非去甲肾上腺素",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:交感节后的一般递质。B:副交感节后递质。C:汗腺的交感支配是例外。D:交感和副交感节前纤维均释放ACh。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "自主神经递质",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "356616148",
+  "tags": []
+ },
+ "BQ-nervous_sys-f9b7ffab0efc": {
+  "type": "mtf",
+  "question": "关于自主神经系统的递质与受体，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "交感神经节后纤维释放去甲肾上腺素作用于α和β肾上腺素受体",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "自主神经节的节前纤维递质均为乙酰胆碱",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "交感神经节后支配汗腺的纤维释放乙酰胆碱而非去甲肾上腺素",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "副交感神经节后纤维释放乙酰胆碱作用于毒蕈碱型受体",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:交感节后的一般递质。B:副交感节后递质。C:汗腺的交感支配是例外。D:交感和副交感节前纤维均释放ACh。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "自主神经递质",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "356616148",
+  "tags": []
+ },
+ "BQ-nervous_sys-258cdeb07a12": {
+  "type": "mtf",
+  "question": "关于自主神经系统的递质与受体，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "交感神经节后纤维释放去甲肾上腺素作用于α和β肾上腺素受体",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "自主神经节的节前纤维递质均为乙酰胆碱",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "副交感神经节后纤维释放乙酰胆碱作用于毒蕈碱型受体",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "交感神经节后支配汗腺的纤维释放乙酰胆碱而非去甲肾上腺素",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:交感节后的一般递质。B:副交感节后递质。C:汗腺的交感支配是例外。D:交感和副交感节前纤维均释放ACh。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "自主神经递质",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "356616148",
+  "tags": []
+ },
+ "BQ-nervous_sys-b889e1eb2f36": {
+  "type": "mtf",
+  "question": "关于自主神经系统的递质与受体，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "副交感神经节后纤维释放乙酰胆碱作用于毒蕈碱型受体",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "交感神经节后支配汗腺的纤维释放乙酰胆碱而非去甲肾上腺素",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "交感神经节后纤维释放去甲肾上腺素作用于α和β肾上腺素受体",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "自主神经节的节前纤维递质均为乙酰胆碱",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:交感节后的一般递质。B:副交感节后递质。C:汗腺的交感支配是例外。D:交感和副交感节前纤维均释放ACh。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "自主神经递质",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "356616148",
+  "tags": []
+ },
+ "BQ-nervous_sys-995da883de85": {
+  "type": "mtf",
+  "question": "关于自主神经系统的递质与受体，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "副交感神经节后纤维释放乙酰胆碱作用于毒蕈碱型受体",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "交感神经节后支配汗腺的纤维释放乙酰胆碱而非去甲肾上腺素",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "自主神经节的节前纤维递质均为乙酰胆碱",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "交感神经节后纤维释放去甲肾上腺素作用于α和β肾上腺素受体",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:交感节后的一般递质。B:副交感节后递质。C:汗腺的交感支配是例外。D:交感和副交感节前纤维均释放ACh。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "自主神经递质",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "356616148",
+  "tags": []
+ },
+ "BQ-nervous_sys-9b52f0f15926": {
+  "type": "mtf",
+  "question": "关于自主神经系统的递质与受体，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "副交感神经节后纤维释放乙酰胆碱作用于毒蕈碱型受体",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "交感神经节后纤维释放去甲肾上腺素作用于α和β肾上腺素受体",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "交感神经节后支配汗腺的纤维释放乙酰胆碱而非去甲肾上腺素",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "自主神经节的节前纤维递质均为乙酰胆碱",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:交感节后的一般递质。B:副交感节后递质。C:汗腺的交感支配是例外。D:交感和副交感节前纤维均释放ACh。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "自主神经递质",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "356616148",
+  "tags": []
+ },
+ "BQ-nervous_sys-243a16eae4b6": {
+  "type": "mtf",
+  "question": "关于自主神经系统的递质与受体，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "副交感神经节后纤维释放乙酰胆碱作用于毒蕈碱型受体",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "交感神经节后纤维释放去甲肾上腺素作用于α和β肾上腺素受体",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "自主神经节的节前纤维递质均为乙酰胆碱",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "交感神经节后支配汗腺的纤维释放乙酰胆碱而非去甲肾上腺素",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:交感节后的一般递质。B:副交感节后递质。C:汗腺的交感支配是例外。D:交感和副交感节前纤维均释放ACh。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "自主神经递质",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "356616148",
+  "tags": []
+ },
+ "BQ-nervous_sys-3c5dc9757a60": {
+  "type": "mtf",
+  "question": "关于自主神经系统的递质与受体，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "副交感神经节后纤维释放乙酰胆碱作用于毒蕈碱型受体",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "自主神经节的节前纤维递质均为乙酰胆碱",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "交感神经节后支配汗腺的纤维释放乙酰胆碱而非去甲肾上腺素",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "交感神经节后纤维释放去甲肾上腺素作用于α和β肾上腺素受体",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:交感节后的一般递质。B:副交感节后递质。C:汗腺的交感支配是例外。D:交感和副交感节前纤维均释放ACh。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "自主神经递质",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "356616148",
+  "tags": []
+ },
+ "BQ-nervous_sys-7738fbe4a993": {
+  "type": "mtf",
+  "question": "关于自主神经系统的递质与受体，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "副交感神经节后纤维释放乙酰胆碱作用于毒蕈碱型受体",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "自主神经节的节前纤维递质均为乙酰胆碱",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "交感神经节后纤维释放去甲肾上腺素作用于α和β肾上腺素受体",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "交感神经节后支配汗腺的纤维释放乙酰胆碱而非去甲肾上腺素",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:交感节后的一般递质。B:副交感节后递质。C:汗腺的交感支配是例外。D:交感和副交感节前纤维均释放ACh。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "自主神经递质",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "356616148",
+  "tags": []
+ },
+ "BQ-nervous_sys-2db9c5a29359": {
+  "type": "mtf",
+  "question": "关于自主神经系统的递质与受体，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "自主神经节的节前纤维递质均为乙酰胆碱",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "交感神经节后支配汗腺的纤维释放乙酰胆碱而非去甲肾上腺素",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "交感神经节后纤维释放去甲肾上腺素作用于α和β肾上腺素受体",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "副交感神经节后纤维释放乙酰胆碱作用于毒蕈碱型受体",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:交感节后的一般递质。B:副交感节后递质。C:汗腺的交感支配是例外。D:交感和副交感节前纤维均释放ACh。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "自主神经递质",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "356616148",
+  "tags": []
+ },
+ "BQ-nervous_sys-279e929feb84": {
+  "type": "mtf",
+  "question": "关于自主神经系统的递质与受体，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "自主神经节的节前纤维递质均为乙酰胆碱",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "交感神经节后支配汗腺的纤维释放乙酰胆碱而非去甲肾上腺素",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "副交感神经节后纤维释放乙酰胆碱作用于毒蕈碱型受体",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "交感神经节后纤维释放去甲肾上腺素作用于α和β肾上腺素受体",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:交感节后的一般递质。B:副交感节后递质。C:汗腺的交感支配是例外。D:交感和副交感节前纤维均释放ACh。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "自主神经递质",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "356616148",
+  "tags": []
+ },
+ "BQ-nervous_sys-7cbc9bb910ad": {
+  "type": "mtf",
+  "question": "关于自主神经系统的递质与受体，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "自主神经节的节前纤维递质均为乙酰胆碱",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "交感神经节后纤维释放去甲肾上腺素作用于α和β肾上腺素受体",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "交感神经节后支配汗腺的纤维释放乙酰胆碱而非去甲肾上腺素",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "副交感神经节后纤维释放乙酰胆碱作用于毒蕈碱型受体",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:交感节后的一般递质。B:副交感节后递质。C:汗腺的交感支配是例外。D:交感和副交感节前纤维均释放ACh。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "自主神经递质",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "356616148",
+  "tags": []
+ },
+ "BQ-nervous_sys-0ad7b43dcd0f": {
+  "type": "mtf",
+  "question": "关于自主神经系统的递质与受体，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "自主神经节的节前纤维递质均为乙酰胆碱",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "交感神经节后纤维释放去甲肾上腺素作用于α和β肾上腺素受体",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "副交感神经节后纤维释放乙酰胆碱作用于毒蕈碱型受体",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "交感神经节后支配汗腺的纤维释放乙酰胆碱而非去甲肾上腺素",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:交感节后的一般递质。B:副交感节后递质。C:汗腺的交感支配是例外。D:交感和副交感节前纤维均释放ACh。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "自主神经递质",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "356616148",
+  "tags": []
+ },
+ "BQ-nervous_sys-d21dfe77ab6e": {
+  "type": "mtf",
+  "question": "关于自主神经系统的递质与受体，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "自主神经节的节前纤维递质均为乙酰胆碱",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "副交感神经节后纤维释放乙酰胆碱作用于毒蕈碱型受体",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "交感神经节后支配汗腺的纤维释放乙酰胆碱而非去甲肾上腺素",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "交感神经节后纤维释放去甲肾上腺素作用于α和β肾上腺素受体",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:交感节后的一般递质。B:副交感节后递质。C:汗腺的交感支配是例外。D:交感和副交感节前纤维均释放ACh。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "自主神经递质",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "356616148",
+  "tags": []
+ },
+ "BQ-nervous_sys-683ce60b7ef7": {
+  "type": "mtf",
+  "question": "关于自主神经系统的递质与受体，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "自主神经节的节前纤维递质均为乙酰胆碱",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "副交感神经节后纤维释放乙酰胆碱作用于毒蕈碱型受体",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "交感神经节后纤维释放去甲肾上腺素作用于α和β肾上腺素受体",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "交感神经节后支配汗腺的纤维释放乙酰胆碱而非去甲肾上腺素",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:交感节后的一般递质。B:副交感节后递质。C:汗腺的交感支配是例外。D:交感和副交感节前纤维均释放ACh。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "自主神经递质",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "356616148",
+  "tags": []
+ }
+}

@@ -1,0 +1,1647 @@
+{
+ "BQ-plant_hormone-454d1045b38a": {
+  "tags": [
+   "plant_hormone",
+   "module_2",
+   "植物学",
+   "植物激素",
+   "高考"
+  ],
+  "diff": "basic",
+  "len": 16,
+  "src": "plant_hormone",
+  "year": null,
+  "module": "module_2"
+ },
+ "BQ-plant_hormone-ef03ec53985b": {
+  "tags": [
+   "plant_hormone",
+   "module_2",
+   "植物生理学",
+   "植物激素调节",
+   "high_school"
+  ],
+  "diff": "basic",
+  "len": 16,
+  "src": "plant_hormone",
+  "year": null,
+  "module": "module_2"
+ },
+ "BQ-plant_hormone-f41757271dd9": {
+  "tags": [
+   "plant_hormone",
+   "module_2",
+   "植物学",
+   "植物激素调节",
+   "high_school"
+  ],
+  "diff": "basic",
+  "len": 15,
+  "src": "plant_hormone",
+  "year": null,
+  "module": "module_2"
+ },
+ "BQ-plant_hormone-e7e5cb0897f9": {
+  "tags": [
+   "plant_hormone",
+   "module_2",
+   "植物生理学",
+   "植物激素调节",
+   "high_school"
+  ],
+  "diff": "basic",
+  "len": 17,
+  "src": "plant_hormone",
+  "year": null,
+  "module": "module_2"
+ },
+ "BQ-plant_hormone-859294a35349": {
+  "tags": [
+   "plant_hormone",
+   "module_2",
+   "植物学",
+   "植物激素调节",
+   "high_school"
+  ],
+  "diff": "basic",
+  "len": 17,
+  "src": "plant_hormone",
+  "year": null,
+  "module": "module_2"
+ },
+ "BQ-plant_hormone-baf514f25c3f": {
+  "tags": [
+   "plant_hormone",
+   "module_2",
+   "植物学",
+   "植物激素调节",
+   "high_school"
+  ],
+  "diff": "basic",
+  "len": 14,
+  "src": "plant_hormone",
+  "year": null,
+  "module": "module_2"
+ },
+ "BQ-plant_hormone-27dd7115f18a": {
+  "tags": [
+   "plant_hormone",
+   "module_2",
+   "植物生理学",
+   "植物激素调节",
+   "high_school"
+  ],
+  "diff": "basic",
+  "len": 13,
+  "src": "plant_hormone",
+  "year": null,
+  "module": "module_2"
+ },
+ "BQ-plant_hormone-6b559266fb9e": {
+  "tags": [
+   "plant_hormone",
+   "植物学",
+   "植物激素",
+   "high_school"
+  ],
+  "diff": "basic",
+  "len": 23,
+  "src": "plant_hormone",
+  "year": null,
+  "module": "module_2"
+ },
+ "BQ-plant_hormone-c19a6b516e28": {
+  "tags": [
+   "plant_hormone",
+   "module_2",
+   "hard"
+  ],
+  "diff": "national",
+  "len": 44,
+  "src": "plant_hormone",
+  "year": null,
+  "module": "module_2"
+ },
+ "BQ-plant_hormone-fccb311d0767": {
+  "tags": [
+   "plant_hormone",
+   "module_2",
+   "hard"
+  ],
+  "diff": "national",
+  "len": 40,
+  "src": "plant_hormone",
+  "year": null,
+  "module": "module_2"
+ },
+ "BQ-plant_hormone-c16481c9465c": {
+  "tags": [
+   "plant_hormone",
+   "module_2",
+   "easy"
+  ],
+  "diff": "basic",
+  "len": 48,
+  "src": "plant_hormone",
+  "year": null,
+  "module": "module_2"
+ },
+ "BQ-plant_hormone-08d7f97d8457": {
+  "tags": [
+   "plant_hormone",
+   "module_2",
+   "medium"
+  ],
+  "diff": "league",
+  "len": 52,
+  "src": "plant_hormone",
+  "year": null,
+  "module": "module_2"
+ },
+ "BQ-plant_hormone-6b10659291b8": {
+  "tags": [
+   "plant_hormone",
+   "module_2",
+   "hard"
+  ],
+  "diff": "national",
+  "len": 52,
+  "src": "plant_hormone",
+  "year": null,
+  "module": "module_2"
+ },
+ "BQ-plant_hormone-a95e21ddae49": {
+  "tags": [
+   "plant_hormone",
+   "module_2",
+   "植物学",
+   "植物激素",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2015/art_1c13e648d84d4e38b94e2dfd5e5b1b0b.html",
+   "2015"
+  ],
+  "diff": "league",
+  "len": 29,
+  "src": "plant_hormone",
+  "year": 2015,
+  "module": "module_2"
+ },
+ "BQ-plant_hormone-953d093ef2b9": {
+  "tags": [
+   "plant_hormone",
+   "module_2",
+   "植物学",
+   "植物激素",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2025/art_b153fd076f3f4fe282acfc333c4d4ab6.html",
+   "2025"
+  ],
+  "diff": "league",
+  "len": 261,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": "module_2"
+ },
+ "BQ-plant_hormone-12400f9b325d": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_hormone-84cda872575e": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_hormone-d5e41c45c208": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_hormone-3fb1a38f8bca": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_hormone-9d27d34432c4": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_hormone-b9d89434afc2": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_hormone-a800c9b45115": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_hormone-beeb6d36d4ba": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_hormone-1bcb800fc568": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_hormone-9788dae8627d": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_hormone-00260e01e821": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_hormone-3217f8a424e5": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_hormone-4c036ec35d21": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_hormone-34196529da1c": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_hormone-9c2bd54b3556": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_hormone-a8b4d3984261": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_hormone-357974d25a00": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_hormone-fe2635cca7f2": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_hormone-1dff5e998d9d": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_hormone-7119f548d400": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_hormone-88fcbebae387": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_hormone-ba55deb9c196": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_hormone-8e34c6c7bed2": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_hormone-611c07b1ed79": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_hormone-90a89918f85e": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "hard",
+  "len": 23,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_hormone-444d8ed87d07": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "hard",
+  "len": 23,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_hormone-17df6735b3b1": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "hard",
+  "len": 23,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_hormone-b62df5271722": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "hard",
+  "len": 23,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_hormone-a60c391a6b82": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "hard",
+  "len": 23,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_hormone-5975e7cd3546": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "hard",
+  "len": 23,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_hormone-4ff198052764": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "hard",
+  "len": 23,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_hormone-f970c0fce723": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "hard",
+  "len": 23,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_hormone-a99a63eba326": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "hard",
+  "len": 23,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_hormone-cf0907b937bc": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "hard",
+  "len": 23,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_hormone-96f6f29fd679": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "hard",
+  "len": 23,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_hormone-7e02dfead2ec": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "hard",
+  "len": 23,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_hormone-577f0e777871": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "hard",
+  "len": 23,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_hormone-76e73f9fac2e": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "hard",
+  "len": 23,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_hormone-79b91f7775db": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "hard",
+  "len": 23,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_hormone-901c85ff83f9": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "hard",
+  "len": 23,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_hormone-d9af2461a3f1": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "hard",
+  "len": 23,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_hormone-68fba9fc530d": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "hard",
+  "len": 23,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_hormone-14a9a6256c30": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "hard",
+  "len": 23,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_hormone-74ed112bf87d": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "hard",
+  "len": 23,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_hormone-5981ae5d376a": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "hard",
+  "len": 23,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_hormone-c8669a7f5925": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "hard",
+  "len": 23,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_hormone-944a43ef0763": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "hard",
+  "len": 23,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_hormone-b66a19c70aad": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "hard",
+  "len": 23,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_hormone-aee6c2de53f2": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_hormone-c61bc187a511": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_hormone-f6e4bbb8f1be": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_hormone-6002fe792cfa": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_hormone-f0867eb7e3b5": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_hormone-7a3eabff7715": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_hormone-fb69fc727446": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_hormone-8d0f4d25cac8": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_hormone-ae28f55e9ce5": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_hormone-cc370bd072e6": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_hormone-e99edd6e9185": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_hormone-32ca53b5416e": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_hormone-34bf03462356": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_hormone-518d2ee7dd40": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_hormone-339c7c79ca6b": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_hormone-4ca77f709878": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_hormone-3dc26df7cf94": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_hormone-d58d04eb869e": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_hormone-09fc0005fd19": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_hormone-b9ec5dfb220c": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_hormone-91eba05b5cdf": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_hormone-3e39923cc6b2": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_hormone-9a7778b2f921": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_hormone-f7a859499224": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-plant_hormone-c01a1a81ce02": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-plant_hormone-16a697752408": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-plant_hormone-eab48f559e6d": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-plant_hormone-6f27362071d3": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-plant_hormone-f15ad2097d78": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-plant_hormone-420a1263bcc4": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-plant_hormone-6d1c62542176": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-plant_hormone-411b46927de6": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-plant_hormone-4cf16fb2808f": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-plant_hormone-78986863fe77": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-plant_hormone-4e456fb94039": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-plant_hormone-8892770217c8": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-plant_hormone-9f14db918bd6": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-plant_hormone-dae224c4e536": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-plant_hormone-b9edeff59235": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-plant_hormone-14aaa9b04905": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-plant_hormone-111c236e04ca": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-plant_hormone-984a41eaee1c": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-plant_hormone-9885d7e7518a": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-plant_hormone-ef9f71966347": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-plant_hormone-a6a2dc75089b": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-plant_hormone-96a283ece87d": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-plant_hormone-d20397f14dd4": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-plant_hormone-706596da6887": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-plant_hormone-918a0b9879db": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-plant_hormone-b30d06d7c106": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-plant_hormone-066856e046f8": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-plant_hormone-2bbcba47c41e": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-plant_hormone-ab159f632ac6": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-plant_hormone-b9668fc63e4e": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-plant_hormone-37035da6c510": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-plant_hormone-aa7e7f7ab270": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-plant_hormone-4ebde6c605c5": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-plant_hormone-a16382dbcb79": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-plant_hormone-5b97e9adab50": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-plant_hormone-688aae279092": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-plant_hormone-ba253f10f077": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-plant_hormone-ca466dd135cf": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-plant_hormone-f3c0f65c45bd": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-plant_hormone-73983baca55d": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-plant_hormone-9ecda19c9965": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-plant_hormone-6eaf01bb43fa": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-plant_hormone-98b8d4293298": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-plant_hormone-3e5833105f51": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-plant_hormone-e3484418ec1e": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-plant_hormone-8d604cbba009": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-plant_hormone-b0d1d09d9b12": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-plant_hormone-42816a8512f4": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-plant_hormone-003abe1009dd": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-plant_hormone-ac859586500d": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-plant_hormone-4a7693f017ee": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-plant_hormone-599566f967a5": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-plant_hormone-7531f4270bf6": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-plant_hormone-8f0473f309ff": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-plant_hormone-77925a849002": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-plant_hormone-25b9d7645e07": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-plant_hormone-63db3574454e": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-plant_hormone-32caaacfd57a": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-plant_hormone-ce83f21c0f08": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-plant_hormone-9887fa57f3f7": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-plant_hormone-451bef027648": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-plant_hormone-7418a426a261": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-plant_hormone-ad6fd43eeec8": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-plant_hormone-f55661b3f9eb": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-plant_hormone-9415f0171368": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-plant_hormone-7964e10298e1": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-plant_hormone-406e2f5fe46a": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-plant_hormone-3b9a5aab287e": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-plant_hormone-14f693be15d0": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-plant_hormone-aba6281747cb": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-plant_hormone-d4ed63ef0a6b": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-plant_hormone-ec778fe69c65": {
+  "tags": [
+   "plant_hormone"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "plant_hormone",
+  "year": 2025,
+  "module": 3
+ }
+}

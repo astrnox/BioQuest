@@ -1,7 +1,12 @@
 {
-  "version": "4.1.0",
-  "updated_at": "2026-07-22",
+  "version": "5.0.0",
+  "updated_at": "2026-08-16",
   "changes": [
+    {
+      "date": "2026-08-16",
+      "version": "5.0.0",
+      "description": "Issue #10 题库重建：建立稳定 bioID 体系（BQ-<tag>-<12位十六进制>，内容寻址 = sha256(题目规范内容) 截断、确定性生成、全局唯一、抗漂移：新增/删除其它题目永不改变既有 bioID），题库重构为 manifest + index + bank 三层分片（data/manifest.json 记录各分片 SHA-256 完整性；data/index/<tag>.json 极快筛选元数据；data/bank/<tag>.json 按需加载完整题目），并生成 data/bioid-map.json 旧 ID→bioID 迁移映射表；loader.js 支持分片加载 + IndexedDB 增量缓存 + SHA-256 完整性校验，每道题注入稳定 bioID（q.id/q.bioId）；storage.js 将旧 hash/数字 ID 引用的收藏/错题/练习记录自动迁移到 bioID；practice/exam 的错题与记录统一使用 bioID 引用。"
+    },
     {
       "date": "2026-07-22",
       "version": "4.1.0",

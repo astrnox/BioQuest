@@ -1,0 +1,937 @@
+{
+ "BQ-microbial_eco-6773721dc682": {
+  "type": "single",
+  "question": "nifA基因突变体根瘤菌能正常侵入根毛并形成侵染线，但形成的根瘤小且白色，不含豆血红蛋白，固氮酶活性为零。NifA是固氮基因簇的转录激活因子，其活性在低氧下有活性、高氧下失活。推断野生型根瘤中NifA如何被激活？",
+  "options": [
+   "根瘤中豆血红蛋白维持低氧环境，使NifA保持活性",
+   "NifA被根瘤菌其他基因产物直接磷酸化激活",
+   "根瘤中的高氧环境激活NifA",
+   "NifA在根瘤发育早期即被组成型激活，无需低氧"
+  ],
+  "answer": 0,
+  "explanation": "nifA突变体根瘤不含豆血红蛋白且固氮酶活性为零，说明NifA对固氮酶基因和豆血红蛋白基因表达都是必需的。NifA活性需要低氧条件，固氮酶对氧极度敏感。豆血红蛋白是氧结合蛋白，在根瘤中将游离氧浓度维持在极低水平（约10 nM），既保证类菌体呼吸所需又保护固氮酶。逻辑链：根瘤发育→豆血红蛋白表达→维持低氧环境→NifA在低氧下激活→启动固氮酶等基因表达→固氮。nifA突变体不能启动这一正反馈，所以根瘤发育异常。",
+  "subject": "微生物学",
+  "concept": "共生固氮调控推理",
+  "difficulty": 4,
+  "tags": [
+   "逻辑推理",
+   "实验分析",
+   "微生物共生"
+  ],
+  "module": "module_2",
+  "category": "logic",
+  "oldId": "550823916",
+  "subQuestions": [],
+  "chart": null,
+  "year": null
+ },
+ "BQ-microbial_eco-ae4722c6880b": {
+  "stem": "对以下关于构建酵母与蓝藻人工内共生体系的选育条件及机理的陈述进行正误判断：",
+  "options": {
+   "A": "酵母在该共生体系中依赖蓝藻提供的葡萄糖和能量来补偿自身呼吸功能的缺陷，从而实现正常生长",
+   "B": "在共生体系选育过程中，使用含有外源性碳源（如葡萄糖）的培养基是筛选出具有稳定共生关系的融合体的\n最佳策略",
+   "C": "建立共生体系时，培养基中需以碳酸氢盐作为唯一碳源，并提供适宜光照，以迫使酵母依赖蓝藻供能",
+   "D": "为防止外部蓝藻污染，共生体系的选育培养基通常不添加抗生素，从而有利于共生体的长期稳定\n三、动物学、动物生理学、生态学（18 题）"
+  },
+  "answer": {
+   "A": true,
+   "B": false,
+   "C": false,
+   "D": false
+  },
+  "analysis": "正确答案：A。详细解析请通过 AI 导师获取（在 AI 对话中粘贴本题题干即可）。",
+  "knowledge": [
+   "module_2",
+   "微生物学"
+  ],
+  "module": "module_2",
+  "difficulty": "league",
+  "target": "competition",
+  "subject": "微生物学",
+  "concept": "微生物生态",
+  "tags": [
+   "module_2",
+   "微生物学",
+   "微生物生态",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2025/art_b153fd076f3f4fe282acfc333c4d4ab6.html",
+   "2025"
+  ],
+  "weight": 1,
+  "fb_good": 0,
+  "fb_bad": 0,
+  "created_at": 1782028596.2297523,
+  "source": "https://www.czs.org.cn/swjs/lsstxz/art/2025/art_b153fd076f3f4fe282acfc333c4d4ab6.html",
+  "year": 2025,
+  "_analysis_sparse": true,
+  "_review_reason": "解析为 AI 引导提示，待人工补充详细解析",
+  "type": "multi_judge",
+  "question": "对以下关于构建酵母与蓝藻人工内共生体系的选育条件及机理的陈述进行正误判断：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "酵母在该共生体系中依赖蓝藻提供的葡萄糖和能量来补偿自身呼吸功能的缺陷，从而实现正常生长",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "在共生体系选育过程中，使用含有外源性碳源（如葡萄糖）的培养基是筛选出具有稳定共生关系的融合体的\n最佳策略",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "建立共生体系时，培养基中需以碳酸氢盐作为唯一碳源，并提供适宜光照，以迫使酵母依赖蓝藻供能",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "为防止外部蓝藻污染，共生体系的选育培养基通常不添加抗生素，从而有利于共生体的长期稳定\n三、动物学、动物生理学、生态学（18 题）",
+    "answer": false
+   }
+  ],
+  "explanation": "正确答案：A。详细解析请通过 AI 导师获取（在 AI 对话中粘贴本题题干即可）。",
+  "chart": null,
+  "oldId": "crawled_1782028596229_8934"
+ },
+ "BQ-microbial_eco-8a17261b994b": {
+  "type": "mtf",
+  "question": "关于化学自养微生物的能量代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "化学自养菌的CO₂固定途径通常是Calvin循环",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "所有化学自养菌都是好氧菌",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "硝化细菌通过氧化NH₄⁺或NO₂⁻获取能量,以CO₂为碳源",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "硫氧化菌利用还原性硫化合物(H₂S、S⁰等)作为电子供体",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:有厌氧化能自养菌——如某些硫酸盐还原菌利用H₂作为电子供体,某些古菌利用厌氧甲烷氧化。",
+  "module": 2,
+  "subject": "微生物学",
+  "concept": "化学自养",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "675120725",
+  "tags": []
+ },
+ "BQ-microbial_eco-67a163de551e": {
+  "type": "mtf",
+  "question": "关于化学自养微生物的能量代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "化学自养菌的CO₂固定途径通常是Calvin循环",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "所有化学自养菌都是好氧菌",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "硫氧化菌利用还原性硫化合物(H₂S、S⁰等)作为电子供体",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "硝化细菌通过氧化NH₄⁺或NO₂⁻获取能量,以CO₂为碳源",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:有厌氧化能自养菌——如某些硫酸盐还原菌利用H₂作为电子供体,某些古菌利用厌氧甲烷氧化。",
+  "module": 2,
+  "subject": "微生物学",
+  "concept": "化学自养",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "675120725",
+  "tags": []
+ },
+ "BQ-microbial_eco-249535221357": {
+  "type": "mtf",
+  "question": "关于化学自养微生物的能量代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "化学自养菌的CO₂固定途径通常是Calvin循环",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "硝化细菌通过氧化NH₄⁺或NO₂⁻获取能量,以CO₂为碳源",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "所有化学自养菌都是好氧菌",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "硫氧化菌利用还原性硫化合物(H₂S、S⁰等)作为电子供体",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:有厌氧化能自养菌——如某些硫酸盐还原菌利用H₂作为电子供体,某些古菌利用厌氧甲烷氧化。",
+  "module": 2,
+  "subject": "微生物学",
+  "concept": "化学自养",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "675120725",
+  "tags": []
+ },
+ "BQ-microbial_eco-8108a7ed6aa0": {
+  "type": "mtf",
+  "question": "关于化学自养微生物的能量代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "化学自养菌的CO₂固定途径通常是Calvin循环",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "硝化细菌通过氧化NH₄⁺或NO₂⁻获取能量,以CO₂为碳源",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "硫氧化菌利用还原性硫化合物(H₂S、S⁰等)作为电子供体",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "所有化学自养菌都是好氧菌",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:有厌氧化能自养菌——如某些硫酸盐还原菌利用H₂作为电子供体,某些古菌利用厌氧甲烷氧化。",
+  "module": 2,
+  "subject": "微生物学",
+  "concept": "化学自养",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "675120725",
+  "tags": []
+ },
+ "BQ-microbial_eco-9efa5b07a45f": {
+  "type": "mtf",
+  "question": "关于化学自养微生物的能量代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "化学自养菌的CO₂固定途径通常是Calvin循环",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "硫氧化菌利用还原性硫化合物(H₂S、S⁰等)作为电子供体",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "所有化学自养菌都是好氧菌",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "硝化细菌通过氧化NH₄⁺或NO₂⁻获取能量,以CO₂为碳源",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:有厌氧化能自养菌——如某些硫酸盐还原菌利用H₂作为电子供体,某些古菌利用厌氧甲烷氧化。",
+  "module": 2,
+  "subject": "微生物学",
+  "concept": "化学自养",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "675120725",
+  "tags": []
+ },
+ "BQ-microbial_eco-c73dc924e7f1": {
+  "type": "mtf",
+  "question": "关于化学自养微生物的能量代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "化学自养菌的CO₂固定途径通常是Calvin循环",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "硫氧化菌利用还原性硫化合物(H₂S、S⁰等)作为电子供体",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "硝化细菌通过氧化NH₄⁺或NO₂⁻获取能量,以CO₂为碳源",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "所有化学自养菌都是好氧菌",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:有厌氧化能自养菌——如某些硫酸盐还原菌利用H₂作为电子供体,某些古菌利用厌氧甲烷氧化。",
+  "module": 2,
+  "subject": "微生物学",
+  "concept": "化学自养",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "675120725",
+  "tags": []
+ },
+ "BQ-microbial_eco-c16f5ff93c42": {
+  "type": "mtf",
+  "question": "关于化学自养微生物的能量代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "所有化学自养菌都是好氧菌",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "化学自养菌的CO₂固定途径通常是Calvin循环",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "硝化细菌通过氧化NH₄⁺或NO₂⁻获取能量,以CO₂为碳源",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "硫氧化菌利用还原性硫化合物(H₂S、S⁰等)作为电子供体",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:有厌氧化能自养菌——如某些硫酸盐还原菌利用H₂作为电子供体,某些古菌利用厌氧甲烷氧化。",
+  "module": 2,
+  "subject": "微生物学",
+  "concept": "化学自养",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "675120725",
+  "tags": []
+ },
+ "BQ-microbial_eco-34759f3e967f": {
+  "type": "mtf",
+  "question": "关于化学自养微生物的能量代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "所有化学自养菌都是好氧菌",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "化学自养菌的CO₂固定途径通常是Calvin循环",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "硫氧化菌利用还原性硫化合物(H₂S、S⁰等)作为电子供体",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "硝化细菌通过氧化NH₄⁺或NO₂⁻获取能量,以CO₂为碳源",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:有厌氧化能自养菌——如某些硫酸盐还原菌利用H₂作为电子供体,某些古菌利用厌氧甲烷氧化。",
+  "module": 2,
+  "subject": "微生物学",
+  "concept": "化学自养",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "675120725",
+  "tags": []
+ },
+ "BQ-microbial_eco-539dc37d00d4": {
+  "type": "mtf",
+  "question": "关于化学自养微生物的能量代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "所有化学自养菌都是好氧菌",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "硝化细菌通过氧化NH₄⁺或NO₂⁻获取能量,以CO₂为碳源",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "化学自养菌的CO₂固定途径通常是Calvin循环",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "硫氧化菌利用还原性硫化合物(H₂S、S⁰等)作为电子供体",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:有厌氧化能自养菌——如某些硫酸盐还原菌利用H₂作为电子供体,某些古菌利用厌氧甲烷氧化。",
+  "module": 2,
+  "subject": "微生物学",
+  "concept": "化学自养",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "675120725",
+  "tags": []
+ },
+ "BQ-microbial_eco-732fb61a469e": {
+  "type": "mtf",
+  "question": "关于化学自养微生物的能量代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "所有化学自养菌都是好氧菌",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "硝化细菌通过氧化NH₄⁺或NO₂⁻获取能量,以CO₂为碳源",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "硫氧化菌利用还原性硫化合物(H₂S、S⁰等)作为电子供体",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "化学自养菌的CO₂固定途径通常是Calvin循环",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:有厌氧化能自养菌——如某些硫酸盐还原菌利用H₂作为电子供体,某些古菌利用厌氧甲烷氧化。",
+  "module": 2,
+  "subject": "微生物学",
+  "concept": "化学自养",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "675120725",
+  "tags": []
+ },
+ "BQ-microbial_eco-9757ebfa7005": {
+  "type": "mtf",
+  "question": "关于化学自养微生物的能量代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "所有化学自养菌都是好氧菌",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "硫氧化菌利用还原性硫化合物(H₂S、S⁰等)作为电子供体",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "化学自养菌的CO₂固定途径通常是Calvin循环",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "硝化细菌通过氧化NH₄⁺或NO₂⁻获取能量,以CO₂为碳源",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:有厌氧化能自养菌——如某些硫酸盐还原菌利用H₂作为电子供体,某些古菌利用厌氧甲烷氧化。",
+  "module": 2,
+  "subject": "微生物学",
+  "concept": "化学自养",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "675120725",
+  "tags": []
+ },
+ "BQ-microbial_eco-18701e48ec96": {
+  "type": "mtf",
+  "question": "关于化学自养微生物的能量代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "所有化学自养菌都是好氧菌",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "硫氧化菌利用还原性硫化合物(H₂S、S⁰等)作为电子供体",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "硝化细菌通过氧化NH₄⁺或NO₂⁻获取能量,以CO₂为碳源",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "化学自养菌的CO₂固定途径通常是Calvin循环",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:有厌氧化能自养菌——如某些硫酸盐还原菌利用H₂作为电子供体,某些古菌利用厌氧甲烷氧化。",
+  "module": 2,
+  "subject": "微生物学",
+  "concept": "化学自养",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "675120725",
+  "tags": []
+ },
+ "BQ-microbial_eco-cb0ae0d860aa": {
+  "type": "mtf",
+  "question": "关于化学自养微生物的能量代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "硝化细菌通过氧化NH₄⁺或NO₂⁻获取能量,以CO₂为碳源",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "化学自养菌的CO₂固定途径通常是Calvin循环",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "所有化学自养菌都是好氧菌",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "硫氧化菌利用还原性硫化合物(H₂S、S⁰等)作为电子供体",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:有厌氧化能自养菌——如某些硫酸盐还原菌利用H₂作为电子供体,某些古菌利用厌氧甲烷氧化。",
+  "module": 2,
+  "subject": "微生物学",
+  "concept": "化学自养",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "675120725",
+  "tags": []
+ },
+ "BQ-microbial_eco-35567bcdf525": {
+  "type": "mtf",
+  "question": "关于化学自养微生物的能量代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "硝化细菌通过氧化NH₄⁺或NO₂⁻获取能量,以CO₂为碳源",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "化学自养菌的CO₂固定途径通常是Calvin循环",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "硫氧化菌利用还原性硫化合物(H₂S、S⁰等)作为电子供体",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "所有化学自养菌都是好氧菌",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:有厌氧化能自养菌——如某些硫酸盐还原菌利用H₂作为电子供体,某些古菌利用厌氧甲烷氧化。",
+  "module": 2,
+  "subject": "微生物学",
+  "concept": "化学自养",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "675120725",
+  "tags": []
+ },
+ "BQ-microbial_eco-d4d3d04289c4": {
+  "type": "mtf",
+  "question": "关于化学自养微生物的能量代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "硝化细菌通过氧化NH₄⁺或NO₂⁻获取能量,以CO₂为碳源",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "所有化学自养菌都是好氧菌",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "化学自养菌的CO₂固定途径通常是Calvin循环",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "硫氧化菌利用还原性硫化合物(H₂S、S⁰等)作为电子供体",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:有厌氧化能自养菌——如某些硫酸盐还原菌利用H₂作为电子供体,某些古菌利用厌氧甲烷氧化。",
+  "module": 2,
+  "subject": "微生物学",
+  "concept": "化学自养",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "675120725",
+  "tags": []
+ },
+ "BQ-microbial_eco-01a90b1b8151": {
+  "type": "mtf",
+  "question": "关于化学自养微生物的能量代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "硝化细菌通过氧化NH₄⁺或NO₂⁻获取能量,以CO₂为碳源",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "所有化学自养菌都是好氧菌",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "硫氧化菌利用还原性硫化合物(H₂S、S⁰等)作为电子供体",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "化学自养菌的CO₂固定途径通常是Calvin循环",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:有厌氧化能自养菌——如某些硫酸盐还原菌利用H₂作为电子供体,某些古菌利用厌氧甲烷氧化。",
+  "module": 2,
+  "subject": "微生物学",
+  "concept": "化学自养",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "675120725",
+  "tags": []
+ },
+ "BQ-microbial_eco-958fdfd5714d": {
+  "type": "mtf",
+  "question": "关于化学自养微生物的能量代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "硝化细菌通过氧化NH₄⁺或NO₂⁻获取能量,以CO₂为碳源",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "硫氧化菌利用还原性硫化合物(H₂S、S⁰等)作为电子供体",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "化学自养菌的CO₂固定途径通常是Calvin循环",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "所有化学自养菌都是好氧菌",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:有厌氧化能自养菌——如某些硫酸盐还原菌利用H₂作为电子供体,某些古菌利用厌氧甲烷氧化。",
+  "module": 2,
+  "subject": "微生物学",
+  "concept": "化学自养",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "675120725",
+  "tags": []
+ },
+ "BQ-microbial_eco-f98fe6b529e5": {
+  "type": "mtf",
+  "question": "关于化学自养微生物的能量代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "硝化细菌通过氧化NH₄⁺或NO₂⁻获取能量,以CO₂为碳源",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "硫氧化菌利用还原性硫化合物(H₂S、S⁰等)作为电子供体",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "所有化学自养菌都是好氧菌",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "化学自养菌的CO₂固定途径通常是Calvin循环",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:有厌氧化能自养菌——如某些硫酸盐还原菌利用H₂作为电子供体,某些古菌利用厌氧甲烷氧化。",
+  "module": 2,
+  "subject": "微生物学",
+  "concept": "化学自养",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "675120725",
+  "tags": []
+ },
+ "BQ-microbial_eco-75b06568c50e": {
+  "type": "mtf",
+  "question": "关于化学自养微生物的能量代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "硫氧化菌利用还原性硫化合物(H₂S、S⁰等)作为电子供体",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "化学自养菌的CO₂固定途径通常是Calvin循环",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "所有化学自养菌都是好氧菌",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "硝化细菌通过氧化NH₄⁺或NO₂⁻获取能量,以CO₂为碳源",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:有厌氧化能自养菌——如某些硫酸盐还原菌利用H₂作为电子供体,某些古菌利用厌氧甲烷氧化。",
+  "module": 2,
+  "subject": "微生物学",
+  "concept": "化学自养",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "675120725",
+  "tags": []
+ },
+ "BQ-microbial_eco-12ef0f91d15e": {
+  "type": "mtf",
+  "question": "关于化学自养微生物的能量代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "硫氧化菌利用还原性硫化合物(H₂S、S⁰等)作为电子供体",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "化学自养菌的CO₂固定途径通常是Calvin循环",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "硝化细菌通过氧化NH₄⁺或NO₂⁻获取能量,以CO₂为碳源",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "所有化学自养菌都是好氧菌",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:有厌氧化能自养菌——如某些硫酸盐还原菌利用H₂作为电子供体,某些古菌利用厌氧甲烷氧化。",
+  "module": 2,
+  "subject": "微生物学",
+  "concept": "化学自养",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "675120725",
+  "tags": []
+ },
+ "BQ-microbial_eco-04ecb321830a": {
+  "type": "mtf",
+  "question": "关于化学自养微生物的能量代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "硫氧化菌利用还原性硫化合物(H₂S、S⁰等)作为电子供体",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "所有化学自养菌都是好氧菌",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "化学自养菌的CO₂固定途径通常是Calvin循环",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "硝化细菌通过氧化NH₄⁺或NO₂⁻获取能量,以CO₂为碳源",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:有厌氧化能自养菌——如某些硫酸盐还原菌利用H₂作为电子供体,某些古菌利用厌氧甲烷氧化。",
+  "module": 2,
+  "subject": "微生物学",
+  "concept": "化学自养",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "675120725",
+  "tags": []
+ },
+ "BQ-microbial_eco-c2cd5e06b218": {
+  "type": "mtf",
+  "question": "关于化学自养微生物的能量代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "硫氧化菌利用还原性硫化合物(H₂S、S⁰等)作为电子供体",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "所有化学自养菌都是好氧菌",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "硝化细菌通过氧化NH₄⁺或NO₂⁻获取能量,以CO₂为碳源",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "化学自养菌的CO₂固定途径通常是Calvin循环",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:有厌氧化能自养菌——如某些硫酸盐还原菌利用H₂作为电子供体,某些古菌利用厌氧甲烷氧化。",
+  "module": 2,
+  "subject": "微生物学",
+  "concept": "化学自养",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "675120725",
+  "tags": []
+ },
+ "BQ-microbial_eco-c6775c096ed5": {
+  "type": "mtf",
+  "question": "关于化学自养微生物的能量代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "硫氧化菌利用还原性硫化合物(H₂S、S⁰等)作为电子供体",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "硝化细菌通过氧化NH₄⁺或NO₂⁻获取能量,以CO₂为碳源",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "化学自养菌的CO₂固定途径通常是Calvin循环",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "所有化学自养菌都是好氧菌",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:有厌氧化能自养菌——如某些硫酸盐还原菌利用H₂作为电子供体,某些古菌利用厌氧甲烷氧化。",
+  "module": 2,
+  "subject": "微生物学",
+  "concept": "化学自养",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "675120725",
+  "tags": []
+ },
+ "BQ-microbial_eco-2c282b76c83d": {
+  "type": "mtf",
+  "question": "关于化学自养微生物的能量代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "硫氧化菌利用还原性硫化合物(H₂S、S⁰等)作为电子供体",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "硝化细菌通过氧化NH₄⁺或NO₂⁻获取能量,以CO₂为碳源",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "所有化学自养菌都是好氧菌",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "化学自养菌的CO₂固定途径通常是Calvin循环",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:有厌氧化能自养菌——如某些硫酸盐还原菌利用H₂作为电子供体,某些古菌利用厌氧甲烷氧化。",
+  "module": 2,
+  "subject": "微生物学",
+  "concept": "化学自养",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "675120725",
+  "tags": []
+ }
+}

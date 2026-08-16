@@ -1,0 +1,1588 @@
+{
+ "BQ-translation-700eef83f053": {
+  "tags": [
+   "translation",
+   "module_1",
+   "easy"
+  ],
+  "diff": "basic",
+  "len": 62,
+  "src": "translation",
+  "year": null,
+  "module": "module_1"
+ },
+ "BQ-translation-f209ac72736e": {
+  "tags": [
+   "translation",
+   "module_1",
+   "medium"
+  ],
+  "diff": "league",
+  "len": 66,
+  "src": "translation",
+  "year": null,
+  "module": "module_1"
+ },
+ "BQ-translation-f6e756735c37": {
+  "tags": [
+   "translation",
+   "module_1",
+   "hard"
+  ],
+  "diff": "national",
+  "len": 68,
+  "src": "translation",
+  "year": null,
+  "module": "module_1"
+ },
+ "BQ-translation-1f6870dafc05": {
+  "tags": [
+   "translation",
+   "module_1",
+   "medium"
+  ],
+  "diff": "league",
+  "len": 72,
+  "src": "translation",
+  "year": null,
+  "module": "module_1"
+ },
+ "BQ-translation-9a2143166720": {
+  "tags": [
+   "translation",
+   "module_1",
+   "hard"
+  ],
+  "diff": "national",
+  "len": 79,
+  "src": "translation",
+  "year": null,
+  "module": "module_1"
+ },
+ "BQ-translation-45416bc27efb": {
+  "tags": [
+   "translation",
+   "module_1",
+   "medium"
+  ],
+  "diff": "league",
+  "len": 75,
+  "src": "translation",
+  "year": null,
+  "module": "module_1"
+ },
+ "BQ-translation-587b59d94d5e": {
+  "tags": [
+   "translation",
+   "module_1",
+   "easy"
+  ],
+  "diff": "basic",
+  "len": 68,
+  "src": "translation",
+  "year": null,
+  "module": "module_1"
+ },
+ "BQ-translation-04b70e44824e": {
+  "tags": [
+   "translation",
+   "module_3",
+   "遗传学",
+   "密码子",
+   "高考"
+  ],
+  "diff": "basic",
+  "len": 14,
+  "src": "translation",
+  "year": null,
+  "module": "module_3"
+ },
+ "BQ-translation-9a8046184d68": {
+  "tags": [
+   "translation",
+   "module_4",
+   "分子生物学",
+   "基因的表达",
+   "high_school"
+  ],
+  "diff": "basic",
+  "len": 5,
+  "src": "translation",
+  "year": null,
+  "module": "module_4"
+ },
+ "BQ-translation-90ed3110939f": {
+  "tags": [
+   "translation",
+   "module_1",
+   "分子生物学",
+   "翻译",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2015/art_1c13e648d84d4e38b94e2dfd5e5b1b0b.html",
+   "2015"
+  ],
+  "diff": "league",
+  "len": 54,
+  "src": "translation",
+  "year": 2015,
+  "module": "module_1"
+ },
+ "BQ-translation-e530b23cbad1": {
+  "tags": [
+   "translation",
+   "module_1",
+   "分子生物学",
+   "翻译",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2025/art_b153fd076f3f4fe282acfc333c4d4ab6.html",
+   "2025"
+  ],
+  "diff": "league",
+  "len": 138,
+  "src": "translation",
+  "year": 2025,
+  "module": "module_1"
+ },
+ "BQ-translation-f43351e21089": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "easy",
+  "len": 56,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-471a8126a20b": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "easy",
+  "len": 56,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-b5e799a353c8": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "easy",
+  "len": 56,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-f65ab59b8b24": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "easy",
+  "len": 56,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-18e62f2891ba": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "easy",
+  "len": 56,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-8851f98df752": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "easy",
+  "len": 56,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-908a732a0a53": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "easy",
+  "len": 56,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-2e3caf898d55": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "easy",
+  "len": 56,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-f805c2cf3133": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "easy",
+  "len": 56,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-60c737caf904": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "easy",
+  "len": 56,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-fdd8b2839f23": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "easy",
+  "len": 56,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-eee096d13a1d": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "easy",
+  "len": 56,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-e732726fb3c0": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "easy",
+  "len": 56,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-423aee2074df": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "easy",
+  "len": 56,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-a2287c49bb55": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "easy",
+  "len": 56,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-7c0fc5513694": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "easy",
+  "len": 56,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-423407968bc7": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "easy",
+  "len": 56,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-5e711f5bd4a4": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "easy",
+  "len": 56,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-7a9140a32935": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "easy",
+  "len": 56,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-2caa9ec556b4": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "easy",
+  "len": 56,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-83ad962ee8ec": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "easy",
+  "len": 56,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-6ba930da8f37": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "easy",
+  "len": 56,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-7f44124dfaab": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "easy",
+  "len": 56,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-72948bc7ac0d": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "easy",
+  "len": 56,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-51a86a88b9e4": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-b5397df99316": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-0f9cf5e90425": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-572598af4657": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-90b972606a5c": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-eadef970a078": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-63fd6d203555": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-8324d07b18b4": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-33edadedf125": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-cd9c41e69699": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-673d147d2c93": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-913bfab6d370": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-19a6ecd545eb": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-2d6eb2de5b00": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-1679bd2fd7e4": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-4ea87acc08ae": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-6e304a7ccdee": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-9b490b7b4fde": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-2edeffcd1a9e": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-597cf6fb2af2": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-7a780f44fbae": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-7089c12d6685": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-048eacbf5974": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-6ec13c8d0a54": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-200af93ea3d4": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-5839386ca7fe": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-01630ebc0515": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-f41b84b25261": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-e9da7d84be54": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-9f2f8333c0ee": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-3bf30df35e29": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-0bb7e49bb156": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-9ae8fea4096d": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-8873c80f942b": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-fb529ecdf6e2": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-418ac94ec195": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-fc17fb0528d0": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-f503fbe52774": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-abd4dc564b72": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-a93b61f79767": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-3140b18f6569": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-16062f02e066": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-1db60e9bd5c7": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-0e79fdbc5134": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-c90acf442af0": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-4de379303884": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-4638254a7ceb": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-b86a32e405e3": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-cdf31b76bc4b": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-89692a83a011": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-16f267f8d3e7": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-5c21904da568": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-f251f60d7c84": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-610b209514f1": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-1781e5b12025": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-71debb03d1df": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-bc728d6fd278": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-7f79fea59afb": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-9952f9850d91": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-4cff0fa536ef": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-eb3f060dfd3d": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-2c10c44ad48a": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-ad348ae681d7": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-dca6c73ae2bd": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-a51cd55ece8c": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-1d211fe2b1b8": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-69e647876f50": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-b4f402042470": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-a01184b12e87": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-d5dd511c734b": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-d65d2d27c0bb": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-7b32f07091f3": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-19c7c5875180": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-123fad153532": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-2ae8a058d17e": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-fcc0f33693b1": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-ee5acdb743d3": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-d7d395755e96": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-2d3eca5611b8": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-e00448e22739": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-6eac3b0df444": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-901f852fc63a": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-52eb1d95f4ff": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-3a285efbd778": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-f059abf097c5": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-844ae33b396b": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-1048d6b261ae": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-5717238ee05c": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-22b07ec8abd1": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-3a6d0a2944fe": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-4dbf3cfc7ee3": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-d2e545484bd6": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-28692a282c8c": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-379ea0aed3b2": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-9a67268bb9eb": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-76015b30cf8b": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-520b7f7d07d6": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "hard",
+  "len": 28,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-a229356ba1c9": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "hard",
+  "len": 28,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-a988e53740d3": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "hard",
+  "len": 28,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-95d4b93289d4": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "hard",
+  "len": 28,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-c098d08d9330": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "hard",
+  "len": 28,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-0378524cbcc1": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "hard",
+  "len": 28,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-fc40fdb24cb6": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "hard",
+  "len": 28,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-b1070ec80fbc": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "hard",
+  "len": 28,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-3e3cbf281487": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "hard",
+  "len": 28,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-754df0e82fcc": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "hard",
+  "len": 28,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-9f2c576226c0": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "hard",
+  "len": 28,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-f9ffd7af8317": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "hard",
+  "len": 28,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-e065a151de62": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "hard",
+  "len": 28,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-f3931e917489": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "hard",
+  "len": 28,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-e1f4f05ee34a": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "hard",
+  "len": 28,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-654ad07a4465": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "hard",
+  "len": 28,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-37dd7aee2038": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "hard",
+  "len": 28,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-fded5c73d879": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "hard",
+  "len": 28,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-6cd4fcc31021": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "hard",
+  "len": 28,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-9769a693bf12": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "hard",
+  "len": 28,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-ee9443ebcdbd": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "hard",
+  "len": 28,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-3761dc30a111": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "hard",
+  "len": 28,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-1eda7d4b6a0f": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "hard",
+  "len": 28,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-translation-b69a7195956f": {
+  "tags": [
+   "translation"
+  ],
+  "diff": "hard",
+  "len": 28,
+  "src": "translation",
+  "year": 2025,
+  "module": 1
+ }
+}
