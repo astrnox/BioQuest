@@ -1,1 +1,3 @@
 microscope-3d/assets/*.js -whitespace
+*.sql linguist-detectable=false
+*.py linguist-detectable=false
