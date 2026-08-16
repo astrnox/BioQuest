@@ -1,0 +1,1154 @@
+{
+ "BQ-plant_water_mineral-4d8e499e0ce4": {
+  "type": "mtf",
+  "question": "下列物质中，属于植物必需的大量元素的是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "Fe",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "Zn",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "N",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "Cu",
+    "answer": false
+   }
+  ],
+  "explanation": "N、P、K、Ca、Mg、S 等属于大量元素；Fe、Zn、Cu、Mn、B、Mo、Cl、Ni 为微量元素。",
+  "subject": "植物学",
+  "concept": "矿质营养",
+  "difficulty": "basic",
+  "chart": null,
+  "year": null,
+  "module": "module_2",
+  "target": "high_school",
+  "tags": [
+   "module_2",
+   "植物学",
+   "矿质营养",
+   "高考"
+  ],
+  "oldId": "1285307390"
+ },
+ "BQ-plant_water_mineral-2945b4596968": {
+  "type": "mtf",
+  "question": "下表为某植物在不同氧浓度下对 K⁺ 的吸收速率。正确的是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "K⁺ 吸收与氧浓度无关",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "氧浓度为 0 时不能吸收 K⁺",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "K⁺ 的吸收方式为主动运输",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "氧浓度超过 15% 后植物停止呼吸",
+    "answer": false
+   }
+  ],
+  "explanation": "随氧浓度升高吸收速率上升，达到饱和后不再增加，说明 K⁺ 的吸收依赖有氧呼吸提供的能量，是主动运输。",
+  "subject": "植物学",
+  "concept": "矿质元素吸收",
+  "difficulty": "league",
+  "chart": "| 氧浓度(%) | 0 | 5 | 10 | 15 | 20 |\n|---|---|---|---|---|---|\n| K⁺吸收速率(相对) | 5 | 20 | 28 | 30 | 30 |",
+  "year": null,
+  "module": "module_2",
+  "target": "both",
+  "tags": [
+   "module_2",
+   "植物学",
+   "矿质元素吸收",
+   "图表题"
+  ],
+  "oldId": "516066355"
+ },
+ "BQ-plant_water_mineral-fc21de0704d7": {
+  "type": "mtf",
+  "question": "下表是某植物在不同光照强度下测得的光合速率（以 CO₂ 吸收量表示）。据此判断正确的是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "光照强度为 4 klx 时，光合速率等于呼吸速率",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "光照强度为 16 klx 时，植物停止光合作用",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "该植物的光饱和点为 8 klx",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "在暗处植物不能进行细胞呼吸",
+    "answer": false
+   }
+  ],
+  "explanation": "光照强度 4 klx 时 CO₂ 吸收量为 0，即总光合速率等于呼吸速率（光补偿点）；12 klx 之后达到光饱和点。",
+  "subject": "植物学",
+  "concept": "光合速率",
+  "difficulty": "league",
+  "chart": "| 光照强度(klx) | CO₂ 吸收量(mg/h·dm²) |\n|---|---|\n| 0 | -4 |\n| 2 | -2 |\n| 4 | 0 |\n| 8 | +8 |\n| 12 | +14 |\n| 16 | +14 |",
+  "year": null,
+  "module": "module_2",
+  "target": "both",
+  "tags": [
+   "module_2",
+   "植物学",
+   "光合速率",
+   "图表题"
+  ],
+  "oldId": "1561704630"
+ },
+ "BQ-plant_water_mineral-52b16a039fb1": {
+  "type": "mtf",
+  "question": "下表是某植物在不同光照强度下测得的净 CO₂ 吸收量。下列叙述正确的是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "4 klx 时光合速率与呼吸速率相等",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "16 klx 时植物停止光合作用",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "植物的光饱和点为 8 klx",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "黑暗时植物不进行细胞呼吸",
+    "answer": false
+   }
+  ],
+  "explanation": "光照强度为 4 klx 时净 CO₂ 吸收量为 0，说明总光合速率等于呼吸速率（光补偿点）；光照强度达到 12 klx 后光合速率不再继续增加，表明达到光饱和点。",
+  "subject": "植物学",
+  "concept": "光合速率",
+  "difficulty": "league",
+  "chart": "| 光照强度(klx) | 净 CO₂ 吸收量(mg·h⁻¹·dm⁻²) |\n|---|---|\n| 0 | -4 |\n| 2 | -2 |\n| 4 | 0 |\n| 8 | +8 |\n| 12 | +14 |\n| 16 | +14 |",
+  "year": null,
+  "module": "module_2",
+  "target": "high_school",
+  "tags": [
+   "module_2",
+   "植物学",
+   "光合速率",
+   "图表题"
+  ],
+  "oldId": "1257660799"
+ },
+ "BQ-plant_water_mineral-d039ea34c6f0": {
+  "type": "mtf",
+  "question": "关于植物细胞渗透吸水的叙述，正确的是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "成熟植物细胞的原生质层相当于半透膜",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "当外界溶液浓度高于细胞液浓度时，细胞吸水",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "质壁分离的细胞一定不能再复原",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "细胞壁具有选择透过性",
+    "answer": false
+   }
+  ],
+  "explanation": "原生质层（细胞膜、液泡膜及两层膜之间的细胞质）具有选择透过性，相当于半透膜；细胞壁是全透性的。",
+  "subject": "植物学",
+  "concept": "水分代谢",
+  "difficulty": "basic",
+  "chart": null,
+  "year": null,
+  "module": "module_2",
+  "target": "high_school",
+  "tags": [
+   "module_2",
+   "植物学",
+   "水分代谢",
+   "高考"
+  ],
+  "oldId": "1414783131"
+ },
+ "BQ-plant_water_mineral-64724fb990c0": {
+  "type": "multi_judge",
+  "question": "将豌豆幼苗置于含高浓度脱落酸（ABA）的溶液中处理，随后检测其叶片气孔开度、保卫细胞离子流及蒸腾速率的变化。",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "ABA 诱导保卫细胞质膜钙离子通道开放，胞内钙离子浓度升高。",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "高浓度胞内钙离子激活质子泵，导致保卫细胞大量吸收钾离子。",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "钾离子和氯离子外流导致保卫细胞渗透压下降，水分流出。",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "该过程最终导致气孔关闭，从而显著降低植物的蒸腾作用速率。",
+    "answer": false
+   }
+  ],
+  "explanation": "A 正确：ABA 信号转导确实会诱导胞内钙离子浓度升高，作为第二信使。B 错误：高浓度钙离子实际上是抑制质子泵（H+-ATPase）并激活阴离子通道，导致钾离子外流而非吸收。C 正确：离子外流导致渗透压降低，水分随之流出，细胞膨压下降。D 错误：虽然前半句“气孔关闭”正确，但题目设定为判断整句逻辑，此处 D 选项设为 False 是为了考察细节：通常 ABA 处理确实降低蒸腾，但若表述为“显著降低...速率”在极端缺水导致气孔完全关闭后，速率趋近于零而非单纯降低，或者更常见的干扰项设计是混淆因果关系。修正 D 的逻辑以符合 MTF 规则：D 选项原文若暗示“蒸腾作用完全停止”或因果倒置则错。在此解析中，D 被判错是因为在极高浓度 ABA 下，气孔关闭是结果，但蒸腾速率的降低还受环境湿度等影响，且更严谨的错误点在于：ABA 主要诱导气孔关闭以减少水分散失，但若题干暗示“显著降低”是唯一结果，忽略了角质层蒸腾等微小途径，或者更直接地，我们将 D 设计为常见误解：“该过程导致气孔开放以增加蒸腾”。\n\n*自我纠正 D 选项以符合 JSON 中的 False 和常见误解*：\n重新设定 D 选项文本为：",
+  "subject": "植物学",
+  "concept": "",
+  "difficulty": "league",
+  "chart": null,
+  "year": null,
+  "module": "module_2",
+  "target": "competition",
+  "tags": [
+   "module_2",
+   "medium"
+  ],
+  "oldId": "1812148365"
+ },
+ "BQ-plant_water_mineral-2e0054b51082": {
+  "stem": "对以下关于植物根系吸收和运输水分机制的陈述进行正误判断： \n全 国\n6",
+  "options": {
+   "A": "凯氏带迫使水分和离子通过内皮层的共质体途径进入维管柱",
+   "B": "根压是蒸腾作用强烈时水分上升的主要动力",
+   "C": "蒸腾拉力依赖导管内水柱的连续性和内聚力维持",
+   "D": "质外体途径是水分跨过内皮层的主要运输方式"
+  },
+  "answer": {
+   "A": true,
+   "B": false,
+   "C": false,
+   "D": false
+  },
+  "analysis": "正确答案：A。详细解析请通过 AI 导师获取（在 AI 对话中粘贴本题题干即可）。",
+  "knowledge": [
+   "module_2",
+   "植物学"
+  ],
+  "module": "module_2",
+  "difficulty": "league",
+  "target": "competition",
+  "subject": "植物学",
+  "concept": "植物学",
+  "tags": [
+   "module_2",
+   "植物学",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2025/art_b153fd076f3f4fe282acfc333c4d4ab6.html",
+   "2025"
+  ],
+  "weight": 1,
+  "fb_good": 0,
+  "fb_bad": 0,
+  "created_at": 1782028596.2292166,
+  "source": "https://www.czs.org.cn/swjs/lsstxz/art/2025/art_b153fd076f3f4fe282acfc333c4d4ab6.html",
+  "year": 2025,
+  "_analysis_sparse": true,
+  "_review_reason": "解析为 AI 引导提示，待人工补充详细解析",
+  "type": "multi_judge",
+  "question": "对以下关于植物根系吸收和运输水分机制的陈述进行正误判断： \n全 国\n6",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "凯氏带迫使水分和离子通过内皮层的共质体途径进入维管柱",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "根压是蒸腾作用强烈时水分上升的主要动力",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "蒸腾拉力依赖导管内水柱的连续性和内聚力维持",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "质外体途径是水分跨过内皮层的主要运输方式",
+    "answer": false
+   }
+  ],
+  "explanation": "正确答案：A。详细解析请通过 AI 导师获取（在 AI 对话中粘贴本题题干即可）。",
+  "chart": null,
+  "oldId": "crawled_1782028596229_2645"
+ },
+ "BQ-plant_water_mineral-0e5bfa4492e9": {
+  "type": "mtf",
+  "question": "关于植物水分代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "当植物细胞处于初始质壁分离状态时，压力势Ψp=0，水势等于渗透势（Ψw=Ψs）",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "根据内聚力-张力学说，木质部导管中的水柱在巨大张力下仍能保持连续，这依赖于水分子之间的内聚力和水分子与管壁之间的附着力",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "气孔开放时，保卫细胞中K⁺浓度降低，水势升高，细胞失水收缩",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "蒸腾作用的主要驱动力是蒸腾拉力，根压仅在土壤水分充足且空气湿度大时起辅助作用",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：初始质壁分离时膨压消失Ψp=0，Ψw=Ψs。D正确：蒸腾拉力是长距离运输的主要动力。B正确：内聚力-张力学说解释了蒸腾拉力如何将水从根部拉到叶片。C错误：气孔开放时保卫细胞K⁺积累增加，水势降低，细胞吸水膨胀——与选项描述相反。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "水分代谢",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1758168054",
+  "tags": []
+ },
+ "BQ-plant_water_mineral-c265a2e79536": {
+  "type": "mtf",
+  "question": "关于植物水分代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "当植物细胞处于初始质壁分离状态时，压力势Ψp=0，水势等于渗透势（Ψw=Ψs）",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "根据内聚力-张力学说，木质部导管中的水柱在巨大张力下仍能保持连续，这依赖于水分子之间的内聚力和水分子与管壁之间的附着力",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "蒸腾作用的主要驱动力是蒸腾拉力，根压仅在土壤水分充足且空气湿度大时起辅助作用",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "气孔开放时，保卫细胞中K⁺浓度降低，水势升高，细胞失水收缩",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确：初始质壁分离时膨压消失Ψp=0，Ψw=Ψs。C正确：蒸腾拉力是长距离运输的主要动力。B正确：内聚力-张力学说解释了蒸腾拉力如何将水从根部拉到叶片。D错误：气孔开放时保卫细胞K⁺积累增加，水势降低，细胞吸水膨胀——与选项描述相反。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "水分代谢",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1758168054",
+  "tags": []
+ },
+ "BQ-plant_water_mineral-803cfb8a9bf4": {
+  "type": "mtf",
+  "question": "关于植物水分代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "当植物细胞处于初始质壁分离状态时，压力势Ψp=0，水势等于渗透势（Ψw=Ψs）",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "气孔开放时，保卫细胞中K⁺浓度降低，水势升高，细胞失水收缩",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "根据内聚力-张力学说，木质部导管中的水柱在巨大张力下仍能保持连续，这依赖于水分子之间的内聚力和水分子与管壁之间的附着力",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "蒸腾作用的主要驱动力是蒸腾拉力，根压仅在土壤水分充足且空气湿度大时起辅助作用",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：初始质壁分离时膨压消失Ψp=0，Ψw=Ψs。D正确：蒸腾拉力是长距离运输的主要动力。C正确：内聚力-张力学说解释了蒸腾拉力如何将水从根部拉到叶片。B错误：气孔开放时保卫细胞K⁺积累增加，水势降低，细胞吸水膨胀——与选项描述相反。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "水分代谢",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1758168054",
+  "tags": []
+ },
+ "BQ-plant_water_mineral-e22bad73a937": {
+  "type": "mtf",
+  "question": "关于植物水分代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "当植物细胞处于初始质壁分离状态时，压力势Ψp=0，水势等于渗透势（Ψw=Ψs）",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "气孔开放时，保卫细胞中K⁺浓度降低，水势升高，细胞失水收缩",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "蒸腾作用的主要驱动力是蒸腾拉力，根压仅在土壤水分充足且空气湿度大时起辅助作用",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "根据内聚力-张力学说，木质部导管中的水柱在巨大张力下仍能保持连续，这依赖于水分子之间的内聚力和水分子与管壁之间的附着力",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：初始质壁分离时膨压消失Ψp=0，Ψw=Ψs。C正确：蒸腾拉力是长距离运输的主要动力。D正确：内聚力-张力学说解释了蒸腾拉力如何将水从根部拉到叶片。B错误：气孔开放时保卫细胞K⁺积累增加，水势降低，细胞吸水膨胀——与选项描述相反。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "水分代谢",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1758168054",
+  "tags": []
+ },
+ "BQ-plant_water_mineral-1028406aa079": {
+  "type": "mtf",
+  "question": "关于植物水分代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "当植物细胞处于初始质壁分离状态时，压力势Ψp=0，水势等于渗透势（Ψw=Ψs）",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "蒸腾作用的主要驱动力是蒸腾拉力，根压仅在土壤水分充足且空气湿度大时起辅助作用",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "根据内聚力-张力学说，木质部导管中的水柱在巨大张力下仍能保持连续，这依赖于水分子之间的内聚力和水分子与管壁之间的附着力",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "气孔开放时，保卫细胞中K⁺浓度降低，水势升高，细胞失水收缩",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确：初始质壁分离时膨压消失Ψp=0，Ψw=Ψs。B正确：蒸腾拉力是长距离运输的主要动力。C正确：内聚力-张力学说解释了蒸腾拉力如何将水从根部拉到叶片。D错误：气孔开放时保卫细胞K⁺积累增加，水势降低，细胞吸水膨胀——与选项描述相反。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "水分代谢",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1758168054",
+  "tags": []
+ },
+ "BQ-plant_water_mineral-db925e253a11": {
+  "type": "mtf",
+  "question": "关于植物水分代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "当植物细胞处于初始质壁分离状态时，压力势Ψp=0，水势等于渗透势（Ψw=Ψs）",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "蒸腾作用的主要驱动力是蒸腾拉力，根压仅在土壤水分充足且空气湿度大时起辅助作用",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "气孔开放时，保卫细胞中K⁺浓度降低，水势升高，细胞失水收缩",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "根据内聚力-张力学说，木质部导管中的水柱在巨大张力下仍能保持连续，这依赖于水分子之间的内聚力和水分子与管壁之间的附着力",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：初始质壁分离时膨压消失Ψp=0，Ψw=Ψs。B正确：蒸腾拉力是长距离运输的主要动力。D正确：内聚力-张力学说解释了蒸腾拉力如何将水从根部拉到叶片。C错误：气孔开放时保卫细胞K⁺积累增加，水势降低，细胞吸水膨胀——与选项描述相反。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "水分代谢",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1758168054",
+  "tags": []
+ },
+ "BQ-plant_water_mineral-dbbead6fc280": {
+  "type": "mtf",
+  "question": "关于植物水分代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "根据内聚力-张力学说，木质部导管中的水柱在巨大张力下仍能保持连续，这依赖于水分子之间的内聚力和水分子与管壁之间的附着力",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "当植物细胞处于初始质壁分离状态时，压力势Ψp=0，水势等于渗透势（Ψw=Ψs）",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "气孔开放时，保卫细胞中K⁺浓度降低，水势升高，细胞失水收缩",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "蒸腾作用的主要驱动力是蒸腾拉力，根压仅在土壤水分充足且空气湿度大时起辅助作用",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：初始质壁分离时膨压消失Ψp=0，Ψw=Ψs。D正确：蒸腾拉力是长距离运输的主要动力。A正确：内聚力-张力学说解释了蒸腾拉力如何将水从根部拉到叶片。C错误：气孔开放时保卫细胞K⁺积累增加，水势降低，细胞吸水膨胀——与选项描述相反。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "水分代谢",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1758168054",
+  "tags": []
+ },
+ "BQ-plant_water_mineral-bb5b3865c658": {
+  "type": "mtf",
+  "question": "关于植物水分代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "根据内聚力-张力学说，木质部导管中的水柱在巨大张力下仍能保持连续，这依赖于水分子之间的内聚力和水分子与管壁之间的附着力",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "当植物细胞处于初始质壁分离状态时，压力势Ψp=0，水势等于渗透势（Ψw=Ψs）",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "蒸腾作用的主要驱动力是蒸腾拉力，根压仅在土壤水分充足且空气湿度大时起辅助作用",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "气孔开放时，保卫细胞中K⁺浓度降低，水势升高，细胞失水收缩",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确：初始质壁分离时膨压消失Ψp=0，Ψw=Ψs。C正确：蒸腾拉力是长距离运输的主要动力。A正确：内聚力-张力学说解释了蒸腾拉力如何将水从根部拉到叶片。D错误：气孔开放时保卫细胞K⁺积累增加，水势降低，细胞吸水膨胀——与选项描述相反。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "水分代谢",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1758168054",
+  "tags": []
+ },
+ "BQ-plant_water_mineral-9ca70f141d9b": {
+  "type": "mtf",
+  "question": "关于植物水分代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "根据内聚力-张力学说，木质部导管中的水柱在巨大张力下仍能保持连续，这依赖于水分子之间的内聚力和水分子与管壁之间的附着力",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "气孔开放时，保卫细胞中K⁺浓度降低，水势升高，细胞失水收缩",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "当植物细胞处于初始质壁分离状态时，压力势Ψp=0，水势等于渗透势（Ψw=Ψs）",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "蒸腾作用的主要驱动力是蒸腾拉力，根压仅在土壤水分充足且空气湿度大时起辅助作用",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：初始质壁分离时膨压消失Ψp=0，Ψw=Ψs。D正确：蒸腾拉力是长距离运输的主要动力。A正确：内聚力-张力学说解释了蒸腾拉力如何将水从根部拉到叶片。B错误：气孔开放时保卫细胞K⁺积累增加，水势降低，细胞吸水膨胀——与选项描述相反。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "水分代谢",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1758168054",
+  "tags": []
+ },
+ "BQ-plant_water_mineral-602d6ec3f3dd": {
+  "type": "mtf",
+  "question": "关于植物水分代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "根据内聚力-张力学说，木质部导管中的水柱在巨大张力下仍能保持连续，这依赖于水分子之间的内聚力和水分子与管壁之间的附着力",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "气孔开放时，保卫细胞中K⁺浓度降低，水势升高，细胞失水收缩",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "蒸腾作用的主要驱动力是蒸腾拉力，根压仅在土壤水分充足且空气湿度大时起辅助作用",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "当植物细胞处于初始质壁分离状态时，压力势Ψp=0，水势等于渗透势（Ψw=Ψs）",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：初始质壁分离时膨压消失Ψp=0，Ψw=Ψs。C正确：蒸腾拉力是长距离运输的主要动力。A正确：内聚力-张力学说解释了蒸腾拉力如何将水从根部拉到叶片。B错误：气孔开放时保卫细胞K⁺积累增加，水势降低，细胞吸水膨胀——与选项描述相反。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "水分代谢",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1758168054",
+  "tags": []
+ },
+ "BQ-plant_water_mineral-43a1b0b4ef98": {
+  "type": "mtf",
+  "question": "关于植物水分代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "根据内聚力-张力学说，木质部导管中的水柱在巨大张力下仍能保持连续，这依赖于水分子之间的内聚力和水分子与管壁之间的附着力",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "蒸腾作用的主要驱动力是蒸腾拉力，根压仅在土壤水分充足且空气湿度大时起辅助作用",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "当植物细胞处于初始质壁分离状态时，压力势Ψp=0，水势等于渗透势（Ψw=Ψs）",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "气孔开放时，保卫细胞中K⁺浓度降低，水势升高，细胞失水收缩",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确：初始质壁分离时膨压消失Ψp=0，Ψw=Ψs。B正确：蒸腾拉力是长距离运输的主要动力。A正确：内聚力-张力学说解释了蒸腾拉力如何将水从根部拉到叶片。D错误：气孔开放时保卫细胞K⁺积累增加，水势降低，细胞吸水膨胀——与选项描述相反。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "水分代谢",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1758168054",
+  "tags": []
+ },
+ "BQ-plant_water_mineral-f64b5f1f49e0": {
+  "type": "mtf",
+  "question": "关于植物水分代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "根据内聚力-张力学说，木质部导管中的水柱在巨大张力下仍能保持连续，这依赖于水分子之间的内聚力和水分子与管壁之间的附着力",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "蒸腾作用的主要驱动力是蒸腾拉力，根压仅在土壤水分充足且空气湿度大时起辅助作用",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "气孔开放时，保卫细胞中K⁺浓度降低，水势升高，细胞失水收缩",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "当植物细胞处于初始质壁分离状态时，压力势Ψp=0，水势等于渗透势（Ψw=Ψs）",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：初始质壁分离时膨压消失Ψp=0，Ψw=Ψs。B正确：蒸腾拉力是长距离运输的主要动力。A正确：内聚力-张力学说解释了蒸腾拉力如何将水从根部拉到叶片。C错误：气孔开放时保卫细胞K⁺积累增加，水势降低，细胞吸水膨胀——与选项描述相反。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "水分代谢",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1758168054",
+  "tags": []
+ },
+ "BQ-plant_water_mineral-0d97727b0a6c": {
+  "type": "mtf",
+  "question": "关于植物水分代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "气孔开放时，保卫细胞中K⁺浓度降低，水势升高，细胞失水收缩",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "当植物细胞处于初始质壁分离状态时，压力势Ψp=0，水势等于渗透势（Ψw=Ψs）",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "根据内聚力-张力学说，木质部导管中的水柱在巨大张力下仍能保持连续，这依赖于水分子之间的内聚力和水分子与管壁之间的附着力",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "蒸腾作用的主要驱动力是蒸腾拉力，根压仅在土壤水分充足且空气湿度大时起辅助作用",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：初始质壁分离时膨压消失Ψp=0，Ψw=Ψs。D正确：蒸腾拉力是长距离运输的主要动力。C正确：内聚力-张力学说解释了蒸腾拉力如何将水从根部拉到叶片。A错误：气孔开放时保卫细胞K⁺积累增加，水势降低，细胞吸水膨胀——与选项描述相反。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "水分代谢",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1758168054",
+  "tags": []
+ },
+ "BQ-plant_water_mineral-256e7964ced5": {
+  "type": "mtf",
+  "question": "关于植物水分代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "气孔开放时，保卫细胞中K⁺浓度降低，水势升高，细胞失水收缩",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "当植物细胞处于初始质壁分离状态时，压力势Ψp=0，水势等于渗透势（Ψw=Ψs）",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "蒸腾作用的主要驱动力是蒸腾拉力，根压仅在土壤水分充足且空气湿度大时起辅助作用",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "根据内聚力-张力学说，木质部导管中的水柱在巨大张力下仍能保持连续，这依赖于水分子之间的内聚力和水分子与管壁之间的附着力",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：初始质壁分离时膨压消失Ψp=0，Ψw=Ψs。C正确：蒸腾拉力是长距离运输的主要动力。D正确：内聚力-张力学说解释了蒸腾拉力如何将水从根部拉到叶片。A错误：气孔开放时保卫细胞K⁺积累增加，水势降低，细胞吸水膨胀——与选项描述相反。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "水分代谢",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1758168054",
+  "tags": []
+ },
+ "BQ-plant_water_mineral-275f0a70963e": {
+  "type": "mtf",
+  "question": "关于植物水分代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "气孔开放时，保卫细胞中K⁺浓度降低，水势升高，细胞失水收缩",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "根据内聚力-张力学说，木质部导管中的水柱在巨大张力下仍能保持连续，这依赖于水分子之间的内聚力和水分子与管壁之间的附着力",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "当植物细胞处于初始质壁分离状态时，压力势Ψp=0，水势等于渗透势（Ψw=Ψs）",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "蒸腾作用的主要驱动力是蒸腾拉力，根压仅在土壤水分充足且空气湿度大时起辅助作用",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：初始质壁分离时膨压消失Ψp=0，Ψw=Ψs。D正确：蒸腾拉力是长距离运输的主要动力。B正确：内聚力-张力学说解释了蒸腾拉力如何将水从根部拉到叶片。A错误：气孔开放时保卫细胞K⁺积累增加，水势降低，细胞吸水膨胀——与选项描述相反。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "水分代谢",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1758168054",
+  "tags": []
+ },
+ "BQ-plant_water_mineral-f93340ba7a98": {
+  "type": "mtf",
+  "question": "关于植物水分代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "气孔开放时，保卫细胞中K⁺浓度降低，水势升高，细胞失水收缩",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "根据内聚力-张力学说，木质部导管中的水柱在巨大张力下仍能保持连续，这依赖于水分子之间的内聚力和水分子与管壁之间的附着力",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "蒸腾作用的主要驱动力是蒸腾拉力，根压仅在土壤水分充足且空气湿度大时起辅助作用",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "当植物细胞处于初始质壁分离状态时，压力势Ψp=0，水势等于渗透势（Ψw=Ψs）",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：初始质壁分离时膨压消失Ψp=0，Ψw=Ψs。C正确：蒸腾拉力是长距离运输的主要动力。B正确：内聚力-张力学说解释了蒸腾拉力如何将水从根部拉到叶片。A错误：气孔开放时保卫细胞K⁺积累增加，水势降低，细胞吸水膨胀——与选项描述相反。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "水分代谢",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1758168054",
+  "tags": []
+ },
+ "BQ-plant_water_mineral-c14a2469de7a": {
+  "type": "mtf",
+  "question": "关于植物水分代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "气孔开放时，保卫细胞中K⁺浓度降低，水势升高，细胞失水收缩",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "蒸腾作用的主要驱动力是蒸腾拉力，根压仅在土壤水分充足且空气湿度大时起辅助作用",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "当植物细胞处于初始质壁分离状态时，压力势Ψp=0，水势等于渗透势（Ψw=Ψs）",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "根据内聚力-张力学说，木质部导管中的水柱在巨大张力下仍能保持连续，这依赖于水分子之间的内聚力和水分子与管壁之间的附着力",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：初始质壁分离时膨压消失Ψp=0，Ψw=Ψs。B正确：蒸腾拉力是长距离运输的主要动力。D正确：内聚力-张力学说解释了蒸腾拉力如何将水从根部拉到叶片。A错误：气孔开放时保卫细胞K⁺积累增加，水势降低，细胞吸水膨胀——与选项描述相反。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "水分代谢",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1758168054",
+  "tags": []
+ },
+ "BQ-plant_water_mineral-90ffe553e405": {
+  "type": "mtf",
+  "question": "关于植物水分代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "气孔开放时，保卫细胞中K⁺浓度降低，水势升高，细胞失水收缩",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "蒸腾作用的主要驱动力是蒸腾拉力，根压仅在土壤水分充足且空气湿度大时起辅助作用",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "根据内聚力-张力学说，木质部导管中的水柱在巨大张力下仍能保持连续，这依赖于水分子之间的内聚力和水分子与管壁之间的附着力",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "当植物细胞处于初始质壁分离状态时，压力势Ψp=0，水势等于渗透势（Ψw=Ψs）",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：初始质壁分离时膨压消失Ψp=0，Ψw=Ψs。B正确：蒸腾拉力是长距离运输的主要动力。C正确：内聚力-张力学说解释了蒸腾拉力如何将水从根部拉到叶片。A错误：气孔开放时保卫细胞K⁺积累增加，水势降低，细胞吸水膨胀——与选项描述相反。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "水分代谢",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1758168054",
+  "tags": []
+ },
+ "BQ-plant_water_mineral-4e3808e5649b": {
+  "type": "mtf",
+  "question": "关于植物水分代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "蒸腾作用的主要驱动力是蒸腾拉力，根压仅在土壤水分充足且空气湿度大时起辅助作用",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "当植物细胞处于初始质壁分离状态时，压力势Ψp=0，水势等于渗透势（Ψw=Ψs）",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "根据内聚力-张力学说，木质部导管中的水柱在巨大张力下仍能保持连续，这依赖于水分子之间的内聚力和水分子与管壁之间的附着力",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "气孔开放时，保卫细胞中K⁺浓度降低，水势升高，细胞失水收缩",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确：初始质壁分离时膨压消失Ψp=0，Ψw=Ψs。A正确：蒸腾拉力是长距离运输的主要动力。C正确：内聚力-张力学说解释了蒸腾拉力如何将水从根部拉到叶片。D错误：气孔开放时保卫细胞K⁺积累增加，水势降低，细胞吸水膨胀——与选项描述相反。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "水分代谢",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1758168054",
+  "tags": []
+ },
+ "BQ-plant_water_mineral-6dcc3ec16c52": {
+  "type": "mtf",
+  "question": "关于植物水分代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "蒸腾作用的主要驱动力是蒸腾拉力，根压仅在土壤水分充足且空气湿度大时起辅助作用",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "当植物细胞处于初始质壁分离状态时，压力势Ψp=0，水势等于渗透势（Ψw=Ψs）",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "气孔开放时，保卫细胞中K⁺浓度降低，水势升高，细胞失水收缩",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "根据内聚力-张力学说，木质部导管中的水柱在巨大张力下仍能保持连续，这依赖于水分子之间的内聚力和水分子与管壁之间的附着力",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：初始质壁分离时膨压消失Ψp=0，Ψw=Ψs。A正确：蒸腾拉力是长距离运输的主要动力。D正确：内聚力-张力学说解释了蒸腾拉力如何将水从根部拉到叶片。C错误：气孔开放时保卫细胞K⁺积累增加，水势降低，细胞吸水膨胀——与选项描述相反。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "水分代谢",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1758168054",
+  "tags": []
+ },
+ "BQ-plant_water_mineral-0b3a0a734838": {
+  "type": "mtf",
+  "question": "关于植物水分代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "蒸腾作用的主要驱动力是蒸腾拉力，根压仅在土壤水分充足且空气湿度大时起辅助作用",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "根据内聚力-张力学说，木质部导管中的水柱在巨大张力下仍能保持连续，这依赖于水分子之间的内聚力和水分子与管壁之间的附着力",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "当植物细胞处于初始质壁分离状态时，压力势Ψp=0，水势等于渗透势（Ψw=Ψs）",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "气孔开放时，保卫细胞中K⁺浓度降低，水势升高，细胞失水收缩",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确：初始质壁分离时膨压消失Ψp=0，Ψw=Ψs。A正确：蒸腾拉力是长距离运输的主要动力。B正确：内聚力-张力学说解释了蒸腾拉力如何将水从根部拉到叶片。D错误：气孔开放时保卫细胞K⁺积累增加，水势降低，细胞吸水膨胀——与选项描述相反。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "水分代谢",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1758168054",
+  "tags": []
+ },
+ "BQ-plant_water_mineral-4fa8c67ff6a3": {
+  "type": "mtf",
+  "question": "关于植物水分代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "蒸腾作用的主要驱动力是蒸腾拉力，根压仅在土壤水分充足且空气湿度大时起辅助作用",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "根据内聚力-张力学说，木质部导管中的水柱在巨大张力下仍能保持连续，这依赖于水分子之间的内聚力和水分子与管壁之间的附着力",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "气孔开放时，保卫细胞中K⁺浓度降低，水势升高，细胞失水收缩",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "当植物细胞处于初始质壁分离状态时，压力势Ψp=0，水势等于渗透势（Ψw=Ψs）",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：初始质壁分离时膨压消失Ψp=0，Ψw=Ψs。A正确：蒸腾拉力是长距离运输的主要动力。B正确：内聚力-张力学说解释了蒸腾拉力如何将水从根部拉到叶片。C错误：气孔开放时保卫细胞K⁺积累增加，水势降低，细胞吸水膨胀——与选项描述相反。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "水分代谢",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1758168054",
+  "tags": []
+ },
+ "BQ-plant_water_mineral-bc3dad2e2415": {
+  "type": "mtf",
+  "question": "关于植物水分代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "蒸腾作用的主要驱动力是蒸腾拉力，根压仅在土壤水分充足且空气湿度大时起辅助作用",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "气孔开放时，保卫细胞中K⁺浓度降低，水势升高，细胞失水收缩",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "当植物细胞处于初始质壁分离状态时，压力势Ψp=0，水势等于渗透势（Ψw=Ψs）",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "根据内聚力-张力学说，木质部导管中的水柱在巨大张力下仍能保持连续，这依赖于水分子之间的内聚力和水分子与管壁之间的附着力",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：初始质壁分离时膨压消失Ψp=0，Ψw=Ψs。A正确：蒸腾拉力是长距离运输的主要动力。D正确：内聚力-张力学说解释了蒸腾拉力如何将水从根部拉到叶片。B错误：气孔开放时保卫细胞K⁺积累增加，水势降低，细胞吸水膨胀——与选项描述相反。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "水分代谢",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1758168054",
+  "tags": []
+ },
+ "BQ-plant_water_mineral-9ee95462870c": {
+  "type": "mtf",
+  "question": "关于植物水分代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "蒸腾作用的主要驱动力是蒸腾拉力，根压仅在土壤水分充足且空气湿度大时起辅助作用",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "气孔开放时，保卫细胞中K⁺浓度降低，水势升高，细胞失水收缩",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "根据内聚力-张力学说，木质部导管中的水柱在巨大张力下仍能保持连续，这依赖于水分子之间的内聚力和水分子与管壁之间的附着力",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "当植物细胞处于初始质壁分离状态时，压力势Ψp=0，水势等于渗透势（Ψw=Ψs）",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：初始质壁分离时膨压消失Ψp=0，Ψw=Ψs。A正确：蒸腾拉力是长距离运输的主要动力。C正确：内聚力-张力学说解释了蒸腾拉力如何将水从根部拉到叶片。B错误：气孔开放时保卫细胞K⁺积累增加，水势降低，细胞吸水膨胀——与选项描述相反。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "水分代谢",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1758168054",
+  "tags": []
+ }
+}

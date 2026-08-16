@@ -1,0 +1,4216 @@
+{
+ "BQ-replication-c5ec28be0760": {
+  "type": "mtf",
+  "question": "DNA 复制过程中，DNA 聚合酶的作用是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "解旋酶",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "连接酶",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "5'到3'外切酶",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "在模板链上合成新的核苷酸链",
+    "answer": true
+   }
+  ],
+  "explanation": "A选项不正确，解旋酶是DNA 复制过程中解开双螺旋结构的酶。B选项不正确，连接酶是在DNA 复制过程中连接Okazaki片段的酶。C选项不正确，5'到3'外切酶是DNA 复制过程中校正错误碱基配对的酶。D选项正确，DNA 聚合酶在DNA 复制过程中合成新的核苷酸链。",
+  "subject": "分子生物学",
+  "concept": "DNA 复制",
+  "difficulty": "basic",
+  "chart": null,
+  "year": null,
+  "module": "module_1",
+  "target": "high_school",
+  "tags": [
+   "分子生物学",
+   "DNA 复制",
+   "high_school"
+  ],
+  "oldId": "2069191173"
+ },
+ "BQ-replication-1112bf949c75": {
+  "type": "mtf",
+  "question": "下列哪项不是 DNA 复制所需的条件",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "DNA 分子是单链结构",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "脱氧核糖和磷酸交替连接构成 DNA 的基本骨架",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "DNA 分子中碱基 A 与 G 配对",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "两条脱氧核苷酸链方向相同",
+    "answer": false
+   }
+  ],
+  "explanation": "DNA 分子由两条反向平行的脱氧核苷酸长链盘旋而成，脱氧核糖和磷酸交替连接构成基本骨架，碱基通过氢键配对（A-T、G-C）。",
+  "subject": "分子生物学",
+  "concept": "DNA 复制与结构",
+  "difficulty": "basic",
+  "chart": null,
+  "year": null,
+  "module": "module_1",
+  "target": "high_school",
+  "tags": [
+   "module_1",
+   "分子生物学",
+   "DNA 复制与结构",
+   "high_school"
+  ],
+  "oldId": "2000119433"
+ },
+ "BQ-replication-5f6813b9d934": {
+  "type": "multi_judge",
+  "question": "体外重建真核生物 DNA 复制系统，加入解旋酶、SSB、引物酶、DNA 聚合酶及 dNTPs，但缺失 DNA 连接酶。以含多个复制起点的环状双链 DNA 为模板进行复制。",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "前导链可连续合成完整子链，滞后链则积累大量未连接的短片段。",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "因缺乏连接酶，解旋酶无法解开双链，导致复制叉完全停滞不能启动。",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "反应体系中最终产物包含大量带有单链缺口的环状双链 DNA 分子。",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "DNA 聚合酶能直接识别并填补引物移除后留下的空隙，无需连接酶。",
+    "answer": false
+   }
+  ],
+  "explanation": "A 正确：前导链连续合成，滞后链生成冈崎片段，缺连接酶时片段无法连接。B 错误：解旋酶解开双链不依赖连接酶，复制叉可启动但无法完成滞后链连接。C 正确：冈崎片段间磷酸二酯键未形成，产物为含单链缺口的 DNA。D 错误：DNA 聚合酶只能延伸 3'端，不能催化两个独立片段间的连接，该步骤必须由连接酶完成。",
+  "subject": "分子生物学",
+  "concept": "DNA 复制酶系功能",
+  "difficulty": "national",
+  "chart": null,
+  "year": null,
+  "module": "module_1",
+  "target": "competition",
+  "tags": [
+   "module_1",
+   "hard"
+  ],
+  "oldId": "1010339834"
+ },
+ "BQ-replication-e1b123b77e18": {
+  "type": "multi_judge",
+  "question": "体外重构真核生物 DNA 复制系统，加入线性双链 DNA 模板、DNA 聚合酶及必要因子，观察复制过程。",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "若体系中缺乏引物酶或人工引物，DNA 聚合酶无法启动新链合成。",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "真核生物 DNA 聚合酶具有从头合成能力，可直接在模板上起始复制。",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "复制叉前进时，前导链连续合成，后随链以冈崎片段形式不连续合成。",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "线性模板复制结束时，两条子链均能完整复制至 5'末端而无序列丢失。",
+    "answer": false
+   }
+  ],
+  "explanation": "A 正确：DNA 聚合酶只能将核苷酸加到已有 3'-OH 末端，必须依赖引物。B 错误：真核 DNA 聚合酶无从头合成能力，需引物酶合成 RNA 引物。C 正确：由于 DNA 聚合酶只能 5'→3'合成，导致后随链不连续合成冈崎片段。D 错误：线性 DNA 复制存在末端复制问题，去除 RNA 引物后 5'端会缩短，需端粒酶解决。",
+  "subject": "分子生物学",
+  "concept": "DNA 复制机制",
+  "difficulty": "league",
+  "chart": null,
+  "year": null,
+  "module": "module_1",
+  "target": "competition",
+  "tags": [
+   "module_1",
+   "medium"
+  ],
+  "oldId": "1084886781"
+ },
+ "BQ-replication-0b1290205131": {
+  "type": "multi_judge",
+  "question": "体外重构真核生物 DNA 复制系统，加入线性双链 DNA 模板、DNA 聚合酶及必要因子，观察复制过程。",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "若缺乏拓扑异构酶，复制叉前方 DNA 将因过度扭转张力而阻碍解旋。",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "DNA 聚合酶可直接识别复制起点并催化两条链同时连续合成。",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "后随链合成需引物酶反复合成 RNA 引物以启动冈崎片段延伸。",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "端粒酶在所有体细胞中均高表达，以解决线性 DNA 末端复制问题。",
+    "answer": false
+   }
+  ],
+  "explanation": "A 正确：拓扑异构酶负责消除复制叉前方的超螺旋张力，缺乏时复制受阻。B 错误：DNA 聚合酶不能识别起点，需起始蛋白复合物；且由于 5'到 3'合成方向限制，两条链不可能同时连续合成。C 正确：后随链不连续合成，每个冈崎片段都需要独立的 RNA 引物启动。D 错误：端粒酶主要在生殖细胞和干细胞中活跃，大多数分化后的体细胞中端粒酶活性极低或缺失。",
+  "subject": "分子生物学",
+  "concept": "DNA 复制机制",
+  "difficulty": "national",
+  "chart": null,
+  "year": null,
+  "module": "module_1",
+  "target": "competition",
+  "tags": [
+   "module_1",
+   "hard"
+  ],
+  "oldId": "1084886781"
+ },
+ "BQ-replication-f4d00fe7805c": {
+  "type": "mtf",
+  "question": "关于 DNA 分子结构的叙述，正确的是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "DNA 分子是单链结构",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "脱氧核糖和磷酸交替连接构成 DNA 的基本骨架",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "DNA 分子中碱基 A 与 G 配对",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "两条脱氧核苷酸链方向相同",
+    "answer": false
+   }
+  ],
+  "explanation": "DNA 分子由两条反向平行的脱氧核苷酸长链盘旋而成，脱氧核糖和磷酸交替连接构成基本骨架，碱基通过氢键配对（A-T、G-C）。",
+  "subject": "分子生物学",
+  "concept": "DNA 复制与结构",
+  "difficulty": "basic",
+  "chart": null,
+  "year": null,
+  "module": "module_1",
+  "target": "high_school",
+  "tags": [
+   "module_1",
+   "分子生物学",
+   "DNA 复制与结构",
+   "high_school"
+  ],
+  "oldId": "2012745315"
+ },
+ "BQ-replication-0dc753310054": {
+  "type": "mtf",
+  "question": "关于 DNA 复制的叙述，正确的是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "DNA 分子是单链结构",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "脱氧核糖和磷酸交替连接构成 DNA 的基本骨架",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "DNA 分子中碱基 A 与 G 配对",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "两条脱氧核苷酸链方向相同",
+    "answer": false
+   }
+  ],
+  "explanation": "DNA 分子由两条反向平行的脱氧核苷酸长链盘旋而成，脱氧核糖和磷酸交替连接构成基本骨架，碱基通过氢键配对（A-T、G-C）。",
+  "subject": "分子生物学",
+  "concept": "DNA 复制与结构",
+  "difficulty": "basic",
+  "chart": null,
+  "year": null,
+  "module": "module_1",
+  "target": "high_school",
+  "tags": [
+   "module_1",
+   "分子生物学",
+   "DNA 复制与结构",
+   "high_school"
+  ],
+  "oldId": "711446447"
+ },
+ "BQ-replication-3bbca03ef39e": {
+  "type": "mtf",
+  "question": "关于 DNA 复制的叙述，正确的是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "DNA 复制是全保留复制，一条母链合成一条新链",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "DNA 复制以四种核糖核苷酸为原料",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "DNA 复制过程中需要解旋酶、DNA 聚合酶等多种酶的参与",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "DNA 复制只在细胞核内进行",
+    "answer": false
+   }
+  ],
+  "explanation": "DNA 复制是半保留复制，以四种脱氧核糖核苷酸为原料，在真核细胞中细胞核、线粒体、叶绿体中均可进行。",
+  "subject": "分子生物学",
+  "concept": "DNA 复制",
+  "difficulty": "basic",
+  "chart": null,
+  "year": null,
+  "module": "module_1",
+  "target": "high_school",
+  "tags": [
+   "module_1",
+   "分子生物学",
+   "DNA 复制",
+   "高考"
+  ],
+  "oldId": "1499967472"
+ },
+ "BQ-replication-015625ffed73": {
+  "type": "multi_judge",
+  "question": "在体外重构大肠杆菌 DNA 复制系统，加入环状双链 DNA 模板、DNA 聚合酶 III 全酶及必要因子，观察复制过程。",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "DNA 聚合酶 III 只能沿 5'到 3'方向合成新链，不能反向合成。",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "由于模板是环状 DNA，复制过程不需要引物酶合成 RNA 引物。",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "复制叉处两条新链的合成方式不同，一条连续一条不连续。",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "DNA 聚合酶 III 具有 5'到 3'外切酶活性，负责切除 RNA 引物。",
+    "answer": false
+   }
+  ],
+  "explanation": "A 正确：所有已知 DNA 聚合酶只能催化核苷酸加到 3'-OH 端，故只能 5'→3'合成。B 错误：无论线性或环状 DNA，DNA 聚合酶均需游离 3'-OH 起始，必须依赖引物酶合成 RNA 引物。C 正确：因双链反向平行且酶只能 5'→3'合成，导致前导链连续、后随链不连续（冈崎片段）。D 错误：大肠杆菌中切除 RNA 引物主要依靠 DNA 聚合酶 I 的 5'→3'外切酶活性，而非 Pol III。",
+  "subject": "分子生物学",
+  "concept": "DNA 复制机制",
+  "difficulty": "basic",
+  "chart": null,
+  "year": null,
+  "module": "module_1",
+  "target": "competition",
+  "tags": [
+   "module_1",
+   "easy"
+  ],
+  "oldId": "821122491"
+ },
+ "BQ-replication-ac64185e19bf": {
+  "type": "multi_judge",
+  "question": "在体外重构大肠杆菌 DNA 复制系统，加入环状双链 DNA 模板、DNA 聚合酶 III 全酶及必要因子，观察复制过程。",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "系统必须加入解旋酶才能解开双链启动复制。",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "DNA 聚合酶 III 可直接利用游离脱氧核苷酸起始合成。",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "复制过程中需要引物酶合成短链 RNA 引物。",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "DNA 聚合酶 III 能同时连续合成两条子链。",
+    "answer": false
+   }
+  ],
+  "explanation": "A 正确：解旋酶利用 ATP 水解能量解开双螺旋，是复制起始必需。B 错误：DNA 聚合酶不能从头合成，必须依赖 3'-OH 末端，需引物。C 正确：原核生物由引物酶（DnaG）合成 RNA 引物提供 3'-OH。D 错误：因 DNA 聚合酶只能 5'到 3'合成，且双链反向平行，导致一条链连续（前导链），另一条不连续（后随链）。",
+  "subject": "分子生物学",
+  "concept": "DNA 复制机制",
+  "difficulty": "basic",
+  "chart": null,
+  "year": null,
+  "module": "module_1",
+  "target": "competition",
+  "tags": [
+   "module_1",
+   "easy"
+  ],
+  "oldId": "821122491"
+ },
+ "BQ-replication-5323bbf3f55c": {
+  "type": "multi_judge",
+  "question": "在体外重构大肠杆菌 DNA 复制系统时，加入环状双链 DNA 模板、DNA 聚合酶 III 全酶及必要的辅助蛋白，观察复制过程。",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "DNA 聚合酶 III 能从头起始合成新的 DNA 链，无需引物。",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "解旋酶利用 ATP 水解提供的能量解开 DNA 双螺旋结构。",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "后随链的合成是不连续的，最终需要 DNA 连接酶连接片段。",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "拓扑异构酶的主要功能是识别并切除复制过程中错配的碱基。",
+    "answer": false
+   }
+  ],
+  "explanation": "A 错误：DNA 聚合酶不能从头合成，必须依赖引物酶合成的 RNA 引物提供 3'-OH 末端。B 正确：解旋酶通过水解 ATP 获得能量，破坏氢键从而解开双链。C 正确：由于 DNA 聚合酶只能沿 5'到 3'方向合成，后随链需分段合成冈崎片段，并由连接酶连接。D 错误：拓扑异构酶用于缓解复制叉前方的超螺旋张力，切除错配碱基是错配修复系统或聚合酶校对功能。",
+  "subject": "分子生物学",
+  "concept": "DNA 复制机制",
+  "difficulty": "basic",
+  "chart": null,
+  "year": null,
+  "module": "module_1",
+  "target": "competition",
+  "tags": [
+   "module_1",
+   "easy"
+  ],
+  "oldId": "1702613001"
+ },
+ "BQ-replication-6fb463dc5892": {
+  "type": "mtf",
+  "question": "在细胞中，DNA 复制的起始点是哪个结构？",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "复制起始点",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "复制叉",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "引物",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "RNA 引物",
+    "answer": false
+   }
+  ],
+  "explanation": "A 正确，复制起始点是 DNA 复制的起始位置。B 复制叉是 DNA 复制过程中形成的 Y 形结构。C 引物是 RNA 分子，用于启动 DNA 复制。D RNA 引物是错误的，引物是 RNA 分子，而不是 DNA 分子。",
+  "subject": "细胞生物学",
+  "concept": "DNA 复制",
+  "difficulty": "basic",
+  "chart": null,
+  "year": null,
+  "module": "module_1",
+  "target": "high_school",
+  "tags": [
+   "细胞生物学",
+   "DNA 复制",
+   "high_school"
+  ],
+  "oldId": "1462720637"
+ },
+ "BQ-replication-7bf847bc3de1": {
+  "type": "multi_judge",
+  "question": "将大肠杆菌置于含放射性同位素³²P 的培养基中培养多代，随后转移至无放射性的普通培养基中继续分裂一代。",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "子代细菌的所有 DNA 分子均含有放射性标记。",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "子代细菌的每条 DNA 单链都带有³²P 放射性标记。",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "该实验结果支持 DNA 半保留复制的机制模型。",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "若继续培养一代，所有子代 DNA 都将失去放射性。",
+    "answer": false
+   }
+  ],
+  "explanation": "A 正确：亲代 DNA 双链均含³²P，复制一代后，每个子代 DNA 分子含一条亲代链（有标记）和一条新链（无标记），故均有放射性。B 错误：新合成的链利用无放射性原料，故每条 DNA 中仅一条链有标记。C 正确：结果符合半保留复制特征。D 错误：再复制一代，含亲代链的 DNA 分子仍具放射性，不会全部消失。",
+  "subject": "分子生物学",
+  "concept": "DNA 半保留复制",
+  "difficulty": "basic",
+  "chart": null,
+  "year": null,
+  "module": "module_1",
+  "target": "competition",
+  "tags": [
+   "module_1",
+   "easy"
+  ],
+  "oldId": "644825091"
+ },
+ "BQ-replication-2a7cf8ceda1d": {
+  "type": "multi_judge",
+  "question": "某实验室提取大肠杆菌拟核 DNA 进行体外复制实验，体系中加入了 DNA 聚合酶 III、dNTPs 及缓冲液，但遗漏了其他关键因子。",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "若体系中缺乏 DNA 解旋酶，复制叉将无法形成导致复制不能启动。",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "DNA 聚合酶 III 可以直接结合单链 DNA 并从头开始合成新的子链。",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "若未加入引物酶或人工合成引物，DNA 聚合酶 III 无法催化磷酸二酯键形成。",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "大肠杆菌 DNA 复制是单向进行的，仅从一个复制起点向一个方向延伸。",
+    "answer": false
+   }
+  ],
+  "explanation": "A 正确：解旋酶负责解开双螺旋形成复制叉，缺乏则无法启动。B 错误：DNA 聚合酶不能从头合成，必须依赖 3'-OH 末端（引物）。C 正确：DNA 聚合酶严格需要引物提供 3'-OH 才能延伸子链。D 错误：大肠杆菌环状 DNA 复制通常是双向进行的，形成两个复制叉。",
+  "subject": "分子生物学",
+  "concept": "DNA 复制机制",
+  "difficulty": "basic",
+  "chart": null,
+  "year": null,
+  "module": "module_1",
+  "target": "competition",
+  "tags": [
+   "module_1",
+   "easy"
+  ],
+  "oldId": "1804955218"
+ },
+ "BQ-replication-af657f1137c7": {
+  "type": "mtf",
+  "question": "用 ¹⁵N 标记的 DNA 在含 ¹⁴N 的培养基中复制，以下是不同代次的检测结果。正确的是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "该实验证明 DNA 复制是半保留复制",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "该实验证明 DNA 复制是全保留复制",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "F₁ 中 DNA 都是 ¹⁵N 标记",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "F₃ 中的 DNA 全部为轻带",
+    "answer": false
+   }
+  ],
+  "explanation": "Meselson-Stahl 实验通过密度梯度离心验证了 DNA 半保留复制的机制。",
+  "subject": "分子生物学",
+  "concept": "DNA 半保留复制",
+  "difficulty": "league",
+  "chart": "| 代次 | 全重(¹⁵N/¹⁵N) | 中间(¹⁵N/¹⁴N) | 全轻(¹⁴N/¹⁴N) |\n|---|---|---|---|\n| F₀ | 100% | 0% | 0% |\n| F₁ | 0% | 100% | 0% |\n| F₂ | 0% | 50% | 50% |\n| F₃ | 0% | 25% | 75% |",
+  "year": null,
+  "module": "module_3",
+  "target": "both",
+  "tags": [
+   "module_3",
+   "分子生物学",
+   "DNA 半保留复制",
+   "图表题"
+  ],
+  "oldId": "278487808"
+ },
+ "BQ-replication-b2e739257a31": {
+  "type": "mtf",
+  "question": "一个 DNA 分子中 A+T 占 60%，则 G 占",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "两条链方向相同",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "DNA 的基本单位是脱氧核苷酸",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "碱基配对原则是 A-G、T-C",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "脱氧核糖与碱基交替连接构成基本骨架",
+    "answer": false
+   }
+  ],
+  "explanation": "DNA 两条脱氧核苷酸链反向平行；碱基通过氢键互补配对（A-T、G-C）；脱氧核糖和磷酸交替连接构成基本骨架。",
+  "subject": "分子生物学",
+  "concept": "DNA 的结构与复制",
+  "difficulty": "basic",
+  "chart": null,
+  "year": null,
+  "module": "module_4",
+  "target": "high_school",
+  "tags": [
+   "module_4",
+   "分子生物学",
+   "DNA 的结构与复制",
+   "high_school"
+  ],
+  "oldId": "822485528"
+ },
+ "BQ-replication-0de51e3f185a": {
+  "type": "mtf",
+  "question": "关于 DNA 双螺旋结构的叙述，正确的是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "脱氧核糖与碱基交替连接构成基本骨架",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "碱基配对原则是 A-G、T-C",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "DNA 的基本单位是脱氧核苷酸",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "两条链方向相同",
+    "answer": false
+   }
+  ],
+  "explanation": "DNA 两条脱氧核苷酸链反向平行；碱基通过氢键互补配对（A-T、G-C）；脱氧核糖和磷酸交替连接构成基本骨架。",
+  "subject": "分子生物学",
+  "concept": "DNA 的结构与复制",
+  "difficulty": "basic",
+  "chart": null,
+  "year": null,
+  "module": "module_4",
+  "target": "high_school",
+  "tags": [
+   "module_4",
+   "分子生物学",
+   "DNA 的结构与复制",
+   "high_school"
+  ],
+  "oldId": "1683600814"
+ },
+ "BQ-replication-b8dbf1c1d31c": {
+  "type": "mtf",
+  "question": "关于 DNA 复制的叙述，错误的是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "脱氧核糖与碱基交替连接构成基本骨架",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "DNA 的基本单位是脱氧核苷酸",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "碱基配对原则是 A-G、T-C",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "两条链方向相同",
+    "answer": false
+   }
+  ],
+  "explanation": "DNA 两条脱氧核苷酸链反向平行；碱基通过氢键互补配对（A-T、G-C）；脱氧核糖和磷酸交替连接构成基本骨架。",
+  "subject": "分子生物学",
+  "concept": "DNA 的结构与复制",
+  "difficulty": "basic",
+  "chart": null,
+  "year": null,
+  "module": "module_4",
+  "target": "high_school",
+  "tags": [
+   "module_4",
+   "分子生物学",
+   "DNA 的结构与复制",
+   "high_school"
+  ],
+  "oldId": "332430764"
+ },
+ "BQ-replication-103828ea51a4": {
+  "type": "mtf",
+  "question": "遗传学中，遗传信息的传递是通过 DNA 复制和转录等过程实现的。下列关于遗传信息传递的描述中，正确的是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "遗传信息的传递是通过 DNA 复制和转录等过程实现的",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "遗传信息的传递是通过蛋白质合成和分解等过程实现的",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "遗传信息的传递是通过细胞分裂和分化等过程实现的",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "遗传信息的传递是通过环境因素和遗传因素等过程实现的",
+    "answer": false
+   }
+  ],
+  "explanation": "选项 A 正确，因为遗传信息的传递确实是通过 DNA 复制和转录等过程实现的。选项 B、C 和 D 错误，因为它们分别描述了蛋白质合成和分解、细胞分裂和分化、环境因素和遗传因素等过程，而不是遗传信息传递的主要过程。遗传信息的传递是通过 DNA 复制和转录等过程实现的，例如 DNA 复制过程中，遗传信息从父代 DNA 传递给子代 DNA，而转录过程中，遗传信息从 DNA 传递给 RNA。",
+  "subject": "遗传学",
+  "concept": "遗传信息传递",
+  "difficulty": "basic",
+  "chart": null,
+  "year": null,
+  "module": "module_4",
+  "target": "high_school",
+  "tags": [
+   "遗传学",
+   "遗传信息传递",
+   "high_school"
+  ],
+  "oldId": "440837106"
+ },
+ "BQ-replication-30e23dc92f9f": {
+  "type": "single",
+  "question": "研究者构建了温度敏感型突变体酵母，其DNA聚合酶δ在37°C下失活，25°C下正常。将突变体从25°C转移到37°C后，0-30分钟内DNA复制逐渐停止，且出现大量约100-200 bp的短DNA片段。30分钟后短片段不再增加也不消失。这一结果最支持以下哪个结论？",
+  "options": [
+   "DNA聚合酶δ负责前导链的连续合成",
+   "DNA聚合酶δ负责后随链冈崎片段的延伸与连接",
+   "DNA聚合酶δ同时负责前导链和后随链的合成",
+   "DNA聚合酶δ仅参与DNA修复而非复制"
+  ],
+  "answer": 1,
+  "explanation": "关键推理：1）温度敏感突变体在37°C下Polδ失活；2）出现100-200 bp短DNA片段，正是冈崎片段的特征长度；3）短片段不再增加也不消失，说明新的冈崎片段不再产生（复制停止），但已有的片段无法被连接成完整链。如果Polδ负责前导链合成，后随链的冈崎片段应正常合成和连接，不会积累短片段。Polδ负责后随链冈崎片段的延伸，其失活导致短片段无法完成延伸和连接，最合理解释了短片段的积累。",
+  "subject": "分子生物学",
+  "concept": "DNA复制机制推理",
+  "difficulty": 4,
+  "tags": [
+   "逻辑推理",
+   "实验分析",
+   "DNA复制"
+  ],
+  "module": "module_1",
+  "category": "logic",
+  "oldId": "160503090",
+  "subQuestions": [],
+  "chart": null,
+  "year": null
+ },
+ "BQ-replication-84b2155600fb": {
+  "stem": "端粒的功能包括：\n（多选）",
+  "options": {
+   "A": "防止染色体末端被核酸酶降解，以维护染色体的完整性",
+   "B": "为线状染色体的末端复制提供基础",
+   "C": "保证染色体的准确联会配对",
+   "D": "与细胞衰老有关"
+  },
+  "answer": {
+   "A": true,
+   "B": false,
+   "C": false,
+   "D": false
+  },
+  "analysis": "正确答案：A。详细解析请通过 AI 导师获取（在 AI 对话中粘贴本题题干即可）。",
+  "knowledge": [
+   "module_1",
+   "生物学"
+  ],
+  "module": "module_1",
+  "difficulty": "league",
+  "target": "competition",
+  "subject": "生物学",
+  "concept": "生物学",
+  "tags": [
+   "module_1",
+   "生物学",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2015/art_1c13e648d84d4e38b94e2dfd5e5b1b0b.html",
+   "2015"
+  ],
+  "weight": 1,
+  "fb_good": 0,
+  "fb_bad": 0,
+  "created_at": 1782028584.5845125,
+  "source": "https://www.czs.org.cn/swjs/lsstxz/art/2015/art_1c13e648d84d4e38b94e2dfd5e5b1b0b.html",
+  "year": 2015,
+  "_analysis_sparse": true,
+  "_review_reason": "解析为 AI 引导提示，待人工补充详细解析",
+  "type": "multi_judge",
+  "question": "端粒的功能包括：\n（多选）",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "防止染色体末端被核酸酶降解，以维护染色体的完整性",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "为线状染色体的末端复制提供基础",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "保证染色体的准确联会配对",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "与细胞衰老有关",
+    "answer": false
+   }
+  ],
+  "explanation": "正确答案：A。详细解析请通过 AI 导师获取（在 AI 对话中粘贴本题题干即可）。",
+  "chart": null,
+  "oldId": "crawled_1782028584584_6635"
+ },
+ "BQ-replication-01bbda8afb98": {
+  "type": "mtf",
+  "question": "下列关于DNA复制的陈述，判断正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "DNA聚合酶III是原核生物DNA复制的主要合成酶，具有5'→3'聚合酶活性和3'→5'外切核酸酶校对活性",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "原核生物DNA复制只有一个复制起点，而真核生物染色体上有多个复制起点",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "滞后链的合成是连续的，引物酶只需合成一次RNA引物",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "端粒酶是一种逆转录酶，使用其自身携带的RNA模板来延伸染色体末端",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：大肠杆菌oriC一个起点；真核多起点复制提高效率。A正确：DNA Pol III具有聚合和校对双重功能。C错误：滞后链合成是不连续的，形成冈崎片段，每个片段需独立引物。D正确：端粒酶以自身RNA为模板在染色体末端合成端粒重复序列，解决了末端复制问题。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "DNA复制",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1443905332",
+  "tags": []
+ },
+ "BQ-replication-76e1e50d840a": {
+  "type": "mtf",
+  "question": "下列关于DNA复制的陈述，判断正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "DNA聚合酶III是原核生物DNA复制的主要合成酶，具有5'→3'聚合酶活性和3'→5'外切核酸酶校对活性",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "原核生物DNA复制只有一个复制起点，而真核生物染色体上有多个复制起点",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "端粒酶是一种逆转录酶，使用其自身携带的RNA模板来延伸染色体末端",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "滞后链的合成是连续的，引物酶只需合成一次RNA引物",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确：大肠杆菌oriC一个起点；真核多起点复制提高效率。A正确：DNA Pol III具有聚合和校对双重功能。D错误：滞后链合成是不连续的，形成冈崎片段，每个片段需独立引物。C正确：端粒酶以自身RNA为模板在染色体末端合成端粒重复序列，解决了末端复制问题。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "DNA复制",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1443905332",
+  "tags": []
+ },
+ "BQ-replication-c51cc8ba606d": {
+  "type": "mtf",
+  "question": "下列关于DNA复制的陈述，判断正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "DNA聚合酶III是原核生物DNA复制的主要合成酶，具有5'→3'聚合酶活性和3'→5'外切核酸酶校对活性",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "滞后链的合成是连续的，引物酶只需合成一次RNA引物",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "原核生物DNA复制只有一个复制起点，而真核生物染色体上有多个复制起点",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "端粒酶是一种逆转录酶，使用其自身携带的RNA模板来延伸染色体末端",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：大肠杆菌oriC一个起点；真核多起点复制提高效率。A正确：DNA Pol III具有聚合和校对双重功能。B错误：滞后链合成是不连续的，形成冈崎片段，每个片段需独立引物。D正确：端粒酶以自身RNA为模板在染色体末端合成端粒重复序列，解决了末端复制问题。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "DNA复制",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1443905332",
+  "tags": []
+ },
+ "BQ-replication-3340ca4fe062": {
+  "type": "mtf",
+  "question": "下列关于DNA复制的陈述，判断正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "DNA聚合酶III是原核生物DNA复制的主要合成酶，具有5'→3'聚合酶活性和3'→5'外切核酸酶校对活性",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "滞后链的合成是连续的，引物酶只需合成一次RNA引物",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "端粒酶是一种逆转录酶，使用其自身携带的RNA模板来延伸染色体末端",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "原核生物DNA复制只有一个复制起点，而真核生物染色体上有多个复制起点",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：大肠杆菌oriC一个起点；真核多起点复制提高效率。A正确：DNA Pol III具有聚合和校对双重功能。B错误：滞后链合成是不连续的，形成冈崎片段，每个片段需独立引物。C正确：端粒酶以自身RNA为模板在染色体末端合成端粒重复序列，解决了末端复制问题。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "DNA复制",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1443905332",
+  "tags": []
+ },
+ "BQ-replication-4801b09b277e": {
+  "type": "mtf",
+  "question": "下列关于DNA复制的陈述，判断正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "DNA聚合酶III是原核生物DNA复制的主要合成酶，具有5'→3'聚合酶活性和3'→5'外切核酸酶校对活性",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "端粒酶是一种逆转录酶，使用其自身携带的RNA模板来延伸染色体末端",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "原核生物DNA复制只有一个复制起点，而真核生物染色体上有多个复制起点",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "滞后链的合成是连续的，引物酶只需合成一次RNA引物",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确：大肠杆菌oriC一个起点；真核多起点复制提高效率。A正确：DNA Pol III具有聚合和校对双重功能。D错误：滞后链合成是不连续的，形成冈崎片段，每个片段需独立引物。B正确：端粒酶以自身RNA为模板在染色体末端合成端粒重复序列，解决了末端复制问题。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "DNA复制",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1443905332",
+  "tags": []
+ },
+ "BQ-replication-f2b189c96576": {
+  "type": "mtf",
+  "question": "下列关于DNA复制的陈述，判断正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "DNA聚合酶III是原核生物DNA复制的主要合成酶，具有5'→3'聚合酶活性和3'→5'外切核酸酶校对活性",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "端粒酶是一种逆转录酶，使用其自身携带的RNA模板来延伸染色体末端",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "滞后链的合成是连续的，引物酶只需合成一次RNA引物",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "原核生物DNA复制只有一个复制起点，而真核生物染色体上有多个复制起点",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：大肠杆菌oriC一个起点；真核多起点复制提高效率。A正确：DNA Pol III具有聚合和校对双重功能。C错误：滞后链合成是不连续的，形成冈崎片段，每个片段需独立引物。B正确：端粒酶以自身RNA为模板在染色体末端合成端粒重复序列，解决了末端复制问题。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "DNA复制",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1443905332",
+  "tags": []
+ },
+ "BQ-replication-0a10f3d5e4aa": {
+  "type": "mtf",
+  "question": "下列关于DNA复制的陈述，判断正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "原核生物DNA复制只有一个复制起点，而真核生物染色体上有多个复制起点",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "DNA聚合酶III是原核生物DNA复制的主要合成酶，具有5'→3'聚合酶活性和3'→5'外切核酸酶校对活性",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "滞后链的合成是连续的，引物酶只需合成一次RNA引物",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "端粒酶是一种逆转录酶，使用其自身携带的RNA模板来延伸染色体末端",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：大肠杆菌oriC一个起点；真核多起点复制提高效率。B正确：DNA Pol III具有聚合和校对双重功能。C错误：滞后链合成是不连续的，形成冈崎片段，每个片段需独立引物。D正确：端粒酶以自身RNA为模板在染色体末端合成端粒重复序列，解决了末端复制问题。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "DNA复制",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1443905332",
+  "tags": []
+ },
+ "BQ-replication-960a5bead905": {
+  "type": "mtf",
+  "question": "下列关于DNA复制的陈述，判断正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "原核生物DNA复制只有一个复制起点，而真核生物染色体上有多个复制起点",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "DNA聚合酶III是原核生物DNA复制的主要合成酶，具有5'→3'聚合酶活性和3'→5'外切核酸酶校对活性",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "端粒酶是一种逆转录酶，使用其自身携带的RNA模板来延伸染色体末端",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "滞后链的合成是连续的，引物酶只需合成一次RNA引物",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确：大肠杆菌oriC一个起点；真核多起点复制提高效率。B正确：DNA Pol III具有聚合和校对双重功能。D错误：滞后链合成是不连续的，形成冈崎片段，每个片段需独立引物。C正确：端粒酶以自身RNA为模板在染色体末端合成端粒重复序列，解决了末端复制问题。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "DNA复制",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1443905332",
+  "tags": []
+ },
+ "BQ-replication-11a928d15149": {
+  "type": "mtf",
+  "question": "下列关于DNA复制的陈述，判断正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "原核生物DNA复制只有一个复制起点，而真核生物染色体上有多个复制起点",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "滞后链的合成是连续的，引物酶只需合成一次RNA引物",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "DNA聚合酶III是原核生物DNA复制的主要合成酶，具有5'→3'聚合酶活性和3'→5'外切核酸酶校对活性",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "端粒酶是一种逆转录酶，使用其自身携带的RNA模板来延伸染色体末端",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：大肠杆菌oriC一个起点；真核多起点复制提高效率。C正确：DNA Pol III具有聚合和校对双重功能。B错误：滞后链合成是不连续的，形成冈崎片段，每个片段需独立引物。D正确：端粒酶以自身RNA为模板在染色体末端合成端粒重复序列，解决了末端复制问题。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "DNA复制",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1443905332",
+  "tags": []
+ },
+ "BQ-replication-7dd66c23c9e4": {
+  "type": "mtf",
+  "question": "下列关于DNA复制的陈述，判断正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "原核生物DNA复制只有一个复制起点，而真核生物染色体上有多个复制起点",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "滞后链的合成是连续的，引物酶只需合成一次RNA引物",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "端粒酶是一种逆转录酶，使用其自身携带的RNA模板来延伸染色体末端",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "DNA聚合酶III是原核生物DNA复制的主要合成酶，具有5'→3'聚合酶活性和3'→5'外切核酸酶校对活性",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：大肠杆菌oriC一个起点；真核多起点复制提高效率。D正确：DNA Pol III具有聚合和校对双重功能。B错误：滞后链合成是不连续的，形成冈崎片段，每个片段需独立引物。C正确：端粒酶以自身RNA为模板在染色体末端合成端粒重复序列，解决了末端复制问题。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "DNA复制",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1443905332",
+  "tags": []
+ },
+ "BQ-replication-c5287a79ab1c": {
+  "type": "mtf",
+  "question": "下列关于DNA复制的陈述，判断正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "原核生物DNA复制只有一个复制起点，而真核生物染色体上有多个复制起点",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "端粒酶是一种逆转录酶，使用其自身携带的RNA模板来延伸染色体末端",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "DNA聚合酶III是原核生物DNA复制的主要合成酶，具有5'→3'聚合酶活性和3'→5'外切核酸酶校对活性",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "滞后链的合成是连续的，引物酶只需合成一次RNA引物",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确：大肠杆菌oriC一个起点；真核多起点复制提高效率。C正确：DNA Pol III具有聚合和校对双重功能。D错误：滞后链合成是不连续的，形成冈崎片段，每个片段需独立引物。B正确：端粒酶以自身RNA为模板在染色体末端合成端粒重复序列，解决了末端复制问题。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "DNA复制",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1443905332",
+  "tags": []
+ },
+ "BQ-replication-6ad9f3b33d53": {
+  "type": "mtf",
+  "question": "下列关于DNA复制的陈述，判断正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "原核生物DNA复制只有一个复制起点，而真核生物染色体上有多个复制起点",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "端粒酶是一种逆转录酶，使用其自身携带的RNA模板来延伸染色体末端",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "滞后链的合成是连续的，引物酶只需合成一次RNA引物",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "DNA聚合酶III是原核生物DNA复制的主要合成酶，具有5'→3'聚合酶活性和3'→5'外切核酸酶校对活性",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：大肠杆菌oriC一个起点；真核多起点复制提高效率。D正确：DNA Pol III具有聚合和校对双重功能。C错误：滞后链合成是不连续的，形成冈崎片段，每个片段需独立引物。B正确：端粒酶以自身RNA为模板在染色体末端合成端粒重复序列，解决了末端复制问题。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "DNA复制",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1443905332",
+  "tags": []
+ },
+ "BQ-replication-e5db7bafc327": {
+  "type": "mtf",
+  "question": "下列关于DNA复制的陈述，判断正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "滞后链的合成是连续的，引物酶只需合成一次RNA引物",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "DNA聚合酶III是原核生物DNA复制的主要合成酶，具有5'→3'聚合酶活性和3'→5'外切核酸酶校对活性",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "原核生物DNA复制只有一个复制起点，而真核生物染色体上有多个复制起点",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "端粒酶是一种逆转录酶，使用其自身携带的RNA模板来延伸染色体末端",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：大肠杆菌oriC一个起点；真核多起点复制提高效率。B正确：DNA Pol III具有聚合和校对双重功能。A错误：滞后链合成是不连续的，形成冈崎片段，每个片段需独立引物。D正确：端粒酶以自身RNA为模板在染色体末端合成端粒重复序列，解决了末端复制问题。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "DNA复制",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1443905332",
+  "tags": []
+ },
+ "BQ-replication-1c4d9b61a404": {
+  "type": "mtf",
+  "question": "下列关于DNA复制的陈述，判断正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "滞后链的合成是连续的，引物酶只需合成一次RNA引物",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "DNA聚合酶III是原核生物DNA复制的主要合成酶，具有5'→3'聚合酶活性和3'→5'外切核酸酶校对活性",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "端粒酶是一种逆转录酶，使用其自身携带的RNA模板来延伸染色体末端",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "原核生物DNA复制只有一个复制起点，而真核生物染色体上有多个复制起点",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：大肠杆菌oriC一个起点；真核多起点复制提高效率。B正确：DNA Pol III具有聚合和校对双重功能。A错误：滞后链合成是不连续的，形成冈崎片段，每个片段需独立引物。C正确：端粒酶以自身RNA为模板在染色体末端合成端粒重复序列，解决了末端复制问题。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "DNA复制",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1443905332",
+  "tags": []
+ },
+ "BQ-replication-808e67cd56a0": {
+  "type": "mtf",
+  "question": "下列关于DNA复制的陈述，判断正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "滞后链的合成是连续的，引物酶只需合成一次RNA引物",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "原核生物DNA复制只有一个复制起点，而真核生物染色体上有多个复制起点",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "DNA聚合酶III是原核生物DNA复制的主要合成酶，具有5'→3'聚合酶活性和3'→5'外切核酸酶校对活性",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "端粒酶是一种逆转录酶，使用其自身携带的RNA模板来延伸染色体末端",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：大肠杆菌oriC一个起点；真核多起点复制提高效率。C正确：DNA Pol III具有聚合和校对双重功能。A错误：滞后链合成是不连续的，形成冈崎片段，每个片段需独立引物。D正确：端粒酶以自身RNA为模板在染色体末端合成端粒重复序列，解决了末端复制问题。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "DNA复制",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1443905332",
+  "tags": []
+ },
+ "BQ-replication-8094da72fca9": {
+  "type": "mtf",
+  "question": "下列关于DNA复制的陈述，判断正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "滞后链的合成是连续的，引物酶只需合成一次RNA引物",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "原核生物DNA复制只有一个复制起点，而真核生物染色体上有多个复制起点",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "端粒酶是一种逆转录酶，使用其自身携带的RNA模板来延伸染色体末端",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "DNA聚合酶III是原核生物DNA复制的主要合成酶，具有5'→3'聚合酶活性和3'→5'外切核酸酶校对活性",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：大肠杆菌oriC一个起点；真核多起点复制提高效率。D正确：DNA Pol III具有聚合和校对双重功能。A错误：滞后链合成是不连续的，形成冈崎片段，每个片段需独立引物。C正确：端粒酶以自身RNA为模板在染色体末端合成端粒重复序列，解决了末端复制问题。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "DNA复制",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1443905332",
+  "tags": []
+ },
+ "BQ-replication-74af8255cac0": {
+  "type": "mtf",
+  "question": "下列关于DNA复制的陈述，判断正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "滞后链的合成是连续的，引物酶只需合成一次RNA引物",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "端粒酶是一种逆转录酶，使用其自身携带的RNA模板来延伸染色体末端",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "DNA聚合酶III是原核生物DNA复制的主要合成酶，具有5'→3'聚合酶活性和3'→5'外切核酸酶校对活性",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "原核生物DNA复制只有一个复制起点，而真核生物染色体上有多个复制起点",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：大肠杆菌oriC一个起点；真核多起点复制提高效率。C正确：DNA Pol III具有聚合和校对双重功能。A错误：滞后链合成是不连续的，形成冈崎片段，每个片段需独立引物。B正确：端粒酶以自身RNA为模板在染色体末端合成端粒重复序列，解决了末端复制问题。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "DNA复制",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1443905332",
+  "tags": []
+ },
+ "BQ-replication-447b77d82a0d": {
+  "type": "mtf",
+  "question": "下列关于DNA复制的陈述，判断正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "滞后链的合成是连续的，引物酶只需合成一次RNA引物",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "端粒酶是一种逆转录酶，使用其自身携带的RNA模板来延伸染色体末端",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "原核生物DNA复制只有一个复制起点，而真核生物染色体上有多个复制起点",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "DNA聚合酶III是原核生物DNA复制的主要合成酶，具有5'→3'聚合酶活性和3'→5'外切核酸酶校对活性",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：大肠杆菌oriC一个起点；真核多起点复制提高效率。D正确：DNA Pol III具有聚合和校对双重功能。A错误：滞后链合成是不连续的，形成冈崎片段，每个片段需独立引物。B正确：端粒酶以自身RNA为模板在染色体末端合成端粒重复序列，解决了末端复制问题。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "DNA复制",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1443905332",
+  "tags": []
+ },
+ "BQ-replication-2aab6d1a30d4": {
+  "type": "mtf",
+  "question": "下列关于DNA复制的陈述，判断正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "端粒酶是一种逆转录酶，使用其自身携带的RNA模板来延伸染色体末端",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "DNA聚合酶III是原核生物DNA复制的主要合成酶，具有5'→3'聚合酶活性和3'→5'外切核酸酶校对活性",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "原核生物DNA复制只有一个复制起点，而真核生物染色体上有多个复制起点",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "滞后链的合成是连续的，引物酶只需合成一次RNA引物",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确：大肠杆菌oriC一个起点；真核多起点复制提高效率。B正确：DNA Pol III具有聚合和校对双重功能。D错误：滞后链合成是不连续的，形成冈崎片段，每个片段需独立引物。A正确：端粒酶以自身RNA为模板在染色体末端合成端粒重复序列，解决了末端复制问题。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "DNA复制",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1443905332",
+  "tags": []
+ },
+ "BQ-replication-6e8b8c64f63c": {
+  "type": "mtf",
+  "question": "下列关于DNA复制的陈述，判断正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "端粒酶是一种逆转录酶，使用其自身携带的RNA模板来延伸染色体末端",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "DNA聚合酶III是原核生物DNA复制的主要合成酶，具有5'→3'聚合酶活性和3'→5'外切核酸酶校对活性",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "滞后链的合成是连续的，引物酶只需合成一次RNA引物",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "原核生物DNA复制只有一个复制起点，而真核生物染色体上有多个复制起点",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：大肠杆菌oriC一个起点；真核多起点复制提高效率。B正确：DNA Pol III具有聚合和校对双重功能。C错误：滞后链合成是不连续的，形成冈崎片段，每个片段需独立引物。A正确：端粒酶以自身RNA为模板在染色体末端合成端粒重复序列，解决了末端复制问题。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "DNA复制",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1443905332",
+  "tags": []
+ },
+ "BQ-replication-49609d0a3ce2": {
+  "type": "mtf",
+  "question": "下列关于DNA复制的陈述，判断正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "端粒酶是一种逆转录酶，使用其自身携带的RNA模板来延伸染色体末端",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "原核生物DNA复制只有一个复制起点，而真核生物染色体上有多个复制起点",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "DNA聚合酶III是原核生物DNA复制的主要合成酶，具有5'→3'聚合酶活性和3'→5'外切核酸酶校对活性",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "滞后链的合成是连续的，引物酶只需合成一次RNA引物",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确：大肠杆菌oriC一个起点；真核多起点复制提高效率。C正确：DNA Pol III具有聚合和校对双重功能。D错误：滞后链合成是不连续的，形成冈崎片段，每个片段需独立引物。A正确：端粒酶以自身RNA为模板在染色体末端合成端粒重复序列，解决了末端复制问题。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "DNA复制",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1443905332",
+  "tags": []
+ },
+ "BQ-replication-23bfd52504c5": {
+  "type": "mtf",
+  "question": "下列关于DNA复制的陈述，判断正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "端粒酶是一种逆转录酶，使用其自身携带的RNA模板来延伸染色体末端",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "原核生物DNA复制只有一个复制起点，而真核生物染色体上有多个复制起点",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "滞后链的合成是连续的，引物酶只需合成一次RNA引物",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "DNA聚合酶III是原核生物DNA复制的主要合成酶，具有5'→3'聚合酶活性和3'→5'外切核酸酶校对活性",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：大肠杆菌oriC一个起点；真核多起点复制提高效率。D正确：DNA Pol III具有聚合和校对双重功能。C错误：滞后链合成是不连续的，形成冈崎片段，每个片段需独立引物。A正确：端粒酶以自身RNA为模板在染色体末端合成端粒重复序列，解决了末端复制问题。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "DNA复制",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1443905332",
+  "tags": []
+ },
+ "BQ-replication-559f5b38e2b5": {
+  "type": "mtf",
+  "question": "下列关于DNA复制的陈述，判断正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "端粒酶是一种逆转录酶，使用其自身携带的RNA模板来延伸染色体末端",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "滞后链的合成是连续的，引物酶只需合成一次RNA引物",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "DNA聚合酶III是原核生物DNA复制的主要合成酶，具有5'→3'聚合酶活性和3'→5'外切核酸酶校对活性",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "原核生物DNA复制只有一个复制起点，而真核生物染色体上有多个复制起点",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：大肠杆菌oriC一个起点；真核多起点复制提高效率。C正确：DNA Pol III具有聚合和校对双重功能。B错误：滞后链合成是不连续的，形成冈崎片段，每个片段需独立引物。A正确：端粒酶以自身RNA为模板在染色体末端合成端粒重复序列，解决了末端复制问题。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "DNA复制",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1443905332",
+  "tags": []
+ },
+ "BQ-replication-7b11b910cb23": {
+  "type": "mtf",
+  "question": "下列关于DNA复制的陈述，判断正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "端粒酶是一种逆转录酶，使用其自身携带的RNA模板来延伸染色体末端",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "滞后链的合成是连续的，引物酶只需合成一次RNA引物",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "原核生物DNA复制只有一个复制起点，而真核生物染色体上有多个复制起点",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "DNA聚合酶III是原核生物DNA复制的主要合成酶，具有5'→3'聚合酶活性和3'→5'外切核酸酶校对活性",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：大肠杆菌oriC一个起点；真核多起点复制提高效率。D正确：DNA Pol III具有聚合和校对双重功能。B错误：滞后链合成是不连续的，形成冈崎片段，每个片段需独立引物。A正确：端粒酶以自身RNA为模板在染色体末端合成端粒重复序列，解决了末端复制问题。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "DNA复制",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1443905332",
+  "tags": []
+ },
+ "BQ-replication-9d19e3f35f0b": {
+  "type": "mtf",
+  "question": "关于端粒与端粒酶，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "在大多数正常体细胞中，端粒酶活性很低或检测不到，端粒随细胞分裂逐渐缩短",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "端粒位于真核生物线性染色体的末端，由重复的DNA序列和端粒结合蛋白组成",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "端粒完全丧失不会导致染色体不稳定或细胞衰老",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "脊椎动物的端粒DNA重复序列为TTAGGG",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：端粒的结构。D正确：脊椎动物端粒序列保守。A正确：端粒缩短-衰老假说。C错误：端粒丢失导致染色体末端-末端融合、基因组不稳定、细胞衰老或凋亡。端粒功能障碍与衰老和多种疾病密切相关。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "端粒与端粒酶",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1579598574",
+  "tags": []
+ },
+ "BQ-replication-c3c2d0f69c02": {
+  "type": "mtf",
+  "question": "关于端粒与端粒酶，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "在大多数正常体细胞中，端粒酶活性很低或检测不到，端粒随细胞分裂逐渐缩短",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "端粒位于真核生物线性染色体的末端，由重复的DNA序列和端粒结合蛋白组成",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "脊椎动物的端粒DNA重复序列为TTAGGG",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "端粒完全丧失不会导致染色体不稳定或细胞衰老",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确：端粒的结构。C正确：脊椎动物端粒序列保守。A正确：端粒缩短-衰老假说。D错误：端粒丢失导致染色体末端-末端融合、基因组不稳定、细胞衰老或凋亡。端粒功能障碍与衰老和多种疾病密切相关。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "端粒与端粒酶",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1579598574",
+  "tags": []
+ },
+ "BQ-replication-70f860c7a24f": {
+  "type": "mtf",
+  "question": "关于端粒与端粒酶，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "在大多数正常体细胞中，端粒酶活性很低或检测不到，端粒随细胞分裂逐渐缩短",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "端粒完全丧失不会导致染色体不稳定或细胞衰老",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "端粒位于真核生物线性染色体的末端，由重复的DNA序列和端粒结合蛋白组成",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "脊椎动物的端粒DNA重复序列为TTAGGG",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：端粒的结构。D正确：脊椎动物端粒序列保守。A正确：端粒缩短-衰老假说。B错误：端粒丢失导致染色体末端-末端融合、基因组不稳定、细胞衰老或凋亡。端粒功能障碍与衰老和多种疾病密切相关。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "端粒与端粒酶",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1579598574",
+  "tags": []
+ },
+ "BQ-replication-dd3b4641e307": {
+  "type": "mtf",
+  "question": "关于端粒与端粒酶，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "在大多数正常体细胞中，端粒酶活性很低或检测不到，端粒随细胞分裂逐渐缩短",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "端粒完全丧失不会导致染色体不稳定或细胞衰老",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "脊椎动物的端粒DNA重复序列为TTAGGG",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "端粒位于真核生物线性染色体的末端，由重复的DNA序列和端粒结合蛋白组成",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：端粒的结构。C正确：脊椎动物端粒序列保守。A正确：端粒缩短-衰老假说。B错误：端粒丢失导致染色体末端-末端融合、基因组不稳定、细胞衰老或凋亡。端粒功能障碍与衰老和多种疾病密切相关。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "端粒与端粒酶",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1579598574",
+  "tags": []
+ },
+ "BQ-replication-29a3842674df": {
+  "type": "mtf",
+  "question": "关于端粒与端粒酶，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "在大多数正常体细胞中，端粒酶活性很低或检测不到，端粒随细胞分裂逐渐缩短",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "脊椎动物的端粒DNA重复序列为TTAGGG",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "端粒位于真核生物线性染色体的末端，由重复的DNA序列和端粒结合蛋白组成",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "端粒完全丧失不会导致染色体不稳定或细胞衰老",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确：端粒的结构。B正确：脊椎动物端粒序列保守。A正确：端粒缩短-衰老假说。D错误：端粒丢失导致染色体末端-末端融合、基因组不稳定、细胞衰老或凋亡。端粒功能障碍与衰老和多种疾病密切相关。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "端粒与端粒酶",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1579598574",
+  "tags": []
+ },
+ "BQ-replication-05c83cba0bd2": {
+  "type": "mtf",
+  "question": "关于端粒与端粒酶，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "在大多数正常体细胞中，端粒酶活性很低或检测不到，端粒随细胞分裂逐渐缩短",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "脊椎动物的端粒DNA重复序列为TTAGGG",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "端粒完全丧失不会导致染色体不稳定或细胞衰老",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "端粒位于真核生物线性染色体的末端，由重复的DNA序列和端粒结合蛋白组成",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：端粒的结构。B正确：脊椎动物端粒序列保守。A正确：端粒缩短-衰老假说。C错误：端粒丢失导致染色体末端-末端融合、基因组不稳定、细胞衰老或凋亡。端粒功能障碍与衰老和多种疾病密切相关。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "端粒与端粒酶",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1579598574",
+  "tags": []
+ },
+ "BQ-replication-2efe704e47d3": {
+  "type": "mtf",
+  "question": "关于端粒与端粒酶，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "端粒位于真核生物线性染色体的末端，由重复的DNA序列和端粒结合蛋白组成",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "在大多数正常体细胞中，端粒酶活性很低或检测不到，端粒随细胞分裂逐渐缩短",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "端粒完全丧失不会导致染色体不稳定或细胞衰老",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "脊椎动物的端粒DNA重复序列为TTAGGG",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：端粒的结构。D正确：脊椎动物端粒序列保守。B正确：端粒缩短-衰老假说。C错误：端粒丢失导致染色体末端-末端融合、基因组不稳定、细胞衰老或凋亡。端粒功能障碍与衰老和多种疾病密切相关。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "端粒与端粒酶",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1579598574",
+  "tags": []
+ },
+ "BQ-replication-00dd2b311bc6": {
+  "type": "mtf",
+  "question": "关于端粒与端粒酶，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "端粒位于真核生物线性染色体的末端，由重复的DNA序列和端粒结合蛋白组成",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "在大多数正常体细胞中，端粒酶活性很低或检测不到，端粒随细胞分裂逐渐缩短",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "脊椎动物的端粒DNA重复序列为TTAGGG",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "端粒完全丧失不会导致染色体不稳定或细胞衰老",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确：端粒的结构。C正确：脊椎动物端粒序列保守。B正确：端粒缩短-衰老假说。D错误：端粒丢失导致染色体末端-末端融合、基因组不稳定、细胞衰老或凋亡。端粒功能障碍与衰老和多种疾病密切相关。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "端粒与端粒酶",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1579598574",
+  "tags": []
+ },
+ "BQ-replication-db8935e34c5c": {
+  "type": "mtf",
+  "question": "关于端粒与端粒酶，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "端粒位于真核生物线性染色体的末端，由重复的DNA序列和端粒结合蛋白组成",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "端粒完全丧失不会导致染色体不稳定或细胞衰老",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "在大多数正常体细胞中，端粒酶活性很低或检测不到，端粒随细胞分裂逐渐缩短",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "脊椎动物的端粒DNA重复序列为TTAGGG",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：端粒的结构。D正确：脊椎动物端粒序列保守。C正确：端粒缩短-衰老假说。B错误：端粒丢失导致染色体末端-末端融合、基因组不稳定、细胞衰老或凋亡。端粒功能障碍与衰老和多种疾病密切相关。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "端粒与端粒酶",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1579598574",
+  "tags": []
+ },
+ "BQ-replication-fd95528b0d8f": {
+  "type": "mtf",
+  "question": "关于端粒与端粒酶，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "端粒位于真核生物线性染色体的末端，由重复的DNA序列和端粒结合蛋白组成",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "端粒完全丧失不会导致染色体不稳定或细胞衰老",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "脊椎动物的端粒DNA重复序列为TTAGGG",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "在大多数正常体细胞中，端粒酶活性很低或检测不到，端粒随细胞分裂逐渐缩短",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：端粒的结构。C正确：脊椎动物端粒序列保守。D正确：端粒缩短-衰老假说。B错误：端粒丢失导致染色体末端-末端融合、基因组不稳定、细胞衰老或凋亡。端粒功能障碍与衰老和多种疾病密切相关。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "端粒与端粒酶",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1579598574",
+  "tags": []
+ },
+ "BQ-replication-a5da21d3d67e": {
+  "type": "mtf",
+  "question": "关于端粒与端粒酶，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "端粒位于真核生物线性染色体的末端，由重复的DNA序列和端粒结合蛋白组成",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "脊椎动物的端粒DNA重复序列为TTAGGG",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "在大多数正常体细胞中，端粒酶活性很低或检测不到，端粒随细胞分裂逐渐缩短",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "端粒完全丧失不会导致染色体不稳定或细胞衰老",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确：端粒的结构。B正确：脊椎动物端粒序列保守。C正确：端粒缩短-衰老假说。D错误：端粒丢失导致染色体末端-末端融合、基因组不稳定、细胞衰老或凋亡。端粒功能障碍与衰老和多种疾病密切相关。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "端粒与端粒酶",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1579598574",
+  "tags": []
+ },
+ "BQ-replication-7085ec848f4d": {
+  "type": "mtf",
+  "question": "关于端粒与端粒酶，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "端粒位于真核生物线性染色体的末端，由重复的DNA序列和端粒结合蛋白组成",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "脊椎动物的端粒DNA重复序列为TTAGGG",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "端粒完全丧失不会导致染色体不稳定或细胞衰老",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "在大多数正常体细胞中，端粒酶活性很低或检测不到，端粒随细胞分裂逐渐缩短",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：端粒的结构。B正确：脊椎动物端粒序列保守。D正确：端粒缩短-衰老假说。C错误：端粒丢失导致染色体末端-末端融合、基因组不稳定、细胞衰老或凋亡。端粒功能障碍与衰老和多种疾病密切相关。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "端粒与端粒酶",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1579598574",
+  "tags": []
+ },
+ "BQ-replication-ad31d9a103d4": {
+  "type": "mtf",
+  "question": "关于端粒与端粒酶，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "端粒完全丧失不会导致染色体不稳定或细胞衰老",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "在大多数正常体细胞中，端粒酶活性很低或检测不到，端粒随细胞分裂逐渐缩短",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "端粒位于真核生物线性染色体的末端，由重复的DNA序列和端粒结合蛋白组成",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "脊椎动物的端粒DNA重复序列为TTAGGG",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：端粒的结构。D正确：脊椎动物端粒序列保守。B正确：端粒缩短-衰老假说。A错误：端粒丢失导致染色体末端-末端融合、基因组不稳定、细胞衰老或凋亡。端粒功能障碍与衰老和多种疾病密切相关。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "端粒与端粒酶",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1579598574",
+  "tags": []
+ },
+ "BQ-replication-1bc1234ea10c": {
+  "type": "mtf",
+  "question": "关于端粒与端粒酶，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "端粒完全丧失不会导致染色体不稳定或细胞衰老",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "在大多数正常体细胞中，端粒酶活性很低或检测不到，端粒随细胞分裂逐渐缩短",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "脊椎动物的端粒DNA重复序列为TTAGGG",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "端粒位于真核生物线性染色体的末端，由重复的DNA序列和端粒结合蛋白组成",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：端粒的结构。C正确：脊椎动物端粒序列保守。B正确：端粒缩短-衰老假说。A错误：端粒丢失导致染色体末端-末端融合、基因组不稳定、细胞衰老或凋亡。端粒功能障碍与衰老和多种疾病密切相关。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "端粒与端粒酶",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1579598574",
+  "tags": []
+ },
+ "BQ-replication-15c47badf7f1": {
+  "type": "mtf",
+  "question": "关于端粒与端粒酶，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "端粒完全丧失不会导致染色体不稳定或细胞衰老",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "端粒位于真核生物线性染色体的末端，由重复的DNA序列和端粒结合蛋白组成",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "在大多数正常体细胞中，端粒酶活性很低或检测不到，端粒随细胞分裂逐渐缩短",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "脊椎动物的端粒DNA重复序列为TTAGGG",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：端粒的结构。D正确：脊椎动物端粒序列保守。C正确：端粒缩短-衰老假说。A错误：端粒丢失导致染色体末端-末端融合、基因组不稳定、细胞衰老或凋亡。端粒功能障碍与衰老和多种疾病密切相关。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "端粒与端粒酶",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1579598574",
+  "tags": []
+ },
+ "BQ-replication-589152634b2e": {
+  "type": "mtf",
+  "question": "关于端粒与端粒酶，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "端粒完全丧失不会导致染色体不稳定或细胞衰老",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "端粒位于真核生物线性染色体的末端，由重复的DNA序列和端粒结合蛋白组成",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "脊椎动物的端粒DNA重复序列为TTAGGG",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "在大多数正常体细胞中，端粒酶活性很低或检测不到，端粒随细胞分裂逐渐缩短",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：端粒的结构。C正确：脊椎动物端粒序列保守。D正确：端粒缩短-衰老假说。A错误：端粒丢失导致染色体末端-末端融合、基因组不稳定、细胞衰老或凋亡。端粒功能障碍与衰老和多种疾病密切相关。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "端粒与端粒酶",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1579598574",
+  "tags": []
+ },
+ "BQ-replication-437ad88d8267": {
+  "type": "mtf",
+  "question": "关于端粒与端粒酶，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "端粒完全丧失不会导致染色体不稳定或细胞衰老",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "脊椎动物的端粒DNA重复序列为TTAGGG",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "在大多数正常体细胞中，端粒酶活性很低或检测不到，端粒随细胞分裂逐渐缩短",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "端粒位于真核生物线性染色体的末端，由重复的DNA序列和端粒结合蛋白组成",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：端粒的结构。B正确：脊椎动物端粒序列保守。C正确：端粒缩短-衰老假说。A错误：端粒丢失导致染色体末端-末端融合、基因组不稳定、细胞衰老或凋亡。端粒功能障碍与衰老和多种疾病密切相关。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "端粒与端粒酶",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1579598574",
+  "tags": []
+ },
+ "BQ-replication-9d0071360e25": {
+  "type": "mtf",
+  "question": "关于端粒与端粒酶，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "端粒完全丧失不会导致染色体不稳定或细胞衰老",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "脊椎动物的端粒DNA重复序列为TTAGGG",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "端粒位于真核生物线性染色体的末端，由重复的DNA序列和端粒结合蛋白组成",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "在大多数正常体细胞中，端粒酶活性很低或检测不到，端粒随细胞分裂逐渐缩短",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：端粒的结构。B正确：脊椎动物端粒序列保守。D正确：端粒缩短-衰老假说。A错误：端粒丢失导致染色体末端-末端融合、基因组不稳定、细胞衰老或凋亡。端粒功能障碍与衰老和多种疾病密切相关。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "端粒与端粒酶",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1579598574",
+  "tags": []
+ },
+ "BQ-replication-d427f4b3ee4d": {
+  "type": "mtf",
+  "question": "关于端粒与端粒酶，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "脊椎动物的端粒DNA重复序列为TTAGGG",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "在大多数正常体细胞中，端粒酶活性很低或检测不到，端粒随细胞分裂逐渐缩短",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "端粒位于真核生物线性染色体的末端，由重复的DNA序列和端粒结合蛋白组成",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "端粒完全丧失不会导致染色体不稳定或细胞衰老",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确：端粒的结构。A正确：脊椎动物端粒序列保守。B正确：端粒缩短-衰老假说。D错误：端粒丢失导致染色体末端-末端融合、基因组不稳定、细胞衰老或凋亡。端粒功能障碍与衰老和多种疾病密切相关。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "端粒与端粒酶",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1579598574",
+  "tags": []
+ },
+ "BQ-replication-5315918bc771": {
+  "type": "mtf",
+  "question": "关于端粒与端粒酶，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "脊椎动物的端粒DNA重复序列为TTAGGG",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "在大多数正常体细胞中，端粒酶活性很低或检测不到，端粒随细胞分裂逐渐缩短",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "端粒完全丧失不会导致染色体不稳定或细胞衰老",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "端粒位于真核生物线性染色体的末端，由重复的DNA序列和端粒结合蛋白组成",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：端粒的结构。A正确：脊椎动物端粒序列保守。B正确：端粒缩短-衰老假说。C错误：端粒丢失导致染色体末端-末端融合、基因组不稳定、细胞衰老或凋亡。端粒功能障碍与衰老和多种疾病密切相关。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "端粒与端粒酶",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1579598574",
+  "tags": []
+ },
+ "BQ-replication-85020cff7ccb": {
+  "type": "mtf",
+  "question": "关于端粒与端粒酶，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "脊椎动物的端粒DNA重复序列为TTAGGG",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "端粒位于真核生物线性染色体的末端，由重复的DNA序列和端粒结合蛋白组成",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "在大多数正常体细胞中，端粒酶活性很低或检测不到，端粒随细胞分裂逐渐缩短",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "端粒完全丧失不会导致染色体不稳定或细胞衰老",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确：端粒的结构。A正确：脊椎动物端粒序列保守。C正确：端粒缩短-衰老假说。D错误：端粒丢失导致染色体末端-末端融合、基因组不稳定、细胞衰老或凋亡。端粒功能障碍与衰老和多种疾病密切相关。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "端粒与端粒酶",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1579598574",
+  "tags": []
+ },
+ "BQ-replication-d4e89cb44008": {
+  "type": "mtf",
+  "question": "关于端粒与端粒酶，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "脊椎动物的端粒DNA重复序列为TTAGGG",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "端粒位于真核生物线性染色体的末端，由重复的DNA序列和端粒结合蛋白组成",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "端粒完全丧失不会导致染色体不稳定或细胞衰老",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "在大多数正常体细胞中，端粒酶活性很低或检测不到，端粒随细胞分裂逐渐缩短",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：端粒的结构。A正确：脊椎动物端粒序列保守。D正确：端粒缩短-衰老假说。C错误：端粒丢失导致染色体末端-末端融合、基因组不稳定、细胞衰老或凋亡。端粒功能障碍与衰老和多种疾病密切相关。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "端粒与端粒酶",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1579598574",
+  "tags": []
+ },
+ "BQ-replication-4e1d26b31d88": {
+  "type": "mtf",
+  "question": "关于端粒与端粒酶，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "脊椎动物的端粒DNA重复序列为TTAGGG",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "端粒完全丧失不会导致染色体不稳定或细胞衰老",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "在大多数正常体细胞中，端粒酶活性很低或检测不到，端粒随细胞分裂逐渐缩短",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "端粒位于真核生物线性染色体的末端，由重复的DNA序列和端粒结合蛋白组成",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：端粒的结构。A正确：脊椎动物端粒序列保守。C正确：端粒缩短-衰老假说。B错误：端粒丢失导致染色体末端-末端融合、基因组不稳定、细胞衰老或凋亡。端粒功能障碍与衰老和多种疾病密切相关。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "端粒与端粒酶",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1579598574",
+  "tags": []
+ },
+ "BQ-replication-d27725f9d43e": {
+  "type": "mtf",
+  "question": "关于端粒与端粒酶，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "脊椎动物的端粒DNA重复序列为TTAGGG",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "端粒完全丧失不会导致染色体不稳定或细胞衰老",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "端粒位于真核生物线性染色体的末端，由重复的DNA序列和端粒结合蛋白组成",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "在大多数正常体细胞中，端粒酶活性很低或检测不到，端粒随细胞分裂逐渐缩短",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：端粒的结构。A正确：脊椎动物端粒序列保守。D正确：端粒缩短-衰老假说。B错误：端粒丢失导致染色体末端-末端融合、基因组不稳定、细胞衰老或凋亡。端粒功能障碍与衰老和多种疾病密切相关。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "端粒与端粒酶",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1579598574",
+  "tags": []
+ },
+ "BQ-replication-be947c580fb7": {
+  "type": "mtf",
+  "question": "关于端粒酶的调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "端粒酶包含TERT(催化亚基)和TERC(RNA模板)两个核心组分",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "端粒酶在大多数体细胞中表达",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "端粒酶基因(TERT)启动子突变是多种癌症中常见的非编码突变",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "端粒酶的Shelterin复合物保护端粒末端不被识别为DNA断裂",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:端粒酶在大多数人体细胞中不表达或低表达(除干细胞和生殖细胞外),这是复制性衰老的分子基础。肿瘤细胞常重新激活端粒酶。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "端粒酶",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1584532758",
+  "tags": []
+ },
+ "BQ-replication-0b57e798b93e": {
+  "type": "mtf",
+  "question": "关于端粒酶的调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "端粒酶包含TERT(催化亚基)和TERC(RNA模板)两个核心组分",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "端粒酶在大多数体细胞中表达",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "端粒酶的Shelterin复合物保护端粒末端不被识别为DNA断裂",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "端粒酶基因(TERT)启动子突变是多种癌症中常见的非编码突变",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:端粒酶在大多数人体细胞中不表达或低表达(除干细胞和生殖细胞外),这是复制性衰老的分子基础。肿瘤细胞常重新激活端粒酶。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "端粒酶",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1584532758",
+  "tags": []
+ },
+ "BQ-replication-361666e9956b": {
+  "type": "mtf",
+  "question": "关于端粒酶的调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "端粒酶包含TERT(催化亚基)和TERC(RNA模板)两个核心组分",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "端粒酶基因(TERT)启动子突变是多种癌症中常见的非编码突变",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "端粒酶在大多数体细胞中表达",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "端粒酶的Shelterin复合物保护端粒末端不被识别为DNA断裂",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:端粒酶在大多数人体细胞中不表达或低表达(除干细胞和生殖细胞外),这是复制性衰老的分子基础。肿瘤细胞常重新激活端粒酶。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "端粒酶",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1584532758",
+  "tags": []
+ },
+ "BQ-replication-ffc5d1976a9d": {
+  "type": "mtf",
+  "question": "关于端粒酶的调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "端粒酶包含TERT(催化亚基)和TERC(RNA模板)两个核心组分",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "端粒酶基因(TERT)启动子突变是多种癌症中常见的非编码突变",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "端粒酶的Shelterin复合物保护端粒末端不被识别为DNA断裂",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "端粒酶在大多数体细胞中表达",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:端粒酶在大多数人体细胞中不表达或低表达(除干细胞和生殖细胞外),这是复制性衰老的分子基础。肿瘤细胞常重新激活端粒酶。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "端粒酶",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1584532758",
+  "tags": []
+ },
+ "BQ-replication-7a025141b1d0": {
+  "type": "mtf",
+  "question": "关于端粒酶的调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "端粒酶包含TERT(催化亚基)和TERC(RNA模板)两个核心组分",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "端粒酶的Shelterin复合物保护端粒末端不被识别为DNA断裂",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "端粒酶在大多数体细胞中表达",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "端粒酶基因(TERT)启动子突变是多种癌症中常见的非编码突变",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:端粒酶在大多数人体细胞中不表达或低表达(除干细胞和生殖细胞外),这是复制性衰老的分子基础。肿瘤细胞常重新激活端粒酶。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "端粒酶",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1584532758",
+  "tags": []
+ },
+ "BQ-replication-3b4de34091cc": {
+  "type": "mtf",
+  "question": "关于端粒酶的调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "端粒酶包含TERT(催化亚基)和TERC(RNA模板)两个核心组分",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "端粒酶的Shelterin复合物保护端粒末端不被识别为DNA断裂",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "端粒酶基因(TERT)启动子突变是多种癌症中常见的非编码突变",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "端粒酶在大多数体细胞中表达",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:端粒酶在大多数人体细胞中不表达或低表达(除干细胞和生殖细胞外),这是复制性衰老的分子基础。肿瘤细胞常重新激活端粒酶。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "端粒酶",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1584532758",
+  "tags": []
+ },
+ "BQ-replication-60b573004d67": {
+  "type": "mtf",
+  "question": "关于端粒酶的调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "端粒酶在大多数体细胞中表达",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "端粒酶包含TERT(催化亚基)和TERC(RNA模板)两个核心组分",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "端粒酶基因(TERT)启动子突变是多种癌症中常见的非编码突变",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "端粒酶的Shelterin复合物保护端粒末端不被识别为DNA断裂",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:端粒酶在大多数人体细胞中不表达或低表达(除干细胞和生殖细胞外),这是复制性衰老的分子基础。肿瘤细胞常重新激活端粒酶。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "端粒酶",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1584532758",
+  "tags": []
+ },
+ "BQ-replication-34f719ad1624": {
+  "type": "mtf",
+  "question": "关于端粒酶的调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "端粒酶在大多数体细胞中表达",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "端粒酶包含TERT(催化亚基)和TERC(RNA模板)两个核心组分",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "端粒酶的Shelterin复合物保护端粒末端不被识别为DNA断裂",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "端粒酶基因(TERT)启动子突变是多种癌症中常见的非编码突变",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:端粒酶在大多数人体细胞中不表达或低表达(除干细胞和生殖细胞外),这是复制性衰老的分子基础。肿瘤细胞常重新激活端粒酶。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "端粒酶",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1584532758",
+  "tags": []
+ },
+ "BQ-replication-d86ca4d13f27": {
+  "type": "mtf",
+  "question": "关于端粒酶的调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "端粒酶在大多数体细胞中表达",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "端粒酶基因(TERT)启动子突变是多种癌症中常见的非编码突变",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "端粒酶包含TERT(催化亚基)和TERC(RNA模板)两个核心组分",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "端粒酶的Shelterin复合物保护端粒末端不被识别为DNA断裂",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:端粒酶在大多数人体细胞中不表达或低表达(除干细胞和生殖细胞外),这是复制性衰老的分子基础。肿瘤细胞常重新激活端粒酶。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "端粒酶",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1584532758",
+  "tags": []
+ },
+ "BQ-replication-48b023f7bb00": {
+  "type": "mtf",
+  "question": "关于端粒酶的调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "端粒酶在大多数体细胞中表达",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "端粒酶基因(TERT)启动子突变是多种癌症中常见的非编码突变",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "端粒酶的Shelterin复合物保护端粒末端不被识别为DNA断裂",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "端粒酶包含TERT(催化亚基)和TERC(RNA模板)两个核心组分",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:端粒酶在大多数人体细胞中不表达或低表达(除干细胞和生殖细胞外),这是复制性衰老的分子基础。肿瘤细胞常重新激活端粒酶。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "端粒酶",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1584532758",
+  "tags": []
+ },
+ "BQ-replication-85ff640fba05": {
+  "type": "mtf",
+  "question": "关于端粒酶的调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "端粒酶在大多数体细胞中表达",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "端粒酶的Shelterin复合物保护端粒末端不被识别为DNA断裂",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "端粒酶包含TERT(催化亚基)和TERC(RNA模板)两个核心组分",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "端粒酶基因(TERT)启动子突变是多种癌症中常见的非编码突变",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:端粒酶在大多数人体细胞中不表达或低表达(除干细胞和生殖细胞外),这是复制性衰老的分子基础。肿瘤细胞常重新激活端粒酶。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "端粒酶",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1584532758",
+  "tags": []
+ },
+ "BQ-replication-8275eb50c0fa": {
+  "type": "mtf",
+  "question": "关于端粒酶的调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "端粒酶在大多数体细胞中表达",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "端粒酶的Shelterin复合物保护端粒末端不被识别为DNA断裂",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "端粒酶基因(TERT)启动子突变是多种癌症中常见的非编码突变",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "端粒酶包含TERT(催化亚基)和TERC(RNA模板)两个核心组分",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:端粒酶在大多数人体细胞中不表达或低表达(除干细胞和生殖细胞外),这是复制性衰老的分子基础。肿瘤细胞常重新激活端粒酶。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "端粒酶",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1584532758",
+  "tags": []
+ },
+ "BQ-replication-60d658fe9928": {
+  "type": "mtf",
+  "question": "关于端粒酶的调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "端粒酶基因(TERT)启动子突变是多种癌症中常见的非编码突变",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "端粒酶包含TERT(催化亚基)和TERC(RNA模板)两个核心组分",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "端粒酶在大多数体细胞中表达",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "端粒酶的Shelterin复合物保护端粒末端不被识别为DNA断裂",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:端粒酶在大多数人体细胞中不表达或低表达(除干细胞和生殖细胞外),这是复制性衰老的分子基础。肿瘤细胞常重新激活端粒酶。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "端粒酶",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1584532758",
+  "tags": []
+ },
+ "BQ-replication-831cfaffc2bf": {
+  "type": "mtf",
+  "question": "关于端粒酶的调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "端粒酶基因(TERT)启动子突变是多种癌症中常见的非编码突变",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "端粒酶包含TERT(催化亚基)和TERC(RNA模板)两个核心组分",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "端粒酶的Shelterin复合物保护端粒末端不被识别为DNA断裂",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "端粒酶在大多数体细胞中表达",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:端粒酶在大多数人体细胞中不表达或低表达(除干细胞和生殖细胞外),这是复制性衰老的分子基础。肿瘤细胞常重新激活端粒酶。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "端粒酶",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1584532758",
+  "tags": []
+ },
+ "BQ-replication-d708395d9969": {
+  "type": "mtf",
+  "question": "关于端粒酶的调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "端粒酶基因(TERT)启动子突变是多种癌症中常见的非编码突变",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "端粒酶在大多数体细胞中表达",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "端粒酶包含TERT(催化亚基)和TERC(RNA模板)两个核心组分",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "端粒酶的Shelterin复合物保护端粒末端不被识别为DNA断裂",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:端粒酶在大多数人体细胞中不表达或低表达(除干细胞和生殖细胞外),这是复制性衰老的分子基础。肿瘤细胞常重新激活端粒酶。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "端粒酶",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1584532758",
+  "tags": []
+ },
+ "BQ-replication-07044f696de9": {
+  "type": "mtf",
+  "question": "关于端粒酶的调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "端粒酶基因(TERT)启动子突变是多种癌症中常见的非编码突变",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "端粒酶在大多数体细胞中表达",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "端粒酶的Shelterin复合物保护端粒末端不被识别为DNA断裂",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "端粒酶包含TERT(催化亚基)和TERC(RNA模板)两个核心组分",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:端粒酶在大多数人体细胞中不表达或低表达(除干细胞和生殖细胞外),这是复制性衰老的分子基础。肿瘤细胞常重新激活端粒酶。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "端粒酶",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1584532758",
+  "tags": []
+ },
+ "BQ-replication-d8917dd1aa10": {
+  "type": "mtf",
+  "question": "关于端粒酶的调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "端粒酶基因(TERT)启动子突变是多种癌症中常见的非编码突变",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "端粒酶的Shelterin复合物保护端粒末端不被识别为DNA断裂",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "端粒酶包含TERT(催化亚基)和TERC(RNA模板)两个核心组分",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "端粒酶在大多数体细胞中表达",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:端粒酶在大多数人体细胞中不表达或低表达(除干细胞和生殖细胞外),这是复制性衰老的分子基础。肿瘤细胞常重新激活端粒酶。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "端粒酶",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1584532758",
+  "tags": []
+ },
+ "BQ-replication-72ee27764b61": {
+  "type": "mtf",
+  "question": "关于端粒酶的调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "端粒酶基因(TERT)启动子突变是多种癌症中常见的非编码突变",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "端粒酶的Shelterin复合物保护端粒末端不被识别为DNA断裂",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "端粒酶在大多数体细胞中表达",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "端粒酶包含TERT(催化亚基)和TERC(RNA模板)两个核心组分",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:端粒酶在大多数人体细胞中不表达或低表达(除干细胞和生殖细胞外),这是复制性衰老的分子基础。肿瘤细胞常重新激活端粒酶。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "端粒酶",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1584532758",
+  "tags": []
+ },
+ "BQ-replication-024889f0420a": {
+  "type": "mtf",
+  "question": "关于端粒酶的调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "端粒酶的Shelterin复合物保护端粒末端不被识别为DNA断裂",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "端粒酶包含TERT(催化亚基)和TERC(RNA模板)两个核心组分",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "端粒酶在大多数体细胞中表达",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "端粒酶基因(TERT)启动子突变是多种癌症中常见的非编码突变",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:端粒酶在大多数人体细胞中不表达或低表达(除干细胞和生殖细胞外),这是复制性衰老的分子基础。肿瘤细胞常重新激活端粒酶。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "端粒酶",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1584532758",
+  "tags": []
+ },
+ "BQ-replication-05832d6fe4dc": {
+  "type": "mtf",
+  "question": "关于端粒酶的调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "端粒酶的Shelterin复合物保护端粒末端不被识别为DNA断裂",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "端粒酶包含TERT(催化亚基)和TERC(RNA模板)两个核心组分",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "端粒酶基因(TERT)启动子突变是多种癌症中常见的非编码突变",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "端粒酶在大多数体细胞中表达",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:端粒酶在大多数人体细胞中不表达或低表达(除干细胞和生殖细胞外),这是复制性衰老的分子基础。肿瘤细胞常重新激活端粒酶。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "端粒酶",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1584532758",
+  "tags": []
+ },
+ "BQ-replication-eb7ca4368e9b": {
+  "type": "mtf",
+  "question": "关于端粒酶的调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "端粒酶的Shelterin复合物保护端粒末端不被识别为DNA断裂",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "端粒酶在大多数体细胞中表达",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "端粒酶包含TERT(催化亚基)和TERC(RNA模板)两个核心组分",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "端粒酶基因(TERT)启动子突变是多种癌症中常见的非编码突变",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:端粒酶在大多数人体细胞中不表达或低表达(除干细胞和生殖细胞外),这是复制性衰老的分子基础。肿瘤细胞常重新激活端粒酶。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "端粒酶",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1584532758",
+  "tags": []
+ },
+ "BQ-replication-94e4e65e9e56": {
+  "type": "mtf",
+  "question": "关于端粒酶的调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "端粒酶的Shelterin复合物保护端粒末端不被识别为DNA断裂",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "端粒酶在大多数体细胞中表达",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "端粒酶基因(TERT)启动子突变是多种癌症中常见的非编码突变",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "端粒酶包含TERT(催化亚基)和TERC(RNA模板)两个核心组分",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:端粒酶在大多数人体细胞中不表达或低表达(除干细胞和生殖细胞外),这是复制性衰老的分子基础。肿瘤细胞常重新激活端粒酶。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "端粒酶",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1584532758",
+  "tags": []
+ },
+ "BQ-replication-487bee92cb03": {
+  "type": "mtf",
+  "question": "关于端粒酶的调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "端粒酶的Shelterin复合物保护端粒末端不被识别为DNA断裂",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "端粒酶基因(TERT)启动子突变是多种癌症中常见的非编码突变",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "端粒酶包含TERT(催化亚基)和TERC(RNA模板)两个核心组分",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "端粒酶在大多数体细胞中表达",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:端粒酶在大多数人体细胞中不表达或低表达(除干细胞和生殖细胞外),这是复制性衰老的分子基础。肿瘤细胞常重新激活端粒酶。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "端粒酶",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1584532758",
+  "tags": []
+ },
+ "BQ-replication-b33c2d21817c": {
+  "type": "mtf",
+  "question": "关于端粒酶的调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "端粒酶的Shelterin复合物保护端粒末端不被识别为DNA断裂",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "端粒酶基因(TERT)启动子突变是多种癌症中常见的非编码突变",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "端粒酶在大多数体细胞中表达",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "端粒酶包含TERT(催化亚基)和TERC(RNA模板)两个核心组分",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:端粒酶在大多数人体细胞中不表达或低表达(除干细胞和生殖细胞外),这是复制性衰老的分子基础。肿瘤细胞常重新激活端粒酶。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "端粒酶",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1584532758",
+  "tags": []
+ },
+ "BQ-replication-82a824d702c4": {
+  "type": "mtf",
+  "question": "关于细胞衰老与端粒的关系，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "Hayflick极限是指正常人体细胞在体外培养中分裂约50-70代后停止分裂的现象",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "端粒缩短被认为是细胞复制性衰老的分子钟机制",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "端粒酶在绝大多数肿瘤细胞中被重新激活，使肿瘤细胞获得无限增殖能力",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "细胞衰老等同于细胞凋亡",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确:Hayflick极限。B正确:端粒假说。C正确:端粒酶激活是肿瘤的标志之一。D错误:衰老细胞进入不可逆生长停滞但保持代谢活性，不立即死亡。衰老细胞可分泌SASP因子影响微环境。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "细胞衰老",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1439923049",
+  "tags": []
+ },
+ "BQ-replication-3af28ff56fd9": {
+  "type": "mtf",
+  "question": "关于细胞衰老与端粒的关系，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "Hayflick极限是指正常人体细胞在体外培养中分裂约50-70代后停止分裂的现象",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "端粒缩短被认为是细胞复制性衰老的分子钟机制",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "细胞衰老等同于细胞凋亡",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "端粒酶在绝大多数肿瘤细胞中被重新激活，使肿瘤细胞获得无限增殖能力",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确:Hayflick极限。B正确:端粒假说。D正确:端粒酶激活是肿瘤的标志之一。C错误:衰老细胞进入不可逆生长停滞但保持代谢活性，不立即死亡。衰老细胞可分泌SASP因子影响微环境。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "细胞衰老",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1439923049",
+  "tags": []
+ },
+ "BQ-replication-e7f3f2ac0d08": {
+  "type": "mtf",
+  "question": "关于细胞衰老与端粒的关系，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "Hayflick极限是指正常人体细胞在体外培养中分裂约50-70代后停止分裂的现象",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "端粒酶在绝大多数肿瘤细胞中被重新激活，使肿瘤细胞获得无限增殖能力",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "端粒缩短被认为是细胞复制性衰老的分子钟机制",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "细胞衰老等同于细胞凋亡",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确:Hayflick极限。C正确:端粒假说。B正确:端粒酶激活是肿瘤的标志之一。D错误:衰老细胞进入不可逆生长停滞但保持代谢活性，不立即死亡。衰老细胞可分泌SASP因子影响微环境。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "细胞衰老",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1439923049",
+  "tags": []
+ },
+ "BQ-replication-fbdf074e5eee": {
+  "type": "mtf",
+  "question": "关于细胞衰老与端粒的关系，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "Hayflick极限是指正常人体细胞在体外培养中分裂约50-70代后停止分裂的现象",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "端粒酶在绝大多数肿瘤细胞中被重新激活，使肿瘤细胞获得无限增殖能力",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "细胞衰老等同于细胞凋亡",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "端粒缩短被认为是细胞复制性衰老的分子钟机制",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确:Hayflick极限。D正确:端粒假说。B正确:端粒酶激活是肿瘤的标志之一。C错误:衰老细胞进入不可逆生长停滞但保持代谢活性，不立即死亡。衰老细胞可分泌SASP因子影响微环境。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "细胞衰老",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1439923049",
+  "tags": []
+ },
+ "BQ-replication-ac702d8dbff8": {
+  "type": "mtf",
+  "question": "关于细胞衰老与端粒的关系，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "Hayflick极限是指正常人体细胞在体外培养中分裂约50-70代后停止分裂的现象",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "细胞衰老等同于细胞凋亡",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "端粒缩短被认为是细胞复制性衰老的分子钟机制",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "端粒酶在绝大多数肿瘤细胞中被重新激活，使肿瘤细胞获得无限增殖能力",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确:Hayflick极限。C正确:端粒假说。D正确:端粒酶激活是肿瘤的标志之一。B错误:衰老细胞进入不可逆生长停滞但保持代谢活性，不立即死亡。衰老细胞可分泌SASP因子影响微环境。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "细胞衰老",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1439923049",
+  "tags": []
+ },
+ "BQ-replication-6cc79cca8102": {
+  "type": "mtf",
+  "question": "关于细胞衰老与端粒的关系，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "Hayflick极限是指正常人体细胞在体外培养中分裂约50-70代后停止分裂的现象",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "细胞衰老等同于细胞凋亡",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "端粒酶在绝大多数肿瘤细胞中被重新激活，使肿瘤细胞获得无限增殖能力",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "端粒缩短被认为是细胞复制性衰老的分子钟机制",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确:Hayflick极限。D正确:端粒假说。C正确:端粒酶激活是肿瘤的标志之一。B错误:衰老细胞进入不可逆生长停滞但保持代谢活性，不立即死亡。衰老细胞可分泌SASP因子影响微环境。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "细胞衰老",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1439923049",
+  "tags": []
+ },
+ "BQ-replication-a4c12557ed8d": {
+  "type": "mtf",
+  "question": "关于细胞衰老与端粒的关系，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "端粒缩短被认为是细胞复制性衰老的分子钟机制",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "Hayflick极限是指正常人体细胞在体外培养中分裂约50-70代后停止分裂的现象",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "端粒酶在绝大多数肿瘤细胞中被重新激活，使肿瘤细胞获得无限增殖能力",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "细胞衰老等同于细胞凋亡",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确:Hayflick极限。A正确:端粒假说。C正确:端粒酶激活是肿瘤的标志之一。D错误:衰老细胞进入不可逆生长停滞但保持代谢活性，不立即死亡。衰老细胞可分泌SASP因子影响微环境。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "细胞衰老",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1439923049",
+  "tags": []
+ },
+ "BQ-replication-7f0924741c02": {
+  "type": "mtf",
+  "question": "关于细胞衰老与端粒的关系，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "端粒缩短被认为是细胞复制性衰老的分子钟机制",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "Hayflick极限是指正常人体细胞在体外培养中分裂约50-70代后停止分裂的现象",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "细胞衰老等同于细胞凋亡",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "端粒酶在绝大多数肿瘤细胞中被重新激活，使肿瘤细胞获得无限增殖能力",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确:Hayflick极限。A正确:端粒假说。D正确:端粒酶激活是肿瘤的标志之一。C错误:衰老细胞进入不可逆生长停滞但保持代谢活性，不立即死亡。衰老细胞可分泌SASP因子影响微环境。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "细胞衰老",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1439923049",
+  "tags": []
+ },
+ "BQ-replication-7e98c2e2bc11": {
+  "type": "mtf",
+  "question": "关于细胞衰老与端粒的关系，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "端粒缩短被认为是细胞复制性衰老的分子钟机制",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "端粒酶在绝大多数肿瘤细胞中被重新激活，使肿瘤细胞获得无限增殖能力",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "Hayflick极限是指正常人体细胞在体外培养中分裂约50-70代后停止分裂的现象",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "细胞衰老等同于细胞凋亡",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确:Hayflick极限。A正确:端粒假说。B正确:端粒酶激活是肿瘤的标志之一。D错误:衰老细胞进入不可逆生长停滞但保持代谢活性，不立即死亡。衰老细胞可分泌SASP因子影响微环境。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "细胞衰老",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1439923049",
+  "tags": []
+ },
+ "BQ-replication-85d094c35669": {
+  "type": "mtf",
+  "question": "关于细胞衰老与端粒的关系，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "端粒缩短被认为是细胞复制性衰老的分子钟机制",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "端粒酶在绝大多数肿瘤细胞中被重新激活，使肿瘤细胞获得无限增殖能力",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "细胞衰老等同于细胞凋亡",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "Hayflick极限是指正常人体细胞在体外培养中分裂约50-70代后停止分裂的现象",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确:Hayflick极限。A正确:端粒假说。B正确:端粒酶激活是肿瘤的标志之一。C错误:衰老细胞进入不可逆生长停滞但保持代谢活性，不立即死亡。衰老细胞可分泌SASP因子影响微环境。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "细胞衰老",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1439923049",
+  "tags": []
+ },
+ "BQ-replication-abf404da6892": {
+  "type": "mtf",
+  "question": "关于细胞衰老与端粒的关系，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "端粒缩短被认为是细胞复制性衰老的分子钟机制",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "细胞衰老等同于细胞凋亡",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "Hayflick极限是指正常人体细胞在体外培养中分裂约50-70代后停止分裂的现象",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "端粒酶在绝大多数肿瘤细胞中被重新激活，使肿瘤细胞获得无限增殖能力",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确:Hayflick极限。A正确:端粒假说。D正确:端粒酶激活是肿瘤的标志之一。B错误:衰老细胞进入不可逆生长停滞但保持代谢活性，不立即死亡。衰老细胞可分泌SASP因子影响微环境。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "细胞衰老",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1439923049",
+  "tags": []
+ },
+ "BQ-replication-667a0e83a507": {
+  "type": "mtf",
+  "question": "关于细胞衰老与端粒的关系，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "端粒缩短被认为是细胞复制性衰老的分子钟机制",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "细胞衰老等同于细胞凋亡",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "端粒酶在绝大多数肿瘤细胞中被重新激活，使肿瘤细胞获得无限增殖能力",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "Hayflick极限是指正常人体细胞在体外培养中分裂约50-70代后停止分裂的现象",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确:Hayflick极限。A正确:端粒假说。C正确:端粒酶激活是肿瘤的标志之一。B错误:衰老细胞进入不可逆生长停滞但保持代谢活性，不立即死亡。衰老细胞可分泌SASP因子影响微环境。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "细胞衰老",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1439923049",
+  "tags": []
+ },
+ "BQ-replication-39c63ecef503": {
+  "type": "mtf",
+  "question": "关于细胞衰老与端粒的关系，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "端粒酶在绝大多数肿瘤细胞中被重新激活，使肿瘤细胞获得无限增殖能力",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "Hayflick极限是指正常人体细胞在体外培养中分裂约50-70代后停止分裂的现象",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "端粒缩短被认为是细胞复制性衰老的分子钟机制",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "细胞衰老等同于细胞凋亡",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确:Hayflick极限。C正确:端粒假说。A正确:端粒酶激活是肿瘤的标志之一。D错误:衰老细胞进入不可逆生长停滞但保持代谢活性，不立即死亡。衰老细胞可分泌SASP因子影响微环境。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "细胞衰老",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1439923049",
+  "tags": []
+ },
+ "BQ-replication-5bea010136e8": {
+  "type": "mtf",
+  "question": "关于细胞衰老与端粒的关系，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "端粒酶在绝大多数肿瘤细胞中被重新激活，使肿瘤细胞获得无限增殖能力",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "Hayflick极限是指正常人体细胞在体外培养中分裂约50-70代后停止分裂的现象",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "细胞衰老等同于细胞凋亡",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "端粒缩短被认为是细胞复制性衰老的分子钟机制",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确:Hayflick极限。D正确:端粒假说。A正确:端粒酶激活是肿瘤的标志之一。C错误:衰老细胞进入不可逆生长停滞但保持代谢活性，不立即死亡。衰老细胞可分泌SASP因子影响微环境。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "细胞衰老",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1439923049",
+  "tags": []
+ },
+ "BQ-replication-38b51054e487": {
+  "type": "mtf",
+  "question": "关于细胞衰老与端粒的关系，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "端粒酶在绝大多数肿瘤细胞中被重新激活，使肿瘤细胞获得无限增殖能力",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "端粒缩短被认为是细胞复制性衰老的分子钟机制",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "Hayflick极限是指正常人体细胞在体外培养中分裂约50-70代后停止分裂的现象",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "细胞衰老等同于细胞凋亡",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确:Hayflick极限。B正确:端粒假说。A正确:端粒酶激活是肿瘤的标志之一。D错误:衰老细胞进入不可逆生长停滞但保持代谢活性，不立即死亡。衰老细胞可分泌SASP因子影响微环境。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "细胞衰老",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1439923049",
+  "tags": []
+ },
+ "BQ-replication-00a6608076a8": {
+  "type": "mtf",
+  "question": "关于细胞衰老与端粒的关系，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "端粒酶在绝大多数肿瘤细胞中被重新激活，使肿瘤细胞获得无限增殖能力",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "端粒缩短被认为是细胞复制性衰老的分子钟机制",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "细胞衰老等同于细胞凋亡",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "Hayflick极限是指正常人体细胞在体外培养中分裂约50-70代后停止分裂的现象",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确:Hayflick极限。B正确:端粒假说。A正确:端粒酶激活是肿瘤的标志之一。C错误:衰老细胞进入不可逆生长停滞但保持代谢活性，不立即死亡。衰老细胞可分泌SASP因子影响微环境。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "细胞衰老",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1439923049",
+  "tags": []
+ },
+ "BQ-replication-512afb84112b": {
+  "type": "mtf",
+  "question": "关于细胞衰老与端粒的关系，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "端粒酶在绝大多数肿瘤细胞中被重新激活，使肿瘤细胞获得无限增殖能力",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "细胞衰老等同于细胞凋亡",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "Hayflick极限是指正常人体细胞在体外培养中分裂约50-70代后停止分裂的现象",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "端粒缩短被认为是细胞复制性衰老的分子钟机制",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确:Hayflick极限。D正确:端粒假说。A正确:端粒酶激活是肿瘤的标志之一。B错误:衰老细胞进入不可逆生长停滞但保持代谢活性，不立即死亡。衰老细胞可分泌SASP因子影响微环境。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "细胞衰老",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1439923049",
+  "tags": []
+ },
+ "BQ-replication-96fb96dc03e2": {
+  "type": "mtf",
+  "question": "关于细胞衰老与端粒的关系，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "端粒酶在绝大多数肿瘤细胞中被重新激活，使肿瘤细胞获得无限增殖能力",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "细胞衰老等同于细胞凋亡",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "端粒缩短被认为是细胞复制性衰老的分子钟机制",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "Hayflick极限是指正常人体细胞在体外培养中分裂约50-70代后停止分裂的现象",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确:Hayflick极限。C正确:端粒假说。A正确:端粒酶激活是肿瘤的标志之一。B错误:衰老细胞进入不可逆生长停滞但保持代谢活性，不立即死亡。衰老细胞可分泌SASP因子影响微环境。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "细胞衰老",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1439923049",
+  "tags": []
+ },
+ "BQ-replication-52ff6d1f0fbf": {
+  "type": "mtf",
+  "question": "关于细胞衰老与端粒的关系，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "细胞衰老等同于细胞凋亡",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "Hayflick极限是指正常人体细胞在体外培养中分裂约50-70代后停止分裂的现象",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "端粒缩短被认为是细胞复制性衰老的分子钟机制",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "端粒酶在绝大多数肿瘤细胞中被重新激活，使肿瘤细胞获得无限增殖能力",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确:Hayflick极限。C正确:端粒假说。D正确:端粒酶激活是肿瘤的标志之一。A错误:衰老细胞进入不可逆生长停滞但保持代谢活性，不立即死亡。衰老细胞可分泌SASP因子影响微环境。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "细胞衰老",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1439923049",
+  "tags": []
+ },
+ "BQ-replication-e78845dc911b": {
+  "type": "mtf",
+  "question": "关于细胞衰老与端粒的关系，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "细胞衰老等同于细胞凋亡",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "Hayflick极限是指正常人体细胞在体外培养中分裂约50-70代后停止分裂的现象",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "端粒酶在绝大多数肿瘤细胞中被重新激活，使肿瘤细胞获得无限增殖能力",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "端粒缩短被认为是细胞复制性衰老的分子钟机制",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确:Hayflick极限。D正确:端粒假说。C正确:端粒酶激活是肿瘤的标志之一。A错误:衰老细胞进入不可逆生长停滞但保持代谢活性，不立即死亡。衰老细胞可分泌SASP因子影响微环境。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "细胞衰老",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1439923049",
+  "tags": []
+ },
+ "BQ-replication-5b8eb5999e82": {
+  "type": "mtf",
+  "question": "关于细胞衰老与端粒的关系，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "细胞衰老等同于细胞凋亡",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "端粒缩短被认为是细胞复制性衰老的分子钟机制",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "Hayflick极限是指正常人体细胞在体外培养中分裂约50-70代后停止分裂的现象",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "端粒酶在绝大多数肿瘤细胞中被重新激活，使肿瘤细胞获得无限增殖能力",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确:Hayflick极限。B正确:端粒假说。D正确:端粒酶激活是肿瘤的标志之一。A错误:衰老细胞进入不可逆生长停滞但保持代谢活性，不立即死亡。衰老细胞可分泌SASP因子影响微环境。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "细胞衰老",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1439923049",
+  "tags": []
+ },
+ "BQ-replication-1fe31882f4aa": {
+  "type": "mtf",
+  "question": "关于细胞衰老与端粒的关系，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "细胞衰老等同于细胞凋亡",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "端粒缩短被认为是细胞复制性衰老的分子钟机制",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "端粒酶在绝大多数肿瘤细胞中被重新激活，使肿瘤细胞获得无限增殖能力",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "Hayflick极限是指正常人体细胞在体外培养中分裂约50-70代后停止分裂的现象",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确:Hayflick极限。B正确:端粒假说。C正确:端粒酶激活是肿瘤的标志之一。A错误:衰老细胞进入不可逆生长停滞但保持代谢活性，不立即死亡。衰老细胞可分泌SASP因子影响微环境。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "细胞衰老",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1439923049",
+  "tags": []
+ },
+ "BQ-replication-92dcf32c339d": {
+  "type": "mtf",
+  "question": "关于细胞衰老与端粒的关系，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "细胞衰老等同于细胞凋亡",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "端粒酶在绝大多数肿瘤细胞中被重新激活，使肿瘤细胞获得无限增殖能力",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "Hayflick极限是指正常人体细胞在体外培养中分裂约50-70代后停止分裂的现象",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "端粒缩短被认为是细胞复制性衰老的分子钟机制",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确:Hayflick极限。D正确:端粒假说。B正确:端粒酶激活是肿瘤的标志之一。A错误:衰老细胞进入不可逆生长停滞但保持代谢活性，不立即死亡。衰老细胞可分泌SASP因子影响微环境。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "细胞衰老",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1439923049",
+  "tags": []
+ },
+ "BQ-replication-9c1b08da270b": {
+  "type": "mtf",
+  "question": "关于细胞衰老与端粒的关系，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "细胞衰老等同于细胞凋亡",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "端粒酶在绝大多数肿瘤细胞中被重新激活，使肿瘤细胞获得无限增殖能力",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "端粒缩短被认为是细胞复制性衰老的分子钟机制",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "Hayflick极限是指正常人体细胞在体外培养中分裂约50-70代后停止分裂的现象",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确:Hayflick极限。C正确:端粒假说。B正确:端粒酶激活是肿瘤的标志之一。A错误:衰老细胞进入不可逆生长停滞但保持代谢活性，不立即死亡。衰老细胞可分泌SASP因子影响微环境。",
+  "module": 1,
+  "subject": "细胞生物学",
+  "concept": "细胞衰老",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1439923049",
+  "tags": []
+ }
+}

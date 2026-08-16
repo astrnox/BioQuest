@@ -1,0 +1,1077 @@
+{
+ "BQ-molecular_tech-72edaaa4378d": {
+  "tags": [
+   "molecular_tech",
+   "module_1",
+   "分子生物学",
+   "分子生物学实验技术",
+   "competition"
+  ],
+  "diff": "national",
+  "len": 16,
+  "src": "molecular_tech",
+  "year": null,
+  "module": "module_1"
+ },
+ "BQ-molecular_tech-0ecbd0f3dfdd": {
+  "tags": [
+   "molecular_tech",
+   "module_1",
+   "分子生物学",
+   "分子生物学实验技术",
+   "competition"
+  ],
+  "diff": "national",
+  "len": 17,
+  "src": "molecular_tech",
+  "year": null,
+  "module": "module_1"
+ },
+ "BQ-molecular_tech-065a6ee394cf": {
+  "tags": [
+   "molecular_tech",
+   "module_1",
+   "hard"
+  ],
+  "diff": "national",
+  "len": 48,
+  "src": "molecular_tech",
+  "year": null,
+  "module": "module_1"
+ },
+ "BQ-molecular_tech-28bfe52174a7": {
+  "tags": [
+   "molecular_tech",
+   "分子生物学",
+   "分子克隆",
+   "competition"
+  ],
+  "diff": "national",
+  "len": 20,
+  "src": "molecular_tech",
+  "year": null,
+  "module": "module_1"
+ },
+ "BQ-molecular_tech-65cb84dfcd04": {
+  "tags": [
+   "molecular_tech",
+   "module_1",
+   "分子生物学",
+   "分子生物学实验技术",
+   "competition"
+  ],
+  "diff": "national",
+  "len": 19,
+  "src": "molecular_tech",
+  "year": null,
+  "module": "module_1"
+ },
+ "BQ-molecular_tech-10025cf7347f": {
+  "tags": [
+   "molecular_tech",
+   "module_1",
+   "生物学",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2024/art_f5fe44f36762455fb9f8f99b9e0bf2e2.html",
+   "2024"
+  ],
+  "diff": "league",
+  "len": 139,
+  "src": "molecular_tech",
+  "year": 2024,
+  "module": "module_1"
+ },
+ "BQ-molecular_tech-29ddd66f8c7f": {
+  "tags": [
+   "molecular_tech",
+   "module_1",
+   "生物学",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2024/art_f5fe44f36762455fb9f8f99b9e0bf2e2.html",
+   "2024"
+  ],
+  "diff": "league",
+  "len": 20,
+  "src": "molecular_tech",
+  "year": 2024,
+  "module": "module_1"
+ },
+ "BQ-molecular_tech-e6427c99563e": {
+  "tags": [
+   "molecular_tech",
+   "module_1",
+   "生物学",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2024/art_f5fe44f36762455fb9f8f99b9e0bf2e2.html",
+   "2024"
+  ],
+  "diff": "league",
+  "len": 123,
+  "src": "molecular_tech",
+  "year": 2024,
+  "module": "module_1"
+ },
+ "BQ-molecular_tech-cd2909df446e": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "medium",
+  "len": 30,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-molecular_tech-957ec58c853f": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "medium",
+  "len": 30,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-molecular_tech-706a885f4f1e": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "medium",
+  "len": 30,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-molecular_tech-b01d7d7e1d8b": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "medium",
+  "len": 30,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-molecular_tech-79519d8b858c": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "medium",
+  "len": 30,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-molecular_tech-169818d709ae": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "medium",
+  "len": 30,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-molecular_tech-7c9621319af0": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "medium",
+  "len": 30,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-molecular_tech-33b6405b6d6b": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "medium",
+  "len": 30,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-molecular_tech-7a281e30515b": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "medium",
+  "len": 30,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-molecular_tech-de1bdc44df75": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "medium",
+  "len": 30,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-molecular_tech-fd501f34ff1d": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "medium",
+  "len": 30,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-molecular_tech-7552aa3d39be": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "medium",
+  "len": 30,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-molecular_tech-b818a86b4edf": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "medium",
+  "len": 30,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-molecular_tech-74d79070fc8c": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "medium",
+  "len": 30,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-molecular_tech-bd1c84c3c890": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "medium",
+  "len": 30,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-molecular_tech-8b4645c46f08": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "medium",
+  "len": 30,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-molecular_tech-ab4245fc5ecc": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "medium",
+  "len": 30,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-molecular_tech-d5d1f5dc6b63": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "medium",
+  "len": 30,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-molecular_tech-bf155cc16905": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "medium",
+  "len": 30,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-molecular_tech-0474ade4caf4": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "medium",
+  "len": 30,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-molecular_tech-8ca481d617b7": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "medium",
+  "len": 30,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-molecular_tech-f44776987091": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "medium",
+  "len": 30,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-molecular_tech-3c2b9c419025": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "medium",
+  "len": 30,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-molecular_tech-fb310db4d674": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "medium",
+  "len": 30,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-molecular_tech-878641aaab4e": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "easy",
+  "len": 29,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-molecular_tech-5e86f045d42d": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "easy",
+  "len": 29,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-molecular_tech-1f3ee5ed264e": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "easy",
+  "len": 29,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-molecular_tech-5a741006597a": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "easy",
+  "len": 29,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-molecular_tech-bda619c95ae2": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "easy",
+  "len": 29,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-molecular_tech-53a8e6e3ac99": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "easy",
+  "len": 29,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-molecular_tech-75eec4d82e97": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "easy",
+  "len": 29,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-molecular_tech-b1dc713befbd": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "easy",
+  "len": 29,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-molecular_tech-fd1633d986f1": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "easy",
+  "len": 29,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-molecular_tech-0ff89691c598": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "easy",
+  "len": 29,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-molecular_tech-e1ab95f1fd26": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "easy",
+  "len": 29,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-molecular_tech-8127e7a06c0a": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "easy",
+  "len": 29,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-molecular_tech-595a13bd4d2e": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "easy",
+  "len": 29,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-molecular_tech-1e35978fcf42": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "easy",
+  "len": 29,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-molecular_tech-5115f6789230": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "easy",
+  "len": 29,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-molecular_tech-bfd2efeba784": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "easy",
+  "len": 29,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-molecular_tech-689a130d32f2": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "easy",
+  "len": 29,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-molecular_tech-a097cd155f0a": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "easy",
+  "len": 29,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-molecular_tech-71b419353e08": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "easy",
+  "len": 29,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-molecular_tech-0384f8a93144": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "easy",
+  "len": 29,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-molecular_tech-ccecab01578b": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "easy",
+  "len": 29,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-molecular_tech-03b6371630fc": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "easy",
+  "len": 29,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-molecular_tech-dc6278b16e0d": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "easy",
+  "len": 29,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-molecular_tech-9b668ad788e7": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "easy",
+  "len": 29,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-molecular_tech-8420b2a9ebbe": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-molecular_tech-2863db9a351a": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-molecular_tech-f7c9082bc85c": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-molecular_tech-db89b915499a": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-molecular_tech-56bba4dd7436": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-molecular_tech-3925251b1b23": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-molecular_tech-53be227492d2": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-molecular_tech-abda48c8d5cf": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-molecular_tech-167ffb2dc281": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-molecular_tech-96ce11d669d7": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-molecular_tech-8a8fb26f0768": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-molecular_tech-5eb8aa478a73": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-molecular_tech-aae06c5505c9": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-molecular_tech-29f6315c042f": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-molecular_tech-650fa9e1cc07": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-molecular_tech-290996b7f268": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-molecular_tech-f4745cd1ac58": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-molecular_tech-72effed9af3a": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-molecular_tech-e3a52cc5be0a": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-molecular_tech-a325601c4074": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-molecular_tech-7c61519bd34a": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-molecular_tech-6d43b101a61a": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-molecular_tech-2d13176c1aa3": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-molecular_tech-16757e74094b": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-molecular_tech-76d64d814093": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "easy",
+  "len": 25,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-molecular_tech-63b07034f8ea": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "easy",
+  "len": 25,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-molecular_tech-1559a5857447": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "easy",
+  "len": 25,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-molecular_tech-8f140729856c": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "easy",
+  "len": 25,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-molecular_tech-f826ecd521e2": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "easy",
+  "len": 25,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-molecular_tech-ffc6f796b112": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "easy",
+  "len": 25,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-molecular_tech-97543e044473": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "easy",
+  "len": 25,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-molecular_tech-e41f3521f4c7": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "easy",
+  "len": 25,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-molecular_tech-de4e4717d84c": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "easy",
+  "len": 25,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-molecular_tech-4272f9349a27": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "easy",
+  "len": 25,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-molecular_tech-fb0683dc3378": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "easy",
+  "len": 25,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-molecular_tech-7780af10e3d7": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "easy",
+  "len": 25,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-molecular_tech-47332711bb2d": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "easy",
+  "len": 25,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-molecular_tech-827f9cf3bf0c": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "easy",
+  "len": 25,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-molecular_tech-0124da321192": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "easy",
+  "len": 25,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-molecular_tech-148924ca7512": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "easy",
+  "len": 25,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-molecular_tech-6d6b97cbdda7": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "easy",
+  "len": 25,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-molecular_tech-11890f043593": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "easy",
+  "len": 25,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-molecular_tech-5e18b3d9395f": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "easy",
+  "len": 25,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-molecular_tech-dc7a1338119d": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "easy",
+  "len": 25,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-molecular_tech-c27ca1434446": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "easy",
+  "len": 25,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-molecular_tech-3f5a61867675": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "easy",
+  "len": 25,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-molecular_tech-e55f0dd1a099": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "easy",
+  "len": 25,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 4
+ },
+ "BQ-molecular_tech-a66951bf45bf": {
+  "tags": [
+   "molecular_tech"
+  ],
+  "diff": "easy",
+  "len": 25,
+  "src": "molecular_tech",
+  "year": 2025,
+  "module": 4
+ }
+}

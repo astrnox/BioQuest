@@ -839,9 +839,9 @@ function updateStatsForQuestion(q, userAnswers) {
     }
   }
 
-  // 记录题目难度统计（用于自动调整难度标签）
+  // 记录题目难度统计（用于自动调整难度标签）——Issue #10：改用稳定 bioID 作统计 key
   if (typeof recordQuestionAnswer === 'function') {
-    var qId = q.question ? (String(q.question).slice(0, 20) + (q.concept || '')) : (q.id || '');
+    var qId = getQuestionBioId(q) || String(q.question).slice(0, 20);
     try {
       recordQuestionAnswer(qId, isFullyCorrect, q.difficulty || 3);
     } catch (e) { /* 静默 */ }
@@ -922,11 +922,29 @@ function handleToggleAnswer(subIdx, value) {
   renderQuiz();
 }
 
+/**
+ * Issue #10：解析题目稳定 bioID。
+ * 优先级：q.bioId > q.id（分片题库加载时已注入稳定 bioID）> 旧 hash 回退。
+ * 旧 hash/数字 ID 会通过 bioid-map.json（window.bioIdMap）映射为稳定 bioID，
+ * 保证本地收藏/错题与题库引用一致，避免刷新后失配。
+ */
+function getQuestionBioId(q) {
+  if (!q) return '';
+  var raw = q.bioId || q.id;
+  if (raw === undefined || raw === null || raw === '') {
+    raw = String(hashQuestionId((q.question || '') + (q.concept || '')));
+  }
+  if (typeof window.resolveQuestionBioId === 'function') {
+    return String(window.resolveQuestionBioId(raw));
+  }
+  return String(raw);
+}
+
 function handleToggleFavorite() {
   const q = PracticeState.currentSet[PracticeState.currentIndex];
   if (!q) return;
 
-  const qId = q.id ? String(q.id) : String(hashQuestionId(q.question + (q.concept || '')));
+  const qId = getQuestionBioId(q);
 
   if (typeof toggleFavorite === 'function') {
     const isFav = toggleFavorite(qId);
@@ -943,7 +961,7 @@ function handleMarkWrong() {
   const q = PracticeState.currentSet[PracticeState.currentIndex];
   if (!q) return;
 
-  const qId = q.id ? String(q.id) : String(hashQuestionId(q.question + (q.concept || '')));
+  const qId = getQuestionBioId(q);
 
   if (PracticeState.wrongMarked.has(qId)) {
     PracticeState.wrongMarked.delete(qId);
@@ -988,6 +1006,7 @@ function savePracticeRecord() {
     duration,
     module: 'practice',
     questions: PracticeState.currentSet.map((q, i) => ({
+      questionId: getQuestionBioId(q),
       question: q.question,
       subject: q.subject,
       concept: q.concept,
@@ -1702,7 +1721,7 @@ function renderQuiz() {
   const moduleGroup = getModuleGroupBySubject(q.subject);
   const moduleLabel = moduleGroup ? moduleGroup.label : '';
 
-  const qId = q.id ? String(q.id) : String(hashQuestionId(q.question + (q.concept || '')));
+  const qId = getQuestionBioId(q);
   const isFav = PracticeState.favorites.has(qId);
   const isWrongMarked = PracticeState.wrongMarked.has(qId);
 
@@ -1863,7 +1882,7 @@ function renderQuiz() {
         </div>
 
         <div class="practice-quiz-tags">
-          <span class="tag" style="background:rgba(0,0,0,0.05);color:var(--text-muted,#888);font-size:0.7rem;font-family:var(--font-mono,monospace);">ID:${q.id ? q.id : qId.slice(0, 8)}</span>
+          <span class="tag" style="background:rgba(0,0,0,0.05);color:var(--text-muted,#888);font-size:0.7rem;font-family:var(--font-mono,monospace);">ID:${qId}</span>
           ${q.category === 'logic' ? '<span class="tag" style="background:rgba(99,102,241,0.12);color:#6366f1;">逻辑推理</span>' : ''}
           ${moduleLabel ? `<span class="tag tag--primary">${moduleLabel}</span>` : ''}
           ${q.subject ? '<span class="tag tag--info">' + escapeHtml(q.subject) + '</span>' : ''}
@@ -2016,7 +2035,7 @@ function bindQuizEvents() {
       if (typeof window.showQuestionFeedbackModal === 'function') {
         var q = PracticeState.currentSet[PracticeState.currentIndex];
         if (!q) return;
-        var feedbackQId = q.id || String(hashQuestionId(q.question + (q.concept || '')));
+        var feedbackQId = getQuestionBioId(q);
         window.showQuestionFeedbackModal(feedbackQId, q.question || '');
       }
     });

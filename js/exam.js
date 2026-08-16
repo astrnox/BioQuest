@@ -2719,8 +2719,12 @@ function saveExamRecord(score, duration) {
       module: 'exam',
       questions: examQuestions.map((q, i) => {
         const correctSubs = calcQuestionScore(i).correct;
+        // Issue #10：用稳定 bioID 引用题目（examQ.id/bioId 由分片加载注入）
+        const examQ = examQuestions[i];
+        const qBio = (examQ && (examQ.id || examQ.bioId)) || '';
         return {
-          qId: `exam_${i}`,
+          questionId: qBio || `exam_${i}`,
+          qId: qBio || `exam_${i}`,
           question: q.question,
           correctSubs,
           totalSubs: 4,
@@ -2749,7 +2753,13 @@ function saveExamRecord(score, duration) {
       if (!isSubQuestionCorrect(i, j)) {
         const moduleKey = getExamModuleKey(i);
         if (typeof addWrongQuestion === 'function') {
-          addWrongQuestion(String(hashQuestionId('exam_' + i + '_sub' + j)), `module_${moduleKey}`, examQuestions[i]?.subQuestions?.[j]?.text || examQuestions[i]?.question || '');
+          // Issue #10：优先用题目稳定 bioID 引用（旧 hash 合成 ID 不可稳定映射回题库）
+          const examQ = examQuestions[i];
+          const qBio = (examQ && (examQ.id || examQ.bioId)) || '';
+          const wId = qBio
+            ? String(qBio) + '#sub' + (j + 1)
+            : String(hashQuestionId('exam_' + i + '_sub' + j));
+          addWrongQuestion(wId, `module_${moduleKey}`, examQ?.subQuestions?.[j]?.text || examQ?.question || '');
         }
       }
     }

@@ -1,0 +1,4296 @@
+{
+ "BQ-plant_movement-38d1325dfbef": {
+  "type": "single",
+  "question": "研究者测定了保卫细胞中离子浓度变化和气孔开度。光照后5分钟内：H⁺-ATPase活性增加，K⁺从100 mM升至200 mM，Cl⁻从30 mM升至80 mM，细胞质pH从7.0升至7.5，气孔开度从2 μm增至8 μm。加入H⁺-ATPase抑制剂正钒酸钠后K⁺和Cl⁻均不变，气孔不开放。仅向保卫细胞外添加50 mM KCl，黑暗下气孔开度也可从2 μm增至6 μm。推断气孔开放的离子机制：",
+  "options": [
+   "H⁺-ATPase泵出H⁺产生的电化学梯度驱动K⁺内流，K⁺内流产生的膜电位差驱动Cl⁻内流，两者共同降低保卫细胞水势",
+   "K⁺和Cl⁻通过各自的主动转运蛋白独立进入保卫细胞",
+   "Cl⁻内流是气孔开放的主要驱动力，K⁺仅起平衡作用",
+   "H⁺-ATPase直接将K⁺泵入保卫细胞"
+  ],
+  "answer": 0,
+  "explanation": "光照激活H⁺-ATPase→质子泵出→胞内pH升高→膜超极化。正钒酸钠抑制H⁺-ATPase后K⁺和Cl⁻均不内流，说明两者内流都依赖H⁺-ATPase产生的电化学梯度。外加KCl在黑暗下也能使气孔开放，说明K⁺和Cl⁻内流是气孔开放的直接原因。机制：H⁺-ATPase泵出H⁺→膜超极化→K⁺通过内向K⁺通道顺电化学梯度内流→Cl⁻顺电位差内流→K⁺和Cl⁻积累→保卫细胞渗透势降低→水分子内流→膨压增大→气孔开放。",
+  "subject": "植物生理学",
+  "concept": "气孔运动机制推理",
+  "difficulty": 4,
+  "tags": [
+   "逻辑推理",
+   "实验分析",
+   "植物生理"
+  ],
+  "module": "module_2",
+  "category": "logic",
+  "oldId": "82223802",
+  "subQuestions": [],
+  "chart": null,
+  "year": null
+ },
+ "BQ-plant_movement-ded5dcfcc76b": {
+  "stem": "不同种类的植物通过光周期诱导的天数不同，短的如苍耳、水稻、浮萍、油菜等完成光周\n期诱导，需要的最少光周期数目为：\n（单选）",
+  "options": {
+   "A": "1 个",
+   "B": "2 个",
+   "C": "4 个",
+   "D": "6 个"
+  },
+  "answer": {
+   "A": true,
+   "B": false,
+   "C": false,
+   "D": false
+  },
+  "analysis": "正确答案：A",
+  "knowledge": [
+   "module_2",
+   "植物学"
+  ],
+  "module": "module_2",
+  "difficulty": "league",
+  "target": "competition",
+  "subject": "植物学",
+  "concept": "植物学",
+  "tags": [
+   "module_2",
+   "植物学",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2015/art_1c13e648d84d4e38b94e2dfd5e5b1b0b.html",
+   "2015"
+  ],
+  "weight": 1,
+  "fb_good": 0,
+  "fb_bad": 0,
+  "created_at": 1782028584.5795977,
+  "source": "https://www.czs.org.cn/swjs/lsstxz/art/2015/art_1c13e648d84d4e38b94e2dfd5e5b1b0b.html",
+  "year": 2015,
+  "_analysis_sparse": true,
+  "_review_reason": "解析为 AI 引导提示，待人工补充详细解析",
+  "type": "multi_judge",
+  "question": "不同种类的植物通过光周期诱导的天数不同，短的如苍耳、水稻、浮萍、油菜等完成光周\n期诱导，需要的最少光周期数目为：\n（单选）",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "1 个",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "2 个",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "4 个",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "6 个",
+    "answer": false
+   }
+  ],
+  "explanation": "正确答案：A",
+  "chart": null,
+  "oldId": "crawled_1782028584579_7461"
+ },
+ "BQ-plant_movement-30943d96dce0": {
+  "type": "mtf",
+  "question": "关于植物中的光敏色素信号转导，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "Pfr型光敏色素进入细胞核后与PIF转录因子直接相互作用，导致PIF磷酸化降解",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "光敏色素仅存在于维管植物中",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "光敏色素调控的避荫反应中，低R:FR比值（红光/远红光）促进茎的伸长生长",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "红光照射将Pr转化为Pfr，远红光照射将Pfr逆转回Pr",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：光敏色素信号转导的核心机制。D正确：光敏色素的光可逆性。B错误：光敏色素在绿藻、苔藓、蕨类到种子植物中均有发现，在植物演化早期就已出现。C正确：遮荫下R:FR降低，植物通过伸长生长竞争光照。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光敏色素",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1837790073",
+  "tags": []
+ },
+ "BQ-plant_movement-ff8f02e2fdbb": {
+  "type": "mtf",
+  "question": "关于植物中的光敏色素信号转导，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "Pfr型光敏色素进入细胞核后与PIF转录因子直接相互作用，导致PIF磷酸化降解",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "光敏色素仅存在于维管植物中",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "红光照射将Pr转化为Pfr，远红光照射将Pfr逆转回Pr",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "光敏色素调控的避荫反应中，低R:FR比值（红光/远红光）促进茎的伸长生长",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：光敏色素信号转导的核心机制。C正确：光敏色素的光可逆性。B错误：光敏色素在绿藻、苔藓、蕨类到种子植物中均有发现，在植物演化早期就已出现。D正确：遮荫下R:FR降低，植物通过伸长生长竞争光照。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光敏色素",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1837790073",
+  "tags": []
+ },
+ "BQ-plant_movement-a276d3aa5677": {
+  "type": "mtf",
+  "question": "关于植物中的光敏色素信号转导，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "Pfr型光敏色素进入细胞核后与PIF转录因子直接相互作用，导致PIF磷酸化降解",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "光敏色素调控的避荫反应中，低R:FR比值（红光/远红光）促进茎的伸长生长",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "光敏色素仅存在于维管植物中",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "红光照射将Pr转化为Pfr，远红光照射将Pfr逆转回Pr",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：光敏色素信号转导的核心机制。D正确：光敏色素的光可逆性。C错误：光敏色素在绿藻、苔藓、蕨类到种子植物中均有发现，在植物演化早期就已出现。B正确：遮荫下R:FR降低，植物通过伸长生长竞争光照。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光敏色素",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1837790073",
+  "tags": []
+ },
+ "BQ-plant_movement-33adcbbc8c49": {
+  "type": "mtf",
+  "question": "关于植物中的光敏色素信号转导，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "Pfr型光敏色素进入细胞核后与PIF转录因子直接相互作用，导致PIF磷酸化降解",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "光敏色素调控的避荫反应中，低R:FR比值（红光/远红光）促进茎的伸长生长",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "红光照射将Pr转化为Pfr，远红光照射将Pfr逆转回Pr",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "光敏色素仅存在于维管植物中",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确：光敏色素信号转导的核心机制。C正确：光敏色素的光可逆性。D错误：光敏色素在绿藻、苔藓、蕨类到种子植物中均有发现，在植物演化早期就已出现。B正确：遮荫下R:FR降低，植物通过伸长生长竞争光照。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光敏色素",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1837790073",
+  "tags": []
+ },
+ "BQ-plant_movement-211816b08f8a": {
+  "type": "mtf",
+  "question": "关于植物中的光敏色素信号转导，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "Pfr型光敏色素进入细胞核后与PIF转录因子直接相互作用，导致PIF磷酸化降解",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "红光照射将Pr转化为Pfr，远红光照射将Pfr逆转回Pr",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "光敏色素仅存在于维管植物中",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "光敏色素调控的避荫反应中，低R:FR比值（红光/远红光）促进茎的伸长生长",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：光敏色素信号转导的核心机制。B正确：光敏色素的光可逆性。C错误：光敏色素在绿藻、苔藓、蕨类到种子植物中均有发现，在植物演化早期就已出现。D正确：遮荫下R:FR降低，植物通过伸长生长竞争光照。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光敏色素",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1837790073",
+  "tags": []
+ },
+ "BQ-plant_movement-43d092bf57ea": {
+  "type": "mtf",
+  "question": "关于植物中的光敏色素信号转导，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "Pfr型光敏色素进入细胞核后与PIF转录因子直接相互作用，导致PIF磷酸化降解",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "红光照射将Pr转化为Pfr，远红光照射将Pfr逆转回Pr",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "光敏色素调控的避荫反应中，低R:FR比值（红光/远红光）促进茎的伸长生长",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "光敏色素仅存在于维管植物中",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确：光敏色素信号转导的核心机制。B正确：光敏色素的光可逆性。D错误：光敏色素在绿藻、苔藓、蕨类到种子植物中均有发现，在植物演化早期就已出现。C正确：遮荫下R:FR降低，植物通过伸长生长竞争光照。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光敏色素",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1837790073",
+  "tags": []
+ },
+ "BQ-plant_movement-d6fd2d5b6ed1": {
+  "type": "mtf",
+  "question": "关于植物中的光敏色素信号转导，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "光敏色素仅存在于维管植物中",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "Pfr型光敏色素进入细胞核后与PIF转录因子直接相互作用，导致PIF磷酸化降解",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "光敏色素调控的避荫反应中，低R:FR比值（红光/远红光）促进茎的伸长生长",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "红光照射将Pr转化为Pfr，远红光照射将Pfr逆转回Pr",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：光敏色素信号转导的核心机制。D正确：光敏色素的光可逆性。A错误：光敏色素在绿藻、苔藓、蕨类到种子植物中均有发现，在植物演化早期就已出现。C正确：遮荫下R:FR降低，植物通过伸长生长竞争光照。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光敏色素",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1837790073",
+  "tags": []
+ },
+ "BQ-plant_movement-af50769e5278": {
+  "type": "mtf",
+  "question": "关于植物中的光敏色素信号转导，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "光敏色素仅存在于维管植物中",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "Pfr型光敏色素进入细胞核后与PIF转录因子直接相互作用，导致PIF磷酸化降解",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "红光照射将Pr转化为Pfr，远红光照射将Pfr逆转回Pr",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "光敏色素调控的避荫反应中，低R:FR比值（红光/远红光）促进茎的伸长生长",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：光敏色素信号转导的核心机制。C正确：光敏色素的光可逆性。A错误：光敏色素在绿藻、苔藓、蕨类到种子植物中均有发现，在植物演化早期就已出现。D正确：遮荫下R:FR降低，植物通过伸长生长竞争光照。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光敏色素",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1837790073",
+  "tags": []
+ },
+ "BQ-plant_movement-60f6e8ebb9d6": {
+  "type": "mtf",
+  "question": "关于植物中的光敏色素信号转导，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "光敏色素仅存在于维管植物中",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "光敏色素调控的避荫反应中，低R:FR比值（红光/远红光）促进茎的伸长生长",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "Pfr型光敏色素进入细胞核后与PIF转录因子直接相互作用，导致PIF磷酸化降解",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "红光照射将Pr转化为Pfr，远红光照射将Pfr逆转回Pr",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：光敏色素信号转导的核心机制。D正确：光敏色素的光可逆性。A错误：光敏色素在绿藻、苔藓、蕨类到种子植物中均有发现，在植物演化早期就已出现。B正确：遮荫下R:FR降低，植物通过伸长生长竞争光照。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光敏色素",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1837790073",
+  "tags": []
+ },
+ "BQ-plant_movement-0a8c1cca3809": {
+  "type": "mtf",
+  "question": "关于植物中的光敏色素信号转导，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "光敏色素仅存在于维管植物中",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "光敏色素调控的避荫反应中，低R:FR比值（红光/远红光）促进茎的伸长生长",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "红光照射将Pr转化为Pfr，远红光照射将Pfr逆转回Pr",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "Pfr型光敏色素进入细胞核后与PIF转录因子直接相互作用，导致PIF磷酸化降解",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：光敏色素信号转导的核心机制。C正确：光敏色素的光可逆性。A错误：光敏色素在绿藻、苔藓、蕨类到种子植物中均有发现，在植物演化早期就已出现。B正确：遮荫下R:FR降低，植物通过伸长生长竞争光照。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光敏色素",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1837790073",
+  "tags": []
+ },
+ "BQ-plant_movement-0a0d27000ee1": {
+  "type": "mtf",
+  "question": "关于植物中的光敏色素信号转导，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "光敏色素仅存在于维管植物中",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "红光照射将Pr转化为Pfr，远红光照射将Pfr逆转回Pr",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "Pfr型光敏色素进入细胞核后与PIF转录因子直接相互作用，导致PIF磷酸化降解",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "光敏色素调控的避荫反应中，低R:FR比值（红光/远红光）促进茎的伸长生长",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：光敏色素信号转导的核心机制。B正确：光敏色素的光可逆性。A错误：光敏色素在绿藻、苔藓、蕨类到种子植物中均有发现，在植物演化早期就已出现。D正确：遮荫下R:FR降低，植物通过伸长生长竞争光照。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光敏色素",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1837790073",
+  "tags": []
+ },
+ "BQ-plant_movement-023c383a10dc": {
+  "type": "mtf",
+  "question": "关于植物中的光敏色素信号转导，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "光敏色素仅存在于维管植物中",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "红光照射将Pr转化为Pfr，远红光照射将Pfr逆转回Pr",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "光敏色素调控的避荫反应中，低R:FR比值（红光/远红光）促进茎的伸长生长",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "Pfr型光敏色素进入细胞核后与PIF转录因子直接相互作用，导致PIF磷酸化降解",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：光敏色素信号转导的核心机制。B正确：光敏色素的光可逆性。A错误：光敏色素在绿藻、苔藓、蕨类到种子植物中均有发现，在植物演化早期就已出现。C正确：遮荫下R:FR降低，植物通过伸长生长竞争光照。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光敏色素",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1837790073",
+  "tags": []
+ },
+ "BQ-plant_movement-2f30292c4e74": {
+  "type": "mtf",
+  "question": "关于植物中的光敏色素信号转导，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "光敏色素调控的避荫反应中，低R:FR比值（红光/远红光）促进茎的伸长生长",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "Pfr型光敏色素进入细胞核后与PIF转录因子直接相互作用，导致PIF磷酸化降解",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "光敏色素仅存在于维管植物中",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "红光照射将Pr转化为Pfr，远红光照射将Pfr逆转回Pr",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：光敏色素信号转导的核心机制。D正确：光敏色素的光可逆性。C错误：光敏色素在绿藻、苔藓、蕨类到种子植物中均有发现，在植物演化早期就已出现。A正确：遮荫下R:FR降低，植物通过伸长生长竞争光照。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光敏色素",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1837790073",
+  "tags": []
+ },
+ "BQ-plant_movement-4a458366cc27": {
+  "type": "mtf",
+  "question": "关于植物中的光敏色素信号转导，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "光敏色素调控的避荫反应中，低R:FR比值（红光/远红光）促进茎的伸长生长",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "Pfr型光敏色素进入细胞核后与PIF转录因子直接相互作用，导致PIF磷酸化降解",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "红光照射将Pr转化为Pfr，远红光照射将Pfr逆转回Pr",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "光敏色素仅存在于维管植物中",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确：光敏色素信号转导的核心机制。C正确：光敏色素的光可逆性。D错误：光敏色素在绿藻、苔藓、蕨类到种子植物中均有发现，在植物演化早期就已出现。A正确：遮荫下R:FR降低，植物通过伸长生长竞争光照。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光敏色素",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1837790073",
+  "tags": []
+ },
+ "BQ-plant_movement-e64dcfeed450": {
+  "type": "mtf",
+  "question": "关于植物中的光敏色素信号转导，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "光敏色素调控的避荫反应中，低R:FR比值（红光/远红光）促进茎的伸长生长",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "光敏色素仅存在于维管植物中",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "Pfr型光敏色素进入细胞核后与PIF转录因子直接相互作用，导致PIF磷酸化降解",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "红光照射将Pr转化为Pfr，远红光照射将Pfr逆转回Pr",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：光敏色素信号转导的核心机制。D正确：光敏色素的光可逆性。B错误：光敏色素在绿藻、苔藓、蕨类到种子植物中均有发现，在植物演化早期就已出现。A正确：遮荫下R:FR降低，植物通过伸长生长竞争光照。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光敏色素",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1837790073",
+  "tags": []
+ },
+ "BQ-plant_movement-7ace282447ce": {
+  "type": "mtf",
+  "question": "关于植物中的光敏色素信号转导，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "光敏色素调控的避荫反应中，低R:FR比值（红光/远红光）促进茎的伸长生长",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "光敏色素仅存在于维管植物中",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "红光照射将Pr转化为Pfr，远红光照射将Pfr逆转回Pr",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "Pfr型光敏色素进入细胞核后与PIF转录因子直接相互作用，导致PIF磷酸化降解",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：光敏色素信号转导的核心机制。C正确：光敏色素的光可逆性。B错误：光敏色素在绿藻、苔藓、蕨类到种子植物中均有发现，在植物演化早期就已出现。A正确：遮荫下R:FR降低，植物通过伸长生长竞争光照。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光敏色素",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1837790073",
+  "tags": []
+ },
+ "BQ-plant_movement-b6070cb1ba14": {
+  "type": "mtf",
+  "question": "关于植物中的光敏色素信号转导，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "光敏色素调控的避荫反应中，低R:FR比值（红光/远红光）促进茎的伸长生长",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "红光照射将Pr转化为Pfr，远红光照射将Pfr逆转回Pr",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "Pfr型光敏色素进入细胞核后与PIF转录因子直接相互作用，导致PIF磷酸化降解",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "光敏色素仅存在于维管植物中",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确：光敏色素信号转导的核心机制。B正确：光敏色素的光可逆性。D错误：光敏色素在绿藻、苔藓、蕨类到种子植物中均有发现，在植物演化早期就已出现。A正确：遮荫下R:FR降低，植物通过伸长生长竞争光照。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光敏色素",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1837790073",
+  "tags": []
+ },
+ "BQ-plant_movement-ac5977859022": {
+  "type": "mtf",
+  "question": "关于植物中的光敏色素信号转导，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "光敏色素调控的避荫反应中，低R:FR比值（红光/远红光）促进茎的伸长生长",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "红光照射将Pr转化为Pfr，远红光照射将Pfr逆转回Pr",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "光敏色素仅存在于维管植物中",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "Pfr型光敏色素进入细胞核后与PIF转录因子直接相互作用，导致PIF磷酸化降解",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：光敏色素信号转导的核心机制。B正确：光敏色素的光可逆性。C错误：光敏色素在绿藻、苔藓、蕨类到种子植物中均有发现，在植物演化早期就已出现。A正确：遮荫下R:FR降低，植物通过伸长生长竞争光照。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光敏色素",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1837790073",
+  "tags": []
+ },
+ "BQ-plant_movement-43fa785018dc": {
+  "type": "mtf",
+  "question": "关于植物中的光敏色素信号转导，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "红光照射将Pr转化为Pfr，远红光照射将Pfr逆转回Pr",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "Pfr型光敏色素进入细胞核后与PIF转录因子直接相互作用，导致PIF磷酸化降解",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "光敏色素仅存在于维管植物中",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "光敏色素调控的避荫反应中，低R:FR比值（红光/远红光）促进茎的伸长生长",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：光敏色素信号转导的核心机制。A正确：光敏色素的光可逆性。C错误：光敏色素在绿藻、苔藓、蕨类到种子植物中均有发现，在植物演化早期就已出现。D正确：遮荫下R:FR降低，植物通过伸长生长竞争光照。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光敏色素",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1837790073",
+  "tags": []
+ },
+ "BQ-plant_movement-d99547d42dfe": {
+  "type": "mtf",
+  "question": "关于植物中的光敏色素信号转导，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "红光照射将Pr转化为Pfr，远红光照射将Pfr逆转回Pr",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "Pfr型光敏色素进入细胞核后与PIF转录因子直接相互作用，导致PIF磷酸化降解",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "光敏色素调控的避荫反应中，低R:FR比值（红光/远红光）促进茎的伸长生长",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "光敏色素仅存在于维管植物中",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确：光敏色素信号转导的核心机制。A正确：光敏色素的光可逆性。D错误：光敏色素在绿藻、苔藓、蕨类到种子植物中均有发现，在植物演化早期就已出现。C正确：遮荫下R:FR降低，植物通过伸长生长竞争光照。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光敏色素",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1837790073",
+  "tags": []
+ },
+ "BQ-plant_movement-3bf441eac9f5": {
+  "type": "mtf",
+  "question": "关于植物中的光敏色素信号转导，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "红光照射将Pr转化为Pfr，远红光照射将Pfr逆转回Pr",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "光敏色素仅存在于维管植物中",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "Pfr型光敏色素进入细胞核后与PIF转录因子直接相互作用，导致PIF磷酸化降解",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "光敏色素调控的避荫反应中，低R:FR比值（红光/远红光）促进茎的伸长生长",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：光敏色素信号转导的核心机制。A正确：光敏色素的光可逆性。B错误：光敏色素在绿藻、苔藓、蕨类到种子植物中均有发现，在植物演化早期就已出现。D正确：遮荫下R:FR降低，植物通过伸长生长竞争光照。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光敏色素",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1837790073",
+  "tags": []
+ },
+ "BQ-plant_movement-0843de7f8dcf": {
+  "type": "mtf",
+  "question": "关于植物中的光敏色素信号转导，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "红光照射将Pr转化为Pfr，远红光照射将Pfr逆转回Pr",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "光敏色素仅存在于维管植物中",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "光敏色素调控的避荫反应中，低R:FR比值（红光/远红光）促进茎的伸长生长",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "Pfr型光敏色素进入细胞核后与PIF转录因子直接相互作用，导致PIF磷酸化降解",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：光敏色素信号转导的核心机制。A正确：光敏色素的光可逆性。B错误：光敏色素在绿藻、苔藓、蕨类到种子植物中均有发现，在植物演化早期就已出现。C正确：遮荫下R:FR降低，植物通过伸长生长竞争光照。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光敏色素",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1837790073",
+  "tags": []
+ },
+ "BQ-plant_movement-42ad694fbd0b": {
+  "type": "mtf",
+  "question": "关于植物中的光敏色素信号转导，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "红光照射将Pr转化为Pfr，远红光照射将Pfr逆转回Pr",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "光敏色素调控的避荫反应中，低R:FR比值（红光/远红光）促进茎的伸长生长",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "Pfr型光敏色素进入细胞核后与PIF转录因子直接相互作用，导致PIF磷酸化降解",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "光敏色素仅存在于维管植物中",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确：光敏色素信号转导的核心机制。A正确：光敏色素的光可逆性。D错误：光敏色素在绿藻、苔藓、蕨类到种子植物中均有发现，在植物演化早期就已出现。B正确：遮荫下R:FR降低，植物通过伸长生长竞争光照。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光敏色素",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1837790073",
+  "tags": []
+ },
+ "BQ-plant_movement-42c2c9ed603d": {
+  "type": "mtf",
+  "question": "关于植物中的光敏色素信号转导，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "红光照射将Pr转化为Pfr，远红光照射将Pfr逆转回Pr",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "光敏色素调控的避荫反应中，低R:FR比值（红光/远红光）促进茎的伸长生长",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "光敏色素仅存在于维管植物中",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "Pfr型光敏色素进入细胞核后与PIF转录因子直接相互作用，导致PIF磷酸化降解",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：光敏色素信号转导的核心机制。A正确：光敏色素的光可逆性。C错误：光敏色素在绿藻、苔藓、蕨类到种子植物中均有发现，在植物演化早期就已出现。B正确：遮荫下R:FR降低，植物通过伸长生长竞争光照。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "光敏色素",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1837790073",
+  "tags": []
+ },
+ "BQ-plant_movement-344c26e80b6b": {
+  "type": "mtf",
+  "question": "关于植物对环境信号的感知，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "向光性中，蓝光受体phototropin感知单侧光信号，引起生长素在背光侧积累从而导致不对称生长",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "向地性中，根表现为正向地性（向下生长），茎表现为负向地性（向上生长）",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "植物无法感知和响应机械损伤以外的非生物环境信号",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "植物的向触性最典型的例子是攀援植物的卷须在接触支持物后的缠绕生长",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：向光性的分子机制。B正确：根和茎的向地性差异。D正确：向触性的经典实例。C错误：植物能感知多种环境信号——光（光敏色素、隐花色素等）、温度、水分、盐、重力、触摸、声音振动、甚至邻近植物的遮荫。植物感知环境的机制是当前研究热点。",
+  "module": 2,
+  "subject": "植物学",
+  "concept": "植物运动与感知",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "607224655",
+  "tags": []
+ },
+ "BQ-plant_movement-c1466cffbb99": {
+  "type": "mtf",
+  "question": "关于植物对环境信号的感知，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "向光性中，蓝光受体phototropin感知单侧光信号，引起生长素在背光侧积累从而导致不对称生长",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "向地性中，根表现为正向地性（向下生长），茎表现为负向地性（向上生长）",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "植物的向触性最典型的例子是攀援植物的卷须在接触支持物后的缠绕生长",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "植物无法感知和响应机械损伤以外的非生物环境信号",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确：向光性的分子机制。B正确：根和茎的向地性差异。C正确：向触性的经典实例。D错误：植物能感知多种环境信号——光（光敏色素、隐花色素等）、温度、水分、盐、重力、触摸、声音振动、甚至邻近植物的遮荫。植物感知环境的机制是当前研究热点。",
+  "module": 2,
+  "subject": "植物学",
+  "concept": "植物运动与感知",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "607224655",
+  "tags": []
+ },
+ "BQ-plant_movement-d12afa7121ff": {
+  "type": "mtf",
+  "question": "关于植物对环境信号的感知，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "向光性中，蓝光受体phototropin感知单侧光信号，引起生长素在背光侧积累从而导致不对称生长",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "植物无法感知和响应机械损伤以外的非生物环境信号",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "向地性中，根表现为正向地性（向下生长），茎表现为负向地性（向上生长）",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "植物的向触性最典型的例子是攀援植物的卷须在接触支持物后的缠绕生长",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：向光性的分子机制。C正确：根和茎的向地性差异。D正确：向触性的经典实例。B错误：植物能感知多种环境信号——光（光敏色素、隐花色素等）、温度、水分、盐、重力、触摸、声音振动、甚至邻近植物的遮荫。植物感知环境的机制是当前研究热点。",
+  "module": 2,
+  "subject": "植物学",
+  "concept": "植物运动与感知",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "607224655",
+  "tags": []
+ },
+ "BQ-plant_movement-012ccdcbffc3": {
+  "type": "mtf",
+  "question": "关于植物对环境信号的感知，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "向光性中，蓝光受体phototropin感知单侧光信号，引起生长素在背光侧积累从而导致不对称生长",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "植物无法感知和响应机械损伤以外的非生物环境信号",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "植物的向触性最典型的例子是攀援植物的卷须在接触支持物后的缠绕生长",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "向地性中，根表现为正向地性（向下生长），茎表现为负向地性（向上生长）",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：向光性的分子机制。D正确：根和茎的向地性差异。C正确：向触性的经典实例。B错误：植物能感知多种环境信号——光（光敏色素、隐花色素等）、温度、水分、盐、重力、触摸、声音振动、甚至邻近植物的遮荫。植物感知环境的机制是当前研究热点。",
+  "module": 2,
+  "subject": "植物学",
+  "concept": "植物运动与感知",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "607224655",
+  "tags": []
+ },
+ "BQ-plant_movement-2e2f366f726b": {
+  "type": "mtf",
+  "question": "关于植物对环境信号的感知，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "向光性中，蓝光受体phototropin感知单侧光信号，引起生长素在背光侧积累从而导致不对称生长",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "植物的向触性最典型的例子是攀援植物的卷须在接触支持物后的缠绕生长",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "向地性中，根表现为正向地性（向下生长），茎表现为负向地性（向上生长）",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "植物无法感知和响应机械损伤以外的非生物环境信号",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确：向光性的分子机制。C正确：根和茎的向地性差异。B正确：向触性的经典实例。D错误：植物能感知多种环境信号——光（光敏色素、隐花色素等）、温度、水分、盐、重力、触摸、声音振动、甚至邻近植物的遮荫。植物感知环境的机制是当前研究热点。",
+  "module": 2,
+  "subject": "植物学",
+  "concept": "植物运动与感知",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "607224655",
+  "tags": []
+ },
+ "BQ-plant_movement-64a6beae7314": {
+  "type": "mtf",
+  "question": "关于植物对环境信号的感知，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "向光性中，蓝光受体phototropin感知单侧光信号，引起生长素在背光侧积累从而导致不对称生长",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "植物的向触性最典型的例子是攀援植物的卷须在接触支持物后的缠绕生长",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "植物无法感知和响应机械损伤以外的非生物环境信号",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "向地性中，根表现为正向地性（向下生长），茎表现为负向地性（向上生长）",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：向光性的分子机制。D正确：根和茎的向地性差异。B正确：向触性的经典实例。C错误：植物能感知多种环境信号——光（光敏色素、隐花色素等）、温度、水分、盐、重力、触摸、声音振动、甚至邻近植物的遮荫。植物感知环境的机制是当前研究热点。",
+  "module": 2,
+  "subject": "植物学",
+  "concept": "植物运动与感知",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "607224655",
+  "tags": []
+ },
+ "BQ-plant_movement-02cb4882f5bf": {
+  "type": "mtf",
+  "question": "关于植物对环境信号的感知，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "向地性中，根表现为正向地性（向下生长），茎表现为负向地性（向上生长）",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "向光性中，蓝光受体phototropin感知单侧光信号，引起生长素在背光侧积累从而导致不对称生长",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "植物无法感知和响应机械损伤以外的非生物环境信号",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "植物的向触性最典型的例子是攀援植物的卷须在接触支持物后的缠绕生长",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：向光性的分子机制。A正确：根和茎的向地性差异。D正确：向触性的经典实例。C错误：植物能感知多种环境信号——光（光敏色素、隐花色素等）、温度、水分、盐、重力、触摸、声音振动、甚至邻近植物的遮荫。植物感知环境的机制是当前研究热点。",
+  "module": 2,
+  "subject": "植物学",
+  "concept": "植物运动与感知",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "607224655",
+  "tags": []
+ },
+ "BQ-plant_movement-8886e0be0e63": {
+  "type": "mtf",
+  "question": "关于植物对环境信号的感知，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "向地性中，根表现为正向地性（向下生长），茎表现为负向地性（向上生长）",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "向光性中，蓝光受体phototropin感知单侧光信号，引起生长素在背光侧积累从而导致不对称生长",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "植物的向触性最典型的例子是攀援植物的卷须在接触支持物后的缠绕生长",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "植物无法感知和响应机械损伤以外的非生物环境信号",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确：向光性的分子机制。A正确：根和茎的向地性差异。C正确：向触性的经典实例。D错误：植物能感知多种环境信号——光（光敏色素、隐花色素等）、温度、水分、盐、重力、触摸、声音振动、甚至邻近植物的遮荫。植物感知环境的机制是当前研究热点。",
+  "module": 2,
+  "subject": "植物学",
+  "concept": "植物运动与感知",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "607224655",
+  "tags": []
+ },
+ "BQ-plant_movement-718ce4a89c07": {
+  "type": "mtf",
+  "question": "关于植物对环境信号的感知，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "向地性中，根表现为正向地性（向下生长），茎表现为负向地性（向上生长）",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "植物无法感知和响应机械损伤以外的非生物环境信号",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "向光性中，蓝光受体phototropin感知单侧光信号，引起生长素在背光侧积累从而导致不对称生长",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "植物的向触性最典型的例子是攀援植物的卷须在接触支持物后的缠绕生长",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：向光性的分子机制。A正确：根和茎的向地性差异。D正确：向触性的经典实例。B错误：植物能感知多种环境信号——光（光敏色素、隐花色素等）、温度、水分、盐、重力、触摸、声音振动、甚至邻近植物的遮荫。植物感知环境的机制是当前研究热点。",
+  "module": 2,
+  "subject": "植物学",
+  "concept": "植物运动与感知",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "607224655",
+  "tags": []
+ },
+ "BQ-plant_movement-c1b9504c7320": {
+  "type": "mtf",
+  "question": "关于植物对环境信号的感知，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "向地性中，根表现为正向地性（向下生长），茎表现为负向地性（向上生长）",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "植物无法感知和响应机械损伤以外的非生物环境信号",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "植物的向触性最典型的例子是攀援植物的卷须在接触支持物后的缠绕生长",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "向光性中，蓝光受体phototropin感知单侧光信号，引起生长素在背光侧积累从而导致不对称生长",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：向光性的分子机制。A正确：根和茎的向地性差异。C正确：向触性的经典实例。B错误：植物能感知多种环境信号——光（光敏色素、隐花色素等）、温度、水分、盐、重力、触摸、声音振动、甚至邻近植物的遮荫。植物感知环境的机制是当前研究热点。",
+  "module": 2,
+  "subject": "植物学",
+  "concept": "植物运动与感知",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "607224655",
+  "tags": []
+ },
+ "BQ-plant_movement-71789bcd7dd1": {
+  "type": "mtf",
+  "question": "关于植物对环境信号的感知，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "向地性中，根表现为正向地性（向下生长），茎表现为负向地性（向上生长）",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "植物的向触性最典型的例子是攀援植物的卷须在接触支持物后的缠绕生长",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "向光性中，蓝光受体phototropin感知单侧光信号，引起生长素在背光侧积累从而导致不对称生长",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "植物无法感知和响应机械损伤以外的非生物环境信号",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确：向光性的分子机制。A正确：根和茎的向地性差异。B正确：向触性的经典实例。D错误：植物能感知多种环境信号——光（光敏色素、隐花色素等）、温度、水分、盐、重力、触摸、声音振动、甚至邻近植物的遮荫。植物感知环境的机制是当前研究热点。",
+  "module": 2,
+  "subject": "植物学",
+  "concept": "植物运动与感知",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "607224655",
+  "tags": []
+ },
+ "BQ-plant_movement-578b2a897bd3": {
+  "type": "mtf",
+  "question": "关于植物对环境信号的感知，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "向地性中，根表现为正向地性（向下生长），茎表现为负向地性（向上生长）",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "植物的向触性最典型的例子是攀援植物的卷须在接触支持物后的缠绕生长",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "植物无法感知和响应机械损伤以外的非生物环境信号",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "向光性中，蓝光受体phototropin感知单侧光信号，引起生长素在背光侧积累从而导致不对称生长",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：向光性的分子机制。A正确：根和茎的向地性差异。B正确：向触性的经典实例。C错误：植物能感知多种环境信号——光（光敏色素、隐花色素等）、温度、水分、盐、重力、触摸、声音振动、甚至邻近植物的遮荫。植物感知环境的机制是当前研究热点。",
+  "module": 2,
+  "subject": "植物学",
+  "concept": "植物运动与感知",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "607224655",
+  "tags": []
+ },
+ "BQ-plant_movement-0776e605435b": {
+  "type": "mtf",
+  "question": "关于植物对环境信号的感知，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "植物无法感知和响应机械损伤以外的非生物环境信号",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "向光性中，蓝光受体phototropin感知单侧光信号，引起生长素在背光侧积累从而导致不对称生长",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "向地性中，根表现为正向地性（向下生长），茎表现为负向地性（向上生长）",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "植物的向触性最典型的例子是攀援植物的卷须在接触支持物后的缠绕生长",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：向光性的分子机制。C正确：根和茎的向地性差异。D正确：向触性的经典实例。A错误：植物能感知多种环境信号——光（光敏色素、隐花色素等）、温度、水分、盐、重力、触摸、声音振动、甚至邻近植物的遮荫。植物感知环境的机制是当前研究热点。",
+  "module": 2,
+  "subject": "植物学",
+  "concept": "植物运动与感知",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "607224655",
+  "tags": []
+ },
+ "BQ-plant_movement-64892ccbf13d": {
+  "type": "mtf",
+  "question": "关于植物对环境信号的感知，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "植物无法感知和响应机械损伤以外的非生物环境信号",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "向光性中，蓝光受体phototropin感知单侧光信号，引起生长素在背光侧积累从而导致不对称生长",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "植物的向触性最典型的例子是攀援植物的卷须在接触支持物后的缠绕生长",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "向地性中，根表现为正向地性（向下生长），茎表现为负向地性（向上生长）",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：向光性的分子机制。D正确：根和茎的向地性差异。C正确：向触性的经典实例。A错误：植物能感知多种环境信号——光（光敏色素、隐花色素等）、温度、水分、盐、重力、触摸、声音振动、甚至邻近植物的遮荫。植物感知环境的机制是当前研究热点。",
+  "module": 2,
+  "subject": "植物学",
+  "concept": "植物运动与感知",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "607224655",
+  "tags": []
+ },
+ "BQ-plant_movement-6b48bb6f24b7": {
+  "type": "mtf",
+  "question": "关于植物对环境信号的感知，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "植物无法感知和响应机械损伤以外的非生物环境信号",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "向地性中，根表现为正向地性（向下生长），茎表现为负向地性（向上生长）",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "向光性中，蓝光受体phototropin感知单侧光信号，引起生长素在背光侧积累从而导致不对称生长",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "植物的向触性最典型的例子是攀援植物的卷须在接触支持物后的缠绕生长",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：向光性的分子机制。B正确：根和茎的向地性差异。D正确：向触性的经典实例。A错误：植物能感知多种环境信号——光（光敏色素、隐花色素等）、温度、水分、盐、重力、触摸、声音振动、甚至邻近植物的遮荫。植物感知环境的机制是当前研究热点。",
+  "module": 2,
+  "subject": "植物学",
+  "concept": "植物运动与感知",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "607224655",
+  "tags": []
+ },
+ "BQ-plant_movement-d7240a18eb93": {
+  "type": "mtf",
+  "question": "关于植物对环境信号的感知，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "植物无法感知和响应机械损伤以外的非生物环境信号",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "向地性中，根表现为正向地性（向下生长），茎表现为负向地性（向上生长）",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "植物的向触性最典型的例子是攀援植物的卷须在接触支持物后的缠绕生长",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "向光性中，蓝光受体phototropin感知单侧光信号，引起生长素在背光侧积累从而导致不对称生长",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：向光性的分子机制。B正确：根和茎的向地性差异。C正确：向触性的经典实例。A错误：植物能感知多种环境信号——光（光敏色素、隐花色素等）、温度、水分、盐、重力、触摸、声音振动、甚至邻近植物的遮荫。植物感知环境的机制是当前研究热点。",
+  "module": 2,
+  "subject": "植物学",
+  "concept": "植物运动与感知",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "607224655",
+  "tags": []
+ },
+ "BQ-plant_movement-0bfa72aa4f77": {
+  "type": "mtf",
+  "question": "关于植物对环境信号的感知，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "植物无法感知和响应机械损伤以外的非生物环境信号",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "植物的向触性最典型的例子是攀援植物的卷须在接触支持物后的缠绕生长",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "向光性中，蓝光受体phototropin感知单侧光信号，引起生长素在背光侧积累从而导致不对称生长",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "向地性中，根表现为正向地性（向下生长），茎表现为负向地性（向上生长）",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：向光性的分子机制。D正确：根和茎的向地性差异。B正确：向触性的经典实例。A错误：植物能感知多种环境信号——光（光敏色素、隐花色素等）、温度、水分、盐、重力、触摸、声音振动、甚至邻近植物的遮荫。植物感知环境的机制是当前研究热点。",
+  "module": 2,
+  "subject": "植物学",
+  "concept": "植物运动与感知",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "607224655",
+  "tags": []
+ },
+ "BQ-plant_movement-2ae67c3e7cb0": {
+  "type": "mtf",
+  "question": "关于植物对环境信号的感知，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "植物无法感知和响应机械损伤以外的非生物环境信号",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "植物的向触性最典型的例子是攀援植物的卷须在接触支持物后的缠绕生长",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "向地性中，根表现为正向地性（向下生长），茎表现为负向地性（向上生长）",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "向光性中，蓝光受体phototropin感知单侧光信号，引起生长素在背光侧积累从而导致不对称生长",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：向光性的分子机制。C正确：根和茎的向地性差异。B正确：向触性的经典实例。A错误：植物能感知多种环境信号——光（光敏色素、隐花色素等）、温度、水分、盐、重力、触摸、声音振动、甚至邻近植物的遮荫。植物感知环境的机制是当前研究热点。",
+  "module": 2,
+  "subject": "植物学",
+  "concept": "植物运动与感知",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "607224655",
+  "tags": []
+ },
+ "BQ-plant_movement-88c3a1104f36": {
+  "type": "mtf",
+  "question": "关于植物对环境信号的感知，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "植物的向触性最典型的例子是攀援植物的卷须在接触支持物后的缠绕生长",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "向光性中，蓝光受体phototropin感知单侧光信号，引起生长素在背光侧积累从而导致不对称生长",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "向地性中，根表现为正向地性（向下生长），茎表现为负向地性（向上生长）",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "植物无法感知和响应机械损伤以外的非生物环境信号",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确：向光性的分子机制。C正确：根和茎的向地性差异。A正确：向触性的经典实例。D错误：植物能感知多种环境信号——光（光敏色素、隐花色素等）、温度、水分、盐、重力、触摸、声音振动、甚至邻近植物的遮荫。植物感知环境的机制是当前研究热点。",
+  "module": 2,
+  "subject": "植物学",
+  "concept": "植物运动与感知",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "607224655",
+  "tags": []
+ },
+ "BQ-plant_movement-5a554945e4ec": {
+  "type": "mtf",
+  "question": "关于植物对环境信号的感知，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "植物的向触性最典型的例子是攀援植物的卷须在接触支持物后的缠绕生长",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "向光性中，蓝光受体phototropin感知单侧光信号，引起生长素在背光侧积累从而导致不对称生长",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "植物无法感知和响应机械损伤以外的非生物环境信号",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "向地性中，根表现为正向地性（向下生长），茎表现为负向地性（向上生长）",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：向光性的分子机制。D正确：根和茎的向地性差异。A正确：向触性的经典实例。C错误：植物能感知多种环境信号——光（光敏色素、隐花色素等）、温度、水分、盐、重力、触摸、声音振动、甚至邻近植物的遮荫。植物感知环境的机制是当前研究热点。",
+  "module": 2,
+  "subject": "植物学",
+  "concept": "植物运动与感知",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "607224655",
+  "tags": []
+ },
+ "BQ-plant_movement-0f6ffd93cb36": {
+  "type": "mtf",
+  "question": "关于植物对环境信号的感知，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "植物的向触性最典型的例子是攀援植物的卷须在接触支持物后的缠绕生长",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "向地性中，根表现为正向地性（向下生长），茎表现为负向地性（向上生长）",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "向光性中，蓝光受体phototropin感知单侧光信号，引起生长素在背光侧积累从而导致不对称生长",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "植物无法感知和响应机械损伤以外的非生物环境信号",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确：向光性的分子机制。B正确：根和茎的向地性差异。A正确：向触性的经典实例。D错误：植物能感知多种环境信号——光（光敏色素、隐花色素等）、温度、水分、盐、重力、触摸、声音振动、甚至邻近植物的遮荫。植物感知环境的机制是当前研究热点。",
+  "module": 2,
+  "subject": "植物学",
+  "concept": "植物运动与感知",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "607224655",
+  "tags": []
+ },
+ "BQ-plant_movement-e4bbdb4a3116": {
+  "type": "mtf",
+  "question": "关于植物对环境信号的感知，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "植物的向触性最典型的例子是攀援植物的卷须在接触支持物后的缠绕生长",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "向地性中，根表现为正向地性（向下生长），茎表现为负向地性（向上生长）",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "植物无法感知和响应机械损伤以外的非生物环境信号",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "向光性中，蓝光受体phototropin感知单侧光信号，引起生长素在背光侧积累从而导致不对称生长",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：向光性的分子机制。B正确：根和茎的向地性差异。A正确：向触性的经典实例。C错误：植物能感知多种环境信号——光（光敏色素、隐花色素等）、温度、水分、盐、重力、触摸、声音振动、甚至邻近植物的遮荫。植物感知环境的机制是当前研究热点。",
+  "module": 2,
+  "subject": "植物学",
+  "concept": "植物运动与感知",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "607224655",
+  "tags": []
+ },
+ "BQ-plant_movement-81de19495d03": {
+  "type": "mtf",
+  "question": "关于植物对环境信号的感知，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "植物的向触性最典型的例子是攀援植物的卷须在接触支持物后的缠绕生长",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "植物无法感知和响应机械损伤以外的非生物环境信号",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "向光性中，蓝光受体phototropin感知单侧光信号，引起生长素在背光侧积累从而导致不对称生长",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "向地性中，根表现为正向地性（向下生长），茎表现为负向地性（向上生长）",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：向光性的分子机制。D正确：根和茎的向地性差异。A正确：向触性的经典实例。B错误：植物能感知多种环境信号——光（光敏色素、隐花色素等）、温度、水分、盐、重力、触摸、声音振动、甚至邻近植物的遮荫。植物感知环境的机制是当前研究热点。",
+  "module": 2,
+  "subject": "植物学",
+  "concept": "植物运动与感知",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "607224655",
+  "tags": []
+ },
+ "BQ-plant_movement-25b258b685fc": {
+  "type": "mtf",
+  "question": "关于植物对环境信号的感知，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "植物的向触性最典型的例子是攀援植物的卷须在接触支持物后的缠绕生长",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "植物无法感知和响应机械损伤以外的非生物环境信号",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "向地性中，根表现为正向地性（向下生长），茎表现为负向地性（向上生长）",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "向光性中，蓝光受体phototropin感知单侧光信号，引起生长素在背光侧积累从而导致不对称生长",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：向光性的分子机制。C正确：根和茎的向地性差异。A正确：向触性的经典实例。B错误：植物能感知多种环境信号——光（光敏色素、隐花色素等）、温度、水分、盐、重力、触摸、声音振动、甚至邻近植物的遮荫。植物感知环境的机制是当前研究热点。",
+  "module": 2,
+  "subject": "植物学",
+  "concept": "植物运动与感知",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "607224655",
+  "tags": []
+ },
+ "BQ-plant_movement-29299718c682": {
+  "type": "mtf",
+  "question": "关于植物气孔开关的信号调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "ABA激活保卫细胞Ca²⁺通道和阴离子通道→去极化→K⁺外流→气孔关闭",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "气孔运动仅由单因素决定",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "蓝光激活保卫细胞质膜H⁺-ATPase→超极化→K⁺内流→气孔张开",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "高CO₂浓度促进气孔关闭",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:气孔运动整合多种信号——光(蓝光/红光)、CO₂浓度、ABA、湿度、病原信号等,多种信号通路在保卫细胞中汇合并精细调控。",
+  "module": 2,
+  "subject": "植物学",
+  "concept": "气孔调控",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "302670685",
+  "tags": []
+ },
+ "BQ-plant_movement-9d992b53f903": {
+  "type": "mtf",
+  "question": "关于植物气孔开关的信号调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "ABA激活保卫细胞Ca²⁺通道和阴离子通道→去极化→K⁺外流→气孔关闭",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "气孔运动仅由单因素决定",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "高CO₂浓度促进气孔关闭",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "蓝光激活保卫细胞质膜H⁺-ATPase→超极化→K⁺内流→气孔张开",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:气孔运动整合多种信号——光(蓝光/红光)、CO₂浓度、ABA、湿度、病原信号等,多种信号通路在保卫细胞中汇合并精细调控。",
+  "module": 2,
+  "subject": "植物学",
+  "concept": "气孔调控",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "302670685",
+  "tags": []
+ },
+ "BQ-plant_movement-00d9dc2dc59e": {
+  "type": "mtf",
+  "question": "关于植物气孔开关的信号调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "ABA激活保卫细胞Ca²⁺通道和阴离子通道→去极化→K⁺外流→气孔关闭",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "蓝光激活保卫细胞质膜H⁺-ATPase→超极化→K⁺内流→气孔张开",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "气孔运动仅由单因素决定",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "高CO₂浓度促进气孔关闭",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:气孔运动整合多种信号——光(蓝光/红光)、CO₂浓度、ABA、湿度、病原信号等,多种信号通路在保卫细胞中汇合并精细调控。",
+  "module": 2,
+  "subject": "植物学",
+  "concept": "气孔调控",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "302670685",
+  "tags": []
+ },
+ "BQ-plant_movement-e6d98add00bb": {
+  "type": "mtf",
+  "question": "关于植物气孔开关的信号调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "ABA激活保卫细胞Ca²⁺通道和阴离子通道→去极化→K⁺外流→气孔关闭",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "蓝光激活保卫细胞质膜H⁺-ATPase→超极化→K⁺内流→气孔张开",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "高CO₂浓度促进气孔关闭",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "气孔运动仅由单因素决定",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:气孔运动整合多种信号——光(蓝光/红光)、CO₂浓度、ABA、湿度、病原信号等,多种信号通路在保卫细胞中汇合并精细调控。",
+  "module": 2,
+  "subject": "植物学",
+  "concept": "气孔调控",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "302670685",
+  "tags": []
+ },
+ "BQ-plant_movement-8c3c488dfd21": {
+  "type": "mtf",
+  "question": "关于植物气孔开关的信号调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "ABA激活保卫细胞Ca²⁺通道和阴离子通道→去极化→K⁺外流→气孔关闭",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "高CO₂浓度促进气孔关闭",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "气孔运动仅由单因素决定",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "蓝光激活保卫细胞质膜H⁺-ATPase→超极化→K⁺内流→气孔张开",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:气孔运动整合多种信号——光(蓝光/红光)、CO₂浓度、ABA、湿度、病原信号等,多种信号通路在保卫细胞中汇合并精细调控。",
+  "module": 2,
+  "subject": "植物学",
+  "concept": "气孔调控",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "302670685",
+  "tags": []
+ },
+ "BQ-plant_movement-bb0615517edd": {
+  "type": "mtf",
+  "question": "关于植物气孔开关的信号调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "ABA激活保卫细胞Ca²⁺通道和阴离子通道→去极化→K⁺外流→气孔关闭",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "高CO₂浓度促进气孔关闭",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "蓝光激活保卫细胞质膜H⁺-ATPase→超极化→K⁺内流→气孔张开",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "气孔运动仅由单因素决定",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:气孔运动整合多种信号——光(蓝光/红光)、CO₂浓度、ABA、湿度、病原信号等,多种信号通路在保卫细胞中汇合并精细调控。",
+  "module": 2,
+  "subject": "植物学",
+  "concept": "气孔调控",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "302670685",
+  "tags": []
+ },
+ "BQ-plant_movement-9427daf82275": {
+  "type": "mtf",
+  "question": "关于植物气孔开关的信号调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "气孔运动仅由单因素决定",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "ABA激活保卫细胞Ca²⁺通道和阴离子通道→去极化→K⁺外流→气孔关闭",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "蓝光激活保卫细胞质膜H⁺-ATPase→超极化→K⁺内流→气孔张开",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "高CO₂浓度促进气孔关闭",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:气孔运动整合多种信号——光(蓝光/红光)、CO₂浓度、ABA、湿度、病原信号等,多种信号通路在保卫细胞中汇合并精细调控。",
+  "module": 2,
+  "subject": "植物学",
+  "concept": "气孔调控",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "302670685",
+  "tags": []
+ },
+ "BQ-plant_movement-a61c45e0e1cb": {
+  "type": "mtf",
+  "question": "关于植物气孔开关的信号调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "气孔运动仅由单因素决定",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "ABA激活保卫细胞Ca²⁺通道和阴离子通道→去极化→K⁺外流→气孔关闭",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "高CO₂浓度促进气孔关闭",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "蓝光激活保卫细胞质膜H⁺-ATPase→超极化→K⁺内流→气孔张开",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:气孔运动整合多种信号——光(蓝光/红光)、CO₂浓度、ABA、湿度、病原信号等,多种信号通路在保卫细胞中汇合并精细调控。",
+  "module": 2,
+  "subject": "植物学",
+  "concept": "气孔调控",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "302670685",
+  "tags": []
+ },
+ "BQ-plant_movement-b12ed5c59891": {
+  "type": "mtf",
+  "question": "关于植物气孔开关的信号调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "气孔运动仅由单因素决定",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "蓝光激活保卫细胞质膜H⁺-ATPase→超极化→K⁺内流→气孔张开",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "ABA激活保卫细胞Ca²⁺通道和阴离子通道→去极化→K⁺外流→气孔关闭",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "高CO₂浓度促进气孔关闭",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:气孔运动整合多种信号——光(蓝光/红光)、CO₂浓度、ABA、湿度、病原信号等,多种信号通路在保卫细胞中汇合并精细调控。",
+  "module": 2,
+  "subject": "植物学",
+  "concept": "气孔调控",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "302670685",
+  "tags": []
+ },
+ "BQ-plant_movement-dff35fb208a6": {
+  "type": "mtf",
+  "question": "关于植物气孔开关的信号调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "气孔运动仅由单因素决定",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "蓝光激活保卫细胞质膜H⁺-ATPase→超极化→K⁺内流→气孔张开",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "高CO₂浓度促进气孔关闭",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "ABA激活保卫细胞Ca²⁺通道和阴离子通道→去极化→K⁺外流→气孔关闭",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:气孔运动整合多种信号——光(蓝光/红光)、CO₂浓度、ABA、湿度、病原信号等,多种信号通路在保卫细胞中汇合并精细调控。",
+  "module": 2,
+  "subject": "植物学",
+  "concept": "气孔调控",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "302670685",
+  "tags": []
+ },
+ "BQ-plant_movement-e07fd2656fc8": {
+  "type": "mtf",
+  "question": "关于植物气孔开关的信号调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "气孔运动仅由单因素决定",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "高CO₂浓度促进气孔关闭",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "ABA激活保卫细胞Ca²⁺通道和阴离子通道→去极化→K⁺外流→气孔关闭",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "蓝光激活保卫细胞质膜H⁺-ATPase→超极化→K⁺内流→气孔张开",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:气孔运动整合多种信号——光(蓝光/红光)、CO₂浓度、ABA、湿度、病原信号等,多种信号通路在保卫细胞中汇合并精细调控。",
+  "module": 2,
+  "subject": "植物学",
+  "concept": "气孔调控",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "302670685",
+  "tags": []
+ },
+ "BQ-plant_movement-411bc3ed76a6": {
+  "type": "mtf",
+  "question": "关于植物气孔开关的信号调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "气孔运动仅由单因素决定",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "高CO₂浓度促进气孔关闭",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "蓝光激活保卫细胞质膜H⁺-ATPase→超极化→K⁺内流→气孔张开",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "ABA激活保卫细胞Ca²⁺通道和阴离子通道→去极化→K⁺外流→气孔关闭",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:气孔运动整合多种信号——光(蓝光/红光)、CO₂浓度、ABA、湿度、病原信号等,多种信号通路在保卫细胞中汇合并精细调控。",
+  "module": 2,
+  "subject": "植物学",
+  "concept": "气孔调控",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "302670685",
+  "tags": []
+ },
+ "BQ-plant_movement-c2d06d479bde": {
+  "type": "mtf",
+  "question": "关于植物气孔开关的信号调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "蓝光激活保卫细胞质膜H⁺-ATPase→超极化→K⁺内流→气孔张开",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "ABA激活保卫细胞Ca²⁺通道和阴离子通道→去极化→K⁺外流→气孔关闭",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "气孔运动仅由单因素决定",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "高CO₂浓度促进气孔关闭",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:气孔运动整合多种信号——光(蓝光/红光)、CO₂浓度、ABA、湿度、病原信号等,多种信号通路在保卫细胞中汇合并精细调控。",
+  "module": 2,
+  "subject": "植物学",
+  "concept": "气孔调控",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "302670685",
+  "tags": []
+ },
+ "BQ-plant_movement-4d9b28424c00": {
+  "type": "mtf",
+  "question": "关于植物气孔开关的信号调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "蓝光激活保卫细胞质膜H⁺-ATPase→超极化→K⁺内流→气孔张开",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "ABA激活保卫细胞Ca²⁺通道和阴离子通道→去极化→K⁺外流→气孔关闭",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "高CO₂浓度促进气孔关闭",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "气孔运动仅由单因素决定",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:气孔运动整合多种信号——光(蓝光/红光)、CO₂浓度、ABA、湿度、病原信号等,多种信号通路在保卫细胞中汇合并精细调控。",
+  "module": 2,
+  "subject": "植物学",
+  "concept": "气孔调控",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "302670685",
+  "tags": []
+ },
+ "BQ-plant_movement-6c4123f65b3f": {
+  "type": "mtf",
+  "question": "关于植物气孔开关的信号调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "蓝光激活保卫细胞质膜H⁺-ATPase→超极化→K⁺内流→气孔张开",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "气孔运动仅由单因素决定",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "ABA激活保卫细胞Ca²⁺通道和阴离子通道→去极化→K⁺外流→气孔关闭",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "高CO₂浓度促进气孔关闭",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:气孔运动整合多种信号——光(蓝光/红光)、CO₂浓度、ABA、湿度、病原信号等,多种信号通路在保卫细胞中汇合并精细调控。",
+  "module": 2,
+  "subject": "植物学",
+  "concept": "气孔调控",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "302670685",
+  "tags": []
+ },
+ "BQ-plant_movement-dd402d3b8e4b": {
+  "type": "mtf",
+  "question": "关于植物气孔开关的信号调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "蓝光激活保卫细胞质膜H⁺-ATPase→超极化→K⁺内流→气孔张开",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "气孔运动仅由单因素决定",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "高CO₂浓度促进气孔关闭",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "ABA激活保卫细胞Ca²⁺通道和阴离子通道→去极化→K⁺外流→气孔关闭",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:气孔运动整合多种信号——光(蓝光/红光)、CO₂浓度、ABA、湿度、病原信号等,多种信号通路在保卫细胞中汇合并精细调控。",
+  "module": 2,
+  "subject": "植物学",
+  "concept": "气孔调控",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "302670685",
+  "tags": []
+ },
+ "BQ-plant_movement-c08ff601c2d9": {
+  "type": "mtf",
+  "question": "关于植物气孔开关的信号调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "蓝光激活保卫细胞质膜H⁺-ATPase→超极化→K⁺内流→气孔张开",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "高CO₂浓度促进气孔关闭",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "ABA激活保卫细胞Ca²⁺通道和阴离子通道→去极化→K⁺外流→气孔关闭",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "气孔运动仅由单因素决定",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:气孔运动整合多种信号——光(蓝光/红光)、CO₂浓度、ABA、湿度、病原信号等,多种信号通路在保卫细胞中汇合并精细调控。",
+  "module": 2,
+  "subject": "植物学",
+  "concept": "气孔调控",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "302670685",
+  "tags": []
+ },
+ "BQ-plant_movement-d47392b0fe09": {
+  "type": "mtf",
+  "question": "关于植物气孔开关的信号调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "蓝光激活保卫细胞质膜H⁺-ATPase→超极化→K⁺内流→气孔张开",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "高CO₂浓度促进气孔关闭",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "气孔运动仅由单因素决定",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "ABA激活保卫细胞Ca²⁺通道和阴离子通道→去极化→K⁺外流→气孔关闭",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:气孔运动整合多种信号——光(蓝光/红光)、CO₂浓度、ABA、湿度、病原信号等,多种信号通路在保卫细胞中汇合并精细调控。",
+  "module": 2,
+  "subject": "植物学",
+  "concept": "气孔调控",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "302670685",
+  "tags": []
+ },
+ "BQ-plant_movement-a549b9bfad52": {
+  "type": "mtf",
+  "question": "关于植物气孔开关的信号调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "高CO₂浓度促进气孔关闭",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "ABA激活保卫细胞Ca²⁺通道和阴离子通道→去极化→K⁺外流→气孔关闭",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "气孔运动仅由单因素决定",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "蓝光激活保卫细胞质膜H⁺-ATPase→超极化→K⁺内流→气孔张开",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:气孔运动整合多种信号——光(蓝光/红光)、CO₂浓度、ABA、湿度、病原信号等,多种信号通路在保卫细胞中汇合并精细调控。",
+  "module": 2,
+  "subject": "植物学",
+  "concept": "气孔调控",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "302670685",
+  "tags": []
+ },
+ "BQ-plant_movement-6f59c43222db": {
+  "type": "mtf",
+  "question": "关于植物气孔开关的信号调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "高CO₂浓度促进气孔关闭",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "ABA激活保卫细胞Ca²⁺通道和阴离子通道→去极化→K⁺外流→气孔关闭",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "蓝光激活保卫细胞质膜H⁺-ATPase→超极化→K⁺内流→气孔张开",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "气孔运动仅由单因素决定",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:气孔运动整合多种信号——光(蓝光/红光)、CO₂浓度、ABA、湿度、病原信号等,多种信号通路在保卫细胞中汇合并精细调控。",
+  "module": 2,
+  "subject": "植物学",
+  "concept": "气孔调控",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "302670685",
+  "tags": []
+ },
+ "BQ-plant_movement-e5a108f34aa3": {
+  "type": "mtf",
+  "question": "关于植物气孔开关的信号调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "高CO₂浓度促进气孔关闭",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "气孔运动仅由单因素决定",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "ABA激活保卫细胞Ca²⁺通道和阴离子通道→去极化→K⁺外流→气孔关闭",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "蓝光激活保卫细胞质膜H⁺-ATPase→超极化→K⁺内流→气孔张开",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:气孔运动整合多种信号——光(蓝光/红光)、CO₂浓度、ABA、湿度、病原信号等,多种信号通路在保卫细胞中汇合并精细调控。",
+  "module": 2,
+  "subject": "植物学",
+  "concept": "气孔调控",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "302670685",
+  "tags": []
+ },
+ "BQ-plant_movement-89407dfcdf80": {
+  "type": "mtf",
+  "question": "关于植物气孔开关的信号调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "高CO₂浓度促进气孔关闭",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "气孔运动仅由单因素决定",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "蓝光激活保卫细胞质膜H⁺-ATPase→超极化→K⁺内流→气孔张开",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "ABA激活保卫细胞Ca²⁺通道和阴离子通道→去极化→K⁺外流→气孔关闭",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:气孔运动整合多种信号——光(蓝光/红光)、CO₂浓度、ABA、湿度、病原信号等,多种信号通路在保卫细胞中汇合并精细调控。",
+  "module": 2,
+  "subject": "植物学",
+  "concept": "气孔调控",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "302670685",
+  "tags": []
+ },
+ "BQ-plant_movement-e69fb9058a06": {
+  "type": "mtf",
+  "question": "关于植物气孔开关的信号调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "高CO₂浓度促进气孔关闭",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "蓝光激活保卫细胞质膜H⁺-ATPase→超极化→K⁺内流→气孔张开",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "ABA激活保卫细胞Ca²⁺通道和阴离子通道→去极化→K⁺外流→气孔关闭",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "气孔运动仅由单因素决定",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:气孔运动整合多种信号——光(蓝光/红光)、CO₂浓度、ABA、湿度、病原信号等,多种信号通路在保卫细胞中汇合并精细调控。",
+  "module": 2,
+  "subject": "植物学",
+  "concept": "气孔调控",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "302670685",
+  "tags": []
+ },
+ "BQ-plant_movement-8b815cb1dc8e": {
+  "type": "mtf",
+  "question": "关于植物气孔开关的信号调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "高CO₂浓度促进气孔关闭",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "蓝光激活保卫细胞质膜H⁺-ATPase→超极化→K⁺内流→气孔张开",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "气孔运动仅由单因素决定",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "ABA激活保卫细胞Ca²⁺通道和阴离子通道→去极化→K⁺外流→气孔关闭",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:气孔运动整合多种信号——光(蓝光/红光)、CO₂浓度、ABA、湿度、病原信号等,多种信号通路在保卫细胞中汇合并精细调控。",
+  "module": 2,
+  "subject": "植物学",
+  "concept": "气孔调控",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "302670685",
+  "tags": []
+ },
+ "BQ-plant_movement-905890ef69bc": {
+  "type": "mtf",
+  "question": "关于植物的向性运动，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "向水性是指根向水分较多的区域生长的特性，其分子机制与向地性共享部分信号通路",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "所有向性运动都是不可逆的生长反应",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "根的正向地性和茎的负向地性均依赖平衡细胞(statocyte)中的淀粉体沉降",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "植物向光性中蓝光受体phot1和phot2感知光信号，调控生长素转运蛋白PIN的分布",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:向光性分子机制。B:平衡石假说。C:向水性的分子基础。D:向性运动定义为生长性运动，不可逆。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "植物运动",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "334208026",
+  "tags": []
+ },
+ "BQ-plant_movement-3409a80321d8": {
+  "type": "mtf",
+  "question": "关于植物的向性运动，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "向水性是指根向水分较多的区域生长的特性，其分子机制与向地性共享部分信号通路",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "所有向性运动都是不可逆的生长反应",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "植物向光性中蓝光受体phot1和phot2感知光信号，调控生长素转运蛋白PIN的分布",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "根的正向地性和茎的负向地性均依赖平衡细胞(statocyte)中的淀粉体沉降",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:向光性分子机制。B:平衡石假说。C:向水性的分子基础。D:向性运动定义为生长性运动，不可逆。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "植物运动",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "334208026",
+  "tags": []
+ },
+ "BQ-plant_movement-b4c52295e0b7": {
+  "type": "mtf",
+  "question": "关于植物的向性运动，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "向水性是指根向水分较多的区域生长的特性，其分子机制与向地性共享部分信号通路",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "根的正向地性和茎的负向地性均依赖平衡细胞(statocyte)中的淀粉体沉降",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "所有向性运动都是不可逆的生长反应",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "植物向光性中蓝光受体phot1和phot2感知光信号，调控生长素转运蛋白PIN的分布",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:向光性分子机制。B:平衡石假说。C:向水性的分子基础。D:向性运动定义为生长性运动，不可逆。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "植物运动",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "334208026",
+  "tags": []
+ },
+ "BQ-plant_movement-109feaa31618": {
+  "type": "mtf",
+  "question": "关于植物的向性运动，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "向水性是指根向水分较多的区域生长的特性，其分子机制与向地性共享部分信号通路",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "根的正向地性和茎的负向地性均依赖平衡细胞(statocyte)中的淀粉体沉降",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "植物向光性中蓝光受体phot1和phot2感知光信号，调控生长素转运蛋白PIN的分布",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "所有向性运动都是不可逆的生长反应",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:向光性分子机制。B:平衡石假说。C:向水性的分子基础。D:向性运动定义为生长性运动，不可逆。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "植物运动",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "334208026",
+  "tags": []
+ },
+ "BQ-plant_movement-9dd92dfbd30a": {
+  "type": "mtf",
+  "question": "关于植物的向性运动，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "向水性是指根向水分较多的区域生长的特性，其分子机制与向地性共享部分信号通路",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "植物向光性中蓝光受体phot1和phot2感知光信号，调控生长素转运蛋白PIN的分布",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "所有向性运动都是不可逆的生长反应",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "根的正向地性和茎的负向地性均依赖平衡细胞(statocyte)中的淀粉体沉降",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:向光性分子机制。B:平衡石假说。C:向水性的分子基础。D:向性运动定义为生长性运动，不可逆。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "植物运动",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "334208026",
+  "tags": []
+ },
+ "BQ-plant_movement-8e5cb80147f7": {
+  "type": "mtf",
+  "question": "关于植物的向性运动，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "向水性是指根向水分较多的区域生长的特性，其分子机制与向地性共享部分信号通路",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "植物向光性中蓝光受体phot1和phot2感知光信号，调控生长素转运蛋白PIN的分布",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "根的正向地性和茎的负向地性均依赖平衡细胞(statocyte)中的淀粉体沉降",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "所有向性运动都是不可逆的生长反应",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:向光性分子机制。B:平衡石假说。C:向水性的分子基础。D:向性运动定义为生长性运动，不可逆。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "植物运动",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "334208026",
+  "tags": []
+ },
+ "BQ-plant_movement-b93de9a21021": {
+  "type": "mtf",
+  "question": "关于植物的向性运动，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "所有向性运动都是不可逆的生长反应",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "向水性是指根向水分较多的区域生长的特性，其分子机制与向地性共享部分信号通路",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "根的正向地性和茎的负向地性均依赖平衡细胞(statocyte)中的淀粉体沉降",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "植物向光性中蓝光受体phot1和phot2感知光信号，调控生长素转运蛋白PIN的分布",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:向光性分子机制。B:平衡石假说。C:向水性的分子基础。D:向性运动定义为生长性运动，不可逆。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "植物运动",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "334208026",
+  "tags": []
+ },
+ "BQ-plant_movement-c7eddab2c841": {
+  "type": "mtf",
+  "question": "关于植物的向性运动，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "所有向性运动都是不可逆的生长反应",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "向水性是指根向水分较多的区域生长的特性，其分子机制与向地性共享部分信号通路",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "植物向光性中蓝光受体phot1和phot2感知光信号，调控生长素转运蛋白PIN的分布",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "根的正向地性和茎的负向地性均依赖平衡细胞(statocyte)中的淀粉体沉降",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:向光性分子机制。B:平衡石假说。C:向水性的分子基础。D:向性运动定义为生长性运动，不可逆。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "植物运动",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "334208026",
+  "tags": []
+ },
+ "BQ-plant_movement-3c35b1f0636c": {
+  "type": "mtf",
+  "question": "关于植物的向性运动，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "所有向性运动都是不可逆的生长反应",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "根的正向地性和茎的负向地性均依赖平衡细胞(statocyte)中的淀粉体沉降",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "向水性是指根向水分较多的区域生长的特性，其分子机制与向地性共享部分信号通路",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "植物向光性中蓝光受体phot1和phot2感知光信号，调控生长素转运蛋白PIN的分布",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:向光性分子机制。B:平衡石假说。C:向水性的分子基础。D:向性运动定义为生长性运动，不可逆。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "植物运动",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "334208026",
+  "tags": []
+ },
+ "BQ-plant_movement-14606bdd0d75": {
+  "type": "mtf",
+  "question": "关于植物的向性运动，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "所有向性运动都是不可逆的生长反应",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "根的正向地性和茎的负向地性均依赖平衡细胞(statocyte)中的淀粉体沉降",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "植物向光性中蓝光受体phot1和phot2感知光信号，调控生长素转运蛋白PIN的分布",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "向水性是指根向水分较多的区域生长的特性，其分子机制与向地性共享部分信号通路",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:向光性分子机制。B:平衡石假说。C:向水性的分子基础。D:向性运动定义为生长性运动，不可逆。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "植物运动",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "334208026",
+  "tags": []
+ },
+ "BQ-plant_movement-5dd5557501aa": {
+  "type": "mtf",
+  "question": "关于植物的向性运动，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "所有向性运动都是不可逆的生长反应",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "植物向光性中蓝光受体phot1和phot2感知光信号，调控生长素转运蛋白PIN的分布",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "向水性是指根向水分较多的区域生长的特性，其分子机制与向地性共享部分信号通路",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "根的正向地性和茎的负向地性均依赖平衡细胞(statocyte)中的淀粉体沉降",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:向光性分子机制。B:平衡石假说。C:向水性的分子基础。D:向性运动定义为生长性运动，不可逆。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "植物运动",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "334208026",
+  "tags": []
+ },
+ "BQ-plant_movement-caf9bc0dce5c": {
+  "type": "mtf",
+  "question": "关于植物的向性运动，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "所有向性运动都是不可逆的生长反应",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "植物向光性中蓝光受体phot1和phot2感知光信号，调控生长素转运蛋白PIN的分布",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "根的正向地性和茎的负向地性均依赖平衡细胞(statocyte)中的淀粉体沉降",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "向水性是指根向水分较多的区域生长的特性，其分子机制与向地性共享部分信号通路",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:向光性分子机制。B:平衡石假说。C:向水性的分子基础。D:向性运动定义为生长性运动，不可逆。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "植物运动",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "334208026",
+  "tags": []
+ },
+ "BQ-plant_movement-8ab16f757cee": {
+  "type": "mtf",
+  "question": "关于植物的向性运动，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "根的正向地性和茎的负向地性均依赖平衡细胞(statocyte)中的淀粉体沉降",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "向水性是指根向水分较多的区域生长的特性，其分子机制与向地性共享部分信号通路",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "所有向性运动都是不可逆的生长反应",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "植物向光性中蓝光受体phot1和phot2感知光信号，调控生长素转运蛋白PIN的分布",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:向光性分子机制。B:平衡石假说。C:向水性的分子基础。D:向性运动定义为生长性运动，不可逆。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "植物运动",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "334208026",
+  "tags": []
+ },
+ "BQ-plant_movement-001a47014b00": {
+  "type": "mtf",
+  "question": "关于植物的向性运动，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "根的正向地性和茎的负向地性均依赖平衡细胞(statocyte)中的淀粉体沉降",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "向水性是指根向水分较多的区域生长的特性，其分子机制与向地性共享部分信号通路",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "植物向光性中蓝光受体phot1和phot2感知光信号，调控生长素转运蛋白PIN的分布",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "所有向性运动都是不可逆的生长反应",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:向光性分子机制。B:平衡石假说。C:向水性的分子基础。D:向性运动定义为生长性运动，不可逆。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "植物运动",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "334208026",
+  "tags": []
+ },
+ "BQ-plant_movement-c7f1274da120": {
+  "type": "mtf",
+  "question": "关于植物的向性运动，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "根的正向地性和茎的负向地性均依赖平衡细胞(statocyte)中的淀粉体沉降",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "所有向性运动都是不可逆的生长反应",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "向水性是指根向水分较多的区域生长的特性，其分子机制与向地性共享部分信号通路",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "植物向光性中蓝光受体phot1和phot2感知光信号，调控生长素转运蛋白PIN的分布",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:向光性分子机制。B:平衡石假说。C:向水性的分子基础。D:向性运动定义为生长性运动，不可逆。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "植物运动",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "334208026",
+  "tags": []
+ },
+ "BQ-plant_movement-e4de5a880306": {
+  "type": "mtf",
+  "question": "关于植物的向性运动，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "根的正向地性和茎的负向地性均依赖平衡细胞(statocyte)中的淀粉体沉降",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "所有向性运动都是不可逆的生长反应",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "植物向光性中蓝光受体phot1和phot2感知光信号，调控生长素转运蛋白PIN的分布",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "向水性是指根向水分较多的区域生长的特性，其分子机制与向地性共享部分信号通路",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:向光性分子机制。B:平衡石假说。C:向水性的分子基础。D:向性运动定义为生长性运动，不可逆。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "植物运动",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "334208026",
+  "tags": []
+ },
+ "BQ-plant_movement-027951498468": {
+  "type": "mtf",
+  "question": "关于植物的向性运动，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "根的正向地性和茎的负向地性均依赖平衡细胞(statocyte)中的淀粉体沉降",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "植物向光性中蓝光受体phot1和phot2感知光信号，调控生长素转运蛋白PIN的分布",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "向水性是指根向水分较多的区域生长的特性，其分子机制与向地性共享部分信号通路",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "所有向性运动都是不可逆的生长反应",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:向光性分子机制。B:平衡石假说。C:向水性的分子基础。D:向性运动定义为生长性运动，不可逆。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "植物运动",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "334208026",
+  "tags": []
+ },
+ "BQ-plant_movement-02973f68830f": {
+  "type": "mtf",
+  "question": "关于植物的向性运动，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "根的正向地性和茎的负向地性均依赖平衡细胞(statocyte)中的淀粉体沉降",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "植物向光性中蓝光受体phot1和phot2感知光信号，调控生长素转运蛋白PIN的分布",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "所有向性运动都是不可逆的生长反应",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "向水性是指根向水分较多的区域生长的特性，其分子机制与向地性共享部分信号通路",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:向光性分子机制。B:平衡石假说。C:向水性的分子基础。D:向性运动定义为生长性运动，不可逆。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "植物运动",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "334208026",
+  "tags": []
+ },
+ "BQ-plant_movement-f1c08d502055": {
+  "type": "mtf",
+  "question": "关于植物的向性运动，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "植物向光性中蓝光受体phot1和phot2感知光信号，调控生长素转运蛋白PIN的分布",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "向水性是指根向水分较多的区域生长的特性，其分子机制与向地性共享部分信号通路",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "所有向性运动都是不可逆的生长反应",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "根的正向地性和茎的负向地性均依赖平衡细胞(statocyte)中的淀粉体沉降",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:向光性分子机制。B:平衡石假说。C:向水性的分子基础。D:向性运动定义为生长性运动，不可逆。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "植物运动",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "334208026",
+  "tags": []
+ },
+ "BQ-plant_movement-4ed6edf11036": {
+  "type": "mtf",
+  "question": "关于植物的向性运动，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "植物向光性中蓝光受体phot1和phot2感知光信号，调控生长素转运蛋白PIN的分布",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "向水性是指根向水分较多的区域生长的特性，其分子机制与向地性共享部分信号通路",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "根的正向地性和茎的负向地性均依赖平衡细胞(statocyte)中的淀粉体沉降",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "所有向性运动都是不可逆的生长反应",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:向光性分子机制。B:平衡石假说。C:向水性的分子基础。D:向性运动定义为生长性运动，不可逆。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "植物运动",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "334208026",
+  "tags": []
+ },
+ "BQ-plant_movement-84fd18e13653": {
+  "type": "mtf",
+  "question": "关于植物的向性运动，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "植物向光性中蓝光受体phot1和phot2感知光信号，调控生长素转运蛋白PIN的分布",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "所有向性运动都是不可逆的生长反应",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "向水性是指根向水分较多的区域生长的特性，其分子机制与向地性共享部分信号通路",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "根的正向地性和茎的负向地性均依赖平衡细胞(statocyte)中的淀粉体沉降",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:向光性分子机制。B:平衡石假说。C:向水性的分子基础。D:向性运动定义为生长性运动，不可逆。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "植物运动",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "334208026",
+  "tags": []
+ },
+ "BQ-plant_movement-58e69c8cec97": {
+  "type": "mtf",
+  "question": "关于植物的向性运动，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "植物向光性中蓝光受体phot1和phot2感知光信号，调控生长素转运蛋白PIN的分布",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "所有向性运动都是不可逆的生长反应",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "根的正向地性和茎的负向地性均依赖平衡细胞(statocyte)中的淀粉体沉降",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "向水性是指根向水分较多的区域生长的特性，其分子机制与向地性共享部分信号通路",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:向光性分子机制。B:平衡石假说。C:向水性的分子基础。D:向性运动定义为生长性运动，不可逆。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "植物运动",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "334208026",
+  "tags": []
+ },
+ "BQ-plant_movement-25448d3c5178": {
+  "type": "mtf",
+  "question": "关于植物的向性运动，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "植物向光性中蓝光受体phot1和phot2感知光信号，调控生长素转运蛋白PIN的分布",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "根的正向地性和茎的负向地性均依赖平衡细胞(statocyte)中的淀粉体沉降",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "向水性是指根向水分较多的区域生长的特性，其分子机制与向地性共享部分信号通路",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "所有向性运动都是不可逆的生长反应",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:向光性分子机制。B:平衡石假说。C:向水性的分子基础。D:向性运动定义为生长性运动，不可逆。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "植物运动",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "334208026",
+  "tags": []
+ },
+ "BQ-plant_movement-647ffb2c8cd6": {
+  "type": "mtf",
+  "question": "关于植物的向性运动，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "植物向光性中蓝光受体phot1和phot2感知光信号，调控生长素转运蛋白PIN的分布",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "根的正向地性和茎的负向地性均依赖平衡细胞(statocyte)中的淀粉体沉降",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "所有向性运动都是不可逆的生长反应",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "向水性是指根向水分较多的区域生长的特性，其分子机制与向地性共享部分信号通路",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:向光性分子机制。B:平衡石假说。C:向水性的分子基础。D:向性运动定义为生长性运动，不可逆。",
+  "module": 2,
+  "subject": "植物生理学",
+  "concept": "植物运动",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "334208026",
+  "tags": []
+ },
+ "BQ-plant_movement-3abdffe9f567": {
+  "type": "mtf",
+  "question": "关于运动系统的能量代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "有氧氧化系统是长时间(>2分钟)耐力运动的主要供能方式",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "磷酸肌酸系统(ATP-PCr系统)提供极短时间(0-10秒)爆发性运动的能量",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "糖酵解系统(乳酸系统)提供中等时间(10秒-2分钟)高强度运动的能量",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "肌纤维类型的代谢特征与运动能力相关——I型肌纤维(慢肌)富含线粒体适合耐力运动，II型(快肌)主要依赖糖酵解适合爆发力运动",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A-C:三大供能系统的时间特征。D:肌纤维类型与代谢特征的关系。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "运动供能",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1983363753",
+  "tags": []
+ },
+ "BQ-plant_movement-b5c97267a2e2": {
+  "type": "mtf",
+  "question": "关于运动系统的能量代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "有氧氧化系统是长时间(>2分钟)耐力运动的主要供能方式",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "磷酸肌酸系统(ATP-PCr系统)提供极短时间(0-10秒)爆发性运动的能量",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "肌纤维类型的代谢特征与运动能力相关——I型肌纤维(慢肌)富含线粒体适合耐力运动，II型(快肌)主要依赖糖酵解适合爆发力运动",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "糖酵解系统(乳酸系统)提供中等时间(10秒-2分钟)高强度运动的能量",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A-C:三大供能系统的时间特征。D:肌纤维类型与代谢特征的关系。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "运动供能",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1983363753",
+  "tags": []
+ },
+ "BQ-plant_movement-f639762da0bf": {
+  "type": "mtf",
+  "question": "关于运动系统的能量代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "有氧氧化系统是长时间(>2分钟)耐力运动的主要供能方式",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "糖酵解系统(乳酸系统)提供中等时间(10秒-2分钟)高强度运动的能量",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "磷酸肌酸系统(ATP-PCr系统)提供极短时间(0-10秒)爆发性运动的能量",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "肌纤维类型的代谢特征与运动能力相关——I型肌纤维(慢肌)富含线粒体适合耐力运动，II型(快肌)主要依赖糖酵解适合爆发力运动",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A-C:三大供能系统的时间特征。D:肌纤维类型与代谢特征的关系。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "运动供能",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1983363753",
+  "tags": []
+ },
+ "BQ-plant_movement-003b90394c43": {
+  "type": "mtf",
+  "question": "关于运动系统的能量代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "有氧氧化系统是长时间(>2分钟)耐力运动的主要供能方式",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "糖酵解系统(乳酸系统)提供中等时间(10秒-2分钟)高强度运动的能量",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "肌纤维类型的代谢特征与运动能力相关——I型肌纤维(慢肌)富含线粒体适合耐力运动，II型(快肌)主要依赖糖酵解适合爆发力运动",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "磷酸肌酸系统(ATP-PCr系统)提供极短时间(0-10秒)爆发性运动的能量",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A-C:三大供能系统的时间特征。D:肌纤维类型与代谢特征的关系。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "运动供能",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1983363753",
+  "tags": []
+ },
+ "BQ-plant_movement-7ff4e043fe33": {
+  "type": "mtf",
+  "question": "关于运动系统的能量代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "有氧氧化系统是长时间(>2分钟)耐力运动的主要供能方式",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "肌纤维类型的代谢特征与运动能力相关——I型肌纤维(慢肌)富含线粒体适合耐力运动，II型(快肌)主要依赖糖酵解适合爆发力运动",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "磷酸肌酸系统(ATP-PCr系统)提供极短时间(0-10秒)爆发性运动的能量",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "糖酵解系统(乳酸系统)提供中等时间(10秒-2分钟)高强度运动的能量",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A-C:三大供能系统的时间特征。D:肌纤维类型与代谢特征的关系。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "运动供能",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1983363753",
+  "tags": []
+ },
+ "BQ-plant_movement-535cd311613e": {
+  "type": "mtf",
+  "question": "关于运动系统的能量代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "有氧氧化系统是长时间(>2分钟)耐力运动的主要供能方式",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "肌纤维类型的代谢特征与运动能力相关——I型肌纤维(慢肌)富含线粒体适合耐力运动，II型(快肌)主要依赖糖酵解适合爆发力运动",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "糖酵解系统(乳酸系统)提供中等时间(10秒-2分钟)高强度运动的能量",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "磷酸肌酸系统(ATP-PCr系统)提供极短时间(0-10秒)爆发性运动的能量",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A-C:三大供能系统的时间特征。D:肌纤维类型与代谢特征的关系。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "运动供能",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1983363753",
+  "tags": []
+ },
+ "BQ-plant_movement-66b7e33af364": {
+  "type": "mtf",
+  "question": "关于运动系统的能量代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "磷酸肌酸系统(ATP-PCr系统)提供极短时间(0-10秒)爆发性运动的能量",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "有氧氧化系统是长时间(>2分钟)耐力运动的主要供能方式",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "糖酵解系统(乳酸系统)提供中等时间(10秒-2分钟)高强度运动的能量",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "肌纤维类型的代谢特征与运动能力相关——I型肌纤维(慢肌)富含线粒体适合耐力运动，II型(快肌)主要依赖糖酵解适合爆发力运动",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A-C:三大供能系统的时间特征。D:肌纤维类型与代谢特征的关系。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "运动供能",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1983363753",
+  "tags": []
+ },
+ "BQ-plant_movement-235f22b6df4e": {
+  "type": "mtf",
+  "question": "关于运动系统的能量代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "磷酸肌酸系统(ATP-PCr系统)提供极短时间(0-10秒)爆发性运动的能量",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "有氧氧化系统是长时间(>2分钟)耐力运动的主要供能方式",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "肌纤维类型的代谢特征与运动能力相关——I型肌纤维(慢肌)富含线粒体适合耐力运动，II型(快肌)主要依赖糖酵解适合爆发力运动",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "糖酵解系统(乳酸系统)提供中等时间(10秒-2分钟)高强度运动的能量",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A-C:三大供能系统的时间特征。D:肌纤维类型与代谢特征的关系。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "运动供能",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1983363753",
+  "tags": []
+ },
+ "BQ-plant_movement-0850cd5f64d7": {
+  "type": "mtf",
+  "question": "关于运动系统的能量代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "磷酸肌酸系统(ATP-PCr系统)提供极短时间(0-10秒)爆发性运动的能量",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "糖酵解系统(乳酸系统)提供中等时间(10秒-2分钟)高强度运动的能量",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "有氧氧化系统是长时间(>2分钟)耐力运动的主要供能方式",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "肌纤维类型的代谢特征与运动能力相关——I型肌纤维(慢肌)富含线粒体适合耐力运动，II型(快肌)主要依赖糖酵解适合爆发力运动",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A-C:三大供能系统的时间特征。D:肌纤维类型与代谢特征的关系。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "运动供能",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1983363753",
+  "tags": []
+ },
+ "BQ-plant_movement-7e0a0c5e3ca9": {
+  "type": "mtf",
+  "question": "关于运动系统的能量代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "磷酸肌酸系统(ATP-PCr系统)提供极短时间(0-10秒)爆发性运动的能量",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "糖酵解系统(乳酸系统)提供中等时间(10秒-2分钟)高强度运动的能量",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "肌纤维类型的代谢特征与运动能力相关——I型肌纤维(慢肌)富含线粒体适合耐力运动，II型(快肌)主要依赖糖酵解适合爆发力运动",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "有氧氧化系统是长时间(>2分钟)耐力运动的主要供能方式",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A-C:三大供能系统的时间特征。D:肌纤维类型与代谢特征的关系。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "运动供能",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1983363753",
+  "tags": []
+ },
+ "BQ-plant_movement-4f0ebd196589": {
+  "type": "mtf",
+  "question": "关于运动系统的能量代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "磷酸肌酸系统(ATP-PCr系统)提供极短时间(0-10秒)爆发性运动的能量",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "肌纤维类型的代谢特征与运动能力相关——I型肌纤维(慢肌)富含线粒体适合耐力运动，II型(快肌)主要依赖糖酵解适合爆发力运动",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "有氧氧化系统是长时间(>2分钟)耐力运动的主要供能方式",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "糖酵解系统(乳酸系统)提供中等时间(10秒-2分钟)高强度运动的能量",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A-C:三大供能系统的时间特征。D:肌纤维类型与代谢特征的关系。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "运动供能",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1983363753",
+  "tags": []
+ },
+ "BQ-plant_movement-f6cd7da101c3": {
+  "type": "mtf",
+  "question": "关于运动系统的能量代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "磷酸肌酸系统(ATP-PCr系统)提供极短时间(0-10秒)爆发性运动的能量",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "肌纤维类型的代谢特征与运动能力相关——I型肌纤维(慢肌)富含线粒体适合耐力运动，II型(快肌)主要依赖糖酵解适合爆发力运动",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "糖酵解系统(乳酸系统)提供中等时间(10秒-2分钟)高强度运动的能量",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "有氧氧化系统是长时间(>2分钟)耐力运动的主要供能方式",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A-C:三大供能系统的时间特征。D:肌纤维类型与代谢特征的关系。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "运动供能",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1983363753",
+  "tags": []
+ },
+ "BQ-plant_movement-ae29bd946dfa": {
+  "type": "mtf",
+  "question": "关于运动系统的能量代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "糖酵解系统(乳酸系统)提供中等时间(10秒-2分钟)高强度运动的能量",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "有氧氧化系统是长时间(>2分钟)耐力运动的主要供能方式",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "磷酸肌酸系统(ATP-PCr系统)提供极短时间(0-10秒)爆发性运动的能量",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "肌纤维类型的代谢特征与运动能力相关——I型肌纤维(慢肌)富含线粒体适合耐力运动，II型(快肌)主要依赖糖酵解适合爆发力运动",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A-C:三大供能系统的时间特征。D:肌纤维类型与代谢特征的关系。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "运动供能",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1983363753",
+  "tags": []
+ },
+ "BQ-plant_movement-a84128177102": {
+  "type": "mtf",
+  "question": "关于运动系统的能量代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "糖酵解系统(乳酸系统)提供中等时间(10秒-2分钟)高强度运动的能量",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "有氧氧化系统是长时间(>2分钟)耐力运动的主要供能方式",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "肌纤维类型的代谢特征与运动能力相关——I型肌纤维(慢肌)富含线粒体适合耐力运动，II型(快肌)主要依赖糖酵解适合爆发力运动",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "磷酸肌酸系统(ATP-PCr系统)提供极短时间(0-10秒)爆发性运动的能量",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A-C:三大供能系统的时间特征。D:肌纤维类型与代谢特征的关系。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "运动供能",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1983363753",
+  "tags": []
+ },
+ "BQ-plant_movement-874d5b72525b": {
+  "type": "mtf",
+  "question": "关于运动系统的能量代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "糖酵解系统(乳酸系统)提供中等时间(10秒-2分钟)高强度运动的能量",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "磷酸肌酸系统(ATP-PCr系统)提供极短时间(0-10秒)爆发性运动的能量",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "有氧氧化系统是长时间(>2分钟)耐力运动的主要供能方式",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "肌纤维类型的代谢特征与运动能力相关——I型肌纤维(慢肌)富含线粒体适合耐力运动，II型(快肌)主要依赖糖酵解适合爆发力运动",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A-C:三大供能系统的时间特征。D:肌纤维类型与代谢特征的关系。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "运动供能",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1983363753",
+  "tags": []
+ },
+ "BQ-plant_movement-009cb10d9523": {
+  "type": "mtf",
+  "question": "关于运动系统的能量代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "糖酵解系统(乳酸系统)提供中等时间(10秒-2分钟)高强度运动的能量",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "磷酸肌酸系统(ATP-PCr系统)提供极短时间(0-10秒)爆发性运动的能量",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "肌纤维类型的代谢特征与运动能力相关——I型肌纤维(慢肌)富含线粒体适合耐力运动，II型(快肌)主要依赖糖酵解适合爆发力运动",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "有氧氧化系统是长时间(>2分钟)耐力运动的主要供能方式",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A-C:三大供能系统的时间特征。D:肌纤维类型与代谢特征的关系。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "运动供能",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1983363753",
+  "tags": []
+ },
+ "BQ-plant_movement-7f1f97fc81cc": {
+  "type": "mtf",
+  "question": "关于运动系统的能量代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "糖酵解系统(乳酸系统)提供中等时间(10秒-2分钟)高强度运动的能量",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "肌纤维类型的代谢特征与运动能力相关——I型肌纤维(慢肌)富含线粒体适合耐力运动，II型(快肌)主要依赖糖酵解适合爆发力运动",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "有氧氧化系统是长时间(>2分钟)耐力运动的主要供能方式",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "磷酸肌酸系统(ATP-PCr系统)提供极短时间(0-10秒)爆发性运动的能量",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A-C:三大供能系统的时间特征。D:肌纤维类型与代谢特征的关系。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "运动供能",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1983363753",
+  "tags": []
+ },
+ "BQ-plant_movement-51143b4c162e": {
+  "type": "mtf",
+  "question": "关于运动系统的能量代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "糖酵解系统(乳酸系统)提供中等时间(10秒-2分钟)高强度运动的能量",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "肌纤维类型的代谢特征与运动能力相关——I型肌纤维(慢肌)富含线粒体适合耐力运动，II型(快肌)主要依赖糖酵解适合爆发力运动",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "磷酸肌酸系统(ATP-PCr系统)提供极短时间(0-10秒)爆发性运动的能量",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "有氧氧化系统是长时间(>2分钟)耐力运动的主要供能方式",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A-C:三大供能系统的时间特征。D:肌纤维类型与代谢特征的关系。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "运动供能",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1983363753",
+  "tags": []
+ },
+ "BQ-plant_movement-31ddc7ce9966": {
+  "type": "mtf",
+  "question": "关于运动系统的能量代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "肌纤维类型的代谢特征与运动能力相关——I型肌纤维(慢肌)富含线粒体适合耐力运动，II型(快肌)主要依赖糖酵解适合爆发力运动",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "有氧氧化系统是长时间(>2分钟)耐力运动的主要供能方式",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "磷酸肌酸系统(ATP-PCr系统)提供极短时间(0-10秒)爆发性运动的能量",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "糖酵解系统(乳酸系统)提供中等时间(10秒-2分钟)高强度运动的能量",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A-C:三大供能系统的时间特征。D:肌纤维类型与代谢特征的关系。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "运动供能",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1983363753",
+  "tags": []
+ },
+ "BQ-plant_movement-df78950ff5bb": {
+  "type": "mtf",
+  "question": "关于运动系统的能量代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "肌纤维类型的代谢特征与运动能力相关——I型肌纤维(慢肌)富含线粒体适合耐力运动，II型(快肌)主要依赖糖酵解适合爆发力运动",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "有氧氧化系统是长时间(>2分钟)耐力运动的主要供能方式",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "糖酵解系统(乳酸系统)提供中等时间(10秒-2分钟)高强度运动的能量",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "磷酸肌酸系统(ATP-PCr系统)提供极短时间(0-10秒)爆发性运动的能量",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A-C:三大供能系统的时间特征。D:肌纤维类型与代谢特征的关系。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "运动供能",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1983363753",
+  "tags": []
+ },
+ "BQ-plant_movement-0a8651d31ca7": {
+  "type": "mtf",
+  "question": "关于运动系统的能量代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "肌纤维类型的代谢特征与运动能力相关——I型肌纤维(慢肌)富含线粒体适合耐力运动，II型(快肌)主要依赖糖酵解适合爆发力运动",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "磷酸肌酸系统(ATP-PCr系统)提供极短时间(0-10秒)爆发性运动的能量",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "有氧氧化系统是长时间(>2分钟)耐力运动的主要供能方式",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "糖酵解系统(乳酸系统)提供中等时间(10秒-2分钟)高强度运动的能量",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A-C:三大供能系统的时间特征。D:肌纤维类型与代谢特征的关系。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "运动供能",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1983363753",
+  "tags": []
+ },
+ "BQ-plant_movement-f8f16b91dfec": {
+  "type": "mtf",
+  "question": "关于运动系统的能量代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "肌纤维类型的代谢特征与运动能力相关——I型肌纤维(慢肌)富含线粒体适合耐力运动，II型(快肌)主要依赖糖酵解适合爆发力运动",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "磷酸肌酸系统(ATP-PCr系统)提供极短时间(0-10秒)爆发性运动的能量",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "糖酵解系统(乳酸系统)提供中等时间(10秒-2分钟)高强度运动的能量",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "有氧氧化系统是长时间(>2分钟)耐力运动的主要供能方式",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A-C:三大供能系统的时间特征。D:肌纤维类型与代谢特征的关系。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "运动供能",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1983363753",
+  "tags": []
+ },
+ "BQ-plant_movement-168523d3214a": {
+  "type": "mtf",
+  "question": "关于运动系统的能量代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "肌纤维类型的代谢特征与运动能力相关——I型肌纤维(慢肌)富含线粒体适合耐力运动，II型(快肌)主要依赖糖酵解适合爆发力运动",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "糖酵解系统(乳酸系统)提供中等时间(10秒-2分钟)高强度运动的能量",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "有氧氧化系统是长时间(>2分钟)耐力运动的主要供能方式",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "磷酸肌酸系统(ATP-PCr系统)提供极短时间(0-10秒)爆发性运动的能量",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A-C:三大供能系统的时间特征。D:肌纤维类型与代谢特征的关系。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "运动供能",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1983363753",
+  "tags": []
+ },
+ "BQ-plant_movement-979b5527a572": {
+  "type": "mtf",
+  "question": "关于运动系统的能量代谢，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "肌纤维类型的代谢特征与运动能力相关——I型肌纤维(慢肌)富含线粒体适合耐力运动，II型(快肌)主要依赖糖酵解适合爆发力运动",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "糖酵解系统(乳酸系统)提供中等时间(10秒-2分钟)高强度运动的能量",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "磷酸肌酸系统(ATP-PCr系统)提供极短时间(0-10秒)爆发性运动的能量",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "有氧氧化系统是长时间(>2分钟)耐力运动的主要供能方式",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A-C:三大供能系统的时间特征。D:肌纤维类型与代谢特征的关系。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "运动供能",
+  "difficulty": "easy",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1983363753",
+  "tags": []
+ }
+}

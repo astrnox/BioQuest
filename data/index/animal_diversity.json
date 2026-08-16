@@ -1,0 +1,8244 @@
+{
+ "BQ-animal_diversity-843b85668af3": {
+  "tags": [
+   "animal_diversity",
+   "动物学",
+   "神经系统",
+   "high_school"
+  ],
+  "diff": "league",
+  "len": 57,
+  "src": "animal_diversity",
+  "year": null,
+  "module": "module_3"
+ },
+ "BQ-animal_diversity-46d35f14f228": {
+  "tags": [
+   "animal_diversity",
+   "动物学",
+   "行为学",
+   "high_school"
+  ],
+  "diff": "league",
+  "len": 43,
+  "src": "animal_diversity",
+  "year": null,
+  "module": "module_3"
+ },
+ "BQ-animal_diversity-6bb888135abe": {
+  "tags": [
+   "animal_diversity",
+   "动物学",
+   "生理学",
+   "high_school"
+  ],
+  "diff": "basic",
+  "len": 48,
+  "src": "animal_diversity",
+  "year": null,
+  "module": "module_3"
+ },
+ "BQ-animal_diversity-91d4adcd6401": {
+  "tags": [
+   "animal_diversity",
+   "动物学",
+   "神经调节",
+   "high_school"
+  ],
+  "diff": "basic",
+  "len": 86,
+  "src": "animal_diversity",
+  "year": null,
+  "module": "module_3"
+ },
+ "BQ-animal_diversity-42f631d0b45f": {
+  "tags": [
+   "animal_diversity",
+   "动物学",
+   "动物行为",
+   "high_school"
+  ],
+  "diff": "basic",
+  "len": 53,
+  "src": "animal_diversity",
+  "year": null,
+  "module": "module_3"
+ },
+ "BQ-animal_diversity-9248770e0c3f": {
+  "tags": [
+   "animal_diversity",
+   "动物学",
+   "蜕皮",
+   "high_school"
+  ],
+  "diff": "basic",
+  "len": 81,
+  "src": "animal_diversity",
+  "year": null,
+  "module": "module_3"
+ },
+ "BQ-animal_diversity-11972ae8daca": {
+  "tags": [
+   "animal_diversity",
+   "动物学",
+   "共生关系",
+   "high_school"
+  ],
+  "diff": "basic",
+  "len": 43,
+  "src": "animal_diversity",
+  "year": null,
+  "module": "module_3"
+ },
+ "BQ-animal_diversity-663cb5e6f35b": {
+  "tags": [
+   "animal_diversity",
+   "动物学",
+   "冬眠",
+   "high_school"
+  ],
+  "diff": "basic",
+  "len": 72,
+  "src": "animal_diversity",
+  "year": null,
+  "module": "module_3"
+ },
+ "BQ-animal_diversity-be4230e717f5": {
+  "tags": [
+   "animal_diversity",
+   "动物学",
+   "鸟类迁徙",
+   "high_school"
+  ],
+  "diff": "basic",
+  "len": 35,
+  "src": "animal_diversity",
+  "year": null,
+  "module": "module_3"
+ },
+ "BQ-animal_diversity-f681fc435fc7": {
+  "tags": [
+   "animal_diversity",
+   "动物学",
+   "脂肪合成",
+   "high_school"
+  ],
+  "diff": "basic",
+  "len": 79,
+  "src": "animal_diversity",
+  "year": null,
+  "module": "module_3"
+ },
+ "BQ-animal_diversity-3808f7933e99": {
+  "tags": [
+   "animal_diversity",
+   "动物学",
+   "行为学",
+   "high_school"
+  ],
+  "diff": "basic",
+  "len": 19,
+  "src": "animal_diversity",
+  "year": null,
+  "module": "module_3"
+ },
+ "BQ-animal_diversity-c6b5fc99e2c5": {
+  "tags": [
+   "animal_diversity",
+   "module_3",
+   "hard"
+  ],
+  "diff": "national",
+  "len": 51,
+  "src": "animal_diversity",
+  "year": null,
+  "module": "module_3"
+ },
+ "BQ-animal_diversity-e9299ed6da4b": {
+  "tags": [
+   "animal_diversity",
+   "module_3",
+   "动物学",
+   "神经系统",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2024/art_f5fe44f36762455fb9f8f99b9e0bf2e2.html",
+   "2024"
+  ],
+  "diff": "league",
+  "len": 24,
+  "src": "animal_diversity",
+  "year": 2024,
+  "module": "module_3"
+ },
+ "BQ-animal_diversity-b451a3fa48d7": {
+  "tags": [
+   "animal_diversity",
+   "module_3",
+   "动物学",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2015/art_1c13e648d84d4e38b94e2dfd5e5b1b0b.html",
+   "2015"
+  ],
+  "diff": "league",
+  "len": 27,
+  "src": "animal_diversity",
+  "year": 2015,
+  "module": "module_3"
+ },
+ "BQ-animal_diversity-9c2eb30f5feb": {
+  "tags": [
+   "animal_diversity",
+   "module_3",
+   "动物学",
+   "神经系统",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2024/art_f5fe44f36762455fb9f8f99b9e0bf2e2.html",
+   "2024"
+  ],
+  "diff": "league",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2024,
+  "module": "module_3"
+ },
+ "BQ-animal_diversity-b0ac959f776f": {
+  "tags": [
+   "animal_diversity",
+   "module_3",
+   "动物学",
+   "神经系统",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2015/art_1c13e648d84d4e38b94e2dfd5e5b1b0b.html",
+   "2015"
+  ],
+  "diff": "league",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2015,
+  "module": "module_3"
+ },
+ "BQ-animal_diversity-f886b5ad725d": {
+  "tags": [
+   "animal_diversity",
+   "module_1",
+   "生物学",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2015/art_1c13e648d84d4e38b94e2dfd5e5b1b0b.html",
+   "2015"
+  ],
+  "diff": "league",
+  "len": 26,
+  "src": "animal_diversity",
+  "year": 2015,
+  "module": "module_1"
+ },
+ "BQ-animal_diversity-ef6f3857a91f": {
+  "tags": [
+   "animal_diversity",
+   "module_3",
+   "动物学",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2024/art_f5fe44f36762455fb9f8f99b9e0bf2e2.html",
+   "2024"
+  ],
+  "diff": "league",
+  "len": 26,
+  "src": "animal_diversity",
+  "year": 2024,
+  "module": "module_3"
+ },
+ "BQ-animal_diversity-4a131d7b6d5b": {
+  "tags": [
+   "animal_diversity",
+   "module_3",
+   "动物学",
+   "神经系统",
+   "league",
+   "competition",
+   "http://www.botany.org.cn/swxjs/swxls/202605/t20260518_838211.html",
+   "2026"
+  ],
+  "diff": "league",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2026,
+  "module": "module_3"
+ },
+ "BQ-animal_diversity-5ea71f9da2ad": {
+  "tags": [
+   "animal_diversity",
+   "module_3",
+   "动物学",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2024/art_f5fe44f36762455fb9f8f99b9e0bf2e2.html",
+   "2024"
+  ],
+  "diff": "league",
+  "len": 26,
+  "src": "animal_diversity",
+  "year": 2024,
+  "module": "module_3"
+ },
+ "BQ-animal_diversity-b9adf8587994": {
+  "tags": [
+   "animal_diversity",
+   "module_3",
+   "动物学",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2024/art_f5fe44f36762455fb9f8f99b9e0bf2e2.html",
+   "2024"
+  ],
+  "diff": "league",
+  "len": 142,
+  "src": "animal_diversity",
+  "year": 2024,
+  "module": "module_3"
+ },
+ "BQ-animal_diversity-38fe22c13684": {
+  "tags": [
+   "animal_diversity",
+   "module_3",
+   "动物学",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2015/art_1c13e648d84d4e38b94e2dfd5e5b1b0b.html",
+   "2015"
+  ],
+  "diff": "league",
+  "len": 76,
+  "src": "animal_diversity",
+  "year": 2015,
+  "module": "module_3"
+ },
+ "BQ-animal_diversity-21fd7ee82166": {
+  "tags": [
+   "animal_diversity",
+   "module_3",
+   "动物学",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2025/art_b153fd076f3f4fe282acfc333c4d4ab6.html",
+   "2025"
+  ],
+  "diff": "league",
+  "len": 67,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": "module_3"
+ },
+ "BQ-animal_diversity-fb6d6c02e9ec": {
+  "tags": [
+   "animal_diversity",
+   "module_3",
+   "动物学",
+   "league",
+   "competition",
+   "http://www.botany.org.cn/swxjs/swxls/202405/t20240521_586284.html",
+   "2024"
+  ],
+  "diff": "league",
+  "len": 188,
+  "src": "animal_diversity",
+  "year": 2024,
+  "module": "module_3"
+ },
+ "BQ-animal_diversity-e199089b42e6": {
+  "tags": [
+   "animal_diversity",
+   "module_3",
+   "动物学",
+   "神经系统",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2025/art_b153fd076f3f4fe282acfc333c4d4ab6.html",
+   "2025"
+  ],
+  "diff": "league",
+  "len": 37,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": "module_3"
+ },
+ "BQ-animal_diversity-9232dcf74f73": {
+  "tags": [
+   "animal_diversity",
+   "module_3",
+   "动物学",
+   "league",
+   "competition",
+   "http://www.botany.org.cn/swxjs/swxls/202605/t20260518_838211.html",
+   "2026"
+  ],
+  "diff": "league",
+  "len": 33,
+  "src": "animal_diversity",
+  "year": 2026,
+  "module": "module_3"
+ },
+ "BQ-animal_diversity-cbb62d9203d2": {
+  "tags": [
+   "animal_diversity",
+   "module_3",
+   "动物学",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2025/art_b153fd076f3f4fe282acfc333c4d4ab6.html",
+   "2025"
+  ],
+  "diff": "league",
+  "len": 33,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": "module_3"
+ },
+ "BQ-animal_diversity-77c9b82b2bc1": {
+  "tags": [
+   "animal_diversity",
+   "module_3",
+   "动物学",
+   "league",
+   "competition",
+   "http://www.botany.org.cn/swxjs/swxls/202405/t20240521_586284.html",
+   "2024"
+  ],
+  "diff": "league",
+  "len": 34,
+  "src": "animal_diversity",
+  "year": 2024,
+  "module": "module_3"
+ },
+ "BQ-animal_diversity-91795a200d16": {
+  "tags": [
+   "animal_diversity",
+   "module_3",
+   "动物学",
+   "神经系统",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2015/art_1c13e648d84d4e38b94e2dfd5e5b1b0b.html",
+   "2015"
+  ],
+  "diff": "league",
+  "len": 39,
+  "src": "animal_diversity",
+  "year": 2015,
+  "module": "module_3"
+ },
+ "BQ-animal_diversity-4a66635e849c": {
+  "tags": [
+   "animal_diversity",
+   "module_3",
+   "动物学",
+   "league",
+   "competition",
+   "http://www.botany.org.cn/swxjs/swxls/202605/t20260518_838211.html",
+   "2026"
+  ],
+  "diff": "league",
+  "len": 26,
+  "src": "animal_diversity",
+  "year": 2026,
+  "module": "module_3"
+ },
+ "BQ-animal_diversity-56607b950fe2": {
+  "tags": [
+   "animal_diversity",
+   "module_3",
+   "动物学",
+   "league",
+   "competition",
+   "http://www.botany.org.cn/swxjs/swxls/202405/t20240521_586284.html",
+   "2024"
+  ],
+  "diff": "league",
+  "len": 31,
+  "src": "animal_diversity",
+  "year": 2024,
+  "module": "module_3"
+ },
+ "BQ-animal_diversity-b737b72f657f": {
+  "tags": [
+   "animal_diversity",
+   "module_3",
+   "动物学",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2015/art_1c13e648d84d4e38b94e2dfd5e5b1b0b.html",
+   "2015"
+  ],
+  "diff": "league",
+  "len": 18,
+  "src": "animal_diversity",
+  "year": 2015,
+  "module": "module_3"
+ },
+ "BQ-animal_diversity-57da31b9b651": {
+  "tags": [
+   "animal_diversity",
+   "module_3",
+   "动物学",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2015/art_1c13e648d84d4e38b94e2dfd5e5b1b0b.html",
+   "2015"
+  ],
+  "diff": "league",
+  "len": 49,
+  "src": "animal_diversity",
+  "year": 2015,
+  "module": "module_3"
+ },
+ "BQ-animal_diversity-e8d2c1cbdf79": {
+  "tags": [
+   "animal_diversity",
+   "module_3",
+   "动物学",
+   "league",
+   "competition",
+   "http://www.botany.org.cn/swxjs/swxls/202405/t20240521_586284.html",
+   "2024"
+  ],
+  "diff": "league",
+  "len": 31,
+  "src": "animal_diversity",
+  "year": 2024,
+  "module": "module_3"
+ },
+ "BQ-animal_diversity-eb7106affd85": {
+  "tags": [
+   "animal_diversity",
+   "module_3",
+   "动物学",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2024/art_f5fe44f36762455fb9f8f99b9e0bf2e2.html",
+   "2024"
+  ],
+  "diff": "league",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2024,
+  "module": "module_3"
+ },
+ "BQ-animal_diversity-41d48faeb6e6": {
+  "tags": [
+   "animal_diversity",
+   "module_3",
+   "动物学",
+   "神经系统",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2025/art_b153fd076f3f4fe282acfc333c4d4ab6.html",
+   "2025"
+  ],
+  "diff": "league",
+  "len": 76,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": "module_3"
+ },
+ "BQ-animal_diversity-8228032a1b03": {
+  "tags": [
+   "animal_diversity",
+   "module_3",
+   "动物学",
+   "league",
+   "competition",
+   "http://www.botany.org.cn/swxjs/swxls/202405/t20240521_586284.html",
+   "2024"
+  ],
+  "diff": "league",
+  "len": 34,
+  "src": "animal_diversity",
+  "year": 2024,
+  "module": "module_3"
+ },
+ "BQ-animal_diversity-2038562e1996": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 50,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-f397ed13fd8c": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 50,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-392788555faf": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 50,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-5d5122e19893": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 50,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-45d4385aaa48": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 50,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-3d02f8d32aec": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 50,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-be6ab7489522": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 50,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-2649aa7f1b13": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 50,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-a8a9c9fe5c0e": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 50,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-8b95a21505f7": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 50,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-4fb9d4ae35b2": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 50,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-6b70e56d4a68": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 50,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-d54cb36bbe32": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 50,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-bfcdfa4690b2": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 50,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-55660894b656": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 50,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-f7130fa017f8": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 50,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-81f0a1a45d83": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 50,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-0697b5839487": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 50,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-05c5e364911b": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 50,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-2e0342937513": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 50,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-ad364e4bc671": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 50,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-e50e4a1e5b0e": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 50,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-9e8be595ecbd": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 50,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-66d5a1421ded": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 50,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-460e674c9aeb": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 60,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-0cf8ec7f23ff": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 60,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-0b1edb87f574": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 60,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-718b148cc04b": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 60,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-b0cef188b492": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 60,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-db4f2fd8b3d0": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 60,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-2321da749e5f": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 60,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-98a5f2b94472": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 60,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-1437c3335d1f": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 60,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-d204fa027275": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 60,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-61b344e407b8": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 60,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-911574763e14": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 60,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-54be15286292": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 60,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-e74366b3f573": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 60,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-9df8e1323b58": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 60,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-43393dfcd300": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 60,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-8b9f6b1d72ee": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 60,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-4a3ff1ae68f2": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 60,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-aa9285af7253": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 60,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-19caa13f53a3": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 60,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-c4b89f7e1b35": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 60,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-46c51e531de5": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 60,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-b4ce1be53e5e": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 60,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-13a0adee8af9": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 60,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-6bd2f818aa06": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 75,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-5183e98a293c": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 75,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-05ca4628a788": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 75,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-f5e90bf1df8e": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 75,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-b2cbcd1dc0d4": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 75,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-22f6eeada592": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 75,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-84ebcbc1657c": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 75,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-dbde8897bc74": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 75,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-2cfa3d274dd7": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 75,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-1f0b2d585a3d": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 75,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-556f3fc68d44": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 75,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-946e1d8b9320": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 75,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-d9abe2388d12": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 75,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-db75beb2d663": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 75,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-25d37b0e190e": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 75,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-cb4239b3dd08": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 75,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-7c816490aa89": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 75,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-6a974dbb5ce1": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 75,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-b548ae367e50": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 75,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-6d82c5488f26": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 75,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-c66a5533f878": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 75,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-0cc8446619b2": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 75,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-bcce2d90e0c0": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 75,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-b968e92ed651": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 75,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-5d0d2f737cf0": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-4112383a6d5d": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-2addfdd0661b": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-f0586bf7434a": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-6d4ad247a41f": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-62d791807903": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-84c424272058": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-0080400789f2": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-a4c191fe6000": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-906788396519": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-93a7a00523d4": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-1cc4d87bc7ee": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-b70c1b8a83ae": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-999235cc7ee9": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-79a457f57d77": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-8c8c865ebae8": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-ca81c7d2087a": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-533d62cc6296": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-bef9427e6cf0": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-5418003f4f59": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-ab2e2a3709f9": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-b3f0fad05ccd": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-6d2a8ff41823": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-9eecc18daebe": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-d3e4b8a7d1d6": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 26,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-b3b6efa39f30": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 26,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-3a243c6ccf64": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 26,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-1f4453e4e8ae": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 26,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-8504c076a4b5": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 26,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-9d05f0297bbd": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 26,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-2c816a7e9d5e": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 26,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-dc8103e0c9ca": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 26,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-1d3489a8b09d": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 26,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-887fc0eeddb7": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 26,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-2445858f0152": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 26,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-6d7c845e1af2": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 26,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-84df82267623": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 26,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-965672d09517": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 26,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-ff315c3be6ea": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 26,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-ba9e24219bf2": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 26,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-ed7d7b344435": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 26,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-9c1d57547023": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 26,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-4d1675227871": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 26,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-3e366d2cb7d3": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 26,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-5067b3da88cc": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 26,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-961fb8865463": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 26,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-50e2692cb5ee": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 26,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-8ffa34551dda": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 26,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-4ef2c4d02a82": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-04344c7b6c75": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-547ee0723dce": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-074cca715952": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-6f25e5810f86": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-0d56c76f7c45": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-ef516de7de09": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-0b9c7f937f8e": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-ba0749e4f143": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-9770735516ff": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-b5d28a50e9c4": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-78a8f7c68431": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-b08e1c0d6a1a": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-b6d0db5de5b7": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-cd50413a5878": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-901c26ddb7f1": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-7b65abdf1522": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-4e727c925e91": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-ba82ed9bc6b4": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-c524dd400052": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-0bcaeca454d4": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-62efcadff8f1": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-541458ede6d0": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-2d9a28d4fb4a": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-b693bae06fcf": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 25,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-6033e68037b4": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 25,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-b9bc41c2a0fb": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 25,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-d070f1370ecf": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 25,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-895fbd2d8fdd": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 25,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-83fce801bec1": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 25,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-973db3d6fd5b": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 25,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-bd295b83105f": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 25,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-0fc9c450b3f4": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 25,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-8d5398acf3a5": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 25,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-0686c176457f": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 25,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-d93180c01ec6": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 25,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-35f251ee7b3b": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 25,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-d5bfb7c9f592": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 25,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-5f4fdaa26f9e": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 25,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-5cb8cfc4d23e": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 25,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-17d1c4d44870": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 25,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-5f51ef7c7f04": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 25,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-f2bac523be80": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 25,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-abecbb67d33a": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 25,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-56e328d18b27": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 25,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-ed51f5889b19": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 25,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-56405335e518": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 25,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-0fe27f1eb13a": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 25,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-ec572fa31bec": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-b932d82d1d45": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-dd9480820de5": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-9eeeef89df29": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-b5f8a58d53ce": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-b110d2cb2117": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-43ae18ebd175": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-7c021d8f62ee": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-a1234683624f": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-e1f76bc60415": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-ad2d82942b3b": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-584b65f42b85": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-6c5182abf72f": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-e13554a9532f": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-a563e1fb7075": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-d880a77b12bc": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-00a9814b8ede": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-d11d78ac3577": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-87f9a9037b78": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-46b2e3517ad3": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-aed92d64bb8d": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-b0fc5dd3f4fe": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-241829884b26": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-6a466f6a5390": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-f983d13913cf": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-cdaa939def7f": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-5b6505c1ce77": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-ba4786a4a284": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-3f4b71d464b9": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-50c7edec62cc": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-6dfba3dab860": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-b8c2afd21e29": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-95a9758019bd": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-f445289586e8": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-43b7a2cd4c2a": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-5bba383d09d5": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-066afe9d7fce": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-739239f07828": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-819fdcf79a85": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-f7a6f31a78f3": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-9a8d01d57530": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-1b4d2c357757": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-6979c45627ad": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-6f06e7d4500f": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-2c07544e6c9d": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-52ba39b08cae": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-586af6efba76": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-9228611331e2": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-40040748821e": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-4d3a52d6269c": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-5ab3eae68673": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-d11ae84b2888": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-ec0f5eb1b47f": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-dad1f3fd3d28": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-0c2e189b13b2": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-9dbcc0ca1a31": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-2d495236056d": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-5467b8019b97": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-e908919bf813": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-f3941a0fd13b": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-3f577c33e4d4": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-11b4bbede75d": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-fa953b2df025": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-82bfea4c18d8": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-1ccab9f4433c": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-06b33bf5db9e": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-62f5cdff9629": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-8cbaa59d0c25": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-47b699269065": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-e077a69975e0": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-d0fd034634a3": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-7fbb93e03ae6": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-7bfe6dfd3c2d": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-afe4924bde30": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-edc669c853fb": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-7d37d541f950": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-5c9861f57a26": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-3781766db729": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-5ad820b8eb12": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-7bb3c82dc269": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-bdda4c676e3c": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-8bf0f0fa4c58": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-67de5c8dbb01": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-cfa503078996": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-1f486c92d31d": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-97a3d80d850a": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-09aad68cc77a": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-c5bdb1ff4723": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-a6c180e12d08": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-3aefa71a3848": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-bd615fa919b1": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-62498b5a3875": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-6c9bab7c289b": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-bdad48c8ea33": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-f5d8b45a863a": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-eee320e5ac00": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-2cd69ccbd1c9": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-d0cc580e74d9": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-26d8ed1a8dbc": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-94ecc8ad30dd": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-951c180ee578": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-064aff864f46": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-0d26daf8b048": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-21ba50eeb0c7": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-4f57d8bfc68e": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-8592ff7b973e": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-3cf3579f1f6c": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-32f2723b00e4": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-8139ddabe279": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-769f1a62096e": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-b9202afc0d42": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-1981f26696eb": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-053500f85287": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-14a653553625": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-983e1a790d06": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-72aa5a988fc6": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-4a975caa552f": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-6ac04a3f10c8": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-938868146f85": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-61797d4876d2": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-0052fd5bcb4c": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-73ea4a490361": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-99ec3ad443a8": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-6e7536865939": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-776c0291f607": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-52d3fdafb45b": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-d73e5c605508": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-04942a4328cd": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-fc3fc397763a": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-63929e4c898e": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-453edea733a6": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-5cc5e978fda8": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-265d77a32883": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-8e4256cad0e9": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-e3cdf61fadab": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-d2a1a94e4f6e": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-32d3faaea543": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-72e564d1139a": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-5363b56d9914": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-7d73f1797db2": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-35e087d88fcd": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-a745df8b1cff": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-555c23a7f43e": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-2a4151609095": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-192e00c32618": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-2bb4cc630816": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-01821edf0446": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-60b19853f83c": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-c0ac1cc2f7ad": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-a12ae5985ffd": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-8b6d9aa14aef": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-114057faa56a": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-c5c09c165805": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-53969e2e32d4": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-3ba904fdbff7": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-6c6cbffc45b6": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-8606c798fb7b": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-908e358e1c43": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-f8421bf11986": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-2771890ef8d0": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-2fd003646075": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-0427fc97a443": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-5927bc6f16e4": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-7972bb9574a1": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-ba5ed6841066": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-eebb2ace26f1": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-097296a1d245": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-d894ee3fce16": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-6df0de78dfc5": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-712a37fc6448": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-85bd731b90fe": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-245c7fac75cf": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-011caaa7f8a8": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-60d5c9cebb7b": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-852d73fb6c85": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-0cd54b14e613": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-aedd33c112a7": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-1e797f7dd6cf": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-4d3fcd26ce07": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-68bcd73ad818": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-2efc2008ee18": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-20f00729e314": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-2744d7f2b389": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-de0feafa85ff": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-977406fbd494": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-f5e5c00aee9b": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-0e60e8ed59e7": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-5c5d03c75e50": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-5229bd4f1eb4": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-147fbb668e10": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-0f65aa36511f": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-ea7b62c38add": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-0408e6babd26": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-0e3e0a171d0b": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-dcb08a947d34": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-1c3dc56d5e29": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-0b0b7eb9ecce": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-5eb91ef0b1f4": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-0925126fbdea": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-d26a7b1b8b84": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-2fe1b1814556": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-69b9a85587a3": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-f901c963d154": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-bcfde2795e34": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-c5c7dd95b4c5": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-478fd98b0428": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-910b033367c6": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-828da7dba4cd": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-bf92baa6f34c": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-cc3dc480afe1": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-bc08b1980339": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-0bad4bc1837a": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-722ee03cab33": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-383db7aa8727": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-80cf42689903": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-b9b84d1b7ebb": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-525270547489": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-6ffd09caa586": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-e85dd45f5de3": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-44d6d55c6f8d": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-10424fb12fd1": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-f34f6196f5dd": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-7b27bf0ed6af": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-b97728eb28af": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-e6ef54b94243": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-9691e729c5a3": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-8a2b100630ef": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-8e19ba594be5": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-961cf710739f": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-963d3db2360e": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-cd1e4d77a238": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-ab1f07448f8f": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-a7133aac6ea8": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-ba9e1d439d76": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-b90101db95b3": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-6313beb6dc19": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-12fa35c9bb14": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-c514fba1b0d6": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-086c37e64170": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-4c726ed48d2e": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-b4fee330d50f": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-9aac63ba13a0": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-8ce1be6bf35f": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-881102952bec": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-c9034042b95f": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-e5e29cadda79": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-15af56407ab0": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-f1a1677136e2": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-3648cf265a64": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-76f2f8b5ba93": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-68c3f0ceb593": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-0435b6af40b1": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-ca682ae2aebd": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-f4bb0d69d8c3": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-a2722fee3e73": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-5d21257d25a0": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-7e349450d0e3": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-153649e7d2a7": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-97c5c51ad789": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-547da27d5c06": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-832fd8c41625": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-147b27b475a7": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-ccf36c67b084": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-54761df9e7c2": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-fdf11a9e4b5a": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 25,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-4cc4fc270484": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 25,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-1e2cadac146a": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 25,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-e52a6ebd2ea1": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 25,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-078e509dea12": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 25,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-df6c1824529a": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 25,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-2897f6b50f74": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 25,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-ce26dfc6322c": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 25,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-eed80dbf4853": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 25,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-a6790cdda02b": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 25,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-65cb8aaba092": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 25,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-2404e7a85e14": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 25,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-7ee45f321827": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 25,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-799b0f92ab59": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 25,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-f7b713913360": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 25,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-860f6e2c09a4": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 25,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-d9b9d75181c0": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 25,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-376da749ea35": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 25,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-021ab21b9c98": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 25,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-8375a31e33f7": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 25,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-f5f316415968": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 25,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-4a4fc6293468": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 25,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-126413e91ae4": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 25,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-83ce99a8e73d": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 25,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-f0e027c91243": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-4b85331e7797": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-39ee9077495c": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-d3423bda5e37": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-023144ca6020": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-365a9956b7bf": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-ca9c13363dd1": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-2024ab64dec2": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-fde44d888921": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-e1e36a63a08d": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-bb654353c5df": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-98f7a37138f9": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-21ed69b46c37": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-636f3bf1c5f3": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-7977c666e2c5": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-1735e7963a69": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-5250ebdb2c82": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-5b7da4ebc735": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-c7d29fe3aa02": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-b65776e1eab3": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-79a6c90a5c7c": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-747f2ae9eb36": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-740d928d6411": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-1c7a53e8dbc1": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-800b6ff0a9cf": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-1b728a771975": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-edc0a66ad65e": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-1f27d0a24f47": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-38a5c9c3a2f5": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-11f3006b0f00": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-5c4f81338487": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-6fdd6aa31989": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-3ebf1988f613": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-86ffee42147d": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-97f567b393f6": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-e90ebbd97544": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-f92c6b45628f": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-c8d32ddd84a2": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-8204760f56ec": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-46a87fcb9834": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-bd362b47ccd9": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-66b73fc64377": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-30d54a60e85e": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-0eeff0f302eb": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-12131b0eea83": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-c6f269db1a19": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-e35d7d6ff7b4": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-59baa7956e5d": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-771c44f25100": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-c84fee848e3f": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-c75cfa579972": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-e6f83b009b25": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-8e4af6634dc2": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-54b6018911b3": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-66031fb32a62": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-b41776e22d21": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-7d97da74f499": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-3314aaf5dd9f": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-12f159d46f51": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-d6c71b98fac5": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-f543f1f10b9e": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-1ca0eced2cbb": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-69eeae3edf86": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-cecf175c84b1": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-efe01d12a2c9": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-21a59942d00b": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-93ae8a117c9e": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-0c8f7344fbe4": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-f9b6b7be241d": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-0a1360baae22": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-1594352143b9": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-cc3eb88b0215": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-566676525bc0": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 19,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-756db6a2a14a": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 19,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-48c125f259a4": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 19,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-dbcee78b8475": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 19,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-8349c7487746": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 19,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-af569fd6e6da": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 19,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-0e2f8e0e8add": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 19,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-b531233e9c30": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 19,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-1aea66f17038": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 19,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-00629c70b5cb": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 19,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-4cbecf5ec526": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 19,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-6f0cb6576905": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 19,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-a15d92c055f9": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 19,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-4516437ae61d": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 19,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-03ad67d1b919": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 19,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-66ea5c4f94aa": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 19,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-dc7e0601a014": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 19,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-701a0ccd9536": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 19,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-c700d9e84c45": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 19,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-daa28098603f": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 19,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-b2d05ec8a1a8": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 19,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-fbfcc06bc302": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 19,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-d16c9b95f492": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 19,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-5cdeed982860": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 19,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-095de5504481": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 25,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-d79963f61241": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 25,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-6af690298859": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 25,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-4a6a34ea5db6": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 25,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-a3bc21b3f1ee": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 25,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-715ca0f8ae5b": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 25,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-056786067724": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 25,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-182b2c1a4b87": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 25,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-177458839f12": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 25,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-a7f598964417": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 25,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-24280fcb00fb": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 25,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-ccb768880f96": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 25,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-5d0c3a5c6397": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 25,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-705d52618e10": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 25,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-761156495eb4": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 25,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-e25ffd1f0b2f": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 25,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-96570a499a48": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 25,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-b5272f3247ec": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 25,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-7f3d7c91579b": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 25,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-e6d71c054e80": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 25,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-359f244649f5": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 25,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-c64cda553187": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 25,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-247e566cdd8b": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 25,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-497bebf14487": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 25,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-2e13b6bb91f7": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-f460d8b58829": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-9fe60350bf2c": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-12d336e68268": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-093476db09d8": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-34056600f869": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-7dccc2e99863": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-9f2592e49971": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-b697731e8c10": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-042a81ee8077": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-3b7157dc7a46": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-08a2f02c8649": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-14be6f19a4fa": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-53fdfe000ea2": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-3240b8c229b5": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-f4ab4e225ade": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-abfbbbda7e14": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-d7d4633a219d": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-9c349ff19154": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-21194a3b4c88": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-9a0b6b663960": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-3f64da5004d2": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-e30448516baa": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-441ad298aea0": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-521757ec54eb": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-117f459fde1f": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-bb76d57a9138": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-8b64db80b9ac": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-5b9f03c17bb2": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-d982ad0b8920": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-85dfbe83bfbe": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-726e34c8597f": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-4bd1d6112cab": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-bf4ed51596ac": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-5fd60f40837c": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-e88b462b5c97": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-0bab7633c525": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-806193a1edc6": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-a694394fccc7": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-2a67e0ad9c99": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-b0327966f872": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-742cbbcfabae": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-2c47f405d205": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-ec9221d7e56b": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-4351cb15d677": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-c67c59b70b06": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-f0d38c572d8d": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-5ca6d7a215fe": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-6e93510e8b54": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-eb3cb122599e": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-e0b2693a02b1": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-ff3978288b6d": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-8fbd149346c8": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-c7f1fb01610b": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-2154815c3ae6": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-be3efcffb2c7": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-673af8e01d45": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-02d225c60264": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-81e93b30085f": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-3f84c190a58c": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-f99887392014": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-764dedb76444": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-bc3b1ebfaf34": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-890a29da7636": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-71b03c51550e": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-84a35a05645b": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-1565f101f51c": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-e28c274d0922": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-ed4974f3d6b1": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-a86eef83b7c4": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-1ab0243b0957": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-74d917004804": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-99582e77619b": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-adf7d669038d": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-c0335efb57bc": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-5683dcda5376": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-393a81e10388": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-b1234292f148": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-c1a61d82e7c1": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-6177ad40d9b2": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-441e3f8e30b7": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-9ebf6a159d26": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-433c5db4f28c": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-0ffa1967bd71": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-c2f10e5e63ff": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-d7328ad5be5a": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-66ecceaba4ad": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-55bb7aa93de2": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-ab8dfc3c52a4": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-7ac472223b3c": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-2a397f12df5b": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-2723197cb9db": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-1036044937d8": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-bae08918a7b8": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-da2f443379f5": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-374f20525abe": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-5a941efc453d": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-786747417897": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-f4ad47a43060": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-793ac96dc187": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-5b67096d81cc": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-bc5a5a86195b": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-f320b69a441b": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-04ef5c3dbe85": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-7cdda9be62a0": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-a99c7bf7437e": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-7af24e48053e": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-398c72419188": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-c462e5bf7c0f": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-48ee3181726d": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-1a9a368cab4b": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-8384e577d870": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-ca1dbbcff86b": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-9f31dd164bf9": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-f07f4bc2abcb": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-d67b0783e02a": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-61133c1005e4": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-becec0bb2923": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-2eefb21c06fe": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-7aaaf20a4a29": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 23,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-62a872bf004d": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-e8ba146fac31": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-c0475fa04f47": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-f3d160592cdd": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-c4c3a82331a8": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-29f82ec584d7": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-668553ee2654": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-b1e806f476eb": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-24c03eb3f799": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-e1d476c288d1": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-e9960826272f": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-cca23d27d694": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-a2a90c257b6f": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-bc7f4e94f743": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-474fc4b6c212": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-728a2c183b8c": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-cb9181056535": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-65cd786507a1": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-ae0641a46748": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-bb20ae111b80": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-de4cf1d15968": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-5a36c4bd211a": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-d3b32865da8a": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-c94716f40167": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-26814fe12184": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-c0787ff55a8d": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-7d15ed93bab0": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-fdbfbbc49568": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-930c996ad5f8": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-7a94b2d26c59": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-f343c74cce83": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-44650412caeb": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-a3fd48fd90aa": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-10e9bb9b6ad9": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-47863ed09c16": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-16c951ee7ec2": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-d2694fdd385a": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-fbb886c7560b": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-9365aa9bc5f1": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-4b3b2c44dc2e": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-b6d451adecf0": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-56bd9b17ceed": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-e3522599a2ff": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-adc67fbcdd79": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-55ee4bf330bd": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-e7b005fa7762": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-f2d6c9ae2bb2": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-a1ab31225923": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-c20a85eb6e24": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-2f43ad7febce": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-1d752372854f": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-f528fc7740d0": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-5eb7447af32f": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-b40d93187490": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-ed903860fe81": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-e8359a36d952": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-3885af3972be": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-a20a9bfa71a1": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-2324a5b68edf": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-3ea8c1c1371c": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-293cacc7aaa9": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-10cd95aef66d": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-ac62fdecbc8a": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-2b2b15e5d67c": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-c4e172a7ece5": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-5afc62e9d72d": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-afeb7ad39e6b": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-d9fe8aaa3248": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-70b1f128b3b7": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-88d1a2cfe52d": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-e00db736b9a0": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ },
+ "BQ-animal_diversity-4f1dba25a323": {
+  "tags": [
+   "animal_diversity"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "animal_diversity",
+  "year": 2025,
+  "module": 3
+ }
+}
