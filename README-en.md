@@ -56,8 +56,6 @@ npx serve .                  # Node.js
 - Database: create a free project at [Supabase](https://supabase.com), run the SQL files in `sql/`, then fill the URL and key into `js/supabase-client.js` (optional — without it, it automatically falls back to browser local storage).
 - AI features: users enter their own API Key in "Profile → Settings"; developers don't need to manage it.
 
-For detailed deployment instructions, see [DEPLOYMENT.md](./prd/DEPLOYMENT.md).
-
 ---
 
 ## Feature Highlights

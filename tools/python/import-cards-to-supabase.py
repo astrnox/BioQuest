@@ -15,7 +15,7 @@ import urllib.error
 from pathlib import Path
 
 # 加载项目根目录的 .env
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parent.parent.parent
 ENV_PATH = ROOT / '.env'
 if ENV_PATH.exists():
     for line in ENV_PATH.read_text(encoding='utf-8').splitlines():

@@ -32,7 +32,7 @@ import urllib.parse
 import urllib.request
 from pathlib import Path
 
-PROJECT_ROOT = str(Path(__file__).resolve().parent.parent)
+PROJECT_ROOT = str(Path(__file__).resolve().parent.parent.parent)
 DEFAULT_OUT = os.path.join(PROJECT_ROOT, "data", "wiki-seed.json")
 
 UA = (

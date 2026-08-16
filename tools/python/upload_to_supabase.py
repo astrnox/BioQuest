@@ -9,11 +9,11 @@ import urllib.error
 import os
 import sys
 
-# 复用 server.py 的配置
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+# 复用 server.py 的配置（同目录）
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from server import SUPABASE_URL, SUPABASE_KEY, _build_record, sb_request, log
 
-POOL_FILE = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "pool.json")
+POOL_FILE = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), "pool.json")
 
 
 def upload_pool():
