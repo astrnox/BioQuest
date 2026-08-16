@@ -24,7 +24,7 @@ random.seed(42)
 
 def load_cards():
     """加载 cards.json """
-    cards_path = Path(__file__).parent.parent / 'data' / 'cards.json'
+    cards_path = Path(__file__).parent.parent.parent / 'data' / 'cards.json'
     with open(cards_path, encoding='utf-8') as of:
         data = json.load(of)
     return data.get('分类', [])
@@ -332,7 +332,7 @@ def main():
         print(f'  {t}: {c}')
 
     # 保存为 quiz_questions.json
-    output_path = Path(__file__).parent.parent / 'data' / 'quiz_auto_generated.json'
+    output_path = Path(__file__).parent.parent.parent / 'data' / 'quiz_auto_generated.json'
     with open(output_path, 'w', encoding='utf-8') as f:
         json.dump({
             '题库': [q for q in all_questions if q.get('type') in ['single', 'tf']],
