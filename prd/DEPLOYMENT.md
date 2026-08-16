@@ -54,7 +54,7 @@ netlify deploy --prod --dir=.
 ### 1. 自动生成（已实现）
 
 ```bash
-python3 scripts/generate_questions_from_cards.py
+python3 tools/python/generate_questions_from_cards.py
 # → 从 200 张卡片自动生成 800+ 题目
 ```
 

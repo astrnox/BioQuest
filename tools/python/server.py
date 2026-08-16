@@ -49,7 +49,7 @@ log = logging.getLogger("bio")
 
 def _load_dotenv():
     """零依赖加载 .env 文件（不覆盖已存在的系统环境变量）"""
-    env_path = Path(__file__).parent / ".env"
+    env_path = Path(__file__).resolve().parent.parent / ".env"
     if not env_path.exists():
         return
     for line in env_path.read_text("utf-8").splitlines():
@@ -101,12 +101,12 @@ else:
 FAST_MODEL = PRIMARY_MODEL  # 别名兼容
 QWEN = SELF_CHECK_MODEL     # 别名兼容
 
-POOL_FILE = "pool.json"
+POOL_FILE = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), "pool.json")
 POOL_MIN  = 100
 MAX_RETRY = 5
 
-# 静态文件目录（项目根目录）
-STATIC_DIR = os.path.dirname(os.path.abspath(__file__))
+# 静态文件目录（项目根目录：tools/python/ 上溯两级）
+STATIC_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 # MIME 类型映射
 MIME_TYPES = {
@@ -1661,7 +1661,7 @@ class Handler(http.server.BaseHTTPRequestHandler):
         return data
 
     # 静态文件服务禁止访问的目录前缀与扩展名（防源码/密钥/历史泄露）
-    _FORBIDDEN_DIRS = (".git", "scripts", "qa-output", "__pycache__", "node_modules", "sql")
+    _FORBIDDEN_DIRS = (".git", "scripts", "tools", "archive", "qa-output", "__pycache__", "node_modules", "sql")
     _FORBIDDEN_EXTS = (".py", ".pyc", ".log", ".sh", ".ps1", ".env", ".sql", ".bak", ".md")
 
     def _serve_static(self, filepath):

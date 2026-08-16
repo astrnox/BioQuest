@@ -3,9 +3,11 @@
 import urllib.request
 import json
 import re
+import os
 
 env = {}
-with open('.env', encoding='utf-8') as f:
+env_path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), '.env')
+with open(env_path, encoding='utf-8') as f:
     for line in f:
         m = re.match(r'^([A-Z_][A-Z0-9_]*)\s*=\s*(.+)$', line.strip())
         if m:
