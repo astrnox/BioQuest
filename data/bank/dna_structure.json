@@ -1,0 +1,6345 @@
+{
+ "BQ-dna_structure-eb3f79276106": {
+  "type": "mtf",
+  "question": "下列有关中心法则的叙述，错误的是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "DNA 通过转录可以合成 RNA",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "mRNA 通过翻译可以合成蛋白质",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "逆转录病毒能够以 RNA 为模板合成 DNA",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "所有细胞中都存在逆转录过程",
+    "answer": true
+   }
+  ],
+  "explanation": "逆转录只存在于逆转录病毒感染过程中，正常细胞的遗传信息传递为 DNA→RNA→蛋白质，并不普遍包含逆转录过程。",
+  "subject": "分子生物学",
+  "concept": "中心法则",
+  "difficulty": "basic",
+  "chart": null,
+  "year": null,
+  "module": "module_1",
+  "target": "high_school",
+  "tags": [
+   "module_1",
+   "分子生物学",
+   "中心法则",
+   "高考"
+  ],
+  "oldId": "1718904068"
+ },
+ "BQ-dna_structure-8e4bb65f2858": {
+  "type": "mtf",
+  "question": "下列有关中心法则的叙述，错误的是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "DNA 通过转录合成 RNA",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "RNA 通过翻译合成蛋白质",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "所有生物都能进行逆转录",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "RNA 也能进行自我复制",
+    "answer": false
+   }
+  ],
+  "explanation": "中心法则包括 DNA→DNA（复制）、DNA→RNA（转录）、RNA→蛋白质（翻译）、RNA→RNA（复制）、RNA→DNA（逆转录）。逆转录仅存在于逆转录病毒等情况。",
+  "subject": "分子生物学",
+  "concept": "中心法则与基因表达",
+  "difficulty": "league",
+  "chart": null,
+  "year": null,
+  "module": "module_1",
+  "target": "high_school",
+  "tags": [
+   "module_1",
+   "分子生物学",
+   "中心法则与基因表达",
+   "high_school"
+  ],
+  "oldId": "1829922162"
+ },
+ "BQ-dna_structure-ae5e02921d24": {
+  "type": "mtf",
+  "question": "关于基因表达的叙述，正确的是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "DNA 通过转录合成 RNA",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "RNA 通过翻译合成蛋白质",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "所有生物都能进行逆转录",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "RNA 也能进行自我复制",
+    "answer": false
+   }
+  ],
+  "explanation": "中心法则包括 DNA→DNA（复制）、DNA→RNA（转录）、RNA→蛋白质（翻译）、RNA→RNA（复制）、RNA→DNA（逆转录）。逆转录仅存在于逆转录病毒等情况。",
+  "subject": "分子生物学",
+  "concept": "中心法则与基因表达",
+  "difficulty": "league",
+  "chart": null,
+  "year": null,
+  "module": "module_1",
+  "target": "high_school",
+  "tags": [
+   "module_1",
+   "分子生物学",
+   "中心法则与基因表达",
+   "high_school"
+  ],
+  "oldId": "180449394"
+ },
+ "BQ-dna_structure-dd18e7fbd8d4": {
+  "type": "mtf",
+  "question": "某基因含有 3 个外显子和 2 个内含子，下列叙述正确的是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "真核生物的基因均不含内含子",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "转录产生的前体 mRNA 需要剪接去除内含子才能翻译",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "内含子序列最终会被翻译为蛋白质",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "外显子与内含子的长度比例恒定",
+    "answer": false
+   }
+  ],
+  "explanation": "真核生物基因的编码区由外显子和内含子组成，转录产生的 hnRNA（pre-mRNA）经剪接去除内含子、连接外显子后成为成熟 mRNA，才能翻译。",
+  "subject": "分子生物学",
+  "concept": "分子遗传学综合",
+  "difficulty": "national",
+  "chart": null,
+  "year": null,
+  "module": "module_3",
+  "target": "competition",
+  "tags": [
+   "module_3",
+   "分子生物学",
+   "分子遗传学综合",
+   "competition"
+  ],
+  "oldId": "1107712019"
+ },
+ "BQ-dna_structure-074164659546": {
+  "type": "mtf",
+  "question": "DNA 分子中嘌呤碱基的数量与嘧啶碱基的数量之比是多少？",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "1:1",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "2:1",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "1:2",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "2:3",
+    "answer": false
+   }
+  ],
+  "explanation": "根据 Chargaff 规则，DNA 分子中嘌呤碱基的数量与嘧啶碱基的数量之比为 1:1。选项 B、C 和 D 不正确，因为它们不符合 Chargaff 规则。",
+  "subject": "遗传学",
+  "concept": "DNA 结构",
+  "difficulty": "basic",
+  "chart": null,
+  "year": null,
+  "module": "module_4",
+  "target": "high_school",
+  "tags": [
+   "遗传学",
+   "DNA 结构",
+   "high_school"
+  ],
+  "oldId": "1878130239"
+ },
+ "BQ-dna_structure-b912a9384c69": {
+  "type": "mtf",
+  "question": "下列关于中心法则的叙述，错误的是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "翻译过程中 tRNA 携带氨基酸到核糖体",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "一个基因只能转录一种 mRNA",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "mRNA 上的反密码子与 tRNA 上的密码子配对",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "转录发生在细胞质中",
+    "answer": false
+   }
+  ],
+  "explanation": "转录发生在细胞核（真核）；mRNA 上有密码子，tRNA 上有反密码子；一个基因通过可变剪接可产生多种 mRNA。",
+  "subject": "分子生物学",
+  "concept": "基因的表达",
+  "difficulty": "basic",
+  "chart": null,
+  "year": null,
+  "module": "module_4",
+  "target": "high_school",
+  "tags": [
+   "module_4",
+   "分子生物学",
+   "基因的表达",
+   "high_school"
+  ],
+  "oldId": "1475881727"
+ },
+ "BQ-dna_structure-8c4d647bb9fb": {
+  "type": "mtf",
+  "question": "下列示意图表示中心法则及其扩展。据图判断正确的是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "所有生物的遗传信息都从 DNA 流向 DNA",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "逆转录需要逆转录酶，某些病毒能进行",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "RNA 复制发生在所有细胞中",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "翻译在细胞核中进行",
+    "answer": false
+   }
+  ],
+  "explanation": "逆转录存在于逆转录病毒（如 HIV），需逆转录酶；正常细胞以 DNA 复制、转录、翻译为主。",
+  "subject": "分子生物学",
+  "concept": "中心法则",
+  "difficulty": "basic",
+  "chart": "DNA →(转录) RNA →(翻译) 蛋白质\n      ↑(逆转录)     ↑(RNA 复制)\n      RNA            RNA",
+  "year": null,
+  "module": "module_4",
+  "target": "high_school",
+  "tags": [
+   "module_4",
+   "分子生物学",
+   "中心法则",
+   "high_school"
+  ],
+  "oldId": "1172599894"
+ },
+ "BQ-dna_structure-06a3971588f9": {
+  "type": "mtf",
+  "question": "下列示意图表示中心法则及其扩展。据图判断正确的是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "逆转录需要逆转录酶，某些病毒能进行",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "RNA 复制发生在所有细胞中",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "所有生物的遗传信息都从 DNA 流向 DNA",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "翻译在细胞核中进行",
+    "answer": false
+   }
+  ],
+  "explanation": "逆转录存在于逆转录病毒（如 HIV），需逆转录酶；正常细胞以 DNA 复制、转录、翻译为主。",
+  "subject": "分子生物学",
+  "concept": "中心法则",
+  "difficulty": "basic",
+  "chart": "DNA →(转录) RNA →(翻译) 蛋白质\n      ↑(逆转录)     ↑(RNA 复制)\n      RNA            RNA",
+  "year": null,
+  "module": "module_4",
+  "target": "high_school",
+  "tags": [
+   "module_4",
+   "分子生物学",
+   "中心法则",
+   "high_school"
+  ],
+  "oldId": "1172599894"
+ },
+ "BQ-dna_structure-bc8b2358988c": {
+  "stem": "下列几种不同碱基组成比例的DNA 分子, 哪一种DNA 分子的Tm 值最高：（单选）",
+  "options": {
+   "A": "",
+   "B": "GC",
+   "C": "G + C",
+   "D": ""
+  },
+  "answer": {
+   "A": false,
+   "B": false,
+   "C": true,
+   "D": false
+  },
+  "analysis": "正确答案：C",
+  "knowledge": [
+   "module_1",
+   "分子生物学"
+  ],
+  "module": "module_1",
+  "difficulty": "league",
+  "target": "competition",
+  "subject": "分子生物学",
+  "concept": "分子生物学",
+  "tags": [
+   "module_1",
+   "分子生物学",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2015/art_1c13e648d84d4e38b94e2dfd5e5b1b0b.html",
+   "2015"
+  ],
+  "weight": 1,
+  "fb_good": 0,
+  "fb_bad": 0,
+  "created_at": 1782028584.5755377,
+  "source": "https://www.czs.org.cn/swjs/lsstxz/art/2015/art_1c13e648d84d4e38b94e2dfd5e5b1b0b.html",
+  "year": 2015,
+  "_analysis_sparse": true,
+  "_review_reason": "解析为 AI 引导提示，待人工补充详细解析",
+  "type": "multi_judge",
+  "question": "下列几种不同碱基组成比例的DNA 分子, 哪一种DNA 分子的Tm 值最高：（单选）",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "GC",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "G + C",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "",
+    "answer": false
+   }
+  ],
+  "explanation": "正确答案：C",
+  "chart": null,
+  "oldId": "crawled_1782028584575_6026"
+ },
+ "BQ-dna_structure-ec593a1f69bd": {
+  "stem": "紫外线可以引起DNA 发生哪些变化：\n（多选）",
+  "options": {
+   "A": "缺失",
+   "B": "重复",
+   "C": "移码",
+   "D": "形成嘧啶二聚体"
+  },
+  "answer": {
+   "A": true,
+   "B": true,
+   "C": true,
+   "D": true
+  },
+  "analysis": "正确答案：ABCD",
+  "knowledge": [
+   "module_1",
+   "分子生物学"
+  ],
+  "module": "module_1",
+  "difficulty": "league",
+  "target": "competition",
+  "subject": "分子生物学",
+  "concept": "分子生物学",
+  "tags": [
+   "module_1",
+   "分子生物学",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2015/art_1c13e648d84d4e38b94e2dfd5e5b1b0b.html",
+   "2015"
+  ],
+  "weight": 1,
+  "fb_good": 0,
+  "fb_bad": 0,
+  "created_at": 1782028584.5845125,
+  "source": "https://www.czs.org.cn/swjs/lsstxz/art/2015/art_1c13e648d84d4e38b94e2dfd5e5b1b0b.html",
+  "year": 2015,
+  "_analysis_sparse": true,
+  "_review_reason": "解析为 AI 引导提示，待人工补充详细解析",
+  "type": "multi_judge",
+  "question": "紫外线可以引起DNA 发生哪些变化：\n（多选）",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "缺失",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "重复",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "移码",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "形成嘧啶二聚体",
+    "answer": true
+   }
+  ],
+  "explanation": "正确答案：ABCD",
+  "chart": null,
+  "oldId": "crawled_1782028584584_4820"
+ },
+ "BQ-dna_structure-8cb1edd12ad3": {
+  "type": "mtf",
+  "question": "关于DNA超螺旋与拓扑异构酶，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "DNA拓扑异构酶II(细菌中的回旋酶)在双链上产生瞬时断裂，每次改变两个连环数",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "DNA拓扑异构酶I在单链上产生瞬时断裂，每次改变一个连环数(Lk)",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "细菌DNA回旋酶可引入负超螺旋，这一活性是喹诺酮类抗生素的靶点",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "负超螺旋有利于DNA复制和转录时的链分离",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:Topo I机制。B:Topo II机制。C:回旋酶是抗生素靶点。D:负超螺旋促进链分离。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "DNA拓扑",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "649716854",
+  "tags": []
+ },
+ "BQ-dna_structure-b8092b393939": {
+  "type": "mtf",
+  "question": "关于DNA超螺旋与拓扑异构酶，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "DNA拓扑异构酶II(细菌中的回旋酶)在双链上产生瞬时断裂，每次改变两个连环数",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "DNA拓扑异构酶I在单链上产生瞬时断裂，每次改变一个连环数(Lk)",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "负超螺旋有利于DNA复制和转录时的链分离",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "细菌DNA回旋酶可引入负超螺旋，这一活性是喹诺酮类抗生素的靶点",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:Topo I机制。B:Topo II机制。C:回旋酶是抗生素靶点。D:负超螺旋促进链分离。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "DNA拓扑",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "649716854",
+  "tags": []
+ },
+ "BQ-dna_structure-fe56ec2d216d": {
+  "type": "mtf",
+  "question": "关于DNA超螺旋与拓扑异构酶，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "DNA拓扑异构酶II(细菌中的回旋酶)在双链上产生瞬时断裂，每次改变两个连环数",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "细菌DNA回旋酶可引入负超螺旋，这一活性是喹诺酮类抗生素的靶点",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "DNA拓扑异构酶I在单链上产生瞬时断裂，每次改变一个连环数(Lk)",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "负超螺旋有利于DNA复制和转录时的链分离",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:Topo I机制。B:Topo II机制。C:回旋酶是抗生素靶点。D:负超螺旋促进链分离。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "DNA拓扑",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "649716854",
+  "tags": []
+ },
+ "BQ-dna_structure-0d39d1e32e63": {
+  "type": "mtf",
+  "question": "关于DNA超螺旋与拓扑异构酶，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "DNA拓扑异构酶II(细菌中的回旋酶)在双链上产生瞬时断裂，每次改变两个连环数",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "细菌DNA回旋酶可引入负超螺旋，这一活性是喹诺酮类抗生素的靶点",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "负超螺旋有利于DNA复制和转录时的链分离",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "DNA拓扑异构酶I在单链上产生瞬时断裂，每次改变一个连环数(Lk)",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:Topo I机制。B:Topo II机制。C:回旋酶是抗生素靶点。D:负超螺旋促进链分离。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "DNA拓扑",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "649716854",
+  "tags": []
+ },
+ "BQ-dna_structure-04d2156d18a6": {
+  "type": "mtf",
+  "question": "关于DNA超螺旋与拓扑异构酶，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "DNA拓扑异构酶II(细菌中的回旋酶)在双链上产生瞬时断裂，每次改变两个连环数",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "负超螺旋有利于DNA复制和转录时的链分离",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "DNA拓扑异构酶I在单链上产生瞬时断裂，每次改变一个连环数(Lk)",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "细菌DNA回旋酶可引入负超螺旋，这一活性是喹诺酮类抗生素的靶点",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:Topo I机制。B:Topo II机制。C:回旋酶是抗生素靶点。D:负超螺旋促进链分离。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "DNA拓扑",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "649716854",
+  "tags": []
+ },
+ "BQ-dna_structure-99162abfc65f": {
+  "type": "mtf",
+  "question": "关于DNA超螺旋与拓扑异构酶，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "DNA拓扑异构酶II(细菌中的回旋酶)在双链上产生瞬时断裂，每次改变两个连环数",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "负超螺旋有利于DNA复制和转录时的链分离",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "细菌DNA回旋酶可引入负超螺旋，这一活性是喹诺酮类抗生素的靶点",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "DNA拓扑异构酶I在单链上产生瞬时断裂，每次改变一个连环数(Lk)",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:Topo I机制。B:Topo II机制。C:回旋酶是抗生素靶点。D:负超螺旋促进链分离。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "DNA拓扑",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "649716854",
+  "tags": []
+ },
+ "BQ-dna_structure-62643189d2f0": {
+  "type": "mtf",
+  "question": "关于DNA超螺旋与拓扑异构酶，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "DNA拓扑异构酶I在单链上产生瞬时断裂，每次改变一个连环数(Lk)",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "DNA拓扑异构酶II(细菌中的回旋酶)在双链上产生瞬时断裂，每次改变两个连环数",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "细菌DNA回旋酶可引入负超螺旋，这一活性是喹诺酮类抗生素的靶点",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "负超螺旋有利于DNA复制和转录时的链分离",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:Topo I机制。B:Topo II机制。C:回旋酶是抗生素靶点。D:负超螺旋促进链分离。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "DNA拓扑",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "649716854",
+  "tags": []
+ },
+ "BQ-dna_structure-4c7ad7e7ef5f": {
+  "type": "mtf",
+  "question": "关于DNA超螺旋与拓扑异构酶，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "DNA拓扑异构酶I在单链上产生瞬时断裂，每次改变一个连环数(Lk)",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "DNA拓扑异构酶II(细菌中的回旋酶)在双链上产生瞬时断裂，每次改变两个连环数",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "负超螺旋有利于DNA复制和转录时的链分离",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "细菌DNA回旋酶可引入负超螺旋，这一活性是喹诺酮类抗生素的靶点",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:Topo I机制。B:Topo II机制。C:回旋酶是抗生素靶点。D:负超螺旋促进链分离。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "DNA拓扑",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "649716854",
+  "tags": []
+ },
+ "BQ-dna_structure-2f42244b400a": {
+  "type": "mtf",
+  "question": "关于DNA超螺旋与拓扑异构酶，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "DNA拓扑异构酶I在单链上产生瞬时断裂，每次改变一个连环数(Lk)",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "细菌DNA回旋酶可引入负超螺旋，这一活性是喹诺酮类抗生素的靶点",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "DNA拓扑异构酶II(细菌中的回旋酶)在双链上产生瞬时断裂，每次改变两个连环数",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "负超螺旋有利于DNA复制和转录时的链分离",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:Topo I机制。B:Topo II机制。C:回旋酶是抗生素靶点。D:负超螺旋促进链分离。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "DNA拓扑",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "649716854",
+  "tags": []
+ },
+ "BQ-dna_structure-30ccf94823c6": {
+  "type": "mtf",
+  "question": "关于DNA超螺旋与拓扑异构酶，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "DNA拓扑异构酶I在单链上产生瞬时断裂，每次改变一个连环数(Lk)",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "细菌DNA回旋酶可引入负超螺旋，这一活性是喹诺酮类抗生素的靶点",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "负超螺旋有利于DNA复制和转录时的链分离",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "DNA拓扑异构酶II(细菌中的回旋酶)在双链上产生瞬时断裂，每次改变两个连环数",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:Topo I机制。B:Topo II机制。C:回旋酶是抗生素靶点。D:负超螺旋促进链分离。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "DNA拓扑",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "649716854",
+  "tags": []
+ },
+ "BQ-dna_structure-e73b7f9be1f9": {
+  "type": "mtf",
+  "question": "关于DNA超螺旋与拓扑异构酶，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "DNA拓扑异构酶I在单链上产生瞬时断裂，每次改变一个连环数(Lk)",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "负超螺旋有利于DNA复制和转录时的链分离",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "DNA拓扑异构酶II(细菌中的回旋酶)在双链上产生瞬时断裂，每次改变两个连环数",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "细菌DNA回旋酶可引入负超螺旋，这一活性是喹诺酮类抗生素的靶点",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:Topo I机制。B:Topo II机制。C:回旋酶是抗生素靶点。D:负超螺旋促进链分离。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "DNA拓扑",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "649716854",
+  "tags": []
+ },
+ "BQ-dna_structure-93f4a539f251": {
+  "type": "mtf",
+  "question": "关于DNA超螺旋与拓扑异构酶，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "DNA拓扑异构酶I在单链上产生瞬时断裂，每次改变一个连环数(Lk)",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "负超螺旋有利于DNA复制和转录时的链分离",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "细菌DNA回旋酶可引入负超螺旋，这一活性是喹诺酮类抗生素的靶点",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "DNA拓扑异构酶II(细菌中的回旋酶)在双链上产生瞬时断裂，每次改变两个连环数",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:Topo I机制。B:Topo II机制。C:回旋酶是抗生素靶点。D:负超螺旋促进链分离。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "DNA拓扑",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "649716854",
+  "tags": []
+ },
+ "BQ-dna_structure-09f6243cc07e": {
+  "type": "mtf",
+  "question": "关于DNA超螺旋与拓扑异构酶，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "细菌DNA回旋酶可引入负超螺旋，这一活性是喹诺酮类抗生素的靶点",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "DNA拓扑异构酶II(细菌中的回旋酶)在双链上产生瞬时断裂，每次改变两个连环数",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "DNA拓扑异构酶I在单链上产生瞬时断裂，每次改变一个连环数(Lk)",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "负超螺旋有利于DNA复制和转录时的链分离",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:Topo I机制。B:Topo II机制。C:回旋酶是抗生素靶点。D:负超螺旋促进链分离。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "DNA拓扑",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "649716854",
+  "tags": []
+ },
+ "BQ-dna_structure-b73109281e8b": {
+  "type": "mtf",
+  "question": "关于DNA超螺旋与拓扑异构酶，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "细菌DNA回旋酶可引入负超螺旋，这一活性是喹诺酮类抗生素的靶点",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "DNA拓扑异构酶II(细菌中的回旋酶)在双链上产生瞬时断裂，每次改变两个连环数",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "负超螺旋有利于DNA复制和转录时的链分离",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "DNA拓扑异构酶I在单链上产生瞬时断裂，每次改变一个连环数(Lk)",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:Topo I机制。B:Topo II机制。C:回旋酶是抗生素靶点。D:负超螺旋促进链分离。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "DNA拓扑",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "649716854",
+  "tags": []
+ },
+ "BQ-dna_structure-9be914b6c0df": {
+  "type": "mtf",
+  "question": "关于DNA超螺旋与拓扑异构酶，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "细菌DNA回旋酶可引入负超螺旋，这一活性是喹诺酮类抗生素的靶点",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "DNA拓扑异构酶I在单链上产生瞬时断裂，每次改变一个连环数(Lk)",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "DNA拓扑异构酶II(细菌中的回旋酶)在双链上产生瞬时断裂，每次改变两个连环数",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "负超螺旋有利于DNA复制和转录时的链分离",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:Topo I机制。B:Topo II机制。C:回旋酶是抗生素靶点。D:负超螺旋促进链分离。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "DNA拓扑",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "649716854",
+  "tags": []
+ },
+ "BQ-dna_structure-6684de8d6779": {
+  "type": "mtf",
+  "question": "关于DNA超螺旋与拓扑异构酶，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "细菌DNA回旋酶可引入负超螺旋，这一活性是喹诺酮类抗生素的靶点",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "DNA拓扑异构酶I在单链上产生瞬时断裂，每次改变一个连环数(Lk)",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "负超螺旋有利于DNA复制和转录时的链分离",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "DNA拓扑异构酶II(细菌中的回旋酶)在双链上产生瞬时断裂，每次改变两个连环数",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:Topo I机制。B:Topo II机制。C:回旋酶是抗生素靶点。D:负超螺旋促进链分离。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "DNA拓扑",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "649716854",
+  "tags": []
+ },
+ "BQ-dna_structure-973fc36d2531": {
+  "type": "mtf",
+  "question": "关于DNA超螺旋与拓扑异构酶，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "细菌DNA回旋酶可引入负超螺旋，这一活性是喹诺酮类抗生素的靶点",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "负超螺旋有利于DNA复制和转录时的链分离",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "DNA拓扑异构酶II(细菌中的回旋酶)在双链上产生瞬时断裂，每次改变两个连环数",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "DNA拓扑异构酶I在单链上产生瞬时断裂，每次改变一个连环数(Lk)",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:Topo I机制。B:Topo II机制。C:回旋酶是抗生素靶点。D:负超螺旋促进链分离。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "DNA拓扑",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "649716854",
+  "tags": []
+ },
+ "BQ-dna_structure-ee58c69c0b95": {
+  "type": "mtf",
+  "question": "关于DNA超螺旋与拓扑异构酶，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "细菌DNA回旋酶可引入负超螺旋，这一活性是喹诺酮类抗生素的靶点",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "负超螺旋有利于DNA复制和转录时的链分离",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "DNA拓扑异构酶I在单链上产生瞬时断裂，每次改变一个连环数(Lk)",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "DNA拓扑异构酶II(细菌中的回旋酶)在双链上产生瞬时断裂，每次改变两个连环数",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:Topo I机制。B:Topo II机制。C:回旋酶是抗生素靶点。D:负超螺旋促进链分离。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "DNA拓扑",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "649716854",
+  "tags": []
+ },
+ "BQ-dna_structure-9919710ce0d5": {
+  "type": "mtf",
+  "question": "关于DNA超螺旋与拓扑异构酶，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "负超螺旋有利于DNA复制和转录时的链分离",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "DNA拓扑异构酶II(细菌中的回旋酶)在双链上产生瞬时断裂，每次改变两个连环数",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "DNA拓扑异构酶I在单链上产生瞬时断裂，每次改变一个连环数(Lk)",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "细菌DNA回旋酶可引入负超螺旋，这一活性是喹诺酮类抗生素的靶点",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:Topo I机制。B:Topo II机制。C:回旋酶是抗生素靶点。D:负超螺旋促进链分离。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "DNA拓扑",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "649716854",
+  "tags": []
+ },
+ "BQ-dna_structure-8b205b97a19e": {
+  "type": "mtf",
+  "question": "关于DNA超螺旋与拓扑异构酶，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "负超螺旋有利于DNA复制和转录时的链分离",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "DNA拓扑异构酶II(细菌中的回旋酶)在双链上产生瞬时断裂，每次改变两个连环数",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "细菌DNA回旋酶可引入负超螺旋，这一活性是喹诺酮类抗生素的靶点",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "DNA拓扑异构酶I在单链上产生瞬时断裂，每次改变一个连环数(Lk)",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:Topo I机制。B:Topo II机制。C:回旋酶是抗生素靶点。D:负超螺旋促进链分离。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "DNA拓扑",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "649716854",
+  "tags": []
+ },
+ "BQ-dna_structure-7350603b767d": {
+  "type": "mtf",
+  "question": "关于DNA超螺旋与拓扑异构酶，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "负超螺旋有利于DNA复制和转录时的链分离",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "DNA拓扑异构酶I在单链上产生瞬时断裂，每次改变一个连环数(Lk)",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "DNA拓扑异构酶II(细菌中的回旋酶)在双链上产生瞬时断裂，每次改变两个连环数",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "细菌DNA回旋酶可引入负超螺旋，这一活性是喹诺酮类抗生素的靶点",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:Topo I机制。B:Topo II机制。C:回旋酶是抗生素靶点。D:负超螺旋促进链分离。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "DNA拓扑",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "649716854",
+  "tags": []
+ },
+ "BQ-dna_structure-c4d17ef29168": {
+  "type": "mtf",
+  "question": "关于DNA超螺旋与拓扑异构酶，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "负超螺旋有利于DNA复制和转录时的链分离",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "DNA拓扑异构酶I在单链上产生瞬时断裂，每次改变一个连环数(Lk)",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "细菌DNA回旋酶可引入负超螺旋，这一活性是喹诺酮类抗生素的靶点",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "DNA拓扑异构酶II(细菌中的回旋酶)在双链上产生瞬时断裂，每次改变两个连环数",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:Topo I机制。B:Topo II机制。C:回旋酶是抗生素靶点。D:负超螺旋促进链分离。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "DNA拓扑",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "649716854",
+  "tags": []
+ },
+ "BQ-dna_structure-c9910dde127d": {
+  "type": "mtf",
+  "question": "关于DNA超螺旋与拓扑异构酶，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "负超螺旋有利于DNA复制和转录时的链分离",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "细菌DNA回旋酶可引入负超螺旋，这一活性是喹诺酮类抗生素的靶点",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "DNA拓扑异构酶II(细菌中的回旋酶)在双链上产生瞬时断裂，每次改变两个连环数",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "DNA拓扑异构酶I在单链上产生瞬时断裂，每次改变一个连环数(Lk)",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:Topo I机制。B:Topo II机制。C:回旋酶是抗生素靶点。D:负超螺旋促进链分离。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "DNA拓扑",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "649716854",
+  "tags": []
+ },
+ "BQ-dna_structure-68d391f02d49": {
+  "type": "mtf",
+  "question": "关于DNA超螺旋与拓扑异构酶，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "负超螺旋有利于DNA复制和转录时的链分离",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "细菌DNA回旋酶可引入负超螺旋，这一活性是喹诺酮类抗生素的靶点",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "DNA拓扑异构酶I在单链上产生瞬时断裂，每次改变一个连环数(Lk)",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "DNA拓扑异构酶II(细菌中的回旋酶)在双链上产生瞬时断裂，每次改变两个连环数",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:Topo I机制。B:Topo II机制。C:回旋酶是抗生素靶点。D:负超螺旋促进链分离。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "DNA拓扑",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "649716854",
+  "tags": []
+ },
+ "BQ-dna_structure-6bbfd8839931": {
+  "type": "mtf",
+  "question": "关于信号肽与蛋白质靶向，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "信号识别颗粒(SRP)识别信号肽后暂停翻译，将核糖体-新生链复合物靶向到内质网膜",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "内质网信号肽通常位于蛋白质N端，含有一个疏水核心区",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "线粒体基质靶向信号富含碱性氨基酸和羟基氨基酸，形成两亲α-螺旋",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "蛋白质定位完全由信号肽决定",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确:ER信号肽特征。A正确:SRP循环。C正确:线粒体导肽特征。D错误:一些蛋白质通过信号斑(三维折叠后的表面区域)、翻译后修饰或与其他蛋白的互作被靶向转运。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "蛋白靶向",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "34908821",
+  "tags": []
+ },
+ "BQ-dna_structure-053da6b0daa8": {
+  "type": "mtf",
+  "question": "关于信号肽与蛋白质靶向，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "信号识别颗粒(SRP)识别信号肽后暂停翻译，将核糖体-新生链复合物靶向到内质网膜",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "内质网信号肽通常位于蛋白质N端，含有一个疏水核心区",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "蛋白质定位完全由信号肽决定",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "线粒体基质靶向信号富含碱性氨基酸和羟基氨基酸，形成两亲α-螺旋",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确:ER信号肽特征。A正确:SRP循环。D正确:线粒体导肽特征。C错误:一些蛋白质通过信号斑(三维折叠后的表面区域)、翻译后修饰或与其他蛋白的互作被靶向转运。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "蛋白靶向",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "34908821",
+  "tags": []
+ },
+ "BQ-dna_structure-c245a0d32999": {
+  "type": "mtf",
+  "question": "关于信号肽与蛋白质靶向，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "信号识别颗粒(SRP)识别信号肽后暂停翻译，将核糖体-新生链复合物靶向到内质网膜",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "线粒体基质靶向信号富含碱性氨基酸和羟基氨基酸，形成两亲α-螺旋",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "内质网信号肽通常位于蛋白质N端，含有一个疏水核心区",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "蛋白质定位完全由信号肽决定",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确:ER信号肽特征。A正确:SRP循环。B正确:线粒体导肽特征。D错误:一些蛋白质通过信号斑(三维折叠后的表面区域)、翻译后修饰或与其他蛋白的互作被靶向转运。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "蛋白靶向",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "34908821",
+  "tags": []
+ },
+ "BQ-dna_structure-1ef1abfa194b": {
+  "type": "mtf",
+  "question": "关于信号肽与蛋白质靶向，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "信号识别颗粒(SRP)识别信号肽后暂停翻译，将核糖体-新生链复合物靶向到内质网膜",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "线粒体基质靶向信号富含碱性氨基酸和羟基氨基酸，形成两亲α-螺旋",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "蛋白质定位完全由信号肽决定",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "内质网信号肽通常位于蛋白质N端，含有一个疏水核心区",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确:ER信号肽特征。A正确:SRP循环。B正确:线粒体导肽特征。C错误:一些蛋白质通过信号斑(三维折叠后的表面区域)、翻译后修饰或与其他蛋白的互作被靶向转运。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "蛋白靶向",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "34908821",
+  "tags": []
+ },
+ "BQ-dna_structure-e95813c2f50c": {
+  "type": "mtf",
+  "question": "关于信号肽与蛋白质靶向，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "信号识别颗粒(SRP)识别信号肽后暂停翻译，将核糖体-新生链复合物靶向到内质网膜",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "蛋白质定位完全由信号肽决定",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "内质网信号肽通常位于蛋白质N端，含有一个疏水核心区",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "线粒体基质靶向信号富含碱性氨基酸和羟基氨基酸，形成两亲α-螺旋",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确:ER信号肽特征。A正确:SRP循环。D正确:线粒体导肽特征。B错误:一些蛋白质通过信号斑(三维折叠后的表面区域)、翻译后修饰或与其他蛋白的互作被靶向转运。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "蛋白靶向",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "34908821",
+  "tags": []
+ },
+ "BQ-dna_structure-55cf7e0e051b": {
+  "type": "mtf",
+  "question": "关于信号肽与蛋白质靶向，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "信号识别颗粒(SRP)识别信号肽后暂停翻译，将核糖体-新生链复合物靶向到内质网膜",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "蛋白质定位完全由信号肽决定",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "线粒体基质靶向信号富含碱性氨基酸和羟基氨基酸，形成两亲α-螺旋",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "内质网信号肽通常位于蛋白质N端，含有一个疏水核心区",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确:ER信号肽特征。A正确:SRP循环。C正确:线粒体导肽特征。B错误:一些蛋白质通过信号斑(三维折叠后的表面区域)、翻译后修饰或与其他蛋白的互作被靶向转运。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "蛋白靶向",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "34908821",
+  "tags": []
+ },
+ "BQ-dna_structure-087a3c072e22": {
+  "type": "mtf",
+  "question": "关于信号肽与蛋白质靶向，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "内质网信号肽通常位于蛋白质N端，含有一个疏水核心区",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "信号识别颗粒(SRP)识别信号肽后暂停翻译，将核糖体-新生链复合物靶向到内质网膜",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "线粒体基质靶向信号富含碱性氨基酸和羟基氨基酸，形成两亲α-螺旋",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "蛋白质定位完全由信号肽决定",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确:ER信号肽特征。B正确:SRP循环。C正确:线粒体导肽特征。D错误:一些蛋白质通过信号斑(三维折叠后的表面区域)、翻译后修饰或与其他蛋白的互作被靶向转运。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "蛋白靶向",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "34908821",
+  "tags": []
+ },
+ "BQ-dna_structure-846b446cc874": {
+  "type": "mtf",
+  "question": "关于信号肽与蛋白质靶向，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "内质网信号肽通常位于蛋白质N端，含有一个疏水核心区",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "信号识别颗粒(SRP)识别信号肽后暂停翻译，将核糖体-新生链复合物靶向到内质网膜",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "蛋白质定位完全由信号肽决定",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "线粒体基质靶向信号富含碱性氨基酸和羟基氨基酸，形成两亲α-螺旋",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确:ER信号肽特征。B正确:SRP循环。D正确:线粒体导肽特征。C错误:一些蛋白质通过信号斑(三维折叠后的表面区域)、翻译后修饰或与其他蛋白的互作被靶向转运。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "蛋白靶向",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "34908821",
+  "tags": []
+ },
+ "BQ-dna_structure-cf0a3bdf826d": {
+  "type": "mtf",
+  "question": "关于信号肽与蛋白质靶向，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "内质网信号肽通常位于蛋白质N端，含有一个疏水核心区",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "线粒体基质靶向信号富含碱性氨基酸和羟基氨基酸，形成两亲α-螺旋",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "信号识别颗粒(SRP)识别信号肽后暂停翻译，将核糖体-新生链复合物靶向到内质网膜",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "蛋白质定位完全由信号肽决定",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确:ER信号肽特征。C正确:SRP循环。B正确:线粒体导肽特征。D错误:一些蛋白质通过信号斑(三维折叠后的表面区域)、翻译后修饰或与其他蛋白的互作被靶向转运。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "蛋白靶向",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "34908821",
+  "tags": []
+ },
+ "BQ-dna_structure-a1895b78e726": {
+  "type": "mtf",
+  "question": "关于信号肽与蛋白质靶向，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "内质网信号肽通常位于蛋白质N端，含有一个疏水核心区",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "线粒体基质靶向信号富含碱性氨基酸和羟基氨基酸，形成两亲α-螺旋",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "蛋白质定位完全由信号肽决定",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "信号识别颗粒(SRP)识别信号肽后暂停翻译，将核糖体-新生链复合物靶向到内质网膜",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确:ER信号肽特征。D正确:SRP循环。B正确:线粒体导肽特征。C错误:一些蛋白质通过信号斑(三维折叠后的表面区域)、翻译后修饰或与其他蛋白的互作被靶向转运。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "蛋白靶向",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "34908821",
+  "tags": []
+ },
+ "BQ-dna_structure-05970c22f7b5": {
+  "type": "mtf",
+  "question": "关于信号肽与蛋白质靶向，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "内质网信号肽通常位于蛋白质N端，含有一个疏水核心区",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "蛋白质定位完全由信号肽决定",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "信号识别颗粒(SRP)识别信号肽后暂停翻译，将核糖体-新生链复合物靶向到内质网膜",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "线粒体基质靶向信号富含碱性氨基酸和羟基氨基酸，形成两亲α-螺旋",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确:ER信号肽特征。C正确:SRP循环。D正确:线粒体导肽特征。B错误:一些蛋白质通过信号斑(三维折叠后的表面区域)、翻译后修饰或与其他蛋白的互作被靶向转运。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "蛋白靶向",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "34908821",
+  "tags": []
+ },
+ "BQ-dna_structure-a5f20b1bc74b": {
+  "type": "mtf",
+  "question": "关于信号肽与蛋白质靶向，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "内质网信号肽通常位于蛋白质N端，含有一个疏水核心区",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "蛋白质定位完全由信号肽决定",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "线粒体基质靶向信号富含碱性氨基酸和羟基氨基酸，形成两亲α-螺旋",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "信号识别颗粒(SRP)识别信号肽后暂停翻译，将核糖体-新生链复合物靶向到内质网膜",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确:ER信号肽特征。D正确:SRP循环。C正确:线粒体导肽特征。B错误:一些蛋白质通过信号斑(三维折叠后的表面区域)、翻译后修饰或与其他蛋白的互作被靶向转运。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "蛋白靶向",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "34908821",
+  "tags": []
+ },
+ "BQ-dna_structure-af8354579bc5": {
+  "type": "mtf",
+  "question": "关于信号肽与蛋白质靶向，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "线粒体基质靶向信号富含碱性氨基酸和羟基氨基酸，形成两亲α-螺旋",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "信号识别颗粒(SRP)识别信号肽后暂停翻译，将核糖体-新生链复合物靶向到内质网膜",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "内质网信号肽通常位于蛋白质N端，含有一个疏水核心区",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "蛋白质定位完全由信号肽决定",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确:ER信号肽特征。B正确:SRP循环。A正确:线粒体导肽特征。D错误:一些蛋白质通过信号斑(三维折叠后的表面区域)、翻译后修饰或与其他蛋白的互作被靶向转运。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "蛋白靶向",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "34908821",
+  "tags": []
+ },
+ "BQ-dna_structure-b59fc96f49cd": {
+  "type": "mtf",
+  "question": "关于信号肽与蛋白质靶向，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "线粒体基质靶向信号富含碱性氨基酸和羟基氨基酸，形成两亲α-螺旋",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "信号识别颗粒(SRP)识别信号肽后暂停翻译，将核糖体-新生链复合物靶向到内质网膜",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "蛋白质定位完全由信号肽决定",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "内质网信号肽通常位于蛋白质N端，含有一个疏水核心区",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确:ER信号肽特征。B正确:SRP循环。A正确:线粒体导肽特征。C错误:一些蛋白质通过信号斑(三维折叠后的表面区域)、翻译后修饰或与其他蛋白的互作被靶向转运。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "蛋白靶向",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "34908821",
+  "tags": []
+ },
+ "BQ-dna_structure-6e684ba2ce87": {
+  "type": "mtf",
+  "question": "关于信号肽与蛋白质靶向，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "线粒体基质靶向信号富含碱性氨基酸和羟基氨基酸，形成两亲α-螺旋",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "内质网信号肽通常位于蛋白质N端，含有一个疏水核心区",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "信号识别颗粒(SRP)识别信号肽后暂停翻译，将核糖体-新生链复合物靶向到内质网膜",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "蛋白质定位完全由信号肽决定",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确:ER信号肽特征。C正确:SRP循环。A正确:线粒体导肽特征。D错误:一些蛋白质通过信号斑(三维折叠后的表面区域)、翻译后修饰或与其他蛋白的互作被靶向转运。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "蛋白靶向",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "34908821",
+  "tags": []
+ },
+ "BQ-dna_structure-108eab2ff620": {
+  "type": "mtf",
+  "question": "关于信号肽与蛋白质靶向，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "线粒体基质靶向信号富含碱性氨基酸和羟基氨基酸，形成两亲α-螺旋",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "内质网信号肽通常位于蛋白质N端，含有一个疏水核心区",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "蛋白质定位完全由信号肽决定",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "信号识别颗粒(SRP)识别信号肽后暂停翻译，将核糖体-新生链复合物靶向到内质网膜",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确:ER信号肽特征。D正确:SRP循环。A正确:线粒体导肽特征。C错误:一些蛋白质通过信号斑(三维折叠后的表面区域)、翻译后修饰或与其他蛋白的互作被靶向转运。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "蛋白靶向",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "34908821",
+  "tags": []
+ },
+ "BQ-dna_structure-446bf3a9ccb4": {
+  "type": "mtf",
+  "question": "关于信号肽与蛋白质靶向，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "线粒体基质靶向信号富含碱性氨基酸和羟基氨基酸，形成两亲α-螺旋",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "蛋白质定位完全由信号肽决定",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "信号识别颗粒(SRP)识别信号肽后暂停翻译，将核糖体-新生链复合物靶向到内质网膜",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "内质网信号肽通常位于蛋白质N端，含有一个疏水核心区",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确:ER信号肽特征。C正确:SRP循环。A正确:线粒体导肽特征。B错误:一些蛋白质通过信号斑(三维折叠后的表面区域)、翻译后修饰或与其他蛋白的互作被靶向转运。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "蛋白靶向",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "34908821",
+  "tags": []
+ },
+ "BQ-dna_structure-5574e5d726e6": {
+  "type": "mtf",
+  "question": "关于信号肽与蛋白质靶向，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "线粒体基质靶向信号富含碱性氨基酸和羟基氨基酸，形成两亲α-螺旋",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "蛋白质定位完全由信号肽决定",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "内质网信号肽通常位于蛋白质N端，含有一个疏水核心区",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "信号识别颗粒(SRP)识别信号肽后暂停翻译，将核糖体-新生链复合物靶向到内质网膜",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确:ER信号肽特征。D正确:SRP循环。A正确:线粒体导肽特征。B错误:一些蛋白质通过信号斑(三维折叠后的表面区域)、翻译后修饰或与其他蛋白的互作被靶向转运。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "蛋白靶向",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "34908821",
+  "tags": []
+ },
+ "BQ-dna_structure-44d741a3a68c": {
+  "type": "mtf",
+  "question": "关于信号肽与蛋白质靶向，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "蛋白质定位完全由信号肽决定",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "信号识别颗粒(SRP)识别信号肽后暂停翻译，将核糖体-新生链复合物靶向到内质网膜",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "内质网信号肽通常位于蛋白质N端，含有一个疏水核心区",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "线粒体基质靶向信号富含碱性氨基酸和羟基氨基酸，形成两亲α-螺旋",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确:ER信号肽特征。B正确:SRP循环。D正确:线粒体导肽特征。A错误:一些蛋白质通过信号斑(三维折叠后的表面区域)、翻译后修饰或与其他蛋白的互作被靶向转运。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "蛋白靶向",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "34908821",
+  "tags": []
+ },
+ "BQ-dna_structure-65eceb8d8765": {
+  "type": "mtf",
+  "question": "关于信号肽与蛋白质靶向，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "蛋白质定位完全由信号肽决定",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "信号识别颗粒(SRP)识别信号肽后暂停翻译，将核糖体-新生链复合物靶向到内质网膜",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "线粒体基质靶向信号富含碱性氨基酸和羟基氨基酸，形成两亲α-螺旋",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "内质网信号肽通常位于蛋白质N端，含有一个疏水核心区",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确:ER信号肽特征。B正确:SRP循环。C正确:线粒体导肽特征。A错误:一些蛋白质通过信号斑(三维折叠后的表面区域)、翻译后修饰或与其他蛋白的互作被靶向转运。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "蛋白靶向",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "34908821",
+  "tags": []
+ },
+ "BQ-dna_structure-4659f0eb5fc6": {
+  "type": "mtf",
+  "question": "关于信号肽与蛋白质靶向，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "蛋白质定位完全由信号肽决定",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "内质网信号肽通常位于蛋白质N端，含有一个疏水核心区",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "信号识别颗粒(SRP)识别信号肽后暂停翻译，将核糖体-新生链复合物靶向到内质网膜",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "线粒体基质靶向信号富含碱性氨基酸和羟基氨基酸，形成两亲α-螺旋",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确:ER信号肽特征。C正确:SRP循环。D正确:线粒体导肽特征。A错误:一些蛋白质通过信号斑(三维折叠后的表面区域)、翻译后修饰或与其他蛋白的互作被靶向转运。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "蛋白靶向",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "34908821",
+  "tags": []
+ },
+ "BQ-dna_structure-231f2397bd84": {
+  "type": "mtf",
+  "question": "关于信号肽与蛋白质靶向，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "蛋白质定位完全由信号肽决定",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "内质网信号肽通常位于蛋白质N端，含有一个疏水核心区",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "线粒体基质靶向信号富含碱性氨基酸和羟基氨基酸，形成两亲α-螺旋",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "信号识别颗粒(SRP)识别信号肽后暂停翻译，将核糖体-新生链复合物靶向到内质网膜",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确:ER信号肽特征。D正确:SRP循环。C正确:线粒体导肽特征。A错误:一些蛋白质通过信号斑(三维折叠后的表面区域)、翻译后修饰或与其他蛋白的互作被靶向转运。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "蛋白靶向",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "34908821",
+  "tags": []
+ },
+ "BQ-dna_structure-85c86c0b54d6": {
+  "type": "mtf",
+  "question": "关于信号肽与蛋白质靶向，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "蛋白质定位完全由信号肽决定",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "线粒体基质靶向信号富含碱性氨基酸和羟基氨基酸，形成两亲α-螺旋",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "信号识别颗粒(SRP)识别信号肽后暂停翻译，将核糖体-新生链复合物靶向到内质网膜",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "内质网信号肽通常位于蛋白质N端，含有一个疏水核心区",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确:ER信号肽特征。C正确:SRP循环。B正确:线粒体导肽特征。A错误:一些蛋白质通过信号斑(三维折叠后的表面区域)、翻译后修饰或与其他蛋白的互作被靶向转运。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "蛋白靶向",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "34908821",
+  "tags": []
+ },
+ "BQ-dna_structure-445e596103f9": {
+  "type": "mtf",
+  "question": "关于信号肽与蛋白质靶向，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "蛋白质定位完全由信号肽决定",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "线粒体基质靶向信号富含碱性氨基酸和羟基氨基酸，形成两亲α-螺旋",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "内质网信号肽通常位于蛋白质N端，含有一个疏水核心区",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "信号识别颗粒(SRP)识别信号肽后暂停翻译，将核糖体-新生链复合物靶向到内质网膜",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确:ER信号肽特征。D正确:SRP循环。B正确:线粒体导肽特征。A错误:一些蛋白质通过信号斑(三维折叠后的表面区域)、翻译后修饰或与其他蛋白的互作被靶向转运。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "蛋白靶向",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "34908821",
+  "tags": []
+ },
+ "BQ-dna_structure-d123cc19b7f0": {
+  "type": "mtf",
+  "question": "关于核糖开关与RNA调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "核糖开关是位于mRNA 5'端非翻译区的RNA元件，通过与特定小分子代谢物结合来改变自身构象从而调控基因表达",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "核糖开关的发现颠覆了「只有蛋白质才能作为小分子传感器」的传统观念",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "核糖开关调控仅发生在翻译水平",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "硫胺素焦磷酸（TPP）核糖开关在原核和真核生物中均存在，是最保守的核糖开关之一",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：核糖开关的定义。D正确：TPP核糖开关的保守性。C错误：核糖开关可在转录水平（影响终止子/抗终止子形成）或翻译水平（影响核糖体结合位点的可及性）调控，取决于具体类型。B正确：核糖开关是RNA世界中RNA催化/调控功能的现代例证。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "核糖开关",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "988411305",
+  "tags": []
+ },
+ "BQ-dna_structure-38b67fb69cfa": {
+  "type": "mtf",
+  "question": "关于核糖开关与RNA调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "核糖开关是位于mRNA 5'端非翻译区的RNA元件，通过与特定小分子代谢物结合来改变自身构象从而调控基因表达",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "核糖开关的发现颠覆了「只有蛋白质才能作为小分子传感器」的传统观念",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "硫胺素焦磷酸（TPP）核糖开关在原核和真核生物中均存在，是最保守的核糖开关之一",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "核糖开关调控仅发生在翻译水平",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确：核糖开关的定义。C正确：TPP核糖开关的保守性。D错误：核糖开关可在转录水平（影响终止子/抗终止子形成）或翻译水平（影响核糖体结合位点的可及性）调控，取决于具体类型。B正确：核糖开关是RNA世界中RNA催化/调控功能的现代例证。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "核糖开关",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "988411305",
+  "tags": []
+ },
+ "BQ-dna_structure-c2dd13a5577b": {
+  "type": "mtf",
+  "question": "关于核糖开关与RNA调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "核糖开关是位于mRNA 5'端非翻译区的RNA元件，通过与特定小分子代谢物结合来改变自身构象从而调控基因表达",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "核糖开关调控仅发生在翻译水平",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "核糖开关的发现颠覆了「只有蛋白质才能作为小分子传感器」的传统观念",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "硫胺素焦磷酸（TPP）核糖开关在原核和真核生物中均存在，是最保守的核糖开关之一",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：核糖开关的定义。D正确：TPP核糖开关的保守性。B错误：核糖开关可在转录水平（影响终止子/抗终止子形成）或翻译水平（影响核糖体结合位点的可及性）调控，取决于具体类型。C正确：核糖开关是RNA世界中RNA催化/调控功能的现代例证。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "核糖开关",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "988411305",
+  "tags": []
+ },
+ "BQ-dna_structure-acec6c23cac8": {
+  "type": "mtf",
+  "question": "关于核糖开关与RNA调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "核糖开关是位于mRNA 5'端非翻译区的RNA元件，通过与特定小分子代谢物结合来改变自身构象从而调控基因表达",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "核糖开关调控仅发生在翻译水平",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "硫胺素焦磷酸（TPP）核糖开关在原核和真核生物中均存在，是最保守的核糖开关之一",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "核糖开关的发现颠覆了「只有蛋白质才能作为小分子传感器」的传统观念",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：核糖开关的定义。C正确：TPP核糖开关的保守性。B错误：核糖开关可在转录水平（影响终止子/抗终止子形成）或翻译水平（影响核糖体结合位点的可及性）调控，取决于具体类型。D正确：核糖开关是RNA世界中RNA催化/调控功能的现代例证。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "核糖开关",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "988411305",
+  "tags": []
+ },
+ "BQ-dna_structure-26a53c84868e": {
+  "type": "mtf",
+  "question": "关于核糖开关与RNA调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "核糖开关是位于mRNA 5'端非翻译区的RNA元件，通过与特定小分子代谢物结合来改变自身构象从而调控基因表达",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "硫胺素焦磷酸（TPP）核糖开关在原核和真核生物中均存在，是最保守的核糖开关之一",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "核糖开关的发现颠覆了「只有蛋白质才能作为小分子传感器」的传统观念",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "核糖开关调控仅发生在翻译水平",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确：核糖开关的定义。B正确：TPP核糖开关的保守性。D错误：核糖开关可在转录水平（影响终止子/抗终止子形成）或翻译水平（影响核糖体结合位点的可及性）调控，取决于具体类型。C正确：核糖开关是RNA世界中RNA催化/调控功能的现代例证。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "核糖开关",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "988411305",
+  "tags": []
+ },
+ "BQ-dna_structure-0e5789cfafca": {
+  "type": "mtf",
+  "question": "关于核糖开关与RNA调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "核糖开关是位于mRNA 5'端非翻译区的RNA元件，通过与特定小分子代谢物结合来改变自身构象从而调控基因表达",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "硫胺素焦磷酸（TPP）核糖开关在原核和真核生物中均存在，是最保守的核糖开关之一",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "核糖开关调控仅发生在翻译水平",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "核糖开关的发现颠覆了「只有蛋白质才能作为小分子传感器」的传统观念",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：核糖开关的定义。B正确：TPP核糖开关的保守性。C错误：核糖开关可在转录水平（影响终止子/抗终止子形成）或翻译水平（影响核糖体结合位点的可及性）调控，取决于具体类型。D正确：核糖开关是RNA世界中RNA催化/调控功能的现代例证。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "核糖开关",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "988411305",
+  "tags": []
+ },
+ "BQ-dna_structure-128de21578dc": {
+  "type": "mtf",
+  "question": "关于核糖开关与RNA调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "核糖开关的发现颠覆了「只有蛋白质才能作为小分子传感器」的传统观念",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "核糖开关是位于mRNA 5'端非翻译区的RNA元件，通过与特定小分子代谢物结合来改变自身构象从而调控基因表达",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "核糖开关调控仅发生在翻译水平",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "硫胺素焦磷酸（TPP）核糖开关在原核和真核生物中均存在，是最保守的核糖开关之一",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：核糖开关的定义。D正确：TPP核糖开关的保守性。C错误：核糖开关可在转录水平（影响终止子/抗终止子形成）或翻译水平（影响核糖体结合位点的可及性）调控，取决于具体类型。A正确：核糖开关是RNA世界中RNA催化/调控功能的现代例证。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "核糖开关",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "988411305",
+  "tags": []
+ },
+ "BQ-dna_structure-2b5b6f85fe62": {
+  "type": "mtf",
+  "question": "关于核糖开关与RNA调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "核糖开关的发现颠覆了「只有蛋白质才能作为小分子传感器」的传统观念",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "核糖开关是位于mRNA 5'端非翻译区的RNA元件，通过与特定小分子代谢物结合来改变自身构象从而调控基因表达",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "硫胺素焦磷酸（TPP）核糖开关在原核和真核生物中均存在，是最保守的核糖开关之一",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "核糖开关调控仅发生在翻译水平",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确：核糖开关的定义。C正确：TPP核糖开关的保守性。D错误：核糖开关可在转录水平（影响终止子/抗终止子形成）或翻译水平（影响核糖体结合位点的可及性）调控，取决于具体类型。A正确：核糖开关是RNA世界中RNA催化/调控功能的现代例证。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "核糖开关",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "988411305",
+  "tags": []
+ },
+ "BQ-dna_structure-52036095b09b": {
+  "type": "mtf",
+  "question": "关于核糖开关与RNA调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "核糖开关的发现颠覆了「只有蛋白质才能作为小分子传感器」的传统观念",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "核糖开关调控仅发生在翻译水平",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "核糖开关是位于mRNA 5'端非翻译区的RNA元件，通过与特定小分子代谢物结合来改变自身构象从而调控基因表达",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "硫胺素焦磷酸（TPP）核糖开关在原核和真核生物中均存在，是最保守的核糖开关之一",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：核糖开关的定义。D正确：TPP核糖开关的保守性。B错误：核糖开关可在转录水平（影响终止子/抗终止子形成）或翻译水平（影响核糖体结合位点的可及性）调控，取决于具体类型。A正确：核糖开关是RNA世界中RNA催化/调控功能的现代例证。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "核糖开关",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "988411305",
+  "tags": []
+ },
+ "BQ-dna_structure-db6c916d2042": {
+  "type": "mtf",
+  "question": "关于核糖开关与RNA调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "核糖开关的发现颠覆了「只有蛋白质才能作为小分子传感器」的传统观念",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "核糖开关调控仅发生在翻译水平",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "硫胺素焦磷酸（TPP）核糖开关在原核和真核生物中均存在，是最保守的核糖开关之一",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "核糖开关是位于mRNA 5'端非翻译区的RNA元件，通过与特定小分子代谢物结合来改变自身构象从而调控基因表达",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：核糖开关的定义。C正确：TPP核糖开关的保守性。B错误：核糖开关可在转录水平（影响终止子/抗终止子形成）或翻译水平（影响核糖体结合位点的可及性）调控，取决于具体类型。A正确：核糖开关是RNA世界中RNA催化/调控功能的现代例证。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "核糖开关",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "988411305",
+  "tags": []
+ },
+ "BQ-dna_structure-e708c19b1c0e": {
+  "type": "mtf",
+  "question": "关于核糖开关与RNA调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "核糖开关的发现颠覆了「只有蛋白质才能作为小分子传感器」的传统观念",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "硫胺素焦磷酸（TPP）核糖开关在原核和真核生物中均存在，是最保守的核糖开关之一",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "核糖开关是位于mRNA 5'端非翻译区的RNA元件，通过与特定小分子代谢物结合来改变自身构象从而调控基因表达",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "核糖开关调控仅发生在翻译水平",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确：核糖开关的定义。B正确：TPP核糖开关的保守性。D错误：核糖开关可在转录水平（影响终止子/抗终止子形成）或翻译水平（影响核糖体结合位点的可及性）调控，取决于具体类型。A正确：核糖开关是RNA世界中RNA催化/调控功能的现代例证。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "核糖开关",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "988411305",
+  "tags": []
+ },
+ "BQ-dna_structure-2ab441923ef2": {
+  "type": "mtf",
+  "question": "关于核糖开关与RNA调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "核糖开关的发现颠覆了「只有蛋白质才能作为小分子传感器」的传统观念",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "硫胺素焦磷酸（TPP）核糖开关在原核和真核生物中均存在，是最保守的核糖开关之一",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "核糖开关调控仅发生在翻译水平",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "核糖开关是位于mRNA 5'端非翻译区的RNA元件，通过与特定小分子代谢物结合来改变自身构象从而调控基因表达",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：核糖开关的定义。B正确：TPP核糖开关的保守性。C错误：核糖开关可在转录水平（影响终止子/抗终止子形成）或翻译水平（影响核糖体结合位点的可及性）调控，取决于具体类型。A正确：核糖开关是RNA世界中RNA催化/调控功能的现代例证。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "核糖开关",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "988411305",
+  "tags": []
+ },
+ "BQ-dna_structure-100199ae80b9": {
+  "type": "mtf",
+  "question": "关于核糖开关与RNA调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "核糖开关调控仅发生在翻译水平",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "核糖开关是位于mRNA 5'端非翻译区的RNA元件，通过与特定小分子代谢物结合来改变自身构象从而调控基因表达",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "核糖开关的发现颠覆了「只有蛋白质才能作为小分子传感器」的传统观念",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "硫胺素焦磷酸（TPP）核糖开关在原核和真核生物中均存在，是最保守的核糖开关之一",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：核糖开关的定义。D正确：TPP核糖开关的保守性。A错误：核糖开关可在转录水平（影响终止子/抗终止子形成）或翻译水平（影响核糖体结合位点的可及性）调控，取决于具体类型。C正确：核糖开关是RNA世界中RNA催化/调控功能的现代例证。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "核糖开关",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "988411305",
+  "tags": []
+ },
+ "BQ-dna_structure-58c9d406b117": {
+  "type": "mtf",
+  "question": "关于核糖开关与RNA调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "核糖开关调控仅发生在翻译水平",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "核糖开关是位于mRNA 5'端非翻译区的RNA元件，通过与特定小分子代谢物结合来改变自身构象从而调控基因表达",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "硫胺素焦磷酸（TPP）核糖开关在原核和真核生物中均存在，是最保守的核糖开关之一",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "核糖开关的发现颠覆了「只有蛋白质才能作为小分子传感器」的传统观念",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：核糖开关的定义。C正确：TPP核糖开关的保守性。A错误：核糖开关可在转录水平（影响终止子/抗终止子形成）或翻译水平（影响核糖体结合位点的可及性）调控，取决于具体类型。D正确：核糖开关是RNA世界中RNA催化/调控功能的现代例证。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "核糖开关",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "988411305",
+  "tags": []
+ },
+ "BQ-dna_structure-711336542c1c": {
+  "type": "mtf",
+  "question": "关于核糖开关与RNA调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "核糖开关调控仅发生在翻译水平",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "核糖开关的发现颠覆了「只有蛋白质才能作为小分子传感器」的传统观念",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "核糖开关是位于mRNA 5'端非翻译区的RNA元件，通过与特定小分子代谢物结合来改变自身构象从而调控基因表达",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "硫胺素焦磷酸（TPP）核糖开关在原核和真核生物中均存在，是最保守的核糖开关之一",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：核糖开关的定义。D正确：TPP核糖开关的保守性。A错误：核糖开关可在转录水平（影响终止子/抗终止子形成）或翻译水平（影响核糖体结合位点的可及性）调控，取决于具体类型。B正确：核糖开关是RNA世界中RNA催化/调控功能的现代例证。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "核糖开关",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "988411305",
+  "tags": []
+ },
+ "BQ-dna_structure-e60aa2aa96f2": {
+  "type": "mtf",
+  "question": "关于核糖开关与RNA调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "核糖开关调控仅发生在翻译水平",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "核糖开关的发现颠覆了「只有蛋白质才能作为小分子传感器」的传统观念",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "硫胺素焦磷酸（TPP）核糖开关在原核和真核生物中均存在，是最保守的核糖开关之一",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "核糖开关是位于mRNA 5'端非翻译区的RNA元件，通过与特定小分子代谢物结合来改变自身构象从而调控基因表达",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：核糖开关的定义。C正确：TPP核糖开关的保守性。A错误：核糖开关可在转录水平（影响终止子/抗终止子形成）或翻译水平（影响核糖体结合位点的可及性）调控，取决于具体类型。B正确：核糖开关是RNA世界中RNA催化/调控功能的现代例证。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "核糖开关",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "988411305",
+  "tags": []
+ },
+ "BQ-dna_structure-39cb1820974c": {
+  "type": "mtf",
+  "question": "关于核糖开关与RNA调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "核糖开关调控仅发生在翻译水平",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "硫胺素焦磷酸（TPP）核糖开关在原核和真核生物中均存在，是最保守的核糖开关之一",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "核糖开关是位于mRNA 5'端非翻译区的RNA元件，通过与特定小分子代谢物结合来改变自身构象从而调控基因表达",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "核糖开关的发现颠覆了「只有蛋白质才能作为小分子传感器」的传统观念",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：核糖开关的定义。B正确：TPP核糖开关的保守性。A错误：核糖开关可在转录水平（影响终止子/抗终止子形成）或翻译水平（影响核糖体结合位点的可及性）调控，取决于具体类型。D正确：核糖开关是RNA世界中RNA催化/调控功能的现代例证。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "核糖开关",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "988411305",
+  "tags": []
+ },
+ "BQ-dna_structure-7a9c41c9172a": {
+  "type": "mtf",
+  "question": "关于核糖开关与RNA调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "核糖开关调控仅发生在翻译水平",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "硫胺素焦磷酸（TPP）核糖开关在原核和真核生物中均存在，是最保守的核糖开关之一",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "核糖开关的发现颠覆了「只有蛋白质才能作为小分子传感器」的传统观念",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "核糖开关是位于mRNA 5'端非翻译区的RNA元件，通过与特定小分子代谢物结合来改变自身构象从而调控基因表达",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：核糖开关的定义。B正确：TPP核糖开关的保守性。A错误：核糖开关可在转录水平（影响终止子/抗终止子形成）或翻译水平（影响核糖体结合位点的可及性）调控，取决于具体类型。C正确：核糖开关是RNA世界中RNA催化/调控功能的现代例证。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "核糖开关",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "988411305",
+  "tags": []
+ },
+ "BQ-dna_structure-0b2aa834094c": {
+  "type": "mtf",
+  "question": "关于核糖开关与RNA调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "硫胺素焦磷酸（TPP）核糖开关在原核和真核生物中均存在，是最保守的核糖开关之一",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "核糖开关是位于mRNA 5'端非翻译区的RNA元件，通过与特定小分子代谢物结合来改变自身构象从而调控基因表达",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "核糖开关的发现颠覆了「只有蛋白质才能作为小分子传感器」的传统观念",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "核糖开关调控仅发生在翻译水平",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确：核糖开关的定义。A正确：TPP核糖开关的保守性。D错误：核糖开关可在转录水平（影响终止子/抗终止子形成）或翻译水平（影响核糖体结合位点的可及性）调控，取决于具体类型。C正确：核糖开关是RNA世界中RNA催化/调控功能的现代例证。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "核糖开关",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "988411305",
+  "tags": []
+ },
+ "BQ-dna_structure-23052b2d006c": {
+  "type": "mtf",
+  "question": "关于核糖开关与RNA调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "硫胺素焦磷酸（TPP）核糖开关在原核和真核生物中均存在，是最保守的核糖开关之一",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "核糖开关是位于mRNA 5'端非翻译区的RNA元件，通过与特定小分子代谢物结合来改变自身构象从而调控基因表达",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "核糖开关调控仅发生在翻译水平",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "核糖开关的发现颠覆了「只有蛋白质才能作为小分子传感器」的传统观念",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：核糖开关的定义。A正确：TPP核糖开关的保守性。C错误：核糖开关可在转录水平（影响终止子/抗终止子形成）或翻译水平（影响核糖体结合位点的可及性）调控，取决于具体类型。D正确：核糖开关是RNA世界中RNA催化/调控功能的现代例证。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "核糖开关",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "988411305",
+  "tags": []
+ },
+ "BQ-dna_structure-7f01e10a746d": {
+  "type": "mtf",
+  "question": "关于核糖开关与RNA调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "硫胺素焦磷酸（TPP）核糖开关在原核和真核生物中均存在，是最保守的核糖开关之一",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "核糖开关的发现颠覆了「只有蛋白质才能作为小分子传感器」的传统观念",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "核糖开关是位于mRNA 5'端非翻译区的RNA元件，通过与特定小分子代谢物结合来改变自身构象从而调控基因表达",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "核糖开关调控仅发生在翻译水平",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确：核糖开关的定义。A正确：TPP核糖开关的保守性。D错误：核糖开关可在转录水平（影响终止子/抗终止子形成）或翻译水平（影响核糖体结合位点的可及性）调控，取决于具体类型。B正确：核糖开关是RNA世界中RNA催化/调控功能的现代例证。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "核糖开关",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "988411305",
+  "tags": []
+ },
+ "BQ-dna_structure-5e954f114208": {
+  "type": "mtf",
+  "question": "关于核糖开关与RNA调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "硫胺素焦磷酸（TPP）核糖开关在原核和真核生物中均存在，是最保守的核糖开关之一",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "核糖开关的发现颠覆了「只有蛋白质才能作为小分子传感器」的传统观念",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "核糖开关调控仅发生在翻译水平",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "核糖开关是位于mRNA 5'端非翻译区的RNA元件，通过与特定小分子代谢物结合来改变自身构象从而调控基因表达",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：核糖开关的定义。A正确：TPP核糖开关的保守性。C错误：核糖开关可在转录水平（影响终止子/抗终止子形成）或翻译水平（影响核糖体结合位点的可及性）调控，取决于具体类型。B正确：核糖开关是RNA世界中RNA催化/调控功能的现代例证。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "核糖开关",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "988411305",
+  "tags": []
+ },
+ "BQ-dna_structure-1a1ea387f0d1": {
+  "type": "mtf",
+  "question": "关于核糖开关与RNA调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "硫胺素焦磷酸（TPP）核糖开关在原核和真核生物中均存在，是最保守的核糖开关之一",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "核糖开关调控仅发生在翻译水平",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "核糖开关是位于mRNA 5'端非翻译区的RNA元件，通过与特定小分子代谢物结合来改变自身构象从而调控基因表达",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "核糖开关的发现颠覆了「只有蛋白质才能作为小分子传感器」的传统观念",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：核糖开关的定义。A正确：TPP核糖开关的保守性。B错误：核糖开关可在转录水平（影响终止子/抗终止子形成）或翻译水平（影响核糖体结合位点的可及性）调控，取决于具体类型。D正确：核糖开关是RNA世界中RNA催化/调控功能的现代例证。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "核糖开关",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "988411305",
+  "tags": []
+ },
+ "BQ-dna_structure-64c163873eac": {
+  "type": "mtf",
+  "question": "关于核糖开关与RNA调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "硫胺素焦磷酸（TPP）核糖开关在原核和真核生物中均存在，是最保守的核糖开关之一",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "核糖开关调控仅发生在翻译水平",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "核糖开关的发现颠覆了「只有蛋白质才能作为小分子传感器」的传统观念",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "核糖开关是位于mRNA 5'端非翻译区的RNA元件，通过与特定小分子代谢物结合来改变自身构象从而调控基因表达",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：核糖开关的定义。A正确：TPP核糖开关的保守性。B错误：核糖开关可在转录水平（影响终止子/抗终止子形成）或翻译水平（影响核糖体结合位点的可及性）调控，取决于具体类型。C正确：核糖开关是RNA世界中RNA催化/调控功能的现代例证。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "核糖开关",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "988411305",
+  "tags": []
+ },
+ "BQ-dna_structure-22635cfa7d5b": {
+  "type": "mtf",
+  "question": "关于蛋白质工程与定向进化，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "2018年诺贝尔化学奖授予了酶的定向进化研究(Frances Arnold)",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "DNA shuffling(基因洗牌)将同源基因随机片段重组，创造嵌合基因文库供筛选",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "定向进化通过随机突变和筛选改造蛋白质性质，不需要预先了解蛋白质结构",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "定点突变技术可精确改变蛋白质特定位点的氨基酸，用于研究结构-功能关系",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:定点突变。B:定向进化策略。C:DNA shuffling。D:2018年诺贝尔化学奖。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "蛋白质工程",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1859867314",
+  "tags": []
+ },
+ "BQ-dna_structure-c8ea6bdfd9d5": {
+  "type": "mtf",
+  "question": "关于蛋白质工程与定向进化，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "2018年诺贝尔化学奖授予了酶的定向进化研究(Frances Arnold)",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "DNA shuffling(基因洗牌)将同源基因随机片段重组，创造嵌合基因文库供筛选",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "定点突变技术可精确改变蛋白质特定位点的氨基酸，用于研究结构-功能关系",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "定向进化通过随机突变和筛选改造蛋白质性质，不需要预先了解蛋白质结构",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:定点突变。B:定向进化策略。C:DNA shuffling。D:2018年诺贝尔化学奖。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "蛋白质工程",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1859867314",
+  "tags": []
+ },
+ "BQ-dna_structure-08e17113aea1": {
+  "type": "mtf",
+  "question": "关于蛋白质工程与定向进化，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "2018年诺贝尔化学奖授予了酶的定向进化研究(Frances Arnold)",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "定向进化通过随机突变和筛选改造蛋白质性质，不需要预先了解蛋白质结构",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "DNA shuffling(基因洗牌)将同源基因随机片段重组，创造嵌合基因文库供筛选",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "定点突变技术可精确改变蛋白质特定位点的氨基酸，用于研究结构-功能关系",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:定点突变。B:定向进化策略。C:DNA shuffling。D:2018年诺贝尔化学奖。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "蛋白质工程",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1859867314",
+  "tags": []
+ },
+ "BQ-dna_structure-61f8ccef85d1": {
+  "type": "mtf",
+  "question": "关于蛋白质工程与定向进化，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "2018年诺贝尔化学奖授予了酶的定向进化研究(Frances Arnold)",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "定向进化通过随机突变和筛选改造蛋白质性质，不需要预先了解蛋白质结构",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "定点突变技术可精确改变蛋白质特定位点的氨基酸，用于研究结构-功能关系",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "DNA shuffling(基因洗牌)将同源基因随机片段重组，创造嵌合基因文库供筛选",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:定点突变。B:定向进化策略。C:DNA shuffling。D:2018年诺贝尔化学奖。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "蛋白质工程",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1859867314",
+  "tags": []
+ },
+ "BQ-dna_structure-2220a56e5f13": {
+  "type": "mtf",
+  "question": "关于蛋白质工程与定向进化，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "2018年诺贝尔化学奖授予了酶的定向进化研究(Frances Arnold)",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "定点突变技术可精确改变蛋白质特定位点的氨基酸，用于研究结构-功能关系",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "DNA shuffling(基因洗牌)将同源基因随机片段重组，创造嵌合基因文库供筛选",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "定向进化通过随机突变和筛选改造蛋白质性质，不需要预先了解蛋白质结构",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:定点突变。B:定向进化策略。C:DNA shuffling。D:2018年诺贝尔化学奖。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "蛋白质工程",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1859867314",
+  "tags": []
+ },
+ "BQ-dna_structure-1edc928b3d93": {
+  "type": "mtf",
+  "question": "关于蛋白质工程与定向进化，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "2018年诺贝尔化学奖授予了酶的定向进化研究(Frances Arnold)",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "定点突变技术可精确改变蛋白质特定位点的氨基酸，用于研究结构-功能关系",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "定向进化通过随机突变和筛选改造蛋白质性质，不需要预先了解蛋白质结构",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "DNA shuffling(基因洗牌)将同源基因随机片段重组，创造嵌合基因文库供筛选",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:定点突变。B:定向进化策略。C:DNA shuffling。D:2018年诺贝尔化学奖。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "蛋白质工程",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1859867314",
+  "tags": []
+ },
+ "BQ-dna_structure-f20ae3e3eead": {
+  "type": "mtf",
+  "question": "关于蛋白质工程与定向进化，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "DNA shuffling(基因洗牌)将同源基因随机片段重组，创造嵌合基因文库供筛选",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "2018年诺贝尔化学奖授予了酶的定向进化研究(Frances Arnold)",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "定向进化通过随机突变和筛选改造蛋白质性质，不需要预先了解蛋白质结构",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "定点突变技术可精确改变蛋白质特定位点的氨基酸，用于研究结构-功能关系",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:定点突变。B:定向进化策略。C:DNA shuffling。D:2018年诺贝尔化学奖。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "蛋白质工程",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1859867314",
+  "tags": []
+ },
+ "BQ-dna_structure-66aa1b264e13": {
+  "type": "mtf",
+  "question": "关于蛋白质工程与定向进化，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "DNA shuffling(基因洗牌)将同源基因随机片段重组，创造嵌合基因文库供筛选",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "2018年诺贝尔化学奖授予了酶的定向进化研究(Frances Arnold)",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "定点突变技术可精确改变蛋白质特定位点的氨基酸，用于研究结构-功能关系",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "定向进化通过随机突变和筛选改造蛋白质性质，不需要预先了解蛋白质结构",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:定点突变。B:定向进化策略。C:DNA shuffling。D:2018年诺贝尔化学奖。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "蛋白质工程",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1859867314",
+  "tags": []
+ },
+ "BQ-dna_structure-8c3a3d235b19": {
+  "type": "mtf",
+  "question": "关于蛋白质工程与定向进化，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "DNA shuffling(基因洗牌)将同源基因随机片段重组，创造嵌合基因文库供筛选",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "定向进化通过随机突变和筛选改造蛋白质性质，不需要预先了解蛋白质结构",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "2018年诺贝尔化学奖授予了酶的定向进化研究(Frances Arnold)",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "定点突变技术可精确改变蛋白质特定位点的氨基酸，用于研究结构-功能关系",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:定点突变。B:定向进化策略。C:DNA shuffling。D:2018年诺贝尔化学奖。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "蛋白质工程",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1859867314",
+  "tags": []
+ },
+ "BQ-dna_structure-27b29f269098": {
+  "type": "mtf",
+  "question": "关于蛋白质工程与定向进化，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "DNA shuffling(基因洗牌)将同源基因随机片段重组，创造嵌合基因文库供筛选",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "定向进化通过随机突变和筛选改造蛋白质性质，不需要预先了解蛋白质结构",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "定点突变技术可精确改变蛋白质特定位点的氨基酸，用于研究结构-功能关系",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "2018年诺贝尔化学奖授予了酶的定向进化研究(Frances Arnold)",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:定点突变。B:定向进化策略。C:DNA shuffling。D:2018年诺贝尔化学奖。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "蛋白质工程",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1859867314",
+  "tags": []
+ },
+ "BQ-dna_structure-c3165658bc48": {
+  "type": "mtf",
+  "question": "关于蛋白质工程与定向进化，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "DNA shuffling(基因洗牌)将同源基因随机片段重组，创造嵌合基因文库供筛选",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "定点突变技术可精确改变蛋白质特定位点的氨基酸，用于研究结构-功能关系",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "2018年诺贝尔化学奖授予了酶的定向进化研究(Frances Arnold)",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "定向进化通过随机突变和筛选改造蛋白质性质，不需要预先了解蛋白质结构",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:定点突变。B:定向进化策略。C:DNA shuffling。D:2018年诺贝尔化学奖。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "蛋白质工程",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1859867314",
+  "tags": []
+ },
+ "BQ-dna_structure-22cfa0304af2": {
+  "type": "mtf",
+  "question": "关于蛋白质工程与定向进化，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "DNA shuffling(基因洗牌)将同源基因随机片段重组，创造嵌合基因文库供筛选",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "定点突变技术可精确改变蛋白质特定位点的氨基酸，用于研究结构-功能关系",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "定向进化通过随机突变和筛选改造蛋白质性质，不需要预先了解蛋白质结构",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "2018年诺贝尔化学奖授予了酶的定向进化研究(Frances Arnold)",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:定点突变。B:定向进化策略。C:DNA shuffling。D:2018年诺贝尔化学奖。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "蛋白质工程",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1859867314",
+  "tags": []
+ },
+ "BQ-dna_structure-58718619b1a6": {
+  "type": "mtf",
+  "question": "关于蛋白质工程与定向进化，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "定向进化通过随机突变和筛选改造蛋白质性质，不需要预先了解蛋白质结构",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "2018年诺贝尔化学奖授予了酶的定向进化研究(Frances Arnold)",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "DNA shuffling(基因洗牌)将同源基因随机片段重组，创造嵌合基因文库供筛选",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "定点突变技术可精确改变蛋白质特定位点的氨基酸，用于研究结构-功能关系",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:定点突变。B:定向进化策略。C:DNA shuffling。D:2018年诺贝尔化学奖。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "蛋白质工程",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1859867314",
+  "tags": []
+ },
+ "BQ-dna_structure-0dc2e7922ff2": {
+  "type": "mtf",
+  "question": "关于蛋白质工程与定向进化，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "定向进化通过随机突变和筛选改造蛋白质性质，不需要预先了解蛋白质结构",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "2018年诺贝尔化学奖授予了酶的定向进化研究(Frances Arnold)",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "定点突变技术可精确改变蛋白质特定位点的氨基酸，用于研究结构-功能关系",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "DNA shuffling(基因洗牌)将同源基因随机片段重组，创造嵌合基因文库供筛选",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:定点突变。B:定向进化策略。C:DNA shuffling。D:2018年诺贝尔化学奖。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "蛋白质工程",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1859867314",
+  "tags": []
+ },
+ "BQ-dna_structure-2c757f2bfe9b": {
+  "type": "mtf",
+  "question": "关于蛋白质工程与定向进化，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "定向进化通过随机突变和筛选改造蛋白质性质，不需要预先了解蛋白质结构",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "DNA shuffling(基因洗牌)将同源基因随机片段重组，创造嵌合基因文库供筛选",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "2018年诺贝尔化学奖授予了酶的定向进化研究(Frances Arnold)",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "定点突变技术可精确改变蛋白质特定位点的氨基酸，用于研究结构-功能关系",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:定点突变。B:定向进化策略。C:DNA shuffling。D:2018年诺贝尔化学奖。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "蛋白质工程",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1859867314",
+  "tags": []
+ },
+ "BQ-dna_structure-e1b02388b6b8": {
+  "type": "mtf",
+  "question": "关于蛋白质工程与定向进化，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "定向进化通过随机突变和筛选改造蛋白质性质，不需要预先了解蛋白质结构",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "DNA shuffling(基因洗牌)将同源基因随机片段重组，创造嵌合基因文库供筛选",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "定点突变技术可精确改变蛋白质特定位点的氨基酸，用于研究结构-功能关系",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "2018年诺贝尔化学奖授予了酶的定向进化研究(Frances Arnold)",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:定点突变。B:定向进化策略。C:DNA shuffling。D:2018年诺贝尔化学奖。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "蛋白质工程",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1859867314",
+  "tags": []
+ },
+ "BQ-dna_structure-2e7a297c6a38": {
+  "type": "mtf",
+  "question": "关于蛋白质工程与定向进化，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "定向进化通过随机突变和筛选改造蛋白质性质，不需要预先了解蛋白质结构",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "定点突变技术可精确改变蛋白质特定位点的氨基酸，用于研究结构-功能关系",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "2018年诺贝尔化学奖授予了酶的定向进化研究(Frances Arnold)",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "DNA shuffling(基因洗牌)将同源基因随机片段重组，创造嵌合基因文库供筛选",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:定点突变。B:定向进化策略。C:DNA shuffling。D:2018年诺贝尔化学奖。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "蛋白质工程",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1859867314",
+  "tags": []
+ },
+ "BQ-dna_structure-e673cc884641": {
+  "type": "mtf",
+  "question": "关于蛋白质工程与定向进化，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "定向进化通过随机突变和筛选改造蛋白质性质，不需要预先了解蛋白质结构",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "定点突变技术可精确改变蛋白质特定位点的氨基酸，用于研究结构-功能关系",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "DNA shuffling(基因洗牌)将同源基因随机片段重组，创造嵌合基因文库供筛选",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "2018年诺贝尔化学奖授予了酶的定向进化研究(Frances Arnold)",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:定点突变。B:定向进化策略。C:DNA shuffling。D:2018年诺贝尔化学奖。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "蛋白质工程",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1859867314",
+  "tags": []
+ },
+ "BQ-dna_structure-9692a66594ef": {
+  "type": "mtf",
+  "question": "关于蛋白质工程与定向进化，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "定点突变技术可精确改变蛋白质特定位点的氨基酸，用于研究结构-功能关系",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "2018年诺贝尔化学奖授予了酶的定向进化研究(Frances Arnold)",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "DNA shuffling(基因洗牌)将同源基因随机片段重组，创造嵌合基因文库供筛选",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "定向进化通过随机突变和筛选改造蛋白质性质，不需要预先了解蛋白质结构",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:定点突变。B:定向进化策略。C:DNA shuffling。D:2018年诺贝尔化学奖。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "蛋白质工程",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1859867314",
+  "tags": []
+ },
+ "BQ-dna_structure-1c7274f5fcb5": {
+  "type": "mtf",
+  "question": "关于蛋白质工程与定向进化，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "定点突变技术可精确改变蛋白质特定位点的氨基酸，用于研究结构-功能关系",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "2018年诺贝尔化学奖授予了酶的定向进化研究(Frances Arnold)",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "定向进化通过随机突变和筛选改造蛋白质性质，不需要预先了解蛋白质结构",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "DNA shuffling(基因洗牌)将同源基因随机片段重组，创造嵌合基因文库供筛选",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:定点突变。B:定向进化策略。C:DNA shuffling。D:2018年诺贝尔化学奖。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "蛋白质工程",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1859867314",
+  "tags": []
+ },
+ "BQ-dna_structure-618c18b8fe54": {
+  "type": "mtf",
+  "question": "关于蛋白质工程与定向进化，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "定点突变技术可精确改变蛋白质特定位点的氨基酸，用于研究结构-功能关系",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "DNA shuffling(基因洗牌)将同源基因随机片段重组，创造嵌合基因文库供筛选",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "2018年诺贝尔化学奖授予了酶的定向进化研究(Frances Arnold)",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "定向进化通过随机突变和筛选改造蛋白质性质，不需要预先了解蛋白质结构",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:定点突变。B:定向进化策略。C:DNA shuffling。D:2018年诺贝尔化学奖。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "蛋白质工程",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1859867314",
+  "tags": []
+ },
+ "BQ-dna_structure-0f165ff887b0": {
+  "type": "mtf",
+  "question": "关于蛋白质工程与定向进化，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "定点突变技术可精确改变蛋白质特定位点的氨基酸，用于研究结构-功能关系",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "DNA shuffling(基因洗牌)将同源基因随机片段重组，创造嵌合基因文库供筛选",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "定向进化通过随机突变和筛选改造蛋白质性质，不需要预先了解蛋白质结构",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "2018年诺贝尔化学奖授予了酶的定向进化研究(Frances Arnold)",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:定点突变。B:定向进化策略。C:DNA shuffling。D:2018年诺贝尔化学奖。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "蛋白质工程",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1859867314",
+  "tags": []
+ },
+ "BQ-dna_structure-966b2599f20f": {
+  "type": "mtf",
+  "question": "关于蛋白质工程与定向进化，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "定点突变技术可精确改变蛋白质特定位点的氨基酸，用于研究结构-功能关系",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "定向进化通过随机突变和筛选改造蛋白质性质，不需要预先了解蛋白质结构",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "2018年诺贝尔化学奖授予了酶的定向进化研究(Frances Arnold)",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "DNA shuffling(基因洗牌)将同源基因随机片段重组，创造嵌合基因文库供筛选",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:定点突变。B:定向进化策略。C:DNA shuffling。D:2018年诺贝尔化学奖。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "蛋白质工程",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1859867314",
+  "tags": []
+ },
+ "BQ-dna_structure-95a36fb918d3": {
+  "type": "mtf",
+  "question": "关于蛋白质工程与定向进化，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "定点突变技术可精确改变蛋白质特定位点的氨基酸，用于研究结构-功能关系",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "定向进化通过随机突变和筛选改造蛋白质性质，不需要预先了解蛋白质结构",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "DNA shuffling(基因洗牌)将同源基因随机片段重组，创造嵌合基因文库供筛选",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "2018年诺贝尔化学奖授予了酶的定向进化研究(Frances Arnold)",
+    "answer": true
+   }
+  ],
+  "explanation": "全部正确。A:定点突变。B:定向进化策略。C:DNA shuffling。D:2018年诺贝尔化学奖。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "蛋白质工程",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1859867314",
+  "tags": []
+ },
+ "BQ-dna_structure-20d46f6d7c3d": {
+  "type": "mtf",
+  "question": "关于蛋白质的泛素化降解，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "26S蛋白酶体识别被泛素链标记的蛋白质，将其去折叠并降解为单个氨基酸",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "E2泛素结合酶从E1接受泛素并传递给E3泛素连接酶",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "E3泛素连接酶通过识别靶蛋白的特定降解信号（degron）来介导泛素转移到底物上",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "泛素激活酶E1利用ATP将泛素的C端与自身的半胱氨酸残基形成硫酯键",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：E1的激活机制。B正确：E2的作用。C正确：E3的底物识别功能。A错误：蛋白酶体将蛋白质降解为短肽（约7-8个氨基酸），而非单个氨基酸。这些短肽需进一步被胞质中的肽酶降解为单个氨基酸。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "泛素化降解",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1938832184",
+  "tags": []
+ },
+ "BQ-dna_structure-09b87a6fd553": {
+  "type": "mtf",
+  "question": "关于蛋白质的泛素化降解，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "26S蛋白酶体识别被泛素链标记的蛋白质，将其去折叠并降解为单个氨基酸",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "E2泛素结合酶从E1接受泛素并传递给E3泛素连接酶",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "泛素激活酶E1利用ATP将泛素的C端与自身的半胱氨酸残基形成硫酯键",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "E3泛素连接酶通过识别靶蛋白的特定降解信号（degron）来介导泛素转移到底物上",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：E1的激活机制。B正确：E2的作用。D正确：E3的底物识别功能。A错误：蛋白酶体将蛋白质降解为短肽（约7-8个氨基酸），而非单个氨基酸。这些短肽需进一步被胞质中的肽酶降解为单个氨基酸。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "泛素化降解",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1938832184",
+  "tags": []
+ },
+ "BQ-dna_structure-9e4d7f17c5ed": {
+  "type": "mtf",
+  "question": "关于蛋白质的泛素化降解，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "26S蛋白酶体识别被泛素链标记的蛋白质，将其去折叠并降解为单个氨基酸",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "E3泛素连接酶通过识别靶蛋白的特定降解信号（degron）来介导泛素转移到底物上",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "E2泛素结合酶从E1接受泛素并传递给E3泛素连接酶",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "泛素激活酶E1利用ATP将泛素的C端与自身的半胱氨酸残基形成硫酯键",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：E1的激活机制。C正确：E2的作用。B正确：E3的底物识别功能。A错误：蛋白酶体将蛋白质降解为短肽（约7-8个氨基酸），而非单个氨基酸。这些短肽需进一步被胞质中的肽酶降解为单个氨基酸。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "泛素化降解",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1938832184",
+  "tags": []
+ },
+ "BQ-dna_structure-4517662bbb09": {
+  "type": "mtf",
+  "question": "关于蛋白质的泛素化降解，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "26S蛋白酶体识别被泛素链标记的蛋白质，将其去折叠并降解为单个氨基酸",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "E3泛素连接酶通过识别靶蛋白的特定降解信号（degron）来介导泛素转移到底物上",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "泛素激活酶E1利用ATP将泛素的C端与自身的半胱氨酸残基形成硫酯键",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "E2泛素结合酶从E1接受泛素并传递给E3泛素连接酶",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：E1的激活机制。D正确：E2的作用。B正确：E3的底物识别功能。A错误：蛋白酶体将蛋白质降解为短肽（约7-8个氨基酸），而非单个氨基酸。这些短肽需进一步被胞质中的肽酶降解为单个氨基酸。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "泛素化降解",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1938832184",
+  "tags": []
+ },
+ "BQ-dna_structure-0940e43001ad": {
+  "type": "mtf",
+  "question": "关于蛋白质的泛素化降解，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "26S蛋白酶体识别被泛素链标记的蛋白质，将其去折叠并降解为单个氨基酸",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "泛素激活酶E1利用ATP将泛素的C端与自身的半胱氨酸残基形成硫酯键",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "E2泛素结合酶从E1接受泛素并传递给E3泛素连接酶",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "E3泛素连接酶通过识别靶蛋白的特定降解信号（degron）来介导泛素转移到底物上",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：E1的激活机制。C正确：E2的作用。D正确：E3的底物识别功能。A错误：蛋白酶体将蛋白质降解为短肽（约7-8个氨基酸），而非单个氨基酸。这些短肽需进一步被胞质中的肽酶降解为单个氨基酸。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "泛素化降解",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1938832184",
+  "tags": []
+ },
+ "BQ-dna_structure-38aadc8f7cd3": {
+  "type": "mtf",
+  "question": "关于蛋白质的泛素化降解，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "26S蛋白酶体识别被泛素链标记的蛋白质，将其去折叠并降解为单个氨基酸",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "泛素激活酶E1利用ATP将泛素的C端与自身的半胱氨酸残基形成硫酯键",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "E3泛素连接酶通过识别靶蛋白的特定降解信号（degron）来介导泛素转移到底物上",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "E2泛素结合酶从E1接受泛素并传递给E3泛素连接酶",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：E1的激活机制。D正确：E2的作用。C正确：E3的底物识别功能。A错误：蛋白酶体将蛋白质降解为短肽（约7-8个氨基酸），而非单个氨基酸。这些短肽需进一步被胞质中的肽酶降解为单个氨基酸。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "泛素化降解",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1938832184",
+  "tags": []
+ },
+ "BQ-dna_structure-6353288eb6d2": {
+  "type": "mtf",
+  "question": "关于蛋白质的泛素化降解，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "E2泛素结合酶从E1接受泛素并传递给E3泛素连接酶",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "26S蛋白酶体识别被泛素链标记的蛋白质，将其去折叠并降解为单个氨基酸",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "E3泛素连接酶通过识别靶蛋白的特定降解信号（degron）来介导泛素转移到底物上",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "泛素激活酶E1利用ATP将泛素的C端与自身的半胱氨酸残基形成硫酯键",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：E1的激活机制。A正确：E2的作用。C正确：E3的底物识别功能。B错误：蛋白酶体将蛋白质降解为短肽（约7-8个氨基酸），而非单个氨基酸。这些短肽需进一步被胞质中的肽酶降解为单个氨基酸。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "泛素化降解",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1938832184",
+  "tags": []
+ },
+ "BQ-dna_structure-48287fd4efc4": {
+  "type": "mtf",
+  "question": "关于蛋白质的泛素化降解，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "E2泛素结合酶从E1接受泛素并传递给E3泛素连接酶",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "26S蛋白酶体识别被泛素链标记的蛋白质，将其去折叠并降解为单个氨基酸",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "泛素激活酶E1利用ATP将泛素的C端与自身的半胱氨酸残基形成硫酯键",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "E3泛素连接酶通过识别靶蛋白的特定降解信号（degron）来介导泛素转移到底物上",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：E1的激活机制。A正确：E2的作用。D正确：E3的底物识别功能。B错误：蛋白酶体将蛋白质降解为短肽（约7-8个氨基酸），而非单个氨基酸。这些短肽需进一步被胞质中的肽酶降解为单个氨基酸。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "泛素化降解",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1938832184",
+  "tags": []
+ },
+ "BQ-dna_structure-762ec376be4d": {
+  "type": "mtf",
+  "question": "关于蛋白质的泛素化降解，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "E2泛素结合酶从E1接受泛素并传递给E3泛素连接酶",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "E3泛素连接酶通过识别靶蛋白的特定降解信号（degron）来介导泛素转移到底物上",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "26S蛋白酶体识别被泛素链标记的蛋白质，将其去折叠并降解为单个氨基酸",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "泛素激活酶E1利用ATP将泛素的C端与自身的半胱氨酸残基形成硫酯键",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：E1的激活机制。A正确：E2的作用。B正确：E3的底物识别功能。C错误：蛋白酶体将蛋白质降解为短肽（约7-8个氨基酸），而非单个氨基酸。这些短肽需进一步被胞质中的肽酶降解为单个氨基酸。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "泛素化降解",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1938832184",
+  "tags": []
+ },
+ "BQ-dna_structure-53b01bdd76b0": {
+  "type": "mtf",
+  "question": "关于蛋白质的泛素化降解，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "E2泛素结合酶从E1接受泛素并传递给E3泛素连接酶",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "E3泛素连接酶通过识别靶蛋白的特定降解信号（degron）来介导泛素转移到底物上",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "泛素激活酶E1利用ATP将泛素的C端与自身的半胱氨酸残基形成硫酯键",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "26S蛋白酶体识别被泛素链标记的蛋白质，将其去折叠并降解为单个氨基酸",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确：E1的激活机制。A正确：E2的作用。B正确：E3的底物识别功能。D错误：蛋白酶体将蛋白质降解为短肽（约7-8个氨基酸），而非单个氨基酸。这些短肽需进一步被胞质中的肽酶降解为单个氨基酸。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "泛素化降解",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1938832184",
+  "tags": []
+ },
+ "BQ-dna_structure-2fdb0429d3df": {
+  "type": "mtf",
+  "question": "关于蛋白质的泛素化降解，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "E2泛素结合酶从E1接受泛素并传递给E3泛素连接酶",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "泛素激活酶E1利用ATP将泛素的C端与自身的半胱氨酸残基形成硫酯键",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "26S蛋白酶体识别被泛素链标记的蛋白质，将其去折叠并降解为单个氨基酸",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "E3泛素连接酶通过识别靶蛋白的特定降解信号（degron）来介导泛素转移到底物上",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：E1的激活机制。A正确：E2的作用。D正确：E3的底物识别功能。C错误：蛋白酶体将蛋白质降解为短肽（约7-8个氨基酸），而非单个氨基酸。这些短肽需进一步被胞质中的肽酶降解为单个氨基酸。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "泛素化降解",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1938832184",
+  "tags": []
+ },
+ "BQ-dna_structure-84edfdb669db": {
+  "type": "mtf",
+  "question": "关于蛋白质的泛素化降解，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "E2泛素结合酶从E1接受泛素并传递给E3泛素连接酶",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "泛素激活酶E1利用ATP将泛素的C端与自身的半胱氨酸残基形成硫酯键",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "E3泛素连接酶通过识别靶蛋白的特定降解信号（degron）来介导泛素转移到底物上",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "26S蛋白酶体识别被泛素链标记的蛋白质，将其去折叠并降解为单个氨基酸",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确：E1的激活机制。A正确：E2的作用。C正确：E3的底物识别功能。D错误：蛋白酶体将蛋白质降解为短肽（约7-8个氨基酸），而非单个氨基酸。这些短肽需进一步被胞质中的肽酶降解为单个氨基酸。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "泛素化降解",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1938832184",
+  "tags": []
+ },
+ "BQ-dna_structure-29fd769c6df8": {
+  "type": "mtf",
+  "question": "关于蛋白质的泛素化降解，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "E3泛素连接酶通过识别靶蛋白的特定降解信号（degron）来介导泛素转移到底物上",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "26S蛋白酶体识别被泛素链标记的蛋白质，将其去折叠并降解为单个氨基酸",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "E2泛素结合酶从E1接受泛素并传递给E3泛素连接酶",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "泛素激活酶E1利用ATP将泛素的C端与自身的半胱氨酸残基形成硫酯键",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：E1的激活机制。C正确：E2的作用。A正确：E3的底物识别功能。B错误：蛋白酶体将蛋白质降解为短肽（约7-8个氨基酸），而非单个氨基酸。这些短肽需进一步被胞质中的肽酶降解为单个氨基酸。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "泛素化降解",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1938832184",
+  "tags": []
+ },
+ "BQ-dna_structure-bcd383c0f43d": {
+  "type": "mtf",
+  "question": "关于蛋白质的泛素化降解，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "E3泛素连接酶通过识别靶蛋白的特定降解信号（degron）来介导泛素转移到底物上",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "26S蛋白酶体识别被泛素链标记的蛋白质，将其去折叠并降解为单个氨基酸",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "泛素激活酶E1利用ATP将泛素的C端与自身的半胱氨酸残基形成硫酯键",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "E2泛素结合酶从E1接受泛素并传递给E3泛素连接酶",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：E1的激活机制。D正确：E2的作用。A正确：E3的底物识别功能。B错误：蛋白酶体将蛋白质降解为短肽（约7-8个氨基酸），而非单个氨基酸。这些短肽需进一步被胞质中的肽酶降解为单个氨基酸。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "泛素化降解",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1938832184",
+  "tags": []
+ },
+ "BQ-dna_structure-075d4653ce0f": {
+  "type": "mtf",
+  "question": "关于蛋白质的泛素化降解，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "E3泛素连接酶通过识别靶蛋白的特定降解信号（degron）来介导泛素转移到底物上",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "E2泛素结合酶从E1接受泛素并传递给E3泛素连接酶",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "26S蛋白酶体识别被泛素链标记的蛋白质，将其去折叠并降解为单个氨基酸",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "泛素激活酶E1利用ATP将泛素的C端与自身的半胱氨酸残基形成硫酯键",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：E1的激活机制。B正确：E2的作用。A正确：E3的底物识别功能。C错误：蛋白酶体将蛋白质降解为短肽（约7-8个氨基酸），而非单个氨基酸。这些短肽需进一步被胞质中的肽酶降解为单个氨基酸。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "泛素化降解",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1938832184",
+  "tags": []
+ },
+ "BQ-dna_structure-5753994a0b01": {
+  "type": "mtf",
+  "question": "关于蛋白质的泛素化降解，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "E3泛素连接酶通过识别靶蛋白的特定降解信号（degron）来介导泛素转移到底物上",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "E2泛素结合酶从E1接受泛素并传递给E3泛素连接酶",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "泛素激活酶E1利用ATP将泛素的C端与自身的半胱氨酸残基形成硫酯键",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "26S蛋白酶体识别被泛素链标记的蛋白质，将其去折叠并降解为单个氨基酸",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确：E1的激活机制。B正确：E2的作用。A正确：E3的底物识别功能。D错误：蛋白酶体将蛋白质降解为短肽（约7-8个氨基酸），而非单个氨基酸。这些短肽需进一步被胞质中的肽酶降解为单个氨基酸。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "泛素化降解",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1938832184",
+  "tags": []
+ },
+ "BQ-dna_structure-c68054461f4b": {
+  "type": "mtf",
+  "question": "关于蛋白质的泛素化降解，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "E3泛素连接酶通过识别靶蛋白的特定降解信号（degron）来介导泛素转移到底物上",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "泛素激活酶E1利用ATP将泛素的C端与自身的半胱氨酸残基形成硫酯键",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "26S蛋白酶体识别被泛素链标记的蛋白质，将其去折叠并降解为单个氨基酸",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "E2泛素结合酶从E1接受泛素并传递给E3泛素连接酶",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：E1的激活机制。D正确：E2的作用。A正确：E3的底物识别功能。C错误：蛋白酶体将蛋白质降解为短肽（约7-8个氨基酸），而非单个氨基酸。这些短肽需进一步被胞质中的肽酶降解为单个氨基酸。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "泛素化降解",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1938832184",
+  "tags": []
+ },
+ "BQ-dna_structure-03cfbda77877": {
+  "type": "mtf",
+  "question": "关于蛋白质的泛素化降解，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "E3泛素连接酶通过识别靶蛋白的特定降解信号（degron）来介导泛素转移到底物上",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "泛素激活酶E1利用ATP将泛素的C端与自身的半胱氨酸残基形成硫酯键",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "E2泛素结合酶从E1接受泛素并传递给E3泛素连接酶",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "26S蛋白酶体识别被泛素链标记的蛋白质，将其去折叠并降解为单个氨基酸",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确：E1的激活机制。C正确：E2的作用。A正确：E3的底物识别功能。D错误：蛋白酶体将蛋白质降解为短肽（约7-8个氨基酸），而非单个氨基酸。这些短肽需进一步被胞质中的肽酶降解为单个氨基酸。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "泛素化降解",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1938832184",
+  "tags": []
+ },
+ "BQ-dna_structure-ac9ca1eaf461": {
+  "type": "mtf",
+  "question": "关于蛋白质的泛素化降解，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "泛素激活酶E1利用ATP将泛素的C端与自身的半胱氨酸残基形成硫酯键",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "26S蛋白酶体识别被泛素链标记的蛋白质，将其去折叠并降解为单个氨基酸",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "E2泛素结合酶从E1接受泛素并传递给E3泛素连接酶",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "E3泛素连接酶通过识别靶蛋白的特定降解信号（degron）来介导泛素转移到底物上",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：E1的激活机制。C正确：E2的作用。D正确：E3的底物识别功能。B错误：蛋白酶体将蛋白质降解为短肽（约7-8个氨基酸），而非单个氨基酸。这些短肽需进一步被胞质中的肽酶降解为单个氨基酸。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "泛素化降解",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1938832184",
+  "tags": []
+ },
+ "BQ-dna_structure-412291fdca79": {
+  "type": "mtf",
+  "question": "关于蛋白质的泛素化降解，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "泛素激活酶E1利用ATP将泛素的C端与自身的半胱氨酸残基形成硫酯键",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "26S蛋白酶体识别被泛素链标记的蛋白质，将其去折叠并降解为单个氨基酸",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "E3泛素连接酶通过识别靶蛋白的特定降解信号（degron）来介导泛素转移到底物上",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "E2泛素结合酶从E1接受泛素并传递给E3泛素连接酶",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：E1的激活机制。D正确：E2的作用。C正确：E3的底物识别功能。B错误：蛋白酶体将蛋白质降解为短肽（约7-8个氨基酸），而非单个氨基酸。这些短肽需进一步被胞质中的肽酶降解为单个氨基酸。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "泛素化降解",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1938832184",
+  "tags": []
+ },
+ "BQ-dna_structure-65126bd4efe4": {
+  "type": "mtf",
+  "question": "关于蛋白质的泛素化降解，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "泛素激活酶E1利用ATP将泛素的C端与自身的半胱氨酸残基形成硫酯键",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "E2泛素结合酶从E1接受泛素并传递给E3泛素连接酶",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "26S蛋白酶体识别被泛素链标记的蛋白质，将其去折叠并降解为单个氨基酸",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "E3泛素连接酶通过识别靶蛋白的特定降解信号（degron）来介导泛素转移到底物上",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：E1的激活机制。B正确：E2的作用。D正确：E3的底物识别功能。C错误：蛋白酶体将蛋白质降解为短肽（约7-8个氨基酸），而非单个氨基酸。这些短肽需进一步被胞质中的肽酶降解为单个氨基酸。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "泛素化降解",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1938832184",
+  "tags": []
+ },
+ "BQ-dna_structure-3bb1372f8985": {
+  "type": "mtf",
+  "question": "关于蛋白质的泛素化降解，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "泛素激活酶E1利用ATP将泛素的C端与自身的半胱氨酸残基形成硫酯键",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "E2泛素结合酶从E1接受泛素并传递给E3泛素连接酶",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "E3泛素连接酶通过识别靶蛋白的特定降解信号（degron）来介导泛素转移到底物上",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "26S蛋白酶体识别被泛素链标记的蛋白质，将其去折叠并降解为单个氨基酸",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确：E1的激活机制。B正确：E2的作用。C正确：E3的底物识别功能。D错误：蛋白酶体将蛋白质降解为短肽（约7-8个氨基酸），而非单个氨基酸。这些短肽需进一步被胞质中的肽酶降解为单个氨基酸。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "泛素化降解",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1938832184",
+  "tags": []
+ },
+ "BQ-dna_structure-59f8854d3ba1": {
+  "type": "mtf",
+  "question": "关于蛋白质的泛素化降解，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "泛素激活酶E1利用ATP将泛素的C端与自身的半胱氨酸残基形成硫酯键",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "E3泛素连接酶通过识别靶蛋白的特定降解信号（degron）来介导泛素转移到底物上",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "26S蛋白酶体识别被泛素链标记的蛋白质，将其去折叠并降解为单个氨基酸",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "E2泛素结合酶从E1接受泛素并传递给E3泛素连接酶",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：E1的激活机制。D正确：E2的作用。B正确：E3的底物识别功能。C错误：蛋白酶体将蛋白质降解为短肽（约7-8个氨基酸），而非单个氨基酸。这些短肽需进一步被胞质中的肽酶降解为单个氨基酸。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "泛素化降解",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1938832184",
+  "tags": []
+ },
+ "BQ-dna_structure-24346945858d": {
+  "type": "mtf",
+  "question": "关于蛋白质的泛素化降解，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "泛素激活酶E1利用ATP将泛素的C端与自身的半胱氨酸残基形成硫酯键",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "E3泛素连接酶通过识别靶蛋白的特定降解信号（degron）来介导泛素转移到底物上",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "E2泛素结合酶从E1接受泛素并传递给E3泛素连接酶",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "26S蛋白酶体识别被泛素链标记的蛋白质，将其去折叠并降解为单个氨基酸",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确：E1的激活机制。C正确：E2的作用。B正确：E3的底物识别功能。D错误：蛋白酶体将蛋白质降解为短肽（约7-8个氨基酸），而非单个氨基酸。这些短肽需进一步被胞质中的肽酶降解为单个氨基酸。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "泛素化降解",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1938832184",
+  "tags": []
+ },
+ "BQ-dna_structure-19c909855ce8": {
+  "type": "mtf",
+  "question": "关于非编码RNA，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "piRNA主要在生殖细胞中表达，通过与PIWI蛋白结合抑制转座子活性，保护基因组完整性",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "siRNA由双链RNA前体经Dicer酶加工生成，引导RISC复合物切割与siRNA完全互补的靶mRNA",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "所有非编码RNA的功能都是通过碱基配对直接靶向mRNA来调控基因表达",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "长链非编码RNA（lncRNA）长度大于200nt，可通过多种机制调控基因表达，包括染色质修饰和转录调控",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：lncRNA的特征和功能。B正确：siRNA通路机制。A正确：piRNA的功能和表达特征。C错误：非编码RNA功能多样——rRNA和tRNA参与翻译；snRNA参与剪接；snoRNA参与rRNA修饰；端粒酶RNA作为端粒合成模板。并非所有ncRNA都通过靶向mRNA发挥作用。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "非编码RNA",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "646029202",
+  "tags": []
+ },
+ "BQ-dna_structure-698b763702d3": {
+  "type": "mtf",
+  "question": "关于非编码RNA，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "piRNA主要在生殖细胞中表达，通过与PIWI蛋白结合抑制转座子活性，保护基因组完整性",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "siRNA由双链RNA前体经Dicer酶加工生成，引导RISC复合物切割与siRNA完全互补的靶mRNA",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "长链非编码RNA（lncRNA）长度大于200nt，可通过多种机制调控基因表达，包括染色质修饰和转录调控",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "所有非编码RNA的功能都是通过碱基配对直接靶向mRNA来调控基因表达",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确：lncRNA的特征和功能。B正确：siRNA通路机制。A正确：piRNA的功能和表达特征。D错误：非编码RNA功能多样——rRNA和tRNA参与翻译；snRNA参与剪接；snoRNA参与rRNA修饰；端粒酶RNA作为端粒合成模板。并非所有ncRNA都通过靶向mRNA发挥作用。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "非编码RNA",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "646029202",
+  "tags": []
+ },
+ "BQ-dna_structure-d6b4f567a122": {
+  "type": "mtf",
+  "question": "关于非编码RNA，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "piRNA主要在生殖细胞中表达，通过与PIWI蛋白结合抑制转座子活性，保护基因组完整性",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "所有非编码RNA的功能都是通过碱基配对直接靶向mRNA来调控基因表达",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "siRNA由双链RNA前体经Dicer酶加工生成，引导RISC复合物切割与siRNA完全互补的靶mRNA",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "长链非编码RNA（lncRNA）长度大于200nt，可通过多种机制调控基因表达，包括染色质修饰和转录调控",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：lncRNA的特征和功能。C正确：siRNA通路机制。A正确：piRNA的功能和表达特征。B错误：非编码RNA功能多样——rRNA和tRNA参与翻译；snRNA参与剪接；snoRNA参与rRNA修饰；端粒酶RNA作为端粒合成模板。并非所有ncRNA都通过靶向mRNA发挥作用。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "非编码RNA",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "646029202",
+  "tags": []
+ },
+ "BQ-dna_structure-23c355b80af9": {
+  "type": "mtf",
+  "question": "关于非编码RNA，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "piRNA主要在生殖细胞中表达，通过与PIWI蛋白结合抑制转座子活性，保护基因组完整性",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "所有非编码RNA的功能都是通过碱基配对直接靶向mRNA来调控基因表达",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "长链非编码RNA（lncRNA）长度大于200nt，可通过多种机制调控基因表达，包括染色质修饰和转录调控",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "siRNA由双链RNA前体经Dicer酶加工生成，引导RISC复合物切割与siRNA完全互补的靶mRNA",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：lncRNA的特征和功能。D正确：siRNA通路机制。A正确：piRNA的功能和表达特征。B错误：非编码RNA功能多样——rRNA和tRNA参与翻译；snRNA参与剪接；snoRNA参与rRNA修饰；端粒酶RNA作为端粒合成模板。并非所有ncRNA都通过靶向mRNA发挥作用。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "非编码RNA",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "646029202",
+  "tags": []
+ },
+ "BQ-dna_structure-f6ba06c4f6a2": {
+  "type": "mtf",
+  "question": "关于非编码RNA，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "piRNA主要在生殖细胞中表达，通过与PIWI蛋白结合抑制转座子活性，保护基因组完整性",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "长链非编码RNA（lncRNA）长度大于200nt，可通过多种机制调控基因表达，包括染色质修饰和转录调控",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "siRNA由双链RNA前体经Dicer酶加工生成，引导RISC复合物切割与siRNA完全互补的靶mRNA",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "所有非编码RNA的功能都是通过碱基配对直接靶向mRNA来调控基因表达",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确：lncRNA的特征和功能。C正确：siRNA通路机制。A正确：piRNA的功能和表达特征。D错误：非编码RNA功能多样——rRNA和tRNA参与翻译；snRNA参与剪接；snoRNA参与rRNA修饰；端粒酶RNA作为端粒合成模板。并非所有ncRNA都通过靶向mRNA发挥作用。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "非编码RNA",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "646029202",
+  "tags": []
+ },
+ "BQ-dna_structure-b662b8111b0d": {
+  "type": "mtf",
+  "question": "关于非编码RNA，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "piRNA主要在生殖细胞中表达，通过与PIWI蛋白结合抑制转座子活性，保护基因组完整性",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "长链非编码RNA（lncRNA）长度大于200nt，可通过多种机制调控基因表达，包括染色质修饰和转录调控",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "所有非编码RNA的功能都是通过碱基配对直接靶向mRNA来调控基因表达",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "siRNA由双链RNA前体经Dicer酶加工生成，引导RISC复合物切割与siRNA完全互补的靶mRNA",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：lncRNA的特征和功能。D正确：siRNA通路机制。A正确：piRNA的功能和表达特征。C错误：非编码RNA功能多样——rRNA和tRNA参与翻译；snRNA参与剪接；snoRNA参与rRNA修饰；端粒酶RNA作为端粒合成模板。并非所有ncRNA都通过靶向mRNA发挥作用。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "非编码RNA",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "646029202",
+  "tags": []
+ },
+ "BQ-dna_structure-1ed32c204aa6": {
+  "type": "mtf",
+  "question": "关于非编码RNA，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "siRNA由双链RNA前体经Dicer酶加工生成，引导RISC复合物切割与siRNA完全互补的靶mRNA",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "piRNA主要在生殖细胞中表达，通过与PIWI蛋白结合抑制转座子活性，保护基因组完整性",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "所有非编码RNA的功能都是通过碱基配对直接靶向mRNA来调控基因表达",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "长链非编码RNA（lncRNA）长度大于200nt，可通过多种机制调控基因表达，包括染色质修饰和转录调控",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：lncRNA的特征和功能。A正确：siRNA通路机制。B正确：piRNA的功能和表达特征。C错误：非编码RNA功能多样——rRNA和tRNA参与翻译；snRNA参与剪接；snoRNA参与rRNA修饰；端粒酶RNA作为端粒合成模板。并非所有ncRNA都通过靶向mRNA发挥作用。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "非编码RNA",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "646029202",
+  "tags": []
+ },
+ "BQ-dna_structure-310b06c8dd7f": {
+  "type": "mtf",
+  "question": "关于非编码RNA，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "siRNA由双链RNA前体经Dicer酶加工生成，引导RISC复合物切割与siRNA完全互补的靶mRNA",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "piRNA主要在生殖细胞中表达，通过与PIWI蛋白结合抑制转座子活性，保护基因组完整性",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "长链非编码RNA（lncRNA）长度大于200nt，可通过多种机制调控基因表达，包括染色质修饰和转录调控",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "所有非编码RNA的功能都是通过碱基配对直接靶向mRNA来调控基因表达",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确：lncRNA的特征和功能。A正确：siRNA通路机制。B正确：piRNA的功能和表达特征。D错误：非编码RNA功能多样——rRNA和tRNA参与翻译；snRNA参与剪接；snoRNA参与rRNA修饰；端粒酶RNA作为端粒合成模板。并非所有ncRNA都通过靶向mRNA发挥作用。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "非编码RNA",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "646029202",
+  "tags": []
+ },
+ "BQ-dna_structure-f6354b80d95b": {
+  "type": "mtf",
+  "question": "关于非编码RNA，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "siRNA由双链RNA前体经Dicer酶加工生成，引导RISC复合物切割与siRNA完全互补的靶mRNA",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "所有非编码RNA的功能都是通过碱基配对直接靶向mRNA来调控基因表达",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "piRNA主要在生殖细胞中表达，通过与PIWI蛋白结合抑制转座子活性，保护基因组完整性",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "长链非编码RNA（lncRNA）长度大于200nt，可通过多种机制调控基因表达，包括染色质修饰和转录调控",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：lncRNA的特征和功能。A正确：siRNA通路机制。C正确：piRNA的功能和表达特征。B错误：非编码RNA功能多样——rRNA和tRNA参与翻译；snRNA参与剪接；snoRNA参与rRNA修饰；端粒酶RNA作为端粒合成模板。并非所有ncRNA都通过靶向mRNA发挥作用。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "非编码RNA",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "646029202",
+  "tags": []
+ },
+ "BQ-dna_structure-02e9833cf7fb": {
+  "type": "mtf",
+  "question": "关于非编码RNA，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "siRNA由双链RNA前体经Dicer酶加工生成，引导RISC复合物切割与siRNA完全互补的靶mRNA",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "所有非编码RNA的功能都是通过碱基配对直接靶向mRNA来调控基因表达",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "长链非编码RNA（lncRNA）长度大于200nt，可通过多种机制调控基因表达，包括染色质修饰和转录调控",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "piRNA主要在生殖细胞中表达，通过与PIWI蛋白结合抑制转座子活性，保护基因组完整性",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：lncRNA的特征和功能。A正确：siRNA通路机制。D正确：piRNA的功能和表达特征。B错误：非编码RNA功能多样——rRNA和tRNA参与翻译；snRNA参与剪接；snoRNA参与rRNA修饰；端粒酶RNA作为端粒合成模板。并非所有ncRNA都通过靶向mRNA发挥作用。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "非编码RNA",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "646029202",
+  "tags": []
+ },
+ "BQ-dna_structure-0eb79012da55": {
+  "type": "mtf",
+  "question": "关于非编码RNA，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "siRNA由双链RNA前体经Dicer酶加工生成，引导RISC复合物切割与siRNA完全互补的靶mRNA",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "长链非编码RNA（lncRNA）长度大于200nt，可通过多种机制调控基因表达，包括染色质修饰和转录调控",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "piRNA主要在生殖细胞中表达，通过与PIWI蛋白结合抑制转座子活性，保护基因组完整性",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "所有非编码RNA的功能都是通过碱基配对直接靶向mRNA来调控基因表达",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确：lncRNA的特征和功能。A正确：siRNA通路机制。C正确：piRNA的功能和表达特征。D错误：非编码RNA功能多样——rRNA和tRNA参与翻译；snRNA参与剪接；snoRNA参与rRNA修饰；端粒酶RNA作为端粒合成模板。并非所有ncRNA都通过靶向mRNA发挥作用。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "非编码RNA",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "646029202",
+  "tags": []
+ },
+ "BQ-dna_structure-cb4ffacb6d7b": {
+  "type": "mtf",
+  "question": "关于非编码RNA，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "siRNA由双链RNA前体经Dicer酶加工生成，引导RISC复合物切割与siRNA完全互补的靶mRNA",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "长链非编码RNA（lncRNA）长度大于200nt，可通过多种机制调控基因表达，包括染色质修饰和转录调控",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "所有非编码RNA的功能都是通过碱基配对直接靶向mRNA来调控基因表达",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "piRNA主要在生殖细胞中表达，通过与PIWI蛋白结合抑制转座子活性，保护基因组完整性",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：lncRNA的特征和功能。A正确：siRNA通路机制。D正确：piRNA的功能和表达特征。C错误：非编码RNA功能多样——rRNA和tRNA参与翻译；snRNA参与剪接；snoRNA参与rRNA修饰；端粒酶RNA作为端粒合成模板。并非所有ncRNA都通过靶向mRNA发挥作用。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "非编码RNA",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "646029202",
+  "tags": []
+ },
+ "BQ-dna_structure-da4afac2f1ae": {
+  "type": "mtf",
+  "question": "关于非编码RNA，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "所有非编码RNA的功能都是通过碱基配对直接靶向mRNA来调控基因表达",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "piRNA主要在生殖细胞中表达，通过与PIWI蛋白结合抑制转座子活性，保护基因组完整性",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "siRNA由双链RNA前体经Dicer酶加工生成，引导RISC复合物切割与siRNA完全互补的靶mRNA",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "长链非编码RNA（lncRNA）长度大于200nt，可通过多种机制调控基因表达，包括染色质修饰和转录调控",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：lncRNA的特征和功能。C正确：siRNA通路机制。B正确：piRNA的功能和表达特征。A错误：非编码RNA功能多样——rRNA和tRNA参与翻译；snRNA参与剪接；snoRNA参与rRNA修饰；端粒酶RNA作为端粒合成模板。并非所有ncRNA都通过靶向mRNA发挥作用。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "非编码RNA",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "646029202",
+  "tags": []
+ },
+ "BQ-dna_structure-f291cb81389f": {
+  "type": "mtf",
+  "question": "关于非编码RNA，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "所有非编码RNA的功能都是通过碱基配对直接靶向mRNA来调控基因表达",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "piRNA主要在生殖细胞中表达，通过与PIWI蛋白结合抑制转座子活性，保护基因组完整性",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "长链非编码RNA（lncRNA）长度大于200nt，可通过多种机制调控基因表达，包括染色质修饰和转录调控",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "siRNA由双链RNA前体经Dicer酶加工生成，引导RISC复合物切割与siRNA完全互补的靶mRNA",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：lncRNA的特征和功能。D正确：siRNA通路机制。B正确：piRNA的功能和表达特征。A错误：非编码RNA功能多样——rRNA和tRNA参与翻译；snRNA参与剪接；snoRNA参与rRNA修饰；端粒酶RNA作为端粒合成模板。并非所有ncRNA都通过靶向mRNA发挥作用。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "非编码RNA",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "646029202",
+  "tags": []
+ },
+ "BQ-dna_structure-f5a0b9c3698a": {
+  "type": "mtf",
+  "question": "关于非编码RNA，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "所有非编码RNA的功能都是通过碱基配对直接靶向mRNA来调控基因表达",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "siRNA由双链RNA前体经Dicer酶加工生成，引导RISC复合物切割与siRNA完全互补的靶mRNA",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "piRNA主要在生殖细胞中表达，通过与PIWI蛋白结合抑制转座子活性，保护基因组完整性",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "长链非编码RNA（lncRNA）长度大于200nt，可通过多种机制调控基因表达，包括染色质修饰和转录调控",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：lncRNA的特征和功能。B正确：siRNA通路机制。C正确：piRNA的功能和表达特征。A错误：非编码RNA功能多样——rRNA和tRNA参与翻译；snRNA参与剪接；snoRNA参与rRNA修饰；端粒酶RNA作为端粒合成模板。并非所有ncRNA都通过靶向mRNA发挥作用。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "非编码RNA",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "646029202",
+  "tags": []
+ },
+ "BQ-dna_structure-960cc48407ed": {
+  "type": "mtf",
+  "question": "关于非编码RNA，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "所有非编码RNA的功能都是通过碱基配对直接靶向mRNA来调控基因表达",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "siRNA由双链RNA前体经Dicer酶加工生成，引导RISC复合物切割与siRNA完全互补的靶mRNA",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "长链非编码RNA（lncRNA）长度大于200nt，可通过多种机制调控基因表达，包括染色质修饰和转录调控",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "piRNA主要在生殖细胞中表达，通过与PIWI蛋白结合抑制转座子活性，保护基因组完整性",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：lncRNA的特征和功能。B正确：siRNA通路机制。D正确：piRNA的功能和表达特征。A错误：非编码RNA功能多样——rRNA和tRNA参与翻译；snRNA参与剪接；snoRNA参与rRNA修饰；端粒酶RNA作为端粒合成模板。并非所有ncRNA都通过靶向mRNA发挥作用。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "非编码RNA",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "646029202",
+  "tags": []
+ },
+ "BQ-dna_structure-ed507d35b8c4": {
+  "type": "mtf",
+  "question": "关于非编码RNA，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "所有非编码RNA的功能都是通过碱基配对直接靶向mRNA来调控基因表达",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "长链非编码RNA（lncRNA）长度大于200nt，可通过多种机制调控基因表达，包括染色质修饰和转录调控",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "piRNA主要在生殖细胞中表达，通过与PIWI蛋白结合抑制转座子活性，保护基因组完整性",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "siRNA由双链RNA前体经Dicer酶加工生成，引导RISC复合物切割与siRNA完全互补的靶mRNA",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：lncRNA的特征和功能。D正确：siRNA通路机制。C正确：piRNA的功能和表达特征。A错误：非编码RNA功能多样——rRNA和tRNA参与翻译；snRNA参与剪接；snoRNA参与rRNA修饰；端粒酶RNA作为端粒合成模板。并非所有ncRNA都通过靶向mRNA发挥作用。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "非编码RNA",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "646029202",
+  "tags": []
+ },
+ "BQ-dna_structure-83f1b13497f6": {
+  "type": "mtf",
+  "question": "关于非编码RNA，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "所有非编码RNA的功能都是通过碱基配对直接靶向mRNA来调控基因表达",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "长链非编码RNA（lncRNA）长度大于200nt，可通过多种机制调控基因表达，包括染色质修饰和转录调控",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "siRNA由双链RNA前体经Dicer酶加工生成，引导RISC复合物切割与siRNA完全互补的靶mRNA",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "piRNA主要在生殖细胞中表达，通过与PIWI蛋白结合抑制转座子活性，保护基因组完整性",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：lncRNA的特征和功能。C正确：siRNA通路机制。D正确：piRNA的功能和表达特征。A错误：非编码RNA功能多样——rRNA和tRNA参与翻译；snRNA参与剪接；snoRNA参与rRNA修饰；端粒酶RNA作为端粒合成模板。并非所有ncRNA都通过靶向mRNA发挥作用。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "非编码RNA",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "646029202",
+  "tags": []
+ },
+ "BQ-dna_structure-848e87a905d2": {
+  "type": "mtf",
+  "question": "关于非编码RNA，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "长链非编码RNA（lncRNA）长度大于200nt，可通过多种机制调控基因表达，包括染色质修饰和转录调控",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "piRNA主要在生殖细胞中表达，通过与PIWI蛋白结合抑制转座子活性，保护基因组完整性",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "siRNA由双链RNA前体经Dicer酶加工生成，引导RISC复合物切割与siRNA完全互补的靶mRNA",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "所有非编码RNA的功能都是通过碱基配对直接靶向mRNA来调控基因表达",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确：lncRNA的特征和功能。C正确：siRNA通路机制。B正确：piRNA的功能和表达特征。D错误：非编码RNA功能多样——rRNA和tRNA参与翻译；snRNA参与剪接；snoRNA参与rRNA修饰；端粒酶RNA作为端粒合成模板。并非所有ncRNA都通过靶向mRNA发挥作用。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "非编码RNA",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "646029202",
+  "tags": []
+ },
+ "BQ-dna_structure-6d60d7cefb49": {
+  "type": "mtf",
+  "question": "关于非编码RNA，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "长链非编码RNA（lncRNA）长度大于200nt，可通过多种机制调控基因表达，包括染色质修饰和转录调控",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "piRNA主要在生殖细胞中表达，通过与PIWI蛋白结合抑制转座子活性，保护基因组完整性",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "所有非编码RNA的功能都是通过碱基配对直接靶向mRNA来调控基因表达",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "siRNA由双链RNA前体经Dicer酶加工生成，引导RISC复合物切割与siRNA完全互补的靶mRNA",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：lncRNA的特征和功能。D正确：siRNA通路机制。B正确：piRNA的功能和表达特征。C错误：非编码RNA功能多样——rRNA和tRNA参与翻译；snRNA参与剪接；snoRNA参与rRNA修饰；端粒酶RNA作为端粒合成模板。并非所有ncRNA都通过靶向mRNA发挥作用。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "非编码RNA",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "646029202",
+  "tags": []
+ },
+ "BQ-dna_structure-762db024efda": {
+  "type": "mtf",
+  "question": "关于非编码RNA，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "长链非编码RNA（lncRNA）长度大于200nt，可通过多种机制调控基因表达，包括染色质修饰和转录调控",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "siRNA由双链RNA前体经Dicer酶加工生成，引导RISC复合物切割与siRNA完全互补的靶mRNA",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "piRNA主要在生殖细胞中表达，通过与PIWI蛋白结合抑制转座子活性，保护基因组完整性",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "所有非编码RNA的功能都是通过碱基配对直接靶向mRNA来调控基因表达",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确：lncRNA的特征和功能。B正确：siRNA通路机制。C正确：piRNA的功能和表达特征。D错误：非编码RNA功能多样——rRNA和tRNA参与翻译；snRNA参与剪接；snoRNA参与rRNA修饰；端粒酶RNA作为端粒合成模板。并非所有ncRNA都通过靶向mRNA发挥作用。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "非编码RNA",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "646029202",
+  "tags": []
+ },
+ "BQ-dna_structure-db508abca744": {
+  "type": "mtf",
+  "question": "关于非编码RNA，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "长链非编码RNA（lncRNA）长度大于200nt，可通过多种机制调控基因表达，包括染色质修饰和转录调控",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "siRNA由双链RNA前体经Dicer酶加工生成，引导RISC复合物切割与siRNA完全互补的靶mRNA",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "所有非编码RNA的功能都是通过碱基配对直接靶向mRNA来调控基因表达",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "piRNA主要在生殖细胞中表达，通过与PIWI蛋白结合抑制转座子活性，保护基因组完整性",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：lncRNA的特征和功能。B正确：siRNA通路机制。D正确：piRNA的功能和表达特征。C错误：非编码RNA功能多样——rRNA和tRNA参与翻译；snRNA参与剪接；snoRNA参与rRNA修饰；端粒酶RNA作为端粒合成模板。并非所有ncRNA都通过靶向mRNA发挥作用。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "非编码RNA",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "646029202",
+  "tags": []
+ },
+ "BQ-dna_structure-5c53126eef54": {
+  "type": "mtf",
+  "question": "关于非编码RNA，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "长链非编码RNA（lncRNA）长度大于200nt，可通过多种机制调控基因表达，包括染色质修饰和转录调控",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "所有非编码RNA的功能都是通过碱基配对直接靶向mRNA来调控基因表达",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "piRNA主要在生殖细胞中表达，通过与PIWI蛋白结合抑制转座子活性，保护基因组完整性",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "siRNA由双链RNA前体经Dicer酶加工生成，引导RISC复合物切割与siRNA完全互补的靶mRNA",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：lncRNA的特征和功能。D正确：siRNA通路机制。C正确：piRNA的功能和表达特征。B错误：非编码RNA功能多样——rRNA和tRNA参与翻译；snRNA参与剪接；snoRNA参与rRNA修饰；端粒酶RNA作为端粒合成模板。并非所有ncRNA都通过靶向mRNA发挥作用。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "非编码RNA",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "646029202",
+  "tags": []
+ },
+ "BQ-dna_structure-a26a6680145e": {
+  "type": "mtf",
+  "question": "关于非编码RNA，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "长链非编码RNA（lncRNA）长度大于200nt，可通过多种机制调控基因表达，包括染色质修饰和转录调控",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "所有非编码RNA的功能都是通过碱基配对直接靶向mRNA来调控基因表达",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "siRNA由双链RNA前体经Dicer酶加工生成，引导RISC复合物切割与siRNA完全互补的靶mRNA",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "piRNA主要在生殖细胞中表达，通过与PIWI蛋白结合抑制转座子活性，保护基因组完整性",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：lncRNA的特征和功能。C正确：siRNA通路机制。D正确：piRNA的功能和表达特征。B错误：非编码RNA功能多样——rRNA和tRNA参与翻译；snRNA参与剪接；snoRNA参与rRNA修饰；端粒酶RNA作为端粒合成模板。并非所有ncRNA都通过靶向mRNA发挥作用。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "非编码RNA",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "646029202",
+  "tags": []
+ },
+ "BQ-dna_structure-6ab79e448bb6": {
+  "type": "mtf",
+  "question": "某研究将GFP基因与目的基因融合，在荧光显微镜下观察融合蛋白在细胞内的定位。获得以下结果：融合蛋白在细胞核中聚集。判断以下推断的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "GFP蛋白的分子量较大（约27kDa），可通过被动扩散自由穿越核孔复合体进入细胞核",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "核输入过程需要importin蛋白和Ran GTPase的参与",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "若删除预测的NLS序列后融合蛋白弥散于细胞质，说明NLS是核定位的必要条件",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "该目的蛋白的氨基酸序列中可能含有核定位信号（NLS）",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：核定位信号是引导蛋白质入核的必需序列。C正确：删除NLS后丧失核定位能力，验证了NLS的功能必要性。A错误：核孔复合体允许小分子（<40kDa）被动扩散，但GFP融合蛋白通常超过此阈值，且主动核输入需要NLS和受体介导。B正确：importin识别NLS，Ran GTPase提供能量和方向性。这是一道典型的实验分析题。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "蛋白质核输入",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "600164654",
+  "tags": []
+ },
+ "BQ-dna_structure-f18fffaa1b66": {
+  "type": "mtf",
+  "question": "某研究将GFP基因与目的基因融合，在荧光显微镜下观察融合蛋白在细胞内的定位。获得以下结果：融合蛋白在细胞核中聚集。判断以下推断的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "GFP蛋白的分子量较大（约27kDa），可通过被动扩散自由穿越核孔复合体进入细胞核",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "核输入过程需要importin蛋白和Ran GTPase的参与",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "该目的蛋白的氨基酸序列中可能含有核定位信号（NLS）",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "若删除预测的NLS序列后融合蛋白弥散于细胞质，说明NLS是核定位的必要条件",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：核定位信号是引导蛋白质入核的必需序列。D正确：删除NLS后丧失核定位能力，验证了NLS的功能必要性。A错误：核孔复合体允许小分子（<40kDa）被动扩散，但GFP融合蛋白通常超过此阈值，且主动核输入需要NLS和受体介导。B正确：importin识别NLS，Ran GTPase提供能量和方向性。这是一道典型的实验分析题。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "蛋白质核输入",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "600164654",
+  "tags": []
+ },
+ "BQ-dna_structure-fb6cb0704100": {
+  "type": "mtf",
+  "question": "某研究将GFP基因与目的基因融合，在荧光显微镜下观察融合蛋白在细胞内的定位。获得以下结果：融合蛋白在细胞核中聚集。判断以下推断的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "GFP蛋白的分子量较大（约27kDa），可通过被动扩散自由穿越核孔复合体进入细胞核",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "若删除预测的NLS序列后融合蛋白弥散于细胞质，说明NLS是核定位的必要条件",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "核输入过程需要importin蛋白和Ran GTPase的参与",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "该目的蛋白的氨基酸序列中可能含有核定位信号（NLS）",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：核定位信号是引导蛋白质入核的必需序列。B正确：删除NLS后丧失核定位能力，验证了NLS的功能必要性。A错误：核孔复合体允许小分子（<40kDa）被动扩散，但GFP融合蛋白通常超过此阈值，且主动核输入需要NLS和受体介导。C正确：importin识别NLS，Ran GTPase提供能量和方向性。这是一道典型的实验分析题。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "蛋白质核输入",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "600164654",
+  "tags": []
+ },
+ "BQ-dna_structure-e0449d06c7b8": {
+  "type": "mtf",
+  "question": "某研究将GFP基因与目的基因融合，在荧光显微镜下观察融合蛋白在细胞内的定位。获得以下结果：融合蛋白在细胞核中聚集。判断以下推断的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "GFP蛋白的分子量较大（约27kDa），可通过被动扩散自由穿越核孔复合体进入细胞核",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "若删除预测的NLS序列后融合蛋白弥散于细胞质，说明NLS是核定位的必要条件",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "该目的蛋白的氨基酸序列中可能含有核定位信号（NLS）",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "核输入过程需要importin蛋白和Ran GTPase的参与",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：核定位信号是引导蛋白质入核的必需序列。B正确：删除NLS后丧失核定位能力，验证了NLS的功能必要性。A错误：核孔复合体允许小分子（<40kDa）被动扩散，但GFP融合蛋白通常超过此阈值，且主动核输入需要NLS和受体介导。D正确：importin识别NLS，Ran GTPase提供能量和方向性。这是一道典型的实验分析题。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "蛋白质核输入",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "600164654",
+  "tags": []
+ },
+ "BQ-dna_structure-ee5332514a9f": {
+  "type": "mtf",
+  "question": "某研究将GFP基因与目的基因融合，在荧光显微镜下观察融合蛋白在细胞内的定位。获得以下结果：融合蛋白在细胞核中聚集。判断以下推断的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "GFP蛋白的分子量较大（约27kDa），可通过被动扩散自由穿越核孔复合体进入细胞核",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "该目的蛋白的氨基酸序列中可能含有核定位信号（NLS）",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "核输入过程需要importin蛋白和Ran GTPase的参与",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "若删除预测的NLS序列后融合蛋白弥散于细胞质，说明NLS是核定位的必要条件",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：核定位信号是引导蛋白质入核的必需序列。D正确：删除NLS后丧失核定位能力，验证了NLS的功能必要性。A错误：核孔复合体允许小分子（<40kDa）被动扩散，但GFP融合蛋白通常超过此阈值，且主动核输入需要NLS和受体介导。C正确：importin识别NLS，Ran GTPase提供能量和方向性。这是一道典型的实验分析题。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "蛋白质核输入",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "600164654",
+  "tags": []
+ },
+ "BQ-dna_structure-36576df4d470": {
+  "type": "mtf",
+  "question": "某研究将GFP基因与目的基因融合，在荧光显微镜下观察融合蛋白在细胞内的定位。获得以下结果：融合蛋白在细胞核中聚集。判断以下推断的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "GFP蛋白的分子量较大（约27kDa），可通过被动扩散自由穿越核孔复合体进入细胞核",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "该目的蛋白的氨基酸序列中可能含有核定位信号（NLS）",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "若删除预测的NLS序列后融合蛋白弥散于细胞质，说明NLS是核定位的必要条件",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "核输入过程需要importin蛋白和Ran GTPase的参与",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：核定位信号是引导蛋白质入核的必需序列。C正确：删除NLS后丧失核定位能力，验证了NLS的功能必要性。A错误：核孔复合体允许小分子（<40kDa）被动扩散，但GFP融合蛋白通常超过此阈值，且主动核输入需要NLS和受体介导。D正确：importin识别NLS，Ran GTPase提供能量和方向性。这是一道典型的实验分析题。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "蛋白质核输入",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "600164654",
+  "tags": []
+ },
+ "BQ-dna_structure-b581b9358226": {
+  "type": "mtf",
+  "question": "某研究将GFP基因与目的基因融合，在荧光显微镜下观察融合蛋白在细胞内的定位。获得以下结果：融合蛋白在细胞核中聚集。判断以下推断的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "核输入过程需要importin蛋白和Ran GTPase的参与",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "GFP蛋白的分子量较大（约27kDa），可通过被动扩散自由穿越核孔复合体进入细胞核",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "若删除预测的NLS序列后融合蛋白弥散于细胞质，说明NLS是核定位的必要条件",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "该目的蛋白的氨基酸序列中可能含有核定位信号（NLS）",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：核定位信号是引导蛋白质入核的必需序列。C正确：删除NLS后丧失核定位能力，验证了NLS的功能必要性。B错误：核孔复合体允许小分子（<40kDa）被动扩散，但GFP融合蛋白通常超过此阈值，且主动核输入需要NLS和受体介导。A正确：importin识别NLS，Ran GTPase提供能量和方向性。这是一道典型的实验分析题。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "蛋白质核输入",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "600164654",
+  "tags": []
+ },
+ "BQ-dna_structure-33ff8ee5cf2f": {
+  "type": "mtf",
+  "question": "某研究将GFP基因与目的基因融合，在荧光显微镜下观察融合蛋白在细胞内的定位。获得以下结果：融合蛋白在细胞核中聚集。判断以下推断的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "核输入过程需要importin蛋白和Ran GTPase的参与",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "GFP蛋白的分子量较大（约27kDa），可通过被动扩散自由穿越核孔复合体进入细胞核",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "该目的蛋白的氨基酸序列中可能含有核定位信号（NLS）",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "若删除预测的NLS序列后融合蛋白弥散于细胞质，说明NLS是核定位的必要条件",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：核定位信号是引导蛋白质入核的必需序列。D正确：删除NLS后丧失核定位能力，验证了NLS的功能必要性。B错误：核孔复合体允许小分子（<40kDa）被动扩散，但GFP融合蛋白通常超过此阈值，且主动核输入需要NLS和受体介导。A正确：importin识别NLS，Ran GTPase提供能量和方向性。这是一道典型的实验分析题。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "蛋白质核输入",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "600164654",
+  "tags": []
+ },
+ "BQ-dna_structure-ce1d8bc17ac6": {
+  "type": "mtf",
+  "question": "某研究将GFP基因与目的基因融合，在荧光显微镜下观察融合蛋白在细胞内的定位。获得以下结果：融合蛋白在细胞核中聚集。判断以下推断的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "核输入过程需要importin蛋白和Ran GTPase的参与",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "若删除预测的NLS序列后融合蛋白弥散于细胞质，说明NLS是核定位的必要条件",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "GFP蛋白的分子量较大（约27kDa），可通过被动扩散自由穿越核孔复合体进入细胞核",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "该目的蛋白的氨基酸序列中可能含有核定位信号（NLS）",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：核定位信号是引导蛋白质入核的必需序列。B正确：删除NLS后丧失核定位能力，验证了NLS的功能必要性。C错误：核孔复合体允许小分子（<40kDa）被动扩散，但GFP融合蛋白通常超过此阈值，且主动核输入需要NLS和受体介导。A正确：importin识别NLS，Ran GTPase提供能量和方向性。这是一道典型的实验分析题。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "蛋白质核输入",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "600164654",
+  "tags": []
+ },
+ "BQ-dna_structure-dfa6e2eb7f30": {
+  "type": "mtf",
+  "question": "某研究将GFP基因与目的基因融合，在荧光显微镜下观察融合蛋白在细胞内的定位。获得以下结果：融合蛋白在细胞核中聚集。判断以下推断的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "核输入过程需要importin蛋白和Ran GTPase的参与",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "若删除预测的NLS序列后融合蛋白弥散于细胞质，说明NLS是核定位的必要条件",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "该目的蛋白的氨基酸序列中可能含有核定位信号（NLS）",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "GFP蛋白的分子量较大（约27kDa），可通过被动扩散自由穿越核孔复合体进入细胞核",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确：核定位信号是引导蛋白质入核的必需序列。B正确：删除NLS后丧失核定位能力，验证了NLS的功能必要性。D错误：核孔复合体允许小分子（<40kDa）被动扩散，但GFP融合蛋白通常超过此阈值，且主动核输入需要NLS和受体介导。A正确：importin识别NLS，Ran GTPase提供能量和方向性。这是一道典型的实验分析题。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "蛋白质核输入",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "600164654",
+  "tags": []
+ },
+ "BQ-dna_structure-9f720b67e1ef": {
+  "type": "mtf",
+  "question": "某研究将GFP基因与目的基因融合，在荧光显微镜下观察融合蛋白在细胞内的定位。获得以下结果：融合蛋白在细胞核中聚集。判断以下推断的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "核输入过程需要importin蛋白和Ran GTPase的参与",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "该目的蛋白的氨基酸序列中可能含有核定位信号（NLS）",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "GFP蛋白的分子量较大（约27kDa），可通过被动扩散自由穿越核孔复合体进入细胞核",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "若删除预测的NLS序列后融合蛋白弥散于细胞质，说明NLS是核定位的必要条件",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：核定位信号是引导蛋白质入核的必需序列。D正确：删除NLS后丧失核定位能力，验证了NLS的功能必要性。C错误：核孔复合体允许小分子（<40kDa）被动扩散，但GFP融合蛋白通常超过此阈值，且主动核输入需要NLS和受体介导。A正确：importin识别NLS，Ran GTPase提供能量和方向性。这是一道典型的实验分析题。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "蛋白质核输入",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "600164654",
+  "tags": []
+ },
+ "BQ-dna_structure-604c347ab247": {
+  "type": "mtf",
+  "question": "某研究将GFP基因与目的基因融合，在荧光显微镜下观察融合蛋白在细胞内的定位。获得以下结果：融合蛋白在细胞核中聚集。判断以下推断的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "核输入过程需要importin蛋白和Ran GTPase的参与",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "该目的蛋白的氨基酸序列中可能含有核定位信号（NLS）",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "若删除预测的NLS序列后融合蛋白弥散于细胞质，说明NLS是核定位的必要条件",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "GFP蛋白的分子量较大（约27kDa），可通过被动扩散自由穿越核孔复合体进入细胞核",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确：核定位信号是引导蛋白质入核的必需序列。C正确：删除NLS后丧失核定位能力，验证了NLS的功能必要性。D错误：核孔复合体允许小分子（<40kDa）被动扩散，但GFP融合蛋白通常超过此阈值，且主动核输入需要NLS和受体介导。A正确：importin识别NLS，Ran GTPase提供能量和方向性。这是一道典型的实验分析题。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "蛋白质核输入",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "600164654",
+  "tags": []
+ },
+ "BQ-dna_structure-009945137f61": {
+  "type": "mtf",
+  "question": "某研究将GFP基因与目的基因融合，在荧光显微镜下观察融合蛋白在细胞内的定位。获得以下结果：融合蛋白在细胞核中聚集。判断以下推断的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "若删除预测的NLS序列后融合蛋白弥散于细胞质，说明NLS是核定位的必要条件",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "GFP蛋白的分子量较大（约27kDa），可通过被动扩散自由穿越核孔复合体进入细胞核",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "核输入过程需要importin蛋白和Ran GTPase的参与",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "该目的蛋白的氨基酸序列中可能含有核定位信号（NLS）",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：核定位信号是引导蛋白质入核的必需序列。A正确：删除NLS后丧失核定位能力，验证了NLS的功能必要性。B错误：核孔复合体允许小分子（<40kDa）被动扩散，但GFP融合蛋白通常超过此阈值，且主动核输入需要NLS和受体介导。C正确：importin识别NLS，Ran GTPase提供能量和方向性。这是一道典型的实验分析题。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "蛋白质核输入",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "600164654",
+  "tags": []
+ },
+ "BQ-dna_structure-9c5a5bb49077": {
+  "type": "mtf",
+  "question": "某研究将GFP基因与目的基因融合，在荧光显微镜下观察融合蛋白在细胞内的定位。获得以下结果：融合蛋白在细胞核中聚集。判断以下推断的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "若删除预测的NLS序列后融合蛋白弥散于细胞质，说明NLS是核定位的必要条件",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "GFP蛋白的分子量较大（约27kDa），可通过被动扩散自由穿越核孔复合体进入细胞核",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "该目的蛋白的氨基酸序列中可能含有核定位信号（NLS）",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "核输入过程需要importin蛋白和Ran GTPase的参与",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：核定位信号是引导蛋白质入核的必需序列。A正确：删除NLS后丧失核定位能力，验证了NLS的功能必要性。B错误：核孔复合体允许小分子（<40kDa）被动扩散，但GFP融合蛋白通常超过此阈值，且主动核输入需要NLS和受体介导。D正确：importin识别NLS，Ran GTPase提供能量和方向性。这是一道典型的实验分析题。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "蛋白质核输入",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "600164654",
+  "tags": []
+ },
+ "BQ-dna_structure-9459f1c52145": {
+  "type": "mtf",
+  "question": "某研究将GFP基因与目的基因融合，在荧光显微镜下观察融合蛋白在细胞内的定位。获得以下结果：融合蛋白在细胞核中聚集。判断以下推断的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "若删除预测的NLS序列后融合蛋白弥散于细胞质，说明NLS是核定位的必要条件",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "核输入过程需要importin蛋白和Ran GTPase的参与",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "GFP蛋白的分子量较大（约27kDa），可通过被动扩散自由穿越核孔复合体进入细胞核",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "该目的蛋白的氨基酸序列中可能含有核定位信号（NLS）",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：核定位信号是引导蛋白质入核的必需序列。A正确：删除NLS后丧失核定位能力，验证了NLS的功能必要性。C错误：核孔复合体允许小分子（<40kDa）被动扩散，但GFP融合蛋白通常超过此阈值，且主动核输入需要NLS和受体介导。B正确：importin识别NLS，Ran GTPase提供能量和方向性。这是一道典型的实验分析题。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "蛋白质核输入",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "600164654",
+  "tags": []
+ },
+ "BQ-dna_structure-52493f5f7b9a": {
+  "type": "mtf",
+  "question": "某研究将GFP基因与目的基因融合，在荧光显微镜下观察融合蛋白在细胞内的定位。获得以下结果：融合蛋白在细胞核中聚集。判断以下推断的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "若删除预测的NLS序列后融合蛋白弥散于细胞质，说明NLS是核定位的必要条件",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "核输入过程需要importin蛋白和Ran GTPase的参与",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "该目的蛋白的氨基酸序列中可能含有核定位信号（NLS）",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "GFP蛋白的分子量较大（约27kDa），可通过被动扩散自由穿越核孔复合体进入细胞核",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确：核定位信号是引导蛋白质入核的必需序列。A正确：删除NLS后丧失核定位能力，验证了NLS的功能必要性。D错误：核孔复合体允许小分子（<40kDa）被动扩散，但GFP融合蛋白通常超过此阈值，且主动核输入需要NLS和受体介导。B正确：importin识别NLS，Ran GTPase提供能量和方向性。这是一道典型的实验分析题。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "蛋白质核输入",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "600164654",
+  "tags": []
+ },
+ "BQ-dna_structure-b2ce6e4d0d47": {
+  "type": "mtf",
+  "question": "某研究将GFP基因与目的基因融合，在荧光显微镜下观察融合蛋白在细胞内的定位。获得以下结果：融合蛋白在细胞核中聚集。判断以下推断的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "若删除预测的NLS序列后融合蛋白弥散于细胞质，说明NLS是核定位的必要条件",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "该目的蛋白的氨基酸序列中可能含有核定位信号（NLS）",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "GFP蛋白的分子量较大（约27kDa），可通过被动扩散自由穿越核孔复合体进入细胞核",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "核输入过程需要importin蛋白和Ran GTPase的参与",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：核定位信号是引导蛋白质入核的必需序列。A正确：删除NLS后丧失核定位能力，验证了NLS的功能必要性。C错误：核孔复合体允许小分子（<40kDa）被动扩散，但GFP融合蛋白通常超过此阈值，且主动核输入需要NLS和受体介导。D正确：importin识别NLS，Ran GTPase提供能量和方向性。这是一道典型的实验分析题。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "蛋白质核输入",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "600164654",
+  "tags": []
+ },
+ "BQ-dna_structure-8b2ace4314cb": {
+  "type": "mtf",
+  "question": "某研究将GFP基因与目的基因融合，在荧光显微镜下观察融合蛋白在细胞内的定位。获得以下结果：融合蛋白在细胞核中聚集。判断以下推断的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "若删除预测的NLS序列后融合蛋白弥散于细胞质，说明NLS是核定位的必要条件",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "该目的蛋白的氨基酸序列中可能含有核定位信号（NLS）",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "核输入过程需要importin蛋白和Ran GTPase的参与",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "GFP蛋白的分子量较大（约27kDa），可通过被动扩散自由穿越核孔复合体进入细胞核",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确：核定位信号是引导蛋白质入核的必需序列。A正确：删除NLS后丧失核定位能力，验证了NLS的功能必要性。D错误：核孔复合体允许小分子（<40kDa）被动扩散，但GFP融合蛋白通常超过此阈值，且主动核输入需要NLS和受体介导。C正确：importin识别NLS，Ran GTPase提供能量和方向性。这是一道典型的实验分析题。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "蛋白质核输入",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "600164654",
+  "tags": []
+ },
+ "BQ-dna_structure-4d7d154b94d6": {
+  "type": "mtf",
+  "question": "某研究将GFP基因与目的基因融合，在荧光显微镜下观察融合蛋白在细胞内的定位。获得以下结果：融合蛋白在细胞核中聚集。判断以下推断的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "该目的蛋白的氨基酸序列中可能含有核定位信号（NLS）",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "GFP蛋白的分子量较大（约27kDa），可通过被动扩散自由穿越核孔复合体进入细胞核",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "核输入过程需要importin蛋白和Ran GTPase的参与",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "若删除预测的NLS序列后融合蛋白弥散于细胞质，说明NLS是核定位的必要条件",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：核定位信号是引导蛋白质入核的必需序列。D正确：删除NLS后丧失核定位能力，验证了NLS的功能必要性。B错误：核孔复合体允许小分子（<40kDa）被动扩散，但GFP融合蛋白通常超过此阈值，且主动核输入需要NLS和受体介导。C正确：importin识别NLS，Ran GTPase提供能量和方向性。这是一道典型的实验分析题。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "蛋白质核输入",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "600164654",
+  "tags": []
+ },
+ "BQ-dna_structure-c8cb7f4a05a1": {
+  "type": "mtf",
+  "question": "某研究将GFP基因与目的基因融合，在荧光显微镜下观察融合蛋白在细胞内的定位。获得以下结果：融合蛋白在细胞核中聚集。判断以下推断的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "该目的蛋白的氨基酸序列中可能含有核定位信号（NLS）",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "GFP蛋白的分子量较大（约27kDa），可通过被动扩散自由穿越核孔复合体进入细胞核",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "若删除预测的NLS序列后融合蛋白弥散于细胞质，说明NLS是核定位的必要条件",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "核输入过程需要importin蛋白和Ran GTPase的参与",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：核定位信号是引导蛋白质入核的必需序列。C正确：删除NLS后丧失核定位能力，验证了NLS的功能必要性。B错误：核孔复合体允许小分子（<40kDa）被动扩散，但GFP融合蛋白通常超过此阈值，且主动核输入需要NLS和受体介导。D正确：importin识别NLS，Ran GTPase提供能量和方向性。这是一道典型的实验分析题。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "蛋白质核输入",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "600164654",
+  "tags": []
+ },
+ "BQ-dna_structure-e26622f5b199": {
+  "type": "mtf",
+  "question": "某研究将GFP基因与目的基因融合，在荧光显微镜下观察融合蛋白在细胞内的定位。获得以下结果：融合蛋白在细胞核中聚集。判断以下推断的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "该目的蛋白的氨基酸序列中可能含有核定位信号（NLS）",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "核输入过程需要importin蛋白和Ran GTPase的参与",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "GFP蛋白的分子量较大（约27kDa），可通过被动扩散自由穿越核孔复合体进入细胞核",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "若删除预测的NLS序列后融合蛋白弥散于细胞质，说明NLS是核定位的必要条件",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：核定位信号是引导蛋白质入核的必需序列。D正确：删除NLS后丧失核定位能力，验证了NLS的功能必要性。C错误：核孔复合体允许小分子（<40kDa）被动扩散，但GFP融合蛋白通常超过此阈值，且主动核输入需要NLS和受体介导。B正确：importin识别NLS，Ran GTPase提供能量和方向性。这是一道典型的实验分析题。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "蛋白质核输入",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "600164654",
+  "tags": []
+ },
+ "BQ-dna_structure-d3d7f8fc357f": {
+  "type": "mtf",
+  "question": "某研究将GFP基因与目的基因融合，在荧光显微镜下观察融合蛋白在细胞内的定位。获得以下结果：融合蛋白在细胞核中聚集。判断以下推断的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "该目的蛋白的氨基酸序列中可能含有核定位信号（NLS）",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "核输入过程需要importin蛋白和Ran GTPase的参与",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "若删除预测的NLS序列后融合蛋白弥散于细胞质，说明NLS是核定位的必要条件",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "GFP蛋白的分子量较大（约27kDa），可通过被动扩散自由穿越核孔复合体进入细胞核",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确：核定位信号是引导蛋白质入核的必需序列。C正确：删除NLS后丧失核定位能力，验证了NLS的功能必要性。D错误：核孔复合体允许小分子（<40kDa）被动扩散，但GFP融合蛋白通常超过此阈值，且主动核输入需要NLS和受体介导。B正确：importin识别NLS，Ran GTPase提供能量和方向性。这是一道典型的实验分析题。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "蛋白质核输入",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "600164654",
+  "tags": []
+ },
+ "BQ-dna_structure-a27fe0c03de7": {
+  "type": "mtf",
+  "question": "某研究将GFP基因与目的基因融合，在荧光显微镜下观察融合蛋白在细胞内的定位。获得以下结果：融合蛋白在细胞核中聚集。判断以下推断的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "该目的蛋白的氨基酸序列中可能含有核定位信号（NLS）",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "若删除预测的NLS序列后融合蛋白弥散于细胞质，说明NLS是核定位的必要条件",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "GFP蛋白的分子量较大（约27kDa），可通过被动扩散自由穿越核孔复合体进入细胞核",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "核输入过程需要importin蛋白和Ran GTPase的参与",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：核定位信号是引导蛋白质入核的必需序列。B正确：删除NLS后丧失核定位能力，验证了NLS的功能必要性。C错误：核孔复合体允许小分子（<40kDa）被动扩散，但GFP融合蛋白通常超过此阈值，且主动核输入需要NLS和受体介导。D正确：importin识别NLS，Ran GTPase提供能量和方向性。这是一道典型的实验分析题。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "蛋白质核输入",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "600164654",
+  "tags": []
+ },
+ "BQ-dna_structure-e6360c63dca8": {
+  "type": "mtf",
+  "question": "某研究将GFP基因与目的基因融合，在荧光显微镜下观察融合蛋白在细胞内的定位。获得以下结果：融合蛋白在细胞核中聚集。判断以下推断的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "该目的蛋白的氨基酸序列中可能含有核定位信号（NLS）",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "若删除预测的NLS序列后融合蛋白弥散于细胞质，说明NLS是核定位的必要条件",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "核输入过程需要importin蛋白和Ran GTPase的参与",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "GFP蛋白的分子量较大（约27kDa），可通过被动扩散自由穿越核孔复合体进入细胞核",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确：核定位信号是引导蛋白质入核的必需序列。B正确：删除NLS后丧失核定位能力，验证了NLS的功能必要性。D错误：核孔复合体允许小分子（<40kDa）被动扩散，但GFP融合蛋白通常超过此阈值，且主动核输入需要NLS和受体介导。C正确：importin识别NLS，Ran GTPase提供能量和方向性。这是一道典型的实验分析题。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "蛋白质核输入",
+  "difficulty": "hard",
+  "year": 2025,
+  "chart": null,
+  "oldId": "600164654",
+  "tags": []
+ }
+}

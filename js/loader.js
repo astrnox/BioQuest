@@ -46,12 +46,17 @@ function _openDB() {
     return _dbReady;
   }
   _dbReady = new Promise(function (resolve) {
-    var req = indexedDB.open('BioQuestCache', 2);
+    var req = indexedDB.open('BioQuestCache', 3);
     req.onupgradeneeded = function (e) {
       var db = e.target.result;
       if (!db.objectStoreNames.contains('modules')) {
         var store = db.createObjectStore('modules', { keyPath: 'key' });
         store.createIndex('updated', 'updated', { unique: false });
+      }
+      // Issue #10：分片题库缓存（key=tag，存原始 JSON 文本 + manifest SHA-256）
+      if (!db.objectStoreNames.contains('shards')) {
+        var shardStore = db.createObjectStore('shards', { keyPath: 'key' });
+        shardStore.createIndex('updated', 'updated', { unique: false });
       }
     };
     req.onsuccess = function (e) { resolve(e.target.result); };
@@ -186,6 +191,249 @@ function _filterQuarantinedQuestions(items) {
 // 暴露到全局，供 practice.js / quiz.js / exam.js 共用
 window._filterQuarantinedQuestions = _filterQuarantinedQuestions;
 
+/* ============================================================
+ * 分片题库（Issue #10：manifest + index + bank 三层架构）
+ *  - data/manifest.json        版本 + 各分片 SHA-256（完整性校验）
+ *  - data/bioid-map.json       oldId -> bioID 迁移映射表
+ *  - data/bank/<tag>.json      完整题目内容（按需加载）
+ * 每道题统一附带稳定 bioID（q.id / q.bioId），替代前端 hash 生成的临时 ID。
+ * 加载策略：内存缓存 → IndexedDB 分片缓存（SHA 一致复用）→ 拉取并校验落缓存
+ * ============================================================ */
+
+var _shardManifest = null;  // data/manifest.json
+var _bioidMap = null;       // data/bioid-map.json  oldId -> bioID
+var _shardMemCache = {};    // tag -> { json: string, sha: string }（本会话内存缓存）
+var _shardStoreReady = null;
+
+// 分片归属映射：新题库 tag 前缀 -> 旧前端 module 标识
+var TAG_TO_MODULE = { m1: 'module_1', m2: 'module_2', m3: 'module_3', m4: 'module_4' };
+var MODULE_TO_TAG = { 1: 'm1', 2: 'm2', 3: 'm3', 4: 'm4' };
+// 「全量」场景按生成器 SOURCES 优先级加载全部分片（回退默认集）
+var ALL_SHARD_TAGS = ['m1', 'm2', 'm3', 'm4', 'pool', 'logic', 'comp', 'qdb'];
+
+/**
+ * 按模块解析考点 tag 列表（以 manifest.modules 为准，数据真源）。
+ * manifest.modules = { module1: [tag...], module2: [...], ... }（Issue #10 考点分片）。
+ * 兼容旧 manifest（module -> 单 tag 字符串 / 缺省时回退 MODULE_TO_TAG）。
+ */
+function _moduleToTags(mf, moduleNum) {
+  var key = 'module' + moduleNum;
+  if (mf && mf.modules) {
+    var list = mf.modules[key];
+    if (Array.isArray(list) && list.length > 0) return list;
+    if (typeof list === 'string') return [list];
+  }
+  var legacy = MODULE_TO_TAG[moduleNum];
+  return legacy ? [legacy] : [];
+}
+
+function _loadManifest(signal) {
+  if (_shardManifest) return Promise.resolve(_shardManifest);
+  return _fetchJSON('data/manifest.json', signal).then(function (mf) {
+    _shardManifest = (mf && mf.files) ? mf : null;
+    return _shardManifest;
+  }).catch(function () {
+    _shardManifest = null;
+    return null;
+  });
+}
+
+function _loadBioIdMap(signal) {
+  if (_bioidMap) return Promise.resolve(_bioidMap);
+  return _fetchJSON('data/bioid-map.json', signal).then(function (map) {
+    _bioidMap = map || {};
+    window.bioIdMap = _bioidMap;
+    // 数据就绪后，把旧 hash/数字 ID 引用的错题/收藏/记录迁移到 bioID
+    if (typeof window.migrateLocalDataToBioId === 'function') {
+      try { window.migrateLocalDataToBioId(); } catch (e) {}
+    }
+    return _bioidMap;
+  }).catch(function () {
+    _bioidMap = {};
+    window.bioIdMap = _bioidMap;
+    return _bioidMap;
+  });
+}
+
+function _openShardStore() {
+  if (_shardStoreReady) return _shardStoreReady;
+  _shardStoreReady = _openDB().then(function (db) {
+    if (!db) return null;
+    return db.objectStoreNames.contains('shards') ? db : null;
+  });
+  return _shardStoreReady;
+}
+
+function _loadShardFromDB(tag) {
+  return _openShardStore().then(function (db) {
+    if (!db) return null;
+    return new Promise(function (resolve) {
+      try {
+        var tx = db.transaction('shards', 'readonly');
+        var req = tx.objectStore('shards').get(tag);
+        req.onsuccess = function () { resolve(req.result || null); };
+        req.onerror = function () { resolve(null); };
+      } catch (e) { resolve(null); }
+    });
+  });
+}
+
+function _saveShardToDB(tag, json, sha) {
+  return _openShardStore().then(function (db) {
+    if (!db) return;
+    return new Promise(function (resolve) {
+      try {
+        var tx = db.transaction('shards', 'readwrite');
+        tx.objectStore('shards').put({ key: tag, json: json, sha: sha, updated: Date.now() });
+        tx.oncomplete = function () { resolve(); };
+        tx.onerror = function () { resolve(); };
+        tx.onabort = function () { resolve(); };
+      } catch (e) { resolve(); }
+    });
+  });
+}
+
+function _sha256Hex(text) {
+  if (typeof crypto !== 'undefined' && crypto.subtle && crypto.subtle.digest && typeof TextEncoder === 'function') {
+    var enc = new TextEncoder();
+    return crypto.subtle.digest('SHA-256', enc.encode(text)).then(function (buf) {
+      return Array.prototype.map.call(new Uint8Array(buf), function (b) {
+        return ('0' + b.toString(16)).slice(-2);
+      }).join('');
+    });
+  }
+  return Promise.resolve(null);
+}
+
+/**
+ * 加载单个 bank 分片（manifest SHA-256 完整性校验 + 增量刷新）
+ * 命中缓存（sha 与 manifest 一致）直接复用；否则拉取校验后落缓存。
+ * @returns {Promise<string>} 分片原始 JSON 文本
+ */
+function _loadShardBank(tag, expectedSha, signal) {
+  var mem = _shardMemCache[tag];
+  if (mem) return Promise.resolve(mem.json);
+
+  return _loadShardFromDB(tag).then(function (rec) {
+    // 缓存可用且与 manifest 版本一致 → 复用（增量刷新：只拉变化的）
+    if (rec && rec.json && (!expectedSha || rec.sha === expectedSha)) {
+      _shardMemCache[tag] = { json: rec.json, sha: rec.sha || '' };
+      return rec.json;
+    }
+    // 缓存缺失或版本不符 → 拉取
+    return fetch('data/bank/' + tag + '.json', { signal: signal }).then(function (r) {
+      if (!r.ok) throw new Error('HTTP ' + r.status + ': data/bank/' + tag + '.json');
+      return r.text();
+    }).then(function (text) {
+      // 先校验 JSON 可解析，避免缓存脏数据
+      JSON.parse(text);
+      _shardMemCache[tag] = { json: text, sha: '' };
+      if (expectedSha) {
+        _sha256Hex(text).then(function (actual) {
+          if (actual && actual !== expectedSha) {
+            console.warn('[Loader] 分片 ' + tag + ' SHA-256 校验失败（manifest=' + expectedSha.slice(0, 12) + ' actual=' + actual.slice(0, 12) + '），按 manifest 为准');
+            _saveShardToDB(tag, text, '');
+          } else if (actual) {
+            _shardMemCache[tag].sha = actual;
+            _saveShardToDB(tag, text, actual);
+          }
+        });
+      } else {
+        _saveShardToDB(tag, text, '');
+      }
+      return text;
+    }).catch(function (err) {
+      // 拉取失败：降级复用旧缓存，保证离线可用
+      if (rec && rec.json) {
+        _shardMemCache[tag] = { json: rec.json, sha: rec.sha || '' };
+        return rec.json;
+      }
+      throw err;
+    });
+  });
+}
+
+/**
+ * 把 bank 分片对象（bioID -> question）转成数组并附上稳定 bioID
+ */
+function _bankToItems(rawText, tag) {
+  var bankObj;
+  try { bankObj = JSON.parse(rawText); } catch (e) { return []; }
+  var items = [];
+  var keys = Object.keys(bankObj || {});
+  for (var i = 0; i < keys.length; i++) {
+    var bioId = keys[i];
+    var q = bankObj[bioId];
+    if (!q || typeof q !== 'object') continue;
+    q.id = bioId;   // 稳定 bioID 作为题目 ID（替代 hash 生成）
+    q.bioId = bioId;
+    q._shardTag = tag;
+    if (q.module === undefined || q.module === null) {
+      q.module = TAG_TO_MODULE[tag] || ('module_' + tag);
+    }
+    items.push(q);
+  }
+  return items;
+}
+
+/**
+ * 按 tag 列表加载分片并合并为题目数组
+ */
+function _loadShardTags(tags, onProgress, signal) {
+  return _loadManifest(signal).then(function (mf) {
+    if (!mf) { _shardManifest = null; return []; }
+    // 异步预热迁移映射表（不阻塞题库返回）
+    _loadBioIdMap(signal);
+    var jobs = tags.map(function (tag) {
+      var expected = (mf.files && mf.files['bank/' + tag + '.json']) || null;
+      return _loadShardBank(tag, expected, signal).then(function (text) {
+        var items = _bankToItems(text, tag);
+        if (onProgress) {
+          try { onProgress(1, tags.length, tag, items.length); } catch (e) {}
+        }
+        return items;
+      }).catch(function () { return []; });
+    });
+    return Promise.all(jobs).then(function (arrs) {
+      var result = [];
+      for (var i = 0; i < arrs.length; i++) result = result.concat(arrs[i]);
+      return result;
+    });
+  });
+}
+
+function _loadByModulesShards(modules, onProgress, signal) {
+  return _loadManifest(signal).then(function (mf) {
+    // 每个模块可能对应多个考点分片（Issue #10），展平后按 tag 拉取
+    var tags = [];
+    for (var i = 0; i < modules.length; i++) {
+      tags = tags.concat(_moduleToTags(mf, modules[i]));
+    }
+    return _loadShardTags(tags, onProgress, signal).then(function (items) {
+      // 写模块级缓存，供 getCachedModule / isModuleCached 使用
+      for (var j = 0; j < modules.length; j++) {
+        var mTags = _moduleToTags(mf, modules[j]);
+        var sub = items.filter(function (q) { return mTags.indexOf(q._shardTag) !== -1; });
+        _setCached('module_' + modules[j], sub);
+      }
+      return items;
+    });
+  });
+}
+
+function _loadAllShards(onProgress, signal) {
+  // 以 manifest.sources 为准（数据真源，避免硬编码列表过期）；缺失时回退默认分片集
+  return _loadManifest(signal).then(function (mf) {
+    var tags;
+    if (mf && Array.isArray(mf.sources) && mf.sources.length > 0) {
+      tags = mf.sources.map(function (s) { return s.tag; });
+    } else {
+      tags = ALL_SHARD_TAGS.filter(function (t) { return t !== 'pool'; });
+    }
+    return _loadShardTags(tags, onProgress, signal);
+  });
+}
+
 function loadQuestions(moduleFilter, options) {
   options = options || {};
   var onProgress = options.onProgress || null;
@@ -284,9 +532,9 @@ function _loadByModules(modules, onProgress, signal, forceRefresh, mode, onBackg
     return Promise.resolve(result);
   }
 
-  // ---------- 首屏快速模式：立刻读本地 JSON（IndexedDB 异步太慢直接跳过），用户不再等 30s ----------
+  // ---------- 首屏快速模式：立刻读本地题库（分片优先，IndexedDB 异步太慢直接跳过） ----------
   if (mode === LOAD_MODE.PREFER_LOCAL || mode === LOAD_MODE.BALANCED) {
-    return _loadByModulesLocalJSON(modules, onProgress, signal).then(function (localItems) {
+    return _loadByModulesLocal(modules, onProgress, signal).then(function (localItems) {
       // 已经把结果给用户了；后台再跑 Supabase 同步（不阻塞 resolve）
       if (mode === LOAD_MODE.BALANCED) {
         _backgroundRefreshModules(modules, onBackgroundDone);
@@ -310,6 +558,17 @@ function _loadByModules(modules, onProgress, signal, forceRefresh, mode, onBackg
       if (cached2) result = result.concat(cached2);
     }
     return result;
+  });
+}
+
+/**
+ * 模块级本地加载：优先走分片题库（manifest + bank，附 bioID），
+ * 分片不可用（manifest 缺失 / 拉取为空）时回退旧版 quiz_mX.json。
+ */
+function _loadByModulesLocal(modules, onProgress, signal) {
+  return _loadByModulesShards(modules, onProgress, signal).then(function (shardItems) {
+    if (shardItems && shardItems.length > 0) return shardItems;
+    return _loadByModulesLocalJSON(modules, onProgress, signal);
   });
 }
 
@@ -695,19 +954,29 @@ function _loadAll(onProgress, signal, forceRefresh, mode, onBackgroundDone) {
   if (!forceRefresh && _hasCached('_all')) return Promise.resolve(_getCached('_all'));
 
   if (mode === LOAD_MODE.PREFER_LOCAL || mode === LOAD_MODE.BALANCED) {
-    // 首屏秒开：直接读 data/quiz.json，100~300ms 返回
-    return _fetchJSON('data/quiz.json', signal).then(function (data) {
-      var items = _filterQuarantinedQuestions(_extractQuestions(data));
-      _setCached('_all', items);
-      if (onProgress) { try { onProgress(0, items.length); } catch (e) {} }
-      // 后台再刷一次 Supabase（不阻塞）
-      if (mode === LOAD_MODE.BALANCED) {
-        _backgroundRefreshAll(onBackgroundDone);
+    // 首屏秒开：优先走分片（manifest+bank，附 bioID）；分片缺失回退 data/quiz.json
+    return _loadAllShards(onProgress, signal).then(function (shardItems) {
+      if (shardItems && shardItems.length > 0) {
+        _setCached('_all', shardItems);
+        if (onProgress) { try { onProgress(0, shardItems.length); } catch (e) {} }
+        if (mode === LOAD_MODE.BALANCED) {
+          _backgroundRefreshAll(onBackgroundDone);
+        }
+        return shardItems;
       }
-      return items;
-    }).catch(function () {
-      // 本地 quiz.json 也没读到，只好走 IndexedDB→Supabase 原链路
-      return _loadAllRemote(onProgress, signal, forceRefresh, onBackgroundDone);
+      return _fetchJSON('data/quiz.json', signal).then(function (data) {
+        var items = _filterQuarantinedQuestions(_extractQuestions(data));
+        _setCached('_all', items);
+        if (onProgress) { try { onProgress(0, items.length); } catch (e) {} }
+        // 后台再刷一次 Supabase（不阻塞）
+        if (mode === LOAD_MODE.BALANCED) {
+          _backgroundRefreshAll(onBackgroundDone);
+        }
+        return items;
+      }).catch(function () {
+        // 本地 quiz.json 也没读到，只好走 IndexedDB→Supabase 原链路
+        return _loadAllRemote(onProgress, signal, forceRefresh, onBackgroundDone);
+      });
     });
   }
 
@@ -819,6 +1088,40 @@ window.abortLoading = abortLoading;
 window.abortAllLoading = abortAllLoading;
 window.isModuleCached = isModuleCached;
 window.LoaderMode = LOAD_MODE;
+// Issue #10：分片题库 API（供外部按需刷新 / 迁移 / 查询 bioID 映射）
+window.loadAllShards = _loadAllShards;
+window.loadBioIdMap = _loadBioIdMap;
+window.bioIdMap = window.bioIdMap || null;
+
+/**
+ * 字符串 hash 函数（与 storage.js / generate-bio-shards.js 算法一致）。
+ * 将任意字符串转换为稳定的 32 位正整数，用于复算旧题目数字 ID。
+ * 供 quiz.js 等未加载 storage.js 的页面使用。
+ */
+window.hashQuestionId = function (str) {
+  var hash = 0;
+  for (var i = 0; i < str.length; i++) {
+    hash = ((hash << 5) - hash) + str.charCodeAt(i);
+    hash = hash & hash;
+  }
+  return Math.abs(hash);
+};
+
+/**
+ * 解析题目 bioID：
+ *   - 已是 bioID（BQ-…）原样返回；
+ *   - 旧 hash/数字 ID 通过 bioid-map 映射为稳定 bioID；
+ *   - 无法解析则原样返回（回退逻辑由调用方保证）。
+ */
+window.resolveQuestionBioId = function (id) {
+  if (id === undefined || id === null || id === '') return id;
+  var s = String(id);
+  if (/^BQ-[A-Za-z0-9]+-[0-9a-f]{12}$/.test(s)) return s;
+  if (window.bioIdMap && Object.prototype.hasOwnProperty.call(window.bioIdMap, s)) {
+    return window.bioIdMap[s];
+  }
+  return s;
+};
 
 /**
  * 确保 loader.js 已加载并就绪（供 practice.js / exam.js 按需调用）

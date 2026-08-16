@@ -1,99 +1,1158 @@
 {
-  "version": "2.0.0",
-  "updated_at": "2026-06-28",
+  "version": "3.0.0",
+  "updated_at": "2026-08-16",
+  "categories": [
+    {
+      "name": "细胞生物学",
+      "count": 7
+    },
+    {
+      "name": "分子生物学",
+      "count": 7
+    },
+    {
+      "name": "生物化学",
+      "count": 7
+    },
+    {
+      "name": "植物学",
+      "count": 6
+    },
+    {
+      "name": "植物生理学",
+      "count": 6
+    },
+    {
+      "name": "微生物学",
+      "count": 6
+    },
+    {
+      "name": "动物学",
+      "count": 6
+    },
+    {
+      "name": "动物生理学",
+      "count": 7
+    },
+    {
+      "name": "遗传学",
+      "count": 7
+    },
+    {
+      "name": "演化生物学",
+      "count": 6
+    },
+    {
+      "name": "生态学",
+      "count": 7
+    },
+    {
+      "name": "生物信息学",
+      "count": 6
+    },
+    {
+      "name": "生物技术",
+      "count": 2
+    }
+  ],
   "nodes": [
-    { "id": "cell_structure",   "label": "细胞结构",     "category": "细胞生物学", "description": "原核细胞与真核细胞的结构比较，细胞膜、细胞质、细胞核等基本结构", "relatedModule": "module1" },
-    { "id": "cell_membrane",    "label": "细胞膜",       "category": "细胞生物学", "description": "流动镶嵌模型，膜蛋白功能，物质跨膜运输方式", "relatedModule": "module1" },
-    { "id": "organelle",        "label": "细胞器",       "category": "细胞生物学", "description": "线粒体、叶绿体、内质网、高尔基体等细胞器的结构与功能", "relatedModule": "module1" },
-    { "id": "cell_cycle",       "label": "细胞周期",     "category": "细胞生物学", "description": "有丝分裂与减数分裂的过程、各期特征及生物学意义", "relatedModule": "module1" },
-    { "id": "cell_signal",      "label": "细胞信号转导", "category": "细胞生物学", "description": "受体、第二信使、信号级联放大、G蛋白偶联受体通路", "relatedModule": "module1" },
-    { "id": "cell_apoptosis",   "label": "细胞凋亡",     "category": "细胞生物学", "description": "程序性细胞死亡的机制、Caspase级联、与坏死的区别", "relatedModule": "module1" },
-    { "id": "mendel",           "label": "孟德尔遗传",   "category": "遗传学", "description": "分离定律与自由组合定律，显隐性关系，概率计算", "relatedModule": "module4" },
-    { "id": "linkage",          "label": "连锁与交换",   "category": "遗传学", "description": "连锁遗传、重组率、三点测交、基因定位", "relatedModule": "module4" },
-    { "id": "sex_linkage",      "label": "伴性遗传",     "category": "遗传学", "description": "X/Y连锁遗传、剂量补偿、巴氏小体", "relatedModule": "module4" },
-    { "id": "gene_mutation",    "label": "基因突变",     "category": "遗传学", "description": "碱基替换、移码突变、突变率与修复机制", "relatedModule": "module4" },
-    { "id": "chromosome_var",   "label": "染色体变异",   "category": "遗传学", "description": "缺失、重复、倒位、易位，染色体数目变异", "relatedModule": "module4" },
-    { "id": "population_gen",   "label": "群体遗传",     "category": "遗传学", "description": "Hardy-Weinberg平衡、遗传漂变、基因流、自然选择", "relatedModule": "module4" },
-    { "id": "dna_structure",    "label": "DNA结构",      "category": "分子生物学", "description": "双螺旋结构、碱基配对、Chargaff法则、DNA变性复性", "relatedModule": "module1" },
-    { "id": "replication",      "label": "DNA复制",      "category": "分子生物学", "description": "半保留复制、复制叉、引物酶、DNA聚合酶、冈崎片段", "relatedModule": "module1" },
-    { "id": "transcription",    "label": "转录",         "category": "分子生物学", "description": "RNA聚合酶、启动子、转录因子、mRNA加工", "relatedModule": "module1" },
-    { "id": "translation",      "label": "翻译",         "category": "分子生物学", "description": "核糖体、tRNA、密码子、翻译后修饰", "relatedModule": "module1" },
-    { "id": "gene_regulation",  "label": "基因表达调控", "category": "分子生物学", "description": "操纵子模型、转录因子、表观遗传调控、miRNA", "relatedModule": "module1" },
-    { "id": "pcr",              "label": "PCR技术",      "category": "分子生物学", "description": "聚合酶链式反应原理、引物设计、定量PCR", "relatedModule": "module1" },
-    { "id": "ecosystem",        "label": "生态系统",     "category": "生态学", "description": "生态系统的组成、食物链与食物网、能量流动与物质循环", "relatedModule": "module3" },
-    { "id": "population_eco",   "label": "种群生态",     "category": "生态学", "description": "种群增长模型、逻辑斯谛增长、r/K选择", "relatedModule": "module3" },
-    { "id": "community",        "label": "群落生态",     "category": "生态学", "description": "种间关系、群落演替、生物多样性、生态位", "relatedModule": "module3" },
-    { "id": "biogeochemical",   "label": "物质循环",     "category": "生态学", "description": "碳循环、氮循环、磷循环、水循环", "relatedModule": "module3" },
-    { "id": "biodiversity",     "label": "生物多样性",   "category": "生态学", "description": "物种多样性、遗传多样性、生态系统多样性、保护策略", "relatedModule": "module3" },
-    { "id": "animal_tissue",    "label": "动物组织",     "category": "动物学", "description": "上皮、结缔、肌肉、神经四大组织类型", "relatedModule": "module3" },
-    { "id": "nervous_sys",      "label": "神经系统",     "category": "动物学", "description": "神经元结构、突触传递、反射弧、自主神经", "relatedModule": "module3" },
-    { "id": "immune_sys",       "label": "免疫系统",     "category": "动物学", "description": "固有免疫与适应性免疫、抗体、T/B细胞", "relatedModule": "module3" },
-    { "id": "endocrine",        "label": "内分泌系统",   "category": "动物学", "description": "激素种类与作用机制、下丘脑-垂体轴", "relatedModule": "module3" },
-    { "id": "circulatory",      "label": "循环系统",     "category": "动物学", "description": "心脏结构、血液循环途径、血压调节", "relatedModule": "module3" },
-    { "id": "plant_tissue",     "label": "植物组织",     "category": "植物学", "description": "分生组织、保护组织、薄壁组织、输导组织", "relatedModule": "module2" },
-    { "id": "photosynthesis",   "label": "光合作用",     "category": "植物学", "description": "光反应与暗反应、光系统、Calvin循环", "relatedModule": "module2" },
-    { "id": "plant_hormone",    "label": "植物激素",     "category": "植物学", "description": "生长素、赤霉素、细胞分裂素、乙烯、脱落酸", "relatedModule": "module2" },
-    { "id": "plant_transport",  "label": "植物物质运输", "category": "植物学", "description": "蒸腾拉力、根压、内聚力学说、筛管运输", "relatedModule": "module2" },
-    { "id": "enzyme",           "label": "酶",           "category": "生物化学", "description": "酶的催化机制、米氏动力学、别构调节、竞争性抑制", "relatedModule": "module1" },
-    { "id": "glycolysis",       "label": "糖酵解",       "category": "生物化学", "description": "葡萄糖分解为丙酮酸、底物水平磷酸化、NADH生成", "relatedModule": "module1" },
-    { "id": "krebs_cycle",      "label": "柠檬酸循环",   "category": "生物化学", "description": "乙酰CoA氧化、NADH/FADH2生成、回补反应", "relatedModule": "module1" },
-    { "id": "oxidative_phos",   "label": "氧化磷酸化",   "category": "生物化学", "description": "电子传递链、化学渗透、ATP合酶、P/O比", "relatedModule": "module1" },
-    { "id": "amino_acid",       "label": "氨基酸代谢",   "category": "生物化学", "description": "转氨基、脱氨基、尿素循环、必需氨基酸", "relatedModule": "module1" },
-    { "id": "bacteria",         "label": "细菌",         "category": "微生物学", "description": "细菌形态结构、革兰氏染色、代谢多样性", "relatedModule": "module2" },
-    { "id": "virus",            "label": "病毒",         "category": "微生物学", "description": "病毒结构、复制周期、溶原性与溶菌性", "relatedModule": "module2" },
-    { "id": "microbial_eco",    "label": "微生物生态",   "category": "微生物学", "description": "共生、寄生、微生物群落、极端环境微生物", "relatedModule": "module2" }
+    {
+      "id": "cell_structure",
+      "label": "细胞结构",
+      "category": "细胞生物学",
+      "description": "原核/真核细胞结构比较、细胞膜与细胞壁、细胞骨架、内膜系统",
+      "relatedModule": "module1",
+      "questionCount": 336
+    },
+    {
+      "id": "cell_membrane",
+      "label": "细胞膜与物质运输",
+      "category": "细胞生物学",
+      "description": "流动镶嵌模型、膜蛋白、物质跨膜运输（被动/主动/胞吞胞吐）、质壁分离",
+      "relatedModule": "module1",
+      "questionCount": 57
+    },
+    {
+      "id": "organelle",
+      "label": "细胞器",
+      "category": "细胞生物学",
+      "description": "线粒体、叶绿体、内质网、高尔基体、溶酶体等细胞器结构与功能",
+      "relatedModule": "module1",
+      "questionCount": 218
+    },
+    {
+      "id": "cell_cycle",
+      "label": "细胞周期与分裂",
+      "category": "细胞生物学",
+      "description": "细胞周期、有丝分裂、减数分裂、CDK调控、接触抑制",
+      "relatedModule": "module1",
+      "questionCount": 90
+    },
+    {
+      "id": "cell_signal",
+      "label": "细胞信号转导",
+      "category": "细胞生物学",
+      "description": "受体、第二信使、信号级联、G蛋白偶联受体、MAPK、钙信号",
+      "relatedModule": "module1",
+      "questionCount": 154
+    },
+    {
+      "id": "cell_death",
+      "label": "细胞凋亡与死亡",
+      "category": "细胞生物学",
+      "description": "细胞凋亡、程序性坏死、自噬、Caspase、p53 调控",
+      "relatedModule": "module1",
+      "questionCount": 152
+    },
+    {
+      "id": "cell_metabolism",
+      "label": "细胞代谢与能量",
+      "category": "细胞生物学",
+      "description": "细胞代谢网络、线粒体呼吸、ATP、代谢区室化、有氧呼吸",
+      "relatedModule": "module1",
+      "questionCount": 52
+    },
+    {
+      "id": "dna_structure",
+      "label": "DNA 结构",
+      "category": "分子生物学",
+      "description": "双螺旋结构、碱基配对、Chargaff 法则、超螺旋与拓扑异构酶",
+      "relatedModule": "module1",
+      "questionCount": 178
+    },
+    {
+      "id": "replication",
+      "label": "DNA 复制",
+      "category": "分子生物学",
+      "description": "半保留复制、复制叉、引物酶、DNA聚合酶、冈崎片段、端粒",
+      "relatedModule": "module1",
+      "questionCount": 117
+    },
+    {
+      "id": "transcription",
+      "label": "转录与加工",
+      "category": "分子生物学",
+      "description": "RNA聚合酶、启动子、转录因子、mRNA加工、RNA聚合、转录终止",
+      "relatedModule": "module1",
+      "questionCount": 163
+    },
+    {
+      "id": "translation",
+      "label": "翻译",
+      "category": "分子生物学",
+      "description": "核糖体、tRNA、密码子、翻译起始延伸终止、共翻译转运",
+      "relatedModule": "module1",
+      "questionCount": 155
+    },
+    {
+      "id": "gene_regulation",
+      "label": "基因表达调控",
+      "category": "分子生物学",
+      "description": "操纵子模型、转录因子、表观遗传、miRNA、增强子、染色质修饰",
+      "relatedModule": "module1",
+      "questionCount": 238
+    },
+    {
+      "id": "molecular_tech",
+      "label": "分子生物学技术",
+      "category": "分子生物学",
+      "description": "PCR、分子克隆、基因编辑(CRISPR)、重组、电泳、分子生物学实验",
+      "relatedModule": "module1",
+      "questionCount": 104
+    },
+    {
+      "id": "rna_biology",
+      "label": "RNA 生物学",
+      "category": "分子生物学",
+      "description": "RNA干扰、RNA编辑、miRNA、sRNA、RNA聚合相关调控",
+      "relatedModule": "module1",
+      "questionCount": 72
+    },
+    {
+      "id": "enzyme",
+      "label": "酶学",
+      "category": "生物化学",
+      "description": "酶催化机制、米氏动力学、别构调控、竞争性抑制、酶活性",
+      "relatedModule": "module1",
+      "questionCount": 391
+    },
+    {
+      "id": "glycolysis",
+      "label": "糖酵解与糖代谢",
+      "category": "生物化学",
+      "description": "糖酵解、糖原代谢、糖异生、戊糖磷酸途径、糖代谢调控",
+      "relatedModule": "module1",
+      "questionCount": 99
+    },
+    {
+      "id": "krebs_cycle",
+      "label": "三羧酸循环",
+      "category": "生物化学",
+      "description": "柠檬酸/三羧酸循环、回补反应、代谢中间物",
+      "relatedModule": "module1",
+      "questionCount": 24
+    },
+    {
+      "id": "oxidative_phos",
+      "label": "氧化磷酸化",
+      "category": "生物化学",
+      "description": "电子传递链、化学渗透、ATP合酶、解偶联、P/O 比",
+      "relatedModule": "module1",
+      "questionCount": 74
+    },
+    {
+      "id": "lipid_metab",
+      "label": "脂类代谢",
+      "category": "生物化学",
+      "description": "脂肪酸氧化、脂肪合成、脂类代谢、酮体",
+      "relatedModule": "module1",
+      "questionCount": 49
+    },
+    {
+      "id": "amino_acid_metab",
+      "label": "氨基酸与蛋白质代谢",
+      "category": "生物化学",
+      "description": "氨基酸代谢、尿素循环、转氨基、必需氨基酸、蛋白质折叠",
+      "relatedModule": "module1",
+      "questionCount": 169
+    },
+    {
+      "id": "nucleotide_metab",
+      "label": "核酸与核苷酸代谢",
+      "category": "生物化学",
+      "description": "核酸结构、核苷酸代谢、核酸化学组成",
+      "relatedModule": "module1",
+      "questionCount": 74
+    },
+    {
+      "id": "plant_tissue",
+      "label": "植物组织与器官",
+      "category": "植物学",
+      "description": "分生/保护/薄壁/输导组织、根茎叶结构、维管系统",
+      "relatedModule": "module2",
+      "questionCount": 314
+    },
+    {
+      "id": "plant_water_mineral",
+      "label": "植物水分与矿质",
+      "category": "植物学",
+      "description": "水分代谢、蒸腾、矿质元素吸收与运输、矿质营养",
+      "relatedModule": "module2",
+      "questionCount": 31
+    },
+    {
+      "id": "plant_repro",
+      "label": "植物生殖与发育",
+      "category": "植物学",
+      "description": "花、种子与果实、胚与胚乳发育、世代交替、传粉",
+      "relatedModule": "module2",
+      "questionCount": 269
+    },
+    {
+      "id": "plant_classification",
+      "label": "植物分类与演化",
+      "category": "植物学",
+      "description": "植物分类、系统演化、禾本科特征、植物演化",
+      "relatedModule": "module2",
+      "questionCount": 388
+    },
+    {
+      "id": "plant_hormone",
+      "label": "植物激素",
+      "category": "植物学",
+      "description": "生长素、赤霉素、细胞分裂素、乙烯、脱落酸、信号转导",
+      "relatedModule": "module2",
+      "questionCount": 159
+    },
+    {
+      "id": "plant_movement",
+      "label": "植物运动与感知",
+      "category": "植物学",
+      "description": "向性运动、感性运动、光周期、气孔调控、植物运动与感知",
+      "relatedModule": "module2",
+      "questionCount": 122
+    },
+    {
+      "id": "photosynthesis",
+      "label": "光合作用",
+      "category": "植物生理学",
+      "description": "光反应与暗反应、光系统、Calvin循环、光合电子传递与磷酸化",
+      "relatedModule": "module2",
+      "questionCount": 104
+    },
+    {
+      "id": "photorespiration_c4",
+      "label": "光呼吸与 C4 途径",
+      "category": "植物生理学",
+      "description": "光呼吸、C3/C4/CAM 植物、RuBisCO 调控、C4 碳同化",
+      "relatedModule": "module2",
+      "questionCount": 76
+    },
+    {
+      "id": "assimilate_transport",
+      "label": "光合产物运输",
+      "category": "植物生理学",
+      "description": "同化物运输、韧皮部装载、源库关系",
+      "relatedModule": "module2",
+      "questionCount": 128
+    },
+    {
+      "id": "plant_nutrition",
+      "label": "植物营养与固氮",
+      "category": "植物生理学",
+      "description": "氮代谢、固氮作用、矿质营养生理、共生固氮",
+      "relatedModule": "module2",
+      "questionCount": 96
+    },
+    {
+      "id": "plant_respiration",
+      "label": "植物呼吸作用",
+      "category": "植物生理学",
+      "description": "植物呼吸、无氧呼吸、呼吸代谢",
+      "relatedModule": "module2",
+      "questionCount": 15
+    },
+    {
+      "id": "plant_stress",
+      "label": "植物逆境生理",
+      "category": "植物生理学",
+      "description": "盐胁迫、干旱、低温等逆境响应、活性氧、抗氧化",
+      "relatedModule": "module2",
+      "questionCount": 198
+    },
+    {
+      "id": "bacteria",
+      "label": "细菌",
+      "category": "微生物学",
+      "description": "细菌形态结构、革兰氏染色、代谢多样性、细菌运动与转化",
+      "relatedModule": "module2",
+      "questionCount": 419
+    },
+    {
+      "id": "virus",
+      "label": "病毒与噬菌体",
+      "category": "微生物学",
+      "description": "病毒结构、复制周期、溶原/溶菌、噬菌体",
+      "relatedModule": "module2",
+      "questionCount": 50
+    },
+    {
+      "id": "microbial_genetics",
+      "label": "微生物遗传",
+      "category": "微生物学",
+      "description": "细菌遗传系统、转座、质粒、微生物基因调控",
+      "relatedModule": "module2",
+      "questionCount": 98
+    },
+    {
+      "id": "microbial_metabolism",
+      "label": "微生物代谢与培养",
+      "category": "微生物学",
+      "description": "微生物营养代谢、生长曲线、培养、发酵、极端微生物",
+      "relatedModule": "module2",
+      "questionCount": 376
+    },
+    {
+      "id": "microbial_eco",
+      "label": "微生物生态",
+      "category": "微生物学",
+      "description": "微生物组、共生、化学自养、固氮微生物、微生物生态",
+      "relatedModule": "module2",
+      "questionCount": 26
+    },
+    {
+      "id": "antibiotics_resistance",
+      "label": "抗生素与耐药",
+      "category": "微生物学",
+      "description": "抗生素作用机制、耐药性、耐药传播、抗菌药物",
+      "relatedModule": "module2",
+      "questionCount": 96
+    },
+    {
+      "id": "animal_tissue",
+      "label": "动物组织与肌肉",
+      "category": "动物学",
+      "description": "上皮/结缔/肌肉/神经组织、骨骼肌收缩与运动机制、器官系统组成",
+      "relatedModule": "module3",
+      "questionCount": 27
+    },
+    {
+      "id": "immune_system",
+      "label": "免疫系统",
+      "category": "动物学",
+      "description": "固有免疫与适应性免疫、抗体、T/B细胞、补体、比较免疫学",
+      "relatedModule": "module3",
+      "questionCount": 74
+    },
+    {
+      "id": "endocrine",
+      "label": "内分泌系统",
+      "category": "动物学",
+      "description": "激素种类与作用、下丘脑-垂体轴、内分泌调控",
+      "relatedModule": "module3",
+      "questionCount": 6
+    },
+    {
+      "id": "circulatory",
+      "label": "循环系统",
+      "category": "动物学",
+      "description": "心脏、血管、血液循环、凝血、血压调节",
+      "relatedModule": "module3",
+      "questionCount": 102
+    },
+    {
+      "id": "excretory",
+      "label": "排泄与渗透调节",
+      "category": "动物学",
+      "description": "肾脏/肾单位、泌尿系统、排泄与渗透调节、水生/陆生排泄",
+      "relatedModule": "module3",
+      "questionCount": 121
+    },
+    {
+      "id": "animal_diversity",
+      "label": "动物分类与演化",
+      "category": "动物学",
+      "description": "无脊椎/脊椎动物演化、分类特征、体腔演化、节肢动物",
+      "relatedModule": "module3",
+      "questionCount": 805
+    },
+    {
+      "id": "nervous_sys",
+      "label": "神经系统",
+      "category": "动物生理学",
+      "description": "神经元、突触传递、反射、感觉生理、神经调节",
+      "relatedModule": "module3",
+      "questionCount": 180
+    },
+    {
+      "id": "homeostasis",
+      "label": "内环境与稳态",
+      "category": "动物生理学",
+      "description": "内环境、体液调节、血糖/水盐/酸碱平衡、稳态调节",
+      "relatedModule": "module3",
+      "questionCount": 200
+    },
+    {
+      "id": "temperature_reg",
+      "label": "体温调节",
+      "category": "动物生理学",
+      "description": "恒温/变温动物体温调节、产热散热、冬眠",
+      "relatedModule": "module3",
+      "questionCount": 5
+    },
+    {
+      "id": "osmoregulation",
+      "label": "水盐平衡调节",
+      "category": "动物生理学",
+      "description": "肾脏调节、渗透压调节、抗利尿激素、水平衡",
+      "relatedModule": "module3",
+      "questionCount": 10
+    },
+    {
+      "id": "respiratory_sys",
+      "label": "呼吸与循环生理",
+      "category": "动物生理学",
+      "description": "呼吸调控、气体运输(CO₂/O₂)、呼吸系统生理",
+      "relatedModule": "module3",
+      "questionCount": 48
+    },
+    {
+      "id": "digestive_sys",
+      "label": "消化与营养",
+      "category": "动物生理学",
+      "description": "消化系统结构、消化液与消化酶、营养物质的吸收、胃肠激素",
+      "relatedModule": "module3",
+      "questionCount": 49
+    },
+    {
+      "id": "sensory_physio",
+      "label": "感觉与运动生理",
+      "category": "动物生理学",
+      "description": "感觉生理、肌肉、内分泌与应激、激素分级调节",
+      "relatedModule": "module3",
+      "questionCount": 36
+    },
+    {
+      "id": "mendel",
+      "label": "孟德尔遗传",
+      "category": "遗传学",
+      "description": "分离定律、自由组合、显隐性、基因互作、上位效应",
+      "relatedModule": "module4",
+      "questionCount": 256
+    },
+    {
+      "id": "linkage",
+      "label": "连锁与交换",
+      "category": "遗传学",
+      "description": "连锁遗传、重组率、三点测交、基因定位、连锁分析",
+      "relatedModule": "module4",
+      "questionCount": 83
+    },
+    {
+      "id": "sex_linkage",
+      "label": "伴性遗传与性别决定",
+      "category": "遗传学",
+      "description": "X/Y连锁、剂量补偿、巴氏小体、性别决定、伴性遗传概率",
+      "relatedModule": "module4",
+      "questionCount": 55
+    },
+    {
+      "id": "gene_mutation",
+      "label": "基因突变",
+      "category": "遗传学",
+      "description": "碱基替换/移码、突变率与修复、基因突变机制",
+      "relatedModule": "module4",
+      "questionCount": 106
+    },
+    {
+      "id": "chromosome_var",
+      "label": "染色体变异",
+      "category": "遗传学",
+      "description": "缺失/重复/倒位/易位、数目变异、多倍体、染色体变异",
+      "relatedModule": "module4",
+      "questionCount": 33
+    },
+    {
+      "id": "population_gen",
+      "label": "群体遗传学",
+      "category": "遗传学",
+      "description": "Hardy-Weinberg平衡、遗传漂变、基因流、近交、选择",
+      "relatedModule": "module4",
+      "questionCount": 63
+    },
+    {
+      "id": "quantitative_gen",
+      "label": "数量遗传与分子标记",
+      "category": "遗传学",
+      "description": "数量性状、遗传力、分子标记、基因芯片、遗传力",
+      "relatedModule": "module4",
+      "questionCount": 52
+    },
+    {
+      "id": "natural_selection",
+      "label": "自然选择与适应",
+      "category": "演化生物学",
+      "description": "自然选择、适应、性选择、适应景观、选择压力检测",
+      "relatedModule": "module4",
+      "questionCount": 192
+    },
+    {
+      "id": "genetic_drift",
+      "label": "遗传漂变与中性进化",
+      "category": "演化生物学",
+      "description": "遗传漂变、瓶颈效应、奠基者效应、中性学说、近中性理论",
+      "relatedModule": "module4",
+      "questionCount": 94
+    },
+    {
+      "id": "speciation",
+      "label": "物种形成",
+      "category": "演化生物学",
+      "description": "物种形成机制、生殖隔离、多倍体成种、染色体倒位与物种形成",
+      "relatedModule": "module4",
+      "questionCount": 75
+    },
+    {
+      "id": "molecular_evo",
+      "label": "分子演化",
+      "category": "演化生物学",
+      "description": "分子钟、同源基因、比较基因组、正选择检测、分子演化",
+      "relatedModule": "module4",
+      "questionCount": 120
+    },
+    {
+      "id": "phylogeny",
+      "label": "系统发育",
+      "category": "演化生物学",
+      "description": "系统发育树、系统发育方法、聚类、长枝吸引",
+      "relatedModule": "module4",
+      "questionCount": 73
+    },
+    {
+      "id": "macroevolution",
+      "label": "大演化与生命起源",
+      "category": "演化生物学",
+      "description": "间断平衡、集群灭绝、关键创新、生命起源、大演化",
+      "relatedModule": "module4",
+      "questionCount": 72
+    },
+    {
+      "id": "population_eco",
+      "label": "种群生态",
+      "category": "生态学",
+      "description": "种群增长模型、逻辑斯谛、r/K选择、种群数量调节",
+      "relatedModule": "module3",
+      "questionCount": 290
+    },
+    {
+      "id": "community_eco",
+      "label": "群落生态",
+      "category": "生态学",
+      "description": "种间关系、生态位、群落演替、群落结构、竞争排斥",
+      "relatedModule": "module3",
+      "questionCount": 149
+    },
+    {
+      "id": "ecosystem",
+      "label": "生态系统",
+      "category": "生态学",
+      "description": "生态系统结构、能量流动、营养级、食物网",
+      "relatedModule": "module3",
+      "questionCount": 171
+    },
+    {
+      "id": "biogeochemical",
+      "label": "物质循环",
+      "category": "生态学",
+      "description": "碳/氮/磷循环、水体富营养化、物质循环",
+      "relatedModule": "module3",
+      "questionCount": 55
+    },
+    {
+      "id": "biodiversity",
+      "label": "生物多样性",
+      "category": "生态学",
+      "description": "物种多样性测度、岛屿生物地理学、物种-面积关系、保护",
+      "relatedModule": "module3",
+      "questionCount": 123
+    },
+    {
+      "id": "animal_behavior",
+      "label": "动物行为学",
+      "category": "生态学",
+      "description": "本能与学习行为、定向与通讯、领域与社会行为、行为适应与进化",
+      "relatedModule": "module3",
+      "questionCount": 53
+    },
+    {
+      "id": "behavioral_eco",
+      "label": "行为生态与生态应用",
+      "category": "生态学",
+      "description": "动物行为生态、生态恢复、全球变化、景观生态、污染生态",
+      "relatedModule": "module3",
+      "questionCount": 97
+    },
+    {
+      "id": "sequence_alignment",
+      "label": "序列比对",
+      "category": "生物信息学",
+      "description": "BLAST、序列比对、比对算法、同源检索",
+      "relatedModule": "module1",
+      "questionCount": 53
+    },
+    {
+      "id": "sequencing_tech",
+      "label": "测序技术",
+      "category": "生物信息学",
+      "description": "高通量测序、单细胞测序、宏基因组测序、测序技术",
+      "relatedModule": "module1",
+      "questionCount": 243
+    },
+    {
+      "id": "genome_assembly",
+      "label": "基因组组装与注释",
+      "category": "生物信息学",
+      "description": "基因组组装、基因组注释、结构变异、功能基因组学",
+      "relatedModule": "module1",
+      "questionCount": 97
+    },
+    {
+      "id": "transcriptomics",
+      "label": "转录组与表达分析",
+      "category": "生物信息学",
+      "description": "RNA-seq分析、基因表达聚类、共表达网络、差异表达",
+      "relatedModule": "module1",
+      "questionCount": 120
+    },
+    {
+      "id": "genomics_comp",
+      "label": "比较与功能基因组",
+      "category": "生物信息学",
+      "description": "比较基因组、GWAS、结构域、系统发生网络、功能基因组",
+      "relatedModule": "module1",
+      "questionCount": 49
+    },
+    {
+      "id": "bio_databases",
+      "label": "生物数据库与工具",
+      "category": "生物信息学",
+      "description": "生物数据库、分子模拟、深度学习与生物学、生物信息工具",
+      "relatedModule": "module1",
+      "questionCount": 364
+    },
+    {
+      "id": "genetic_engineering",
+      "label": "基因工程",
+      "category": "生物技术",
+      "description": "基因工程操作、载体构建、转基因、目的基因表达",
+      "relatedModule": "module4",
+      "questionCount": 29
+    },
+    {
+      "id": "plant_biotech",
+      "label": "植物生物技术",
+      "category": "生物技术",
+      "description": "植物组织培养、全能性、植物转基因、育种技术",
+      "relatedModule": "module4",
+      "questionCount": 191
+    }
   ],
   "edges": [
-    { "source": "cell_structure",  "target": "cell_membrane" },
-    { "source": "cell_structure",  "target": "organelle" },
-    { "source": "cell_structure",  "target": "cell_cycle" },
-    { "source": "cell_membrane",   "target": "cell_signal" },
-    { "source": "cell_signal",     "target": "cell_apoptosis" },
-    { "source": "organelle",       "target": "cell_cycle" },
-    { "source": "mendel",          "target": "linkage" },
-    { "source": "mendel",          "target": "sex_linkage" },
-    { "source": "linkage",         "target": "gene_mutation" },
-    { "source": "gene_mutation",   "target": "chromosome_var" },
-    { "source": "gene_mutation",   "target": "population_gen" },
-    { "source": "chromosome_var",  "target": "population_gen" },
-    { "source": "dna_structure",   "target": "replication" },
-    { "source": "dna_structure",   "target": "transcription" },
-    { "source": "transcription",   "target": "translation" },
-    { "source": "transcription",   "target": "gene_regulation" },
-    { "source": "replication",     "target": "pcr" },
-    { "source": "dna_structure",   "target": "pcr" },
-    { "source": "population_eco",  "target": "community" },
-    { "source": "community",       "target": "ecosystem" },
-    { "source": "ecosystem",       "target": "biogeochemical" },
-    { "source": "ecosystem",       "target": "biodiversity" },
-    { "source": "population_eco",  "target": "biodiversity" },
-    { "source": "animal_tissue",   "target": "nervous_sys" },
-    { "source": "animal_tissue",   "target": "immune_sys" },
-    { "source": "animal_tissue",   "target": "endocrine" },
-    { "source": "animal_tissue",   "target": "circulatory" },
-    { "source": "nervous_sys",     "target": "endocrine" },
-    { "source": "plant_tissue",    "target": "photosynthesis" },
-    { "source": "plant_tissue",    "target": "plant_transport" },
-    { "source": "plant_hormone",   "target": "plant_transport" },
-    { "source": "enzyme",          "target": "glycolysis" },
-    { "source": "glycolysis",      "target": "krebs_cycle" },
-    { "source": "krebs_cycle",     "target": "oxidative_phos" },
-    { "source": "enzyme",          "target": "amino_acid" },
-    { "source": "glycolysis",      "target": "amino_acid" },
-    { "source": "bacteria",        "target": "microbial_eco" },
-    { "source": "virus",           "target": "microbial_eco" },
-    { "source": "cell_membrane",   "target": "cell_signal" },
-    { "source": "dna_structure",   "target": "mendel" },
-    { "source": "dna_structure",   "target": "gene_mutation" },
-    { "source": "gene_mutation",   "target": "gene_regulation" },
-    { "source": "organelle",       "target": "photosynthesis" },
-    { "source": "organelle",       "target": "oxidative_phos" },
-    { "source": "cell_signal",     "target": "nervous_sys" },
-    { "source": "cell_signal",     "target": "endocrine" },
-    { "source": "cell_signal",     "target": "immune_sys" },
-    { "source": "enzyme",          "target": "replication" },
-    { "source": "enzyme",          "target": "transcription" },
-    { "source": "bacteria",        "target": "ecosystem" },
-    { "source": "virus",           "target": "immune_sys" }
+    {
+      "source": "cell_structure",
+      "target": "cell_membrane"
+    },
+    {
+      "source": "cell_structure",
+      "target": "organelle"
+    },
+    {
+      "source": "cell_membrane",
+      "target": "cell_signal"
+    },
+    {
+      "source": "organelle",
+      "target": "cell_metabolism"
+    },
+    {
+      "source": "organelle",
+      "target": "cell_cycle"
+    },
+    {
+      "source": "cell_cycle",
+      "target": "cell_death"
+    },
+    {
+      "source": "cell_signal",
+      "target": "cell_death"
+    },
+    {
+      "source": "cell_signal",
+      "target": "nervous_sys"
+    },
+    {
+      "source": "cell_signal",
+      "target": "endocrine"
+    },
+    {
+      "source": "dna_structure",
+      "target": "replication"
+    },
+    {
+      "source": "dna_structure",
+      "target": "transcription"
+    },
+    {
+      "source": "replication",
+      "target": "transcription"
+    },
+    {
+      "source": "transcription",
+      "target": "translation"
+    },
+    {
+      "source": "transcription",
+      "target": "rna_biology"
+    },
+    {
+      "source": "gene_regulation",
+      "target": "transcription"
+    },
+    {
+      "source": "gene_regulation",
+      "target": "rna_biology"
+    },
+    {
+      "source": "molecular_tech",
+      "target": "replication"
+    },
+    {
+      "source": "molecular_tech",
+      "target": "sequence_alignment"
+    },
+    {
+      "source": "dna_structure",
+      "target": "nucleotide_metab"
+    },
+    {
+      "source": "enzyme",
+      "target": "glycolysis"
+    },
+    {
+      "source": "glycolysis",
+      "target": "krebs_cycle"
+    },
+    {
+      "source": "krebs_cycle",
+      "target": "oxidative_phos"
+    },
+    {
+      "source": "glycolysis",
+      "target": "lipid_metab"
+    },
+    {
+      "source": "glycolysis",
+      "target": "amino_acid_metab"
+    },
+    {
+      "source": "oxidative_phos",
+      "target": "cell_metabolism"
+    },
+    {
+      "source": "enzyme",
+      "target": "amino_acid_metab"
+    },
+    {
+      "source": "nucleotide_metab",
+      "target": "replication"
+    },
+    {
+      "source": "plant_tissue",
+      "target": "plant_water_mineral"
+    },
+    {
+      "source": "plant_tissue",
+      "target": "plant_repro"
+    },
+    {
+      "source": "plant_repro",
+      "target": "plant_classification"
+    },
+    {
+      "source": "plant_hormone",
+      "target": "plant_movement"
+    },
+    {
+      "source": "plant_hormone",
+      "target": "plant_stress"
+    },
+    {
+      "source": "plant_repro",
+      "target": "cell_cycle"
+    },
+    {
+      "source": "plant_water_mineral",
+      "target": "photosynthesis"
+    },
+    {
+      "source": "plant_tissue",
+      "target": "photosynthesis"
+    },
+    {
+      "source": "photosynthesis",
+      "target": "assimilate_transport"
+    },
+    {
+      "source": "photosynthesis",
+      "target": "photorespiration_c4"
+    },
+    {
+      "source": "plant_nutrition",
+      "target": "photosynthesis"
+    },
+    {
+      "source": "plant_nutrition",
+      "target": "microbial_eco"
+    },
+    {
+      "source": "plant_stress",
+      "target": "photosynthesis"
+    },
+    {
+      "source": "photosynthesis",
+      "target": "oxidative_phos"
+    },
+    {
+      "source": "plant_respiration",
+      "target": "glycolysis"
+    },
+    {
+      "source": "bacteria",
+      "target": "microbial_genetics"
+    },
+    {
+      "source": "bacteria",
+      "target": "microbial_metabolism"
+    },
+    {
+      "source": "bacteria",
+      "target": "microbial_eco"
+    },
+    {
+      "source": "virus",
+      "target": "microbial_genetics"
+    },
+    {
+      "source": "virus",
+      "target": "immune_system"
+    },
+    {
+      "source": "microbial_eco",
+      "target": "plant_nutrition"
+    },
+    {
+      "source": "bacteria",
+      "target": "antibiotics_resistance"
+    },
+    {
+      "source": "bacteria",
+      "target": "cell_structure"
+    },
+    {
+      "source": "animal_tissue",
+      "target": "immune_system"
+    },
+    {
+      "source": "animal_tissue",
+      "target": "endocrine"
+    },
+    {
+      "source": "animal_tissue",
+      "target": "circulatory"
+    },
+    {
+      "source": "animal_tissue",
+      "target": "excretory"
+    },
+    {
+      "source": "animal_tissue",
+      "target": "nervous_sys"
+    },
+    {
+      "source": "animal_tissue",
+      "target": "animal_diversity"
+    },
+    {
+      "source": "circulatory",
+      "target": "respiratory_sys"
+    },
+    {
+      "source": "excretory",
+      "target": "osmoregulation"
+    },
+    {
+      "source": "animal_tissue",
+      "target": "digestive_sys"
+    },
+    {
+      "source": "digestive_sys",
+      "target": "excretory"
+    },
+    {
+      "source": "digestive_sys",
+      "target": "homeostasis"
+    },
+    {
+      "source": "enzyme",
+      "target": "digestive_sys"
+    },
+    {
+      "source": "digestive_sys",
+      "target": "circulatory"
+    },
+    {
+      "source": "nervous_sys",
+      "target": "sensory_physio"
+    },
+    {
+      "source": "nervous_sys",
+      "target": "homeostasis"
+    },
+    {
+      "source": "endocrine",
+      "target": "homeostasis"
+    },
+    {
+      "source": "endocrine",
+      "target": "temperature_reg"
+    },
+    {
+      "source": "homeostasis",
+      "target": "osmoregulation"
+    },
+    {
+      "source": "homeostasis",
+      "target": "temperature_reg"
+    },
+    {
+      "source": "immune_system",
+      "target": "sensory_physio"
+    },
+    {
+      "source": "mendel",
+      "target": "linkage"
+    },
+    {
+      "source": "mendel",
+      "target": "sex_linkage"
+    },
+    {
+      "source": "linkage",
+      "target": "gene_mutation"
+    },
+    {
+      "source": "linkage",
+      "target": "chromosome_var"
+    },
+    {
+      "source": "gene_mutation",
+      "target": "chromosome_var"
+    },
+    {
+      "source": "gene_mutation",
+      "target": "population_gen"
+    },
+    {
+      "source": "population_gen",
+      "target": "genetic_drift"
+    },
+    {
+      "source": "quantitative_gen",
+      "target": "population_gen"
+    },
+    {
+      "source": "chromosome_var",
+      "target": "speciation"
+    },
+    {
+      "source": "gene_mutation",
+      "target": "molecular_tech"
+    },
+    {
+      "source": "mendel",
+      "target": "translation"
+    },
+    {
+      "source": "natural_selection",
+      "target": "genetic_drift"
+    },
+    {
+      "source": "natural_selection",
+      "target": "speciation"
+    },
+    {
+      "source": "genetic_drift",
+      "target": "molecular_evo"
+    },
+    {
+      "source": "molecular_evo",
+      "target": "phylogeny"
+    },
+    {
+      "source": "phylogeny",
+      "target": "genomics_comp"
+    },
+    {
+      "source": "speciation",
+      "target": "macroevolution"
+    },
+    {
+      "source": "natural_selection",
+      "target": "population_gen"
+    },
+    {
+      "source": "natural_selection",
+      "target": "behavioral_eco"
+    },
+    {
+      "source": "population_eco",
+      "target": "community_eco"
+    },
+    {
+      "source": "community_eco",
+      "target": "ecosystem"
+    },
+    {
+      "source": "ecosystem",
+      "target": "biogeochemical"
+    },
+    {
+      "source": "ecosystem",
+      "target": "biodiversity"
+    },
+    {
+      "source": "population_eco",
+      "target": "biodiversity"
+    },
+    {
+      "source": "animal_behavior",
+      "target": "behavioral_eco"
+    },
+    {
+      "source": "animal_behavior",
+      "target": "nervous_sys"
+    },
+    {
+      "source": "animal_behavior",
+      "target": "natural_selection"
+    },
+    {
+      "source": "animal_behavior",
+      "target": "population_eco"
+    },
+    {
+      "source": "community_eco",
+      "target": "behavioral_eco"
+    },
+    {
+      "source": "behavioral_eco",
+      "target": "animal_diversity"
+    },
+    {
+      "source": "biodiversity",
+      "target": "plant_classification"
+    },
+    {
+      "source": "sequence_alignment",
+      "target": "sequencing_tech"
+    },
+    {
+      "source": "sequencing_tech",
+      "target": "genome_assembly"
+    },
+    {
+      "source": "sequencing_tech",
+      "target": "transcriptomics"
+    },
+    {
+      "source": "genome_assembly",
+      "target": "genomics_comp"
+    },
+    {
+      "source": "genomics_comp",
+      "target": "phylogeny"
+    },
+    {
+      "source": "transcriptomics",
+      "target": "bio_databases"
+    },
+    {
+      "source": "sequence_alignment",
+      "target": "bio_databases"
+    },
+    {
+      "source": "sequencing_tech",
+      "target": "molecular_tech"
+    },
+    {
+      "source": "genetic_engineering",
+      "target": "plant_biotech"
+    },
+    {
+      "source": "genetic_engineering",
+      "target": "molecular_tech"
+    },
+    {
+      "source": "plant_biotech",
+      "target": "plant_repro"
+    },
+    {
+      "source": "microbial_metabolism",
+      "target": "genetic_engineering"
+    },
+    {
+      "source": "cell_metabolism",
+      "target": "oxidative_phos"
+    }
   ]
 }

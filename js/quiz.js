@@ -122,6 +122,41 @@ function generateNewPaper() {
   }
 }
 
+/**
+ * Issue #10：解析题目稳定 bioID（与 practice.js getQuestionBioId 同一算法）。
+ * 优先级：q.bioId > q.id（分片题库加载时已注入）> 旧 hash 复算并映射。
+ * 保证本地收藏/错题引用稳定，刷新、题库增删后不漂移。
+ */
+function getQuestionBioId(q) {
+  if (!q) return '';
+  // 自愈：若 bioID 映射表尚未加载，触发后台加载（不阻塞返回）
+  if (!window.bioIdMap && typeof window.loadBioIdMap === 'function') {
+    try { window.loadBioIdMap(); } catch (e) {}
+  }
+  var raw = q.bioId || q.id;
+  if (raw === undefined || raw === null || raw === '') {
+    // 旧 ID 复算（自包含，避免依赖 storage.js；算法与 generate-bio-shards.js 一致）
+    var hashFn = (typeof window.hashQuestionId === 'function')
+      ? window.hashQuestionId
+      : function (str) {
+          var h = 0;
+          for (var i = 0; i < str.length; i++) {
+            h = ((h << 5) - h) + str.charCodeAt(i);
+            h = h & h;
+          }
+          return Math.abs(h);
+        };
+    raw = String(hashFn((q.question || '') + (q.concept || '')));
+  }
+  if (typeof window.resolveQuestionBioId === 'function') {
+    return String(window.resolveQuestionBioId(raw));
+  }
+  return String(raw);
+}
+
+// 暴露到 window：浏览器经典脚本下本就为全局，显式暴露使 jsdom/单测能调用真实实现
+window.getQuestionBioId = getQuestionBioId;
+
 function generateBasicPaper() {
   if (!dataLoaded || QData.length === 0) {
     alert('基础知识题库加载中，请稍候...');
@@ -437,19 +472,25 @@ function renderPaper() {
         if (typeof navigateTo === 'function') navigateTo('/knowledge-graph');
       } else if (action === 'wrongbook') {
         var q = currentPaper[parseInt(qidx)];
-        if (q && typeof window.addWrongQuestion === 'function') {
-          window.addWrongQuestion(q);
-          this.textContent = '✓ 已加入';
-          this.disabled = true;
-        } else if (q) {
-          // 兜底：直接写入 localStorage
-          try {
-            var arr = JSON.parse(localStorage.getItem('bioquest_wrongbook_concepts') || '[]');
-            arr.push({ id: q.id || ('q_' + Date.now()), question: q.question, subject: q.subject, ts: Date.now() });
-            localStorage.setItem('bioquest_wrongbook_concepts', JSON.stringify(arr.slice(-200)));
+        if (q) {
+          // Issue #10：统一使用题目稳定 bioID，避免云端/本地错题引用漂移
+          var qBio = getQuestionBioId(q);
+          if (typeof window.addWrongQuestion === 'function') {
+            // supabase-client 云端版签名 addWrongQuestion(question)：
+            // 把 bioID 挂到 question_id，使 review_cards 引用与题库一致
+            window.addWrongQuestion(Object.assign({}, q, { question_id: qBio }));
             this.textContent = '✓ 已加入';
             this.disabled = true;
-          } catch (e) {}
+          } else {
+            // 兜底：直接写入 localStorage（同样以稳定 bioID 为 id，key 与 storage.js KEYS.WRONG_QUESTIONS 一致）
+            try {
+              var arr = JSON.parse(localStorage.getItem('bioquest_wrong_questions') || '[]');
+              arr.push({ qId: qBio, questionText: q.question, subject: q.subject, timestamp: Date.now(), wrongCount: 1 });
+              localStorage.setItem('bioquest_wrong_questions', JSON.stringify(arr.slice(-200)));
+              this.textContent = '✓ 已加入';
+              this.disabled = true;
+            } catch (e) {}
+          }
         }
       } else if (action === 'card') {
         // 跳转到卡片页，并通过 sessionStorage 传递概念
@@ -610,6 +651,12 @@ function submitPaper() {
 
 document.addEventListener('DOMContentLoaded', async () => {
   await loadQuizData();
+
+  // Issue #10：确保 bioID 映射表已加载（本页未预加载分片，需手动触发）。
+  // 使错题本/收藏里的旧 hash ID 能解析为稳定 bioID（data/bioid-map.json 体积小、毫秒级加载）。
+  if (typeof window.loadBioIdMap === 'function' && !window.bioIdMap) {
+    try { window.loadBioIdMap(); } catch (e) {}
+  }
 
   const btn = document.getElementById('quizCrawlBtn');
   if (btn) {

@@ -267,7 +267,8 @@ async function syncToCloud() {
       };
     }),
     favorites: localFavs.map(function(f) {
-      return { question_id: typeof f === 'number' ? f : 0 };
+      // Issue #10：收藏 ID 已统一为稳定 bioID 字符串，原样上传
+      return { question_id: String(f) };
     }),
     records: localRecords.slice(-100)
   });

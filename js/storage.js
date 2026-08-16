@@ -61,6 +61,99 @@ function hashQuestionId(str) {
 window.hashQuestionId = hashQuestionId;
 
 /**
+ * Issue #10：解析题目稳定 bioID
+ *   - 已是 bioID（BQ-…）原样返回；
+ *   - 旧 hash/数字 ID 通过 window.bioIdMap（bioid-map.json）映射为 bioID；
+ *   - 无法解析则原样返回（回退逻辑由调用方保证）。
+ */
+function resolveQuestionBioId(id) {
+  if (id === undefined || id === null || id === '') return id;
+  var s = String(id);
+  if (/^BQ-[A-Za-z0-9]+-[0-9a-f]{12}$/.test(s)) return s;
+  if (window.bioIdMap && Object.prototype.hasOwnProperty.call(window.bioIdMap, s)) {
+    return window.bioIdMap[s];
+  }
+  return s;
+}
+window.resolveQuestionBioId = window.resolveQuestionBioId || resolveQuestionBioId;
+
+/**
+ * Issue #10：将旧 hash/数字 ID 引用的本地数据迁移到稳定 bioID。
+ * 覆盖 favorites（ID 数组）、wrong_questions（{qId}）、records（questions[].questionId/.id）。
+ * 幂等：已迁移项（BQ-…）保持不变，重复调用安全。
+ * 由 loader.js 在 bioid-map.json 加载就绪后触发。
+ * @returns {number} 发生迁移的数据类别数（0 = 无需迁移）
+ */
+function migrateLocalDataToBioId() {
+  var map = window.bioIdMap;
+  if (!map || typeof map !== 'object') return 0;
+  var resolve = window.resolveQuestionBioId || resolveQuestionBioId;
+  var migrated = 0;
+
+  // favorites：旧 hash/数字 ID -> bioID
+  var favs = safeGetJSON(KEYS.FAVORITES, []);
+  if (Array.isArray(favs)) {
+    var newFavs = favs.map(function (id) { return resolve(id); });
+    if (JSON.stringify(newFavs) !== JSON.stringify(favs)) {
+      safeSetJSON(KEYS.FAVORITES, newFavs);
+      migrated++;
+    }
+  }
+
+  // wrong_questions：{ qId: 旧ID } -> bioID
+  var wrongs = safeGetJSON(KEYS.WRONG_QUESTIONS, []);
+  if (Array.isArray(wrongs)) {
+    var wrongChanged = false;
+    for (var i = 0; i < wrongs.length; i++) {
+      if (wrongs[i] && wrongs[i].qId) {
+        var wBio = resolve(wrongs[i].qId);
+        if (wBio !== String(wrongs[i].qId)) {
+          wrongs[i].qId = wBio;
+          wrongChanged = true;
+        }
+      }
+    }
+    if (wrongChanged) {
+      safeSetJSON(KEYS.WRONG_QUESTIONS, wrongs);
+      migrated++;
+    }
+  }
+
+  // records：questions[].questionId/.id -> bioID
+  var records = safeGetJSON(KEYS.RECORDS, []);
+  if (Array.isArray(records)) {
+    var recChanged = false;
+    for (var r = 0; r < records.length; r++) {
+      var qs = records[r] && records[r].questions;
+      if (!Array.isArray(qs)) continue;
+      for (var q = 0; q < qs.length; q++) {
+        var item = qs[q];
+        if (!item) continue;
+        var oldRef = item.questionId || item.id;
+        if (oldRef) {
+          var rBio = resolve(oldRef);
+          if (rBio !== String(oldRef)) {
+            if (item.questionId !== undefined) item.questionId = rBio;
+            else item.id = rBio;
+            recChanged = true;
+          }
+        }
+      }
+    }
+    if (recChanged) {
+      safeSetJSON(KEYS.RECORDS, records);
+      migrated++;
+    }
+  }
+
+  if (migrated > 0) {
+    console.info('[BioQuest Storage] 已迁移 ' + migrated + ' 类本地数据到稳定 bioID');
+  }
+  return migrated;
+}
+window.migrateLocalDataToBioId = migrateLocalDataToBioId;
+
+/**
  * 获取设备 ID（唯一标识）
  */
 function getDeviceId() {
@@ -211,6 +304,7 @@ function clearRecords() {
 
 function toggleFavorite(qId) {
   if (!qId) return false;
+  qId = (window.resolveQuestionBioId || resolveQuestionBioId)(qId);
 
   var favorites = safeGetJSON(KEYS.FAVORITES, []);
   var index = favorites.indexOf(qId);
@@ -235,27 +329,26 @@ function getFavorites() {
 
 function isFavorite(qId) {
   if (!qId) return false;
+  // Issue #10：与 toggleFavorite 一致，先解析为稳定 bioID 再比对，避免旧 ID 失配
+  qId = (window.resolveQuestionBioId || resolveQuestionBioId)(qId);
   var favorites = safeGetJSON(KEYS.FAVORITES, []);
   return favorites.includes(qId);
 }
 
 function _syncFavoriteToSupabase(qId, isFav) {
   if (typeof window.isLoggedIn !== 'function' || !window.isLoggedIn()) return;
-  var numId = parseInt(qId);
-  if (isNaN(numId)) {
-    numId = hashQuestionId(String(qId));
-  }
+  var bioId = (window.resolveQuestionBioId || resolveQuestionBioId)(qId);
   if (isFav) {
     if (typeof window.saveFavorite === 'function') {
-      window.saveFavorite(numId, 1, '', '');
+      window.saveFavorite(bioId, 1, '', '');
     } else {
-      saveFavorite(numId, 1, '', '');
+      saveFavorite(bioId, 1, '', '');
     }
   } else {
     if (typeof window.deleteFavorite === 'function') {
-      window.deleteFavorite(numId);
+      window.deleteFavorite(bioId);
     } else {
-      deleteFavorite(numId);
+      deleteFavorite(bioId);
     }
   }
 }
@@ -266,6 +359,7 @@ function _syncFavoriteToSupabase(qId, isFav) {
 
 function addWrongQuestion(qId, module, questionText, fullQuestion) {
   if (!qId) return false;
+  qId = (window.resolveQuestionBioId || resolveQuestionBioId)(qId);
   module = module || 'general';
   questionText = questionText || '';
 
@@ -318,6 +412,7 @@ function getWrongQuestions(options) {
 
 function removeWrongQuestion(qId) {
   if (!qId) return false;
+  qId = (window.resolveQuestionBioId || resolveQuestionBioId)(qId);
 
   var wrongQuestions = safeGetJSON(KEYS.WRONG_QUESTIONS, []);
   var index = -1;
@@ -333,14 +428,10 @@ function removeWrongQuestion(qId) {
   safeSetJSON(KEYS.WRONG_QUESTIONS, wrongQuestions);
 
   if (window.isLoggedIn && window.isLoggedIn()) {
-    var numId = parseInt(qId);
-    if (isNaN(numId)) {
-      numId = hashQuestionId(String(qId));
-    }
     if (typeof window.deleteWrongQuestion === 'function') {
-      window.deleteWrongQuestion(numId);
+      window.deleteWrongQuestion(qId);
     } else {
-      deleteWrongQuestion(numId);
+      deleteWrongQuestion(qId);
     }
   }
 
@@ -349,10 +440,7 @@ function removeWrongQuestion(qId) {
 
 function _syncWrongToSupabase(qId, module, questionText, wrongCount) {
   if (typeof window.isLoggedIn !== 'function' || !window.isLoggedIn()) return;
-  var numId = parseInt(qId);
-  if (isNaN(numId)) {
-    numId = hashQuestionId(String(qId));
-  }
+  qId = (window.resolveQuestionBioId || resolveQuestionBioId)(qId);
 
   // 尝试获取完整题目对象（含选项、答案等）
   var wrongQuestions = safeGetJSON(KEYS.WRONG_QUESTIONS, []);
@@ -365,7 +453,7 @@ function _syncWrongToSupabase(qId, module, questionText, wrongCount) {
   }
 
   var payload = {
-    question_id: numId,
+    question_id: qId,
     module_num: parseInt(module) || 1,
     question_text: questionText || '',
     subject: '',

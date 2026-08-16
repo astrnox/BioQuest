@@ -32,12 +32,18 @@
     '动物学':     { fill: '#c45a7a', stroke: '#a43a5a', bg: 'rgba(196,90,122,0.12)', text: '#a43a5a' },
     '植物学':     { fill: '#5aaa5a', stroke: '#3a8a3a', bg: 'rgba(90,170,90,0.12)', text: '#3a8a3a' },
     '生物化学':   { fill: '#c49a4a', stroke: '#a47a2a', bg: 'rgba(196,154,74,0.12)', text: '#a47a2a' },
-    '微生物学':   { fill: '#4aaac4', stroke: '#2a8aa4', bg: 'rgba(74,170,196,0.12)', text: '#2a8aa4' }
+    '微生物学':   { fill: '#4aaac4', stroke: '#2a8aa4', bg: 'rgba(74,170,196,0.12)', text: '#2a8aa4' },
+    '植物生理学': { fill: '#5a9a4a', stroke: '#3a7a2a', bg: 'rgba(90,154,74,0.12)', text: '#3a7a2a' },
+    '动物生理学': { fill: '#c45a5a', stroke: '#a43a3a', bg: 'rgba(196,90,90,0.12)', text: '#a43a3a' },
+    '演化生物学': { fill: '#9a4ac4', stroke: '#7a2aa4', bg: 'rgba(154,74,196,0.12)', text: '#7a2aa4' },
+    '生物信息学': { fill: '#4ac4c4', stroke: '#2aa4a4', bg: 'rgba(74,196,196,0.12)', text: '#2aa4a4' },
+    '生物技术':   { fill: '#c4a44a', stroke: '#a4842a', bg: 'rgba(196,164,74,0.12)', text: '#a4842a' }
   };
 
   /* ============================================================
-   * 知识图谱数据：约 38 个核心概念节点，覆盖 CBO 竞赛大纲
+   * 知识图谱数据：80 个考点节点（13 学科 / 114 条关联边），覆盖 CBO 竞赛大纲
    * 修复 P1-2：数据外移到 data/knowledge-graph.json，运行时异步加载
+   * 修复 Issue #10：节点与题库分片 tag 同源（scripts/bio-topic-schema.js）
    * ============================================================ */
   var GRAPH_NODES = [];   // 将由 _loadGraphData() 异步填充
   var GRAPH_EDGES = [];

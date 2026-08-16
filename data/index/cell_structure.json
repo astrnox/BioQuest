@@ -1,0 +1,3772 @@
+{
+ "BQ-cell_structure-42482f7879a8": {
+  "tags": [
+   "cell_structure",
+   "module_1",
+   "细胞生物学",
+   "原核细胞与真核细胞",
+   "high_school"
+  ],
+  "diff": "basic",
+  "len": 16,
+  "src": "cell_structure",
+  "year": null,
+  "module": "module_1"
+ },
+ "BQ-cell_structure-daa6e106848d": {
+  "tags": [
+   "cell_structure",
+   "module_1",
+   "细胞生物学",
+   "细胞结构",
+   "高考"
+  ],
+  "diff": "basic",
+  "len": 15,
+  "src": "cell_structure",
+  "year": null,
+  "module": "module_1"
+ },
+ "BQ-cell_structure-8ddc7d0b6c85": {
+  "tags": [
+   "cell_structure",
+   "module_1",
+   "细胞生物学",
+   "细胞学说",
+   "high_school"
+  ],
+  "diff": "basic",
+  "len": 22,
+  "src": "cell_structure",
+  "year": null,
+  "module": "module_1"
+ },
+ "BQ-cell_structure-cf8c08b023cc": {
+  "tags": [
+   "cell_structure",
+   "module_1",
+   "细胞生物学",
+   "细胞学说",
+   "high_school"
+  ],
+  "diff": "basic",
+  "len": 16,
+  "src": "cell_structure",
+  "year": null,
+  "module": "module_1"
+ },
+ "BQ-cell_structure-f0d7af482652": {
+  "tags": [
+   "cell_structure",
+   "module_1",
+   "细胞生物学",
+   "原核细胞与真核细胞",
+   "high_school"
+  ],
+  "diff": "basic",
+  "len": 18,
+  "src": "cell_structure",
+  "year": null,
+  "module": "module_1"
+ },
+ "BQ-cell_structure-cc6489cf43a1": {
+  "tags": [
+   "cell_structure",
+   "module_1",
+   "细胞生物学",
+   "原核细胞与真核细胞",
+   "high_school"
+  ],
+  "diff": "basic",
+  "len": 19,
+  "src": "cell_structure",
+  "year": null,
+  "module": "module_1"
+ },
+ "BQ-cell_structure-a59788d54ed2": {
+  "tags": [
+   "cell_structure",
+   "module_1",
+   "细胞生物学",
+   "细胞学说",
+   "high_school"
+  ],
+  "diff": "basic",
+  "len": 14,
+  "src": "cell_structure",
+  "year": null,
+  "module": "module_1"
+ },
+ "BQ-cell_structure-aab51258ec32": {
+  "tags": [
+   "cell_structure",
+   "分子生物学",
+   "真核细胞",
+   "high_school"
+  ],
+  "diff": "basic",
+  "len": 19,
+  "src": "cell_structure",
+  "year": null,
+  "module": "module_1"
+ },
+ "BQ-cell_structure-3a1563b562ff": {
+  "tags": [
+   "cell_structure",
+   "module_1",
+   "medium"
+  ],
+  "diff": "league",
+  "len": 50,
+  "src": "cell_structure",
+  "year": null,
+  "module": "module_1"
+ },
+ "BQ-cell_structure-8147addb60fa": {
+  "tags": [
+   "cell_structure",
+   "module_1",
+   "细胞生物学",
+   "细胞学说",
+   "high_school"
+  ],
+  "diff": "basic",
+  "len": 10,
+  "src": "cell_structure",
+  "year": null,
+  "module": "module_1"
+ },
+ "BQ-cell_structure-56ad8f79c3ba": {
+  "tags": [
+   "cell_structure",
+   "植物学",
+   "细胞壁结构",
+   "high_school"
+  ],
+  "diff": "basic",
+  "len": 16,
+  "src": "cell_structure",
+  "year": null,
+  "module": "module_2"
+ },
+ "BQ-cell_structure-c55af9b1d0d7": {
+  "tags": [
+   "cell_structure",
+   "module_1",
+   "生物学",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2025/art_b153fd076f3f4fe282acfc333c4d4ab6.html",
+   "2025"
+  ],
+  "diff": "league",
+  "len": 10,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": "module_1"
+ },
+ "BQ-cell_structure-d49fbd8fbacf": {
+  "tags": [
+   "cell_structure",
+   "module_1",
+   "生物学",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2015/art_1c13e648d84d4e38b94e2dfd5e5b1b0b.html",
+   "2015"
+  ],
+  "diff": "league",
+  "len": 18,
+  "src": "cell_structure",
+  "year": 2015,
+  "module": "module_1"
+ },
+ "BQ-cell_structure-bf91aefde3ef": {
+  "tags": [
+   "cell_structure",
+   "module_1",
+   "细胞生物学",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2015/art_1c13e648d84d4e38b94e2dfd5e5b1b0b.html",
+   "2015"
+  ],
+  "diff": "league",
+  "len": 17,
+  "src": "cell_structure",
+  "year": 2015,
+  "module": "module_1"
+ },
+ "BQ-cell_structure-afc4aab2542b": {
+  "tags": [
+   "cell_structure",
+   "module_1",
+   "细胞生物学",
+   "细胞结构",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2025/art_b153fd076f3f4fe282acfc333c4d4ab6.html",
+   "2025"
+  ],
+  "diff": "league",
+  "len": 154,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": "module_1"
+ },
+ "BQ-cell_structure-42d7f37a5519": {
+  "tags": [
+   "cell_structure",
+   "module_1",
+   "生物学",
+   "league",
+   "competition",
+   "http://www.botany.org.cn/swxjs/swxls/202405/t20240521_586284.html",
+   "2024"
+  ],
+  "diff": "league",
+  "len": 25,
+  "src": "cell_structure",
+  "year": 2024,
+  "module": "module_1"
+ },
+ "BQ-cell_structure-e322418941e1": {
+  "tags": [
+   "cell_structure",
+   "module_1",
+   "细胞生物学",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2024/art_f5fe44f36762455fb9f8f99b9e0bf2e2.html",
+   "2024"
+  ],
+  "diff": "league",
+  "len": 32,
+  "src": "cell_structure",
+  "year": 2024,
+  "module": "module_1"
+ },
+ "BQ-cell_structure-9563f62f4b75": {
+  "tags": [
+   "cell_structure",
+   "module_1",
+   "细胞生物学",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2015/art_1c13e648d84d4e38b94e2dfd5e5b1b0b.html",
+   "2015"
+  ],
+  "diff": "league",
+  "len": 32,
+  "src": "cell_structure",
+  "year": 2015,
+  "module": "module_1"
+ },
+ "BQ-cell_structure-e0886c8ec2e0": {
+  "tags": [
+   "cell_structure",
+   "module_1",
+   "细胞生物学",
+   "细胞结构",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2024/art_f5fe44f36762455fb9f8f99b9e0bf2e2.html",
+   "2024"
+  ],
+  "diff": "league",
+  "len": 23,
+  "src": "cell_structure",
+  "year": 2024,
+  "module": "module_1"
+ },
+ "BQ-cell_structure-da27da5f5289": {
+  "tags": [
+   "cell_structure",
+   "module_1",
+   "生物学",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2015/art_1c13e648d84d4e38b94e2dfd5e5b1b0b.html",
+   "2015"
+  ],
+  "diff": "league",
+  "len": 17,
+  "src": "cell_structure",
+  "year": 2015,
+  "module": "module_1"
+ },
+ "BQ-cell_structure-d36971941b10": {
+  "tags": [
+   "cell_structure",
+   "module_1",
+   "细胞生物学",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2015/art_1c13e648d84d4e38b94e2dfd5e5b1b0b.html",
+   "2015"
+  ],
+  "diff": "league",
+  "len": 19,
+  "src": "cell_structure",
+  "year": 2015,
+  "module": "module_1"
+ },
+ "BQ-cell_structure-4e0b5244c3dc": {
+  "tags": [
+   "cell_structure",
+   "module_1",
+   "生物学",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2015/art_1c13e648d84d4e38b94e2dfd5e5b1b0b.html",
+   "2015"
+  ],
+  "diff": "league",
+  "len": 25,
+  "src": "cell_structure",
+  "year": 2015,
+  "module": "module_1"
+ },
+ "BQ-cell_structure-437b8dcb14ad": {
+  "tags": [
+   "cell_structure",
+   "module_1",
+   "生物学",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2024/art_f5fe44f36762455fb9f8f99b9e0bf2e2.html",
+   "2024"
+  ],
+  "diff": "league",
+  "len": 19,
+  "src": "cell_structure",
+  "year": 2024,
+  "module": "module_1"
+ },
+ "BQ-cell_structure-a0e8bb4ea258": {
+  "tags": [
+   "cell_structure",
+   "module_1",
+   "生物学",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2024/art_f5fe44f36762455fb9f8f99b9e0bf2e2.html",
+   "2024"
+  ],
+  "diff": "league",
+  "len": 20,
+  "src": "cell_structure",
+  "year": 2024,
+  "module": "module_1"
+ },
+ "BQ-cell_structure-3b8d82dafd1b": {
+  "tags": [
+   "cell_structure",
+   "module_1",
+   "生物学",
+   "league",
+   "competition",
+   "http://www.botany.org.cn/swxjs/swxls/202405/t20240521_586284.html",
+   "2024"
+  ],
+  "diff": "league",
+  "len": 25,
+  "src": "cell_structure",
+  "year": 2024,
+  "module": "module_1"
+ },
+ "BQ-cell_structure-eb562a795948": {
+  "tags": [
+   "cell_structure",
+   "module_1",
+   "生物学",
+   "league",
+   "competition",
+   "http://www.botany.org.cn/swxjs/swxls/202405/t20240521_586284.html",
+   "2024"
+  ],
+  "diff": "league",
+  "len": 23,
+  "src": "cell_structure",
+  "year": 2024,
+  "module": "module_1"
+ },
+ "BQ-cell_structure-c710f68f13dd": {
+  "tags": [
+   "cell_structure",
+   "module_1",
+   "生物学",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2015/art_1c13e648d84d4e38b94e2dfd5e5b1b0b.html",
+   "2015"
+  ],
+  "diff": "league",
+  "len": 20,
+  "src": "cell_structure",
+  "year": 2015,
+  "module": "module_1"
+ },
+ "BQ-cell_structure-b15af8ea2e58": {
+  "tags": [
+   "cell_structure",
+   "module_1",
+   "生物学",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2015/art_1c13e648d84d4e38b94e2dfd5e5b1b0b.html",
+   "2015"
+  ],
+  "diff": "league",
+  "len": 14,
+  "src": "cell_structure",
+  "year": 2015,
+  "module": "module_1"
+ },
+ "BQ-cell_structure-4af567721826": {
+  "tags": [
+   "cell_structure",
+   "module_1",
+   "生物学",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2015/art_1c13e648d84d4e38b94e2dfd5e5b1b0b.html",
+   "2015"
+  ],
+  "diff": "league",
+  "len": 17,
+  "src": "cell_structure",
+  "year": 2015,
+  "module": "module_1"
+ },
+ "BQ-cell_structure-0ff3cc1bfdad": {
+  "tags": [
+   "cell_structure",
+   "module_1",
+   "细胞生物学",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2015/art_1c13e648d84d4e38b94e2dfd5e5b1b0b.html",
+   "2015"
+  ],
+  "diff": "league",
+  "len": 32,
+  "src": "cell_structure",
+  "year": 2015,
+  "module": "module_1"
+ },
+ "BQ-cell_structure-ff5b9b214e5b": {
+  "tags": [
+   "cell_structure",
+   "module_1",
+   "生物学",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2015/art_1c13e648d84d4e38b94e2dfd5e5b1b0b.html",
+   "2015"
+  ],
+  "diff": "league",
+  "len": 66,
+  "src": "cell_structure",
+  "year": 2015,
+  "module": "module_1"
+ },
+ "BQ-cell_structure-f6e9fe4c5640": {
+  "tags": [
+   "cell_structure",
+   "module_1",
+   "生物学",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2015/art_1c13e648d84d4e38b94e2dfd5e5b1b0b.html",
+   "2015"
+  ],
+  "diff": "league",
+  "len": 26,
+  "src": "cell_structure",
+  "year": 2015,
+  "module": "module_1"
+ },
+ "BQ-cell_structure-5f55ae166726": {
+  "tags": [
+   "cell_structure",
+   "module_1",
+   "生物学",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2015/art_1c13e648d84d4e38b94e2dfd5e5b1b0b.html",
+   "2015"
+  ],
+  "diff": "league",
+  "len": 36,
+  "src": "cell_structure",
+  "year": 2015,
+  "module": "module_1"
+ },
+ "BQ-cell_structure-4925919a6ca4": {
+  "tags": [
+   "cell_structure",
+   "module_1",
+   "生物学",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2015/art_1c13e648d84d4e38b94e2dfd5e5b1b0b.html",
+   "2015"
+  ],
+  "diff": "league",
+  "len": 23,
+  "src": "cell_structure",
+  "year": 2015,
+  "module": "module_1"
+ },
+ "BQ-cell_structure-12161bc5808e": {
+  "tags": [
+   "cell_structure",
+   "module_1",
+   "生物学",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2015/art_1c13e648d84d4e38b94e2dfd5e5b1b0b.html",
+   "2015"
+  ],
+  "diff": "league",
+  "len": 35,
+  "src": "cell_structure",
+  "year": 2015,
+  "module": "module_1"
+ },
+ "BQ-cell_structure-67e8f9b29999": {
+  "tags": [
+   "cell_structure",
+   "module_1",
+   "细胞生物学",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2024/art_f5fe44f36762455fb9f8f99b9e0bf2e2.html",
+   "2024"
+  ],
+  "diff": "league",
+  "len": 17,
+  "src": "cell_structure",
+  "year": 2024,
+  "module": "module_1"
+ },
+ "BQ-cell_structure-08f7204828c7": {
+  "tags": [
+   "cell_structure",
+   "module_1",
+   "生物学",
+   "league",
+   "competition",
+   "http://www.botany.org.cn/swxjs/swxls/202405/t20240521_586284.html",
+   "2024"
+  ],
+  "diff": "league",
+  "len": 25,
+  "src": "cell_structure",
+  "year": 2024,
+  "module": "module_1"
+ },
+ "BQ-cell_structure-3a1581bea97f": {
+  "tags": [
+   "cell_structure",
+   "module_1",
+   "生物学",
+   "league",
+   "competition",
+   "http://www.botany.org.cn/swxjs/swxls/202405/t20240521_586284.html",
+   "2024"
+  ],
+  "diff": "league",
+  "len": 16,
+  "src": "cell_structure",
+  "year": 2024,
+  "module": "module_1"
+ },
+ "BQ-cell_structure-e1622eff8742": {
+  "tags": [
+   "cell_structure",
+   "module_1",
+   "生物学",
+   "league",
+   "competition",
+   "http://www.botany.org.cn/swxjs/swxls/202405/t20240521_586284.html",
+   "2024"
+  ],
+  "diff": "league",
+  "len": 19,
+  "src": "cell_structure",
+  "year": 2024,
+  "module": "module_1"
+ },
+ "BQ-cell_structure-6397f4613daf": {
+  "tags": [
+   "cell_structure",
+   "module_1",
+   "生物学",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2015/art_1c13e648d84d4e38b94e2dfd5e5b1b0b.html",
+   "2015"
+  ],
+  "diff": "league",
+  "len": 14,
+  "src": "cell_structure",
+  "year": 2015,
+  "module": "module_1"
+ },
+ "BQ-cell_structure-dcadd9df738a": {
+  "tags": [
+   "cell_structure",
+   "module_1",
+   "生物学",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2015/art_1c13e648d84d4e38b94e2dfd5e5b1b0b.html",
+   "2015"
+  ],
+  "diff": "league",
+  "len": 99,
+  "src": "cell_structure",
+  "year": 2015,
+  "module": "module_1"
+ },
+ "BQ-cell_structure-be3e616c2ec5": {
+  "tags": [
+   "cell_structure",
+   "module_1",
+   "生物学",
+   "league",
+   "competition",
+   "http://www.botany.org.cn/swxjs/swxls/202605/t20260518_838211.html",
+   "2026"
+  ],
+  "diff": "league",
+  "len": 21,
+  "src": "cell_structure",
+  "year": 2026,
+  "module": "module_1"
+ },
+ "BQ-cell_structure-aec074fef344": {
+  "tags": [
+   "cell_structure",
+   "module_1",
+   "生物学",
+   "league",
+   "competition",
+   "http://www.botany.org.cn/swxjs/swxls/202605/t20260518_838211.html",
+   "2026"
+  ],
+  "diff": "league",
+  "len": 19,
+  "src": "cell_structure",
+  "year": 2026,
+  "module": "module_1"
+ },
+ "BQ-cell_structure-cf63b60345c3": {
+  "tags": [
+   "cell_structure",
+   "module_1",
+   "生物学",
+   "league",
+   "competition",
+   "http://www.botany.org.cn/swxjs/swxls/202605/t20260518_838211.html",
+   "2026"
+  ],
+  "diff": "league",
+  "len": 10,
+  "src": "cell_structure",
+  "year": 2026,
+  "module": "module_1"
+ },
+ "BQ-cell_structure-22d27d05b419": {
+  "tags": [
+   "cell_structure",
+   "module_1",
+   "生物学",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2024/art_f5fe44f36762455fb9f8f99b9e0bf2e2.html",
+   "2024"
+  ],
+  "diff": "league",
+  "len": 55,
+  "src": "cell_structure",
+  "year": 2024,
+  "module": "module_1"
+ },
+ "BQ-cell_structure-de42e4f8deea": {
+  "tags": [
+   "cell_structure",
+   "module_1",
+   "生物学",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2015/art_1c13e648d84d4e38b94e2dfd5e5b1b0b.html",
+   "2015"
+  ],
+  "diff": "league",
+  "len": 36,
+  "src": "cell_structure",
+  "year": 2015,
+  "module": "module_1"
+ },
+ "BQ-cell_structure-9dca69883714": {
+  "tags": [
+   "cell_structure",
+   "module_1",
+   "细胞生物学",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2024/art_f5fe44f36762455fb9f8f99b9e0bf2e2.html",
+   "2024"
+  ],
+  "diff": "league",
+  "len": 36,
+  "src": "cell_structure",
+  "year": 2024,
+  "module": "module_1"
+ },
+ "BQ-cell_structure-0faf0a892b97": {
+  "tags": [
+   "cell_structure",
+   "module_1",
+   "生物学",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2015/art_1c13e648d84d4e38b94e2dfd5e5b1b0b.html",
+   "2015"
+  ],
+  "diff": "league",
+  "len": 38,
+  "src": "cell_structure",
+  "year": 2015,
+  "module": "module_1"
+ },
+ "BQ-cell_structure-8fb17ecfc8cd": {
+  "tags": [
+   "cell_structure",
+   "module_1",
+   "生物学",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2015/art_1c13e648d84d4e38b94e2dfd5e5b1b0b.html",
+   "2015"
+  ],
+  "diff": "league",
+  "len": 39,
+  "src": "cell_structure",
+  "year": 2015,
+  "module": "module_1"
+ },
+ "BQ-cell_structure-c4612d363952": {
+  "tags": [
+   "cell_structure",
+   "module_1",
+   "生物学",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2024/art_f5fe44f36762455fb9f8f99b9e0bf2e2.html",
+   "2024"
+  ],
+  "diff": "league",
+  "len": 69,
+  "src": "cell_structure",
+  "year": 2024,
+  "module": "module_1"
+ },
+ "BQ-cell_structure-34037b7174f4": {
+  "tags": [
+   "cell_structure",
+   "module_1",
+   "细胞生物学",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2024/art_f5fe44f36762455fb9f8f99b9e0bf2e2.html",
+   "2024"
+  ],
+  "diff": "league",
+  "len": 39,
+  "src": "cell_structure",
+  "year": 2024,
+  "module": "module_1"
+ },
+ "BQ-cell_structure-fb1a46038a15": {
+  "tags": [
+   "cell_structure",
+   "module_1",
+   "生物学",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2024/art_f5fe44f36762455fb9f8f99b9e0bf2e2.html",
+   "2024"
+  ],
+  "diff": "league",
+  "len": 38,
+  "src": "cell_structure",
+  "year": 2024,
+  "module": "module_1"
+ },
+ "BQ-cell_structure-c136f246bcee": {
+  "tags": [
+   "cell_structure",
+   "module_1",
+   "生物学",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2015/art_1c13e648d84d4e38b94e2dfd5e5b1b0b.html",
+   "2015"
+  ],
+  "diff": "league",
+  "len": 30,
+  "src": "cell_structure",
+  "year": 2015,
+  "module": "module_1"
+ },
+ "BQ-cell_structure-a41ee53d11f8": {
+  "tags": [
+   "cell_structure",
+   "module_1",
+   "细胞生物学",
+   "细胞结构",
+   "league",
+   "competition",
+   "http://www.botany.org.cn/swxjs/swxls/202605/t20260518_838211.html",
+   "2026"
+  ],
+  "diff": "league",
+  "len": 29,
+  "src": "cell_structure",
+  "year": 2026,
+  "module": "module_1"
+ },
+ "BQ-cell_structure-36b356e7aada": {
+  "tags": [
+   "cell_structure",
+   "module_1",
+   "细胞生物学",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2025/art_b153fd076f3f4fe282acfc333c4d4ab6.html",
+   "2025"
+  ],
+  "diff": "league",
+  "len": 23,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": "module_1"
+ },
+ "BQ-cell_structure-7559b4ef9106": {
+  "tags": [
+   "cell_structure",
+   "module_1",
+   "生物学",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2025/art_b153fd076f3f4fe282acfc333c4d4ab6.html",
+   "2025"
+  ],
+  "diff": "league",
+  "len": 12,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": "module_1"
+ },
+ "BQ-cell_structure-17b2b534af9a": {
+  "tags": [
+   "cell_structure",
+   "module_1",
+   "生物学",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2025/art_b153fd076f3f4fe282acfc333c4d4ab6.html",
+   "2025"
+  ],
+  "diff": "league",
+  "len": 12,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": "module_1"
+ },
+ "BQ-cell_structure-a2e465cd82ab": {
+  "tags": [
+   "cell_structure",
+   "module_1",
+   "细胞生物学",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2024/art_f5fe44f36762455fb9f8f99b9e0bf2e2.html",
+   "2024"
+  ],
+  "diff": "league",
+  "len": 71,
+  "src": "cell_structure",
+  "year": 2024,
+  "module": "module_1"
+ },
+ "BQ-cell_structure-6e3bed305073": {
+  "tags": [
+   "cell_structure",
+   "module_1",
+   "生物学",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2015/art_1c13e648d84d4e38b94e2dfd5e5b1b0b.html",
+   "2015"
+  ],
+  "diff": "league",
+  "len": 29,
+  "src": "cell_structure",
+  "year": 2015,
+  "module": "module_1"
+ },
+ "BQ-cell_structure-aaed1a94dbf3": {
+  "tags": [
+   "cell_structure",
+   "module_1",
+   "生物学",
+   "league",
+   "competition",
+   "http://www.botany.org.cn/swxjs/swxls/202605/t20260518_838211.html",
+   "2026"
+  ],
+  "diff": "league",
+  "len": 27,
+  "src": "cell_structure",
+  "year": 2026,
+  "module": "module_1"
+ },
+ "BQ-cell_structure-5a87593ca82d": {
+  "tags": [
+   "cell_structure",
+   "module_1",
+   "生物学",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2025/art_b153fd076f3f4fe282acfc333c4d4ab6.html",
+   "2025"
+  ],
+  "diff": "league",
+  "len": 122,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": "module_1"
+ },
+ "BQ-cell_structure-7d142f04f68d": {
+  "tags": [
+   "cell_structure",
+   "module_1",
+   "生物学",
+   "league",
+   "competition",
+   "http://www.botany.org.cn/swxjs/swxls/202405/t20240521_586284.html",
+   "2024"
+  ],
+  "diff": "league",
+  "len": 53,
+  "src": "cell_structure",
+  "year": 2024,
+  "module": "module_1"
+ },
+ "BQ-cell_structure-88f4e00e8357": {
+  "tags": [
+   "cell_structure",
+   "module_1",
+   "生物学",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2015/art_1c13e648d84d4e38b94e2dfd5e5b1b0b.html",
+   "2015"
+  ],
+  "diff": "league",
+  "len": 17,
+  "src": "cell_structure",
+  "year": 2015,
+  "module": "module_1"
+ },
+ "BQ-cell_structure-0990d84cf3c4": {
+  "tags": [
+   "cell_structure",
+   "module_1",
+   "生物学",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2024/art_f5fe44f36762455fb9f8f99b9e0bf2e2.html",
+   "2024"
+  ],
+  "diff": "league",
+  "len": 135,
+  "src": "cell_structure",
+  "year": 2024,
+  "module": "module_1"
+ },
+ "BQ-cell_structure-65db239bbba5": {
+  "tags": [
+   "cell_structure",
+   "module_1",
+   "细胞生物学",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2015/art_1c13e648d84d4e38b94e2dfd5e5b1b0b.html",
+   "2015"
+  ],
+  "diff": "league",
+  "len": 99,
+  "src": "cell_structure",
+  "year": 2015,
+  "module": "module_1"
+ },
+ "BQ-cell_structure-9f0510409d25": {
+  "tags": [
+   "cell_structure",
+   "module_1",
+   "生物学",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2015/art_1c13e648d84d4e38b94e2dfd5e5b1b0b.html",
+   "2015"
+  ],
+  "diff": "league",
+  "len": 39,
+  "src": "cell_structure",
+  "year": 2015,
+  "module": "module_1"
+ },
+ "BQ-cell_structure-4557fd4eb485": {
+  "tags": [
+   "cell_structure",
+   "module_1",
+   "细胞生物学",
+   "细胞结构",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2024/art_f5fe44f36762455fb9f8f99b9e0bf2e2.html",
+   "2024"
+  ],
+  "diff": "league",
+  "len": 135,
+  "src": "cell_structure",
+  "year": 2024,
+  "module": "module_1"
+ },
+ "BQ-cell_structure-1a477a5dc7e3": {
+  "tags": [
+   "cell_structure",
+   "module_1",
+   "生物学",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2015/art_1c13e648d84d4e38b94e2dfd5e5b1b0b.html",
+   "2015"
+  ],
+  "diff": "league",
+  "len": 12,
+  "src": "cell_structure",
+  "year": 2015,
+  "module": "module_1"
+ },
+ "BQ-cell_structure-b64b86dfdfbc": {
+  "tags": [
+   "cell_structure",
+   "module_1",
+   "生物学",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2025/art_b153fd076f3f4fe282acfc333c4d4ab6.html",
+   "2025"
+  ],
+  "diff": "league",
+  "len": 60,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": "module_1"
+ },
+ "BQ-cell_structure-c45483ed8227": {
+  "tags": [
+   "cell_structure",
+   "module_1",
+   "生物学",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2024/art_f5fe44f36762455fb9f8f99b9e0bf2e2.html",
+   "2024"
+  ],
+  "diff": "league",
+  "len": 17,
+  "src": "cell_structure",
+  "year": 2024,
+  "module": "module_1"
+ },
+ "BQ-cell_structure-644a915d4c43": {
+  "tags": [
+   "cell_structure",
+   "module_1",
+   "生物学",
+   "league",
+   "competition",
+   "http://www.botany.org.cn/swxjs/swxls/202605/t20260518_838211.html",
+   "2026"
+  ],
+  "diff": "league",
+  "len": 72,
+  "src": "cell_structure",
+  "year": 2026,
+  "module": "module_1"
+ },
+ "BQ-cell_structure-1b9b9727efad": {
+  "tags": [
+   "cell_structure",
+   "module_1",
+   "生物学",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2025/art_b153fd076f3f4fe282acfc333c4d4ab6.html",
+   "2025"
+  ],
+  "diff": "league",
+  "len": 64,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": "module_1"
+ },
+ "BQ-cell_structure-88298b31c8b5": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-f04e14765047": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-be2d8a80e4f0": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-bc2952486d37": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-9c7aadc3a046": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-6fa81e0181e6": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-33c591c5de97": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-43ce919f2ec4": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-5d27111368a3": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-9c065f729b32": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-1fe86af00742": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-e4a8d71ea16a": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-1bf4755548e6": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-d36fbbab7405": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-026b7cc9aa45": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-5514710dffea": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-da25f7784b99": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-88866effe486": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-44bfa76e67e6": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-63e2e9773c99": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-ea88abcef2b7": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-2b53749c08ee": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-2e22f16c0bef": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-f99580250297": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 21,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-710a3462ed0c": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-cell_structure-302b53723132": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-cell_structure-a06b9d6212f7": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-cell_structure-888b8d87cffc": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-cell_structure-8e659168c477": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-cell_structure-16bbda3a2b38": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-cell_structure-69d9127bdb8d": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-cell_structure-992f3f01499d": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-cell_structure-df7fbfe3e717": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-cell_structure-40fd8fd649a1": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-cell_structure-57f760677859": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-cell_structure-cd28a0b46360": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-cell_structure-34165d903392": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-cell_structure-7e5d24cf4678": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-cell_structure-5e2caf8e0589": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-cell_structure-71957f863b0f": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-cell_structure-8607e58b8af8": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-cell_structure-3d00fac8ff0d": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-cell_structure-9df27c70e93b": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-cell_structure-761fd004b6dd": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-cell_structure-82c933263c71": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-cell_structure-ca7505b905ac": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-cell_structure-db8788ad633c": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-cell_structure-12aa1bdf21e0": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 24,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-cell_structure-fe8d1991fdf4": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 24,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-cell_structure-94cf13ebfd57": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 24,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-cell_structure-b4b8ff26c1c4": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 24,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-cell_structure-015fbf558607": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 24,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-cell_structure-b1dce6b5cf98": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 24,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-cell_structure-c8f1f03477af": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 24,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-cell_structure-c083692b8cb3": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 24,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-cell_structure-a2de5e3bd368": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 24,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-cell_structure-854bc1f3314e": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 24,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-cell_structure-006c44392fa9": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 24,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-cell_structure-f1472b39f35b": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 24,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-cell_structure-280a51f5b15d": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 24,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-cell_structure-81e0e39a8c52": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 24,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-cell_structure-8a6d421f8c0e": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 24,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-cell_structure-a55516785c7e": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 24,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-cell_structure-c7a79804f4e8": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 24,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-cell_structure-0aaee1fbc79d": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 24,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-cell_structure-9ba24001370c": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 24,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-cell_structure-120dc2d5f443": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 24,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-cell_structure-82d27fcfcd11": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 24,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-cell_structure-d98237f036c3": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 24,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-cell_structure-7010156965cb": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 24,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-cell_structure-f4e7ac67fa57": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 24,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-cell_structure-5d8b1d02dc35": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 24,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 2
+ },
+ "BQ-cell_structure-e5634fe71ae3": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-36bd49360898": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-b282215f019c": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-0719589e932a": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-3c6c2790bb43": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-4802671f0554": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-206d3be83924": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-8db81d50d5e9": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-2f7c75688676": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-564f1f1c1fb8": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-1715abe64593": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-ecde650ae5a9": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-b42f2442cc61": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-f82aaa3e64b9": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-56d6dbf7fd7b": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-82f3784a5523": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-0e5111e51b03": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-32a9fbdf2c32": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-fce4c4521d37": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-c75bfe7be472": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-2e138393a5b4": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-3a0600243e7b": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-83364e84fbf9": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-467dbc20c5c7": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 22,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-641623315a4a": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-21575eaca328": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-5e4a5780e3ca": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-db0ae63c1eae": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-ac399a389a35": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-1d11d6b500e2": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-d217c9ecaa98": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-533f9e832286": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-ef202591562c": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-965bdd019d21": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-38af6bfda5ae": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-a309aeda8e4c": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-91389cd3439b": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-f6adbee4df25": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-2e4979d431a6": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-252d278e8718": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-56455046119d": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-d3806d010893": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-24d9fabea34e": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-7dd4d3375aa8": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-67840bdcc7e9": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-6ac44b980c81": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-239f8e0c6e8e": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-d281934cdff7": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 19,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-334d7a0ac71b": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 18,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-311c953fb3d5": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 18,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-6be5eee2744b": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 18,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-23c4c59bd900": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 18,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-8bfb2d242c6d": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 18,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-67a7a618d273": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 18,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-a5eb456706aa": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 18,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-18a06067d0e0": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 18,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-9233595e3f50": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 18,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-5f05aa66bfd6": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 18,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-ad4690c5e045": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 18,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-f279ef5a3ad6": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 18,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-57d4938bcd20": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 18,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-90399d24baee": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 18,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-2b9ccc2bfae9": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 18,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-bac7a26688c2": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 18,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-9fa6f4fa7257": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 18,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-846fbb0b201a": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 18,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-812545887e77": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 18,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-d77a7023b90b": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 18,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-1f5f14fe0c92": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 18,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-8f604a4aaaf7": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 18,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-4d1966a5ab0f": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 18,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-bad368ffbec6": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 18,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-0da2f3d89192": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-8ff8033ea6b7": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-e2f2feb79c06": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-bc22cf85e365": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-ee197b6b2575": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-486db0df10eb": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-0834b6b31e42": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-7cd9edfe072f": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-34dc37634884": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-36d214f04c4f": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-de7b038c4553": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-7a6a58559852": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-288333a82efe": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-5856602b1dba": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-346d3d4b6b85": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-fdc08e7ca1f0": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-6d2dd1b84964": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-66a7adfbd694": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-1edf124a532c": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-65e581c74eb8": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-3b0fdb18b4de": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-9af3fc614f8a": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-846c516d3d38": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-4ae14e3f6e4f": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 22,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-cacb48780ab7": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-ca7fa6dcc252": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-3e8848cfdaec": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-90459f7210ea": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-a69113c98345": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-f0896fab3354": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-1b82801703af": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-3938cdf9de80": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-92debff0370a": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-f7df35558e07": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-079786b3b887": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-7e307ded27f2": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-04ecb0a77b9c": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-0e6dd796424c": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-8e6f13603510": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-a82254c71d25": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-dc154aec46e6": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-9fa52718ca4c": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-9b4e4532797e": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-659fce013202": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-6a6ec826a30c": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-dce60280cb8f": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-5bc10aff1f91": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-75bfd124407d": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 20,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-ef967e209118": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 17,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-6233393c1acb": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 17,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-c5a21a51d08c": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 17,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-79839640a299": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 17,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-7a0d372f9e2a": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 17,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-4024c127ab0e": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 17,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-f0655e66658f": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 17,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-3f0a6a7c234d": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 17,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-15b0e9cfdb04": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 17,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-0e06d0e4f192": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 17,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-8a3e02011446": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 17,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-f428658a264a": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 17,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-5844440d926c": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 17,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-cb98f62a9788": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 17,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-6e7e696639e8": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 17,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-7c195ad157cd": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 17,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-a2ce64fc8951": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 17,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-542d161bb5d8": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 17,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-0a09b922f6f5": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 17,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-6453923a0137": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 17,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-46f91b88fc9c": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 17,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-e00bcfa1153b": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 17,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-d3e005a6799c": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 17,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-4b93739d4b7f": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 17,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-371cca511c6c": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-4c0f36a8f9ce": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-9386ef9e1ee0": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-a1998b0887f4": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-23c41eb96c2e": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-69ae580839c0": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-5d0476b6c63a": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-fa2ab66a7ffc": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-8af07472bdc5": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-d962cd091a90": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-ddddd74d12c6": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-03a094ee393f": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-80a9893eb12d": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-ecc686259f94": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-3cbb1af22a9a": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-8f04c6f2a5be": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-88cda1c7e118": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-f9be30f24d4a": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-e97306ebe34d": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-45a5aff60ef8": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-9c006b62976c": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-9978658ed2a7": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-1be9326d5aca": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-027ffdbb0866": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "medium",
+  "len": 17,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-5d0e2b90efa1": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-b0d775e6c723": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-f544d54a6bde": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-c6002726c12b": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-b50bab0444a6": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-020c46879bf2": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-974f6e7799ca": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-683a6d169b14": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-768fb07378d5": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-b5d193be1fd6": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-f9389c90b4cf": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-56f7e65ac98e": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-61e0d2f18478": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-62e48e03314c": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-a78314c148ff": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-8e2d794c30e6": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-a3d64c4d2de0": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-2f7ede36293c": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-3e2d920eab36": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-be049908f2e8": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-07685353d683": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-c0aab09ac482": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-0cc2a7481a65": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ },
+ "BQ-cell_structure-ad876b509b88": {
+  "tags": [
+   "cell_structure"
+  ],
+  "diff": "easy",
+  "len": 20,
+  "src": "cell_structure",
+  "year": 2025,
+  "module": 1
+ }
+}

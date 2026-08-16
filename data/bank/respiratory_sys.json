@@ -1,0 +1,1682 @@
+{
+ "BQ-respiratory_sys-64b404b74057": {
+  "type": "mtf",
+  "question": "关于呼吸的化学调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "CO₂对呼吸的刺激作用主要通过外周化学感受器介导",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "中枢化学感受器位于延髓腹外侧，主要对脑脊液中的H⁺浓度变化敏感",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "动脉血PO₂降至60 mmHg以下时，通过外周化学感受器显著刺激呼吸",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "外周化学感受器（颈动脉体和主动脉体）主要检测动脉血中的PO₂、PCO₂和pH变化",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：中枢化学感受器的位置和功能。D正确：外周化学感受器的功能。A错误：CO₂对呼吸的刺激作用约80%由中枢化学感受器介导，CO₂通过血脑屏障后与H₂O反应形成H⁺，中枢化学感受器检测H⁺浓度变化。C正确：低氧刺激的阈值。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "呼吸调控",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "14774604",
+  "tags": []
+ },
+ "BQ-respiratory_sys-27a27d916d7a": {
+  "type": "mtf",
+  "question": "关于呼吸的化学调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "CO₂对呼吸的刺激作用主要通过外周化学感受器介导",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "中枢化学感受器位于延髓腹外侧，主要对脑脊液中的H⁺浓度变化敏感",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "外周化学感受器（颈动脉体和主动脉体）主要检测动脉血中的PO₂、PCO₂和pH变化",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "动脉血PO₂降至60 mmHg以下时，通过外周化学感受器显著刺激呼吸",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：中枢化学感受器的位置和功能。C正确：外周化学感受器的功能。A错误：CO₂对呼吸的刺激作用约80%由中枢化学感受器介导，CO₂通过血脑屏障后与H₂O反应形成H⁺，中枢化学感受器检测H⁺浓度变化。D正确：低氧刺激的阈值。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "呼吸调控",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "14774604",
+  "tags": []
+ },
+ "BQ-respiratory_sys-9e6ee19da23d": {
+  "type": "mtf",
+  "question": "关于呼吸的化学调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "CO₂对呼吸的刺激作用主要通过外周化学感受器介导",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "动脉血PO₂降至60 mmHg以下时，通过外周化学感受器显著刺激呼吸",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "中枢化学感受器位于延髓腹外侧，主要对脑脊液中的H⁺浓度变化敏感",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "外周化学感受器（颈动脉体和主动脉体）主要检测动脉血中的PO₂、PCO₂和pH变化",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：中枢化学感受器的位置和功能。D正确：外周化学感受器的功能。A错误：CO₂对呼吸的刺激作用约80%由中枢化学感受器介导，CO₂通过血脑屏障后与H₂O反应形成H⁺，中枢化学感受器检测H⁺浓度变化。B正确：低氧刺激的阈值。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "呼吸调控",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "14774604",
+  "tags": []
+ },
+ "BQ-respiratory_sys-0d13b5fb9499": {
+  "type": "mtf",
+  "question": "关于呼吸的化学调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "CO₂对呼吸的刺激作用主要通过外周化学感受器介导",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "动脉血PO₂降至60 mmHg以下时，通过外周化学感受器显著刺激呼吸",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "外周化学感受器（颈动脉体和主动脉体）主要检测动脉血中的PO₂、PCO₂和pH变化",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "中枢化学感受器位于延髓腹外侧，主要对脑脊液中的H⁺浓度变化敏感",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：中枢化学感受器的位置和功能。C正确：外周化学感受器的功能。A错误：CO₂对呼吸的刺激作用约80%由中枢化学感受器介导，CO₂通过血脑屏障后与H₂O反应形成H⁺，中枢化学感受器检测H⁺浓度变化。B正确：低氧刺激的阈值。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "呼吸调控",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "14774604",
+  "tags": []
+ },
+ "BQ-respiratory_sys-cc08107878b0": {
+  "type": "mtf",
+  "question": "关于呼吸的化学调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "CO₂对呼吸的刺激作用主要通过外周化学感受器介导",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "外周化学感受器（颈动脉体和主动脉体）主要检测动脉血中的PO₂、PCO₂和pH变化",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "中枢化学感受器位于延髓腹外侧，主要对脑脊液中的H⁺浓度变化敏感",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "动脉血PO₂降至60 mmHg以下时，通过外周化学感受器显著刺激呼吸",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：中枢化学感受器的位置和功能。B正确：外周化学感受器的功能。A错误：CO₂对呼吸的刺激作用约80%由中枢化学感受器介导，CO₂通过血脑屏障后与H₂O反应形成H⁺，中枢化学感受器检测H⁺浓度变化。D正确：低氧刺激的阈值。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "呼吸调控",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "14774604",
+  "tags": []
+ },
+ "BQ-respiratory_sys-0a42e3d5dd88": {
+  "type": "mtf",
+  "question": "关于呼吸的化学调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "CO₂对呼吸的刺激作用主要通过外周化学感受器介导",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "外周化学感受器（颈动脉体和主动脉体）主要检测动脉血中的PO₂、PCO₂和pH变化",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "动脉血PO₂降至60 mmHg以下时，通过外周化学感受器显著刺激呼吸",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "中枢化学感受器位于延髓腹外侧，主要对脑脊液中的H⁺浓度变化敏感",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：中枢化学感受器的位置和功能。B正确：外周化学感受器的功能。A错误：CO₂对呼吸的刺激作用约80%由中枢化学感受器介导，CO₂通过血脑屏障后与H₂O反应形成H⁺，中枢化学感受器检测H⁺浓度变化。C正确：低氧刺激的阈值。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "呼吸调控",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "14774604",
+  "tags": []
+ },
+ "BQ-respiratory_sys-52e19eb32988": {
+  "type": "mtf",
+  "question": "关于呼吸的化学调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "中枢化学感受器位于延髓腹外侧，主要对脑脊液中的H⁺浓度变化敏感",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "CO₂对呼吸的刺激作用主要通过外周化学感受器介导",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "动脉血PO₂降至60 mmHg以下时，通过外周化学感受器显著刺激呼吸",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "外周化学感受器（颈动脉体和主动脉体）主要检测动脉血中的PO₂、PCO₂和pH变化",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：中枢化学感受器的位置和功能。D正确：外周化学感受器的功能。B错误：CO₂对呼吸的刺激作用约80%由中枢化学感受器介导，CO₂通过血脑屏障后与H₂O反应形成H⁺，中枢化学感受器检测H⁺浓度变化。C正确：低氧刺激的阈值。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "呼吸调控",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "14774604",
+  "tags": []
+ },
+ "BQ-respiratory_sys-b60e032b03de": {
+  "type": "mtf",
+  "question": "关于呼吸的化学调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "中枢化学感受器位于延髓腹外侧，主要对脑脊液中的H⁺浓度变化敏感",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "CO₂对呼吸的刺激作用主要通过外周化学感受器介导",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "外周化学感受器（颈动脉体和主动脉体）主要检测动脉血中的PO₂、PCO₂和pH变化",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "动脉血PO₂降至60 mmHg以下时，通过外周化学感受器显著刺激呼吸",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：中枢化学感受器的位置和功能。C正确：外周化学感受器的功能。B错误：CO₂对呼吸的刺激作用约80%由中枢化学感受器介导，CO₂通过血脑屏障后与H₂O反应形成H⁺，中枢化学感受器检测H⁺浓度变化。D正确：低氧刺激的阈值。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "呼吸调控",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "14774604",
+  "tags": []
+ },
+ "BQ-respiratory_sys-d3d2c90ceb5a": {
+  "type": "mtf",
+  "question": "关于呼吸的化学调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "中枢化学感受器位于延髓腹外侧，主要对脑脊液中的H⁺浓度变化敏感",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "动脉血PO₂降至60 mmHg以下时，通过外周化学感受器显著刺激呼吸",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "CO₂对呼吸的刺激作用主要通过外周化学感受器介导",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "外周化学感受器（颈动脉体和主动脉体）主要检测动脉血中的PO₂、PCO₂和pH变化",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：中枢化学感受器的位置和功能。D正确：外周化学感受器的功能。C错误：CO₂对呼吸的刺激作用约80%由中枢化学感受器介导，CO₂通过血脑屏障后与H₂O反应形成H⁺，中枢化学感受器检测H⁺浓度变化。B正确：低氧刺激的阈值。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "呼吸调控",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "14774604",
+  "tags": []
+ },
+ "BQ-respiratory_sys-552a26679f16": {
+  "type": "mtf",
+  "question": "关于呼吸的化学调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "中枢化学感受器位于延髓腹外侧，主要对脑脊液中的H⁺浓度变化敏感",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "动脉血PO₂降至60 mmHg以下时，通过外周化学感受器显著刺激呼吸",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "外周化学感受器（颈动脉体和主动脉体）主要检测动脉血中的PO₂、PCO₂和pH变化",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "CO₂对呼吸的刺激作用主要通过外周化学感受器介导",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确：中枢化学感受器的位置和功能。C正确：外周化学感受器的功能。D错误：CO₂对呼吸的刺激作用约80%由中枢化学感受器介导，CO₂通过血脑屏障后与H₂O反应形成H⁺，中枢化学感受器检测H⁺浓度变化。B正确：低氧刺激的阈值。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "呼吸调控",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "14774604",
+  "tags": []
+ },
+ "BQ-respiratory_sys-93fce40ecdd9": {
+  "type": "mtf",
+  "question": "关于呼吸的化学调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "中枢化学感受器位于延髓腹外侧，主要对脑脊液中的H⁺浓度变化敏感",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "外周化学感受器（颈动脉体和主动脉体）主要检测动脉血中的PO₂、PCO₂和pH变化",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "CO₂对呼吸的刺激作用主要通过外周化学感受器介导",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "动脉血PO₂降至60 mmHg以下时，通过外周化学感受器显著刺激呼吸",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：中枢化学感受器的位置和功能。B正确：外周化学感受器的功能。C错误：CO₂对呼吸的刺激作用约80%由中枢化学感受器介导，CO₂通过血脑屏障后与H₂O反应形成H⁺，中枢化学感受器检测H⁺浓度变化。D正确：低氧刺激的阈值。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "呼吸调控",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "14774604",
+  "tags": []
+ },
+ "BQ-respiratory_sys-afa3dfc17199": {
+  "type": "mtf",
+  "question": "关于呼吸的化学调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "中枢化学感受器位于延髓腹外侧，主要对脑脊液中的H⁺浓度变化敏感",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "外周化学感受器（颈动脉体和主动脉体）主要检测动脉血中的PO₂、PCO₂和pH变化",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "动脉血PO₂降至60 mmHg以下时，通过外周化学感受器显著刺激呼吸",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "CO₂对呼吸的刺激作用主要通过外周化学感受器介导",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确：中枢化学感受器的位置和功能。B正确：外周化学感受器的功能。D错误：CO₂对呼吸的刺激作用约80%由中枢化学感受器介导，CO₂通过血脑屏障后与H₂O反应形成H⁺，中枢化学感受器检测H⁺浓度变化。C正确：低氧刺激的阈值。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "呼吸调控",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "14774604",
+  "tags": []
+ },
+ "BQ-respiratory_sys-9c6126561e80": {
+  "type": "mtf",
+  "question": "关于呼吸的化学调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "动脉血PO₂降至60 mmHg以下时，通过外周化学感受器显著刺激呼吸",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "CO₂对呼吸的刺激作用主要通过外周化学感受器介导",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "中枢化学感受器位于延髓腹外侧，主要对脑脊液中的H⁺浓度变化敏感",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "外周化学感受器（颈动脉体和主动脉体）主要检测动脉血中的PO₂、PCO₂和pH变化",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：中枢化学感受器的位置和功能。D正确：外周化学感受器的功能。B错误：CO₂对呼吸的刺激作用约80%由中枢化学感受器介导，CO₂通过血脑屏障后与H₂O反应形成H⁺，中枢化学感受器检测H⁺浓度变化。A正确：低氧刺激的阈值。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "呼吸调控",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "14774604",
+  "tags": []
+ },
+ "BQ-respiratory_sys-a4eb20a5c206": {
+  "type": "mtf",
+  "question": "关于呼吸的化学调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "动脉血PO₂降至60 mmHg以下时，通过外周化学感受器显著刺激呼吸",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "CO₂对呼吸的刺激作用主要通过外周化学感受器介导",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "外周化学感受器（颈动脉体和主动脉体）主要检测动脉血中的PO₂、PCO₂和pH变化",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "中枢化学感受器位于延髓腹外侧，主要对脑脊液中的H⁺浓度变化敏感",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：中枢化学感受器的位置和功能。C正确：外周化学感受器的功能。B错误：CO₂对呼吸的刺激作用约80%由中枢化学感受器介导，CO₂通过血脑屏障后与H₂O反应形成H⁺，中枢化学感受器检测H⁺浓度变化。A正确：低氧刺激的阈值。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "呼吸调控",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "14774604",
+  "tags": []
+ },
+ "BQ-respiratory_sys-569a92655569": {
+  "type": "mtf",
+  "question": "关于呼吸的化学调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "动脉血PO₂降至60 mmHg以下时，通过外周化学感受器显著刺激呼吸",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "中枢化学感受器位于延髓腹外侧，主要对脑脊液中的H⁺浓度变化敏感",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "CO₂对呼吸的刺激作用主要通过外周化学感受器介导",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "外周化学感受器（颈动脉体和主动脉体）主要检测动脉血中的PO₂、PCO₂和pH变化",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：中枢化学感受器的位置和功能。D正确：外周化学感受器的功能。C错误：CO₂对呼吸的刺激作用约80%由中枢化学感受器介导，CO₂通过血脑屏障后与H₂O反应形成H⁺，中枢化学感受器检测H⁺浓度变化。A正确：低氧刺激的阈值。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "呼吸调控",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "14774604",
+  "tags": []
+ },
+ "BQ-respiratory_sys-f5562210e314": {
+  "type": "mtf",
+  "question": "关于呼吸的化学调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "动脉血PO₂降至60 mmHg以下时，通过外周化学感受器显著刺激呼吸",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "中枢化学感受器位于延髓腹外侧，主要对脑脊液中的H⁺浓度变化敏感",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "外周化学感受器（颈动脉体和主动脉体）主要检测动脉血中的PO₂、PCO₂和pH变化",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "CO₂对呼吸的刺激作用主要通过外周化学感受器介导",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确：中枢化学感受器的位置和功能。C正确：外周化学感受器的功能。D错误：CO₂对呼吸的刺激作用约80%由中枢化学感受器介导，CO₂通过血脑屏障后与H₂O反应形成H⁺，中枢化学感受器检测H⁺浓度变化。A正确：低氧刺激的阈值。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "呼吸调控",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "14774604",
+  "tags": []
+ },
+ "BQ-respiratory_sys-f4fe01eaa0ce": {
+  "type": "mtf",
+  "question": "关于呼吸的化学调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "动脉血PO₂降至60 mmHg以下时，通过外周化学感受器显著刺激呼吸",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "外周化学感受器（颈动脉体和主动脉体）主要检测动脉血中的PO₂、PCO₂和pH变化",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "CO₂对呼吸的刺激作用主要通过外周化学感受器介导",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "中枢化学感受器位于延髓腹外侧，主要对脑脊液中的H⁺浓度变化敏感",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：中枢化学感受器的位置和功能。B正确：外周化学感受器的功能。C错误：CO₂对呼吸的刺激作用约80%由中枢化学感受器介导，CO₂通过血脑屏障后与H₂O反应形成H⁺，中枢化学感受器检测H⁺浓度变化。A正确：低氧刺激的阈值。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "呼吸调控",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "14774604",
+  "tags": []
+ },
+ "BQ-respiratory_sys-6c5dd06800a4": {
+  "type": "mtf",
+  "question": "关于呼吸的化学调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "动脉血PO₂降至60 mmHg以下时，通过外周化学感受器显著刺激呼吸",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "外周化学感受器（颈动脉体和主动脉体）主要检测动脉血中的PO₂、PCO₂和pH变化",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "中枢化学感受器位于延髓腹外侧，主要对脑脊液中的H⁺浓度变化敏感",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "CO₂对呼吸的刺激作用主要通过外周化学感受器介导",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确：中枢化学感受器的位置和功能。B正确：外周化学感受器的功能。D错误：CO₂对呼吸的刺激作用约80%由中枢化学感受器介导，CO₂通过血脑屏障后与H₂O反应形成H⁺，中枢化学感受器检测H⁺浓度变化。A正确：低氧刺激的阈值。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "呼吸调控",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "14774604",
+  "tags": []
+ },
+ "BQ-respiratory_sys-7bfbb6d7d0a3": {
+  "type": "mtf",
+  "question": "关于呼吸的化学调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "外周化学感受器（颈动脉体和主动脉体）主要检测动脉血中的PO₂、PCO₂和pH变化",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "CO₂对呼吸的刺激作用主要通过外周化学感受器介导",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "中枢化学感受器位于延髓腹外侧，主要对脑脊液中的H⁺浓度变化敏感",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "动脉血PO₂降至60 mmHg以下时，通过外周化学感受器显著刺激呼吸",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：中枢化学感受器的位置和功能。A正确：外周化学感受器的功能。B错误：CO₂对呼吸的刺激作用约80%由中枢化学感受器介导，CO₂通过血脑屏障后与H₂O反应形成H⁺，中枢化学感受器检测H⁺浓度变化。D正确：低氧刺激的阈值。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "呼吸调控",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "14774604",
+  "tags": []
+ },
+ "BQ-respiratory_sys-93a0368227aa": {
+  "type": "mtf",
+  "question": "关于呼吸的化学调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "外周化学感受器（颈动脉体和主动脉体）主要检测动脉血中的PO₂、PCO₂和pH变化",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "CO₂对呼吸的刺激作用主要通过外周化学感受器介导",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "动脉血PO₂降至60 mmHg以下时，通过外周化学感受器显著刺激呼吸",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "中枢化学感受器位于延髓腹外侧，主要对脑脊液中的H⁺浓度变化敏感",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：中枢化学感受器的位置和功能。A正确：外周化学感受器的功能。B错误：CO₂对呼吸的刺激作用约80%由中枢化学感受器介导，CO₂通过血脑屏障后与H₂O反应形成H⁺，中枢化学感受器检测H⁺浓度变化。C正确：低氧刺激的阈值。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "呼吸调控",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "14774604",
+  "tags": []
+ },
+ "BQ-respiratory_sys-c091a57f1c43": {
+  "type": "mtf",
+  "question": "关于呼吸的化学调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "外周化学感受器（颈动脉体和主动脉体）主要检测动脉血中的PO₂、PCO₂和pH变化",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "中枢化学感受器位于延髓腹外侧，主要对脑脊液中的H⁺浓度变化敏感",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "CO₂对呼吸的刺激作用主要通过外周化学感受器介导",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "动脉血PO₂降至60 mmHg以下时，通过外周化学感受器显著刺激呼吸",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：中枢化学感受器的位置和功能。A正确：外周化学感受器的功能。C错误：CO₂对呼吸的刺激作用约80%由中枢化学感受器介导，CO₂通过血脑屏障后与H₂O反应形成H⁺，中枢化学感受器检测H⁺浓度变化。D正确：低氧刺激的阈值。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "呼吸调控",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "14774604",
+  "tags": []
+ },
+ "BQ-respiratory_sys-a015fd220495": {
+  "type": "mtf",
+  "question": "关于呼吸的化学调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "外周化学感受器（颈动脉体和主动脉体）主要检测动脉血中的PO₂、PCO₂和pH变化",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "中枢化学感受器位于延髓腹外侧，主要对脑脊液中的H⁺浓度变化敏感",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "动脉血PO₂降至60 mmHg以下时，通过外周化学感受器显著刺激呼吸",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "CO₂对呼吸的刺激作用主要通过外周化学感受器介导",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确：中枢化学感受器的位置和功能。A正确：外周化学感受器的功能。D错误：CO₂对呼吸的刺激作用约80%由中枢化学感受器介导，CO₂通过血脑屏障后与H₂O反应形成H⁺，中枢化学感受器检测H⁺浓度变化。C正确：低氧刺激的阈值。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "呼吸调控",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "14774604",
+  "tags": []
+ },
+ "BQ-respiratory_sys-a20c0628fc33": {
+  "type": "mtf",
+  "question": "关于呼吸的化学调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "外周化学感受器（颈动脉体和主动脉体）主要检测动脉血中的PO₂、PCO₂和pH变化",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "动脉血PO₂降至60 mmHg以下时，通过外周化学感受器显著刺激呼吸",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "CO₂对呼吸的刺激作用主要通过外周化学感受器介导",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "中枢化学感受器位于延髓腹外侧，主要对脑脊液中的H⁺浓度变化敏感",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：中枢化学感受器的位置和功能。A正确：外周化学感受器的功能。C错误：CO₂对呼吸的刺激作用约80%由中枢化学感受器介导，CO₂通过血脑屏障后与H₂O反应形成H⁺，中枢化学感受器检测H⁺浓度变化。B正确：低氧刺激的阈值。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "呼吸调控",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "14774604",
+  "tags": []
+ },
+ "BQ-respiratory_sys-b7b3466b533d": {
+  "type": "mtf",
+  "question": "关于呼吸的化学调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "外周化学感受器（颈动脉体和主动脉体）主要检测动脉血中的PO₂、PCO₂和pH变化",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "动脉血PO₂降至60 mmHg以下时，通过外周化学感受器显著刺激呼吸",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "中枢化学感受器位于延髓腹外侧，主要对脑脊液中的H⁺浓度变化敏感",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "CO₂对呼吸的刺激作用主要通过外周化学感受器介导",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确：中枢化学感受器的位置和功能。A正确：外周化学感受器的功能。D错误：CO₂对呼吸的刺激作用约80%由中枢化学感受器介导，CO₂通过血脑屏障后与H₂O反应形成H⁺，中枢化学感受器检测H⁺浓度变化。B正确：低氧刺激的阈值。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "呼吸调控",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "14774604",
+  "tags": []
+ },
+ "BQ-respiratory_sys-1f1c51d82112": {
+  "type": "mtf",
+  "question": "关于血液中CO₂的运输形式，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "CO₂全部以溶解气体形式在血液中运输",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "CO₂在血液中的主要运输形式是HCO₃⁻(约70%)",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "HCO₃⁻与Cl⁻通过红细胞膜上的AE1阴离子交换蛋白(带3蛋白)进行交换(氯转移)",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "红细胞中的碳酸酐酶催化CO₂+H₂O⇌H₂CO₃,加速HCO₃⁻的形成",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:CO₂运输形式:约70%为HCO₃⁻,约23%为氨基甲酸血红蛋白,约7%为物理溶解。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "CO₂运输",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1021014646",
+  "tags": []
+ },
+ "BQ-respiratory_sys-5be4ac96cc2b": {
+  "type": "mtf",
+  "question": "关于血液中CO₂的运输形式，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "CO₂全部以溶解气体形式在血液中运输",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "CO₂在血液中的主要运输形式是HCO₃⁻(约70%)",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "红细胞中的碳酸酐酶催化CO₂+H₂O⇌H₂CO₃,加速HCO₃⁻的形成",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "HCO₃⁻与Cl⁻通过红细胞膜上的AE1阴离子交换蛋白(带3蛋白)进行交换(氯转移)",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:CO₂运输形式:约70%为HCO₃⁻,约23%为氨基甲酸血红蛋白,约7%为物理溶解。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "CO₂运输",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1021014646",
+  "tags": []
+ },
+ "BQ-respiratory_sys-af43af6720b8": {
+  "type": "mtf",
+  "question": "关于血液中CO₂的运输形式，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "CO₂全部以溶解气体形式在血液中运输",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "HCO₃⁻与Cl⁻通过红细胞膜上的AE1阴离子交换蛋白(带3蛋白)进行交换(氯转移)",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "CO₂在血液中的主要运输形式是HCO₃⁻(约70%)",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "红细胞中的碳酸酐酶催化CO₂+H₂O⇌H₂CO₃,加速HCO₃⁻的形成",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:CO₂运输形式:约70%为HCO₃⁻,约23%为氨基甲酸血红蛋白,约7%为物理溶解。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "CO₂运输",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1021014646",
+  "tags": []
+ },
+ "BQ-respiratory_sys-dc43f51a3eef": {
+  "type": "mtf",
+  "question": "关于血液中CO₂的运输形式，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "CO₂全部以溶解气体形式在血液中运输",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "HCO₃⁻与Cl⁻通过红细胞膜上的AE1阴离子交换蛋白(带3蛋白)进行交换(氯转移)",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "红细胞中的碳酸酐酶催化CO₂+H₂O⇌H₂CO₃,加速HCO₃⁻的形成",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "CO₂在血液中的主要运输形式是HCO₃⁻(约70%)",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:CO₂运输形式:约70%为HCO₃⁻,约23%为氨基甲酸血红蛋白,约7%为物理溶解。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "CO₂运输",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1021014646",
+  "tags": []
+ },
+ "BQ-respiratory_sys-c27021a5396e": {
+  "type": "mtf",
+  "question": "关于血液中CO₂的运输形式，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "CO₂全部以溶解气体形式在血液中运输",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "红细胞中的碳酸酐酶催化CO₂+H₂O⇌H₂CO₃,加速HCO₃⁻的形成",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "CO₂在血液中的主要运输形式是HCO₃⁻(约70%)",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "HCO₃⁻与Cl⁻通过红细胞膜上的AE1阴离子交换蛋白(带3蛋白)进行交换(氯转移)",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:CO₂运输形式:约70%为HCO₃⁻,约23%为氨基甲酸血红蛋白,约7%为物理溶解。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "CO₂运输",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1021014646",
+  "tags": []
+ },
+ "BQ-respiratory_sys-09d885e2ef11": {
+  "type": "mtf",
+  "question": "关于血液中CO₂的运输形式，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "CO₂全部以溶解气体形式在血液中运输",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "红细胞中的碳酸酐酶催化CO₂+H₂O⇌H₂CO₃,加速HCO₃⁻的形成",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "HCO₃⁻与Cl⁻通过红细胞膜上的AE1阴离子交换蛋白(带3蛋白)进行交换(氯转移)",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "CO₂在血液中的主要运输形式是HCO₃⁻(约70%)",
+    "answer": true
+   }
+  ],
+  "explanation": "A错误:CO₂运输形式:约70%为HCO₃⁻,约23%为氨基甲酸血红蛋白,约7%为物理溶解。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "CO₂运输",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1021014646",
+  "tags": []
+ },
+ "BQ-respiratory_sys-c366002c19f8": {
+  "type": "mtf",
+  "question": "关于血液中CO₂的运输形式，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "CO₂在血液中的主要运输形式是HCO₃⁻(约70%)",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "CO₂全部以溶解气体形式在血液中运输",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "HCO₃⁻与Cl⁻通过红细胞膜上的AE1阴离子交换蛋白(带3蛋白)进行交换(氯转移)",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "红细胞中的碳酸酐酶催化CO₂+H₂O⇌H₂CO₃,加速HCO₃⁻的形成",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:CO₂运输形式:约70%为HCO₃⁻,约23%为氨基甲酸血红蛋白,约7%为物理溶解。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "CO₂运输",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1021014646",
+  "tags": []
+ },
+ "BQ-respiratory_sys-503d1082a652": {
+  "type": "mtf",
+  "question": "关于血液中CO₂的运输形式，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "CO₂在血液中的主要运输形式是HCO₃⁻(约70%)",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "CO₂全部以溶解气体形式在血液中运输",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "红细胞中的碳酸酐酶催化CO₂+H₂O⇌H₂CO₃,加速HCO₃⁻的形成",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "HCO₃⁻与Cl⁻通过红细胞膜上的AE1阴离子交换蛋白(带3蛋白)进行交换(氯转移)",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:CO₂运输形式:约70%为HCO₃⁻,约23%为氨基甲酸血红蛋白,约7%为物理溶解。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "CO₂运输",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1021014646",
+  "tags": []
+ },
+ "BQ-respiratory_sys-64bb4b23e572": {
+  "type": "mtf",
+  "question": "关于血液中CO₂的运输形式，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "CO₂在血液中的主要运输形式是HCO₃⁻(约70%)",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "HCO₃⁻与Cl⁻通过红细胞膜上的AE1阴离子交换蛋白(带3蛋白)进行交换(氯转移)",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "CO₂全部以溶解气体形式在血液中运输",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "红细胞中的碳酸酐酶催化CO₂+H₂O⇌H₂CO₃,加速HCO₃⁻的形成",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:CO₂运输形式:约70%为HCO₃⁻,约23%为氨基甲酸血红蛋白,约7%为物理溶解。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "CO₂运输",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1021014646",
+  "tags": []
+ },
+ "BQ-respiratory_sys-ee7048d53378": {
+  "type": "mtf",
+  "question": "关于血液中CO₂的运输形式，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "CO₂在血液中的主要运输形式是HCO₃⁻(约70%)",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "HCO₃⁻与Cl⁻通过红细胞膜上的AE1阴离子交换蛋白(带3蛋白)进行交换(氯转移)",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "红细胞中的碳酸酐酶催化CO₂+H₂O⇌H₂CO₃,加速HCO₃⁻的形成",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "CO₂全部以溶解气体形式在血液中运输",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:CO₂运输形式:约70%为HCO₃⁻,约23%为氨基甲酸血红蛋白,约7%为物理溶解。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "CO₂运输",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1021014646",
+  "tags": []
+ },
+ "BQ-respiratory_sys-c1108f2ceec5": {
+  "type": "mtf",
+  "question": "关于血液中CO₂的运输形式，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "CO₂在血液中的主要运输形式是HCO₃⁻(约70%)",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "红细胞中的碳酸酐酶催化CO₂+H₂O⇌H₂CO₃,加速HCO₃⁻的形成",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "CO₂全部以溶解气体形式在血液中运输",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "HCO₃⁻与Cl⁻通过红细胞膜上的AE1阴离子交换蛋白(带3蛋白)进行交换(氯转移)",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:CO₂运输形式:约70%为HCO₃⁻,约23%为氨基甲酸血红蛋白,约7%为物理溶解。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "CO₂运输",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1021014646",
+  "tags": []
+ },
+ "BQ-respiratory_sys-73c75abb9fca": {
+  "type": "mtf",
+  "question": "关于血液中CO₂的运输形式，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "CO₂在血液中的主要运输形式是HCO₃⁻(约70%)",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "红细胞中的碳酸酐酶催化CO₂+H₂O⇌H₂CO₃,加速HCO₃⁻的形成",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "HCO₃⁻与Cl⁻通过红细胞膜上的AE1阴离子交换蛋白(带3蛋白)进行交换(氯转移)",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "CO₂全部以溶解气体形式在血液中运输",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:CO₂运输形式:约70%为HCO₃⁻,约23%为氨基甲酸血红蛋白,约7%为物理溶解。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "CO₂运输",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1021014646",
+  "tags": []
+ },
+ "BQ-respiratory_sys-edd773d558de": {
+  "type": "mtf",
+  "question": "关于血液中CO₂的运输形式，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "HCO₃⁻与Cl⁻通过红细胞膜上的AE1阴离子交换蛋白(带3蛋白)进行交换(氯转移)",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "CO₂全部以溶解气体形式在血液中运输",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "CO₂在血液中的主要运输形式是HCO₃⁻(约70%)",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "红细胞中的碳酸酐酶催化CO₂+H₂O⇌H₂CO₃,加速HCO₃⁻的形成",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:CO₂运输形式:约70%为HCO₃⁻,约23%为氨基甲酸血红蛋白,约7%为物理溶解。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "CO₂运输",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1021014646",
+  "tags": []
+ },
+ "BQ-respiratory_sys-5fba0585fae1": {
+  "type": "mtf",
+  "question": "关于血液中CO₂的运输形式，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "HCO₃⁻与Cl⁻通过红细胞膜上的AE1阴离子交换蛋白(带3蛋白)进行交换(氯转移)",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "CO₂全部以溶解气体形式在血液中运输",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "红细胞中的碳酸酐酶催化CO₂+H₂O⇌H₂CO₃,加速HCO₃⁻的形成",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "CO₂在血液中的主要运输形式是HCO₃⁻(约70%)",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:CO₂运输形式:约70%为HCO₃⁻,约23%为氨基甲酸血红蛋白,约7%为物理溶解。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "CO₂运输",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1021014646",
+  "tags": []
+ },
+ "BQ-respiratory_sys-72c7c441aa41": {
+  "type": "mtf",
+  "question": "关于血液中CO₂的运输形式，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "HCO₃⁻与Cl⁻通过红细胞膜上的AE1阴离子交换蛋白(带3蛋白)进行交换(氯转移)",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "CO₂在血液中的主要运输形式是HCO₃⁻(约70%)",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "CO₂全部以溶解气体形式在血液中运输",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "红细胞中的碳酸酐酶催化CO₂+H₂O⇌H₂CO₃,加速HCO₃⁻的形成",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:CO₂运输形式:约70%为HCO₃⁻,约23%为氨基甲酸血红蛋白,约7%为物理溶解。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "CO₂运输",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1021014646",
+  "tags": []
+ },
+ "BQ-respiratory_sys-f5215417dcb9": {
+  "type": "mtf",
+  "question": "关于血液中CO₂的运输形式，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "HCO₃⁻与Cl⁻通过红细胞膜上的AE1阴离子交换蛋白(带3蛋白)进行交换(氯转移)",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "CO₂在血液中的主要运输形式是HCO₃⁻(约70%)",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "红细胞中的碳酸酐酶催化CO₂+H₂O⇌H₂CO₃,加速HCO₃⁻的形成",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "CO₂全部以溶解气体形式在血液中运输",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:CO₂运输形式:约70%为HCO₃⁻,约23%为氨基甲酸血红蛋白,约7%为物理溶解。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "CO₂运输",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1021014646",
+  "tags": []
+ },
+ "BQ-respiratory_sys-2f07e8b7ca57": {
+  "type": "mtf",
+  "question": "关于血液中CO₂的运输形式，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "HCO₃⁻与Cl⁻通过红细胞膜上的AE1阴离子交换蛋白(带3蛋白)进行交换(氯转移)",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "红细胞中的碳酸酐酶催化CO₂+H₂O⇌H₂CO₃,加速HCO₃⁻的形成",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "CO₂全部以溶解气体形式在血液中运输",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "CO₂在血液中的主要运输形式是HCO₃⁻(约70%)",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:CO₂运输形式:约70%为HCO₃⁻,约23%为氨基甲酸血红蛋白,约7%为物理溶解。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "CO₂运输",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1021014646",
+  "tags": []
+ },
+ "BQ-respiratory_sys-fe2153baa9e8": {
+  "type": "mtf",
+  "question": "关于血液中CO₂的运输形式，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "HCO₃⁻与Cl⁻通过红细胞膜上的AE1阴离子交换蛋白(带3蛋白)进行交换(氯转移)",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "红细胞中的碳酸酐酶催化CO₂+H₂O⇌H₂CO₃,加速HCO₃⁻的形成",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "CO₂在血液中的主要运输形式是HCO₃⁻(约70%)",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "CO₂全部以溶解气体形式在血液中运输",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:CO₂运输形式:约70%为HCO₃⁻,约23%为氨基甲酸血红蛋白,约7%为物理溶解。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "CO₂运输",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1021014646",
+  "tags": []
+ },
+ "BQ-respiratory_sys-681f87560cc1": {
+  "type": "mtf",
+  "question": "关于血液中CO₂的运输形式，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "红细胞中的碳酸酐酶催化CO₂+H₂O⇌H₂CO₃,加速HCO₃⁻的形成",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "CO₂全部以溶解气体形式在血液中运输",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "CO₂在血液中的主要运输形式是HCO₃⁻(约70%)",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "HCO₃⁻与Cl⁻通过红细胞膜上的AE1阴离子交换蛋白(带3蛋白)进行交换(氯转移)",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:CO₂运输形式:约70%为HCO₃⁻,约23%为氨基甲酸血红蛋白,约7%为物理溶解。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "CO₂运输",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1021014646",
+  "tags": []
+ },
+ "BQ-respiratory_sys-a96da5034219": {
+  "type": "mtf",
+  "question": "关于血液中CO₂的运输形式，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "红细胞中的碳酸酐酶催化CO₂+H₂O⇌H₂CO₃,加速HCO₃⁻的形成",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "CO₂全部以溶解气体形式在血液中运输",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "HCO₃⁻与Cl⁻通过红细胞膜上的AE1阴离子交换蛋白(带3蛋白)进行交换(氯转移)",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "CO₂在血液中的主要运输形式是HCO₃⁻(约70%)",
+    "answer": true
+   }
+  ],
+  "explanation": "B错误:CO₂运输形式:约70%为HCO₃⁻,约23%为氨基甲酸血红蛋白,约7%为物理溶解。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "CO₂运输",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1021014646",
+  "tags": []
+ },
+ "BQ-respiratory_sys-b7573b6fd01e": {
+  "type": "mtf",
+  "question": "关于血液中CO₂的运输形式，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "红细胞中的碳酸酐酶催化CO₂+H₂O⇌H₂CO₃,加速HCO₃⁻的形成",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "CO₂在血液中的主要运输形式是HCO₃⁻(约70%)",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "CO₂全部以溶解气体形式在血液中运输",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "HCO₃⁻与Cl⁻通过红细胞膜上的AE1阴离子交换蛋白(带3蛋白)进行交换(氯转移)",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:CO₂运输形式:约70%为HCO₃⁻,约23%为氨基甲酸血红蛋白,约7%为物理溶解。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "CO₂运输",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1021014646",
+  "tags": []
+ },
+ "BQ-respiratory_sys-22989925a6fc": {
+  "type": "mtf",
+  "question": "关于血液中CO₂的运输形式，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "红细胞中的碳酸酐酶催化CO₂+H₂O⇌H₂CO₃,加速HCO₃⁻的形成",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "CO₂在血液中的主要运输形式是HCO₃⁻(约70%)",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "HCO₃⁻与Cl⁻通过红细胞膜上的AE1阴离子交换蛋白(带3蛋白)进行交换(氯转移)",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "CO₂全部以溶解气体形式在血液中运输",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:CO₂运输形式:约70%为HCO₃⁻,约23%为氨基甲酸血红蛋白,约7%为物理溶解。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "CO₂运输",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1021014646",
+  "tags": []
+ },
+ "BQ-respiratory_sys-d333dda086a2": {
+  "type": "mtf",
+  "question": "关于血液中CO₂的运输形式，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "红细胞中的碳酸酐酶催化CO₂+H₂O⇌H₂CO₃,加速HCO₃⁻的形成",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "HCO₃⁻与Cl⁻通过红细胞膜上的AE1阴离子交换蛋白(带3蛋白)进行交换(氯转移)",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "CO₂全部以溶解气体形式在血液中运输",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "CO₂在血液中的主要运输形式是HCO₃⁻(约70%)",
+    "answer": true
+   }
+  ],
+  "explanation": "C错误:CO₂运输形式:约70%为HCO₃⁻,约23%为氨基甲酸血红蛋白,约7%为物理溶解。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "CO₂运输",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1021014646",
+  "tags": []
+ },
+ "BQ-respiratory_sys-bfc0466775de": {
+  "type": "mtf",
+  "question": "关于血液中CO₂的运输形式，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "红细胞中的碳酸酐酶催化CO₂+H₂O⇌H₂CO₃,加速HCO₃⁻的形成",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "HCO₃⁻与Cl⁻通过红细胞膜上的AE1阴离子交换蛋白(带3蛋白)进行交换(氯转移)",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "CO₂在血液中的主要运输形式是HCO₃⁻(约70%)",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "CO₂全部以溶解气体形式在血液中运输",
+    "answer": false
+   }
+  ],
+  "explanation": "D错误:CO₂运输形式:约70%为HCO₃⁻,约23%为氨基甲酸血红蛋白,约7%为物理溶解。",
+  "module": 3,
+  "subject": "动物生理学",
+  "concept": "CO₂运输",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1021014646",
+  "tags": []
+ }
+}

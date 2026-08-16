@@ -1,0 +1,5879 @@
+{
+ "BQ-transcription-52b0f031a920": {
+  "type": "multi_judge",
+  "question": "体外重构大肠杆菌无细胞转录 - 翻译偶联系统。加入利福平抑制 RNA 聚合酶，同时检测到新生肽链合成迅速停止。",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "原核生物转录与翻译在时空上紧密偶联，mRNA 边合成边被核糖体结合。",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "利福平通过结合核糖体大亚基，直接阻断肽酰转移酶活性从而抑制翻译。",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "新生肽链停止合成是因为利福平阻断了 mRNA 的合成，导致翻译缺乏模板。",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "若在该真核重构体系中施加同等处理，也会观察到转录翻译同步立即停止的现象。",
+    "answer": false
+   }
+  ],
+  "explanation": "A 正确：原核生物无核膜，转录出的 mRNA 5'端尚未完全合成即可被核糖体结合，体现时空偶联。B 错误：利福平特异性结合原核 RNA 聚合酶的β亚基，抑制转录起始，而非作用于核糖体。C 正确：由于转录被抑制，mRNA 无法生成，依赖新转录本的翻译过程随之因缺乏模板而停止。D 错误：真核生物转录在核内，翻译在胞质，二者时空分离，且利福平对真核 RNA 聚合酶无抑制作用。",
+  "subject": "分子生物学",
+  "concept": "原核转录翻译偶联",
+  "difficulty": "league",
+  "chart": null,
+  "year": null,
+  "module": "module_1",
+  "target": "competition",
+  "tags": [
+   "module_1",
+   "medium"
+  ],
+  "oldId": "589533482"
+ },
+ "BQ-transcription-24919ede4e07": {
+  "type": "multi_judge",
+  "question": "利用体外无细胞体系研究大肠杆菌转录过程，加入含启动子的双链 DNA 模板、RNA 聚合酶全酶及四种 NTP。若反应体系中误加入利福平，下列推断正确的是？",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "利福平特异性结合 RNA 聚合酶β亚基，阻断转录起始阶段磷酸二酯键形成。",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "利福平通过嵌入 DNA 双螺旋结构，阻碍 RNA 聚合酶沿模板链的移动延伸。",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "若在转录起始完成后加入利福平，已启动的 RNA 链合成过程仍可继续进行。",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "利福平对真核生物 RNA 聚合酶 II 具有同等强度的抑制作用，机制完全相同。",
+    "answer": false
+   }
+  ],
+  "explanation": "A 正确：利福平特异性结合原核生物 RNA 聚合酶的β亚基，物理阻塞新生 RNA 出口通道，从而抑制转录起始。B 错误：利福平不嵌入 DNA，而是结合酶蛋白；阻碍延伸通常是放线菌素 D 等药物的机制。C 正确：利福平仅抑制转录起始，对已经形成磷酸二酯键并进入延伸阶段的复合物无抑制作用。D 错误：真核生物 RNA 聚合酶结构与原核不同，对利福平不敏感，这是选择性抗菌的基础。",
+  "subject": "分子生物学",
+  "concept": "转录抑制机制",
+  "difficulty": "league",
+  "chart": null,
+  "year": null,
+  "module": "module_1",
+  "target": "competition",
+  "tags": [
+   "module_1",
+   "medium"
+  ],
+  "oldId": "1899734528"
+ },
+ "BQ-transcription-299cf645effd": {
+  "type": "multi_judge",
+  "question": "利用纯化的原核 RNA 聚合酶核心酶与σ因子重构转录体系，加入含特定启动子的双链 DNA 模板及 NTPs 进行体外实验。",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "σ因子显著降低核心酶与非特异性 DNA 序列的亲和力，提高启动子识别精度。",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "转录起始后σ因子立即降解，以确保延伸复合物的稳定性及持续合成能力。",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "若移除σ因子仅保留核心酶，体系将丧失特异性起始但保留非特异性延伸活性。",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "核心酶催化磷酸二酯键形成时，必须依赖外源提供的 Mg2+ 作为唯一金属辅因子。",
+    "answer": false
+   }
+  ],
+  "explanation": "A 正确：σ因子通过空间位阻或构象改变，降低核心酶与非特异性 DNA 的结合，引导其识别启动子。B 错误：转录起始后σ因子通常从核心酶上解离并可重复利用，而非被降解。C 正确：核心酶自身具备催化活性但缺乏特异性，无σ因子时只能进行非特异性转录。D 错误：原核 RNA 聚合酶活性中心通常含有两个 Mg2+ 离子协同催化，且部分条件下 Mn2+ 可替代，表述“唯一”不准确且忽略双金属离子机制。",
+  "subject": "分子生物学",
+  "concept": "原核转录机制",
+  "difficulty": "national",
+  "chart": null,
+  "year": null,
+  "module": "module_1",
+  "target": "competition",
+  "tags": [
+   "module_1",
+   "hard"
+  ],
+  "oldId": "1817305354"
+ },
+ "BQ-transcription-a43017e58a85": {
+  "type": "multi_judge",
+  "question": "利用纯化的大肠杆菌 RNA 聚合酶全酶与含 lac 启动子的线性 DNA 模板进行体外转录，体系中仅加入 ATP、GTP、CTP 及放射性标记的 UTP。",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "若去除σ因子，RNA 聚合酶核心酶仍能特异性识别并结合启动子序列。",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "反应产物为单链 RNA 分子，其 5'端第一个核苷酸通常保留三磷酸基团。",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "若向体系中加入利福平，将直接抑制磷酸二酯键形成从而阻断延伸。",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "放射性标记只会掺入到新合成的 RNA 链中，不会出现在 DNA 模板链上。",
+    "answer": true
+   }
+  ],
+  "explanation": "A 错：σ因子负责启动子特异性识别，去除后核心酶只能非特异性结合 DNA。B 对：转录起始核苷酸通常保留 pp pN 结构，且产物为单链。C 错：利福平特异性结合β亚基，阻断的是转录起始后的早期延伸（约 2-3 个核苷酸后），而非直接抑制催化中心形成磷酸二酯键的能力（那是焦磷酸类似物等作用），更准确说是阻断 RNA 链延伸出通道。D 对：UTP 是 RNA 合成原料，DNA 合成需 dUTP（且通常被 dTTP 替代），故标记只进入 RNA。",
+  "subject": "分子生物学",
+  "concept": "原核生物转录机制",
+  "difficulty": "national",
+  "chart": null,
+  "year": null,
+  "module": "module_1",
+  "target": "competition",
+  "tags": [
+   "module_1",
+   "hard"
+  ],
+  "oldId": "256014105"
+ },
+ "BQ-transcription-8827e269b767": {
+  "type": "multi_judge",
+  "question": "利用纯化的大肠杆菌 RNA 聚合酶全酶与含 lac 启动子的线性 DNA 进行体外转录。若反应体系中特意缺失 ATP 或加入利福平，检测转录产物及过程。",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "利福平通过结合β亚基阻止第一个磷酸二酯键形成，抑制转录起始。",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "缺失 ATP 时，RNA 聚合酶仍能结合启动子并形成稳定的开放复合物。",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "若模板链起始序列对应产物为 5'-pppGpA-3'，则缺失 ATP 将完全阻断转录延伸。",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "利福平主要作用于转录延伸阶段，导致 RNA 聚合酶从 DNA 模板上提前脱落。",
+    "answer": false
+   }
+  ],
+  "explanation": "A 正确：利福平特异性结合原核 RNA 聚合酶β亚基，物理阻塞 RNA 出口通道，抑制起始阶段第一个磷酸二酯键形成。B 错误：形成开放复合物虽不需 NTP 聚合，但 lac 启动子转录起始第一个核苷酸通常为嘌呤（ATP 或 GTP），若起始核苷酸为 ATP 且缺失，则无法形成稳定的起始复合物进入延伸，且题目暗示特定序列依赖。更严谨地，若起始碱基非 A，可形成开放复合物但不能起始合成；若起始为 A，则无法形成稳定起始复合物。此处考察对起始核苷酸特异性的理解，通常认为缺失起始所需 NTP 会阻碍功能性复合物向延伸转化，故判错以示区分。C 正确：若转录起始第二个碱基为 A（即产物为 GpA...），缺失 ATP 则无法形成第二个磷酸二酯键，转录停留在起始阶段，无法延伸。D 错误：利福平仅抑制转录起始，对已经形成的延伸复合物无影响，不会导致延伸中的聚合酶脱落。",
+  "subject": "分子生物学",
+  "concept": "原核转录调控机制",
+  "difficulty": "national",
+  "chart": null,
+  "year": null,
+  "module": "module_1",
+  "target": "competition",
+  "tags": [
+   "module_1",
+   "hard"
+  ],
+  "oldId": "74984023"
+ },
+ "BQ-transcription-7ca6a2ff6b15": {
+  "type": "multi_judge",
+  "question": "利用纯化的大肠杆菌 RNA 聚合酶全酶与含 lac 操纵子启动子的 DNA 模板进行体外转录。体系中缺乏 cAMP-CRP 复合物，但存在乳糖衍生物 IPTG。",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "RNA 聚合酶全酶中的σ因子负责识别启动子特异性序列并起始转录。",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "由于缺乏 cAMP-CRP 复合物，RNA 聚合酶完全无法结合到启动子区域。",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "IPTG 的存在使 Lac 阻遏蛋白构象改变并从操纵基因序列上解离。",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "在此条件下，该体系的转录效率将达到最大值，与野生型体内环境一致。",
+    "answer": false
+   }
+  ],
+  "explanation": "A 正确：σ因子的核心功能是识别启动子 -10 和 -35 区并介导转录起始。B 错误：cAMP-CRP 是正调控因子，缺失时聚合酶仍可结合启动子，但结合力弱、转录效率低，并非完全无法结合。C 正确：IPTG 作为诱导剂结合 LacI，使其构象改变并脱离操纵基因，解除抑制。D 错误：虽然阻遏被解除，但因缺乏 cAMP-CRP 的正调控辅助，转录效率远低于最大值，无法达到野生型在诱导状态下的高水平。",
+  "subject": "分子生物学",
+  "concept": "原核基因转录调控",
+  "difficulty": "national",
+  "chart": null,
+  "year": null,
+  "module": "module_1",
+  "target": "competition",
+  "tags": [
+   "module_1",
+   "hard"
+  ],
+  "oldId": "1948312929"
+ },
+ "BQ-transcription-58fd82f70189": {
+  "type": "multi_judge",
+  "question": "利用纯化的大肠杆菌 RNA 聚合酶全酶与含 lac 操纵子启动子的 DNA 模板进行体外转录。若反应体系中缺乏 cAMP-CRP 复合物但存在 Lac 阻遏蛋白，下列推断正确的是？",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "RNA 聚合酶全酶能特异性识别并结合启动子序列，但转录起始效率极低。",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "Lac 阻遏蛋白会直接结合 RNA 聚合酶β亚基，阻止全酶与启动子的任何结合。",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "若加入高浓度 cAMP 解除 CRP 限制，转录水平仍受 Lac 阻遏蛋白的显著抑制。",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "缺乏 cAMP-CRP 时，RNA 聚合酶核心酶无法识别启动子，导致转录完全不能发生。",
+    "answer": false
+   }
+  ],
+  "explanation": "A 正确：全酶中的σ因子可识别启动子，但缺乏 cAMP-CRP 正调控，开放复合物形成困难，效率极低。B 错误：Lac 阻遏蛋白结合的是操纵基因（operator）序列，通过空间位阻阻碍转录延伸或起始，而非直接结合聚合酶β亚基阻止其结合启动子。C 正确：cAMP-CRP 仅解决正调控问题，若 Lac 阻遏蛋白仍存在且未结合诱导物，它会结合操纵基因继续抑制转录。D 错误：识别启动子的是全酶（含σ因子），而非核心酶；且缺乏 cAMP-CRP 只是降低效率而非导致转录“完全不能”发生，存在基础水平的渗漏表达。",
+  "subject": "分子生物学",
+  "concept": "原核基因转录调控",
+  "difficulty": "national",
+  "chart": null,
+  "year": null,
+  "module": "module_1",
+  "target": "competition",
+  "tags": [
+   "module_1",
+   "hard"
+  ],
+  "oldId": "528160633"
+ },
+ "BQ-transcription-3c1c2763fc3e": {
+  "type": "multi_judge",
+  "question": "利用纯化的大肠杆菌 RNA 聚合酶全酶与含强启动子的双链 DNA 模板进行体外转录。若反应体系中误加入利福平（Rifampicin）并在延伸阶段加入，下列推断正确的是？",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "利福平结合于β亚基，阻断磷酸二酯键形成从而抑制所有转录阶段。",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "若利福平在转录起始后加入，已形成的转录复合物能继续完成 RNA 合成。",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "利福平通过干扰σ因子与启动子的识别结合，阻止开放复合物的形成。",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "该抗生素对真核生物 RNA 聚合酶Ⅱ无抑制作用，因其结合位点结构不同。",
+    "answer": true
+   }
+  ],
+  "explanation": "A 错：利福平特异性结合原核 RNA 聚合酶β亚基，仅阻断转录起始阶段第一个磷酸二酯键的形成，不抑制已启动的延伸过程。B 对：一旦转录进入延伸阶段，利福平无法结合或发挥作用，已有复合物可继续合成 RNA。C 错：利福平不干扰σ因子识别启动子或开放复合物形成，而是阻断起始后的早期延伸。D 对：真核生物 RNA 聚合酶结构与原核差异巨大，缺乏利福平结合口袋，故不受其抑制，这是选择性毒性的基础。",
+  "subject": "分子生物学",
+  "concept": "转录抑制机制",
+  "difficulty": "national",
+  "chart": null,
+  "year": null,
+  "module": "module_1",
+  "target": "competition",
+  "tags": [
+   "module_1",
+   "hard"
+  ],
+  "oldId": "471466225"
+ },
+ "BQ-transcription-495b14638815": {
+  "type": "multi_judge",
+  "question": "利用纯化的大肠杆菌 RNA 聚合酶全酶与含强启动子的环状双链 DNA 模板进行体外转录。若反应体系中特异性缺失 Rho 因子，但存在 rut 位点序列，下列推断正确的是？",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "转录起始阶段 sigma 因子识别启动子并促使 DNA 双链解开形成转录泡",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "因缺乏 Rho 因子，所有含 rut 位点的转录本均无法终止导致读通",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "新生 RNA 链的合成方向严格遵循从 5'端向 3'端延伸的规律",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "RNA 聚合酶核心酶在转录起始完成后仍与 sigma 因子紧密结合",
+    "answer": false
+   }
+  ],
+  "explanation": "A 正确：Sigma 因子负责识别启动子特定序列并诱导 DNA 解旋形成开放复合体。B 错误：细菌存在不依赖 Rho 的内在终止机制（发夹结构 + 寡聚 U），即使缺失 Rho，含强内在终止子的基因仍可正常终止。C 正确：所有已知核酸聚合酶合成方向均为 5'到 3'，这是由核苷酸添加机制决定的。D 错误：转录起始后进入延伸阶段时，sigma 因子通常会从核心酶上解离，以便核心酶高效进行延伸合成。",
+  "subject": "分子生物学",
+  "concept": "原核生物转录机制",
+  "difficulty": "national",
+  "chart": null,
+  "year": null,
+  "module": "module_1",
+  "target": "competition",
+  "tags": [
+   "module_1",
+   "hard"
+  ],
+  "oldId": "1360747273"
+ },
+ "BQ-transcription-e5f4b06d93f1": {
+  "type": "mtf",
+  "question": "在原核细胞中，mRNA 的翻译过程与转录过程是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "同时进行",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "先转录后翻译",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "先翻译后转录",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "无关联",
+    "answer": false
+   }
+  ],
+  "explanation": "A选项正确，因为在原核细胞中，mRNA 的翻译过程与转录过程是同时进行的。B选项不正确，因为在原核细胞中，转录过程不需要完成后才开始翻译。C选项不正确，因为在原核细胞中，翻译过程不需要等待转录过程完成后才开始。D选项不正确，因为转录过程与翻译过程是相关的。",
+  "subject": "分子生物学",
+  "concept": "原核细胞",
+  "difficulty": "basic",
+  "chart": null,
+  "year": null,
+  "module": "module_1",
+  "target": "high_school",
+  "tags": [
+   "分子生物学",
+   "原核细胞",
+   "high_school"
+  ],
+  "oldId": "1582853773"
+ },
+ "BQ-transcription-7a8a1d8b6f03": {
+  "type": "multi_judge",
+  "question": "在无细胞体系中重构原核生物转录 - 翻译偶联系统，加入环丙沙星抑制 DNA 旋转酶，同时观测到新生肽链合成迅速停止。",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "环丙沙星导致 DNA 超螺旋无法释放，阻碍 RNA 聚合酶延伸。",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "新生肽链停止合成是因为核糖体大亚基催化中心被药物直接结合。",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "该现象体现了原核生物转录与翻译在空间和时间上的紧密偶联。",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "若在该体系中加入真核生物核糖体，仍能观察到相同的偶联抑制效应。",
+    "answer": false
+   }
+  ],
+  "explanation": "A 正确：环丙沙星通过抑制 DNA 旋转酶（gyrase），阻止 DNA 超螺旋的松弛，导致 RNA 聚合酶无法继续向前移动进行转录延伸。B 错误：新生肽链停止是转录受阻的间接结果，环丙沙星不直接作用于核糖体或肽基转移酶中心。C 正确：原核生物无核膜，转录未结束翻译即开始，转录受阻直接导致翻译模板缺失，体现时空偶联。D 错误：真核生物转录在核内、翻译在胞质，且核糖体结构不同，不存在这种直接的偶联抑制机制，且药物特异性针对原核酶。",
+  "subject": "分子生物学",
+  "concept": "转录翻译偶联",
+  "difficulty": "national",
+  "chart": null,
+  "year": null,
+  "module": "module_1",
+  "target": "competition",
+  "tags": [
+   "module_1",
+   "hard"
+  ],
+  "oldId": "1993158903"
+ },
+ "BQ-transcription-098400af1a56": {
+  "type": "multi_judge",
+  "question": "在无细胞体系中重构大肠杆菌转录 - 翻译偶联系统，加入含典型 SD 序列的 mRNA 模板。若向体系中加入利福平或氯霉素，观察其对大分子合成的特异性抑制效果。",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "利福平通过结合 RNA 聚合酶β亚基，特异性阻断转录起始阶段磷酸二酯键的形成。",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "氯霉素通过与 30S 小亚基结合，阻碍氨酰 -tRNA 进入 A 位点从而抑制肽链延伸。",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "由于原核生物转录翻译偶联，加入利福平后，正在延申的多肽链合成也会迅速停止。",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "若将模板换为真核 mRNA 且体系替换为真核组分，利福平仍能有效抑制其 RNA 聚合酶 II 的活性。",
+    "answer": false
+   }
+  ],
+  "explanation": "A 正确：利福平特异性结合原核 RNA 聚合酶β亚基，抑制转录起始。B 错误：氯霉素结合的是 50S 大亚基，抑制肽酰转移酶活性，而非 30S 小亚基。C 正确：原核生物转录与翻译偶联，转录被阻断后，mRNA 供应停止，翻译随之迅速终止。D 错误：利福平仅对原核 RNA 聚合酶有效，真核 RNA 聚合酶对其不敏感，真核转录抑制常用α-鹅膏蕈碱。",
+  "subject": "分子生物学",
+  "concept": "抗生素作用机制",
+  "difficulty": "national",
+  "chart": null,
+  "year": null,
+  "module": "module_1",
+  "target": "competition",
+  "tags": [
+   "module_1",
+   "hard"
+  ],
+  "oldId": "2053176976"
+ },
+ "BQ-transcription-cdf60d42c211": {
+  "type": "multi_judge",
+  "question": "在无细胞体系中重构大肠杆菌转录系统，加入含强启动子的双链 DNA 模板、RNA 聚合酶全酶及 NTPs，检测转录产物。",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "σ因子协助全酶特异性识别启动子序列，启动转录过程。",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "转录延伸阶段，RNA 聚合酶核心酶与σ因子紧密结合以维持稳定性。",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "新合成的 RNA 链方向为 5'端向 3'端，且无需引物即可起始。",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "终止子序列形成的发夹结构直接导致 DNA 模板双链发生永久解离。",
+    "answer": false
+   }
+  ],
+  "explanation": "A 正确：σ因子的主要功能是引导 RNA 聚合酶全酶特异性识别并结合启动子，从而启动转录。B 错误：转录一旦进入延伸阶段，σ因子通常会从核心酶上解离，不再紧密结合。C 正确：所有已知 RNA 聚合酶合成 RNA 的方向均为 5'到 3'，且转录起始不需要引物。D 错误：终止子形成的发夹结构主要导致转录复合物不稳定从而释放 RNA 链，DNA 模板随后会重新形成双螺旋，而非永久解离。",
+  "subject": "分子生物学",
+  "concept": "原核生物转录机制",
+  "difficulty": "league",
+  "chart": null,
+  "year": null,
+  "module": "module_1",
+  "target": "competition",
+  "tags": [
+   "module_1",
+   "medium"
+  ],
+  "oldId": "1854636033"
+ },
+ "BQ-transcription-c5ceb6293807": {
+  "type": "mtf",
+  "question": "在真核细胞中，mRNA的加工过程包括哪些步骤？",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "剪接、加帽、加尾",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "剪接、加帽、翻译",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "加帽、加尾、翻译",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "剪接、翻译、加尾",
+    "answer": false
+   }
+  ],
+  "explanation": "真核细胞中，mRNA的加工过程包括剪接（去除内含子）、加帽（在5'端添加甲基化的腺苷酸）和加尾（在3'端添加多腺苷酸尾）。选项A正确。选项B错误，因为翻译是蛋白质合成的过程，而不是mRNA加工的步骤。选项C错误，因为翻译不是mRNA加工的步骤。选项D错误，因为加尾是在剪接之后进行的。",
+  "subject": "分子生物学",
+  "concept": "mRNA加工",
+  "difficulty": "national",
+  "chart": null,
+  "year": null,
+  "module": "module_1",
+  "target": "competition",
+  "tags": [
+   "分子生物学",
+   "mRNA加工",
+   "competition"
+  ],
+  "oldId": "1710522872"
+ },
+ "BQ-transcription-b9b41b05078d": {
+  "type": "mtf",
+  "question": "转录和翻译的主要场所分别是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "DNA 通过转录合成 RNA",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "RNA 通过翻译合成蛋白质",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "所有生物都能进行逆转录",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "RNA 也能进行自我复制",
+    "answer": false
+   }
+  ],
+  "explanation": "中心法则包括 DNA→DNA（复制）、DNA→RNA（转录）、RNA→蛋白质（翻译）、RNA→RNA（复制）、RNA→DNA（逆转录）。逆转录仅存在于逆转录病毒等情况。",
+  "subject": "分子生物学",
+  "concept": "中心法则与基因表达",
+  "difficulty": "league",
+  "chart": null,
+  "year": null,
+  "module": "module_1",
+  "target": "high_school",
+  "tags": [
+   "module_1",
+   "分子生物学",
+   "中心法则与基因表达",
+   "high_school"
+  ],
+  "oldId": "631765597"
+ },
+ "BQ-transcription-a7e3c68fa196": {
+  "type": "mtf",
+  "question": "关于转录和翻译的叙述，正确的是",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "一个基因只能转录一种 mRNA",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "翻译过程中 tRNA 携带氨基酸到核糖体",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "转录发生在细胞质中",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "mRNA 上的反密码子与 tRNA 上的密码子配对",
+    "answer": false
+   }
+  ],
+  "explanation": "转录发生在细胞核（真核）；mRNA 上有密码子，tRNA 上有反密码子；一个基因通过可变剪接可产生多种 mRNA。",
+  "subject": "分子生物学",
+  "concept": "基因的表达",
+  "difficulty": "basic",
+  "chart": null,
+  "year": null,
+  "module": "module_4",
+  "target": "high_school",
+  "tags": [
+   "module_4",
+   "分子生物学",
+   "基因的表达",
+   "high_school"
+  ],
+  "oldId": "758597905"
+ },
+ "BQ-transcription-5ec25c17d376": {
+  "stem": "以下哪一个术语被用来描述含有几个转录因子与一个增强子结合的DNA-蛋白质复合物？",
+  "options": {
+   "A": "核糖体",
+   "B": "染色体",
+   "C": "增强体",
+   "D": "蛋白酶体"
+  },
+  "answer": {
+   "A": false,
+   "B": false,
+   "C": true,
+   "D": false
+  },
+  "analysis": "正确答案：C",
+  "knowledge": [
+   "module_1",
+   "分子生物学"
+  ],
+  "module": "module_1",
+  "difficulty": "league",
+  "target": "competition",
+  "subject": "分子生物学",
+  "concept": "转录",
+  "tags": [
+   "module_1",
+   "分子生物学",
+   "转录",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2024/art_f5fe44f36762455fb9f8f99b9e0bf2e2.html",
+   "2024"
+  ],
+  "weight": 1,
+  "fb_good": 0,
+  "fb_bad": 0,
+  "created_at": 1782028590.062659,
+  "source": "https://www.czs.org.cn/swjs/lsstxz/art/2024/art_f5fe44f36762455fb9f8f99b9e0bf2e2.html",
+  "year": 2024,
+  "_analysis_sparse": true,
+  "_review_reason": "解析为 AI 引导提示，待人工补充详细解析",
+  "type": "multi_judge",
+  "question": "以下哪一个术语被用来描述含有几个转录因子与一个增强子结合的DNA-蛋白质复合物？",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "核糖体",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "染色体",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "增强体",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "蛋白酶体",
+    "answer": false
+   }
+  ],
+  "explanation": "正确答案：C",
+  "chart": null,
+  "oldId": "crawled_1782028590062_4657"
+ },
+ "BQ-transcription-8c373803b6d2": {
+  "stem": "以下是人22 号染色体GTF 格式基因组注释文件的一部分，展示了PERM1 基因的转录本NM_001291367.2\n的信息。对以下基于该GTF 信息的陈述进行正误判断：",
+  "options": {
+   "A": "GTF 文件第7 列的'–'标记表明，PERM1 基因及其所示转录本位于染色体的负链",
+   "B": "该转录本起始密码子的第一个核苷酸（A）对应于基因组坐标981164",
+   "C": "该转录本包含5 个外显子（exon），但编码序列（CDS）仅覆盖了其中的4 个外显子区域",
+   "D": "成熟的mRNA 分子包含了从基因组坐标976172 到981164 之间的所有核苷酸序列"
+  },
+  "answer": {
+   "A": true,
+   "B": false,
+   "C": false,
+   "D": false
+  },
+  "analysis": "正确答案：A。详细解析请通过 AI 导师获取（在 AI 对话中粘贴本题题干即可）。",
+  "knowledge": [
+   "module_1",
+   "分子生物学"
+  ],
+  "module": "module_1",
+  "difficulty": "league",
+  "target": "competition",
+  "subject": "分子生物学",
+  "concept": "转录",
+  "tags": [
+   "module_1",
+   "分子生物学",
+   "转录",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2025/art_b153fd076f3f4fe282acfc333c4d4ab6.html",
+   "2025"
+  ],
+  "weight": 1,
+  "fb_good": 0,
+  "fb_bad": 0,
+  "created_at": 1782028596.2332528,
+  "source": "https://www.czs.org.cn/swjs/lsstxz/art/2025/art_b153fd076f3f4fe282acfc333c4d4ab6.html",
+  "year": 2025,
+  "_analysis_sparse": true,
+  "_review_reason": "解析为 AI 引导提示，待人工补充详细解析",
+  "type": "multi_judge",
+  "question": "以下是人22 号染色体GTF 格式基因组注释文件的一部分，展示了PERM1 基因的转录本NM_001291367.2\n的信息。对以下基于该GTF 信息的陈述进行正误判断：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "GTF 文件第7 列的'–'标记表明，PERM1 基因及其所示转录本位于染色体的负链",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "该转录本起始密码子的第一个核苷酸（A）对应于基因组坐标981164",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "该转录本包含5 个外显子（exon），但编码序列（CDS）仅覆盖了其中的4 个外显子区域",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "成熟的mRNA 分子包含了从基因组坐标976172 到981164 之间的所有核苷酸序列",
+    "answer": false
+   }
+  ],
+  "explanation": "正确答案：A。详细解析请通过 AI 导师获取（在 AI 对话中粘贴本题题干即可）。",
+  "chart": null,
+  "oldId": "crawled_1782028596233_3008"
+ },
+ "BQ-transcription-34f8585b5d8c": {
+  "stem": "可以由RNA 聚合酶III 转录的RNA 包括：\n（多选）",
+  "options": {
+   "A": "5S rRNA",
+   "B": "mRNA",
+   "C": "tRNA",
+   "D": "部分miRNA"
+  },
+  "answer": {
+   "A": true,
+   "B": false,
+   "C": true,
+   "D": true
+  },
+  "analysis": "正确答案：ACD",
+  "knowledge": [
+   "module_1",
+   "分子生物学"
+  ],
+  "module": "module_1",
+  "difficulty": "league",
+  "target": "competition",
+  "subject": "分子生物学",
+  "concept": "转录",
+  "tags": [
+   "module_1",
+   "分子生物学",
+   "转录",
+   "league",
+   "competition",
+   "https://www.czs.org.cn/swjs/lsstxz/art/2015/art_1c13e648d84d4e38b94e2dfd5e5b1b0b.html",
+   "2015"
+  ],
+  "weight": 1,
+  "fb_good": 0,
+  "fb_bad": 0,
+  "created_at": 1782028584.5775487,
+  "source": "https://www.czs.org.cn/swjs/lsstxz/art/2015/art_1c13e648d84d4e38b94e2dfd5e5b1b0b.html",
+  "year": 2015,
+  "_analysis_sparse": true,
+  "_review_reason": "解析为 AI 引导提示，待人工补充详细解析",
+  "type": "multi_judge",
+  "question": "可以由RNA 聚合酶III 转录的RNA 包括：\n（多选）",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "5S rRNA",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "mRNA",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "tRNA",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "部分miRNA",
+    "answer": true
+   }
+  ],
+  "explanation": "正确答案：ACD",
+  "chart": null,
+  "oldId": "crawled_1782028584577_3948"
+ },
+ "BQ-transcription-96da4e9216f5": {
+  "type": "mtf",
+  "question": "关于mRNA可变剪接，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "SR蛋白和hnRNP蛋白分别促进和抑制剪接位点的识别，其相对浓度调控剪接位点的选择",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "剪接体由5种snRNP（U1、U2、U4、U5、U6）和多种辅助蛋白组装而成",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "可变剪接是真核生物增加蛋白质多样性的重要机制，超过95%的人类基因存在可变剪接",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "外显子跳跃（exon skipping）是最常见的可变剪接类型，在脊椎动物中约占所有可变剪接事件的三分之一",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确：可变剪接的普遍性。B正确：剪接体的组成。A正确：剪接调控蛋白的作用。D错误：外显子跳跃在脊椎动物中约占所有可变剪接事件的40%以上，是最常见的类型，不是三分之一。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "可变剪接",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "896938534",
+  "tags": []
+ },
+ "BQ-transcription-8ef1c65ec050": {
+  "type": "mtf",
+  "question": "关于mRNA可变剪接，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "SR蛋白和hnRNP蛋白分别促进和抑制剪接位点的识别，其相对浓度调控剪接位点的选择",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "剪接体由5种snRNP（U1、U2、U4、U5、U6）和多种辅助蛋白组装而成",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "外显子跳跃（exon skipping）是最常见的可变剪接类型，在脊椎动物中约占所有可变剪接事件的三分之一",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "可变剪接是真核生物增加蛋白质多样性的重要机制，超过95%的人类基因存在可变剪接",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：可变剪接的普遍性。B正确：剪接体的组成。A正确：剪接调控蛋白的作用。C错误：外显子跳跃在脊椎动物中约占所有可变剪接事件的40%以上，是最常见的类型，不是三分之一。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "可变剪接",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "896938534",
+  "tags": []
+ },
+ "BQ-transcription-e45725b48304": {
+  "type": "mtf",
+  "question": "关于mRNA可变剪接，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "SR蛋白和hnRNP蛋白分别促进和抑制剪接位点的识别，其相对浓度调控剪接位点的选择",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "可变剪接是真核生物增加蛋白质多样性的重要机制，超过95%的人类基因存在可变剪接",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "剪接体由5种snRNP（U1、U2、U4、U5、U6）和多种辅助蛋白组装而成",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "外显子跳跃（exon skipping）是最常见的可变剪接类型，在脊椎动物中约占所有可变剪接事件的三分之一",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确：可变剪接的普遍性。C正确：剪接体的组成。A正确：剪接调控蛋白的作用。D错误：外显子跳跃在脊椎动物中约占所有可变剪接事件的40%以上，是最常见的类型，不是三分之一。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "可变剪接",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "896938534",
+  "tags": []
+ },
+ "BQ-transcription-bb49ba71725b": {
+  "type": "mtf",
+  "question": "关于mRNA可变剪接，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "SR蛋白和hnRNP蛋白分别促进和抑制剪接位点的识别，其相对浓度调控剪接位点的选择",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "可变剪接是真核生物增加蛋白质多样性的重要机制，超过95%的人类基因存在可变剪接",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "外显子跳跃（exon skipping）是最常见的可变剪接类型，在脊椎动物中约占所有可变剪接事件的三分之一",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "剪接体由5种snRNP（U1、U2、U4、U5、U6）和多种辅助蛋白组装而成",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：可变剪接的普遍性。D正确：剪接体的组成。A正确：剪接调控蛋白的作用。C错误：外显子跳跃在脊椎动物中约占所有可变剪接事件的40%以上，是最常见的类型，不是三分之一。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "可变剪接",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "896938534",
+  "tags": []
+ },
+ "BQ-transcription-ae3ed7e09193": {
+  "type": "mtf",
+  "question": "关于mRNA可变剪接，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "SR蛋白和hnRNP蛋白分别促进和抑制剪接位点的识别，其相对浓度调控剪接位点的选择",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "外显子跳跃（exon skipping）是最常见的可变剪接类型，在脊椎动物中约占所有可变剪接事件的三分之一",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "剪接体由5种snRNP（U1、U2、U4、U5、U6）和多种辅助蛋白组装而成",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "可变剪接是真核生物增加蛋白质多样性的重要机制，超过95%的人类基因存在可变剪接",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：可变剪接的普遍性。C正确：剪接体的组成。A正确：剪接调控蛋白的作用。B错误：外显子跳跃在脊椎动物中约占所有可变剪接事件的40%以上，是最常见的类型，不是三分之一。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "可变剪接",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "896938534",
+  "tags": []
+ },
+ "BQ-transcription-3729d05f80e2": {
+  "type": "mtf",
+  "question": "关于mRNA可变剪接，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "SR蛋白和hnRNP蛋白分别促进和抑制剪接位点的识别，其相对浓度调控剪接位点的选择",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "外显子跳跃（exon skipping）是最常见的可变剪接类型，在脊椎动物中约占所有可变剪接事件的三分之一",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "可变剪接是真核生物增加蛋白质多样性的重要机制，超过95%的人类基因存在可变剪接",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "剪接体由5种snRNP（U1、U2、U4、U5、U6）和多种辅助蛋白组装而成",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：可变剪接的普遍性。D正确：剪接体的组成。A正确：剪接调控蛋白的作用。B错误：外显子跳跃在脊椎动物中约占所有可变剪接事件的40%以上，是最常见的类型，不是三分之一。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "可变剪接",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "896938534",
+  "tags": []
+ },
+ "BQ-transcription-7eefba58f952": {
+  "type": "mtf",
+  "question": "关于mRNA可变剪接，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "剪接体由5种snRNP（U1、U2、U4、U5、U6）和多种辅助蛋白组装而成",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "SR蛋白和hnRNP蛋白分别促进和抑制剪接位点的识别，其相对浓度调控剪接位点的选择",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "可变剪接是真核生物增加蛋白质多样性的重要机制，超过95%的人类基因存在可变剪接",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "外显子跳跃（exon skipping）是最常见的可变剪接类型，在脊椎动物中约占所有可变剪接事件的三分之一",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确：可变剪接的普遍性。A正确：剪接体的组成。B正确：剪接调控蛋白的作用。D错误：外显子跳跃在脊椎动物中约占所有可变剪接事件的40%以上，是最常见的类型，不是三分之一。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "可变剪接",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "896938534",
+  "tags": []
+ },
+ "BQ-transcription-b39f61a9bfb7": {
+  "type": "mtf",
+  "question": "关于mRNA可变剪接，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "剪接体由5种snRNP（U1、U2、U4、U5、U6）和多种辅助蛋白组装而成",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "SR蛋白和hnRNP蛋白分别促进和抑制剪接位点的识别，其相对浓度调控剪接位点的选择",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "外显子跳跃（exon skipping）是最常见的可变剪接类型，在脊椎动物中约占所有可变剪接事件的三分之一",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "可变剪接是真核生物增加蛋白质多样性的重要机制，超过95%的人类基因存在可变剪接",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：可变剪接的普遍性。A正确：剪接体的组成。B正确：剪接调控蛋白的作用。C错误：外显子跳跃在脊椎动物中约占所有可变剪接事件的40%以上，是最常见的类型，不是三分之一。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "可变剪接",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "896938534",
+  "tags": []
+ },
+ "BQ-transcription-a2f0f1b59f87": {
+  "type": "mtf",
+  "question": "关于mRNA可变剪接，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "剪接体由5种snRNP（U1、U2、U4、U5、U6）和多种辅助蛋白组装而成",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "可变剪接是真核生物增加蛋白质多样性的重要机制，超过95%的人类基因存在可变剪接",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "SR蛋白和hnRNP蛋白分别促进和抑制剪接位点的识别，其相对浓度调控剪接位点的选择",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "外显子跳跃（exon skipping）是最常见的可变剪接类型，在脊椎动物中约占所有可变剪接事件的三分之一",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确：可变剪接的普遍性。A正确：剪接体的组成。C正确：剪接调控蛋白的作用。D错误：外显子跳跃在脊椎动物中约占所有可变剪接事件的40%以上，是最常见的类型，不是三分之一。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "可变剪接",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "896938534",
+  "tags": []
+ },
+ "BQ-transcription-cb5859cdb8e1": {
+  "type": "mtf",
+  "question": "关于mRNA可变剪接，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "剪接体由5种snRNP（U1、U2、U4、U5、U6）和多种辅助蛋白组装而成",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "可变剪接是真核生物增加蛋白质多样性的重要机制，超过95%的人类基因存在可变剪接",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "外显子跳跃（exon skipping）是最常见的可变剪接类型，在脊椎动物中约占所有可变剪接事件的三分之一",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "SR蛋白和hnRNP蛋白分别促进和抑制剪接位点的识别，其相对浓度调控剪接位点的选择",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：可变剪接的普遍性。A正确：剪接体的组成。D正确：剪接调控蛋白的作用。C错误：外显子跳跃在脊椎动物中约占所有可变剪接事件的40%以上，是最常见的类型，不是三分之一。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "可变剪接",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "896938534",
+  "tags": []
+ },
+ "BQ-transcription-02867bcf2a35": {
+  "type": "mtf",
+  "question": "关于mRNA可变剪接，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "剪接体由5种snRNP（U1、U2、U4、U5、U6）和多种辅助蛋白组装而成",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "外显子跳跃（exon skipping）是最常见的可变剪接类型，在脊椎动物中约占所有可变剪接事件的三分之一",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "SR蛋白和hnRNP蛋白分别促进和抑制剪接位点的识别，其相对浓度调控剪接位点的选择",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "可变剪接是真核生物增加蛋白质多样性的重要机制，超过95%的人类基因存在可变剪接",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：可变剪接的普遍性。A正确：剪接体的组成。C正确：剪接调控蛋白的作用。B错误：外显子跳跃在脊椎动物中约占所有可变剪接事件的40%以上，是最常见的类型，不是三分之一。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "可变剪接",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "896938534",
+  "tags": []
+ },
+ "BQ-transcription-835094514c0b": {
+  "type": "mtf",
+  "question": "关于mRNA可变剪接，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "剪接体由5种snRNP（U1、U2、U4、U5、U6）和多种辅助蛋白组装而成",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "外显子跳跃（exon skipping）是最常见的可变剪接类型，在脊椎动物中约占所有可变剪接事件的三分之一",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "可变剪接是真核生物增加蛋白质多样性的重要机制，超过95%的人类基因存在可变剪接",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "SR蛋白和hnRNP蛋白分别促进和抑制剪接位点的识别，其相对浓度调控剪接位点的选择",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：可变剪接的普遍性。A正确：剪接体的组成。D正确：剪接调控蛋白的作用。B错误：外显子跳跃在脊椎动物中约占所有可变剪接事件的40%以上，是最常见的类型，不是三分之一。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "可变剪接",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "896938534",
+  "tags": []
+ },
+ "BQ-transcription-728c90d69518": {
+  "type": "mtf",
+  "question": "关于mRNA可变剪接，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "可变剪接是真核生物增加蛋白质多样性的重要机制，超过95%的人类基因存在可变剪接",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "SR蛋白和hnRNP蛋白分别促进和抑制剪接位点的识别，其相对浓度调控剪接位点的选择",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "剪接体由5种snRNP（U1、U2、U4、U5、U6）和多种辅助蛋白组装而成",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "外显子跳跃（exon skipping）是最常见的可变剪接类型，在脊椎动物中约占所有可变剪接事件的三分之一",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确：可变剪接的普遍性。C正确：剪接体的组成。B正确：剪接调控蛋白的作用。D错误：外显子跳跃在脊椎动物中约占所有可变剪接事件的40%以上，是最常见的类型，不是三分之一。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "可变剪接",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "896938534",
+  "tags": []
+ },
+ "BQ-transcription-c85aa8e121c9": {
+  "type": "mtf",
+  "question": "关于mRNA可变剪接，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "可变剪接是真核生物增加蛋白质多样性的重要机制，超过95%的人类基因存在可变剪接",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "SR蛋白和hnRNP蛋白分别促进和抑制剪接位点的识别，其相对浓度调控剪接位点的选择",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "外显子跳跃（exon skipping）是最常见的可变剪接类型，在脊椎动物中约占所有可变剪接事件的三分之一",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "剪接体由5种snRNP（U1、U2、U4、U5、U6）和多种辅助蛋白组装而成",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：可变剪接的普遍性。D正确：剪接体的组成。B正确：剪接调控蛋白的作用。C错误：外显子跳跃在脊椎动物中约占所有可变剪接事件的40%以上，是最常见的类型，不是三分之一。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "可变剪接",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "896938534",
+  "tags": []
+ },
+ "BQ-transcription-054bf3c6ef1d": {
+  "type": "mtf",
+  "question": "关于mRNA可变剪接，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "可变剪接是真核生物增加蛋白质多样性的重要机制，超过95%的人类基因存在可变剪接",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "剪接体由5种snRNP（U1、U2、U4、U5、U6）和多种辅助蛋白组装而成",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "SR蛋白和hnRNP蛋白分别促进和抑制剪接位点的识别，其相对浓度调控剪接位点的选择",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "外显子跳跃（exon skipping）是最常见的可变剪接类型，在脊椎动物中约占所有可变剪接事件的三分之一",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确：可变剪接的普遍性。B正确：剪接体的组成。C正确：剪接调控蛋白的作用。D错误：外显子跳跃在脊椎动物中约占所有可变剪接事件的40%以上，是最常见的类型，不是三分之一。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "可变剪接",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "896938534",
+  "tags": []
+ },
+ "BQ-transcription-966f7158d1f5": {
+  "type": "mtf",
+  "question": "关于mRNA可变剪接，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "可变剪接是真核生物增加蛋白质多样性的重要机制，超过95%的人类基因存在可变剪接",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "剪接体由5种snRNP（U1、U2、U4、U5、U6）和多种辅助蛋白组装而成",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "外显子跳跃（exon skipping）是最常见的可变剪接类型，在脊椎动物中约占所有可变剪接事件的三分之一",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "SR蛋白和hnRNP蛋白分别促进和抑制剪接位点的识别，其相对浓度调控剪接位点的选择",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：可变剪接的普遍性。B正确：剪接体的组成。D正确：剪接调控蛋白的作用。C错误：外显子跳跃在脊椎动物中约占所有可变剪接事件的40%以上，是最常见的类型，不是三分之一。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "可变剪接",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "896938534",
+  "tags": []
+ },
+ "BQ-transcription-2e55a593ad1b": {
+  "type": "mtf",
+  "question": "关于mRNA可变剪接，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "可变剪接是真核生物增加蛋白质多样性的重要机制，超过95%的人类基因存在可变剪接",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "外显子跳跃（exon skipping）是最常见的可变剪接类型，在脊椎动物中约占所有可变剪接事件的三分之一",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "SR蛋白和hnRNP蛋白分别促进和抑制剪接位点的识别，其相对浓度调控剪接位点的选择",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "剪接体由5种snRNP（U1、U2、U4、U5、U6）和多种辅助蛋白组装而成",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：可变剪接的普遍性。D正确：剪接体的组成。C正确：剪接调控蛋白的作用。B错误：外显子跳跃在脊椎动物中约占所有可变剪接事件的40%以上，是最常见的类型，不是三分之一。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "可变剪接",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "896938534",
+  "tags": []
+ },
+ "BQ-transcription-316cf039cd2c": {
+  "type": "mtf",
+  "question": "关于mRNA可变剪接，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "可变剪接是真核生物增加蛋白质多样性的重要机制，超过95%的人类基因存在可变剪接",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "外显子跳跃（exon skipping）是最常见的可变剪接类型，在脊椎动物中约占所有可变剪接事件的三分之一",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "剪接体由5种snRNP（U1、U2、U4、U5、U6）和多种辅助蛋白组装而成",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "SR蛋白和hnRNP蛋白分别促进和抑制剪接位点的识别，其相对浓度调控剪接位点的选择",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：可变剪接的普遍性。C正确：剪接体的组成。D正确：剪接调控蛋白的作用。B错误：外显子跳跃在脊椎动物中约占所有可变剪接事件的40%以上，是最常见的类型，不是三分之一。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "可变剪接",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "896938534",
+  "tags": []
+ },
+ "BQ-transcription-76b6b7b5f2f6": {
+  "type": "mtf",
+  "question": "关于mRNA可变剪接，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "外显子跳跃（exon skipping）是最常见的可变剪接类型，在脊椎动物中约占所有可变剪接事件的三分之一",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "SR蛋白和hnRNP蛋白分别促进和抑制剪接位点的识别，其相对浓度调控剪接位点的选择",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "剪接体由5种snRNP（U1、U2、U4、U5、U6）和多种辅助蛋白组装而成",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "可变剪接是真核生物增加蛋白质多样性的重要机制，超过95%的人类基因存在可变剪接",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：可变剪接的普遍性。C正确：剪接体的组成。B正确：剪接调控蛋白的作用。A错误：外显子跳跃在脊椎动物中约占所有可变剪接事件的40%以上，是最常见的类型，不是三分之一。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "可变剪接",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "896938534",
+  "tags": []
+ },
+ "BQ-transcription-f4e138076163": {
+  "type": "mtf",
+  "question": "关于mRNA可变剪接，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "外显子跳跃（exon skipping）是最常见的可变剪接类型，在脊椎动物中约占所有可变剪接事件的三分之一",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "SR蛋白和hnRNP蛋白分别促进和抑制剪接位点的识别，其相对浓度调控剪接位点的选择",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "可变剪接是真核生物增加蛋白质多样性的重要机制，超过95%的人类基因存在可变剪接",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "剪接体由5种snRNP（U1、U2、U4、U5、U6）和多种辅助蛋白组装而成",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：可变剪接的普遍性。D正确：剪接体的组成。B正确：剪接调控蛋白的作用。A错误：外显子跳跃在脊椎动物中约占所有可变剪接事件的40%以上，是最常见的类型，不是三分之一。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "可变剪接",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "896938534",
+  "tags": []
+ },
+ "BQ-transcription-1b96743525e3": {
+  "type": "mtf",
+  "question": "关于mRNA可变剪接，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "外显子跳跃（exon skipping）是最常见的可变剪接类型，在脊椎动物中约占所有可变剪接事件的三分之一",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "剪接体由5种snRNP（U1、U2、U4、U5、U6）和多种辅助蛋白组装而成",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "SR蛋白和hnRNP蛋白分别促进和抑制剪接位点的识别，其相对浓度调控剪接位点的选择",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "可变剪接是真核生物增加蛋白质多样性的重要机制，超过95%的人类基因存在可变剪接",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：可变剪接的普遍性。B正确：剪接体的组成。C正确：剪接调控蛋白的作用。A错误：外显子跳跃在脊椎动物中约占所有可变剪接事件的40%以上，是最常见的类型，不是三分之一。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "可变剪接",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "896938534",
+  "tags": []
+ },
+ "BQ-transcription-8fa7cdb12ea5": {
+  "type": "mtf",
+  "question": "关于mRNA可变剪接，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "外显子跳跃（exon skipping）是最常见的可变剪接类型，在脊椎动物中约占所有可变剪接事件的三分之一",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "剪接体由5种snRNP（U1、U2、U4、U5、U6）和多种辅助蛋白组装而成",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "可变剪接是真核生物增加蛋白质多样性的重要机制，超过95%的人类基因存在可变剪接",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "SR蛋白和hnRNP蛋白分别促进和抑制剪接位点的识别，其相对浓度调控剪接位点的选择",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：可变剪接的普遍性。B正确：剪接体的组成。D正确：剪接调控蛋白的作用。A错误：外显子跳跃在脊椎动物中约占所有可变剪接事件的40%以上，是最常见的类型，不是三分之一。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "可变剪接",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "896938534",
+  "tags": []
+ },
+ "BQ-transcription-ae7d13c89dec": {
+  "type": "mtf",
+  "question": "关于mRNA可变剪接，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "外显子跳跃（exon skipping）是最常见的可变剪接类型，在脊椎动物中约占所有可变剪接事件的三分之一",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "可变剪接是真核生物增加蛋白质多样性的重要机制，超过95%的人类基因存在可变剪接",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "SR蛋白和hnRNP蛋白分别促进和抑制剪接位点的识别，其相对浓度调控剪接位点的选择",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "剪接体由5种snRNP（U1、U2、U4、U5、U6）和多种辅助蛋白组装而成",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：可变剪接的普遍性。D正确：剪接体的组成。C正确：剪接调控蛋白的作用。A错误：外显子跳跃在脊椎动物中约占所有可变剪接事件的40%以上，是最常见的类型，不是三分之一。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "可变剪接",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "896938534",
+  "tags": []
+ },
+ "BQ-transcription-d67e54410961": {
+  "type": "mtf",
+  "question": "关于mRNA可变剪接，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "外显子跳跃（exon skipping）是最常见的可变剪接类型，在脊椎动物中约占所有可变剪接事件的三分之一",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "可变剪接是真核生物增加蛋白质多样性的重要机制，超过95%的人类基因存在可变剪接",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "剪接体由5种snRNP（U1、U2、U4、U5、U6）和多种辅助蛋白组装而成",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "SR蛋白和hnRNP蛋白分别促进和抑制剪接位点的识别，其相对浓度调控剪接位点的选择",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：可变剪接的普遍性。C正确：剪接体的组成。D正确：剪接调控蛋白的作用。A错误：外显子跳跃在脊椎动物中约占所有可变剪接事件的40%以上，是最常见的类型，不是三分之一。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "可变剪接",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "896938534",
+  "tags": []
+ },
+ "BQ-transcription-f6afab25402c": {
+  "type": "mtf",
+  "question": "关于RNA聚合酶II的转录起始，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "TATA盒结合蛋白（TBP）是TFIID的组分，识别启动子中的TATA盒序列",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "TFIIH具有解旋酶活性，在转录起始时打开DNA双链形成转录泡",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "TFIIH的激酶活性磷酸化RNA聚合酶II的CTD结构域，促使聚合酶从启动子释放进入延伸阶段",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "转录起始复合物的组装是有序的，各通用转录因子按随机顺序结合到启动子上",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确：TBP-TATA盒识别。B正确：TFIIH的解旋酶功能。C正确：CTD磷酸化标志着转录起始到延伸的转换。D错误：通用转录因子的组装是有序的：TFIID→TFIIA→TFIIB→Pol II/TFIIF→TFIIE→TFIIH，顺序是固定的而非随机。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录起始",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "702042375",
+  "tags": []
+ },
+ "BQ-transcription-ca51f25f2972": {
+  "type": "mtf",
+  "question": "关于RNA聚合酶II的转录起始，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "TATA盒结合蛋白（TBP）是TFIID的组分，识别启动子中的TATA盒序列",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "TFIIH具有解旋酶活性，在转录起始时打开DNA双链形成转录泡",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "转录起始复合物的组装是有序的，各通用转录因子按随机顺序结合到启动子上",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "TFIIH的激酶活性磷酸化RNA聚合酶II的CTD结构域，促使聚合酶从启动子释放进入延伸阶段",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：TBP-TATA盒识别。B正确：TFIIH的解旋酶功能。D正确：CTD磷酸化标志着转录起始到延伸的转换。C错误：通用转录因子的组装是有序的：TFIID→TFIIA→TFIIB→Pol II/TFIIF→TFIIE→TFIIH，顺序是固定的而非随机。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录起始",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "702042375",
+  "tags": []
+ },
+ "BQ-transcription-e82762ffa56e": {
+  "type": "mtf",
+  "question": "关于RNA聚合酶II的转录起始，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "TATA盒结合蛋白（TBP）是TFIID的组分，识别启动子中的TATA盒序列",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "TFIIH的激酶活性磷酸化RNA聚合酶II的CTD结构域，促使聚合酶从启动子释放进入延伸阶段",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "TFIIH具有解旋酶活性，在转录起始时打开DNA双链形成转录泡",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "转录起始复合物的组装是有序的，各通用转录因子按随机顺序结合到启动子上",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确：TBP-TATA盒识别。C正确：TFIIH的解旋酶功能。B正确：CTD磷酸化标志着转录起始到延伸的转换。D错误：通用转录因子的组装是有序的：TFIID→TFIIA→TFIIB→Pol II/TFIIF→TFIIE→TFIIH，顺序是固定的而非随机。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录起始",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "702042375",
+  "tags": []
+ },
+ "BQ-transcription-f5a73ca749a5": {
+  "type": "mtf",
+  "question": "关于RNA聚合酶II的转录起始，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "TATA盒结合蛋白（TBP）是TFIID的组分，识别启动子中的TATA盒序列",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "TFIIH的激酶活性磷酸化RNA聚合酶II的CTD结构域，促使聚合酶从启动子释放进入延伸阶段",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "转录起始复合物的组装是有序的，各通用转录因子按随机顺序结合到启动子上",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "TFIIH具有解旋酶活性，在转录起始时打开DNA双链形成转录泡",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：TBP-TATA盒识别。D正确：TFIIH的解旋酶功能。B正确：CTD磷酸化标志着转录起始到延伸的转换。C错误：通用转录因子的组装是有序的：TFIID→TFIIA→TFIIB→Pol II/TFIIF→TFIIE→TFIIH，顺序是固定的而非随机。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录起始",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "702042375",
+  "tags": []
+ },
+ "BQ-transcription-401daf3e1235": {
+  "type": "mtf",
+  "question": "关于RNA聚合酶II的转录起始，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "TATA盒结合蛋白（TBP）是TFIID的组分，识别启动子中的TATA盒序列",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "转录起始复合物的组装是有序的，各通用转录因子按随机顺序结合到启动子上",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "TFIIH具有解旋酶活性，在转录起始时打开DNA双链形成转录泡",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "TFIIH的激酶活性磷酸化RNA聚合酶II的CTD结构域，促使聚合酶从启动子释放进入延伸阶段",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：TBP-TATA盒识别。C正确：TFIIH的解旋酶功能。D正确：CTD磷酸化标志着转录起始到延伸的转换。B错误：通用转录因子的组装是有序的：TFIID→TFIIA→TFIIB→Pol II/TFIIF→TFIIE→TFIIH，顺序是固定的而非随机。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录起始",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "702042375",
+  "tags": []
+ },
+ "BQ-transcription-913f426c2e5b": {
+  "type": "mtf",
+  "question": "关于RNA聚合酶II的转录起始，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "TATA盒结合蛋白（TBP）是TFIID的组分，识别启动子中的TATA盒序列",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "转录起始复合物的组装是有序的，各通用转录因子按随机顺序结合到启动子上",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "TFIIH的激酶活性磷酸化RNA聚合酶II的CTD结构域，促使聚合酶从启动子释放进入延伸阶段",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "TFIIH具有解旋酶活性，在转录起始时打开DNA双链形成转录泡",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：TBP-TATA盒识别。D正确：TFIIH的解旋酶功能。C正确：CTD磷酸化标志着转录起始到延伸的转换。B错误：通用转录因子的组装是有序的：TFIID→TFIIA→TFIIB→Pol II/TFIIF→TFIIE→TFIIH，顺序是固定的而非随机。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录起始",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "702042375",
+  "tags": []
+ },
+ "BQ-transcription-13d0613ed5b7": {
+  "type": "mtf",
+  "question": "关于RNA聚合酶II的转录起始，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "TFIIH具有解旋酶活性，在转录起始时打开DNA双链形成转录泡",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "TATA盒结合蛋白（TBP）是TFIID的组分，识别启动子中的TATA盒序列",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "TFIIH的激酶活性磷酸化RNA聚合酶II的CTD结构域，促使聚合酶从启动子释放进入延伸阶段",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "转录起始复合物的组装是有序的，各通用转录因子按随机顺序结合到启动子上",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确：TBP-TATA盒识别。A正确：TFIIH的解旋酶功能。C正确：CTD磷酸化标志着转录起始到延伸的转换。D错误：通用转录因子的组装是有序的：TFIID→TFIIA→TFIIB→Pol II/TFIIF→TFIIE→TFIIH，顺序是固定的而非随机。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录起始",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "702042375",
+  "tags": []
+ },
+ "BQ-transcription-87e69ceddbdf": {
+  "type": "mtf",
+  "question": "关于RNA聚合酶II的转录起始，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "TFIIH具有解旋酶活性，在转录起始时打开DNA双链形成转录泡",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "TATA盒结合蛋白（TBP）是TFIID的组分，识别启动子中的TATA盒序列",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "转录起始复合物的组装是有序的，各通用转录因子按随机顺序结合到启动子上",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "TFIIH的激酶活性磷酸化RNA聚合酶II的CTD结构域，促使聚合酶从启动子释放进入延伸阶段",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：TBP-TATA盒识别。A正确：TFIIH的解旋酶功能。D正确：CTD磷酸化标志着转录起始到延伸的转换。C错误：通用转录因子的组装是有序的：TFIID→TFIIA→TFIIB→Pol II/TFIIF→TFIIE→TFIIH，顺序是固定的而非随机。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录起始",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "702042375",
+  "tags": []
+ },
+ "BQ-transcription-62d81a35863c": {
+  "type": "mtf",
+  "question": "关于RNA聚合酶II的转录起始，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "TFIIH具有解旋酶活性，在转录起始时打开DNA双链形成转录泡",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "TFIIH的激酶活性磷酸化RNA聚合酶II的CTD结构域，促使聚合酶从启动子释放进入延伸阶段",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "TATA盒结合蛋白（TBP）是TFIID的组分，识别启动子中的TATA盒序列",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "转录起始复合物的组装是有序的，各通用转录因子按随机顺序结合到启动子上",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确：TBP-TATA盒识别。A正确：TFIIH的解旋酶功能。B正确：CTD磷酸化标志着转录起始到延伸的转换。D错误：通用转录因子的组装是有序的：TFIID→TFIIA→TFIIB→Pol II/TFIIF→TFIIE→TFIIH，顺序是固定的而非随机。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录起始",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "702042375",
+  "tags": []
+ },
+ "BQ-transcription-829b3b97b9b0": {
+  "type": "mtf",
+  "question": "关于RNA聚合酶II的转录起始，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "TFIIH具有解旋酶活性，在转录起始时打开DNA双链形成转录泡",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "TFIIH的激酶活性磷酸化RNA聚合酶II的CTD结构域，促使聚合酶从启动子释放进入延伸阶段",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "转录起始复合物的组装是有序的，各通用转录因子按随机顺序结合到启动子上",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "TATA盒结合蛋白（TBP）是TFIID的组分，识别启动子中的TATA盒序列",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：TBP-TATA盒识别。A正确：TFIIH的解旋酶功能。B正确：CTD磷酸化标志着转录起始到延伸的转换。C错误：通用转录因子的组装是有序的：TFIID→TFIIA→TFIIB→Pol II/TFIIF→TFIIE→TFIIH，顺序是固定的而非随机。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录起始",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "702042375",
+  "tags": []
+ },
+ "BQ-transcription-8ff1bc61550c": {
+  "type": "mtf",
+  "question": "关于RNA聚合酶II的转录起始，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "TFIIH具有解旋酶活性，在转录起始时打开DNA双链形成转录泡",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "转录起始复合物的组装是有序的，各通用转录因子按随机顺序结合到启动子上",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "TATA盒结合蛋白（TBP）是TFIID的组分，识别启动子中的TATA盒序列",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "TFIIH的激酶活性磷酸化RNA聚合酶II的CTD结构域，促使聚合酶从启动子释放进入延伸阶段",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：TBP-TATA盒识别。A正确：TFIIH的解旋酶功能。D正确：CTD磷酸化标志着转录起始到延伸的转换。B错误：通用转录因子的组装是有序的：TFIID→TFIIA→TFIIB→Pol II/TFIIF→TFIIE→TFIIH，顺序是固定的而非随机。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录起始",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "702042375",
+  "tags": []
+ },
+ "BQ-transcription-a5820d2e9824": {
+  "type": "mtf",
+  "question": "关于RNA聚合酶II的转录起始，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "TFIIH具有解旋酶活性，在转录起始时打开DNA双链形成转录泡",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "转录起始复合物的组装是有序的，各通用转录因子按随机顺序结合到启动子上",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "TFIIH的激酶活性磷酸化RNA聚合酶II的CTD结构域，促使聚合酶从启动子释放进入延伸阶段",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "TATA盒结合蛋白（TBP）是TFIID的组分，识别启动子中的TATA盒序列",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：TBP-TATA盒识别。A正确：TFIIH的解旋酶功能。C正确：CTD磷酸化标志着转录起始到延伸的转换。B错误：通用转录因子的组装是有序的：TFIID→TFIIA→TFIIB→Pol II/TFIIF→TFIIE→TFIIH，顺序是固定的而非随机。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录起始",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "702042375",
+  "tags": []
+ },
+ "BQ-transcription-9aac77606b81": {
+  "type": "mtf",
+  "question": "关于RNA聚合酶II的转录起始，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "TFIIH的激酶活性磷酸化RNA聚合酶II的CTD结构域，促使聚合酶从启动子释放进入延伸阶段",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "TATA盒结合蛋白（TBP）是TFIID的组分，识别启动子中的TATA盒序列",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "TFIIH具有解旋酶活性，在转录起始时打开DNA双链形成转录泡",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "转录起始复合物的组装是有序的，各通用转录因子按随机顺序结合到启动子上",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确：TBP-TATA盒识别。C正确：TFIIH的解旋酶功能。A正确：CTD磷酸化标志着转录起始到延伸的转换。D错误：通用转录因子的组装是有序的：TFIID→TFIIA→TFIIB→Pol II/TFIIF→TFIIE→TFIIH，顺序是固定的而非随机。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录起始",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "702042375",
+  "tags": []
+ },
+ "BQ-transcription-a0e2fa4e2651": {
+  "type": "mtf",
+  "question": "关于RNA聚合酶II的转录起始，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "TFIIH的激酶活性磷酸化RNA聚合酶II的CTD结构域，促使聚合酶从启动子释放进入延伸阶段",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "TATA盒结合蛋白（TBP）是TFIID的组分，识别启动子中的TATA盒序列",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "转录起始复合物的组装是有序的，各通用转录因子按随机顺序结合到启动子上",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "TFIIH具有解旋酶活性，在转录起始时打开DNA双链形成转录泡",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：TBP-TATA盒识别。D正确：TFIIH的解旋酶功能。A正确：CTD磷酸化标志着转录起始到延伸的转换。C错误：通用转录因子的组装是有序的：TFIID→TFIIA→TFIIB→Pol II/TFIIF→TFIIE→TFIIH，顺序是固定的而非随机。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录起始",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "702042375",
+  "tags": []
+ },
+ "BQ-transcription-98a5ffb13139": {
+  "type": "mtf",
+  "question": "关于RNA聚合酶II的转录起始，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "TFIIH的激酶活性磷酸化RNA聚合酶II的CTD结构域，促使聚合酶从启动子释放进入延伸阶段",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "TFIIH具有解旋酶活性，在转录起始时打开DNA双链形成转录泡",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "TATA盒结合蛋白（TBP）是TFIID的组分，识别启动子中的TATA盒序列",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "转录起始复合物的组装是有序的，各通用转录因子按随机顺序结合到启动子上",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确：TBP-TATA盒识别。B正确：TFIIH的解旋酶功能。A正确：CTD磷酸化标志着转录起始到延伸的转换。D错误：通用转录因子的组装是有序的：TFIID→TFIIA→TFIIB→Pol II/TFIIF→TFIIE→TFIIH，顺序是固定的而非随机。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录起始",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "702042375",
+  "tags": []
+ },
+ "BQ-transcription-e2e013b7233a": {
+  "type": "mtf",
+  "question": "关于RNA聚合酶II的转录起始，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "TFIIH的激酶活性磷酸化RNA聚合酶II的CTD结构域，促使聚合酶从启动子释放进入延伸阶段",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "TFIIH具有解旋酶活性，在转录起始时打开DNA双链形成转录泡",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "转录起始复合物的组装是有序的，各通用转录因子按随机顺序结合到启动子上",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "TATA盒结合蛋白（TBP）是TFIID的组分，识别启动子中的TATA盒序列",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：TBP-TATA盒识别。B正确：TFIIH的解旋酶功能。A正确：CTD磷酸化标志着转录起始到延伸的转换。C错误：通用转录因子的组装是有序的：TFIID→TFIIA→TFIIB→Pol II/TFIIF→TFIIE→TFIIH，顺序是固定的而非随机。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录起始",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "702042375",
+  "tags": []
+ },
+ "BQ-transcription-605e33c01439": {
+  "type": "mtf",
+  "question": "关于RNA聚合酶II的转录起始，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "TFIIH的激酶活性磷酸化RNA聚合酶II的CTD结构域，促使聚合酶从启动子释放进入延伸阶段",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "转录起始复合物的组装是有序的，各通用转录因子按随机顺序结合到启动子上",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "TATA盒结合蛋白（TBP）是TFIID的组分，识别启动子中的TATA盒序列",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "TFIIH具有解旋酶活性，在转录起始时打开DNA双链形成转录泡",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：TBP-TATA盒识别。D正确：TFIIH的解旋酶功能。A正确：CTD磷酸化标志着转录起始到延伸的转换。B错误：通用转录因子的组装是有序的：TFIID→TFIIA→TFIIB→Pol II/TFIIF→TFIIE→TFIIH，顺序是固定的而非随机。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录起始",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "702042375",
+  "tags": []
+ },
+ "BQ-transcription-334326661b77": {
+  "type": "mtf",
+  "question": "关于RNA聚合酶II的转录起始，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "TFIIH的激酶活性磷酸化RNA聚合酶II的CTD结构域，促使聚合酶从启动子释放进入延伸阶段",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "转录起始复合物的组装是有序的，各通用转录因子按随机顺序结合到启动子上",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "TFIIH具有解旋酶活性，在转录起始时打开DNA双链形成转录泡",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "TATA盒结合蛋白（TBP）是TFIID的组分，识别启动子中的TATA盒序列",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：TBP-TATA盒识别。C正确：TFIIH的解旋酶功能。A正确：CTD磷酸化标志着转录起始到延伸的转换。B错误：通用转录因子的组装是有序的：TFIID→TFIIA→TFIIB→Pol II/TFIIF→TFIIE→TFIIH，顺序是固定的而非随机。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录起始",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "702042375",
+  "tags": []
+ },
+ "BQ-transcription-4c239b568948": {
+  "type": "mtf",
+  "question": "关于RNA聚合酶II的转录起始，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "转录起始复合物的组装是有序的，各通用转录因子按随机顺序结合到启动子上",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "TATA盒结合蛋白（TBP）是TFIID的组分，识别启动子中的TATA盒序列",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "TFIIH具有解旋酶活性，在转录起始时打开DNA双链形成转录泡",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "TFIIH的激酶活性磷酸化RNA聚合酶II的CTD结构域，促使聚合酶从启动子释放进入延伸阶段",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：TBP-TATA盒识别。C正确：TFIIH的解旋酶功能。D正确：CTD磷酸化标志着转录起始到延伸的转换。A错误：通用转录因子的组装是有序的：TFIID→TFIIA→TFIIB→Pol II/TFIIF→TFIIE→TFIIH，顺序是固定的而非随机。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录起始",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "702042375",
+  "tags": []
+ },
+ "BQ-transcription-e10ce028c3bb": {
+  "type": "mtf",
+  "question": "关于RNA聚合酶II的转录起始，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "转录起始复合物的组装是有序的，各通用转录因子按随机顺序结合到启动子上",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "TATA盒结合蛋白（TBP）是TFIID的组分，识别启动子中的TATA盒序列",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "TFIIH的激酶活性磷酸化RNA聚合酶II的CTD结构域，促使聚合酶从启动子释放进入延伸阶段",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "TFIIH具有解旋酶活性，在转录起始时打开DNA双链形成转录泡",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：TBP-TATA盒识别。D正确：TFIIH的解旋酶功能。C正确：CTD磷酸化标志着转录起始到延伸的转换。A错误：通用转录因子的组装是有序的：TFIID→TFIIA→TFIIB→Pol II/TFIIF→TFIIE→TFIIH，顺序是固定的而非随机。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录起始",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "702042375",
+  "tags": []
+ },
+ "BQ-transcription-9aae60e524e0": {
+  "type": "mtf",
+  "question": "关于RNA聚合酶II的转录起始，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "转录起始复合物的组装是有序的，各通用转录因子按随机顺序结合到启动子上",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "TFIIH具有解旋酶活性，在转录起始时打开DNA双链形成转录泡",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "TATA盒结合蛋白（TBP）是TFIID的组分，识别启动子中的TATA盒序列",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "TFIIH的激酶活性磷酸化RNA聚合酶II的CTD结构域，促使聚合酶从启动子释放进入延伸阶段",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：TBP-TATA盒识别。B正确：TFIIH的解旋酶功能。D正确：CTD磷酸化标志着转录起始到延伸的转换。A错误：通用转录因子的组装是有序的：TFIID→TFIIA→TFIIB→Pol II/TFIIF→TFIIE→TFIIH，顺序是固定的而非随机。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录起始",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "702042375",
+  "tags": []
+ },
+ "BQ-transcription-55ef7a5b883b": {
+  "type": "mtf",
+  "question": "关于RNA聚合酶II的转录起始，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "转录起始复合物的组装是有序的，各通用转录因子按随机顺序结合到启动子上",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "TFIIH具有解旋酶活性，在转录起始时打开DNA双链形成转录泡",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "TFIIH的激酶活性磷酸化RNA聚合酶II的CTD结构域，促使聚合酶从启动子释放进入延伸阶段",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "TATA盒结合蛋白（TBP）是TFIID的组分，识别启动子中的TATA盒序列",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：TBP-TATA盒识别。B正确：TFIIH的解旋酶功能。C正确：CTD磷酸化标志着转录起始到延伸的转换。A错误：通用转录因子的组装是有序的：TFIID→TFIIA→TFIIB→Pol II/TFIIF→TFIIE→TFIIH，顺序是固定的而非随机。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录起始",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "702042375",
+  "tags": []
+ },
+ "BQ-transcription-aa46ea131101": {
+  "type": "mtf",
+  "question": "关于RNA聚合酶II的转录起始，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "转录起始复合物的组装是有序的，各通用转录因子按随机顺序结合到启动子上",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "TFIIH的激酶活性磷酸化RNA聚合酶II的CTD结构域，促使聚合酶从启动子释放进入延伸阶段",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "TATA盒结合蛋白（TBP）是TFIID的组分，识别启动子中的TATA盒序列",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "TFIIH具有解旋酶活性，在转录起始时打开DNA双链形成转录泡",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：TBP-TATA盒识别。D正确：TFIIH的解旋酶功能。B正确：CTD磷酸化标志着转录起始到延伸的转换。A错误：通用转录因子的组装是有序的：TFIID→TFIIA→TFIIB→Pol II/TFIIF→TFIIE→TFIIH，顺序是固定的而非随机。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录起始",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "702042375",
+  "tags": []
+ },
+ "BQ-transcription-7ece3d513699": {
+  "type": "mtf",
+  "question": "关于RNA聚合酶II的转录起始，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "转录起始复合物的组装是有序的，各通用转录因子按随机顺序结合到启动子上",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "TFIIH的激酶活性磷酸化RNA聚合酶II的CTD结构域，促使聚合酶从启动子释放进入延伸阶段",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "TFIIH具有解旋酶活性，在转录起始时打开DNA双链形成转录泡",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "TATA盒结合蛋白（TBP）是TFIID的组分，识别启动子中的TATA盒序列",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：TBP-TATA盒识别。C正确：TFIIH的解旋酶功能。B正确：CTD磷酸化标志着转录起始到延伸的转换。A错误：通用转录因子的组装是有序的：TFIID→TFIIA→TFIIB→Pol II/TFIIF→TFIIE→TFIIH，顺序是固定的而非随机。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录起始",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "702042375",
+  "tags": []
+ },
+ "BQ-transcription-851b0f7ad270": {
+  "type": "mtf",
+  "question": "关于真核生物mRNA加工，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "3'端多聚腺苷酸化（加polyA尾）与转录终止耦合，polyA尾对mRNA稳定性和翻译效率有重要作用",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "5'端帽结构（m⁷Gppp）在转录起始后不久即添加到mRNA的5'端，保护mRNA免受5'核酸外切酶降解",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "RNA编辑（如A-to-I编辑）可在转录后水平改变mRNA的编码序列，产生与基因序列编码不同的蛋白质产物",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "所有内含子均被剪接体切除，剪接过程不消耗能量",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确：加帽是共转录加工的第一步。A正确：加尾的功能。D错误：不是所有内含子都由剪接体切除——有些是自我剪接内含子（I型和II型内含子）。此外剪接需要ATP供能。C正确：RNA编辑增加了蛋白质多样性。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA加工",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2107204760",
+  "tags": []
+ },
+ "BQ-transcription-5bdf0fafabf0": {
+  "type": "mtf",
+  "question": "关于真核生物mRNA加工，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "3'端多聚腺苷酸化（加polyA尾）与转录终止耦合，polyA尾对mRNA稳定性和翻译效率有重要作用",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "5'端帽结构（m⁷Gppp）在转录起始后不久即添加到mRNA的5'端，保护mRNA免受5'核酸外切酶降解",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "所有内含子均被剪接体切除，剪接过程不消耗能量",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "RNA编辑（如A-to-I编辑）可在转录后水平改变mRNA的编码序列，产生与基因序列编码不同的蛋白质产物",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：加帽是共转录加工的第一步。A正确：加尾的功能。C错误：不是所有内含子都由剪接体切除——有些是自我剪接内含子（I型和II型内含子）。此外剪接需要ATP供能。D正确：RNA编辑增加了蛋白质多样性。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA加工",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2107204760",
+  "tags": []
+ },
+ "BQ-transcription-9cb83e4310f0": {
+  "type": "mtf",
+  "question": "关于真核生物mRNA加工，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "3'端多聚腺苷酸化（加polyA尾）与转录终止耦合，polyA尾对mRNA稳定性和翻译效率有重要作用",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "RNA编辑（如A-to-I编辑）可在转录后水平改变mRNA的编码序列，产生与基因序列编码不同的蛋白质产物",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "5'端帽结构（m⁷Gppp）在转录起始后不久即添加到mRNA的5'端，保护mRNA免受5'核酸外切酶降解",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "所有内含子均被剪接体切除，剪接过程不消耗能量",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确：加帽是共转录加工的第一步。A正确：加尾的功能。D错误：不是所有内含子都由剪接体切除——有些是自我剪接内含子（I型和II型内含子）。此外剪接需要ATP供能。B正确：RNA编辑增加了蛋白质多样性。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA加工",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2107204760",
+  "tags": []
+ },
+ "BQ-transcription-da74d3d024ba": {
+  "type": "mtf",
+  "question": "关于真核生物mRNA加工，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "3'端多聚腺苷酸化（加polyA尾）与转录终止耦合，polyA尾对mRNA稳定性和翻译效率有重要作用",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "RNA编辑（如A-to-I编辑）可在转录后水平改变mRNA的编码序列，产生与基因序列编码不同的蛋白质产物",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "所有内含子均被剪接体切除，剪接过程不消耗能量",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "5'端帽结构（m⁷Gppp）在转录起始后不久即添加到mRNA的5'端，保护mRNA免受5'核酸外切酶降解",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：加帽是共转录加工的第一步。A正确：加尾的功能。C错误：不是所有内含子都由剪接体切除——有些是自我剪接内含子（I型和II型内含子）。此外剪接需要ATP供能。B正确：RNA编辑增加了蛋白质多样性。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA加工",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2107204760",
+  "tags": []
+ },
+ "BQ-transcription-f91a79b75bde": {
+  "type": "mtf",
+  "question": "关于真核生物mRNA加工，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "3'端多聚腺苷酸化（加polyA尾）与转录终止耦合，polyA尾对mRNA稳定性和翻译效率有重要作用",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "所有内含子均被剪接体切除，剪接过程不消耗能量",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "5'端帽结构（m⁷Gppp）在转录起始后不久即添加到mRNA的5'端，保护mRNA免受5'核酸外切酶降解",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "RNA编辑（如A-to-I编辑）可在转录后水平改变mRNA的编码序列，产生与基因序列编码不同的蛋白质产物",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：加帽是共转录加工的第一步。A正确：加尾的功能。B错误：不是所有内含子都由剪接体切除——有些是自我剪接内含子（I型和II型内含子）。此外剪接需要ATP供能。D正确：RNA编辑增加了蛋白质多样性。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA加工",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2107204760",
+  "tags": []
+ },
+ "BQ-transcription-d997d8298fca": {
+  "type": "mtf",
+  "question": "关于真核生物mRNA加工，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "3'端多聚腺苷酸化（加polyA尾）与转录终止耦合，polyA尾对mRNA稳定性和翻译效率有重要作用",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "所有内含子均被剪接体切除，剪接过程不消耗能量",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "RNA编辑（如A-to-I编辑）可在转录后水平改变mRNA的编码序列，产生与基因序列编码不同的蛋白质产物",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "5'端帽结构（m⁷Gppp）在转录起始后不久即添加到mRNA的5'端，保护mRNA免受5'核酸外切酶降解",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：加帽是共转录加工的第一步。A正确：加尾的功能。B错误：不是所有内含子都由剪接体切除——有些是自我剪接内含子（I型和II型内含子）。此外剪接需要ATP供能。C正确：RNA编辑增加了蛋白质多样性。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA加工",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2107204760",
+  "tags": []
+ },
+ "BQ-transcription-9401a0ec3850": {
+  "type": "mtf",
+  "question": "关于真核生物mRNA加工，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "5'端帽结构（m⁷Gppp）在转录起始后不久即添加到mRNA的5'端，保护mRNA免受5'核酸外切酶降解",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "3'端多聚腺苷酸化（加polyA尾）与转录终止耦合，polyA尾对mRNA稳定性和翻译效率有重要作用",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "RNA编辑（如A-to-I编辑）可在转录后水平改变mRNA的编码序列，产生与基因序列编码不同的蛋白质产物",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "所有内含子均被剪接体切除，剪接过程不消耗能量",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确：加帽是共转录加工的第一步。B正确：加尾的功能。D错误：不是所有内含子都由剪接体切除——有些是自我剪接内含子（I型和II型内含子）。此外剪接需要ATP供能。C正确：RNA编辑增加了蛋白质多样性。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA加工",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2107204760",
+  "tags": []
+ },
+ "BQ-transcription-657cae3ef441": {
+  "type": "mtf",
+  "question": "关于真核生物mRNA加工，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "5'端帽结构（m⁷Gppp）在转录起始后不久即添加到mRNA的5'端，保护mRNA免受5'核酸外切酶降解",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "3'端多聚腺苷酸化（加polyA尾）与转录终止耦合，polyA尾对mRNA稳定性和翻译效率有重要作用",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "所有内含子均被剪接体切除，剪接过程不消耗能量",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "RNA编辑（如A-to-I编辑）可在转录后水平改变mRNA的编码序列，产生与基因序列编码不同的蛋白质产物",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：加帽是共转录加工的第一步。B正确：加尾的功能。C错误：不是所有内含子都由剪接体切除——有些是自我剪接内含子（I型和II型内含子）。此外剪接需要ATP供能。D正确：RNA编辑增加了蛋白质多样性。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA加工",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2107204760",
+  "tags": []
+ },
+ "BQ-transcription-11c6f3e7d4f1": {
+  "type": "mtf",
+  "question": "关于真核生物mRNA加工，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "5'端帽结构（m⁷Gppp）在转录起始后不久即添加到mRNA的5'端，保护mRNA免受5'核酸外切酶降解",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "RNA编辑（如A-to-I编辑）可在转录后水平改变mRNA的编码序列，产生与基因序列编码不同的蛋白质产物",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "3'端多聚腺苷酸化（加polyA尾）与转录终止耦合，polyA尾对mRNA稳定性和翻译效率有重要作用",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "所有内含子均被剪接体切除，剪接过程不消耗能量",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确：加帽是共转录加工的第一步。C正确：加尾的功能。D错误：不是所有内含子都由剪接体切除——有些是自我剪接内含子（I型和II型内含子）。此外剪接需要ATP供能。B正确：RNA编辑增加了蛋白质多样性。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA加工",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2107204760",
+  "tags": []
+ },
+ "BQ-transcription-48267a01d213": {
+  "type": "mtf",
+  "question": "关于真核生物mRNA加工，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "5'端帽结构（m⁷Gppp）在转录起始后不久即添加到mRNA的5'端，保护mRNA免受5'核酸外切酶降解",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "RNA编辑（如A-to-I编辑）可在转录后水平改变mRNA的编码序列，产生与基因序列编码不同的蛋白质产物",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "所有内含子均被剪接体切除，剪接过程不消耗能量",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "3'端多聚腺苷酸化（加polyA尾）与转录终止耦合，polyA尾对mRNA稳定性和翻译效率有重要作用",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：加帽是共转录加工的第一步。D正确：加尾的功能。C错误：不是所有内含子都由剪接体切除——有些是自我剪接内含子（I型和II型内含子）。此外剪接需要ATP供能。B正确：RNA编辑增加了蛋白质多样性。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA加工",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2107204760",
+  "tags": []
+ },
+ "BQ-transcription-ce05a00cb44b": {
+  "type": "mtf",
+  "question": "关于真核生物mRNA加工，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "5'端帽结构（m⁷Gppp）在转录起始后不久即添加到mRNA的5'端，保护mRNA免受5'核酸外切酶降解",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "所有内含子均被剪接体切除，剪接过程不消耗能量",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "3'端多聚腺苷酸化（加polyA尾）与转录终止耦合，polyA尾对mRNA稳定性和翻译效率有重要作用",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "RNA编辑（如A-to-I编辑）可在转录后水平改变mRNA的编码序列，产生与基因序列编码不同的蛋白质产物",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：加帽是共转录加工的第一步。C正确：加尾的功能。B错误：不是所有内含子都由剪接体切除——有些是自我剪接内含子（I型和II型内含子）。此外剪接需要ATP供能。D正确：RNA编辑增加了蛋白质多样性。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA加工",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2107204760",
+  "tags": []
+ },
+ "BQ-transcription-dd4b8fdc22c1": {
+  "type": "mtf",
+  "question": "关于真核生物mRNA加工，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "5'端帽结构（m⁷Gppp）在转录起始后不久即添加到mRNA的5'端，保护mRNA免受5'核酸外切酶降解",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "所有内含子均被剪接体切除，剪接过程不消耗能量",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "RNA编辑（如A-to-I编辑）可在转录后水平改变mRNA的编码序列，产生与基因序列编码不同的蛋白质产物",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "3'端多聚腺苷酸化（加polyA尾）与转录终止耦合，polyA尾对mRNA稳定性和翻译效率有重要作用",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：加帽是共转录加工的第一步。D正确：加尾的功能。B错误：不是所有内含子都由剪接体切除——有些是自我剪接内含子（I型和II型内含子）。此外剪接需要ATP供能。C正确：RNA编辑增加了蛋白质多样性。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA加工",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2107204760",
+  "tags": []
+ },
+ "BQ-transcription-a3cecf7184bd": {
+  "type": "mtf",
+  "question": "关于真核生物mRNA加工，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "RNA编辑（如A-to-I编辑）可在转录后水平改变mRNA的编码序列，产生与基因序列编码不同的蛋白质产物",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "3'端多聚腺苷酸化（加polyA尾）与转录终止耦合，polyA尾对mRNA稳定性和翻译效率有重要作用",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "5'端帽结构（m⁷Gppp）在转录起始后不久即添加到mRNA的5'端，保护mRNA免受5'核酸外切酶降解",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "所有内含子均被剪接体切除，剪接过程不消耗能量",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确：加帽是共转录加工的第一步。B正确：加尾的功能。D错误：不是所有内含子都由剪接体切除——有些是自我剪接内含子（I型和II型内含子）。此外剪接需要ATP供能。A正确：RNA编辑增加了蛋白质多样性。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA加工",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2107204760",
+  "tags": []
+ },
+ "BQ-transcription-001e2b22e78b": {
+  "type": "mtf",
+  "question": "关于真核生物mRNA加工，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "RNA编辑（如A-to-I编辑）可在转录后水平改变mRNA的编码序列，产生与基因序列编码不同的蛋白质产物",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "3'端多聚腺苷酸化（加polyA尾）与转录终止耦合，polyA尾对mRNA稳定性和翻译效率有重要作用",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "所有内含子均被剪接体切除，剪接过程不消耗能量",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "5'端帽结构（m⁷Gppp）在转录起始后不久即添加到mRNA的5'端，保护mRNA免受5'核酸外切酶降解",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：加帽是共转录加工的第一步。B正确：加尾的功能。C错误：不是所有内含子都由剪接体切除——有些是自我剪接内含子（I型和II型内含子）。此外剪接需要ATP供能。A正确：RNA编辑增加了蛋白质多样性。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA加工",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2107204760",
+  "tags": []
+ },
+ "BQ-transcription-aac7c8be170b": {
+  "type": "mtf",
+  "question": "关于真核生物mRNA加工，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "RNA编辑（如A-to-I编辑）可在转录后水平改变mRNA的编码序列，产生与基因序列编码不同的蛋白质产物",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "5'端帽结构（m⁷Gppp）在转录起始后不久即添加到mRNA的5'端，保护mRNA免受5'核酸外切酶降解",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "3'端多聚腺苷酸化（加polyA尾）与转录终止耦合，polyA尾对mRNA稳定性和翻译效率有重要作用",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "所有内含子均被剪接体切除，剪接过程不消耗能量",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确：加帽是共转录加工的第一步。C正确：加尾的功能。D错误：不是所有内含子都由剪接体切除——有些是自我剪接内含子（I型和II型内含子）。此外剪接需要ATP供能。A正确：RNA编辑增加了蛋白质多样性。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA加工",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2107204760",
+  "tags": []
+ },
+ "BQ-transcription-55303a9cac77": {
+  "type": "mtf",
+  "question": "关于真核生物mRNA加工，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "RNA编辑（如A-to-I编辑）可在转录后水平改变mRNA的编码序列，产生与基因序列编码不同的蛋白质产物",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "5'端帽结构（m⁷Gppp）在转录起始后不久即添加到mRNA的5'端，保护mRNA免受5'核酸外切酶降解",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "所有内含子均被剪接体切除，剪接过程不消耗能量",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "3'端多聚腺苷酸化（加polyA尾）与转录终止耦合，polyA尾对mRNA稳定性和翻译效率有重要作用",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：加帽是共转录加工的第一步。D正确：加尾的功能。C错误：不是所有内含子都由剪接体切除——有些是自我剪接内含子（I型和II型内含子）。此外剪接需要ATP供能。A正确：RNA编辑增加了蛋白质多样性。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA加工",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2107204760",
+  "tags": []
+ },
+ "BQ-transcription-6ae1ef30188e": {
+  "type": "mtf",
+  "question": "关于真核生物mRNA加工，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "RNA编辑（如A-to-I编辑）可在转录后水平改变mRNA的编码序列，产生与基因序列编码不同的蛋白质产物",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "所有内含子均被剪接体切除，剪接过程不消耗能量",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "3'端多聚腺苷酸化（加polyA尾）与转录终止耦合，polyA尾对mRNA稳定性和翻译效率有重要作用",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "5'端帽结构（m⁷Gppp）在转录起始后不久即添加到mRNA的5'端，保护mRNA免受5'核酸外切酶降解",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：加帽是共转录加工的第一步。C正确：加尾的功能。B错误：不是所有内含子都由剪接体切除——有些是自我剪接内含子（I型和II型内含子）。此外剪接需要ATP供能。A正确：RNA编辑增加了蛋白质多样性。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA加工",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2107204760",
+  "tags": []
+ },
+ "BQ-transcription-7ee0d318ccf6": {
+  "type": "mtf",
+  "question": "关于真核生物mRNA加工，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "RNA编辑（如A-to-I编辑）可在转录后水平改变mRNA的编码序列，产生与基因序列编码不同的蛋白质产物",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "所有内含子均被剪接体切除，剪接过程不消耗能量",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "5'端帽结构（m⁷Gppp）在转录起始后不久即添加到mRNA的5'端，保护mRNA免受5'核酸外切酶降解",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "3'端多聚腺苷酸化（加polyA尾）与转录终止耦合，polyA尾对mRNA稳定性和翻译效率有重要作用",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：加帽是共转录加工的第一步。D正确：加尾的功能。B错误：不是所有内含子都由剪接体切除——有些是自我剪接内含子（I型和II型内含子）。此外剪接需要ATP供能。A正确：RNA编辑增加了蛋白质多样性。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA加工",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2107204760",
+  "tags": []
+ },
+ "BQ-transcription-004e2ddec0c1": {
+  "type": "mtf",
+  "question": "关于真核生物mRNA加工，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "所有内含子均被剪接体切除，剪接过程不消耗能量",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "3'端多聚腺苷酸化（加polyA尾）与转录终止耦合，polyA尾对mRNA稳定性和翻译效率有重要作用",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "5'端帽结构（m⁷Gppp）在转录起始后不久即添加到mRNA的5'端，保护mRNA免受5'核酸外切酶降解",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "RNA编辑（如A-to-I编辑）可在转录后水平改变mRNA的编码序列，产生与基因序列编码不同的蛋白质产物",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：加帽是共转录加工的第一步。B正确：加尾的功能。A错误：不是所有内含子都由剪接体切除——有些是自我剪接内含子（I型和II型内含子）。此外剪接需要ATP供能。D正确：RNA编辑增加了蛋白质多样性。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA加工",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2107204760",
+  "tags": []
+ },
+ "BQ-transcription-377a052c0639": {
+  "type": "mtf",
+  "question": "关于真核生物mRNA加工，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "所有内含子均被剪接体切除，剪接过程不消耗能量",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "3'端多聚腺苷酸化（加polyA尾）与转录终止耦合，polyA尾对mRNA稳定性和翻译效率有重要作用",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "RNA编辑（如A-to-I编辑）可在转录后水平改变mRNA的编码序列，产生与基因序列编码不同的蛋白质产物",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "5'端帽结构（m⁷Gppp）在转录起始后不久即添加到mRNA的5'端，保护mRNA免受5'核酸外切酶降解",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：加帽是共转录加工的第一步。B正确：加尾的功能。A错误：不是所有内含子都由剪接体切除——有些是自我剪接内含子（I型和II型内含子）。此外剪接需要ATP供能。C正确：RNA编辑增加了蛋白质多样性。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA加工",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2107204760",
+  "tags": []
+ },
+ "BQ-transcription-08c9ab654e12": {
+  "type": "mtf",
+  "question": "关于真核生物mRNA加工，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "所有内含子均被剪接体切除，剪接过程不消耗能量",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "5'端帽结构（m⁷Gppp）在转录起始后不久即添加到mRNA的5'端，保护mRNA免受5'核酸外切酶降解",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "3'端多聚腺苷酸化（加polyA尾）与转录终止耦合，polyA尾对mRNA稳定性和翻译效率有重要作用",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "RNA编辑（如A-to-I编辑）可在转录后水平改变mRNA的编码序列，产生与基因序列编码不同的蛋白质产物",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：加帽是共转录加工的第一步。C正确：加尾的功能。A错误：不是所有内含子都由剪接体切除——有些是自我剪接内含子（I型和II型内含子）。此外剪接需要ATP供能。D正确：RNA编辑增加了蛋白质多样性。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA加工",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2107204760",
+  "tags": []
+ },
+ "BQ-transcription-3af0b5f6f80a": {
+  "type": "mtf",
+  "question": "关于真核生物mRNA加工，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "所有内含子均被剪接体切除，剪接过程不消耗能量",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "5'端帽结构（m⁷Gppp）在转录起始后不久即添加到mRNA的5'端，保护mRNA免受5'核酸外切酶降解",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "RNA编辑（如A-to-I编辑）可在转录后水平改变mRNA的编码序列，产生与基因序列编码不同的蛋白质产物",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "3'端多聚腺苷酸化（加polyA尾）与转录终止耦合，polyA尾对mRNA稳定性和翻译效率有重要作用",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：加帽是共转录加工的第一步。D正确：加尾的功能。A错误：不是所有内含子都由剪接体切除——有些是自我剪接内含子（I型和II型内含子）。此外剪接需要ATP供能。C正确：RNA编辑增加了蛋白质多样性。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA加工",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2107204760",
+  "tags": []
+ },
+ "BQ-transcription-de9eaa2412d4": {
+  "type": "mtf",
+  "question": "关于真核生物mRNA加工，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "所有内含子均被剪接体切除，剪接过程不消耗能量",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "RNA编辑（如A-to-I编辑）可在转录后水平改变mRNA的编码序列，产生与基因序列编码不同的蛋白质产物",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "3'端多聚腺苷酸化（加polyA尾）与转录终止耦合，polyA尾对mRNA稳定性和翻译效率有重要作用",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "5'端帽结构（m⁷Gppp）在转录起始后不久即添加到mRNA的5'端，保护mRNA免受5'核酸外切酶降解",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：加帽是共转录加工的第一步。C正确：加尾的功能。A错误：不是所有内含子都由剪接体切除——有些是自我剪接内含子（I型和II型内含子）。此外剪接需要ATP供能。B正确：RNA编辑增加了蛋白质多样性。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA加工",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2107204760",
+  "tags": []
+ },
+ "BQ-transcription-2b77bcc9f427": {
+  "type": "mtf",
+  "question": "关于真核生物mRNA加工，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "所有内含子均被剪接体切除，剪接过程不消耗能量",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "RNA编辑（如A-to-I编辑）可在转录后水平改变mRNA的编码序列，产生与基因序列编码不同的蛋白质产物",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "5'端帽结构（m⁷Gppp）在转录起始后不久即添加到mRNA的5'端，保护mRNA免受5'核酸外切酶降解",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "3'端多聚腺苷酸化（加polyA尾）与转录终止耦合，polyA尾对mRNA稳定性和翻译效率有重要作用",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：加帽是共转录加工的第一步。D正确：加尾的功能。A错误：不是所有内含子都由剪接体切除——有些是自我剪接内含子（I型和II型内含子）。此外剪接需要ATP供能。B正确：RNA编辑增加了蛋白质多样性。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "RNA加工",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "2107204760",
+  "tags": []
+ },
+ "BQ-transcription-b05603c9d18d": {
+  "type": "mtf",
+  "question": "关于细菌转录的终止机制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "ρ因子依赖终止中ρ蛋白沿RNA追踪至RNA聚合酶，利用ATP水解能量将转录物释放",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "ρ因子非依赖终止依靠DNA模板上的回文序列形成RNA发夹结构和随后的U串",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "所有转录终止都需要蛋白因子的参与",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "抗终止机制(如λ噬菌体N蛋白)通过修饰RNA聚合酶使其能够通读终止信号",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确:内在终止子的结构特征。A正确:ρ因子的机制。D正确:抗终止的生物学意义。C错误:内在终止子(intrinsic terminator)不需要蛋白质因子。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录终止",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1880266880",
+  "tags": []
+ },
+ "BQ-transcription-eba64b8860d5": {
+  "type": "mtf",
+  "question": "关于细菌转录的终止机制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "ρ因子依赖终止中ρ蛋白沿RNA追踪至RNA聚合酶，利用ATP水解能量将转录物释放",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "ρ因子非依赖终止依靠DNA模板上的回文序列形成RNA发夹结构和随后的U串",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "抗终止机制(如λ噬菌体N蛋白)通过修饰RNA聚合酶使其能够通读终止信号",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "所有转录终止都需要蛋白因子的参与",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确:内在终止子的结构特征。A正确:ρ因子的机制。C正确:抗终止的生物学意义。D错误:内在终止子(intrinsic terminator)不需要蛋白质因子。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录终止",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1880266880",
+  "tags": []
+ },
+ "BQ-transcription-55c5d1b03a82": {
+  "type": "mtf",
+  "question": "关于细菌转录的终止机制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "ρ因子依赖终止中ρ蛋白沿RNA追踪至RNA聚合酶，利用ATP水解能量将转录物释放",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "所有转录终止都需要蛋白因子的参与",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "ρ因子非依赖终止依靠DNA模板上的回文序列形成RNA发夹结构和随后的U串",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "抗终止机制(如λ噬菌体N蛋白)通过修饰RNA聚合酶使其能够通读终止信号",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确:内在终止子的结构特征。A正确:ρ因子的机制。D正确:抗终止的生物学意义。B错误:内在终止子(intrinsic terminator)不需要蛋白质因子。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录终止",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1880266880",
+  "tags": []
+ },
+ "BQ-transcription-839fb2707548": {
+  "type": "mtf",
+  "question": "关于细菌转录的终止机制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "ρ因子依赖终止中ρ蛋白沿RNA追踪至RNA聚合酶，利用ATP水解能量将转录物释放",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "所有转录终止都需要蛋白因子的参与",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "抗终止机制(如λ噬菌体N蛋白)通过修饰RNA聚合酶使其能够通读终止信号",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "ρ因子非依赖终止依靠DNA模板上的回文序列形成RNA发夹结构和随后的U串",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确:内在终止子的结构特征。A正确:ρ因子的机制。C正确:抗终止的生物学意义。B错误:内在终止子(intrinsic terminator)不需要蛋白质因子。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录终止",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1880266880",
+  "tags": []
+ },
+ "BQ-transcription-84d2cf4d4df3": {
+  "type": "mtf",
+  "question": "关于细菌转录的终止机制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "ρ因子依赖终止中ρ蛋白沿RNA追踪至RNA聚合酶，利用ATP水解能量将转录物释放",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "抗终止机制(如λ噬菌体N蛋白)通过修饰RNA聚合酶使其能够通读终止信号",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "ρ因子非依赖终止依靠DNA模板上的回文序列形成RNA发夹结构和随后的U串",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "所有转录终止都需要蛋白因子的参与",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确:内在终止子的结构特征。A正确:ρ因子的机制。B正确:抗终止的生物学意义。D错误:内在终止子(intrinsic terminator)不需要蛋白质因子。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录终止",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1880266880",
+  "tags": []
+ },
+ "BQ-transcription-f59d81f72d98": {
+  "type": "mtf",
+  "question": "关于细菌转录的终止机制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "ρ因子依赖终止中ρ蛋白沿RNA追踪至RNA聚合酶，利用ATP水解能量将转录物释放",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "抗终止机制(如λ噬菌体N蛋白)通过修饰RNA聚合酶使其能够通读终止信号",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "所有转录终止都需要蛋白因子的参与",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "ρ因子非依赖终止依靠DNA模板上的回文序列形成RNA发夹结构和随后的U串",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确:内在终止子的结构特征。A正确:ρ因子的机制。B正确:抗终止的生物学意义。C错误:内在终止子(intrinsic terminator)不需要蛋白质因子。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录终止",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1880266880",
+  "tags": []
+ },
+ "BQ-transcription-f32a337a934a": {
+  "type": "mtf",
+  "question": "关于细菌转录的终止机制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "ρ因子非依赖终止依靠DNA模板上的回文序列形成RNA发夹结构和随后的U串",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "ρ因子依赖终止中ρ蛋白沿RNA追踪至RNA聚合酶，利用ATP水解能量将转录物释放",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "所有转录终止都需要蛋白因子的参与",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "抗终止机制(如λ噬菌体N蛋白)通过修饰RNA聚合酶使其能够通读终止信号",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确:内在终止子的结构特征。B正确:ρ因子的机制。D正确:抗终止的生物学意义。C错误:内在终止子(intrinsic terminator)不需要蛋白质因子。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录终止",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1880266880",
+  "tags": []
+ },
+ "BQ-transcription-675bbde2f261": {
+  "type": "mtf",
+  "question": "关于细菌转录的终止机制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "ρ因子非依赖终止依靠DNA模板上的回文序列形成RNA发夹结构和随后的U串",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "ρ因子依赖终止中ρ蛋白沿RNA追踪至RNA聚合酶，利用ATP水解能量将转录物释放",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "抗终止机制(如λ噬菌体N蛋白)通过修饰RNA聚合酶使其能够通读终止信号",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "所有转录终止都需要蛋白因子的参与",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确:内在终止子的结构特征。B正确:ρ因子的机制。C正确:抗终止的生物学意义。D错误:内在终止子(intrinsic terminator)不需要蛋白质因子。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录终止",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1880266880",
+  "tags": []
+ },
+ "BQ-transcription-0ae5e7aab14c": {
+  "type": "mtf",
+  "question": "关于细菌转录的终止机制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "ρ因子非依赖终止依靠DNA模板上的回文序列形成RNA发夹结构和随后的U串",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "所有转录终止都需要蛋白因子的参与",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "ρ因子依赖终止中ρ蛋白沿RNA追踪至RNA聚合酶，利用ATP水解能量将转录物释放",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "抗终止机制(如λ噬菌体N蛋白)通过修饰RNA聚合酶使其能够通读终止信号",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确:内在终止子的结构特征。C正确:ρ因子的机制。D正确:抗终止的生物学意义。B错误:内在终止子(intrinsic terminator)不需要蛋白质因子。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录终止",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1880266880",
+  "tags": []
+ },
+ "BQ-transcription-01f203b67fa6": {
+  "type": "mtf",
+  "question": "关于细菌转录的终止机制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "ρ因子非依赖终止依靠DNA模板上的回文序列形成RNA发夹结构和随后的U串",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "所有转录终止都需要蛋白因子的参与",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "抗终止机制(如λ噬菌体N蛋白)通过修饰RNA聚合酶使其能够通读终止信号",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "ρ因子依赖终止中ρ蛋白沿RNA追踪至RNA聚合酶，利用ATP水解能量将转录物释放",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确:内在终止子的结构特征。D正确:ρ因子的机制。C正确:抗终止的生物学意义。B错误:内在终止子(intrinsic terminator)不需要蛋白质因子。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录终止",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1880266880",
+  "tags": []
+ },
+ "BQ-transcription-cca75016565e": {
+  "type": "mtf",
+  "question": "关于细菌转录的终止机制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "ρ因子非依赖终止依靠DNA模板上的回文序列形成RNA发夹结构和随后的U串",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "抗终止机制(如λ噬菌体N蛋白)通过修饰RNA聚合酶使其能够通读终止信号",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "ρ因子依赖终止中ρ蛋白沿RNA追踪至RNA聚合酶，利用ATP水解能量将转录物释放",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "所有转录终止都需要蛋白因子的参与",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确:内在终止子的结构特征。C正确:ρ因子的机制。B正确:抗终止的生物学意义。D错误:内在终止子(intrinsic terminator)不需要蛋白质因子。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录终止",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1880266880",
+  "tags": []
+ },
+ "BQ-transcription-756941822983": {
+  "type": "mtf",
+  "question": "关于细菌转录的终止机制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "ρ因子非依赖终止依靠DNA模板上的回文序列形成RNA发夹结构和随后的U串",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "抗终止机制(如λ噬菌体N蛋白)通过修饰RNA聚合酶使其能够通读终止信号",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "所有转录终止都需要蛋白因子的参与",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "ρ因子依赖终止中ρ蛋白沿RNA追踪至RNA聚合酶，利用ATP水解能量将转录物释放",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确:内在终止子的结构特征。D正确:ρ因子的机制。B正确:抗终止的生物学意义。C错误:内在终止子(intrinsic terminator)不需要蛋白质因子。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录终止",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1880266880",
+  "tags": []
+ },
+ "BQ-transcription-9337440234a4": {
+  "type": "mtf",
+  "question": "关于细菌转录的终止机制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "所有转录终止都需要蛋白因子的参与",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "ρ因子依赖终止中ρ蛋白沿RNA追踪至RNA聚合酶，利用ATP水解能量将转录物释放",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "ρ因子非依赖终止依靠DNA模板上的回文序列形成RNA发夹结构和随后的U串",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "抗终止机制(如λ噬菌体N蛋白)通过修饰RNA聚合酶使其能够通读终止信号",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确:内在终止子的结构特征。B正确:ρ因子的机制。D正确:抗终止的生物学意义。A错误:内在终止子(intrinsic terminator)不需要蛋白质因子。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录终止",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1880266880",
+  "tags": []
+ },
+ "BQ-transcription-7b6ce39b01bc": {
+  "type": "mtf",
+  "question": "关于细菌转录的终止机制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "所有转录终止都需要蛋白因子的参与",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "ρ因子依赖终止中ρ蛋白沿RNA追踪至RNA聚合酶，利用ATP水解能量将转录物释放",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "抗终止机制(如λ噬菌体N蛋白)通过修饰RNA聚合酶使其能够通读终止信号",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "ρ因子非依赖终止依靠DNA模板上的回文序列形成RNA发夹结构和随后的U串",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确:内在终止子的结构特征。B正确:ρ因子的机制。C正确:抗终止的生物学意义。A错误:内在终止子(intrinsic terminator)不需要蛋白质因子。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录终止",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1880266880",
+  "tags": []
+ },
+ "BQ-transcription-ba3a6fb71e7c": {
+  "type": "mtf",
+  "question": "关于细菌转录的终止机制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "所有转录终止都需要蛋白因子的参与",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "ρ因子非依赖终止依靠DNA模板上的回文序列形成RNA发夹结构和随后的U串",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "ρ因子依赖终止中ρ蛋白沿RNA追踪至RNA聚合酶，利用ATP水解能量将转录物释放",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "抗终止机制(如λ噬菌体N蛋白)通过修饰RNA聚合酶使其能够通读终止信号",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确:内在终止子的结构特征。C正确:ρ因子的机制。D正确:抗终止的生物学意义。A错误:内在终止子(intrinsic terminator)不需要蛋白质因子。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录终止",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1880266880",
+  "tags": []
+ },
+ "BQ-transcription-f0d11f3017ee": {
+  "type": "mtf",
+  "question": "关于细菌转录的终止机制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "所有转录终止都需要蛋白因子的参与",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "ρ因子非依赖终止依靠DNA模板上的回文序列形成RNA发夹结构和随后的U串",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "抗终止机制(如λ噬菌体N蛋白)通过修饰RNA聚合酶使其能够通读终止信号",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "ρ因子依赖终止中ρ蛋白沿RNA追踪至RNA聚合酶，利用ATP水解能量将转录物释放",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确:内在终止子的结构特征。D正确:ρ因子的机制。C正确:抗终止的生物学意义。A错误:内在终止子(intrinsic terminator)不需要蛋白质因子。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录终止",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1880266880",
+  "tags": []
+ },
+ "BQ-transcription-f54dc992086c": {
+  "type": "mtf",
+  "question": "关于细菌转录的终止机制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "所有转录终止都需要蛋白因子的参与",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "抗终止机制(如λ噬菌体N蛋白)通过修饰RNA聚合酶使其能够通读终止信号",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "ρ因子依赖终止中ρ蛋白沿RNA追踪至RNA聚合酶，利用ATP水解能量将转录物释放",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "ρ因子非依赖终止依靠DNA模板上的回文序列形成RNA发夹结构和随后的U串",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确:内在终止子的结构特征。C正确:ρ因子的机制。B正确:抗终止的生物学意义。A错误:内在终止子(intrinsic terminator)不需要蛋白质因子。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录终止",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1880266880",
+  "tags": []
+ },
+ "BQ-transcription-024af2365cbe": {
+  "type": "mtf",
+  "question": "关于细菌转录的终止机制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "所有转录终止都需要蛋白因子的参与",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "抗终止机制(如λ噬菌体N蛋白)通过修饰RNA聚合酶使其能够通读终止信号",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "ρ因子非依赖终止依靠DNA模板上的回文序列形成RNA发夹结构和随后的U串",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "ρ因子依赖终止中ρ蛋白沿RNA追踪至RNA聚合酶，利用ATP水解能量将转录物释放",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确:内在终止子的结构特征。D正确:ρ因子的机制。B正确:抗终止的生物学意义。A错误:内在终止子(intrinsic terminator)不需要蛋白质因子。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录终止",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1880266880",
+  "tags": []
+ },
+ "BQ-transcription-b5b5696ac53b": {
+  "type": "mtf",
+  "question": "关于细菌转录的终止机制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "抗终止机制(如λ噬菌体N蛋白)通过修饰RNA聚合酶使其能够通读终止信号",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "ρ因子依赖终止中ρ蛋白沿RNA追踪至RNA聚合酶，利用ATP水解能量将转录物释放",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "ρ因子非依赖终止依靠DNA模板上的回文序列形成RNA发夹结构和随后的U串",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "所有转录终止都需要蛋白因子的参与",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确:内在终止子的结构特征。B正确:ρ因子的机制。A正确:抗终止的生物学意义。D错误:内在终止子(intrinsic terminator)不需要蛋白质因子。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录终止",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1880266880",
+  "tags": []
+ },
+ "BQ-transcription-54bf7fe9689e": {
+  "type": "mtf",
+  "question": "关于细菌转录的终止机制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "抗终止机制(如λ噬菌体N蛋白)通过修饰RNA聚合酶使其能够通读终止信号",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "ρ因子依赖终止中ρ蛋白沿RNA追踪至RNA聚合酶，利用ATP水解能量将转录物释放",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "所有转录终止都需要蛋白因子的参与",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "ρ因子非依赖终止依靠DNA模板上的回文序列形成RNA发夹结构和随后的U串",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确:内在终止子的结构特征。B正确:ρ因子的机制。A正确:抗终止的生物学意义。C错误:内在终止子(intrinsic terminator)不需要蛋白质因子。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录终止",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1880266880",
+  "tags": []
+ },
+ "BQ-transcription-b3309630dd4a": {
+  "type": "mtf",
+  "question": "关于细菌转录的终止机制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "抗终止机制(如λ噬菌体N蛋白)通过修饰RNA聚合酶使其能够通读终止信号",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "ρ因子非依赖终止依靠DNA模板上的回文序列形成RNA发夹结构和随后的U串",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "ρ因子依赖终止中ρ蛋白沿RNA追踪至RNA聚合酶，利用ATP水解能量将转录物释放",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "所有转录终止都需要蛋白因子的参与",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确:内在终止子的结构特征。C正确:ρ因子的机制。A正确:抗终止的生物学意义。D错误:内在终止子(intrinsic terminator)不需要蛋白质因子。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录终止",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1880266880",
+  "tags": []
+ },
+ "BQ-transcription-7087c60d8069": {
+  "type": "mtf",
+  "question": "关于细菌转录的终止机制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "抗终止机制(如λ噬菌体N蛋白)通过修饰RNA聚合酶使其能够通读终止信号",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "ρ因子非依赖终止依靠DNA模板上的回文序列形成RNA发夹结构和随后的U串",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "所有转录终止都需要蛋白因子的参与",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "ρ因子依赖终止中ρ蛋白沿RNA追踪至RNA聚合酶，利用ATP水解能量将转录物释放",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确:内在终止子的结构特征。D正确:ρ因子的机制。A正确:抗终止的生物学意义。C错误:内在终止子(intrinsic terminator)不需要蛋白质因子。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录终止",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1880266880",
+  "tags": []
+ },
+ "BQ-transcription-3fe43a8e7d5b": {
+  "type": "mtf",
+  "question": "关于细菌转录的终止机制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "抗终止机制(如λ噬菌体N蛋白)通过修饰RNA聚合酶使其能够通读终止信号",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "所有转录终止都需要蛋白因子的参与",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "ρ因子依赖终止中ρ蛋白沿RNA追踪至RNA聚合酶，利用ATP水解能量将转录物释放",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "ρ因子非依赖终止依靠DNA模板上的回文序列形成RNA发夹结构和随后的U串",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确:内在终止子的结构特征。C正确:ρ因子的机制。A正确:抗终止的生物学意义。B错误:内在终止子(intrinsic terminator)不需要蛋白质因子。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录终止",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1880266880",
+  "tags": []
+ },
+ "BQ-transcription-216e7f133c77": {
+  "type": "mtf",
+  "question": "关于细菌转录的终止机制，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "抗终止机制(如λ噬菌体N蛋白)通过修饰RNA聚合酶使其能够通读终止信号",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "所有转录终止都需要蛋白因子的参与",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "ρ因子非依赖终止依靠DNA模板上的回文序列形成RNA发夹结构和随后的U串",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "ρ因子依赖终止中ρ蛋白沿RNA追踪至RNA聚合酶，利用ATP水解能量将转录物释放",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确:内在终止子的结构特征。D正确:ρ因子的机制。A正确:抗终止的生物学意义。B错误:内在终止子(intrinsic terminator)不需要蛋白质因子。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录终止",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1880266880",
+  "tags": []
+ },
+ "BQ-transcription-da64cb0ad609": {
+  "type": "mtf",
+  "question": "关于转录及其调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "乳糖操纵子中，阻遏蛋白与操纵基因结合时，cAMP-CAP复合物促进转录",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "原核生物的RNA聚合酶全酶由核心酶（α₂ββ'ω）和σ因子组成，σ因子负责识别启动子序列",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "增强子是一类顺式作用元件，可以远距离、不依赖方向地增强基因转录",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "真核生物mRNA的5'端加帽和3'端加polyA尾发生在转录完成之后",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确：σ因子赋予RNA聚合酶识别启动子序列的能力。D错误：加帽和加尾在转录过程中协同发生，帽结构在转录起始后迅速添加，加尾与转录终止耦合。C正确：增强子的典型特征。A错误：阻遏蛋白结合时转录被抑制；cAMP-CAP在无葡萄糖时激活转录，是正调控机制。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录与调控",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1509950736",
+  "tags": []
+ },
+ "BQ-transcription-cf4d9a4b74ed": {
+  "type": "mtf",
+  "question": "关于转录及其调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "乳糖操纵子中，阻遏蛋白与操纵基因结合时，cAMP-CAP复合物促进转录",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "原核生物的RNA聚合酶全酶由核心酶（α₂ββ'ω）和σ因子组成，σ因子负责识别启动子序列",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "真核生物mRNA的5'端加帽和3'端加polyA尾发生在转录完成之后",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "增强子是一类顺式作用元件，可以远距离、不依赖方向地增强基因转录",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：σ因子赋予RNA聚合酶识别启动子序列的能力。C错误：加帽和加尾在转录过程中协同发生，帽结构在转录起始后迅速添加，加尾与转录终止耦合。D正确：增强子的典型特征。A错误：阻遏蛋白结合时转录被抑制；cAMP-CAP在无葡萄糖时激活转录，是正调控机制。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录与调控",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1509950736",
+  "tags": []
+ },
+ "BQ-transcription-8f20f3475995": {
+  "type": "mtf",
+  "question": "关于转录及其调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "乳糖操纵子中，阻遏蛋白与操纵基因结合时，cAMP-CAP复合物促进转录",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "增强子是一类顺式作用元件，可以远距离、不依赖方向地增强基因转录",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "原核生物的RNA聚合酶全酶由核心酶（α₂ββ'ω）和σ因子组成，σ因子负责识别启动子序列",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "真核生物mRNA的5'端加帽和3'端加polyA尾发生在转录完成之后",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确：σ因子赋予RNA聚合酶识别启动子序列的能力。D错误：加帽和加尾在转录过程中协同发生，帽结构在转录起始后迅速添加，加尾与转录终止耦合。B正确：增强子的典型特征。A错误：阻遏蛋白结合时转录被抑制；cAMP-CAP在无葡萄糖时激活转录，是正调控机制。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录与调控",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1509950736",
+  "tags": []
+ },
+ "BQ-transcription-9f02d6214c34": {
+  "type": "mtf",
+  "question": "关于转录及其调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "乳糖操纵子中，阻遏蛋白与操纵基因结合时，cAMP-CAP复合物促进转录",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "增强子是一类顺式作用元件，可以远距离、不依赖方向地增强基因转录",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "真核生物mRNA的5'端加帽和3'端加polyA尾发生在转录完成之后",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "原核生物的RNA聚合酶全酶由核心酶（α₂ββ'ω）和σ因子组成，σ因子负责识别启动子序列",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：σ因子赋予RNA聚合酶识别启动子序列的能力。C错误：加帽和加尾在转录过程中协同发生，帽结构在转录起始后迅速添加，加尾与转录终止耦合。B正确：增强子的典型特征。A错误：阻遏蛋白结合时转录被抑制；cAMP-CAP在无葡萄糖时激活转录，是正调控机制。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录与调控",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1509950736",
+  "tags": []
+ },
+ "BQ-transcription-264f49ac6fcd": {
+  "type": "mtf",
+  "question": "关于转录及其调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "乳糖操纵子中，阻遏蛋白与操纵基因结合时，cAMP-CAP复合物促进转录",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "真核生物mRNA的5'端加帽和3'端加polyA尾发生在转录完成之后",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "原核生物的RNA聚合酶全酶由核心酶（α₂ββ'ω）和σ因子组成，σ因子负责识别启动子序列",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "增强子是一类顺式作用元件，可以远距离、不依赖方向地增强基因转录",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：σ因子赋予RNA聚合酶识别启动子序列的能力。B错误：加帽和加尾在转录过程中协同发生，帽结构在转录起始后迅速添加，加尾与转录终止耦合。D正确：增强子的典型特征。A错误：阻遏蛋白结合时转录被抑制；cAMP-CAP在无葡萄糖时激活转录，是正调控机制。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录与调控",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1509950736",
+  "tags": []
+ },
+ "BQ-transcription-c006bbf1b848": {
+  "type": "mtf",
+  "question": "关于转录及其调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "乳糖操纵子中，阻遏蛋白与操纵基因结合时，cAMP-CAP复合物促进转录",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "真核生物mRNA的5'端加帽和3'端加polyA尾发生在转录完成之后",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "增强子是一类顺式作用元件，可以远距离、不依赖方向地增强基因转录",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "原核生物的RNA聚合酶全酶由核心酶（α₂ββ'ω）和σ因子组成，σ因子负责识别启动子序列",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：σ因子赋予RNA聚合酶识别启动子序列的能力。B错误：加帽和加尾在转录过程中协同发生，帽结构在转录起始后迅速添加，加尾与转录终止耦合。C正确：增强子的典型特征。A错误：阻遏蛋白结合时转录被抑制；cAMP-CAP在无葡萄糖时激活转录，是正调控机制。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录与调控",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1509950736",
+  "tags": []
+ },
+ "BQ-transcription-0e82c3f7b3e4": {
+  "type": "mtf",
+  "question": "关于转录及其调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "原核生物的RNA聚合酶全酶由核心酶（α₂ββ'ω）和σ因子组成，σ因子负责识别启动子序列",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "乳糖操纵子中，阻遏蛋白与操纵基因结合时，cAMP-CAP复合物促进转录",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "增强子是一类顺式作用元件，可以远距离、不依赖方向地增强基因转录",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "真核生物mRNA的5'端加帽和3'端加polyA尾发生在转录完成之后",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确：σ因子赋予RNA聚合酶识别启动子序列的能力。D错误：加帽和加尾在转录过程中协同发生，帽结构在转录起始后迅速添加，加尾与转录终止耦合。C正确：增强子的典型特征。B错误：阻遏蛋白结合时转录被抑制；cAMP-CAP在无葡萄糖时激活转录，是正调控机制。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录与调控",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1509950736",
+  "tags": []
+ },
+ "BQ-transcription-99376844431c": {
+  "type": "mtf",
+  "question": "关于转录及其调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "原核生物的RNA聚合酶全酶由核心酶（α₂ββ'ω）和σ因子组成，σ因子负责识别启动子序列",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "乳糖操纵子中，阻遏蛋白与操纵基因结合时，cAMP-CAP复合物促进转录",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "真核生物mRNA的5'端加帽和3'端加polyA尾发生在转录完成之后",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "增强子是一类顺式作用元件，可以远距离、不依赖方向地增强基因转录",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：σ因子赋予RNA聚合酶识别启动子序列的能力。C错误：加帽和加尾在转录过程中协同发生，帽结构在转录起始后迅速添加，加尾与转录终止耦合。D正确：增强子的典型特征。B错误：阻遏蛋白结合时转录被抑制；cAMP-CAP在无葡萄糖时激活转录，是正调控机制。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录与调控",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1509950736",
+  "tags": []
+ },
+ "BQ-transcription-72c8ef542f17": {
+  "type": "mtf",
+  "question": "关于转录及其调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "原核生物的RNA聚合酶全酶由核心酶（α₂ββ'ω）和σ因子组成，σ因子负责识别启动子序列",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "增强子是一类顺式作用元件，可以远距离、不依赖方向地增强基因转录",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "乳糖操纵子中，阻遏蛋白与操纵基因结合时，cAMP-CAP复合物促进转录",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "真核生物mRNA的5'端加帽和3'端加polyA尾发生在转录完成之后",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确：σ因子赋予RNA聚合酶识别启动子序列的能力。D错误：加帽和加尾在转录过程中协同发生，帽结构在转录起始后迅速添加，加尾与转录终止耦合。B正确：增强子的典型特征。C错误：阻遏蛋白结合时转录被抑制；cAMP-CAP在无葡萄糖时激活转录，是正调控机制。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录与调控",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1509950736",
+  "tags": []
+ },
+ "BQ-transcription-87c755722af6": {
+  "type": "mtf",
+  "question": "关于转录及其调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "原核生物的RNA聚合酶全酶由核心酶（α₂ββ'ω）和σ因子组成，σ因子负责识别启动子序列",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "增强子是一类顺式作用元件，可以远距离、不依赖方向地增强基因转录",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "真核生物mRNA的5'端加帽和3'端加polyA尾发生在转录完成之后",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "乳糖操纵子中，阻遏蛋白与操纵基因结合时，cAMP-CAP复合物促进转录",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确：σ因子赋予RNA聚合酶识别启动子序列的能力。C错误：加帽和加尾在转录过程中协同发生，帽结构在转录起始后迅速添加，加尾与转录终止耦合。B正确：增强子的典型特征。D错误：阻遏蛋白结合时转录被抑制；cAMP-CAP在无葡萄糖时激活转录，是正调控机制。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录与调控",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1509950736",
+  "tags": []
+ },
+ "BQ-transcription-d673031fd547": {
+  "type": "mtf",
+  "question": "关于转录及其调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "原核生物的RNA聚合酶全酶由核心酶（α₂ββ'ω）和σ因子组成，σ因子负责识别启动子序列",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "真核生物mRNA的5'端加帽和3'端加polyA尾发生在转录完成之后",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "乳糖操纵子中，阻遏蛋白与操纵基因结合时，cAMP-CAP复合物促进转录",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "增强子是一类顺式作用元件，可以远距离、不依赖方向地增强基因转录",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：σ因子赋予RNA聚合酶识别启动子序列的能力。B错误：加帽和加尾在转录过程中协同发生，帽结构在转录起始后迅速添加，加尾与转录终止耦合。D正确：增强子的典型特征。C错误：阻遏蛋白结合时转录被抑制；cAMP-CAP在无葡萄糖时激活转录，是正调控机制。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录与调控",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1509950736",
+  "tags": []
+ },
+ "BQ-transcription-ddaf2c54334d": {
+  "type": "mtf",
+  "question": "关于转录及其调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "原核生物的RNA聚合酶全酶由核心酶（α₂ββ'ω）和σ因子组成，σ因子负责识别启动子序列",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "真核生物mRNA的5'端加帽和3'端加polyA尾发生在转录完成之后",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "增强子是一类顺式作用元件，可以远距离、不依赖方向地增强基因转录",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "乳糖操纵子中，阻遏蛋白与操纵基因结合时，cAMP-CAP复合物促进转录",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确：σ因子赋予RNA聚合酶识别启动子序列的能力。B错误：加帽和加尾在转录过程中协同发生，帽结构在转录起始后迅速添加，加尾与转录终止耦合。C正确：增强子的典型特征。D错误：阻遏蛋白结合时转录被抑制；cAMP-CAP在无葡萄糖时激活转录，是正调控机制。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录与调控",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1509950736",
+  "tags": []
+ },
+ "BQ-transcription-25c7956ad9ac": {
+  "type": "mtf",
+  "question": "关于转录及其调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "增强子是一类顺式作用元件，可以远距离、不依赖方向地增强基因转录",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "乳糖操纵子中，阻遏蛋白与操纵基因结合时，cAMP-CAP复合物促进转录",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "原核生物的RNA聚合酶全酶由核心酶（α₂ββ'ω）和σ因子组成，σ因子负责识别启动子序列",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "真核生物mRNA的5'端加帽和3'端加polyA尾发生在转录完成之后",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确：σ因子赋予RNA聚合酶识别启动子序列的能力。D错误：加帽和加尾在转录过程中协同发生，帽结构在转录起始后迅速添加，加尾与转录终止耦合。A正确：增强子的典型特征。B错误：阻遏蛋白结合时转录被抑制；cAMP-CAP在无葡萄糖时激活转录，是正调控机制。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录与调控",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1509950736",
+  "tags": []
+ },
+ "BQ-transcription-5ff97061badd": {
+  "type": "mtf",
+  "question": "关于转录及其调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "增强子是一类顺式作用元件，可以远距离、不依赖方向地增强基因转录",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "乳糖操纵子中，阻遏蛋白与操纵基因结合时，cAMP-CAP复合物促进转录",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "真核生物mRNA的5'端加帽和3'端加polyA尾发生在转录完成之后",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "原核生物的RNA聚合酶全酶由核心酶（α₂ββ'ω）和σ因子组成，σ因子负责识别启动子序列",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：σ因子赋予RNA聚合酶识别启动子序列的能力。C错误：加帽和加尾在转录过程中协同发生，帽结构在转录起始后迅速添加，加尾与转录终止耦合。A正确：增强子的典型特征。B错误：阻遏蛋白结合时转录被抑制；cAMP-CAP在无葡萄糖时激活转录，是正调控机制。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录与调控",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1509950736",
+  "tags": []
+ },
+ "BQ-transcription-496fd86382aa": {
+  "type": "mtf",
+  "question": "关于转录及其调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "增强子是一类顺式作用元件，可以远距离、不依赖方向地增强基因转录",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "原核生物的RNA聚合酶全酶由核心酶（α₂ββ'ω）和σ因子组成，σ因子负责识别启动子序列",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "乳糖操纵子中，阻遏蛋白与操纵基因结合时，cAMP-CAP复合物促进转录",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "真核生物mRNA的5'端加帽和3'端加polyA尾发生在转录完成之后",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确：σ因子赋予RNA聚合酶识别启动子序列的能力。D错误：加帽和加尾在转录过程中协同发生，帽结构在转录起始后迅速添加，加尾与转录终止耦合。A正确：增强子的典型特征。C错误：阻遏蛋白结合时转录被抑制；cAMP-CAP在无葡萄糖时激活转录，是正调控机制。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录与调控",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1509950736",
+  "tags": []
+ },
+ "BQ-transcription-99268bd88bb9": {
+  "type": "mtf",
+  "question": "关于转录及其调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "增强子是一类顺式作用元件，可以远距离、不依赖方向地增强基因转录",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "原核生物的RNA聚合酶全酶由核心酶（α₂ββ'ω）和σ因子组成，σ因子负责识别启动子序列",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "真核生物mRNA的5'端加帽和3'端加polyA尾发生在转录完成之后",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "乳糖操纵子中，阻遏蛋白与操纵基因结合时，cAMP-CAP复合物促进转录",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确：σ因子赋予RNA聚合酶识别启动子序列的能力。C错误：加帽和加尾在转录过程中协同发生，帽结构在转录起始后迅速添加，加尾与转录终止耦合。A正确：增强子的典型特征。D错误：阻遏蛋白结合时转录被抑制；cAMP-CAP在无葡萄糖时激活转录，是正调控机制。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录与调控",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1509950736",
+  "tags": []
+ },
+ "BQ-transcription-51b039399041": {
+  "type": "mtf",
+  "question": "关于转录及其调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "增强子是一类顺式作用元件，可以远距离、不依赖方向地增强基因转录",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "真核生物mRNA的5'端加帽和3'端加polyA尾发生在转录完成之后",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "乳糖操纵子中，阻遏蛋白与操纵基因结合时，cAMP-CAP复合物促进转录",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "原核生物的RNA聚合酶全酶由核心酶（α₂ββ'ω）和σ因子组成，σ因子负责识别启动子序列",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：σ因子赋予RNA聚合酶识别启动子序列的能力。B错误：加帽和加尾在转录过程中协同发生，帽结构在转录起始后迅速添加，加尾与转录终止耦合。A正确：增强子的典型特征。C错误：阻遏蛋白结合时转录被抑制；cAMP-CAP在无葡萄糖时激活转录，是正调控机制。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录与调控",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1509950736",
+  "tags": []
+ },
+ "BQ-transcription-14bd87cbece8": {
+  "type": "mtf",
+  "question": "关于转录及其调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "增强子是一类顺式作用元件，可以远距离、不依赖方向地增强基因转录",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "真核生物mRNA的5'端加帽和3'端加polyA尾发生在转录完成之后",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "原核生物的RNA聚合酶全酶由核心酶（α₂ββ'ω）和σ因子组成，σ因子负责识别启动子序列",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "乳糖操纵子中，阻遏蛋白与操纵基因结合时，cAMP-CAP复合物促进转录",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确：σ因子赋予RNA聚合酶识别启动子序列的能力。B错误：加帽和加尾在转录过程中协同发生，帽结构在转录起始后迅速添加，加尾与转录终止耦合。A正确：增强子的典型特征。D错误：阻遏蛋白结合时转录被抑制；cAMP-CAP在无葡萄糖时激活转录，是正调控机制。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录与调控",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1509950736",
+  "tags": []
+ },
+ "BQ-transcription-3fe160c771a1": {
+  "type": "mtf",
+  "question": "关于转录及其调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "真核生物mRNA的5'端加帽和3'端加polyA尾发生在转录完成之后",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "乳糖操纵子中，阻遏蛋白与操纵基因结合时，cAMP-CAP复合物促进转录",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "原核生物的RNA聚合酶全酶由核心酶（α₂ββ'ω）和σ因子组成，σ因子负责识别启动子序列",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "增强子是一类顺式作用元件，可以远距离、不依赖方向地增强基因转录",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：σ因子赋予RNA聚合酶识别启动子序列的能力。A错误：加帽和加尾在转录过程中协同发生，帽结构在转录起始后迅速添加，加尾与转录终止耦合。D正确：增强子的典型特征。B错误：阻遏蛋白结合时转录被抑制；cAMP-CAP在无葡萄糖时激活转录，是正调控机制。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录与调控",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1509950736",
+  "tags": []
+ },
+ "BQ-transcription-d36bc6189e8e": {
+  "type": "mtf",
+  "question": "关于转录及其调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "真核生物mRNA的5'端加帽和3'端加polyA尾发生在转录完成之后",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "乳糖操纵子中，阻遏蛋白与操纵基因结合时，cAMP-CAP复合物促进转录",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "增强子是一类顺式作用元件，可以远距离、不依赖方向地增强基因转录",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "原核生物的RNA聚合酶全酶由核心酶（α₂ββ'ω）和σ因子组成，σ因子负责识别启动子序列",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：σ因子赋予RNA聚合酶识别启动子序列的能力。A错误：加帽和加尾在转录过程中协同发生，帽结构在转录起始后迅速添加，加尾与转录终止耦合。C正确：增强子的典型特征。B错误：阻遏蛋白结合时转录被抑制；cAMP-CAP在无葡萄糖时激活转录，是正调控机制。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录与调控",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1509950736",
+  "tags": []
+ },
+ "BQ-transcription-973bc26657c8": {
+  "type": "mtf",
+  "question": "关于转录及其调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "真核生物mRNA的5'端加帽和3'端加polyA尾发生在转录完成之后",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "原核生物的RNA聚合酶全酶由核心酶（α₂ββ'ω）和σ因子组成，σ因子负责识别启动子序列",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "乳糖操纵子中，阻遏蛋白与操纵基因结合时，cAMP-CAP复合物促进转录",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "增强子是一类顺式作用元件，可以远距离、不依赖方向地增强基因转录",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：σ因子赋予RNA聚合酶识别启动子序列的能力。A错误：加帽和加尾在转录过程中协同发生，帽结构在转录起始后迅速添加，加尾与转录终止耦合。D正确：增强子的典型特征。C错误：阻遏蛋白结合时转录被抑制；cAMP-CAP在无葡萄糖时激活转录，是正调控机制。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录与调控",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1509950736",
+  "tags": []
+ },
+ "BQ-transcription-3a5ddcf7335b": {
+  "type": "mtf",
+  "question": "关于转录及其调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "真核生物mRNA的5'端加帽和3'端加polyA尾发生在转录完成之后",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "原核生物的RNA聚合酶全酶由核心酶（α₂ββ'ω）和σ因子组成，σ因子负责识别启动子序列",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "增强子是一类顺式作用元件，可以远距离、不依赖方向地增强基因转录",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "乳糖操纵子中，阻遏蛋白与操纵基因结合时，cAMP-CAP复合物促进转录",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确：σ因子赋予RNA聚合酶识别启动子序列的能力。A错误：加帽和加尾在转录过程中协同发生，帽结构在转录起始后迅速添加，加尾与转录终止耦合。C正确：增强子的典型特征。D错误：阻遏蛋白结合时转录被抑制；cAMP-CAP在无葡萄糖时激活转录，是正调控机制。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录与调控",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1509950736",
+  "tags": []
+ },
+ "BQ-transcription-8af9facc5a98": {
+  "type": "mtf",
+  "question": "关于转录及其调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "真核生物mRNA的5'端加帽和3'端加polyA尾发生在转录完成之后",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "增强子是一类顺式作用元件，可以远距离、不依赖方向地增强基因转录",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "乳糖操纵子中，阻遏蛋白与操纵基因结合时，cAMP-CAP复合物促进转录",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "原核生物的RNA聚合酶全酶由核心酶（α₂ββ'ω）和σ因子组成，σ因子负责识别启动子序列",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：σ因子赋予RNA聚合酶识别启动子序列的能力。A错误：加帽和加尾在转录过程中协同发生，帽结构在转录起始后迅速添加，加尾与转录终止耦合。B正确：增强子的典型特征。C错误：阻遏蛋白结合时转录被抑制；cAMP-CAP在无葡萄糖时激活转录，是正调控机制。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录与调控",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1509950736",
+  "tags": []
+ },
+ "BQ-transcription-82673c766b40": {
+  "type": "mtf",
+  "question": "关于转录及其调控，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "真核生物mRNA的5'端加帽和3'端加polyA尾发生在转录完成之后",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "增强子是一类顺式作用元件，可以远距离、不依赖方向地增强基因转录",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "原核生物的RNA聚合酶全酶由核心酶（α₂ββ'ω）和σ因子组成，σ因子负责识别启动子序列",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "乳糖操纵子中，阻遏蛋白与操纵基因结合时，cAMP-CAP复合物促进转录",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确：σ因子赋予RNA聚合酶识别启动子序列的能力。A错误：加帽和加尾在转录过程中协同发生，帽结构在转录起始后迅速添加，加尾与转录终止耦合。B正确：增强子的典型特征。D错误：阻遏蛋白结合时转录被抑制；cAMP-CAP在无葡萄糖时激活转录，是正调控机制。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录与调控",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "1509950736",
+  "tags": []
+ },
+ "BQ-transcription-23e31ee95849": {
+  "type": "mtf",
+  "question": "关于转录因子的结构与功能，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "亮氨酸拉链模体由周期性排列的亮氨酸残基形成两亲性α-螺旋，介导转录因子的二聚化",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "所有转录因子都必须包含DNA结合结构域和转录激活结构域两部分",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "核受体超家族成员（如糖皮质激素受体）是配体激活的转录因子",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "锌指结构是DNA结合结构域的一种常见模体，通过锌离子的配位稳定其三维折叠",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：锌指结构的基本特征。A正确：亮氨酸拉链的二聚化机制。B错误：有些转录因子可能只有DNA结合域（如某些抑制因子）或通过与其他蛋白质相互作用间接调控转录。C正确：核受体的配体依赖性激活机制。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录因子",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "712056507",
+  "tags": []
+ },
+ "BQ-transcription-a558f180ca9d": {
+  "type": "mtf",
+  "question": "关于转录因子的结构与功能，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "亮氨酸拉链模体由周期性排列的亮氨酸残基形成两亲性α-螺旋，介导转录因子的二聚化",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "所有转录因子都必须包含DNA结合结构域和转录激活结构域两部分",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "锌指结构是DNA结合结构域的一种常见模体，通过锌离子的配位稳定其三维折叠",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "核受体超家族成员（如糖皮质激素受体）是配体激活的转录因子",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：锌指结构的基本特征。A正确：亮氨酸拉链的二聚化机制。B错误：有些转录因子可能只有DNA结合域（如某些抑制因子）或通过与其他蛋白质相互作用间接调控转录。D正确：核受体的配体依赖性激活机制。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录因子",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "712056507",
+  "tags": []
+ },
+ "BQ-transcription-8c84ec4c7be4": {
+  "type": "mtf",
+  "question": "关于转录因子的结构与功能，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "亮氨酸拉链模体由周期性排列的亮氨酸残基形成两亲性α-螺旋，介导转录因子的二聚化",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "核受体超家族成员（如糖皮质激素受体）是配体激活的转录因子",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "所有转录因子都必须包含DNA结合结构域和转录激活结构域两部分",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "锌指结构是DNA结合结构域的一种常见模体，通过锌离子的配位稳定其三维折叠",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：锌指结构的基本特征。A正确：亮氨酸拉链的二聚化机制。C错误：有些转录因子可能只有DNA结合域（如某些抑制因子）或通过与其他蛋白质相互作用间接调控转录。B正确：核受体的配体依赖性激活机制。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录因子",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "712056507",
+  "tags": []
+ },
+ "BQ-transcription-8d23cec4509f": {
+  "type": "mtf",
+  "question": "关于转录因子的结构与功能，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "亮氨酸拉链模体由周期性排列的亮氨酸残基形成两亲性α-螺旋，介导转录因子的二聚化",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "核受体超家族成员（如糖皮质激素受体）是配体激活的转录因子",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "锌指结构是DNA结合结构域的一种常见模体，通过锌离子的配位稳定其三维折叠",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "所有转录因子都必须包含DNA结合结构域和转录激活结构域两部分",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确：锌指结构的基本特征。A正确：亮氨酸拉链的二聚化机制。D错误：有些转录因子可能只有DNA结合域（如某些抑制因子）或通过与其他蛋白质相互作用间接调控转录。B正确：核受体的配体依赖性激活机制。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录因子",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "712056507",
+  "tags": []
+ },
+ "BQ-transcription-cbb98d6329a9": {
+  "type": "mtf",
+  "question": "关于转录因子的结构与功能，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "亮氨酸拉链模体由周期性排列的亮氨酸残基形成两亲性α-螺旋，介导转录因子的二聚化",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "锌指结构是DNA结合结构域的一种常见模体，通过锌离子的配位稳定其三维折叠",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "所有转录因子都必须包含DNA结合结构域和转录激活结构域两部分",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "核受体超家族成员（如糖皮质激素受体）是配体激活的转录因子",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：锌指结构的基本特征。A正确：亮氨酸拉链的二聚化机制。C错误：有些转录因子可能只有DNA结合域（如某些抑制因子）或通过与其他蛋白质相互作用间接调控转录。D正确：核受体的配体依赖性激活机制。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录因子",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "712056507",
+  "tags": []
+ },
+ "BQ-transcription-cee76df5a584": {
+  "type": "mtf",
+  "question": "关于转录因子的结构与功能，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "亮氨酸拉链模体由周期性排列的亮氨酸残基形成两亲性α-螺旋，介导转录因子的二聚化",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "锌指结构是DNA结合结构域的一种常见模体，通过锌离子的配位稳定其三维折叠",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "核受体超家族成员（如糖皮质激素受体）是配体激活的转录因子",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "所有转录因子都必须包含DNA结合结构域和转录激活结构域两部分",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确：锌指结构的基本特征。A正确：亮氨酸拉链的二聚化机制。D错误：有些转录因子可能只有DNA结合域（如某些抑制因子）或通过与其他蛋白质相互作用间接调控转录。C正确：核受体的配体依赖性激活机制。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录因子",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "712056507",
+  "tags": []
+ },
+ "BQ-transcription-0c794227d4b6": {
+  "type": "mtf",
+  "question": "关于转录因子的结构与功能，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "所有转录因子都必须包含DNA结合结构域和转录激活结构域两部分",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "亮氨酸拉链模体由周期性排列的亮氨酸残基形成两亲性α-螺旋，介导转录因子的二聚化",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "核受体超家族成员（如糖皮质激素受体）是配体激活的转录因子",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "锌指结构是DNA结合结构域的一种常见模体，通过锌离子的配位稳定其三维折叠",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：锌指结构的基本特征。B正确：亮氨酸拉链的二聚化机制。A错误：有些转录因子可能只有DNA结合域（如某些抑制因子）或通过与其他蛋白质相互作用间接调控转录。C正确：核受体的配体依赖性激活机制。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录因子",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "712056507",
+  "tags": []
+ },
+ "BQ-transcription-fb2a70bc0128": {
+  "type": "mtf",
+  "question": "关于转录因子的结构与功能，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "所有转录因子都必须包含DNA结合结构域和转录激活结构域两部分",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "亮氨酸拉链模体由周期性排列的亮氨酸残基形成两亲性α-螺旋，介导转录因子的二聚化",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "锌指结构是DNA结合结构域的一种常见模体，通过锌离子的配位稳定其三维折叠",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "核受体超家族成员（如糖皮质激素受体）是配体激活的转录因子",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：锌指结构的基本特征。B正确：亮氨酸拉链的二聚化机制。A错误：有些转录因子可能只有DNA结合域（如某些抑制因子）或通过与其他蛋白质相互作用间接调控转录。D正确：核受体的配体依赖性激活机制。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录因子",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "712056507",
+  "tags": []
+ },
+ "BQ-transcription-f75ca5541d12": {
+  "type": "mtf",
+  "question": "关于转录因子的结构与功能，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "所有转录因子都必须包含DNA结合结构域和转录激活结构域两部分",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "核受体超家族成员（如糖皮质激素受体）是配体激活的转录因子",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "亮氨酸拉链模体由周期性排列的亮氨酸残基形成两亲性α-螺旋，介导转录因子的二聚化",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "锌指结构是DNA结合结构域的一种常见模体，通过锌离子的配位稳定其三维折叠",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：锌指结构的基本特征。C正确：亮氨酸拉链的二聚化机制。A错误：有些转录因子可能只有DNA结合域（如某些抑制因子）或通过与其他蛋白质相互作用间接调控转录。B正确：核受体的配体依赖性激活机制。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录因子",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "712056507",
+  "tags": []
+ },
+ "BQ-transcription-4a486b068a98": {
+  "type": "mtf",
+  "question": "关于转录因子的结构与功能，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "所有转录因子都必须包含DNA结合结构域和转录激活结构域两部分",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "核受体超家族成员（如糖皮质激素受体）是配体激活的转录因子",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "锌指结构是DNA结合结构域的一种常见模体，通过锌离子的配位稳定其三维折叠",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "亮氨酸拉链模体由周期性排列的亮氨酸残基形成两亲性α-螺旋，介导转录因子的二聚化",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：锌指结构的基本特征。D正确：亮氨酸拉链的二聚化机制。A错误：有些转录因子可能只有DNA结合域（如某些抑制因子）或通过与其他蛋白质相互作用间接调控转录。B正确：核受体的配体依赖性激活机制。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录因子",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "712056507",
+  "tags": []
+ },
+ "BQ-transcription-80d06bc8290f": {
+  "type": "mtf",
+  "question": "关于转录因子的结构与功能，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "所有转录因子都必须包含DNA结合结构域和转录激活结构域两部分",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "锌指结构是DNA结合结构域的一种常见模体，通过锌离子的配位稳定其三维折叠",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "亮氨酸拉链模体由周期性排列的亮氨酸残基形成两亲性α-螺旋，介导转录因子的二聚化",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "核受体超家族成员（如糖皮质激素受体）是配体激活的转录因子",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：锌指结构的基本特征。C正确：亮氨酸拉链的二聚化机制。A错误：有些转录因子可能只有DNA结合域（如某些抑制因子）或通过与其他蛋白质相互作用间接调控转录。D正确：核受体的配体依赖性激活机制。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录因子",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "712056507",
+  "tags": []
+ },
+ "BQ-transcription-11fd308fafde": {
+  "type": "mtf",
+  "question": "关于转录因子的结构与功能，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "所有转录因子都必须包含DNA结合结构域和转录激活结构域两部分",
+    "answer": false
+   },
+   {
+    "label": "B",
+    "text": "锌指结构是DNA结合结构域的一种常见模体，通过锌离子的配位稳定其三维折叠",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "核受体超家族成员（如糖皮质激素受体）是配体激活的转录因子",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "亮氨酸拉链模体由周期性排列的亮氨酸残基形成两亲性α-螺旋，介导转录因子的二聚化",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：锌指结构的基本特征。D正确：亮氨酸拉链的二聚化机制。A错误：有些转录因子可能只有DNA结合域（如某些抑制因子）或通过与其他蛋白质相互作用间接调控转录。C正确：核受体的配体依赖性激活机制。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录因子",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "712056507",
+  "tags": []
+ },
+ "BQ-transcription-0247bf643dbf": {
+  "type": "mtf",
+  "question": "关于转录因子的结构与功能，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "核受体超家族成员（如糖皮质激素受体）是配体激活的转录因子",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "亮氨酸拉链模体由周期性排列的亮氨酸残基形成两亲性α-螺旋，介导转录因子的二聚化",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "所有转录因子都必须包含DNA结合结构域和转录激活结构域两部分",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "锌指结构是DNA结合结构域的一种常见模体，通过锌离子的配位稳定其三维折叠",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：锌指结构的基本特征。B正确：亮氨酸拉链的二聚化机制。C错误：有些转录因子可能只有DNA结合域（如某些抑制因子）或通过与其他蛋白质相互作用间接调控转录。A正确：核受体的配体依赖性激活机制。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录因子",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "712056507",
+  "tags": []
+ },
+ "BQ-transcription-014c11a983d3": {
+  "type": "mtf",
+  "question": "关于转录因子的结构与功能，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "核受体超家族成员（如糖皮质激素受体）是配体激活的转录因子",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "亮氨酸拉链模体由周期性排列的亮氨酸残基形成两亲性α-螺旋，介导转录因子的二聚化",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "锌指结构是DNA结合结构域的一种常见模体，通过锌离子的配位稳定其三维折叠",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "所有转录因子都必须包含DNA结合结构域和转录激活结构域两部分",
+    "answer": false
+   }
+  ],
+  "explanation": "C正确：锌指结构的基本特征。B正确：亮氨酸拉链的二聚化机制。D错误：有些转录因子可能只有DNA结合域（如某些抑制因子）或通过与其他蛋白质相互作用间接调控转录。A正确：核受体的配体依赖性激活机制。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录因子",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "712056507",
+  "tags": []
+ },
+ "BQ-transcription-90e8b141c478": {
+  "type": "mtf",
+  "question": "关于转录因子的结构与功能，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "核受体超家族成员（如糖皮质激素受体）是配体激活的转录因子",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "所有转录因子都必须包含DNA结合结构域和转录激活结构域两部分",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "亮氨酸拉链模体由周期性排列的亮氨酸残基形成两亲性α-螺旋，介导转录因子的二聚化",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "锌指结构是DNA结合结构域的一种常见模体，通过锌离子的配位稳定其三维折叠",
+    "answer": true
+   }
+  ],
+  "explanation": "D正确：锌指结构的基本特征。C正确：亮氨酸拉链的二聚化机制。B错误：有些转录因子可能只有DNA结合域（如某些抑制因子）或通过与其他蛋白质相互作用间接调控转录。A正确：核受体的配体依赖性激活机制。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录因子",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "712056507",
+  "tags": []
+ },
+ "BQ-transcription-9a2f58bbf757": {
+  "type": "mtf",
+  "question": "关于转录因子的结构与功能，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "核受体超家族成员（如糖皮质激素受体）是配体激活的转录因子",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "所有转录因子都必须包含DNA结合结构域和转录激活结构域两部分",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "锌指结构是DNA结合结构域的一种常见模体，通过锌离子的配位稳定其三维折叠",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "亮氨酸拉链模体由周期性排列的亮氨酸残基形成两亲性α-螺旋，介导转录因子的二聚化",
+    "answer": true
+   }
+  ],
+  "explanation": "C正确：锌指结构的基本特征。D正确：亮氨酸拉链的二聚化机制。B错误：有些转录因子可能只有DNA结合域（如某些抑制因子）或通过与其他蛋白质相互作用间接调控转录。A正确：核受体的配体依赖性激活机制。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录因子",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "712056507",
+  "tags": []
+ },
+ "BQ-transcription-1f3f5cdde318": {
+  "type": "mtf",
+  "question": "关于转录因子的结构与功能，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "核受体超家族成员（如糖皮质激素受体）是配体激活的转录因子",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "锌指结构是DNA结合结构域的一种常见模体，通过锌离子的配位稳定其三维折叠",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "亮氨酸拉链模体由周期性排列的亮氨酸残基形成两亲性α-螺旋，介导转录因子的二聚化",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "所有转录因子都必须包含DNA结合结构域和转录激活结构域两部分",
+    "answer": false
+   }
+  ],
+  "explanation": "B正确：锌指结构的基本特征。C正确：亮氨酸拉链的二聚化机制。D错误：有些转录因子可能只有DNA结合域（如某些抑制因子）或通过与其他蛋白质相互作用间接调控转录。A正确：核受体的配体依赖性激活机制。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录因子",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "712056507",
+  "tags": []
+ },
+ "BQ-transcription-ff93c1faed21": {
+  "type": "mtf",
+  "question": "关于转录因子的结构与功能，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "核受体超家族成员（如糖皮质激素受体）是配体激活的转录因子",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "锌指结构是DNA结合结构域的一种常见模体，通过锌离子的配位稳定其三维折叠",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "所有转录因子都必须包含DNA结合结构域和转录激活结构域两部分",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "亮氨酸拉链模体由周期性排列的亮氨酸残基形成两亲性α-螺旋，介导转录因子的二聚化",
+    "answer": true
+   }
+  ],
+  "explanation": "B正确：锌指结构的基本特征。D正确：亮氨酸拉链的二聚化机制。C错误：有些转录因子可能只有DNA结合域（如某些抑制因子）或通过与其他蛋白质相互作用间接调控转录。A正确：核受体的配体依赖性激活机制。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录因子",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "712056507",
+  "tags": []
+ },
+ "BQ-transcription-0a5a07229e4a": {
+  "type": "mtf",
+  "question": "关于转录因子的结构与功能，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "锌指结构是DNA结合结构域的一种常见模体，通过锌离子的配位稳定其三维折叠",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "亮氨酸拉链模体由周期性排列的亮氨酸残基形成两亲性α-螺旋，介导转录因子的二聚化",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "所有转录因子都必须包含DNA结合结构域和转录激活结构域两部分",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "核受体超家族成员（如糖皮质激素受体）是配体激活的转录因子",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：锌指结构的基本特征。B正确：亮氨酸拉链的二聚化机制。C错误：有些转录因子可能只有DNA结合域（如某些抑制因子）或通过与其他蛋白质相互作用间接调控转录。D正确：核受体的配体依赖性激活机制。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录因子",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "712056507",
+  "tags": []
+ },
+ "BQ-transcription-b3c5e3395f3f": {
+  "type": "mtf",
+  "question": "关于转录因子的结构与功能，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "锌指结构是DNA结合结构域的一种常见模体，通过锌离子的配位稳定其三维折叠",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "亮氨酸拉链模体由周期性排列的亮氨酸残基形成两亲性α-螺旋，介导转录因子的二聚化",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "核受体超家族成员（如糖皮质激素受体）是配体激活的转录因子",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "所有转录因子都必须包含DNA结合结构域和转录激活结构域两部分",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确：锌指结构的基本特征。B正确：亮氨酸拉链的二聚化机制。D错误：有些转录因子可能只有DNA结合域（如某些抑制因子）或通过与其他蛋白质相互作用间接调控转录。C正确：核受体的配体依赖性激活机制。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录因子",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "712056507",
+  "tags": []
+ },
+ "BQ-transcription-c07f0c7cfabf": {
+  "type": "mtf",
+  "question": "关于转录因子的结构与功能，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "锌指结构是DNA结合结构域的一种常见模体，通过锌离子的配位稳定其三维折叠",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "所有转录因子都必须包含DNA结合结构域和转录激活结构域两部分",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "亮氨酸拉链模体由周期性排列的亮氨酸残基形成两亲性α-螺旋，介导转录因子的二聚化",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "核受体超家族成员（如糖皮质激素受体）是配体激活的转录因子",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：锌指结构的基本特征。C正确：亮氨酸拉链的二聚化机制。B错误：有些转录因子可能只有DNA结合域（如某些抑制因子）或通过与其他蛋白质相互作用间接调控转录。D正确：核受体的配体依赖性激活机制。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录因子",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "712056507",
+  "tags": []
+ },
+ "BQ-transcription-7808599fb1f8": {
+  "type": "mtf",
+  "question": "关于转录因子的结构与功能，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "锌指结构是DNA结合结构域的一种常见模体，通过锌离子的配位稳定其三维折叠",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "所有转录因子都必须包含DNA结合结构域和转录激活结构域两部分",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "核受体超家族成员（如糖皮质激素受体）是配体激活的转录因子",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "亮氨酸拉链模体由周期性排列的亮氨酸残基形成两亲性α-螺旋，介导转录因子的二聚化",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：锌指结构的基本特征。D正确：亮氨酸拉链的二聚化机制。B错误：有些转录因子可能只有DNA结合域（如某些抑制因子）或通过与其他蛋白质相互作用间接调控转录。C正确：核受体的配体依赖性激活机制。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录因子",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "712056507",
+  "tags": []
+ },
+ "BQ-transcription-80d66a9890c8": {
+  "type": "mtf",
+  "question": "关于转录因子的结构与功能，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "锌指结构是DNA结合结构域的一种常见模体，通过锌离子的配位稳定其三维折叠",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "核受体超家族成员（如糖皮质激素受体）是配体激活的转录因子",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "亮氨酸拉链模体由周期性排列的亮氨酸残基形成两亲性α-螺旋，介导转录因子的二聚化",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "所有转录因子都必须包含DNA结合结构域和转录激活结构域两部分",
+    "answer": false
+   }
+  ],
+  "explanation": "A正确：锌指结构的基本特征。C正确：亮氨酸拉链的二聚化机制。D错误：有些转录因子可能只有DNA结合域（如某些抑制因子）或通过与其他蛋白质相互作用间接调控转录。B正确：核受体的配体依赖性激活机制。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录因子",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "712056507",
+  "tags": []
+ },
+ "BQ-transcription-2f63f6f59efd": {
+  "type": "mtf",
+  "question": "关于转录因子的结构与功能，判断以下陈述的正误：",
+  "subQuestions": [
+   {
+    "label": "A",
+    "text": "锌指结构是DNA结合结构域的一种常见模体，通过锌离子的配位稳定其三维折叠",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "核受体超家族成员（如糖皮质激素受体）是配体激活的转录因子",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "所有转录因子都必须包含DNA结合结构域和转录激活结构域两部分",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "亮氨酸拉链模体由周期性排列的亮氨酸残基形成两亲性α-螺旋，介导转录因子的二聚化",
+    "answer": true
+   }
+  ],
+  "explanation": "A正确：锌指结构的基本特征。D正确：亮氨酸拉链的二聚化机制。C错误：有些转录因子可能只有DNA结合域（如某些抑制因子）或通过与其他蛋白质相互作用间接调控转录。B正确：核受体的配体依赖性激活机制。",
+  "module": 1,
+  "subject": "分子生物学",
+  "concept": "转录因子",
+  "difficulty": "medium",
+  "year": 2025,
+  "chart": null,
+  "oldId": "712056507",
+  "tags": []
+ }
+}
