@@ -179,6 +179,10 @@
     } catch (e) {
       console.warn('[FSRS] 保存失败:', e);
     }
+    // Issue #13：异步把复习进度纳入本地进度快照 + 防抖云端同步（非阻塞，缺省跳过）
+    if (typeof window.saveProgress === 'function') {
+      try { window.saveProgress('fsrs_cards', states); } catch (e) {}
+    }
   }
 
   function getCardState(cardId) {

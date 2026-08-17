@@ -129,6 +129,31 @@
       border-color: rgba(107, 196, 142, 0.22);
       border-top-color: #6bc48e;
     }
+    /* ⑤ 加载进度条 + 百分比（加权步骤估算，真实进度驱动） */
+    #bq-boot-progress {
+      width: 180px;
+      height: 5px;
+      border-radius: 999px;
+      background: rgba(90, 125, 92, 0.18);
+      overflow: hidden;
+      margin-top: 2px;
+    }
+    html[data-theme="dark"] #bq-boot-progress { background: rgba(107, 196, 142, 0.2); }
+    #bq-boot-progress-fill {
+      height: 100%;
+      width: 0%;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #5a7d5c, #6bc48e);
+      transition: width 0.14s linear;
+    }
+    #bq-boot-percent {
+      font-family: var(--font-serif);
+      font-variant-numeric: tabular-nums;
+      font-size: 0.85rem;
+      color: #93a094;
+      letter-spacing: 0.04em;
+    }
+    html[data-theme="dark"] #bq-boot-percent { color: #7f9189; }
     /* 动画声明（只放这里，不依赖外部 CSS 文件加载） */
     @keyframes bqBootSpin { to { transform: rotate(360deg); } }
     @keyframes bqBootPulse {
@@ -285,18 +310,92 @@
     <div id="bq-boot-logo" aria-hidden="true"></div>
     <div id="bq-boot-label">BioQuest · 生物竞赛刷题</div>
     <div id="bq-boot-spinner" aria-hidden="true"></div>
+    <div id="bq-boot-progress" aria-hidden="true"><div id="bq-boot-progress-fill"></div></div>
+    <div id="bq-boot-percent" aria-hidden="true">0%</div>
   </div>
   <script>
     // 首屏骨架遮罩：加载动画展示 → 等应用首屏渲染完成（Hero/倒计时/布局已提交） → 平滑淡出进入主页面。
     // 遮罩在页面内容真正就绪后才消失，避免"内容还没渲染就过早撤遮罩"导致的卡顿/空白/下拉卡一下。
+    // 进度条：加权步骤 + 渐进逼近，只增不减、不提前到 100%，动画时长随真实加载时长走。
     (function () {
       var mask = document.getElementById('bq-boot-mask');
       if (!mask) return;
       var done = false;
       var startTime = Date.now();
+
+      // ---- 加载进度估算器 ----
+      // 参考 GitHub 现成实现 load-time-estimate / fake-progress 的思想：
+      //   真实完成节点标记权重 → 进度只增不减（ever-increasing）→ 用渐进曲线逼近档位上限，
+      //   且永不提前到 100%（除非收到 app-ready 真正完成的信号）。
+      var BootProgress = {
+        done: 0,   // 已完成的加权和
+        cap: 0,    // 当前"档位上限"（不会显示超过该值）
+        show: 0,   // 当前已显示的百分比
+        max: 100,
+        fill: document.getElementById('bq-boot-progress-fill'),
+        pct: document.getElementById('bq-boot-percent'),
+        _timer: null,
+        _ended: false,
+        addWeight: function (w, hi) {
+          if (this._ended) return;
+          this.done = Math.min(this.max, this.done + (w || 0));
+          var c = Math.max(this.cap, this.done);
+          if (typeof hi === 'number') c = Math.max(c, hi);
+          this.cap = Math.min(this.max, c);
+          this._tick();
+          this._schedule();
+        },
+        set: function (p) {
+          if (this._ended) return;
+          p = Math.min(this.max, Math.max(p, this.done));
+          this.done = p;
+          if (this.cap < p) this.cap = p;
+          this._tick();
+          this._schedule();
+        },
+        complete: function () {
+          this._ended = true;
+          if (this._timer) { clearTimeout(this._timer); this._timer = null; }
+          this._animate();
+        },
+        _schedule: function () {
+          var self = this;
+          if (this._timer || this._ended) return;
+          if (this.cap <= this.show || this.cap >= this.max) return;
+          this._timer = setTimeout(function () {
+            self._timer = null;
+            self._tick();
+            if (self.cap > self.show && self.cap < self.max) self._schedule();
+          }, 110);
+        },
+        _tick: function () {
+          if (this.cap <= this.show) return;
+          // 渐进逼近上限：越快越慢，符合"前期快、后期慢"的直觉
+          this._setShow(this.show + Math.max(0.4, (this.cap - this.show) * 0.10));
+        },
+        _animate: function () {
+          var self = this;
+          (function step() {
+            var gap = 100 - self.show;
+            if (gap <= 0.5) { self._setShow(100); return; }
+            self._setShow(self.show + Math.max(0.4, gap * 0.22));
+            requestAnimationFrame(step);
+          })();
+        },
+        _setShow: function (v) {
+          this.show = Math.min(this.max, v);
+          if (this.pct) { try { this.pct.textContent = Math.floor(this.show) + '%'; } catch (e) {} }
+          if (this.fill) { this.fill.style.width = this.show + '%'; }
+        }
+      };
+      window.BootProgress = BootProgress;
+      window.__bootWeight = function (w, hi) { if (BootProgress) BootProgress.addWeight(w, hi); };
+
       function fadeOut() {
         if (done) return;
         done = true;
+        // 开始淡出时把进度补足到 100%
+        if (BootProgress) BootProgress.complete();
         // 核心：确保撤遮罩前，浏览器已完成首屏布局与绘制。
         // 两轮 rAF 保证至少一次 layout + paint 已提交；再强制一次 reflow 读取，
         // 确保页面高度/滚动条已存在，避免"进主页后拉不动一会"的现象。
@@ -334,30 +433,61 @@
           });
         });
       }
-      function hideWhenAppReady() {
-        // 保证加载动画至少可见约 800ms，既让用户看到"在加载"，
-        // 又给 app.js 里的 Hero/倒计时/滚动动画初始化留足时间，
-        // 真正做到"加载界面加载完之后 → 进主页"。
+
+      function startFadeOut() {
+        // 仅作为"最短展示时间"下限：让动画至少可见约 500ms，让用户看到"在加载"。
         var elapsed = Date.now() - startTime;
-        var MIN_VISIBLE = 800;
+        var MIN_VISIBLE = 500;
         if (elapsed >= MIN_VISIBLE) fadeOut();
         else setTimeout(fadeOut, MIN_VISIBLE - elapsed);
       }
 
-      // 主信号：应用首屏渲染完成后派发（app.js finishRouting + reinitHomeComponents rAF 双重确认）
-      document.addEventListener('bioquest:app-ready', hideWhenAppReady);
+      // ---- 就绪判定（保证"动画时长 = 实际加载时长"）----
+      // 必须同时满足"内容已渲染" 与 "资源已加载"，才会撤遮罩：
+      //   1) 内容渲染：收到 bioquest:app-ready（finishRouting + reinitHomeComponents rAF 双重确认）；
+      //   2) 资源加载：window.load 触发（全部 CSS/JS/字体/图片已下载），或到达硬上限(LOAD_CAP)，
+      //      避免某个挂起的 CDN 资源无限期挡住首屏。
+      var contentReady = false;  // bioquest:app-ready 已收到
+      var loadReady = false;     // window.load 已触发
+      var LOAD_CAP = 9000;       // 硬上限：内容就绪后缩短为 CONTENT_CAP，不再无限期阻塞
+      var CONTENT_CAP = 4000;    // 内容已渲染后的资源加载上限
 
-      // 兜底信号：DOMContentLoaded / window load / 硬超时，任何异常都不会让遮罩永久存在
-      if (document.readyState === 'interactive' || document.readyState === 'complete') {
-        setTimeout(function () { if (!done) hideWhenAppReady(); }, 1600);
-      } else {
-        document.addEventListener('DOMContentLoaded', function () {
-          setTimeout(function () { if (!done) hideWhenAppReady(); }, 1600);
-        });
+      function bootTick() {
+        // 内容已渲染后，给资源加载一个较短窗口；否则用更长的总上限做兜底。
+        var cap = contentReady ? CONTENT_CAP : LOAD_CAP;
+        var loadDone = loadReady || (Date.now() - startTime >= cap);
+        if (contentReady && loadDone) {
+          startFadeOut();
+        } else if (BootProgress) {
+          BootProgress._schedule(); // 未就绪时保持进度条继续渐进逼近
+        }
       }
-      window.addEventListener('load', function () { setTimeout(function () { if (!done) hideWhenAppReady(); }, 0); });
-      // 终极兜底：超过 6 秒无论如何淡出，避免遮罩卡死
-      setTimeout(fadeOut, 6000);
+
+      // 主信号：应用首屏渲染/路由完成。仅当内容真正渲染后才把进度推到接近完成，
+      // 并参与"内容已就绪"门控——动画绝不会早于内容渲染结束。
+      document.addEventListener('bioquest:app-ready', function () {
+        contentReady = true;
+        if (window.BootProgress) BootProgress.addWeight(40, 88);
+        bootTick();
+      });
+
+      // 进度标记：HTML/CSS/脚本解析阶段
+      var onDOMReady = function () {
+        if (window.BootProgress) BootProgress.addWeight(15, 20);
+        bootTick();
+      };
+      if (document.readyState === 'interactive' || document.readyState === 'complete') onDOMReady();
+      else document.addEventListener('DOMContentLoaded', onDOMReady);
+
+      // 全部资源加载完成：这是"实际加载"完成的标志之一（配合内容渲染门控）。
+      window.addEventListener('load', function () {
+        loadReady = true;
+        if (window.BootProgress) BootProgress.addWeight(15, 60);
+        bootTick();
+      });
+
+      // 兜底：极长时间仍未就绪（异常路径），避免遮罩永久卡死。
+      setTimeout(function () { contentReady = true; loadReady = true; if (!done) startFadeOut(); }, 20000);
     })();
   </script>
 
