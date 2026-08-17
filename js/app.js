@@ -1079,6 +1079,8 @@ function reinitHomeComponents() {
         void hero.offsetHeight;
       }
       AppState._homePaintedReady = true;
+      // 首页首屏绘制完成：推进一次加载进度档位（配合 index.html 的加权进度估算器）
+      if (window.__bootWeight) { try { window.__bootWeight(20, 75); } catch (e) {} }
       // 若 finishRouting 已经执行过，则这里补发 app-ready 信号（解除遮罩等待）
       if (AppState._homeRouteRendered && !AppState._appReadyDispatched) {
         AppState._appReadyDispatched = true;
@@ -1443,6 +1445,8 @@ function handleRoute(route) {
     try { document.dispatchEvent(new CustomEvent('bioquest:route-change')); } catch (e) {}
     // 首次路由渲染完成 → 通知首屏骨架遮罩淡出（只在首次触发一次）
     if (!AppState._appReadyDispatched) {
+      // 路由已完成首帧渲染：推进一次加载进度档位（加权进度估算器）
+      if (window.__bootWeight) { try { window.__bootWeight(15, 55); } catch (e) {} }
       var route = AppState.currentRoute || (window.location.hash || '#/').replace(/^#/, '') || '/';
       var isHome = (route === '/' || route === '' || route === '/index.html');
       if (isHome) {
