@@ -336,6 +336,19 @@ function _saveShardToDB(tag, json, sha) {
 }
 
 function _sha256Hex(text) {
+  // Issue #14：优先走 Web Worker（js/fsrs.worker.js）并行计算，避免主线程 Long Task；
+  // Worker 不可用（离线/受限环境）回退 crypto.subtle。
+  if (typeof window !== 'undefined' && window.FSRSOptimizer &&
+      typeof window.FSRSOptimizer.sha256HexAsync === 'function') {
+    return window.FSRSOptimizer.sha256HexAsync(text).then(function (res) {
+      if (res) return res;
+      return _sha256HexSubtle(text);
+    }).catch(function () { return _sha256HexSubtle(text); });
+  }
+  return _sha256HexSubtle(text);
+}
+
+function _sha256HexSubtle(text) {
   if (typeof crypto !== 'undefined' && crypto.subtle && crypto.subtle.digest && typeof TextEncoder === 'function') {
     var enc = new TextEncoder();
     return crypto.subtle.digest('SHA-256', enc.encode(text)).then(function (buf) {
@@ -868,6 +881,7 @@ function _loadByModulesLocal(modules, onProgress, signal) {
  */
 function _loadByModulesLocalJSON(modules, onProgress, signal) {
   var pending = modules.length;
+  var completed = 0;
   var bucket = {};
   return Promise.all(modules.map(function (m) {
     var url = 'data/quiz_m' + m + '.json';
@@ -875,8 +889,9 @@ function _loadByModulesLocalJSON(modules, onProgress, signal) {
       var items = _filterQuarantinedQuestions(_extractQuestions(raw));
       bucket[m] = items;
       _setCached('module_' + m, items);
+      completed++;
       if (onProgress) {
-        try { onProgress(pending - pending, modules.length, m, items.length); } catch (e) {}
+        try { onProgress(completed, modules.length, m, items.length); } catch (e) {}
       }
       return items;
     }).catch(function (err) {
