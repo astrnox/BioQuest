@@ -1,0 +1,25 @@
+name: 💬 其他问题
+description: 未分类的问题、求助或反馈
+title: "其他: "
+labels: ["question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        其他问题、求助或反馈都可以填在这里。也可以先翻翻 [已有 Issue](https://github.com/astrnox/BioQuest/issues) 看看有没有人问过了。
+  - type: textarea
+    id: content
+    attributes:
+      label: 想说什么？
+      description: 描述你的问题或想法。
+      placeholder: 例：离线使用后数据没有同步到手机是怎么回事？
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: 补充环境 / 截图（可选）
+      description: 需要的话贴一下浏览器、页面地址或截图。
+      placeholder: 浏览器 / 设备 / 截图等
+    validations:
+      required: false

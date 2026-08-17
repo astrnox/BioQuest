@@ -1,0 +1,41 @@
+name: 📖 题目 / 内容纠错
+description: 发现题目、解析或知识卡片有错误，来帮忙修正
+title: "[纠正]: "
+labels: ["content"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢帮忙纠错！题库数据在 `data/` 里是纯 JSON，会几行 JSON 的同学也可以直接提 Pull Request（见 [README 贡献指南](https://github.com/astrnox/BioQuest#贡献指南)）。
+  - type: textarea
+    id: location
+    attributes:
+      label: 出错位置
+      description: 题目出处 / 章节 / 模块（如专项练习·遗传）以及题目大致内容，最好带上题号或链接。
+      placeholder: 例：专项练习 → 遗传 → 第 8 题（孟德尔分离定律）
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: 现在的错误内容
+      description: 题干、选项、答案或解析里哪里不对。
+      placeholder: 例：选项 B 的“子二代中出现 3:1 分离比”应为“3:1 性状分离比”，而题干问的是基因型比例。
+    validations:
+      required: true
+  - type: textarea
+    id: correct
+    attributes:
+      label: 正确的应该是什么
+      description: 你确认的正确内容，最好附上判断依据。
+      placeholder: 例：正确选项应为 C，理由：F2 基因型比为 1:2:1，与性状分离比 3:1 不同。
+    validations:
+      required: true
+  - type: textarea
+    id: reference
+    attributes:
+      label: 参考资料（可选）
+      description: 教材页码、真题出处、文献链接等能帮助确认的来源。
+      placeholder: 例：人教版必修二 P8 例 1
+    validations:
+      required: false
