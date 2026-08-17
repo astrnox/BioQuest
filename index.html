@@ -917,7 +917,10 @@
   <script src="js/integrations/molecule-viewer.js?v=20260723d" defer></script>
   <script src="js/integrations/document-tools.js?v=20260723d" defer></script>
   <script src="js/integrations/data-store.js?v=20260723d" defer></script>
-  <script src="js/fsrs-optimizer.js?v=20260723d" defer></script>
+  <!-- Issue #14：FSRS 优化器/分片哈希 Web Worker 核心（纯函数，双上下文：Worker + 主线程桶底）。
+       必须先于 fsrs-optimizer.js 加载，提供 window.FSRSWorkerCore 供主线程兜底。 -->
+  <script src="js/fsrs.worker.js?v=20260817a" defer></script>
+  <script src="js/fsrs-optimizer.js?v=20260817a" defer></script>
   <!-- Tier 2 集成模块：IRT增强 + BKT知识追踪 + RDKit分子 + Excalidraw白板（vendor 懒加载） -->
   <script src="js/integrations/irt-enhanced.js?v=20260723d" defer></script>
   <script src="js/integrations/bkt-engine.js?v=20260723d" defer></script>
