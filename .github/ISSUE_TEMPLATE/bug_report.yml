@@ -1,0 +1,66 @@
+name: 🐛 Bug 报告
+description: 报告你在使用 BioQuest 时遇到的问题
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢你花时间反馈 Bug！请尽量填写完整，作者平时比较忙（还是高中牲），完整的信息能帮你更快得到修复。
+  - type: textarea
+    id: description
+    attributes:
+      label: 问题描述
+      description: 发生了什么？你期望的结果是什么？
+      placeholder: 例：点击“开始刷题”后页面白屏，没有任何报错提示。
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      description: 一步一步描述如何触发这个问题（越具体越好）。
+      placeholder: |
+        1. 打开 https://bio.sumalink.cn
+        2. 点击右上角“开始刷题”
+        3. 页面开始加载题库……
+        4. 此时页面变白，无响应
+      value: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期望结果
+      description: 你希望得到什么结果？
+      placeholder: 例：应该正常加载并显示题目列表。
+    validations:
+      required: false
+  - type: textarea
+    id: environment
+    attributes:
+      label: 环境信息
+      description: 浏览器、设备、系统、App 或网页地址（这些我们填在日志里了，但最好也手动贴一下）。
+      placeholder: |
+        - 浏览器：Chrome / Edge / Firefox / Safari / 手机内置浏览器
+        - 设备：电脑 / 安卓手机 / 苹果手机
+        - 系统：Windows / macOS / Android / iOS
+        - 页面地址：如 https://bio.sumalink.cn/#/practice
+      value: |
+        - 浏览器：
+        - 设备：
+        - 系统：
+        - 页面地址：
+    validations:
+      required: false
+  - type: textarea
+    id: logs
+    attributes:
+      label: 报错信息 / 截图 / 视频
+      description: 如果有控制台报错、截图或录屏，粘贴或拖进来，会很有帮助。
+      placeholder: 报错信息、截图或录屏
+    validations:
+      required: false

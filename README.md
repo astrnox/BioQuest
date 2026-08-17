@@ -180,6 +180,24 @@ finalEl.innerHTML = DOMPurify.sanitize(marked.parse(text));  // 完成后渲染
 
 ---
 
+## 反馈与联系方式
+
+有任何问题、Bug、功能想法或题目纠错，都欢迎反馈！
+
+- **首选：GitHub Issues** → **[https://github.com/astrnox/BioQuest/issues](https://github.com/astrnox/BioQuest/issues)**
+  - 点了「New Issue」会有对应模板，按模板填空最快：
+    - 🐛 **Bug 报告**：复现步骤 + 浏览器/设备信息 + 截图
+    - ✨ **功能建议**：你想解决什么问题、希望怎么解决
+    - 📖 **题目/内容纠错**：出错位置 + 现在的错误 + 正确内容
+    - 💬 **其他问题**：求助 / 其他反馈
+  - 也可以在站内「用户反馈」弹窗里留言（同一套分类）。
+- **邮件**：astrnox@163.com
+- **QQ**：3930523703
+
+> 🌱 作者是高中生，平时的回复可能偏慢（比较忙），但每一条建议都会认真看，请多包涵～
+
+---
+
 ## 贡献指南
 
 欢迎贡献！不管你是：

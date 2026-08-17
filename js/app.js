@@ -5114,9 +5114,10 @@ function showFeedbackModal() {
         <div class="auth-field" style="margin-bottom:14px;">
           <label style="display:block;font-size:0.82rem;color:var(--text-secondary,#8a8a8a);margin-bottom:6px;">反馈类型</label>
           <select id="feedback-type" style="width:100%;padding:10px 14px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:10px;color:var(--text-primary,#e0e0e0);font-size:0.9rem;outline:none;">
-            <option value="bug">Bug 报告</option>
-            <option value="feature">功能建议</option>
-            <option value="suggestion">其他建议</option>
+            <option value="bug">🐛 Bug 报告</option>
+            <option value="feature">✨ 功能建议</option>
+            <option value="question_error">📖 题目/内容纠错</option>
+            <option value="suggestion">💬 其他建议</option>
           </select>
         </div>
 
@@ -5130,13 +5131,20 @@ function showFeedbackModal() {
           <textarea id="feedback-description" class="auth-input" placeholder="请详细描述问题或建议..." style="width:100%;box-sizing:border-box;min-height:100px;resize:vertical;font-family:inherit;" rows="4"></textarea>
         </div>
 
-        <div class="auth-field" style="margin-bottom:20px;">
+        <div class="auth-field" style="margin-bottom:14px;">
           <label style="display:block;font-size:0.82rem;color:var(--text-secondary,#8a8a8a);margin-bottom:6px;">联系方式（选填）</label>
           <input type="text" id="feedback-contact" class="auth-input" placeholder="QQ/微信/邮箱，方便我们回复" style="width:100%;box-sizing:border-box;">
         </div>
 
+        <div style="margin-bottom:14px;padding:10px 12px;background:rgba(58,140,92,0.08);border:1px solid rgba(58,140,92,0.25);border-radius:10px;font-size:0.82rem;color:var(--text-secondary,#9aa5a0);line-height:1.6;">
+          想得到更快的回复，建议直接去 GitHub 提 Issue（有模板，填起来很快）：
+          <br>
+          <button type="button" onclick="event.stopPropagation();window.open('https://github.com/astrnox/BioQuest/issues/new/choose','_blank')" style="margin-top:8px;padding:6px 14px;border-radius:8px;background:rgba(58,140,92,0.15);border:1px solid rgba(58,140,92,0.4);color:#7fd0a3;font-size:0.82rem;cursor:pointer;">前往 GitHub 提 Issue →</button>
+        </div>
+
         <button type="button" class="auth-btn" onclick="handleFeedbackSubmit();return false" style="width:100%;">提交反馈</button>
         <p class="auth-error" id="feedback-error" style="margin-top:8px;"></p>
+        <p style="margin-top:14px;text-align:center;font-size:0.78rem;color:rgba(255,255,255,0.35);">作者（高中生）较忙，回复可能偏慢，见谅 · 作者 astrnox · astrnox@163.com · QQ 3930523703</p>
       </div>
     </div>
   `;

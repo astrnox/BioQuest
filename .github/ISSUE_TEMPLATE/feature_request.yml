@@ -1,0 +1,41 @@
+name: ✨ 功能建议
+description: 给 BioQuest 提一个新的想法或功能
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        欢迎提想法！先看看 [README](https://github.com/astrnox/BioQuest#roadmap) 的 Roadmap，可能已经在计划里了。
+  - type: textarea
+    id: problem
+    attributes:
+      label: 你想解决什么问题？
+      description: 描述你遇到的痛点或使用场景，为什么需要这个功能。
+      placeholder: 例：刷联赛题时常遇到“计算自由组合概率”的题型，希望有一个针对性练习入口。
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: 你希望怎么做？
+      description: 描述你理想中的功能交互或展现形式。
+      placeholder: 例：在“专项练习”里新增一个“遗传计算”模块，里面分难度出题并给解析。
+    validations:
+      required: false
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 你试过其他办法吗？
+      description: 目前有没有临时绕过的办法？
+      placeholder: 例：暂时手动在 AI 导师里问。
+    validations:
+      required: false
+  - type: textarea
+    id: category
+    attributes:
+      label: 属于哪个方向？（可选）
+      description: 刷题 / 错题本 / 卡片 / AI 导师 / 虚拟实验 / 社区 / 界面 / 其他
+      placeholder: 例：刷题
+    validations:
+      required: false
