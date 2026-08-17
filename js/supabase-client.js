@@ -212,6 +212,10 @@ function _setupAuthListener() {
                   window.saveUserKeyIfNeeded();
                 }
                 _persistUserInfo();
+                // Issue #13：登录/恢复会话后异步拉取云端进度（LWW 合并，暂不阻塞）
+                if (typeof window.syncLocalProgressToCloud === 'function') {
+                  window.syncLocalProgressToCloud().catch(function () {});
+                }
               })
               .catch(function(e) {
                 console.warn('[BioQuest] onAuthStateChange 获取 profile 失败:', e);
@@ -3400,6 +3404,125 @@ async function syncHabitLogToSupabase(dateStr, streakCount) {
   }
 }
 
+// ===== Issue #13 用户进度云端同步（user_progress 表，LWW 合并）=====
+// 数据表：user_progress (profile_id, key, data JSONB, updated_at)
+// 配套迁移：sql/migration_v8_user_progress.sql
+// 键值快照（如 'fsrs_cards'）整体存储，updated_at 做 Last-Write-Wins 冲突合并。
+
+/**
+ * 把单个进度键推送/合并到 Supabase（LWW）。
+ * 服务端已存在且 updated_at 更新 → 跳过（远端为准）；否则插入或覆盖。
+ * @param {string} key - 进度键（如 'fsrs_cards'、'stats'）
+ * @param {*} data - 进度快照（JSON 可序列化）
+ * @param {number} [updatedAt] - 本地更新时间戳（ms）；缺省用 now()
+ * @returns {Promise<{ok: boolean, applied?: boolean, created?: boolean, error?: string}>}
+ */
+async function pushUserProgressToSupabase(key, data, updatedAt) {
+  if (!_currentUser || _currentUser.isGuest) return { ok: false, error: '未登录' };
+  if (!key) return { ok: false, error: '缺少进度键' };
+  var sb = getSupabase();
+  if (!sb) return { ok: false, error: 'Supabase 未初始化' };
+  var ts = typeof updatedAt === 'number' && updatedAt > 0 ? new Date(updatedAt).toISOString() : new Date().toISOString();
+  try {
+    // 1) 读当前远端记录（仅比较 updated_at，避免拉全量大 JSON）
+    var existing = null;
+    try {
+      var q = sb.from('user_progress')
+        .select('updated_at')
+        .eq('profile_id', _currentUser.id)
+        .eq('key', key)
+        .maybeSingle();
+      var r = await q;
+      if (r.error) throw r.error;
+      existing = r.data || null;
+    } catch (e) {
+      // maybeSingle 需要新版 supabase-js；失败静默，回退为插桩写入
+    }
+
+    var payload = { profile_id: _currentUser.id, key: key, data: data, updated_at: ts };
+
+    if (existing) {
+      var remoteMs = existing.updated_at ? new Date(existing.updated_at).getTime() : 0;
+      if (new Date(ts).getTime() < remoteMs) {
+        // 远端更新，丢弃本地旧快照（服务端为准）
+        return { ok: true, applied: false };
+      }
+      var up = await sb.from('user_progress')
+        .update({ data: data, updated_at: ts })
+        .eq('profile_id', _currentUser.id)
+        .eq('key', key);
+      if (up.error) throw up.error;
+      return { ok: true, applied: true };
+    }
+
+    var ins = await sb.from('user_progress').insert(payload);
+    if (ins.error) throw ins.error;
+    return { ok: true, applied: true, created: true };
+  } catch (e) {
+    if (e && /duplicate|unique|already exists/i.test(e.message || '')) {
+      // 并发插入撞唯一键：改为条件更新（远端较新则跳过）
+      try {
+        var up2 = await sb.from('user_progress')
+          .update({ data: data, updated_at: ts })
+          .eq('profile_id', _currentUser.id)
+          .eq('key', key);
+        if (up2.error) throw up2.error;
+        return { ok: true, applied: true };
+      } catch (e2) {
+        return { ok: false, error: e2.message };
+      }
+    }
+    console.warn('[BioQuest] pushUserProgressToSupabase 失败:', key, e && e.message);
+    return { ok: false, error: e && e.message };
+  }
+}
+
+/**
+ * 拉取当前用户全部进度快照（或指定 key）。
+ * @param {string} [key] - 可选，仅拉取该进度键
+ * @returns {Promise<Array<{key:string, data:any, updated_at:number, serverUpdatedAt:string}>|null>}
+ *   updated_at 为 ms 时间戳，便于与本地 LWW 比较；失败返回 null。
+ */
+async function pullUserProgressFromSupabase(key) {
+  if (!_currentUser || _currentUser.isGuest) return null;
+  var sb = getSupabase();
+  if (!sb) return null;
+  try {
+    var query = sb.from('user_progress')
+      .select('key, data, updated_at')
+      .eq('profile_id', _currentUser.id);
+    if (key) query = query.eq('key', key);
+    var { data, error } = await query;
+    if (error) throw error;
+    return (data || []).map(function (row) {
+      var ms = row.updated_at ? new Date(row.updated_at).getTime() : 0;
+      return { key: row.key, data: row.data, updated_at: ms, serverUpdatedAt: row.updated_at };
+    });
+  } catch (e) {
+    console.warn('[BioQuest] pullUserProgressFromSupabase 失败:', e && e.message);
+    return null;
+  }
+}
+
+/**
+ * 删除某个进度键（用于「重置进度」等功能）。
+ */
+async function deleteUserProgressFromSupabase(key) {
+  if (!_currentUser || _currentUser.isGuest || !key) return { ok: false, error: '参数错误' };
+  var sb = getSupabase();
+  if (!sb) return { ok: false, error: 'Supabase 未初始化' };
+  try {
+    var del = await sb.from('user_progress')
+      .delete()
+      .eq('profile_id', _currentUser.id)
+      .eq('key', key);
+    if (del.error) throw del.error;
+    return { ok: true };
+  } catch (e) {
+    return { ok: false, error: e.message };
+  }
+}
+
 // ===== P0-3 班级成员关系（修复 teacher.js localStorage 模拟）=====
 // 数据表：class_memberships (teacher_id, student_id, student_key, student_name, added_at)
 // 配套迁移：sql/migration_v6_class_memberships.sql
@@ -4116,6 +4239,9 @@ window.getBehaviorCount = getBehaviorCount;
 window.calculateEarnedPoints = calculateEarnedPoints;
 window.canPerformAction = canPerformAction;
 window.syncPointsToCloud = syncPointsToCloud;
+window.pushUserProgressToSupabase = pushUserProgressToSupabase;
+window.pullUserProgressFromSupabase = pullUserProgressFromSupabase;
+window.deleteUserProgressFromSupabase = deleteUserProgressFromSupabase;
 window.getPointsLeaderboard = getPointsLeaderboard;
 window.createCRAppeal = createCRAppeal;
 window.updateCRAppeal = updateCRAppeal;

@@ -46,7 +46,7 @@ function _openDB() {
     return _dbReady;
   }
   _dbReady = new Promise(function (resolve) {
-    var req = indexedDB.open('BioQuestCache', 3);
+    var req = indexedDB.open('BioQuestCache', 4);
     req.onupgradeneeded = function (e) {
       var db = e.target.result;
       if (!db.objectStoreNames.contains('modules')) {
@@ -57,6 +57,17 @@ function _openDB() {
       if (!db.objectStoreNames.contains('shards')) {
         var shardStore = db.createObjectStore('shards', { keyPath: 'key' });
         shardStore.createIndex('updated', 'updated', { unique: false });
+      }
+      // Issue #12：索引分片缓存（key=tag，存原始 JSON 文本 + SHA-256，用于启动仅加载索引）
+      if (!db.objectStoreNames.contains('indexShards')) {
+        var idxStore = db.createObjectStore('indexShards', { keyPath: 'key' });
+        idxStore.createIndex('updated', 'updated', { unique: false });
+      }
+      // Issue #12：解析后的题目表（bioID 主键 + [tag+diff] 复合索引），支持 bulkGet/bulkPut 按需命中
+      if (!db.objectStoreNames.contains('questions')) {
+        var qStore = db.createObjectStore('questions', { keyPath: 'bioId' });
+        qStore.createIndex('tagDiff', ['_shardTag', 'difficulty'], { unique: false });
+        qStore.createIndex('updated', 'updated', { unique: false });
       }
     };
     req.onsuccess = function (e) { resolve(e.target.result); };
@@ -201,9 +212,11 @@ window._filterQuarantinedQuestions = _filterQuarantinedQuestions;
  * ============================================================ */
 
 var _shardManifest = null;  // data/manifest.json
+var _manifestRev = null;    // manifest 版本标识（rev/updated_at），用于启动时判断题库是否更新
 var _bioidMap = null;       // data/bioid-map.json  oldId -> bioID
 var _shardMemCache = {};    // tag -> { json: string, sha: string }（本会话内存缓存）
 var _shardStoreReady = null;
+var _maintenanceRunning = null; // Issue #11：启动后台维护单例
 
 // 分片归属映射：新题库 tag 前缀 -> 旧前端 module 标识
 var TAG_TO_MODULE = { m1: 'module_1', m2: 'module_2', m3: 'module_3', m4: 'module_4' };
@@ -231,9 +244,38 @@ function _loadManifest(signal) {
   if (_shardManifest) return Promise.resolve(_shardManifest);
   return _fetchJSON('data/manifest.json', signal).then(function (mf) {
     _shardManifest = (mf && mf.files) ? mf : null;
+    if (_shardManifest) _manifestRev = mf.rev || mf.updated_at || null;
     return _shardManifest;
   }).catch(function () {
     _shardManifest = null;
+    return null;
+  });
+}
+
+/**
+ * Issue #11：强制从网络拉取最新 manifest（带缓存破坏参数 + 短超时）。
+ * 用于启动时判断题库是否有更新；失败（离线/超时/网络波动）静默返回 null，
+ * 上层保持旧缓存，保证离线可用。
+ * @returns {Promise<{manifest:Object, changed:boolean}|null>}
+ */
+function _loadManifestFresh(timeoutMs) {
+  var url = 'data/manifest.json?v=' + Date.now();
+  var controller = new AbortController();
+  var timer = setTimeout(function () { controller.abort(); }, timeoutMs || 5000);
+  return fetch(url, { signal: controller.signal }).then(function (r) {
+    clearTimeout(timer);
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    return r.json();
+  }).then(function (mf) {
+    if (mf && mf.files) {
+      var changed = !_shardManifest || (_manifestRev !== (mf.rev || mf.updated_at));
+      _shardManifest = mf;
+      _manifestRev = mf.rev || mf.updated_at || null;
+      return { manifest: mf, changed: changed };
+    }
+    return null;
+  }).catch(function () {
+    clearTimeout(timer);
     return null;
   });
 }
@@ -305,6 +347,246 @@ function _sha256Hex(text) {
   return Promise.resolve(null);
 }
 
+/* ============================================================
+ * Issue #12：索引层（indexShards + questions 表）
+ *  - data/index/<tag>.json 提供每题的轻量元信息（tags/diff/module/src/year）
+ *  - 启动先仅加载索引 → 内存 Map<bioID, meta>，筛选在内存完成，
+ *    再惰性拉取命中所属的 bank 分片正文，避免整包读取。
+ * ============================================================ */
+
+var _indexMemCache = {};        // tag -> index 分片对象（本会话内存缓存）
+var _indexShardStoreReady = null;
+var _bioIndexMap = null;        // Map<bioID, meta> 索引查询层
+var _indexLoaded = false;
+var _indexLoading = null;
+
+function _openIndexShardStore() {
+  if (_indexShardStoreReady) return _indexShardStoreReady;
+  _indexShardStoreReady = _openDB().then(function (db) {
+    if (!db) return null;
+    return db.objectStoreNames.contains('indexShards') ? db : null;
+  });
+  return _indexShardStoreReady;
+}
+
+function _loadIndexShardFromDB(tag) {
+  return _openIndexShardStore().then(function (db) {
+    if (!db) return null;
+    return new Promise(function (resolve) {
+      try {
+        var tx = db.transaction('indexShards', 'readonly');
+        var req = tx.objectStore('indexShards').get(tag);
+        req.onsuccess = function () { resolve(req.result || null); };
+        req.onerror = function () { resolve(null); };
+      } catch (e) { resolve(null); }
+    });
+  });
+}
+
+function _saveIndexShardToDB(tag, json, sha) {
+  return _openIndexShardStore().then(function (db) {
+    if (!db) return;
+    return new Promise(function (resolve) {
+      try {
+        var tx = db.transaction('indexShards', 'readwrite');
+        tx.objectStore('indexShards').put({ key: tag, json: json, sha: sha, updated: Date.now() });
+        tx.oncomplete = function () { resolve(); };
+        tx.onerror = function () { resolve(); };
+        tx.onabort = function () { resolve(); };
+      } catch (e) { resolve(); }
+    });
+  });
+}
+
+/**
+ * 加载单个 index 分片（manifest SHA 校验 + 增量刷新，逻辑与 bank 分片一致）。
+ * @returns {Promise<string>} index 分片原始 JSON 文本
+ */
+function _loadIndexShard(tag, expectedSha, signal) {
+  var mem = _indexMemCache[tag];
+  if (mem) return Promise.resolve(mem.json);
+
+  return _loadIndexShardFromDB(tag).then(function (rec) {
+    if (rec && rec.json && (!expectedSha || rec.sha === expectedSha)) {
+      _indexMemCache[tag] = { json: rec.json, sha: rec.sha || '' };
+      return rec.json;
+    }
+    return fetch('data/index/' + tag + '.json', { signal: signal }).then(function (r) {
+      if (!r.ok) throw new Error('HTTP ' + r.status + ': data/index/' + tag + '.json');
+      return r.text();
+    }).then(function (text) {
+      JSON.parse(text); // 预防脏数据
+      _indexMemCache[tag] = { json: text, sha: '' };
+      if (expectedSha) {
+        _sha256Hex(text).then(function (actual) {
+          if (actual && actual !== expectedSha) {
+            console.warn('[Loader] 索引分片 ' + tag + ' SHA-256 校验失败，按 manifest 为准');
+            _saveIndexShardToDB(tag, text, '');
+          } else if (actual) {
+            _indexMemCache[tag].sha = actual;
+            _saveIndexShardToDB(tag, text, actual);
+          }
+        });
+      } else {
+        _saveIndexShardToDB(tag, text, '');
+      }
+      return text;
+    }).catch(function (err) {
+      // 拉取失败：降级复用旧索引缓存，保证离线可用
+      if (rec && rec.json) {
+        _indexMemCache[tag] = { json: rec.json, sha: rec.sha || '' };
+        return rec.json;
+      }
+      throw err;
+    });
+  });
+}
+
+/**
+ * 构建内存索引查询层（汇聚全部 index 分片 → Map<bioID, meta>）。
+ * 仅在 manifest 已加载时使用其 files 清单，否则按 biosource sonar 回退为空。
+ * @returns {Promise<Map<string,Object>|null>} bioID -> meta
+ */
+function _loadIndexMap(signal) {
+  if (_indexLoaded) return Promise.resolve(_bioIndexMap);
+  if (_indexLoading) return _indexLoading;
+
+  _indexLoading = _loadManifest(signal).then(function (mf) {
+    var map = new Map();
+    if (!mf) return map;
+    var tags = Object.keys(mf.files || {})
+      .filter(function (k) { return /^index\/.+\.json$/.test(k); })
+      .map(function (k) { return k.replace(/^index\//, '').replace(/\.json$/, ''); });
+    if (tags.length === 0) return map;
+
+    return Promise.all(tags.map(function (tag) {
+      var expected = (mf.files && mf.files['index/' + tag + '.json']) || null;
+      return _loadIndexShard(tag, expected, signal).then(function (text) {
+        var obj;
+        try { obj = JSON.parse(text); } catch (e) { return; }
+        if (!obj || typeof obj !== 'object') return;
+        Object.keys(obj).forEach(function (bioId) {
+          var meta = obj[bioId];
+          if (!meta || typeof meta !== 'object') return;
+          meta.bioId = bioId;
+          map.set(bioId, meta);
+        });
+      }).catch(function () {});
+    })).then(function () {
+      _bioIndexMap = map;
+      _indexLoaded = true;
+      return map;
+    });
+  }).catch(function () {
+    _bioIndexMap = new Map();
+    _indexLoaded = true;
+    return _bioIndexMap;
+  });
+
+  return _indexLoading;
+}
+
+/**
+ * 校验某 bank 分片的每个 bioID 是否都应存在于索引层。
+ * 若索引==正文 数量不吻合且相差较大，说明版本不一致，需整体刷新。
+ * @returns {boolean} 是否一致（无法判断时返回 true，避免误伤）
+ */
+function _isShardConsistentWithIndex(tag, items) {
+  if (!_bioIndexMap || _indexLoaded !== true) return true;
+  var indexCount = 0;
+  _bioIndexMap.forEach(function (meta, bioId) {
+    if (meta.src === tag) indexCount++;
+  });
+  if (indexCount === 0) return true; // 无法交叉核对
+  var bankCount = (items && items.length) || 0;
+  var diff = Math.abs(indexCount - bankCount);
+  return diff <= Math.max(5, Math.ceil(indexCount * 0.1));
+}
+
+/* ============================================================
+ * Issue #12：解析后题目缓存（IndexedDB questions 表，bulkGet/bulkPut）
+ * ============================================================ */
+
+function _openQuestionStore() {
+  return _openDB().then(function (db) {
+    if (!db) return null;
+    return db.objectStoreNames.contains('questions') ? db : null;
+  });
+}
+
+function _bulkGetQuestionsByIds(bioIds) {
+  if (!bioIds || bioIds.length === 0) return Promise.resolve([]);
+  return _openQuestionStore().then(function (db) {
+    if (!db) return [];
+    return new Promise(function (resolve) {
+      try {
+        var tx = db.transaction('questions', 'readonly');
+        var store = tx.objectStore('questions');
+        var results = {};
+        var pending = bioIds.length;
+        var done = false;
+        function finish() {
+          if (done) return;
+          done = true;
+          var arr = [];
+          for (var i = 0; i < bioIds.length; i++) {
+            if (results[bioIds[i]]) arr.push(results[bioIds[i]]);
+          }
+          resolve(arr);
+        }
+        bioIds.forEach(function (id) {
+          var req = store.get(id);
+          req.onsuccess = function () {
+            if (req.result) results[id] = req.result;
+            pending--;
+            if (pending <= 0) finish();
+          };
+          req.onerror = function () { pending--; if (pending <= 0) finish(); };
+        });
+        // 保险：1.5s 内无论是否完成都返回当前结果
+        setTimeout(finish, 1500);
+      } catch (e) { resolve([]); }
+    });
+  });
+}
+
+function _bulkPutQuestions(items) {
+  if (!items || items.length === 0) return Promise.resolve();
+  return _openQuestionStore().then(function (db) {
+    if (!db) return;
+    return new Promise(function (resolve) {
+      try {
+        var tx = db.transaction('questions', 'readwrite');
+        var store = tx.objectStore('questions');
+        var now = Date.now();
+        items.forEach(function (q) {
+          var rec = q;
+          try { rec.updated = now; } catch (e) {}
+          store.put(rec);
+        });
+        tx.oncomplete = function () { resolve(); };
+        tx.onerror = function () { resolve(); };
+        tx.onabort = function () { resolve(); };
+      } catch (e) { resolve(); }
+    });
+  });
+}
+
+function _getQuestionsByTagDiff(tag, diff) {
+  return _openQuestionStore().then(function (db) {
+    if (!db) return [];
+    return new Promise(function (resolve) {
+      try {
+        var tx = db.transaction('questions', 'readonly');
+        var idx = tx.objectStore('questions').index('tagDiff');
+        var range = IDBKeyRange.bound([tag, diff || ''], [tag, diff || '\uffff']);
+        idx.getAll(range).onsuccess = function (e) { resolve(e.target.result || []); };
+        idx.getAll(range).onerror = function () { resolve([]); };
+      } catch (e) { resolve([]); }
+    });
+  });
+}
+
 /**
  * 加载单个 bank 分片（manifest SHA-256 完整性校验 + 增量刷新）
  * 命中缓存（sha 与 manifest 一致）直接复用；否则拉取校验后落缓存。
@@ -354,9 +636,13 @@ function _loadShardBank(tag, expectedSha, signal) {
 }
 
 /**
- * 把 bank 分片对象（bioID -> question）转成数组并附上稳定 bioID
+ * 把 bank 分片对象（bioID -> question）转成数组并附上稳定 bioID。
+ * 同时把解析后的题目落库到 questions 表（bulkPut），供索引筛选后按需命中。
+ * @param {string} rawText 分片原始 JSON
+ * @param {string} tag 分片标签
+ * @param {boolean} persist 是否写入 questions 表（默认 true）
  */
-function _bankToItems(rawText, tag) {
+function _bankToItems(rawText, tag, persist) {
   var bankObj;
   try { bankObj = JSON.parse(rawText); } catch (e) { return []; }
   var items = [];
@@ -373,6 +659,9 @@ function _bankToItems(rawText, tag) {
     }
     items.push(q);
   }
+  if (persist !== false && items.length > 0) {
+    _bulkPutQuestions(items);
+  }
   return items;
 }
 
@@ -382,6 +671,8 @@ function _bankToItems(rawText, tag) {
 function _loadShardTags(tags, onProgress, signal) {
   return _loadManifest(signal).then(function (mf) {
     if (!mf) { _shardManifest = null; return []; }
+    // Issue #12：索引查询层仅在使用 loadQuestionsByFilter 时惰性加载，
+    // 常规 loadQuestions 不预热索引，避免为常见路径引入 2MB 索引拉取开销。
     // 异步预热迁移映射表（不阻塞题库返回）
     _loadBioIdMap(signal);
     var jobs = tags.map(function (tag) {
@@ -1080,8 +1371,168 @@ function isModuleCached(moduleNum) {
   return _hasCached('module_' + moduleNum);
 }
 
+/**
+ * Issue #11：启动后台维护（哈希校验 + 增量刷新）
+ * 流程：
+ *  1. 空闲时拉取最新 manifest（cache-busting，短超时）判断题库是否有更新；
+ *  2. 仅对「新增 / SHA 变化」的 bank 分片执行拉取 → 解析 → 落库 questions 表；
+ *  3. 全程分片串行 + requestIdleCallback 让出主线程，避免 Long Task；
+ *  4. 离线 / 超时静默降级，不阻塞也不污染控制台。
+ * @returns {Promise<{changed:boolean, refreshed:number}|null>}
+ */
+function maintainQuestionBank() {
+  if (_maintenanceRunning) return _maintenanceRunning;
+  _maintenanceRunning = true;
+
+  var task = _loadManifestFresh(5000).then(function (result) {
+    if (!result || !result.manifest) { _maintenanceRunning = false; return null; }
+    var mf = result.manifest;
+    var files = mf.files || {};
+    var bankTags = Object.keys(files)
+      .filter(function (k) { return /^bank\/.+\.json$/.test(k); })
+      .map(function (k) { return k.replace(/^bank\//, '').replace(/\.json$/, ''); });
+    if (bankTags.length === 0) { _maintenanceRunning = false; return { changed: false, refreshed: 0 }; }
+
+    return new Promise(function (resolveOuter) {
+      var refreshed = 0;
+      var idx = 0;
+      function next() {
+        if (idx >= bankTags.length) { resolveOuter({ changed: result.changed, refreshed: refreshed }); return; }
+        var tag = bankTags[idx++];
+        var expected = files['bank/' + tag + '.json'] || null;
+        // 逐 tag 拉取（内部缓存命中/SHA 一致会复用），完成后让出主线程
+        _loadShardBank(tag, expected, null).then(function (text) {
+          refreshed++;
+          _bankToItems(text, tag); // 落库 questions 表
+        }).catch(function () {
+          // 单个分片失败不影响整体
+        }).then(function () {
+          if (typeof window.requestIdleCallback === 'function') {
+            window.requestIdleCallback(next, { timeout: 3000 });
+          } else {
+            setTimeout(next, 20);
+          }
+        });
+      }
+      // 空闲后再开始，避免抢首屏资源
+      if (typeof window.requestIdleCallback === 'function') {
+        window.requestIdleCallback(next, { timeout: 6000 });
+      } else {
+        setTimeout(next, 1500);
+      }
+    });
+  }).then(function (r) {
+    _maintenanceRunning = false;
+    return r;
+  }).catch(function () {
+    _maintenanceRunning = false;
+    return null;
+  });
+
+  _maintenanceRunning = task;
+  return _maintenanceRunning;
+}
+
+/**
+ * Issue #12：基于内存索引层的条件筛选加载。
+ * options: { tags:[], diffs:[], modules:[], concept, count, fallbackAll }
+ * 命中索引 Map → 得到 bioID 集 → 惰性从 questions 表 / bank 分片补齐正文。
+ * 索引未就绪时按 fallbackAll 回退到全量加载（默认 true），保证行为不退化。
+ * @returns {Promise<Array>} 匹配的题目数组
+ */
+function loadQuestionsByFilter(options) {
+  options = options || {};
+  var fallbackAll = options.fallbackAll !== false;
+  return _loadIndexMap(null).then(function (map) {
+    var matched = [];
+    if (map && map.size > 0) {
+      map.forEach(function (meta, bioId) {
+        if (options.tags && options.tags.length > 0) {
+          var hasTag = false;
+          for (var i = 0; i < options.tags.length; i++) {
+            if (meta.tags && meta.tags.indexOf(options.tags[i]) !== -1) { hasTag = true; break; }
+            if (meta.src === options.tags[i]) { hasTag = true; break; }
+          }
+          if (!hasTag) return;
+        }
+        if (options.modules && options.modules.length > 0) {
+          var m = meta.module || '';
+          if (options.modules.indexOf(m) === -1) {
+            // 兼容 module_1 与数字模块名
+            var numMatch = m.match(/module[_-](\d+)/);
+            var norm = numMatch ? 'module_' + numMatch[1] : m;
+            var modValid = options.modules.indexOf(norm) !== -1;
+            if (!modValid && options.modules.indexOf(parseInt(norm.replace('module_', ''), 10)) === -1) return;
+          }
+        }
+        if (options.diffs && options.diffs.length > 0 && options.diffs.indexOf(meta.diff) === -1) return;
+        if (options.concept) {
+          var inTag = meta.tags && meta.tags.indexOf(options.concept) !== -1;
+          if (!inTag && meta.src !== options.concept) return;
+        }
+        matched.push(bioId);
+        if (options.count && matched.length >= options.count) {
+          map = null; // 到达预期数提前终止
+          return;
+        }
+      });
+    }
+
+    if (matched.length === 0) {
+      if (fallbackAll) return loadQuestions(null, { mode: LOAD_MODE.PREFER_LOCAL });
+      return [];
+    }
+
+    // 惰性补齐正文：先查 questions 表，缺失的按 tag 分组从 bank 分片拉取
+    return _bulkGetQuestionsByIds(matched).then(function (cached) {
+      var byId = {};
+      cached.forEach(function (q) { byId[q.bioId] = q; });
+      var missingTags = {};
+      matched.forEach(function (id) {
+        if (!byId[id]) {
+          var meta = null;
+          // 重新查 Map
+          if (_bioIndexMap) { meta = _bioIndexMap.get(id); }
+          var tag = (meta && meta.src) || id.split('-')[1] || null;
+          if (tag) missingTags[tag] = missingTags[tag] || [];
+          if (tag) missingTags[tag].push(id);
+        }
+      });
+      var tagKeys = Object.keys(missingTags);
+      if (tagKeys.length === 0) {
+        return matched.map(function (id) { return byId[id]; }).filter(Boolean);
+      }
+      return _loadManifest(null).then(function (mf) {
+        var files = (mf && mf.files) || {};
+        var jobs = tagKeys.map(function (tag) {
+          var expected = files['bank/' + tag + '.json'] || null;
+          return _loadShardBank(tag, expected, null).then(function (text) {
+            var all = _bankToItems(text, tag, false);
+            return all.filter(function (q) { return missingTags[tag].indexOf(q.bioId) !== -1; });
+          }).catch(function () { return []; });
+        });
+        return Promise.all(jobs).then(function (arrs) {
+          var extraById = {};
+          arrs.forEach(function (arr) {
+            arr.forEach(function (q) { extraById[q.bioId] = q; });
+          });
+          var result = [];
+          matched.forEach(function (id) {
+            if (byId[id]) result.push(byId[id]);
+            else if (extraById[id]) result.push(extraById[id]);
+          });
+          return result;
+        });
+      });
+    });
+  });
+}
+
 window.loadQuestions = loadQuestions;
 window.loadQuestionsStream = loadQuestionsStream;
+window.loadQuestionsByFilter = loadQuestionsByFilter;
+window.maintainQuestionBank = maintainQuestionBank;
+window.loadIndexMap = _loadIndexMap;
 window.clearQuestionCache = clearQuestionCache;
 window.clearAllCaches = clearAllCaches;
 window.abortLoading = abortLoading;
@@ -1207,3 +1658,30 @@ window.ensureQuestionLoaderReady = function (opts) {
 
   return tryLoad(attempts);
 };
+
+/* ============================================================
+ * Issue #11：启动后台维护自触发
+ * SPA（loader.js 每会话仅加载一次），页面稳定后后台校验题库哈希并增量刷新，
+ * 全程 idle/请求空闲，不阻塞首屏渲染与交互。
+ * ============================================================ */
+(function () {
+  function scheduleMaintenance() {
+    // 页面 load 完成、主线程空闲后再启动，避免抢首屏
+    if (document.readyState === 'complete') {
+      if (typeof window.requestIdleCallback === 'function') {
+        window.requestIdleCallback(function () { window.maintainQuestionBank(); }, { timeout: 8000 });
+      } else {
+        setTimeout(function () { window.maintainQuestionBank(); }, 2500);
+      }
+    } else {
+      window.addEventListener('load', function () {
+        if (typeof window.requestIdleCallback === 'function') {
+          window.requestIdleCallback(function () { window.maintainQuestionBank(); }, { timeout: 8000 });
+        } else {
+          setTimeout(function () { window.maintainQuestionBank(); }, 2500);
+        }
+      });
+    }
+  }
+  if (typeof window !== 'undefined' && typeof document !== 'undefined') scheduleMaintenance();
+})();

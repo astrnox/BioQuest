@@ -641,7 +641,8 @@ async function exportData(options) {
       stats: safeGetJSON(KEYS.STATS, {}),
       habits: safeGetJSON('bioquest_habits', []),
       habitLogs: safeGetJSON('bioquest_habit_logs', []),
-      badges: safeGetJSON('bioquest_badges', [])
+      badges: safeGetJSON('bioquest_badges', []),
+      progress: getAllLocalProgress()
     };
 
     // 如果 calcBioScore 函数存在，计算并包含 Bio Score
@@ -789,6 +790,19 @@ async function importData(jsonString) {
       safeSetJSON(KEYS.STATS, mergedStats);
     }
 
+    // Issue #13：恢复进度快照（LWW：仅当导入项较新时覆盖）
+    if (data && data.progress && typeof data.progress === 'object') {
+      for (var pk in data.progress) {
+        if (!data.progress.hasOwnProperty(pk)) continue;
+        var pmeta = data.progress[pk];
+        if (!pmeta || pmeta.data === undefined) continue;
+        var existingProgress = loadProgress(pk);
+        if (!existingProgress || (pmeta.updatedAt || 0) >= (existingProgress.updatedAt || 0)) {
+          _saveProgressLocalOnly(pk, pmeta.data, pmeta.updatedAt || 0);
+        }
+      }
+    }
+
     return true;
   } catch (e) {
     console.error('[BioQuest Storage] 数据导入失败:', e.message);
@@ -813,3 +827,140 @@ function getStorageUsage() {
     return { used: 0, available: 0 };
   }
 }
+
+/* ============================================================
+ * Issue #13：用户进度快照（localStorage 键值 + LWW 云端同步）
+ * 进度键前缀：bioquest_progress_<key>，值格式 { updatedAt, deviceId, data }
+ * 配套表：user_progress（sql/migration_v8_user_progress.sql）
+ * 同步：pushUserProgressToSupabase / pullUserProgressFromSupabase（supabase-client.js）
+ * ============================================================ */
+var PROGRESS_PREFIX = 'bioquest_progress_';
+var _progressSyncTimers = {};
+var _progressSyncInflight = null;
+
+/**
+ * 保存一条进度快照到本地，并触发防抖云端同步。
+ * 供各模块（如 fsrs-algorithm）在数据变更时调用，非阻塞。
+ * @param {string} key - 进度键（如 'fsrs_cards'、'stats'）
+ * @param {*} data - 快照数据（JSON 可序列化）
+ * @returns {{updatedAt:number, deviceId:string, data:*} | null}
+ */
+function saveProgress(key, data) {
+  if (!key) return null;
+  var meta = { updatedAt: Date.now(), deviceId: getDeviceId(), data: data };
+  safeSetJSON(PROGRESS_PREFIX + key, meta);
+  scheduleProgressSync(key);
+  return meta;
+}
+
+/**
+ * 读取进度快照。
+ */
+function loadProgress(key) {
+  if (!key) return null;
+  return safeGetJSON(PROGRESS_PREFIX + key, null);
+}
+
+/**
+ * 收集本地全部进度快照：{ key: { updatedAt, deviceId, data } }
+ * 用于备份导出 / 云端上传。
+ */
+function getAllLocalProgress() {
+  var result = {};
+  try {
+    for (var i = 0; i < localStorage.length; i++) {
+      var k = localStorage.key(i);
+      if (k && k.indexOf(PROGRESS_PREFIX) === 0) {
+        var meta = safeGetJSON(k, null);
+        if (meta && meta.data !== undefined) result[k.slice(PROGRESS_PREFIX.length)] = meta;
+      }
+    }
+  } catch (e) {}
+  return result;
+}
+
+/**
+ * 仅写本地（不触发再次同步），用于接收云端拉取结果，避免同步回环。
+ */
+function _saveProgressLocalOnly(key, data, updatedAt) {
+  if (!key) return;
+  safeSetJSON(PROGRESS_PREFIX + key, {
+    updatedAt: typeof updatedAt === 'number' && updatedAt > 0 ? updatedAt : Date.now(),
+    deviceId: getDeviceId() || 'local',
+    data: data
+  });
+}
+
+/**
+ * 防抖安排一次云端同步（默认 3s），把高频写入（如连续复习）聚合成一次上传。
+ * 避免每次评分都触发整份快照上传，同时保证会话结束后不久即完成持久化。
+ */
+function scheduleProgressSync(key) {
+  if (typeof setTimeout !== 'function') return;
+  if (_progressSyncTimers[key]) clearTimeout(_progressSyncTimers[key]);
+  _progressSyncTimers[key] = setTimeout(function () {
+    delete _progressSyncTimers[key];
+    syncLocalProgressToCloud([key]).catch(function () {});
+  }, 3000);
+}
+
+/**
+ * 将本地进度同步到云端（LWW），并拉取远端较新快照覆盖本地。
+ * @param {string[]|undefined} [keys] - 指定只同步这些键；缺省同步所有本地键
+ * @returns {Promise<{ok:boolean, push?:Object, merge?:Array, error?:string}>}
+ */
+function syncLocalProgressToCloud(keys) {
+  if (typeof window.isLoggedIn !== 'function' || !window.isLoggedIn()) {
+    return Promise.resolve({ ok: false, error: '未登录' });
+  }
+  if (typeof window.pushUserProgressToSupabase !== 'function' ||
+      typeof window.pullUserProgressFromSupabase !== 'function') {
+    return Promise.resolve({ ok: false, error: '同步 API 未就绪' });
+  }
+  if (_progressSyncInflight) return _progressSyncInflight;
+
+  var local = getAllLocalProgress();
+  var wanted = (Array.isArray(keys) && keys.length) ? keys : Object.keys(local);
+
+  _progressSyncInflight = (async function () {
+    try {
+      // 1) 推送本地较新快照到云端
+      var pushResults = {};
+      for (var i = 0; i < wanted.length; i++) {
+        var key = wanted[i];
+        var meta = local[key];
+        if (!meta) continue;
+        var r = await window.pushUserProgressToSupabase(key, meta.data, meta.updatedAt);
+        pushResults[key] = r;
+      }
+
+      // 2) 拉取远端快照，LWW 合并到本地
+      var merge = [];
+      var remote = await window.pullUserProgressFromSupabase();
+      if (remote && remote.length) {
+        for (var j = 0; j < remote.length; j++) {
+          var row = remote[j];
+          var localMeta = local[row.key];
+          if (!localMeta || row.updated_at > (localMeta.updatedAt || 0)) {
+            // 本地缺失或云端较新 → 采用云端
+            _saveProgressLocalOnly(row.key, row.data, row.updated_at);
+            merge.push({ key: row.key, direction: 'pull' });
+          } else {
+            merge.push({ key: row.key, direction: 'local' });
+          }
+        }
+      }
+      return { ok: true, push: pushResults, merge: merge };
+    } catch (e) {
+      return { ok: false, error: e && e.message };
+    } finally {
+      _progressSyncInflight = null;
+    }
+  })();
+  return _progressSyncInflight;
+}
+
+// 供 fsrs-algorithm / 登录流调用
+window.saveProgress = saveProgress;
+window.loadProgress = loadProgress;
+window.syncLocalProgressToCloud = syncLocalProgressToCloud;
