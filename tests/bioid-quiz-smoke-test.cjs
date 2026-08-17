@@ -67,10 +67,16 @@ window.localStorage = (() => {
 })();
 
 // fetch 桩：按 URL 返回对应 JSON
+// 注：Issue #15 起 loader 的分片/映射表通道改用 r.text()（CDN SHA 校验需要原始文本），
+// 因此桩同时提供 json() 与 text()（与真实 Response 对齐）。
 window.fetch = (url, opts) => {
   const u = String(url);
-  const respond = (data) => Promise.resolve({ ok: true, status: 200, json: () => Promise.resolve(data) });
-  const miss = () => Promise.resolve({ ok: false, status: 404, json: () => Promise.resolve({}) });
+  const respond = (data) => Promise.resolve({
+    ok: true, status: 200,
+    json: () => Promise.resolve(data),
+    text: () => Promise.resolve(JSON.stringify(data))
+  });
+  const miss = () => Promise.resolve({ ok: false, status: 404, json: () => Promise.resolve({}), text: () => Promise.resolve('') });
   if (u.indexOf('data/quiz.json') !== -1) return respond(quizData);
   if (u.indexOf('data/logic_questions.json') !== -1) return respond(logicData);
   if (u.indexOf('data/bioid-map.json') !== -1) return respond(bioIdMapData);

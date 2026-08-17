@@ -27,6 +27,32 @@
 const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
+const { execSync } = require('child_process');
+
+/* ============================================================
+ * Issue #15：CDN 版本锚点
+ * manifest 写入 git（生成时的 HEAD commit SHA）与 repo（origin 仓库 slug），
+ * 前端据此构造 https://cdn.jsdelivr.net/gh/<repo>@<git>/data/... 版本化长缓存 URL。
+ * 注意：manifest.json 不参与 CI「分片确定性」哈希比对，新增字段不影响 CI。
+ * ============================================================ */
+function gitHeadSha() {
+  try {
+    return execSync('git rev-parse HEAD', { cwd: ROOT, stdio: ['ignore', 'pipe', 'ignore'] })
+      .toString().trim().replace(/[^0-9a-f]/g, '') || null;
+  } catch (e) { return null; }
+}
+
+function originRepoSlug() {
+  try {
+    const url = execSync('git remote get-url origin', { cwd: ROOT, stdio: ['ignore', 'pipe', 'ignore'] })
+      .toString().trim();
+    // ssh: git@github.com:owner/repo.git  |  https://github.com/owner/repo.git
+    const m = url.match(/github\.com[/:]([^/\s]+)\/([^/\s#?]+?)(?:\.git)?\s*$/i);
+    if (!m) return null;
+    const slug = (m[1] + '/' + m[2]).replace(/\.git$/, '');
+    return /^[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+$/.test(slug) ? slug : null;
+  } catch (e) { return null; }
+}
 
 const ROOT = path.resolve(__dirname, '..');
 const DATA_DIR = path.join(ROOT, 'data');
@@ -400,6 +426,10 @@ function main() {
   const manifest = {
     rev: 2,
     updated_at: new Date().toISOString().slice(0, 10),
+    // Issue #15：CDN 版本锚点（jsDelivr 版本化 URL = 长缓存 + 精确版本控制）
+    // git = 生成时 HEAD commit（CDN URL 锚点）；repo = origin 仓库 slug（fork 部署自动指向自身）
+    git: gitHeadSha(),
+    repo: originRepoSlug(),
     total_questions: assigned,
     topics: TOPICS.map((t) => ({
       id: t.id, label: t.label, category: t.category,
