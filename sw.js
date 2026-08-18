@@ -7,7 +7,7 @@
 
 // 版本号策略：CSS/JS 缓存与页面解耦（剥离 ?v= 参数匹配），
 // 因此每次修改任何 JS/CSS 后必须 bump 此版本号，触发预缓存刷新与旧缓存清理。
-var CACHE_VERSION = 'bioquest-20260817a';
+var CACHE_VERSION = 'bioquest-20260818a';
 var CACHE_NAME = 'bioquest-cache-' + CACHE_VERSION;
 
 /* ========================================================================
@@ -286,15 +286,22 @@ self.addEventListener('fetch', function (event) {
   // jsDelivr CDN URL 因含 commit 锚点天然不可变 → 缓存优先即可。
   if (url.pathname.endsWith('.json') || url.hostname === 'cdn.jsdelivr.net') {
     var isCdn = url.hostname === 'cdn.jsdelivr.net';
+    // 缓存键归一化（与策略 3 CSS/JS 一致）：同源 JSON 剥离 ?v= 缓存破坏参数。
+    // loader「检查更新」以 data/manifest.json?v=<时间戳> 拉新鲜 manifest，
+    // 若按原始 URL 落缓存，每次检查都会在 DATA_CACHE 积累一条只差时间戳的条目。
+    // 归一化后所有 ?v= 变体共享同一条目，离线回退也能命中预缓存的无参数版本。
+    var dataUrl = new URL(request.url);
+    dataUrl.search = '';
+    var cacheKey = isCdn ? request : new Request(dataUrl.toString(), { mode: request.mode, credentials: request.credentials });
     event.respondWith(
-      caches.match(request).then(function (cached) {
+      caches.match(cacheKey).then(function (cached) {
         // CDN 版本化 URL：缓存优先（长缓存）；同源 data JSON：网络优先
         if (isCdn && cached) return cached;
         return fetch(request).then(function (response) {
           if (response && response.ok) {
             var clone = response.clone();
             caches.open(isCdn ? DATA_CACHE_NAME : (url.pathname.indexOf('/data/') !== -1 ? DATA_CACHE_NAME : CACHE_NAME)).then(function (cache) {
-              cache.put(request, clone);
+              cache.put(cacheKey, clone);
             });
           }
           return response;
