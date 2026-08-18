@@ -118,6 +118,10 @@ async function renderCommunityTab(container) {
               const isDeleted = post.is_deleted || false;
               const likeCount = post.like_count !== undefined ? post.like_count : (post.likes || 0);
               const commentCount = post.comment_count !== undefined ? post.comment_count : (post.comments || 0);
+              // P0-3 修复：onclick 内联参数一律先转义/数值化，杜绝引号逃逸注入（与 data-post-id 一致）
+              const postIdJs = escapeHtml(post.id);
+              const likeCountNum = Number(likeCount) || 0;
+              const commentCountNum = Number(commentCount) || 0;
               const authorName = post.author_name || post.author || post.username || '';
               return `
                 <tr data-post-id="${escapeHtml(post.id)}" style="${isDeleted ? 'opacity:0.5;background:rgba(192,85,58,0.04);' : ''}">
@@ -128,21 +132,21 @@ async function renderCommunityTab(container) {
                     ${isPinned ? '<span class="admin-q-tag" style="background:rgba(196,149,106,0.12);color:var(--color-amber,#c4956a);margin:1px;">置顶</span>' : ''}
                     ${isDeleted ? '<span class="admin-q-tag" style="background:rgba(192,85,58,0.12);color:var(--color-error,#c0553a);margin:1px;">已删除</span>' : ''}
                   </td>
-                  <td style="font-family:var(--font-mono,monospace);font-weight:600;color:var(--color-sage,#5a7d5c);cursor:pointer;" title="点击修改点赞数" onclick="handleEditPostStat('${post.id}','like_count',${likeCount})">${likeCount}<span style="font-size:0.65rem;color:#999;margin-left:2px;">✎</span></td>
-                  <td style="font-family:var(--font-mono,monospace);cursor:pointer;" title="点击修改评论数" onclick="handleEditPostStat('${post.id}','comment_count',${commentCount})">${commentCount}<span style="font-size:0.65rem;color:#999;margin-left:2px;">✎</span></td>
+                  <td style="font-family:var(--font-mono,monospace);font-weight:600;color:var(--color-sage,#5a7d5c);cursor:pointer;" title="点击修改点赞数" onclick="handleEditPostStat('${postIdJs}','like_count',${likeCountNum})">${likeCountNum}<span style="font-size:0.65rem;color:#999;margin-left:2px;">✎</span></td>
+                  <td style="font-family:var(--font-mono,monospace);cursor:pointer;" title="点击修改评论数" onclick="handleEditPostStat('${postIdJs}','comment_count',${commentCountNum})">${commentCountNum}<span style="font-size:0.65rem;color:#999;margin-left:2px;">✎</span></td>
                   <td style="font-size:0.78rem;color:var(--text-muted,#8a8a8a);white-space:nowrap;">${post.created_at ? new Date(post.created_at).toLocaleString('zh-CN', {month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit'}) : ''}</td>
                   <td>
                     <div class="admin-table-actions">
-                      <button class="admin-btn admin-btn--ghost" onclick="handleViewPostDetail('${post.id}')">
+                      <button class="admin-btn admin-btn--ghost" onclick="handleViewPostDetail('${postIdJs}')">
                         详情
                       </button>
-                      <button class="admin-btn ${isPinned ? 'admin-btn--ghost' : 'admin-btn--primary'}" onclick="handleTogglePin('${post.id}')">
+                      <button class="admin-btn ${isPinned ? 'admin-btn--ghost' : 'admin-btn--primary'}" onclick="handleTogglePin('${postIdJs}', ${isPinned ? 'true' : 'false'})">
                         ${isPinned ? '取消置顶' : '置顶'}
                       </button>
-                      <button class="admin-btn admin-btn--primary" onclick="handleManagePostComments('${post.id}')">
+                      <button class="admin-btn admin-btn--primary" onclick="handleManagePostComments('${postIdJs}')">
                         评论
                       </button>
-                      <button class="admin-btn admin-btn--danger" onclick="handleDeleteCommunityPost('${post.id}')">
+                      <button class="admin-btn admin-btn--danger" onclick="handleDeleteCommunityPost('${postIdJs}')">
                         ${ICONS.trash}
                         删除
                       </button>
@@ -607,8 +611,8 @@ window.handleEditComment = async function(commentId, postId) {
   });
 };
 
-window.handleTogglePin = async function(id) {
-  const result = await toggleCommunityPostPin(id);
+window.handleTogglePin = async function(id, currentPinned) {
+  const result = await toggleCommunityPostPin(id, !currentPinned);
   if (result) {
     showAdminToast('操作成功', 'success');
     const container = document.getElementById('admin-tab-content');

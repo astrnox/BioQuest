@@ -6,6 +6,29 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="theme-color" content="#1a2f1d">
   <meta name="color-scheme" content="light dark">
+  <!-- P0-3 修复：meta CSP（GitHub Pages 兼容）。
+       connect-src 锁定 Supabase / 7 家 LLM / CDN / 必应代理域名：
+       即使发生存储型 XSS，被窃取的 AI Key 也无法外传至任意攻击者域名。
+       本应用为纯 vanilla + 内联脚本/内联样式，script-src/style-src 需保留 unsafe-inline。 -->
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net https://unpkg.com;
+    style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com;
+    img-src 'self' data: https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://upload.wikimedia.org;
+    font-src 'self' data: https://cdn.jsdelivr.net https://cdnjs.cloudflare.com;
+    connect-src 'self'
+      https://pgkjpuowpxngmxjjlfil.supabase.co
+      https://open.bigmodel.cn https://metaso.cn https://api.deepseek.com
+      https://dashscope.aliyuncs.com https://api.moonshot.cn
+      https://integrate.api.nvidia.com https://api.siliconflow.cn
+      https://cdn.jsdelivr.net https://r.jina.ai;
+    frame-src 'self' https://phet.colorado.edu;
+    media-src 'self' blob: data:;
+    worker-src 'self' blob:;
+    object-src 'none';
+    base-uri 'self';
+    form-action 'self';
+  ">
   <link rel="manifest" href="manifest.json">
   <!-- 内联 SVG favicon：避免浏览器默认请求 /favicon.ico 产生 404 -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%235a7d5c' rx='12'/%3E%3Ccircle cx='32' cy='32' r='16' fill='none' stroke='%23fff' stroke-width='2'/%3E%3Ccircle cx='32' cy='32' r='8' fill='%23fff'/%3E%3C/svg%3E">

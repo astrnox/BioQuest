@@ -132,7 +132,7 @@ async function renderEbookTab(container) {
         <h4 style="font-size:0.92rem;font-weight:600;margin-bottom:8px;color:var(--color-deep,#1a3a2a);">已保存的编辑</h4>
         <div id="ebook-saved-edits" style="font-size:0.85rem;color:var(--text-secondary,#4a4a4a);">
           ${Object.keys(savedEdits).length === 0 ? '<span style="color:var(--text-muted,#8a8a8a);">暂无本地编辑</span>' :
-            Object.keys(savedEdits).map(key => `<div style="padding:6px 0;border-bottom:1px solid var(--border-light,#ece8e1);display:flex;justify-content:space-between;align-items:center;"><span>${key}</span><button class="admin-btn admin-btn--danger" style="padding:4px 10px;font-size:0.75rem;" onclick="deleteEbookEdit('${key}')">删除</button></div>`).join('')}
+            Object.keys(savedEdits).map(key => `<div style="padding:6px 0;border-bottom:1px solid var(--border-light,#ece8e1);display:flex;justify-content:space-between;align-items:center;"><span>${escapeHtml(key)}</span><button class="admin-btn admin-btn--danger" style="padding:4px 10px;font-size:0.75rem;" onclick="deleteEbookEdit('${escapeHtml(key)}')">删除</button></div>`).join('')}
         </div>
       </div>
     </div>
@@ -326,7 +326,7 @@ async function renderEbookTab(container) {
     const editsDiv = document.getElementById('ebook-saved-edits');
     if (editsDiv) {
       editsDiv.innerHTML = Object.keys(savedEdits).map(key =>
-        `<div style="padding:6px 0;border-bottom:1px solid var(--border-light,#ece8e1);display:flex;justify-content:space-between;align-items:center;"><span>${key}</span><button class="admin-btn admin-btn--danger" style="padding:4px 10px;font-size:0.75rem;" onclick="deleteEbookEdit('${key}')">删除</button></div>`
+        `<div style="padding:6px 0;border-bottom:1px solid var(--border-light,#ece8e1);display:flex;justify-content:space-between;align-items:center;"><span>${escapeHtml(key)}</span><button class="admin-btn admin-btn--danger" style="padding:4px 10px;font-size:0.75rem;" onclick="deleteEbookEdit('${escapeHtml(key)}')">删除</button></div>`
       ).join('');
     }
   });
@@ -483,7 +483,7 @@ async function renderEbookTab(container) {
               const timeoutId = setTimeout(() => ctrl.abort(), ADMIN_EBOOK_UPLOAD_TIMEOUT_MS); // 5 分钟超时
               const res = await fetch('/admin/ebook-upload', {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json', 'X-Admin-Key': _adminSecretKey || '' },
+                headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + (await window.getSupabaseSessionToken()) },
                 body: JSON.stringify({ file_path: filePath, file_b64: fileB64, content_type: 'application/pdf' }),
                 signal: ctrl.signal,
                 keepalive: true
@@ -604,7 +604,7 @@ async function renderEbookTab(container) {
             const timeoutId = setTimeout(() => ctrl.abort(), ADMIN_EBOOK_UPLOAD_TIMEOUT_MS);
             const result = await fetch('/admin/ebook-upload', {
               method: 'POST',
-              headers: { 'Content-Type': 'application/json', 'X-Admin-Key': _adminSecretKey || '' },
+              headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + (await window.getSupabaseSessionToken()) },
               body: JSON.stringify({ file_path: filePath, file_b64: fileB64, content_type: 'application/pdf' }),
               signal: ctrl.signal,
               keepalive: true
@@ -683,7 +683,7 @@ window.adminDeletePdf = async function(bookKey, filePath, isCustom) {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'X-Admin-Key': _adminSecretKey || ''
+        'Authorization': 'Bearer ' + (await window.getSupabaseSessionToken())
       },
       body: JSON.stringify({ file_path: filePath })
     });

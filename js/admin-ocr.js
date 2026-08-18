@@ -145,7 +145,7 @@ let _ocrPendingQueue = [];
 async function _ocrCheckVisionStatus() {
   try {
     const res = await fetch('/admin/vision-status', {
-      headers: { 'X-Admin-Key': _adminSecretKey || '' }
+      headers: { 'Authorization': 'Bearer ' + (await window.getSupabaseSessionToken()) }
     });
     if (!res.ok) return;
     const data = await res.json();
@@ -218,7 +218,7 @@ async function _ocrProcessFiles(files) {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'X-Admin-Key': _adminSecretKey || ''
+          'Authorization': 'Bearer ' + (await window.getSupabaseSessionToken())
         },
         body: JSON.stringify({
           image: b64,
@@ -393,7 +393,7 @@ async function _ocrApproveItem(idx) {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'X-Admin-Key': _adminSecretKey || ''
+        'Authorization': 'Bearer ' + (await window.getSupabaseSessionToken())
       },
       body: JSON.stringify({
         id: q.id,
@@ -433,7 +433,7 @@ async function _ocrApproveAll() {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'X-Admin-Key': _adminSecretKey || ''
+          'Authorization': 'Bearer ' + (await window.getSupabaseSessionToken())
         },
         body: JSON.stringify({
           id: q.id,
