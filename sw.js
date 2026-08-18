@@ -7,8 +7,17 @@
 
 // 版本号策略：CSS/JS 缓存与页面解耦（剥离 ?v= 参数匹配），
 // 因此每次修改任何 JS/CSS 后必须 bump 此版本号，触发预缓存刷新与旧缓存清理。
-var CACHE_VERSION = 'bioquest-20260812b';
+var CACHE_VERSION = 'bioquest-20260817a';
 var CACHE_NAME = 'bioquest-cache-' + CACHE_VERSION;
+
+/* ========================================================================
+ * Issue #16：题库 runtime cache（与外壳缓存分离）
+ *  - data/*（manifest / bank / index / bioid-map）与 jsDelivr CDN 响应
+ *    存入独立 DATA_CACHE，网络优先 + 离线回退；
+ *  - 「检查更新」发现 manifest.rev 变化时可整体清空 DATA_CACHE 并重取，
+ *    不影响应用外壳（避免"旧壳新数据"错位：外壳版本由 CACHE_VERSION 控制）。
+ * ====================================================================== */
+var DATA_CACHE_NAME = 'bioquest-data';
 
 /* ========================================================================
  * 首屏缓存策略（修复"新用户首次加载很久/卡住/需要刷新"）
@@ -215,7 +224,9 @@ self.addEventListener('activate', function (event) {
     caches.keys().then(function (keys) {
       return Promise.all(
         keys.filter(function (k) {
-          return k.startsWith('bioquest-') && k !== CACHE_NAME;
+          // Issue #16：DATA_CACHE 是题库 runtime cache，独立于外壳版本，
+          // 外壳更新不应清空它（题库新旧由 manifest rev 校验管理，检查更新时可单独清）
+          return k.indexOf('bioquest-cache-') === 0 && k !== CACHE_NAME;
         }).map(function (k) {
           return caches.delete(k).catch(function () {});
         })
@@ -244,7 +255,7 @@ self.addEventListener('fetch', function (event) {
   var url = new URL(request.url);
   if (url.protocol !== 'http:' && url.protocol !== 'https:') return;
 
-  // 策略 1: 页面导航 - 网络优先，回退到离线页面
+  // 策略 1: 页面导航 - 网络优先，回退到离线页面（Issue #16：断网刷新仍可用）
   if (request.mode === 'navigate') {
     event.respondWith(
       fetch(request)
@@ -256,26 +267,44 @@ self.addEventListener('fetch', function (event) {
           return response;
         })
         .catch(function () {
-          return caches.match(request) || caches.match('./index.html');
+          return caches.match(request).then(function (cached) {
+            if (cached) return cached;
+            return caches.match('./index.html').then(function (shell) {
+              return shell || new Response('<h1>离线</h1><p>暂无缓存，请联网后重试</p>', {
+                status: 503,
+                headers: { 'Content-Type': 'text/html; charset=utf-8' }
+              });
+            });
+          });
         })
     );
     return;
   }
 
-  // 策略 2: JSON 数据 - 网络优先，缓存回退
-  if (url.pathname.endsWith('.json')) {
+  // 策略 2（Issue #16）：题库/数据 JSON - 网络优先 + 独立 DATA_CACHE 回退
+  // data/* 走 runtime cache（每次校验 manifest 的新鲜度由页面层 SHA 校验保证），
+  // jsDelivr CDN URL 因含 commit 锚点天然不可变 → 缓存优先即可。
+  if (url.pathname.endsWith('.json') || url.hostname === 'cdn.jsdelivr.net') {
+    var isCdn = url.hostname === 'cdn.jsdelivr.net';
     event.respondWith(
-      fetch(request)
-        .then(function (response) {
-          var clone = response.clone();
-          caches.open(CACHE_NAME).then(function (cache) {
-            cache.put(request, clone);
-          });
+      caches.match(request).then(function (cached) {
+        // CDN 版本化 URL：缓存优先（长缓存）；同源 data JSON：网络优先
+        if (isCdn && cached) return cached;
+        return fetch(request).then(function (response) {
+          if (response && response.ok) {
+            var clone = response.clone();
+            caches.open(isCdn ? DATA_CACHE_NAME : (url.pathname.indexOf('/data/') !== -1 ? DATA_CACHE_NAME : CACHE_NAME)).then(function (cache) {
+              cache.put(request, clone);
+            });
+          }
           return response;
-        })
-        .catch(function () {
-          return caches.match(request);
-        })
+        }).catch(function () {
+          return cached || new Response('{"error":"offline"}', {
+            status: 503,
+            headers: { 'Content-Type': 'application/json' }
+          });
+        });
+      })
     );
     return;
   }
@@ -338,9 +367,44 @@ self.addEventListener('fetch', function (event) {
   );
 });
 
-// ==================== 消息处理：手动触发更新 ====================
+// ==================== 消息处理：手动触发更新 / 版本查询 / 题库缓存清理（Issue #16） ====================
+function purgeDataCaches() {
+  return caches.keys().then(function (keys) {
+    return Promise.all(
+      keys.filter(function (k) { return k === DATA_CACHE_NAME || k.indexOf('bioquest-data-') === 0; })
+        .map(function (k) { return caches.delete(k).catch(function () {}); })
+    );
+  });
+}
+
 self.addEventListener('message', function (event) {
-  if (event.data === 'SKIP_WAITING') {
+  var data = event.data;
+  // 兼容旧协议：纯字符串 SKIP_WAITING
+  if (data === 'SKIP_WAITING') {
     self.skipWaiting();
+    return;
+  }
+  if (!data || typeof data !== 'object') return;
+
+  switch (data.type) {
+    case 'SKIP_WAITING':
+      self.skipWaiting();
+      break;
+    case 'GET_VERSION':
+      // 「检查更新」：返回外壳版本 + 题库缓存大小，供 UI 比对展示
+      if (event.source) {
+        event.source.postMessage({ type: 'VERSION', version: CACHE_VERSION });
+      }
+      break;
+    case 'PURGE_DATA_CACHE':
+      // 「检查更新」发现题库新版本：清空题库 runtime cache，页面重取后自然落新缓存
+      event.waitUntil(purgeDataCaches().then(function () {
+        if (event.source) {
+          event.source.postMessage({ type: 'DATA_CACHE_PURGED' });
+        }
+      }));
+      break;
+    default:
+      break;
   }
 });

@@ -218,6 +218,113 @@ var _shardMemCache = {};    // tag -> { json: string, sha: string }（本会话�
 var _shardStoreReady = null;
 var _maintenanceRunning = null; // Issue #11：启动后台维护单例
 
+/* ============================================================
+ * Issue #15：题库分发 jsDelivr CDN 主通道
+ *  - manifest（版本真源）始终走同源 + 缓存破坏，保证新鲜；
+ *  - 重资源（bank/index/bioid-map）走版本化 CDN URL：
+ *      https://cdn.jsdelivr.net/gh/<repo>@<git-sha>/data/...
+ *    commit 锚定 URL 天然长缓存，manifest.rev/git 变化即整体换 URL；
+ *  - 三级回退：CDN → 同源直连 → IndexedDB 离线缓存；
+ *  - SHA-256 与 manifest 不符（CDN 陈旧/fork 数据不一致）视为未命中，
+ *    自动降级同源；连续网络失败达到阈值后会话级禁用 CDN（国内不可达场景）。
+ * ============================================================ */
+
+var _cdnBase = null;          // https://cdn.jsdelivr.net/gh/<repo>@<sha>（manifest 加载后解析）
+var _cdnFailCount = 0;        // 连续网络失败计数
+var _cdnDisabled = false;     // 会话级 kill-switch
+var CDN_FETCH_TIMEOUT = 8000; // CDN 单请求超时
+var CDN_MAX_FAILURES = 3;     // 连续失败阈值，达到后本会话禁用 CDN
+var CDN_BASE_TEMPLATE = 'https://cdn.jsdelivr.net/gh/';
+
+/**
+ * 从 manifest 解析 CDN 基址（git 锚点 + repo slug 均合法才启用）。
+ * @param {Object} mf - data/manifest.json
+ * @returns {string|null}
+ */
+function _resolveCdnBase(mf) {
+  if (!mf || !mf.git || !mf.repo) return null;
+  var sha = String(mf.git);
+  var repo = String(mf.repo);
+  // 安全校验：仅接受 40/7-40 位十六进制 commit 与 owner/repo slug，防注入
+  if (!/^[0-9a-f]{7,40}$/i.test(sha)) return null;
+  if (!/^[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+$/.test(repo)) return null;
+  return CDN_BASE_TEMPLATE + repo + '@' + sha;
+}
+
+/**
+ * 带超时的 fetch（CDN/网络请求统一走这里，避免不可达时长时间挂起）。
+ * @returns {Promise<Response>}
+ */
+function _fetchWithTimeout(url, timeoutMs, signal) {
+  var controller = new AbortController();
+  var timer = setTimeout(function () { controller.abort(); }, timeoutMs || 8000);
+  // 外部 signal 联动（调用方 abort 时同步取消内部请求）
+  if (signal) {
+    if (signal.aborted) { clearTimeout(timer); return Promise.reject(new DOMException('Aborted', 'AbortError')); }
+    signal.addEventListener('abort', function () { controller.abort(); }, { once: true });
+  }
+  return fetch(url, { signal: controller.signal }).then(function (r) {
+    clearTimeout(timer);
+    return r;
+  }, function (err) {
+    clearTimeout(timer);
+    throw err;
+  });
+}
+
+/**
+ * Issue #15：题库重资源统一取数通道（CDN 优先 → SHA 校验 → 同源回退）。
+ * @param {string} path 相对路径，如 'data/bank/cell_structure.json'
+ * @param {string|null} expectedSha manifest 期望的 SHA-256（可空）
+ * @param {AbortSignal|null} signal
+ * @returns {Promise<{text:string, via:string}>} via: 'cdn' | 'origin'
+ */
+function _fetchShardText(path, expectedSha, signal) {
+  function fromOrigin() {
+    return _fetchWithTimeout(path, 15000, signal).then(function (r) {
+      if (!r.ok) throw new Error('HTTP ' + r.status + ': ' + path);
+      return r.text();
+    }).then(function (text) {
+      return { text: text, via: 'origin' };
+    });
+  }
+
+  // CDN 不可用（未解析出基址 / 本会话已禁用 / 请求来自 CDN 源本身）→ 直接同源
+  if (!_cdnBase || _cdnDisabled) return fromOrigin();
+  // 本地开发（file://）或非 http(s) 页面环境无法走 CDN
+  if (typeof location === 'undefined' || !/^https?:$/.test(location.protocol)) return fromOrigin();
+  // 页面本身就部署在 jsDelivr 上时（预览场景），无需再绕 CDN
+  if (location.hostname === 'cdn.jsdelivr.net') return fromOrigin();
+
+  return _fetchWithTimeout(_cdnBase + '/' + path, CDN_FETCH_TIMEOUT, signal).then(function (r) {
+    if (!r.ok) throw new Error('CDN HTTP ' + r.status + ': ' + path);
+    return r.text();
+  }).then(function (text) {
+    _cdnFailCount = 0; // 成功即重置连续失败计数
+    if (!expectedSha) return { text: text, via: 'cdn' };
+    // SHA 校验：CDN 内容与 manifest 版本不一致 → 视为未命中，降级同源
+    return _sha256Hex(text).then(function (actual) {
+      if (actual && actual !== expectedSha) {
+        console.warn('[Loader] CDN 分片陈旧（' + path + '），降级同源拉取');
+        return fromOrigin();
+      }
+      return { text: text, via: 'cdn' };
+    });
+  }).catch(function (err) {
+    // 调用方主动中止：不计数、不降级（上层自有中止逻辑）
+    if (err && (err.name === 'AbortError') && signal && signal.aborted) {
+      throw err;
+    }
+    // CDN 不可达/超时：计数 + 降级同源
+    _cdnFailCount++;
+    if (_cdnFailCount >= CDN_MAX_FAILURES) {
+      _cdnDisabled = true;
+      console.warn('[Loader] jsDelivr 连续 ' + _cdnFailCount + ' 次不可达，本会话禁用 CDN（同源直连）');
+    }
+    return fromOrigin();
+  });
+}
+
 // 分片归属映射：新题库 tag 前缀 -> 旧前端 module 标识
 var TAG_TO_MODULE = { m1: 'module_1', m2: 'module_2', m3: 'module_3', m4: 'module_4' };
 var MODULE_TO_TAG = { 1: 'm1', 2: 'm2', 3: 'm3', 4: 'm4' };
@@ -244,12 +351,28 @@ function _loadManifest(signal) {
   if (_shardManifest) return Promise.resolve(_shardManifest);
   return _fetchJSON('data/manifest.json', signal).then(function (mf) {
     _shardManifest = (mf && mf.files) ? mf : null;
-    if (_shardManifest) _manifestRev = mf.rev || mf.updated_at || null;
+    if (_shardManifest) {
+      _manifestRev = mf.rev || mf.updated_at || null;
+      _applyManifestSideEffects(mf);
+    }
     return _shardManifest;
   }).catch(function () {
     _shardManifest = null;
     return null;
   });
+}
+
+/**
+ * manifest 就绪后的副作用：解析 CDN 基址（Issue #15）+ 持久化版本号（Issue #16）。
+ */
+function _applyManifestSideEffects(mf) {
+  var base = _resolveCdnBase(mf);
+  // 基址变化时重置会话失败计数，允许新版本重新尝试 CDN
+  if (base && base !== _cdnBase) { _cdnFailCount = 0; }
+  _cdnBase = base;
+  if (_manifestRev) {
+    try { localStorage.setItem('bq_manifest_rev', String(_manifestRev)); } catch (e) {}
+  }
 }
 
 /**
@@ -271,6 +394,7 @@ function _loadManifestFresh(timeoutMs) {
       var changed = !_shardManifest || (_manifestRev !== (mf.rev || mf.updated_at));
       _shardManifest = mf;
       _manifestRev = mf.rev || mf.updated_at || null;
+      _applyManifestSideEffects(mf);
       return { manifest: mf, changed: changed };
     }
     return null;
@@ -282,7 +406,11 @@ function _loadManifestFresh(timeoutMs) {
 
 function _loadBioIdMap(signal) {
   if (_bioidMap) return Promise.resolve(_bioidMap);
-  return _fetchJSON('data/bioid-map.json', signal).then(function (map) {
+  // Issue #15：映射表（大文件）走 CDN 优先 + SHA 校验 + 同源回退，失败静默降级空表
+  var expected = (_shardManifest && _shardManifest.files && _shardManifest.files['bioid-map.json']) || null;
+  return _fetchShardText('data/bioid-map.json', expected, signal).then(function (res) {
+    return JSON.parse(res.text);
+  }).then(function (map) {
     _bioidMap = map || {};
     window.bioIdMap = _bioidMap;
     // 数据就绪后，把旧 hash/数字 ID 引用的错题/收藏/记录迁移到 bioID
@@ -424,10 +552,9 @@ function _loadIndexShard(tag, expectedSha, signal) {
       _indexMemCache[tag] = { json: rec.json, sha: rec.sha || '' };
       return rec.json;
     }
-    return fetch('data/index/' + tag + '.json', { signal: signal }).then(function (r) {
-      if (!r.ok) throw new Error('HTTP ' + r.status + ': data/index/' + tag + '.json');
-      return r.text();
-    }).then(function (text) {
+    // Issue #15：索引分片走 CDN 优先 + SHA 校验 + 同源回退
+    return _fetchShardText('data/index/' + tag + '.json', expectedSha, signal).then(function (res) {
+      var text = res.text;
       JSON.parse(text); // 预防脏数据
       _indexMemCache[tag] = { json: text, sha: '' };
       if (expectedSha) {
@@ -615,11 +742,9 @@ function _loadShardBank(tag, expectedSha, signal) {
       _shardMemCache[tag] = { json: rec.json, sha: rec.sha || '' };
       return rec.json;
     }
-    // 缓存缺失或版本不符 → 拉取
-    return fetch('data/bank/' + tag + '.json', { signal: signal }).then(function (r) {
-      if (!r.ok) throw new Error('HTTP ' + r.status + ': data/bank/' + tag + '.json');
-      return r.text();
-    }).then(function (text) {
+    // 缓存缺失或版本不符 → 拉取（Issue #15：CDN 优先 + SHA 校验 + 同源回退）
+    return _fetchShardText('data/bank/' + tag + '.json', expectedSha, signal).then(function (res) {
+      var text = res.text;
       // 先校验 JSON 可解析，避免缓存脏数据
       JSON.parse(text);
       _shardMemCache[tag] = { json: text, sha: '' };
@@ -1554,6 +1679,14 @@ window.abortLoading = abortLoading;
 window.abortAllLoading = abortAllLoading;
 window.isModuleCached = isModuleCached;
 window.LoaderMode = LOAD_MODE;
+// Issue #15：CDN 分发诊断接口（状态查询 / 手动重置 kill-switch）
+window.BioQuestCDN = {
+  getBase: function () { return _cdnBase; },
+  isEnabled: function () { return !!_cdnBase && !_cdnDisabled; },
+  reset: function () { _cdnDisabled = false; _cdnFailCount = 0; }
+};
+// Issue #16：当前题库版本号（manifest rev），供「检查更新」比对
+window.getManifestRev = function () { return _manifestRev; };
 // Issue #10：分片题库 API（供外部按需刷新 / 迁移 / 查询 bioID 映射）
 window.loadAllShards = _loadAllShards;
 window.loadBioIdMap = _loadBioIdMap;
