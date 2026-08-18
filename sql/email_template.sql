@@ -55,7 +55,7 @@
     <div style="padding:16px 32px;background:#f4f6f8;font-size:12px;color:#8a9aaa;line-height:1.5;">
       <p style="margin:0 0 4px 0;">BioQuest · 用生物知识服务社会公益</p>
       <p style="margin:0;">
-        <a href="https://bio.sumalink.cn" style="color:#6a7a8a;text-decoration:none;">项目主页</a> ·
+        <a href="https://astrnox.github.io/BioQuest/" style="color:#6a7a8a;text-decoration:none;">项目主页</a> ·
         <a href="mailto:support@bio.sumalink.cn?subject=取消订阅" style="color:#6a7a8a;text-decoration:none;">联系我们</a>
       </p>
     </div>
@@ -77,7 +77,7 @@
 
 ——
 BioQuest · 用生物知识服务社会公益
-项目主页：https://bio.sumalink.cn
+项目主页：https://astrnox.github.io/BioQuest/
 联系我们：support@bio.sumalink.cn
 */
 
@@ -121,7 +121,7 @@ BioQuest · 用生物知识服务社会公益
     <div style="padding:16px 32px;background:#f4f6f8;font-size:12px;color:#8a9aaa;line-height:1.5;">
       <p style="margin:0 0 4px 0;">BioQuest · 用生物知识服务社会公益</p>
       <p style="margin:0;">
-        <a href="https://bio.sumalink.cn" style="color:#6a7a8a;text-decoration:none;">项目主页</a>
+        <a href="https://astrnox.github.io/BioQuest/" style="color:#6a7a8a;text-decoration:none;">项目主页</a>
       </p>
     </div>
   </div>

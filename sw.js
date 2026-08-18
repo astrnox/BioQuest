@@ -5,9 +5,11 @@
  * ============================================================
  */
 
-// 版本号策略：CSS/JS 缓存与页面解耦（剥离 ?v= 参数匹配），
-// 因此每次修改任何 JS/CSS 后必须 bump 此版本号，触发预缓存刷新与旧缓存清理。
-var CACHE_VERSION = 'bioquest-20260818a';
+// 版本号策略：CSS/JS 缓存与页面解耦（剥离 ?v= 参数匹配）。
+// P1-4 修复：CACHE_VERSION 由 scripts/bump-sw.js 基于 git 跟踪的 js/css/data
+// 内容哈希自动生成——修改任何 JS/CSS/data 后运行 `npm run bump:sw` 即可，
+// 不再依赖人肉维护版本号。版本号变化会触发 activate 阶段清理旧缓存并重新预热。
+var CACHE_VERSION = 'bioquest-90c858493f5c'; // ← bump-sw.js 会自动改写此行
 var CACHE_NAME = 'bioquest-cache-' + CACHE_VERSION;
 
 /* ========================================================================
@@ -245,6 +247,37 @@ self.addEventListener('activate', function (event) {
 });
 
 // ==================== 请求拦截：Cache First + Network Fallback ====================
+
+/* P1-4 逃生通道：缓存损坏时全清 + 硬刷新。
+ * 若 Cache Storage 数据损坏导致 caches.match 抛错（表现为资源加载异常、
+ * 反复 404/JSON 解析失败等灵异问题），清空全部缓存并强制刷新页面，
+ * 避免"坏缓存"被反复命中。 */
+function handleCacheCorruption() {
+  console.warn('[SW] 检测到缓存损坏，清空全部缓存并硬刷新');
+  return caches.keys().then(function (keys) {
+    return Promise.all(
+      keys.map(function (k) { return caches.delete(k).catch(function () {}); })
+    );
+  }).then(function () {
+    try { self.skipWaiting(); } catch (e) {}
+    if (self.clients && self.clients.matchAll) {
+      return self.clients.matchAll({ type: 'window' }).then(function (clients) {
+        clients.forEach(function (c) {
+          if (c && c.navigate) { try { c.navigate(c.url); } catch (e) {} }
+        });
+      });
+    }
+    return Promise.resolve();
+  });
+}
+
+// 缓存匹配的"安全包装"：match 抛错视为缓存损坏，走全清逃生通道
+function safeCacheMatch(request) {
+  return caches.match(request).catch(function () {
+    return handleCacheCorruption();
+  });
+}
+
 self.addEventListener('fetch', function (event) {
   var request = event.request;
 
@@ -267,7 +300,7 @@ self.addEventListener('fetch', function (event) {
           return response;
         })
         .catch(function () {
-          return caches.match(request).then(function (cached) {
+          return safeCacheMatch(request).then(function (cached) {
             if (cached) return cached;
             return caches.match('./index.html').then(function (shell) {
               return shell || new Response('<h1>离线</h1><p>暂无缓存，请联网后重试</p>', {
@@ -294,7 +327,7 @@ self.addEventListener('fetch', function (event) {
     dataUrl.search = '';
     var cacheKey = isCdn ? request : new Request(dataUrl.toString(), { mode: request.mode, credentials: request.credentials });
     event.respondWith(
-      caches.match(cacheKey).then(function (cached) {
+      safeCacheMatch(cacheKey).then(function (cached) {
         // CDN 版本化 URL：缓存优先（长缓存）；同源 data JSON：网络优先
         if (isCdn && cached) return cached;
         return fetch(request).then(function (response) {
@@ -324,7 +357,7 @@ self.addEventListener('fetch', function (event) {
     assetUrl.search = '';
     var assetRequest = new Request(assetUrl.toString(), { mode: request.mode, credentials: request.credentials });
     event.respondWith(
-      caches.match(assetRequest).then(function (cached) {
+      safeCacheMatch(assetRequest).then(function (cached) {
         var networkFetch = fetch(request).then(function (response) {
           var clone = response.clone();
           caches.open(CACHE_NAME).then(function (cache) {
@@ -343,7 +376,7 @@ self.addEventListener('fetch', function (event) {
   // 策略 4: 图片 - 缓存优先，永不更新
   if (url.pathname.match(/\.(png|jpg|jpeg|gif|svg|webp|ico)$/i)) {
     event.respondWith(
-      caches.match(request).then(function (cached) {
+      safeCacheMatch(request).then(function (cached) {
         return cached || fetch(request).then(function (response) {
           var clone = response.clone();
           caches.open(CACHE_NAME).then(function (cache) {
@@ -360,7 +393,7 @@ self.addEventListener('fetch', function (event) {
 
   // 策略 5: 其他资源 - 缓存优先
   event.respondWith(
-    caches.match(request).then(function (cached) {
+    safeCacheMatch(request).then(function (cached) {
       return cached || fetch(request).then(function (response) {
         var clone = response.clone();
         caches.open(CACHE_NAME).then(function (cache) {

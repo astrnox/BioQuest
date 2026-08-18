@@ -4,6 +4,13 @@
 -- 问题：questions 表只允许 admin 插入，导致 server.py 用 anon key 上传失败 (401)
 -- 方案：允许匿名 INSERT（题库为公开数据，无安全风险），保留 admin 管理 UPDATE/DELETE
 -- ============================================================
+--
+-- ⚠️ 已废弃（P0-2 / S-003 安全加固）：
+--   server.py 已改用 SUPABASE_SERVICE_ROLE_KEY 上传题目（绕过 RLS），
+--   不再需要匿名 INSERT。本文件的匿名插入策略会重新打开
+--   「匿名 anon key 可写敏感表」漏洞，请勿再运行。
+--   请改为运行 sql/migration_v6_security_hardening.sql
+--   （questions 仅 admin INSERT，普通用户仅读）。
 
 -- 删除旧的仅 admin 插入策略
 DROP POLICY IF EXISTS questions_insert_admin ON questions;

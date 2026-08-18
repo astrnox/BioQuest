@@ -14,10 +14,6 @@ var _adminModalTraps = {};
 
 // ===== 管理员后台常量（超时 / 限制 / 重试） =====
 var ADMIN_TOKEN_TTL = 5 * 60 * 1000;            // 管理员 token 有效期（5 分钟）
-var ADMIN_LOGIN_MAX_ATTEMPTS = 5;               // 连续失败锁定阈值
-var ADMIN_LOGIN_LOCK_DURATION_MS = 60000;       // 失败锁定时长（60 秒）
-var ADMIN_LOGIN_DELAY_PER_ATTEMPT_MS = 200;     // 每次尝试叠加延迟
-var ADMIN_LOGIN_MAX_DELAY_MS = 2000;            // 单次尝试延迟上限
 var ADMIN_COUNT_LIMIT = 100000;                 // 统计总数用的查询 limit
 var ADMIN_CARDS_COUNT_LIMIT = 1000;             // 卡片统计查询 limit
 var ADMIN_LIST_LIMIT = 100;                     // 列表查询默认 limit
@@ -168,16 +164,14 @@ window._onAuthUserLoaded = function(user) {
       _adminAuthenticated = true;
       // 安全：Supabase 管理员身份仅解锁前端 UI，绝不作为服务端管理凭证
       // （服务端无法验证 Supabase JWT，否则任何人伪造 X-Admin-Key: supabase_admin 即可提权）。
-      // 服务端管理操作仍需通过 adminLogin 输入真实管理员密钥。
       _adminSecretKey = null;
       var token = JSON.stringify({ t: Date.now(), exp: ADMIN_TOKEN_TTL });
       sessionStorage.setItem('bioquest_admin_auth', token);
 
     }
   } else if (user) {
-    // 普通用户登录时，如果当前 _adminAuthenticated 是从 sessionStorage 恢复的但用户不是 admin，
-    // 清除 admin 认证
-    if (_adminAuthenticated && _adminSecretKey === 'session_restored') {
+    // 普通用户登录时，清除可能残留的 admin 认证（user_group 非 admin 一律视为无权限）
+    if (_adminAuthenticated) {
       _adminAuthenticated = false;
       _adminSecretKey = null;
       sessionStorage.removeItem('bioquest_admin_auth');
@@ -1048,61 +1042,35 @@ function injectAdminStyles() {
 }
 
 /* ===== API 调用 ===== */
-// 管理员密钥的 SHA-256 哈希值（默认密钥已移除，首次使用需通过 Supabase admin 用户组认证）
-var ADMIN_KEY_HASH = 'd090ea0a3c226b0afb5fa7d86dce875dd63434b1e9bd6dc804ea9bf55a38f57b';
+// P0-2 修复：移除纯客户端 SHA-256 管理员密钥比对（可被前端绕过，不构成真实安全）。
+// 管理员认证统一走 Supabase Auth（signInWithPassword）+ 服务端 RLS：
+//   - 前端仅根据 Supabase 返回的 user_group === 'admin' 决定是否解锁管理 UI；
+//   - 真正的写权限由 sql/ 中的 RLS 策略在服务端强制，伪造前端状态无法提权。
+// 详见 prd/BioQuest-安全与工程整改PRD.md P0-2。
 
-// 登录尝试频率限制（持久化到 sessionStorage，防止刷新绕过）
-var _adminLoginAttempts = Math.max(0, parseInt(sessionStorage.getItem('bioquest_admin_attempts') || '0', 10) || 0);
-var _adminLockUntil = Math.max(0, parseInt(sessionStorage.getItem('bioquest_admin_lock') || '0', 10) || 0);
-
-async function sha256(str) {
-  const encoder = new TextEncoder();
-  const data = encoder.encode(str);
-  const hashBuffer = await crypto.subtle.digest('SHA-256', data);
-  const hashArray = Array.from(new Uint8Array(hashBuffer));
-  return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
-}
-
-async function adminLogin(key) {
-  if (!key) return false;
-
-  // 频率限制：5 次失败后锁定 60 秒
-  var now = Date.now();
-  if (_adminLockUntil > now) {
-    var waitSec = Math.ceil((_adminLockUntil - now) / 1000);
-    showToast('尝试过于频繁，请 ' + waitSec + ' 秒后重试');
+// 登录管理员账号（Supabase Auth：邮箱 + 密码）
+async function adminLogin(email, password) {
+  if (!email || !password) return false;
+  if (typeof window.loginUser !== 'function') return false;
+  var res = await window.loginUser(email, password);
+  if (!res || !res.ok) return false;
+  var user = res.user || (typeof window.getCurrentUser === 'function' ? window.getCurrentUser() : null);
+  if (!user || user.user_group !== 'admin') {
+    // 登录成功但非管理员 → 登出，避免以普通身份停留在管理界面
+    if (typeof window.logoutUser === 'function') { try { await window.logoutUser(); } catch (e) {} }
     return false;
   }
-
-  // 每次尝试叠加延迟（最多 2 秒），减缓暴力破解
-  var delay = Math.min(ADMIN_LOGIN_MAX_DELAY_MS, ADMIN_LOGIN_DELAY_PER_ATTEMPT_MS * (_adminLoginAttempts + 1));
-  await new Promise(function(r) { setTimeout(r, delay); });
-
-  const hash = await sha256(key);
-  if (hash === ADMIN_KEY_HASH) {
-    _adminSecretKey = key;
-    _adminAuthenticated = true;
-    // 使用带时间戳的 token 而非固定 '1'，5 分钟过期
-    var token = JSON.stringify({ t: Date.now(), exp: ADMIN_TOKEN_TTL });
-    sessionStorage.setItem('bioquest_admin_auth', token);
-    _adminLoginAttempts = 0;
-    sessionStorage.removeItem('bioquest_admin_attempts');
-    sessionStorage.removeItem('bioquest_admin_lock');
-    return true;
-  }
-
-  // 失败计数（持久化）
-  _adminLoginAttempts++;
-  sessionStorage.setItem('bioquest_admin_attempts', String(_adminLoginAttempts));
-  if (_adminLoginAttempts >= ADMIN_LOGIN_MAX_ATTEMPTS) {
-    _adminLockUntil = Date.now() + ADMIN_LOGIN_LOCK_DURATION_MS;
-    sessionStorage.setItem('bioquest_admin_lock', String(_adminLockUntil));
-    showToast('连续失败 ' + ADMIN_LOGIN_MAX_ATTEMPTS + ' 次，已锁定 ' + (ADMIN_LOGIN_LOCK_DURATION_MS / 1000) + ' 秒');
-  }
-  return false;
+  _adminAuthenticated = true;
+  _adminSecretKey = null; // 不持有任何服务端密钥
+  // 使用带时间戳的 token 记录会话开始时间，5 分钟过期
+  var token = JSON.stringify({ t: Date.now(), exp: ADMIN_TOKEN_TTL });
+  sessionStorage.setItem('bioquest_admin_auth', token);
+  return true;
 }
 
 // 检查会话中是否已认证（带过期校验）
+// 注：仅凭 token 恢复 UI 解锁状态；最终以 Supabase 会话的 user_group === 'admin' 为准，
+// _onAuthUserLoaded / renderAdminDashboard 会在用户加载后校正（非管理员会被清除）。
 (function() {
   try {
     var raw = sessionStorage.getItem('bioquest_admin_auth');
@@ -1119,7 +1087,7 @@ async function adminLogin(key) {
       return;
     }
     _adminAuthenticated = true;
-    _adminSecretKey = 'session_restored';
+    _adminSecretKey = null;
   } catch (e) {
     sessionStorage.removeItem('bioquest_admin_auth');
   }
@@ -1792,24 +1760,34 @@ function renderAdminLoginPage(target) {
           ${ICONS.shield}
         </div>
         <div class="admin-login-title">管理员后台</div>
-        <div class="admin-login-subtitle">输入密钥以访问 BioQuest 管理面板</div>
+        <div class="admin-login-subtitle">使用 Supabase 管理员账号登录（邮箱 + 密码）</div>
         <form class="admin-login-form" id="admin-login-form">
+          <div class="admin-login-input-wrap">
+            <input
+              type="email"
+              class="admin-login-input"
+              id="admin-email-input"
+              placeholder="管理员邮箱"
+              required
+              autocomplete="username"
+            >
+          </div>
           <div class="admin-login-input-wrap">
             <input
               type="password"
               class="admin-login-input"
               id="admin-key-input"
-              placeholder="输入管理员密钥"
+              placeholder="密码"
               required
-              autocomplete="off"
+              autocomplete="current-password"
             >
             ${ICONS.key}
           </div>
-          <button type="submit" class="admin-login-btn">验证并登录</button>
+          <button type="submit" class="admin-login-btn">登录</button>
         </form>
         <div class="admin-login-error" id="admin-login-error"></div>
         <div class="admin-login-hint">
-          仅限授权管理员访问。如需密钥，请联系平台管理员。
+          仅限授权管理员访问。管理员账号由 Supabase Auth 管理，密码不存于前端。
         </div>
       </div>
     </div>
@@ -1817,20 +1795,21 @@ function renderAdminLoginPage(target) {
 
   document.getElementById('admin-login-form').addEventListener('submit', async (e) => {
     e.preventDefault();
+    const email = document.getElementById('admin-email-input').value.trim();
     const key = document.getElementById('admin-key-input').value;
     const errorEl = document.getElementById('admin-login-error');
     const btn = e.target.querySelector('.admin-login-btn');
 
-    btn.textContent = '验证中...';
+    btn.textContent = '登录中...';
     btn.disabled = true;
 
-    const success = await adminLogin(key);
+    const success = await adminLogin(email, key);
     if (success) {
       renderAdminDashboard(target);
     } else {
-      errorEl.textContent = '密钥错误，请检查后重试';
+      errorEl.textContent = '登录失败：请检查邮箱/密码，或该账号无管理员权限';
       errorEl.style.display = 'block';
-      btn.textContent = '验证并登录';
+      btn.textContent = '登录';
       btn.disabled = false;
       document.getElementById('admin-key-input').value = '';
       document.getElementById('admin-key-input').focus();
@@ -2144,7 +2123,8 @@ async function loadTabContent(target, tab) {
       }
     } catch(e) {
       console.error('[Admin] 加载卡片出错:', e);
-      contentEl.innerHTML = `<div class="admin-empty"><div class="admin-empty-icon">${ICONS.inbox}</div><div class="admin-empty-text">卡片加载出错: ${e.message}</div><div class="admin-empty-hint">请检查浏览器控制台（F12）获取详细信息</div></div>`;
+      // S-007：不向用户暴露底层错误信息（可能含表名/字段/SQL），仅显示通用提示
+      contentEl.innerHTML = `<div class="admin-empty"><div class="admin-empty-icon">${ICONS.inbox}</div><div class="admin-empty-text">卡片加载失败</div><div class="admin-empty-hint">请稍后重试；若持续失败，请检查浏览器控制台（F12）获取详细信息</div></div>`;
     }
   } else {
     try {
@@ -2156,7 +2136,8 @@ async function loadTabContent(target, tab) {
       }
     } catch(e) {
       console.error('[Admin] 加载题目出错:', e);
-      contentEl.innerHTML = `<div class="admin-empty"><div class="admin-empty-icon">${ICONS.inbox}</div><div class="admin-empty-text">题目加载出错: ${e.message}</div><div class="admin-empty-hint">请检查浏览器控制台（F12）获取详细信息</div></div>`;
+      // S-007：不向用户暴露底层错误信息，仅显示通用提示
+      contentEl.innerHTML = `<div class="admin-empty"><div class="admin-empty-icon">${ICONS.inbox}</div><div class="admin-empty-text">题目加载失败</div><div class="admin-empty-hint">请稍后重试；若持续失败，请检查浏览器控制台（F12）获取详细信息</div></div>`;
     }
   }
 }

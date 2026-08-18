@@ -8,7 +8,7 @@
 
 **从联赛备考到高考模拟，一个网站搞定你的生物练习**
 
-[🌐 在线 Demo](https://bio.sumalink.cn/) · [📝 开始刷题](https://bio.sumalink.cn/#/practice) · [💬 反馈问题](https://github.com/astrnox/BioQuest/issues)(现在没钱买服务器了，去看看GitHubpage吧...)
+[🌐 在线 Demo](https://astrnox.github.io/BioQuest/) · [📝 开始刷题](https://astrnox.github.io/BioQuest/#/practice) · [💬 反馈问题](https://github.com/astrnox/BioQuest/issues)
 
 [![Platform](https://img.shields.io/badge/platform-Web-blue?style=flat-square)]()
 [![License](https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-green?style=flat-square)](./LICENSE)
@@ -29,7 +29,7 @@ BioQuest 是一个专门给高中生做的生物学习网站。不管你是准�
 
 ### 👉 如果你只是想用（学生/老师）
 
-直接打开在线版本就能用：**[https://bio.sumalink.cn/](https://bio.sumalink.cn/)**
+直接打开在线版本就能用：**[https://astrnox.github.io/BioQuest/](https://astrnox.github.io/BioQuest/)**
 
 - 不用注册也能刷题，注册了可以同步错题本和学习进度
 - AI 导师、拍照搜题这些功能需要自己配一下 API Key（都是各家大模型的免费额度，不用花钱，里面有教程）
