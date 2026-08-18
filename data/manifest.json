@@ -1,6 +1,8 @@
 {
   "rev": 2,
-  "updated_at": "2026-08-16",
+  "updated_at": "2026-08-18",
+  "git": "6b962d9e4380bd69ede8f6d00f48652ff971503d",
+  "repo": "astrnox/BioQuest",
   "total_questions": 10952,
   "topics": [
     {
@@ -1138,6 +1140,6 @@
     "index/plant_biotech.json": "fe1dc07bd89e45c5e77c18805ee2d89c41a81b4dc6b0abae47333f0d5642d624",
     "bank/plant_biotech.json": "4b281ecd31c0d8371bc6bdcbc82a658bfc3ad0ef000d88f2c78b4249bfd05b70",
     "bioid-map.json": "d4097f73b9d6b66a6ec32cec97f92efb8f450c87fb5fb8ef182ac6235797b278",
-    "knowledge-graph.json": "3086d4718bff003784348cfe8de20e9322b96f11248b3ed72eb184aaf0136213"
+    "knowledge-graph.json": "a4bc0ba938cb6446035de3afd0e15e6d2592f75e138cd6537bcdb63e32eb6594"
   }
 }
