@@ -27,6 +27,71 @@
 const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
+const { execSync } = require('child_process');
+
+/* ============================================================
+ * Issue #15：CDN 版本锚点
+ * manifest 写入 git（生成时的 HEAD commit SHA）与 repo（origin 仓库 slug），
+ * 前端据此构造 https://cdn.jsdelivr.net/gh/<repo>@<git>/data/... 版本化长缓存 URL。
+ * 注意：manifest.json 不参与 CI「分片确定性」哈希比对，新增字段不影响 CI。
+ *
+ * 锚点一致性（PR #25 教训）：自动探测读的是「当前 clone」的 origin/HEAD，
+ * 在贡献者 fork 里跑会把锚点写成 fork 仓库（上游部署时 CDN 全部指向 fork，
+ * jsDelivr 404 后静默回退同源，版本化分发失效）。
+ *   - 在 fork 中生成、准备合入上游时，必须显式指定：
+ *       node scripts/generate-bio-shards.js --repo=astrnox/BioQuest --git=<上游存在的 commit>
+ *   - 合并到上游后由维护者在 main 重跑生成器（自动探测即正确）。
+ * 校验：node scripts/verify-manifest-anchor.js（已挂 CI 与 npm test）
+ * ============================================================ */
+
+/** 解析 --repo=<slug> / --git=<sha> 覆盖参数（优先于自动探测）。 */
+function anchorOverrides() {
+  const out = { repo: null, git: null };
+  for (const arg of process.argv.slice(2)) {
+    let m = /^--repo=(.+)$/.exec(arg);
+    if (m) out.repo = m[1].trim();
+    m = /^--git=(.+)$/.exec(arg);
+    if (m) out.git = m[1].trim().replace(/[^0-9a-f]/gi, '');
+  }
+  return out;
+}
+
+function gitHeadSha() {
+  try {
+    return execSync('git rev-parse HEAD', { cwd: ROOT, stdio: ['ignore', 'pipe', 'ignore'] })
+      .toString().trim().replace(/[^0-9a-f]/g, '') || null;
+  } catch (e) { return null; }
+}
+
+function originRepoSlug() {
+  try {
+    const url = execSync('git remote get-url origin', { cwd: ROOT, stdio: ['ignore', 'pipe', 'ignore'] })
+      .toString().trim();
+    // ssh: git@github.com:owner/repo.git  |  https://github.com/owner/repo.git
+    const m = url.match(/github\.com[/:]([^/\s]+)\/([^/\s#?]+?)(?:\.git)?\s*$/i);
+    if (!m) return null;
+    const slug = (m[1] + '/' + m[2]).replace(/\.git$/, '');
+    return /^[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+$/.test(slug) ? slug : null;
+  } catch (e) { return null; }
+}
+
+/**
+ * 解析最终锚点：CLI 覆盖 > 自动探测。
+ * 未显式覆盖时打印提示（fork 生成的锚点对上游部署无效，见上方说明）。
+ */
+function resolveAnchors() {
+  const ov = anchorOverrides();
+  const repo = ov.repo || originRepoSlug();
+  const git = ov.git || gitHeadSha();
+  const notes = [];
+  if (!ov.repo && repo) {
+    notes.push('[warn] 锚点 repo=' + repo + ' 自动探测自当前 origin；若在 fork 中为上游生成，请加 --repo=<owner>/<repo>');
+  }
+  if (!ov.git && git) {
+    notes.push('[warn] 锚点 git=' + git.slice(0, 12) + ' 取自当前 HEAD；后续提交会使 SHA 前移，合并到上游后请在 main 重跑生成器');
+  }
+  return { repo, git, notes };
+}
 
 const ROOT = path.resolve(__dirname, '..');
 const DATA_DIR = path.join(ROOT, 'data');
@@ -397,9 +462,14 @@ function main() {
     modules['module' + mi] = TOPICS.filter((t) => t.relatedModule === 'module' + mi && topicQuestions[t.id] && topicQuestions[t.id].length > 0).map((t) => t.id);
   }
 
+  // Issue #15：CDN 版本锚点（jsDelivr 版本化 URL = 长缓存 + 精确版本控制）
+  // CLI --repo/--git 覆盖 > 自动探测（HEAD/origin）；fork 环境务必显式覆盖，见文件头说明
+  const anchors = resolveAnchors();
   const manifest = {
     rev: 2,
     updated_at: new Date().toISOString().slice(0, 10),
+    git: anchors.git,
+    repo: anchors.repo,
     total_questions: assigned,
     topics: TOPICS.map((t) => ({
       id: t.id, label: t.label, category: t.category,
@@ -417,6 +487,8 @@ function main() {
   fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2) + '\n', 'utf8');
 
   console.log('[write] data/manifest.json');
+  console.log('[anchor] git=' + (anchors.git || 'null') + ' repo=' + (anchors.repo || 'null'));
+  for (const note of anchors.notes) console.log(note);
   console.log('[write] data/bioid-map.json (' + Object.keys(bioIdMap).length + ' 条映射)');
   console.log('[write] data/knowledge-graph.json (' + TOPICS.length + ' 节点 / ' + EDGES.length + ' 边 / ' + CATEGORIES.length + ' 学科)');
   console.log('[write] index/*.json ' + TOPICS.length + ' 个, bank/*.json ' + TOPICS.length + ' 个');

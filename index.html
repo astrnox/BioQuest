@@ -825,6 +825,7 @@
         <a href="#/user">用户中心</a>
         <a href="resources.html">学习资源</a>
         <a href="javascript:void(0)" onclick="window.showFeedbackModal()" style="color:rgba(255,255,255,0.5);font-size:0.8rem;transition:color 0.15s">反馈</a>
+        <a href="javascript:void(0)" onclick="window.checkForAppUpdates()" style="color:rgba(255,255,255,0.5);font-size:0.8rem;transition:color 0.15s" title="检查应用与题库更新">检查更新</a>
         <a href="javascript:void(0)" onclick="window.openDonation()" style="color:rgba(255,255,255,0.5);font-size:0.8rem;transition:color 0.15s">支持我们</a>
       </div>
       <div class="footer-bottom">
@@ -1003,8 +1004,9 @@
   <script src="js/community.js?v=20260725final" defer></script>
   <!-- 社区回帖通知：收到回帖弹窗提示 + 我的-通知列表 -->
   <script src="js/notifications.js?v=20260811g" defer></script>
-  <!-- admin.js 改为 async：管理后台是按需访问的，让它独立加载不阻塞首屏 -->
-  <script src="js/admin.js?v=20260806a" async></script>
+  <!-- Issue #17：admin.js（282KB）不再首屏加载——由 app.js 路由到 #/admin 时动态注入，
+       且其功能页子模块（admin-users/questions/cards/community/ebook/ops/ocr/aigen）
+       在点击对应标签时才按需加载 -->
   <script src="js/learning-hub.js?v=20260809f" defer></script>
   <script src="js/daily-billion.js?v=20260809c" defer></script>
   <script src="js/points-ui.js?v=20260814a" defer></script>

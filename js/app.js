@@ -5435,6 +5435,119 @@ window.showToast = showToast;
   });
 })();
 
+// ============================================================
+// Issue #16：「检查更新」手动入口
+// ----------------------------------------------------------------
+// 两级检查：
+//   1. 外壳更新：reg.update() 发现新 SW → 提示刷新（复用上方横幅）；
+//   2. 题库更新：拉取最新 data/manifest.json，比对 rev（loader 持久化于
+//      localStorage.bq_manifest_rev）→ 有新版则清空 SW 题库 runtime cache
+//      + 触发后台增量刷新（IndexedDB 按 manifest SHA 增量替换）。
+// 全程离线安全：任何网络失败都提示"检查失败"，不影响现有功能。
+// ============================================================
+(function () {
+  function _updateToast(text, ms) {
+    try {
+      var old = document.getElementById('bq-update-toast');
+      if (old) old.remove();
+      var el = document.createElement('div');
+      el.id = 'bq-update-toast';
+      el.style.cssText = 'position:fixed;bottom:110px;left:50%;transform:translateX(-50%);' +
+        'z-index:99999;background:rgba(26,58,42,0.95);color:#fff;padding:10px 22px;border-radius:14px;' +
+        'font-size:0.88rem;box-shadow:0 4px 20px rgba(0,0,0,0.3);max-width:86vw;text-align:center;';
+      el.textContent = text;
+      document.body.appendChild(el);
+      setTimeout(function () { if (el.parentNode) el.remove(); }, ms || 2600);
+    } catch (e) {}
+  }
+
+  function _sendSwMessage(msg) {
+    return new Promise(function (resolve) {
+      if (!('serviceWorker' in navigator) || !navigator.serviceWorker.controller) {
+        resolve(null);
+        return;
+      }
+      var channel = new MessageChannel();
+      var settled = false;
+      channel.port1.onmessage = function (e) {
+        settled = true;
+        resolve(e.data || null);
+      };
+      try {
+        navigator.serviceWorker.controller.postMessage(msg, [channel.port2]);
+      } catch (err) { resolve(null); return; }
+      setTimeout(function () { if (!settled) resolve(null); }, 3000);
+    });
+  }
+
+  function _fetchFreshManifestRev() {
+    var controller = new AbortController();
+    var timer = setTimeout(function () { controller.abort(); }, 6000);
+    return fetch('data/manifest.json?v=' + Date.now(), { signal: controller.signal, cache: 'no-store' })
+      .then(function (r) {
+        clearTimeout(timer);
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        return r.json();
+      })
+      .then(function (mf) {
+        clearTimeout(timer);
+        return (mf && (mf.rev || mf.updated_at)) ? String(mf.rev || mf.updated_at) : null;
+      })
+      .catch(function () {
+        clearTimeout(timer);
+        return null;
+      });
+  }
+
+  window.checkForAppUpdates = function () {
+    var savedRev = null;
+    try { savedRev = localStorage.getItem('bq_manifest_rev'); } catch (e) {}
+
+    var swUpdatePromise = ('serviceWorker' in navigator && navigator.serviceWorker.getRegistration)
+      ? navigator.serviceWorker.getRegistration().then(function (reg) {
+          return reg ? reg.update().then(function () { return reg; }) : null;
+        }).catch(function () { return null; })
+      : Promise.resolve(null);
+
+    return swUpdatePromise.then(function (reg) {
+      var hasNewSw = !!(reg && (reg.waiting || (reg.installing && reg.installing.state === 'installed')));
+
+      return _fetchFreshManifestRev().then(function (freshRev) {
+        // 1) 外壳有新 SW → 提示刷新即激活（skipWaiting 已内置）
+        if (hasNewSw) {
+          _updateToast('发现新版本应用，3 秒后自动刷新…', 3000);
+          setTimeout(function () { location.reload(); }, 3000);
+          return { shell: true, data: false };
+        }
+
+        // 2) 题库 manifest 有新版 → 清 SW 题库缓存 + 后台增量刷新 IndexedDB
+        if (freshRev && savedRev && String(freshRev) !== String(savedRev)) {
+          _updateToast('题库有更新（v' + freshRev + '），正在同步…');
+          return _sendSwMessage({ type: 'PURGE_DATA_CACHE' }).then(function () {
+            try { localStorage.setItem('bq_manifest_rev', String(freshRev)); } catch (e) {}
+            if (typeof window.clearQuestionCache === 'function') window.clearQuestionCache();
+            if (typeof window.maintainQuestionBank === 'function') window.maintainQuestionBank();
+            _updateToast('题库已更新到 v' + freshRev + '，刷新页面生效', 3600);
+            return { shell: false, data: true };
+          });
+        }
+
+        // 3) 无更新（或离线检查失败但 SW 正常）
+        if (freshRev === null && savedRev === null) {
+          _updateToast('检查更新失败，请检查网络');
+        } else {
+          // 首次检查（本地无版本记录）：落盘基线，供后续比对
+          if (freshRev && !savedRev) {
+            try { localStorage.setItem('bq_manifest_rev', String(freshRev)); } catch (e) {}
+          }
+          _updateToast('已是最新版本（题库 v' + (freshRev || savedRev) + '）');
+        }
+        return { shell: false, data: false };
+      });
+    });
+  };
+})();
+
 document.addEventListener('DOMContentLoaded', initApp);
 
 if (document.readyState === 'interactive' || document.readyState === 'complete') {
