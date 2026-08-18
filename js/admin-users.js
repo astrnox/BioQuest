@@ -86,17 +86,25 @@ function renderUsersTab(container, users) {
               var uid = user.id || '';
               var uname = user.username || '未知用户';
               var dname = user.display_name || uname;
+              // P0-3 修复：username/display_name 为用户可控字段，渲染与 onclick 均需转义。
+              // onclick 内的字符串需同时处理反斜杠/单引号（JS 字符串）与双引号（HTML 属性）。
+              function _jsStr(s) {
+                return String(s || '').replace(/\\/g, '\\\\').replace(/'/g, "\\'").replace(/"/g, '&quot;').replace(/</g, '&lt;');
+              }
+              var uidJs = _jsStr(uid);
+              var unameJs = _jsStr(uname);
+              var dnameJs = _jsStr(dname);
               return `
-              <tr data-uid="${uid}">
-                <td class="admin-table-name">${uname}</td>
-                <td>${dname}</td>
+              <tr data-uid="${escapeHtml(uid)}">
+                <td class="admin-table-name">${escapeHtml(uname)}</td>
+                <td>${escapeHtml(dname)}</td>
                 <td class="admin-table-score" id="score-${uid}">${user.bio_score || 0}</td>
                 <td>${user.total_answered || 0}</td>
                 <td>${user.total_correct || 0}</td>
                 <td>${(user.accuracy || 0)}%</td>
                 <td id="points-${uid}" style="font-weight:700;color:var(--color-deep,#1a3a2a);">${typeof user.points === 'number' ? user.points : 0}</td>
                 <td>
-                  <select class="admin-form-select" style="padding:4px 8px;font-size:0.8rem;min-width:80px;" onchange="handleChangeUserGroup('${uid}', this.value)">
+                  <select class="admin-form-select" style="padding:4px 8px;font-size:0.8rem;min-width:80px;" onchange="handleChangeUserGroup('${uidJs}', this.value)">
                     <option value="admin" ${user.user_group === 'admin' ? 'selected' : ''}>管理员</option>
                     <option value="premium" ${user.user_group === 'premium' ? 'selected' : ''}>高级会员</option>
                     <option value="verified" ${user.user_group === 'verified' ? 'selected' : ''}>认证会员</option>
@@ -106,7 +114,7 @@ function renderUsersTab(container, users) {
                 </td>
                 <td>
                   <div class="admin-table-actions">
-                    <button class="admin-btn admin-btn--primary" onclick="handleEditUser('${uid}', '${(uname || '').replace(/'/g, "\\'")}', '${(dname || '').replace(/'/g, "\\'")}', ${user.bio_score || 0}, ${user.total_answered || 0}, ${user.total_correct || 0}, ${user.accuracy || 0}, ${typeof user.points === 'number' ? user.points : 0})">
+                    <button class="admin-btn admin-btn--primary" onclick="handleEditUser('${uidJs}', '${unameJs}', '${dnameJs}', ${user.bio_score || 0}, ${user.total_answered || 0}, ${user.total_correct || 0}, ${user.accuracy || 0}, ${typeof user.points === 'number' ? user.points : 0})">
                       编辑
                     </button>
                     <button class="admin-btn admin-btn--ghost" onclick="handleAdjustUserPoints('${uid}', ${typeof user.points === 'number' ? user.points : 0})">

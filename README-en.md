@@ -6,7 +6,7 @@
 
 **From biology-league prep to Gaokao mock exams — practice biology with one website.**
 
-[🇨🇳 中文版](./README.md) · [🌐 Live Demo](https://bio.sumalink.cn/) · [📝 Start Practicing](https://bio.sumalink.cn/#/practice) · [💬 Report an Issue](https://github.com/astrnox/BioQuest/issues)
+[🇨🇳 中文版](./README.md) · [🌐 Live Demo](https://astrnox.github.io/BioQuest/) · [📝 Start Practicing](https://astrnox.github.io/BioQuest/#/practice) · [💬 Report an Issue](https://github.com/astrnox/BioQuest/issues)
 
 [![Platform](https://img.shields.io/badge/platform-Web-blue?style=flat-square)]()
 [![License](https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-green?style=flat-square)](./LICENSE)
@@ -28,7 +28,7 @@ BioQuest is a biology learning website built specifically for high school studen
 
 ### 👉 Just want to use it (students / teachers)
 
-Open the online version directly: **[https://bio.sumalink.cn/](https://bio.sumalink.cn/)**
+Open the online version directly: **[https://astrnox.github.io/BioQuest/](https://astrnox.github.io/BioQuest/)**
 
 - You can practice without registering; registering lets you sync your wrong-answer book and learning progress.
 - Features like the AI tutor and photo-based question search require you to configure your own API Key (they all use the free tiers of various providers — no cost, tutorial included).

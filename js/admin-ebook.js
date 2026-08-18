@@ -414,8 +414,18 @@ async function renderEbookTab(container) {
     var customEbooks = getCustomEbooks();
     customEbooks.forEach(function(eb) {
       var hasPdf = !!status[eb.id];
+      // P0-3 修复：用户上传书籍的标题/作者/分类为用户可控字段，渲染与属性均需转义
+      function _escJsStr(s) {
+        return String(s || '').replace(/\\/g, '\\\\').replace(/'/g, "\\'").replace(/"/g, '&quot;').replace(/</g, '&lt;');
+      }
+      var ebTitle = escapeHtml(eb.title || '');
+      var ebAuthor = escapeHtml(eb.author || '');
+      var ebCategory = escapeHtml(eb.category || '');
+      var ebIdJs = _escJsStr(eb.id);
+      var ebPathJs = _escJsStr(eb.filePath);
+      var ebTitleAttr = _escJsStr(eb.title);
       rows.push('<tr style="background:rgba(90,125,92,0.04);">' +
-        '<td class="admin-table-name">' + eb.title + (eb.author ? ' <span style="color:var(--text-muted,#8a8a8a);font-size:0.78rem;">(' + eb.author + ')</span>' : '') + ' <span class="admin-q-tag admin-q-tag--module" style="font-size:0.7rem;">' + eb.category + '</span></td>' +
+        '<td class="admin-table-name">' + ebTitle + (eb.author ? ' <span style="color:var(--text-muted,#8a8a8a);font-size:0.78rem;">(' + ebAuthor + ')</span>' : '') + ' <span class="admin-q-tag admin-q-tag--module" style="font-size:0.7rem;">' + ebCategory + '</span></td>' +
         '<td>' + (hasPdf
           ? '<span class="admin-q-tag admin-q-tag--module">已上传</span>'
           : '<span class="admin-q-tag admin-q-tag--difficulty">未上传</span>') +
@@ -423,11 +433,11 @@ async function renderEbookTab(container) {
         '<td>' +
           '<label class="admin-btn admin-btn--primary" style="padding:4px 12px;font-size:0.78rem;cursor:pointer;margin:0;">' +
             '选择PDF' +
-            '<input type="file" accept="application/pdf" style="display:none;" data-book-key="' + eb.id + '" data-book-name="' + eb.title + '" data-file-path="' + eb.filePath + '" data-custom-id="' + eb.id + '" class="admin-pdf-file-input" />' +
+            '<input type="file" accept="application/pdf" style="display:none;" data-book-key="' + eb.id + '" data-book-name="' + ebTitleAttr + '" data-file-path="' + ebPathJs + '" data-custom-id="' + eb.id + '" class="admin-pdf-file-input" />' +
           '</label>' +
         '</td>' +
         '<td>' +
-          '<button class="admin-btn admin-btn--danger" style="padding:4px 12px;font-size:0.78rem;" onclick="adminDeletePdf(\'' + eb.id + '\',\'' + eb.filePath + '\',true)">删除</button>' +
+          '<button class="admin-btn admin-btn--danger" style="padding:4px 12px;font-size:0.78rem;" onclick="adminDeletePdf(\'' + ebIdJs + '\',\'' + ebPathJs + '\',true)">删除</button>' +
         '</td>' +
       '</tr>');
     });
