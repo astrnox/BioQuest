@@ -40,6 +40,12 @@ jobs:
           done
           exit $fail
 
+      - name: manifest CDN 锚点一致性校验（Issue #15）
+        # 必须排在「题库重建确定性」重跑生成器之前——重跑会用 runner 环境
+        # 改写工作区 manifest，锚点被"洗白"后此校验失去意义
+        # （这正是 CI 之前抓不到 PR #25 fork 锚点的原因）。
+        run: node scripts/verify-manifest-anchor.js
+
       - name: 题库分片一致性校验（Issue #10）
         # 校验 manifest/index/bank 三层分片：SHA-256 完整性、bioID 全局唯一、
         # 内容寻址反向复算（抗漂移）、index/bank 双向一致、bioid-map 迁移映射完备
