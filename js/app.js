@@ -1384,18 +1384,67 @@ function _checkRouteAccess(route) {
 }
 
 /**
- * P0-1 路由访问拒绝处理：记录来源 → 引导回首页 → 弹登录。
+ * P0-1 路由访问拒绝处理：记录来源 → 在目标页内展示访问提示。
+ * 不强制跳回首页、不自动弹登录框：认证会话恢复慢或被拒时，
+ * 用户停留在目标页看到「请先登录/权限不足」提示，避免被误认为还要重新登录。
  */
 function _denyRouteAccess(route, access) {
-  console.warn('[BioQuest] 路由访问被拒绝（随保存，登录后恢复）:', access);
+  console.warn('[BioQuest] 路由访问被拒绝（随登录后恢复）:', access);
   try { sessionStorage.setItem('bioquest:authRedirect', route); } catch (e) {}
-  if (typeof navigateTo === 'function') {
-    navigateTo('/');
-  } else if (typeof window.location !== 'undefined') {
-    window.location.hash = '#/';
+
+  var target = (typeof AppState !== 'undefined' && AppState.rootElement) || document.getElementById('page-content');
+  if (!target) {
+    // 兜底：找不到容器时才回退为跳首页
+    if (typeof navigateTo === 'function') navigateTo('/');
+    else if (typeof window.location !== 'undefined') window.location.hash = '#/';
+    return;
   }
-  if (typeof showAuthModal === 'function') {
-    setTimeout(function () { showAuthModal('login'); }, 50);
+
+  AppState.currentRoute = route;
+  try { if (typeof updatePageTitle === 'function') updatePageTitle(route); } catch (e) {}
+  var denied = !!(access && access.reason === 'role');
+  target.innerHTML =
+    '<div class="animate-fade-in" style="display:flex;align-items:center;justify-content:center;min-height:60vh;">' +
+      '<div style="text-align:center;max-width:420px;padding:48px 32px;">' +
+        '<div style="font-size:3.5rem;margin-bottom:16px;">' + (denied ? '🔒' : '👋') + '</div>' +
+        '<div style="font-family:var(--font-serif,\'Noto Serif SC\',serif);font-size:1.4rem;font-weight:700;color:var(--color-deep,#1a3a2a);margin-bottom:8px;">' +
+          (denied ? '权限不足' : '请先登录') +
+        '</div>' +
+        '<div style="font-size:0.9rem;color:var(--text-muted,#8a8a8a);line-height:1.7;margin-bottom:32px;">' +
+          (denied ? '需要管理员权限才能访问此页面' : '登录后即可访问此页面') +
+        '</div>' +
+        '<div style="display:flex;gap:16px;justify-content:center;">' +
+          '<button id="routeAccessLoginBtn" style="display:inline-flex;align-items:center;gap:8px;padding:14px 30px;border:none;border-radius:24px;background:linear-gradient(135deg,var(--color-sage,#5a7d5c),var(--color-deep,#1a3a2a));color:#fff;font-size:1rem;font-weight:600;cursor:pointer;box-shadow:0 4px 16px rgba(26,58,42,0.2);">' + (denied ? '切换账号' : '立即登录') + '</button>' +
+          '<button id="routeAccessHomeBtn" style="display:inline-flex;align-items:center;gap:8px;padding:14px 30px;border:1px solid var(--border-light,#ece8e1);border-radius:24px;background:var(--bg-card,#fff);color:var(--text-primary,#1a2f1d);font-size:1rem;font-weight:600;cursor:pointer;">返回首页</button>' +
+        '</div>' +
+      '</div>' +
+    '</div>';
+  var loginBtn = document.getElementById('routeAccessLoginBtn');
+  if (loginBtn) loginBtn.addEventListener('click', function () {
+    if (typeof showAuthModal === 'function') showAuthModal('login');
+  });
+  var homeBtn = document.getElementById('routeAccessHomeBtn');
+  if (homeBtn) homeBtn.addEventListener('click', function () {
+    if (typeof navigateTo === 'function') navigateTo('/');
+  });
+}
+
+/**
+ * 登录/登出后：若当前处于受保护路由且现在已可访问，则重新渲染以刷新登录态，
+ * 避免「登录成功后仍在原页看不到用户中心 / 体验上需要再次登录」。
+ */
+function _refreshCurrentProtectedRoute() {
+  var route = AppState.currentRoute || (window.location.hash || '#/').replace(/^#/, '') || '/';
+  var cfg = Routes[route];
+  if (!cfg || (!cfg.auth && !cfg.role)) return;
+  var access = _checkRouteAccess(route);
+  if (access.allowed) {
+    try { sessionStorage.removeItem('bioquest:authRedirect'); } catch (e) {}
+    if (route === AppState.currentRoute) {
+      handleRoute(route);
+    } else if (typeof navigateTo === 'function') {
+      navigateTo(route);
+    }
   }
 }
 
@@ -3991,14 +4040,19 @@ async function handleLogin() {
       if (typeof _setCurrentUser === 'function') _setCurrentUser(result.user);
       await mergeCloudData();
       var uname = (result.user || {}).username || '用户';
-      // P0-1：登录成功后回到此前因权限不足被拦截的目标路由
+      // P0-1：登录成功后回到此前因权限不足被拦截的目标路由；
+      // 若没有待恢复路由（如直接在受保护页内登录），则刷新当前受保护路由的登录态
       try {
         var authRedirect = sessionStorage.getItem('bioquest:authRedirect');
         if (authRedirect && Routes[authRedirect] && (_checkRouteAccess(authRedirect) || {}).allowed) {
           sessionStorage.removeItem('bioquest:authRedirect');
           navigateTo(authRedirect);
+        } else {
+          _refreshCurrentProtectedRoute();
         }
-      } catch (e) {}
+      } catch (e) {
+        _refreshCurrentProtectedRoute();
+      }
 
     } else {
       var origErr = (result && result.error) || '登录失败';
@@ -4057,6 +4111,18 @@ async function handleGuestLogin() {
     updateAuthUI();
     if (typeof showToast === 'function') {
       showToast('已作为游客登录，数据保存在本地');
+    }
+    // 游客登录后同样刷新当前受保护路由的登录态，避免停在「请先登录」页
+    if (typeof _refreshCurrentProtectedRoute === 'function') {
+      try {
+        var guestRedirect = sessionStorage.getItem('bioquest:authRedirect');
+        if (guestRedirect && Routes[guestRedirect] && (_checkRouteAccess(guestRedirect) || {}).allowed) {
+          sessionStorage.removeItem('bioquest:authRedirect');
+          navigateTo(guestRedirect);
+        } else {
+          _refreshCurrentProtectedRoute();
+        }
+      } catch (e) { _refreshCurrentProtectedRoute(); }
     }
   } else if (result && result.error) {
     if (errorEl) errorEl.textContent = result.error;
