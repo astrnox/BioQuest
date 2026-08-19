@@ -1,0 +1,95 @@
+# BioQuest — 题库数据流水线（P2 Issue #18）
+# ============================================================
+# 目标：题库/索引（data/**）一旦变更，自动重跑生成器：
+#   1. 分配/复核 bioID、产出 index / bank / bioid-map / knowledge-graph；
+#   2. 用内容寻址 + crypto sha256 写入 manifest（files: {path: sha256}）；
+#   3. 提交并 push 重新生成的产物，保证「manifest 与实际分片哈希一致」。
+#
+# 与 ci.yml 的分工：
+#   - ci.yml  在每次 push/PR 上只读地「校验」manifest 与分片一致性，
+#             （sha256 比对、bioID 唯一性、内容寻址反向复算、index/bank 双向一致），
+#             篡改/遗漏分片时直接 FAIL（验收标准 2）。
+#   - 本 workflow 负责产物的「自动生成与回写」（验收标准 1）。
+#
+# 防无限循环：
+#   触发路径 data/** 会因「回写的产物也是 data/**」再次命中。
+#   生成脚本本身是确定性的（同输入→同输出），唯一随时间漂移的字段是
+#   manifest.git 锚点（= 生成时 HEAD）。因此本流程用固定机器人身份提交，
+#   当触发 commit 的作者是机器人时直接跳过重新生成 —— 循环在第二轮终止。
+#
+# 锚点安全（PR #25 教训）：
+#   generate-bio-shards.js 会把 { repo, git } 写入 manifest 供 jsDelivr CDN
+#   版本化分发。本流程只在 main/master 的直接 push 上运行，并用
+#   --repo=<本仓库事件 full_name> 显式固化上游仓库；生成时 HEAD 即为
+#   本仓库已存在的 commit，锚点归属天然正确（不会出现 fork 锚点）。
+
+name: Data Pipeline
+
+on:
+  push:
+    branches: [main, master]
+    paths:
+      - 'data/**'
+      - 'scripts/bio-topic-schema.js'
+      - 'scripts/generate-bio-shards.js'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  regenerate:
+    name: auto-regenerate manifest + shards
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # 防循环：上一次本流程已用过机器人身份提交过，若触发 commit 的作者
+      # 正是机器人，说明是「回写产物」的推送，产物已是最新，无需再生成。
+      - name: Skip auto-committed runs (break the loop)
+        run: |
+          author="${{ github.event.head_commit.author.name }}"
+          echo "trigger author = '$author'"
+          if [ "$author" = "bioquest-bot" ]; then
+            echo "已是机器人回写提交，跳过重新生成，避免无限循环"
+            exit 0
+          fi
+
+      - name: Regenerate shards + manifest
+        # --repo 固定为本仓库 slug，--git 取生成时 HEAD（即触发本次流程、
+        # 已存在于本仓库的 commit）→ 锚点归属正确。
+        run: |
+          branch="${GITHUB_HEAD_REF:-${GITHUB_REF_NAME}}"
+          node scripts/generate-bio-shards.js \
+            --repo="${{ github.event.repository.full_name }}" \
+            --git="$(git rev-parse HEAD)"
+
+      - name: Consistency smoke check (Issue #18 验收标准 2)
+        # manifest 中 files:{path:sha256} 与实际分片一致性、bioID 唯一性、
+        # 内容寻址反向复算、index/bank 双向一致、迁移映射完备。
+        run: node scripts/verify-bio-shards.js
+
+      - name: CDN 锚点一致性校验（PR #25）
+        # 确保生成器写回的 repo/git 指向本仓库而非 fork。
+        run: node scripts/verify-manifest-anchor.js
+
+      - name: Commit regenerated data
+        run: |
+          git config user.name "bioquest-bot"
+          git config user.email "bioquest-bot@users.noreply.github.com"
+          git add data/
+          if git diff --cached --quiet; then
+            echo "题库产物已与生成器输出一致，无需提交"
+          else
+            git commit -m "chore(data): 重建题库分片与 manifest（数据流水线自动生成）"
+            git push origin HEAD
+            echo "已提交并推送重新生成的题库产物"
+          fi
