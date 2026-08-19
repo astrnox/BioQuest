@@ -1113,6 +1113,13 @@ function renderSettingsPanel(container) {
           <input type="text" id="aiModelInput" placeholder="留空使用服务商默认推荐模型" value="${escapeHtml(apiKeyConfig.model || '')}" style="width:100%;margin-top:6px;padding:10px 12px;border:1px solid var(--border-light,#e3e0d8);border-radius:10px;font-size:0.84rem;background:var(--surface-primary,#fff);color:var(--text-primary,#1a1a1a);outline:none;">
         </div>
 
+        <div>
+          <label style="display:flex;align-items:center;gap:8px;font-size:0.8rem;color:var(--text-secondary,#4a4a4a);cursor:pointer;">
+            <input type="checkbox" id="aiKeyRememberCb" ${apiKeyConfig.remember ? 'checked' : ''} style="accent-color:var(--color-sage,#5a7d5c);width:16px;height:16px;">
+            <span>会话内记住 Key（刷新不丢失，关闭标签页自动清除）</span>
+          </label>
+        </div>
+
         <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:4px;">
           <button class="btn btn-sm btn-primary" id="aiKeySaveBtn">保存</button>
           <button class="btn btn-sm btn-secondary" id="aiKeyTestBtn">测试连接</button>
@@ -1153,7 +1160,7 @@ function renderSettingsPanel(container) {
             <p style="margin:0 0 8px;">访问 <a href="https://cloud.siliconflow.cn" target="_blank" style="color:var(--color-amber,#c4956a);">cloud.siliconflow.cn</a> → 注册 → 「API 密钥」。新用户送 14 元额度，Qwen2.5-7B 等小模型永久免费。模型填 <code style="background:rgba(0,0,0,0.05);padding:1px 5px;border-radius:3px;">Qwen/Qwen2.5-7B-Instruct</code></p>
 
             <p style="margin:10px 0 4px;padding-top:8px;border-top:1px dashed var(--border-light,#ece8e1);"><strong>🔒 隐私说明</strong></p>
-            <p style="margin:0;">API Key 仅保存在你本机浏览器 localStorage，不会上传服务器，也不会与他人共享。每次 AI 调用从前端直接转发到对应服务商。</p>
+            <p style="margin:0;">API Key 仅保存在当前页面的内存中；若勾选「会话内记住」，会额外存入本标签页的 sessionStorage（关闭标签页即自动清除）。Key 不会上传服务器，也不会持久化到你浏览器的 localStorage 或磁盘，关闭浏览器后长期不留存。</p>
 
             <p style="margin:10px 0 4px;"><strong>⚡ 用量限制</strong></p>
             <p style="margin:0;">为避免滥用，每个用户每日限 ${_AI_DAILY_LIMIT} 次 AI 调用，0:00 自动重置。自定义 Key 用户同样受此限制。</p>
@@ -1199,42 +1206,49 @@ var _AI_DAILY_LIMIT = 100; // 每用户每日限 100 次 AI 调用
 var _AI_KEY_STORAGE = 'bioquest_ai_key_config';
 var _AI_USAGE_STORAGE = 'bioquest_ai_usage';
 
-// 安全：API Key 仅存页面内存（window 全局对象），不落 localStorage
-// 原因 1：XSS 无法直接从 localStorage 一锅端；2：保证 user.js 与 ai-client.js 在刷新前能共享同一个 Key
-// 刷新后需重新输入 Key（符合"本地存储模式"说明）
-// 注意：使用 window 全局而不是模块私有变量，是为了让 ai-client.js 也能读到
-var _AI_MEM_KEY = '__bioquest_ai_key_memory__';
+// 安全：API Key 存储统一委托 window.BioQuestKeyStore（闭包化单例，P1-3 修复）。
+// - 页面内存：默认，刷新后需重新输入 Key；
+// - 会话内记住（用户显式勾选）：额外写入 sessionStorage，同标签页刷新可恢复，关闭标签页即清除；
+// - 绝不写入 localStorage，避免明文长留存磁盘；也不再使用 window 全局明文属性
+//   window.__bioquest_ai_key_memory__（该属性已由 ai-key-store.js 接管并废弃）。
+
 function _getMemKey() {
   try {
-    if (typeof window[_AI_MEM_KEY] === 'string') return window[_AI_MEM_KEY];
+    if (window.BioQuestKeyStore && typeof window.BioQuestKeyStore.get === 'function') {
+      return window.BioQuestKeyStore.get() || '';
+    }
   } catch (e) {}
   return '';
 }
-function _setMemKey(k) {
-  try { window[_AI_MEM_KEY] = String(k || ''); } catch (e) {}
+
+function _setMemKey(k, remember) {
+  try {
+    if (window.BioQuestKeyStore && typeof window.BioQuestKeyStore.set === 'function') {
+      window.BioQuestKeyStore.set(k, remember);
+    }
+  } catch (e) {}
 }
 
 function _loadApiKeyConfig() {
-  var cfg = { provider: 'deepseek', apiKey: '', model: '' };
+  var cfg = { provider: 'deepseek', apiKey: '', model: '', remember: false };
   try {
     var raw = localStorage.getItem(_AI_KEY_STORAGE);
     if (raw) {
       var stored = JSON.parse(raw);
       cfg.provider = stored.provider || cfg.provider;
       cfg.model = stored.model || '';
-      // 旧版本迁移：localStorage 中残留的明文 Key 移到内存并立即擦除
-      if (stored.apiKey) {
-        _setMemKey(stored.apiKey);
-        _saveApiKeyConfig({ provider: cfg.provider, apiKey: stored.apiKey, model: cfg.model });
-      }
     }
   } catch (e) {}
+  // 旧版 localStorage 明文 Key 的迁移由 BioQuestKeyStore.get() 内部完成并擦除
   cfg.apiKey = _getMemKey();
+  cfg.remember = !!(window.BioQuestKeyStore && window.BioQuestKeyStore.isRemember &&
+    window.BioQuestKeyStore.isRemember());
   return cfg;
 }
 
-function _saveApiKeyConfig(cfg) {
-  _setMemKey((cfg && cfg.apiKey) || '');
+function _saveApiKeyConfig(cfg, remember) {
+  // API Key 一律经闭包单例保存（可选「会话内记住」），绝不落 localStorage
+  _setMemKey((cfg && cfg.apiKey) || '', !!remember);
   try {
     localStorage.setItem(_AI_KEY_STORAGE, JSON.stringify({
       provider: (cfg && cfg.provider) || 'deepseek',
@@ -1320,6 +1334,12 @@ function _bindApiKeySettings() {
     });
   }
 
+  // 读取「会话内记住」勾选项
+  function _rememberChecked() {
+    var cb = document.getElementById('aiKeyRememberCb');
+    return !!(cb && cb.checked);
+  }
+
   var saveBtn = document.getElementById('aiKeySaveBtn');
   if (saveBtn) {
     saveBtn.addEventListener('click', function() {
@@ -1338,11 +1358,15 @@ function _bindApiKeySettings() {
         if (typeof showToast === 'function') showToast('请输入 API Key');
         return;
       }
-      _saveApiKeyConfig(cfg);
+      _saveApiKeyConfig(cfg, _rememberChecked());
       // 恢复遮罩显示
       keyInput.value = cfg.apiKey.length > 4 ? '****' + cfg.apiKey.slice(-4) : '****';
       keyInput.type = 'password';
-      if (typeof showToast === 'function') showToast('已保存（Key 仅存内存，刷新页面后需重新输入）');
+      if (typeof showToast === 'function') {
+        showToast(_rememberChecked()
+          ? '已保存（会话内记住：刷新不丢失，关闭标签页自动清除）'
+          : '已保存（Key 仅存当前页面内存，刷新页面后需重新输入）');
+      }
     });
   }
 
@@ -1354,7 +1378,10 @@ function _bindApiKeySettings() {
   var clearBtn = document.getElementById('aiKeyClearBtn');
   if (clearBtn) {
     clearBtn.addEventListener('click', function() {
-      _saveApiKeyConfig({ provider: 'deepseek', apiKey: '', model: '' });
+      var cb = document.getElementById('aiKeyRememberCb');
+      // 清除 Key 的同时复位「会话内记住」偏好（remember=false 会一并清除 session 中的 Key 与偏好标记）
+      _saveApiKeyConfig({ provider: 'deepseek', apiKey: '', model: '' }, false);
+      if (cb) cb.checked = false;
       keyInput.value = '';
       document.getElementById('aiModelInput').value = '';
       document.getElementById('aiProviderSelect').value = 'deepseek';
@@ -1367,7 +1394,7 @@ function _testAiKeyConnection() {
   var resultEl = document.getElementById('aiKeyTestResult');
   if (!resultEl) return;
   var inputVal = document.getElementById('aiApiKeyInput').value.trim();
-  // 如果输入框是遮罩值，从 localStorage 读取真实 Key
+  // 如果输入框是遮罩值，从内存单例读取真实 Key（不再触达已废弃的明文全局属性）
   if (inputVal.indexOf('****') !== -1) {
     var existingCfg = _loadApiKeyConfig();
     inputVal = existingCfg.apiKey || '';
@@ -1406,8 +1433,9 @@ function _testAiKeyConnection() {
     if (resp.ok) {
       resultEl.textContent = '✓ 连接成功！模型 ' + model + ' 可用';
       resultEl.style.color = 'var(--color-sage,#3a6b4a)';
-      // 保存配置
-      _saveApiKeyConfig(cfg);
+      // 保存配置（携带「会话内记住」偏好）
+      _saveApiKeyConfig(cfg, document.getElementById('aiKeyRememberCb')
+        ? document.getElementById('aiKeyRememberCb').checked : false);
     } else {
       return resp.text().then(function(txt) {
         var msg = '✗ 连接失败（HTTP ' + resp.status + '）';
@@ -1770,10 +1798,18 @@ function renderDataManagement(container) {
       <div class="user-data-actions">
         <div class="user-data-action">
           <div class="user-data-action-info">
-            <div class="user-data-action-label">导出学习数据</div>
-            <div class="user-data-action-desc">将所有学习记录、收藏、错题导出为 JSON 文件</div>
+            <div class="user-data-action-label">导出加密备份</div>
+            <div class="user-data-action-desc">一键导出加密备份文件 (.bqb)，用于数据迁移与灾难还原（需本机解密密钥）</div>
           </div>
-          <button class="btn btn-sm btn-primary" id="userExportBtn">导出</button>
+          <button class="btn btn-sm btn-primary" id="userExportBtn">导出备份</button>
+        </div>
+
+        <div class="user-data-action">
+          <div class="user-data-action-info">
+            <div class="user-data-action-label">导出我的数据</div>
+            <div class="user-data-action-desc">输出可读的明文 JSON，包含学习记录、收藏、错题与统计，供自行查看与留存（GDPR/个保法数据可携权）</div>
+          </div>
+          <button class="btn btn-sm btn-secondary" id="userExportPlainBtn">导出明文</button>
         </div>
 
         <div class="user-data-action">
@@ -1799,7 +1835,16 @@ function renderDataManagement(container) {
   document.getElementById('userExportBtn').addEventListener('click', async () => {
     if (typeof exportData === 'function') {
       var result = await exportData();
-      showToast(result ? '数据已导出' : '数据导出失败');
+      showToast(result ? '加密备份已导出' : '数据导出失败');
+    }
+  });
+
+  document.getElementById('userExportPlainBtn').addEventListener('click', async () => {
+    if (typeof exportData === 'function') {
+      var result = await exportData({ encrypted: false });
+      showToast(result ? '明文数据已导出（我的数据 .json）' : '数据导出失败');
+    } else {
+      showToast('导出模块未就绪');
     }
   });
 
@@ -1831,21 +1876,33 @@ function renderDataManagement(container) {
     showConfirmDialog(
       '!',
       '确认清除所有数据？',
-      '此操作将删除所有学习记录、收藏、错题和统计数据，且不可恢复。建议先导出备份。',
+      '此操作将删除全部学习记录、收藏、错题、统计、习惯、AI 配置与本地缓存等所有 bioquest_* 数据，且不可恢复。建议先导出备份。',
       () => {
         try {
-          const keys = Object.values(
-            typeof KEYS !== 'undefined' ? KEYS : {
-              SETTINGS: 'bioquest_settings',
-              RECORDS: 'bioquest_records',
-              FAVORITES: 'bioquest_favorites',
-              WRONG_QUESTIONS: 'bioquest_wrong_questions',
-              STATS: 'bioquest_stats'
+          // 清除 Web Storage + IndexedDB 用户数据库（clearAllLocalData 现已一并删除 Dexie 数据，
+          // 如 cards/reviews/wrongbook/sessions/settings，以及可重建的 BioQuestCache 缓存）
+          var wipePromise;
+          if (typeof window.clearAllLocalData === 'function') {
+            wipePromise = window.clearAllLocalData();
+          } else {
+            // 兜底：仅清 Web Storage
+            for (var i = localStorage.length - 1; i >= 0; i--) {
+              var k = localStorage.key(i);
+              if (k && k.indexOf('bioquest_') === 0) localStorage.removeItem(k);
             }
-          );
-          keys.forEach((k) => localStorage.removeItem(k));
-          showToast('所有数据已清除');
-          refreshAllData();
+            wipePromise = Promise.resolve([]);
+          }
+          // 一并清除 AI Key 内存与会话内 Key
+          if (typeof window.BioQuestKeyStore === 'object' && window.BioQuestKeyStore.clear) {
+            try { window.BioQuestKeyStore.clear(); } catch (e) {}
+          }
+          wipePromise.then(function () {
+            showToast('所有数据已清除');
+            refreshAllData();
+          }, function () {
+            showToast('部分数据可能未完全清除（请关闭其他标签页后重试）');
+            refreshAllData();
+          });
         } catch (e) {
           showToast('清除失败: ' + e.message);
         }
@@ -1855,14 +1912,17 @@ function renderDataManagement(container) {
 }
 
 function showConfirmDialog(icon, title, text, onConfirm) {
-  var safeIcon = typeof escapeHtml === 'function' ? escapeHtml(icon) : String(icon).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  var esc = function (s) {
+    return typeof escapeHtml === 'function' ? escapeHtml(s) : String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  };
+  var safeIcon = esc(icon);
   const overlay = document.createElement('div');
   overlay.className = 'user-confirm-overlay';
   overlay.innerHTML = `
     <div class="user-confirm-dialog">
       <div class="user-confirm-icon">${safeIcon}</div>
-      <div class="user-confirm-title">${title}</div>
-      <div class="user-confirm-text">${text}</div>
+      <div class="user-confirm-title">${esc(title)}</div>
+      <div class="user-confirm-text">${esc(text)}</div>
       <div class="user-confirm-actions">
         <button class="btn btn-sm btn-secondary" id="confirmCancel">取消</button>
         <button class="btn btn-sm btn-danger" id="confirmOk">确认清除</button>
