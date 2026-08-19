@@ -21,7 +21,7 @@ body:
       label: 复现步骤
       description: 一步一步描述如何触发这个问题（越具体越好）。
       placeholder: |
-        1. 打开 https://bio.sumalink.cn
+        1. 打开 https://astrnox.github.io/BioQuest/
         2. 点击右上角“开始刷题”
         3. 页面开始加载题库……
         4. 此时页面变白，无响应
@@ -48,7 +48,7 @@ body:
         - 浏览器：Chrome / Edge / Firefox / Safari / 手机内置浏览器
         - 设备：电脑 / 安卓手机 / 苹果手机
         - 系统：Windows / macOS / Android / iOS
-        - 页面地址：如 https://bio.sumalink.cn/#/practice
+        - 页面地址：如 https://astrnox.github.io/BioQuest//#/practice
       value: |
         - 浏览器：
         - 设备：

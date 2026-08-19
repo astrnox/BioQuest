@@ -1,15 +1,15 @@
 {
-  "name": "workspace",
+  "name": "bioquest",
   "version": "1.0.0",
   "description": "面向生物竞赛（联赛）备考的全栈学习平台，集知识卡片、模拟试题、学习分析、社区讨论于一体。",
-  "main": "import-data.js",
   "scripts": {
     "test": "npm run test:anchor && npm run test:unit && npm run test:smoke && npm run test:bioid",
     "test:unit": "jest --verbose",
     "test:smoke": "node tests/wiki-smoke-test.cjs",
     "test:bioid": "node tests/bioid-quiz-smoke-test.cjs",
     "test:anchor": "node scripts/verify-manifest-anchor.js",
-    "lint:js": "git ls-files 'js/*.js' 'tests/*.js' 'tests/*.cjs' | xargs -n1 node --check"
+    "lint:js": "git ls-files 'js/*.js' 'tests/*.js' 'tests/*.cjs' | xargs -n1 node --check",
+    "bump:sw": "node scripts/bump-sw.js"
   },
   "repository": {
     "type": "git",
@@ -26,9 +26,8 @@
   "devDependencies": {
     "jest": "^30.4.2",
     "jest-environment-jsdom": "^30.4.1",
-    "jsdom": "^29.1.1"
-  },
-  "dependencies": {
+    "jsdom": "^29.1.1",
     "agent-browser": "^0.31.1"
-  }
+  },
+  "dependencies": {}
 }

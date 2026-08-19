@@ -132,7 +132,7 @@ async function renderEbookTab(container) {
         <h4 style="font-size:0.92rem;font-weight:600;margin-bottom:8px;color:var(--color-deep,#1a3a2a);">已保存的编辑</h4>
         <div id="ebook-saved-edits" style="font-size:0.85rem;color:var(--text-secondary,#4a4a4a);">
           ${Object.keys(savedEdits).length === 0 ? '<span style="color:var(--text-muted,#8a8a8a);">暂无本地编辑</span>' :
-            Object.keys(savedEdits).map(key => `<div style="padding:6px 0;border-bottom:1px solid var(--border-light,#ece8e1);display:flex;justify-content:space-between;align-items:center;"><span>${key}</span><button class="admin-btn admin-btn--danger" style="padding:4px 10px;font-size:0.75rem;" onclick="deleteEbookEdit('${key}')">删除</button></div>`).join('')}
+            Object.keys(savedEdits).map(key => `<div style="padding:6px 0;border-bottom:1px solid var(--border-light,#ece8e1);display:flex;justify-content:space-between;align-items:center;"><span>${escapeHtml(key)}</span><button class="admin-btn admin-btn--danger" style="padding:4px 10px;font-size:0.75rem;" onclick="deleteEbookEdit('${escapeHtml(key)}')">删除</button></div>`).join('')}
         </div>
       </div>
     </div>
@@ -326,7 +326,7 @@ async function renderEbookTab(container) {
     const editsDiv = document.getElementById('ebook-saved-edits');
     if (editsDiv) {
       editsDiv.innerHTML = Object.keys(savedEdits).map(key =>
-        `<div style="padding:6px 0;border-bottom:1px solid var(--border-light,#ece8e1);display:flex;justify-content:space-between;align-items:center;"><span>${key}</span><button class="admin-btn admin-btn--danger" style="padding:4px 10px;font-size:0.75rem;" onclick="deleteEbookEdit('${key}')">删除</button></div>`
+        `<div style="padding:6px 0;border-bottom:1px solid var(--border-light,#ece8e1);display:flex;justify-content:space-between;align-items:center;"><span>${escapeHtml(key)}</span><button class="admin-btn admin-btn--danger" style="padding:4px 10px;font-size:0.75rem;" onclick="deleteEbookEdit('${escapeHtml(key)}')">删除</button></div>`
       ).join('');
     }
   });
@@ -414,8 +414,18 @@ async function renderEbookTab(container) {
     var customEbooks = getCustomEbooks();
     customEbooks.forEach(function(eb) {
       var hasPdf = !!status[eb.id];
+      // P0-3 修复：用户上传书籍的标题/作者/分类为用户可控字段，渲染与属性均需转义
+      function _escJsStr(s) {
+        return String(s || '').replace(/\\/g, '\\\\').replace(/'/g, "\\'").replace(/"/g, '&quot;').replace(/</g, '&lt;');
+      }
+      var ebTitle = escapeHtml(eb.title || '');
+      var ebAuthor = escapeHtml(eb.author || '');
+      var ebCategory = escapeHtml(eb.category || '');
+      var ebIdJs = _escJsStr(eb.id);
+      var ebPathJs = _escJsStr(eb.filePath);
+      var ebTitleAttr = _escJsStr(eb.title);
       rows.push('<tr style="background:rgba(90,125,92,0.04);">' +
-        '<td class="admin-table-name">' + eb.title + (eb.author ? ' <span style="color:var(--text-muted,#8a8a8a);font-size:0.78rem;">(' + eb.author + ')</span>' : '') + ' <span class="admin-q-tag admin-q-tag--module" style="font-size:0.7rem;">' + eb.category + '</span></td>' +
+        '<td class="admin-table-name">' + ebTitle + (eb.author ? ' <span style="color:var(--text-muted,#8a8a8a);font-size:0.78rem;">(' + ebAuthor + ')</span>' : '') + ' <span class="admin-q-tag admin-q-tag--module" style="font-size:0.7rem;">' + ebCategory + '</span></td>' +
         '<td>' + (hasPdf
           ? '<span class="admin-q-tag admin-q-tag--module">已上传</span>'
           : '<span class="admin-q-tag admin-q-tag--difficulty">未上传</span>') +
@@ -423,11 +433,11 @@ async function renderEbookTab(container) {
         '<td>' +
           '<label class="admin-btn admin-btn--primary" style="padding:4px 12px;font-size:0.78rem;cursor:pointer;margin:0;">' +
             '选择PDF' +
-            '<input type="file" accept="application/pdf" style="display:none;" data-book-key="' + eb.id + '" data-book-name="' + eb.title + '" data-file-path="' + eb.filePath + '" data-custom-id="' + eb.id + '" class="admin-pdf-file-input" />' +
+            '<input type="file" accept="application/pdf" style="display:none;" data-book-key="' + eb.id + '" data-book-name="' + ebTitleAttr + '" data-file-path="' + ebPathJs + '" data-custom-id="' + eb.id + '" class="admin-pdf-file-input" />' +
           '</label>' +
         '</td>' +
         '<td>' +
-          '<button class="admin-btn admin-btn--danger" style="padding:4px 12px;font-size:0.78rem;" onclick="adminDeletePdf(\'' + eb.id + '\',\'' + eb.filePath + '\',true)">删除</button>' +
+          '<button class="admin-btn admin-btn--danger" style="padding:4px 12px;font-size:0.78rem;" onclick="adminDeletePdf(\'' + ebIdJs + '\',\'' + ebPathJs + '\',true)">删除</button>' +
         '</td>' +
       '</tr>');
     });
@@ -473,7 +483,7 @@ async function renderEbookTab(container) {
               const timeoutId = setTimeout(() => ctrl.abort(), ADMIN_EBOOK_UPLOAD_TIMEOUT_MS); // 5 分钟超时
               const res = await fetch('/admin/ebook-upload', {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json', 'X-Admin-Key': _adminSecretKey || '' },
+                headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + (await window.getSupabaseSessionToken()) },
                 body: JSON.stringify({ file_path: filePath, file_b64: fileB64, content_type: 'application/pdf' }),
                 signal: ctrl.signal,
                 keepalive: true
@@ -594,7 +604,7 @@ async function renderEbookTab(container) {
             const timeoutId = setTimeout(() => ctrl.abort(), ADMIN_EBOOK_UPLOAD_TIMEOUT_MS);
             const result = await fetch('/admin/ebook-upload', {
               method: 'POST',
-              headers: { 'Content-Type': 'application/json', 'X-Admin-Key': _adminSecretKey || '' },
+              headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + (await window.getSupabaseSessionToken()) },
               body: JSON.stringify({ file_path: filePath, file_b64: fileB64, content_type: 'application/pdf' }),
               signal: ctrl.signal,
               keepalive: true
@@ -673,7 +683,7 @@ window.adminDeletePdf = async function(bookKey, filePath, isCustom) {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'X-Admin-Key': _adminSecretKey || ''
+        'Authorization': 'Bearer ' + (await window.getSupabaseSessionToken())
       },
       body: JSON.stringify({ file_path: filePath })
     });

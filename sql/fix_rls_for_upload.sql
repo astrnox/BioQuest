@@ -1,21 +1,26 @@
 -- ============================================================
--- BioQuest — 修复 RLS 策略以允许后端匿名上传题目
--- 在 Supabase SQL Editor 中运行此文件
--- 问题：questions 表只允许 admin 插入，导致 server.py 用 anon key 上传失败 (401)
--- 方案：允许匿名 INSERT（题库为公开数据，无安全风险），保留 admin 管理 UPDATE/DELETE
+-- BioQuest — 已废弃：请勿再运行本文件
 -- ============================================================
-
--- 删除旧的仅 admin 插入策略
-DROP POLICY IF EXISTS questions_insert_admin ON questions;
-
--- 创建新的匿名可插入策略（允许 server.py 后端上传题目）
-CREATE POLICY questions_insert_anon ON questions
-  FOR INSERT WITH CHECK (true);
-
--- 可选：如果需要更严格的控制，可以改为只允许特定 IP 或使用 service_role key
--- 但对于公开题库场景，匿名插入是安全的
+-- ⚠️⚠️ 本文件已废弃（P0-2 / S-003 安全加固），仅供历史审计留存。
+--
+-- 废弃原因：
+--   server.py 已改用 SUPABASE_SERVICE_ROLE_KEY 上传题目（绕过 RLS），
+--   不再需要匿名 INSERT。下方「匿名可插入」策略会重新打开
+--   「匿名 anon key 可写敏感表」漏洞——若被再次执行，任何拿到
+--   anon key（公开）的人都能向 questions 表写入任意数据。
+--
+-- 正确做法：
+--   1) 运行 sql/migration_v6_security_hardening.sql（questions 仅 admin INSERT，
+--      普通用户仅读，匿名写一律 403/401）；
+--   2) 若题库曾误用本文件的匿名策略，请执行下方「补救」段将其删除。
+--
+-- 补救段（幂等，删除任何遗留的匿名 INSERT 策略）：
+DROP POLICY IF EXISTS questions_insert_anon ON questions;
+DROP POLICY IF EXISTS questions_public_insert ON questions;
+DROP POLICY IF EXISTS cards_public_insert ON cards;
 
 -- 验证策略
 SELECT schemaname, tablename, policyname, permissive, roles, cmd, qual, with_check
 FROM pg_policies
-WHERE tablename = 'questions';
+WHERE tablename IN ('questions', 'cards')
+ORDER BY tablename, policyname;

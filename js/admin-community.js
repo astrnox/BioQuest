@@ -110,36 +110,43 @@ async function renderCommunityTab(container) {
           </thead>
           <tbody>
             ${posts.map(post => {
-              const contentPreview = (post.content || '').length > 60 ? (post.content || '').slice(0, 60) + '...' : (post.content || '');
+              // P0-3 修复：所有用户可控字段渲染前必须 escapeHtml（存储型 XSS 防线）
+              const rawContent = post.content || '';
+              const contentPreview = rawContent.length > 60 ? rawContent.slice(0, 60) + '...' : rawContent;
               const tags = Array.isArray(post.tags) ? post.tags : [];
               const isPinned = post.pinned || post.is_pinned || false;
               const isDeleted = post.is_deleted || false;
               const likeCount = post.like_count !== undefined ? post.like_count : (post.likes || 0);
               const commentCount = post.comment_count !== undefined ? post.comment_count : (post.comments || 0);
+              // P0-3 修复：onclick 内联参数一律先转义/数值化，杜绝引号逃逸注入（与 data-post-id 一致）
+              const postIdJs = escapeHtml(post.id);
+              const likeCountNum = Number(likeCount) || 0;
+              const commentCountNum = Number(commentCount) || 0;
+              const authorName = post.author_name || post.author || post.username || '';
               return `
-                <tr data-post-id="${post.id}" style="${isDeleted ? 'opacity:0.5;background:rgba(192,85,58,0.04);' : ''}">
-                  <td class="admin-table-name">${post.author_name || post.author || post.username || ''}</td>
-                  <td style="max-width:240px;color:var(--text-secondary,#4a4a4a);font-size:0.82rem;" title="${(post.content || '').replace(/"/g, '&quot;')}">${contentPreview}</td>
+                <tr data-post-id="${escapeHtml(post.id)}" style="${isDeleted ? 'opacity:0.5;background:rgba(192,85,58,0.04);' : ''}">
+                  <td class="admin-table-name">${escapeHtml(authorName)}</td>
+                  <td style="max-width:240px;color:var(--text-secondary,#4a4a4a);font-size:0.82rem;" title="${escapeHtml(rawContent)}">${escapeHtml(contentPreview)}</td>
                   <td>
-                    ${tags.map(t => `<span class="admin-q-tag admin-q-tag--module" style="margin:1px;">${t}</span>`).join('')}
+                    ${tags.map(t => `<span class="admin-q-tag admin-q-tag--module" style="margin:1px;">${escapeHtml(t)}</span>`).join('')}
                     ${isPinned ? '<span class="admin-q-tag" style="background:rgba(196,149,106,0.12);color:var(--color-amber,#c4956a);margin:1px;">置顶</span>' : ''}
                     ${isDeleted ? '<span class="admin-q-tag" style="background:rgba(192,85,58,0.12);color:var(--color-error,#c0553a);margin:1px;">已删除</span>' : ''}
                   </td>
-                  <td style="font-family:var(--font-mono,monospace);font-weight:600;color:var(--color-sage,#5a7d5c);cursor:pointer;" title="点击修改点赞数" onclick="handleEditPostStat('${post.id}','like_count',${likeCount})">${likeCount}<span style="font-size:0.65rem;color:#999;margin-left:2px;">✎</span></td>
-                  <td style="font-family:var(--font-mono,monospace);cursor:pointer;" title="点击修改评论数" onclick="handleEditPostStat('${post.id}','comment_count',${commentCount})">${commentCount}<span style="font-size:0.65rem;color:#999;margin-left:2px;">✎</span></td>
+                  <td style="font-family:var(--font-mono,monospace);font-weight:600;color:var(--color-sage,#5a7d5c);cursor:pointer;" title="点击修改点赞数" onclick="handleEditPostStat('${postIdJs}','like_count',${likeCountNum})">${likeCountNum}<span style="font-size:0.65rem;color:#999;margin-left:2px;">✎</span></td>
+                  <td style="font-family:var(--font-mono,monospace);cursor:pointer;" title="点击修改评论数" onclick="handleEditPostStat('${postIdJs}','comment_count',${commentCountNum})">${commentCountNum}<span style="font-size:0.65rem;color:#999;margin-left:2px;">✎</span></td>
                   <td style="font-size:0.78rem;color:var(--text-muted,#8a8a8a);white-space:nowrap;">${post.created_at ? new Date(post.created_at).toLocaleString('zh-CN', {month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit'}) : ''}</td>
                   <td>
                     <div class="admin-table-actions">
-                      <button class="admin-btn admin-btn--ghost" onclick="handleViewPostDetail('${post.id}')">
+                      <button class="admin-btn admin-btn--ghost" onclick="handleViewPostDetail('${postIdJs}')">
                         详情
                       </button>
-                      <button class="admin-btn ${isPinned ? 'admin-btn--ghost' : 'admin-btn--primary'}" onclick="handleTogglePin('${post.id}')">
+                      <button class="admin-btn ${isPinned ? 'admin-btn--ghost' : 'admin-btn--primary'}" onclick="handleTogglePin('${postIdJs}', ${isPinned ? 'true' : 'false'})">
                         ${isPinned ? '取消置顶' : '置顶'}
                       </button>
-                      <button class="admin-btn admin-btn--primary" onclick="handleManagePostComments('${post.id}')">
+                      <button class="admin-btn admin-btn--primary" onclick="handleManagePostComments('${postIdJs}')">
                         评论
                       </button>
-                      <button class="admin-btn admin-btn--danger" onclick="handleDeleteCommunityPost('${post.id}')">
+                      <button class="admin-btn admin-btn--danger" onclick="handleDeleteCommunityPost('${postIdJs}')">
                         ${ICONS.trash}
                         删除
                       </button>
@@ -197,16 +204,19 @@ async function renderCommunityTab(container) {
             ${mutes.map(mute => {
               const expiresAt = mute.expires_at || mute.expire_at || mute.expiry || '';
               const isPermanent = expiresAt === '永久' || expiresAt === 'permanent' || mute.duration_hours === 0 || mute.is_permanent;
+              // P0-3 修复：username 为用户可控字段，渲染与 onclick 均需转义
+              const muteKey = escapeHtml(mute.user_id || mute.username || '');
+              const muteName = escapeHtml(mute.username || mute.user_id || '');
               return `
-                <tr data-mute-user-id="${mute.user_id || mute.username || ''}">
-                  <td class="admin-table-name">${mute.username || mute.user_id || ''}</td>
-                  <td style="color:var(--text-secondary,#4a4a4a);">${mute.reason || ''}</td>
+                <tr data-mute-user-id="${muteKey}">
+                  <td class="admin-table-name">${muteName}</td>
+                  <td style="color:var(--text-secondary,#4a4a4a);">${escapeHtml(mute.reason || '')}</td>
                   <td style="font-size:0.82rem;color:${isPermanent ? 'var(--color-error,#c0553a)' : 'var(--text-muted,#8a8a8a)'};">
                     ${isPermanent ? '永久' : (expiresAt ? new Date(expiresAt).toLocaleString('zh-CN') : '--')}
                   </td>
                   <td>
                     <div class="admin-table-actions">
-                      <button class="admin-btn admin-btn--ghost" onclick="handleUnmuteUser('${mute.user_id || mute.username || ''}')">
+                      <button class="admin-btn admin-btn--ghost" onclick="handleUnmuteUser('${muteKey}')">
                         解除禁言
                       </button>
                     </div>
@@ -601,8 +611,8 @@ window.handleEditComment = async function(commentId, postId) {
   });
 };
 
-window.handleTogglePin = async function(id) {
-  const result = await toggleCommunityPostPin(id);
+window.handleTogglePin = async function(id, currentPinned) {
+  const result = await toggleCommunityPostPin(id, !currentPinned);
   if (result) {
     showAdminToast('操作成功', 'success');
     const container = document.getElementById('admin-tab-content');
@@ -658,7 +668,7 @@ window.handleManagePostComments = async function(postId) {
     : comments.map(function(c) {
         return '<div style="display:flex;justify-content:space-between;align-items:center;padding:10px 12px;border-bottom:1px solid var(--border-light,#ece8e1);gap:10px;">' +
           '<div style="flex:1;min-width:0;">' +
-            '<div style="font-size:0.8rem;color:var(--text-secondary,#4a4a4a);word-break:break-all;">' + (c.content || '').substring(0, 200) + '</div>' +
+            '<div style="font-size:0.8rem;color:var(--text-secondary,#4a4a4a);word-break:break-all;">' + escapeHtml((c.content || '').substring(0, 200)) + '</div>' +
             '<div style="font-size:0.7rem;color:var(--text-muted,#8a8a8a);margin-top:4px;">' + (c.author_id || '') + ' · ' + (c.created_at ? new Date(c.created_at).toLocaleString('zh-CN') : '') + '</div>' +
           '</div>' +
           '<button class="admin-btn admin-btn--danger" style="padding:4px 10px;font-size:0.75rem;white-space:nowrap;flex-shrink:0;" onclick="handleDeleteComment(\'' + c.id + '\',\'' + postId + '\')">' + ICONS.trash + ' 删除</button>' +

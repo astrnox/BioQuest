@@ -6,7 +6,6 @@
  * ============================================================
  */
 
-var _adminSecretKey = null;
 var _adminAuthenticated = false;
 
 // admin modal 焦点陷阱管理（统一通过 MutationObserver 监听 display 变化）
@@ -14,10 +13,6 @@ var _adminModalTraps = {};
 
 // ===== 管理员后台常量（超时 / 限制 / 重试） =====
 var ADMIN_TOKEN_TTL = 5 * 60 * 1000;            // 管理员 token 有效期（5 分钟）
-var ADMIN_LOGIN_MAX_ATTEMPTS = 5;               // 连续失败锁定阈值
-var ADMIN_LOGIN_LOCK_DURATION_MS = 60000;       // 失败锁定时长（60 秒）
-var ADMIN_LOGIN_DELAY_PER_ATTEMPT_MS = 200;     // 每次尝试叠加延迟
-var ADMIN_LOGIN_MAX_DELAY_MS = 2000;            // 单次尝试延迟上限
 var ADMIN_COUNT_LIMIT = 100000;                 // 统计总数用的查询 limit
 var ADMIN_CARDS_COUNT_LIMIT = 1000;             // 卡片统计查询 limit
 var ADMIN_LIST_LIMIT = 100;                     // 列表查询默认 limit
@@ -168,25 +163,20 @@ window._onAuthUserLoaded = function(user) {
       _adminAuthenticated = true;
       // 安全：Supabase 管理员身份仅解锁前端 UI，绝不作为服务端管理凭证
       // （服务端无法验证 Supabase JWT，否则任何人伪造 X-Admin-Key: supabase_admin 即可提权）。
-      // 服务端管理操作仍需通过 adminLogin 输入真实管理员密钥。
-      _adminSecretKey = null;
       var token = JSON.stringify({ t: Date.now(), exp: ADMIN_TOKEN_TTL });
       sessionStorage.setItem('bioquest_admin_auth', token);
 
     }
   } else if (user) {
-    // 普通用户登录时，如果当前 _adminAuthenticated 是从 sessionStorage 恢复的但用户不是 admin，
-    // 清除 admin 认证
-    if (_adminAuthenticated && _adminSecretKey === 'session_restored') {
+    // 普通用户登录时，清除可能残留的 admin 认证（user_group 非 admin 一律视为无权限）
+    if (_adminAuthenticated) {
       _adminAuthenticated = false;
-      _adminSecretKey = null;
       sessionStorage.removeItem('bioquest_admin_auth');
 
     }
   } else {
     // 用户登出时
     _adminAuthenticated = false;
-    _adminSecretKey = null;
     sessionStorage.removeItem('bioquest_admin_auth');
   }
 };
@@ -1048,61 +1038,34 @@ function injectAdminStyles() {
 }
 
 /* ===== API 调用 ===== */
-// 管理员密钥的 SHA-256 哈希值（默认密钥已移除，首次使用需通过 Supabase admin 用户组认证）
-var ADMIN_KEY_HASH = 'd090ea0a3c226b0afb5fa7d86dce875dd63434b1e9bd6dc804ea9bf55a38f57b';
+// P0-2 修复：移除纯客户端 SHA-256 管理员密钥比对（可被前端绕过，不构成真实安全）。
+// 管理员认证统一走 Supabase Auth（signInWithPassword）+ 服务端 RLS：
+//   - 前端仅根据 Supabase 返回的 user_group === 'admin' 决定是否解锁管理 UI；
+//   - 真正的写权限由 sql/ 中的 RLS 策略在服务端强制，伪造前端状态无法提权。
+// 详见 prd/BioQuest-安全与工程整改PRD.md P0-2。
 
-// 登录尝试频率限制（持久化到 sessionStorage，防止刷新绕过）
-var _adminLoginAttempts = Math.max(0, parseInt(sessionStorage.getItem('bioquest_admin_attempts') || '0', 10) || 0);
-var _adminLockUntil = Math.max(0, parseInt(sessionStorage.getItem('bioquest_admin_lock') || '0', 10) || 0);
-
-async function sha256(str) {
-  const encoder = new TextEncoder();
-  const data = encoder.encode(str);
-  const hashBuffer = await crypto.subtle.digest('SHA-256', data);
-  const hashArray = Array.from(new Uint8Array(hashBuffer));
-  return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
-}
-
-async function adminLogin(key) {
-  if (!key) return false;
-
-  // 频率限制：5 次失败后锁定 60 秒
-  var now = Date.now();
-  if (_adminLockUntil > now) {
-    var waitSec = Math.ceil((_adminLockUntil - now) / 1000);
-    showToast('尝试过于频繁，请 ' + waitSec + ' 秒后重试');
+// 登录管理员账号（Supabase Auth：邮箱 + 密码）
+async function adminLogin(email, password) {
+  if (!email || !password) return false;
+  if (typeof window.loginUser !== 'function') return false;
+  var res = await window.loginUser(email, password);
+  if (!res || !res.ok) return false;
+  var user = res.user || (typeof window.getCurrentUser === 'function' ? window.getCurrentUser() : null);
+  if (!user || user.user_group !== 'admin') {
+    // 登录成功但非管理员 → 登出，避免以普通身份停留在管理界面
+    if (typeof window.logoutUser === 'function') { try { await window.logoutUser(); } catch (e) {} }
     return false;
   }
-
-  // 每次尝试叠加延迟（最多 2 秒），减缓暴力破解
-  var delay = Math.min(ADMIN_LOGIN_MAX_DELAY_MS, ADMIN_LOGIN_DELAY_PER_ATTEMPT_MS * (_adminLoginAttempts + 1));
-  await new Promise(function(r) { setTimeout(r, delay); });
-
-  const hash = await sha256(key);
-  if (hash === ADMIN_KEY_HASH) {
-    _adminSecretKey = key;
-    _adminAuthenticated = true;
-    // 使用带时间戳的 token 而非固定 '1'，5 分钟过期
-    var token = JSON.stringify({ t: Date.now(), exp: ADMIN_TOKEN_TTL });
-    sessionStorage.setItem('bioquest_admin_auth', token);
-    _adminLoginAttempts = 0;
-    sessionStorage.removeItem('bioquest_admin_attempts');
-    sessionStorage.removeItem('bioquest_admin_lock');
-    return true;
-  }
-
-  // 失败计数（持久化）
-  _adminLoginAttempts++;
-  sessionStorage.setItem('bioquest_admin_attempts', String(_adminLoginAttempts));
-  if (_adminLoginAttempts >= ADMIN_LOGIN_MAX_ATTEMPTS) {
-    _adminLockUntil = Date.now() + ADMIN_LOGIN_LOCK_DURATION_MS;
-    sessionStorage.setItem('bioquest_admin_lock', String(_adminLockUntil));
-    showToast('连续失败 ' + ADMIN_LOGIN_MAX_ATTEMPTS + ' 次，已锁定 ' + (ADMIN_LOGIN_LOCK_DURATION_MS / 1000) + ' 秒');
-  }
-  return false;
+  _adminAuthenticated = true;
+  // 使用带时间戳的 token 记录会话开始时间，5 分钟过期
+  var token = JSON.stringify({ t: Date.now(), exp: ADMIN_TOKEN_TTL });
+  sessionStorage.setItem('bioquest_admin_auth', token);
+  return true;
 }
 
 // 检查会话中是否已认证（带过期校验）
+// 注：仅凭 token 恢复 UI 解锁状态；最终以 Supabase 会话的 user_group === 'admin' 为准，
+// _onAuthUserLoaded / renderAdminDashboard 会在用户加载后校正（非管理员会被清除）。
 (function() {
   try {
     var raw = sessionStorage.getItem('bioquest_admin_auth');
@@ -1119,7 +1082,6 @@ async function adminLogin(key) {
       return;
     }
     _adminAuthenticated = true;
-    _adminSecretKey = 'session_restored';
   } catch (e) {
     sessionStorage.removeItem('bioquest_admin_auth');
   }
@@ -1159,10 +1121,24 @@ function parseSupabaseError(error) {
 // Supabase 直连的管理员 API
 async function adminApiCall(method, endpoint, body = null) {
   if (!_adminAuthenticated) {
-    return { ok: false, data: { error: '管理员未认证，请重新输入管理员密钥' }, status: 401 };
+    return { ok: false, data: { error: '管理员未认证，请重新登录' }, status: 401 };
   }
   return await handleAdminSupabaseCall(method, endpoint, body);
 }
+
+// 获取当前 Supabase 会话 access_token（供本地 server.py 管理端点的新认证模型使用：
+// 后端以 service role key 独立校验该 token 并确认 user_group === 'admin'，不信任前端自述）。
+// 返回 Promise<string>，无会话时为空串。
+window.getSupabaseSessionToken = async function () {
+  var sb = (typeof window.getSupabase === 'function') ? window.getSupabase() : null;
+  if (!sb || !sb.auth) return '';
+  try {
+    var sessionRes = await sb.auth.getSession();
+    return (sessionRes && sessionRes.data && sessionRes.data.session && sessionRes.data.session.access_token) || '';
+  } catch (e) {
+    return '';
+  }
+};
 
 // 使用 fetch() 直接调用 Supabase REST API，避免 Supabase JS 客户端内部取消请求导致 net::ERR_ABORTED
 async function adminFetchRest(method, table, queryParams, body) {
@@ -1571,31 +1547,31 @@ async function handleAdminSupabaseCall(method, endpoint, body) {
 }
 
 async function getUsers() {
-  if (!_adminSecretKey) return null;
+  if (!_adminAuthenticated) return null;
   const result = await adminApiCall('GET', '/admin/users');
   return result.ok ? result.data.users : null;
 }
 
 async function deleteUser(username) {
-  if (!_adminSecretKey) return false;
+  if (!_adminAuthenticated) return false;
   const result = await adminApiCall('DELETE', `/admin/users/${encodeURIComponent(username)}`);
   return result.ok;
 }
 
 async function updateUser(username, updates) {
-  if (!_adminSecretKey) return null;
+  if (!_adminAuthenticated) return null;
   const result = await adminApiCall('PUT', `/admin/users/${encodeURIComponent(username)}`, updates);
   return result.ok ? result.data : null;
 }
 
 async function resetUserPassword(username, newPassword) {
-  if (!_adminSecretKey) return null;
+  if (!_adminAuthenticated) return null;
   const result = await adminApiCall('POST', `/admin/users/${encodeURIComponent(username)}/reset-password`, { new_password: newPassword });
   return result.ok ? result.data : null;
 }
 
 async function getQuestions(params = {}) {
-  if (!_adminSecretKey) return null;
+  if (!_adminAuthenticated) return null;
   const query = new URLSearchParams(params).toString();
   const result = await adminApiCall('GET', `/admin/questions?${query}`);
   if (!result.ok) {
@@ -1605,26 +1581,26 @@ async function getQuestions(params = {}) {
 }
 
 async function addQuestion(question) {
-  if (!_adminSecretKey) return null;
+  if (!_adminAuthenticated) return null;
   const result = await adminApiCall('POST', '/admin/questions', question);
   return result.ok ? result.data : null;
 }
 
 async function updateQuestion(id, question) {
-  if (!_adminSecretKey) return null;
+  if (!_adminAuthenticated) return null;
   const result = await adminApiCall('PUT', `/admin/questions/${encodeURIComponent(id)}`, question);
   return result.ok ? result.data : null;
 }
 
 async function deleteQuestion(id) {
-  if (!_adminSecretKey) return false;
+  if (!_adminAuthenticated) return false;
   const result = await adminApiCall('DELETE', `/admin/questions/${encodeURIComponent(id)}`);
   return result.ok;
 }
 
 /* ===== 卡片管理 API ===== */
 async function getCards(params = {}) {
-  if (!_adminSecretKey) return null;
+  if (!_adminAuthenticated) return null;
   const query = new URLSearchParams(params).toString();
   const result = await adminApiCall('GET', `/admin/cards?${query}`);
   if (!result.ok) {
@@ -1634,75 +1610,75 @@ async function getCards(params = {}) {
 }
 
 async function addCard(card) {
-  if (!_adminSecretKey) return null;
+  if (!_adminAuthenticated) return null;
   const result = await adminApiCall('POST', '/admin/cards', card);
   return result.ok ? result.data : null;
 }
 
 async function updateCard(id, card) {
-  if (!_adminSecretKey) return null;
+  if (!_adminAuthenticated) return null;
   const result = await adminApiCall('PUT', `/admin/cards/${encodeURIComponent(id)}`, card);
   return result.ok ? result.data : null;
 }
 
 async function deleteCard(id) {
-  if (!_adminSecretKey) return false;
+  if (!_adminAuthenticated) return false;
   const result = await adminApiCall('DELETE', `/admin/cards/${encodeURIComponent(id)}`);
   return result.ok;
 }
 
 async function getCardCategories() {
-  if (!_adminSecretKey) return null;
+  if (!_adminAuthenticated) return null;
   const result = await adminApiCall('GET', '/admin/card-categories');
   return result.ok ? result.data.categories : null;
 }
 
 /* ===== 社区管理 API ===== */
 async function getCommunityPosts(params = {}) {
-  if (!_adminSecretKey) return null;
+  if (!_adminAuthenticated) return null;
   const query = new URLSearchParams(params).toString();
   const result = await adminApiCall('GET', `/admin/community/posts?${query}`);
   return result.ok ? result.data : null;
 }
 
 async function deleteCommunityPost(id) {
-  if (!_adminSecretKey) return false;
+  if (!_adminAuthenticated) return false;
   const result = await adminApiCall('DELETE', `/admin/community/posts/${encodeURIComponent(id)}`);
   return result.ok;
 }
 
-async function toggleCommunityPostPin(id) {
-  if (!_adminSecretKey) return null;
-  const result = await adminApiCall('POST', `/admin/community/posts/${encodeURIComponent(id)}/pin`, { key: _adminSecretKey });
+async function toggleCommunityPostPin(id, pinned) {
+  if (!_adminAuthenticated) return null;
+  const result = await adminApiCall('POST', `/admin/community/posts/${encodeURIComponent(id)}/pin`, { pinned: !!pinned });
   return result.ok ? result.data : null;
 }
 
 async function getCommunityMutes() {
-  if (!_adminSecretKey) return null;
+  if (!_adminAuthenticated) return null;
   const result = await adminApiCall('GET', '/admin/community/mutes');
   return result.ok ? result.data : null;
 }
 
 async function muteCommunityUser(userId, reason, durationHours) {
-  if (!_adminSecretKey) return null;
+  if (!_adminAuthenticated) return null;
   const result = await adminApiCall('POST', '/admin/community/mutes', { user_id: userId, reason, duration_hours: durationHours });
   return result.ok ? result.data : null;
 }
 
 async function unmuteCommunityUser(userId) {
-  if (!_adminSecretKey) return false;
+  if (!_adminAuthenticated) return false;
   const result = await adminApiCall('DELETE', `/admin/community/mutes/${encodeURIComponent(userId)}`);
   return result.ok;
 }
 
 async function updateCommunityPost(postId, updates) {
-  if (!_adminSecretKey) return null;
+  if (!_adminAuthenticated) return null;
   const result = await adminApiCall('PUT', `/admin/community/posts/${encodeURIComponent(postId)}`, updates);
   return result.ok ? result.data : null;
 }
 
 async function deleteCommunityComment(commentId) {
-  if (!_adminSecretKey) return false;
+  if (!_adminAuthenticated) return false;
   const result = await adminApiCall('DELETE', `/admin/community/comments/${encodeURIComponent(commentId)}`);
   return result.ok;
 }
@@ -1749,13 +1725,13 @@ window.dismissReportsByPostId = dismissReportsByPostId;
 
 /* ===== 反馈管理 API ===== */
 async function getFeedbacks() {
-  if (!_adminSecretKey) return null;
+  if (!_adminAuthenticated) return null;
   const result = await adminApiCall('GET', '/admin/feedbacks');
   return result.ok ? result.data : null;
 }
 
 async function getCommunityPostComments(postId) {
-  if (!_adminSecretKey) return null;
+  if (!_adminAuthenticated) return null;
   var sb = (typeof window.getSupabase === 'function') ? window.getSupabase() : null;
   if (!sb) return null;
   var { data, error } = await sb.from('community_comments').select('*').eq('post_id', postId).order('created_at', { ascending: true });
@@ -1792,24 +1768,34 @@ function renderAdminLoginPage(target) {
           ${ICONS.shield}
         </div>
         <div class="admin-login-title">管理员后台</div>
-        <div class="admin-login-subtitle">输入密钥以访问 BioQuest 管理面板</div>
+        <div class="admin-login-subtitle">使用 Supabase 管理员账号登录（邮箱 + 密码）</div>
         <form class="admin-login-form" id="admin-login-form">
+          <div class="admin-login-input-wrap">
+            <input
+              type="email"
+              class="admin-login-input"
+              id="admin-email-input"
+              placeholder="管理员邮箱"
+              required
+              autocomplete="username"
+            >
+          </div>
           <div class="admin-login-input-wrap">
             <input
               type="password"
               class="admin-login-input"
               id="admin-key-input"
-              placeholder="输入管理员密钥"
+              placeholder="密码"
               required
-              autocomplete="off"
+              autocomplete="current-password"
             >
             ${ICONS.key}
           </div>
-          <button type="submit" class="admin-login-btn">验证并登录</button>
+          <button type="submit" class="admin-login-btn">登录</button>
         </form>
         <div class="admin-login-error" id="admin-login-error"></div>
         <div class="admin-login-hint">
-          仅限授权管理员访问。如需密钥，请联系平台管理员。
+          仅限授权管理员访问。管理员账号由 Supabase Auth 管理，密码不存于前端。
         </div>
       </div>
     </div>
@@ -1817,20 +1803,21 @@ function renderAdminLoginPage(target) {
 
   document.getElementById('admin-login-form').addEventListener('submit', async (e) => {
     e.preventDefault();
+    const email = document.getElementById('admin-email-input').value.trim();
     const key = document.getElementById('admin-key-input').value;
     const errorEl = document.getElementById('admin-login-error');
     const btn = e.target.querySelector('.admin-login-btn');
 
-    btn.textContent = '验证中...';
+    btn.textContent = '登录中...';
     btn.disabled = true;
 
-    const success = await adminLogin(key);
+    const success = await adminLogin(email, key);
     if (success) {
       renderAdminDashboard(target);
     } else {
-      errorEl.textContent = '密钥错误，请检查后重试';
+      errorEl.textContent = '登录失败：请检查邮箱/密码，或该账号无管理员权限';
       errorEl.style.display = 'block';
-      btn.textContent = '验证并登录';
+      btn.textContent = '登录';
       btn.disabled = false;
       document.getElementById('admin-key-input').value = '';
       document.getElementById('admin-key-input').focus();
@@ -1843,12 +1830,11 @@ function renderAdminDashboard(target) {
   // 如果通过 Supabase 登录且 user_group 是 admin，自动认证
   // 安全：Supabase 管理员身份仅解锁前端 UI，绝不作为服务端管理凭证
   // （服务端无法验证 Supabase JWT，否则任何人伪造 X-Admin-Key: supabase_admin 即可提权）。
-  // 服务端管理操作仍需通过 adminLogin 输入真实管理员密钥。
+  // 服务端管理操作由 Supabase RLS 策略强制，adminLogin 使用 Supabase Auth 邮箱/密码登录。
   if (!_adminAuthenticated && typeof window.getCurrentUser === 'function') {
     var user = window.getCurrentUser();
     if (user && user.user_group === 'admin') {
       _adminAuthenticated = true;
-      _adminSecretKey = null;  // 前台 UI 解锁，不持有服务端密钥
       var token = JSON.stringify({ t: Date.now(), exp: ADMIN_TOKEN_TTL });
       sessionStorage.setItem('bioquest_admin_auth', token);
 
@@ -1860,9 +1846,8 @@ function renderAdminDashboard(target) {
   // 关键：禁止在 setInterval 回调中同步重入 renderAdminDashboard，
   // 否则一旦 _currentUser 状态在多次触发间反复切换，可能累积调用栈导致 "Maximum call stack size exceeded"。
   // 改为：使用 setTimeout 链式轮询，并在用户就绪后通过 setTimeout(0) 异步重入。
-  // 注意：仅当认证来源是 Supabase 管理员（_adminSecretKey 为 null，即未持有本地密钥）时才等待 currentUser；
-  // 本地密钥认证的管理员不应依赖 Supabase 会话。
-  if (_adminAuthenticated && !_adminSecretKey && !window.getCurrentUser()) {
+  // 注：管理员认证一律来自 Supabase 会话（user_group === 'admin'），无本地密钥认证路径。
+  if (_adminAuthenticated && !window.getCurrentUser()) {
     // 显示加载中
     target.innerHTML = '<div style="padding:80px 20px;text-align:center;color:#666;">正在恢复登录状态...</div>';
     var waitCount = 0;
@@ -1879,7 +1864,6 @@ function renderAdminDashboard(target) {
         // 2 秒后仍无用户，可能是 session 真的过期
         sessionStorage.removeItem('bioquest_admin_auth');
         _adminAuthenticated = false;
-        _adminSecretKey = null;
         setTimeout(function() { renderAdminLoginPage(target); }, 0);
         return;
       }
@@ -1958,7 +1942,6 @@ function renderAdminDashboard(target) {
 
   // 退出登录
   document.getElementById('admin-logout-btn').addEventListener('click', () => {
-    _adminSecretKey = null;
     _adminAuthenticated = false;
     sessionStorage.removeItem('bioquest_admin_auth');
     renderAdminLoginPage(target);
@@ -2144,7 +2127,8 @@ async function loadTabContent(target, tab) {
       }
     } catch(e) {
       console.error('[Admin] 加载卡片出错:', e);
-      contentEl.innerHTML = `<div class="admin-empty"><div class="admin-empty-icon">${ICONS.inbox}</div><div class="admin-empty-text">卡片加载出错: ${e.message}</div><div class="admin-empty-hint">请检查浏览器控制台（F12）获取详细信息</div></div>`;
+      // S-007：不向用户暴露底层错误信息（可能含表名/字段/SQL），仅显示通用提示
+      contentEl.innerHTML = `<div class="admin-empty"><div class="admin-empty-icon">${ICONS.inbox}</div><div class="admin-empty-text">卡片加载失败</div><div class="admin-empty-hint">请稍后重试；若持续失败，请检查浏览器控制台（F12）获取详细信息</div></div>`;
     }
   } else {
     try {
@@ -2156,7 +2140,8 @@ async function loadTabContent(target, tab) {
       }
     } catch(e) {
       console.error('[Admin] 加载题目出错:', e);
-      contentEl.innerHTML = `<div class="admin-empty"><div class="admin-empty-icon">${ICONS.inbox}</div><div class="admin-empty-text">题目加载出错: ${e.message}</div><div class="admin-empty-hint">请检查浏览器控制台（F12）获取详细信息</div></div>`;
+      // S-007：不向用户暴露底层错误信息，仅显示通用提示
+      contentEl.innerHTML = `<div class="admin-empty"><div class="admin-empty-icon">${ICONS.inbox}</div><div class="admin-empty-text">题目加载失败</div><div class="admin-empty-hint">请稍后重试；若持续失败，请检查浏览器控制台（F12）获取详细信息</div></div>`;
     }
   }
 }
