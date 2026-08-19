@@ -1,0 +1,19 @@
+#!/bin/sh
+# commit-msg hook —— 剔除提交信息中的 Co-authored-by 尾巴，保证历史署名仅为本仓库作者。
+#
+# 启用方式（在仓库根目录执行一次）：
+#   git config core.hooksPath .githooks
+# 之后无论手工、IDE 或自动工具提交，落定前都会自动清除 Co-authored-by 行。
+set -e
+
+msg="$1"
+tmp="$(mktemp)"
+
+# 删除 footer 中的 Co-authored-by 行（兼容大小写变体）
+sed -e '/^[Cc]o-[Aa]uthored-[Bb]y:[[:space:]]*/d' "$msg" > "$tmp"
+
+# 折叠尾部连续空行为单一换行，保证消息结尾干净
+perl -0777 -pi -e 's/\s+\z/\n/' "$tmp"
+
+mv "$tmp" "$msg"
+exit 0
