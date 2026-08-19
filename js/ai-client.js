@@ -354,30 +354,19 @@
   }
 
   // 读取当前有效 API Key（仅内部使用，不对外返回）：
-  //   1) 优先读页面内存 window.__bioquest_ai_key_memory__（user.js 保存）；
-  //   2) 兼容迁移：若 localStorage 仍残留旧版明文 Key，搬进内存后立即擦除；
-  //   3) 都没有 → 返回空串，调用方走 canUse() 的配置引导。
+  //   P1-3 修复：统一走 window.BioQuestKeyStore 闭包单例读取。
+  //   该单例负责旧版 localStorage 明文迁移与「会话内记住」的恢复，
+  //   不再在 window 上暴露可直读的明文属性 window.__bioquest_ai_key_memory__。
   function _getApiKey() {
-    var MEM_KEY = '__bioquest_ai_key_memory__';
     try {
-      if (window && typeof window[MEM_KEY] === 'string' && _isValidKey(window[MEM_KEY])) {
-        return window[MEM_KEY];
+      if (typeof window.BioQuestKeyStore === 'object' && typeof window.BioQuestKeyStore.get === 'function') {
+        var k = window.BioQuestKeyStore.get();
+        return _isValidKey(k) ? k : '';
       }
     } catch (e) {}
+    // 兜底：极早期版本可能在 window 上残留明文（理论上已被 ai-key-store 迁移清除）
     try {
-      var raw = localStorage.getItem('bioquest_ai_key_config');
-      if (raw) {
-        var stored = JSON.parse(raw);
-        if (stored && _isValidKey(stored.apiKey)) {
-          var key = stored.apiKey;
-          try { window[MEM_KEY] = key; } catch (e2) {}
-          try {
-            stored.apiKey = '';
-            localStorage.setItem('bioquest_ai_key_config', JSON.stringify(stored));
-          } catch (e3) {}
-          return key;
-        }
-      }
+      if (window && typeof window.__bioquest_ai_key_memory__ === 'string') return window.__bioquest_ai_key_memory__;
     } catch (e) {}
     return '';
   }
