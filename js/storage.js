@@ -41,9 +41,125 @@ function safeSetJSON(key, value) {
     localStorage.setItem(key, JSON.stringify(value));
     return true;
   } catch (e) {
+    var isQuota = !!(e && (e.name === 'QuotaExceededError' || e.code === 22 ||
+      String(e).toLowerCase().indexOf('quota') !== -1));
+    // P1-15：配额超限时先清理可重建的缓存类键再重试一次，避免关键数据静默丢失
+    if (isQuota && _evictCacheOnce() > 0) {
+      try {
+        localStorage.setItem(key, JSON.stringify(value));
+        return true;
+      } catch (e2) {
+        console.warn('[BioQuest Storage] 写入 ' + key + ' 失败（清理缓存后配额仍不足）:', e2.message);
+        return false;
+      }
+    }
+    if (isQuota) {
+      var usage = getStorageUsage();
+      if (usage.percent > 80 && !_quotaWarnFired) {
+        _quotaWarnFired = true;
+        console.warn('[BioQuest Storage] localStorage 已用约 ' + usage.percent.toFixed(0) + '%，接近配额，可能发生数据写入失败。建议导出备份并清理缓存数据。');
+      }
+      return false;
+    }
     console.warn('[BioQuest Storage] 写入 ' + key + ' 失败:', e.message);
     return false;
   }
+}
+
+var _quotaWarnFired = false;
+
+/**
+ * 估算 localStorage 已用字节数与占比（约 5MB 上限），供配额监控（P1-15）。
+ * @returns {{bytes:number, limit:number, percent:number}}
+ */
+function getStorageUsage() {
+  var bytes = 0;
+  try {
+    for (var i = 0; i < localStorage.length; i++) {
+      var k = localStorage.key(i);
+      var v = localStorage.getItem(k);
+      bytes += (k ? k.length : 0) + (v ? (v.length * 1) : 0); // 每个字符约 1 字节估算
+    }
+  } catch (e) {}
+  var limit = 5 * 1024 * 1024; // 约 5MB
+  return { bytes: bytes, limit: limit, percent: Math.min(100, bytes / limit * 100) };
+}
+
+/**
+ * 清除可重建的缓存类键（题面缓存/横幅/预览等），用于配额超限时的保守回收。
+ * @returns {number} 实际删除的键数量
+ */
+function _evictCacheOnce() {
+  var removed = 0;
+  try {
+    for (var i = localStorage.length - 1; i >= 0; i--) {
+      var k = localStorage.key(i);
+      if (k && (k.indexOf('cache') !== -1 || k.indexOf('banner') !== -1 || k.indexOf('preview') !== -1)) {
+        try { localStorage.removeItem(k); removed++; } catch (e) {}
+      }
+    }
+  } catch (e) {}
+  return removed;
+}
+
+/**
+ * 清除全部业务数据（P1-17 GDPR/个保法：删除所有本地数据）。
+ *   - Web Storage：清 bioquest_* 前缀的 localStorage 与 sessionStorage 键，
+ *     保留 Supabase 账号会话 token（sb-*）以维持登录；
+ *   - IndexedDB：删除 bioquest-store（Dexie 用户数据：cards/reviews/wrongbook/sessions/settings）
+ *     与 BioQuestCache（可重建的模块缓存 DB）。
+ * 由于 IndexedDB 删除为异步，本函数返回 Promise<boolean[]>；调用方可 .then 感知结果。
+ */
+function clearAllLocalData() {
+  return new Promise(function (resolve) {
+    // 1) Web Storage
+    try {
+      for (var i = localStorage.length - 1; i >= 0; i--) {
+        var k = localStorage.key(i);
+        if (k && k.indexOf('bioquest_') === 0) localStorage.removeItem(k);
+      }
+    } catch (e) {}
+    try {
+      for (var j = sessionStorage.length - 1; j >= 0; j--) {
+        var sk = sessionStorage.key(j);
+        if (sk && sk.indexOf('bioquest_') === 0) sessionStorage.removeItem(sk);
+      }
+    } catch (e) {}
+
+    // 2) IndexedDB：优先走 DataStore.clearAll()（会先关闭 Dexie 连接再删库），
+    //    覆盖 bioquest-store 用户数据库；BioQuestCache 为可重建模块缓存，一并删除。
+    var idbCalls = [];
+    if (typeof window.DataStore === 'object' && typeof window.DataStore.clearAll === 'function') {
+      idbCalls.push(window.DataStore.clearAll());
+    } else {
+      idbCalls.push(_deleteIndexedDb('bioquest-store'));
+    }
+    idbCalls.push(_deleteIndexedDb('BioQuestCache'));
+
+    Promise.all(idbCalls).then(function (results) {
+      if (results.join('').indexOf('false') !== -1) {
+        console.warn('[BioQuest Storage] 部分 IndexedDB 数据库删除未完成（可能因其他标签页仍打开）。建议关闭其他标签页后重试。');
+      }
+      resolve(results);
+    }, function () {
+      resolve([]);
+    });
+  });
+}
+
+/**
+ * 直接调用 indexedDB.deleteDatabase（尽力而为，异步）。
+ * @returns {Promise<boolean>}
+ */
+function _deleteIndexedDb(name) {
+  return new Promise(function (resolve) {
+    if (typeof indexedDB !== 'object' || !indexedDB) { resolve(false); return; }
+    var req;
+    try { req = indexedDB.deleteDatabase(name); } catch (e) { resolve(false); return; }
+    req.onsuccess = function () { resolve(true); };
+    req.onerror = function () { resolve(false); };
+    req.onblocked = function () { resolve(false); };
+  });
 }
 
 /**
