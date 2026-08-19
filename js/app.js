@@ -118,7 +118,8 @@ const Routes = {
   '/user': {
     title: '用户中心',
     render: 'renderUserPage',
-    module: 'user'
+    module: 'user',
+    auth: true
   },
   '/search': {
     title: '搜索',
@@ -128,7 +129,9 @@ const Routes = {
   '/admin': {
     title: '管理员后台',
     render: 'renderAdminPage',
-    module: 'admin'
+    module: 'admin',
+    auth: true,
+    role: 'admin'
   },
   '/cards': {
     title: '知识卡片',
@@ -173,7 +176,8 @@ const Routes = {
   '/diagnosis': {
     title: '学情诊断',
     render: 'renderSmartDiagnosisPage',
-    module: 'smart-diagnosis'
+    module: 'smart-diagnosis',
+    auth: true
   },
   '/pomodoro': {
     title: '专注模式',
@@ -214,7 +218,8 @@ const Routes = {
   '/dashboard': {
     title: '仪表盘',
     render: 'renderDashboardPage',
-    module: 'dashboard'
+    module: 'dashboard',
+    auth: true
   },
   '/tutor': {
     title: 'AI 生物导师',
@@ -1357,6 +1362,43 @@ function setupScrollIndicator() {
 var _routingInProgress = false;
 var _pendingRoute = null;
 
+/**
+ * P0-1 路由访问检查：返回 { allowed } 或失败原因。
+ * - auth:true  → 需已登录（含游客会话）
+ * - role:'admin' → 需已登录且 user_group === 'admin'
+ */
+function _checkRouteAccess(route) {
+  var cfg = Routes[route];
+  if (!cfg || (!cfg.auth && !cfg.role)) return { allowed: true };
+  var loggedIn = (typeof isLoggedIn === 'function') ? isLoggedIn() : false;
+  if (!loggedIn) {
+    return { allowed: false, reason: 'auth', route: route };
+  }
+  if (cfg.role) {
+    var user = (typeof getCurrentUser === 'function') ? getCurrentUser() : null;
+    if (!user || user.user_group !== cfg.role) {
+      return { allowed: false, reason: 'role', role: cfg.role, route: route };
+    }
+  }
+  return { allowed: true };
+}
+
+/**
+ * P0-1 路由访问拒绝处理：记录来源 → 引导回首页 → 弹登录。
+ */
+function _denyRouteAccess(route, access) {
+  console.warn('[BioQuest] 路由访问被拒绝（随保存，登录后恢复）:', access);
+  try { sessionStorage.setItem('bioquest:authRedirect', route); } catch (e) {}
+  if (typeof navigateTo === 'function') {
+    navigateTo('/');
+  } else if (typeof window.location !== 'undefined') {
+    window.location.hash = '#/';
+  }
+  if (typeof showAuthModal === 'function') {
+    setTimeout(function () { showAuthModal('login'); }, 50);
+  }
+}
+
 function handleRoute(route) {
   // 路由重定向（用于合并相似模块，如 /review-deep → /wrongbook）
   var routeCfg = Routes[route];
@@ -1369,6 +1411,26 @@ function handleRoute(route) {
       navigateTo(routeCfg.redirect);
     } else if (typeof window.location !== 'undefined') {
       window.location.hash = '#' + routeCfg.redirect;
+    }
+    return;
+  }
+
+  // P0-1 路由守卫：未登录/无权限路由拦截。
+  // 需认证（auth）或需特定角色（role）的路由，在渲染前统一校验；
+  // 首帧若认证尚未就绪，则等待其完成后重新判定，避免误拦截已登录用户。
+  var _access = _checkRouteAccess(route);
+  if (!_access.allowed) {
+    if (window._authReadyDone !== true && typeof window.waitAuthReady === 'function') {
+      window.waitAuthReady().then(function () {
+        var again = _checkRouteAccess(route);
+        if (again.allowed) {
+          handleRoute(route);
+        } else {
+          _denyRouteAccess(route, again);
+        }
+      });
+    } else {
+      _denyRouteAccess(route, _access);
     }
     return;
   }
@@ -2276,6 +2338,7 @@ function _resolveAuthReady() {
     _authReadyResolve = null;
     _authReadyPromise = Promise.resolve();
     window._authReadyPromise = _authReadyPromise;
+    window._authReadyDone = true;
   }
 }
 
@@ -2425,6 +2488,10 @@ function showAuthModal(mode) {
           <span class="slide-cap-trigger-arrow">→</span>
         </div>
         <div class="auth-form-extra">
+          <label for="auth-remember" style="display:flex;align-items:center;gap:6px;font-size:0.85rem;color:#cfd8d0;cursor:pointer;user-select:none;">
+            <input type="checkbox" id="auth-remember" checked style="accent-color:#5a7d5c;cursor:pointer;">
+            记住我的账号
+          </label>
           <a href="javascript:void(0)" onclick="authSwitchToForgot()">忘记密码？</a>
         </div>
         <button type="button" class="auth-btn" onclick="handleLogin();return false">登 录</button>
@@ -2533,6 +2600,18 @@ function showAuthModal(mode) {
   setTimeout(function() { overlay.classList.add('visible'); }, 10);
   if (mode === 'register') setTimeout(authSwitchToRegister, 20);
   else setTimeout(updateAuthTabIndicator, 20);
+
+  // P0 登录持久化：若用户勾选了“记住我的账号”，自动预填上次登录标识
+  if (mode !== 'register') {
+    var savedId = null;
+    try { savedId = localStorage.getItem('bioquest_remember_id'); } catch (e) {}
+    if (savedId) {
+      var loginUserEl = document.getElementById('auth-login-username');
+      if (loginUserEl) loginUserEl.value = savedId;
+      var loginPwdEl = document.getElementById('auth-login-password');
+      if (loginPwdEl) loginPwdEl.focus();
+    }
+  }
 
   // 延迟渲染验证码
   setTimeout(function () {
@@ -3896,6 +3975,15 @@ async function handleLogin() {
     var result = await loginUser(username, password);
 
     if (result && result.ok) {
+      // P0 登录持久化：登录成功后按“记住我的账号”选择持久化登录标识（下次自动预填）
+      var rememberEl = document.getElementById('auth-remember');
+      try {
+        if (rememberEl && rememberEl.checked) {
+          localStorage.setItem('bioquest_remember_id', username);
+        } else {
+          localStorage.removeItem('bioquest_remember_id');
+        }
+      } catch (e) {}
       setAuthCooldown('login');
       closeAuthModal();
       showStorageStatus('cloud');
@@ -3903,6 +3991,14 @@ async function handleLogin() {
       if (typeof _setCurrentUser === 'function') _setCurrentUser(result.user);
       await mergeCloudData();
       var uname = (result.user || {}).username || '用户';
+      // P0-1：登录成功后回到此前因权限不足被拦截的目标路由
+      try {
+        var authRedirect = sessionStorage.getItem('bioquest:authRedirect');
+        if (authRedirect && Routes[authRedirect] && (_checkRouteAccess(authRedirect) || {}).allowed) {
+          sessionStorage.removeItem('bioquest:authRedirect');
+          navigateTo(authRedirect);
+        }
+      } catch (e) {}
 
     } else {
       var origErr = (result && result.error) || '登录失败';

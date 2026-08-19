@@ -6,13 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="theme-color" content="#1a2f1d">
   <meta name="color-scheme" content="light dark">
-  <!-- P0-3 修复：meta CSP（GitHub Pages 兼容）。
-       connect-src 锁定 Supabase / 7 家 LLM / CDN / 必应代理域名：
-       即使发生存储型 XSS，被窃取的 AI Key 也无法外传至任意攻击者域名。
+  <!-- P0-2 修复：meta CSP（GitHub Pages 兼容）。
+       已移除 'unsafe-eval'：应用自身代码不使用 eval()/new Function()，
+       消除存储型 XSS 下通过 eval 逃逸 CSP 的路径，防止被窃取的 AI Key 外传。
        本应用为纯 vanilla + 内联脚本/内联样式，script-src/style-src 需保留 unsafe-inline。 -->
   <meta http-equiv="Content-Security-Policy" content="
     default-src 'self';
-    script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net https://unpkg.com;
+    script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://unpkg.com;
     style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com;
     img-src 'self' data: https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://upload.wikimedia.org;
     font-src 'self' data: https://cdn.jsdelivr.net https://cdnjs.cloudflare.com;
