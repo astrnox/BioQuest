@@ -375,6 +375,48 @@ function _privacySection(title, items) {
 }
 
 /**
+ * 首次访问隐私政策提示（P1-19）。
+ * 一次性、可关闭；仅用内联样式 + textContent/按钮，无内联脚本（符合 CSP）。
+ * 关键约束：任何分支都不抛异常、不依赖 DOM 状态，绝不影响 initApp 后续执行
+ * （initApp 在 DOMContentLoaded 直接触发，无 try/catch 兜底）。
+ */
+function _maybeShowPrivacyNotice() {
+  try {
+    var seen = false;
+    try { seen = localStorage.getItem('bioquest_privacy_notice_seen') === '1'; } catch (e) {}
+    if (seen || typeof document === 'undefined' || !document.body) return;
+
+    var el = document.createElement('div');
+    el.id = 'privacy-notice';
+    el.setAttribute('role', 'alert');
+    el.style.cssText = 'position:fixed;left:12px;right:12px;bottom:12px;z-index:2147483000;' +
+      'display:flex;flex-wrap:wrap;align-items:center;gap:12px;padding:14px 16px;border-radius:12px;' +
+      'background:#ffffff;border:1px solid #ece8e1;box-shadow:0 6px 24px rgba(0,0,0,0.12);' +
+      'font-family:var(--font-sans, sans-serif);font-size:0.85rem;color:#2c3e30;line-height:1.5;max-width:640px;margin:0 auto;';
+    var txt = document.createElement('span');
+    txt.style.cssText = 'flex:1;min-width:220px;';
+    txt.textContent = '我们重视你的数据隐私：学习数据默认仅保存在本地，可随时导出或清除。';
+    var link = document.createElement('a');
+    link.href = '#/privacy';
+    link.textContent = '查看隐私政策';
+    link.style.cssText = 'color:#3a6b4a;font-weight:600;white-space:nowrap;text-decoration:none;';
+    var closeBtn = document.createElement('button');
+    closeBtn.type = 'button';
+    closeBtn.textContent = '我知道了';
+    closeBtn.style.cssText = 'border:1px solid #3a6b4a;background:#3a6b4a;color:#fff;border-radius:8px;padding:6px 14px;font-size:0.82rem;cursor:pointer;white-space:nowrap;';
+    closeBtn.addEventListener('click', function () {
+      try { localStorage.setItem('bioquest_privacy_notice_seen', '1'); } catch (e) {}
+      if (el.parentNode) el.parentNode.removeChild(el);
+    });
+
+    el.appendChild(txt);
+    el.appendChild(link);
+    el.appendChild(closeBtn);
+    document.body.appendChild(el);
+  } catch (e) { /* 提示失败绝不能影响应用启动 */ }
+}
+
+/**
  * 获取当前 hash 对应的路由路径
  * @returns {string} 路由路径，如 '/', '/practice', '/exam'
  */
