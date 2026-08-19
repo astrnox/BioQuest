@@ -86,9 +86,9 @@ function renderCardsTab(container, cardsData) {
               return `
                 <tr data-card-id="${card.id}">
                   <td style="font-family:var(--font-mono,monospace);font-size:0.75rem;color:var(--color-sage,#5a7d5c);">${String(card.id).slice(0, 12)}${String(card.id).length > 12 ? '...' : ''}</td>
-                  <td><span class="admin-q-tag admin-q-tag--module">${card.category || ''}</span></td>
-                  <td class="admin-table-name">${card.title || ''}</td>
-                  <td style="color:var(--text-muted,#8a8a8a);font-size:0.82rem;max-width:300px;" title="${(card.question || '').replace(/"/g, '&quot;')}">${qPreview}</td>
+                  <td><span class="admin-q-tag admin-q-tag--module">${escapeHtml(card.category || '')}</span></td>
+                  <td class="admin-table-name">${escapeHtml(card.title || '')}</td>
+                  <td style="color:var(--text-muted,#8a8a8a);font-size:0.82rem;max-width:300px;" title="${escapeHtml(card.question || '')}">${escapeHtml(qPreview)}</td>
                   <td>
                     <div class="admin-table-actions">
                       <button class="admin-btn admin-btn--ghost" onclick='handleEditCard(${JSON.stringify(card).replace(/'/g, "&#39;")})'>

@@ -37,15 +37,13 @@
     nvidia:      { base: 'https://integrate.api.nvidia.com/v1', model: 'meta/llama-3.2-90b-vision-instruct', name: 'NVIDIA Llama-Vision' }
   };
 
-  // P0-2 修复：按用户要求内置免费模型 API Key（glm4flash，智谱 glm-4-flash 同模型别名）
-  // 安全说明：该项目运行于本地静态环境，所有用户数据只保存在浏览器本地。
-  // 内置 Key 用于保证开箱即用，若用户配置自有 Key 则优先使用用户配置。
-  var BUILTIN_PROVIDER = 'zhipu';
-  var BUILTIN_API_KEY = '15d687f54c0e4ab49f693a0261a85ceb.ESOfcHFXBhvZPBwk';
-  var BUILTIN_MODEL = 'glm4flash';
-
-  var DEFAULT_PROVIDER = BUILTIN_PROVIDER;
-  var DEFAULT_MODEL = BUILTIN_MODEL;
+  // P0-1/S-001 修复：移除硬编码内置 API Key，全面转向 BYOK（用户自带 Key）。
+  // 安全说明：本文件不再以任何形式写死/携带 LLM API Key。
+  //   - Key 由 user.js 在「我的 → 设置」配置，仅保存在页面内存
+  //     （window.__bioquest_ai_key_memory__），不落 localStorage、不入 git；
+  //   - loadConfig() 返回值不再包含 apiKey（控制台调用也不会泄露）；
+  //   - 无 Key 时 AI 入口显示配置引导，刷题/错题本/卡片/实验等核心功能不受影响。
+  var DEFAULT_PROVIDER = 'zhipu'; // 无用户配置时的默认服务商（智谱 glm-4-flash 免费）
 
   // ===== 调用限制 / 超时 / 重试常量 =====
   var AI_DAILY_USAGE_LIMIT = 9999;            // 用户要求：不要权限限制，额度放最大
@@ -190,9 +188,10 @@
   }
 
   // 加载用户配置（与 user.js 共享 localStorage key）
-  // 统一规则：
-  //   1) 若用户配置存在且 apiKey 非空（不是 undefined/null/''/占位符'xxx'/'your-key'）→ 用用户配置
-  //   2) 否则一律使用内置 BUILTIN_PROVIDER/BUILTIN_API_KEY/BUILTIN_MODEL（纯前端直连智谱，不走后端代理）
+  // 统一规则（P0-1/S-001 修复，BYOK）：
+  //   1) 用户在「我的 → 设置」配置的 Key 保存在页面内存，通过 _getApiKey() 读取；
+  //   2) loadConfig() 只返回非敏感偏好（provider/model），绝不携带 apiKey；
+  //   3) 无 Key 时不兜底任何内置密钥，由 canUse() 给出配置引导。
   function _isValidKey(k) {
     if (!k) return false;
     if (typeof k !== 'string') return false;
@@ -335,8 +334,9 @@
   }
 
   function loadConfig() {
-    // 1) 先从 localStorage 读取 provider / model 等非敏感偏好
-    var prefs = { provider: BUILTIN_PROVIDER, model: '' };
+    // P0-1/S-001 修复：只返回非敏感偏好（provider/model），不含 apiKey。
+    // 实际 Key 由 _getApiKey() 从页面内存读取，仅供内部 fetch 使用。
+    var prefs = { provider: DEFAULT_PROVIDER, model: '' };
     try {
       var rawPref = localStorage.getItem('bioquest_ai_key_config');
       if (rawPref) {
@@ -344,35 +344,42 @@
         if (stored) {
           prefs.provider = stored.provider || prefs.provider;
           prefs.model = stored.model || '';
-          // 旧版本兼容：万一 localStorage 里残留了明文 Key 且合法，也尝试一下
-          if (_isValidKey(stored.apiKey)) {
-            var nm1 = _normalizeModel(prefs.provider, prefs.model);
-            return {
-              provider: prefs.provider,
-              apiKey: stored.apiKey,
-              model: nm1 || PROVIDER_MAP[prefs.provider].defaultModel
-            };
-          }
         }
       }
     } catch (e) {}
 
-    // 2) 再从 window 共享内存读：user.js 保存但不落盘的真实 Key（"我的→设置" 填完立刻用的场景）
+    var model = _normalizeModel(prefs.provider, prefs.model) ||
+      (PROVIDER_MAP[prefs.provider] ? PROVIDER_MAP[prefs.provider].defaultModel : '');
+    return { provider: prefs.provider, model: model };
+  }
+
+  // 读取当前有效 API Key（仅内部使用，不对外返回）：
+  //   1) 优先读页面内存 window.__bioquest_ai_key_memory__（user.js 保存）；
+  //   2) 兼容迁移：若 localStorage 仍残留旧版明文 Key，搬进内存后立即擦除；
+  //   3) 都没有 → 返回空串，调用方走 canUse() 的配置引导。
+  function _getApiKey() {
+    var MEM_KEY = '__bioquest_ai_key_memory__';
     try {
-      var MEM_KEY = '__bioquest_ai_key_memory__';
       if (window && typeof window[MEM_KEY] === 'string' && _isValidKey(window[MEM_KEY])) {
-        var nm2 = _normalizeModel(prefs.provider, prefs.model);
-        return {
-          provider: prefs.provider,
-          apiKey: window[MEM_KEY],
-          model: nm2 || (PROVIDER_MAP[prefs.provider] ? PROVIDER_MAP[prefs.provider].defaultModel : BUILTIN_MODEL)
-        };
+        return window[MEM_KEY];
       }
     } catch (e) {}
-
-    // 3) 以上都无 → 内置 BUILTIN（zhipu glm-4-flash）
-    var builtinNormModel = _normalizeModel(BUILTIN_PROVIDER, BUILTIN_MODEL) || PROVIDER_MAP[BUILTIN_PROVIDER].defaultModel;
-    return { provider: BUILTIN_PROVIDER, apiKey: BUILTIN_API_KEY, model: builtinNormModel };
+    try {
+      var raw = localStorage.getItem('bioquest_ai_key_config');
+      if (raw) {
+        var stored = JSON.parse(raw);
+        if (stored && _isValidKey(stored.apiKey)) {
+          var key = stored.apiKey;
+          try { window[MEM_KEY] = key; } catch (e2) {}
+          try {
+            stored.apiKey = '';
+            localStorage.setItem('bioquest_ai_key_config', JSON.stringify(stored));
+          } catch (e3) {}
+          return key;
+        }
+      }
+    } catch (e) {}
+    return '';
   }
 
   // 检查每日用量上限
@@ -402,10 +409,9 @@
     var data = getUsage();
     // 调用额度（已放大到 9999，基本不限）
     if (data.count >= AI_DAILY_USAGE_LIMIT) return { ok: false, reason: '今日 AI 调用已达上限（' + AI_DAILY_USAGE_LIMIT + ' 次），明日 0:00 重置' };
-    // 关键修复：不再有 useBackend 分支！server.py /chat 代理在 agent sandbox 环境返回 501，且内置 Key 本就可直接直连智谱
-    // 一律视为 useBackend: false，走 PROVIDER_MAP 直连
-    if (!_isValidKey(cfg.apiKey)) {
-      return { ok: false, reason: 'AI API Key 未正确配置，请前往「我的 → 设置」填写有效 Key（或不填使用内置免费 Key）。' };
+    // P0-1/S-001 修复：无内置兜底 Key，一律 BYOK。未配置则给出配置引导。
+    if (!_isValidKey(_getApiKey())) {
+      return { ok: false, reason: '尚未配置 AI API Key，请前往「我的 → 设置」填写你自己的免费 Key（智谱 glm-4-flash、DeepSeek 均有免费额度）。' };
     }
     return { ok: true, useBackend: false, config: cfg };
   }
@@ -423,9 +429,9 @@
     }
 
     // 历史上这里会走到 server.py 的 /chat 代理端点，但该端点在 agent sandbox
-    // 预览环境返回 HTTP 501（NOT IMPLEMENTED），导致"明明配好 Key 仍报不可用"。
-    // 现已移除该分支：一律走 check.config 下的 PROVIDER_MAP 直连（内置 glm4flash Key 可用）。
-    // 为了兼容老逻辑（若 canUse 偶发返回 useBackend:true），这里也强制走内置 Key 直连。
+    // 预览环境返回 HTTP 501（NOT IMPLEMENTED）。
+    // P0-1/S-001 修复后：无内置兜底 Key，一律走 check.config 下的 PROVIDER_MAP
+    // 直连用户自配 Key；未配置时 canUse() 已在入口拦截并给出引导。
     var cfg = check.config;
     if (!cfg) cfg = loadConfig();
     var prov = PROVIDER_MAP[cfg.provider] || PROVIDER_MAP.deepseek;
@@ -448,7 +454,7 @@
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': 'Bearer ' + cfg.apiKey,
+        'Authorization': 'Bearer ' + _getApiKey(),
         'Accept': 'text/event-stream'
       },
       body: JSON.stringify(body),
@@ -487,7 +493,7 @@
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': 'Bearer ' + cfg.apiKey
+        'Authorization': 'Bearer ' + _getApiKey()
       },
       body: JSON.stringify(body),
       signal: opts.signal
@@ -544,7 +550,7 @@
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': 'Bearer ' + cfg.apiKey
+        'Authorization': 'Bearer ' + _getApiKey()
       },
       body: JSON.stringify(body),
       signal: opts.signal
@@ -779,7 +785,7 @@
    */
   function visionRecognize(opts) {
     var cfg = loadConfig();
-    if (!cfg.apiKey) {
+    if (!_getApiKey()) {
       if (opts.onError) opts.onError(new Error('未配置 AI API Key，无法使用视觉 OCR'));
       return Promise.reject(new Error('未配置 AI API Key'));
     }
@@ -816,7 +822,7 @@
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': 'Bearer ' + cfg.apiKey
+        'Authorization': 'Bearer ' + _getApiKey()
       },
       body: body,
       signal: opts.signal
@@ -848,13 +854,13 @@
   function hasVisionSupport() {
     var cfg = loadConfig();
     // 必须有 API Key 且当前服务商在视觉模型表中（避免 DeepSeek/Kimi 误用智谱端点导致 401）
-    return !!cfg.apiKey && !!VISION_MODELS[cfg.provider];
+    return !!_getApiKey() && !!VISION_MODELS[cfg.provider];
   }
 
   // 检查当前配置是否支持文生图
   function hasImageGenSupport() {
     var cfg = loadConfig();
-    return !!cfg.apiKey && !!IMAGE_MODELS[cfg.provider];
+    return !!_getApiKey() && !!IMAGE_MODELS[cfg.provider];
   }
 
   /**
@@ -867,7 +873,7 @@
   function generateImage(opts) {
     opts = opts || {};
     var cfg = loadConfig();
-    if (!cfg.apiKey) {
+    if (!_getApiKey()) {
       var err = new Error('未配置 AI API Key，无法使用文生图功能');
       if (opts.onError) opts.onError(err);
       return Promise.reject(err);
@@ -895,7 +901,7 @@
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': 'Bearer ' + cfg.apiKey
+        'Authorization': 'Bearer ' + _getApiKey()
       },
       body: JSON.stringify(body),
       signal: opts.signal
@@ -1003,7 +1009,7 @@
     var cfg = loadConfig();
 
     // Metaso 使用单一模型，不需要 preferStrong 切换
-    var useStrong = stageCfg.preferStrong && cfg.apiKey && cfg.provider !== 'zhipu' && cfg.provider !== 'metaso';
+    var useStrong = stageCfg.preferStrong && _getApiKey() && cfg.provider !== 'zhipu' && cfg.provider !== 'metaso';
 
     var callOpts = {
       messages: messages,

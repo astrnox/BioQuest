@@ -66,7 +66,9 @@
     }).catch(function (err) {
       clearTimeout(timeoutHandle);
       _hideLoading();
-      _showError('课堂生成失败：' + (err.message || err) + '。请检查 AI 配置或稍后重试。');
+      console.warn('[Classroom] 课堂生成失败:', err && err.message);
+      // S-007：对用户仅显示通用错误提示，不暴露底层错误信息
+      _showError('课堂生成失败，请检查 AI 配置或稍后重试。');
     });
   }
 
@@ -531,7 +533,9 @@
       }
       _renderQuizQuestions(set);
     }).catch(function (err) {
-      stage.querySelector('.cls-quiz-wrap').innerHTML = '<p style="color:#d44;">题库加载失败：' + _escapeHtml(err.message) + '</p>';
+      console.warn('[Classroom] 题库加载失败:', err && err.message);
+      // S-007：对用户仅显示通用错误提示，不暴露底层错误信息
+      stage.querySelector('.cls-quiz-wrap').innerHTML = '<p style="color:#d44;">题库加载失败，请稍后重试。</p>';
       if (instance) instance.completeScene({ correct: 0, total: 0 });
     });
   }
@@ -812,7 +816,9 @@
         if (TTS && TTS.isEnabled()) TTS.speak(acc, '主讲老师');
       },
       onError: function (err) {
-        streamTarget.textContent = '回答失败：' + (err.message || err);
+        console.warn('[Classroom] AI 回答失败:', err && err.message);
+        // S-007：对用户仅显示通用错误提示，不暴露底层错误信息
+        streamTarget.textContent = '回答失败，请稍后重试。';
       }
     });
   }

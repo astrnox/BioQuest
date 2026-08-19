@@ -1579,13 +1579,48 @@ def _check_rate_limit(ip, endpoint, max_per_minute=20):
         bucket.append(now)
         return True
 
+def _verify_supabase_admin_token(token):
+    """新认证模型：用 Supabase 校验前端携带的用户 access_token，
+    并确认该用户 user_group == 'admin'（以 service role key 调用，不信任前端自述身份）。"""
+    try:
+        if not token or not SUPABASE_URL or not SUPABASE_SERVICE_ROLE_KEY:
+            return False
+        # 1) 校验 token 并取用户
+        req = urllib.request.Request(
+            SUPABASE_URL + "/auth/v1/user",
+            headers={
+                "apikey": SUPABASE_SERVICE_ROLE_KEY,
+                "Authorization": "Bearer " + token,
+            })
+        with urllib.request.urlopen(req, timeout=6) as resp:
+            user = json.loads(resp.read().decode("utf-8"))
+        uid = user.get("id") or ""
+        if not re.fullmatch(r"[0-9a-fA-F-]{36}", uid):
+            return False
+        # 2) 查 profiles.user_group（service role 绕过 RLS，读取准确角色）
+        q = urllib.request.Request(
+            SUPABASE_URL + "/rest/v1/profiles?select=user_group&id=eq." + uid,
+            headers={
+                "apikey": SUPABASE_SERVICE_ROLE_KEY,
+                "Authorization": "Bearer " + SUPABASE_SERVICE_ROLE_KEY,
+            })
+        with urllib.request.urlopen(q, timeout=6) as resp2:
+            rows = json.loads(resp2.read().decode("utf-8"))
+        return bool(rows) and rows[0].get("user_group") == "admin"
+    except Exception as e:
+        log.warning("Supabase 管理员 token 校验失败: %s", e)
+        return False
+
+
 def _check_admin_authorization(headers):
-    """检查请求头是否携带有效的管理员密钥。
+    """检查请求头是否携带有效的管理员凭证。
     支持：
-    1. X-Admin-Key 携带明文密钥（后端哈希后比对）
-    2. X-Admin-Key-Hash 携带预哈希值（生产环境推荐，避免明文传输）
+    1. X-Admin-Key 携带明文密钥（后端哈希后比对）——遗留兼容
+    2. X-Admin-Key-Hash 携带预哈希值（生产环境推荐，避免明文传输）——遗留兼容
+    3. Authorization: Bearer <Supabase access_token>——新认证模型（管理员经
+       Supabase Auth 邮箱/密码登录，服务端以 service role key 独立校验角色）
     注意：绝不信任前端自称的身份标记（如 supabase_admin / user_group），
-    服务端无法验证 Supabase JWT，唯一安全边界是本密钥。
+    服务端唯一安全边界是密钥哈希或对 Supabase 的独立校验。
     """
     try:
         provided = (headers.get("X-Admin-Key") or headers.get("x-admin-key") or "").strip()
@@ -1595,6 +1630,9 @@ def _check_admin_authorization(headers):
         if provided:
             h = hashlib.sha256(provided.encode("utf-8")).hexdigest()
             return h == ADMIN_KEY_HASH_HEX
+        authz = (headers.get("Authorization") or headers.get("authorization") or "").strip()
+        if authz.lower().startswith("bearer "):
+            return _verify_supabase_admin_token(authz[7:].strip())
     except Exception:
         pass
     return False
@@ -2015,7 +2053,8 @@ class Handler(http.server.BaseHTTPRequestHandler):
             # 管理员 OCR 上传题目：接收 base64 图片，调用 vision 模型提取题目文字，
             # 再调用 photo-quiz 逻辑补全选项/答案/解析，最后入库。
             # 关键安全约束：
-            # 1. 必须提供 admin 密钥（_adminSecretKey 在 admin 客户端通过 X-Admin-Key 头传递）
+            # 1. 必须提供管理员凭证（新认证模型：Authorization: Bearer <Supabase access_token>，
+            #    服务端用 service role key 校验并确认 user_group == 'admin'；遗留 X-Admin-Key 仅作兼容）
             # 2. 图片大小限制 ≤ 5MB
             # 3. 仅调用 vision-capable 模型（zhipu glm-4v / qwen qwen-vl / siliconflow Qwen2-VL / nvidia yi-vl）
             try:
