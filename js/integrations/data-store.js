@@ -266,6 +266,26 @@
   }
 
   /**
+   * 清空整库（P1-17 GDPR/个保法删除权：连同 IndexedDB 用户数据一并删除，而非仅清 Web Storage）。
+   * 会先关闭当前 Dexie 连接，再调用 indexedDB.deleteDatabase 删除整个 bioquest-store 数据库。
+   * 若其他标签页仍持有连接（onblocked），尽力而为：resolve(false) 但不抛出。
+   * @returns {Promise<boolean>} 是否删除成功
+   */
+  function clearAll() {
+    try {
+      if (_db) { try { _db.close(); } catch (e) {} _db = null; }
+    } catch (e) {}
+    return new Promise(function (resolve) {
+      if (typeof indexedDB !== 'object' || !indexedDB) { resolve(false); return; }
+      var req;
+      try { req = indexedDB.deleteDatabase(DB_NAME); } catch (e) { resolve(false); return; }
+      req.onsuccess = function () { resolve(true); };
+      req.onerror = function () { resolve(false); };
+      req.onblocked = function () { resolve(false); }; // 其他标签页仍打开，尽力而为
+    });
+  }
+
+  /**
    * 计数
    */
   function count(table) {
@@ -393,6 +413,7 @@
     putRecord: putRecord,
     deleteRecord: deleteRecord,
     clearTable: clearTable,
+    clearAll: clearAll,
     count: count,
     queryByIndex: queryByIndex,
     addReview: addReview,
