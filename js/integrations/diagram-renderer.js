@@ -2,13 +2,25 @@
  * BioQuest — 图表渲染集成模块（Mermaid）
  * 把文本格式图表（流程图/时序图/类图等）渲染为 SVG
  * 依赖：js/vendor/mermaid.min.js -> window.mermaid
- * 注：mermaid.initialize 由 vendor-init.js 在 DOMContentLoaded 时调用
+ * 注：P0 性能优化——mermaid 首屏不再预载，改为按需惰性加载；
+ *     mermaid.initialize 由 vendor-init.js 在启动期调用，此处仅在尚未初始化时兜底。
  */
 (function () {
   'use strict';
 
   var _seq = 0;
   var _pendingRenders = {};  // id -> { code, container }
+
+  // P0 性能优化：mermaid 从首屏 defer 移除后，在这里按需惰性加载。
+  // 走统一 loadScriptOnce（带去重与超时），零依赖；同名脚本重复请求会被去重。
+  var _loadingMermaid = false;
+  function loadMermaid() {
+    if (typeof window.mermaid !== 'undefined') return Promise.resolve(true);
+    if (typeof window.loadScriptOnce !== 'function') return Promise.resolve(false);
+    return window.loadScriptOnce('js/vendor/mermaid.min.js?v=20260723d')
+      .then(function () { return typeof window.mermaid !== 'undefined'; })
+      .catch(function () { return false; });
+  }
 
   function ensureMermaid() {
     if (typeof window.mermaid === 'undefined') {
@@ -46,6 +58,21 @@
    * @returns {Promise<string|null>} SVG 字符串
    */
   function render(containerId, code, opts) {
+    if (typeof window.mermaid === 'undefined') {
+      // P0 性能优化：mermaid 尚未加载则按需下载，完成后重入渲染。
+      // 避免并发重复触发（用 _loadingMermaid 去重）。
+      if (typeof window.loadScriptOnce !== 'function' || _loadingMermaid) {
+        return Promise.resolve(null);
+      }
+      _loadingMermaid = true;
+      return loadMermaid().then(function (loaded) {
+        _loadingMermaid = false;
+        if (loaded) return render(containerId, code, opts);
+        var c = document.getElementById(containerId);
+        if (c) c.innerHTML = '<p style="color:var(--text-muted);text-align:center;padding:24px;">图表组件未加载</p>';
+        return null;
+      });
+    }
     var container = document.getElementById(containerId);
     if (!container) {
       console.warn('[DiagramRenderer] 容器不存在:', containerId);
@@ -127,6 +154,13 @@
    */
   function renderAll(selector) {
     selector = selector || '.mermaid, pre[data-mermaid]';
+    if (typeof window.mermaid === 'undefined') {
+      // P0 性能优化：mermaid 尚未加载则按需下载，完成后重入。
+      if (typeof window.loadScriptOnce !== 'function') return Promise.resolve([]);
+      return loadMermaid().then(function (loaded) {
+        return loaded ? renderAll(selector) : [];
+      });
+    }
     if (!ensureInit()) return Promise.resolve([]);
     var nodes = document.querySelectorAll(selector);
     var promises = [];
