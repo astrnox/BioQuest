@@ -1012,6 +1012,26 @@ function getQueryParams(url) {
 }
 
 /**
+ * 安全清洗 URL 参数值（P1-5）。
+ * 对来自 URL 的入参做白名单式校验与过滤：
+ *   - 仅接受字符串
+ *   - 剔除控制字符（含 \x00-\x1f、\x7f）与危险空白，防参数注入 / 控制字符污染渲染
+ *   - 限制最大长度，防超长参数滥用（刷接口 / 拖慢索引逻辑）
+ * @param {*} value - 原始参数值
+ * @param {number} [maxLen=100] - 允许的最大字符长度
+ * @returns {string|null} 清洗后的安全字符串；非法/超长返回 null
+ */
+function sanitizeUrlParam(value, maxLen) {
+  if (value == null || typeof value !== 'string') return null;
+  // 剔除控制字符；保留正常空白、中文与可打印字符
+  const cleaned = value.replace(/[\u0000-\u001f\u007f]/g, '');
+  if (!cleaned) return null;
+  const limit = (typeof maxLen === 'number' && maxLen > 0) ? maxLen : 100;
+  if (cleaned.length > limit) return null;
+  return cleaned;
+}
+
+/**
  * 平滑滚动到指定元素
  * @param {string|HTMLElement} target - 目标元素或选择器
  * @param {Object} [options] - 滚动选项

@@ -2147,9 +2147,22 @@ function renderPracticePage(target) {
     var queryIdx = hash.indexOf('?');
     if (queryIdx >= 0) {
       var params = new URLSearchParams(hash.substring(queryIdx + 1));
-      var conceptParam = params.get('concept');
-      var moduleParam = params.get('module');
-      var categoryParam = params.get('category');
+      // P1-5：对 URL 入参做白名单式清洗（剔除控制字符、限制长度），防止参数注入污染过滤/渲染
+      var conceptParam = (typeof sanitizeUrlParam === 'function')
+        ? sanitizeUrlParam(params.get('concept'), 64)
+        : params.get('concept');
+      var moduleParam;
+      if (params.get('module') != null) {
+        moduleParam = (typeof sanitizeUrlParam === 'function')
+          ? sanitizeUrlParam(params.get('module'), 32)
+          : params.get('module');
+      }
+      var categoryParam;
+      if (params.get('category') != null) {
+        categoryParam = (typeof sanitizeUrlParam === 'function')
+          ? sanitizeUrlParam(params.get('category'), 32)
+          : params.get('category');
+      }
       if (conceptParam) {
         kgData = { concept: decodeURIComponent(conceptParam), module: moduleParam || null, category: categoryParam || null };
       }

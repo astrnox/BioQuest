@@ -1023,8 +1023,9 @@ function renderSearchPage() {
     }, 300);
   });
 
-  // URL 参数支持
+  // URL 参数支持（P1-5：对入参做清洗，限制长度并剔除控制字符）
   var urlQuery = new URLSearchParams(window.location.hash.split('?')[1] || '').get('q');
+  urlQuery = (urlQuery && typeof sanitizeUrlParam === 'function') ? sanitizeUrlParam(urlQuery, 100) : urlQuery;
   if (urlQuery) {
     searchInput.value = urlQuery;
     doSearch();
