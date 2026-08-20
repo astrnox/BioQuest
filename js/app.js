@@ -1676,6 +1676,8 @@ function handleRoute(route) {
     _flushPendingRoute();
     // 每次路由渲染完成都广播，供"回到顶部按钮"等按路由变化的组件刷新状态
     try { document.dispatchEvent(new CustomEvent('bioquest:route-change')); } catch (e) {}
+    // P1-18 修复：路由切换后把焦点移入新页面主体标题，读屏/键盘用户不必回顶重按 Tab
+    _manageFocusForNewRoute();
     // 首次路由渲染完成 → 通知首屏骨架遮罩淡出（只在首次触发一次）
     if (!AppState._appReadyDispatched) {
       // 路由已完成首帧渲染：推进一次加载进度档位（加权进度估算器）
@@ -1704,6 +1706,28 @@ function handleRoute(route) {
         try { document.dispatchEvent(new CustomEvent('bioquest:app-ready')); } catch (e) {}
       }
     }
+  }
+
+  // P1-18 修复：路由渲染完成后，把键盘/读屏焦点移到新页面主体标题。
+  // 优先聚焦 #page-content 内的 h1/h2 或带 .page-title 的元素；
+  // 找不到标题时聚焦容器本身。
+  // 注意：标题元素默认不可聚焦，故统一加 tabindex=-1（可编程聚焦、不进 Tab 顺序），
+  // 否则对 h1/h2 调用 focus() 会静默失效。模块若自行聚焦输入框，会在其后
+  // setTimeout 覆盖标题焦点，因此无需抢占守卫。
+  function _manageFocusForNewRoute() {
+    try {
+      var root = (typeof AppState !== 'undefined' && AppState.rootElement) || document.getElementById('page-content');
+      if (!root) return;
+      var targets = ['h1', '.page-title', '[role="heading"]', 'h2'];
+      var el = null;
+      for (var i = 0; i < targets.length; i++) {
+        el = root.querySelector(targets[i]);
+        if (el) break;
+      }
+      if (!el) el = root;
+      if (!el.hasAttribute('tabindex')) el.setAttribute('tabindex', '-1');
+      el.focus({ preventScroll: true });
+    } catch (e) { /* 聚焦失败不影响路由渲染 */ }
   }
 
   function showModuleError(modName, err) {
@@ -5836,6 +5860,114 @@ window.showToast = showToast;
       });
     });
   };
+})();
+
+// ============================================================
+// P1-26 修复：beforeinstallprompt — 自定义 PWA 安装引导
+// ----------------------------------------------------------------
+// 监听 beforeinstallprompt；可安装时在左下角显示自定义安装引导条，
+// 替代浏览器默认安装 UI。点击后调用 deferredPrompt.prompt()；
+// 安装完成（appinstalled）或用户拒绝/手动关闭后移除，
+// 并用 localStorage 记录"已处理"，避免重复打扰。
+// 仅 Chromium 系支持 beforeinstallprompt，其余浏览器直接跳过。
+// ============================================================
+(function () {
+  if (!('beforeinstallprompt' in window)) return;
+
+  var INSTALL_STORE_KEY = 'bioquest_a2hs_dismissed';
+  var deferredPrompt = null;
+
+  function _wasDismissed() {
+    try { return localStorage.getItem(INSTALL_STORE_KEY) === '1'; } catch (e) { return false; }
+  }
+  function _markDismissed() {
+    try { localStorage.setItem(INSTALL_STORE_KEY, '1'); } catch (e) {}
+  }
+  function _removeInstallBar() {
+    var bar = document.getElementById('bq-install-bar');
+    if (bar && bar.parentNode) bar.parentNode.removeChild(bar);
+  }
+
+  function _showInstallBar() {
+    _removeInstallBar();
+    if (!document.body || !deferredPrompt) return;
+
+    var bar = document.createElement('div');
+    bar.id = 'bq-install-bar';
+    bar.setAttribute('role', 'region');   // 非模态横幅，避免误导屏读器认为是对话框
+    bar.setAttribute('aria-label', '安装 BioQuest 应用');
+    bar.style.cssText = [
+      'position:fixed',
+      'left:16px',
+      'bottom:16px',
+      'z-index:99998',
+      'max-width:min(340px, 86vw)',
+      'background:linear-gradient(135deg,#2c5a3a,#1a3a2a)',
+      'color:#fff',
+      'padding:12px 16px',
+      'border-radius:16px',
+      'font-size:0.9rem',
+      'line-height:1.5',
+      'display:flex',
+      'align-items:center',
+      'gap:12px',
+      'box-shadow:0 6px 24px rgba(0,0,0,0.35)',
+      'animation:toastSlideUp 0.3s ease'
+    ].join(';');
+    bar.appendChild(document.createTextNode('📱 将 BioQuest 添加至主屏幕，随时随地学习'));
+
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.id = 'bq-install-btn';
+    btn.textContent = '安装 App';
+    btn.style.cssText = 'flex:none;padding:8px 16px;border:none;border-radius:10px;background:#fff;color:#1a3a2a;font-weight:700;cursor:pointer;';
+    bar.appendChild(btn);
+
+    var dismissBtn = document.createElement('button');
+    dismissBtn.type = 'button';
+    dismissBtn.textContent = '✕';
+    dismissBtn.setAttribute('aria-label', '不再提示');
+    dismissBtn.style.cssText = 'flex:none;padding:2px 8px;border:none;background:transparent;color:rgba(255,255,255,0.7);cursor:pointer;font-size:1.1rem;';
+    bar.appendChild(dismissBtn);
+
+    var installing = false;
+    btn.addEventListener('click', function () {
+      if (installing || !deferredPrompt) return;
+      installing = true;
+      deferredPrompt.prompt();
+      deferredPrompt.userChoice
+        .then(function (choice) {
+          deferredPrompt = null;
+          installing = false;
+          _markDismissed(); // 接受或拒绝后都不再重复打扰
+          _removeInstallBar();
+        })
+        .catch(function () {
+          deferredPrompt = null;
+          installing = false;
+          _removeInstallBar();
+        });
+    });
+    dismissBtn.addEventListener('click', function () {
+      _markDismissed();
+      _removeInstallBar();
+    });
+
+    document.body.appendChild(bar);
+  }
+
+  window.addEventListener('beforeinstallprompt', function (e) {
+    e.preventDefault(); // 拦截默认安装提示，统一走自定义引导
+    deferredPrompt = e;
+    if (_wasDismissed()) return; // 曾安装/拒绝：不再展示
+    requestAnimationFrame(function () { _showInstallBar(); });
+  });
+
+  window.addEventListener('appinstalled', function () {
+    deferredPrompt = null;
+    _markDismissed();
+    _removeInstallBar();
+  });
 })();
 
 document.addEventListener('DOMContentLoaded', initApp);
