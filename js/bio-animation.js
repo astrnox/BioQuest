@@ -2637,7 +2637,10 @@
         card.style.display = 'block';
         card.style.left = Math.min(e.clientX - r.left + 12, r.width - 270) + 'px';
         card.style.top = Math.min(e.clientY - r.top + 12, r.height - 80) + 'px';
-        card.innerHTML = '<h4>' + found.title + '</h4><p>' + found.text + '</p>';
+        // 安全：热点标注文案可能来自数据文件/远程，插入前必须转义，防 XSS（P0）
+        var _ht = (window.escapeHtml) ? window.escapeHtml(found.title || '') : String(found.title || '');
+        var _xd = (window.escapeHtml) ? window.escapeHtml(found.text || '') : String(found.text || '');
+        card.innerHTML = '<h4>' + _ht + '</h4><p>' + _xd + '</p>';
         canvas.style.cursor = 'pointer';
       } else { card.style.display = 'none'; canvas.style.cursor = _state.dragging ? 'grabbing' : 'grab'; }
     });

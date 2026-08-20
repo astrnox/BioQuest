@@ -29,6 +29,12 @@ jobs:
         with:
           node-version: 20
 
+      - name: vendor 完整性校验（P0 供应链门禁）
+        # 防"以好心升级库为名"的投毒：任何 js/vendor/* 文件被替换/新增且未同步
+        # 更新清单，此处直接 FAIL。合法升级需人工审查后运行
+        # `node scripts/verify-vendor-integrity.js --update` 再提交。
+        run: node scripts/verify-vendor-integrity.js
+
       - name: Install dependencies
         run: npm install
 
