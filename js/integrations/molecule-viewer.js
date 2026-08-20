@@ -18,6 +18,18 @@
   var _currentViewer = null;
   var _currentPdbId = null;
 
+  // P0 性能优化：three.min.js / 3Dmol-min.js 不再于首屏预载，改为点击预览时按需加载。
+  // 走统一 loadScriptOnce（带去重与超时），零依赖；保持与首屏 boot 一致的加载顺序（THREE 先于 3Dmol）。
+  var _loading3Dmol = false;
+  function load3Dmol() {
+    if (typeof window.$3Dmol !== 'undefined') return Promise.resolve(true);
+    if (typeof window.loadScriptOnce !== 'function') return Promise.resolve(false);
+    return window.loadScriptOnce('js/vendor/three.min.js?v=20260723d')
+      .then(function () { return window.loadScriptOnce('js/vendor/3Dmol-min.js?v=20260723d'); })
+      .then(function () { return typeof window.$3Dmol !== 'undefined'; })
+      .catch(function () { return false; });
+  }
+
   function destroyViewer(container) {
     if (!container) return;
     var v = container._bioquestViewer;
@@ -224,6 +236,26 @@
     modal.style.display = 'flex';
     if (title) title.textContent = name + ' (' + pdbId + ')';
     _currentPdbId = pdbId;
+
+    var container = document.getElementById('molecule-3d-container');
+    var showPlaceholder = function () {
+      if (container) container.innerHTML = '<p style="color:var(--text-muted);text-align:center;padding:40px;">3D 分子查看器未加载</p>';
+    };
+
+    if (typeof window.$3Dmol === 'undefined') {
+      // P0 性能优化：点击预览时才按需加载 three/3Dmol，加载完成后重入渲染
+      if (typeof window.loadScriptOnce !== 'function' || _loading3Dmol) return showPlaceholder();
+      _loading3Dmol = true;
+      load3Dmol().then(function (ok) {
+        _loading3Dmol = false;
+        if (!ok) { showPlaceholder(); return; }
+        // 防止用户期间切换了分子
+        if (_currentPdbId !== pdbId) return;
+        try { _currentViewer = render('molecule-3d-container', pdbId, { style: 'cartoon' }); }
+        catch (e) { showPlaceholder(); }
+      });
+      return;
+    }
     _currentViewer = render('molecule-3d-container', pdbId, { style: 'cartoon' });
   }
 
