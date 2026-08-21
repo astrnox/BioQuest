@@ -80,15 +80,15 @@ var __jsBase = (function() {
 })();
 
 /**
- * @typedef {Object} AppState
+ * @typedef {Object} _AppState
  * @property {string} currentRoute - 当前路由路径
  * @property {string} theme - 当前主题 ('light' | 'dark')
  * @property {Object} userSettings - 用户偏好设置
  * @property {boolean} initialized - 应用是否已初始化
  */
 
-/** @type {AppState} */
-const AppState = {
+/** @type {_AppState} */
+const _AppState = {
   currentRoute: '',
   theme: 'light',
   userSettings: {
@@ -101,8 +101,31 @@ const AppState = {
   pageModules: {}
 };
 
-// 立即暴露到 window 全局，供其他模块使用
-window.AppState = AppState;
+/**
+ * P1-7：通过只读 Proxy 视图暴露内部状态。
+ * - 内部（app.js）直接读写 `_AppState` 可变对象；
+ * - 外部（window.AppState / 其他模块 / 第三方脚本）只能读取，
+ *   写入、删除、原型污染均被拒绝，限制对全局状态的篡改与注入。
+ */
+window.AppState = createReadOnlyStateView(_AppState);
+
+function createReadOnlyStateView(target) {
+  return new Proxy(target, {
+    get: function (t, k) { return t[k]; },
+    set: function (t, k, v) {
+      if (k === '__proto__' || k === 'prototype' || k === 'constructor') return false;
+      console.warn('[BioQuest] AppState 为只读视图，已拒绝外部写入:', String(k));
+      return true; // 严格模式返回 false 会抛错，改为静默拒绝
+    },
+    deleteProperty: function () { return false; },
+    defineProperty: function () { return false; },
+    setPrototypeOf: function () { return false; },
+    has: function (t, k) { return k in t; },
+    ownKeys: function (t) { return Reflect.ownKeys(t); },
+    getOwnPropertyDescriptor: function (t, k) { return Reflect.getOwnPropertyDescriptor(t, k); },
+    getPrototypeOf: function (t) { return Reflect.getPrototypeOf(t); }
+  });
+}
 
 // Modal 焦点陷阱句柄（统一在 app.js 管理）
 var _authFocusTrap = null;
@@ -465,7 +488,7 @@ function navigateTo(route, options = {}) {
     route = '/';
   }
 
-  if (route === AppState.currentRoute) {
+  if (route === _AppState.currentRoute) {
     return;
   }
 
@@ -1183,7 +1206,7 @@ var escapeHtml = (typeof window !== 'undefined' && typeof window.escapeHtml === 
 /**
  * 重新初始化首页关键组件（倒计时、Hero 动画、滚动动画）
  * 这些组件位于首屏或影响全局交互，需要立即执行。
- * 首次进入时会标记 AppState._homePaintedReady，
+ * 首次进入时会标记 _AppState._homePaintedReady，
  * 配合 finishRouting → bioquest:app-ready 实现"加载界面期间就加载好"。
  */
 function reinitHomeComponents() {
@@ -1208,8 +1231,8 @@ function reinitHomeComponents() {
       if (secsEl) secsEl.textContent = pad(secs);
     }
     update();
-    if (AppState._countdownTimer) clearInterval(AppState._countdownTimer);
-    AppState._countdownTimer = setInterval(update, 1000);
+    if (_AppState._countdownTimer) clearInterval(_AppState._countdownTimer);
+    _AppState._countdownTimer = setInterval(update, 1000);
   }
 
   if (typeof initHeroSketch === 'function') {
@@ -1228,12 +1251,12 @@ function reinitHomeComponents() {
         // 触发一次 reflow 读取，强制浏览器完成布局
         void hero.offsetHeight;
       }
-      AppState._homePaintedReady = true;
+      _AppState._homePaintedReady = true;
       // 首页首屏绘制完成：推进一次加载进度档位（配合 index.html 的加权进度估算器）
       if (window.__bootWeight) { try { window.__bootWeight(20, 75); } catch (e) {} }
       // 若 finishRouting 已经执行过，则这里补发 app-ready 信号（解除遮罩等待）
-      if (AppState._homeRouteRendered && !AppState._appReadyDispatched) {
-        AppState._appReadyDispatched = true;
+      if (_AppState._homeRouteRendered && !_AppState._appReadyDispatched) {
+        _AppState._appReadyDispatched = true;
         try { document.dispatchEvent(new CustomEvent('bioquest:app-ready')); } catch (e) {}
       }
     });
@@ -1403,8 +1426,8 @@ function updateBottomTabBar(route) {
  */
 function initScrollAnimations() {
   // 清理旧的 observer
-  if (AppState._scrollObserver) {
-    AppState._scrollObserver.disconnect();
+  if (_AppState._scrollObserver) {
+    _AppState._scrollObserver.disconnect();
   }
 
   // 为主页各区块添加 reveal 类
@@ -1434,7 +1457,7 @@ function initScrollAnimations() {
     processSteps[i].style.transitionDelay = (i * 0.12) + 's';
   }
 
-  AppState._scrollObserver = new IntersectionObserver(function (entries) {
+  _AppState._scrollObserver = new IntersectionObserver(function (entries) {
     for (var i = 0; i < entries.length; i++) {
       var entry = entries[i];
       if (entry.isIntersecting) {
@@ -1445,7 +1468,7 @@ function initScrollAnimations() {
         }
         // 区块可见后不再观察，但子元素继续观察以便 stagger
         if (!entry.target.classList.contains('section-reveal-child')) {
-          AppState._scrollObserver.unobserve(entry.target);
+          _AppState._scrollObserver.unobserve(entry.target);
         }
       }
     }
@@ -1457,7 +1480,7 @@ function initScrollAnimations() {
   // 观察所有目标元素
   var allReveals = document.querySelectorAll('.section-reveal, .section-reveal-child');
   for (var i = 0; i < allReveals.length; i++) {
-    AppState._scrollObserver.observe(allReveals[i]);
+    _AppState._scrollObserver.observe(allReveals[i]);
   }
 
   // 创建或更新滚动指示器
@@ -1537,7 +1560,7 @@ function _denyRouteAccess(route, access) {
   console.warn('[BioQuest] 路由访问被拒绝（随登录后恢复）:', access);
   try { sessionStorage.setItem('bioquest:authRedirect', route); } catch (e) {}
 
-  var target = (typeof AppState !== 'undefined' && AppState.rootElement) || document.getElementById('page-content');
+  var target = (typeof _AppState !== 'undefined' && _AppState.rootElement) || document.getElementById('page-content');
   if (!target) {
     // 兜底：找不到容器时才回退为跳首页
     if (typeof navigateTo === 'function') navigateTo('/');
@@ -1545,7 +1568,7 @@ function _denyRouteAccess(route, access) {
     return;
   }
 
-  AppState.currentRoute = route;
+  _AppState.currentRoute = route;
   try { if (typeof updatePageTitle === 'function') updatePageTitle(route); } catch (e) {}
   var denied = !!(access && access.reason === 'role');
   target.innerHTML =
@@ -1579,13 +1602,13 @@ function _denyRouteAccess(route, access) {
  * 避免「登录成功后仍在原页看不到用户中心 / 体验上需要再次登录」。
  */
 function _refreshCurrentProtectedRoute() {
-  var route = AppState.currentRoute || (window.location.hash || '#/').replace(/^#/, '') || '/';
+  var route = _AppState.currentRoute || (window.location.hash || '#/').replace(/^#/, '') || '/';
   var cfg = Routes[route];
   if (!cfg || (!cfg.auth && !cfg.role)) return;
   var access = _checkRouteAccess(route);
   if (access.allowed) {
     try { sessionStorage.removeItem('bioquest:authRedirect'); } catch (e) {}
-    if (route === AppState.currentRoute) {
+    if (route === _AppState.currentRoute) {
       handleRoute(route);
     } else if (typeof navigateTo === 'function') {
       navigateTo(route);
@@ -1638,11 +1661,11 @@ function handleRoute(route) {
   _routingInProgress = true;
   _pendingRoute = null;
 
-  AppState.currentRoute = route;
+  _AppState.currentRoute = route;
   updatePageTitle(route);
   updateNavActive(route);
 
-  var target = AppState.rootElement || document.getElementById('page-content');
+  var target = _AppState.rootElement || document.getElementById('page-content');
   if (!target) {
     _routingInProgress = false;
     _flushPendingRoute();
@@ -1702,30 +1725,30 @@ function handleRoute(route) {
     // P1-18 修复：路由切换后把焦点移入新页面主体标题，读屏/键盘用户不必回顶重按 Tab
     _manageFocusForNewRoute();
     // 首次路由渲染完成 → 通知首屏骨架遮罩淡出（只在首次触发一次）
-    if (!AppState._appReadyDispatched) {
+    if (!_AppState._appReadyDispatched) {
       // 路由已完成首帧渲染：推进一次加载进度档位（加权进度估算器）
       if (window.__bootWeight) { try { window.__bootWeight(15, 55); } catch (e) {} }
-      var route = AppState.currentRoute || (window.location.hash || '#/').replace(/^#/, '') || '/';
+      var route = _AppState.currentRoute || (window.location.hash || '#/').replace(/^#/, '') || '/';
       var isHome = (route === '/' || route === '' || route === '/index.html');
       if (isHome) {
         // 首页：等 reinitHomeComponents 把 Hero/倒计时/滚动动画都绘制完成（见 reinitHomeComponents rAF 回调）
-        AppState._homeRouteRendered = true;
+        _AppState._homeRouteRendered = true;
         // 保险兜底：若 reinitHomeComponents 没被调用或超时，500ms 后仍会发 app-ready，不让遮罩卡住
         var safetyTimer = setTimeout(function () {
-          if (!AppState._appReadyDispatched) {
-            AppState._appReadyDispatched = true;
+          if (!_AppState._appReadyDispatched) {
+            _AppState._appReadyDispatched = true;
             try { document.dispatchEvent(new CustomEvent('bioquest:app-ready')); } catch (e) {}
           }
         }, 1500);
         // 若已提前 ready（非典型路径），立刻派发并清定时器
-        if (AppState._homePaintedReady) {
+        if (_AppState._homePaintedReady) {
           clearTimeout(safetyTimer);
-          AppState._appReadyDispatched = true;
+          _AppState._appReadyDispatched = true;
           try { document.dispatchEvent(new CustomEvent('bioquest:app-ready')); } catch (e) {}
         }
       } else {
         // 非首页路由：首次路由渲染完即可撤遮罩
-        AppState._appReadyDispatched = true;
+        _AppState._appReadyDispatched = true;
         try { document.dispatchEvent(new CustomEvent('bioquest:app-ready')); } catch (e) {}
       }
     }
@@ -1739,7 +1762,7 @@ function handleRoute(route) {
   // setTimeout 覆盖标题焦点，因此无需抢占守卫。
   function _manageFocusForNewRoute() {
     try {
-      var root = (typeof AppState !== 'undefined' && AppState.rootElement) || document.getElementById('page-content');
+      var root = (typeof _AppState !== 'undefined' && _AppState.rootElement) || document.getElementById('page-content');
       if (!root) return;
       var targets = ['h1', '.page-title', '[role="heading"]', 'h2'];
       var el = null;
@@ -1811,7 +1834,7 @@ function handleRoute(route) {
 }
 
 function _flushPendingRoute() {
-  if (_pendingRoute && _pendingRoute !== AppState.currentRoute) {
+  if (_pendingRoute && _pendingRoute !== _AppState.currentRoute) {
     var r = _pendingRoute;
     _pendingRoute = null;
     handleRoute(r);
@@ -2088,8 +2111,8 @@ function doRouteRender(route, target) {
     switch (route) {
       case '/':
         target.classList.add('page-content--home');
-        if (AppState._homeHTML) {
-          target.innerHTML = AppState._homeHTML;
+        if (_AppState._homeHTML) {
+          target.innerHTML = _AppState._homeHTML;
           reinitHomeComponents();
         }
         break;
@@ -2262,8 +2285,8 @@ function doRouteRender(route, target) {
         break;
       default:
         target.classList.add('page-content--home');
-        if (AppState._homeHTML) {
-          target.innerHTML = AppState._homeHTML;
+        if (_AppState._homeHTML) {
+          target.innerHTML = _AppState._homeHTML;
           reinitHomeComponents();
         }
     }
@@ -2299,7 +2322,7 @@ function toggleTheme(theme) {
 
   if (theme && COLOR_THEMES.indexOf(theme) >= 0) {
     // 色彩主题（保留深色模式，仅改变强调色）
-    AppState.theme = theme;
+    _AppState.theme = theme;
     document.documentElement.setAttribute('data-theme', theme);
     if (theme === 'amber') {
       document.documentElement.style.setProperty('--color-amber', '#c4956a');
@@ -2322,7 +2345,7 @@ function toggleTheme(theme) {
     return;
   }
 
-  const current = AppState.theme;
+  const current = _AppState.theme;
   let nextTheme;
 
   if (theme === 'light' || theme === 'dark') {
@@ -2331,7 +2354,7 @@ function toggleTheme(theme) {
     nextTheme = current === 'light' ? 'dark' : 'light';
   }
 
-  AppState.theme = nextTheme;
+  _AppState.theme = nextTheme;
 
   if (nextTheme === 'dark') {
     document.documentElement.setAttribute('data-theme', 'dark');
@@ -2429,7 +2452,7 @@ function bindEvents() {
             }
           }
         } catch (e2) { /* ignore */ }
-        const target = AppState.rootElement || document.getElementById('page-content');
+        const target = _AppState.rootElement || document.getElementById('page-content');
         if (target) {
           target.setAttribute('data-page-transition', 'exiting');
         }
@@ -2478,14 +2501,14 @@ function bindEvents() {
  * @returns {Promise<void>}
  */
 async function loadPageModule(moduleName) {
-  if (AppState.pageModules[moduleName]) {
+  if (_AppState.pageModules[moduleName]) {
     return;
   }
 
   try {
     // 添加 cache-bust 参数避免浏览器缓存旧版模块（如 tutor.js）
     const module = await import(`./${moduleName}.js?v=20260809g`);
-    AppState.pageModules[moduleName] = module;
+    _AppState.pageModules[moduleName] = module;
   } catch (err) {
     console.warn(`[BioQuest] 模块 ${moduleName} 加载失败:`, err.message);
   }
@@ -2503,7 +2526,7 @@ function restoreSettings() {
       const showTimer = loadSetting('showTimer', true);
       const autoSubmit = loadSetting('autoSubmit', false);
 
-      AppState.userSettings = { fontSize, questionCount, showTimer, autoSubmit };
+      _AppState.userSettings = { fontSize, questionCount, showTimer, autoSubmit };
       toggleTheme(theme);
     } else {
       const theme = localStorage.getItem('bioquest-theme') || 'light';
@@ -4999,7 +5022,7 @@ async function handleResetPasswordSubmit() {
       errorEl.textContent = error.message.includes('same') ? '新密码不能与旧密码相同' : '修改失败：' + error.message;
       return;
     }
-    var target = AppState.rootElement || document.getElementById('page-content');
+    var target = _AppState.rootElement || document.getElementById('page-content');
     if (target) {
       target.innerHTML = '<div style="text-align:center;padding:80px 20px;">' +
         '<div style="font-size:3rem;margin-bottom:16px;">&#10003;</div>' +
@@ -5128,7 +5151,7 @@ function showStorageStatus(status) {
  * 初始化应用 — 在 DOMContentLoaded 时执行
  */
 function initApp() {
-  if (AppState.initialized) {
+  if (_AppState.initialized) {
     return;
   }
 
@@ -5158,9 +5181,9 @@ function initApp() {
     return;
   }
 
-  AppState.rootElement = root;
-  AppState._homeHTML = root.innerHTML;
-  AppState._countdownTimer = null;
+  _AppState.rootElement = root;
+  _AppState._homeHTML = root.innerHTML;
+  _AppState._countdownTimer = null;
 
   const route = getRouteFromHash();
 
@@ -5170,7 +5193,7 @@ function initApp() {
     handleRoute(route);
   });
 
-  AppState.initialized = true;
+  _AppState.initialized = true;
 
 }
 
