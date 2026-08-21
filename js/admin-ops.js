@@ -248,8 +248,8 @@ async function renderAppealsTab(container) {
                   <td>
                     ${a.status === 'pending' ? `
                     <div class="admin-table-actions">
-                      <button class="admin-btn admin-btn--primary" onclick="handleResolveAppeal('${a.id}', 'approve')">通过</button>
-                      <button class="admin-btn admin-btn--danger" onclick="handleResolveAppeal('${a.id}', 'reject')">驳回</button>
+                      <button class="admin-btn admin-btn--primary" data-on='["handleResolveAppeal","${a.id}","approve"]'>通过</button>
+                      <button class="admin-btn admin-btn--danger" data-on='["handleResolveAppeal","${a.id}","reject"]'>驳回</button>
                     </div>
                     ` : `<span style="font-size:0.78rem;color:var(--text-muted);">${a.admin_note ? escapeHtml((a.admin_note || '').slice(0,20)) : '--'}</span>`}
                   </td>

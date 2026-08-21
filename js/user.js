@@ -9,6 +9,13 @@
 
 let userStylesInjected = false;
 
+// CSP 安全的事件委托 wrapper（由 data-on 委托调用，供内联处理器改造使用）
+window._cspSetBg = function (color) { if (this) this.style.background = color; };
+window._cspClearNotifs = function () {
+  if (typeof BioQuestNotifications === 'object' && BioQuestNotifications) BioQuestNotifications.clear();
+  renderNotificationsPanel(document.getElementById('userSubPageBody'));
+};
+
 // escapeHtml 本地 fallback：优先使用全局函数，否则使用内联实现
 var escapeHtml = (typeof window !== 'undefined' && typeof window.escapeHtml === 'function')
   ? window.escapeHtml
@@ -994,7 +1001,7 @@ function renderAccountActions(container) {
         background:transparent;color:var(--color-amber,#c4956a);
         font-size:0.9rem;font-weight:600;cursor:pointer;
         transition:all 0.2s ease;
-      " onmouseover="this.style.background='rgba(196,149,106,0.08)'" onmouseout="this.style.background='transparent'">
+      " data-on-mouseover='["_cspSetBg","rgba(196,149,106,0.08)"]' data-on-mouseout='["_cspSetBg","transparent"]'>
         永久退出登录
       </button>
       <button id="userDeleteAccountBtn" style="
@@ -1003,7 +1010,7 @@ function renderAccountActions(container) {
         background:transparent;color:var(--color-error,#c0553a);
         font-size:0.9rem;font-weight:600;cursor:pointer;
         transition:all 0.2s ease;
-      " onmouseover="this.style.background='rgba(192,85,58,0.08)'" onmouseout="this.style.background='transparent'">
+      " data-on-mouseover='["_cspSetBg","rgba(192,85,58,0.08)"]' data-on-mouseout='["_cspSetBg","transparent"]'>
         注销账号
       </button>
     </div>
@@ -2379,7 +2386,7 @@ function renderUserPage(target) {
       <div class="animate-fade-in user-accordion-page">
 
         <!-- 紧凑资料卡（点击跳转仪表盘） -->
-        <div class="user-profile-compact" onclick="navigateTo('/dashboard')">
+        <div class="user-profile-compact" data-on='["navigateTo","/dashboard"]'>
           <div class="user-profile-avatar" id="userAvatarBtn" title="头像可在「设置」中上传">
             ${avatarHtml}
           </div>
@@ -2403,70 +2410,70 @@ function renderUserPage(target) {
 
         <!-- 快捷入口横排 -->
         <div class="user-quick-row">
-          <div class="user-quick-item" onclick="navigateTo('/analytics')">
+          <div class="user-quick-item" data-on='["navigateTo","/analytics"]'>
             <div class="user-quick-icon">📊</div><div class="user-quick-label">学习分析</div>
           </div>
-          <div class="user-quick-item" onclick="navigateTo('/wrongbook')">
+          <div class="user-quick-item" data-on='["navigateTo","/wrongbook"]'>
             <div class="user-quick-icon">📕</div><div class="user-quick-label">错题与复盘</div>
           </div>
-          <div class="user-quick-item" onclick="navigateTo('/community')">
+          <div class="user-quick-item" data-on='["navigateTo","/community"]'>
             <div class="user-quick-icon">💬</div><div class="user-quick-label">社区</div>
           </div>
-          <div class="user-quick-item" onclick="navigateTo('/leaderboard')">
+          <div class="user-quick-item" data-on='["navigateTo","/leaderboard"]'>
             <div class="user-quick-icon">🏆</div><div class="user-quick-label">排行</div>
           </div>
         </div>
 
         <!-- 功能列表（点击进入独立子页面） -->
         <div class="user-list-group" id="userListGroup">
-          <div class="user-list-item" onclick="_showUserSubPage('notifications')">
+          <div class="user-list-item" data-on='["_showUserSubPage","notifications"]'>
             <div class="user-list-icon" style="background:#8a5ac4;">🔔</div>
             <div class="user-list-info"><div class="user-list-title">通知</div><div class="user-list-desc">社区回帖和系统通知</div></div>
             <span class="user-notif-badge" id="userNotifBadge" style="display:none;">0</span>
             <svg class="user-list-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
           </div>
-          <div class="user-list-item" onclick="_showUserSubPage('streak')">
+          <div class="user-list-item" data-on='["_showUserSubPage","streak"]'>
             <div class="user-list-icon" style="background:#c4956a;">🔥</div>
             <div class="user-list-info"><div class="user-list-title">打卡与成就</div><div class="user-list-desc">连续打卡天数与成就徽章</div></div>
             <svg class="user-list-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
           </div>
-          <div class="user-list-item" onclick="_showUserSubPage('records')">
+          <div class="user-list-item" data-on='["_showUserSubPage","records"]'>
             <div class="user-list-icon" style="background:#5a7bc4;">📋</div>
             <div class="user-list-info"><div class="user-list-title">学习记录</div><div class="user-list-desc">最近 20 条练习与考试记录</div></div>
             <svg class="user-list-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
           </div>
-          <div class="user-list-item" onclick="_showUserSubPage('favorites')">
+          <div class="user-list-item" data-on='["_showUserSubPage","favorites"]'>
             <div class="user-list-icon" style="background:#c45a7a;">⭐</div>
             <div class="user-list-info"><div class="user-list-title">收藏夹</div><div class="user-list-desc">已收藏的题目</div></div>
             <svg class="user-list-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
           </div>
-          <div class="user-list-item" onclick="_showUserSubPage('settings')">
+          <div class="user-list-item" data-on='["_showUserSubPage","settings"]'>
             <div class="user-list-icon" style="background:#5a7d5c;">⚙️</div>
             <div class="user-list-info"><div class="user-list-title">设置</div><div class="user-list-desc">主题、字体大小偏好</div></div>
             <svg class="user-list-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
           </div>
-          <div class="user-list-item" onclick="_showUserSubPage('data')">
+          <div class="user-list-item" data-on='["_showUserSubPage","data"]'>
             <div class="user-list-icon" style="background:#4a9c6a;">💾</div>
             <div class="user-list-info"><div class="user-list-title">数据管理</div><div class="user-list-desc">导出、导入、清除学习数据</div></div>
             <svg class="user-list-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
           </div>
-          <div class="user-list-item" onclick="_showUserSubPage('storage')">
+          <div class="user-list-item" data-on='["_showUserSubPage","storage"]'>
             <div class="user-list-icon" style="background:#8a8a8a;">📦</div>
             <div class="user-list-info"><div class="user-list-title">存储与账号</div><div class="user-list-desc">存储用量与账号操作</div></div>
             <svg class="user-list-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
           </div>
-          <div class="user-list-item" onclick="_userJoinClass()">
+          <div class="user-list-item" data-on='["_userJoinClass"]'>
             <div class="user-list-icon" style="background:#5a7bc4;">🏫</div>
             <div class="user-list-info"><div class="user-list-title">加入班级</div><div class="user-list-desc">输入班级码和密钥加入教师班级</div></div>
             <svg class="user-list-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
           </div>
-          <div class="user-list-item" onclick="navigateTo('/credit')">
+          <div class="user-list-item" data-on='["navigateTo","/credit"]'>
             <div class="user-list-icon" style="background:#c4956a;">⭐</div>
             <div class="user-list-info"><div class="user-list-title">信用中心</div><div class="user-list-desc">信用指数、信任等级、明细与社区信任排行</div></div>
             <svg class="user-list-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
           </div>
           ${userGroup === 'admin' ? `
-          <div class="user-list-item" onclick="_userAdminEntry()">
+          <div class="user-list-item" data-on='["_userAdminEntry"]'>
             <div class="user-list-icon" style="background:#ff6b6b;">🛡️</div>
             <div class="user-list-info"><div class="user-list-title">管理员入口</div><div class="user-list-desc">管理后台（需输入管理员密码）</div></div>
             <svg class="user-list-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
@@ -2476,7 +2483,7 @@ function renderUserPage(target) {
         <!-- 子页面容器（默认隐藏，点击列表项后显示） -->
         <div class="user-subpage" id="userSubPage" style="display:none;">
           <div class="user-subpage-header">
-            <button class="user-subpage-back" onclick="_hideUserSubPage()">
+            <button class="user-subpage-back" data-on='["_hideUserSubPage"]'>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
               返回
             </button>
@@ -2584,7 +2591,7 @@ function _showUserSubPage(key) {
         bodyEl.innerHTML = '<div id="userSettingsContainer"></div>';
         renderSettingsPanel(document.getElementById('userSettingsContainer'));
       } else if (key === 'data') {
-        bodyEl.innerHTML = '<div id="userDataContainer"></div><div style="margin-top:16px;text-align:center;"><button onclick="generateShareCard()" style="display:inline-flex;align-items:center;gap:8px;padding:10px 24px;border:none;border-radius:20px;background:linear-gradient(135deg,#3a8c5c,#2d6a47);color:#fff;font-size:0.85rem;font-weight:600;cursor:pointer;box-shadow:0 2px 8px rgba(26,58,42,0.15);">生成学习报告卡片</button></div>';
+        bodyEl.innerHTML = '<div id="userDataContainer"></div><div style="margin-top:16px;text-align:center;"><button data-on=\'["generateShareCard"]\' style="display:inline-flex;align-items:center;gap:8px;padding:10px 24px;border:none;border-radius:20px;background:linear-gradient(135deg,#3a8c5c,#2d6a47);color:#fff;font-size:0.85rem;font-weight:600;cursor:pointer;box-shadow:0 2px 8px rgba(26,58,42,0.15);">生成学习报告卡片</button></div>';
         renderDataManagement(document.getElementById('userDataContainer'));
       } else if (key === 'storage') {
         bodyEl.innerHTML = '<div id="userStorageContainer"></div><div id="userAccountActionsContainer" style="margin-top:16px;text-align:center;"></div>';
@@ -2635,7 +2642,7 @@ function renderNotificationsPanel(bodyEl) {
 
   var html = '<div class="user-notif-actions">' +
     '<span class="user-notif-count">共 ' + list.length + ' 条通知</span>' +
-    '<button class="user-notif-clear" onclick="BioQuestNotifications.clear();renderNotificationsPanel(document.getElementById(\'userSubPageBody\'))">清空</button>' +
+    '<button class="user-notif-clear" data-on=\'["_cspClearNotifs"]\'>清空</button>' +
     '</div>';
   if (!list.length) {
     html += '<div class="user-empty-state" style="padding:48px 20px;text-align:center;color:var(--text-muted,#8a8a8a);"><div style="font-size:2.2rem;margin-bottom:10px;">🔕</div><p>暂无通知</p><p style="font-size:0.82rem;margin-top:6px;">当有人回复你的社区帖子时，会在这里提醒你</p></div>';

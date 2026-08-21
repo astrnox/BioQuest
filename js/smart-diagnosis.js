@@ -1749,7 +1749,7 @@ function renderSmartDiagnosisPage(target) {
           <div class="diagnosis-empty-icon">--</div>\
           <div class="diagnosis-empty-title">数据不足，暂无法诊断</div>\
           <div class="diagnosis-empty-desc">学情诊断需要至少 10 道题的练习数据。<br>当前已答 ' + totalAnswered + ' 题，还需 ' + Math.max(0, 10 - totalAnswered) + ' 题。</div>\
-          <button class="diagnosis-empty-btn" onclick="typeof navigateTo === \'function\' ? navigateTo(\'/practice\') : (window.location.hash = \'#/practice\')">去练习</button>\
+          <button class="diagnosis-empty-btn" data-on=\'["_cspGoDiagnosisPractice"]\'>去练习</button>\
         </div>\
       </div>\
     ';

@@ -230,10 +230,10 @@ function renderQuestionsTab(container, questionsData) {
               ${qExpl ? `<div class="admin-q-explanation"><strong>解析：</strong>${qExpl.length > 80 ? qExpl.slice(0, 80) + '...' : qExpl}</div>` : ''}
             </div>
             <div class="admin-table-actions">
-              <button class="admin-btn admin-btn--ghost" onclick='handleEditQuestion(${JSON.stringify(q).replace(/'/g, "&#39;")})'>
+              <button class="admin-btn admin-btn--ghost" data-on='["handleEditQuestion",${JSON.stringify(q).replace(/'/g, "&#39;")}]'>
                 编辑
               </button>
-              <button class="admin-btn admin-btn--danger" onclick="handleDeleteQuestion('${q.id}')">
+              <button class="admin-btn admin-btn--danger" data-on='["handleDeleteQuestion","${q.id}"]'>
                 ${ICONS.trash}
                 删除
               </button>
@@ -246,9 +246,9 @@ function renderQuestionsTab(container, questionsData) {
     // 分页
     if (totalPages > 1) {
       html += `<div style="display:flex;justify-content:center;gap:8px;margin-top:20px;align-items:center;">`;
-      html += `<button class="admin-btn admin-btn--ghost" onclick="adminGoQuestionPage(${currentPage - 1})" ${currentPage <= 1 ? 'disabled' : ''}>上一页</button>`;
+      html += `<button class="admin-btn admin-btn--ghost" data-on='["adminGoQuestionPage",${currentPage - 1}]' ${currentPage <= 1 ? 'disabled' : ''}>上一页</button>`;
       html += `<span style="color:var(--text-muted);font-size:0.85rem;">第 ${currentPage} / ${totalPages} 页</span>`;
-      html += `<button class="admin-btn admin-btn--ghost" onclick="adminGoQuestionPage(${currentPage + 1})" ${currentPage >= totalPages ? 'disabled' : ''}>下一页</button>`;
+      html += `<button class="admin-btn admin-btn--ghost" data-on='["adminGoQuestionPage",${currentPage + 1}]' ${currentPage >= totalPages ? 'disabled' : ''}>下一页</button>`;
       html += `</div>`;
     }
   }
@@ -261,7 +261,7 @@ function renderQuestionsTab(container, questionsData) {
       <div class="admin-modal" style="max-width:680px;">
         <div class="admin-modal-header">
           <div class="admin-modal-title">编辑题目</div>
-          <button class="admin-modal-close" onclick="closeQuestionModal()">&times;</button>
+          <button class="admin-modal-close" data-on='["closeQuestionModal"]'>&times;</button>
         </div>
         <form id="admin-question-edit-form" class="admin-form-grid">
           <div class="admin-form-group">
@@ -338,14 +338,14 @@ function renderQuestionsTab(container, questionsData) {
             <div id="eq-tags-container" style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:6px;"></div>
             <div style="display:flex;gap:6px;">
               <input type="text" class="admin-form-input" id="eq-tag-input" placeholder="输入标签后回车" style="flex:1;">
-              <button type="button" class="admin-btn admin-btn--ghost" onclick="addEditTag()" style="white-space:nowrap;">添加</button>
+              <button type="button" class="admin-btn admin-btn--ghost" data-on='["addEditTag"]' style="white-space:nowrap;">添加</button>
             </div>
           </div>
           <div class="admin-form-group full">
             <label class="admin-form-label">题目图片</label>
             <div style="display:flex;gap:10px;align-items:flex-start;flex-wrap:wrap;">
               <div style="flex:1;min-width:200px;">
-                <input type="file" accept="image/*" id="eq-image-file" style="font-size:0.82rem;" onchange="handleQuestionImageUpload(this)">
+                <input type="file" accept="image/*" id="eq-image-file" style="font-size:0.82rem;" data-on-change='["handleQuestionImageUpload","__this"]'>
                 <div style="font-size:0.72rem;color:var(--text-muted,#8a8a8a);margin-top:4px;">支持 JPG/PNG/GIF，将转为 Base64 存储</div>
               </div>
               <div id="eq-image-preview" style="max-width:120px;max-height:80px;overflow:hidden;border-radius:8px;border:1px solid var(--border-light,#ece8e1);display:none;">
@@ -725,7 +725,7 @@ function renderEditTags() {
   container.innerHTML = _editQuestionTags.map((tag, i) =>
     `<span style="display:inline-flex;align-items:center;gap:4px;padding:4px 10px;background:rgba(90,125,92,0.1);color:var(--color-sage,#5a7d5c);border-radius:8px;font-size:0.78rem;font-weight:500;">
       ${tag}
-      <button type="button" onclick="removeEditTag(${i})" style="background:none;border:none;cursor:pointer;color:var(--color-error,#c0553a);font-size:0.85rem;padding:0 2px;">&times;</button>
+      <button type="button" data-on='["removeEditTag",${i}]' style="background:none;border:none;cursor:pointer;color:var(--color-error,#c0553a);font-size:0.85rem;padding:0 2px;">&times;</button>
     </span>`
   ).join('');
 }

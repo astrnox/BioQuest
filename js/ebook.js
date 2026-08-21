@@ -2,6 +2,11 @@
  * 电子书模块逻辑
  * ============================================ */
 
+/* CSP 便捷委托：把「一次点击执行两步」的内联处理器收敛为最小全局函数，
+ * 供 csp-events.js 的 data-on 委托通过 window 查找调用。语义与原内联表达式等价。 */
+window._cspEBookBookmarkGo = function (id) { navigateToSection(id); toggleBookmarksPanel(); };
+window._cspEBookSearchGo = function (id) { navigateToSection(id); closeSearch(); };
+
 // 多本书数据
 const ALL_BOOKS = [
   {
@@ -1735,7 +1740,7 @@ function renderTOC() {
       : false;
 
     html += `<div class="ebook-toc-part${isPartExpanded ? ' expanded' : ''}" data-part-id="${part.id}">`;
-    html += `<div class="ebook-toc-part-title" onclick="togglePart('${part.id}')">`;
+    html += `<div class="ebook-toc-part-title" data-on='["togglePart","${part.id}"]'>`;
     html += `<span class="ebook-toc-part-arrow">&gt;</span>`;
     html += `<span>${part.title}</span>`;
     html += `</div>`;
@@ -1747,7 +1752,7 @@ function renderTOC() {
         : false;
 
       html += `<div class="ebook-toc-chapter${isChapterExpanded ? ' expanded' : ''}" data-chapter-id="${chapter.id}">`;
-      html += `<div class="ebook-toc-chapter-title" onclick="toggleChapter('${chapter.id}')">`;
+      html += `<div class="ebook-toc-chapter-title" data-on='["toggleChapter","${chapter.id}"]'>`;
       html += `<span class="ebook-toc-chapter-arrow">&gt;</span>`;
       html += `<span>第${chapter.number}章 ${chapter.title}</span>`;
       html += `</div>`;
@@ -1759,7 +1764,7 @@ function renderTOC() {
         const isBookmarked = bookmarks.includes(section.id);
 
         html += `<div class="ebook-toc-section">`;
-        html += `<div class="ebook-toc-section-title${isActive ? ' active' : ''}${isRead ? ' read' : ''}${isBookmarked ? ' bookmarked' : ''}" onclick="navigateToSection('${section.id}')">`;
+        html += `<div class="ebook-toc-section-title${isActive ? ' active' : ''}${isRead ? ' read' : ''}${isBookmarked ? ' bookmarked' : ''}" data-on='["navigateToSection","${section.id}"]'>`;
         html += `<span class="ebook-toc-read-dot"></span>`;
         html += `<span>${section.title}</span>`;
         html += `<span class="ebook-toc-bookmark-icon">*</span>`;
@@ -1852,7 +1857,7 @@ function renderContent(sectionId) {
   // 上下节导航
   let navHtml = `<div class="ebook-section-nav">`;
   if (adjacent.prev) {
-    navHtml += `<button class="ebook-nav-btn" onclick="navigateToSection('${adjacent.prev.section.id}')">`;
+    navHtml += `<button class="ebook-nav-btn" data-on='["navigateToSection","${adjacent.prev.section.id}"]'>`;
     navHtml += `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>`;
     navHtml += `<div><div class="ebook-nav-btn-label">上一节</div><div class="ebook-nav-btn-text">${adjacent.prev.section.title}</div></div>`;
     navHtml += `</button>`;
@@ -1860,7 +1865,7 @@ function renderContent(sectionId) {
     navHtml += `<div></div>`;
   }
   if (adjacent.next) {
-    navHtml += `<button class="ebook-nav-btn" onclick="navigateToSection('${adjacent.next.section.id}')">`;
+    navHtml += `<button class="ebook-nav-btn" data-on='["navigateToSection","${adjacent.next.section.id}"]'>`;
     navHtml += `<div style="text-align:right"><div class="ebook-nav-btn-label">下一节</div><div class="ebook-nav-btn-text">${adjacent.next.section.title}</div></div>`;
     navHtml += `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>`;
     navHtml += `</button>`;
@@ -1874,11 +1879,11 @@ function renderContent(sectionId) {
       <div class="ebook-section-subtitle">第${chapter.number}章 ${chapter.title}</div>
     </div>
     <div class="ebook-section-body">
-      <button class="ebook-bookmark-btn${bookmarked ? ' active' : ''}" onclick="handleBookmark('${sectionId}')">
+      <button class="ebook-bookmark-btn${bookmarked ? ' active' : ''}" data-on='["handleBookmark","${sectionId}"]'>
         <svg viewBox="0 0 24 24" fill="${bookmarked ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
         <span>${bookmarked ? '已收藏' : '收藏'}</span>
       </button>
-      <button class="ebook-bookmark-btn ebook-pdf-btn" onclick="downloadBookPdf(currentBookIndex)" title="下载原版PDF">
+      <button class="ebook-bookmark-btn ebook-pdf-btn" data-on='["downloadBookPdf",${currentBookIndex}]' title="下载原版PDF">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
           <polyline points="7 10 12 15 17 10"/>
@@ -1977,13 +1982,13 @@ function renderBookmarksPanel() {
   for (const sectionId of bookmarks) {
     const data = findSection(sectionId);
     if (!data) continue;
-    html += `<div class="ebook-bookmark-item" onclick="navigateToSection('${sectionId}'); toggleBookmarksPanel();">`;
+    html += `<div class="ebook-bookmark-item" data-on='["_cspEBookBookmarkGo","${sectionId}"]'>`;
     html += `<div class="ebook-bookmark-item-icon"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></div>`;
     html += `<div class="ebook-bookmark-item-info">`;
     html += `<div class="ebook-bookmark-item-title">${data.section.title}</div>`;
     html += `<div class="ebook-bookmark-item-meta">第${data.chapter.number}章 ${data.chapter.title}</div>`;
     html += `</div>`;
-    html += `<button class="ebook-bookmark-item-remove" onclick="event.stopPropagation(); removeBookmark('${sectionId}');" title="移除书签">x</button>`;
+    html += `<button class="ebook-bookmark-item-remove" data-on='["removeBookmark","${sectionId}"]' data-stop-propagation title="移除书签">x</button>`;
     html += `</div>`;
   }
   list.innerHTML = html;
@@ -2063,7 +2068,7 @@ function handleSearch(query) {
       // 高亮关键词
       const highlightedTitle = highlightText(r.title, q);
       const highlightedPreview = highlightText(r.preview, q);
-      html += `<div class="ebook-search-result-item" onclick="navigateToSection('${r.sectionId}'); closeSearch();">`;
+      html += `<div class="ebook-search-result-item" data-on='["_cspEBookSearchGo","${r.sectionId}"]'>`;
       html += `<div class="ebook-search-result-title">${highlightedTitle}</div>`;
       html += `<div class="ebook-search-result-preview">${highlightedPreview}</div>`;
       html += `</div>`;

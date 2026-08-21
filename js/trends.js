@@ -845,7 +845,7 @@
       '</svg>' +
       '<h3 style="font-size:1.1rem;color:var(--text-secondary,#555);margin:0 0 8px;">' + title + '</h3>' +
       '<p style="font-size:0.88rem;margin:0 0 20px;">' + desc + '</p>' +
-      '<button class="wr-export" onclick="navigateTo(\'/practice\')">去练习</button>' +
+      '<button class="wr-export" data-on=\'["navigateTo","/practice"]\'>去练习</button>' +
     '</div>';
   }
 

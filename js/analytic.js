@@ -7,6 +7,14 @@
 
 'use strict';
 
+/* CSP 便捷委托：原内联 onmouseover/onmouseout 的悬浮样式收敛为最小全局函数 */
+if (typeof window._cspHoverIn !== 'function') {
+  window._cspHoverIn = function (el) { el.style.transform = 'translateY(-1px)'; el.style.boxShadow = '0 4px 12px rgba(90,125,92,0.3)'; };
+}
+if (typeof window._cspHoverOut !== 'function') {
+  window._cspHoverOut = function (el) { el.style.transform = ''; el.style.boxShadow = ''; };
+}
+
 let analyticStylesInjected = false;
 
 function injectAnalyticsStyles() {
@@ -1213,10 +1221,10 @@ function renderAnalyticsPage(target) {
           <div style="font-size:48px;margin-bottom:16px;opacity:0.3;"></div>
           <h2 style="font-size:22px;font-weight:600;margin-bottom:8px;color:var(--text-primary);">学习分析需要登录</h2>
           <p style="font-size:14px;color:var(--text-secondary);margin-bottom:24px;line-height:1.6;">登录后即可查看你的学习进度、能力雷达图和错题本</p>
-          <button onclick="window.showAuthModal && window.showAuthModal()" style="
+          <button data-on='["_cspShowAuth"]' style="
             background:var(--color-sage);color:#fff;border:none;padding:12px 32px;border-radius:var(--radius-full);
             font-size:15px;font-weight:500;cursor:pointer;transition:all 0.2s;
-          " onmouseover="this.style.transform='translateY(-1px)';this.style.boxShadow='0 4px 12px rgba(90,125,92,0.3)'" onmouseout="this.style.transform='';this.style.boxShadow=''">立即登录</button>
+          " data-on-mouseover='["_cspHoverIn","__this"]' data-on-mouseout='["_cspHoverOut","__this"]'>立即登录</button>
         </div>
       </div>
     `;

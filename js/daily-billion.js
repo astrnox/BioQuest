@@ -418,7 +418,7 @@
     html += '<div class="db-progress-wrap"><div class="db-progress-bar" id="dbProgressBar"></div></div>';
     html += '<div class="db-top-bar" id="dbTopBar">';
     html += '<div class="db-top-bar-left">';
-    html += '<a class="db-back-btn" href="#/" onclick="event.preventDefault();window.location.hash=\'#/\';">';
+    html += '<a class="db-back-btn" href="#/" data-on=\'["_cspGotoHash","#/"]\' data-prevent-default>';
     html += '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>';
     html += '</a>';
     html += '<span class="db-top-bar-title">每日亿题</span>';

@@ -686,7 +686,7 @@
 
     var res = await window.analyzeWrongQuestionWithAI(q.question_text, q.user_answer, q.correct_answer);
     if (!res.ok) {
-      overlay.querySelector('.wb-modal').innerHTML = '<h3>AI 分析失败</h3><p>' + (res.error || '未知错误') + '</p><button class="wb-btn wb-btn--secondary" onclick="window.closeWrongbookModal&&window.closeWrongbookModal()">关闭</button>';
+      overlay.querySelector('.wb-modal').innerHTML = '<h3>AI 分析失败</h3><p>' + (res.error || '未知错误') + '</p><button class="wb-btn wb-btn--secondary" data-on=\'["closeWrongbookModal"]\'>关闭</button>';
       return;
     }
 

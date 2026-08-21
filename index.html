@@ -9,10 +9,13 @@
   <!-- P0-2 修复：meta CSP（GitHub Pages 兼容）。
        已移除 'unsafe-eval'：应用自身代码不使用 eval()/new Function()，
        消除存储型 XSS 下通过 eval 逃逸 CSP 的路径，防止被窃取的 AI Key 外传。
-       本应用为纯 vanilla + 内联脚本/内联样式，script-src/style-src 需保留 unsafe-inline。 -->
+       P1-8 修复：已移除 script-src 的 'unsafe-inline'——所有内联脚本外部化为
+       js/theme-init.js（同步防闪烁）、js/boot-mask.js、js/boot-lazy.js、js/sw-register.js，
+       所有动态内联 onclick/onchange 等处理器改由 js/csp-events.js 的 data-on 委托实现。
+       style-src 保留 unsafe-inline：动态度量/背景等数百处内联 style 属性为低风险（非 XSS 载体）。 -->
   <meta http-equiv="Content-Security-Policy" content="
     default-src 'self';
-    script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://unpkg.com;
+    script-src 'self' https://cdn.jsdelivr.net https://unpkg.com;
     style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com;
     img-src 'self' data: https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://upload.wikimedia.org;
     font-src 'self' data: https://cdn.jsdelivr.net https://cdnjs.cloudflare.com;

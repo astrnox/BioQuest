@@ -5,6 +5,28 @@
  * ============================================================
  */
 
+/* CSP 改造辅助：把无法用 data-on 数组直接表达的复杂内联处理器
+ * 收敛为极小的命名函数，供 csp-events.js 的委托通过 window[fn] 查找调用。
+ * 语义均与原内联表达式完全等价。 */
+window.__cspRoot = function () {};
+window._cspGotoHash = function (hash) { window.location.hash = hash; };
+window._cspShowAuth = function () {
+  if (typeof window.showAuthModal === 'function') window.showAuthModal();
+  else if (typeof window.renderAuthModal === 'function') window.renderAuthModal();
+};
+window._cspReload = function () { window.location.reload(); };
+window._cspRemoveParent = function () { if (this.parentNode) this.parentNode.remove(); };
+window._cspSlideCaptcha = function (mode) {
+  var fn = window._showSlideCaptcha || window.__cspSlideCaptchaImpl;
+  var p = fn ? fn(mode) : Promise.resolve();
+  return Promise.resolve(p).then(function () {
+    if (typeof window._updateSlideTriggerUI === 'function') window._updateSlideTriggerUI();
+  });
+};
+window._cspOpenGitHub = function () {
+  window.open('https://github.com/astrnox/BioQuest/issues/new/choose', '_blank');
+};
+
 /**
  * 动态加载脚本（返回 Promise），用于延迟加载非首屏 JS
  * 统一委托给 window.loadScriptOnce（公共加载器，带去重与超时），
@@ -556,7 +578,7 @@ function renderExamPage(target) {
           <div style="text-align:center;padding:64px 24px;">
             <div style="font-size:2rem;margin-bottom:12px;"></div>
             <p style="color:var(--color-error);">考试模块加载超时，请刷新页面重试</p>
-            <button style="margin-top:16px;padding:8px 20px;background:var(--color-amber);border:none;border-radius:8px;cursor:pointer;" onclick="location.reload()">刷新页面</button>
+            <button style="margin-top:16px;padding:8px 20px;background:var(--color-amber);border:none;border-radius:8px;cursor:pointer;" data-on='["_cspReload"]'>刷新页面</button>
           </div>
         `;
       }
@@ -1736,7 +1758,7 @@ function handleRoute(route) {
     target.innerHTML = '<div style="text-align:center;padding:60px 20px;">' +
       '<p style="color:var(--color-error);font-size:1.1rem;margin-bottom:8px;">模块加载失败</p>' +
       '<p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:16px;">' + escapeHtml(err && err.message ? err.message : '请检查网络或刷新页面重试') + '</p>' +
-      '<button onclick="location.reload()" style="padding:8px 20px;background:var(--color-sage);color:#fff;border:none;border-radius:8px;cursor:pointer;">刷新页面</button>' +
+      '<button data-on=\'["_cspReload"]\' style="padding:8px 20px;background:var(--color-sage);color:#fff;border:none;border-radius:8px;cursor:pointer;">刷新页面</button>' +
       '</div>';
   }
 
@@ -1966,8 +1988,8 @@ function _renderModuleError(target, route, err) {
       '<p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:16px;">' +
       escapeHtml((err && err.message) ? err.message : '模块初始化异常，请刷新页面重试') +
       '</p>' +
-      '<button onclick="location.reload()" style="padding:8px 20px;background:var(--color-sage);color:#fff;border:none;border-radius:8px;cursor:pointer;margin-right:8px;">刷新页面</button>' +
-      '<button onclick="window.location.hash=\'/\'" style="padding:8px 20px;background:transparent;border:1px solid var(--color-sage);color:var(--color-sage);border-radius:8px;cursor:pointer;">返回首页</button>' +
+      '<button data-on=\'["_cspReload"]\' style="padding:8px 20px;background:var(--color-sage);color:#fff;border:none;border-radius:8px;cursor:pointer;margin-right:8px;">刷新页面</button>' +
+      '<button data-on=\'["_cspGotoHash","/"]\' style="padding:8px 20px;background:transparent;border:1px solid var(--color-sage);color:var(--color-sage);border-radius:8px;cursor:pointer;">返回首页</button>' +
       '</div>';
   } catch (e2) { /* ignore */ }
 }
@@ -2058,7 +2080,7 @@ function doRouteRender(route, target) {
         '<div style="font-size:48px;margin-bottom:16px;opacity:0.3;">需要登录</div>' +
         '<h2 style="font-size:20px;font-weight:600;margin-bottom:8px;">权限不足</h2>' +
         '<p style="font-size:14px;color:var(--text-secondary);margin-bottom:20px;">此功能需要【' + (groupLabels[requiredGroup] || requiredGroup) + '】及以上权限</p>' +
-        '<button onclick="window.showAuthModal && window.showAuthModal()" style="background:var(--color-sage);color:#fff;border:none;padding:10px 24px;border-radius:20px;cursor:pointer;">升级权限</button>' +
+        '<button data-on=\'["_cspShowAuth"]\' style="background:var(--color-sage);color:#fff;border:none;padding:10px 24px;border-radius:20px;cursor:pointer;">升级权限</button>' +
         '</div>';
       return;
     }
@@ -2681,7 +2703,7 @@ function showAuthModal(mode) {
           <svg class="auth-field-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
           <input type="password" class="auth-input" id="auth-login-password" placeholder="密码" autocomplete="current-password">
         </div>
-        <div class="slide-cap-trigger" id="slide-cap-trigger-login" data-state="pending" onclick="_showSlideCaptcha('login').then(_updateSlideTriggerUI)">
+        <div class="slide-cap-trigger" id="slide-cap-trigger-login" data-state="pending" data-on='["_cspSlideCaptcha","login"]'>
           <svg class="slide-cap-trigger-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
           <span class="slide-cap-trigger-text" id="slide-cap-trigger-text-login">点击完成安全验证</span>
           <span class="slide-cap-trigger-arrow">→</span>
@@ -2691,23 +2713,21 @@ function showAuthModal(mode) {
             <input type="checkbox" id="auth-remember" checked style="accent-color:#5a7d5c;cursor:pointer;">
             记住我的账号
           </label>
-          <a href="javascript:void(0)" onclick="authSwitchToForgot()">忘记密码？</a>
+          <a href="#" data-on='["authSwitchToForgot"]' data-prevent-default>忘记密码？</a>
         </div>
-        <button type="button" class="auth-btn" onclick="handleLogin();return false">登 录</button>
+        <button type="button" class="auth-btn" data-on='["handleLogin"]' data-prevent-default>登 录</button>
         <p class="auth-error" id="auth-login-error"></p>
         <div style="text-align:center;margin-top:10px;border-top:1px solid rgba(255,255,255,0.08);padding-top:10px;">
           <div class="auth-field">
             <svg class="auth-field-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
             <input type="password" class="auth-input" id="auth-guest-password" placeholder="设置密码（可选，用于找回账号）" autocomplete="new-password">
           </div>
-          <button type="button" class="auth-btn-guest" onclick="handleGuestLogin();return false" style="background:linear-gradient(135deg,#c4956a,#d4a574);border:none;color:#1a2f1d;padding:10px 20px;border-radius:20px;cursor:pointer;font-size:0.9rem;font-weight:600;width:100%;transition:all 0.2s;box-shadow:0 2px 8px rgba(196,149,106,0.3);"
-            onmouseenter="this.style.transform='translateY(-1px)';this.style.boxShadow='0 4px 14px rgba(196,149,106,0.45)';"
-            onmouseleave="this.style.transform='translateY(0)';this.style.boxShadow='0 2px 8px rgba(196,149,106,0.3)';">
+          <button type="button" class="auth-btn-guest" data-on='["handleGuestLogin"]' data-prevent-default style="background:linear-gradient(135deg,#c4956a,#d4a574);border:none;color:#1a2f1d;padding:10px 20px;border-radius:20px;cursor:pointer;font-size:0.9rem;font-weight:600;width:100%;transition:all 0.2s;box-shadow:0 2px 8px rgba(196,149,106,0.3);">
             🚀 游客登录（无需注册）
           </button>
         </div>
         <div style="text-align:center;margin-top:6px;">
-          <a href="#/admin" onclick="closeAuthModal()" class="auth-link" style="font-size:0.72rem;">管理员入口</a>
+          <a href="#/admin" data-on='["closeAuthModal"]' class="auth-link" style="font-size:0.72rem;">管理员入口</a>
         </div>
       </div>
       <div class="auth-form-panel" id="auth-form-register">
@@ -2729,12 +2749,12 @@ function showAuthModal(mode) {
           <svg class="auth-field-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
           <input type="password" class="auth-input" id="auth-register-password" placeholder="密码（至少6位）" autocomplete="new-password">
         </div>
-        <div class="slide-cap-trigger" id="slide-cap-trigger-register" data-state="pending" onclick="_showSlideCaptcha('register').then(_updateSlideTriggerUI)">
+        <div class="slide-cap-trigger" id="slide-cap-trigger-register" data-state="pending" data-on='["_cspSlideCaptcha","register"]'>
           <svg class="slide-cap-trigger-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
           <span class="slide-cap-trigger-text" id="slide-cap-trigger-text-register">点击完成安全验证</span>
           <span class="slide-cap-trigger-arrow">→</span>
         </div>
-        <button type="button" class="auth-btn" onclick="handleRegister();return false">注 册</button>
+        <button type="button" class="auth-btn" data-on='["handleRegister"]' data-prevent-default>注 册</button>
         <p class="auth-error" id="auth-register-error"></p>
         <p id="auth-register-debug" style="font-size:0.65rem;color:#889;text-align:center;margin:4px 0;line-height:1.5;word-break:break-all;display:none;"></p>
       </div>
@@ -2743,10 +2763,10 @@ function showAuthModal(mode) {
         <p class="auth-form-sub">使用 8 字符密钥重置密码（无需邮件）</p>
         <div style="display:flex;gap:8px;margin-bottom:14px;justify-content:center;">
           <label style="display:flex;align-items:center;gap:4px;font-size:0.82rem;cursor:pointer;color:#cfd8d0;">
-            <input type="radio" name="forgot-mode" value="reset" checked onchange="toggleForgotMode()"> 重置密码
-          </label>
-          <label style="display:flex;align-items:center;gap:4px;font-size:0.82rem;cursor:pointer;color:#cfd8d0;">
-            <input type="radio" name="forgot-mode" value="recover-key" onchange="toggleForgotMode()"> 找回密钥
+            <input type="radio" name="forgot-mode" value="reset" checked data-on-change='["toggleForgotMode"]'> 重置密码
+              </label>
+              <label style="display:flex;align-items:center;gap:6px;font-size:0.85rem;color:#cfd8d0;cursor:pointer;">
+            <input type="radio" name="forgot-mode" value="recover-key" data-on-change='["toggleForgotMode"]'> 找回密钥
           </label>
         </div>
 
@@ -2781,11 +2801,11 @@ function showAuthModal(mode) {
           <p style="font-size:0.72rem;color:#8a9a8a;margin:6px 0 12px;line-height:1.5;">需要通过用户名 + 邮箱后缀验证身份</p>
         </div>
 
-        <button type="button" class="auth-btn" onclick="handleForgotPassword();return false">重置密码</button>
+        <button type="button" class="auth-btn" data-on='["handleForgotPassword"]' data-prevent-default>重置密码</button>
         <p class="auth-error" id="auth-forgot-error"></p>
         <p class="auth-success" id="auth-forgot-success"></p>
         <div style="text-align:center;margin-top:10px;">
-          <a href="javascript:void(0)" onclick="authSwitchToLogin()" class="auth-link">返回登录</a>
+          <a href="#" data-on='["authSwitchToLogin"]' data-prevent-default class="auth-link">返回登录</a>
         </div>
       </div>
     </div>
@@ -4107,7 +4127,7 @@ async function handleForgotPassword() {
           '<p style="font-size:0.85rem;color:var(--text-secondary,#8a8a8a);line-height:1.6;margin-bottom:12px;">' +
             '你的密码已成功重置。<br>请使用新密码登录。' +
           '</p>' +
-          '<button onclick="authSwitchToLogin()" ' +
+          '<button data-on=\'["authSwitchToLogin"]\' ' +
             'style="background:var(--color-sage,#3a8c5c);color:#fff;border:none;padding:8px 20px;border-radius:20px;cursor:pointer;font-size:0.85rem;margin-top:8px;">' +
             '返回登录</button>' +
         '</div>';
@@ -4565,13 +4585,13 @@ async function showLeaderboard() {
   overlay.className = 'leaderboard-overlay';
   overlay.innerHTML = `
     <div class="leaderboard-box">
-      <button class="lb-close" onclick="closeLeaderboard()">&times;</button>
+      <button class="lb-close" data-on='["closeLeaderboard"]'>&times;</button>
       <div class="lb-header">
         <div class="lb-title">排行榜</div>
         <div class="lb-tabs">
-          <button class="lb-tab active" id="lb-tab-bio" onclick="switchLbTab('bio')">Bio 分</button>
-          <button class="lb-tab" id="lb-tab-practice" onclick="switchLbTab('practice')">练习量</button>
-          <button class="lb-tab" id="lb-tab-checkin" onclick="switchLbTab('checkin')">签到</button>
+          <button class="lb-tab active" id="lb-tab-bio" data-on='["switchLbTab","bio"]'>Bio 分</button>
+          <button class="lb-tab" id="lb-tab-practice" data-on='["switchLbTab","practice"]'>练习量</button>
+          <button class="lb-tab" id="lb-tab-checkin" data-on='["switchLbTab","checkin"]'>签到</button>
         </div>
       </div>
       <div class="lb-body" id="lb-list">
@@ -4943,7 +4963,7 @@ function renderResetPasswordPage(target) {
     '<p style="text-align:center;font-size:0.85rem;color:var(--text-secondary,#8a8a8a);margin-bottom:20px;">请输入您的新密码</p>' +
     '<input type="password" class="auth-input" id="reset-new-password" placeholder="新密码（至少6位）" autocomplete="new-password" style="margin-bottom:12px;width:100%;box-sizing:border-box;">' +
     '<input type="password" class="auth-input" id="reset-confirm-password" placeholder="确认新密码" autocomplete="new-password" style="margin-bottom:16px;width:100%;box-sizing:border-box;">' +
-    '<button class="auth-btn" onclick="handleResetPasswordSubmit()">确认修改</button>' +
+    '<button class="auth-btn" data-on=\'["handleResetPasswordSubmit"]\'>确认修改</button>' +
     '<p id="reset-password-error" class="auth-error"></p>' +
   '</div>';
 }
@@ -4985,7 +5005,7 @@ async function handleResetPasswordSubmit() {
         '<div style="font-size:3rem;margin-bottom:16px;">&#10003;</div>' +
         '<h2 style="font-size:1.3rem;margin-bottom:8px;color:var(--color-sage,#3a8c5c);">密码修改成功</h2>' +
         '<p style="font-size:0.9rem;color:var(--text-secondary,#8a8a8a);margin-bottom:24px;">请使用新密码登录</p>' +
-        '<button onclick="window.location.hash=\'/\'" style="background:var(--color-sage,#3a8c5c);color:#fff;border:none;padding:10px 24px;border-radius:20px;cursor:pointer;font-size:0.9rem;">返回首页</button>' +
+        '<button data-on=\'["_cspGotoHash","/"]\' style="background:var(--color-sage,#3a8c5c);color:#fff;border:none;padding:10px 24px;border-radius:20px;cursor:pointer;font-size:0.9rem;">返回首页</button>' +
       '</div>';
     }
   } catch (e) {
@@ -4999,9 +5019,9 @@ function renderLeaderboardPage(target) {
     '<div class="lb-page-header">' +
       '<h2 class="lb-page-title">排行榜</h2>' +
       '<div class="lb-tabs" id="lb-page-tabs">' +
-        '<button class="lb-tab active" id="lb-page-tab-bio" onclick="switchLbPageTab(\'bio\')">Bio 分</button>' +
-        '<button class="lb-tab" id="lb-page-tab-practice" onclick="switchLbPageTab(\'practice\')">练习量</button>' +
-        '<button class="lb-tab" id="lb-page-tab-checkin" onclick="switchLbPageTab(\'checkin\')">签到</button>' +
+        '<button class="lb-tab active" id="lb-page-tab-bio" data-on=\'["switchLbPageTab","bio"]\'>Bio 分</button>' +
+        '<button class="lb-tab" id="lb-page-tab-practice" data-on=\'["switchLbPageTab","practice"]\'>练习量</button>' +
+        '<button class="lb-tab" id="lb-page-tab-checkin" data-on=\'["switchLbPageTab","checkin"]\'>签到</button>' +
       '</div>' +
     '</div>' +
     '<div class="lb-page-body" id="lb-page-list">' +
@@ -5047,7 +5067,7 @@ async function loadLbPageData(tabName) {
       if (myRank) html += renderMyRank(myRank);
       else if (typeof window.isLoggedIn !== 'function' || !window.isLoggedIn()) {
         // 游客提示登录后可见自己的排名
-        html += '<div style="text-align:center;color:#6b7f74;padding:20px 12px;margin-top:12px;border-radius:12px;background:rgba(58,140,92,0.04);"><span style="font-size:0.84rem;">登录后查看你的排名</span> <button onclick="window.showAuthModal && window.showAuthModal()" style="margin-left:8px;padding:4px 14px;border:none;border-radius:14px;background:var(--color-sage,#5a7d5c);color:#fff;font-size:0.78rem;cursor:pointer;">登录</button></div>';
+        html += '<div style="text-align:center;color:#6b7f74;padding:20px 12px;margin-top:12px;border-radius:12px;background:rgba(58,140,92,0.04);"><span style="font-size:0.84rem;">登录后查看你的排名</span> <button data-on=\'["_cspShowAuth"]\' style="margin-left:8px;padding:4px 14px;border:none;border-radius:14px;background:var(--color-sage,#5a7d5c);color:#fff;font-size:0.78rem;cursor:pointer;">登录</button></div>';
       }
       listEl.innerHTML = html;
     } else {
@@ -5419,7 +5439,7 @@ function showFeedbackModal() {
   overlay.className = 'auth-modal-overlay';
   overlay.innerHTML = `
     <div class="auth-container" style="max-width:500px;">
-      <button class="auth-close-btn" onclick="closeFeedbackModal()" title="关闭">
+      <button class="auth-close-btn" data-on='["closeFeedbackModal"]' title="关闭">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
       </button>
       <div style="padding:24px 20px;">
@@ -5454,10 +5474,10 @@ function showFeedbackModal() {
         <div style="margin-bottom:14px;padding:10px 12px;background:rgba(58,140,92,0.08);border:1px solid rgba(58,140,92,0.25);border-radius:10px;font-size:0.82rem;color:var(--text-secondary,#9aa5a0);line-height:1.6;">
           想得到更快的回复，建议直接去 GitHub 提 Issue（有模板，填起来很快）：
           <br>
-          <button type="button" onclick="event.stopPropagation();window.open('https://github.com/astrnox/BioQuest/issues/new/choose','_blank')" style="margin-top:8px;padding:6px 14px;border-radius:8px;background:rgba(58,140,92,0.15);border:1px solid rgba(58,140,92,0.4);color:#7fd0a3;font-size:0.82rem;cursor:pointer;">前往 GitHub 提 Issue →</button>
+          <button type="button" data-stop-propagation data-on='["_cspOpenGitHub"]' style="margin-top:8px;padding:6px 14px;border-radius:8px;background:rgba(58,140,92,0.15);border:1px solid rgba(58,140,92,0.4);color:#7fd0a3;font-size:0.82rem;cursor:pointer;">前往 GitHub 提 Issue →</button>
         </div>
 
-        <button type="button" class="auth-btn" onclick="handleFeedbackSubmit();return false" style="width:100%;">提交反馈</button>
+        <button type="button" class="auth-btn" data-on='["handleFeedbackSubmit"]' data-prevent-default style="width:100%;">提交反馈</button>
         <p class="auth-error" id="feedback-error" style="margin-top:8px;"></p>
         <p style="margin-top:14px;text-align:center;font-size:0.78rem;color:rgba(255,255,255,0.35);">作者（高中生）较忙，回复可能偏慢，见谅 · 作者 astrnox · astrnox@163.com · QQ 3930523703</p>
       </div>
@@ -5694,8 +5714,8 @@ window.showToast = showToast;
           'animation:toastSlideUp 0.3s ease'
         ].join(';');
         banner.innerHTML = '<span>新版本可用</span>' +
-          '<button onclick="location.reload()" style="padding:6px 16px;border-radius:8px;border:none;background:#5a7d5c;color:#fff;cursor:pointer;font-size:0.85rem;font-weight:600;white-space:nowrap;">刷新</button>' +
-          '<button onclick="this.parentNode.remove()" style="padding:6px 10px;border-radius:8px;border:none;background:transparent;color:#999;cursor:pointer;font-size:0.85rem;">✕</button>';
+          '<button data-on=\'["_cspReload"]\' style="padding:6px 16px;border-radius:8px;border:none;background:#5a7d5c;color:#fff;cursor:pointer;font-size:0.85rem;font-weight:600;white-space:nowrap;">刷新</button>' +
+          '<button data-on=\'["_cspRemoveParent"]\' style="padding:6px 10px;border-radius:8px;border:none;background:transparent;color:#999;cursor:pointer;font-size:0.85rem;">✕</button>';
         document.body.appendChild(banner);
       }, 0);
     });

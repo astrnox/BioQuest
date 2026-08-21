@@ -5,6 +5,14 @@
  * ============================================================
  */
 
+/* CSP 便捷委托：原内联 onmouseover/onmouseout 的悬浮样式收敛为最小全局函数 */
+if (typeof window._cspHoverIn !== 'function') {
+  window._cspHoverIn = function (el) { el.style.transform = 'translateY(-1px)'; el.style.boxShadow = '0 4px 12px rgba(90,125,92,0.3)'; };
+}
+if (typeof window._cspHoverOut !== 'function') {
+  window._cspHoverOut = function (el) { el.style.transform = ''; el.style.boxShadow = ''; };
+}
+
 (function () {
   'use strict';
 
@@ -21,7 +29,7 @@
       target.innerHTML = '<div style="text-align:center;padding:60px 20px;">' +
         '<p style="color:var(--color-error);font-size:1.1rem;margin-bottom:8px;">社区模块加载失败</p>' +
         '<p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:16px;">请刷新页面或稍后重试</p>' +
-        '<button onclick="location.reload()" style="padding:8px 20px;background:var(--color-sage);color:#fff;border:none;border-radius:8px;cursor:pointer;">刷新页面</button>' +
+        '<button data-on=\'["_cspReload"]\' style="padding:8px 20px;background:var(--color-sage);color:#fff;border:none;border-radius:8px;cursor:pointer;">刷新页面</button>' +
         '</div>';
     }
   }
@@ -1752,10 +1760,10 @@
       '<div style="font-size:48px;margin-bottom:16px;opacity:0.3;"></div>' +
       '<h2 style="font-size:22px;font-weight:600;margin-bottom:8px;color:var(--text-primary);">社区需要登录</h2>' +
       '<p style="font-size:14px;color:var(--text-secondary);margin-bottom:24px;line-height:1.6;">登录后即可参与讨论、发帖和评论</p>' +
-      '<button onclick="window.showAuthModal && window.showAuthModal()" style="' +
+      '<button data-on=\'["_cspShowAuth"]\' style="' +
       'background:var(--color-sage);color:#fff;border:none;padding:12px 32px;border-radius:var(--radius-full);' +
       'font-size:15px;font-weight:500;cursor:pointer;transition:all 0.2s;' +
-      '" onmouseover="this.style.transform=\'translateY(-1px)\';this.style.boxShadow=\'0 4px 12px rgba(90,125,92,0.3)\'" onmouseout="this.style.transform=\'\';this.style.boxShadow=\'\'">立即登录</button>' +
+      '" data-on-mouseover=\'["_cspHoverIn","__this"]\' data-on-mouseout=\'["_cspHoverOut","__this"]\'>立即登录</button>' +
       '</div></div>';
   }
 
@@ -1871,7 +1879,7 @@
       if (!loggedIn) {
         html += '<div class="community-login-banner">';
         html += '<span class="community-login-banner-text">登录后参与讨论、发帖和评论</span>';
-        html += '<button class="community-login-banner-btn" onclick="window.showAuthModal && window.showAuthModal()">立即登录</button>';
+        html += '<button class="community-login-banner-btn" data-on=\'["_cspShowAuth"]\'>立即登录</button>';
         html += '</div>';
       }
 
@@ -1913,7 +1921,7 @@
       target.innerHTML = '<div style="text-align:center;padding:60px 20px;">' +
         '<p style="color:var(--color-error);font-size:1.1rem;margin-bottom:8px;">社区页面渲染失败</p>' +
         '<p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:16px;">请刷新页面或稍后重试</p>' +
-        '<button onclick="location.reload()" style="padding:8px 20px;background:var(--color-sage);color:#fff;border:none;border-radius:8px;cursor:pointer;">刷新页面</button>' +
+        '<button data-on=\'["_cspReload"]\' style="padding:8px 20px;background:var(--color-sage);color:#fff;border:none;border-radius:8px;cursor:pointer;">刷新页面</button>' +
         '</div>';
     }
   }
@@ -2734,7 +2742,7 @@
         target.innerHTML = '<div style="text-align:center;padding:60px 20px;">' +
           '<p style="color:var(--color-error);font-size:1.1rem;margin-bottom:8px;">社区模块初始化失败</p>' +
           '<p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:16px;">请刷新页面或稍后重试</p>' +
-          '<button onclick="location.reload()" style="padding:8px 20px;background:var(--color-sage);color:#fff;border:none;border-radius:8px;cursor:pointer;">刷新页面</button>' +
+          '<button data-on=\'["_cspReload"]\' style="padding:8px 20px;background:var(--color-sage);color:#fff;border:none;border-radius:8px;cursor:pointer;">刷新页面</button>' +
           '</div>';
       }
     }
