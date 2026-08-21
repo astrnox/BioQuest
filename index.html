@@ -802,7 +802,9 @@
   <script src="js/learning-hub.js?v=20260809f" defer></script>
   <script src="js/daily-billion.js?v=20260809c" defer></script>
   <script src="js/points-ui.js?v=20260814a" defer></script>
-  <script src="js/app.js?v=20260814b" defer></script>
+  <!-- P1-2 拆分：路由配置表先于 app.js 加载，app.js 通过全局 Routes 引用 -->
+  <script src="js/app-routes.js?v=20260821a" defer></script>
+  <script src="js/app.js?v=20260821a" defer></script>
   <!-- PRD §5 补全模块 -->
   <script src="js/micro-details.js?v=20260803a" defer></script>
   <script src="js/sync-tabs.js?v=20260803a" defer></script>
