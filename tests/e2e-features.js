@@ -129,6 +129,7 @@ function seedData(page) {
   check(bubblesAfter >= bubblesBefore + 2, '发送后新增用户+AI 两条消息（' + bubblesBefore + ' → ' + bubblesAfter + '）');
   const lastAiText = await page.locator('#tutor-messages .tutor-msg-bubble').last().innerText().catch(() => '');
   check(lastAiText.trim().length > 0, 'AI 侧有非空回复（降级引导文本）');
+  check(lastAiText.indexOf('API Key') !== -1, '降级回复是「配置 API Key」引导（而非空/崩溃）');
 
   /* ================= 3. OCR 拍照录题 ================= */
   console.log('\n== 3. OCR / 拍照录题（/photo-quiz）==');
@@ -140,12 +141,16 @@ function seedData(page) {
   check((await page.locator('#pq-question').count()) > 0, '渲染题目文字输入框');
   check((await page.locator('#pq-analyze').count()) > 0, '渲染「AI 解析」按钮');
 
-  // 3b) 手动录入题目 + 点「AI 解析」→ 不崩溃
+  // 3b) 手动录入题目 + 点「AI 解析」：静态服务器无 /photo-quiz 后端，应真实走「解析失败」反馈路径
+  //     （有后端 + Key 的完整识别流程无法在静态环断言，这里验证失败能给出可见反馈而不卡死/崩溃）
   console.log('-- 3b 手动录入 + AI 解析 --');
   await page.fill('#pq-question', '单选题：细胞呼吸的主要场所是____。A 细胞核 B 线粒体 C 核糖体 D 内质网');
   await page.click('#pq-analyze');
-  await page.waitForTimeout(1200);
-  check(true, '手动录入并触发 AI 解析，页面保持稳定（详见下方全局 JS 错误校核）');
+  // 等「解析中」loading 消失（fetch 落定后才会替换为最终结果），再读取并断言
+  await page.waitForFunction(() => !document.querySelector('#pq-result .pq-loading'), { timeout: WAIT_TIMEOUT }).catch(() => {});
+  const resultText = await page.locator('#pq-result').innerText().catch(() => '');
+  check(resultText.length > 0, '点击 AI 解析后 #pq-result 出现可见反馈（实际：' + resultText.slice(0, 40).trim() + '…）');
+  check(resultText.indexOf('解析失败') !== -1, '无后端时走「解析失败」反馈路径（而非静默卡死）');
 
   /* ================= 4. 全程页面 JS 错误 ================= */
   console.log('\n== 4. 全程页面级 JS 错误 ==');

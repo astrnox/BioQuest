@@ -55,6 +55,9 @@
   }
 
   function dismiss() {
+    // 清除本卡片的自动收起定时器，避免旧卡片的 30s 定时器把「新卡片」提前关掉
+    // （render() 在切步骤时会先 dismiss() 再建新卡，若不清理，旧定时器会误删新卡）
+    if (card && card._autoClose) { clearTimeout(card._autoClose); }
     if (card && card.parentNode) card.parentNode.removeChild(card);
     card = null;
   }
@@ -178,7 +181,6 @@
     flashTarget();
 
     // 30 秒无操作后自动收起（不再次弹出，不写完成标记）
-    if (typeof card._autoClose !== 'undefined') clearTimeout(card._autoClose);
     card._autoClose = setTimeout(dismiss, 30000);
   }
 
@@ -206,8 +208,17 @@
     if (help) help.addEventListener('click', function () { start(); });
   }
 
+  // 路由切换时收起引导卡片，避免自动弹出在首页后「残留」到其他页面
+  // （设计意图是「只在首页自动弹出」，切走后应让出交互区域）
+  function bindRouteDismiss() {
+    window.addEventListener('hashchange', function () {
+      if (card && card.parentNode) dismiss();
+    });
+  }
+
   if (typeof document !== 'undefined') {
     bindHelpButton();
+    bindRouteDismiss();
     maybeAutoStart(900);
   }
 
