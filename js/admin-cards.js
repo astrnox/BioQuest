@@ -43,7 +43,7 @@ function renderCardsTab(container, cardsData) {
           ${ICONS.layers}
           知识卡片管理
         </div>
-        <button class="admin-btn admin-btn--primary" onclick="openCardModal()">
+        <button class="admin-btn admin-btn--primary" data-on='["openCardModal"]'>
           ${ICONS.plus}
           添加卡片
         </button>
@@ -91,10 +91,10 @@ function renderCardsTab(container, cardsData) {
                   <td style="color:var(--text-muted,#8a8a8a);font-size:0.82rem;max-width:300px;" title="${escapeHtml(card.question || '')}">${escapeHtml(qPreview)}</td>
                   <td>
                     <div class="admin-table-actions">
-                      <button class="admin-btn admin-btn--ghost" onclick='handleEditCard(${JSON.stringify(card).replace(/'/g, "&#39;")})'>
+                      <button class="admin-btn admin-btn--ghost" data-on='["handleEditCard",${JSON.stringify(card).replace(/'/g, "&#39;")}]'>
                         编辑
                       </button>
-                      <button class="admin-btn admin-btn--danger" onclick="handleDeleteCard('${card.id}')">
+                      <button class="admin-btn admin-btn--danger" data-on='["handleDeleteCard","${card.id}"]'>
                         ${ICONS.trash}
                         删除
                       </button>
@@ -111,9 +111,9 @@ function renderCardsTab(container, cardsData) {
     // 分页
     if (totalPages > 1) {
       html += `<div style="display:flex;justify-content:center;gap:8px;margin-top:20px;align-items:center;">`;
-      html += `<button class="admin-btn admin-btn--ghost" onclick="adminGoCardPage(${currentPage - 1})" ${currentPage <= 1 ? 'disabled' : ''}>上一页</button>`;
+      html += `<button class="admin-btn admin-btn--ghost" data-on='["adminGoCardPage",${currentPage - 1}]' ${currentPage <= 1 ? 'disabled' : ''}>上一页</button>`;
       html += `<span style="color:var(--text-muted);font-size:0.85rem;">第 ${currentPage} / ${totalPages} 页</span>`;
-      html += `<button class="admin-btn admin-btn--ghost" onclick="adminGoCardPage(${currentPage + 1})" ${currentPage >= totalPages ? 'disabled' : ''}>下一页</button>`;
+      html += `<button class="admin-btn admin-btn--ghost" data-on='["adminGoCardPage",${currentPage + 1}]' ${currentPage >= totalPages ? 'disabled' : ''}>下一页</button>`;
       html += `</div>`;
     }
   }
@@ -126,7 +126,7 @@ function renderCardsTab(container, cardsData) {
       <div class="admin-modal" style="max-width:600px;">
         <div class="admin-modal-header">
           <div class="admin-modal-title" id="admin-card-modal-title">添加卡片</div>
-          <button class="admin-modal-close" onclick="closeCardModal()">&times;</button>
+          <button class="admin-modal-close" data-on='["closeCardModal"]'>&times;</button>
         </div>
         <form id="admin-card-form" class="admin-form-grid">
           <div class="admin-form-group full">

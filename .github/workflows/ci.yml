@@ -82,3 +82,40 @@ jobs:
         # 验证 quiz.js 中 bioID 映射、getQuestionBioId 解析、
         # 错题本兜底 localStorage 写入稳定 bioID 等全流程
         run: npm run test:bioid
+
+  e2e:
+    name: Playwright E2E（Issue P1-28）
+    runs-on: ubuntu-latest
+    needs: test
+    timeout-minutes: 15
+
+    # Playwright 需真实系统依赖，故各步骤使用默认环境（含 apt 的 ubuntu），
+    # 不重复运行上游 job，避免拉长整套流水线耗时。
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Install Playwright 与 Chromium
+        # 以 --no-save 方式装载 Playwright，避免把重型依赖写入仓库锁定文件；
+        # --with-deps 自动安装浏览器所需的系统共享库。
+        run: |
+          npm install --no-save playwright
+          npx playwright install chromium --with-deps
+
+      - name: 启动静态服务器
+        # 静态 SPA 由 python3 提供（与本地开发一致），绑定随机端口避免冲突。
+        run: |
+          python3 -m http.server 8091 --bind 127.0.0.1 > /tmp/bioquest-http.log 2>&1 &
+          echo "http server started (127.0.0.1:8091)"
+
+      - name: Run Playwright E2E（P1-28）
+        # e2e-smoke.js 内置服务器冷启动重试，测试脚本常在服务器就绪前才开始。
+        run: npm run test:e2e

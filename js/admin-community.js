@@ -8,6 +8,12 @@
 let _adminCommunityPostPage = 1;
 let _adminCommunityPostSearch = '';
 
+// CSP-safe 包装：关闭最近的 admin-modal-overlay 弹窗（供 data-on 委托调用，this 为触发元素）
+window._cspRemoveOverlay = function () {
+  var overlay = this.closest('.admin-modal-overlay');
+  if (overlay) overlay.remove();
+};
+
 async function renderCommunityTab(container) {
   let postsData, mutesData, reportsData, loadError = '', fallbackSource = '';
   try {
@@ -132,21 +138,21 @@ async function renderCommunityTab(container) {
                     ${isPinned ? '<span class="admin-q-tag" style="background:rgba(196,149,106,0.12);color:var(--color-amber,#c4956a);margin:1px;">置顶</span>' : ''}
                     ${isDeleted ? '<span class="admin-q-tag" style="background:rgba(192,85,58,0.12);color:var(--color-error,#c0553a);margin:1px;">已删除</span>' : ''}
                   </td>
-                  <td style="font-family:var(--font-mono,monospace);font-weight:600;color:var(--color-sage,#5a7d5c);cursor:pointer;" title="点击修改点赞数" onclick="handleEditPostStat('${postIdJs}','like_count',${likeCountNum})">${likeCountNum}<span style="font-size:0.65rem;color:#999;margin-left:2px;">✎</span></td>
-                  <td style="font-family:var(--font-mono,monospace);cursor:pointer;" title="点击修改评论数" onclick="handleEditPostStat('${postIdJs}','comment_count',${commentCountNum})">${commentCountNum}<span style="font-size:0.65rem;color:#999;margin-left:2px;">✎</span></td>
+                  <td style="font-family:var(--font-mono,monospace);font-weight:600;color:var(--color-sage,#5a7d5c);cursor:pointer;" title="点击修改点赞数" data-on='["handleEditPostStat","${postIdJs}","like_count",${likeCountNum}]'>${likeCountNum}<span style="font-size:0.65rem;color:#999;margin-left:2px;">✎</span></td>
+                  <td style="font-family:var(--font-mono,monospace);cursor:pointer;" title="点击修改评论数" data-on='["handleEditPostStat","${postIdJs}","comment_count",${commentCountNum}]'>${commentCountNum}<span style="font-size:0.65rem;color:#999;margin-left:2px;">✎</span></td>
                   <td style="font-size:0.78rem;color:var(--text-muted,#8a8a8a);white-space:nowrap;">${post.created_at ? new Date(post.created_at).toLocaleString('zh-CN', {month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit'}) : ''}</td>
                   <td>
                     <div class="admin-table-actions">
-                      <button class="admin-btn admin-btn--ghost" onclick="handleViewPostDetail('${postIdJs}')">
+                      <button class="admin-btn admin-btn--ghost" data-on='["handleViewPostDetail","${postIdJs}"]'>
                         详情
                       </button>
-                      <button class="admin-btn ${isPinned ? 'admin-btn--ghost' : 'admin-btn--primary'}" onclick="handleTogglePin('${postIdJs}', ${isPinned ? 'true' : 'false'})">
+                      <button class="admin-btn ${isPinned ? 'admin-btn--ghost' : 'admin-btn--primary'}" data-on='["handleTogglePin","${postIdJs}",${isPinned ? 'true' : 'false'}]'>
                         ${isPinned ? '取消置顶' : '置顶'}
                       </button>
-                      <button class="admin-btn admin-btn--primary" onclick="handleManagePostComments('${postIdJs}')">
+                      <button class="admin-btn admin-btn--primary" data-on='["handleManagePostComments","${postIdJs}"]'>
                         评论
                       </button>
-                      <button class="admin-btn admin-btn--danger" onclick="handleDeleteCommunityPost('${postIdJs}')">
+                      <button class="admin-btn admin-btn--danger" data-on='["handleDeleteCommunityPost","${postIdJs}"]'>
                         ${ICONS.trash}
                         删除
                       </button>
@@ -162,9 +168,9 @@ async function renderCommunityTab(container) {
 
     if (postTotalPages > 1) {
       html += `<div style="display:flex;justify-content:center;gap:8px;margin-top:20px;align-items:center;">`;
-      html += `<button class="admin-btn admin-btn--ghost" onclick="adminGoCommunityPostPage(${postPage - 1})" ${postPage <= 1 ? 'disabled' : ''}>上一页</button>`;
+      html += `<button class="admin-btn admin-btn--ghost" data-on='["adminGoCommunityPostPage",${postPage - 1}]' ${postPage <= 1 ? 'disabled' : ''}>上一页</button>`;
       html += `<span style="color:var(--text-muted);font-size:0.85rem;">第 ${postPage} / ${postTotalPages} 页</span>`;
-      html += `<button class="admin-btn admin-btn--ghost" onclick="adminGoCommunityPostPage(${postPage + 1})" ${postPage >= postTotalPages ? 'disabled' : ''}>下一页</button>`;
+      html += `<button class="admin-btn admin-btn--ghost" data-on='["adminGoCommunityPostPage",${postPage + 1}]' ${postPage >= postTotalPages ? 'disabled' : ''}>下一页</button>`;
       html += `</div>`;
     }
   }
@@ -179,7 +185,7 @@ async function renderCommunityTab(container) {
           ${ICONS.shield}
           禁言管理
         </div>
-        <button class="admin-btn admin-btn--primary" onclick="openMuteModal()">
+        <button class="admin-btn admin-btn--primary" data-on='["openMuteModal"]'>
           ${ICONS.plus}
           添加禁言
         </button>
@@ -216,7 +222,7 @@ async function renderCommunityTab(container) {
                   </td>
                   <td>
                     <div class="admin-table-actions">
-                      <button class="admin-btn admin-btn--ghost" onclick="handleUnmuteUser('${muteKey}')">
+                      <button class="admin-btn admin-btn--ghost" data-on='["handleUnmuteUser","${muteKey}"]'>
                         解除禁言
                       </button>
                     </div>
@@ -282,10 +288,10 @@ async function renderCommunityTab(container) {
                   <td style="font-size:0.78rem;color:var(--text-muted);white-space:nowrap;">${times}</td>
                   <td>
                     <div class="admin-table-actions">
-                      <button class="admin-btn admin-btn--ghost" onclick="handleDismissReport('${escapeHtml(pid)}')">
+                      <button class="admin-btn admin-btn--ghost" data-on='["handleDismissReport","${escapeHtml(pid)}"]'>
                         驳回举报
                       </button>
-                      <button class="admin-btn admin-btn--danger" onclick="handleDeleteReportedPost('${escapeHtml(pid)}')">
+                      <button class="admin-btn admin-btn--danger" data-on='["handleDeleteReportedPost","${escapeHtml(pid)}"]'>
                         ${ICONS.trash}
                         删除帖子
                       </button>
@@ -308,7 +314,7 @@ async function renderCommunityTab(container) {
       <div class="admin-modal">
         <div class="admin-modal-header">
           <div class="admin-modal-title">添加禁言</div>
-          <button class="admin-modal-close" onclick="closeMuteModal()">&times;</button>
+          <button class="admin-modal-close" data-on='["closeMuteModal"]'>&times;</button>
         </div>
         <form id="admin-mute-form" class="admin-form-grid">
           <div class="admin-form-group full">
@@ -341,7 +347,7 @@ async function renderCommunityTab(container) {
       <div class="admin-modal" style="max-width:420px;">
         <div class="admin-modal-header">
           <div class="admin-modal-title" id="admin-post-stat-title">编辑帖子数据</div>
-          <button class="admin-modal-close" onclick="closePostStatModal()">&times;</button>
+          <button class="admin-modal-close" data-on='["closePostStatModal"]'>&times;</button>
         </div>
         <form id="admin-post-stat-form" class="admin-form-grid">
           <div class="admin-form-group full">
@@ -508,8 +514,8 @@ window.handleViewPostDetail = async function(postId) {
         '<div style="font-size:0.8rem;color:var(--text-primary,#1a2f1d);word-break:break-all;margin-bottom:4px;" id="comment-content-' + c.id + '">' + (window.renderMarkdown ? window.renderMarkdown(c.content || '') : escapeHtml(c.content || '')) + '</div>' +
         '<div style="font-size:0.7rem;color:var(--text-muted,#8a8a8a);margin-bottom:6px;">' + escapeHtml(c.author_id || '') + ' · ' + (c.created_at ? new Date(c.created_at).toLocaleString('zh-CN') : '') + '</div>' +
         '<div style="display:flex;gap:6px;">' +
-          '<button class="admin-btn admin-btn--ghost" style="padding:3px 10px;font-size:0.72rem;" onclick="handleEditComment(\'' + c.id + '\',\'' + postId + '\')">编辑</button>' +
-          '<button class="admin-btn admin-btn--danger" style="padding:3px 10px;font-size:0.72rem;" onclick="handleDeleteComment(\'' + c.id + '\',\'' + postId + '\')">删除</button>' +
+          '<button class="admin-btn admin-btn--ghost" style="padding:3px 10px;font-size:0.72rem;" data-on=\'["handleEditComment","' + c.id + '","' + postId + '"]\'>编辑</button>' +
+          '<button class="admin-btn admin-btn--danger" style="padding:3px 10px;font-size:0.72rem;" data-on=\'["handleDeleteComment","' + c.id + '","' + postId + '"]\'>删除</button>' +
         '</div>' +
       '</div>';
     }).join('');
@@ -522,7 +528,7 @@ window.handleViewPostDetail = async function(postId) {
       <div class="admin-modal" style="max-width:680px;max-height:85vh;overflow-y:auto;">
         <div class="admin-modal-header">
           <h3 class="admin-modal-title">帖子详情</h3>
-          <button class="admin-modal-close" onclick="closePostDetailModal()">×</button>
+          <button class="admin-modal-close" data-on='["closePostDetailModal"]'>×</button>
         </div>
         <div class="admin-modal-body" style="padding:20px;">
           <div style="margin-bottom:16px;">
@@ -574,11 +580,11 @@ window.handleEditComment = async function(commentId, postId) {
   overlay.style.zIndex = '10050';
   overlay.innerHTML =
     '<div class="admin-modal" style="max-width:460px;">' +
-      '<div class="admin-modal-header"><h3 class="admin-modal-title">编辑评论</h3><button class="admin-modal-close" onclick="this.closest(\'.admin-modal-overlay\').remove()">×</button></div>' +
+      '<div class="admin-modal-header"><h3 class="admin-modal-title">编辑评论</h3><button class="admin-modal-close" data-on=\'["_cspRemoveOverlay"]\'>×</button></div>' +
       '<div class="admin-modal-body" style="padding:20px;">' +
         '<textarea id="edit-comment-textarea" style="width:100%;box-sizing:border-box;min-height:100px;padding:10px 14px;border:1px solid var(--border-light,#e3e0d8);border-radius:10px;font-size:0.88rem;outline:none;background:var(--surface-primary,#fff);color:var(--text-primary,#1a2f1d);resize:vertical;" placeholder="评论内容">' + escapeHtml(oldContent) + '</textarea>' +
         '<div style="display:flex;gap:10px;justify-content:flex-end;margin-top:16px;">' +
-          '<button class="admin-btn admin-btn--ghost" onclick="this.closest(\'.admin-modal-overlay\').remove()">取消</button>' +
+          '<button class="admin-btn admin-btn--ghost" data-on=\'["_cspRemoveOverlay"]\'>取消</button>' +
           '<button class="admin-btn admin-btn--primary" id="edit-comment-save">保存</button>' +
         '</div>' +
       '</div>' +
@@ -671,7 +677,7 @@ window.handleManagePostComments = async function(postId) {
             '<div style="font-size:0.8rem;color:var(--text-secondary,#4a4a4a);word-break:break-all;">' + escapeHtml((c.content || '').substring(0, 200)) + '</div>' +
             '<div style="font-size:0.7rem;color:var(--text-muted,#8a8a8a);margin-top:4px;">' + (c.author_id || '') + ' · ' + (c.created_at ? new Date(c.created_at).toLocaleString('zh-CN') : '') + '</div>' +
           '</div>' +
-          '<button class="admin-btn admin-btn--danger" style="padding:4px 10px;font-size:0.75rem;white-space:nowrap;flex-shrink:0;" onclick="handleDeleteComment(\'' + c.id + '\',\'' + postId + '\')">' + ICONS.trash + ' 删除</button>' +
+          '<button class="admin-btn admin-btn--danger" style="padding:4px 10px;font-size:0.75rem;white-space:nowrap;flex-shrink:0;" data-on=\'["handleDeleteComment","' + c.id + '","' + postId + '"]\'>' + ICONS.trash + ' 删除</button>' +
         '</div>';
       }).join('');
 
@@ -680,7 +686,7 @@ window.handleManagePostComments = async function(postId) {
       <div class="admin-modal" style="max-width:560px;">
         <div class="admin-modal-header">
           <div class="admin-modal-title">帖子评论管理</div>
-          <button class="admin-modal-close" onclick="closeCommentsModal()">&times;</button>
+          <button class="admin-modal-close" data-on='["closeCommentsModal"]'>&times;</button>
         </div>
         <div style="max-height:400px;overflow-y:auto;border:1px solid var(--border-light,#ece8e1);border-radius:10px;">
           ${commentListHtml}

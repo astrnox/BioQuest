@@ -474,10 +474,10 @@
         '</div>' +
         masteryHtml +
         '<div class="anki-rating-bar">' +
-        '<button class="anki-rate-btn anki-rate-again" data-rate="again" onclick="event.stopPropagation();event.preventDefault();if(typeof window._ankiHandleRate===\'function\')window._ankiHandleRate(\'again\');return false;">再来一次</button>' +
-        '<button class="anki-rate-btn anki-rate-hard" data-rate="hard" onclick="event.stopPropagation();event.preventDefault();if(typeof window._ankiHandleRate===\'function\')window._ankiHandleRate(\'hard\');return false;">困难</button>' +
-        '<button class="anki-rate-btn anki-rate-good" data-rate="good" onclick="event.stopPropagation();event.preventDefault();if(typeof window._ankiHandleRate===\'function\')window._ankiHandleRate(\'good\');return false;">一般</button>' +
-        '<button class="anki-rate-btn anki-rate-easy" data-rate="easy" onclick="event.stopPropagation();event.preventDefault();if(typeof window._ankiHandleRate===\'function\')window._ankiHandleRate(\'easy\');return false;">简单</button>' +
+        '<button class="anki-rate-btn anki-rate-again" data-rate="again" data-on=\'["_ankiHandleRate","again"]\' data-stop-propagation data-prevent-default>再来一次</button>' +
+        '<button class="anki-rate-btn anki-rate-hard" data-rate="hard" data-on=\'["_ankiHandleRate","hard"]\' data-stop-propagation data-prevent-default>困难</button>' +
+        '<button class="anki-rate-btn anki-rate-good" data-rate="good" data-on=\'["_ankiHandleRate","good"]\' data-stop-propagation data-prevent-default>一般</button>' +
+        '<button class="anki-rate-btn anki-rate-easy" data-rate="easy" data-on=\'["_ankiHandleRate","easy"]\' data-stop-propagation data-prevent-default>简单</button>' +
         '</div>';
     }
 

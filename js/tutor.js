@@ -617,11 +617,20 @@ function _sendTutorMessage(text) {
     return { role: m.role === 'user' ? 'user' : 'assistant', content: m.content };
   });
 
+  // P1-24：开新请求前先中止上一个仍在飞的孤儿请求，避免重复占用模型连接
+  if (_tutorState.abortController) {
+    try { _tutorState.abortController.abort(); } catch (e) { /* 忽略 */ }
+  }
   _tutorState.abortController = new AbortController();
   // 绑定到 currentAiMsg，后面停止/恢复/flush 都以这个 msgId 为准
   _tutorState.currentAiMsgId = aiMsg.id;
 
-  var aiCheck = (typeof window.AiClient === 'function') ? window.AiClient.canUse() : { ok: true, useBackend: true };
+  // P1 修复：window.AiClient 是「对象」而非函数，原 `typeof === 'function'` 判断恒为 false，
+  // 会永远走 {ok:true} 兜底而跳过 canUse 门禁 → 无 Key 时仍调 streamChat，产生未处理 Promise 拒绝。
+  // 改为检测 canUse 方法是否存在，未加载时再兜底。
+  var aiCheck = (window.AiClient && typeof window.AiClient.canUse === 'function')
+    ? window.AiClient.canUse()
+    : { ok: true, useBackend: true };
   if (!aiCheck.ok) {
     _finishTutorStream(aiMsg, aiCheck.reason || '今日 AI 调用已达上限，请明日再试。');
     return;

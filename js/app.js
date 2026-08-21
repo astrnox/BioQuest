@@ -5,6 +5,28 @@
  * ============================================================
  */
 
+/* CSP 改造辅助：把无法用 data-on 数组直接表达的复杂内联处理器
+ * 收敛为极小的命名函数，供 csp-events.js 的委托通过 window[fn] 查找调用。
+ * 语义均与原内联表达式完全等价。 */
+window.__cspRoot = function () {};
+window._cspGotoHash = function (hash) { window.location.hash = hash; };
+window._cspShowAuth = function () {
+  if (typeof window.showAuthModal === 'function') window.showAuthModal();
+  else if (typeof window.renderAuthModal === 'function') window.renderAuthModal();
+};
+window._cspReload = function () { window.location.reload(); };
+window._cspRemoveParent = function () { if (this.parentNode) this.parentNode.remove(); };
+window._cspSlideCaptcha = function (mode) {
+  var fn = window._showSlideCaptcha || window.__cspSlideCaptchaImpl;
+  var p = fn ? fn(mode) : Promise.resolve();
+  return Promise.resolve(p).then(function () {
+    if (typeof window._updateSlideTriggerUI === 'function') window._updateSlideTriggerUI();
+  });
+};
+window._cspOpenGitHub = function () {
+  window.open('https://github.com/astrnox/BioQuest/issues/new/choose', '_blank');
+};
+
 /**
  * 动态加载脚本（返回 Promise），用于延迟加载非首屏 JS
  * 统一委托给 window.loadScriptOnce（公共加载器，带去重与超时），
@@ -58,15 +80,15 @@ var __jsBase = (function() {
 })();
 
 /**
- * @typedef {Object} AppState
+ * @typedef {Object} _AppState
  * @property {string} currentRoute - 当前路由路径
  * @property {string} theme - 当前主题 ('light' | 'dark')
  * @property {Object} userSettings - 用户偏好设置
  * @property {boolean} initialized - 应用是否已初始化
  */
 
-/** @type {AppState} */
-const AppState = {
+/** @type {_AppState} */
+const _AppState = {
   currentRoute: '',
   theme: 'light',
   userSettings: {
@@ -79,224 +101,37 @@ const AppState = {
   pageModules: {}
 };
 
-// 立即暴露到 window 全局，供其他模块使用
-window.AppState = AppState;
+/**
+ * P1-7：通过只读 Proxy 视图暴露内部状态。
+ * - 内部（app.js）直接读写 `_AppState` 可变对象；
+ * - 外部（window.AppState / 其他模块 / 第三方脚本）只能读取，
+ *   写入、删除、原型污染均被拒绝，限制对全局状态的篡改与注入。
+ */
+window.AppState = createReadOnlyStateView(_AppState);
+
+function createReadOnlyStateView(target) {
+  return new Proxy(target, {
+    get: function (t, k) { return t[k]; },
+    set: function (t, k, v) {
+      if (k === '__proto__' || k === 'prototype' || k === 'constructor') return false;
+      console.warn('[BioQuest] AppState 为只读视图，已拒绝外部写入:', String(k));
+      return true; // 严格模式返回 false 会抛错，改为静默拒绝
+    },
+    deleteProperty: function () { return false; },
+    defineProperty: function () { return false; },
+    setPrototypeOf: function () { return false; },
+    has: function (t, k) { return k in t; },
+    ownKeys: function (t) { return Reflect.ownKeys(t); },
+    getOwnPropertyDescriptor: function (t, k) { return Reflect.getOwnPropertyDescriptor(t, k); },
+    getPrototypeOf: function (t) { return Reflect.getPrototypeOf(t); }
+  });
+}
 
 // Modal 焦点陷阱句柄（统一在 app.js 管理）
 var _authFocusTrap = null;
 var _donationFocusTrap = null;
 
-/**
- * 路由配置表
- * 定义每个路由对应的页面标题和渲染函数
- */
-const Routes = {
-  '/': {
-    title: '首页',
-    module: 'home'
-  },
-  '/practice': {
-    title: '练习',
-    render: 'renderPracticePage',
-    module: 'practice'
-  },
-  '/photo-quiz': {
-    title: '拍照录题',
-    render: 'renderPhotoQuizPage',
-    module: 'photo-quiz'
-  },
-  '/exam': {
-    title: '模拟考试',
-    render: 'renderExamPage',
-    module: 'exam'
-  },
-  '/analytics': {
-    title: '学习分析',
-    render: 'renderAnalyticsPage',
-    module: 'analytics'
-  },
-  '/user': {
-    title: '用户中心',
-    render: 'renderUserPage',
-    module: 'user',
-    auth: true
-  },
-  '/privacy': {
-    title: '隐私政策',
-    module: 'privacy'
-  },
-  '/search': {
-    title: '搜索',
-    render: 'renderSearchPage',
-    module: 'search'
-  },
-  '/admin': {
-    title: '管理员后台',
-    render: 'renderAdminPage',
-    module: 'admin',
-    auth: true,
-    role: 'admin'
-  },
-  '/cards': {
-    title: '知识卡片',
-    render: 'renderCardsPage',
-    module: 'cards'
-  },
-  '/community': {
-    title: '社区',
-    render: 'renderCommunityPage',
-    module: 'community'
-  },
-  '/leaderboard': {
-    title: '排行榜',
-    render: 'renderLeaderboardPage',
-    module: 'leaderboard'
-  },
-  '/points-leaderboard': {
-    title: '信用排行榜',
-    render: 'renderCreditLeaderboardPage',
-    module: 'points-ui'
-  },
-  '/credit-leaderboard': {
-    title: '信用排行榜',
-    render: 'renderCreditLeaderboardPage',
-    module: 'points-ui'
-  },
-  '/points-shop': {
-    title: '信用中心',
-    render: 'renderCreditCenterPage',
-    module: 'points-ui'
-  },
-  '/credit': {
-    title: '信用中心',
-    render: 'renderCreditCenterPage',
-    module: 'points-ui'
-  },
-  '/knowledge-graph': {
-    title: '知识图谱',
-    render: 'renderKnowledgeGraphPage',
-    module: 'knowledge-graph'
-  },
-  '/diagnosis': {
-    title: '学情诊断',
-    render: 'renderSmartDiagnosisPage',
-    module: 'smart-diagnosis',
-    auth: true
-  },
-  '/pomodoro': {
-    title: '专注模式',
-    redirect: '/study'
-  },
-  '/habits': {
-    title: '习惯养成',
-    redirect: '/study'
-  },
-  '/review': {
-    title: '错题与复盘',
-    redirect: '/wrongbook'
-  },
-  '/bounties': {
-    title: '问答悬赏',
-    render: 'renderBountiesPage',
-    module: 'bounty'
-  },
-  '/wrongbook': {
-    title: '错题与复盘',
-    render: 'renderWrongbookPage',
-    module: 'wrongbook'
-  },
-  '/review-deep': {
-    title: '错题与复盘',
-    redirect: '/wrongbook'
-  },
-  '/study': {
-    title: '学习管理',
-    render: 'renderStudyPage',
-    module: 'study'
-  },
-  '/bio-animation': {
-    title: '生物过程动画',
-    render: 'renderBioAnimationPage',
-    module: 'bio-animation'
-  },
-  '/dashboard': {
-    title: '仪表盘',
-    render: 'renderDashboardPage',
-    module: 'dashboard',
-    auth: true
-  },
-  '/tutor': {
-    title: 'AI 生物导师',
-    render: 'renderTutorPage',
-    module: 'tutor'
-  },
-  '/discussion': {
-    title: '生物学家圆桌讨论',
-    render: 'renderDiscussionPage',
-    module: 'discussion'
-  },
-  '/bio-lab': {
-    title: '虚拟生物实验室',
-    render: 'renderBioLabPage',
-    module: 'bio-lab'
-  },
-  '/phet-sims': {
-    title: 'PhET 互动模拟实验',
-    render: 'renderPhetSimsPage',
-    module: 'phet-sims'
-  },
-  '/trends': {
-    title: '学情趋势',
-    render: 'renderTrendsPage',
-    module: 'trends'
-  },
-  '/teacher': {
-    title: '教师协同视图',
-    render: 'renderTeacherPage',
-    module: 'teacher'
-  },
-  // 注意：/classroom 路由已移除（模块不稳定已下线），保留显式 redirect 避免老书签白屏
-  '/classroom': {
-    title: '练习',
-    redirect: '/practice'
-  },
-  '/learning-hub': {
-    title: '学习管理中心',
-    redirect: '/study',
-    redirectFlag: 'lmc'
-  },
-  // —— 集成模块路由（对应 js/integrations/*.js，已在 index.html 中通过 defer 预加载） ——
-  '/sketch': {
-    title: '画板',
-    render: 'renderSketchPadPage',
-    module: 'sketch-pad'
-  },
-  '/smiles': {
-    title: '分子结构 (SMILES)',
-    render: 'renderSmilesPage',
-    module: 'rdkit-viewer'
-  },
-  '/molecules': {
-    title: '3D 分子查看',
-    render: 'renderMoleculesPage',
-    module: 'molecule-viewer'
-  },
-  '/genome': {
-    title: '基因组浏览器',
-    render: 'renderGenomeBrowserPage',
-    module: 'genome-browser'
-  },
-  '/community-enhanced': {
-    title: '社区（增强版）',
-    render: 'renderCommunityEnhancedPage',
-    module: 'community-enhanced'
-  },
-  '/daily-billion': {
-    title: '每日亿题',
-    render: 'renderDailyBillionPage',
-    module: 'daily-billion'
-  },
-};
+// 路由配置表已拆分至 js/app-routes.js（P1-2），此处通过全局 `Routes` 引用
 
 /**
  * 隐私政策页（静态内容，P1-19）
@@ -389,13 +224,27 @@ function _maybeShowPrivacyNotice() {
     var el = document.createElement('div');
     el.id = 'privacy-notice';
     el.setAttribute('role', 'alert');
+    el.setAttribute('aria-live', 'polite');
     el.style.cssText = 'position:fixed;left:12px;right:12px;bottom:12px;z-index:2147483000;' +
-      'display:flex;flex-wrap:wrap;align-items:center;gap:12px;padding:14px 16px;border-radius:12px;' +
+      'display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:14px 16px;border-radius:12px;' +
       'background:#ffffff;border:1px solid #ece8e1;box-shadow:0 6px 24px rgba(0,0,0,0.12);' +
       'font-family:var(--font-sans, sans-serif);font-size:0.85rem;color:#2c3e30;line-height:1.5;max-width:640px;margin:0 auto;';
     var txt = document.createElement('span');
-    txt.style.cssText = 'flex:1;min-width:220px;';
+    txt.style.cssText = 'flex:1 1 100%;';
     txt.textContent = '我们重视你的数据隐私：学习数据默认仅保存在本地，可随时导出或清除。';
+    // P1-33：未成年人保护——首次使用需确认年龄/监护人同意。
+    // 该确认仅作为最小合规门槛（不阻塞应用启动，用户也可自行访问隐私政策页后再确认）。
+    var ageWrap = document.createElement('label');
+    ageWrap.style.cssText = 'display:flex;align-items:flex-start;gap:8px;flex:1 1 100%;cursor:pointer;font-size:0.82rem;color:#54665c;';
+    var ageInput = document.createElement('input');
+    ageInput.type = 'checkbox';
+    ageInput.setAttribute('aria-label', '我已阅读并同意隐私政策；确认年满14周岁，或未成年人使用已取得监护人同意');
+    ageInput.style.cssText = 'margin-top:1px;accent-color:#3a6b4a;';
+    var ageText = document.createElement('span');
+    ageText.textContent = '我已阅读并同意隐私政策；确认年满 14 周岁（若为未成年人，已取得监护人同意后使用本平台）。';
+    ageWrap.appendChild(ageInput);
+    ageWrap.appendChild(ageText);
+
     var link = document.createElement('a');
     link.href = '#/privacy';
     link.textContent = '查看隐私政策';
@@ -403,13 +252,21 @@ function _maybeShowPrivacyNotice() {
     var closeBtn = document.createElement('button');
     closeBtn.type = 'button';
     closeBtn.textContent = '我知道了';
+    closeBtn.disabled = true;
     closeBtn.style.cssText = 'border:1px solid #3a6b4a;background:#3a6b4a;color:#fff;border-radius:8px;padding:6px 14px;font-size:0.82rem;cursor:pointer;white-space:nowrap;';
+    closeBtn.style.opacity = '0.5';
     closeBtn.addEventListener('click', function () {
       try { localStorage.setItem('bioquest_privacy_notice_seen', '1'); } catch (e) {}
+      try { localStorage.setItem('bioquest_age_consent', '1'); } catch (e) {}
       if (el.parentNode) el.parentNode.removeChild(el);
+    });
+    ageInput.addEventListener('change', function () {
+      closeBtn.disabled = !ageInput.checked;
+      closeBtn.style.opacity = ageInput.checked ? '1' : '0.5';
     });
 
     el.appendChild(txt);
+    el.appendChild(ageWrap);
     el.appendChild(link);
     el.appendChild(closeBtn);
     document.body.appendChild(el);
@@ -443,7 +300,7 @@ function navigateTo(route, options = {}) {
     route = '/';
   }
 
-  if (route === AppState.currentRoute) {
+  if (route === _AppState.currentRoute) {
     return;
   }
 
@@ -556,7 +413,7 @@ function renderExamPage(target) {
           <div style="text-align:center;padding:64px 24px;">
             <div style="font-size:2rem;margin-bottom:12px;"></div>
             <p style="color:var(--color-error);">考试模块加载超时，请刷新页面重试</p>
-            <button style="margin-top:16px;padding:8px 20px;background:var(--color-amber);border:none;border-radius:8px;cursor:pointer;" onclick="location.reload()">刷新页面</button>
+            <button style="margin-top:16px;padding:8px 20px;background:var(--color-amber);border:none;border-radius:8px;cursor:pointer;" data-on='["_cspReload"]'>刷新页面</button>
           </div>
         `;
       }
@@ -1023,8 +880,9 @@ function renderSearchPage() {
     }, 300);
   });
 
-  // URL 参数支持
+  // URL 参数支持（P1-5：对入参做清洗，限制长度并剔除控制字符）
   var urlQuery = new URLSearchParams(window.location.hash.split('?')[1] || '').get('q');
+  urlQuery = (urlQuery && typeof sanitizeUrlParam === 'function') ? sanitizeUrlParam(urlQuery, 100) : urlQuery;
   if (urlQuery) {
     searchInput.value = urlQuery;
     doSearch();
@@ -1160,7 +1018,7 @@ var escapeHtml = (typeof window !== 'undefined' && typeof window.escapeHtml === 
 /**
  * 重新初始化首页关键组件（倒计时、Hero 动画、滚动动画）
  * 这些组件位于首屏或影响全局交互，需要立即执行。
- * 首次进入时会标记 AppState._homePaintedReady，
+ * 首次进入时会标记 _AppState._homePaintedReady，
  * 配合 finishRouting → bioquest:app-ready 实现"加载界面期间就加载好"。
  */
 function reinitHomeComponents() {
@@ -1185,8 +1043,8 @@ function reinitHomeComponents() {
       if (secsEl) secsEl.textContent = pad(secs);
     }
     update();
-    if (AppState._countdownTimer) clearInterval(AppState._countdownTimer);
-    AppState._countdownTimer = setInterval(update, 1000);
+    if (_AppState._countdownTimer) clearInterval(_AppState._countdownTimer);
+    _AppState._countdownTimer = setInterval(update, 1000);
   }
 
   if (typeof initHeroSketch === 'function') {
@@ -1205,12 +1063,12 @@ function reinitHomeComponents() {
         // 触发一次 reflow 读取，强制浏览器完成布局
         void hero.offsetHeight;
       }
-      AppState._homePaintedReady = true;
+      _AppState._homePaintedReady = true;
       // 首页首屏绘制完成：推进一次加载进度档位（配合 index.html 的加权进度估算器）
       if (window.__bootWeight) { try { window.__bootWeight(20, 75); } catch (e) {} }
       // 若 finishRouting 已经执行过，则这里补发 app-ready 信号（解除遮罩等待）
-      if (AppState._homeRouteRendered && !AppState._appReadyDispatched) {
-        AppState._appReadyDispatched = true;
+      if (_AppState._homeRouteRendered && !_AppState._appReadyDispatched) {
+        _AppState._appReadyDispatched = true;
         try { document.dispatchEvent(new CustomEvent('bioquest:app-ready')); } catch (e) {}
       }
     });
@@ -1380,8 +1238,8 @@ function updateBottomTabBar(route) {
  */
 function initScrollAnimations() {
   // 清理旧的 observer
-  if (AppState._scrollObserver) {
-    AppState._scrollObserver.disconnect();
+  if (_AppState._scrollObserver) {
+    _AppState._scrollObserver.disconnect();
   }
 
   // 为主页各区块添加 reveal 类
@@ -1411,7 +1269,7 @@ function initScrollAnimations() {
     processSteps[i].style.transitionDelay = (i * 0.12) + 's';
   }
 
-  AppState._scrollObserver = new IntersectionObserver(function (entries) {
+  _AppState._scrollObserver = new IntersectionObserver(function (entries) {
     for (var i = 0; i < entries.length; i++) {
       var entry = entries[i];
       if (entry.isIntersecting) {
@@ -1422,7 +1280,7 @@ function initScrollAnimations() {
         }
         // 区块可见后不再观察，但子元素继续观察以便 stagger
         if (!entry.target.classList.contains('section-reveal-child')) {
-          AppState._scrollObserver.unobserve(entry.target);
+          _AppState._scrollObserver.unobserve(entry.target);
         }
       }
     }
@@ -1434,7 +1292,7 @@ function initScrollAnimations() {
   // 观察所有目标元素
   var allReveals = document.querySelectorAll('.section-reveal, .section-reveal-child');
   for (var i = 0; i < allReveals.length; i++) {
-    AppState._scrollObserver.observe(allReveals[i]);
+    _AppState._scrollObserver.observe(allReveals[i]);
   }
 
   // 创建或更新滚动指示器
@@ -1514,7 +1372,7 @@ function _denyRouteAccess(route, access) {
   console.warn('[BioQuest] 路由访问被拒绝（随登录后恢复）:', access);
   try { sessionStorage.setItem('bioquest:authRedirect', route); } catch (e) {}
 
-  var target = (typeof AppState !== 'undefined' && AppState.rootElement) || document.getElementById('page-content');
+  var target = (typeof _AppState !== 'undefined' && _AppState.rootElement) || document.getElementById('page-content');
   if (!target) {
     // 兜底：找不到容器时才回退为跳首页
     if (typeof navigateTo === 'function') navigateTo('/');
@@ -1522,7 +1380,7 @@ function _denyRouteAccess(route, access) {
     return;
   }
 
-  AppState.currentRoute = route;
+  _AppState.currentRoute = route;
   try { if (typeof updatePageTitle === 'function') updatePageTitle(route); } catch (e) {}
   var denied = !!(access && access.reason === 'role');
   target.innerHTML =
@@ -1556,13 +1414,13 @@ function _denyRouteAccess(route, access) {
  * 避免「登录成功后仍在原页看不到用户中心 / 体验上需要再次登录」。
  */
 function _refreshCurrentProtectedRoute() {
-  var route = AppState.currentRoute || (window.location.hash || '#/').replace(/^#/, '') || '/';
+  var route = _AppState.currentRoute || (window.location.hash || '#/').replace(/^#/, '') || '/';
   var cfg = Routes[route];
   if (!cfg || (!cfg.auth && !cfg.role)) return;
   var access = _checkRouteAccess(route);
   if (access.allowed) {
     try { sessionStorage.removeItem('bioquest:authRedirect'); } catch (e) {}
-    if (route === AppState.currentRoute) {
+    if (route === _AppState.currentRoute) {
       handleRoute(route);
     } else if (typeof navigateTo === 'function') {
       navigateTo(route);
@@ -1615,11 +1473,11 @@ function handleRoute(route) {
   _routingInProgress = true;
   _pendingRoute = null;
 
-  AppState.currentRoute = route;
+  _AppState.currentRoute = route;
   updatePageTitle(route);
   updateNavActive(route);
 
-  var target = AppState.rootElement || document.getElementById('page-content');
+  var target = _AppState.rootElement || document.getElementById('page-content');
   if (!target) {
     _routingInProgress = false;
     _flushPendingRoute();
@@ -1679,30 +1537,30 @@ function handleRoute(route) {
     // P1-18 修复：路由切换后把焦点移入新页面主体标题，读屏/键盘用户不必回顶重按 Tab
     _manageFocusForNewRoute();
     // 首次路由渲染完成 → 通知首屏骨架遮罩淡出（只在首次触发一次）
-    if (!AppState._appReadyDispatched) {
+    if (!_AppState._appReadyDispatched) {
       // 路由已完成首帧渲染：推进一次加载进度档位（加权进度估算器）
       if (window.__bootWeight) { try { window.__bootWeight(15, 55); } catch (e) {} }
-      var route = AppState.currentRoute || (window.location.hash || '#/').replace(/^#/, '') || '/';
+      var route = _AppState.currentRoute || (window.location.hash || '#/').replace(/^#/, '') || '/';
       var isHome = (route === '/' || route === '' || route === '/index.html');
       if (isHome) {
         // 首页：等 reinitHomeComponents 把 Hero/倒计时/滚动动画都绘制完成（见 reinitHomeComponents rAF 回调）
-        AppState._homeRouteRendered = true;
+        _AppState._homeRouteRendered = true;
         // 保险兜底：若 reinitHomeComponents 没被调用或超时，500ms 后仍会发 app-ready，不让遮罩卡住
         var safetyTimer = setTimeout(function () {
-          if (!AppState._appReadyDispatched) {
-            AppState._appReadyDispatched = true;
+          if (!_AppState._appReadyDispatched) {
+            _AppState._appReadyDispatched = true;
             try { document.dispatchEvent(new CustomEvent('bioquest:app-ready')); } catch (e) {}
           }
         }, 1500);
         // 若已提前 ready（非典型路径），立刻派发并清定时器
-        if (AppState._homePaintedReady) {
+        if (_AppState._homePaintedReady) {
           clearTimeout(safetyTimer);
-          AppState._appReadyDispatched = true;
+          _AppState._appReadyDispatched = true;
           try { document.dispatchEvent(new CustomEvent('bioquest:app-ready')); } catch (e) {}
         }
       } else {
         // 非首页路由：首次路由渲染完即可撤遮罩
-        AppState._appReadyDispatched = true;
+        _AppState._appReadyDispatched = true;
         try { document.dispatchEvent(new CustomEvent('bioquest:app-ready')); } catch (e) {}
       }
     }
@@ -1716,7 +1574,7 @@ function handleRoute(route) {
   // setTimeout 覆盖标题焦点，因此无需抢占守卫。
   function _manageFocusForNewRoute() {
     try {
-      var root = (typeof AppState !== 'undefined' && AppState.rootElement) || document.getElementById('page-content');
+      var root = (typeof _AppState !== 'undefined' && _AppState.rootElement) || document.getElementById('page-content');
       if (!root) return;
       var targets = ['h1', '.page-title', '[role="heading"]', 'h2'];
       var el = null;
@@ -1735,7 +1593,7 @@ function handleRoute(route) {
     target.innerHTML = '<div style="text-align:center;padding:60px 20px;">' +
       '<p style="color:var(--color-error);font-size:1.1rem;margin-bottom:8px;">模块加载失败</p>' +
       '<p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:16px;">' + escapeHtml(err && err.message ? err.message : '请检查网络或刷新页面重试') + '</p>' +
-      '<button onclick="location.reload()" style="padding:8px 20px;background:var(--color-sage);color:#fff;border:none;border-radius:8px;cursor:pointer;">刷新页面</button>' +
+      '<button data-on=\'["_cspReload"]\' style="padding:8px 20px;background:var(--color-sage);color:#fff;border:none;border-radius:8px;cursor:pointer;">刷新页面</button>' +
       '</div>';
   }
 
@@ -1788,7 +1646,7 @@ function handleRoute(route) {
 }
 
 function _flushPendingRoute() {
-  if (_pendingRoute && _pendingRoute !== AppState.currentRoute) {
+  if (_pendingRoute && _pendingRoute !== _AppState.currentRoute) {
     var r = _pendingRoute;
     _pendingRoute = null;
     handleRoute(r);
@@ -1965,8 +1823,8 @@ function _renderModuleError(target, route, err) {
       '<p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:16px;">' +
       escapeHtml((err && err.message) ? err.message : '模块初始化异常，请刷新页面重试') +
       '</p>' +
-      '<button onclick="location.reload()" style="padding:8px 20px;background:var(--color-sage);color:#fff;border:none;border-radius:8px;cursor:pointer;margin-right:8px;">刷新页面</button>' +
-      '<button onclick="window.location.hash=\'/\'" style="padding:8px 20px;background:transparent;border:1px solid var(--color-sage);color:var(--color-sage);border-radius:8px;cursor:pointer;">返回首页</button>' +
+      '<button data-on=\'["_cspReload"]\' style="padding:8px 20px;background:var(--color-sage);color:#fff;border:none;border-radius:8px;cursor:pointer;margin-right:8px;">刷新页面</button>' +
+      '<button data-on=\'["_cspGotoHash","/"]\' style="padding:8px 20px;background:transparent;border:1px solid var(--color-sage);color:var(--color-sage);border-radius:8px;cursor:pointer;">返回首页</button>' +
       '</div>';
   } catch (e2) { /* ignore */ }
 }
@@ -2057,7 +1915,7 @@ function doRouteRender(route, target) {
         '<div style="font-size:48px;margin-bottom:16px;opacity:0.3;">需要登录</div>' +
         '<h2 style="font-size:20px;font-weight:600;margin-bottom:8px;">权限不足</h2>' +
         '<p style="font-size:14px;color:var(--text-secondary);margin-bottom:20px;">此功能需要【' + (groupLabels[requiredGroup] || requiredGroup) + '】及以上权限</p>' +
-        '<button onclick="window.showAuthModal && window.showAuthModal()" style="background:var(--color-sage);color:#fff;border:none;padding:10px 24px;border-radius:20px;cursor:pointer;">升级权限</button>' +
+        '<button data-on=\'["_cspShowAuth"]\' style="background:var(--color-sage);color:#fff;border:none;padding:10px 24px;border-radius:20px;cursor:pointer;">升级权限</button>' +
         '</div>';
       return;
     }
@@ -2065,8 +1923,8 @@ function doRouteRender(route, target) {
     switch (route) {
       case '/':
         target.classList.add('page-content--home');
-        if (AppState._homeHTML) {
-          target.innerHTML = AppState._homeHTML;
+        if (_AppState._homeHTML) {
+          target.innerHTML = _AppState._homeHTML;
           reinitHomeComponents();
         }
         break;
@@ -2239,8 +2097,8 @@ function doRouteRender(route, target) {
         break;
       default:
         target.classList.add('page-content--home');
-        if (AppState._homeHTML) {
-          target.innerHTML = AppState._homeHTML;
+        if (_AppState._homeHTML) {
+          target.innerHTML = _AppState._homeHTML;
           reinitHomeComponents();
         }
     }
@@ -2276,7 +2134,7 @@ function toggleTheme(theme) {
 
   if (theme && COLOR_THEMES.indexOf(theme) >= 0) {
     // 色彩主题（保留深色模式，仅改变强调色）
-    AppState.theme = theme;
+    _AppState.theme = theme;
     document.documentElement.setAttribute('data-theme', theme);
     if (theme === 'amber') {
       document.documentElement.style.setProperty('--color-amber', '#c4956a');
@@ -2299,7 +2157,7 @@ function toggleTheme(theme) {
     return;
   }
 
-  const current = AppState.theme;
+  const current = _AppState.theme;
   let nextTheme;
 
   if (theme === 'light' || theme === 'dark') {
@@ -2308,7 +2166,7 @@ function toggleTheme(theme) {
     nextTheme = current === 'light' ? 'dark' : 'light';
   }
 
-  AppState.theme = nextTheme;
+  _AppState.theme = nextTheme;
 
   if (nextTheme === 'dark') {
     document.documentElement.setAttribute('data-theme', 'dark');
@@ -2406,7 +2264,7 @@ function bindEvents() {
             }
           }
         } catch (e2) { /* ignore */ }
-        const target = AppState.rootElement || document.getElementById('page-content');
+        const target = _AppState.rootElement || document.getElementById('page-content');
         if (target) {
           target.setAttribute('data-page-transition', 'exiting');
         }
@@ -2455,14 +2313,14 @@ function bindEvents() {
  * @returns {Promise<void>}
  */
 async function loadPageModule(moduleName) {
-  if (AppState.pageModules[moduleName]) {
+  if (_AppState.pageModules[moduleName]) {
     return;
   }
 
   try {
     // 添加 cache-bust 参数避免浏览器缓存旧版模块（如 tutor.js）
     const module = await import(`./${moduleName}.js?v=20260809g`);
-    AppState.pageModules[moduleName] = module;
+    _AppState.pageModules[moduleName] = module;
   } catch (err) {
     console.warn(`[BioQuest] 模块 ${moduleName} 加载失败:`, err.message);
   }
@@ -2480,7 +2338,7 @@ function restoreSettings() {
       const showTimer = loadSetting('showTimer', true);
       const autoSubmit = loadSetting('autoSubmit', false);
 
-      AppState.userSettings = { fontSize, questionCount, showTimer, autoSubmit };
+      _AppState.userSettings = { fontSize, questionCount, showTimer, autoSubmit };
       toggleTheme(theme);
     } else {
       const theme = localStorage.getItem('bioquest-theme') || 'light';
@@ -2660,14 +2518,14 @@ function showAuthModal(mode) {
   overlay.setAttribute('aria-label', '登录或注册 BioQuest 账号');
   overlay.innerHTML = `
     <div class="auth-container" id="auth-container">
-      <button class="auth-close-btn" onclick="closeAuthModal()" title="关闭">
+      <button class="auth-close-btn" data-on='["closeAuthModal"]' title="关闭">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
       </button>
       <div class="auth-tabs" id="auth-tabs">
         <span class="auth-tab-indicator" id="auth-tab-indicator"></span>
-        <button class="auth-tab active" id="auth-tab-login" onclick="authSwitchToLogin()">登录</button>
-        <button class="auth-tab" id="auth-tab-register" onclick="authSwitchToRegister()">注册</button>
-        <button class="auth-tab" id="auth-tab-forgot" onclick="authSwitchToForgot()">找回密码</button>
+        <button class="auth-tab active" id="auth-tab-login" data-on='["authSwitchToLogin"]'>登录</button>
+        <button class="auth-tab" id="auth-tab-register" data-on='["authSwitchToRegister"]'>注册</button>
+        <button class="auth-tab" id="auth-tab-forgot" data-on='["authSwitchToForgot"]'>找回密码</button>
       </div>
       <div class="auth-form-panel active" id="auth-form-login">
         <h2 class="auth-form-title">欢迎回来</h2>
@@ -2680,7 +2538,7 @@ function showAuthModal(mode) {
           <svg class="auth-field-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
           <input type="password" class="auth-input" id="auth-login-password" placeholder="密码" autocomplete="current-password">
         </div>
-        <div class="slide-cap-trigger" id="slide-cap-trigger-login" data-state="pending" onclick="_showSlideCaptcha('login').then(_updateSlideTriggerUI)">
+        <div class="slide-cap-trigger" id="slide-cap-trigger-login" data-state="pending" data-on='["_cspSlideCaptcha","login"]'>
           <svg class="slide-cap-trigger-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
           <span class="slide-cap-trigger-text" id="slide-cap-trigger-text-login">点击完成安全验证</span>
           <span class="slide-cap-trigger-arrow">→</span>
@@ -2690,23 +2548,21 @@ function showAuthModal(mode) {
             <input type="checkbox" id="auth-remember" checked style="accent-color:#5a7d5c;cursor:pointer;">
             记住我的账号
           </label>
-          <a href="javascript:void(0)" onclick="authSwitchToForgot()">忘记密码？</a>
+          <a href="#" data-on='["authSwitchToForgot"]' data-prevent-default>忘记密码？</a>
         </div>
-        <button type="button" class="auth-btn" onclick="handleLogin();return false">登 录</button>
+        <button type="button" class="auth-btn" data-on='["handleLogin"]' data-prevent-default>登 录</button>
         <p class="auth-error" id="auth-login-error"></p>
         <div style="text-align:center;margin-top:10px;border-top:1px solid rgba(255,255,255,0.08);padding-top:10px;">
           <div class="auth-field">
             <svg class="auth-field-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
             <input type="password" class="auth-input" id="auth-guest-password" placeholder="设置密码（可选，用于找回账号）" autocomplete="new-password">
           </div>
-          <button type="button" class="auth-btn-guest" onclick="handleGuestLogin();return false" style="background:linear-gradient(135deg,#c4956a,#d4a574);border:none;color:#1a2f1d;padding:10px 20px;border-radius:20px;cursor:pointer;font-size:0.9rem;font-weight:600;width:100%;transition:all 0.2s;box-shadow:0 2px 8px rgba(196,149,106,0.3);"
-            onmouseenter="this.style.transform='translateY(-1px)';this.style.boxShadow='0 4px 14px rgba(196,149,106,0.45)';"
-            onmouseleave="this.style.transform='translateY(0)';this.style.boxShadow='0 2px 8px rgba(196,149,106,0.3)';">
+          <button type="button" class="auth-btn-guest" data-on='["handleGuestLogin"]' data-prevent-default style="background:linear-gradient(135deg,#c4956a,#d4a574);border:none;color:#1a2f1d;padding:10px 20px;border-radius:20px;cursor:pointer;font-size:0.9rem;font-weight:600;width:100%;transition:all 0.2s;box-shadow:0 2px 8px rgba(196,149,106,0.3);">
             🚀 游客登录（无需注册）
           </button>
         </div>
         <div style="text-align:center;margin-top:6px;">
-          <a href="#/admin" onclick="closeAuthModal()" class="auth-link" style="font-size:0.72rem;">管理员入口</a>
+          <a href="#/admin" data-on='["closeAuthModal"]' class="auth-link" style="font-size:0.72rem;">管理员入口</a>
         </div>
       </div>
       <div class="auth-form-panel" id="auth-form-register">
@@ -2728,12 +2584,12 @@ function showAuthModal(mode) {
           <svg class="auth-field-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
           <input type="password" class="auth-input" id="auth-register-password" placeholder="密码（至少6位）" autocomplete="new-password">
         </div>
-        <div class="slide-cap-trigger" id="slide-cap-trigger-register" data-state="pending" onclick="_showSlideCaptcha('register').then(_updateSlideTriggerUI)">
+        <div class="slide-cap-trigger" id="slide-cap-trigger-register" data-state="pending" data-on='["_cspSlideCaptcha","register"]'>
           <svg class="slide-cap-trigger-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
           <span class="slide-cap-trigger-text" id="slide-cap-trigger-text-register">点击完成安全验证</span>
           <span class="slide-cap-trigger-arrow">→</span>
         </div>
-        <button type="button" class="auth-btn" onclick="handleRegister();return false">注 册</button>
+        <button type="button" class="auth-btn" data-on='["handleRegister"]' data-prevent-default>注 册</button>
         <p class="auth-error" id="auth-register-error"></p>
         <p id="auth-register-debug" style="font-size:0.65rem;color:#889;text-align:center;margin:4px 0;line-height:1.5;word-break:break-all;display:none;"></p>
       </div>
@@ -2742,10 +2598,10 @@ function showAuthModal(mode) {
         <p class="auth-form-sub">使用 8 字符密钥重置密码（无需邮件）</p>
         <div style="display:flex;gap:8px;margin-bottom:14px;justify-content:center;">
           <label style="display:flex;align-items:center;gap:4px;font-size:0.82rem;cursor:pointer;color:#cfd8d0;">
-            <input type="radio" name="forgot-mode" value="reset" checked onchange="toggleForgotMode()"> 重置密码
-          </label>
-          <label style="display:flex;align-items:center;gap:4px;font-size:0.82rem;cursor:pointer;color:#cfd8d0;">
-            <input type="radio" name="forgot-mode" value="recover-key" onchange="toggleForgotMode()"> 找回密钥
+            <input type="radio" name="forgot-mode" value="reset" checked data-on-change='["toggleForgotMode"]'> 重置密码
+              </label>
+              <label style="display:flex;align-items:center;gap:6px;font-size:0.85rem;color:#cfd8d0;cursor:pointer;">
+            <input type="radio" name="forgot-mode" value="recover-key" data-on-change='["toggleForgotMode"]'> 找回密钥
           </label>
         </div>
 
@@ -2780,11 +2636,11 @@ function showAuthModal(mode) {
           <p style="font-size:0.72rem;color:#8a9a8a;margin:6px 0 12px;line-height:1.5;">需要通过用户名 + 邮箱后缀验证身份</p>
         </div>
 
-        <button type="button" class="auth-btn" onclick="handleForgotPassword();return false">重置密码</button>
+        <button type="button" class="auth-btn" data-on='["handleForgotPassword"]' data-prevent-default>重置密码</button>
         <p class="auth-error" id="auth-forgot-error"></p>
         <p class="auth-success" id="auth-forgot-success"></p>
         <div style="text-align:center;margin-top:10px;">
-          <a href="javascript:void(0)" onclick="authSwitchToLogin()" class="auth-link">返回登录</a>
+          <a href="#" data-on='["authSwitchToLogin"]' data-prevent-default class="auth-link">返回登录</a>
         </div>
       </div>
     </div>
@@ -4106,7 +3962,7 @@ async function handleForgotPassword() {
           '<p style="font-size:0.85rem;color:var(--text-secondary,#8a8a8a);line-height:1.6;margin-bottom:12px;">' +
             '你的密码已成功重置。<br>请使用新密码登录。' +
           '</p>' +
-          '<button onclick="authSwitchToLogin()" ' +
+          '<button data-on=\'["authSwitchToLogin"]\' ' +
             'style="background:var(--color-sage,#3a8c5c);color:#fff;border:none;padding:8px 20px;border-radius:20px;cursor:pointer;font-size:0.85rem;margin-top:8px;">' +
             '返回登录</button>' +
         '</div>';
@@ -4564,13 +4420,13 @@ async function showLeaderboard() {
   overlay.className = 'leaderboard-overlay';
   overlay.innerHTML = `
     <div class="leaderboard-box">
-      <button class="lb-close" onclick="closeLeaderboard()">&times;</button>
+      <button class="lb-close" data-on='["closeLeaderboard"]'>&times;</button>
       <div class="lb-header">
         <div class="lb-title">排行榜</div>
         <div class="lb-tabs">
-          <button class="lb-tab active" id="lb-tab-bio" onclick="switchLbTab('bio')">Bio 分</button>
-          <button class="lb-tab" id="lb-tab-practice" onclick="switchLbTab('practice')">练习量</button>
-          <button class="lb-tab" id="lb-tab-checkin" onclick="switchLbTab('checkin')">签到</button>
+          <button class="lb-tab active" id="lb-tab-bio" data-on='["switchLbTab","bio"]'>Bio 分</button>
+          <button class="lb-tab" id="lb-tab-practice" data-on='["switchLbTab","practice"]'>练习量</button>
+          <button class="lb-tab" id="lb-tab-checkin" data-on='["switchLbTab","checkin"]'>签到</button>
         </div>
       </div>
       <div class="lb-body" id="lb-list">
@@ -4942,7 +4798,7 @@ function renderResetPasswordPage(target) {
     '<p style="text-align:center;font-size:0.85rem;color:var(--text-secondary,#8a8a8a);margin-bottom:20px;">请输入您的新密码</p>' +
     '<input type="password" class="auth-input" id="reset-new-password" placeholder="新密码（至少6位）" autocomplete="new-password" style="margin-bottom:12px;width:100%;box-sizing:border-box;">' +
     '<input type="password" class="auth-input" id="reset-confirm-password" placeholder="确认新密码" autocomplete="new-password" style="margin-bottom:16px;width:100%;box-sizing:border-box;">' +
-    '<button class="auth-btn" onclick="handleResetPasswordSubmit()">确认修改</button>' +
+    '<button class="auth-btn" data-on=\'["handleResetPasswordSubmit"]\'>确认修改</button>' +
     '<p id="reset-password-error" class="auth-error"></p>' +
   '</div>';
 }
@@ -4978,13 +4834,13 @@ async function handleResetPasswordSubmit() {
       errorEl.textContent = error.message.includes('same') ? '新密码不能与旧密码相同' : '修改失败：' + error.message;
       return;
     }
-    var target = AppState.rootElement || document.getElementById('page-content');
+    var target = _AppState.rootElement || document.getElementById('page-content');
     if (target) {
       target.innerHTML = '<div style="text-align:center;padding:80px 20px;">' +
         '<div style="font-size:3rem;margin-bottom:16px;">&#10003;</div>' +
         '<h2 style="font-size:1.3rem;margin-bottom:8px;color:var(--color-sage,#3a8c5c);">密码修改成功</h2>' +
         '<p style="font-size:0.9rem;color:var(--text-secondary,#8a8a8a);margin-bottom:24px;">请使用新密码登录</p>' +
-        '<button onclick="window.location.hash=\'/\'" style="background:var(--color-sage,#3a8c5c);color:#fff;border:none;padding:10px 24px;border-radius:20px;cursor:pointer;font-size:0.9rem;">返回首页</button>' +
+        '<button data-on=\'["_cspGotoHash","/"]\' style="background:var(--color-sage,#3a8c5c);color:#fff;border:none;padding:10px 24px;border-radius:20px;cursor:pointer;font-size:0.9rem;">返回首页</button>' +
       '</div>';
     }
   } catch (e) {
@@ -4998,9 +4854,9 @@ function renderLeaderboardPage(target) {
     '<div class="lb-page-header">' +
       '<h2 class="lb-page-title">排行榜</h2>' +
       '<div class="lb-tabs" id="lb-page-tabs">' +
-        '<button class="lb-tab active" id="lb-page-tab-bio" onclick="switchLbPageTab(\'bio\')">Bio 分</button>' +
-        '<button class="lb-tab" id="lb-page-tab-practice" onclick="switchLbPageTab(\'practice\')">练习量</button>' +
-        '<button class="lb-tab" id="lb-page-tab-checkin" onclick="switchLbPageTab(\'checkin\')">签到</button>' +
+        '<button class="lb-tab active" id="lb-page-tab-bio" data-on=\'["switchLbPageTab","bio"]\'>Bio 分</button>' +
+        '<button class="lb-tab" id="lb-page-tab-practice" data-on=\'["switchLbPageTab","practice"]\'>练习量</button>' +
+        '<button class="lb-tab" id="lb-page-tab-checkin" data-on=\'["switchLbPageTab","checkin"]\'>签到</button>' +
       '</div>' +
     '</div>' +
     '<div class="lb-page-body" id="lb-page-list">' +
@@ -5046,7 +4902,7 @@ async function loadLbPageData(tabName) {
       if (myRank) html += renderMyRank(myRank);
       else if (typeof window.isLoggedIn !== 'function' || !window.isLoggedIn()) {
         // 游客提示登录后可见自己的排名
-        html += '<div style="text-align:center;color:#6b7f74;padding:20px 12px;margin-top:12px;border-radius:12px;background:rgba(58,140,92,0.04);"><span style="font-size:0.84rem;">登录后查看你的排名</span> <button onclick="window.showAuthModal && window.showAuthModal()" style="margin-left:8px;padding:4px 14px;border:none;border-radius:14px;background:var(--color-sage,#5a7d5c);color:#fff;font-size:0.78rem;cursor:pointer;">登录</button></div>';
+        html += '<div style="text-align:center;color:#6b7f74;padding:20px 12px;margin-top:12px;border-radius:12px;background:rgba(58,140,92,0.04);"><span style="font-size:0.84rem;">登录后查看你的排名</span> <button data-on=\'["_cspShowAuth"]\' style="margin-left:8px;padding:4px 14px;border:none;border-radius:14px;background:var(--color-sage,#5a7d5c);color:#fff;font-size:0.78rem;cursor:pointer;">登录</button></div>';
       }
       listEl.innerHTML = html;
     } else {
@@ -5107,7 +4963,7 @@ function showStorageStatus(status) {
  * 初始化应用 — 在 DOMContentLoaded 时执行
  */
 function initApp() {
-  if (AppState.initialized) {
+  if (_AppState.initialized) {
     return;
   }
 
@@ -5137,9 +4993,9 @@ function initApp() {
     return;
   }
 
-  AppState.rootElement = root;
-  AppState._homeHTML = root.innerHTML;
-  AppState._countdownTimer = null;
+  _AppState.rootElement = root;
+  _AppState._homeHTML = root.innerHTML;
+  _AppState._countdownTimer = null;
 
   const route = getRouteFromHash();
 
@@ -5149,7 +5005,7 @@ function initApp() {
     handleRoute(route);
   });
 
-  AppState.initialized = true;
+  _AppState.initialized = true;
 
 }
 
@@ -5418,7 +5274,7 @@ function showFeedbackModal() {
   overlay.className = 'auth-modal-overlay';
   overlay.innerHTML = `
     <div class="auth-container" style="max-width:500px;">
-      <button class="auth-close-btn" onclick="closeFeedbackModal()" title="关闭">
+      <button class="auth-close-btn" data-on='["closeFeedbackModal"]' title="关闭">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
       </button>
       <div style="padding:24px 20px;">
@@ -5453,10 +5309,10 @@ function showFeedbackModal() {
         <div style="margin-bottom:14px;padding:10px 12px;background:rgba(58,140,92,0.08);border:1px solid rgba(58,140,92,0.25);border-radius:10px;font-size:0.82rem;color:var(--text-secondary,#9aa5a0);line-height:1.6;">
           想得到更快的回复，建议直接去 GitHub 提 Issue（有模板，填起来很快）：
           <br>
-          <button type="button" onclick="event.stopPropagation();window.open('https://github.com/astrnox/BioQuest/issues/new/choose','_blank')" style="margin-top:8px;padding:6px 14px;border-radius:8px;background:rgba(58,140,92,0.15);border:1px solid rgba(58,140,92,0.4);color:#7fd0a3;font-size:0.82rem;cursor:pointer;">前往 GitHub 提 Issue →</button>
+          <button type="button" data-stop-propagation data-on='["_cspOpenGitHub"]' style="margin-top:8px;padding:6px 14px;border-radius:8px;background:rgba(58,140,92,0.15);border:1px solid rgba(58,140,92,0.4);color:#7fd0a3;font-size:0.82rem;cursor:pointer;">前往 GitHub 提 Issue →</button>
         </div>
 
-        <button type="button" class="auth-btn" onclick="handleFeedbackSubmit();return false" style="width:100%;">提交反馈</button>
+        <button type="button" class="auth-btn" data-on='["handleFeedbackSubmit"]' data-prevent-default style="width:100%;">提交反馈</button>
         <p class="auth-error" id="feedback-error" style="margin-top:8px;"></p>
         <p style="margin-top:14px;text-align:center;font-size:0.78rem;color:rgba(255,255,255,0.35);">作者（高中生）较忙，回复可能偏慢，见谅 · 作者 astrnox · astrnox@163.com · QQ 3930523703</p>
       </div>
@@ -5596,11 +5452,87 @@ function showToast(message, duration) {
   }, duration || 3000);
 }
 
+/**
+ * P1-21：带“撤销”按钮的操作反馈条，用于删除等可逆操作。
+ * 自动经过 options.duration 后消失（不触发撤销）；点“撤销”则执行 onUndo 并收起。
+ * 返回 { dismiss }，调用方可主动收起（例如已重新恢复场景）。
+ * 仅用 DOM API + addEventListener，无内联脚本（符合 CSP）。
+ * @param {string} message - 提示文本
+ * @param {Function} onUndo - 点撤销时执行的回调
+ * @param {Object} [options] - { duration, label }
+ * @returns {{ dismiss: Function }}
+ */
+function showUndoToast(message, onUndo, options) {
+  options = options || {};
+  var label = options.label || '撤销';
+  var existing = document.getElementById('bioquest-undo-toast');
+  if (existing) existing.remove();
+
+  var bar = document.createElement('div');
+  bar.id = 'bioquest-undo-toast';
+  bar.setAttribute('role', 'status');
+  bar.setAttribute('aria-live', 'polite');
+  bar.style.cssText = [
+    'position:fixed',
+    'bottom:80px',
+    'left:50%',
+    'transform:translateX(-50%)',
+    'z-index:99999',
+    'display:flex',
+    'align-items:center',
+    'gap:14px',
+    'background:rgba(26,58,42,0.96)',
+    'color:#fff',
+    'padding:12px 18px',
+    'border-radius:14px',
+    'font-size:0.9rem',
+    'font-weight:500',
+    'box-shadow:0 4px 20px rgba(0,0,0,0.3)',
+    'border:1px solid rgba(58,140,92,0.3)',
+    'animation:toastSlideUp 0.3s ease',
+    'max-width:90vw',
+    'pointer-events:auto'
+  ].join(';');
+
+  var text = document.createElement('span');
+  text.textContent = message;
+
+  var undoBtn = document.createElement('button');
+  undoBtn.type = 'button';
+  undoBtn.textContent = label;
+  undoBtn.style.cssText = 'border:none;background:transparent;color:#91d8ab;font-weight:700;font-size:0.9rem;cursor:pointer;padding:4px 8px;white-space:nowrap;';
+
+  var fired = false;
+  function dismiss() {
+    if (bar.parentNode) bar.parentNode.removeChild(bar);
+  }
+  undoBtn.addEventListener('click', function () {
+    if (fired) return;
+    fired = true;
+    dismiss();
+    if (typeof onUndo === 'function') {
+      try { onUndo(); } catch (e) { /* 撤销失败不影响页面 */ }
+    }
+  });
+
+  bar.appendChild(text);
+  bar.appendChild(undoBtn);
+  document.body.appendChild(bar);
+
+  setTimeout(function () {
+    bar.style.animation = 'toastSlideDown 0.3s ease forwards';
+    setTimeout(dismiss, 300);
+  }, options.duration || 5000);
+
+  return { dismiss: dismiss };
+}
+
 // 暴露到全局
 window.showFeedbackModal = showFeedbackModal;
 window.closeFeedbackModal = closeFeedbackModal;
 window.handleFeedbackSubmit = handleFeedbackSubmit;
 window.showToast = showToast;
+window.showUndoToast = showUndoToast;
 
 // ============================================================
 // PRD §5-30：网络状态指示器
@@ -5693,8 +5625,8 @@ window.showToast = showToast;
           'animation:toastSlideUp 0.3s ease'
         ].join(';');
         banner.innerHTML = '<span>新版本可用</span>' +
-          '<button onclick="location.reload()" style="padding:6px 16px;border-radius:8px;border:none;background:#5a7d5c;color:#fff;cursor:pointer;font-size:0.85rem;font-weight:600;white-space:nowrap;">刷新</button>' +
-          '<button onclick="this.parentNode.remove()" style="padding:6px 10px;border-radius:8px;border:none;background:transparent;color:#999;cursor:pointer;font-size:0.85rem;">✕</button>';
+          '<button data-on=\'["_cspReload"]\' style="padding:6px 16px;border-radius:8px;border:none;background:#5a7d5c;color:#fff;cursor:pointer;font-size:0.85rem;font-weight:600;white-space:nowrap;">刷新</button>' +
+          '<button data-on=\'["_cspRemoveParent"]\' style="padding:6px 10px;border-radius:8px;border:none;background:transparent;color:#999;cursor:pointer;font-size:0.85rem;">✕</button>';
         document.body.appendChild(banner);
       }, 0);
     });

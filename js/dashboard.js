@@ -917,7 +917,7 @@ function _loadForecast(container) {
     forecasts.forEach(function(f, i) {
       var conf = Math.round((f.confidence || 0.5) * 100);
       var confColor = conf >= 75 ? '#5a7d5c' : conf >= 50 ? '#c49a4a' : '#aaa';
-      html += '<div class="dash-forecast-item" onclick="navigateTo(\'/practice\')">' +
+      html += '<div class="dash-forecast-item" data-on=\'["navigateTo","/practice"]\'>' +
         '<div class="dash-forecast-rank' + (i === 0 ? ' dash-forecast-rank--top' : '') + '">' + (i + 1) + '</div>' +
         '<div class="dash-forecast-info">' +
         '<div class="dash-forecast-name">' + escapeHtml(f.concept || '未知考点') +
@@ -1042,7 +1042,7 @@ function renderDashboardPage(target) {
   html += '<div class="dash-header">' +
     '<div><h2 class="dash-greeting">' + _getGreeting() + '，' + escapeHtml(userName) + '</h2>' +
     '<p class="dash-date">' + new Date().toLocaleDateString('zh-CN', { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long' }) + '</p></div>' +
-    '<div class="dash-avatar" onclick="navigateTo(\'/user\')" style="' + (_avatarUrl ? 'background:none;' : '') + 'overflow:hidden;">' + _avatarInner + '</div>' +
+    '<div class="dash-avatar" data-on=\'["navigateTo","/user"]\' style="' + (_avatarUrl ? 'background:none;' : '') + 'overflow:hidden;">' + _avatarInner + '</div>' +
     '</div>';
 
   // v4.0 今日情绪卡片（常驻）
@@ -1061,20 +1061,20 @@ function renderDashboardPage(target) {
     '<div class="dash-goal-title">' + (goalProgress >= 100 ? '今日目标已完成' : '继续努力，完成今日目标') + '</div>' +
     '<div class="dash-goal-desc">每日练习 ' + dailyGoal + ' 题，巩固知识点，稳步提升</div>' +
     (goalProgress >= 100 ?
-      '<button class="dash-goal-btn dash-goal-btn--outline" onclick="navigateTo(\'/practice\')">再来一组</button>' :
-      '<button class="dash-goal-btn" onclick="navigateTo(\'/practice\')">开始练习</button>') +
+      '<button class="dash-goal-btn dash-goal-btn--outline" data-on=\'["navigateTo","/practice"]\'>再来一组</button>' :
+      '<button class="dash-goal-btn" data-on=\'["navigateTo","/practice"]\'>开始练习</button>') +
     '</div></div>';
 
   // 横向统计卡
   var accuracy = stats.totalAnswered > 0 ? Math.round(stats.totalCorrect / stats.totalAnswered * 100) : 0;
   html += '<div class="dash-stats-row">' +
-    '<div class="dash-stat-card dash-stat-card--accent" onclick="navigateTo(\'/habits\')">' +
+    '<div class="dash-stat-card dash-stat-card--accent" data-on=\'["navigateTo","/habits"]\'>' +
     '<div class="dash-stat-num">' + streak + '</div><div class="dash-stat-label">连续打卡</div></div>' +
-    '<div class="dash-stat-card" onclick="navigateTo(\'/analytics\')">' +
+    '<div class="dash-stat-card" data-on=\'["navigateTo","/analytics"]\'>' +
     '<div class="dash-stat-num">' + stats.totalAnswered + '</div><div class="dash-stat-label">总答题数</div></div>' +
-    '<div class="dash-stat-card dash-stat-card--amber" onclick="navigateTo(\'/analytics\')">' +
+    '<div class="dash-stat-card dash-stat-card--amber" data-on=\'["navigateTo","/analytics"]\'>' +
     '<div class="dash-stat-num">' + accuracy + '%</div><div class="dash-stat-label">正确率</div></div>' +
-    '<div class="dash-stat-card" onclick="navigateTo(\'/analytics\')">' +
+    '<div class="dash-stat-card" data-on=\'["navigateTo","/analytics"]\'>' +
     '<div class="dash-stat-num">' + (bioScore ? bioScore.score : '--') + '</div><div class="dash-stat-label">Bio Score</div></div>' +
     '</div>';
 
@@ -1083,7 +1083,7 @@ function renderDashboardPage(target) {
     html += '<div class="dash-section">' +
       '<div class="dash-section-header">' +
       '<span class="dash-section-title">Bio Score 生物素养</span>' +
-      '<span class="dash-section-link" onclick="navigateTo(\'/analytics\')">详情 ›</span>' +
+      '<span class="dash-section-link" data-on=\'["navigateTo","/analytics"]\'>详情 ›</span>' +
       '</div>' +
       '<div class="dash-bioscore">' +
       '<div class="dash-bioscore-grade" style="background:' + _getGradeColor(bioScore.grade) + ';">' + escapeHtml(bioScore.grade) + '</div>' +
@@ -1099,12 +1099,12 @@ function renderDashboardPage(target) {
     html += '<div class="dash-section">' +
       '<div class="dash-section-header">' +
       '<span class="dash-section-title">薄弱模块诊断</span>' +
-      '<span class="dash-section-link" onclick="navigateTo(\'/diagnosis\')">完整诊断 ›</span>' +
+      '<span class="dash-section-link" data-on=\'["navigateTo","/diagnosis"]\'>完整诊断 ›</span>' +
       '</div>' +
       '<div class="dash-weak-list">';
     topWeak.forEach(function(m) {
       var accColor = m.acc < 40 ? '#c45a5a' : m.acc < 60 ? '#c49a4a' : '#5a7d5c';
-      html += '<div class="dash-weak-item" onclick="navigateTo(\'/practice\')">' +
+      html += '<div class="dash-weak-item" data-on=\'["navigateTo","/practice"]\'>' +
         '<div class="dash-weak-icon" style="background:' + m.color + '22;color:' + m.color + ';">' + m.icon + '</div>' +
         '<div class="dash-weak-info"><div class="dash-weak-name">' + escapeHtml(m.name) + '</div>' +
         '<div class="dash-weak-desc">' + m.total + '题已练 · 建议加强</div></div>' +
@@ -1152,18 +1152,18 @@ function renderDashboardPage(target) {
     '<span class="dash-section-title">今日计划</span>' +
     '</div>' +
     '<div class="dash-plan-list">' +
-    '<div class="dash-plan-item" onclick="navigateTo(\'/practice\')">' +
+    '<div class="dash-plan-item" data-on=\'["navigateTo","/practice"]\'>' +
     '<span class="dash-plan-icon">📝</span>' +
     '<div class="dash-plan-info"><div class="dash-plan-title">每日练习</div>' +
     '<div class="dash-plan-desc">完成 ' + Math.max(0, dailyGoal - todayCount) + ' 题达到今日目标</div></div>' +
     '<span class="dash-plan-arrow">›</span></div>' +
-    '<div class="dash-plan-item" onclick="navigateTo(\'/review\')">' +
+    '<div class="dash-plan-item" data-on=\'["navigateTo","/review"]\'>' +
     '<span class="dash-plan-icon">🔁</span>' +
     '<div class="dash-plan-info"><div class="dash-plan-title">复习错题</div>' +
     '<div class="dash-plan-desc">基于遗忘曲线的智能复习</div></div>' +
     '<span class="dash-plan-arrow">›</span></div>';
   if (topWeak.length > 0) {
-    html += '<div class="dash-plan-item" onclick="navigateTo(\'/practice\')" style="border-left-color:#c45a5a;">' +
+    html += '<div class="dash-plan-item" data-on=\'["navigateTo","/practice"]\' style="border-left-color:#c45a5a;">' +
       '<span class="dash-plan-icon">🎯</span>' +
       '<div class="dash-plan-info"><div class="dash-plan-title">专项突破</div>' +
       '<div class="dash-plan-desc">针对「' + escapeHtml(topWeak[0].name) + '」进行强化训练</div></div>' +
@@ -1176,7 +1176,7 @@ function renderDashboardPage(target) {
     html += '<div class="dash-section">' +
       '<div class="dash-section-header">' +
       '<span class="dash-section-title">近 7 天趋势</span>' +
-      '<span class="dash-section-link" onclick="navigateTo(\'/analytics\')">详情 ›</span>' +
+      '<span class="dash-section-link" data-on=\'["navigateTo","/analytics"]\'>详情 ›</span>' +
       '</div>' +
       '<div class="dash-trend-chart">';
     trend.forEach(function(t) {
@@ -1199,7 +1199,7 @@ function renderDashboardPage(target) {
       '<div class="dash-empty">' +
       '<div class="dash-empty-icon">📊</div>' +
       '<div class="dash-empty-text">开始练习后，这里会展示你的学习趋势</div>' +
-      '<button class="dash-goal-btn" onclick="navigateTo(\'/practice\')">立即开始</button>' +
+      '<button class="dash-goal-btn" data-on=\'["navigateTo","/practice"]\'>立即开始</button>' +
       '</div></div>';
   }
 
@@ -1207,7 +1207,7 @@ function renderDashboardPage(target) {
   html += '<div class="dash-section">' +
     '<div class="dash-section-header">' +
     '<span class="dash-section-title">🔮 AI 考点预测</span>' +
-    '<span class="dash-section-link" onclick="navigateTo(\'/practice\')">去练习 ›</span>' +
+    '<span class="dash-section-link" data-on=\'["navigateTo","/practice"]\'>去练习 ›</span>' +
     '</div>' +
     '<div id="dash-forecast-container"></div>' +
     '</div>';

@@ -2147,9 +2147,22 @@ function renderPracticePage(target) {
     var queryIdx = hash.indexOf('?');
     if (queryIdx >= 0) {
       var params = new URLSearchParams(hash.substring(queryIdx + 1));
-      var conceptParam = params.get('concept');
-      var moduleParam = params.get('module');
-      var categoryParam = params.get('category');
+      // P1-5：对 URL 入参做白名单式清洗（剔除控制字符、限制长度），防止参数注入污染过滤/渲染
+      var conceptParam = (typeof sanitizeUrlParam === 'function')
+        ? sanitizeUrlParam(params.get('concept'), 64)
+        : params.get('concept');
+      var moduleParam;
+      if (params.get('module') != null) {
+        moduleParam = (typeof sanitizeUrlParam === 'function')
+          ? sanitizeUrlParam(params.get('module'), 32)
+          : params.get('module');
+      }
+      var categoryParam;
+      if (params.get('category') != null) {
+        categoryParam = (typeof sanitizeUrlParam === 'function')
+          ? sanitizeUrlParam(params.get('category'), 32)
+          : params.get('category');
+      }
       if (conceptParam) {
         kgData = { concept: decodeURIComponent(conceptParam), module: moduleParam || null, category: categoryParam || null };
       }
@@ -2193,7 +2206,7 @@ function renderPracticePage(target) {
     target.innerHTML = '<div style="text-align:center;padding:60px 20px;">' +
       '<p style="color:var(--color-error);font-size:1.1rem;margin-bottom:8px;">练习模块加载失败</p>' +
       '<p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:16px;">请刷新页面或稍后重试</p>' +
-      '<button onclick="location.reload()" style="padding:8px 20px;background:var(--color-sage);color:#fff;border:none;border-radius:8px;cursor:pointer;">刷新页面</button>' +
+      '<button data-on=\'["_cspReload"]\' style="padding:8px 20px;background:var(--color-sage);color:#fff;border:none;border-radius:8px;cursor:pointer;">刷新页面</button>' +
       '</div>';
   }
 }
@@ -2415,7 +2428,7 @@ function initPractice(target) {
       target.innerHTML = '<div style="text-align:center;padding:60px 20px;">' +
         '<p style="color:var(--color-error);font-size:1.1rem;margin-bottom:8px;">练习模块初始化失败</p>' +
         '<p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:16px;">请刷新页面或稍后重试</p>' +
-        '<button onclick="location.reload()" style="padding:8px 20px;background:var(--color-sage);color:#fff;border:none;border-radius:8px;cursor:pointer;">刷新页面</button>' +
+        '<button data-on=\'["_cspReload"]\' style="padding:8px 20px;background:var(--color-sage);color:#fff;border:none;border-radius:8px;cursor:pointer;">刷新页面</button>' +
         '</div>';
     }
   }

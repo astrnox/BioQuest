@@ -105,7 +105,7 @@ function renderResources(list = allResources) {
     var hasLink = r.link && r.link !== '#' && !r.link.startsWith('javascript');
     var sourceUrl = hasLink ? escapeHtml(r.link) : '';
     return `
-    <div class="resource-item" data-idx="${i}" onclick="openResourceDetail(${i})">
+    <div class="resource-item" data-idx="${i}" data-on='["openResourceDetail",${i}]'>
       <div class="resource-source">${escapeHtml(r.source)}</div>
       <div class="resource-title">${escapeHtml(r.title)}</div>
       <div class="resource-excerpt">${escapeHtml(r.excerpt)}</div>
@@ -224,7 +224,7 @@ function openResourceDetail(idx) {
   
   var hasLink = r.link && r.link !== '#' && !r.link.startsWith('javascript');
   var detailHTML = '<div class="resource-detail-panel" id="' + activeResourceId + '">' +
-    '<button class="resource-detail-close" onclick="event.stopPropagation();closeResourceDetail();">&times;</button>' +
+    '<button class="resource-detail-close" data-on=\'["closeResourceDetail"]\' data-stop-propagation>&times;</button>' +
     '<div class="resource-detail-header">' +
       '<span class="resource-detail-source">' + escapeHtml(r.source) + '</span>' +
       '<h3 class="resource-detail-title">' + escapeHtml(r.title) + '</h3>' +
@@ -236,7 +236,7 @@ function openResourceDetail(idx) {
     '<div class="resource-detail-footer">' +
       '<span class="resource-tag">' + escapeHtml(r.tag) + '</span>' +
       (r.category ? '<span class="resource-tag" style="background:rgba(232,168,48,0.1);color:#e8a830;">' + escapeHtml(r.category) + '</span>' : '') +
-      (hasLink ? '<a href="' + escapeHtml(r.link) + '" target="_blank" rel="noopener noreferrer" class="resource-detail-link" onclick="event.stopPropagation();">访问源站 ↗</a>' : '') +
+      (hasLink ? '<a href="' + escapeHtml(r.link) + '" target="_blank" rel="noopener noreferrer" class="resource-detail-link" data-on=\'["__cspRoot"]\' data-stop-propagation>访问源站 ↗</a>' : '') +
     '</div>' +
   '</div>';
   

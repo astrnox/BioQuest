@@ -5,6 +5,13 @@
  */
 
 /* ===== 用户管理标签 ===== */
+
+// CSP 便捷委托：原内联 onchange 中 `this.value` 无法由 data-on 数组直接表达，
+// 收敛为最小全局函数，供 csp-events 的 __this 委托调用。
+window._cspUserGroupChange = function (uid, el) {
+  if (typeof window.handleChangeUserGroup === 'function') window.handleChangeUserGroup(uid, el && el.value);
+};
+
 function renderUsersTab(container, users) {
   const totalUsers = users.length;
   const totalAnswered = users.reduce((sum, u) => sum + (u.total_answered || 0), 0);
@@ -91,6 +98,14 @@ function renderUsersTab(container, users) {
               function _jsStr(s) {
                 return String(s || '').replace(/\\/g, '\\\\').replace(/'/g, "\\'").replace(/"/g, '&quot;').replace(/</g, '&lt;');
               }
+              // _jsStrJson：供 CSP data-on（JSON 数组，单引号属性）使用的字符串转义。
+              // 需保证 HTML 解析后仍是合法 JSON 字符串：\→\\、"→\"、'→&#39;。
+              function _jsStrJson(s) {
+                return String(s == null ? '' : s)
+                  .replace(/\\/g, '\\\\')
+                  .replace(/"/g, '\\"')
+                  .replace(/'/g, '&#39;');
+              }
               var uidJs = _jsStr(uid);
               var unameJs = _jsStr(uname);
               var dnameJs = _jsStr(dname);
@@ -104,7 +119,7 @@ function renderUsersTab(container, users) {
                 <td>${(user.accuracy || 0)}%</td>
                 <td id="points-${uid}" style="font-weight:700;color:var(--color-deep,#1a3a2a);">${typeof user.points === 'number' ? user.points : 0}</td>
                 <td>
-                  <select class="admin-form-select" style="padding:4px 8px;font-size:0.8rem;min-width:80px;" onchange="handleChangeUserGroup('${uidJs}', this.value)">
+                  <select class="admin-form-select" style="padding:4px 8px;font-size:0.8rem;min-width:80px;" data-on-change='["_cspUserGroupChange","${_jsStrJson(uid)}","__this"]'>
                     <option value="admin" ${user.user_group === 'admin' ? 'selected' : ''}>管理员</option>
                     <option value="premium" ${user.user_group === 'premium' ? 'selected' : ''}>高级会员</option>
                     <option value="verified" ${user.user_group === 'verified' ? 'selected' : ''}>认证会员</option>
@@ -114,16 +129,16 @@ function renderUsersTab(container, users) {
                 </td>
                 <td>
                   <div class="admin-table-actions">
-                    <button class="admin-btn admin-btn--primary" onclick="handleEditUser('${uidJs}', '${unameJs}', '${dnameJs}', ${user.bio_score || 0}, ${user.total_answered || 0}, ${user.total_correct || 0}, ${user.accuracy || 0}, ${typeof user.points === 'number' ? user.points : 0})">
+                    <button class="admin-btn admin-btn--primary" data-on='["handleEditUser","${_jsStrJson(uid)}","${_jsStrJson(uname)}","${_jsStrJson(dname)}",${user.bio_score || 0},${user.total_answered || 0},${user.total_correct || 0},${user.accuracy || 0},${typeof user.points === 'number' ? user.points : 0}]'>
                       编辑
                     </button>
-                    <button class="admin-btn admin-btn--ghost" onclick="handleAdjustUserPoints('${uid}', ${typeof user.points === 'number' ? user.points : 0})">
+                    <button class="admin-btn admin-btn--ghost" data-on='["handleAdjustUserPoints","${uid}",${typeof user.points === 'number' ? user.points : 0}]'>
                       调整信用
                     </button>
-                    <button class="admin-btn admin-btn--ghost" onclick="handleResetPassword('${uid}')">
+                    <button class="admin-btn admin-btn--ghost" data-on='["handleResetPassword","${uid}"]'>
                       重置密码
                     </button>
-                    <button class="admin-btn admin-btn--danger" onclick="handleDeleteUser('${uid}')">
+                    <button class="admin-btn admin-btn--danger" data-on='["handleDeleteUser","${uid}"]'>
                       ${ICONS.trash}
                       删除
                     </button>
@@ -145,7 +160,7 @@ function renderUsersTab(container, users) {
       <div class="admin-modal">
         <div class="admin-modal-header">
           <div class="admin-modal-title">编辑用户</div>
-          <button class="admin-modal-close" onclick="closeUserModal()">&times;</button>
+          <button class="admin-modal-close" data-on='["closeUserModal"]'>&times;</button>
         </div>
         <form id="admin-user-edit-form" class="admin-form-grid">
           <div class="admin-form-group">

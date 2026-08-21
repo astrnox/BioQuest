@@ -25,9 +25,18 @@ var KEYS = {
  * ============================================================ */
 
 function safeGetJSON(key, defaultValue) {
+  var raw;
   try {
-    var raw = localStorage.getItem(key);
+    raw = localStorage.getItem(key);
     if (raw === null) return defaultValue;
+    // P1-14(旧)：加载时进行哈希校验，检测篡改 / 截断损坏，避免把脏数据注入运行时
+    if (_isIntegrityProtected(key)) {
+      var ok = _verifyIntegrity(key, raw);
+      if (ok === 'tampered') {
+        console.warn('[BioQuest Storage] ' + key + ' 完整性校验失败，判定为被篡改或损坏，已忽略该数据。');
+        return defaultValue;
+      }
+    }
     var parsed = JSON.parse(raw);
     return (parsed === null || parsed === undefined) ? defaultValue : parsed;
   } catch (e) {
@@ -39,6 +48,8 @@ function safeGetJSON(key, defaultValue) {
 function safeSetJSON(key, value) {
   try {
     localStorage.setItem(key, JSON.stringify(value));
+    // P1-14(旧)：写入成功后记录旁路哈希，供后续加载时校验；失败不影响本次写入
+    if (_isIntegrityProtected(key)) _recordIntegrity(key);
     return true;
   } catch (e) {
     var isQuota = !!(e && (e.name === 'QuotaExceededError' || e.code === 22 ||
@@ -47,6 +58,7 @@ function safeSetJSON(key, value) {
     if (isQuota && _evictCacheOnce() > 0) {
       try {
         localStorage.setItem(key, JSON.stringify(value));
+        if (_isIntegrityProtected(key)) _recordIntegrity(key);
         return true;
       } catch (e2) {
         console.warn('[BioQuest Storage] 写入 ' + key + ' 失败（清理缓存后配额仍不足）:', e2.message);
@@ -85,6 +97,145 @@ function getStorageUsage() {
   return { bytes: bytes, limit: limit, percent: Math.min(100, bytes / limit * 100) };
 }
 
+/* ============================================================
+ * P1-14(旧)：数据版本控制 + 完整性（篡改/损坏）校验
+ * 方案：存储值保持原始格式不变（不打包成 envelope，避免破坏跨模块直接读取），
+ *      仅维护一份「旁路校验元数据」bioquest_meta：{ v, checksums, updatedAt }，
+ *      写入成功时记录该键的值哈希，加载时复算比对，不匹配即判定为被篡改/截断。
+ * 说明：纯前端无法做到防篡改（用户可随意改 localStorage），此处目标是把
+ *      「肉眼难以察觉的脏数据/截断」显式化为「忽略 + 报错」，避免脏数据污染运行时。
+ * ============================================================ */
+
+var STORAGE_SCHEMA_VERSION = 1;          // 存储结构 schema 版本号，便于未来做格式迁移
+var INTEGRITY_META_KEY = STORAGE_PREFIX + 'meta';
+var _integrityCache = null;              // 内存缓存的元数据副本，避免每次读写都 parse
+
+function _isIntegrityProtected(key) {
+  // 只对「由 storage.js 全程写入」的键做自动校验，避免因其他模块直接 setItem
+  // （quiz.js / supabase.js / supabase-client.js 会直接写 records/favorites/...）
+  // 造成的旁路哈希不同步 → 误判为篡改。目前受保护域 = 设置 + 进度快照。
+  return key === KEYS.SETTINGS ||
+    (typeof key === 'string' && key.indexOf(PROGRESS_PREFIX) === 0);
+}
+
+/**
+ * FNV-1a 32 位字符串哈希 -> 8 位十六进制字符串（用于本地数据轻量校验）。
+ */
+function _hashString(str) {
+  var h = 0x811c9dc5;
+  for (var i = 0; i < str.length; i++) {
+    h ^= str.charCodeAt(i);
+    h = (h * 0x01000193) >>> 0;
+  }
+  return ('000000000' + h.toString(16)).slice(-8);
+}
+
+function _loadMeta() {
+  if (_integrityCache) return _integrityCache;
+  var m;
+  try {
+    var raw = localStorage.getItem(INTEGRITY_META_KEY);
+    m = raw ? JSON.parse(raw) : null;
+  } catch (e) { m = null; }
+  if (!m || typeof m !== 'object' || typeof m.checksums !== 'object') {
+    m = { v: STORAGE_SCHEMA_VERSION, checksums: {}, updatedAt: Date.now() };
+  }
+  _integrityCache = m;
+  return m;
+}
+
+function _saveMeta() {
+  var m = _loadMeta();
+  try {
+    localStorage.setItem(INTEGRITY_META_KEY, JSON.stringify({ v: m.v, checksums: m.checksums, updatedAt: m.updatedAt }));
+  } catch (e) {
+    // 元数据写入失败仅影响后续校验能力，不影响业务写入本身
+  }
+}
+
+// 多标签一致性（P1-14 修复）：其他标签页写入 localStorage 会在本页触发 storage 事件，
+// 此时失效内存缓存，避免用旧的 checksum 校验新写入的值而被误判为“篡改”→ 数据被忽略。
+if (typeof window !== 'undefined' && window.addEventListener) {
+  window.addEventListener('storage', function () { _integrityCache = null; });
+}
+
+/**
+ * 写入成功后记录指定键的旁路哈希。校验元数据本身不属于受保护键，不会递归。
+ */
+function _recordIntegrity(key) {
+  var raw;
+  try { raw = localStorage.getItem(key); } catch (e) { return; }
+  if (raw === null) return;
+  var m = _loadMeta();
+  m.checksums[key] = _hashString(raw);
+  m.updatedAt = Date.now();
+  _saveMeta();
+}
+
+/**
+ * 校验指定键的旁路哈希。
+ * @returns {'ok'|'untracked'|'tampered'} untracked 表示尚无旁路哈希（旧数据），按通过处理
+ */
+function _verifyIntegrity(key, raw) {
+  var m = _loadMeta();
+  if (typeof m.checksums[key] !== 'string') return 'untracked';
+  if (_hashString(raw) !== m.checksums[key]) {
+    return 'tampered';
+  }
+  return 'ok';
+}
+
+/**
+ * 对外校验接口：扫描受保护域（设置 + 全部进度快照），返回整体状态（供工具/审计/设置页展示）。
+ * @returns {{version:number, protectedKeys:string[], tampered:string[], untracked:string[], ok:string[]}}
+ */
+function verifyStorageIntegrity() {
+  var m = _loadMeta();
+  var all = [KEYS.SETTINGS];
+  try {
+    for (var z = 0; z < localStorage.length; z++) {
+      var kz = localStorage.key(z);
+      if (kz && kz.indexOf(PROGRESS_PREFIX) === 0) all.push(kz);
+    }
+  } catch (e) {}
+  var result = { version: m.v, protectedKeys: all, tampered: [], untracked: [], ok: [] };
+  for (var i = 0; i < all.length; i++) {
+    var key = all[i];
+    var raw;
+    try { raw = localStorage.getItem(key); } catch (e) { raw = null; }
+    if (raw === null) {
+      result.untracked.push(key); // 键尚不存在，暂无数据可校验
+      continue;
+    }
+    var r = _verifyIntegrity(key, raw);
+    if (r === 'tampered') result.tampered.push(key);
+    else if (r === 'untracked') result.untracked.push(key);
+    else result.ok.push(key);
+  }
+  return result;
+}
+window.verifyStorageIntegrity = verifyStorageIntegrity;
+// 便于旧数据迁移时主动补记旁路哈希（例如首次升级后触发一次全量记录）
+function backfillStorageIntegrity() {
+  var filled = 0;
+  var all = [KEYS.SETTINGS];
+  try {
+    for (var z = 0; z < localStorage.length; z++) {
+      var kz = localStorage.key(z);
+      if (kz && kz.indexOf(PROGRESS_PREFIX) === 0) all.push(kz);
+    }
+  } catch (e) {}
+  for (var i = 0; i < all.length; i++) {
+    var raw;
+    try { raw = localStorage.getItem(all[i]); } catch (e) { raw = null; }
+    if (raw === null) continue;
+    _recordIntegrity(all[i]);
+    filled++;
+  }
+  return filled;
+}
+window.backfillStorageIntegrity = backfillStorageIntegrity;
+
 /**
  * 清除可重建的缓存类键（题面缓存/横幅/预览等），用于配额超限时的保守回收。
  * @returns {number} 实际删除的键数量
@@ -111,6 +262,7 @@ function _evictCacheOnce() {
  * 由于 IndexedDB 删除为异步，本函数返回 Promise<boolean[]>；调用方可 .then 感知结果。
  */
 function clearAllLocalData() {
+  _integrityCache = null; // 清库后丢弃内存中的校验元数据缓存，避免残留陈旧哈希
   return new Promise(function (resolve) {
     // 1) Web Storage
     try {

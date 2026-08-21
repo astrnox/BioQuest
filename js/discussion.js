@@ -759,10 +759,17 @@ function _sendGroup(userMessage) {
     if (r.synthesis) history.push({ role: 'assistant', content: '[综合观点] ' + r.synthesis });
   });
 
+  // P1-24：开新讨论轮前先中止上一个仍在飞的请求，避免重复占用模型连接
+  if (_discussionState.abortController) {
+    try { _discussionState.abortController.abort(); } catch (e) { /* 忽略 */ }
+  }
   _discussionState.abortController = new AbortController();
 
   // 检查 AI 用量
-  var aiCheck = (typeof window.AiClient === 'function') ? window.AiClient.canUse() : { ok: true, useBackend: true };
+  // P1 修复：window.AiClient 是对象而非函数，原 `typeof === 'function'` 恒为 false 会跳过 canUse 门禁
+  var aiCheck = (window.AiClient && typeof window.AiClient.canUse === 'function')
+    ? window.AiClient.canUse()
+    : { ok: true, useBackend: true };
   if (!aiCheck.ok) {
     round.error = aiCheck.reason || '今日 AI 调用已达上限';
     _renderMessages(document.getElementById('discussion-messages'));
@@ -900,10 +907,17 @@ function _sendPipeline(userMessage) {
   _setSendDisabled(true);
   _updateFinalizeBtn();
 
+  // P1-24：开新讨论轮前先中止上一个仍在飞的请求，避免重复占用模型连接
+  if (_discussionState.abortController) {
+    try { _discussionState.abortController.abort(); } catch (e) { /* 忽略 */ }
+  }
   _discussionState.abortController = new AbortController();
 
   // 检查 AI 用量
-  var aiCheck = (typeof window.AiClient === 'function') ? window.AiClient.canUse() : { ok: true, useBackend: true };
+  // P1 修复：window.AiClient 是对象而非函数，原 `typeof === 'function'` 恒为 false 会跳过 canUse 门禁
+  var aiCheck = (window.AiClient && typeof window.AiClient.canUse === 'function')
+    ? window.AiClient.canUse()
+    : { ok: true, useBackend: true };
   if (!aiCheck.ok) {
     run.error = aiCheck.reason || '今日 AI 调用已达上限';
     _renderMessages(document.getElementById('discussion-messages'));

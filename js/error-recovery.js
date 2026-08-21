@@ -43,7 +43,7 @@
           '<div style="font-size:3rem;margin-bottom:16px;">🧬</div>' +
           '<p style="font-size:1.1rem;color:var(--text-primary);margin-bottom:8px;">页面遇到了一些问题</p>' +
           '<p style="font-size:0.9rem;color:var(--text-muted);margin-bottom:24px;">别担心，你的数据已保存在本地</p>' +
-          '<button onclick="location.reload()" style="padding:10px 28px;background:var(--color-sage,#5a7d5c);color:#fff;border:none;border-radius:20px;cursor:pointer;font-size:0.95rem;">刷新页面</button>' +
+          '<button data-on=\'["_cspReload"]\' style="padding:10px 28px;background:var(--color-sage,#5a7d5c);color:#fff;border:none;border-radius:20px;cursor:pointer;font-size:0.95rem;">刷新页面</button>' +
           '</div>';
       }
     } catch (e2) {}

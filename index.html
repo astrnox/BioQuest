@@ -9,10 +9,13 @@
   <!-- P0-2 修复：meta CSP（GitHub Pages 兼容）。
        已移除 'unsafe-eval'：应用自身代码不使用 eval()/new Function()，
        消除存储型 XSS 下通过 eval 逃逸 CSP 的路径，防止被窃取的 AI Key 外传。
-       本应用为纯 vanilla + 内联脚本/内联样式，script-src/style-src 需保留 unsafe-inline。 -->
+       P1-8 修复：已移除 script-src 的 'unsafe-inline'——所有内联脚本外部化为
+       js/theme-init.js（同步防闪烁）、js/boot-mask.js、js/boot-lazy.js、js/sw-register.js，
+       所有动态内联 onclick/onchange 等处理器改由 js/csp-events.js 的 data-on 委托实现。
+       style-src 保留 unsafe-inline：动态度量/背景等数百处内联 style 属性为低风险（非 XSS 载体）。 -->
   <meta http-equiv="Content-Security-Policy" content="
     default-src 'self';
-    script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://unpkg.com;
+    script-src 'self' https://cdn.jsdelivr.net https://unpkg.com;
     style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com;
     img-src 'self' data: https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://upload.wikimedia.org;
     font-src 'self' data: https://cdn.jsdelivr.net https://cdnjs.cloudflare.com;
@@ -189,24 +192,10 @@
     }
     /* 卸载 mask：通过 classList.add('is-ready') 平滑淡出，避免"忽然切走" */
     #bq-boot-mask.is-ready { opacity: 0; visibility: hidden; }
+    /* 每日亿题入口 hover（原内联 onmouseover/onmouseout 已改纯 CSS） */
+    .daily-billion-entry-link:hover { background: rgba(196,149,106,0.1); }
   </style>
-  <script>
-    // 同步初始化主题（必须放在 body 渲染前，否则首帧会显示浅色再切深色造成白屏闪烁）
-    (function () {
-      try {
-        var t = localStorage.getItem('bioquest-theme');
-        if (t === 'dark' || t === 'light') {
-          document.documentElement.setAttribute('data-theme', t);
-        } else {
-          // 用户没设就跟随系统，避免 paint 一次再被 CSS 覆盖
-          var mql = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)');
-          if (mql && mql.matches) {
-            document.documentElement.setAttribute('data-theme', 'dark');
-          }
-        }
-      } catch (e) {}
-    })();
-  </script>
+  <script src="js/theme-init.js?v=20260820a"></script>
 
   <!-- Primary SEO -->
   <title>BioQuest — 生物竞赛刷题平台 | 全真模拟 · 专项练习 · 错题本</title>
@@ -273,25 +262,12 @@
   </style>
 
   <!-- KaTeX：首屏不依赖，异步加载 -->
-  <link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" as="style" onload="this.rel='stylesheet'">
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" as="style" data-css-async>
   <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"></noscript>
 
   <!-- 外部 CDN 失败回退状态与工具函数 -->
-  <script>
-    window.__supabaseLoaded = false;
-    window.__loadSupabaseFallback = function(script) {
-      if (window.__supabaseLoaded || typeof window.supabase !== 'undefined') return;
-      var s = document.createElement('script');
-      s.src = 'https://unpkg.com/@supabase/supabase-js@2/dist/umd/supabase.min.js';
-      s.defer = true;
-      s.onerror = function() {
-        console.warn('[BioQuest] Supabase SDK 镜像加载失败，将使用本地存储模式');
-        document.documentElement.classList.add('supabase-fallback');
-        if (typeof window.showStorageStatus === 'function') window.showStorageStatus('local');
-      };
-      document.head.appendChild(s);
-    };
-  </script>
+  <!-- 启动辅助脚本（defer）：Supabase 延迟加载 + data-route 点击委托兜底 -->
+  <script src="js/boot-lazy.js?v=20260820a" defer></script>
 
   <!-- 首屏关键 CSS：同步加载 -->
   <link rel="stylesheet" href="css/globals.css?v=20260811h">
@@ -300,31 +276,31 @@
   <link rel="stylesheet" href="css/learning-hub.css?v=20260809a">
   <link rel="stylesheet" href="css/home.css?v=20260723e">
   <!-- 非首屏关键 CSS：异步加载，不阻塞首次渲染 -->
-  <link rel="preload" href="css/countdown.css" as="style" onload="this.rel='stylesheet'">
+  <link rel="preload" href="css/countdown.css" as="style" data-css-async>
   <noscript><link rel="stylesheet" href="css/countdown.css"></noscript>
   <!-- debug-fix.css 非首屏关键，异步加载 -->
   <link rel="stylesheet" href="css/debug-fix.css?v=20260811h">
 
   <!-- 非首屏 CSS：异步加载，不阻塞首次渲染 -->
-  <link rel="preload" href="css/practice.css?v=20260723e" as="style" onload="this.rel='stylesheet'">
+  <link rel="preload" href="css/practice.css?v=20260723e" as="style" data-css-async>
   <noscript><link rel="stylesheet" href="css/practice.css?v=20260723e"></noscript>
-  <link rel="preload" href="css/footer.css" as="style" onload="this.rel='stylesheet'">
+  <link rel="preload" href="css/footer.css" as="style" data-css-async>
   <noscript><link rel="stylesheet" href="css/footer.css"></noscript>
-  <link rel="preload" href="css/analytics.css" as="style" onload="this.rel='stylesheet'">
+  <link rel="preload" href="css/analytics.css" as="style" data-css-async>
   <noscript><link rel="stylesheet" href="css/analytics.css"></noscript>
-  <link rel="preload" href="css/user.css" as="style" onload="this.rel='stylesheet'">
+  <link rel="preload" href="css/user.css" as="style" data-css-async>
   <noscript><link rel="stylesheet" href="css/user.css"></noscript>
-  <link rel="preload" href="css/cards.css" as="style" onload="this.rel='stylesheet'">
+  <link rel="preload" href="css/cards.css" as="style" data-css-async>
   <noscript><link rel="stylesheet" href="css/cards.css"></noscript>
-  <link rel="preload" href="css/announcements.css" as="style" onload="this.rel='stylesheet'">
+  <link rel="preload" href="css/announcements.css" as="style" data-css-async>
   <noscript><link rel="stylesheet" href="css/announcements.css"></noscript>
-  <link rel="preload" href="css/habits.css?v=20260723e" as="style" onload="this.rel='stylesheet'">
+  <link rel="preload" href="css/habits.css?v=20260723e" as="style" data-css-async>
   <noscript><link rel="stylesheet" href="css/habits.css?v=20260723e"></noscript>
   <!-- PhET 互动模拟实验页样式（异步加载，不阻塞首屏） -->
-  <link rel="preload" href="css/phet-sims.css?v=20260809j" as="style" onload="this.rel='stylesheet'">
+  <link rel="preload" href="css/phet-sims.css?v=20260809j" as="style" data-css-async>
   <noscript><link rel="stylesheet" href="css/phet-sims.css?v=20260809j"></noscript>
   <!-- 每日亿题样式（异步加载，不影响首屏） -->
-  <link rel="preload" href="css/daily-billion.css?v=20260809a" as="style" onload="this.rel='stylesheet'">
+  <link rel="preload" href="css/daily-billion.css?v=20260809a" as="style" data-css-async>
   <noscript><link rel="stylesheet" href="css/daily-billion.css?v=20260809a"></noscript>
 </head>
 <body>
@@ -336,183 +312,8 @@
     <div id="bq-boot-progress" aria-hidden="true"><div id="bq-boot-progress-fill"></div></div>
     <div id="bq-boot-percent" aria-hidden="true">0%</div>
   </div>
-  <script>
-    // 首屏骨架遮罩：加载动画展示 → 等应用首屏渲染完成（Hero/倒计时/布局已提交） → 平滑淡出进入主页面。
-    // 遮罩在页面内容真正就绪后才消失，避免"内容还没渲染就过早撤遮罩"导致的卡顿/空白/下拉卡一下。
-    // 进度条：加权步骤 + 渐进逼近，只增不减、不提前到 100%，动画时长随真实加载时长走。
-    (function () {
-      var mask = document.getElementById('bq-boot-mask');
-      if (!mask) return;
-      var done = false;
-      var startTime = Date.now();
-
-      // ---- 加载进度估算器 ----
-      // 参考 GitHub 现成实现 load-time-estimate / fake-progress 的思想：
-      //   真实完成节点标记权重 → 进度只增不减（ever-increasing）→ 用渐进曲线逼近档位上限，
-      //   且永不提前到 100%（除非收到 app-ready 真正完成的信号）。
-      var BootProgress = {
-        done: 0,   // 已完成的加权和
-        cap: 0,    // 当前"档位上限"（不会显示超过该值）
-        show: 0,   // 当前已显示的百分比
-        max: 100,
-        fill: document.getElementById('bq-boot-progress-fill'),
-        pct: document.getElementById('bq-boot-percent'),
-        _timer: null,
-        _ended: false,
-        addWeight: function (w, hi) {
-          if (this._ended) return;
-          this.done = Math.min(this.max, this.done + (w || 0));
-          var c = Math.max(this.cap, this.done);
-          if (typeof hi === 'number') c = Math.max(c, hi);
-          this.cap = Math.min(this.max, c);
-          this._tick();
-          this._schedule();
-        },
-        set: function (p) {
-          if (this._ended) return;
-          p = Math.min(this.max, Math.max(p, this.done));
-          this.done = p;
-          if (this.cap < p) this.cap = p;
-          this._tick();
-          this._schedule();
-        },
-        complete: function () {
-          this._ended = true;
-          if (this._timer) { clearTimeout(this._timer); this._timer = null; }
-          this._animate();
-        },
-        _schedule: function () {
-          var self = this;
-          if (this._timer || this._ended) return;
-          if (this.cap <= this.show || this.cap >= this.max) return;
-          this._timer = setTimeout(function () {
-            self._timer = null;
-            self._tick();
-            if (self.cap > self.show && self.cap < self.max) self._schedule();
-          }, 110);
-        },
-        _tick: function () {
-          if (this.cap <= this.show) return;
-          // 渐进逼近上限：越快越慢，符合"前期快、后期慢"的直觉
-          this._setShow(this.show + Math.max(0.4, (this.cap - this.show) * 0.10));
-        },
-        _animate: function () {
-          var self = this;
-          (function step() {
-            var gap = 100 - self.show;
-            if (gap <= 0.5) { self._setShow(100); return; }
-            self._setShow(self.show + Math.max(0.4, gap * 0.22));
-            requestAnimationFrame(step);
-          })();
-        },
-        _setShow: function (v) {
-          this.show = Math.min(this.max, v);
-          if (this.pct) { try { this.pct.textContent = Math.floor(this.show) + '%'; } catch (e) {} }
-          if (this.fill) { this.fill.style.width = this.show + '%'; }
-        }
-      };
-      window.BootProgress = BootProgress;
-      window.__bootWeight = function (w, hi) { if (BootProgress) BootProgress.addWeight(w, hi); };
-
-      function fadeOut() {
-        if (done) return;
-        done = true;
-        // 开始淡出时把进度补足到 100%
-        if (BootProgress) BootProgress.complete();
-        // 核心：确保撤遮罩前，浏览器已完成首屏布局与绘制。
-        // 两轮 rAF 保证至少一次 layout + paint 已提交；再强制一次 reflow 读取，
-        // 确保页面高度/滚动条已存在，避免"进主页后拉不动一会"的现象。
-        requestAnimationFrame(function () {
-          requestAnimationFrame(function () {
-            try {
-              // 强制 reflow：读取首屏元素尺寸，触发浏览器完成 layout 计算
-              var h = document.getElementById('main-content') || document.querySelector('.hero');
-              if (h) void h.offsetHeight;
-              var pc = document.getElementById('page-content');
-              if (pc) void pc.scrollHeight;
-              // 确保 body 可滚动
-              document.body.style.overflowY = '';
-              if (document.documentElement) {
-                document.documentElement.style.overflowY = '';
-              }
-            } catch (e) {}
-            // 再加一轮 rAF + 微延迟，给移动端布局提交留缓冲
-            requestAnimationFrame(function () {
-              setTimeout(function () {
-                mask.classList.add('is-ready');
-                // 淡出过渡结束后立即从 DOM 移除，避免残留的 fixed 遮罩干扰移动端首次滚动
-                var removed = false;
-                function removeMask() {
-                  if (removed) return;
-                  removed = true;
-                  if (mask && mask.parentNode) mask.parentNode.removeChild(mask);
-                }
-                mask.addEventListener('transitionend', function onEnd(e) {
-                  if (e.propertyName === 'opacity' || e.propertyName === 'visibility') removeMask();
-                });
-                setTimeout(removeMask, 400); // 兜底：过渡结束后即便没触发 transitionend 也移除
-              }, 30);
-            });
-          });
-        });
-      }
-
-      function startFadeOut() {
-        // 仅作为"最短展示时间"下限：让动画至少可见约 500ms，让用户看到"在加载"。
-        var elapsed = Date.now() - startTime;
-        var MIN_VISIBLE = 500;
-        if (elapsed >= MIN_VISIBLE) fadeOut();
-        else setTimeout(fadeOut, MIN_VISIBLE - elapsed);
-      }
-
-      // ---- 就绪判定（保证"动画时长 = 实际加载时长"）----
-      // 必须同时满足"内容已渲染" 与 "资源已加载"，才会撤遮罩：
-      //   1) 内容渲染：收到 bioquest:app-ready（finishRouting + reinitHomeComponents rAF 双重确认）；
-      //   2) 资源加载：window.load 触发（全部 CSS/JS/字体/图片已下载），或到达硬上限(LOAD_CAP)，
-      //      避免某个挂起的 CDN 资源无限期挡住首屏。
-      var contentReady = false;  // bioquest:app-ready 已收到
-      var loadReady = false;     // window.load 已触发
-      var LOAD_CAP = 9000;       // 硬上限：内容就绪后缩短为 CONTENT_CAP，不再无限期阻塞
-      var CONTENT_CAP = 4000;    // 内容已渲染后的资源加载上限
-
-      function bootTick() {
-        // 内容已渲染后，给资源加载一个较短窗口；否则用更长的总上限做兜底。
-        var cap = contentReady ? CONTENT_CAP : LOAD_CAP;
-        var loadDone = loadReady || (Date.now() - startTime >= cap);
-        if (contentReady && loadDone) {
-          startFadeOut();
-        } else if (BootProgress) {
-          BootProgress._schedule(); // 未就绪时保持进度条继续渐进逼近
-        }
-      }
-
-      // 主信号：应用首屏渲染/路由完成。仅当内容真正渲染后才把进度推到接近完成，
-      // 并参与"内容已就绪"门控——动画绝不会早于内容渲染结束。
-      document.addEventListener('bioquest:app-ready', function () {
-        contentReady = true;
-        if (window.BootProgress) BootProgress.addWeight(40, 88);
-        bootTick();
-      });
-
-      // 进度标记：HTML/CSS/脚本解析阶段
-      var onDOMReady = function () {
-        if (window.BootProgress) BootProgress.addWeight(15, 20);
-        bootTick();
-      };
-      if (document.readyState === 'interactive' || document.readyState === 'complete') onDOMReady();
-      else document.addEventListener('DOMContentLoaded', onDOMReady);
-
-      // 全部资源加载完成：这是"实际加载"完成的标志之一（配合内容渲染门控）。
-      window.addEventListener('load', function () {
-        loadReady = true;
-        if (window.BootProgress) BootProgress.addWeight(15, 60);
-        bootTick();
-      });
-
-      // 兜底：极长时间仍未就绪（异常路径），避免遮罩永久卡死。
-      setTimeout(function () { contentReady = true; loadReady = true; if (!done) startFadeOut(); }, 20000);
-    })();
-  </script>
+  <!-- 首屏骨架遮罩逻辑（外部化）：defer 加载，不阻塞内容解析；遮罩本身由上方 CSS 立即显示 -->
+  <script src="js/boot-mask.js?v=20260820a" defer></script>
 
   <a href="#page-content" class="skip-link">跳到主要内容</a>
 
@@ -554,6 +355,7 @@
     </nav>
 
     <div class="header-right">
+      <button type="button" class="header-help" id="onboarding-help" title="新手引导" aria-label="重新查看新手引导">?</button>
       <button class="auth-btn" id="auth-btn" title="登录/注册">登录</button>
 
       <button class="hamburger" id="hamburgerBtn" aria-label="菜单" aria-expanded="false">
@@ -614,7 +416,7 @@
         <a href="#/tutor" data-route="/tutor">AI 对话</a>
         <a href="#/community" data-route="/community">社区</a>
         <a href="#/daily-billion" data-route="/daily-billion" class="mn-featured amber"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>每日亿题</a>
-        <a href="javascript:void(0)" id="nav-leaderboard-btn">排行</a>
+        <a href="#" role="button" id="nav-leaderboard-btn">排行</a>
       </div>
 
       <div class="mn-section">
@@ -753,7 +555,7 @@
             <div class="section-label">DAILY CHALLENGE</div>
             <h2 class="section-title">每日一题</h2>
             <p class="section-desc">每天一道精选竞赛题，保持手感，积少成多</p>
-            <a href="#/daily-billion" style="display:inline-block;margin-top:8px;color:var(--color-amber,#c4956a);font-weight:600;font-size:0.9rem;text-decoration:none;padding:6px 16px;border:1px solid var(--color-amber,#c4956a);border-radius:20px;transition:all 0.2s;" onmouseover="this.style.background='rgba(196,149,106,0.1)'" onmouseout="this.style.background='transparent'">进入每日亿题 →</a>
+            <a href="#/daily-billion" class="daily-billion-entry-link" style="display:inline-block;margin-top:8px;color:var(--color-amber,#c4956a);font-weight:600;font-size:0.9rem;text-decoration:none;padding:6px 16px;border:1px solid var(--color-amber,#c4956a);border-radius:20px;transition:all 0.2s;">进入每日亿题 →</a>
           </div>
           <div class="daily-question-card" id="dailyQuestionCard">
             <div class="daily-question-loading" id="dailyLoading">加载中...</div>
@@ -776,10 +578,10 @@
               <div style="padding:24px;">
                 <h3 style="font-size:1.15rem;font-weight:600;margin-bottom:10px;color:var(--color-deep);">乡村生物科普志愿行</h3>
                 <p style="font-size:0.92rem;color:var(--text-secondary);line-height:1.7;margin-bottom:16px;">BioQuest 将竞赛级生物知识拆解为适合中学生的科普内容，助力志愿者走进乡村学校，让每个孩子都能触摸生命的奥秘。</p>
-                <button class="btn-secondary-cta" onclick="window.location.href='index.html#/practice?concept=%E7%94%9F%E7%89%A9%E5%A4%9A%E6%A0%B7%E6%80%A7%E4%BF%9D%E6%8A%A4'" style="display:inline-flex;align-items:center;gap:6px;">
+                <a class="btn-secondary-cta" href="index.html#/practice?concept=%E7%94%9F%E7%89%A9%E5%A4%9A%E6%A0%B7%E6%80%A7%E4%BF%9D%E6%8A%A4" style="display:inline-flex;align-items:center;gap:6px;text-decoration:none;">
                   进入公益专题练习
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </button>
+                </a>
               </div>
             </div>
             <div style="flex:1;min-width:300px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--border-light);background:var(--surface-primary);box-shadow:var(--shadow-sm);padding:24px;display:flex;flex-direction:column;justify-content:center;">
@@ -848,9 +650,9 @@
         <a href="#/user">用户中心</a>
         <a href="#/privacy">隐私政策</a>
         <a href="resources.html">学习资源</a>
-        <a href="javascript:void(0)" onclick="window.showFeedbackModal()" style="color:rgba(255,255,255,0.5);font-size:0.8rem;transition:color 0.15s">反馈</a>
-        <a href="javascript:void(0)" onclick="window.checkForAppUpdates()" style="color:rgba(255,255,255,0.5);font-size:0.8rem;transition:color 0.15s" title="检查应用与题库更新">检查更新</a>
-        <a href="javascript:void(0)" onclick="window.openDonation()" style="color:rgba(255,255,255,0.5);font-size:0.8rem;transition:color 0.15s">支持我们</a>
+        <a href="#" role="button" data-action="showFeedbackModal" style="color:rgba(255,255,255,0.5);font-size:0.8rem;transition:color 0.15s">反馈</a>
+        <a href="#" role="button" data-action="checkForAppUpdates" style="color:rgba(255,255,255,0.5);font-size:0.8rem;transition:color 0.15s" title="检查应用与题库更新">检查更新</a>
+        <a href="#" role="button" data-action="openDonation" style="color:rgba(255,255,255,0.5);font-size:0.8rem;transition:color 0.15s">支持我们</a>
       </div>
       <div class="footer-bottom">
         <span>鸣谢 · 基于 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> 开源协议</span>
@@ -883,23 +685,7 @@
     </a>
   </nav>
 
-  <!-- Supabase JS SDK：首屏不需要，延迟到空闲时加载 -->
-  <script>
-    // 延迟加载 Supabase SDK，不阻塞 DOMContentLoaded
-    function __loadSupabaseSDK() {
-      var s = document.createElement('script');
-      s.src = 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2';
-      s.defer = true;
-      s.onload = function() { window.__supabaseLoaded = true; };
-      s.onerror = function() { window.__loadSupabaseFallback(this); };
-      document.head.appendChild(s);
-    }
-    if (typeof window.requestIdleCallback === 'function') {
-      window.requestIdleCallback(__loadSupabaseSDK, { timeout: 3000 });
-    } else {
-      setTimeout(__loadSupabaseSDK, 1000);
-    }
-  </script>
+  <!-- Supabase JS SDK：由 boot-lazy.js 在空闲时延迟加载，不阻塞 DOMContentLoaded -->
   <!-- Supabase 相关脚本：首屏不需要，由 app.js 在 initSupabase 中按需动态加载 -->
   <!-- supabase-client.js / supabase.js / storage.js 已从 HTML 移除，节省 ~140KB 首屏加载 -->
 
@@ -953,23 +739,7 @@
   <!-- Tier 2 增强模块：基因组浏览器（igv.js MIT，访问 #/genome 时懒加载 igv.min.js ~1.5MB） -->
   <script src="js/integrations/genome-browser.js?v=20260723d" defer></script>
   <!-- question-utils.js / loader.js 已从 HTML 移除，由 practice/exam 模块按需加载 -->
-  <!-- 降级导航：仅在 app.js 尚未加载时兜底处理 data-route 点击 -->
-  <script>
-    (function() {
-      document.addEventListener('click', function(e) {
-        // app.js 加载后会暴露 navigateTo，此时由 app.js 统一处理
-        if (typeof window.navigateTo === 'function') return;
-        var link = e.target.closest('[data-route]');
-        if (link) {
-          var route = link.getAttribute('data-route');
-          if (route && route.startsWith('/')) {
-            e.preventDefault();
-            window.location.hash = route;
-          }
-        }
-      });
-    })();
-  </script>
+  <!-- 降级导航：由 boot-lazy.js 统一处理（app.js 未加载时兜底 data-route 点击） -->
   <!-- 全局调试脚本（已禁用）
   <script>
     console.log('%c BioQuest 调试模式 ', 'background: #1a3a2a; color: #e8a830; font-weight: bold; padding: 4px 12px; border-radius: 4px;');
@@ -1015,6 +785,7 @@
   <script src="js/ai-client.js?v=20260819a" defer></script>
   <!-- v3.4 基础能力：事件总线 + IRT 引擎 + TTS + 白板 + 多智能体 -->
   <script src="js/event-bus.js?v=20260712k" defer></script>
+  <script src="js/csp-events.js?v=20260820a" defer></script>
   <script src="js/irt-engine.js?v=20260712k" defer></script>
   <script src="js/tts.js?v=20260712k" defer></script>
   <script src="js/whiteboard.js?v=20260712k" defer></script>
@@ -1032,7 +803,9 @@
   <script src="js/learning-hub.js?v=20260809f" defer></script>
   <script src="js/daily-billion.js?v=20260809c" defer></script>
   <script src="js/points-ui.js?v=20260814a" defer></script>
-  <script src="js/app.js?v=20260814b" defer></script>
+  <!-- P1-2 拆分：路由配置表先于 app.js 加载，app.js 通过全局 Routes 引用 -->
+  <script src="js/app-routes.js?v=20260821a" defer></script>
+  <script src="js/app.js?v=20260821a" defer></script>
   <!-- PRD §5 补全模块 -->
   <script src="js/micro-details.js?v=20260803a" defer></script>
   <script src="js/sync-tabs.js?v=20260803a" defer></script>
@@ -1074,56 +847,8 @@
   <script src="vendor/openmaic/openmaic-constants.js?v=20260712j" defer></script>
   <script src="vendor/openmaic/openmaic-browser-tts.js?v=20260712j" defer></script>
   <!-- 注：AI 课堂模块已移除，首屏由 app.js 控制路由，不再加载 classroom.js/classroom-player.js/runner -->
-  <!-- 首页关键模块：首屏动画立即加载；非关键模块由 app.js 延迟加载 -->
-  <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    if (typeof window.loadModule === 'function') {
-      window.loadModule('hero-sketch');
-    }
-  });
-  </script>
-  <!-- PWA Service Worker 注册：DOMContentLoaded 立即启动，避免 window load 太晚导致
-       SW install/warmup 被图片/字体等大资源挤占下载带宽；配 6s 硬超时兜底
-       防止首次启动时 SW 注册 pending 导致用户感知"卡住/需手动刷新" -->
-  <script>
-  (function() {
-    if ('serviceWorker' in navigator) {
-      var registerFn = function() {
-        // 低电量 / 2G / 用户明确设置 reduce-data 时就不注册 SW，避免"慢"
-        var conn = (navigator.connection || navigator.mozConnection || navigator.webkitConnection);
-        if (conn && (conn.saveData ||
-          (conn.effectiveType && /^2g$/.test(conn.effectiveType)) ||
-          (conn.downlink != null && conn.downlink < 0.4))) {
-          console.info('[SW] 低带宽/省流模式，跳过 SW 注册');
-          return;
-        }
-        // 超时保护：navigator.serviceWorker.register 理论上永不超时，
-        // 这里 AbortController 不能作用于它，用 Promise.race + 标记跳过即可
-        var timeoutMs = 6000;
-        var timedOut = false;
-        var timer = setTimeout(function () {
-          timedOut = true;
-          console.warn('[SW] 注册超过 ' + timeoutMs + 'ms，暂时放弃，不阻塞页面');
-        }, timeoutMs);
-        var regPromise = navigator.serviceWorker.register('sw.js');
-        regPromise.then(function(registration) {
-          if (timedOut) return;
-          clearTimeout(timer);
-          console.log('[SW] 注册成功:', registration.scope);
-        }).catch(function(error) {
-          if (timedOut) return;
-          clearTimeout(timer);
-          console.warn('[SW] 注册失败:', error);
-        });
-      };
-      // DOMContentLoaded 立即开始，不再等 window load（那会被 7.7MB woff2 等阻塞）
-      if (document.readyState === 'interactive' || document.readyState === 'complete') {
-        setTimeout(registerFn, 0);
-      } else {
-        document.addEventListener('DOMContentLoaded', function () { setTimeout(registerFn, 0); });
-      }
-    }
-  })();
-  </script>
+  <!-- 首页关键模块：由 boot-lazy.js 在 DOMContentLoaded 时加载 hero-sketch；非关键模块由 app.js 延迟加载 -->
+  <!-- PWA Service Worker 注册（外部化 sw-register.js）：DOMContentLoaded 立即启动，配 6s 硬超时兜底 -->
+  <script src="js/sw-register.js?v=20260820a" defer></script>
 </body>
 </html>

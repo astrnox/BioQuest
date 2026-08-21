@@ -514,7 +514,7 @@
         + '<p style="margin:16px 0;font-size:15px;line-height:1.7;">' + _escapeHtml(scene.content.project || '') + '</p>'
         + '<h4 style="margin-top:24px;">项目脚手架：</h4>'
         + '<ol style="line-height:2;padding-left:24px;">' + (scene.content.scaffold || []).map(function (s) { return '<li>' + _escapeHtml(s) + '</li>'; }).join('') + '</ol>'
-        + '<button class="cls-btn" style="margin-top:20px;" onclick="window.location.hash=\'#/bio-lab\'">前往实验室开始探究</button>'
+        + '<button class="cls-btn" style="margin-top:20px;" data-on=\'["_cspGotoHash","#/bio-lab"]\'>前往实验室开始探究</button>'
         + '</div>';
     }
   }
@@ -907,7 +907,7 @@
       '    <p style="color:#4a7c59;font-weight:600;">' + ability.desc + '</p>',
       '  </div>',
       '  <div style="margin-top:24px;">',
-      '    <button class="cls-btn" onclick="window.ClassroomPlayer.close()">完成</button>',
+      '    <button class="cls-btn" data-on=\'["ClassroomPlayer.close"]\'>完成</button>',
       '  </div>',
       '</div>'
     ].join('');
