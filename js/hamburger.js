@@ -68,7 +68,7 @@
     '    <a href="' + BASE + '#/tutor">AI 对话</a>',
     '    <a href="' + BASE + '#/community">社区</a>',
     '    <a href="' + BASE + '#/daily-billion">每日亿题</a>',
-    '    <a href="javascript:void(0)" id="nav-leaderboard-btn">排行</a>',
+    '    <a href="#" role="button" id="nav-leaderboard-btn">排行</a>',
     '  </div>',
     '  <div class="mn-section"><div class="mn-section-label">账户</div>',
     '    <a href="' + BASE + '#/dashboard">仪表盘</a>',

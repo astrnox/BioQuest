@@ -2661,14 +2661,14 @@ function showAuthModal(mode) {
   overlay.setAttribute('aria-label', '登录或注册 BioQuest 账号');
   overlay.innerHTML = `
     <div class="auth-container" id="auth-container">
-      <button class="auth-close-btn" onclick="closeAuthModal()" title="关闭">
+      <button class="auth-close-btn" data-on='["closeAuthModal"]' title="关闭">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
       </button>
       <div class="auth-tabs" id="auth-tabs">
         <span class="auth-tab-indicator" id="auth-tab-indicator"></span>
-        <button class="auth-tab active" id="auth-tab-login" onclick="authSwitchToLogin()">登录</button>
-        <button class="auth-tab" id="auth-tab-register" onclick="authSwitchToRegister()">注册</button>
-        <button class="auth-tab" id="auth-tab-forgot" onclick="authSwitchToForgot()">找回密码</button>
+        <button class="auth-tab active" id="auth-tab-login" data-on='["authSwitchToLogin"]'>登录</button>
+        <button class="auth-tab" id="auth-tab-register" data-on='["authSwitchToRegister"]'>注册</button>
+        <button class="auth-tab" id="auth-tab-forgot" data-on='["authSwitchToForgot"]'>找回密码</button>
       </div>
       <div class="auth-form-panel active" id="auth-form-login">
         <h2 class="auth-form-title">欢迎回来</h2>
