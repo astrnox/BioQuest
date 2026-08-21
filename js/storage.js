@@ -153,6 +153,12 @@ function _saveMeta() {
   }
 }
 
+// 多标签一致性（P1-14 修复）：其他标签页写入 localStorage 会在本页触发 storage 事件，
+// 此时失效内存缓存，避免用旧的 checksum 校验新写入的值而被误判为“篡改”→ 数据被忽略。
+if (typeof window !== 'undefined' && window.addEventListener) {
+  window.addEventListener('storage', function () { _integrityCache = null; });
+}
+
 /**
  * 写入成功后记录指定键的旁路哈希。校验元数据本身不属于受保护键，不会递归。
  */

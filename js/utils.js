@@ -938,13 +938,14 @@ function renderChart(chart) {
   const s = String(chart).trim();
   if (!s) return '';
 
-  // 真实图片：data URI 或 http(s) URL；增加 onerror 兜底与懒加载
+  // 真实图片：data URI 或 http(s) URL；改为「捕获阶段 error 委托」兜底（P1-8/CSP：内联 onerror 已被
+  // script-src 移除 unsafe-inline 后拦截，故不能用属性式内联处理器）。
+  // 统一由 _registerChartImgErrorFallback 监听 img#data-chart-fallback 的 error 事件。
   if (s.startsWith('data:image') || /^https?:\/\//.test(s)) {
     const src = s.split(/\s+/)[0];
     return `<div class="question-chart-wrapper" style="margin:12px 0;">
-      <img src="${escapeHtml(src)}" alt="题目图表" loading="lazy" decoding="async"
-        style="max-width:100%;border-radius:12px;border:1px solid var(--border-light);background:var(--surface-tertiary);padding:8px;box-shadow:0 2px 8px rgba(0,0,0,0.06);display:block;"
-        onerror="if(!this.dataset.retried){this.dataset.retried='1';this.style.display='none';var note=document.createElement('div');note.style.cssText='margin-top:8px;padding:10px 14px;border-radius:8px;border:1px dashed var(--border-light);color:var(--text-muted);font-size:0.82rem;background:var(--surface-tertiary);';note.textContent='图表/图片加载失败，请检查网络或稍后重试。';this.parentNode.appendChild(note);}">
+      <img src="${escapeHtml(src)}" alt="题目图表" loading="lazy" decoding="async" data-chart-fallback="1"
+        style="max-width:100%;border-radius:12px;border:1px solid var(--border-light);background:var(--surface-tertiary);padding:8px;box-shadow:0 2px 8px rgba(0,0,0,0.06);display:block;">
     </div>`;
   }
 
@@ -981,6 +982,30 @@ function renderChart(chart) {
   // 纯文本描述：使用等宽字体保留缩进/换行
   return `<div class="question-chart-wrapper chart-text" style="margin:12px 0;background:var(--surface-tertiary);padding:16px;border-radius:12px;border:1px dashed var(--border-light);font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;font-size:0.9rem;line-height:1.6;white-space:pre-wrap;overflow-x:auto;">${escapeHtml(s)}</div>`;
 }
+
+// P1-8/CSP：图片加载失败兜底改为「捕获阶段 error 事件委托」。
+// 内联 onerror 属性在 script-src 移除 unsafe-inline 后会被 CSP 拦截，
+// 故由 renderChart 在 <img> 上打 data-chart-fallback="1" 标记，
+// 统一在此处捕获错误并插入“加载失败”提示（逻辑与原内联处理器一致）。
+var _chartImgFallbackBound = false;
+function _ensureChartImgFallback() {
+  if (_chartImgFallbackBound) return;
+  _chartImgFallbackBound = true;
+  if (typeof document === 'undefined' || !document.addEventListener) return;
+  document.addEventListener('error', function (e) {
+    var t = e && e.target;
+    if (!t || t.tagName !== 'IMG') return;
+    if (t.getAttribute('data-chart-fallback') !== '1') return;
+    if (t.dataset && t.dataset.retried) return; // 已处理过，避免重复插入
+    if (t.dataset) t.dataset.retried = '1';
+    try { t.style.display = 'none'; } catch (err) {}
+    var note = document.createElement('div');
+    note.style.cssText = 'margin-top:8px;padding:10px 14px;border-radius:8px;border:1px dashed var(--border-light);color:var(--text-muted);font-size:0.82rem;background:var(--surface-tertiary);';
+    note.textContent = '图表/图片加载失败，请检查网络或稍后重试。';
+    if (t.parentNode) t.parentNode.appendChild(note);
+  }, true);
+}
+_ensureChartImgFallback();
 
 /**
  * 判断是否为移动设备
