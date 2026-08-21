@@ -224,13 +224,27 @@ function _maybeShowPrivacyNotice() {
     var el = document.createElement('div');
     el.id = 'privacy-notice';
     el.setAttribute('role', 'alert');
+    el.setAttribute('aria-live', 'polite');
     el.style.cssText = 'position:fixed;left:12px;right:12px;bottom:12px;z-index:2147483000;' +
-      'display:flex;flex-wrap:wrap;align-items:center;gap:12px;padding:14px 16px;border-radius:12px;' +
+      'display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:14px 16px;border-radius:12px;' +
       'background:#ffffff;border:1px solid #ece8e1;box-shadow:0 6px 24px rgba(0,0,0,0.12);' +
       'font-family:var(--font-sans, sans-serif);font-size:0.85rem;color:#2c3e30;line-height:1.5;max-width:640px;margin:0 auto;';
     var txt = document.createElement('span');
-    txt.style.cssText = 'flex:1;min-width:220px;';
+    txt.style.cssText = 'flex:1 1 100%;';
     txt.textContent = '我们重视你的数据隐私：学习数据默认仅保存在本地，可随时导出或清除。';
+    // P1-33：未成年人保护——首次使用需确认年龄/监护人同意。
+    // 该确认仅作为最小合规门槛（不阻塞应用启动，用户也可自行访问隐私政策页后再确认）。
+    var ageWrap = document.createElement('label');
+    ageWrap.style.cssText = 'display:flex;align-items:flex-start;gap:8px;flex:1 1 100%;cursor:pointer;font-size:0.82rem;color:#54665c;';
+    var ageInput = document.createElement('input');
+    ageInput.type = 'checkbox';
+    ageInput.setAttribute('aria-label', '我已阅读并同意隐私政策；确认年满14周岁，或未成年人使用已取得监护人同意');
+    ageInput.style.cssText = 'margin-top:1px;accent-color:#3a6b4a;';
+    var ageText = document.createElement('span');
+    ageText.textContent = '我已阅读并同意隐私政策；确认年满 14 周岁（若为未成年人，已取得监护人同意后使用本平台）。';
+    ageWrap.appendChild(ageInput);
+    ageWrap.appendChild(ageText);
+
     var link = document.createElement('a');
     link.href = '#/privacy';
     link.textContent = '查看隐私政策';
@@ -238,13 +252,21 @@ function _maybeShowPrivacyNotice() {
     var closeBtn = document.createElement('button');
     closeBtn.type = 'button';
     closeBtn.textContent = '我知道了';
+    closeBtn.disabled = true;
     closeBtn.style.cssText = 'border:1px solid #3a6b4a;background:#3a6b4a;color:#fff;border-radius:8px;padding:6px 14px;font-size:0.82rem;cursor:pointer;white-space:nowrap;';
+    closeBtn.style.opacity = '0.5';
     closeBtn.addEventListener('click', function () {
       try { localStorage.setItem('bioquest_privacy_notice_seen', '1'); } catch (e) {}
+      try { localStorage.setItem('bioquest_age_consent', '1'); } catch (e) {}
       if (el.parentNode) el.parentNode.removeChild(el);
+    });
+    ageInput.addEventListener('change', function () {
+      closeBtn.disabled = !ageInput.checked;
+      closeBtn.style.opacity = ageInput.checked ? '1' : '0.5';
     });
 
     el.appendChild(txt);
+    el.appendChild(ageWrap);
     el.appendChild(link);
     el.appendChild(closeBtn);
     document.body.appendChild(el);

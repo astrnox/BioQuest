@@ -617,6 +617,10 @@ function _sendTutorMessage(text) {
     return { role: m.role === 'user' ? 'user' : 'assistant', content: m.content };
   });
 
+  // P1-24：开新请求前先中止上一个仍在飞的孤儿请求，避免重复占用模型连接
+  if (_tutorState.abortController) {
+    try { _tutorState.abortController.abort(); } catch (e) { /* 忽略 */ }
+  }
   _tutorState.abortController = new AbortController();
   // 绑定到 currentAiMsg，后面停止/恢复/flush 都以这个 msgId 为准
   _tutorState.currentAiMsgId = aiMsg.id;

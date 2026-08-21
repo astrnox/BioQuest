@@ -759,6 +759,10 @@ function _sendGroup(userMessage) {
     if (r.synthesis) history.push({ role: 'assistant', content: '[综合观点] ' + r.synthesis });
   });
 
+  // P1-24：开新讨论轮前先中止上一个仍在飞的请求，避免重复占用模型连接
+  if (_discussionState.abortController) {
+    try { _discussionState.abortController.abort(); } catch (e) { /* 忽略 */ }
+  }
   _discussionState.abortController = new AbortController();
 
   // 检查 AI 用量
@@ -900,6 +904,10 @@ function _sendPipeline(userMessage) {
   _setSendDisabled(true);
   _updateFinalizeBtn();
 
+  // P1-24：开新讨论轮前先中止上一个仍在飞的请求，避免重复占用模型连接
+  if (_discussionState.abortController) {
+    try { _discussionState.abortController.abort(); } catch (e) { /* 忽略 */ }
+  }
   _discussionState.abortController = new AbortController();
 
   // 检查 AI 用量
