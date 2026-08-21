@@ -5452,11 +5452,87 @@ function showToast(message, duration) {
   }, duration || 3000);
 }
 
+/**
+ * P1-21：带“撤销”按钮的操作反馈条，用于删除等可逆操作。
+ * 自动经过 options.duration 后消失（不触发撤销）；点“撤销”则执行 onUndo 并收起。
+ * 返回 { dismiss }，调用方可主动收起（例如已重新恢复场景）。
+ * 仅用 DOM API + addEventListener，无内联脚本（符合 CSP）。
+ * @param {string} message - 提示文本
+ * @param {Function} onUndo - 点撤销时执行的回调
+ * @param {Object} [options] - { duration, label }
+ * @returns {{ dismiss: Function }}
+ */
+function showUndoToast(message, onUndo, options) {
+  options = options || {};
+  var label = options.label || '撤销';
+  var existing = document.getElementById('bioquest-undo-toast');
+  if (existing) existing.remove();
+
+  var bar = document.createElement('div');
+  bar.id = 'bioquest-undo-toast';
+  bar.setAttribute('role', 'status');
+  bar.setAttribute('aria-live', 'polite');
+  bar.style.cssText = [
+    'position:fixed',
+    'bottom:80px',
+    'left:50%',
+    'transform:translateX(-50%)',
+    'z-index:99999',
+    'display:flex',
+    'align-items:center',
+    'gap:14px',
+    'background:rgba(26,58,42,0.96)',
+    'color:#fff',
+    'padding:12px 18px',
+    'border-radius:14px',
+    'font-size:0.9rem',
+    'font-weight:500',
+    'box-shadow:0 4px 20px rgba(0,0,0,0.3)',
+    'border:1px solid rgba(58,140,92,0.3)',
+    'animation:toastSlideUp 0.3s ease',
+    'max-width:90vw',
+    'pointer-events:auto'
+  ].join(';');
+
+  var text = document.createElement('span');
+  text.textContent = message;
+
+  var undoBtn = document.createElement('button');
+  undoBtn.type = 'button';
+  undoBtn.textContent = label;
+  undoBtn.style.cssText = 'border:none;background:transparent;color:#91d8ab;font-weight:700;font-size:0.9rem;cursor:pointer;padding:4px 8px;white-space:nowrap;';
+
+  var fired = false;
+  function dismiss() {
+    if (bar.parentNode) bar.parentNode.removeChild(bar);
+  }
+  undoBtn.addEventListener('click', function () {
+    if (fired) return;
+    fired = true;
+    dismiss();
+    if (typeof onUndo === 'function') {
+      try { onUndo(); } catch (e) { /* 撤销失败不影响页面 */ }
+    }
+  });
+
+  bar.appendChild(text);
+  bar.appendChild(undoBtn);
+  document.body.appendChild(bar);
+
+  setTimeout(function () {
+    bar.style.animation = 'toastSlideDown 0.3s ease forwards';
+    setTimeout(dismiss, 300);
+  }, options.duration || 5000);
+
+  return { dismiss: dismiss };
+}
+
 // 暴露到全局
 window.showFeedbackModal = showFeedbackModal;
 window.closeFeedbackModal = closeFeedbackModal;
 window.handleFeedbackSubmit = handleFeedbackSubmit;
 window.showToast = showToast;
+window.showUndoToast = showUndoToast;
 
 // ============================================================
 // PRD §5-30：网络状态指示器

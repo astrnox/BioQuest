@@ -741,17 +741,51 @@
   }
 
   async function _deleteQuestion(id) {
+    // P1-21：删除前捕获该行快照，用 showUndoToast 支持撤销恢复
+    var snapshot = null;
+    if (Array.isArray(_currentList)) {
+      for (var i = 0; i < _currentList.length; i++) {
+        if (_currentList[i] && String(_currentList[i].id) === String(id)) { snapshot = _currentList[i]; break; }
+      }
+    }
+    function doDelete() {
+      return window.deleteWrongQuestion(id).then(function (res) {
+        if (!res.ok) { if (typeof showToast === 'function') showToast('删除失败：' + (res.error || '未知错误')); return null; }
+        return snapshot;
+      });
+    }
     if (typeof showConfirmDialog === 'function') {
-      showConfirmDialog('!', '删除错题', '确定删除这道错题？此操作不可恢复。', async function() {
-        var res = await window.deleteWrongQuestion(id);
-        if (!res.ok) { if (typeof showToast === 'function') showToast('删除失败：' + (res.error || '未知错误')); return; }
+      showConfirmDialog('!', '删除错题', '确定删除这道错题？', async function() {
+        var snap = await doDelete();
+        if (!snap) return;
         await initWrongbook();
-        if (typeof showToast === 'function') showToast('已删除');
+        if (typeof window.showUndoToast === 'function') {
+          window.showUndoToast('错题已删除', async function () {
+            if (typeof window.addWrongQuestion === 'function') {
+              try { await window.addWrongQuestion(snap); } catch (e) { /* 撤销失败 */ }
+            }
+            await initWrongbook();
+            if (typeof showToast === 'function') showToast('已恢复');
+          });
+        } else if (typeof showToast === 'function') {
+          showToast('已删除');
+        }
       });
     } else {
-      var res = await window.deleteWrongQuestion(id);
-      if (!res.ok) { if (typeof showToast === 'function') showToast('删除失败：' + (res.error || '未知错误')); return; }
+      var snap = await doDelete();
+      if (!snap) return;
       await initWrongbook();
+      if (typeof window.showUndoToast === 'function') {
+        window.showUndoToast('错题已删除', async function () {
+          if (typeof window.addWrongQuestion === 'function') {
+            try { await window.addWrongQuestion(snap); } catch (e) { /* 撤销失败 */ }
+          }
+          await initWrongbook();
+          if (typeof showToast === 'function') showToast('已恢复');
+        });
+      } else if (typeof showToast === 'function') {
+        showToast('已删除');
+      }
     }
   }
 
