@@ -356,17 +356,13 @@
   // 读取当前有效 API Key（仅内部使用，不对外返回）：
   //   P1-3 修复：统一走 window.BioQuestKeyStore 闭包单例读取。
   //   该单例负责旧版 localStorage 明文迁移与「会话内记住」的恢复，
-  //   不再在 window 上暴露可直读的明文属性 window.__bioquest_ai_key_memory__。
+  //   不在 window 上暴露任何可直读的明文属性（P0-006 修复：已移除 __bioquest_ai_key_memory__ 兜底路径）。
   function _getApiKey() {
     try {
       if (typeof window.BioQuestKeyStore === 'object' && typeof window.BioQuestKeyStore.get === 'function') {
         var k = window.BioQuestKeyStore.get();
         return _isValidKey(k) ? k : '';
       }
-    } catch (e) {}
-    // 兜底：极早期版本可能在 window 上残留明文（理论上已被 ai-key-store 迁移清除）
-    try {
-      if (window && typeof window.__bioquest_ai_key_memory__ === 'string') return window.__bioquest_ai_key_memory__;
     } catch (e) {}
     return '';
   }

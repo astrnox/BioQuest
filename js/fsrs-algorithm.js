@@ -18,8 +18,42 @@
   var TS = window.FSRS;
   if (!TS || typeof TS.fsrs !== 'function') {
     console.error('[FSRS] ts-fsrs UMD 未加载！请检查 index.html 是否引入 js/vendor/ts-fsrs.umd.min.js');
-    // 不再回退到 SM-2 — 宁可报错也不使用虚假的间隔重复
+    // 不再回退到 SM-2 — 宁可报错也不使用虚假的间隔重复。
+    // P0-005 修复：不再静默失效 —— 设置降级标记、提供明确报错的占位 API，并展示可见提示条。
+    _degradeFSRS();
     return;
+  }
+
+  // P0-005：ts-fsrs 加载失败时的降级处理（广告拦截 / 网络失败时卡片功能不再静默失效）
+  function _degradeFSRS() {
+    window.FSRS_UNAVAILABLE = true;
+    try {
+      window.dispatchEvent(new CustomEvent('bioquest:fsrs-unavailable', { detail: { reason: 'ts-fsrs not loaded' } }));
+    } catch (e) {}
+    // 占位对象：让消费方（cards.js / supabase-client.js 等）调用 schedule 时抛出明确错误而非 undefined 崩溃
+    if (typeof window.FSRS === 'undefined') {
+      window.FSRS = {
+        _loaded: false,
+        RATING: { AGAIN: 1, HARD: 2, GOOD: 3, EASY: 4 },
+        State: {},
+        schedule: function () { throw new Error('[FSRS] 间隔重复引擎未加载（可能被广告拦截或网络异常），复习/卡片调度暂不可用'); },
+        fsrs: function () { throw new Error('[FSRS] 间隔重复引擎未加载'); }
+      };
+    }
+    // 展示降级提示条（defer 脚本执行时 DOM 已解析完成，body 可用）
+    try {
+      var b = document.createElement('div');
+      b.setAttribute('data-fsrs-degrade', '1');
+      b.style.cssText = 'position:fixed;top:0;left:0;right:0;z-index:2147483000;background:#8a3b2e;color:#fff;padding:8px 14px;font-size:13px;text-align:center;';
+      b.textContent = '间隔重复算法组件未加载（可能被广告拦截或网络异常），复习/卡片调度暂不可用，可刷新重试。';
+      var close = document.createElement('button');
+      close.textContent = '×';
+      close.setAttribute('aria-label', '关闭');
+      close.style.cssText = 'position:absolute;right:8px;top:50%;transform:translateY(-50%);background:none;border:none;color:#fff;font-size:16px;cursor:pointer;';
+      close.onclick = function () { if (b.parentNode) b.parentNode.removeChild(b); };
+      b.appendChild(close);
+      (document.body || document.documentElement).appendChild(b);
+    } catch (e) {}
   }
 
   // ==================== 兼容常量 ====================

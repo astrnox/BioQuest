@@ -1113,10 +1113,9 @@ function _loadModuleFromDBOrFetch(moduleNum, signal) {
 
 function _fetchFromSupabase(moduleNum, timeoutMs) {
   var sb = typeof window.getSupabase === 'function' ? window.getSupabase() : null;
-  var SUPABASE_URL = typeof window.SUPABASE_URL !== 'undefined' ? window.SUPABASE_URL :
-    (sb && sb.supabaseUrl) || 'https://pgkjpuowpxngmxjjlfil.supabase.co';
-  var SUPABASE_ANON_KEY = typeof window.SUPABASE_ANON_KEY !== 'undefined' ? window.SUPABASE_ANON_KEY :
-    (sb && sb.supabaseKey) || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBna2pwdW93cHhuZ214ampsZmlsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA2ODM2MzIsImV4cCI6MjA5NjI1OTYzMn0.lgfxN9htgo1i4tX_KwEehW47uqOwj3Jfwy-ljsjQnx4';
+  // P0-001 修复：优先读取 js/supabase-config.js 单一来源，其次 supabase 客户端，不再内嵌硬编码
+  var SUPABASE_URL = (typeof window.SUPABASE_URL !== 'undefined' && window.SUPABASE_URL) ? window.SUPABASE_URL : (sb && sb.supabaseUrl);
+  var SUPABASE_ANON_KEY = (typeof window.SUPABASE_ANON_KEY !== 'undefined' && window.SUPABASE_ANON_KEY) ? window.SUPABASE_ANON_KEY : (sb && sb.supabaseKey);
 
   var moduleLabel = (moduleNum !== null && moduleNum !== undefined) ? 'module_' + moduleNum : null;
   var pageSize = REST_PAGE_SIZE;
@@ -1187,10 +1186,9 @@ function _fetchFromSupabase(moduleNum, timeoutMs) {
 function fetchQuestionsBatch(options) {
   options = options || {};
   var sb = typeof window.getSupabase === 'function' ? window.getSupabase() : null;
-  var SUPABASE_URL = typeof window.SUPABASE_URL !== 'undefined' ? window.SUPABASE_URL :
-    (sb && sb.supabaseUrl) || 'https://pgkjpuowpxngmxjjlfil.supabase.co';
-  var SUPABASE_ANON_KEY = typeof window.SUPABASE_ANON_KEY !== 'undefined' ? window.SUPABASE_ANON_KEY :
-    (sb && sb.supabaseKey) || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBna2pwdW93cHhuZ214ampsZmlsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA2ODM2MzIsImV4cCI6MjA5NjI1OTYzMn0.lgfxN9htgo1i4tX_KwEehW47uqOwj3Jfwy-ljsjQnx4';
+  // P0-001 修复：优先读取 js/supabase-config.js 单一来源，其次 supabase 客户端，不再内嵌硬编码
+  var SUPABASE_URL = (typeof window.SUPABASE_URL !== 'undefined' && window.SUPABASE_URL) ? window.SUPABASE_URL : (sb && sb.supabaseUrl);
+  var SUPABASE_ANON_KEY = (typeof window.SUPABASE_ANON_KEY !== 'undefined' && window.SUPABASE_ANON_KEY) ? window.SUPABASE_ANON_KEY : (sb && sb.supabaseKey);
 
   var modules = options.modules || ['module_1', 'module_2', 'module_3', 'module_4'];
   var difficulties = options.difficulties || [];

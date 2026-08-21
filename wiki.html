@@ -271,6 +271,8 @@
 
   <!-- DOMPurify：对导入/用户编写的 Markdown 做最终消毒，防 XSS -->
   <script src="js/vendor/purify.min.js"></script>
+  <!-- Supabase 公开配置单一来源（P0-001）：URL + anon key 只在此定义，供 wiki.js 等统一读取 -->
+  <script src="js/supabase-config.js?v=20260821a"></script>
   <script src="js/utils.js?v=20260814b"></script>
   <script src="js/hamburger.js?v=20260814b"></script>
   <script src="js/wiki.js?v=20260814b"></script>

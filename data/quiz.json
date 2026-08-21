@@ -166,12 +166,12 @@
       {
         "label": "A",
         "text": "一切动植物都由细胞发育而来",
-        "answer": false
+        "answer": true
       },
       {
         "label": "B",
         "text": "所有生物都由细胞构成",
-        "answer": true
+        "answer": false
       },
       {
         "label": "C",
@@ -251,7 +251,7 @@
       {
         "label": "B",
         "text": "一切动植物都由细胞发育而来",
-        "answer": false
+        "answer": true
       },
       {
         "label": "C",
@@ -261,7 +261,7 @@
       {
         "label": "D",
         "text": "所有生物都由细胞构成",
-        "answer": true
+        "answer": false
       }
     ],
     "explanation": "细胞学说揭示了动物和植物的统一性；病毒没有细胞结构，因此并非所有生物都由细胞构成。",

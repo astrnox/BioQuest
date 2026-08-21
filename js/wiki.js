@@ -26,8 +26,9 @@
   var SEED_URL = 'data/wiki-seed.json?v=20260812a';
 
   // Supabase 配置（匿名 key 公开，仅用于公开读取词条；表结构见 sql/wiki_entries.sql）
-  var SB_URL = 'https://pgkjpuowpxngmxjjlfil.supabase.co';
-  var SB_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBna2pwdW93cHhuZ214ampsZmlsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA2ODM2MzIsImV4cCI6MjA5NjI1OTYzMn0.lgfxN9htgo1i4tX_KwEehW47uqOwj3Jfwy-ljsjQnx4';
+  // P0-001 修复：URL/anon key 统一读取 js/supabase-config.js 单一来源，避免重复硬编码
+  var SB_URL = (typeof window.SUPABASE_URL !== 'undefined' && window.SUPABASE_URL) ? window.SUPABASE_URL : '';
+  var SB_KEY = (typeof window.SUPABASE_ANON_KEY !== 'undefined' && window.SUPABASE_ANON_KEY) ? window.SUPABASE_ANON_KEY : '';
   var SB_TABLE = 'wiki_entries';
 
   // 学科分类（与 topics.json / knowledge-graph 配色保持一致）

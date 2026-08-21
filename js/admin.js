@@ -6,7 +6,29 @@
  * ============================================================
  */
 
-var _adminAuthenticated = false;
+// P0-2 加固：管理员认证状态改为闭包私有 + 只读全局访问器，Console 无法直接赋值伪造。
+// 真正的授权仍由 Supabase Auth（user_group==='admin'）+ 服务端 RLS 强制；
+// 置真必须经 _setAdminAuth 校验「真实 Supabase 会话为管理员」才允许，伪造前端状态无法提权。
+(function () {
+  var _adminAuth = false;
+  window._getAdminAuth = function () { return _adminAuth; };
+  window._setAdminAuth = function (v) {
+    if (v) {
+      // 仅当真实会话确认 user_group === 'admin' 时才允许置真
+      var u = (typeof window.getCurrentUser === 'function') ? window.getCurrentUser() : null;
+      if (!u || u.user_group !== 'admin') return false;
+    }
+    _adminAuth = !!v;
+    return true;
+  };
+  // 兼容旧名：只读访问器，外部（Console）赋值静默无效
+  Object.defineProperty(window, '_adminAuthenticated', {
+    configurable: true,
+    enumerable: false,
+    get: function () { return window._getAdminAuth(); },
+    set: function () { /* 拒绝外部直接赋值，只能经 _setAdminAuth 内部校验后修改 */ }
+  });
+})();
 
 // admin modal 焦点陷阱管理（统一通过 MutationObserver 监听 display 变化）
 var _adminModalTraps = {};
@@ -157,26 +179,29 @@ var escapeHtml = (typeof window !== 'undefined' && typeof window.escapeHtml === 
     };
 
 // 修复：当 Supabase auth 状态变化时，admin 模块同步更新认证状态
+// P0-2 加固：不信任外部传入的 user 对象（Console 可伪造 user_group），
+// 一律以内部缓存的真实会话 getCurrentUser() 为准 —— 伪造参数无法解锁。
 window._onAuthUserLoaded = function(user) {
-  if (user && user.user_group === 'admin') {
-    if (!_adminAuthenticated) {
-      _adminAuthenticated = true;
+  var real = (typeof window.getCurrentUser === 'function') ? window.getCurrentUser() : (user || null);
+  if (real && real.user_group === 'admin') {
+    if (!_getAdminAuth()) {
+      _setAdminAuth(true);
       // 安全：Supabase 管理员身份仅解锁前端 UI，绝不作为服务端管理凭证
       // （服务端无法验证 Supabase JWT，否则任何人伪造 X-Admin-Key: supabase_admin 即可提权）。
       var token = JSON.stringify({ t: Date.now(), exp: ADMIN_TOKEN_TTL });
       sessionStorage.setItem('bioquest_admin_auth', token);
 
     }
-  } else if (user) {
+  } else if (real) {
     // 普通用户登录时，清除可能残留的 admin 认证（user_group 非 admin 一律视为无权限）
-    if (_adminAuthenticated) {
-      _adminAuthenticated = false;
+    if (_getAdminAuth()) {
+      _setAdminAuth(false);
       sessionStorage.removeItem('bioquest_admin_auth');
 
     }
   } else {
     // 用户登出时
-    _adminAuthenticated = false;
+    _setAdminAuth(false);
     sessionStorage.removeItem('bioquest_admin_auth');
   }
 };
@@ -1056,7 +1081,7 @@ async function adminLogin(email, password) {
     if (typeof window.logoutUser === 'function') { try { await window.logoutUser(); } catch (e) {} }
     return false;
   }
-  _adminAuthenticated = true;
+  _setAdminAuth(true);
   // 使用带时间戳的 token 记录会话开始时间，5 分钟过期
   var token = JSON.stringify({ t: Date.now(), exp: ADMIN_TOKEN_TTL });
   sessionStorage.setItem('bioquest_admin_auth', token);
@@ -1064,7 +1089,8 @@ async function adminLogin(email, password) {
 }
 
 // 检查会话中是否已认证（带过期校验）
-// 注：仅凭 token 恢复 UI 解锁状态；最终以 Supabase 会话的 user_group === 'admin' 为准，
+// P0-2 加固：本地 sessionStorage token 仅作「待验证」提示，绝不单独作为授权依据。
+// 解锁必须以真实 Supabase 会话（user_group === 'admin'）复核为准，
 // _onAuthUserLoaded / renderAdminDashboard 会在用户加载后校正（非管理员会被清除）。
 (function() {
   try {
@@ -1081,11 +1107,33 @@ async function adminLogin(email, password) {
       sessionStorage.removeItem('bioquest_admin_auth');
       return;
     }
-    _adminAuthenticated = true;
+    // 真实会话已就绪：仅当确认为管理员才解锁；非管理员一律清除并保持未认证
+    var u = (typeof window.getCurrentUser === 'function') ? window.getCurrentUser() : null;
+    if (u) {
+      if (u.user_group === 'admin') {
+        _setAdminAuth(true);
+      } else {
+        sessionStorage.removeItem('bioquest_admin_auth');
+        _setAdminAuth(false);
+      }
+    }
+    // 会话尚未就绪：不解锁（防御伪造 token），由 renderAdminDashboard 轮询真实会话后校正
   } catch (e) {
     sessionStorage.removeItem('bioquest_admin_auth');
   }
 })();
+
+// 是否存在「待验证」的管理员 token（仅作 UI 渲染提示，不构成授权）
+function _hasPendingAdminToken() {
+  try {
+    var raw = sessionStorage.getItem('bioquest_admin_auth');
+    if (!raw) return false;
+    var t = JSON.parse(raw);
+    return !!(t && typeof t.t === 'number' && typeof t.exp === 'number' && (Date.now() - t.t) <= t.exp);
+  } catch (e) {
+    return false;
+  }
+}
 
 // 解析 Supabase 错误，返回用户友好的错误信息
 function parseSupabaseError(error) {
@@ -1120,7 +1168,7 @@ function parseSupabaseError(error) {
 
 // Supabase 直连的管理员 API
 async function adminApiCall(method, endpoint, body = null) {
-  if (!_adminAuthenticated) {
+  if (!_getAdminAuth()) {
     return { ok: false, data: { error: '管理员未认证，请重新登录' }, status: 401 };
   }
   return await handleAdminSupabaseCall(method, endpoint, body);
@@ -1165,8 +1213,9 @@ async function adminFetchRest(method, table, queryParams, body) {
       status: 401
     };
   }
-  var url = 'https://pgkjpuowpxngmxjjlfil.supabase.co/rest/v1/' + table + (queryParams ? '?' + queryParams : '');
-  var anonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBna2pwdW93cHhuZ214ampsZmlsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA2ODM2MzIsImV4cCI6MjA5NjI1OTYzMn0.lgfxN9htgo1i4tX_KwEehW47uqOwj3Jfwy-ljsjQnx4';
+  var url = (typeof window.SUPABASE_URL !== 'undefined' && window.SUPABASE_URL ? window.SUPABASE_URL : '') + '/rest/v1/' + table + (queryParams ? '?' + queryParams : '');
+  // P0-001 修复：anon key 统一读取 js/supabase-config.js 单一来源，避免重复硬编码
+  var anonKey = (typeof window.SUPABASE_ANON_KEY !== 'undefined' && window.SUPABASE_ANON_KEY) ? window.SUPABASE_ANON_KEY : '';
   var headers = {
     'apikey': anonKey,
     // 写操作必定有 token（上方已校验），读公开表用 anon，读私有表用 token
@@ -1279,7 +1328,8 @@ async function handleAdminSupabaseCall(method, endpoint, body) {
               token = (sesData && sesData.data && sesData.data.session && sesData.data.session.access_token) || null;
             } catch (e) {}
           }
-          var anonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBna2pwdW93cHhuZ214ampsZmlsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA2ODM2MzIsImV4cCI6MjA5NjI1OTYzMn0.lgfxN9htgo1i4tX_KwEehW47uqOwj3Jfwy-ljsjQnx4';
+          // P0-001 修复：anon key 统一读取 js/supabase-config.js 单一来源，避免重复硬编码
+          var anonKey = (typeof window.SUPABASE_ANON_KEY !== 'undefined' && window.SUPABASE_ANON_KEY) ? window.SUPABASE_ANON_KEY : '';
           // 精确计数：带上与主查询相同的搜索/模块过滤条件，不带分页/排序
           var countParams = 'select=id&limit=1';
           if (searchMatch && searchMatch[1]) {
@@ -1547,31 +1597,31 @@ async function handleAdminSupabaseCall(method, endpoint, body) {
 }
 
 async function getUsers() {
-  if (!_adminAuthenticated) return null;
+  if (!_getAdminAuth()) return null;
   const result = await adminApiCall('GET', '/admin/users');
   return result.ok ? result.data.users : null;
 }
 
 async function deleteUser(username) {
-  if (!_adminAuthenticated) return false;
+  if (!_getAdminAuth()) return false;
   const result = await adminApiCall('DELETE', `/admin/users/${encodeURIComponent(username)}`);
   return result.ok;
 }
 
 async function updateUser(username, updates) {
-  if (!_adminAuthenticated) return null;
+  if (!_getAdminAuth()) return null;
   const result = await adminApiCall('PUT', `/admin/users/${encodeURIComponent(username)}`, updates);
   return result.ok ? result.data : null;
 }
 
 async function resetUserPassword(username, newPassword) {
-  if (!_adminAuthenticated) return null;
+  if (!_getAdminAuth()) return null;
   const result = await adminApiCall('POST', `/admin/users/${encodeURIComponent(username)}/reset-password`, { new_password: newPassword });
   return result.ok ? result.data : null;
 }
 
 async function getQuestions(params = {}) {
-  if (!_adminAuthenticated) return null;
+  if (!_getAdminAuth()) return null;
   const query = new URLSearchParams(params).toString();
   const result = await adminApiCall('GET', `/admin/questions?${query}`);
   if (!result.ok) {
@@ -1581,26 +1631,26 @@ async function getQuestions(params = {}) {
 }
 
 async function addQuestion(question) {
-  if (!_adminAuthenticated) return null;
+  if (!_getAdminAuth()) return null;
   const result = await adminApiCall('POST', '/admin/questions', question);
   return result.ok ? result.data : null;
 }
 
 async function updateQuestion(id, question) {
-  if (!_adminAuthenticated) return null;
+  if (!_getAdminAuth()) return null;
   const result = await adminApiCall('PUT', `/admin/questions/${encodeURIComponent(id)}`, question);
   return result.ok ? result.data : null;
 }
 
 async function deleteQuestion(id) {
-  if (!_adminAuthenticated) return false;
+  if (!_getAdminAuth()) return false;
   const result = await adminApiCall('DELETE', `/admin/questions/${encodeURIComponent(id)}`);
   return result.ok;
 }
 
 /* ===== 卡片管理 API ===== */
 async function getCards(params = {}) {
-  if (!_adminAuthenticated) return null;
+  if (!_getAdminAuth()) return null;
   const query = new URLSearchParams(params).toString();
   const result = await adminApiCall('GET', `/admin/cards?${query}`);
   if (!result.ok) {
@@ -1610,75 +1660,75 @@ async function getCards(params = {}) {
 }
 
 async function addCard(card) {
-  if (!_adminAuthenticated) return null;
+  if (!_getAdminAuth()) return null;
   const result = await adminApiCall('POST', '/admin/cards', card);
   return result.ok ? result.data : null;
 }
 
 async function updateCard(id, card) {
-  if (!_adminAuthenticated) return null;
+  if (!_getAdminAuth()) return null;
   const result = await adminApiCall('PUT', `/admin/cards/${encodeURIComponent(id)}`, card);
   return result.ok ? result.data : null;
 }
 
 async function deleteCard(id) {
-  if (!_adminAuthenticated) return false;
+  if (!_getAdminAuth()) return false;
   const result = await adminApiCall('DELETE', `/admin/cards/${encodeURIComponent(id)}`);
   return result.ok;
 }
 
 async function getCardCategories() {
-  if (!_adminAuthenticated) return null;
+  if (!_getAdminAuth()) return null;
   const result = await adminApiCall('GET', '/admin/card-categories');
   return result.ok ? result.data.categories : null;
 }
 
 /* ===== 社区管理 API ===== */
 async function getCommunityPosts(params = {}) {
-  if (!_adminAuthenticated) return null;
+  if (!_getAdminAuth()) return null;
   const query = new URLSearchParams(params).toString();
   const result = await adminApiCall('GET', `/admin/community/posts?${query}`);
   return result.ok ? result.data : null;
 }
 
 async function deleteCommunityPost(id) {
-  if (!_adminAuthenticated) return false;
+  if (!_getAdminAuth()) return false;
   const result = await adminApiCall('DELETE', `/admin/community/posts/${encodeURIComponent(id)}`);
   return result.ok;
 }
 
 async function toggleCommunityPostPin(id, pinned) {
-  if (!_adminAuthenticated) return null;
+  if (!_getAdminAuth()) return null;
   const result = await adminApiCall('POST', `/admin/community/posts/${encodeURIComponent(id)}/pin`, { pinned: !!pinned });
   return result.ok ? result.data : null;
 }
 
 async function getCommunityMutes() {
-  if (!_adminAuthenticated) return null;
+  if (!_getAdminAuth()) return null;
   const result = await adminApiCall('GET', '/admin/community/mutes');
   return result.ok ? result.data : null;
 }
 
 async function muteCommunityUser(userId, reason, durationHours) {
-  if (!_adminAuthenticated) return null;
+  if (!_getAdminAuth()) return null;
   const result = await adminApiCall('POST', '/admin/community/mutes', { user_id: userId, reason, duration_hours: durationHours });
   return result.ok ? result.data : null;
 }
 
 async function unmuteCommunityUser(userId) {
-  if (!_adminAuthenticated) return false;
+  if (!_getAdminAuth()) return false;
   const result = await adminApiCall('DELETE', `/admin/community/mutes/${encodeURIComponent(userId)}`);
   return result.ok;
 }
 
 async function updateCommunityPost(postId, updates) {
-  if (!_adminAuthenticated) return null;
+  if (!_getAdminAuth()) return null;
   const result = await adminApiCall('PUT', `/admin/community/posts/${encodeURIComponent(postId)}`, updates);
   return result.ok ? result.data : null;
 }
 
 async function deleteCommunityComment(commentId) {
-  if (!_adminAuthenticated) return false;
+  if (!_getAdminAuth()) return false;
   const result = await adminApiCall('DELETE', `/admin/community/comments/${encodeURIComponent(commentId)}`);
   return result.ok;
 }
@@ -1725,13 +1775,13 @@ window.dismissReportsByPostId = dismissReportsByPostId;
 
 /* ===== 反馈管理 API ===== */
 async function getFeedbacks() {
-  if (!_adminAuthenticated) return null;
+  if (!_getAdminAuth()) return null;
   const result = await adminApiCall('GET', '/admin/feedbacks');
   return result.ok ? result.data : null;
 }
 
 async function getCommunityPostComments(postId) {
-  if (!_adminAuthenticated) return null;
+  if (!_getAdminAuth()) return null;
   var sb = (typeof window.getSupabase === 'function') ? window.getSupabase() : null;
   if (!sb) return null;
   var { data, error } = await sb.from('community_comments').select('*').eq('post_id', postId).order('created_at', { ascending: true });
@@ -1831,23 +1881,34 @@ function renderAdminDashboard(target) {
   // 安全：Supabase 管理员身份仅解锁前端 UI，绝不作为服务端管理凭证
   // （服务端无法验证 Supabase JWT，否则任何人伪造 X-Admin-Key: supabase_admin 即可提权）。
   // 服务端管理操作由 Supabase RLS 策略强制，adminLogin 使用 Supabase Auth 邮箱/密码登录。
-  if (!_adminAuthenticated && typeof window.getCurrentUser === 'function') {
+  if (!_getAdminAuth() && typeof window.getCurrentUser === 'function') {
     var user = window.getCurrentUser();
     if (user && user.user_group === 'admin') {
-      _adminAuthenticated = true;
+      _setAdminAuth(true);
       var token = JSON.stringify({ t: Date.now(), exp: ADMIN_TOKEN_TTL });
       sessionStorage.setItem('bioquest_admin_auth', token);
 
     }
   }
 
-  // 修复：如果 _adminAuthenticated 是从 sessionStorage 恢复的，但 _currentUser 还是 null，
+  // P0-2 加固：本地 token 仅作「待验证」提示，绝不作为授权依据。
+  // 若真实会话已加载但 user_group 非 admin，一律回登录页（防止伪造 token 解锁 UI）。
+  if (!_getAdminAuth()) {
+    var _cu = (typeof window.getCurrentUser === 'function') ? window.getCurrentUser() : null;
+    if (_cu && _cu.user_group !== 'admin') {
+      sessionStorage.removeItem('bioquest_admin_auth');
+      renderAdminLoginPage(target);
+      return;
+    }
+  }
+
+  // 修复：认证状态已就绪（真实管理员会话 或 存在待验证 token）但 _currentUser 仍为 null，
   // 等待 _currentUser 加载完成（最多等 2 秒）。
   // 关键：禁止在 setInterval 回调中同步重入 renderAdminDashboard，
   // 否则一旦 _currentUser 状态在多次触发间反复切换，可能累积调用栈导致 "Maximum call stack size exceeded"。
   // 改为：使用 setTimeout 链式轮询，并在用户就绪后通过 setTimeout(0) 异步重入。
   // 注：管理员认证一律来自 Supabase 会话（user_group === 'admin'），无本地密钥认证路径。
-  if (_adminAuthenticated && !window.getCurrentUser()) {
+  if ((_getAdminAuth() || _hasPendingAdminToken()) && !window.getCurrentUser()) {
     // 显示加载中
     target.innerHTML = '<div style="padding:80px 20px;text-align:center;color:#666;">正在恢复登录状态...</div>';
     var waitCount = 0;
@@ -1863,7 +1924,7 @@ function renderAdminDashboard(target) {
       if (waitCount > 20) {
         // 2 秒后仍无用户，可能是 session 真的过期
         sessionStorage.removeItem('bioquest_admin_auth');
-        _adminAuthenticated = false;
+        _setAdminAuth(false);
         setTimeout(function() { renderAdminLoginPage(target); }, 0);
         return;
       }
@@ -1942,7 +2003,7 @@ function renderAdminDashboard(target) {
 
   // 退出登录
   document.getElementById('admin-logout-btn').addEventListener('click', () => {
-    _adminAuthenticated = false;
+    _setAdminAuth(false);
     sessionStorage.removeItem('bioquest_admin_auth');
     renderAdminLoginPage(target);
   });
@@ -1991,6 +2052,20 @@ var _adminModulePromises = {};
  * @param {string} src 形如 'js/admin-users.js' 的相对路径
  * @returns {Promise<boolean>} 是否加载成功
  */
+// P0-3 修复：子模块版本号不再硬编码 —— 复用 admin.js 自身加载时的缓存版本号
+// （app.js 以 js/admin.js?v=YYYYMMDDx 动态注入）。升级 admin.js 版本时子模块自动
+// 一并换新，杜绝「改了子模块文件却忘改 ?v=」导致浏览器仍用旧缓存。
+function _adminSubModuleVersion() {
+  try {
+    var scripts = document.querySelectorAll('script[src*="admin.js"]');
+    for (var i = 0; i < scripts.length; i++) {
+      var m = (scripts[i].src || '').match(/[?&]v=([^&#]+)/);
+      if (m && m[1]) return m[1];
+    }
+  } catch (e) {}
+  return '1';
+}
+
 function _ensureAdminModule(src) {
   if (_adminModulePromises[src]) return _adminModulePromises[src];
   _adminModulePromises[src] = new Promise(function (resolve) {
@@ -2002,7 +2077,7 @@ function _ensureAdminModule(src) {
       return;
     }
     var s = document.createElement('script');
-    s.src = src + '?v=20260817a';
+    s.src = src + '?v=' + _adminSubModuleVersion();
     s.setAttribute('data-admin-module', src);
     s.async = true;
     s.onload = function () { s.setAttribute('data-loaded', '1'); resolve(true); };
@@ -2209,7 +2284,8 @@ function renderAdminPage(target) {
   _adminRenderGuard = true;
   try {
     injectAdminStyles();
-    if (_adminAuthenticated) {
+    // P0-2：存在待验证 token 时先进仪表盘（其内部会校验真实会话，非管理员会回登录页）
+    if (_getAdminAuth() || _hasPendingAdminToken()) {
       renderAdminDashboard(target);
     } else {
       renderAdminLoginPage(target);
