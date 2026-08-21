@@ -75,7 +75,7 @@ describe('1. IRT predictScore（预测联赛得分）设计合理性', () => {
     return l.predictScore();
   }
 
-  test('分数恒在 [0,100]，且随 θ 单调不减', () => {
+  test('分数恒在 [0,100]，且随 θ 单调不减；锚定 θ=-3→0、θ=0→50、θ=3→100', () => {
     let prev = -1;
     for (let theta = -3; theta <= 3; theta += 0.5) {
       const s = pred(theta, 40).score;
@@ -84,13 +84,13 @@ describe('1. IRT predictScore（预测联赛得分）设计合理性', () => {
       expect(s).toBeGreaterThanOrEqual(prev);
       prev = s;
     }
-    // 端点锚定：θ=-3→0，θ=0→50，θ=3→100
+    // score = Φ(θ)×100（百分位分）：中心 50，两端趋近 0/100
     expect(pred(-3, 40).score).toBe(0);
     expect(pred(0, 40).score).toBe(50);
     expect(pred(3, 40).score).toBe(100);
   });
 
-  test('置信区间满足 low ≤ score ≤ high，且 →[0,100]', () => {
+  test('置信区间满足 low ≤ score ≤ high，且 ∈[0,100]', () => {
     for (let theta = -3; theta <= 3; theta += 0.5) {
       const r = pred(theta, 10);
       expect(r.low).toBeLessThanOrEqual(r.score);
@@ -100,7 +100,7 @@ describe('1. IRT predictScore（预测联赛得分）设计合理性', () => {
     }
   });
 
-  test('置信度 ∈[0,100] 且随做题量递增', () => {
+  test('SE 基于信息函数：SE=1/√ΣI；置信度∈[0,100] 且随做题量(信息量)单调递增', () => {
     let prev = -1;
     for (let n = 0; n <= 120; n += 10) {
       const c = pred(0.5, n).confidence;
@@ -109,8 +109,25 @@ describe('1. IRT predictScore（预测联赛得分）设计合理性', () => {
       expect(c).toBeGreaterThanOrEqual(prev);
       prev = c;
     }
-    expect(pred(0, 0).confidence).toBe(0);       // 0 题 → 0% 置信
-    expect(pred(0, 100).confidence).toBeGreaterThan(90); // 100 题 → >90%
+    expect(pred(0, 0).confidence).toBe(0);              // 0 信息 → 0% 置信
+    expect(pred(0, 100).confidence).toBeGreaterThan(85); // 100 题(高信息) → >85%
+  });
+
+  test('信息函数驱动：high-区分度题比 low-区分度题提供更小 SE / 更高置信（非只按题量）', () => {
+    const mk = (a) => {
+      const l = loadIrtEngine({
+        bioquest_irt_state: JSON.stringify({
+          theta: 0.5, totalAnswered: 1, byModule: {},
+          history: [{ ts: 1, questionId: 'qa', correct: true, thetaAfter: 0.5 }]
+        }),
+        bioquest_irt_params: JSON.stringify({ qa: { a, b: 0.5, c: 0.2 } })
+      });
+      return l.predictScore();
+    };
+    const hi = mk(2.5);  // 区分度题：信息量大
+    const lo = mk(0.3);  // 弱区分度题：信息量小（题量同为 1）
+    expect(lo.se).toBeGreaterThan(hi.se);
+    expect(hi.confidence).toBeGreaterThan(lo.confidence);
   });
 });
 

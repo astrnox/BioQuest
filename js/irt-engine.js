@@ -8,12 +8,14 @@
  *
  * 三参数模型（3PL）：
  *   P(答对|θ) = c + (1 - c) * 1 / (1 + exp(-a * (θ - b)))
- *   a: 区分度 (0-2)
+ *   a: 区分度 (0.3-2.5)   参考 Hambleton et al. 建议典型区间 0.5-2.5
  *   b: 难度   (-3 to 3)
- *   c: 猜测率 (0-0.5)
+ *   c: 猜测率 (0-0.5)     典型上界 0.35（MetricGate）
  *   θ: 受测者能力 (-3 to 3)
  *
  * 参考：Lord (1980) "Applications of Item Response Theory to Practical Testing Problems"
+ *       Hambleton & Swaminathan (1985) "Item Response Theory: Principles and Applications"
+ *       MetricGate 关于 3PL 猜测参数 c 典型值 0-0.35 的讨论
  */
 
 (function () {
@@ -49,15 +51,17 @@
     if (question.options && question.options.length >= 4) a = 1.2;
     if (question.type === 'essay') a = 1.5;
     if (question.type === 'mcq' && question.options && question.options.length === 2) a = 0.6;
-    a = Math.min(2.0, Math.max(0.3, a));
+    // 区分度典型区间 0.5–2.5（Hambleton 等）；保留下限 0.3 以容纳弱区分项
+    a = Math.min(2.5, Math.max(0.3, a));
 
     // 猜测率 c：选择题按 1/选项数，非选择题为 0
+    // 下限典型值为 0.35（MetricGate）——4 选项理论 0.25 在范围内
     var c = 0;
     if (question.type === 'mcq' && question.options) {
       c = 1 / question.options.length;
-      c = Math.min(0.4, c);
+      c = Math.min(0.35, c);
     } else if (question.type === 'judgment') {
-      c = 0.5;
+      c = 0.5; // 2 选项判断题的理论猜测下限
     }
 
     return { a: a, b: b, c: c };
@@ -98,6 +102,24 @@
     var z = a * (theta - b);
     var p = c + (1 - c) / (1 + Math.exp(-z));
     return Math.min(0.999, Math.max(0.001, p));
+  }
+
+  /**
+   * 单项信息函数 I(θ)（3PL）：
+   *   I(θ) = a² · (P-c)²/(1-c)² · (1-P)/P
+   * θ 处信息量越大，对能力估计越精确。参考 Lord (1980)。
+   * @param {number} theta - 能力值
+   * @param {Object} params - {a, b, c}
+   * @returns {number} 信息量（≥0）
+   */
+  function itemInfo(theta, params) {
+    var a = params.a || 0;
+    var c = params.c || 0;
+    var p = probCorrect(theta, params);
+    var omc = 1 - c;           // 1-c，p 已钳制在 (c, 1)，故 won't 除零
+    var pc = p - c;
+    if (pc <= 0 || omc <= 0) return 0;
+    return a * a * (pc * pc / (omc * omc)) * ((1 - p) / p);
   }
 
   /**
@@ -214,8 +236,7 @@
       .filter(function (q) { return !exclude[q.id]; })
       .map(function (q) {
         var params = getParam(q.id, cache) || inferParams(q);
-        var p = probCorrect(theta, params);
-        var info = params.a * params.a * (1 - p) / Math.pow(1 - params.c, 2) * Math.pow(p - params.c, 2) / p;
+        var info = itemInfo(theta, params);
         // 难度过滤：easy→θ-1, normal→θ, hard→θ+1
         var targetB = theta;
         if (options.targetDifficulty === 'easy') targetB = theta - 1;
@@ -265,30 +286,84 @@
   // ====== 预测分析 ======
 
   /**
-   * 预测联赛得分（基于 θ 与历史数据）
-   * 简化：θ=-3→0分，θ=0→60分，θ=3→100分，置信度随答题量提升
-   * @returns {{score: number, low: number, high: number, confidence: number}}
+   * θ → 百分位（标准正态 CDF）。θ 被建模为 N(0,1) 的受测者能力，
+   * 百分位表示「比多少比例的参赛者强」。一致用于 describeAbility 与 predictScore。
+   * @param {number} theta
+   * @returns {number} 0-100
+   */
+  function thetaToPercentile(theta) {
+    // Abramowitz & Stegun 近似 erf，配合标准正态 CDF
+    var x = Math.abs(theta) / Math.SQRT2;
+    var t = 1 / (1 + 0.3275911 * x);
+    var y = 1 - (((((1.061405429 * t - 1.453152027) * t) + 1.421413741) * t - 0.284496736) * t + 0.254829592) * t * Math.exp(-x * x);
+    var cdf = 0.5 * (1 + (theta >= 0 ? y : -y));
+    return Math.round(cdf * 1000) / 10; // 0.1 精度
+  }
+
+  /**
+   * 预测联赛得分的百分位分（百分制）
+   * score = Φ(θ)×100（即 θ 对应的参赛者百分位）。θ 与 score 单调，θ=0→50。
+   */
+  function thetaToScore(theta) {
+    return thetaToPercentile(theta);
+  }
+
+  /**
+   * 有效测验信息量 ΣI_j(θ)：
+   * 优先累加已答题目（history）的真实信息函数；history 无参数可用时，
+   * 退化为「平均题量 × 单题典型信息」，保证早期与测试环境也有合理口径。
+   * @param {Object} state
+   * @param {number} theta
+   * @returns {number} 总信息量
+   */
+  function effectiveTestInfo(state, theta) {
+    var hist = state.history || [];
+    var sum = 0, used = 0;
+    for (var i = 0; i < hist.length; i++) {
+      var p = getParam(hist[i].questionId);
+      if (p && typeof p.a === 'number' && typeof p.c === 'number') {
+        sum += itemInfo(theta, p);
+        used++;
+      }
+    }
+    if (used > 0) return sum;
+    var n = state.totalAnswered || 0;
+    if (n <= 0) return 0;
+    // 退化口径：典型题 a=1.1、c=0.25，在 θ 处（b=θ 最大化信息）的信息量
+    return n * itemInfo(theta, { a: 1.1, b: theta, c: 0.25 });
+  }
+
+  /**
+   * 预测联赛得分（基于 IRT 测验信息函数，而非简单题量）
+   *
+   * 设计依据：
+   *   - 能力估计标准差（SE）：SE(θ) = 1/√ΣI_j(θ)（标准误随信息量增大而减小）。
+   *   - 95% 置信区间：θ ± 1.96·SE，再各自映射到百分位分 → score CI。
+   *   - 置信度展示：information → confidence 的单调映射，样本(信息量)越多越可信。
+   *
+   * @returns {{theta, score, low, high, se, info, confidence}}
    */
   function predictScore() {
     var state = loadState();
     var theta = state.theta;
-    var n = state.totalAnswered;
 
-    // θ → 分数映射（联赛满分 100）
-    var score = 50 + (theta / 3) * 50;
-    score = Math.max(0, Math.min(100, score));
+    var info = effectiveTestInfo(state, theta);
+    var se = info > 0 ? (1 / Math.sqrt(info)) : 3; // 无信息时给满幅 SE（极宽区间）
+    var score = thetaToScore(theta);
+    var low = thetaToScore(theta - 1.96 * se);
+    var high = thetaToScore(theta + 1.96 * se);
 
-    // 置信度：答 0 题为 0%，答 30 题约 70%，答 100 题约 95%
-    var confidence = 1 - Math.exp(-n / 30);
-    // 置信区间（θ 估计标准差近似 1/sqrt(n)）
-    var sd = n > 0 ? 1 / Math.sqrt(n) : 3;
-    var margin = sd * 16.67;  // θ 转 分数系数
+    // 置信度：0 信息→0%，信息饱和→趋近 100%。exp(-info/8) 在 info=8 时约 37%。
+    var confidence = Math.max(0, Math.min(100, Math.round(100 * (1 - Math.exp(-info / 8)))));
 
     return {
-      score: Math.round(score),
-      low: Math.max(0, Math.round(score - 1.96 * margin)),
-      high: Math.min(100, Math.round(score + 1.96 * margin)),
-      confidence: Math.round(confidence * 100)
+      theta: Math.round(theta * 100) / 100,
+      score: Math.max(0, Math.min(100, Math.round(score))),
+      low: Math.max(0, Math.min(100, Math.round(low))),
+      high: Math.max(0, Math.min(100, Math.round(high))),
+      se: Math.round(se * 100) / 100,
+      info: Math.round(info * 100) / 100,
+      confidence: confidence
     };
   }
 
@@ -298,15 +373,7 @@
    * @returns {{level: string, percentile: number, desc: string}}
    */
   function describeAbility(theta) {
-    // θ 对应正态分布百分位
-    // 用近似 erf 函数
-    function erf(x) {
-      var t = 1 / (1 + 0.3275911 * Math.abs(x));
-      var y = 1 - (((((1.061405429 * t - 1.453152027) * t) + 1.421413741) * t - 0.284496736) * t + 0.254829592) * t * Math.exp(-x * x);
-      return x >= 0 ? y : -y;
-    }
-    var percentile = 0.5 * (1 + erf(theta / Math.sqrt(2)));
-    percentile = Math.round(percentile * 100);
+    var percentile = thetaToPercentile(theta);
 
     var level, desc;
     if (theta < -1.5) { level = '入门'; desc = '建议从基础概念开始，多看动画和卡片'; }
