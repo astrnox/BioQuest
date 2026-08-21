@@ -44,6 +44,28 @@
 /* 注：.auth-btn 样式由 globals.css 统一定义（避免与 globals.css 重复定义导致
    padding/font-weight 冲突），此处不再覆盖。 */
 
+/* 右上角「新手引导」重看按钮 */
+.header-help {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid rgba(58, 107, 74, 0.45);
+  background: transparent;
+  color: var(--color-deep, #1a3a2a);
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.header-help:hover {
+  background: var(--color-deep, #1a3a2a);
+  color: #fff;
+}
+
 .hamburger {
   display: flex;
   flex-direction: column;

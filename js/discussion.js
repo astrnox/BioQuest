@@ -766,7 +766,10 @@ function _sendGroup(userMessage) {
   _discussionState.abortController = new AbortController();
 
   // 检查 AI 用量
-  var aiCheck = (typeof window.AiClient === 'function') ? window.AiClient.canUse() : { ok: true, useBackend: true };
+  // P1 修复：window.AiClient 是对象而非函数，原 `typeof === 'function'` 恒为 false 会跳过 canUse 门禁
+  var aiCheck = (window.AiClient && typeof window.AiClient.canUse === 'function')
+    ? window.AiClient.canUse()
+    : { ok: true, useBackend: true };
   if (!aiCheck.ok) {
     round.error = aiCheck.reason || '今日 AI 调用已达上限';
     _renderMessages(document.getElementById('discussion-messages'));
@@ -911,7 +914,10 @@ function _sendPipeline(userMessage) {
   _discussionState.abortController = new AbortController();
 
   // 检查 AI 用量
-  var aiCheck = (typeof window.AiClient === 'function') ? window.AiClient.canUse() : { ok: true, useBackend: true };
+  // P1 修复：window.AiClient 是对象而非函数，原 `typeof === 'function'` 恒为 false 会跳过 canUse 门禁
+  var aiCheck = (window.AiClient && typeof window.AiClient.canUse === 'function')
+    ? window.AiClient.canUse()
+    : { ok: true, useBackend: true };
   if (!aiCheck.ok) {
     run.error = aiCheck.reason || '今日 AI 调用已达上限';
     _renderMessages(document.getElementById('discussion-messages'));
