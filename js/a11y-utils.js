@@ -208,24 +208,11 @@
     setTimeout(function () { region.textContent = String(message); }, 50);
   }
 
-  /**
-   * 给动态内容容器添加 aria-live 属性（用于流式输出区域）
-   * @param {HTMLElement} el - 容器元素
-   * @param {string} [level='polite']
-   */
-  function makeLive(el, level) {
-    if (!el) return;
-    el.setAttribute('aria-live', level || 'polite');
-    el.setAttribute('aria-atomic', 'false');
-    if (!el.getAttribute('role')) el.setAttribute('role', 'log');
-  }
-
   // 暴露到全局
   window.BioQuestA11y = {
     trapFocus: trapFocus,
     createLiveRegion: createLiveRegion,
     announce: announce,
-    makeLive: makeLive,
     FOCUSABLE_SELECTOR: FOCUSABLE_SELECTOR
   };
 

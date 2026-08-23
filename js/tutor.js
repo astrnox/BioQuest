@@ -551,6 +551,13 @@ function _renderTutorMessages(container) {
     var msgEl = document.createElement('div');
     msgEl.className = 'tutor-msg tutor-msg--' + msg.role;
     var content = msg.role === 'user' ? escapeHtml(msg.content) : _tutorMarkdown(msg.content);
+    // P1-11（Issue #120）：AI 首字到达前的「思考中」三点占位
+    // （CSS .tutor-typing-dots 此前已注入样式但从未被创建——本处补上）
+    // 仅在「该消息正处于流式等待」时展示，收尾/出错（phase 回到 idle）即消失。
+    if (msg.role === 'ai' && !msg.content &&
+        _tutorState.streamPhase !== 'idle' && _tutorState.currentAiMsgId === msg.id) {
+      content = '<div class="tutor-typing-dots" role="status" aria-label="AI 正在思考"><span></span><span></span><span></span></div>';
+    }
     msgEl.innerHTML = '<div class="tutor-msg-bubble" id="msg-' + msg.id + '">' + content + '</div>';
     container.appendChild(msgEl);
   });
@@ -663,6 +670,9 @@ function _sendTutorMessage(text) {
     var span = document.createElement('span');
     span.className = 'tutor-streaming-text';
     span.textContent = newText;
+    // P1-11（Issue #120）：首字到达时移除「思考中」三点占位
+    var oldDots = bubble.querySelector('.tutor-typing-dots');
+    if (oldDots) oldDots.remove();
     var oldCursor = bubble.querySelector('.tutor-typing');
     if (oldCursor) oldCursor.remove();
     bubble.appendChild(span);
@@ -760,7 +770,7 @@ function _finishTutorStream(aiMsg, fullText, stopped) {
     _renderTutorMessages(messagesEl);
     var bubble = document.getElementById('msg-' + aiMsg.id);
     if (bubble) {
-      var tmpSpans = bubble.querySelectorAll('.tutor-streaming-text, .tutor-typing');
+      var tmpSpans = bubble.querySelectorAll('.tutor-streaming-text, .tutor-typing, .tutor-typing-dots');
       tmpSpans.forEach(function(s) { s.remove(); });
     }
   }

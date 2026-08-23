@@ -287,6 +287,44 @@ function getRouteFromHash() {
 }
 
 /**
+ * P1-5（Issue #102）：处理 PWA 快捷方式的 ?page= 查询参数。
+ * manifest.json 的 shortcuts 指向 ./index.html?page=cards|quiz|diagnosis，
+ * 此前该参数无任何消费方（点击快捷方式只会落到首页）。
+ * 规则：
+ *   - 仅接受白名单映射（cards→/cards、quiz→/practice、diagnosis→/diagnosis），
+ *     未知值一律忽略，杜绝参数注入与任意跳转；
+ *   - 显式 hash 优先级高于 ?page=（用户带 hash 进入时不覆盖）；
+ *   - 用 history.replaceState 清理查询串，不产生多余历史记录。
+ */
+function _applyPageQueryParam() {
+  try {
+    if (!window.location.search) return;
+    var params = new URLSearchParams(window.location.search);
+    var page = params.get('page');
+    // 无论是否命中白名单都清掉查询串（一次性参数，避免刷新/分享时残留）
+    var baseUrl = window.location.pathname + window.location.hash;
+    if (!page) {
+      window.history.replaceState(null, '', baseUrl);
+      return;
+    }
+    var PAGE_ROUTE_WHITELIST = {
+      cards: '/cards',
+      quiz: '/practice',      // manifest 快捷方式「模拟练习」
+      diagnosis: '/diagnosis'
+    };
+    var target = PAGE_ROUTE_WHITELIST[String(page).toLowerCase()];
+    var hasExplicitHash = !!window.location.hash && window.location.hash !== '#/' && window.location.hash !== '#';
+    if (target && Routes[target] && !hasExplicitHash) {
+      // 先清查询串，再设置目标 hash（异步触发 hashchange → 常规路由）
+      window.history.replaceState(null, '', window.location.pathname);
+      window.location.hash = target;
+    } else {
+      window.history.replaceState(null, '', baseUrl);
+    }
+  } catch (e) { /* URL API 异常时静默忽略，保持默认路由 */ }
+}
+
+/**
  * 导航到指定路由
  * @param {string} route - 目标路由路径
  * @param {Object} [options] - 导航选项
@@ -1476,6 +1514,13 @@ function handleRoute(route) {
   _AppState.currentRoute = route;
   updatePageTitle(route);
   updateNavActive(route);
+
+  // #119 路由切换播报：SPA 视图切换对屏幕阅读器不可见（无整页加载），
+  // 用共享 aria-live 区播报目标页标题，让盲人用户感知导航已生效。
+  if (window.BioQuestA11y && typeof window.BioQuestA11y.announce === 'function') {
+    var _pageTitle = (routeCfg && routeCfg.title) ? routeCfg.title : '页面';
+    window.BioQuestA11y.announce(_pageTitle + '，已加载', 'polite');
+  }
 
   var target = _AppState.rootElement || document.getElementById('page-content');
   if (!target) {
@@ -4997,6 +5042,9 @@ function initApp() {
   _AppState._homeHTML = root.innerHTML;
   _AppState._countdownTimer = null;
 
+  // P1-5（Issue #102）：PWA 快捷方式 ?page= 白名单路由（读取后清理 URL）
+  _applyPageQueryParam();
+
   const route = getRouteFromHash();
 
   bindEvents();
@@ -5407,27 +5455,51 @@ function handleFeedbackSubmit() {
 
 /**
  * 显示 Toast 通知
+ * P1-12（Issue #121）增强：
+ *   - 第二参数兼容两种形态：'error'|'success'|'info'（类型化样式）或数字（毫秒时长）；
+ *     修复 habits.js 等处误传 'error' 字符串导致 setTimeout(…,'error') 被 coerce 成 0ms
+ *     立即消失、且错误无视觉区分的缺陷；
+ *   - 增加 role="alert" + aria-live，读屏用户可感知错误/状态提示。
+ * @param {string} message 提示文本
+ * @param {string|number} [typeOrDuration] 'error'|'success'|'info' 或毫秒数
+ * @param {number} [duration] 显示时长（毫秒），默认 success/info 3000、error 4500
  */
-function showToast(message, duration) {
+function showToast(message, typeOrDuration, duration) {
+  var type = 'info';
+  if (typeOrDuration === 'error' || typeOrDuration === 'success' || typeOrDuration === 'info') {
+    type = typeOrDuration;
+  } else if (typeof typeOrDuration === 'number' && typeOrDuration > 0) {
+    duration = typeOrDuration; // 旧签名 showToast(msg, ms) 兼容
+  }
+  if (!(typeof duration === 'number' && duration > 0)) {
+    duration = type === 'error' ? 4500 : 3000;
+  }
+
   var existing = document.getElementById('bioquest-toast');
   if (existing) existing.remove();
 
+  var typeBg = type === 'error' ? 'rgba(160,58,44,0.96)' : type === 'success' ? 'rgba(38,92,58,0.96)' : 'rgba(26,58,42,0.95)';
+  var typeBorder = type === 'error' ? 'rgba(200,90,70,0.5)' : type === 'success' ? 'rgba(90,180,120,0.5)' : 'rgba(58,140,92,0.3)';
+
   var toast = document.createElement('div');
   toast.id = 'bioquest-toast';
+  // P1-12：错误用 assertive（立即播报），其余 polite
+  toast.setAttribute('role', type === 'error' ? 'alert' : 'status');
+  toast.setAttribute('aria-live', type === 'error' ? 'assertive' : 'polite');
   toast.style.cssText = [
     'position:fixed',
     'bottom:80px',
     'left:50%',
     'transform:translateX(-50%)',
     'z-index:99999',
-    'background:rgba(26,58,42,0.95)',
+    'background:' + typeBg,
     'color:#fff',
     'padding:12px 24px',
     'border-radius:24px',
     'font-size:0.9rem',
     'font-weight:500',
     'box-shadow:0 4px 20px rgba(0,0,0,0.3)',
-    'border:1px solid rgba(58,140,92,0.3)',
+    'border:1px solid ' + typeBorder,
     'animation:toastSlideUp 0.3s ease',
     'max-width:90vw',
     'text-align:center',
@@ -5449,7 +5521,7 @@ function showToast(message, duration) {
     setTimeout(function() {
       if (toast.parentNode) toast.parentNode.removeChild(toast);
     }, 300);
-  }, duration || 3000);
+  }, duration);
 }
 
 /**
