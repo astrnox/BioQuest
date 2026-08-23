@@ -1,0 +1,67 @@
+{
+  "M4-09-c3d526da86b6": {
+    "tags": [
+      "genetic_drift",
+      "module_4",
+      "演化生物学",
+      "遗传漂变"
+    ],
+    "diff": "high_school",
+    "len": 88,
+    "src": "genetic_drift",
+    "year": null,
+    "module": "module_4"
+  },
+  "M4-09-7e6f5acf30f2": {
+    "tags": [
+      "genetic_drift",
+      "module_4",
+      "演化生物学",
+      "遗传漂变"
+    ],
+    "diff": "high_school",
+    "len": 133,
+    "src": "genetic_drift",
+    "year": null,
+    "module": "module_4"
+  },
+  "M4-09-fe42bfd5d95b": {
+    "tags": [
+      "genetic_drift",
+      "module_4",
+      "演化生物学",
+      "中性学说"
+    ],
+    "diff": "league",
+    "len": 115,
+    "src": "genetic_drift",
+    "year": null,
+    "module": "module_4"
+  },
+  "M4-09-8f93809ce3bf": {
+    "tags": [
+      "genetic_drift",
+      "module_4",
+      "演化生物学",
+      "有效群体大小"
+    ],
+    "diff": "league",
+    "len": 120,
+    "src": "genetic_drift",
+    "year": null,
+    "module": "module_4"
+  },
+  "M4-09-92df69f908e6": {
+    "tags": [
+      "genetic_drift",
+      "module_4",
+      "演化生物学",
+      "近中性理论"
+    ],
+    "diff": "league",
+    "len": 133,
+    "src": "genetic_drift",
+    "year": null,
+    "module": "module_4"
+  }
+}

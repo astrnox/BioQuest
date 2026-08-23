@@ -1,0 +1,67 @@
+{
+  "M1-0B-36ac96c58aef": {
+    "tags": [
+      "translation",
+      "module_1",
+      "分子生物学",
+      "核糖体"
+    ],
+    "diff": "high_school",
+    "len": 80,
+    "src": "translation",
+    "year": null,
+    "module": "module_1"
+  },
+  "M1-0B-e675f6bd4701": {
+    "tags": [
+      "translation",
+      "module_1",
+      "分子生物学",
+      "tRNA"
+    ],
+    "diff": "high_school",
+    "len": 90,
+    "src": "translation",
+    "year": null,
+    "module": "module_1"
+  },
+  "M1-0B-e13631187359": {
+    "tags": [
+      "translation",
+      "module_1",
+      "分子生物学",
+      "密码子"
+    ],
+    "diff": "high_school",
+    "len": 64,
+    "src": "translation",
+    "year": null,
+    "module": "module_1"
+  },
+  "M1-0B-1d2b900a9a19": {
+    "tags": [
+      "translation",
+      "module_1",
+      "分子生物学",
+      "摆动性"
+    ],
+    "diff": "league",
+    "len": 97,
+    "src": "translation",
+    "year": null,
+    "module": "module_1"
+  },
+  "M1-0B-ef7a0c8e1552": {
+    "tags": [
+      "translation",
+      "module_1",
+      "分子生物学",
+      "翻译"
+    ],
+    "diff": "league",
+    "len": 101,
+    "src": "translation",
+    "year": null,
+    "module": "module_1"
+  }
+}

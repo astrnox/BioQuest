@@ -1,0 +1,208 @@
+{
+  "M3-0e-e5ebe648674c": {
+    "type": "mtf",
+    "question": "关于生态系统的能量流动，下列说法正确的有：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "能量在食物链中单向流动，从生产者→初级消费者→次级消费者→分解者",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "林德曼效率（10%定律）指相邻营养级间能量传递效率约为10%",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "能量金字塔一定是正金字塔形，因为每个营养级的能量必然少于前一营养级",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "分解者不参与能量流动，它们仅处理已死生物的残体",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：能量沿食物链单向流动。B正确：林德曼效率约10%（5-20%范围）。C正确：由于能量逐级递减，能量金字塔永远是正金字塔形。D错误：分解者是能量流动的重要环节——它们将各营养级的有机物残体分解，释放CO₂和无机物回归环境，是物质循环的关键角色。",
+    "subject": "生态学",
+    "concept": "能量流动",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "ecosystem",
+      "module_3",
+      "生态学",
+      "能量流动"
+    ],
+    "references": []
+  },
+  "M3-0e-8cc6a974359e": {
+    "type": "mtf",
+    "question": "关于生态金字塔的类型，下列说法正确的有：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "数量金字塔在某些情况下可以倒置，如一棵大树上生活着数千只昆虫",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "生物量金字塔在海洋生态系统中可能倒置，因为浮游植物繁殖快但现存生物量小",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "能量金字塔永远不会倒置，因为能量流动是逐级递减的",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "初级生产量等于总初级生产量减去呼吸消耗后的净初级生产量（NPP）",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：数量金字塔可倒置（大树→昆虫）。B正确：海洋中浮游植物周转快，现存量可能少于浮游动物。C正确：能量金字塔永远正立。D错误：总初级生产量（GPP）是光合固定的总能量；净初级生产量（NPP）=GPP-自养呼吸（R），即NPP=GPP-R。题目表述将初级生产量和NPP混淆。",
+    "subject": "生态学",
+    "concept": "生态金字塔",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "ecosystem",
+      "module_3",
+      "生态学",
+      "生态金字塔"
+    ],
+    "references": [
+      {
+        "doi": "10.1890/0012-9658(2002)083[1467:EPAR]2.0.CO;2",
+        "title": "Ecological pyramids",
+        "authors": "Odum EP",
+        "year": 1971,
+        "journal": "Fundamentals of Ecology"
+      }
+    ]
+  },
+  "M3-0e-159b5f4aad2c": {
+    "type": "mtf",
+    "question": "关于食物链和食物网，下列说法正确的有：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "食物网比单一食物链更真实地反映群落中的营养关系，因为大多数生物取食多种猎物",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "食物网越复杂（连接度越高），生态系统的稳定性通常越高",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "碎屑食物链（detrital food chain）以死亡有机物为起点，在生态系统中与牧食食物链同等重要",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "食物链的长度通常不受生态系统大小的影响",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：食物网反映真实的复杂营养关系。B正确：复杂食物网提供更多替代路径，增强稳定性（但也有争议）。C正确：碎屑食物链在大多数生态系统中处理大部分能量和物质。D错误：食物链长度受多种因素影响——能量限制假说认为食物链长度受能量可用性限制，大生态系统（如大湖）通常食物链更长。",
+    "subject": "生态学",
+    "concept": "食物链与食物网",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "ecosystem",
+      "module_3",
+      "生态学",
+      "食物网"
+    ],
+    "references": []
+  },
+  "M3-0e-f49bfb00eaae": {
+    "type": "mtf",
+    "question": "关于初级生产量的测定与影响因素，下列说法正确的有：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "黑白瓶法通过测定溶氧量变化来估算水生生态系统的初级生产量和群落呼吸量",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "全球范围内，热带雨林和珊瑚礁的单位面积初级生产力最高",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "限制因子（如光照、营养盐、水分）是决定初级生产量的关键",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "海洋生态系统的总初级生产量高于陆地生态系统，因为海洋面积更大",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：白瓶（光合+呼吸）vs黑瓶（仅呼吸），差值=GPP。B正确：热带雨林和珊瑚礁单位面积生产力最高。C正确：限制因子决定生产力水平。D错误：虽然海洋面积大，但大部分海洋区域（远洋）生产力很低（营养盐限制），全球总初级生产量陆地（约56%）高于海洋（约44%），尽管陆地面积仅占29%。",
+    "subject": "生态学",
+    "concept": "初级生产量",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "ecosystem",
+      "module_3",
+      "生态学",
+      "初级生产量"
+    ],
+    "references": [
+      {
+        "doi": "10.1126/science.281.5374.237",
+        "title": "Global primary production",
+        "authors": "Field CB et al.",
+        "year": 1998,
+        "journal": "Science"
+      }
+    ]
+  },
+  "M3-0e-cb618cb12973": {
+    "type": "mtf",
+    "question": "关于生态系统的组成与功能，下列说法正确的有：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "生态系统由生物群落（生产者/消费者/分解者）和非生物环境（光/温/水/矿物质）组成",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "生态系统的基本功能包括能量流动、物质循环和信息传递",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "分解者将有机物矿化为无机物，使营养物质得以循环利用",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "生态系统中的能量可以循环利用，物质则单向流动",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：生态系统=生物群落+非生物环境。B正确：三大基本功能。C正确：分解者是物质循环的关键环节。D错误：能量单向流动（最终以热能耗散），物质循环（在生物与非生物环境间循环）。题目将两者颠倒。",
+    "subject": "生态学",
+    "concept": "生态系统组成与功能",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "ecosystem",
+      "module_3",
+      "生态学",
+      "生态系统功能"
+    ],
+    "references": []
+  }
+}

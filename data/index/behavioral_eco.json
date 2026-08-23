@@ -1,0 +1,67 @@
+{
+  "M3-12-174cf5b4e9f8": {
+    "tags": [
+      "behavioral_eco",
+      "module_3",
+      "生态学",
+      "最优觅食"
+    ],
+    "diff": "league",
+    "len": 142,
+    "src": "behavioral_eco",
+    "year": 1986,
+    "module": "module_3"
+  },
+  "M3-12-9a597ad0f0f2": {
+    "tags": [
+      "behavioral_eco",
+      "module_3",
+      "生态学",
+      "性选择"
+    ],
+    "diff": "league",
+    "len": 175,
+    "src": "behavioral_eco",
+    "year": 1994,
+    "module": "module_3"
+  },
+  "M3-12-adf2b8349883": {
+    "tags": [
+      "behavioral_eco",
+      "module_3",
+      "生态学",
+      "繁殖策略"
+    ],
+    "diff": "high_school",
+    "len": 153,
+    "src": "behavioral_eco",
+    "year": null,
+    "module": "module_3"
+  },
+  "M3-12-90a14108eac5": {
+    "tags": [
+      "behavioral_eco",
+      "module_3",
+      "生态学",
+      "包容适合度"
+    ],
+    "diff": "league",
+    "len": 170,
+    "src": "behavioral_eco",
+    "year": 1964,
+    "module": "module_3"
+  },
+  "M3-12-66df6a466ffa": {
+    "tags": [
+      "behavioral_eco",
+      "module_3",
+      "生态学",
+      "社会行为"
+    ],
+    "diff": "league",
+    "len": 183,
+    "src": "behavioral_eco",
+    "year": 1981,
+    "module": "module_3"
+  }
+}

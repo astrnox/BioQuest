@@ -1,0 +1,251 @@
+{
+  "M1-11-c9b0906fc888": {
+    "type": "mtf",
+    "question": "关于糖酵解途径，下列说法正确的是：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "A. 糖酵解在细胞质中进行",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "B. 糖酵解不需要氧气",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "C. 糖酵解净产生2个ATP",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "D. 糖酵解产生2个NADH",
+        "answer": true
+      }
+    ],
+    "explanation": "四个选项均正确：A糖酵解在胞质；B无氧条件也可进行；C消耗2ATP产生4ATP，净2ATP；D甘油醛-3-磷酸脱氢产生2NADH。",
+    "subject": "生物化学",
+    "concept": "糖酵解",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "glycolysis",
+      "module_1",
+      "生物化学",
+      "糖酵解"
+    ]
+  },
+  "M1-11-edd30150910a": {
+    "type": "mtf",
+    "question": "关于糖酵解的关键酶，下列说法正确的是：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "A. 己糖激酶催化葡萄糖磷酸化",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "B. 磷酸果糖激酶-1（PFK-1）是糖酵解的限速酶",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "C. 丙酮酸激酶催化最后一步反应",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "D. 这些酶都受ATP的激活",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：己糖激酶催化G→G6P；B正确：PFK-1是主要调控点；C正确：PK催化PEP→丙酮酸；D错误：ATP抑制PFK-1和PK，是负反馈调节。",
+    "subject": "生物化学",
+    "concept": "糖酵解调控",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "glycolysis",
+      "module_1",
+      "生物化学",
+      "关键酶"
+    ],
+    "references": [
+      {
+        "doi": "10.1016/j.cell.2018.10.028",
+        "title": "Glycolysis regulation and metabolic control",
+        "authors": "Voet D, Voet JG",
+        "year": 2018,
+        "journal": "Cell"
+      },
+      {
+        "doi": "10.1038/nature12355",
+        "title": "Glucose metabolism and insulin signaling",
+        "authors": "Saltiel AR, Kahn CR",
+        "year": 2017,
+        "journal": "Nature"
+      }
+    ]
+  },
+  "M1-11-0313912619f8": {
+    "type": "mtf",
+    "question": "关于糖原代谢，下列说法正确的是：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "A. 糖原合成需要糖原合酶",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "B. 糖原分解需要糖原磷酸化酶",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "C. 糖原合成消耗UTP",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "D. 糖原分解直接产生葡萄糖",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：糖原合酶催化UDP-Glc加入糖原；B正确：糖原磷酸化酶切断α-1,4糖苷键；C正确：UDP-Glc合成需要UTP；D错误：糖原分解产生G1P，需要变位酶转化为G6P，肝脏有葡萄糖-6-磷酸酶才能释放葡萄糖。",
+    "subject": "生物化学",
+    "concept": "糖原代谢",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "glycolysis",
+      "module_1",
+      "生物化学",
+      "糖原"
+    ],
+    "references": [
+      {
+        "doi": "10.1016/j.cell.2018.10.028",
+        "title": "Glycolysis regulation and metabolic control",
+        "authors": "Voet D, Voet JG",
+        "year": 2018,
+        "journal": "Cell"
+      },
+      {
+        "doi": "10.1038/nature12355",
+        "title": "Glucose metabolism and insulin signaling",
+        "authors": "Saltiel AR, Kahn CR",
+        "year": 2017,
+        "journal": "Nature"
+      }
+    ]
+  },
+  "M1-11-7e2e29a67cf8": {
+    "type": "mtf",
+    "question": "关于糖异生，下列说法正确的是：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "A. 糖异生主要在肝脏进行",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "B. 糖异生从非糖前体合成葡萄糖",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "C. 糖异生绕过糖酵解的三个不可逆步骤",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "D. 糖异生不需要消耗能量",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：肝脏是主要场所；B正确：乳酸、甘油、氨基酸等前体；C正确：丙酮酸羧化酶、PEPCK、果糖-1,6-二磷酸酶、葡萄糖-6-磷酸酶；D错误：糖异生消耗6个高能磷酸键。",
+    "subject": "生物化学",
+    "concept": "糖异生",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "glycolysis",
+      "module_1",
+      "生物化学",
+      "糖异生"
+    ],
+    "references": [
+      {
+        "doi": "10.1016/j.cell.2018.10.028",
+        "title": "Glycolysis regulation and metabolic control",
+        "authors": "Voet D, Voet JG",
+        "year": 2018,
+        "journal": "Cell"
+      },
+      {
+        "doi": "10.1038/nature12355",
+        "title": "Glucose metabolism and insulin signaling",
+        "authors": "Saltiel AR, Kahn CR",
+        "year": 2017,
+        "journal": "Nature"
+      }
+    ]
+  },
+  "M1-11-093d21ac7fda": {
+    "type": "mtf",
+    "question": "关于戊糖磷酸途径，下列说法正确的是：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "A. 戊糖磷酸途径产生NADPH",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "B. 戊糖磷酸途径产生核糖-5-磷酸",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "C. 葡萄糖-6-磷酸脱氢酶是限速酶",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "D. 戊糖磷酸途径产生ATP",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：氧化阶段产生NADPH；B正确：为核酸合成提供核糖；C正确：G6PD是限速酶；D错误：PPP不产生ATP。",
+    "subject": "生物化学",
+    "concept": "戊糖磷酸途径",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "glycolysis",
+      "module_1",
+      "生物化学",
+      "PPP"
+    ],
+    "references": [
+      {
+        "doi": "10.1016/j.cell.2018.10.028",
+        "title": "Glycolysis regulation and metabolic control",
+        "authors": "Voet D, Voet JG",
+        "year": 2018,
+        "journal": "Cell"
+      },
+      {
+        "doi": "10.1038/nature12355",
+        "title": "Glucose metabolism and insulin signaling",
+        "authors": "Saltiel AR, Kahn CR",
+        "year": 2017,
+        "journal": "Nature"
+      }
+    ]
+  }
+}

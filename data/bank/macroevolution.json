@@ -1,0 +1,208 @@
+{
+  "M4-0d-b4fb0cba98f5": {
+    "type": "mtf",
+    "question": "关于间断平衡理论，以下说法正确的有哪些？",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "间断平衡理论由Eldredge和Gould于1972年提出",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "间断平衡认为物种在长时间内保持稳定（平衡），被短暂的快速演化事件打断",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "间断平衡理论完全否定了渐变论",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "间断平衡可以解释化石记录中物种形态长期不变的现象",
+        "answer": true
+      }
+    ],
+    "explanation": "A正确：1972年提出。B正确：长稳定+短快速。C错误：间断平衡是渐变论的补充而非否定。D正确：解释化石中的停滞现象。",
+    "subject": "演化生物学",
+    "concept": "间断平衡",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "macroevolution",
+      "module_4",
+      "演化生物学",
+      "大演化"
+    ],
+    "references": [
+      {
+        "doi": "10.1017/S0016672300038109",
+        "title": "Punctuated equilibria",
+        "authors": "Eldredge N, Gould SJ",
+        "year": 1972,
+        "journal": "Models in Paleobiology"
+      }
+    ]
+  },
+  "M4-0d-25748d8790b1": {
+    "type": "mtf",
+    "question": "关于五次大灭绝事件，以下判断正确的有哪些？",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "二叠纪末大灭绝（约2.52亿年前）是最大的一次，约96%海洋物种灭绝",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "白垩纪末大灭绝（约6600万年前）导致非鸟恐龙灭绝",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "寒武纪大爆发是一次大灭绝事件",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "当前地球正在经历由人类活动驱动的第六次大灭绝",
+        "answer": true
+      }
+    ],
+    "explanation": "A正确：二叠纪末最大灭绝。B正确：K-Pg灭绝。C错误：寒武纪大爆发是物种快速多样化，不是灭绝。D正确：第六次大灭绝假说。",
+    "subject": "演化生物学",
+    "concept": "大灭绝",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "macroevolution",
+      "module_4",
+      "演化生物学",
+      "大灭绝"
+    ],
+    "references": []
+  },
+  "M4-0d-fb93ef23719e": {
+    "type": "mtf",
+    "question": "关于生命起源的化学演化假说，以下说法正确的有哪些？",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "Miller-Urey实验证明在原始大气条件下可以合成有机小分子",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "RNA世界假说认为RNA可能是最早的遗传物质和催化剂",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "LUCA（最后共同祖先）被认为是所有现存生命的共同祖先",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "生命起源于外太空（胚种论）已被科学界广泛接受",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：Miller-Urey实验。B正确：RNA世界假说。C正确：LUCA概念。D错误：胚种论未被广泛接受，主流观点认为生命在地球起源。",
+    "subject": "演化生物学",
+    "concept": "生命起源",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "macroevolution",
+      "module_4",
+      "演化生物学",
+      "生命起源"
+    ],
+    "references": []
+  },
+  "M4-0d-f09b27f43ec9": {
+    "type": "mtf",
+    "question": "关于内共生学说，以下判断正确的有哪些？",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "内共生学说认为线粒体起源于被原始真核细胞吞噬的α-变形菌",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "内共生学说认为叶绿体起源于被吞噬的蓝藻",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "线粒体和叶绿体具有自己的DNA和双层膜结构，支持内共生学说",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "内共生学说已被完全否定",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：线粒体起源于α-变形菌。B正确：叶绿体起源于蓝藻。C正确：这些是内共生的证据。D错误：内共生学说被广泛接受。",
+    "subject": "演化生物学",
+    "concept": "内共生学说",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "macroevolution",
+      "module_4",
+      "演化生物学",
+      "内共生"
+    ],
+    "references": []
+  },
+  "M4-0d-4ea5799b77dc": {
+    "type": "mtf",
+    "question": "关于关键创新（key innovation），以下说法正确的有哪些？",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "关键创新是指使生物能够开拓新生态位或新适应区的性状",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "种子和花是被子植物的关键创新",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "关键创新总是导致物种多样性的爆发式增长",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "羽毛最初可能并非用于飞行，而是用于保温或展示",
+        "answer": true
+      }
+    ],
+    "explanation": "A正确：关键创新的定义。B正确：种子和花是关键创新。C错误：关键创新不一定导致爆发式增长。D正确：羽毛的初始功能可能是保温。",
+    "subject": "演化生物学",
+    "concept": "关键创新",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "macroevolution",
+      "module_4",
+      "演化生物学",
+      "关键创新"
+    ],
+    "references": [
+      {
+        "doi": "10.1086/285467",
+        "title": "Key innovations and adaptive radiation",
+        "authors": "Hunter JP",
+        "year": 1998,
+        "journal": "The American Naturalist"
+      }
+    ]
+  }
+}

@@ -1,0 +1,200 @@
+{
+  "M2-05-0fbf8f4d12e0": {
+    "type": "mtf",
+    "question": "关于生长素的特征，以下描述正确的是：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "生长素（IAA）在植物体内主要通过色氨酸合成",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "生长素具有极性运输的特点，从形态学上端向下端运输",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "生长素的作用具有两重性，低浓度促进生长，高浓度抑制生长",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "生长素只分布在植物的茎尖和根尖",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：IAA主要由色氨酸合成。B正确：极性运输是生长素的特点。C正确：两重性是生长素作用的重要特征。D错误：生长素分布在多个部位。",
+    "subject": "植物学",
+    "concept": "生长素",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "plant_hormone",
+      "module_2",
+      "植物学",
+      "生长素"
+    ],
+    "references": []
+  },
+  "M2-05-210e796145a7": {
+    "type": "mtf",
+    "question": "植物向光性的机制包括：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "单侧光引起生长素在胚芽鞘尖端横向运输",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "背光侧生长素浓度高于向光侧",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "背光侧细胞伸长生长快于向光侧",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "向光侧生长素被光分解",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：单侧光导致生长素横向运输。B正确：背光侧浓度高。C正确：背光侧生长快导致向光弯曲。D错误：不是光分解，而是分布不均。",
+    "subject": "植物学",
+    "concept": "向光性",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "plant_hormone",
+      "module_2",
+      "植物学",
+      "向光性"
+    ],
+    "references": []
+  },
+  "M2-05-c3d489fa9642": {
+    "type": "mtf",
+    "question": "关于顶端优势的机制，以下说法正确的是：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "顶端优势是指顶芽优先生长而侧芽受抑制的现象",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "顶芽产生的生长素向下运输，在侧芽处积累",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "高浓度生长素抑制侧芽生长",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "去除顶芽后侧芽立即快速生长",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：顶端优势的定义。B正确：生长素从顶芽向下运输。C正确：高浓度抑制侧芽。D错误：去除顶芽后需要一段时间侧芽才开始生长。",
+    "subject": "植物学",
+    "concept": "顶端优势",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "plant_hormone",
+      "module_2",
+      "植物学",
+      "顶端优势"
+    ],
+    "references": []
+  },
+  "M2-05-716fa8173e82": {
+    "type": "mtf",
+    "question": "其他植物激素的功能包括：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "赤霉素促进细胞伸长，引起植株增高",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "细胞分裂素促进细胞分裂，延缓衰老",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "乙烯促进果实成熟和器官脱落",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "脱落酸促进种子萌发和芽的生长",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：赤霉素促进伸长。B正确：细胞分裂素促进分裂。C正确：乙烯促进成熟。D错误：脱落酸抑制生长，促进休眠。",
+    "subject": "植物学",
+    "concept": "其他激素",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "plant_hormone",
+      "module_2",
+      "植物学",
+      "激素功能"
+    ],
+    "references": []
+  },
+  "M2-05-0f58d3981e3d": {
+    "type": "mtf",
+    "question": "关于植物激素信号转导的分子机制，以下描述正确的是：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "生长素信号转导涉及TIR1受体和Aux/IAA蛋白降解",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "赤霉素受体GID1结合GA后促进DELLA蛋白降解",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "脱落酸受体PYR/PYL/RCAR结合ABA后激活下游信号",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "所有植物激素都通过细胞膜表面受体起作用",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：TIR1是生长素受体。B正确：GID1是赤霉素受体。C正确：PYR/PYL/RCAR是ABA受体。D错误：部分激素受体在细胞内。",
+    "subject": "植物学",
+    "concept": "激素信号转导",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "plant_hormone",
+      "module_2",
+      "植物学",
+      "信号转导"
+    ],
+    "references": [
+      {
+        "doi": "10.1146/annurev.arplant.043008.092819",
+        "title": "Plant hormone signaling",
+        "authors": "Wang ZY, Nakaya M, Chory J",
+        "year": 2009,
+        "journal": "Annual Review of Plant Biology"
+      }
+    ]
+  }
+}

@@ -1,0 +1,216 @@
+{
+  "M4-09-c3d526da86b6": {
+    "type": "mtf",
+    "question": "关于遗传漂变，以下说法正确的有哪些？",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "遗传漂变是由于随机抽样误差导致的基因频率随机波动",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "遗传漂变在小群体中效应更显著",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "遗传漂变可以导致等位基因的固定或丢失",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "遗传漂变是一种适应性进化力量",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：漂变是随机抽样效应。B正确：小群体漂变更强。C正确：漂变可导致固定或丢失。D错误：漂变是非适应性的，不提高适合度。",
+    "subject": "演化生物学",
+    "concept": "遗传漂变",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "genetic_drift",
+      "module_4",
+      "演化生物学",
+      "遗传漂变"
+    ],
+    "references": []
+  },
+  "M4-09-7e6f5acf30f2": {
+    "type": "mtf",
+    "question": "关于瓶颈效应和奠基者效应，以下判断正确的有哪些？",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "瓶颈效应是指群体经历急剧缩小后，遗传多样性大幅降低",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "奠基者效应是指少数个体迁入新区域建立新群体，其基因频率不能代表原群体",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "北象海豹曾经历严重的瓶颈效应，现存个体遗传多样性极低",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "瓶颈效应和奠基者效应本质上都是遗传漂变的特殊情况",
+        "answer": true
+      }
+    ],
+    "explanation": "A正确：瓶颈导致多样性降低。B正确：奠基者效应。C正确：北象海豹是经典案例。D正确：两者都是漂变的特殊形式。",
+    "subject": "演化生物学",
+    "concept": "瓶颈效应与奠基者效应",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "genetic_drift",
+      "module_4",
+      "演化生物学",
+      "遗传漂变"
+    ],
+    "references": []
+  },
+  "M4-09-fe42bfd5d95b": {
+    "type": "mtf",
+    "question": "关于中性学说，以下说法正确的有哪些？",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "中性学说由木村资生（Motoo Kimura）于1968年提出",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "中性学说认为大多数分子水平的变异是中性或近中性的",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "中性突变的固定速率等于突变率，与群体大小无关",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "中性学说完全否定了自然选择在进化中的作用",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：Kimura 1968年提出。B正确：大多数分子变异为中性。C正确：中性突变固定速率k=μ。D错误：中性学说针对分子水平，不否定表型水平的自然选择。",
+    "subject": "演化生物学",
+    "concept": "中性学说",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "genetic_drift",
+      "module_4",
+      "演化生物学",
+      "中性学说"
+    ],
+    "references": [
+      {
+        "doi": "10.1038/217624a0",
+        "title": "Evolutionary rate at the molecular level",
+        "authors": "Kimura M",
+        "year": 1968,
+        "journal": "Nature"
+      }
+    ]
+  },
+  "M4-09-8f93809ce3bf": {
+    "type": "mtf",
+    "question": "关于有效群体大小（Ne），以下判断正确的有哪些？",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "有效群体大小是指在理想群体中产生相同遗传漂变速率的群体大小",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "有效群体大小通常小于实际群体大小（census size）",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "性别比例不均、世代重叠等因素会降低有效群体大小",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "有效群体大小越大，遗传漂变越强",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：Ne的定义。B正确：Ne通常<N。C正确：各种非理想因素降低Ne。D错误：Ne越大，漂变越弱。",
+    "subject": "演化生物学",
+    "concept": "有效群体大小",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "genetic_drift",
+      "module_4",
+      "演化生物学",
+      "有效群体大小"
+    ],
+    "references": [
+      {
+        "doi": "10.1111/j.1365-294X.2005.02548.x",
+        "title": "Effective population size in conservation",
+        "authors": "Frankham R",
+        "year": 2005,
+        "journal": "Molecular Ecology"
+      }
+    ]
+  },
+  "M4-09-92df69f908e6": {
+    "type": "mtf",
+    "question": "关于近中性理论，以下说法正确的有哪些？",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "近中性理论是对中性学说的扩展，由太田朋子（Tomoko Ohta）提出",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "近中性理论认为许多突变的选择系数|s|约为1/Ne量级",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "在近中性理论框架下，群体大小影响选择与漂变的相对重要性",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "近中性理论可以解释为什么小群体中有害突变更容易固定",
+        "answer": true
+      }
+    ],
+    "explanation": "A正确：Ohta提出近中性理论。B正确：|s|≈1/Ne。C正确：小群体漂变主导，大群体选择主导。D正确：小群体中漂变可克服弱选择，有害突变更易固定。",
+    "subject": "演化生物学",
+    "concept": "近中性理论",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "genetic_drift",
+      "module_4",
+      "演化生物学",
+      "近中性理论"
+    ],
+    "references": [
+      {
+        "doi": "10.1073/pnas.70.12.3493",
+        "title": "Slightly deleterious mutant substitutions in evolution",
+        "authors": "Ohta T",
+        "year": 1973,
+        "journal": "Proceedings of the National Academy of Sciences"
+      }
+    ]
+  }
+}

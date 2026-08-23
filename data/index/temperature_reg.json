@@ -1,0 +1,67 @@
+{
+  "M3-0b-8404f19524e0": {
+    "tags": [
+      "temperature_reg",
+      "module_3",
+      "动物生理学",
+      "恒温变温"
+    ],
+    "diff": "league",
+    "len": 142,
+    "src": "temperature_reg",
+    "year": 2010,
+    "module": "module_3"
+  },
+  "M3-0b-d9a494556339": {
+    "tags": [
+      "temperature_reg",
+      "module_3",
+      "动物生理学",
+      "非颤抖产热"
+    ],
+    "diff": "league",
+    "len": 194,
+    "src": "temperature_reg",
+    "year": 2009,
+    "module": "module_3"
+  },
+  "M3-0b-b6e60c2cb0f2": {
+    "tags": [
+      "temperature_reg",
+      "module_3",
+      "动物生理学",
+      "散热机制"
+    ],
+    "diff": "high_school",
+    "len": 117,
+    "src": "temperature_reg",
+    "year": null,
+    "module": "module_3"
+  },
+  "M3-0b-7e3b10c40912": {
+    "tags": [
+      "temperature_reg",
+      "module_3",
+      "动物生理学",
+      "体温调节中枢"
+    ],
+    "diff": "league",
+    "len": 157,
+    "src": "temperature_reg",
+    "year": 2008,
+    "module": "module_3"
+  },
+  "M3-0b-d113d86b78c9": {
+    "tags": [
+      "temperature_reg",
+      "module_3",
+      "动物生理学",
+      "冬眠"
+    ],
+    "diff": "high_school",
+    "len": 133,
+    "src": "temperature_reg",
+    "year": null,
+    "module": "module_3"
+  }
+}

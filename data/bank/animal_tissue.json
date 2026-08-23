@@ -1,0 +1,216 @@
+{
+  "M3-01-af3d0ad38aa2": {
+    "type": "mtf",
+    "question": "关于动物四大基本组织的结构与功能，下列说法正确的有：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "单层扁平上皮（内皮）覆盖在血管内表面，有利于物质交换和减少血流阻力",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "疏松结缔组织中的成纤维细胞能合成和分泌胶原蛋白与弹性蛋白",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "心肌组织属于平滑肌的一种，其收缩受意识直接控制",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "骨骼肌纤维为多核细胞，肌原纤维由粗肌丝（肌球蛋白）和细肌丝（肌动蛋白）组成",
+        "answer": true
+      }
+    ],
+    "explanation": "A正确：单层扁平上皮（内皮）分布于血管和淋巴管内表面，薄而光滑，利于物质交换和减少血流阻力。B正确：成纤维细胞是疏松结缔组织中最常见的细胞，负责合成细胞外基质蛋白（胶原蛋白、弹性蛋白）和糖胺聚糖。C错误：心肌是独立于平滑肌的肌肉类型，具有自律性，不受意识直接控制（属于不随意肌）。D正确：骨骼肌纤维为多核合胞体，肌原纤维由粗肌丝（肌球蛋白）和细肌丝（肌动蛋白）组成。",
+    "subject": "动物生理学",
+    "concept": "四大基本组织",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "animal_tissue",
+      "module_3",
+      "动物生理学",
+      "四大基本组织"
+    ],
+    "references": [
+      {
+        "doi": "10.1016/B978-012374232-2.00045-0",
+        "title": "Muscle: Molecular Biology",
+        "authors": "Engel AG, Franzini-Armstrong C",
+        "year": 2004,
+        "journal": "Encyclopedia of Neuroscience"
+      }
+    ]
+  },
+  "M3-01-b9efbf2c721f": {
+    "type": "mtf",
+    "question": "关于骨骼肌收缩的滑动丝模型，下列描述正确的有：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "收缩时肌小节的I带和H区缩短，但A带长度不变",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "肌球蛋白头部与肌动蛋白结合形成横桥，ATP水解提供构象变化的能量",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "Ca²⁺与肌钙蛋白C亚基结合后，使原肌球蛋白移位，暴露出肌动蛋白上的横桥结合位点",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "肌肉收缩过程中，粗肌丝和细肌丝本身的长度均发生明显缩短",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：滑动丝模型的核心是细肌丝向粗肌丝中央滑入，I带和H区缩短，A带（等于粗肌丝长度）不变。B正确：横桥循环中，肌球蛋白头部结合并水解ATP，产生动力冲程拉动细肌丝。C正确：Ca²⁺与肌钙蛋白C结合→构象变化→原肌球蛋白移位→暴露肌动蛋白结合位点。D错误：滑动丝模型的核心正是肌丝本身长度不变，而是相对滑动。",
+    "subject": "动物生理学",
+    "concept": "滑动丝模型",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "animal_tissue",
+      "module_3",
+      "动物生理学",
+      "滑动丝模型"
+    ],
+    "references": [
+      {
+        "doi": "10.1038/1991043a0",
+        "title": "Structural changes in muscle during contraction",
+        "authors": "Huxley HE, Hanson J",
+        "year": 1954,
+        "journal": "Nature"
+      }
+    ]
+  },
+  "M3-01-9d6b3f3bd4b5": {
+    "type": "mtf",
+    "question": "比较横纹肌与平滑肌的特征，下列说法正确的有：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "骨骼肌为随意肌，受躯体运动神经支配；平滑肌和心肌为不随意肌，受自主神经支配",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "平滑肌细胞无肌小节结构，其收缩依赖钙调蛋白而非肌钙蛋白",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "心肌细胞之间的闰盘含有缝隙连接，允许电信号在细胞间快速传播",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "平滑肌的收缩速度比骨骼肌快，因为其肌丝排列更加有序",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：骨骼肌受意识控制（随意肌）；平滑肌和心肌受自主神经支配（不随意肌）。B正确：平滑肌不含肌钙蛋白，Ca²⁺通过钙调蛋白激活肌球蛋白轻链激酶启动收缩。C正确：闰盘含缝隙连接，使心肌成为功能合胞体，实现同步收缩。D错误：平滑肌收缩速度远慢于骨骼肌，但能维持长时间紧张性收缩。",
+    "subject": "动物生理学",
+    "concept": "肌肉类型比较",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "animal_tissue",
+      "module_3",
+      "动物生理学",
+      "肌肉类型"
+    ],
+    "references": []
+  },
+  "M3-01-000afdf16eb8": {
+    "type": "mtf",
+    "question": "关于上皮组织的分类与特征，下列描述正确的有：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "复层扁平上皮具有多层细胞，表层细胞扁平且可角化，起保护作用",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "假复层纤毛柱状上皮所有细胞均附着于基膜，但并非所有细胞都达到腔面",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "移行上皮分布于输尿管和膀胱，其层数和细胞形状可随器官扩张状态而变化",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "外分泌腺通过导管将分泌物释放到体表或管腔，而内分泌腺无导管，分泌物直接进入血液",
+        "answer": true
+      }
+    ],
+    "explanation": "A正确：复层扁平上皮由多层细胞组成，表层扁平，在皮肤表面发生角化，具有强大的保护功能。B正确：假复层纤毛柱状上皮所有细胞基底面均附着于基膜，但只有部分细胞伸达腔面，核位于不同高度。C正确：移行上皮器官收缩时较厚，扩张时变薄，细胞形态相应变化。D正确：这是外分泌腺和内分泌腺的基本区别。",
+    "subject": "动物生理学",
+    "concept": "上皮组织分类",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "animal_tissue",
+      "module_3",
+      "动物生理学",
+      "上皮组织"
+    ],
+    "references": [
+      {
+        "doi": "10.1002/jmor.1051450304",
+        "title": "The structure and function of transitional epithelium",
+        "authors": "Hicks RM",
+        "year": 1975,
+        "journal": "Journal of Morphology"
+      }
+    ]
+  },
+  "M3-01-0d183e5fb6b8": {
+    "type": "mtf",
+    "question": "关于结缔组织的类型和功能，下列说法正确的有：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "软骨组织中的软骨细胞位于陷窝内，软骨基质富含蛋白聚糖和胶原纤维，无血管分布",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "骨组织中骨单位以中央管为中心呈同心圆排列，骨细胞位于骨板间的陷窝内",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "血液属于液态结缔组织，其细胞外基质为血浆，含有纤维蛋白原等蛋白质",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "脂肪组织仅具有储能功能，不具有内分泌功能和隔热保温作用",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：软骨细胞位于基质陷窝中，软骨无血管，营养通过扩散获得。B正确：密质骨的基本结构单位为骨单位，由同心圆排列的骨板和中央Havers管组成。C正确：血液被归类为液态结缔组织，细胞外基质即血浆。D错误：脂肪组织不仅储能，还分泌瘦素、脂联素等脂肪因子，同时具有隔热保温和缓冲保护功能。",
+    "subject": "动物生理学",
+    "concept": "结缔组织类型",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "animal_tissue",
+      "module_3",
+      "动物生理学",
+      "结缔组织"
+    ],
+    "references": []
+  }
+}

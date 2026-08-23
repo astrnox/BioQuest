@@ -1,0 +1,67 @@
+{
+  "M1-0C-089ce49dc331": {
+    "tags": [
+      "gene_regulation",
+      "module_1",
+      "分子生物学",
+      "操纵子"
+    ],
+    "diff": "league",
+    "len": 84,
+    "src": "gene_regulation",
+    "year": null,
+    "module": "module_1"
+  },
+  "M1-0C-680db6c17e77": {
+    "tags": [
+      "gene_regulation",
+      "module_1",
+      "分子生物学",
+      "操纵子"
+    ],
+    "diff": "league",
+    "len": 82,
+    "src": "gene_regulation",
+    "year": null,
+    "module": "module_1"
+  },
+  "M1-0C-9f6d5b4e84a7": {
+    "tags": [
+      "gene_regulation",
+      "module_1",
+      "分子生物学",
+      "表观遗传"
+    ],
+    "diff": "league",
+    "len": 93,
+    "src": "gene_regulation",
+    "year": null,
+    "module": "module_1"
+  },
+  "M1-0C-7fda64f6c141": {
+    "tags": [
+      "gene_regulation",
+      "module_1",
+      "分子生物学",
+      "miRNA"
+    ],
+    "diff": "league",
+    "len": 103,
+    "src": "gene_regulation",
+    "year": null,
+    "module": "module_1"
+  },
+  "M1-0C-7e6346887135": {
+    "tags": [
+      "gene_regulation",
+      "module_1",
+      "分子生物学",
+      "染色质"
+    ],
+    "diff": "league",
+    "len": 93,
+    "src": "gene_regulation",
+    "year": null,
+    "module": "module_1"
+  }
+}

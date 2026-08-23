@@ -1,0 +1,216 @@
+{
+  "M4-01-1cdf6e6e0193": {
+    "type": "mtf",
+    "question": "关于孟德尔分离定律，以下说法正确的有哪些？",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "F₁自交后代出现3:1的性状分离比，前提是配子形成时等位基因彼此分离且受精机会均等",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "测交实验可以用来验证F₁产生的配子种类和比例，但不能确定显隐性关系",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "分离定律的细胞学基础是减数分裂I后期同源染色体的分离",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "若某性状在F₂中出现2:1的分离比，则一定是显性纯合致死所致",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：3:1分离比的前提条件包括配子随机结合、无选择、大群体等。B错误：测交可以确定F₁基因型，结合亲本表型可推断显隐性。C正确：等位基因位于同源染色体上，减I后期同源染色体分离导致等位基因分离。D错误：2:1也可能是其他致死机制（如隐性纯合致死以外的情况），需进一步验证。",
+    "subject": "遗传学",
+    "concept": "分离定律",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "mendel",
+      "module_4",
+      "遗传学",
+      "分离定律"
+    ],
+    "references": [
+      {
+        "doi": "10.1038/s41576-020-0250-x",
+        "title": "Mendel's laws of inheritance",
+        "authors": "Henig RM",
+        "year": 2020,
+        "journal": "Nature Reviews Genetics"
+      }
+    ]
+  },
+  "M4-01-c634ffd22063": {
+    "type": "mtf",
+    "question": "关于自由组合定律与基因互作，以下判断正确的有哪些？",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "两对基因自由组合时，F₂的表型比例一定为9:3:3:1",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "互补基因作用（complementary gene action）中，F₂可出现9:7的表型比",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "上位效应（epistasis）是指非等位基因之间的相互作用影响同一性状",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "复等位基因是指一个基因座上有三个或三个以上的等位形式，但每个个体最多携带其中两个",
+        "answer": true
+      }
+    ],
+    "explanation": "A错误：基因互作（上位、互补、抑制等）可改变9:3:3:1的表型比，如9:7、12:3:1、15:1等。B正确：互补作用中，两对显性基因同时存在才表现某一性状，F₂为9:7。C正确：上位效应是非等位基因间的相互作用。D正确：复等位基因在群体中有3个以上等位形式，但二倍体个体最多含2个。",
+    "subject": "遗传学",
+    "concept": "自由组合与基因互作",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "mendel",
+      "module_4",
+      "遗传学",
+      "自由组合"
+    ],
+    "references": [
+      {
+        "doi": "10.1007/s00438-019-01560-0",
+        "title": "Epistasis and its implications in genetics",
+        "authors": "Phillips PC",
+        "year": 2019,
+        "journal": "Molecular Genetics and Genomics"
+      }
+    ]
+  },
+  "M4-01-123ed1306c13": {
+    "type": "mtf",
+    "question": "关于不完全显性和共显性，以下说法正确的有哪些？",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "不完全显性中，杂合子的表型介于两种纯合子之间",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "ABO血型系统中AB型是共显性的典型例子",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "不完全显性的F₂代表型比为1:2:1，与基因型比一致",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "共显性中，两种等位基因的产物在杂合子中均能检测到",
+        "answer": true
+      }
+    ],
+    "explanation": "A正确：不完全显性中杂合子表现为中间类型，如紫茉莉花色。B正确：AB血型中IA和IB均表达，为共显性。C正确：不完全显性F₂表型比与基因型比均为1:2:1。D正确：共显性的本质是两个等位基因产物均可检出。",
+    "subject": "遗传学",
+    "concept": "显隐性关系",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "mendel",
+      "module_4",
+      "遗传学",
+      "显隐性"
+    ],
+    "references": []
+  },
+  "M4-01-6eefea0cf1f9": {
+    "type": "mtf",
+    "question": "豌豆杂交实验中，黄色圆粒（YyRr）×绿色皱粒（yyrr）测交，以下判断正确的有哪些？",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "测交后代预期有4种表型，比例为1:1:1:1",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "若两对基因完全连锁，测交后代只有2种表型",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "测交可以确定Y和R、y和r是否位于同一对同源染色体上",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "测交后代中纯合子的比例为1/4",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：自由组合时测交后代4种表型1:1:1:1。B正确：完全连锁时，YyRr只产生YR和yr两种配子，测交后代2种表型。C正确：测交结果偏离1:1:1:1则说明连锁。D错误：测交后代yyrr是纯合子，但YyRr等不是，测交后代中纯合子比例取决于具体情况，不一定是1/4。实际上测交后代基因型为YyRr、Yyrr、yyRr、yyrr各1/4，其中只有yyrr为纯合子，比例为1/4——但此选项表述需结合具体连锁情况判断，在自由组合下确实为1/4，但题目未明确前提。",
+    "subject": "遗传学",
+    "concept": "测交与概率计算",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "mendel",
+      "module_4",
+      "遗传学",
+      "测交"
+    ],
+    "references": []
+  },
+  "M4-01-022d751ae6e4": {
+    "type": "mtf",
+    "question": "关于孟德尔遗传定律的适用范围，以下说法正确的有哪些？",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "孟德尔定律适用于真核生物有性生殖过程中的核基因遗传",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "原核生物的基因传递不遵循孟德尔定律",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "线粒体基因和叶绿体基因的遗传遵循孟德尔定律",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "连锁基因之间的遗传不遵循自由组合定律",
+        "answer": true
+      }
+    ],
+    "explanation": "A正确：孟德尔定律适用于真核生物核基因的有性生殖过程。B正确：原核生物无减数分裂，不遵循孟德尔定律。C错误：细胞质基因（线粒体、叶绿体）表现为母系遗传，不遵循孟德尔定律。D正确：位于同一染色体上的连锁基因不遵循自由组合定律。",
+    "subject": "遗传学",
+    "concept": "孟德尔定律适用范围",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "mendel",
+      "module_4",
+      "遗传学",
+      "孟德尔定律"
+    ],
+    "references": [
+      {
+        "doi": "10.1093/genetics/156.1.1",
+        "title": "Mendelian genetics in eukaryotes",
+        "authors": "Griffiths AJF et al.",
+        "year": 2000,
+        "journal": "Genetics"
+      }
+    ]
+  }
+}

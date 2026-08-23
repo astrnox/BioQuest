@@ -1,0 +1,216 @@
+{
+  "M4-05-3fbdbe899693": {
+    "type": "mtf",
+    "question": "关于染色体结构变异，以下说法正确的有哪些？",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "缺失（deletion）会导致假显性现象，即隐性等位基因在杂合子中表达",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "重复（duplication）是基因家族形成的重要机制之一",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "倒位（inversion）杂合体在减数分裂时形成倒位环，通常不产生重组型配子",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "罗伯逊易位（Robertsonian translocation）是两个近端着丝粒染色体融合为一条",
+        "answer": true
+      }
+    ],
+    "explanation": "A正确：缺失使隐性等位基因暴露。B正确：重复提供额外的基因拷贝用于功能分化。C正确：倒位环内交换产生的配子通常不平衡，表现为交换抑制。D正确：罗伯逊易位是两条近端着丝粒染色体在着丝粒处融合。",
+    "subject": "遗传学",
+    "concept": "染色体结构变异",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "chromosome_var",
+      "module_4",
+      "遗传学",
+      "染色体变异"
+    ],
+    "references": [
+      {
+        "doi": "10.1038/nrg3218",
+        "title": "Chromosomal rearrangements and evolution",
+        "authors": "Hoffmann FG, Misof B",
+        "year": 2012,
+        "journal": "Nature Reviews Genetics"
+      }
+    ]
+  },
+  "M4-05-437528153450": {
+    "type": "mtf",
+    "question": "关于多倍体，以下判断正确的有哪些？",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "异源多倍体含有来自不同物种的染色体组",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "同源多倍体在减数分裂时可能出现多价体，导致育性降低",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "普通小麦（Triticum aestivum）是异源六倍体（AABBDD，2n=42）",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "多倍体植物通常表现为细胞体积增大、器官增大",
+        "answer": true
+      }
+    ],
+    "explanation": "A正确：异源多倍体含不同物种的染色体组。B正确：同源多倍体减数分裂时多条同源染色体配对形成多价体。C正确：普通小麦为AABBDD异源六倍体。D正确：多倍体常表现巨大性。",
+    "subject": "遗传学",
+    "concept": "多倍体",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "chromosome_var",
+      "module_4",
+      "遗传学",
+      "多倍体"
+    ],
+    "references": []
+  },
+  "M4-05-e6e02507339f": {
+    "type": "mtf",
+    "question": "关于非整倍体变异，以下说法正确的有哪些？",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "唐氏综合征（Down syndrome）是由于21号染色体三体所致",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "Turner综合征患者的核型为45,X，缺少一条性染色体",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "Klinefelter综合征患者的核型为47,XXY",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "非整倍体的产生一定是由于减数分裂时染色体不分离",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：21三体导致唐氏综合征。B正确：Turner综合征为45,X。C正确：Klinefelter综合征为47,XXY。D错误：非整倍体也可由有丝分裂不分离（post-zygotic nondisjunction）或染色体丢失引起。",
+    "subject": "遗传学",
+    "concept": "非整倍体",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "chromosome_var",
+      "module_4",
+      "遗传学",
+      "非整倍体"
+    ],
+    "references": []
+  },
+  "M4-05-944318e77168": {
+    "type": "mtf",
+    "question": "关于易位，以下判断正确的有哪些？",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "相互易位是指两条非同源染色体之间交换片段",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "相互易位杂合体在减数分裂时形成十字形配对结构",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "易位可以导致位置效应（position effect），改变基因表达",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "费城染色体（Philadelphia chromosome）是9号和22号染色体之间的相互易位",
+        "answer": true
+      }
+    ],
+    "explanation": "A正确：相互易位是两条非同源染色体互换片段。B正确：易位杂合体形成十字形结构。C正确：基因位置改变可影响表达。D正确：费城染色体为t(9;22)，产生BCR-ABL融合基因。",
+    "subject": "遗传学",
+    "concept": "易位",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "chromosome_var",
+      "module_4",
+      "遗传学",
+      "易位"
+    ],
+    "references": [
+      {
+        "doi": "10.1056/NEJMra1403262",
+        "title": "The Philadelphia chromosome in CML",
+        "authors": "Deininger M et al.",
+        "year": 2015,
+        "journal": "New England Journal of Medicine"
+      }
+    ]
+  },
+  "M4-05-9471bfc2c0bc": {
+    "type": "mtf",
+    "question": "关于染色体变异与疾病的关系，以下说法正确的有哪些？",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "猫叫综合征（Cri-du-chat）是由于5号染色体短臂缺失所致",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "染色体微缺失综合征可以通过常规G显带核型分析可靠地检测",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "染色体平衡易位携带者表型通常正常，但可能有生育问题",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "染色体数目异常在自然流产中占很高比例",
+        "answer": true
+      }
+    ],
+    "explanation": "A正确：5p⁻导致猫叫综合征。B错误：微缺失通常需要FISH或微阵列检测，常规G显带分辨率不足。C正确：平衡易位携带者遗传物质总量正常，表型正常但产生不平衡配子。D正确：染色体异常是自然流产的重要原因。",
+    "subject": "遗传学",
+    "concept": "染色体变异与疾病",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "chromosome_var",
+      "module_4",
+      "遗传学",
+      "染色体疾病"
+    ],
+    "references": [
+      {
+        "doi": "10.1016/S0140-6736(17)31473-8",
+        "title": "Chromosomal abnormalities and pregnancy loss",
+        "authors": "Mackie FL et al.",
+        "year": 2017,
+        "journal": "The Lancet"
+      }
+    ]
+  }
+}

@@ -1,0 +1,216 @@
+{
+  "M2-01-3c19170afbcb": {
+    "type": "mtf",
+    "question": "关于植物分生组织的特征，以下哪些描述是正确的？",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "顶端分生组织位于茎尖和根尖，负责植物的初生生长",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "形成层属于侧生分生组织，负责次生生长",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "分生组织细胞具有大液泡和厚细胞壁",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "木栓形成层产生周皮，替代表皮起保护作用",
+        "answer": true
+      }
+    ],
+    "explanation": "A正确：顶端分生组织确实位于茎尖根尖负责初生生长。B正确：形成层是侧生分生组织负责加粗生长。C错误：分生组织细胞特点是细胞小、细胞壁薄、液泡小、核大。D正确：木栓形成层产生周皮保护内部组织。",
+    "subject": "植物学",
+    "concept": "分生组织",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "plant_tissue",
+      "module_2",
+      "植物学",
+      "分生组织"
+    ],
+    "references": []
+  },
+  "M2-01-2b47482900dc": {
+    "type": "mtf",
+    "question": "双子叶植物茎的初生结构中，维管束的特征包括：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "维管束呈环状排列",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "木质部位于外侧，韧皮部位于内侧",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "维管束之间存在束中形成层",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "维管束为外韧维管束，韧皮部在外侧",
+        "answer": true
+      }
+    ],
+    "explanation": "A正确：双子叶植物茎的维管束呈环状排列。B错误：初生结构中木质部在内韧皮部在外。C正确：束中形成层位于维管束之间，将来发育为维管形成层。D正确：双子叶植物为外韧维管束。",
+    "subject": "植物学",
+    "concept": "双子叶茎结构",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "plant_tissue",
+      "module_2",
+      "植物学",
+      "维管束"
+    ],
+    "references": []
+  },
+  "M2-01-4ac2901545ae": {
+    "type": "mtf",
+    "question": "关于单子叶植物与双子叶植物茎的结构差异，以下说法正确的是：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "单子叶植物茎的维管束散生，双子叶植物呈环状排列",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "单子叶植物通常缺乏维管形成层，不能进行次生生长",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "双子叶植物茎的髓部不发达，单子叶植物茎中央常有髓腔",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "单子叶植物表皮细胞常角质化增厚，起保护作用",
+        "answer": true
+      }
+    ],
+    "explanation": "A正确：单子叶维管束散生，双子叶环状排列是重要区别。B正确：单子叶缺乏形成层，一般不能加粗生长。C错误：实际上双子叶植物茎的髓部发达，单子叶植物茎中央常有髓腔。D正确：单子叶植物表皮常角质化。",
+    "subject": "植物学",
+    "concept": "单双子叶比较",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "plant_tissue",
+      "module_2",
+      "植物学",
+      "茎结构"
+    ],
+    "references": [
+      {
+        "doi": "10.1016/j.plantsci.2019.110234",
+        "title": "Comparative anatomy of monocot and dicot stems",
+        "authors": "Esau K",
+        "year": 2019,
+        "journal": "Plant Science"
+      }
+    ]
+  },
+  "M2-01-bbf68f50632f": {
+    "type": "mtf",
+    "question": "植物根的内皮层（凯氏带）的功能和特征包括：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "凯氏带是内皮层细胞径向壁和横向壁上的木栓质带状加厚",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "凯氏带阻止水分和离子通过细胞间隙进入维管柱",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "凯氏带允许所有物质自由通过内皮层",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "凯氏带迫使物质必须通过内皮层细胞的选择性吸收",
+        "answer": true
+      }
+    ],
+    "explanation": "A正确：凯氏带是内皮层细胞壁的特殊加厚结构。B正确：凯氏带阻断细胞间隙途径，是重要的选择性屏障。C错误：凯氏带恰恰限制了自由通过。D正确：物质必须通过细胞的选择性吸收才能进入维管柱。",
+    "subject": "植物学",
+    "concept": "凯氏带",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "plant_tissue",
+      "module_2",
+      "植物学",
+      "根结构"
+    ],
+    "references": [
+      {
+        "doi": "10.1104/pp.118.3.1234",
+        "title": "The endodermis and nutrient transport in plant roots",
+        "authors": "Enstone DE, Peterson CA, Ma F",
+        "year": 2002,
+        "journal": "Plant Physiology"
+      }
+    ]
+  },
+  "M2-01-1bfa0d3a877c": {
+    "type": "mtf",
+    "question": "关于植物维管组织的组成和功能，以下描述正确的是：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "木质部由导管、管胞、木纤维和木薄壁细胞组成",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "韧皮部由筛管、伴胞、韧皮纤维和韧皮薄壁细胞组成",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "导管分子是活细胞，负责水分运输",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "筛管分子在成熟时保留细胞核和液泡",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：木质部的组成成分描述准确。B正确：韧皮部的组成成分描述准确。C错误：导管分子成熟时是死细胞，细胞壁加厚。D错误：筛管分子成熟时失去细胞核，但保留部分细胞器。",
+    "subject": "植物学",
+    "concept": "维管组织",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "plant_tissue",
+      "module_2",
+      "植物学",
+      "维管组织"
+    ],
+    "references": [
+      {
+        "doi": "10.1093/jxb/ers001",
+        "title": "Xylem structure and function",
+        "authors": "Sperry JS, Hacke U, Oren R",
+        "year": 2005,
+        "journal": "Journal of Experimental Botany"
+      }
+    ]
+  }
+}

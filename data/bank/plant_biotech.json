@@ -1,0 +1,216 @@
+{
+  "M4-0f-b4d316949aa9": {
+    "type": "mtf",
+    "question": "关于植物组织培养，以下说法正确的有哪些？",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "植物组织培养的理论基础是植物细胞的全能性",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "脱分化过程是已分化的细胞恢复为未分化状态形成愈伤组织",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "再分化过程中，生长素/细胞分裂素的比例影响器官分化方向",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "植物组织培养必须在无菌条件下进行",
+        "answer": true
+      }
+    ],
+    "explanation": "A正确：全能性是基础。B正确：脱分化形成愈伤。C正确：高生长素促根，高细胞分裂素促芽。D正确：需无菌操作。",
+    "subject": "生物技术",
+    "concept": "植物组织培养",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "plant_biotech",
+      "module_4",
+      "生物技术",
+      "植物组织培养"
+    ],
+    "references": []
+  },
+  "M4-0f-7e9c9bcc0168": {
+    "type": "mtf",
+    "question": "关于农杆菌介导的植物转化，以下判断正确的有哪些？",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "农杆菌Ti质粒上的T-DNA可以整合到植物基因组中",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "改造后的Ti质粒去除了致瘤基因，保留T-DNA转移功能",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "农杆菌主要感染双子叶植物，对单子叶植物转化效率较低",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "农杆菌介导法是目前植物转基因最常用的方法",
+        "answer": true
+      }
+    ],
+    "explanation": "A正确：T-DNA整合。B正确：解除致瘤性。C正确：单子叶较难。D正确：最常用方法。",
+    "subject": "生物技术",
+    "concept": "农杆菌转化",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "plant_biotech",
+      "module_4",
+      "生物技术",
+      "农杆菌"
+    ],
+    "references": [
+      {
+        "doi": "10.1146/annurev.phyto.43.040204.115539",
+        "title": "Agrobacterium-mediated plant transformation",
+        "authors": "Gelvin SB",
+        "year": 2005,
+        "journal": "Annual Review of Phytopathology"
+      }
+    ]
+  },
+  "M4-0f-5e302e89c551": {
+    "type": "mtf",
+    "question": "关于转基因作物的应用，以下说法正确的有哪些？",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "Bt抗虫作物表达了苏云金芽孢杆菌的杀虫蛋白基因",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "抗除草剂作物（如抗草甘膦大豆）可以耐受特定除草剂",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "黄金大米通过转入β-胡萝卜素合成途径基因来改善维生素A缺乏",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "所有转基因作物都已获得全球范围内的种植许可",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：Bt蛋白杀虫。B正确：抗除草剂作物。C正确：黄金大米。D错误：各国监管政策不同，并非全球许可。",
+    "subject": "生物技术",
+    "concept": "转基因作物应用",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "plant_biotech",
+      "module_4",
+      "生物技术",
+      "转基因作物"
+    ],
+    "references": []
+  },
+  "M4-0f-287d84d78e80": {
+    "type": "mtf",
+    "question": "关于基因枪法和体细胞杂交，以下判断正确的有哪些？",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "基因枪法（biolistics）用金粉或钨粉微粒包裹DNA轰击植物细胞",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "基因枪法不受宿主范围限制，可转化农杆菌难以感染的物种",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "体细胞杂交可以克服远缘杂交不亲和的障碍",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "体细胞杂交产生的杂种植株一定可育",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：基因枪原理。B正确：不受宿主限制。C正确：克服杂交障碍。D错误：体细胞杂种可能不育（染色体不配对）。",
+    "subject": "生物技术",
+    "concept": "基因枪与体细胞杂交",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "plant_biotech",
+      "module_4",
+      "生物技术",
+      "植物生物技术"
+    ],
+    "references": [
+      {
+        "doi": "10.1007/s00294-015-0507-9",
+        "title": "Biolistic transformation of plants",
+        "authors": "Sanford JC et al.",
+        "year": 2015,
+        "journal": "Current Genetics"
+      }
+    ]
+  },
+  "M4-0f-06185657f493": {
+    "type": "mtf",
+    "question": "关于植物基因工程的筛选与鉴定，以下说法正确的有哪些？",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "筛选标记基因（如抗生素抗性基因）用于筛选转化成功的细胞",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "PCR可以检测外源基因是否整合到植物基因组中",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "Southern blot可以检测外源基因的拷贝数",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "RT-qPCR可以检测外源基因的表达水平",
+        "answer": true
+      }
+    ],
+    "explanation": "A正确：筛选标记。B正确：PCR检测整合。C正确：Southern检测拷贝数。D正确：RT-qPCR检测表达。",
+    "subject": "生物技术",
+    "concept": "转基因筛选",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "plant_biotech",
+      "module_4",
+      "生物技术",
+      "筛选鉴定"
+    ],
+    "references": [
+      {
+        "doi": "10.1038/nprot.2006.454",
+        "title": "Plant transformation and analysis methods",
+        "authors": "Gelvin SB",
+        "year": 2006,
+        "journal": "Nature Protocols"
+      }
+    ]
+  }
+}

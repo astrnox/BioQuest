@@ -1,0 +1,216 @@
+{
+  "M3-08-8a3def3d9dae": {
+    "type": "mtf",
+    "question": "关于气体交换的原理，下列说法正确的有：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "气体交换通过扩散进行，扩散速率与分压差、扩散面积成正比，与扩散距离成反比",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "肺泡气中O₂分压（约100mmHg）高于静脉血O₂分压（约40mmHg），O₂从肺泡扩散入血",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "CO₂的扩散系数约为O₂的20倍，因此尽管CO₂分压差较小，扩散速率仍然很高",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "呼吸膜的厚度增加有利于提高气体交换效率",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：Fick扩散定律。B正确：O₂从高分压（肺泡）向低分压（静脉血）扩散。C正确：CO₂在水中的溶解度远高于O₂，扩散系数约为O₂的20倍。D错误：呼吸膜增厚（如肺纤维化、肺水肿）增加扩散距离，降低气体交换效率。",
+    "subject": "动物生理学",
+    "concept": "气体交换原理",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "respiratory_sys",
+      "module_3",
+      "动物生理学",
+      "气体交换"
+    ],
+    "references": [
+      {
+        "doi": "10.1152/physrev.00021.2008",
+        "title": "Gas exchange in the lung",
+        "authors": "Weibel ER",
+        "year": 2009,
+        "journal": "Physiological Reviews"
+      }
+    ]
+  },
+  "M3-08-4947d9fdc3fe": {
+    "type": "mtf",
+    "question": "关于氧解离曲线及其影响因素，下列说法正确的有：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "氧解离曲线呈S形，这是由于Hb四个亚基之间存在协同结合效应",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "Bohr效应是指pH降低或CO₂分压升高使氧解离曲线右移，促进O₂释放",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "2,3-BPG与Hbβ亚基结合降低Hb对O₂的亲和力，使曲线右移",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "温度升高使氧解离曲线左移，增加Hb对O₂的亲和力",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：Hb的S形曲线源于亚基间协同效应（结合一个O₂后亲和力增加）。B正确：Bohr效应——组织代谢产生CO₂和H⁺→曲线右移→促进O₂释放到活跃组织。C正确：2,3-BPG稳定Hb的T态（低亲和力态），使曲线右移。D错误：温度升高使曲线右移（而非左移），降低Hb对O₂亲和力，促进O₂释放——这在运动时肌肉温度升高有利于O₂供应。",
+    "subject": "动物生理学",
+    "concept": "氧解离曲线",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "respiratory_sys",
+      "module_3",
+      "动物生理学",
+      "氧解离曲线"
+    ],
+    "references": [
+      {
+        "doi": "10.1016/S0006-8993(00)02535-2",
+        "title": "Hemoglobin-oxygen affinity and Bohr effect",
+        "authors": "Weber RE",
+        "year": 2007,
+        "journal": "Comparative Biochemistry and Physiology"
+      }
+    ]
+  },
+  "M3-08-7465c9c7ae77": {
+    "type": "mtf",
+    "question": "关于呼吸运动的调控，下列说法正确的有：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "延髓是产生基本呼吸节律的中枢，包含吸气神经元和呼气神经元",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "脑桥的呼吸调整中枢（PBKF核群）限制吸气深度，促进吸气向呼气转换",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "中枢化学感受器位于延髓腹外侧，主要对脑脊液中H⁺浓度变化敏感",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "CO₂对呼吸的刺激作用主要通过直接刺激外周化学感受器实现",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：延髓呼吸中枢（pre-Bötzinger复合体等）产生基本呼吸节律。B正确：脑桥呼吸调整中枢限制吸气，促进吸-呼转换。C正确：中枢化学感受器位于延髓腹外侧，对脑脊液H⁺敏感。D错误：CO₂主要通过透过血脑屏障→在脑脊液中水化产生H⁺→刺激中枢化学感受器（占80%），而非主要刺激外周化学感受器。",
+    "subject": "动物生理学",
+    "concept": "呼吸调控",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "respiratory_sys",
+      "module_3",
+      "动物生理学",
+      "呼吸调控"
+    ],
+    "references": [
+      {
+        "doi": "10.1152/japplphysiol.01028.2008",
+        "title": "Central respiratory chemosensitivity",
+        "authors": "Nattie E, Li A",
+        "year": 2009,
+        "journal": "Journal of Applied Physiology"
+      }
+    ]
+  },
+  "M3-08-7f56c8043cf1": {
+    "type": "mtf",
+    "question": "关于呼吸色素与气体运输，下列说法正确的有：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "血液中O₂主要以与Hb结合的形式运输（化学结合），仅约1.5%以溶解形式运输",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "CO₂在血液中的运输形式包括：溶解CO₂、碳酸氢盐（HCO₃⁻）和氨基甲酰血红蛋白",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "Haldane效应是指O₂与Hb结合促进CO₂从血液中释放",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "血蓝蛋白是脊椎动物血液中主要的呼吸色素",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：O₂主要与Hb结合运输（约98.5%），溶解仅约1.5%。B正确：CO₂三种运输形式——溶解（约5%）、HCO₃⁻（约85-90%）、氨基甲酰Hb（约5-10%）。C正确：Haldane效应——O₂合Hb促进CO₂释放（氧合Hb酸性更强，易释放CO₂）。D错误：血蓝蛋白（hemocyanin）存在于部分无脊椎动物（如软体动物、节肢动物）中，脊椎动物的呼吸色素是血红蛋白。",
+    "subject": "动物生理学",
+    "concept": "气体运输",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "respiratory_sys",
+      "module_3",
+      "动物生理学",
+      "气体运输"
+    ],
+    "references": []
+  },
+  "M3-08-e1fd7b2f608e": {
+    "type": "mtf",
+    "question": "关于不同呼吸器官的比较，下列说法正确的有：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "鱼类的鳃通过逆流交换机制实现高效气体交换，水流与血流方向相反",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "哺乳动物肺泡的总表面积很大（人类约70-100m²），有利于气体交换",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "鸟类的肺为刚性结构，气体交换在副支气管（parabronchus）中进行，呼吸过程中气体单向流动",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "昆虫通过体表进行气体交换，不需要专门的呼吸器官",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：鱼鳃的逆流交换使水与血之间始终保持分压差，可提取水中约80%的O₂。B正确：人类肺泡总面积约70-100m²。C正确：鸟类肺为刚性管道系统，气体在副支气管中单向流动，配合气囊实现连续气流，效率极高。D错误：昆虫通过气管系统（tracheal system）进行气体交换——空气经气门进入气管分支直达组织细胞，不是通过体表扩散。",
+    "subject": "动物生理学",
+    "concept": "呼吸器官比较",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "respiratory_sys",
+      "module_3",
+      "动物生理学",
+      "呼吸器官"
+    ],
+    "references": []
+  }
+}

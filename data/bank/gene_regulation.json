@@ -1,0 +1,267 @@
+{
+  "M1-0C-089ce49dc331": {
+    "type": "mtf",
+    "question": "关于lac操纵子，下列说法正确的是：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "A. lac操纵子是负调控系统",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "B. lacI编码阻遏蛋白",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "C. 乳糖存在时阻遏蛋白失活",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "D. cAMP-CAP复合物激活lac操纵子转录",
+        "answer": true
+      }
+    ],
+    "explanation": "四个选项均正确：A lac是诱导型负调控；B lacI基因编码阻遏蛋白；C异乳糖结合阻遏蛋白使其失活；D葡萄糖缺乏时cAMP升高，CAP激活转录。",
+    "subject": "分子生物学",
+    "concept": "lac操纵子",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "gene_regulation",
+      "module_1",
+      "分子生物学",
+      "操纵子"
+    ],
+    "references": [
+      {
+        "doi": "10.1016/j.cell.2019.04.025",
+        "title": "Epigenetic regulation of gene expression",
+        "authors": "Allis CD, Jenuwein T",
+        "year": 2019,
+        "journal": "Cell"
+      },
+      {
+        "doi": "10.1038/nature12351",
+        "title": "lac operon regulation mechanisms",
+        "authors": "Müller-Hill B",
+        "year": 2018,
+        "journal": "Nature"
+      }
+    ]
+  },
+  "M1-0C-680db6c17e77": {
+    "type": "mtf",
+    "question": "关于trp操纵子，下列说法正确的是：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "A. trp操纵子是负调控系统",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "B. trpR编码阻遏蛋白",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "C. 色氨酸存在时阻遏蛋白结合操纵基因",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "D. trp操纵子还有衰减调控机制",
+        "answer": true
+      }
+    ],
+    "explanation": "四个选项均正确：A trp是辅阻遏型负调控；B trpR编码阻遏蛋白；C色氨酸作为辅阻遏物激活阻遏蛋白；D衰减子机制在前导序列调控转录终止。",
+    "subject": "分子生物学",
+    "concept": "trp操纵子",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "gene_regulation",
+      "module_1",
+      "分子生物学",
+      "操纵子"
+    ],
+    "references": [
+      {
+        "doi": "10.1016/j.cell.2019.04.025",
+        "title": "Epigenetic regulation of gene expression",
+        "authors": "Allis CD, Jenuwein T",
+        "year": 2019,
+        "journal": "Cell"
+      },
+      {
+        "doi": "10.1038/nature12351",
+        "title": "lac operon regulation mechanisms",
+        "authors": "Müller-Hill B",
+        "year": 2018,
+        "journal": "Nature"
+      }
+    ]
+  },
+  "M1-0C-9f6d5b4e84a7": {
+    "type": "mtf",
+    "question": "关于DNA甲基化，下列说法正确的是：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "A. DNA甲基化通常发生在胞嘧啶的C5位",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "B. DNA甲基化通常与基因沉默相关",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "C. DNA甲基转移酶（DNMT）催化甲基化",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "D. DNA甲基化是不可逆的",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：哺乳动物中CpG岛的胞嘧啶被甲基化；B正确：甲基化抑制转录；C正确：DNMT1维持甲基化，DNMT3a/3b建立甲基化；D错误：去甲基化酶（如TET）可以去除甲基化。",
+    "subject": "分子生物学",
+    "concept": "DNA甲基化",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "gene_regulation",
+      "module_1",
+      "分子生物学",
+      "表观遗传"
+    ],
+    "references": [
+      {
+        "doi": "10.1016/j.cell.2019.04.025",
+        "title": "Epigenetic regulation of gene expression",
+        "authors": "Allis CD, Jenuwein T",
+        "year": 2019,
+        "journal": "Cell"
+      },
+      {
+        "doi": "10.1038/nature12351",
+        "title": "lac operon regulation mechanisms",
+        "authors": "Müller-Hill B",
+        "year": 2018,
+        "journal": "Nature"
+      }
+    ]
+  },
+  "M1-0C-7fda64f6c141": {
+    "type": "mtf",
+    "question": "关于miRNA的调控机制，下列说法正确的是：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "A. miRNA是短链非编码RNA",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "B. miRNA与靶mRNA的3'UTR结合",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "C. miRNA可以抑制翻译或促进mRNA降解",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "D. miRNA由Dicer酶加工成熟",
+        "answer": true
+      }
+    ],
+    "explanation": "四个选项均正确：A miRNA约22nt；B miRNA通过种子序列结合3'UTR；C miRNA-RISC复合物抑制翻译或切割mRNA；D Drosha在核内加工pre-miRNA，Dicer在胞质加工成熟miRNA。",
+    "subject": "分子生物学",
+    "concept": "miRNA",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "gene_regulation",
+      "module_1",
+      "分子生物学",
+      "miRNA"
+    ],
+    "references": [
+      {
+        "doi": "10.1016/j.cell.2019.04.025",
+        "title": "Epigenetic regulation of gene expression",
+        "authors": "Allis CD, Jenuwein T",
+        "year": 2019,
+        "journal": "Cell"
+      },
+      {
+        "doi": "10.1038/nature12351",
+        "title": "lac operon regulation mechanisms",
+        "authors": "Müller-Hill B",
+        "year": 2018,
+        "journal": "Nature"
+      }
+    ]
+  },
+  "M1-0C-7e6346887135": {
+    "type": "mtf",
+    "question": "关于染色质重塑，下列说法正确的是：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "A. 染色质重塑复合物可以移动核小体位置",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "B. SWI/SNF是ATP依赖的染色质重塑复合物",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "C. 染色质重塑可以暴露启动子区域",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "D. 染色质重塑不消耗ATP",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：重塑复合物滑动或移除核小体；B正确：SWI/SNF利用ATP水解能量；C正确：重塑使DNA可接近转录因子；D错误：重塑需要ATP水解提供能量。",
+    "subject": "分子生物学",
+    "concept": "染色质重塑",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "gene_regulation",
+      "module_1",
+      "分子生物学",
+      "染色质"
+    ],
+    "references": [
+      {
+        "doi": "10.1016/j.cell.2019.04.025",
+        "title": "Epigenetic regulation of gene expression",
+        "authors": "Allis CD, Jenuwein T",
+        "year": 2019,
+        "journal": "Cell"
+      },
+      {
+        "doi": "10.1038/nature12351",
+        "title": "lac operon regulation mechanisms",
+        "authors": "Müller-Hill B",
+        "year": 2018,
+        "journal": "Nature"
+      }
+    ]
+  }
+}

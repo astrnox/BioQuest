@@ -1,0 +1,67 @@
+{
+  "M4-04-e085d1347ddf": {
+    "tags": [
+      "gene_mutation",
+      "module_4",
+      "遗传学",
+      "基因突变"
+    ],
+    "diff": "league",
+    "len": 121,
+    "src": "gene_mutation",
+    "year": null,
+    "module": "module_4"
+  },
+  "M4-04-5f19ccecb2b4": {
+    "tags": [
+      "gene_mutation",
+      "module_4",
+      "遗传学",
+      "DNA修复"
+    ],
+    "diff": "league",
+    "len": 129,
+    "src": "gene_mutation",
+    "year": null,
+    "module": "module_4"
+  },
+  "M4-04-f770d98aeca6": {
+    "tags": [
+      "gene_mutation",
+      "module_4",
+      "遗传学",
+      "Ames试验"
+    ],
+    "diff": "league",
+    "len": 119,
+    "src": "gene_mutation",
+    "year": null,
+    "module": "module_4"
+  },
+  "M4-04-c399db9a828f": {
+    "tags": [
+      "gene_mutation",
+      "module_4",
+      "遗传学",
+      "诱变剂"
+    ],
+    "diff": "high_school",
+    "len": 99,
+    "src": "gene_mutation",
+    "year": null,
+    "module": "module_4"
+  },
+  "M4-04-45648f112101": {
+    "tags": [
+      "gene_mutation",
+      "module_4",
+      "遗传学",
+      "基因突变"
+    ],
+    "diff": "high_school",
+    "len": 99,
+    "src": "gene_mutation",
+    "year": null,
+    "module": "module_4"
+  }
+}

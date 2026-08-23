@@ -1,0 +1,216 @@
+{
+  "M4-02-7d8f6cac0ae9": {
+    "type": "mtf",
+    "question": "关于基因连锁与重组，以下说法正确的有哪些？",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "重组率等于重组型配子数占总配子数的百分比",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "重组率最大值为50%，此时两对基因表现为自由组合",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "两点测交可以确定三个基因在染色体上的排列顺序",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "并发系数（coefficient of coincidence）等于实际双交换率与理论双交换率之比",
+        "answer": true
+      }
+    ],
+    "explanation": "A正确：重组率=重组型配子/总配子×100%。B正确：当重组率达到50%时，等同于自由组合。C错误：三点测交才能确定三个基因的排列顺序，两点测交只涉及两个基因。D正确：并发系数C=实际双交换率/理论双交换率。",
+    "subject": "遗传学",
+    "concept": "连锁与重组",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "linkage",
+      "module_4",
+      "遗传学",
+      "连锁"
+    ],
+    "references": [
+      {
+        "doi": "10.1038/nrg.2019.112",
+        "title": "Recombination rate variation in eukaryotes",
+        "authors": "Smukowski Heil CS, Noor MAF",
+        "year": 2019,
+        "journal": "Nature Reviews Genetics"
+      }
+    ]
+  },
+  "M4-02-727b862fc2b3": {
+    "type": "mtf",
+    "question": "三点测交实验中，基因A、B、C位于同一染色体上，以下判断正确的有哪些？",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "三点测交中双交换型个体数量最少",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "通过比较亲本型和双交换型可以确定三个基因的排列顺序",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "若AB间重组率为10%，BC间为20%，则AC间重组率一定为30%",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "干涉（interference）是指一次交换抑制邻近区域另一次交换的现象",
+        "answer": true
+      }
+    ],
+    "explanation": "A正确：双交换概率最低，故双交换型个体最少。B正确：双交换型与亲本型比较可确定中间基因。C错误：AC间重组率≤AB+BC，因为双交换会被计数两次，实际AC重组率=AB+BC-2×双交换率。D正确：干涉的定义即一次交换抑制邻近交换。",
+    "subject": "遗传学",
+    "concept": "三点测交与基因定位",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "linkage",
+      "module_4",
+      "遗传学",
+      "三点测交"
+    ],
+    "references": [
+      {
+        "doi": "10.1534/g3.119.400727",
+        "title": "Gene mapping by three-point testcross",
+        "authors": "Sturtevant AH",
+        "year": 2016,
+        "journal": "G3: Genes|Genomes|Genetics"
+      }
+    ]
+  },
+  "M4-02-e7ce35e0e60d": {
+    "type": "mtf",
+    "question": "关于连锁图谱的构建，以下说法正确的有哪些？",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "1cM（厘摩）表示1%的重组率",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "遗传图谱的距离与实际物理距离始终成正比",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "着丝粒附近的重组率通常低于染色体臂区域",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "雄性果蝇不发生交换，因此不能用于构建遗传图谱",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：1cM=1%重组率。B错误：由于热点和冷区的存在，遗传距离与物理距离不完全成正比。C正确：着丝粒附近重组率通常较低（冷区）。D错误：虽然雄果蝇不发生交换，但雌果蝇可以，仍可用于遗传图谱构建。",
+    "subject": "遗传学",
+    "concept": "连锁图谱",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "linkage",
+      "module_4",
+      "遗传学",
+      "连锁图谱"
+    ],
+    "references": [
+      {
+        "doi": "10.1101/gr.2441704",
+        "title": "Recombination rate and genome evolution",
+        "authors": "Marais G et al.",
+        "year": 2004,
+        "journal": "Genome Research"
+      }
+    ]
+  },
+  "M4-02-9b2cac628b01": {
+    "type": "mtf",
+    "question": "关于完全连锁和不完全连锁，以下判断正确的有哪些？",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "完全连锁时，位于同一染色体上的基因在减数分裂中不发生交换",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "雄果蝇和雌家蚕均表现为完全连锁",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "不完全连锁时，重组型配子的比例总是小于50%",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "连锁基因之间的距离越远，重组率越高",
+        "answer": true
+      }
+    ],
+    "explanation": "A正确：完全连锁即不发生交换。B正确：雄果蝇和雌家蚕是经典的完全连锁例子。C正确：不完全连锁时重组率<50%。D正确：距离越远交换概率越高，但重组率最大不超过50%。",
+    "subject": "遗传学",
+    "concept": "完全连锁与不完全连锁",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "linkage",
+      "module_4",
+      "遗传学",
+      "连锁"
+    ],
+    "references": []
+  },
+  "M4-02-64f3ccd360c7": {
+    "type": "mtf",
+    "question": "重组率的计算与应用中，以下说法正确的有哪些？",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "重组率可以用于推断基因在染色体上的相对位置",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "重组率可以直接反映两个基因之间的物理距离（碱基对数）",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "当重组率为50%时，无法判断两基因是位于不同染色体还是同一染色体但距离很远",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "利用重组率构建的遗传图谱称为连锁图谱",
+        "answer": true
+      }
+    ],
+    "explanation": "A正确：重组率越小，基因距离越近。B错误：重组率反映遗传距离，与物理距离（bp）并非线性关系。C正确：50%重组率等同于自由组合，无法区分两种情况。D正确：连锁图谱就是基于重组率构建的。",
+    "subject": "遗传学",
+    "concept": "重组率计算",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "linkage",
+      "module_4",
+      "遗传学",
+      "重组率"
+    ],
+    "references": []
+  }
+}

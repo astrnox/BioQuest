@@ -1,0 +1,67 @@
+{
+  "M4-14-9e2e5d984f3e": {
+    "tags": [
+      "transcriptomics",
+      "module_4",
+      "生物信息学",
+      "转录组学"
+    ],
+    "diff": "high_school",
+    "len": 131,
+    "src": "transcriptomics",
+    "year": null,
+    "module": "module_4"
+  },
+  "M4-14-e3e2b001575b": {
+    "tags": [
+      "transcriptomics",
+      "module_4",
+      "生物信息学",
+      "差异表达"
+    ],
+    "diff": "league",
+    "len": 123,
+    "src": "transcriptomics",
+    "year": null,
+    "module": "module_4"
+  },
+  "M4-14-275e248d3553": {
+    "tags": [
+      "transcriptomics",
+      "module_4",
+      "生物信息学",
+      "共表达网络"
+    ],
+    "diff": "league",
+    "len": 149,
+    "src": "transcriptomics",
+    "year": null,
+    "module": "module_4"
+  },
+  "M4-14-4326af0404c5": {
+    "tags": [
+      "transcriptomics",
+      "module_4",
+      "生物信息学",
+      "可变剪接"
+    ],
+    "diff": "league",
+    "len": 109,
+    "src": "transcriptomics",
+    "year": null,
+    "module": "module_4"
+  },
+  "M4-14-97678db89669": {
+    "tags": [
+      "transcriptomics",
+      "module_4",
+      "生物信息学",
+      "转录组学"
+    ],
+    "diff": "high_school",
+    "len": 102,
+    "src": "transcriptomics",
+    "year": null,
+    "module": "module_4"
+  }
+}

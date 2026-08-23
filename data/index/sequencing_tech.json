@@ -1,0 +1,67 @@
+{
+  "M4-12-2af00f21b2e8": {
+    "tags": [
+      "sequencing_tech",
+      "module_4",
+      "生物信息学",
+      "测序技术"
+    ],
+    "diff": "high_school",
+    "len": 107,
+    "src": "sequencing_tech",
+    "year": null,
+    "module": "module_4"
+  },
+  "M4-12-e550555f5de7": {
+    "tags": [
+      "sequencing_tech",
+      "module_4",
+      "生物信息学",
+      "NGS"
+    ],
+    "diff": "league",
+    "len": 139,
+    "src": "sequencing_tech",
+    "year": null,
+    "module": "module_4"
+  },
+  "M4-12-e6d2a1cc3447": {
+    "tags": [
+      "sequencing_tech",
+      "module_4",
+      "生物信息学",
+      "三代测序"
+    ],
+    "diff": "league",
+    "len": 121,
+    "src": "sequencing_tech",
+    "year": null,
+    "module": "module_4"
+  },
+  "M4-12-73e1d5057a51": {
+    "tags": [
+      "sequencing_tech",
+      "module_4",
+      "生物信息学",
+      "测序技术"
+    ],
+    "diff": "league",
+    "len": 128,
+    "src": "sequencing_tech",
+    "year": null,
+    "module": "module_4"
+  },
+  "M4-12-840981d86a62": {
+    "tags": [
+      "sequencing_tech",
+      "module_4",
+      "生物信息学",
+      "测序技术"
+    ],
+    "diff": "high_school",
+    "len": 125,
+    "src": "sequencing_tech",
+    "year": null,
+    "module": "module_4"
+  }
+}

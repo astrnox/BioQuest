@@ -1,0 +1,67 @@
+{
+  "M4-11-641ad13972e2": {
+    "tags": [
+      "sequence_alignment",
+      "module_4",
+      "生物信息学",
+      "序列比对"
+    ],
+    "diff": "high_school",
+    "len": 143,
+    "src": "sequence_alignment",
+    "year": null,
+    "module": "module_4"
+  },
+  "M4-11-79596477f416": {
+    "tags": [
+      "sequence_alignment",
+      "module_4",
+      "生物信息学",
+      "BLAST"
+    ],
+    "diff": "high_school",
+    "len": 162,
+    "src": "sequence_alignment",
+    "year": null,
+    "module": "module_4"
+  },
+  "M4-11-23b95d5ca172": {
+    "tags": [
+      "sequence_alignment",
+      "module_4",
+      "生物信息学",
+      "打分矩阵"
+    ],
+    "diff": "league",
+    "len": 123,
+    "src": "sequence_alignment",
+    "year": null,
+    "module": "module_4"
+  },
+  "M4-11-4baa782f9a38": {
+    "tags": [
+      "sequence_alignment",
+      "module_4",
+      "生物信息学",
+      "动态规划"
+    ],
+    "diff": "league",
+    "len": 123,
+    "src": "sequence_alignment",
+    "year": null,
+    "module": "module_4"
+  },
+  "M4-11-27130b5b79cc": {
+    "tags": [
+      "sequence_alignment",
+      "module_4",
+      "生物信息学",
+      "多序列比对"
+    ],
+    "diff": "league",
+    "len": 99,
+    "src": "sequence_alignment",
+    "year": null,
+    "module": "module_4"
+  }
+}

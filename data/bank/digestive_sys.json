@@ -1,0 +1,216 @@
+{
+  "M3-09-c38f6628d214": {
+    "type": "mtf",
+    "question": "关于消化道的结构与运动方式，下列说法正确的有：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "消化道壁从内到外依次为黏膜层、黏膜下层、肌层和浆膜层",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "蠕动是消化道最基本的运动方式，由纵行肌和环行肌的顺序收缩产生",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "消化道的内在神经系统（肠神经系统/ENS）可在脱离中枢神经支配的情况下独立调节消化活动",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "食管上段和下段均为骨骼肌，吞咽过程完全受意识控制",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：消化道壁四层结构。B正确：蠕动由环行肌收缩（蠕动波前方舒张）和纵行肌协调产生。C正确：肠神经系统（ENS）含约1亿个神经元，可独立调控消化运动、分泌和血流，被称为\"第二大脑\"。D错误：食管上1/3为骨骼肌（随意），下1/3为平滑肌（不随意），中段为混合肌；吞咽反射一旦启动即为不随意的反射活动。",
+    "subject": "动物生理学",
+    "concept": "消化道结构与运动",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "digestive_sys",
+      "module_3",
+      "动物生理学",
+      "消化道结构"
+    ],
+    "references": [
+      {
+        "doi": "10.1113/jphysiol.2009.178414",
+        "title": "The enteric nervous system",
+        "authors": "Furness JB",
+        "year": 2012,
+        "journal": "Journal of Physiology"
+      }
+    ]
+  },
+  "M3-09-1b19a3676cd0": {
+    "type": "mtf",
+    "question": "关于胃的消化功能，下列说法正确的有：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "胃主细胞分泌胃蛋白酶原，在酸性环境（HCl激活，pH<5）下转化为活性的胃蛋白酶",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "壁细胞分泌HCl和内因子（intrinsic factor），内因子是维生素B₁₂吸收所必需的",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "胃黏膜表面的黏液-碳酸氢盐屏障保护胃壁免受胃酸和胃蛋白酶的自身消化",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "胃是营养物质吸收的主要场所，大部分营养物质在胃中被吸收",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：胃蛋白酶原在pH<5时自身激活为胃蛋白酶，分解蛋白质。B正确：壁细胞分泌HCl（杀菌、激活胃蛋白酶原）和内因子（与B₁₂结合促进回肠吸收）。C正确：黏液-碳酸氢盐屏障是胃黏膜的重要保护机制。D错误：胃主要进行初步消化（蛋白质），吸收功能有限（仅少量水、酒精和药物）；大部分营养物质在小肠（尤其是空肠）吸收。",
+    "subject": "动物生理学",
+    "concept": "胃的消化功能",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "digestive_sys",
+      "module_3",
+      "动物生理学",
+      "胃消化"
+    ],
+    "references": []
+  },
+  "M3-09-1122c60cdf12": {
+    "type": "mtf",
+    "question": "关于小肠的消化与吸收，下列说法正确的有：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "小肠绒毛和微绒毛极大地增加了吸收面积（约200m²），有利于营养物质吸收",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "胆汁由肝细胞分泌，不含消化酶，但胆盐可乳化脂肪促进脂肪酶的作用",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "胰液含有多种消化酶（胰蛋白酶、胰脂肪酶、胰淀粉酶等），是最重要的消化液",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "脂肪消化产物（脂肪酸和甘油一酯）通过毛细血管直接进入门静脉运输",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：环状皱襞+绒毛+微绒毛使小肠吸收面积达约200m²。B正确：胆汁不含酶，胆盐乳化脂肪增大脂肪酶作用面积。C正确：胰液含多种消化酶，是最重要的消化液。D错误：脂肪消化产物在肠上皮细胞中重新合成甘油三酯，与载脂蛋白形成乳糜微粒，进入中央乳糜管（淋巴管）→胸导管→血液循环，不直接入门静脉。",
+    "subject": "动物生理学",
+    "concept": "小肠消化吸收",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "digestive_sys",
+      "module_3",
+      "动物生理学",
+      "小肠消化"
+    ],
+    "references": []
+  },
+  "M3-09-2668998a1fcb": {
+    "type": "mtf",
+    "question": "关于肝脏的功能，下列说法正确的有：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "肝脏是糖代谢的重要器官，可进行糖原合成、糖原分解和糖异生",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "肝脏通过尿素循环将有毒的氨转化为无毒的尿素",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "肝脏是合成血浆蛋白（如白蛋白、凝血因子）的主要场所",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "肝脏不具有解毒功能，有毒物质直接通过肝脏排出体外",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：肝脏在糖代谢中起核心作用。B正确：尿素循环仅在肝脏进行。C正确：肝脏合成大部分血浆蛋白。D错误：肝脏具有强大的解毒功能——通过氧化、还原、水解和结合反应（如细胞色素P450系统）将有毒物质转化为无毒或低毒物质排出。",
+    "subject": "动物生理学",
+    "concept": "肝脏功能",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "digestive_sys",
+      "module_3",
+      "动物生理学",
+      "肝脏功能"
+    ],
+    "references": [
+      {
+        "doi": "10.1002/cphy.c010207",
+        "title": "Liver metabolism and function",
+        "authors": "Jungermann K, Kietzmann T",
+        "year": 2010,
+        "journal": "Comprehensive Physiology"
+      }
+    ]
+  },
+  "M3-09-551a4a93b8d4": {
+    "type": "mtf",
+    "question": "关于胃肠激素的调节作用，下列说法正确的有：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "胃泌素（gastrin）由胃窦G细胞分泌，促进胃酸分泌和胃黏膜生长",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "促胰液素（secretin）由十二指肠S细胞分泌，主要刺激胰腺分泌富含HCO₃⁻的胰液",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "胆囊收缩素（CCK）由十二指肠I细胞分泌，促进胆囊收缩和胰酶分泌",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "所有胃肠激素均只通过血液循环作用于远隔靶器官，不存在旁分泌作用",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：胃泌素促进胃酸分泌和胃黏膜增生。B正确：促胰液素刺激胰腺分泌大量含HCO₃⁻的稀薄胰液中和胃酸。C正确：CCK促进胆囊收缩排胆汁和刺激胰腺腺泡分泌消化酶。D错误：胃肠激素既有内分泌（如胃泌素经血循环作用于壁细胞），也有旁分泌（如生长抑素由D细胞旁分泌抑制邻近G细胞和壁细胞）和神经分泌等多种作用方式。",
+    "subject": "动物生理学",
+    "concept": "胃肠激素",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "digestive_sys",
+      "module_3",
+      "动物生理学",
+      "胃肠激素"
+    ],
+    "references": [
+      {
+        "doi": "10.1152/physrev.00014.2000",
+        "title": "Gastrointestinal hormones",
+        "authors": "Walsh JH",
+        "year": 2001,
+        "journal": "Physiological Reviews"
+      }
+    ]
+  }
+}

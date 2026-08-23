@@ -1,0 +1,67 @@
+{
+  "M3-0d-cbff2d28fd1e": {
+    "tags": [
+      "community_eco",
+      "module_3",
+      "生态学",
+      "种间关系"
+    ],
+    "diff": "high_school",
+    "len": 149,
+    "src": "community_eco",
+    "year": null,
+    "module": "module_3"
+  },
+  "M3-0d-65768072800a": {
+    "tags": [
+      "community_eco",
+      "module_3",
+      "生态学",
+      "生态位"
+    ],
+    "diff": "league",
+    "len": 196,
+    "src": "community_eco",
+    "year": 1983,
+    "module": "module_3"
+  },
+  "M3-0d-109148fa1a2c": {
+    "tags": [
+      "community_eco",
+      "module_3",
+      "生态学",
+      "群落演替"
+    ],
+    "diff": "high_school",
+    "len": 159,
+    "src": "community_eco",
+    "year": null,
+    "module": "module_3"
+  },
+  "M3-0d-ef6ff9e39220": {
+    "tags": [
+      "community_eco",
+      "module_3",
+      "生态学",
+      "关键种"
+    ],
+    "diff": "league",
+    "len": 182,
+    "src": "community_eco",
+    "year": 1980,
+    "module": "module_3"
+  },
+  "M3-0d-a3de9fc34664": {
+    "tags": [
+      "community_eco",
+      "module_3",
+      "生态学",
+      "群落结构"
+    ],
+    "diff": "league",
+    "len": 181,
+    "src": "community_eco",
+    "year": 2008,
+    "module": "module_3"
+  }
+}

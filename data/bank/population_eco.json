@@ -1,0 +1,208 @@
+{
+  "M3-0c-729af2c92dc3": {
+    "type": "mtf",
+    "question": "关于种群增长的数学模型，下列说法正确的有：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "指数增长模型 dN/dt=rN 假设资源无限，种群增长率与种群大小成正比",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "逻辑斯谛增长模型 dN/dt=rN(1-N/K) 引入了环境容纳量K，增长率随种群增大而下降",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "逻辑斯谛增长中，种群增长速率在N=K/2时达到最大值",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "r-选择物种通常具有K值接近环境容纳量的特征",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：指数增长假设资源无限，dN/dt=rN。B正确：逻辑斯谛增长引入(1-N/K)密度制约因子。C正确：对dN/dt=rN(1-N/K)求导，当N=K/2时增长速率最大（最大持续产量MSY的理论基础）。D错误：r-选择物种的特征是高繁殖率、小体型、短寿命、后代数量多但照顾少，适应不稳定环境；K值（环境容纳量）是种群特征而非r-选择物种的特征。",
+    "subject": "生态学",
+    "concept": "种群增长模型",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "population_eco",
+      "module_3",
+      "生态学",
+      "种群增长"
+    ],
+    "references": [
+      {
+        "doi": "10.1086/285835",
+        "title": "Population growth models",
+        "authors": "Gotelli NJ",
+        "year": 2001,
+        "journal": "A Primer of Ecology"
+      }
+    ]
+  },
+  "M3-0c-217173691585": {
+    "type": "mtf",
+    "question": "关于r/K选择理论，下列说法正确的有：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "r-选择物种适应不稳定环境，具有高繁殖率、小体型、短世代时间等特征",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "K-选择物种适应稳定环境，具有低繁殖率、大体型、长寿命、亲代抚育投入大等特征",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "r-选择物种的种群数量波动大，常经历种群崩溃和快速恢复",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "大象和鲸鱼是典型的r-选择物种",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：r-选择物种（如昆虫、杂草）适应不稳定环境，快速繁殖。B正确：K-选择物种（如大型哺乳动物）适应稳定环境，竞争能力强。C正确：r-选择物种种群数量波动剧烈。D错误：大象和鲸鱼是典型的K-选择物种——体型大、寿命长、繁殖率低、孕期长、亲代抚育投入大。",
+    "subject": "生态学",
+    "concept": "r/K选择理论",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "population_eco",
+      "module_3",
+      "生态学",
+      "r/K选择"
+    ],
+    "references": []
+  },
+  "M3-0c-53059de1dcbb": {
+    "type": "mtf",
+    "question": "关于生命表与存活曲线，下列说法正确的有：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "I型存活曲线（如人类）特征是幼年和成年存活率高，老年期死亡率急剧升高",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "II型存活曲线（如某些鸟类）特征是各年龄段死亡率大致恒定",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "III型存活曲线（如大多数鱼类和海洋无脊椎动物）特征是幼体死亡率极高，存活个体后期死亡率低",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "静态生命表需要追踪同一出生队列从出生到全部死亡的全过程",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：I型（凸型）如人类和大型哺乳动物。B正确：II型（对角线型）如某些鸟类和啮齿类。C正确：III型（凹型）如牡蛎和大多数鱼类，产生大量后代但幼体存活率极低。D错误：追踪同一出生队列的是动态生命表（cohort life table）；静态生命表（static/static life table）是在某一时间点调查不同年龄个体的数量，假设各年龄组的死亡率代表该物种的一般规律。",
+    "subject": "生态学",
+    "concept": "生命表与存活曲线",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "population_eco",
+      "module_3",
+      "生态学",
+      "生命表"
+    ],
+    "references": [
+      {
+        "doi": "10.1890/0012-9658(2001)082[2173:SLAC]2.0.CO;2",
+        "title": "Survivorship curves in ecology",
+        "authors": "Deevey ES",
+        "year": 1947,
+        "journal": "Ecology"
+      }
+    ]
+  },
+  "M3-0c-30fc62259c44": {
+    "type": "mtf",
+    "question": "关于种群数量调节机制，下列说法正确的有：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "密度制约因素（如竞争、捕食、寄生、疾病）的作用强度随种群密度变化",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "非密度制约因素（如气候灾害、火山爆发）的作用强度与种群密度无关",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "种内竞争在种群密度接近K值时加剧，是重要的密度制约调节因素",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "在自然种群中，密度制约因素和非密度制约因素通常独立起作用，不存在交互作用",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：密度制约因素如竞争、捕食等随密度增大而作用增强。B正确：非密度制约因素如暴风雨、火灾等与密度无关。C正确：密度接近K时资源竞争加剧，抑制种群增长。D错误：自然种群中两类因素常交互作用——如气候灾害（非密度制约）可能降低种群密度，从而减弱种内竞争（密度制约）的强度。",
+    "subject": "生态学",
+    "concept": "种群数量调节",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "population_eco",
+      "module_3",
+      "生态学",
+      "种群调节"
+    ],
+    "references": []
+  },
+  "M3-0c-b19628392c4b": {
+    "type": "mtf",
+    "question": "关于种群的年龄结构与性比，下列说法正确的有：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "增长型种群的年龄金字塔底部宽（幼年多）、顶部窄（老年少）",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "稳定型种群的各年龄组个体数大致均匀，出生率与死亡率接近平衡",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "衰退型种群的幼年少、老年多，种群数量趋于下降",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "性比（sex ratio）在所有物种中都严格保持1:1，不会偏离",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：增长型金字塔呈典型金字塔形。B正确：稳定型各年龄组较均匀。C正确：衰退型幼年少老年多。D错误：性比并非总是1:1——许多因素可导致偏离，如局部配偶竞争（local mate competition）使某些寄生蜂产生极度偏雌的性比；环境因素（温度依赖性别决定的爬行动物）也可导致性比偏离；社会性昆虫中性比极度偏向雌性。",
+    "subject": "生态学",
+    "concept": "年龄结构与性比",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "population_eco",
+      "module_3",
+      "生态学",
+      "年龄结构"
+    ],
+    "references": []
+  }
+}

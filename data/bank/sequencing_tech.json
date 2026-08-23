@@ -1,0 +1,216 @@
+{
+  "M4-12-2af00f21b2e8": {
+    "type": "mtf",
+    "question": "关于Sanger测序法，以下说法正确的有哪些？",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "Sanger测序基于双脱氧链终止法原理",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "Sanger测序使用ddNTP作为链终止剂",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "Sanger测序的读长通常为800-1000bp",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "Sanger测序是目前通量最高的测序技术",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：双脱氧链终止。B正确：ddNTP终止。C正确：读长800-1000bp。D错误：Sanger是低通量一代测序。",
+    "subject": "生物信息学",
+    "concept": "Sanger测序",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "sequencing_tech",
+      "module_4",
+      "生物信息学",
+      "测序技术"
+    ],
+    "references": []
+  },
+  "M4-12-e550555f5de7": {
+    "type": "mtf",
+    "question": "关于二代测序技术（NGS），以下判断正确的有哪些？",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "Illumina测序基于边合成边测序（sequencing by synthesis）原理",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "Illumina测序使用可逆终止子荧光标记的dNTP",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "Ion Torrent测序通过检测H⁺离子释放来识别碱基",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "二代测序的读长普遍超过10kb",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：SBS原理。B正确：可逆终止子。C正确：Ion Torrent检测pH变化。D错误：NGS读长通常较短（150-300bp for Illumina）。",
+    "subject": "生物信息学",
+    "concept": "二代测序",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "sequencing_tech",
+      "module_4",
+      "生物信息学",
+      "NGS"
+    ],
+    "references": [
+      {
+        "doi": "10.1038/nrg2809",
+        "title": "Next-generation sequencing technologies",
+        "authors": "Shendure J, Ji H",
+        "year": 2008,
+        "journal": "Nature Biotechnology"
+      }
+    ]
+  },
+  "M4-12-e6d2a1cc3447": {
+    "type": "mtf",
+    "question": "关于三代测序技术，以下说法正确的有哪些？",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "PacBio SMRT测序基于单分子实时测序原理",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "PacBio的读长可达数十kb",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "Oxford Nanopore测序通过检测DNA通过纳米孔时的电流变化识别碱基",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "三代测序的准确率已经超过了Illumina测序",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：SMRT原理。B正确：长读长。C正确：纳米孔电流变化。D错误：三代原始读准确率通常低于Illumina（虽然HiFi模式已接近）。",
+    "subject": "生物信息学",
+    "concept": "三代测序",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "sequencing_tech",
+      "module_4",
+      "生物信息学",
+      "三代测序"
+    ],
+    "references": [
+      {
+        "doi": "10.1038/nbt.3314",
+        "title": "Single-molecule sequencing technologies",
+        "authors": "van Dijk EL et al.",
+        "year": 2018,
+        "journal": "Nature Biotechnology"
+      }
+    ]
+  },
+  "M4-12-73e1d5057a51": {
+    "type": "mtf",
+    "question": "关于单细胞测序和宏基因组测序，以下判断正确的有哪些？",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "单细胞RNA-seq（scRNA-seq）可以在单个细胞水平分析基因表达",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "scRNA-seq可以发现组织中的细胞异质性",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "宏基因组测序是对环境样品中所有微生物的基因组进行测序",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "宏基因组测序需要先分离培养每种微生物",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：scRNA-seq定义。B正确：发现异质性。C正确：宏基因组定义。D错误：宏基因组无需培养，直接提取环境DNA。",
+    "subject": "生物信息学",
+    "concept": "单细胞与宏基因组",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "sequencing_tech",
+      "module_4",
+      "生物信息学",
+      "测序技术"
+    ],
+    "references": [
+      {
+        "doi": "10.1038/nbt.3442",
+        "title": "Single-cell RNA-seq",
+        "authors": "Macosko EZ et al.",
+        "year": 2015,
+        "journal": "Cell"
+      }
+    ]
+  },
+  "M4-12-840981d86a62": {
+    "type": "mtf",
+    "question": "关于测序深度和覆盖度，以下说法正确的有哪些？",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "测序深度（depth）是指每个碱基被测序的平均次数",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "测序覆盖度（coverage）是指被测序到的碱基占基因组的百分比",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "增加测序深度可以提高碱基调用的准确性",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "30×深度的人类基因组测序意味着每个碱基平均被测了30次",
+        "answer": true
+      }
+    ],
+    "explanation": "A正确：depth定义。B正确：coverage定义。C正确：深度提高准确性。D正确：30×含义。",
+    "subject": "生物信息学",
+    "concept": "测序深度与覆盖度",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "sequencing_tech",
+      "module_4",
+      "生物信息学",
+      "测序技术"
+    ],
+    "references": []
+  }
+}

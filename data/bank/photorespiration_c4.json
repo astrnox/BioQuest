@@ -1,0 +1,216 @@
+{
+  "M2-04-ee787ec8a3cf": {
+    "type": "mtf",
+    "question": "关于光呼吸的特征，以下描述正确的是：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "光呼吸在光照条件下发生，由RuBisCO的加氧酶活性引起",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "光呼吸消耗O2，释放CO2",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "光呼吸涉及叶绿体、过氧化物酶体和线粒体三种细胞器",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "光呼吸产生ATP，对植物有利",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：RuBisCO具有羧化酶和加氧酶双重活性。B正确：光呼吸消耗O2释放CO2。C正确：光呼吸是三种细胞器协同的过程。D错误：光呼吸消耗能量，一般认为对植物不利。",
+    "subject": "植物生理学",
+    "concept": "光呼吸",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "photorespiration_c4",
+      "module_2",
+      "植物生理学",
+      "光呼吸"
+    ],
+    "references": []
+  },
+  "M2-04-ca3e399bc91c": {
+    "type": "mtf",
+    "question": "C4植物的特征包括：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "C4植物具有Kranz解剖结构，维管束鞘细胞发达",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "C4植物的初次CO2固定由PEP羧化酶催化",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "C4途径是一种CO2浓缩机制，减少光呼吸",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "C4植物的Calvin循环在叶肉细胞中进行",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：Kranz结构是C4植物的特征。B正确：PEP羧化酶是C4途径的关键酶。C正确：C4途径浓缩CO2抑制光呼吸。D错误：Calvin循环在维管束鞘细胞中进行。",
+    "subject": "植物生理学",
+    "concept": "C4植物",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "photorespiration_c4",
+      "module_2",
+      "植物生理学",
+      "C4途径"
+    ],
+    "references": []
+  },
+  "M2-04-ea776b82417b": {
+    "type": "mtf",
+    "question": "关于PEP羧化酶与RuBisCO的比较，以下说法正确的是：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "PEP羧化酶对CO2的亲和力高于RuBisCO",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "PEP羧化酶没有加氧酶活性，不催化光呼吸",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "RuBisCO既能催化羧化反应也能催化加氧反应",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "PEP羧化酶催化CO2与RuBP结合",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：PEP羧化酶对CO2亲和力高。B正确：PEP羧化酶只催化羧化。C正确：RuBisCO具有双重活性。D错误：PEP羧化酶催化CO2与PEP结合形成草酰乙酸。",
+    "subject": "植物生理学",
+    "concept": "羧化酶比较",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "photorespiration_c4",
+      "module_2",
+      "植物生理学",
+      "酶比较"
+    ],
+    "references": [
+      {
+        "doi": "10.1111/j.1365-3040.2005.01439.x",
+        "title": "C4 photosynthesis: the role of PEP carboxylase",
+        "authors": "Svensson P, Gardner J",
+        "year": 2006,
+        "journal": "Plant, Cell & Environment"
+      }
+    ]
+  },
+  "M2-04-16cf28260f93": {
+    "type": "mtf",
+    "question": "CAM植物的特征包括：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "CAM植物夜间开放气孔固定CO2",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "CAM植物白天关闭气孔，利用夜间固定的CO2进行Calvin循环",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "CAM是一种时间上分离的CO2浓缩机制",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "CAM植物主要分布在寒冷湿润的地区",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：CAM植物夜间开气孔。B正确：白天利用夜间固定的CO2。C正确：CAM是时间分离的C4类似机制。D错误：CAM植物主要分布在干旱炎热地区。",
+    "subject": "植物生理学",
+    "concept": "CAM植物",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "photorespiration_c4",
+      "module_2",
+      "植物生理学",
+      "CAM"
+    ],
+    "references": [
+      {
+        "doi": "10.1016/j.plantsci.2008.09.010",
+        "title": "CAM photosynthesis in arid environments",
+        "authors": "Osmond CB, Winter K",
+        "year": 2008,
+        "journal": "Plant Science"
+      }
+    ]
+  },
+  "M2-04-708696cc652c": {
+    "type": "mtf",
+    "question": "C3、C4、CAM植物的比较，以下说法正确的是：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "C3植物在高温强光下光呼吸较强",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "C4植物的水分利用效率高于C3植物",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "CAM植物的水分利用效率最高，但生长缓慢",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "C4植物的光补偿点高于C3植物",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：C3植物光呼吸强。B正确：C4水分利用效率高。C正确：CAM最节水但生长慢。D错误：C4光补偿点通常低于C3。",
+    "subject": "植物生理学",
+    "concept": "光合类型比较",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "photorespiration_c4",
+      "module_2",
+      "植物生理学",
+      "光合类型"
+    ],
+    "references": [
+      {
+        "doi": "10.1146/annurev.arplant.56.032604.144231",
+        "title": "Evolution of C4 and CAM photosynthesis",
+        "authors": "Edwards EJ, Still CJ, Donoghue MJ",
+        "year": 2010,
+        "journal": "Annual Review of Plant Biology"
+      }
+    ]
+  }
+}

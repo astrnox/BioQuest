@@ -1,0 +1,216 @@
+{
+  "M3-05-879f574040db": {
+    "type": "mtf",
+    "question": "关于固有免疫的特征与机制，下列说法正确的有：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "Toll样受体（TLR）是重要的模式识别受体，能识别病原体相关分子模式如LPS、鞭毛蛋白等",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "补体系统可通过经典途径、旁路途径和凝集素途径激活，最终形成膜攻击复合体溶解靶细胞",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "自然杀伤细胞（NK细胞）属于适应性免疫细胞，通过识别抗原特异性激活",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "中性粒细胞通过氧化爆发产生ROS杀灭吞噬的病原菌",
+        "answer": true
+      }
+    ],
+    "explanation": "A正确：TLR是固有免疫关键PRR，如TLR4识别LPS，TLR5识别鞭毛蛋白。B正确：补体三条途径汇聚于MAC（C5b-C9）形成膜穿孔。C错误：NK细胞属于固有免疫细胞，通过\"丢失自我\"机制识别MHC-I下调的靶细胞。D正确：中性粒细胞通过NADPH氧化酶产生ROS杀灭病原菌。",
+    "subject": "动物生理学",
+    "concept": "固有免疫",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "immune_system",
+      "module_3",
+      "动物生理学",
+      "固有免疫"
+    ],
+    "references": [
+      {
+        "doi": "10.1038/ni1065",
+        "title": "Toll-like receptors in innate immunity",
+        "authors": "Akira S, Takeda K",
+        "year": 2004,
+        "journal": "Nature Immunology"
+      }
+    ]
+  },
+  "M3-05-bc55f177afc4": {
+    "type": "mtf",
+    "question": "关于体液免疫（B细胞介导）的过程，下列说法正确的有：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "B细胞通过BCR识别抗原后，在Th细胞辅助下活化、增殖并分化为浆细胞和记忆B细胞",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "初次免疫应答主要产生IgM，再次应答以IgG为主且抗体亲和力更大",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "抗体类别转换由活化诱导胞苷脱氨酶（AID）介导，在生发中心发生",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "TI抗原（非T细胞依赖性抗原）能高效诱导记忆B细胞的产生",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：B细胞活化需BCR识别抗原（第一信号）和Th细胞CD40L-CD40结合（第二信号）。B正确：初次应答以IgM为主，再次应答以IgG为主且经亲和力成熟。C正确：AID催化类别转换重组（CSR）。D错误：TI抗原主要产生低亲和力IgM，通常不形成记忆B细胞；TD抗原才能诱导生发中心形成和记忆B细胞。",
+    "subject": "动物生理学",
+    "concept": "体液免疫",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "immune_system",
+      "module_3",
+      "动物生理学",
+      "体液免疫"
+    ],
+    "references": [
+      {
+        "doi": "10.1038/ni1026",
+        "title": "B-cell memory and plasma cells",
+        "authors": "Radbruch A et al.",
+        "year": 2006,
+        "journal": "Nature Immunology"
+      }
+    ]
+  },
+  "M3-05-470c186f3860": {
+    "type": "mtf",
+    "question": "关于细胞免疫（T细胞介导），下列说法正确的有：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "CD8⁺CTL通过释放穿孔素和颗粒酶诱导靶细胞凋亡",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "CD4⁺辅助T细胞可分化为Th1和Th2等亚群，由不同细胞因子环境决定",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "CD4⁺T细胞识别MHC-II类分子呈递的抗原，CD8⁺T细胞识别MHC-I类分子呈递的抗原",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "调节性T细胞（Treg）通过分泌IL-2和IFN-γ增强免疫应答",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：CTL通过穿孔素打孔、颗粒酶激活Caspase诱导凋亡。B正确：IL-12→Th1，IL-4→Th2。C正确：MHC限制性——CD4⁺识别MHC-II，CD8⁺识别MHC-I。D错误：Treg通过分泌IL-10、TGF-β等抑制性细胞因子维持免疫耐受，而非增强免疫应答。",
+    "subject": "动物生理学",
+    "concept": "细胞免疫",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "immune_system",
+      "module_3",
+      "动物生理学",
+      "细胞免疫"
+    ],
+    "references": [
+      {
+        "doi": "10.1016/j.cell.2009.01.035",
+        "title": "Regulatory T cells and immune tolerance",
+        "authors": "Sakaguchi S et al.",
+        "year": 2008,
+        "journal": "Cell"
+      }
+    ]
+  },
+  "M3-05-360f0b38cc11": {
+    "type": "mtf",
+    "question": "关于MHC分子，下列说法正确的有：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "MHC-I类分子表达于几乎所有有核细胞表面，MHC-II类分子主要表达于专职APC",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "MHC分子具有高度多态性，其多态性集中在抗原肽结合槽区域",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "人类的MHC称为HLA，其中HLA-A、B、C编码MHC-I类分子",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "MHC分子直接识别并结合完整的天然蛋白质抗原",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：MHC-I广泛表达于有核细胞，MHC-II限制表达于APC。B正确：多态性集中在肽结合槽。C正确：HLA-A/B/C为MHC-I类基因。D错误：MHC呈递经蛋白酶体降解后的短肽片段，不识别完整天然蛋白质。",
+    "subject": "动物生理学",
+    "concept": "MHC分子",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "immune_system",
+      "module_3",
+      "动物生理学",
+      "MHC"
+    ],
+    "references": []
+  },
+  "M3-05-6dbda49cf44b": {
+    "type": "mtf",
+    "question": "关于免疫记忆与疫苗原理，下列说法正确的有：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "记忆T细胞和记忆B细胞寿命长，遇到相同抗原时可快速产生更强的免疫应答",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "灭活疫苗通常需要多次接种，而减毒活疫苗通常只需接种一次即可产生持久免疫",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "mRNA疫苗通过将编码抗原蛋白的mRNA递送入细胞，在胞内翻译产生抗原蛋白诱导免疫",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "佐剂的作用机制是直接杀灭病原体从而增强疫苗效果",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：记忆细胞在再次遇到抗原时快速应答。B正确：灭活疫苗免疫原性弱需加强；减毒活疫苗模拟自然感染，一次即可。C正确：mRNA疫苗在胞内翻译抗原蛋白诱导免疫。D错误：佐剂不直接杀灭病原体，而是通过延长抗原暴露、激活固有免疫等方式增强免疫应答。",
+    "subject": "动物生理学",
+    "concept": "免疫记忆与疫苗",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "immune_system",
+      "module_3",
+      "动物生理学",
+      "免疫记忆"
+    ],
+    "references": []
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "M4-03-7da9bfbdb17e": {
+    "tags": [
+      "sex_linkage",
+      "module_4",
+      "遗传学",
+      "伴性遗传"
+    ],
+    "diff": "high_school",
+    "len": 106,
+    "src": "sex_linkage",
+    "year": null,
+    "module": "module_4"
+  },
+  "M4-03-886ff7bbb683": {
+    "tags": [
+      "sex_linkage",
+      "module_4",
+      "遗传学",
+      "剂量补偿"
+    ],
+    "diff": "league",
+    "len": 124,
+    "src": "sex_linkage",
+    "year": null,
+    "module": "module_4"
+  },
+  "M4-03-461ac6c9f98f": {
+    "tags": [
+      "sex_linkage",
+      "module_4",
+      "遗传学",
+      "性别决定"
+    ],
+    "diff": "league",
+    "len": 99,
+    "src": "sex_linkage",
+    "year": null,
+    "module": "module_4"
+  },
+  "M4-03-6adb968d6a22": {
+    "tags": [
+      "sex_linkage",
+      "module_4",
+      "遗传学",
+      "从性遗传"
+    ],
+    "diff": "league",
+    "len": 132,
+    "src": "sex_linkage",
+    "year": null,
+    "module": "module_4"
+  },
+  "M4-03-8107a95e6ccd": {
+    "tags": [
+      "sex_linkage",
+      "module_4",
+      "遗传学",
+      "伴性遗传"
+    ],
+    "diff": "high_school",
+    "len": 120,
+    "src": "sex_linkage",
+    "year": null,
+    "module": "module_4"
+  }
+}

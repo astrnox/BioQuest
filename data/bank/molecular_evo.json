@@ -1,0 +1,216 @@
+{
+  "M4-0c-abeecc02d322": {
+    "type": "mtf",
+    "question": "关于直系同源和旁系同源基因，以下说法正确的有哪些？",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "直系同源基因（orthologs）是不同物种中由共同祖先基因经物种分化而产生的同源基因",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "旁系同源基因（paralogs）是同一基因组中由基因复制产生的同源基因",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "直系同源基因通常保留相似的功能",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "旁系同源基因总是具有完全相同的功能",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：orthologs的定义。B正确：paralogs的定义。C正确：orthologs通常功能保守。D错误：paralogs可以发生功能分化（neofunctionalization/subfunctionalization）。",
+    "subject": "演化生物学",
+    "concept": "同源基因",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "molecular_evo",
+      "module_4",
+      "演化生物学",
+      "分子演化"
+    ],
+    "references": [
+      {
+        "doi": "10.1016/j.tig.2015.03.006",
+        "title": "Orthologs and paralogs",
+        "authors": "Koonin EV",
+        "year": 2015,
+        "journal": "Trends in Genetics"
+      }
+    ]
+  },
+  "M4-0c-dd40a6288c47": {
+    "type": "mtf",
+    "question": "关于dN/dS比值，以下判断正确的有哪些？",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "dN表示非同义替换速率，dS表示同义替换速率",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "dN/dS>1表示该基因可能受到正选择",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "dN/dS=1表示中性进化",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "dN/dS<1表示该基因受到纯化选择（purifying selection）",
+        "answer": true
+      }
+    ],
+    "explanation": "A正确：定义。B正确：正选择。C正确：中性。D正确：纯化选择。",
+    "subject": "演化生物学",
+    "concept": "dN/dS",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "molecular_evo",
+      "module_4",
+      "演化生物学",
+      "分子演化"
+    ],
+    "references": [
+      {
+        "doi": "10.1038/nrg2823",
+        "title": "Detecting positive selection",
+        "authors": "Yang Z, Bielawski JP",
+        "year": 2010,
+        "journal": "Nature Reviews Genetics"
+      }
+    ]
+  },
+  "M4-0c-d47da47b5cf5": {
+    "type": "mtf",
+    "question": "关于比较基因组学，以下说法正确的有哪些？",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "比较基因组学通过比较不同物种的基因组来揭示基因功能和进化关系",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "基因组中的保守区域通常具有重要的生物学功能",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "基因组的共线性（synteny）分析可以帮助识别直系同源基因",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "比较基因组学只能用于近缘物种之间的比较",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：比较基因组学的定义。B正确：保守区域功能重要。C正确：共线性帮助识别orthologs。D错误：可用于远缘物种比较。",
+    "subject": "演化生物学",
+    "concept": "比较基因组学",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "molecular_evo",
+      "module_4",
+      "演化生物学",
+      "比较基因组"
+    ],
+    "references": [
+      {
+        "doi": "10.1101/gr.175908",
+        "title": "Comparative genomics",
+        "authors": "Eichler EE, Sankoff D",
+        "year": 2008,
+        "journal": "Genome Research"
+      }
+    ]
+  },
+  "M4-0c-4d137976ab2f": {
+    "type": "mtf",
+    "question": "关于分子钟的校准，以下判断正确的有哪些？",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "分子钟校准通常依赖化石记录提供的分化时间",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "地质事件（如大陆漂移、岛屿形成）可以作为校准点",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "使用多个校准点可以提高分子钟估计的准确性",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "分子钟校准不需要考虑不同谱系间速率的差异",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：化石是主要校准来源。B正确：地质事件可作校准。C正确：多校准点更准确。D错误：需要考虑速率差异（松弛分子钟模型）。",
+    "subject": "演化生物学",
+    "concept": "分子钟校准",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "molecular_evo",
+      "module_4",
+      "演化生物学",
+      "分子钟"
+    ],
+    "references": []
+  },
+  "M4-0c-48b516a75839": {
+    "type": "mtf",
+    "question": "关于基因家族的演化，以下说法正确的有哪些？",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "基因复制是基因家族扩增的主要机制",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "基因复制后的命运包括新功能化、亚功能化和假基因化",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "Hox基因家族在动物体轴发育中起关键作用",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "基因家族中的所有成员都具有完全相同的功能",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：基因复制扩增家族。B正确：三种命运。C正确：Hox基因控制体轴。D错误：家族成员可功能分化。",
+    "subject": "演化生物学",
+    "concept": "基因家族演化",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "molecular_evo",
+      "module_4",
+      "演化生物学",
+      "基因家族"
+    ],
+    "references": []
+  }
+}

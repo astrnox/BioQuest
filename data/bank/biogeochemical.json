@@ -1,0 +1,216 @@
+{
+  "M3-0f-c484b731879d": {
+    "type": "mtf",
+    "question": "关于碳循环，下列说法正确的有：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "大气中的CO₂通过光合作用被固定为有机物，通过呼吸作用和分解作用返回大气",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "化石燃料的燃烧是人为干扰碳循环的重要途径，导致大气CO₂浓度升高",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "海洋是重要的碳汇，通过物理溶解和生物泵（biological pump）吸收大量CO₂",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "碳循环完全是气体型循环，不存在沉积型循环的成分",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：光合固定CO₂，呼吸和分解释放CO₂。B正确：化石燃料燃烧释放地质历史时期固定的碳。C正确：海洋通过溶解泵和生物泵（浮游植物光合→食物链→沉降）吸收CO₂。D错误：碳循环兼具气体型和沉积型特征——CO₂在大气和海洋间循环（气体型），同时碳酸盐岩石（石灰岩）和化石燃料中的碳通过地质过程缓慢循环（沉积型）。",
+    "subject": "生态学",
+    "concept": "碳循环",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "biogeochemical",
+      "module_3",
+      "生态学",
+      "碳循环"
+    ],
+    "references": []
+  },
+  "M3-0f-3f95fc6c79f0": {
+    "type": "mtf",
+    "question": "关于氮循环，下列说法正确的有：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "生物固氮由固氮酶催化，将N₂还原为NH₃，该酶对O₂极其敏感",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "硝化作用分为两步：氨氧化为亚硝酸盐（由亚硝化单胞菌），再氧化为硝酸盐（由硝化杆菌）",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "反硝化作用在厌氧条件下进行，将硝酸盐还原为N₂或N₂O返回大气",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "植物可以直接吸收利用大气中的N₂作为氮源",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：固氮酶（含Fe-Mo辅因子）对O₂敏感，根瘤菌通过豆血红蛋白保护固氮酶。B正确：硝化作用两步——NH₃→NO₂⁻（Nitrosomonas）→NO₃⁻（Nitrobacter）。C正确：反硝化在厌氧条件下由反硝化菌将NO₃⁻→NO₂⁻→NO→N₂O→N₂。D错误：植物不能直接利用N₂，只能吸收无机氮（NH₄⁺和NO₃⁻）和少量简单有机氮。N₂必须先经固氮菌或工业固氮转化为可利用形式。",
+    "subject": "生态学",
+    "concept": "氮循环",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "biogeochemical",
+      "module_3",
+      "生态学",
+      "氮循环"
+    ],
+    "references": []
+  },
+  "M3-0f-3cd82536aee2": {
+    "type": "mtf",
+    "question": "关于磷循环和水体富营养化，下列说法正确的有：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "磷循环是典型的沉积型循环，没有气体形式的磷存在于大气中",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "磷是许多淡水生态系统的限制性营养元素，磷的输入增加可导致富营养化",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "水体富营养化导致藻类大量繁殖→死亡分解耗氧→水体缺氧→鱼类死亡",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "磷的主要储存库是大气，通过降水进入生态系统",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：磷循环是沉积型循环，无气体态。B正确：磷常是淡水生产力的限制因子。C正确：富营养化→藻华→死亡→分解耗氧→缺氧→鱼类死亡（水华/赤潮）。D错误：磷的主要储存库是岩石和沉积物（非大气），通过岩石风化释放磷酸盐进入生态系统。",
+    "subject": "生态学",
+    "concept": "磷循环与富营养化",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "biogeochemical",
+      "module_3",
+      "生态学",
+      "磷循环"
+    ],
+    "references": [
+      {
+        "doi": "10.1890/050024",
+        "title": "Phosphorus cycling and eutrophication",
+        "authors": "Carpenter SR",
+        "year": 2005,
+        "journal": "Ecological Applications"
+      }
+    ]
+  },
+  "M3-0f-40cc21c3d622": {
+    "type": "mtf",
+    "question": "关于水循环，下列说法正确的有：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "水循环的驱动力主要来自太阳能（蒸发）和重力（降水、径流）",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "蒸腾作用是陆地水循环的重要组成部分，森林的蒸腾量可占陆地蒸发总量的很大比例",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "地下水是陆地淡水的最大储存库，远大于地表水（河流湖泊）的储量",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "水循环的速度在全球各区域是均匀的，不存在区域差异",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：太阳能驱动蒸发，重力驱动降水和径流。B正确：森林蒸腾是陆地水循环重要环节。C正确：地下水储量约为地表水的100倍以上。D错误：水循环速度存在显著区域差异——热带雨林水循环快（高温高蒸发高降水），沙漠水循环极慢（低降水）；不同水体的更新周期也不同（大气水约9天，深层地下水可达数千年）。",
+    "subject": "生态学",
+    "concept": "水循环",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "biogeochemical",
+      "module_3",
+      "生态学",
+      "水循环"
+    ],
+    "references": [
+      {
+        "doi": "10.1126/science.1089927",
+        "title": "Global water cycle",
+        "authors": "Oki T, Kanae S",
+        "year": 2006,
+        "journal": "Science"
+      }
+    ]
+  },
+  "M3-0f-094435c2f903": {
+    "type": "mtf",
+    "question": "关于生物地球化学循环的一般特征，下列说法正确的有：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "气体型循环（如碳、氮）的储存库主要是大气和海洋，循环速度快，全球性强",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "沉积型循环（如磷、钙）的储存库主要是岩石和沉积物，循环速度慢，易受局部干扰影响",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "微生物在碳、氮、硫等元素的生物地球化学循环中扮演关键角色",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "人类活动对生物地球化学循环的影响仅限于局部区域，不影响全球尺度的循环",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：气体型循环以大气/海洋为库，全球性强。B正确：沉积型循环以岩石为库，速度慢。C正确：微生物参与固氮、硝化、反硝化、分解等关键过程。D错误：人类活动（化石燃料燃烧、化肥使用、森林砍伐等）已显著改变全球尺度的碳、氮、磷循环——如大气CO₂浓度从工业革命前280ppm升至420ppm以上，人为固氮量已超过全球自然固氮总量。",
+    "subject": "生态学",
+    "concept": "生物地球化学循环特征",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "biogeochemical",
+      "module_3",
+      "生态学",
+      "生物地球化学循环"
+    ],
+    "references": [
+      {
+        "doi": "10.1126/science.1163700",
+        "title": "Human alteration of biogeochemical cycles",
+        "authors": "Vitousek PM et al.",
+        "year": 1997,
+        "journal": "Science"
+      }
+    ]
+  }
+}

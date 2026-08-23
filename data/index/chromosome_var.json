@@ -1,0 +1,67 @@
+{
+  "M4-05-3fbdbe899693": {
+    "tags": [
+      "chromosome_var",
+      "module_4",
+      "遗传学",
+      "染色体变异"
+    ],
+    "diff": "league",
+    "len": 172,
+    "src": "chromosome_var",
+    "year": null,
+    "module": "module_4"
+  },
+  "M4-05-437528153450": {
+    "tags": [
+      "chromosome_var",
+      "module_4",
+      "遗传学",
+      "多倍体"
+    ],
+    "diff": "high_school",
+    "len": 124,
+    "src": "chromosome_var",
+    "year": null,
+    "module": "module_4"
+  },
+  "M4-05-e6e02507339f": {
+    "tags": [
+      "chromosome_var",
+      "module_4",
+      "遗传学",
+      "非整倍体"
+    ],
+    "diff": "high_school",
+    "len": 130,
+    "src": "chromosome_var",
+    "year": null,
+    "module": "module_4"
+  },
+  "M4-05-944318e77168": {
+    "tags": [
+      "chromosome_var",
+      "module_4",
+      "遗传学",
+      "易位"
+    ],
+    "diff": "league",
+    "len": 139,
+    "src": "chromosome_var",
+    "year": null,
+    "module": "module_4"
+  },
+  "M4-05-9471bfc2c0bc": {
+    "tags": [
+      "chromosome_var",
+      "module_4",
+      "遗传学",
+      "染色体疾病"
+    ],
+    "diff": "league",
+    "len": 127,
+    "src": "chromosome_var",
+    "year": null,
+    "module": "module_4"
+  }
+}

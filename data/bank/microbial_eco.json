@@ -1,0 +1,208 @@
+{
+  "M2-10-45260be12a67": {
+    "type": "mtf",
+    "question": "微生物组的特征包括：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "人体微生物组包含数万亿微生物",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "肠道微生物帮助消化和合成维生素",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "土壤微生物参与养分循环",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "微生物组对宿主健康没有影响",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：微生物数量庞大。B正确：肠道菌功能。C正确：土壤菌功能。D错误：微生物组影响健康。",
+    "subject": "微生物学",
+    "concept": "微生物组",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "microbial_eco",
+      "module_2",
+      "微生物学",
+      "微生物组"
+    ],
+    "references": []
+  },
+  "M2-10-78cab3622ace": {
+    "type": "mtf",
+    "question": "生物膜的特征包括：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "生物膜是微生物附着在表面形成的群落",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "生物膜中的微生物被胞外多糖基质包被",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "生物膜中的微生物对抗生素更敏感",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "生物膜可以保护微生物抵抗环境压力",
+        "answer": true
+      }
+    ],
+    "explanation": "A正确：生物膜定义。B正确：胞外基质。C错误：生物膜中微生物更耐药。D正确：保护作用。",
+    "subject": "微生物学",
+    "concept": "生物膜",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "microbial_eco",
+      "module_2",
+      "微生物学",
+      "生物膜"
+    ],
+    "references": [
+      {
+        "doi": "10.1128/microbiolspec.1.1.0016.2013",
+        "title": "Biofilm formation in bacteria",
+        "authors": "Costerton JW, Stewart PS, Greenberg EP",
+        "year": 1999,
+        "journal": "Microbiology Spectrum"
+      }
+    ]
+  },
+  "M2-10-5929e8225b25": {
+    "type": "mtf",
+    "question": "微生物在生物地球化学循环中的作用包括：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "固氮微生物将N2转化为NH3",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "硝化细菌将NH3氧化为NO3-",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "反硝化细菌将NO3-还原为N2",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "微生物不参与碳循环",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：固氮作用。B正确：硝化作用。C正确：反硝化。D错误：微生物参与碳循环。",
+    "subject": "微生物学",
+    "concept": "元素循环",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "microbial_eco",
+      "module_2",
+      "微生物学",
+      "循环"
+    ],
+    "references": []
+  },
+  "M2-10-746cbe409a50": {
+    "type": "mtf",
+    "question": "微生物共生的类型包括：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "互利共生中双方都受益",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "偏利共生中一方受益另一方不受影响",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "寄生中一方受益另一方受害",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "共生关系对双方总是有利的",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：互利共生。B正确：偏利共生。C正确：寄生。D错误：共生包括多种类型。",
+    "subject": "微生物学",
+    "concept": "共生类型",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "microbial_eco",
+      "module_2",
+      "微生物学",
+      "共生"
+    ],
+    "references": []
+  },
+  "M2-10-5a030cf4478c": {
+    "type": "mtf",
+    "question": "微生物修复的特征包括：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "微生物可以降解有机污染物",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "微生物可以转化重金属降低毒性",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "生物修复比物理化学方法更环保",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "所有污染物都可以被微生物降解",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：降解有机物。B正确：转化重金属。C正确：环保。D错误：有些污染物难降解。",
+    "subject": "微生物学",
+    "concept": "微生物修复",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "microbial_eco",
+      "module_2",
+      "微生物学",
+      "修复"
+    ],
+    "references": [
+      {
+        "doi": "10.1146/annurev.micro.56.012302.160731",
+        "title": "Bioremediation of contaminated environments",
+        "authors": "Meckenstock OU, Richnow HH",
+        "year": 2006,
+        "journal": "Annual Review of Microbiology"
+      }
+    ]
+  }
+}

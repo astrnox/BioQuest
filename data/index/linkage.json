@@ -1,0 +1,67 @@
+{
+  "M4-02-7d8f6cac0ae9": {
+    "tags": [
+      "linkage",
+      "module_4",
+      "遗传学",
+      "连锁"
+    ],
+    "diff": "league",
+    "len": 136,
+    "src": "linkage",
+    "year": null,
+    "module": "module_4"
+  },
+  "M4-02-727b862fc2b3": {
+    "tags": [
+      "linkage",
+      "module_4",
+      "遗传学",
+      "三点测交"
+    ],
+    "diff": "league",
+    "len": 144,
+    "src": "linkage",
+    "year": null,
+    "module": "module_4"
+  },
+  "M4-02-e7ce35e0e60d": {
+    "tags": [
+      "linkage",
+      "module_4",
+      "遗传学",
+      "连锁图谱"
+    ],
+    "diff": "league",
+    "len": 96,
+    "src": "linkage",
+    "year": null,
+    "module": "module_4"
+  },
+  "M4-02-9b2cac628b01": {
+    "tags": [
+      "linkage",
+      "module_4",
+      "遗传学",
+      "连锁"
+    ],
+    "diff": "high_school",
+    "len": 106,
+    "src": "linkage",
+    "year": null,
+    "module": "module_4"
+  },
+  "M4-02-64f3ccd360c7": {
+    "tags": [
+      "linkage",
+      "module_4",
+      "遗传学",
+      "重组率"
+    ],
+    "diff": "high_school",
+    "len": 124,
+    "src": "linkage",
+    "year": null,
+    "module": "module_4"
+  }
+}

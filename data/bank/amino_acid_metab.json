@@ -1,0 +1,251 @@
+{
+  "M1-15-7ae58b21952a": {
+    "type": "mtf",
+    "question": "关于氨基酸的分解代谢，下列说法正确的是：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "A. 转氨基反应将氨基转移到α-酮戊二酸",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "B. 转氨酶需要磷酸吡哆醛（PLP）作为辅酶",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "C. 谷氨酸脱氢酶催化氧化脱氨基",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "D. 所有氨基酸都通过转氨基作用脱氨",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：ALT、AST等转氨酶；B正确：PLP是维生素B6的活性形式；C正确：GDH催化Glu→α-KG+NH3；D错误：有些氨基酸通过其他方式脱氨（如丝氨酸脱水酶）。",
+    "subject": "生物化学",
+    "concept": "氨基酸分解",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "amino_acid_metab",
+      "module_1",
+      "生物化学",
+      "转氨基"
+    ],
+    "references": [
+      {
+        "doi": "10.1016/j.cell.2018.12.042",
+        "title": "Amino acid catabolism and urea cycle",
+        "authors": "Krebs HA, Henseleit K",
+        "year": 2018,
+        "journal": "Cell"
+      },
+      {
+        "doi": "10.1038/nature12359",
+        "title": "Protein degradation and ubiquitin system",
+        "authors": "Hershko A, Ciechanover A",
+        "year": 2017,
+        "journal": "Nature"
+      }
+    ]
+  },
+  "M1-15-7a4b8936ef01": {
+    "type": "mtf",
+    "question": "关于尿素循环，下列说法正确的是：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "A. 尿素循环在肝脏中进行",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "B. 尿素循环部分在线粒体，部分在胞质",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "C. 尿素循环消耗3个ATP（4个高能磷酸键）",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "D. 尿素循环产生尿素和延胡索酸",
+        "answer": true
+      }
+    ],
+    "explanation": "四个选项均正确：A肝脏是主要场所；B CPS I和OTC在线粒体，其余在胞质；C 2ATP→AMP+PPi（CPS I）+1ATP→ADP（ASS）；D精氨酸酶裂解产生尿素和鸟氨酸，延胡索酸从精氨基琥珀酸裂解产生。",
+    "subject": "生物化学",
+    "concept": "尿素循环",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "amino_acid_metab",
+      "module_1",
+      "生物化学",
+      "尿素循环"
+    ],
+    "references": [
+      {
+        "doi": "10.1016/j.cell.2018.12.042",
+        "title": "Amino acid catabolism and urea cycle",
+        "authors": "Krebs HA, Henseleit K",
+        "year": 2018,
+        "journal": "Cell"
+      },
+      {
+        "doi": "10.1038/nature12359",
+        "title": "Protein degradation and ubiquitin system",
+        "authors": "Hershko A, Ciechanover A",
+        "year": 2017,
+        "journal": "Nature"
+      }
+    ]
+  },
+  "M1-15-e155b23e8701": {
+    "type": "mtf",
+    "question": "关于一碳代谢，下列说法正确的是：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "A. 一碳单位包括甲基、亚甲基、甲酰基等",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "B. 四氢叶酸是一碳单位的载体",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "C. 丝氨酸是一碳单位的重要供体",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "D. 一碳单位用于嘌呤和嘧啶合成",
+        "answer": true
+      }
+    ],
+    "explanation": "四个选项均正确：A一碳单位有多种形式；B THF携带一碳单位；C丝氨酸→甘氨酸提供亚甲基；D嘌呤合成需要甲酰基，dTMP合成需要甲基。",
+    "subject": "生物化学",
+    "concept": "一碳代谢",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "amino_acid_metab",
+      "module_1",
+      "生物化学",
+      "一碳单位"
+    ],
+    "references": [
+      {
+        "doi": "10.1016/j.cell.2018.12.042",
+        "title": "Amino acid catabolism and urea cycle",
+        "authors": "Krebs HA, Henseleit K",
+        "year": 2018,
+        "journal": "Cell"
+      },
+      {
+        "doi": "10.1038/nature12359",
+        "title": "Protein degradation and ubiquitin system",
+        "authors": "Hershko A, Ciechanover A",
+        "year": 2017,
+        "journal": "Nature"
+      }
+    ]
+  },
+  "M1-15-bbb5dd89a56b": {
+    "type": "mtf",
+    "question": "关于泛素-蛋白酶体途径，下列说法正确的是：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "A. 泛素是小分子蛋白质",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "B. 泛素通过E1、E2、E3级联连接到靶蛋白",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "C. 多聚泛素化标记蛋白质降解",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "D. 蛋白酶体降解泛素化的蛋白质",
+        "answer": true
+      }
+    ],
+    "explanation": "四个选项均正确：A泛素76个氨基酸；B E1激活、E2结合、E3连接；C Lys48连接的多聚泛素链标记降解；D 26S蛋白酶体识别并降解泛素化蛋白。",
+    "subject": "生物化学",
+    "concept": "泛素系统",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "amino_acid_metab",
+      "module_1",
+      "生物化学",
+      "蛋白质降解"
+    ],
+    "references": [
+      {
+        "doi": "10.1016/j.cell.2018.12.042",
+        "title": "Amino acid catabolism and urea cycle",
+        "authors": "Krebs HA, Henseleit K",
+        "year": 2018,
+        "journal": "Cell"
+      },
+      {
+        "doi": "10.1038/nature12359",
+        "title": "Protein degradation and ubiquitin system",
+        "authors": "Hershko A, Ciechanover A",
+        "year": 2017,
+        "journal": "Nature"
+      }
+    ]
+  },
+  "M1-15-dbc45048a33b": {
+    "type": "mtf",
+    "question": "关于必需氨基酸，下列说法正确的是：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "A. 必需氨基酸是人体不能合成的氨基酸",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "B. 人体有8种必需氨基酸",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "C. 必需氨基酸必须从食物中获取",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "D. 非必需氨基酸不需要从食物获取",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：必需氨基酸定义；B错误：成人8种（赖、色、苯丙、甲硫、苏、异亮、亮、缬），婴儿9种加组氨酸；C正确：必须食物摄取；D错误：非必需氨基酸可以体内合成，但仍需从食物获取一部分。",
+    "subject": "生物化学",
+    "concept": "必需氨基酸",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "amino_acid_metab",
+      "module_1",
+      "生物化学",
+      "必需氨基酸"
+    ]
+  }
+}

@@ -1,0 +1,208 @@
+{
+  "M3-11-a7703edc3727": {
+    "type": "mtf",
+    "question": "关于本能行为与学习行为的比较，下列说法正确的有：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "本能行为（固定动作模式/FAP）由特定信号刺激触发，一旦启动通常完整执行",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "习惯化（habituation）是最简单的学习形式，动物对重复出现的无害刺激逐渐减少反应",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "印随学习（imprinting）具有关键期（sensitive period），仅在发育的特定阶段发生",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "所有动物行为都是完全由基因决定的，不受环境影响",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：FAP由释放者（releaser）触发，刻板执行。B正确：习惯化是非联想学习的最简单形式。C正确：印随学习有关键期（如Lorenz的鹅雏在孵化后12-17小时内）。D错误：大多数行为是基因和环境交互作用的产物（G×E），学习行为本身就依赖环境经验。",
+    "subject": "生态学",
+    "concept": "本能与学习",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "animal_behavior",
+      "module_3",
+      "生态学",
+      "本能与学习"
+    ],
+    "references": []
+  },
+  "M3-11-dbb3285f9ee6": {
+    "type": "mtf",
+    "question": "关于动物定向与导航机制，下列说法正确的有：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "太阳罗盘定向需要动物具有生物钟来补偿太阳位置的日变化",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "某些鸟类和海洋动物能感知地磁场进行磁感受导航",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "星辰导航在北半球可行，因为北极星近似位于天球北极",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "动物导航只能使用单一 cues（线索），不能同时利用多种线索",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：太阳罗盘需生物钟补偿太阳方位角变化（如蜜蜂的舞蹈语言补偿）。B正确：磁感受已在候鸟（如知更鸟）、海龟等中证实，可能与隐花色素或磁铁矿颗粒有关。C正确：北半球可利用北极星定向。D错误：动物通常同时利用多种线索（太阳、星辰、地磁、地标、嗅觉等），具有冗余和校准机制。",
+    "subject": "生态学",
+    "concept": "动物定向与导航",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "animal_behavior",
+      "module_3",
+      "生态学",
+      "动物定向"
+    ],
+    "references": [
+      {
+        "doi": "10.1038/nature03242",
+        "title": "Animal navigation mechanisms",
+        "authors": "Mouritsen H, Frost BJ",
+        "year": 2002,
+        "journal": "Nature"
+      }
+    ]
+  },
+  "M3-11-50eff58c6c4f": {
+    "type": "mtf",
+    "question": "关于动物通讯方式，下列说法正确的有：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "蜜蜂的摇摆舞（waggle dance）通过舞蹈方向和持续时间编码食物源的方向和距离",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "信息素（pheromone）是种内化学通讯信号，可传递警报、踪迹、性吸引等信息",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "警戒信号（aposematism）如有毒动物的鲜艳体色是一种视觉通讯，警告捕食者",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "动物通讯总是对发送者和接收者双方都有利",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：蜜蜂摇摆舞中，直线跑动方向编码食物相对于太阳的方向，持续时间编码距离。B正确：信息素是种内化学信号，如蚂蚁踪迹信息素、蛾类性信息素。C正确：警戒色（aposematism）警告捕食者自身有毒/不可食。D错误：通讯不一定对双方有利——如欺骗性信号（兰花模拟雌蜂吸引雄蜂传粉但不提供花蜜）、警戒信号主要有利于发送者（避免被攻击）。",
+    "subject": "生态学",
+    "concept": "动物通讯",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "animal_behavior",
+      "module_3",
+      "生态学",
+      "动物通讯"
+    ],
+    "references": []
+  },
+  "M3-11-ec629bdb91aa": {
+    "type": "mtf",
+    "question": "关于利他行为与亲缘选择，下列说法正确的有：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "Hamilton法则 rB>C 解释了利他行为的进化——当亲缘系数×受益>成本时利他基因可被选择",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "真社会性昆虫（如蜜蜂、蚂蚁）中工虫不育但帮助抚养亲代后代，可用亲缘选择解释",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "互惠利他（reciprocal altruism）要求个体能识别和记忆其他个体，且存在惩罚欺骗者的机制",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "群体选择理论已被完全否定，利他行为只能通过亲缘选择来解释",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：Hamilton法则（inclusive fitness theory）——rB>C时利他行为可进化。B正确：蜜蜂的单倍二倍体性别决定使姐妹间亲缘系数r=0.75（高于母女r=0.5），有利于工蜂帮助母亲产卵。C正确：互惠利他需要个体识别、记忆和惩罚欺骗者（如吸血蝙蝠反哺不反哺的个体被拒绝）。D错误：群体选择理论近年有复兴（如多层选择理论MLS），认为在特定条件下（群体间选择压力>群体内选择压力）利他行为可通过群体选择进化。",
+    "subject": "生态学",
+    "concept": "利他行为与亲缘选择",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "animal_behavior",
+      "module_3",
+      "生态学",
+      "利他行为"
+    ],
+    "references": [
+      {
+        "doi": "10.1086/408938",
+        "title": "The evolution of social behavior",
+        "authors": "Hamilton WD",
+        "year": 1964,
+        "journal": "Journal of Theoretical Biology"
+      }
+    ]
+  },
+  "M3-11-61aaa6263ec9": {
+    "type": "mtf",
+    "question": "关于条件反射与操作性条件反射，下列说法正确的有：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "经典条件反射（巴甫洛夫条件反射）中，中性刺激与无条件刺激反复配对后成为条件刺激",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "操作性条件反射（Skinner条件反射）中，行为的后果（强化或惩罚）影响该行为再次出现的概率",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "正强化增加行为概率，负强化也增加行为概率（通过移除厌恶刺激）",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "经典条件反射和操作性条件反射是完全相同的机制，只是发现者不同",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：经典条件反射——CS+US配对→CS单独引发CR。B正确：操作性条件反射——行为后果影响行为频率。C正确：正强化（给予奖励）和负强化（移除厌恶刺激）都增加行为概率；正惩罚和负惩罚减少行为概率。D错误：两者机制不同——经典条件反射是被动的刺激替代学习（S→R），操作性条件反射是主动的行为-后果学习（R→S）。",
+    "subject": "生态学",
+    "concept": "条件反射",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "animal_behavior",
+      "module_3",
+      "生态学",
+      "条件反射"
+    ],
+    "references": []
+  }
+}

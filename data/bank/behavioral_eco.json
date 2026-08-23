@@ -1,0 +1,224 @@
+{
+  "M3-12-174cf5b4e9f8": {
+    "type": "mtf",
+    "question": "关于最优觅食理论（OFT），下列说法正确的有：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "最优觅食理论预测动物会选择使净能量收益最大化的觅食策略",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "猎物选择模型预测捕食者偏好能量/处理时间比最高的猎物",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "边际值定理（MVT）预测捕食者在一个斑块中停留的时间取决于到达下一个斑块的距离",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "最优觅食理论假设动物总是选择最大的猎物，不考虑处理时间",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：OFT核心是最优化能量净收益。B正确：偏好E/h（能量/处理时间）最高的猎物。C正确：MVT预测斑块停留时间随斑块间距离增大而增大（直到边际收益=平均收益）。D错误：OFT考虑处理时间——最优策略不是总选最大猎物，而是选E/h最高的猎物（大猎物可能处理时间过长）。",
+    "subject": "生态学",
+    "concept": "最优觅食理论",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "behavioral_eco",
+      "module_3",
+      "生态学",
+      "最优觅食"
+    ],
+    "references": [
+      {
+        "doi": "10.1086/408938",
+        "title": "Optimal foraging theory",
+        "authors": "Stephens DW, Krebs JR",
+        "year": 1986,
+        "journal": "Princeton University Press"
+      }
+    ]
+  },
+  "M3-12-9a597ad0f0f2": {
+    "type": "mtf",
+    "question": "关于性选择与配偶选择，下列说法正确的有：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "雄性竞争（intrasexual selection）通常导致雄性体型更大、具有武器（如鹿角）",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "雌性选择（intersexual selection）通常导致雄性发展出夸张的装饰特征（如孔雀尾羽）",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "Fisher失控选择模型解释了极端雄性装饰的进化——雌性偏好与雄性特征相互强化",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "性选择只作用于雄性，雌性不受性选择影响",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：雄性竞争（同性选择）→武器和体型二态性。B正确：雌性选择（异性选择）→夸张装饰。C正确：Fisher runaway——雌性偏好基因与雄性特征基因连锁，相互正反馈。D错误：性选择也可作用于雌性——在性别角色反转的物种（如瓣蹼鹬、海马）中，雌性竞争雄性，雌性更具装饰性。",
+    "subject": "生态学",
+    "concept": "性选择",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "behavioral_eco",
+      "module_3",
+      "生态学",
+      "性选择"
+    ],
+    "references": [
+      {
+        "doi": "10.1098/rspb.1997.0186",
+        "title": "Sexual selection mechanisms",
+        "authors": "Andersson M",
+        "year": 1994,
+        "journal": "Proceedings of the Royal Society B"
+      }
+    ]
+  },
+  "M3-12-adf2b8349883": {
+    "type": "mtf",
+    "question": "关于繁殖策略与生活史理论，下列说法正确的有：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "r-选择策略者投资于大量小后代，亲代抚育少，适应不稳定环境",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "K-选择策略者投资于少量大后代，亲代抚育多，适应稳定环境",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "繁殖代价（cost of reproduction）指当前繁殖投入会降低未来繁殖成功率或存活率",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "所有动物都严格遵循r-K连续体的某一端，不存在中间策略",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：r-策略——高繁殖率、小后代、少抚育。B正确：K-策略——低繁殖率、大后代、多抚育。C正确：繁殖代价是生活史理论核心概念——资源有限，当前繁殖投入与未来繁殖/存活存在权衡（trade-off）。D错误：r-K是连续体，大多数物种处于中间位置，且同一物种在不同环境条件下可调整策略（表型可塑性）。",
+    "subject": "生态学",
+    "concept": "繁殖策略",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "behavioral_eco",
+      "module_3",
+      "生态学",
+      "繁殖策略"
+    ],
+    "references": []
+  },
+  "M3-12-90a14108eac5": {
+    "type": "mtf",
+    "question": "关于包容适合度（inclusive fitness）理论，下列说法正确的有：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "包容适合度=直接适合度（自身繁殖成功）+间接适合度（帮助亲属繁殖的额外成功）",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "亲缘选择可以解释为什么个体对近亲的利他行为比对远亲或无亲缘个体更强",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "真社会性昆虫中的等级分化（如蜂后与工蜂）是亲缘选择的经典例证",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "包容适合度理论认为个体应该对所有生物都表现出同等程度的利他行为",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：包容适合度=直接+间接适合度。B正确：Hamilton法则预测利他行为强度与亲缘系数成正比。C正确：蜜蜂中工蜂帮助蜂后（母亲）繁殖，因单倍二倍体系统姐妹间r=0.75。D错误：包容适合度理论预测利他行为应与亲缘关系成正比——对近亲利他强，对远亲弱，对无亲缘个体最弱或不存在。",
+    "subject": "生态学",
+    "concept": "包容适合度",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "behavioral_eco",
+      "module_3",
+      "生态学",
+      "包容适合度"
+    ],
+    "references": [
+      {
+        "doi": "10.1086/408938",
+        "title": "Inclusive fitness theory",
+        "authors": "Hamilton WD",
+        "year": 1964,
+        "journal": "Journal of Theoretical Biology"
+      }
+    ]
+  },
+  "M3-12-66df6a466ffa": {
+    "type": "mtf",
+    "question": "关于社会行为的进化，下列说法正确的有：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "社会行为的进化可以通过亲缘选择、互惠利他和群体选择等多种机制解释",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "合作繁殖（cooperative breeding）中帮手（helpers）帮助抚养非自己的后代，通常可用亲缘选择解释",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "囚徒困境博弈模型表明在重复博弈中，\"以牙还牙\"（tit-for-tat）策略可以促进合作",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "社会性昆虫中的等级制度完全是由遗传决定的，不受环境因素影响",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：多种机制可解释社会行为进化。B正确：帮手通常是亲缘个体（如子女帮助父母），可用Hamilton法则解释。C正确：Axelrod的研究表明重复博弈中tit-for-tat策略最稳定——先合作，然后模仿对方上一步行为。D错误：社会性昆虫的等级分化受基因和环境双重影响——如蜜蜂幼虫发育为蜂后还是工蜂取决于食物（蜂王浆vs花粉蜂蜜），不是纯遗传决定。",
+    "subject": "生态学",
+    "concept": "社会行为进化",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "behavioral_eco",
+      "module_3",
+      "生态学",
+      "社会行为"
+    ],
+    "references": [
+      {
+        "doi": "10.1126/science.242.4874.14",
+        "title": "The evolution of cooperation",
+        "authors": "Axelrod R, Hamilton WD",
+        "year": 1981,
+        "journal": "Science"
+      }
+    ]
+  }
+}

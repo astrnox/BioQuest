@@ -1,0 +1,216 @@
+{
+  "M3-0b-8404f19524e0": {
+    "type": "mtf",
+    "question": "关于恒温动物与变温动物的比较，下列说法正确的有：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "恒温动物（鸟类和哺乳类）通过内部产热维持相对恒定的体温",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "变温动物的体温随环境温度变化而变化，其代谢率随温度升高而增大（Q₁₀效应）",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "恒温动物的基础代谢率通常显著高于同等体型的变温动物",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "所有鱼类和两栖类都是严格的变温动物，不存在任何体温调节机制",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：恒温动物（endotherm）通过代谢产热维持体温恒定。B正确：变温动物（ectotherm）体温随环境变化，代谢率遵循Q₁₀效应（温度每升高10°C，反应速率约增加2-3倍）。C正确：恒温动物基础代谢率约为同体型变温动物的5-10倍。D错误：部分鱼类（如金枪鱼、某些鲨鱼）具有区域性恒温能力（retia mirabilia逆流热交换保持肌肉/脑温度高于水温）；某些大型蜥蜴也有行为性体温调节。",
+    "subject": "动物生理学",
+    "concept": "恒温与变温",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "temperature_reg",
+      "module_3",
+      "动物生理学",
+      "恒温变温"
+    ],
+    "references": [
+      {
+        "doi": "10.1086/590218",
+        "title": "Endothermy and ectothermy in vertebrates",
+        "authors": "Clarke A, Pörtner HO",
+        "year": 2010,
+        "journal": "Physiological and Biochemical Zoology"
+      }
+    ]
+  },
+  "M3-0b-d9a494556339": {
+    "type": "mtf",
+    "question": "关于非颤抖产热（non-shivering thermogenesis）的机制，下列说法正确的有：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "非颤抖产热主要发生在棕色脂肪组织（BAT）中，由解偶联蛋白1（UCP1/thermogenin）介导",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "UCP1使线粒体内膜对质子的通透性增加，使氧化磷酸化解偶联，能量以热能释放",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "去甲肾上腺素通过激活β₃肾上腺素受体促进棕色脂肪组织的产热",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "成年人类的棕色脂肪组织含量极少，在体温调节中不发挥任何作用",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：BAT是哺乳动物非颤抖产热的主要场所，UCP1是其关键分子。B正确：UCP1使质子不经ATP合酶而直接回流→能量不以ATP形式储存而以热能释放。C正确：交感神经释放NE→β₃受体→cAMP→PKA→ lipolysis→脂肪酸激活UCP1。D错误：近年研究发现成年人类仍存在功能性棕色脂肪组织（主要在颈部、锁骨上区域），在冷适应和能量代谢中发挥重要作用。",
+    "subject": "动物生理学",
+    "concept": "非颤抖产热",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "temperature_reg",
+      "module_3",
+      "动物生理学",
+      "非颤抖产热"
+    ],
+    "references": [
+      {
+        "doi": "10.1038/nm.2002",
+        "title": "Brown adipose tissue in adult humans",
+        "authors": "Cypess AM et al.",
+        "year": 2009,
+        "journal": "New England Journal of Medicine"
+      }
+    ]
+  },
+  "M3-0b-b6e60c2cb0f2": {
+    "type": "mtf",
+    "question": "关于散热机制，下列说法正确的有：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "皮肤血管舒张增加皮肤血流量和散热，血管收缩减少散热",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "蒸发散热包括出汗（显性出汗）和经皮肤/呼吸道的不显性蒸发",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "当环境温度高于皮肤温度时，辐射、传导和对流散热停止，蒸发成为唯一散热途径",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "狗主要通过皮肤出汗来散热",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：皮肤血管是重要的散热器官——舒张时散热↑，收缩时散热↓。B正确：蒸发散热包括汗腺主动出汗和不显性蒸发（经皮肤和呼吸道）。C正确：当环境温度>皮肤温度（约33°C），辐射/传导/对流变为吸热方向，蒸发成为唯一有效散热途径。D错误：狗皮肤汗腺极少，主要通过喘息（panting）——快速呼吸增加呼吸道蒸发散热。",
+    "subject": "动物生理学",
+    "concept": "散热机制",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "temperature_reg",
+      "module_3",
+      "动物生理学",
+      "散热机制"
+    ],
+    "references": []
+  },
+  "M3-0b-7e3b10c40912": {
+    "type": "mtf",
+    "question": "关于下丘脑体温调节中枢，下列说法正确的有：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "视前区-下丘脑前部（PO/AH）是体温调节的整合中枢，含有温度敏感神经元",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "体温调定点学说认为PO/AH设定一个温度阈值（约37°C），体温偏离时启动调节反应",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "发热时致热原（如IL-1、TNF-α）使下丘脑PGE₂合成增加，调定点上移",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "体温调节完全是自主性的，行为性体温调节不存在",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：PO/AH是体温调节整合中枢，含热敏和冷敏神经元。B正确：调定点学说——体温偏离设定点时启动散热或产热反应。C正确：感染时巨噬细胞释放IL-1等→下丘脑COX-2↑→PGE₂↑→调定点上移→产热增加（寒战）→体温升高（发热）。D错误：体温调节包括自主性（血管舒缩、出汗、颤抖）和行为性（增减衣物、寻找阴凉/温暖环境）两种方式，行为性调节在人类尤为重要。",
+    "subject": "动物生理学",
+    "concept": "体温调节中枢",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "temperature_reg",
+      "module_3",
+      "动物生理学",
+      "体温调节中枢"
+    ],
+    "references": [
+      {
+        "doi": "10.1152/japplphysiol.00696.2007",
+        "title": "Thermoregulation and fever",
+        "authors": "Romanovsky AA",
+        "year": 2008,
+        "journal": "Journal of Applied Physiology"
+      }
+    ]
+  },
+  "M3-0b-d113d86b78c9": {
+    "type": "mtf",
+    "question": "关于冬眠与蛰伏的生理特征，下列说法正确的有：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "冬眠动物在冬眠期间体温显著下降，可接近环境温度（但不低于0°C）",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "冬眠期间代谢率可降低至正常水平的1-5%，心率和呼吸频率也显著降低",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "冬眠动物定期周期性觉醒，每次觉醒期间体温恢复正常",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "冬眠和睡眠是相同的生理过程，只是持续时间不同",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：冬眠动物体温可降至接近0°C（但不结冰）。B正确：代谢率大幅下降（可降至1-5%），心率从200-300次/分降至5次/分。C正确：冬眠动物每隔1-3周周期性觉醒，体温恢复正常数小时后再进入冬眠，原因尚不完全清楚（可能与免疫功能和睡眠债有关）。D错误：冬眠与睡眠是不同的生理过程——冬眠是特殊的低代谢状态，体温下降、代谢大幅降低；睡眠时代谢率仅降低约10-15%，体温变化很小。",
+    "subject": "动物生理学",
+    "concept": "冬眠与蛰伏",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "temperature_reg",
+      "module_3",
+      "动物生理学",
+      "冬眠"
+    ],
+    "references": []
+  }
+}

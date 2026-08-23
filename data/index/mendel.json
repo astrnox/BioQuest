@@ -1,0 +1,67 @@
+{
+  "M4-01-1cdf6e6e0193": {
+    "tags": [
+      "mendel",
+      "module_4",
+      "遗传学",
+      "分离定律"
+    ],
+    "diff": "league",
+    "len": 151,
+    "src": "mendel",
+    "year": null,
+    "module": "module_4"
+  },
+  "M4-01-c634ffd22063": {
+    "tags": [
+      "mendel",
+      "module_4",
+      "遗传学",
+      "自由组合"
+    ],
+    "diff": "league",
+    "len": 174,
+    "src": "mendel",
+    "year": null,
+    "module": "module_4"
+  },
+  "M4-01-123ed1306c13": {
+    "tags": [
+      "mendel",
+      "module_4",
+      "遗传学",
+      "显隐性"
+    ],
+    "diff": "high_school",
+    "len": 115,
+    "src": "mendel",
+    "year": null,
+    "module": "module_4"
+  },
+  "M4-01-6eefea0cf1f9": {
+    "tags": [
+      "mendel",
+      "module_4",
+      "遗传学",
+      "测交"
+    ],
+    "diff": "high_school",
+    "len": 126,
+    "src": "mendel",
+    "year": null,
+    "module": "module_4"
+  },
+  "M4-01-022d751ae6e4": {
+    "tags": [
+      "mendel",
+      "module_4",
+      "遗传学",
+      "孟德尔定律"
+    ],
+    "diff": "league",
+    "len": 107,
+    "src": "mendel",
+    "year": null,
+    "module": "module_4"
+  }
+}

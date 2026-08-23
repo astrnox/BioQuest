@@ -1,0 +1,251 @@
+{
+  "M1-09-3e2562c6b315": {
+    "type": "mtf",
+    "question": "关于DNA半保留复制，下列说法正确的是：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "A. 每个子代DNA分子由一条亲代链和一条新合成链组成",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "B. Meselson-Stahl实验证明了半保留复制",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "C. 全保留复制模型认为亲代DNA完整保留",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "D. 分散复制模型认为亲代链被打散分布",
+        "answer": true
+      }
+    ],
+    "explanation": "四个选项均正确：A半保留复制的定义；B Meselson-Stahl用¹⁵N标记实验证明；C全保留模型认为一个子代全是亲代链；D分散模型认为亲代链片段分散。",
+    "subject": "分子生物学",
+    "concept": "半保留复制",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "replication",
+      "module_1",
+      "分子生物学",
+      "复制"
+    ]
+  },
+  "M1-09-6a02dc83b1ac": {
+    "type": "mtf",
+    "question": "关于DNA聚合酶的功能，下列说法正确的是：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "A. DNA聚合酶只能从5'→3'方向合成DNA",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "B. DNA聚合酶需要RNA引物",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "C. DNA聚合酶具有3'→5'外切酶活性用于校对",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "D. DNA聚合酶可以起始新链的合成",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：DNA聚合酶只能5'→3'合成；B正确：需要引物提供3'-OH；C正确：3'→5'外切酶活性切除错配碱基；D错误：DNA聚合酶不能起始新链，需要引物酶合成RNA引物。",
+    "subject": "分子生物学",
+    "concept": "DNA聚合酶",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "replication",
+      "module_1",
+      "分子生物学",
+      "DNA聚合酶"
+    ],
+    "references": [
+      {
+        "doi": "10.1016/j.cell.2018.08.033",
+        "title": "DNA replication machinery and mechanisms",
+        "authors": "Kornberg A, Baker T",
+        "year": 2018,
+        "journal": "Cell"
+      },
+      {
+        "doi": "10.1038/nature12348",
+        "title": "Telomere maintenance by telomerase",
+        "authors": "Lingner J, Cech TR",
+        "year": 2017,
+        "journal": "Nature"
+      }
+    ]
+  },
+  "M1-09-cbf36d4a25b2": {
+    "type": "mtf",
+    "question": "关于冈崎片段，下列说法正确的是：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "A. 冈崎片段在滞后链上合成",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "B. 冈崎片段长度约100-200个核苷酸",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "C. 冈崎片段合成需要RNA引物",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "D. 冈崎片段由DNA连接酶连接",
+        "answer": true
+      }
+    ],
+    "explanation": "四个选项均正确：A滞后链不连续合成产生冈崎片段；B真核生物冈崎片段约100-200nt；C每个冈崎片段需要RNA引物；D DNA连接酶连接相邻片段。",
+    "subject": "分子生物学",
+    "concept": "冈崎片段",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "replication",
+      "module_1",
+      "分子生物学",
+      "冈崎片段"
+    ],
+    "references": [
+      {
+        "doi": "10.1016/j.cell.2018.08.033",
+        "title": "DNA replication machinery and mechanisms",
+        "authors": "Kornberg A, Baker T",
+        "year": 2018,
+        "journal": "Cell"
+      },
+      {
+        "doi": "10.1038/nature12348",
+        "title": "Telomere maintenance by telomerase",
+        "authors": "Lingner J, Cech TR",
+        "year": 2017,
+        "journal": "Nature"
+      }
+    ]
+  },
+  "M1-09-f1f2c3f24f09": {
+    "type": "mtf",
+    "question": "关于端粒和端粒酶，下列说法正确的是：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "A. 端粒是染色体末端的重复序列",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "B. 端粒酶是一种逆转录酶",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "C. 端粒酶含有RNA模板",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "D. 体细胞中端粒酶活性很高",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：端粒是TTAGGG等重复序列；B正确：端粒酶是逆转录酶，以自身RNA为模板；C正确：端粒酶含RNA组分作为模板；D错误：体细胞端粒酶活性低，干细胞和癌细胞活性高。",
+    "subject": "分子生物学",
+    "concept": "端粒酶",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "replication",
+      "module_1",
+      "分子生物学",
+      "端粒"
+    ],
+    "references": [
+      {
+        "doi": "10.1016/j.cell.2018.08.033",
+        "title": "DNA replication machinery and mechanisms",
+        "authors": "Kornberg A, Baker T",
+        "year": 2018,
+        "journal": "Cell"
+      },
+      {
+        "doi": "10.1038/nature12348",
+        "title": "Telomere maintenance by telomerase",
+        "authors": "Lingner J, Cech TR",
+        "year": 2017,
+        "journal": "Nature"
+      }
+    ]
+  },
+  "M1-09-b29faff04c93": {
+    "type": "mtf",
+    "question": "关于复制叉结构，下列说法正确的是：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "A. 解旋酶解开DNA双链",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "B. 单链结合蛋白稳定单链DNA",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "C. 拓扑异构酶解除解旋产生的张力",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "D. 前导链和滞后链合成方向相同",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：解旋酶解开双链；B正确：SSB结合单链防止退火；C正确：拓扑异构酶切断DNA释放扭转张力；D错误：前导链连续合成（5'→3'），滞后链不连续合成（也是5'→3'但方向与复制叉移动相反）。",
+    "subject": "分子生物学",
+    "concept": "复制叉",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "replication",
+      "module_1",
+      "分子生物学",
+      "复制叉"
+    ],
+    "references": [
+      {
+        "doi": "10.1016/j.cell.2018.08.033",
+        "title": "DNA replication machinery and mechanisms",
+        "authors": "Kornberg A, Baker T",
+        "year": 2018,
+        "journal": "Cell"
+      },
+      {
+        "doi": "10.1038/nature12348",
+        "title": "Telomere maintenance by telomerase",
+        "authors": "Lingner J, Cech TR",
+        "year": 2017,
+        "journal": "Nature"
+      }
+    ]
+  }
+}

@@ -1,0 +1,216 @@
+{
+  "M4-16-9093695beaa6": {
+    "type": "mtf",
+    "question": "关于NCBI数据库，以下说法正确的有哪些？",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "GenBank是NCBI维护的核酸序列数据库",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "PubMed是生物医学文献摘要和引文数据库",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "BLAST工具可以在NCBI网站上免费使用",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "NCBI只存储核酸序列数据，不包含蛋白质数据",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：GenBank是核酸数据库。B正确：PubMed文献库。C正确：BLAST在线使用。D错误：NCBI也包含蛋白质数据库（如RefSeq蛋白质）。",
+    "subject": "生物信息学",
+    "concept": "NCBI数据库",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "bio_databases",
+      "module_4",
+      "生物信息学",
+      "数据库"
+    ],
+    "references": []
+  },
+  "M4-16-7ab8f351480e": {
+    "type": "mtf",
+    "question": "关于UniProt数据库，以下判断正确的有哪些？",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "UniProt是全面的蛋白质序列和功能信息数据库",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "UniProt由Swiss-Prot、TrEMBL和PIR组成",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "Swiss-Prot是手动注释和审核的蛋白质数据库",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "TrEMBL中的蛋白质信息比Swiss-Prot更可靠",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：UniProt定义。B正确：组成。C正确：Swiss-Prot手动注释。D错误：Swiss-Prot比TrEMBL更可靠（TrEMBL是自动注释）。",
+    "subject": "生物信息学",
+    "concept": "UniProt数据库",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "bio_databases",
+      "module_4",
+      "生物信息学",
+      "数据库"
+    ],
+    "references": [
+      {
+        "doi": "10.1093/nar/gky1083",
+        "title": "UniProt: the universal protein knowledgebase",
+        "authors": "The UniProt Consortium",
+        "year": 2019,
+        "journal": "Nucleic Acids Research"
+      }
+    ]
+  },
+  "M4-16-5b3948ada363": {
+    "type": "mtf",
+    "question": "关于PDB数据库，以下说法正确的有哪些？",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "PDB（Protein Data Bank）存储蛋白质和核酸的三维结构数据",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "PDB中的结构数据主要通过X射线晶体学、NMR和冷冻电镜获得",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "RCSB PDB是美国维护的PDB镜像站点",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "PDB只存储蛋白质的结构，不包含核酸结构",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：PDB定义。B正确：实验方法。C正确：RCSB是美国站点。D错误：PDB也包含核酸和复合物结构。",
+    "subject": "生物信息学",
+    "concept": "PDB数据库",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "bio_databases",
+      "module_4",
+      "生物信息学",
+      "数据库"
+    ],
+    "references": [
+      {
+        "doi": "10.1093/nar/gky1004",
+        "title": "Protein Data Bank",
+        "authors": "Berman H et al.",
+        "year": 2019,
+        "journal": "Nucleic Acids Research"
+      }
+    ]
+  },
+  "M4-16-c99ab014202e": {
+    "type": "mtf",
+    "question": "关于Ensembl数据库，以下判断正确的有哪些？",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "Ensembl是真核生物基因组的自动注释数据库",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "Ensembl提供基因组浏览器用于可视化基因组数据",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "Ensembl只注释人类基因组，不包含其他物种",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "Ensembl与UCSC Genome Browser是两个独立的基因组浏览器",
+        "answer": true
+      }
+    ],
+    "explanation": "A正确：Ensembl定义。B正确：基因组浏览器。C错误：Ensembl注释多个真核物种。D正确：两者独立。",
+    "subject": "生物信息学",
+    "concept": "Ensembl数据库",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "bio_databases",
+      "module_4",
+      "生物信息学",
+      "数据库"
+    ],
+    "references": [
+      {
+        "doi": "10.1093/nar/gky1113",
+        "title": "Ensembl 2019",
+        "authors": "Howe KL et al.",
+        "year": 2019,
+        "journal": "Nucleic Acids Research"
+      }
+    ]
+  },
+  "M4-16-2f8084468c18": {
+    "type": "mtf",
+    "question": "关于生物数据格式，以下说法正确的有哪些？",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "FASTA格式是最简单的核酸和蛋白质序列格式",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "GenBank格式包含序列信息和丰富的注释信息",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "SAM/BAM格式用于存储测序reads与参考基因组的比对结果",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "VCF格式用于存储基因变异信息",
+        "answer": true
+      }
+    ],
+    "explanation": "A正确：FASTA格式。B正确：GenBank格式。C正确：SAM/BAM比对格式。D正确：VCF变异格式。",
+    "subject": "生物信息学",
+    "concept": "数据格式",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "bio_databases",
+      "module_4",
+      "生物信息学",
+      "数据格式"
+    ],
+    "references": []
+  }
+}

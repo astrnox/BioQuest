@@ -1,0 +1,67 @@
+{
+  "M4-06-3a3863bd9919": {
+    "tags": [
+      "population_gen",
+      "module_4",
+      "遗传学",
+      "群体遗传"
+    ],
+    "diff": "high_school",
+    "len": 153,
+    "src": "population_gen",
+    "year": null,
+    "module": "module_4"
+  },
+  "M4-06-c873424bd787": {
+    "tags": [
+      "population_gen",
+      "module_4",
+      "遗传学",
+      "群体遗传"
+    ],
+    "diff": "league",
+    "len": 124,
+    "src": "population_gen",
+    "year": null,
+    "module": "module_4"
+  },
+  "M4-06-e02a5cb85449": {
+    "tags": [
+      "population_gen",
+      "module_4",
+      "遗传学",
+      "群体遗传"
+    ],
+    "diff": "league",
+    "len": 112,
+    "src": "population_gen",
+    "year": null,
+    "module": "module_4"
+  },
+  "M4-06-b5ade78f0dcb": {
+    "tags": [
+      "population_gen",
+      "module_4",
+      "遗传学",
+      "遗传负荷"
+    ],
+    "diff": "league",
+    "len": 104,
+    "src": "population_gen",
+    "year": null,
+    "module": "module_4"
+  },
+  "M4-06-0521f6793dee": {
+    "tags": [
+      "population_gen",
+      "module_4",
+      "遗传学",
+      "群体遗传"
+    ],
+    "diff": "high_school",
+    "len": 136,
+    "src": "population_gen",
+    "year": null,
+    "module": "module_4"
+  }
+}

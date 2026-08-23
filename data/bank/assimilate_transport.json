@@ -1,0 +1,216 @@
+{
+  "M2-07-c62204b3d203": {
+    "type": "mtf",
+    "question": "关于韧皮部运输的特征，以下描述正确的是：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "韧皮部运输的主要物质是蔗糖",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "韧皮部运输是双向运输，可以从源到库",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "筛管分子是活细胞，但缺乏细胞核",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "韧皮部运输不需要消耗能量",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：蔗糖是主要运输形式。B正确：韧皮部可双向运输。C正确：筛管分子是活细胞但无核。D错误：韧皮部装载和卸载需要能量。",
+    "subject": "植物生理学",
+    "concept": "韧皮部运输",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "assimilate_transport",
+      "module_2",
+      "植物生理学",
+      "韧皮部"
+    ],
+    "references": []
+  },
+  "M2-07-6f53419940c4": {
+    "type": "mtf",
+    "question": "压力流动假说的内容包括：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "源端筛管渗透压高，水分进入产生高压",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "库端筛管渗透压低，水分流出压力降低",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "压力差驱动同化物从源向库运输",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "压力流动假说认为运输过程不需要代谢能量",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：源端装载产生高压。B正确：库端卸载压力低。C正确：压力差驱动流动。D错误：装载和卸载需要代谢能量。",
+    "subject": "植物生理学",
+    "concept": "压力流动",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "assimilate_transport",
+      "module_2",
+      "植物生理学",
+      "运输机制"
+    ],
+    "references": [
+      {
+        "doi": "10.1016/j.pbi.2003.09.005",
+        "title": "Phloem transport: cellular pathways and molecular trafficking",
+        "authors": "Oparka KJ, Santa Cruz S",
+        "year": 2005,
+        "journal": "Current Opinion in Plant Biology"
+      }
+    ]
+  },
+  "M2-07-0e12038d9172": {
+    "type": "mtf",
+    "question": "韧皮部装载的途径包括：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "共质体途径通过胞间连丝运输",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "质外体途径需要蔗糖转运蛋白",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "质外体途径需要H+-蔗糖共运输",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "所有植物都采用相同的装载途径",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：共质体途径存在。B正确：质外体需要转运蛋白。C正确：H+梯度驱动蔗糖运输。D错误：不同植物采用不同途径。",
+    "subject": "植物生理学",
+    "concept": "装载途径",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "assimilate_transport",
+      "module_2",
+      "植物生理学",
+      "装载"
+    ],
+    "references": [
+      {
+        "doi": "10.1146/annurev.arplant.56.032604.144254",
+        "title": "Phloem loading mechanisms",
+        "authors": "Lalonde E, Wipf D, Frommer WB",
+        "year": 2004,
+        "journal": "Annual Review of Plant Biology"
+      }
+    ]
+  },
+  "M2-07-99a0fbb2cc63": {
+    "type": "mtf",
+    "question": "源-库关系的特点包括：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "源是指产生同化物的器官或组织",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "库是指消耗或储存同化物的器官或组织",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "同一器官在不同发育阶段可以是源或库",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "源端总是叶片，库端总是根系",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：源的定义。B正确：库的定义。C正确：器官角色可变。D错误：果实、幼叶也可以是库。",
+    "subject": "植物生理学",
+    "concept": "源库关系",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "assimilate_transport",
+      "module_2",
+      "植物生理学",
+      "源库"
+    ],
+    "references": []
+  },
+  "M2-07-0c177345525b": {
+    "type": "mtf",
+    "question": "影响同化物分配的因素包括：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "库的竞争力影响同化物的分配方向",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "维管束的连接方式影响运输路径",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "距离源的远近影响同化物分配",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "同化物总是平均分配到各个库器官",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：库强影响分配。B正确：维管连接影响路径。C正确：就近供应原则。D错误：分配不均匀，优先供应强库。",
+    "subject": "植物生理学",
+    "concept": "同化物分配",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "assimilate_transport",
+      "module_2",
+      "植物生理学",
+      "分配"
+    ],
+    "references": [
+      {
+        "doi": "10.1071/PP995001",
+        "title": "Assimilate partitioning in crops",
+        "authors": "Fischer RA, Aguilar MI",
+        "year": 1995,
+        "journal": "Plant and Soil"
+      }
+    ]
+  }
+}

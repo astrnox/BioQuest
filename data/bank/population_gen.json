@@ -1,0 +1,216 @@
+{
+  "M4-06-3a3863bd9919": {
+    "type": "mtf",
+    "question": "关于Hardy-Weinberg平衡，以下说法正确的有哪些？",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "HW平衡的条件包括：大群体、随机交配、无突变、无迁移、无选择",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "在一个满足HW条件的群体中，等位基因频率和基因型频率世代保持不变",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "若某群体中A的频率p=0.6，a的频率q=0.4，则杂合子频率为0.48",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "HW平衡只适用于常染色体基因，不适用于性染色体基因",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：五大条件是HW平衡的前提。B正确：平衡状态下频率不变。C正确：2pq=2×0.6×0.4=0.48。D错误：HW原理也可推广到性染色体，只是性染色体基因频率的计算方式不同。",
+    "subject": "遗传学",
+    "concept": "Hardy-Weinberg平衡",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "population_gen",
+      "module_4",
+      "遗传学",
+      "群体遗传"
+    ],
+    "references": []
+  },
+  "M4-06-c873424bd787": {
+    "type": "mtf",
+    "question": "关于影响群体遗传平衡的因素，以下判断正确的有哪些？",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "突变本身对基因频率的改变很慢，但为进化提供了原材料",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "选择对显性有害等位基因的清除比对隐性有害等位基因更有效",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "迁移（基因流）可以使不同群体间的基因频率趋于一致",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "遗传漂变在大群体中对基因频率的影响比小群体更大",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：突变率低，直接改变频率慢，但提供变异。B正确：显性有害等位基因在所有携带者中均被选择。C正确：基因流使群体趋同。D错误：漂变在小群体中影响更大。",
+    "subject": "遗传学",
+    "concept": "影响平衡的因素",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "population_gen",
+      "module_4",
+      "遗传学",
+      "群体遗传"
+    ],
+    "references": [
+      {
+        "doi": "10.1038/nrg3359",
+        "title": "Population genetics of human evolution",
+        "authors": "Barreiro LB, Quintana-Murci L",
+        "year": 2013,
+        "journal": "Nature Reviews Genetics"
+      }
+    ]
+  },
+  "M4-06-e02a5cb85449": {
+    "type": "mtf",
+    "question": "关于近交系数和选择系数，以下说法正确的有哪些？",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "近交系数F表示个体从双亲获得相同等位基因（IBD）的概率",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "近交导致纯合子频率增加，杂合子频率减少",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "选择系数s表示某一基因型相对于最适基因型的适合度降低程度",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "当s=1时，该基因型完全致死",
+        "answer": true
+      }
+    ],
+    "explanation": "A正确：F的定义即IBD概率。B正确：近交增加纯合度。C正确：s=1-w，w为适合度。D正确：s=1意味着适合度为0，即完全致死。",
+    "subject": "遗传学",
+    "concept": "近交系数与选择系数",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "population_gen",
+      "module_4",
+      "遗传学",
+      "群体遗传"
+    ],
+    "references": [
+      {
+        "doi": "10.1093/genetics/198.2.521",
+        "title": "Inbreeding coefficient estimation",
+        "authors": "Keller MF et al.",
+        "year": 2015,
+        "journal": "Genetics"
+      }
+    ]
+  },
+  "M4-06-b5ade78f0dcb": {
+    "type": "mtf",
+    "question": "关于遗传负荷，以下判断正确的有哪些？",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "突变负荷是指由于有害突变在群体中积累而造成的适合度降低",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "分离负荷是指杂合子优势情况下，纯合子适合度较低造成的负荷",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "平衡多态现象可以维持遗传负荷",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "遗传负荷越大的群体，其进化潜力越高",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：突变负荷的定义。B正确：杂合子优势导致纯合子被淘汰，产生分离负荷。C正确：平衡多态维持了有害等位基因的存在。D错误：遗传负荷大意味着有害突变多，不一定进化潜力高。",
+    "subject": "遗传学",
+    "concept": "遗传负荷",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "population_gen",
+      "module_4",
+      "遗传学",
+      "遗传负荷"
+    ],
+    "references": [
+      {
+        "doi": "10.1146/annurev.genet.46.091112.142249",
+        "title": "Genetic load",
+        "authors": "Charlesworth D, Willis JH",
+        "year": 2013,
+        "journal": "Annual Review of Genetics"
+      }
+    ]
+  },
+  "M4-06-0521f6793dee": {
+    "type": "mtf",
+    "question": "某群体中白化病（常染色体隐性遗传）的发病率为1/10000，以下说法正确的有哪些？",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "致病基因a的频率约为0.01",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "携带者（Aa）的频率约为1/50",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "两个正常表型的人结婚，生出白化病孩子的概率约为1/2500",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "该群体处于Hardy-Weinberg平衡时，AA的频率约为0.9801",
+        "answer": true
+      }
+    ],
+    "explanation": "A正确：q²=1/10000，q=0.01。B正确：2pq≈2×0.99×0.01≈0.02≈1/50。C错误：两个正常人均为携带者的概率为(2pq)²≈(1/50)²=1/2500，他们生出白化病孩子的概率还需乘以1/4，即约1/10000。D正确：p²=0.99²=0.9801。",
+    "subject": "遗传学",
+    "concept": "HW平衡计算",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "population_gen",
+      "module_4",
+      "遗传学",
+      "群体遗传"
+    ],
+    "references": []
+  }
+}

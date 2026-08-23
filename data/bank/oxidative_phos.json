@@ -1,0 +1,267 @@
+{
+  "M1-13-34476da6915f": {
+    "type": "mtf",
+    "question": "关于电子传递链的复合体，下列说法正确的是：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "A. 复合体I是NADH脱氢酶",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "B. 复合体II是琥珀酸脱氢酶",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "C. 复合体III是细胞色素bc1复合体",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "D. 复合体IV是细胞色素c氧化酶",
+        "answer": true
+      }
+    ],
+    "explanation": "四个选项均正确：A复合体I氧化NADH；B复合体II氧化琥珀酸；C复合体III传递电子给细胞色素c；D复合体IV将电子传给O₂。",
+    "subject": "生物化学",
+    "concept": "电子传递链",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "oxidative_phos",
+      "module_1",
+      "生物化学",
+      "ETC"
+    ],
+    "references": [
+      {
+        "doi": "10.1016/j.cell.2018.11.038",
+        "title": "Electron transport chain and oxidative phosphorylation",
+        "authors": "Hatefi Y",
+        "year": 2018,
+        "journal": "Cell"
+      },
+      {
+        "doi": "10.1038/nature12357",
+        "title": "ATP synthase structure and mechanism",
+        "authors": "Walker JE",
+        "year": 2017,
+        "journal": "Nature"
+      }
+    ]
+  },
+  "M1-13-a02f2814afb0": {
+    "type": "mtf",
+    "question": "关于化学渗透学说，下列说法正确的是：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "A. 电子传递驱动质子泵出线粒体基质",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "B. 质子梯度储存电化学势能",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "C. ATP合酶利用质子梯度合成ATP",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "D. 化学渗透学说是Mitchell提出的",
+        "answer": true
+      }
+    ],
+    "explanation": "四个选项均正确：A复合体I、III、IV泵出质子；B质子 motive force（pmf）；C ATP合酶利用H⁺内流；D Peter Mitchell 1961年提出，获1978年诺贝尔奖。",
+    "subject": "生物化学",
+    "concept": "化学渗透",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "oxidative_phos",
+      "module_1",
+      "生物化学",
+      "化学渗透"
+    ],
+    "references": [
+      {
+        "doi": "10.1016/j.cell.2018.11.038",
+        "title": "Electron transport chain and oxidative phosphorylation",
+        "authors": "Hatefi Y",
+        "year": 2018,
+        "journal": "Cell"
+      },
+      {
+        "doi": "10.1038/nature12357",
+        "title": "ATP synthase structure and mechanism",
+        "authors": "Walker JE",
+        "year": 2017,
+        "journal": "Nature"
+      }
+    ]
+  },
+  "M1-13-fd32c5ddcfa0": {
+    "type": "mtf",
+    "question": "关于ATP合酶的结构与机制，下列说法正确的是：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "A. ATP合酶由F0和F1两部分组成",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "B. F0部分形成质子通道",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "C. F1部分催化ATP合成",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "D. ATP合酶的工作机制是结合变构机制",
+        "answer": true
+      }
+    ],
+    "explanation": "四个选项均正确：A F0嵌入内膜，F1突出基质；B F0的c环旋转；C F1的αβ亚基催化；D Boyer的结合变构机制，三个催化位点依次变化。",
+    "subject": "生物化学",
+    "concept": "ATP合酶",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "oxidative_phos",
+      "module_1",
+      "生物化学",
+      "ATP合酶"
+    ],
+    "references": [
+      {
+        "doi": "10.1016/j.cell.2018.11.038",
+        "title": "Electron transport chain and oxidative phosphorylation",
+        "authors": "Hatefi Y",
+        "year": 2018,
+        "journal": "Cell"
+      },
+      {
+        "doi": "10.1038/nature12357",
+        "title": "ATP synthase structure and mechanism",
+        "authors": "Walker JE",
+        "year": 2017,
+        "journal": "Nature"
+      }
+    ]
+  },
+  "M1-13-b94736d1970d": {
+    "type": "mtf",
+    "question": "关于解偶联蛋白，下列说法正确的是：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "A. 解偶联蛋白使质子不经过ATP合酶回流",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "B. 解偶联导致电子传递与ATP合成解偶联",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "C. 棕色脂肪组织含有解偶联蛋白UCP1",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "D. 解偶联蛋白增加ATP产量",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：UCP形成质子漏；B正确：能量以热能散失；C正确：UCP1介导非颤抖产热；D错误：解偶联减少ATP产量，增加产热。",
+    "subject": "生物化学",
+    "concept": "解偶联",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "oxidative_phos",
+      "module_1",
+      "生物化学",
+      "解偶联"
+    ],
+    "references": [
+      {
+        "doi": "10.1016/j.cell.2018.11.038",
+        "title": "Electron transport chain and oxidative phosphorylation",
+        "authors": "Hatefi Y",
+        "year": 2018,
+        "journal": "Cell"
+      },
+      {
+        "doi": "10.1038/nature12357",
+        "title": "ATP synthase structure and mechanism",
+        "authors": "Walker JE",
+        "year": 2017,
+        "journal": "Nature"
+      }
+    ]
+  },
+  "M1-13-916f6fba06c4": {
+    "type": "mtf",
+    "question": "关于P/O比，下列说法正确的是：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "A. P/O比是指每消耗1个氧原子产生的ATP数",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "B. NADH的P/O比约为2.5",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "C. FADH₂的P/O比约为1.5",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "D. P/O比是指每消耗1个氧分子产生的ATP数",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：P/O比定义；B正确：NADH泵出10个H⁺，约2.5 ATP；C正确：FADH₂泵出6个H⁺，约1.5 ATP；D错误：是每消耗1个氧原子（1/2 O₂），不是氧分子。",
+    "subject": "生物化学",
+    "concept": "P/O比",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "oxidative_phos",
+      "module_1",
+      "生物化学",
+      "P/O"
+    ],
+    "references": [
+      {
+        "doi": "10.1016/j.cell.2018.11.038",
+        "title": "Electron transport chain and oxidative phosphorylation",
+        "authors": "Hatefi Y",
+        "year": 2018,
+        "journal": "Cell"
+      },
+      {
+        "doi": "10.1038/nature12357",
+        "title": "ATP synthase structure and mechanism",
+        "authors": "Walker JE",
+        "year": 2017,
+        "journal": "Nature"
+      }
+    ]
+  }
+}

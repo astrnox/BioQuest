@@ -1,0 +1,219 @@
+{
+  "M1-04-6449035c17bd": {
+    "type": "mtf",
+    "question": "关于细胞周期的阶段，下列说法正确的是：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "A. G1期是细胞生长和准备DNA复制的阶段",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "B. S期进行DNA复制",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "C. G2期是准备有丝分裂的阶段",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "D. M期包括有丝分裂和胞质分裂",
+        "answer": true
+      }
+    ],
+    "explanation": "四个选项均正确：A G1期细胞生长；B S期DNA复制；C G2期准备分裂；D M期包括核分裂和胞质分裂。",
+    "subject": "细胞生物学",
+    "concept": "细胞周期",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "cell_cycle",
+      "module_1",
+      "细胞生物学",
+      "细胞周期"
+    ]
+  },
+  "M1-04-41b7a95d7a09": {
+    "type": "mtf",
+    "question": "关于CDK/cyclin调控系统，下列说法正确的是：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "A. CDK是周期蛋白依赖性激酶",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "B. cyclin的浓度在细胞周期中周期性变化",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "C. CDK-cyclin复合物磷酸化靶蛋白推动细胞周期",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "D. CDK的浓度在细胞周期中保持不变",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：CDK是激酶；B正确：cyclin浓度周期性变化；C正确：CDK-cyclin磷酸化靶蛋白；D错误：CDK浓度相对稳定，但活性受cyclin调控。",
+    "subject": "细胞生物学",
+    "concept": "CDK/cyclin",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "cell_cycle",
+      "module_1",
+      "细胞生物学",
+      "细胞周期调控"
+    ],
+    "references": [
+      {
+        "doi": "10.1038/s41580-019-0114-6",
+        "title": "Cell cycle regulation by CDK inhibitors",
+        "authors": "Sherr CJ, McCormick F",
+        "year": 2019,
+        "journal": "Nat Rev Mol Cell Biol"
+      },
+      {
+        "doi": "10.1016/j.cell.2020.02.015",
+        "title": "The spindle assembly checkpoint",
+        "authors": "Musacchio A, Salmon ED",
+        "year": 2020,
+        "journal": "Cell"
+      }
+    ]
+  },
+  "M1-04-3733b99b94c3": {
+    "type": "mtf",
+    "question": "关于细胞周期检查点，下列说法正确的是：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "A. G1/S检查点检测DNA是否损伤",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "B. G2/M检查点检测DNA是否完全复制",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "C. 纺锤体组装检查点确保染色体正确附着",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "D. 检查点机制可以阻止有缺陷的细胞进入下一阶段",
+        "answer": true
+      }
+    ],
+    "explanation": "四个选项均正确：A G1/S检查DNA损伤；B G2/M检查DNA复制；C纺锤体检查点监控染色体附着；D检查点是质量控制机制。",
+    "subject": "细胞生物学",
+    "concept": "检查点",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "cell_cycle",
+      "module_1",
+      "细胞生物学",
+      "检查点"
+    ],
+    "references": [
+      {
+        "doi": "10.1038/s41580-019-0114-6",
+        "title": "Cell cycle regulation by CDK inhibitors",
+        "authors": "Sherr CJ, McCormick F",
+        "year": 2019,
+        "journal": "Nat Rev Mol Cell Biol"
+      },
+      {
+        "doi": "10.1016/j.cell.2020.02.015",
+        "title": "The spindle assembly checkpoint",
+        "authors": "Musacchio A, Salmon ED",
+        "year": 2020,
+        "journal": "Cell"
+      }
+    ]
+  },
+  "M1-04-6912127ada2c": {
+    "type": "mtf",
+    "question": "关于有丝分裂各期特征，下列说法正确的是：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "A. 前期染色质凝缩成染色体",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "B. 中期染色体排列在赤道板上",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "C. 后期姐妹染色单体分离",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "D. 末期核膜重新形成",
+        "answer": true
+      }
+    ],
+    "explanation": "四个选项均正确：A前期染色质凝缩；B中期染色体排列在赤道板；C后期着丝粒分裂，姐妹染色单体分离；D末期核膜重建。",
+    "subject": "细胞生物学",
+    "concept": "有丝分裂",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "cell_cycle",
+      "module_1",
+      "细胞生物学",
+      "有丝分裂"
+    ]
+  },
+  "M1-04-430c329db729": {
+    "type": "mtf",
+    "question": "关于癌细胞与细胞周期调控，下列说法正确的是：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "A. 癌细胞失去了接触抑制",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "B. 癌细胞可以无限增殖",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "C. 癌细胞的细胞周期调控失常",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "D. 所有癌细胞都有相同的突变",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：癌细胞失去接触抑制，可重叠生长；B正确：癌细胞有端粒酶活性，可无限增殖；C正确：癌细胞周期调控失常；D错误：不同癌细胞有不同的突变组合。",
+    "subject": "细胞生物学",
+    "concept": "癌细胞",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "cell_cycle",
+      "module_1",
+      "细胞生物学",
+      "癌细胞"
+    ]
+  }
+}

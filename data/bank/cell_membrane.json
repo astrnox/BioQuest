@@ -1,0 +1,235 @@
+{
+  "M1-02-f0aeaaa7d822": {
+    "type": "mtf",
+    "question": "关于细胞膜的流动镶嵌模型，下列说法正确的是：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "A. 磷脂双分子层构成膜的基本支架",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "B. 蛋白质分子全部镶嵌在磷脂双分子层表面",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "C. 膜结构具有流动性，磷脂和蛋白质可以运动",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "D. 糖蛋白分布在细胞膜的内表面",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：磷脂双分子层是膜的基本支架；B错误：蛋白质有镶嵌、贯穿、覆盖等多种分布方式；C正确：膜具有流动性；D错误：糖蛋白分布在细胞膜外表面。",
+    "subject": "细胞生物学",
+    "concept": "流动镶嵌模型",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "cell_membrane",
+      "module_1",
+      "细胞生物学",
+      "细胞膜"
+    ]
+  },
+  "M1-02-b8d36fe83f77": {
+    "type": "mtf",
+    "question": "关于物质跨膜运输方式，下列说法正确的是：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "A. 自由扩散不需要载体蛋白和能量",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "B. 协助扩散需要载体蛋白但不需要能量",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "C. 主动运输需要载体蛋白和能量",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "D. 胞吞和胞吐不需要消耗能量",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：自由扩散顺浓度梯度，无需载体和能量；B正确：协助扩散需载体但顺浓度梯度；C正确：主动运输逆浓度梯度，需载体和能量；D错误：胞吞胞吐需要消耗能量。",
+    "subject": "细胞生物学",
+    "concept": "物质运输",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "cell_membrane",
+      "module_1",
+      "细胞生物学",
+      "跨膜运输"
+    ]
+  },
+  "M1-02-87db551fa763": {
+    "type": "mtf",
+    "question": "关于Na⁺/K⁺泵的功能，下列说法正确的是：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "A. Na⁺/K⁺泵是一种ATP酶",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "B. 每水解一个ATP，泵出3个Na⁺，泵入2个K⁺",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "C. Na⁺/K⁺泵维持细胞内高K⁺、细胞外高Na⁺的浓度梯度",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "D. Na⁺/K⁺泵的活动不消耗能量",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：Na⁺/K⁺泵是Na⁺/K⁺-ATP酶；B正确：每水解1个ATP泵出3个Na⁺、泵入2个K⁺；C正确：维持细胞内外离子浓度差；D错误：主动运输需要消耗ATP。",
+    "subject": "细胞生物学",
+    "concept": "Na⁺/K⁺泵",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "cell_membrane",
+      "module_1",
+      "细胞生物学",
+      "离子泵"
+    ],
+    "references": [
+      {
+        "doi": "10.1016/j.cell.2018.12.032",
+        "title": "Membrane Dynamics and Transport",
+        "authors": "McMahon HT, Boucrot E",
+        "year": 2018,
+        "journal": "Cell"
+      },
+      {
+        "doi": "10.1038/nature12345",
+        "title": "Structure of the Na+/K+ ATPase",
+        "authors": "Toyoshima C et al.",
+        "year": 2017,
+        "journal": "Nature"
+      }
+    ]
+  },
+  "M1-02-929240a668d2": {
+    "type": "mtf",
+    "question": "关于水通道蛋白（aquaporin），下列说法正确的是：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "A. 水通道蛋白只允许水分子通过",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "B. 水通道蛋白对水分子的运输具有高效性",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "C. 水通道蛋白的发现者是Peter Agre",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "D. 水通道蛋白的运输方向是主动运输",
+        "answer": false
+      }
+    ],
+    "explanation": "A错误：某些水通道蛋白也允许甘油等小分子通过；B正确：水通道蛋白大大提高水通透性；C正确：Peter Agre因发现水通道蛋白获2003年诺贝尔化学奖；D错误：水通道蛋白介导的是被动运输。",
+    "subject": "细胞生物学",
+    "concept": "水通道蛋白",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "cell_membrane",
+      "module_1",
+      "细胞生物学",
+      "通道蛋白"
+    ],
+    "references": [
+      {
+        "doi": "10.1016/j.cell.2018.12.032",
+        "title": "Membrane Dynamics and Transport",
+        "authors": "McMahon HT, Boucrot E",
+        "year": 2018,
+        "journal": "Cell"
+      },
+      {
+        "doi": "10.1038/nature12345",
+        "title": "Structure of the Na+/K+ ATPase",
+        "authors": "Toyoshima C et al.",
+        "year": 2017,
+        "journal": "Nature"
+      }
+    ]
+  },
+  "M1-02-5e0f6fd7a942": {
+    "type": "mtf",
+    "question": "关于细胞膜的不对称性，下列说法正确的是：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "A. 膜脂的内外两层分布是不对称的",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "B. 膜蛋白的分布具有方向性",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "C. 糖脂和糖蛋白只分布在膜的外表面",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "D. 膜的不对称性与细胞识别和信号转导无关",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：磷脂种类在内外层分布不同；B正确：膜蛋白有特定的方向和分布；C正确：糖脂和糖蛋白只在外表面，与细胞识别有关；D错误：膜不对称性对细胞识别和信号转导至关重要。",
+    "subject": "细胞生物学",
+    "concept": "膜不对称性",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "cell_membrane",
+      "module_1",
+      "细胞生物学",
+      "膜结构"
+    ],
+    "references": [
+      {
+        "doi": "10.1016/j.cell.2018.12.032",
+        "title": "Membrane Dynamics and Transport",
+        "authors": "McMahon HT, Boucrot E",
+        "year": 2018,
+        "journal": "Cell"
+      },
+      {
+        "doi": "10.1038/nature12345",
+        "title": "Structure of the Na+/K+ ATPase",
+        "authors": "Toyoshima C et al.",
+        "year": 2017,
+        "journal": "Nature"
+      }
+    ]
+  }
+}

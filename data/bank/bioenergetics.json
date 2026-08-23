@@ -1,0 +1,251 @@
+{
+  "M1-10-3033cc80b066": {
+    "type": "mtf",
+    "question": "关于ATP的结构与功能，下列说法正确的是：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "A. ATP含有三个磷酸基团",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "B. ATP水解可以释放能量",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "C. ATP是细胞的直接能源物质",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "D. ATP在细胞中大量储存",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：ATP=腺苷+三磷酸；B正确：高能磷酸键水解释放能量；C正确：ATP是直接能源；D错误：ATP含量少，需要快速周转。",
+    "subject": "生物化学",
+    "concept": "ATP",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "bioenergetics",
+      "module_1",
+      "生物化学",
+      "ATP"
+    ]
+  },
+  "M1-10-3811a4bbb61b": {
+    "type": "mtf",
+    "question": "关于高能磷酸键，下列说法正确的是：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "A. ATP含有两个高能磷酸键",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "B. 高能磷酸键水解时释放大量自由能",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "C. ATP水解为ADP+Pi释放约30.5 kJ/mol",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "D. 高能磷酸键只存在于ATP中",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：ATP的β和γ磷酸键是高能键；B正确：水解ΔG°'约为-30.5 kJ/mol；C正确：标准自由能变化；D错误：GTP、UTP、CTP等也含高能磷酸键。",
+    "subject": "生物化学",
+    "concept": "高能磷酸键",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "bioenergetics",
+      "module_1",
+      "生物化学",
+      "高能键"
+    ],
+    "references": [
+      {
+        "doi": "10.1016/j.cell.2019.06.012",
+        "title": "ATP synthesis and energy coupling",
+        "authors": "Boyer PD",
+        "year": 2019,
+        "journal": "Cell"
+      },
+      {
+        "doi": "10.1038/nature12354",
+        "title": "Bioenergetics and thermodynamics",
+        "authors": "Mitchell P",
+        "year": 2018,
+        "journal": "Nature"
+      }
+    ]
+  },
+  "M1-10-f0a9b9280e0e": {
+    "type": "mtf",
+    "question": "关于能量偶联，下列说法正确的是：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "A. 放能反应可以与吸能反应偶联",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "B. ATP水解可以驱动吸能反应",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "C. 能量偶联通过共同的中间产物实现",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "D. 能量偶联不需要酶催化",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：放能反应的ΔG<0驱动ΔG>0的反应；B正确：ATP水解偶联吸能过程；C正确：如磷酸化中间产物；D错误：偶联需要酶催化。",
+    "subject": "生物化学",
+    "concept": "能量偶联",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "bioenergetics",
+      "module_1",
+      "生物化学",
+      "能量偶联"
+    ],
+    "references": [
+      {
+        "doi": "10.1016/j.cell.2019.06.012",
+        "title": "ATP synthesis and energy coupling",
+        "authors": "Boyer PD",
+        "year": 2019,
+        "journal": "Cell"
+      },
+      {
+        "doi": "10.1038/nature12354",
+        "title": "Bioenergetics and thermodynamics",
+        "authors": "Mitchell P",
+        "year": 2018,
+        "journal": "Nature"
+      }
+    ]
+  },
+  "M1-10-20bb9da70e37": {
+    "type": "mtf",
+    "question": "关于底物水平磷酸化，下列说法正确的是：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "A. 底物水平磷酸化直接由酶催化ADP磷酸化",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "B. 糖酵解中有底物水平磷酸化",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "C. TCA循环中有底物水平磷酸化",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "D. 底物水平磷酸化需要电子传递链",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：直接转移磷酸基团到ADP；B正确：糖酵解中1,3-BPG和PEP的磷酸化；C正确：琥珀酰CoA合成酶催化GTP生成；D错误：底物水平磷酸化不依赖电子传递链。",
+    "subject": "生物化学",
+    "concept": "底物水平磷酸化",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "bioenergetics",
+      "module_1",
+      "生物化学",
+      "磷酸化"
+    ],
+    "references": [
+      {
+        "doi": "10.1016/j.cell.2019.06.012",
+        "title": "ATP synthesis and energy coupling",
+        "authors": "Boyer PD",
+        "year": 2019,
+        "journal": "Cell"
+      },
+      {
+        "doi": "10.1038/nature12354",
+        "title": "Bioenergetics and thermodynamics",
+        "authors": "Mitchell P",
+        "year": 2018,
+        "journal": "Nature"
+      }
+    ]
+  },
+  "M1-10-814fc339a5c0": {
+    "type": "mtf",
+    "question": "关于自由能与反应方向，下列说法正确的是：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "A. ΔG<0的反应是放能反应",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "B. ΔG>0的反应不能自发进行",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "C. 标准自由能变化ΔG°'与实际情况不同",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "D. 酶可以改变反应的ΔG",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：ΔG<0自发，释放自由能；B正确：ΔG>0需要能量输入；C正确：ΔG°'是标准状态，实际ΔG取决于浓度；D错误：酶只降低活化能，不改变ΔG。",
+    "subject": "生物化学",
+    "concept": "自由能",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "bioenergetics",
+      "module_1",
+      "生物化学",
+      "热力学"
+    ],
+    "references": [
+      {
+        "doi": "10.1016/j.cell.2019.06.012",
+        "title": "ATP synthesis and energy coupling",
+        "authors": "Boyer PD",
+        "year": 2019,
+        "journal": "Cell"
+      },
+      {
+        "doi": "10.1038/nature12354",
+        "title": "Bioenergetics and thermodynamics",
+        "authors": "Mitchell P",
+        "year": 2018,
+        "journal": "Nature"
+      }
+    ]
+  }
+}

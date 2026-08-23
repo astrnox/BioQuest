@@ -1,0 +1,67 @@
+{
+  "M4-07-a2cfb282801c": {
+    "tags": [
+      "quantitative_gen",
+      "module_4",
+      "遗传学",
+      "数量遗传"
+    ],
+    "diff": "high_school",
+    "len": 93,
+    "src": "quantitative_gen",
+    "year": null,
+    "module": "module_4"
+  },
+  "M4-07-65ede18c4e5c": {
+    "tags": [
+      "quantitative_gen",
+      "module_4",
+      "遗传学",
+      "遗传力"
+    ],
+    "diff": "league",
+    "len": 107,
+    "src": "quantitative_gen",
+    "year": null,
+    "module": "module_4"
+  },
+  "M4-07-f824f036d2ce": {
+    "tags": [
+      "quantitative_gen",
+      "module_4",
+      "遗传学",
+      "QTL"
+    ],
+    "diff": "league",
+    "len": 131,
+    "src": "quantitative_gen",
+    "year": null,
+    "module": "module_4"
+  },
+  "M4-07-d583ec50247c": {
+    "tags": [
+      "quantitative_gen",
+      "module_4",
+      "遗传学",
+      "GWAS"
+    ],
+    "diff": "league",
+    "len": 126,
+    "src": "quantitative_gen",
+    "year": null,
+    "module": "module_4"
+  },
+  "M4-07-2235efd7877b": {
+    "tags": [
+      "quantitative_gen",
+      "module_4",
+      "遗传学",
+      "分子标记"
+    ],
+    "diff": "high_school",
+    "len": 120,
+    "src": "quantitative_gen",
+    "year": null,
+    "module": "module_4"
+  }
+}

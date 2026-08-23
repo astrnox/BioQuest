@@ -1,0 +1,67 @@
+{
+  "M1-09-3e2562c6b315": {
+    "tags": [
+      "replication",
+      "module_1",
+      "分子生物学",
+      "复制"
+    ],
+    "diff": "high_school",
+    "len": 114,
+    "src": "replication",
+    "year": null,
+    "module": "module_1"
+  },
+  "M1-09-6a02dc83b1ac": {
+    "tags": [
+      "replication",
+      "module_1",
+      "分子生物学",
+      "DNA聚合酶"
+    ],
+    "diff": "league",
+    "len": 104,
+    "src": "replication",
+    "year": null,
+    "module": "module_1"
+  },
+  "M1-09-cbf36d4a25b2": {
+    "tags": [
+      "replication",
+      "module_1",
+      "分子生物学",
+      "冈崎片段"
+    ],
+    "diff": "league",
+    "len": 83,
+    "src": "replication",
+    "year": null,
+    "module": "module_1"
+  },
+  "M1-09-f1f2c3f24f09": {
+    "tags": [
+      "replication",
+      "module_1",
+      "分子生物学",
+      "端粒"
+    ],
+    "diff": "league",
+    "len": 74,
+    "src": "replication",
+    "year": null,
+    "module": "module_1"
+  },
+  "M1-09-b29faff04c93": {
+    "tags": [
+      "replication",
+      "module_1",
+      "分子生物学",
+      "复制叉"
+    ],
+    "diff": "league",
+    "len": 79,
+    "src": "replication",
+    "year": null,
+    "module": "module_1"
+  }
+}

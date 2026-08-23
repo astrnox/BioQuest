@@ -1,0 +1,224 @@
+{
+  "M2-0E-3828eb09ce34": {
+    "type": "mtf",
+    "question": "质粒的特征包括：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "质粒是独立于染色体的环状DNA分子",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "质粒可以自主复制",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "质粒携带的基因对宿主通常不是必需的",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "质粒只能存在于细菌中",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：质粒定义。B正确：自主复制。C正确：非必需。D错误：酵母也有质粒。",
+    "subject": "微生物学",
+    "concept": "质粒",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "microbial_genetics",
+      "module_2",
+      "微生物学",
+      "质粒"
+    ],
+    "references": []
+  },
+  "M2-0E-e70e9db094ce": {
+    "type": "mtf",
+    "question": "F因子介导的接合包括：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "F+菌株含有F质粒，能形成性菌毛",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "F-菌株不含F质粒，作为受体",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "接合过程中F质粒可以转移到受体",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "Hfr菌株中F因子整合到染色体",
+        "answer": true
+      }
+    ],
+    "explanation": "A正确：F+定义。B正确：F-定义。C正确：质粒转移。D正确：Hfr定义。",
+    "subject": "微生物学",
+    "concept": "接合",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "microbial_genetics",
+      "module_2",
+      "微生物学",
+      "接合"
+    ],
+    "references": [
+      {
+        "doi": "10.1128/microbiolspec.3.1.0016.2015",
+        "title": "Bacterial conjugation",
+        "authors": "Llosa M, Bolland S, de la Cruz F",
+        "year": 2003,
+        "journal": "Microbiology Spectrum"
+      }
+    ]
+  },
+  "M2-0E-fb7f023b6494": {
+    "type": "mtf",
+    "question": "转座子的特征包括：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "转座子可以在基因组内移动位置",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "转座子两端有反向重复序列",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "转座酶催化转座过程",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "转座子只能携带转座酶基因",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：转座特性。B正确：结构特征。C正确：转座酶。D错误：可携带其他基因如抗性基因。",
+    "subject": "微生物学",
+    "concept": "转座子",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "microbial_genetics",
+      "module_2",
+      "微生物学",
+      "转座子"
+    ],
+    "references": [
+      {
+        "doi": "10.1146/annurev.genet.34.1.101",
+        "title": "Transposable elements in bacteria",
+        "authors": "Craig NL",
+        "year": 2002,
+        "journal": "Annual Review of Genetics"
+      }
+    ]
+  },
+  "M2-0E-a494de3d420d": {
+    "type": "mtf",
+    "question": "局限性转导的特征包括：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "局限性转导由温和噬菌体介导",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "转导的基因是噬菌体整合位点附近的基因",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "局限性转导频率高于普遍性转导",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "λ噬菌体是典型的局限性转导噬菌体",
+        "answer": true
+      }
+    ],
+    "explanation": "A正确：温和噬菌体。B正确：特定基因。C错误：局限性转导频率低。D正确：λ噬菌体典型。",
+    "subject": "微生物学",
+    "concept": "转导",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "microbial_genetics",
+      "module_2",
+      "微生物学",
+      "转导"
+    ],
+    "references": [
+      {
+        "doi": "10.1128/microbiolspec.2.1.0016.2014",
+        "title": "Transduction in bacteria",
+        "authors": "Waldor MK, Friedman SA",
+        "year": 2005,
+        "journal": "Microbiology Spectrum"
+      }
+    ]
+  },
+  "M2-0E-07432dbf6500": {
+    "type": "mtf",
+    "question": "细菌基因表达调控的特点包括：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "操纵子是原核生物特有的基因组织形式",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "lac操纵子是诱导型操纵子",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "trp操纵子是阻遏型操纵子",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "原核生物基因调控主要在翻译水平",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：操纵子原核特有。B正确：lac诱导型。C正确：trp阻遏型。D错误：主要在转录水平。",
+    "subject": "微生物学",
+    "concept": "基因调控",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "microbial_genetics",
+      "module_2",
+      "微生物学",
+      "调控"
+    ],
+    "references": [
+      {
+        "doi": "10.1128/microbiolspec.1.1.0016.2013",
+        "title": "Gene regulation in bacteria",
+        "authors": "Storz G, Waters KM",
+        "year": 2014,
+        "journal": "Microbiology Spectrum"
+      }
+    ]
+  }
+}

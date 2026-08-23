@@ -1,0 +1,67 @@
+{
+  "M1-0A-0cefc6f64a10": {
+    "tags": [
+      "transcription",
+      "module_1",
+      "分子生物学",
+      "RNA聚合酶"
+    ],
+    "diff": "league",
+    "len": 98,
+    "src": "transcription",
+    "year": null,
+    "module": "module_1"
+  },
+  "M1-0A-526e794db281": {
+    "tags": [
+      "transcription",
+      "module_1",
+      "分子生物学",
+      "转录调控"
+    ],
+    "diff": "league",
+    "len": 83,
+    "src": "transcription",
+    "year": null,
+    "module": "module_1"
+  },
+  "M1-0A-b45082bbeb0c": {
+    "tags": [
+      "transcription",
+      "module_1",
+      "分子生物学",
+      "mRNA"
+    ],
+    "diff": "high_school",
+    "len": 80,
+    "src": "transcription",
+    "year": null,
+    "module": "module_1"
+  },
+  "M1-0A-56b653de4ec9": {
+    "tags": [
+      "transcription",
+      "module_1",
+      "分子生物学",
+      "转录因子"
+    ],
+    "diff": "league",
+    "len": 82,
+    "src": "transcription",
+    "year": null,
+    "module": "module_1"
+  },
+  "M1-0A-0944a5fa8cd4": {
+    "tags": [
+      "transcription",
+      "module_1",
+      "分子生物学",
+      "剪接"
+    ],
+    "diff": "league",
+    "len": 81,
+    "src": "transcription",
+    "year": null,
+    "module": "module_1"
+  }
+}

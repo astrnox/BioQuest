@@ -1,0 +1,216 @@
+{
+  "M4-0b-0e3482b62202": {
+    "type": "mtf",
+    "question": "关于系统发育树的构建方法，以下说法正确的有哪些？",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "最大简约法（Maximum Parsimony）寻找所需进化步骤最少的树",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "最大似然法（Maximum Likelihood）基于特定的序列进化模型",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "贝叶斯推断法利用先验概率和后验概率估计系统发育关系",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "邻接法（Neighbor-Joining）是一种基于距离的方法，速度较快",
+        "answer": true
+      }
+    ],
+    "explanation": "A正确：简约法求最少步骤。B正确：似然法基于进化模型。C正确：贝叶斯法使用先验和后验概率。D正确：NJ是基于距离的快速方法。",
+    "subject": "演化生物学",
+    "concept": "系统发育树构建",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "phylogeny",
+      "module_4",
+      "演化生物学",
+      "系统发育"
+    ],
+    "references": [
+      {
+        "doi": "10.1093/sysbio/syv034",
+        "title": "Phylogenetic methods",
+        "authors": "Yang Z, Rannala B",
+        "year": 2015,
+        "journal": "Systematic Biology"
+      }
+    ]
+  },
+  "M4-0b-74799b7c3417": {
+    "type": "mtf",
+    "question": "关于分子钟假说，以下判断正确的有哪些？",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "分子钟假说认为分子序列以大致恒定的速率积累变异",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "分子钟需要用化石记录或地质事件进行校准",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "不同基因和不同谱系的分子钟速率可能不同",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "分子钟在所有基因和所有生物中都严格恒定",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：分子钟的基本假设。B正确：需要化石等校准。C正确：速率可变。D错误：分子钟速率在不同基因和谱系间可变化（松弛分子钟）。",
+    "subject": "演化生物学",
+    "concept": "分子钟",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "phylogeny",
+      "module_4",
+      "演化生物学",
+      "分子钟"
+    ],
+    "references": []
+  },
+  "M4-0b-603127477daa": {
+    "type": "mtf",
+    "question": "关于长枝吸引（long branch attraction），以下说法正确的有哪些？",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "长枝吸引是指进化速率快的谱系在系统发育分析中被错误地聚在一起",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "长枝吸引是最大简约法的一个已知问题",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "增加分类单元（taxon sampling）可以缓解长枝吸引问题",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "使用更复杂的进化模型可以减少长枝吸引的影响",
+        "answer": true
+      }
+    ],
+    "explanation": "A正确：长枝吸引的定义。B正确：简约法易受长枝吸引影响。C正确：增加取样可打断长枝。D正确：复杂模型更好地处理多重替换。",
+    "subject": "演化生物学",
+    "concept": "长枝吸引",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "phylogeny",
+      "module_4",
+      "演化生物学",
+      "系统发育"
+    ],
+    "references": [
+      {
+        "doi": "10.1093/sysbio/49.4.637",
+        "title": "Long-branch attraction",
+        "authors": "Bergsten D",
+        "year": 2000,
+        "journal": "Systematic Biology"
+      }
+    ]
+  },
+  "M4-0b-ae522c0ed589": {
+    "type": "mtf",
+    "question": "关于支序分类学（cladistics），以下判断正确的有哪些？",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "支序分类学只依据共衍征（synapomorphy）来建立分类群",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "单系群（monophyletic group）包括一个共同祖先及其所有后代",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "并系群（paraphyletic group）包括一个共同祖先但不包括所有后代",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "多系群（polyphyletic group）的成员不具有最近的共同祖先",
+        "answer": true
+      }
+    ],
+    "explanation": "A正确：支序分类依据共衍征。B正确：单系群定义。C正确：并系群定义。D正确：多系群定义。",
+    "subject": "演化生物学",
+    "concept": "支序分类学",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "phylogeny",
+      "module_4",
+      "演化生物学",
+      "支序分类"
+    ],
+    "references": [
+      {
+        "doi": "10.1146/annurev.ecolsys.32.081501.114045",
+        "title": "Cladistics and classification",
+        "authors": "Wiley EO, Lieberman BS",
+        "year": 2011,
+        "journal": "Annual Review of Ecology and Systematics"
+      }
+    ]
+  },
+  "M4-0b-b0c299340011": {
+    "type": "mtf",
+    "question": "关于系统发育树的解读，以下说法正确的有哪些？",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "系统发育树的节点代表共同祖先",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "树的分支长度在所有类型的树中都代表时间",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "两个分类单元在树上的距离（经过的节点数）反映它们的亲缘关系远近",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "自举值（bootstrap value）越高，该节点的支持度越强",
+        "answer": true
+      }
+    ],
+    "explanation": "A正确：节点代表祖先。B错误：分支长度可代表时间、替换数或仅为拓扑关系。C正确：距离反映亲缘关系。D正确：bootstrap值越高支持度越强。",
+    "subject": "演化生物学",
+    "concept": "系统发育树解读",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "phylogeny",
+      "module_4",
+      "演化生物学",
+      "系统发育"
+    ],
+    "references": []
+  }
+}

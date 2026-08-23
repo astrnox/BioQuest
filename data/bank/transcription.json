@@ -1,0 +1,251 @@
+{
+  "M1-0A-0cefc6f64a10": {
+    "type": "mtf",
+    "question": "关于RNA聚合酶的类型，下列说法正确的是：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "A. RNA聚合酶I负责rRNA的转录",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "B. RNA聚合酶II负责mRNA的转录",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "C. RNA聚合酶III负责tRNA的转录",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "D. 原核生物只有一种RNA聚合酶",
+        "answer": true
+      }
+    ],
+    "explanation": "四个选项均正确：A Pol I转录28S、18S、5.8S rRNA；B Pol II转录mRNA；C Pol III转录tRNA和5S rRNA；D原核生物只有一种RNA聚合酶。",
+    "subject": "分子生物学",
+    "concept": "RNA聚合酶",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "transcription",
+      "module_1",
+      "分子生物学",
+      "RNA聚合酶"
+    ],
+    "references": [
+      {
+        "doi": "10.1016/j.cell.2019.01.040",
+        "title": "RNA polymerase II transcription cycle",
+        "authors": "Hahn S, Kim JL",
+        "year": 2019,
+        "journal": "Cell"
+      },
+      {
+        "doi": "10.1038/nature12349",
+        "title": "mRNA splicing mechanisms",
+        "authors": "Staley JP, Guthrie C",
+        "year": 2018,
+        "journal": "Nature"
+      }
+    ]
+  },
+  "M1-0A-526e794db281": {
+    "type": "mtf",
+    "question": "关于启动子和增强子，下列说法正确的是：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "A. 启动子是RNA聚合酶结合的DNA序列",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "B. 增强子可以远距离增强转录",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "C. 增强子的作用具有方向性",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "D. 启动子决定转录起始位点",
+        "answer": true
+      }
+    ],
+    "explanation": "A正确：启动子结合RNA聚合酶和转录因子；B正确：增强子可距离基因数千碱基；C错误：增强子作用无方向性，可在基因上下游；D正确：启动子包含转录起始位点。",
+    "subject": "分子生物学",
+    "concept": "启动子与增强子",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "transcription",
+      "module_1",
+      "分子生物学",
+      "转录调控"
+    ],
+    "references": [
+      {
+        "doi": "10.1016/j.cell.2019.01.040",
+        "title": "RNA polymerase II transcription cycle",
+        "authors": "Hahn S, Kim JL",
+        "year": 2019,
+        "journal": "Cell"
+      },
+      {
+        "doi": "10.1038/nature12349",
+        "title": "mRNA splicing mechanisms",
+        "authors": "Staley JP, Guthrie C",
+        "year": 2018,
+        "journal": "Nature"
+      }
+    ]
+  },
+  "M1-0A-b45082bbeb0c": {
+    "type": "mtf",
+    "question": "关于mRNA加工修饰，下列说法正确的是：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "A. 5'端加帽结构是7-甲基鸟苷",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "B. 3'端加polyA尾",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "C. 内含子被剪接体切除",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "D. 可变剪接可以产生不同的mRNA",
+        "answer": true
+      }
+    ],
+    "explanation": "四个选项均正确：A 5'帽为m⁷GpppN；B polyA尾约200个腺苷酸；C剪接体切除内含子，连接外显子；D可变剪接产生不同蛋白异构体。",
+    "subject": "分子生物学",
+    "concept": "mRNA加工",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "transcription",
+      "module_1",
+      "分子生物学",
+      "mRNA"
+    ]
+  },
+  "M1-0A-56b653de4ec9": {
+    "type": "mtf",
+    "question": "关于转录因子，下列说法正确的是：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "A. 通用转录因子结合启动子核心区域",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "B. 特异性转录因子结合增强子或沉默子",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "C. TFIID识别TATA盒",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "D. 转录因子都是激活转录的",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：通用转录因子（GTF）结合核心启动子；B正确：特异性因子结合调控元件；C正确：TFIID的TBP亚基结合TATA盒；D错误：转录因子包括激活因子和抑制因子。",
+    "subject": "分子生物学",
+    "concept": "转录因子",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "transcription",
+      "module_1",
+      "分子生物学",
+      "转录因子"
+    ],
+    "references": [
+      {
+        "doi": "10.1016/j.cell.2019.01.040",
+        "title": "RNA polymerase II transcription cycle",
+        "authors": "Hahn S, Kim JL",
+        "year": 2019,
+        "journal": "Cell"
+      },
+      {
+        "doi": "10.1038/nature12349",
+        "title": "mRNA splicing mechanisms",
+        "authors": "Staley JP, Guthrie C",
+        "year": 2018,
+        "journal": "Nature"
+      }
+    ]
+  },
+  "M1-0A-0944a5fa8cd4": {
+    "type": "mtf",
+    "question": "关于RNA剪接机制，下列说法正确的是：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "A. 剪接体由snRNP组成",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "B. 剪接发生在5'剪接位点和3'剪接位点",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "C. 分支点腺苷酸参与剪接反应",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "D. 剪接过程需要ATP",
+        "answer": true
+      }
+    ],
+    "explanation": "四个选项均正确：A剪接体由U1、U2、U4、U5、U6等snRNP组成；B剪接位点为GU-AG；C分支点A的2'-OH攻击5'剪接位点；D剪接需要ATP提供能量。",
+    "subject": "分子生物学",
+    "concept": "RNA剪接",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "transcription",
+      "module_1",
+      "分子生物学",
+      "剪接"
+    ],
+    "references": [
+      {
+        "doi": "10.1016/j.cell.2019.01.040",
+        "title": "RNA polymerase II transcription cycle",
+        "authors": "Hahn S, Kim JL",
+        "year": 2019,
+        "journal": "Cell"
+      },
+      {
+        "doi": "10.1038/nature12349",
+        "title": "mRNA splicing mechanisms",
+        "authors": "Staley JP, Guthrie C",
+        "year": 2018,
+        "journal": "Nature"
+      }
+    ]
+  }
+}

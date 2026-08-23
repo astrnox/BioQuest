@@ -1,0 +1,208 @@
+{
+  "M2-02-72d7dc9ccaf3": {
+    "type": "mtf",
+    "question": "关于植物水分吸收和运输的机制，以下说法正确的是：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "根毛细胞通过渗透作用吸收土壤中的水分",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "水分在木质部中的运输主要依靠根压",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "内聚力-张力学说认为水柱的连续性依靠水分子间的氢键",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "蒸腾拉力是高大乔木水分运输的主要动力",
+        "answer": true
+      }
+    ],
+    "explanation": "A正确：根毛细胞通过渗透吸水。B错误：蒸腾拉力是水分上升的主要动力，根压作用有限。C正确：内聚力学说强调水分子间氢键维持水柱连续。D正确：蒸腾拉力是高大乔木水分运输的主要动力。",
+    "subject": "植物生理学",
+    "concept": "水分运输",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "plant_water_mineral",
+      "module_2",
+      "植物生理学",
+      "水分代谢"
+    ],
+    "references": []
+  },
+  "M2-02-5de44f723568": {
+    "type": "mtf",
+    "question": "影响植物蒸腾作用的环境因素包括：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "光照强度增加会促进气孔开放，增加蒸腾",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "空气湿度降低会减小蒸腾速率",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "温度升高会加速蒸腾作用",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "风速增大总是抑制蒸腾作用",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：光照促进气孔开放。B错误：湿度低，水汽压差大，蒸腾快。C正确：温度高促进蒸腾。D错误：微风有助于扩散水汽层，促进蒸腾；强风可能导致气孔关闭。",
+    "subject": "植物生理学",
+    "concept": "蒸腾作用",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "plant_water_mineral",
+      "module_2",
+      "植物生理学",
+      "蒸腾"
+    ],
+    "references": []
+  },
+  "M2-02-4802d03ef9fb": {
+    "type": "mtf",
+    "question": "关于植物矿质元素吸收的机制，以下描述正确的是：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "离子通过离子通道蛋白进行被动运输",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "载体蛋白可以介导离子的主动运输和协助扩散",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "H+-ATPase建立的质子梯度驱动次级主动运输",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "所有矿质元素的吸收都需要消耗ATP",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：离子通道允许离子顺电化学梯度被动运输。B正确：载体蛋白可介导多种运输方式。C正确：质子泵建立的电化学梯度驱动共运输。D错误：部分离子可通过被动运输吸收。",
+    "subject": "植物生理学",
+    "concept": "矿质吸收",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "plant_water_mineral",
+      "module_2",
+      "植物生理学",
+      "离子运输"
+    ],
+    "references": [
+      {
+        "doi": "10.1146/annurev.arplant.56.032604.144152",
+        "title": "Nutrient transport in plants",
+        "authors": "Williams LE, Miller T, Chao S",
+        "year": 2010,
+        "journal": "Annual Review of Plant Biology"
+      }
+    ]
+  },
+  "M2-02-7529fc4956ff": {
+    "type": "mtf",
+    "question": "植物必需的大量元素包括：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "氮、磷、钾是植物需要量最大的三种矿质元素",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "钙、镁、硫也是大量元素",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "铁、锰、锌属于大量元素",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "碳、氢、氧、氮是构成有机物的主要元素",
+        "answer": true
+      }
+    ],
+    "explanation": "A正确：NPK是肥料三要素。B正确：Ca、Mg、S也是大量元素。C错误：Fe、Mn、Zn是微量元素。D正确：CHO N是有机物主要组成元素。",
+    "subject": "植物生理学",
+    "concept": "必需元素",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "plant_water_mineral",
+      "module_2",
+      "植物生理学",
+      "矿质营养"
+    ],
+    "references": []
+  },
+  "M2-02-de3f7bc2a423": {
+    "type": "mtf",
+    "question": "关于水分在植物体内运输的途径，以下说法正确的是：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "水分可以通过共质体途径从根毛运输到内皮层",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "水分可以通过质外体途径在细胞壁和细胞间隙中运输",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "凯氏带允许水分通过质外体途径自由通过内皮层",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "水分最终必须进入共质体才能通过内皮层进入维管柱",
+        "answer": true
+      }
+    ],
+    "explanation": "A正确：共质体途径是水分运输的重要途径。B正确：质外体途径在皮层中很重要。C错误：凯氏带阻断质外体途径。D正确：水分必须通过内皮层细胞的选择性吸收。",
+    "subject": "植物生理学",
+    "concept": "水分运输途径",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "plant_water_mineral",
+      "module_2",
+      "植物生理学",
+      "运输途径"
+    ],
+    "references": [
+      {
+        "doi": "10.1046/j.1365-3040.2001.00721.x",
+        "title": "Water transport across plant roots",
+        "authors": "Steudle E",
+        "year": 2001,
+        "journal": "Plant, Cell & Environment"
+      }
+    ]
+  }
+}

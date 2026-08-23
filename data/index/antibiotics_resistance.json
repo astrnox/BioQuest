@@ -1,0 +1,67 @@
+{
+  "M2-11-638624f552f6": {
+    "tags": [
+      "antibiotics_resistance",
+      "module_2",
+      "微生物学",
+      "抗生素"
+    ],
+    "diff": "high_school",
+    "len": 59,
+    "src": "antibiotics_resistance",
+    "year": null,
+    "module": "module_2"
+  },
+  "M2-11-399243abe106": {
+    "tags": [
+      "antibiotics_resistance",
+      "module_2",
+      "微生物学",
+      "耐药"
+    ],
+    "diff": "league",
+    "len": 53,
+    "src": "antibiotics_resistance",
+    "year": 2014,
+    "module": "module_2"
+  },
+  "M2-11-a19d8112c223": {
+    "tags": [
+      "antibiotics_resistance",
+      "module_2",
+      "微生物学",
+      "MRSA"
+    ],
+    "diff": "league",
+    "len": 75,
+    "src": "antibiotics_resistance",
+    "year": 2003,
+    "module": "module_2"
+  },
+  "M2-11-27df64a1edd6": {
+    "tags": [
+      "antibiotics_resistance",
+      "module_2",
+      "微生物学",
+      "传播"
+    ],
+    "diff": "league",
+    "len": 53,
+    "src": "antibiotics_resistance",
+    "year": 2010,
+    "module": "module_2"
+  },
+  "M2-11-5fc60c6a498d": {
+    "tags": [
+      "antibiotics_resistance",
+      "module_2",
+      "微生物学",
+      "滥用"
+    ],
+    "diff": "high_school",
+    "len": 53,
+    "src": "antibiotics_resistance",
+    "year": null,
+    "module": "module_2"
+  }
+}

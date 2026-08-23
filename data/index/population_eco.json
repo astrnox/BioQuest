@@ -1,0 +1,67 @@
+{
+  "M3-0c-729af2c92dc3": {
+    "tags": [
+      "population_eco",
+      "module_3",
+      "生态学",
+      "种群增长"
+    ],
+    "diff": "league",
+    "len": 151,
+    "src": "population_eco",
+    "year": 2001,
+    "module": "module_3"
+  },
+  "M3-0c-217173691585": {
+    "tags": [
+      "population_eco",
+      "module_3",
+      "生态学",
+      "r/K选择"
+    ],
+    "diff": "high_school",
+    "len": 132,
+    "src": "population_eco",
+    "year": null,
+    "module": "module_3"
+  },
+  "M3-0c-53059de1dcbb": {
+    "tags": [
+      "population_eco",
+      "module_3",
+      "生态学",
+      "生命表"
+    ],
+    "diff": "league",
+    "len": 154,
+    "src": "population_eco",
+    "year": 1947,
+    "module": "module_3"
+  },
+  "M3-0c-30fc62259c44": {
+    "tags": [
+      "population_eco",
+      "module_3",
+      "生态学",
+      "种群调节"
+    ],
+    "diff": "high_school",
+    "len": 148,
+    "src": "population_eco",
+    "year": null,
+    "module": "module_3"
+  },
+  "M3-0c-b19628392c4b": {
+    "tags": [
+      "population_eco",
+      "module_3",
+      "生态学",
+      "年龄结构"
+    ],
+    "diff": "high_school",
+    "len": 133,
+    "src": "population_eco",
+    "year": null,
+    "module": "module_3"
+  }
+}

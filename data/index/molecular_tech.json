@@ -1,0 +1,67 @@
+{
+  "M1-0D-1e45e2191622": {
+    "tags": [
+      "molecular_tech",
+      "module_1",
+      "分子生物学",
+      "PCR"
+    ],
+    "diff": "high_school",
+    "len": 88,
+    "src": "molecular_tech",
+    "year": null,
+    "module": "module_1"
+  },
+  "M1-0D-fe9936bf25b5": {
+    "tags": [
+      "molecular_tech",
+      "module_1",
+      "分子生物学",
+      "基因编辑"
+    ],
+    "diff": "league",
+    "len": 96,
+    "src": "molecular_tech",
+    "year": null,
+    "module": "module_1"
+  },
+  "M1-0D-0e28f74d6cbb": {
+    "tags": [
+      "molecular_tech",
+      "module_1",
+      "分子生物学",
+      "载体"
+    ],
+    "diff": "high_school",
+    "len": 72,
+    "src": "molecular_tech",
+    "year": null,
+    "module": "module_1"
+  },
+  "M1-0D-60acc671725e": {
+    "tags": [
+      "molecular_tech",
+      "module_1",
+      "分子生物学",
+      "电泳"
+    ],
+    "diff": "high_school",
+    "len": 81,
+    "src": "molecular_tech",
+    "year": null,
+    "module": "module_1"
+  },
+  "M1-0D-25010430e74c": {
+    "tags": [
+      "molecular_tech",
+      "module_1",
+      "分子生物学",
+      "印迹"
+    ],
+    "diff": "league",
+    "len": 115,
+    "src": "molecular_tech",
+    "year": null,
+    "module": "module_1"
+  }
+}

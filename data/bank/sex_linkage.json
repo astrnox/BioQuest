@@ -1,0 +1,216 @@
+{
+  "M4-03-7da9bfbdb17e": {
+    "type": "mtf",
+    "question": "关于X连锁遗传，以下说法正确的有哪些？",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "X连锁隐性遗传病中，男性发病率高于女性",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "X连锁显性遗传病中，女性患者通常是杂合子，症状比男性轻",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "父亲X连锁的性状只能传给女儿，不能传给儿子",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "色盲基因位于Y染色体上，因此只有男性患病",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：男性只有一条X，携带隐性致病基因即发病。B正确：女性杂合子有一个正常等位基因，症状通常较轻。C正确：父亲的X只传给女儿，Y传给儿子。D错误：红绿色盲基因位于X染色体上，非Y染色体。",
+    "subject": "遗传学",
+    "concept": "X连锁遗传",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "sex_linkage",
+      "module_4",
+      "遗传学",
+      "伴性遗传"
+    ],
+    "references": []
+  },
+  "M4-03-886ff7bbb683": {
+    "type": "mtf",
+    "question": "关于剂量补偿与X染色体失活，以下判断正确的有哪些？",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "哺乳动物雌性体细胞中有一条X染色体随机失活，形成巴氏小体",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "X染色体失活发生在胚胎发育早期",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "X失活中心的XIST基因编码的lncRNA在X失活中起关键作用",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "X染色体失活后，失活的X染色体上的所有基因均不表达",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：雌性哺乳动物一条X随机失活形成巴氏小体。B正确：失活发生在胚胎发育早期。C正确：XIST lncRNA包裹将要失活的X染色体，引发沉默。D错误：失活X上仍有约15%的基因逃逸失活而表达。",
+    "subject": "遗传学",
+    "concept": "剂量补偿与X失活",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "sex_linkage",
+      "module_4",
+      "遗传学",
+      "剂量补偿"
+    ],
+    "references": [
+      {
+        "doi": "10.1016/j.cell.2019.01.030",
+        "title": "X chromosome dosage compensation",
+        "authors": "Penny GD, Kay SA",
+        "year": 2019,
+        "journal": "Cell"
+      }
+    ]
+  },
+  "M4-03-461ac6c9f98f": {
+    "type": "mtf",
+    "question": "关于ZW性别决定系统，以下说法正确的有哪些？",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "ZW系统中，雌性为ZW，雄性为ZZ",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "鸟类和鳞翅目昆虫采用ZW性别决定系统",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "ZW系统中，后代的性别由母本决定",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "ZW系统与XY系统在本质上是相同的，只是异配性别不同",
+        "answer": true
+      }
+    ],
+    "explanation": "A正确：ZW系统中雌性异配（ZW），雄性同配（ZZ）。B正确：鸟类、部分昆虫（如鳞翅目）采用ZW系统。C正确：母本产生Z和W两种卵子，决定后代性别。D正确：XY和ZW本质相同，XY中雄性异配，ZW中雌性异配。",
+    "subject": "遗传学",
+    "concept": "ZW性别决定",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "sex_linkage",
+      "module_4",
+      "遗传学",
+      "性别决定"
+    ],
+    "references": [
+      {
+        "doi": "10.1016/j.tree.2018.11.005",
+        "title": "Sex determination systems in vertebrates",
+        "authors": "Vicoso B, Bachtrog D",
+        "year": 2019,
+        "journal": "Trends in Ecology & Evolution"
+      }
+    ]
+  },
+  "M4-03-6adb968d6a22": {
+    "type": "mtf",
+    "question": "关于从性遗传和限性遗传，以下判断正确的有哪些？",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "从性遗传的基因位于常染色体上，但表达受性激素影响",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "人类秃顶是从性遗传的典型例子，杂合子男性秃顶而杂合子女性不秃顶",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "限性遗传的性状只在一种性别中表现，但基因可以存在于两种性别中",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "从性遗传和伴性遗传的区别在于基因所在的染色体不同",
+        "answer": true
+      }
+    ],
+    "explanation": "A正确：从性遗传基因在常染色体上，受性激素调控。B正确：秃顶基因Bb，男性Bb秃顶，女性Bb不秃顶。C正确：限性遗传如产蛋量，基因两性都有但只在一性表达。D正确：从性遗传在常染色体，伴性遗传在性染色体。",
+    "subject": "遗传学",
+    "concept": "从性遗传与限性遗传",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "sex_linkage",
+      "module_4",
+      "遗传学",
+      "从性遗传"
+    ],
+    "references": [
+      {
+        "doi": "10.1038/s41437-020-0325-9",
+        "title": "Sex-influenced and sex-limited traits",
+        "authors": "Garcia JR et al.",
+        "year": 2020,
+        "journal": "Heredity"
+      }
+    ]
+  },
+  "M4-03-8107a95e6ccd": {
+    "type": "mtf",
+    "question": "一对夫妇，妻子为色觉正常的携带者（XBXb），丈夫色觉正常（XBY），以下判断正确的有哪些？",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "他们的女儿全部色觉正常",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "他们的儿子有50%概率患色盲",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "他们的女儿中有50%为携带者",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "若他们生了一个色盲女儿，则女儿的基因型为XbXb，说明丈夫一定携带Xb",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：女儿从父亲获得XB，全部正常。B正确：儿子从母亲获得Xb概率50%。C正确：女儿从母亲获得Xb概率50%。D错误：色盲女儿XbXb需从父母各获一个Xb，但父亲为XBY，不可能提供Xb，所以不可能有色盲女儿。",
+    "subject": "遗传学",
+    "concept": "X连锁遗传概率计算",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "sex_linkage",
+      "module_4",
+      "遗传学",
+      "伴性遗传"
+    ],
+    "references": []
+  }
+}

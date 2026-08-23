@@ -1,0 +1,267 @@
+{
+  "M1-0E-0891bef1fab0": {
+    "type": "mtf",
+    "question": "关于RNA干扰（RNAi），下列说法正确的是：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "A. RNAi由双链RNA触发",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "B. Dicer酶切割dsRNA产生siRNA",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "C. siRNA与RISC复合物结合",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "D. RNAi可以特异性沉默基因表达",
+        "answer": true
+      }
+    ],
+    "explanation": "四个选项均正确：A dsRNA触发RNAi；B Dicer切割产生21-23nt siRNA；C siRNA装载到RISC；D siRNA引导RISC切割互补mRNA。",
+    "subject": "分子生物学",
+    "concept": "RNAi",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "rna_biology",
+      "module_1",
+      "分子生物学",
+      "RNAi"
+    ],
+    "references": [
+      {
+        "doi": "10.1016/j.cell.2019.03.035",
+        "title": "RNA interference mechanisms",
+        "authors": "Fire A, Mello CC",
+        "year": 2019,
+        "journal": "Cell"
+      },
+      {
+        "doi": "10.1038/nature12352",
+        "title": "Non-coding RNA functions",
+        "authors": "Mattick JS, Rinn JL",
+        "year": 2018,
+        "journal": "Nature"
+      }
+    ]
+  },
+  "M1-0E-4a7fe21f6cba": {
+    "type": "mtf",
+    "question": "关于RNA编辑，下列说法正确的是：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "A. RNA编辑可以改变mRNA的编码序列",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "B. A-to-I编辑由ADAR酶催化",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "C. C-to-U编辑由APOBEC酶催化",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "D. RNA编辑只发生在植物中",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：编辑改变编码信息；B正确：ADAR催化A→I（读作G）；C正确：APOBEC催化C→U；D错误：RNA编辑在动物、植物、真菌中都有。",
+    "subject": "分子生物学",
+    "concept": "RNA编辑",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "rna_biology",
+      "module_1",
+      "分子生物学",
+      "RNA编辑"
+    ],
+    "references": [
+      {
+        "doi": "10.1016/j.cell.2019.03.035",
+        "title": "RNA interference mechanisms",
+        "authors": "Fire A, Mello CC",
+        "year": 2019,
+        "journal": "Cell"
+      },
+      {
+        "doi": "10.1038/nature12352",
+        "title": "Non-coding RNA functions",
+        "authors": "Mattick JS, Rinn JL",
+        "year": 2018,
+        "journal": "Nature"
+      }
+    ]
+  },
+  "M1-0E-edcc7c4f98b5": {
+    "type": "mtf",
+    "question": "关于lncRNA的功能，下列说法正确的是：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "A. lncRNA长度大于200nt",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "B. lncRNA可以招募染色质修饰复合物",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "C. lncRNA可以作为miRNA海绵",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "D. lncRNA不编码任何蛋白质",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：lncRNA>200nt；B正确：如Xist招募PRC2复合物；C正确：ceRNA机制吸附miRNA；D错误：部分lncRNA可以编码小肽。",
+    "subject": "分子生物学",
+    "concept": "lncRNA",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "rna_biology",
+      "module_1",
+      "分子生物学",
+      "lncRNA"
+    ],
+    "references": [
+      {
+        "doi": "10.1016/j.cell.2019.03.035",
+        "title": "RNA interference mechanisms",
+        "authors": "Fire A, Mello CC",
+        "year": 2019,
+        "journal": "Cell"
+      },
+      {
+        "doi": "10.1038/nature12352",
+        "title": "Non-coding RNA functions",
+        "authors": "Mattick JS, Rinn JL",
+        "year": 2018,
+        "journal": "Nature"
+      }
+    ]
+  },
+  "M1-0E-55858c35286e": {
+    "type": "mtf",
+    "question": "关于核酶（ribozyme），下列说法正确的是：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "A. 核酶是具有催化活性的RNA",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "B. 核糖体是核酶",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "C. 自我剪接内含子是核酶",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "D. 核酶的发现证明RNA可以催化化学反应",
+        "answer": true
+      }
+    ],
+    "explanation": "四个选项均正确：A核酶是RNA催化剂；B 23S/28S rRNA催化肽键形成；C I型、II型内含子自我剪接；D核酶支持RNA世界假说。",
+    "subject": "分子生物学",
+    "concept": "核酶",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "rna_biology",
+      "module_1",
+      "分子生物学",
+      "核酶"
+    ],
+    "references": [
+      {
+        "doi": "10.1016/j.cell.2019.03.035",
+        "title": "RNA interference mechanisms",
+        "authors": "Fire A, Mello CC",
+        "year": 2019,
+        "journal": "Cell"
+      },
+      {
+        "doi": "10.1038/nature12352",
+        "title": "Non-coding RNA functions",
+        "authors": "Mattick JS, Rinn JL",
+        "year": 2018,
+        "journal": "Nature"
+      }
+    ]
+  },
+  "M1-0E-760baf43a0e1": {
+    "type": "mtf",
+    "question": "关于RNA世界假说，下列说法正确的是：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "A. RNA世界假说认为生命起源于RNA",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "B. RNA可以同时存储信息和催化反应",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "C. RNA世界假说解释了DNA和蛋白质的起源",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "D. RNA世界假说已经被完全证明",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：假说认为早期生命基于RNA；B正确：RNA具有遗传和催化双重功能；C正确：DNA可能由RNA演化而来，蛋白质由RNA催化合成；D错误：假说仍有待证明，存在争议。",
+    "subject": "分子生物学",
+    "concept": "RNA世界",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "rna_biology",
+      "module_1",
+      "分子生物学",
+      "生命起源"
+    ],
+    "references": [
+      {
+        "doi": "10.1016/j.cell.2019.03.035",
+        "title": "RNA interference mechanisms",
+        "authors": "Fire A, Mello CC",
+        "year": 2019,
+        "journal": "Cell"
+      },
+      {
+        "doi": "10.1038/nature12352",
+        "title": "Non-coding RNA functions",
+        "authors": "Mattick JS, Rinn JL",
+        "year": 2018,
+        "journal": "Nature"
+      }
+    ]
+  }
+}

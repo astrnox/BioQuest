@@ -1,0 +1,208 @@
+{
+  "M2-0D-63176152aeee": {
+    "type": "mtf",
+    "question": "病毒的基本特征包括：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "病毒没有细胞结构，由核酸和蛋白质组成",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "病毒必须寄生在活细胞内才能繁殖",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "病毒的核酸可以是DNA或RNA",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "病毒具有核糖体等细胞器",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：病毒无细胞结构。B正确：专性寄生。C正确：DNA或RNA。D错误：病毒无细胞器。",
+    "subject": "微生物学",
+    "concept": "病毒特征",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "virus",
+      "module_2",
+      "微生物学",
+      "病毒"
+    ],
+    "references": []
+  },
+  "M2-0D-b47c6ccecd37": {
+    "type": "mtf",
+    "question": "噬菌体的复制周期包括：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "吸附：噬菌体识别并结合宿主细胞",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "侵入：噬菌体核酸注入宿主细胞",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "合成：利用宿主系统合成噬菌体组分",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "装配和释放：新噬菌体组装后裂解细胞释放",
+        "answer": true
+      }
+    ],
+    "explanation": "A正确：吸附步骤。B正确：侵入步骤。C正确：合成步骤。D正确：装配释放步骤。",
+    "subject": "微生物学",
+    "concept": "噬菌体复制",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "virus",
+      "module_2",
+      "微生物学",
+      "噬菌体"
+    ],
+    "references": []
+  },
+  "M2-0D-ff77d97e7dce": {
+    "type": "mtf",
+    "question": "溶原循环与溶菌循环的区别包括：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "溶原循环中噬菌体DNA整合到宿主染色体",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "溶原状态下噬菌体基因完全不表达",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "溶菌循环导致宿主细胞裂解",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "温和噬菌体可以进行溶原循环",
+        "answer": true
+      }
+    ],
+    "explanation": "A正确：溶原整合。B错误：溶原状态下部分基因表达维持溶原。C正确：溶菌裂解。D正确：温和噬菌体特性。",
+    "subject": "微生物学",
+    "concept": "溶原溶菌",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "virus",
+      "module_2",
+      "微生物学",
+      "噬菌体"
+    ],
+    "references": [
+      {
+        "doi": "10.1128/microbiolspec.4.1.0016.2016",
+        "title": "Bacteriophage life cycles",
+        "authors": "Hendrix RW",
+        "year": 2009,
+        "journal": "Microbiology Spectrum"
+      }
+    ]
+  },
+  "M2-0D-1d20300126a4": {
+    "type": "mtf",
+    "question": "逆转录病毒的特征包括：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "逆转录病毒的遗传物质是RNA",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "逆转录酶将RNA逆转录为DNA",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "HIV是典型的逆转录病毒",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "逆转录病毒不需要整合到宿主基因组",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：RNA病毒。B正确：逆转录过程。C正确：HIV是逆转录病毒。D错误：需要整合。",
+    "subject": "微生物学",
+    "concept": "逆转录病毒",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "virus",
+      "module_2",
+      "微生物学",
+      "逆转录"
+    ],
+    "references": [
+      {
+        "doi": "10.1146/annurev.biochem.68.1.153",
+        "title": "Retroviral reverse transcription",
+        "authors": "Hughes AL, Coffin JM",
+        "year": 2001,
+        "journal": "Annual Review of Biochemistry"
+      }
+    ]
+  },
+  "M2-0D-fd1acb57fd35": {
+    "type": "mtf",
+    "question": "病毒分类的依据包括：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "核酸类型（DNA或RNA）",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "核酸链数（单链或双链）",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "有无包膜",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "病毒大小是唯一分类标准",
+        "answer": false
+      }
+    ],
+    "explanation": "A正确：核酸类型。B正确：链数。C正确：包膜。D错误：多种标准综合。",
+    "subject": "微生物学",
+    "concept": "病毒分类",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "virus",
+      "module_2",
+      "微生物学",
+      "分类"
+    ],
+    "references": []
+  }
+}
