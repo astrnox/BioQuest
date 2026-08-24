@@ -482,6 +482,12 @@ body {
   transform: scale(0.97);
 }
 
+/* #122 通用按压反馈：所有原生按钮/角色按钮按压时统一缩放。
+   使用 :where() 零特异性，仅作兜底 —— 页面级 :active 规则一律优先生效。 */
+:where(button, input[type='button'], input[type='submit'], [role='button']):where(:active:not(:disabled)) {
+  transform: scale(0.97);
+}
+
 .btn:disabled {
   opacity: 0.5;
   cursor: not-allowed;

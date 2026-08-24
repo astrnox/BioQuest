@@ -426,22 +426,30 @@ self.addEventListener('message', function (event) {
   }
   if (!data || typeof data !== 'object') return;
 
+  // #137 应答助手：优先经请求携带的 MessageChannel port 点对点回包
+  // （客户端 _sendSwMessage 通过 port1 监听应答；走 event.source.postMessage
+  //  广播时客户端永远收不到，只能等 3s 超时兜底）；无 port 再回退广播兼容旧协议。
+  function _reply(msg) {
+    if (event.ports && event.ports[0]) {
+      try { event.ports[0].postMessage(msg); return; } catch (e) {}
+    }
+    if (event.source) {
+      try { event.source.postMessage(msg); } catch (e) {}
+    }
+  }
+
   switch (data.type) {
     case 'SKIP_WAITING':
       self.skipWaiting();
       break;
     case 'GET_VERSION':
-      // 「检查更新」：返回外壳版本 + 题库缓存大小，供 UI 比对展示
-      if (event.source) {
-        event.source.postMessage({ type: 'VERSION', version: CACHE_VERSION });
-      }
+      // 「检查更新」：返回外壳版本，供 UI 比对展示
+      _reply({ type: 'VERSION', version: CACHE_VERSION });
       break;
     case 'PURGE_DATA_CACHE':
       // 「检查更新」发现题库新版本：清空题库 runtime cache，页面重取后自然落新缓存
       event.waitUntil(purgeDataCaches().then(function () {
-        if (event.source) {
-          event.source.postMessage({ type: 'DATA_CACHE_PURGED' });
-        }
+        _reply({ type: 'DATA_CACHE_PURGED' });
       }));
       break;
     default:

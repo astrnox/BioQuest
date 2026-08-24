@@ -59,12 +59,24 @@
     }
   });
 
-  // 未处理的 Promise 拒绝
+  // 未处理的 Promise 拒绝（#121：除记录日志外对用户可见）
+  var _lastRejectionToastAt = 0;
   window.addEventListener('unhandledrejection', function (event) {
     var reason = event.reason;
     var msg = reason && reason.message ? reason.message : String(reason);
     logError('[UnhandledRejection] ' + msg, '', 0, 0, reason);
     console.warn('[BioQuest] 未处理的 Promise 拒绝:', msg);
+    // 用户主动取消（AbortError）属正常流程，不打扰用户
+    if (reason && reason.name === 'AbortError') return;
+    // 节流：5 秒内最多提示一次，避免连续失败触发 toast 风暴
+    var now = Date.now();
+    if (now - _lastRejectionToastAt < 5000) return;
+    _lastRejectionToastAt = now;
+    if (typeof window.showToast === 'function') {
+      var brief = String(msg || '未知错误');
+      if (brief.length > 80) brief = brief.slice(0, 80) + '…';
+      window.showToast('操作遇到问题：' + brief, 'error');
+    }
   });
 
   console.log('[BioQuest] 全局错误恢复机制已启动');
