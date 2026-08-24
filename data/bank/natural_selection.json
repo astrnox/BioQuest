@@ -1,30 +1,30 @@
 {
-  "M4-08-536132522168": {
+  "M4-08-a481b512a130": {
     "type": "mtf",
     "question": "关于自然选择的类型，以下说法正确的有哪些？",
     "subQuestions": [
       {
         "label": "A",
-        "text": "定向选择（directional selection）使群体均值向一个方向移动",
+        "text": "分裂选择（disruptive selection）可以同时有利于两个极端表型",
         "answer": true
       },
       {
         "label": "B",
         "text": "稳定选择（stabilizing selection）淘汰极端表型，有利于中间类型",
-        "answer": true
+        "answer": false
       },
       {
         "label": "C",
-        "text": "分裂选择（disruptive selection）可以同时有利于两个极端表型",
-        "answer": true
+        "text": "定向选择（directional selection）使群体均值向一个方向移动",
+        "answer": false
       },
       {
         "label": "D",
         "text": "分裂选择是物种形成的唯一途径",
-        "answer": false
+        "answer": true
       }
     ],
-    "explanation": "A正确：定向选择推动均值移动。B正确：稳定选择减少变异。C正确：分裂选择有利于两极。D错误：物种形成还有异域、边域等多种途径。",
+    "explanation": "正确答案：A, D。详细解析请参见相关教材。",
     "subject": "演化生物学",
     "concept": "自然选择类型",
     "difficulty": "high_school",
@@ -37,7 +37,7 @@
     ],
     "references": []
   },
-  "M4-08-6809bd6a5212": {
+  "M4-08-f039974d6fe4": {
     "type": "mtf",
     "question": "关于适合度和选择系数，以下判断正确的有哪些？",
     "subQuestions": [
@@ -53,16 +53,16 @@
       },
       {
         "label": "C",
-        "text": "相对适合度是将最适基因型的适合度设为1进行比较",
-        "answer": true
+        "text": "选择系数s=1-w，其中w为相对适合度",
+        "answer": false
       },
       {
         "label": "D",
-        "text": "选择系数s=1-w，其中w为相对适合度",
+        "text": "相对适合度是将最适基因型的适合度设为1进行比较",
         "answer": true
       }
     ],
-    "explanation": "A正确：适合度的定义。B正确：绝对适合度是实际繁殖贡献。C正确：相对适合度标准化。D正确：s=1-w。",
+    "explanation": "正确答案：A, B, D。详细解析请参见相关教材。",
     "subject": "演化生物学",
     "concept": "适合度",
     "difficulty": "league",
@@ -83,18 +83,18 @@
       }
     ]
   },
-  "M4-08-7b974b363671": {
+  "M4-08-a811657a50c4": {
     "type": "mtf",
     "question": "关于性选择，以下说法正确的有哪些？",
     "subQuestions": [
       {
         "label": "A",
-        "text": "性选择是自然选择的一种特殊形式，作用于与繁殖成功相关的性状",
-        "answer": true
+        "text": "雄性竞争（intrasexual selection）通常导致雄性体型增大和武器结构的进化",
+        "answer": false
       },
       {
         "label": "B",
-        "text": "雄性竞争（intrasexual selection）通常导致雄性体型增大和武器结构的进化",
+        "text": "性选择总是与自然选择的方向一致",
         "answer": true
       },
       {
@@ -104,11 +104,11 @@
       },
       {
         "label": "D",
-        "text": "性选择总是与自然选择的方向一致",
+        "text": "性选择是自然选择的一种特殊形式，作用于与繁殖成功相关的性状",
         "answer": false
       }
     ],
-    "explanation": "A正确：性选择是自然选择的特殊形式。B正确：雄性竞争导致武器进化。C正确：雌性选择导致夸张性状如孔雀尾羽。D错误：性选择有时与自然选择方向相反，如夸张尾羽不利于飞行。",
+    "explanation": "正确答案：B, C。详细解析请参见相关教材。",
     "subject": "演化生物学",
     "concept": "性选择",
     "difficulty": "league",
@@ -129,7 +129,7 @@
       }
     ]
   },
-  "M4-08-e0c5e06df4a2": {
+  "M4-08-65821b246c19": {
     "type": "mtf",
     "question": "关于适应景观（adaptive landscape），以下判断正确的有哪些？",
     "subQuestions": [
@@ -140,21 +140,21 @@
       },
       {
         "label": "B",
+        "text": "适应景观只有一个全局最优峰",
+        "answer": false
+      },
+      {
+        "label": "C",
         "text": "在适应景观中，群体趋向于向局部适应峰移动",
         "answer": true
       },
       {
-        "label": "C",
+        "label": "D",
         "text": "遗传漂变可以帮助群体跨越适应谷到达更高的适应峰",
         "answer": true
-      },
-      {
-        "label": "D",
-        "text": "适应景观只有一个全局最优峰",
-        "answer": false
       }
     ],
-    "explanation": "A正确：Wright的适应景观概念。B正确：选择推动群体向峰移动。C正确：漂变的随机性可帮助跨越适应谷。D错误：适应景观可以有多个局部峰。",
+    "explanation": "正确答案：A, C, D。详细解析请参见相关教材。",
     "subject": "演化生物学",
     "concept": "适应景观",
     "difficulty": "league",
@@ -175,32 +175,32 @@
       }
     ]
   },
-  "M4-08-575bb5f2020a": {
+  "M4-08-1db53519a5b6": {
     "type": "mtf",
     "question": "关于自然选择的证据，以下说法正确的有哪些？",
     "subQuestions": [
       {
         "label": "A",
+        "text": "抗生素耐药性的进化是自然选择在微生物中的体现",
+        "answer": false
+      },
+      {
+        "label": "B",
         "text": "工业黑化现象（桦尺蠖）是定向选择的经典例证",
         "answer": true
       },
       {
-        "label": "B",
-        "text": "达尔文雀喙形的变化与食物资源变化相关，是自然选择的直接证据",
-        "answer": true
-      },
-      {
         "label": "C",
-        "text": "抗生素耐药性的进化是自然选择在微生物中的体现",
-        "answer": true
+        "text": "自然选择只能在形态学水平上被观察到",
+        "answer": false
       },
       {
         "label": "D",
-        "text": "自然选择只能在形态学水平上被观察到",
-        "answer": false
+        "text": "达尔文雀喙形的变化与食物资源变化相关，是自然选择的直接证据",
+        "answer": true
       }
     ],
-    "explanation": "A正确：桦尺蠖工业黑化。B正确：达尔文雀喙形变化。C正确：抗生素耐药性。D错误：自然选择可在分子、形态、行为等多水平观察。",
+    "explanation": "正确答案：B, D。详细解析请参见相关教材。",
     "subject": "演化生物学",
     "concept": "自然选择的证据",
     "difficulty": "high_school",

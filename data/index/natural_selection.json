@@ -1,67 +1,57 @@
 {
-  "M4-08-536132522168": {
+  "M4-08-a481b512a130": {
     "tags": [
       "natural_selection",
       "module_4",
       "演化生物学",
       "自然选择"
     ],
-    "diff": "high_school",
-    "len": 154,
-    "src": "natural_selection",
-    "year": null,
-    "module": "module_4"
+    "difficulty": "high_school",
+    "module": "module1",
+    "tag": "natural_selection"
   },
-  "M4-08-6809bd6a5212": {
+  "M4-08-f039974d6fe4": {
     "tags": [
       "natural_selection",
       "module_4",
       "演化生物学",
       "适合度"
     ],
-    "diff": "league",
-    "len": 109,
-    "src": "natural_selection",
-    "year": null,
-    "module": "module_4"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "natural_selection"
   },
-  "M4-08-7b974b363671": {
+  "M4-08-a811657a50c4": {
     "tags": [
       "natural_selection",
       "module_4",
       "演化生物学",
       "性选择"
     ],
-    "diff": "league",
-    "len": 148,
-    "src": "natural_selection",
-    "year": null,
-    "module": "module_4"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "natural_selection"
   },
-  "M4-08-e0c5e06df4a2": {
+  "M4-08-65821b246c19": {
     "tags": [
       "natural_selection",
       "module_4",
       "演化生物学",
       "适应景观"
     ],
-    "diff": "league",
-    "len": 135,
-    "src": "natural_selection",
-    "year": null,
-    "module": "module_4"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "natural_selection"
   },
-  "M4-08-575bb5f2020a": {
+  "M4-08-1db53519a5b6": {
     "tags": [
       "natural_selection",
       "module_4",
       "演化生物学",
       "自然选择"
     ],
-    "diff": "high_school",
-    "len": 110,
-    "src": "natural_selection",
-    "year": null,
-    "module": "module_4"
+    "difficulty": "high_school",
+    "module": "module1",
+    "tag": "natural_selection"
   }
 }

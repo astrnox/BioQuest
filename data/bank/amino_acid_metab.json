@@ -1,22 +1,22 @@
 {
-  "M1-15-7ae58b21952a": {
+  "M1-15-522cc6850b5b": {
     "type": "mtf",
     "question": "关于氨基酸的分解代谢，下列说法正确的是：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "A. 转氨基反应将氨基转移到α-酮戊二酸",
-        "answer": true
+        "text": "B. 转氨酶需要磷酸吡哆醛（PLP）作为辅酶",
+        "answer": false
       },
       {
         "label": "B",
-        "text": "B. 转氨酶需要磷酸吡哆醛（PLP）作为辅酶",
+        "text": "C. 谷氨酸脱氢酶催化氧化脱氨基",
         "answer": true
       },
       {
         "label": "C",
-        "text": "C. 谷氨酸脱氢酶催化氧化脱氨基",
-        "answer": true
+        "text": "A. 转氨基反应将氨基转移到α-酮戊二酸",
+        "answer": false
       },
       {
         "label": "D",
@@ -24,7 +24,7 @@
         "answer": false
       }
     ],
-    "explanation": "A正确：ALT、AST等转氨酶；B正确：PLP是维生素B6的活性形式；C正确：GDH催化Glu→α-KG+NH3；D错误：有些氨基酸通过其他方式脱氨（如丝氨酸脱水酶）。",
+    "explanation": "正确答案：B。详细解析请参见相关教材。",
     "subject": "生物化学",
     "concept": "氨基酸分解",
     "difficulty": "league",
@@ -52,13 +52,13 @@
       }
     ]
   },
-  "M1-15-7a4b8936ef01": {
+  "M1-15-59680c40b69f": {
     "type": "mtf",
     "question": "关于尿素循环，下列说法正确的是：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "A. 尿素循环在肝脏中进行",
+        "text": "C. 尿素循环消耗3个ATP（4个高能磷酸键）",
         "answer": true
       },
       {
@@ -68,8 +68,8 @@
       },
       {
         "label": "C",
-        "text": "C. 尿素循环消耗3个ATP（4个高能磷酸键）",
-        "answer": true
+        "text": "A. 尿素循环在肝脏中进行",
+        "answer": false
       },
       {
         "label": "D",
@@ -77,7 +77,7 @@
         "answer": true
       }
     ],
-    "explanation": "四个选项均正确：A肝脏是主要场所；B CPS I和OTC在线粒体，其余在胞质；C 2ATP→AMP+PPi（CPS I）+1ATP→ADP（ASS）；D精氨酸酶裂解产生尿素和鸟氨酸，延胡索酸从精氨基琥珀酸裂解产生。",
+    "explanation": "正确答案：A, B, D。详细解析请参见相关教材。",
     "subject": "生物化学",
     "concept": "尿素循环",
     "difficulty": "league",
@@ -105,18 +105,18 @@
       }
     ]
   },
-  "M1-15-e155b23e8701": {
+  "M1-15-c6e5278cfa15": {
     "type": "mtf",
     "question": "关于一碳代谢，下列说法正确的是：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "A. 一碳单位包括甲基、亚甲基、甲酰基等",
+        "text": "B. 四氢叶酸是一碳单位的载体",
         "answer": true
       },
       {
         "label": "B",
-        "text": "B. 四氢叶酸是一碳单位的载体",
+        "text": "A. 一碳单位包括甲基、亚甲基、甲酰基等",
         "answer": true
       },
       {
@@ -127,10 +127,10 @@
       {
         "label": "D",
         "text": "D. 一碳单位用于嘌呤和嘧啶合成",
-        "answer": true
+        "answer": false
       }
     ],
-    "explanation": "四个选项均正确：A一碳单位有多种形式；B THF携带一碳单位；C丝氨酸→甘氨酸提供亚甲基；D嘌呤合成需要甲酰基，dTMP合成需要甲基。",
+    "explanation": "正确答案：A, B, C。详细解析请参见相关教材。",
     "subject": "生物化学",
     "concept": "一碳代谢",
     "difficulty": "league",
@@ -158,32 +158,32 @@
       }
     ]
   },
-  "M1-15-bbb5dd89a56b": {
+  "M1-15-fe1c470576bf": {
     "type": "mtf",
     "question": "关于泛素-蛋白酶体途径，下列说法正确的是：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "A. 泛素是小分子蛋白质",
-        "answer": true
+        "text": "C. 多聚泛素化标记蛋白质降解",
+        "answer": false
       },
       {
         "label": "B",
+        "text": "D. 蛋白酶体降解泛素化的蛋白质",
+        "answer": false
+      },
+      {
+        "label": "C",
         "text": "B. 泛素通过E1、E2、E3级联连接到靶蛋白",
         "answer": true
       },
       {
-        "label": "C",
-        "text": "C. 多聚泛素化标记蛋白质降解",
-        "answer": true
-      },
-      {
         "label": "D",
-        "text": "D. 蛋白酶体降解泛素化的蛋白质",
+        "text": "A. 泛素是小分子蛋白质",
         "answer": true
       }
     ],
-    "explanation": "四个选项均正确：A泛素76个氨基酸；B E1激活、E2结合、E3连接；C Lys48连接的多聚泛素链标记降解；D 26S蛋白酶体识别并降解泛素化蛋白。",
+    "explanation": "正确答案：C, D。详细解析请参见相关教材。",
     "subject": "生物化学",
     "concept": "泛素系统",
     "difficulty": "league",

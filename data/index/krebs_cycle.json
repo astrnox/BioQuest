@@ -1,67 +1,57 @@
 {
-  "M1-12-33b61c8c70aa": {
+  "M1-12-c286a417241b": {
     "tags": [
       "krebs_cycle",
       "module_1",
       "生物化学",
       "TCA"
     ],
-    "diff": "high_school",
-    "len": 91,
-    "src": "krebs_cycle",
-    "year": null,
-    "module": "module_1"
+    "difficulty": "high_school",
+    "module": "module1",
+    "tag": "krebs_cycle"
   },
-  "M1-12-0e071fe344a5": {
+  "M1-12-aafc9d3052fb": {
     "tags": [
       "krebs_cycle",
       "module_1",
       "生物化学",
       "TCA"
     ],
-    "diff": "high_school",
-    "len": 97,
-    "src": "krebs_cycle",
-    "year": null,
-    "module": "module_1"
+    "difficulty": "high_school",
+    "module": "module1",
+    "tag": "krebs_cycle"
   },
-  "M1-12-8318d19a5a1c": {
+  "M1-12-056ac6c6fb93": {
     "tags": [
       "krebs_cycle",
       "module_1",
       "生物化学",
       "关键酶"
     ],
-    "diff": "league",
-    "len": 105,
-    "src": "krebs_cycle",
-    "year": null,
-    "module": "module_1"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "krebs_cycle"
   },
-  "M1-12-7ddd83e20132": {
+  "M1-12-f12704ea4f58": {
     "tags": [
       "krebs_cycle",
       "module_1",
       "生物化学",
       "回补"
     ],
-    "diff": "league",
-    "len": 85,
-    "src": "krebs_cycle",
-    "year": null,
-    "module": "module_1"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "krebs_cycle"
   },
-  "M1-12-f347490c41b1": {
+  "M1-12-58b0edbecfdb": {
     "tags": [
       "krebs_cycle",
       "module_1",
       "生物化学",
       "代谢整合"
     ],
-    "diff": "league",
-    "len": 96,
-    "src": "krebs_cycle",
-    "year": null,
-    "module": "module_1"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "krebs_cycle"
   }
 }

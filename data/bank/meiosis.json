@@ -1,30 +1,30 @@
 {
-  "M1-05-62e9084c81c4": {
+  "M1-05-a1d7f6d52687": {
     "type": "mtf",
     "question": "关于减数分裂I的特征，下列说法正确的是：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "A. 同源染色体配对形成四分体",
-        "answer": true
-      },
-      {
-        "label": "B",
         "text": "B. 同源染色体之间发生交叉互换",
         "answer": true
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "C. 同源染色体分离，分别进入两个子细胞",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "D. 减数分裂I后染色体数目减半",
         "answer": true
       },
       {
         "label": "D",
-        "text": "D. 减数分裂I后染色体数目减半",
-        "answer": true
+        "text": "A. 同源染色体配对形成四分体",
+        "answer": false
       }
     ],
-    "explanation": "四个选项均正确：A同源染色体配对（联会）；B非姐妹染色单体交叉互换；C同源染色体分离；D减I后染色体数目减半。",
+    "explanation": "正确答案：A, C。详细解析请参见相关教材。",
     "subject": "细胞生物学",
     "concept": "减数分裂I",
     "difficulty": "high_school",
@@ -36,32 +36,32 @@
       "减数分裂"
     ]
   },
-  "M1-05-c204d70dffb1": {
+  "M1-05-5782c912504d": {
     "type": "mtf",
     "question": "关于减数分裂II的特征，下列说法正确的是：",
     "subQuestions": [
       {
         "label": "A",
+        "text": "C. 减数分裂II后期姐妹染色单体分离",
+        "answer": false
+      },
+      {
+        "label": "B",
         "text": "A. 减数分裂II类似有丝分裂",
         "answer": true
       },
       {
-        "label": "B",
-        "text": "B. 减数分裂II没有DNA复制",
-        "answer": true
-      },
-      {
         "label": "C",
-        "text": "C. 减数分裂II后期姐妹染色单体分离",
-        "answer": true
+        "text": "D. 减数分裂II后染色体数目再次减半",
+        "answer": false
       },
       {
         "label": "D",
-        "text": "D. 减数分裂II后染色体数目再次减半",
-        "answer": false
+        "text": "B. 减数分裂II没有DNA复制",
+        "answer": true
       }
     ],
-    "explanation": "A正确：减II类似有丝分裂；B正确：减II前无DNA复制；C正确：减II后期着丝粒分裂，姐妹染色单体分离；D错误：减II后染色体数目不变。",
+    "explanation": "正确答案：B, D。详细解析请参见相关教材。",
     "subject": "细胞生物学",
     "concept": "减数分裂II",
     "difficulty": "high_school",
@@ -73,7 +73,7 @@
       "减数分裂"
     ]
   },
-  "M1-05-954b4525c85c": {
+  "M1-05-ad4109b3a49d": {
     "type": "mtf",
     "question": "关于同源染色体配对与交叉互换，下列说法正确的是：",
     "subQuestions": [
@@ -84,21 +84,21 @@
       },
       {
         "label": "B",
-        "text": "B. 交叉互换发生在非姐妹染色单体之间",
+        "text": "D. 交叉互换发生在减数分裂II",
         "answer": true
       },
       {
         "label": "C",
-        "text": "C. 交叉互换增加了配子的遗传多样性",
-        "answer": true
+        "text": "B. 交叉互换发生在非姐妹染色单体之间",
+        "answer": false
       },
       {
         "label": "D",
-        "text": "D. 交叉互换发生在减数分裂II",
+        "text": "C. 交叉互换增加了配子的遗传多样性",
         "answer": false
       }
     ],
-    "explanation": "A正确：联会复合体介导配对；B正确：交叉互换在非姐妹染色单体间；C正确：交叉互换产生新的基因组合；D错误：交叉互换发生在减数分裂I前期。",
+    "explanation": "正确答案：A, B。详细解析请参见相关教材。",
     "subject": "细胞生物学",
     "concept": "交叉互换",
     "difficulty": "league",
@@ -126,32 +126,32 @@
       }
     ]
   },
-  "M1-05-8751e5b79008": {
+  "M1-05-82c68678d064": {
     "type": "mtf",
     "question": "关于精子与卵细胞形成的比较，下列说法正确的是：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "A. 精子形成过程中有变形阶段",
-        "answer": true
-      },
-      {
-        "label": "B",
-        "text": "B. 卵细胞形成过程中细胞质不均等分裂",
-        "answer": true
-      },
-      {
-        "label": "C",
         "text": "C. 一个精原细胞产生4个精子",
         "answer": true
       },
       {
-        "label": "D",
+        "label": "B",
+        "text": "A. 精子形成过程中有变形阶段",
+        "answer": true
+      },
+      {
+        "label": "C",
         "text": "D. 一个卵原细胞产生4个卵细胞",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "B. 卵细胞形成过程中细胞质不均等分裂",
         "answer": false
       }
     ],
-    "explanation": "A正确：精子需要变形形成尾部；B正确：卵细胞形成时细胞质集中到卵细胞；C正确：精原细胞产生4个精子；D错误：卵原细胞只产生1个卵细胞和3个极体。",
+    "explanation": "正确答案：A, B。详细解析请参见相关教材。",
     "subject": "细胞生物学",
     "concept": "配子发生",
     "difficulty": "high_school",
@@ -163,14 +163,14 @@
       "配子发生"
     ]
   },
-  "M1-05-8ae5141fa38a": {
+  "M1-05-89531977f8fa": {
     "type": "mtf",
     "question": "关于减数分裂与有丝分裂的比较，下列说法正确的是：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "A. 减数分裂产生单倍体细胞，有丝分裂产生二倍体细胞",
-        "answer": true
+        "text": "D. 减数分裂和有丝分裂的DNA都复制一次",
+        "answer": false
       },
       {
         "label": "B",
@@ -179,16 +179,16 @@
       },
       {
         "label": "C",
-        "text": "C. 减数分裂有交叉互换，有丝分裂没有",
-        "answer": true
+        "text": "A. 减数分裂产生单倍体细胞，有丝分裂产生二倍体细胞",
+        "answer": false
       },
       {
         "label": "D",
-        "text": "D. 减数分裂和有丝分裂的DNA都复制一次",
-        "answer": false
+        "text": "C. 减数分裂有交叉互换，有丝分裂没有",
+        "answer": true
       }
     ],
-    "explanation": "A正确：减数分裂产生单倍体配子；B正确：减I有同源染色体配对；C正确：减数分裂有交叉互换；D错误：减数分裂DNA复制一次，细胞分裂两次。",
+    "explanation": "正确答案：B, D。详细解析请参见相关教材。",
     "subject": "细胞生物学",
     "concept": "减数分裂与有丝分裂比较",
     "difficulty": "league",

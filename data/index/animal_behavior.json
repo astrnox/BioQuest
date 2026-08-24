@@ -1,67 +1,57 @@
 {
-  "M3-11-a7703edc3727": {
+  "M3-11-144adca11605": {
     "tags": [
       "animal_behavior",
       "module_3",
       "生态学",
       "本能与学习"
     ],
-    "diff": "high_school",
-    "len": 178,
-    "src": "animal_behavior",
-    "year": null,
-    "module": "module_3"
+    "difficulty": "high_school",
+    "module": "module1",
+    "tag": "animal_behavior"
   },
-  "M3-11-dbb3285f9ee6": {
+  "M3-11-d17ba9dfb26c": {
     "tags": [
       "animal_behavior",
       "module_3",
       "生态学",
       "动物定向"
     ],
-    "diff": "league",
-    "len": 123,
-    "src": "animal_behavior",
-    "year": 2002,
-    "module": "module_3"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "animal_behavior"
   },
-  "M3-11-50eff58c6c4f": {
+  "M3-11-97bf602d483d": {
     "tags": [
       "animal_behavior",
       "module_3",
       "生态学",
       "动物通讯"
     ],
-    "diff": "high_school",
-    "len": 158,
-    "src": "animal_behavior",
-    "year": null,
-    "module": "module_3"
+    "difficulty": "high_school",
+    "module": "module1",
+    "tag": "animal_behavior"
   },
-  "M3-11-ec629bdb91aa": {
+  "M3-11-36dca5249f4b": {
     "tags": [
       "animal_behavior",
       "module_3",
       "生态学",
       "利他行为"
     ],
-    "diff": "league",
-    "len": 185,
-    "src": "animal_behavior",
-    "year": 1964,
-    "module": "module_3"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "animal_behavior"
   },
-  "M3-11-61aaa6263ec9": {
+  "M3-11-e24a6e376f7c": {
     "tags": [
       "animal_behavior",
       "module_3",
       "生态学",
       "条件反射"
     ],
-    "diff": "high_school",
-    "len": 169,
-    "src": "animal_behavior",
-    "year": null,
-    "module": "module_3"
+    "difficulty": "high_school",
+    "module": "module1",
+    "tag": "animal_behavior"
   }
 }

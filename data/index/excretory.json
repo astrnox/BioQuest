@@ -1,67 +1,57 @@
 {
-  "M3-06-1afe97c6f5b2": {
+  "M3-06-ab3908f22ef9": {
     "tags": [
       "excretory",
       "module_3",
       "动物生理学",
       "肾单位"
     ],
-    "diff": "league",
-    "len": 150,
-    "src": "excretory",
-    "year": 2014,
-    "module": "module_3"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "excretory"
   },
-  "M3-06-d85351b4a739": {
+  "M3-06-ab41eca30f4c": {
     "tags": [
       "excretory",
       "module_3",
       "动物生理学",
       "含氮废物"
     ],
-    "diff": "high_school",
-    "len": 135,
-    "src": "excretory",
-    "year": null,
-    "module": "module_3"
+    "difficulty": "high_school",
+    "module": "module1",
+    "tag": "excretory"
   },
-  "M3-06-7bbda19bed1c": {
+  "M3-06-8311a94e01d1": {
     "tags": [
       "excretory",
       "module_3",
       "动物生理学",
       "ADH"
     ],
-    "diff": "league",
-    "len": 147,
-    "src": "excretory",
-    "year": 2006,
-    "module": "module_3"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "excretory"
   },
-  "M3-06-e78b347722d3": {
+  "M3-06-54883c989796": {
     "tags": [
       "excretory",
       "module_3",
       "动物生理学",
       "醛固酮"
     ],
-    "diff": "high_school",
-    "len": 144,
-    "src": "excretory",
-    "year": null,
-    "module": "module_3"
+    "difficulty": "high_school",
+    "module": "module1",
+    "tag": "excretory"
   },
-  "M3-06-9805b1482370": {
+  "M3-06-b3519374c480": {
     "tags": [
       "excretory",
       "module_3",
       "动物生理学",
       "排泄器官"
     ],
-    "diff": "league",
-    "len": 133,
-    "src": "excretory",
-    "year": 1994,
-    "module": "module_3"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "excretory"
   }
 }

@@ -1,30 +1,30 @@
 {
-  "M1-0F-daf7e8cd17bf": {
+  "M1-0F-a56bdcc78f41": {
     "type": "mtf",
     "question": "关于米氏方程，下列说法正确的是：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "A. Km是酶达到最大反应速度一半时的底物浓度",
-        "answer": true
-      },
-      {
-        "label": "B",
-        "text": "B. Vmax是酶完全被底物饱和时的反应速度",
-        "answer": true
-      },
-      {
-        "label": "C",
         "text": "C. Km值越小，酶与底物亲和力越大",
         "answer": true
       },
       {
-        "label": "D",
+        "label": "B",
+        "text": "A. Km是酶达到最大反应速度一半时的底物浓度",
+        "answer": true
+      },
+      {
+        "label": "C",
         "text": "D. 米氏方程适用于所有酶",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "B. Vmax是酶完全被底物饱和时的反应速度",
         "answer": false
       }
     ],
-    "explanation": "A正确：Km=Vmax/2时的[S]；B正确：Vmax是极限速度；C正确：Km小意味着低浓度即可达到半最大速度，亲和力大；D错误：别构酶不遵循米氏动力学。",
+    "explanation": "正确答案：A, B。详细解析请参见相关教材。",
     "subject": "生物化学",
     "concept": "米氏方程",
     "difficulty": "league",
@@ -52,32 +52,32 @@
       }
     ]
   },
-  "M1-0F-723459c7109a": {
+  "M1-0F-f1f79f7e9f16": {
     "type": "mtf",
     "question": "关于竞争性抑制，下列说法正确的是：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "A. 竞争性抑制剂与底物结构相似",
-        "answer": true
+        "text": "B. 竞争性抑制剂结合酶的活性中心",
+        "answer": false
       },
       {
         "label": "B",
-        "text": "B. 竞争性抑制剂结合酶的活性中心",
-        "answer": true
+        "text": "A. 竞争性抑制剂与底物结构相似",
+        "answer": false
       },
       {
         "label": "C",
-        "text": "C. 增加底物浓度可以克服竞争性抑制",
+        "text": "D. 竞争性抑制降低Vmax",
         "answer": true
       },
       {
         "label": "D",
-        "text": "D. 竞争性抑制降低Vmax",
-        "answer": false
+        "text": "C. 增加底物浓度可以克服竞争性抑制",
+        "answer": true
       }
     ],
-    "explanation": "A正确：抑制剂类似底物；B正确：竞争活性中心；C正确：高[S]可以超过抑制剂；D错误：竞争性抑制不改变Vmax，只增加表观Km。",
+    "explanation": "正确答案：C, D。详细解析请参见相关教材。",
     "subject": "生物化学",
     "concept": "竞争性抑制",
     "difficulty": "league",
@@ -112,7 +112,7 @@
       {
         "label": "A",
         "text": "A. 非竞争性抑制剂结合酶的非活性位点",
-        "answer": true
+        "answer": false
       },
       {
         "label": "B",
@@ -130,7 +130,7 @@
         "answer": true
       }
     ],
-    "explanation": "A正确：抑制剂结合别构位点；B正确：Vmax降低；C错误：增加[S]不能克服；D正确：Km不变，因为抑制剂不影响底物结合。",
+    "explanation": "正确答案：B, D。详细解析请参见相关教材。",
     "subject": "生物化学",
     "concept": "非竞争性抑制",
     "difficulty": "league",
@@ -158,32 +158,32 @@
       }
     ]
   },
-  "M1-0F-dfeba5a86a53": {
+  "M1-0F-9500c3096d5a": {
     "type": "mtf",
     "question": "关于别构酶，下列说法正确的是：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "A. 别构酶具有多个活性位点",
+        "text": "D. 别构酶遵循米氏动力学",
         "answer": true
       },
       {
         "label": "B",
-        "text": "B. 别构酶的动力学曲线呈S型",
-        "answer": true
-      },
-      {
-        "label": "C",
         "text": "C. 别构效应物可以激活或抑制酶活性",
         "answer": true
       },
       {
+        "label": "C",
+        "text": "B. 别构酶的动力学曲线呈S型",
+        "answer": false
+      },
+      {
         "label": "D",
-        "text": "D. 别构酶遵循米氏动力学",
+        "text": "A. 别构酶具有多个活性位点",
         "answer": false
       }
     ],
-    "explanation": "A正确：别构酶有多个亚基和活性位点；B正确：协同效应导致S型曲线；C正确：别构效应物调节活性；D错误：别构酶不遵循米氏动力学，呈S型曲线。",
+    "explanation": "正确答案：A, B。详细解析请参见相关教材。",
     "subject": "生物化学",
     "concept": "别构酶",
     "difficulty": "league",
@@ -211,32 +211,32 @@
       }
     ]
   },
-  "M1-0F-63d09a685eb0": {
+  "M1-0F-e760b9e9b0ea": {
     "type": "mtf",
     "question": "关于辅酶和辅基，下列说法正确的是：",
     "subQuestions": [
       {
         "label": "A",
+        "text": "C. NAD⁺是一种辅酶",
+        "answer": false
+      },
+      {
+        "label": "B",
         "text": "A. 辅酶与酶蛋白结合松散，可以透析去除",
         "answer": true
       },
       {
-        "label": "B",
-        "text": "B. 辅基与酶蛋白结合紧密，不能透析去除",
-        "answer": true
-      },
-      {
         "label": "C",
-        "text": "C. NAD⁺是一种辅酶",
+        "text": "D. FAD是一种辅基",
         "answer": true
       },
       {
         "label": "D",
-        "text": "D. FAD是一种辅基",
-        "answer": true
+        "text": "B. 辅基与酶蛋白结合紧密，不能透析去除",
+        "answer": false
       }
     ],
-    "explanation": "四个选项均正确：A辅酶松散结合；B辅基共价或紧密非共价结合；C NAD⁺是脱氢酶的辅酶；D FAD共价结合，是辅基。",
+    "explanation": "正确答案：B, C。详细解析请参见相关教材。",
     "subject": "生物化学",
     "concept": "辅酶辅基",
     "difficulty": "league",

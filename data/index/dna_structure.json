@@ -1,55 +1,47 @@
 {
-  "M1-08-34982b184938": {
+  "M1-08-60151389f5ea": {
     "tags": [
       "dna_structure",
       "module_1",
       "分子生物学",
       "DNA"
     ],
-    "diff": "high_school",
-    "len": 85,
-    "src": "dna_structure",
-    "year": null,
-    "module": "module_1"
+    "difficulty": "high_school",
+    "module": "module1",
+    "tag": "dna_structure"
   },
-  "M1-08-1a0a82826c04": {
+  "M1-08-9049c2e029be": {
     "tags": [
       "dna_structure",
       "module_1",
       "分子生物学",
       "Chargaff"
     ],
-    "diff": "league",
-    "len": 86,
-    "src": "dna_structure",
-    "year": null,
-    "module": "module_1"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "dna_structure"
   },
-  "M1-08-e20a5fa82bdb": {
+  "M1-08-c4241dbab01b": {
     "tags": [
       "dna_structure",
       "module_1",
       "分子生物学",
       "DNA构型"
     ],
-    "diff": "league",
-    "len": 93,
-    "src": "dna_structure",
-    "year": null,
-    "module": "module_1"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "dna_structure"
   },
-  "M1-08-805e3631c360": {
+  "M1-08-93586044ad59": {
     "tags": [
       "dna_structure",
       "module_1",
       "分子生物学",
       "核小体"
     ],
-    "diff": "league",
-    "len": 99,
-    "src": "dna_structure",
-    "year": null,
-    "module": "module_1"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "dna_structure"
   },
   "M1-08-b23c4dead4e5": {
     "tags": [

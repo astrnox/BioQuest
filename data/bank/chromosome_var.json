@@ -1,12 +1,12 @@
 {
-  "M4-05-3fbdbe899693": {
+  "M4-05-b4f6e7407acc": {
     "type": "mtf",
     "question": "关于染色体结构变异，以下说法正确的有哪些？",
     "subQuestions": [
       {
         "label": "A",
-        "text": "缺失（deletion）会导致假显性现象，即隐性等位基因在杂合子中表达",
-        "answer": true
+        "text": "罗伯逊易位（Robertsonian translocation）是两个近端着丝粒染色体融合为一条",
+        "answer": false
       },
       {
         "label": "B",
@@ -15,16 +15,16 @@
       },
       {
         "label": "C",
-        "text": "倒位（inversion）杂合体在减数分裂时形成倒位环，通常不产生重组型配子",
+        "text": "缺失（deletion）会导致假显性现象，即隐性等位基因在杂合子中表达",
         "answer": true
       },
       {
         "label": "D",
-        "text": "罗伯逊易位（Robertsonian translocation）是两个近端着丝粒染色体融合为一条",
-        "answer": true
+        "text": "倒位（inversion）杂合体在减数分裂时形成倒位环，通常不产生重组型配子",
+        "answer": false
       }
     ],
-    "explanation": "A正确：缺失使隐性等位基因暴露。B正确：重复提供额外的基因拷贝用于功能分化。C正确：倒位环内交换产生的配子通常不平衡，表现为交换抑制。D正确：罗伯逊易位是两条近端着丝粒染色体在着丝粒处融合。",
+    "explanation": "正确答案：B, C。详细解析请参见相关教材。",
     "subject": "遗传学",
     "concept": "染色体结构变异",
     "difficulty": "league",
@@ -45,7 +45,7 @@
       }
     ]
   },
-  "M4-05-437528153450": {
+  "M4-05-72de3d077d78": {
     "type": "mtf",
     "question": "关于多倍体，以下判断正确的有哪些？",
     "subQuestions": [
@@ -56,21 +56,21 @@
       },
       {
         "label": "B",
+        "text": "多倍体植物通常表现为细胞体积增大、器官增大",
+        "answer": false
+      },
+      {
+        "label": "C",
         "text": "同源多倍体在减数分裂时可能出现多价体，导致育性降低",
         "answer": true
       },
       {
-        "label": "C",
-        "text": "普通小麦（Triticum aestivum）是异源六倍体（AABBDD，2n=42）",
-        "answer": true
-      },
-      {
         "label": "D",
-        "text": "多倍体植物通常表现为细胞体积增大、器官增大",
-        "answer": true
+        "text": "普通小麦（Triticum aestivum）是异源六倍体（AABBDD，2n=42）",
+        "answer": false
       }
     ],
-    "explanation": "A正确：异源多倍体含不同物种的染色体组。B正确：同源多倍体减数分裂时多条同源染色体配对形成多价体。C正确：普通小麦为AABBDD异源六倍体。D正确：多倍体常表现巨大性。",
+    "explanation": "正确答案：A, C。详细解析请参见相关教材。",
     "subject": "遗传学",
     "concept": "多倍体",
     "difficulty": "high_school",
@@ -83,32 +83,32 @@
     ],
     "references": []
   },
-  "M4-05-e6e02507339f": {
+  "M4-05-65700584b1ee": {
     "type": "mtf",
     "question": "关于非整倍体变异，以下说法正确的有哪些？",
     "subQuestions": [
       {
         "label": "A",
-        "text": "唐氏综合征（Down syndrome）是由于21号染色体三体所致",
-        "answer": true
-      },
-      {
-        "label": "B",
-        "text": "Turner综合征患者的核型为45,X，缺少一条性染色体",
-        "answer": true
-      },
-      {
-        "label": "C",
         "text": "Klinefelter综合征患者的核型为47,XXY",
         "answer": true
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "非整倍体的产生一定是由于减数分裂时染色体不分离",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "Turner综合征患者的核型为45,X，缺少一条性染色体",
         "answer": false
+      },
+      {
+        "label": "D",
+        "text": "唐氏综合征（Down syndrome）是由于21号染色体三体所致",
+        "answer": true
       }
     ],
-    "explanation": "A正确：21三体导致唐氏综合征。B正确：Turner综合征为45,X。C正确：Klinefelter综合征为47,XXY。D错误：非整倍体也可由有丝分裂不分离（post-zygotic nondisjunction）或染色体丢失引起。",
+    "explanation": "正确答案：A, B, D。详细解析请参见相关教材。",
     "subject": "遗传学",
     "concept": "非整倍体",
     "difficulty": "high_school",
@@ -121,32 +121,32 @@
     ],
     "references": []
   },
-  "M4-05-944318e77168": {
+  "M4-05-0f782213a3bd": {
     "type": "mtf",
     "question": "关于易位，以下判断正确的有哪些？",
     "subQuestions": [
       {
         "label": "A",
-        "text": "相互易位是指两条非同源染色体之间交换片段",
-        "answer": true
+        "text": "费城染色体（Philadelphia chromosome）是9号和22号染色体之间的相互易位",
+        "answer": false
       },
       {
         "label": "B",
-        "text": "相互易位杂合体在减数分裂时形成十字形配对结构",
-        "answer": true
-      },
-      {
-        "label": "C",
         "text": "易位可以导致位置效应（position effect），改变基因表达",
         "answer": true
       },
       {
+        "label": "C",
+        "text": "相互易位杂合体在减数分裂时形成十字形配对结构",
+        "answer": true
+      },
+      {
         "label": "D",
-        "text": "费城染色体（Philadelphia chromosome）是9号和22号染色体之间的相互易位",
+        "text": "相互易位是指两条非同源染色体之间交换片段",
         "answer": true
       }
     ],
-    "explanation": "A正确：相互易位是两条非同源染色体互换片段。B正确：易位杂合体形成十字形结构。C正确：基因位置改变可影响表达。D正确：费城染色体为t(9;22)，产生BCR-ABL融合基因。",
+    "explanation": "正确答案：B, C, D。详细解析请参见相关教材。",
     "subject": "遗传学",
     "concept": "易位",
     "difficulty": "league",

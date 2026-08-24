@@ -1,5 +1,5 @@
 {
-  "M2-09-ec5580cbb859": {
+  "M2-09-c4f874a5010b": {
     "type": "mtf",
     "question": "植物对干旱胁迫的响应包括：",
     "subQuestions": [
@@ -11,20 +11,20 @@
       {
         "label": "B",
         "text": "根系生长相对增加以吸收更多水分",
-        "answer": true
+        "answer": false
       },
       {
         "label": "C",
-        "text": "积累脯氨酸等渗透调节物质",
+        "text": "光合作用增强以补偿水分不足",
         "answer": true
       },
       {
         "label": "D",
-        "text": "光合作用增强以补偿水分不足",
-        "answer": false
+        "text": "积累脯氨酸等渗透调节物质",
+        "answer": true
       }
     ],
-    "explanation": "A正确：ABA诱导气孔关闭。B正确：根冠比增加。C正确：渗透调节物质积累。D错误：干旱抑制光合作用。",
+    "explanation": "正确答案：A, C, D。详细解析请参见相关教材。",
     "subject": "植物生理学",
     "concept": "干旱响应",
     "difficulty": "high_school",
@@ -37,32 +37,32 @@
     ],
     "references": []
   },
-  "M2-09-56536052e205": {
+  "M2-09-9bb254ef2795": {
     "type": "mtf",
     "question": "ABA在植物逆境响应中的作用包括：",
     "subQuestions": [
       {
         "label": "A",
+        "text": "ABA促进逆境相关基因表达",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "ABA促进种子萌发",
+        "answer": false
+      },
+      {
+        "label": "C",
         "text": "ABA被称为应激激素，在逆境下含量增加",
         "answer": true
       },
       {
-        "label": "B",
+        "label": "D",
         "text": "ABA诱导气孔关闭",
         "answer": true
-      },
-      {
-        "label": "C",
-        "text": "ABA促进逆境相关基因表达",
-        "answer": true
-      },
-      {
-        "label": "D",
-        "text": "ABA促进种子萌发",
-        "answer": false
       }
     ],
-    "explanation": "A正确：ABA是应激激素。B正确：ABA诱导气孔关闭。C正确：ABA激活基因表达。D错误：ABA抑制萌发，促进休眠。",
+    "explanation": "正确答案：C, D。详细解析请参见相关教材。",
     "subject": "植物生理学",
     "concept": "ABA作用",
     "difficulty": "high_school",
@@ -75,32 +75,32 @@
     ],
     "references": []
   },
-  "M2-09-98728a7c4235": {
+  "M2-09-bbbe20c7b0d7": {
     "type": "mtf",
     "question": "盐胁迫对植物的影响包括：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "盐胁迫造成渗透胁迫，影响水分吸收",
-        "answer": true
+        "text": "Na+毒害影响酶活性和代谢",
+        "answer": false
       },
       {
         "label": "B",
-        "text": "Na+毒害影响酶活性和代谢",
-        "answer": true
-      },
-      {
-        "label": "C",
         "text": "离子不平衡导致营养缺乏",
         "answer": true
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "盐胁迫促进植物快速生长",
         "answer": false
+      },
+      {
+        "label": "D",
+        "text": "盐胁迫造成渗透胁迫，影响水分吸收",
+        "answer": true
       }
     ],
-    "explanation": "A正确：盐降低水势。B正确：Na+有毒害作用。C正确：离子竞争影响吸收。D错误：盐胁迫抑制生长。",
+    "explanation": "正确答案：B, D。详细解析请参见相关教材。",
     "subject": "植物生理学",
     "concept": "盐胁迫",
     "difficulty": "league",
@@ -121,7 +121,7 @@
       }
     ]
   },
-  "M2-09-d51bd32ba37e": {
+  "M2-09-d3d00badf4d4": {
     "type": "mtf",
     "question": "植物抗氧化系统包括：",
     "subQuestions": [
@@ -138,15 +138,15 @@
       {
         "label": "C",
         "text": "抗坏血酸和谷胱甘肽是非酶抗氧化剂",
-        "answer": true
+        "answer": false
       },
       {
         "label": "D",
         "text": "活性氧对植物只有害处没有益处",
-        "answer": false
+        "answer": true
       }
     ],
-    "explanation": "A正确：SOD清除O2-。B正确：CAT分解H2O2。C正确：AsA和GSH是重要抗氧化剂。D错误：活性氧也参与信号转导。",
+    "explanation": "正确答案：A, B, D。详细解析请参见相关教材。",
     "subject": "植物生理学",
     "concept": "抗氧化系统",
     "difficulty": "league",
@@ -167,7 +167,7 @@
       }
     ]
   },
-  "M2-09-6a833008caff": {
+  "M2-09-d951dab8e9a0": {
     "type": "mtf",
     "question": "低温对植物的影响包括：",
     "subQuestions": [
@@ -179,7 +179,7 @@
       {
         "label": "B",
         "text": "冰晶形成造成机械损伤",
-        "answer": true
+        "answer": false
       },
       {
         "label": "C",
@@ -192,7 +192,7 @@
         "answer": false
       }
     ],
-    "explanation": "A正确：低温影响膜流动性。B正确：冰晶造成损伤。C正确：冷害的定义。D错误：不同植物耐寒性不同。",
+    "explanation": "正确答案：A, C。详细解析请参见相关教材。",
     "subject": "植物生理学",
     "concept": "低温胁迫",
     "difficulty": "league",

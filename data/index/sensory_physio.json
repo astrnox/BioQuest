@@ -1,67 +1,57 @@
 {
-  "M3-0a-1a3a499f75f5": {
+  "M3-0a-1cf044028937": {
     "tags": [
       "sensory_physio",
       "module_3",
       "动物生理学",
       "视觉转导"
     ],
-    "diff": "league",
-    "len": 178,
-    "src": "sensory_physio",
-    "year": 2005,
-    "module": "module_3"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "sensory_physio"
   },
-  "M3-0a-9126295ef138": {
+  "M3-0a-94850747482c": {
     "tags": [
       "sensory_physio",
       "module_3",
       "动物生理学",
       "听觉"
     ],
-    "diff": "league",
-    "len": 155,
-    "src": "sensory_physio",
-    "year": 2008,
-    "module": "module_3"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "sensory_physio"
   },
-  "M3-0a-a4d46639c82b": {
+  "M3-0a-bcef72ca2e1f": {
     "tags": [
       "sensory_physio",
       "module_3",
       "动物生理学",
       "运动调控"
     ],
-    "diff": "high_school",
-    "len": 161,
-    "src": "sensory_physio",
-    "year": null,
-    "module": "module_3"
+    "difficulty": "high_school",
+    "module": "module1",
+    "tag": "sensory_physio"
   },
-  "M3-0a-6ef83028f3e8": {
+  "M3-0a-d5c5f7bb9e6a": {
     "tags": [
       "sensory_physio",
       "module_3",
       "动物生理学",
       "化学感觉"
     ],
-    "diff": "league",
-    "len": 144,
-    "src": "sensory_physio",
-    "year": 2005,
-    "module": "module_3"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "sensory_physio"
   },
-  "M3-0a-588988d2f1d1": {
+  "M3-0a-0b97411e2007": {
     "tags": [
       "sensory_physio",
       "module_3",
       "动物生理学",
       "感觉器"
     ],
-    "diff": "high_school",
-    "len": 150,
-    "src": "sensory_physio",
-    "year": null,
-    "module": "module_3"
+    "difficulty": "high_school",
+    "module": "module1",
+    "tag": "sensory_physio"
   }
 }

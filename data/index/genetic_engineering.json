@@ -1,67 +1,57 @@
 {
-  "M4-0e-42da570e4d8d": {
+  "M4-0e-e2a60cb47bc3": {
     "tags": [
       "genetic_engineering",
       "module_4",
       "生物技术",
       "基因工程"
     ],
-    "diff": "high_school",
-    "len": 127,
-    "src": "genetic_engineering",
-    "year": null,
-    "module": "module_4"
+    "difficulty": "high_school",
+    "module": "module1",
+    "tag": "genetic_engineering"
   },
-  "M4-0e-6973350ca8b9": {
+  "M4-0e-9afce6647b7e": {
     "tags": [
       "genetic_engineering",
       "module_4",
       "生物技术",
       "载体"
     ],
-    "diff": "league",
-    "len": 101,
-    "src": "genetic_engineering",
-    "year": null,
-    "module": "module_4"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "genetic_engineering"
   },
-  "M4-0e-88d3af03f916": {
+  "M4-0e-ee676586bf0a": {
     "tags": [
       "genetic_engineering",
       "module_4",
       "生物技术",
       "CRISPR"
     ],
-    "diff": "league",
-    "len": 145,
-    "src": "genetic_engineering",
-    "year": null,
-    "module": "module_4"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "genetic_engineering"
   },
-  "M4-0e-e9fceba42b07": {
+  "M4-0e-620048ca11e2": {
     "tags": [
       "genetic_engineering",
       "module_4",
       "生物技术",
       "重组蛋白"
     ],
-    "diff": "league",
-    "len": 104,
-    "src": "genetic_engineering",
-    "year": null,
-    "module": "module_4"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "genetic_engineering"
   },
-  "M4-0e-70071cdc3b55": {
+  "M4-0e-cfa8c9cea08f": {
     "tags": [
       "genetic_engineering",
       "module_4",
       "生物技术",
       "转基因"
     ],
-    "diff": "high_school",
-    "len": 101,
-    "src": "genetic_engineering",
-    "year": null,
-    "module": "module_4"
+    "difficulty": "high_school",
+    "module": "module1",
+    "tag": "genetic_engineering"
   }
 }

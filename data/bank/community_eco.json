@@ -1,5 +1,5 @@
 {
-  "M3-0d-cbff2d28fd1e": {
+  "M3-0d-06332409caa7": {
     "type": "mtf",
     "question": "关于种间关系的类型，下列说法正确的有：",
     "subQuestions": [
@@ -10,12 +10,12 @@
       },
       {
         "label": "B",
-        "text": "互利共生（+/+）中两个物种均获益，如豆科植物与根瘤菌的固氮共生",
-        "answer": true
+        "text": "偏利共生（+/0）中一方获益而另一方不受影响，如附生植物附着在大树上",
+        "answer": false
       },
       {
         "label": "C",
-        "text": "偏利共生（+/0）中一方获益而另一方不受影响，如附生植物附着在大树上",
+        "text": "互利共生（+/+）中两个物种均获益，如豆科植物与根瘤菌的固氮共生",
         "answer": true
       },
       {
@@ -24,7 +24,7 @@
         "answer": false
       }
     ],
-    "explanation": "A正确：竞争排斥原理（Gause原理）——完全相同生态位的物种不能共存。B正确：互利共生双方获益。C正确：偏利共生一方获益另一方不受影响。D错误：寄生是+/-关系——寄生者获益（获取营养），寄主受害（健康受损）。",
+    "explanation": "正确答案：A, C。详细解析请参见相关教材。",
     "subject": "生态学",
     "concept": "种间关系",
     "difficulty": "high_school",
@@ -37,32 +37,32 @@
     ],
     "references": []
   },
-  "M3-0d-65768072800a": {
+  "M3-0d-baa62f4d06d4": {
     "type": "mtf",
     "question": "关于生态位理论，下列说法正确的有：",
     "subQuestions": [
       {
         "label": "A",
         "text": "基础生态位（fundamental niche）是指在没有竞争者存在时物种理论上能占据的全部环境空间",
-        "answer": true
+        "answer": false
       },
       {
         "label": "B",
-        "text": "实际生态位（realized niche）是在竞争者存在时物种实际占据的环境空间，通常小于基础生态位",
-        "answer": true
+        "text": "性状替换（character displacement）是竞争导致共存物种在同域分布区形态差异增大",
+        "answer": false
       },
       {
         "label": "C",
-        "text": "性状替换（character displacement）是竞争导致共存物种在同域分布区形态差异增大",
+        "text": "竞争排斥原理已被证明在所有自然群落中绝对成立，不存在任何例外",
         "answer": true
       },
       {
         "label": "D",
-        "text": "竞争排斥原理已被证明在所有自然群落中绝对成立，不存在任何例外",
+        "text": "实际生态位（realized niche）是在竞争者存在时物种实际占据的环境空间，通常小于基础生态位",
         "answer": false
       }
     ],
-    "explanation": "A正确：基础生态位是物种在无竞争时理论上能占据的全部环境。B正确：实际生态位受竞争限制，通常小于基础生态位。C正确：性状替换（如Galapagos地雀喙形分化）是竞争驱动的生态位分化。D错误：自然群落中存在许多看似违反竞争排斥的例子——如生态位分化（资源分割）、环境波动阻止竞争结局、捕食者维持物种共存等。",
+    "explanation": "正确答案：C。详细解析请参见相关教材。",
     "subject": "生态学",
     "concept": "生态位理论",
     "difficulty": "league",
@@ -83,32 +83,32 @@
       }
     ]
   },
-  "M3-0d-109148fa1a2c": {
+  "M3-0d-1d26237feace": {
     "type": "mtf",
     "question": "关于群落演替，下列说法正确的有：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "初生演替发生在从未有过生物的裸地（如火山岩、冰川退却地），过程缓慢",
-        "answer": true
-      },
-      {
-        "label": "B",
         "text": "次生演替发生在原有群落被破坏但土壤仍保留的地方（如弃耕农田、火灾后），速度较快",
         "answer": true
       },
       {
-        "label": "C",
-        "text": "演替过程中，物种多样性通常先增加后趋于稳定，到达顶级群落时达到相对平衡",
+        "label": "B",
+        "text": "初生演替发生在从未有过生物的裸地（如火山岩、冰川退却地），过程缓慢",
         "answer": true
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "顶级群落（climax community）一旦形成就永远不会再发生变化",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "演替过程中，物种多样性通常先增加后趋于稳定，到达顶级群落时达到相对平衡",
         "answer": false
       }
     ],
-    "explanation": "A正确：初生演替从裸地开始，需先有地衣苔藓改良土壤，过程缓慢。B正确：次生演替有土壤基础和种子库，速度较快。C正确：演替过程中多样性通常先增后稳。D错误：顶级群落并非永恒不变——干扰（火灾、风暴）、气候变化、物种入侵等均可导致群落偏离顶级状态；现代生态学认为群落动态变化是常态。",
+    "explanation": "正确答案：A, B。详细解析请参见相关教材。",
     "subject": "生态学",
     "concept": "群落演替",
     "difficulty": "high_school",
@@ -121,7 +121,7 @@
     ],
     "references": []
   },
-  "M3-0d-ef6ff9e39220": {
+  "M3-0d-33732f6aec45": {
     "type": "mtf",
     "question": "关于关键种（keystone species）和营养级联，下列说法正确的有：",
     "subQuestions": [
@@ -132,12 +132,12 @@
       },
       {
         "label": "B",
-        "text": "Paine的经典实验中，去除海星（Pisaster）导致贻贝独占优势，物种多样性下降",
-        "answer": true
+        "text": "营养级联（trophic cascade）是指捕食者的存在通过食物链逐级影响多个营养级的结构和功能",
+        "answer": false
       },
       {
         "label": "C",
-        "text": "营养级联（trophic cascade）是指捕食者的存在通过食物链逐级影响多个营养级的结构和功能",
+        "text": "Paine的经典实验中，去除海星（Pisaster）导致贻贝独占优势，物种多样性下降",
         "answer": true
       },
       {
@@ -146,7 +146,7 @@
         "answer": false
       }
     ],
-    "explanation": "A正确：关键种的影响远超其生物量所预期的程度。B正确：Paine实验是经典的关键种证据。C正确：如狼→鹿→植被的三级营养级联。D错误：关键种通常不是数量最多的优势种（dominant species），而是数量可能很少但影响巨大的物种（如海星、海獭）。优势种是生物量或数量最多的物种。",
+    "explanation": "正确答案：A, C。详细解析请参见相关教材。",
     "subject": "生态学",
     "concept": "关键种与营养级联",
     "difficulty": "league",
@@ -167,32 +167,32 @@
       }
     ]
   },
-  "M3-0d-a3de9fc34664": {
+  "M3-0d-e46c0f6fc0f2": {
     "type": "mtf",
     "question": "关于群落的垂直和水平结构，下列说法正确的有：",
     "subQuestions": [
       {
         "label": "A",
+        "text": "群落的水平结构常表现为斑块状分布（patchiness），由微环境异质性和种间相互作用造成",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "群落中物种的分布完全是随机的，不受环境梯度和种间关系的影响",
+        "answer": false
+      },
+      {
+        "label": "C",
         "text": "森林群落的垂直分层（乔木层/灌木层/草本层/地被层）提高了光能利用率和物种多样性",
         "answer": true
       },
       {
-        "label": "B",
-        "text": "群落的水平结构常表现为斑块状分布（patchiness），由微环境异质性和种间相互作用造成",
-        "answer": true
-      },
-      {
-        "label": "C",
+        "label": "D",
         "text": "生态交错带（ecotone）是两个群落之间的过渡区域，通常具有较高的物种多样性（边缘效应）",
         "answer": true
-      },
-      {
-        "label": "D",
-        "text": "群落中物种的分布完全是随机的，不受环境梯度和种间关系的影响",
-        "answer": false
       }
     ],
-    "explanation": "A正确：垂直分层使不同物种利用不同层次资源。B正确：斑块状分布由微地形、土壤、水分等异质性和种间关系造成。C正确：生态交错带兼具两侧群落物种，多样性常较高（边缘效应）。D错误：物种分布受环境梯度（如海拔、水分梯度）和种间关系（竞争排斥、互利共生等）强烈影响，绝非随机。",
+    "explanation": "正确答案：C, D。详细解析请参见相关教材。",
     "subject": "生态学",
     "concept": "群落结构",
     "difficulty": "league",

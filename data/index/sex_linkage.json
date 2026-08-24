@@ -1,67 +1,57 @@
 {
-  "M4-03-7da9bfbdb17e": {
+  "M4-03-35cca5634194": {
     "tags": [
       "sex_linkage",
       "module_4",
       "遗传学",
       "伴性遗传"
     ],
-    "diff": "high_school",
-    "len": 106,
-    "src": "sex_linkage",
-    "year": null,
-    "module": "module_4"
+    "difficulty": "high_school",
+    "module": "module1",
+    "tag": "sex_linkage"
   },
-  "M4-03-886ff7bbb683": {
+  "M4-03-644841677d57": {
     "tags": [
       "sex_linkage",
       "module_4",
       "遗传学",
       "剂量补偿"
     ],
-    "diff": "league",
-    "len": 124,
-    "src": "sex_linkage",
-    "year": null,
-    "module": "module_4"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "sex_linkage"
   },
-  "M4-03-461ac6c9f98f": {
+  "M4-03-ff4068e085c8": {
     "tags": [
       "sex_linkage",
       "module_4",
       "遗传学",
       "性别决定"
     ],
-    "diff": "league",
-    "len": 99,
-    "src": "sex_linkage",
-    "year": null,
-    "module": "module_4"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "sex_linkage"
   },
-  "M4-03-6adb968d6a22": {
+  "M4-03-aad0dad95dd2": {
     "tags": [
       "sex_linkage",
       "module_4",
       "遗传学",
       "从性遗传"
     ],
-    "diff": "league",
-    "len": 132,
-    "src": "sex_linkage",
-    "year": null,
-    "module": "module_4"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "sex_linkage"
   },
-  "M4-03-8107a95e6ccd": {
+  "M4-03-a0125ba7e48d": {
     "tags": [
       "sex_linkage",
       "module_4",
       "遗传学",
       "伴性遗传"
     ],
-    "diff": "high_school",
-    "len": 120,
-    "src": "sex_linkage",
-    "year": null,
-    "module": "module_4"
+    "difficulty": "high_school",
+    "module": "module1",
+    "tag": "sex_linkage"
   }
 }

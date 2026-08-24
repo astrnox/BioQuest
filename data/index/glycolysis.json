@@ -1,67 +1,57 @@
 {
-  "M1-11-c9b0906fc888": {
+  "M1-11-cb1a8b9e529e": {
     "tags": [
       "glycolysis",
       "module_1",
       "生物化学",
       "糖酵解"
     ],
-    "diff": "high_school",
-    "len": 69,
-    "src": "glycolysis",
-    "year": null,
-    "module": "module_1"
+    "difficulty": "high_school",
+    "module": "module1",
+    "tag": "glycolysis"
   },
-  "M1-11-edd30150910a": {
+  "M1-11-d0a683cc6938": {
     "tags": [
       "glycolysis",
       "module_1",
       "生物化学",
       "关键酶"
     ],
-    "diff": "league",
-    "len": 90,
-    "src": "glycolysis",
-    "year": null,
-    "module": "module_1"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "glycolysis"
   },
-  "M1-11-0313912619f8": {
+  "M1-11-9fa456529624": {
     "tags": [
       "glycolysis",
       "module_1",
       "生物化学",
       "糖原"
     ],
-    "diff": "league",
-    "len": 70,
-    "src": "glycolysis",
-    "year": null,
-    "module": "module_1"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "glycolysis"
   },
-  "M1-11-7e2e29a67cf8": {
+  "M1-11-f464c628b38d": {
     "tags": [
       "glycolysis",
       "module_1",
       "生物化学",
       "糖异生"
     ],
-    "diff": "league",
-    "len": 76,
-    "src": "glycolysis",
-    "year": null,
-    "module": "module_1"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "glycolysis"
   },
-  "M1-11-093d21ac7fda": {
+  "M1-11-62fea8dae5af": {
     "tags": [
       "glycolysis",
       "module_1",
       "生物化学",
       "PPP"
     ],
-    "diff": "league",
-    "len": 84,
-    "src": "glycolysis",
-    "year": null,
-    "module": "module_1"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "glycolysis"
   }
 }

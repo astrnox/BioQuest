@@ -1,67 +1,57 @@
 {
-  "M4-15-d656b6c9f140": {
+  "M4-15-287eb21899d1": {
     "tags": [
       "genomics_comp",
       "module_4",
       "生物信息学",
       "比较基因组"
     ],
-    "diff": "high_school",
-    "len": 109,
-    "src": "genomics_comp",
-    "year": null,
-    "module": "module_4"
+    "difficulty": "high_school",
+    "module": "module1",
+    "tag": "genomics_comp"
   },
-  "M4-15-90cef18cabe6": {
+  "M4-15-a46a014b6807": {
     "tags": [
       "genomics_comp",
       "module_4",
       "生物信息学",
       "ChIP-seq"
     ],
-    "diff": "league",
-    "len": 141,
-    "src": "genomics_comp",
-    "year": null,
-    "module": "module_4"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "genomics_comp"
   },
-  "M4-15-ee07cd4aadb7": {
+  "M4-15-d6e03be35bca": {
     "tags": [
       "genomics_comp",
       "module_4",
       "生物信息学",
       "ATAC-seq"
     ],
-    "diff": "league",
-    "len": 129,
-    "src": "genomics_comp",
-    "year": null,
-    "module": "module_4"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "genomics_comp"
   },
-  "M4-15-77f25f521b01": {
+  "M4-15-e04dabe4401c": {
     "tags": [
       "genomics_comp",
       "module_4",
       "生物信息学",
       "蛋白质结构域"
     ],
-    "diff": "high_school",
-    "len": 110,
-    "src": "genomics_comp",
-    "year": null,
-    "module": "module_4"
+    "difficulty": "high_school",
+    "module": "module1",
+    "tag": "genomics_comp"
   },
-  "M4-15-3598871ceee4": {
+  "M4-15-d9fd6be3d7a7": {
     "tags": [
       "genomics_comp",
       "module_4",
       "生物信息学",
       "系统发生基因组"
     ],
-    "diff": "league",
-    "len": 115,
-    "src": "genomics_comp",
-    "year": null,
-    "module": "module_4"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "genomics_comp"
   }
 }

@@ -1,12 +1,12 @@
 {
-  "M4-18-66436f1bf066": {
+  "M4-18-f5f32693c265": {
     "type": "mtf",
     "question": "关于植物主要类群的特征，以下说法正确的有哪些？",
     "subQuestions": [
       {
         "label": "A",
-        "text": "藻类植物无根茎叶分化，多为水生",
-        "answer": true
+        "text": "种子植物（裸子和被子）产生种子，不产生孢子",
+        "answer": false
       },
       {
         "label": "B",
@@ -15,16 +15,16 @@
       },
       {
         "label": "C",
-        "text": "蕨类植物有根茎叶分化，有维管组织",
+        "text": "藻类植物无根茎叶分化，多为水生",
         "answer": true
       },
       {
         "label": "D",
-        "text": "种子植物（裸子和被子）产生种子，不产生孢子",
+        "text": "蕨类植物有根茎叶分化，有维管组织",
         "answer": false
       }
     ],
-    "explanation": "A正确：藻类特征。B正确：苔藓特征。C正确：蕨类特征。D错误：种子植物也产生孢子（小孢子和大孢子）。",
+    "explanation": "正确答案：B, C。详细解析请参见相关教材。",
     "subject": "植物分类学",
     "concept": "植物类群",
     "difficulty": "high_school",
@@ -37,32 +37,32 @@
     ],
     "references": []
   },
-  "M4-18-642ff0146b50": {
+  "M4-18-5fdd60e16240": {
     "type": "mtf",
     "question": "关于裸子植物和被子植物的区别，以下判断正确的有哪些？",
     "subQuestions": [
       {
         "label": "A",
-        "text": "裸子植物的种子裸露，无果皮包被",
-        "answer": true
+        "text": "裸子植物有真正的花，被子植物无花",
+        "answer": false
       },
       {
         "label": "B",
-        "text": "被子植物的种子有果皮包被，形成果实",
-        "answer": true
+        "text": "裸子植物多为木本，被子植物有木本和草本",
+        "answer": false
       },
       {
         "label": "C",
-        "text": "裸子植物多为木本，被子植物有木本和草本",
-        "answer": true
+        "text": "被子植物的种子有果皮包被，形成果实",
+        "answer": false
       },
       {
         "label": "D",
-        "text": "裸子植物有真正的花，被子植物无花",
-        "answer": false
+        "text": "裸子植物的种子裸露，无果皮包被",
+        "answer": true
       }
     ],
-    "explanation": "A正确：裸子种子裸露。B正确：被子有果实。C正确：生活型差异。D错误：被子植物有花，裸子植物无真正的花。",
+    "explanation": "正确答案：D。详细解析请参见相关教材。",
     "subject": "植物分类学",
     "concept": "裸子与被子",
     "difficulty": "high_school",
@@ -75,32 +75,32 @@
     ],
     "references": []
   },
-  "M4-18-896d93ec704d": {
+  "M4-18-b134dca2ff8f": {
     "type": "mtf",
     "question": "关于APG分类系统，以下说法正确的有哪些？",
     "subQuestions": [
       {
         "label": "A",
         "text": "APG（Angiosperm Phylogeny Group）系统是基于分子系统发育研究的被子植物分类系统",
-        "answer": true
+        "answer": false
       },
       {
         "label": "B",
+        "text": "APG系统完全取代了传统的形态学分类系统",
+        "answer": false
+      },
+      {
+        "label": "C",
         "text": "APG系统使用单系群作为分类依据",
         "answer": true
       },
       {
-        "label": "C",
+        "label": "D",
         "text": "APG系统已经发布了多个版本（APG I, II, III, IV）",
         "answer": true
-      },
-      {
-        "label": "D",
-        "text": "APG系统完全取代了传统的形态学分类系统",
-        "answer": false
       }
     ],
-    "explanation": "A正确：APG定义。B正确：单系原则。C正确：多个版本。D错误：APG与传统系统并存，不是完全取代。",
+    "explanation": "正确答案：C, D。详细解析请参见相关教材。",
     "subject": "植物分类学",
     "concept": "APG系统",
     "difficulty": "league",
@@ -121,32 +121,32 @@
       }
     ]
   },
-  "M4-18-52d4f1da759c": {
+  "M4-18-0b48dbde862d": {
     "type": "mtf",
     "question": "关于被子植物主要科的特征，以下判断正确的有哪些？",
     "subQuestions": [
       {
         "label": "A",
-        "text": "禾本科植物具有颖花，果实为颖果",
-        "answer": true
+        "text": "十字花科植物具有四强雄蕊，果实为角果",
+        "answer": false
       },
       {
         "label": "B",
         "text": "豆科植物具有蝶形花冠，果实为荚果",
-        "answer": true
+        "answer": false
       },
       {
         "label": "C",
         "text": "蔷薇科植物花托凸起，多为聚合果",
-        "answer": true
+        "answer": false
       },
       {
         "label": "D",
-        "text": "十字花科植物具有四强雄蕊，果实为角果",
-        "answer": true
+        "text": "禾本科植物具有颖花，果实为颖果",
+        "answer": false
       }
     ],
-    "explanation": "A正确：禾本科特征。B正确：豆科特征。C正确：蔷薇科特征。D正确：十字花科特征。",
+    "explanation": "正确答案：。详细解析请参见相关教材。",
     "subject": "植物分类学",
     "concept": "主要科特征",
     "difficulty": "league",
@@ -167,14 +167,14 @@
       }
     ]
   },
-  "M4-18-71929dd0c44a": {
+  "M4-18-b8a687f67732": {
     "type": "mtf",
     "question": "关于植物演化趋势，以下说法正确的有哪些？",
     "subQuestions": [
       {
         "label": "A",
-        "text": "从水生到陆生",
-        "answer": true
+        "text": "从无种子到有种子",
+        "answer": false
       },
       {
         "label": "B",
@@ -183,16 +183,16 @@
       },
       {
         "label": "C",
-        "text": "从无维管组织到有维管组织",
-        "answer": true
+        "text": "从水生到陆生",
+        "answer": false
       },
       {
         "label": "D",
-        "text": "从无种子到有种子",
+        "text": "从无维管组织到有维管组织",
         "answer": true
       }
     ],
-    "explanation": "A正确：水生→陆生。B正确：配子体→孢子体。C正确：无→有维管。D正确：无→有种子。",
+    "explanation": "正确答案：B, D。详细解析请参见相关教材。",
     "subject": "植物分类学",
     "concept": "植物演化",
     "difficulty": "high_school",

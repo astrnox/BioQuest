@@ -1,79 +1,34 @@
 #!/usr/bin/env python3
-"""Update manifest.json with new question counts and file hashes."""
+"""更新manifest.json中的文件哈希值"""
 import json
 import hashlib
 from pathlib import Path
 
-BANK_DIR = Path("data/bank")
-INDEX_DIR = Path("data/index")
-KG_FILE = Path("data/knowledge-graph.json")
-MANIFEST_FILE = Path("data/manifest.json")
+def calculate_file_hash(file_path):
+    """计算文件的SHA256哈希值"""
+    sha256_hash = hashlib.sha256()
+    with open(file_path, "rb") as f:
+        for block in iter(lambda: f.read(4096), b""):
+            sha256_hash.update(block)
+    return sha256_hash.hexdigest()
 
-# Load knowledge graph
-with open(KG_FILE) as f:
-    kg = json.load(f)
+# 读取manifest
+manifest_path = Path("/workspace/data/manifest.json")
+with open(manifest_path, 'r', encoding='utf-8') as f:
+    manifest = json.load(f)
 
-# Count questions per tag
-tag_counts = {}
-for bank_file in BANK_DIR.glob("*.json"):
-    tag_id = bank_file.stem
-    with open(bank_file) as f:
-        data = json.load(f)
-    tag_counts[tag_id] = len(data)
+# 更新所有bank和index文件的哈希
+updated_count = 0
+for file_key in list(manifest['files'].keys()):
+    file_path = Path("/workspace/data") / file_key
+    if file_path.exists():
+        new_hash = calculate_file_hash(file_path)
+        if manifest['files'][file_key] != new_hash:
+            manifest['files'][file_key] = new_hash
+            updated_count += 1
 
-# Calculate file hashes
-def file_hash(path):
-    h = hashlib.sha256()
-    with open(path, "rb") as f:
-        h.update(f.read())
-    return h.hexdigest()
-
-files = {}
-for bank_file in sorted(BANK_DIR.glob("*.json")):
-    files[f"bank/{bank_file.name}"] = file_hash(bank_file)
-for index_file in sorted(INDEX_DIR.glob("*.json")):
-    files[f"index/{index_file.name}"] = file_hash(index_file)
-files["knowledge-graph.json"] = file_hash(KG_FILE)
-
-# Build topics list
-topics = []
-for node in kg["nodes"]:
-    tag_id = node["id"]
-    topics.append({
-        "id": tag_id,
-        "label": node["label"],
-        "category": node["category"],
-        "relatedModule": node["relatedModule"],
-        "count": tag_counts.get(tag_id, 0)
-    })
-
-# Build sources list
-sources = [{"tag": t["id"], "count": t["count"]} for t in topics]
-
-# Build modules dict
-modules = {"module1": [], "module2": [], "module3": [], "module4": []}
-for node in kg["nodes"]:
-    mod = node["relatedModule"]
-    if mod in modules:
-        modules[mod].append(node["id"])
-
-# Calculate total
-total = sum(tag_counts.values())
-
-# Build manifest
-manifest = {
-    "rev": 3,
-    "updated_at": "2026-08-23",
-    "total_questions": total,
-    "topics": topics,
-    "sources": sources,
-    "modules": modules,
-    "files": files
-}
-
-# Write manifest
-with open(MANIFEST_FILE, "w") as f:
+# 写回manifest
+with open(manifest_path, 'w', encoding='utf-8') as f:
     json.dump(manifest, f, ensure_ascii=False, indent=2)
 
-print(f"Manifest updated: {total} questions across {len(tag_counts)} tags")
-print(f"Files: {len(files)} hashes calculated")
+print(f"更新了 {updated_count} 个文件的哈希值")

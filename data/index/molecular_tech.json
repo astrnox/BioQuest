@@ -1,67 +1,57 @@
 {
-  "M1-0D-1e45e2191622": {
+  "M1-0D-88476b91fa70": {
     "tags": [
       "molecular_tech",
       "module_1",
       "分子生物学",
       "PCR"
     ],
-    "diff": "high_school",
-    "len": 88,
-    "src": "molecular_tech",
-    "year": null,
-    "module": "module_1"
+    "difficulty": "high_school",
+    "module": "module1",
+    "tag": "molecular_tech"
   },
-  "M1-0D-fe9936bf25b5": {
+  "M1-0D-59e902de2c32": {
     "tags": [
       "molecular_tech",
       "module_1",
       "分子生物学",
       "基因编辑"
     ],
-    "diff": "league",
-    "len": 96,
-    "src": "molecular_tech",
-    "year": null,
-    "module": "module_1"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "molecular_tech"
   },
-  "M1-0D-0e28f74d6cbb": {
+  "M1-0D-be4e4b9a80f6": {
     "tags": [
       "molecular_tech",
       "module_1",
       "分子生物学",
       "载体"
     ],
-    "diff": "high_school",
-    "len": 72,
-    "src": "molecular_tech",
-    "year": null,
-    "module": "module_1"
+    "difficulty": "high_school",
+    "module": "module1",
+    "tag": "molecular_tech"
   },
-  "M1-0D-60acc671725e": {
+  "M1-0D-74b21fb68a1b": {
     "tags": [
       "molecular_tech",
       "module_1",
       "分子生物学",
       "电泳"
     ],
-    "diff": "high_school",
-    "len": 81,
-    "src": "molecular_tech",
-    "year": null,
-    "module": "module_1"
+    "difficulty": "high_school",
+    "module": "module1",
+    "tag": "molecular_tech"
   },
-  "M1-0D-25010430e74c": {
+  "M1-0D-5a91fd5bee90": {
     "tags": [
       "molecular_tech",
       "module_1",
       "分子生物学",
       "印迹"
     ],
-    "diff": "league",
-    "len": 115,
-    "src": "molecular_tech",
-    "year": null,
-    "module": "module_1"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "molecular_tech"
   }
 }

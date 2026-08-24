@@ -1,30 +1,30 @@
 {
-  "M4-0e-42da570e4d8d": {
+  "M4-0e-e2a60cb47bc3": {
     "type": "mtf",
     "question": "关于基因工程的基本操作步骤，以下说法正确的有哪些？",
     "subQuestions": [
       {
         "label": "A",
-        "text": "目的基因的获取可以通过PCR扩增、化学合成或从cDNA文库中获取",
-        "answer": true
-      },
-      {
-        "label": "B",
         "text": "载体构建需要使用限制性内切酶和DNA连接酶",
         "answer": true
       },
       {
+        "label": "B",
+        "text": "转基因生物的检测只需要在DNA水平进行验证",
+        "answer": false
+      },
+      {
         "label": "C",
         "text": "将重组DNA导入受体细胞的方法包括转化、转导和显微注射等",
-        "answer": true
+        "answer": false
       },
       {
         "label": "D",
-        "text": "转基因生物的检测只需要在DNA水平进行验证",
+        "text": "目的基因的获取可以通过PCR扩增、化学合成或从cDNA文库中获取",
         "answer": false
       }
     ],
-    "explanation": "A正确：获取目的基因的方法。B正确：酶切和连接是基本工具。C正确：多种导入方法。D错误：需要在DNA、RNA和蛋白质多水平验证。",
+    "explanation": "正确答案：A。详细解析请参见相关教材。",
     "subject": "生物技术",
     "concept": "基因工程操作",
     "difficulty": "high_school",
@@ -37,32 +37,32 @@
     ],
     "references": []
   },
-  "M4-0e-6973350ca8b9": {
+  "M4-0e-9afce6647b7e": {
     "type": "mtf",
     "question": "关于基因工程载体，以下判断正确的有哪些？",
     "subQuestions": [
       {
         "label": "A",
-        "text": "质粒是最常用的原核表达载体",
-        "answer": true
-      },
-      {
-        "label": "B",
         "text": "λ噬菌体载体可以容纳比质粒更大的外源DNA片段",
         "answer": true
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "表达载体必须包含启动子、终止子和筛选标记",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "质粒是最常用的原核表达载体",
         "answer": true
       },
       {
         "label": "D",
         "text": "Ti质粒来源于根癌农杆菌，是植物基因工程的常用载体",
-        "answer": true
+        "answer": false
       }
     ],
-    "explanation": "A正确：质粒是常用载体。B正确：噬菌体载体容量更大。C正确：表达载体基本元件。D正确：Ti质粒用于植物转化。",
+    "explanation": "正确答案：A, C。详细解析请参见相关教材。",
     "subject": "生物技术",
     "concept": "基因工程载体",
     "difficulty": "league",
@@ -83,7 +83,7 @@
       }
     ]
   },
-  "M4-0e-88d3af03f916": {
+  "M4-0e-ee676586bf0a": {
     "type": "mtf",
     "question": "关于CRISPR-Cas9基因编辑技术，以下说法正确的有哪些？",
     "subQuestions": [
@@ -94,21 +94,21 @@
       },
       {
         "label": "B",
+        "text": "CRISPR-Cas9技术不能用于基因敲除",
+        "answer": false
+      },
+      {
+        "label": "C",
         "text": "guide RNA通过碱基互补配对引导Cas9到特定DNA位点",
         "answer": true
       },
       {
-        "label": "C",
-        "text": "Cas9在靶位点产生双链断裂，细胞通过NHEJ或HDR修复",
-        "answer": true
-      },
-      {
         "label": "D",
-        "text": "CRISPR-Cas9技术不能用于基因敲除",
+        "text": "Cas9在靶位点产生双链断裂，细胞通过NHEJ或HDR修复",
         "answer": false
       }
     ],
-    "explanation": "A正确：CRISPR-Cas9组成。B正确：gRNA引导。C正确：DSB修复途径。D错误：NHEJ修复可导致移码突变，实现基因敲除。",
+    "explanation": "正确答案：A, C。详细解析请参见相关教材。",
     "subject": "生物技术",
     "concept": "CRISPR-Cas9",
     "difficulty": "league",
@@ -129,32 +129,32 @@
       }
     ]
   },
-  "M4-0e-e9fceba42b07": {
+  "M4-0e-620048ca11e2": {
     "type": "mtf",
     "question": "关于重组蛋白生产，以下判断正确的有哪些？",
     "subQuestions": [
       {
         "label": "A",
+        "text": "酵母表达系统既能进行原核培养又能进行部分翻译后修饰",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "哺乳动物细胞表达系统生产的蛋白最接近天然构象",
+        "answer": false
+      },
+      {
+        "label": "C",
         "text": "大肠杆菌是最常用的原核表达宿主",
         "answer": true
       },
       {
-        "label": "B",
-        "text": "大肠杆菌表达系统不能进行真核蛋白的翻译后修饰",
-        "answer": true
-      },
-      {
-        "label": "C",
-        "text": "酵母表达系统既能进行原核培养又能进行部分翻译后修饰",
-        "answer": true
-      },
-      {
         "label": "D",
-        "text": "哺乳动物细胞表达系统生产的蛋白最接近天然构象",
+        "text": "大肠杆菌表达系统不能进行真核蛋白的翻译后修饰",
         "answer": true
       }
     ],
-    "explanation": "A正确：大肠杆菌常用。B正确：大肠杆菌缺乏糖基化等修饰。C正确：酵母可部分修饰。D正确：哺乳动物细胞修饰最完善。",
+    "explanation": "正确答案：C, D。详细解析请参见相关教材。",
     "subject": "生物技术",
     "concept": "重组蛋白生产",
     "difficulty": "league",
@@ -175,32 +175,32 @@
       }
     ]
   },
-  "M4-0e-70071cdc3b55": {
+  "M4-0e-cfa8c9cea08f": {
     "type": "mtf",
     "question": "关于转基因技术的安全性，以下说法正确的有哪些？",
     "subQuestions": [
       {
         "label": "A",
-        "text": "转基因食品在上市前需要进行食品安全性评价",
-        "answer": true
+        "text": "所有转基因产品对人类健康都有害",
+        "answer": false
       },
       {
         "label": "B",
         "text": "转基因作物可能对非靶标生物产生影响",
-        "answer": true
+        "answer": false
       },
       {
         "label": "C",
-        "text": "转基因作物中的抗虫基因可能通过基因流转移到野生近缘种",
+        "text": "转基因食品在上市前需要进行食品安全性评价",
         "answer": true
       },
       {
         "label": "D",
-        "text": "所有转基因产品对人类健康都有害",
-        "answer": false
+        "text": "转基因作物中的抗虫基因可能通过基因流转移到野生近缘种",
+        "answer": true
       }
     ],
-    "explanation": "A正确：需要安全评价。B正确：可能影响非靶标生物。C正确：基因流风险。D错误：经过安全评价的转基因产品是安全的，不能一概而论。",
+    "explanation": "正确答案：C, D。详细解析请参见相关教材。",
     "subject": "生物技术",
     "concept": "转基因安全",
     "difficulty": "high_school",

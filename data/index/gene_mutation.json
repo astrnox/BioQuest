@@ -25,43 +25,37 @@
     "year": null,
     "module": "module_4"
   },
-  "M4-04-f770d98aeca6": {
+  "M4-04-994238ceac4c": {
     "tags": [
       "gene_mutation",
       "module_4",
       "遗传学",
       "Ames试验"
     ],
-    "diff": "league",
-    "len": 119,
-    "src": "gene_mutation",
-    "year": null,
-    "module": "module_4"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "gene_mutation"
   },
-  "M4-04-c399db9a828f": {
+  "M4-04-a2d4eac5898e": {
     "tags": [
       "gene_mutation",
       "module_4",
       "遗传学",
       "诱变剂"
     ],
-    "diff": "high_school",
-    "len": 99,
-    "src": "gene_mutation",
-    "year": null,
-    "module": "module_4"
+    "difficulty": "high_school",
+    "module": "module1",
+    "tag": "gene_mutation"
   },
-  "M4-04-45648f112101": {
+  "M4-04-19667a175b7f": {
     "tags": [
       "gene_mutation",
       "module_4",
       "遗传学",
       "基因突变"
     ],
-    "diff": "high_school",
-    "len": 99,
-    "src": "gene_mutation",
-    "year": null,
-    "module": "module_4"
+    "difficulty": "high_school",
+    "module": "module1",
+    "tag": "gene_mutation"
   }
 }

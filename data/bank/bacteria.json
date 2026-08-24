@@ -1,30 +1,30 @@
 {
-  "M2-0C-36677d8afb89": {
+  "M2-0C-ce41a44b7114": {
     "type": "mtf",
     "question": "细菌的基本结构包括：",
     "subQuestions": [
       {
         "label": "A",
+        "text": "细菌的遗传物质是裸露的DNA，无核膜包被",
+        "answer": false
+      },
+      {
+        "label": "B",
         "text": "细菌具有细胞壁、细胞膜、细胞质",
         "answer": true
       },
       {
-        "label": "B",
-        "text": "细菌的遗传物质是裸露的DNA，无核膜包被",
-        "answer": true
-      },
-      {
         "label": "C",
-        "text": "细菌具有核糖体",
+        "text": "细菌具有线粒体和叶绿体",
         "answer": true
       },
       {
         "label": "D",
-        "text": "细菌具有线粒体和叶绿体",
-        "answer": false
+        "text": "细菌具有核糖体",
+        "answer": true
       }
     ],
-    "explanation": "A正确：细菌基本结构。B正确：原核生物无核膜。C正确：细菌有核糖体。D错误：细菌没有膜包被的细胞器。",
+    "explanation": "正确答案：B, C, D。详细解析请参见相关教材。",
     "subject": "微生物学",
     "concept": "细菌结构",
     "difficulty": "high_school",
@@ -37,32 +37,32 @@
     ],
     "references": []
   },
-  "M2-0C-429fd37ece0e": {
+  "M2-0C-ae84bc04659e": {
     "type": "mtf",
     "question": "革兰氏阳性菌与阴性菌的区别包括：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "革兰氏阳性菌细胞壁厚，肽聚糖含量高",
+        "text": "革兰氏染色后阳性菌呈紫色，阴性菌呈红色",
         "answer": true
       },
       {
         "label": "B",
         "text": "革兰氏阴性菌有外膜，含脂多糖",
-        "answer": true
+        "answer": false
       },
       {
         "label": "C",
-        "text": "革兰氏染色后阳性菌呈紫色，阴性菌呈红色",
-        "answer": true
+        "text": "革兰氏阳性菌细胞壁厚，肽聚糖含量高",
+        "answer": false
       },
       {
         "label": "D",
         "text": "革兰氏阴性菌对青霉素更敏感",
-        "answer": false
+        "answer": true
       }
     ],
-    "explanation": "A正确：阳性菌细胞壁厚。B正确：阴性菌有外膜。C正确：染色结果。D错误：阳性菌对青霉素更敏感。",
+    "explanation": "正确答案：A, D。详细解析请参见相关教材。",
     "subject": "微生物学",
     "concept": "革兰氏染色",
     "difficulty": "high_school",
@@ -75,7 +75,7 @@
     ],
     "references": []
   },
-  "M2-0C-b2590ec29a23": {
+  "M2-0C-0bd1079cac5e": {
     "type": "mtf",
     "question": "细菌的运动器官和趋化性包括：",
     "subQuestions": [
@@ -86,21 +86,21 @@
       },
       {
         "label": "B",
-        "text": "细菌趋化性是对化学物质的定向运动",
-        "answer": true
-      },
-      {
-        "label": "C",
         "text": "趋化性通过鞭毛的旋转和反转实现",
         "answer": true
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "所有细菌都能运动",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "细菌趋化性是对化学物质的定向运动",
         "answer": false
       }
     ],
-    "explanation": "A正确：鞭毛运动。B正确：趋化性定义。C正确：运动机制。D错误：有些细菌不能运动。",
+    "explanation": "正确答案：A, B。详细解析请参见相关教材。",
     "subject": "微生物学",
     "concept": "细菌运动",
     "difficulty": "league",
@@ -121,7 +121,7 @@
       }
     ]
   },
-  "M2-0C-97bd3a9af1f4": {
+  "M2-0C-cc56b9c26384": {
     "type": "mtf",
     "question": "细菌的基因转移方式包括：",
     "subQuestions": [
@@ -133,7 +133,7 @@
       {
         "label": "B",
         "text": "转导是通过噬菌体介导的基因转移",
-        "answer": true
+        "answer": false
       },
       {
         "label": "C",
@@ -146,7 +146,7 @@
         "answer": false
       }
     ],
-    "explanation": "A正确：转化定义。B正确：转导定义。C正确：接合定义。D错误：转化不需要接触。",
+    "explanation": "正确答案：A, C。详细解析请参见相关教材。",
     "subject": "微生物学",
     "concept": "基因转移",
     "difficulty": "league",
@@ -167,23 +167,23 @@
       }
     ]
   },
-  "M2-0C-2889d3e7a907": {
+  "M2-0C-792545a8c593": {
     "type": "mtf",
     "question": "细菌的代谢多样性包括：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "光合细菌能进行光合作用",
+        "text": "异养菌利用有机物作为碳源和能源",
         "answer": true
       },
       {
         "label": "B",
         "text": "化能自养菌利用无机物氧化获得能量",
-        "answer": true
+        "answer": false
       },
       {
         "label": "C",
-        "text": "异养菌利用有机物作为碳源和能源",
+        "text": "光合细菌能进行光合作用",
         "answer": true
       },
       {
@@ -192,7 +192,7 @@
         "answer": false
       }
     ],
-    "explanation": "A正确：光合细菌存在。B正确：化能自养。C正确：异养。D错误：有厌氧菌。",
+    "explanation": "正确答案：A, C。详细解析请参见相关教材。",
     "subject": "微生物学",
     "concept": "代谢多样性",
     "difficulty": "high_school",

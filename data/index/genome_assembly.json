@@ -1,42 +1,36 @@
 {
-  "M4-13-3425d9a0b4b8": {
+  "M4-13-a5eda024311e": {
     "tags": [
       "genome_assembly",
       "module_4",
       "生物信息学",
       "基因组组装"
     ],
-    "diff": "league",
-    "len": 147,
-    "src": "genome_assembly",
-    "year": null,
-    "module": "module_4"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "genome_assembly"
   },
-  "M4-13-124e5dd348b0": {
+  "M4-13-c05ea7fb5bf5": {
     "tags": [
       "genome_assembly",
       "module_4",
       "生物信息学",
       "基因组组装"
     ],
-    "diff": "high_school",
-    "len": 127,
-    "src": "genome_assembly",
-    "year": null,
-    "module": "module_4"
+    "difficulty": "high_school",
+    "module": "module1",
+    "tag": "genome_assembly"
   },
-  "M4-13-2221d9bfdda9": {
+  "M4-13-f5ae19c318a5": {
     "tags": [
       "genome_assembly",
       "module_4",
       "生物信息学",
       "基因组注释"
     ],
-    "diff": "league",
-    "len": 110,
-    "src": "genome_assembly",
-    "year": null,
-    "module": "module_4"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "genome_assembly"
   },
   "M4-13-45b53a2e3255": {
     "tags": [
@@ -51,17 +45,15 @@
     "year": null,
     "module": "module_4"
   },
-  "M4-13-df7a304d8094": {
+  "M4-13-903aacdb6afe": {
     "tags": [
       "genome_assembly",
       "module_4",
       "生物信息学",
       "基因组组装"
     ],
-    "diff": "league",
-    "len": 117,
-    "src": "genome_assembly",
-    "year": null,
-    "module": "module_4"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "genome_assembly"
   }
 }

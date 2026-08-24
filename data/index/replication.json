@@ -1,67 +1,57 @@
 {
-  "M1-09-3e2562c6b315": {
+  "M1-09-cd29a3aacddb": {
     "tags": [
       "replication",
       "module_1",
       "分子生物学",
       "复制"
     ],
-    "diff": "high_school",
-    "len": 114,
-    "src": "replication",
-    "year": null,
-    "module": "module_1"
+    "difficulty": "high_school",
+    "module": "module1",
+    "tag": "replication"
   },
-  "M1-09-6a02dc83b1ac": {
+  "M1-09-b23e5b5cf380": {
     "tags": [
       "replication",
       "module_1",
       "分子生物学",
       "DNA聚合酶"
     ],
-    "diff": "league",
-    "len": 104,
-    "src": "replication",
-    "year": null,
-    "module": "module_1"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "replication"
   },
-  "M1-09-cbf36d4a25b2": {
+  "M1-09-420962d8a1d7": {
     "tags": [
       "replication",
       "module_1",
       "分子生物学",
       "冈崎片段"
     ],
-    "diff": "league",
-    "len": 83,
-    "src": "replication",
-    "year": null,
-    "module": "module_1"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "replication"
   },
-  "M1-09-f1f2c3f24f09": {
+  "M1-09-83bcf21e16ce": {
     "tags": [
       "replication",
       "module_1",
       "分子生物学",
       "端粒"
     ],
-    "diff": "league",
-    "len": 74,
-    "src": "replication",
-    "year": null,
-    "module": "module_1"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "replication"
   },
-  "M1-09-b29faff04c93": {
+  "M1-09-89647d7e40c5": {
     "tags": [
       "replication",
       "module_1",
       "分子生物学",
       "复制叉"
     ],
-    "diff": "league",
-    "len": 79,
-    "src": "replication",
-    "year": null,
-    "module": "module_1"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "replication"
   }
 }

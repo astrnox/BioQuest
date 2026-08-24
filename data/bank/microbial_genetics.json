@@ -1,30 +1,30 @@
 {
-  "M2-0E-3828eb09ce34": {
+  "M2-0E-a6a198c0d802": {
     "type": "mtf",
     "question": "质粒的特征包括：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "质粒是独立于染色体的环状DNA分子",
+        "text": "质粒只能存在于细菌中",
         "answer": true
       },
       {
         "label": "B",
-        "text": "质粒可以自主复制",
-        "answer": true
-      },
-      {
-        "label": "C",
         "text": "质粒携带的基因对宿主通常不是必需的",
         "answer": true
       },
       {
+        "label": "C",
+        "text": "质粒可以自主复制",
+        "answer": true
+      },
+      {
         "label": "D",
-        "text": "质粒只能存在于细菌中",
+        "text": "质粒是独立于染色体的环状DNA分子",
         "answer": false
       }
     ],
-    "explanation": "A正确：质粒定义。B正确：自主复制。C正确：非必需。D错误：酵母也有质粒。",
+    "explanation": "正确答案：A, B, C。详细解析请参见相关教材。",
     "subject": "微生物学",
     "concept": "质粒",
     "difficulty": "high_school",
@@ -37,18 +37,18 @@
     ],
     "references": []
   },
-  "M2-0E-e70e9db094ce": {
+  "M2-0E-1138c62209e0": {
     "type": "mtf",
     "question": "F因子介导的接合包括：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "F+菌株含有F质粒，能形成性菌毛",
+        "text": "F-菌株不含F质粒，作为受体",
         "answer": true
       },
       {
         "label": "B",
-        "text": "F-菌株不含F质粒，作为受体",
+        "text": "Hfr菌株中F因子整合到染色体",
         "answer": true
       },
       {
@@ -58,11 +58,11 @@
       },
       {
         "label": "D",
-        "text": "Hfr菌株中F因子整合到染色体",
+        "text": "F+菌株含有F质粒，能形成性菌毛",
         "answer": true
       }
     ],
-    "explanation": "A正确：F+定义。B正确：F-定义。C正确：质粒转移。D正确：Hfr定义。",
+    "explanation": "正确答案：A, B, C, D。详细解析请参见相关教材。",
     "subject": "微生物学",
     "concept": "接合",
     "difficulty": "league",
@@ -83,19 +83,19 @@
       }
     ]
   },
-  "M2-0E-fb7f023b6494": {
+  "M2-0E-9ff23e45fc36": {
     "type": "mtf",
     "question": "转座子的特征包括：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "转座子可以在基因组内移动位置",
-        "answer": true
+        "text": "转座子只能携带转座酶基因",
+        "answer": false
       },
       {
         "label": "B",
-        "text": "转座子两端有反向重复序列",
-        "answer": true
+        "text": "转座子可以在基因组内移动位置",
+        "answer": false
       },
       {
         "label": "C",
@@ -104,11 +104,11 @@
       },
       {
         "label": "D",
-        "text": "转座子只能携带转座酶基因",
-        "answer": false
+        "text": "转座子两端有反向重复序列",
+        "answer": true
       }
     ],
-    "explanation": "A正确：转座特性。B正确：结构特征。C正确：转座酶。D错误：可携带其他基因如抗性基因。",
+    "explanation": "正确答案：C, D。详细解析请参见相关教材。",
     "subject": "微生物学",
     "concept": "转座子",
     "difficulty": "league",
@@ -175,32 +175,32 @@
       }
     ]
   },
-  "M2-0E-07432dbf6500": {
+  "M2-0E-cf6d87c91d10": {
     "type": "mtf",
     "question": "细菌基因表达调控的特点包括：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "操纵子是原核生物特有的基因组织形式",
-        "answer": true
-      },
-      {
-        "label": "B",
         "text": "lac操纵子是诱导型操纵子",
         "answer": true
       },
       {
+        "label": "B",
+        "text": "原核生物基因调控主要在翻译水平",
+        "answer": false
+      },
+      {
         "label": "C",
-        "text": "trp操纵子是阻遏型操纵子",
-        "answer": true
+        "text": "操纵子是原核生物特有的基因组织形式",
+        "answer": false
       },
       {
         "label": "D",
-        "text": "原核生物基因调控主要在翻译水平",
-        "answer": false
+        "text": "trp操纵子是阻遏型操纵子",
+        "answer": true
       }
     ],
-    "explanation": "A正确：操纵子原核特有。B正确：lac诱导型。C正确：trp阻遏型。D错误：主要在转录水平。",
+    "explanation": "正确答案：A, D。详细解析请参见相关教材。",
     "subject": "微生物学",
     "concept": "基因调控",
     "difficulty": "league",

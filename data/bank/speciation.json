@@ -1,30 +1,30 @@
 {
-  "M4-0a-607ff2594b66": {
+  "M4-0a-3b2fe975c068": {
     "type": "mtf",
     "question": "关于物种形成模式，以下说法正确的有哪些？",
     "subQuestions": [
       {
         "label": "A",
-        "text": "异域成种（allopatric speciation）需要地理隔离作为前提",
-        "answer": true
+        "text": "同域成种在植物中比在动物中更常见",
+        "answer": false
       },
       {
         "label": "B",
-        "text": "同域成种（sympatric speciation）中，新物种在亲本分布区内形成",
-        "answer": true
-      },
-      {
-        "label": "C",
         "text": "边域成种（peripatric speciation）是异域成种的特殊形式，涉及小群体",
         "answer": true
       },
       {
-        "label": "D",
-        "text": "同域成种在植物中比在动物中更常见",
+        "label": "C",
+        "text": "同域成种（sympatric speciation）中，新物种在亲本分布区内形成",
         "answer": true
+      },
+      {
+        "label": "D",
+        "text": "异域成种（allopatric speciation）需要地理隔离作为前提",
+        "answer": false
       }
     ],
-    "explanation": "A正确：异域成种需地理隔离。B正确：同域成种无地理隔离。C正确：边域成种是小群体异域成种。D正确：植物中多倍体等同域成种更常见。",
+    "explanation": "正确答案：B, C。详细解析请参见相关教材。",
     "subject": "演化生物学",
     "concept": "物种形成模式",
     "difficulty": "league",
@@ -45,32 +45,32 @@
       }
     ]
   },
-  "M4-0a-1d404bcc1f47": {
+  "M4-0a-4f85ee8583ad": {
     "type": "mtf",
     "question": "关于生殖隔离机制，以下判断正确的有哪些？",
     "subQuestions": [
       {
         "label": "A",
-        "text": "交配前隔离（prezygotic isolation）阻止不同物种间的交配或受精",
-        "answer": true
+        "text": "时间隔离（temporal isolation）属于交配后隔离",
+        "answer": false
       },
       {
         "label": "B",
-        "text": "交配后隔离（postzygotic isolation）导致杂种不育或杂种不活",
-        "answer": true
-      },
-      {
-        "label": "C",
         "text": "马和驴交配产生的骡是不育的，属于交配后隔离",
         "answer": true
       },
       {
-        "label": "D",
-        "text": "时间隔离（temporal isolation）属于交配后隔离",
+        "label": "C",
+        "text": "交配前隔离（prezygotic isolation）阻止不同物种间的交配或受精",
         "answer": false
+      },
+      {
+        "label": "D",
+        "text": "交配后隔离（postzygotic isolation）导致杂种不育或杂种不活",
+        "answer": true
       }
     ],
-    "explanation": "A正确：交配前隔离的定义。B正确：交配后隔离的定义。C正确：骡不育是交配后隔离。D错误：时间隔离是交配前隔离（不同繁殖季节）。",
+    "explanation": "正确答案：B, D。详细解析请参见相关教材。",
     "subject": "演化生物学",
     "concept": "生殖隔离",
     "difficulty": "high_school",
@@ -83,19 +83,19 @@
     ],
     "references": []
   },
-  "M4-0a-b9a912671152": {
+  "M4-0a-d52eee9a6182": {
     "type": "mtf",
     "question": "关于多倍体成种，以下说法正确的有哪些？",
     "subQuestions": [
       {
         "label": "A",
-        "text": "同源多倍体可以由未减数配子的融合产生",
+        "text": "多倍体动物比多倍体植物更为常见",
         "answer": true
       },
       {
         "label": "B",
         "text": "异源多倍体通常涉及种间杂交 followed by 染色体加倍",
-        "answer": true
+        "answer": false
       },
       {
         "label": "C",
@@ -104,11 +104,11 @@
       },
       {
         "label": "D",
-        "text": "多倍体动物比多倍体植物更为常见",
-        "answer": false
+        "text": "同源多倍体可以由未减数配子的融合产生",
+        "answer": true
       }
     ],
-    "explanation": "A正确：2n配子融合。B正确：杂交+加倍。C正确：植物中多倍体成种常见。D错误：多倍体在植物中远比动物中常见。",
+    "explanation": "正确答案：A, C, D。详细解析请参见相关教材。",
     "subject": "演化生物学",
     "concept": "多倍体成种",
     "difficulty": "league",
@@ -175,32 +175,32 @@
       }
     ]
   },
-  "M4-0a-975d0c35ba62": {
+  "M4-0a-9584d9b59c1b": {
     "type": "mtf",
     "question": "关于物种概念，以下说法正确的有哪些？",
     "subQuestions": [
       {
         "label": "A",
-        "text": "生物学物种概念（BSC）强调生殖隔离作为物种界定的标准",
-        "answer": true
-      },
-      {
-        "label": "B",
         "text": "生物学物种概念不适用于无性生殖生物和化石",
         "answer": true
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "系统发育物种概念将物种定义为具有共同祖先的最小单系群",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "生物学物种概念（BSC）强调生殖隔离作为物种界定的标准",
         "answer": true
       },
       {
         "label": "D",
         "text": "所有物种概念对同一组生物的分类结果总是一致的",
-        "answer": false
+        "answer": true
       }
     ],
-    "explanation": "A正确：BSC以生殖隔离为标准。B正确：BSC的局限性。C正确：系统发育物种概念的定义。D错误：不同物种概念可能给出不同分类结果。",
+    "explanation": "正确答案：A, C, D。详细解析请参见相关教材。",
     "subject": "演化生物学",
     "concept": "物种概念",
     "difficulty": "high_school",

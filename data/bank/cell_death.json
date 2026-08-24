@@ -6,7 +6,7 @@
       {
         "label": "A",
         "text": "A. 细胞凋亡是程序性死亡过程",
-        "answer": true
+        "answer": false
       },
       {
         "label": "B",
@@ -24,7 +24,7 @@
         "answer": true
       }
     ],
-    "explanation": "A正确：凋亡是程序性死亡；B正确：凋亡有特征性形态变化；C错误：凋亡不引发炎症，坏死才引发；D正确：凋亡小体被吞噬清除。",
+    "explanation": "正确答案：B, D。详细解析请参见相关教材。",
     "subject": "细胞生物学",
     "concept": "细胞凋亡",
     "difficulty": "high_school",
@@ -36,32 +36,32 @@
       "细胞凋亡"
     ]
   },
-  "M1-07-388af96407a2": {
+  "M1-07-d5ecc3d49f81": {
     "type": "mtf",
     "question": "关于Caspase家族，下列说法正确的是：",
     "subQuestions": [
       {
         "label": "A",
+        "text": "D. Caspase以活性形式存在于细胞中",
+        "answer": false
+      },
+      {
+        "label": "B",
         "text": "A. Caspase是半胱氨酸蛋白酶",
         "answer": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "B. Caspase切割天冬氨酸残基后的肽键",
         "answer": true
       },
       {
-        "label": "C",
+        "label": "D",
         "text": "C. 起始Caspase激活效应Caspase",
         "answer": true
-      },
-      {
-        "label": "D",
-        "text": "D. Caspase以活性形式存在于细胞中",
-        "answer": false
       }
     ],
-    "explanation": "A正确：Caspase是半胱氨酸依赖的天冬氨酸特异性蛋白酶；B正确：切割Asp后的肽键；C正确：起始Caspase（如8、9）激活效应Caspase（3、6、7）；D错误：Caspase以酶原形式存在。",
+    "explanation": "正确答案：B, C, D。详细解析请参见相关教材。",
     "subject": "细胞生物学",
     "concept": "Caspase",
     "difficulty": "league",
@@ -89,32 +89,32 @@
       }
     ]
   },
-  "M1-07-e84726454d30": {
+  "M1-07-401a14a11257": {
     "type": "mtf",
     "question": "关于p53蛋白的功能，下列说法正确的是：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "A. p53是肿瘤抑制蛋白",
+        "text": "D. p53突变与癌症发生无关",
         "answer": true
       },
       {
         "label": "B",
-        "text": "B. p53可以诱导细胞周期停滞",
-        "answer": true
+        "text": "A. p53是肿瘤抑制蛋白",
+        "answer": false
       },
       {
         "label": "C",
         "text": "C. p53可以促凋亡基因的表达",
-        "answer": true
+        "answer": false
       },
       {
         "label": "D",
-        "text": "D. p53突变与癌症发生无关",
-        "answer": false
+        "text": "B. p53可以诱导细胞周期停滞",
+        "answer": true
       }
     ],
-    "explanation": "A正确：p53是重要的肿瘤抑制因子；B正确：p53诱导p21表达，抑制CDK，导致G1停滞；C正确：p53诱导Bax、PUMA等促凋亡基因；D错误：p53突变与约50%的癌症相关。",
+    "explanation": "正确答案：A, D。详细解析请参见相关教材。",
     "subject": "细胞生物学",
     "concept": "p53",
     "difficulty": "league",
@@ -142,14 +142,14 @@
       }
     ]
   },
-  "M1-07-b81a1c0c9509": {
+  "M1-07-f2e94f02a0da": {
     "type": "mtf",
     "question": "关于Bcl-2蛋白家族，下列说法正确的是：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "A. Bcl-2家族包括促凋亡和抗凋亡成员",
-        "answer": true
+        "text": "C. Bax和Bak是促凋亡蛋白",
+        "answer": false
       },
       {
         "label": "B",
@@ -158,16 +158,16 @@
       },
       {
         "label": "C",
-        "text": "C. Bax和Bak是促凋亡蛋白",
-        "answer": true
+        "text": "A. Bcl-2家族包括促凋亡和抗凋亡成员",
+        "answer": false
       },
       {
         "label": "D",
         "text": "D. Bcl-2家族蛋白只定位在线粒体外膜",
-        "answer": false
+        "answer": true
       }
     ],
-    "explanation": "A正确：家族包括抗凋亡（Bcl-2、Bcl-xL）和促凋亡（Bax、Bak、Bid等）成员；B正确：Bcl-2抑制凋亡；C正确：Bax/Bak形成线粒体外膜孔道；D错误：部分成员（如Bid）在胞质中。",
+    "explanation": "正确答案：B, D。详细解析请参见相关教材。",
     "subject": "细胞生物学",
     "concept": "Bcl-2家族",
     "difficulty": "league",
@@ -195,32 +195,32 @@
       }
     ]
   },
-  "M1-07-13180831b43c": {
+  "M1-07-7b51d33c64b8": {
     "type": "mtf",
     "question": "关于细胞凋亡与坏死的比较，下列说法正确的是：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "A. 凋亡是主动过程，坏死是被动过程",
-        "answer": true
-      },
-      {
-        "label": "B",
-        "text": "B. 凋亡不引发炎症，坏死引发炎症",
-        "answer": true
-      },
-      {
-        "label": "C",
         "text": "C. 凋亡细胞膜保持完整，坏死细胞膜破裂",
         "answer": true
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "D. 凋亡和坏死都是程序性死亡",
         "answer": false
+      },
+      {
+        "label": "C",
+        "text": "B. 凋亡不引发炎症，坏死引发炎症",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "A. 凋亡是主动过程，坏死是被动过程",
+        "answer": true
       }
     ],
-    "explanation": "A正确：凋亡是程序性主动死亡，坏死是病理性被动死亡；B正确：凋亡不引发炎症；C正确：凋亡细胞膜完整形成凋亡小体，坏死膜破裂；D错误：坏死不是程序性死亡（程序性坏死除外）。",
+    "explanation": "正确答案：A, C, D。详细解析请参见相关教材。",
     "subject": "细胞生物学",
     "concept": "凋亡与坏死",
     "difficulty": "high_school",

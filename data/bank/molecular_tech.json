@@ -1,30 +1,30 @@
 {
-  "M1-0D-1e45e2191622": {
+  "M1-0D-88476b91fa70": {
     "type": "mtf",
     "question": "关于PCR技术，下列说法正确的是：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "A. PCR需要耐高温的DNA聚合酶",
-        "answer": true
+        "text": "D. PCR可以扩增任意长度的DNA片段",
+        "answer": false
       },
       {
         "label": "B",
-        "text": "B. PCR包括变性、退火、延伸三个步骤",
-        "answer": true
-      },
-      {
-        "label": "C",
         "text": "C. PCR需要特异性引物",
         "answer": true
       },
       {
+        "label": "C",
+        "text": "B. PCR包括变性、退火、延伸三个步骤",
+        "answer": true
+      },
+      {
         "label": "D",
-        "text": "D. PCR可以扩增任意长度的DNA片段",
+        "text": "A. PCR需要耐高温的DNA聚合酶",
         "answer": false
       }
     ],
-    "explanation": "A正确：Taq酶等耐热聚合酶；B正确：94°C变性，55-65°C退火，72°C延伸；C正确：需要一对特异性引物；D错误：PCR通常扩增<5kb的片段，长片段扩增困难。",
+    "explanation": "正确答案：B, C。详细解析请参见相关教材。",
     "subject": "分子生物学",
     "concept": "PCR",
     "difficulty": "high_school",
@@ -36,32 +36,32 @@
       "PCR"
     ]
   },
-  "M1-0D-fe9936bf25b5": {
+  "M1-0D-59e902de2c32": {
     "type": "mtf",
     "question": "关于CRISPR-Cas9系统，下列说法正确的是：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "A. Cas9是DNA内切酶",
-        "answer": true
+        "text": "B. guide RNA引导Cas9到靶位点",
+        "answer": false
       },
       {
         "label": "B",
-        "text": "B. guide RNA引导Cas9到靶位点",
-        "answer": true
-      },
-      {
-        "label": "C",
         "text": "C. CRISPR可以精确编辑基因组",
         "answer": true
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "D. CRISPR技术只适用于细菌",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "A. Cas9是DNA内切酶",
         "answer": false
       }
     ],
-    "explanation": "A正确：Cas9切割DNA双链；B正确：gRNA通过碱基互补配对引导；C正确：CRISPR可实现定点编辑；D错误：CRISPR广泛应用于动植物和人类细胞。",
+    "explanation": "正确答案：B, C。详细解析请参见相关教材。",
     "subject": "分子生物学",
     "concept": "CRISPR",
     "difficulty": "league",
@@ -89,32 +89,32 @@
       }
     ]
   },
-  "M1-0D-0e28f74d6cbb": {
+  "M1-0D-be4e4b9a80f6": {
     "type": "mtf",
     "question": "关于分子克隆载体，下列说法正确的是：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "A. 质粒是常用的克隆载体",
+        "text": "D. 载体只能有一个限制性酶切位点",
         "answer": true
       },
       {
         "label": "B",
-        "text": "B. 载体需要复制起点",
+        "text": "A. 质粒是常用的克隆载体",
         "answer": true
       },
       {
         "label": "C",
         "text": "C. 载体需要选择标记基因",
-        "answer": true
+        "answer": false
       },
       {
         "label": "D",
-        "text": "D. 载体只能有一个限制性酶切位点",
-        "answer": false
+        "text": "B. 载体需要复制起点",
+        "answer": true
       }
     ],
-    "explanation": "A正确：质粒是常用载体；B正确：ori保证自主复制；C正确：抗生素抗性等标记用于筛选；D错误：载体需要多克隆位点（多个酶切位点）。",
+    "explanation": "正确答案：A, B, D。详细解析请参见相关教材。",
     "subject": "分子生物学",
     "concept": "分子克隆",
     "difficulty": "high_school",
@@ -126,32 +126,32 @@
       "载体"
     ]
   },
-  "M1-0D-60acc671725e": {
+  "M1-0D-74b21fb68a1b": {
     "type": "mtf",
     "question": "关于凝胶电泳，下列说法正确的是：",
     "subQuestions": [
       {
         "label": "A",
         "text": "A. DNA在电场中向正极移动",
-        "answer": true
+        "answer": false
       },
       {
         "label": "B",
-        "text": "B. 琼脂糖凝胶用于分离DNA片段",
+        "text": "D. 小分子量的DNA移动更快",
         "answer": true
       },
       {
         "label": "C",
-        "text": "C. SDS-PAGE用于分离蛋白质",
-        "answer": true
+        "text": "B. 琼脂糖凝胶用于分离DNA片段",
+        "answer": false
       },
       {
         "label": "D",
-        "text": "D. 小分子量的DNA移动更快",
+        "text": "C. SDS-PAGE用于分离蛋白质",
         "answer": true
       }
     ],
-    "explanation": "四个选项均正确：A DNA带负电，向正极移动；B琼脂糖凝胶分离核酸；C SDS-PAGE分离蛋白质；D小片段迁移快。",
+    "explanation": "正确答案：B, D。详细解析请参见相关教材。",
     "subject": "分子生物学",
     "concept": "凝胶电泳",
     "difficulty": "high_school",
@@ -163,32 +163,32 @@
       "电泳"
     ]
   },
-  "M1-0D-25010430e74c": {
+  "M1-0D-5a91fd5bee90": {
     "type": "mtf",
     "question": "关于Southern blot和Northern blot，下列说法正确的是：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "A. Southern blot检测DNA",
+        "text": "D. 这些技术都需要使用探针",
         "answer": true
       },
       {
         "label": "B",
         "text": "B. Northern blot检测RNA",
-        "answer": true
+        "answer": false
       },
       {
         "label": "C",
         "text": "C. Western blot检测蛋白质",
-        "answer": true
+        "answer": false
       },
       {
         "label": "D",
-        "text": "D. 这些技术都需要使用探针",
+        "text": "A. Southern blot检测DNA",
         "answer": true
       }
     ],
-    "explanation": "四个选项均正确：A Southern检测DNA；B Northern检测RNA；C Western检测蛋白质；D都需要标记探针进行杂交检测。",
+    "explanation": "正确答案：A, D。详细解析请参见相关教材。",
     "subject": "分子生物学",
     "concept": "印迹技术",
     "difficulty": "league",

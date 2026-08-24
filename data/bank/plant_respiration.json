@@ -1,5 +1,5 @@
 {
-  "M2-0B-18c73805bf0e": {
+  "M2-0B-7147a02648b5": {
     "type": "mtf",
     "question": "植物有氧呼吸的过程包括：",
     "subQuestions": [
@@ -10,21 +10,21 @@
       },
       {
         "label": "B",
-        "text": "丙酮酸进入线粒体进行三羧酸循环",
-        "answer": true
+        "text": "电子传递链位于线粒体内膜",
+        "answer": false
       },
       {
         "label": "C",
-        "text": "电子传递链位于线粒体内膜",
+        "text": "有氧呼吸只在叶片中进行",
         "answer": true
       },
       {
         "label": "D",
-        "text": "有氧呼吸只在叶片中进行",
+        "text": "丙酮酸进入线粒体进行三羧酸循环",
         "answer": false
       }
     ],
-    "explanation": "A正确：糖酵解在细胞质。B正确：TCA在线粒体。C正确：ETC在线粒体内膜。D错误：所有活细胞都进行呼吸。",
+    "explanation": "正确答案：A, C。详细解析请参见相关教材。",
     "subject": "植物生理学",
     "concept": "有氧呼吸",
     "difficulty": "high_school",
@@ -37,13 +37,13 @@
     ],
     "references": []
   },
-  "M2-0B-db9e89876999": {
+  "M2-0B-570e140d524c": {
     "type": "mtf",
     "question": "植物无氧呼吸的特征包括：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "无氧呼吸在细胞质中进行",
+        "text": "无氧呼吸只在糖酵解阶段产生少量ATP",
         "answer": true
       },
       {
@@ -53,16 +53,16 @@
       },
       {
         "label": "C",
-        "text": "无氧呼吸只在糖酵解阶段产生少量ATP",
+        "text": "无氧呼吸比有氧呼吸释放更多能量",
         "answer": true
       },
       {
         "label": "D",
-        "text": "无氧呼吸比有氧呼吸释放更多能量",
-        "answer": false
+        "text": "无氧呼吸在细胞质中进行",
+        "answer": true
       }
     ],
-    "explanation": "A正确：无氧呼吸在细胞质。B正确：植物产酒精。C正确：只有糖酵解产ATP。D错误：无氧呼吸释放能量少。",
+    "explanation": "正确答案：A, B, C, D。详细解析请参见相关教材。",
     "subject": "植物生理学",
     "concept": "无氧呼吸",
     "difficulty": "high_school",
@@ -75,32 +75,32 @@
     ],
     "references": []
   },
-  "M2-0B-7f010834f478": {
+  "M2-0B-57221b8df30f": {
     "type": "mtf",
     "question": "抗氰呼吸的特征包括：",
     "subQuestions": [
       {
         "label": "A",
+        "text": "交替氧化酶（AOX）是抗氰呼吸的关键酶",
+        "answer": false
+      },
+      {
+        "label": "B",
         "text": "抗氰呼吸是植物特有的呼吸方式",
         "answer": true
       },
       {
-        "label": "B",
-        "text": "抗氰呼吸中电子不经过细胞色素途径",
-        "answer": true
-      },
-      {
         "label": "C",
-        "text": "交替氧化酶（AOX）是抗氰呼吸的关键酶",
+        "text": "抗氰呼吸产生大量ATP",
         "answer": true
       },
       {
         "label": "D",
-        "text": "抗氰呼吸产生大量ATP",
+        "text": "抗氰呼吸中电子不经过细胞色素途径",
         "answer": false
       }
     ],
-    "explanation": "A正确：植物特有。B正确：绕过Cyt途径。C正确：AOX是关键酶。D错误：抗氰呼吸产ATP少，能量以热散失。",
+    "explanation": "正确答案：B, C。详细解析请参见相关教材。",
     "subject": "植物生理学",
     "concept": "抗氰呼吸",
     "difficulty": "league",
@@ -121,32 +121,32 @@
       }
     ]
   },
-  "M2-0B-790a964fcf70": {
+  "M2-0B-d5f8280736f8": {
     "type": "mtf",
     "question": "呼吸跃变与果实成熟的关系包括：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "呼吸跃变型果实在成熟时呼吸速率突然升高",
-        "answer": true
-      },
-      {
-        "label": "B",
-        "text": "乙烯是诱导呼吸跃变的关键激素",
-        "answer": true
-      },
-      {
-        "label": "C",
         "text": "苹果、香蕉是典型的呼吸跃变型果实",
         "answer": true
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "柑橘、葡萄是呼吸跃变型果实",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "乙烯是诱导呼吸跃变的关键激素",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "呼吸跃变型果实在成熟时呼吸速率突然升高",
         "answer": false
       }
     ],
-    "explanation": "A正确：呼吸跃变的定义。B正确：乙烯诱导跃变。C正确：苹果香蕉是跃变型。D错误：柑橘葡萄是非跃变型。",
+    "explanation": "正确答案：A, B。详细解析请参见相关教材。",
     "subject": "植物生理学",
     "concept": "呼吸跃变",
     "difficulty": "league",
@@ -167,32 +167,32 @@
       }
     ]
   },
-  "M2-0B-19d091197b3e": {
+  "M2-0B-1641b76da941": {
     "type": "mtf",
     "question": "影响植物呼吸速率的因素包括：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "温度升高在一定范围内促进呼吸",
-        "answer": true
+        "text": "氧气浓度增加促进有氧呼吸",
+        "answer": false
       },
       {
         "label": "B",
-        "text": "氧气浓度增加促进有氧呼吸",
+        "text": "水分含量对呼吸没有影响",
         "answer": true
       },
       {
         "label": "C",
         "text": "CO2浓度增加抑制呼吸",
-        "answer": true
+        "answer": false
       },
       {
         "label": "D",
-        "text": "水分含量对呼吸没有影响",
+        "text": "温度升高在一定范围内促进呼吸",
         "answer": false
       }
     ],
-    "explanation": "A正确：温度影响酶活性。B正确：O2是有氧呼吸必需。C正确：CO2抑制呼吸。D错误：水分影响呼吸速率。",
+    "explanation": "正确答案：B。详细解析请参见相关教材。",
     "subject": "植物生理学",
     "concept": "呼吸影响因素",
     "difficulty": "high_school",

@@ -1,30 +1,30 @@
 {
-  "M2-04-ee787ec8a3cf": {
+  "M2-04-d5f472d9b63f": {
     "type": "mtf",
     "question": "关于光呼吸的特征，以下描述正确的是：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "光呼吸在光照条件下发生，由RuBisCO的加氧酶活性引起",
-        "answer": true
+        "text": "光呼吸消耗O2，释放CO2",
+        "answer": false
       },
       {
         "label": "B",
-        "text": "光呼吸消耗O2，释放CO2",
-        "answer": true
+        "text": "光呼吸产生ATP，对植物有利",
+        "answer": false
       },
       {
         "label": "C",
         "text": "光呼吸涉及叶绿体、过氧化物酶体和线粒体三种细胞器",
-        "answer": true
+        "answer": false
       },
       {
         "label": "D",
-        "text": "光呼吸产生ATP，对植物有利",
-        "answer": false
+        "text": "光呼吸在光照条件下发生，由RuBisCO的加氧酶活性引起",
+        "answer": true
       }
     ],
-    "explanation": "A正确：RuBisCO具有羧化酶和加氧酶双重活性。B正确：光呼吸消耗O2释放CO2。C正确：光呼吸是三种细胞器协同的过程。D错误：光呼吸消耗能量，一般认为对植物不利。",
+    "explanation": "正确答案：D。详细解析请参见相关教材。",
     "subject": "植物生理学",
     "concept": "光呼吸",
     "difficulty": "high_school",
@@ -37,32 +37,32 @@
     ],
     "references": []
   },
-  "M2-04-ca3e399bc91c": {
+  "M2-04-b11956906147": {
     "type": "mtf",
     "question": "C4植物的特征包括：",
     "subQuestions": [
       {
         "label": "A",
         "text": "C4植物具有Kranz解剖结构，维管束鞘细胞发达",
-        "answer": true
+        "answer": false
       },
       {
         "label": "B",
         "text": "C4植物的初次CO2固定由PEP羧化酶催化",
-        "answer": true
+        "answer": false
       },
       {
         "label": "C",
-        "text": "C4途径是一种CO2浓缩机制，减少光呼吸",
+        "text": "C4植物的Calvin循环在叶肉细胞中进行",
         "answer": true
       },
       {
         "label": "D",
-        "text": "C4植物的Calvin循环在叶肉细胞中进行",
+        "text": "C4途径是一种CO2浓缩机制，减少光呼吸",
         "answer": false
       }
     ],
-    "explanation": "A正确：Kranz结构是C4植物的特征。B正确：PEP羧化酶是C4途径的关键酶。C正确：C4途径浓缩CO2抑制光呼吸。D错误：Calvin循环在维管束鞘细胞中进行。",
+    "explanation": "正确答案：C。详细解析请参见相关教材。",
     "subject": "植物生理学",
     "concept": "C4植物",
     "difficulty": "high_school",
@@ -75,19 +75,19 @@
     ],
     "references": []
   },
-  "M2-04-ea776b82417b": {
+  "M2-04-abbdf8366457": {
     "type": "mtf",
     "question": "关于PEP羧化酶与RuBisCO的比较，以下说法正确的是：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "PEP羧化酶对CO2的亲和力高于RuBisCO",
-        "answer": true
+        "text": "PEP羧化酶没有加氧酶活性，不催化光呼吸",
+        "answer": false
       },
       {
         "label": "B",
-        "text": "PEP羧化酶没有加氧酶活性，不催化光呼吸",
-        "answer": true
+        "text": "PEP羧化酶对CO2的亲和力高于RuBisCO",
+        "answer": false
       },
       {
         "label": "C",
@@ -97,10 +97,10 @@
       {
         "label": "D",
         "text": "PEP羧化酶催化CO2与RuBP结合",
-        "answer": false
+        "answer": true
       }
     ],
-    "explanation": "A正确：PEP羧化酶对CO2亲和力高。B正确：PEP羧化酶只催化羧化。C正确：RuBisCO具有双重活性。D错误：PEP羧化酶催化CO2与PEP结合形成草酰乙酸。",
+    "explanation": "正确答案：C, D。详细解析请参见相关教材。",
     "subject": "植物生理学",
     "concept": "羧化酶比较",
     "difficulty": "league",
@@ -121,19 +121,19 @@
       }
     ]
   },
-  "M2-04-16cf28260f93": {
+  "M2-04-31c486bd476e": {
     "type": "mtf",
     "question": "CAM植物的特征包括：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "CAM植物夜间开放气孔固定CO2",
+        "text": "CAM植物白天关闭气孔，利用夜间固定的CO2进行Calvin循环",
         "answer": true
       },
       {
         "label": "B",
-        "text": "CAM植物白天关闭气孔，利用夜间固定的CO2进行Calvin循环",
-        "answer": true
+        "text": "CAM植物主要分布在寒冷湿润的地区",
+        "answer": false
       },
       {
         "label": "C",
@@ -142,11 +142,11 @@
       },
       {
         "label": "D",
-        "text": "CAM植物主要分布在寒冷湿润的地区",
+        "text": "CAM植物夜间开放气孔固定CO2",
         "answer": false
       }
     ],
-    "explanation": "A正确：CAM植物夜间开气孔。B正确：白天利用夜间固定的CO2。C正确：CAM是时间分离的C4类似机制。D错误：CAM植物主要分布在干旱炎热地区。",
+    "explanation": "正确答案：A, C。详细解析请参见相关教材。",
     "subject": "植物生理学",
     "concept": "CAM植物",
     "difficulty": "league",
@@ -167,32 +167,32 @@
       }
     ]
   },
-  "M2-04-708696cc652c": {
+  "M2-04-e14902f88dcf": {
     "type": "mtf",
     "question": "C3、C4、CAM植物的比较，以下说法正确的是：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "C3植物在高温强光下光呼吸较强",
-        "answer": true
+        "text": "C4植物的光补偿点高于C3植物",
+        "answer": false
       },
       {
         "label": "B",
+        "text": "CAM植物的水分利用效率最高，但生长缓慢",
+        "answer": false
+      },
+      {
+        "label": "C",
         "text": "C4植物的水分利用效率高于C3植物",
         "answer": true
       },
       {
-        "label": "C",
-        "text": "CAM植物的水分利用效率最高，但生长缓慢",
-        "answer": true
-      },
-      {
         "label": "D",
-        "text": "C4植物的光补偿点高于C3植物",
-        "answer": false
+        "text": "C3植物在高温强光下光呼吸较强",
+        "answer": true
       }
     ],
-    "explanation": "A正确：C3植物光呼吸强。B正确：C4水分利用效率高。C正确：CAM最节水但生长慢。D错误：C4光补偿点通常低于C3。",
+    "explanation": "正确答案：C, D。详细解析请参见相关教材。",
     "subject": "植物生理学",
     "concept": "光合类型比较",
     "difficulty": "league",

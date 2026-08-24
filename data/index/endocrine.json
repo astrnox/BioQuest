@@ -12,44 +12,38 @@
     "year": 2010,
     "module": "module_3"
   },
-  "M3-03-ec818857943a": {
+  "M3-03-d629fa35eecb": {
     "tags": [
       "endocrine",
       "module_3",
       "动物生理学",
       "激素分类"
     ],
-    "diff": "high_school",
-    "len": 136,
-    "src": "endocrine",
-    "year": null,
-    "module": "module_3"
+    "difficulty": "high_school",
+    "module": "module1",
+    "tag": "endocrine"
   },
-  "M3-03-e33f4409fec8": {
+  "M3-03-35e2b3d4f2f1": {
     "tags": [
       "endocrine",
       "module_3",
       "动物生理学",
       "血糖调节"
     ],
-    "diff": "league",
-    "len": 139,
-    "src": "endocrine",
-    "year": 2001,
-    "module": "module_3"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "endocrine"
   },
-  "M3-03-4cdc652fb5c7": {
+  "M3-03-7e598b657aae": {
     "tags": [
       "endocrine",
       "module_3",
       "动物生理学",
       "肾上腺"
     ],
-    "diff": "high_school",
-    "len": 153,
-    "src": "endocrine",
-    "year": null,
-    "module": "module_3"
+    "difficulty": "high_school",
+    "module": "module1",
+    "tag": "endocrine"
   },
   "M3-03-28df2074b226": {
     "tags": [

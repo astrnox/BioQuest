@@ -1,67 +1,57 @@
 {
-  "M3-09-c38f6628d214": {
+  "M3-09-1d08a629082b": {
     "tags": [
       "digestive_sys",
       "module_3",
       "动物生理学",
       "消化道结构"
     ],
-    "diff": "league",
-    "len": 146,
-    "src": "digestive_sys",
-    "year": 2012,
-    "module": "module_3"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "digestive_sys"
   },
-  "M3-09-1b19a3676cd0": {
+  "M3-09-4bca39dbdc3f": {
     "tags": [
       "digestive_sys",
       "module_3",
       "动物生理学",
       "胃消化"
     ],
-    "diff": "high_school",
-    "len": 165,
-    "src": "digestive_sys",
-    "year": null,
-    "module": "module_3"
+    "difficulty": "high_school",
+    "module": "module1",
+    "tag": "digestive_sys"
   },
-  "M3-09-1122c60cdf12": {
+  "M3-09-fe214bba0b2f": {
     "tags": [
       "digestive_sys",
       "module_3",
       "动物生理学",
       "小肠消化"
     ],
-    "diff": "high_school",
-    "len": 153,
-    "src": "digestive_sys",
-    "year": null,
-    "module": "module_3"
+    "difficulty": "high_school",
+    "module": "module1",
+    "tag": "digestive_sys"
   },
-  "M3-09-2668998a1fcb": {
+  "M3-09-c14e0ccdcafe": {
     "tags": [
       "digestive_sys",
       "module_3",
       "动物生理学",
       "肝脏功能"
     ],
-    "diff": "league",
-    "len": 115,
-    "src": "digestive_sys",
-    "year": 2010,
-    "module": "module_3"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "digestive_sys"
   },
-  "M3-09-551a4a93b8d4": {
+  "M3-09-7479487cd066": {
     "tags": [
       "digestive_sys",
       "module_3",
       "动物生理学",
       "胃肠激素"
     ],
-    "diff": "league",
-    "len": 160,
-    "src": "digestive_sys",
-    "year": 2001,
-    "module": "module_3"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "digestive_sys"
   }
 }

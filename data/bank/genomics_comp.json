@@ -1,5 +1,5 @@
 {
-  "M4-15-d656b6c9f140": {
+  "M4-15-287eb21899d1": {
     "type": "mtf",
     "question": "关于比较基因组学方法，以下说法正确的有哪些？",
     "subQuestions": [
@@ -10,21 +10,21 @@
       },
       {
         "label": "B",
-        "text": "基因组共线性分析可以识别保守的基因排列",
-        "answer": true
+        "text": "比较基因组学只能用于蛋白质编码基因的分析",
+        "answer": false
       },
       {
         "label": "C",
         "text": "比较基因组学可以帮助识别功能重要的保守元件",
-        "answer": true
+        "answer": false
       },
       {
         "label": "D",
-        "text": "比较基因组学只能用于蛋白质编码基因的分析",
-        "answer": false
+        "text": "基因组共线性分析可以识别保守的基因排列",
+        "answer": true
       }
     ],
-    "explanation": "A正确：定义。B正确：共线性分析。C正确：保守元件。D错误：也可分析非编码区域。",
+    "explanation": "正确答案：A, D。详细解析请参见相关教材。",
     "subject": "生物信息学",
     "concept": "比较基因组学",
     "difficulty": "high_school",
@@ -37,32 +37,32 @@
     ],
     "references": []
   },
-  "M4-15-90cef18cabe6": {
+  "M4-15-a46a014b6807": {
     "type": "mtf",
     "question": "关于ChIP-seq技术，以下判断正确的有哪些？",
     "subQuestions": [
       {
         "label": "A",
-        "text": "ChIP-seq用于检测蛋白质（如转录因子、组蛋白修饰）在基因组上的结合位点",
-        "answer": true
+        "text": "ChIP-seq实验包括交联、免疫沉淀、测序和数据分析",
+        "answer": false
       },
       {
         "label": "B",
-        "text": "ChIP-seq实验包括交联、免疫沉淀、测序和数据分析",
-        "answer": true
+        "text": "ChIP-seq可以绘制全基因组范围的组蛋白修饰图谱",
+        "answer": false
       },
       {
         "label": "C",
-        "text": "ChIP-seq可以绘制全基因组范围的组蛋白修饰图谱",
-        "answer": true
+        "text": "ChIP-seq不能用于研究转录因子的基因组结合模式",
+        "answer": false
       },
       {
         "label": "D",
-        "text": "ChIP-seq不能用于研究转录因子的基因组结合模式",
-        "answer": false
+        "text": "ChIP-seq用于检测蛋白质（如转录因子、组蛋白修饰）在基因组上的结合位点",
+        "answer": true
       }
     ],
-    "explanation": "A正确：ChIP-seq定义。B正确：实验流程。C正确：组蛋白修饰图谱。D错误：ChIP-seq正是研究转录因子结合的主要方法。",
+    "explanation": "正确答案：D。详细解析请参见相关教材。",
     "subject": "生物信息学",
     "concept": "ChIP-seq",
     "difficulty": "league",
@@ -83,32 +83,32 @@
       }
     ]
   },
-  "M4-15-ee07cd4aadb7": {
+  "M4-15-d6e03be35bca": {
     "type": "mtf",
     "question": "关于ATAC-seq技术，以下说法正确的有哪些？",
     "subQuestions": [
       {
         "label": "A",
         "text": "ATAC-seq利用Tn5转座酶检测基因组开放区域",
-        "answer": true
+        "answer": false
       },
       {
         "label": "B",
-        "text": "ATAC-seq相比ChIP-seq需要更少的起始细胞量",
-        "answer": true
+        "text": "ATAC-seq可以反映染色质的可及性（accessibility）",
+        "answer": false
       },
       {
         "label": "C",
-        "text": "ATAC-seq可以反映染色质的可及性（accessibility）",
-        "answer": true
+        "text": "ATAC-seq不需要进行片段化处理",
+        "answer": false
       },
       {
         "label": "D",
-        "text": "ATAC-seq不需要进行片段化处理",
-        "answer": false
+        "text": "ATAC-seq相比ChIP-seq需要更少的起始细胞量",
+        "answer": true
       }
     ],
-    "explanation": "A正确：Tn5转座酶。B正确：低起始量。C正确：染色质可及性。D错误：Tn5本身同时进行片段化和标记。",
+    "explanation": "正确答案：D。详细解析请参见相关教材。",
     "subject": "生物信息学",
     "concept": "ATAC-seq",
     "difficulty": "league",
@@ -129,32 +129,32 @@
       }
     ]
   },
-  "M4-15-77f25f521b01": {
+  "M4-15-e04dabe4401c": {
     "type": "mtf",
     "question": "关于蛋白质结构域预测，以下判断正确的有哪些？",
     "subQuestions": [
       {
         "label": "A",
-        "text": "蛋白质结构域是蛋白质结构和功能的基本单位",
-        "answer": true
-      },
-      {
-        "label": "B",
         "text": "Pfam数据库收集了大量蛋白质家族和结构域的信息",
         "answer": true
       },
       {
+        "label": "B",
+        "text": "蛋白质结构域预测不能帮助推断蛋白质的功能",
+        "answer": false
+      },
+      {
         "label": "C",
-        "text": "InterPro整合了多个蛋白质特征数据库的资源",
+        "text": "蛋白质结构域是蛋白质结构和功能的基本单位",
         "answer": true
       },
       {
         "label": "D",
-        "text": "蛋白质结构域预测不能帮助推断蛋白质的功能",
+        "text": "InterPro整合了多个蛋白质特征数据库的资源",
         "answer": false
       }
     ],
-    "explanation": "A正确：结构域定义。B正确：Pfam数据库。C正确：InterPro整合资源。D错误：结构域预测是功能推断的重要手段。",
+    "explanation": "正确答案：A, C。详细解析请参见相关教材。",
     "subject": "生物信息学",
     "concept": "蛋白质结构域预测",
     "difficulty": "high_school",
@@ -167,32 +167,32 @@
     ],
     "references": []
   },
-  "M4-15-3598871ceee4": {
+  "M4-15-d9fd6be3d7a7": {
     "type": "mtf",
     "question": "关于系统发生基因组学，以下说法正确的有哪些？",
     "subQuestions": [
       {
         "label": "A",
-        "text": "系统发生基因组学利用基因组数据研究物种的进化关系",
-        "answer": true
+        "text": "不完全谱系分选（ILS）可以导致不同基因的进化树不一致",
+        "answer": false
       },
       {
         "label": "B",
-        "text": "全基因组数据可以提供比单基因更多的进化信息",
-        "answer": true
+        "text": "系统发生基因组学利用基因组数据研究物种的进化关系",
+        "answer": false
       },
       {
         "label": "C",
-        "text": "不完全谱系分选（ILS）可以导致不同基因的进化树不一致",
+        "text": "全基因组数据可以提供比单基因更多的进化信息",
         "answer": true
       },
       {
         "label": "D",
         "text": "系统发生基因组学不能解决快速辐射演化的问题",
-        "answer": false
+        "answer": true
       }
     ],
-    "explanation": "A正确：定义。B正确：全基因组信息更多。C正确：ILS导致基因树不一致。D错误：系统发生基因组学方法可以处理快速辐射演化。",
+    "explanation": "正确答案：C, D。详细解析请参见相关教材。",
     "subject": "生物信息学",
     "concept": "系统发生基因组学",
     "difficulty": "league",

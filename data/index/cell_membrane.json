@@ -12,31 +12,27 @@
     "year": null,
     "module": "module_1"
   },
-  "M1-02-b8d36fe83f77": {
+  "M1-02-08f757bb8570": {
     "tags": [
       "cell_membrane",
       "module_1",
       "细胞生物学",
       "跨膜运输"
     ],
-    "diff": "high_school",
-    "len": 87,
-    "src": "cell_membrane",
-    "year": null,
-    "module": "module_1"
+    "difficulty": "high_school",
+    "module": "module1",
+    "tag": "cell_membrane"
   },
-  "M1-02-87db551fa763": {
+  "M1-02-779760fec9be": {
     "tags": [
       "cell_membrane",
       "module_1",
       "细胞生物学",
       "离子泵"
     ],
-    "diff": "league",
-    "len": 114,
-    "src": "cell_membrane",
-    "year": null,
-    "module": "module_1"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "cell_membrane"
   },
   "M1-02-929240a668d2": {
     "tags": [
@@ -51,17 +47,15 @@
     "year": null,
     "module": "module_1"
   },
-  "M1-02-5e0f6fd7a942": {
+  "M1-02-43605ab1ed5e": {
     "tags": [
       "cell_membrane",
       "module_1",
       "细胞生物学",
       "膜结构"
     ],
-    "diff": "league",
-    "len": 90,
-    "src": "cell_membrane",
-    "year": null,
-    "module": "module_1"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "cell_membrane"
   }
 }

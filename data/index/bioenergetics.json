@@ -1,67 +1,57 @@
 {
-  "M1-10-3033cc80b066": {
+  "M1-10-42dcac4dadd9": {
     "tags": [
       "bioenergetics",
       "module_1",
       "生物化学",
       "ATP"
     ],
-    "diff": "high_school",
-    "len": 79,
-    "src": "bioenergetics",
-    "year": null,
-    "module": "module_1"
+    "difficulty": "high_school",
+    "module": "module1",
+    "tag": "bioenergetics"
   },
-  "M1-10-3811a4bbb61b": {
+  "M1-10-0876e66c4dfe": {
     "tags": [
       "bioenergetics",
       "module_1",
       "生物化学",
       "高能键"
     ],
-    "diff": "league",
-    "len": 95,
-    "src": "bioenergetics",
-    "year": null,
-    "module": "module_1"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "bioenergetics"
   },
-  "M1-10-f0a9b9280e0e": {
+  "M1-10-2e94ba4ffcc6": {
     "tags": [
       "bioenergetics",
       "module_1",
       "生物化学",
       "能量偶联"
     ],
-    "diff": "league",
-    "len": 79,
-    "src": "bioenergetics",
-    "year": null,
-    "module": "module_1"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "bioenergetics"
   },
-  "M1-10-20bb9da70e37": {
+  "M1-10-21230ca870b3": {
     "tags": [
       "bioenergetics",
       "module_1",
       "生物化学",
       "磷酸化"
     ],
-    "diff": "league",
-    "len": 90,
-    "src": "bioenergetics",
-    "year": null,
-    "module": "module_1"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "bioenergetics"
   },
-  "M1-10-814fc339a5c0": {
+  "M1-10-238544c7dfbf": {
     "tags": [
       "bioenergetics",
       "module_1",
       "生物化学",
       "热力学"
     ],
-    "diff": "league",
-    "len": 85,
-    "src": "bioenergetics",
-    "year": null,
-    "module": "module_1"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "bioenergetics"
   }
 }

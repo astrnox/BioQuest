@@ -1,30 +1,30 @@
 {
-  "M1-06-7b537d15d596": {
+  "M1-06-7ee722083464": {
     "type": "mtf",
     "question": "关于G蛋白偶联受体（GPCR），下列说法正确的是：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "A. GPCR是七次跨膜蛋白",
+        "text": "D. GPCR信号转导不需要第二信使",
         "answer": true
       },
       {
         "label": "B",
-        "text": "B. GPCR激活后可以激活或抑制腺苷酸环化酶",
-        "answer": true
-      },
-      {
-        "label": "C",
         "text": "C. G蛋白由α、β、γ三个亚基组成",
         "answer": true
       },
       {
+        "label": "C",
+        "text": "A. GPCR是七次跨膜蛋白",
+        "answer": false
+      },
+      {
         "label": "D",
-        "text": "D. GPCR信号转导不需要第二信使",
+        "text": "B. GPCR激活后可以激活或抑制腺苷酸环化酶",
         "answer": false
       }
     ],
-    "explanation": "A正确：GPCR有7个跨膜α螺旋；B正确：Gs激活AC，Gi抑制AC；C正确：异三聚体G蛋白由αβγ组成；D错误：GPCR通过cAMP等第二信使转导信号。",
+    "explanation": "正确答案：A, B。详细解析请参见相关教材。",
     "subject": "细胞生物学",
     "concept": "GPCR",
     "difficulty": "league",
@@ -52,32 +52,32 @@
       }
     ]
   },
-  "M1-06-6e8d72d4580a": {
+  "M1-06-fe49617c892a": {
     "type": "mtf",
     "question": "关于第二信使cAMP，下列说法正确的是：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "A. cAMP由腺苷酸环化酶催化ATP生成",
-        "answer": true
-      },
-      {
-        "label": "B",
         "text": "B. cAMP可以激活蛋白激酶A（PKA）",
         "answer": true
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "C. 磷酸二酯酶可以降解cAMP",
-        "answer": true
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "D. cAMP直接磷酸化靶蛋白",
+        "answer": false
       },
       {
         "label": "D",
-        "text": "D. cAMP直接磷酸化靶蛋白",
-        "answer": false
+        "text": "A. cAMP由腺苷酸环化酶催化ATP生成",
+        "answer": true
       }
     ],
-    "explanation": "A正确：AC催化ATP→cAMP；B正确：cAMP结合PKA调节亚基，释放催化亚基；C正确：PDE降解cAMP为5'-AMP；D错误：cAMP通过PKA间接磷酸化靶蛋白。",
+    "explanation": "正确答案：A, D。详细解析请参见相关教材。",
     "subject": "细胞生物学",
     "concept": "cAMP",
     "difficulty": "league",
@@ -105,32 +105,32 @@
       }
     ]
   },
-  "M1-06-79605143ae5e": {
+  "M1-06-12d49db92679": {
     "type": "mtf",
     "question": "关于钙信号系统，下列说法正确的是：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "A. 细胞内Ca²⁺浓度远低于细胞外",
-        "answer": true
+        "text": "B. IP₃可以打开内质网上的钙通道",
+        "answer": false
       },
       {
         "label": "B",
-        "text": "B. IP₃可以打开内质网上的钙通道",
+        "text": "C. 钙调蛋白（CaM）是重要的钙结合蛋白",
         "answer": true
       },
       {
         "label": "C",
-        "text": "C. 钙调蛋白（CaM）是重要的钙结合蛋白",
+        "text": "A. 细胞内Ca²⁺浓度远低于细胞外",
         "answer": true
       },
       {
         "label": "D",
         "text": "D. Ca²⁺信号只通过细胞内钙库释放产生",
-        "answer": false
+        "answer": true
       }
     ],
-    "explanation": "A正确：细胞内Ca²⁺浓度约100nM，细胞外约1mM；B正确：IP₃与内质网IP₃受体结合释放Ca²⁺；C正确：CaM结合Ca²⁺后激活下游靶标；D错误：Ca²⁺也可通过细胞外内流进入细胞。",
+    "explanation": "正确答案：B, C, D。详细解析请参见相关教材。",
     "subject": "细胞生物学",
     "concept": "钙信号",
     "difficulty": "league",
@@ -158,32 +158,32 @@
       }
     ]
   },
-  "M1-06-090aec588f00": {
+  "M1-06-aa16ad0068d3": {
     "type": "mtf",
     "question": "关于MAPK信号级联，下列说法正确的是：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "A. MAPK级联包括MAPKKK→MAPKK→MAPK三级磷酸化",
-        "answer": true
-      },
-      {
-        "label": "B",
-        "text": "B. MAPK可以磷酸化转录因子调节基因表达",
-        "answer": true
-      },
-      {
-        "label": "C",
         "text": "C. Ras是MAPK级联上游的小G蛋白",
         "answer": true
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "D. MAPK级联只参与细胞增殖调控",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "A. MAPK级联包括MAPKKK→MAPKK→MAPK三级磷酸化",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "B. MAPK可以磷酸化转录因子调节基因表达",
         "answer": false
       }
     ],
-    "explanation": "A正确：三级激酶级联放大信号；B正确：MAPK入核磷酸化转录因子；C正确：Ras激活Raf（MAPKKK）；D错误：MAPK还参与分化、凋亡等多种过程。",
+    "explanation": "正确答案：A, C。详细解析请参见相关教材。",
     "subject": "细胞生物学",
     "concept": "MAPK级联",
     "difficulty": "league",
@@ -211,32 +211,32 @@
       }
     ]
   },
-  "M1-06-5a82f84fb604": {
+  "M1-06-a5f4568c66db": {
     "type": "mtf",
     "question": "关于受体酪氨酸激酶（RTK），下列说法正确的是：",
     "subQuestions": [
       {
         "label": "A",
+        "text": "D. RTK信号转导不涉及Ras蛋白",
+        "answer": false
+      },
+      {
+        "label": "B",
         "text": "A. RTK结合配体后发生二聚化",
         "answer": true
       },
       {
-        "label": "B",
+        "label": "C",
         "text": "B. RTK二聚体发生自磷酸化",
         "answer": true
       },
       {
-        "label": "C",
-        "text": "C. 磷酸化的酪氨酸可以招募含有SH2结构域的蛋白",
-        "answer": true
-      },
-      {
         "label": "D",
-        "text": "D. RTK信号转导不涉及Ras蛋白",
+        "text": "C. 磷酸化的酪氨酸可以招募含有SH2结构域的蛋白",
         "answer": false
       }
     ],
-    "explanation": "A正确：配体诱导RTK二聚化；B正确：二聚体胞内段相互磷酸化；C正确：SH2结构域识别磷酸酪氨酸；D错误：RTK通过Grb2-SOS激活Ras。",
+    "explanation": "正确答案：B, C。详细解析请参见相关教材。",
     "subject": "细胞生物学",
     "concept": "RTK",
     "difficulty": "league",

@@ -75,32 +75,32 @@
     ],
     "references": []
   },
-  "M2-02-4802d03ef9fb": {
+  "M2-02-dc286e4c4a3d": {
     "type": "mtf",
     "question": "关于植物矿质元素吸收的机制，以下描述正确的是：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "离子通过离子通道蛋白进行被动运输",
+        "text": "H+-ATPase建立的质子梯度驱动次级主动运输",
         "answer": true
       },
       {
         "label": "B",
         "text": "载体蛋白可以介导离子的主动运输和协助扩散",
-        "answer": true
+        "answer": false
       },
       {
         "label": "C",
-        "text": "H+-ATPase建立的质子梯度驱动次级主动运输",
+        "text": "所有矿质元素的吸收都需要消耗ATP",
         "answer": true
       },
       {
         "label": "D",
-        "text": "所有矿质元素的吸收都需要消耗ATP",
-        "answer": false
+        "text": "离子通过离子通道蛋白进行被动运输",
+        "answer": true
       }
     ],
-    "explanation": "A正确：离子通道允许离子顺电化学梯度被动运输。B正确：载体蛋白可介导多种运输方式。C正确：质子泵建立的电化学梯度驱动共运输。D错误：部分离子可通过被动运输吸收。",
+    "explanation": "正确答案：A, C, D。详细解析请参见相关教材。",
     "subject": "植物生理学",
     "concept": "矿质吸收",
     "difficulty": "league",

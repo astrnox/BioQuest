@@ -83,32 +83,32 @@
       }
     ]
   },
-  "M4-07-f824f036d2ce": {
+  "M4-07-b5fc81189362": {
     "type": "mtf",
     "question": "关于QTL定位，以下说法正确的有哪些？",
     "subQuestions": [
       {
         "label": "A",
-        "text": "QTL（Quantitative Trait Locus）是影响数量性状的基因在染色体上的位置",
-        "answer": true
+        "text": "QTL定位可以直接确定控制数量性状的具体基因",
+        "answer": false
       },
       {
         "label": "B",
-        "text": "QTL定位通常利用分子标记与性状的连锁分析",
-        "answer": true
-      },
-      {
-        "label": "C",
         "text": "QTL定位的精度主要取决于标记密度和群体大小",
         "answer": true
       },
       {
+        "label": "C",
+        "text": "QTL定位通常利用分子标记与性状的连锁分析",
+        "answer": true
+      },
+      {
         "label": "D",
-        "text": "QTL定位可以直接确定控制数量性状的具体基因",
+        "text": "QTL（Quantitative Trait Locus）是影响数量性状的基因在染色体上的位置",
         "answer": false
       }
     ],
-    "explanation": "A正确：QTL是影响数量性状的基因座。B正确：利用标记-性状连锁。C正确：标记越密、群体越大，定位越精确。D错误：QTL定位给出的是区间，需进一步精细定位和候选基因验证。",
+    "explanation": "正确答案：B, C。详细解析请参见相关教材。",
     "subject": "遗传学",
     "concept": "QTL定位",
     "difficulty": "league",
@@ -175,23 +175,23 @@
       }
     ]
   },
-  "M4-07-2235efd7877b": {
+  "M4-07-c28b307d74bc": {
     "type": "mtf",
     "question": "关于分子标记在遗传学中的应用，以下说法正确的有哪些？",
     "subQuestions": [
       {
         "label": "A",
-        "text": "RFLP（限制性片段长度多态性）是最早发展的分子标记之一",
-        "answer": true
+        "text": "SNP是基因组中数量最多的分子标记类型",
+        "answer": false
       },
       {
         "label": "B",
         "text": "SSR（简单序列重复）标记具有高度多态性和共显性特征",
-        "answer": true
+        "answer": false
       },
       {
         "label": "C",
-        "text": "SNP是基因组中数量最多的分子标记类型",
+        "text": "RFLP（限制性片段长度多态性）是最早发展的分子标记之一",
         "answer": true
       },
       {
@@ -200,7 +200,7 @@
         "answer": true
       }
     ],
-    "explanation": "A正确：RFLP是最早的分子标记。B正确：SSR高度多态且共显性。C正确：SNP数量最多。D正确：MAS利用标记选择目标基因型，缩短育种周期。",
+    "explanation": "正确答案：C, D。详细解析请参见相关教材。",
     "subject": "遗传学",
     "concept": "分子标记",
     "difficulty": "high_school",

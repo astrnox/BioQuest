@@ -1,55 +1,47 @@
 {
-  "M1-15-7ae58b21952a": {
+  "M1-15-522cc6850b5b": {
     "tags": [
       "amino_acid_metab",
       "module_1",
       "生物化学",
       "转氨基"
     ],
-    "diff": "league",
-    "len": 96,
-    "src": "amino_acid_metab",
-    "year": null,
-    "module": "module_1"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "amino_acid_metab"
   },
-  "M1-15-7a4b8936ef01": {
+  "M1-15-59680c40b69f": {
     "tags": [
       "amino_acid_metab",
       "module_1",
       "生物化学",
       "尿素循环"
     ],
-    "diff": "league",
-    "len": 87,
-    "src": "amino_acid_metab",
-    "year": null,
-    "module": "module_1"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "amino_acid_metab"
   },
-  "M1-15-e155b23e8701": {
+  "M1-15-c6e5278cfa15": {
     "tags": [
       "amino_acid_metab",
       "module_1",
       "生物化学",
       "一碳单位"
     ],
-    "diff": "league",
-    "len": 83,
-    "src": "amino_acid_metab",
-    "year": null,
-    "module": "module_1"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "amino_acid_metab"
   },
-  "M1-15-bbb5dd89a56b": {
+  "M1-15-fe1c470576bf": {
     "tags": [
       "amino_acid_metab",
       "module_1",
       "生物化学",
       "蛋白质降解"
     ],
-    "diff": "league",
-    "len": 87,
-    "src": "amino_acid_metab",
-    "year": null,
-    "module": "module_1"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "amino_acid_metab"
   },
   "M1-15-dbc45048a33b": {
     "tags": [

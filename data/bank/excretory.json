@@ -1,5 +1,5 @@
 {
-  "M3-06-1afe97c6f5b2": {
+  "M3-06-ab3908f22ef9": {
     "type": "mtf",
     "question": "关于肾单位的结构与尿液形成过程，下列说法正确的有：",
     "subQuestions": [
@@ -10,8 +10,8 @@
       },
       {
         "label": "B",
-        "text": "近端小管是重吸收的主要部位，可重吸收几乎全部的葡萄糖和氨基酸",
-        "answer": true
+        "text": "远曲小管和集合管对水的通透性始终不受激素调控，保持恒定",
+        "answer": false
       },
       {
         "label": "C",
@@ -20,11 +20,11 @@
       },
       {
         "label": "D",
-        "text": "远曲小管和集合管对水的通透性始终不受激素调控，保持恒定",
-        "answer": false
+        "text": "近端小管是重吸收的主要部位，可重吸收几乎全部的葡萄糖和氨基酸",
+        "answer": true
       }
     ],
-    "explanation": "A正确：滤过膜三层结构起分子和电荷选择性屏障作用。B正确：近端小管重吸收约65%的Na⁺和水，几乎100%的葡萄糖和氨基酸。C正确：降支高表达AQP1对水通透，升支对水不通透但NaCl可扩散出。D错误：远曲小管后段和集合管对水的通透性受ADH调控。",
+    "explanation": "正确答案：A, C, D。详细解析请参见相关教材。",
     "subject": "动物生理学",
     "concept": "肾单位与尿液形成",
     "difficulty": "league",
@@ -45,24 +45,24 @@
       }
     ]
   },
-  "M3-06-d85351b4a739": {
+  "M3-06-ab41eca30f4c": {
     "type": "mtf",
     "question": "关于含氮废物的排泄方式与适应，下列说法正确的有：",
     "subQuestions": [
       {
         "label": "A",
+        "text": "尿酸几乎不溶于水，鸟类和爬行类以排泄尿酸为主，有利于减少水分散失",
+        "answer": false
+      },
+      {
+        "label": "B",
         "text": "氨毒性最强但排泄不需要能量，水生动物可直接通过鳃排出氨",
         "answer": true
       },
       {
-        "label": "B",
-        "text": "尿素毒性较低，哺乳动物主要通过肝脏尿素循环将氨转化为尿素排泄",
-        "answer": true
-      },
-      {
         "label": "C",
-        "text": "尿酸几乎不溶于水，鸟类和爬行类以排泄尿酸为主，有利于减少水分散失",
-        "answer": true
+        "text": "尿素毒性较低，哺乳动物主要通过肝脏尿素循环将氨转化为尿素排泄",
+        "answer": false
       },
       {
         "label": "D",
@@ -70,7 +70,7 @@
         "answer": false
       }
     ],
-    "explanation": "A正确：氨排泄型（ammonotelic）见于水生动物。B正确：尿素排泄型（ureotelic）见于哺乳动物。C正确：尿酸排泄型（uricotelic）见于鸟类爬行类，减少水分散失。D错误：尿素循环每合成1分子尿素消耗3分子ATP（4个高能磷酸键）。",
+    "explanation": "正确答案：B。详细解析请参见相关教材。",
     "subject": "动物生理学",
     "concept": "含氮废物排泄",
     "difficulty": "high_school",
@@ -83,7 +83,7 @@
     ],
     "references": []
   },
-  "M3-06-7bbda19bed1c": {
+  "M3-06-8311a94e01d1": {
     "type": "mtf",
     "question": "关于ADH对尿液浓缩的调控，下列说法正确的有：",
     "subQuestions": [
@@ -94,12 +94,12 @@
       },
       {
         "label": "B",
-        "text": "ADH与集合管主细胞V₂受体结合，通过cAMP-PKA通路使AQP2插入管腔膜",
-        "answer": true
+        "text": "ADH还能增加髓质集合管对尿素的通透性，有助于维持髓质高渗梯度",
+        "answer": false
       },
       {
         "label": "C",
-        "text": "ADH还能增加髓质集合管对尿素的通透性，有助于维持髓质高渗梯度",
+        "text": "ADH与集合管主细胞V₂受体结合，通过cAMP-PKA通路使AQP2插入管腔膜",
         "answer": true
       },
       {
@@ -108,7 +108,7 @@
         "answer": false
       }
     ],
-    "explanation": "A正确：渗透压升高→渗透压感受器→ADH释放↑。B正确：ADH→V₂→cAMP→PKA→AQP2转位。C正确：ADH上调UT-A1增加尿素重吸收维持髓质高渗。D错误：酒精抑制（而非促进）ADH释放，导致多尿。",
+    "explanation": "正确答案：A, C。详细解析请参见相关教材。",
     "subject": "动物生理学",
     "concept": "ADH与尿液浓缩",
     "difficulty": "league",
@@ -129,32 +129,32 @@
       }
     ]
   },
-  "M3-06-e78b347722d3": {
+  "M3-06-54883c989796": {
     "type": "mtf",
     "question": "关于醛固酮对Na⁺/K⁺平衡的调节，下列说法正确的有：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "醛固酮由肾上腺皮质球状带分泌，主要受RAAS系统和血K⁺浓度调控",
-        "answer": true
-      },
-      {
-        "label": "B",
         "text": "醛固酮促进肾远曲小管和集合管ENaC表达和Na⁺重吸收",
         "answer": true
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "醛固酮促进Na⁺重吸收的同时也促进K⁺的排泄，即保Na⁺排K⁺",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "醛固酮的分泌主要受腺垂体ACTH的日常调控，与肾素无关",
         "answer": true
       },
       {
         "label": "D",
-        "text": "醛固酮的分泌主要受腺垂体ACTH的日常调控，与肾素无关",
-        "answer": false
+        "text": "醛固酮由肾上腺皮质球状带分泌，主要受RAAS系统和血K⁺浓度调控",
+        "answer": true
       }
     ],
-    "explanation": "A正确：醛固酮受RAAS和血K⁺双重调控。B正确：醛固酮上调ENaC增加Na⁺重吸收。C正确：保Na⁺同时通过ROMK排K⁺。D错误：醛固酮主要受RAAS调控，ACTH仅有很弱的急性刺激作用。",
+    "explanation": "正确答案：A, C, D。详细解析请参见相关教材。",
     "subject": "动物生理学",
     "concept": "醛固酮与水盐平衡",
     "difficulty": "high_school",
@@ -167,13 +167,13 @@
     ],
     "references": []
   },
-  "M3-06-9805b1482370": {
+  "M3-06-b3519374c480": {
     "type": "mtf",
     "question": "关于不同动物类群的排泄器官与适应，下列说法正确的有：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "原肾管见于扁形动物等无体腔动物，由焰细胞和排泄管组成",
+        "text": "淡水硬骨鱼由于体液渗透压低于环境水，需要大量饮水并主动排出盐分",
         "answer": true
       },
       {
@@ -184,15 +184,15 @@
       {
         "label": "C",
         "text": "马氏管是昆虫的排泄器官，开口于中后肠交界处",
-        "answer": true
+        "answer": false
       },
       {
         "label": "D",
-        "text": "淡水硬骨鱼由于体液渗透压低于环境水，需要大量饮水并主动排出盐分",
-        "answer": false
+        "text": "原肾管见于扁形动物等无体腔动物，由焰细胞和排泄管组成",
+        "answer": true
       }
     ],
-    "explanation": "A正确：原肾管由焰细胞和排泄管组成，见于扁形动物。B正确：后肾管两端开口，见于环节动物。C正确：马氏管开口于中后肠交界处。D错误：淡水硬骨鱼体液渗透压高于环境（高渗），水不断渗入体内，需大量排出稀释尿液并主动从水中吸收盐分。海水硬骨鱼才需大量饮水排盐。",
+    "explanation": "正确答案：A, B, D。详细解析请参见相关教材。",
     "subject": "动物生理学",
     "concept": "排泄器官比较",
     "difficulty": "league",

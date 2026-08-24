@@ -12,56 +12,48 @@
     "year": 2004,
     "module": "module_3"
   },
-  "M3-01-b9efbf2c721f": {
+  "M3-01-028d3e66a625": {
     "tags": [
       "animal_tissue",
       "module_3",
       "动物生理学",
       "滑动丝模型"
     ],
-    "diff": "league",
-    "len": 144,
-    "src": "animal_tissue",
-    "year": 1954,
-    "module": "module_3"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "animal_tissue"
   },
-  "M3-01-9d6b3f3bd4b5": {
+  "M3-01-8b6a855e3f01": {
     "tags": [
       "animal_tissue",
       "module_3",
       "动物生理学",
       "肌肉类型"
     ],
-    "diff": "high_school",
-    "len": 140,
-    "src": "animal_tissue",
-    "year": null,
-    "module": "module_3"
+    "difficulty": "high_school",
+    "module": "module1",
+    "tag": "animal_tissue"
   },
-  "M3-01-000afdf16eb8": {
+  "M3-01-0f69ad523ceb": {
     "tags": [
       "animal_tissue",
       "module_3",
       "动物生理学",
       "上皮组织"
     ],
-    "diff": "league",
-    "len": 155,
-    "src": "animal_tissue",
-    "year": 1975,
-    "module": "module_3"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "animal_tissue"
   },
-  "M3-01-0d183e5fb6b8": {
+  "M3-01-f4539ff9c96c": {
     "tags": [
       "animal_tissue",
       "module_3",
       "动物生理学",
       "结缔组织"
     ],
-    "diff": "high_school",
-    "len": 151,
-    "src": "animal_tissue",
-    "year": null,
-    "module": "module_3"
+    "difficulty": "high_school",
+    "module": "module1",
+    "tag": "animal_tissue"
   }
 }

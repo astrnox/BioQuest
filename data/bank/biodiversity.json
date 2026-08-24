@@ -1,30 +1,30 @@
 {
-  "M3-10-ec8453e94572": {
+  "M3-10-9ca575247284": {
     "type": "mtf",
     "question": "关于生物多样性的层次与测度，下列说法正确的有：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "生物多样性包括遗传多样性、物种多样性和生态系统多样性三个层次",
-        "answer": true
-      },
-      {
-        "label": "B",
-        "text": "Shannon-Wiener指数 H'=-Σpᵢln(pᵢ) 同时考虑了物种丰富度和均匀度",
-        "answer": true
-      },
-      {
-        "label": "C",
         "text": "α多样性指某一特定生境或群落内的物种多样性，β多样性指不同生境间物种组成的差异",
         "answer": true
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "物种丰富度（species richness）和物种均匀度（evenness）是同一概念的不同表述",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "Shannon-Wiener指数 H'=-Σpᵢln(pᵢ) 同时考虑了物种丰富度和均匀度",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "生物多样性包括遗传多样性、物种多样性和生态系统多样性三个层次",
         "answer": false
       }
     ],
-    "explanation": "A正确：生物多样性三个层次。B正确：Shannon指数综合考虑丰富度和均匀度。C正确：α多样性=局域多样性，β多样性=生境间差异，γ多样性=区域总多样性。D错误：物种丰富度指物种数目（不考虑各物种的相对多度），均匀度指各物种个体数分配的均匀程度——两者不同。两个群落可有相同丰富度但均匀度不同。",
+    "explanation": "正确答案：A, B。详细解析请参见相关教材。",
     "subject": "生态学",
     "concept": "生物多样性测度",
     "difficulty": "league",
@@ -45,32 +45,32 @@
       }
     ]
   },
-  "M3-10-54deb25939ea": {
+  "M3-10-a074a522901e": {
     "type": "mtf",
     "question": "关于岛屿生物地理学理论，下列说法正确的有：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "MacArthur-Wilson平衡理论预测岛屿物种数是迁入率和灭绝率动态平衡的结果",
-        "answer": true
+        "text": "种-面积关系 S=cA^z 表明物种数随面积增大而增加",
+        "answer": false
       },
       {
         "label": "B",
-        "text": "种-面积关系 S=cA^z 表明物种数随面积增大而增加",
-        "answer": true
+        "text": "MacArthur-Wilson平衡理论预测岛屿物种数是迁入率和灭绝率动态平衡的结果",
+        "answer": false
       },
       {
         "label": "C",
-        "text": "距大陆较近的大岛比距大陆远的小岛具有更高的物种数",
+        "text": "岛屿面积减半，物种数也恰好减半",
         "answer": true
       },
       {
         "label": "D",
-        "text": "岛屿面积减半，物种数也恰好减半",
-        "answer": false
+        "text": "距大陆较近的大岛比距大陆远的小岛具有更高的物种数",
+        "answer": true
       }
     ],
-    "explanation": "A正确：MacArthur-Wilson理论——迁入率（随物种数增加而下降）和灭绝率（随物种数增加而上升）的平衡决定物种数。B正确：种-面积曲线S=cA^z（z通常0.2-0.35）。C正确：大岛迁入率高、灭绝率低；近岛迁入率高。D错误：根据S=cA^z，面积减半时物种数减少约10-20%（z≈0.25时减少约16%），而非减半。",
+    "explanation": "正确答案：C, D。详细解析请参见相关教材。",
     "subject": "生态学",
     "concept": "岛屿生物地理学",
     "difficulty": "league",
@@ -91,32 +91,32 @@
       }
     ]
   },
-  "M3-10-37d70b3e8edc": {
+  "M3-10-c42f185aaca6": {
     "type": "mtf",
     "question": "关于生物多样性丧失的原因，下列说法正确的有：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "栖息地丧失和破碎化是当前物种灭绝的最主要原因",
-        "answer": true
-      },
-      {
-        "label": "B",
         "text": "过度开发（overexploitation）如过度捕捞和偷猎是许多大型动物濒危的重要原因",
         "answer": true
       },
       {
-        "label": "C",
-        "text": "外来入侵物种通过竞争、捕食和传播疾病等方式威胁本地物种多样性",
+        "label": "B",
+        "text": "气候变化对生物多样性的影响微乎其微，不是当前生物多样性丧失的重要因素",
         "answer": true
       },
       {
+        "label": "C",
+        "text": "栖息地丧失和破碎化是当前物种灭绝的最主要原因",
+        "answer": false
+      },
+      {
         "label": "D",
-        "text": "气候变化对生物多样性的影响微乎其微，不是当前生物多样性丧失的重要因素",
+        "text": "外来入侵物种通过竞争、捕食和传播疾病等方式威胁本地物种多样性",
         "answer": false
       }
     ],
-    "explanation": "A正确：栖息地丧失和破碎化是首要威胁（HIPPO中的H）。B正确：过度开发是第二大威胁（如渡渡鸟、北美旅鸽）。C正确：外来物种是岛屿生态系统的主要威胁。D错误：气候变化正成为越来越重要的威胁因素——改变物种分布范围、物候期、种间关系，珊瑚白化、北极生态系统变化等均是例证。",
+    "explanation": "正确答案：A, B。详细解析请参见相关教材。",
     "subject": "生态学",
     "concept": "生物多样性丧失原因",
     "difficulty": "high_school",
@@ -129,32 +129,32 @@
     ],
     "references": []
   },
-  "M3-10-1521aa4181c2": {
+  "M3-10-5cf4d58840fa": {
     "type": "mtf",
     "question": "关于保护生物学的策略，下列说法正确的有：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "就地保护（in situ conservation）如建立自然保护区是保护生物多样性最有效的策略",
-        "answer": true
-      },
-      {
-        "label": "B",
-        "text": "迁地保护（ex situ conservation）如动物园、种子库是就地保护的补充手段",
-        "answer": true
-      },
-      {
-        "label": "C",
         "text": "生态廊道（wildlife corridor）连接破碎化的栖息地，有助于维持基因流和种群存活",
         "answer": true
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "最小可存活种群（MVP）是指种群数量低于此值时物种立即灭绝",
         "answer": false
+      },
+      {
+        "label": "C",
+        "text": "迁地保护（ex situ conservation）如动物园、种子库是就地保护的补充手段",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "就地保护（in situ conservation）如建立自然保护区是保护生物多样性最有效的策略",
+        "answer": true
       }
     ],
-    "explanation": "A正确：就地保护维持物种在自然栖息地中的种群。B正确：迁地保护是补充手段，适用于就地保护不可行时。C正确：生态廊道减少隔离效应，促进基因流。D错误：MVP是指在一定概率和时间内能维持存活的最低有效种群大小（如\"50/500规则\"），不是\"低于此值立即灭绝\"——低于MVP时灭绝概率增大但不是100%。",
+    "explanation": "正确答案：A, D。详细解析请参见相关教材。",
     "subject": "生态学",
     "concept": "保护策略",
     "difficulty": "league",
@@ -175,19 +175,19 @@
       }
     ]
   },
-  "M3-10-9c40613b7caa": {
+  "M3-10-e26f5b108bdf": {
     "type": "mtf",
     "question": "关于物种概念与分类，下列说法正确的有：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "生物学物种概念（BSC）将物种定义为能够自然交配并产生可育后代的群体，与其他群体存在生殖隔离",
+        "text": "生物学物种概念适用于所有生物，包括无性繁殖生物和化石生物",
         "answer": true
       },
       {
         "label": "B",
         "text": "系统发育物种概念（PSC）将物种定义为具有共同祖先、在系统发育树上形成独立分支的最小群体",
-        "answer": true
+        "answer": false
       },
       {
         "label": "C",
@@ -196,11 +196,11 @@
       },
       {
         "label": "D",
-        "text": "生物学物种概念适用于所有生物，包括无性繁殖生物和化石生物",
-        "answer": false
+        "text": "生物学物种概念（BSC）将物种定义为能够自然交配并产生可育后代的群体，与其他群体存在生殖隔离",
+        "answer": true
       }
     ],
-    "explanation": "A正确：BSC（Mayr定义）以生殖隔离为标准。B正确：PSC以系统发育独立性为标准。C正确：形态学物种概念基于形态差异，适用范围广。D错误：BSC不适用于无性繁殖生物（细菌、部分植物）和化石生物（无法测试交配能力），这些情况需用其他物种概念。",
+    "explanation": "正确答案：A, C, D。详细解析请参见相关教材。",
     "subject": "生态学",
     "concept": "物种概念",
     "difficulty": "high_school",

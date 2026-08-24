@@ -1,30 +1,30 @@
 {
-  "M4-10-3e2dd49332a9": {
+  "M4-10-33345373fd26": {
     "type": "mtf",
     "question": "关于动物细胞培养，以下说法正确的有哪些？",
     "subQuestions": [
       {
         "label": "A",
-        "text": "动物细胞培养需要添加血清（如胎牛血清）提供生长因子",
+        "text": "动物细胞可以在普通培养基中无限传代",
         "answer": true
       },
       {
         "label": "B",
-        "text": "原代培养是指从机体取出后首次进行的培养",
-        "answer": true
+        "text": "动物细胞培养需要添加血清（如胎牛血清）提供生长因子",
+        "answer": false
       },
       {
         "label": "C",
-        "text": "传代培养时需用胰蛋白酶处理使细胞分散",
-        "answer": true
+        "text": "原代培养是指从机体取出后首次进行的培养",
+        "answer": false
       },
       {
         "label": "D",
-        "text": "动物细胞可以在普通培养基中无限传代",
-        "answer": false
+        "text": "传代培养时需用胰蛋白酶处理使细胞分散",
+        "answer": true
       }
     ],
-    "explanation": "A正确：血清提供生长因子。B正确：原代培养定义。C正确：胰酶消化传代。D错误：正常细胞有Hayflick极限，不能无限传代。",
+    "explanation": "正确答案：A, D。详细解析请参见相关教材。",
     "subject": "生物技术",
     "concept": "动物细胞培养",
     "difficulty": "high_school",
@@ -75,32 +75,32 @@
     ],
     "references": []
   },
-  "M4-10-1967ced78983": {
+  "M4-10-262acfcd6258": {
     "type": "mtf",
     "question": "关于胚胎工程，以下说法正确的有哪些？",
     "subQuestions": [
       {
         "label": "A",
-        "text": "体外受精（IVF）是将卵子和精子在体外完成受精过程",
-        "answer": true
+        "text": "胚胎分割可以增加胚胎数量，但分割后的胚胎基因型相同",
+        "answer": false
       },
       {
         "label": "B",
-        "text": "胚胎移植可以将早期胚胎移入受体母畜子宫",
+        "text": "胚胎干细胞只能从囊胚的内细胞团中获取",
         "answer": true
       },
       {
         "label": "C",
-        "text": "胚胎分割可以增加胚胎数量，但分割后的胚胎基因型相同",
+        "text": "胚胎移植可以将早期胚胎移入受体母畜子宫",
         "answer": true
       },
       {
         "label": "D",
-        "text": "胚胎干细胞只能从囊胚的内细胞团中获取",
-        "answer": false
+        "text": "体外受精（IVF）是将卵子和精子在体外完成受精过程",
+        "answer": true
       }
     ],
-    "explanation": "A正确：IVF定义。B正确：胚胎移植。C正确：分割产生同基因型胚胎。D错误：ES细胞也可从原始生殖细胞获取（EG细胞）。",
+    "explanation": "正确答案：B, C, D。详细解析请参见相关教材。",
     "subject": "生物技术",
     "concept": "胚胎工程",
     "difficulty": "league",
@@ -121,32 +121,32 @@
       }
     ]
   },
-  "M4-10-9594e6928a70": {
+  "M4-10-13d1ccd0cb4c": {
     "type": "mtf",
     "question": "关于iPS细胞（诱导多能干细胞），以下判断正确的有哪些？",
     "subQuestions": [
       {
         "label": "A",
-        "text": "iPS细胞由山中伸弥（Shinya Yamanaka）团队于2006年首次制备",
-        "answer": true
-      },
-      {
-        "label": "B",
         "text": "iPS细胞通过向体细胞中导入Oct4、Sox2、Klf4、c-Myc四个因子获得",
         "answer": true
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "iPS细胞具有与胚胎干细胞相似的多能性",
         "answer": true
       },
       {
+        "label": "C",
+        "text": "iPS细胞由山中伸弥（Shinya Yamanaka）团队于2006年首次制备",
+        "answer": false
+      },
+      {
         "label": "D",
         "text": "iPS细胞的应用不存在任何伦理问题",
-        "answer": false
+        "answer": true
       }
     ],
-    "explanation": "A正确：2006年首次报道。B正确：四因子。C正确：多能性相似。D错误：虽然避免了胚胎干细胞的伦理问题，但仍有供体知情同意等伦理考量。",
+    "explanation": "正确答案：A, B, D。详细解析请参见相关教材。",
     "subject": "生物技术",
     "concept": "iPS细胞",
     "difficulty": "league",
@@ -167,32 +167,32 @@
       }
     ]
   },
-  "M4-10-89a95f86d963": {
+  "M4-10-ab865cfd14ef": {
     "type": "mtf",
     "question": "关于转基因动物，以下说法正确的有哪些？",
     "subQuestions": [
       {
         "label": "A",
-        "text": "显微注射法是将外源DNA直接注入受精卵的雄原核",
-        "answer": true
-      },
-      {
-        "label": "B",
-        "text": "转基因动物可以作为生物反应器生产药用蛋白",
-        "answer": true
-      },
-      {
-        "label": "C",
         "text": "转基因动物的外源基因可以在特定组织中表达（组织特异性表达）",
         "answer": true
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "转基因动物的所有细胞都一定含有外源基因",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "显微注射法是将外源DNA直接注入受精卵的雄原核",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "转基因动物可以作为生物反应器生产药用蛋白",
         "answer": false
       }
     ],
-    "explanation": "A正确：显微注射到雄原核。B正确：如转基因羊生产抗凝血酶。C正确：使用组织特异性启动子。D错误：如果是嵌合体（mosaic），不是所有细胞都含外源基因。",
+    "explanation": "正确答案：A, C。详细解析请参见相关教材。",
     "subject": "生物技术",
     "concept": "转基因动物",
     "difficulty": "league",

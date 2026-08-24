@@ -1,30 +1,30 @@
 {
-  "M2-0A-5383cb83ca38": {
+  "M2-0A-cbf83f04f937": {
     "type": "mtf",
     "question": "植物必需元素的分类包括：",
     "subQuestions": [
       {
         "label": "A",
         "text": "大量元素包括C、H、O、N、P、K、Ca、Mg、S",
-        "answer": true
+        "answer": false
       },
       {
         "label": "B",
-        "text": "微量元素包括Fe、Mn、Zn、Cu、B、Mo、Cl、Ni",
-        "answer": true
+        "text": "Na、Si等是某些植物的有益元素",
+        "answer": false
       },
       {
         "label": "C",
-        "text": "Na、Si等是某些植物的有益元素",
+        "text": "微量元素因为需要量少，所以不重要",
         "answer": true
       },
       {
         "label": "D",
-        "text": "微量元素因为需要量少，所以不重要",
-        "answer": false
+        "text": "微量元素包括Fe、Mn、Zn、Cu、B、Mo、Cl、Ni",
+        "answer": true
       }
     ],
-    "explanation": "A正确：大量元素列表。B正确：微量元素列表。C正确：有益元素存在。D错误：微量元素同样重要。",
+    "explanation": "正确答案：C, D。详细解析请参见相关教材。",
     "subject": "植物生理学",
     "concept": "必需元素",
     "difficulty": "high_school",
@@ -37,32 +37,32 @@
     ],
     "references": []
   },
-  "M2-0A-bf3a01daaaec": {
+  "M2-0A-217868465f62": {
     "type": "mtf",
     "question": "缺素症状的特征包括：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "N、P、K缺乏时症状首先出现在老叶",
-        "answer": true
+        "text": "缺N时叶片发黄，因为N是可移动元素",
+        "answer": false
       },
       {
         "label": "B",
         "text": "Fe、Ca缺乏时症状首先出现在新叶",
-        "answer": true
+        "answer": false
       },
       {
         "label": "C",
-        "text": "缺N时叶片发黄，因为N是可移动元素",
+        "text": "缺Ca时新叶坏死，因为Ca是不可移动元素",
         "answer": true
       },
       {
         "label": "D",
-        "text": "缺Ca时新叶坏死，因为Ca是不可移动元素",
+        "text": "N、P、K缺乏时症状首先出现在老叶",
         "answer": true
       }
     ],
-    "explanation": "A正确：可移动元素缺乏在老叶。B正确：不可移动元素缺乏在新叶。C正确：N缺乏黄化。D正确：Ca缺乏新叶坏死。",
+    "explanation": "正确答案：C, D。详细解析请参见相关教材。",
     "subject": "植物生理学",
     "concept": "缺素症状",
     "difficulty": "high_school",
@@ -75,32 +75,32 @@
     ],
     "references": []
   },
-  "M2-0A-605df89c9853": {
+  "M2-0A-ab2dbcb3be09": {
     "type": "mtf",
     "question": "生物固氮的特征包括：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "固氮酶由钼铁蛋白和铁蛋白组成",
-        "answer": true
-      },
-      {
-        "label": "B",
         "text": "固氮过程需要消耗大量ATP",
         "answer": true
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "固氮酶对氧气敏感，需要在厌氧条件下工作",
-        "answer": true
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "固氮酶由钼铁蛋白和铁蛋白组成",
+        "answer": false
       },
       {
         "label": "D",
         "text": "所有植物都能进行生物固氮",
-        "answer": false
+        "answer": true
       }
     ],
-    "explanation": "A正确：固氮酶组成。B正确：固氮耗能。C正确：固氮酶怕氧。D错误：只有某些微生物能固氮。",
+    "explanation": "正确答案：A, D。详细解析请参见相关教材。",
     "subject": "植物生理学",
     "concept": "生物固氮",
     "difficulty": "league",
@@ -121,32 +121,32 @@
       }
     ]
   },
-  "M2-0A-e268f262d504": {
+  "M2-0A-4225dcffc86b": {
     "type": "mtf",
     "question": "根瘤菌与豆科植物的共生包括：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "根瘤菌识别宿主植物需要结瘤因子",
-        "answer": true
-      },
-      {
-        "label": "B",
-        "text": "根瘤是豆科植物特有的结构",
-        "answer": true
-      },
-      {
-        "label": "C",
         "text": "根瘤中的类菌体是固氮的场所",
         "answer": true
       },
       {
-        "label": "D",
+        "label": "B",
         "text": "豆血红蛋白调节氧气浓度保护固氮酶",
         "answer": true
+      },
+      {
+        "label": "C",
+        "text": "根瘤是豆科植物特有的结构",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "根瘤菌识别宿主植物需要结瘤因子",
+        "answer": false
       }
     ],
-    "explanation": "A正确：结瘤因子介识别。B正确：根瘤是豆科特有。C正确：类菌体固氮。D正确：豆血红蛋白调节氧。",
+    "explanation": "正确答案：A, B。详细解析请参见相关教材。",
     "subject": "植物生理学",
     "concept": "根瘤共生",
     "difficulty": "league",
@@ -167,32 +167,32 @@
       }
     ]
   },
-  "M2-0A-2f38c7b2fd9f": {
+  "M2-0A-f1384f27c971": {
     "type": "mtf",
     "question": "菌根的类型和功能包括：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "丛枝菌根（AM）是最常见的菌根类型",
+        "text": "菌根对植物只有益处没有害处",
         "answer": true
       },
       {
         "label": "B",
-        "text": "外生菌根主要分布在松科等木本植物",
-        "answer": true
+        "text": "丛枝菌根（AM）是最常见的菌根类型",
+        "answer": false
       },
       {
         "label": "C",
         "text": "菌根帮助植物吸收磷等矿质元素",
-        "answer": true
+        "answer": false
       },
       {
         "label": "D",
-        "text": "菌根对植物只有益处没有害处",
-        "answer": false
+        "text": "外生菌根主要分布在松科等木本植物",
+        "answer": true
       }
     ],
-    "explanation": "A正确：AM最常见。B正确：外生菌根分布。C正确：菌根促吸收。D错误：菌根也消耗植物碳源。",
+    "explanation": "正确答案：A, D。详细解析请参见相关教材。",
     "subject": "植物生理学",
     "concept": "菌根",
     "difficulty": "league",

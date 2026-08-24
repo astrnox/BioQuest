@@ -1,67 +1,57 @@
 {
-  "M4-14-9e2e5d984f3e": {
+  "M4-14-68e356f3549a": {
     "tags": [
       "transcriptomics",
       "module_4",
       "生物信息学",
       "转录组学"
     ],
-    "diff": "high_school",
-    "len": 131,
-    "src": "transcriptomics",
-    "year": null,
-    "module": "module_4"
+    "difficulty": "high_school",
+    "module": "module1",
+    "tag": "transcriptomics"
   },
-  "M4-14-e3e2b001575b": {
+  "M4-14-cd31fa5ba15d": {
     "tags": [
       "transcriptomics",
       "module_4",
       "生物信息学",
       "差异表达"
     ],
-    "diff": "league",
-    "len": 123,
-    "src": "transcriptomics",
-    "year": null,
-    "module": "module_4"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "transcriptomics"
   },
-  "M4-14-275e248d3553": {
+  "M4-14-ca639958d381": {
     "tags": [
       "transcriptomics",
       "module_4",
       "生物信息学",
       "共表达网络"
     ],
-    "diff": "league",
-    "len": 149,
-    "src": "transcriptomics",
-    "year": null,
-    "module": "module_4"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "transcriptomics"
   },
-  "M4-14-4326af0404c5": {
+  "M4-14-2c28a06689de": {
     "tags": [
       "transcriptomics",
       "module_4",
       "生物信息学",
       "可变剪接"
     ],
-    "diff": "league",
-    "len": 109,
-    "src": "transcriptomics",
-    "year": null,
-    "module": "module_4"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "transcriptomics"
   },
-  "M4-14-97678db89669": {
+  "M4-14-4cd9e0e1f653": {
     "tags": [
       "transcriptomics",
       "module_4",
       "生物信息学",
       "转录组学"
     ],
-    "diff": "high_school",
-    "len": 102,
-    "src": "transcriptomics",
-    "year": null,
-    "module": "module_4"
+    "difficulty": "high_school",
+    "module": "module1",
+    "tag": "transcriptomics"
   }
 }

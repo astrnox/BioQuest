@@ -12,56 +12,48 @@
     "year": 2004,
     "module": "module_3"
   },
-  "M3-05-bc55f177afc4": {
+  "M3-05-ffaa4f726e7e": {
     "tags": [
       "immune_system",
       "module_3",
       "动物生理学",
       "体液免疫"
     ],
-    "diff": "league",
-    "len": 157,
-    "src": "immune_system",
-    "year": 2006,
-    "module": "module_3"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "immune_system"
   },
-  "M3-05-470c186f3860": {
+  "M3-05-8a0c96a93774": {
     "tags": [
       "immune_system",
       "module_3",
       "动物生理学",
       "细胞免疫"
     ],
-    "diff": "league",
-    "len": 161,
-    "src": "immune_system",
-    "year": 2008,
-    "module": "module_3"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "immune_system"
   },
-  "M3-05-360f0b38cc11": {
+  "M3-05-e32db589da65": {
     "tags": [
       "immune_system",
       "module_3",
       "动物生理学",
       "MHC"
     ],
-    "diff": "high_school",
-    "len": 141,
-    "src": "immune_system",
-    "year": null,
-    "module": "module_3"
+    "difficulty": "high_school",
+    "module": "module1",
+    "tag": "immune_system"
   },
-  "M3-05-6dbda49cf44b": {
+  "M3-05-a942000c6d03": {
     "tags": [
       "immune_system",
       "module_3",
       "动物生理学",
       "免疫记忆"
     ],
-    "diff": "high_school",
-    "len": 154,
-    "src": "immune_system",
-    "year": null,
-    "module": "module_3"
+    "difficulty": "high_school",
+    "module": "module1",
+    "tag": "immune_system"
   }
 }

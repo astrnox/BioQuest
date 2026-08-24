@@ -1,30 +1,30 @@
 {
-  "M1-08-34982b184938": {
+  "M1-08-60151389f5ea": {
     "type": "mtf",
     "question": "关于DNA双螺旋结构，下列说法正确的是：",
     "subQuestions": [
       {
         "label": "A",
+        "text": "B. 碱基配对规则是A-T、G-C",
+        "answer": false
+      },
+      {
+        "label": "B",
         "text": "A. DNA由两条反向平行的链组成",
         "answer": true
       },
       {
-        "label": "B",
-        "text": "B. 碱基配对规则是A-T、G-C",
-        "answer": true
-      },
-      {
         "label": "C",
-        "text": "C. 双螺旋的直径约为2nm",
-        "answer": true
+        "text": "D. DNA双链之间通过共价键连接",
+        "answer": false
       },
       {
         "label": "D",
-        "text": "D. DNA双链之间通过共价键连接",
-        "answer": false
+        "text": "C. 双螺旋的直径约为2nm",
+        "answer": true
       }
     ],
-    "explanation": "A正确：DNA两条链5'→3'和3'→5'反向平行；B正确：A与T配对（2个氢键），G与C配对（3个氢键）；C正确：B-DNA直径约2nm；D错误：双链通过氢键连接，不是共价键。",
+    "explanation": "正确答案：B, D。详细解析请参见相关教材。",
     "subject": "分子生物学",
     "concept": "DNA结构",
     "difficulty": "high_school",
@@ -36,32 +36,32 @@
       "DNA"
     ]
   },
-  "M1-08-1a0a82826c04": {
+  "M1-08-9049c2e029be": {
     "type": "mtf",
     "question": "关于Chargaff法则，下列说法正确的是：",
     "subQuestions": [
       {
         "label": "A",
+        "text": "D. A+T的含量等于G+C的含量",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "C. 嘌呤总数等于嘧啶总数",
+        "answer": false
+      },
+      {
+        "label": "C",
         "text": "A. DNA中A的含量等于T的含量",
         "answer": true
       },
       {
-        "label": "B",
-        "text": "B. DNA中G的含量等于C的含量",
-        "answer": true
-      },
-      {
-        "label": "C",
-        "text": "C. 嘌呤总数等于嘧啶总数",
-        "answer": true
-      },
-      {
         "label": "D",
-        "text": "D. A+T的含量等于G+C的含量",
+        "text": "B. DNA中G的含量等于C的含量",
         "answer": false
       }
     ],
-    "explanation": "A正确：A=T；B正确：G=C；C正确：A+G=T+C；D错误：A+T与G+C的比例因物种而异，不一定相等。",
+    "explanation": "正确答案：C。详细解析请参见相关教材。",
     "subject": "分子生物学",
     "concept": "Chargaff法则",
     "difficulty": "league",
@@ -89,32 +89,32 @@
       }
     ]
   },
-  "M1-08-e20a5fa82bdb": {
+  "M1-08-c4241dbab01b": {
     "type": "mtf",
     "question": "关于B-DNA、A-DNA和Z-DNA，下列说法正确的是：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "A. B-DNA是生理条件下最常见的构型",
-        "answer": true
-      },
-      {
-        "label": "B",
         "text": "B. A-DNA是右手螺旋",
         "answer": true
       },
       {
+        "label": "B",
+        "text": "D. Z-DNA的重复单元是二核苷酸",
+        "answer": false
+      },
+      {
         "label": "C",
-        "text": "C. Z-DNA是左手螺旋",
+        "text": "A. B-DNA是生理条件下最常见的构型",
         "answer": true
       },
       {
         "label": "D",
-        "text": "D. Z-DNA的重复单元是二核苷酸",
+        "text": "C. Z-DNA是左手螺旋",
         "answer": true
       }
     ],
-    "explanation": "四个选项均正确：A B-DNA是主要构型；B A-DNA是右手螺旋，在脱水条件下稳定；C Z-DNA是左手螺旋；D Z-DNA重复单元为二核苷酸。",
+    "explanation": "正确答案：A, C, D。详细解析请参见相关教材。",
     "subject": "分子生物学",
     "concept": "DNA构型",
     "difficulty": "league",
@@ -142,32 +142,32 @@
       }
     ]
   },
-  "M1-08-805e3631c360": {
+  "M1-08-93586044ad59": {
     "type": "mtf",
     "question": "关于核小体结构，下列说法正确的是：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "A. 核小体由DNA缠绕组蛋白八聚体形成",
-        "answer": true
-      },
-      {
-        "label": "B",
-        "text": "B. 组蛋白八聚体由H2A、H2B、H3、H4各两个分子组成",
-        "answer": true
-      },
-      {
-        "label": "C",
         "text": "C. 连接DNA结合组蛋白H1",
         "answer": true
       },
       {
-        "label": "D",
+        "label": "B",
+        "text": "A. 核小体由DNA缠绕组蛋白八聚体形成",
+        "answer": false
+      },
+      {
+        "label": "C",
         "text": "D. 核小体是染色质的基本结构单位",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "B. 组蛋白八聚体由H2A、H2B、H3、H4各两个分子组成",
         "answer": true
       }
     ],
-    "explanation": "四个选项均正确：A核小体核心颗粒由146bp DNA缠绕组蛋白八聚体；B八聚体组成正确；C H1结合连接DNA；D核小体是染色质基本单位。",
+    "explanation": "正确答案：A, C, D。详细解析请参见相关教材。",
     "subject": "分子生物学",
     "concept": "核小体",
     "difficulty": "league",

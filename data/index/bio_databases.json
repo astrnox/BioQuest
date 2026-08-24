@@ -1,42 +1,36 @@
 {
-  "M4-16-9093695beaa6": {
+  "M4-16-64a24e6c9aeb": {
     "tags": [
       "bio_databases",
       "module_4",
       "生物信息学",
       "数据库"
     ],
-    "diff": "high_school",
-    "len": 107,
-    "src": "bio_databases",
-    "year": null,
-    "module": "module_4"
+    "difficulty": "high_school",
+    "module": "module1",
+    "tag": "bio_databases"
   },
-  "M4-16-7ab8f351480e": {
+  "M4-16-91c7af652a30": {
     "tags": [
       "bio_databases",
       "module_4",
       "生物信息学",
       "数据库"
     ],
-    "diff": "league",
-    "len": 131,
-    "src": "bio_databases",
-    "year": null,
-    "module": "module_4"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "bio_databases"
   },
-  "M4-16-5b3948ada363": {
+  "M4-16-00a8d3c1833d": {
     "tags": [
       "bio_databases",
       "module_4",
       "生物信息学",
       "数据库"
     ],
-    "diff": "league",
-    "len": 128,
-    "src": "bio_databases",
-    "year": null,
-    "module": "module_4"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "bio_databases"
   },
   "M4-16-c99ab014202e": {
     "tags": [
@@ -51,17 +45,15 @@
     "year": null,
     "module": "module_4"
   },
-  "M4-16-2f8084468c18": {
+  "M4-16-ea52355e1a7f": {
     "tags": [
       "bio_databases",
       "module_4",
       "生物信息学",
       "数据格式"
     ],
-    "diff": "high_school",
-    "len": 111,
-    "src": "bio_databases",
-    "year": null,
-    "module": "module_4"
+    "difficulty": "high_school",
+    "module": "module1",
+    "tag": "bio_databases"
   }
 }

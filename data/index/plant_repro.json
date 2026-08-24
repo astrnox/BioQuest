@@ -1,67 +1,57 @@
 {
-  "M2-06-0c030df1a561": {
+  "M2-06-1c105366ea3a": {
     "tags": [
       "plant_repro",
       "module_2",
       "植物学",
       "双受精"
     ],
-    "diff": "high_school",
-    "len": 94,
-    "src": "plant_repro",
-    "year": null,
-    "module": "module_2"
+    "difficulty": "high_school",
+    "module": "module1",
+    "tag": "plant_repro"
   },
-  "M2-06-a2141b12840e": {
+  "M2-06-908a9d3a4f15": {
     "tags": [
       "plant_repro",
       "module_2",
       "植物学",
       "花粉"
     ],
-    "diff": "league",
-    "len": 84,
-    "src": "plant_repro",
-    "year": 2004,
-    "module": "module_2"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "plant_repro"
   },
-  "M2-06-63357d1b3555": {
+  "M2-06-eb7417da57c5": {
     "tags": [
       "plant_repro",
       "module_2",
       "植物学",
       "胚囊"
     ],
-    "diff": "league",
-    "len": 74,
-    "src": "plant_repro",
-    "year": 2005,
-    "module": "module_2"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "plant_repro"
   },
-  "M2-06-6cde8cb41d48": {
+  "M2-06-e3c045ae5a04": {
     "tags": [
       "plant_repro",
       "module_2",
       "植物学",
       "种子"
     ],
-    "diff": "high_school",
-    "len": 63,
-    "src": "plant_repro",
-    "year": null,
-    "module": "module_2"
+    "difficulty": "high_school",
+    "module": "module1",
+    "tag": "plant_repro"
   },
-  "M2-06-8b4afee218b0": {
+  "M2-06-fd3b8d4ee320": {
     "tags": [
       "plant_repro",
       "module_2",
       "植物学",
       "世代交替"
     ],
-    "diff": "league",
-    "len": 86,
-    "src": "plant_repro",
-    "year": 2007,
-    "module": "module_2"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "plant_repro"
   }
 }

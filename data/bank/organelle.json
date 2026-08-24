@@ -1,30 +1,30 @@
 {
-  "M1-03-f2bd5c7b4beb": {
+  "M1-03-3066e579ecd5": {
     "type": "mtf",
     "question": "关于线粒体的结构与功能，下列说法正确的是：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "A. 线粒体具有双层膜结构",
+        "text": "C. 线粒体是细胞有氧呼吸的主要场所",
         "answer": true
       },
       {
         "label": "B",
         "text": "B. 线粒体内膜向内折叠形成嵴",
-        "answer": true
+        "answer": false
       },
       {
         "label": "C",
-        "text": "C. 线粒体是细胞有氧呼吸的主要场所",
+        "text": "D. 线粒体含有自己的DNA和核糖体",
         "answer": true
       },
       {
         "label": "D",
-        "text": "D. 线粒体含有自己的DNA和核糖体",
-        "answer": true
+        "text": "A. 线粒体具有双层膜结构",
+        "answer": false
       }
     ],
-    "explanation": "四个选项均正确：A线粒体有外膜和内膜；B内膜形成嵴增加表面积；C线粒体是有氧呼吸主要场所；D线粒体有半自主性，含DNA和核糖体。",
+    "explanation": "正确答案：A, C。详细解析请参见相关教材。",
     "subject": "细胞生物学",
     "concept": "线粒体",
     "difficulty": "high_school",
@@ -36,32 +36,32 @@
       "线粒体"
     ]
   },
-  "M1-03-2d91262bbfec": {
+  "M1-03-1b24f381291e": {
     "type": "mtf",
     "question": "关于叶绿体的结构与功能，下列说法正确的是：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "A. 叶绿体具有双层膜结构",
-        "answer": true
+        "text": "D. 叶绿体不含DNA，完全依赖核基因",
+        "answer": false
       },
       {
         "label": "B",
-        "text": "B. 类囊体膜上含有光合色素",
-        "answer": true
+        "text": "A. 叶绿体具有双层膜结构",
+        "answer": false
       },
       {
         "label": "C",
         "text": "C. 叶绿体基质中进行Calvin循环",
-        "answer": true
+        "answer": false
       },
       {
         "label": "D",
-        "text": "D. 叶绿体不含DNA，完全依赖核基因",
+        "text": "B. 类囊体膜上含有光合色素",
         "answer": false
       }
     ],
-    "explanation": "A正确：叶绿体有外膜和内膜；B正确：类囊体膜上有光合色素；C正确：Calvin循环在基质中进行；D错误：叶绿体有自己的DNA。",
+    "explanation": "正确答案：。详细解析请参见相关教材。",
     "subject": "细胞生物学",
     "concept": "叶绿体",
     "difficulty": "high_school",
@@ -73,14 +73,14 @@
       "叶绿体"
     ]
   },
-  "M1-03-4e0c6a1af3af": {
+  "M1-03-3bad866aab5d": {
     "type": "mtf",
     "question": "关于内共生学说，下列说法正确的是：",
     "subQuestions": [
       {
         "label": "A",
         "text": "A. 线粒体起源于被原始真核细胞吞噬的α-变形菌",
-        "answer": true
+        "answer": false
       },
       {
         "label": "B",
@@ -90,15 +90,15 @@
       {
         "label": "C",
         "text": "C. 内共生学说可以解释线粒体和叶绿体含有自己的DNA",
-        "answer": true
+        "answer": false
       },
       {
         "label": "D",
         "text": "D. 内共生学说认为细胞核也是内共生起源",
-        "answer": false
+        "answer": true
       }
     ],
-    "explanation": "A正确：线粒体起源于α-变形菌；B正确：叶绿体起源于蓝细菌；C正确：内共生学说解释了细胞器的半自主性；D错误：细胞核不是内共生起源。",
+    "explanation": "正确答案：B, D。详细解析请参见相关教材。",
     "subject": "细胞生物学",
     "concept": "内共生学说",
     "difficulty": "league",
@@ -126,7 +126,7 @@
       }
     ]
   },
-  "M1-03-6f4755cc4e31": {
+  "M1-03-9b5e7abd2071": {
     "type": "mtf",
     "question": "关于内膜系统和蛋白质分选，下列说法正确的是：",
     "subQuestions": [
@@ -137,12 +137,12 @@
       },
       {
         "label": "B",
-        "text": "B. 高尔基体对蛋白质进行修饰、分选和运输",
+        "text": "C. 溶酶体含有多种水解酶，能分解衰老的细胞器",
         "answer": true
       },
       {
         "label": "C",
-        "text": "C. 溶酶体含有多种水解酶，能分解衰老的细胞器",
+        "text": "B. 高尔基体对蛋白质进行修饰、分选和运输",
         "answer": true
       },
       {
@@ -151,7 +151,7 @@
         "answer": false
       }
     ],
-    "explanation": "A正确：粗面内质网参与蛋白质合成和加工；B正确：高尔基体加工和分选蛋白质；C正确：溶酶体是细胞内消化器官；D错误：分泌蛋白和膜蛋白在附着核糖体上合成。",
+    "explanation": "正确答案：A, B, C。详细解析请参见相关教材。",
     "subject": "细胞生物学",
     "concept": "内膜系统",
     "difficulty": "league",
@@ -179,32 +179,32 @@
       }
     ]
   },
-  "M1-03-8f046f8e9b67": {
+  "M1-03-b5239c897a9d": {
     "type": "mtf",
     "question": "关于囊泡运输机制，下列说法正确的是：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "A. 囊泡运输需要SNARE蛋白介导膜融合",
-        "answer": true
+        "text": "D. 网格蛋白包被囊泡参与受体介导的内吞作用",
+        "answer": false
       },
       {
         "label": "B",
         "text": "B. COPI囊泡负责从内质网到高尔基体的运输",
-        "answer": false
+        "answer": true
       },
       {
         "label": "C",
-        "text": "C. COPII囊泡负责高尔基体内部的逆向运输",
-        "answer": false
+        "text": "A. 囊泡运输需要SNARE蛋白介导膜融合",
+        "answer": true
       },
       {
         "label": "D",
-        "text": "D. 网格蛋白包被囊泡参与受体介导的内吞作用",
-        "answer": true
+        "text": "C. COPII囊泡负责高尔基体内部的逆向运输",
+        "answer": false
       }
     ],
-    "explanation": "A正确：SNARE蛋白介导囊泡与靶膜融合；B错误：COPII负责ER到高尔基体运输；C错误：COPI负责高尔基体逆向运输和高尔基体到ER的运输；D正确：网格蛋白参与内吞作用。",
+    "explanation": "正确答案：B, C。详细解析请参见相关教材。",
     "subject": "细胞生物学",
     "concept": "囊泡运输",
     "difficulty": "league",

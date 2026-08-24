@@ -12,56 +12,48 @@
     "year": null,
     "module": "module_1"
   },
-  "M1-07-388af96407a2": {
+  "M1-07-d5ecc3d49f81": {
     "tags": [
       "cell_death",
       "module_1",
       "细胞生物学",
       "Caspase"
     ],
-    "diff": "league",
-    "len": 105,
-    "src": "cell_death",
-    "year": null,
-    "module": "module_1"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "cell_death"
   },
-  "M1-07-e84726454d30": {
+  "M1-07-401a14a11257": {
     "tags": [
       "cell_death",
       "module_1",
       "细胞生物学",
       "p53"
     ],
-    "diff": "league",
-    "len": 80,
-    "src": "cell_death",
-    "year": null,
-    "module": "module_1"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "cell_death"
   },
-  "M1-07-b81a1c0c9509": {
+  "M1-07-f2e94f02a0da": {
     "tags": [
       "cell_death",
       "module_1",
       "细胞生物学",
       "Bcl-2"
     ],
-    "diff": "league",
-    "len": 95,
-    "src": "cell_death",
-    "year": null,
-    "module": "module_1"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "cell_death"
   },
-  "M1-07-13180831b43c": {
+  "M1-07-7b51d33c64b8": {
     "tags": [
       "cell_death",
       "module_1",
       "细胞生物学",
       "细胞死亡"
     ],
-    "diff": "high_school",
-    "len": 92,
-    "src": "cell_death",
-    "year": null,
-    "module": "module_1"
+    "difficulty": "high_school",
+    "module": "module1",
+    "tag": "cell_death"
   }
 }

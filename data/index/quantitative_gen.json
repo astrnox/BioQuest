@@ -25,18 +25,16 @@
     "year": null,
     "module": "module_4"
   },
-  "M4-07-f824f036d2ce": {
+  "M4-07-b5fc81189362": {
     "tags": [
       "quantitative_gen",
       "module_4",
       "遗传学",
       "QTL"
     ],
-    "diff": "league",
-    "len": 131,
-    "src": "quantitative_gen",
-    "year": null,
-    "module": "module_4"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "quantitative_gen"
   },
   "M4-07-d583ec50247c": {
     "tags": [
@@ -51,17 +49,15 @@
     "year": null,
     "module": "module_4"
   },
-  "M4-07-2235efd7877b": {
+  "M4-07-c28b307d74bc": {
     "tags": [
       "quantitative_gen",
       "module_4",
       "遗传学",
       "分子标记"
     ],
-    "diff": "high_school",
-    "len": 120,
-    "src": "quantitative_gen",
-    "year": null,
-    "module": "module_4"
+    "difficulty": "high_school",
+    "module": "module1",
+    "tag": "quantitative_gen"
   }
 }

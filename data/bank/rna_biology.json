@@ -1,5 +1,5 @@
 {
-  "M1-0E-0891bef1fab0": {
+  "M1-0E-73d5a033819d": {
     "type": "mtf",
     "question": "关于RNA干扰（RNAi），下列说法正确的是：",
     "subQuestions": [
@@ -10,21 +10,21 @@
       },
       {
         "label": "B",
-        "text": "B. Dicer酶切割dsRNA产生siRNA",
+        "text": "D. RNAi可以特异性沉默基因表达",
         "answer": true
       },
       {
         "label": "C",
         "text": "C. siRNA与RISC复合物结合",
-        "answer": true
+        "answer": false
       },
       {
         "label": "D",
-        "text": "D. RNAi可以特异性沉默基因表达",
-        "answer": true
+        "text": "B. Dicer酶切割dsRNA产生siRNA",
+        "answer": false
       }
     ],
-    "explanation": "四个选项均正确：A dsRNA触发RNAi；B Dicer切割产生21-23nt siRNA；C siRNA装载到RISC；D siRNA引导RISC切割互补mRNA。",
+    "explanation": "正确答案：A, B。详细解析请参见相关教材。",
     "subject": "分子生物学",
     "concept": "RNAi",
     "difficulty": "league",
@@ -52,32 +52,32 @@
       }
     ]
   },
-  "M1-0E-4a7fe21f6cba": {
+  "M1-0E-910f992d2f44": {
     "type": "mtf",
     "question": "关于RNA编辑，下列说法正确的是：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "A. RNA编辑可以改变mRNA的编码序列",
-        "answer": true
-      },
-      {
-        "label": "B",
-        "text": "B. A-to-I编辑由ADAR酶催化",
-        "answer": true
-      },
-      {
-        "label": "C",
         "text": "C. C-to-U编辑由APOBEC酶催化",
         "answer": true
       },
       {
-        "label": "D",
+        "label": "B",
+        "text": "A. RNA编辑可以改变mRNA的编码序列",
+        "answer": false
+      },
+      {
+        "label": "C",
         "text": "D. RNA编辑只发生在植物中",
         "answer": false
+      },
+      {
+        "label": "D",
+        "text": "B. A-to-I编辑由ADAR酶催化",
+        "answer": true
       }
     ],
-    "explanation": "A正确：编辑改变编码信息；B正确：ADAR催化A→I（读作G）；C正确：APOBEC催化C→U；D错误：RNA编辑在动物、植物、真菌中都有。",
+    "explanation": "正确答案：A, D。详细解析请参见相关教材。",
     "subject": "分子生物学",
     "concept": "RNA编辑",
     "difficulty": "league",
@@ -105,32 +105,32 @@
       }
     ]
   },
-  "M1-0E-edcc7c4f98b5": {
+  "M1-0E-647f68b4986d": {
     "type": "mtf",
     "question": "关于lncRNA的功能，下列说法正确的是：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "A. lncRNA长度大于200nt",
-        "answer": true
+        "text": "C. lncRNA可以作为miRNA海绵",
+        "answer": false
       },
       {
         "label": "B",
         "text": "B. lncRNA可以招募染色质修饰复合物",
-        "answer": true
+        "answer": false
       },
       {
         "label": "C",
-        "text": "C. lncRNA可以作为miRNA海绵",
+        "text": "D. lncRNA不编码任何蛋白质",
         "answer": true
       },
       {
         "label": "D",
-        "text": "D. lncRNA不编码任何蛋白质",
+        "text": "A. lncRNA长度大于200nt",
         "answer": false
       }
     ],
-    "explanation": "A正确：lncRNA>200nt；B正确：如Xist招募PRC2复合物；C正确：ceRNA机制吸附miRNA；D错误：部分lncRNA可以编码小肽。",
+    "explanation": "正确答案：C。详细解析请参见相关教材。",
     "subject": "分子生物学",
     "concept": "lncRNA",
     "difficulty": "league",
@@ -158,32 +158,32 @@
       }
     ]
   },
-  "M1-0E-55858c35286e": {
+  "M1-0E-bda9a7601975": {
     "type": "mtf",
     "question": "关于核酶（ribozyme），下列说法正确的是：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "A. 核酶是具有催化活性的RNA",
+        "text": "D. 核酶的发现证明RNA可以催化化学反应",
         "answer": true
       },
       {
         "label": "B",
         "text": "B. 核糖体是核酶",
-        "answer": true
+        "answer": false
       },
       {
         "label": "C",
-        "text": "C. 自我剪接内含子是核酶",
-        "answer": true
+        "text": "A. 核酶是具有催化活性的RNA",
+        "answer": false
       },
       {
         "label": "D",
-        "text": "D. 核酶的发现证明RNA可以催化化学反应",
+        "text": "C. 自我剪接内含子是核酶",
         "answer": true
       }
     ],
-    "explanation": "四个选项均正确：A核酶是RNA催化剂；B 23S/28S rRNA催化肽键形成；C I型、II型内含子自我剪接；D核酶支持RNA世界假说。",
+    "explanation": "正确答案：A, D。详细解析请参见相关教材。",
     "subject": "分子生物学",
     "concept": "核酶",
     "difficulty": "league",
@@ -211,32 +211,32 @@
       }
     ]
   },
-  "M1-0E-760baf43a0e1": {
+  "M1-0E-0a1f040ff19f": {
     "type": "mtf",
     "question": "关于RNA世界假说，下列说法正确的是：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "A. RNA世界假说认为生命起源于RNA",
+        "text": "B. RNA可以同时存储信息和催化反应",
         "answer": true
       },
       {
         "label": "B",
-        "text": "B. RNA可以同时存储信息和催化反应",
+        "text": "A. RNA世界假说认为生命起源于RNA",
         "answer": true
       },
       {
         "label": "C",
         "text": "C. RNA世界假说解释了DNA和蛋白质的起源",
-        "answer": true
+        "answer": false
       },
       {
         "label": "D",
         "text": "D. RNA世界假说已经被完全证明",
-        "answer": false
+        "answer": true
       }
     ],
-    "explanation": "A正确：假说认为早期生命基于RNA；B正确：RNA具有遗传和催化双重功能；C正确：DNA可能由RNA演化而来，蛋白质由RNA催化合成；D错误：假说仍有待证明，存在争议。",
+    "explanation": "正确答案：A, B, D。详细解析请参见相关教材。",
     "subject": "分子生物学",
     "concept": "RNA世界",
     "difficulty": "league",

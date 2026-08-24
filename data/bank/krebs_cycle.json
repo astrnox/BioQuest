@@ -1,11 +1,11 @@
 {
-  "M1-12-33b61c8c70aa": {
+  "M1-12-c286a417241b": {
     "type": "mtf",
     "question": "关于TCA循环的位置和输入，下列说法正确的是：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "A. TCA循环在线粒体基质中进行",
+        "text": "D. TCA循环每轮产生2个CO₂",
         "answer": true
       },
       {
@@ -20,11 +20,11 @@
       },
       {
         "label": "D",
-        "text": "D. TCA循环每轮产生2个CO₂",
-        "answer": true
+        "text": "A. TCA循环在线粒体基质中进行",
+        "answer": false
       }
     ],
-    "explanation": "四个选项均正确：A在线粒体基质；B乙酰CoA与草酰乙酸缩合；C丙酮酸脱氢酶复合体催化；D异柠檬酸和α-酮戊二酸脱羧各释放1个CO₂。",
+    "explanation": "正确答案：A, B, C。详细解析请参见相关教材。",
     "subject": "生物化学",
     "concept": "TCA循环",
     "difficulty": "high_school",
@@ -36,32 +36,32 @@
       "TCA"
     ]
   },
-  "M1-12-0e071fe344a5": {
+  "M1-12-aafc9d3052fb": {
     "type": "mtf",
     "question": "关于TCA循环的产能，下列说法正确的是：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "A. 每轮TCA循环产生3个NADH",
-        "answer": true
+        "text": "C. 每轮TCA循环产生1个GTP（或ATP）",
+        "answer": false
       },
       {
         "label": "B",
-        "text": "B. 每轮TCA循环产生1个FADH₂",
-        "answer": true
+        "text": "A. 每轮TCA循环产生3个NADH",
+        "answer": false
       },
       {
         "label": "C",
-        "text": "C. 每轮TCA循环产生1个GTP（或ATP）",
-        "answer": true
+        "text": "D. TCA循环直接产生大量ATP",
+        "answer": false
       },
       {
         "label": "D",
-        "text": "D. TCA循环直接产生大量ATP",
-        "answer": false
+        "text": "B. 每轮TCA循环产生1个FADH₂",
+        "answer": true
       }
     ],
-    "explanation": "A正确：异柠檬酸、α-酮戊二酸、苹果酸脱氢；B正确：琥珀酸脱氢；C正确：琥珀酰CoA合成酶催化；D错误：TCA直接产能少，主要产生NADH和FADH₂用于氧化磷酸化。",
+    "explanation": "正确答案：D。详细解析请参见相关教材。",
     "subject": "生物化学",
     "concept": "TCA产能",
     "difficulty": "high_school",
@@ -73,32 +73,32 @@
       "TCA"
     ]
   },
-  "M1-12-8318d19a5a1c": {
+  "M1-12-056ac6c6fb93": {
     "type": "mtf",
     "question": "关于TCA循环的关键酶，下列说法正确的是：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "A. 柠檬酸合酶催化草酰乙酸与乙酰CoA缩合",
-        "answer": true
+        "text": "C. α-酮戊二酸脱氢酶复合体类似丙酮酸脱氢酶",
+        "answer": false
       },
       {
         "label": "B",
-        "text": "B. 异柠檬酸脱氢酶是TCA循环的限速酶",
+        "text": "D. 这些酶都受ATP和NADH的激活",
         "answer": true
       },
       {
         "label": "C",
-        "text": "C. α-酮戊二酸脱氢酶复合体类似丙酮酸脱氢酶",
-        "answer": true
+        "text": "B. 异柠檬酸脱氢酶是TCA循环的限速酶",
+        "answer": false
       },
       {
         "label": "D",
-        "text": "D. 这些酶都受ATP和NADH的激活",
+        "text": "A. 柠檬酸合酶催化草酰乙酸与乙酰CoA缩合",
         "answer": false
       }
     ],
-    "explanation": "A正确：柠檬酸合酶催化第一步；B正确：异柠檬酸脱氢酶是主要调控点；C正确：都含E1、E2、E3和辅因子；D错误：ATP和NADH抑制这些酶，是负反馈调节。",
+    "explanation": "正确答案：B。详细解析请参见相关教材。",
     "subject": "生物化学",
     "concept": "TCA调控",
     "difficulty": "league",
@@ -126,18 +126,18 @@
       }
     ]
   },
-  "M1-12-7ddd83e20132": {
+  "M1-12-f12704ea4f58": {
     "type": "mtf",
     "question": "关于回补反应，下列说法正确的是：",
     "subQuestions": [
       {
         "label": "A",
         "text": "A. 回补反应补充TCA循环的中间物",
-        "answer": true
+        "answer": false
       },
       {
         "label": "B",
-        "text": "B. 丙酮酸羧化酶催化丙酮酸生成草酰乙酸",
+        "text": "D. 回补反应只在饥饿时发生",
         "answer": true
       },
       {
@@ -147,11 +147,11 @@
       },
       {
         "label": "D",
-        "text": "D. 回补反应只在饥饿时发生",
-        "answer": false
+        "text": "B. 丙酮酸羧化酶催化丙酮酸生成草酰乙酸",
+        "answer": true
       }
     ],
-    "explanation": "A正确：中间物被用于生物合成时需要补充；B正确：丙酮酸羧化酶催化回补反应；C正确：维持草酰乙酸等浓度；D错误：回补反应持续进行，不仅饥饿时。",
+    "explanation": "正确答案：B, C, D。详细解析请参见相关教材。",
     "subject": "生物化学",
     "concept": "回补反应",
     "difficulty": "league",
@@ -179,24 +179,24 @@
       }
     ]
   },
-  "M1-12-f347490c41b1": {
+  "M1-12-58b0edbecfdb": {
     "type": "mtf",
     "question": "关于TCA循环中间物的生物合成作用，下列说法正确的是：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "A. 草酰乙酸可以转化为天冬氨酸",
-        "answer": true
+        "text": "B. α-酮戊二酸可以转化为谷氨酸",
+        "answer": false
       },
       {
         "label": "B",
-        "text": "B. α-酮戊二酸可以转化为谷氨酸",
+        "text": "C. 琥珀酰CoA可以用于卟啉合成",
         "answer": true
       },
       {
         "label": "C",
-        "text": "C. 琥珀酰CoA可以用于卟啉合成",
-        "answer": true
+        "text": "A. 草酰乙酸可以转化为天冬氨酸",
+        "answer": false
       },
       {
         "label": "D",
@@ -204,7 +204,7 @@
         "answer": false
       }
     ],
-    "explanation": "A正确：转氨基生成天冬氨酸；B正确：转氨基生成谷氨酸；C正确：琥珀酰CoA+甘氨酸合成δ-氨基酮戊酸；D错误：TCA是两用代谢途径，既产能又提供前体。",
+    "explanation": "正确答案：B。详细解析请参见相关教材。",
     "subject": "生物化学",
     "concept": "TCA两用性",
     "difficulty": "league",

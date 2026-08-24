@@ -25,43 +25,37 @@
     "year": null,
     "module": "module_1"
   },
-  "M1-01-56bd8ae9e6e8": {
+  "M1-01-781947209f0f": {
     "tags": [
       "cell_structure",
       "module_1",
       "细胞生物学",
       "细胞适应性"
     ],
-    "diff": "high_school",
-    "len": 131,
-    "src": "cell_structure",
-    "year": null,
-    "module": "module_1"
+    "difficulty": "high_school",
+    "module": "module1",
+    "tag": "cell_structure"
   },
-  "M1-01-94458227cc8c": {
+  "M1-01-c528c2559d8e": {
     "tags": [
       "cell_structure",
       "module_1",
       "细胞生物学",
       "细胞类型"
     ],
-    "diff": "league",
-    "len": 105,
-    "src": "cell_structure",
-    "year": null,
-    "module": "module_1"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "cell_structure"
   },
-  "M1-01-d4cb0e4bb0cf": {
+  "M1-01-4498407c4f4a": {
     "tags": [
       "cell_structure",
       "module_1",
       "细胞生物学",
       "细胞学说"
     ],
-    "diff": "high_school",
-    "len": 101,
-    "src": "cell_structure",
-    "year": null,
-    "module": "module_1"
+    "difficulty": "high_school",
+    "module": "module1",
+    "tag": "cell_structure"
   }
 }

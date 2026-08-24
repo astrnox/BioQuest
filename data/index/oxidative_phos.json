@@ -1,67 +1,57 @@
 {
-  "M1-13-34476da6915f": {
+  "M1-13-f1a3f99da71e": {
     "tags": [
       "oxidative_phos",
       "module_1",
       "生物化学",
       "ETC"
     ],
-    "diff": "league",
-    "len": 88,
-    "src": "oxidative_phos",
-    "year": null,
-    "module": "module_1"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "oxidative_phos"
   },
-  "M1-13-a02f2814afb0": {
+  "M1-13-8d04b6ada7ed": {
     "tags": [
       "oxidative_phos",
       "module_1",
       "生物化学",
       "化学渗透"
     ],
-    "diff": "league",
-    "len": 90,
-    "src": "oxidative_phos",
-    "year": null,
-    "module": "module_1"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "oxidative_phos"
   },
-  "M1-13-fd32c5ddcfa0": {
+  "M1-13-d05d17c329ed": {
     "tags": [
       "oxidative_phos",
       "module_1",
       "生物化学",
       "ATP合酶"
     ],
-    "diff": "league",
-    "len": 89,
-    "src": "oxidative_phos",
-    "year": null,
-    "module": "module_1"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "oxidative_phos"
   },
-  "M1-13-b94736d1970d": {
+  "M1-13-30963a77a70a": {
     "tags": [
       "oxidative_phos",
       "module_1",
       "生物化学",
       "解偶联"
     ],
-    "diff": "league",
-    "len": 94,
-    "src": "oxidative_phos",
-    "year": null,
-    "module": "module_1"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "oxidative_phos"
   },
-  "M1-13-916f6fba06c4": {
+  "M1-13-25fc7ddd371f": {
     "tags": [
       "oxidative_phos",
       "module_1",
       "生物化学",
       "P/O"
     ],
-    "diff": "league",
-    "len": 99,
-    "src": "oxidative_phos",
-    "year": null,
-    "module": "module_1"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "oxidative_phos"
   }
 }

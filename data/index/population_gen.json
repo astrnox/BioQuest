@@ -1,55 +1,47 @@
 {
-  "M4-06-3a3863bd9919": {
+  "M4-06-83081ca5b016": {
     "tags": [
       "population_gen",
       "module_4",
       "遗传学",
       "群体遗传"
     ],
-    "diff": "high_school",
-    "len": 153,
-    "src": "population_gen",
-    "year": null,
-    "module": "module_4"
+    "difficulty": "high_school",
+    "module": "module1",
+    "tag": "population_gen"
   },
-  "M4-06-c873424bd787": {
+  "M4-06-8b84c6787228": {
     "tags": [
       "population_gen",
       "module_4",
       "遗传学",
       "群体遗传"
     ],
-    "diff": "league",
-    "len": 124,
-    "src": "population_gen",
-    "year": null,
-    "module": "module_4"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "population_gen"
   },
-  "M4-06-e02a5cb85449": {
+  "M4-06-7cb5055f03e6": {
     "tags": [
       "population_gen",
       "module_4",
       "遗传学",
       "群体遗传"
     ],
-    "diff": "league",
-    "len": 112,
-    "src": "population_gen",
-    "year": null,
-    "module": "module_4"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "population_gen"
   },
-  "M4-06-b5ade78f0dcb": {
+  "M4-06-4c31277a97b3": {
     "tags": [
       "population_gen",
       "module_4",
       "遗传学",
       "遗传负荷"
     ],
-    "diff": "league",
-    "len": 104,
-    "src": "population_gen",
-    "year": null,
-    "module": "module_4"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "population_gen"
   },
   "M4-06-0521f6793dee": {
     "tags": [

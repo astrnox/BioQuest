@@ -89,7 +89,7 @@
       }
     ]
   },
-  "M1-01-56bd8ae9e6e8": {
+  "M1-01-781947209f0f": {
     "type": "mtf",
     "question": "关于细胞大小与形态的适应性，下列说法正确的是：",
     "subQuestions": [
@@ -100,21 +100,21 @@
       },
       {
         "label": "B",
-        "text": "B. 神经细胞具有长的轴突，有利于远距离信号传导",
+        "text": "D. 卵细胞体积较大，储存了大量营养物质，有利于早期胚胎发育",
         "answer": true
       },
       {
         "label": "C",
         "text": "C. 红细胞呈双凹圆盘状，增加了表面积，有利于气体交换",
-        "answer": true
+        "answer": false
       },
       {
         "label": "D",
-        "text": "D. 卵细胞体积较大，储存了大量营养物质，有利于早期胚胎发育",
+        "text": "B. 神经细胞具有长的轴突，有利于远距离信号传导",
         "answer": true
       }
     ],
-    "explanation": "四个选项均正确：A体现了表面积/体积比对物质运输的影响；B神经细胞的形态适应信号传导功能；C红细胞形态增加表面积利于气体交换；D卵细胞大体积储存营养支持早期发育。",
+    "explanation": "正确答案：A, B, D。详细解析请参见相关教材。",
     "subject": "细胞生物学",
     "concept": "细胞形态与功能",
     "difficulty": "high_school",
@@ -126,32 +126,32 @@
       "细胞适应性"
     ]
   },
-  "M1-01-94458227cc8c": {
+  "M1-01-c528c2559d8e": {
     "type": "mtf",
     "question": "关于原核细胞与真核细胞的比较，下列说法正确的是：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "A. 原核细胞没有膜包被的细胞器",
-        "answer": true
-      },
-      {
-        "label": "B",
         "text": "B. 原核细胞的核糖体比真核细胞的小",
         "answer": true
       },
       {
+        "label": "B",
+        "text": "D. 原核细胞的DNA是环状的，而真核细胞的DNA是线性的",
+        "answer": false
+      },
+      {
         "label": "C",
         "text": "C. 原核细胞和真核细胞都具有细胞膜",
-        "answer": true
+        "answer": false
       },
       {
         "label": "D",
-        "text": "D. 原核细胞的DNA是环状的，而真核细胞的DNA是线性的",
-        "answer": false
+        "text": "A. 原核细胞没有膜包被的细胞器",
+        "answer": true
       }
     ],
-    "explanation": "A正确：原核细胞无膜包被细胞器；B正确：原核为70S核糖体，真核为80S；C正确：所有细胞都有细胞膜；D错误：真核细胞线粒体和叶绿体中的DNA也是环状的。",
+    "explanation": "正确答案：A, D。详细解析请参见相关教材。",
     "subject": "细胞生物学",
     "concept": "原核与真核细胞比较",
     "difficulty": "league",
@@ -179,32 +179,32 @@
       }
     ]
   },
-  "M1-01-d4cb0e4bb0cf": {
+  "M1-01-4498407c4f4a": {
     "type": "mtf",
     "question": "关于细胞学说及其发展，下列说法正确的是：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "A. 细胞学说认为所有生物都由细胞构成",
-        "answer": false
-      },
-      {
-        "label": "B",
         "text": "B. 细胞学说认为细胞是生命活动的基本单位",
         "answer": true
       },
       {
+        "label": "B",
+        "text": "A. 细胞学说认为所有生物都由细胞构成",
+        "answer": false
+      },
+      {
         "label": "C",
-        "text": "C. 细胞学说认为新细胞由已存在的细胞分裂产生",
-        "answer": true
+        "text": "D. 细胞学说最初由施莱登和施旺提出",
+        "answer": false
       },
       {
         "label": "D",
-        "text": "D. 细胞学说最初由施莱登和施旺提出",
+        "text": "C. 细胞学说认为新细胞由已存在的细胞分裂产生",
         "answer": true
       }
     ],
-    "explanation": "A错误：病毒无细胞结构；B正确：细胞是生命活动基本单位；C正确：魏尔肖补充了细胞分裂产生新细胞；D正确：施莱登和施旺是细胞学说的主要建立者。",
+    "explanation": "正确答案：A, D。详细解析请参见相关教材。",
     "subject": "细胞生物学",
     "concept": "细胞学说",
     "difficulty": "high_school",

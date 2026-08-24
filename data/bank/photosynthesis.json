@@ -37,14 +37,14 @@
     ],
     "references": []
   },
-  "M2-03-bcbb963ac4bb": {
+  "M2-03-e3a40b40e32c": {
     "type": "mtf",
     "question": "Calvin循环的特征包括：",
     "subQuestions": [
       {
         "label": "A",
         "text": "Calvin循环在叶绿体基质中进行",
-        "answer": true
+        "answer": false
       },
       {
         "label": "B",
@@ -54,15 +54,15 @@
       {
         "label": "C",
         "text": "每固定3分子CO2需要消耗9分子ATP和6分子NADPH",
-        "answer": true
+        "answer": false
       },
       {
         "label": "D",
         "text": "Calvin循环的直接产物是葡萄糖",
-        "answer": false
+        "answer": true
       }
     ],
-    "explanation": "A正确：Calvin循环在基质中进行。B正确：RuBisCO是Calvin循环的关键酶。C正确：固定3CO2需要9ATP和6NADPH。D错误：直接产物是G3P（3-磷酸甘油醛），不是葡萄糖。",
+    "explanation": "正确答案：B, D。详细解析请参见相关教材。",
     "subject": "植物生理学",
     "concept": "Calvin循环",
     "difficulty": "high_school",
@@ -128,7 +128,7 @@
       {
         "label": "A",
         "text": "环式磷酸化只涉及PSI，非环式涉及PSII和PSI",
-        "answer": true
+        "answer": false
       },
       {
         "label": "B",
@@ -146,7 +146,7 @@
         "answer": true
       }
     ],
-    "explanation": "A正确：环式只涉及PSI。B正确：环式只产ATP。C错误：非环式最终电子传递给NADP+，不是O2。D正确：环式电子循环使用。",
+    "explanation": "正确答案：B, D。详细解析请参见相关教材。",
     "subject": "植物生理学",
     "concept": "光合磷酸化",
     "difficulty": "league",
@@ -167,32 +167,32 @@
       }
     ]
   },
-  "M2-03-c5a5b2ed8918": {
+  "M2-03-069f184f0a24": {
     "type": "mtf",
     "question": "影响光合速率的环境因素包括：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "光照强度在一定范围内，光合速率随光强增加而增加",
-        "answer": true
-      },
-      {
-        "label": "B",
-        "text": "CO2浓度增加可以提高光合速率，但存在饱和点",
-        "answer": true
-      },
-      {
-        "label": "C",
         "text": "温度通过影响酶活性影响光合速率",
         "answer": true
       },
       {
-        "label": "D",
+        "label": "B",
+        "text": "光照强度在一定范围内，光合速率随光强增加而增加",
+        "answer": true
+      },
+      {
+        "label": "C",
         "text": "水分亏缺主要通过减少CO2供应影响光合",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "CO2浓度增加可以提高光合速率，但存在饱和点",
         "answer": false
       }
     ],
-    "explanation": "A正确：光强是光反应的限制因素。B正确：CO2是暗反应的底物。C正确：温度影响酶活性。D错误：水分亏缺主要通过气孔关闭减少CO2进入，但也影响代谢。",
+    "explanation": "正确答案：A, B, C。详细解析请参见相关教材。",
     "subject": "植物生理学",
     "concept": "光合影响因素",
     "difficulty": "high_school",

@@ -12,44 +12,38 @@
     "year": null,
     "module": "module_4"
   },
-  "M4-01-c634ffd22063": {
+  "M4-01-6f6db374bc12": {
     "tags": [
       "mendel",
       "module_4",
       "遗传学",
       "自由组合"
     ],
-    "diff": "league",
-    "len": 174,
-    "src": "mendel",
-    "year": null,
-    "module": "module_4"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "mendel"
   },
-  "M4-01-123ed1306c13": {
+  "M4-01-e0d988fa9e92": {
     "tags": [
       "mendel",
       "module_4",
       "遗传学",
       "显隐性"
     ],
-    "diff": "high_school",
-    "len": 115,
-    "src": "mendel",
-    "year": null,
-    "module": "module_4"
+    "difficulty": "high_school",
+    "module": "module1",
+    "tag": "mendel"
   },
-  "M4-01-6eefea0cf1f9": {
+  "M4-01-9efd9b5c3fb2": {
     "tags": [
       "mendel",
       "module_4",
       "遗传学",
       "测交"
     ],
-    "diff": "high_school",
-    "len": 126,
-    "src": "mendel",
-    "year": null,
-    "module": "module_4"
+    "difficulty": "high_school",
+    "module": "module1",
+    "tag": "mendel"
   },
   "M4-01-022d751ae6e4": {
     "tags": [

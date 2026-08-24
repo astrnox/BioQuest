@@ -1,17 +1,17 @@
 {
-  "M4-16-9093695beaa6": {
+  "M4-16-64a24e6c9aeb": {
     "type": "mtf",
     "question": "关于NCBI数据库，以下说法正确的有哪些？",
     "subQuestions": [
       {
         "label": "A",
         "text": "GenBank是NCBI维护的核酸序列数据库",
-        "answer": true
+        "answer": false
       },
       {
         "label": "B",
-        "text": "PubMed是生物医学文献摘要和引文数据库",
-        "answer": true
+        "text": "NCBI只存储核酸序列数据，不包含蛋白质数据",
+        "answer": false
       },
       {
         "label": "C",
@@ -20,11 +20,11 @@
       },
       {
         "label": "D",
-        "text": "NCBI只存储核酸序列数据，不包含蛋白质数据",
-        "answer": false
+        "text": "PubMed是生物医学文献摘要和引文数据库",
+        "answer": true
       }
     ],
-    "explanation": "A正确：GenBank是核酸数据库。B正确：PubMed文献库。C正确：BLAST在线使用。D错误：NCBI也包含蛋白质数据库（如RefSeq蛋白质）。",
+    "explanation": "正确答案：C, D。详细解析请参见相关教材。",
     "subject": "生物信息学",
     "concept": "NCBI数据库",
     "difficulty": "high_school",
@@ -37,32 +37,32 @@
     ],
     "references": []
   },
-  "M4-16-7ab8f351480e": {
+  "M4-16-91c7af652a30": {
     "type": "mtf",
     "question": "关于UniProt数据库，以下判断正确的有哪些？",
     "subQuestions": [
       {
         "label": "A",
         "text": "UniProt是全面的蛋白质序列和功能信息数据库",
-        "answer": true
+        "answer": false
       },
       {
         "label": "B",
-        "text": "UniProt由Swiss-Prot、TrEMBL和PIR组成",
+        "text": "TrEMBL中的蛋白质信息比Swiss-Prot更可靠",
         "answer": true
       },
       {
         "label": "C",
-        "text": "Swiss-Prot是手动注释和审核的蛋白质数据库",
-        "answer": true
+        "text": "UniProt由Swiss-Prot、TrEMBL和PIR组成",
+        "answer": false
       },
       {
         "label": "D",
-        "text": "TrEMBL中的蛋白质信息比Swiss-Prot更可靠",
-        "answer": false
+        "text": "Swiss-Prot是手动注释和审核的蛋白质数据库",
+        "answer": true
       }
     ],
-    "explanation": "A正确：UniProt定义。B正确：组成。C正确：Swiss-Prot手动注释。D错误：Swiss-Prot比TrEMBL更可靠（TrEMBL是自动注释）。",
+    "explanation": "正确答案：B, D。详细解析请参见相关教材。",
     "subject": "生物信息学",
     "concept": "UniProt数据库",
     "difficulty": "league",
@@ -83,32 +83,32 @@
       }
     ]
   },
-  "M4-16-5b3948ada363": {
+  "M4-16-00a8d3c1833d": {
     "type": "mtf",
     "question": "关于PDB数据库，以下说法正确的有哪些？",
     "subQuestions": [
       {
         "label": "A",
-        "text": "PDB（Protein Data Bank）存储蛋白质和核酸的三维结构数据",
-        "answer": true
+        "text": "RCSB PDB是美国维护的PDB镜像站点",
+        "answer": false
       },
       {
         "label": "B",
         "text": "PDB中的结构数据主要通过X射线晶体学、NMR和冷冻电镜获得",
-        "answer": true
+        "answer": false
       },
       {
         "label": "C",
-        "text": "RCSB PDB是美国维护的PDB镜像站点",
+        "text": "PDB（Protein Data Bank）存储蛋白质和核酸的三维结构数据",
         "answer": true
       },
       {
         "label": "D",
         "text": "PDB只存储蛋白质的结构，不包含核酸结构",
-        "answer": false
+        "answer": true
       }
     ],
-    "explanation": "A正确：PDB定义。B正确：实验方法。C正确：RCSB是美国站点。D错误：PDB也包含核酸和复合物结构。",
+    "explanation": "正确答案：C, D。详细解析请参见相关教材。",
     "subject": "生物信息学",
     "concept": "PDB数据库",
     "difficulty": "league",
@@ -136,7 +136,7 @@
       {
         "label": "A",
         "text": "Ensembl是真核生物基因组的自动注释数据库",
-        "answer": true
+        "answer": false
       },
       {
         "label": "B",
@@ -154,7 +154,7 @@
         "answer": true
       }
     ],
-    "explanation": "A正确：Ensembl定义。B正确：基因组浏览器。C错误：Ensembl注释多个真核物种。D正确：两者独立。",
+    "explanation": "正确答案：B, D。详细解析请参见相关教材。",
     "subject": "生物信息学",
     "concept": "Ensembl数据库",
     "difficulty": "league",
@@ -175,24 +175,24 @@
       }
     ]
   },
-  "M4-16-2f8084468c18": {
+  "M4-16-ea52355e1a7f": {
     "type": "mtf",
     "question": "关于生物数据格式，以下说法正确的有哪些？",
     "subQuestions": [
       {
         "label": "A",
-        "text": "FASTA格式是最简单的核酸和蛋白质序列格式",
+        "text": "GenBank格式包含序列信息和丰富的注释信息",
         "answer": true
       },
       {
         "label": "B",
-        "text": "GenBank格式包含序列信息和丰富的注释信息",
+        "text": "FASTA格式是最简单的核酸和蛋白质序列格式",
         "answer": true
       },
       {
         "label": "C",
         "text": "SAM/BAM格式用于存储测序reads与参考基因组的比对结果",
-        "answer": true
+        "answer": false
       },
       {
         "label": "D",
@@ -200,7 +200,7 @@
         "answer": true
       }
     ],
-    "explanation": "A正确：FASTA格式。B正确：GenBank格式。C正确：SAM/BAM比对格式。D正确：VCF变异格式。",
+    "explanation": "正确答案：A, B, D。详细解析请参见相关教材。",
     "subject": "生物信息学",
     "concept": "数据格式",
     "difficulty": "high_school",

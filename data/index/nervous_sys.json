@@ -1,55 +1,47 @@
 {
-  "M3-02-e596f33f2d8d": {
+  "M3-02-28a2be979ae6": {
     "tags": [
       "nervous_sys",
       "module_3",
       "动物生理学",
       "动作电位"
     ],
-    "diff": "league",
-    "len": 154,
-    "src": "nervous_sys",
-    "year": 1990,
-    "module": "module_3"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "nervous_sys"
   },
-  "M3-02-00ebeb101e4e": {
+  "M3-02-2ba08825458a": {
     "tags": [
       "nervous_sys",
       "module_3",
       "动物生理学",
       "突触传递"
     ],
-    "diff": "league",
-    "len": 158,
-    "src": "nervous_sys",
-    "year": 2008,
-    "module": "module_3"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "nervous_sys"
   },
-  "M3-02-7b699ed7cbee": {
+  "M3-02-b00d2fa3a45c": {
     "tags": [
       "nervous_sys",
       "module_3",
       "动物生理学",
       "神经系统组成"
     ],
-    "diff": "high_school",
-    "len": 155,
-    "src": "nervous_sys",
-    "year": null,
-    "module": "module_3"
+    "difficulty": "high_school",
+    "module": "module1",
+    "tag": "nervous_sys"
   },
-  "M3-02-3cb4850722e7": {
+  "M3-02-fb1f1466f4bf": {
     "tags": [
       "nervous_sys",
       "module_3",
       "动物生理学",
       "神经冲动传导"
     ],
-    "diff": "high_school",
-    "len": 145,
-    "src": "nervous_sys",
-    "year": null,
-    "module": "module_3"
+    "difficulty": "high_school",
+    "module": "module1",
+    "tag": "nervous_sys"
   },
   "M3-02-381192161499": {
     "tags": [

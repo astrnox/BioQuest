@@ -1,30 +1,30 @@
 {
-  "M2-06-0c030df1a561": {
+  "M2-06-1c105366ea3a": {
     "type": "mtf",
     "question": "关于被子植物的双受精过程，以下描述正确的是：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "双受精是指一个精子与卵细胞结合，另一个精子与极核结合",
+        "text": "两个精子分别与两个卵细胞结合",
         "answer": true
       },
       {
         "label": "B",
-        "text": "受精卵发育成胚，受精极核发育成胚乳",
+        "text": "双受精是指一个精子与卵细胞结合，另一个精子与极核结合",
         "answer": true
       },
       {
         "label": "C",
-        "text": "双受精是被子植物特有的受精方式",
-        "answer": true
+        "text": "受精卵发育成胚，受精极核发育成胚乳",
+        "answer": false
       },
       {
         "label": "D",
-        "text": "两个精子分别与两个卵细胞结合",
+        "text": "双受精是被子植物特有的受精方式",
         "answer": false
       }
     ],
-    "explanation": "A正确：双受精的定义。B正确：受精卵→胚，受精极核→胚乳。C正确：双受精是被子植物特有。D错误：是一个精子与卵细胞，另一个与极核。",
+    "explanation": "正确答案：A, B。详细解析请参见相关教材。",
     "subject": "植物学",
     "concept": "双受精",
     "difficulty": "high_school",
@@ -37,14 +37,14 @@
     ],
     "references": []
   },
-  "M2-06-a2141b12840e": {
+  "M2-06-908a9d3a4f15": {
     "type": "mtf",
     "question": "花粉发育的过程包括：",
     "subQuestions": [
       {
         "label": "A",
         "text": "小孢子母细胞经减数分裂形成四个小孢子",
-        "answer": true
+        "answer": false
       },
       {
         "label": "B",
@@ -53,16 +53,16 @@
       },
       {
         "label": "C",
-        "text": "成熟花粉粒含有两个细胞（营养细胞和生殖细胞）",
-        "answer": true
+        "text": "花粉粒的壁由花粉母细胞自身合成",
+        "answer": false
       },
       {
         "label": "D",
-        "text": "花粉粒的壁由花粉母细胞自身合成",
-        "answer": false
+        "text": "成熟花粉粒含有两个细胞（营养细胞和生殖细胞）",
+        "answer": true
       }
     ],
-    "explanation": "A正确：减数分裂产生小孢子。B正确：有丝分裂形成两细胞。C正确：成熟花粉含两细胞。D错误：花粉壁部分由花药壁细胞提供。",
+    "explanation": "正确答案：B, D。详细解析请参见相关教材。",
     "subject": "植物学",
     "concept": "花粉发育",
     "difficulty": "league",
@@ -83,14 +83,14 @@
       }
     ]
   },
-  "M2-06-63357d1b3555": {
+  "M2-06-eb7417da57c5": {
     "type": "mtf",
     "question": "胚囊发育的过程包括：",
     "subQuestions": [
       {
         "label": "A",
         "text": "大孢子母细胞经减数分裂形成四个大孢子",
-        "answer": true
+        "answer": false
       },
       {
         "label": "B",
@@ -100,7 +100,7 @@
       {
         "label": "C",
         "text": "成熟胚囊含有七个细胞八个核",
-        "answer": true
+        "answer": false
       },
       {
         "label": "D",
@@ -108,7 +108,7 @@
         "answer": false
       }
     ],
-    "explanation": "A正确：减数分裂产生四个大孢子。B正确：通常只有一个发育。C正确：7细胞8核是典型结构。D错误：卵细胞是经过多次有丝分裂和分化形成的。",
+    "explanation": "正确答案：B。详细解析请参见相关教材。",
     "subject": "植物学",
     "concept": "胚囊发育",
     "difficulty": "league",
@@ -129,32 +129,32 @@
       }
     ]
   },
-  "M2-06-6cde8cb41d48": {
+  "M2-06-e3c045ae5a04": {
     "type": "mtf",
     "question": "关于种子的形成和结构，以下说法正确的是：",
     "subQuestions": [
       {
         "label": "A",
         "text": "种子由种皮、胚和胚乳三部分组成",
-        "answer": true
+        "answer": false
       },
       {
         "label": "B",
         "text": "种皮由珠被发育而来",
-        "answer": true
+        "answer": false
       },
       {
         "label": "C",
-        "text": "胚由受精卵发育而来",
+        "text": "所有种子的胚乳都发达",
         "answer": true
       },
       {
         "label": "D",
-        "text": "所有种子的胚乳都发达",
-        "answer": false
+        "text": "胚由受精卵发育而来",
+        "answer": true
       }
     ],
-    "explanation": "A正确：种子的基本结构。B正确：种皮来源于珠被。C正确：胚来自受精卵。D错误：有些种子（如豆类）胚乳被吸收，子叶发达。",
+    "explanation": "正确答案：C, D。详细解析请参见相关教材。",
     "subject": "植物学",
     "concept": "种子结构",
     "difficulty": "high_school",
@@ -167,32 +167,32 @@
     ],
     "references": []
   },
-  "M2-06-8b4afee218b0": {
+  "M2-06-fd3b8d4ee320": {
     "type": "mtf",
     "question": "植物的世代交替包括：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "世代交替是指孢子体世代和配子体世代交替出现",
+        "text": "种子植物的配子体发达，孢子体退化",
         "answer": true
       },
       {
         "label": "B",
-        "text": "苔藓植物的配子体发达，孢子体寄生在配子体上",
+        "text": "世代交替是指孢子体世代和配子体世代交替出现",
         "answer": true
       },
       {
         "label": "C",
-        "text": "蕨类植物的孢子体发达，配子体独立生活",
-        "answer": true
+        "text": "苔藓植物的配子体发达，孢子体寄生在配子体上",
+        "answer": false
       },
       {
         "label": "D",
-        "text": "种子植物的配子体发达，孢子体退化",
+        "text": "蕨类植物的孢子体发达，配子体独立生活",
         "answer": false
       }
     ],
-    "explanation": "A正确：世代交替的定义。B正确：苔藓配子体发达。C正确：蕨类孢子体发达。D错误：种子植物孢子体发达，配子体极度退化。",
+    "explanation": "正确答案：A, B。详细解析请参见相关教材。",
     "subject": "植物学",
     "concept": "世代交替",
     "difficulty": "league",

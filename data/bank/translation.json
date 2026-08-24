@@ -1,30 +1,30 @@
 {
-  "M1-0B-36ac96c58aef": {
+  "M1-0B-bfe0dedf29b1": {
     "type": "mtf",
     "question": "关于核糖体的结构与功能，下列说法正确的是：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "A. 核糖体由大亚基和小亚基组成",
-        "answer": true
-      },
-      {
-        "label": "B",
         "text": "B. 原核生物核糖体为70S",
         "answer": true
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "C. 真核生物核糖体为80S",
         "answer": true
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "D. 核糖体是蛋白质合成的场所",
-        "answer": true
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "A. 核糖体由大亚基和小亚基组成",
+        "answer": false
       }
     ],
-    "explanation": "四个选项均正确：A核糖体由大小亚基组成；B原核为70S（50S+30S）；C真核为80S（60S+40S）；D核糖体是翻译场所。",
+    "explanation": "正确答案：A, B。详细解析请参见相关教材。",
     "subject": "分子生物学",
     "concept": "核糖体",
     "difficulty": "high_school",
@@ -36,32 +36,32 @@
       "核糖体"
     ]
   },
-  "M1-0B-e675f6bd4701": {
+  "M1-0B-ad5de112010f": {
     "type": "mtf",
     "question": "关于tRNA的结构与功能，下列说法正确的是：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "A. tRNA具有三叶草结构",
-        "answer": true
+        "text": "D. 每种氨基酸只有一种tRNA",
+        "answer": false
       },
       {
         "label": "B",
+        "text": "C. tRNA的反密码子识别mRNA的密码子",
+        "answer": false
+      },
+      {
+        "label": "C",
         "text": "B. tRNA的3'端结合氨基酸",
         "answer": true
       },
       {
-        "label": "C",
-        "text": "C. tRNA的反密码子识别mRNA的密码子",
-        "answer": true
-      },
-      {
         "label": "D",
-        "text": "D. 每种氨基酸只有一种tRNA",
-        "answer": false
+        "text": "A. tRNA具有三叶草结构",
+        "answer": true
       }
     ],
-    "explanation": "A正确：tRNA有三叶草二级结构；B正确：3'端CCA序列结合氨基酸；C正确：反密码子与密码子互补配对；D错误：由于摆动性，一种氨基酸可以有多种tRNA。",
+    "explanation": "正确答案：C, D。详细解析请参见相关教材。",
     "subject": "分子生物学",
     "concept": "tRNA",
     "difficulty": "high_school",
@@ -73,32 +73,32 @@
       "tRNA"
     ]
   },
-  "M1-0B-e13631187359": {
+  "M1-0B-f6378e8968ed": {
     "type": "mtf",
     "question": "关于密码子的特性，下列说法正确的是：",
     "subQuestions": [
       {
         "label": "A",
+        "text": "C. 起始密码子是AUG",
+        "answer": false
+      },
+      {
+        "label": "B",
         "text": "A. 密码子具有简并性",
         "answer": true
       },
       {
-        "label": "B",
-        "text": "B. 密码子是三联体",
-        "answer": true
-      },
-      {
         "label": "C",
-        "text": "C. 起始密码子是AUG",
-        "answer": true
+        "text": "D. 终止密码子编码氨基酸",
+        "answer": false
       },
       {
         "label": "D",
-        "text": "D. 终止密码子编码氨基酸",
-        "answer": false
+        "text": "B. 密码子是三联体",
+        "answer": true
       }
     ],
-    "explanation": "A正确：多个密码子可编码同一氨基酸；B正确：每3个碱基编码一个氨基酸；C正确：AUG编码甲硫氨酸并作为起始信号；D错误：终止密码子（UAA、UAG、UGA）不编码氨基酸。",
+    "explanation": "正确答案：B, D。详细解析请参见相关教材。",
     "subject": "分子生物学",
     "concept": "密码子",
     "difficulty": "high_school",
@@ -110,18 +110,18 @@
       "密码子"
     ]
   },
-  "M1-0B-1d2b900a9a19": {
+  "M1-0B-c15849f2a2a2": {
     "type": "mtf",
     "question": "关于摆动假说，下列说法正确的是：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "A. 密码子第三位碱基与反密码子第一位碱基配对不严格",
-        "answer": true
+        "text": "B. 摆动性可以减少所需tRNA的种类",
+        "answer": false
       },
       {
         "label": "B",
-        "text": "B. 摆动性可以减少所需tRNA的种类",
+        "text": "D. 摆动性发生在密码子的第一位",
         "answer": true
       },
       {
@@ -131,11 +131,11 @@
       },
       {
         "label": "D",
-        "text": "D. 摆动性发生在密码子的第一位",
+        "text": "A. 密码子第三位碱基与反密码子第一位碱基配对不严格",
         "answer": false
       }
     ],
-    "explanation": "A正确：Crick摆动假说认为第三位配对不严格；B正确：摆动性减少tRNA种类；C正确：I可以配对U、C、A；D错误：摆动发生在密码子第三位，反密码子第一位。",
+    "explanation": "正确答案：B, C。详细解析请参见相关教材。",
     "subject": "分子生物学",
     "concept": "摆动假说",
     "difficulty": "league",
@@ -163,32 +163,32 @@
       }
     ]
   },
-  "M1-0B-ef7a0c8e1552": {
+  "M1-0B-e752d7a8732f": {
     "type": "mtf",
     "question": "关于翻译的起始、延伸和终止，下列说法正确的是：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "A. 原核生物起始tRNA携带甲酰甲硫氨酸",
-        "answer": true
-      },
-      {
-        "label": "B",
-        "text": "B. 延伸因子EF-Tu携带氨酰-tRNA进入A位",
-        "answer": true
-      },
-      {
-        "label": "C",
         "text": "C. 肽酰转移酶活性由rRNA催化",
         "answer": true
       },
       {
+        "label": "B",
+        "text": "A. 原核生物起始tRNA携带甲酰甲硫氨酸",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "B. 延伸因子EF-Tu携带氨酰-tRNA进入A位",
+        "answer": false
+      },
+      {
         "label": "D",
         "text": "D. 终止密码子由tRNA识别",
-        "answer": false
+        "answer": true
       }
     ],
-    "explanation": "A正确：原核起始氨基酸为fMet；B正确：EF-Tu-GTP携带氨酰-tRNA；C正确：核糖体是核酶，23S rRNA催化肽键形成；D错误：终止密码子由释放因子识别，不是tRNA。",
+    "explanation": "正确答案：A, B, D。详细解析请参见相关教材。",
     "subject": "分子生物学",
     "concept": "翻译过程",
     "difficulty": "league",

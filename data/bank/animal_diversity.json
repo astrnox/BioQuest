@@ -1,12 +1,12 @@
 {
-  "M4-17-d8524cfebb53": {
+  "M4-17-c757860190d5": {
     "type": "mtf",
     "question": "关于动物体腔的演化，以下说法正确的有哪些？",
     "subQuestions": [
       {
         "label": "A",
-        "text": "无体腔动物（如扁形动物）体壁与消化道之间无空腔",
-        "answer": true
+        "text": "真体腔动物（如环节动物）体腔由中胚层包裹",
+        "answer": false
       },
       {
         "label": "B",
@@ -15,7 +15,7 @@
       },
       {
         "label": "C",
-        "text": "真体腔动物（如环节动物）体腔由中胚层包裹",
+        "text": "无体腔动物（如扁形动物）体壁与消化道之间无空腔",
         "answer": true
       },
       {
@@ -24,7 +24,7 @@
         "answer": false
       }
     ],
-    "explanation": "A正确：无体腔定义。B正确：假体腔定义。C正确：真体腔定义。D错误：低等动物无体腔。",
+    "explanation": "正确答案：B, C。详细解析请参见相关教材。",
     "subject": "动物分类学",
     "concept": "体腔演化",
     "difficulty": "high_school",
@@ -75,19 +75,19 @@
     ],
     "references": []
   },
-  "M4-17-be7cfc7c0299": {
+  "M4-17-c87ec690e2b5": {
     "type": "mtf",
     "question": "关于节肢动物的特征，以下说法正确的有哪些？",
     "subQuestions": [
       {
         "label": "A",
-        "text": "节肢动物具有分节的身体和外骨骼",
-        "answer": true
+        "text": "节肢动物是动物界中种类最多的门",
+        "answer": false
       },
       {
         "label": "B",
-        "text": "节肢动物的附肢分节，用于运动、摄食等不同功能",
-        "answer": true
+        "text": "节肢动物具有分节的身体和外骨骼",
+        "answer": false
       },
       {
         "label": "C",
@@ -96,11 +96,11 @@
       },
       {
         "label": "D",
-        "text": "节肢动物是动物界中种类最多的门",
-        "answer": true
+        "text": "节肢动物的附肢分节，用于运动、摄食等不同功能",
+        "answer": false
       }
     ],
-    "explanation": "A正确：分节和外骨骼。B正确：附肢分节。C正确：昆虫种类最多。D正确：节肢动物是最大门。",
+    "explanation": "正确答案：C。详细解析请参见相关教材。",
     "subject": "动物分类学",
     "concept": "节肢动物",
     "difficulty": "high_school",
@@ -113,7 +113,7 @@
     ],
     "references": []
   },
-  "M4-17-5e5d1da55924": {
+  "M4-17-e58bebc3f70f": {
     "type": "mtf",
     "question": "关于无脊椎动物到脊椎动物的演化趋势，以下判断正确的有哪些？",
     "subQuestions": [
@@ -124,21 +124,21 @@
       },
       {
         "label": "B",
-        "text": "从二胚层到三胚层",
-        "answer": true
+        "text": "从脊椎到无脊椎",
+        "answer": false
       },
       {
         "label": "C",
         "text": "从无体腔到有体腔",
-        "answer": true
+        "answer": false
       },
       {
         "label": "D",
-        "text": "从脊椎到无脊椎",
-        "answer": false
+        "text": "从二胚层到三胚层",
+        "answer": true
       }
     ],
-    "explanation": "A正确：辐射→两侧。B正确：二→三胚层。C正确：无→有体腔。D错误：是从无脊椎到有脊椎。",
+    "explanation": "正确答案：A, D。详细解析请参见相关教材。",
     "subject": "动物分类学",
     "concept": "演化趋势",
     "difficulty": "high_school",
@@ -151,7 +151,7 @@
     ],
     "references": []
   },
-  "M4-17-83793ef80608": {
+  "M4-17-e504324276e5": {
     "type": "mtf",
     "question": "关于主要无脊椎动物门类，以下说法正确的有哪些？",
     "subQuestions": [
@@ -162,21 +162,21 @@
       },
       {
         "label": "B",
-        "text": "腔肠动物（如海葵、水母）具有辐射对称和两胚层",
+        "text": "软体动物（如蜗牛、章鱼）具有柔软的身体，多数有贝壳",
         "answer": true
       },
       {
         "label": "C",
         "text": "扁形动物（如涡虫）具有两侧对称和三胚层，但无体腔",
-        "answer": true
+        "answer": false
       },
       {
         "label": "D",
-        "text": "软体动物（如蜗牛、章鱼）具有柔软的身体，多数有贝壳",
-        "answer": true
+        "text": "腔肠动物（如海葵、水母）具有辐射对称和两胚层",
+        "answer": false
       }
     ],
-    "explanation": "A正确：海绵原始。B正确：腔肠特征。C正确：扁形特征。D正确：软体特征。",
+    "explanation": "正确答案：A, B。详细解析请参见相关教材。",
     "subject": "动物分类学",
     "concept": "无脊椎动物门类",
     "difficulty": "league",

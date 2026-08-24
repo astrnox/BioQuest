@@ -83,14 +83,14 @@
     ],
     "references": []
   },
-  "M4-0d-fb93ef23719e": {
+  "M4-0d-876d066ba23c": {
     "type": "mtf",
     "question": "关于生命起源的化学演化假说，以下说法正确的有哪些？",
     "subQuestions": [
       {
         "label": "A",
         "text": "Miller-Urey实验证明在原始大气条件下可以合成有机小分子",
-        "answer": true
+        "answer": false
       },
       {
         "label": "B",
@@ -100,15 +100,15 @@
       {
         "label": "C",
         "text": "LUCA（最后共同祖先）被认为是所有现存生命的共同祖先",
-        "answer": true
+        "answer": false
       },
       {
         "label": "D",
         "text": "生命起源于外太空（胚种论）已被科学界广泛接受",
-        "answer": false
+        "answer": true
       }
     ],
-    "explanation": "A正确：Miller-Urey实验。B正确：RNA世界假说。C正确：LUCA概念。D错误：胚种论未被广泛接受，主流观点认为生命在地球起源。",
+    "explanation": "正确答案：B, D。详细解析请参见相关教材。",
     "subject": "演化生物学",
     "concept": "生命起源",
     "difficulty": "high_school",
@@ -121,24 +121,24 @@
     ],
     "references": []
   },
-  "M4-0d-f09b27f43ec9": {
+  "M4-0d-cde8ca5fdd81": {
     "type": "mtf",
     "question": "关于内共生学说，以下判断正确的有哪些？",
     "subQuestions": [
       {
         "label": "A",
-        "text": "内共生学说认为线粒体起源于被原始真核细胞吞噬的α-变形菌",
-        "answer": true
-      },
-      {
-        "label": "B",
         "text": "内共生学说认为叶绿体起源于被吞噬的蓝藻",
         "answer": true
       },
       {
+        "label": "B",
+        "text": "内共生学说认为线粒体起源于被原始真核细胞吞噬的α-变形菌",
+        "answer": false
+      },
+      {
         "label": "C",
         "text": "线粒体和叶绿体具有自己的DNA和双层膜结构，支持内共生学说",
-        "answer": true
+        "answer": false
       },
       {
         "label": "D",
@@ -146,7 +146,7 @@
         "answer": false
       }
     ],
-    "explanation": "A正确：线粒体起源于α-变形菌。B正确：叶绿体起源于蓝藻。C正确：这些是内共生的证据。D错误：内共生学说被广泛接受。",
+    "explanation": "正确答案：A。详细解析请参见相关教材。",
     "subject": "演化生物学",
     "concept": "内共生学说",
     "difficulty": "high_school",

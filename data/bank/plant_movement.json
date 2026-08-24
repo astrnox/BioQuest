@@ -1,30 +1,30 @@
 {
-  "M2-08-56fe3b08de2f": {
+  "M2-08-e6def1975466": {
     "type": "mtf",
     "question": "关于植物的向光性，以下描述正确的是：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "向光性是植物对单侧光的生长反应",
+        "text": "向光侧生长素浓度高于背光侧",
         "answer": true
       },
       {
         "label": "B",
         "text": "胚芽鞘尖端是感光部位",
-        "answer": true
+        "answer": false
       },
       {
         "label": "C",
         "text": "弯曲部位在胚芽鞘尖端下方",
-        "answer": true
+        "answer": false
       },
       {
         "label": "D",
-        "text": "向光侧生长素浓度高于背光侧",
-        "answer": false
+        "text": "向光性是植物对单侧光的生长反应",
+        "answer": true
       }
     ],
-    "explanation": "A正确：向光性的定义。B正确：尖端感光。C正确：尖端下方弯曲。D错误：背光侧浓度高。",
+    "explanation": "正确答案：A, D。详细解析请参见相关教材。",
     "subject": "植物学",
     "concept": "向光性",
     "difficulty": "high_school",
@@ -37,32 +37,32 @@
     ],
     "references": []
   },
-  "M2-08-54633f2b88d6": {
+  "M2-08-96f5a75e3727": {
     "type": "mtf",
     "question": "植物的向重力性包括：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "根的正向重力性有利于吸收水分和矿质",
-        "answer": true
-      },
-      {
-        "label": "B",
         "text": "茎的负向重力性有利于叶片接受光照",
         "answer": true
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "平衡石（淀粉体）是重力感知的关键",
         "answer": true
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "根冠不是根感知重力的部位",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "根的正向重力性有利于吸收水分和矿质",
         "answer": false
       }
     ],
-    "explanation": "A正确：正向重力性的意义。B正确：负向重力性的意义。C正确：淀粉体作为平衡石。D错误：根冠是感光部位。",
+    "explanation": "正确答案：A, B, C。详细解析请参见相关教材。",
     "subject": "植物学",
     "concept": "向重力性",
     "difficulty": "high_school",
@@ -75,32 +75,32 @@
     ],
     "references": []
   },
-  "M2-08-bbf6b8e7848a": {
+  "M2-08-066ab0314faa": {
     "type": "mtf",
     "question": "光周期现象的类型包括：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "短日照植物在日照短于临界日长时开花",
+        "text": "菊花是典型的长日照植物",
         "answer": true
       },
       {
         "label": "B",
+        "text": "日中性植物开花不受日照长度影响",
+        "answer": false
+      },
+      {
+        "label": "C",
         "text": "长日照植物在日照长于临界日长时开花",
         "answer": true
       },
       {
-        "label": "C",
-        "text": "日中性植物开花不受日照长度影响",
-        "answer": true
-      },
-      {
         "label": "D",
-        "text": "菊花是典型的长日照植物",
+        "text": "短日照植物在日照短于临界日长时开花",
         "answer": false
       }
     ],
-    "explanation": "A正确：短日照植物定义。B正确：长日照植物定义。C正确：日中性定义。D错误：菊花是短日照植物。",
+    "explanation": "正确答案：A, C。详细解析请参见相关教材。",
     "subject": "植物学",
     "concept": "光周期",
     "difficulty": "high_school",
@@ -113,32 +113,32 @@
     ],
     "references": []
   },
-  "M2-08-94c16d153ee9": {
+  "M2-08-b23271cc4b23": {
     "type": "mtf",
     "question": "光敏色素的特征包括：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "光敏色素存在Pr和Pfr两种可逆转形式",
-        "answer": true
+        "text": "Pfr是生理激活形式",
+        "answer": false
       },
       {
         "label": "B",
+        "text": "光敏色素只分布在叶片中",
+        "answer": false
+      },
+      {
+        "label": "C",
         "text": "Pr吸收红光转变为Pfr",
         "answer": true
       },
       {
-        "label": "C",
-        "text": "Pfr是生理激活形式",
-        "answer": true
-      },
-      {
         "label": "D",
-        "text": "光敏色素只分布在叶片中",
-        "answer": false
+        "text": "光敏色素存在Pr和Pfr两种可逆转形式",
+        "answer": true
       }
     ],
-    "explanation": "A正确：两种形式可逆转。B正确：红光使Pr→Pfr。C正确：Pfr是活性形式。D错误：光敏色素分布在多个部位。",
+    "explanation": "正确答案：C, D。详细解析请参见相关教材。",
     "subject": "植物学",
     "concept": "光敏色素",
     "difficulty": "league",
@@ -159,7 +159,7 @@
       }
     ]
   },
-  "M2-08-dfa84e1dd5eb": {
+  "M2-08-c0a23f67d8b2": {
     "type": "mtf",
     "question": "感性运动的特点包括：",
     "subQuestions": [
@@ -175,16 +175,16 @@
       },
       {
         "label": "C",
-        "text": "感性运动与生长无关，由膨压变化引起",
+        "text": "感性运动的方向与刺激方向有关",
         "answer": true
       },
       {
         "label": "D",
-        "text": "感性运动的方向与刺激方向有关",
-        "answer": false
+        "text": "感性运动与生长无关，由膨压变化引起",
+        "answer": true
       }
     ],
-    "explanation": "A正确：感性运动快速。B正确：含羞草是典型例子。C正确：膨压变化引起。D错误：感性运动方向与刺激方向无关。",
+    "explanation": "正确答案：A, B, C, D。详细解析请参见相关教材。",
     "subject": "植物学",
     "concept": "感性运动",
     "difficulty": "league",

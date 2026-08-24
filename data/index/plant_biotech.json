@@ -1,67 +1,57 @@
 {
-  "M4-0f-b4d316949aa9": {
+  "M4-0f-dbbfecea3932": {
     "tags": [
       "plant_biotech",
       "module_4",
       "生物技术",
       "植物组织培养"
     ],
-    "diff": "high_school",
-    "len": 109,
-    "src": "plant_biotech",
-    "year": null,
-    "module": "module_4"
+    "difficulty": "high_school",
+    "module": "module1",
+    "tag": "plant_biotech"
   },
-  "M4-0f-7e9c9bcc0168": {
+  "M4-0f-cc9b93574dde": {
     "tags": [
       "plant_biotech",
       "module_4",
       "生物技术",
       "农杆菌"
     ],
-    "diff": "league",
-    "len": 121,
-    "src": "plant_biotech",
-    "year": null,
-    "module": "module_4"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "plant_biotech"
   },
-  "M4-0f-5e302e89c551": {
+  "M4-0f-0aaa437a1d6b": {
     "tags": [
       "plant_biotech",
       "module_4",
       "生物技术",
       "转基因作物"
     ],
-    "diff": "high_school",
-    "len": 119,
-    "src": "plant_biotech",
-    "year": null,
-    "module": "module_4"
+    "difficulty": "high_school",
+    "module": "module1",
+    "tag": "plant_biotech"
   },
-  "M4-0f-287d84d78e80": {
+  "M4-0f-96c77ee4bf09": {
     "tags": [
       "plant_biotech",
       "module_4",
       "生物技术",
       "植物生物技术"
     ],
-    "diff": "league",
-    "len": 120,
-    "src": "plant_biotech",
-    "year": null,
-    "module": "module_4"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "plant_biotech"
   },
-  "M4-0f-06185657f493": {
+  "M4-0f-d1a63eca8e6f": {
     "tags": [
       "plant_biotech",
       "module_4",
       "生物技术",
       "筛选鉴定"
     ],
-    "diff": "league",
-    "len": 120,
-    "src": "plant_biotech",
-    "year": null,
-    "module": "module_4"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "plant_biotech"
   }
 }

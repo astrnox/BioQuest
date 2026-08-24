@@ -1,67 +1,57 @@
 {
-  "M1-04-6449035c17bd": {
+  "M1-04-4395913fa9af": {
     "tags": [
       "cell_cycle",
       "module_1",
       "细胞生物学",
       "细胞周期"
     ],
-    "diff": "high_school",
-    "len": 85,
-    "src": "cell_cycle",
-    "year": null,
-    "module": "module_1"
+    "difficulty": "high_school",
+    "module": "module1",
+    "tag": "cell_cycle"
   },
-  "M1-04-41b7a95d7a09": {
+  "M1-04-bb3447beee8e": {
     "tags": [
       "cell_cycle",
       "module_1",
       "细胞生物学",
       "细胞周期调控"
     ],
-    "diff": "league",
-    "len": 112,
-    "src": "cell_cycle",
-    "year": null,
-    "module": "module_1"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "cell_cycle"
   },
-  "M1-04-3733b99b94c3": {
+  "M1-04-58872bac7e82": {
     "tags": [
       "cell_cycle",
       "module_1",
       "细胞生物学",
       "检查点"
     ],
-    "diff": "league",
-    "len": 103,
-    "src": "cell_cycle",
-    "year": null,
-    "module": "module_1"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "cell_cycle"
   },
-  "M1-04-6912127ada2c": {
+  "M1-04-5de6d5a6b898": {
     "tags": [
       "cell_cycle",
       "module_1",
       "细胞生物学",
       "有丝分裂"
     ],
-    "diff": "high_school",
-    "len": 73,
-    "src": "cell_cycle",
-    "year": null,
-    "module": "module_1"
+    "difficulty": "high_school",
+    "module": "module1",
+    "tag": "cell_cycle"
   },
-  "M1-04-430c329db729": {
+  "M1-04-27e0ee38676e": {
     "tags": [
       "cell_cycle",
       "module_1",
       "细胞生物学",
       "癌细胞"
     ],
-    "diff": "high_school",
-    "len": 77,
-    "src": "cell_cycle",
-    "year": null,
-    "module": "module_1"
+    "difficulty": "high_school",
+    "module": "module1",
+    "tag": "cell_cycle"
   }
 }

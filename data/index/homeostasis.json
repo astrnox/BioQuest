@@ -12,56 +12,48 @@
     "year": null,
     "module": "module_3"
   },
-  "M3-07-da5056990123": {
+  "M3-07-598aeb4c7b15": {
     "tags": [
       "homeostasis",
       "module_3",
       "动物生理学",
       "血糖调节"
     ],
-    "diff": "high_school",
-    "len": 128,
-    "src": "homeostasis",
-    "year": null,
-    "module": "module_3"
+    "difficulty": "high_school",
+    "module": "module1",
+    "tag": "homeostasis"
   },
-  "M3-07-f67742c7479f": {
+  "M3-07-7dde19532930": {
     "tags": [
       "homeostasis",
       "module_3",
       "动物生理学",
       "酸碱平衡"
     ],
-    "diff": "league",
-    "len": 122,
-    "src": "homeostasis",
-    "year": 2010,
-    "module": "module_3"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "homeostasis"
   },
-  "M3-07-61a79ba8fb8c": {
+  "M3-07-70d9bf363f8b": {
     "tags": [
       "homeostasis",
       "module_3",
       "动物生理学",
       "水盐平衡"
     ],
-    "diff": "league",
-    "len": 122,
-    "src": "homeostasis",
-    "year": 2010,
-    "module": "module_3"
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "homeostasis"
   },
-  "M3-07-110106dbee50": {
+  "M3-07-d0d39aca9b54": {
     "tags": [
       "homeostasis",
       "module_3",
       "动物生理学",
       "反馈调节"
     ],
-    "diff": "high_school",
-    "len": 129,
-    "src": "homeostasis",
-    "year": null,
-    "module": "module_3"
+    "difficulty": "high_school",
+    "module": "module1",
+    "tag": "homeostasis"
   }
 }

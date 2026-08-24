@@ -38,18 +38,16 @@
     "year": null,
     "module": "module_4"
   },
-  "M4-02-9b2cac628b01": {
+  "M4-02-c84c6055f818": {
     "tags": [
       "linkage",
       "module_4",
       "遗传学",
       "连锁"
     ],
-    "diff": "high_school",
-    "len": 106,
-    "src": "linkage",
-    "year": null,
-    "module": "module_4"
+    "difficulty": "high_school",
+    "module": "module1",
+    "tag": "linkage"
   },
   "M4-02-64f3ccd360c7": {
     "tags": [

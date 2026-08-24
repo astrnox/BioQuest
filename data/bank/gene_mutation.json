@@ -91,19 +91,19 @@
       }
     ]
   },
-  "M4-04-f770d98aeca6": {
+  "M4-04-994238ceac4c": {
     "type": "mtf",
     "question": "关于Ames试验，以下说法正确的有哪些？",
     "subQuestions": [
       {
         "label": "A",
-        "text": "Ames试验利用鼠伤寒沙门氏菌组氨酸营养缺陷型菌株检测诱变剂",
-        "answer": true
+        "text": "Ames试验可以直接检测染色体变异",
+        "answer": false
       },
       {
         "label": "B",
         "text": "试验中需加入大鼠肝提取物（S9），以模拟哺乳动物代谢活化",
-        "answer": true
+        "answer": false
       },
       {
         "label": "C",
@@ -112,11 +112,11 @@
       },
       {
         "label": "D",
-        "text": "Ames试验可以直接检测染色体变异",
-        "answer": false
+        "text": "Ames试验利用鼠伤寒沙门氏菌组氨酸营养缺陷型菌株检测诱变剂",
+        "answer": true
       }
     ],
-    "explanation": "A正确：Ames试验使用his⁻菌株。B正确：S9提供代谢活化系统。C正确：回复突变菌落数与致突变性正相关。D错误：Ames试验检测的是基因突变（点突变），不能检测染色体变异。",
+    "explanation": "正确答案：C, D。详细解析请参见相关教材。",
     "subject": "遗传学",
     "concept": "Ames试验",
     "difficulty": "league",
@@ -137,32 +137,32 @@
       }
     ]
   },
-  "M4-04-c399db9a828f": {
+  "M4-04-a2d4eac5898e": {
     "type": "mtf",
     "question": "关于诱变剂，以下判断正确的有哪些？",
     "subQuestions": [
       {
         "label": "A",
-        "text": "紫外线属于物理诱变剂，主要引起嘧啶二聚体的形成",
-        "answer": true
+        "text": "亚硝酸是化学诱变剂，可引起碱基的脱氨基作用",
+        "answer": false
       },
       {
         "label": "B",
-        "text": "亚硝酸是化学诱变剂，可引起碱基的脱氨基作用",
-        "answer": true
-      },
-      {
-        "label": "C",
         "text": "嵌入染料（如溴化乙锭）可引起移码突变",
         "answer": true
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "自发突变率极低，因此在自然群体中不会积累",
         "answer": false
+      },
+      {
+        "label": "D",
+        "text": "紫外线属于物理诱变剂，主要引起嘧啶二聚体的形成",
+        "answer": true
       }
     ],
-    "explanation": "A正确：UV引起嘧啶二聚体。B正确：亚硝酸使C→U（脱氨基）。C正确：嵌入染料插入碱基对之间，复制时导致移码。D错误：虽然自发突变率低，但在大群体和长时间尺度下仍会积累，是进化的原材料。",
+    "explanation": "正确答案：B, D。详细解析请参见相关教材。",
     "subject": "遗传学",
     "concept": "诱变剂",
     "difficulty": "high_school",
@@ -175,14 +175,14 @@
     ],
     "references": []
   },
-  "M4-04-45648f112101": {
+  "M4-04-19667a175b7f": {
     "type": "mtf",
     "question": "关于基因突变的特点，以下说法正确的有哪些？",
     "subQuestions": [
       {
         "label": "A",
-        "text": "基因突变具有不定向性，可以产生复等位基因",
-        "answer": true
+        "text": "基因突变是生物变异的根本来源，为进化提供原材料",
+        "answer": false
       },
       {
         "label": "B",
@@ -191,16 +191,16 @@
       },
       {
         "label": "C",
-        "text": "基因突变是生物变异的根本来源，为进化提供原材料",
-        "answer": true
+        "text": "基因突变具有不定向性，可以产生复等位基因",
+        "answer": false
       },
       {
         "label": "D",
         "text": "所有基因突变都会导致生物体表型的改变",
-        "answer": false
+        "answer": true
       }
     ],
-    "explanation": "A正确：突变可产生多个等位基因。B正确：自然突变率通常很低。C正确：突变是变异的根本来源。D错误：同义突变、隐性突变在杂合子中等情况下不改变表型。",
+    "explanation": "正确答案：B, D。详细解析请参见相关教材。",
     "subject": "遗传学",
     "concept": "基因突变特点",
     "difficulty": "high_school",

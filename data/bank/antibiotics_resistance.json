@@ -1,12 +1,12 @@
 {
-  "M2-11-638624f552f6": {
+  "M2-11-1d598148e37c": {
     "type": "mtf",
     "question": "抗生素的作用机制包括：",
     "subQuestions": [
       {
         "label": "A",
         "text": "β-内酰胺类抑制细胞壁合成",
-        "answer": true
+        "answer": false
       },
       {
         "label": "B",
@@ -16,15 +16,15 @@
       {
         "label": "C",
         "text": "喹诺酮类抑制DNA复制",
-        "answer": true
+        "answer": false
       },
       {
         "label": "D",
         "text": "所有抗生素都作用于细胞壁",
-        "answer": false
+        "answer": true
       }
     ],
-    "explanation": "A正确：β-内酰胺类作用。B正确：氨基糖苷类作用。C正确：喹诺酮类作用。D错误：作用靶点多样。",
+    "explanation": "正确答案：B, D。详细解析请参见相关教材。",
     "subject": "微生物学",
     "concept": "抗生素机制",
     "difficulty": "high_school",
@@ -37,32 +37,32 @@
     ],
     "references": []
   },
-  "M2-11-399243abe106": {
+  "M2-11-64a861604826": {
     "type": "mtf",
     "question": "细菌耐药机制包括：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "产生灭活酶降解抗生素",
+        "text": "增强外排泵排出药物",
         "answer": true
       },
       {
         "label": "B",
-        "text": "改变药物靶点降低亲和力",
-        "answer": true
+        "text": "产生灭活酶降解抗生素",
+        "answer": false
       },
       {
         "label": "C",
-        "text": "增强外排泵排出药物",
+        "text": "改变药物靶点降低亲和力",
         "answer": true
       },
       {
         "label": "D",
         "text": "增加细胞壁通透性促进药物进入",
-        "answer": false
+        "answer": true
       }
     ],
-    "explanation": "A正确：灭活酶机制。B正确：靶点修饰。C正确：外排泵。D错误：降低通透性减少进入。",
+    "explanation": "正确答案：A, C, D。详细解析请参见相关教材。",
     "subject": "微生物学",
     "concept": "耐药机制",
     "difficulty": "league",
@@ -83,32 +83,32 @@
       }
     ]
   },
-  "M2-11-a19d8112c223": {
+  "M2-11-58374ab9361e": {
     "type": "mtf",
     "question": "MRSA的特征包括：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "MRSA是耐甲氧西林金黄色葡萄球菌",
-        "answer": true
+        "text": "MRSA耐药性与mecA基因有关",
+        "answer": false
       },
       {
         "label": "B",
-        "text": "MRSA对多种β-内酰胺类抗生素耐药",
-        "answer": true
+        "text": "MRSA只对医院环境造成威胁",
+        "answer": false
       },
       {
         "label": "C",
-        "text": "MRSA耐药性与mecA基因有关",
-        "answer": true
+        "text": "MRSA是耐甲氧西林金黄色葡萄球菌",
+        "answer": false
       },
       {
         "label": "D",
-        "text": "MRSA只对医院环境造成威胁",
-        "answer": false
+        "text": "MRSA对多种β-内酰胺类抗生素耐药",
+        "answer": true
       }
     ],
-    "explanation": "A正确：MRSA定义。B正确：多重耐药。C正确：mecA基因。D错误：社区也有MRSA。",
+    "explanation": "正确答案：D。详细解析请参见相关教材。",
     "subject": "微生物学",
     "concept": "MRSA",
     "difficulty": "league",
@@ -129,13 +129,13 @@
       }
     ]
   },
-  "M2-11-27df64a1edd6": {
+  "M2-11-bc8a9d151eed": {
     "type": "mtf",
     "question": "耐药基因水平传播的方式包括：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "质粒介导的接合传播",
+        "text": "噬菌体介导的转导",
         "answer": true
       },
       {
@@ -145,16 +145,16 @@
       },
       {
         "label": "C",
-        "text": "噬菌体介导的转导",
+        "text": "耐药基因只能通过垂直传播",
         "answer": true
       },
       {
         "label": "D",
-        "text": "耐药基因只能通过垂直传播",
-        "answer": false
+        "text": "质粒介导的接合传播",
+        "answer": true
       }
     ],
-    "explanation": "A正确：质粒接合。B正确：转座子。C正确：转导。D错误：水平传播很重要。",
+    "explanation": "正确答案：A, B, C, D。详细解析请参见相关教材。",
     "subject": "微生物学",
     "concept": "基因传播",
     "difficulty": "league",
@@ -175,32 +175,32 @@
       }
     ]
   },
-  "M2-11-5fc60c6a498d": {
+  "M2-11-e4d11645bf86": {
     "type": "mtf",
     "question": "抗生素滥用的后果包括：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "加速耐药菌株的出现和传播",
+        "text": "增加治疗难度和医疗费用",
         "answer": true
       },
       {
         "label": "B",
         "text": "破坏正常菌群平衡",
-        "answer": true
+        "answer": false
       },
       {
         "label": "C",
-        "text": "增加治疗难度和医疗费用",
-        "answer": true
+        "text": "抗生素对所有感染都有效",
+        "answer": false
       },
       {
         "label": "D",
-        "text": "抗生素对所有感染都有效",
-        "answer": false
+        "text": "加速耐药菌株的出现和传播",
+        "answer": true
       }
     ],
-    "explanation": "A正确：选择压力。B正确：菌群失调。C正确：治疗困难。D错误：抗生素对病毒无效。",
+    "explanation": "正确答案：A, D。详细解析请参见相关教材。",
     "subject": "微生物学",
     "concept": "抗生素滥用",
     "difficulty": "high_school",

@@ -1,5 +1,5 @@
 {
-  "M1-14-80171f5b9355": {
+  "M1-14-5c84248c3173": {
     "type": "mtf",
     "question": "关于脂肪酸β-氧化，下列说法正确的是：",
     "subQuestions": [
@@ -10,21 +10,21 @@
       },
       {
         "label": "B",
+        "text": "D. 脂肪酸活化消耗1个ATP",
+        "answer": false
+      },
+      {
+        "label": "C",
         "text": "B. β-氧化每次切下2个碳原子",
         "answer": true
       },
       {
-        "label": "C",
-        "text": "C. β-氧化产生乙酰CoA、NADH和FADH₂",
-        "answer": true
-      },
-      {
         "label": "D",
-        "text": "D. 脂肪酸活化消耗1个ATP",
+        "text": "C. β-氧化产生乙酰CoA、NADH和FADH₂",
         "answer": true
       }
     ],
-    "explanation": "四个选项均正确：A在线粒体基质；B每次β-氧化切下乙酰CoA（2C）；C四步反应产生1 FADH₂、1 NADH、1乙酰CoA；D脂肪酸→脂酰CoA消耗2个高能磷酸键（ATP→AMP+PPi）。",
+    "explanation": "正确答案：A, C, D。详细解析请参见相关教材。",
     "subject": "生物化学",
     "concept": "β-氧化",
     "difficulty": "high_school",
@@ -36,32 +36,32 @@
       "脂肪酸"
     ]
   },
-  "M1-14-9f73ccec84b7": {
+  "M1-14-74604b53a49f": {
     "type": "mtf",
     "question": "关于脂肪酸的活化与转运，下列说法正确的是：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "A. 脂肪酸在胞质中被活化为脂酰CoA",
+        "text": "D. 长链脂肪酸可以直接穿过线粒体内膜",
         "answer": true
       },
       {
         "label": "B",
+        "text": "A. 脂肪酸在胞质中被活化为脂酰CoA",
+        "answer": false
+      },
+      {
+        "label": "C",
         "text": "B. 脂酰CoA通过肉碱穿梭进入线粒体",
         "answer": true
       },
       {
-        "label": "C",
-        "text": "C. 肉碱脂酰转移酶I是限速酶",
-        "answer": true
-      },
-      {
         "label": "D",
-        "text": "D. 长链脂肪酸可以直接穿过线粒体内膜",
+        "text": "C. 肉碱脂酰转移酶I是限速酶",
         "answer": false
       }
     ],
-    "explanation": "A正确：脂酰CoA合成酶催化；B正确：肉碱-脂酰肉碱转位酶介导；C正确：CPT I受丙二酰CoA抑制；D错误：长链脂肪酸需要肉碱穿梭系统。",
+    "explanation": "正确答案：A, C。详细解析请参见相关教材。",
     "subject": "生物化学",
     "concept": "脂肪酸转运",
     "difficulty": "league",
@@ -89,24 +89,24 @@
       }
     ]
   },
-  "M1-14-92b782a786d1": {
+  "M1-14-f1c17b89113c": {
     "type": "mtf",
     "question": "关于脂肪酸合成，下列说法正确的是：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "A. 脂肪酸合成在胞质中进行",
-        "answer": true
-      },
-      {
-        "label": "B",
         "text": "B. 脂肪酸合酶复合体催化合成",
         "answer": true
       },
       {
+        "label": "B",
+        "text": "A. 脂肪酸合成在胞质中进行",
+        "answer": false
+      },
+      {
         "label": "C",
         "text": "C. 脂肪酸合成需要NADPH",
-        "answer": true
+        "answer": false
       },
       {
         "label": "D",
@@ -114,7 +114,7 @@
         "answer": true
       }
     ],
-    "explanation": "四个选项均正确：A胞质中进行；B FAS是多酶复合体；C NADPH提供还原力；D FAS合成到16C棕榈酸释放。",
+    "explanation": "正确答案：A, D。详细解析请参见相关教材。",
     "subject": "生物化学",
     "concept": "脂肪酸合成",
     "difficulty": "league",
@@ -195,13 +195,13 @@
       }
     ]
   },
-  "M1-14-4566722d5535": {
+  "M1-14-640a361e92d8": {
     "type": "mtf",
     "question": "关于胆固醇代谢，下列说法正确的是：",
     "subQuestions": [
       {
         "label": "A",
-        "text": "A. 胆固醇合成在胞质和内质网中进行",
+        "text": "C. 胆固醇可以转化为胆汁酸",
         "answer": true
       },
       {
@@ -211,8 +211,8 @@
       },
       {
         "label": "C",
-        "text": "C. 胆固醇可以转化为胆汁酸",
-        "answer": true
+        "text": "A. 胆固醇合成在胞质和内质网中进行",
+        "answer": false
       },
       {
         "label": "D",
@@ -220,7 +220,7 @@
         "answer": false
       }
     ],
-    "explanation": "A正确：胆固醇合成途径；B正确：HMG-CoA还原酶是主要调控点；C正确：胆汁酸是胆固醇主要去路；D错误：胆固醇不能转化为脂肪酸，乙酰CoA可以合成脂肪酸。",
+    "explanation": "正确答案：A, B。详细解析请参见相关教材。",
     "subject": "生物化学",
     "concept": "胆固醇",
     "difficulty": "league",
