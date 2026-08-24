@@ -66,7 +66,7 @@ _load_dotenv()
 
 NVIDIA_API_KEY = os.environ.get("NVIDIA_API_KEY", "")
 ZHIPU_API_KEY  = os.environ.get("ZHIPU_API_KEY", "")   # 修复 P0-2：可选 Zhipu，避免 NVIDIA 限流
-SUPABASE_URL   = os.environ.get("SUPABASE_URL", "https://pgkjpuowpxngmxjjlfil.supabase.co")
+SUPABASE_URL   = os.environ.get("SUPABASE_URL", "https://qxehkfucvmx.supabase.co")
 SUPABASE_KEY   = os.environ.get("SUPABASE_KEY", "")
 # Service Role Key：仅服务端使用，用于 Storage 上传等需要绕过 RLS 的场景（绝不暴露到前端）
 SUPABASE_SERVICE_ROLE_KEY = os.environ.get("SUPABASE_SERVICE_ROLE_KEY", "")

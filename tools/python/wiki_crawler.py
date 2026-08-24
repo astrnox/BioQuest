@@ -565,7 +565,7 @@ def write_seed(out_path: Path, entries):
     os.replace(tmp, out_path)
 
 
-SB_URL = os.environ.get("SUPABASE_URL", "https://pgkjpuowpxngmxjjlfil.supabase.co")
+SB_URL = os.environ.get("SUPABASE_URL", "https://qxehkfucvmx.supabase.co")
 
 
 def upload_to_supabase(entries, service_key: str, batch_size: int = 50) -> int:
