@@ -187,6 +187,120 @@
     });
   }
 
+  /* ============================================================
+   * Issue P1-16（#135）：AI 请求限流与去重
+   * ------------------------------------------------------------
+   * 1) 速率限制：相邻请求最小启动间隔（AI_MIN_INTERVAL_MS，默认
+   *    600ms ≈ 100 次/分钟），超出的请求自动排队而非直接拒绝；
+   * 2) 并发上限：同时在飞的 AI 请求最多 AI_MAX_CONCURRENT 个，
+   *    防止快速连点并发打爆配额；
+   * 3) 排队超时：等待超过 AI_QUEUE_TIMEOUT_MS 直接报错，不无限堆积；
+   * 4) 请求去重：同指纹（endpoint+body 哈希）的非流式请求在复用
+   *    窗口内共享同一 Promise，快速重复点击只发一次真实请求。
+   * 说明：流式请求（streamChat）因各调用方持有独立 onChunk 回调，
+   *    不做结果复用，但同样受速率限制与并发上限约束；
+   *    tutor/discussion 模块已有的"新请求 abort 旧请求"逻辑保持不变。
+   * ============================================================ */
+  var AI_MAX_CONCURRENT = 3;        // 同时在飞的 AI 请求上限
+  var AI_MIN_INTERVAL_MS = 600;     // 相邻请求最小启动间隔（滑动窗口节流）
+  var AI_QUEUE_TIMEOUT_MS = 15000;  // 排队等待上限（超时报错）
+  var AI_DEDUP_TTL_MS = 5000;       // 去重指纹复用窗口（请求发起后）
+  var AI_DEDUP_MAP_MAX = 64;        // 去重表容量上限（防内存无限增长）
+
+  var _aiQueue = [];                // 等待启动的请求队列
+  var _aiInFlight = 0;              // 在飞请求计数
+  var _aiLastStartAt = 0;           // 上一次请求启动时间戳
+  var _aiDedupMap = new Map();      // fingerprint -> { promise, ts }
+  var _aiDrainTimer = null;         // 节流排空定时器（去重）
+
+  function _hashString(s) {
+    var h = 5381;
+    for (var i = 0; i < s.length; i++) h = ((h << 5) + h + s.charCodeAt(i)) & 0xffffffff;
+    return (h >>> 0).toString(36);
+  }
+
+  /** 请求指纹：endpoint + 请求体哈希（非流式去重用） */
+  function _requestFingerprint(url, bodyObj) {
+    var bodyStr = '';
+    try { bodyStr = JSON.stringify(bodyObj); } catch (e) {}
+    return url + '#' + _hashString(bodyStr);
+  }
+
+  /**
+   * P1-16：统一的 AI 请求调度入口（限流 + 并发上限 + 排队 + 去重）。
+   * @param {Function} starter 无参函数，启动真实请求并返回 Promise
+   * @param {string|null} fingerprint 请求指纹（非 null 时启用并发去重）
+   * @returns {Promise}
+   */
+  function _scheduleAiRequest(starter, fingerprint) {
+    // 去重命中：同指纹请求仍在复用窗口内 → 共享同一 Promise
+    if (fingerprint) {
+      var hit = _aiDedupMap.get(fingerprint);
+      if (hit && (Date.now() - hit.ts) < AI_DEDUP_TTL_MS) return hit.promise;
+    }
+
+    var promise = new Promise(function (resolve, reject) {
+      _aiQueue.push({ starter: starter, resolve: resolve, reject: reject, enqueuedAt: Date.now() });
+      _drainAiQueue();
+    });
+
+    if (fingerprint) {
+      var entry = { promise: promise, ts: Date.now() };
+      _aiDedupMap.set(fingerprint, entry);
+      // 容量控制：超限时清掉最旧的过期项
+      if (_aiDedupMap.size > AI_DEDUP_MAP_MAX) {
+        var cutoff = Date.now() - AI_DEDUP_TTL_MS;
+        _aiDedupMap.forEach(function (v, k) { if (v.ts < cutoff) _aiDedupMap.delete(k); });
+      }
+      // 共享的 promise 附加空 catch，避免无人处理拒绝时触发全局告警
+      promise.catch(function () {});
+    }
+    return promise;
+  }
+
+  function _drainAiQueue() {
+    while (_aiQueue.length > 0) {
+      if (_aiInFlight >= AI_MAX_CONCURRENT) return;
+      // 最小启动间隔（滑动窗口节流）：未到间隔则定时后重试
+      var wait = AI_MIN_INTERVAL_MS - (Date.now() - _aiLastStartAt);
+      if (wait > 0) {
+        if (!_aiDrainTimer) {
+          _aiDrainTimer = setTimeout(function () {
+            _aiDrainTimer = null;
+            _drainAiQueue();
+          }, wait + 5);
+        }
+        return;
+      }
+      var job = _aiQueue.shift();
+      // 排队超时：还没启动就超时 → 拒绝并继续处理后续任务
+      if (Date.now() - job.enqueuedAt > AI_QUEUE_TIMEOUT_MS) {
+        job.reject(new Error('AI 请求排队超时（当前请求过多），请稍后重试'));
+        continue;
+      }
+      _aiInFlight++;
+      _aiLastStartAt = Date.now();
+      Promise.resolve()
+        .then(job.starter)
+        .then(job.resolve, job.reject)
+        .then(function () {
+          _aiInFlight--;
+          _drainAiQueue();
+        });
+    }
+  }
+
+  /** P1-16：调度器状态（供诊断/测试） */
+  function _schedulerStats() {
+    return {
+      inFlight: _aiInFlight,
+      queued: _aiQueue.length,
+      dedupEntries: _aiDedupMap.size,
+      maxConcurrent: AI_MAX_CONCURRENT,
+      minIntervalMs: AI_MIN_INTERVAL_MS
+    };
+  }
+
   // 加载用户配置（与 user.js 共享 localStorage key）
   // 统一规则（P0-1/S-001 修复，BYOK）：
   //   1) 用户在「我的 → 设置」配置的 Key 保存在页面内存，通过 _getApiKey() 读取；
@@ -439,29 +553,33 @@
       body.subject_id = METASO_SUBJECT_ID;
     }
 
-    return fetchWithRetry(url, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': 'Bearer ' + _getApiKey(),
-        'Accept': 'text/event-stream'
-      },
-      body: JSON.stringify(body),
-      signal: opts.signal
-    }).then(function (resp) {
-      if (!resp.ok) {
-        return resp.text().then(function (txt) {
-          throw new Error(_extractApiError(resp.status, txt));
-        });
-      }
-      incrementUsage();
-      return _pumpSse(resp, opts);
-    }).catch(function (err) {
-      if (err.name === 'AbortError') return;
-      // 流式失败 → 自动回退非流式
-      console.warn('[ai-client] 流式失败，回退非流式:', err.message);
-      _streamFallbackToChat(opts, cfg, model);
-    });
+    return _scheduleAiRequest(function () {
+      // P1-16：排队期间用户可能已中止（切换问题/停止生成）→ 静默结束
+      if (opts.signal && opts.signal.aborted) return Promise.resolve();
+      return fetchWithRetry(url, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer ' + _getApiKey(),
+          'Accept': 'text/event-stream'
+        },
+        body: JSON.stringify(body),
+        signal: opts.signal
+      }).then(function (resp) {
+        if (!resp.ok) {
+          return resp.text().then(function (txt) {
+            throw new Error(_extractApiError(resp.status, txt));
+          });
+        }
+        incrementUsage();
+        return _pumpSse(resp, opts);
+      }).catch(function (err) {
+        if (err.name === 'AbortError') return;
+        // 流式失败 → 自动回退非流式
+        console.warn('[ai-client] 流式失败，回退非流式:', err.message);
+        _streamFallbackToChat(opts, cfg, model);
+      });
+    }, null); // 流式请求各调用方持有独立回调，不做结果去重（仅限流）
   }
 
   // 流式失败时回退到非流式（Metaso 等API流式不稳定时使用）
@@ -535,27 +653,30 @@
         body.subject_id = METASO_SUBJECT_ID;
       }
 
-    return fetchWithRetry(url, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': 'Bearer ' + _getApiKey()
-      },
-      body: JSON.stringify(body),
-      signal: opts.signal
-    }).then(function (resp) {
-      if (!resp.ok) {
-        return resp.text().then(function (txt) {
-          throw new Error(_extractApiError(resp.status, txt));
-        });
-      }
-      incrementUsage();
-      return resp.json();
-    }).catch(function (err) {
-      if (err.name === 'AbortError') throw err;
-      // 纯前端项目无后端，直连失败直接抛错
-      throw err;
-    });
+    // P1-16：非流式请求走调度器（限流 + 并发上限 + 同指纹并发去重）
+    return _scheduleAiRequest(function () {
+      return fetchWithRetry(url, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer ' + _getApiKey()
+        },
+        body: JSON.stringify(body),
+        signal: opts.signal
+      }).then(function (resp) {
+        if (!resp.ok) {
+          return resp.text().then(function (txt) {
+            throw new Error(_extractApiError(resp.status, txt));
+          });
+        }
+        incrementUsage();
+        return resp.json();
+      }).catch(function (err) {
+        if (err.name === 'AbortError') throw err;
+        // 纯前端项目无后端，直连失败直接抛错
+        throw err;
+      });
+    }, _requestFingerprint(url, body));
   }
 
   // ====== SSE 解析（fetch + ReadableStream，兼容性强） ======
@@ -807,36 +928,40 @@
       stream: false
     });
 
-    return fetchWithRetry(url, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': 'Bearer ' + _getApiKey()
-      },
-      body: body,
-      signal: opts.signal
-    }).then(function (resp) {
-      if (!resp.ok) {
-        return resp.text().then(function (txt) {
-          throw new Error(_extractApiError(resp.status, txt));
-        });
-      }
-      incrementUsage();
-      return resp.json();
-    }).then(function (data) {
-      var text = '';
-      try {
-        text = data.choices[0].message.content || '';
-      } catch (e) {}
-      // 清理模型可能加的代码块包裹
-      text = text.replace(/^```[\w]*\n?/, '').replace(/\n?```$/, '').trim();
-      if (opts.onDone) opts.onDone(text);
-      return text;
-    }).catch(function (err) {
-      if (err.name === 'AbortError') return;
-      if (opts.onError) opts.onError(err);
-      throw err;
-    });
+    return _scheduleAiRequest(function () {
+      // P1-16：OCR 批量场景同样受速率限制/并发上限约束（防刷配额）
+      if (opts.signal && opts.signal.aborted) return Promise.resolve('');
+      return fetchWithRetry(url, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer ' + _getApiKey()
+        },
+        body: body,
+        signal: opts.signal
+      }).then(function (resp) {
+        if (!resp.ok) {
+          return resp.text().then(function (txt) {
+            throw new Error(_extractApiError(resp.status, txt));
+          });
+        }
+        incrementUsage();
+        return resp.json();
+      }).then(function (data) {
+        var text = '';
+        try {
+          text = data.choices[0].message.content || '';
+        } catch (e) {}
+        // 清理模型可能加的代码块包裹
+        text = text.replace(/^```[\w]*\n?/, '').replace(/\n?```$/, '').trim();
+        if (opts.onDone) opts.onDone(text);
+        return text;
+      }).catch(function (err) {
+        if (err.name === 'AbortError') return '';
+        if (opts.onError) opts.onError(err);
+        throw err;
+      });
+    }, null); // 图片 base64 体积大，不做指纹去重（仅限流）
   }
 
   // 检查当前配置是否支持视觉 OCR
@@ -1041,6 +1166,8 @@
     // v3.1 新增
     withRetry: withRetry,
     callByStage: callByStage,
+    // P1-16（Issue #135）新增：请求调度器诊断接口（限流/并发/去重状态）
+    schedulerStats: _schedulerStats,
     // 让调用方（tutor/discussion）直接用，不用每次 new AbortController
     createAbortSignal: function () {
       var ctrl = new AbortController();

@@ -1041,6 +1041,8 @@ function getQueryParams(url) {
  * 对来自 URL 的入参做白名单式校验与过滤：
  *   - 仅接受字符串
  *   - 剔除控制字符（含 \x00-\x1f、\x7f）与危险空白，防参数注入 / 控制字符污染渲染
+ *   - 剔除 HTML 标签定界符（< > 反引号），纵深防御：即使下游新增调用点
+ *     忘记 escapeHtml，也无法注入标记（引号保留给合法搜索词，由下游转义）
  *   - 限制最大长度，防超长参数滥用（刷接口 / 拖慢索引逻辑）
  * @param {*} value - 原始参数值
  * @param {number} [maxLen=100] - 允许的最大字符长度
@@ -1049,11 +1051,18 @@ function getQueryParams(url) {
 function sanitizeUrlParam(value, maxLen) {
   if (value == null || typeof value !== 'string') return null;
   // 剔除控制字符；保留正常空白、中文与可打印字符
-  const cleaned = value.replace(/[\u0000-\u001f\u007f]/g, '');
+  const cleaned = value
+    .replace(/[\u0000-\u001f\u007f]/g, '')
+    .replace(/[<>`]/g, '');
   if (!cleaned) return null;
   const limit = (typeof maxLen === 'number' && maxLen > 0) ? maxLen : 100;
   if (cleaned.length > limit) return null;
   return cleaned;
+}
+
+// Q-03：注册到 BioQuest 命名空间（各调用点统一走 window.BioQuest.sanitizeUrlParam）
+if (typeof window !== 'undefined') {
+  BioQuest.sanitizeUrlParam = sanitizeUrlParam;
 }
 
 /**

@@ -72,7 +72,9 @@ jobs:
           diff /tmp/shards-before.sha /tmp/shards-after.sha \
             || { echo "题库分片与生成器不一致：请运行 node scripts/generate-bio-shards.js 并提交结果"; exit 1; }
 
-      - name: 单元测试（IRT / FSRS）
+      - name: 单元测试（IRT / FSRS / 调度器 + 覆盖率门禁）
+        # #140/#141：--coverage 已并入 test:unit；低于 jest.config.cjs
+        # coverageThreshold 的任何指标都会使本步骤失败（防覆盖率回退）
         run: npm run test:unit
 
       - name: 烟雾测试（Wiki）
