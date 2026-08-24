@@ -144,20 +144,25 @@ Some notable ones:
 
 ## License
 
-This project is licensed under [CC BY-NC-SA 4.0](./LICENSE).
+This project — **both the code and the content** — is licensed under [CC BY-NC-SA 4.0](./LICENSE):
+
+- **Code**: `js/`, `css/`, `scripts/`, `*.html` structure, etc.
+- **Content**: `data/` question bank, `images/`, PDF study materials, encyclopedia entries, animations, etc.
 
 ### About the "non-commercial" clause
 
-In short: **as long as you're not selling the software itself, educational use is fine**:
+In short: **as long as you're not directly selling the software or its content itself, learning & educational use is fine**:
 
-✅ Students using it for their own study or tinkering  
-✅ Schools and tutoring centers using it for teaching (even if you charge tuition — you're selling a teaching *service*, not the software)  
+✅ Personal study and tweaking  
+✅ Schools, tutoring/extension centers using it for teaching (even if you charge tuition — you're selling a teaching *service*, not the software/content)  
 ✅ Non-profit education projects and education-aid initiatives  
-✅ Self-hosting for classmates or internal school use  
-❌ Repackaging BioQuest as a paid SaaS to make money  
-❌ Making changes without open-sourcing, removing the copyright, or claiming you wrote it
+✅ Internal deployment for classmates or school use  
+❌ Repackaging BioQuest or its question bank/content into a paid product, a paid SaaS, or a paid question bank for sale  
+❌ Removing the copyright or claiming you wrote it
 
-If you genuinely have a commercial use case (e.g. corporate training), contact the author — education-related licensing is generally granted free.
+### Commercial licensing
+
+The default license **prohibits commercial use**. Using this project or its **content (question bank, PDFs, animations, etc.)** for commercial purposes (e.g. corporate training, paid platforms / commercial SaaS, reselling the question bank) falls **outside** the default license and requires a separate **written commercial licensing agreement** with the copyright holder **astrnox** (reachable via GitHub Issues). Education / non-profit projects are generally granted the license free of charge.
 
 ---
 
