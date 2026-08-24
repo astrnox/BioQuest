@@ -6,7 +6,7 @@ if (!SVC_KEY) {
   console.error('ERROR: 请先设置环境变量 SUPABASE_SERVICE_ROLE_KEY');
   process.exit(1);
 }
-const SUPABASE_URL = 'https://qxehkfucvmx.supabase.co';
+const SUPABASE_URL = 'https://qxehkfucvmxuojjkdaqy.supabase.co';
 
 const sql = `
 INSERT INTO storage.buckets (id, name, public, file_size_limit, allowed_mime_types)

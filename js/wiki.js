@@ -26,7 +26,7 @@
   var SEED_URL = 'data/wiki-seed.json?v=20260812a';
 
   // Supabase 配置（匿名 key 公开，仅用于公开读取词条；表结构见 sql/wiki_entries.sql）
-  var SB_URL = 'https://qxehkfucvmx.supabase.co';
+  var SB_URL = 'https://qxehkfucvmxuojjkdaqy.supabase.co';
   var SB_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InF4ZWhrZnVjdm14dW9qamtkYXF5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODY2MjU2ODUsImV4cCI6MjEwMjIwMTY4NX0.lbiJxhFvy0t_J4qSeoP6K0r53M4KaEDSKkRlZu03ze8';
   var SB_TABLE = 'wiki_entries';
 

@@ -208,7 +208,7 @@ function renderQuestionsTab(container, questionsData) {
       const subsHtml = _renderSubQuestionsHtml(q.sub_questions || q.subQuestions);
       // Supabase 实时查看链接（按 id 拉取单题）
       const supaLink = q.id
-        ? `<a href="https://supabase.com/dashboard/project/qxehkfucvmx/editor/2920?filter=id%3Deq%3A${encodeURIComponent(q.id)}" target="_blank" rel="noopener" class="admin-q-tag" style="background:rgba(99,102,241,0.1);color:#6366f1;text-decoration:none;font-size:0.65rem;cursor:pointer;" title="在 Supabase 中查看">↗ Supabase</a>`
+        ? `<a href="https://supabase.com/dashboard/project/qxehkfucvmxuojjkdaqy/editor/2920?filter=id%3Deq%3A${encodeURIComponent(q.id)}" target="_blank" rel="noopener" class="admin-q-tag" style="background:rgba(99,102,241,0.1);color:#6366f1;text-decoration:none;font-size:0.65rem;cursor:pointer;" title="在 Supabase 中查看">↗ Supabase</a>`
         : '';
       html += `
         <div class="admin-q-card" data-question-id="${q.id}">

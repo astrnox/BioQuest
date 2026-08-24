@@ -17,7 +17,7 @@ BioQuest — 全量种子数据上传脚本（新 Supabase）
   python tools/python/upload_all_to_supabase.py [--questions-only] [--no-questions]
 
 环境变量（从项目根 .env 或环境读取）：
-  SUPABASE_URL                默认 https://qxehkfucvmx.supabase.co
+  SUPABASE_URL                默认 https://qxehkfucvmxuojjkdaqy.supabase.co
   SUPABASE_SERVICE_ROLE_KEY   必填（写入 .env，见 .env.example）
 """
 import json
@@ -40,7 +40,7 @@ if ENV_PATH.exists():
         k, v = line.split("=", 1)
         os.environ.setdefault(k.strip(), v.strip().strip("\"'"))
 
-SUPABASE_URL = os.environ.get("SUPABASE_URL", "https://qxehkfucvmx.supabase.co").rstrip("/")
+SUPABASE_URL = os.environ.get("SUPABASE_URL", "https://qxehkfucvmxuojjkdaqy.supabase.co").rstrip("/")
 SERVICE_KEY = os.environ.get("SUPABASE_SERVICE_ROLE_KEY", "")
 
 if not SERVICE_KEY:

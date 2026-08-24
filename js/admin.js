@@ -1165,7 +1165,7 @@ async function adminFetchRest(method, table, queryParams, body) {
       status: 401
     };
   }
-  var url = 'https://qxehkfucvmx.supabase.co/rest/v1/' + table + (queryParams ? '?' + queryParams : '');
+  var url = 'https://qxehkfucvmxuojjkdaqy.supabase.co/rest/v1/' + table + (queryParams ? '?' + queryParams : '');
   var anonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InF4ZWhrZnVjdm14dW9qamtkYXF5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODY2MjU2ODUsImV4cCI6MjEwMjIwMTY4NX0.lbiJxhFvy0t_J4qSeoP6K0r53M4KaEDSKkRlZu03ze8';
   var headers = {
     'apikey': anonKey,
@@ -1288,7 +1288,7 @@ async function handleAdminSupabaseCall(method, endpoint, body) {
           if (moduleMatch && moduleMatch[1]) {
             countParams += '&module=eq.' + encodeURIComponent(modVal);
           }
-          var countUrl = 'https://qxehkfucvmx.supabase.co/rest/v1/questions?' + countParams;
+          var countUrl = 'https://qxehkfucvmxuojjkdaqy.supabase.co/rest/v1/questions?' + countParams;
           var countResp = await fetch(countUrl, {
             method: 'GET',
             headers: {

@@ -1114,7 +1114,7 @@ function _loadModuleFromDBOrFetch(moduleNum, signal) {
 function _fetchFromSupabase(moduleNum, timeoutMs) {
   var sb = typeof window.getSupabase === 'function' ? window.getSupabase() : null;
   var SUPABASE_URL = typeof window.SUPABASE_URL !== 'undefined' ? window.SUPABASE_URL :
-    (sb && sb.supabaseUrl) || 'https://qxehkfucvmx.supabase.co';
+    (sb && sb.supabaseUrl) || 'https://qxehkfucvmxuojjkdaqy.supabase.co';
   var SUPABASE_ANON_KEY = typeof window.SUPABASE_ANON_KEY !== 'undefined' ? window.SUPABASE_ANON_KEY :
     (sb && sb.supabaseKey) || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InF4ZWhrZnVjdm14dW9qamtkYXF5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODY2MjU2ODUsImV4cCI6MjEwMjIwMTY4NX0.lbiJxhFvy0t_J4qSeoP6K0r53M4KaEDSKkRlZu03ze8';
 
@@ -1188,7 +1188,7 @@ function fetchQuestionsBatch(options) {
   options = options || {};
   var sb = typeof window.getSupabase === 'function' ? window.getSupabase() : null;
   var SUPABASE_URL = typeof window.SUPABASE_URL !== 'undefined' ? window.SUPABASE_URL :
-    (sb && sb.supabaseUrl) || 'https://qxehkfucvmx.supabase.co';
+    (sb && sb.supabaseUrl) || 'https://qxehkfucvmxuojjkdaqy.supabase.co';
   var SUPABASE_ANON_KEY = typeof window.SUPABASE_ANON_KEY !== 'undefined' ? window.SUPABASE_ANON_KEY :
     (sb && sb.supabaseKey) || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InF4ZWhrZnVjdm14dW9qamtkYXF5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODY2MjU2ODUsImV4cCI6MjEwMjIwMTY4NX0.lbiJxhFvy0t_J4qSeoP6K0r53M4KaEDSKkRlZu03ze8';
 
