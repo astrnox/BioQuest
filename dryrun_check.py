@@ -2,10 +2,10 @@
 """Dry-run 数据解析验证：不连网络，仅验证全部数据源能被正确解析为上传记录。"""
 import sys, json, importlib.util, re
 from pathlib import Path
-ROOT = Path("/workspace")
+ROOT = Path(__file__).resolve().parent  # 脚本位于项目根目录（跨平台）
 
 # 加载上传脚本模块（不执行 __main__）
-spec = importlib.util.spec_from_file_location("up", "/workspace/tools/python/upload_all_to_supabase.py")
+spec = importlib.util.spec_from_file_location("up", ROOT / "tools" / "python" / "upload_all_to_supabase.py")
 m = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(m)
 
