@@ -1,6 +1,8 @@
 {
   "rev": 3,
-  "updated_at": "2026-08-23",
+  "updated_at": "2026-08-24",
+  "repo": "astrnox/BioQuest",
+  "git": "6cc58414842bd7ad34d342024ffb1540580243db",
   "total_questions": 400,
   "topics": [
     {
