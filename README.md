@@ -11,7 +11,7 @@
 [🌐 在线 Demo](https://astrnox.github.io/BioQuest/) · [📝 开始刷题](https://astrnox.github.io/BioQuest/#/practice) · [💬 反馈问题](https://github.com/astrnox/BioQuest/issues)
 
 [![Platform](https://img.shields.io/badge/platform-Web-blue?style=flat-square)]()
-[![License](https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-green?style=flat-square)](./LICENSE)
+[![License: MPL 2.0](https://img.shields.io/badge/license-MPL--2.0-green?style=flat-square)](./LICENSE)
 [![Status](https://img.shields.io/badge/status-Active-success?style=flat-square)]()
 [![PWA](https://img.shields.io/badge/PWA-Supported-purple?style=flat-square)]()
 [![GitHub Stars](https://img.shields.io/github/stars/astrnox/BioQuest?style=flat-square)]()
@@ -146,20 +146,28 @@ finalEl.innerHTML = DOMPurify.sanitize(marked.parse(text));  // 完成后渲染
 
 ## 许可证
 
-本项目采用 [CC BY-NC-SA 4.0](./LICENSE)。
+本项目采用**双授权**：
 
-### 关于「非商业使用」的说明
+- **代码**（`js/`、`css/`、`scripts/`、`*.html` 结构等）：采用 [MPL-2.0](./LICENSE) 授权
+- **内容**（`data/` 题库、`images/`、PDF 教材、百科词条、动画等）：采用 [CC BY-NC-SA 4.0](./LICENSE-CONTENT) 授权
 
-简单说：**只要你不是卖这个软件本身，用于教育目的都可以**：
+### 代码（MPL-2.0）
 
-✅ 学生自己学习用、改着玩都没问题  
-✅ 学校、辅导班老师用来教学（哪怕收学费也没关系，你是在卖教学服务，不是卖这个软件）  
-✅ 公益教育项目、教育扶贫都可以用  
-✅ 自己搭了给同学/学校内部用没问题  
-❌ 把 BioQuest 包装成付费 SaaS 卖钱不行  
-❌ 改了不闭源、去掉版权说自己写的不行
+MPL-2.0 是弱 copyleft 协议：**允许修改与商用**，但修改过的文件（及其派生）需保留并以 MPL-2.0 开源；文件级边界，可与闭源项目一起分发。
 
-如果你真的有商业用途（比如企业培训），可以联系作者，教育相关的一般都免费给授权。
+### 内容（CC BY-NC-SA 4.0）——非商业使用说明
+
+**只要你不是在直接销售内容本身，用于学习与教育都可以**：
+
+✅ 个人学习、二次使用  
+✅ 学校 / 辅导班 / 培训机构用于教学（教学服务收费没问题，你卖的是教学服务，不是内容）  
+✅ 公益教育项目、教育扶贫  
+❌ 把题库/PDF/动画等内容直接打包售卖  
+❌ 移除版权、假冒原创
+
+### 内容商用授权
+
+内容默认**禁止商业用途**。若想将题库、PDF、动画等内容用于商业场景（企业培训、付费平台 / 商用 SaaS、批量售卖题库等），**不在默认授权范围内**，需与版权所有者 **astrnox** 单独签订《商业授权合同》（可通过 GitHub Issues 联系原作者）。教育 / 公益性项目一般可免费获得授权。
 
 ---
 

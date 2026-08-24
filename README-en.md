@@ -9,7 +9,7 @@
 [🇨🇳 中文版](./README.md) · [🌐 Live Demo](https://astrnox.github.io/BioQuest/) · [📝 Start Practicing](https://astrnox.github.io/BioQuest/#/practice) · [💬 Report an Issue](https://github.com/astrnox/BioQuest/issues)
 
 [![Platform](https://img.shields.io/badge/platform-Web-blue?style=flat-square)]()
-[![License](https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-green?style=flat-square)](./LICENSE)
+[![License: MPL 2.0](https://img.shields.io/badge/license-MPL--2.0-green?style=flat-square)](./LICENSE)
 [![Status](https://img.shields.io/badge/status-Active-success?style=flat-square)]()
 [![PWA](https://img.shields.io/badge/PWA-Supported-purple?style=flat-square)]()
 [![GitHub Stars](https://img.shields.io/github/stars/astrnox/BioQuest?style=flat-square)]()
@@ -144,20 +144,28 @@ Some notable ones:
 
 ## License
 
-This project is licensed under [CC BY-NC-SA 4.0](./LICENSE).
+This project is **dual-licensed**:
 
-### About the "non-commercial" clause
+- **Code** (`js/`, `css/`, `scripts/`, `*.html` structure, etc.): [MPL-2.0](./LICENSE)
+- **Content** (`data/` question bank, `images/`, PDF study materials, encyclopedia entries, animations, etc.): [CC BY-NC-SA 4.0](./LICENSE-CONTENT)
 
-In short: **as long as you're not selling the software itself, educational use is fine**:
+### Code (MPL-2.0)
 
-✅ Students using it for their own study or tinkering  
-✅ Schools and tutoring centers using it for teaching (even if you charge tuition — you're selling a teaching *service*, not the software)  
+MPL-2.0 is a weak copyleft license: **modification and commercial use are allowed**, but modified files (and their derivatives) must remain available under MPL-2.0; it is file-level and can be combined with closed-source projects.
+
+### Content (CC BY-NC-SA 4.0) — non-commercial clause
+
+**As long as you're not directly selling the content itself, learning & educational use is fine**:
+
+✅ Personal study and reuse  
+✅ Schools, tutoring/extension centers using it for teaching (even if you charge tuition — you're selling a teaching *service*, not the content)  
 ✅ Non-profit education projects and education-aid initiatives  
-✅ Self-hosting for classmates or internal school use  
-❌ Repackaging BioQuest as a paid SaaS to make money  
-❌ Making changes without open-sourcing, removing the copyright, or claiming you wrote it
+❌ Selling the question bank/PDFs/animations content directly  
+❌ Removing the copyright or claiming you wrote it
 
-If you genuinely have a commercial use case (e.g. corporate training), contact the author — education-related licensing is generally granted free.
+### Content commercial licensing
+
+Content is **not permitted for commercial use** by default. Using the question bank, PDFs, animations, etc. for commercial purposes (corporate training, paid platforms / commercial SaaS, reselling the question bank) falls **outside** the default license and requires a separate **written commercial licensing agreement** with the copyright holder **astrnox** (reachable via GitHub Issues). Education / non-profit projects are generally granted the license free of charge.
 
 ---
 
