@@ -1,386 +1,216 @@
 {
- "BQ-endocrine-76ed94663a05": {
-  "type": "multi_judge",
-  "question": "将正常蝌蚪置于含适量外源甲状腺激素的水体中培养，观察其变态发育进程及组织器官的形态变化。",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "外源激素显著加速尾部细胞凋亡，缩短变态发育所需时间。",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "该处理抑制促甲状腺激素释放，导致蝌蚪自身甲状腺萎缩退化。",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "高浓度甲状腺激素主要促进肢体生长，对鳃的退化无显著影响。",
-    "answer": false
-   },
-   {
-    "label": "D",
-    "text": "若同时加入甲状腺激素受体拮抗剂，可完全逆转外源激素的效应。",
-    "answer": false
-   }
-  ],
-  "explanation": "A 正确：甲状腺激素是两栖类变态发育的关键信号，能直接诱导尾部细胞程序性死亡（凋亡），加速变态。B 正确：依据负反馈调节机制，血液中高浓度甲状腺激素会抑制下丘脑和垂体分泌 TRH 和 TSH，导致自身甲状腺因缺乏 TSH 刺激而萎缩。C 错误：甲状腺激素不仅促进肢体生长，也是鳃退化、肠道缩短等幼体结构消失的必要信号，并非无影响。D 错误：虽然拮抗剂可阻断部分效应，但高浓度激素可能通过非基因组途径或其他旁路机制发挥作用，且‘完全逆转’过于绝对，生物学实验中很难做到完全可逆。",
-  "subject": "动物学与动物生理学",
-  "concept": "激素调节与变态发育",
-  "difficulty": "national",
-  "chart": null,
-  "year": null,
-  "module": "module_2",
-  "target": "competition",
-  "tags": [
-   "module_2",
-   "hard"
-  ],
-  "oldId": "1220904597"
- },
- "BQ-endocrine-4de8ee580c32": {
-  "stem": "15 的培养基，根系生长速度的变化情况是什么？如果将pH 5.8 的培养基换成pH 5.1 的培养基，根系生长速度\n的变化情况是什么？已知植物生长素（IAA）和油菜素甾醇（BR）均能促进植物根系生长，这两种激素中哪种\n能改变质外体的pH 值从而影响根系生长？以下描述中合理的是：",
-  "options": {
-   "A": "换成pH 6.15 的培养基后根系生长速度增强，换成pH 5.1 的培养基后根系生长速度降低，IAA 能调控质外 \n \n7/12 \n  体pH 值从而影响根系生长",
-   "B": "换成pH 6.15 的培养基后根系生长速度增强，换成pH 5.1 的培养基后根系生长速度降低，BR 能调控质外 \n  体pH 值从而影响根系生长",
-   "C": "换成pH 6.15 的培养基后根系生长速度降低，换成pH 5.1 的培养基后根系生长速度升高，IAA 能调控质外 \n  体pH 值从而影响根系生长",
-   "D": "换成pH 6.15 的培养基后根系生长速度降低，换成pH 5.1 的培养基后根系生长速度升高，BR 能调控质外 \n  体pH 值从而影响根系生长"
+  "M3-03-f6d373a25e1f": {
+    "type": "mtf",
+    "question": "关于下丘脑-垂体轴的调控机制，下列说法正确的有：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "下丘脑分泌的TRH通过垂体门脉系统到达腺垂体，促进TSH的合成与释放",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "甲状腺激素通过负反馈抑制下丘脑TRH和腺垂体TSH的分泌",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "神经垂体本身合成并储存抗利尿激素和催产素",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "下丘脑分泌的GHRH和生长抑素共同调节腺垂体GH的分泌",
+        "answer": true
+      }
+    ],
+    "explanation": "A正确：TRH经垂体门脉到达腺垂体刺激TSH分泌。B正确：T₃/T₄通过负反馈抑制TRH和TSH。C错误：ADH和催产素由下丘脑合成，经轴突运输至神经垂体储存释放，神经垂体本身不合成激素。D正确：GHRH促进GH释放，生长抑素抑制GH释放。",
+    "subject": "动物生理学",
+    "concept": "下丘脑-垂体轴",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "endocrine",
+      "module_3",
+      "动物生理学",
+      "下丘脑-垂体轴"
+    ],
+    "references": [
+      {
+        "doi": "10.1210/er.2010-0009",
+        "title": "The hypothalamic-pituitary axis",
+        "authors": "Guillemin R",
+        "year": 2010,
+        "journal": "Endocrine Reviews"
+      }
+    ]
   },
-  "answer": {
-   "A": false,
-   "B": true,
-   "C": false,
-   "D": false
+  "M3-03-d629fa35eecb": {
+    "type": "mtf",
+    "question": "关于含氮激素与类固醇激素的比较，下列说法正确的有：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "甲状腺激素属于类固醇激素，因为它含有碘元素",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "含氮激素通常与细胞膜表面受体结合，通过第二信使发挥作用",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "含氮激素的作用通常起效快但持续时间短，而类固醇激素起效慢但作用持久",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "类固醇激素为脂溶性，可穿过细胞膜与胞内受体结合，调节基因转录",
+        "answer": false
+      }
+    ],
+    "explanation": "正确答案：A, B。详细解析请参见相关教材。",
+    "subject": "动物生理学",
+    "concept": "激素分类与作用机制",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "endocrine",
+      "module_3",
+      "动物生理学",
+      "激素分类"
+    ],
+    "references": []
   },
-  "analysis": "正确答案：B",
-  "knowledge": [
-   "module_3",
-   "动物学"
-  ],
-  "module": "module_3",
-  "difficulty": "league",
-  "target": "competition",
-  "subject": "动物学",
-  "concept": "内分泌系统",
-  "tags": [
-   "module_3",
-   "动物学",
-   "内分泌系统",
-   "league",
-   "competition",
-   "https://www.czs.org.cn/swjs/lsstxz/art/2024/art_f5fe44f36762455fb9f8f99b9e0bf2e2.html",
-   "2024"
-  ],
-  "weight": 1,
-  "fb_good": 0,
-  "fb_bad": 0,
-  "created_at": 1782028590.0662682,
-  "source": "https://www.czs.org.cn/swjs/lsstxz/art/2024/art_f5fe44f36762455fb9f8f99b9e0bf2e2.html",
-  "year": 2024,
-  "_analysis_sparse": true,
-  "_review_reason": "解析为 AI 引导提示，待人工补充详细解析",
-  "type": "multi_judge",
-  "question": "15 的培养基，根系生长速度的变化情况是什么？如果将pH 5.8 的培养基换成pH 5.1 的培养基，根系生长速度\n的变化情况是什么？已知植物生长素（IAA）和油菜素甾醇（BR）均能促进植物根系生长，这两种激素中哪种\n能改变质外体的pH 值从而影响根系生长？以下描述中合理的是：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "换成pH 6.15 的培养基后根系生长速度增强，换成pH 5.1 的培养基后根系生长速度降低，IAA 能调控质外 \n \n7/12 \n  体pH 值从而影响根系生长",
-    "answer": false
-   },
-   {
-    "label": "B",
-    "text": "换成pH 6.15 的培养基后根系生长速度增强，换成pH 5.1 的培养基后根系生长速度降低，BR 能调控质外 \n  体pH 值从而影响根系生长",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "换成pH 6.15 的培养基后根系生长速度降低，换成pH 5.1 的培养基后根系生长速度升高，IAA 能调控质外 \n  体pH 值从而影响根系生长",
-    "answer": false
-   },
-   {
-    "label": "D",
-    "text": "换成pH 6.15 的培养基后根系生长速度降低，换成pH 5.1 的培养基后根系生长速度升高，BR 能调控质外 \n  体pH 值从而影响根系生长",
-    "answer": false
-   }
-  ],
-  "explanation": "正确答案：B",
-  "chart": null,
-  "oldId": "crawled_1782028590066_1164"
- },
- "BQ-endocrine-cf48f61d36a0": {
-  "stem": "下列有关昆虫激素的说法中正确的有（多选）：",
-  "options": {
-   "A": "脑神经分泌细胞分泌促蜕皮激素，可沿神经细胞轴突输送到心侧体；",
-   "B": "心侧体的功能是储存促蜕皮激素，并分泌蜕皮激素到血液中；",
-   "C": "咽侧体有神经与脑和前胸腺相连，分泌保幼激素；",
-   "D": "前胸腺分泌蜕皮激素，能引起上皮细胞分泌新的表皮而开始蜕皮过程。 \n 7 / 12"
+  "M3-03-35e2b3d4f2f1": {
+    "type": "mtf",
+    "question": "关于血糖调节的激素机制，下列说法正确的有：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "胰岛素通过促进GLUT4转位至细胞膜，增加肌肉和脂肪细胞对葡萄糖的摄取",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "胰高血糖素主要作用于肌肉细胞，促进肌糖原分解以升高血糖",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "胰岛素信号通过受体酪氨酸激酶途径传导，激活PI3K-Akt通路",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "胰高血糖素主要通过促进肝糖原分解和糖异生来升高血糖",
+        "answer": false
+      }
+    ],
+    "explanation": "正确答案：A, C。详细解析请参见相关教材。",
+    "subject": "动物生理学",
+    "concept": "血糖调节",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "endocrine",
+      "module_3",
+      "动物生理学",
+      "血糖调节"
+    ],
+    "references": [
+      {
+        "doi": "10.1016/S0092-8674(01)00313-1",
+        "title": "Insulin signaling and action",
+        "authors": "Saltiel AR, Kahn CR",
+        "year": 2001,
+        "journal": "Nature"
+      }
+    ]
   },
-  "answer": {
-   "A": true,
-   "B": false,
-   "C": false,
-   "D": true
+  "M3-03-7e598b657aae": {
+    "type": "mtf",
+    "question": "关于肾上腺的结构与功能，下列说法正确的有：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "醛固酮属于糖皮质激素，主要功能是升高血糖",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "肾上腺髓质嗜铬细胞分泌肾上腺素和去甲肾上腺素，属于交感-肾上腺髓质系统",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "糖皮质激素的分泌受ACTH调控，构成HPA轴（下丘脑-垂体-肾上腺轴）",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "肾上腺皮质由外向内分为球状带、束状带和网状带，分别分泌盐皮质激素、糖皮质激素和性激素",
+        "answer": true
+      }
+    ],
+    "explanation": "正确答案：A, D。详细解析请参见相关教材。",
+    "subject": "动物生理学",
+    "concept": "肾上腺功能",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "endocrine",
+      "module_3",
+      "动物生理学",
+      "肾上腺"
+    ],
+    "references": []
   },
-  "analysis": "正确答案：AD",
-  "knowledge": [
-   "module_3",
-   "动物学"
-  ],
-  "module": "module_3",
-  "difficulty": "league",
-  "target": "competition",
-  "subject": "动物学",
-  "concept": "内分泌系统",
-  "tags": [
-   "module_3",
-   "动物学",
-   "内分泌系统",
-   "league",
-   "competition",
-   "http://www.botany.org.cn/swxjs/swxls/202405/t20240521_586284.html",
-   "2024"
-  ],
-  "weight": 1,
-  "fb_good": 0,
-  "fb_bad": 0,
-  "created_at": 1782028635.384555,
-  "source": "http://www.botany.org.cn/swxjs/swxls/202405/t20240521_586284.html",
-  "year": 2024,
-  "_analysis_sparse": true,
-  "_review_reason": "解析为 AI 引导提示，待人工补充详细解析",
-  "type": "multi_judge",
-  "question": "下列有关昆虫激素的说法中正确的有（多选）：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "脑神经分泌细胞分泌促蜕皮激素，可沿神经细胞轴突输送到心侧体；",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "心侧体的功能是储存促蜕皮激素，并分泌蜕皮激素到血液中；",
-    "answer": false
-   },
-   {
-    "label": "C",
-    "text": "咽侧体有神经与脑和前胸腺相连，分泌保幼激素；",
-    "answer": false
-   },
-   {
-    "label": "D",
-    "text": "前胸腺分泌蜕皮激素，能引起上皮细胞分泌新的表皮而开始蜕皮过程。 \n 7 / 12",
-    "answer": true
-   }
-  ],
-  "explanation": "正确答案：AD",
-  "chart": null,
-  "oldId": "crawled_1782028635384_5464"
- },
- "BQ-endocrine-3334aa31d36c": {
-  "stem": "刚成熟的种子处于休眠状态。请判断种子在成熟过程中，下列两种激素的变化趋势是：",
-  "options": {
-   "A": "脱落酸升高、赤霉素升高",
-   "B": "脱落酸降低、赤霉素升高",
-   "C": "脱落酸升高、赤霉素降低",
-   "D": "脱落酸降低、赤霉素降低"
-  },
-  "answer": {
-   "A": false,
-   "B": false,
-   "C": true,
-   "D": false
-  },
-  "analysis": "正确答案：C",
-  "knowledge": [
-   "module_3",
-   "动物学"
-  ],
-  "module": "module_3",
-  "difficulty": "league",
-  "target": "competition",
-  "subject": "动物学",
-  "concept": "内分泌系统",
-  "tags": [
-   "module_3",
-   "动物学",
-   "内分泌系统",
-   "league",
-   "competition",
-   "https://www.czs.org.cn/swjs/lsstxz/art/2024/art_f5fe44f36762455fb9f8f99b9e0bf2e2.html",
-   "2024"
-  ],
-  "weight": 1,
-  "fb_good": 0,
-  "fb_bad": 0,
-  "created_at": 1782028590.0652373,
-  "source": "https://www.czs.org.cn/swjs/lsstxz/art/2024/art_f5fe44f36762455fb9f8f99b9e0bf2e2.html",
-  "year": 2024,
-  "_analysis_sparse": true,
-  "_review_reason": "解析为 AI 引导提示，待人工补充详细解析",
-  "type": "multi_judge",
-  "question": "刚成熟的种子处于休眠状态。请判断种子在成熟过程中，下列两种激素的变化趋势是：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "脱落酸升高、赤霉素升高",
-    "answer": false
-   },
-   {
-    "label": "B",
-    "text": "脱落酸降低、赤霉素升高",
-    "answer": false
-   },
-   {
-    "label": "C",
-    "text": "脱落酸升高、赤霉素降低",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "脱落酸降低、赤霉素降低",
-    "answer": false
-   }
-  ],
-  "explanation": "正确答案：C",
-  "chart": null,
-  "oldId": "crawled_1782028590065_8818"
- },
- "BQ-endocrine-bd4a2300e22f": {
-  "stem": "判断下列有关哺乳动物内分泌系统描述的正确与错误。",
-  "options": {
-   "A": "腺垂体来源于间脑底部向下的突出，神经垂体来源于原始口腔顶部的突出；",
-   "B": "神经垂体可分泌催产素，具有催产和乳腺排乳的作用；",
-   "C": "腺垂体可分泌促卵泡激素，能促进雌兽卵巢中卵泡的加速成熟；",
-   "D": "腺垂体可分泌促性腺激素，作用于雌兽乳腺分泌催乳激素。"
-  },
-  "answer": {
-   "A": true,
-   "B": false,
-   "C": false,
-   "D": false
-  },
-  "analysis": "正确答案：A。详细解析请通过 AI 导师获取（在 AI 对话中粘贴本题题干即可）。",
-  "knowledge": [
-   "module_3",
-   "动物学"
-  ],
-  "module": "module_3",
-  "difficulty": "league",
-  "target": "competition",
-  "subject": "动物学",
-  "concept": "内分泌系统",
-  "tags": [
-   "module_3",
-   "动物学",
-   "内分泌系统",
-   "league",
-   "competition",
-   "http://www.botany.org.cn/swxjs/swxls/202605/t20260518_838211.html",
-   "2026"
-  ],
-  "weight": 1,
-  "fb_good": 0,
-  "fb_bad": 0,
-  "created_at": 1782028626.8278515,
-  "source": "http://www.botany.org.cn/swxjs/swxls/202605/t20260518_838211.html",
-  "year": 2026,
-  "_analysis_sparse": true,
-  "_review_reason": "解析为 AI 引导提示，待人工补充详细解析",
-  "type": "multi_judge",
-  "question": "判断下列有关哺乳动物内分泌系统描述的正确与错误。",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "腺垂体来源于间脑底部向下的突出，神经垂体来源于原始口腔顶部的突出；",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "神经垂体可分泌催产素，具有催产和乳腺排乳的作用；",
-    "answer": false
-   },
-   {
-    "label": "C",
-    "text": "腺垂体可分泌促卵泡激素，能促进雌兽卵巢中卵泡的加速成熟；",
-    "answer": false
-   },
-   {
-    "label": "D",
-    "text": "腺垂体可分泌促性腺激素，作用于雌兽乳腺分泌催乳激素。",
-    "answer": false
-   }
-  ],
-  "explanation": "正确答案：A。详细解析请通过 AI 导师获取（在 AI 对话中粘贴本题题干即可）。",
-  "chart": null,
-  "oldId": "crawled_1782028626827_0392"
- },
- "BQ-endocrine-d69fe69a198d": {
-  "stem": "植物激素间的平衡在维持和打破芽休眠中起调控作用，其中起主要作用的是：\n（单选）",
-  "options": {
-   "A": "IAA 与GA",
-   "B": "CTK 与GA",
-   "C": "GA 与Eth",
-   "D": "ABA 与GA"
-  },
-  "answer": {
-   "A": false,
-   "B": false,
-   "C": false,
-   "D": true
-  },
-  "analysis": "正确答案：D",
-  "knowledge": [
-   "module_3",
-   "动物学"
-  ],
-  "module": "module_3",
-  "difficulty": "league",
-  "target": "competition",
-  "subject": "动物学",
-  "concept": "内分泌系统",
-  "tags": [
-   "module_3",
-   "动物学",
-   "内分泌系统",
-   "league",
-   "competition",
-   "https://www.czs.org.cn/swjs/lsstxz/art/2015/art_1c13e648d84d4e38b94e2dfd5e5b1b0b.html",
-   "2015"
-  ],
-  "weight": 1,
-  "fb_good": 0,
-  "fb_bad": 0,
-  "created_at": 1782028584.5795977,
-  "source": "https://www.czs.org.cn/swjs/lsstxz/art/2015/art_1c13e648d84d4e38b94e2dfd5e5b1b0b.html",
-  "year": 2015,
-  "_analysis_sparse": true,
-  "_review_reason": "解析为 AI 引导提示，待人工补充详细解析",
-  "type": "multi_judge",
-  "question": "植物激素间的平衡在维持和打破芽休眠中起调控作用，其中起主要作用的是：\n（单选）",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "IAA 与GA",
-    "answer": false
-   },
-   {
-    "label": "B",
-    "text": "CTK 与GA",
-    "answer": false
-   },
-   {
-    "label": "C",
-    "text": "GA 与Eth",
-    "answer": false
-   },
-   {
-    "label": "D",
-    "text": "ABA 与GA",
-    "answer": true
-   }
-  ],
-  "explanation": "正确答案：D",
-  "chart": null,
-  "oldId": "crawled_1782028584579_8351"
- }
+  "M3-03-28df2074b226": {
+    "type": "mtf",
+    "question": "关于激素作用的一般特征和调控，下列说法正确的有：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "激素具有绝对特异性，每种激素只作用于一种特定的靶细胞",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "激素在血液中浓度极低，但通过与高亲和力受体结合产生显著的生物放大效应",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "胰高血糖素和肾上腺素在升血糖方面具有协同作用",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "受体的上调是指靶细胞在激素长期高水平刺激下增加受体数量",
+        "answer": false
+      }
+    ],
+    "explanation": "A错误：激素的特异性是相对的，有些激素作用广泛（如甲状腺激素几乎作用于全身细胞），一种激素可有多种靶器官。B正确：激素是高效能物质，极低浓度即可通过高亲和力受体和多级信号放大发挥作用。C正确：胰高血糖素、肾上腺素、皮质醇均升血糖，具有协同作用。D错误：受体上调是激素浓度长期偏低时增加受体数量；长期高水平导致受体减少称为下调。",
+    "subject": "动物生理学",
+    "concept": "激素作用特征",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "endocrine",
+      "module_3",
+      "动物生理学",
+      "激素调控"
+    ],
+    "references": [
+      {
+        "doi": "10.1124/pr.109.002264",
+        "title": "GPCR regulation and receptor trafficking",
+        "authors": "Rosenbaum DM et al.",
+        "year": 2011,
+        "journal": "Nature"
+      }
+    ]
+  }
 }

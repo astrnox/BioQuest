@@ -1,1046 +1,216 @@
 {
- "BQ-animal_tissue-2eb6a3d196e2": {
-  "stem": "决定心肌“全或无”式收缩的细胞连接方式是：\n（单选）",
-  "options": {
-   "A": "缝隙连接",
-   "B": "紧密连接",
-   "C": "桥粒",
-   "D": "半桥粒"
+  "M3-01-af3d0ad38aa2": {
+    "type": "mtf",
+    "question": "关于动物四大基本组织的结构与功能，下列说法正确的有：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "单层扁平上皮（内皮）覆盖在血管内表面，有利于物质交换和减少血流阻力",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "疏松结缔组织中的成纤维细胞能合成和分泌胶原蛋白与弹性蛋白",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "心肌组织属于平滑肌的一种，其收缩受意识直接控制",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "骨骼肌纤维为多核细胞，肌原纤维由粗肌丝（肌球蛋白）和细肌丝（肌动蛋白）组成",
+        "answer": true
+      }
+    ],
+    "explanation": "A正确：单层扁平上皮（内皮）分布于血管和淋巴管内表面，薄而光滑，利于物质交换和减少血流阻力。B正确：成纤维细胞是疏松结缔组织中最常见的细胞，负责合成细胞外基质蛋白（胶原蛋白、弹性蛋白）和糖胺聚糖。C错误：心肌是独立于平滑肌的肌肉类型，具有自律性，不受意识直接控制（属于不随意肌）。D正确：骨骼肌纤维为多核合胞体，肌原纤维由粗肌丝（肌球蛋白）和细肌丝（肌动蛋白）组成。",
+    "subject": "动物生理学",
+    "concept": "四大基本组织",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "animal_tissue",
+      "module_3",
+      "动物生理学",
+      "四大基本组织"
+    ],
+    "references": [
+      {
+        "doi": "10.1016/B978-012374232-2.00045-0",
+        "title": "Muscle: Molecular Biology",
+        "authors": "Engel AG, Franzini-Armstrong C",
+        "year": 2004,
+        "journal": "Encyclopedia of Neuroscience"
+      }
+    ]
   },
-  "answer": {
-   "A": true,
-   "B": false,
-   "C": false,
-   "D": false
+  "M3-01-028d3e66a625": {
+    "type": "mtf",
+    "question": "关于骨骼肌收缩的滑动丝模型，下列描述正确的有：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "肌球蛋白头部与肌动蛋白结合形成横桥，ATP水解提供构象变化的能量",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "收缩时肌小节的I带和H区缩短，但A带长度不变",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "肌肉收缩过程中，粗肌丝和细肌丝本身的长度均发生明显缩短",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "Ca²⁺与肌钙蛋白C亚基结合后，使原肌球蛋白移位，暴露出肌动蛋白上的横桥结合位点",
+        "answer": false
+      }
+    ],
+    "explanation": "正确答案：A, C。详细解析请参见相关教材。",
+    "subject": "动物生理学",
+    "concept": "滑动丝模型",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "animal_tissue",
+      "module_3",
+      "动物生理学",
+      "滑动丝模型"
+    ],
+    "references": [
+      {
+        "doi": "10.1038/1991043a0",
+        "title": "Structural changes in muscle during contraction",
+        "authors": "Huxley HE, Hanson J",
+        "year": 1954,
+        "journal": "Nature"
+      }
+    ]
   },
-  "analysis": "正确答案：A",
-  "knowledge": [
-   "module_1",
-   "细胞生物学"
-  ],
-  "module": "module_1",
-  "difficulty": "league",
-  "target": "competition",
-  "subject": "细胞生物学",
-  "concept": "细胞生物学",
-  "tags": [
-   "module_1",
-   "细胞生物学",
-   "league",
-   "competition",
-   "https://www.czs.org.cn/swjs/lsstxz/art/2015/art_1c13e648d84d4e38b94e2dfd5e5b1b0b.html",
-   "2015"
-  ],
-  "weight": 1,
-  "fb_good": 0,
-  "fb_bad": 0,
-  "created_at": 1782028584.5780604,
-  "source": "https://www.czs.org.cn/swjs/lsstxz/art/2015/art_1c13e648d84d4e38b94e2dfd5e5b1b0b.html",
-  "year": 2015,
-  "_analysis_sparse": true,
-  "_review_reason": "解析为 AI 引导提示，待人工补充详细解析",
-  "type": "multi_judge",
-  "question": "决定心肌“全或无”式收缩的细胞连接方式是：\n（单选）",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "缝隙连接",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "紧密连接",
-    "answer": false
-   },
-   {
-    "label": "C",
-    "text": "桥粒",
-    "answer": false
-   },
-   {
-    "label": "D",
-    "text": "半桥粒",
-    "answer": false
-   }
-  ],
-  "explanation": "正确答案：A",
-  "chart": null,
-  "oldId": "crawled_1782028584578_3211"
- },
- "BQ-animal_tissue-58cced2bfadc": {
-  "stem": "当蟾蜍离体腓肠肌标本受到适当的连续电刺激时，当刺激的时间间隔大于肌肉单收缩的收\n缩期，而小于其舒张期，则肌肉发生：\n（单选）",
-  "options": {
-   "A": "一次单收缩",
-   "B": "一串单收缩",
-   "C": "不完全强直收缩",
-   "D": "完全强直收缩"
+  "M3-01-8b6a855e3f01": {
+    "type": "mtf",
+    "question": "比较横纹肌与平滑肌的特征，下列说法正确的有：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "心肌细胞之间的闰盘含有缝隙连接，允许电信号在细胞间快速传播",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "平滑肌的收缩速度比骨骼肌快，因为其肌丝排列更加有序",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "平滑肌细胞无肌小节结构，其收缩依赖钙调蛋白而非肌钙蛋白",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "骨骼肌为随意肌，受躯体运动神经支配；平滑肌和心肌为不随意肌，受自主神经支配",
+        "answer": false
+      }
+    ],
+    "explanation": "正确答案：C。详细解析请参见相关教材。",
+    "subject": "动物生理学",
+    "concept": "肌肉类型比较",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "animal_tissue",
+      "module_3",
+      "动物生理学",
+      "肌肉类型"
+    ],
+    "references": []
   },
-  "answer": {
-   "A": false,
-   "B": false,
-   "C": true,
-   "D": false
+  "M3-01-0f69ad523ceb": {
+    "type": "mtf",
+    "question": "关于上皮组织的分类与特征，下列描述正确的有：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "复层扁平上皮具有多层细胞，表层细胞扁平且可角化，起保护作用",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "假复层纤毛柱状上皮所有细胞均附着于基膜，但并非所有细胞都达到腔面",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "移行上皮分布于输尿管和膀胱，其层数和细胞形状可随器官扩张状态而变化",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "外分泌腺通过导管将分泌物释放到体表或管腔，而内分泌腺无导管，分泌物直接进入血液",
+        "answer": false
+      }
+    ],
+    "explanation": "正确答案：A, B, C。详细解析请参见相关教材。",
+    "subject": "动物生理学",
+    "concept": "上皮组织分类",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "animal_tissue",
+      "module_3",
+      "动物生理学",
+      "上皮组织"
+    ],
+    "references": [
+      {
+        "doi": "10.1002/jmor.1051450304",
+        "title": "The structure and function of transitional epithelium",
+        "authors": "Hicks RM",
+        "year": 1975,
+        "journal": "Journal of Morphology"
+      }
+    ]
   },
-  "analysis": "正确答案：C",
-  "knowledge": [
-   "module_1",
-   "生物学"
-  ],
-  "module": "module_1",
-  "difficulty": "league",
-  "target": "competition",
-  "subject": "生物学",
-  "concept": "生物学",
-  "tags": [
-   "module_1",
-   "生物学",
-   "league",
-   "competition",
-   "https://www.czs.org.cn/swjs/lsstxz/art/2015/art_1c13e648d84d4e38b94e2dfd5e5b1b0b.html",
-   "2015"
-  ],
-  "weight": 1,
-  "fb_good": 0,
-  "fb_bad": 0,
-  "created_at": 1782028584.5780604,
-  "source": "https://www.czs.org.cn/swjs/lsstxz/art/2015/art_1c13e648d84d4e38b94e2dfd5e5b1b0b.html",
-  "year": 2015,
-  "_analysis_sparse": true,
-  "_review_reason": "解析为 AI 引导提示，待人工补充详细解析",
-  "type": "multi_judge",
-  "question": "当蟾蜍离体腓肠肌标本受到适当的连续电刺激时，当刺激的时间间隔大于肌肉单收缩的收\n缩期，而小于其舒张期，则肌肉发生：\n（单选）",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "一次单收缩",
-    "answer": false
-   },
-   {
-    "label": "B",
-    "text": "一串单收缩",
-    "answer": false
-   },
-   {
-    "label": "C",
-    "text": "不完全强直收缩",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "完全强直收缩",
-    "answer": false
-   }
-  ],
-  "explanation": "正确答案：C",
-  "chart": null,
-  "oldId": "crawled_1782028584578_8213"
- },
- "BQ-animal_tissue-896968b08927": {
-  "stem": "骨骼肌可发生完全强直收缩是因为：\n（单选）",
-  "options": {
-   "A": "动作电位时程短于肌肉收缩的收缩期",
-   "B": "动作电位时程长于肌肉收缩的收缩期",
-   "C": "动作电位时程长于肌肉收缩的舒张期",
-   "D": "动作电位时程短于肌肉收缩的舒张期"
-  },
-  "answer": {
-   "A": true,
-   "B": false,
-   "C": false,
-   "D": false
-  },
-  "analysis": "正确答案：A",
-  "knowledge": [
-   "module_1",
-   "生物学"
-  ],
-  "module": "module_1",
-  "difficulty": "league",
-  "target": "competition",
-  "subject": "生物学",
-  "concept": "生物学",
-  "tags": [
-   "module_1",
-   "生物学",
-   "league",
-   "competition",
-   "https://www.czs.org.cn/swjs/lsstxz/art/2015/art_1c13e648d84d4e38b94e2dfd5e5b1b0b.html",
-   "2015"
-  ],
-  "weight": 1,
-  "fb_good": 0,
-  "fb_bad": 0,
-  "created_at": 1782028584.5780604,
-  "source": "https://www.czs.org.cn/swjs/lsstxz/art/2015/art_1c13e648d84d4e38b94e2dfd5e5b1b0b.html",
-  "year": 2015,
-  "_analysis_sparse": true,
-  "_review_reason": "解析为 AI 引导提示，待人工补充详细解析",
-  "type": "multi_judge",
-  "question": "骨骼肌可发生完全强直收缩是因为：\n（单选）",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "动作电位时程短于肌肉收缩的收缩期",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "动作电位时程长于肌肉收缩的收缩期",
-    "answer": false
-   },
-   {
-    "label": "C",
-    "text": "动作电位时程长于肌肉收缩的舒张期",
-    "answer": false
-   },
-   {
-    "label": "D",
-    "text": "动作电位时程短于肌肉收缩的舒张期",
-    "answer": false
-   }
-  ],
-  "explanation": "正确答案：A",
-  "chart": null,
-  "oldId": "crawled_1782028584578_0585"
- },
- "BQ-animal_tissue-d2411710b2e3": {
-  "type": "mtf",
-  "question": "关于骨骼肌收缩的分子机制，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "动作电位传导至横管系统后，肌质网通过兰尼碱受体（RyR）释放Ca²⁺，触发肌肉收缩",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "原肌球蛋白在静息状态下遮盖肌动蛋白上的肌球蛋白结合位点",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "肌球蛋白头部具有ATP酶活性，水解ATP为横桥摆动提供能量",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "骨骼肌收缩需要细胞外Ca²⁺的内流才能启动",
-    "answer": false
-   }
-  ],
-  "explanation": "C正确：横桥循环的ATP依赖性。B正确：原肌球蛋白的位阻效应。A正确：兴奋-收缩耦联的Ca²⁺释放机制。D错误：骨骼肌的肌质网有充足的Ca²⁺储备，不需要细胞外Ca²⁺内流。心肌和平滑肌则需要细胞外Ca²⁺内流来触发或加强收缩。",
-  "module": 3,
-  "subject": "动物生理学",
-  "concept": "肌肉收缩",
-  "difficulty": "medium",
-  "year": 2025,
-  "chart": null,
-  "oldId": "448020131",
-  "tags": []
- },
- "BQ-animal_tissue-eea0b4aed127": {
-  "type": "mtf",
-  "question": "关于骨骼肌收缩的分子机制，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "动作电位传导至横管系统后，肌质网通过兰尼碱受体（RyR）释放Ca²⁺，触发肌肉收缩",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "原肌球蛋白在静息状态下遮盖肌动蛋白上的肌球蛋白结合位点",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "骨骼肌收缩需要细胞外Ca²⁺的内流才能启动",
-    "answer": false
-   },
-   {
-    "label": "D",
-    "text": "肌球蛋白头部具有ATP酶活性，水解ATP为横桥摆动提供能量",
-    "answer": true
-   }
-  ],
-  "explanation": "D正确：横桥循环的ATP依赖性。B正确：原肌球蛋白的位阻效应。A正确：兴奋-收缩耦联的Ca²⁺释放机制。C错误：骨骼肌的肌质网有充足的Ca²⁺储备，不需要细胞外Ca²⁺内流。心肌和平滑肌则需要细胞外Ca²⁺内流来触发或加强收缩。",
-  "module": 3,
-  "subject": "动物生理学",
-  "concept": "肌肉收缩",
-  "difficulty": "medium",
-  "year": 2025,
-  "chart": null,
-  "oldId": "448020131",
-  "tags": []
- },
- "BQ-animal_tissue-bb7ed05b9b11": {
-  "type": "mtf",
-  "question": "关于骨骼肌收缩的分子机制，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "动作电位传导至横管系统后，肌质网通过兰尼碱受体（RyR）释放Ca²⁺，触发肌肉收缩",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "肌球蛋白头部具有ATP酶活性，水解ATP为横桥摆动提供能量",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "原肌球蛋白在静息状态下遮盖肌动蛋白上的肌球蛋白结合位点",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "骨骼肌收缩需要细胞外Ca²⁺的内流才能启动",
-    "answer": false
-   }
-  ],
-  "explanation": "B正确：横桥循环的ATP依赖性。C正确：原肌球蛋白的位阻效应。A正确：兴奋-收缩耦联的Ca²⁺释放机制。D错误：骨骼肌的肌质网有充足的Ca²⁺储备，不需要细胞外Ca²⁺内流。心肌和平滑肌则需要细胞外Ca²⁺内流来触发或加强收缩。",
-  "module": 3,
-  "subject": "动物生理学",
-  "concept": "肌肉收缩",
-  "difficulty": "medium",
-  "year": 2025,
-  "chart": null,
-  "oldId": "448020131",
-  "tags": []
- },
- "BQ-animal_tissue-e34db76bb919": {
-  "type": "mtf",
-  "question": "关于骨骼肌收缩的分子机制，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "动作电位传导至横管系统后，肌质网通过兰尼碱受体（RyR）释放Ca²⁺，触发肌肉收缩",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "肌球蛋白头部具有ATP酶活性，水解ATP为横桥摆动提供能量",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "骨骼肌收缩需要细胞外Ca²⁺的内流才能启动",
-    "answer": false
-   },
-   {
-    "label": "D",
-    "text": "原肌球蛋白在静息状态下遮盖肌动蛋白上的肌球蛋白结合位点",
-    "answer": true
-   }
-  ],
-  "explanation": "B正确：横桥循环的ATP依赖性。D正确：原肌球蛋白的位阻效应。A正确：兴奋-收缩耦联的Ca²⁺释放机制。C错误：骨骼肌的肌质网有充足的Ca²⁺储备，不需要细胞外Ca²⁺内流。心肌和平滑肌则需要细胞外Ca²⁺内流来触发或加强收缩。",
-  "module": 3,
-  "subject": "动物生理学",
-  "concept": "肌肉收缩",
-  "difficulty": "medium",
-  "year": 2025,
-  "chart": null,
-  "oldId": "448020131",
-  "tags": []
- },
- "BQ-animal_tissue-21d95dfa160e": {
-  "type": "mtf",
-  "question": "关于骨骼肌收缩的分子机制，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "动作电位传导至横管系统后，肌质网通过兰尼碱受体（RyR）释放Ca²⁺，触发肌肉收缩",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "骨骼肌收缩需要细胞外Ca²⁺的内流才能启动",
-    "answer": false
-   },
-   {
-    "label": "C",
-    "text": "原肌球蛋白在静息状态下遮盖肌动蛋白上的肌球蛋白结合位点",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "肌球蛋白头部具有ATP酶活性，水解ATP为横桥摆动提供能量",
-    "answer": true
-   }
-  ],
-  "explanation": "D正确：横桥循环的ATP依赖性。C正确：原肌球蛋白的位阻效应。A正确：兴奋-收缩耦联的Ca²⁺释放机制。B错误：骨骼肌的肌质网有充足的Ca²⁺储备，不需要细胞外Ca²⁺内流。心肌和平滑肌则需要细胞外Ca²⁺内流来触发或加强收缩。",
-  "module": 3,
-  "subject": "动物生理学",
-  "concept": "肌肉收缩",
-  "difficulty": "medium",
-  "year": 2025,
-  "chart": null,
-  "oldId": "448020131",
-  "tags": []
- },
- "BQ-animal_tissue-c169c4856721": {
-  "type": "mtf",
-  "question": "关于骨骼肌收缩的分子机制，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "动作电位传导至横管系统后，肌质网通过兰尼碱受体（RyR）释放Ca²⁺，触发肌肉收缩",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "骨骼肌收缩需要细胞外Ca²⁺的内流才能启动",
-    "answer": false
-   },
-   {
-    "label": "C",
-    "text": "肌球蛋白头部具有ATP酶活性，水解ATP为横桥摆动提供能量",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "原肌球蛋白在静息状态下遮盖肌动蛋白上的肌球蛋白结合位点",
-    "answer": true
-   }
-  ],
-  "explanation": "C正确：横桥循环的ATP依赖性。D正确：原肌球蛋白的位阻效应。A正确：兴奋-收缩耦联的Ca²⁺释放机制。B错误：骨骼肌的肌质网有充足的Ca²⁺储备，不需要细胞外Ca²⁺内流。心肌和平滑肌则需要细胞外Ca²⁺内流来触发或加强收缩。",
-  "module": 3,
-  "subject": "动物生理学",
-  "concept": "肌肉收缩",
-  "difficulty": "medium",
-  "year": 2025,
-  "chart": null,
-  "oldId": "448020131",
-  "tags": []
- },
- "BQ-animal_tissue-2a0db96067f8": {
-  "type": "mtf",
-  "question": "关于骨骼肌收缩的分子机制，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "原肌球蛋白在静息状态下遮盖肌动蛋白上的肌球蛋白结合位点",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "动作电位传导至横管系统后，肌质网通过兰尼碱受体（RyR）释放Ca²⁺，触发肌肉收缩",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "肌球蛋白头部具有ATP酶活性，水解ATP为横桥摆动提供能量",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "骨骼肌收缩需要细胞外Ca²⁺的内流才能启动",
-    "answer": false
-   }
-  ],
-  "explanation": "C正确：横桥循环的ATP依赖性。A正确：原肌球蛋白的位阻效应。B正确：兴奋-收缩耦联的Ca²⁺释放机制。D错误：骨骼肌的肌质网有充足的Ca²⁺储备，不需要细胞外Ca²⁺内流。心肌和平滑肌则需要细胞外Ca²⁺内流来触发或加强收缩。",
-  "module": 3,
-  "subject": "动物生理学",
-  "concept": "肌肉收缩",
-  "difficulty": "medium",
-  "year": 2025,
-  "chart": null,
-  "oldId": "448020131",
-  "tags": []
- },
- "BQ-animal_tissue-486d2da5cb01": {
-  "type": "mtf",
-  "question": "关于骨骼肌收缩的分子机制，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "原肌球蛋白在静息状态下遮盖肌动蛋白上的肌球蛋白结合位点",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "动作电位传导至横管系统后，肌质网通过兰尼碱受体（RyR）释放Ca²⁺，触发肌肉收缩",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "骨骼肌收缩需要细胞外Ca²⁺的内流才能启动",
-    "answer": false
-   },
-   {
-    "label": "D",
-    "text": "肌球蛋白头部具有ATP酶活性，水解ATP为横桥摆动提供能量",
-    "answer": true
-   }
-  ],
-  "explanation": "D正确：横桥循环的ATP依赖性。A正确：原肌球蛋白的位阻效应。B正确：兴奋-收缩耦联的Ca²⁺释放机制。C错误：骨骼肌的肌质网有充足的Ca²⁺储备，不需要细胞外Ca²⁺内流。心肌和平滑肌则需要细胞外Ca²⁺内流来触发或加强收缩。",
-  "module": 3,
-  "subject": "动物生理学",
-  "concept": "肌肉收缩",
-  "difficulty": "medium",
-  "year": 2025,
-  "chart": null,
-  "oldId": "448020131",
-  "tags": []
- },
- "BQ-animal_tissue-6ebd439fd569": {
-  "type": "mtf",
-  "question": "关于骨骼肌收缩的分子机制，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "原肌球蛋白在静息状态下遮盖肌动蛋白上的肌球蛋白结合位点",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "肌球蛋白头部具有ATP酶活性，水解ATP为横桥摆动提供能量",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "动作电位传导至横管系统后，肌质网通过兰尼碱受体（RyR）释放Ca²⁺，触发肌肉收缩",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "骨骼肌收缩需要细胞外Ca²⁺的内流才能启动",
-    "answer": false
-   }
-  ],
-  "explanation": "B正确：横桥循环的ATP依赖性。A正确：原肌球蛋白的位阻效应。C正确：兴奋-收缩耦联的Ca²⁺释放机制。D错误：骨骼肌的肌质网有充足的Ca²⁺储备，不需要细胞外Ca²⁺内流。心肌和平滑肌则需要细胞外Ca²⁺内流来触发或加强收缩。",
-  "module": 3,
-  "subject": "动物生理学",
-  "concept": "肌肉收缩",
-  "difficulty": "medium",
-  "year": 2025,
-  "chart": null,
-  "oldId": "448020131",
-  "tags": []
- },
- "BQ-animal_tissue-f4fbc279835e": {
-  "type": "mtf",
-  "question": "关于骨骼肌收缩的分子机制，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "原肌球蛋白在静息状态下遮盖肌动蛋白上的肌球蛋白结合位点",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "肌球蛋白头部具有ATP酶活性，水解ATP为横桥摆动提供能量",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "骨骼肌收缩需要细胞外Ca²⁺的内流才能启动",
-    "answer": false
-   },
-   {
-    "label": "D",
-    "text": "动作电位传导至横管系统后，肌质网通过兰尼碱受体（RyR）释放Ca²⁺，触发肌肉收缩",
-    "answer": true
-   }
-  ],
-  "explanation": "B正确：横桥循环的ATP依赖性。A正确：原肌球蛋白的位阻效应。D正确：兴奋-收缩耦联的Ca²⁺释放机制。C错误：骨骼肌的肌质网有充足的Ca²⁺储备，不需要细胞外Ca²⁺内流。心肌和平滑肌则需要细胞外Ca²⁺内流来触发或加强收缩。",
-  "module": 3,
-  "subject": "动物生理学",
-  "concept": "肌肉收缩",
-  "difficulty": "medium",
-  "year": 2025,
-  "chart": null,
-  "oldId": "448020131",
-  "tags": []
- },
- "BQ-animal_tissue-20b9ee1c37cd": {
-  "type": "mtf",
-  "question": "关于骨骼肌收缩的分子机制，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "原肌球蛋白在静息状态下遮盖肌动蛋白上的肌球蛋白结合位点",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "骨骼肌收缩需要细胞外Ca²⁺的内流才能启动",
-    "answer": false
-   },
-   {
-    "label": "C",
-    "text": "动作电位传导至横管系统后，肌质网通过兰尼碱受体（RyR）释放Ca²⁺，触发肌肉收缩",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "肌球蛋白头部具有ATP酶活性，水解ATP为横桥摆动提供能量",
-    "answer": true
-   }
-  ],
-  "explanation": "D正确：横桥循环的ATP依赖性。A正确：原肌球蛋白的位阻效应。C正确：兴奋-收缩耦联的Ca²⁺释放机制。B错误：骨骼肌的肌质网有充足的Ca²⁺储备，不需要细胞外Ca²⁺内流。心肌和平滑肌则需要细胞外Ca²⁺内流来触发或加强收缩。",
-  "module": 3,
-  "subject": "动物生理学",
-  "concept": "肌肉收缩",
-  "difficulty": "medium",
-  "year": 2025,
-  "chart": null,
-  "oldId": "448020131",
-  "tags": []
- },
- "BQ-animal_tissue-3b3be1a89eb0": {
-  "type": "mtf",
-  "question": "关于骨骼肌收缩的分子机制，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "原肌球蛋白在静息状态下遮盖肌动蛋白上的肌球蛋白结合位点",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "骨骼肌收缩需要细胞外Ca²⁺的内流才能启动",
-    "answer": false
-   },
-   {
-    "label": "C",
-    "text": "肌球蛋白头部具有ATP酶活性，水解ATP为横桥摆动提供能量",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "动作电位传导至横管系统后，肌质网通过兰尼碱受体（RyR）释放Ca²⁺，触发肌肉收缩",
-    "answer": true
-   }
-  ],
-  "explanation": "C正确：横桥循环的ATP依赖性。A正确：原肌球蛋白的位阻效应。D正确：兴奋-收缩耦联的Ca²⁺释放机制。B错误：骨骼肌的肌质网有充足的Ca²⁺储备，不需要细胞外Ca²⁺内流。心肌和平滑肌则需要细胞外Ca²⁺内流来触发或加强收缩。",
-  "module": 3,
-  "subject": "动物生理学",
-  "concept": "肌肉收缩",
-  "difficulty": "medium",
-  "year": 2025,
-  "chart": null,
-  "oldId": "448020131",
-  "tags": []
- },
- "BQ-animal_tissue-bc5b0bbb3f85": {
-  "type": "mtf",
-  "question": "关于骨骼肌收缩的分子机制，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "肌球蛋白头部具有ATP酶活性，水解ATP为横桥摆动提供能量",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "动作电位传导至横管系统后，肌质网通过兰尼碱受体（RyR）释放Ca²⁺，触发肌肉收缩",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "原肌球蛋白在静息状态下遮盖肌动蛋白上的肌球蛋白结合位点",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "骨骼肌收缩需要细胞外Ca²⁺的内流才能启动",
-    "answer": false
-   }
-  ],
-  "explanation": "A正确：横桥循环的ATP依赖性。C正确：原肌球蛋白的位阻效应。B正确：兴奋-收缩耦联的Ca²⁺释放机制。D错误：骨骼肌的肌质网有充足的Ca²⁺储备，不需要细胞外Ca²⁺内流。心肌和平滑肌则需要细胞外Ca²⁺内流来触发或加强收缩。",
-  "module": 3,
-  "subject": "动物生理学",
-  "concept": "肌肉收缩",
-  "difficulty": "medium",
-  "year": 2025,
-  "chart": null,
-  "oldId": "448020131",
-  "tags": []
- },
- "BQ-animal_tissue-2285eed9f0fb": {
-  "type": "mtf",
-  "question": "关于骨骼肌收缩的分子机制，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "肌球蛋白头部具有ATP酶活性，水解ATP为横桥摆动提供能量",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "动作电位传导至横管系统后，肌质网通过兰尼碱受体（RyR）释放Ca²⁺，触发肌肉收缩",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "骨骼肌收缩需要细胞外Ca²⁺的内流才能启动",
-    "answer": false
-   },
-   {
-    "label": "D",
-    "text": "原肌球蛋白在静息状态下遮盖肌动蛋白上的肌球蛋白结合位点",
-    "answer": true
-   }
-  ],
-  "explanation": "A正确：横桥循环的ATP依赖性。D正确：原肌球蛋白的位阻效应。B正确：兴奋-收缩耦联的Ca²⁺释放机制。C错误：骨骼肌的肌质网有充足的Ca²⁺储备，不需要细胞外Ca²⁺内流。心肌和平滑肌则需要细胞外Ca²⁺内流来触发或加强收缩。",
-  "module": 3,
-  "subject": "动物生理学",
-  "concept": "肌肉收缩",
-  "difficulty": "medium",
-  "year": 2025,
-  "chart": null,
-  "oldId": "448020131",
-  "tags": []
- },
- "BQ-animal_tissue-254377682bf4": {
-  "type": "mtf",
-  "question": "关于骨骼肌收缩的分子机制，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "肌球蛋白头部具有ATP酶活性，水解ATP为横桥摆动提供能量",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "原肌球蛋白在静息状态下遮盖肌动蛋白上的肌球蛋白结合位点",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "动作电位传导至横管系统后，肌质网通过兰尼碱受体（RyR）释放Ca²⁺，触发肌肉收缩",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "骨骼肌收缩需要细胞外Ca²⁺的内流才能启动",
-    "answer": false
-   }
-  ],
-  "explanation": "A正确：横桥循环的ATP依赖性。B正确：原肌球蛋白的位阻效应。C正确：兴奋-收缩耦联的Ca²⁺释放机制。D错误：骨骼肌的肌质网有充足的Ca²⁺储备，不需要细胞外Ca²⁺内流。心肌和平滑肌则需要细胞外Ca²⁺内流来触发或加强收缩。",
-  "module": 3,
-  "subject": "动物生理学",
-  "concept": "肌肉收缩",
-  "difficulty": "medium",
-  "year": 2025,
-  "chart": null,
-  "oldId": "448020131",
-  "tags": []
- },
- "BQ-animal_tissue-ed1864e32748": {
-  "type": "mtf",
-  "question": "关于骨骼肌收缩的分子机制，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "肌球蛋白头部具有ATP酶活性，水解ATP为横桥摆动提供能量",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "原肌球蛋白在静息状态下遮盖肌动蛋白上的肌球蛋白结合位点",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "骨骼肌收缩需要细胞外Ca²⁺的内流才能启动",
-    "answer": false
-   },
-   {
-    "label": "D",
-    "text": "动作电位传导至横管系统后，肌质网通过兰尼碱受体（RyR）释放Ca²⁺，触发肌肉收缩",
-    "answer": true
-   }
-  ],
-  "explanation": "A正确：横桥循环的ATP依赖性。B正确：原肌球蛋白的位阻效应。D正确：兴奋-收缩耦联的Ca²⁺释放机制。C错误：骨骼肌的肌质网有充足的Ca²⁺储备，不需要细胞外Ca²⁺内流。心肌和平滑肌则需要细胞外Ca²⁺内流来触发或加强收缩。",
-  "module": 3,
-  "subject": "动物生理学",
-  "concept": "肌肉收缩",
-  "difficulty": "medium",
-  "year": 2025,
-  "chart": null,
-  "oldId": "448020131",
-  "tags": []
- },
- "BQ-animal_tissue-8594cacfc586": {
-  "type": "mtf",
-  "question": "关于骨骼肌收缩的分子机制，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "肌球蛋白头部具有ATP酶活性，水解ATP为横桥摆动提供能量",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "骨骼肌收缩需要细胞外Ca²⁺的内流才能启动",
-    "answer": false
-   },
-   {
-    "label": "C",
-    "text": "动作电位传导至横管系统后，肌质网通过兰尼碱受体（RyR）释放Ca²⁺，触发肌肉收缩",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "原肌球蛋白在静息状态下遮盖肌动蛋白上的肌球蛋白结合位点",
-    "answer": true
-   }
-  ],
-  "explanation": "A正确：横桥循环的ATP依赖性。D正确：原肌球蛋白的位阻效应。C正确：兴奋-收缩耦联的Ca²⁺释放机制。B错误：骨骼肌的肌质网有充足的Ca²⁺储备，不需要细胞外Ca²⁺内流。心肌和平滑肌则需要细胞外Ca²⁺内流来触发或加强收缩。",
-  "module": 3,
-  "subject": "动物生理学",
-  "concept": "肌肉收缩",
-  "difficulty": "medium",
-  "year": 2025,
-  "chart": null,
-  "oldId": "448020131",
-  "tags": []
- },
- "BQ-animal_tissue-4343454df8d5": {
-  "type": "mtf",
-  "question": "关于骨骼肌收缩的分子机制，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "肌球蛋白头部具有ATP酶活性，水解ATP为横桥摆动提供能量",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "骨骼肌收缩需要细胞外Ca²⁺的内流才能启动",
-    "answer": false
-   },
-   {
-    "label": "C",
-    "text": "原肌球蛋白在静息状态下遮盖肌动蛋白上的肌球蛋白结合位点",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "动作电位传导至横管系统后，肌质网通过兰尼碱受体（RyR）释放Ca²⁺，触发肌肉收缩",
-    "answer": true
-   }
-  ],
-  "explanation": "A正确：横桥循环的ATP依赖性。C正确：原肌球蛋白的位阻效应。D正确：兴奋-收缩耦联的Ca²⁺释放机制。B错误：骨骼肌的肌质网有充足的Ca²⁺储备，不需要细胞外Ca²⁺内流。心肌和平滑肌则需要细胞外Ca²⁺内流来触发或加强收缩。",
-  "module": 3,
-  "subject": "动物生理学",
-  "concept": "肌肉收缩",
-  "difficulty": "medium",
-  "year": 2025,
-  "chart": null,
-  "oldId": "448020131",
-  "tags": []
- },
- "BQ-animal_tissue-9d51d3e7b3e0": {
-  "type": "mtf",
-  "question": "关于骨骼肌收缩的分子机制，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "骨骼肌收缩需要细胞外Ca²⁺的内流才能启动",
-    "answer": false
-   },
-   {
-    "label": "B",
-    "text": "动作电位传导至横管系统后，肌质网通过兰尼碱受体（RyR）释放Ca²⁺，触发肌肉收缩",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "原肌球蛋白在静息状态下遮盖肌动蛋白上的肌球蛋白结合位点",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "肌球蛋白头部具有ATP酶活性，水解ATP为横桥摆动提供能量",
-    "answer": true
-   }
-  ],
-  "explanation": "D正确：横桥循环的ATP依赖性。C正确：原肌球蛋白的位阻效应。B正确：兴奋-收缩耦联的Ca²⁺释放机制。A错误：骨骼肌的肌质网有充足的Ca²⁺储备，不需要细胞外Ca²⁺内流。心肌和平滑肌则需要细胞外Ca²⁺内流来触发或加强收缩。",
-  "module": 3,
-  "subject": "动物生理学",
-  "concept": "肌肉收缩",
-  "difficulty": "medium",
-  "year": 2025,
-  "chart": null,
-  "oldId": "448020131",
-  "tags": []
- },
- "BQ-animal_tissue-8d24386bf486": {
-  "type": "mtf",
-  "question": "关于骨骼肌收缩的分子机制，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "骨骼肌收缩需要细胞外Ca²⁺的内流才能启动",
-    "answer": false
-   },
-   {
-    "label": "B",
-    "text": "动作电位传导至横管系统后，肌质网通过兰尼碱受体（RyR）释放Ca²⁺，触发肌肉收缩",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "肌球蛋白头部具有ATP酶活性，水解ATP为横桥摆动提供能量",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "原肌球蛋白在静息状态下遮盖肌动蛋白上的肌球蛋白结合位点",
-    "answer": true
-   }
-  ],
-  "explanation": "C正确：横桥循环的ATP依赖性。D正确：原肌球蛋白的位阻效应。B正确：兴奋-收缩耦联的Ca²⁺释放机制。A错误：骨骼肌的肌质网有充足的Ca²⁺储备，不需要细胞外Ca²⁺内流。心肌和平滑肌则需要细胞外Ca²⁺内流来触发或加强收缩。",
-  "module": 3,
-  "subject": "动物生理学",
-  "concept": "肌肉收缩",
-  "difficulty": "medium",
-  "year": 2025,
-  "chart": null,
-  "oldId": "448020131",
-  "tags": []
- },
- "BQ-animal_tissue-ba0b0eac7c59": {
-  "type": "mtf",
-  "question": "关于骨骼肌收缩的分子机制，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "骨骼肌收缩需要细胞外Ca²⁺的内流才能启动",
-    "answer": false
-   },
-   {
-    "label": "B",
-    "text": "原肌球蛋白在静息状态下遮盖肌动蛋白上的肌球蛋白结合位点",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "动作电位传导至横管系统后，肌质网通过兰尼碱受体（RyR）释放Ca²⁺，触发肌肉收缩",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "肌球蛋白头部具有ATP酶活性，水解ATP为横桥摆动提供能量",
-    "answer": true
-   }
-  ],
-  "explanation": "D正确：横桥循环的ATP依赖性。B正确：原肌球蛋白的位阻效应。C正确：兴奋-收缩耦联的Ca²⁺释放机制。A错误：骨骼肌的肌质网有充足的Ca²⁺储备，不需要细胞外Ca²⁺内流。心肌和平滑肌则需要细胞外Ca²⁺内流来触发或加强收缩。",
-  "module": 3,
-  "subject": "动物生理学",
-  "concept": "肌肉收缩",
-  "difficulty": "medium",
-  "year": 2025,
-  "chart": null,
-  "oldId": "448020131",
-  "tags": []
- },
- "BQ-animal_tissue-ccd0f5f84a19": {
-  "type": "mtf",
-  "question": "关于骨骼肌收缩的分子机制，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "骨骼肌收缩需要细胞外Ca²⁺的内流才能启动",
-    "answer": false
-   },
-   {
-    "label": "B",
-    "text": "原肌球蛋白在静息状态下遮盖肌动蛋白上的肌球蛋白结合位点",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "肌球蛋白头部具有ATP酶活性，水解ATP为横桥摆动提供能量",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "动作电位传导至横管系统后，肌质网通过兰尼碱受体（RyR）释放Ca²⁺，触发肌肉收缩",
-    "answer": true
-   }
-  ],
-  "explanation": "C正确：横桥循环的ATP依赖性。B正确：原肌球蛋白的位阻效应。D正确：兴奋-收缩耦联的Ca²⁺释放机制。A错误：骨骼肌的肌质网有充足的Ca²⁺储备，不需要细胞外Ca²⁺内流。心肌和平滑肌则需要细胞外Ca²⁺内流来触发或加强收缩。",
-  "module": 3,
-  "subject": "动物生理学",
-  "concept": "肌肉收缩",
-  "difficulty": "medium",
-  "year": 2025,
-  "chart": null,
-  "oldId": "448020131",
-  "tags": []
- },
- "BQ-animal_tissue-9af5191e7dc3": {
-  "type": "mtf",
-  "question": "关于骨骼肌收缩的分子机制，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "骨骼肌收缩需要细胞外Ca²⁺的内流才能启动",
-    "answer": false
-   },
-   {
-    "label": "B",
-    "text": "肌球蛋白头部具有ATP酶活性，水解ATP为横桥摆动提供能量",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "动作电位传导至横管系统后，肌质网通过兰尼碱受体（RyR）释放Ca²⁺，触发肌肉收缩",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "原肌球蛋白在静息状态下遮盖肌动蛋白上的肌球蛋白结合位点",
-    "answer": true
-   }
-  ],
-  "explanation": "B正确：横桥循环的ATP依赖性。D正确：原肌球蛋白的位阻效应。C正确：兴奋-收缩耦联的Ca²⁺释放机制。A错误：骨骼肌的肌质网有充足的Ca²⁺储备，不需要细胞外Ca²⁺内流。心肌和平滑肌则需要细胞外Ca²⁺内流来触发或加强收缩。",
-  "module": 3,
-  "subject": "动物生理学",
-  "concept": "肌肉收缩",
-  "difficulty": "medium",
-  "year": 2025,
-  "chart": null,
-  "oldId": "448020131",
-  "tags": []
- },
- "BQ-animal_tissue-497db3cb7c21": {
-  "type": "mtf",
-  "question": "关于骨骼肌收缩的分子机制，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "骨骼肌收缩需要细胞外Ca²⁺的内流才能启动",
-    "answer": false
-   },
-   {
-    "label": "B",
-    "text": "肌球蛋白头部具有ATP酶活性，水解ATP为横桥摆动提供能量",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "原肌球蛋白在静息状态下遮盖肌动蛋白上的肌球蛋白结合位点",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "动作电位传导至横管系统后，肌质网通过兰尼碱受体（RyR）释放Ca²⁺，触发肌肉收缩",
-    "answer": true
-   }
-  ],
-  "explanation": "B正确：横桥循环的ATP依赖性。C正确：原肌球蛋白的位阻效应。D正确：兴奋-收缩耦联的Ca²⁺释放机制。A错误：骨骼肌的肌质网有充足的Ca²⁺储备，不需要细胞外Ca²⁺内流。心肌和平滑肌则需要细胞外Ca²⁺内流来触发或加强收缩。",
-  "module": 3,
-  "subject": "动物生理学",
-  "concept": "肌肉收缩",
-  "difficulty": "medium",
-  "year": 2025,
-  "chart": null,
-  "oldId": "448020131",
-  "tags": []
- }
+  "M3-01-f4539ff9c96c": {
+    "type": "mtf",
+    "question": "关于结缔组织的类型和功能，下列说法正确的有：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "血液属于液态结缔组织，其细胞外基质为血浆，含有纤维蛋白原等蛋白质",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "脂肪组织仅具有储能功能，不具有内分泌功能和隔热保温作用",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "软骨组织中的软骨细胞位于陷窝内，软骨基质富含蛋白聚糖和胶原纤维，无血管分布",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "骨组织中骨单位以中央管为中心呈同心圆排列，骨细胞位于骨板间的陷窝内",
+        "answer": false
+      }
+    ],
+    "explanation": "正确答案：A, C。详细解析请参见相关教材。",
+    "subject": "动物生理学",
+    "concept": "结缔组织类型",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "animal_tissue",
+      "module_3",
+      "动物生理学",
+      "结缔组织"
+    ],
+    "references": []
+  }
 }

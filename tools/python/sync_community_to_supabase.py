@@ -3,7 +3,7 @@
 """同步 data/community.json 的 20 条旧帖子到 Supabase，并清理 5 条测试垃圾
 
 需要环境变量：
-  SUPABASE_URL              默认 https://pgkjpuowpxngmxjjlfil.supabase.co
+  SUPABASE_URL              默认 https://qxehkfucvmxuojjkdaqy.supabase.co
   SUPABASE_SERVICE_ROLE_KEY 必填，从 .env 读取（绝不能硬编码或提交）
 """
 import os
@@ -23,7 +23,7 @@ if ENV_PATH.exists():
         k, v = line.split('=', 1)
         os.environ.setdefault(k.strip(), v.strip().strip('"').strip("'"))
 
-URL = os.environ.get('SUPABASE_URL', 'https://pgkjpuowpxngmxjjlfil.supabase.co') + '/rest/v1'
+URL = os.environ.get('SUPABASE_URL', 'https://qxehkfucvmxuojjkdaqy.supabase.co') + '/rest/v1'
 KEY_SRV = os.environ.get('SUPABASE_SERVICE_ROLE_KEY')
 if not KEY_SRV:
     print('ERROR: SUPABASE_SERVICE_ROLE_KEY not set. Please create .env file in project root with:')

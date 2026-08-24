@@ -1,1844 +1,216 @@
 {
- "BQ-quantitative_gen-a9c187296825": {
-  "type": "mtf",
-  "question": "在研究基因表达调控时，科学家们经常使用基因芯片技术。下列关于基因芯片技术的描述中，正确的是",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "基因芯片技术可以直接测量个体的基因表达水平",
-    "answer": false
-   },
-   {
-    "label": "B",
-    "text": "基因芯片技术可以用于研究单个基因的表达调控",
-    "answer": false
-   },
-   {
-    "label": "C",
-    "text": "基因芯片技术可以用于研究整个基因组的表达调控",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "基因芯片技术只能用于研究特定类型的基因",
-    "answer": false
-   }
-  ],
-  "explanation": "C选项正确，因为基因芯片技术确实可以用于研究整个基因组的表达调控。A选项错误，因为基因芯片技术通常需要通过荧光标记和扫描等步骤来间接测量个体的基因表达水平。B选项错误，因为基因芯片技术不仅限于研究单个基因，还可以研究整个基因组。D选项错误，因为基因芯片技术可以用于研究不同类型的基因，而不仅限于特定类型的基因。",
-  "subject": "遗传学",
-  "concept": "基因芯片技术",
-  "difficulty": "basic",
-  "chart": null,
-  "year": null,
-  "module": "module_4",
-  "target": "high_school",
-  "tags": [
-   "遗传学",
-   "基因芯片技术",
-   "high_school"
-  ],
-  "oldId": "1645341595"
- },
- "BQ-quantitative_gen-4d52d98b7d31": {
-  "type": "mtf",
-  "question": "在研究遗传变异时，科学家们经常使用分子标记技术。下列关于分子标记的描述中，正确的是",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "分子标记是指个体间在DNA序列上的差异",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "分子标记可以用来研究遗传变异的来源",
-    "answer": false
-   },
-   {
-    "label": "C",
-    "text": "分子标记技术可以直接测量个体的遗传变异",
-    "answer": false
-   },
-   {
-    "label": "D",
-    "text": "分子标记只能用于研究单个基因的变异",
-    "answer": false
-   }
-  ],
-  "explanation": "A选项正确，因为分子标记确实是指个体间在DNA序列上的差异。B选项错误，因为分子标记主要用于研究遗传变异的分布和频率，而不是来源。C选项错误，因为分子标记技术通常需要通过PCR扩增和测序等步骤来间接测量个体的遗传变异。D选项错误，因为分子标记可以用于研究整个基因组的变异，而不仅限于单个基因。",
-  "subject": "遗传学",
-  "concept": "分子标记技术",
-  "difficulty": "basic",
-  "chart": null,
-  "year": null,
-  "module": "module_4",
-  "target": "high_school",
-  "tags": [
-   "遗传学",
-   "分子标记技术",
-   "high_school"
-  ],
-  "oldId": "2079304658"
- },
- "BQ-quantitative_gen-58dac0f7da89": {
-  "type": "mtf",
-  "question": "某数量性状由 3 对独立遗传基因控制，基因型 AABBCC 表现型最高。若两纯合亲本 AABBCC × aabbcc 杂交，F1 自交，F2 中与 AABBCC 表现型相同的比例约为",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "1/16",
-    "answer": false
-   },
-   {
-    "label": "B",
-    "text": "1/32",
-    "answer": false
-   },
-   {
-    "label": "C",
-    "text": "1/4",
-    "answer": false
-   },
-   {
-    "label": "D",
-    "text": "1/64",
-    "answer": true
-   }
-  ],
-  "explanation": "多基因（加性）遗传中，F2 中获得所有 6 个显性等位基因的概率为 (1/4)^3 = 1/64（每对基因获得 AA 的概率为 1/4）。",
-  "subject": "遗传学",
-  "concept": "数量遗传",
-  "difficulty": "national",
-  "chart": null,
-  "year": null,
-  "module": "module_4",
-  "target": "competition",
-  "tags": [
-   "module_4",
-   "遗传学",
-   "数量遗传",
-   "competition"
-  ],
-  "oldId": "1295056439"
- },
- "BQ-quantitative_gen-169da59a8aef": {
-  "type": "mtf",
-  "question": "某数量性状由 3 对独立遗传基因控制，基因型 AABBCC 表现型最高。若两纯合亲本 AABBCC × aabbcc 杂交，F1 自交，F2 中与 AABBCC 表现型相同的比例约为",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "1/64",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "1/16",
-    "answer": false
-   },
-   {
-    "label": "C",
-    "text": "1/4",
-    "answer": false
-   },
-   {
-    "label": "D",
-    "text": "1/32",
-    "answer": false
-   }
-  ],
-  "explanation": "多基因（加性）遗传中，F2 中获得所有 6 个显性等位基因的概率为 (1/4)^3 = 1/64（每对基因获得 AA 的概率为 1/4）。",
-  "subject": "遗传学",
-  "concept": "数量遗传",
-  "difficulty": "national",
-  "chart": null,
-  "year": null,
-  "module": "module_4",
-  "target": "competition",
-  "tags": [
-   "module_4",
-   "遗传学",
-   "数量遗传",
-   "competition"
-  ],
-  "oldId": "1295056439"
- },
- "BQ-quantitative_gen-febb402ff974": {
-  "type": "mtf",
-  "question": "关于分子标记的类型与应用，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "RFLP（限制性片段长度多态性）利用限制酶切片段长度的差异作为遗传标记",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "RFLP标记的检测效率高于SNP标记",
-    "answer": false
-   },
-   {
-    "label": "C",
-    "text": "SNP（单核苷酸多态性）是基因组中分布最广泛的遗传变异类型",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "SSR（简单序列重复/微卫星）标记具有高度多态性和共显性遗传的特点",
-    "answer": true
-   }
-  ],
-  "explanation": "A正确：RFLP的原理。D正确：SSR标记的优点。C正确：SNP的普遍性。B错误：RFLP检测效率低（需Southern blotting），SNP可通过高通量芯片或测序检测，检测效率远高于RFLP。",
-  "module": 4,
-  "subject": "遗传学",
-  "concept": "分子标记",
-  "difficulty": "easy",
-  "year": 2025,
-  "chart": null,
-  "oldId": "1359802620",
-  "tags": []
- },
- "BQ-quantitative_gen-5eeb960b54b3": {
-  "type": "mtf",
-  "question": "关于分子标记的类型与应用，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "RFLP（限制性片段长度多态性）利用限制酶切片段长度的差异作为遗传标记",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "RFLP标记的检测效率高于SNP标记",
-    "answer": false
-   },
-   {
-    "label": "C",
-    "text": "SSR（简单序列重复/微卫星）标记具有高度多态性和共显性遗传的特点",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "SNP（单核苷酸多态性）是基因组中分布最广泛的遗传变异类型",
-    "answer": true
-   }
-  ],
-  "explanation": "A正确：RFLP的原理。C正确：SSR标记的优点。D正确：SNP的普遍性。B错误：RFLP检测效率低（需Southern blotting），SNP可通过高通量芯片或测序检测，检测效率远高于RFLP。",
-  "module": 4,
-  "subject": "遗传学",
-  "concept": "分子标记",
-  "difficulty": "easy",
-  "year": 2025,
-  "chart": null,
-  "oldId": "1359802620",
-  "tags": []
- },
- "BQ-quantitative_gen-fc181580f6d4": {
-  "type": "mtf",
-  "question": "关于分子标记的类型与应用，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "RFLP（限制性片段长度多态性）利用限制酶切片段长度的差异作为遗传标记",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "SNP（单核苷酸多态性）是基因组中分布最广泛的遗传变异类型",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "RFLP标记的检测效率高于SNP标记",
-    "answer": false
-   },
-   {
-    "label": "D",
-    "text": "SSR（简单序列重复/微卫星）标记具有高度多态性和共显性遗传的特点",
-    "answer": true
-   }
-  ],
-  "explanation": "A正确：RFLP的原理。D正确：SSR标记的优点。B正确：SNP的普遍性。C错误：RFLP检测效率低（需Southern blotting），SNP可通过高通量芯片或测序检测，检测效率远高于RFLP。",
-  "module": 4,
-  "subject": "遗传学",
-  "concept": "分子标记",
-  "difficulty": "easy",
-  "year": 2025,
-  "chart": null,
-  "oldId": "1359802620",
-  "tags": []
- },
- "BQ-quantitative_gen-cb64c64ff040": {
-  "type": "mtf",
-  "question": "关于分子标记的类型与应用，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "RFLP（限制性片段长度多态性）利用限制酶切片段长度的差异作为遗传标记",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "SNP（单核苷酸多态性）是基因组中分布最广泛的遗传变异类型",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "SSR（简单序列重复/微卫星）标记具有高度多态性和共显性遗传的特点",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "RFLP标记的检测效率高于SNP标记",
-    "answer": false
-   }
-  ],
-  "explanation": "A正确：RFLP的原理。C正确：SSR标记的优点。B正确：SNP的普遍性。D错误：RFLP检测效率低（需Southern blotting），SNP可通过高通量芯片或测序检测，检测效率远高于RFLP。",
-  "module": 4,
-  "subject": "遗传学",
-  "concept": "分子标记",
-  "difficulty": "easy",
-  "year": 2025,
-  "chart": null,
-  "oldId": "1359802620",
-  "tags": []
- },
- "BQ-quantitative_gen-122d7a992b6f": {
-  "type": "mtf",
-  "question": "关于分子标记的类型与应用，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "RFLP（限制性片段长度多态性）利用限制酶切片段长度的差异作为遗传标记",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "SSR（简单序列重复/微卫星）标记具有高度多态性和共显性遗传的特点",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "RFLP标记的检测效率高于SNP标记",
-    "answer": false
-   },
-   {
-    "label": "D",
-    "text": "SNP（单核苷酸多态性）是基因组中分布最广泛的遗传变异类型",
-    "answer": true
-   }
-  ],
-  "explanation": "A正确：RFLP的原理。B正确：SSR标记的优点。D正确：SNP的普遍性。C错误：RFLP检测效率低（需Southern blotting），SNP可通过高通量芯片或测序检测，检测效率远高于RFLP。",
-  "module": 4,
-  "subject": "遗传学",
-  "concept": "分子标记",
-  "difficulty": "easy",
-  "year": 2025,
-  "chart": null,
-  "oldId": "1359802620",
-  "tags": []
- },
- "BQ-quantitative_gen-6f27816720db": {
-  "type": "mtf",
-  "question": "关于分子标记的类型与应用，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "RFLP（限制性片段长度多态性）利用限制酶切片段长度的差异作为遗传标记",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "SSR（简单序列重复/微卫星）标记具有高度多态性和共显性遗传的特点",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "SNP（单核苷酸多态性）是基因组中分布最广泛的遗传变异类型",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "RFLP标记的检测效率高于SNP标记",
-    "answer": false
-   }
-  ],
-  "explanation": "A正确：RFLP的原理。B正确：SSR标记的优点。C正确：SNP的普遍性。D错误：RFLP检测效率低（需Southern blotting），SNP可通过高通量芯片或测序检测，检测效率远高于RFLP。",
-  "module": 4,
-  "subject": "遗传学",
-  "concept": "分子标记",
-  "difficulty": "easy",
-  "year": 2025,
-  "chart": null,
-  "oldId": "1359802620",
-  "tags": []
- },
- "BQ-quantitative_gen-697091ac9863": {
-  "type": "mtf",
-  "question": "关于分子标记的类型与应用，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "RFLP标记的检测效率高于SNP标记",
-    "answer": false
-   },
-   {
-    "label": "B",
-    "text": "RFLP（限制性片段长度多态性）利用限制酶切片段长度的差异作为遗传标记",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "SNP（单核苷酸多态性）是基因组中分布最广泛的遗传变异类型",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "SSR（简单序列重复/微卫星）标记具有高度多态性和共显性遗传的特点",
-    "answer": true
-   }
-  ],
-  "explanation": "B正确：RFLP的原理。D正确：SSR标记的优点。C正确：SNP的普遍性。A错误：RFLP检测效率低（需Southern blotting），SNP可通过高通量芯片或测序检测，检测效率远高于RFLP。",
-  "module": 4,
-  "subject": "遗传学",
-  "concept": "分子标记",
-  "difficulty": "easy",
-  "year": 2025,
-  "chart": null,
-  "oldId": "1359802620",
-  "tags": []
- },
- "BQ-quantitative_gen-fb5190b87c98": {
-  "type": "mtf",
-  "question": "关于分子标记的类型与应用，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "RFLP标记的检测效率高于SNP标记",
-    "answer": false
-   },
-   {
-    "label": "B",
-    "text": "RFLP（限制性片段长度多态性）利用限制酶切片段长度的差异作为遗传标记",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "SSR（简单序列重复/微卫星）标记具有高度多态性和共显性遗传的特点",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "SNP（单核苷酸多态性）是基因组中分布最广泛的遗传变异类型",
-    "answer": true
-   }
-  ],
-  "explanation": "B正确：RFLP的原理。C正确：SSR标记的优点。D正确：SNP的普遍性。A错误：RFLP检测效率低（需Southern blotting），SNP可通过高通量芯片或测序检测，检测效率远高于RFLP。",
-  "module": 4,
-  "subject": "遗传学",
-  "concept": "分子标记",
-  "difficulty": "easy",
-  "year": 2025,
-  "chart": null,
-  "oldId": "1359802620",
-  "tags": []
- },
- "BQ-quantitative_gen-0633797bd9b7": {
-  "type": "mtf",
-  "question": "关于分子标记的类型与应用，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "RFLP标记的检测效率高于SNP标记",
-    "answer": false
-   },
-   {
-    "label": "B",
-    "text": "SNP（单核苷酸多态性）是基因组中分布最广泛的遗传变异类型",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "RFLP（限制性片段长度多态性）利用限制酶切片段长度的差异作为遗传标记",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "SSR（简单序列重复/微卫星）标记具有高度多态性和共显性遗传的特点",
-    "answer": true
-   }
-  ],
-  "explanation": "C正确：RFLP的原理。D正确：SSR标记的优点。B正确：SNP的普遍性。A错误：RFLP检测效率低（需Southern blotting），SNP可通过高通量芯片或测序检测，检测效率远高于RFLP。",
-  "module": 4,
-  "subject": "遗传学",
-  "concept": "分子标记",
-  "difficulty": "easy",
-  "year": 2025,
-  "chart": null,
-  "oldId": "1359802620",
-  "tags": []
- },
- "BQ-quantitative_gen-bfb6836d474b": {
-  "type": "mtf",
-  "question": "关于分子标记的类型与应用，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "RFLP标记的检测效率高于SNP标记",
-    "answer": false
-   },
-   {
-    "label": "B",
-    "text": "SNP（单核苷酸多态性）是基因组中分布最广泛的遗传变异类型",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "SSR（简单序列重复/微卫星）标记具有高度多态性和共显性遗传的特点",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "RFLP（限制性片段长度多态性）利用限制酶切片段长度的差异作为遗传标记",
-    "answer": true
-   }
-  ],
-  "explanation": "D正确：RFLP的原理。C正确：SSR标记的优点。B正确：SNP的普遍性。A错误：RFLP检测效率低（需Southern blotting），SNP可通过高通量芯片或测序检测，检测效率远高于RFLP。",
-  "module": 4,
-  "subject": "遗传学",
-  "concept": "分子标记",
-  "difficulty": "easy",
-  "year": 2025,
-  "chart": null,
-  "oldId": "1359802620",
-  "tags": []
- },
- "BQ-quantitative_gen-b27e1c88ffa6": {
-  "type": "mtf",
-  "question": "关于分子标记的类型与应用，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "RFLP标记的检测效率高于SNP标记",
-    "answer": false
-   },
-   {
-    "label": "B",
-    "text": "SSR（简单序列重复/微卫星）标记具有高度多态性和共显性遗传的特点",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "RFLP（限制性片段长度多态性）利用限制酶切片段长度的差异作为遗传标记",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "SNP（单核苷酸多态性）是基因组中分布最广泛的遗传变异类型",
-    "answer": true
-   }
-  ],
-  "explanation": "C正确：RFLP的原理。B正确：SSR标记的优点。D正确：SNP的普遍性。A错误：RFLP检测效率低（需Southern blotting），SNP可通过高通量芯片或测序检测，检测效率远高于RFLP。",
-  "module": 4,
-  "subject": "遗传学",
-  "concept": "分子标记",
-  "difficulty": "easy",
-  "year": 2025,
-  "chart": null,
-  "oldId": "1359802620",
-  "tags": []
- },
- "BQ-quantitative_gen-bdb1d9bf5606": {
-  "type": "mtf",
-  "question": "关于分子标记的类型与应用，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "RFLP标记的检测效率高于SNP标记",
-    "answer": false
-   },
-   {
-    "label": "B",
-    "text": "SSR（简单序列重复/微卫星）标记具有高度多态性和共显性遗传的特点",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "SNP（单核苷酸多态性）是基因组中分布最广泛的遗传变异类型",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "RFLP（限制性片段长度多态性）利用限制酶切片段长度的差异作为遗传标记",
-    "answer": true
-   }
-  ],
-  "explanation": "D正确：RFLP的原理。B正确：SSR标记的优点。C正确：SNP的普遍性。A错误：RFLP检测效率低（需Southern blotting），SNP可通过高通量芯片或测序检测，检测效率远高于RFLP。",
-  "module": 4,
-  "subject": "遗传学",
-  "concept": "分子标记",
-  "difficulty": "easy",
-  "year": 2025,
-  "chart": null,
-  "oldId": "1359802620",
-  "tags": []
- },
- "BQ-quantitative_gen-55e7966f5275": {
-  "type": "mtf",
-  "question": "关于分子标记的类型与应用，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "SNP（单核苷酸多态性）是基因组中分布最广泛的遗传变异类型",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "RFLP（限制性片段长度多态性）利用限制酶切片段长度的差异作为遗传标记",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "RFLP标记的检测效率高于SNP标记",
-    "answer": false
-   },
-   {
-    "label": "D",
-    "text": "SSR（简单序列重复/微卫星）标记具有高度多态性和共显性遗传的特点",
-    "answer": true
-   }
-  ],
-  "explanation": "B正确：RFLP的原理。D正确：SSR标记的优点。A正确：SNP的普遍性。C错误：RFLP检测效率低（需Southern blotting），SNP可通过高通量芯片或测序检测，检测效率远高于RFLP。",
-  "module": 4,
-  "subject": "遗传学",
-  "concept": "分子标记",
-  "difficulty": "easy",
-  "year": 2025,
-  "chart": null,
-  "oldId": "1359802620",
-  "tags": []
- },
- "BQ-quantitative_gen-971d74d3dc8e": {
-  "type": "mtf",
-  "question": "关于分子标记的类型与应用，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "SNP（单核苷酸多态性）是基因组中分布最广泛的遗传变异类型",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "RFLP（限制性片段长度多态性）利用限制酶切片段长度的差异作为遗传标记",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "SSR（简单序列重复/微卫星）标记具有高度多态性和共显性遗传的特点",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "RFLP标记的检测效率高于SNP标记",
-    "answer": false
-   }
-  ],
-  "explanation": "B正确：RFLP的原理。C正确：SSR标记的优点。A正确：SNP的普遍性。D错误：RFLP检测效率低（需Southern blotting），SNP可通过高通量芯片或测序检测，检测效率远高于RFLP。",
-  "module": 4,
-  "subject": "遗传学",
-  "concept": "分子标记",
-  "difficulty": "easy",
-  "year": 2025,
-  "chart": null,
-  "oldId": "1359802620",
-  "tags": []
- },
- "BQ-quantitative_gen-dc8060fea8a7": {
-  "type": "mtf",
-  "question": "关于分子标记的类型与应用，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "SNP（单核苷酸多态性）是基因组中分布最广泛的遗传变异类型",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "RFLP标记的检测效率高于SNP标记",
-    "answer": false
-   },
-   {
-    "label": "C",
-    "text": "RFLP（限制性片段长度多态性）利用限制酶切片段长度的差异作为遗传标记",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "SSR（简单序列重复/微卫星）标记具有高度多态性和共显性遗传的特点",
-    "answer": true
-   }
-  ],
-  "explanation": "C正确：RFLP的原理。D正确：SSR标记的优点。A正确：SNP的普遍性。B错误：RFLP检测效率低（需Southern blotting），SNP可通过高通量芯片或测序检测，检测效率远高于RFLP。",
-  "module": 4,
-  "subject": "遗传学",
-  "concept": "分子标记",
-  "difficulty": "easy",
-  "year": 2025,
-  "chart": null,
-  "oldId": "1359802620",
-  "tags": []
- },
- "BQ-quantitative_gen-57b82403e400": {
-  "type": "mtf",
-  "question": "关于分子标记的类型与应用，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "SNP（单核苷酸多态性）是基因组中分布最广泛的遗传变异类型",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "RFLP标记的检测效率高于SNP标记",
-    "answer": false
-   },
-   {
-    "label": "C",
-    "text": "SSR（简单序列重复/微卫星）标记具有高度多态性和共显性遗传的特点",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "RFLP（限制性片段长度多态性）利用限制酶切片段长度的差异作为遗传标记",
-    "answer": true
-   }
-  ],
-  "explanation": "D正确：RFLP的原理。C正确：SSR标记的优点。A正确：SNP的普遍性。B错误：RFLP检测效率低（需Southern blotting），SNP可通过高通量芯片或测序检测，检测效率远高于RFLP。",
-  "module": 4,
-  "subject": "遗传学",
-  "concept": "分子标记",
-  "difficulty": "easy",
-  "year": 2025,
-  "chart": null,
-  "oldId": "1359802620",
-  "tags": []
- },
- "BQ-quantitative_gen-1834077b598e": {
-  "type": "mtf",
-  "question": "关于分子标记的类型与应用，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "SNP（单核苷酸多态性）是基因组中分布最广泛的遗传变异类型",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "SSR（简单序列重复/微卫星）标记具有高度多态性和共显性遗传的特点",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "RFLP（限制性片段长度多态性）利用限制酶切片段长度的差异作为遗传标记",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "RFLP标记的检测效率高于SNP标记",
-    "answer": false
-   }
-  ],
-  "explanation": "C正确：RFLP的原理。B正确：SSR标记的优点。A正确：SNP的普遍性。D错误：RFLP检测效率低（需Southern blotting），SNP可通过高通量芯片或测序检测，检测效率远高于RFLP。",
-  "module": 4,
-  "subject": "遗传学",
-  "concept": "分子标记",
-  "difficulty": "easy",
-  "year": 2025,
-  "chart": null,
-  "oldId": "1359802620",
-  "tags": []
- },
- "BQ-quantitative_gen-ea7e6248e6fb": {
-  "type": "mtf",
-  "question": "关于分子标记的类型与应用，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "SNP（单核苷酸多态性）是基因组中分布最广泛的遗传变异类型",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "SSR（简单序列重复/微卫星）标记具有高度多态性和共显性遗传的特点",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "RFLP标记的检测效率高于SNP标记",
-    "answer": false
-   },
-   {
-    "label": "D",
-    "text": "RFLP（限制性片段长度多态性）利用限制酶切片段长度的差异作为遗传标记",
-    "answer": true
-   }
-  ],
-  "explanation": "D正确：RFLP的原理。B正确：SSR标记的优点。A正确：SNP的普遍性。C错误：RFLP检测效率低（需Southern blotting），SNP可通过高通量芯片或测序检测，检测效率远高于RFLP。",
-  "module": 4,
-  "subject": "遗传学",
-  "concept": "分子标记",
-  "difficulty": "easy",
-  "year": 2025,
-  "chart": null,
-  "oldId": "1359802620",
-  "tags": []
- },
- "BQ-quantitative_gen-5fad1fc476ee": {
-  "type": "mtf",
-  "question": "关于分子标记的类型与应用，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "SSR（简单序列重复/微卫星）标记具有高度多态性和共显性遗传的特点",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "RFLP（限制性片段长度多态性）利用限制酶切片段长度的差异作为遗传标记",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "RFLP标记的检测效率高于SNP标记",
-    "answer": false
-   },
-   {
-    "label": "D",
-    "text": "SNP（单核苷酸多态性）是基因组中分布最广泛的遗传变异类型",
-    "answer": true
-   }
-  ],
-  "explanation": "B正确：RFLP的原理。A正确：SSR标记的优点。D正确：SNP的普遍性。C错误：RFLP检测效率低（需Southern blotting），SNP可通过高通量芯片或测序检测，检测效率远高于RFLP。",
-  "module": 4,
-  "subject": "遗传学",
-  "concept": "分子标记",
-  "difficulty": "easy",
-  "year": 2025,
-  "chart": null,
-  "oldId": "1359802620",
-  "tags": []
- },
- "BQ-quantitative_gen-d50e9b2bca21": {
-  "type": "mtf",
-  "question": "关于分子标记的类型与应用，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "SSR（简单序列重复/微卫星）标记具有高度多态性和共显性遗传的特点",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "RFLP（限制性片段长度多态性）利用限制酶切片段长度的差异作为遗传标记",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "SNP（单核苷酸多态性）是基因组中分布最广泛的遗传变异类型",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "RFLP标记的检测效率高于SNP标记",
-    "answer": false
-   }
-  ],
-  "explanation": "B正确：RFLP的原理。A正确：SSR标记的优点。C正确：SNP的普遍性。D错误：RFLP检测效率低（需Southern blotting），SNP可通过高通量芯片或测序检测，检测效率远高于RFLP。",
-  "module": 4,
-  "subject": "遗传学",
-  "concept": "分子标记",
-  "difficulty": "easy",
-  "year": 2025,
-  "chart": null,
-  "oldId": "1359802620",
-  "tags": []
- },
- "BQ-quantitative_gen-567c77850906": {
-  "type": "mtf",
-  "question": "关于分子标记的类型与应用，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "SSR（简单序列重复/微卫星）标记具有高度多态性和共显性遗传的特点",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "RFLP标记的检测效率高于SNP标记",
-    "answer": false
-   },
-   {
-    "label": "C",
-    "text": "RFLP（限制性片段长度多态性）利用限制酶切片段长度的差异作为遗传标记",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "SNP（单核苷酸多态性）是基因组中分布最广泛的遗传变异类型",
-    "answer": true
-   }
-  ],
-  "explanation": "C正确：RFLP的原理。A正确：SSR标记的优点。D正确：SNP的普遍性。B错误：RFLP检测效率低（需Southern blotting），SNP可通过高通量芯片或测序检测，检测效率远高于RFLP。",
-  "module": 4,
-  "subject": "遗传学",
-  "concept": "分子标记",
-  "difficulty": "easy",
-  "year": 2025,
-  "chart": null,
-  "oldId": "1359802620",
-  "tags": []
- },
- "BQ-quantitative_gen-0f98e2f5d000": {
-  "type": "mtf",
-  "question": "关于分子标记的类型与应用，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "SSR（简单序列重复/微卫星）标记具有高度多态性和共显性遗传的特点",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "RFLP标记的检测效率高于SNP标记",
-    "answer": false
-   },
-   {
-    "label": "C",
-    "text": "SNP（单核苷酸多态性）是基因组中分布最广泛的遗传变异类型",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "RFLP（限制性片段长度多态性）利用限制酶切片段长度的差异作为遗传标记",
-    "answer": true
-   }
-  ],
-  "explanation": "D正确：RFLP的原理。A正确：SSR标记的优点。C正确：SNP的普遍性。B错误：RFLP检测效率低（需Southern blotting），SNP可通过高通量芯片或测序检测，检测效率远高于RFLP。",
-  "module": 4,
-  "subject": "遗传学",
-  "concept": "分子标记",
-  "difficulty": "easy",
-  "year": 2025,
-  "chart": null,
-  "oldId": "1359802620",
-  "tags": []
- },
- "BQ-quantitative_gen-8af4d55cc20a": {
-  "type": "mtf",
-  "question": "关于分子标记的类型与应用，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "SSR（简单序列重复/微卫星）标记具有高度多态性和共显性遗传的特点",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "SNP（单核苷酸多态性）是基因组中分布最广泛的遗传变异类型",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "RFLP（限制性片段长度多态性）利用限制酶切片段长度的差异作为遗传标记",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "RFLP标记的检测效率高于SNP标记",
-    "answer": false
-   }
-  ],
-  "explanation": "C正确：RFLP的原理。A正确：SSR标记的优点。B正确：SNP的普遍性。D错误：RFLP检测效率低（需Southern blotting），SNP可通过高通量芯片或测序检测，检测效率远高于RFLP。",
-  "module": 4,
-  "subject": "遗传学",
-  "concept": "分子标记",
-  "difficulty": "easy",
-  "year": 2025,
-  "chart": null,
-  "oldId": "1359802620",
-  "tags": []
- },
- "BQ-quantitative_gen-3bd5bcec64c6": {
-  "type": "mtf",
-  "question": "关于分子标记的类型与应用，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "SSR（简单序列重复/微卫星）标记具有高度多态性和共显性遗传的特点",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "SNP（单核苷酸多态性）是基因组中分布最广泛的遗传变异类型",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "RFLP标记的检测效率高于SNP标记",
-    "answer": false
-   },
-   {
-    "label": "D",
-    "text": "RFLP（限制性片段长度多态性）利用限制酶切片段长度的差异作为遗传标记",
-    "answer": true
-   }
-  ],
-  "explanation": "D正确：RFLP的原理。A正确：SSR标记的优点。B正确：SNP的普遍性。C错误：RFLP检测效率低（需Southern blotting），SNP可通过高通量芯片或测序检测，检测效率远高于RFLP。",
-  "module": 4,
-  "subject": "遗传学",
-  "concept": "分子标记",
-  "difficulty": "easy",
-  "year": 2025,
-  "chart": null,
-  "oldId": "1359802620",
-  "tags": []
- },
- "BQ-quantitative_gen-fef90518a2b6": {
-  "type": "mtf",
-  "question": "关于数量性状遗传，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "QTL（数量性状位点）作图通过分子标记与表型的关联统计来确定影响数量性状的染色体区域",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "数量性状的变异与孟德尔遗传规律相矛盾",
-    "answer": false
-   },
-   {
-    "label": "C",
-    "text": "数量性状表现为连续变异，受多个基因（多基因）和环境因素共同影响",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "遗传率（heritability）分为广义遗传率和狭义遗传率，狭义遗传率仅包括加性遗传方差占总表型方差的比例",
-    "answer": true
-   }
-  ],
-  "explanation": "C正确：数量性状的定义。D正确：遗传率的分类。A正确：QTL作图的原理。B错误：数量性状的变异可用多基因假说（Nilsson-Ehle）解释——多个孟德尔基因的加性效应产生连续表型分布，与孟德尔遗传规律不矛盾。",
-  "module": 4,
-  "subject": "遗传学",
-  "concept": "数量遗传学",
-  "difficulty": "medium",
-  "year": 2025,
-  "chart": null,
-  "oldId": "1108728835",
-  "tags": []
- },
- "BQ-quantitative_gen-9eb997ab7d5b": {
-  "type": "mtf",
-  "question": "关于数量性状遗传，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "QTL（数量性状位点）作图通过分子标记与表型的关联统计来确定影响数量性状的染色体区域",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "数量性状的变异与孟德尔遗传规律相矛盾",
-    "answer": false
-   },
-   {
-    "label": "C",
-    "text": "遗传率（heritability）分为广义遗传率和狭义遗传率，狭义遗传率仅包括加性遗传方差占总表型方差的比例",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "数量性状表现为连续变异，受多个基因（多基因）和环境因素共同影响",
-    "answer": true
-   }
-  ],
-  "explanation": "D正确：数量性状的定义。C正确：遗传率的分类。A正确：QTL作图的原理。B错误：数量性状的变异可用多基因假说（Nilsson-Ehle）解释——多个孟德尔基因的加性效应产生连续表型分布，与孟德尔遗传规律不矛盾。",
-  "module": 4,
-  "subject": "遗传学",
-  "concept": "数量遗传学",
-  "difficulty": "medium",
-  "year": 2025,
-  "chart": null,
-  "oldId": "1108728835",
-  "tags": []
- },
- "BQ-quantitative_gen-1ecc8f300dd6": {
-  "type": "mtf",
-  "question": "关于数量性状遗传，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "QTL（数量性状位点）作图通过分子标记与表型的关联统计来确定影响数量性状的染色体区域",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "数量性状表现为连续变异，受多个基因（多基因）和环境因素共同影响",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "数量性状的变异与孟德尔遗传规律相矛盾",
-    "answer": false
-   },
-   {
-    "label": "D",
-    "text": "遗传率（heritability）分为广义遗传率和狭义遗传率，狭义遗传率仅包括加性遗传方差占总表型方差的比例",
-    "answer": true
-   }
-  ],
-  "explanation": "B正确：数量性状的定义。D正确：遗传率的分类。A正确：QTL作图的原理。C错误：数量性状的变异可用多基因假说（Nilsson-Ehle）解释——多个孟德尔基因的加性效应产生连续表型分布，与孟德尔遗传规律不矛盾。",
-  "module": 4,
-  "subject": "遗传学",
-  "concept": "数量遗传学",
-  "difficulty": "medium",
-  "year": 2025,
-  "chart": null,
-  "oldId": "1108728835",
-  "tags": []
- },
- "BQ-quantitative_gen-6e1af61f9f5f": {
-  "type": "mtf",
-  "question": "关于数量性状遗传，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "QTL（数量性状位点）作图通过分子标记与表型的关联统计来确定影响数量性状的染色体区域",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "数量性状表现为连续变异，受多个基因（多基因）和环境因素共同影响",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "遗传率（heritability）分为广义遗传率和狭义遗传率，狭义遗传率仅包括加性遗传方差占总表型方差的比例",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "数量性状的变异与孟德尔遗传规律相矛盾",
-    "answer": false
-   }
-  ],
-  "explanation": "B正确：数量性状的定义。C正确：遗传率的分类。A正确：QTL作图的原理。D错误：数量性状的变异可用多基因假说（Nilsson-Ehle）解释——多个孟德尔基因的加性效应产生连续表型分布，与孟德尔遗传规律不矛盾。",
-  "module": 4,
-  "subject": "遗传学",
-  "concept": "数量遗传学",
-  "difficulty": "medium",
-  "year": 2025,
-  "chart": null,
-  "oldId": "1108728835",
-  "tags": []
- },
- "BQ-quantitative_gen-03cabf41660d": {
-  "type": "mtf",
-  "question": "关于数量性状遗传，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "QTL（数量性状位点）作图通过分子标记与表型的关联统计来确定影响数量性状的染色体区域",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "遗传率（heritability）分为广义遗传率和狭义遗传率，狭义遗传率仅包括加性遗传方差占总表型方差的比例",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "数量性状的变异与孟德尔遗传规律相矛盾",
-    "answer": false
-   },
-   {
-    "label": "D",
-    "text": "数量性状表现为连续变异，受多个基因（多基因）和环境因素共同影响",
-    "answer": true
-   }
-  ],
-  "explanation": "D正确：数量性状的定义。B正确：遗传率的分类。A正确：QTL作图的原理。C错误：数量性状的变异可用多基因假说（Nilsson-Ehle）解释——多个孟德尔基因的加性效应产生连续表型分布，与孟德尔遗传规律不矛盾。",
-  "module": 4,
-  "subject": "遗传学",
-  "concept": "数量遗传学",
-  "difficulty": "medium",
-  "year": 2025,
-  "chart": null,
-  "oldId": "1108728835",
-  "tags": []
- },
- "BQ-quantitative_gen-7572362a291e": {
-  "type": "mtf",
-  "question": "关于数量性状遗传，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "QTL（数量性状位点）作图通过分子标记与表型的关联统计来确定影响数量性状的染色体区域",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "遗传率（heritability）分为广义遗传率和狭义遗传率，狭义遗传率仅包括加性遗传方差占总表型方差的比例",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "数量性状表现为连续变异，受多个基因（多基因）和环境因素共同影响",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "数量性状的变异与孟德尔遗传规律相矛盾",
-    "answer": false
-   }
-  ],
-  "explanation": "C正确：数量性状的定义。B正确：遗传率的分类。A正确：QTL作图的原理。D错误：数量性状的变异可用多基因假说（Nilsson-Ehle）解释——多个孟德尔基因的加性效应产生连续表型分布，与孟德尔遗传规律不矛盾。",
-  "module": 4,
-  "subject": "遗传学",
-  "concept": "数量遗传学",
-  "difficulty": "medium",
-  "year": 2025,
-  "chart": null,
-  "oldId": "1108728835",
-  "tags": []
- },
- "BQ-quantitative_gen-0ead2fefca4c": {
-  "type": "mtf",
-  "question": "关于数量性状遗传，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "数量性状的变异与孟德尔遗传规律相矛盾",
-    "answer": false
-   },
-   {
-    "label": "B",
-    "text": "QTL（数量性状位点）作图通过分子标记与表型的关联统计来确定影响数量性状的染色体区域",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "数量性状表现为连续变异，受多个基因（多基因）和环境因素共同影响",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "遗传率（heritability）分为广义遗传率和狭义遗传率，狭义遗传率仅包括加性遗传方差占总表型方差的比例",
-    "answer": true
-   }
-  ],
-  "explanation": "C正确：数量性状的定义。D正确：遗传率的分类。B正确：QTL作图的原理。A错误：数量性状的变异可用多基因假说（Nilsson-Ehle）解释——多个孟德尔基因的加性效应产生连续表型分布，与孟德尔遗传规律不矛盾。",
-  "module": 4,
-  "subject": "遗传学",
-  "concept": "数量遗传学",
-  "difficulty": "medium",
-  "year": 2025,
-  "chart": null,
-  "oldId": "1108728835",
-  "tags": []
- },
- "BQ-quantitative_gen-27f45e74996f": {
-  "type": "mtf",
-  "question": "关于数量性状遗传，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "数量性状的变异与孟德尔遗传规律相矛盾",
-    "answer": false
-   },
-   {
-    "label": "B",
-    "text": "QTL（数量性状位点）作图通过分子标记与表型的关联统计来确定影响数量性状的染色体区域",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "遗传率（heritability）分为广义遗传率和狭义遗传率，狭义遗传率仅包括加性遗传方差占总表型方差的比例",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "数量性状表现为连续变异，受多个基因（多基因）和环境因素共同影响",
-    "answer": true
-   }
-  ],
-  "explanation": "D正确：数量性状的定义。C正确：遗传率的分类。B正确：QTL作图的原理。A错误：数量性状的变异可用多基因假说（Nilsson-Ehle）解释——多个孟德尔基因的加性效应产生连续表型分布，与孟德尔遗传规律不矛盾。",
-  "module": 4,
-  "subject": "遗传学",
-  "concept": "数量遗传学",
-  "difficulty": "medium",
-  "year": 2025,
-  "chart": null,
-  "oldId": "1108728835",
-  "tags": []
- },
- "BQ-quantitative_gen-41e20add1651": {
-  "type": "mtf",
-  "question": "关于数量性状遗传，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "数量性状的变异与孟德尔遗传规律相矛盾",
-    "answer": false
-   },
-   {
-    "label": "B",
-    "text": "数量性状表现为连续变异，受多个基因（多基因）和环境因素共同影响",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "QTL（数量性状位点）作图通过分子标记与表型的关联统计来确定影响数量性状的染色体区域",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "遗传率（heritability）分为广义遗传率和狭义遗传率，狭义遗传率仅包括加性遗传方差占总表型方差的比例",
-    "answer": true
-   }
-  ],
-  "explanation": "B正确：数量性状的定义。D正确：遗传率的分类。C正确：QTL作图的原理。A错误：数量性状的变异可用多基因假说（Nilsson-Ehle）解释——多个孟德尔基因的加性效应产生连续表型分布，与孟德尔遗传规律不矛盾。",
-  "module": 4,
-  "subject": "遗传学",
-  "concept": "数量遗传学",
-  "difficulty": "medium",
-  "year": 2025,
-  "chart": null,
-  "oldId": "1108728835",
-  "tags": []
- },
- "BQ-quantitative_gen-335298908f14": {
-  "type": "mtf",
-  "question": "关于数量性状遗传，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "数量性状的变异与孟德尔遗传规律相矛盾",
-    "answer": false
-   },
-   {
-    "label": "B",
-    "text": "数量性状表现为连续变异，受多个基因（多基因）和环境因素共同影响",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "遗传率（heritability）分为广义遗传率和狭义遗传率，狭义遗传率仅包括加性遗传方差占总表型方差的比例",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "QTL（数量性状位点）作图通过分子标记与表型的关联统计来确定影响数量性状的染色体区域",
-    "answer": true
-   }
-  ],
-  "explanation": "B正确：数量性状的定义。C正确：遗传率的分类。D正确：QTL作图的原理。A错误：数量性状的变异可用多基因假说（Nilsson-Ehle）解释——多个孟德尔基因的加性效应产生连续表型分布，与孟德尔遗传规律不矛盾。",
-  "module": 4,
-  "subject": "遗传学",
-  "concept": "数量遗传学",
-  "difficulty": "medium",
-  "year": 2025,
-  "chart": null,
-  "oldId": "1108728835",
-  "tags": []
- },
- "BQ-quantitative_gen-bb2514257326": {
-  "type": "mtf",
-  "question": "关于数量性状遗传，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "数量性状的变异与孟德尔遗传规律相矛盾",
-    "answer": false
-   },
-   {
-    "label": "B",
-    "text": "遗传率（heritability）分为广义遗传率和狭义遗传率，狭义遗传率仅包括加性遗传方差占总表型方差的比例",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "QTL（数量性状位点）作图通过分子标记与表型的关联统计来确定影响数量性状的染色体区域",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "数量性状表现为连续变异，受多个基因（多基因）和环境因素共同影响",
-    "answer": true
-   }
-  ],
-  "explanation": "D正确：数量性状的定义。B正确：遗传率的分类。C正确：QTL作图的原理。A错误：数量性状的变异可用多基因假说（Nilsson-Ehle）解释——多个孟德尔基因的加性效应产生连续表型分布，与孟德尔遗传规律不矛盾。",
-  "module": 4,
-  "subject": "遗传学",
-  "concept": "数量遗传学",
-  "difficulty": "medium",
-  "year": 2025,
-  "chart": null,
-  "oldId": "1108728835",
-  "tags": []
- },
- "BQ-quantitative_gen-907b61230bbc": {
-  "type": "mtf",
-  "question": "关于数量性状遗传，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "数量性状的变异与孟德尔遗传规律相矛盾",
-    "answer": false
-   },
-   {
-    "label": "B",
-    "text": "遗传率（heritability）分为广义遗传率和狭义遗传率，狭义遗传率仅包括加性遗传方差占总表型方差的比例",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "数量性状表现为连续变异，受多个基因（多基因）和环境因素共同影响",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "QTL（数量性状位点）作图通过分子标记与表型的关联统计来确定影响数量性状的染色体区域",
-    "answer": true
-   }
-  ],
-  "explanation": "C正确：数量性状的定义。B正确：遗传率的分类。D正确：QTL作图的原理。A错误：数量性状的变异可用多基因假说（Nilsson-Ehle）解释——多个孟德尔基因的加性效应产生连续表型分布，与孟德尔遗传规律不矛盾。",
-  "module": 4,
-  "subject": "遗传学",
-  "concept": "数量遗传学",
-  "difficulty": "medium",
-  "year": 2025,
-  "chart": null,
-  "oldId": "1108728835",
-  "tags": []
- },
- "BQ-quantitative_gen-b129ec5d1bd9": {
-  "type": "mtf",
-  "question": "关于数量性状遗传，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "数量性状表现为连续变异，受多个基因（多基因）和环境因素共同影响",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "QTL（数量性状位点）作图通过分子标记与表型的关联统计来确定影响数量性状的染色体区域",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "数量性状的变异与孟德尔遗传规律相矛盾",
-    "answer": false
-   },
-   {
-    "label": "D",
-    "text": "遗传率（heritability）分为广义遗传率和狭义遗传率，狭义遗传率仅包括加性遗传方差占总表型方差的比例",
-    "answer": true
-   }
-  ],
-  "explanation": "A正确：数量性状的定义。D正确：遗传率的分类。B正确：QTL作图的原理。C错误：数量性状的变异可用多基因假说（Nilsson-Ehle）解释——多个孟德尔基因的加性效应产生连续表型分布，与孟德尔遗传规律不矛盾。",
-  "module": 4,
-  "subject": "遗传学",
-  "concept": "数量遗传学",
-  "difficulty": "medium",
-  "year": 2025,
-  "chart": null,
-  "oldId": "1108728835",
-  "tags": []
- },
- "BQ-quantitative_gen-b5badd734593": {
-  "type": "mtf",
-  "question": "关于数量性状遗传，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "数量性状表现为连续变异，受多个基因（多基因）和环境因素共同影响",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "QTL（数量性状位点）作图通过分子标记与表型的关联统计来确定影响数量性状的染色体区域",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "遗传率（heritability）分为广义遗传率和狭义遗传率，狭义遗传率仅包括加性遗传方差占总表型方差的比例",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "数量性状的变异与孟德尔遗传规律相矛盾",
-    "answer": false
-   }
-  ],
-  "explanation": "A正确：数量性状的定义。C正确：遗传率的分类。B正确：QTL作图的原理。D错误：数量性状的变异可用多基因假说（Nilsson-Ehle）解释——多个孟德尔基因的加性效应产生连续表型分布，与孟德尔遗传规律不矛盾。",
-  "module": 4,
-  "subject": "遗传学",
-  "concept": "数量遗传学",
-  "difficulty": "medium",
-  "year": 2025,
-  "chart": null,
-  "oldId": "1108728835",
-  "tags": []
- },
- "BQ-quantitative_gen-add50acaa0e3": {
-  "type": "mtf",
-  "question": "关于数量性状遗传，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "数量性状表现为连续变异，受多个基因（多基因）和环境因素共同影响",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "数量性状的变异与孟德尔遗传规律相矛盾",
-    "answer": false
-   },
-   {
-    "label": "C",
-    "text": "QTL（数量性状位点）作图通过分子标记与表型的关联统计来确定影响数量性状的染色体区域",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "遗传率（heritability）分为广义遗传率和狭义遗传率，狭义遗传率仅包括加性遗传方差占总表型方差的比例",
-    "answer": true
-   }
-  ],
-  "explanation": "A正确：数量性状的定义。D正确：遗传率的分类。C正确：QTL作图的原理。B错误：数量性状的变异可用多基因假说（Nilsson-Ehle）解释——多个孟德尔基因的加性效应产生连续表型分布，与孟德尔遗传规律不矛盾。",
-  "module": 4,
-  "subject": "遗传学",
-  "concept": "数量遗传学",
-  "difficulty": "medium",
-  "year": 2025,
-  "chart": null,
-  "oldId": "1108728835",
-  "tags": []
- },
- "BQ-quantitative_gen-1f27b5b4d961": {
-  "type": "mtf",
-  "question": "关于数量性状遗传，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "数量性状表现为连续变异，受多个基因（多基因）和环境因素共同影响",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "数量性状的变异与孟德尔遗传规律相矛盾",
-    "answer": false
-   },
-   {
-    "label": "C",
-    "text": "遗传率（heritability）分为广义遗传率和狭义遗传率，狭义遗传率仅包括加性遗传方差占总表型方差的比例",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "QTL（数量性状位点）作图通过分子标记与表型的关联统计来确定影响数量性状的染色体区域",
-    "answer": true
-   }
-  ],
-  "explanation": "A正确：数量性状的定义。C正确：遗传率的分类。D正确：QTL作图的原理。B错误：数量性状的变异可用多基因假说（Nilsson-Ehle）解释——多个孟德尔基因的加性效应产生连续表型分布，与孟德尔遗传规律不矛盾。",
-  "module": 4,
-  "subject": "遗传学",
-  "concept": "数量遗传学",
-  "difficulty": "medium",
-  "year": 2025,
-  "chart": null,
-  "oldId": "1108728835",
-  "tags": []
- },
- "BQ-quantitative_gen-6241fce6d3ce": {
-  "type": "mtf",
-  "question": "关于数量性状遗传，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "数量性状表现为连续变异，受多个基因（多基因）和环境因素共同影响",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "遗传率（heritability）分为广义遗传率和狭义遗传率，狭义遗传率仅包括加性遗传方差占总表型方差的比例",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "QTL（数量性状位点）作图通过分子标记与表型的关联统计来确定影响数量性状的染色体区域",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "数量性状的变异与孟德尔遗传规律相矛盾",
-    "answer": false
-   }
-  ],
-  "explanation": "A正确：数量性状的定义。B正确：遗传率的分类。C正确：QTL作图的原理。D错误：数量性状的变异可用多基因假说（Nilsson-Ehle）解释——多个孟德尔基因的加性效应产生连续表型分布，与孟德尔遗传规律不矛盾。",
-  "module": 4,
-  "subject": "遗传学",
-  "concept": "数量遗传学",
-  "difficulty": "medium",
-  "year": 2025,
-  "chart": null,
-  "oldId": "1108728835",
-  "tags": []
- },
- "BQ-quantitative_gen-9e2ccfb91068": {
-  "type": "mtf",
-  "question": "关于数量性状遗传，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "数量性状表现为连续变异，受多个基因（多基因）和环境因素共同影响",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "遗传率（heritability）分为广义遗传率和狭义遗传率，狭义遗传率仅包括加性遗传方差占总表型方差的比例",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "数量性状的变异与孟德尔遗传规律相矛盾",
-    "answer": false
-   },
-   {
-    "label": "D",
-    "text": "QTL（数量性状位点）作图通过分子标记与表型的关联统计来确定影响数量性状的染色体区域",
-    "answer": true
-   }
-  ],
-  "explanation": "A正确：数量性状的定义。B正确：遗传率的分类。D正确：QTL作图的原理。C错误：数量性状的变异可用多基因假说（Nilsson-Ehle）解释——多个孟德尔基因的加性效应产生连续表型分布，与孟德尔遗传规律不矛盾。",
-  "module": 4,
-  "subject": "遗传学",
-  "concept": "数量遗传学",
-  "difficulty": "medium",
-  "year": 2025,
-  "chart": null,
-  "oldId": "1108728835",
-  "tags": []
- },
- "BQ-quantitative_gen-1364acedea35": {
-  "type": "mtf",
-  "question": "关于数量性状遗传，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "遗传率（heritability）分为广义遗传率和狭义遗传率，狭义遗传率仅包括加性遗传方差占总表型方差的比例",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "QTL（数量性状位点）作图通过分子标记与表型的关联统计来确定影响数量性状的染色体区域",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "数量性状的变异与孟德尔遗传规律相矛盾",
-    "answer": false
-   },
-   {
-    "label": "D",
-    "text": "数量性状表现为连续变异，受多个基因（多基因）和环境因素共同影响",
-    "answer": true
-   }
-  ],
-  "explanation": "D正确：数量性状的定义。A正确：遗传率的分类。B正确：QTL作图的原理。C错误：数量性状的变异可用多基因假说（Nilsson-Ehle）解释——多个孟德尔基因的加性效应产生连续表型分布，与孟德尔遗传规律不矛盾。",
-  "module": 4,
-  "subject": "遗传学",
-  "concept": "数量遗传学",
-  "difficulty": "medium",
-  "year": 2025,
-  "chart": null,
-  "oldId": "1108728835",
-  "tags": []
- },
- "BQ-quantitative_gen-68164765b544": {
-  "type": "mtf",
-  "question": "关于数量性状遗传，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "遗传率（heritability）分为广义遗传率和狭义遗传率，狭义遗传率仅包括加性遗传方差占总表型方差的比例",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "QTL（数量性状位点）作图通过分子标记与表型的关联统计来确定影响数量性状的染色体区域",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "数量性状表现为连续变异，受多个基因（多基因）和环境因素共同影响",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "数量性状的变异与孟德尔遗传规律相矛盾",
-    "answer": false
-   }
-  ],
-  "explanation": "C正确：数量性状的定义。A正确：遗传率的分类。B正确：QTL作图的原理。D错误：数量性状的变异可用多基因假说（Nilsson-Ehle）解释——多个孟德尔基因的加性效应产生连续表型分布，与孟德尔遗传规律不矛盾。",
-  "module": 4,
-  "subject": "遗传学",
-  "concept": "数量遗传学",
-  "difficulty": "medium",
-  "year": 2025,
-  "chart": null,
-  "oldId": "1108728835",
-  "tags": []
- },
- "BQ-quantitative_gen-3cc460786a46": {
-  "type": "mtf",
-  "question": "关于数量性状遗传，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "遗传率（heritability）分为广义遗传率和狭义遗传率，狭义遗传率仅包括加性遗传方差占总表型方差的比例",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "数量性状的变异与孟德尔遗传规律相矛盾",
-    "answer": false
-   },
-   {
-    "label": "C",
-    "text": "QTL（数量性状位点）作图通过分子标记与表型的关联统计来确定影响数量性状的染色体区域",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "数量性状表现为连续变异，受多个基因（多基因）和环境因素共同影响",
-    "answer": true
-   }
-  ],
-  "explanation": "D正确：数量性状的定义。A正确：遗传率的分类。C正确：QTL作图的原理。B错误：数量性状的变异可用多基因假说（Nilsson-Ehle）解释——多个孟德尔基因的加性效应产生连续表型分布，与孟德尔遗传规律不矛盾。",
-  "module": 4,
-  "subject": "遗传学",
-  "concept": "数量遗传学",
-  "difficulty": "medium",
-  "year": 2025,
-  "chart": null,
-  "oldId": "1108728835",
-  "tags": []
- },
- "BQ-quantitative_gen-bc599a59bc7b": {
-  "type": "mtf",
-  "question": "关于数量性状遗传，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "遗传率（heritability）分为广义遗传率和狭义遗传率，狭义遗传率仅包括加性遗传方差占总表型方差的比例",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "数量性状的变异与孟德尔遗传规律相矛盾",
-    "answer": false
-   },
-   {
-    "label": "C",
-    "text": "数量性状表现为连续变异，受多个基因（多基因）和环境因素共同影响",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "QTL（数量性状位点）作图通过分子标记与表型的关联统计来确定影响数量性状的染色体区域",
-    "answer": true
-   }
-  ],
-  "explanation": "C正确：数量性状的定义。A正确：遗传率的分类。D正确：QTL作图的原理。B错误：数量性状的变异可用多基因假说（Nilsson-Ehle）解释——多个孟德尔基因的加性效应产生连续表型分布，与孟德尔遗传规律不矛盾。",
-  "module": 4,
-  "subject": "遗传学",
-  "concept": "数量遗传学",
-  "difficulty": "medium",
-  "year": 2025,
-  "chart": null,
-  "oldId": "1108728835",
-  "tags": []
- },
- "BQ-quantitative_gen-95586a9d5613": {
-  "type": "mtf",
-  "question": "关于数量性状遗传，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "遗传率（heritability）分为广义遗传率和狭义遗传率，狭义遗传率仅包括加性遗传方差占总表型方差的比例",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "数量性状表现为连续变异，受多个基因（多基因）和环境因素共同影响",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "QTL（数量性状位点）作图通过分子标记与表型的关联统计来确定影响数量性状的染色体区域",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "数量性状的变异与孟德尔遗传规律相矛盾",
-    "answer": false
-   }
-  ],
-  "explanation": "B正确：数量性状的定义。A正确：遗传率的分类。C正确：QTL作图的原理。D错误：数量性状的变异可用多基因假说（Nilsson-Ehle）解释——多个孟德尔基因的加性效应产生连续表型分布，与孟德尔遗传规律不矛盾。",
-  "module": 4,
-  "subject": "遗传学",
-  "concept": "数量遗传学",
-  "difficulty": "medium",
-  "year": 2025,
-  "chart": null,
-  "oldId": "1108728835",
-  "tags": []
- },
- "BQ-quantitative_gen-1e23b9e09a75": {
-  "type": "mtf",
-  "question": "关于数量性状遗传，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "遗传率（heritability）分为广义遗传率和狭义遗传率，狭义遗传率仅包括加性遗传方差占总表型方差的比例",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "数量性状表现为连续变异，受多个基因（多基因）和环境因素共同影响",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "数量性状的变异与孟德尔遗传规律相矛盾",
-    "answer": false
-   },
-   {
-    "label": "D",
-    "text": "QTL（数量性状位点）作图通过分子标记与表型的关联统计来确定影响数量性状的染色体区域",
-    "answer": true
-   }
-  ],
-  "explanation": "B正确：数量性状的定义。A正确：遗传率的分类。D正确：QTL作图的原理。C错误：数量性状的变异可用多基因假说（Nilsson-Ehle）解释——多个孟德尔基因的加性效应产生连续表型分布，与孟德尔遗传规律不矛盾。",
-  "module": 4,
-  "subject": "遗传学",
-  "concept": "数量遗传学",
-  "difficulty": "medium",
-  "year": 2025,
-  "chart": null,
-  "oldId": "1108728835",
-  "tags": []
- }
+  "M4-07-a2cfb282801c": {
+    "type": "mtf",
+    "question": "关于数量性状的特征，以下说法正确的有哪些？",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "数量性状通常由多基因控制，每个基因的效应较小且可累加",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "数量性状在群体中通常呈连续分布",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "数量性状的表现不受环境因素影响",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "数量性状的遗传分析需要统计学方法",
+        "answer": true
+      }
+    ],
+    "explanation": "A正确：多基因控制，效应累加。B正确：连续变异。C错误：数量性状受环境和基因共同影响。D正确：需要方差分析等统计方法。",
+    "subject": "遗传学",
+    "concept": "数量性状",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "quantitative_gen",
+      "module_4",
+      "遗传学",
+      "数量遗传"
+    ],
+    "references": []
+  },
+  "M4-07-65ede18c4e5c": {
+    "type": "mtf",
+    "question": "关于遗传力，以下判断正确的有哪些？",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "广义遗传力H²=VG/VP，其中VG为遗传方差，VP为表型方差",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "狭义遗传力h²=VA/VP，其中VA为加性遗传方差",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "狭义遗传力总是大于或等于广义遗传力",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "遗传力高的性状，选择育种的效果更好",
+        "answer": true
+      }
+    ],
+    "explanation": "A正确：广义遗传力定义。B正确：狭义遗传力定义。C错误：狭义遗传力≤广义遗传力，因为VA≤VG（VG=VA+VD+VI）。D正确：遗传力高意味着表型变异主要由遗传决定，选择有效。",
+    "subject": "遗传学",
+    "concept": "遗传力",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "quantitative_gen",
+      "module_4",
+      "遗传学",
+      "遗传力"
+    ],
+    "references": [
+      {
+        "doi": "10.1038/nrg2922",
+        "title": "Heritability in the genomics era",
+        "authors": "Manolio TA et al.",
+        "year": 2009,
+        "journal": "Nature Reviews Genetics"
+      }
+    ]
+  },
+  "M4-07-b5fc81189362": {
+    "type": "mtf",
+    "question": "关于QTL定位，以下说法正确的有哪些？",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "QTL定位可以直接确定控制数量性状的具体基因",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "QTL定位的精度主要取决于标记密度和群体大小",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "QTL定位通常利用分子标记与性状的连锁分析",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "QTL（Quantitative Trait Locus）是影响数量性状的基因在染色体上的位置",
+        "answer": false
+      }
+    ],
+    "explanation": "正确答案：B, C。详细解析请参见相关教材。",
+    "subject": "遗传学",
+    "concept": "QTL定位",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "quantitative_gen",
+      "module_4",
+      "遗传学",
+      "QTL"
+    ],
+    "references": [
+      {
+        "doi": "10.1038/nrg3103",
+        "title": "QTL mapping in plants",
+        "authors": "Kole C et al.",
+        "year": 2013,
+        "journal": "Nature Reviews Genetics"
+      }
+    ]
+  },
+  "M4-07-d583ec50247c": {
+    "type": "mtf",
+    "question": "关于GWAS（全基因组关联分析），以下判断正确的有哪些？",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "GWAS利用群体中的连锁不平衡（LD）来检测标记与性状的关联",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "GWAS通常使用SNP芯片进行全基因组范围的标记检测",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "GWAS发现的关联位点一定就是因果变异",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "GWAS的显著性阈值通常设定为p<5×10⁻⁸",
+        "answer": true
+      }
+    ],
+    "explanation": "A正确：GWAS利用LD。B正确：SNP芯片是GWAS的主要工具。C错误：关联位点可能与因果变异连锁，不一定是因果变异本身。D正确：Bonferroni校正后的阈值约为5×10⁻⁸。",
+    "subject": "遗传学",
+    "concept": "GWAS",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "quantitative_gen",
+      "module_4",
+      "遗传学",
+      "GWAS"
+    ],
+    "references": [
+      {
+        "doi": "10.1038/nrg2603",
+        "title": "Genome-wide association studies",
+        "authors": "McCarthy MI et al.",
+        "year": 2008,
+        "journal": "Nature Reviews Genetics"
+      }
+    ]
+  },
+  "M4-07-c28b307d74bc": {
+    "type": "mtf",
+    "question": "关于分子标记在遗传学中的应用，以下说法正确的有哪些？",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "SNP是基因组中数量最多的分子标记类型",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "SSR（简单序列重复）标记具有高度多态性和共显性特征",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "RFLP（限制性片段长度多态性）是最早发展的分子标记之一",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "分子标记辅助选择（MAS）可以加速育种进程",
+        "answer": true
+      }
+    ],
+    "explanation": "正确答案：C, D。详细解析请参见相关教材。",
+    "subject": "遗传学",
+    "concept": "分子标记",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "quantitative_gen",
+      "module_4",
+      "遗传学",
+      "分子标记"
+    ],
+    "references": []
+  }
 }

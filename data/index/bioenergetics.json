@@ -1,0 +1,57 @@
+{
+  "M1-10-42dcac4dadd9": {
+    "tags": [
+      "bioenergetics",
+      "module_1",
+      "生物化学",
+      "ATP"
+    ],
+    "difficulty": "high_school",
+    "module": "module1",
+    "tag": "bioenergetics"
+  },
+  "M1-10-0876e66c4dfe": {
+    "tags": [
+      "bioenergetics",
+      "module_1",
+      "生物化学",
+      "高能键"
+    ],
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "bioenergetics"
+  },
+  "M1-10-2e94ba4ffcc6": {
+    "tags": [
+      "bioenergetics",
+      "module_1",
+      "生物化学",
+      "能量偶联"
+    ],
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "bioenergetics"
+  },
+  "M1-10-21230ca870b3": {
+    "tags": [
+      "bioenergetics",
+      "module_1",
+      "生物化学",
+      "磷酸化"
+    ],
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "bioenergetics"
+  },
+  "M1-10-238544c7dfbf": {
+    "tags": [
+      "bioenergetics",
+      "module_1",
+      "生物化学",
+      "热力学"
+    ],
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "bioenergetics"
+  }
+}

@@ -1,595 +1,208 @@
 {
- "BQ-plant_respiration-b7047be156d8": {
-  "type": "mtf",
-  "question": "研究人员检测了酵母菌在不同氧浓度下的气体变化，数据如下（相对单位）。正确的是",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "氧浓度为 0 时只进行无氧呼吸",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "氧浓度 10% 时只进行有氧呼吸",
-    "answer": false
-   },
-   {
-    "label": "C",
-    "text": "酵母菌不进行无氧呼吸",
-    "answer": false
-   },
-   {
-    "label": "D",
-    "text": "氧浓度越高，无氧呼吸越强",
-    "answer": false
-   }
-  ],
-  "explanation": "O₂ 吸收为 0 时只进行无氧呼吸；O₂ 吸收等于 CO₂ 释放时（20%）只进行有氧呼吸；介于两者之间时同时进行有氧与无氧呼吸。",
-  "subject": "生物化学",
-  "concept": "呼吸作用",
-  "difficulty": "league",
-  "chart": "| 氧浓度(%) | 0 | 2 | 5 | 10 | 20 |\n|---|---|---|---|---|---|\n| CO₂释放 | 30 | 25 | 20 | 22 | 30 |\n| O₂吸收 | 0 | 10 | 15 | 22 | 30 |",
-  "year": null,
-  "module": "module_1",
-  "target": "both",
-  "tags": [
-   "module_1",
-   "生物化学",
-   "呼吸作用",
-   "图表题"
-  ],
-  "oldId": "1458756231"
- },
- "BQ-plant_respiration-dec0f9d6dd42": {
-  "type": "mtf",
-  "question": "细胞呼吸过程中，产生 CO2 的场所是",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "氧气直接与葡萄糖结合",
-    "answer": false
-   },
-   {
-    "label": "B",
-    "text": "有氧呼吸不产生还原氢",
-    "answer": false
-   },
-   {
-    "label": "C",
-    "text": "有氧呼吸的三个阶段都在线粒体中进行",
-    "answer": false
-   },
-   {
-    "label": "D",
-    "text": "有氧呼吸第一阶段在细胞质基质中进行",
-    "answer": true
-   }
-  ],
-  "explanation": "有氧呼吸第一阶段发生在细胞质基质，二、三阶段在线粒体；[H] 在第一、二阶段产生。",
-  "subject": "细胞生物学",
-  "concept": "细胞呼吸",
-  "difficulty": "basic",
-  "chart": null,
-  "year": null,
-  "module": "module_1",
-  "target": "high_school",
-  "tags": [
-   "module_1",
-   "细胞生物学",
-   "细胞呼吸",
-   "high_school"
-  ],
-  "oldId": "2122776828"
- },
- "BQ-plant_respiration-69b310671ae8": {
-  "type": "mtf",
-  "question": "下列产物中，酵母菌有氧呼吸和无氧呼吸都能产生的是",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "有氧呼吸全过程都在线粒体内进行",
-    "answer": false
-   },
-   {
-    "label": "B",
-    "text": "有氧呼吸第三阶段 O₂ 与 [H] 结合生成水，释放大量能量",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "有氧呼吸产生的 [H] 全部来自葡萄糖",
-    "answer": false
-   },
-   {
-    "label": "D",
-    "text": "有氧呼吸第二阶段产生 ATP 最多",
-    "answer": false
-   }
-  ],
-  "explanation": "有氧呼吸第一阶段在细胞质基质，第二、三阶段在线粒体；第三阶段 O₂ 与 [H] 结合生成水，同时释放大量能量。",
-  "subject": "植物学",
-  "concept": "细胞呼吸",
-  "difficulty": "league",
-  "chart": null,
-  "year": null,
-  "module": "module_2",
-  "target": "high_school",
-  "tags": [
-   "module_2",
-   "植物学",
-   "细胞呼吸",
-   "high_school"
-  ],
-  "oldId": "86260219"
- },
- "BQ-plant_respiration-555dd651af78": {
-  "type": "mtf",
-  "question": "下列关于光合作用和呼吸作用中能量和物质的关系，正确的是",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "光照为零时测得的 CO₂ 增加速率表示呼吸速率",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "光照强度越高，光合速率持续升高",
-    "answer": false
-   },
-   {
-    "label": "C",
-    "text": "CO₂ 吸收速率即为总光合速率",
-    "answer": false
-   },
-   {
-    "label": "D",
-    "text": "无法通过实验区分呼吸速率与光合速率",
-    "answer": false
-   }
-  ],
-  "explanation": "光照为零时植物只进行细胞呼吸释放 CO₂，可测得呼吸速率；CO₂ 吸收速率为净光合速率，真正（总）光合速率=净光合速率+呼吸速率。",
-  "subject": "植物学",
-  "concept": "光合作用与呼吸作用综合",
-  "difficulty": "league",
-  "chart": null,
-  "year": null,
-  "module": "module_2",
-  "target": "competition",
-  "tags": [
-   "module_2",
-   "植物学",
-   "光合作用与呼吸作用综合",
-   "competition"
-  ],
-  "oldId": "156776525"
- },
- "BQ-plant_respiration-1bf601739906": {
-  "type": "mtf",
-  "question": "关于无氧呼吸的叙述，错误的是",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "有氧呼吸全过程都在线粒体内进行",
-    "answer": false
-   },
-   {
-    "label": "B",
-    "text": "有氧呼吸第三阶段 O₂ 与 [H] 结合生成水，释放大量能量",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "有氧呼吸产生的 [H] 全部来自葡萄糖",
-    "answer": false
-   },
-   {
-    "label": "D",
-    "text": "有氧呼吸第二阶段产生 ATP 最多",
-    "answer": false
-   }
-  ],
-  "explanation": "有氧呼吸第一阶段在细胞质基质，第二、三阶段在线粒体；第三阶段 O₂ 与 [H] 结合生成水，同时释放大量能量。",
-  "subject": "植物学",
-  "concept": "细胞呼吸",
-  "difficulty": "league",
-  "chart": null,
-  "year": null,
-  "module": "module_2",
-  "target": "high_school",
-  "tags": [
-   "module_2",
-   "植物学",
-   "细胞呼吸",
-   "high_school"
-  ],
-  "oldId": "1945604700"
- },
- "BQ-plant_respiration-809fbbdb244c": {
-  "type": "mtf",
-  "question": "关于有氧呼吸的叙述，正确的是",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "有氧呼吸全过程都在线粒体内进行",
-    "answer": false
-   },
-   {
-    "label": "B",
-    "text": "有氧呼吸第三阶段 O₂ 与 [H] 结合生成水，释放大量能量",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "有氧呼吸产生的 [H] 全部来自葡萄糖",
-    "answer": false
-   },
-   {
-    "label": "D",
-    "text": "有氧呼吸第二阶段产生 ATP 最多",
-    "answer": false
-   }
-  ],
-  "explanation": "有氧呼吸第一阶段在细胞质基质，第二、三阶段在线粒体；第三阶段 O₂ 与 [H] 结合生成水，同时释放大量能量。",
-  "subject": "植物学",
-  "concept": "细胞呼吸",
-  "difficulty": "league",
-  "chart": null,
-  "year": null,
-  "module": "module_2",
-  "target": "high_school",
-  "tags": [
-   "module_2",
-   "植物学",
-   "细胞呼吸",
-   "high_school"
-  ],
-  "oldId": "1785493232"
- },
- "BQ-plant_respiration-d95a30345a8e": {
-  "type": "mtf",
-  "question": "关于有氧呼吸的叙述，正确的是",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "有氧呼吸的全过程都在线粒体内进行",
-    "answer": false
-   },
-   {
-    "label": "B",
-    "text": "有氧呼吸第一阶段生成的[H]全部来自葡萄糖",
-    "answer": false
-   },
-   {
-    "label": "C",
-    "text": "有氧呼吸第三阶段是氧气与[H]结合生成水，产生大量 ATP",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "有氧呼吸产生的 CO₂ 来自细胞质基质",
-    "answer": false
-   }
-  ],
-  "explanation": "有氧呼吸第一阶段在细胞质基质中进行，第二、三阶段在线粒体中进行；第三阶段[H]与O₂结合生成水，释放大量能量。",
-  "subject": "植物学",
-  "concept": "呼吸作用",
-  "difficulty": "basic",
-  "chart": null,
-  "year": null,
-  "module": "module_2",
-  "target": "high_school",
-  "tags": [
-   "module_2",
-   "植物学",
-   "呼吸作用",
-   "高考"
-  ],
-  "oldId": "2119027068"
- },
- "BQ-plant_respiration-cb26b3935c75": {
-  "type": "mtf",
-  "question": "关于绿色植物光合作用和呼吸作用的叙述，正确的是",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "光合作用只在白天进行，呼吸作用只在夜晚进行",
-    "answer": false
-   },
-   {
-    "label": "B",
-    "text": "光合作用产生的 O2 可被呼吸作用利用",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "光合作用的暗反应不消耗能量",
-    "answer": false
-   },
-   {
-    "label": "D",
-    "text": "光合作用和呼吸作用产生的 ATP 用途相同",
-    "answer": false
-   }
-  ],
-  "explanation": "光合作用产生的 O2 可被呼吸作用消耗；呼吸作用昼夜都进行；光合产生的 ATP 主要用于暗反应；呼吸产生的 ATP 为各种生命活动供能。",
-  "subject": "植物生理学",
-  "concept": "光合与呼吸综合",
-  "difficulty": "basic",
-  "chart": null,
-  "year": null,
-  "module": "module_2",
-  "target": "high_school",
-  "tags": [
-   "module_2",
-   "植物生理学",
-   "光合与呼吸综合",
-   "high_school"
-  ],
-  "oldId": "1774970287"
- },
- "BQ-plant_respiration-af9acd4edf37": {
-  "type": "mtf",
-  "question": "在植物的呼吸过程中，下列关于细胞色素的说法中正确的是",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "细胞色素是电子传递链的最后一个电子受体",
-    "answer": false
-   },
-   {
-    "label": "B",
-    "text": "细胞色素是电子传递链的第一个电子受体",
-    "answer": false
-   },
-   {
-    "label": "C",
-    "text": "细胞色素是电子传递链的中间电子受体",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "细胞色素不是电子传递链的电子受体",
-    "answer": false
-   }
-  ],
-  "explanation": "在植物的呼吸过程中，细胞色素是电子传递链的中间电子受体。它接受来自其他电子传递体的电子，并将其传递给下一个电子传递体。选项A是错误的，因为细胞色素不是电子传递链的最后一个电子受体。选项B是错误的，因为细胞色素不是电子传递链的第一个电子受体。选项D是错误的，因为细胞色素是电子传递链的电子受体。",
-  "subject": "植物学",
-  "concept": "呼吸",
-  "difficulty": "basic",
-  "chart": null,
-  "year": null,
-  "module": "module_2",
-  "target": "high_school",
-  "tags": [
-   "植物学",
-   "呼吸",
-   "high_school"
-  ],
-  "oldId": "261661542"
- },
- "BQ-plant_respiration-a742f5189e4e": {
-  "type": "mtf",
-  "question": "如果 CO₂ 浓度突然下降，短时间内叶绿体中 C₃ 和 C₅ 的变化是",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "光照为零时测得的 CO₂ 增加速率表示呼吸速率",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "光照强度越高，光合速率持续升高",
-    "answer": false
-   },
-   {
-    "label": "C",
-    "text": "CO₂ 吸收速率即为总光合速率",
-    "answer": false
-   },
-   {
-    "label": "D",
-    "text": "无法通过实验区分呼吸速率与光合速率",
-    "answer": false
-   }
-  ],
-  "explanation": "光照为零时植物只进行细胞呼吸释放 CO₂，可测得呼吸速率；CO₂ 吸收速率为净光合速率，真正（总）光合速率=净光合速率+呼吸速率。",
-  "subject": "植物学",
-  "concept": "光合作用与呼吸作用综合",
-  "difficulty": "league",
-  "chart": null,
-  "year": null,
-  "module": "module_2",
-  "target": "competition",
-  "tags": [
-   "module_2",
-   "植物学",
-   "光合作用与呼吸作用综合",
-   "competition"
-  ],
-  "oldId": "657619761"
- },
- "BQ-plant_respiration-b8fba09656b2": {
-  "type": "mtf",
-  "question": "将一株绿色植物置于密闭装置内，测定不同光照条件下装置中 CO₂ 变化速率，下列叙述正确的是",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "光照为零时测得的 CO₂ 增加速率表示呼吸速率",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "光照强度越高，光合速率持续升高",
-    "answer": false
-   },
-   {
-    "label": "C",
-    "text": "CO₂ 吸收速率即为总光合速率",
-    "answer": false
-   },
-   {
-    "label": "D",
-    "text": "无法通过实验区分呼吸速率与光合速率",
-    "answer": false
-   }
-  ],
-  "explanation": "光照为零时植物只进行细胞呼吸释放 CO₂，可测得呼吸速率；CO₂ 吸收速率为净光合速率，真正（总）光合速率=净光合速率+呼吸速率。",
-  "subject": "植物学",
-  "concept": "光合作用与呼吸作用综合",
-  "difficulty": "league",
-  "chart": null,
-  "year": null,
-  "module": "module_2",
-  "target": "competition",
-  "tags": [
-   "module_2",
-   "植物学",
-   "光合作用与呼吸作用综合",
-   "competition"
-  ],
-  "oldId": "1212290094"
- },
- "BQ-plant_respiration-797522b3ba06": {
-  "type": "multi_judge",
-  "question": "将某植物幼苗置于密闭透明容器，给予适宜光照。一段时间后，检测到容器内 CO2 浓度显著下降，O2 浓度上升。",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "该现象表明幼苗的光合速率大于呼吸速率。",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "容器内 CO2 的减少量等于幼苗积累的有机物总量。",
-    "answer": false
-   },
-   {
-    "label": "C",
-    "text": "若突然停止光照，短时间内 C3 化合物含量将上升。",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "O2 浓度上升是因为线粒体有氧呼吸产生了氧气。",
-    "answer": false
-   }
-  ],
-  "explanation": "A 正确：密闭容器 CO2 下降、O2 上升，说明净光合速率大于零，即总光合速率大于呼吸速率。B 错误：CO2 减少量代表净光合固定的碳，但有机物积累还需考虑非碳元素及代谢损耗，且表述过于绝对。C 正确：停止光照，光反应停止，ATP 和 NADPH 减少，C3 还原受阻但生成仍在继续，导致 C3 积累。D 错误：氧气是叶绿体光反应产生的，线粒体有氧呼吸是消耗氧气。",
-  "subject": "植物生理学",
-  "concept": "光合作用与呼吸作用",
-  "difficulty": "basic",
-  "chart": null,
-  "year": null,
-  "module": "module_2",
-  "target": "competition",
-  "tags": [
-   "module_2",
-   "easy"
-  ],
-  "oldId": "819015989"
- },
- "BQ-plant_respiration-21710fd10d18": {
-  "type": "multi_judge",
-  "question": "将生长状况一致的豌豆幼苗置于密闭透明容器中，给予适宜光照。随时间推移，容器内 CO2 浓度逐渐下降并趋于稳定。",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "CO2 浓度稳定时，叶肉细胞的光合速率等于其呼吸速率。",
-    "answer": false
-   },
-   {
-    "label": "B",
-    "text": "实验初期 CO2 浓度下降速率主要受限于 Rubisco 酶的羧化效率。",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "达到稳定状态时，容器内 O2 浓度高于实验开始时的初始浓度。",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "若突然停止光照，短时间内叶绿体基质中 C3 化合物含量将减少。",
-    "answer": false
-   }
-  ],
-  "explanation": "A 错：CO2 稳定指整株植物光合等于呼吸，但叶肉细胞光合需大于呼吸以补偿非光合器官消耗。B 对：初期 CO2 充足，暗反应酶活性常是限制因子。C 对：净光合积累有机物必然伴随 O2 净释放，故终点 O2 浓度升高。D 错：停光导致 ATP 和 NADPH 骤减，C3 还原受阻但生成仍在，故 C3 含量应上升而非减少。",
-  "subject": "植物生理学",
-  "concept": "光合作用与呼吸作用",
-  "difficulty": "league",
-  "chart": null,
-  "year": null,
-  "module": "module_2",
-  "target": "competition",
-  "tags": [
-   "module_2",
-   "medium"
-  ],
-  "oldId": "677769155"
- },
- "BQ-plant_respiration-3a7a8e879d1b": {
-  "type": "multi_judge",
-  "question": "将豌豆幼苗置于低氧胁迫下，根尖细胞线粒体膜电位下降，细胞质基质 pH 降低。检测发现乙醇积累且乳酸脱氢酶活性未显著升高。",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "低氧导致氧化磷酸化受阻，细胞主要依赖糖酵解供能。",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "细胞质基质 pH 降低主要由乳酸大量积累直接导致。",
-    "answer": false
-   },
-   {
-    "label": "C",
-    "text": "乙醇发酵途径被激活，丙酮酸在细胞质基质中被还原。",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "线粒体膜电位下降是因为电子传递链复合体 IV 活性增强。",
-    "answer": false
-   }
-  ],
-  "explanation": "A 正确：低氧抑制线粒体有氧呼吸，细胞转向糖酵解产生 ATP。B 错误：豌豆等高等植物无氧呼吸主要产生乙醇和 CO2，不产生乳酸，pH 下降源于乙醇发酵伴随的有机酸积累或质子泵功能紊乱。C 正确：植物在缺氧时通过乙醇发酵再生 NAD+，丙酮酸在细胞质中脱羧后还原为乙醇。D 错误：低氧导致电子传递链末端受体（氧气）不足，电子传递受阻，质子梯度无法维持，故膜电位下降而非复合体活性增强。",
-  "subject": "植物生理学",
-  "concept": "植物无氧呼吸机制",
-  "difficulty": "national",
-  "chart": null,
-  "year": null,
-  "module": "module_2",
-  "target": "competition",
-  "tags": [
-   "module_2",
-   "hard"
-  ],
-  "oldId": "2013696170"
- },
- "BQ-plant_respiration-d9d372b721a1": {
-  "type": "single",
-  "question": "研究者将某植物置于密闭透明容器中，在恒定温度和光照下测定CO₂吸收速率。CO₂浓度从400 ppm逐渐降低时，吸收速率逐渐下降，在50 ppm时降至零。恢复CO₂至400 ppm并加入¹⁸O₂，一段时间后检测到含¹⁸O的有机物。将植物从光照转为黑暗，CO₂浓度开始上升。以下推断最不合理的是：",
-  "options": [
-   "CO₂补偿点为50 ppm",
-   "光照下植物同时进行光合作用和呼吸作用",
-   "¹⁸O出现在有机物中说明O₂参与了光合作用的暗反应",
-   "黑暗下CO₂浓度上升是因为呼吸作用持续而光合作用停止"
-  ],
-  "answer": 2,
-  "explanation": "选项A：CO₂补偿点是净光合速率为零时的CO₂浓度，即50 ppm，合理。选项B：光照下CO₂吸收速率=光合速率-呼吸速率，两者同时进行，合理。选项C：¹⁸O₂在光反应中被光解释放为¹⁸O₂，有机物中的氧来自CO₂而非O₂。¹⁸O出现在有机物中是因为呼吸作用中¹⁸O₂参与氧化生成含¹⁸O的水，再通过代谢进入有机物，而非O₂直接参与暗反应，该推断不合理。选项D：黑暗下光合停止，呼吸继续释放CO₂，合理。",
-  "subject": "植物生理学",
-  "concept": "光合与呼吸作用分析",
-  "difficulty": 4,
-  "tags": [
-   "逻辑推理",
-   "实验分析",
-   "光合作用"
-  ],
-  "module": "module_2",
-  "category": "logic",
-  "oldId": "1957930447",
-  "subQuestions": [],
-  "chart": null,
-  "year": null
- }
+  "M2-0B-7147a02648b5": {
+    "type": "mtf",
+    "question": "植物有氧呼吸的过程包括：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "糖酵解在细胞质中进行，将葡萄糖分解为丙酮酸",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "电子传递链位于线粒体内膜",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "有氧呼吸只在叶片中进行",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "丙酮酸进入线粒体进行三羧酸循环",
+        "answer": false
+      }
+    ],
+    "explanation": "正确答案：A, C。详细解析请参见相关教材。",
+    "subject": "植物生理学",
+    "concept": "有氧呼吸",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "plant_respiration",
+      "module_2",
+      "植物生理学",
+      "呼吸"
+    ],
+    "references": []
+  },
+  "M2-0B-570e140d524c": {
+    "type": "mtf",
+    "question": "植物无氧呼吸的特征包括：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "无氧呼吸只在糖酵解阶段产生少量ATP",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "植物无氧呼吸通常产生酒精和CO2",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "无氧呼吸比有氧呼吸释放更多能量",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "无氧呼吸在细胞质中进行",
+        "answer": true
+      }
+    ],
+    "explanation": "正确答案：A, B, C, D。详细解析请参见相关教材。",
+    "subject": "植物生理学",
+    "concept": "无氧呼吸",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "plant_respiration",
+      "module_2",
+      "植物生理学",
+      "无氧呼吸"
+    ],
+    "references": []
+  },
+  "M2-0B-57221b8df30f": {
+    "type": "mtf",
+    "question": "抗氰呼吸的特征包括：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "交替氧化酶（AOX）是抗氰呼吸的关键酶",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "抗氰呼吸是植物特有的呼吸方式",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "抗氰呼吸产生大量ATP",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "抗氰呼吸中电子不经过细胞色素途径",
+        "answer": false
+      }
+    ],
+    "explanation": "正确答案：B, C。详细解析请参见相关教材。",
+    "subject": "植物生理学",
+    "concept": "抗氰呼吸",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "plant_respiration",
+      "module_2",
+      "植物生理学",
+      "抗氰呼吸"
+    ],
+    "references": [
+      {
+        "doi": "10.1146/annurev.arplant.53.091001.143731",
+        "title": "Alternative oxidase and plant respiration",
+        "authors": "Maxwell DP, Wang Y, McIntosh L",
+        "year": 1999,
+        "journal": "Annual Review of Plant Biology"
+      }
+    ]
+  },
+  "M2-0B-d5f8280736f8": {
+    "type": "mtf",
+    "question": "呼吸跃变与果实成熟的关系包括：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "苹果、香蕉是典型的呼吸跃变型果实",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "柑橘、葡萄是呼吸跃变型果实",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "乙烯是诱导呼吸跃变的关键激素",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "呼吸跃变型果实在成熟时呼吸速率突然升高",
+        "answer": false
+      }
+    ],
+    "explanation": "正确答案：A, B。详细解析请参见相关教材。",
+    "subject": "植物生理学",
+    "concept": "呼吸跃变",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "plant_respiration",
+      "module_2",
+      "植物生理学",
+      "果实成熟"
+    ],
+    "references": [
+      {
+        "doi": "10.1016/S1360-1385(02)02329-5",
+        "title": "Climacteric ripening in fruits",
+        "authors": "Brummell DA, Harpster SH",
+        "year": 2001,
+        "journal": "Trends in Plant Science"
+      }
+    ]
+  },
+  "M2-0B-1641b76da941": {
+    "type": "mtf",
+    "question": "影响植物呼吸速率的因素包括：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "氧气浓度增加促进有氧呼吸",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "水分含量对呼吸没有影响",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "CO2浓度增加抑制呼吸",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "温度升高在一定范围内促进呼吸",
+        "answer": false
+      }
+    ],
+    "explanation": "正确答案：B。详细解析请参见相关教材。",
+    "subject": "植物生理学",
+    "concept": "呼吸影响因素",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "plant_respiration",
+      "module_2",
+      "植物生理学",
+      "呼吸速率"
+    ],
+    "references": []
+  }
 }

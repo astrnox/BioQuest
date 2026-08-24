@@ -1,1910 +1,216 @@
 {
- "BQ-sequence_alignment-ffd8aac7d431": {
-  "type": "mtf",
-  "question": "在生物信息学中，研究人员经常使用BLAST（基本局部比对搜索工具）来比对不同生物体的蛋白质或DNA序列。下列关于BLAST的描述中，正确的是",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "BLAST可以用来比对不同生物体的蛋白质或DNA序列",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "BLAST可以用来预测蛋白质的结构和功能",
-    "answer": false
-   },
-   {
-    "label": "C",
-    "text": "BLAST可以用来设计PCR引物",
-    "answer": false
-   },
-   {
-    "label": "D",
-    "text": "BLAST可以用来分析基因表达数据",
-    "answer": false
-   }
-  ],
-  "explanation": "选项A正确，因为BLAST可以用来比对不同生物体的蛋白质或DNA序列。选项B错误，因为BLAST主要用于比对序列，而不是预测蛋白质的结构和功能。选项C错误，因为BLAST主要用于比对序列，而不是设计PCR引物。选项D错误，因为BLAST主要用于比对序列，而不是分析基因表达数据。",
-  "subject": "生物信息学",
-  "concept": "BLAST",
-  "difficulty": "league",
-  "chart": null,
-  "year": null,
-  "module": "module_4",
-  "target": "competition",
-  "tags": [
-   "生物信息学",
-   "BLAST",
-   "competition"
-  ],
-  "oldId": "1365874291"
- },
- "BQ-sequence_alignment-66102ddf37b4": {
-  "type": "mtf",
-  "question": "生物信息学中，BLAST（基本局部比对搜索工具）是一种常用的比对算法。BLAST可以用于比对哪些类型的序列？",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "DNA序列",
-    "answer": false
-   },
-   {
-    "label": "B",
-    "text": "蛋白质序列",
-    "answer": false
-   },
-   {
-    "label": "C",
-    "text": "RNA序列",
-    "answer": false
-   },
-   {
-    "label": "D",
-    "text": "所有类型的生物序列",
-    "answer": true
-   }
-  ],
-  "explanation": "选项D正确，因为BLAST可以用于比对DNA、蛋白质和RNA序列。选项A、B和C错误，因为它们只代表了一部分BLAST可以比对的序列类型。",
-  "subject": "生物信息学",
-  "concept": "BLAST",
-  "difficulty": "basic",
-  "chart": null,
-  "year": null,
-  "module": "module_4",
-  "target": "high_school",
-  "tags": [
-   "生物信息学",
-   "BLAST",
-   "high_school"
-  ],
-  "oldId": "1632169347"
- },
- "BQ-sequence_alignment-76ce70286555": {
-  "type": "mtf",
-  "question": "生物信息学中，BLAST算法是用于比较两个生物序列的相似性。下列关于BLAST算法的描述中，正确的是",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "BLAST算法只能用于比较两个DNA序列",
-    "answer": false
-   },
-   {
-    "label": "B",
-    "text": "BLAST算法只能用于比较两个蛋白质序列",
-    "answer": false
-   },
-   {
-    "label": "C",
-    "text": "BLAST算法可以用于比较两个DNA序列或两个蛋白质序列",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "BLAST算法可以用于比较一个DNA序列和一个蛋白质序列",
-    "answer": false
-   }
-  ],
-  "explanation": "C选项正确，因为BLAST算法确实可以用于比较两个DNA序列或两个蛋白质序列。A选项错误，因为BLAST算法不仅限于比较DNA序列，还可以比较蛋白质序列。B选项错误，因为BLAST算法不仅限于比较蛋白质序列，还可以比较DNA序列。D选项错误，因为BLAST算法主要用于比较两个相同类型的序列，而不是不同类型的序列。",
-  "subject": "生物信息学",
-  "concept": "BLAST算法",
-  "difficulty": "basic",
-  "chart": null,
-  "year": null,
-  "module": "module_4",
-  "target": "high_school",
-  "tags": [
-   "生物信息学",
-   "BLAST算法",
-   "high_school"
-  ],
-  "oldId": "698370395"
- },
- "BQ-sequence_alignment-8513df8ed4e1": {
-  "type": "mtf",
-  "question": "生物信息学中，基因序列比对是指将两个或多个基因序列进行比较，以确定它们之间的相似性和差异。下列关于基因序列比对的描述中，正确的是",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "基因序列比对是指将两个或多个基因序列进行比较，以确定它们之间的相似性和差异",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "基因序列比对是指将两个或多个蛋白质序列进行比较，以确定它们之间的相似性和差异",
-    "answer": false
-   },
-   {
-    "label": "C",
-    "text": "基因序列比对是指将两个或多个基因表达水平进行比较，以确定它们之间的相似性和差异",
-    "answer": false
-   },
-   {
-    "label": "D",
-    "text": "基因序列比对是指将两个或多个基因功能进行比较，以确定它们之间的相似性和差异",
-    "answer": false
-   }
-  ],
-  "explanation": "选项 A 正确，因为基因序列比对确实是指将两个或多个基因序列进行比较，以确定它们之间的相似性和差异。选项 B、C 和 D 错误，因为它们分别描述了蛋白质序列比对、基因表达水平比对和基因功能比对，而不是基因序列比对。基因序列比对是指将两个或多个基因序列进行比较，以确定它们之间的相似性和差异，例如核苷酸序列、基因结构等方面的差异。",
-  "subject": "生物信息学",
-  "concept": "基因序列比对",
-  "difficulty": "basic",
-  "chart": null,
-  "year": null,
-  "module": "module_4",
-  "target": "high_school",
-  "tags": [
-   "生物信息学",
-   "基因序列比对",
-   "high_school"
-  ],
-  "oldId": "1808359483"
- },
- "BQ-sequence_alignment-e6668885fda7": {
-  "stem": "在蛋白和非编码RNA 的结构预测中，人们常常会用到一个假设是，同源蛋白或非编码RNA 在不同物种发\n挥的功能是相似的，所以结构也是保守的。进化过程中，当一个残基发生改变时，为了保持蛋白或RNA 的结构\n不变，与之存在接触的残基往往也会发生改变，这种现象被称为序列的协变。Potts 模型是一种无向图模型，它\n将同源蛋白或RNA 的多序列比对作为输入，根据序列协变的信息计算出不同残基两两之间发生接触的可能性，\n即接触图。请问下列哪个说法是正确的？",
-  "options": {
-   "A": "提供给Potts 模型的同源序列的相似度越低越好，这可以给Potts 模型的接触预测提供更多的信息",
-   "B": "提供给Potts 模型的同源序列的相似度越高越好，这可以给Potts 模型的接触预测提供更多的信息",
-   "C": "在非编码RNA 多序列比对中掺入较多的假基因（pseudogene），不会对Potts 模型的预测效果产生影响",
-   "D": "Potts 模型不仅能预测RNA 的碱基互补配对情况，也可以预测其他形式的相互作用 \n二、植物和动物的解剖、生理、组织和器官的结构与功能（30 题38 分） \n31-32 组题题干：鱼类为单循环，心室、心房、静脉窦内流动的是缺氧血，如下侧心脏和血管模式图所示。"
+  "M4-11-a38f6f9cb30e": {
+    "type": "mtf",
+    "question": "关于序列比对的基本概念，以下说法正确的有哪些？",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "局部比对（local alignment）寻找两条序列中相似度最高的局部区域",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "全局比对（global alignment）试图将两条序列的全长进行比对",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "Smith-Waterman算法用于全局比对",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "Needleman-Wunsch算法用于全局比对",
+        "answer": false
+      }
+    ],
+    "explanation": "正确答案：A, C。详细解析请参见相关教材。",
+    "subject": "生物信息学",
+    "concept": "序列比对概念",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "sequence_alignment",
+      "module_4",
+      "生物信息学",
+      "序列比对"
+    ],
+    "references": []
   },
-  "answer": {
-   "A": false,
-   "B": false,
-   "C": false,
-   "D": true
+  "M4-11-0494444c278f": {
+    "type": "mtf",
+    "question": "关于BLAST，以下判断正确的有哪些？",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "BLAST使用seed-and-extend策略进行快速搜索",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "BLAST（Basic Local Alignment Search Tool）是一种快速序列相似性搜索工具",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "BLAST只能用于核酸序列的搜索，不能用于蛋白质序列",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "E值（Expect value）越小，表示比对结果的统计显著性越高",
+        "answer": true
+      }
+    ],
+    "explanation": "正确答案：C, D。详细解析请参见相关教材。",
+    "subject": "生物信息学",
+    "concept": "BLAST",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "sequence_alignment",
+      "module_4",
+      "生物信息学",
+      "BLAST"
+    ],
+    "references": []
   },
-  "analysis": "正确答案：D",
-  "knowledge": [
-   "module_1",
-   "分子生物学"
-  ],
-  "module": "module_1",
-  "difficulty": "league",
-  "target": "competition",
-  "subject": "分子生物学",
-  "concept": "分子生物学",
-  "tags": [
-   "module_1",
-   "分子生物学",
-   "league",
-   "competition",
-   "https://www.czs.org.cn/swjs/lsstxz/art/2024/art_f5fe44f36762455fb9f8f99b9e0bf2e2.html",
-   "2024"
-  ],
-  "weight": 1,
-  "fb_good": 0,
-  "fb_bad": 0,
-  "created_at": 1782028590.0641978,
-  "source": "https://www.czs.org.cn/swjs/lsstxz/art/2024/art_f5fe44f36762455fb9f8f99b9e0bf2e2.html",
-  "year": 2024,
-  "_analysis_sparse": true,
-  "_review_reason": "解析为 AI 引导提示，待人工补充详细解析",
-  "type": "multi_judge",
-  "question": "在蛋白和非编码RNA 的结构预测中，人们常常会用到一个假设是，同源蛋白或非编码RNA 在不同物种发\n挥的功能是相似的，所以结构也是保守的。进化过程中，当一个残基发生改变时，为了保持蛋白或RNA 的结构\n不变，与之存在接触的残基往往也会发生改变，这种现象被称为序列的协变。Potts 模型是一种无向图模型，它\n将同源蛋白或RNA 的多序列比对作为输入，根据序列协变的信息计算出不同残基两两之间发生接触的可能性，\n即接触图。请问下列哪个说法是正确的？",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "提供给Potts 模型的同源序列的相似度越低越好，这可以给Potts 模型的接触预测提供更多的信息",
-    "answer": false
-   },
-   {
-    "label": "B",
-    "text": "提供给Potts 模型的同源序列的相似度越高越好，这可以给Potts 模型的接触预测提供更多的信息",
-    "answer": false
-   },
-   {
-    "label": "C",
-    "text": "在非编码RNA 多序列比对中掺入较多的假基因（pseudogene），不会对Potts 模型的预测效果产生影响",
-    "answer": false
-   },
-   {
-    "label": "D",
-    "text": "Potts 模型不仅能预测RNA 的碱基互补配对情况，也可以预测其他形式的相互作用 \n二、植物和动物的解剖、生理、组织和器官的结构与功能（30 题38 分） \n31-32 组题题干：鱼类为单循环，心室、心房、静脉窦内流动的是缺氧血，如下侧心脏和血管模式图所示。",
-    "answer": true
-   }
-  ],
-  "explanation": "正确答案：D",
-  "chart": null,
-  "oldId": "crawled_1782028590064_5638"
- },
- "BQ-sequence_alignment-91c157fe05e8": {
-  "type": "mtf",
-  "question": "【序列比对分析】利用BLAST对未知基因序列进行在线比对,返回E-value=1e-50,Identities=85%,Query coverage=98%。判断以下推论：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "E-value=1e-50说明匹配是偶然发生的概率为1e-50",
-    "answer": false
-   },
-   {
-    "label": "B",
-    "text": "Query coverage=98%说明比对几乎覆盖了整个查询序列",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "查询序列与数据库匹配序列高度相似(85%一致),很可能为同源基因",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "该E-value(1e-50)极低,说明比对结果的统计学显著性非常高",
-    "answer": true
-   }
-  ],
-  "explanation": "A错误:E-value是期望值,表示在给定大小的数据库中随机获得相同或更好比对得分的期望次数,而非偶然概率。E-value越小越显著。",
-  "module": 4,
-  "subject": "生物信息学",
-  "concept": "序列比对",
-  "difficulty": "easy",
-  "year": 2025,
-  "chart": null,
-  "oldId": "1601884656",
-  "tags": []
- },
- "BQ-sequence_alignment-0b01b9b08f12": {
-  "type": "mtf",
-  "question": "【序列比对分析】利用BLAST对未知基因序列进行在线比对,返回E-value=1e-50,Identities=85%,Query coverage=98%。判断以下推论：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "E-value=1e-50说明匹配是偶然发生的概率为1e-50",
-    "answer": false
-   },
-   {
-    "label": "B",
-    "text": "Query coverage=98%说明比对几乎覆盖了整个查询序列",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "该E-value(1e-50)极低,说明比对结果的统计学显著性非常高",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "查询序列与数据库匹配序列高度相似(85%一致),很可能为同源基因",
-    "answer": true
-   }
-  ],
-  "explanation": "A错误:E-value是期望值,表示在给定大小的数据库中随机获得相同或更好比对得分的期望次数,而非偶然概率。E-value越小越显著。",
-  "module": 4,
-  "subject": "生物信息学",
-  "concept": "序列比对",
-  "difficulty": "easy",
-  "year": 2025,
-  "chart": null,
-  "oldId": "1601884656",
-  "tags": []
- },
- "BQ-sequence_alignment-9accf10aa949": {
-  "type": "mtf",
-  "question": "【序列比对分析】利用BLAST对未知基因序列进行在线比对,返回E-value=1e-50,Identities=85%,Query coverage=98%。判断以下推论：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "E-value=1e-50说明匹配是偶然发生的概率为1e-50",
-    "answer": false
-   },
-   {
-    "label": "B",
-    "text": "查询序列与数据库匹配序列高度相似(85%一致),很可能为同源基因",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "Query coverage=98%说明比对几乎覆盖了整个查询序列",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "该E-value(1e-50)极低,说明比对结果的统计学显著性非常高",
-    "answer": true
-   }
-  ],
-  "explanation": "A错误:E-value是期望值,表示在给定大小的数据库中随机获得相同或更好比对得分的期望次数,而非偶然概率。E-value越小越显著。",
-  "module": 4,
-  "subject": "生物信息学",
-  "concept": "序列比对",
-  "difficulty": "easy",
-  "year": 2025,
-  "chart": null,
-  "oldId": "1601884656",
-  "tags": []
- },
- "BQ-sequence_alignment-441a3db9367f": {
-  "type": "mtf",
-  "question": "【序列比对分析】利用BLAST对未知基因序列进行在线比对,返回E-value=1e-50,Identities=85%,Query coverage=98%。判断以下推论：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "E-value=1e-50说明匹配是偶然发生的概率为1e-50",
-    "answer": false
-   },
-   {
-    "label": "B",
-    "text": "查询序列与数据库匹配序列高度相似(85%一致),很可能为同源基因",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "该E-value(1e-50)极低,说明比对结果的统计学显著性非常高",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "Query coverage=98%说明比对几乎覆盖了整个查询序列",
-    "answer": true
-   }
-  ],
-  "explanation": "A错误:E-value是期望值,表示在给定大小的数据库中随机获得相同或更好比对得分的期望次数,而非偶然概率。E-value越小越显著。",
-  "module": 4,
-  "subject": "生物信息学",
-  "concept": "序列比对",
-  "difficulty": "easy",
-  "year": 2025,
-  "chart": null,
-  "oldId": "1601884656",
-  "tags": []
- },
- "BQ-sequence_alignment-ea701eb76b2f": {
-  "type": "mtf",
-  "question": "【序列比对分析】利用BLAST对未知基因序列进行在线比对,返回E-value=1e-50,Identities=85%,Query coverage=98%。判断以下推论：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "E-value=1e-50说明匹配是偶然发生的概率为1e-50",
-    "answer": false
-   },
-   {
-    "label": "B",
-    "text": "该E-value(1e-50)极低,说明比对结果的统计学显著性非常高",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "Query coverage=98%说明比对几乎覆盖了整个查询序列",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "查询序列与数据库匹配序列高度相似(85%一致),很可能为同源基因",
-    "answer": true
-   }
-  ],
-  "explanation": "A错误:E-value是期望值,表示在给定大小的数据库中随机获得相同或更好比对得分的期望次数,而非偶然概率。E-value越小越显著。",
-  "module": 4,
-  "subject": "生物信息学",
-  "concept": "序列比对",
-  "difficulty": "easy",
-  "year": 2025,
-  "chart": null,
-  "oldId": "1601884656",
-  "tags": []
- },
- "BQ-sequence_alignment-9fc683eab891": {
-  "type": "mtf",
-  "question": "【序列比对分析】利用BLAST对未知基因序列进行在线比对,返回E-value=1e-50,Identities=85%,Query coverage=98%。判断以下推论：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "E-value=1e-50说明匹配是偶然发生的概率为1e-50",
-    "answer": false
-   },
-   {
-    "label": "B",
-    "text": "该E-value(1e-50)极低,说明比对结果的统计学显著性非常高",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "查询序列与数据库匹配序列高度相似(85%一致),很可能为同源基因",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "Query coverage=98%说明比对几乎覆盖了整个查询序列",
-    "answer": true
-   }
-  ],
-  "explanation": "A错误:E-value是期望值,表示在给定大小的数据库中随机获得相同或更好比对得分的期望次数,而非偶然概率。E-value越小越显著。",
-  "module": 4,
-  "subject": "生物信息学",
-  "concept": "序列比对",
-  "difficulty": "easy",
-  "year": 2025,
-  "chart": null,
-  "oldId": "1601884656",
-  "tags": []
- },
- "BQ-sequence_alignment-439df1c8a242": {
-  "type": "mtf",
-  "question": "【序列比对分析】利用BLAST对未知基因序列进行在线比对,返回E-value=1e-50,Identities=85%,Query coverage=98%。判断以下推论：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "Query coverage=98%说明比对几乎覆盖了整个查询序列",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "E-value=1e-50说明匹配是偶然发生的概率为1e-50",
-    "answer": false
-   },
-   {
-    "label": "C",
-    "text": "查询序列与数据库匹配序列高度相似(85%一致),很可能为同源基因",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "该E-value(1e-50)极低,说明比对结果的统计学显著性非常高",
-    "answer": true
-   }
-  ],
-  "explanation": "B错误:E-value是期望值,表示在给定大小的数据库中随机获得相同或更好比对得分的期望次数,而非偶然概率。E-value越小越显著。",
-  "module": 4,
-  "subject": "生物信息学",
-  "concept": "序列比对",
-  "difficulty": "easy",
-  "year": 2025,
-  "chart": null,
-  "oldId": "1601884656",
-  "tags": []
- },
- "BQ-sequence_alignment-56e743a2393b": {
-  "type": "mtf",
-  "question": "【序列比对分析】利用BLAST对未知基因序列进行在线比对,返回E-value=1e-50,Identities=85%,Query coverage=98%。判断以下推论：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "Query coverage=98%说明比对几乎覆盖了整个查询序列",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "E-value=1e-50说明匹配是偶然发生的概率为1e-50",
-    "answer": false
-   },
-   {
-    "label": "C",
-    "text": "该E-value(1e-50)极低,说明比对结果的统计学显著性非常高",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "查询序列与数据库匹配序列高度相似(85%一致),很可能为同源基因",
-    "answer": true
-   }
-  ],
-  "explanation": "B错误:E-value是期望值,表示在给定大小的数据库中随机获得相同或更好比对得分的期望次数,而非偶然概率。E-value越小越显著。",
-  "module": 4,
-  "subject": "生物信息学",
-  "concept": "序列比对",
-  "difficulty": "easy",
-  "year": 2025,
-  "chart": null,
-  "oldId": "1601884656",
-  "tags": []
- },
- "BQ-sequence_alignment-e1618ecb0602": {
-  "type": "mtf",
-  "question": "【序列比对分析】利用BLAST对未知基因序列进行在线比对,返回E-value=1e-50,Identities=85%,Query coverage=98%。判断以下推论：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "Query coverage=98%说明比对几乎覆盖了整个查询序列",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "查询序列与数据库匹配序列高度相似(85%一致),很可能为同源基因",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "E-value=1e-50说明匹配是偶然发生的概率为1e-50",
-    "answer": false
-   },
-   {
-    "label": "D",
-    "text": "该E-value(1e-50)极低,说明比对结果的统计学显著性非常高",
-    "answer": true
-   }
-  ],
-  "explanation": "C错误:E-value是期望值,表示在给定大小的数据库中随机获得相同或更好比对得分的期望次数,而非偶然概率。E-value越小越显著。",
-  "module": 4,
-  "subject": "生物信息学",
-  "concept": "序列比对",
-  "difficulty": "easy",
-  "year": 2025,
-  "chart": null,
-  "oldId": "1601884656",
-  "tags": []
- },
- "BQ-sequence_alignment-a649ad05c5aa": {
-  "type": "mtf",
-  "question": "【序列比对分析】利用BLAST对未知基因序列进行在线比对,返回E-value=1e-50,Identities=85%,Query coverage=98%。判断以下推论：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "Query coverage=98%说明比对几乎覆盖了整个查询序列",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "查询序列与数据库匹配序列高度相似(85%一致),很可能为同源基因",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "该E-value(1e-50)极低,说明比对结果的统计学显著性非常高",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "E-value=1e-50说明匹配是偶然发生的概率为1e-50",
-    "answer": false
-   }
-  ],
-  "explanation": "D错误:E-value是期望值,表示在给定大小的数据库中随机获得相同或更好比对得分的期望次数,而非偶然概率。E-value越小越显著。",
-  "module": 4,
-  "subject": "生物信息学",
-  "concept": "序列比对",
-  "difficulty": "easy",
-  "year": 2025,
-  "chart": null,
-  "oldId": "1601884656",
-  "tags": []
- },
- "BQ-sequence_alignment-16d528fcbbb9": {
-  "type": "mtf",
-  "question": "【序列比对分析】利用BLAST对未知基因序列进行在线比对,返回E-value=1e-50,Identities=85%,Query coverage=98%。判断以下推论：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "Query coverage=98%说明比对几乎覆盖了整个查询序列",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "该E-value(1e-50)极低,说明比对结果的统计学显著性非常高",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "E-value=1e-50说明匹配是偶然发生的概率为1e-50",
-    "answer": false
-   },
-   {
-    "label": "D",
-    "text": "查询序列与数据库匹配序列高度相似(85%一致),很可能为同源基因",
-    "answer": true
-   }
-  ],
-  "explanation": "C错误:E-value是期望值,表示在给定大小的数据库中随机获得相同或更好比对得分的期望次数,而非偶然概率。E-value越小越显著。",
-  "module": 4,
-  "subject": "生物信息学",
-  "concept": "序列比对",
-  "difficulty": "easy",
-  "year": 2025,
-  "chart": null,
-  "oldId": "1601884656",
-  "tags": []
- },
- "BQ-sequence_alignment-696d00db4cb4": {
-  "type": "mtf",
-  "question": "【序列比对分析】利用BLAST对未知基因序列进行在线比对,返回E-value=1e-50,Identities=85%,Query coverage=98%。判断以下推论：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "Query coverage=98%说明比对几乎覆盖了整个查询序列",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "该E-value(1e-50)极低,说明比对结果的统计学显著性非常高",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "查询序列与数据库匹配序列高度相似(85%一致),很可能为同源基因",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "E-value=1e-50说明匹配是偶然发生的概率为1e-50",
-    "answer": false
-   }
-  ],
-  "explanation": "D错误:E-value是期望值,表示在给定大小的数据库中随机获得相同或更好比对得分的期望次数,而非偶然概率。E-value越小越显著。",
-  "module": 4,
-  "subject": "生物信息学",
-  "concept": "序列比对",
-  "difficulty": "easy",
-  "year": 2025,
-  "chart": null,
-  "oldId": "1601884656",
-  "tags": []
- },
- "BQ-sequence_alignment-c2deb5f84665": {
-  "type": "mtf",
-  "question": "【序列比对分析】利用BLAST对未知基因序列进行在线比对,返回E-value=1e-50,Identities=85%,Query coverage=98%。判断以下推论：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "查询序列与数据库匹配序列高度相似(85%一致),很可能为同源基因",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "E-value=1e-50说明匹配是偶然发生的概率为1e-50",
-    "answer": false
-   },
-   {
-    "label": "C",
-    "text": "Query coverage=98%说明比对几乎覆盖了整个查询序列",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "该E-value(1e-50)极低,说明比对结果的统计学显著性非常高",
-    "answer": true
-   }
-  ],
-  "explanation": "B错误:E-value是期望值,表示在给定大小的数据库中随机获得相同或更好比对得分的期望次数,而非偶然概率。E-value越小越显著。",
-  "module": 4,
-  "subject": "生物信息学",
-  "concept": "序列比对",
-  "difficulty": "easy",
-  "year": 2025,
-  "chart": null,
-  "oldId": "1601884656",
-  "tags": []
- },
- "BQ-sequence_alignment-1a50754b4691": {
-  "type": "mtf",
-  "question": "【序列比对分析】利用BLAST对未知基因序列进行在线比对,返回E-value=1e-50,Identities=85%,Query coverage=98%。判断以下推论：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "查询序列与数据库匹配序列高度相似(85%一致),很可能为同源基因",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "E-value=1e-50说明匹配是偶然发生的概率为1e-50",
-    "answer": false
-   },
-   {
-    "label": "C",
-    "text": "该E-value(1e-50)极低,说明比对结果的统计学显著性非常高",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "Query coverage=98%说明比对几乎覆盖了整个查询序列",
-    "answer": true
-   }
-  ],
-  "explanation": "B错误:E-value是期望值,表示在给定大小的数据库中随机获得相同或更好比对得分的期望次数,而非偶然概率。E-value越小越显著。",
-  "module": 4,
-  "subject": "生物信息学",
-  "concept": "序列比对",
-  "difficulty": "easy",
-  "year": 2025,
-  "chart": null,
-  "oldId": "1601884656",
-  "tags": []
- },
- "BQ-sequence_alignment-4950b5d3124e": {
-  "type": "mtf",
-  "question": "【序列比对分析】利用BLAST对未知基因序列进行在线比对,返回E-value=1e-50,Identities=85%,Query coverage=98%。判断以下推论：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "查询序列与数据库匹配序列高度相似(85%一致),很可能为同源基因",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "Query coverage=98%说明比对几乎覆盖了整个查询序列",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "E-value=1e-50说明匹配是偶然发生的概率为1e-50",
-    "answer": false
-   },
-   {
-    "label": "D",
-    "text": "该E-value(1e-50)极低,说明比对结果的统计学显著性非常高",
-    "answer": true
-   }
-  ],
-  "explanation": "C错误:E-value是期望值,表示在给定大小的数据库中随机获得相同或更好比对得分的期望次数,而非偶然概率。E-value越小越显著。",
-  "module": 4,
-  "subject": "生物信息学",
-  "concept": "序列比对",
-  "difficulty": "easy",
-  "year": 2025,
-  "chart": null,
-  "oldId": "1601884656",
-  "tags": []
- },
- "BQ-sequence_alignment-c823901fbe75": {
-  "type": "mtf",
-  "question": "【序列比对分析】利用BLAST对未知基因序列进行在线比对,返回E-value=1e-50,Identities=85%,Query coverage=98%。判断以下推论：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "查询序列与数据库匹配序列高度相似(85%一致),很可能为同源基因",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "Query coverage=98%说明比对几乎覆盖了整个查询序列",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "该E-value(1e-50)极低,说明比对结果的统计学显著性非常高",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "E-value=1e-50说明匹配是偶然发生的概率为1e-50",
-    "answer": false
-   }
-  ],
-  "explanation": "D错误:E-value是期望值,表示在给定大小的数据库中随机获得相同或更好比对得分的期望次数,而非偶然概率。E-value越小越显著。",
-  "module": 4,
-  "subject": "生物信息学",
-  "concept": "序列比对",
-  "difficulty": "easy",
-  "year": 2025,
-  "chart": null,
-  "oldId": "1601884656",
-  "tags": []
- },
- "BQ-sequence_alignment-7735476b0594": {
-  "type": "mtf",
-  "question": "【序列比对分析】利用BLAST对未知基因序列进行在线比对,返回E-value=1e-50,Identities=85%,Query coverage=98%。判断以下推论：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "查询序列与数据库匹配序列高度相似(85%一致),很可能为同源基因",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "该E-value(1e-50)极低,说明比对结果的统计学显著性非常高",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "E-value=1e-50说明匹配是偶然发生的概率为1e-50",
-    "answer": false
-   },
-   {
-    "label": "D",
-    "text": "Query coverage=98%说明比对几乎覆盖了整个查询序列",
-    "answer": true
-   }
-  ],
-  "explanation": "C错误:E-value是期望值,表示在给定大小的数据库中随机获得相同或更好比对得分的期望次数,而非偶然概率。E-value越小越显著。",
-  "module": 4,
-  "subject": "生物信息学",
-  "concept": "序列比对",
-  "difficulty": "easy",
-  "year": 2025,
-  "chart": null,
-  "oldId": "1601884656",
-  "tags": []
- },
- "BQ-sequence_alignment-d2ba894e16a9": {
-  "type": "mtf",
-  "question": "【序列比对分析】利用BLAST对未知基因序列进行在线比对,返回E-value=1e-50,Identities=85%,Query coverage=98%。判断以下推论：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "查询序列与数据库匹配序列高度相似(85%一致),很可能为同源基因",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "该E-value(1e-50)极低,说明比对结果的统计学显著性非常高",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "Query coverage=98%说明比对几乎覆盖了整个查询序列",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "E-value=1e-50说明匹配是偶然发生的概率为1e-50",
-    "answer": false
-   }
-  ],
-  "explanation": "D错误:E-value是期望值,表示在给定大小的数据库中随机获得相同或更好比对得分的期望次数,而非偶然概率。E-value越小越显著。",
-  "module": 4,
-  "subject": "生物信息学",
-  "concept": "序列比对",
-  "difficulty": "easy",
-  "year": 2025,
-  "chart": null,
-  "oldId": "1601884656",
-  "tags": []
- },
- "BQ-sequence_alignment-5e54df9b468a": {
-  "type": "mtf",
-  "question": "【序列比对分析】利用BLAST对未知基因序列进行在线比对,返回E-value=1e-50,Identities=85%,Query coverage=98%。判断以下推论：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "该E-value(1e-50)极低,说明比对结果的统计学显著性非常高",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "E-value=1e-50说明匹配是偶然发生的概率为1e-50",
-    "answer": false
-   },
-   {
-    "label": "C",
-    "text": "Query coverage=98%说明比对几乎覆盖了整个查询序列",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "查询序列与数据库匹配序列高度相似(85%一致),很可能为同源基因",
-    "answer": true
-   }
-  ],
-  "explanation": "B错误:E-value是期望值,表示在给定大小的数据库中随机获得相同或更好比对得分的期望次数,而非偶然概率。E-value越小越显著。",
-  "module": 4,
-  "subject": "生物信息学",
-  "concept": "序列比对",
-  "difficulty": "easy",
-  "year": 2025,
-  "chart": null,
-  "oldId": "1601884656",
-  "tags": []
- },
- "BQ-sequence_alignment-db533bda50ab": {
-  "type": "mtf",
-  "question": "【序列比对分析】利用BLAST对未知基因序列进行在线比对,返回E-value=1e-50,Identities=85%,Query coverage=98%。判断以下推论：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "该E-value(1e-50)极低,说明比对结果的统计学显著性非常高",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "E-value=1e-50说明匹配是偶然发生的概率为1e-50",
-    "answer": false
-   },
-   {
-    "label": "C",
-    "text": "查询序列与数据库匹配序列高度相似(85%一致),很可能为同源基因",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "Query coverage=98%说明比对几乎覆盖了整个查询序列",
-    "answer": true
-   }
-  ],
-  "explanation": "B错误:E-value是期望值,表示在给定大小的数据库中随机获得相同或更好比对得分的期望次数,而非偶然概率。E-value越小越显著。",
-  "module": 4,
-  "subject": "生物信息学",
-  "concept": "序列比对",
-  "difficulty": "easy",
-  "year": 2025,
-  "chart": null,
-  "oldId": "1601884656",
-  "tags": []
- },
- "BQ-sequence_alignment-3323ef129529": {
-  "type": "mtf",
-  "question": "【序列比对分析】利用BLAST对未知基因序列进行在线比对,返回E-value=1e-50,Identities=85%,Query coverage=98%。判断以下推论：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "该E-value(1e-50)极低,说明比对结果的统计学显著性非常高",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "Query coverage=98%说明比对几乎覆盖了整个查询序列",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "E-value=1e-50说明匹配是偶然发生的概率为1e-50",
-    "answer": false
-   },
-   {
-    "label": "D",
-    "text": "查询序列与数据库匹配序列高度相似(85%一致),很可能为同源基因",
-    "answer": true
-   }
-  ],
-  "explanation": "C错误:E-value是期望值,表示在给定大小的数据库中随机获得相同或更好比对得分的期望次数,而非偶然概率。E-value越小越显著。",
-  "module": 4,
-  "subject": "生物信息学",
-  "concept": "序列比对",
-  "difficulty": "easy",
-  "year": 2025,
-  "chart": null,
-  "oldId": "1601884656",
-  "tags": []
- },
- "BQ-sequence_alignment-8dbb07697877": {
-  "type": "mtf",
-  "question": "【序列比对分析】利用BLAST对未知基因序列进行在线比对,返回E-value=1e-50,Identities=85%,Query coverage=98%。判断以下推论：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "该E-value(1e-50)极低,说明比对结果的统计学显著性非常高",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "Query coverage=98%说明比对几乎覆盖了整个查询序列",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "查询序列与数据库匹配序列高度相似(85%一致),很可能为同源基因",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "E-value=1e-50说明匹配是偶然发生的概率为1e-50",
-    "answer": false
-   }
-  ],
-  "explanation": "D错误:E-value是期望值,表示在给定大小的数据库中随机获得相同或更好比对得分的期望次数,而非偶然概率。E-value越小越显著。",
-  "module": 4,
-  "subject": "生物信息学",
-  "concept": "序列比对",
-  "difficulty": "easy",
-  "year": 2025,
-  "chart": null,
-  "oldId": "1601884656",
-  "tags": []
- },
- "BQ-sequence_alignment-f4c63947ac68": {
-  "type": "mtf",
-  "question": "【序列比对分析】利用BLAST对未知基因序列进行在线比对,返回E-value=1e-50,Identities=85%,Query coverage=98%。判断以下推论：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "该E-value(1e-50)极低,说明比对结果的统计学显著性非常高",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "查询序列与数据库匹配序列高度相似(85%一致),很可能为同源基因",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "E-value=1e-50说明匹配是偶然发生的概率为1e-50",
-    "answer": false
-   },
-   {
-    "label": "D",
-    "text": "Query coverage=98%说明比对几乎覆盖了整个查询序列",
-    "answer": true
-   }
-  ],
-  "explanation": "C错误:E-value是期望值,表示在给定大小的数据库中随机获得相同或更好比对得分的期望次数,而非偶然概率。E-value越小越显著。",
-  "module": 4,
-  "subject": "生物信息学",
-  "concept": "序列比对",
-  "difficulty": "easy",
-  "year": 2025,
-  "chart": null,
-  "oldId": "1601884656",
-  "tags": []
- },
- "BQ-sequence_alignment-85afe72e375e": {
-  "type": "mtf",
-  "question": "【序列比对分析】利用BLAST对未知基因序列进行在线比对,返回E-value=1e-50,Identities=85%,Query coverage=98%。判断以下推论：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "该E-value(1e-50)极低,说明比对结果的统计学显著性非常高",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "查询序列与数据库匹配序列高度相似(85%一致),很可能为同源基因",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "Query coverage=98%说明比对几乎覆盖了整个查询序列",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "E-value=1e-50说明匹配是偶然发生的概率为1e-50",
-    "answer": false
-   }
-  ],
-  "explanation": "D错误:E-value是期望值,表示在给定大小的数据库中随机获得相同或更好比对得分的期望次数,而非偶然概率。E-value越小越显著。",
-  "module": 4,
-  "subject": "生物信息学",
-  "concept": "序列比对",
-  "difficulty": "easy",
-  "year": 2025,
-  "chart": null,
-  "oldId": "1601884656",
-  "tags": []
- },
- "BQ-sequence_alignment-2ca2ff364f69": {
-  "type": "mtf",
-  "question": "关于序列比对与数据库搜索，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "BLAST算法通过寻找短的精确匹配片段（种子）来加速序列数据库的比对搜索",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "E值（Expect value）越小，表示比对结果的统计学显著性越高，即随机获得该比对结果的概率越低",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "全局比对与局部比对的选择取决于具体问题：Needleman-Wunsch算法做全局比对，Smith-Waterman算法做局部比对",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "多序列比对可用于鉴定保守的功能结构域和构建系统发育树",
-    "answer": true
-   }
-  ],
-  "explanation": "所有选项均正确。A：BLAST的种子-扩展策略。B：E值的统计学意义。C：多序列比对的核心应用。D：两种经典比对算法的用途区分。",
-  "module": 4,
-  "subject": "生物信息学",
-  "concept": "序列比对",
-  "difficulty": "easy",
-  "year": 2025,
-  "chart": null,
-  "oldId": "8782779",
-  "tags": []
- },
- "BQ-sequence_alignment-90d4546002d1": {
-  "type": "mtf",
-  "question": "关于序列比对与数据库搜索，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "BLAST算法通过寻找短的精确匹配片段（种子）来加速序列数据库的比对搜索",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "E值（Expect value）越小，表示比对结果的统计学显著性越高，即随机获得该比对结果的概率越低",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "多序列比对可用于鉴定保守的功能结构域和构建系统发育树",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "全局比对与局部比对的选择取决于具体问题：Needleman-Wunsch算法做全局比对，Smith-Waterman算法做局部比对",
-    "answer": true
-   }
-  ],
-  "explanation": "所有选项均正确。A：BLAST的种子-扩展策略。B：E值的统计学意义。C：多序列比对的核心应用。D：两种经典比对算法的用途区分。",
-  "module": 4,
-  "subject": "生物信息学",
-  "concept": "序列比对",
-  "difficulty": "easy",
-  "year": 2025,
-  "chart": null,
-  "oldId": "8782779",
-  "tags": []
- },
- "BQ-sequence_alignment-94da4194a6d4": {
-  "type": "mtf",
-  "question": "关于序列比对与数据库搜索，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "BLAST算法通过寻找短的精确匹配片段（种子）来加速序列数据库的比对搜索",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "全局比对与局部比对的选择取决于具体问题：Needleman-Wunsch算法做全局比对，Smith-Waterman算法做局部比对",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "E值（Expect value）越小，表示比对结果的统计学显著性越高，即随机获得该比对结果的概率越低",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "多序列比对可用于鉴定保守的功能结构域和构建系统发育树",
-    "answer": true
-   }
-  ],
-  "explanation": "所有选项均正确。A：BLAST的种子-扩展策略。B：E值的统计学意义。C：多序列比对的核心应用。D：两种经典比对算法的用途区分。",
-  "module": 4,
-  "subject": "生物信息学",
-  "concept": "序列比对",
-  "difficulty": "easy",
-  "year": 2025,
-  "chart": null,
-  "oldId": "8782779",
-  "tags": []
- },
- "BQ-sequence_alignment-5f5a6cdb9755": {
-  "type": "mtf",
-  "question": "关于序列比对与数据库搜索，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "BLAST算法通过寻找短的精确匹配片段（种子）来加速序列数据库的比对搜索",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "全局比对与局部比对的选择取决于具体问题：Needleman-Wunsch算法做全局比对，Smith-Waterman算法做局部比对",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "多序列比对可用于鉴定保守的功能结构域和构建系统发育树",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "E值（Expect value）越小，表示比对结果的统计学显著性越高，即随机获得该比对结果的概率越低",
-    "answer": true
-   }
-  ],
-  "explanation": "所有选项均正确。A：BLAST的种子-扩展策略。B：E值的统计学意义。C：多序列比对的核心应用。D：两种经典比对算法的用途区分。",
-  "module": 4,
-  "subject": "生物信息学",
-  "concept": "序列比对",
-  "difficulty": "easy",
-  "year": 2025,
-  "chart": null,
-  "oldId": "8782779",
-  "tags": []
- },
- "BQ-sequence_alignment-32b63508a4cd": {
-  "type": "mtf",
-  "question": "关于序列比对与数据库搜索，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "BLAST算法通过寻找短的精确匹配片段（种子）来加速序列数据库的比对搜索",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "多序列比对可用于鉴定保守的功能结构域和构建系统发育树",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "E值（Expect value）越小，表示比对结果的统计学显著性越高，即随机获得该比对结果的概率越低",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "全局比对与局部比对的选择取决于具体问题：Needleman-Wunsch算法做全局比对，Smith-Waterman算法做局部比对",
-    "answer": true
-   }
-  ],
-  "explanation": "所有选项均正确。A：BLAST的种子-扩展策略。B：E值的统计学意义。C：多序列比对的核心应用。D：两种经典比对算法的用途区分。",
-  "module": 4,
-  "subject": "生物信息学",
-  "concept": "序列比对",
-  "difficulty": "easy",
-  "year": 2025,
-  "chart": null,
-  "oldId": "8782779",
-  "tags": []
- },
- "BQ-sequence_alignment-bf1cd45eada1": {
-  "type": "mtf",
-  "question": "关于序列比对与数据库搜索，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "BLAST算法通过寻找短的精确匹配片段（种子）来加速序列数据库的比对搜索",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "多序列比对可用于鉴定保守的功能结构域和构建系统发育树",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "全局比对与局部比对的选择取决于具体问题：Needleman-Wunsch算法做全局比对，Smith-Waterman算法做局部比对",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "E值（Expect value）越小，表示比对结果的统计学显著性越高，即随机获得该比对结果的概率越低",
-    "answer": true
-   }
-  ],
-  "explanation": "所有选项均正确。A：BLAST的种子-扩展策略。B：E值的统计学意义。C：多序列比对的核心应用。D：两种经典比对算法的用途区分。",
-  "module": 4,
-  "subject": "生物信息学",
-  "concept": "序列比对",
-  "difficulty": "easy",
-  "year": 2025,
-  "chart": null,
-  "oldId": "8782779",
-  "tags": []
- },
- "BQ-sequence_alignment-da24da3c7d39": {
-  "type": "mtf",
-  "question": "关于序列比对与数据库搜索，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "E值（Expect value）越小，表示比对结果的统计学显著性越高，即随机获得该比对结果的概率越低",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "BLAST算法通过寻找短的精确匹配片段（种子）来加速序列数据库的比对搜索",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "全局比对与局部比对的选择取决于具体问题：Needleman-Wunsch算法做全局比对，Smith-Waterman算法做局部比对",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "多序列比对可用于鉴定保守的功能结构域和构建系统发育树",
-    "answer": true
-   }
-  ],
-  "explanation": "所有选项均正确。A：BLAST的种子-扩展策略。B：E值的统计学意义。C：多序列比对的核心应用。D：两种经典比对算法的用途区分。",
-  "module": 4,
-  "subject": "生物信息学",
-  "concept": "序列比对",
-  "difficulty": "easy",
-  "year": 2025,
-  "chart": null,
-  "oldId": "8782779",
-  "tags": []
- },
- "BQ-sequence_alignment-d2533250bde0": {
-  "type": "mtf",
-  "question": "关于序列比对与数据库搜索，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "E值（Expect value）越小，表示比对结果的统计学显著性越高，即随机获得该比对结果的概率越低",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "BLAST算法通过寻找短的精确匹配片段（种子）来加速序列数据库的比对搜索",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "多序列比对可用于鉴定保守的功能结构域和构建系统发育树",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "全局比对与局部比对的选择取决于具体问题：Needleman-Wunsch算法做全局比对，Smith-Waterman算法做局部比对",
-    "answer": true
-   }
-  ],
-  "explanation": "所有选项均正确。A：BLAST的种子-扩展策略。B：E值的统计学意义。C：多序列比对的核心应用。D：两种经典比对算法的用途区分。",
-  "module": 4,
-  "subject": "生物信息学",
-  "concept": "序列比对",
-  "difficulty": "easy",
-  "year": 2025,
-  "chart": null,
-  "oldId": "8782779",
-  "tags": []
- },
- "BQ-sequence_alignment-28a3486c2994": {
-  "type": "mtf",
-  "question": "关于序列比对与数据库搜索，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "E值（Expect value）越小，表示比对结果的统计学显著性越高，即随机获得该比对结果的概率越低",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "全局比对与局部比对的选择取决于具体问题：Needleman-Wunsch算法做全局比对，Smith-Waterman算法做局部比对",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "BLAST算法通过寻找短的精确匹配片段（种子）来加速序列数据库的比对搜索",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "多序列比对可用于鉴定保守的功能结构域和构建系统发育树",
-    "answer": true
-   }
-  ],
-  "explanation": "所有选项均正确。A：BLAST的种子-扩展策略。B：E值的统计学意义。C：多序列比对的核心应用。D：两种经典比对算法的用途区分。",
-  "module": 4,
-  "subject": "生物信息学",
-  "concept": "序列比对",
-  "difficulty": "easy",
-  "year": 2025,
-  "chart": null,
-  "oldId": "8782779",
-  "tags": []
- },
- "BQ-sequence_alignment-efcf5e3d123c": {
-  "type": "mtf",
-  "question": "关于序列比对与数据库搜索，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "E值（Expect value）越小，表示比对结果的统计学显著性越高，即随机获得该比对结果的概率越低",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "全局比对与局部比对的选择取决于具体问题：Needleman-Wunsch算法做全局比对，Smith-Waterman算法做局部比对",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "多序列比对可用于鉴定保守的功能结构域和构建系统发育树",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "BLAST算法通过寻找短的精确匹配片段（种子）来加速序列数据库的比对搜索",
-    "answer": true
-   }
-  ],
-  "explanation": "所有选项均正确。A：BLAST的种子-扩展策略。B：E值的统计学意义。C：多序列比对的核心应用。D：两种经典比对算法的用途区分。",
-  "module": 4,
-  "subject": "生物信息学",
-  "concept": "序列比对",
-  "difficulty": "easy",
-  "year": 2025,
-  "chart": null,
-  "oldId": "8782779",
-  "tags": []
- },
- "BQ-sequence_alignment-2264c32f7b66": {
-  "type": "mtf",
-  "question": "关于序列比对与数据库搜索，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "E值（Expect value）越小，表示比对结果的统计学显著性越高，即随机获得该比对结果的概率越低",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "多序列比对可用于鉴定保守的功能结构域和构建系统发育树",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "BLAST算法通过寻找短的精确匹配片段（种子）来加速序列数据库的比对搜索",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "全局比对与局部比对的选择取决于具体问题：Needleman-Wunsch算法做全局比对，Smith-Waterman算法做局部比对",
-    "answer": true
-   }
-  ],
-  "explanation": "所有选项均正确。A：BLAST的种子-扩展策略。B：E值的统计学意义。C：多序列比对的核心应用。D：两种经典比对算法的用途区分。",
-  "module": 4,
-  "subject": "生物信息学",
-  "concept": "序列比对",
-  "difficulty": "easy",
-  "year": 2025,
-  "chart": null,
-  "oldId": "8782779",
-  "tags": []
- },
- "BQ-sequence_alignment-64488b83c36b": {
-  "type": "mtf",
-  "question": "关于序列比对与数据库搜索，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "E值（Expect value）越小，表示比对结果的统计学显著性越高，即随机获得该比对结果的概率越低",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "多序列比对可用于鉴定保守的功能结构域和构建系统发育树",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "全局比对与局部比对的选择取决于具体问题：Needleman-Wunsch算法做全局比对，Smith-Waterman算法做局部比对",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "BLAST算法通过寻找短的精确匹配片段（种子）来加速序列数据库的比对搜索",
-    "answer": true
-   }
-  ],
-  "explanation": "所有选项均正确。A：BLAST的种子-扩展策略。B：E值的统计学意义。C：多序列比对的核心应用。D：两种经典比对算法的用途区分。",
-  "module": 4,
-  "subject": "生物信息学",
-  "concept": "序列比对",
-  "difficulty": "easy",
-  "year": 2025,
-  "chart": null,
-  "oldId": "8782779",
-  "tags": []
- },
- "BQ-sequence_alignment-a926756d42e3": {
-  "type": "mtf",
-  "question": "关于序列比对与数据库搜索，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "全局比对与局部比对的选择取决于具体问题：Needleman-Wunsch算法做全局比对，Smith-Waterman算法做局部比对",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "BLAST算法通过寻找短的精确匹配片段（种子）来加速序列数据库的比对搜索",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "E值（Expect value）越小，表示比对结果的统计学显著性越高，即随机获得该比对结果的概率越低",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "多序列比对可用于鉴定保守的功能结构域和构建系统发育树",
-    "answer": true
-   }
-  ],
-  "explanation": "所有选项均正确。A：BLAST的种子-扩展策略。B：E值的统计学意义。C：多序列比对的核心应用。D：两种经典比对算法的用途区分。",
-  "module": 4,
-  "subject": "生物信息学",
-  "concept": "序列比对",
-  "difficulty": "easy",
-  "year": 2025,
-  "chart": null,
-  "oldId": "8782779",
-  "tags": []
- },
- "BQ-sequence_alignment-b1f89488b3b3": {
-  "type": "mtf",
-  "question": "关于序列比对与数据库搜索，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "全局比对与局部比对的选择取决于具体问题：Needleman-Wunsch算法做全局比对，Smith-Waterman算法做局部比对",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "BLAST算法通过寻找短的精确匹配片段（种子）来加速序列数据库的比对搜索",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "多序列比对可用于鉴定保守的功能结构域和构建系统发育树",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "E值（Expect value）越小，表示比对结果的统计学显著性越高，即随机获得该比对结果的概率越低",
-    "answer": true
-   }
-  ],
-  "explanation": "所有选项均正确。A：BLAST的种子-扩展策略。B：E值的统计学意义。C：多序列比对的核心应用。D：两种经典比对算法的用途区分。",
-  "module": 4,
-  "subject": "生物信息学",
-  "concept": "序列比对",
-  "difficulty": "easy",
-  "year": 2025,
-  "chart": null,
-  "oldId": "8782779",
-  "tags": []
- },
- "BQ-sequence_alignment-533f2d110494": {
-  "type": "mtf",
-  "question": "关于序列比对与数据库搜索，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "全局比对与局部比对的选择取决于具体问题：Needleman-Wunsch算法做全局比对，Smith-Waterman算法做局部比对",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "E值（Expect value）越小，表示比对结果的统计学显著性越高，即随机获得该比对结果的概率越低",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "BLAST算法通过寻找短的精确匹配片段（种子）来加速序列数据库的比对搜索",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "多序列比对可用于鉴定保守的功能结构域和构建系统发育树",
-    "answer": true
-   }
-  ],
-  "explanation": "所有选项均正确。A：BLAST的种子-扩展策略。B：E值的统计学意义。C：多序列比对的核心应用。D：两种经典比对算法的用途区分。",
-  "module": 4,
-  "subject": "生物信息学",
-  "concept": "序列比对",
-  "difficulty": "easy",
-  "year": 2025,
-  "chart": null,
-  "oldId": "8782779",
-  "tags": []
- },
- "BQ-sequence_alignment-5099e1b96427": {
-  "type": "mtf",
-  "question": "关于序列比对与数据库搜索，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "全局比对与局部比对的选择取决于具体问题：Needleman-Wunsch算法做全局比对，Smith-Waterman算法做局部比对",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "E值（Expect value）越小，表示比对结果的统计学显著性越高，即随机获得该比对结果的概率越低",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "多序列比对可用于鉴定保守的功能结构域和构建系统发育树",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "BLAST算法通过寻找短的精确匹配片段（种子）来加速序列数据库的比对搜索",
-    "answer": true
-   }
-  ],
-  "explanation": "所有选项均正确。A：BLAST的种子-扩展策略。B：E值的统计学意义。C：多序列比对的核心应用。D：两种经典比对算法的用途区分。",
-  "module": 4,
-  "subject": "生物信息学",
-  "concept": "序列比对",
-  "difficulty": "easy",
-  "year": 2025,
-  "chart": null,
-  "oldId": "8782779",
-  "tags": []
- },
- "BQ-sequence_alignment-cb0d255ebefd": {
-  "type": "mtf",
-  "question": "关于序列比对与数据库搜索，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "全局比对与局部比对的选择取决于具体问题：Needleman-Wunsch算法做全局比对，Smith-Waterman算法做局部比对",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "多序列比对可用于鉴定保守的功能结构域和构建系统发育树",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "BLAST算法通过寻找短的精确匹配片段（种子）来加速序列数据库的比对搜索",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "E值（Expect value）越小，表示比对结果的统计学显著性越高，即随机获得该比对结果的概率越低",
-    "answer": true
-   }
-  ],
-  "explanation": "所有选项均正确。A：BLAST的种子-扩展策略。B：E值的统计学意义。C：多序列比对的核心应用。D：两种经典比对算法的用途区分。",
-  "module": 4,
-  "subject": "生物信息学",
-  "concept": "序列比对",
-  "difficulty": "easy",
-  "year": 2025,
-  "chart": null,
-  "oldId": "8782779",
-  "tags": []
- },
- "BQ-sequence_alignment-be9d7790fafc": {
-  "type": "mtf",
-  "question": "关于序列比对与数据库搜索，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "全局比对与局部比对的选择取决于具体问题：Needleman-Wunsch算法做全局比对，Smith-Waterman算法做局部比对",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "多序列比对可用于鉴定保守的功能结构域和构建系统发育树",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "E值（Expect value）越小，表示比对结果的统计学显著性越高，即随机获得该比对结果的概率越低",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "BLAST算法通过寻找短的精确匹配片段（种子）来加速序列数据库的比对搜索",
-    "answer": true
-   }
-  ],
-  "explanation": "所有选项均正确。A：BLAST的种子-扩展策略。B：E值的统计学意义。C：多序列比对的核心应用。D：两种经典比对算法的用途区分。",
-  "module": 4,
-  "subject": "生物信息学",
-  "concept": "序列比对",
-  "difficulty": "easy",
-  "year": 2025,
-  "chart": null,
-  "oldId": "8782779",
-  "tags": []
- },
- "BQ-sequence_alignment-5f0af656c1ad": {
-  "type": "mtf",
-  "question": "关于序列比对与数据库搜索，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "多序列比对可用于鉴定保守的功能结构域和构建系统发育树",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "BLAST算法通过寻找短的精确匹配片段（种子）来加速序列数据库的比对搜索",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "E值（Expect value）越小，表示比对结果的统计学显著性越高，即随机获得该比对结果的概率越低",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "全局比对与局部比对的选择取决于具体问题：Needleman-Wunsch算法做全局比对，Smith-Waterman算法做局部比对",
-    "answer": true
-   }
-  ],
-  "explanation": "所有选项均正确。A：BLAST的种子-扩展策略。B：E值的统计学意义。C：多序列比对的核心应用。D：两种经典比对算法的用途区分。",
-  "module": 4,
-  "subject": "生物信息学",
-  "concept": "序列比对",
-  "difficulty": "easy",
-  "year": 2025,
-  "chart": null,
-  "oldId": "8782779",
-  "tags": []
- },
- "BQ-sequence_alignment-2075ebbb2349": {
-  "type": "mtf",
-  "question": "关于序列比对与数据库搜索，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "多序列比对可用于鉴定保守的功能结构域和构建系统发育树",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "BLAST算法通过寻找短的精确匹配片段（种子）来加速序列数据库的比对搜索",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "全局比对与局部比对的选择取决于具体问题：Needleman-Wunsch算法做全局比对，Smith-Waterman算法做局部比对",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "E值（Expect value）越小，表示比对结果的统计学显著性越高，即随机获得该比对结果的概率越低",
-    "answer": true
-   }
-  ],
-  "explanation": "所有选项均正确。A：BLAST的种子-扩展策略。B：E值的统计学意义。C：多序列比对的核心应用。D：两种经典比对算法的用途区分。",
-  "module": 4,
-  "subject": "生物信息学",
-  "concept": "序列比对",
-  "difficulty": "easy",
-  "year": 2025,
-  "chart": null,
-  "oldId": "8782779",
-  "tags": []
- },
- "BQ-sequence_alignment-59fef39e372d": {
-  "type": "mtf",
-  "question": "关于序列比对与数据库搜索，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "多序列比对可用于鉴定保守的功能结构域和构建系统发育树",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "E值（Expect value）越小，表示比对结果的统计学显著性越高，即随机获得该比对结果的概率越低",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "BLAST算法通过寻找短的精确匹配片段（种子）来加速序列数据库的比对搜索",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "全局比对与局部比对的选择取决于具体问题：Needleman-Wunsch算法做全局比对，Smith-Waterman算法做局部比对",
-    "answer": true
-   }
-  ],
-  "explanation": "所有选项均正确。A：BLAST的种子-扩展策略。B：E值的统计学意义。C：多序列比对的核心应用。D：两种经典比对算法的用途区分。",
-  "module": 4,
-  "subject": "生物信息学",
-  "concept": "序列比对",
-  "difficulty": "easy",
-  "year": 2025,
-  "chart": null,
-  "oldId": "8782779",
-  "tags": []
- },
- "BQ-sequence_alignment-418bf501244b": {
-  "type": "mtf",
-  "question": "关于序列比对与数据库搜索，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "多序列比对可用于鉴定保守的功能结构域和构建系统发育树",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "E值（Expect value）越小，表示比对结果的统计学显著性越高，即随机获得该比对结果的概率越低",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "全局比对与局部比对的选择取决于具体问题：Needleman-Wunsch算法做全局比对，Smith-Waterman算法做局部比对",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "BLAST算法通过寻找短的精确匹配片段（种子）来加速序列数据库的比对搜索",
-    "answer": true
-   }
-  ],
-  "explanation": "所有选项均正确。A：BLAST的种子-扩展策略。B：E值的统计学意义。C：多序列比对的核心应用。D：两种经典比对算法的用途区分。",
-  "module": 4,
-  "subject": "生物信息学",
-  "concept": "序列比对",
-  "difficulty": "easy",
-  "year": 2025,
-  "chart": null,
-  "oldId": "8782779",
-  "tags": []
- },
- "BQ-sequence_alignment-81ea67b197ba": {
-  "type": "mtf",
-  "question": "关于序列比对与数据库搜索，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "多序列比对可用于鉴定保守的功能结构域和构建系统发育树",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "全局比对与局部比对的选择取决于具体问题：Needleman-Wunsch算法做全局比对，Smith-Waterman算法做局部比对",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "BLAST算法通过寻找短的精确匹配片段（种子）来加速序列数据库的比对搜索",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "E值（Expect value）越小，表示比对结果的统计学显著性越高，即随机获得该比对结果的概率越低",
-    "answer": true
-   }
-  ],
-  "explanation": "所有选项均正确。A：BLAST的种子-扩展策略。B：E值的统计学意义。C：多序列比对的核心应用。D：两种经典比对算法的用途区分。",
-  "module": 4,
-  "subject": "生物信息学",
-  "concept": "序列比对",
-  "difficulty": "easy",
-  "year": 2025,
-  "chart": null,
-  "oldId": "8782779",
-  "tags": []
- },
- "BQ-sequence_alignment-055222d33328": {
-  "type": "mtf",
-  "question": "关于序列比对与数据库搜索，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "多序列比对可用于鉴定保守的功能结构域和构建系统发育树",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "全局比对与局部比对的选择取决于具体问题：Needleman-Wunsch算法做全局比对，Smith-Waterman算法做局部比对",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "E值（Expect value）越小，表示比对结果的统计学显著性越高，即随机获得该比对结果的概率越低",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "BLAST算法通过寻找短的精确匹配片段（种子）来加速序列数据库的比对搜索",
-    "answer": true
-   }
-  ],
-  "explanation": "所有选项均正确。A：BLAST的种子-扩展策略。B：E值的统计学意义。C：多序列比对的核心应用。D：两种经典比对算法的用途区分。",
-  "module": 4,
-  "subject": "生物信息学",
-  "concept": "序列比对",
-  "difficulty": "easy",
-  "year": 2025,
-  "chart": null,
-  "oldId": "8782779",
-  "tags": []
- }
+  "M4-11-aa6ab4c7111e": {
+    "type": "mtf",
+    "question": "关于打分矩阵，以下说法正确的有哪些？",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "BLOSUM62是BLAST默认使用的氨基酸替换打分矩阵",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "BLOSUM矩阵的数字越大，表示构建时使用的序列一致性阈值越高",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "打分矩阵中的正值表示该替换比随机预期更频繁发生",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "PAM矩阵基于亲缘关系较近的蛋白质序列比对构建",
+        "answer": true
+      }
+    ],
+    "explanation": "正确答案：C, D。详细解析请参见相关教材。",
+    "subject": "生物信息学",
+    "concept": "打分矩阵",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "sequence_alignment",
+      "module_4",
+      "生物信息学",
+      "打分矩阵"
+    ],
+    "references": [
+      {
+        "doi": "10.1093/nar/22.22.4673",
+        "title": "Amino acid substitution matrices",
+        "authors": "Henikoff S, Henikoff JG",
+        "year": 1994,
+        "journal": "Nucleic Acids Research"
+      }
+    ]
+  },
+  "M4-11-73a94c12b702": {
+    "type": "mtf",
+    "question": "关于动态规划算法在序列比对中的应用，以下判断正确的有哪些？",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "动态规划的时间复杂度为O(mn)，其中m和n为两条序列的长度",
+        "answer": false
+      },
+      {
+        "label": "B",
+        "text": "空位罚分（gap penalty）包括空位开放罚分和空位延伸罚分",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "动态规划可以保证找到全局最优比对",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "动态规划不适用于大规模数据库搜索",
+        "answer": true
+      }
+    ],
+    "explanation": "正确答案：C, D。详细解析请参见相关教材。",
+    "subject": "生物信息学",
+    "concept": "动态规划",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "sequence_alignment",
+      "module_4",
+      "生物信息学",
+      "动态规划"
+    ],
+    "references": [
+      {
+        "doi": "10.1016/0022-2836(82)90381-2",
+        "title": "Smith-Waterman algorithm",
+        "authors": "Smith TF, Waterman MS",
+        "year": 1981,
+        "journal": "Journal of Molecular Biology"
+      }
+    ]
+  },
+  "M4-11-0c315b82717a": {
+    "type": "mtf",
+    "question": "关于多序列比对，以下说法正确的有哪些？",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "ClustalW是一种常用的多序列比对工具",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "多序列比对可以用于发现保守区域和motif",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "多序列比对可以同时比对三条或更多序列",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "多序列比对的最优解可以在多项式时间内获得",
+        "answer": true
+      }
+    ],
+    "explanation": "正确答案：A, B, D。详细解析请参见相关教材。",
+    "subject": "生物信息学",
+    "concept": "多序列比对",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "sequence_alignment",
+      "module_4",
+      "生物信息学",
+      "多序列比对"
+    ],
+    "references": [
+      {
+        "doi": "10.1093/bioinformatics/btm404",
+        "title": "Multiple sequence alignment methods",
+        "authors": "Edgar RC, Batzoglou S",
+        "year": 2007,
+        "journal": "Bioinformatics"
+      }
+    ]
+  }
 }

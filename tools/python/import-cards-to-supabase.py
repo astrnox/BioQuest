@@ -4,7 +4,7 @@ BioQuest — 批量导入 200 张知识卡片到 Supabase cards 表
 用法: python scripts/import-cards-to-supabase.py
 
 需要环境变量：
-  SUPABASE_URL              默认 https://pgkjpuowpxngmxjjlfil.supabase.co
+  SUPABASE_URL              默认 https://qxehkfucvmxuojjkdaqy.supabase.co
   SUPABASE_SERVICE_ROLE_KEY 必填，从 .env 读取（绝不能硬编码或提交）
 """
 import json
@@ -25,7 +25,7 @@ if ENV_PATH.exists():
         k, v = line.split('=', 1)
         os.environ.setdefault(k.strip(), v.strip().strip('"').strip("'"))
 
-SUPABASE_URL = os.environ.get('SUPABASE_URL', 'https://pgkjpuowpxngmxjjlfil.supabase.co')
+SUPABASE_URL = os.environ.get('SUPABASE_URL', 'https://qxehkfucvmxuojjkdaqy.supabase.co')
 SERVICE_KEY = os.environ.get('SUPABASE_SERVICE_ROLE_KEY')
 if not SERVICE_KEY:
     print('ERROR: SUPABASE_SERVICE_ROLE_KEY not set. Please create .env file in project root with:')

@@ -1,379 +1,59 @@
 {
- "BQ-chromosome_var-ba258a37624f": {
-  "tags": [
-   "chromosome_var",
-   "module_3",
-   "遗传学",
-   "染色体变异",
-   "高考"
-  ],
-  "diff": "basic",
-  "len": 19,
-  "src": "chromosome_var",
-  "year": null,
-  "module": "module_3"
- },
- "BQ-chromosome_var-04252ad114b7": {
-  "tags": [
-   "chromosome_var",
-   "必修二",
-   "medium"
-  ],
-  "diff": "league",
-  "len": 54,
-  "src": "chromosome_var",
-  "year": null,
-  "module": "module4"
- },
- "BQ-chromosome_var-57947e29a476": {
-  "tags": [
-   "chromosome_var",
-   "必修二",
-   "easy"
-  ],
-  "diff": "basic",
-  "len": 51,
-  "src": "chromosome_var",
-  "year": null,
-  "module": "module4"
- },
- "BQ-chromosome_var-a361cf740179": {
-  "tags": [
-   "chromosome_var",
-   "module_4",
-   "遗传学",
-   "league",
-   "competition",
-   "https://www.czs.org.cn/swjs/lsstxz/art/2015/art_1c13e648d84d4e38b94e2dfd5e5b1b0b.html",
-   "2015"
-  ],
-  "diff": "league",
-  "len": 42,
-  "src": "chromosome_var",
-  "year": 2015,
-  "module": "module_4"
- },
- "BQ-chromosome_var-e15225e32b28": {
-  "tags": [
-   "chromosome_var",
-   "module_4",
-   "遗传学",
-   "league",
-   "competition",
-   "https://www.czs.org.cn/swjs/lsstxz/art/2015/art_1c13e648d84d4e38b94e2dfd5e5b1b0b.html",
-   "2015"
-  ],
-  "diff": "league",
-  "len": 68,
-  "src": "chromosome_var",
-  "year": 2015,
-  "module": "module_4"
- },
- "BQ-chromosome_var-b4302392227f": {
-  "tags": [
-   "chromosome_var",
-   "module_4",
-   "遗传学",
-   "league",
-   "competition",
-   "https://www.czs.org.cn/swjs/lsstxz/art/2024/art_f5fe44f36762455fb9f8f99b9e0bf2e2.html",
-   "2024"
-  ],
-  "diff": "league",
-  "len": 26,
-  "src": "chromosome_var",
-  "year": 2024,
-  "module": "module_4"
- },
- "BQ-chromosome_var-ca709ed326c5": {
-  "tags": [
-   "chromosome_var",
-   "module_4",
-   "遗传学",
-   "染色体变异",
-   "league",
-   "competition",
-   "https://www.czs.org.cn/swjs/lsstxz/art/2024/art_f5fe44f36762455fb9f8f99b9e0bf2e2.html",
-   "2024"
-  ],
-  "diff": "league",
-  "len": 181,
-  "src": "chromosome_var",
-  "year": 2024,
-  "module": "module_4"
- },
- "BQ-chromosome_var-25b3ef459539": {
-  "tags": [
-   "chromosome_var",
-   "module_4",
-   "遗传学",
-   "染色体变异",
-   "league",
-   "competition",
-   "https://www.czs.org.cn/swjs/lsstxz/art/2025/art_b153fd076f3f4fe282acfc333c4d4ab6.html",
-   "2025"
-  ],
-  "diff": "league",
-  "len": 225,
-  "src": "chromosome_var",
-  "year": 2025,
-  "module": "module_4"
- },
- "BQ-chromosome_var-3cf7ac7f647b": {
-  "tags": [
-   "chromosome_var",
-   "module_4",
-   "遗传学",
-   "染色体变异",
-   "league",
-   "competition",
-   "https://www.czs.org.cn/swjs/lsstxz/art/2025/art_b153fd076f3f4fe282acfc333c4d4ab6.html",
-   "2025"
-  ],
-  "diff": "league",
-  "len": 140,
-  "src": "chromosome_var",
-  "year": 2025,
-  "module": "module_4"
- },
- "BQ-chromosome_var-e32793254383": {
-  "tags": [
-   "chromosome_var"
-  ],
-  "diff": "medium",
-  "len": 18,
-  "src": "chromosome_var",
-  "year": 2025,
-  "module": 4
- },
- "BQ-chromosome_var-b093c584d3c9": {
-  "tags": [
-   "chromosome_var"
-  ],
-  "diff": "medium",
-  "len": 18,
-  "src": "chromosome_var",
-  "year": 2025,
-  "module": 4
- },
- "BQ-chromosome_var-543641340db5": {
-  "tags": [
-   "chromosome_var"
-  ],
-  "diff": "medium",
-  "len": 18,
-  "src": "chromosome_var",
-  "year": 2025,
-  "module": 4
- },
- "BQ-chromosome_var-e3ae97d66bb3": {
-  "tags": [
-   "chromosome_var"
-  ],
-  "diff": "medium",
-  "len": 18,
-  "src": "chromosome_var",
-  "year": 2025,
-  "module": 4
- },
- "BQ-chromosome_var-e46ec7bcdee7": {
-  "tags": [
-   "chromosome_var"
-  ],
-  "diff": "medium",
-  "len": 18,
-  "src": "chromosome_var",
-  "year": 2025,
-  "module": 4
- },
- "BQ-chromosome_var-6bf0fa2ff1a2": {
-  "tags": [
-   "chromosome_var"
-  ],
-  "diff": "medium",
-  "len": 18,
-  "src": "chromosome_var",
-  "year": 2025,
-  "module": 4
- },
- "BQ-chromosome_var-331dbf9aa0ec": {
-  "tags": [
-   "chromosome_var"
-  ],
-  "diff": "medium",
-  "len": 18,
-  "src": "chromosome_var",
-  "year": 2025,
-  "module": 4
- },
- "BQ-chromosome_var-ca1d2b33b7c4": {
-  "tags": [
-   "chromosome_var"
-  ],
-  "diff": "medium",
-  "len": 18,
-  "src": "chromosome_var",
-  "year": 2025,
-  "module": 4
- },
- "BQ-chromosome_var-0b5623180e4b": {
-  "tags": [
-   "chromosome_var"
-  ],
-  "diff": "medium",
-  "len": 18,
-  "src": "chromosome_var",
-  "year": 2025,
-  "module": 4
- },
- "BQ-chromosome_var-de9ab19ece29": {
-  "tags": [
-   "chromosome_var"
-  ],
-  "diff": "medium",
-  "len": 18,
-  "src": "chromosome_var",
-  "year": 2025,
-  "module": 4
- },
- "BQ-chromosome_var-39d72cbff9a9": {
-  "tags": [
-   "chromosome_var"
-  ],
-  "diff": "medium",
-  "len": 18,
-  "src": "chromosome_var",
-  "year": 2025,
-  "module": 4
- },
- "BQ-chromosome_var-ca5931541eae": {
-  "tags": [
-   "chromosome_var"
-  ],
-  "diff": "medium",
-  "len": 18,
-  "src": "chromosome_var",
-  "year": 2025,
-  "module": 4
- },
- "BQ-chromosome_var-9c796c40304a": {
-  "tags": [
-   "chromosome_var"
-  ],
-  "diff": "medium",
-  "len": 18,
-  "src": "chromosome_var",
-  "year": 2025,
-  "module": 4
- },
- "BQ-chromosome_var-3521300a4b7a": {
-  "tags": [
-   "chromosome_var"
-  ],
-  "diff": "medium",
-  "len": 18,
-  "src": "chromosome_var",
-  "year": 2025,
-  "module": 4
- },
- "BQ-chromosome_var-d44680148d02": {
-  "tags": [
-   "chromosome_var"
-  ],
-  "diff": "medium",
-  "len": 18,
-  "src": "chromosome_var",
-  "year": 2025,
-  "module": 4
- },
- "BQ-chromosome_var-c823efff52fe": {
-  "tags": [
-   "chromosome_var"
-  ],
-  "diff": "medium",
-  "len": 18,
-  "src": "chromosome_var",
-  "year": 2025,
-  "module": 4
- },
- "BQ-chromosome_var-5c4b63b265b4": {
-  "tags": [
-   "chromosome_var"
-  ],
-  "diff": "medium",
-  "len": 18,
-  "src": "chromosome_var",
-  "year": 2025,
-  "module": 4
- },
- "BQ-chromosome_var-604fc8a10fdb": {
-  "tags": [
-   "chromosome_var"
-  ],
-  "diff": "medium",
-  "len": 18,
-  "src": "chromosome_var",
-  "year": 2025,
-  "module": 4
- },
- "BQ-chromosome_var-34e51b113788": {
-  "tags": [
-   "chromosome_var"
-  ],
-  "diff": "medium",
-  "len": 18,
-  "src": "chromosome_var",
-  "year": 2025,
-  "module": 4
- },
- "BQ-chromosome_var-92bf9a09c794": {
-  "tags": [
-   "chromosome_var"
-  ],
-  "diff": "medium",
-  "len": 18,
-  "src": "chromosome_var",
-  "year": 2025,
-  "module": 4
- },
- "BQ-chromosome_var-4f4d943757f2": {
-  "tags": [
-   "chromosome_var"
-  ],
-  "diff": "medium",
-  "len": 18,
-  "src": "chromosome_var",
-  "year": 2025,
-  "module": 4
- },
- "BQ-chromosome_var-44e55da50e3c": {
-  "tags": [
-   "chromosome_var"
-  ],
-  "diff": "medium",
-  "len": 18,
-  "src": "chromosome_var",
-  "year": 2025,
-  "module": 4
- },
- "BQ-chromosome_var-4b80ff7e7cb0": {
-  "tags": [
-   "chromosome_var"
-  ],
-  "diff": "medium",
-  "len": 18,
-  "src": "chromosome_var",
-  "year": 2025,
-  "module": 4
- },
- "BQ-chromosome_var-655e784701e3": {
-  "tags": [
-   "chromosome_var"
-  ],
-  "diff": "medium",
-  "len": 18,
-  "src": "chromosome_var",
-  "year": 2025,
-  "module": 4
- }
+  "M4-05-b4f6e7407acc": {
+    "tags": [
+      "chromosome_var",
+      "module_4",
+      "遗传学",
+      "染色体变异"
+    ],
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "chromosome_var"
+  },
+  "M4-05-72de3d077d78": {
+    "tags": [
+      "chromosome_var",
+      "module_4",
+      "遗传学",
+      "多倍体"
+    ],
+    "difficulty": "high_school",
+    "module": "module1",
+    "tag": "chromosome_var"
+  },
+  "M4-05-65700584b1ee": {
+    "tags": [
+      "chromosome_var",
+      "module_4",
+      "遗传学",
+      "非整倍体"
+    ],
+    "difficulty": "high_school",
+    "module": "module1",
+    "tag": "chromosome_var"
+  },
+  "M4-05-0f782213a3bd": {
+    "tags": [
+      "chromosome_var",
+      "module_4",
+      "遗传学",
+      "易位"
+    ],
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "chromosome_var"
+  },
+  "M4-05-9471bfc2c0bc": {
+    "tags": [
+      "chromosome_var",
+      "module_4",
+      "遗传学",
+      "染色体疾病"
+    ],
+    "diff": "league",
+    "len": 127,
+    "src": "chromosome_var",
+    "year": null,
+    "module": "module_4"
+  }
 }

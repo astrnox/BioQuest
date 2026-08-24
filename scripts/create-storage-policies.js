@@ -6,7 +6,7 @@ if (!SVC_KEY) {
   console.error('ERROR: 请先设置环境变量 SUPABASE_SERVICE_ROLE_KEY');
   process.exit(1);
 }
-const SUPABASE_URL = 'https://pgkjpuowpxngmxjjlfil.supabase.co';
+const SUPABASE_URL = 'https://qxehkfucvmxuojjkdaqy.supabase.co';
 
 const sql = `
 INSERT INTO storage.buckets (id, name, public, file_size_limit, allowed_mime_types)
@@ -84,7 +84,7 @@ async function run() {
 
   // Test upload after policies
   console.log('\n--- Testing upload with anon key ---');
-  const anonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBna2pwdW93cHhuZ214ampsZmlsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA2ODM2MzIsImV4cCI6MjA5NjI1OTYzMn0.lgfxN9htgo1i4tX_KwEehW47uqOwj3Jfwy-ljsjQnx4';
+  const anonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InF4ZWhrZnVjdm14dW9qamtkYXF5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODY2MjU2ODUsImV4cCI6MjEwMjIwMTY4NX0.lbiJxhFvy0t_J4qSeoP6K0r53M4KaEDSKkRlZu03ze8';
   const testBlob = new Blob(['test-pdf-content'], { type: 'application/pdf' });
   const upResp = await fetch(`${SUPABASE_URL}/storage/v1/object/bioquest-ebooks/test-rls-check.pdf`, {
     method: 'POST',

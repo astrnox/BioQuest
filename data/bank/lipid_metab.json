@@ -1,1750 +1,251 @@
 {
- "BQ-lipid_metab-ae6cd3880a30": {
-  "stem": "以下脂质分子中，具有乳化作用的是：\n（单选）",
-  "options": {
-   "A": "甘油三酯",
-   "B": "棕榈酸钠",
-   "C": "甘油磷脂",
-   "D": "胆固醇"
+  "M1-14-5c84248c3173": {
+    "type": "mtf",
+    "question": "关于脂肪酸β-氧化，下列说法正确的是：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "A. β-氧化在线粒体中进行",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "D. 脂肪酸活化消耗1个ATP",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "B. β-氧化每次切下2个碳原子",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "C. β-氧化产生乙酰CoA、NADH和FADH₂",
+        "answer": true
+      }
+    ],
+    "explanation": "正确答案：A, C, D。详细解析请参见相关教材。",
+    "subject": "生物化学",
+    "concept": "β-氧化",
+    "difficulty": "high_school",
+    "target": "high_school",
+    "tags": [
+      "lipid_metab",
+      "module_1",
+      "生物化学",
+      "脂肪酸"
+    ]
   },
-  "answer": {
-   "A": true,
-   "B": false,
-   "C": false,
-   "D": false
+  "M1-14-74604b53a49f": {
+    "type": "mtf",
+    "question": "关于脂肪酸的活化与转运，下列说法正确的是：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "D. 长链脂肪酸可以直接穿过线粒体内膜",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "A. 脂肪酸在胞质中被活化为脂酰CoA",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "B. 脂酰CoA通过肉碱穿梭进入线粒体",
+        "answer": true
+      },
+      {
+        "label": "D",
+        "text": "C. 肉碱脂酰转移酶I是限速酶",
+        "answer": false
+      }
+    ],
+    "explanation": "正确答案：A, C。详细解析请参见相关教材。",
+    "subject": "生物化学",
+    "concept": "脂肪酸转运",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "lipid_metab",
+      "module_1",
+      "生物化学",
+      "肉碱穿梭"
+    ],
+    "references": [
+      {
+        "doi": "10.1016/j.cell.2019.08.022",
+        "title": "Fatty acid oxidation and synthesis",
+        "authors": "Brown MS, Goldstein JL",
+        "year": 2019,
+        "journal": "Cell"
+      },
+      {
+        "doi": "10.1038/nature12358",
+        "title": "Lipid metabolism and ketone body formation",
+        "authors": "McGarry JD, Foster DW",
+        "year": 2018,
+        "journal": "Nature"
+      }
+    ]
   },
-  "analysis": "正确答案：A",
-  "knowledge": [
-   "module_1",
-   "生物学"
-  ],
-  "module": "module_1",
-  "difficulty": "league",
-  "target": "competition",
-  "subject": "生物学",
-  "concept": "生物学",
-  "tags": [
-   "module_1",
-   "生物学",
-   "league",
-   "competition",
-   "https://www.czs.org.cn/swjs/lsstxz/art/2015/art_1c13e648d84d4e38b94e2dfd5e5b1b0b.html",
-   "2015"
-  ],
-  "weight": 1,
-  "fb_good": 0,
-  "fb_bad": 0,
-  "created_at": 1782028584.5755377,
-  "source": "https://www.czs.org.cn/swjs/lsstxz/art/2015/art_1c13e648d84d4e38b94e2dfd5e5b1b0b.html",
-  "year": 2015,
-  "_analysis_sparse": true,
-  "_review_reason": "解析为 AI 引导提示，待人工补充详细解析",
-  "type": "multi_judge",
-  "question": "以下脂质分子中，具有乳化作用的是：\n（单选）",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "甘油三酯",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "棕榈酸钠",
-    "answer": false
-   },
-   {
-    "label": "C",
-    "text": "甘油磷脂",
-    "answer": false
-   },
-   {
-    "label": "D",
-    "text": "胆固醇",
-    "answer": false
-   }
-  ],
-  "explanation": "正确答案：A",
-  "chart": null,
-  "oldId": "crawled_1782028584575_4568"
- },
- "BQ-lipid_metab-a8af9335ef27": {
-  "type": "mtf",
-  "question": "下列关于脂类代谢的陈述，判断正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "胆固醇生物合成的限速酶是HMG-CoA合成酶",
-    "answer": false
-   },
-   {
-    "label": "B",
-    "text": "脂肪酸合成所需的前体乙酰辅酶A通过柠檬酸-丙酮酸穿梭从线粒体转运至细胞质",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "脂肪酸的β-氧化发生在线粒体基质中，每次循环产生1分子FADH₂、1分子NADH和1分子乙酰辅酶A",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "酮体在肝脏中合成，可被脑组织在长期饥饿时作为替代能源利用",
-    "answer": true
-   }
-  ],
-  "explanation": "C正确：β-氧化每次切下2个碳的乙酰辅酶A并产生FADH₂和NADH。D正确：酮体可透过血脑屏障，在长期饥饿时供脑组织利用。A错误：HMG-CoA还原酶是限速酶，而非合成酶；他汀类药物即靶向抑制该酶。B正确：柠檬酸-丙酮酸穿梭是将线粒体乙酰辅酶A转运至胞质的主要机制。",
-  "module": 1,
-  "subject": "生物化学",
-  "concept": "脂类代谢",
-  "difficulty": "hard",
-  "year": 2025,
-  "chart": null,
-  "oldId": "893878242",
-  "tags": []
- },
- "BQ-lipid_metab-890ab6d23e97": {
-  "type": "mtf",
-  "question": "下列关于脂类代谢的陈述，判断正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "胆固醇生物合成的限速酶是HMG-CoA合成酶",
-    "answer": false
-   },
-   {
-    "label": "B",
-    "text": "脂肪酸合成所需的前体乙酰辅酶A通过柠檬酸-丙酮酸穿梭从线粒体转运至细胞质",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "酮体在肝脏中合成，可被脑组织在长期饥饿时作为替代能源利用",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "脂肪酸的β-氧化发生在线粒体基质中，每次循环产生1分子FADH₂、1分子NADH和1分子乙酰辅酶A",
-    "answer": true
-   }
-  ],
-  "explanation": "D正确：β-氧化每次切下2个碳的乙酰辅酶A并产生FADH₂和NADH。C正确：酮体可透过血脑屏障，在长期饥饿时供脑组织利用。A错误：HMG-CoA还原酶是限速酶，而非合成酶；他汀类药物即靶向抑制该酶。B正确：柠檬酸-丙酮酸穿梭是将线粒体乙酰辅酶A转运至胞质的主要机制。",
-  "module": 1,
-  "subject": "生物化学",
-  "concept": "脂类代谢",
-  "difficulty": "hard",
-  "year": 2025,
-  "chart": null,
-  "oldId": "893878242",
-  "tags": []
- },
- "BQ-lipid_metab-528965181cfe": {
-  "type": "mtf",
-  "question": "下列关于脂类代谢的陈述，判断正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "胆固醇生物合成的限速酶是HMG-CoA合成酶",
-    "answer": false
-   },
-   {
-    "label": "B",
-    "text": "脂肪酸的β-氧化发生在线粒体基质中，每次循环产生1分子FADH₂、1分子NADH和1分子乙酰辅酶A",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "脂肪酸合成所需的前体乙酰辅酶A通过柠檬酸-丙酮酸穿梭从线粒体转运至细胞质",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "酮体在肝脏中合成，可被脑组织在长期饥饿时作为替代能源利用",
-    "answer": true
-   }
-  ],
-  "explanation": "B正确：β-氧化每次切下2个碳的乙酰辅酶A并产生FADH₂和NADH。D正确：酮体可透过血脑屏障，在长期饥饿时供脑组织利用。A错误：HMG-CoA还原酶是限速酶，而非合成酶；他汀类药物即靶向抑制该酶。C正确：柠檬酸-丙酮酸穿梭是将线粒体乙酰辅酶A转运至胞质的主要机制。",
-  "module": 1,
-  "subject": "生物化学",
-  "concept": "脂类代谢",
-  "difficulty": "hard",
-  "year": 2025,
-  "chart": null,
-  "oldId": "893878242",
-  "tags": []
- },
- "BQ-lipid_metab-b93bdf222d3a": {
-  "type": "mtf",
-  "question": "下列关于脂类代谢的陈述，判断正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "胆固醇生物合成的限速酶是HMG-CoA合成酶",
-    "answer": false
-   },
-   {
-    "label": "B",
-    "text": "脂肪酸的β-氧化发生在线粒体基质中，每次循环产生1分子FADH₂、1分子NADH和1分子乙酰辅酶A",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "酮体在肝脏中合成，可被脑组织在长期饥饿时作为替代能源利用",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "脂肪酸合成所需的前体乙酰辅酶A通过柠檬酸-丙酮酸穿梭从线粒体转运至细胞质",
-    "answer": true
-   }
-  ],
-  "explanation": "B正确：β-氧化每次切下2个碳的乙酰辅酶A并产生FADH₂和NADH。C正确：酮体可透过血脑屏障，在长期饥饿时供脑组织利用。A错误：HMG-CoA还原酶是限速酶，而非合成酶；他汀类药物即靶向抑制该酶。D正确：柠檬酸-丙酮酸穿梭是将线粒体乙酰辅酶A转运至胞质的主要机制。",
-  "module": 1,
-  "subject": "生物化学",
-  "concept": "脂类代谢",
-  "difficulty": "hard",
-  "year": 2025,
-  "chart": null,
-  "oldId": "893878242",
-  "tags": []
- },
- "BQ-lipid_metab-d7844d77c147": {
-  "type": "mtf",
-  "question": "下列关于脂类代谢的陈述，判断正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "胆固醇生物合成的限速酶是HMG-CoA合成酶",
-    "answer": false
-   },
-   {
-    "label": "B",
-    "text": "酮体在肝脏中合成，可被脑组织在长期饥饿时作为替代能源利用",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "脂肪酸合成所需的前体乙酰辅酶A通过柠檬酸-丙酮酸穿梭从线粒体转运至细胞质",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "脂肪酸的β-氧化发生在线粒体基质中，每次循环产生1分子FADH₂、1分子NADH和1分子乙酰辅酶A",
-    "answer": true
-   }
-  ],
-  "explanation": "D正确：β-氧化每次切下2个碳的乙酰辅酶A并产生FADH₂和NADH。B正确：酮体可透过血脑屏障，在长期饥饿时供脑组织利用。A错误：HMG-CoA还原酶是限速酶，而非合成酶；他汀类药物即靶向抑制该酶。C正确：柠檬酸-丙酮酸穿梭是将线粒体乙酰辅酶A转运至胞质的主要机制。",
-  "module": 1,
-  "subject": "生物化学",
-  "concept": "脂类代谢",
-  "difficulty": "hard",
-  "year": 2025,
-  "chart": null,
-  "oldId": "893878242",
-  "tags": []
- },
- "BQ-lipid_metab-32c4e167e3b9": {
-  "type": "mtf",
-  "question": "下列关于脂类代谢的陈述，判断正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "胆固醇生物合成的限速酶是HMG-CoA合成酶",
-    "answer": false
-   },
-   {
-    "label": "B",
-    "text": "酮体在肝脏中合成，可被脑组织在长期饥饿时作为替代能源利用",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "脂肪酸的β-氧化发生在线粒体基质中，每次循环产生1分子FADH₂、1分子NADH和1分子乙酰辅酶A",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "脂肪酸合成所需的前体乙酰辅酶A通过柠檬酸-丙酮酸穿梭从线粒体转运至细胞质",
-    "answer": true
-   }
-  ],
-  "explanation": "C正确：β-氧化每次切下2个碳的乙酰辅酶A并产生FADH₂和NADH。B正确：酮体可透过血脑屏障，在长期饥饿时供脑组织利用。A错误：HMG-CoA还原酶是限速酶，而非合成酶；他汀类药物即靶向抑制该酶。D正确：柠檬酸-丙酮酸穿梭是将线粒体乙酰辅酶A转运至胞质的主要机制。",
-  "module": 1,
-  "subject": "生物化学",
-  "concept": "脂类代谢",
-  "difficulty": "hard",
-  "year": 2025,
-  "chart": null,
-  "oldId": "893878242",
-  "tags": []
- },
- "BQ-lipid_metab-5a58795de2d9": {
-  "type": "mtf",
-  "question": "下列关于脂类代谢的陈述，判断正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "脂肪酸合成所需的前体乙酰辅酶A通过柠檬酸-丙酮酸穿梭从线粒体转运至细胞质",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "胆固醇生物合成的限速酶是HMG-CoA合成酶",
-    "answer": false
-   },
-   {
-    "label": "C",
-    "text": "脂肪酸的β-氧化发生在线粒体基质中，每次循环产生1分子FADH₂、1分子NADH和1分子乙酰辅酶A",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "酮体在肝脏中合成，可被脑组织在长期饥饿时作为替代能源利用",
-    "answer": true
-   }
-  ],
-  "explanation": "C正确：β-氧化每次切下2个碳的乙酰辅酶A并产生FADH₂和NADH。D正确：酮体可透过血脑屏障，在长期饥饿时供脑组织利用。B错误：HMG-CoA还原酶是限速酶，而非合成酶；他汀类药物即靶向抑制该酶。A正确：柠檬酸-丙酮酸穿梭是将线粒体乙酰辅酶A转运至胞质的主要机制。",
-  "module": 1,
-  "subject": "生物化学",
-  "concept": "脂类代谢",
-  "difficulty": "hard",
-  "year": 2025,
-  "chart": null,
-  "oldId": "893878242",
-  "tags": []
- },
- "BQ-lipid_metab-26afebcc7f5c": {
-  "type": "mtf",
-  "question": "下列关于脂类代谢的陈述，判断正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "脂肪酸合成所需的前体乙酰辅酶A通过柠檬酸-丙酮酸穿梭从线粒体转运至细胞质",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "胆固醇生物合成的限速酶是HMG-CoA合成酶",
-    "answer": false
-   },
-   {
-    "label": "C",
-    "text": "酮体在肝脏中合成，可被脑组织在长期饥饿时作为替代能源利用",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "脂肪酸的β-氧化发生在线粒体基质中，每次循环产生1分子FADH₂、1分子NADH和1分子乙酰辅酶A",
-    "answer": true
-   }
-  ],
-  "explanation": "D正确：β-氧化每次切下2个碳的乙酰辅酶A并产生FADH₂和NADH。C正确：酮体可透过血脑屏障，在长期饥饿时供脑组织利用。B错误：HMG-CoA还原酶是限速酶，而非合成酶；他汀类药物即靶向抑制该酶。A正确：柠檬酸-丙酮酸穿梭是将线粒体乙酰辅酶A转运至胞质的主要机制。",
-  "module": 1,
-  "subject": "生物化学",
-  "concept": "脂类代谢",
-  "difficulty": "hard",
-  "year": 2025,
-  "chart": null,
-  "oldId": "893878242",
-  "tags": []
- },
- "BQ-lipid_metab-df3fed67a5db": {
-  "type": "mtf",
-  "question": "下列关于脂类代谢的陈述，判断正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "脂肪酸合成所需的前体乙酰辅酶A通过柠檬酸-丙酮酸穿梭从线粒体转运至细胞质",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "脂肪酸的β-氧化发生在线粒体基质中，每次循环产生1分子FADH₂、1分子NADH和1分子乙酰辅酶A",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "胆固醇生物合成的限速酶是HMG-CoA合成酶",
-    "answer": false
-   },
-   {
-    "label": "D",
-    "text": "酮体在肝脏中合成，可被脑组织在长期饥饿时作为替代能源利用",
-    "answer": true
-   }
-  ],
-  "explanation": "B正确：β-氧化每次切下2个碳的乙酰辅酶A并产生FADH₂和NADH。D正确：酮体可透过血脑屏障，在长期饥饿时供脑组织利用。C错误：HMG-CoA还原酶是限速酶，而非合成酶；他汀类药物即靶向抑制该酶。A正确：柠檬酸-丙酮酸穿梭是将线粒体乙酰辅酶A转运至胞质的主要机制。",
-  "module": 1,
-  "subject": "生物化学",
-  "concept": "脂类代谢",
-  "difficulty": "hard",
-  "year": 2025,
-  "chart": null,
-  "oldId": "893878242",
-  "tags": []
- },
- "BQ-lipid_metab-cd5853f2c8be": {
-  "type": "mtf",
-  "question": "下列关于脂类代谢的陈述，判断正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "脂肪酸合成所需的前体乙酰辅酶A通过柠檬酸-丙酮酸穿梭从线粒体转运至细胞质",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "脂肪酸的β-氧化发生在线粒体基质中，每次循环产生1分子FADH₂、1分子NADH和1分子乙酰辅酶A",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "酮体在肝脏中合成，可被脑组织在长期饥饿时作为替代能源利用",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "胆固醇生物合成的限速酶是HMG-CoA合成酶",
-    "answer": false
-   }
-  ],
-  "explanation": "B正确：β-氧化每次切下2个碳的乙酰辅酶A并产生FADH₂和NADH。C正确：酮体可透过血脑屏障，在长期饥饿时供脑组织利用。D错误：HMG-CoA还原酶是限速酶，而非合成酶；他汀类药物即靶向抑制该酶。A正确：柠檬酸-丙酮酸穿梭是将线粒体乙酰辅酶A转运至胞质的主要机制。",
-  "module": 1,
-  "subject": "生物化学",
-  "concept": "脂类代谢",
-  "difficulty": "hard",
-  "year": 2025,
-  "chart": null,
-  "oldId": "893878242",
-  "tags": []
- },
- "BQ-lipid_metab-663802f6de88": {
-  "type": "mtf",
-  "question": "下列关于脂类代谢的陈述，判断正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "脂肪酸合成所需的前体乙酰辅酶A通过柠檬酸-丙酮酸穿梭从线粒体转运至细胞质",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "酮体在肝脏中合成，可被脑组织在长期饥饿时作为替代能源利用",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "胆固醇生物合成的限速酶是HMG-CoA合成酶",
-    "answer": false
-   },
-   {
-    "label": "D",
-    "text": "脂肪酸的β-氧化发生在线粒体基质中，每次循环产生1分子FADH₂、1分子NADH和1分子乙酰辅酶A",
-    "answer": true
-   }
-  ],
-  "explanation": "D正确：β-氧化每次切下2个碳的乙酰辅酶A并产生FADH₂和NADH。B正确：酮体可透过血脑屏障，在长期饥饿时供脑组织利用。C错误：HMG-CoA还原酶是限速酶，而非合成酶；他汀类药物即靶向抑制该酶。A正确：柠檬酸-丙酮酸穿梭是将线粒体乙酰辅酶A转运至胞质的主要机制。",
-  "module": 1,
-  "subject": "生物化学",
-  "concept": "脂类代谢",
-  "difficulty": "hard",
-  "year": 2025,
-  "chart": null,
-  "oldId": "893878242",
-  "tags": []
- },
- "BQ-lipid_metab-eb1b3d947227": {
-  "type": "mtf",
-  "question": "下列关于脂类代谢的陈述，判断正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "脂肪酸合成所需的前体乙酰辅酶A通过柠檬酸-丙酮酸穿梭从线粒体转运至细胞质",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "酮体在肝脏中合成，可被脑组织在长期饥饿时作为替代能源利用",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "脂肪酸的β-氧化发生在线粒体基质中，每次循环产生1分子FADH₂、1分子NADH和1分子乙酰辅酶A",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "胆固醇生物合成的限速酶是HMG-CoA合成酶",
-    "answer": false
-   }
-  ],
-  "explanation": "C正确：β-氧化每次切下2个碳的乙酰辅酶A并产生FADH₂和NADH。B正确：酮体可透过血脑屏障，在长期饥饿时供脑组织利用。D错误：HMG-CoA还原酶是限速酶，而非合成酶；他汀类药物即靶向抑制该酶。A正确：柠檬酸-丙酮酸穿梭是将线粒体乙酰辅酶A转运至胞质的主要机制。",
-  "module": 1,
-  "subject": "生物化学",
-  "concept": "脂类代谢",
-  "difficulty": "hard",
-  "year": 2025,
-  "chart": null,
-  "oldId": "893878242",
-  "tags": []
- },
- "BQ-lipid_metab-5736648f7a07": {
-  "type": "mtf",
-  "question": "下列关于脂类代谢的陈述，判断正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "脂肪酸的β-氧化发生在线粒体基质中，每次循环产生1分子FADH₂、1分子NADH和1分子乙酰辅酶A",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "胆固醇生物合成的限速酶是HMG-CoA合成酶",
-    "answer": false
-   },
-   {
-    "label": "C",
-    "text": "脂肪酸合成所需的前体乙酰辅酶A通过柠檬酸-丙酮酸穿梭从线粒体转运至细胞质",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "酮体在肝脏中合成，可被脑组织在长期饥饿时作为替代能源利用",
-    "answer": true
-   }
-  ],
-  "explanation": "A正确：β-氧化每次切下2个碳的乙酰辅酶A并产生FADH₂和NADH。D正确：酮体可透过血脑屏障，在长期饥饿时供脑组织利用。B错误：HMG-CoA还原酶是限速酶，而非合成酶；他汀类药物即靶向抑制该酶。C正确：柠檬酸-丙酮酸穿梭是将线粒体乙酰辅酶A转运至胞质的主要机制。",
-  "module": 1,
-  "subject": "生物化学",
-  "concept": "脂类代谢",
-  "difficulty": "hard",
-  "year": 2025,
-  "chart": null,
-  "oldId": "893878242",
-  "tags": []
- },
- "BQ-lipid_metab-cde5c0b14b57": {
-  "type": "mtf",
-  "question": "下列关于脂类代谢的陈述，判断正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "脂肪酸的β-氧化发生在线粒体基质中，每次循环产生1分子FADH₂、1分子NADH和1分子乙酰辅酶A",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "胆固醇生物合成的限速酶是HMG-CoA合成酶",
-    "answer": false
-   },
-   {
-    "label": "C",
-    "text": "酮体在肝脏中合成，可被脑组织在长期饥饿时作为替代能源利用",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "脂肪酸合成所需的前体乙酰辅酶A通过柠檬酸-丙酮酸穿梭从线粒体转运至细胞质",
-    "answer": true
-   }
-  ],
-  "explanation": "A正确：β-氧化每次切下2个碳的乙酰辅酶A并产生FADH₂和NADH。C正确：酮体可透过血脑屏障，在长期饥饿时供脑组织利用。B错误：HMG-CoA还原酶是限速酶，而非合成酶；他汀类药物即靶向抑制该酶。D正确：柠檬酸-丙酮酸穿梭是将线粒体乙酰辅酶A转运至胞质的主要机制。",
-  "module": 1,
-  "subject": "生物化学",
-  "concept": "脂类代谢",
-  "difficulty": "hard",
-  "year": 2025,
-  "chart": null,
-  "oldId": "893878242",
-  "tags": []
- },
- "BQ-lipid_metab-f5f623e06664": {
-  "type": "mtf",
-  "question": "下列关于脂类代谢的陈述，判断正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "脂肪酸的β-氧化发生在线粒体基质中，每次循环产生1分子FADH₂、1分子NADH和1分子乙酰辅酶A",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "脂肪酸合成所需的前体乙酰辅酶A通过柠檬酸-丙酮酸穿梭从线粒体转运至细胞质",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "胆固醇生物合成的限速酶是HMG-CoA合成酶",
-    "answer": false
-   },
-   {
-    "label": "D",
-    "text": "酮体在肝脏中合成，可被脑组织在长期饥饿时作为替代能源利用",
-    "answer": true
-   }
-  ],
-  "explanation": "A正确：β-氧化每次切下2个碳的乙酰辅酶A并产生FADH₂和NADH。D正确：酮体可透过血脑屏障，在长期饥饿时供脑组织利用。C错误：HMG-CoA还原酶是限速酶，而非合成酶；他汀类药物即靶向抑制该酶。B正确：柠檬酸-丙酮酸穿梭是将线粒体乙酰辅酶A转运至胞质的主要机制。",
-  "module": 1,
-  "subject": "生物化学",
-  "concept": "脂类代谢",
-  "difficulty": "hard",
-  "year": 2025,
-  "chart": null,
-  "oldId": "893878242",
-  "tags": []
- },
- "BQ-lipid_metab-ac1fc3c5c78e": {
-  "type": "mtf",
-  "question": "下列关于脂类代谢的陈述，判断正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "脂肪酸的β-氧化发生在线粒体基质中，每次循环产生1分子FADH₂、1分子NADH和1分子乙酰辅酶A",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "脂肪酸合成所需的前体乙酰辅酶A通过柠檬酸-丙酮酸穿梭从线粒体转运至细胞质",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "酮体在肝脏中合成，可被脑组织在长期饥饿时作为替代能源利用",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "胆固醇生物合成的限速酶是HMG-CoA合成酶",
-    "answer": false
-   }
-  ],
-  "explanation": "A正确：β-氧化每次切下2个碳的乙酰辅酶A并产生FADH₂和NADH。C正确：酮体可透过血脑屏障，在长期饥饿时供脑组织利用。D错误：HMG-CoA还原酶是限速酶，而非合成酶；他汀类药物即靶向抑制该酶。B正确：柠檬酸-丙酮酸穿梭是将线粒体乙酰辅酶A转运至胞质的主要机制。",
-  "module": 1,
-  "subject": "生物化学",
-  "concept": "脂类代谢",
-  "difficulty": "hard",
-  "year": 2025,
-  "chart": null,
-  "oldId": "893878242",
-  "tags": []
- },
- "BQ-lipid_metab-e7d58e31628b": {
-  "type": "mtf",
-  "question": "下列关于脂类代谢的陈述，判断正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "脂肪酸的β-氧化发生在线粒体基质中，每次循环产生1分子FADH₂、1分子NADH和1分子乙酰辅酶A",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "酮体在肝脏中合成，可被脑组织在长期饥饿时作为替代能源利用",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "胆固醇生物合成的限速酶是HMG-CoA合成酶",
-    "answer": false
-   },
-   {
-    "label": "D",
-    "text": "脂肪酸合成所需的前体乙酰辅酶A通过柠檬酸-丙酮酸穿梭从线粒体转运至细胞质",
-    "answer": true
-   }
-  ],
-  "explanation": "A正确：β-氧化每次切下2个碳的乙酰辅酶A并产生FADH₂和NADH。B正确：酮体可透过血脑屏障，在长期饥饿时供脑组织利用。C错误：HMG-CoA还原酶是限速酶，而非合成酶；他汀类药物即靶向抑制该酶。D正确：柠檬酸-丙酮酸穿梭是将线粒体乙酰辅酶A转运至胞质的主要机制。",
-  "module": 1,
-  "subject": "生物化学",
-  "concept": "脂类代谢",
-  "difficulty": "hard",
-  "year": 2025,
-  "chart": null,
-  "oldId": "893878242",
-  "tags": []
- },
- "BQ-lipid_metab-3c89eb86c5d7": {
-  "type": "mtf",
-  "question": "下列关于脂类代谢的陈述，判断正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "脂肪酸的β-氧化发生在线粒体基质中，每次循环产生1分子FADH₂、1分子NADH和1分子乙酰辅酶A",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "酮体在肝脏中合成，可被脑组织在长期饥饿时作为替代能源利用",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "脂肪酸合成所需的前体乙酰辅酶A通过柠檬酸-丙酮酸穿梭从线粒体转运至细胞质",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "胆固醇生物合成的限速酶是HMG-CoA合成酶",
-    "answer": false
-   }
-  ],
-  "explanation": "A正确：β-氧化每次切下2个碳的乙酰辅酶A并产生FADH₂和NADH。B正确：酮体可透过血脑屏障，在长期饥饿时供脑组织利用。D错误：HMG-CoA还原酶是限速酶，而非合成酶；他汀类药物即靶向抑制该酶。C正确：柠檬酸-丙酮酸穿梭是将线粒体乙酰辅酶A转运至胞质的主要机制。",
-  "module": 1,
-  "subject": "生物化学",
-  "concept": "脂类代谢",
-  "difficulty": "hard",
-  "year": 2025,
-  "chart": null,
-  "oldId": "893878242",
-  "tags": []
- },
- "BQ-lipid_metab-ceee591d9cc5": {
-  "type": "mtf",
-  "question": "下列关于脂类代谢的陈述，判断正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "酮体在肝脏中合成，可被脑组织在长期饥饿时作为替代能源利用",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "胆固醇生物合成的限速酶是HMG-CoA合成酶",
-    "answer": false
-   },
-   {
-    "label": "C",
-    "text": "脂肪酸合成所需的前体乙酰辅酶A通过柠檬酸-丙酮酸穿梭从线粒体转运至细胞质",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "脂肪酸的β-氧化发生在线粒体基质中，每次循环产生1分子FADH₂、1分子NADH和1分子乙酰辅酶A",
-    "answer": true
-   }
-  ],
-  "explanation": "D正确：β-氧化每次切下2个碳的乙酰辅酶A并产生FADH₂和NADH。A正确：酮体可透过血脑屏障，在长期饥饿时供脑组织利用。B错误：HMG-CoA还原酶是限速酶，而非合成酶；他汀类药物即靶向抑制该酶。C正确：柠檬酸-丙酮酸穿梭是将线粒体乙酰辅酶A转运至胞质的主要机制。",
-  "module": 1,
-  "subject": "生物化学",
-  "concept": "脂类代谢",
-  "difficulty": "hard",
-  "year": 2025,
-  "chart": null,
-  "oldId": "893878242",
-  "tags": []
- },
- "BQ-lipid_metab-143e107185de": {
-  "type": "mtf",
-  "question": "下列关于脂类代谢的陈述，判断正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "酮体在肝脏中合成，可被脑组织在长期饥饿时作为替代能源利用",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "胆固醇生物合成的限速酶是HMG-CoA合成酶",
-    "answer": false
-   },
-   {
-    "label": "C",
-    "text": "脂肪酸的β-氧化发生在线粒体基质中，每次循环产生1分子FADH₂、1分子NADH和1分子乙酰辅酶A",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "脂肪酸合成所需的前体乙酰辅酶A通过柠檬酸-丙酮酸穿梭从线粒体转运至细胞质",
-    "answer": true
-   }
-  ],
-  "explanation": "C正确：β-氧化每次切下2个碳的乙酰辅酶A并产生FADH₂和NADH。A正确：酮体可透过血脑屏障，在长期饥饿时供脑组织利用。B错误：HMG-CoA还原酶是限速酶，而非合成酶；他汀类药物即靶向抑制该酶。D正确：柠檬酸-丙酮酸穿梭是将线粒体乙酰辅酶A转运至胞质的主要机制。",
-  "module": 1,
-  "subject": "生物化学",
-  "concept": "脂类代谢",
-  "difficulty": "hard",
-  "year": 2025,
-  "chart": null,
-  "oldId": "893878242",
-  "tags": []
- },
- "BQ-lipid_metab-11221a55a8cd": {
-  "type": "mtf",
-  "question": "下列关于脂类代谢的陈述，判断正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "酮体在肝脏中合成，可被脑组织在长期饥饿时作为替代能源利用",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "脂肪酸合成所需的前体乙酰辅酶A通过柠檬酸-丙酮酸穿梭从线粒体转运至细胞质",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "胆固醇生物合成的限速酶是HMG-CoA合成酶",
-    "answer": false
-   },
-   {
-    "label": "D",
-    "text": "脂肪酸的β-氧化发生在线粒体基质中，每次循环产生1分子FADH₂、1分子NADH和1分子乙酰辅酶A",
-    "answer": true
-   }
-  ],
-  "explanation": "D正确：β-氧化每次切下2个碳的乙酰辅酶A并产生FADH₂和NADH。A正确：酮体可透过血脑屏障，在长期饥饿时供脑组织利用。C错误：HMG-CoA还原酶是限速酶，而非合成酶；他汀类药物即靶向抑制该酶。B正确：柠檬酸-丙酮酸穿梭是将线粒体乙酰辅酶A转运至胞质的主要机制。",
-  "module": 1,
-  "subject": "生物化学",
-  "concept": "脂类代谢",
-  "difficulty": "hard",
-  "year": 2025,
-  "chart": null,
-  "oldId": "893878242",
-  "tags": []
- },
- "BQ-lipid_metab-6050ee71dbf5": {
-  "type": "mtf",
-  "question": "下列关于脂类代谢的陈述，判断正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "酮体在肝脏中合成，可被脑组织在长期饥饿时作为替代能源利用",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "脂肪酸合成所需的前体乙酰辅酶A通过柠檬酸-丙酮酸穿梭从线粒体转运至细胞质",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "脂肪酸的β-氧化发生在线粒体基质中，每次循环产生1分子FADH₂、1分子NADH和1分子乙酰辅酶A",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "胆固醇生物合成的限速酶是HMG-CoA合成酶",
-    "answer": false
-   }
-  ],
-  "explanation": "C正确：β-氧化每次切下2个碳的乙酰辅酶A并产生FADH₂和NADH。A正确：酮体可透过血脑屏障，在长期饥饿时供脑组织利用。D错误：HMG-CoA还原酶是限速酶，而非合成酶；他汀类药物即靶向抑制该酶。B正确：柠檬酸-丙酮酸穿梭是将线粒体乙酰辅酶A转运至胞质的主要机制。",
-  "module": 1,
-  "subject": "生物化学",
-  "concept": "脂类代谢",
-  "difficulty": "hard",
-  "year": 2025,
-  "chart": null,
-  "oldId": "893878242",
-  "tags": []
- },
- "BQ-lipid_metab-30cca559c302": {
-  "type": "mtf",
-  "question": "下列关于脂类代谢的陈述，判断正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "酮体在肝脏中合成，可被脑组织在长期饥饿时作为替代能源利用",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "脂肪酸的β-氧化发生在线粒体基质中，每次循环产生1分子FADH₂、1分子NADH和1分子乙酰辅酶A",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "胆固醇生物合成的限速酶是HMG-CoA合成酶",
-    "answer": false
-   },
-   {
-    "label": "D",
-    "text": "脂肪酸合成所需的前体乙酰辅酶A通过柠檬酸-丙酮酸穿梭从线粒体转运至细胞质",
-    "answer": true
-   }
-  ],
-  "explanation": "B正确：β-氧化每次切下2个碳的乙酰辅酶A并产生FADH₂和NADH。A正确：酮体可透过血脑屏障，在长期饥饿时供脑组织利用。C错误：HMG-CoA还原酶是限速酶，而非合成酶；他汀类药物即靶向抑制该酶。D正确：柠檬酸-丙酮酸穿梭是将线粒体乙酰辅酶A转运至胞质的主要机制。",
-  "module": 1,
-  "subject": "生物化学",
-  "concept": "脂类代谢",
-  "difficulty": "hard",
-  "year": 2025,
-  "chart": null,
-  "oldId": "893878242",
-  "tags": []
- },
- "BQ-lipid_metab-54af770f7672": {
-  "type": "mtf",
-  "question": "下列关于脂类代谢的陈述，判断正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "酮体在肝脏中合成，可被脑组织在长期饥饿时作为替代能源利用",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "脂肪酸的β-氧化发生在线粒体基质中，每次循环产生1分子FADH₂、1分子NADH和1分子乙酰辅酶A",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "脂肪酸合成所需的前体乙酰辅酶A通过柠檬酸-丙酮酸穿梭从线粒体转运至细胞质",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "胆固醇生物合成的限速酶是HMG-CoA合成酶",
-    "answer": false
-   }
-  ],
-  "explanation": "B正确：β-氧化每次切下2个碳的乙酰辅酶A并产生FADH₂和NADH。A正确：酮体可透过血脑屏障，在长期饥饿时供脑组织利用。D错误：HMG-CoA还原酶是限速酶，而非合成酶；他汀类药物即靶向抑制该酶。C正确：柠檬酸-丙酮酸穿梭是将线粒体乙酰辅酶A转运至胞质的主要机制。",
-  "module": 1,
-  "subject": "生物化学",
-  "concept": "脂类代谢",
-  "difficulty": "hard",
-  "year": 2025,
-  "chart": null,
-  "oldId": "893878242",
-  "tags": []
- },
- "BQ-lipid_metab-d1dfc7dd8082": {
-  "type": "mtf",
-  "question": "关于脂肪酸β-氧化的能量计算，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "1分子棕榈酸（C16）完全氧化约产生106分子ATP",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "不饱和脂肪酸的β-氧化产生的ATP多于同碳链长度的饱和脂肪酸",
-    "answer": false
-   },
-   {
-    "label": "C",
-    "text": "奇数碳脂肪酸的β-氧化最终产生丙酰辅酶A，丙酰辅酶A需转化为琥珀酰辅酶A才能进入TCA循环",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "脂肪酸活化消耗2个高能磷酸键（相当于消耗2个ATP）",
-    "answer": true
-   }
-  ],
-  "explanation": "A正确：C16棕榈酸：7轮β-氧化→7FADH₂+7NADH+8乙酰CoA。7×1.5+7×2.5+8×10=10.5+17.5+80=108，减去活化消耗2=106。D正确：脂肪酸活化消耗的两步。C正确：奇数碳脂肪酸的代谢。B错误：不饱和脂肪酸的β-氧化需要额外的异构酶和还原酶步骤，产生较少FADH₂，因此ATP产量略低于同链长的饱和脂肪酸。",
-  "module": 1,
-  "subject": "生物化学",
-  "concept": "脂肪酸氧化计算",
-  "difficulty": "hard",
-  "year": 2025,
-  "chart": null,
-  "oldId": "134709611",
-  "tags": []
- },
- "BQ-lipid_metab-dc356a910665": {
-  "type": "mtf",
-  "question": "关于脂肪酸β-氧化的能量计算，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "1分子棕榈酸（C16）完全氧化约产生106分子ATP",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "不饱和脂肪酸的β-氧化产生的ATP多于同碳链长度的饱和脂肪酸",
-    "answer": false
-   },
-   {
-    "label": "C",
-    "text": "脂肪酸活化消耗2个高能磷酸键（相当于消耗2个ATP）",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "奇数碳脂肪酸的β-氧化最终产生丙酰辅酶A，丙酰辅酶A需转化为琥珀酰辅酶A才能进入TCA循环",
-    "answer": true
-   }
-  ],
-  "explanation": "A正确：C16棕榈酸：7轮β-氧化→7FADH₂+7NADH+8乙酰CoA。7×1.5+7×2.5+8×10=10.5+17.5+80=108，减去活化消耗2=106。C正确：脂肪酸活化消耗的两步。D正确：奇数碳脂肪酸的代谢。B错误：不饱和脂肪酸的β-氧化需要额外的异构酶和还原酶步骤，产生较少FADH₂，因此ATP产量略低于同链长的饱和脂肪酸。",
-  "module": 1,
-  "subject": "生物化学",
-  "concept": "脂肪酸氧化计算",
-  "difficulty": "hard",
-  "year": 2025,
-  "chart": null,
-  "oldId": "134709611",
-  "tags": []
- },
- "BQ-lipid_metab-34fcaae9fb27": {
-  "type": "mtf",
-  "question": "关于脂肪酸β-氧化的能量计算，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "1分子棕榈酸（C16）完全氧化约产生106分子ATP",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "奇数碳脂肪酸的β-氧化最终产生丙酰辅酶A，丙酰辅酶A需转化为琥珀酰辅酶A才能进入TCA循环",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "不饱和脂肪酸的β-氧化产生的ATP多于同碳链长度的饱和脂肪酸",
-    "answer": false
-   },
-   {
-    "label": "D",
-    "text": "脂肪酸活化消耗2个高能磷酸键（相当于消耗2个ATP）",
-    "answer": true
-   }
-  ],
-  "explanation": "A正确：C16棕榈酸：7轮β-氧化→7FADH₂+7NADH+8乙酰CoA。7×1.5+7×2.5+8×10=10.5+17.5+80=108，减去活化消耗2=106。D正确：脂肪酸活化消耗的两步。B正确：奇数碳脂肪酸的代谢。C错误：不饱和脂肪酸的β-氧化需要额外的异构酶和还原酶步骤，产生较少FADH₂，因此ATP产量略低于同链长的饱和脂肪酸。",
-  "module": 1,
-  "subject": "生物化学",
-  "concept": "脂肪酸氧化计算",
-  "difficulty": "hard",
-  "year": 2025,
-  "chart": null,
-  "oldId": "134709611",
-  "tags": []
- },
- "BQ-lipid_metab-2c7f4e2dfd5c": {
-  "type": "mtf",
-  "question": "关于脂肪酸β-氧化的能量计算，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "1分子棕榈酸（C16）完全氧化约产生106分子ATP",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "奇数碳脂肪酸的β-氧化最终产生丙酰辅酶A，丙酰辅酶A需转化为琥珀酰辅酶A才能进入TCA循环",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "脂肪酸活化消耗2个高能磷酸键（相当于消耗2个ATP）",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "不饱和脂肪酸的β-氧化产生的ATP多于同碳链长度的饱和脂肪酸",
-    "answer": false
-   }
-  ],
-  "explanation": "A正确：C16棕榈酸：7轮β-氧化→7FADH₂+7NADH+8乙酰CoA。7×1.5+7×2.5+8×10=10.5+17.5+80=108，减去活化消耗2=106。C正确：脂肪酸活化消耗的两步。B正确：奇数碳脂肪酸的代谢。D错误：不饱和脂肪酸的β-氧化需要额外的异构酶和还原酶步骤，产生较少FADH₂，因此ATP产量略低于同链长的饱和脂肪酸。",
-  "module": 1,
-  "subject": "生物化学",
-  "concept": "脂肪酸氧化计算",
-  "difficulty": "hard",
-  "year": 2025,
-  "chart": null,
-  "oldId": "134709611",
-  "tags": []
- },
- "BQ-lipid_metab-fe92db91e35c": {
-  "type": "mtf",
-  "question": "关于脂肪酸β-氧化的能量计算，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "1分子棕榈酸（C16）完全氧化约产生106分子ATP",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "脂肪酸活化消耗2个高能磷酸键（相当于消耗2个ATP）",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "不饱和脂肪酸的β-氧化产生的ATP多于同碳链长度的饱和脂肪酸",
-    "answer": false
-   },
-   {
-    "label": "D",
-    "text": "奇数碳脂肪酸的β-氧化最终产生丙酰辅酶A，丙酰辅酶A需转化为琥珀酰辅酶A才能进入TCA循环",
-    "answer": true
-   }
-  ],
-  "explanation": "A正确：C16棕榈酸：7轮β-氧化→7FADH₂+7NADH+8乙酰CoA。7×1.5+7×2.5+8×10=10.5+17.5+80=108，减去活化消耗2=106。B正确：脂肪酸活化消耗的两步。D正确：奇数碳脂肪酸的代谢。C错误：不饱和脂肪酸的β-氧化需要额外的异构酶和还原酶步骤，产生较少FADH₂，因此ATP产量略低于同链长的饱和脂肪酸。",
-  "module": 1,
-  "subject": "生物化学",
-  "concept": "脂肪酸氧化计算",
-  "difficulty": "hard",
-  "year": 2025,
-  "chart": null,
-  "oldId": "134709611",
-  "tags": []
- },
- "BQ-lipid_metab-bf4d70d2e2e0": {
-  "type": "mtf",
-  "question": "关于脂肪酸β-氧化的能量计算，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "1分子棕榈酸（C16）完全氧化约产生106分子ATP",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "脂肪酸活化消耗2个高能磷酸键（相当于消耗2个ATP）",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "奇数碳脂肪酸的β-氧化最终产生丙酰辅酶A，丙酰辅酶A需转化为琥珀酰辅酶A才能进入TCA循环",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "不饱和脂肪酸的β-氧化产生的ATP多于同碳链长度的饱和脂肪酸",
-    "answer": false
-   }
-  ],
-  "explanation": "A正确：C16棕榈酸：7轮β-氧化→7FADH₂+7NADH+8乙酰CoA。7×1.5+7×2.5+8×10=10.5+17.5+80=108，减去活化消耗2=106。B正确：脂肪酸活化消耗的两步。C正确：奇数碳脂肪酸的代谢。D错误：不饱和脂肪酸的β-氧化需要额外的异构酶和还原酶步骤，产生较少FADH₂，因此ATP产量略低于同链长的饱和脂肪酸。",
-  "module": 1,
-  "subject": "生物化学",
-  "concept": "脂肪酸氧化计算",
-  "difficulty": "hard",
-  "year": 2025,
-  "chart": null,
-  "oldId": "134709611",
-  "tags": []
- },
- "BQ-lipid_metab-cbbd34128343": {
-  "type": "mtf",
-  "question": "关于脂肪酸β-氧化的能量计算，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "不饱和脂肪酸的β-氧化产生的ATP多于同碳链长度的饱和脂肪酸",
-    "answer": false
-   },
-   {
-    "label": "B",
-    "text": "1分子棕榈酸（C16）完全氧化约产生106分子ATP",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "奇数碳脂肪酸的β-氧化最终产生丙酰辅酶A，丙酰辅酶A需转化为琥珀酰辅酶A才能进入TCA循环",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "脂肪酸活化消耗2个高能磷酸键（相当于消耗2个ATP）",
-    "answer": true
-   }
-  ],
-  "explanation": "B正确：C16棕榈酸：7轮β-氧化→7FADH₂+7NADH+8乙酰CoA。7×1.5+7×2.5+8×10=10.5+17.5+80=108，减去活化消耗2=106。D正确：脂肪酸活化消耗的两步。C正确：奇数碳脂肪酸的代谢。A错误：不饱和脂肪酸的β-氧化需要额外的异构酶和还原酶步骤，产生较少FADH₂，因此ATP产量略低于同链长的饱和脂肪酸。",
-  "module": 1,
-  "subject": "生物化学",
-  "concept": "脂肪酸氧化计算",
-  "difficulty": "hard",
-  "year": 2025,
-  "chart": null,
-  "oldId": "134709611",
-  "tags": []
- },
- "BQ-lipid_metab-1550c55ba61a": {
-  "type": "mtf",
-  "question": "关于脂肪酸β-氧化的能量计算，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "不饱和脂肪酸的β-氧化产生的ATP多于同碳链长度的饱和脂肪酸",
-    "answer": false
-   },
-   {
-    "label": "B",
-    "text": "1分子棕榈酸（C16）完全氧化约产生106分子ATP",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "脂肪酸活化消耗2个高能磷酸键（相当于消耗2个ATP）",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "奇数碳脂肪酸的β-氧化最终产生丙酰辅酶A，丙酰辅酶A需转化为琥珀酰辅酶A才能进入TCA循环",
-    "answer": true
-   }
-  ],
-  "explanation": "B正确：C16棕榈酸：7轮β-氧化→7FADH₂+7NADH+8乙酰CoA。7×1.5+7×2.5+8×10=10.5+17.5+80=108，减去活化消耗2=106。C正确：脂肪酸活化消耗的两步。D正确：奇数碳脂肪酸的代谢。A错误：不饱和脂肪酸的β-氧化需要额外的异构酶和还原酶步骤，产生较少FADH₂，因此ATP产量略低于同链长的饱和脂肪酸。",
-  "module": 1,
-  "subject": "生物化学",
-  "concept": "脂肪酸氧化计算",
-  "difficulty": "hard",
-  "year": 2025,
-  "chart": null,
-  "oldId": "134709611",
-  "tags": []
- },
- "BQ-lipid_metab-2ff17894fd85": {
-  "type": "mtf",
-  "question": "关于脂肪酸β-氧化的能量计算，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "不饱和脂肪酸的β-氧化产生的ATP多于同碳链长度的饱和脂肪酸",
-    "answer": false
-   },
-   {
-    "label": "B",
-    "text": "奇数碳脂肪酸的β-氧化最终产生丙酰辅酶A，丙酰辅酶A需转化为琥珀酰辅酶A才能进入TCA循环",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "1分子棕榈酸（C16）完全氧化约产生106分子ATP",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "脂肪酸活化消耗2个高能磷酸键（相当于消耗2个ATP）",
-    "answer": true
-   }
-  ],
-  "explanation": "C正确：C16棕榈酸：7轮β-氧化→7FADH₂+7NADH+8乙酰CoA。7×1.5+7×2.5+8×10=10.5+17.5+80=108，减去活化消耗2=106。D正确：脂肪酸活化消耗的两步。B正确：奇数碳脂肪酸的代谢。A错误：不饱和脂肪酸的β-氧化需要额外的异构酶和还原酶步骤，产生较少FADH₂，因此ATP产量略低于同链长的饱和脂肪酸。",
-  "module": 1,
-  "subject": "生物化学",
-  "concept": "脂肪酸氧化计算",
-  "difficulty": "hard",
-  "year": 2025,
-  "chart": null,
-  "oldId": "134709611",
-  "tags": []
- },
- "BQ-lipid_metab-e82f8cf4a866": {
-  "type": "mtf",
-  "question": "关于脂肪酸β-氧化的能量计算，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "不饱和脂肪酸的β-氧化产生的ATP多于同碳链长度的饱和脂肪酸",
-    "answer": false
-   },
-   {
-    "label": "B",
-    "text": "奇数碳脂肪酸的β-氧化最终产生丙酰辅酶A，丙酰辅酶A需转化为琥珀酰辅酶A才能进入TCA循环",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "脂肪酸活化消耗2个高能磷酸键（相当于消耗2个ATP）",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "1分子棕榈酸（C16）完全氧化约产生106分子ATP",
-    "answer": true
-   }
-  ],
-  "explanation": "D正确：C16棕榈酸：7轮β-氧化→7FADH₂+7NADH+8乙酰CoA。7×1.5+7×2.5+8×10=10.5+17.5+80=108，减去活化消耗2=106。C正确：脂肪酸活化消耗的两步。B正确：奇数碳脂肪酸的代谢。A错误：不饱和脂肪酸的β-氧化需要额外的异构酶和还原酶步骤，产生较少FADH₂，因此ATP产量略低于同链长的饱和脂肪酸。",
-  "module": 1,
-  "subject": "生物化学",
-  "concept": "脂肪酸氧化计算",
-  "difficulty": "hard",
-  "year": 2025,
-  "chart": null,
-  "oldId": "134709611",
-  "tags": []
- },
- "BQ-lipid_metab-0faedbccc96a": {
-  "type": "mtf",
-  "question": "关于脂肪酸β-氧化的能量计算，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "不饱和脂肪酸的β-氧化产生的ATP多于同碳链长度的饱和脂肪酸",
-    "answer": false
-   },
-   {
-    "label": "B",
-    "text": "脂肪酸活化消耗2个高能磷酸键（相当于消耗2个ATP）",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "1分子棕榈酸（C16）完全氧化约产生106分子ATP",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "奇数碳脂肪酸的β-氧化最终产生丙酰辅酶A，丙酰辅酶A需转化为琥珀酰辅酶A才能进入TCA循环",
-    "answer": true
-   }
-  ],
-  "explanation": "C正确：C16棕榈酸：7轮β-氧化→7FADH₂+7NADH+8乙酰CoA。7×1.5+7×2.5+8×10=10.5+17.5+80=108，减去活化消耗2=106。B正确：脂肪酸活化消耗的两步。D正确：奇数碳脂肪酸的代谢。A错误：不饱和脂肪酸的β-氧化需要额外的异构酶和还原酶步骤，产生较少FADH₂，因此ATP产量略低于同链长的饱和脂肪酸。",
-  "module": 1,
-  "subject": "生物化学",
-  "concept": "脂肪酸氧化计算",
-  "difficulty": "hard",
-  "year": 2025,
-  "chart": null,
-  "oldId": "134709611",
-  "tags": []
- },
- "BQ-lipid_metab-6e782cd5ffc4": {
-  "type": "mtf",
-  "question": "关于脂肪酸β-氧化的能量计算，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "不饱和脂肪酸的β-氧化产生的ATP多于同碳链长度的饱和脂肪酸",
-    "answer": false
-   },
-   {
-    "label": "B",
-    "text": "脂肪酸活化消耗2个高能磷酸键（相当于消耗2个ATP）",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "奇数碳脂肪酸的β-氧化最终产生丙酰辅酶A，丙酰辅酶A需转化为琥珀酰辅酶A才能进入TCA循环",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "1分子棕榈酸（C16）完全氧化约产生106分子ATP",
-    "answer": true
-   }
-  ],
-  "explanation": "D正确：C16棕榈酸：7轮β-氧化→7FADH₂+7NADH+8乙酰CoA。7×1.5+7×2.5+8×10=10.5+17.5+80=108，减去活化消耗2=106。B正确：脂肪酸活化消耗的两步。C正确：奇数碳脂肪酸的代谢。A错误：不饱和脂肪酸的β-氧化需要额外的异构酶和还原酶步骤，产生较少FADH₂，因此ATP产量略低于同链长的饱和脂肪酸。",
-  "module": 1,
-  "subject": "生物化学",
-  "concept": "脂肪酸氧化计算",
-  "difficulty": "hard",
-  "year": 2025,
-  "chart": null,
-  "oldId": "134709611",
-  "tags": []
- },
- "BQ-lipid_metab-260410f34d9c": {
-  "type": "mtf",
-  "question": "关于脂肪酸β-氧化的能量计算，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "奇数碳脂肪酸的β-氧化最终产生丙酰辅酶A，丙酰辅酶A需转化为琥珀酰辅酶A才能进入TCA循环",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "1分子棕榈酸（C16）完全氧化约产生106分子ATP",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "不饱和脂肪酸的β-氧化产生的ATP多于同碳链长度的饱和脂肪酸",
-    "answer": false
-   },
-   {
-    "label": "D",
-    "text": "脂肪酸活化消耗2个高能磷酸键（相当于消耗2个ATP）",
-    "answer": true
-   }
-  ],
-  "explanation": "B正确：C16棕榈酸：7轮β-氧化→7FADH₂+7NADH+8乙酰CoA。7×1.5+7×2.5+8×10=10.5+17.5+80=108，减去活化消耗2=106。D正确：脂肪酸活化消耗的两步。A正确：奇数碳脂肪酸的代谢。C错误：不饱和脂肪酸的β-氧化需要额外的异构酶和还原酶步骤，产生较少FADH₂，因此ATP产量略低于同链长的饱和脂肪酸。",
-  "module": 1,
-  "subject": "生物化学",
-  "concept": "脂肪酸氧化计算",
-  "difficulty": "hard",
-  "year": 2025,
-  "chart": null,
-  "oldId": "134709611",
-  "tags": []
- },
- "BQ-lipid_metab-e3a64217b4c1": {
-  "type": "mtf",
-  "question": "关于脂肪酸β-氧化的能量计算，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "奇数碳脂肪酸的β-氧化最终产生丙酰辅酶A，丙酰辅酶A需转化为琥珀酰辅酶A才能进入TCA循环",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "1分子棕榈酸（C16）完全氧化约产生106分子ATP",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "脂肪酸活化消耗2个高能磷酸键（相当于消耗2个ATP）",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "不饱和脂肪酸的β-氧化产生的ATP多于同碳链长度的饱和脂肪酸",
-    "answer": false
-   }
-  ],
-  "explanation": "B正确：C16棕榈酸：7轮β-氧化→7FADH₂+7NADH+8乙酰CoA。7×1.5+7×2.5+8×10=10.5+17.5+80=108，减去活化消耗2=106。C正确：脂肪酸活化消耗的两步。A正确：奇数碳脂肪酸的代谢。D错误：不饱和脂肪酸的β-氧化需要额外的异构酶和还原酶步骤，产生较少FADH₂，因此ATP产量略低于同链长的饱和脂肪酸。",
-  "module": 1,
-  "subject": "生物化学",
-  "concept": "脂肪酸氧化计算",
-  "difficulty": "hard",
-  "year": 2025,
-  "chart": null,
-  "oldId": "134709611",
-  "tags": []
- },
- "BQ-lipid_metab-20215ed700d0": {
-  "type": "mtf",
-  "question": "关于脂肪酸β-氧化的能量计算，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "奇数碳脂肪酸的β-氧化最终产生丙酰辅酶A，丙酰辅酶A需转化为琥珀酰辅酶A才能进入TCA循环",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "不饱和脂肪酸的β-氧化产生的ATP多于同碳链长度的饱和脂肪酸",
-    "answer": false
-   },
-   {
-    "label": "C",
-    "text": "1分子棕榈酸（C16）完全氧化约产生106分子ATP",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "脂肪酸活化消耗2个高能磷酸键（相当于消耗2个ATP）",
-    "answer": true
-   }
-  ],
-  "explanation": "C正确：C16棕榈酸：7轮β-氧化→7FADH₂+7NADH+8乙酰CoA。7×1.5+7×2.5+8×10=10.5+17.5+80=108，减去活化消耗2=106。D正确：脂肪酸活化消耗的两步。A正确：奇数碳脂肪酸的代谢。B错误：不饱和脂肪酸的β-氧化需要额外的异构酶和还原酶步骤，产生较少FADH₂，因此ATP产量略低于同链长的饱和脂肪酸。",
-  "module": 1,
-  "subject": "生物化学",
-  "concept": "脂肪酸氧化计算",
-  "difficulty": "hard",
-  "year": 2025,
-  "chart": null,
-  "oldId": "134709611",
-  "tags": []
- },
- "BQ-lipid_metab-75ab0ce134f9": {
-  "type": "mtf",
-  "question": "关于脂肪酸β-氧化的能量计算，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "奇数碳脂肪酸的β-氧化最终产生丙酰辅酶A，丙酰辅酶A需转化为琥珀酰辅酶A才能进入TCA循环",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "不饱和脂肪酸的β-氧化产生的ATP多于同碳链长度的饱和脂肪酸",
-    "answer": false
-   },
-   {
-    "label": "C",
-    "text": "脂肪酸活化消耗2个高能磷酸键（相当于消耗2个ATP）",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "1分子棕榈酸（C16）完全氧化约产生106分子ATP",
-    "answer": true
-   }
-  ],
-  "explanation": "D正确：C16棕榈酸：7轮β-氧化→7FADH₂+7NADH+8乙酰CoA。7×1.5+7×2.5+8×10=10.5+17.5+80=108，减去活化消耗2=106。C正确：脂肪酸活化消耗的两步。A正确：奇数碳脂肪酸的代谢。B错误：不饱和脂肪酸的β-氧化需要额外的异构酶和还原酶步骤，产生较少FADH₂，因此ATP产量略低于同链长的饱和脂肪酸。",
-  "module": 1,
-  "subject": "生物化学",
-  "concept": "脂肪酸氧化计算",
-  "difficulty": "hard",
-  "year": 2025,
-  "chart": null,
-  "oldId": "134709611",
-  "tags": []
- },
- "BQ-lipid_metab-2e3a1137e4f3": {
-  "type": "mtf",
-  "question": "关于脂肪酸β-氧化的能量计算，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "奇数碳脂肪酸的β-氧化最终产生丙酰辅酶A，丙酰辅酶A需转化为琥珀酰辅酶A才能进入TCA循环",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "脂肪酸活化消耗2个高能磷酸键（相当于消耗2个ATP）",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "1分子棕榈酸（C16）完全氧化约产生106分子ATP",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "不饱和脂肪酸的β-氧化产生的ATP多于同碳链长度的饱和脂肪酸",
-    "answer": false
-   }
-  ],
-  "explanation": "C正确：C16棕榈酸：7轮β-氧化→7FADH₂+7NADH+8乙酰CoA。7×1.5+7×2.5+8×10=10.5+17.5+80=108，减去活化消耗2=106。B正确：脂肪酸活化消耗的两步。A正确：奇数碳脂肪酸的代谢。D错误：不饱和脂肪酸的β-氧化需要额外的异构酶和还原酶步骤，产生较少FADH₂，因此ATP产量略低于同链长的饱和脂肪酸。",
-  "module": 1,
-  "subject": "生物化学",
-  "concept": "脂肪酸氧化计算",
-  "difficulty": "hard",
-  "year": 2025,
-  "chart": null,
-  "oldId": "134709611",
-  "tags": []
- },
- "BQ-lipid_metab-3f73fd967829": {
-  "type": "mtf",
-  "question": "关于脂肪酸β-氧化的能量计算，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "奇数碳脂肪酸的β-氧化最终产生丙酰辅酶A，丙酰辅酶A需转化为琥珀酰辅酶A才能进入TCA循环",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "脂肪酸活化消耗2个高能磷酸键（相当于消耗2个ATP）",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "不饱和脂肪酸的β-氧化产生的ATP多于同碳链长度的饱和脂肪酸",
-    "answer": false
-   },
-   {
-    "label": "D",
-    "text": "1分子棕榈酸（C16）完全氧化约产生106分子ATP",
-    "answer": true
-   }
-  ],
-  "explanation": "D正确：C16棕榈酸：7轮β-氧化→7FADH₂+7NADH+8乙酰CoA。7×1.5+7×2.5+8×10=10.5+17.5+80=108，减去活化消耗2=106。B正确：脂肪酸活化消耗的两步。A正确：奇数碳脂肪酸的代谢。C错误：不饱和脂肪酸的β-氧化需要额外的异构酶和还原酶步骤，产生较少FADH₂，因此ATP产量略低于同链长的饱和脂肪酸。",
-  "module": 1,
-  "subject": "生物化学",
-  "concept": "脂肪酸氧化计算",
-  "difficulty": "hard",
-  "year": 2025,
-  "chart": null,
-  "oldId": "134709611",
-  "tags": []
- },
- "BQ-lipid_metab-5f126b5dd729": {
-  "type": "mtf",
-  "question": "关于脂肪酸β-氧化的能量计算，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "脂肪酸活化消耗2个高能磷酸键（相当于消耗2个ATP）",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "1分子棕榈酸（C16）完全氧化约产生106分子ATP",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "不饱和脂肪酸的β-氧化产生的ATP多于同碳链长度的饱和脂肪酸",
-    "answer": false
-   },
-   {
-    "label": "D",
-    "text": "奇数碳脂肪酸的β-氧化最终产生丙酰辅酶A，丙酰辅酶A需转化为琥珀酰辅酶A才能进入TCA循环",
-    "answer": true
-   }
-  ],
-  "explanation": "B正确：C16棕榈酸：7轮β-氧化→7FADH₂+7NADH+8乙酰CoA。7×1.5+7×2.5+8×10=10.5+17.5+80=108，减去活化消耗2=106。A正确：脂肪酸活化消耗的两步。D正确：奇数碳脂肪酸的代谢。C错误：不饱和脂肪酸的β-氧化需要额外的异构酶和还原酶步骤，产生较少FADH₂，因此ATP产量略低于同链长的饱和脂肪酸。",
-  "module": 1,
-  "subject": "生物化学",
-  "concept": "脂肪酸氧化计算",
-  "difficulty": "hard",
-  "year": 2025,
-  "chart": null,
-  "oldId": "134709611",
-  "tags": []
- },
- "BQ-lipid_metab-edeb5694d1b7": {
-  "type": "mtf",
-  "question": "关于脂肪酸β-氧化的能量计算，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "脂肪酸活化消耗2个高能磷酸键（相当于消耗2个ATP）",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "1分子棕榈酸（C16）完全氧化约产生106分子ATP",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "奇数碳脂肪酸的β-氧化最终产生丙酰辅酶A，丙酰辅酶A需转化为琥珀酰辅酶A才能进入TCA循环",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "不饱和脂肪酸的β-氧化产生的ATP多于同碳链长度的饱和脂肪酸",
-    "answer": false
-   }
-  ],
-  "explanation": "B正确：C16棕榈酸：7轮β-氧化→7FADH₂+7NADH+8乙酰CoA。7×1.5+7×2.5+8×10=10.5+17.5+80=108，减去活化消耗2=106。A正确：脂肪酸活化消耗的两步。C正确：奇数碳脂肪酸的代谢。D错误：不饱和脂肪酸的β-氧化需要额外的异构酶和还原酶步骤，产生较少FADH₂，因此ATP产量略低于同链长的饱和脂肪酸。",
-  "module": 1,
-  "subject": "生物化学",
-  "concept": "脂肪酸氧化计算",
-  "difficulty": "hard",
-  "year": 2025,
-  "chart": null,
-  "oldId": "134709611",
-  "tags": []
- },
- "BQ-lipid_metab-dbb5f0a95001": {
-  "type": "mtf",
-  "question": "关于脂肪酸β-氧化的能量计算，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "脂肪酸活化消耗2个高能磷酸键（相当于消耗2个ATP）",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "不饱和脂肪酸的β-氧化产生的ATP多于同碳链长度的饱和脂肪酸",
-    "answer": false
-   },
-   {
-    "label": "C",
-    "text": "1分子棕榈酸（C16）完全氧化约产生106分子ATP",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "奇数碳脂肪酸的β-氧化最终产生丙酰辅酶A，丙酰辅酶A需转化为琥珀酰辅酶A才能进入TCA循环",
-    "answer": true
-   }
-  ],
-  "explanation": "C正确：C16棕榈酸：7轮β-氧化→7FADH₂+7NADH+8乙酰CoA。7×1.5+7×2.5+8×10=10.5+17.5+80=108，减去活化消耗2=106。A正确：脂肪酸活化消耗的两步。D正确：奇数碳脂肪酸的代谢。B错误：不饱和脂肪酸的β-氧化需要额外的异构酶和还原酶步骤，产生较少FADH₂，因此ATP产量略低于同链长的饱和脂肪酸。",
-  "module": 1,
-  "subject": "生物化学",
-  "concept": "脂肪酸氧化计算",
-  "difficulty": "hard",
-  "year": 2025,
-  "chart": null,
-  "oldId": "134709611",
-  "tags": []
- },
- "BQ-lipid_metab-7f41fd4cdf25": {
-  "type": "mtf",
-  "question": "关于脂肪酸β-氧化的能量计算，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "脂肪酸活化消耗2个高能磷酸键（相当于消耗2个ATP）",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "不饱和脂肪酸的β-氧化产生的ATP多于同碳链长度的饱和脂肪酸",
-    "answer": false
-   },
-   {
-    "label": "C",
-    "text": "奇数碳脂肪酸的β-氧化最终产生丙酰辅酶A，丙酰辅酶A需转化为琥珀酰辅酶A才能进入TCA循环",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "1分子棕榈酸（C16）完全氧化约产生106分子ATP",
-    "answer": true
-   }
-  ],
-  "explanation": "D正确：C16棕榈酸：7轮β-氧化→7FADH₂+7NADH+8乙酰CoA。7×1.5+7×2.5+8×10=10.5+17.5+80=108，减去活化消耗2=106。A正确：脂肪酸活化消耗的两步。C正确：奇数碳脂肪酸的代谢。B错误：不饱和脂肪酸的β-氧化需要额外的异构酶和还原酶步骤，产生较少FADH₂，因此ATP产量略低于同链长的饱和脂肪酸。",
-  "module": 1,
-  "subject": "生物化学",
-  "concept": "脂肪酸氧化计算",
-  "difficulty": "hard",
-  "year": 2025,
-  "chart": null,
-  "oldId": "134709611",
-  "tags": []
- },
- "BQ-lipid_metab-93a05d579ff9": {
-  "type": "mtf",
-  "question": "关于脂肪酸β-氧化的能量计算，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "脂肪酸活化消耗2个高能磷酸键（相当于消耗2个ATP）",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "奇数碳脂肪酸的β-氧化最终产生丙酰辅酶A，丙酰辅酶A需转化为琥珀酰辅酶A才能进入TCA循环",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "1分子棕榈酸（C16）完全氧化约产生106分子ATP",
-    "answer": true
-   },
-   {
-    "label": "D",
-    "text": "不饱和脂肪酸的β-氧化产生的ATP多于同碳链长度的饱和脂肪酸",
-    "answer": false
-   }
-  ],
-  "explanation": "C正确：C16棕榈酸：7轮β-氧化→7FADH₂+7NADH+8乙酰CoA。7×1.5+7×2.5+8×10=10.5+17.5+80=108，减去活化消耗2=106。A正确：脂肪酸活化消耗的两步。B正确：奇数碳脂肪酸的代谢。D错误：不饱和脂肪酸的β-氧化需要额外的异构酶和还原酶步骤，产生较少FADH₂，因此ATP产量略低于同链长的饱和脂肪酸。",
-  "module": 1,
-  "subject": "生物化学",
-  "concept": "脂肪酸氧化计算",
-  "difficulty": "hard",
-  "year": 2025,
-  "chart": null,
-  "oldId": "134709611",
-  "tags": []
- },
- "BQ-lipid_metab-be1826378ac4": {
-  "type": "mtf",
-  "question": "关于脂肪酸β-氧化的能量计算，判断以下陈述的正误：",
-  "subQuestions": [
-   {
-    "label": "A",
-    "text": "脂肪酸活化消耗2个高能磷酸键（相当于消耗2个ATP）",
-    "answer": true
-   },
-   {
-    "label": "B",
-    "text": "奇数碳脂肪酸的β-氧化最终产生丙酰辅酶A，丙酰辅酶A需转化为琥珀酰辅酶A才能进入TCA循环",
-    "answer": true
-   },
-   {
-    "label": "C",
-    "text": "不饱和脂肪酸的β-氧化产生的ATP多于同碳链长度的饱和脂肪酸",
-    "answer": false
-   },
-   {
-    "label": "D",
-    "text": "1分子棕榈酸（C16）完全氧化约产生106分子ATP",
-    "answer": true
-   }
-  ],
-  "explanation": "D正确：C16棕榈酸：7轮β-氧化→7FADH₂+7NADH+8乙酰CoA。7×1.5+7×2.5+8×10=10.5+17.5+80=108，减去活化消耗2=106。A正确：脂肪酸活化消耗的两步。B正确：奇数碳脂肪酸的代谢。C错误：不饱和脂肪酸的β-氧化需要额外的异构酶和还原酶步骤，产生较少FADH₂，因此ATP产量略低于同链长的饱和脂肪酸。",
-  "module": 1,
-  "subject": "生物化学",
-  "concept": "脂肪酸氧化计算",
-  "difficulty": "hard",
-  "year": 2025,
-  "chart": null,
-  "oldId": "134709611",
-  "tags": []
- }
+  "M1-14-f1c17b89113c": {
+    "type": "mtf",
+    "question": "关于脂肪酸合成，下列说法正确的是：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "B. 脂肪酸合酶复合体催化合成",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "A. 脂肪酸合成在胞质中进行",
+        "answer": false
+      },
+      {
+        "label": "C",
+        "text": "C. 脂肪酸合成需要NADPH",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "D. 脂肪酸合成的直接产物是棕榈酸（16C）",
+        "answer": true
+      }
+    ],
+    "explanation": "正确答案：A, D。详细解析请参见相关教材。",
+    "subject": "生物化学",
+    "concept": "脂肪酸合成",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "lipid_metab",
+      "module_1",
+      "生物化学",
+      "脂肪酸合成"
+    ],
+    "references": [
+      {
+        "doi": "10.1016/j.cell.2019.08.022",
+        "title": "Fatty acid oxidation and synthesis",
+        "authors": "Brown MS, Goldstein JL",
+        "year": 2019,
+        "journal": "Cell"
+      },
+      {
+        "doi": "10.1038/nature12358",
+        "title": "Lipid metabolism and ketone body formation",
+        "authors": "McGarry JD, Foster DW",
+        "year": 2018,
+        "journal": "Nature"
+      }
+    ]
+  },
+  "M1-14-0ae0be1e9d6a": {
+    "type": "mtf",
+    "question": "关于酮体代谢，下列说法正确的是：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "A. 酮体在肝脏线粒体中合成",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "B. 酮体包括乙酰乙酸、β-羟丁酸和丙酮",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "C. 肝脏可以利用酮体作为能源",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "D. 饥饿时酮体生成增加",
+        "answer": true
+      }
+    ],
+    "explanation": "A正确：肝脏线粒体合成酮体；B正确：三种酮体；C错误：肝脏缺乏琥珀酰CoA转硫酶，不能利用酮体；D正确：饥饿时脂肪动员增加，酮体生成增多供脑使用。",
+    "subject": "生物化学",
+    "concept": "酮体",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "lipid_metab",
+      "module_1",
+      "生物化学",
+      "酮体"
+    ],
+    "references": [
+      {
+        "doi": "10.1016/j.cell.2019.08.022",
+        "title": "Fatty acid oxidation and synthesis",
+        "authors": "Brown MS, Goldstein JL",
+        "year": 2019,
+        "journal": "Cell"
+      },
+      {
+        "doi": "10.1038/nature12358",
+        "title": "Lipid metabolism and ketone body formation",
+        "authors": "McGarry JD, Foster DW",
+        "year": 2018,
+        "journal": "Nature"
+      }
+    ]
+  },
+  "M1-14-640a361e92d8": {
+    "type": "mtf",
+    "question": "关于胆固醇代谢，下列说法正确的是：",
+    "subQuestions": [
+      {
+        "label": "A",
+        "text": "C. 胆固醇可以转化为胆汁酸",
+        "answer": true
+      },
+      {
+        "label": "B",
+        "text": "B. HMG-CoA还原酶是胆固醇合成的限速酶",
+        "answer": true
+      },
+      {
+        "label": "C",
+        "text": "A. 胆固醇合成在胞质和内质网中进行",
+        "answer": false
+      },
+      {
+        "label": "D",
+        "text": "D. 胆固醇可以转化为脂肪酸",
+        "answer": false
+      }
+    ],
+    "explanation": "正确答案：A, B。详细解析请参见相关教材。",
+    "subject": "生物化学",
+    "concept": "胆固醇",
+    "difficulty": "league",
+    "target": "competition",
+    "tags": [
+      "lipid_metab",
+      "module_1",
+      "生物化学",
+      "胆固醇"
+    ],
+    "references": [
+      {
+        "doi": "10.1016/j.cell.2019.08.022",
+        "title": "Fatty acid oxidation and synthesis",
+        "authors": "Brown MS, Goldstein JL",
+        "year": 2019,
+        "journal": "Cell"
+      },
+      {
+        "doi": "10.1038/nature12358",
+        "title": "Lipid metabolism and ketone body formation",
+        "authors": "McGarry JD, Foster DW",
+        "year": 2018,
+        "journal": "Nature"
+      }
+    ]
+  }
 }

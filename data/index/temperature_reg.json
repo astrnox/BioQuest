@@ -1,64 +1,57 @@
 {
- "BQ-temperature_reg-fe4fadd8fbe9": {
-  "tags": [
-   "temperature_reg",
-   "module_3",
-   "easy"
-  ],
-  "diff": "basic",
-  "len": 45,
-  "src": "temperature_reg",
-  "year": null,
-  "module": "module_3"
- },
- "BQ-temperature_reg-3f1074977ba8": {
-  "tags": [
-   "temperature_reg",
-   "module_3",
-   "medium"
-  ],
-  "diff": "league",
-  "len": 55,
-  "src": "temperature_reg",
-  "year": null,
-  "module": "module_3"
- },
- "BQ-temperature_reg-58b39636c1b9": {
-  "tags": [
-   "temperature_reg",
-   "module_3",
-   "hard"
-  ],
-  "diff": "national",
-  "len": 55,
-  "src": "temperature_reg",
-  "year": null,
-  "module": "module_3"
- },
- "BQ-temperature_reg-6957b2c8c65e": {
-  "tags": [
-   "temperature_reg",
-   "逻辑推理",
-   "实验分析",
-   "体温调节"
-  ],
-  "diff": 4,
-  "len": 172,
-  "src": "temperature_reg",
-  "year": null,
-  "module": "module_3"
- },
- "BQ-temperature_reg-8476903ad1c4": {
-  "tags": [
-   "temperature_reg",
-   "逻辑推理",
-   "数据分析",
-   "体温调节"
-  ],
-  "diff": 4,
-  "len": 210,
-  "src": "temperature_reg",
-  "year": null,
-  "module": "module_3"
- }
+  "M3-0b-209f3bbc7bc8": {
+    "tags": [
+      "temperature_reg",
+      "module_3",
+      "动物生理学",
+      "恒温变温"
+    ],
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "temperature_reg"
+  },
+  "M3-0b-53911c42b7c2": {
+    "tags": [
+      "temperature_reg",
+      "module_3",
+      "动物生理学",
+      "非颤抖产热"
+    ],
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "temperature_reg"
+  },
+  "M3-0b-40c9c8d60475": {
+    "tags": [
+      "temperature_reg",
+      "module_3",
+      "动物生理学",
+      "散热机制"
+    ],
+    "difficulty": "high_school",
+    "module": "module1",
+    "tag": "temperature_reg"
+  },
+  "M3-0b-f65e63515cc1": {
+    "tags": [
+      "temperature_reg",
+      "module_3",
+      "动物生理学",
+      "体温调节中枢"
+    ],
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "temperature_reg"
+  },
+  "M3-0b-53b980461aa1": {
+    "tags": [
+      "temperature_reg",
+      "module_3",
+      "动物生理学",
+      "冬眠"
+    ],
+    "difficulty": "high_school",
+    "module": "module1",
+    "tag": "temperature_reg"
+  }
 }

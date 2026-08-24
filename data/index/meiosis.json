@@ -1,0 +1,57 @@
+{
+  "M1-05-a1d7f6d52687": {
+    "tags": [
+      "meiosis",
+      "module_1",
+      "细胞生物学",
+      "减数分裂"
+    ],
+    "difficulty": "high_school",
+    "module": "module1",
+    "tag": "meiosis"
+  },
+  "M1-05-5782c912504d": {
+    "tags": [
+      "meiosis",
+      "module_1",
+      "细胞生物学",
+      "减数分裂"
+    ],
+    "difficulty": "high_school",
+    "module": "module1",
+    "tag": "meiosis"
+  },
+  "M1-05-ad4109b3a49d": {
+    "tags": [
+      "meiosis",
+      "module_1",
+      "细胞生物学",
+      "交叉互换"
+    ],
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "meiosis"
+  },
+  "M1-05-82c68678d064": {
+    "tags": [
+      "meiosis",
+      "module_1",
+      "细胞生物学",
+      "配子发生"
+    ],
+    "difficulty": "high_school",
+    "module": "module1",
+    "tag": "meiosis"
+  },
+  "M1-05-89531977f8fa": {
+    "tags": [
+      "meiosis",
+      "module_1",
+      "细胞生物学",
+      "分裂比较"
+    ],
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "meiosis"
+  }
+}

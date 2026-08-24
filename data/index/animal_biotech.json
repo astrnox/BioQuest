@@ -1,0 +1,59 @@
+{
+  "M4-10-33345373fd26": {
+    "tags": [
+      "animal_biotech",
+      "module_4",
+      "生物技术",
+      "动物细胞培养"
+    ],
+    "difficulty": "high_school",
+    "module": "module1",
+    "tag": "animal_biotech"
+  },
+  "M4-10-893d8ccff123": {
+    "tags": [
+      "animal_biotech",
+      "module_4",
+      "生物技术",
+      "克隆"
+    ],
+    "diff": "high_school",
+    "len": 101,
+    "src": "animal_biotech",
+    "year": null,
+    "module": "module_4"
+  },
+  "M4-10-262acfcd6258": {
+    "tags": [
+      "animal_biotech",
+      "module_4",
+      "生物技术",
+      "胚胎工程"
+    ],
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "animal_biotech"
+  },
+  "M4-10-13d1ccd0cb4c": {
+    "tags": [
+      "animal_biotech",
+      "module_4",
+      "生物技术",
+      "iPS细胞"
+    ],
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "animal_biotech"
+  },
+  "M4-10-ab865cfd14ef": {
+    "tags": [
+      "animal_biotech",
+      "module_4",
+      "生物技术",
+      "转基因动物"
+    ],
+    "difficulty": "league",
+    "module": "module1",
+    "tag": "animal_biotech"
+  }
+}
