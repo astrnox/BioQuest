@@ -1139,6 +1139,28 @@ function scheduleIdleWork(fn, options) {
 window.scheduleIdleWork = scheduleIdleWork;
 
 /**
+ * 空闲预热常用懒加载路由模块
+ * 这些模块（practice/exam/study/…）未在 index.html 预加载，首次点击时才会
+ * 网络拉取 + 同步求值整段脚本，期间主线程被占用、旧页面停留在屏幕造成"卡一会才进页"。
+ * 在首屏就绪后的空闲时隙错峰预加载它们，把频繁点击的代价挪到后台闲置期，点击即进。
+ */
+function _prefetchPrimaryModules() {
+  if (typeof window.loadModule !== 'function') return;
+  // practice/exam 会连带加载其依赖 question-utils、loader
+  var list = ['practice', 'exam', 'study', 'wrongbook', 'tutor', 'photo-quiz'];
+  var i = 0;
+  var step = function () {
+    if (i >= list.length) return;
+    var mod = list[i++];
+    try { window.loadModule(mod).catch(function () { /* 预热失败不影响功能 */ }); } catch (e) {}
+    // 错峰求值：每个模块各占一个独立空闲时隙，避免集中加载时长时间占用主线程
+    scheduleIdleWork(step, { delay: 400 });
+  };
+  scheduleIdleWork(step, { delay: 400 });
+}
+window._prefetchPrimaryModules = _prefetchPrimaryModules;
+
+/**
  * 初始化首页非关键模块
  * 每日一题、公告、生物学史时间轴、能力雷达、社区摘要等首屏下方内容
  * 在首屏渲染完成后再按需加载，不阻塞 DOMContentLoaded 后的交互
@@ -1569,6 +1591,35 @@ function handleRoute(route) {
     '/teacher': 'teacher'
   };
   var modName = moduleMap[route];
+
+  // —— 进入目标模块页的即时反馈 ——
+  // 懒加载模块在点击时才通过网络拉取并同步求值整段脚本，期间会短暂占用主线程、
+  // 而旧页面仍停留在屏幕上，导致"点了没反应、卡在当前页面"的观感。
+  // 这里在真正请求模块前先切换到轻量加载占位，让页面立即给出响应。
+  if (modName) {
+    var _routeInitFn = {
+      '/practice': 'initPractice',
+      '/photo-quiz': 'initPhotoQuiz',
+      '/exam': 'initExam',
+      '/analytics': 'initAnalytics',
+      '/user': 'initUser',
+      '/admin': 'initAdmin',
+      '/community': 'initCommunity',
+      '/knowledge-graph': 'initKnowledgeGraph',
+      '/diagnosis': 'initSmartDiagnosis',
+      '/study': 'initStudy',
+      '/wrongbook': 'initWrongbook',
+      '/tutor': 'initTutor',
+      '/bio-lab': 'initBioLab',
+      '/phet-sims': 'initPhetSims',
+      '/trends': 'initTrends',
+      '/teacher': 'initTeacher'
+    }[route];
+    // 仅当模块脚本尚未就绪时才显示占位，避免已加载模块产生闪烁
+    if (_routeInitFn && typeof window[_routeInitFn] !== 'function') {
+      _showModuleLoading(target, _routeInitFn);
+    }
+  }
 
   var renderFn = function() {
     doRouteRender(route, target);
@@ -5041,6 +5092,12 @@ function initApp() {
   _AppState.rootElement = root;
   _AppState._homeHTML = root.innerHTML;
   _AppState._countdownTimer = null;
+
+  // 首屏就绪后再错峰预热常用懒加载模块，让首次点击某模式即时进入、不卡当前页
+  document.addEventListener('bioquest:app-ready', function _onReadyPrefetch() {
+    document.removeEventListener('bioquest:app-ready', _onReadyPrefetch);
+    scheduleIdleWork(_prefetchPrimaryModules, { delay: 800 });
+  });
 
   // P1-5（Issue #102）：PWA 快捷方式 ?page= 白名单路由（读取后清理 URL）
   _applyPageQueryParam();
