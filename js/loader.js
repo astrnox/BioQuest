@@ -1533,6 +1533,17 @@ function maintainQuestionBank() {
       .map(function (k) { return k.replace(/^bank\//, '').replace(/\.json$/, ''); });
     if (bankTags.length === 0) { _maintenanceRunning = false; return { changed: false, refreshed: 0 }; }
 
+    // 首访带宽保护：首次会话不后台预热 bank 分片（80 个文件约 14MB），
+    // 避免新用户刚进站就被大流量下载拖慢，造成"进度条走完页面还在加载/卡网速"。
+    // 置位标记后，从下一次访问起（分片已随用户使用按需进入 SW/内存缓存）再在空闲时后台预热。
+    var warmedOnce = false;
+    try { warmedOnce = localStorage.getItem('bioquest_bank_warmed_once') === '1'; } catch (e) {}
+    if (!warmedOnce) {
+      try { localStorage.setItem('bioquest_bank_warmed_once', '1'); } catch (e) {}
+      _maintenanceRunning = false;
+      return { changed: result.changed, refreshed: 0, deferred: true };
+    }
+
     return new Promise(function (resolveOuter) {
       var refreshed = 0;
       var idx = 0;
@@ -1541,9 +1552,13 @@ function maintainQuestionBank() {
         var tag = bankTags[idx++];
         var expected = files['bank/' + tag + '.json'] || null;
         // 逐 tag 拉取（内部缓存命中/SHA 一致会复用），完成后让出主线程
-        _loadShardBank(tag, expected, null).then(function (text) {
+        _loadShardBank(tag, expected, null).then(function () {
           refreshed++;
-          _bankToItems(text, tag); // 落库 questions 表
+          // 注意：这里不再调用 _bankToItems()（JSON.parse 整片 + bulkPut 进 questions 表）。
+          // 空闲期在 80+ 个分片上做同步 parse/写入会制造大量 Long Task，
+          // 导致用户刚加载完点"练习/模考"时页面卡死几秒。
+          // 分片原始 JSON 已由 _loadShardBank 存入 IndexedDB shards 表（含 SHA），
+          // 首次真正拉题时再由 _bankToItems 惰性解析落库。
         }).catch(function () {
           // 单个分片失败不影响整体
         }).then(function () {

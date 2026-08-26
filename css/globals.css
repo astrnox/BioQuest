@@ -116,7 +116,9 @@
   --z-toast: 500;
 
   --header-height: 64px;
-  --content-max-width: 1200px;
+  /* 内页内容区宽度：从 1200px 提升到 min(1600px, 100%)，
+     宽屏下更撑满屏幕减少两侧米白留白，小屏维持接近全宽不产生白边 */
+  --content-max-width: min(1600px, 100%);
   --content-padding: 24px;
 
   --breakpoint-sm: 640px;
