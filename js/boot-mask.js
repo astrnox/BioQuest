@@ -128,33 +128,29 @@
     else setTimeout(fadeOut, MIN_VISIBLE - elapsed);
   }
 
-  // ---- 就绪判定（保证"动画时长 = 实际加载时长"）----
-  // 必须同时满足"内容已渲染" 与 "资源已加载"，才会撤遮罩：
-  //   1) 内容渲染：收到 bioquest:app-ready（finishRouting + reinitHomeComponents rAF 双重确认）；
-  //   2) 资源加载：window.load 触发（全部 CSS/JS/字体/图片已下载），或到达硬上限(LOAD_CAP)，
-  //      避免某个挂起的 CDN 资源无限期挡住首屏。
+  // ---- 就绪判定 ----
+  // 遮罩只在"页面可交互"后撤除：bioquest:app-ready 由 SPA 路由在首帧渲染完成后派发，
+  // 此时全部 defer 脚本已按序执行完毕、首屏已绘制，页面可点击。
+  // 不再等待 window.load —— 它会被 7.6MB 字体/图片等资源无限期拖住，造成
+  // "进度条走完但页面还在加载/卡"的错位感（字体走 font-display:swap 异步加载，不影响交互）。
   var contentReady = false;  // bioquest:app-ready 已收到
-  var loadReady = false;     // window.load 已触发
-  var LOAD_CAP = 9000;       // 硬上限：内容就绪后缩短为 CONTENT_CAP，不再无限期阻塞
-  var CONTENT_CAP = 4000;    // 内容已渲染后的资源加载上限
+  var APP_READY_CAP = 15000; // 兜底：异常路径（app-ready 未派发）也不让遮罩永久卡死
 
   function bootTick() {
-    // 内容已渲染后，给资源加载一个较短窗口；否则用更长的总上限做兜底。
-    var cap = contentReady ? CONTENT_CAP : LOAD_CAP;
-    var loadDone = loadReady || (Date.now() - startTime >= cap);
-    if (contentReady && loadDone) {
+    var capReached = Date.now() - startTime >= APP_READY_CAP;
+    if (contentReady || capReached) {
       startFadeOut();
     } else if (BootProgress) {
       BootProgress._schedule(); // 未就绪时保持进度条继续渐进逼近
     }
   }
 
-  // 主信号：应用首屏渲染/路由完成。仅当内容真正渲染后才把进度推到接近完成，
-  // 并参与"内容已就绪"门控——动画绝不会早于内容渲染结束。
+  // 主信号：应用首屏渲染/路由完成 → 页面已可交互，撤遮罩（进度同时补足到 100%）。
   document.addEventListener('bioquest:app-ready', function () {
     contentReady = true;
-    if (window.BootProgress) BootProgress.addWeight(40, 88);
-    bootTick();
+    if (window.BootProgress) BootProgress.addWeight(40, 92);
+    // 给最后一帧布局/绘制留一点缓冲，避免淡出瞬间卡顿
+    setTimeout(bootTick, 40);
   });
 
   // 进度标记：HTML/CSS/脚本解析阶段
@@ -165,13 +161,6 @@
   if (document.readyState === 'interactive' || document.readyState === 'complete') onDOMReady();
   else document.addEventListener('DOMContentLoaded', onDOMReady);
 
-  // 全部资源加载完成：这是"实际加载"完成的标志之一（配合内容渲染门控）。
-  window.addEventListener('load', function () {
-    loadReady = true;
-    if (window.BootProgress) BootProgress.addWeight(15, 60);
-    bootTick();
-  });
-
   // 兜底：极长时间仍未就绪（异常路径），避免遮罩永久卡死。
-  setTimeout(function () { contentReady = true; loadReady = true; if (!done) startFadeOut(); }, 20000);
+  setTimeout(function () { contentReady = true; if (!done) startFadeOut(); }, APP_READY_CAP);
 })();

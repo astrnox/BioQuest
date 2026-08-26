@@ -250,6 +250,9 @@
   <link rel="preconnect" href="https://phet.colorado.edu" crossorigin>
 
   <!-- 字体：本地霞鹜文楷 v1.522，woff2 压缩（7.6MB），零网络请求 -->
+  <!-- 字体 preload：与 CSS/JS 并行下载，避免"进度条走完页面仍在加载"时字体还在路上；
+       crossorigin 为字体 preload 必需（字体以 CORS 模式请求） -->
+  <link rel="preload" as="font" type="font/woff2" href="fonts/lxgw-wenkai.woff2?v=1.522" crossorigin>
   <style>
     @font-face {
       font-family: 'LXGW WenKai';
@@ -271,7 +274,7 @@
   <script src="js/boot-lazy.js?v=20260820a" defer></script>
 
   <!-- 首屏关键 CSS：同步加载 -->
-  <link rel="stylesheet" href="css/globals.css?v=20260811h">
+  <link rel="stylesheet" href="css/globals.css?v=20260826a">
   <link rel="stylesheet" href="css/layout.css?v=20260723e">
   <link rel="stylesheet" href="css/header.css?v=20260723e">
   <link rel="stylesheet" href="css/learning-hub.css?v=20260809a">
@@ -314,7 +317,7 @@
     <div id="bq-boot-percent" aria-hidden="true">0%</div>
   </div>
   <!-- 首屏骨架遮罩逻辑（外部化）：defer 加载，不阻塞内容解析；遮罩本身由上方 CSS 立即显示 -->
-  <script src="js/boot-mask.js?v=20260820a" defer></script>
+  <script src="js/boot-mask.js?v=20260826a" defer></script>
 
   <a href="#page-content" class="skip-link">跳到主要内容</a>
 
@@ -699,20 +702,17 @@
   <script src="js/vendor/purify.min.js?v=20260723d" defer></script>
   <!-- FSRS 间隔重复算法包装层：基于 ts-fsrs，暴露 window.FSRS 兼容 API（修复 P0-1） -->
   <script src="js/fsrs-algorithm.js?v=20260723d" defer></script>
-  <!-- v5.0 Tier1 vendor 库（懒加载由集成模块内部处理，但首屏预加载关键库） -->
-  <script src="js/vendor/katex.min.js?v=20260723d" defer></script>
-  <script src="js/vendor/mhchem.min.js?v=20260723d" defer></script>
+  <!-- v5.0 Tier1 vendor 库：仅保留首页/学习主链路真正用到的库；
+       体积大且仅特定路由使用/当前未使用的库（katex/mhchem/gsap 无业务调用，
+       mammoth/pdf.js 仅文档导入用）不再首屏加载，mammoth/pdf 由 document-tools 用时注入 -->
   <script src="js/vendor/dexie.min.js?v=20260723d" defer></script>
   <script src="js/vendor/chart.umd.min.js?v=20260723d" defer></script>
-  <script src="js/vendor/gsap.min.js?v=20260723d" defer></script>
   <script src="js/vendor/jszip.min.js?v=20260723d" defer></script>
-  <script src="js/vendor/mammoth.browser.min.js?v=20260723d" defer></script>
   <!-- d3 (BSD-3): cal-heatmap 4.x 依赖（d3-selection/d3-color/d3-fetch），
        必须在 cal-heatmap.min.js 之前加载，否则 cal-heatmap 会报
        "Cannot read properties of undefined (reading 'timeSecond')" -->
   <script src="js/vendor/d3.min.js?v=20260723d" defer></script>
   <script src="js/vendor/cal-heatmap.min.js?v=20260723d" defer></script>
-  <script src="js/vendor/pdf.min.js?v=20260723d" defer></script>
   <!-- v5.0 Tier1 集成模块 -->
   <script src="js/integrations/vendor-init.js?v=20260723d" defer></script>
   <!-- OCR 多引擎抽象层：Vision → ONNX PaddleOCR → Tesseract → OCRad 四级降级；
@@ -723,7 +723,7 @@
   <script src="js/integrations/analytics-charts.js?v=20260723d" defer></script>
   <script src="js/integrations/diagram-renderer.js?v=20260723d" defer></script>
   <script src="js/integrations/molecule-viewer.js?v=20260723d" defer></script>
-  <script src="js/integrations/document-tools.js?v=20260723d" defer></script>
+  <script src="js/integrations/document-tools.js?v=20260826a" defer></script>
   <script src="js/integrations/data-store.js?v=20260723d" defer></script>
   <!-- Issue #14：FSRS 优化器/分片哈希 Web Worker 核心（纯函数，双上下文：Worker + 主线程桶底）。
        必须先于 fsrs-optimizer.js 加载，提供 window.FSRSWorkerCore 供主线程兜底。 -->
@@ -812,7 +812,7 @@
   <script src="js/sync-tabs.js?v=20260803a" defer></script>
   <script src="js/error-recovery.js?v=20260803a" defer></script>
   <script src="js/question-utils.js?v=20260809c" defer></script>
-  <script src="js/loader.js?v=20260809g" defer></script>
+  <script src="js/loader.js?v=20260826a" defer></script>
   <script src="js/cell-loader.js?v=20260803a" defer></script>
   <script src="js/shortcut-panel.js?v=20260803a" defer></script>
   <script src="js/soundscape.js?v=20260803a" defer></script>

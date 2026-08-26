@@ -10,6 +10,39 @@
 (function () {
   'use strict';
 
+  var _mammothLoading = null;
+  var _pdfLoading = null;
+
+  /**
+   * 按需加载 mammoth（约 620KB，仅首次处理 .docx 时注入），避免首屏卡顿
+   * @returns {Promise<boolean>}
+   */
+  function loadMammoth() {
+    if (typeof window.mammoth !== 'undefined') return Promise.resolve(true);
+    if (typeof window.loadScriptOnce !== 'function') return Promise.resolve(false);
+    if (!_mammothLoading) {
+      _mammothLoading = window.loadScriptOnce('js/vendor/mammoth.browser.min.js?v=20260723d', {
+        verify: function () { return typeof window.mammoth !== 'undefined'; }
+      }).then(function () { return true; }).catch(function () { _mammothLoading = null; return false; });
+    }
+    return _mammothLoading;
+  }
+
+  /**
+   * 按需加载 PDF.js（约 320KB，仅首次处理 .pdf 时注入）
+   * @returns {Promise<boolean>}
+   */
+  function loadPDFJS() {
+    if (typeof window.pdfjsLib !== 'undefined') return Promise.resolve(true);
+    if (typeof window.loadScriptOnce !== 'function') return Promise.resolve(false);
+    if (!_pdfLoading) {
+      _pdfLoading = window.loadScriptOnce('js/vendor/pdf.min.js?v=20260723d', {
+        verify: function () { return typeof window.pdfjsLib !== 'undefined'; }
+      }).then(function () { return true; }).catch(function () { _pdfLoading = null; return false; });
+    }
+    return _pdfLoading;
+  }
+
   function ensureMammoth() {
     if (typeof window.mammoth === 'undefined') {
       console.warn('[DocumentTools] mammoth 未加载');
@@ -47,11 +80,11 @@
    * @returns {Promise<{ text:string, html:string, messages:Array }>}
    */
   function extractWord(file) {
-    if (!ensureMammoth()) {
-      return Promise.reject(new Error('Word 解析库未加载'));
-    }
     if (!file) return Promise.reject(new Error('未提供文件'));
-    return readFileAsArrayBuffer(file).then(function (buf) {
+    return loadMammoth().then(function (ok) {
+      if (!ok || !ensureMammoth()) return Promise.reject(new Error('Word 解析库加载失败'));
+      return readFileAsArrayBuffer(file);
+    }).then(function (buf) {
       return window.mammoth.convertToHtml({ arrayBuffer: buf });
     }).then(function (result) {
       // 去标签得到纯文本
@@ -67,14 +100,14 @@
    * @returns {Promise<{ pages:string[], numPages:number }>}
    */
   function extractPdf(file, opts) {
-    if (!ensurePDFJS()) {
-      return Promise.reject(new Error('PDF 解析库未加载'));
-    }
     if (!file) return Promise.reject(new Error('未提供文件'));
     opts = opts || {};
     var maxPages = opts.maxPages || 100;
 
-    return readFileAsArrayBuffer(file).then(function (buf) {
+    return loadPDFJS().then(function (ok) {
+      if (!ok || !ensurePDFJS()) return Promise.reject(new Error('PDF 解析库加载失败'));
+      return readFileAsArrayBuffer(file);
+    }).then(function (buf) {
       var loadingTask = window.pdfjsLib.getDocument({ data: buf });
       return loadingTask.promise;
     }).then(function (pdf) {
@@ -111,13 +144,15 @@
    * @returns {Promise<{ width:number, height:number }>}
    */
   function renderPdfPage(canvasId, arrayBuffer, pageNum, opts) {
-    if (!ensurePDFJS()) return Promise.reject(new Error('PDF 解析库未加载'));
     var canvas = document.getElementById(canvasId);
     if (!canvas) return Promise.reject(new Error('canvas 不存在: ' + canvasId));
     opts = opts || {};
     var scale = opts.scale || 1.5;
 
-    return window.pdfjsLib.getDocument({ data: arrayBuffer }).promise.then(function (pdf) {
+    return loadPDFJS().then(function (ok) {
+      if (!ok || !ensurePDFJS()) return Promise.reject(new Error('PDF 解析库加载失败'));
+      return window.pdfjsLib.getDocument({ data: arrayBuffer }).promise;
+    }).then(function (pdf) {
       return pdf.getPage(pageNum);
     }).then(function (page) {
       var viewport = page.getViewport({ scale: scale });
@@ -136,18 +171,20 @@
    * @returns {Promise<{ pdf, numPages, renderPage }>}
    */
   function loadPdf(input) {
-    if (!ensurePDFJS()) return Promise.reject(new Error('PDF 解析库未加载'));
-    var promise;
-    if (input instanceof ArrayBuffer) promise = Promise.resolve(input);
-    else promise = readFileAsArrayBuffer(input);
-    return promise.then(function (buf) {
-      return window.pdfjsLib.getDocument({ data: buf }).promise;
+    if (!(input instanceof ArrayBuffer)) {
+      if (!input) return Promise.reject(new Error('未提供文件'));
+      // File/Blob → 先读成 ArrayBuffer，再走 ArrayBuffer 分支（避免闭包捕获局部 buf）
+      return readFileAsArrayBuffer(input).then(loadPdf);
+    }
+    return loadPDFJS().then(function (ok) {
+      if (!ok || !ensurePDFJS()) return Promise.reject(new Error('PDF 解析库加载失败'));
+      return window.pdfjsLib.getDocument({ data: input }).promise;
     }).then(function (pdf) {
       return {
         pdf: pdf,
         numPages: pdf.numPages,
         renderPage: function (canvasId, pageNum, opts) {
-          return renderPdfPage(canvasId, buf, pageNum, opts);
+          return renderPdfPage(canvasId, input, pageNum, opts);
         }
       };
     });
