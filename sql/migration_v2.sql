@@ -3,6 +3,12 @@
 -- 在 Supabase SQL Editor 中运行此文件
 -- 用途：补齐缺失的列、创建缺失的表、插入种子数据
 -- ============================================================
+-- [幂等改造] Issue #143
+-- 已确认本文件幂等：ADD COLUMN IF NOT EXISTS / CREATE TABLE IF NOT EXISTS
+-- / CREATE INDEX IF NOT EXISTS / CREATE OR REPLACE FUNCTION /
+-- DROP TRIGGER IF EXISTS + CREATE TRIGGER / RLS 策略用 DO 块 + IF NOT EXISTS
+-- / 种子数据用计数守卫（已有数据则跳过）。仅加注释说明，未改动任何业务逻辑。
+-- ============================================================
 
 -- ============================================================
 -- 0. 注册即生效：自动确认邮箱（绕开 Supabase 邮件验证）

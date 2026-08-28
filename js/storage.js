@@ -453,6 +453,74 @@ function getAllSettings() {
 }
 
 /* ============================================================
+ * Issue #130：离线写操作队列接入
+ *  - 离线时把收藏/错题/练习记录的云端同步操作推入 OfflineQueue
+ *    （IndexedDB），网络恢复后由 offline-queue.js 自动重放；
+ *  - 在线时行为完全不变（直接调用 supabase 同步函数）。
+ * ============================================================ */
+
+function _registerOfflineQueueHandlers() {
+  if (typeof window === 'undefined' || typeof window.OfflineQueue !== 'object' ||
+      typeof window.OfflineQueue.register !== 'function') return;
+  if (_offlineQueueRegistered) return;
+  _offlineQueueRegistered = true;
+
+  // 练习记录（存储完整 record 结构，重放时原样调用）
+  window.OfflineQueue.register('practice-record', function (record) {
+    if (typeof window.syncPracticeRecordToSupabase !== 'function') {
+      return Promise.reject(new Error('同步 API 未就绪'));
+    }
+    return Promise.resolve(window.syncPracticeRecordToSupabase(record)).then(function (r) {
+      if (r && r.ok === false && r.error) throw new Error(r.error);
+    });
+  });
+
+  // 收藏 / 取消收藏
+  window.OfflineQueue.register('favorite', function (payload) {
+    var op;
+    if (payload.isFav) {
+      op = (typeof window.saveFavorite === 'function')
+        ? window.saveFavorite(payload.qId, 1, '', '')
+        : Promise.resolve({ ok: false, error: 'saveFavorite 未就绪' });
+    } else {
+      op = (typeof window.deleteFavorite === 'function')
+        ? window.deleteFavorite(payload.qId)
+        : Promise.resolve({ ok: false, error: 'deleteFavorite 未就绪' });
+    }
+    return Promise.resolve(op).then(function (r) {
+      if (r && r.ok === false && r.error) throw new Error(r.error);
+    });
+  });
+
+  // 错题上报（与 _syncWrongToSupabase 的 payload 结构一致）
+  window.OfflineQueue.register('wrong-question', function (payload) {
+    if (typeof window.saveWrongQuestion !== 'function') {
+      return Promise.reject(new Error('saveWrongQuestion 未就绪'));
+    }
+    return Promise.resolve(window.saveWrongQuestion(payload)).then(function (r) {
+      if (r && r.ok === false && r.error) throw new Error(r.error);
+    });
+  });
+}
+var _offlineQueueRegistered = false;
+
+/**
+ * 离线时把写操作入队并返回 true（调用方直接 return，跳过即时同步）；
+ * 在线或队列不可用时返回 false（走原有同步逻辑）。
+ */
+function _enqueueIfOffline(opType, payload) {
+  try {
+    if (typeof navigator === 'undefined' || navigator.onLine !== false) return false;
+    if (typeof window.OfflineQueue !== 'object' || typeof window.OfflineQueue.enqueue !== 'function') return false;
+    _registerOfflineQueueHandlers();
+    window.OfflineQueue.enqueue(opType, payload);
+    return true;
+  } catch (e) {
+    return false;
+  }
+}
+
+/* ============================================================
  * 练习记录
  * ============================================================ */
 
@@ -525,6 +593,8 @@ function _syncPracticeRecordToSupabase(fullRecord) {
       is_correct: fullRecord.totalQuestions > 0 && fullRecord.correctCount === fullRecord.totalQuestions,
       question_id: (answers[0] && answers[0].question_id) || 0
     };
+    // Issue #130：离线时入队，网络恢复后自动重放，避免练习记录丢失
+    if (_enqueueIfOffline('practice-record', record)) return;
     window.syncPracticeRecordToSupabase(record).catch(function (e) {
       console.warn('[storage] syncPracticeRecordToSupabase 失败:', e && e.message);
     });
@@ -606,6 +676,8 @@ function isFavorite(qId) {
 function _syncFavoriteToSupabase(qId, isFav) {
   if (typeof window.isLoggedIn !== 'function' || !window.isLoggedIn()) return;
   var bioId = (window.resolveQuestionBioId || resolveQuestionBioId)(qId);
+  // Issue #130：离线时入队，网络恢复后自动重放
+  if (_enqueueIfOffline('favorite', { qId: bioId, isFav: !!isFav })) return;
   if (isFav) {
     if (typeof window.saveFavorite === 'function') {
       window.saveFavorite(bioId, 1, '', '');
@@ -740,6 +812,8 @@ function _syncWrongToSupabase(qId, module, questionText, wrongCount) {
     } catch(e) {}
   }
 
+  // Issue #130：离线时入队，网络恢复后自动重放（payload 与队列重放结构一致）
+  if (_enqueueIfOffline('wrong-question', payload)) return;
   if (typeof window.saveWrongQuestion === 'function') {
     window.saveWrongQuestion(payload);
   } else {
@@ -1097,6 +1171,51 @@ function getStorageUsage() {
 }
 
 /* ============================================================
+ * Issue #134：大数据压缩（lz-string，同步、零网络依赖）
+ *  - 依赖 js/vendor/lz-string.min.js（MIT，已在 vendor 完整性清单登记）；
+ *  - 仅对超过阈值的进度快照自动做 Base64 压缩，压缩无效（无明显收益）时
+ *    自动回退明文，保证不会出现「压缩反而更大」的负优化；
+ *  - 信封格式：{ __bqz:1, s:"<compressToBase64 输出>" }，读写路径
+ *    （saveProgress / loadProgress / getAllLocalProgress）自动编解码，
+ *    其它模块无感知；未加载 lz-string 时整体透明禁用。
+ * ============================================================ */
+var _LZ = null;
+if (typeof window !== 'undefined' && window.LZString &&
+    typeof window.LZString.compressToBase64 === 'function' &&
+    typeof window.LZString.decompressFromBase64 === 'function') {
+  _LZ = window.LZString;
+}
+var COMPRESS_THRESHOLD = 2048; // 明文 JSON 超过该字符数才考虑压缩
+var PROGRESS_Z_MARK = '__bqz';
+
+function _maybeCompressMeta(meta) {
+  if (!_LZ) return meta;
+  var json;
+  try { json = JSON.stringify(meta); } catch (e) { return meta; }
+  if (!json || json.length <= COMPRESS_THRESHOLD) return meta;
+  var compressed = _LZ.compressToBase64(json);
+  // 压缩后仍不小于明文（≈信封开销 24 字符），放弃压缩避免负优化
+  if (compressed.length + 24 >= json.length) return meta;
+  return { __bqz: 1, s: compressed };
+}
+
+function _decompressMeta(parsed) {
+  if (!(parsed && parsed.__bqz === 1 && typeof parsed.s === 'string' && _LZ)) {
+    return parsed;
+  }
+  try {
+    var json = _LZ.decompressFromBase64(parsed.s);
+    if (json) {
+      var restored = JSON.parse(json);
+      return restored && typeof restored === 'object' ? restored : parsed;
+    }
+  } catch (e) {
+    console.warn('[BioQuest Storage] 进度快照解压失败，按损坏处理：', e.message);
+  }
+  return parsed;
+}
+
+/* ============================================================
  * Issue #13：用户进度快照（localStorage 键值 + LWW 云端同步）
  * 进度键前缀：bioquest_progress_<key>，值格式 { updatedAt, deviceId, data }
  * 配套表：user_progress（sql/migration_v8_user_progress.sql）
@@ -1116,17 +1235,18 @@ var _progressSyncInflight = null;
 function saveProgress(key, data) {
   if (!key) return null;
   var meta = { updatedAt: Date.now(), deviceId: getDeviceId(), data: data };
-  safeSetJSON(PROGRESS_PREFIX + key, meta);
+  // Issue #134：大 payload 自动压缩存储（压缩无收益时自动回退明文）
+  safeSetJSON(PROGRESS_PREFIX + key, _maybeCompressMeta(meta));
   scheduleProgressSync(key);
   return meta;
 }
 
 /**
- * 读取进度快照。
+ * 读取进度快照（自动解压 Issue #134 的压缩信封；兼容明文旧数据）。
  */
 function loadProgress(key) {
   if (!key) return null;
-  return safeGetJSON(PROGRESS_PREFIX + key, null);
+  return _decompressMeta(safeGetJSON(PROGRESS_PREFIX + key, null));
 }
 
 /**
@@ -1139,7 +1259,8 @@ function getAllLocalProgress() {
     for (var i = 0; i < localStorage.length; i++) {
       var k = localStorage.key(i);
       if (k && k.indexOf(PROGRESS_PREFIX) === 0) {
-        var meta = safeGetJSON(k, null);
+        // Issue #134：自动解压压缩信封后再判断 data 字段
+        var meta = _decompressMeta(safeGetJSON(k, null));
         if (meta && meta.data !== undefined) result[k.slice(PROGRESS_PREFIX.length)] = meta;
       }
     }

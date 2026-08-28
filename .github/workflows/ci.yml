@@ -63,6 +63,18 @@ jobs:
         # coverageThreshold 的任何指标都会使本步骤失败（防覆盖率回退）
         run: npm run test:unit
 
+      - name: RLS 策略静态审计（Issue #100）
+        # 离线审计 sql/*.sql：每个被创建的表必须启用 RLS 或存在策略，
+        # 无保护表 → 非零退出（防「anon key 暴露 + RLS 配置错误」导致全表泄露）。
+        run: node scripts/audit-rls.js
+
+      - name: 发布资源压缩构建验证（Issue #112）
+        # 验证 js/css 可经 esbuild 压缩进 dist/（构建产物不入库）,
+        # 且首屏同步 CSS 可合并为 bundle-core.css（Issue #108）。
+        run: |
+          npm run build:min
+          npm run build:css
+
       - name: 烟雾测试（Wiki）
         run: npm run test:smoke
 

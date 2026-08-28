@@ -9,7 +9,9 @@
     "test:e2e": "node tests/e2e-smoke.js",
     "test:anchor": "node scripts/verify-manifest-anchor.js",
     "lint:js": "git ls-files 'js/*.js' 'tests/*.js' 'tests/*.cjs' | xargs -n1 node --check",
-    "bump:sw": "node scripts/bump-sw.js"
+    "bump:sw": "node scripts/bump-sw.js",
+    "build:css": "node scripts/build-css-bundle.js",
+    "build:min": "node scripts/minify-assets.js"
   },
   "repository": {
     "type": "git",
@@ -24,10 +26,10 @@
   },
   "homepage": "https://github.com/astrnox/BioQuest#readme",
   "devDependencies": {
+    "agent-browser": "^0.31.1",
+    "esbuild": "^0.24.2",
     "jest": "^30.4.2",
     "jest-environment-jsdom": "^30.4.1",
-    "jsdom": "^29.1.1",
-    "agent-browser": "^0.31.1"
-  },
-  "dependencies": {}
+    "jsdom": "^29.1.1"
+  }
 }

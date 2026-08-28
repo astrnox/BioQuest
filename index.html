@@ -274,16 +274,12 @@
   <script src="js/boot-lazy.js?v=20260820a" defer></script>
 
   <!-- 首屏关键 CSS：同步加载 -->
-  <link rel="stylesheet" href="css/globals.css?v=20260826a">
-  <link rel="stylesheet" href="css/layout.css?v=20260723e">
-  <link rel="stylesheet" href="css/header.css?v=20260723e">
-  <link rel="stylesheet" href="css/learning-hub.css?v=20260809a">
-  <link rel="stylesheet" href="css/home.css?v=20260723e">
+  <!-- Issue #108：首屏同步 CSS 合并为单文件（scripts/build-css-bundle.js 生成，减少 6→1 次串行请求） -->
+  <link rel="stylesheet" href="css/bundle-core.css?v=20260828a">
   <!-- 非首屏关键 CSS：异步加载，不阻塞首次渲染 -->
   <link rel="preload" href="css/countdown.css" as="style" data-css-async>
   <noscript><link rel="stylesheet" href="css/countdown.css"></noscript>
-  <!-- debug-fix.css 非首屏关键，异步加载 -->
-  <link rel="stylesheet" href="css/debug-fix.css?v=20260811h">
+  <!-- debug-fix.css 已并入 bundle-core.css（Issue #108），不再单独同步加载 -->
 
   <!-- 非首屏 CSS：异步加载，不阻塞首次渲染 -->
   <link rel="preload" href="css/practice.css?v=20260723e" as="style" data-css-async>
@@ -306,6 +302,11 @@
   <!-- 每日亿题样式（异步加载，不影响首屏） -->
   <link rel="preload" href="css/daily-billion.css?v=20260809a" as="style" data-css-async>
   <noscript><link rel="stylesheet" href="css/daily-billion.css?v=20260809a"></noscript>
+  <!-- Issue #123/#128：全局离线提示横幅 + 生物主题微交互彩蛋 -->
+  <link rel="preload" href="css/offline-status.css?v=20260828a" as="style" data-css-async>
+  <noscript><link rel="stylesheet" href="css/offline-status.css?v=20260828a"></noscript>
+  <link rel="preload" href="css/eggs.css?v=20260828a" as="style" data-css-async>
+  <noscript><link rel="stylesheet" href="css/eggs.css?v=20260828a"></noscript>
 </head>
 <body>
   <!-- 首屏骨架遮罩：在 JS/CSS 加载前立即渲染，避免"缩小/两边白边/空白几秒"的现象 -->
@@ -693,7 +694,13 @@
   <!-- Supabase 相关脚本：首屏不需要，由 app.js 在 initSupabase 中按需动态加载 -->
   <!-- supabase-client.js / supabase.js / storage.js 已从 HTML 移除，节省 ~140KB 首屏加载 -->
 
-  <script src="js/utils.js?v=20260814b" defer></script>
+  <script src="js/utils.js?v=20260828a" defer></script>
+  <!-- Issue #105/#123/#130/#128：事件集中管理 / 离线队列 / 离线提示 / 生物彩蛋 -->
+  <script src="js/offline-queue.js?v=20260828a" defer></script>
+  <script src="js/offline-status.js?v=20260828a" defer></script>
+  <script src="js/eggs.js?v=20260828a" defer></script>
+  <!-- Issue #134：本地数据压缩（lz-string，MIT，vendor 完整性清单已登记） -->
+  <script src="js/vendor/lz-string.min.js?v=20260828a" defer></script>
   <!-- 手绘成就徽章库（单一数据源）：暴露 window.renderBadgeSvg，供习惯/成就面板共用 -->
   <script src="js/badge-motifs.js?v=20260725a" defer></script>
   <!-- ts-fsrs (MIT): 官方 FSRS-5 引擎 UMD 构建，必须在 fsrs-algorithm.js 之前加载 -->
@@ -780,6 +787,8 @@
   </script> -->
 
   <!-- 核心模块直接加载，避免动态 import 兼容性问题 -->
+  <!-- Issue #106：运行时配置独立文件，须在依赖方（ai-client.js）之前加载 -->
+  <script src="js/config.js?v=20260828a" defer></script>
   <!-- ai-key-store.js 先行：提供加密/闭包化的 AI Key 存取（P1-3），供后续脚本使用 -->
   <script src="js/ai-key-store.js?v=20260819a" defer></script>
   <!-- ai-client.js 先加载（纯前端 AI 调用，供 tutor/discussion 复用） -->

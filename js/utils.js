@@ -1128,7 +1128,7 @@ function timeAgo(date) {
   const seconds = Math.floor(diff / 1000);
   const minutes = Math.floor(seconds / 60);
   const hours = Math.floor(minutes / 60);
-  const days = Math.floor(hours / 24);
+  const days = Math.floor(diff / 86400000);
 
   if (seconds < 60) return '刚刚';
   if (minutes < 60) return `${minutes} 分钟前`;
@@ -1139,3 +1139,102 @@ function timeAgo(date) {
 
   return `${Math.floor(days / 365)} 年前`;
 }
+
+/* ============================================================
+ * Issue #105：事件监听器集中管理（EventHub）
+ * 目标：addEventListener 与 removeEventListener 成对维护，避免内存泄漏。
+ *  - 所有页面级监听统一走 EventHub.on / once；
+ *  - 支持按 scope（如路由名/模块名）批量清理；
+ *  - 未显式 off 的监听在页面卸载（pagehide）时统一解除；
+ *  - 新模块应优先使用本工具，存量代码逐步迁移。
+ * ============================================================ */
+(function () {
+  'use strict';
+  if (typeof window === 'undefined') return;
+
+  var _registry = [];   // { scope, target, type, handler, options }
+  var _scopeCount = {}; // 便于统计
+
+  function _normalizeTarget(target) {
+    return target || window;
+  }
+
+  /**
+   * 注册监听（推荐替代 addEventListener）。
+   * @param {*} target - 事件源（默认 window）
+   * @param {string} type - 事件类型
+   * @param {Function} handler - 处理函数
+   * @param {Object} [options] - { once, capture, passive, scope }
+   * @returns {Function} 取消函数
+   */
+  function on(target, type, handler, options) {
+    options = options || {};
+    var el = _normalizeTarget(target);
+    if (typeof el.addEventListener !== 'function' || typeof handler !== 'function') {
+      return function () {};
+    }
+    var scope = options.scope || 'global';
+    var record = { scope: scope, target: el, type: type, handler: handler, options: options };
+    el.addEventListener(type, handler, options);
+    _registry.push(record);
+    _scopeCount[scope] = (_scopeCount[scope] || 0) + 1;
+    return function off() {
+      remove(scope, el, type, handler);
+    };
+  }
+
+  /**
+   * 一次性监听（内部使用 { once: true }，自动解除）。
+   */
+  function once(target, type, handler, options) {
+    options = options || {};
+    options.once = true;
+    return on(target, type, handler, options);
+  }
+
+  /**
+   * 解除指定监听。
+   */
+  function remove(scope, target, type, handler) {
+    var i = _registry.length;
+    while (i--) {
+      var rec = _registry[i];
+      if ((scope === undefined || rec.scope === scope) &&
+          (target === undefined || rec.target === target) &&
+          (type === undefined || rec.type === type) &&
+          (handler === undefined || rec.handler === handler)) {
+        try { rec.target.removeEventListener(rec.type, rec.handler, rec.options); } catch (e) {}
+        _registry.splice(i, 1);
+        if (_scopeCount[rec.scope]) _scopeCount[rec.scope]--;
+      }
+    }
+  }
+
+  /**
+   * 按 scope 批量清理（路由切换等场景：EventHub.cleanup('route:quiz')）。
+   * @returns {number} 解除数量
+   */
+  function cleanup(scope) {
+    if (scope === undefined) return 0;
+    var before = _registry.length;
+    remove(scope);
+    return before - _registry.length;
+  }
+
+  /**
+   * 全部清理。
+   */
+  function clearAll() {
+    _registry.slice().forEach(function (rec) {
+      try { rec.target.removeEventListener(rec.type, rec.handler, rec.options); } catch (e) {}
+    });
+    _registry.length = 0;
+    _scopeCount = {};
+  }
+
+  // 页面卸载时统一解除，避免跨页面残留监听
+  window.addEventListener('pagehide', clearAll);
+
+  window.EventHub = { on: on, once: once, off: remove, remove: remove, cleanup: cleanup, clearAll: clearAll };
+  if (window.BioQuest) window.BioQuest.EventHub = window.EventHub;
+})();

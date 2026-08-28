@@ -9,6 +9,12 @@
 --   * RLS 严格限制：用户只能读写自己 profile_id 的行（auth.uid() = profile_id）。
 --   * updated_at 由触发器自动维护，客户端无需自行计算（仍可显式传入以便 LWW 比较）。
 -- ============================================================
+-- [幂等改造] Issue #143
+-- 已确认本文件幂等：CREATE TABLE IF NOT EXISTS / CREATE INDEX IF NOT EXISTS /
+-- CREATE OR REPLACE FUNCTION / DROP TRIGGER IF EXISTS + CREATE TRIGGER /
+-- RLS 策略用 DO 块 + 表存在性判断 + pg_policies 判断 + EXCEPTION 兜底。
+-- 仅加注释说明，未改动任何业务逻辑。
+-- ============================================================
 
 BEGIN;
 

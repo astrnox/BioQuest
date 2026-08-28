@@ -1,7 +1,11 @@
 -- ============================================================
 -- BioQuest — 迁移 v6：安全加固（P0-2 / S-003 / S-004）
 -- 在 Supabase SQL Editor 中运行此文件（幂等，可重复执行）
---
+-- ============================================================
+-- [幂等改造] Issue #143
+-- 已确认本文件幂等：DROP POLICY IF EXISTS + DO 块 + pg_policies 判断 +
+-- EXCEPTION 兜底。仅加注释说明，未改动任何业务逻辑。
+-- ============================================================
 -- 修复内容：
 --   1. 移除 cards/questions 的「匿名可写」INSERT 策略
 --      （cards_public_insert / questions_public_insert / questions_insert_anon），

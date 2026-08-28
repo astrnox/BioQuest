@@ -5,6 +5,11 @@
 --   1) 在本机运行 scripts/wiki_crawler.py --upload 抓取并上传词条
 --   2) 前端 wiki.html 首次加载会从该表读取词条（离线时回退到 data/wiki-seed.json）
 -- ============================================================
+-- [幂等改造] Issue #143
+-- 原「CREATE POLICY "wiki_entries public read"」无存在性判断，
+-- 重复执行会报「policy already exists」。
+-- 现已用 DO 块 + pg_policies 判断包裹，重复执行业务语义不变且不报错。
+-- ============================================================
 
 create table if not exists public.wiki_entries (
   id          text primary key,
@@ -25,11 +30,15 @@ comment on table public.wiki_entries is 'BioQuest 百科词条（由 wiki_crawle
 alter table public.wiki_entries enable row level security;
 
 -- 公开可读：匿名与登录用户都能读取词条（词条为公开内容，无敏感数据）
-create policy "wiki_entries public read"
-  on public.wiki_entries
-  for select
-  to anon, authenticated
-  using (true);
+DO $$ BEGIN
+  IF NOT EXISTS (SELECT 1 FROM pg_policies WHERE schemaname = 'public' AND tablename = 'wiki_entries' AND policyname = 'wiki_entries public read') THEN
+    create policy "wiki_entries public read"
+      on public.wiki_entries
+      for select
+      to anon, authenticated
+      using (true);
+  END IF;
+END $$;
 
 -- 写入由服务端（service_role，默认 BYPASSRLS）或脚本完成，无需额外写策略。
 -- 若希望匿名不可写，则保持现状即可。

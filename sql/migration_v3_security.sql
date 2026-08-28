@@ -1,6 +1,13 @@
 -- ============================================================
 -- BioQuest — 安全审计修复（migration_v3）
 -- 适用 Supabase SQL Editor
+-- ============================================================
+-- [幂等改造] Issue #143
+-- 已确认本文件幂等：ADD COLUMN IF NOT EXISTS / CREATE OR REPLACE FUNCTION /
+-- DROP VIEW IF EXISTS + CREATE VIEW / DROP POLICY IF EXISTS + CREATE POLICY /
+-- DROP TRIGGER IF EXISTS + CREATE TRIGGER / CREATE INDEX IF NOT EXISTS。
+-- 仅加注释说明，未改动任何业务逻辑。
+-- ============================================================
 -- 修复 4 个高风险问题：
 --   1. handle_new_user 触发器不写 email/device_id
 --   2. 客户端可改 email/user_key/user_group（绕过 admin 流程）

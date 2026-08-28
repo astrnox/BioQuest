@@ -2,6 +2,10 @@
 -- BioQuest Migration v5: 社区帖子举报功能
 -- 创建 community_reports 表，允许用户举报帖子，管理员在后台查看
 -- ============================================================
+-- [幂等改造] Issue #143
+-- 已确认本文件幂等：CREATE TABLE IF NOT EXISTS / CREATE INDEX IF NOT EXISTS
+-- / DROP POLICY IF EXISTS + CREATE POLICY。仅加注释说明，未改动任何业务逻辑。
+-- ============================================================
 
 -- 举报表
 CREATE TABLE IF NOT EXISTS community_reports (
