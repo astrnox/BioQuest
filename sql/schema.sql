@@ -2,6 +2,12 @@
 -- BioQuest — Supabase 数据库 Schema (前端直连版)
 -- 在 Supabase SQL Editor 中运行此文件以初始化数据库
 -- ============================================================
+-- [幂等改造] Issue #143
+-- 已确认本文件幂等：CREATE TABLE/EXTENSION/INDEX 均带 IF NOT EXISTS、
+-- CREATE OR REPLACE FUNCTION、DROP TRIGGER IF EXISTS + CREATE TRIGGER，
+-- RLS 策略经 bioquest_create_policy() 存在性判断后再创建。
+-- 文件较大且已幂等，保持原样不改动，以免引入回归。
+-- ============================================================
 
 -- 启用 UUID 扩展
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";

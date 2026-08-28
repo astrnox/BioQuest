@@ -8,8 +8,17 @@
 (function () {
   'use strict';
 
-  // 知识库 ID（从 .env 注入，由 server.py 读取并注入到前端）
+  // 知识库 ID（Issue #106：优先读取独立配置文件 js/config.js 注入的
+  // window.BQ_CONFIG.METASO_SUBJECT_ID；此处保留默认值作为无配置时的兜底）
   var METASO_SUBJECT_ID = '2045811707737636864';
+  function _metasoSubjectId() {
+    if (typeof window !== 'undefined' && window.BQ_CONFIG &&
+        typeof window.BQ_CONFIG.METASO_SUBJECT_ID === 'string' &&
+        window.BQ_CONFIG.METASO_SUBJECT_ID) {
+      return window.BQ_CONFIG.METASO_SUBJECT_ID;
+    }
+    return METASO_SUBJECT_ID;
+  }
 
   // 服务商 → base_url + 默认模型
   var PROVIDER_MAP = {
@@ -549,8 +558,8 @@
       stream: true
     };
     // 秘塔知识库：注入 subject_id
-    if (cfg.provider === 'metaso' && METASO_SUBJECT_ID) {
-      body.subject_id = METASO_SUBJECT_ID;
+    if (cfg.provider === 'metaso' && _metasoSubjectId()) {
+      body.subject_id = _metasoSubjectId();
     }
 
     return _scheduleAiRequest(function () {
@@ -593,8 +602,8 @@
       max_tokens: opts.maxTokens || AI_DEFAULT_MAX_TOKENS,
       stream: false
     };
-    if (cfg.provider === 'metaso' && METASO_SUBJECT_ID) {
-      body.subject_id = METASO_SUBJECT_ID;
+    if (cfg.provider === 'metaso' && _metasoSubjectId()) {
+      body.subject_id = _metasoSubjectId();
     }
     fetchWithRetry(url, {
       method: 'POST',
@@ -629,7 +638,11 @@
   }
 
   /**
-   * 非流式对话（一次性返回完整结果）
+   * 对话接口（Issue #136：全链路流式支持）
+   *  - opts.stream === true 或传入 opts.onChunk 时自动走 SSE 流式分块输出；
+   *  - 流式响应最终以 { choices:[{ message:{ role:'assistant', content } }] } 形态 resolve，
+   *    与原有非流式返回结构一致，调用方无需改动；
+   *  - 未传 onChunk / stream 时保持原「一次性完整返回」行为。
    */
   function chat(opts) {
     var check = canUse();
@@ -642,16 +655,74 @@
     var model = cfg.model || prov.defaultModel;
     var url = prov.base + '/chat/completions';
 
+    var wantsStream = !!opts && (opts.stream === true || typeof opts.onChunk === 'function');
+
     var body = {
         model: model,
         messages: opts.messages,
         temperature: opts.temperature != null ? opts.temperature : 0.3,
         max_tokens: opts.maxTokens || AI_STREAM_MAX_TOKENS,
-        stream: false
+        stream: !!wantsStream
       };
-      if (cfg.provider === 'metaso' && METASO_SUBJECT_ID) {
-        body.subject_id = METASO_SUBJECT_ID;
+      if (cfg.provider === 'metaso' && _metasoSubjectId()) {
+        body.subject_id = _metasoSubjectId();
       }
+
+    // Issue #136：流式对话（opts.onChunk / opts.stream 触发）
+    if (wantsStream) {
+      return _scheduleAiRequest(function () {
+        return fetchWithRetry(url, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + _getApiKey(),
+            'Accept': 'text/event-stream'
+          },
+          body: JSON.stringify(body),
+          signal: opts.signal
+        }).then(function (resp) {
+          if (!resp.ok) {
+            return resp.text().then(function (txt) {
+              throw new Error(_extractApiError(resp.status, txt));
+            });
+          }
+          incrementUsage();
+          var full = '';
+          var settled = false;
+          return new Promise(function (resolve, reject) {
+            function finish(chunkText) {
+              if (settled) return;
+              settled = true;
+              resolve({ choices: [{ message: { role: 'assistant', content: chunkText } }] });
+            }
+            function fail(err) {
+              if (settled) return;
+              settled = true;
+              if (opts.onError) opts.onError(err);
+              reject(err);
+            }
+            // 复用 SSE 解析：增量 onChunk / onDone / onError
+            _pumpSse(resp, {
+              signal: opts.signal,
+              onChunk: function (chunk) {
+                full += chunk;
+                if (opts.onChunk) opts.onChunk(chunk);
+                if (opts.onProgress) opts.onProgress(full);
+              },
+              onDone: function () { finish(full); },
+              onError: function (err) { fail(err); }
+            }).catch(function (err) {
+              // 流中途 reader 异常：AbortError 由 pump 内部处理，其余按出错结束
+              fail(err && err.name === 'AbortError' ? new Error('AI 请求已中止') : err);
+            });
+          });
+        }).catch(function (err) {
+          if (err.name === 'AbortError') throw err;
+          if (opts.onError) opts.onError(err);
+          throw err;
+        });
+      }, _requestFingerprint(url, body));
+    }
 
     // P1-16：非流式请求走调度器（限流 + 并发上限 + 同指纹并发去重）
     return _scheduleAiRequest(function () {
@@ -1177,6 +1248,6 @@
     PROVIDER_MAP: PROVIDER_MAP,
     VISION_MODELS: VISION_MODELS,
     IMAGE_MODELS: IMAGE_MODELS,
-    METASO_SUBJECT_ID: METASO_SUBJECT_ID
+    METASO_SUBJECT_ID: _metasoSubjectId()
   };
 })();

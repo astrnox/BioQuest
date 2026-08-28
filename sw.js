@@ -9,7 +9,7 @@
 // P1-4 修复：CACHE_VERSION 由 scripts/bump-sw.js 基于 git 跟踪的 js/css/data
 // 内容哈希自动生成——修改任何 JS/CSS/data 后运行 `npm run bump:sw` 即可，
 // 不再依赖人肉维护版本号。版本号变化会触发 activate 阶段清理旧缓存并重新预热。
-var CACHE_VERSION = 'bioquest-19ac7a539a03'; // ← bump-sw.js 会自动改写此行
+var CACHE_VERSION = 'bioquest-77d161d20edd'; // ← bump-sw.js 会自动改写此行
 var CACHE_NAME = 'bioquest-cache-' + CACHE_VERSION;
 
 /* ========================================================================
@@ -49,6 +49,9 @@ var SKELETON_ASSETS = [
   './js/utils.js',
   './js/loader.js',
   './js/question-utils.js',
+  // 必要的小型基础依赖（运行时配置 / 数据压缩）
+  './js/config.js',
+  './js/vendor/lz-string.min.js',
   // 必要的 meta/小数据
   './data/_version.json',
   './data/cards.json'
@@ -83,11 +86,16 @@ var WARMUP_PHASE_1 = [
   './js/soundscape.js',
   './js/social-impact.js',
   './js/learning-hub.js',
-  './js/micro-details.js'
+  './js/micro-details.js',
+  // Issue #105 / #123 / #128：通用交互小模块
+  './js/offline-queue.js',
+  './js/offline-status.js',
+  './js/eggs.js'
 ];
 
 // 预热阶段 2：重型功能（quiz/exam/practice 等运行时库 + 数据）
-// 注意：quiz_*.json 很大 (~900KB total)，放在最后一批；即便失败也不影响使用
+// 注意：Issue #115 后不再默认全量预热；本列表保留供页面按需发动
+// WARM_UP 消息（如进入 quiz 路由时拖动预热对应资源）使用，避免 idle 阶段全量抢占带宽。
 var WARMUP_PHASE_2 = [
   // 路由核心
   './js/quiz.js',
@@ -171,11 +179,16 @@ var NEVER_PRECACHE = [
  * 分批预热缓存，每批之间让出主线程：
  *  避免 SW 安装后一次性并发 150+ 请求 → 主页面资源下载被反压，
  *  也避免部分 HTTP/1.1 服务器把并发数打满而报错 499/503。
+ *
+ * Issue #115 修复：不再全量预取（原 WARMUP_PHASE_2 约 50+ 个 JS/数据文件），
+ * 只预热"首屏/高频路由"常用文件（WARMUP_PHASE_1）。重型文件按使用量
+ * 渐进式进入缓存——fetch 策略 3（CSS/JS 网络更新）与策略 2（data 网络优先）
+ * 在用户实际访问对应页面时自然落缓存，避免 idle 阶段抢占带宽。
+ * 需要主动预热时，页面可发消息 { type:'WARM_UP', urls:[...] } 按需拉取。
  */
 function warmupCache() {
   caches.open(CACHE_NAME).then(function (cache) {
-    // 逐个批次串行，批内允许有限并发
-    var batches = [WARMUP_PHASE_1, WARMUP_PHASE_2];
+    var batches = [WARMUP_PHASE_1];
     var batchIdx = 0;
     function nextBatch() {
       if (batchIdx >= batches.length) return;
@@ -451,6 +464,22 @@ self.addEventListener('message', function (event) {
       event.waitUntil(purgeDataCaches().then(function () {
         _reply({ type: 'DATA_CACHE_PURGED' });
       }));
+      break;
+    case 'WARM_UP':
+      // Issue #115：按需渐进式预热。页面在进入某个路由时发送：
+      //   { type:'WARM_UP', urls:[相对路径...] } 或 { type:'WARM_UP', phase:2 }
+      // SW 分批把资源写入外壳缓存（失败忽略）；不阻塞页面主流程。
+      event.waitUntil((function () {
+        var urls = (data.urls && data.urls.length) ? data.urls : (data.phase === 2 ? WARMUP_PHASE_2 : []);
+        if (!urls.length) { _reply({ type: 'WARMED', count: 0 }); return Promise.resolve(); }
+        return caches.open(CACHE_NAME).then(function (cache) {
+          return Promise.all(urls.map(function (url) {
+            return cache.add(url).catch(function () { /* 按需预热失败忽略 */ });
+          }));
+        }).then(function () {
+          _reply({ type: 'WARMED', count: urls.length });
+        });
+      })());
       break;
     default:
       break;

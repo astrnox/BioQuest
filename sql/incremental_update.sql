@@ -4,6 +4,13 @@
 --       community 表、daily_checkins 表、achievements 表、streak 字段
 -- 健壮版：每个语句独立容错，可重复运行，不会因单点失败导致整体崩溃
 -- ============================================================
+-- [幂等改造] Issue #143
+-- 已确认本文件幂等：CREATE EXTENSION/TABLE/INDEX 均带 IF NOT EXISTS；
+-- 列增改用 DO 块 + information_schema.columns 判断 + EXCEPTION 兜底；
+-- RLS 策略全部置于 DO 块 + pg_policies 判断内；CREATE OR REPLACE FUNCTION /
+-- DROP TRIGGER/DROP FUNCTION IF EXISTS + CREATE TRIGGER / DELETE / UPDATE
+-- 均为自然幂等。仅加注释说明，未改动任何业务逻辑。
+-- ============================================================
 
 -- 0. 启用必要扩展
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";

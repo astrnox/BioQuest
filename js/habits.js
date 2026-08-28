@@ -1064,6 +1064,12 @@ function updateHabitCardUI(hid, container) {
     streakEl.textContent = streak > 0 ? ' ' + streak + '天' : '';
   }
 
+  // Issue #128：连续打卡里程碑（每 7 天）触发 DNA 链生长彩蛋
+  if (streak > 0 && streak % 7 === 0 && typeof window.BioEggs === 'object' &&
+      typeof window.BioEggs.dnaGrow === 'function') {
+    try { window.BioEggs.dnaGrow(streakEl || card); } catch (e) {}
+  }
+
   // 更新周视图今天状态
   var weeklyDays = card.querySelectorAll('.habit-weekly-day');
   if (weeklyDays.length > 0) {

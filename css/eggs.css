@@ -1,0 +1,99 @@
+/* ============================================================
+ * Issue #128：生物主题微交互彩蛋
+ * 答题正确 → 细胞分裂动画；连续打卡里程碑 → DNA 链生长动画。
+ * ============================================================ */
+
+/* ---- 细胞分裂爆发 ---- */
+@keyframes bqEggCellSplit {
+  0%   { transform: translate(-50%, -50%) scale(0.2); opacity: 0; }
+  30%  { transform: translate(-50%, -50%) scale(1);   opacity: 1; }
+  70%  { transform: translate(-50%, -55%) scale(1.05); opacity: 1; }
+  100% { transform: translate(-50%, -80%) scale(1.4); opacity: 0; }
+}
+.bq-egg-cell {
+  position: fixed;
+  z-index: 99995;
+  width: 64px;
+  height: 64px;
+  margin: 0;
+  pointer-events: none;
+  animation: bqEggCellSplit 0.9s cubic-bezier(0.2, 0.6, 0.3, 1) forwards;
+}
+.bq-egg-cell::before,
+.bq-egg-cell::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  background: radial-gradient(circle at 35% 35%, #ffdf8e, #f2b04d 70%, #d98e33);
+  border: 2px solid #b9762a;
+  top: 8px;
+}
+.bq-egg-cell::before { left: 4px; }
+.bq-egg-cell::after  { right: 4px; }
+.bq-egg-cell i {
+  position: absolute;
+  top: 14px;
+  left: 50%;
+  width: 8px;
+  height: 30px;
+  background: #7ca86f;
+  border-radius: 4px;
+  transform: translateX(-50%);
+  opacity: 0.85;
+}
+.bq-egg-cell em {
+  position: absolute;
+  top: 18px;
+  left: 50%;
+  width: 3px;
+  height: 18px;
+  background: #e6c25a;
+  border-radius: 2px;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+/* ---- DNA 链生长 ---- */
+@keyframes bqEggDnaGrow {
+  0%   { transform: translate(-50%, 12px) scaleY(0.15); opacity: 0; }
+  40%  { transform: translate(-50%, 0) scaleY(0.6);     opacity: 1; }
+  100% { transform: translate(-50%, -6px) scaleY(1);    opacity: 0; }
+}
+.bq-egg-dna {
+  position: fixed;
+  z-index: 99995;
+  width: 44px;
+  height: 120px;
+  margin: 0;
+  pointer-events: none;
+  transform: translate(-50%, 0);
+  transform-origin: 50% 100%;
+  animation: bqEggDnaGrow 1.1s ease-out forwards;
+}
+.bq-egg-dna svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+.bq-egg-dna .bq-dna-strand {
+  stroke: #5a9e6b;
+  stroke-width: 3;
+  fill: none;
+  stroke-linecap: round;
+}
+.bq-egg-dna .bq-dna-rung {
+  stroke: #e0b84c;
+  stroke-width: 2;
+}
+.bq-egg-dna .bq-dna-node {
+  fill: #7fb069;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bq-egg-cell,
+  .bq-egg-dna {
+    display: none !important;
+  }
+}

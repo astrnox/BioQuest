@@ -1,0 +1,51 @@
+/* ============================================================
+ * Issue #123：全局离线状态提示（顶部横幅）
+ * 断网时展示可见的离线横幅（含待同步操作数量），联网后自动隐藏。
+ * ============================================================ */
+#bq-offline-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99990;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 14px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #fff;
+  background: linear-gradient(90deg, #b3541e, #c96a2e);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+  -webkit-user-select: none;
+  user-select: none;
+}
+#bq-offline-banner.is-visible {
+  display: flex;
+}
+#bq-offline-banner .bq-ob-btn {
+  margin-left: 8px;
+  padding: 2px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  border-radius: 999px;
+  background: transparent;
+  color: #fff;
+  font-size: 12px;
+  cursor: pointer;
+}
+#bq-offline-banner .bq-ob-btn:hover {
+  background: rgba(255, 255, 255, 0.18);
+}
+html[data-theme="dark"] #bq-offline-banner {
+  background: linear-gradient(90deg, #8a4016, #a8551f);
+}
+/* 显示横幅时给页面顶部留出空间，避免遮挡内容 */
+body.bq-offline-active {
+  padding-top: 36px;
+}
+@media (max-width: 600px) {
+  body.bq-offline-active {
+    padding-top: 52px;
+  }
+}

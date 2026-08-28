@@ -1,5 +1,12 @@
 -- ============================================================
 -- BioQuest 数据库迁移 v7：信用点 CR → 信用指数（points）
+-- ============================================================
+-- [幂等改造] Issue #143
+-- 已确认本文件幂等：列增改与 RENAME 均用 DO 块 + information_schema.columns
+-- 判断 + EXCEPTION 兜底；CREATE OR REPLACE FUNCTION /
+-- DROP TRIGGER IF EXISTS + CREATE TRIGGER / UPDATE 均为自然幂等。
+-- 仅加注释说明，未改动任何业务逻辑。
+-- ============================================================
 -- 说明：信用点（CR / points）是社区对用户信任程度的量化，不是经验值、货币。
 -- 1. profiles.cr / cr_updated_at → points / points_updated_at（数据迁移）
 -- 2. q_bounties.cr_reward / extra_reward → points_reward / extra_points

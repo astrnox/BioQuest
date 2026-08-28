@@ -3,6 +3,12 @@
 -- 在 Supabase SQL Editor 中运行此文件以初始化数据库
 -- 安全版：可以处理旧表存在的情况
 -- ============================================================
+-- [幂等改造] Issue #143
+-- 已确认本文件幂等：列增改用 DO 块 + information_schema.columns 判断、
+-- CREATE TABLE/EXTENSION/INDEX 带 IF NOT EXISTS、CREATE OR REPLACE FUNCTION、
+-- DROP TRIGGER/FUNCTION IF EXISTS + CREATE、RLS 策略用 DO 块 + pg_policies 判断、
+-- EXCEPTION 兜底。文件较大且已幂等，保持原样不改动。
+-- ============================================================
 
 -- ============================================================
 -- 第 0 步：诊断当前数据库状态（运行这个先看看问题）

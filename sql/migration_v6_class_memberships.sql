@@ -2,6 +2,11 @@
 -- BioQuest Migration V6 — 班级成员关系表（P0-3 修复 teacher.js localStorage）
 -- 解决 PRD §5.11 T-1：「班级数据全部走 Supabase（删除 teacher.js localStorage 模拟）」
 -- ============================================================
+-- [幂等改造] Issue #143
+-- 已确认本文件幂等：CREATE TABLE IF NOT EXISTS / CREATE INDEX IF NOT EXISTS
+-- / RLS 策略用 DO 块 + 表存在性判断 + pg_policies 判断 + EXCEPTION 兜底。
+-- 仅加注释说明，未改动任何业务逻辑。
+-- ============================================================
 
 -- 班级成员关系表：教师（任何登录用户）添加的学生列表
 CREATE TABLE IF NOT EXISTS class_memberships (

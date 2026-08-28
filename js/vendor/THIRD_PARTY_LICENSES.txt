@@ -37,6 +37,7 @@
 | 20 | react-jsx-runtime polyfill | 自实现（随仓库）|
 | 21 | Excalidraw | 快照 2026-07-23 |
 | 22 | quikchat | 快照 2026-07-23 |
+| 26 | lz-string | 1.5.0（MIT，本地数据压缩，Issue #134，购入 2026-08-28）|
 | 23 | marked | 18.0.7 |
 | 24 | igv.js | 快照 2026-07-23 |
 | 25 | d3 | 7.9.0 |
