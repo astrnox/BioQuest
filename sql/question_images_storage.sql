@@ -27,9 +27,9 @@ UPDATE storage.buckets SET public = true WHERE id = 'question-images';
 -- 2. 读取策略：所有人可读（因为 bucket 是 public）
 DO $$ BEGIN
   IF NOT EXISTS (SELECT 1 FROM pg_policies WHERE schemaname = 'storage' AND tablename = 'objects' AND policyname = 'question_images_read_public') THEN
-    CREATE POLICY "question_images_read_public" ON storage.objects
+    EXECUTE 'CREATE POLICY "question_images_read_public" ON storage.objects
       FOR SELECT TO public
-      USING (bucket_id = 'question-images');
+      USING (bucket_id = ''question-images'')';
   END IF;
 END $$;
 
@@ -37,39 +37,39 @@ END $$;
 -- 注意：需要先运行 schema.sql 中的 bioquest_is_admin() 函数
 DO $$ BEGIN
   IF NOT EXISTS (SELECT 1 FROM pg_policies WHERE schemaname = 'storage' AND tablename = 'objects' AND policyname = 'question_images_upload_admin') THEN
-    CREATE POLICY "question_images_upload_admin" ON storage.objects
+    EXECUTE 'CREATE POLICY "question_images_upload_admin" ON storage.objects
       FOR INSERT TO authenticated
       WITH CHECK (
-        bucket_id = 'question-images'
+        bucket_id = ''question-images''
         AND bioquest_is_admin()
-      );
+      )';
   END IF;
 END $$;
 
 -- 4. 更新策略：仅管理员可更新/替换图片
 DO $$ BEGIN
   IF NOT EXISTS (SELECT 1 FROM pg_policies WHERE schemaname = 'storage' AND tablename = 'objects' AND policyname = 'question_images_update_admin') THEN
-    CREATE POLICY "question_images_update_admin" ON storage.objects
+    EXECUTE 'CREATE POLICY "question_images_update_admin" ON storage.objects
       FOR UPDATE TO authenticated
       USING (
-        bucket_id = 'question-images'
+        bucket_id = ''question-images''
         AND bioquest_is_admin()
       )
       WITH CHECK (
-        bucket_id = 'question-images'
+        bucket_id = ''question-images''
         AND bioquest_is_admin()
-      );
+      )';
   END IF;
 END $$;
 
 -- 5. 删除策略：仅管理员可删除图片
 DO $$ BEGIN
   IF NOT EXISTS (SELECT 1 FROM pg_policies WHERE schemaname = 'storage' AND tablename = 'objects' AND policyname = 'question_images_delete_admin') THEN
-    CREATE POLICY "question_images_delete_admin" ON storage.objects
+    EXECUTE 'CREATE POLICY "question_images_delete_admin" ON storage.objects
       FOR DELETE TO authenticated
       USING (
-        bucket_id = 'question-images'
+        bucket_id = ''question-images''
         AND bioquest_is_admin()
-      );
+      )';
   END IF;
 END $$;

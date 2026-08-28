@@ -32,11 +32,11 @@ alter table public.wiki_entries enable row level security;
 -- 公开可读：匿名与登录用户都能读取词条（词条为公开内容，无敏感数据）
 DO $$ BEGIN
   IF NOT EXISTS (SELECT 1 FROM pg_policies WHERE schemaname = 'public' AND tablename = 'wiki_entries' AND policyname = 'wiki_entries public read') THEN
-    create policy "wiki_entries public read"
+    EXECUTE 'create policy "wiki_entries public read"
       on public.wiki_entries
       for select
       to anon, authenticated
-      using (true);
+      using (true)';
   END IF;
 END $$;
 
