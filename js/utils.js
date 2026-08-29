@@ -1174,12 +1174,21 @@ function timeAgo(date) {
       return function () {};
     }
     var scope = options.scope || 'global';
-    var record = { scope: scope, target: el, type: type, handler: handler, options: options };
-    el.addEventListener(type, handler, options);
+    var once = options.once === true;
+    var wrapped = handler;
+    // once 由 EventHub 自行保证（首次触发即解除），不依赖目标实现是否支持 {once}
+    if (once) {
+      wrapped = function bqEventHubOnce() {
+        remove(scope, el, type, wrapped);
+        return handler.apply(this, arguments);
+      };
+    }
+    var record = { scope: scope, target: el, type: type, handler: wrapped, options: options };
+    el.addEventListener(type, wrapped, options);
     _registry.push(record);
     _scopeCount[scope] = (_scopeCount[scope] || 0) + 1;
     return function off() {
-      remove(scope, el, type, handler);
+      remove(scope, el, type, wrapped);
     };
   }
 
@@ -1222,6 +1231,21 @@ function timeAgo(date) {
   }
 
   /**
+   * 解除监听（对外接口，兼容两种调用方式）：
+   *   EventHub.off(scope)                        — 清空某 scope
+   *   EventHub.off(target, type, handler)        — 元素模式（等价原始 removeEventListener 语义）
+   *   EventHub.off(scope, target, type, handler) — 精确匹配
+   */
+  function off(a, b, c, d) {
+    if (typeof a === 'string') {
+      // scope 位于首参：scope 模式（remove 的 scope 在前）
+      return remove(a, b, c, d);
+    }
+    // 元素模式：off(target, type, handler)
+    return remove(undefined, a, b, c);
+  }
+
+  /**
    * 全部清理。
    */
   function clearAll() {
@@ -1235,6 +1259,6 @@ function timeAgo(date) {
   // 页面卸载时统一解除，避免跨页面残留监听
   window.addEventListener('pagehide', clearAll);
 
-  window.EventHub = { on: on, once: once, off: remove, remove: remove, cleanup: cleanup, clearAll: clearAll };
+  window.EventHub = { on: on, once: once, off: off, remove: remove, cleanup: cleanup, clearAll: clearAll };
   if (window.BioQuest) window.BioQuest.EventHub = window.EventHub;
 })();
