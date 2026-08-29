@@ -27,6 +27,14 @@
 
   function _renderHistory(history) {
     if (!history || history.length === 0) {
+      // Issue #125：统一「温暖空状态」组件（加载失败时回退原有提示）
+      if (root.BioQuest && typeof root.BioQuest.emptyStateHTML === 'function') {
+        return root.BioQuest.emptyStateHTML({
+          icon: '📥',
+          title: '暂无信用变动记录',
+          hint: '答对题目、每日签到、发布帖子等行为会在这里留下记录'
+        });
+      }
       return '<div style="text-align:center;padding:24px;color:var(--text-muted);">暂无信用变动记录</div>';
     }
     var REASONS = {
@@ -127,6 +135,24 @@
       }).join('');
 
       var userInList = (list || []).some(function (item) { return myId && item.id === myId; });
+
+      // Issue #125：榜单为空时展示统一空状态
+      if (!rows) {
+        if (root.BioQuest && typeof root.BioQuest.emptyStateHTML === 'function') {
+          rows = root.BioQuest.emptyStateHTML({
+            icon: '📈',
+            title: '暂无信用排行',
+            hint: '答对题目、每日签到等行为会积累信用点，来成为社区最受信任的用户',
+            action: {
+              label: '去练习',
+              onClick: function () { window.location.hash = '#/practice'; }
+            }
+          });
+        } else {
+          rows = '<div style="text-align:center;padding:40px 0;color:var(--text-muted);">暂无信用排行，完成练习即可上榜</div>';
+        }
+      }
+
       if (myId && !userInList) {
         var myLv = (typeof root.getPointsLevel === 'function') ? root.getPointsLevel(myPoints) : { title: '基本信任', color: '#5a7d5c', icon: '👍' };
         rows += '<div style="display:flex;align-items:center;gap:12px;padding:12px 16px;background:rgba(196,149,106,0.12);border:1px solid var(--color-amber,#c4956a);border-radius:12px;margin-top:12px;">' +

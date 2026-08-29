@@ -90,7 +90,17 @@
     });
 
     if (items.length === 0) {
-      container.innerHTML = '<div class="wb-empty">暂无错题记录。练习时答错的题目会自动收录，也可以点击右上角添加。</div>';
+      // Issue #125：统一「温暖空状态」组件（加载失败时回退原有提示）
+      if (window.BioQuest && typeof window.BioQuest.renderEmptyState === 'function') {
+        window.BioQuest.renderEmptyState(container, {
+          icon: '🐞',
+          title: '暂无错题记录',
+          hint: '练习时答错的题目会自动收录到这里，也可以点击右上角添加',
+          action: { label: '去练习', onClick: function () { window.location.hash = '#/practice'; } }
+        });
+      } else {
+        container.innerHTML = '<div class="wb-empty">暂无错题记录。练习时答错的题目会自动收录，也可以点击右上角添加。</div>';
+      }
       return;
     }
 

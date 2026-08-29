@@ -35,6 +35,15 @@ jobs:
         # `node scripts/verify-vendor-integrity.js --update` 再提交。
         run: node scripts/verify-vendor-integrity.js
 
+      - name: 第三方资源白名单 + SRI 完整性校验（Issue #104）
+        # 纯静态审计（不联网）：外部 URL 域名必须进入 data/third-party-domains.txt
+        # 白名单或内置豁免清单；外链样式/脚本/KaTeX preload 必须携带 integrity。
+        run: node scripts/verify-third-party.js
+
+      - name: 提交信息规范校验（Issue #113）
+        # 校验最近一次提交是否符合 Conventional Commits（与 CONTRIBUTING.md 一致）。
+        run: node scripts/check-commit-msg.js
+
       - name: Install dependencies
         run: npm install
 
