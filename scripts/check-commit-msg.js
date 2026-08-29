@@ -57,11 +57,12 @@ function main() {
   const args = process.argv.slice(2);
 
   for (let i = 0; i < args.length; i++) {
-    if (args[i] === '--subject' && args[i + 1]) {
-      subject = args[i + 1];
+    // 显式传 --subject 时允许值为空字符串（空消息也应按规范失败，
+    // 而不是因 falsy 误判为「未传参」回退到 HEAD——PR CI 中 HEAD 是
+    // 自动生成的 merge commit，其消息不可作数，回退会误报）。
+    if (args[i] === '--subject') {
+      subject = args[i + 1] !== undefined ? args[i + 1] : '';
       i++;
-    } else if (args[i] !== '--subject') {
-      // 忽略未知参数，脚本仍可运行
     }
   }
 
