@@ -41,8 +41,16 @@ jobs:
         run: node scripts/verify-third-party.js
 
       - name: 提交信息规范校验（Issue #113）
-        # 校验最近一次提交是否符合 Conventional Commits（与 CONTRIBUTING.md 一致）。
-        run: node scripts/check-commit-msg.js
+        # pull_request 事件下 checkout 的是自动生成的 merge commit（"Merge X into Y"），
+        # 其信息不可作数，故显式校验 PR head 提交；push 事件无 pull_request 上下文，
+        # 回退校验 HEAD（即最新提交本身）。
+        run: |
+          PR_SHA="${{ github.event.pull_request.head.sha }}"
+          if [ -n "$PR_SHA" ]; then
+            node scripts/check-commit-msg.js --subject "$(git log -1 --format=%s "$PR_SHA")"
+          else
+            node scripts/check-commit-msg.js
+          fi
 
       - name: Install dependencies
         run: npm install
