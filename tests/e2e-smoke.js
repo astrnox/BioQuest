@@ -7,6 +7,8 @@
 //      都能渲染出非空内容（捕获模块未能挂载 / 渲染崩溃等回归）；
 //   3. 重定向路由（/review → /wrongbook、/points-leaderboard → /credit-leaderboard）生效；
 //   4. 全程未触发页面级 JS 异常（pageerror）。
+//   5. （Issue #121 P3-30 视觉回归）关键路由渲染后各截图落盘 /tmp 供人工比对，
+//      并断言渲染期间无 console error（CSS/JS/资源加载失败等视觉破坏信号）。
 //
 // 注意：不把「未登录访问 auth 路由必须被拦截」作为硬性断言——本应用对游客会
 // 建立匿名会话，isLoggedIn() 对游客返回 true（见 supabase-client.js），因此
@@ -20,6 +22,7 @@ const { chromium } = require('playwright');
 const BASE_URL = process.env.E2E_BASE_URL || 'http://localhost:8091';
 const GOTO_TIMEOUT = 30000;
 const SETTLE_MS = 1500; // 路由渲染/动态脚本加载的稳定等待时间
+const SCREENSHOT_DIR = '/tmp/bioquest-e2e'; // 视觉回归截图目录（不污染仓库）
 
 // 关键路由（hash 路由）。只断言「渲染出非空内容」，不做易碎的中文关键词匹配。
 const ROUTES = [
@@ -51,6 +54,17 @@ const REDIRECTS = [
 
   const pageErrors = [];
   page.on('pageerror', err => pageErrors.push({ url: page.url(), msg: err.message }));
+  // Issue #121：记录渲染期间的 console error（CSS/JS/资源加载失败等视觉破坏信号）
+  const consoleErrors = [];
+  page.on('console', msg => {
+    if (msg.type() === 'error') consoleErrors.push({ url: page.url(), text: msg.text().slice(0, 160) });
+  });
+  // 记录 4xx/5xx 响应：本机静态资源失败是视觉硬错误；外域（CDN/Supabase 等）
+  // 失败多为环境相关（如 CI 无后端），仅告警不阻断。
+  const failedRequests = [];
+  page.on('response', resp => {
+    if (resp.status() >= 400) failedRequests.push({ url: resp.url(), status: resp.status() });
+  });
 
   function check(cond, msg) {
     if (cond) {
@@ -89,8 +103,11 @@ const REDIRECTS = [
   check(title && title.trim().length > 0, '页面 title 非空（title=' + title + '）');
   const navCount = await page.locator('.header-nav a, header a[data-route]').count();
   check(navCount > 0, '导航入口非空（nav=' + navCount + '）');
+  const fs = require('fs');
+  fs.mkdirSync(SCREENSHOT_DIR, { recursive: true });
+  await page.screenshot({ path: SCREENSHOT_DIR + '/home.png', fullPage: false }).catch(() => {});
 
-  // 2) 路由逐个渲染
+  // 2) 路由逐个渲染 + 截图（视觉回归留档）
   console.log('\n== 2. 关键路由渲染 ==');
   for (const r of ROUTES) {
     if (r.hash === '/') continue;
@@ -99,6 +116,8 @@ const REDIRECTS = [
       await page.waitForTimeout(SETTLE_MS);
       const text = (await page.locator('#page-content').innerText().catch(() => '')) || '';
       check(text.trim().length > 0, `#${r.hash} 渲染出非空内容`);
+      const shotName = (r.hash === '/' ? 'home' : r.hash.replace(/[^a-z0-9-]/gi, '_')) + '.png';
+      await page.screenshot({ path: SCREENSHOT_DIR + '/' + shotName, fullPage: false }).catch(() => {});
     } catch (e) {
       check(false, `#${r.hash} 访问失败：${e.message}`);
     }
@@ -120,6 +139,25 @@ const REDIRECTS = [
   if (relevantErrors.length) {
     relevantErrors.slice(0, 5).forEach(e => console.error('   - ' + e.url + ' :: ' + e.msg));
   }
+
+  // 5) 渲染期间 JS 级 console error（视觉健康信号）
+  console.log('\n== 5. console error 检查 ==');
+  // 网络层失败（"Failed to load resource"）单独归入 failedRequests 按来源判定；
+  // 此处只拦截真正的 JS 运行时错误（语法/引用/类型错误等）。
+  const runtimeErrors = consoleErrors.filter(e => !/Failed to load resource/.test(e.text || ''));
+  const hardErrors = runtimeErrors.filter(e => !/favicon/.test(e.text || ''));
+  check(hardErrors.length === 0, '渲染期间无 JS 运行时错误（实际 ' + hardErrors.length + ' 个，截图存于 ' + SCREENSHOT_DIR + ' 供视觉比对）');
+  if (hardErrors.length) {
+    hardErrors.slice(0, 5).forEach(e => console.error('   - ' + e.url + ' :: ' + e.text));
+  }
+
+  // 5b) 本机静态资源 4xx/5xx 应严格为零；外域失败（CDN/后端）仅告警
+  console.log('\n== 5b. 资源加载检查（本机严格 / 外域告警） ==');
+  const localFailures = failedRequests.filter(r => r.url.startsWith(BASE_URL));
+  check(localFailures.length === 0, '本机静态资源无 4xx/5xx 失败（实际 ' + localFailures.length + ' 个）');
+  localFailures.slice(0, 5).forEach(r => console.error('   - [本机] ' + r.status + ' ' + r.url));
+  const externalFailures = failedRequests.filter(r => !r.url.startsWith(BASE_URL));
+  externalFailures.slice(0, 5).forEach(r => console.warn('   [外域/后端，仅告警] ' + r.status + ' ' + r.url));
 
   await browser.close();
 

@@ -265,9 +265,9 @@
     }
   </style>
 
-  <!-- KaTeX：首屏不依赖，异步加载 -->
-  <link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" as="style" data-css-async>
-  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"></noscript>
+  <!-- KaTeX：首屏不依赖，异步加载（Issue #104：外链样式带 SRI 完整性校验） -->
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" as="style" data-css-async integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous"></noscript>
 
   <!-- 外部 CDN 失败回退状态与工具函数 -->
   <!-- 启动辅助脚本（defer）：Supabase 延迟加载 + data-route 点击委托兜底 -->
@@ -307,6 +307,12 @@
   <noscript><link rel="stylesheet" href="css/offline-status.css?v=20260828a"></noscript>
   <link rel="preload" href="css/eggs.css?v=20260828a" as="style" data-css-async>
   <noscript><link rel="stylesheet" href="css/eggs.css?v=20260828a"></noscript>
+  <!-- Issue #127：暗色/亮色模式切换过渡动画（仅主题切换时由 JS 临时启用，异步加载） -->
+  <link rel="preload" href="css/theme-transition.css?v=20260828p3" as="style" data-css-async>
+  <noscript><link rel="stylesheet" href="css/theme-transition.css?v=20260828p3"></noscript>
+  <!-- Issue #136：成就徽章面板与解锁 toast 样式（异步加载） -->
+  <link rel="preload" href="css/achievements.css?v=20260828p3" as="style" data-css-async>
+  <noscript><link rel="stylesheet" href="css/achievements.css?v=20260828p3"></noscript>
 </head>
 <body>
   <!-- 首屏骨架遮罩：在 JS/CSS 加载前立即渲染，避免"缩小/两边白边/空白几秒"的现象 -->
@@ -860,5 +866,13 @@
   <!-- 首页关键模块：由 boot-lazy.js 在 DOMContentLoaded 时加载 hero-sketch；非关键模块由 app.js 延迟加载 -->
   <!-- PWA Service Worker 注册（外部化 sw-register.js）：DOMContentLoaded 立即启动，配 6s 硬超时兜底 -->
   <script src="js/sw-register.js?v=20260820a" defer></script>
+  <!-- Issue #116：图片懒加载（非首屏 <img> 补 loading="lazy"，含动态插入扫描） -->
+  <script src="js/lazy-images.js?v=20260828p3" defer></script>
+  <!-- Issue #127：暗色/亮色模式切换过渡动画控制 -->
+  <script src="js/theme-transition.js?v=20260828p3" defer></script>
+  <!-- Issue #125：统一「温暖空状态」组件（错题/收藏/排行/流水等空区域） -->
+  <script src="js/empty-state.js?v=20260828p3" defer></script>
+  <!-- Issue #136：轻量成就/激励引擎（游客与本地场景，登录用户云端徽章不受影响） -->
+  <script src="js/achievements.js?v=20260828p3" defer></script>
 </body>
 </html>

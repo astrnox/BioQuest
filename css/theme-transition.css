@@ -1,0 +1,36 @@
+/* ==========================================================================
+   #127 [P3-34] 暗色/亮色模式切换过渡动画
+   仅当 <html> 带 .bq-theme-anim（由 js/theme-transition.js 在切换 data-theme 后
+   临时添加，600ms 后移除）时，才对所有元素启用背景/文字/边框/阴影的过渡；
+   其余时间该规则不生效，避免全局产生非预期动画副作用。
+   ========================================================================== */
+html.bq-theme-anim *,
+html.bq-theme-anim *::before,
+html.bq-theme-anim *::after {
+  transition:
+    background-color .3s ease,
+    color .3s ease,
+    border-color .3s ease,
+    box-shadow .3s ease !important;
+}
+
+/* will-change 提示：预先告知浏览器参与过渡的元素，减少切换时的合成/闪烁 */
+html.bq-theme-anim body,
+html.bq-theme-anim main,
+html.bq-theme-anim .page-content,
+html.bq-theme-anim .container {
+  will-change: background-color, color;
+}
+html.bq-theme-anim .card,
+html.bq-theme-anim [class*="card-"],
+html.bq-theme-anim [class*="-card"],
+html.bq-theme-anim .section-block {
+  will-change: background-color, border-color, box-shadow;
+}
+
+/* 尊重系统减弱动效偏好：禁用过渡 */
+@media (prefers-reduced-motion: reduce) {
+  html.bq-theme-anim * {
+    transition: none !important;
+  }
+}

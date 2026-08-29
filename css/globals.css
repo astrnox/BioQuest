@@ -3832,3 +3832,82 @@ mark.search-highlight {
   display: none;
 }
 
+/* ============================================================
+ * Issue #125：统一「温暖空状态」组件样式
+ * 供 wrongbook / dashboard / 排行 / 点数流水等空数据区域复用。
+ * ============================================================ */
+.bq-empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 48px 20px;
+  margin: 12px auto;
+  max-width: 420px;
+  text-align: center;
+  color: var(--text-muted, #8a8a8a);
+}
+.bq-empty-icon {
+  font-size: 44px;
+  line-height: 1;
+  filter: saturate(0.85);
+  animation: bqEmptyBob 2.4s ease-in-out infinite;
+}
+@keyframes bqEmptyBob {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-6px); }
+}
+.bq-empty-title {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary, #2c3e30);
+}
+.bq-empty-hint {
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+.bq-empty-cta {
+  margin-top: 6px;
+  padding: 7px 18px;
+  border: none;
+  border-radius: 999px;
+  background: var(--color-primary, #5a7d5c);
+  color: #fff;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+.bq-empty-cta:hover {
+  transform: translateY(-1px);
+  opacity: 0.92;
+}
+@media (prefers-reduced-motion: reduce) {
+  .bq-empty-icon { animation: none; }
+}
+
+/* ============================================================
+ * Issue #118：高频动画合成提示（transform/opacity 友好）
+ * 仅对已知动画热点补充 will-change / 渲染层提示，避免重绘回流。
+ * ============================================================ */
+.bq-egg-cell,
+.bq-egg-dna,
+.habit-flame,
+.habit-particle,
+.bq-empty-icon,
+#bq-boot-logo {
+  will-change: transform, opacity;
+}
+.habit-flame,
+.habit-streak-fire {
+  will-change: transform, box-shadow;
+}
+.lmc-modal,
+.habit-modal,
+.modal {
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+}
+

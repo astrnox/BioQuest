@@ -27,10 +27,9 @@
       return { left: window.innerWidth / 2, top: window.innerHeight / 3 };
     }
     var r = anchor.getBoundingClientRect();
-    return {
-      left: (r.left + (r.width || 0) / 2) + window.scrollX,
-      top: (r.top || window.scrollY + 40) + window.scrollY
-    };
+    // 彩蛋使用 position:fixed（视口坐标系），直接取视口坐标，
+    // 不要再叠加 scrollX/scrollY，否则页面滚动后彩蛋位置会漂移。
+    return { left: r.left + (r.width || 0) / 2, top: r.top || (window.innerHeight / 3) };
   }
 
   /**

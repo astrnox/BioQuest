@@ -551,6 +551,8 @@ function saveRecord(record) {
 
   var saved = safeSetJSON(KEYS.RECORDS, records);
 
+  try { if (typeof window !== 'undefined' && typeof window.dispatchEvent === 'function') { window.dispatchEvent(new CustomEvent('bq:record-saved', { detail: { record: fullRecord } })); } } catch (e) {}
+
   // P0-3: Dual-write 到 Supabase（fire-and-forget，不阻塞 UI）
   _syncPracticeRecordToSupabase(fullRecord);
 

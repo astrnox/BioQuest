@@ -35,6 +35,25 @@ jobs:
         # `node scripts/verify-vendor-integrity.js --update` 再提交。
         run: node scripts/verify-vendor-integrity.js
 
+      - name: 第三方资源白名单 + SRI 完整性校验（Issue #104）
+        # 纯静态审计（不联网）：外部 URL 域名必须进入 data/third-party-domains.txt
+        # 白名单或内置豁免清单；外链样式/脚本/KaTeX preload 必须携带 integrity。
+        run: node scripts/verify-third-party.js
+
+      - name: 提交信息规范校验（Issue #113）
+        # pull_request 事件下 checkout 的是自动生成的 merge commit（"Merge X into Y"），
+        # 其信息不可作数，故显式校验 PR head 提交；push 事件无 pull_request 上下文，
+        # 回退校验 HEAD（即最新提交本身）。
+        run: |
+          PR_SHA="${{ github.event.pull_request.head.sha }}"
+          if [ -n "$PR_SHA" ]; then
+            # 默认 checkout 深度 1，PR head 对象可能不在本地，先以深度 1 拉取
+            git fetch origin "$PR_SHA" --depth=1 2>/dev/null || true
+            node scripts/check-commit-msg.js --subject "$(git log -1 --format=%s "$PR_SHA" 2>/dev/null || true)"
+          else
+            node scripts/check-commit-msg.js
+          fi
+
       - name: Install dependencies
         run: npm install
 

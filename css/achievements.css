@@ -1,0 +1,193 @@
+/* ============================================================
+ * BioQuest — 轻量级成就 / 激励系统样式（P3-36）
+ * 覆盖：解锁 toast（合成属性动画）、成就面板 / 网格 / 条目。
+ * 兼容暗色模式（CSS 变量），并尊重 prefers-reduced-motion。
+ * ============================================================ */
+
+:root {
+  --bq-ach-bg: #ffffff;
+  --bq-ach-bg-soft: rgba(90, 125, 92, 0.07);
+  --bq-ach-border: rgba(26, 58, 42, 0.14);
+  --bq-ach-text: #1a3a2a;
+  --bq-ach-text-muted: #6b6b6b;
+  --bq-ach-accent: #8a6a4a;
+  --bq-ach-shadow: 0 6px 20px rgba(26, 58, 42, 0.16);
+  --bq-ach-gold: #c9a227;
+  --bq-ach-silver: #9aa5b1;
+  --bq-ach-bronze: #b06b3a;
+}
+
+[data-theme='dark'] .bq-ach,
+[data-theme='dark'] .bq-ach-toast {
+  --bq-ach-bg: #1b2a22;
+  --bq-ach-bg-soft: rgba(90, 125, 92, 0.18);
+  --bq-ach-border: rgba(255, 255, 255, 0.12);
+  --bq-ach-text: #e8efe9;
+  --bq-ach-text-muted: #a8b2aa;
+  --bq-ach-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+}
+
+/* ---------- 解锁 toast ---------- */
+.bq-ach-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 96px;
+  z-index: 99999;
+  width: min(360px, calc(100vw - 32px));
+  transform: translate(-50%, 24px);
+  opacity: 0;
+  will-change: transform, opacity;
+  transition: transform 0.45s cubic-bezier(0.2, 0.9, 0.25, 1.2), opacity 0.45s ease;
+  pointer-events: none;
+}
+
+.bq-ach-toast--show {
+  transform: translate(-50%, 0);
+  opacity: 1;
+}
+
+.bq-ach-toast__inner {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+  border-radius: 16px;
+  background: var(--color-sage, #5a7d5c);
+  color: #fff;
+  box-shadow: var(--bq-ach-shadow);
+  border: 1px solid var(--bq-ach-border);
+}
+
+.bq-ach-toast__badge {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.bq-ach-toast__body {
+  min-width: 0;
+}
+
+.bq-ach-toast__tag {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  opacity: 0.9;
+}
+
+.bq-ach-toast__name {
+  font-family: var(--font-serif, 'Noto Serif SC', serif);
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 2px 0;
+}
+
+.bq-ach-toast__desc {
+  font-size: 0.82rem;
+  opacity: 0.9;
+}
+
+.bq-ach-toast__emoji {
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.25));
+}
+
+/* ---------- 成就面板 ---------- */
+.bq-ach {
+  padding: 4px 2px;
+}
+
+.bq-ach__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.bq-ach__title {
+  font-family: var(--font-serif, 'Noto Serif SC', serif);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--bq-ach-text);
+}
+
+.bq-ach__summary {
+  font-size: 0.82rem;
+  color: var(--bq-ach-text-muted);
+}
+
+.bq-ach__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(104px, 1fr));
+  gap: 12px;
+}
+
+.bq-ach__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 12px 8px;
+  border-radius: 12px;
+  border: 1px solid var(--bq-ach-border);
+  background: var(--bq-ach-bg-soft);
+  text-align: center;
+  opacity: 0.55;
+  filter: grayscale(0.7);
+  transition: opacity 0.25s ease, filter 0.25s ease, transform 0.25s ease;
+}
+
+.bq-ach__item--earned {
+  opacity: 1;
+  filter: none;
+  transform: translateY(-1px);
+}
+
+.bq-ach__badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 46px;
+  line-height: 1;
+  font-size: 1.6rem;
+}
+
+.bq-ach__emoji {
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+.bq-ach__name {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--bq-ach-text);
+}
+
+.bq-ach__desc {
+  font-size: 0.66rem;
+  color: var(--bq-ach-text-muted);
+  line-height: 1.35;
+}
+
+.bq-ach__item--earned .bq-ach__name { color: var(--bq-ach-accent); }
+
+/* tier 描边点缀 */
+.bq-ach__item[data-key*='_30'],
+.bq-ach__item[data-key*='_200'],
+.bq-ach__item[data-key*='favorite_20'] .bq-ach__name { color: var(--bq-ach-gold); }
+
+/* ---------- 无障碍：尊重减少动效偏好 ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .bq-ach-toast,
+  .bq-ach-toast--show {
+    transition: opacity 0.15s linear;
+    transform: translate(-50%, 0);
+  }
+  .bq-ach__item {
+    transition: none;
+  }
+}

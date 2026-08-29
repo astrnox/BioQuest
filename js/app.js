@@ -4533,7 +4533,16 @@ async function loadLbData(tabName) {
       }
       listEl.innerHTML = html;
     } else {
-      listEl.innerHTML = '<div style="text-align:center;color:#6b7f74;padding:40px 0;">暂无排行数据<br><span style="font-size:0.78rem;color:#8a8a8a;">完成练习后即可上榜</span></div>';
+      // Issue #125：统一「温暖空状态」组件（加载失败时回退原有提示）
+      if (window.BioQuest && typeof window.BioQuest.renderEmptyState === 'function') {
+        window.BioQuest.renderEmptyState(listEl, {
+          icon: '📈',
+          title: '暂无排行数据',
+          hint: '完成练习后即可上榜'
+        });
+      } else {
+        listEl.innerHTML = '<div style="text-align:center;color:#6b7f74;padding:40px 0;">暂无排行数据<br><span style="font-size:0.78rem;color:#8a8a8a;">完成练习后即可上榜</span></div>';
+      }
     }
   } catch (err) {
     if (listEl) {
@@ -4951,7 +4960,16 @@ async function loadLbPageData(tabName) {
       }
       listEl.innerHTML = html;
     } else {
-      listEl.innerHTML = '<div style="text-align:center;color:#6b7f74;padding:40px 0;">暂无排行数据<br><span style="font-size:0.78rem;color:#8a8a8a;">完成练习后即可上榜</span></div>';
+      // Issue #125：统一「温暖空状态」组件（加载失败时回退原有提示）
+      if (window.BioQuest && typeof window.BioQuest.renderEmptyState === 'function') {
+        window.BioQuest.renderEmptyState(listEl, {
+          icon: '📈',
+          title: '暂无排行数据',
+          hint: '完成练习后即可上榜'
+        });
+      } else {
+        listEl.innerHTML = '<div style="text-align:center;color:#6b7f74;padding:40px 0;">暂无排行数据<br><span style="font-size:0.78rem;color:#8a8a8a;">完成练习后即可上榜</span></div>';
+      }
     }
   } catch (err) {
     listEl.innerHTML = '<div style="text-align:center;color:#6b7f74;padding:40px 0;">排行榜数据暂不可用<br><span style="font-size:0.78rem;color:#8a8a8a;">' + (err && err.message ? err.message : '请稍后重试') + '</span></div>';
