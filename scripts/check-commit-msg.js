@@ -27,7 +27,13 @@ const EXAMPLES = [
 ].join('\n');
 
 function getLastCommitSubject() {
-  const out = execSync('git log -1 --format=%s', { encoding: 'utf8' });
+  // PR CI（pull_request 事件）中 checkout 的是自动生成的合并提交
+  // （HEAD 消息形如 "Merge X into Y"），真正要校验的是 PR head 提交，
+  // 它位于 MERGE_HEAD。push 事件/本地无 MERGE_HEAD，退回校验 HEAD。
+  const out = execSync(
+    'if git rev-parse --verify -q MERGE_HEAD >/dev/null 2>&1; then git log -1 --format=%s MERGE_HEAD; else git log -1 --format=%s; fi',
+    { encoding: 'utf8' }
+  );
   return out ? out.replace(/\n+$/, '') : '';
 }
 
