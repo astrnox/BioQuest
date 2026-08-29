@@ -16,7 +16,7 @@
       {
         "label": "C",
         "text": "比较基因组学可以帮助识别功能重要的保守元件",
-        "answer": false
+        "answer": true
       },
       {
         "label": "D",
@@ -24,7 +24,7 @@
         "answer": true
       }
     ],
-    "explanation": "正确答案：A, D。详细解析请参见相关教材。",
+    "explanation": "A【对】比较不同物种基因组正是比较基因组学的核心，用于研究基因进化与功能。B【错】它不仅分析编码基因，也分析启动子、增强子、lncRNA 等非编码保守元件与结构变异。C【对】高度保守的序列通常提示功能重要，是全基因组水平识别功能元件的主要依据。D【对】共线性分析比较基因在染色体上的排列顺序，可识别保守的基因簇与染色体重排。",
     "subject": "生物信息学",
     "concept": "比较基因组学",
     "difficulty": "high_school",
@@ -44,12 +44,12 @@
       {
         "label": "A",
         "text": "ChIP-seq实验包括交联、免疫沉淀、测序和数据分析",
-        "answer": false
+        "answer": true
       },
       {
         "label": "B",
         "text": "ChIP-seq可以绘制全基因组范围的组蛋白修饰图谱",
-        "answer": false
+        "answer": true
       },
       {
         "label": "C",
@@ -62,7 +62,7 @@
         "answer": true
       }
     ],
-    "explanation": "正确答案：D。详细解析请参见相关教材。",
+    "explanation": "A【对】ChIP-seq 流程确为交联、免疫沉淀富集、测序与数据分析四步，描述准确。B【对】以组蛋白修饰特异性抗体进行沉淀即可绘制全基因组修饰图谱，是典型应用。C【错】恰恰相反，ChIP-seq 常用于研究转录因子在全基因组上的结合模式，'不能'表述错误。D【对】凡蛋白质与 DNA 的结合（转录因子、组蛋白修饰）均可被检测，是对该技术用途的准确概括。",
     "subject": "生物信息学",
     "concept": "ChIP-seq",
     "difficulty": "league",
@@ -85,21 +85,21 @@
   },
   "M4-15-d6e03be35bca": {
     "type": "mtf",
-    "question": "关于ATAC-seq技术，以下说法正确的有哪些？",
+    "question": "关于ATAC-seq技术，以下判断正确的有哪些？",
     "subQuestions": [
       {
         "label": "A",
         "text": "ATAC-seq利用Tn5转座酶检测基因组开放区域",
-        "answer": false
+        "answer": true
       },
       {
         "label": "B",
         "text": "ATAC-seq可以反映染色质的可及性（accessibility）",
-        "answer": false
+        "answer": true
       },
       {
         "label": "C",
-        "text": "ATAC-seq不需要进行片段化处理",
+        "text": "ATAC-seq在测序前必须像ChIP-seq一样用超声波进行物理片段化",
         "answer": false
       },
       {
@@ -108,7 +108,7 @@
         "answer": true
       }
     ],
-    "explanation": "正确答案：D。详细解析请参见相关教材。",
+    "explanation": "A【对】ATAC-seq 利用高活性 Tn5 转座酶插入开放染色质区并同时加接头，测序检出的正是开放区域。B【对】开放区域可被转座酶接近，测序信号直接反映染色质可及性（accessibility）。C【错】ATAC-seq 的片段化由 Tn5 转座整合时一并完成，无需额外的物理超声波片段化步骤，题干说法与实际相反。D【对】ATAC-seq 仅需数千个细胞即可完成，远少于 ChIP-seq 的百万级起始量，这是其突出优势。",
     "subject": "生物信息学",
     "concept": "ATAC-seq",
     "difficulty": "league",
@@ -151,10 +151,10 @@
       {
         "label": "D",
         "text": "InterPro整合了多个蛋白质特征数据库的资源",
-        "answer": false
+        "answer": true
       }
     ],
-    "explanation": "正确答案：A, C。详细解析请参见相关教材。",
+    "explanation": "A【对】Pfam 以多序列比对构建隐马尔可夫模型，收录大量蛋白质家族与结构域信息。B【错】结构域是功能单元，识别结构域可直接推断蛋白功能（如激酶结构域提示磷酸化功能），'不能帮助推断'错误。C【对】结构域是序列、结构与功能的保守模块，是蛋白质结构功能的基本组成单位。D【对】InterPro 将 Pfam、SMART、PANTHER 等多个特征数据库统一整合检索，描述正确。",
     "subject": "生物信息学",
     "concept": "蛋白质结构域预测",
     "difficulty": "high_school",
@@ -174,12 +174,12 @@
       {
         "label": "A",
         "text": "不完全谱系分选（ILS）可以导致不同基因的进化树不一致",
-        "answer": false
+        "answer": true
       },
       {
         "label": "B",
         "text": "系统发生基因组学利用基因组数据研究物种的进化关系",
-        "answer": false
+        "answer": true
       },
       {
         "label": "C",
@@ -189,10 +189,10 @@
       {
         "label": "D",
         "text": "系统发生基因组学不能解决快速辐射演化的问题",
-        "answer": true
+        "answer": false
       }
     ],
-    "explanation": "正确答案：C, D。详细解析请参见相关教材。",
+    "explanation": "A【对】ILS 指祖先群体多态在成种后的随机保留使基因树与物种树不一致，是不同基因建树结果分歧的重要原因。B【对】以基因组规模的分子数据重建物种进化关系，正是该学科的定义。C【对】基因组提供大量独立位点，统计信息远超单基因，可提高建树分辨率与支持度。D【错】全基因组策略与溯祖模型正是为应对快速辐射等难题而发展，如采用多位点联合建树，'不能解决'的说法错误。",
     "subject": "生物信息学",
     "concept": "系统发生基因组学",
     "difficulty": "league",
