@@ -59,6 +59,12 @@ const REDIRECTS = [
   page.on('console', msg => {
     if (msg.type() === 'error') consoleErrors.push({ url: page.url(), text: msg.text().slice(0, 160) });
   });
+  // 记录 4xx/5xx 响应：本机静态资源失败是视觉硬错误；外域（CDN/Supabase 等）
+  // 失败多为环境相关（如 CI 无后端），仅告警不阻断。
+  const failedRequests = [];
+  page.on('response', resp => {
+    if (resp.status() >= 400) failedRequests.push({ url: resp.url(), status: resp.status() });
+  });
 
   function check(cond, msg) {
     if (cond) {
@@ -134,13 +140,24 @@ const REDIRECTS = [
     relevantErrors.slice(0, 5).forEach(e => console.error('   - ' + e.url + ' :: ' + e.msg));
   }
 
-  // 5) 渲染期间 console error（视觉健康信号：CSS/JS/资源加载失败）
+  // 5) 渲染期间 JS 级 console error（视觉健康信号）
   console.log('\n== 5. console error 检查 ==');
-  const relevantConsoleErrors = consoleErrors.filter(e => !/favicon|Failed to load resource: net::/.test(e.text || ''));
-  check(relevantConsoleErrors.length === 0, '渲染期间无 console error（实际 ' + relevantConsoleErrors.length + ' 个，截图存于 ' + SCREENSHOT_DIR + ' 供视觉比对）');
-  if (relevantConsoleErrors.length) {
-    relevantConsoleErrors.slice(0, 5).forEach(e => console.error('   - ' + e.url + ' :: ' + e.text));
+  // 网络层失败（"Failed to load resource"）单独归入 failedRequests 按来源判定；
+  // 此处只拦截真正的 JS 运行时错误（语法/引用/类型错误等）。
+  const runtimeErrors = consoleErrors.filter(e => !/Failed to load resource/.test(e.text || ''));
+  const hardErrors = runtimeErrors.filter(e => !/favicon/.test(e.text || ''));
+  check(hardErrors.length === 0, '渲染期间无 JS 运行时错误（实际 ' + hardErrors.length + ' 个，截图存于 ' + SCREENSHOT_DIR + ' 供视觉比对）');
+  if (hardErrors.length) {
+    hardErrors.slice(0, 5).forEach(e => console.error('   - ' + e.url + ' :: ' + e.text));
   }
+
+  // 5b) 本机静态资源 4xx/5xx 应严格为零；外域失败（CDN/后端）仅告警
+  console.log('\n== 5b. 资源加载检查（本机严格 / 外域告警） ==');
+  const localFailures = failedRequests.filter(r => r.url.startsWith(BASE_URL));
+  check(localFailures.length === 0, '本机静态资源无 4xx/5xx 失败（实际 ' + localFailures.length + ' 个）');
+  localFailures.slice(0, 5).forEach(r => console.error('   - [本机] ' + r.status + ' ' + r.url));
+  const externalFailures = failedRequests.filter(r => !r.url.startsWith(BASE_URL));
+  externalFailures.slice(0, 5).forEach(r => console.warn('   [外域/后端，仅告警] ' + r.status + ' ' + r.url));
 
   await browser.close();
 
