@@ -1,1 +1,21 @@
-{}
+{
+  "M3-01-6ca40312": {
+    "diff": "league",
+    "difficulty": "league",
+    "has_image": false,
+    "len": 69,
+    "module": "module_3",
+    "src": "microbial_eco",
+    "tag": "microbial_eco",
+    "tags": [
+      "microbial_eco",
+      "module_3",
+      "微生物学",
+      "肠道菌群",
+      "短链脂肪酸",
+      "肠脑轴"
+    ],
+    "target": "competition",
+    "year": null
+  }
+}

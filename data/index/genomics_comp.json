@@ -1,1 +1,20 @@
-{}
+{
+  "M4-01-7476e725": {
+    "diff": "league",
+    "difficulty": "league",
+    "has_image": false,
+    "len": 72,
+    "module": "module_4",
+    "src": "genomics_comp",
+    "tag": "genomics_comp",
+    "tags": [
+      "genomics_comp",
+      "module_4",
+      "基因组学",
+      "泛基因组",
+      "结构变异"
+    ],
+    "target": "competition",
+    "year": null
+  }
+}

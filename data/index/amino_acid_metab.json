@@ -1,1 +1,20 @@
-{}
+{
+  "M1-01-5516890d": {
+    "diff": "league",
+    "difficulty": "league",
+    "has_image": false,
+    "len": 62,
+    "module": "module_1",
+    "src": "amino_acid_metab",
+    "tag": "amino_acid_metab",
+    "tags": [
+      "amino_acid_metab",
+      "module_1",
+      "生物化学",
+      "蛋白质结构",
+      "AlphaFold"
+    ],
+    "target": "competition",
+    "year": null
+  }
+}

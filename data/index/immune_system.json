@@ -1,1 +1,20 @@
-{}
+{
+  "M3-01-a898fe16": {
+    "diff": "league",
+    "difficulty": "league",
+    "has_image": false,
+    "len": 89,
+    "module": "module_3",
+    "src": "immune_system",
+    "tag": "immune_system",
+    "tags": [
+      "immune_system",
+      "module_3",
+      "免疫学",
+      "CAR-T",
+      "肿瘤免疫"
+    ],
+    "target": "competition",
+    "year": null
+  }
+}

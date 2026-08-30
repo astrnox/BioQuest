@@ -2,7 +2,129 @@
   "_meta": {
     "generated_at": "2026-08-30",
     "schema_version": 1,
-    "total": 0
+    "total": 11
   },
-  "questions": {}
+  "questions": {
+    "M1-01-4000ade1": {
+      "concept": "CRISPR 碱基编辑",
+      "difficulty": "league",
+      "file": "molecular_tech/league/M1-01-4000ade1.json",
+      "has_image": false,
+      "len": 56,
+      "subject": "生物技术",
+      "tag": "molecular_tech",
+      "target": "competition",
+      "type": "mtf"
+    },
+    "M1-01-5516890d": {
+      "concept": "蛋白质结构预测与序列-结构-功能关系",
+      "difficulty": "league",
+      "file": "amino_acid_metab/league/M1-01-5516890d.json",
+      "has_image": false,
+      "len": 62,
+      "subject": "生物化学",
+      "tag": "amino_acid_metab",
+      "target": "competition",
+      "type": "mtf"
+    },
+    "M1-01-f73d8d73": {
+      "concept": "microRNA 加工与转录后调控",
+      "difficulty": "league",
+      "file": "rna_biology/league/M1-01-f73d8d73.json",
+      "has_image": false,
+      "len": 65,
+      "subject": "分子生物学",
+      "tag": "rna_biology",
+      "target": "competition",
+      "type": "mtf"
+    },
+    "M1-02-30bbc833": {
+      "concept": "m6A RNA 修饰与表观转录组",
+      "difficulty": "league",
+      "file": "rna_biology/league/M1-02-30bbc833.json",
+      "has_image": false,
+      "len": 57,
+      "subject": "分子生物学",
+      "tag": "rna_biology",
+      "target": "competition",
+      "type": "mtf"
+    },
+    "M2-01-6d709f24": {
+      "concept": "植物干旱胁迫响应与渗透调节",
+      "difficulty": "league",
+      "file": "plant_stress/league/M2-01-6d709f24.json",
+      "has_image": false,
+      "len": 47,
+      "subject": "植物生理学",
+      "tag": "plant_stress",
+      "target": "competition",
+      "type": "mtf"
+    },
+    "M2-01-f05ce501": {
+      "concept": "空间转录组学与肿瘤微环境",
+      "difficulty": "league",
+      "file": "cell_signal/league/M2-01-f05ce501.json",
+      "has_image": false,
+      "len": 46,
+      "subject": "细胞生物学",
+      "tag": "cell_signal",
+      "target": "competition",
+      "type": "mtf"
+    },
+    "M3-01-6ca40312": {
+      "concept": "肠道菌群代谢物与宿主互作",
+      "difficulty": "league",
+      "file": "microbial_eco/league/M3-01-6ca40312.json",
+      "has_image": false,
+      "len": 69,
+      "subject": "微生物学",
+      "tag": "microbial_eco",
+      "target": "competition",
+      "type": "mtf"
+    },
+    "M3-01-a898fe16": {
+      "concept": "CAR-T 细胞疗法与肿瘤免疫",
+      "difficulty": "league",
+      "file": "immune_system/league/M3-01-a898fe16.json",
+      "has_image": false,
+      "len": 89,
+      "subject": "免疫学",
+      "tag": "immune_system",
+      "target": "competition",
+      "type": "mtf"
+    },
+    "M4-01-516222a8": {
+      "concept": "古 DNA 与人类演化",
+      "difficulty": "league",
+      "file": "molecular_evo/league/M4-01-516222a8.json",
+      "has_image": false,
+      "len": 66,
+      "subject": "进化生物学",
+      "tag": "molecular_evo",
+      "target": "competition",
+      "type": "mtf"
+    },
+    "M4-01-7476e725": {
+      "concept": "人类泛基因组与图参考",
+      "difficulty": "league",
+      "file": "genomics_comp/league/M4-01-7476e725.json",
+      "has_image": false,
+      "len": 72,
+      "subject": "基因组学",
+      "tag": "genomics_comp",
+      "target": "competition",
+      "type": "mtf"
+    },
+    "M4-01-ac721614": {
+      "concept": "DNA 甲基化时钟与表观遗传衰老",
+      "difficulty": "league",
+      "file": "gene_regulation/league/M4-01-ac721614.json",
+      "has_image": false,
+      "len": 58,
+      "subject": "遗传学",
+      "tag": "gene_regulation",
+      "target": "competition",
+      "type": "mtf"
+    }
+  }
 }

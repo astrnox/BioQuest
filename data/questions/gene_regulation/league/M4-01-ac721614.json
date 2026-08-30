@@ -1,0 +1,48 @@
+{
+  "concept": "DNA 甲基化时钟与表观遗传衰老",
+  "difficulty": "league",
+  "explanation": "A【对】依据：Horvath 时钟等基于 353 个 CpG 位点的甲基化水平，这些位点的甲基化变化与细胞分裂次数、干细胞耗竭、表观遗传漂移等衰老机制相关，具有生物学意义而非随机噪声。\nB【对】依据：Horvath 多组织时钟在 51 种人体组织和细胞类型中均表现出高相关性（r > 0.9），表明甲基化衰老信号具有跨组织保守性。\nC【对】依据：表观遗传年龄（DNAm age）与实际年龄的差值（age acceleration residual, AAR）可量化衰老加速，AAR 正值与死亡率、年龄相关疾病风险正相关。\nD【错】错因：近年研究表明表观遗传年龄可通过干预逆转，如 Yamanaka 因子（OSKM）部分重编程可重置甲基化时钟，生活方式干预（饮食、运动）也可减缓表观遗传衰老速率。",
+  "question": "DNA 甲基化时钟通过分析特定 CpG 位点的甲基化水平来预测个体的生物学年龄。关于表观遗传时钟，下列叙述正确的有：",
+  "references": [
+    {
+      "authors": "Bell CG et al.",
+      "doi": "10.1186/s13059-023-03044-7",
+      "journal": "Genome Biology",
+      "title": "DNA methylation-based measures of biological age: a systematic review",
+      "year": 2023
+    }
+  ],
+  "subQuestions": [
+    {
+      "answer": true,
+      "label": "A",
+      "text": "DNA 甲基化随年龄的变化并非完全随机，而是反映了生物学衰老过程"
+    },
+    {
+      "answer": true,
+      "label": "B",
+      "text": "表观遗传时钟在不同组织中具有相似的预测准确性"
+    },
+    {
+      "answer": true,
+      "label": "C",
+      "text": "表观遗传年龄与实际年龄的偏差可用于评估个体的衰老加速程度"
+    },
+    {
+      "answer": false,
+      "label": "D",
+      "text": "表观遗传年龄一旦确定便不可逆转"
+    }
+  ],
+  "subject": "遗传学",
+  "tags": [
+    "gene_regulation",
+    "module_4",
+    "遗传学",
+    "表观遗传",
+    "DNA 甲基化",
+    "衰老"
+  ],
+  "target": "competition",
+  "type": "mtf"
+}

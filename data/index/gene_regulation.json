@@ -1,1 +1,21 @@
-{}
+{
+  "M4-01-ac721614": {
+    "diff": "league",
+    "difficulty": "league",
+    "has_image": false,
+    "len": 58,
+    "module": "module_4",
+    "src": "gene_regulation",
+    "tag": "gene_regulation",
+    "tags": [
+      "gene_regulation",
+      "module_4",
+      "遗传学",
+      "表观遗传",
+      "DNA 甲基化",
+      "衰老"
+    ],
+    "target": "competition",
+    "year": null
+  }
+}
