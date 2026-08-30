@@ -1,7 +1,12 @@
 {
-  "version": "5.0.0",
-  "updated_at": "2026-08-16",
+  "version": "5.1.0",
+  "updated_at": "2026-08-29",
   "changes": [
+    {
+      "date": "2026-08-29",
+      "version": "5.1.0",
+      "description": "题库 per-id 重构与图片管线（审核规则 v1.1）：存储真源迁移为 data/questions/<tag>/<difficulty>/<id>.json 一题一文件 + data/questions/id-all.json（id大全筛选索引），data/bank、data/index、manifest 改为脚本再生产物（tools/python/rebuild-bank-perid.py：build/clear/verify/new）；新增论文配图管线 tools/python/fetch-figures.py（stage/attach/fetch/coverage/license，仅收录 OA/CC-BY 真实论文图，目标带图占比≥30%）；旧占位题库已清空（manifest rev=4, total=0），等待按规则 v1.1 全量重写。"
+    },
     {
       "date": "2026-08-16",
       "version": "5.0.0",
