@@ -118,6 +118,26 @@ describe('本地题库模式（PREFER_LOCAL）', () => {
     });
   });
 
+  test('带图题的 image.file 被映射为 chart（本地题库图片渲染前提）', async () => {
+    const items = await window.loadQuestions([1, 2, 3, 4], { mode: window.LoaderMode.PREFER_LOCAL });
+    // 从 id-all.json 读取 has_image 判定，核对全库带图题而非硬编码
+    const idAll = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/questions/id-all.json'), 'utf-8'));
+    const withImage = Object.keys(idAll.questions || {}).filter((k) => idAll.questions[k].has_image);
+    expect(withImage.length).toBeGreaterThan(0);
+
+    const byId = {};
+    items.forEach((q) => { byId[q.bioId || q.id] = q; });
+    withImage.forEach((id) => {
+      const q = byId[id];
+      expect(q).toBeTruthy();
+      // chart 必须被映射为本地相对路径，且对应文件真实存在
+      expect(typeof q.chart).toBe('string');
+      expect(q.chart).toMatch(/\.(png|jpe?g|webp|gif|svg)([?#]|$)/i);
+      const filePath = path.join(ROOT, q.chart.split(/[?#]/)[0]);
+      expect(fs.existsSync(filePath)).toBe(true);
+    });
+  });
+
   test('PREFER_LOCAL 全程不发起任何 Supabase 请求', async () => {
     await window.loadQuestions([1, 2, 3, 4], { mode: window.LoaderMode.PREFER_LOCAL });
     // 第二次调用可能命中内存/IndexedDB 缓存 → 0 个网络请求（依然符合本地模式）
