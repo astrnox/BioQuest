@@ -242,12 +242,17 @@ MPL-2.0 为弱 copyleft 协议：允许修改与商用，但修改过的文件�
 
 ## 致谢
 
-- 感谢 **Congqianguo** 的贡献与支持
+- 感谢 **Congqianguo** 在项目初期的贡献与支持
+- 感谢各位本仓库的贡献者
 - 感谢 Open Spaced Repetition 社区提供的 FSRS 算法
 - 感谢所有开源库的作者
 - 感谢 [PhET Interactive Simulations](https://phet.colorado.edu)（科罗拉多大学博尔德分校）提供的优质互动模拟
+- 感谢[DNSHE](https://dnshe.com)的免费二级域名
 - 感谢每一位使用 BioQuest 学生物的同学，祝考试顺利
 
+
+---
+**计划改名为GAGABOX,敬请期待~**
 <div align="center">
 
 用 BioQuest，学生物不迷路
