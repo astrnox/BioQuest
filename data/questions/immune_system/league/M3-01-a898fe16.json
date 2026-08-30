@@ -2,6 +2,16 @@
   "concept": "CAR-T 细胞疗法与肿瘤免疫",
   "difficulty": "league",
   "explanation": "A【对】依据：CAR 的 scFv（单链可变区片段）直接识别靶抗原的构象表位，不依赖 MHC-肽复合物呈递，因此可克服肿瘤 MHC 下调导致的免疫逃逸，这是 CAR-T 相对于 TCR-T 的核心优势。\nB【对】依据：第二代 CAR 引入 CD28 或 4-1BB 共刺激域，CD28 促进 T 细胞快速扩增和效应功能，4-1BB 增强持久性和记忆形成，二者均通过招募信号分子（如 TRAF2/PI3K）激活下游通路。\nC【错】错因：CRS 是 CAR-T 疗法最严重的不良反应之一，由大量活化的 T 细胞和巨噬细胞释放 IL-6、IFN-γ 等细胞因子引起，重度 CRS 可致高热、低血压、器官衰竭，需用托珠单抗（抗 IL-6R）或糖皮质激素干预。\nD【错】错因：CD19 主要表达于 B 细胞谱系（包括 B 细胞淋巴瘤和白血病），不表达于 T 细胞、髓系或实体瘤细胞，因此 CD19 CAR-T 仅对 B 细胞来源的肿瘤有效，'所有类型'表述错误。",
+  "image": {
+    "caption": "CAR-T 细胞疗法制造流程",
+    "credit": "Mitra A et al., Front Immunol 2023",
+    "doi": "10.3389/fimmu.2023.1188049",
+    "figure": "1",
+    "file": "assets/questions/M3-01-a898fe16/fig1.jpg",
+    "license": "CC BY 4.0",
+    "pmcId": "PMC10225594",
+    "source": "paper"
+  },
   "question": "研究者从 B 细胞淋巴瘤患者体内分离 T 细胞，经基因工程改造使其表达靶向 CD19 的嵌合抗原受体（CAR），回输后肿瘤显著缩小。关于 CAR-T 细胞疗法，下列叙述正确的有：",
   "references": [
     {

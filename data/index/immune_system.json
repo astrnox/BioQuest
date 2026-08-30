@@ -2,7 +2,7 @@
   "M3-01-a898fe16": {
     "diff": "league",
     "difficulty": "league",
-    "has_image": false,
+    "has_image": true,
     "len": 89,
     "module": "module_3",
     "src": "immune_system",

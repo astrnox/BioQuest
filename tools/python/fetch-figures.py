@@ -80,10 +80,17 @@ def resolve_blob_url(pmcid, filename):
     except Exception as e:
         print(f"  [warn] 文章页拉取失败(用于解析图地址): {e}")
         return None
-    m = re.search(r'src="(https://cdn\.ncbi\.nlm\.nih\.gov/pmc/blob[^"\s]*?' + re.escape(filename) + r')"', html)
-    if not m:
-        m = re.search(r'(https://cdn\.ncbi\.nlm\.nih\.gov/pmc/blob[^"\s]*?' + re.escape(filename) + r')', html)
-    return m.group(1) if m else None
+    # 新版 PMC 使用 blobs（复数）路径
+    for pattern in (
+        r'src="(https://cdn\.ncbi\.nlm\.nih\.gov/pmc/blobs[^"\s]*?' + re.escape(filename) + r')"',
+        r'(https://cdn\.ncbi\.nlm\.nih\.gov/pmc/blobs[^"\s]*?' + re.escape(filename) + r')',
+        r'src="(https://cdn\.ncbi\.nlm\.nih\.gov/pmc/blob[^"\s]*?' + re.escape(filename) + r')"',
+        r'(https://cdn\.ncbi\.nlm\.nih\.gov/pmc/blob[^"\s]*?' + re.escape(filename) + r')',
+    ):
+        m = re.search(pattern, html)
+        if m:
+            return m.group(1)
+    return None
 
 
 def find_graphic(xml, figure_no):
@@ -91,8 +98,12 @@ def find_graphic(xml, figure_no):
     figs = list(re.finditer(r"<fig[^>]*id=[\"']([^\"']*)[\"'][^>]*>(.*?)</fig>", xml, re.S))
     for m in figs:
         fid, body = m.group(1), m.group(2)
-        if figure_no and not re.search(rf"\bfig{re.escape(figure_no)}\b", fid):
-            continue
+        if figure_no:
+            # 支持多种 fig id 格式：fig1 / F1 / BST-52-707F1 / fig-1 / f1 / f001 等
+            num = re.escape(figure_no)
+            # 匹配 F1, fig1, F01, f1, f001 等多种编号风格（允许前导零）
+            if not re.search(rf"(?:fig)?[_-]?f0*{num}0*\b", fid, re.I):
+                continue
         cap = re.search(r"<caption>(.*?)</caption>", body, re.S)
         g = re.search(r"<(?:graphic|media)\b[^>]*\bxlink:href=[\"']([^\"']+)[\"']", body)
         if g:
@@ -207,7 +218,7 @@ def attach(args):
     return 0
 
 
-def coverage():
+def coverage(args=None):
     if not ID_ALL.exists():
         print("id大全不存在（题库尚未构建）")
         return 0

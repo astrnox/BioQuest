@@ -2,7 +2,7 @@
   "M4-01-516222a8": {
     "diff": "league",
     "difficulty": "league",
-    "has_image": false,
+    "has_image": true,
     "len": 66,
     "module": "module_4",
     "src": "molecular_evo",

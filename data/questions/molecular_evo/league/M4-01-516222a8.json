@@ -2,6 +2,16 @@
   "concept": "古 DNA 与人类演化",
   "difficulty": "league",
   "explanation": "A【对】依据：古 DNA 在埋藏过程中发生水解和氧化损伤，最典型的是胞嘧啶脱氨基为尿嘧啶（C→U），PCR 扩增时 U 被读为 T，导致片段末端出现 C→T 替换，这是鉴定古 DNA 真实性的关键指标。\nB【对】依据：每个细胞含数百至数千个线粒体 DNA 拷贝，而核基因组仅 2 份，在 DNA 严重降解的古样本中，mtDNA 的回收率远高于核 DNA，因此早期古 DNA 研究多从 mtDNA 入手。\nC【对】依据：通过比对尼安德特人、丹尼索瓦人和现代人类的核基因组，发现非非洲人群基因组中约 1-2% 来自尼安德特人，证实了走出非洲后存在杂交事件（introgression）。\nD【错】错因：DNA 测序仅能获取基因组序列信息，基因表达（转录组）需要 RNA 作为模板，而 RNA 比 DNA 更不稳定，古样本中极难保存完整 mRNA，因此古 DNA 无法直接反映基因表达模式。",
+  "image": {
+    "caption": "古人类适应性基因渗入检测",
+    "credit": "Zhang X et al., Mol Biol Evol 2023",
+    "doi": "10.1093/molbev/msad001",
+    "figure": "1",
+    "file": "assets/questions/M4-01-516222a8/fig1.jpg",
+    "license": "CC BY-NC 4.0",
+    "pmcId": "PMC9887621",
+    "source": "paper"
+  },
   "question": "研究者从距今约 4 万年的尼安德特人化石中提取 DNA 并进行高通量测序，以研究古人类演化。关于古 DNA 研究，下列叙述正确的有：",
   "references": [
     {

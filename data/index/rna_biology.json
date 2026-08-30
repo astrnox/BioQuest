@@ -20,7 +20,7 @@
   "M1-02-30bbc833": {
     "diff": "league",
     "difficulty": "league",
-    "has_image": false,
+    "has_image": true,
     "len": 57,
     "module": "module_1",
     "src": "rna_biology",

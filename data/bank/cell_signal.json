@@ -3,6 +3,16 @@
     "concept": "空间转录组学与肿瘤微环境",
     "difficulty": "league",
     "explanation": "A【对】依据：空间转录组学（如 10x Visium、MERFISH、seqFISH+）通过在组织切片上原位捕获 mRNA 或利用荧光原位杂交，在保留空间坐标的同时获取转录组信息，区别于需解离组织的 scRNA-seq。\nB【对】依据：MERFISH 和 seqFISH+ 等基于成像的技术已实现亚细胞分辨率，10x Visium 的 spot 直径约 55 μm（含 1-10 个细胞），Visium HD 已达到接近单细胞水平的分辨率。\nC【对】依据：空间转录组可识别肿瘤内不同区域（核心、侵袭前沿、免疫浸润区）的细胞组成差异，揭示癌细胞-免疫细胞-基质细胞的空间互作网络，为理解肿瘤微环境提供关键信息。\nD【错】错因：空间转录组学检测的是 RNA 分子的空间分布，蛋白质定位需借助空间蛋白质组学技术（如 CODEX、IMC、DBiT-seq 的蛋白模式），二者原理与检测对象不同。",
+    "image": {
+      "caption": "空间转录组学肿瘤研究流程",
+      "credit": "Maciejewski K et al., Cancers 2024",
+      "doi": "10.3390/cancers16173100",
+      "figure": "1",
+      "file": "assets/questions/M2-01-f05ce501/fig1.jpg",
+      "license": "CC BY 4.0",
+      "pmcId": "PMC11394603",
+      "source": "paper"
+    },
     "question": "研究者利用空间转录组学技术绘制某肿瘤组织的基因表达图谱。关于空间转录组学，下列叙述正确的有：",
     "references": [
       {
