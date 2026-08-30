@@ -1051,6 +1051,9 @@ function renderFilterPanel() {
   const container = document.getElementById('practice-root');
   if (!container) return;
 
+  // 题库数据源（与设置页共享同一键）：'cloud' 云端同步 / 'local' 本地题库
+  const qSource = (typeof loadSetting === 'function') ? loadSetting('question_source', 'cloud') : 'cloud';
+
   const moduleChecks = PracticeModuleGroups.map(
     (g) => `
     <label class="practice-filter-check">
@@ -1121,6 +1124,26 @@ function renderFilterPanel() {
       </div>
 
       <div class="practice-filter-panel" id="practice-filter-panel">
+        <div class="practice-filter-section">
+          <div class="practice-filter-header">
+            <h3 class="practice-filter-title">题库数据源</h3>
+            <span class="practice-filter-note" id="practice-source-status" style="font-size:0.78rem;color:var(--text-muted);">
+              ${qSource === 'local' ? '当前：本地题库' : '当前：云端同步'}
+            </span>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:6px;">
+            <select class="practice-select" id="practiceQuestionSource" style="min-width:150px;">
+              <option value="cloud" ${qSource === 'cloud' ? 'selected' : ''}>云端同步</option>
+              <option value="local" ${qSource === 'local' ? 'selected' : ''}>本地题库</option>
+            </select>
+            <span style="font-size:0.78rem;color:var(--text-muted);" id="practice-source-hint">
+              ${qSource === 'local'
+                ? '仅从站点内 data/ 读取题目，不发远程请求'
+                : '云端优先，本地兜底（默认）'}
+            </span>
+          </div>
+        </div>
+
         <div class="practice-filter-section">
           <h3 class="practice-filter-title">练习模式</h3>
           <div class="practice-mode-selector" style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px;">
@@ -1231,6 +1254,27 @@ function bindFilterEvents() {
   const modeBtns = document.querySelectorAll('.practice-mode-btn');
   const countSelect = document.getElementById('questionCount');
   const startBtn = document.getElementById('practice-start-btn');
+  const sourceSelect = document.getElementById('practiceQuestionSource');
+
+  // 题库数据源切换：保存设置 → 重新加载题目 → 刷新统计
+  if (sourceSelect) {
+    sourceSelect.addEventListener('change', async () => {
+      const val = sourceSelect.value;
+      if (typeof saveSetting === 'function') saveSetting('question_source', val);
+      const statusEl = document.getElementById('practice-source-status');
+      const hintEl = document.getElementById('practice-source-hint');
+      if (statusEl) statusEl.textContent = val === 'local' ? '当前：本地题库' : '当前：云端同步';
+      if (hintEl) hintEl.textContent = val === 'local'
+        ? '仅从站点内 data/ 读取题目，不发远程请求'
+        : '云端优先，本地兜底（默认）';
+      if (typeof showToast === 'function') {
+        showToast(val === 'local' ? '已切换为本地题库，正在重新加载题目…' : '已切换为云端同步，正在重新加载题目…');
+      }
+      await loadPracticeQuestions();
+      applyFilters();
+      updateAvailableCount();
+    });
+  }
 
   // 练习模式快捷切换（带动画过渡）
   modeBtns.forEach((btn) => {

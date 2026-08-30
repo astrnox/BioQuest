@@ -1819,6 +1819,9 @@ function stopTimer() {
 function renderExamStartPage(target) {
   clearExamState();
 
+  // 题库数据源（与设置页共享同一键）：'cloud' 云端同步 / 'local' 本地题库
+  var qSource = (typeof loadSetting === 'function') ? loadSetting('question_source', 'cloud') : 'cloud';
+
   target.innerHTML = `
     <div class="exam-start animate-fade-in">
       <div class="exam-start-card">
@@ -1829,6 +1832,21 @@ function renderExamStartPage(target) {
         </div>
 
         <div class="exam-start-info">
+          <div class="exam-start-section">
+            <h3>题库数据源</h3>
+            <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:8px;">
+              <select class="practice-select" id="examQuestionSource" style="min-width:150px;padding:8px 12px;border:1px solid var(--border-default,#ddd);border-radius:8px;font-size:0.9rem;background:var(--surface-primary,#fff);color:var(--text-primary,#1a1a1a);">
+                <option value="cloud" ${qSource === 'cloud' ? 'selected' : ''}>云端同步</option>
+                <option value="local" ${qSource === 'local' ? 'selected' : ''}>本地题库</option>
+              </select>
+              <span style="font-size:0.85rem;color:var(--text-secondary,#6b7f74);" id="exam-source-hint">
+                ${qSource === 'local'
+                  ? '仅从站点内 data/ 读取题目，不发远程请求'
+                  : '云端优先，本地兜底（默认）'}
+              </span>
+            </div>
+          </div>
+
           <div class="exam-start-section">
             <h3>选择试卷</h3>
             <div class="exam-paper-selector" style="display:flex;flex-direction:column;gap:10px;margin-top:8px;">
@@ -1887,6 +1905,25 @@ function renderExamStartPage(target) {
       </div>
     </div>
   `;
+
+  // 考试页题库数据源切换：保存设置；若题库已加载则置为未加载，下次开始考试按新源重载
+  var examSourceSelect = document.getElementById('examQuestionSource');
+  if (examSourceSelect) {
+    examSourceSelect.addEventListener('change', function () {
+      var val = examSourceSelect.value;
+      if (typeof saveSetting === 'function') saveSetting('question_source', val);
+      var hintEl = document.getElementById('exam-source-hint');
+      if (hintEl) {
+        hintEl.textContent = val === 'local'
+          ? '仅从站点内 data/ 读取题目，不发远程请求'
+          : '云端优先，本地兜底（默认）';
+      }
+      if (dataLoaded) dataLoaded = false; // 强制下次组卷按新数据源重新加载
+      if (typeof showToast === 'function') {
+        showToast(val === 'local' ? '已切换为本地题库，开始考试时将读取 data/ 题目' : '已切换为云端同步');
+      }
+    });
+  }
 
   var btn = document.getElementById('examStartBtn');
   if (btn) {
