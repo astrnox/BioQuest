@@ -101,6 +101,7 @@ def find_graphic(xml, figure_no):
 
 
 def is_image(bytes_, ext_hint=""):
+    """严格魔数识别；识别失败一律返回 None（不信任 URL 后缀，防止 HTML 错误页冒充图片）。"""
     if bytes_[:8] == b"\x89PNG\r\n\x1a\n":
         return "png"
     if bytes_[:3] == b"\xff\xd8\xff":
@@ -111,8 +112,6 @@ def is_image(bytes_, ext_hint=""):
         return "gif"
     if bytes_[:5].lstrip().lower().startswith(b"<?xml") or bytes_[:4].lstrip().lower().startswith(b"<svg"):
         return "svg"
-    if ext_hint.lower() in ("png", "jpg", "jpeg", "webp", "gif", "svg"):
-        return ext_hint.lower()
     return None
 
 

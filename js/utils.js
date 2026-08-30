@@ -957,9 +957,9 @@ function renderChart(chart) {
   // 统一由 _registerChartImgErrorFallback 监听 img#data-chart-fallback 的 error 事件。
   if (isChartImageSrc(s)) {
     const src = s.split(/\s+/)[0];
-    return `<div class="question-chart-wrapper" style="margin:12px 0;">
+    return `<div class="question-chart-wrapper" style="margin:14px auto;text-align:center;">
       <img src="${escapeHtml(src)}" alt="题目图表" loading="lazy" decoding="async" data-chart-fallback="1"
-        style="max-width:100%;border-radius:12px;border:1px solid var(--border-light);background:var(--surface-tertiary);padding:8px;box-shadow:0 2px 8px rgba(0,0,0,0.06);display:block;">
+        style="max-width:100%;max-height:min(60vh,560px);width:auto;height:auto;object-fit:contain;box-sizing:border-box;border-radius:12px;border:1px solid var(--border-light);background:var(--surface-tertiary);padding:8px;box-shadow:0 2px 8px rgba(0,0,0,0.06);display:block;margin:0 auto;">
     </div>`;
   }
 

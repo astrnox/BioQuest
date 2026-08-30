@@ -739,6 +739,22 @@ python3 tools/python/fetch-figures.py attach --qid <题id>
 - 违规：伪造出处/无许可 → R2 判 D；文件缺失/字段不全 → R8；图片与考点不匹配 → 扣 D1/D2 并限期更换；
 - 过渡期（v1.1）：主库真实图覆盖尚不足 30% 属已知缺口；补齐节奏 = 新题 ≥ 50% 带图 + 存量题按考点重要性补图，达标判定 = `coverage` 输出 ≥ 30%。
 
+### 13.6 存储方案与图文排版
+
+**存储（当前采用，理由见下）**
+- 图片以**独立文件**存放于 `assets/questions/<id>/`（本地、根相对路径、保留原格式 png/jpg/webp/gif/svg），浏览器静态缓存友好、可按 id 懒加载；
+- 单题 JSON 只存 `image` 元数据（file/caption/source/doi/pmcId/figure/license/credit），由 `loader._normalizeQuestion` 映射到 `chart` 字段渲染；
+- `manifest.json` 仅对 `data/` 数据分片做 SHA 完整性与去重核算；`assets/` 属静态资源，不入清单（与 `images/`、`css/` 等一致）。
+
+**备选方案对比（不采用或暂缓）**
+- data URI 内嵌：序列化体积增加、不可独立缓存，仅适合极小 svg/图标（保留 `chart` 的 data:image 兼容旧数据，不成为主路径）；
+- 跨题共享图池（`assets/questions/<topic>/` 公共图）：会模糊单图许可归属，暂缓；共享需求出现时再以"引用同一 assets 文件 + 两题各自增加许可字段"方式扩展。
+
+**图文排版（做题界面约定）**
+- 顺序：`题干 → 图（renderChart）→ 选项列表`（practice/exam 已按此模板）；
+- 图：水平居中、`max-width:100%` + `max-height:min(60vh,560px)` + `object-fit:contain`，超高图压缩为不挡选项、超宽图不溢出；表格/整段文本图表沿用 `question-chart-wrapper` 框样式；
+- 移动端：60vh 上限保证选择题仍可直接作答，无需大幅滚动；加载失败由 `data-chart-fallback` 统一兜底提示。
+
 ---
 
 ## 14. 术语表
