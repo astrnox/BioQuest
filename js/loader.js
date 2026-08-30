@@ -792,6 +792,11 @@ function _bankToItems(rawText, tag, persist) {
     q.id = bioId;   // 稳定 bioID 作为题目 ID（替代 hash 生成）
     q.bioId = bioId;
     q._shardTag = tag;
+    // 本地题库图片：bank 分片存 image 元数据（file/caption/...），
+    // 渲染端（renderChart）只认 q.chart，此处统一映射为 file 路径
+    if ((q.chart === undefined || q.chart === null) && q.image && q.image.file) {
+      q.chart = q.image.file;
+    }
     if (q.module === undefined || q.module === null) {
       q.module = TAG_TO_MODULE[tag] || ('module_' + tag);
     }

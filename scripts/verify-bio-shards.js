@@ -5,7 +5,7 @@
  * 适配 #150 新题库（M 格式 bioID）：
  *   1. manifest 结构
  *   2. manifest 各分片 SHA-256 与实际文件一致
- *   3. bioID 全局唯一 + 格式合法（M<模块>-<tag 十六进制>-<12位hash>）
+ *   3. bioID 全局唯一 + 格式合法（M<模块>-<tag 十六进制>-<8~16位hash>）
  *      并校验前缀「M<模块>」与题目自身 module_<N> 一致
  *   4. index/bank 双向一致（bank 有对应 index，index 有对应 bank）
  *
@@ -15,6 +15,9 @@
  *     无法在本仓库确定性重建，故移除该段。
  *   - 旧的「bioid-map 迁移映射 / oldId」：新题库已删除 bioid-map.json 与 oldId 迁移
  *     体系（旧引用不再需要通过映射表解析），故移除该段。
+ *   - bioID hash 段位数：#150 曾为 12 位；v1.1 存储规范（docs/question-bank-review-rules.md
+ *     §9.3）规定新题为 M{模块}-{主题序号}-{8位hex}（内容 sha256 前 8 位），
+ *     故此处放宽到 8~16 位以兼容两代题库。
  *
  * 运行：node scripts/verify-bio-shards.js
  * 退出码：0 通过；1 失败（任何一项不通过都视为失败）
@@ -43,9 +46,10 @@ function sha256(absPath) {
   return crypto.createHash('sha256').update(fs.readFileSync(absPath)).digest('hex');
 }
 
-// 新格式：M<模块1-4>-<tag十六进制>-<12位hash>
-// tag 十六进制如 05 / 0C / 0F（2 位为主，允许 1-3 位）；尾 hash 为小写 12 位十六进制。
-const bioRegex = /^M[1-4]-[0-9A-Fa-f]{1,3}-[0-9a-f]{12}$/;
+// 新格式：M<模块1-4>-<tag十六进制>-<8~16位hash>
+// tag 十六进制如 05 / 0C / 0F（2 位为主，允许 1-3 位）；尾 hash 为小写十六进制
+// （v1.1 规范为 8 位内容寻址，兼容 12 位旧格式，故放宽到 8~16 位）。
+const bioRegex = /^M[1-4]-[0-9A-Fa-f]{1,3}-[0-9a-f]{8,16}$/;
 
 /* ---- 1. manifest ---- */
 const manifestPath = path.join(DATA_DIR, 'manifest.json');
