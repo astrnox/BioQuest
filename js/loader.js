@@ -1312,7 +1312,7 @@ function _normalizeQuestion(q) {
       subject: q.subject || (q.knowledge && q.knowledge[0]) || '',
       concept: q.concept || (q.knowledge && q.knowledge[1]) || '',
       difficulty: q.difficulty || 'medium',
-      chart: q.chart || null,
+      chart: q.chart || (q.image && q.image.file) || null,
       year: q.year || null,
       module: mod,
       target: q.target || _inferTarget(q),
@@ -1330,7 +1330,7 @@ function _normalizeQuestion(q) {
     explanation: q.explanation || '', subject: q.subject || '',
     concept: q.concept || '',
     difficulty: q.difficulty || 'easy',
-    chart: q.chart || null, year: q.year || null,
+    chart: q.chart || (q.image && q.image.file) || null, year: q.year || null,
     module: q.module,
     target: q.target || (diff0 === 'easy' ? 'high_school' : (diff0 === 'hard' ? 'competition' : 'both')),
     source: 'local'

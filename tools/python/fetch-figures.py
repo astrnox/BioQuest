@@ -24,13 +24,13 @@ BioQuest 论文配图管线（v1.1 图片规则落地）
       license --pmcid PMCxxxxx
 
 许可白名单：CC BY / CC-BY / CC BY-NC / CC BY-SA / CC0 / PD。
-流程规范（规则文档 §13）：确认许可 → 下载原图 → 裁剪单 panel → 转 webp(≤300KB) → 落盘。
-依赖：Python3 标准库；可选 Pillow（裁剪/转 webp，无 PIL 时跳过并保留原格式）。
+流程规范（规则文档 §13）：确认许可 → 下载原图 → 裁剪单 panel → 落盘。
+支持格式：png / jpg / webp / gif / svg（保留原格式，不强制转 webp）。
+依赖：Python3 标准库；可选 Pillow（--crop 裁剪 panel，无 PIL 时跳过）。
 """
 import argparse
 import json
 import re
-import shutil
 import urllib.request
 import urllib.parse
 from pathlib import Path
@@ -109,24 +109,11 @@ def is_image(bytes_, ext_hint=""):
         return "webp"
     if bytes_[:6] in (b"GIF87a", b"GIF89a"):
         return "gif"
-    if ext_hint.lower() in ("png", "jpg", "jpeg", "webp", "gif"):
+    if bytes_[:5].lstrip().lower().startswith(b"<?xml") or bytes_[:4].lstrip().lower().startswith(b"<svg"):
+        return "svg"
+    if ext_hint.lower() in ("png", "jpg", "jpeg", "webp", "gif", "svg"):
         return ext_hint.lower()
     return None
-
-
-def try_webp(src, dst, max_kb=300):
-    """PIL 转 webp + 压缩；失败则原样拷贝。"""
-    try:
-        from PIL import Image
-        im = Image.open(src)
-        im.thumbnail((1200, 1200))
-        im.save(dst, "WEBP", quality=82)
-        if dst.stat().st_size > max_kb * 1024:
-            im.save(dst, "WEBP", quality=68)
-        return True
-    except Exception:
-        shutil.copyfile(src, dst)
-        return False
 
 
 def stage(args):
@@ -191,16 +178,14 @@ def stage(args):
 
     fmt = is_image(raw_bytes, ext_hint)
     if not fmt:
-        print("  [FAIL] 下载/指定的内容不是有效图片（PNG/JPEG/WebP/GIF）")
+        print("  [FAIL] 下载/指定的内容不是有效图片（PNG/JPEG/WebP/GIF/SVG）")
         return 1
 
-    raw_path = qdir / ("raw." + fmt)
-    raw_path.write_bytes(raw_bytes)
-    out_path = qdir / "fig1.webp"
-    try_webp(raw_path, out_path)
+    out_path = qdir / f"fig1.{fmt}"
+    out_path.write_bytes(raw_bytes)
     meta["file"] = str(out_path.relative_to(ROOT)).replace("\\", "/")
     (qdir / "image.json").write_text(json.dumps(meta, ensure_ascii=False, indent=2) + "\n", "utf-8")
-    print(f"  [OK] 素材已登记: {meta['file']}（{raw_path.stat().st_size/1024:.0f}KB → {out_path.stat().st_size/1024:.0f}KB）")
+    print(f"  [OK] 素材已登记: {meta['file']}（{out_path.stat().st_size/1024:.0f}KB，{fmt.upper()}）")
     return 0
 
 

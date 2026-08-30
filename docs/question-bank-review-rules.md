@@ -703,7 +703,7 @@ python3 tools/python/rebuild-bank-perid.py verify                  # 四源一�
 "从论文里截"的标准动作（已封装到 `tools/python/fetch-figures.py`）：
 
 ```bash
-# 1) 登记素材（自动解析许可/图源/下载原图 → assets/questions/<id>/fig1.webp + image.json）
+# 1) 登记素材（自动解析许可/图源/下载原图 → assets/questions/<id>/fig1.<png|jpg|webp|gif|svg> + image.json，保留原格式）
 python3 tools/python/fetch-figures.py stage --qid <题id> --pmcid PMCxxxxx --figure 2 [--panel A] [--caption "图题"]
 #    许可不合规（无法识别 OA/CC）时脚本直接拒绝，必须显式 --license 兜底；
 # 2) 挂接到单题文件（须先有 data/questions/**/<id>.json）
@@ -712,13 +712,13 @@ python3 tools/python/fetch-figures.py attach --qid <题id>
 ```
 
 - 裁剪：`--crop 宽,高,x,y`（可选，需 Pillow）裁出单一 panel（如 Fig.2A）；
-- 若无 Pillow 不裁剪不转 webp，保留原格式（脚本自动识别 PNG/JPEG/WebP/GIF 魔数）。
+- 支持格式：**png / jpg / webp / gif / svg**（保留原格式，不强制转 webp；svg 适合图标/示意图）。
 
 ### 13.4 image 字段 schema（挂在单题 JSON 上）
 
 ```json
 "image": {
-  "file": "assets/questions/M4-01-1cdf6e6e0193/fig1.webp",
+  "file": "assets/questions/M4-01-1cdf6e6e0193/fig1.png",
   "caption": "孟德尔豌豆杂交 F₂ 性状分离示意（改绘自 OA 论文）",
   "source": "paper",
   "doi": "10.7554/eLife.109979",
@@ -730,7 +730,8 @@ python3 tools/python/fetch-figures.py attach --qid <题id>
 ```
 
 - `source ∈ paper | book | repo | original`；自绘示意图 `source: original`，**不得谎称论文图**；
-- `verify`（rebuild-bank-perid.py）会检查 `image.file` 是否真实存在于 `assets/questions/<id>/`（缺失 → R8）。
+- `verify`（rebuild-bank-perid.py）会检查 `image.file` 是否真实存在于 `assets/questions/<id>/`（缺失 → R8）；
+- **前端渲染**：`loader.js` 的 `_normalizeQuestion` 会把 `image.file` 映射到 `chart` 字段；`utils.js` 新增 `isChartImageSrc`（挂 `window.BioQuest`），`renderChart` 据此支持本地相对路径与 png/jpg/jpeg/webp/gif/svg 渲染（不再只认 data URI / http(s)）。
 
 ### 13.5 挂接与违规处置
 
