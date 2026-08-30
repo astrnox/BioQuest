@@ -904,7 +904,7 @@ function isChartImageSrc(s) {
   if (!s) return false;
   if (s.indexOf('data:image') === 0) return true;
   if (/^https?:\/\//.test(s)) return true;
-  return /\.(png|jpe?g|webp|gif|svg)(\?[^\s"']*)?$/i.test(s);
+  return /\.(png|jpe?g|webp|gif|svg)([?#][^\s"']*)?$/i.test(s);
 }
 
 /**
