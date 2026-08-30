@@ -229,6 +229,9 @@ def update_manifest(tag_counts):
     topics = mf.get("topics") or []
     for t in topics:
         t["count"] = tag_counts.get(t.get("id"), 0)
+    sources = mf.get("sources") or []
+    for s in sources:
+        s["count"] = tag_counts.get(s.get("tag"), 0)
 
     files = {}
     for tag in tag_counts:

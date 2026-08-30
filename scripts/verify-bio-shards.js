@@ -57,7 +57,7 @@ else ok('rev = ' + manifest.rev);
 if (!manifest.updated_at) fail('manifest 缺少 updated_at');
 else ok('updated_at = ' + manifest.updated_at);
 if (!manifest.files || typeof manifest.files !== 'object') fail('manifest 缺少 files');
-if (!manifest.total_questions || typeof manifest.total_questions !== 'number') fail('manifest 缺少 total_questions');
+if (typeof manifest.total_questions !== 'number') fail('manifest 缺少 total_questions 字段');
 else ok('total_questions = ' + manifest.total_questions);
 if (!Array.isArray(manifest.sources) || manifest.sources.length === 0) fail('manifest 缺少 sources');
 else ok('sources = ' + manifest.sources.length + ' 个分片');
