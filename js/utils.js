@@ -894,8 +894,21 @@ function randomSample(array, count) {
 }
 
 /**
- * 渲染题目图表/图片
- * 支持 data URI、外部 URL、Markdown 表格、ASCII 表格和纯文本描述
+ * 判定值是否为“图片型”图表内容（供 renderChart 识别）：
+ * 支持 data URI、http(s) 绝对地址，以及本地相对路径图片文件
+ * （png / jpg / jpeg / webp / gif / svg，允许带 ?query / #hash 后缀）。
+ */
+function isChartImageSrc(s) {
+  if (typeof s !== 'string') return false;
+  s = s.trim();
+  if (!s) return false;
+  if (s.indexOf('data:image') === 0) return true;
+  if (/^https?:\/\//.test(s)) return true;
+  return /\.(png|jpe?g|webp|gif|svg)([?#][^\s"']*)?$/i.test(s);
+}
+
+/**
+ * 渲染题目图表（图片 / Markdown 表格 / 纯文本）
  * @param {string} chart - 图表内容
  * @returns {string} 图表 HTML
  */
@@ -938,14 +951,15 @@ function renderChart(chart) {
   const s = String(chart).trim();
   if (!s) return '';
 
-  // 真实图片：data URI 或 http(s) URL；改为「捕获阶段 error 委托」兜底（P1-8/CSP：内联 onerror 已被
+  // 真实图片：data URI / http(s) URL / 本地相对路径（png/jpg/webp/gif/svg）；
+  // 改为「捕获阶段 error 委托」兜底（P1-8/CSP：内联 onerror 已被
   // script-src 移除 unsafe-inline 后拦截，故不能用属性式内联处理器）。
   // 统一由 _registerChartImgErrorFallback 监听 img#data-chart-fallback 的 error 事件。
-  if (s.startsWith('data:image') || /^https?:\/\//.test(s)) {
+  if (isChartImageSrc(s)) {
     const src = s.split(/\s+/)[0];
-    return `<div class="question-chart-wrapper" style="margin:12px 0;">
+    return `<div class="question-chart-wrapper" style="margin:14px auto;text-align:center;">
       <img src="${escapeHtml(src)}" alt="题目图表" loading="lazy" decoding="async" data-chart-fallback="1"
-        style="max-width:100%;border-radius:12px;border:1px solid var(--border-light);background:var(--surface-tertiary);padding:8px;box-shadow:0 2px 8px rgba(0,0,0,0.06);display:block;">
+        style="max-width:100%;max-height:min(60vh,560px);width:auto;height:auto;object-fit:contain;box-sizing:border-box;border-radius:12px;border:1px solid var(--border-light);background:var(--surface-tertiary);padding:8px;box-shadow:0 2px 8px rgba(0,0,0,0.06);display:block;margin:0 auto;">
     </div>`;
   }
 
@@ -1063,6 +1077,7 @@ function sanitizeUrlParam(value, maxLen) {
 // Q-03：注册到 BioQuest 命名空间（各调用点统一走 window.BioQuest.sanitizeUrlParam）
 if (typeof window !== 'undefined') {
   BioQuest.sanitizeUrlParam = sanitizeUrlParam;
+  BioQuest.isChartImageSrc = isChartImageSrc;
 }
 
 /**

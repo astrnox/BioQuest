@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>做题图文排版冒烟（v1.1.1）</title>
+<script src="/js/utils.js"></script>
+<style>
+  body{font-family:system-ui,sans-serif;margin:12px;background:#fafafa}
+  h2{font-size:16px}
+  .card{max-width:720px;margin:14px auto;background:#fff;border:1px solid #e4e4e7;border-radius:12px;padding:16px}
+  .m-card{width:360px;margin:14px auto;background:#fff;border:1px solid #e4e4e7;border-radius:12px;padding:14px;box-sizing:border-box}
+  .stem{font-size:15px;line-height:1.7;margin:0 0 10px}
+  .opt{margin:8px 0;padding:10px 12px;border:1px solid #eee;border-radius:8px;font-size:14px;line-height:1.6}
+  .lab{font-size:13px;color:#666;margin:16px 0 4px;font-weight:600}
+</style>
+</head>
+<body>
+<h2>做题图文排版验证：横图 / 竖图 / SVG（桌面 720 + 移动 360）</h2>
+<div id="out"></div>
+<script>
+(function () {
+  var absDir = location.origin + '/assets/questions/_layer/';
+  var cases = [
+    { name: '横图 PNG（900×240）', src: absDir + 'wide.png' },
+    { name: '竖图 JPG（eLife 论文图 789×931）', src: absDir + 'tall.jpg' },
+    { name: 'SVG 小图标（200×150）', src: absDir + 'icon.svg' }
+  ];
+  window.__layout = [];
+  var out = document.getElementById('out');
+
+  function block(container, c) {
+    var html =
+      '<p class="stem">某真核细胞在适宜条件下进行培养，下列关于该细胞结构与代谢的叙述，正确的有：</p>' +
+      renderChart(c.src) +
+      '<div class="opt">A. 线粒体是有氧呼吸的主要场所，其内膜向内折叠形成嵴</div>' +
+      '<div class="opt">B. 细胞核是遗传信息库，是细胞代谢和遗传的控制中心</div>' +
+      '<div class="opt">C. 所有植物细胞都一定不含有中心体</div>' +
+      '<div class="opt">D. 液泡内含细胞液，可调节植物细胞内的环境</div>';
+    container.insertAdjacentHTML('beforeend', '<div class="lab">' + c.name + '</div>' + html);
+  }
+
+  cases.forEach(function (c) {
+    var d = document.createElement('div');
+    d.className = 'card';
+    d.setAttribute('data-case', c.name);
+    block(d, c);
+    out.appendChild(d);
+    var m = document.createElement('div');
+    m.className = 'm-card';
+    m.setAttribute('data-case', 'm:' + c.name);
+    block(m, c);
+    out.appendChild(m);
+  });
+
+  function collect() {
+    window.__layout = Array.prototype.map.call(document.querySelectorAll('[data-case]'), function (c) {
+      var im = c.querySelector('img');
+      var cs = im ? getComputedStyle(im) : null;
+      return {
+        case: c.getAttribute('data-case'),
+        loaded: im ? im.naturalWidth > 0 : false,
+        w: im ? im.naturalWidth : 0,
+        h: im ? im.naturalHeight : 0,
+        maxH: cs ? cs.maxHeight : '',
+        objFit: cs ? cs.objectFit : '',
+        overflowX: c.scrollWidth - c.clientWidth,
+        fallback: c.textContent.indexOf('加载失败') >= 0
+      };
+    });
+  }
+  window.addEventListener('load', function () { setTimeout(collect, 900); });
+  setTimeout(collect, 2500);
+})();
+</script>
+</body>
+</html>
