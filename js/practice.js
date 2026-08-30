@@ -454,11 +454,19 @@ async function loadPracticeQuestions() {
     var modNums = filterMods ? filterMods.map(function (id) { return moduleMap[id]; }) : [1, 2, 3, 4];
 
     if (typeof window.loadQuestions === 'function') {
-      var items = await window.loadQuestions(modNums, {
+      // 设置页「题库数据源=本地题库」时改走 PREFER_LOCAL，不触发 Supabase 请求
+      var qSource = (typeof loadSetting === 'function') ? loadSetting('question_source', 'cloud') : 'cloud';
+      var loadOpt = {
         onProgress: function (mod, count) {
 
         }
-      });
+      };
+      if (qSource === 'local') {
+        loadOpt.mode = (window.LoaderMode && window.LoaderMode.PREFER_LOCAL)
+          ? window.LoaderMode.PREFER_LOCAL
+          : 'preferLocal';
+      }
+      var items = await window.loadQuestions(modNums, loadOpt);
       // 超长讲义过滤
       var itemsClean = (typeof window.filterQuestionList === 'function') ? window.filterQuestionList(items) : items;
       PracticeState.allQuestions = itemsClean.filter(

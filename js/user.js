@@ -1033,6 +1033,8 @@ function renderAccountActions(container) {
 
 function renderSettingsPanel(container) {
   const currentTheme = (typeof loadSetting === 'function') ? loadSetting('theme', 'light') : 'light';
+  // 题库数据源：'cloud' 云端同步（默认）/ 'local' 本地题库（不发 Supabase 请求）
+  const qSource = (typeof loadSetting === 'function') ? loadSetting('question_source', 'cloud') : 'cloud';
   var avatarUrl = (typeof getAvatarUrl === 'function') ? getAvatarUrl() : null;
   var avatarHtml = avatarUrl ? '<img src="' + avatarUrl + '" alt="头像">' : '👤';
 
@@ -1066,6 +1068,17 @@ function renderSettingsPanel(container) {
           <option value="small">小</option>
           <option value="medium" selected>中</option>
           <option value="large">大</option>
+        </select>
+      </div>
+
+      <div class="user-setting-row">
+        <div>
+          <div class="user-setting-label">题库数据源</div>
+          <div class="user-setting-desc">「本地题库」直接从站点内 data/ 读取题目，不发远程请求</div>
+        </div>
+        <select class="user-theme-select" id="userQuestionSource">
+          <option value="cloud" ${qSource === 'cloud' ? 'selected' : ''}>云端同步</option>
+          <option value="local" ${qSource === 'local' ? 'selected' : ''}>本地题库</option>
         </select>
       </div>
     </div>
@@ -1196,6 +1209,15 @@ function renderSettingsPanel(container) {
     }
 
     showToast('主题已切换');
+  });
+
+  // 题库数据源切换（云端同步 / 本地题库）
+  document.getElementById('userQuestionSource').addEventListener('change', (e) => {
+    const val = e.target.value;
+    if (typeof saveSetting === 'function') {
+      saveSetting('question_source', val);
+    }
+    showToast(val === 'local' ? '已切换为本地题库，考试/练习将读取 data/ 题目' : '已切换为云端同步');
   });
 
   // 头像上传（设置页内）

@@ -1348,11 +1348,18 @@ async function loadQuizData() {
     // 优先使用 loader.js 加载（支持 Supabase + 本地 JSON 回退 + 格式自动转换）
     // → P0-5: 首屏秒开：走 preferLocal / BALANCED 模式，直接读本地 quiz_m1~m4.json（≤300ms），
     //         后台静默刷新 Supabase，避免"一直卡在 30s 超时"
+    // → 设置页「题库数据源=本地题库」时彻底改走 PREFER_LOCAL，不触发任何 Supabase 请求
     var allQuestions = [];
     try {
       if (typeof window.loadQuestions === 'function') {
+        var qSource = (typeof loadSetting === 'function') ? loadSetting('question_source', 'cloud') : 'cloud';
+        var sourceMode = (window.LoaderMode && window.LoaderMode.PREFER_LOCAL)
+          ? window.LoaderMode.PREFER_LOCAL
+          : 'preferLocal';
         var loadOpts = {
-          mode: (window.LoaderMode && window.LoaderMode.BALANCED) || 'balanced',
+          mode: (qSource === 'local')
+            ? sourceMode
+            : ((window.LoaderMode && window.LoaderMode.BALANCED) || 'balanced'),
           onProgress: function (done, total, m, n) {
             var pct = 15 + Math.round((done / Math.max(1, total)) * 60);
             updateProgress(pct, '正在加载题库…', (m ? ('模块 ' + m + ' +' + n + ' 题') : '合并本地题库'));
