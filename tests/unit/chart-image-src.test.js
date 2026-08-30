@@ -1,4 +1,6 @@
 /**
+ * @jest-environment jsdom
+ *
  * 题目图片渲染支持（v1.1.1）：isChartImageSrc 判定
  *
  * 问题背景：题目图片以本地相对路径（如 assets/questions/<id>/fig1.png）存放，
