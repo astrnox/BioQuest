@@ -1570,7 +1570,16 @@ function handleRoute(route) {
   };
   var modName = moduleMap[route];
 
+  // 路由切换即时反馈：模块 JS 首次加载（网络拉取）期间在目标容器上展示
+  // 轻量 loading，渲染开始即移除——避免"点击后页面长时间无任何变化"的
+  // 空白等待感（第二次进入同一路由走缓存，不显示，无闪烁）。
+  var _isFirstModuleLoad = !!modName && typeof window.loadModule === 'function' && !_loadedModules[modName];
+  if (_isFirstModuleLoad) {
+    try { target.classList.add('route-loading'); } catch (e) {}
+  }
+
   var renderFn = function() {
+    try { target.classList.remove('route-loading'); } catch (e) {}
     doRouteRender(route, target);
   };
 
@@ -1681,6 +1690,7 @@ function handleRoute(route) {
       renderFn();
       finishRouting();
     }).catch(function(err) {
+      try { target.classList.remove('route-loading'); } catch (e) {}
       showModuleError(modName, err);
       finishRouting();
     });

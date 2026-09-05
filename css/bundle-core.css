@@ -2,7 +2,7 @@
  * BioQuest — 首屏同步 CSS 合并包（Issue #108，由
  * scripts/build-css-bundle.js 自动生成，勿手改。
  * 合并源：globals.css + layout.css + header.css + learning-hub.css + home.css + debug-fix.css
- * 生成时间：2026-09-05T10:45:57.957Z
+ * 生成时间：2026-09-05T11:01:14.103Z
  * ============================================================ */
 
 /* ---------- 来源: css/globals.css ---------- */
@@ -407,6 +407,28 @@ body {
 /* 防止任何子元素水平溢出（clip：不创建滚动容器，避免 iOS 滚动冻结） */
 .page-content {
   overflow-x: clip;
+}
+
+/* 路由切换即时反馈：模块首次加载期间展示轻量 spinner（由 app.js 添加/移除该类） */
+.page-content.route-loading {
+  position: relative;
+  min-height: 55vh;
+}
+.page-content.route-loading::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  width: 36px;
+  height: 36px;
+  margin-left: -18px;
+  border-radius: 50%;
+  border: 3px solid rgba(90, 125, 92, 0.18);
+  border-top-color: #5a7d5c;
+  animation: bqRouteSpin 0.8s linear infinite;
+}
+@keyframes bqRouteSpin {
+  to { transform: rotate(360deg); }
 }
 
 /* ============================================================

@@ -212,6 +212,23 @@
   }
 
   // ========== 随机加载题目 ==========
+  // 云题库查询统一包裹"超时保护"：Supabase 位于韩国，弱网/跨国链路下单请求
+  // 可能长时间无响应（表现为进入路由后迟迟不出题、用户等待中切走路由时
+  // 在途请求被取消产生 net::ERR_ABORTED）。超时后按失败处理，立即回退本地题库。
+  var REQUEST_TIMEOUT_MS = 8000;
+  function _withTimeout(promise, ms) {
+    return new Promise(function (resolve, reject) {
+      var timer = setTimeout(function () {
+        clearTimeout(timer);
+        reject(Object.assign(new Error('云题库请求超时'), { code: 'REQUEST_TIMEOUT' }));
+      }, ms);
+      promise.then(
+        function (v) { clearTimeout(timer); resolve(v); },
+        function (e) { clearTimeout(timer); reject(e); }
+      );
+    });
+  }
+
   async function loadQuestionsFromSupabase(limit) {
     var sb = getSupabaseClient();
     if (!sb) return null;
@@ -219,7 +236,7 @@
     try {
       // 首次获取总数
       if (state.totalPoolSize === 0) {
-        var countResult = await sb.from('questions').select('id', { count: 'exact', head: true }).eq('type', 'mtf');
+        var countResult = await _withTimeout(sb.from('questions').select('id', { count: 'exact', head: true }).eq('type', 'mtf'), REQUEST_TIMEOUT_MS);
         if (!countResult.error && countResult.count !== null) {
           state.totalPoolSize = countResult.count;
         }
@@ -236,10 +253,10 @@
       var maxOffset = Math.max(0, poolSize - limit);
       var randomOffset = Math.floor(Math.random() * maxOffset);
 
-      var result = await sb.from('questions')
+      var result = await _withTimeout(sb.from('questions')
         .select('id,question,sub_questions,explanation,subject')
         .eq('type', 'mtf')
-        .range(randomOffset, randomOffset + limit - 1);
+        .range(randomOffset, randomOffset + limit - 1), REQUEST_TIMEOUT_MS);
 
       if (result.error) {
         console.warn('[每日亿题] Supabase查询失败:', result.error.message);
@@ -254,10 +271,10 @@
       // 如果过滤后不够，再随机拉一批
       if (freshQuestions.length < limit && state.totalPoolSize > limit) {
         var retryOffset = Math.floor(Math.random() * Math.max(0, poolSize - limit));
-        var retryResult = await sb.from('questions')
+        var retryResult = await _withTimeout(sb.from('questions')
           .select('id,question,sub_questions,explanation,subject')
           .eq('type', 'mtf')
-          .range(retryOffset, retryOffset + limit - 1);
+          .range(retryOffset, retryOffset + limit - 1), REQUEST_TIMEOUT_MS);
         if (retryResult.data) {
           var more = retryResult.data.filter(function(q) { return !state.loadedIds[q.id]; });
           var seen = {};

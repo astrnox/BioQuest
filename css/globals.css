@@ -401,6 +401,28 @@ body {
   overflow-x: clip;
 }
 
+/* 路由切换即时反馈：模块首次加载期间展示轻量 spinner（由 app.js 添加/移除该类） */
+.page-content.route-loading {
+  position: relative;
+  min-height: 55vh;
+}
+.page-content.route-loading::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  width: 36px;
+  height: 36px;
+  margin-left: -18px;
+  border-radius: 50%;
+  border: 3px solid rgba(90, 125, 92, 0.18);
+  border-top-color: #5a7d5c;
+  animation: bqRouteSpin 0.8s linear infinite;
+}
+@keyframes bqRouteSpin {
+  to { transform: rotate(360deg); }
+}
+
 /* ============================================================
  * 辅助类
  * ============================================================ */
