@@ -308,7 +308,9 @@ body {
   background-color: var(--color-cream);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
+  /* 防水平溢出用 clip 而非 hidden：hidden 会在 iOS 上创建滚动容器，
+     导致"首次下拉不动、再拉才好"的滚动冻结；clip 不创建滚动容器。 */
+  overflow-x: clip;
   min-height: 100vh;
 }
 
@@ -394,9 +396,9 @@ body {
   transition: max-width var(--transition-slow);
 }
 
-/* 防止任何子元素水平溢出 */
+/* 防止任何子元素水平溢出（clip：不创建滚动容器，避免 iOS 滚动冻结） */
 .page-content {
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 /* ============================================================

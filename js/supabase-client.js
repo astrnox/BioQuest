@@ -720,15 +720,22 @@ async function loginUser(usernameOrEmail, password) {
     var email = usernameOrEmail;
     if (!usernameOrEmail.includes('@')) {
       // 用户名登录：先从 profiles 表查找对应的邮箱
+      var profileLookup = null;
       try {
-        var profileLookup = await sb.from('profiles')
+        profileLookup = await sb.from('profiles')
           .select('email')
           .eq('username', usernameOrEmail)
           .maybeSingle();
         if (profileLookup.data && profileLookup.data.email) {
           email = profileLookup.data.email;
         } else {
-          return { ok: false, error: '用户名不存在' };
+          // 兼容旧数据：部分用户注册时未填邮箱，Supabase 触发器生成的
+          // profiles.email 为 null（无法直接拿到）。此时回退到注册时的
+          // 占位邮箱规则（username@bioquest.local，清洗规则与注册一致），
+          // 否则这类账号用用户名+正确密码也会被误判为"用户名不存在"。
+          var cleanInput = String(usernameOrEmail).toLowerCase().replace(/[^a-z0-9]/g, '');
+          var cleanUser = cleanInput.slice(0, 20) || 'user';
+          email = cleanUser + '@bioquest.local';
         }
       } catch (e) {
         return { ok: false, error: '登录失败，请稍后重试' };
@@ -765,6 +772,17 @@ async function loginUser(usernameOrEmail, password) {
     } catch (e) {
       // profile 可能不存在
     }
+
+    // 数据自愈：部分历史账号 profiles.email 为 null（注册未填邮箱），
+    // 登录成功后把实际登录邮箱回填，保证下次“用户名登录”能直接命中；
+    // 静默失败不影响登录主流程。
+    try {
+      if (email && (!profile || !profile.email || profile.email !== email)) {
+        await sb.from('profiles')
+          .update({ email: email })
+          .eq('id', data.user.id);
+      }
+    } catch (e) { /* 回填失败不影响登录 */ }
 
     _currentUser = {
       id: data.user.id,

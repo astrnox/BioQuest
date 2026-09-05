@@ -2460,7 +2460,7 @@ async function initSupabase() {
     }
 
     // 动态加载 supabase 相关脚本（按依赖顺序）
-    var v = '20260814c';
+    var v = '20260905a';
     var supabaseScripts = [
       __jsBase + 'js/supabase-client.js?v=' + v,
       __jsBase + 'js/supabase.js?v=' + v,
