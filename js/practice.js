@@ -1568,13 +1568,54 @@ async function handlePullQuestions() {
   var targets = PracticeState.selectedTargets || [];
   var concept = PracticeState.conceptFilter || null;
 
+  var qSource = (typeof loadSetting === 'function') ? loadSetting('question_source', 'cloud') : 'cloud';
+  var items = null;
+
   btn.disabled = true;
   btn.textContent = '拉取中...';
-  _setPullStatus('正在从 Supabase 拉取 ' + countVal + ' 道题…', 'info');
+  _setPullStatus(qSource === 'local' ? '正在从本地题库抽取 ' + countVal + ' 道题…' : '正在从 Supabase 拉取 ' + countVal + ' 道题…', 'info');
 
   try {
-    // 主动确保 loader.js 已加载（解决 loader.js 未在 index.html 预加载的问题）
-    if (typeof window.fetchQuestionsBatch !== 'function') {
+    // 本地题库模式：直接从 data/bank 分片按筛选条件抽题，不请求 Supabase
+    if (qSource === 'local') {
+      if (!PracticeState.allQuestions || PracticeState.allQuestions.length === 0) {
+        if (typeof window.loadQuestions !== 'function') {
+          throw new Error('本地题库加载器未就绪，请刷新页面重试');
+        }
+        var localModNums = [];
+        for (var im = 0; im < modules.length; im++) {
+          var mn = parseInt(String(modules[im]).replace('module_', ''), 10);
+          if (mn >= 1 && mn <= 4) localModNums.push(mn);
+        }
+        if (localModNums.length === 0) localModNums = [1, 2, 3, 4];
+        var localItems = await window.loadQuestions(localModNums, { mode: 'preferLocal' });
+        PracticeState.allQuestions = (localItems || []).filter(function (q) {
+          return Array.isArray(q.subQuestions) && q.subQuestions.length >= 4;
+        });
+      }
+      var lDiffAlias = { easy: ['easy', 'basic'], medium: ['medium', 'league'], hard: ['hard', 'national'] };
+      var lAccDiffs = [];
+      (difficulties || []).forEach(function (d) {
+        (lDiffAlias[d] || [d]).forEach(function (v) { if (lAccDiffs.indexOf(v) < 0) lAccDiffs.push(v); });
+      });
+      var lAccTargets = (targets || []).filter(function (t) { return t !== 'both'; });
+      items = (PracticeState.allQuestions || []).filter(function (q) {
+        if (!q || !q.subQuestions || q.subQuestions.length < 4) return false;
+        if (lAccDiffs.length > 0 && lAccDiffs.indexOf(q.difficulty) < 0) return false;
+        if (q.target && lAccTargets.length > 0 && lAccTargets.indexOf(q.target) < 0) return false;
+        if (concept) {
+          var inTags = q.tags && q.tags.join(' ').indexOf(concept) >= 0;
+          var inText = String(q.concept || '') === concept ||
+            String(q.question || '').indexOf(concept) >= 0 ||
+            String(q.explanation || '').indexOf(concept) >= 0;
+          if (!inTags && !inText) return false;
+        }
+        return true;
+      }).slice().sort(function () { return Math.random() - 0.5; }).slice(0, countVal);
+    } else {
+      // 云题库模式：原 Supabase 拉取流程
+      // 主动确保 loader.js 已加载（解决 loader.js 未在 index.html 预加载的问题）
+      if (typeof window.fetchQuestionsBatch !== 'function') {
       _setPullStatus('正在初始化题库加载器…', 'info');
       var loaderOk = false;
       // 兼容路径 A：loader.js 已在页面中且暴露了 ensureQuestionLoaderReady
@@ -1629,13 +1670,14 @@ async function handlePullQuestions() {
       }
     }
 
-    var items = await window.fetchQuestionsBatch({
+    items = await window.fetchQuestionsBatch({
       modules: modules,
       difficulties: difficulties,
       targets: targets,
       concept: concept,
       count: countVal
     });
+    }
 
     if (!items || items.length === 0) {
       throw new Error('没有符合条件的题目，请放宽筛选条件');
@@ -2179,6 +2221,22 @@ function showSummary() {
 function showFilterPanel() {
   applyFilters();
   renderFilterPanel();
+
+  // 修复：进入练习页时自动加载题库（本地分片 + 逻辑推理），
+  // 否则所有入口（含"本地题库"）初次进入时 allQuestions 为空，
+  // 必须等用户点击"拉取题目"，而该按钮在本地模式下原先仍只请求 Supabase。
+  if (!PracticeState.allQuestions || PracticeState.allQuestions.length === 0) {
+    Promise.all([loadPracticeQuestions(), loadLogicQuestions()]).then(function () {
+      if (!document.getElementById('practice-root')) return;
+      applyFilters();
+      renderFilterPanel(); // 重建面板以显示"共 X 道可用题目"
+    }).catch(function () {});
+  } else if (!PracticeState.logicLoaded) {
+    loadLogicQuestions().then(function () {
+      applyFilters();
+      updateAvailableCount();
+    }).catch(function () {});
+  }
 }
 
 function renderPracticePage(target) {
