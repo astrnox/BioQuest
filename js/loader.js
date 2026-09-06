@@ -406,8 +406,15 @@ function _loadManifestFresh(timeoutMs) {
 
 function _loadBioIdMap(signal) {
   if (_bioidMap) return Promise.resolve(_bioidMap);
-  // Issue #15：映射表（大文件）走 CDN 优先 + SHA 校验 + 同源回退，失败静默降级空表
+  // 数据体系重构（#150）后 bioid-map.json 已从 manifest.files 移除。
+  // 未注册时不再发起请求，直接使用空映射表——既避免每次题库加载产生 404 噪声，
+  // 也避免 E2E 的"本机静态资源无 4xx/5xx"检查拦截。
   var expected = (_shardManifest && _shardManifest.files && _shardManifest.files['bioid-map.json']) || null;
+  if (!expected) {
+    _bioidMap = {};
+    window.bioIdMap = _bioidMap;
+    return Promise.resolve(_bioidMap);
+  }
   return _fetchShardText('data/bioid-map.json', expected, signal).then(function (res) {
     return JSON.parse(res.text);
   }).then(function (map) {
