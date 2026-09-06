@@ -26,11 +26,15 @@
   });
 
   // ---- Supabase 延迟加载 ----
+  // #104：动态注入同样固定精确版本并携带 SRI integrity（与各页面静态
+  // <script> 标签一致），杜绝"版本漂移 + 供应链被替换"风险。
+  var SUPABASE_JS_VERSION = '2.115.0';
+  var SUPABASE_JS_SRI = 'sha384-EyR2P0dlmjnEGcm9xcjdAn0VedZpRHEwDLP9oSS6wYMvzHBHkUrvgonveazJ/sSx';
   window.__supabaseLoaded = false;
   window.__loadSupabaseFallback = function (script) {
     if (window.__supabaseLoaded || typeof window.supabase !== 'undefined') return;
     var s = document.createElement('script');
-    s.src = 'https://unpkg.com/@supabase/supabase-js@2/dist/umd/supabase.min.js';
+    s.src = 'https://unpkg.com/@supabase/supabase-js@' + SUPABASE_JS_VERSION + '/dist/umd/supabase.min.js';
     s.defer = true;
     s.onerror = function () {
       console.warn('[BioQuest] Supabase SDK 镜像加载失败，将使用本地存储模式');
@@ -42,7 +46,9 @@
 
   function __loadSupabaseSDK() {
     var s = document.createElement('script');
-    s.src = 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2';
+    s.src = 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@' + SUPABASE_JS_VERSION;
+    s.integrity = SUPABASE_JS_SRI;
+    s.crossOrigin = 'anonymous';
     s.defer = true;
     s.onload = function () { window.__supabaseLoaded = true; };
     s.onerror = function () { window.__loadSupabaseFallback(this); };
