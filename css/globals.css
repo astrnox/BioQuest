@@ -1802,10 +1802,13 @@ body {
 }
 .pwd-attack-fill {
   height: 100%;
-  width: 0;
+  width: 100%;
   background: linear-gradient(90deg, #d63a2a, #e87a3a, #e8c43a, #a8d63a, #3a8c5c);
   border-radius: 3px;
-  transition: width 0.15s linear, background 0.3s;
+  transform-origin: left center;
+  will-change: transform;
+  /* #118（P3-3）：进度改用 transform: scaleX（合成层动画），避免逐帧改 width 触发重排 */
+  transition: transform 0.15s linear, background 0.3s;
 }
 .pwd-attack-stat {
   font-size: 0.72rem;

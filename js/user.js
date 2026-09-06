@@ -1991,12 +1991,22 @@ function renderRecordsPanel(container) {
   `;
 
   if (records.length === 0) {
-    html += `
-      <div class="user-empty-state">
-        <div class="user-empty-state-icon">暂无</div>
-        <p class="user-empty-state-text">暂无学习记录</p>
-      </div>
-    `;
+    // Issue #125（P3-22）：统一温暖空状态——生物主题 icon + 提示 + 行动按钮
+    if (window.BioQuest && typeof window.BioQuest.emptyStateHTML === 'function') {
+      html += window.BioQuest.emptyStateHTML({
+        icon: '🧪',
+        title: '暂无学习记录',
+        hint: '完成一次练习或考试后，记录会自动出现在这里',
+        action: { label: '去练习', onClick: function () { if (typeof navigateTo === 'function') navigateTo('/practice'); } }
+      });
+    } else {
+      html += `
+        <div class="user-empty-state">
+          <div class="user-empty-state-icon">🧪</div>
+          <p class="user-empty-state-text">暂无学习记录</p>
+        </div>
+      `;
+    }
   } else {
     html += '<div class="user-record-list">';
     records.forEach((rec) => {
@@ -2108,12 +2118,22 @@ function renderFavoritesPanel(container) {
   `;
 
   if (favIds.length === 0) {
-    html += `
-      <div class="user-empty-state">
-        <div class="user-empty-state-icon">[星]</div>
-        <p class="user-empty-state-text">暂无收藏题目</p>
-      </div>
-    `;
+    // Issue #125（P3-22）：统一温暖空状态——生物主题 icon + 提示 + 行动按钮
+    if (window.BioQuest && typeof window.BioQuest.emptyStateHTML === 'function') {
+      html += window.BioQuest.emptyStateHTML({
+        icon: '⭐',
+        title: '暂无收藏题目',
+        hint: '练习或浏览题库时点击「收藏」，题目就会出现在这里',
+        action: { label: '去练习', onClick: function () { if (typeof navigateTo === 'function') navigateTo('/practice'); } }
+      });
+    } else {
+      html += `
+        <div class="user-empty-state">
+          <div class="user-empty-state-icon">⭐</div>
+          <p class="user-empty-state-text">暂无收藏题目</p>
+        </div>
+      `;
+    }
   } else {
     html += '<div class="user-fav-list">';
 

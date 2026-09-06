@@ -11,7 +11,10 @@ html.bq-theme-anim *::after {
     background-color .3s ease,
     color .3s ease,
     border-color .3s ease,
-    box-shadow .3s ease !important;
+    box-shadow .3s ease,
+    opacity .3s ease,
+    fill .3s ease,
+    stroke .3s ease !important;
 }
 
 /* will-change 提示：预先告知浏览器参与过渡的元素，减少切换时的合成/闪烁 */
