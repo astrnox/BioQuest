@@ -773,15 +773,19 @@
 
 .practice-loading-fill {
   height: 100%;
+  width: 100%;
   background-color: var(--color-amber);
   border-radius: 99px;
+  transform-origin: left center;
+  will-change: transform;
+  /* #118（P3-3）：练习加载条动画由 width 改为 transform: scaleX，仅触发合成层，避免重排 */
   animation: practice-loading-pulse 1.4s ease-in-out infinite;
 }
 
 @keyframes practice-loading-pulse {
-  0% { width: 0%; }
-  50% { width: 70%; }
-  100% { width: 100%; }
+  0% { transform: scaleX(0); }
+  50% { transform: scaleX(0.7); }
+  100% { transform: scaleX(1); }
 }
 
 /* ============================================================

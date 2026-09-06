@@ -5,8 +5,13 @@
 #       是否带 SRI 完整性由 scripts/verify-third-party.js 单独校验。
 
 # ---- CDN 静态资源（css/js 加载；外链样式表/脚本必须带 SRI integrity）----
-cdn.jsdelivr.net        # 主 CDN：KaTeX、vue 等；index.html 实际使用
+cdn.jsdelivr.net        # 主 CDN：KaTeX、vue、supabase-js 等；index 及子页面实际使用
 cdnjs.cloudflare.com    # 备用 CDN（CSP style/font/img 允许，index.html 有 preconnect）
+
+# ---- Google Fonts（子页面 quiz/resources/ebook/study/4xx 等引用；CSS 按 UA 协商，
+#      依 verify-third-party.js 的明确例外仅白名单、不强加 SRI；字体文件则从不经 src/href 直引）----
+fonts.googleapis.com
+fonts.gstatic.com
 
 # ---- 交互式模拟 iframe 内嵌（仅 frame-src，不加载静态资源，无需 SRI）----
 phet.colorado.edu

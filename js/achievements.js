@@ -420,6 +420,22 @@
     try {
       checkAndUnlock(gatherStats());
     } catch (e) { /* 自动触发失败静默，不阻塞页面 */ }
+    renderHomePanel();
+  }
+
+  /**
+   * #129（P3-36）：主页「我的成就徽章」面板。
+   * 主页存在 #homeAchievementsPanel 容器（index.html 固定区块）时，
+   * 将本地成就集合渲染进去——未登录/游客也能查看已收集徽章（不再只有一次性 toast）。
+   * 每次自动触发后重渲染，保证新解锁即时上板；容器不存在时零开销跳过。
+   */
+  function renderHomePanel() {
+    try {
+      if (!root || root.document === undefined) return;
+      var el = root.document.getElementById ? root.document.getElementById('homeAchievementsPanel') : null;
+      if (!el || typeof api.render !== 'function') return;
+      api.render(el);
+    } catch (e) { /* 面板渲染失败静默，不影响核心解锁流程 */ }
   }
 
   function init() {

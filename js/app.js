@@ -3323,36 +3323,43 @@ function _showPasswordSetup(onConfirm) {
   });
 
   // 字典攻击演示
-  var attackInterval = null;
+  var attackCancelId = null; // null 表示空闲，存 requestAnimationFrame id（#118：rAF 替代 setInterval）
   function stopAttack() {
-    if (attackInterval) clearInterval(attackInterval);
-    attackInterval = null;
+    if (attackCancelId !== null) cancelAnimationFrame(attackCancelId);
+    attackCancelId = null;
     attackStart.textContent = '开始攻击';
   }
   attackStart.addEventListener('click', function () {
-    if (attackInterval) { stopAttack(); return; }
+    if (attackCancelId !== null) { stopAttack(); return; }
     var pwd = input.value;
     if (!pwd) {
       attackStat.textContent = '请先输入密码';
       return;
     }
     attackStart.textContent = '停止';
-    attackFill.style.width = '0%';
+    attackFill.style.transform = 'scaleX(0)';
     attackFill.style.background = 'linear-gradient(90deg, #d63a2a, #e87a3a, #e8c43a, #a8d63a, #3a8c5c)';
     attackLog.innerHTML = '';
     var tried = 0;
+    var lastMs = Date.now();
     var speed = 50 + Math.floor(Math.random() * 30);
     var strength = _calcPasswordStrength(pwd).score;
     var maxTries = strength <= 1 ? 2000 : (strength <= 2 ? 20000 : (strength <= 3 ? 200000 : (strength <= 4 ? 5000000 : 99999999)));
     var likelyHit = strength <= 2;
 
-    attackInterval = setInterval(function () {
-      tried += speed;
+    function tick() {
+      if (attackCancelId === null) return; // 已停止
+      // 按真实时间步进，避免 rAF 在不同刷新率下速度不一致
+      var now = Date.now();
+      var elapsed = Math.max(1, now - lastMs);
+      lastMs = now;
+      tried += speed * (elapsed / 80);
+
       if (tried > maxTries) tried = maxTries;
-      var pct = Math.min(100, (tried / maxTries) * 100);
-      attackFill.style.width = pct + '%';
+      var pct = Math.min(1, tried / maxTries); // 0~1，配合 transform: scaleX
+      attackFill.style.transform = 'scaleX(' + pct + ')';
       var displayTried = tried >= 1000000 ? (tried / 1000000).toFixed(1) + 'M' :
-                        tried >= 1000 ? (tried / 1000).toFixed(1) + 'K' : String(tried);
+                        tried >= 1000 ? (tried / 1000).toFixed(1) + 'K' : String(Math.floor(tried));
       var displayMax = maxTries >= 1000000 ? (maxTries/1000000).toFixed(0) + 'M' : (maxTries/1000).toFixed(0) + 'K';
       attackStat.textContent = '尝试 ' + displayTried + ' / ' + displayMax;
 
@@ -3386,12 +3393,16 @@ function _showPasswordSetup(onConfirm) {
         attackLog.appendChild(safeLine);
         attackStat.textContent = '已停止';
         stopAttack();
+        return;
       }
-    }, 80);
+      attackCancelId = requestAnimationFrame(tick);
+    }
+    attackCancelId = requestAnimationFrame(tick);
   });
 
   cancelBtn.addEventListener('click', function () {
-    if (attackInterval) clearInterval(attackInterval);
+    if (attackCancelId !== null) cancelAnimationFrame(attackCancelId);
+    attackCancelId = null;
     modal.remove();
     if (typeof onConfirm === 'function') onConfirm(null);
   });
@@ -3405,7 +3416,8 @@ function _showPasswordSetup(onConfirm) {
       sarcastic.textContent = '"至少 6 位"';
       return;
     }
-    if (attackInterval) clearInterval(attackInterval);
+    if (attackCancelId !== null) cancelAnimationFrame(attackCancelId);
+    attackCancelId = null;
     modal.remove();
     if (typeof onConfirm === 'function') onConfirm(pwd);
   });
