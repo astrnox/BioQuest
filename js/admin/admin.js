@@ -1309,6 +1309,16 @@ async function handleAdminSupabaseCall(method, endpoint, body) {
           console.warn('[Admin] 精确计数失败，使用分页数据兜底:', countErr.message);
         }
 
+        // 后台「题目总数」对齐数据源：选择本地题库时统计本地题库（manifest 真源），
+        // 仅当显式选择云端同步时才展示云端题目数量。
+        try {
+          var adminQSource = (typeof loadSetting === 'function') ? loadSetting('question_source', 'cloud') : 'cloud';
+          if (adminQSource === 'local' && typeof window.getQuestionBankCount === 'function') {
+            var localTotal = await window.getQuestionBankCount();
+            if (localTotal) totalCount = localTotal;
+          }
+        } catch (e) {} // 本地计数失败时保留云端统计，不阻断后台加载
+
         // 提取模块（从 subject 字段去重）
         var modules = [];
         var modSet = {};
@@ -1972,23 +1982,23 @@ var _adminCardCategory = '';
 
 /* ===== 标签页子模块懒加载（Issue #17：admin 按功能页拆分，点击后才加载） ===== */
 var ADMIN_TAB_MODULES = {
-  questions: 'js/admin-questions.js',
-  users: 'js/admin-users.js',
-  cards: 'js/admin-cards.js',
-  community: 'js/admin-community.js',
-  ebook: 'js/admin-ebook.js',
-  feedbacks: 'js/admin-ops.js',
-  appeals: 'js/admin-ops.js',
-  sync: 'js/admin-ops.js',
-  announcements: 'js/admin-ops.js',
-  ocr: 'js/admin-ocr.js',
-  aigen: 'js/admin-aigen.js'
+  questions: 'js/admin/admin-questions.js',
+  users: 'js/admin/admin-users.js',
+  cards: 'js/admin/admin-cards.js',
+  community: 'js/admin/admin-community.js',
+  ebook: 'js/admin/admin-ebook.js',
+  feedbacks: 'js/admin/admin-ops.js',
+  appeals: 'js/admin/admin-ops.js',
+  sync: 'js/admin/admin-ops.js',
+  announcements: 'js/admin/admin-ops.js',
+  ocr: 'js/admin/admin-ocr.js',
+  aigen: 'js/admin/admin-aigen.js'
 };
 var _adminModulePromises = {};
 
 /**
  * 动态注入 admin 子模块脚本（去重 + 失败可重试）。
- * @param {string} src 形如 'js/admin-users.js' 的相对路径
+ * @param {string} src 形如 'js/admin/admin-users.js' 的相对路径
  * @returns {Promise<boolean>} 是否加载成功
  */
 function _ensureAdminModule(src) {

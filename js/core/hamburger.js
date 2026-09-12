@@ -5,7 +5,7 @@
  * 复用，保证所有界面的汉堡菜单结构、交互与主页完全一致。
  *
  * 用法：
- *   1. 在页面 <head> 引入：<script src="js/hamburger.js" defer></script>
+ *   1. 在页面 <head> 引入：<script src="js/core/hamburger.js" defer></script>
  *   2. 在页面底部调用：window.BioQuestHamburger.init()
  *      （若页面 #mobileNav 为主页简化版，可先调用 render() 注入主页结构）
  *

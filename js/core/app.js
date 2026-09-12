@@ -70,10 +70,10 @@ function __loadScriptChain(sources) {
 
 // 获取 JS 基路径（适配子目录部署）
 var __jsBase = (function() {
-  var scripts = document.querySelectorAll('script[src*="js/app.js"]');
+  var scripts = document.querySelectorAll('script[src*="js/core/app.js"]');
   if (scripts.length > 0) {
     var src = scripts[scripts.length - 1].src;
-    var base = src.substring(0, src.lastIndexOf('/js/app.js'));
+    var base = src.substring(0, src.lastIndexOf('/js/core/app.js'));
     return base ? base + '/' : '';
   }
   return '';
@@ -131,7 +131,7 @@ function createReadOnlyStateView(target) {
 var _authFocusTrap = null;
 var _donationFocusTrap = null;
 
-// 路由配置表已拆分至 js/app-routes.js（P1-2），此处通过全局 `Routes` 引用
+// 路由配置表已拆分至 js/core/app-routes.js（P1-2），此处通过全局 `Routes` 引用
 
 /**
  * 隐私政策页（静态内容，P1-19）
@@ -547,7 +547,7 @@ function renderCardsPage() {
   // 加载 cards.js 模块（如果尚未加载）
   if (typeof window.AnkiSystem === 'undefined') {
     var script = document.createElement('script');
-    script.src = 'js/cards.js';
+    script.src = 'js/pages/cards.js';
     script.onload = function () {
 
     };
@@ -605,7 +605,7 @@ function renderSearchPage() {
         <div class="search-empty-state">
           <div class="search-empty-icon">[BioQuest]</div>
           <p>输入关键词开始搜索</p>
-          <p class="search-empty-hint">支持搜索全量题库（20000+ 题目）和多个生竞专业网站</p>
+          <p class="search-empty-hint">支持搜索本地题库和多个生竞专业网站</p>
         </div>
       </div>
     </div>
@@ -1044,7 +1044,7 @@ function extractTags(text) {
 
 /**
  * HTML 转义 — 统一使用 window.escapeHtml（Q-01）
- * 规范实现在 js/utils.js，避免各模块重复定义导致转义字符集不一致
+ * 规范实现在 js/core/utils.js，避免各模块重复定义导致转义字符集不一致
  */
 var escapeHtml = (typeof window !== 'undefined' && typeof window.escapeHtml === 'function')
   ? window.escapeHtml
@@ -1083,6 +1083,16 @@ function reinitHomeComponents() {
     update();
     if (_AppState._countdownTimer) clearInterval(_AppState._countdownTimer);
     _AppState._countdownTimer = setInterval(update, 1000);
+  }
+
+  // 首页「题库总量」动态化：读取本地题库总数（不写死），云端场景不虚标
+  const statTotalQ = document.getElementById('statTotalQuestions');
+  if (statTotalQ) {
+    if (typeof window.getQuestionBankCount === 'function') {
+      window.getQuestionBankCount().then(function (n) {
+        if (n && statTotalQ) statTotalQ.textContent = String(n);
+      });
+    }
   }
 
   if (typeof initHeroSketch === 'function') {
@@ -1716,12 +1726,12 @@ var _loadedModules = {};
 var _loadingModules = {};
 
 function _resolveModuleUrl(modName) {
-    // 适配子目录部署：取当前页面最后一个 js/app.js 的目录作为基路径
+    // 适配子目录部署：取当前页面最后一个 js/core/app.js 的目录作为基路径
     var base = '';
-    var scripts = document.querySelectorAll('script[src*="js/app.js"]');
+    var scripts = document.querySelectorAll('script[src*="js/core/app.js"]');
     if (scripts.length > 0) {
       var src = scripts[scripts.length - 1].src;
-      base = src.substring(0, src.lastIndexOf('/js/app.js'));
+      base = src.substring(0, src.lastIndexOf('/js/core/app.js'));
       if (base) base += '/';
     }
     // 使用 app.js 自己的版本号作为 query string，避免 head 中预加载的脚本与动态加载版本不一致
@@ -1731,8 +1741,31 @@ function _resolveModuleUrl(modName) {
       var m = appScript.src.match(/[?&]v=([\w-]+)/);
       if (m) ver = m[1];
     }
-    return base + 'js/' + modName + '.js?v=' + ver;
+    return base + 'js/' + _moduleDir(modName) + '/' + modName + '.js?v=' + ver;
   }
+
+// 模块名 → 子目录（js/ 下的分类存放）。页面模块默认在 pages/，其余显式归属。
+function _moduleDir(modName) {
+  var core = { 'app': 1, 'app-routes': 1, 'boot-mask': 1, 'boot-lazy': 1, 'sw-register': 1,
+    'theme-init': 1, 'theme-transition': 1, 'config': 1, 'utils': 1, 'storage': 1,
+    'supabase': 1, 'supabase-client': 1, 'loader': 1, 'question-utils': 1, 'event-bus': 1,
+    'csp-events': 1, 'error-recovery': 1, 'empty-state': 1, 'a11y-utils': 1, 'sync-tabs': 1,
+    'cell-loader': 1, 'lazy-images': 1, 'offline-queue': 1, 'offline-status': 1,
+    'shortcut-panel': 1, 'hamburger': 1, 'hero-sketch': 1, 'micro-details': 1 };
+  var algo = { 'fsrs-algorithm': 1, 'fsrs-optimizer': 1, 'irt-engine': 1 };
+  var ai = { 'ai-client': 1, 'ai-key-store': 1, 'ai-diagnostic-engine': 1, 'smart-diagnosis': 1, 'multi-agent': 1 };
+  var admin = { 'admin': 1, 'admin-users': 1, 'admin-questions': 1, 'admin-cards': 1,
+    'admin-community': 1, 'admin-ebook': 1, 'admin-ops': 1, 'admin-ocr': 1, 'admin-aigen': 1 };
+  var engagement = { 'achievements': 1, 'badge-motifs': 1, 'eggs': 1, 'countdown': 1,
+    'soundscape': 1, 'social-impact': 1, 'mood-tracker': 1, 'points-ui': 1,
+    'notifications': 1, 'whiteboard': 1, 'tts': 1 };
+  if (core[modName]) return 'core';
+  if (algo[modName]) return 'algo';
+  if (ai[modName]) return 'ai';
+  if (admin[modName]) return 'admin';
+  if (engagement[modName]) return 'engagement';
+  return 'pages';
+}
 
 // 模块依赖表：加载某模块前先加载其依赖
 var _moduleDeps = {
@@ -1912,15 +1945,15 @@ function _safeInit(initFnName, route, target) {
   // 异步加载的模块：如果 init 函数尚未就绪，等待其脚本加载（Bust 缓存版本号随修改同步升级）
   if (typeof window[initFnName] !== 'function') {
     var _pendingModules = {
-      'initAdmin': 'admin.js',
-      'initCommunity': 'community.js',
-      'initUser': 'user.js'
+      'initAdmin': 'admin',
+      'initCommunity': 'community',
+      'initUser': 'user'
     };
-    var moduleFile = _pendingModules[initFnName];
-    if (moduleFile) {
+    var modName = _pendingModules[initFnName];
+    if (modName) {
       _showModuleLoading(target, initFnName);
       var _script = document.createElement('script');
-      _script.src = 'js/' + moduleFile + '?v=20260814c';
+      _script.src = 'js/' + _moduleDir(modName) + '/' + modName + '.js?v=20260814c';
       _script.onload = function() {
         if (typeof window[initFnName] === 'function') {
           try { window[initFnName](target); } catch (e) { console.error(e); }
@@ -2472,9 +2505,9 @@ async function initSupabase() {
     // 动态加载 supabase 相关脚本（按依赖顺序）
     var v = '20260905a';
     var supabaseScripts = [
-      __jsBase + 'js/supabase-client.js?v=' + v,
-      __jsBase + 'js/supabase.js?v=' + v,
-      __jsBase + 'js/storage.js?v=' + v
+      __jsBase + 'js/core/supabase-client.js?v=' + v,
+      __jsBase + 'js/core/supabase.js?v=' + v,
+      __jsBase + 'js/core/storage.js?v=' + v
     ];
     await __loadScriptChain(supabaseScripts);
 

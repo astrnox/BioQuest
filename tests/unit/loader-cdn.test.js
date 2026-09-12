@@ -15,7 +15,7 @@ const fs = require('fs');
 const path = require('path');
 
 const ROOT = path.resolve(__dirname, '../..');
-const LOADER_SRC = fs.readFileSync(path.join(ROOT, 'js/loader.js'), 'utf8');
+const LOADER_SRC = fs.readFileSync(path.join(ROOT, 'js/core/loader.js'), 'utf8');
 
 const SHA_EXPECTED = 'a'.repeat(64);
 const SHARD_TEXT = JSON.stringify({

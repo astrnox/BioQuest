@@ -28,7 +28,7 @@ BioQuest 高中生物题目爬虫 v1.1
     # 3. 把结果追加到 pool.json
     python scripts/bio_crawler.py --merge-to pool.json
 
-概念标签已与 js/knowledge-graph.js 对齐，确保图谱点击节点可进入专项练习。
+概念标签已与 js/pages/knowledge-graph.js 对齐，确保图谱点击节点可进入专项练习。
 """
 
 import argparse
@@ -70,7 +70,7 @@ except Exception as e:
 # ═══════════════════════════════════════════════════════════════
 
 # ═══════════════════════════════════════════════════════════════
-# 知识图谱对齐：概念、学科、模块必须与 js/knowledge-graph.js 一致
+# 知识图谱对齐：概念、学科、模块必须与 js/pages/knowledge-graph.js 一致
 # ═══════════════════════════════════════════════════════════════
 
 # concept -> (category, module)

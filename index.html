@@ -11,8 +11,8 @@
        已移除 'unsafe-eval'：应用自身代码不使用 eval()/new Function()，
        消除存储型 XSS 下通过 eval 逃逸 CSP 的路径，防止被窃取的 AI Key 外传。
        P1-8 修复：已移除 script-src 的 'unsafe-inline'——所有内联脚本外部化为
-       js/theme-init.js（同步防闪烁）、js/boot-mask.js、js/boot-lazy.js、js/sw-register.js，
-       所有动态内联 onclick/onchange 等处理器改由 js/csp-events.js 的 data-on 委托实现。
+       js/core/theme-init.js（同步防闪烁）、js/core/boot-mask.js、js/core/boot-lazy.js、js/core/sw-register.js，
+       所有动态内联 onclick/onchange 等处理器改由 js/core/csp-events.js 的 data-on 委托实现。
        style-src 保留 unsafe-inline：动态度量/背景等数百处内联 style 属性为低风险（非 XSS 载体）。 -->
   <meta http-equiv="Content-Security-Policy" content="
     default-src 'self';
@@ -196,7 +196,7 @@
     /* 每日亿题入口 hover（原内联 onmouseover/onmouseout 已改纯 CSS） */
     .daily-billion-entry-link:hover { background: rgba(196,149,106,0.1); }
   </style>
-  <script src="js/theme-init.js?v=20260820a"></script>
+  <script src="js/core/theme-init.js?v=20260820a"></script>
 
   <!-- Primary SEO -->
   <title>BioQuest — 生物竞赛刷题平台 | 全真模拟 · 专项练习 · 错题本</title>
@@ -271,7 +271,7 @@
 
   <!-- 外部 CDN 失败回退状态与工具函数 -->
   <!-- 启动辅助脚本（defer）：Supabase 延迟加载 + data-route 点击委托兜底 -->
-  <script src="js/boot-lazy.js?v=20260820a" defer></script>
+  <script src="js/core/boot-lazy.js?v=20260820a" defer></script>
 
   <!-- 首屏关键 CSS：同步加载 -->
   <!-- Issue #108：首屏同步 CSS 合并为单文件（scripts/build-css-bundle.js 生成，减少 6→1 次串行请求） -->
@@ -324,7 +324,7 @@
     <div id="bq-boot-percent" aria-hidden="true">0%</div>
   </div>
   <!-- 首屏骨架遮罩逻辑（外部化）：defer 加载，不阻塞内容解析；遮罩本身由上方 CSS 立即显示 -->
-  <script src="js/boot-mask.js?v=20260826a" defer></script>
+  <script src="js/core/boot-mask.js?v=20260826a" defer></script>
 
   <a href="#page-content" class="skip-link">跳到主要内容</a>
 
@@ -538,7 +538,7 @@
         <div class="container">
           <div class="stats-row">
             <div class="stat-item">
-              <div class="stat-value">10,000<span class="stat-unit">+</span></div>
+              <div class="stat-value"><span id="statTotalQuestions">0</span><span class="stat-unit">道</span></div>
               <div class="stat-label">题库总量</div>
             </div>
             <div class="stat-divider"></div>
@@ -574,7 +574,7 @@
         </div>
       </section>
 
-      <!-- Issue #129（P3-36）：本地成就徽章集合（由 js/achievements.js 渲染，游客亦可查看） -->
+      <!-- Issue #129（P3-36）：本地成就徽章集合（由 js/engagement/achievements.js 渲染，游客亦可查看） -->
       <section class="ach-home-section" data-section="achievements" style="padding:48px 0 24px;">
         <div class="container">
           <div class="section-header">
@@ -712,21 +712,21 @@
   <!-- Supabase 相关脚本：首屏不需要，由 app.js 在 initSupabase 中按需动态加载 -->
   <!-- supabase-client.js / supabase.js / storage.js 已从 HTML 移除，节省 ~140KB 首屏加载 -->
 
-  <script src="js/utils.js?v=20260828a" defer></script>
+  <script src="js/core/utils.js?v=20260828a" defer></script>
   <!-- Issue #105/#123/#130/#128：事件集中管理 / 离线队列 / 离线提示 / 生物彩蛋 -->
-  <script src="js/offline-queue.js?v=20260828a" defer></script>
-  <script src="js/offline-status.js?v=20260828a" defer></script>
-  <script src="js/eggs.js?v=20260828a" defer></script>
+  <script src="js/core/offline-queue.js?v=20260828a" defer></script>
+  <script src="js/core/offline-status.js?v=20260828a" defer></script>
+  <script src="js/engagement/eggs.js?v=20260828a" defer></script>
   <!-- Issue #134：本地数据压缩（lz-string，MIT，vendor 完整性清单已登记） -->
   <script src="js/vendor/lz-string.min.js?v=20260828a" defer></script>
   <!-- 手绘成就徽章库（单一数据源）：暴露 window.renderBadgeSvg，供习惯/成就面板共用 -->
-  <script src="js/badge-motifs.js?v=20260725a" defer></script>
+  <script src="js/engagement/badge-motifs.js?v=20260725a" defer></script>
   <!-- ts-fsrs (MIT): 官方 FSRS-5 引擎 UMD 构建，必须在 fsrs-algorithm.js 之前加载 -->
   <script src="js/vendor/ts-fsrs.umd.min.js?v=20260723d" defer></script>
   <!-- DOMPurify (MPL-2.0/Apache-2.0): SVG/HTML XSS sanitizer，必须在 discussion.js / tutor.js 之前加载 -->
   <script src="js/vendor/purify.min.js?v=20260723d" defer></script>
   <!-- FSRS 间隔重复算法包装层：基于 ts-fsrs，暴露 window.FSRS 兼容 API（修复 P0-1） -->
-  <script src="js/fsrs-algorithm.js?v=20260723d" defer></script>
+  <script src="js/algo/fsrs-algorithm.js?v=20260723d" defer></script>
   <!-- v5.0 Tier1 vendor 库：仅保留首页/学习主链路真正用到的库；
        体积大且仅特定路由使用/当前未使用的库（katex/mhchem/gsap 无业务调用，
        mammoth/pdf.js 仅文档导入用）不再首屏加载，mammoth/pdf 由 document-tools 用时注入 -->
@@ -752,8 +752,8 @@
   <script src="js/integrations/data-store.js?v=20260723d" defer></script>
   <!-- Issue #14：FSRS 优化器/分片哈希 Web Worker 核心（纯函数，双上下文：Worker + 主线程桶底）。
        必须先于 fsrs-optimizer.js 加载，提供 window.FSRSWorkerCore 供主线程兜底。 -->
-  <script src="js/fsrs.worker.js?v=20260817a" defer></script>
-  <script src="js/fsrs-optimizer.js?v=20260817a" defer></script>
+  <script src="js/algo/fsrs.worker.js?v=20260817a" defer></script>
+  <script src="js/algo/fsrs-optimizer.js?v=20260817a" defer></script>
   <!-- Tier 2 集成模块：IRT增强 + BKT知识追踪 + RDKit分子 + Excalidraw白板（vendor 懒加载） -->
   <script src="js/integrations/irt-enhanced.js?v=20260723d" defer></script>
   <script src="js/integrations/bkt-engine.js?v=20260723d" defer></script>
@@ -806,45 +806,45 @@
 
   <!-- 核心模块直接加载，避免动态 import 兼容性问题 -->
   <!-- Issue #106：运行时配置独立文件，须在依赖方（ai-client.js）之前加载 -->
-  <script src="js/config.js?v=20260828a" defer></script>
+  <script src="js/core/config.js?v=20260828a" defer></script>
   <!-- ai-key-store.js 先行：提供加密/闭包化的 AI Key 存取（P1-3），供后续脚本使用 -->
-  <script src="js/ai-key-store.js?v=20260819a" defer></script>
+  <script src="js/ai/ai-key-store.js?v=20260819a" defer></script>
   <!-- ai-client.js 先加载（纯前端 AI 调用，供 tutor/discussion 复用） -->
-  <script src="js/ai-client.js?v=20260819a" defer></script>
+  <script src="js/ai/ai-client.js?v=20260819a" defer></script>
   <!-- v3.4 基础能力：事件总线 + IRT 引擎 + TTS + 白板 + 多智能体 -->
-  <script src="js/event-bus.js?v=20260712k" defer></script>
-  <script src="js/csp-events.js?v=20260820a" defer></script>
-  <script src="js/irt-engine.js?v=20260712k" defer></script>
-  <script src="js/tts.js?v=20260712k" defer></script>
-  <script src="js/whiteboard.js?v=20260712k" defer></script>
-  <script src="js/multi-agent.js?v=20260712k" defer></script>
-  <script src="js/classmate.js?v=20260806a" defer></script>
-  <script src="js/learning-dna.js?v=20260719v4" defer></script>
-  <script src="js/mood-tracker.js?v=20260719v4" defer></script>
-  <script src="js/a11y-utils.js?v=20260719v4" defer></script>
-  <script src="js/community.js?v=20260725final" defer></script>
+  <script src="js/core/event-bus.js?v=20260712k" defer></script>
+  <script src="js/core/csp-events.js?v=20260820a" defer></script>
+  <script src="js/algo/irt-engine.js?v=20260712k" defer></script>
+  <script src="js/engagement/tts.js?v=20260712k" defer></script>
+  <script src="js/engagement/whiteboard.js?v=20260712k" defer></script>
+  <script src="js/ai/multi-agent.js?v=20260712k" defer></script>
+  <script src="js/pages/classmate.js?v=20260806a" defer></script>
+  <script src="js/pages/learning-dna.js?v=20260719v4" defer></script>
+  <script src="js/engagement/mood-tracker.js?v=20260719v4" defer></script>
+  <script src="js/core/a11y-utils.js?v=20260719v4" defer></script>
+  <script src="js/pages/community.js?v=20260725final" defer></script>
   <!-- 社区回帖通知：收到回帖弹窗提示 + 我的-通知列表 -->
-  <script src="js/notifications.js?v=20260811g" defer></script>
+  <script src="js/engagement/notifications.js?v=20260811g" defer></script>
   <!-- Issue #17：admin.js（282KB）不再首屏加载——由 app.js 路由到 #/admin 时动态注入，
        且其功能页子模块（admin-users/questions/cards/community/ebook/ops/ocr/aigen）
        在点击对应标签时才按需加载 -->
-  <script src="js/learning-hub.js?v=20260809f" defer></script>
-  <script src="js/daily-billion.js?v=20260905a" defer></script>
-  <script src="js/points-ui.js?v=20260814a" defer></script>
+  <script src="js/pages/learning-hub.js?v=20260809f" defer></script>
+  <script src="js/pages/daily-billion.js?v=20260905a" defer></script>
+  <script src="js/engagement/points-ui.js?v=20260814a" defer></script>
   <!-- P1-2 拆分：路由配置表先于 app.js 加载，app.js 通过全局 Routes 引用 -->
-  <script src="js/app-routes.js?v=20260821a" defer></script>
-  <script src="js/app.js?v=20260905a" defer></script>
+  <script src="js/core/app-routes.js?v=20260821a" defer></script>
+  <script src="js/core/app.js?v=20260905a" defer></script>
   <!-- PRD §5 补全模块 -->
-  <script src="js/micro-details.js?v=20260803a" defer></script>
-  <script src="js/sync-tabs.js?v=20260803a" defer></script>
-  <script src="js/error-recovery.js?v=20260803a" defer></script>
-  <script src="js/question-utils.js?v=20260809c" defer></script>
-  <script src="js/loader.js?v=20260826a" defer></script>
-  <script src="js/cell-loader.js?v=20260803a" defer></script>
-  <script src="js/shortcut-panel.js?v=20260803a" defer></script>
-  <script src="js/soundscape.js?v=20260803a" defer></script>
-  <script src="js/onboarding.js?v=20260803a" defer></script>
-  <script src="js/social-impact.js?v=20260803a" defer></script>
+  <script src="js/core/micro-details.js?v=20260803a" defer></script>
+  <script src="js/core/sync-tabs.js?v=20260803a" defer></script>
+  <script src="js/core/error-recovery.js?v=20260803a" defer></script>
+  <script src="js/core/question-utils.js?v=20260809c" defer></script>
+  <script src="js/core/loader.js?v=20260826a" defer></script>
+  <script src="js/core/cell-loader.js?v=20260803a" defer></script>
+  <script src="js/core/shortcut-panel.js?v=20260803a" defer></script>
+  <script src="js/engagement/soundscape.js?v=20260803a" defer></script>
+  <script src="js/pages/onboarding.js?v=20260803a" defer></script>
+  <script src="js/engagement/social-impact.js?v=20260803a" defer></script>
 </head>  <!-- v3.2 OpenMAIC 范式移植：DSL 类型 + Canvas 渲染器 + Action 执行器（封装在 vendor/ 目录） -->
   <script src="vendor/openmaic/openmaic-dsl.js?v=20260712k" defer></script>
   <script src="vendor/openmaic/openmaic-renderer.js?v=20260712k" defer></script>
@@ -874,17 +874,17 @@
   <script src="vendor/openmaic/openmaic-types.js?v=20260712j" defer></script>
   <script src="vendor/openmaic/openmaic-constants.js?v=20260712j" defer></script>
   <script src="vendor/openmaic/openmaic-browser-tts.js?v=20260712j" defer></script>
-  <!-- 注：AI 课堂模块已移除，首屏由 app.js 控制路由，不再加载 classroom.js/classroom-player.js/runner -->
+  <!-- 注：AI 课堂模块已移除，首屏由 app.js 控制路由，不再加载 classroom.js/pages/classroom-player.js/runner -->
   <!-- 首页关键模块：由 boot-lazy.js 在 DOMContentLoaded 时加载 hero-sketch；非关键模块由 app.js 延迟加载 -->
   <!-- PWA Service Worker 注册（外部化 sw-register.js）：DOMContentLoaded 立即启动，配 6s 硬超时兜底 -->
-  <script src="js/sw-register.js?v=20260820a" defer></script>
+  <script src="js/core/sw-register.js?v=20260820a" defer></script>
   <!-- Issue #116：图片懒加载（非首屏 <img> 补 loading="lazy"，含动态插入扫描） -->
-  <script src="js/lazy-images.js?v=20260828p3" defer></script>
+  <script src="js/core/lazy-images.js?v=20260828p3" defer></script>
   <!-- Issue #127：暗色/亮色模式切换过渡动画控制 -->
-  <script src="js/theme-transition.js?v=20260828p3" defer></script>
+  <script src="js/core/theme-transition.js?v=20260828p3" defer></script>
   <!-- Issue #125：统一「温暖空状态」组件（错题/收藏/排行/流水等空区域） -->
-  <script src="js/empty-state.js?v=20260828p3" defer></script>
+  <script src="js/core/empty-state.js?v=20260828p3" defer></script>
   <!-- Issue #136：轻量成就/激励引擎（游客与本地场景，登录用户云端徽章不受影响） -->
-  <script src="js/achievements.js?v=20260828p3" defer></script>
+  <script src="js/engagement/achievements.js?v=20260828p3" defer></script>
 </body>
 </html>

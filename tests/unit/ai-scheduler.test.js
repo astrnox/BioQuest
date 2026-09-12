@@ -14,7 +14,7 @@
 const path = require('path');
 
 const ROOT = path.resolve(__dirname, '../..');
-const AI_CLIENT_PATH = path.join(ROOT, 'js/ai-client.js');
+const AI_CLIENT_PATH = path.join(ROOT, 'js/ai/ai-client.js');
 
 /** 每个用例重新 require ai-client.js（闭包内调度器状态随之重置；Istanbul 可插桩） */
 function freshClient() {

@@ -42,9 +42,9 @@ v1.0 PRD 描述了 4 大新模块（错题/动画/实验室/学习管理），�
 
 | # | 问题 | 证据 | 影响 |
 |---|------|------|------|
-| P0-1 | FSRS 算法未加载 | `index.html` 未引入 `fsrs-algorithm.js`，`window.FSRS` 永远 undefined，cards.js/wrongbook.js 回退 SM-2 | README 宣传 FSRS-4.5 是虚假宣传 |
+| P0-1 | FSRS 算法未加载 | `index.html` 未引入 `fsrs-algorithm.js`，`window.FSRS` 永远 undefined，cards.js/pages/wrongbook.js 回退 SM-2 | README 宣传 FSRS-4.5 是虚假宣传 |
 | P0-2 | API Key 硬编码 | `ai-client.js:33` `DEFAULT_ZHIPU_KEY = 'f514e5711...'` 明文提交仓库 | Key 被盗刷、违反安全承诺 |
-| P0-3 | 数据层三套标准 | dashboard.js/teacher.js 用 localStorage；community.js 用 Supabase；app.js 有 `_generateLocalLeaderboard` 死代码 | 多设备不同步、教师看不到真实数据、违反"排行榜 Supabase only"硬约束 |
+| P0-3 | 数据层三套标准 | dashboard.js/pages/teacher.js 用 localStorage；community.js 用 Supabase；app.js 有 `_generateLocalLeaderboard` 死代码 | 多设备不同步、教师看不到真实数据、违反"排行榜 Supabase only"硬约束 |
 | P0-4 | 题库数据污染 | `quiz_auto_generated.json` 846 题选项跨题污染；`crawled_competition.json` 750 题含 `【解析待补充】` | 学生被错误选项误导 |
 
 ### 2.2 P1 严重缩水（PRD 承诺未达成）
@@ -144,7 +144,7 @@ v1.0 PRD 描述了 4 大新模块（错题/动画/实验室/学习管理），�
 **目标**：兑现 FSRS-4.5 承诺，打通题-图-卡联动。
 
 **P0 修复**：
-- 在 `index.html` 同步加载 `js/fsrs-algorithm.js`（首屏关键资源）
+- 在 `index.html` 同步加载 `js/algo/fsrs-algorithm.js`（首屏关键资源）
 - 删除 `cards.js:136` 与 `wrongbook.js`、`supabase-client.js` 中所有 `if (typeof window.FSRS === 'undefined')` 的 SM-2 回退分支
 - FSRS 参数（difficulty/stability/retrievability/last_review）持久化到 Supabase `cards_progress` 表
 

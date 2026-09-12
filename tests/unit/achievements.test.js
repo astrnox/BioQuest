@@ -14,7 +14,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const SRC = path.join(__dirname, '..', '..', 'js', 'achievements.js');
+const SRC = path.join(__dirname, '..', '..', 'js', 'engagement', 'achievements.js');
 const source = fs.readFileSync(SRC, 'utf8');
 
 function makeLocalStorage() {

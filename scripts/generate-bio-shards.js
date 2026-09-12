@@ -105,7 +105,7 @@ const { CATEGORIES, TOPICS, EDGES, validateSchema } = require('./bio-topic-schem
  * ============================================================ */
 
 /**
- * 与 js/storage.js 完全一致的旧 ID 生成算法（Java String.hashCode 风格 32 位）。
+ * 与 js/core/storage.js 完全一致的旧 ID 生成算法（Java String.hashCode 风格 32 位）。
  * 旧题库无 id 时前端用 hashQuestionId(question + concept) 作为题目 ID，
  * 迁移映射表必须能复算出该旧 ID，才能把旧 progress/错题映射到 bioID。
  */

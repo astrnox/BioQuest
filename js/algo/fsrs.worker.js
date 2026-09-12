@@ -3,7 +3,7 @@
  *
  * 设计要点
  *  - 一份纯函数代码同时服务两个上下文：
- *      * 作为经典 Dedicated Worker 运行（new Worker('js/fsrs.worker.js')）：
+ *      * 作为经典 Dedicated Worker 运行（new Worker('js/algo/fsrs.worker.js')）：
  *        self.onmessage 处理 { type, id, ... }，回传可序列化结果。
  *      * 作为普通 <script> 在主线程加载：
  *        暴露 window.FSRSWorkerCore / window.FSRSOptimizer（主线程兜底路径）。

@@ -1,5 +1,5 @@
 /**
- * BioQuest — P1-2 / P3-5：路由配置表（js/app-routes.js）单元测试
+ * BioQuest — P1-2 / P3-5：路由配置表（js/core/app-routes.js）单元测试
  *
  * 覆盖：
  *   1. 独立文件存在且定义全局 Routes（拆分自 app.js，P1-2）；
@@ -12,8 +12,8 @@
 const fs = require('fs');
 const path = require('path');
 
-const ROUTES_SRC = path.join(__dirname, '..', '..', 'js', 'app-routes.js');
-const APP_SRC = path.join(__dirname, '..', '..', 'js', 'app.js');
+const ROUTES_SRC = path.join(__dirname, '..', '..', 'js', 'core', 'app-routes.js');
+const APP_SRC = path.join(__dirname, '..', '..', 'js', 'core', 'app.js');
 
 const routesSource = fs.readFileSync(ROUTES_SRC, 'utf8');
 const appSource = fs.readFileSync(APP_SRC, 'utf8');

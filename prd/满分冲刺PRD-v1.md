@@ -368,7 +368,7 @@ db.version(1).stores({
 
 | 任务 | 说明 |
 |------|------|
-| 删除所有Supabase相关代码 | supabase-client.js/supabase.js/storage.js 全部删除 |
+| 删除所有Supabase相关代码 | supabase-client.js/core/supabase.js/core/storage.js 全部删除 |
 | 删除多套数据层 | 统一走Dexie.js，删除localStorage直接写的业务数据 |
 | 拆分超大文件 | app.js按路由拆分为router.js/auth-modal.js等；每个模块一个文件 |
 | 删除死代码 | _generateLocalLeaderboard等所有死代码清除 |

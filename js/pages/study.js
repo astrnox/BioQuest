@@ -697,7 +697,7 @@
     if (typeof window.initHabits === 'function' || typeof window.renderHabitsPage === 'function') {
       _embedHabits();
     } else {
-      var base = (typeof _getModuleBaseUrl === 'function') ? _getModuleBaseUrl() : 'js/';
+      var base = (typeof _getModuleBaseUrl === 'function') ? _getModuleBaseUrl() : 'js/pages/';
       var script = document.createElement('script');
       script.src = base + 'habits.js?v=20260628i';
       script.onload = function() { _embedHabits(); };
@@ -731,7 +731,7 @@
         '<div class="st-card" style="text-align:center;padding:32px;">' +
           '<div style="font-size:32px;margin-bottom:8px;">📚</div>' +
           '<p style="color:var(--text-muted,#8a8a8a);">学习管理中心未加载</p>' +
-          '<p style="color:var(--text-muted,#8a8a8a);font-size:12px;margin-top:4px;">请检查 js/learning-hub.js 是否成功加载</p>' +
+          '<p style="color:var(--text-muted,#8a8a8a);font-size:12px;margin-top:4px;">请检查 js/pages/learning-hub.js 是否成功加载</p>' +
         '</div>';
     }
   }

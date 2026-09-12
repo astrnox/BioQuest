@@ -53,7 +53,7 @@ npx serve .                  # Node.js
 **Deploy online:** just drop the whole folder onto any free hosting platform (GitHub Pages, Vercel, Netlify, Cloudflare Pages). No build step, no server needed.
 
 **Things you may want to configure:**
-- Database: create a free project at [Supabase](https://supabase.com), run the SQL files in `sql/`, then fill the URL and key into `js/supabase-client.js` (optional — without it, it automatically falls back to browser local storage).
+- Database: create a free project at [Supabase](https://supabase.com), run the SQL files in `sql/`, then fill the URL and key into `js/core/supabase-client.js` (optional — without it, it automatically falls back to browser local storage).
 - AI features: users enter their own API Key in "Profile → Settings"; developers don't need to manage it.
 
 ---

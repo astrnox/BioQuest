@@ -1,7 +1,7 @@
 /**
  * BioQuest - 管理后台 · 题目管理子模块（Issue #17 自 admin.js 拆分）
  * 由 admin.js 的 loadTabContent 在切换到「题目管理」标签时动态注入加载。
- * 依赖：js/admin.js（核心）。
+ * 依赖：js/admin/admin.js（核心）。
  */
 
 /* ===== 题目管理标签 ===== */

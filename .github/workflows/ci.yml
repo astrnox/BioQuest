@@ -60,7 +60,7 @@ jobs:
       - name: JS 语法检查
         run: |
           fail=0
-          for f in $(git ls-files 'js/*.js' 'tests/*.js' 'tests/*.cjs'); do
+          for f in $(git ls-files 'js/**/*.js' 'tests/*.js' 'tests/*.cjs'); do
             node --check "$f" || { echo "SYNTAX FAIL: $f"; fail=1; }
           done
           exit $fail

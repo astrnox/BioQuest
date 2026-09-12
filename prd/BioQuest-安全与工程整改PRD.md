@@ -46,7 +46,7 @@ BioQuest 是一个纯静态前端的高中生生物学习 PWA，覆盖高考到�
 
 ### 🔴 P0-1：硬编码真实 LLM API Key
 
-**现状**：`js/ai-client.js` 中明文硬编码智谱 AI 真实密钥（`BUILTIN_API_KEY`），处于公开仓库及 git 历史中，可被任意盗用。此外 `AiClient.loadConfig()` 全局返回值携带 apiKey，叠加 localStorage 明文存储，共 5 条独立泄露路径。
+**现状**：`js/ai/ai-client.js` 中明文硬编码智谱 AI 真实密钥（`BUILTIN_API_KEY`），处于公开仓库及 git 历史中，可被任意盗用。此外 `AiClient.loadConfig()` 全局返回值携带 apiKey，叠加 localStorage 明文存储，共 5 条独立泄露路径。
 
 **整改方案（纯前端正解：BYOK）**：
 1. 立即吊销并轮换该智谱 Key（Day 0 动作）；

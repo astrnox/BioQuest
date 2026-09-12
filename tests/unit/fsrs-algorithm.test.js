@@ -3,13 +3,13 @@
  * 覆盖：fsrsSchedule 首次/复习调度、评分对间隔的影响、卡片状态转移、
  *      getDueCards 到期摘取、reviewCard 持久化、SM-2 兼容接口。
  *
- * 依赖：js/vendor/ts-fsrs.umd.min.js（UMD，可直接 require）+ js/fsrs-algorithm.js
+ * 依赖：js/vendor/ts-fsrs.umd.min.js（UMD，可直接 require）+ js/algo/fsrs-algorithm.js
  */
 
 const fs = require('fs');
 const path = require('path');
 
-const FSRS_SRC = path.join(__dirname, '..', '..', 'js', 'fsrs-algorithm.js');
+const FSRS_SRC = path.join(__dirname, '..', '..', 'js', 'algo', 'fsrs-algorithm.js');
 const TSFRS_SRC = path.join(__dirname, '..', '..', 'js', 'vendor', 'ts-fsrs.umd.min.js');
 
 // 在隔离沙箱中加载 fsrs-algorithm.js，返回 { FSRS, localStorage }

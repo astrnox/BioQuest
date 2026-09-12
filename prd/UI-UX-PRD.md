@@ -973,7 +973,7 @@ CSS/JS 文件使用查询参数版本控制：
 
 ```
 css/globals.css?v=20260627a
-js/app.js?v=20260627a
+js/core/app.js?v=20260627a
 ```
 
 版本号格式：`YYYYMMDD{a-z}`，每次部署更新版本号以强制刷新缓存。

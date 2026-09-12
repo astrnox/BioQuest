@@ -8,8 +8,8 @@ const { JSDOM } = require('jsdom');
 
 const WS = path.resolve(__dirname, '..');
 const html = fs.readFileSync(path.join(WS, 'wiki.html'), 'utf8');
-const utilsJs = fs.readFileSync(path.join(WS, 'js/utils.js'), 'utf8');
-const wikiJs = fs.readFileSync(path.join(WS, 'js/wiki.js'), 'utf8');
+const utilsJs = fs.readFileSync(path.join(WS, 'js/core/utils.js'), 'utf8');
+const wikiJs = fs.readFileSync(path.join(WS, 'js/pages/wiki.js'), 'utf8');
 const seedJson = fs.readFileSync(path.join(WS, 'data/wiki-seed.json'), 'utf8');
 
 let fetchHandler = null;

@@ -3,7 +3,7 @@
  *
  * 本文件是「客户端壳」：
  *  - 优先把重计算（19 维梯度下降 fit / 批量调度 / 分片 SHA-256）postMessage 给 Web Worker
- *    （js/fsrs.worker.js，自包含纯函数，不依赖 window.FSRS UMD），避免主线程 Long Task。
+ *    （js/algo/fsrs.worker.js，自包含纯函数，不依赖 window.FSRS UMD），避免主线程 Long Task。
  *  - Worker 加载/初始化失败时，自动回退到主线程同步执行（window.FSRSWorkerCore，
  *    与 Worker 同一份实现，保证结果一致）。
  *  - 保留旧同步 API（fit / evaluate / extractReviews / toFSRSParams / retention），
@@ -35,7 +35,7 @@
       return null;
     }
     try {
-      var w = new Worker('js/fsrs.worker.js');
+      var w = new Worker('js/algo/fsrs.worker.js');
       w.onmessage = function (e) {
         var d = e.data || {};
         var p = _pending[d.id];

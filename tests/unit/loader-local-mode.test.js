@@ -77,7 +77,7 @@ describe('本地题库模式（PREFER_LOCAL）', () => {
         return all.hasOwnProperty(key) ? all[key] : dflt;
       } catch (e) { return dflt; }
     };
-    require(path.join(ROOT, 'js/loader.js'));
+    require(path.join(ROOT, 'js/core/loader.js'));
   });
 
   beforeEach(() => {

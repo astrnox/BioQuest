@@ -3,7 +3,7 @@
  * BioQuest — 轻量级成就 / 激励引擎（游客与本地场景）
  * 用途：在「未登录 / 本地」场景提供成就触发判定、解锁动画与本地存储，
  *      登录用户的云端徽章面板（user.js + supabase）保持原样，二者互不干扰。
- * 依赖（可选）：window.renderBadgeSvg（js/badge-motifs.js）渲染手绘徽章 SVG；
+ * 依赖（可选）：window.renderBadgeSvg（js/engagement/badge-motifs.js）渲染手绘徽章 SVG；
  *      未加载时回退为本引擎内置的 emoji 兜底图。
  * 数据源（localStorage）：bioquest_records / bioquest_favorites /
  *      bioquest_wrong_questions / bioquest_habits / bioquest_progress_stats

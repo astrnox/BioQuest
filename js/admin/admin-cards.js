@@ -1,7 +1,7 @@
 /**
  * BioQuest - 管理后台 · 知识卡片子模块（Issue #17 自 admin.js 拆分）
  * 由 admin.js 的 loadTabContent 在切换到「知识卡片」标签时动态注入加载。
- * 依赖：js/admin.js（核心）。
+ * 依赖：js/admin/admin.js（核心）。
  */
 
 function renderCardsTab(container, cardsData) {

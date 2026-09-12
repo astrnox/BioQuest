@@ -41,7 +41,7 @@ UA = (
     "BioQuestWikiCrawler/1.0 (educational)"
 )
 
-# 学科分类 → 主题色（与 js/wiki.js 的 CATEGORY_COLORS 一致）
+# 学科分类 → 主题色（与 js/pages/wiki.js 的 CATEGORY_COLORS 一致）
 CATEGORY_COLORS = {
     "细胞生物学": "#3a5ba4",
     "分子生物学": "#6a4aa4",
@@ -322,7 +322,7 @@ class Fetcher:
 
 
 # ═══════════════════════════════════════════════════════════════
-# Markdown 转换（与前端 js/wiki.js 的 wikiTextToMd 保持一致）
+# Markdown 转换（与前端 js/pages/wiki.js 的 wikiTextToMd 保持一致）
 # ═══════════════════════════════════════════════════════════════
 
 def wiki_text_to_md(text: str) -> str:

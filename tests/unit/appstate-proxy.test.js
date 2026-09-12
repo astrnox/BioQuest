@@ -14,7 +14,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const APP_SRC = path.join(__dirname, '..', '..', 'js', 'app.js');
+const APP_SRC = path.join(__dirname, '..', '..', 'js', 'core', 'app.js');
 const source = fs.readFileSync(APP_SRC, 'utf8');
 
 // 从 app.js 源码中抽取 createReadOnlyStateView 函数定义（含函数体）

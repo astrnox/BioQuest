@@ -2,7 +2,7 @@
 """retag_pool.py
 
 把 pool.json 中所有题目的 target/difficulty 做统一映射，
-便于前端 (js/practice.js) 按"高考/竞赛" 及 "基础/进阶/挑战" 筛选。
+便于前端 (js/pages/practice.js) 按"高考/竞赛" 及 "基础/进阶/挑战" 筛选。
 
 规则:
     target:  'high_school' (高考) / 'competition' (竞赛) / 'both' (通用)
