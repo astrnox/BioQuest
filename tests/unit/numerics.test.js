@@ -20,9 +20,9 @@ const fs = require('fs');
 const path = require('path');
 
 const ROOT = path.join(__dirname, '..', '..');
-const IRT_SRC = path.join(ROOT, 'js', 'irt-engine.js');
-const DIAG_SRC = path.join(ROOT, 'js', 'smart-diagnosis.js');
-const ANALYTIC_SRC = path.join(ROOT, 'js', 'analytic.js');
+const IRT_SRC = path.join(ROOT, 'js', 'algo', 'irt-engine.js');
+const DIAG_SRC = path.join(ROOT, 'js', 'ai', 'smart-diagnosis.js');
+const ANALYTIC_SRC = path.join(ROOT, 'js', 'pages', 'analytic.js');
 
 /* 最小 localStorage（内存版），与既有单元测试一致 */
 function makeLocalStorage(init) {

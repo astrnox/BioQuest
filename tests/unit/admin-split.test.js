@@ -63,7 +63,7 @@ describe('Issue #17：admin.js 核心模块', () => {
     // 每个标签映射到存在的子模块文件
     for (const t of tabs) {
       const file = ADMIN_TAB_MODULES[t];
-      expect(file).toMatch(/^js\/admin-(users|questions|cards|community|ebook|ops|ocr|aigen)\.js$/);
+      expect(file).toMatch(/^js\/admin\/admin-(users|questions|cards|community|ebook|ops|ocr|aigen)\.js$/);
       expect(fs.existsSync(path.join(ROOT, file))).toBe(true);
     }
   });
