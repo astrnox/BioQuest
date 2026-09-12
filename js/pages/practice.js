@@ -964,7 +964,16 @@ function handleToggleAnswer(subIdx, value) {
   }
 
   PracticeState.userAnswers[qIdx][subIdx] = value;
-  renderQuiz();
+  // 原地切换「正确/错误」按钮选中态，避免整题重渲染（含淡入动画）被感知为页面刷新
+  const root = document.getElementById('practice-root');
+  if (root) {
+    root.querySelectorAll('.practice-tf-btn[data-sub-idx="' + subIdx + '"]').forEach(function (btn) {
+      const on = btn.getAttribute('data-value') === String(value);
+      btn.classList.toggle('practice-tf-active', on);
+      btn.classList.toggle('practice-tf-true', on && value === true);
+      btn.classList.toggle('practice-tf-false', on && value === false);
+    });
+  }
 }
 
 /**
@@ -999,7 +1008,18 @@ function handleToggleFavorite() {
       PracticeState.favorites.delete(qId);
     }
   }
-  renderQuiz();
+  // 原地更新收藏按钮状态，避免整题重渲染（含淡入动画）被感知为页面刷新
+  const favBtn = document.getElementById('practice-fav-btn');
+  if (favBtn) {
+    const isFav = PracticeState.favorites.has(qId);
+    favBtn.classList.toggle('practice-fav-active', isFav);
+    favBtn.setAttribute('title', isFav ? '取消收藏' : '收藏题目');
+    const svgPath = favBtn.querySelector('polygon');
+    if (svgPath) svgPath.setAttribute('fill', isFav ? 'currentColor' : 'none');
+    if (favBtn.lastChild && favBtn.lastChild.nodeType === 3) {
+      favBtn.lastChild.textContent = isFav ? '已收藏' : '收藏';
+    }
+  }
 }
 
 function handleMarkWrong() {
@@ -1019,7 +1039,16 @@ function handleMarkWrong() {
       addWrongQuestion(qId, q.subject || 'general', q.question || '', q);
     }
   }
-  renderQuiz();
+  // 原地更新错题标记按钮状态，避免整题重渲染（含淡入动画）被感知为页面刷新
+  const wrongBtn = document.getElementById('practice-wrong-btn');
+  if (wrongBtn) {
+    const isWrong = PracticeState.wrongMarked.has(qId);
+    wrongBtn.classList.toggle('practice-wrong-active', isWrong);
+    wrongBtn.setAttribute('title', isWrong ? '取消标记' : '标记错题');
+    if (wrongBtn.lastChild && wrongBtn.lastChild.nodeType === 3) {
+      wrongBtn.lastChild.textContent = isWrong ? '已标记' : '错题';
+    }
+  }
 }
 
 function handleNextQuestion() {
@@ -2126,7 +2155,9 @@ function bindQuizEvents() {
         const idx = parseInt(opt.dataset.logicIdx, 10);
         PracticeState.userAnswers[qIdx][0] = idx;
       }
-      renderQuiz();
+      // 原地切换选中态，避免整题重渲染（含淡入动画）被感知为页面刷新
+      logicOptions.forEach((o) => o.classList.remove('practice-logic-selected'));
+      opt.classList.add('practice-logic-selected');
     });
   });
 

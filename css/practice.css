@@ -704,9 +704,12 @@
 
 .practice-loading-icon,
 .exam-loading-icon {
-  font-size: 3rem;
-  margin-bottom: 16px;
-  animation: pulse 2s ease-in-out infinite;
+  /* Issue #139：图标区域承载统一加载动画（bq-loader-dna 等，纯 CSS） */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 92px;
+  margin-bottom: 8px;
 }
 
 .practice-loading-title,

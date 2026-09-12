@@ -1309,11 +1309,17 @@ async function loadQuizData() {
     target.innerHTML = `
       <div class="exam-loading-screen">
         <div class="exam-loading-content">
-          <div class="exam-loading-icon"></div>
+          <div class="exam-loading-icon" aria-hidden="true">
+            <div class="bq-loader-dna" role="status" aria-label="加载中">
+              <span class="bq-dna-strand bq-dna-strand--left"><i></i><i></i><i></i><i></i></span>
+              <span class="bq-dna-strand bq-dna-strand--right"><i></i><i></i><i></i><i></i></span>
+              <span class="bq-dna-rung"></span>
+            </div>
+          </div>
           <h3 class="exam-loading-title">正在加载题库</h3>
           <p class="exam-loading-status" id="examLoadingStatus">正在连接…</p>
           <div class="exam-loading-bar-wrap">
-            <div class="exam-loading-bar" id="examLoadingBar" style="width:0%"></div>
+            <div class="exam-loading-bar bq-progress-shimmer" id="examLoadingBar" style="width:0%"></div>
           </div>
           <p class="exam-loading-hint" id="examLoadingHint">首次加载可能需要几秒，后续将使用缓存</p>
         </div>
