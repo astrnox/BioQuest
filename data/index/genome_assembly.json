@@ -1,1 +1,19 @@
-{}
+{
+  "M4-01-636d9eab": {
+    "diff": "league",
+    "difficulty": "league",
+    "has_image": false,
+    "len": 37,
+    "module": "module_4",
+    "src": "genome_assembly",
+    "tag": "genome_assembly",
+    "tags": [
+      "genome_assembly",
+      "module_4",
+      "生物信息学",
+      "基因组拼接与质量评估"
+    ],
+    "target": "competition",
+    "year": null
+  }
+}

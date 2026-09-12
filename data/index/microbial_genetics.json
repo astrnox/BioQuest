@@ -1,1 +1,19 @@
-{}
+{
+  "M2-01-f599f18a": {
+    "diff": "league",
+    "difficulty": "league",
+    "has_image": false,
+    "len": 41,
+    "module": "module_2",
+    "src": "microbial_genetics",
+    "tag": "microbial_genetics",
+    "tags": [
+      "microbial_genetics",
+      "module_2",
+      "微生物学",
+      "乳糖操纵子的调控"
+    ],
+    "target": "competition",
+    "year": null
+  }
+}

@@ -1,1 +1,19 @@
-{}
+{
+  "M3-01-ea78b366": {
+    "diff": "league",
+    "difficulty": "league",
+    "has_image": false,
+    "len": 55,
+    "module": "module_3",
+    "src": "biodiversity",
+    "tag": "biodiversity",
+    "tags": [
+      "biodiversity",
+      "module_3",
+      "生态学",
+      "生物多样性的层次与保护"
+    ],
+    "target": "competition",
+    "year": null
+  }
+}

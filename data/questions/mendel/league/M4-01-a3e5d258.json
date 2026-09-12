@@ -1,0 +1,38 @@
+{
+  "concept": "自由组合定律与测交验证",
+  "difficulty": "league",
+  "explanation": "A【对】依据：DdRr 自交，高茎红花（D_R_）占 9/16，其中纯合子 DDRR 占 1 份，即 1/9。\nB【错】错因：9:3:3:1 恰恰说明两对基因位于非同源染色体上独立分配，而非同一对染色体。\nC【错】错因：DdRr × ddrr 测交后代应为 1:1:1:1 四种表现型，而非 3:1:3:1。\nD【错】错因：矮茎红花（ddR_）中 ddRR 占 1/3、ddRr 占 2/3，纯合子占 1/3。",
+  "question": "某二倍体植物中，高茎（D）对矮茎（d）为显性，红花（R）对白花（r）为显性，两对基因独立遗传。基因型为 DdRr 的植株自交，关于后代，下列叙述正确的是：",
+  "references": [],
+  "subQuestions": [
+    {
+      "answer": true,
+      "label": "A",
+      "text": "后代中高茎红花植株占 9/16，其中纯合子占 1/9"
+    },
+    {
+      "answer": false,
+      "label": "B",
+      "text": "后代性状分离比为 9:3:3:1，说明两对基因位于同一对染色体上"
+    },
+    {
+      "answer": false,
+      "label": "C",
+      "text": "用 ddrr 植株与该植株测交，后代比例为 3:1:3:1"
+    },
+    {
+      "answer": false,
+      "label": "D",
+      "text": "后代矮茎红花个体中纯合子占 1/2"
+    }
+  ],
+  "subject": "遗传学",
+  "tags": [
+    "mendel",
+    "module_4",
+    "遗传学",
+    "自由组合定律与测交验证"
+  ],
+  "target": "competition",
+  "type": "mtf"
+}

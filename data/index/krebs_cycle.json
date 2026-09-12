@@ -1,1 +1,19 @@
-{}
+{
+  "M1-01-678b4991": {
+    "diff": "league",
+    "difficulty": "league",
+    "has_image": false,
+    "len": 47,
+    "module": "module_1",
+    "src": "krebs_cycle",
+    "tag": "krebs_cycle",
+    "tags": [
+      "krebs_cycle",
+      "module_1",
+      "生物化学",
+      "三羧酸循环"
+    ],
+    "target": "competition",
+    "year": null
+  }
+}

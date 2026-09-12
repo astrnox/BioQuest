@@ -1,1 +1,19 @@
-{}
+{
+  "M4-01-fc98f5e0": {
+    "diff": "league",
+    "difficulty": "league",
+    "has_image": false,
+    "len": 38,
+    "module": "module_4",
+    "src": "bio_databases",
+    "tag": "bio_databases",
+    "tags": [
+      "bio_databases",
+      "module_4",
+      "生物信息学",
+      "常用生物信息学数据库"
+    ],
+    "target": "competition",
+    "year": null
+  }
+}

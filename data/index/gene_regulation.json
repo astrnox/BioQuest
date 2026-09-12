@@ -17,5 +17,22 @@
     ],
     "target": "competition",
     "year": null
+  },
+  "M4-02-df81db11": {
+    "diff": "league",
+    "difficulty": "league",
+    "has_image": false,
+    "len": 48,
+    "module": "module_4",
+    "src": "gene_regulation",
+    "tag": "gene_regulation",
+    "tags": [
+      "gene_regulation",
+      "module_4",
+      "分子生物学",
+      "增强子的作用机制"
+    ],
+    "target": "competition",
+    "year": null
   }
 }

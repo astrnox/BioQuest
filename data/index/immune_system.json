@@ -16,5 +16,22 @@
     ],
     "target": "competition",
     "year": null
+  },
+  "M3-02-c2773aee": {
+    "diff": "league",
+    "difficulty": "league",
+    "has_image": false,
+    "len": 50,
+    "module": "module_3",
+    "src": "immune_system",
+    "tag": "immune_system",
+    "tags": [
+      "immune_system",
+      "module_3",
+      "免疫学",
+      "克隆选择学说与特异性免疫"
+    ],
+    "target": "competition",
+    "year": null
   }
 }

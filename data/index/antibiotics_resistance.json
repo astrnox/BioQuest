@@ -1,1 +1,19 @@
-{}
+{
+  "M2-01-85894ab9": {
+    "diff": "league",
+    "difficulty": "league",
+    "has_image": false,
+    "len": 36,
+    "module": "module_2",
+    "src": "antibiotics_resistance",
+    "tag": "antibiotics_resistance",
+    "tags": [
+      "antibiotics_resistance",
+      "module_2",
+      "微生物学",
+      "抗生素耐药性的产生与传播"
+    ],
+    "target": "competition",
+    "year": null
+  }
+}

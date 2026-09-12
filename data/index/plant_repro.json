@@ -1,1 +1,19 @@
-{}
+{
+  "M2-01-626295d7": {
+    "diff": "league",
+    "difficulty": "league",
+    "has_image": false,
+    "len": 39,
+    "module": "module_2",
+    "src": "plant_repro",
+    "tag": "plant_repro",
+    "tags": [
+      "plant_repro",
+      "module_2",
+      "植物学",
+      "被子植物双受精"
+    ],
+    "target": "competition",
+    "year": null
+  }
+}

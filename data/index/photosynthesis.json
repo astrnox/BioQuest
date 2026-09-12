@@ -1,1 +1,19 @@
-{}
+{
+  "M2-01-e5ce3088": {
+    "diff": "league",
+    "difficulty": "league",
+    "has_image": false,
+    "len": 59,
+    "module": "module_2",
+    "src": "photosynthesis",
+    "tag": "photosynthesis",
+    "tags": [
+      "photosynthesis",
+      "module_2",
+      "植物生理学",
+      "光反应与暗反应的联系"
+    ],
+    "target": "competition",
+    "year": null
+  }
+}

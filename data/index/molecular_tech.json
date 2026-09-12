@@ -16,5 +16,22 @@
     ],
     "target": "competition",
     "year": null
+  },
+  "M1-02-5775c58d": {
+    "diff": "league",
+    "difficulty": "league",
+    "has_image": false,
+    "len": 52,
+    "module": "module_1",
+    "src": "molecular_tech",
+    "tag": "molecular_tech",
+    "tags": [
+      "molecular_tech",
+      "module_1",
+      "生物技术",
+      "PCR 的原理与应用"
+    ],
+    "target": "competition",
+    "year": null
   }
 }
