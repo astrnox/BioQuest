@@ -15,7 +15,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const SRC = path.join(__dirname, '..', '..', 'js', 'empty-state.js');
+const SRC = path.join(__dirname, '..', '..', 'js', 'core', 'empty-state.js');
 const source = fs.readFileSync(SRC, 'utf8');
 
 function listenCapture(target, type) {

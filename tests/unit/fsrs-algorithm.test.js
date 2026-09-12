@@ -9,7 +9,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const FSRS_SRC = path.join(__dirname, '..', '..', 'js', 'fsrs-algorithm.js');
+const FSRS_SRC = path.join(__dirname, '..', '..', 'js', 'algo', 'fsrs-algorithm.js');
 const TSFRS_SRC = path.join(__dirname, '..', '..', 'js', 'vendor', 'ts-fsrs.umd.min.js');
 
 // 在隔离沙箱中加载 fsrs-algorithm.js，返回 { FSRS, localStorage }

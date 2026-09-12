@@ -17,7 +17,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const SRC = path.join(__dirname, '..', '..', 'js', 'storage.js');
+const SRC = path.join(__dirname, '..', '..', 'js', 'core', 'storage.js');
 const LZ_SRC = path.join(__dirname, '..', '..', 'js', 'vendor', 'lz-string.min.js');
 const storageSource = fs.readFileSync(SRC, 'utf8');
 const lzSource = fs.readFileSync(LZ_SRC, 'utf8');

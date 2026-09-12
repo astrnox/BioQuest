@@ -13,8 +13,8 @@
 const fs = require('fs');
 const path = require('path');
 
-const APP_SRC = path.join(__dirname, '..', '..', 'js', 'app.js');
-const WB_SRC = path.join(__dirname, '..', '..', 'js', 'wrongbook.js');
+const APP_SRC = path.join(__dirname, '..', '..', 'js', 'core', 'app.js');
+const WB_SRC = path.join(__dirname, '..', '..', 'js', 'pages', 'wrongbook.js');
 const appSource = fs.readFileSync(APP_SRC, 'utf8');
 const wbSource = fs.readFileSync(WB_SRC, 'utf8');
 

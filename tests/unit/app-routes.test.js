@@ -12,8 +12,8 @@
 const fs = require('fs');
 const path = require('path');
 
-const ROUTES_SRC = path.join(__dirname, '..', '..', 'js', 'app-routes.js');
-const APP_SRC = path.join(__dirname, '..', '..', 'js', 'app.js');
+const ROUTES_SRC = path.join(__dirname, '..', '..', 'js', 'core', 'app-routes.js');
+const APP_SRC = path.join(__dirname, '..', '..', 'js', 'core', 'app.js');
 
 const routesSource = fs.readFileSync(ROUTES_SRC, 'utf8');
 const appSource = fs.readFileSync(APP_SRC, 'utf8');

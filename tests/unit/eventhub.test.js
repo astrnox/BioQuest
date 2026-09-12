@@ -16,7 +16,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const SRC = path.join(__dirname, '..', '..', 'js', 'utils.js');
+const SRC = path.join(__dirname, '..', '..', 'js', 'core', 'utils.js');
 
 // 从 utils.js 中抽取 EventHub IIFE（避免整文件依赖其它全局函数）
 const source = fs.readFileSync(SRC, 'utf8');

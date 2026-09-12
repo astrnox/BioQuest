@@ -5,7 +5,7 @@
 
 const fs = require('fs');
 const path = require('path');
-const IRT_SRC = path.join(__dirname, '..', '..', 'js', 'irt-engine.js');
+const IRT_SRC = path.join(__dirname, '..', '..', 'js', 'algo', 'irt-engine.js');
 
 // 在隔离的 window/localStorage 沙箱中加载 irt-engine.js，返回 window.IrtEngine
 function loadIrtEngine() {
