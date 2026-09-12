@@ -1,7 +1,7 @@
 /**
  * BioQuest - 管理后台 · 运营子模块：反馈 / 申诉 / 数据同步 / 公告（Issue #17 自 admin.js 拆分）
  * 由 admin.js 的 loadTabContent 在切换到对应标签时动态注入加载。
- * 依赖：js/admin.js（核心）。
+ * 依赖：js/admin/admin.js（核心）。
  */
 
 window.handleResolveAppeal = async function(appealId, action) {

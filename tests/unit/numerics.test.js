@@ -5,15 +5,15 @@
  * 确定性输入做可复现断言，不依赖浏览器 / 后端 / 网络。
  *
  * 覆盖：
- *   1) IRT 引擎（js/irt-engine.js）
+ *   1) IRT 引擎（js/algo/irt-engine.js）
  *        - probCorrect / inferParams 基本不变式（已在 irt-engine.test.js，此处复核关键边界）
  *        - predictScore：分数∈[0,100]、随 θ 单调、low≤score≤high、置信度∈[0,100] 且随做题量递增
  *        - describeAbility：百分位单调、五档等级按 θ 有序
- *   2) 学情诊断统计（js/smart-diagnosis.js）
+ *   2) 学情诊断统计（js/ai/smart-diagnosis.js）
  *        - computeModuleRanking：按正确率升序（最弱在前）、缺失模块归零
  *        - computeTypeAnalysis：题型计数 + 正确率∈[0,100]、`score>0` 视为对的判定
  *        - computeWeakPoints：未练不标、<40严重 / <60薄弱 / ≥80良好 / 区间无空洞
- *   3) BioScore（js/analytic.js，calcBioScore）
+ *   3) BioScore（js/pages/analytic.js，calcBioScore）
  *        - 空数据不产生 NaN / 分数越界，正确率映射整体单调
  */
 const fs = require('fs');

@@ -8,7 +8,7 @@
     "test:smoke": "node tests/wiki-smoke-test.cjs",
     "test:e2e": "node tests/e2e-smoke.js",
     "test:anchor": "node scripts/verify-manifest-anchor.js",
-    "lint:js": "git ls-files 'js/*.js' 'tests/*.js' 'tests/*.cjs' | xargs -n1 node --check",
+    "lint:js": "git ls-files 'js/**/*.js' 'tests/*.js' 'tests/*.cjs' | xargs -n1 node --check",
     "bump:sw": "node scripts/bump-sw.js",
     "build:css": "node scripts/build-css-bundle.js",
     "build:min": "node scripts/minify-assets.js"

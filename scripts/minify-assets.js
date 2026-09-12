@@ -7,8 +7,7 @@
  *  - 本项目是多脚本页面，JS 全局依赖有加载顺序要求，因此禁止把多个脚本打包成单文件。
  *  - 此处使用 esbuild 的 transform API（bundle:false），对每个文件独立压缩，保持相对目录结构写入 dist/。
  *  - 压缩范围：
- *      * js/*.js                 （顶层 js 目录，不含本级子目录）
- *      * js/integrations/*.js    （集成模块）
+ *      * js/ 下各分类子目录中的 *.js（core/pages/ai/algo/admin/engagement/integrations 等）
  *      * css/*.css
  *    js/vendor/*（已压缩的三方库）不会被触碰。
  */
@@ -40,12 +39,22 @@ function listFilePaths(dir, ext) {
     .map((name) => path.join(dir, name));
 }
 
+// 递归收集 dir 下扩展名为 ext 的文件；skip 属可排除的子目录名（按名称）
+function collectDir(dir, ext, out, skip) {
+  if (!fs.existsSync(dir)) return;
+  const entries = fs.readdirSync(dir, { withFileTypes: true });
+  for (const entry of entries) {
+    if (skip && skip.has(entry.name)) continue;
+    const p = path.join(dir, entry.name);
+    if (entry.isDirectory()) collectDir(p, ext, out, skip);
+    else if (path.extname(entry.name) === ext) out.push(p);
+  }
+}
+
 function collectSources() {
   const sources = [];
-  // 顶层 js 目录中的 .js（listFilePaths 只读一层，天然排除 js/vendor、js/integrations）
-  sources.push(...listFilePaths(path.join(ROOT, 'js'), '.js'));
-  // 集成模块
-  sources.push(...listFilePaths(path.join(ROOT, 'js', 'integrations'), '.js'));
+  // 递归收集 js/ 下所有分类子目录中的 .js（跳过已压缩的 js/vendor 三方库）
+  collectDir(path.join(ROOT, 'js'), '.js', sources, new Set(['vendor']));
   // 样式
   sources.push(...listFilePaths(path.join(ROOT, 'css'), '.css'));
   return sources;
@@ -77,7 +86,7 @@ async function main() {
   let totalMinified = 0;
 
   for (const abs of sources) {
-    const rel = path.relative(ROOT, abs); // 例如 js/app.js, js/integrations/ocr-engine.js, css/globals.css
+    const rel = path.relative(ROOT, abs); // 例如 js/core/app.js, js/integrations/ocr-engine.js, css/globals.css
     const outAbs = path.join(outDir, rel);
     const originalBytes = fs.statSync(abs).size;
     const source = fs.readFileSync(abs, 'utf8');

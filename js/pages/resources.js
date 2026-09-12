@@ -7,7 +7,7 @@ let dataLoaded = false;
 let currentFilter = { category: '全部', tag: '全部', keyword: '' };
 let activeResourceId = null;
 
-// HTML 转义 — 统一使用 window.escapeHtml（Q-01，规范实现在 js/utils.js）
+// HTML 转义 — 统一使用 window.escapeHtml（Q-01，规范实现在 js/core/utils.js）
 var escapeHtml = (typeof window !== 'undefined' && typeof window.escapeHtml === 'function')
   ? window.escapeHtml
   : function(str) {

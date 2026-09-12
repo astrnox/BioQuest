@@ -19,7 +19,7 @@
 const path = require('path');
 
 const ROOT = path.resolve(__dirname, '../..');
-require(path.join(ROOT, 'js/utils.js'));
+require(path.join(ROOT, 'js/core/utils.js'));
 const isChartImageSrc = window.BioQuest.isChartImageSrc;
 
 describe('题目图片渲染：isChartImageSrc 格式判定', () => {

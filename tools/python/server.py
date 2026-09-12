@@ -171,7 +171,7 @@ MODULE_NAMES = {
     "module_4": "遗传学、进化生物学、生物信息学"
 }
 
-# 知识图谱 label 列表（与 js/knowledge-graph.js 的 GRAPH_NODES label 严格对齐）
+# 知识图谱 label 列表（与 js/pages/knowledge-graph.js 的 GRAPH_NODES label 严格对齐）
 # 生成的题目 concept 必须取自此列表，确保图谱点击节点能精确匹配到对应题目
 GRAPH_LABELS = {
     "module_1": [
@@ -1555,7 +1555,7 @@ def retag_all_questions():
 
 # ========== 管理员授权 & Vision 模型选择 ==========
 
-# Admin 密钥哈希：与 js/admin.js 的 ADMIN_KEY_HASH 保持一致（请通过 adminLogin 修改密钥）
+# Admin 密钥哈希：与 js/admin/admin.js 的 ADMIN_KEY_HASH 保持一致（请通过 adminLogin 修改密钥）
 # 管理员密钥的 SHA-256 哈希（不是密钥本身）。可用环境变量 ADMIN_KEY_HASH 覆盖以便轮换。
 ADMIN_KEY_HASH_HEX = os.environ.get("ADMIN_KEY_HASH", "").strip().lower() or "d090ea0a3c226b0afb5fa7d86dce875dd63434b1e9bd6dc804ea9bf55a38f57b"
 

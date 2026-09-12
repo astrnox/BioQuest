@@ -2,13 +2,13 @@
  * BioQuest — FSRS Worker 核心单元测试（Issue #14）
  *
  * 验证：
- *  - 纯函数核心（js/fsrs.worker.js 的 CommonJS 导出）可直接在 Node 加载，
+ *  - 纯函数核心（js/algo/fsrs.worker.js 的 CommonJS 导出）可直接在 Node 加载，
  *    与浏览器主线程桶底（window.FSRSWorkerCore）为同一实现，保证 Worker/主线程结果一致。
  *  - fit 收敛、evaluate、extractReviews、scheduleDue 的正确性。
  *  - sha256Hex 与 Node crypto 参考实现一致。
  */
 
-const Core = require('../../js/fsrs.worker.js');
+const Core = require('../../js/algo/fsrs.worker.js');
 
 // 构造一批确定性复习样本（3 种稳定度 + 各 rating）
 function sampleReviews() {
@@ -39,7 +39,7 @@ function sampleHistory() {
   return history;
 }
 
-describe('FSRS Worker Core (js/fsrs.worker.js)', () => {
+describe('FSRS Worker Core (js/algo/fsrs.worker.js)', () => {
   test('默认权重存在且为 19 维', () => {
     expect(Array.isArray(Core.DEFAULT_W)).toBe(true);
     expect(Core.DEFAULT_W.length).toBe(19);

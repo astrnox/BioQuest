@@ -18,7 +18,7 @@ const ROOT = path.resolve(__dirname, '../..');
 // 以 require 加载使 Istanbul 可插桩（此前 eval 方式覆盖率不可见）；
 // utils.js 顶层 'use strict' 使函数声明停留在模块作用域，
 // 受测函数经 window.BioQuest.sanitizeUrlParam 命名空间导出。
-require(path.join(ROOT, 'js/utils.js'));
+require(path.join(ROOT, 'js/core/utils.js'));
 const sanitizeUrlParam = window.BioQuest.sanitizeUrlParam;
 
 describe('Issue #102：sanitizeUrlParam 参数清洗', () => {

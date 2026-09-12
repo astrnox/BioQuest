@@ -8,7 +8,7 @@
 (function () {
   'use strict';
 
-  // 知识库 ID（Issue #106：优先读取独立配置文件 js/config.js 注入的
+  // 知识库 ID（Issue #106：优先读取独立配置文件 js/core/config.js 注入的
   // window.BQ_CONFIG.METASO_SUBJECT_ID；此处保留默认值作为无配置时的兜底）
   var METASO_SUBJECT_ID = '2045811707737636864';
   function _metasoSubjectId() {

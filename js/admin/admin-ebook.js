@@ -1,7 +1,7 @@
 /**
  * BioQuest - 管理后台 · 电子书管理子模块（Issue #17 自 admin.js 拆分）
  * 由 admin.js 的 loadTabContent 在切换到「电子书管理」标签时动态注入加载。
- * 依赖：js/admin.js（核心）；笔记数据 js/ebook.js 在本模块内按需动态加载。
+ * 依赖：js/admin/admin.js（核心）；笔记数据 js/pages/ebook.js 在本模块内按需动态加载。
  */
 
 /* ===== 电子书管理标签 ===== */
@@ -97,7 +97,7 @@ async function renderEbookTab(container) {
       </div>
 
       <div style="background:var(--surface-secondary,#faf7f2);border-radius:12px;padding:16px;margin-bottom:20px;font-size:0.85rem;color:var(--text-secondary,#4a4a4a);line-height:1.6;">
-        编辑内容保存在浏览器本地存储中。如需永久修改，请编辑 <code style="background:rgba(90,125,92,0.1);padding:2px 6px;border-radius:4px;font-family:var(--font-mono);">js/ebook.js</code> 中的 BOOK_DATA。
+        编辑内容保存在浏览器本地存储中。如需永久修改，请编辑 <code style="background:rgba(90,125,92,0.1);padding:2px 6px;border-radius:4px;font-family:var(--font-mono);">js/pages/ebook.js</code> 中的 BOOK_DATA。
       </div>
 
       <form id="admin-ebook-edit-form" class="admin-form-grid">
@@ -224,7 +224,7 @@ async function renderEbookTab(container) {
       // 动态加载 ebook.js 脚本，然后读取 window.ALL_BOOKS
       await new Promise(function(resolve, reject) {
         var script = document.createElement('script');
-        script.src = 'js/ebook.js';
+        script.src = 'js/pages/ebook.js';
         script.onload = resolve;
         script.onerror = reject;
         document.head.appendChild(script);

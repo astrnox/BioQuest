@@ -79,12 +79,12 @@ window.OpenMAICClassroomRunner.startFromEntry({
 
 | 原 OpenMAIC 模块 | BioQuest 替代 | 文件 |
 |------------------|----------------|------|
-| useSceneGenerator (Zustand) | Classroom orchestrator | `js/classroom.js` |
-| Stage component | ClassroomPlayer | `js/classroom-player.js` |
-| Whiteboard canvas | BioQuest Whiteboard | `js/whiteboard.js` |
-| Agent orchestration | MultiAgent 5 角色 | `js/multi-agent.js` |
-| TTS (ElevenLabs) | 浏览器 SpeechSynthesis | `js/tts.js` |
-| EventBus (Zustand) | EventBus | `js/event-bus.js` |
+| useSceneGenerator (Zustand) | Classroom orchestrator | `js/pages/classroom.js` |
+| Stage component | ClassroomPlayer | `js/pages/classroom-player.js` |
+| Whiteboard canvas | BioQuest Whiteboard | `js/engagement/whiteboard.js` |
+| Agent orchestration | MultiAgent 5 角色 | `js/ai/multi-agent.js` |
+| TTS (ElevenLabs) | 浏览器 SpeechSynthesis | `js/engagement/tts.js` |
+| EventBus (Zustand) | EventBus | `js/core/event-bus.js` |
 | SceneOutline (IndexedDB) | 内存 + Supabase | （运行时） |
 
 ## 任务清单

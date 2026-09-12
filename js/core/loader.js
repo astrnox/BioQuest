@@ -471,7 +471,7 @@ function _saveShardToDB(tag, json, sha) {
 }
 
 function _sha256Hex(text) {
-  // Issue #14：优先走 Web Worker（js/fsrs.worker.js）并行计算，避免主线程 Long Task；
+  // Issue #14：优先走 Web Worker（js/algo/fsrs.worker.js）并行计算，避免主线程 Long Task；
   // Worker 不可用（离线/受限环境）回退 crypto.subtle。
   if (typeof window !== 'undefined' && window.FSRSOptimizer &&
       typeof window.FSRSOptimizer.sha256HexAsync === 'function') {
@@ -1804,7 +1804,7 @@ window.ensureQuestionLoaderReady = function (opts) {
       }
 
       var s = document.createElement('script');
-      s.src = 'js/loader.js?v=20260809a';
+      s.src = 'js/core/loader.js?v=20260809a';
       s.setAttribute('data-bioquest-loader', '1');
       s.async = true;
       s.onload = function () { resolve(true); };

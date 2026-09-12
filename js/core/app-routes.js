@@ -1,7 +1,7 @@
 /**
  * BioQuest — 路由配置表（P1-2 拆分：从 app.js 提取为独立文件）
  * 定义每个路由对应的页面标题和渲染函数。
- * 在 index.html 中必须先于 js/app.js 加载，app.js 内部通过全局 `Routes` 引用。
+ * 在 index.html 中必须先于 js/core/app.js 加载，app.js 内部通过全局 `Routes` 引用。
  */
 const Routes = {
   '/': {

@@ -10,9 +10,9 @@ const fs = require('fs');
 const path = require('path');
 const vm = require('vm');
 
-const OPT_SRC = path.join(__dirname, '..', '..', 'js', 'fsrs-optimizer.js');
-const CORE_SRC = path.join(__dirname, '..', '..', 'js', 'fsrs.worker.js');
-const Core = require('../../js/fsrs.worker.js');
+const OPT_SRC = path.join(__dirname, '..', '..', 'js', 'algo', 'fsrs-optimizer.js');
+const CORE_SRC = path.join(__dirname, '..', '..', 'js', 'algo', 'fsrs.worker.js');
+const Core = require('../../js/algo/fsrs.worker.js');
 
 function sampleReviews() {
   const reviews = [];

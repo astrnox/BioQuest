@@ -19,7 +19,7 @@ const COUNT_MULTIPLE = 5;
 const COUNT_JUDGE = 5;
 const COUNT_LOGIC = 15; // 逻辑推理模式题目数
 
-// HTML 转义 — 统一使用 window.escapeHtml（Q-01，规范实现在 js/utils.js）
+// HTML 转义 — 统一使用 window.escapeHtml（Q-01，规范实现在 js/core/utils.js）
 var escapeHtml = (typeof window !== 'undefined' && typeof window.escapeHtml === 'function')
   ? window.escapeHtml
   : function(str) {

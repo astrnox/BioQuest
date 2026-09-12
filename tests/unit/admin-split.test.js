@@ -24,18 +24,18 @@ function loadScript(src) {
 }
 
 const MODULES = [
-  'js/admin-users.js',
-  'js/admin-questions.js',
-  'js/admin-cards.js',
-  'js/admin-community.js',
-  'js/admin-ebook.js',
-  'js/admin-ops.js',
-  'js/admin-ocr.js',
-  'js/admin-aigen.js'
+  'js/admin/admin-users.js',
+  'js/admin/admin-questions.js',
+  'js/admin/admin-cards.js',
+  'js/admin/admin-community.js',
+  'js/admin/admin-ebook.js',
+  'js/admin/admin-ops.js',
+  'js/admin/admin-ocr.js',
+  'js/admin/admin-aigen.js'
 ];
 
 beforeAll(() => {
-  loadScript(read('js/admin.js'));
+  loadScript(read('js/admin/admin.js'));
 });
 
 /** 创建（或复用）唯一的 #admin-tab-content，避免 jsdom 中重复 id */
@@ -116,8 +116,8 @@ describe('Issue #17：admin 子模块', () => {
   });
 
   test('OCR / AI 出题子模块不重复声明共享工具（_ocrReadFileAsBase64 仅在核心）', () => {
-    const ocrSrc = read('js/admin-ocr.js');
-    const ebookSrc = read('js/admin-ebook.js');
+    const ocrSrc = read('js/admin/admin-ocr.js');
+    const ebookSrc = read('js/admin/admin-ebook.js');
     expect(ocrSrc).not.toMatch(/^function _ocrReadFileAsBase64/m);
     expect(ebookSrc).not.toMatch(/^function _ocrReadFileAsBase64/m);
     // ebook/ocr 引用的共享工具来自核心（核心已声明）

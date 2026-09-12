@@ -8,7 +8,7 @@
  *   - Synchronous：speech、whiteboard、discussion（等完成后回调）
  *
  * 与原版差异：
- *   - 白板绘制走 BioQuest 现有 js/whiteboard.js（命令式）
+ *   - 白板绘制走 BioQuest 现有 js/engagement/whiteboard.js（命令式）
  *     而不是 OpenMAIC stageAPI，依赖 window.Whiteboard.executeCommands
  *   - latex 用占位文字（BioQuest 无 KaTeX）
  *   - 视频/媒体占位跳过（BioQuest 走白板文字描述）

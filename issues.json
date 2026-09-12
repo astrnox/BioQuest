@@ -5,7 +5,7 @@
 },
 {"title":"[P1-3] 敏感数据（API key）加密实现存在缺陷，可被 DevTools 直接读取","body":"## 所属维度\n安全\n\n## 问题描述\nAPI key 存储在 `window.__bioquest_ai_key_memory__`（内存中）而非法持久化本地，但内存中的 key 仍可通过 DevTools 直接访问，泄露风险未真正消除。\n\n## 复现路径\n打开 DevTools，在控制台读取 `window.__bioquest_ai_key_memory__` 即可获取明文 API key。\n\n## 改进意见\n- 提供“记住我”选项\n- 使用 IndexedDB 存储加密后的 key"
 },
-{"title":"[P1-2] app.js（192KB）单文件过大，首屏加载与维护受影响","body":"## 所属维度\n架构与代码质量\n\n## 问题描述\n`app.js` 单文件高达 192KB，包含 SPA 路由配置、全局状态管理、Modal 管理、页面渲染调度等核心逻辑，导致首屏加载缓慢、代码可维护性下降。\n\n## 复现路径\n检查 `js/app.js` 的体积与承载的职责范围。\n\n## 改进意见\n- 将 `Routes` 提取为独立文件\n- 利用 `__loadScriptAsync` 动态加载非首屏模块"
+{"title":"[P1-2] app.js（192KB）单文件过大，首屏加载与维护受影响","body":"## 所属维度\n架构与代码质量\n\n## 问题描述\n`app.js` 单文件高达 192KB，包含 SPA 路由配置、全局状态管理、Modal 管理、页面渲染调度等核心逻辑，导致首屏加载缓慢、代码可维护性下降。\n\n## 复现路径\n检查 `js/core/app.js` 的体积与承载的职责范围。\n\n## 改进意见\n- 将 `Routes` 提取为独立文件\n- 利用 `__loadScriptAsync` 动态加载非首屏模块"
 },
 {"title":"[P2-3] CSS 文件过多（20+）同步加载阻塞首屏","body":"## 所属维度\n架构与代码质量\n\n## 问题描述\nCSS 文件数量超过 20 个，且同步加载阻塞首屏渲染。\n\n## 复现路径\n检查 `css/` 目录下的文件数量及 `index.html` 中 link 标签的加载方式。\n\n## 改进意见\n- 将同步 CSS 合并为 1-2 个文件\n- 或使用 CSS 代码分割 + 路由级按需加载"
 },

@@ -61,7 +61,7 @@ npx serve .                  # Node.js
 
 **可选配置**：
 
-- **数据库**：在 [Supabase](https://supabase.com) 创建免费项目，执行 `sql/` 目录下的 SQL 文件，将地址与 Key 填入 `js/supabase-client.js`（不配置则自动使用浏览器本地存储）
+- **数据库**：在 [Supabase](https://supabase.com) 创建免费项目，执行 `sql/` 目录下的 SQL 文件，将地址与 Key 填入 `js/core/supabase-client.js`（不配置则自动使用浏览器本地存储）
 - **AI 功能**：用户在「我的 → 设置」中自行填写 API Key，开发者无需管理
 
 ---

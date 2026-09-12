@@ -1685,7 +1685,7 @@ async function handlePullQuestions() {
           } else {
             // 手动注入 loader.js
             var s = document.createElement('script');
-            s.src = 'js/loader.js?v=' + Date.now();
+            s.src = 'js/core/loader.js?v=' + Date.now();
             s.async = false;
             s.onload = function () {
               var deadline = Date.now() + 8000;

@@ -36,7 +36,7 @@ BioQuest 是**纯前端静态应用 + Supabase（Auth / 数据库 / RLS）**架�
 
 ## 会话与认证（#103）
 
-- **登录/注册**：`js/supabase-client.js` 走 Supabase Auth（`signInWithPassword` / `signUp`），
+- **登录/注册**：`js/core/supabase-client.js` 走 Supabase Auth（`signInWithPassword` / `signUp`），
   密码经 HTTPS 传输、由 Supabase 服务端哈希存储，前端不落盘；
 - **会话持久化**：Supabase SDK `persistSession: true`，token 存 localStorage；
   `autoRefreshToken: true` 自动续期；`restoreSession()` 恢复会话（带 5 秒超时保护）；
@@ -48,7 +48,7 @@ BioQuest 是**纯前端静态应用 + Supabase（Auth / 数据库 / RLS）**架�
 
 ## AI 服务商 API Key（BYOK）
 
-采用 BYOK（用户自带 Key）模式，`js/ai-key-store.js`：
+采用 BYOK（用户自带 Key）模式，`js/ai/ai-key-store.js`：
 
 - Key 默认仅存**页面内存**（闭包单例，非枚举属性），刷新即失；
 - 仅当用户显式勾选「会话内记住」才写 sessionStorage（关闭标签页即清除）；
@@ -56,7 +56,7 @@ BioQuest 是**纯前端静态应用 + Supabase（Auth / 数据库 / RLS）**架�
 
 ## 内容安全策略（CSP）
 
-`index.html` 通过 meta CSP 收紧（`js/ai-client.js` 同样受 `connect-src` 约束）：
+`index.html` 通过 meta CSP 收紧（`js/ai/ai-client.js` 同样受 `connect-src` 约束）：
 
 - `script-src 'self'` + CDN 白名单，**无 `unsafe-inline` / `unsafe-eval`**
   （内联脚本已外部化，`onclick` 改为事件委托）；
@@ -65,8 +65,8 @@ BioQuest 是**纯前端静态应用 + Supabase（Auth / 数据库 / RLS）**架�
 
 ## 数据完整性
 
-- 题库分片带 SHA-256 校验（`js/loader.js`），CDN 回退数据防篡改；
-- 本地备份采用 WebCrypto AES-GCM 加密（`js/storage.js`），密钥由密码 PBKDF 派生；
+- 题库分片带 SHA-256 校验（`js/core/loader.js`），CDN 回退数据防篡改；
+- 本地备份采用 WebCrypto AES-GCM 加密（`js/core/storage.js`），密钥由密码 PBKDF 派生；
 - URL 参数经 `sanitizeUrlParam` 清洗（控制字符 / HTML 定界符过滤 + 长度上限）。
 
 ## 已知风险面（如实披露）

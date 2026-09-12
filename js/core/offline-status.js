@@ -3,7 +3,7 @@
  * BioQuest — 全局离线状态指示器（Issue #123）
  * 监听 online/offline 事件，断网时显示顶部横幅提示离线状态，
  * 并顺带展示 OfflineQueue 待同步操作数量；联网后自动隐藏。
- * 依赖：js/utils.js（EventHub，可选）、js/offline-queue.js（可选）。
+ * 依赖：js/core/utils.js（EventHub，可选）、js/core/offline-queue.js（可选）。
  * ============================================================
  */
 (function () {
