@@ -108,33 +108,18 @@
       background: radial-gradient(ellipse at 20% 20%, #1a1f1c 0%, #141a16 40%, #141a16 100%);
     }
     #bq-boot-logo {
-      width: 56px;
-      height: 56px;
-      border-radius: 16px;
-      background: #5a7d5c;
+      /* 与站点 header 品牌同款 SVG（金环+中心圆+绿色射线），
+         去除原"发光绿块+白圆环"的模板化设计，视觉自然贴合主题 */
+      width: 48px;
+      height: 48px;
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 6px 20px rgba(90, 125, 92, 0.28);
-      animation: bqBootPulse 1.4s ease-in-out infinite;
+      animation: bqBootBreathe 2.6s ease-in-out infinite;
     }
-    #bq-boot-logo::after {
-      content: "";
-      width: 22px;
-      height: 22px;
-      border-radius: 50%;
-      border: 2px solid #ffffff;
-      box-sizing: border-box;
-      position: relative;
-    }
-    #bq-boot-logo::before {
-      content: "";
-      width: 9px;
-      height: 9px;
-      border-radius: 50%;
-      background: #ffffff;
-      position: absolute;
-      z-index: 1;
+    #bq-boot-logo svg {
+      width: 48px;
+      height: 48px;
     }
     #bq-boot-label {
       font-family: var(--font-serif);
@@ -241,13 +226,9 @@
     }
     html[data-theme="dark"] #bq-boot-percent { color: #7f9189; }
     /* 动画声明（只放这里，不依赖外部 CSS 文件加载） */
-    @keyframes bqBootPulse {
-      0%, 100% { transform: scale(1);    box-shadow: 0 6px 20px rgba(90, 125, 92, 0.28); }
-      50%      { transform: scale(1.04); box-shadow: 0 10px 32px rgba(90, 125, 92, 0.40); }
-    }
-    html[data-theme="dark"] #bq-boot-logo {
-      background: #3a7a4c;
-      box-shadow: 0 6px 20px rgba(107, 196, 142, 0.35);
+    @keyframes bqBootBreathe {
+      0%, 100% { opacity: 1; }
+      50%      { opacity: 0.72; }
     }
     /* 卸载 mask：通过 classList.add('is-ready') 平滑淡出，避免"忽然切走" */
     #bq-boot-mask.is-ready { opacity: 0; visibility: hidden; }
@@ -377,7 +358,13 @@
 <body>
   <!-- 首屏骨架遮罩：在 JS/CSS 加载前立即渲染，避免"缩小/两边白边/空白几秒"的现象 -->
   <div id="bq-boot-mask" aria-hidden="true">
-    <div id="bq-boot-logo" aria-hidden="true"></div>
+    <div id="bq-boot-logo" aria-hidden="true">
+      <svg viewBox="0 0 28 28" fill="none" aria-hidden="true">
+        <circle cx="14" cy="14" r="12" stroke="#e8a830" stroke-width="2"/>
+        <circle cx="14" cy="14" r="4" fill="#e8a830"/>
+        <path d="M14 2v4M14 22v4M2 14h4M22 14h4" stroke="#5a7d5c" stroke-width="1.5"/>
+      </svg>
+    </div>
     <div id="bq-boot-label">BioQuest · 生物竞赛刷题</div>
     <div id="bq-boot-spinner" aria-hidden="true">
       <span class="bq-dna-strand bq-dna-strand--left"><i></i><i></i><i></i><i></i></span>
