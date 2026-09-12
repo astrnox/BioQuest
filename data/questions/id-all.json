@@ -225,6 +225,17 @@
       "target": "competition",
       "type": "mtf"
     },
+    "M1-02-57119b7a": {
+      "concept": "TCA循环的回补反应与代谢调控",
+      "difficulty": "league",
+      "file": "krebs_cycle/league/M1-02-57119b7a.json",
+      "has_image": true,
+      "len": 76,
+      "subject": "生物化学",
+      "tag": "krebs_cycle",
+      "target": "competition",
+      "type": "mtf"
+    },
     "M1-02-5775c58d": {
       "concept": "PCR 的原理与应用",
       "difficulty": "league",
@@ -233,17 +244,6 @@
       "len": 52,
       "subject": "生物技术",
       "tag": "molecular_tech",
-      "target": "competition",
-      "type": "mtf"
-    },
-    "M1-02-tca_lit": {
-      "concept": "TCA循环的回补反应与代谢调控",
-      "difficulty": "league",
-      "file": "krebs_cycle/league/M1-02-tca_lit.json",
-      "has_image": true,
-      "len": 76,
-      "subject": "生物化学",
-      "tag": "krebs_cycle",
       "target": "competition",
       "type": "mtf"
     },
@@ -434,6 +434,17 @@
       "target": "competition",
       "type": "mtf"
     },
+    "M2-02-358991fe": {
+      "concept": "光合电子传递与光合磷酸化的偶联",
+      "difficulty": "league",
+      "file": "photosynthesis/league/M2-02-358991fe.json",
+      "has_image": true,
+      "len": 70,
+      "subject": "植物生理学",
+      "tag": "photosynthesis",
+      "target": "competition",
+      "type": "mtf"
+    },
     "M2-02-6af62aca": {
       "concept": "植物抗寒性与低温响应",
       "difficulty": "league",
@@ -453,17 +464,6 @@
       "len": 60,
       "subject": "细胞生物学",
       "tag": "cell_signal",
-      "target": "competition",
-      "type": "mtf"
-    },
-    "M2-02-photo_lit": {
-      "concept": "光合电子传递与光合磷酸化的偶联",
-      "difficulty": "league",
-      "file": "photosynthesis/league/M2-02-photo_lit.json",
-      "has_image": true,
-      "len": 70,
-      "subject": "植物生理学",
-      "tag": "photosynthesis",
       "target": "competition",
       "type": "mtf"
     },
@@ -577,6 +577,17 @@
       "target": "competition",
       "type": "mtf"
     },
+    "M3-01-7c52c506": {
+      "concept": "CAR-T 细胞疗法与肿瘤免疫",
+      "difficulty": "league",
+      "file": "immune_system/league/M3-01-7c52c506.json",
+      "has_image": true,
+      "len": 89,
+      "subject": "免疫学",
+      "tag": "immune_system",
+      "target": "competition",
+      "type": "mtf"
+    },
     "M3-01-7f4c7a7b": {
       "concept": "小肠的结构与消化吸收",
       "difficulty": "league",
@@ -607,17 +618,6 @@
       "len": 35,
       "subject": "生态学",
       "tag": "biogeochemical",
-      "target": "competition",
-      "type": "mtf"
-    },
-    "M3-01-a898fe16": {
-      "concept": "CAR-T 细胞疗法与肿瘤免疫",
-      "difficulty": "league",
-      "file": "immune_system/league/M3-01-a898fe16.json",
-      "has_image": true,
-      "len": 89,
-      "subject": "免疫学",
-      "tag": "immune_system",
       "target": "competition",
       "type": "mtf"
     },
@@ -973,6 +973,17 @@
       "target": "competition",
       "type": "mtf"
     },
+    "M4-02-b7873823": {
+      "concept": "双因子杂交与独立分配的验证",
+      "difficulty": "league",
+      "file": "mendel/league/M4-02-b7873823.json",
+      "has_image": true,
+      "len": 68,
+      "subject": "遗传学",
+      "tag": "mendel",
+      "target": "competition",
+      "type": "mtf"
+    },
     "M4-02-df81db11": {
       "concept": "增强子的作用机制",
       "difficulty": "league",
@@ -984,21 +995,10 @@
       "target": "competition",
       "type": "mtf"
     },
-    "M4-02-mendel_lit": {
-      "concept": "双因子杂交与独立分配的验证",
-      "difficulty": "league",
-      "file": "mendel/league/M4-02-mendel_lit.json",
-      "has_image": true,
-      "len": 68,
-      "subject": "遗传学",
-      "tag": "mendel",
-      "target": "competition",
-      "type": "mtf"
-    },
-    "M4-03-gene_reg_lit": {
+    "M4-03-f59903ec": {
       "concept": "乳糖操纵子的双重调控机制",
       "difficulty": "league",
-      "file": "gene_regulation/league/M4-03-gene_reg_lit.json",
+      "file": "gene_regulation/league/M4-03-f59903ec.json",
       "has_image": true,
       "len": 72,
       "subject": "分子生物学",

@@ -689,7 +689,29 @@ function generateQuestionSet() {
   );
 
   const shuffled = shuffle([...PracticeState.filteredQuestions]);
-  return shuffled.slice(0, count);
+  return shuffled.slice(0, count).map(preparePracticeQuestion);
+}
+
+/**
+ * 克隆一道题并打乱其 subQuestions 显示顺序（浅拷贝题目，深拷贝 subQuestions）。
+ * 保留每个 subQuestion 自身 label，使解析里标注的 A/B/C/D 与选项字母始终对应；
+ * 通过 change 真实题目的「对错个数/位置」，配合此处顺序随机，让多选判断题
+ * 每次取题都呈现不同的正确项位置。
+ * 说明：只洗顺序不改 label，是为了保持 explanation 中的字母映射有效。
+ */
+function preparePracticeQuestion(q) {
+  if (!q || typeof q !== 'object' || !Array.isArray(q.subQuestions) || q.subQuestions.length < 2) {
+    return q;
+  }
+  const arr = q.subQuestions.slice();
+  // Fisher–Yates 洗牌
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    const tmp = arr[i];
+    arr[i] = arr[j];
+    arr[j] = tmp;
+  }
+  return Object.assign({}, q, { subQuestions: arr });
 }
 
 function initNewSession() {
