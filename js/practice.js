@@ -689,7 +689,44 @@ function generateQuestionSet() {
   );
 
   const shuffled = shuffle([...PracticeState.filteredQuestions]);
-  return shuffled.slice(0, count);
+  return shuffled.slice(0, count).map(preparePracticeQuestion);
+}
+
+/**
+ * 出题时对每个子题做「显示层重排」：
+ * - 题库本体固定不动，仅把每个选项的 (text, answer) 一起洗牌到槽位。
+ * - 槽位标签恒为 A/B/C/D 自上而下正序，用户所见始终按 abcd 排列。
+ * - 正确/错误的判断随文本走（answer 与 text 绑定），洗牌只改顺序不改正确性。
+ * - 解析按「原始标签 → 新槽位」重映射字母注解，保证对/错解析与随机后选项一致。
+ */
+function preparePracticeQuestion(q) {
+  if (!q || typeof q !== 'object' || !Array.isArray(q.subQuestions) || q.subQuestions.length < 2) {
+    return q;
+  }
+  // 深拷贝每个子题，避免改动题库本体的对象
+  const items = q.subQuestions.map(function (s) { return Object.assign({}, s); });
+  // Fisher–Yates 洗牌：只重排顺序，不改正确性
+  for (let i = items.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    const tmp = items[i];
+    items[i] = items[j];
+    items[j] = tmp;
+  }
+  // 槽位标签正序 A/B/C/D…
+  const slotLabels = 'ABCDEF'.split('');
+  const labelMap = {};
+  for (let i = 0; i < items.length; i++) {
+    const orig = items[i].label || slotLabels[i];
+    labelMap[orig] = slotLabels[i];
+    items[i].label = slotLabels[i];
+  }
+  // 解析字母注解按「原标签 → 新槽位」重映射，避免解析与随机后选项错位
+  const explanation = (typeof q.explanation === 'string' && q.explanation)
+    ? q.explanation.replace(/(^|\n)([A-D])(\s*【)/g, function (m, pre, L, br) {
+        return pre + (labelMap[L] || L) + br;
+      })
+    : q.explanation;
+  return Object.assign({}, q, { subQuestions: items, explanation: explanation });
 }
 
 function initNewSession() {

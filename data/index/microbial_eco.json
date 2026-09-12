@@ -17,5 +17,22 @@
     ],
     "target": "competition",
     "year": null
+  },
+  "M3-02-9a7f655c": {
+    "diff": "league",
+    "difficulty": "league",
+    "has_image": false,
+    "len": 39,
+    "module": "module_3",
+    "src": "microbial_eco",
+    "tag": "microbial_eco",
+    "tags": [
+      "microbial_eco",
+      "module_3",
+      "微生物学",
+      "微生物在氮循环中的作用"
+    ],
+    "target": "competition",
+    "year": null
   }
 }

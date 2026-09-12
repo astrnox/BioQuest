@@ -9,7 +9,7 @@
  *
  * 验证矩阵：
  *   1. PREFER_LOCAL 路径从本地 data/manifest.json + data/bank/*.json 拉到全库题目
- *      （当前题库 11 道，与 manifest.total_questions 一致）
+ *      （数量以 manifest.total_questions 为唯一真源，不做固定值绑定）
  *   2. 整个过程 fetch 只命中本地 data/ 路径，绝不出现 supabase 域名
  *   3. 设置页持久化键 bioquest_settings.question_source 可被 loadSetting 读回，
  *      且 exam/practice 依此选择的 mode 会退化为 preferLocal（无需网络）
@@ -102,14 +102,15 @@ describe('本地题库模式（PREFER_LOCAL）', () => {
     expect(mode).toBe('preferLocal');
   });
 
-  test('PREFER_LOCAL 从本地 data/ 拉到全库题目（11 道）', async () => {
+  test('PREFER_LOCAL 从本地 data/ 拉到全库题目（与 manifest 一致）', async () => {
     const items = await window.loadQuestions([1, 2, 3, 4], { mode: window.LoaderMode.PREFER_LOCAL });
     expect(Array.isArray(items)).toBe(true);
 
     // manifest.total_questions 是唯一数字真源
+    // 断言「拉到全库」而非绑定具体数量上限，避免题库扩量时脆弱
     const manifest = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/manifest.json'), 'utf-8'));
     expect(items.length).toBe(manifest.total_questions);
-    expect(items.length).toBe(11);
+    expect(items.length).toBeGreaterThanOrEqual(11);
 
     // 每道题至少 4 个选项
     items.forEach((q) => {

@@ -34,5 +34,22 @@
     ],
     "target": "competition",
     "year": null
+  },
+  "M1-03-e2de52ed": {
+    "diff": "league",
+    "difficulty": "league",
+    "has_image": false,
+    "len": 66,
+    "module": "module_1",
+    "src": "rna_biology",
+    "tag": "rna_biology",
+    "tags": [
+      "rna_biology",
+      "module_1",
+      "分子生物学",
+      "lncRNA XIST 与 X 染色体失活"
+    ],
+    "target": "competition",
+    "year": null
   }
 }

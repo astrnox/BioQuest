@@ -1,1 +1,19 @@
-{}
+{
+  "M2-01-7c09ba00": {
+    "diff": "league",
+    "difficulty": "league",
+    "has_image": false,
+    "len": 37,
+    "module": "module_2",
+    "src": "plant_movement",
+    "tag": "plant_movement",
+    "tags": [
+      "plant_movement",
+      "module_2",
+      "植物生理学",
+      "向光性与光受体"
+    ],
+    "target": "competition",
+    "year": null
+  }
+}

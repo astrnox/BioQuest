@@ -1,19 +1,35 @@
 {
-  "M4-01-ac721614": {
+  "M4-02-df81db11": {
     "diff": "league",
     "difficulty": "league",
     "has_image": false,
-    "len": 58,
+    "len": 48,
     "module": "module_4",
     "src": "gene_regulation",
     "tag": "gene_regulation",
     "tags": [
       "gene_regulation",
       "module_4",
-      "遗传学",
-      "表观遗传",
-      "DNA 甲基化",
-      "衰老"
+      "分子生物学",
+      "增强子的作用机制"
+    ],
+    "target": "competition",
+    "year": null
+  },
+  "M4-03-f59903ec": {
+    "diff": "league",
+    "difficulty": "league",
+    "has_image": true,
+    "len": 72,
+    "module": "module_4",
+    "src": "gene_regulation",
+    "tag": "gene_regulation",
+    "tags": [
+      "gene_regulation",
+      "module_4",
+      "分子生物学",
+      "操纵子",
+      "基因表达调控"
     ],
     "target": "competition",
     "year": null

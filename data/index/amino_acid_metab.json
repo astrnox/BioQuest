@@ -16,5 +16,22 @@
     ],
     "target": "competition",
     "year": null
+  },
+  "M1-02-411970b0": {
+    "diff": "league",
+    "difficulty": "league",
+    "has_image": false,
+    "len": 41,
+    "module": "module_1",
+    "src": "amino_acid_metab",
+    "tag": "amino_acid_metab",
+    "tags": [
+      "amino_acid_metab",
+      "module_1",
+      "生物化学",
+      "尿素循环"
+    ],
+    "target": "competition",
+    "year": null
   }
 }
