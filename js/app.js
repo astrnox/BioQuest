@@ -605,7 +605,7 @@ function renderSearchPage() {
         <div class="search-empty-state">
           <div class="search-empty-icon">[BioQuest]</div>
           <p>输入关键词开始搜索</p>
-          <p class="search-empty-hint">支持搜索全量题库（20000+ 题目）和多个生竞专业网站</p>
+          <p class="search-empty-hint">支持搜索本地题库和多个生竞专业网站</p>
         </div>
       </div>
     </div>
@@ -1083,6 +1083,16 @@ function reinitHomeComponents() {
     update();
     if (_AppState._countdownTimer) clearInterval(_AppState._countdownTimer);
     _AppState._countdownTimer = setInterval(update, 1000);
+  }
+
+  // 首页「题库总量」动态化：读取本地题库总数（不写死），云端场景不虚标
+  const statTotalQ = document.getElementById('statTotalQuestions');
+  if (statTotalQ) {
+    if (typeof window.getQuestionBankCount === 'function') {
+      window.getQuestionBankCount().then(function (n) {
+        if (n && statTotalQ) statTotalQ.textContent = String(n);
+      });
+    }
   }
 
   if (typeof initHeroSketch === 'function') {

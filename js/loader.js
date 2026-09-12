@@ -955,7 +955,9 @@ function _loadByModules(modules, onProgress, signal, forceRefresh, mode, onBackg
   var needed = [];
   for (var i = 0; i < modules.length; i++) {
     var m = modules[i];
-    if (forceRefresh || !_hasCached('module_' + m)) {
+    // 本地题库模式（PREFER_LOCAL）一律重新读取本地分片/JSON，避免读入
+    // 上次云端后台刷新写入的 Supabase 全量缓存（如 700 题的脏数据）。
+    if (forceRefresh || mode === LOAD_MODE.PREFER_LOCAL || !_hasCached('module_' + m)) {
       needed.push(m);
     }
   }
@@ -1394,7 +1396,8 @@ function _fetchModule(moduleNum, onProgress, signal) {
 
 function _loadAll(onProgress, signal, forceRefresh, mode, onBackgroundDone) {
   mode = mode || LOAD_MODE.BALANCED;
-  if (!forceRefresh && _hasCached('_all')) return Promise.resolve(_getCached('_all'));
+  // 本地题库模式（PREFER_LOCAL）不读缓存，直接走本地分片，避免命中云端脏缓存
+  if (mode !== LOAD_MODE.PREFER_LOCAL && !forceRefresh && _hasCached('_all')) return Promise.resolve(_getCached('_all'));
 
   if (mode === LOAD_MODE.PREFER_LOCAL || mode === LOAD_MODE.BALANCED) {
     // 首屏秒开：优先走分片（manifest+bank，附 bioID）；分片缺失回退 data/quiz.json
@@ -1714,6 +1717,23 @@ window.BioQuestCDN = {
 };
 // Issue #16：当前题库版本号（manifest rev），供「检查更新」比对
 window.getManifestRev = function () { return _manifestRev; };
+/**
+ * 读取本地题库题目总数（manifest.total_questions 为数据真源）。
+ * 用于首页/后台等「题库总量」动态展示；云端模式由调用方另行查询云端数量。
+ * @returns {Promise<number|null>} 无法获取时返回 null
+ */
+window.getQuestionBankCount = function () {
+  try {
+    if (_shardManifest && _shardManifest.total_questions) {
+      return Promise.resolve(_shardManifest.total_questions);
+    }
+    return _loadManifest(null).then(function (mf) {
+      return (mf && mf.total_questions) || null;
+    }).catch(function () { return null; });
+  } catch (e) {
+    return Promise.resolve(null);
+  }
+};
 // Issue #10：分片题库 API（供外部按需刷新 / 迁移 / 查询 bioID 映射）
 window.loadAllShards = _loadAllShards;
 window.loadBioIdMap = _loadBioIdMap;
