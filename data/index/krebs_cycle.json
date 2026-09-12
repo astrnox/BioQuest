@@ -1,9 +1,9 @@
 {
-  "M1-01-678b4991": {
+  "M1-02-tca_lit": {
     "diff": "league",
     "difficulty": "league",
-    "has_image": false,
-    "len": 47,
+    "has_image": true,
+    "len": 76,
     "module": "module_1",
     "src": "krebs_cycle",
     "tag": "krebs_cycle",
@@ -11,7 +11,8 @@
       "krebs_cycle",
       "module_1",
       "生物化学",
-      "三羧酸循环"
+      "TCA循环",
+      "代谢调控"
     ],
     "target": "competition",
     "year": null

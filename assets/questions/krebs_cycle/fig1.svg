@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" font-family="Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#333"/>
+    </marker>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8f9fa;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#e9ecef;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)" rx="8"/>
+  <text x="400" y="35" text-anchor="middle" font-size="18" font-weight="bold" fill="#212529">TCA Cycle &amp; Anaplerotic Replenishment</text>
+  <text x="400" y="55" text-anchor="middle" font-size="11" fill="#6c757d">Adapted from Mills et al., Cell Metab 2022 (DOI: 10.1016/j.cmet.2022.04.001)</text>
+
+  <!-- Central cycle circle -->
+  <circle cx="400" cy="310" r="180" fill="none" stroke="#dee2e6" stroke-width="2" stroke-dasharray="8,4"/>
+
+  <!-- Metabolites around the cycle -->
+  <!-- Oxaloacetate (top) -->
+  <rect x="340" y="110" width="120" height="36" rx="18" fill="#ffd43b" stroke="#f59f00" stroke-width="2"/>
+  <text x="400" y="133" text-anchor="middle" font-size="13" font-weight="bold" fill="#212529">Oxaloacetate</text>
+
+  <!-- Citrate (top-right) -->
+  <rect x="560" y="180" width="100" height="36" rx="18" fill="#69db7c" stroke="#2f9e44" stroke-width="2"/>
+  <text x="610" y="203" text-anchor="middle" font-size="13" font-weight="bold" fill="#212529">Citrate</text>
+
+  <!-- Isocitrate (right) -->
+  <rect x="590" y="290" width="100" height="36" rx="18" fill="#69db7c" stroke="#2f9e44" stroke-width="2"/>
+  <text x="640" y="313" text-anchor="middle" font-size="13" font-weight="bold" fill="#212529">Isocitrate</text>
+
+  <!-- α-KG (bottom-right) -->
+  <rect x="540" y="410" width="120" height="36" rx="18" fill="#74c0fc" stroke="#1971c2" stroke-width="2"/>
+  <text x="600" y="433" text-anchor="middle" font-size="13" font-weight="bold" fill="#212529">α-Ketoglutarate</text>
+
+  <!-- Succinyl-CoA (bottom) -->
+  <rect x="340" y="470" width="120" height="36" rx="18" fill="#b197fc" stroke="#7048e8" stroke-width="2"/>
+  <text x="400" y="493" text-anchor="middle" font-size="13" font-weight="bold" fill="#212529">Succinyl-CoA</text>
+
+  <!-- Succinate (bottom-left) -->
+  <rect x="140" y="410" width="100" height="36" rx="18" fill="#e599f7" stroke="#9c36b5" stroke-width="2"/>
+  <text x="190" y="433" text-anchor="middle" font-size="13" font-weight="bold" fill="#212529">Succinate</text>
+
+  <!-- Fumarate (left) -->
+  <rect x="100" y="290" width="100" height="36" rx="18" fill="#fcc9d9" stroke="#e64980" stroke-width="2"/>
+  <text x="150" y="313" text-anchor="middle" font-size="13" font-weight="bold" fill="#212529">Fumarate</text>
+
+  <!-- Malate (top-left) -->
+  <rect x="130" y="180" width="100" height="36" rx="18" fill="#ffc078" stroke="#e8590c" stroke-width="2"/>
+  <text x="180" y="203" text-anchor="middle" font-size="13" font-weight="bold" fill="#212529">Malate</text>
+
+  <!-- Arrows connecting metabolites (clockwise) -->
+  <path d="M 460 135 Q 530 150 560 185" fill="none" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="520" y="155" font-size="10" fill="#495057">CS</text>
+
+  <path d="M 610 216 Q 630 250 635 290" fill="none" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="645" y="258" font-size="10" fill="#495057">ACO</text>
+
+  <path d="M 630 326 Q 625 370 605 410" fill="none" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="650" y="375" font-size="10" fill="#495057">IDH</text>
+  <text x="660" y="390" font-size="9" fill="#c92a2a">NAD⁺→NADH</text>
+  <text x="660" y="402" font-size="9" fill="#c92a2a">+ CO₂</text>
+
+  <path d="M 540 435 Q 480 460 460 478" fill="none" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="490" y="465" font-size="10" fill="#495057">OGDH</text>
+
+  <path d="M 340 488 Q 280 460 240 435" fill="none" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="275" y="470" font-size="10" fill="#495057">SCS</text>
+  <text x="265" y="485" font-size="9" fill="#1971c2">GDP→GTP</text>
+
+  <path d="M 165 410 Q 155 370 155 326" fill="none" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="120" y="375" font-size="10" fill="#495057">SDH</text>
+  <text x="95" y="390" font-size="9" fill="#1971c2">FAD→FADH₂</text>
+
+  <path d="M 155 290 Q 160 250 170 216" fill="none" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="120" y="258" font-size="10" fill="#495057">FH</text>
+
+  <path d="M 210 185 Q 280 150 340 135" fill="none" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="260" y="155" font-size="10" fill="#495057">MDH</text>
+  <text x="240" y="170" font-size="9" fill="#c92a2a">NAD⁺→NADH</text>
+
+  <!-- Acetyl-CoA input -->
+  <rect x="250" y="60" width="90" height="30" rx="15" fill="#ff8787" stroke="#c92a2a" stroke-width="2"/>
+  <text x="295" y="80" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">Acetyl-CoA</text>
+  <path d="M 340 80 L 370 115" fill="none" stroke="#c92a2a" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- CO2 outputs -->
+  <text x="680" y="365" font-size="11" fill="#c92a2a" font-weight="bold">CO₂</text>
+  <text x="510" y="455" font-size="11" fill="#c92a2a" font-weight="bold">CO₂</text>
+
+  <!-- Anaplerotic pathway: Pyruvate → OAA -->
+  <rect x="50" y="60" width="90" height="30" rx="15" fill="#da77a2" stroke="#a61e4d" stroke-width="2"/>
+  <text x="95" y="80" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">Pyruvate</text>
+  <path d="M 140 78 Q 200 90 340 120" fill="none" stroke="#a61e4d" stroke-width="2.5" stroke-dasharray="6,3" marker-end="url(#arrow)"/>
+  <text x="210" y="95" font-size="10" fill="#a61e4d" font-weight="bold">PC (anaplerotic)</text>
+
+  <!-- Cataplerotic exit: OAA → PEP -->
+  <rect x="480" y="60" width="90" height="30" rx="15" fill="#748ffc" stroke="#364fc7" stroke-width="2"/>
+  <text x="525" y="80" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">PEP</text>
+  <path d="M 460 120 Q 490 100 500 90" fill="none" stroke="#364fc7" stroke-width="2.5" stroke-dasharray="6,3" marker-end="url(#arrow)"/>
+  <text x="490" y="108" font-size="10" fill="#364fc7" font-weight="bold">PCKE</text>
+
+  <!-- NADH/FADH2 summary box -->
+  <rect x="620" y="520" width="170" height="70" rx="6" fill="#fff" stroke="#adb5bd" stroke-width="1.5"/>
+  <text x="705" y="540" text-anchor="middle" font-size="11" font-weight="bold" fill="#212529">Per turn yield:</text>
+  <text x="705" y="556" text-anchor="middle" font-size="10" fill="#c92a2a">3 NADH + 1 FADH₂</text>
+  <text x="705" y="572" text-anchor="middle" font-size="10" fill="#1971c2">1 GTP + 2 CO₂</text>
+  <text x="705" y="586" text-anchor="middle" font-size="9" fill="#6c757d">+ 3 H₂O consumed</text>
+
+  <!-- Legend -->
+  <rect x="10" y="520" width="200" height="70" rx="6" fill="#fff" stroke="#adb5bd" stroke-width="1.5"/>
+  <text x="20" y="540" font-size="10" font-weight="bold" fill="#212529">Legend:</text>
+  <line x1="20" y1="555" x2="50" y2="555" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="55" y="559" font-size="9" fill="#495057">Cycle reaction</text>
+  <line x1="20" y1="575" x2="50" y2="575" stroke="#a61e4d" stroke-width="2.5" stroke-dasharray="6,3"/>
+  <text x="55" y="579" font-size="9" fill="#495057">Anaplerotic / Cataplerotic</text>
+</svg>

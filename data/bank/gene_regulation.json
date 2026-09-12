@@ -1,52 +1,4 @@
 {
-  "M4-01-ac721614": {
-    "concept": "DNA 甲基化时钟与表观遗传衰老",
-    "difficulty": "league",
-    "explanation": "A【对】依据：Horvath 时钟等基于 353 个 CpG 位点的甲基化水平，这些位点的甲基化变化与细胞分裂次数、干细胞耗竭、表观遗传漂移等衰老机制相关，具有生物学意义而非随机噪声。\nB【对】依据：Horvath 多组织时钟在 51 种人体组织和细胞类型中均表现出高相关性（r > 0.9），表明甲基化衰老信号具有跨组织保守性。\nC【对】依据：表观遗传年龄（DNAm age）与实际年龄的差值（age acceleration residual, AAR）可量化衰老加速，AAR 正值与死亡率、年龄相关疾病风险正相关。\nD【错】错因：近年研究表明表观遗传年龄可通过干预逆转，如 Yamanaka 因子（OSKM）部分重编程可重置甲基化时钟，生活方式干预（饮食、运动）也可减缓表观遗传衰老速率。",
-    "question": "DNA 甲基化时钟通过分析特定 CpG 位点的甲基化水平来预测个体的生物学年龄。关于表观遗传时钟，下列叙述正确的有：",
-    "references": [
-      {
-        "authors": "Bell CG et al.",
-        "doi": "10.1186/s13059-023-03044-7",
-        "journal": "Genome Biology",
-        "title": "DNA methylation-based measures of biological age: a systematic review",
-        "year": 2023
-      }
-    ],
-    "subQuestions": [
-      {
-        "answer": true,
-        "label": "A",
-        "text": "DNA 甲基化随年龄的变化并非完全随机，而是反映了生物学衰老过程"
-      },
-      {
-        "answer": true,
-        "label": "B",
-        "text": "表观遗传时钟在不同组织中具有相似的预测准确性"
-      },
-      {
-        "answer": true,
-        "label": "C",
-        "text": "表观遗传年龄与实际年龄的偏差可用于评估个体的衰老加速程度"
-      },
-      {
-        "answer": false,
-        "label": "D",
-        "text": "表观遗传年龄一旦确定便不可逆转"
-      }
-    ],
-    "subject": "遗传学",
-    "tags": [
-      "gene_regulation",
-      "module_4",
-      "遗传学",
-      "表观遗传",
-      "DNA 甲基化",
-      "衰老"
-    ],
-    "target": "competition",
-    "type": "mtf"
-  },
   "M4-02-df81db11": {
     "concept": "增强子的作用机制",
     "difficulty": "league",
@@ -81,6 +33,63 @@
       "module_4",
       "分子生物学",
       "增强子的作用机制"
+    ],
+    "target": "competition",
+    "type": "mtf"
+  },
+  "M4-03-gene_reg_lit": {
+    "concept": "乳糖操纵子的双重调控机制",
+    "difficulty": "league",
+    "explanation": "A【对】依据：乳糖操纵子同时受到负调控（LacI阻遏蛋白）和正调控（CAP-cAMP激活蛋白）的双重控制。LacI结合操纵基因阻止转录，而CAP-cAMP结合启动子区域增强RNA聚合酶的招募和转录起始效率。\nB【对】依据：当葡萄糖缺乏时，细胞内cAMP水平升高，cAMP与CAP结合使其活化，活化的CAP结合到启动子附近的CAP结合位点，通过蛋白质-蛋白质相互作用增强RNA聚合酶与启动子的结合，从而最大化转录效率。\nC【错】错因：乳糖操纵子的完全激活需要两个条件同时满足：①乳糖存在（使LacI失活，解除负调控）；②葡萄糖缺乏（使cAMP升高，CAP活化，增强正调控）。仅乳糖存在而葡萄糖也充足时，cAMP水平低，CAP不活化，转录水平很低。\nD【错】错因：LacI阻遏蛋白在无乳糖（或别乳糖）时结合操纵基因，阻止转录；当乳糖存在时，乳糖被转化为别乳糖，别乳糖与LacI结合使其构象改变，从操纵基因上解离，从而解除阻遏。因此LacI是在乳糖缺乏时结合操纵基因，而非乳糖存在时。",
+    "image": {
+      "caption": "乳糖操纵子的调控电路",
+      "credit": "Oehler & Schlief, Front Mol Biosci 2022",
+      "doi": "10.3389/fmolb.2022.846805",
+      "figure": "1",
+      "file": "assets/questions/gene_regulation/fig1.svg",
+      "license": "CC BY 4.0",
+      "pmcId": "PMC8994567",
+      "source": "paper"
+    },
+    "question": "研究者通过分析大肠杆菌乳糖操纵子的突变体，发现某些突变导致操纵子在不同碳源条件下的表达模式发生改变。关于乳糖操纵子的调控机制，下列叙述正确的有：",
+    "references": [
+      {
+        "authors": "Oehler S, Schlief A",
+        "doi": "10.3389/fmolb.2022.846805",
+        "journal": "Frontiers in Molecular Biosciences",
+        "title": "The lac operon: a historical perspective",
+        "year": 2022
+      }
+    ],
+    "subQuestions": [
+      {
+        "answer": true,
+        "label": "A",
+        "text": "乳糖操纵子同时受到LacI阻遏蛋白的负调控和CAP-cAMP的正调控"
+      },
+      {
+        "answer": true,
+        "label": "B",
+        "text": "葡萄糖缺乏时，cAMP水平升高，CAP活化后增强RNA聚合酶与启动子的结合"
+      },
+      {
+        "answer": false,
+        "label": "C",
+        "text": "只要乳糖存在，无论葡萄糖水平如何，乳糖操纵子都会完全激活"
+      },
+      {
+        "answer": false,
+        "label": "D",
+        "text": "LacI阻遏蛋白在乳糖存在时结合操纵基因，阻止转录"
+      }
+    ],
+    "subject": "分子生物学",
+    "tags": [
+      "gene_regulation",
+      "module_4",
+      "分子生物学",
+      "操纵子",
+      "基因表达调控"
     ],
     "target": "competition",
     "type": "mtf"

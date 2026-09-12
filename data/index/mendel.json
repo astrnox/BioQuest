@@ -1,9 +1,9 @@
 {
-  "M4-01-a3e5d258": {
+  "M4-02-mendel_lit": {
     "diff": "league",
     "difficulty": "league",
-    "has_image": false,
-    "len": 77,
+    "has_image": true,
+    "len": 68,
     "module": "module_4",
     "src": "mendel",
     "tag": "mendel",
@@ -11,7 +11,8 @@
       "mendel",
       "module_4",
       "遗传学",
-      "自由组合定律与测交验证"
+      "自由组合定律",
+      "独立分配"
     ],
     "target": "competition",
     "year": null

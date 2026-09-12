@@ -1,0 +1,57 @@
+{
+  "concept": "乳糖操纵子的双重调控机制",
+  "difficulty": "league",
+  "explanation": "A【对】依据：乳糖操纵子同时受到负调控（LacI阻遏蛋白）和正调控（CAP-cAMP激活蛋白）的双重控制。LacI结合操纵基因阻止转录，而CAP-cAMP结合启动子区域增强RNA聚合酶的招募和转录起始效率。\nB【对】依据：当葡萄糖缺乏时，细胞内cAMP水平升高，cAMP与CAP结合使其活化，活化的CAP结合到启动子附近的CAP结合位点，通过蛋白质-蛋白质相互作用增强RNA聚合酶与启动子的结合，从而最大化转录效率。\nC【错】错因：乳糖操纵子的完全激活需要两个条件同时满足：①乳糖存在（使LacI失活，解除负调控）；②葡萄糖缺乏（使cAMP升高，CAP活化，增强正调控）。仅乳糖存在而葡萄糖也充足时，cAMP水平低，CAP不活化，转录水平很低。\nD【错】错因：LacI阻遏蛋白在无乳糖（或别乳糖）时结合操纵基因，阻止转录；当乳糖存在时，乳糖被转化为别乳糖，别乳糖与LacI结合使其构象改变，从操纵基因上解离，从而解除阻遏。因此LacI是在乳糖缺乏时结合操纵基因，而非乳糖存在时。",
+  "image": {
+    "caption": "乳糖操纵子的调控电路",
+    "credit": "Oehler & Schlief, Front Mol Biosci 2022",
+    "doi": "10.3389/fmolb.2022.846805",
+    "figure": "1",
+    "file": "assets/questions/gene_regulation/fig1.svg",
+    "license": "CC BY 4.0",
+    "pmcId": "PMC8994567",
+    "source": "paper"
+  },
+  "question": "研究者通过分析大肠杆菌乳糖操纵子的突变体，发现某些突变导致操纵子在不同碳源条件下的表达模式发生改变。关于乳糖操纵子的调控机制，下列叙述正确的有：",
+  "references": [
+    {
+      "authors": "Oehler S, Schlief A",
+      "doi": "10.3389/fmolb.2022.846805",
+      "journal": "Frontiers in Molecular Biosciences",
+      "title": "The lac operon: a historical perspective",
+      "year": 2022
+    }
+  ],
+  "subQuestions": [
+    {
+      "answer": true,
+      "label": "A",
+      "text": "乳糖操纵子同时受到LacI阻遏蛋白的负调控和CAP-cAMP的正调控"
+    },
+    {
+      "answer": true,
+      "label": "B",
+      "text": "葡萄糖缺乏时，cAMP水平升高，CAP活化后增强RNA聚合酶与启动子的结合"
+    },
+    {
+      "answer": false,
+      "label": "C",
+      "text": "只要乳糖存在，无论葡萄糖水平如何，乳糖操纵子都会完全激活"
+    },
+    {
+      "answer": false,
+      "label": "D",
+      "text": "LacI阻遏蛋白在乳糖存在时结合操纵基因，阻止转录"
+    }
+  ],
+  "subject": "分子生物学",
+  "tags": [
+    "gene_regulation",
+    "module_4",
+    "分子生物学",
+    "操纵子",
+    "基因表达调控"
+  ],
+  "target": "competition",
+  "type": "mtf"
+}

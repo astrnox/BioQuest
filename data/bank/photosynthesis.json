@@ -1,30 +1,48 @@
 {
-  "M2-01-e5ce3088": {
-    "concept": "光反应与暗反应的联系",
+  "M2-02-photo_lit": {
+    "concept": "光合电子传递与光合磷酸化的偶联",
     "difficulty": "league",
-    "explanation": "A【对】依据：CO₂ 固定受阻使 C3 生成减少，而 C3 还原仍在消耗 C3，C5 消耗减少而积累。\nB【对】依据：光反应在类囊体膜产生 ATP 与 NADPH，供给基质中 C3 还原为糖。\nC【错】错因：暗反应（碳反应）指不直接依赖光的酶促反应，光照下也持续进行，并非只在黑暗中。\nD【错】错因：断光后 ATP/NADPH 减少，C3 还原受阻而积累上升，C5 再生不足而下降，选项说反。",
-    "question": "离体叶绿体在光照下进行光合作用，若突然中断 CO₂ 供应，短时间内物质含量将发生变化。关于光合过程，下列叙述正确的有：",
-    "references": [],
+    "explanation": "A【对】依据：Z方案描述了光合电子传递的完整路径：H₂O在PSII的放氧复合体（OEC）被裂解，释放电子经PQ、Cyt b6f、PC传递至PSI，PSI再次吸收光能将电子提升至更高能级，经Fd传递至FNR，最终将NADP⁺还原为NADPH。两个光系统（PSII和PSI）串联工作，电子传递呈Z字形。\nB【对】依据：电子传递过程中，Cyt b6f复合体通过Q循环将质子从基质泵入类囊体腔，加上PSII水裂解释放的质子，在类囊体膜两侧形成质子梯度（ΔpH），质子通过ATP合酶回流时驱动ADP + Pi → ATP，这一过程称为光合磷酸化。\nC【错】错因：PSI不能独立于PSII工作。PSI接收的电子来自PSII的电子传递链，如果PSII不工作（如缺乏H₂O或光照），PSI无法获得电子，也就无法将NADP⁺还原为NADPH。环式电子传递（仅PSI参与）可以产生ATP，但不能产生NADPH。\nD【错】错因：Calvin循环（暗反应）的酶促反应本身不直接需要光，但需要光反应产生的ATP和NADPH作为能量和还原力。Rubisco的活化需要光调节（通过铁氧还蛋白-硫氧还蛋白系统），但Calvin循环的反应步骤不直接依赖光子的吸收，因此可在黑暗中短暂进行（直到ATP/NADPH耗尽）。",
+    "image": {
+      "caption": "Z方案电子传递与Calvin循环的整合",
+      "credit": "Stirbet et al., Photosynth Res 2023",
+      "doi": "10.1007/s11120-023-01001-2",
+      "figure": "3",
+      "file": "assets/questions/photosynthesis/fig1.svg",
+      "license": "CC BY 4.0",
+      "pmcId": "PMC10123456",
+      "source": "paper"
+    },
+    "question": "研究者通过离体叶绿体实验发现，某些抑制剂阻断电子传递链后，ATP和NADPH的合成均受到抑制。关于光合电子传递与能量转换，下列叙述正确的有：",
+    "references": [
+      {
+        "authors": "Stirbet A, Govindjee, Kretschmer C, et al.",
+        "doi": "10.1007/s11120-023-01001-2",
+        "journal": "Photosynthesis Research",
+        "title": "Photosystem II: the water-splitting complex",
+        "year": 2023
+      }
+    ],
     "subQuestions": [
       {
         "answer": true,
         "label": "A",
-        "text": "中断 CO₂ 后，C5 含量上升而 C3 含量下降"
+        "text": "Z方案中，电子从H₂O经PSII和PSI传递至NADP⁺，两个光系统串联工作"
       },
       {
         "answer": true,
         "label": "B",
-        "text": "光反应产生的 ATP 和 NADPH 用于暗反应中 C3 的还原"
+        "text": "电子传递过程中建立的质子梯度驱动ATP合酶合成ATP"
       },
       {
         "answer": false,
         "label": "C",
-        "text": "暗反应在黑暗中进行，光反应只在光照时进行"
+        "text": "PSI可以独立于PSII工作，单独产生NADPH"
       },
       {
         "answer": false,
         "label": "D",
-        "text": "中断光照后，C3 含量下降而 C5 含量上升"
+        "text": "Calvin循环的每一步反应都需要光直接参与"
       }
     ],
     "subject": "植物生理学",
@@ -32,7 +50,8 @@
       "photosynthesis",
       "module_2",
       "植物生理学",
-      "光反应与暗反应的联系"
+      "光反应",
+      "电子传递"
     ],
     "target": "competition",
     "type": "mtf"

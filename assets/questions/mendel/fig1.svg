@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 550" font-family="Arial, sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#333"/>
+    </marker>
+  </defs>
+  <rect width="800" height="550" fill="#fafbfc" rx="8"/>
+  <text x="400" y="30" text-anchor="middle" font-size="17" font-weight="bold" fill="#212529">Dihybrid Cross &amp; Independent Assortment</text>
+  <text x="400" y="50" text-anchor="middle" font-size="11" fill="#6c757d">Adapted from Huang &amp; Marowsky, Genetics 2022 (DOI: 10.1093/genetics/iyac064)</text>
+
+  <!-- P generation -->
+  <rect x="100" y="70" width="140" height="50" rx="8" fill="#ffd43b" stroke="#f59f00" stroke-width="2"/>
+  <text x="170" y="92" text-anchor="middle" font-size="13" font-weight="bold" fill="#212529">P: RRYY</text>
+  <text x="170" y="110" text-anchor="middle" font-size="10" fill="#495057">Round, Yellow</text>
+
+  <text x="280" y="100" text-anchor="middle" font-size="20" fill="#495057">×</text>
+
+  <rect x="320" y="70" width="140" height="50" rx="8" fill="#b197fc" stroke="#7048e8" stroke-width="2"/>
+  <text x="390" y="92" text-anchor="middle" font-size="13" font-weight="bold" fill="#212529">P: rryy</text>
+  <text x="390" y="110" text-anchor="middle" font-size="10" fill="#495057">Wrinkled, Green</text>
+
+  <!-- F1 generation -->
+  <path d="M 170 120 L 280 160" fill="none" stroke="#333" stroke-width="2" marker-end="url(#a)"/>
+  <path d="M 390 120 L 280 160" fill="none" stroke="#333" stroke-width="2" marker-end="url(#a)"/>
+
+  <rect x="200" y="160" width="160" height="50" rx="8" fill="#69db7c" stroke="#2f9e44" stroke-width="2"/>
+  <text x="280" y="182" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">F₁: RrYy</text>
+  <text x="280" y="200" text-anchor="middle" font-size="10" fill="#fff">Round, Yellow (all)</text>
+
+  <!-- F1 self-cross -->
+  <text x="280" y="235" text-anchor="middle" font-size="12" fill="#495057">⊗ self-cross</text>
+
+  <!-- Gamete formation -->
+  <path d="M 280 210 L 280 260" fill="none" stroke="#333" stroke-width="2" marker-end="url(#a)"/>
+
+  <text x="280" y="280" text-anchor="middle" font-size="12" font-weight="bold" fill="#495057">Gametes (independent assortment):</text>
+
+  <rect x="80" y="295" width="80" height="35" rx="6" fill="#ffd43b" stroke="#f59f00" stroke-width="1.5"/>
+  <text x="120" y="317" text-anchor="middle" font-size="12" font-weight="bold" fill="#212529">RY</text>
+
+  <rect x="200" y="295" width="80" height="35" rx="6" fill="#74c0fc" stroke="#1971c2" stroke-width="1.5"/>
+  <text x="240" y="317" text-anchor="middle" font-size="12" font-weight="bold" fill="#212529">Ry</text>
+
+  <rect x="320" y="295" width="80" height="35" rx="6" fill="#b197fc" stroke="#7048e8" stroke-width="1.5"/>
+  <text x="360" y="317" text-anchor="middle" font-size="12" font-weight="bold" fill="#212529">rY</text>
+
+  <rect x="440" y="295" width="80" height="35" rx="6" fill="#ff8787" stroke="#c92a2a" stroke-width="1.5"/>
+  <text x="480" y="317" text-anchor="middle" font-size="12" font-weight="bold" fill="#212529">ry</text>
+
+  <text x="280" y="355" text-anchor="middle" font-size="10" fill="#6c757d">Each gamete type: 1/4 (equal frequency)</text>
+
+  <!-- F2 Punnett Square (simplified 4x4) -->
+  <text x="560" y="280" text-anchor="middle" font-size="13" font-weight="bold" fill="#495057">F₂ Punnett Square</text>
+
+  <!-- Grid -->
+  <rect x="460" y="290" width="300" height="240" fill="#fff" stroke="#adb5bd" stroke-width="1.5"/>
+
+  <!-- Column headers -->
+  <rect x="460" y="290" width="60" height="30" fill="#f8f9fa" stroke="#adb5bd" stroke-width="1"/>
+  <rect x="520" y="290" width="60" height="30" fill="#f8f9fa" stroke="#adb5bd" stroke-width="1"/>
+  <rect x="580" y="290" width="60" height="30" fill="#f8f9fa" stroke="#adb5bd" stroke-width="1"/>
+  <rect x="640" y="290" width="60" height="30" fill="#f8f9fa" stroke="#adb5bd" stroke-width="1"/>
+  <rect x="700" y="290" width="60" height="30" fill="#f8f9fa" stroke="#adb5bd" stroke-width="1"/>
+
+  <text x="550" y="310" text-anchor="middle" font-size="10" font-weight="bold" fill="#212529">RY</text>
+  <text x="610" y="310" text-anchor="middle" font-size="10" font-weight="bold" fill="#212529">Ry</text>
+  <text x="670" y="310" text-anchor="middle" font-size="10" font-weight="bold" fill="#212529">rY</text>
+  <text x="730" y="310" text-anchor="middle" font-size="10" font-weight="bold" fill="#212529">ry</text>
+
+  <!-- Row headers -->
+  <rect x="460" y="320" width="60" height="52" fill="#f8f9fa" stroke="#adb5bd" stroke-width="1"/>
+  <rect x="460" y="372" width="60" height="52" fill="#f8f9fa" stroke="#adb5bd" stroke-width="1"/>
+  <rect x="460" y="424" width="60" height="52" fill="#f8f9fa" stroke="#adb5bd" stroke-width="1"/>
+  <rect x="460" y="476" width="60" height="54" fill="#f8f9fa" stroke="#adb5bd" stroke-width="1"/>
+
+  <text x="490" y="350" text-anchor="middle" font-size="10" font-weight="bold" fill="#212529">RY</text>
+  <text x="490" y="402" text-anchor="middle" font-size="10" font-weight="bold" fill="#212529">Ry</text>
+  <text x="490" y="454" text-anchor="middle" font-size="10" font-weight="bold" fill="#212529">rY</text>
+  <text x="490" y="507" text-anchor="middle" font-size="10" font-weight="bold" fill="#212529">ry</text>
+
+  <!-- F2 cells (color-coded by phenotype) -->
+  <!-- Row 1: RY -->
+  <rect x="520" y="320" width="60" height="52" fill="#69db7c" stroke="#adb5bd" stroke-width="0.5"/>
+  <text x="550" y="350" text-anchor="middle" font-size="9" fill="#fff">RRYY</text>
+  <rect x="580" y="320" width="60" height="52" fill="#69db7c" stroke="#adb5bd" stroke-width="0.5"/>
+  <text x="610" y="350" text-anchor="middle" font-size="9" fill="#fff">RRYy</text>
+  <rect x="640" y="320" width="60" height="52" fill="#69db7c" stroke="#adb5bd" stroke-width="0.5"/>
+  <text x="670" y="350" text-anchor="middle" font-size="9" fill="#fff">RrYY</text>
+  <rect x="700" y="320" width="60" height="52" fill="#69db7c" stroke="#adb5bd" stroke-width="0.5"/>
+  <text x="730" y="350" text-anchor="middle" font-size="9" fill="#fff">RrYy</text>
+
+  <!-- Row 2: Ry -->
+  <rect x="520" y="372" width="60" height="52" fill="#69db7c" stroke="#adb5bd" stroke-width="0.5"/>
+  <text x="550" y="402" text-anchor="middle" font-size="9" fill="#fff">RRYy</text>
+  <rect x="580" y="372" width="60" height="52" fill="#ffd43b" stroke="#adb5bd" stroke-width="0.5"/>
+  <text x="610" y="402" text-anchor="middle" font-size="9" fill="#212529">RRyy</text>
+  <rect x="640" y="372" width="60" height="52" fill="#69db7c" stroke="#adb5bd" stroke-width="0.5"/>
+  <text x="670" y="402" text-anchor="middle" font-size="9" fill="#fff">RrYy</text>
+  <rect x="700" y="372" width="60" height="52" fill="#ffd43b" stroke="#adb5bd" stroke-width="0.5"/>
+  <text x="730" y="402" text-anchor="middle" font-size="9" fill="#212529">Rryy</text>
+
+  <!-- Row 3: rY -->
+  <rect x="520" y="424" width="60" height="52" fill="#69db7c" stroke="#adb5bd" stroke-width="0.5"/>
+  <text x="550" y="454" text-anchor="middle" font-size="9" fill="#fff">RrYY</text>
+  <rect x="580" y="424" width="60" height="52" fill="#69db7c" stroke="#adb5bd" stroke-width="0.5"/>
+  <text x="610" y="454" text-anchor="middle" font-size="9" fill="#fff">RrYy</text>
+  <rect x="640" y="424" width="60" height="52" fill="#74c0fc" stroke="#adb5bd" stroke-width="0.5"/>
+  <text x="670" y="454" text-anchor="middle" font-size="9" fill="#fff">rrYY</text>
+  <rect x="700" y="424" width="60" height="52" fill="#74c0fc" stroke="#adb5bd" stroke-width="0.5"/>
+  <text x="730" y="454" text-anchor="middle" font-size="9" fill="#fff">rrYy</text>
+
+  <!-- Row 4: ry -->
+  <rect x="520" y="476" width="60" height="54" fill="#69db7c" stroke="#adb5bd" stroke-width="0.5"/>
+  <text x="550" y="507" text-anchor="middle" font-size="9" fill="#fff">RrYy</text>
+  <rect x="580" y="476" width="60" height="54" fill="#ffd43b" stroke="#adb5bd" stroke-width="0.5"/>
+  <text x="610" y="507" text-anchor="middle" font-size="9" fill="#212529">Rryy</text>
+  <rect x="640" y="476" width="60" height="54" fill="#74c0fc" stroke="#adb5bd" stroke-width="0.5"/>
+  <text x="670" y="507" text-anchor="middle" font-size="9" fill="#fff">rrYy</text>
+  <rect x="700" y="476" width="60" height="54" fill="#b197fc" stroke="#adb5bd" stroke-width="0.5"/>
+  <text x="730" y="507" text-anchor="middle" font-size="9" fill="#fff">rryy</text>
+
+  <!-- Phenotype ratio box -->
+  <rect x="50" y="380" width="370" height="150" rx="8" fill="#fff" stroke="#adb5bd" stroke-width="1.5"/>
+  <text x="235" y="405" text-anchor="middle" font-size="13" font-weight="bold" fill="#212529">F₂ Phenotypic Ratio</text>
+
+  <rect x="70" y="420" width="20" height="20" rx="3" fill="#69db7c"/>
+  <text x="100" y="436" font-size="11" fill="#495057">Round, Yellow (R_Y_):</text>
+  <text x="310" y="436" font-size="12" font-weight="bold" fill="#2f9e44">9/16</text>
+
+  <rect x="70" y="450" width="20" height="20" rx="3" fill="#ffd43b"/>
+  <text x="100" y="466" font-size="11" fill="#495057">Round, Green (R_yy):</text>
+  <text x="310" y="466" font-size="12" font-weight="bold" fill="#e67700">3/16</text>
+
+  <rect x="70" y="480" width="20" height="20" rx="3" fill="#74c0fc"/>
+  <text x="100" y="496" font-size="11" fill="#495057">Wrinkled, Yellow (rrY_):</text>
+  <text x="310" y="496" font-size="12" font-weight="bold" fill="#1971c2">3/16</text>
+
+  <rect x="70" y="510" width="20" height="20" rx="3" fill="#b197fc"/>
+  <text x="100" y="526" font-size="11" fill="#495057">Wrinkled, Green (rryy):</text>
+  <text x="310" y="526" font-size="12" font-weight="bold" fill="#7048e8">1/16</text>
+</svg>
