@@ -90,12 +90,16 @@
        空白/缩放错位/两边白边，也取代"裸 HTML"状态  */
     #bq-boot-mask {
       position: fixed;
-      inset: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
       z-index: 99999;
       display: flex;
       align-items: center;
       justify-content: center;
       flex-direction: column;
+      /* 老浏览器兼容：不依赖 flex gap（Chrome <84 / Safari <14.1），用 margin 兜底 */
       gap: 16px;
       background: radial-gradient(ellipse at 20% 20%, #f5f0e8 0%, #faf8f5 40%, #faf8f5 100%);
       /* 防止 mask 卸载时产生闪烁 */
@@ -115,6 +119,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      margin: 0 0 16px; /* 老浏览器（无 flex gap）下的间距兜底 */
       animation: bqBootBreathe 2.6s ease-in-out infinite;
     }
     #bq-boot-logo svg {
@@ -127,6 +132,7 @@
       font-weight: 600;
       color: #2c3e30;
       letter-spacing: 0.02em;
+      margin: 0 0 16px; /* 老浏览器（无 flex gap）下的间距兜底 */
     }
     html[data-theme="dark"] #bq-boot-label { color: #e0e8e2; }
     #bq-boot-spinner {

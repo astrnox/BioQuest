@@ -142,7 +142,10 @@
 
 .bq-atom-orbit {
   position: absolute;
-  inset: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   border-radius: 50%;
   border: 2px solid rgba(90, 125, 92, 0.2);
   animation: bqAtomOrbit1 1.6s linear infinite;
@@ -207,7 +210,10 @@
 }
 .bq-loader-chase i {
   position: absolute;
-  inset: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   animation: bqChaseBounce 1.2s infinite ease-in-out both;
 }
 .bq-loader-chase i::before {
@@ -308,7 +314,10 @@
 .bq-progress-shimmer::after {
   content: "";
   position: absolute;
-  inset: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.45), transparent);
   animation: bqShimmer 1.4s infinite;
 }

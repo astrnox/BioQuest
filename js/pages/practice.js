@@ -729,6 +729,29 @@ function preparePracticeQuestion(q) {
   return Object.assign({}, q, { subQuestions: items, explanation: explanation });
 }
 
+/**
+ * 逻辑题 MTF 化的「有效子题」：
+ * - 已有 subQuestions（基础知识 MTF）直接返回；
+ * - 逻辑题 type==='mtf' 且为 options 数组 + answer 索引时，不改题干和选项文本，
+ *   仅把每个选项转换为一条判断题陈述：原正确答案的选项 → 正确(true)，其余 → 错误(false)。
+ * 转换不写入题库本体（不参与 preparePracticeQuestion 的洗牌，选项顺序 A/B/C/D 保持不变，
+ * 使解析中「选项A/选项B」等字母引用始终与渲染一致）。
+ */
+function getEffectiveSubQuestions(q) {
+  if (!q || typeof q !== 'object') return [];
+  if (Array.isArray(q.subQuestions)) return q.subQuestions;
+  if (q.type === 'mtf' && Array.isArray(q.options)) {
+    return q.options.map(function (text, idx) {
+      return {
+        label: 'ABCDEFGH'.charAt(idx),
+        text: String(text),
+        answer: idx === q.answer
+      };
+    });
+  }
+  return [];
+}
+
 function initNewSession() {
   resetSyncCounter(); // 重置同步计数器
   PracticeState.currentSet = generateQuestionSet();
@@ -767,8 +790,8 @@ function calculateQuestionScore(q, userAnswers) {
     };
   }
 
-  // 逻辑推理题（单选题格式：options 为数组, answer 为索引 0-4）
-  if (q.category === 'logic' && Array.isArray(q.options)) {
+  // 逻辑推理题（单选题格式：options 为数组, answer 为索引 0-4；type==='mtf' 时走下方 MTF 评分）
+  if (q.category === 'logic' && Array.isArray(q.options) && q.type !== 'mtf') {
     const userAns = userAnswers[0];
     const isCorrect = userAns === q.answer;
     return {
@@ -784,8 +807,8 @@ function calculateQuestionScore(q, userAnswers) {
     };
   }
 
-  // MTF 题型（subQuestions 格式）
-  const subQuestions = q.subQuestions || [];
+  // MTF 题型（subQuestions 格式，或逻辑题 mtf 的选项转换子题）
+  const subQuestions = getEffectiveSubQuestions(q);
   if (subQuestions.length === 0) return { correct: 0, total: 1, score: 0 };
 
   const total = subQuestions.length;
@@ -925,7 +948,7 @@ function handleSubmitAnswer() {
   // 标准单选题（题库格式）
   const isStandardChoice = q.options && typeof q.options === 'object' && !Array.isArray(q.options) && q.answer;
   // 逻辑推理题
-  const isLogicQuestion = q.category === 'logic' && Array.isArray(q.options);
+  const isLogicQuestion = q.category === 'logic' && Array.isArray(q.options) && q.type !== 'mtf';
 
   if (isStandardChoice || isLogicQuestion) {
     if (userAnswers[0] === undefined || userAnswers[0] === null) {
@@ -934,7 +957,7 @@ function handleSubmitAnswer() {
     }
   } else {
     // MTF 题型：检查是否所有子问题都已回答
-    const subQuestions = q.subQuestions || [];
+    const subQuestions = getEffectiveSubQuestions(q);
     const allAnswered = subQuestions.every((_, idx) => userAnswers.hasOwnProperty(idx));
     if (!allAnswered) {
       alert('请对所有选项做出判断后再提交。');
@@ -1156,9 +1179,11 @@ function renderFilterPanel() {
   `
   ).join('');
 
+  // 题目数量：预设选项 + 「自定义」；questionCount 不在预设中时选中自定义并回显输入框
+  const isPresetCount = QUESTION_COUNT_OPTIONS.indexOf(PracticeState.questionCount) >= 0;
   const countOptions = QUESTION_COUNT_OPTIONS.map(
     (n) => `<option value="${n}" ${PracticeState.questionCount === n ? 'selected' : ''}>${n} 题</option>`
-  ).join('');
+  ).join('') + `<option value="custom" ${isPresetCount ? '' : 'selected'}>自定义…</option>`;
 
   const kgBanner = PracticeState.conceptFilter
     ? `<div class="practice-kg-banner" style="margin-bottom:16px;padding:14px 16px;background:var(--color-sage-light,rgba(90,125,92,0.1));border:1px solid var(--color-sage,rgba(90,125,92,0.3));border-radius:12px;position:relative;">
@@ -1269,9 +1294,18 @@ function renderFilterPanel() {
 
         <div class="practice-filter-section">
           <h3 class="practice-filter-title">题目数量</h3>
-          <select class="practice-select" id="questionCount">
-            ${countOptions}
-          </select>
+          <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+            <select class="practice-select" id="questionCount" style="min-width:110px;">
+              ${countOptions}
+            </select>
+            <input type="number" id="customQuestionCount" class="practice-select" min="1" max="200" step="1"
+              value="${isPresetCount ? '' : PracticeState.questionCount}"
+              placeholder="输入 1-200"
+              style="width:120px;${isPresetCount ? 'display:none;' : ''}" aria-label="自定义刷题数量">
+          </div>
+          <div style="font-size:0.78rem;color:var(--text-muted);margin-top:6px;">
+            预设 5/10/20/50，或选择「自定义…」输入 1-200 道（超出可用题目时按实际数量出题）
+          </div>
         </div>
 
         <div class="practice-filter-actions">
@@ -1443,7 +1477,35 @@ function bindFilterEvents() {
 
   if (countSelect) {
     countSelect.addEventListener('change', () => {
-      PracticeState.questionCount = parseInt(countSelect.value, 10);
+      const val = countSelect.value;
+      const customInput = document.getElementById('customQuestionCount');
+      if (val === 'custom') {
+        if (customInput) {
+          customInput.style.display = '';
+          customInput.focus();
+        }
+        let num = customInput ? parseInt(customInput.value, 10) : NaN;
+        if (isNaN(num) || num < 1) num = 10;
+        PracticeState.questionCount = num;
+      } else {
+        PracticeState.questionCount = parseInt(val, 10);
+        if (customInput) customInput.style.display = 'none';
+      }
+    });
+  }
+
+  const customCountInput = document.getElementById('customQuestionCount');
+  if (customCountInput) {
+    // 输入即生效（失焦/回车/输入变化时同步）
+    customCountInput.addEventListener('change', () => {
+      let num = parseInt(customCountInput.value, 10);
+      if (isNaN(num) || num < 1) num = 1;
+      if (num > 200) num = 200;
+      customCountInput.value = num;
+      PracticeState.questionCount = num;
+    });
+    customCountInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') customCountInput.blur();
     });
   }
 
@@ -1862,7 +1924,7 @@ function renderQuiz() {
   const q = PracticeState.currentSet[PracticeState.currentIndex];
   if (!q) return;
 
-  const isLogicQuestion = q.category === 'logic' && Array.isArray(q.options);
+  const isLogicQuestion = q.category === 'logic' && Array.isArray(q.options) && q.type !== 'mtf';
   const isStandardChoice = q.options && typeof q.options === 'object' && !Array.isArray(q.options) && q.answer;
   const userAnswers = PracticeState.userAnswers[PracticeState.currentIndex] || {};
 
@@ -1951,8 +2013,8 @@ function renderQuiz() {
       `;
     }
   } else {
-    // ====== MTF 题型渲染（原有逻辑）======
-    const subQuestions = q.subQuestions || [];
+    // ====== MTF 题型渲染（基础知识 subQuestions / 逻辑题 mtf 选项转换）======
+    const subQuestions = getEffectiveSubQuestions(q);
     subQuestionsHtml = subQuestions
       .map((sq, idx) => {
         const userAns = userAnswers[idx];
@@ -2763,7 +2825,7 @@ function _practiceInQuiz() {
 function _practiceSelectChoice(numKey) {
   var q = PracticeState.currentSet[PracticeState.currentIndex];
   if (!q) return;
-  var isLogic = q.category === 'logic' && Array.isArray(q.options);
+  var isLogic = q.category === 'logic' && Array.isArray(q.options) && q.type !== 'mtf';
   var isStd = q.options && typeof q.options === 'object' &&
               !Array.isArray(q.options) && q.answer;
   if (!isLogic && !isStd) return; // MTF 题型不适用数字键选 A/B/C/D
