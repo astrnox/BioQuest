@@ -741,11 +741,16 @@ function getEffectiveSubQuestions(q) {
   if (!q || typeof q !== 'object') return [];
   if (Array.isArray(q.subQuestions)) return q.subQuestions;
   if (q.type === 'mtf' && Array.isArray(q.options)) {
+    // mtfTruth（负向提问题「最不合理的是」等）显式给出每条陈述的真假；
+    // 缺省时按原单选题语义：原正确答案的选项 → 正确(true)，其余 → 错误(false)。
+    const truth = (Array.isArray(q.mtfTruth) && q.mtfTruth.length === q.options.length)
+      ? q.mtfTruth
+      : q.options.map(function (_, idx) { return idx === q.answer; });
     return q.options.map(function (text, idx) {
       return {
         label: 'ABCDEFGH'.charAt(idx),
         text: String(text),
-        answer: idx === q.answer
+        answer: !!truth[idx]
       };
     });
   }
