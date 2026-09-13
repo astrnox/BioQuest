@@ -56,6 +56,7 @@ async function loadQuizData() {
     QData = (typeof window.filterQuestionList === 'function')
       ? window.filterQuestionList(rawQ)
       : rawQ;
+    QData = QData.filter(function (q) { return !_isQuizRecycled(q); });
     dataLoaded = true;
 
     // 并行加载逻辑题库
@@ -67,6 +68,7 @@ async function loadQuizData() {
       logicData = (typeof window.filterQuestionList === 'function')
         ? window.filterQuestionList(logicFiltered)
         : logicFiltered;
+      logicData = logicData.filter(function (q) { return !_isQuizRecycled(q); });
       logicLoaded = true;
     }
 
@@ -158,6 +160,23 @@ function getQuestionBioId(q) {
 // 暴露到 window：浏览器经典脚本下本就为全局，显式暴露使 jsdom/单测能调用真实实现
 window.getQuestionBioId = getQuestionBioId;
 
+/**
+ * 判断题目是否已被移入回收站（低分下架）。
+ * 与 practice.js / storage.js 共享同一 localStorage 键；storage.js 未加载时直读。
+ */
+function _isQuizRecycled(q) {
+  var qId = getQuestionBioId(q);
+  if (typeof window.isQuestionRecycled === 'function') {
+    return window.isQuestionRecycled(qId);
+  }
+  try {
+    var list = JSON.parse(localStorage.getItem('bioquest_question_recycled') || '[]');
+    return Array.isArray(list) && list.indexOf(qId) !== -1;
+  } catch (e) {
+    return false;
+  }
+}
+
 function generateBasicPaper() {
   if (!dataLoaded || QData.length === 0) {
     alert('基础知识题库加载中，请稍候...');
@@ -239,6 +258,13 @@ function generateMixedPaper() {
 function startPaper(title) {
   userAnswers = {};
   submitted = false;
+
+  // 管理员对本地题库的覆盖修改（题干/选项/解析等）在出卷时生效
+  if (typeof applyQuestionOverride === 'function') {
+    currentPaper = currentPaper.map(function (q) {
+      return applyQuestionOverride(q);
+    });
+  }
 
   // 保存试卷标题供 renderPaper 使用
   currentPaperTitle = title;

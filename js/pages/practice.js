@@ -470,7 +470,7 @@ async function loadPracticeQuestions() {
       // 超长讲义过滤
       var itemsClean = (typeof window.filterQuestionList === 'function') ? window.filterQuestionList(items) : items;
       PracticeState.allQuestions = itemsClean.filter(
-        function (q) { return Array.isArray(q.subQuestions) && q.subQuestions.length >= 4; }
+        function (q) { return Array.isArray(q.subQuestions) && q.subQuestions.length >= 4 && !_isRecycledQuestion(q); }
       );
     } else {
       // 从 Supabase 直连获取
@@ -522,7 +522,7 @@ async function loadPracticeQuestions() {
             // 超长讲义过滤（cleaned 同时会把 300+ 字的选项截断）
             var fn = typeof window.filterQuestionList === 'function' ? window.filterQuestionList : function(x){return x;};
             PracticeState.allQuestions = fn(normed).filter(
-              function(q) { return Array.isArray(q.subQuestions) && q.subQuestions.length >= 4; }
+              function(q) { return Array.isArray(q.subQuestions) && q.subQuestions.length >= 4 && !_isRecycledQuestion(q); }
             );
             return;
           }
@@ -540,7 +540,7 @@ async function loadPracticeQuestions() {
         ? window.filterQuestionList(rawQuestions0)
         : rawQuestions0;
       PracticeState.allQuestions = rawQuestions.filter(
-        function (q) { return Array.isArray(q.subQuestions) && q.subQuestions.length >= 4; }
+        function (q) { return Array.isArray(q.subQuestions) && q.subQuestions.length >= 4 && !_isRecycledQuestion(q); }
       );
     }
   } catch (err) {
@@ -556,10 +556,10 @@ async function loadLogicQuestions() {
     const res = await fetch('data/logic_questions.json');
     if (res.ok) {
       var logicData = await res.json();
-      // P0-4: 应用隔离过滤
+      // P0-4: 应用隔离过滤 + 回收站过滤（低分下架题目用户不再刷到）
       PracticeState.logicData = (typeof window._filterQuarantinedQuestions === 'function')
-        ? window._filterQuarantinedQuestions(logicData)
-        : logicData;
+        ? window._filterQuarantinedQuestions(logicData).filter(function (q) { return !_isRecycledQuestion(q); })
+        : logicData.filter(function (q) { return !_isRecycledQuestion(q); });
       PracticeState.logicLoaded = true;
 
       // 加载完成后刷新筛选结果
@@ -688,8 +688,159 @@ function generateQuestionSet() {
     PracticeState.filteredQuestions.length
   );
 
-  const shuffled = shuffle([...PracticeState.filteredQuestions]);
+  // 排除已移入回收站的题目（低分题，用户不再刷到）
+  const pool = PracticeState.filteredQuestions.filter(function (q) {
+    return !_isRecycledQuestion(q);
+  });
+  if (pool.length === 0) return [];
+
+  // 基于题目评分（Wilson 区间得分）做加权抽取：
+  // 高分题出现率最多 1.3 倍、低分题最低 0.7 倍，浮动受限避免两级分化。
+  if (typeof window.RatingCore === 'object' && window.RatingCore.weightedPick) {
+    const picked = window.RatingCore.weightedPick(
+      pool,
+      function (q) {
+        const rating = _getQuestionRating(q);
+        const score01 = window.RatingCore.wilsonScore(rating.up, rating.down);
+        return window.RatingCore.ratingWeight(score01);
+      },
+      Math.min(count, pool.length)
+    );
+    return picked.map(preparePracticeQuestion);
+  }
+
+  // 兜底：等概率随机
+  const shuffled = shuffle(pool);
   return shuffled.slice(0, count).map(preparePracticeQuestion);
+}
+
+/**
+ * 读取单题评分（点赞/点踩聚合）。storage.js 未加载时返回中性值。
+ */
+function _getQuestionRating(q) {
+  if (typeof getQuestionRating === 'function') {
+    const r = getQuestionRating(getQuestionBioId(q));
+    if (r) return r;
+  }
+  return { up: 0, down: 0 };
+}
+
+/**
+ * 判断题目是否在回收站（低分被下架）。storage.js 未加载时直读 localStorage。
+ */
+function _isRecycledQuestion(q) {
+  const qId = getQuestionBioId(q);
+  if (typeof isQuestionRecycled === 'function') {
+    return isQuestionRecycled(qId);
+  }
+  try {
+    const list = JSON.parse(localStorage.getItem('bioquest_question_recycled') || '[]');
+    return Array.isArray(list) && list.indexOf(qId) !== -1;
+  } catch (e) {
+    return false;
+  }
+}
+
+/**
+ * 读取题目点赞/点踩计数（未投票时 0/0）。
+ */
+function _getRatingCounts(qId) {
+  if (typeof getQuestionRating === 'function') {
+    const r = getQuestionRating(qId);
+    if (r) return r;
+  }
+  return { up: 0, down: 0 };
+}
+
+/**
+ * 当前用户对题目的投票（1=赞, -1=踩, 0=未投）。
+ */
+function _getMyVote(qId) {
+  if (typeof getMyVote === 'function') {
+    const v = getMyVote(qId);
+    return (v === 1 || v === -1) ? v : 0;
+  }
+  return 0;
+}
+
+/**
+ * 渲染题目评分 tag（展示在题目标签组中）：
+ * - 有票时显示 Wilson 区间得分映射的 1~5 星分 + 票数；
+ * - 无票时显示「未评分」。
+ */
+function _renderRatingTag(q, qId) {
+  const counts = _getRatingCounts(qId);
+  const hasVotes = (counts.up + counts.down) > 0;
+  const rc = (typeof window.RatingCore === 'object') ? window.RatingCore : null;
+  if (!rc || !hasVotes) {
+    return '<span class="tag" data-rating-tag style="background:rgba(107,114,128,0.08);color:#6b7280;font-size:0.7rem;" title="暂无评分，点赞/点踩后可查看">评分 未评价</span>';
+  }
+  const score01 = rc.wilsonScore(counts.up, counts.down);
+  const scoreStr = rc.formatQuestionScore(score01);
+  const weight = rc.ratingWeight(score01);
+  const recycled = _isRecycledQuestion(q);
+  const color = recycled ? '#ef4444' : (score01 >= 0.6 ? '#10b981' : (score01 >= 0.4 ? '#c4956a' : '#ef4444'));
+  return `<span class="tag" data-rating-tag style="background:${color}18;color:${color};font-size:0.7rem;font-weight:600;" title="基于 ${counts.up + counts.down} 票的 Wilson 区间得分；出现率权重 ${weight.toFixed(2)}×">评分 ${scoreStr} · ${counts.up + counts.down}票${recycled ? ' · 已回收' : ''}</span>`;
+}
+
+/**
+ * 点赞/点踩处理：更新本地聚合评分；评分过低且票数足够时自动移入回收站。
+ */
+function handleVoteQuestion(vote) {
+  const q = PracticeState.currentSet[PracticeState.currentIndex];
+  if (!q) return;
+  const qId = getQuestionBioId(q);
+  if (typeof rateQuestion !== 'function') return;
+
+  // 相同方向再点一次 = 取消投票
+  const myVote = _getMyVote(qId);
+  const nextVote = (myVote === vote) ? 0 : vote;
+  const result = rateQuestion(qId, nextVote);
+  if (!result) return;
+
+  // 低分（Wilson < 0.35 且票数 >= 5）自动移入回收站
+  const rc = (typeof window.RatingCore === 'object') ? window.RatingCore : null;
+  if (rc && typeof recycleQuestion === 'function' && rc.shouldRecycleQuestion(result.up, result.down)) {
+    recycleQuestion(qId);
+    // 重新生成题目集合，让回收的题从后续练习中消失
+    if (PracticeState.currentIndex >= PracticeState.currentSet.length - 1) {
+      PracticeState.currentSet = generateQuestionSet();
+      PracticeState.currentIndex = 0;
+      PracticeState.userAnswers = {};
+      PracticeState.submitted = false;
+    }
+  }
+
+  // 原地刷新评分 tag 与投票按钮（不整题重渲染）
+  _refreshVoteUI(q, qId);
+}
+
+/**
+ * 原地更新投票按钮计数/激活态与评分 tag。
+ */
+function _refreshVoteUI(q, qId) {
+  const counts = _getRatingCounts(qId);
+  const upCount = document.getElementById('practice-vote-up-count');
+  const downCount = document.getElementById('practice-vote-down-count');
+  if (upCount) upCount.textContent = String(counts.up);
+  if (downCount) downCount.textContent = String(counts.down);
+
+  const upBtn = document.getElementById('practice-vote-up-btn');
+  const downBtn = document.getElementById('practice-vote-down-btn');
+  const myVote = _getMyVote(qId);
+  if (upBtn) upBtn.classList.toggle('practice-vote-active', myVote === 1);
+  if (downBtn) downBtn.classList.toggle('practice-vote-active', myVote === -1);
+  if (upBtn) upBtn.classList.toggle('practice-vote-up-active', myVote === 1);
+  if (downBtn) downBtn.classList.toggle('practice-vote-down-active', myVote === -1);
+
+  // 刷新 tag 行内的评分标签
+  const tags = document.querySelector('.practice-quiz-tags');
+  if (tags) {
+    const oldTag = tags.querySelector('[data-rating-tag]');
+    const newTagHtml = _renderRatingTag(q, qId);
+    if (oldTag) oldTag.outerHTML = newTagHtml;
+    else tags.insertAdjacentHTML('beforeend', newTagHtml);
+  }
 }
 
 /**
@@ -700,7 +851,12 @@ function generateQuestionSet() {
  * - 解析按「原始标签 → 新槽位」重映射字母注解，保证对/错解析与随机后选项一致。
  */
 function preparePracticeQuestion(q) {
-  if (!q || typeof q !== 'object' || !Array.isArray(q.subQuestions) || q.subQuestions.length < 2) {
+  if (!q || typeof q !== 'object') return q;
+  // 管理员对本地题库的覆盖修改（题干/选项/解析等）在出题时生效
+  if (typeof applyQuestionOverride === 'function') {
+    q = applyQuestionOverride(q);
+  }
+  if (!Array.isArray(q.subQuestions) || q.subQuestions.length < 2) {
     return q;
   }
   // 深拷贝每个子题，避免改动题库本体的对象
@@ -2115,6 +2271,7 @@ function renderQuiz() {
           ${q.subject ? '<span class="tag tag--info">' + escapeHtml(q.subject) + '</span>' : ''}
           ${typeof renderDifficultyTag === 'function' ? renderDifficultyTag(qId, q.difficulty || 3) : (q.difficulty ? '<span class="tag ' + getDifficultyClass(q.difficulty) + '">' + getDifficultyLabel(q.difficulty) + '</span>' : '')}
           ${q.concept ? '<span class="tag tag--outline">' + escapeHtml(q.concept) + '</span>' : ''}
+          ${_renderRatingTag(q, qId)}
         </div>
       </div>
 
@@ -2135,6 +2292,23 @@ function renderQuiz() {
 
       <div class="practice-actions">
         <div class="practice-actions-left">
+          <div class="practice-vote-group" style="display:inline-flex;align-items:center;gap:4px;margin-right:2px;">
+            <button class="btn btn-sm practice-vote-btn ${_getMyVote(qId) === 1 ? 'practice-vote-active practice-vote-up-active' : ''}"
+              id="practice-vote-up-btn" title="这道题好，多刷点" data-vote="1">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/>
+              </svg>
+              <span id="practice-vote-up-count">${_getRatingCounts(qId).up}</span>
+            </button>
+            <button class="btn btn-sm practice-vote-btn ${_getMyVote(qId) === -1 ? 'practice-vote-active practice-vote-down-active' : ''}"
+              id="practice-vote-down-btn" title="这道题有问题，少刷点" data-vote="-1">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M10 15v4a3 3 0 0 0 3 3l4-9V2H5.72a2 2 0 0 0-2 1.7l-1.38 9a2 2 0 0 0 2 2.3z"/>
+                <path d="M7 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h3"/>
+              </svg>
+              <span id="practice-vote-down-count">${_getRatingCounts(qId).down}</span>
+            </button>
+          </div>
           <button class="btn btn-sm practice-fav-btn ${isFav ? 'practice-fav-active' : ''}"
             id="practice-fav-btn" title="${isFav ? '取消收藏' : '收藏题目'}">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="${isFav ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -2251,6 +2425,16 @@ function bindQuizEvents() {
   const favBtn = document.getElementById('practice-fav-btn');
   if (favBtn) {
     favBtn.addEventListener('click', handleToggleFavorite);
+  }
+
+  // 点赞 / 点踩
+  const voteUpBtn = document.getElementById('practice-vote-up-btn');
+  if (voteUpBtn) {
+    voteUpBtn.addEventListener('click', function() { handleVoteQuestion(1); });
+  }
+  const voteDownBtn = document.getElementById('practice-vote-down-btn');
+  if (voteDownBtn) {
+    voteDownBtn.addEventListener('click', function() { handleVoteQuestion(-1); });
   }
 
   const wrongBtn = document.getElementById('practice-wrong-btn');
