@@ -8,7 +8,10 @@
 /* ----- 全屏包装器 ----- */
 #dbWrapper {
   position: fixed;
-  inset: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   z-index: 10001;
   background: #faf8f5;
   overflow: hidden;
@@ -21,7 +24,10 @@ html.dark #dbWrapper {
 /* ----- 页面容器 ----- */
 .db-page {
   position: absolute;
-  inset: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   height: 100vh;
   height: 100svh;
   height: 100dvh;

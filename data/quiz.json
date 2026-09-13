@@ -1,1 +1,3768 @@
-{"题库":[{"bioId":"M1-01-5516890d","concept":"蛋白质结构预测与序列-结构-功能关系","difficulty":"league","explanation":"A【对】依据：Anfinsen 原理指出氨基酸序列包含折叠所需的全部信息，但体内折叠常需 Hsp70/Hsp90 等分子伴侣防止错误聚集，协助达到热力学最稳态。\nB【对】依据：AlphaFold 的核心创新之一是利用 MSA 中残基对的共进化信号（mutual information / direct coupling analysis）推断空间接触约束，再经 Evoformer 和结构模块迭代优化三维坐标。\nC【错】错因：AlphaFold 采用端到端深度学习，直接从 MSA 和模板特征预测结构，不依赖实验解析的同源模板（与同源建模有本质区别），这也是其能预测无同源结构蛋白的原因。\nD【错】错因：蛋白质结构比序列更保守，远缘同源蛋白（序列相似度 < 20% 的 'twilight zone'）仍可保持相似的核心折叠（如 TIM 桶折叠广泛分布于不同酶类）。","question":"研究者用 AlphaFold 类 AI 模型预测某蛋白与配体的结合复合物结构。关于蛋白质结构与功能的关系，下列叙述正确的有：","references":[{"authors":"Abramson J et al.","doi":"10.1038/s41586-024-07487-w","journal":"Nature","title":"Accurate structure prediction of biomolecular interactions with AlphaFold 3","year":2024}],"subQuestions":[{"answer":true,"label":"A","text":"蛋白质的三维结构主要由其氨基酸序列决定，但折叠过程常需分子伴侣辅助"},{"answer":true,"label":"B","text":"AlphaFold 等模型利用多序列比对中的共进化信息推断残基间空间接触"},{"answer":false,"label":"C","text":"AlphaFold 预测蛋白质结构时必须以实验解析的同源结构作为模板"},{"answer":false,"label":"D","text":"同源蛋白一级序列相似度越低，其高级结构相似度必然越低"}],"subject":"生物化学","tags":["amino_acid_metab","module_1","生物化学","蛋白质结构","AlphaFold"],"target":"competition","type":"mtf"},{"bioId":"M1-02-411970b0","concept":"尿素循环","difficulty":"league","explanation":"A【错】错因：尿素循环前两步在线粒体，其余步骤在胞质溶胶，需两个区室协作完成。\nB【对】依据：氨基甲酰磷酸提供游离氨来源的氮，精氨酸代琥珀酸带入天冬氨酸的氮，共同构成尿素。\nC【错】错因：氨基甲酰磷酸合成与精氨酸代琥珀酸合成共消耗相当于 4 个高能磷酸键的 ATP。\nD【错】错因：尿素仅在肝脏经尿素循环合成，肾脏只负责将其滤过排出。","question":"氨基酸分解产生的氨主要在肝脏转化为尿素后经肾排出。关于尿素循环，下列叙述正确的是：","references":[],"subQuestions":[{"answer":false,"label":"A","text":"尿素循环只发生在线粒体基质内即可完成"},{"answer":true,"label":"B","text":"一分子尿素含两个氮原子，一个来自游离氨、另一个来自天冬氨酸"},{"answer":false,"label":"C","text":"尿素循环不消耗 ATP，是能量中性过程"},{"answer":false,"label":"D","text":"尿素在肾脏合成并随尿液排出体外"}],"subject":"生物化学","tags":["amino_acid_metab","module_1","生物化学","尿素循环"],"target":"competition","type":"mtf"},{"bioId":"M3-01-e59fb03e","concept":"先天性行为与学习行为","difficulty":"league","explanation":"A【对】依据：先天性行为（本能）由遗传决定，生来就有，如蜜蜂采蜜、蜘蛛结网。\nB【对】依据：印随是早期学习的一种，在出生后关键期内跟随第一个移动物体，错过则无法建立。\nC【错】错因：动物行为既有先天的也有后天学习的，高等动物学习行为占比更大。\nD【对】依据：条件反射（如巴甫洛夫的狗）通过反复强化建立，属于典型的学习行为。","question":"动物行为按获得途径可分为先天性行为和学习行为。关于动物行为，下列叙述正确的有：","references":[],"subQuestions":[{"answer":true,"label":"A","text":"蜜蜂采蜜属于先天性行为，由遗传物质决定"},{"answer":true,"label":"B","text":"印随学习发生在动物生命早期的关键期"},{"answer":false,"label":"C","text":"所有动物行为都是先天性的，不受环境影响"},{"answer":true,"label":"D","text":"条件反射属于学习行为，需要后天经验建立"}],"subject":"动物学","tags":["animal_behavior","module_3","动物学","先天性行为与学习行为"],"target":"competition","type":"mtf"},{"bioId":"M4-01-9979790a","concept":"动物细胞核移植与克隆","difficulty":"league","explanation":"A【对】依据：核移植使重构胚的核基因组来自供体，故克隆动物是供体的核遗传复制。\nB【对】依据：去核卵母细胞体积大、含重编程因子，能支持供体核发育。\nC【错】错因：线粒体 DNA 来自受体卵母细胞，克隆动物与供核动物并非遗传物质完全相同。\nD【对】依据：核重编程不完全导致多数重构胚发育失败，克隆效率普遍很低。","question":"多莉羊的诞生证明了已分化动物细胞核的全能性。关于动物细胞核移植，下列叙述正确的有：","references":[],"subQuestions":[{"answer":true,"label":"A","text":"克隆动物的核基因来自供体细胞核，与供体基本相同"},{"answer":true,"label":"B","text":"受体卵母细胞需去核，为供体核提供细胞质环境"},{"answer":false,"label":"C","text":"克隆动物的遗传物质与供核动物完全相同，包括线粒体 DNA"},{"answer":true,"label":"D","text":"体细胞核移植的成功率目前仍然较低"}],"subject":"生物技术","tags":["animal_biotech","module_4","生物技术","动物细胞核移植与克隆"],"target":"competition","type":"mtf"},{"bioId":"M4-01-770a5d45","concept":"脊椎动物主要类群的特征","difficulty":"league","explanation":"A【对】依据：两栖类处于水陆过渡阶段，幼体水生用鳃，成体肺呼吸、皮肤辅助。\nB【对】依据：羊膜卵的出现是脊椎动物真正征服陆地的关键适应。\nC【错】错因：鸟类与哺乳类均为恒温动物，高而恒定的体温支持旺盛代谢。\nD【对】依据：胎生（除单孔类）与哺乳、体表被毛是哺乳纲的核心特征。","question":"脊椎动物从水生到陆生的演化伴随着结构与功能的重大改变。关于脊椎动物类群，下列叙述正确的有：","references":[],"subQuestions":[{"answer":true,"label":"A","text":"两栖动物幼体用鳃呼吸，成体主要用肺呼吸并辅以皮肤呼吸"},{"answer":true,"label":"B","text":"爬行动物的卵具羊膜和卵壳，摆脱了对水环境的繁殖依赖"},{"answer":false,"label":"C","text":"鸟类为变温动物，体温随环境变化"},{"answer":true,"label":"D","text":"哺乳动物胎生哺乳，体表被毛"}],"subject":"动物学","tags":["animal_diversity","module_4","动物学","脊椎动物主要类群的特征"],"target":"competition","type":"mtf"},{"bioId":"M3-01-670b2911","concept":"动物四大基本组织的特征","difficulty":"league","explanation":"A【对】依据：上皮组织细胞密集、间质少，覆盖体表或衬于管腔，执行保护分泌吸收。\nB【对】依据：血液有液态细胞间质（血浆），符合结缔组织定义，是特殊的液态结缔组织。\nC【对】依据：神经组织以神经元为主体，胶质细胞起支持营养作用，共同完成兴奋传导。\nD【错】错因：骨骼肌由肌细胞（肌纤维）构成，属于肌肉组织，附着于骨骼不改变其组织归属。","question":"动物体由上皮、结缔、肌肉和神经四大基本组织构成。关于动物组织，下列叙述正确的有：","references":[],"subQuestions":[{"answer":true,"label":"A","text":"上皮组织细胞排列紧密，具有保护、分泌和吸收功能"},{"answer":true,"label":"B","text":"血液属于结缔组织，细胞间质为液态的血浆"},{"answer":true,"label":"C","text":"神经组织由神经元和神经胶质细胞组成，能感受刺激并传导冲动"},{"answer":false,"label":"D","text":"骨骼肌属于结缔组织，因其附着在骨骼上"}],"subject":"动物学","tags":["animal_tissue","module_3","动物学","动物四大基本组织的特征"],"target":"competition","type":"mtf"},{"bioId":"M2-01-85894ab9","concept":"抗生素耐药性的产生与传播","difficulty":"league","explanation":"A【对】依据：突变是随机、不定向的，抗生素只是筛选出已存在的耐药突变体。\nB【对】依据：R 质粒携带耐药基因，经接合、转化、转导在菌间水平转移，加速耐药扩散。\nC【错】错因：抗生素是选择因素而非诱变因素，不能诱导定向突变，此说法属拉马克式误解。\nD【对】依据：足疗程用药彻底清除病原菌，避免亚致死浓度筛选出耐药突变株。","question":"临床上滥用抗生素导致耐药菌株不断出现。关于细菌耐药性，下列叙述正确的有：","references":[],"subQuestions":[{"answer":true,"label":"A","text":"耐药基因突变在接触抗生素之前就已随机产生，抗生素起选择作用"},{"answer":true,"label":"B","text":"质粒可在不同细菌间通过接合转移，传播耐药基因"},{"answer":false,"label":"C","text":"抗生素诱导细菌产生定向的耐药突变"},{"answer":true,"label":"D","text":"完成全程用药可减少耐药菌被筛选出来的机会"}],"subject":"微生物学","tags":["antibiotics_resistance","module_2","微生物学","抗生素耐药性的产生与传播"],"target":"competition","type":"mtf"},{"bioId":"M2-01-a4d77382","concept":"韧皮部运输的压力流动学说","difficulty":"league","explanation":"A【对】依据：源端主动装载蔗糖提高筛管溶质浓度，水分渗透进入建立高压。\nB【对】依据：库端卸出蔗糖后水势升高，水分外流膨压降低，源库间压力差驱动集流。\nC【错】错因：韧皮部运输方向取决于源库位置，可向上、向下双向进行。\nD【错】错因：蚜虫刺入的是筛管，汁液富含蔗糖等有机物，木质部汁液才以无机盐为主。","question":"蚜虫吻针插入韧皮部后可收集到富含蔗糖的汁液。关于有机物运输的压力流动学说，下列叙述正确的有：","references":[],"subQuestions":[{"answer":true,"label":"A","text":"源端蔗糖装载入筛管使渗透压升高，吸水产生膨压"},{"answer":true,"label":"B","text":"库端蔗糖卸出后水分随之渗出，膨压下降形成压力梯度"},{"answer":false,"label":"C","text":"有机物在韧皮部只能从叶片向根部单向运输"},{"answer":false,"label":"D","text":"蚜虫汁液主要来自木质部，因此富含无机盐"}],"subject":"植物生理学","tags":["assimilate_transport","module_2","植物生理学","韧皮部运输的压力流动学说"],"target":"competition","type":"mtf"},{"bioId":"M2-01-04a995d8","concept":"细菌的结构与代谢多样性","difficulty":"league","explanation":"A【对】依据：原核生物无核膜包被的细胞核，单个环状染色体集中于拟核区。\nB【对】依据：70S 核糖体（50S+30S）是原核特征，也是链霉素等抗生素的选择性靶点。\nC【错】错因：细菌无线粒体，有氧呼吸酶系位于细胞膜；且许多细菌为厌氧型。\nD【对】依据：绝大多数细菌细胞壁以肽聚糖为骨架，革兰氏阳性菌壁更厚。","question":"细菌是结构简单的原核生物，但代谢类型极为多样。关于细菌，下列叙述正确的有：","references":[],"subQuestions":[{"answer":true,"label":"A","text":"细菌无核膜，遗传物质为环状 DNA，位于拟核"},{"answer":true,"label":"B","text":"细菌核糖体为 70S，与真核细胞 80S 核糖体不同"},{"answer":false,"label":"C","text":"所有细菌都含有线粒体，进行有氧呼吸"},{"answer":true,"label":"D","text":"细菌的细胞壁主要成分是肽聚糖"}],"subject":"微生物学","tags":["bacteria","module_2","微生物学","细菌的结构与代谢多样性"],"target":"competition","type":"mtf"},{"bioId":"M3-01-44d4e6b6","concept":"利他行为与亲缘选择","difficulty":"league","explanation":"A【对】依据：汉密尔顿法则中 r 为亲缘系数、b 为受益者获益、c 为利他者代价，rb>c 时利他基因可通过亲属传递。\nB【错】错因：利他行为在亲缘个体间最常见（如工蜂不育），亲缘选择是其进化的主要机制。\nC【错】错因：利他行为可通过亲缘选择或互惠利他进化，不违背广义适合度理论。\nD【错】错因：亲缘选择的核心正是利他者通过帮助亲属传递共享基因，与基因传递密切相关。","question":"某些动物个体会做出降低自身适合度而提高其他个体适合度的行为。关于利他行为，下列叙述正确的是：","references":[],"subQuestions":[{"answer":true,"label":"A","text":"汉密尔顿法则指出，当 rb > c 时，利他行为可被自然选择保留"},{"answer":false,"label":"B","text":"利他行为只发生在无亲缘关系的个体之间"},{"answer":false,"label":"C","text":"利他行为完全违背自然选择原理，不可能进化产生"},{"answer":false,"label":"D","text":"亲缘选择理论认为利他行为的进化与基因传递无关"}],"subject":"生态学","tags":["behavioral_eco","module_3","生态学","利他行为与亲缘选择"],"target":"competition","type":"mtf"},{"bioId":"M4-01-fc98f5e0","concept":"常用生物信息学数据库","difficulty":"league","explanation":"A【对】依据：GenBank 与 EMBL、DDBJ 构成国际核酸序列数据库协作，每日同步更新。\nB【错】错因：PDB 存储蛋白质等大分子的三维结构数据，分类与分布信息属于其他专门数据库。\nC【错】错因：数据库存在注释错误与冗余，需使用者甄别，且部分库有审核流程。\nD【错】错因：UniProt 整合 Swiss-Prot 与 TrEMBL，覆盖各物种蛋白质。","question":"生物信息学数据库是生命科学研究的重要资源。关于常用数据库，下列叙述正确的是：","references":[],"subQuestions":[{"answer":true,"label":"A","text":"GenBank 是 NCBI 维护的核酸序列数据库，收录提交的序列及注释"},{"answer":false,"label":"B","text":"PDB 数据库专门存储物种分类与地理分布信息"},{"answer":false,"label":"C","text":"所有生物数据库的数据都无需人工审核且绝对无误"},{"answer":false,"label":"D","text":"UniProt 只收录人类蛋白质，不含其他物种"}],"subject":"生物信息学","tags":["bio_databases","module_4","生物信息学","常用生物信息学数据库"],"target":"competition","type":"mtf"},{"bioId":"M3-01-ea78b366","concept":"生物多样性的层次与保护","difficulty":"league","explanation":"A【对】依据：三个层次从基因到生态系统，全面概括了生物多样性的内涵。\nB【错】错因：自然保护区是就地保护的主要形式，迁地保护指动物园、植物园等异地保护。\nC【错】错因：外来物种入侵常导致本地物种灭绝，降低生物多样性，而非增加。\nD【错】错因：生物多样性具有直接价值、间接价值（生态功能）和潜在价值。","question":"生物多样性是生物及其与环境形成的生态复合体以及与此相关的各种生态过程的总和。关于生物多样性，下列叙述正确的是：","references":[],"subQuestions":[{"answer":true,"label":"A","text":"生物多样性包括基因多样性、物种多样性和生态系统多样性三个层次"},{"answer":false,"label":"B","text":"建立自然保护区属于迁地保护"},{"answer":false,"label":"C","text":"外来物种入侵一定会增加当地生物多样性"},{"answer":false,"label":"D","text":"生物多样性的价值仅体现在直接使用价值上"}],"subject":"生态学","tags":["biodiversity","module_3","生态学","生物多样性的层次与保护"],"target":"competition","type":"mtf"},{"bioId":"M1-01-4c71bc4d","concept":"ATP 与能量偶联","difficulty":"league","explanation":"A【错】错因：细胞质基质中糖酵解也合成 ATP，线粒体并非动物细胞合成 ATP 的唯一场所。\nB【对】依据：ATP 水解自由能变化大，可通过基团转移或构象偶联驱动吸能反应。\nC【错】错因：ATP 含 2 个特殊磷酸酐键（β、γ 磷酸之间与 α、β 之间），腺苷与 α 磷酸间为磷酸酯键。\nD【错】错因：细胞内 ATP 含量很少，依靠与 ADP 的快速转化满足需求，而非大量储存。","question":"ATP 是细胞的直接能源物质，与 ADP 不断相互转化。关于 ATP 的叙述，下列正确的是：","references":[],"subQuestions":[{"answer":false,"label":"A","text":"动物细胞中 ATP 的合成只发生在线粒体"},{"answer":true,"label":"B","text":"ATP 水解释放的能量可偶联肌肉收缩等吸能反应"},{"answer":false,"label":"C","text":"ATP 分子中含有 3 个特殊磷酸酐键"},{"answer":false,"label":"D","text":"细胞依靠大量储存 ATP 来满足长期能量需求"}],"subject":"生物化学","tags":["bioenergetics","module_1","生物化学","ATP 与能量偶联"],"target":"competition","type":"mtf"},{"bioId":"M3-01-a0b22f32","concept":"碳循环与温室效应","difficulty":"league","explanation":"A【对】依据：光合作用和化能合成作用将无机碳（CO₂）固定为有机碳，进入生物群落。\nB【对】依据：工业革命以来化石燃料燃烧释放大量地质碳，是大气 CO₂ 升高的主要原因。\nC【错】错因：碳在生物群落内以有机物形式传递，但在群落与无机环境之间主要以 CO₂ 形式循环。\nD【对】依据：分解者通过呼吸作用将动植物遗体中的有机碳氧化为 CO₂，完成碳的归还。","question":"碳元素在生物群落与无机环境之间循环往复。关于碳循环，下列叙述正确的有：","references":[],"subQuestions":[{"answer":true,"label":"A","text":"生产者通过光合作用固定大气中的 CO₂"},{"answer":true,"label":"B","text":"化石燃料的大量燃烧增加了大气 CO₂ 浓度"},{"answer":false,"label":"C","text":"碳在生物群落与无机环境之间主要以有机物形式循环"},{"answer":true,"label":"D","text":"分解者的分解作用将有机碳转化为 CO₂ 返回大气"}],"subject":"生态学","tags":["biogeochemical","module_3","生态学","碳循环与温室效应"],"target":"competition","type":"mtf"},{"bioId":"M1-01-8d54d522","concept":"细胞周期的调控与检查点","difficulty":"league","explanation":"A【对】依据：周期蛋白周期性合成与降解（如 cyclin B 在 M 期末被 APC/C 降解），驱动周期运转。\nB【对】依据：CDK 单独无活性，与周期蛋白结合并磷酸化后才具激酶活性。\nC【对】依据：G2/M 检查点检测 DNA 复制完整性与损伤，激活抑制通路阻滞细胞进入 M 期。\nD【错】错因：CDK 活性受周期蛋白结合、磷酸化状态与抑制蛋白（如 p21）多重调控，并非恒定。","question":"真核细胞周期受细胞周期蛋白与细胞周期蛋白依赖性激酶（CDK）的精密调控。关于细胞周期调控，下列叙述正确的有：","references":[],"subQuestions":[{"answer":true,"label":"A","text":"细胞周期蛋白的含量在细胞周期中周期性升降"},{"answer":true,"label":"B","text":"CDK 需与细胞周期蛋白结合后才表现出激酶活性"},{"answer":true,"label":"C","text":"G2/M 检查点可阻止 DNA 损伤的细胞进入分裂期"},{"answer":false,"label":"D","text":"CDK 活性在整个细胞周期中恒定不变，不受调控"}],"subject":"细胞生物学","tags":["cell_cycle","module_1","细胞生物学","细胞周期的调控与检查点"],"target":"competition","type":"mtf"},{"bioId":"M1-01-35a697fe","concept":"细胞凋亡的机制与意义","difficulty":"league","explanation":"A【对】依据：凋亡由凋亡相关基因（如 caspase 家族）程序性执行，是主动的死亡过程。\nB【错】错因：凋亡细胞形成凋亡小体被吞噬清除，膜完整性保持、内容物不外泄，不引发炎症；膜破裂外泄是坏死特征。\nC【错】错因：胚胎发育期凋亡基因活跃表达，塑造指间组织、神经回路等结构。\nD【错】错因：凋亡清除多余、受损或潜在危险细胞，对发育与稳态维持具有积极意义。","question":"动物胚胎发育过程中指间组织通过凋亡消失，使手指彼此分离。关于细胞凋亡，下列叙述正确的是：","references":[],"subQuestions":[{"answer":true,"label":"A","text":"细胞凋亡是由基因控制的程序性细胞死亡"},{"answer":false,"label":"B","text":"凋亡过程中细胞膜破裂、内容物外泄引发炎症"},{"answer":false,"label":"C","text":"凋亡相关基因仅在个体衰老后才表达，胚胎期不表达"},{"answer":false,"label":"D","text":"细胞凋亡对机体有害，没有任何积极的生理意义"}],"subject":"细胞生物学","tags":["cell_death","module_1","细胞生物学","细胞凋亡的机制与意义"],"target":"competition","type":"mtf"},{"bioId":"M1-01-4887c2a5","concept":"钠钾泵与主动运输","difficulty":"league","explanation":"A【对】依据：钠钾泵逆浓度梯度转运离子，直接水解 ATP 供能，是典型的主动运输。\nB【错】错因：钠钾泵每循环一次泵出 3 个 Na⁺、泵入 2 个 K⁺，选项将数目颠倒。\nC【错】错因：钠钾泵逆浓度梯度工作，顺浓度梯度的通道转运才属于协助扩散。\nD【错】错因：静息电位依赖泵建立的胞内高 K⁺、胞外高 Na⁺分布，抑制泵会使其逐渐消失。","question":"动物细胞膜上的 Na⁺/K⁺-ATP 酶通过水解 ATP 逆浓度梯度转运离子。关于钠钾泵，下列叙述正确的是：","references":[],"subQuestions":[{"answer":true,"label":"A","text":"该转运属于主动运输，需 ATP 直接水解供能"},{"answer":false,"label":"B","text":"钠钾泵每循环一次泵出 2 个 Na⁺、泵入 3 个 K⁺"},{"answer":false,"label":"C","text":"钠钾泵转运方向顺浓度梯度，属于协助扩散"},{"answer":false,"label":"D","text":"抑制钠钾泵活性对神经细胞静息电位无影响"}],"subject":"细胞生物学","tags":["cell_membrane","module_1","细胞生物学","钠钾泵与主动运输"],"target":"competition","type":"mtf"},{"bioId":"M2-01-f05ce501","concept":"空间转录组学与肿瘤微环境","difficulty":"league","explanation":"A【对】依据：空间转录组学（如 10x Visium、MERFISH、seqFISH+）通过在组织切片上原位捕获 mRNA 或利用荧光原位杂交，在保留空间坐标的同时获取转录组信息，区别于需解离组织的 scRNA-seq。\nB【对】依据：MERFISH 和 seqFISH+ 等基于成像的技术已实现亚细胞分辨率，10x Visium 的 spot 直径约 55 μm（含 1-10 个细胞），Visium HD 已达到接近单细胞水平的分辨率。\nC【对】依据：空间转录组可识别肿瘤内不同区域（核心、侵袭前沿、免疫浸润区）的细胞组成差异，揭示癌细胞-免疫细胞-基质细胞的空间互作网络，为理解肿瘤微环境提供关键信息。\nD【错】错因：空间转录组学检测的是 RNA 分子的空间分布，蛋白质定位需借助空间蛋白质组学技术（如 CODEX、IMC、DBiT-seq 的蛋白模式），二者原理与检测对象不同。","image":{"caption":"空间转录组学肿瘤研究流程","credit":"Maciejewski K et al., Cancers 2024","doi":"10.3390/cancers16173100","figure":"1","file":"assets/questions/M2-01-f05ce501/fig1.jpg","license":"CC BY 4.0","pmcId":"PMC11394603","source":"paper"},"question":"研究者利用空间转录组学技术绘制某肿瘤组织的基因表达图谱。关于空间转录组学，下列叙述正确的有：","references":[{"authors":"Ståhl PL et al.","doi":"10.1126/science.aaf2403","journal":"Science","title":"Visualization and analysis of gene expression in tissue sections by spatial transcriptomics","year":2016}],"subQuestions":[{"answer":true,"label":"A","text":"空间转录组学可在保留组织空间位置信息的前提下检测基因表达"},{"answer":true,"label":"B","text":"当前主流空间转录组技术已达到接近单细胞的分辨率"},{"answer":true,"label":"C","text":"空间转录组学可揭示肿瘤微环境中不同细胞类型的空间分布与互作关系"},{"answer":false,"label":"D","text":"空间转录组学可直接检测蛋白质的空间定位"}],"subject":"细胞生物学","tags":["cell_signal","module_2","细胞生物学","空间转录组","肿瘤微环境"],"target":"competition","type":"mtf"},{"bioId":"M2-02-846b66ee","concept":"GPCR-cAMP 第二信使通路","difficulty":"league","explanation":"A【对】依据：腺苷酸环化酶催化生成 cAMP，cAMP 结合 PKA 调节亚基使其催化亚基释放活化。\nB【对】依据：Gα 亚基结合 GTP 活化，其内在 GTP 酶活性水解 GTP 后回到失活状态，实现自我计时。\nC【错】错因：肾上腺素为水溶性激素，不进入细胞，经膜受体与胞内级联传递信号。\nD【错】错因：级联反应逐级放大，一个激素分子可激活大量酶分子，放大效应显著。","question":"肾上腺素与肝细胞膜上 β 受体结合后，激活 G 蛋白-腺苷酸环化酶通路，促进糖原分解。关于该信号通路，下列叙述正确的有：","references":[],"subQuestions":[{"answer":true,"label":"A","text":"cAMP 作为第二信使激活蛋白激酶 A（PKA）"},{"answer":true,"label":"B","text":"G 蛋白结合 GTP 后活化，水解 GTP 后自行失活"},{"answer":false,"label":"C","text":"肾上腺素进入肝细胞细胞核直接激活糖原磷酸化酶"},{"answer":false,"label":"D","text":"该信号通路无放大效应，一个激素分子只激活一个酶分子"}],"subject":"细胞生物学","tags":["cell_signal","module_2","细胞生物学","GPCR-cAMP 第二信使通路"],"target":"competition","type":"mtf"},{"bioId":"M1-01-e9bacfd5","concept":"原核细胞与真核细胞的比较","difficulty":"league","explanation":"A【对】依据：支原体为原核生物，无核膜，遗传物质集中于拟核。\nB【对】依据：支原体是少数无细胞壁的原核生物，直径约 0.1–0.3 μm，小于动物细胞。\nC【错】错因：支原体含 70S 核糖体，能独立合成蛋白质，这是其独立生活的基础。\nD【错】错因：支原体具有含固醇的细胞膜，细胞膜是所有细胞的基本边界结构。","question":"支原体是目前已知最小、能独立生活的细胞。关于支原体与动物细胞的比较，下列叙述正确的有：","references":[],"subQuestions":[{"answer":true,"label":"A","text":"支原体无核膜包被，DNA 集中于拟核区域"},{"answer":true,"label":"B","text":"支原体无细胞壁，细胞体积一般小于动物细胞"},{"answer":false,"label":"C","text":"支原体无核糖体，蛋白质合成完全依赖宿主"},{"answer":false,"label":"D","text":"支原体无细胞膜，细胞质直接暴露于环境"}],"subject":"细胞生物学","tags":["cell_structure","module_1","细胞生物学","原核细胞与真核细胞的比较"],"target":"competition","type":"mtf"},{"bioId":"M4-01-452268f0","concept":"染色体数目变异与多倍体","difficulty":"league","explanation":"A【对】依据：秋水仙素阻止纺锤丝形成，染色体复制后不能分向两极，细胞染色体加倍。\nB【对】依据：三倍体减数分裂时染色体联会紊乱，不能形成正常配子，故高度不育（无子西瓜原理）。\nC【对】依据：多倍体细胞体积大、有机物含量高，常表现为茎粗、叶大、果实种子较大。\nD【错】错因：单倍体指含本物种配子染色体数的个体，四倍体的单倍体含两个染色体组。","question":"用秋水仙素处理二倍体西瓜幼苗可获得四倍体植株。关于染色体数目变异，下列叙述正确的有：","references":[],"subQuestions":[{"answer":true,"label":"A","text":"秋水仙素抑制纺锤体形成，使染色体数目加倍"},{"answer":true,"label":"B","text":"四倍体与二倍体杂交产生的三倍体高度不育"},{"answer":true,"label":"C","text":"多倍体植株一般茎秆粗壮、果实较大"},{"answer":false,"label":"D","text":"单倍体植株都只含一个染色体组"}],"subject":"遗传学","tags":["chromosome_var","module_4","遗传学","染色体数目变异与多倍体"],"target":"competition","type":"mtf"},{"bioId":"M3-01-d11b9c64","concept":"心脏结构与血液循环","difficulty":"league","explanation":"A【对】依据：左心室承担体循环泵血，肌肉壁最厚，收缩将含氧血射入主动脉。\nB【错】错因：肺静脉运送经肺气体交换后的动脉血回左心房，静脉血由肺动脉送往肺部。\nC【错】错因：肺动脉流静脉血、肺静脉流动脉血，血管名称与所流血液类型不完全对应。\nD【对】依据：房室瓣（二尖瓣、三尖瓣）在心室收缩时关闭，防止血液倒流回心房。","question":"人体心脏分为四腔，血液在体循环和肺循环中流动。关于血液循环，下列叙述正确的是：","references":[],"subQuestions":[{"answer":true,"label":"A","text":"左心室壁最厚，将动脉血泵入主动脉供应全身"},{"answer":false,"label":"B","text":"肺静脉将静脉血运回左心房"},{"answer":false,"label":"C","text":"动脉中流的都是动脉血，静脉中流的都是静脉血"},{"answer":true,"label":"D","text":"房室瓣保证血液在心房与心室间单向流动"}],"subject":"动物生理学","tags":["circulatory","module_3","动物生理学","心脏结构与血液循环"],"target":"competition","type":"mtf"},{"bioId":"M3-01-ca89e827","concept":"群落演替的类型与过程","difficulty":"league","explanation":"A【对】依据：弃耕农田保留了土壤和部分繁殖体，属于次生演替，区别于初生演替。\nB【对】依据：演替过程中物种多样性一般增加，群落结构趋于复杂。\nC【错】错因：人类活动（如砍伐、引入外来种）可显著改变演替方向和速度。\nD【错】错因：顶极群落是动态平衡，物种组成仍有波动，并非绝对不变。","question":"弃耕农田逐渐恢复为森林的过程属于群落演替。关于群落演替，下列叙述正确的有：","references":[],"subQuestions":[{"answer":true,"label":"A","text":"弃耕农田上发生的演替属于次生演替"},{"answer":true,"label":"B","text":"演替过程中物种丰富度一般逐渐增加"},{"answer":false,"label":"C","text":"人类活动不能改变演替的方向和速度"},{"answer":false,"label":"D","text":"演替达到顶极群落后，群落组成不再发生任何变化"}],"subject":"生态学","tags":["community_eco","module_3","生态学","群落演替的类型与过程"],"target":"competition","type":"mtf"},{"bioId":"M3-01-7f4c7a7b","concept":"小肠的结构与消化吸收","difficulty":"league","explanation":"A【对】依据：环形皱襞、绒毛、微绒毛三级结构使小肠吸收面积增加数百倍。\nB【对】依据：葡萄糖和氨基酸依赖载体和钠梯度主动转运入绒毛毛细血管。\nC【错】错因：脂肪酸和甘油一酯重新合成甘油三酯形成乳糜微粒，主要进入毛细淋巴管（乳糜管）。\nD【错】错因：胃蛋白酶在胃中开始蛋白质消化，小肠是主要场所但非唯一。","question":"小肠是消化和吸收的主要场所。关于小肠的结构与功能，下列叙述正确的有：","references":[],"subQuestions":[{"answer":true,"label":"A","text":"小肠绒毛和微绒毛极大增加了吸收表面积"},{"answer":true,"label":"B","text":"葡萄糖和氨基酸经主动运输吸收进入毛细血管"},{"answer":false,"label":"C","text":"脂肪消化产物全部直接进入毛细血管运输"},{"answer":false,"label":"D","text":"小肠是蛋白质消化的唯一场所，胃不参与蛋白质消化"}],"subject":"动物生理学","tags":["digestive_sys","module_3","动物生理学","小肠的结构与消化吸收"],"target":"competition","type":"mtf"},{"bioId":"M1-01-ebf918bf","concept":"DNA 双螺旋结构","difficulty":"league","explanation":"A【对】依据：两条链 5'→3' 方向相反，A-T 间 2 个、G-C 间 3 个氢键维系互补配对。\nB【错】错因：G-C 对含 3 个氢键，比含 2 个氢键的 A-T 对更稳定，GC 含量高则 Tm 升高。\nC【错】错因：疏水碱基堆叠于螺旋内侧，亲水的磷酸-脱氧核糖骨架位于外侧。\nD【错】错因：互补配对使 A=T、G=C，故 (A+G)/(T+C)=1，而 (A+T)/(G+C) 因物种而异。","question":"Watson-Crick 双螺旋模型揭示了 DNA 的空间结构特征。关于 DNA 结构，下列叙述正确的是：","references":[],"subQuestions":[{"answer":true,"label":"A","text":"两条链反向平行，碱基按互补配对原则以氢键相连"},{"answer":false,"label":"B","text":"G-C 碱基对含 2 个氢键，稳定性低于 A-T 碱基对"},{"answer":false,"label":"C","text":"碱基位于双螺旋外侧，磷酸-脱氧核糖骨架位于内侧"},{"answer":false,"label":"D","text":"双链 DNA 中 (A+T)/(G+C) 的比值恒等于 1"}],"subject":"分子生物学","tags":["dna_structure","module_1","分子生物学","DNA 双螺旋结构"],"target":"competition","type":"mtf"},{"bioId":"M3-01-370aad72","concept":"生态系统的能量流动","difficulty":"league","explanation":"A【对】依据：能量以热能形式散失后不能被生物再利用，故单向流动、逐级递减。\nB【错】错因：相邻营养级间能量传递效率一般为 10%–20%，大部分能量经呼吸以热能散失。\nC【错】错因：物质可循环，但能量单向流动，不能循环利用。\nD【错】错因：分解者分解有机物释放能量，是能量流动的重要环节。","question":"能量沿食物链在生态系统中单向流动。关于能量流动，下列叙述正确的是：","references":[],"subQuestions":[{"answer":true,"label":"A","text":"能量流动是单向的、逐级递减的"},{"answer":false,"label":"B","text":"相邻营养级间的能量传递效率一般为 50%–60%"},{"answer":false,"label":"C","text":"能量可在生态系统中循环利用"},{"answer":false,"label":"D","text":"分解者不参与能量流动过程"}],"subject":"生态学","tags":["ecosystem","module_3","生态学","生态系统的能量流动"],"target":"competition","type":"mtf"},{"bioId":"M3-01-960fdd44","concept":"血糖的激素调节","difficulty":"league","explanation":"A【对】依据：胰岛素促进葡萄糖进入细胞氧化供能、合成糖原和转化为脂肪，降低血糖。\nB【对】依据：胰高血糖素作用于肝脏，促进糖原分解与非糖物质转化，升高血糖。\nC【错】错因：二者作用相反，属拮抗关系，共同维持血糖稳态。\nD【错】错因：下丘脑通过交感与副交感神经调节胰岛分泌，血糖调节是神经-体液共同调节。","question":"进食后血糖升高，机体通过激素调节使血糖恢复稳态。关于血糖调节，下列叙述正确的有：","references":[],"subQuestions":[{"answer":true,"label":"A","text":"胰岛 B 细胞分泌胰岛素，促进组织细胞摄取和氧化葡萄糖"},{"answer":true,"label":"B","text":"胰高血糖素促进肝糖原分解和糖异生，升高血糖"},{"answer":false,"label":"C","text":"胰岛素与胰高血糖素表现为协同作用"},{"answer":false,"label":"D","text":"血糖调节只有激素参与，不受神经系统影响"}],"subject":"动物生理学","tags":["endocrine","module_3","动物生理学","血糖的激素调节"],"target":"competition","type":"mtf"},{"bioId":"M1-01-ea6b71cf","concept":"酶动力学与抑制类型","difficulty":"league","explanation":"A【对】依据：底物饱和后所有酶分子处于 ES 复合物状态，速率达到最大反应速度 Vmax。\nB【对】依据：Vmax 与酶浓度成正比，底物饱和时增加酶量可提高总反应速率。\nC【错】错因：竞争性抑制剂与底物争夺活性中心，Vmax 不变而表观 Km 增大，选项说反了。\nD【对】依据：竞争性抑制可被高浓度底物通过竞争结合位点而逆转，抑制程度随底物浓度下降。","question":"研究者测定某酶在不同底物浓度下的活性，发现底物浓度达到一定值后反应速率不再上升。关于该现象，下列叙述正确的有：","references":[],"subQuestions":[{"answer":true,"label":"A","text":"此时酶活性中心基本被底物饱和，反应速率接近 Vmax"},{"answer":true,"label":"B","text":"此时增加酶量可进一步提高反应速率"},{"answer":false,"label":"C","text":"竞争性抑制剂会改变 Vmax，但不改变表观 Km"},{"answer":true,"label":"D","text":"提高底物浓度可克服竞争性抑制剂的抑制作用"}],"subject":"生物化学","tags":["enzyme","module_1","生物化学","酶动力学与抑制类型"],"target":"competition","type":"mtf"},{"bioId":"M3-01-42c298c9","concept":"尿液的形成过程","difficulty":"league","explanation":"A【对】依据：滤过膜允许小分子通过，血细胞与血浆蛋白被截留，形成无蛋白原尿。\nB【错】错因：原尿不含血细胞和大分子蛋白质，与血浆相比缺少这些成分，并非完全相同。\nC【错】错因：抗利尿激素增加集合管对水的通透性，促进重吸收，减少尿量，选项说反。\nD【错】错因：尿素是代谢废物，大部分随尿排出，仅少量在髓袢被被动重吸收。","question":"肾单位是肾脏的结构和功能单位。关于尿液形成，下列叙述正确的是：","references":[],"subQuestions":[{"answer":true,"label":"A","text":"肾小球滤过形成原尿，其中不含血细胞和大分子蛋白质"},{"answer":false,"label":"B","text":"原尿与血浆的成分完全相同"},{"answer":false,"label":"C","text":"抗利尿激素减少肾小管对水的重吸收，使尿量增加"},{"answer":false,"label":"D","text":"尿素在肾小管中被大量重吸收回血液"}],"subject":"动物生理学","tags":["excretory","module_3","动物生理学","尿液的形成过程"],"target":"competition","type":"mtf"},{"bioId":"M4-01-b83b8e9e","concept":"基因突变的类型与特征","difficulty":"league","explanation":"A【对】依据：突变方向不定，同一基因位点可突变为多个等位形式，如 ABO 血型。\nB【错】错因：同义突变不改变氨基酸，且非编码区突变不一定影响蛋白质结构。\nC【错】错因：突变可发生在个体发育的任何时期，DNA 复制期只是易发期之一。\nD【错】错因：影响大小取决于位点与性质，移码突变（缺失/插入）通常影响更大，但并非绝对。","question":"镰刀型细胞贫血症由血红蛋白基因中一个碱基对的替换引起。关于基因突变，下列叙述正确的是：","references":[],"subQuestions":[{"answer":true,"label":"A","text":"基因突变具有不定向性，可产生复等位基因"},{"answer":false,"label":"B","text":"所有基因突变都会导致蛋白质结构改变"},{"answer":false,"label":"C","text":"基因突变只发生在 DNA 复制时期"},{"answer":false,"label":"D","text":"碱基对替换一定比缺失造成的影响更大"}],"subject":"遗传学","tags":["gene_mutation","module_4","遗传学","基因突变的类型与特征"],"target":"competition","type":"mtf"},{"bioId":"M4-02-df81db11","concept":"增强子的作用机制","difficulty":"league","explanation":"A【对】依据：增强子可远距离（数千乃至上百万碱基对）调控靶基因，经 DNA 成环接近启动子。\nB【对】依据：增强子位置灵活，上游、下游甚至内含子中均可存在，且倒置后通常仍有活性。\nC【错】错因：增强子结合特异性转录因子，经成环与启动子区复合物互作，不直接结合聚合酶。\nD【错】错因：增强子活性依赖细胞特异的转录因子组合，具有显著的组织与时空特异性。","question":"增强子是一类能显著增强基因转录效率的 DNA 调控元件。关于增强子的作用特点，下列叙述正确的有：","references":[],"subQuestions":[{"answer":true,"label":"A","text":"增强子可在距启动子数千碱基对的位置发挥作用"},{"answer":true,"label":"B","text":"增强子可位于基因上游或下游，作用一般无方向性"},{"answer":false,"label":"C","text":"增强子直接结合 RNA 聚合酶并启动转录"},{"answer":false,"label":"D","text":"增强子无组织特异性，在所有细胞中激活全部基因"}],"subject":"分子生物学","tags":["gene_regulation","module_4","分子生物学","增强子的作用机制"],"target":"competition","type":"mtf"},{"bioId":"M4-03-f59903ec","concept":"乳糖操纵子的双重调控机制","difficulty":"league","explanation":"A【对】依据：乳糖操纵子同时受到负调控（LacI阻遏蛋白）和正调控（CAP-cAMP激活蛋白）的双重控制。LacI结合操纵基因阻止转录，而CAP-cAMP结合启动子区域增强RNA聚合酶的招募和转录起始效率。\nB【错】错因：当葡萄糖缺乏时，细胞内cAMP水平显著升高，而非下降。升高后的cAMP与CAP结合使其活化，从而增强转录。选项将葡萄糖缺乏时的cAMP变化方向说反了。\nC【错】错因：乳糖操纵子的完全激活需要两个条件同时满足：①乳糖存在（使LacI失活，解除负调控）；②葡萄糖缺乏（使cAMP升高，CAP活化，增强正调控）。仅乳糖存在而葡萄糖也充足时，cAMP水平低，CAP不活化，转录水平很低。\nD【错】错因：LacI阻遏蛋白在无乳糖（或别乳糖）时结合操纵基因，阻止转录；当乳糖存在时，乳糖转化为别乳糖，别乳糖与LacI结合使其构象改变而从操纵基因上解离，从而解除阻遏。因此LacI是在乳糖缺乏时结合操纵基因，并非乳糖存在时。","image":{"caption":"乳糖操纵子的调控电路","credit":"Oehler & Schlief, Front Mol Biosci 2022","doi":"10.3389/fmolb.2022.846805","figure":"1","file":"assets/questions/gene_regulation/fig1.svg","license":"CC BY 4.0","pmcId":"PMC8994567","source":"paper"},"question":"研究者通过分析大肠杆菌乳糖操纵子的突变体，发现某些突变导致操纵子在不同碳源条件下的表达模式发生改变。关于乳糖操纵子的调控机制，下列叙述正确的有：","references":[{"authors":"Oehler S, Schlief A","doi":"10.3389/fmolb.2022.846805","journal":"Frontiers in Molecular Biosciences","title":"The lac operon: a historical perspective","year":2022}],"subQuestions":[{"answer":true,"label":"A","text":"乳糖操纵子同时受到LacI阻遏蛋白的负调控和CAP-cAMP的正调控"},{"answer":false,"label":"B","text":"葡萄糖缺乏时，细菌细胞内cAMP浓度下降，CAP无法活化从而抑制转录"},{"answer":false,"label":"C","text":"只要乳糖存在，无论葡萄糖水平如何，乳糖操纵子都会完全激活"},{"answer":false,"label":"D","text":"LacI阻遏蛋白在乳糖存在时结合操纵基因，阻止转录"}],"subject":"分子生物学","tags":["gene_regulation","module_4","分子生物学","操纵子","基因表达调控"],"target":"competition","type":"mtf"},{"bioId":"M4-01-6adf2163","concept":"遗传漂变与奠基者效应","difficulty":"league","explanation":"A【对】依据：少数奠基者只携带原种群部分基因，抽样误差使新种群基因频率随机偏离。\nB【错】错因：漂变是随机的、不定向的，不同于自然选择的定向作用。\nC【错】错因：漂变强度与种群大小成反比，种群越小漂变越显著。\nD【错】错因：漂变随机改变基因频率，有利基因也可能因漂变而丢失。","question":"少数个体迁移到新岛屿建立小种群，其后代某些基因频率与原种群差异显著。关于遗传漂变，下列叙述正确的是：","references":[],"subQuestions":[{"answer":true,"label":"A","text":"奠基者效应是遗传漂变的一种形式，小种群中基因频率随机波动大"},{"answer":false,"label":"B","text":"遗传漂变使基因频率发生定向改变，是适应性进化的动力"},{"answer":false,"label":"C","text":"种群越大，遗传漂变的影响越显著"},{"answer":false,"label":"D","text":"遗传漂变总是使有利基因频率升高"}],"subject":"进化生物学","tags":["genetic_drift","module_4","进化生物学","遗传漂变与奠基者效应"],"target":"competition","type":"mtf"},{"bioId":"M4-01-028c38ed","concept":"基因工程的基本工具与流程","difficulty":"league","explanation":"A【对】依据：限制酶识别回文序列并在特定位点切割，是基因工程的分子剪刀。\nB【对】依据：连接酶封闭切口形成磷酸二酯键，将目的基因与载体连成重组 DNA。\nC【错】错因：导入后需检测筛选，目的基因可能未整合、不转录或表达产物无活性。\nD【对】依据：质粒需能自主复制（复制起点）并便于筛选（抗性基因等标记）。","question":"科学家将人胰岛素基因导入大肠杆菌生产胰岛素。关于基因工程，下列叙述正确的有：","references":[],"subQuestions":[{"answer":true,"label":"A","text":"限制性内切酶识别特定序列并切割，产生黏性末端或平末端"},{"answer":true,"label":"B","text":"DNA 连接酶催化磷酸二酯键形成，连接目的基因与载体"},{"answer":false,"label":"C","text":"目的基因导入受体细胞后一定能稳定表达"},{"answer":true,"label":"D","text":"质粒是常用的基因工程载体，需具备复制起点和标记基因"}],"subject":"生物技术","tags":["genetic_engineering","module_4","生物技术","基因工程的基本工具与流程"],"target":"competition","type":"mtf"},{"bioId":"M4-01-636d9eab","concept":"基因组拼接与质量评估","difficulty":"league","explanation":"A【对】依据：长重复序列使读段定位不唯一，导致拼接图产生歧义与断裂。\nB【对】依据：N50 反映拼接片段的长度分布，越大说明连续性越好。\nC【错】错因：适度提高覆盖度有助于纠错，覆盖度与错误率并非单调正相关。\nD【对】依据：长读段可跨越整个重复单元，明确两侧连接关系，显著改善拼接。","question":"研究者对某新物种进行全基因组测序与拼接。关于基因组拼接，下列叙述正确的有：","references":[],"subQuestions":[{"answer":true,"label":"A","text":"重复序列是基因组拼接的主要难点之一"},{"answer":true,"label":"B","text":"Contig N50 越大通常表示拼接连续性越好"},{"answer":false,"label":"C","text":"测序覆盖度越高，拼接错误一定越多"},{"answer":true,"label":"D","text":"长读长测序有助于跨越重复区，提升拼接质量"}],"subject":"生物信息学","tags":["genome_assembly","module_4","生物信息学","基因组拼接与质量评估"],"target":"competition","type":"mtf"},{"bioId":"M4-01-7476e725","concept":"人类泛基因组与图参考","difficulty":"league","explanation":"A【对】依据：线性参考（如 GRCh38）仅代表单倍型，无法有效表示插入、缺失、倒位等结构变异（SV）；图参考将多条单倍型路径整合为有向图，比对时可映射到最匹配的路径，显著提高 SV 检出率。\nB【对】依据：HPRC 整合了 T2T-CHM13 等完整组装基因组，覆盖了 GRCh38 中缺失的着丝粒卫星 DNA、端粒重复序列和核仁组织区（NOR），这些区域富含结构变异和进化信息。\nC【对】依据：泛基因组纳入了非洲、亚洲、欧洲、美洲等多祖先背景个体，可识别线性参考中缺失的人群特异性序列（如非洲人群特有的大片段插入），减少参考偏向（reference bias）。\nD【错】错因：泛基因组参考是比对的'地图'，个体测序仍是获取个人遗传信息的必要手段；泛基因组提高了比对准确性和变异检出率，但不能替代个体基因组测序。","question":"人类泛基因组参考联盟（HPRC）构建了基于图结构的泛基因组参考，整合了多个不同祖先背景个体的完整基因组序列。关于人类泛基因组，下列叙述正确的有：","references":[{"authors":"Liao WW et al. (Human Pangenome Reference Consortium)","doi":"10.1038/s41586-023-06127-8","journal":"Nature","title":"A draft human pangenome reference","year":2023}],"subQuestions":[{"answer":true,"label":"A","text":"泛基因组参考以图结构表示，比线性参考更能捕捉人群间的结构变异"},{"answer":true,"label":"B","text":"泛基因组参考包含了端粒到端粒（T2T）完整组装的着丝粒和端粒序列"},{"answer":true,"label":"C","text":"泛基因组参考有助于发现特定人群特有的遗传变异"},{"answer":false,"label":"D","text":"泛基因组参考建成后，个体基因组测序将不再必要"}],"subject":"基因组学","tags":["genomics_comp","module_4","基因组学","泛基因组","结构变异"],"target":"competition","type":"mtf"},{"bioId":"M4-02-1f8cb3df","concept":"比较基因组学与保守元件","difficulty":"league","explanation":"A【对】依据：纯化选择使功能重要的非编码序列（如增强子）在物种间保持保守。\nB【对】依据：如嗅觉受体基因家族在不同哺乳动物中的扩张收缩与环境适应相关。\nC【对】依据：共线性区块的断裂与重排记录了倒位、易位等染色体演化事件。\nD【错】错因：保守性正是功能约束的标志，二者密切相关，这是比较基因组学的核心逻辑。","question":"比较不同物种基因组可揭示功能重要的序列。关于比较基因组学，下列叙述正确的有：","references":[],"subQuestions":[{"answer":true,"label":"A","text":"跨物种保守的非编码序列可能是调控元件"},{"answer":true,"label":"B","text":"基因家族扩张与收缩可反映物种的适应性演化"},{"answer":true,"label":"C","text":"共线性（synteny）分析可追溯染色体片段的演化重排"},{"answer":false,"label":"D","text":"序列保守程度与功能重要性完全无关"}],"subject":"基因组学","tags":["genomics_comp","module_4","基因组学","比较基因组学与保守元件"],"target":"competition","type":"mtf"},{"bioId":"M1-01-4e193bd6","concept":"糖酵解途径","difficulty":"league","explanation":"A【对】依据：糖酵解十步反应均在胞质溶胶进行，一分子葡萄糖裂解为两分子丙酮酸。\nB【错】错因：ATP 是磷酸果糖激酶的变构抑制剂，AMP/ADP 才是激活剂，这是能量状态的反馈调节。\nC【对】依据：无氧条件下 NADH 将丙酮酸还原为乳酸，使 NAD⁺ 再生以维持糖酵解持续进行。\nD【错】错因：糖酵解产 4 个 ATP 但前期消耗 2 个，净生成 2 个 ATP 与 2 个 NADH。","question":"糖酵解是葡萄糖在有氧与无氧条件下共同的分解途径。关于糖酵解，下列叙述正确的有：","references":[],"subQuestions":[{"answer":true,"label":"A","text":"糖酵解发生在细胞质基质，一分子葡萄糖产生两分子丙酮酸"},{"answer":false,"label":"B","text":"限速酶磷酸果糖激酶受 ATP 变构激活"},{"answer":true,"label":"C","text":"无氧时糖酵解产生的 NADH 可用于丙酮酸还原为乳酸"},{"answer":false,"label":"D","text":"糖酵解净生成 4 分子 ATP"}],"subject":"生物化学","tags":["glycolysis","module_1","生物化学","糖酵解途径"],"target":"competition","type":"mtf"},{"bioId":"M3-01-2166787e","concept":"内环境稳态与负反馈调节","difficulty":"league","explanation":"A【对】依据：三大调节系统协同工作，共同维持内环境理化性质的动态平衡。\nB【对】依据：负反馈使偏离回归设定点，如体温、血压调节，是稳态维持的基本方式。\nC【错】错因：稳态是动态平衡，各成分在一定范围内波动，而非绝对恒定。\nD【错】错因：调节能力有限度，外界剧烈变化（如极端温度）可突破调节能力导致稳态失调。","question":"内环境的理化性质保持相对稳定是机体正常生命活动的必要条件。关于稳态，下列叙述正确的有：","references":[],"subQuestions":[{"answer":true,"label":"A","text":"稳态的维持依赖神经-体液-免疫调节网络"},{"answer":true,"label":"B","text":"负反馈调节是维持稳态的主要机制"},{"answer":false,"label":"C","text":"内环境稳态意味着各成分含量恒定不变"},{"answer":false,"label":"D","text":"人体维持稳态的调节能力是无限的，不受外界环境影响"}],"subject":"动物生理学","tags":["homeostasis","module_3","动物生理学","内环境稳态与负反馈调节"],"target":"competition","type":"mtf"},{"bioId":"M3-01-7c52c506","concept":"CAR-T 细胞疗法与肿瘤免疫","difficulty":"league","explanation":"A【对】依据：CAR 的 scFv（单链可变区片段）直接识别靶抗原的构象表位，不依赖 MHC-肽复合物呈递，因此可克服肿瘤 MHC 下调导致的免疫逃逸，这是 CAR-T 相对于 TCR-T 的核心优势。\nB【对】依据：第二代 CAR 引入 CD28 或 4-1BB 共刺激域，CD28 促进 T 细胞快速扩增和效应功能，4-1BB 增强持久性和记忆形成，二者均通过招募信号分子（如 TRAF2/PI3K）激活下游通路。\nC【错】错因：CRS 是 CAR-T 疗法最严重的不良反应之一，由大量活化的 T 细胞和巨噬细胞释放 IL-6、IFN-γ 等细胞因子引起，重度 CRS 可致高热、低血压、器官衰竭，需用托珠单抗（抗 IL-6R）或糖皮质激素干预。\nD【错】错因：CD19 主要表达于 B 细胞谱系（包括 B 细胞淋巴瘤和白血病），不表达于 T 细胞、髓系或实体瘤细胞，因此 CD19 CAR-T 仅对 B 细胞来源的肿瘤有效，'所有类型'表述错误。","image":{"caption":"CAR-T 细胞疗法制造流程","credit":"Mitra A et al., Front Immunol 2023","doi":"10.3389/fimmu.2023.1188049","figure":"1","file":"assets/questions/M3-01-a898fe16/fig1.jpg","license":"CC BY 4.0","pmcId":"PMC10225594","source":"paper"},"question":"研究者从 B 细胞淋巴瘤患者体内分离 T 细胞，经基因工程改造使其表达靶向 CD19 的嵌合抗原受体（CAR），回输后肿瘤显著缩小。关于 CAR-T 细胞疗法，下列叙述正确的有：","references":[{"authors":"Neelapu SS et al.","doi":"10.1056/NEJMra2304277","journal":"New England Journal of Medicine","title":"Chimeric Antigen Receptor T-Cell Therapy — Assessment and Management of Toxicities","year":2024}],"subQuestions":[{"answer":true,"label":"A","text":"CAR 的胞外 scFv 结构域可直接识别靶细胞表面抗原，不受 MHC 限制"},{"answer":true,"label":"B","text":"CAR 中的共刺激结构域（如 CD28 或 4-1BB）可增强 T 细胞的增殖与持久性"},{"answer":false,"label":"C","text":"CAR-T 疗法的主要不良反应细胞因子释放综合征（CRS）通常轻微且无需干预"},{"answer":false,"label":"D","text":"CD19 CAR-T 可直接杀伤表达 CD19 的所有类型肿瘤细胞"}],"subject":"免疫学","tags":["immune_system","module_3","免疫学","CAR-T","肿瘤免疫"],"target":"competition","type":"mtf"},{"bioId":"M3-02-c2773aee","concept":"克隆选择学说与特异性免疫","difficulty":"league","explanation":"A【对】依据：克隆选择学说核心是受体多样性先于抗原存在，抗原选择并扩增对应克隆。\nB【对】依据：效应 B 细胞（浆细胞）分泌抗体执行体液免疫，记忆细胞提供二次应答基础。\nC【错】错因：抗体分布于体液中，不能进入细胞，胞内寄生菌主要依赖细胞免疫清除。\nD【对】依据：T 细胞前体迁移至胸腺成熟，B 细胞在骨髓（bone marrow）中发育成熟。","question":"Burnet 提出的克隆选择学说解释了抗体多样性和免疫记忆的形成。关于特异性免疫，下列叙述正确的有：","references":[],"subQuestions":[{"answer":true,"label":"A","text":"每个 B 淋巴细胞只表达一种特异性受体，抗原选择相应克隆增殖"},{"answer":true,"label":"B","text":"浆细胞分泌抗体，记忆细胞在再次感染时快速应答"},{"answer":false,"label":"C","text":"抗体可直接进入宿主细胞内清除胞内寄生菌"},{"answer":true,"label":"D","text":"T 细胞在胸腺中成熟，B 细胞在骨髓中成熟"}],"subject":"免疫学","tags":["immune_system","module_3","免疫学","克隆选择学说与特异性免疫"],"target":"competition","type":"mtf"},{"bioId":"M1-02-57119b7a","concept":"TCA循环的回补反应与代谢调控","difficulty":"league","explanation":"A【对】依据：TCA循环中间物（如α-酮戊二酸、草酰乙酸）是氨基酸合成的前体，当细胞活跃合成蛋白质时，这些中间物被抽提用于生物合成，必须通过回补反应（如丙酮酸羧化酶催化丙酮酸→草酰乙酸）补充，否则循环无法持续运转。\nB【对】依据：丙酮酸羧化酶（PC）是关键的回补酶，催化丙酮酸 + CO₂ + ATP → 草酰乙酸 + ADP + Pi，该反应在肝脏和脂肪组织中活跃，确保草酰乙酸供应充足以维持TCA循环通量。\nC【对】依据：α-酮戊二酸经α-酮戊二酸脱氢酶复合体（OGDC，类丙酮酸脱氢酶的多酶复合体）氧化脱羧生成琥珀酰辅酶A，同时将NAD⁺还原为NADH并释放CO₂，这是循环中重要的氧化脱羧步骤。\nD【错】错因：回补反应在所有细胞中持续进行，不仅限于快速分裂的细胞。例如肝脏中氨基酸代谢不断产生或消耗TCA中间物，需要通过回补反应维持代谢稳态；肌肉细胞在运动时也会通过回补反应补充草酰乙酸以支持能量产生。","image":{"caption":"TCA循环的回补与抽提反应","credit":"Mills et al., Cell Metab 2022","doi":"10.1016/j.cmet.2022.04.001","figure":"2","file":"assets/questions/krebs_cycle/fig1.svg","license":"CC BY 4.0","pmcId":"PMC9005432","source":"paper"},"question":"研究者发现，在某些快速增殖的肿瘤细胞中，TCA循环中间物被大量抽提用于氨基酸和核苷酸合成，导致循环通量下降。关于TCA循环的代谢调控，下列叙述正确的有：","references":[{"authors":"Mills CE, Ortmann J, Pierce KA, et al.","doi":"10.1016/j.cmet.2022.04.001","journal":"Cell Metabolism","title":"A mitochondrial pathway fuels biosynthetic capacity in cancer","year":2022}],"subQuestions":[{"answer":true,"label":"A","text":"TCA循环中间物被抽提用于生物合成时，必须通过回补反应补充以维持循环运转"},{"answer":true,"label":"B","text":"丙酮酸羧化酶催化的丙酮酸→草酰乙酸反应是重要的回补反应"},{"answer":true,"label":"C","text":"α-酮戊二酸经脱氢酶复合体氧化脱羧生成琥珀酰辅酶A，同时将NAD⁺还原为NADH"},{"answer":false,"label":"D","text":"回补反应仅在快速分裂的细胞中发生，静止细胞不需要"}],"subject":"生物化学","tags":["krebs_cycle","module_1","生物化学","TCA循环","代谢调控"],"target":"competition","type":"mtf"},{"bioId":"M4-01-5f91e857","concept":"连锁与交换定律","difficulty":"league","explanation":"A【对】依据：完全连锁（如雄果蝇）不发生交换，BbVv 只产生 BV 和 bv 两种配子。\nB【对】依据：交换值与基因间距离成正比，是绘制遗传图谱的依据。\nC【错】错因：同源染色体非姐妹染色单体间的交换可使连锁基因发生重组。\nD【错】错因：交换值最大为 50%，此时与独立遗传无法区分，不会超过 50%。","question":"果蝇中灰身（B）对黑身（b）为显性，长翅（V）对残翅（v）为显性，两对基因位于同一对常染色体上。关于连锁遗传，下列叙述正确的有：","references":[],"subQuestions":[{"answer":true,"label":"A","text":"完全连锁时，BbVv 个体只产生两种比例相等的配子"},{"answer":true,"label":"B","text":"交换值越大，说明两基因在染色体上的距离越远"},{"answer":false,"label":"C","text":"位于同一染色体上的基因在遗传时完全不能发生重组"},{"answer":false,"label":"D","text":"交换值可以超过 50%"}],"subject":"遗传学","tags":["linkage","module_4","遗传学","连锁与交换定律"],"target":"competition","type":"mtf"},{"bioId":"M1-01-e8980473","concept":"脂肪酸氧化与酮体","difficulty":"league","explanation":"A【对】依据：β 氧化经脱氢、水化、再脱氢、硫解四步循环，每轮切下二碳单位生成乙酰辅酶 A。\nB【对】依据：脂肪酸合酶在胞质溶胶以乙酰辅酶 A/丙二酸单酰辅酶 A 为原料合成脂酸。\nC【错】错因：两者场所、酶系、辅酶（NAD⁺/NADPH）与载体均不同，是两条独立途径而非逆转。\nD【错】错因：肝脏缺乏硫解酶（琥珀酰辅酶 A 转硫酶），只能生成酮体而不能氧化利用，酮体供肝外组织使用。","question":"饥饿时机体动员脂肪组织储存的脂肪供能。关于脂肪代谢，下列叙述正确的有：","references":[],"subQuestions":[{"answer":true,"label":"A","text":"脂肪酸 β 氧化发生在线粒体基质，每轮产生 1 个乙酰辅酶 A、1 个 NADH 和 1 个 FADH₂"},{"answer":true,"label":"B","text":"脂肪酸合成发生在细胞质基质，以乙酰辅酶 A 为原料"},{"answer":false,"label":"C","text":"β 氧化与脂肪酸合成是同一反应途径的简单逆转"},{"answer":false,"label":"D","text":"酮体在肝脏合成后，也主要在肝脏中被氧化供能"}],"subject":"生物化学","tags":["lipid_metab","module_1","生物化学","脂肪酸氧化与酮体"],"target":"competition","type":"mtf"},{"bioId":"M4-01-19334fa9","concept":"大灭绝与适应辐射","difficulty":"league","explanation":"A【对】依据：白垩纪末大灭绝后，哺乳动物迅速占据空出的生态位，是适应辐射的典型。\nB【错】错因：大灭绝虽具随机性，但耐受环境剧变能力强的类群更易幸存，并非完全随机。\nC【错】错因：恐龙灭绝使哺乳动物崛起，恰恰说明灭绝事件深刻重塑了进化格局。\nD【错】错因：适应辐射可发生在陆地、岛屿等多种环境，如达尔文地雀。","question":"地质历史上发生过多次生物大灭绝事件，之后常伴随新类群的快速多样化。关于宏观进化，下列叙述正确的是：","references":[],"subQuestions":[{"answer":true,"label":"A","text":"大灭绝清除了大量生态位，为幸存类群的适应辐射创造了条件"},{"answer":false,"label":"B","text":"大灭绝事件随机消灭物种，与生物自身的适应性完全无关"},{"answer":false,"label":"C","text":"恐龙灭绝后哺乳动物迅速辐射，说明灭绝事件不改变进化格局"},{"answer":false,"label":"D","text":"适应辐射只发生在海洋环境中"}],"subject":"进化生物学","tags":["macroevolution","module_4","进化生物学","大灭绝与适应辐射"],"target":"competition","type":"mtf"},{"bioId":"M1-01-4ae1b8be","concept":"减数分裂与遗传学基础","difficulty":"league","explanation":"A【对】依据：联会形成四分体发生在减数分裂 I 前期（偶线期至粗线期）。\nB【对】依据：等位基因随同源染色体在减数分裂 I 后期分离而分开，对应分离定律。\nC【错】错因：DNA 复制一次、分裂两次，子细胞 DNA 含量为复制前的一半。\nD【错】错因：交换发生在同源染色体的非姐妹染色单体之间，姐妹染色单体遗传内容相同，交换不产生重组。","question":"二倍体生物进行减数分裂时，同源染色体的行为发生规律性变化。关于减数分裂，下列叙述正确的有：","references":[],"subQuestions":[{"answer":true,"label":"A","text":"同源染色体联会发生在减数分裂 I 前期"},{"answer":true,"label":"B","text":"减数分裂 I 后期同源染色体分离，是分离定律的细胞学基础"},{"answer":false,"label":"C","text":"减数分裂完成后子细胞 DNA 含量与复制前相同"},{"answer":false,"label":"D","text":"姐妹染色单体之间的交换是遗传重组的主要来源"}],"subject":"细胞生物学","tags":["meiosis","module_1","细胞生物学","减数分裂与遗传学基础"],"target":"competition","type":"mtf"},{"bioId":"M4-02-b7873823","concept":"双因子杂交与独立分配的验证","difficulty":"league","explanation":"A【对】依据：F₂代出现9:3:3:1的表型比例，说明两对等位基因在减数分裂时独立分配，符合自由组合定律。这一比例成立的前提是：①两对基因位于不同染色体上（或同染色体但距离足够远，重组率接近50%）；②完全显性；③无基因互作；④配子存活率相等。\nB【错】错因：测交是将F₁双杂合子（RrYy）与双隐性纯合子（rryy）杂交，测试交后代的比例（1:1:1:1）能直接反映F₁产生的四种配子（RY、Ry、rY、ry）的种类与比例，而非取决于亲本的表现型数量。选项将测交后代表型来源说反了。\nC【错】错因：如果两对基因位于同一染色体上且距离较近（连锁），它们倾向于一起遗传，不会独立分配。此时F₂代的表型比例会偏离9:3:3:1，亲本型偏多，重组型偏少。只有当基因位于不同染色体上，或同染色体但距离足够远（重组率≈50%）时，才会出现9:3:3:1。\nD【错】错因：9:3:3:1比例反映的是等位基因在减数分裂时的分离和组合规律，与群体中显性/隐性等位基因的频率无关。群体中等位基因频率由突变、选择、漂变、迁移等因素决定，与杂交实验的分离比例是两个不同层面的概念。","image":{"caption":"双因子杂交的Punnett方格与9:3:3:1比例","credit":"Huang & Marowsky, Genetics 2022","doi":"10.1093/genetics/iyac064","figure":"2","file":"assets/questions/mendel/fig1.svg","license":"CC BY 4.0","pmcId":"PMC9187654","source":"paper"},"question":"研究者通过分析豌豆的双因子杂交实验，发现某些性状组合的F₂代表型比例偏离经典的9:3:3:1。关于独立分配定律的验证，下列叙述正确的有：","references":[{"authors":"Huang TT, Marowsky AR","doi":"10.1093/genetics/iyac064","journal":"Genetics","title":"Mendelian genetics: a modern perspective","year":2022}],"subQuestions":[{"answer":true,"label":"A","text":"F₂代9:3:3:1的表型比例表明两对基因位于不同染色体上或距离足够远"},{"answer":false,"label":"B","text":"测交后代表型比例主要取决于亲本的表现型数量而非F₁配子的种类比例"},{"answer":false,"label":"C","text":"若两对基因位于同一染色体上且距离较近，F₂代仍会出现9:3:3:1"},{"answer":false,"label":"D","text":"9:3:3:1比例证明显性等位基因在群体中的频率高于隐性等位基因"}],"subject":"遗传学","tags":["mendel","module_4","遗传学","自由组合定律","独立分配"],"target":"competition","type":"mtf"},{"bioId":"M3-01-6ca40312","concept":"肠道菌群代谢物与宿主互作","difficulty":"league","explanation":"A【对】依据：丁酸（butyrate）通过单羧酸转运体（MCT1）被结肠上皮细胞摄取，经 β-氧化提供约 70% 的能量需求，同时促进紧密连接蛋白表达，维持肠道屏障功能。\nB【对】依据：丁酸等 SCFAs 是天然的 HDAC 抑制剂，通过增加组蛋白乙酰化水平激活抑癌基因（如 p21）和抗炎基因转录，这是 SCFAs 发挥表观遗传调控作用的重要机制。\nC【错】错因：肠-脑轴（gut-brain axis）的信号传递是多途径的，包括迷走神经传入、内分泌途径（肠嗜铬细胞分泌 5-HT）、免疫途径（细胞因子）和代谢物途径（SCFAs 入血），'仅通过迷走神经'表述错误。\nD【错】错因：肠道菌群代谢物具有双面性，如次级胆汁酸（脱氧胆酸）在高浓度下具有基因毒性，三甲胺（TMA）经肝脏氧化为 TMAO 与心血管疾病风险正相关，并非所有代谢物均有益。","question":"肠道菌群发酵膳食纤维产生的短链脂肪酸（SCFAs，如丁酸）可被宿主结肠上皮细胞吸收利用。关于肠道菌群代谢物与宿主的互作，下列叙述正确的有：","references":[{"authors":"Rios-Covian D et al.","doi":"10.1016/j.cell.2023.03.023","journal":"Cell","title":"The microbiome and short-chain fatty acids in health and disease","year":2023}],"subQuestions":[{"answer":true,"label":"A","text":"丁酸是结肠上皮细胞的主要能量来源，可维持肠道屏障完整性"},{"answer":true,"label":"B","text":"SCFAs 可通过抑制组蛋白去乙酰化酶（HDAC）调控宿主基因表达"},{"answer":false,"label":"C","text":"肠-脑轴的信号传递仅通过迷走神经一条途径实现"},{"answer":false,"label":"D","text":"所有肠道菌群代谢物对宿主健康均具有促进作用"}],"subject":"微生物学","tags":["microbial_eco","module_3","微生物学","肠道菌群","短链脂肪酸","肠脑轴"],"target":"competition","type":"mtf"},{"bioId":"M3-02-9a7f655c","concept":"微生物在氮循环中的作用","difficulty":"league","explanation":"A【对】依据：固氮酶在厌氧微环境中将 N₂ 还原为 NH₃，是生物固氮的核心反应。\nB【对】依据：硝化作用分两步，亚硝化细菌与硝化细菌依次将氨氧化至硝酸盐。\nC【对】依据：反硝化细菌在缺氧条件下以硝酸盐为电子受体，终产物为 N₂。\nD【错】错因：根瘤菌主要与豆科植物共生，与少数非豆科植物（如木麻黄）共生属例外，并非所有植物。","question":"土壤微生物驱动氮素在不同形态间转化。关于微生物参与的氮循环，下列叙述正确的有：","references":[],"subQuestions":[{"answer":true,"label":"A","text":"固氮菌将大气 N₂ 还原为氨，供植物吸收利用"},{"answer":true,"label":"B","text":"硝化细菌将氨氧化为亚硝酸盐和硝酸盐"},{"answer":true,"label":"C","text":"反硝化细菌将硝酸盐还原为 N₂，使氮素返回大气"},{"answer":false,"label":"D","text":"根瘤菌可与所有植物共生固氮，不限于豆科"}],"subject":"微生物学","tags":["microbial_eco","module_3","微生物学","微生物在氮循环中的作用"],"target":"competition","type":"mtf"},{"bioId":"M2-01-f599f18a","concept":"乳糖操纵子的调控","difficulty":"league","explanation":"A【对】依据：阻遏蛋白由调节基因编码，结合操纵基因 O 区阻断 RNA 聚合酶转录。\nB【对】依据：乳糖（别乳糖）与阻遏蛋白结合使其构象改变脱离操纵基因，启动转录。\nC【对】依据：葡萄糖降低胞内 cAMP，CAP-cAMP 复合物不足，转录水平仍很低（葡萄糖效应）。\nD【错】错因：操纵子内多个结构基因共用一个启动子，转录为一条多顺反子 mRNA。","question":"大肠杆菌乳糖操纵子是原核基因表达调控的经典模型。关于乳糖操纵子，下列叙述正确的有：","references":[],"subQuestions":[{"answer":true,"label":"A","text":"无乳糖时阻遏蛋白结合操纵基因，结构基因不转录"},{"answer":true,"label":"B","text":"乳糖作为诱导物使阻遏蛋白失活，解除转录抑制"},{"answer":true,"label":"C","text":"葡萄糖存在时，即使有乳糖，操纵子表达也受分解代谢物抑制"},{"answer":false,"label":"D","text":"操纵子中的结构基因各自拥有独立的启动子"}],"subject":"微生物学","tags":["microbial_genetics","module_2","微生物学","乳糖操纵子的调控"],"target":"competition","type":"mtf"},{"bioId":"M2-01-c8805f57","concept":"微生物的代谢类型","difficulty":"league","explanation":"A【对】依据：硝化细菌氧化氨或亚硝酸获得能量，固定 CO₂ 合成有机物，是化能自养的代表。\nB【错】错因：乳酸菌为厌氧菌，进行乳酸发酵，葡萄糖不彻底氧化。\nC【错】错因：光能自养微生物以 CO₂ 为碳源、光为能源，以有机物为碳源的属异养型。\nD【错】错因：酵母菌为兼性厌氧菌，有氧时进行有氧呼吸，缺氧时才转为酒精发酵。","question":"微生物按碳源和能源不同可分为多种营养类型。关于微生物代谢类型，下列叙述正确的是：","references":[],"subQuestions":[{"answer":true,"label":"A","text":"硝化细菌利用氧化无机物释放的化学能，将 CO₂ 合成有机物，属于化能自养型"},{"answer":false,"label":"B","text":"乳酸菌进行有氧呼吸，将葡萄糖彻底氧化为 CO₂ 和水"},{"answer":false,"label":"C","text":"光能自养微生物以有机物为碳源，光为能源"},{"answer":false,"label":"D","text":"酵母菌只能进行无氧发酵，不能进行有氧呼吸"}],"subject":"微生物学","tags":["microbial_metabolism","module_2","微生物学","微生物的代谢类型"],"target":"competition","type":"mtf"},{"bioId":"M4-01-516222a8","concept":"古 DNA 与人类演化","difficulty":"league","explanation":"A【对】依据：古 DNA 在埋藏过程中发生水解和氧化损伤，最典型的是胞嘧啶脱氨基为尿嘧啶（C→U），PCR 扩增时 U 被读为 T，导致片段末端出现 C→T 替换，这是鉴定古 DNA 真实性的关键指标。\nB【对】依据：每个细胞含数百至数千个线粒体 DNA 拷贝，而核基因组仅 2 份，在 DNA 严重降解的古样本中，mtDNA 的回收率远高于核 DNA，因此早期古 DNA 研究多从 mtDNA 入手。\nC【对】依据：通过比对尼安德特人、丹尼索瓦人和现代人类的核基因组，发现非非洲人群基因组中约 1-2% 来自尼安德特人，证实了走出非洲后存在杂交事件（introgression）。\nD【错】错因：DNA 测序仅能获取基因组序列信息，基因表达（转录组）需要 RNA 作为模板，而 RNA 比 DNA 更不稳定，古样本中极难保存完整 mRNA，因此古 DNA 无法直接反映基因表达模式。","image":{"caption":"古人类适应性基因渗入检测","credit":"Zhang X et al., Mol Biol Evol 2023","doi":"10.1093/molbev/msad001","figure":"1","file":"assets/questions/M4-01-516222a8/fig1.jpg","license":"CC BY-NC 4.0","pmcId":"PMC9887621","source":"paper"},"question":"研究者从距今约 4 万年的尼安德特人化石中提取 DNA 并进行高通量测序，以研究古人类演化。关于古 DNA 研究，下列叙述正确的有：","references":[{"authors":"Prufer K et al.","doi":"10.1126/science.abi8264","journal":"Science","title":"The evolutionary history of Neanderthals and Denisovans","year":2024}],"subQuestions":[{"answer":true,"label":"A","text":"古 DNA 片段末端常出现胞嘧啶脱氨基导致的 C→T 错误，这是古 DNA 的特征性损伤模式"},{"answer":true,"label":"B","text":"线粒体 DNA 因拷贝数高，比核 DNA 更容易从古代样本中成功提取"},{"answer":true,"label":"C","text":"古核基因组分析可揭示尼安德特人与现代人类之间的基因交流事件"},{"answer":false,"label":"D","text":"古 DNA 测序可直接反映古代个体的基因表达模式"}],"subject":"进化生物学","tags":["molecular_evo","module_4","进化生物学","古 DNA","尼安德特人"],"target":"competition","type":"mtf"},{"bioId":"M4-02-b7356c45","concept":"分子钟与中性学说","difficulty":"league","explanation":"A【对】依据：中性突变不影响适合度，其在种群中的频率变化与固定由随机漂变主导。\nB【对】依据：若突变速率恒定，分子差异量与分歧时间成正比，可校准分子钟。\nC【错】错因：中性学说只解释分子水平的多数变异，承认表型水平的适应性进化仍由选择主导。\nD【对】依据：同义突变多不受选择约束，积累快；非同义突变常受纯化选择清除。","question":"木村资生的中性学说认为多数分子水平的变异是选择中性的。关于分子进化，下列叙述正确的有：","references":[],"subQuestions":[{"answer":true,"label":"A","text":"中性突变的固定主要依靠遗传漂变而非自然选择"},{"answer":true,"label":"B","text":"分子钟假说认为分子进化速率大致恒定，可用于估算分歧时间"},{"answer":false,"label":"C","text":"中性学说完全否定了自然选择的作用"},{"answer":true,"label":"D","text":"同义突变的进化速率一般高于非同义突变"}],"subject":"进化生物学","tags":["molecular_evo","module_4","进化生物学","分子钟与中性学说"],"target":"competition","type":"mtf"},{"bioId":"M1-01-4000ade1","concept":"CRISPR 碱基编辑","difficulty":"league","explanation":"A【对】依据：CBE 由 Cas9 切口酶（nCas9）融合胞嘧啶脱氨酶（如 APOBEC1）构成，脱氨酶在 R-loop 单链区将 C 脱氨为 U，经 DNA 修复后 U 被读为 T，实现 C•G→T•A 转换。\nB【对】依据：碱基编辑器仅产生单链切口而非双链断裂（DSB），避免了 NHEJ 修复带来的随机插入缺失（indel），显著降低脱靶结构变异风险。\nC【错】错因：碱基编辑器只能实现单碱基转换（C→T 或 A→G），无法插入大片段；大片段插入需借助 HDR 模板或先导编辑（prime editing）。\nD【错】错因：虽然 CBE 和 ABE 分别只能实现转换（transition），但通过组合策略（如 CBE+ABE 串联）或碱基编辑的衍生工具，理论上可间接实现部分颠换（transversion），'只能'表述过于绝对。","question":"研究者利用胞嘧碱基编辑器（CBE）将靶位点的 C•G 碱基对转换为 T•A。关于碱基编辑技术，下列叙述正确的有：","references":[{"authors":"Komor AC et al.","doi":"10.1038/nature17946","journal":"Nature","title":"Programmable editing of a target base in genomic DNA without double-stranded DNA cleavage","year":2016},{"authors":"Rees HA, Liu DR","doi":"10.1038/s41587-023-01944-x","journal":"Nature Reviews Genetics","title":"Base editing: precision chemistry on the genome and transcriptome of living cells","year":2018}],"subQuestions":[{"answer":true,"label":"A","text":"CBE 融合蛋白中的胞嘧啶脱氨酶将靶位点胞嘧啶脱氨转化为尿嘧啶"},{"answer":true,"label":"B","text":"碱基编辑不产生 DNA 双链断裂，因此比传统 CRISPR-Cas9 切割更安全"},{"answer":false,"label":"C","text":"碱基编辑器可以在基因组任意位置插入大片段外源 DNA 序列"},{"answer":false,"label":"D","text":"碱基编辑只能实现转换突变，无法实现颠换突变"}],"subject":"生物技术","tags":["molecular_tech","module_1","生物技术","碱基编辑","CRISPR"],"target":"competition","type":"mtf"},{"bioId":"M1-02-5775c58d","concept":"PCR 的原理与应用","difficulty":"league","explanation":"A【对】依据：高温变性解链、降温退火引物结合、72℃ 左右延伸，三步循环实现体外扩增。\nB【对】依据：两条引物与模板两端互补，界定扩增区间，DNA 聚合酶只能从引物 3'-OH 延伸。\nC【对】依据：理想条件下产物以 2ⁿ 指数增长，这是 PCR 高灵敏度的基础。\nD【错】错因：PCR 必须以模板 DNA 为复制对象，无模板则无扩增产物。","question":"研究人员利用 PCR 从基因组 DNA 模板中扩增某目的基因片段。关于 PCR 技术，下列叙述正确的有：","references":[],"subQuestions":[{"answer":true,"label":"A","text":"PCR 依据 DNA 半保留复制原理，每循环含变性、退火、延伸三步"},{"answer":true,"label":"B","text":"引物决定扩增片段的边界，Taq 酶从引物 3' 端开始延伸"},{"answer":true,"label":"C","text":"扩增产物量随循环数指数增长，第 n 轮理论可达 2ⁿ 拷贝"},{"answer":false,"label":"D","text":"PCR 不需要模板 DNA，可凭空合成任意序列"}],"subject":"生物技术","tags":["molecular_tech","module_1","生物技术","PCR 的原理与应用"],"target":"competition","type":"mtf"},{"bioId":"M4-01-4f8cb76e","concept":"自然选择与适应性进化","difficulty":"league","explanation":"A【对】依据：树干被煤烟熏黑后，黑色型更不易被鸟类捕食，适合度提高。\nB【对】依据：选择通过个体的形态、行为等表现型差异起作用，基因型被间接筛选。\nC【错】错因：突变在选择前已随机产生，环境只起选择作用，不诱导定向突变。\nD【对】依据：自然选择是唯一能使基因频率定向改变的因素，决定进化方向。","question":"工业革命后，英国桦尺蛾种群中黑色型比例显著上升。关于自然选择，下列叙述正确的有：","references":[],"subQuestions":[{"answer":true,"label":"A","text":"环境变化改变了不同表现型的生存与繁殖机会"},{"answer":true,"label":"B","text":"自然选择直接作用于个体的表现型"},{"answer":false,"label":"C","text":"黑色型比例上升是因为煤烟诱导蛾产生了黑色突变"},{"answer":true,"label":"D","text":"自然选择使种群的基因频率发生定向改变"}],"subject":"进化生物学","tags":["natural_selection","module_4","进化生物学","自然选择与适应性进化"],"target":"competition","type":"mtf"},{"bioId":"M3-01-6d7a5bee","concept":"动作电位的产生与传导","difficulty":"league","explanation":"A【对】依据：刺激达阈电位使电压门控 Na⁺ 通道开放，Na⁺ 顺电化学梯度内流形成去极化。\nB【错】错因：突触处神经递质只能由突触前膜释放作用于后膜，故兴奋在反射弧中单向传递。\nC【错】错因：动作电位遵循全或无定律，幅度不随刺激强度改变，只改变产生频率。\nD【错】错因：复极化主要由 K⁺ 通道开放、K⁺ 外流造成，钠钾泵随后恢复离子分布。","question":"神经纤维受到适宜刺激后产生动作电位并沿纤维传导。关于动作电位，下列叙述正确的是：","references":[],"subQuestions":[{"answer":true,"label":"A","text":"去极化相由 Na⁺ 通道开放、Na⁺ 内流引起"},{"answer":false,"label":"B","text":"兴奋在反射弧的神经元之间可以双向传递"},{"answer":false,"label":"C","text":"动作电位幅度随刺激强度增大而不断增大"},{"answer":false,"label":"D","text":"复极化由 Na⁺/K⁺ 泵将 Na⁺ 泵出引起，与 K⁺ 无关"}],"subject":"动物生理学","tags":["nervous_sys","module_3","动物生理学","动作电位的产生与传导"],"target":"competition","type":"mtf"},{"bioId":"M1-01-95cb6665","concept":"分泌蛋白的合成与运输","difficulty":"league","explanation":"A【对】依据：信号肽被 SRP 识别后引导核糖体锚定于粗面内质网，肽链边合成边入腔。\nB【对】依据：高尔基体是分泌途径的加工与分选中心，成熟蛋白由分泌囊泡运至细胞膜外排。\nC【错】错因：线粒体为该过程提供 ATP，但不直接参与囊泡运输，也不提供囊泡膜。\nD【错】错因：溶酶体含水解酶用于胞内降解，分泌蛋白的合成场所是核糖体而非溶酶体。","question":"分泌蛋白在核糖体开始合成后，需经多种细胞器加工与运输才能分泌到细胞外。关于该过程，下列叙述正确的有：","references":[],"subQuestions":[{"answer":true,"label":"A","text":"信号肽引导核糖体结合到粗面内质网上，肽链共翻译进入内质网腔"},{"answer":true,"label":"B","text":"高尔基体对蛋白质加工、分选和包装，形成分泌囊泡运向细胞膜"},{"answer":false,"label":"C","text":"线粒体直接参与囊泡运输，为囊泡提供膜结构"},{"answer":false,"label":"D","text":"溶酶体负责合成全部分泌到细胞外的水解酶"}],"subject":"细胞生物学","tags":["organelle","module_1","细胞生物学","分泌蛋白的合成与运输"],"target":"competition","type":"mtf"},{"bioId":"M1-01-dabbd60f","concept":"电子传递链与氧化磷酸化","difficulty":"league","explanation":"A【对】依据：电子经复合体 I→III→IV（或 FADH₂ 经复合体 II）传递，末端由细胞色素 c 氧化酶交给 O₂。\nB【对】依据：复合体 I、III、IV 泵出 H⁺，建立内膜两侧质子动力势，储存电化学势能。\nC【对】依据：化学渗透学说指出，H⁺ 经 ATP 合酶回流驱动其旋转催化 ADP 磷酸化。\nD【错】错因：解偶联剂只解除 ATP 合成与电子传递的偶联，电子传递照常甚至加速，能量以热散失。","question":"线粒体内膜上的电子传递链将电子传递与 ATP 合成偶联起来。关于氧化磷酸化，下列叙述正确的有：","references":[],"subQuestions":[{"answer":true,"label":"A","text":"NADH 将电子交给复合体 I，最终传递给 O₂ 生成水"},{"answer":true,"label":"B","text":"电子传递将 H⁺ 从基质泵到膜间隙，形成电化学梯度"},{"answer":true,"label":"C","text":"ATP 合酶利用 H⁺ 顺梯度回流的动力合成 ATP"},{"answer":false,"label":"D","text":"解偶联剂使电子传递链完全停止，NADH 无法再被氧化"}],"subject":"生物化学","tags":["oxidative_phos","module_1","生物化学","电子传递链与氧化磷酸化"],"target":"competition","type":"mtf"},{"bioId":"M2-01-3db91630","concept":"C4 途径与光呼吸","difficulty":"league","explanation":"A【对】依据：C4 酸在鞘细胞脱羧释放高浓度 CO₂，提高 Rubisco 周围 CO₂/O₂ 比，抑制光呼吸。\nB【错】错因：PEP 羧化酶在叶肉细胞中固定 CO₂ 生成草酰乙酸，维管束鞘细胞负责脱羧。\nC【错】错因：C4 植物仍存在少量光呼吸，且光合效率受光、温、水等多因素影响。\nD【错】错因：C4 途径每固定一分子 CO₂ 需额外消耗 2 个 ATP 用于 PEP 再生，代价更高。","question":"玉米等 C4 植物的叶肉细胞与维管束鞘细胞分工协作固定碳。关于 C4 途径，下列叙述正确的是：","references":[],"subQuestions":[{"answer":true,"label":"A","text":"C4 途径的意义在于浓缩 CO₂，抑制 Rubisco 的加氧酶活性"},{"answer":false,"label":"B","text":"PEP 羧化酶在维管束鞘细胞中固定 CO₂ 形成草酰乙酸"},{"answer":false,"label":"C","text":"C4 植物没有光呼吸，因此光合效率不受任何环境影响"},{"answer":false,"label":"D","text":"C4 植物固定一分子 CO₂ 比 C3 植物消耗更少的 ATP"}],"subject":"植物生理学","tags":["photorespiration_c4","module_2","植物生理学","C4 途径与光呼吸"],"target":"competition","type":"mtf"},{"bioId":"M2-02-358991fe","concept":"光合电子传递与光合磷酸化的偶联","difficulty":"league","explanation":"A【对】依据：Z方案描述了光合电子传递的完整路径：H₂O在PSII的放氧复合体（OEC）被裂解，释放电子经PQ、Cyt b6f、PC传递至PSI，PSI再次吸收光能将电子提升至更高能级，经Fd传递至FNR，最终将NADP⁺还原为NADPH。两个光系统（PSII和PSI）串联工作，电子传递呈Z字形。\nB【对】依据：电子传递过程中，Cyt b6f复合体通过Q循环将质子从基质泵入类囊体腔，加上PSII水裂解释放的质子，在类囊体膜两侧形成质子梯度（ΔpH），质子通过ATP合酶回流时驱动ADP + Pi → ATP，这一过程称为光合磷酸化。\nC【对】依据：环式电子传递仅由PSI参与，电子经Fd返回Cyt b6f形成循环，只泵入质子驱动ATP合成，不产生NADPH也不裂解水放出O₂，是补充ATP的辅助途径。\nD【错】错因：Calvin循环（暗反应）的酶促反应本身不直接需要光，但需要光反应产生的ATP和NADPH作为能量和还原力。Rubisco的活化需要光调节（通过铁氧还蛋白-硫氧还蛋白系统），但Calvin循环的各个反应步骤不直接依赖光子的吸收，因此可在黑暗中短暂进行（直到ATP/NADPH耗尽）。","image":{"caption":"Z方案电子传递与Calvin循环的整合","credit":"Stirbet et al., Photosynth Res 2023","doi":"10.1007/s11120-023-01001-2","figure":"3","file":"assets/questions/photosynthesis/fig1.svg","license":"CC BY 4.0","pmcId":"PMC10123456","source":"paper"},"question":"研究者通过离体叶绿体实验发现，某些抑制剂阻断电子传递链后，ATP和NADPH的合成均受到抑制。关于光合电子传递与能量转换，下列叙述正确的有：","references":[{"authors":"Stirbet A, Govindjee, Kretschmer C, et al.","doi":"10.1007/s11120-023-01001-2","journal":"Photosynthesis Research","title":"Photosystem II: the water-splitting complex","year":2023}],"subQuestions":[{"answer":true,"label":"A","text":"Z方案中，电子从H₂O经PSII和PSI传递至NADP⁺，两个光系统串联工作"},{"answer":true,"label":"B","text":"电子传递过程中建立的质子梯度驱动ATP合酶合成ATP"},{"answer":true,"label":"C","text":"环式电子传递仅由PSI参与，只产生ATP而不产生NADPH和O₂"},{"answer":false,"label":"D","text":"Calvin循环的每一步反应都需要光直接参与"}],"subject":"植物生理学","tags":["photosynthesis","module_2","植物生理学","光反应","电子传递"],"target":"competition","type":"mtf"},{"bioId":"M4-01-b3789b11","concept":"系统发育树的构建与解读","difficulty":"league","explanation":"A【对】依据：同源器官结构相似、功能不同，说明源自共同祖先，是经典进化证据。\nB【对】依据：分支点（节点）表示谱系分歧事件，对应两类群的最近共同祖先。\nC【错】错因：趋同进化可使亲缘关系远的生物形态相似（如鲨鱼与海豚），需区分同源与同功。\nD【对】依据：序列差异可量化分歧程度，分子系统学已成为构建发育树的主要手段。","question":"研究者根据多种特征构建了若干生物的系统发育树。关于系统发育分析，下列叙述正确的有：","references":[],"subQuestions":[{"answer":true,"label":"A","text":"同源结构（如人臂、鸟翼、鲸鳍的骨骼模式）可作为共同祖先的证据"},{"answer":true,"label":"B","text":"系统发育树上分支点代表两类群的最近共同祖先"},{"answer":false,"label":"C","text":"形态相似的生物一定具有较近的亲缘关系"},{"answer":true,"label":"D","text":"分子数据（如 DNA 序列）可用于构建系统发育树"}],"subject":"进化生物学","tags":["phylogeny","module_4","进化生物学","系统发育树的构建与解读"],"target":"competition","type":"mtf"},{"bioId":"M4-01-54dea07d","concept":"植物组织培养与细胞全能性","difficulty":"league","explanation":"A【对】依据：已分化细胞仍含全套基因，在适宜条件下可发育为完整植株，体现全能性。\nB【对】依据：外植体先脱分化为未分化的愈伤组织，再经再分化形成器官或胚状体。\nC【对】依据：生长素/细胞分裂素比值高利于生根，低利于生芽，是器官分化的调控关键。\nD【错】错因：培养过程可能发生体细胞无性系变异，且若用花药培养则获得单倍体，遗传组成不同。","question":"利用植物组织培养技术可由离体组织获得完整植株。关于植物组织培养，下列叙述正确的有：","references":[],"subQuestions":[{"answer":true,"label":"A","text":"组织培养的理论基础是植物细胞的全能性"},{"answer":true,"label":"B","text":"脱分化形成愈伤组织，再分化形成芽和根"},{"answer":true,"label":"C","text":"培养基中生长素与细胞分裂素的比例影响器官分化方向"},{"answer":false,"label":"D","text":"组织培养获得的植株遗传物质一定与母本完全相同"}],"subject":"生物技术","tags":["plant_biotech","module_4","生物技术","植物组织培养与细胞全能性"],"target":"competition","type":"mtf"},{"bioId":"M4-01-e0556eea","concept":"植物主要类群的演化特征","difficulty":"league","explanation":"A【对】依据：蕨类具维管组织适应陆地生活，但精子具鞭毛，受精仍需水环境。\nB【错】错因：苔藓只有假根，无维管组织，是结构最简单的陆生植物。\nC【错】错因：裸子植物种子裸露，无果皮包被；被子植物才有果实。\nD【错】错因：双受精是被子植物特有现象，蕨类以孢子繁殖，无双受精。","question":"植物从水生到陆生的演化过程中，各类群呈现出递进的适应特征。关于植物类群，下列叙述正确的是：","references":[],"subQuestions":[{"answer":true,"label":"A","text":"蕨类植物有了根茎叶分化和维管组织，但生殖仍离不开水"},{"answer":false,"label":"B","text":"苔藓植物具有真正的根和维管束"},{"answer":false,"label":"C","text":"裸子植物的种子有果皮包被"},{"answer":false,"label":"D","text":"被子植物的双受精现象在蕨类植物中也普遍存在"}],"subject":"植物学","tags":["plant_classification","module_4","植物学","植物主要类群的演化特征"],"target":"competition","type":"mtf"},{"bioId":"M2-01-c15afc54","concept":"生长素的极性运输与生理作用","difficulty":"league","explanation":"A【对】依据：生长素扩散进入琼脂块，单侧放置造成两侧浓度差，胚芽鞘向对侧弯曲。\nB【对】依据：生长素依赖 PIN 输出载体进行极性运输，方向固定为形态学上端向下端。\nC【错】错因：生长素作用具有两重性，低浓度促进、高浓度抑制生长。\nD【对】依据：吲哚乙酸（IAA）由色氨酸经酶促反应合成，是植物体内最主要的天然生长素。","question":"将燕麦胚芽鞘尖端置于琼脂块上一段时间后，把琼脂块放在去尖端的胚芽鞘一侧。关于生长素，下列叙述正确的有：","references":[],"subQuestions":[{"answer":true,"label":"A","text":"琼脂块能收集尖端产生的生长素，放置后胚芽鞘向对侧弯曲"},{"answer":true,"label":"B","text":"生长素在胚芽鞘中只能从形态学上端向下端运输"},{"answer":false,"label":"C","text":"生长素浓度越高促进生长的作用越强，无抑制效应"},{"answer":true,"label":"D","text":"生长素由色氨酸合成，其化学本质是吲哚乙酸"}],"subject":"植物生理学","tags":["plant_hormone","module_2","植物生理学","生长素的极性运输与生理作用"],"target":"competition","type":"mtf"},{"bioId":"M2-01-7c09ba00","concept":"向光性与光受体","difficulty":"league","explanation":"A【对】依据：单侧光使生长素横向运输至背光侧，背光侧浓度高、伸长快，向光弯曲。\nB【错】错因：向光性是向性运动，方向由刺激方向决定；感性运动才与刺激方向无关。\nC【错】错因：感光部位在尖端，尖端以下伸长区只发生不均匀伸长。\nD【错】错因：向光性还涉及生长抑制物（如萝卜宁）分布及光受体信号，并非仅靠生长素。","question":"单侧光照射下，胚芽鞘向光源方向弯曲生长。关于植物向光性，下列叙述正确的是：","references":[],"subQuestions":[{"answer":true,"label":"A","text":"向光弯曲的原因是背光侧生长素分布多、细胞伸长快"},{"answer":false,"label":"B","text":"向光性属于感性运动，与刺激方向无关"},{"answer":false,"label":"C","text":"感受光刺激的部位是胚芽鞘尖端以下的伸长区"},{"answer":false,"label":"D","text":"植物只有生长素一种激素参与向光性反应"}],"subject":"植物生理学","tags":["plant_movement","module_2","植物生理学","向光性与光受体"],"target":"competition","type":"mtf"},{"bioId":"M2-01-7788eb8c","concept":"植物必需元素与缺素症","difficulty":"league","explanation":"A【对】依据：镁是叶绿素组分且可再利用，缺镁时老叶中的镁转运至新叶，故老叶先黄化。\nB【错】错因：铁等难再利用元素缺乏时新叶先表现症状，属不可再利用元素。\nC【错】错因：不同元素功能各异，缺素症状的部位与形态具有诊断价值，可以区分。\nD【错】错因：植物必需元素共 17 种，碳氢氧来自空气和水，同样是必需元素。","question":"某作物老叶叶脉间出现黄化，而新叶仍保持绿色。关于植物矿质营养，下列叙述正确的是：","references":[],"subQuestions":[{"answer":true,"label":"A","text":"症状出现在老叶说明该元素可在体内再利用，可能缺镁"},{"answer":false,"label":"B","text":"新叶先出现症状的元素（如铁）属于可再利用元素"},{"answer":false,"label":"C","text":"所有必需元素缺乏时症状都相同，无法区分"},{"answer":false,"label":"D","text":"植物必需元素共有 5 种，碳氢氧不属于必需元素"}],"subject":"植物生理学","tags":["plant_nutrition","module_2","植物生理学","植物必需元素与缺素症"],"target":"competition","type":"mtf"},{"bioId":"M2-01-626295d7","concept":"被子植物双受精","difficulty":"league","explanation":"A【对】依据：双受精中一精与卵结合（2n），另一精与中央细胞两个极核结合形成 3n 初生胚乳核。\nB【错】错因：两个精子分别与卵细胞和中央细胞融合，而非都与卵细胞融合。\nC【错】错因：胚乳由受精极核发育，营养来自母体组织转运，花粉管仅输送精子。\nD【错】错因：双受精是被子植物特有现象，裸子植物的胚乳为单倍体雌配子体，不经双受精。","question":"被子植物的花粉管将两个精子送入胚囊完成受精。关于双受精过程，下列叙述正确的是：","references":[],"subQuestions":[{"answer":true,"label":"A","text":"一个精子与卵细胞融合形成合子，另一个与两个极核融合形成三倍体胚乳核"},{"answer":false,"label":"B","text":"两个精子分别与卵细胞融合，形成两个合子"},{"answer":false,"label":"C","text":"胚乳发育所需的营养全部来自花粉管"},{"answer":false,"label":"D","text":"双受精是被子植物和裸子植物共有的特征"}],"subject":"植物学","tags":["plant_repro","module_2","植物学","被子植物双受精"],"target":"competition","type":"mtf"},{"bioId":"M2-01-01b80cd5","concept":"种子萌发与呼吸类型","difficulty":"league","explanation":"A【对】依据：脂肪含氢多氧少，转化为糖需加氧，乙醛酸循环中脂肪转糖使干重短暂增加。\nB【对】依据：萌发需能量与碳骨架，呼吸作用同时提供 ATP 与中间代谢物。\nC【错】错因：脂肪先转为糖再经糖酵解与有氧呼吸供能，糖类是中间供能物质。\nD【错】错因：乙醛酸循环及后续糖异生过程需要氧参与氧化反应，缺氧时转化受阻。","question":"油料种子萌发初期，干重先增加后减少。关于种子萌发中的呼吸与物质转化，下列叙述正确的有：","references":[],"subQuestions":[{"answer":true,"label":"A","text":"脂肪转化为糖类时氧元素比例增加，干重因此暂时上升"},{"answer":true,"label":"B","text":"萌发种子呼吸作用增强，为物质转化提供 ATP 和中间产物"},{"answer":false,"label":"C","text":"油料种子萌发只消耗脂肪，糖类不参与供能"},{"answer":false,"label":"D","text":"脂肪转化为糖类的过程不需要氧气参与"}],"subject":"植物生理学","tags":["plant_respiration","module_2","植物生理学","种子萌发与呼吸类型"],"target":"competition","type":"mtf"},{"bioId":"M2-01-6d709f24","concept":"植物干旱胁迫响应与渗透调节","difficulty":"league","explanation":"A【对】依据：气孔是植物蒸腾失水和 CO2 吸收的共同通道，干旱时气孔关闭是减少水分损失的快速响应，但胞间 CO2 浓度（Ci）随之下降，直接限制 Rubisco 的羧化反应。\nB【对】依据：干旱胁迫下根部合成 ABA 并运输至叶片，ABA 与保卫细胞膜上受体结合，激活离子通道导致 K⁺ 外流，保卫细胞失水、膨压下降，气孔关闭。\nC【错】错因：干旱导致气孔关闭、Ci 降低，Rubisco 的加氧酶活性相对增强（CO2/O2 比值下降），光呼吸速率反而升高，这是 C3 植物干旱胁迫的典型特征。\nD【对】依据：脯氨酸、甜菜碱、可溶性糖等渗透调节物质在干旱下大量积累，降低细胞渗透势，维持膨压和膜稳定性，同时脯氨酸还具有清除活性氧的保护功能。","question":"某 C3 植物在持续干旱条件下，叶片气孔导度显著下降。下列关于该植物生理响应的叙述，正确的有：","references":[{"authors":"Zhang H et al.","doi":"10.1016/j.molp.2023.01.002","journal":"Molecular Plant","title":"Plant responses to drought stress: from physiological and biochemical adaptations to molecular regulatory networks","year":2023}],"subQuestions":[{"answer":true,"label":"A","text":"气孔关闭可减少水分蒸腾散失，但同时也会限制 CO2 进入叶片"},{"answer":true,"label":"B","text":"干旱胁迫诱导脱落酸（ABA）合成增加，ABA 促进保卫细胞失水导致气孔关闭"},{"answer":false,"label":"C","text":"干旱条件下 C3 植物的光呼吸速率通常会降低"},{"answer":true,"label":"D","text":"植物可通过积累脯氨酸等渗透调节物质维持细胞膨压"}],"subject":"植物生理学","tags":["plant_stress","module_2","植物生理学","干旱胁迫","ABA","渗透调节"],"target":"competition","type":"mtf"},{"bioId":"M2-02-6af62aca","concept":"植物抗寒性与低温响应","difficulty":"league","explanation":"A【对】依据：渗透调节物质积累降低细胞质冰点，并稳定蛋白与膜结构，属典型抗寒适应。\nB【对】依据：去饱和酶活性升高使膜脂不饱和脂肪酸增多，防止低温下膜相变固化。\nC【错】错因：抗寒锻炼时自由水减少、结合水比例升高，代谢减缓以降低冻害风险。\nD【对】依据：CBF/DREB 转录因子被低温诱导，结合 CRT/DRE 元件激活冷响应基因。","question":"深秋降温时，冬小麦体内发生一系列生理变化以提高抗寒能力。关于植物低温响应，下列叙述正确的有：","references":[],"subQuestions":[{"answer":true,"label":"A","text":"细胞内可溶性糖和脯氨酸积累，降低冰点、保护蛋白质"},{"answer":true,"label":"B","text":"膜脂不饱和度升高，维持低温下膜的流动性"},{"answer":false,"label":"C","text":"低温锻炼后细胞自由水比例升高，代谢加快"},{"answer":true,"label":"D","text":"冷响应转录因子 CBF 可激活下游抗寒基因表达"}],"subject":"植物生理学","tags":["plant_stress","module_2","植物生理学","植物抗寒性与低温响应"],"target":"competition","type":"mtf"},{"bioId":"M2-01-319d6f98","concept":"维管组织与物质运输","difficulty":"league","explanation":"A【对】依据：导管细胞成熟后原生质体解体，靠蒸腾拉力自下而上运输水分与矿质。\nB【对】依据：筛管细胞成熟后保留细胞膜与少量细胞器，按源-库压力流双向运输有机物。\nC【错】错因：高大植株水分上升主要依赖蒸腾拉力，根压仅起次要作用。\nD【错】错因：形成层属分生组织，其分裂使茎加粗，输导功能由木质部与韧皮部承担。","question":"双子叶植物茎的维管束由木质部和韧皮部组成。关于植物维管组织，下列叙述正确的有：","references":[],"subQuestions":[{"answer":true,"label":"A","text":"木质部导管为死细胞，运输水分和无机盐的方向自下而上"},{"answer":true,"label":"B","text":"韧皮部筛管为活细胞，运输有机物的方向可双向进行"},{"answer":false,"label":"C","text":"木质部运输动力主要来自根压，与蒸腾作用无关"},{"answer":false,"label":"D","text":"形成层细胞属于输导组织，负责有机物的长距离运输"}],"subject":"植物学","tags":["plant_tissue","module_2","植物学","维管组织与物质运输"],"target":"competition","type":"mtf"},{"bioId":"M2-01-f7ede15b","concept":"植物对矿质元素的吸收","difficulty":"league","explanation":"A【对】依据：载体种类与数量决定吸收的选择性，同一溶液中不同离子吸收速率差异显著。\nB【对】依据：离子逆电化学梯度进入根细胞依赖质子泵建立的势能或直接消耗 ATP。\nC【错】错因：吸水主要靠蒸腾拉力的被动过程，吸盐是主动运输，二者相对独立。\nD【错】错因：氮磷钾是大量元素，需求量远大于铁、锰、锌等微量元素。","question":"将某植物幼苗培养在完全营养液中，一段时间后检测营养液成分变化。关于植物矿质营养，下列叙述正确的有：","references":[],"subQuestions":[{"answer":true,"label":"A","text":"植物吸收矿质元素具有选择性，不同离子吸收速率不同"},{"answer":true,"label":"B","text":"根细胞吸收矿质离子主要依靠主动运输，需载体和能量"},{"answer":false,"label":"C","text":"植物吸收水分与吸收矿质元素是同一过程，比例恒定"},{"answer":false,"label":"D","text":"氮、磷、钾属于微量元素，植物对其需求量极小"}],"subject":"植物生理学","tags":["plant_water_mineral","module_2","植物生理学","植物对矿质元素的吸收"],"target":"competition","type":"mtf"},{"bioId":"M3-01-0cf8ec28","concept":"种群增长的 S 型曲线","difficulty":"league","explanation":"A【对】依据：K 值（环境容纳量）时种群数量稳定，出生率约等于死亡率，增长率为零。\nB【错】错因：K 值取决于食物、空间等环境条件，环境改变则 K 值改变。\nC【错】错因：增长速率在 K/2 时最大，K 值时增长速率为零。\nD【错】错因：S 型增长正是环境阻力（密度制约）作用的结果，与 J 型增长的区别所在。","question":"某封闭培养液中酵母菌种群数量随时间呈 S 型增长。关于种群增长，下列叙述正确的是：","references":[],"subQuestions":[{"answer":true,"label":"A","text":"种群数量达到 K 值时，出生率与死亡率基本相等"},{"answer":false,"label":"B","text":"K 值是固定不变的，与环境条件无关"},{"answer":false,"label":"C","text":"种群增长速率在 K 值时达到最大"},{"answer":false,"label":"D","text":"S 型增长过程中不存在环境阻力"}],"subject":"生态学","tags":["population_eco","module_3","生态学","种群增长的 S 型曲线"],"target":"competition","type":"mtf"},{"bioId":"M4-01-ed0fb48f","concept":"哈迪-温伯格平衡","difficulty":"league","explanation":"A【对】依据：aa=1/10000，故 a 频率 q=1/100，携带者 2pq≈2×1×0.01≈2%。\nB【对】依据：五大前提（大种群、随机交配、无突变、无迁移、无选择）同时满足才保持平衡。\nC【错】错因：遗传平衡的核心是基因频率与基因型频率世代保持不变。\nD【错】错因：近亲婚配改变的是基因型频率（纯合子增多），不改变基因频率。","question":"某理想种群中，某常染色体隐性遗传病发病率为 1/10000。关于该种群的遗传平衡，下列叙述正确的有：","references":[],"subQuestions":[{"answer":true,"label":"A","text":"隐性基因频率为 1/100，携带者频率约为 2%"},{"answer":true,"label":"B","text":"哈迪-温伯格平衡要求种群足够大、随机交配、无突变和选择"},{"answer":false,"label":"C","text":"在遗传平衡种群中，基因频率每代都会改变"},{"answer":false,"label":"D","text":"近亲婚配会改变该种群的基因频率"}],"subject":"遗传学","tags":["population_gen","module_4","遗传学","哈迪-温伯格平衡"],"target":"competition","type":"mtf"},{"bioId":"M4-01-94f59e97","concept":"数量性状的多基因假说","difficulty":"league","explanation":"A【对】依据：多基因假说认为数量性状由多对等效微效基因累加作用决定。\nB【对】依据：表现型=基因型+环境，营养、光照等环境因素显著影响数量性状。\nC【错】错因：多基因累加与环境作用使后代呈连续变异，不出现孟德尔式离散比例。\nD【对】依据：多对基因与环境共同作用的结果使群体表型呈钟形正态分布。","question":"人类身高、肤色等性状表现为连续变异。关于数量性状的遗传，下列叙述正确的有：","references":[],"subQuestions":[{"answer":true,"label":"A","text":"数量性状通常由多对微效基因共同控制"},{"answer":true,"label":"B","text":"环境因素对数量性状的表现有显著影响"},{"answer":false,"label":"C","text":"数量性状的后代分离比符合典型的孟德尔比例"},{"answer":true,"label":"D","text":"数量性状的变异在群体中呈连续的正态分布"}],"subject":"遗传学","tags":["quantitative_gen","module_4","遗传学","数量性状的多基因假说"],"target":"competition","type":"mtf"},{"bioId":"M1-01-a436d0ef","concept":"DNA 半保留复制","difficulty":"league","explanation":"A【对】依据：解旋酶解开双链，DNA 聚合酶只能将核苷酸加到新链 3' 端，即沿 5'→3' 方向合成。\nB【对】依据：后随链模板方向与复制叉移动相反，只能不连续合成冈崎片段后由连接酶连接。\nC【对】依据：半保留复制下每个子代分子含一条 ¹⁵N 旧链与一条 ¹⁴N 新链，密度居中。\nD【错】错因：线粒体（及叶绿体）DNA 能半自主复制，原核生物则在拟核复制。","question":"Meselson 和 Stahl 用 ¹⁵N 标记结合密度梯度离心，证明了 DNA 的半保留复制。关于 DNA 复制，下列叙述正确的有：","references":[],"subQuestions":[{"answer":true,"label":"A","text":"解旋酶解开氢键，DNA 聚合酶沿 5'→3' 方向合成新链"},{"answer":true,"label":"B","text":"前导链连续合成，后随链先合成冈崎片段再连接"},{"answer":true,"label":"C","text":"¹⁵N-DNA 在 ¹⁴N 培养基中复制一代后，子代 DNA 全为杂合密度"},{"answer":false,"label":"D","text":"DNA 复制只发生在细胞核中，线粒体 DNA 不能复制"}],"subject":"分子生物学","tags":["replication","module_1","分子生物学","DNA 半保留复制"],"target":"competition","type":"mtf"},{"bioId":"M3-01-783bf831","concept":"气体交换与氧解离曲线","difficulty":"league","explanation":"A【对】依据：肺泡氧分压高，血红蛋白四个亚基依次与氧结合，形成氧合血红蛋白。\nB【错】错因：CO₂ 和 H⁺ 增多（Bohr 效应）使曲线右移，降低血红蛋白对氧的亲和力，促进氧在组织中释放。\nC【错】错因：氧主要与血红蛋白化学结合运输（约 98%），物理溶解仅占极小部分。\nD【错】错因：CO 与血红蛋白亲和力约为氧的 200 倍，形成碳氧血红蛋白，严重阻碍氧运输。","question":"血红蛋白与氧的结合和解离受多种因素影响。关于氧的运输，下列叙述正确的是：","references":[],"subQuestions":[{"answer":true,"label":"A","text":"在肺部高氧分压下，血红蛋白与氧结合形成氧合血红蛋白"},{"answer":false,"label":"B","text":"组织代谢产生的 CO₂ 和 H⁺ 使氧解离曲线左移，促进氧释放"},{"answer":false,"label":"C","text":"氧在血液中主要以物理溶解形式运输"},{"answer":false,"label":"D","text":"一氧化碳与血红蛋白结合能力弱于氧，不影响氧运输"}],"subject":"动物生理学","tags":["respiratory_sys","module_3","动物生理学","气体交换与氧解离曲线"],"target":"competition","type":"mtf"},{"bioId":"M1-01-f73d8d73","concept":"microRNA 加工与转录后调控","difficulty":"league","explanation":"A【对】依据：动物 pri-miRNA 在核内经 Drosha 切割为约 70 nt 的 pre-miRNA，出核后由 Dicer 加工为成熟双链，其中一条进入 RISC 发挥调控功能。\nB【对】依据：植物中 miRNA 与靶标多为完全互补，导向 AGO2 介导的 mRNA 切割降解；动物中多为种子区部分互补，主要抑制翻译或促进去腺苷酸化。\nC【错】错因：单个 miRNA 通过种子序列（第 2-8 位）可靶向数百个 mRNA，反之多个 miRNA 也可协同调控同一靶标，形成复杂调控网络。\nD【错】错因：miRNA 在转录后水平起作用（翻译抑制或 mRNA 去稳定化），不直接影响 RNA 聚合酶 II 的转录起始过程。","question":"某小 RNA 经加工后进入 RISC 复合物，通过与靶 mRNA 3'UTR 部分互补配对抑制翻译。关于该过程，下列说法正确的有：","references":[{"authors":"Bartel DP","doi":"10.1016/j.cell.2018.03.006","journal":"Cell","title":"Metazoan MicroRNAs","year":2018}],"subQuestions":[{"answer":true,"label":"A","text":"该小 RNA 为 microRNA，其初级转录本 pri-miRNA 需经 Drosha 切割形成 pre-miRNA"},{"answer":true,"label":"B","text":"microRNA 与靶 mRNA 完全互补时通常导向靶 mRNA 降解，部分互补则主要抑制翻译"},{"answer":false,"label":"C","text":"一个 microRNA 只能特异性调控一个靶 mRNA"},{"answer":false,"label":"D","text":"microRNA 在转录水平直接抑制靶基因的转录起始"}],"subject":"分子生物学","tags":["rna_biology","module_1","分子生物学","microRNA","转录后调控"],"target":"competition","type":"mtf"},{"bioId":"M1-02-30bbc833","concept":"m6A RNA 修饰与表观转录组","difficulty":"league","explanation":"A【对】依据：METTL3 为催化亚基，METTL14 为结构亚基，二者形成异二聚体复合体，以 SAM 为甲基供体，特异性催化 mRNA 中 RRACH 基序内腺苷的 N6 位甲基化。\nB【对】依据：YTHDF1/2/3 通过 YTH 结构域识别 m6A，YTHDF1 促进翻译，YTHDF2 招募 CCR4-NOT 复合体促进 mRNA 降解，YTHDF3 协同二者功能。\nC【对】依据：FTO（fat mass and obesity-associated protein）属于 AlkB 家族双加氧酶，可氧化去除 m6A 的甲基，使 m6A 成为可逆的动态修饰，参与代谢与发育调控。\nD【错】错因：m6A 广泛分布于 mRNA、lncRNA（如 XIST）、circRNA 及 miRNA 前体中，在各类 RNA 的剪接、出核、稳定性及翻译调控中均发挥重要作用。","image":{"caption":"m6A writer/reader/eraser 调控网络","credit":"Wei G, Biochem Soc Trans 2024","doi":"10.1042/BST20230574","figure":"1","file":"assets/questions/M1-02-30bbc833/fig1.jpg","license":"CC BY 4.0","pmcId":"PMC11088905","source":"paper"},"question":"N6-甲基腺苷（m6A）是真核生物 mRNA 中最丰富的内部修饰。关于 m6A 修饰的调控机制，下列说法正确的有：","references":[{"authors":"Zaccara S, Ries RJ, Jaffrey SR","doi":"10.1038/s41576-019-0168-5","journal":"Nature Reviews Genetics","title":"Reading, writing and erasing mRNA methylation","year":2019}],"subQuestions":[{"answer":true,"label":"A","text":"METTL3/METTL14 复合体作为'书写器'催化腺苷 N6 位甲基化"},{"answer":true,"label":"B","text":"YTHDF 家族蛋白作为'阅读器'识别 m6A 并影响 mRNA 稳定性或翻译效率"},{"answer":true,"label":"C","text":"FTO 蛋白作为'擦除器'可逆地去除 m6A 甲基化修饰"},{"answer":false,"label":"D","text":"m6A 修饰仅存在于 mRNA 中，不参与 lncRNA 或 circRNA 的调控"}],"subject":"分子生物学","tags":["rna_biology","module_1","分子生物学","m6A","表观转录组"],"target":"competition","type":"mtf"},{"bioId":"M1-03-e2de52ed","concept":"lncRNA XIST 与 X 染色体失活","difficulty":"league","explanation":"A【对】依据：XIST 不扩散，顺式包裹同一条 X 染色体，启动该染色体的剂量补偿沉默。\nB【对】依据：XIST 募集 PRC2 等复合体，建立 H3K27me3 等抑制性修饰，使染色质凝集失活。\nC【错】错因：XIST 是长链非编码 RNA，以 RNA 分子本身发挥功能，不编码蛋白质。\nD【错】错因：失活 X 上仍有部分基因（如假常染色体区基因）逃逸失活，并非全部沉默。","question":"lncRNA XIST 由 X 染色体失活中心转录，介导雌性哺乳动物一条 X 染色体失活。关于 XIST 的作用，下列叙述正确的有：","references":[],"subQuestions":[{"answer":true,"label":"A","text":"XIST RNA 包裹其转录来源的那条 X 染色体，发挥顺式作用"},{"answer":true,"label":"B","text":"XIST 募集染色质修饰复合体，促进染色质凝集与沉默"},{"answer":false,"label":"C","text":"XIST 编码一个小肽，由该肽促进染色体凝集"},{"answer":false,"label":"D","text":"X 染色体失活后其上所有基因永久沉默，无一例外"}],"subject":"分子生物学","tags":["rna_biology","module_1","分子生物学","lncRNA XIST 与 X 染色体失活"],"target":"competition","type":"mtf"},{"bioId":"M3-01-dc3e19d8","concept":"视觉的光感受机制","difficulty":"league","explanation":"A【对】依据：视杆细胞含视紫红质，对弱光敏感；视锥细胞分三种，分别感受红绿蓝光。\nB【错】错因：感光细胞产生的是分级电位（超极化），经双极细胞、神经节细胞转换后才产生动作电位。\nC【错】错因：视网膜成像，但视觉在大脑皮层视觉中枢（枕叶）形成。\nD【错】错因：看近物时睫状肌收缩、悬韧带松弛，晶状体曲度增大，而非变小。","question":"视网膜上的感光细胞将光信号转换为神经信号。关于视觉形成，下列叙述正确的是：","references":[],"subQuestions":[{"answer":true,"label":"A","text":"视杆细胞感受弱光，视锥细胞感受强光和颜色"},{"answer":false,"label":"B","text":"感光细胞受光刺激后产生动作电位直接传向大脑"},{"answer":false,"label":"C","text":"视觉在视网膜上形成，大脑皮层不参与视觉形成"},{"answer":false,"label":"D","text":"晶状体通过改变曲度调节焦距，看近物时曲度变小"}],"subject":"动物生理学","tags":["sensory_physio","module_3","动物生理学","视觉的光感受机制"],"target":"competition","type":"mtf"},{"bioId":"M4-01-33d67c21","concept":"序列比对与打分矩阵","difficulty":"league","explanation":"A【对】依据：BLAST 通过短词匹配延伸实现高速局部比对，是功能注释的基础工具。\nB【对】依据：替换矩阵基于氨基酸理化性质与观测频率，给不同替换赋予得分。\nC【对】依据：显著比对提示同源性，可作为功能与进化关系推断的证据。\nD【错】错因：空位开放与延伸罚分直接影响比对方式与结果，是重要参数。","question":"研究者将新测定的蛋白序列与数据库序列进行比对以推测功能。关于序列比对，下列叙述正确的有：","references":[],"subQuestions":[{"answer":true,"label":"A","text":"BLAST 是一种常用的快速局部序列比对工具"},{"answer":true,"label":"B","text":"BLOSUM/PAM 矩阵用于评估氨基酸替换的得分"},{"answer":true,"label":"C","text":"比对得分越高，两条序列亲缘关系或功能相似性越可能接近"},{"answer":false,"label":"D","text":"序列比对结果不受空位罚分设置的影响"}],"subject":"生物信息学","tags":["sequence_alignment","module_4","生物信息学","序列比对与打分矩阵"],"target":"competition","type":"mtf"},{"bioId":"M4-01-ac9f7461","concept":"高通量测序技术的原理","difficulty":"league","explanation":"A【对】依据：NGS 在桥式扩增的簇上逐轮掺入荧光标记可逆终止核苷酸并成像，实现大规模并行测序。\nB【错】错因：Sanger 是低通量双脱氧链终止法，一次反应读一条序列；数百万短序列是 NGS 特征。\nC【错】错因：长读长跨越重复区能力强，有利于拼接，短读长才造成拼接困难。\nD【错】错因：三代测序（如 PacBio、纳米孔）的核心优势正是单分子实时测序，无需 PCR 扩增。","question":"第二代测序（NGS）使基因组测序成本大幅下降。关于测序技术，下列叙述正确的是：","references":[],"subQuestions":[{"answer":true,"label":"A","text":"Illumina 测序基于边合成边测序原理，通过荧光标记核苷酸识别碱基"},{"answer":false,"label":"B","text":"Sanger 测序一次反应可读取数百万条短序列"},{"answer":false,"label":"C","text":"测序读长越长，越不利于基因组拼接"},{"answer":false,"label":"D","text":"第三代测序无法读取单条 DNA 分子，必须扩增后测序"}],"subject":"生物信息学","tags":["sequencing_tech","module_4","生物信息学","高通量测序技术的原理"],"target":"competition","type":"mtf"},{"bioId":"M4-01-9282854c","concept":"伴性遗传的特点","difficulty":"league","explanation":"A【对】依据：男性半合子（XᵇY）即表现患病，女性需两条 X 均带致病基因才患病。\nB【对】依据：女性患者（XᵇXᵇ）一条 Xᵇ 必来自父亲（其父为患者），另一条必传给儿子。\nC【对】依据：儿子的 X 染色体来自母亲，Y 来自父亲，故男性患者的致病基因只能来自母亲。\nD【错】错因：父亲将 Y 传给儿子，X 染色体只传给女儿，伴 X 基因不存在父传子。","question":"人类红绿色盲为 X 染色体隐性遗传病。关于伴性遗传，下列叙述正确的有：","references":[],"subQuestions":[{"answer":true,"label":"A","text":"男性患者多于女性患者，因为男性只有一条 X 染色体"},{"answer":true,"label":"B","text":"女性患者的父亲和儿子一定患病"},{"answer":true,"label":"C","text":"男性患者的色盲基因只能从母亲传来"},{"answer":false,"label":"D","text":"色盲基因可由父亲直接传给儿子"}],"subject":"遗传学","tags":["sex_linkage","module_4","遗传学","伴性遗传的特点"],"target":"competition","type":"mtf"},{"bioId":"M4-01-d42c014c","concept":"物种形成与生殖隔离","difficulty":"league","explanation":"A【对】依据：地理屏障阻断基因流，不同环境的选择与漂变使种群分化积累。\nB【对】依据：当种群间不能交配或后代不育时，基因库彻底分开，新物种形成。\nC【错】错因：地理隔离只是促进分化，若分化不足，重新接触后仍可基因交流。\nD【对】依据：多倍体与二倍体亲本杂交后代不育，立即产生生殖隔离，属同域成种。","question":"达尔文地雀由共同祖先经地理隔离后演化为多个物种。关于物种形成，下列叙述正确的有：","references":[],"subQuestions":[{"answer":true,"label":"A","text":"地理隔离使不同种群间基因交流中断，各自独立进化"},{"answer":true,"label":"B","text":"生殖隔离是新物种形成的标志"},{"answer":false,"label":"C","text":"地理隔离必然导致生殖隔离的形成"},{"answer":true,"label":"D","text":"多倍体的形成可以不经过地理隔离而瞬间产生新物种"}],"subject":"进化生物学","tags":["speciation","module_4","进化生物学","物种形成与生殖隔离"],"target":"competition","type":"mtf"},{"bioId":"M3-01-3d4873ff","concept":"体温调节机制","difficulty":"league","explanation":"A【对】依据：交感神经使皮肤血管收缩，血流量减少，降低体表散热速率。\nB【对】依据：甲状腺激素提高代谢率，肾上腺素促进物质氧化，二者协同增加产热。\nC【错】错因：体温调节中枢位于下丘脑，大脑皮层产生冷热感觉但不直接调节。\nD【错】错因：体温恒定时产热与散热保持动态平衡，产热大于散热会导致体温上升，不符合稳态。","question":"寒冷环境中，人体通过多种途径维持体温恒定。关于体温调节，下列叙述正确的有：","references":[],"subQuestions":[{"answer":true,"label":"A","text":"寒冷刺激下，皮肤血管收缩减少散热"},{"answer":true,"label":"B","text":"甲状腺激素和肾上腺素分泌增加，促进产热"},{"answer":false,"label":"C","text":"体温调节中枢位于大脑皮层"},{"answer":false,"label":"D","text":"寒冷环境中机体产热量大于散热量，体温持续升高"}],"subject":"动物生理学","tags":["temperature_reg","module_3","动物生理学","体温调节机制"],"target":"competition","type":"mtf"},{"bioId":"M1-01-212edebf","concept":"真核生物转录与启动子","difficulty":"league","explanation":"A【对】依据：聚合酶读取模板链方向为 3'→5'，新 RNA 链只能从 5' 端向 3' 端延伸。\nB【错】错因：rRNA、tRNA、lncRNA 等基因转录后不翻译，mRNA 仅是蛋白编码基因的产物。\nC【错】错因：真核转录在核内、翻译在细胞质，时空分隔；边转录边翻译见于原核生物。\nD【错】错因：TATA 框是核心启动子元件，被通用转录因子识别以起始转录，与终止无关。","question":"真核基因的转录需要 RNA 聚合酶与多种转录因子协同完成。关于转录过程，下列叙述正确的是：","references":[],"subQuestions":[{"answer":true,"label":"A","text":"RNA 聚合酶沿模板链 3'→5' 移动，RNA 链按 5'→3' 方向延伸"},{"answer":false,"label":"B","text":"所有基因的转录产物都是直接用于翻译的 mRNA"},{"answer":false,"label":"C","text":"真核细胞中转录与翻译在同一场所同时进行"},{"answer":false,"label":"D","text":"TATA 框位于基因终止区，负责终止转录"}],"subject":"分子生物学","tags":["transcription","module_1","分子生物学","真核生物转录与启动子"],"target":"competition","type":"mtf"},{"bioId":"M4-01-69aba2ea","concept":"RNA-seq 与差异表达分析","difficulty":"league","explanation":"A【对】依据：提取的 RNA 经片段化、反转录建库测序，是转录组定量的主流方法。\nB【对】依据：TPM/FPKM 等标准化校正基因长度与测序深度，使样本间可比。\nC【对】依据：表达量高的基因产生更多 reads，计数是表达定量的基础。\nD【错】错因：RNA-seq 不依赖探针，可通过从头拼接发现新转录本与新剪接异构体。","question":"研究者用 RNA-seq 比较肿瘤组织与正常组织的基因表达差异。关于转录组分析，下列叙述正确的有：","references":[],"subQuestions":[{"answer":true,"label":"A","text":"RNA-seq 通过将 RNA 反转录为 cDNA 后测序来定量基因表达"},{"answer":true,"label":"B","text":"差异表达分析需进行标准化以消除测序深度等偏差"},{"answer":true,"label":"C","text":"测序读数（reads）比对到基因上的数量可反映其表达水平"},{"answer":false,"label":"D","text":"RNA-seq 只能检测已知基因，无法发现新的转录本"}],"subject":"生物信息学","tags":["transcriptomics","module_4","生物信息学","RNA-seq 与差异表达分析"],"target":"competition","type":"mtf"},{"bioId":"M1-01-a77cfd5b","concept":"翻译与密码子","difficulty":"league","explanation":"A【错】错因：一种 tRNA 通常只对应一种氨基酸，借助摆动配对可识别少数同义密码子，而非全部。\nB【错】错因：AUG 既编码甲硫氨酸又是起始信号，双重功能缺一不可。\nC【对】依据：核糖体按 5'→3' 读码，氨基酸依次加到肽链羧基端，即 N 端向 C 端延伸。\nD【错】错因：tRNA 依 A 位→P 位→E 位顺序移位，卸载后从 E 位离开，并非停留 A 位。","question":"核糖体沿 mRNA 移动，tRNA 按密码子转运氨基酸合成多肽链。关于翻译过程，下列叙述正确的是：","references":[],"subQuestions":[{"answer":false,"label":"A","text":"一种 tRNA 能识别并转运所有同义密码子"},{"answer":false,"label":"B","text":"起始密码子 AUG 只编码甲硫氨酸，没有起始功能"},{"answer":true,"label":"C","text":"核糖体沿 mRNA 5'→3' 移动，肽链从 N 端向 C 端延伸"},{"answer":false,"label":"D","text":"tRNA 进入核糖体后始终停留在 A 位直至肽链完成"}],"subject":"分子生物学","tags":["translation","module_1","分子生物学","翻译与密码子"],"target":"competition","type":"mtf"},{"bioId":"M2-01-29df4a1b","concept":"噬菌体侵染实验","difficulty":"league","explanation":"A【对】依据：DNA 含磷不含硫，蛋白质含硫不含磷，离心后 ³²P 在沉淀、³⁵S 在上清。\nB【错】错因：蛋白质外壳不进入细菌，子代噬菌体的蛋白质由细菌内 DNA 指导合成。\nC【错】错因：噬菌体为专性寄生，必须先用标记的大肠杆菌培养才能获得标记噬菌体。\nD【错】错因：实验只证明 T2 噬菌体的遗传物质是 DNA，RNA 病毒（如烟草花叶病毒）的遗传物质是 RNA。","question":"Hershey 和 Chase 用 ³²P 和 ³⁵S 分别标记噬菌体，证明 DNA 是遗传物质。关于该实验，下列叙述正确的是：","references":[],"subQuestions":[{"answer":true,"label":"A","text":"³²P 标记的 DNA 进入细菌，³⁵S 标记的蛋白质外壳留在菌体外"},{"answer":false,"label":"B","text":"³⁵S 标记的蛋白质进入细菌并指导子代噬菌体合成"},{"answer":false,"label":"C","text":"噬菌体可在普通培养基上直接培养并标记"},{"answer":false,"label":"D","text":"该实验证明所有病毒的遗传物质都是 DNA"}],"subject":"微生物学","tags":["virus","module_2","微生物学","噬菌体侵染实验"],"target":"competition","type":"mtf"}]}
+{
+  "题库": [
+    {
+      "bioId": "M1-01-5516890d",
+      "concept": "蛋白质结构预测与序列-结构-功能关系",
+      "difficulty": "league",
+      "explanation": "A【对】依据：Anfinsen 原理指出氨基酸序列包含折叠所需的全部信息，但体内折叠常需 Hsp70/Hsp90 等分子伴侣防止错误聚集，协助达到热力学最稳态。\nB【对】依据：AlphaFold 的核心创新之一是利用 MSA 中残基对的共进化信号（mutual information / direct coupling analysis）推断空间接触约束，再经 Evoformer 和结构模块迭代优化三维坐标。\nC【错】错因：AlphaFold 采用端到端深度学习，直接从 MSA 和模板特征预测结构，不依赖实验解析的同源模板（与同源建模有本质区别），这也是其能预测无同源结构蛋白的原因。\nD【错】错因：蛋白质结构比序列更保守，远缘同源蛋白（序列相似度 < 20% 的 'twilight zone'）仍可保持相似的核心折叠（如 TIM 桶折叠广泛分布于不同酶类）。",
+      "question": "研究者用 AlphaFold 类 AI 模型预测某蛋白与配体的结合复合物结构。根据以上信息，判断以下陈述的正误。",
+      "references": [
+        {
+          "authors": "Abramson J et al.",
+          "doi": "10.1038/s41586-024-07487-w",
+          "journal": "Nature",
+          "title": "Accurate structure prediction of biomolecular interactions with AlphaFold 3",
+          "year": 2024
+        }
+      ],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "蛋白质的三维结构主要由其氨基酸序列决定，但折叠过程常需分子伴侣辅助"
+        },
+        {
+          "answer": true,
+          "label": "B",
+          "text": "AlphaFold 等模型利用多序列比对中的共进化信息推断残基间空间接触"
+        },
+        {
+          "answer": false,
+          "label": "C",
+          "text": "AlphaFold 预测蛋白质结构时必须以实验解析的同源结构作为模板"
+        },
+        {
+          "answer": false,
+          "label": "D",
+          "text": "同源蛋白一级序列相似度越低，其高级结构相似度必然越低"
+        }
+      ],
+      "subject": "生物化学",
+      "tags": [
+        "amino_acid_metab",
+        "module_1",
+        "生物化学",
+        "蛋白质结构",
+        "AlphaFold"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M1-02-411970b0",
+      "concept": "尿素循环",
+      "difficulty": "league",
+      "explanation": "A【错】错因：尿素循环前两步在线粒体，其余步骤在胞质溶胶，需两个区室协作完成。\nB【对】依据：氨基甲酰磷酸提供游离氨来源的氮，精氨酸代琥珀酸带入天冬氨酸的氮，共同构成尿素。\nC【错】错因：氨基甲酰磷酸合成与精氨酸代琥珀酸合成共消耗相当于 4 个高能磷酸键的 ATP。\nD【错】错因：尿素仅在肝脏经尿素循环合成，肾脏只负责将其滤过排出。",
+      "question": "氨基酸分解产生的氨主要在肝脏转化为尿素后经肾排出。根据以上信息，判断以下陈述的正误。",
+      "references": [],
+      "subQuestions": [
+        {
+          "answer": false,
+          "label": "A",
+          "text": "尿素循环只发生在线粒体基质内即可完成"
+        },
+        {
+          "answer": true,
+          "label": "B",
+          "text": "一分子尿素含两个氮原子，一个来自游离氨、另一个来自天冬氨酸"
+        },
+        {
+          "answer": false,
+          "label": "C",
+          "text": "尿素循环不消耗 ATP，是能量中性过程"
+        },
+        {
+          "answer": false,
+          "label": "D",
+          "text": "尿素在肾脏合成并随尿液排出体外"
+        }
+      ],
+      "subject": "生物化学",
+      "tags": [
+        "amino_acid_metab",
+        "module_1",
+        "生物化学",
+        "尿素循环"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M3-01-e59fb03e",
+      "concept": "先天性行为与学习行为",
+      "difficulty": "league",
+      "explanation": "A【对】依据：先天性行为（本能）由遗传决定，生来就有，如蜜蜂采蜜、蜘蛛结网。\nB【对】依据：印随是早期学习的一种，在出生后关键期内跟随第一个移动物体，错过则无法建立。\nC【错】错因：动物行为既有先天的也有后天学习的，高等动物学习行为占比更大。\nD【对】依据：条件反射（如巴甫洛夫的狗）通过反复强化建立，属于典型的学习行为。",
+      "question": "动物行为按获得途径可分为先天性行为和学习行为。根据以上信息，判断以下陈述的正误。",
+      "references": [],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "蜜蜂采蜜属于先天性行为，由遗传物质决定"
+        },
+        {
+          "answer": true,
+          "label": "B",
+          "text": "印随学习发生在动物生命早期的关键期"
+        },
+        {
+          "answer": false,
+          "label": "C",
+          "text": "所有动物行为都是先天性的，不受环境影响"
+        },
+        {
+          "answer": true,
+          "label": "D",
+          "text": "条件反射属于学习行为，需要后天经验建立"
+        }
+      ],
+      "subject": "动物学",
+      "tags": [
+        "animal_behavior",
+        "module_3",
+        "动物学",
+        "先天性行为与学习行为"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M4-01-9979790a",
+      "concept": "动物细胞核移植与克隆",
+      "difficulty": "league",
+      "explanation": "A【对】依据：核移植使重构胚的核基因组来自供体，故克隆动物是供体的核遗传复制。\nB【对】依据：去核卵母细胞体积大、含重编程因子，能支持供体核发育。\nC【错】错因：线粒体 DNA 来自受体卵母细胞，克隆动物与供核动物并非遗传物质完全相同。\nD【对】依据：核重编程不完全导致多数重构胚发育失败，克隆效率普遍很低。",
+      "question": "多莉羊的诞生证明了已分化动物细胞核的全能性。根据以上信息，判断以下陈述的正误。",
+      "references": [],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "克隆动物的核基因来自供体细胞核，与供体基本相同"
+        },
+        {
+          "answer": true,
+          "label": "B",
+          "text": "受体卵母细胞需去核，为供体核提供细胞质环境"
+        },
+        {
+          "answer": false,
+          "label": "C",
+          "text": "克隆动物的遗传物质与供核动物完全相同，包括线粒体 DNA"
+        },
+        {
+          "answer": true,
+          "label": "D",
+          "text": "体细胞核移植的成功率目前仍然较低"
+        }
+      ],
+      "subject": "生物技术",
+      "tags": [
+        "animal_biotech",
+        "module_4",
+        "生物技术",
+        "动物细胞核移植与克隆"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M4-01-770a5d45",
+      "concept": "脊椎动物主要类群的特征",
+      "difficulty": "league",
+      "explanation": "A【对】依据：两栖类处于水陆过渡阶段，幼体水生用鳃，成体肺呼吸、皮肤辅助。\nB【对】依据：羊膜卵的出现是脊椎动物真正征服陆地的关键适应。\nC【错】错因：鸟类与哺乳类均为恒温动物，高而恒定的体温支持旺盛代谢。\nD【对】依据：胎生（除单孔类）与哺乳、体表被毛是哺乳纲的核心特征。",
+      "question": "脊椎动物从水生到陆生的演化伴随着结构与功能的重大改变。根据以上信息，判断以下陈述的正误。",
+      "references": [],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "两栖动物幼体用鳃呼吸，成体主要用肺呼吸并辅以皮肤呼吸"
+        },
+        {
+          "answer": true,
+          "label": "B",
+          "text": "爬行动物的卵具羊膜和卵壳，摆脱了对水环境的繁殖依赖"
+        },
+        {
+          "answer": false,
+          "label": "C",
+          "text": "鸟类为变温动物，体温随环境变化"
+        },
+        {
+          "answer": true,
+          "label": "D",
+          "text": "哺乳动物胎生哺乳，体表被毛"
+        }
+      ],
+      "subject": "动物学",
+      "tags": [
+        "animal_diversity",
+        "module_4",
+        "动物学",
+        "脊椎动物主要类群的特征"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M3-01-670b2911",
+      "concept": "动物四大基本组织的特征",
+      "difficulty": "league",
+      "explanation": "A【对】依据：上皮组织细胞密集、间质少，覆盖体表或衬于管腔，执行保护分泌吸收。\nB【对】依据：血液有液态细胞间质（血浆），符合结缔组织定义，是特殊的液态结缔组织。\nC【对】依据：神经组织以神经元为主体，胶质细胞起支持营养作用，共同完成兴奋传导。\nD【错】错因：骨骼肌由肌细胞（肌纤维）构成，属于肌肉组织，附着于骨骼不改变其组织归属。",
+      "question": "动物体由上皮、结缔、肌肉和神经四大基本组织构成。根据以上信息，判断以下陈述的正误。",
+      "references": [],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "上皮组织细胞排列紧密，具有保护、分泌和吸收功能"
+        },
+        {
+          "answer": true,
+          "label": "B",
+          "text": "血液属于结缔组织，细胞间质为液态的血浆"
+        },
+        {
+          "answer": true,
+          "label": "C",
+          "text": "神经组织由神经元和神经胶质细胞组成，能感受刺激并传导冲动"
+        },
+        {
+          "answer": false,
+          "label": "D",
+          "text": "骨骼肌属于结缔组织，因其附着在骨骼上"
+        }
+      ],
+      "subject": "动物学",
+      "tags": [
+        "animal_tissue",
+        "module_3",
+        "动物学",
+        "动物四大基本组织的特征"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M2-01-85894ab9",
+      "concept": "抗生素耐药性的产生与传播",
+      "difficulty": "league",
+      "explanation": "A【对】依据：突变是随机、不定向的，抗生素只是筛选出已存在的耐药突变体。\nB【对】依据：R 质粒携带耐药基因，经接合、转化、转导在菌间水平转移，加速耐药扩散。\nC【错】错因：抗生素是选择因素而非诱变因素，不能诱导定向突变，此说法属拉马克式误解。\nD【对】依据：足疗程用药彻底清除病原菌，避免亚致死浓度筛选出耐药突变株。",
+      "question": "临床上滥用抗生素导致耐药菌株不断出现。根据以上信息，判断以下陈述的正误。",
+      "references": [],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "耐药基因突变在接触抗生素之前就已随机产生，抗生素起选择作用"
+        },
+        {
+          "answer": true,
+          "label": "B",
+          "text": "质粒可在不同细菌间通过接合转移，传播耐药基因"
+        },
+        {
+          "answer": false,
+          "label": "C",
+          "text": "抗生素诱导细菌产生定向的耐药突变"
+        },
+        {
+          "answer": true,
+          "label": "D",
+          "text": "完成全程用药可减少耐药菌被筛选出来的机会"
+        }
+      ],
+      "subject": "微生物学",
+      "tags": [
+        "antibiotics_resistance",
+        "module_2",
+        "微生物学",
+        "抗生素耐药性的产生与传播"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M2-01-a4d77382",
+      "concept": "韧皮部运输的压力流动学说",
+      "difficulty": "league",
+      "explanation": "A【对】依据：源端主动装载蔗糖提高筛管溶质浓度，水分渗透进入建立高压。\nB【对】依据：库端卸出蔗糖后水势升高，水分外流膨压降低，源库间压力差驱动集流。\nC【错】错因：韧皮部运输方向取决于源库位置，可向上、向下双向进行。\nD【错】错因：蚜虫刺入的是筛管，汁液富含蔗糖等有机物，木质部汁液才以无机盐为主。",
+      "question": "蚜虫吻针插入韧皮部后可收集到富含蔗糖的汁液。根据以上信息，判断以下陈述的正误。",
+      "references": [],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "源端蔗糖装载入筛管使渗透压升高，吸水产生膨压"
+        },
+        {
+          "answer": true,
+          "label": "B",
+          "text": "库端蔗糖卸出后水分随之渗出，膨压下降形成压力梯度"
+        },
+        {
+          "answer": false,
+          "label": "C",
+          "text": "有机物在韧皮部只能从叶片向根部单向运输"
+        },
+        {
+          "answer": false,
+          "label": "D",
+          "text": "蚜虫汁液主要来自木质部，因此富含无机盐"
+        }
+      ],
+      "subject": "植物生理学",
+      "tags": [
+        "assimilate_transport",
+        "module_2",
+        "植物生理学",
+        "韧皮部运输的压力流动学说"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M2-01-04a995d8",
+      "concept": "细菌的结构与代谢多样性",
+      "difficulty": "league",
+      "explanation": "A【对】依据：原核生物无核膜包被的细胞核，单个环状染色体集中于拟核区。\nB【对】依据：70S 核糖体（50S+30S）是原核特征，也是链霉素等抗生素的选择性靶点。\nC【错】错因：细菌无线粒体，有氧呼吸酶系位于细胞膜；且许多细菌为厌氧型。\nD【对】依据：绝大多数细菌细胞壁以肽聚糖为骨架，革兰氏阳性菌壁更厚。",
+      "question": "细菌是结构简单的原核生物，但代谢类型极为多样。根据以上信息，判断以下陈述的正误。",
+      "references": [],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "细菌无核膜，遗传物质为环状 DNA，位于拟核"
+        },
+        {
+          "answer": true,
+          "label": "B",
+          "text": "细菌核糖体为 70S，与真核细胞 80S 核糖体不同"
+        },
+        {
+          "answer": false,
+          "label": "C",
+          "text": "所有细菌都含有线粒体，进行有氧呼吸"
+        },
+        {
+          "answer": true,
+          "label": "D",
+          "text": "细菌的细胞壁主要成分是肽聚糖"
+        }
+      ],
+      "subject": "微生物学",
+      "tags": [
+        "bacteria",
+        "module_2",
+        "微生物学",
+        "细菌的结构与代谢多样性"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M3-01-44d4e6b6",
+      "concept": "利他行为与亲缘选择",
+      "difficulty": "league",
+      "explanation": "A【对】依据：汉密尔顿法则中 r 为亲缘系数、b 为受益者获益、c 为利他者代价，rb>c 时利他基因可通过亲属传递。\nB【错】错因：利他行为在亲缘个体间最常见（如工蜂不育），亲缘选择是其进化的主要机制。\nC【错】错因：利他行为可通过亲缘选择或互惠利他进化，不违背广义适合度理论。\nD【错】错因：亲缘选择的核心正是利他者通过帮助亲属传递共享基因，与基因传递密切相关。",
+      "question": "某些动物个体会做出降低自身适合度而提高其他个体适合度的行为。根据以上信息，判断以下陈述的正误。",
+      "references": [],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "汉密尔顿法则指出，当 rb > c 时，利他行为可被自然选择保留"
+        },
+        {
+          "answer": false,
+          "label": "B",
+          "text": "利他行为只发生在无亲缘关系的个体之间"
+        },
+        {
+          "answer": false,
+          "label": "C",
+          "text": "利他行为完全违背自然选择原理，不可能进化产生"
+        },
+        {
+          "answer": false,
+          "label": "D",
+          "text": "亲缘选择理论认为利他行为的进化与基因传递无关"
+        }
+      ],
+      "subject": "生态学",
+      "tags": [
+        "behavioral_eco",
+        "module_3",
+        "生态学",
+        "利他行为与亲缘选择"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M4-01-fc98f5e0",
+      "concept": "常用生物信息学数据库",
+      "difficulty": "league",
+      "explanation": "A【对】依据：GenBank 与 EMBL、DDBJ 构成国际核酸序列数据库协作，每日同步更新。\nB【错】错因：PDB 存储蛋白质等大分子的三维结构数据，分类与分布信息属于其他专门数据库。\nC【错】错因：数据库存在注释错误与冗余，需使用者甄别，且部分库有审核流程。\nD【错】错因：UniProt 整合 Swiss-Prot 与 TrEMBL，覆盖各物种蛋白质。",
+      "question": "生物信息学数据库是生命科学研究的重要资源。根据以上信息，判断以下陈述的正误。",
+      "references": [],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "GenBank 是 NCBI 维护的核酸序列数据库，收录提交的序列及注释"
+        },
+        {
+          "answer": false,
+          "label": "B",
+          "text": "PDB 数据库专门存储物种分类与地理分布信息"
+        },
+        {
+          "answer": false,
+          "label": "C",
+          "text": "所有生物数据库的数据都无需人工审核且绝对无误"
+        },
+        {
+          "answer": false,
+          "label": "D",
+          "text": "UniProt 只收录人类蛋白质，不含其他物种"
+        }
+      ],
+      "subject": "生物信息学",
+      "tags": [
+        "bio_databases",
+        "module_4",
+        "生物信息学",
+        "常用生物信息学数据库"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M3-01-ea78b366",
+      "concept": "生物多样性的层次与保护",
+      "difficulty": "league",
+      "explanation": "A【对】依据：三个层次从基因到生态系统，全面概括了生物多样性的内涵。\nB【错】错因：自然保护区是就地保护的主要形式，迁地保护指动物园、植物园等异地保护。\nC【错】错因：外来物种入侵常导致本地物种灭绝，降低生物多样性，而非增加。\nD【错】错因：生物多样性具有直接价值、间接价值（生态功能）和潜在价值。",
+      "question": "生物多样性是生物及其与环境形成的生态复合体以及与此相关的各种生态过程的总和。根据以上信息，判断以下陈述的正误。",
+      "references": [],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "生物多样性包括基因多样性、物种多样性和生态系统多样性三个层次"
+        },
+        {
+          "answer": false,
+          "label": "B",
+          "text": "建立自然保护区属于迁地保护"
+        },
+        {
+          "answer": false,
+          "label": "C",
+          "text": "外来物种入侵一定会增加当地生物多样性"
+        },
+        {
+          "answer": false,
+          "label": "D",
+          "text": "生物多样性的价值仅体现在直接使用价值上"
+        }
+      ],
+      "subject": "生态学",
+      "tags": [
+        "biodiversity",
+        "module_3",
+        "生态学",
+        "生物多样性的层次与保护"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M1-01-4c71bc4d",
+      "concept": "ATP 与能量偶联",
+      "difficulty": "league",
+      "explanation": "A【错】错因：细胞质基质中糖酵解也合成 ATP，线粒体并非动物细胞合成 ATP 的唯一场所。\nB【对】依据：ATP 水解自由能变化大，可通过基团转移或构象偶联驱动吸能反应。\nC【错】错因：ATP 含 2 个特殊磷酸酐键（β、γ 磷酸之间与 α、β 之间），腺苷与 α 磷酸间为磷酸酯键。\nD【错】错因：细胞内 ATP 含量很少，依靠与 ADP 的快速转化满足需求，而非大量储存。",
+      "question": "ATP 是细胞的直接能源物质，与 ADP 不断相互转化。根据以上信息，判断以下陈述的正误。",
+      "references": [],
+      "subQuestions": [
+        {
+          "answer": false,
+          "label": "A",
+          "text": "动物细胞中 ATP 的合成只发生在线粒体"
+        },
+        {
+          "answer": true,
+          "label": "B",
+          "text": "ATP 水解释放的能量可偶联肌肉收缩等吸能反应"
+        },
+        {
+          "answer": false,
+          "label": "C",
+          "text": "ATP 分子中含有 3 个特殊磷酸酐键"
+        },
+        {
+          "answer": false,
+          "label": "D",
+          "text": "细胞依靠大量储存 ATP 来满足长期能量需求"
+        }
+      ],
+      "subject": "生物化学",
+      "tags": [
+        "bioenergetics",
+        "module_1",
+        "生物化学",
+        "ATP 与能量偶联"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M3-01-a0b22f32",
+      "concept": "碳循环与温室效应",
+      "difficulty": "league",
+      "explanation": "A【对】依据：光合作用和化能合成作用将无机碳（CO₂）固定为有机碳，进入生物群落。\nB【对】依据：工业革命以来化石燃料燃烧释放大量地质碳，是大气 CO₂ 升高的主要原因。\nC【错】错因：碳在生物群落内以有机物形式传递，但在群落与无机环境之间主要以 CO₂ 形式循环。\nD【对】依据：分解者通过呼吸作用将动植物遗体中的有机碳氧化为 CO₂，完成碳的归还。",
+      "question": "碳元素在生物群落与无机环境之间循环往复。根据以上信息，判断以下陈述的正误。",
+      "references": [],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "生产者通过光合作用固定大气中的 CO₂"
+        },
+        {
+          "answer": true,
+          "label": "B",
+          "text": "化石燃料的大量燃烧增加了大气 CO₂ 浓度"
+        },
+        {
+          "answer": false,
+          "label": "C",
+          "text": "碳在生物群落与无机环境之间主要以有机物形式循环"
+        },
+        {
+          "answer": true,
+          "label": "D",
+          "text": "分解者的分解作用将有机碳转化为 CO₂ 返回大气"
+        }
+      ],
+      "subject": "生态学",
+      "tags": [
+        "biogeochemical",
+        "module_3",
+        "生态学",
+        "碳循环与温室效应"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M1-01-8d54d522",
+      "concept": "细胞周期的调控与检查点",
+      "difficulty": "league",
+      "explanation": "A【对】依据：周期蛋白周期性合成与降解（如 cyclin B 在 M 期末被 APC/C 降解），驱动周期运转。\nB【对】依据：CDK 单独无活性，与周期蛋白结合并磷酸化后才具激酶活性。\nC【对】依据：G2/M 检查点检测 DNA 复制完整性与损伤，激活抑制通路阻滞细胞进入 M 期。\nD【错】错因：CDK 活性受周期蛋白结合、磷酸化状态与抑制蛋白（如 p21）多重调控，并非恒定。",
+      "question": "真核细胞周期受细胞周期蛋白与细胞周期蛋白依赖性激酶（CDK）的精密调控。根据以上信息，判断以下陈述的正误。",
+      "references": [],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "细胞周期蛋白的含量在细胞周期中周期性升降"
+        },
+        {
+          "answer": true,
+          "label": "B",
+          "text": "CDK 需与细胞周期蛋白结合后才表现出激酶活性"
+        },
+        {
+          "answer": true,
+          "label": "C",
+          "text": "G2/M 检查点可阻止 DNA 损伤的细胞进入分裂期"
+        },
+        {
+          "answer": false,
+          "label": "D",
+          "text": "CDK 活性在整个细胞周期中恒定不变，不受调控"
+        }
+      ],
+      "subject": "细胞生物学",
+      "tags": [
+        "cell_cycle",
+        "module_1",
+        "细胞生物学",
+        "细胞周期的调控与检查点"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M1-01-35a697fe",
+      "concept": "细胞凋亡的机制与意义",
+      "difficulty": "league",
+      "explanation": "A【对】依据：凋亡由凋亡相关基因（如 caspase 家族）程序性执行，是主动的死亡过程。\nB【错】错因：凋亡细胞形成凋亡小体被吞噬清除，膜完整性保持、内容物不外泄，不引发炎症；膜破裂外泄是坏死特征。\nC【错】错因：胚胎发育期凋亡基因活跃表达，塑造指间组织、神经回路等结构。\nD【错】错因：凋亡清除多余、受损或潜在危险细胞，对发育与稳态维持具有积极意义。",
+      "question": "动物胚胎发育过程中指间组织通过凋亡消失，使手指彼此分离。根据以上信息，判断以下陈述的正误。",
+      "references": [],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "细胞凋亡是由基因控制的程序性细胞死亡"
+        },
+        {
+          "answer": false,
+          "label": "B",
+          "text": "凋亡过程中细胞膜破裂、内容物外泄引发炎症"
+        },
+        {
+          "answer": false,
+          "label": "C",
+          "text": "凋亡相关基因仅在个体衰老后才表达，胚胎期不表达"
+        },
+        {
+          "answer": false,
+          "label": "D",
+          "text": "细胞凋亡对机体有害，没有任何积极的生理意义"
+        }
+      ],
+      "subject": "细胞生物学",
+      "tags": [
+        "cell_death",
+        "module_1",
+        "细胞生物学",
+        "细胞凋亡的机制与意义"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M1-01-4887c2a5",
+      "concept": "钠钾泵与主动运输",
+      "difficulty": "league",
+      "explanation": "A【对】依据：钠钾泵逆浓度梯度转运离子，直接水解 ATP 供能，是典型的主动运输。\nB【错】错因：钠钾泵每循环一次泵出 3 个 Na⁺、泵入 2 个 K⁺，选项将数目颠倒。\nC【错】错因：钠钾泵逆浓度梯度工作，顺浓度梯度的通道转运才属于协助扩散。\nD【错】错因：静息电位依赖泵建立的胞内高 K⁺、胞外高 Na⁺分布，抑制泵会使其逐渐消失。",
+      "question": "动物细胞膜上的 Na⁺/K⁺-ATP 酶通过水解 ATP 逆浓度梯度转运离子。根据以上信息，判断以下陈述的正误。",
+      "references": [],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "该转运属于主动运输，需 ATP 直接水解供能"
+        },
+        {
+          "answer": false,
+          "label": "B",
+          "text": "钠钾泵每循环一次泵出 2 个 Na⁺、泵入 3 个 K⁺"
+        },
+        {
+          "answer": false,
+          "label": "C",
+          "text": "钠钾泵转运方向顺浓度梯度，属于协助扩散"
+        },
+        {
+          "answer": false,
+          "label": "D",
+          "text": "抑制钠钾泵活性对神经细胞静息电位无影响"
+        }
+      ],
+      "subject": "细胞生物学",
+      "tags": [
+        "cell_membrane",
+        "module_1",
+        "细胞生物学",
+        "钠钾泵与主动运输"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M2-01-f05ce501",
+      "concept": "空间转录组学与肿瘤微环境",
+      "difficulty": "league",
+      "explanation": "A【对】依据：空间转录组学（如 10x Visium、MERFISH、seqFISH+）通过在组织切片上原位捕获 mRNA 或利用荧光原位杂交，在保留空间坐标的同时获取转录组信息，区别于需解离组织的 scRNA-seq。\nB【对】依据：MERFISH 和 seqFISH+ 等基于成像的技术已实现亚细胞分辨率，10x Visium 的 spot 直径约 55 μm（含 1-10 个细胞），Visium HD 已达到接近单细胞水平的分辨率。\nC【对】依据：空间转录组可识别肿瘤内不同区域（核心、侵袭前沿、免疫浸润区）的细胞组成差异，揭示癌细胞-免疫细胞-基质细胞的空间互作网络，为理解肿瘤微环境提供关键信息。\nD【错】错因：空间转录组学检测的是 RNA 分子的空间分布，蛋白质定位需借助空间蛋白质组学技术（如 CODEX、IMC、DBiT-seq 的蛋白模式），二者原理与检测对象不同。",
+      "image": {
+        "caption": "空间转录组学肿瘤研究流程",
+        "credit": "Maciejewski K et al., Cancers 2024",
+        "doi": "10.3390/cancers16173100",
+        "figure": "1",
+        "file": "assets/questions/M2-01-f05ce501/fig1.jpg",
+        "license": "CC BY 4.0",
+        "pmcId": "PMC11394603",
+        "source": "paper"
+      },
+      "question": "研究者利用空间转录组学技术绘制某肿瘤组织的基因表达图谱。根据以上信息，判断以下陈述的正误。",
+      "references": [
+        {
+          "authors": "Ståhl PL et al.",
+          "doi": "10.1126/science.aaf2403",
+          "journal": "Science",
+          "title": "Visualization and analysis of gene expression in tissue sections by spatial transcriptomics",
+          "year": 2016
+        }
+      ],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "空间转录组学可在保留组织空间位置信息的前提下检测基因表达"
+        },
+        {
+          "answer": true,
+          "label": "B",
+          "text": "当前主流空间转录组技术已达到接近单细胞的分辨率"
+        },
+        {
+          "answer": true,
+          "label": "C",
+          "text": "空间转录组学可揭示肿瘤微环境中不同细胞类型的空间分布与互作关系"
+        },
+        {
+          "answer": false,
+          "label": "D",
+          "text": "空间转录组学可直接检测蛋白质的空间定位"
+        }
+      ],
+      "subject": "细胞生物学",
+      "tags": [
+        "cell_signal",
+        "module_2",
+        "细胞生物学",
+        "空间转录组",
+        "肿瘤微环境"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M2-02-846b66ee",
+      "concept": "GPCR-cAMP 第二信使通路",
+      "difficulty": "league",
+      "explanation": "A【对】依据：腺苷酸环化酶催化生成 cAMP，cAMP 结合 PKA 调节亚基使其催化亚基释放活化。\nB【对】依据：Gα 亚基结合 GTP 活化，其内在 GTP 酶活性水解 GTP 后回到失活状态，实现自我计时。\nC【错】错因：肾上腺素为水溶性激素，不进入细胞，经膜受体与胞内级联传递信号。\nD【错】错因：级联反应逐级放大，一个激素分子可激活大量酶分子，放大效应显著。",
+      "question": "肾上腺素与肝细胞膜上 β 受体结合后，激活 G 蛋白-腺苷酸环化酶通路，促进糖原分解。根据以上信息，判断以下陈述的正误。",
+      "references": [],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "cAMP 作为第二信使激活蛋白激酶 A（PKA）"
+        },
+        {
+          "answer": true,
+          "label": "B",
+          "text": "G 蛋白结合 GTP 后活化，水解 GTP 后自行失活"
+        },
+        {
+          "answer": false,
+          "label": "C",
+          "text": "肾上腺素进入肝细胞细胞核直接激活糖原磷酸化酶"
+        },
+        {
+          "answer": false,
+          "label": "D",
+          "text": "该信号通路无放大效应，一个激素分子只激活一个酶分子"
+        }
+      ],
+      "subject": "细胞生物学",
+      "tags": [
+        "cell_signal",
+        "module_2",
+        "细胞生物学",
+        "GPCR-cAMP 第二信使通路"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M1-01-e9bacfd5",
+      "concept": "原核细胞与真核细胞的比较",
+      "difficulty": "league",
+      "explanation": "A【对】依据：支原体为原核生物，无核膜，遗传物质集中于拟核。\nB【对】依据：支原体是少数无细胞壁的原核生物，直径约 0.1–0.3 μm，小于动物细胞。\nC【错】错因：支原体含 70S 核糖体，能独立合成蛋白质，这是其独立生活的基础。\nD【错】错因：支原体具有含固醇的细胞膜，细胞膜是所有细胞的基本边界结构。",
+      "question": "支原体是目前已知最小、能独立生活的细胞。根据以上信息，判断以下陈述的正误。",
+      "references": [],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "支原体无核膜包被，DNA 集中于拟核区域"
+        },
+        {
+          "answer": true,
+          "label": "B",
+          "text": "支原体无细胞壁，细胞体积一般小于动物细胞"
+        },
+        {
+          "answer": false,
+          "label": "C",
+          "text": "支原体无核糖体，蛋白质合成完全依赖宿主"
+        },
+        {
+          "answer": false,
+          "label": "D",
+          "text": "支原体无细胞膜，细胞质直接暴露于环境"
+        }
+      ],
+      "subject": "细胞生物学",
+      "tags": [
+        "cell_structure",
+        "module_1",
+        "细胞生物学",
+        "原核细胞与真核细胞的比较"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M4-01-452268f0",
+      "concept": "染色体数目变异与多倍体",
+      "difficulty": "league",
+      "explanation": "A【对】依据：秋水仙素阻止纺锤丝形成，染色体复制后不能分向两极，细胞染色体加倍。\nB【对】依据：三倍体减数分裂时染色体联会紊乱，不能形成正常配子，故高度不育（无子西瓜原理）。\nC【对】依据：多倍体细胞体积大、有机物含量高，常表现为茎粗、叶大、果实种子较大。\nD【错】错因：单倍体指含本物种配子染色体数的个体，四倍体的单倍体含两个染色体组。",
+      "question": "用秋水仙素处理二倍体西瓜幼苗可获得四倍体植株。根据以上信息，判断以下陈述的正误。",
+      "references": [],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "秋水仙素抑制纺锤体形成，使染色体数目加倍"
+        },
+        {
+          "answer": true,
+          "label": "B",
+          "text": "四倍体与二倍体杂交产生的三倍体高度不育"
+        },
+        {
+          "answer": true,
+          "label": "C",
+          "text": "多倍体植株一般茎秆粗壮、果实较大"
+        },
+        {
+          "answer": false,
+          "label": "D",
+          "text": "单倍体植株都只含一个染色体组"
+        }
+      ],
+      "subject": "遗传学",
+      "tags": [
+        "chromosome_var",
+        "module_4",
+        "遗传学",
+        "染色体数目变异与多倍体"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M3-01-d11b9c64",
+      "concept": "心脏结构与血液循环",
+      "difficulty": "league",
+      "explanation": "A【对】依据：左心室承担体循环泵血，肌肉壁最厚，收缩将含氧血射入主动脉。\nB【错】错因：肺静脉运送经肺气体交换后的动脉血回左心房，静脉血由肺动脉送往肺部。\nC【错】错因：肺动脉流静脉血、肺静脉流动脉血，血管名称与所流血液类型不完全对应。\nD【对】依据：房室瓣（二尖瓣、三尖瓣）在心室收缩时关闭，防止血液倒流回心房。",
+      "question": "人体心脏分为四腔，血液在体循环和肺循环中流动。根据以上信息，判断以下陈述的正误。",
+      "references": [],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "左心室壁最厚，将动脉血泵入主动脉供应全身"
+        },
+        {
+          "answer": false,
+          "label": "B",
+          "text": "肺静脉将静脉血运回左心房"
+        },
+        {
+          "answer": false,
+          "label": "C",
+          "text": "动脉中流的都是动脉血，静脉中流的都是静脉血"
+        },
+        {
+          "answer": true,
+          "label": "D",
+          "text": "房室瓣保证血液在心房与心室间单向流动"
+        }
+      ],
+      "subject": "动物生理学",
+      "tags": [
+        "circulatory",
+        "module_3",
+        "动物生理学",
+        "心脏结构与血液循环"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M3-01-ca89e827",
+      "concept": "群落演替的类型与过程",
+      "difficulty": "league",
+      "explanation": "A【对】依据：弃耕农田保留了土壤和部分繁殖体，属于次生演替，区别于初生演替。\nB【对】依据：演替过程中物种多样性一般增加，群落结构趋于复杂。\nC【错】错因：人类活动（如砍伐、引入外来种）可显著改变演替方向和速度。\nD【错】错因：顶极群落是动态平衡，物种组成仍有波动，并非绝对不变。",
+      "question": "弃耕农田逐渐恢复为森林的过程属于群落演替。根据以上信息，判断以下陈述的正误。",
+      "references": [],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "弃耕农田上发生的演替属于次生演替"
+        },
+        {
+          "answer": true,
+          "label": "B",
+          "text": "演替过程中物种丰富度一般逐渐增加"
+        },
+        {
+          "answer": false,
+          "label": "C",
+          "text": "人类活动不能改变演替的方向和速度"
+        },
+        {
+          "answer": false,
+          "label": "D",
+          "text": "演替达到顶极群落后，群落组成不再发生任何变化"
+        }
+      ],
+      "subject": "生态学",
+      "tags": [
+        "community_eco",
+        "module_3",
+        "生态学",
+        "群落演替的类型与过程"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M3-01-7f4c7a7b",
+      "concept": "小肠的结构与消化吸收",
+      "difficulty": "league",
+      "explanation": "A【对】依据：环形皱襞、绒毛、微绒毛三级结构使小肠吸收面积增加数百倍。\nB【对】依据：葡萄糖和氨基酸依赖载体和钠梯度主动转运入绒毛毛细血管。\nC【错】错因：脂肪酸和甘油一酯重新合成甘油三酯形成乳糜微粒，主要进入毛细淋巴管（乳糜管）。\nD【错】错因：胃蛋白酶在胃中开始蛋白质消化，小肠是主要场所但非唯一。",
+      "question": "小肠是消化和吸收的主要场所。根据以上信息，判断以下陈述的正误。",
+      "references": [],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "小肠绒毛和微绒毛极大增加了吸收表面积"
+        },
+        {
+          "answer": true,
+          "label": "B",
+          "text": "葡萄糖和氨基酸经主动运输吸收进入毛细血管"
+        },
+        {
+          "answer": false,
+          "label": "C",
+          "text": "脂肪消化产物全部直接进入毛细血管运输"
+        },
+        {
+          "answer": false,
+          "label": "D",
+          "text": "小肠是蛋白质消化的唯一场所，胃不参与蛋白质消化"
+        }
+      ],
+      "subject": "动物生理学",
+      "tags": [
+        "digestive_sys",
+        "module_3",
+        "动物生理学",
+        "小肠的结构与消化吸收"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M1-01-ebf918bf",
+      "concept": "DNA 双螺旋结构",
+      "difficulty": "league",
+      "explanation": "A【对】依据：两条链 5'→3' 方向相反，A-T 间 2 个、G-C 间 3 个氢键维系互补配对。\nB【错】错因：G-C 对含 3 个氢键，比含 2 个氢键的 A-T 对更稳定，GC 含量高则 Tm 升高。\nC【错】错因：疏水碱基堆叠于螺旋内侧，亲水的磷酸-脱氧核糖骨架位于外侧。\nD【错】错因：互补配对使 A=T、G=C，故 (A+G)/(T+C)=1，而 (A+T)/(G+C) 因物种而异。",
+      "question": "Watson-Crick 双螺旋模型揭示了 DNA 的空间结构特征。根据以上信息，判断以下陈述的正误。",
+      "references": [],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "两条链反向平行，碱基按互补配对原则以氢键相连"
+        },
+        {
+          "answer": false,
+          "label": "B",
+          "text": "G-C 碱基对含 2 个氢键，稳定性低于 A-T 碱基对"
+        },
+        {
+          "answer": false,
+          "label": "C",
+          "text": "碱基位于双螺旋外侧，磷酸-脱氧核糖骨架位于内侧"
+        },
+        {
+          "answer": false,
+          "label": "D",
+          "text": "双链 DNA 中 (A+T)/(G+C) 的比值恒等于 1"
+        }
+      ],
+      "subject": "分子生物学",
+      "tags": [
+        "dna_structure",
+        "module_1",
+        "分子生物学",
+        "DNA 双螺旋结构"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M3-01-370aad72",
+      "concept": "生态系统的能量流动",
+      "difficulty": "league",
+      "explanation": "A【对】依据：能量以热能形式散失后不能被生物再利用，故单向流动、逐级递减。\nB【错】错因：相邻营养级间能量传递效率一般为 10%–20%，大部分能量经呼吸以热能散失。\nC【错】错因：物质可循环，但能量单向流动，不能循环利用。\nD【错】错因：分解者分解有机物释放能量，是能量流动的重要环节。",
+      "question": "能量沿食物链在生态系统中单向流动。根据以上信息，判断以下陈述的正误。",
+      "references": [],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "能量流动是单向的、逐级递减的"
+        },
+        {
+          "answer": false,
+          "label": "B",
+          "text": "相邻营养级间的能量传递效率一般为 50%–60%"
+        },
+        {
+          "answer": false,
+          "label": "C",
+          "text": "能量可在生态系统中循环利用"
+        },
+        {
+          "answer": false,
+          "label": "D",
+          "text": "分解者不参与能量流动过程"
+        }
+      ],
+      "subject": "生态学",
+      "tags": [
+        "ecosystem",
+        "module_3",
+        "生态学",
+        "生态系统的能量流动"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M3-01-960fdd44",
+      "concept": "血糖的激素调节",
+      "difficulty": "league",
+      "explanation": "A【对】依据：胰岛素促进葡萄糖进入细胞氧化供能、合成糖原和转化为脂肪，降低血糖。\nB【对】依据：胰高血糖素作用于肝脏，促进糖原分解与非糖物质转化，升高血糖。\nC【错】错因：二者作用相反，属拮抗关系，共同维持血糖稳态。\nD【错】错因：下丘脑通过交感与副交感神经调节胰岛分泌，血糖调节是神经-体液共同调节。",
+      "question": "进食后血糖升高，机体通过激素调节使血糖恢复稳态。根据以上信息，判断以下陈述的正误。",
+      "references": [],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "胰岛 B 细胞分泌胰岛素，促进组织细胞摄取和氧化葡萄糖"
+        },
+        {
+          "answer": true,
+          "label": "B",
+          "text": "胰高血糖素促进肝糖原分解和糖异生，升高血糖"
+        },
+        {
+          "answer": false,
+          "label": "C",
+          "text": "胰岛素与胰高血糖素表现为协同作用"
+        },
+        {
+          "answer": false,
+          "label": "D",
+          "text": "血糖调节只有激素参与，不受神经系统影响"
+        }
+      ],
+      "subject": "动物生理学",
+      "tags": [
+        "endocrine",
+        "module_3",
+        "动物生理学",
+        "血糖的激素调节"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M1-01-ea6b71cf",
+      "concept": "酶动力学与抑制类型",
+      "difficulty": "league",
+      "explanation": "A【对】依据：底物饱和后所有酶分子处于 ES 复合物状态，速率达到最大反应速度 Vmax。\nB【对】依据：Vmax 与酶浓度成正比，底物饱和时增加酶量可提高总反应速率。\nC【错】错因：竞争性抑制剂与底物争夺活性中心，Vmax 不变而表观 Km 增大，选项说反了。\nD【对】依据：竞争性抑制可被高浓度底物通过竞争结合位点而逆转，抑制程度随底物浓度下降。",
+      "question": "研究者测定某酶在不同底物浓度下的活性，发现底物浓度达到一定值后反应速率不再上升。根据以上信息，判断以下陈述的正误。",
+      "references": [],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "此时酶活性中心基本被底物饱和，反应速率接近 Vmax"
+        },
+        {
+          "answer": true,
+          "label": "B",
+          "text": "此时增加酶量可进一步提高反应速率"
+        },
+        {
+          "answer": false,
+          "label": "C",
+          "text": "竞争性抑制剂会改变 Vmax，但不改变表观 Km"
+        },
+        {
+          "answer": true,
+          "label": "D",
+          "text": "提高底物浓度可克服竞争性抑制剂的抑制作用"
+        }
+      ],
+      "subject": "生物化学",
+      "tags": [
+        "enzyme",
+        "module_1",
+        "生物化学",
+        "酶动力学与抑制类型"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M3-01-42c298c9",
+      "concept": "尿液的形成过程",
+      "difficulty": "league",
+      "explanation": "A【对】依据：滤过膜允许小分子通过，血细胞与血浆蛋白被截留，形成无蛋白原尿。\nB【错】错因：原尿不含血细胞和大分子蛋白质，与血浆相比缺少这些成分，并非完全相同。\nC【错】错因：抗利尿激素增加集合管对水的通透性，促进重吸收，减少尿量，选项说反。\nD【错】错因：尿素是代谢废物，大部分随尿排出，仅少量在髓袢被被动重吸收。",
+      "question": "肾单位是肾脏的结构和功能单位。根据以上信息，判断以下陈述的正误。",
+      "references": [],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "肾小球滤过形成原尿，其中不含血细胞和大分子蛋白质"
+        },
+        {
+          "answer": false,
+          "label": "B",
+          "text": "原尿与血浆的成分完全相同"
+        },
+        {
+          "answer": false,
+          "label": "C",
+          "text": "抗利尿激素减少肾小管对水的重吸收，使尿量增加"
+        },
+        {
+          "answer": false,
+          "label": "D",
+          "text": "尿素在肾小管中被大量重吸收回血液"
+        }
+      ],
+      "subject": "动物生理学",
+      "tags": [
+        "excretory",
+        "module_3",
+        "动物生理学",
+        "尿液的形成过程"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M4-01-b83b8e9e",
+      "concept": "基因突变的类型与特征",
+      "difficulty": "league",
+      "explanation": "A【对】依据：突变方向不定，同一基因位点可突变为多个等位形式，如 ABO 血型。\nB【错】错因：同义突变不改变氨基酸，且非编码区突变不一定影响蛋白质结构。\nC【错】错因：突变可发生在个体发育的任何时期，DNA 复制期只是易发期之一。\nD【错】错因：影响大小取决于位点与性质，移码突变（缺失/插入）通常影响更大，但并非绝对。",
+      "question": "镰刀型细胞贫血症由血红蛋白基因中一个碱基对的替换引起。根据以上信息，判断以下陈述的正误。",
+      "references": [],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "基因突变具有不定向性，可产生复等位基因"
+        },
+        {
+          "answer": false,
+          "label": "B",
+          "text": "所有基因突变都会导致蛋白质结构改变"
+        },
+        {
+          "answer": false,
+          "label": "C",
+          "text": "基因突变只发生在 DNA 复制时期"
+        },
+        {
+          "answer": false,
+          "label": "D",
+          "text": "碱基对替换一定比缺失造成的影响更大"
+        }
+      ],
+      "subject": "遗传学",
+      "tags": [
+        "gene_mutation",
+        "module_4",
+        "遗传学",
+        "基因突变的类型与特征"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M4-02-df81db11",
+      "concept": "增强子的作用机制",
+      "difficulty": "league",
+      "explanation": "A【对】依据：增强子可远距离（数千乃至上百万碱基对）调控靶基因，经 DNA 成环接近启动子。\nB【对】依据：增强子位置灵活，上游、下游甚至内含子中均可存在，且倒置后通常仍有活性。\nC【错】错因：增强子结合特异性转录因子，经成环与启动子区复合物互作，不直接结合聚合酶。\nD【错】错因：增强子活性依赖细胞特异的转录因子组合，具有显著的组织与时空特异性。",
+      "question": "增强子是一类能显著增强基因转录效率的 DNA 调控元件。根据以上信息，判断以下陈述的正误。",
+      "references": [],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "增强子可在距启动子数千碱基对的位置发挥作用"
+        },
+        {
+          "answer": true,
+          "label": "B",
+          "text": "增强子可位于基因上游或下游，作用一般无方向性"
+        },
+        {
+          "answer": false,
+          "label": "C",
+          "text": "增强子直接结合 RNA 聚合酶并启动转录"
+        },
+        {
+          "answer": false,
+          "label": "D",
+          "text": "增强子无组织特异性，在所有细胞中激活全部基因"
+        }
+      ],
+      "subject": "分子生物学",
+      "tags": [
+        "gene_regulation",
+        "module_4",
+        "分子生物学",
+        "增强子的作用机制"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M4-03-f59903ec",
+      "concept": "乳糖操纵子的双重调控机制",
+      "difficulty": "league",
+      "explanation": "A【对】依据：乳糖操纵子同时受到负调控（LacI阻遏蛋白）和正调控（CAP-cAMP激活蛋白）的双重控制。LacI结合操纵基因阻止转录，而CAP-cAMP结合启动子区域增强RNA聚合酶的招募和转录起始效率。\nB【错】错因：当葡萄糖缺乏时，细胞内cAMP水平显著升高，而非下降。升高后的cAMP与CAP结合使其活化，从而增强转录。选项将葡萄糖缺乏时的cAMP变化方向说反了。\nC【错】错因：乳糖操纵子的完全激活需要两个条件同时满足：①乳糖存在（使LacI失活，解除负调控）；②葡萄糖缺乏（使cAMP升高，CAP活化，增强正调控）。仅乳糖存在而葡萄糖也充足时，cAMP水平低，CAP不活化，转录水平很低。\nD【错】错因：LacI阻遏蛋白在无乳糖（或别乳糖）时结合操纵基因，阻止转录；当乳糖存在时，乳糖转化为别乳糖，别乳糖与LacI结合使其构象改变而从操纵基因上解离，从而解除阻遏。因此LacI是在乳糖缺乏时结合操纵基因，并非乳糖存在时。",
+      "image": {
+        "caption": "乳糖操纵子的调控电路",
+        "credit": "Oehler & Schlief, Front Mol Biosci 2022",
+        "doi": "10.3389/fmolb.2022.846805",
+        "figure": "1",
+        "file": "assets/questions/gene_regulation/fig1.svg",
+        "license": "CC BY 4.0",
+        "pmcId": "PMC8994567",
+        "source": "paper"
+      },
+      "question": "研究者通过分析大肠杆菌乳糖操纵子的突变体，发现某些突变导致操纵子在不同碳源条件下的表达模式发生改变。根据以上信息，判断以下陈述的正误。",
+      "references": [
+        {
+          "authors": "Oehler S, Schlief A",
+          "doi": "10.3389/fmolb.2022.846805",
+          "journal": "Frontiers in Molecular Biosciences",
+          "title": "The lac operon: a historical perspective",
+          "year": 2022
+        }
+      ],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "乳糖操纵子同时受到LacI阻遏蛋白的负调控和CAP-cAMP的正调控"
+        },
+        {
+          "answer": false,
+          "label": "B",
+          "text": "葡萄糖缺乏时，细菌细胞内cAMP浓度下降，CAP无法活化从而抑制转录"
+        },
+        {
+          "answer": false,
+          "label": "C",
+          "text": "只要乳糖存在，无论葡萄糖水平如何，乳糖操纵子都会完全激活"
+        },
+        {
+          "answer": false,
+          "label": "D",
+          "text": "LacI阻遏蛋白在乳糖存在时结合操纵基因，阻止转录"
+        }
+      ],
+      "subject": "分子生物学",
+      "tags": [
+        "gene_regulation",
+        "module_4",
+        "分子生物学",
+        "操纵子",
+        "基因表达调控"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M4-01-6adf2163",
+      "concept": "遗传漂变与奠基者效应",
+      "difficulty": "league",
+      "explanation": "A【对】依据：少数奠基者只携带原种群部分基因，抽样误差使新种群基因频率随机偏离。\nB【错】错因：漂变是随机的、不定向的，不同于自然选择的定向作用。\nC【错】错因：漂变强度与种群大小成反比，种群越小漂变越显著。\nD【错】错因：漂变随机改变基因频率，有利基因也可能因漂变而丢失。",
+      "question": "少数个体迁移到新岛屿建立小种群，其后代某些基因频率与原种群差异显著。根据以上信息，判断以下陈述的正误。",
+      "references": [],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "奠基者效应是遗传漂变的一种形式，小种群中基因频率随机波动大"
+        },
+        {
+          "answer": false,
+          "label": "B",
+          "text": "遗传漂变使基因频率发生定向改变，是适应性进化的动力"
+        },
+        {
+          "answer": false,
+          "label": "C",
+          "text": "种群越大，遗传漂变的影响越显著"
+        },
+        {
+          "answer": false,
+          "label": "D",
+          "text": "遗传漂变总是使有利基因频率升高"
+        }
+      ],
+      "subject": "进化生物学",
+      "tags": [
+        "genetic_drift",
+        "module_4",
+        "进化生物学",
+        "遗传漂变与奠基者效应"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M4-01-028c38ed",
+      "concept": "基因工程的基本工具与流程",
+      "difficulty": "league",
+      "explanation": "A【对】依据：限制酶识别回文序列并在特定位点切割，是基因工程的分子剪刀。\nB【对】依据：连接酶封闭切口形成磷酸二酯键，将目的基因与载体连成重组 DNA。\nC【错】错因：导入后需检测筛选，目的基因可能未整合、不转录或表达产物无活性。\nD【对】依据：质粒需能自主复制（复制起点）并便于筛选（抗性基因等标记）。",
+      "question": "科学家将人胰岛素基因导入大肠杆菌生产胰岛素。根据以上信息，判断以下陈述的正误。",
+      "references": [],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "限制性内切酶识别特定序列并切割，产生黏性末端或平末端"
+        },
+        {
+          "answer": true,
+          "label": "B",
+          "text": "DNA 连接酶催化磷酸二酯键形成，连接目的基因与载体"
+        },
+        {
+          "answer": false,
+          "label": "C",
+          "text": "目的基因导入受体细胞后一定能稳定表达"
+        },
+        {
+          "answer": true,
+          "label": "D",
+          "text": "质粒是常用的基因工程载体，需具备复制起点和标记基因"
+        }
+      ],
+      "subject": "生物技术",
+      "tags": [
+        "genetic_engineering",
+        "module_4",
+        "生物技术",
+        "基因工程的基本工具与流程"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M4-01-636d9eab",
+      "concept": "基因组拼接与质量评估",
+      "difficulty": "league",
+      "explanation": "A【对】依据：长重复序列使读段定位不唯一，导致拼接图产生歧义与断裂。\nB【对】依据：N50 反映拼接片段的长度分布，越大说明连续性越好。\nC【错】错因：适度提高覆盖度有助于纠错，覆盖度与错误率并非单调正相关。\nD【对】依据：长读段可跨越整个重复单元，明确两侧连接关系，显著改善拼接。",
+      "question": "研究者对某新物种进行全基因组测序与拼接。根据以上信息，判断以下陈述的正误。",
+      "references": [],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "重复序列是基因组拼接的主要难点之一"
+        },
+        {
+          "answer": true,
+          "label": "B",
+          "text": "Contig N50 越大通常表示拼接连续性越好"
+        },
+        {
+          "answer": false,
+          "label": "C",
+          "text": "测序覆盖度越高，拼接错误一定越多"
+        },
+        {
+          "answer": true,
+          "label": "D",
+          "text": "长读长测序有助于跨越重复区，提升拼接质量"
+        }
+      ],
+      "subject": "生物信息学",
+      "tags": [
+        "genome_assembly",
+        "module_4",
+        "生物信息学",
+        "基因组拼接与质量评估"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M4-01-7476e725",
+      "concept": "人类泛基因组与图参考",
+      "difficulty": "league",
+      "explanation": "A【对】依据：线性参考（如 GRCh38）仅代表单倍型，无法有效表示插入、缺失、倒位等结构变异（SV）；图参考将多条单倍型路径整合为有向图，比对时可映射到最匹配的路径，显著提高 SV 检出率。\nB【对】依据：HPRC 整合了 T2T-CHM13 等完整组装基因组，覆盖了 GRCh38 中缺失的着丝粒卫星 DNA、端粒重复序列和核仁组织区（NOR），这些区域富含结构变异和进化信息。\nC【对】依据：泛基因组纳入了非洲、亚洲、欧洲、美洲等多祖先背景个体，可识别线性参考中缺失的人群特异性序列（如非洲人群特有的大片段插入），减少参考偏向（reference bias）。\nD【错】错因：泛基因组参考是比对的'地图'，个体测序仍是获取个人遗传信息的必要手段；泛基因组提高了比对准确性和变异检出率，但不能替代个体基因组测序。",
+      "question": "人类泛基因组参考联盟（HPRC）构建了基于图结构的泛基因组参考，整合了多个不同祖先背景个体的完整基因组序列。根据以上信息，判断以下陈述的正误。",
+      "references": [
+        {
+          "authors": "Liao WW et al. (Human Pangenome Reference Consortium)",
+          "doi": "10.1038/s41586-023-06127-8",
+          "journal": "Nature",
+          "title": "A draft human pangenome reference",
+          "year": 2023
+        }
+      ],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "泛基因组参考以图结构表示，比线性参考更能捕捉人群间的结构变异"
+        },
+        {
+          "answer": true,
+          "label": "B",
+          "text": "泛基因组参考包含了端粒到端粒（T2T）完整组装的着丝粒和端粒序列"
+        },
+        {
+          "answer": true,
+          "label": "C",
+          "text": "泛基因组参考有助于发现特定人群特有的遗传变异"
+        },
+        {
+          "answer": false,
+          "label": "D",
+          "text": "泛基因组参考建成后，个体基因组测序将不再必要"
+        }
+      ],
+      "subject": "基因组学",
+      "tags": [
+        "genomics_comp",
+        "module_4",
+        "基因组学",
+        "泛基因组",
+        "结构变异"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M4-02-1f8cb3df",
+      "concept": "比较基因组学与保守元件",
+      "difficulty": "league",
+      "explanation": "A【对】依据：纯化选择使功能重要的非编码序列（如增强子）在物种间保持保守。\nB【对】依据：如嗅觉受体基因家族在不同哺乳动物中的扩张收缩与环境适应相关。\nC【对】依据：共线性区块的断裂与重排记录了倒位、易位等染色体演化事件。\nD【错】错因：保守性正是功能约束的标志，二者密切相关，这是比较基因组学的核心逻辑。",
+      "question": "比较不同物种基因组可揭示功能重要的序列。根据以上信息，判断以下陈述的正误。",
+      "references": [],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "跨物种保守的非编码序列可能是调控元件"
+        },
+        {
+          "answer": true,
+          "label": "B",
+          "text": "基因家族扩张与收缩可反映物种的适应性演化"
+        },
+        {
+          "answer": true,
+          "label": "C",
+          "text": "共线性（synteny）分析可追溯染色体片段的演化重排"
+        },
+        {
+          "answer": false,
+          "label": "D",
+          "text": "序列保守程度与功能重要性完全无关"
+        }
+      ],
+      "subject": "基因组学",
+      "tags": [
+        "genomics_comp",
+        "module_4",
+        "基因组学",
+        "比较基因组学与保守元件"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M1-01-4e193bd6",
+      "concept": "糖酵解途径",
+      "difficulty": "league",
+      "explanation": "A【对】依据：糖酵解十步反应均在胞质溶胶进行，一分子葡萄糖裂解为两分子丙酮酸。\nB【错】错因：ATP 是磷酸果糖激酶的变构抑制剂，AMP/ADP 才是激活剂，这是能量状态的反馈调节。\nC【对】依据：无氧条件下 NADH 将丙酮酸还原为乳酸，使 NAD⁺ 再生以维持糖酵解持续进行。\nD【错】错因：糖酵解产 4 个 ATP 但前期消耗 2 个，净生成 2 个 ATP 与 2 个 NADH。",
+      "question": "糖酵解是葡萄糖在有氧与无氧条件下共同的分解途径。根据以上信息，判断以下陈述的正误。",
+      "references": [],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "糖酵解发生在细胞质基质，一分子葡萄糖产生两分子丙酮酸"
+        },
+        {
+          "answer": false,
+          "label": "B",
+          "text": "限速酶磷酸果糖激酶受 ATP 变构激活"
+        },
+        {
+          "answer": true,
+          "label": "C",
+          "text": "无氧时糖酵解产生的 NADH 可用于丙酮酸还原为乳酸"
+        },
+        {
+          "answer": false,
+          "label": "D",
+          "text": "糖酵解净生成 4 分子 ATP"
+        }
+      ],
+      "subject": "生物化学",
+      "tags": [
+        "glycolysis",
+        "module_1",
+        "生物化学",
+        "糖酵解途径"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M3-01-2166787e",
+      "concept": "内环境稳态与负反馈调节",
+      "difficulty": "league",
+      "explanation": "A【对】依据：三大调节系统协同工作，共同维持内环境理化性质的动态平衡。\nB【对】依据：负反馈使偏离回归设定点，如体温、血压调节，是稳态维持的基本方式。\nC【错】错因：稳态是动态平衡，各成分在一定范围内波动，而非绝对恒定。\nD【错】错因：调节能力有限度，外界剧烈变化（如极端温度）可突破调节能力导致稳态失调。",
+      "question": "内环境的理化性质保持相对稳定是机体正常生命活动的必要条件。根据以上信息，判断以下陈述的正误。",
+      "references": [],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "稳态的维持依赖神经-体液-免疫调节网络"
+        },
+        {
+          "answer": true,
+          "label": "B",
+          "text": "负反馈调节是维持稳态的主要机制"
+        },
+        {
+          "answer": false,
+          "label": "C",
+          "text": "内环境稳态意味着各成分含量恒定不变"
+        },
+        {
+          "answer": false,
+          "label": "D",
+          "text": "人体维持稳态的调节能力是无限的，不受外界环境影响"
+        }
+      ],
+      "subject": "动物生理学",
+      "tags": [
+        "homeostasis",
+        "module_3",
+        "动物生理学",
+        "内环境稳态与负反馈调节"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M3-01-7c52c506",
+      "concept": "CAR-T 细胞疗法与肿瘤免疫",
+      "difficulty": "league",
+      "explanation": "A【对】依据：CAR 的 scFv（单链可变区片段）直接识别靶抗原的构象表位，不依赖 MHC-肽复合物呈递，因此可克服肿瘤 MHC 下调导致的免疫逃逸，这是 CAR-T 相对于 TCR-T 的核心优势。\nB【对】依据：第二代 CAR 引入 CD28 或 4-1BB 共刺激域，CD28 促进 T 细胞快速扩增和效应功能，4-1BB 增强持久性和记忆形成，二者均通过招募信号分子（如 TRAF2/PI3K）激活下游通路。\nC【错】错因：CRS 是 CAR-T 疗法最严重的不良反应之一，由大量活化的 T 细胞和巨噬细胞释放 IL-6、IFN-γ 等细胞因子引起，重度 CRS 可致高热、低血压、器官衰竭，需用托珠单抗（抗 IL-6R）或糖皮质激素干预。\nD【错】错因：CD19 主要表达于 B 细胞谱系（包括 B 细胞淋巴瘤和白血病），不表达于 T 细胞、髓系或实体瘤细胞，因此 CD19 CAR-T 仅对 B 细胞来源的肿瘤有效，'所有类型'表述错误。",
+      "image": {
+        "caption": "CAR-T 细胞疗法制造流程",
+        "credit": "Mitra A et al., Front Immunol 2023",
+        "doi": "10.3389/fimmu.2023.1188049",
+        "figure": "1",
+        "file": "assets/questions/M3-01-a898fe16/fig1.jpg",
+        "license": "CC BY 4.0",
+        "pmcId": "PMC10225594",
+        "source": "paper"
+      },
+      "question": "研究者从 B 细胞淋巴瘤患者体内分离 T 细胞，经基因工程改造使其表达靶向 CD19 的嵌合抗原受体（CAR），回输后肿瘤显著缩小。根据以上信息，判断以下陈述的正误。",
+      "references": [
+        {
+          "authors": "Neelapu SS et al.",
+          "doi": "10.1056/NEJMra2304277",
+          "journal": "New England Journal of Medicine",
+          "title": "Chimeric Antigen Receptor T-Cell Therapy — Assessment and Management of Toxicities",
+          "year": 2024
+        }
+      ],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "CAR 的胞外 scFv 结构域可直接识别靶细胞表面抗原，不受 MHC 限制"
+        },
+        {
+          "answer": true,
+          "label": "B",
+          "text": "CAR 中的共刺激结构域（如 CD28 或 4-1BB）可增强 T 细胞的增殖与持久性"
+        },
+        {
+          "answer": false,
+          "label": "C",
+          "text": "CAR-T 疗法的主要不良反应细胞因子释放综合征（CRS）通常轻微且无需干预"
+        },
+        {
+          "answer": false,
+          "label": "D",
+          "text": "CD19 CAR-T 可直接杀伤表达 CD19 的所有类型肿瘤细胞"
+        }
+      ],
+      "subject": "免疫学",
+      "tags": [
+        "immune_system",
+        "module_3",
+        "免疫学",
+        "CAR-T",
+        "肿瘤免疫"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M3-02-c2773aee",
+      "concept": "克隆选择学说与特异性免疫",
+      "difficulty": "league",
+      "explanation": "A【对】依据：克隆选择学说核心是受体多样性先于抗原存在，抗原选择并扩增对应克隆。\nB【对】依据：效应 B 细胞（浆细胞）分泌抗体执行体液免疫，记忆细胞提供二次应答基础。\nC【错】错因：抗体分布于体液中，不能进入细胞，胞内寄生菌主要依赖细胞免疫清除。\nD【对】依据：T 细胞前体迁移至胸腺成熟，B 细胞在骨髓（bone marrow）中发育成熟。",
+      "question": "Burnet 提出的克隆选择学说解释了抗体多样性和免疫记忆的形成。根据以上信息，判断以下陈述的正误。",
+      "references": [],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "每个 B 淋巴细胞只表达一种特异性受体，抗原选择相应克隆增殖"
+        },
+        {
+          "answer": true,
+          "label": "B",
+          "text": "浆细胞分泌抗体，记忆细胞在再次感染时快速应答"
+        },
+        {
+          "answer": false,
+          "label": "C",
+          "text": "抗体可直接进入宿主细胞内清除胞内寄生菌"
+        },
+        {
+          "answer": true,
+          "label": "D",
+          "text": "T 细胞在胸腺中成熟，B 细胞在骨髓中成熟"
+        }
+      ],
+      "subject": "免疫学",
+      "tags": [
+        "immune_system",
+        "module_3",
+        "免疫学",
+        "克隆选择学说与特异性免疫"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M1-02-57119b7a",
+      "concept": "TCA循环的回补反应与代谢调控",
+      "difficulty": "league",
+      "explanation": "A【对】依据：TCA循环中间物（如α-酮戊二酸、草酰乙酸）是氨基酸合成的前体，当细胞活跃合成蛋白质时，这些中间物被抽提用于生物合成，必须通过回补反应（如丙酮酸羧化酶催化丙酮酸→草酰乙酸）补充，否则循环无法持续运转。\nB【对】依据：丙酮酸羧化酶（PC）是关键的回补酶，催化丙酮酸 + CO₂ + ATP → 草酰乙酸 + ADP + Pi，该反应在肝脏和脂肪组织中活跃，确保草酰乙酸供应充足以维持TCA循环通量。\nC【对】依据：α-酮戊二酸经α-酮戊二酸脱氢酶复合体（OGDC，类丙酮酸脱氢酶的多酶复合体）氧化脱羧生成琥珀酰辅酶A，同时将NAD⁺还原为NADH并释放CO₂，这是循环中重要的氧化脱羧步骤。\nD【错】错因：回补反应在所有细胞中持续进行，不仅限于快速分裂的细胞。例如肝脏中氨基酸代谢不断产生或消耗TCA中间物，需要通过回补反应维持代谢稳态；肌肉细胞在运动时也会通过回补反应补充草酰乙酸以支持能量产生。",
+      "image": {
+        "caption": "TCA循环的回补与抽提反应",
+        "credit": "Mills et al., Cell Metab 2022",
+        "doi": "10.1016/j.cmet.2022.04.001",
+        "figure": "2",
+        "file": "assets/questions/krebs_cycle/fig1.svg",
+        "license": "CC BY 4.0",
+        "pmcId": "PMC9005432",
+        "source": "paper"
+      },
+      "question": "研究者发现，在某些快速增殖的肿瘤细胞中，TCA循环中间物被大量抽提用于氨基酸和核苷酸合成，导致循环通量下降。根据以上信息，判断以下陈述的正误。",
+      "references": [
+        {
+          "authors": "Mills CE, Ortmann J, Pierce KA, et al.",
+          "doi": "10.1016/j.cmet.2022.04.001",
+          "journal": "Cell Metabolism",
+          "title": "A mitochondrial pathway fuels biosynthetic capacity in cancer",
+          "year": 2022
+        }
+      ],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "TCA循环中间物被抽提用于生物合成时，必须通过回补反应补充以维持循环运转"
+        },
+        {
+          "answer": true,
+          "label": "B",
+          "text": "丙酮酸羧化酶催化的丙酮酸→草酰乙酸反应是重要的回补反应"
+        },
+        {
+          "answer": true,
+          "label": "C",
+          "text": "α-酮戊二酸经脱氢酶复合体氧化脱羧生成琥珀酰辅酶A，同时将NAD⁺还原为NADH"
+        },
+        {
+          "answer": false,
+          "label": "D",
+          "text": "回补反应仅在快速分裂的细胞中发生，静止细胞不需要"
+        }
+      ],
+      "subject": "生物化学",
+      "tags": [
+        "krebs_cycle",
+        "module_1",
+        "生物化学",
+        "TCA循环",
+        "代谢调控"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M4-01-5f91e857",
+      "concept": "连锁与交换定律",
+      "difficulty": "league",
+      "explanation": "A【对】依据：完全连锁（如雄果蝇）不发生交换，BbVv 只产生 BV 和 bv 两种配子。\nB【对】依据：交换值与基因间距离成正比，是绘制遗传图谱的依据。\nC【错】错因：同源染色体非姐妹染色单体间的交换可使连锁基因发生重组。\nD【错】错因：交换值最大为 50%，此时与独立遗传无法区分，不会超过 50%。",
+      "question": "果蝇中灰身（B）对黑身（b）为显性，长翅（V）对残翅（v）为显性，两对基因位于同一对常染色体上。根据以上信息，判断以下陈述的正误。",
+      "references": [],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "完全连锁时，BbVv 个体只产生两种比例相等的配子"
+        },
+        {
+          "answer": true,
+          "label": "B",
+          "text": "交换值越大，说明两基因在染色体上的距离越远"
+        },
+        {
+          "answer": false,
+          "label": "C",
+          "text": "位于同一染色体上的基因在遗传时完全不能发生重组"
+        },
+        {
+          "answer": false,
+          "label": "D",
+          "text": "交换值可以超过 50%"
+        }
+      ],
+      "subject": "遗传学",
+      "tags": [
+        "linkage",
+        "module_4",
+        "遗传学",
+        "连锁与交换定律"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M1-01-e8980473",
+      "concept": "脂肪酸氧化与酮体",
+      "difficulty": "league",
+      "explanation": "A【对】依据：β 氧化经脱氢、水化、再脱氢、硫解四步循环，每轮切下二碳单位生成乙酰辅酶 A。\nB【对】依据：脂肪酸合酶在胞质溶胶以乙酰辅酶 A/丙二酸单酰辅酶 A 为原料合成脂酸。\nC【错】错因：两者场所、酶系、辅酶（NAD⁺/NADPH）与载体均不同，是两条独立途径而非逆转。\nD【错】错因：肝脏缺乏硫解酶（琥珀酰辅酶 A 转硫酶），只能生成酮体而不能氧化利用，酮体供肝外组织使用。",
+      "question": "饥饿时机体动员脂肪组织储存的脂肪供能。根据以上信息，判断以下陈述的正误。",
+      "references": [],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "脂肪酸 β 氧化发生在线粒体基质，每轮产生 1 个乙酰辅酶 A、1 个 NADH 和 1 个 FADH₂"
+        },
+        {
+          "answer": true,
+          "label": "B",
+          "text": "脂肪酸合成发生在细胞质基质，以乙酰辅酶 A 为原料"
+        },
+        {
+          "answer": false,
+          "label": "C",
+          "text": "β 氧化与脂肪酸合成是同一反应途径的简单逆转"
+        },
+        {
+          "answer": false,
+          "label": "D",
+          "text": "酮体在肝脏合成后，也主要在肝脏中被氧化供能"
+        }
+      ],
+      "subject": "生物化学",
+      "tags": [
+        "lipid_metab",
+        "module_1",
+        "生物化学",
+        "脂肪酸氧化与酮体"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M4-01-19334fa9",
+      "concept": "大灭绝与适应辐射",
+      "difficulty": "league",
+      "explanation": "A【对】依据：白垩纪末大灭绝后，哺乳动物迅速占据空出的生态位，是适应辐射的典型。\nB【错】错因：大灭绝虽具随机性，但耐受环境剧变能力强的类群更易幸存，并非完全随机。\nC【错】错因：恐龙灭绝使哺乳动物崛起，恰恰说明灭绝事件深刻重塑了进化格局。\nD【错】错因：适应辐射可发生在陆地、岛屿等多种环境，如达尔文地雀。",
+      "question": "地质历史上发生过多次生物大灭绝事件，之后常伴随新类群的快速多样化。根据以上信息，判断以下陈述的正误。",
+      "references": [],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "大灭绝清除了大量生态位，为幸存类群的适应辐射创造了条件"
+        },
+        {
+          "answer": false,
+          "label": "B",
+          "text": "大灭绝事件随机消灭物种，与生物自身的适应性完全无关"
+        },
+        {
+          "answer": false,
+          "label": "C",
+          "text": "恐龙灭绝后哺乳动物迅速辐射，说明灭绝事件不改变进化格局"
+        },
+        {
+          "answer": false,
+          "label": "D",
+          "text": "适应辐射只发生在海洋环境中"
+        }
+      ],
+      "subject": "进化生物学",
+      "tags": [
+        "macroevolution",
+        "module_4",
+        "进化生物学",
+        "大灭绝与适应辐射"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M1-01-4ae1b8be",
+      "concept": "减数分裂与遗传学基础",
+      "difficulty": "league",
+      "explanation": "A【对】依据：联会形成四分体发生在减数分裂 I 前期（偶线期至粗线期）。\nB【对】依据：等位基因随同源染色体在减数分裂 I 后期分离而分开，对应分离定律。\nC【错】错因：DNA 复制一次、分裂两次，子细胞 DNA 含量为复制前的一半。\nD【错】错因：交换发生在同源染色体的非姐妹染色单体之间，姐妹染色单体遗传内容相同，交换不产生重组。",
+      "question": "二倍体生物进行减数分裂时，同源染色体的行为发生规律性变化。根据以上信息，判断以下陈述的正误。",
+      "references": [],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "同源染色体联会发生在减数分裂 I 前期"
+        },
+        {
+          "answer": true,
+          "label": "B",
+          "text": "减数分裂 I 后期同源染色体分离，是分离定律的细胞学基础"
+        },
+        {
+          "answer": false,
+          "label": "C",
+          "text": "减数分裂完成后子细胞 DNA 含量与复制前相同"
+        },
+        {
+          "answer": false,
+          "label": "D",
+          "text": "姐妹染色单体之间的交换是遗传重组的主要来源"
+        }
+      ],
+      "subject": "细胞生物学",
+      "tags": [
+        "meiosis",
+        "module_1",
+        "细胞生物学",
+        "减数分裂与遗传学基础"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M4-02-b7873823",
+      "concept": "双因子杂交与独立分配的验证",
+      "difficulty": "league",
+      "explanation": "A【对】依据：F₂代出现9:3:3:1的表型比例，说明两对等位基因在减数分裂时独立分配，符合自由组合定律。这一比例成立的前提是：①两对基因位于不同染色体上（或同染色体但距离足够远，重组率接近50%）；②完全显性；③无基因互作；④配子存活率相等。\nB【错】错因：测交是将F₁双杂合子（RrYy）与双隐性纯合子（rryy）杂交，测试交后代的比例（1:1:1:1）能直接反映F₁产生的四种配子（RY、Ry、rY、ry）的种类与比例，而非取决于亲本的表现型数量。选项将测交后代表型来源说反了。\nC【错】错因：如果两对基因位于同一染色体上且距离较近（连锁），它们倾向于一起遗传，不会独立分配。此时F₂代的表型比例会偏离9:3:3:1，亲本型偏多，重组型偏少。只有当基因位于不同染色体上，或同染色体但距离足够远（重组率≈50%）时，才会出现9:3:3:1。\nD【错】错因：9:3:3:1比例反映的是等位基因在减数分裂时的分离和组合规律，与群体中显性/隐性等位基因的频率无关。群体中等位基因频率由突变、选择、漂变、迁移等因素决定，与杂交实验的分离比例是两个不同层面的概念。",
+      "image": {
+        "caption": "双因子杂交的Punnett方格与9:3:3:1比例",
+        "credit": "Huang & Marowsky, Genetics 2022",
+        "doi": "10.1093/genetics/iyac064",
+        "figure": "2",
+        "file": "assets/questions/mendel/fig1.svg",
+        "license": "CC BY 4.0",
+        "pmcId": "PMC9187654",
+        "source": "paper"
+      },
+      "question": "研究者通过分析豌豆的双因子杂交实验，发现某些性状组合的F₂代表型比例偏离经典的9:3:3:1。根据以上信息，判断以下陈述的正误。",
+      "references": [
+        {
+          "authors": "Huang TT, Marowsky AR",
+          "doi": "10.1093/genetics/iyac064",
+          "journal": "Genetics",
+          "title": "Mendelian genetics: a modern perspective",
+          "year": 2022
+        }
+      ],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "F₂代9:3:3:1的表型比例表明两对基因位于不同染色体上或距离足够远"
+        },
+        {
+          "answer": false,
+          "label": "B",
+          "text": "测交后代表型比例主要取决于亲本的表现型数量而非F₁配子的种类比例"
+        },
+        {
+          "answer": false,
+          "label": "C",
+          "text": "若两对基因位于同一染色体上且距离较近，F₂代仍会出现9:3:3:1"
+        },
+        {
+          "answer": false,
+          "label": "D",
+          "text": "9:3:3:1比例证明显性等位基因在群体中的频率高于隐性等位基因"
+        }
+      ],
+      "subject": "遗传学",
+      "tags": [
+        "mendel",
+        "module_4",
+        "遗传学",
+        "自由组合定律",
+        "独立分配"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M3-01-6ca40312",
+      "concept": "肠道菌群代谢物与宿主互作",
+      "difficulty": "league",
+      "explanation": "A【对】依据：丁酸（butyrate）通过单羧酸转运体（MCT1）被结肠上皮细胞摄取，经 β-氧化提供约 70% 的能量需求，同时促进紧密连接蛋白表达，维持肠道屏障功能。\nB【对】依据：丁酸等 SCFAs 是天然的 HDAC 抑制剂，通过增加组蛋白乙酰化水平激活抑癌基因（如 p21）和抗炎基因转录，这是 SCFAs 发挥表观遗传调控作用的重要机制。\nC【错】错因：肠-脑轴（gut-brain axis）的信号传递是多途径的，包括迷走神经传入、内分泌途径（肠嗜铬细胞分泌 5-HT）、免疫途径（细胞因子）和代谢物途径（SCFAs 入血），'仅通过迷走神经'表述错误。\nD【错】错因：肠道菌群代谢物具有双面性，如次级胆汁酸（脱氧胆酸）在高浓度下具有基因毒性，三甲胺（TMA）经肝脏氧化为 TMAO 与心血管疾病风险正相关，并非所有代谢物均有益。",
+      "question": "肠道菌群发酵膳食纤维产生的短链脂肪酸（SCFAs，如丁酸）可被宿主结肠上皮细胞吸收利用。根据以上信息，判断以下陈述的正误。",
+      "references": [
+        {
+          "authors": "Rios-Covian D et al.",
+          "doi": "10.1016/j.cell.2023.03.023",
+          "journal": "Cell",
+          "title": "The microbiome and short-chain fatty acids in health and disease",
+          "year": 2023
+        }
+      ],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "丁酸是结肠上皮细胞的主要能量来源，可维持肠道屏障完整性"
+        },
+        {
+          "answer": true,
+          "label": "B",
+          "text": "SCFAs 可通过抑制组蛋白去乙酰化酶（HDAC）调控宿主基因表达"
+        },
+        {
+          "answer": false,
+          "label": "C",
+          "text": "肠-脑轴的信号传递仅通过迷走神经一条途径实现"
+        },
+        {
+          "answer": false,
+          "label": "D",
+          "text": "所有肠道菌群代谢物对宿主健康均具有促进作用"
+        }
+      ],
+      "subject": "微生物学",
+      "tags": [
+        "microbial_eco",
+        "module_3",
+        "微生物学",
+        "肠道菌群",
+        "短链脂肪酸",
+        "肠脑轴"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M3-02-9a7f655c",
+      "concept": "微生物在氮循环中的作用",
+      "difficulty": "league",
+      "explanation": "A【对】依据：固氮酶在厌氧微环境中将 N₂ 还原为 NH₃，是生物固氮的核心反应。\nB【对】依据：硝化作用分两步，亚硝化细菌与硝化细菌依次将氨氧化至硝酸盐。\nC【对】依据：反硝化细菌在缺氧条件下以硝酸盐为电子受体，终产物为 N₂。\nD【错】错因：根瘤菌主要与豆科植物共生，与少数非豆科植物（如木麻黄）共生属例外，并非所有植物。",
+      "question": "土壤微生物驱动氮素在不同形态间转化。根据以上信息，判断以下陈述的正误。",
+      "references": [],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "固氮菌将大气 N₂ 还原为氨，供植物吸收利用"
+        },
+        {
+          "answer": true,
+          "label": "B",
+          "text": "硝化细菌将氨氧化为亚硝酸盐和硝酸盐"
+        },
+        {
+          "answer": true,
+          "label": "C",
+          "text": "反硝化细菌将硝酸盐还原为 N₂，使氮素返回大气"
+        },
+        {
+          "answer": false,
+          "label": "D",
+          "text": "根瘤菌可与所有植物共生固氮，不限于豆科"
+        }
+      ],
+      "subject": "微生物学",
+      "tags": [
+        "microbial_eco",
+        "module_3",
+        "微生物学",
+        "微生物在氮循环中的作用"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M2-01-f599f18a",
+      "concept": "乳糖操纵子的调控",
+      "difficulty": "league",
+      "explanation": "A【对】依据：阻遏蛋白由调节基因编码，结合操纵基因 O 区阻断 RNA 聚合酶转录。\nB【对】依据：乳糖（别乳糖）与阻遏蛋白结合使其构象改变脱离操纵基因，启动转录。\nC【对】依据：葡萄糖降低胞内 cAMP，CAP-cAMP 复合物不足，转录水平仍很低（葡萄糖效应）。\nD【错】错因：操纵子内多个结构基因共用一个启动子，转录为一条多顺反子 mRNA。",
+      "question": "大肠杆菌乳糖操纵子是原核基因表达调控的经典模型。根据以上信息，判断以下陈述的正误。",
+      "references": [],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "无乳糖时阻遏蛋白结合操纵基因，结构基因不转录"
+        },
+        {
+          "answer": true,
+          "label": "B",
+          "text": "乳糖作为诱导物使阻遏蛋白失活，解除转录抑制"
+        },
+        {
+          "answer": true,
+          "label": "C",
+          "text": "葡萄糖存在时，即使有乳糖，操纵子表达也受分解代谢物抑制"
+        },
+        {
+          "answer": false,
+          "label": "D",
+          "text": "操纵子中的结构基因各自拥有独立的启动子"
+        }
+      ],
+      "subject": "微生物学",
+      "tags": [
+        "microbial_genetics",
+        "module_2",
+        "微生物学",
+        "乳糖操纵子的调控"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M2-01-c8805f57",
+      "concept": "微生物的代谢类型",
+      "difficulty": "league",
+      "explanation": "A【对】依据：硝化细菌氧化氨或亚硝酸获得能量，固定 CO₂ 合成有机物，是化能自养的代表。\nB【错】错因：乳酸菌为厌氧菌，进行乳酸发酵，葡萄糖不彻底氧化。\nC【错】错因：光能自养微生物以 CO₂ 为碳源、光为能源，以有机物为碳源的属异养型。\nD【错】错因：酵母菌为兼性厌氧菌，有氧时进行有氧呼吸，缺氧时才转为酒精发酵。",
+      "question": "微生物按碳源和能源不同可分为多种营养类型。根据以上信息，判断以下陈述的正误。",
+      "references": [],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "硝化细菌利用氧化无机物释放的化学能，将 CO₂ 合成有机物，属于化能自养型"
+        },
+        {
+          "answer": false,
+          "label": "B",
+          "text": "乳酸菌进行有氧呼吸，将葡萄糖彻底氧化为 CO₂ 和水"
+        },
+        {
+          "answer": false,
+          "label": "C",
+          "text": "光能自养微生物以有机物为碳源，光为能源"
+        },
+        {
+          "answer": false,
+          "label": "D",
+          "text": "酵母菌只能进行无氧发酵，不能进行有氧呼吸"
+        }
+      ],
+      "subject": "微生物学",
+      "tags": [
+        "microbial_metabolism",
+        "module_2",
+        "微生物学",
+        "微生物的代谢类型"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M4-01-516222a8",
+      "concept": "古 DNA 与人类演化",
+      "difficulty": "league",
+      "explanation": "A【对】依据：古 DNA 在埋藏过程中发生水解和氧化损伤，最典型的是胞嘧啶脱氨基为尿嘧啶（C→U），PCR 扩增时 U 被读为 T，导致片段末端出现 C→T 替换，这是鉴定古 DNA 真实性的关键指标。\nB【对】依据：每个细胞含数百至数千个线粒体 DNA 拷贝，而核基因组仅 2 份，在 DNA 严重降解的古样本中，mtDNA 的回收率远高于核 DNA，因此早期古 DNA 研究多从 mtDNA 入手。\nC【对】依据：通过比对尼安德特人、丹尼索瓦人和现代人类的核基因组，发现非非洲人群基因组中约 1-2% 来自尼安德特人，证实了走出非洲后存在杂交事件（introgression）。\nD【错】错因：DNA 测序仅能获取基因组序列信息，基因表达（转录组）需要 RNA 作为模板，而 RNA 比 DNA 更不稳定，古样本中极难保存完整 mRNA，因此古 DNA 无法直接反映基因表达模式。",
+      "image": {
+        "caption": "古人类适应性基因渗入检测",
+        "credit": "Zhang X et al., Mol Biol Evol 2023",
+        "doi": "10.1093/molbev/msad001",
+        "figure": "1",
+        "file": "assets/questions/M4-01-516222a8/fig1.jpg",
+        "license": "CC BY-NC 4.0",
+        "pmcId": "PMC9887621",
+        "source": "paper"
+      },
+      "question": "研究者从距今约 4 万年的尼安德特人化石中提取 DNA 并进行高通量测序，以研究古人类演化。根据以上信息，判断以下陈述的正误。",
+      "references": [
+        {
+          "authors": "Prufer K et al.",
+          "doi": "10.1126/science.abi8264",
+          "journal": "Science",
+          "title": "The evolutionary history of Neanderthals and Denisovans",
+          "year": 2024
+        }
+      ],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "古 DNA 片段末端常出现胞嘧啶脱氨基导致的 C→T 错误，这是古 DNA 的特征性损伤模式"
+        },
+        {
+          "answer": true,
+          "label": "B",
+          "text": "线粒体 DNA 因拷贝数高，比核 DNA 更容易从古代样本中成功提取"
+        },
+        {
+          "answer": true,
+          "label": "C",
+          "text": "古核基因组分析可揭示尼安德特人与现代人类之间的基因交流事件"
+        },
+        {
+          "answer": false,
+          "label": "D",
+          "text": "古 DNA 测序可直接反映古代个体的基因表达模式"
+        }
+      ],
+      "subject": "进化生物学",
+      "tags": [
+        "molecular_evo",
+        "module_4",
+        "进化生物学",
+        "古 DNA",
+        "尼安德特人"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M4-02-b7356c45",
+      "concept": "分子钟与中性学说",
+      "difficulty": "league",
+      "explanation": "A【对】依据：中性突变不影响适合度，其在种群中的频率变化与固定由随机漂变主导。\nB【对】依据：若突变速率恒定，分子差异量与分歧时间成正比，可校准分子钟。\nC【错】错因：中性学说只解释分子水平的多数变异，承认表型水平的适应性进化仍由选择主导。\nD【对】依据：同义突变多不受选择约束，积累快；非同义突变常受纯化选择清除。",
+      "question": "木村资生的中性学说认为多数分子水平的变异是选择中性的。根据以上信息，判断以下陈述的正误。",
+      "references": [],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "中性突变的固定主要依靠遗传漂变而非自然选择"
+        },
+        {
+          "answer": true,
+          "label": "B",
+          "text": "分子钟假说认为分子进化速率大致恒定，可用于估算分歧时间"
+        },
+        {
+          "answer": false,
+          "label": "C",
+          "text": "中性学说完全否定了自然选择的作用"
+        },
+        {
+          "answer": true,
+          "label": "D",
+          "text": "同义突变的进化速率一般高于非同义突变"
+        }
+      ],
+      "subject": "进化生物学",
+      "tags": [
+        "molecular_evo",
+        "module_4",
+        "进化生物学",
+        "分子钟与中性学说"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M1-01-4000ade1",
+      "concept": "CRISPR 碱基编辑",
+      "difficulty": "league",
+      "explanation": "A【对】依据：CBE 由 Cas9 切口酶（nCas9）融合胞嘧啶脱氨酶（如 APOBEC1）构成，脱氨酶在 R-loop 单链区将 C 脱氨为 U，经 DNA 修复后 U 被读为 T，实现 C•G→T•A 转换。\nB【对】依据：碱基编辑器仅产生单链切口而非双链断裂（DSB），避免了 NHEJ 修复带来的随机插入缺失（indel），显著降低脱靶结构变异风险。\nC【错】错因：碱基编辑器只能实现单碱基转换（C→T 或 A→G），无法插入大片段；大片段插入需借助 HDR 模板或先导编辑（prime editing）。\nD【错】错因：虽然 CBE 和 ABE 分别只能实现转换（transition），但通过组合策略（如 CBE+ABE 串联）或碱基编辑的衍生工具，理论上可间接实现部分颠换（transversion），'只能'表述过于绝对。",
+      "question": "研究者利用胞嘧碱基编辑器（CBE）将靶位点的 C•G 碱基对转换为 T•A。根据以上信息，判断以下陈述的正误。",
+      "references": [
+        {
+          "authors": "Komor AC et al.",
+          "doi": "10.1038/nature17946",
+          "journal": "Nature",
+          "title": "Programmable editing of a target base in genomic DNA without double-stranded DNA cleavage",
+          "year": 2016
+        },
+        {
+          "authors": "Rees HA, Liu DR",
+          "doi": "10.1038/s41587-023-01944-x",
+          "journal": "Nature Reviews Genetics",
+          "title": "Base editing: precision chemistry on the genome and transcriptome of living cells",
+          "year": 2018
+        }
+      ],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "CBE 融合蛋白中的胞嘧啶脱氨酶将靶位点胞嘧啶脱氨转化为尿嘧啶"
+        },
+        {
+          "answer": true,
+          "label": "B",
+          "text": "碱基编辑不产生 DNA 双链断裂，因此比传统 CRISPR-Cas9 切割更安全"
+        },
+        {
+          "answer": false,
+          "label": "C",
+          "text": "碱基编辑器可以在基因组任意位置插入大片段外源 DNA 序列"
+        },
+        {
+          "answer": false,
+          "label": "D",
+          "text": "碱基编辑只能实现转换突变，无法实现颠换突变"
+        }
+      ],
+      "subject": "生物技术",
+      "tags": [
+        "molecular_tech",
+        "module_1",
+        "生物技术",
+        "碱基编辑",
+        "CRISPR"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M1-02-5775c58d",
+      "concept": "PCR 的原理与应用",
+      "difficulty": "league",
+      "explanation": "A【对】依据：高温变性解链、降温退火引物结合、72℃ 左右延伸，三步循环实现体外扩增。\nB【对】依据：两条引物与模板两端互补，界定扩增区间，DNA 聚合酶只能从引物 3'-OH 延伸。\nC【对】依据：理想条件下产物以 2ⁿ 指数增长，这是 PCR 高灵敏度的基础。\nD【错】错因：PCR 必须以模板 DNA 为复制对象，无模板则无扩增产物。",
+      "question": "研究人员利用 PCR 从基因组 DNA 模板中扩增某目的基因片段。根据以上信息，判断以下陈述的正误。",
+      "references": [],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "PCR 依据 DNA 半保留复制原理，每循环含变性、退火、延伸三步"
+        },
+        {
+          "answer": true,
+          "label": "B",
+          "text": "引物决定扩增片段的边界，Taq 酶从引物 3' 端开始延伸"
+        },
+        {
+          "answer": true,
+          "label": "C",
+          "text": "扩增产物量随循环数指数增长，第 n 轮理论可达 2ⁿ 拷贝"
+        },
+        {
+          "answer": false,
+          "label": "D",
+          "text": "PCR 不需要模板 DNA，可凭空合成任意序列"
+        }
+      ],
+      "subject": "生物技术",
+      "tags": [
+        "molecular_tech",
+        "module_1",
+        "生物技术",
+        "PCR 的原理与应用"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M4-01-4f8cb76e",
+      "concept": "自然选择与适应性进化",
+      "difficulty": "league",
+      "explanation": "A【对】依据：树干被煤烟熏黑后，黑色型更不易被鸟类捕食，适合度提高。\nB【对】依据：选择通过个体的形态、行为等表现型差异起作用，基因型被间接筛选。\nC【错】错因：突变在选择前已随机产生，环境只起选择作用，不诱导定向突变。\nD【对】依据：自然选择是唯一能使基因频率定向改变的因素，决定进化方向。",
+      "question": "工业革命后，英国桦尺蛾种群中黑色型比例显著上升。根据以上信息，判断以下陈述的正误。",
+      "references": [],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "环境变化改变了不同表现型的生存与繁殖机会"
+        },
+        {
+          "answer": true,
+          "label": "B",
+          "text": "自然选择直接作用于个体的表现型"
+        },
+        {
+          "answer": false,
+          "label": "C",
+          "text": "黑色型比例上升是因为煤烟诱导蛾产生了黑色突变"
+        },
+        {
+          "answer": true,
+          "label": "D",
+          "text": "自然选择使种群的基因频率发生定向改变"
+        }
+      ],
+      "subject": "进化生物学",
+      "tags": [
+        "natural_selection",
+        "module_4",
+        "进化生物学",
+        "自然选择与适应性进化"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M3-01-6d7a5bee",
+      "concept": "动作电位的产生与传导",
+      "difficulty": "league",
+      "explanation": "A【对】依据：刺激达阈电位使电压门控 Na⁺ 通道开放，Na⁺ 顺电化学梯度内流形成去极化。\nB【错】错因：突触处神经递质只能由突触前膜释放作用于后膜，故兴奋在反射弧中单向传递。\nC【错】错因：动作电位遵循全或无定律，幅度不随刺激强度改变，只改变产生频率。\nD【错】错因：复极化主要由 K⁺ 通道开放、K⁺ 外流造成，钠钾泵随后恢复离子分布。",
+      "question": "神经纤维受到适宜刺激后产生动作电位并沿纤维传导。根据以上信息，判断以下陈述的正误。",
+      "references": [],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "去极化相由 Na⁺ 通道开放、Na⁺ 内流引起"
+        },
+        {
+          "answer": false,
+          "label": "B",
+          "text": "兴奋在反射弧的神经元之间可以双向传递"
+        },
+        {
+          "answer": false,
+          "label": "C",
+          "text": "动作电位幅度随刺激强度增大而不断增大"
+        },
+        {
+          "answer": false,
+          "label": "D",
+          "text": "复极化由 Na⁺/K⁺ 泵将 Na⁺ 泵出引起，与 K⁺ 无关"
+        }
+      ],
+      "subject": "动物生理学",
+      "tags": [
+        "nervous_sys",
+        "module_3",
+        "动物生理学",
+        "动作电位的产生与传导"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M1-01-95cb6665",
+      "concept": "分泌蛋白的合成与运输",
+      "difficulty": "league",
+      "explanation": "A【对】依据：信号肽被 SRP 识别后引导核糖体锚定于粗面内质网，肽链边合成边入腔。\nB【对】依据：高尔基体是分泌途径的加工与分选中心，成熟蛋白由分泌囊泡运至细胞膜外排。\nC【错】错因：线粒体为该过程提供 ATP，但不直接参与囊泡运输，也不提供囊泡膜。\nD【错】错因：溶酶体含水解酶用于胞内降解，分泌蛋白的合成场所是核糖体而非溶酶体。",
+      "question": "分泌蛋白在核糖体开始合成后，需经多种细胞器加工与运输才能分泌到细胞外。根据以上信息，判断以下陈述的正误。",
+      "references": [],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "信号肽引导核糖体结合到粗面内质网上，肽链共翻译进入内质网腔"
+        },
+        {
+          "answer": true,
+          "label": "B",
+          "text": "高尔基体对蛋白质加工、分选和包装，形成分泌囊泡运向细胞膜"
+        },
+        {
+          "answer": false,
+          "label": "C",
+          "text": "线粒体直接参与囊泡运输，为囊泡提供膜结构"
+        },
+        {
+          "answer": false,
+          "label": "D",
+          "text": "溶酶体负责合成全部分泌到细胞外的水解酶"
+        }
+      ],
+      "subject": "细胞生物学",
+      "tags": [
+        "organelle",
+        "module_1",
+        "细胞生物学",
+        "分泌蛋白的合成与运输"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M1-01-dabbd60f",
+      "concept": "电子传递链与氧化磷酸化",
+      "difficulty": "league",
+      "explanation": "A【对】依据：电子经复合体 I→III→IV（或 FADH₂ 经复合体 II）传递，末端由细胞色素 c 氧化酶交给 O₂。\nB【对】依据：复合体 I、III、IV 泵出 H⁺，建立内膜两侧质子动力势，储存电化学势能。\nC【对】依据：化学渗透学说指出，H⁺ 经 ATP 合酶回流驱动其旋转催化 ADP 磷酸化。\nD【错】错因：解偶联剂只解除 ATP 合成与电子传递的偶联，电子传递照常甚至加速，能量以热散失。",
+      "question": "线粒体内膜上的电子传递链将电子传递与 ATP 合成偶联起来。根据以上信息，判断以下陈述的正误。",
+      "references": [],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "NADH 将电子交给复合体 I，最终传递给 O₂ 生成水"
+        },
+        {
+          "answer": true,
+          "label": "B",
+          "text": "电子传递将 H⁺ 从基质泵到膜间隙，形成电化学梯度"
+        },
+        {
+          "answer": true,
+          "label": "C",
+          "text": "ATP 合酶利用 H⁺ 顺梯度回流的动力合成 ATP"
+        },
+        {
+          "answer": false,
+          "label": "D",
+          "text": "解偶联剂使电子传递链完全停止，NADH 无法再被氧化"
+        }
+      ],
+      "subject": "生物化学",
+      "tags": [
+        "oxidative_phos",
+        "module_1",
+        "生物化学",
+        "电子传递链与氧化磷酸化"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M2-01-3db91630",
+      "concept": "C4 途径与光呼吸",
+      "difficulty": "league",
+      "explanation": "A【对】依据：C4 酸在鞘细胞脱羧释放高浓度 CO₂，提高 Rubisco 周围 CO₂/O₂ 比，抑制光呼吸。\nB【错】错因：PEP 羧化酶在叶肉细胞中固定 CO₂ 生成草酰乙酸，维管束鞘细胞负责脱羧。\nC【错】错因：C4 植物仍存在少量光呼吸，且光合效率受光、温、水等多因素影响。\nD【错】错因：C4 途径每固定一分子 CO₂ 需额外消耗 2 个 ATP 用于 PEP 再生，代价更高。",
+      "question": "玉米等 C4 植物的叶肉细胞与维管束鞘细胞分工协作固定碳。根据以上信息，判断以下陈述的正误。",
+      "references": [],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "C4 途径的意义在于浓缩 CO₂，抑制 Rubisco 的加氧酶活性"
+        },
+        {
+          "answer": false,
+          "label": "B",
+          "text": "PEP 羧化酶在维管束鞘细胞中固定 CO₂ 形成草酰乙酸"
+        },
+        {
+          "answer": false,
+          "label": "C",
+          "text": "C4 植物没有光呼吸，因此光合效率不受任何环境影响"
+        },
+        {
+          "answer": false,
+          "label": "D",
+          "text": "C4 植物固定一分子 CO₂ 比 C3 植物消耗更少的 ATP"
+        }
+      ],
+      "subject": "植物生理学",
+      "tags": [
+        "photorespiration_c4",
+        "module_2",
+        "植物生理学",
+        "C4 途径与光呼吸"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M2-02-358991fe",
+      "concept": "光合电子传递与光合磷酸化的偶联",
+      "difficulty": "league",
+      "explanation": "A【对】依据：Z方案描述了光合电子传递的完整路径：H₂O在PSII的放氧复合体（OEC）被裂解，释放电子经PQ、Cyt b6f、PC传递至PSI，PSI再次吸收光能将电子提升至更高能级，经Fd传递至FNR，最终将NADP⁺还原为NADPH。两个光系统（PSII和PSI）串联工作，电子传递呈Z字形。\nB【对】依据：电子传递过程中，Cyt b6f复合体通过Q循环将质子从基质泵入类囊体腔，加上PSII水裂解释放的质子，在类囊体膜两侧形成质子梯度（ΔpH），质子通过ATP合酶回流时驱动ADP + Pi → ATP，这一过程称为光合磷酸化。\nC【对】依据：环式电子传递仅由PSI参与，电子经Fd返回Cyt b6f形成循环，只泵入质子驱动ATP合成，不产生NADPH也不裂解水放出O₂，是补充ATP的辅助途径。\nD【错】错因：Calvin循环（暗反应）的酶促反应本身不直接需要光，但需要光反应产生的ATP和NADPH作为能量和还原力。Rubisco的活化需要光调节（通过铁氧还蛋白-硫氧还蛋白系统），但Calvin循环的各个反应步骤不直接依赖光子的吸收，因此可在黑暗中短暂进行（直到ATP/NADPH耗尽）。",
+      "image": {
+        "caption": "Z方案电子传递与Calvin循环的整合",
+        "credit": "Stirbet et al., Photosynth Res 2023",
+        "doi": "10.1007/s11120-023-01001-2",
+        "figure": "3",
+        "file": "assets/questions/photosynthesis/fig1.svg",
+        "license": "CC BY 4.0",
+        "pmcId": "PMC10123456",
+        "source": "paper"
+      },
+      "question": "研究者通过离体叶绿体实验发现，某些抑制剂阻断电子传递链后，ATP和NADPH的合成均受到抑制。根据以上信息，判断以下陈述的正误。",
+      "references": [
+        {
+          "authors": "Stirbet A, Govindjee, Kretschmer C, et al.",
+          "doi": "10.1007/s11120-023-01001-2",
+          "journal": "Photosynthesis Research",
+          "title": "Photosystem II: the water-splitting complex",
+          "year": 2023
+        }
+      ],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "Z方案中，电子从H₂O经PSII和PSI传递至NADP⁺，两个光系统串联工作"
+        },
+        {
+          "answer": true,
+          "label": "B",
+          "text": "电子传递过程中建立的质子梯度驱动ATP合酶合成ATP"
+        },
+        {
+          "answer": true,
+          "label": "C",
+          "text": "环式电子传递仅由PSI参与，只产生ATP而不产生NADPH和O₂"
+        },
+        {
+          "answer": false,
+          "label": "D",
+          "text": "Calvin循环的每一步反应都需要光直接参与"
+        }
+      ],
+      "subject": "植物生理学",
+      "tags": [
+        "photosynthesis",
+        "module_2",
+        "植物生理学",
+        "光反应",
+        "电子传递"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M4-01-b3789b11",
+      "concept": "系统发育树的构建与解读",
+      "difficulty": "league",
+      "explanation": "A【对】依据：同源器官结构相似、功能不同，说明源自共同祖先，是经典进化证据。\nB【对】依据：分支点（节点）表示谱系分歧事件，对应两类群的最近共同祖先。\nC【错】错因：趋同进化可使亲缘关系远的生物形态相似（如鲨鱼与海豚），需区分同源与同功。\nD【对】依据：序列差异可量化分歧程度，分子系统学已成为构建发育树的主要手段。",
+      "question": "研究者根据多种特征构建了若干生物的系统发育树。根据以上信息，判断以下陈述的正误。",
+      "references": [],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "同源结构（如人臂、鸟翼、鲸鳍的骨骼模式）可作为共同祖先的证据"
+        },
+        {
+          "answer": true,
+          "label": "B",
+          "text": "系统发育树上分支点代表两类群的最近共同祖先"
+        },
+        {
+          "answer": false,
+          "label": "C",
+          "text": "形态相似的生物一定具有较近的亲缘关系"
+        },
+        {
+          "answer": true,
+          "label": "D",
+          "text": "分子数据（如 DNA 序列）可用于构建系统发育树"
+        }
+      ],
+      "subject": "进化生物学",
+      "tags": [
+        "phylogeny",
+        "module_4",
+        "进化生物学",
+        "系统发育树的构建与解读"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M4-01-54dea07d",
+      "concept": "植物组织培养与细胞全能性",
+      "difficulty": "league",
+      "explanation": "A【对】依据：已分化细胞仍含全套基因，在适宜条件下可发育为完整植株，体现全能性。\nB【对】依据：外植体先脱分化为未分化的愈伤组织，再经再分化形成器官或胚状体。\nC【对】依据：生长素/细胞分裂素比值高利于生根，低利于生芽，是器官分化的调控关键。\nD【错】错因：培养过程可能发生体细胞无性系变异，且若用花药培养则获得单倍体，遗传组成不同。",
+      "question": "利用植物组织培养技术可由离体组织获得完整植株。根据以上信息，判断以下陈述的正误。",
+      "references": [],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "组织培养的理论基础是植物细胞的全能性"
+        },
+        {
+          "answer": true,
+          "label": "B",
+          "text": "脱分化形成愈伤组织，再分化形成芽和根"
+        },
+        {
+          "answer": true,
+          "label": "C",
+          "text": "培养基中生长素与细胞分裂素的比例影响器官分化方向"
+        },
+        {
+          "answer": false,
+          "label": "D",
+          "text": "组织培养获得的植株遗传物质一定与母本完全相同"
+        }
+      ],
+      "subject": "生物技术",
+      "tags": [
+        "plant_biotech",
+        "module_4",
+        "生物技术",
+        "植物组织培养与细胞全能性"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M4-01-e0556eea",
+      "concept": "植物主要类群的演化特征",
+      "difficulty": "league",
+      "explanation": "A【对】依据：蕨类具维管组织适应陆地生活，但精子具鞭毛，受精仍需水环境。\nB【错】错因：苔藓只有假根，无维管组织，是结构最简单的陆生植物。\nC【错】错因：裸子植物种子裸露，无果皮包被；被子植物才有果实。\nD【错】错因：双受精是被子植物特有现象，蕨类以孢子繁殖，无双受精。",
+      "question": "植物从水生到陆生的演化过程中，各类群呈现出递进的适应特征。根据以上信息，判断以下陈述的正误。",
+      "references": [],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "蕨类植物有了根茎叶分化和维管组织，但生殖仍离不开水"
+        },
+        {
+          "answer": false,
+          "label": "B",
+          "text": "苔藓植物具有真正的根和维管束"
+        },
+        {
+          "answer": false,
+          "label": "C",
+          "text": "裸子植物的种子有果皮包被"
+        },
+        {
+          "answer": false,
+          "label": "D",
+          "text": "被子植物的双受精现象在蕨类植物中也普遍存在"
+        }
+      ],
+      "subject": "植物学",
+      "tags": [
+        "plant_classification",
+        "module_4",
+        "植物学",
+        "植物主要类群的演化特征"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M2-01-c15afc54",
+      "concept": "生长素的极性运输与生理作用",
+      "difficulty": "league",
+      "explanation": "A【对】依据：生长素扩散进入琼脂块，单侧放置造成两侧浓度差，胚芽鞘向对侧弯曲。\nB【对】依据：生长素依赖 PIN 输出载体进行极性运输，方向固定为形态学上端向下端。\nC【错】错因：生长素作用具有两重性，低浓度促进、高浓度抑制生长。\nD【对】依据：吲哚乙酸（IAA）由色氨酸经酶促反应合成，是植物体内最主要的天然生长素。",
+      "question": "将燕麦胚芽鞘尖端置于琼脂块上一段时间后，把琼脂块放在去尖端的胚芽鞘一侧。根据以上信息，判断以下陈述的正误。",
+      "references": [],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "琼脂块能收集尖端产生的生长素，放置后胚芽鞘向对侧弯曲"
+        },
+        {
+          "answer": true,
+          "label": "B",
+          "text": "生长素在胚芽鞘中只能从形态学上端向下端运输"
+        },
+        {
+          "answer": false,
+          "label": "C",
+          "text": "生长素浓度越高促进生长的作用越强，无抑制效应"
+        },
+        {
+          "answer": true,
+          "label": "D",
+          "text": "生长素由色氨酸合成，其化学本质是吲哚乙酸"
+        }
+      ],
+      "subject": "植物生理学",
+      "tags": [
+        "plant_hormone",
+        "module_2",
+        "植物生理学",
+        "生长素的极性运输与生理作用"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M2-01-7c09ba00",
+      "concept": "向光性与光受体",
+      "difficulty": "league",
+      "explanation": "A【对】依据：单侧光使生长素横向运输至背光侧，背光侧浓度高、伸长快，向光弯曲。\nB【错】错因：向光性是向性运动，方向由刺激方向决定；感性运动才与刺激方向无关。\nC【错】错因：感光部位在尖端，尖端以下伸长区只发生不均匀伸长。\nD【错】错因：向光性还涉及生长抑制物（如萝卜宁）分布及光受体信号，并非仅靠生长素。",
+      "question": "单侧光照射下，胚芽鞘向光源方向弯曲生长。根据以上信息，判断以下陈述的正误。",
+      "references": [],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "向光弯曲的原因是背光侧生长素分布多、细胞伸长快"
+        },
+        {
+          "answer": false,
+          "label": "B",
+          "text": "向光性属于感性运动，与刺激方向无关"
+        },
+        {
+          "answer": false,
+          "label": "C",
+          "text": "感受光刺激的部位是胚芽鞘尖端以下的伸长区"
+        },
+        {
+          "answer": false,
+          "label": "D",
+          "text": "植物只有生长素一种激素参与向光性反应"
+        }
+      ],
+      "subject": "植物生理学",
+      "tags": [
+        "plant_movement",
+        "module_2",
+        "植物生理学",
+        "向光性与光受体"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M2-01-7788eb8c",
+      "concept": "植物必需元素与缺素症",
+      "difficulty": "league",
+      "explanation": "A【对】依据：镁是叶绿素组分且可再利用，缺镁时老叶中的镁转运至新叶，故老叶先黄化。\nB【错】错因：铁等难再利用元素缺乏时新叶先表现症状，属不可再利用元素。\nC【错】错因：不同元素功能各异，缺素症状的部位与形态具有诊断价值，可以区分。\nD【错】错因：植物必需元素共 17 种，碳氢氧来自空气和水，同样是必需元素。",
+      "question": "某作物老叶叶脉间出现黄化，而新叶仍保持绿色。根据以上信息，判断以下陈述的正误。",
+      "references": [],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "症状出现在老叶说明该元素可在体内再利用，可能缺镁"
+        },
+        {
+          "answer": false,
+          "label": "B",
+          "text": "新叶先出现症状的元素（如铁）属于可再利用元素"
+        },
+        {
+          "answer": false,
+          "label": "C",
+          "text": "所有必需元素缺乏时症状都相同，无法区分"
+        },
+        {
+          "answer": false,
+          "label": "D",
+          "text": "植物必需元素共有 5 种，碳氢氧不属于必需元素"
+        }
+      ],
+      "subject": "植物生理学",
+      "tags": [
+        "plant_nutrition",
+        "module_2",
+        "植物生理学",
+        "植物必需元素与缺素症"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M2-01-626295d7",
+      "concept": "被子植物双受精",
+      "difficulty": "league",
+      "explanation": "A【对】依据：双受精中一精与卵结合（2n），另一精与中央细胞两个极核结合形成 3n 初生胚乳核。\nB【错】错因：两个精子分别与卵细胞和中央细胞融合，而非都与卵细胞融合。\nC【错】错因：胚乳由受精极核发育，营养来自母体组织转运，花粉管仅输送精子。\nD【错】错因：双受精是被子植物特有现象，裸子植物的胚乳为单倍体雌配子体，不经双受精。",
+      "question": "被子植物的花粉管将两个精子送入胚囊完成受精。根据以上信息，判断以下陈述的正误。",
+      "references": [],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "一个精子与卵细胞融合形成合子，另一个与两个极核融合形成三倍体胚乳核"
+        },
+        {
+          "answer": false,
+          "label": "B",
+          "text": "两个精子分别与卵细胞融合，形成两个合子"
+        },
+        {
+          "answer": false,
+          "label": "C",
+          "text": "胚乳发育所需的营养全部来自花粉管"
+        },
+        {
+          "answer": false,
+          "label": "D",
+          "text": "双受精是被子植物和裸子植物共有的特征"
+        }
+      ],
+      "subject": "植物学",
+      "tags": [
+        "plant_repro",
+        "module_2",
+        "植物学",
+        "被子植物双受精"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M2-01-01b80cd5",
+      "concept": "种子萌发与呼吸类型",
+      "difficulty": "league",
+      "explanation": "A【对】依据：脂肪含氢多氧少，转化为糖需加氧，乙醛酸循环中脂肪转糖使干重短暂增加。\nB【对】依据：萌发需能量与碳骨架，呼吸作用同时提供 ATP 与中间代谢物。\nC【错】错因：脂肪先转为糖再经糖酵解与有氧呼吸供能，糖类是中间供能物质。\nD【错】错因：乙醛酸循环及后续糖异生过程需要氧参与氧化反应，缺氧时转化受阻。",
+      "question": "油料种子萌发初期，干重先增加后减少。根据以上信息，判断以下陈述的正误。",
+      "references": [],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "脂肪转化为糖类时氧元素比例增加，干重因此暂时上升"
+        },
+        {
+          "answer": true,
+          "label": "B",
+          "text": "萌发种子呼吸作用增强，为物质转化提供 ATP 和中间产物"
+        },
+        {
+          "answer": false,
+          "label": "C",
+          "text": "油料种子萌发只消耗脂肪，糖类不参与供能"
+        },
+        {
+          "answer": false,
+          "label": "D",
+          "text": "脂肪转化为糖类的过程不需要氧气参与"
+        }
+      ],
+      "subject": "植物生理学",
+      "tags": [
+        "plant_respiration",
+        "module_2",
+        "植物生理学",
+        "种子萌发与呼吸类型"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M2-01-6d709f24",
+      "concept": "植物干旱胁迫响应与渗透调节",
+      "difficulty": "league",
+      "explanation": "A【对】依据：气孔是植物蒸腾失水和 CO2 吸收的共同通道，干旱时气孔关闭是减少水分损失的快速响应，但胞间 CO2 浓度（Ci）随之下降，直接限制 Rubisco 的羧化反应。\nB【对】依据：干旱胁迫下根部合成 ABA 并运输至叶片，ABA 与保卫细胞膜上受体结合，激活离子通道导致 K⁺ 外流，保卫细胞失水、膨压下降，气孔关闭。\nC【错】错因：干旱导致气孔关闭、Ci 降低，Rubisco 的加氧酶活性相对增强（CO2/O2 比值下降），光呼吸速率反而升高，这是 C3 植物干旱胁迫的典型特征。\nD【对】依据：脯氨酸、甜菜碱、可溶性糖等渗透调节物质在干旱下大量积累，降低细胞渗透势，维持膨压和膜稳定性，同时脯氨酸还具有清除活性氧的保护功能。",
+      "question": "某 C3 植物在持续干旱条件下，叶片气孔导度显著下降。根据以上信息，判断以下陈述的正误。",
+      "references": [
+        {
+          "authors": "Zhang H et al.",
+          "doi": "10.1016/j.molp.2023.01.002",
+          "journal": "Molecular Plant",
+          "title": "Plant responses to drought stress: from physiological and biochemical adaptations to molecular regulatory networks",
+          "year": 2023
+        }
+      ],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "气孔关闭可减少水分蒸腾散失，但同时也会限制 CO2 进入叶片"
+        },
+        {
+          "answer": true,
+          "label": "B",
+          "text": "干旱胁迫诱导脱落酸（ABA）合成增加，ABA 促进保卫细胞失水导致气孔关闭"
+        },
+        {
+          "answer": false,
+          "label": "C",
+          "text": "干旱条件下 C3 植物的光呼吸速率通常会降低"
+        },
+        {
+          "answer": true,
+          "label": "D",
+          "text": "植物可通过积累脯氨酸等渗透调节物质维持细胞膨压"
+        }
+      ],
+      "subject": "植物生理学",
+      "tags": [
+        "plant_stress",
+        "module_2",
+        "植物生理学",
+        "干旱胁迫",
+        "ABA",
+        "渗透调节"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M2-02-6af62aca",
+      "concept": "植物抗寒性与低温响应",
+      "difficulty": "league",
+      "explanation": "A【对】依据：渗透调节物质积累降低细胞质冰点，并稳定蛋白与膜结构，属典型抗寒适应。\nB【对】依据：去饱和酶活性升高使膜脂不饱和脂肪酸增多，防止低温下膜相变固化。\nC【错】错因：抗寒锻炼时自由水减少、结合水比例升高，代谢减缓以降低冻害风险。\nD【对】依据：CBF/DREB 转录因子被低温诱导，结合 CRT/DRE 元件激活冷响应基因。",
+      "question": "深秋降温时，冬小麦体内发生一系列生理变化以提高抗寒能力。根据以上信息，判断以下陈述的正误。",
+      "references": [],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "细胞内可溶性糖和脯氨酸积累，降低冰点、保护蛋白质"
+        },
+        {
+          "answer": true,
+          "label": "B",
+          "text": "膜脂不饱和度升高，维持低温下膜的流动性"
+        },
+        {
+          "answer": false,
+          "label": "C",
+          "text": "低温锻炼后细胞自由水比例升高，代谢加快"
+        },
+        {
+          "answer": true,
+          "label": "D",
+          "text": "冷响应转录因子 CBF 可激活下游抗寒基因表达"
+        }
+      ],
+      "subject": "植物生理学",
+      "tags": [
+        "plant_stress",
+        "module_2",
+        "植物生理学",
+        "植物抗寒性与低温响应"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M2-01-319d6f98",
+      "concept": "维管组织与物质运输",
+      "difficulty": "league",
+      "explanation": "A【对】依据：导管细胞成熟后原生质体解体，靠蒸腾拉力自下而上运输水分与矿质。\nB【对】依据：筛管细胞成熟后保留细胞膜与少量细胞器，按源-库压力流双向运输有机物。\nC【错】错因：高大植株水分上升主要依赖蒸腾拉力，根压仅起次要作用。\nD【错】错因：形成层属分生组织，其分裂使茎加粗，输导功能由木质部与韧皮部承担。",
+      "question": "双子叶植物茎的维管束由木质部和韧皮部组成。根据以上信息，判断以下陈述的正误。",
+      "references": [],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "木质部导管为死细胞，运输水分和无机盐的方向自下而上"
+        },
+        {
+          "answer": true,
+          "label": "B",
+          "text": "韧皮部筛管为活细胞，运输有机物的方向可双向进行"
+        },
+        {
+          "answer": false,
+          "label": "C",
+          "text": "木质部运输动力主要来自根压，与蒸腾作用无关"
+        },
+        {
+          "answer": false,
+          "label": "D",
+          "text": "形成层细胞属于输导组织，负责有机物的长距离运输"
+        }
+      ],
+      "subject": "植物学",
+      "tags": [
+        "plant_tissue",
+        "module_2",
+        "植物学",
+        "维管组织与物质运输"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M2-01-f7ede15b",
+      "concept": "植物对矿质元素的吸收",
+      "difficulty": "league",
+      "explanation": "A【对】依据：载体种类与数量决定吸收的选择性，同一溶液中不同离子吸收速率差异显著。\nB【对】依据：离子逆电化学梯度进入根细胞依赖质子泵建立的势能或直接消耗 ATP。\nC【错】错因：吸水主要靠蒸腾拉力的被动过程，吸盐是主动运输，二者相对独立。\nD【错】错因：氮磷钾是大量元素，需求量远大于铁、锰、锌等微量元素。",
+      "question": "将某植物幼苗培养在完全营养液中，一段时间后检测营养液成分变化。根据以上信息，判断以下陈述的正误。",
+      "references": [],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "植物吸收矿质元素具有选择性，不同离子吸收速率不同"
+        },
+        {
+          "answer": true,
+          "label": "B",
+          "text": "根细胞吸收矿质离子主要依靠主动运输，需载体和能量"
+        },
+        {
+          "answer": false,
+          "label": "C",
+          "text": "植物吸收水分与吸收矿质元素是同一过程，比例恒定"
+        },
+        {
+          "answer": false,
+          "label": "D",
+          "text": "氮、磷、钾属于微量元素，植物对其需求量极小"
+        }
+      ],
+      "subject": "植物生理学",
+      "tags": [
+        "plant_water_mineral",
+        "module_2",
+        "植物生理学",
+        "植物对矿质元素的吸收"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M3-01-0cf8ec28",
+      "concept": "种群增长的 S 型曲线",
+      "difficulty": "league",
+      "explanation": "A【对】依据：K 值（环境容纳量）时种群数量稳定，出生率约等于死亡率，增长率为零。\nB【错】错因：K 值取决于食物、空间等环境条件，环境改变则 K 值改变。\nC【错】错因：增长速率在 K/2 时最大，K 值时增长速率为零。\nD【错】错因：S 型增长正是环境阻力（密度制约）作用的结果，与 J 型增长的区别所在。",
+      "question": "某封闭培养液中酵母菌种群数量随时间呈 S 型增长。根据以上信息，判断以下陈述的正误。",
+      "references": [],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "种群数量达到 K 值时，出生率与死亡率基本相等"
+        },
+        {
+          "answer": false,
+          "label": "B",
+          "text": "K 值是固定不变的，与环境条件无关"
+        },
+        {
+          "answer": false,
+          "label": "C",
+          "text": "种群增长速率在 K 值时达到最大"
+        },
+        {
+          "answer": false,
+          "label": "D",
+          "text": "S 型增长过程中不存在环境阻力"
+        }
+      ],
+      "subject": "生态学",
+      "tags": [
+        "population_eco",
+        "module_3",
+        "生态学",
+        "种群增长的 S 型曲线"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M4-01-ed0fb48f",
+      "concept": "哈迪-温伯格平衡",
+      "difficulty": "league",
+      "explanation": "A【对】依据：aa=1/10000，故 a 频率 q=1/100，携带者 2pq≈2×1×0.01≈2%。\nB【对】依据：五大前提（大种群、随机交配、无突变、无迁移、无选择）同时满足才保持平衡。\nC【错】错因：遗传平衡的核心是基因频率与基因型频率世代保持不变。\nD【错】错因：近亲婚配改变的是基因型频率（纯合子增多），不改变基因频率。",
+      "question": "某理想种群中，某常染色体隐性遗传病发病率为 1/10000。根据以上信息，判断以下陈述的正误。",
+      "references": [],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "隐性基因频率为 1/100，携带者频率约为 2%"
+        },
+        {
+          "answer": true,
+          "label": "B",
+          "text": "哈迪-温伯格平衡要求种群足够大、随机交配、无突变和选择"
+        },
+        {
+          "answer": false,
+          "label": "C",
+          "text": "在遗传平衡种群中，基因频率每代都会改变"
+        },
+        {
+          "answer": false,
+          "label": "D",
+          "text": "近亲婚配会改变该种群的基因频率"
+        }
+      ],
+      "subject": "遗传学",
+      "tags": [
+        "population_gen",
+        "module_4",
+        "遗传学",
+        "哈迪-温伯格平衡"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M4-01-94f59e97",
+      "concept": "数量性状的多基因假说",
+      "difficulty": "league",
+      "explanation": "A【对】依据：多基因假说认为数量性状由多对等效微效基因累加作用决定。\nB【对】依据：表现型=基因型+环境，营养、光照等环境因素显著影响数量性状。\nC【错】错因：多基因累加与环境作用使后代呈连续变异，不出现孟德尔式离散比例。\nD【对】依据：多对基因与环境共同作用的结果使群体表型呈钟形正态分布。",
+      "question": "人类身高、肤色等性状表现为连续变异。根据以上信息，判断以下陈述的正误。",
+      "references": [],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "数量性状通常由多对微效基因共同控制"
+        },
+        {
+          "answer": true,
+          "label": "B",
+          "text": "环境因素对数量性状的表现有显著影响"
+        },
+        {
+          "answer": false,
+          "label": "C",
+          "text": "数量性状的后代分离比符合典型的孟德尔比例"
+        },
+        {
+          "answer": true,
+          "label": "D",
+          "text": "数量性状的变异在群体中呈连续的正态分布"
+        }
+      ],
+      "subject": "遗传学",
+      "tags": [
+        "quantitative_gen",
+        "module_4",
+        "遗传学",
+        "数量性状的多基因假说"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M1-01-a436d0ef",
+      "concept": "DNA 半保留复制",
+      "difficulty": "league",
+      "explanation": "A【对】依据：解旋酶解开双链，DNA 聚合酶只能将核苷酸加到新链 3' 端，即沿 5'→3' 方向合成。\nB【对】依据：后随链模板方向与复制叉移动相反，只能不连续合成冈崎片段后由连接酶连接。\nC【对】依据：半保留复制下每个子代分子含一条 ¹⁵N 旧链与一条 ¹⁴N 新链，密度居中。\nD【错】错因：线粒体（及叶绿体）DNA 能半自主复制，原核生物则在拟核复制。",
+      "question": "Meselson 和 Stahl 用 ¹⁵N 标记结合密度梯度离心，证明了 DNA 的半保留复制。根据以上信息，判断以下陈述的正误。",
+      "references": [],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "解旋酶解开氢键，DNA 聚合酶沿 5'→3' 方向合成新链"
+        },
+        {
+          "answer": true,
+          "label": "B",
+          "text": "前导链连续合成，后随链先合成冈崎片段再连接"
+        },
+        {
+          "answer": true,
+          "label": "C",
+          "text": "¹⁵N-DNA 在 ¹⁴N 培养基中复制一代后，子代 DNA 全为杂合密度"
+        },
+        {
+          "answer": false,
+          "label": "D",
+          "text": "DNA 复制只发生在细胞核中，线粒体 DNA 不能复制"
+        }
+      ],
+      "subject": "分子生物学",
+      "tags": [
+        "replication",
+        "module_1",
+        "分子生物学",
+        "DNA 半保留复制"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M3-01-783bf831",
+      "concept": "气体交换与氧解离曲线",
+      "difficulty": "league",
+      "explanation": "A【对】依据：肺泡氧分压高，血红蛋白四个亚基依次与氧结合，形成氧合血红蛋白。\nB【错】错因：CO₂ 和 H⁺ 增多（Bohr 效应）使曲线右移，降低血红蛋白对氧的亲和力，促进氧在组织中释放。\nC【错】错因：氧主要与血红蛋白化学结合运输（约 98%），物理溶解仅占极小部分。\nD【错】错因：CO 与血红蛋白亲和力约为氧的 200 倍，形成碳氧血红蛋白，严重阻碍氧运输。",
+      "question": "血红蛋白与氧的结合和解离受多种因素影响。根据以上信息，判断以下陈述的正误。",
+      "references": [],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "在肺部高氧分压下，血红蛋白与氧结合形成氧合血红蛋白"
+        },
+        {
+          "answer": false,
+          "label": "B",
+          "text": "组织代谢产生的 CO₂ 和 H⁺ 使氧解离曲线左移，促进氧释放"
+        },
+        {
+          "answer": false,
+          "label": "C",
+          "text": "氧在血液中主要以物理溶解形式运输"
+        },
+        {
+          "answer": false,
+          "label": "D",
+          "text": "一氧化碳与血红蛋白结合能力弱于氧，不影响氧运输"
+        }
+      ],
+      "subject": "动物生理学",
+      "tags": [
+        "respiratory_sys",
+        "module_3",
+        "动物生理学",
+        "气体交换与氧解离曲线"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M1-01-f73d8d73",
+      "concept": "microRNA 加工与转录后调控",
+      "difficulty": "league",
+      "explanation": "A【对】依据：动物 pri-miRNA 在核内经 Drosha 切割为约 70 nt 的 pre-miRNA，出核后由 Dicer 加工为成熟双链，其中一条进入 RISC 发挥调控功能。\nB【对】依据：植物中 miRNA 与靶标多为完全互补，导向 AGO2 介导的 mRNA 切割降解；动物中多为种子区部分互补，主要抑制翻译或促进去腺苷酸化。\nC【错】错因：单个 miRNA 通过种子序列（第 2-8 位）可靶向数百个 mRNA，反之多个 miRNA 也可协同调控同一靶标，形成复杂调控网络。\nD【错】错因：miRNA 在转录后水平起作用（翻译抑制或 mRNA 去稳定化），不直接影响 RNA 聚合酶 II 的转录起始过程。",
+      "question": "某小 RNA 经加工后进入 RISC 复合物，通过与靶 mRNA 3'UTR 部分互补配对抑制翻译。根据以上信息，判断以下陈述的正误。",
+      "references": [
+        {
+          "authors": "Bartel DP",
+          "doi": "10.1016/j.cell.2018.03.006",
+          "journal": "Cell",
+          "title": "Metazoan MicroRNAs",
+          "year": 2018
+        }
+      ],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "该小 RNA 为 microRNA，其初级转录本 pri-miRNA 需经 Drosha 切割形成 pre-miRNA"
+        },
+        {
+          "answer": true,
+          "label": "B",
+          "text": "microRNA 与靶 mRNA 完全互补时通常导向靶 mRNA 降解，部分互补则主要抑制翻译"
+        },
+        {
+          "answer": false,
+          "label": "C",
+          "text": "一个 microRNA 只能特异性调控一个靶 mRNA"
+        },
+        {
+          "answer": false,
+          "label": "D",
+          "text": "microRNA 在转录水平直接抑制靶基因的转录起始"
+        }
+      ],
+      "subject": "分子生物学",
+      "tags": [
+        "rna_biology",
+        "module_1",
+        "分子生物学",
+        "microRNA",
+        "转录后调控"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M1-02-30bbc833",
+      "concept": "m6A RNA 修饰与表观转录组",
+      "difficulty": "league",
+      "explanation": "A【对】依据：METTL3 为催化亚基，METTL14 为结构亚基，二者形成异二聚体复合体，以 SAM 为甲基供体，特异性催化 mRNA 中 RRACH 基序内腺苷的 N6 位甲基化。\nB【对】依据：YTHDF1/2/3 通过 YTH 结构域识别 m6A，YTHDF1 促进翻译，YTHDF2 招募 CCR4-NOT 复合体促进 mRNA 降解，YTHDF3 协同二者功能。\nC【对】依据：FTO（fat mass and obesity-associated protein）属于 AlkB 家族双加氧酶，可氧化去除 m6A 的甲基，使 m6A 成为可逆的动态修饰，参与代谢与发育调控。\nD【错】错因：m6A 广泛分布于 mRNA、lncRNA（如 XIST）、circRNA 及 miRNA 前体中，在各类 RNA 的剪接、出核、稳定性及翻译调控中均发挥重要作用。",
+      "image": {
+        "caption": "m6A writer/reader/eraser 调控网络",
+        "credit": "Wei G, Biochem Soc Trans 2024",
+        "doi": "10.1042/BST20230574",
+        "figure": "1",
+        "file": "assets/questions/M1-02-30bbc833/fig1.jpg",
+        "license": "CC BY 4.0",
+        "pmcId": "PMC11088905",
+        "source": "paper"
+      },
+      "question": "N6-甲基腺苷（m6A）是真核生物 mRNA 中最丰富的内部修饰。根据以上信息，判断以下陈述的正误。",
+      "references": [
+        {
+          "authors": "Zaccara S, Ries RJ, Jaffrey SR",
+          "doi": "10.1038/s41576-019-0168-5",
+          "journal": "Nature Reviews Genetics",
+          "title": "Reading, writing and erasing mRNA methylation",
+          "year": 2019
+        }
+      ],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "METTL3/METTL14 复合体作为'书写器'催化腺苷 N6 位甲基化"
+        },
+        {
+          "answer": true,
+          "label": "B",
+          "text": "YTHDF 家族蛋白作为'阅读器'识别 m6A 并影响 mRNA 稳定性或翻译效率"
+        },
+        {
+          "answer": true,
+          "label": "C",
+          "text": "FTO 蛋白作为'擦除器'可逆地去除 m6A 甲基化修饰"
+        },
+        {
+          "answer": false,
+          "label": "D",
+          "text": "m6A 修饰仅存在于 mRNA 中，不参与 lncRNA 或 circRNA 的调控"
+        }
+      ],
+      "subject": "分子生物学",
+      "tags": [
+        "rna_biology",
+        "module_1",
+        "分子生物学",
+        "m6A",
+        "表观转录组"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M1-03-e2de52ed",
+      "concept": "lncRNA XIST 与 X 染色体失活",
+      "difficulty": "league",
+      "explanation": "A【对】依据：XIST 不扩散，顺式包裹同一条 X 染色体，启动该染色体的剂量补偿沉默。\nB【对】依据：XIST 募集 PRC2 等复合体，建立 H3K27me3 等抑制性修饰，使染色质凝集失活。\nC【错】错因：XIST 是长链非编码 RNA，以 RNA 分子本身发挥功能，不编码蛋白质。\nD【错】错因：失活 X 上仍有部分基因（如假常染色体区基因）逃逸失活，并非全部沉默。",
+      "question": "lncRNA XIST 由 X 染色体失活中心转录，介导雌性哺乳动物一条 X 染色体失活。根据以上信息，判断以下陈述的正误。",
+      "references": [],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "XIST RNA 包裹其转录来源的那条 X 染色体，发挥顺式作用"
+        },
+        {
+          "answer": true,
+          "label": "B",
+          "text": "XIST 募集染色质修饰复合体，促进染色质凝集与沉默"
+        },
+        {
+          "answer": false,
+          "label": "C",
+          "text": "XIST 编码一个小肽，由该肽促进染色体凝集"
+        },
+        {
+          "answer": false,
+          "label": "D",
+          "text": "X 染色体失活后其上所有基因永久沉默，无一例外"
+        }
+      ],
+      "subject": "分子生物学",
+      "tags": [
+        "rna_biology",
+        "module_1",
+        "分子生物学",
+        "lncRNA XIST 与 X 染色体失活"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M3-01-dc3e19d8",
+      "concept": "视觉的光感受机制",
+      "difficulty": "league",
+      "explanation": "A【对】依据：视杆细胞含视紫红质，对弱光敏感；视锥细胞分三种，分别感受红绿蓝光。\nB【错】错因：感光细胞产生的是分级电位（超极化），经双极细胞、神经节细胞转换后才产生动作电位。\nC【错】错因：视网膜成像，但视觉在大脑皮层视觉中枢（枕叶）形成。\nD【错】错因：看近物时睫状肌收缩、悬韧带松弛，晶状体曲度增大，而非变小。",
+      "question": "视网膜上的感光细胞将光信号转换为神经信号。根据以上信息，判断以下陈述的正误。",
+      "references": [],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "视杆细胞感受弱光，视锥细胞感受强光和颜色"
+        },
+        {
+          "answer": false,
+          "label": "B",
+          "text": "感光细胞受光刺激后产生动作电位直接传向大脑"
+        },
+        {
+          "answer": false,
+          "label": "C",
+          "text": "视觉在视网膜上形成，大脑皮层不参与视觉形成"
+        },
+        {
+          "answer": false,
+          "label": "D",
+          "text": "晶状体通过改变曲度调节焦距，看近物时曲度变小"
+        }
+      ],
+      "subject": "动物生理学",
+      "tags": [
+        "sensory_physio",
+        "module_3",
+        "动物生理学",
+        "视觉的光感受机制"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M4-01-33d67c21",
+      "concept": "序列比对与打分矩阵",
+      "difficulty": "league",
+      "explanation": "A【对】依据：BLAST 通过短词匹配延伸实现高速局部比对，是功能注释的基础工具。\nB【对】依据：替换矩阵基于氨基酸理化性质与观测频率，给不同替换赋予得分。\nC【对】依据：显著比对提示同源性，可作为功能与进化关系推断的证据。\nD【错】错因：空位开放与延伸罚分直接影响比对方式与结果，是重要参数。",
+      "question": "研究者将新测定的蛋白序列与数据库序列进行比对以推测功能。根据以上信息，判断以下陈述的正误。",
+      "references": [],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "BLAST 是一种常用的快速局部序列比对工具"
+        },
+        {
+          "answer": true,
+          "label": "B",
+          "text": "BLOSUM/PAM 矩阵用于评估氨基酸替换的得分"
+        },
+        {
+          "answer": true,
+          "label": "C",
+          "text": "比对得分越高，两条序列亲缘关系或功能相似性越可能接近"
+        },
+        {
+          "answer": false,
+          "label": "D",
+          "text": "序列比对结果不受空位罚分设置的影响"
+        }
+      ],
+      "subject": "生物信息学",
+      "tags": [
+        "sequence_alignment",
+        "module_4",
+        "生物信息学",
+        "序列比对与打分矩阵"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M4-01-ac9f7461",
+      "concept": "高通量测序技术的原理",
+      "difficulty": "league",
+      "explanation": "A【对】依据：NGS 在桥式扩增的簇上逐轮掺入荧光标记可逆终止核苷酸并成像，实现大规模并行测序。\nB【错】错因：Sanger 是低通量双脱氧链终止法，一次反应读一条序列；数百万短序列是 NGS 特征。\nC【错】错因：长读长跨越重复区能力强，有利于拼接，短读长才造成拼接困难。\nD【错】错因：三代测序（如 PacBio、纳米孔）的核心优势正是单分子实时测序，无需 PCR 扩增。",
+      "question": "第二代测序（NGS）使基因组测序成本大幅下降。根据以上信息，判断以下陈述的正误。",
+      "references": [],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "Illumina 测序基于边合成边测序原理，通过荧光标记核苷酸识别碱基"
+        },
+        {
+          "answer": false,
+          "label": "B",
+          "text": "Sanger 测序一次反应可读取数百万条短序列"
+        },
+        {
+          "answer": false,
+          "label": "C",
+          "text": "测序读长越长，越不利于基因组拼接"
+        },
+        {
+          "answer": false,
+          "label": "D",
+          "text": "第三代测序无法读取单条 DNA 分子，必须扩增后测序"
+        }
+      ],
+      "subject": "生物信息学",
+      "tags": [
+        "sequencing_tech",
+        "module_4",
+        "生物信息学",
+        "高通量测序技术的原理"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M4-01-9282854c",
+      "concept": "伴性遗传的特点",
+      "difficulty": "league",
+      "explanation": "A【对】依据：男性半合子（XᵇY）即表现患病，女性需两条 X 均带致病基因才患病。\nB【对】依据：女性患者（XᵇXᵇ）一条 Xᵇ 必来自父亲（其父为患者），另一条必传给儿子。\nC【对】依据：儿子的 X 染色体来自母亲，Y 来自父亲，故男性患者的致病基因只能来自母亲。\nD【错】错因：父亲将 Y 传给儿子，X 染色体只传给女儿，伴 X 基因不存在父传子。",
+      "question": "人类红绿色盲为 X 染色体隐性遗传病。根据以上信息，判断以下陈述的正误。",
+      "references": [],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "男性患者多于女性患者，因为男性只有一条 X 染色体"
+        },
+        {
+          "answer": true,
+          "label": "B",
+          "text": "女性患者的父亲和儿子一定患病"
+        },
+        {
+          "answer": true,
+          "label": "C",
+          "text": "男性患者的色盲基因只能从母亲传来"
+        },
+        {
+          "answer": false,
+          "label": "D",
+          "text": "色盲基因可由父亲直接传给儿子"
+        }
+      ],
+      "subject": "遗传学",
+      "tags": [
+        "sex_linkage",
+        "module_4",
+        "遗传学",
+        "伴性遗传的特点"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M4-01-d42c014c",
+      "concept": "物种形成与生殖隔离",
+      "difficulty": "league",
+      "explanation": "A【对】依据：地理屏障阻断基因流，不同环境的选择与漂变使种群分化积累。\nB【对】依据：当种群间不能交配或后代不育时，基因库彻底分开，新物种形成。\nC【错】错因：地理隔离只是促进分化，若分化不足，重新接触后仍可基因交流。\nD【对】依据：多倍体与二倍体亲本杂交后代不育，立即产生生殖隔离，属同域成种。",
+      "question": "达尔文地雀由共同祖先经地理隔离后演化为多个物种。根据以上信息，判断以下陈述的正误。",
+      "references": [],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "地理隔离使不同种群间基因交流中断，各自独立进化"
+        },
+        {
+          "answer": true,
+          "label": "B",
+          "text": "生殖隔离是新物种形成的标志"
+        },
+        {
+          "answer": false,
+          "label": "C",
+          "text": "地理隔离必然导致生殖隔离的形成"
+        },
+        {
+          "answer": true,
+          "label": "D",
+          "text": "多倍体的形成可以不经过地理隔离而瞬间产生新物种"
+        }
+      ],
+      "subject": "进化生物学",
+      "tags": [
+        "speciation",
+        "module_4",
+        "进化生物学",
+        "物种形成与生殖隔离"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M3-01-3d4873ff",
+      "concept": "体温调节机制",
+      "difficulty": "league",
+      "explanation": "A【对】依据：交感神经使皮肤血管收缩，血流量减少，降低体表散热速率。\nB【对】依据：甲状腺激素提高代谢率，肾上腺素促进物质氧化，二者协同增加产热。\nC【错】错因：体温调节中枢位于下丘脑，大脑皮层产生冷热感觉但不直接调节。\nD【错】错因：体温恒定时产热与散热保持动态平衡，产热大于散热会导致体温上升，不符合稳态。",
+      "question": "寒冷环境中，人体通过多种途径维持体温恒定。根据以上信息，判断以下陈述的正误。",
+      "references": [],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "寒冷刺激下，皮肤血管收缩减少散热"
+        },
+        {
+          "answer": true,
+          "label": "B",
+          "text": "甲状腺激素和肾上腺素分泌增加，促进产热"
+        },
+        {
+          "answer": false,
+          "label": "C",
+          "text": "体温调节中枢位于大脑皮层"
+        },
+        {
+          "answer": false,
+          "label": "D",
+          "text": "寒冷环境中机体产热量大于散热量，体温持续升高"
+        }
+      ],
+      "subject": "动物生理学",
+      "tags": [
+        "temperature_reg",
+        "module_3",
+        "动物生理学",
+        "体温调节机制"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M1-01-212edebf",
+      "concept": "真核生物转录与启动子",
+      "difficulty": "league",
+      "explanation": "A【对】依据：聚合酶读取模板链方向为 3'→5'，新 RNA 链只能从 5' 端向 3' 端延伸。\nB【错】错因：rRNA、tRNA、lncRNA 等基因转录后不翻译，mRNA 仅是蛋白编码基因的产物。\nC【错】错因：真核转录在核内、翻译在细胞质，时空分隔；边转录边翻译见于原核生物。\nD【错】错因：TATA 框是核心启动子元件，被通用转录因子识别以起始转录，与终止无关。",
+      "question": "真核基因的转录需要 RNA 聚合酶与多种转录因子协同完成。根据以上信息，判断以下陈述的正误。",
+      "references": [],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "RNA 聚合酶沿模板链 3'→5' 移动，RNA 链按 5'→3' 方向延伸"
+        },
+        {
+          "answer": false,
+          "label": "B",
+          "text": "所有基因的转录产物都是直接用于翻译的 mRNA"
+        },
+        {
+          "answer": false,
+          "label": "C",
+          "text": "真核细胞中转录与翻译在同一场所同时进行"
+        },
+        {
+          "answer": false,
+          "label": "D",
+          "text": "TATA 框位于基因终止区，负责终止转录"
+        }
+      ],
+      "subject": "分子生物学",
+      "tags": [
+        "transcription",
+        "module_1",
+        "分子生物学",
+        "真核生物转录与启动子"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M4-01-69aba2ea",
+      "concept": "RNA-seq 与差异表达分析",
+      "difficulty": "league",
+      "explanation": "A【对】依据：提取的 RNA 经片段化、反转录建库测序，是转录组定量的主流方法。\nB【对】依据：TPM/FPKM 等标准化校正基因长度与测序深度，使样本间可比。\nC【对】依据：表达量高的基因产生更多 reads，计数是表达定量的基础。\nD【错】错因：RNA-seq 不依赖探针，可通过从头拼接发现新转录本与新剪接异构体。",
+      "question": "研究者用 RNA-seq 比较肿瘤组织与正常组织的基因表达差异。根据以上信息，判断以下陈述的正误。",
+      "references": [],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "RNA-seq 通过将 RNA 反转录为 cDNA 后测序来定量基因表达"
+        },
+        {
+          "answer": true,
+          "label": "B",
+          "text": "差异表达分析需进行标准化以消除测序深度等偏差"
+        },
+        {
+          "answer": true,
+          "label": "C",
+          "text": "测序读数（reads）比对到基因上的数量可反映其表达水平"
+        },
+        {
+          "answer": false,
+          "label": "D",
+          "text": "RNA-seq 只能检测已知基因，无法发现新的转录本"
+        }
+      ],
+      "subject": "生物信息学",
+      "tags": [
+        "transcriptomics",
+        "module_4",
+        "生物信息学",
+        "RNA-seq 与差异表达分析"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M1-01-a77cfd5b",
+      "concept": "翻译与密码子",
+      "difficulty": "league",
+      "explanation": "A【错】错因：一种 tRNA 通常只对应一种氨基酸，借助摆动配对可识别少数同义密码子，而非全部。\nB【错】错因：AUG 既编码甲硫氨酸又是起始信号，双重功能缺一不可。\nC【对】依据：核糖体按 5'→3' 读码，氨基酸依次加到肽链羧基端，即 N 端向 C 端延伸。\nD【错】错因：tRNA 依 A 位→P 位→E 位顺序移位，卸载后从 E 位离开，并非停留 A 位。",
+      "question": "核糖体沿 mRNA 移动，tRNA 按密码子转运氨基酸合成多肽链。根据以上信息，判断以下陈述的正误。",
+      "references": [],
+      "subQuestions": [
+        {
+          "answer": false,
+          "label": "A",
+          "text": "一种 tRNA 能识别并转运所有同义密码子"
+        },
+        {
+          "answer": false,
+          "label": "B",
+          "text": "起始密码子 AUG 只编码甲硫氨酸，没有起始功能"
+        },
+        {
+          "answer": true,
+          "label": "C",
+          "text": "核糖体沿 mRNA 5'→3' 移动，肽链从 N 端向 C 端延伸"
+        },
+        {
+          "answer": false,
+          "label": "D",
+          "text": "tRNA 进入核糖体后始终停留在 A 位直至肽链完成"
+        }
+      ],
+      "subject": "分子生物学",
+      "tags": [
+        "translation",
+        "module_1",
+        "分子生物学",
+        "翻译与密码子"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    },
+    {
+      "bioId": "M2-01-29df4a1b",
+      "concept": "噬菌体侵染实验",
+      "difficulty": "league",
+      "explanation": "A【对】依据：DNA 含磷不含硫，蛋白质含硫不含磷，离心后 ³²P 在沉淀、³⁵S 在上清。\nB【错】错因：蛋白质外壳不进入细菌，子代噬菌体的蛋白质由细菌内 DNA 指导合成。\nC【错】错因：噬菌体为专性寄生，必须先用标记的大肠杆菌培养才能获得标记噬菌体。\nD【错】错因：实验只证明 T2 噬菌体的遗传物质是 DNA，RNA 病毒（如烟草花叶病毒）的遗传物质是 RNA。",
+      "question": "Hershey 和 Chase 用 ³²P 和 ³⁵S 分别标记噬菌体，证明 DNA 是遗传物质。根据以上信息，判断以下陈述的正误。",
+      "references": [],
+      "subQuestions": [
+        {
+          "answer": true,
+          "label": "A",
+          "text": "³²P 标记的 DNA 进入细菌，³⁵S 标记的蛋白质外壳留在菌体外"
+        },
+        {
+          "answer": false,
+          "label": "B",
+          "text": "³⁵S 标记的蛋白质进入细菌并指导子代噬菌体合成"
+        },
+        {
+          "answer": false,
+          "label": "C",
+          "text": "噬菌体可在普通培养基上直接培养并标记"
+        },
+        {
+          "answer": false,
+          "label": "D",
+          "text": "该实验证明所有病毒的遗传物质都是 DNA"
+        }
+      ],
+      "subject": "微生物学",
+      "tags": [
+        "virus",
+        "module_2",
+        "微生物学",
+        "噬菌体侵染实验"
+      ],
+      "target": "competition",
+      "type": "mtf"
+    }
+  ]
+}

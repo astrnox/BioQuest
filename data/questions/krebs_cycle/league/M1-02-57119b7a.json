@@ -1,57 +1,57 @@
 {
-  "concept": "TCA循环的回补反应与代谢调控",
-  "difficulty": "league",
-  "explanation": "A【对】依据：TCA循环中间物（如α-酮戊二酸、草酰乙酸）是氨基酸合成的前体，当细胞活跃合成蛋白质时，这些中间物被抽提用于生物合成，必须通过回补反应（如丙酮酸羧化酶催化丙酮酸→草酰乙酸）补充，否则循环无法持续运转。\nB【对】依据：丙酮酸羧化酶（PC）是关键的回补酶，催化丙酮酸 + CO₂ + ATP → 草酰乙酸 + ADP + Pi，该反应在肝脏和脂肪组织中活跃，确保草酰乙酸供应充足以维持TCA循环通量。\nC【对】依据：α-酮戊二酸经α-酮戊二酸脱氢酶复合体（OGDC，类丙酮酸脱氢酶的多酶复合体）氧化脱羧生成琥珀酰辅酶A，同时将NAD⁺还原为NADH并释放CO₂，这是循环中重要的氧化脱羧步骤。\nD【错】错因：回补反应在所有细胞中持续进行，不仅限于快速分裂的细胞。例如肝脏中氨基酸代谢不断产生或消耗TCA中间物，需要通过回补反应维持代谢稳态；肌肉细胞在运动时也会通过回补反应补充草酰乙酸以支持能量产生。",
-  "image": {
-    "caption": "TCA循环的回补与抽提反应",
-    "credit": "Mills et al., Cell Metab 2022",
-    "doi": "10.1016/j.cmet.2022.04.001",
-    "figure": "2",
-    "file": "assets/questions/krebs_cycle/fig1.svg",
-    "license": "CC BY 4.0",
-    "pmcId": "PMC9005432",
-    "source": "paper"
+ "concept": "TCA循环的回补反应与代谢调控",
+ "difficulty": "league",
+ "explanation": "A【对】依据：TCA循环中间物（如α-酮戊二酸、草酰乙酸）是氨基酸合成的前体，当细胞活跃合成蛋白质时，这些中间物被抽提用于生物合成，必须通过回补反应（如丙酮酸羧化酶催化丙酮酸→草酰乙酸）补充，否则循环无法持续运转。\nB【对】依据：丙酮酸羧化酶（PC）是关键的回补酶，催化丙酮酸 + CO₂ + ATP → 草酰乙酸 + ADP + Pi，该反应在肝脏和脂肪组织中活跃，确保草酰乙酸供应充足以维持TCA循环通量。\nC【对】依据：α-酮戊二酸经α-酮戊二酸脱氢酶复合体（OGDC，类丙酮酸脱氢酶的多酶复合体）氧化脱羧生成琥珀酰辅酶A，同时将NAD⁺还原为NADH并释放CO₂，这是循环中重要的氧化脱羧步骤。\nD【错】错因：回补反应在所有细胞中持续进行，不仅限于快速分裂的细胞。例如肝脏中氨基酸代谢不断产生或消耗TCA中间物，需要通过回补反应维持代谢稳态；肌肉细胞在运动时也会通过回补反应补充草酰乙酸以支持能量产生。",
+ "image": {
+  "caption": "TCA循环的回补与抽提反应",
+  "credit": "Mills et al., Cell Metab 2022",
+  "doi": "10.1016/j.cmet.2022.04.001",
+  "figure": "2",
+  "file": "assets/questions/krebs_cycle/fig1.svg",
+  "license": "CC BY 4.0",
+  "pmcId": "PMC9005432",
+  "source": "paper"
+ },
+ "question": "研究者发现，在某些快速增殖的肿瘤细胞中，TCA循环中间物被大量抽提用于氨基酸和核苷酸合成，导致循环通量下降。根据以上信息，判断以下陈述的正误。",
+ "references": [
+  {
+   "authors": "Mills CE, Ortmann J, Pierce KA, et al.",
+   "doi": "10.1016/j.cmet.2022.04.001",
+   "journal": "Cell Metabolism",
+   "title": "A mitochondrial pathway fuels biosynthetic capacity in cancer",
+   "year": 2022
+  }
+ ],
+ "subQuestions": [
+  {
+   "answer": true,
+   "label": "A",
+   "text": "TCA循环中间物被抽提用于生物合成时，必须通过回补反应补充以维持循环运转"
   },
-  "question": "研究者发现，在某些快速增殖的肿瘤细胞中，TCA循环中间物被大量抽提用于氨基酸和核苷酸合成，导致循环通量下降。关于TCA循环的代谢调控，下列叙述正确的有：",
-  "references": [
-    {
-      "authors": "Mills CE, Ortmann J, Pierce KA, et al.",
-      "doi": "10.1016/j.cmet.2022.04.001",
-      "journal": "Cell Metabolism",
-      "title": "A mitochondrial pathway fuels biosynthetic capacity in cancer",
-      "year": 2022
-    }
-  ],
-  "subQuestions": [
-    {
-      "answer": true,
-      "label": "A",
-      "text": "TCA循环中间物被抽提用于生物合成时，必须通过回补反应补充以维持循环运转"
-    },
-    {
-      "answer": true,
-      "label": "B",
-      "text": "丙酮酸羧化酶催化的丙酮酸→草酰乙酸反应是重要的回补反应"
-    },
-    {
-      "answer": true,
-      "label": "C",
-      "text": "α-酮戊二酸经脱氢酶复合体氧化脱羧生成琥珀酰辅酶A，同时将NAD⁺还原为NADH"
-    },
-    {
-      "answer": false,
-      "label": "D",
-      "text": "回补反应仅在快速分裂的细胞中发生，静止细胞不需要"
-    }
-  ],
-  "subject": "生物化学",
-  "tags": [
-    "krebs_cycle",
-    "module_1",
-    "生物化学",
-    "TCA循环",
-    "代谢调控"
-  ],
-  "target": "competition",
-  "type": "mtf"
+  {
+   "answer": true,
+   "label": "B",
+   "text": "丙酮酸羧化酶催化的丙酮酸→草酰乙酸反应是重要的回补反应"
+  },
+  {
+   "answer": true,
+   "label": "C",
+   "text": "α-酮戊二酸经脱氢酶复合体氧化脱羧生成琥珀酰辅酶A，同时将NAD⁺还原为NADH"
+  },
+  {
+   "answer": false,
+   "label": "D",
+   "text": "回补反应仅在快速分裂的细胞中发生，静止细胞不需要"
+  }
+ ],
+ "subject": "生物化学",
+ "tags": [
+  "krebs_cycle",
+  "module_1",
+  "生物化学",
+  "TCA循环",
+  "代谢调控"
+ ],
+ "target": "competition",
+ "type": "mtf"
 }
