@@ -1,0 +1,344 @@
+/* ============================================================
+ * BioQuest — 统一加载动画库
+ *
+ * 参考 GitHub 高星项目（实现思路，非复制代码）：
+ *  - SpinKit (tobiasahlin/SpinKit, ~19.3k★) — 纯 CSS 加载指示器集合
+ *  - loaders.css (ConnorAtherton/loaders.css, ~10.2k★) — 纯 CSS 加载动画
+ *  - pace (CodeByZach/pace, ~15.6k★) — 页面顶部进度条
+ *
+ * 设计原则：
+ *  1. 全部纯 CSS（GPU transform/opacity 动画），零 JS 依赖、零网络请求；
+ *  2. 生物主题视觉：DNA 双螺旋（加载屏主角）、原子轨道（轻量场景）、
+ *     波浪/追点/三点跳动（SpinKit 风格通用型）；
+ *  3. 颜色跟随主题变量（--color-sage / --color-amber），明暗模式自适应；
+ *  4. 尊重 prefers-reduced-motion，降低动画强度。
+ * ============================================================ */
+
+/* ---------- 通用旋转 ---------- */
+@keyframes bqSpin {
+  to { transform: rotate(360deg); }
+}
+
+/* ============================================================
+ * 1) DNA 双螺旋加载器（主角，用于加载屏/首屏遮罩）
+ * 结构：
+ *   <div class="bq-loader-dna" role="status" aria-label="加载中">
+ *     <span class="bq-dna-strand bq-dna-strand--left"><i></i><i></i><i></i><i></i></span>
+ *     <span class="bq-dna-strand bq-dna-strand--right"><i></i><i></i><i></i><i></i></span>
+ *     <span class="bq-dna-rung"></span>
+ *   </div>
+ * ============================================================ */
+.bq-loader-dna {
+  --dna-color: var(--color-sage, #5a7d5c);
+  --dna-accent: var(--color-amber, #c4956a);
+  position: relative;
+  width: 48px;
+  height: 88px;
+  margin: 0 auto;
+}
+
+.bq-loader-dna .bq-dna-strand {
+  position: absolute;
+  top: 3px;
+  bottom: 3px;
+  width: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.bq-loader-dna .bq-dna-strand i {
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--dna-color);
+  will-change: transform;
+}
+
+.bq-loader-dna .bq-dna-strand--left  { left: 2px; }
+.bq-loader-dna .bq-dna-strand--right { right: 2px; }
+
+/* 左链：4 个碱基点错相位摆动（前进→回中→后退→回中） */
+.bq-loader-dna .bq-dna-strand--left i {
+  animation: bqDnaDotL 1.8s ease-in-out infinite;
+}
+.bq-loader-dna .bq-dna-strand--left i:nth-child(1) { animation-delay: 0s; }
+.bq-loader-dna .bq-dna-strand--left i:nth-child(2) { animation-delay: 0.45s; }
+.bq-loader-dna .bq-dna-strand--left i:nth-child(3) { animation-delay: 0.9s; }
+.bq-loader-dna .bq-dna-strand--left i:nth-child(4) { animation-delay: 1.35s; }
+
+/* 右链：与左链相位错开半个周期，形成"旋转双螺旋"视错觉 */
+.bq-loader-dna .bq-dna-strand--right i {
+  animation: bqDnaDotR 1.8s ease-in-out infinite;
+}
+.bq-loader-dna .bq-dna-strand--right i:nth-child(1) { animation-delay: 0.225s; }
+.bq-loader-dna .bq-dna-strand--right i:nth-child(2) { animation-delay: 0.675s; }
+.bq-loader-dna .bq-dna-strand--right i:nth-child(3) { animation-delay: 1.125s; }
+.bq-loader-dna .bq-dna-strand--right i:nth-child(4) { animation-delay: 1.575s; }
+
+/* 中央"碱基对"连接线：随螺旋旋转同步伸缩 */
+.bq-loader-dna .bq-dna-rung {
+  position: absolute;
+  left: 50%;
+  top: 5px;
+  bottom: 5px;
+  width: 2px;
+  margin-left: -1px;
+  border-radius: 2px;
+  background: linear-gradient(180deg, transparent, var(--dna-accent) 25%, var(--dna-accent) 75%, transparent);
+  animation: bqDnaRung 1.8s ease-in-out infinite;
+}
+
+@keyframes bqDnaDotL {
+  0%, 100% { transform: translateX(0) scale(1); }
+  25%      { transform: translateX(9px) scale(0.6); }
+  50%      { transform: translateX(0) scale(1); }
+  75%      { transform: translateX(-9px) scale(0.6); }
+}
+@keyframes bqDnaDotR {
+  0%, 100% { transform: translateX(0) scale(1); }
+  25%      { transform: translateX(-9px) scale(0.6); }
+  50%      { transform: translateX(0) scale(1); }
+  75%      { transform: translateX(9px) scale(0.6); }
+}
+@keyframes bqDnaRung {
+  0%, 100% { transform: scaleY(1); opacity: 1; }
+  25%      { transform: scaleY(0.5); opacity: 0.5; }
+  50%      { transform: scaleY(1); opacity: 1; }
+  75%      { transform: scaleY(0.5); opacity: 0.5; }
+}
+
+/* ============================================================
+ * 2) 原子轨道加载器（轻量场景：搜索/按钮旁）
+ * 结构：
+ *   <div class="bq-loader-atom" role="status" aria-label="加载中">
+ *     <span class="bq-atom-core"></span>
+ *     <span class="bq-atom-orbit"><i></i></span>
+ *     <span class="bq-atom-orbit bq-atom-orbit--2"><i></i></span>
+ *     <span class="bq-atom-orbit bq-atom-orbit--3"><i></i></span>
+ *   </div>
+ * ============================================================ */
+.bq-loader-atom {
+  --atom-color: var(--color-sage, #5a7d5c);
+  --atom-accent: var(--color-amber, #c4956a);
+  position: relative;
+  width: 48px;
+  height: 48px;
+  margin: 0 auto;
+}
+
+.bq-atom-core {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 12px;
+  height: 12px;
+  margin: -6px 0 0 -6px;
+  border-radius: 50%;
+  background: var(--atom-accent);
+  box-shadow: 0 0 10px rgba(196, 149, 106, 0.5);
+}
+
+.bq-atom-orbit {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px solid rgba(90, 125, 92, 0.2);
+  animation: bqAtomOrbit1 1.6s linear infinite;
+}
+.bq-atom-orbit::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -4px;
+  width: 7px;
+  height: 7px;
+  margin-left: -3.5px;
+  border-radius: 50%;
+  background: var(--atom-color);
+}
+.bq-atom-orbit--2 { border-color: rgba(90, 125, 92, 0.13); animation-name: bqAtomOrbit2; animation-duration: 2s; }
+.bq-atom-orbit--3 { border-color: rgba(90, 125, 92, 0.13); animation-name: bqAtomOrbit3; animation-duration: 2.4s; }
+
+@keyframes bqAtomOrbit1 { from { transform: rotate(0deg) scaleY(0.62); } to { transform: rotate(360deg) scaleY(0.62); } }
+@keyframes bqAtomOrbit2 { from { transform: rotate(120deg) scaleY(0.62); } to { transform: rotate(480deg) scaleY(0.62); } }
+@keyframes bqAtomOrbit3 { from { transform: rotate(240deg) scaleY(0.62); } to { transform: rotate(600deg) scaleY(0.62); } }
+
+/* ============================================================
+ * 3) 波浪加载器（SpinKit wave 风格）
+ * 结构：<div class="bq-loader-wave" role="status" aria-label="加载中"><i></i>×5</div>
+ * ============================================================ */
+.bq-loader-wave {
+  --wave-color: var(--color-sage, #5a7d5c);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  height: 38px;
+  margin: 0 auto;
+}
+.bq-loader-wave i {
+  width: 5px;
+  height: 100%;
+  border-radius: 3px;
+  background: var(--wave-color);
+  animation: bqWave 1.2s ease-in-out infinite;
+}
+.bq-loader-wave i:nth-child(2) { animation-delay: -1.1s; }
+.bq-loader-wave i:nth-child(3) { animation-delay: -1.0s; }
+.bq-loader-wave i:nth-child(4) { animation-delay: -0.9s; }
+.bq-loader-wave i:nth-child(5) { animation-delay: -0.8s; }
+
+@keyframes bqWave {
+  0%, 100% { transform: scaleY(0.35); }
+  50%      { transform: scaleY(1); }
+}
+
+/* ============================================================
+ * 4) 环绕追点加载器（SpinKit circle 风格）
+ * 结构：<div class="bq-loader-chase" role="status" aria-label="加载中"><i></i>×8</div>
+ * ============================================================ */
+.bq-loader-chase {
+  --chase-color: var(--color-sage, #5a7d5c);
+  position: relative;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+}
+.bq-loader-chase i {
+  position: absolute;
+  inset: 0;
+  animation: bqChaseBounce 1.2s infinite ease-in-out both;
+}
+.bq-loader-chase i::before {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--chase-color);
+}
+.bq-loader-chase i:nth-child(1) { transform: rotate(0deg); animation-delay: -1.05s; }
+.bq-loader-chase i:nth-child(2) { transform: rotate(45deg); animation-delay: -0.9s; }
+.bq-loader-chase i:nth-child(3) { transform: rotate(90deg); animation-delay: -0.75s; }
+.bq-loader-chase i:nth-child(4) { transform: rotate(135deg); animation-delay: -0.6s; }
+.bq-loader-chase i:nth-child(5) { transform: rotate(180deg); animation-delay: -0.45s; }
+.bq-loader-chase i:nth-child(6) { transform: rotate(225deg); animation-delay: -0.3s; }
+.bq-loader-chase i:nth-child(7) { transform: rotate(270deg); animation-delay: -0.15s; }
+.bq-loader-chase i:nth-child(8) { transform: rotate(315deg); animation-delay: 0s; }
+
+@keyframes bqChaseBounce {
+  0%, 80%, 100% { transform: scale(0); }
+  40%           { transform: scale(1); }
+}
+
+/* ============================================================
+ * 5) 双环加载器（单元素，替换旧 border spinner，用于路由/搜索/按钮）
+ * ============================================================ */
+.bq-loader-dualring {
+  --ring-color: var(--color-sage, #5a7d5c);
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 3px solid rgba(90, 125, 92, 0.14);
+  border-top-color: var(--ring-color);
+  border-right-color: rgba(90, 125, 92, 0.45);
+  animation: bqSpin 0.85s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+}
+
+/* ============================================================
+ * 6) 三点跳动加载器（SpinKit bounce 风格）
+ * 结构：<div class="bq-loader-dots" role="status" aria-label="加载中"><i></i>×3</div>
+ * ============================================================ */
+.bq-loader-dots {
+  --dots-color: var(--color-sage, #5a7d5c);
+  display: flex;
+  gap: 7px;
+  margin: 0 auto;
+}
+.bq-loader-dots i {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--dots-color);
+  animation: bqBounce 1.4s ease-in-out infinite both;
+}
+.bq-loader-dots i:nth-child(2) { animation-delay: -0.16s; }
+.bq-loader-dots i:nth-child(3) { animation-delay: -0.32s; }
+
+@keyframes bqBounce {
+  0%, 80%, 100% { transform: scale(0); }
+  40%           { transform: scale(1); }
+}
+
+/* ============================================================
+ * 7) 打字省略号（状态文本行内点缀）
+ * 结构：<span class="bq-loader-typing" aria-hidden="true"><i></i><i></i><i></i></span>
+ * ============================================================ */
+.bq-loader-typing {
+  display: inline-flex;
+  gap: 3px;
+  vertical-align: middle;
+}
+.bq-loader-typing i {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: currentColor;
+  animation: bqTypingDot 1.2s infinite;
+}
+.bq-loader-typing i:nth-child(2) { animation-delay: 0.2s; }
+.bq-loader-typing i:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes bqTypingDot {
+  0%, 60%, 100% { opacity: 0.25; transform: translateY(0); }
+  30%           { opacity: 1; transform: translateY(-3px); }
+}
+
+/* ============================================================
+ * 8) 进度条流光（叠加在进度条上的高光扫过效果）
+ * 用法：给进度条元素同时加 .bq-progress-shimmer 类
+ * ============================================================ */
+.bq-progress-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+.bq-progress-shimmer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.45), transparent);
+  animation: bqShimmer 1.4s infinite;
+}
+@keyframes bqShimmer {
+  from { transform: translateX(-100%); }
+  to   { transform: translateX(100%); }
+}
+
+/* ============================================================
+ * 尺寸修饰符
+ * ============================================================ */
+.bq-loader--sm { transform: scale(0.72); transform-origin: center; }
+.bq-loader--lg { transform: scale(1.25); transform-origin: center; }
+
+/* ============================================================
+ * 无障碍：尊重系统"减少动态效果"设置
+ * 不直接停掉动画（静止的加载器会被误认为页面卡死），
+ * 而是放慢到平缓节奏。
+ * ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  .bq-loader-dna .bq-dna-strand i,
+  .bq-loader-dna .bq-dna-rung,
+  .bq-atom-orbit,
+  .bq-loader-wave i,
+  .bq-loader-chase,
+  .bq-loader-chase i::before,
+  .bq-loader-dualring,
+  .bq-loader-dots i,
+  .bq-loader-typing i,
+  .bq-progress-shimmer::after {
+    animation-duration: 3.6s !important;
+  }
+}

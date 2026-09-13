@@ -535,7 +535,19 @@ function selectAnswer(qIdx, optIdx) {
     userAnswers[qIdx] = optIdx;
   }
 
-  renderPaper();
+  // 原地更新选中态，避免整卷重渲染（每点一个选项都重建整张试卷）被感知为页面刷新
+  const qEl = document.getElementById('pq-' + qIdx);
+  if (qEl) {
+    qEl.querySelectorAll('.pq-native-input').forEach((input) => {
+      const oIdx = parseInt(input.value, 10);
+      const isSelected = qType === 'multiple'
+        ? (Array.isArray(userAnswers[qIdx]) && userAnswers[qIdx].indexOf(oIdx) > -1)
+        : userAnswers[qIdx] === oIdx;
+      input.checked = isSelected;
+      const labelEl = input.closest('label');
+      if (labelEl) labelEl.classList.toggle('selected', isSelected);
+    });
+  }
 }
 
 function getSingleQuestionScore(q, i) {

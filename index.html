@@ -108,33 +108,18 @@
       background: radial-gradient(ellipse at 20% 20%, #1a1f1c 0%, #141a16 40%, #141a16 100%);
     }
     #bq-boot-logo {
-      width: 56px;
-      height: 56px;
-      border-radius: 16px;
-      background: #5a7d5c;
+      /* 与站点 header 品牌同款 SVG（金环+中心圆+绿色射线），
+         去除原"发光绿块+白圆环"的模板化设计，视觉自然贴合主题 */
+      width: 48px;
+      height: 48px;
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 6px 20px rgba(90, 125, 92, 0.28);
-      animation: bqBootPulse 1.4s ease-in-out infinite;
+      animation: bqBootBreathe 2.6s ease-in-out infinite;
     }
-    #bq-boot-logo::after {
-      content: "";
-      width: 22px;
-      height: 22px;
-      border-radius: 50%;
-      border: 2px solid #ffffff;
-      box-sizing: border-box;
-      position: relative;
-    }
-    #bq-boot-logo::before {
-      content: "";
-      width: 9px;
-      height: 9px;
-      border-radius: 50%;
-      background: #ffffff;
-      position: absolute;
-      z-index: 1;
+    #bq-boot-logo svg {
+      width: 48px;
+      height: 48px;
     }
     #bq-boot-label {
       font-family: var(--font-serif);
@@ -145,16 +130,75 @@
     }
     html[data-theme="dark"] #bq-boot-label { color: #e0e8e2; }
     #bq-boot-spinner {
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      border: 2px solid rgba(90, 125, 92, 0.18);
-      border-top-color: #5a7d5c;
-      animation: bqBootSpin 0.9s linear infinite;
+      /* Issue #139：首屏加载动画升级为 DNA 双螺旋（纯 CSS，不依赖外部样式，符合 boot 自包含约定） */
+      position: relative;
+      width: 40px;
+      height: 72px;
+      margin-top: 2px;
     }
-    html[data-theme="dark"] #bq-boot-spinner {
-      border-color: rgba(107, 196, 142, 0.22);
-      border-top-color: #6bc48e;
+    #bq-boot-spinner .bq-dna-strand {
+      position: absolute;
+      top: 3px;
+      bottom: 3px;
+      width: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    #bq-boot-spinner .bq-dna-strand i {
+      display: block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #5a7d5c;
+      will-change: transform;
+    }
+    html[data-theme="dark"] #bq-boot-spinner .bq-dna-strand i { background: #6bc48e; }
+    #bq-boot-spinner .bq-dna-strand--left  { left: 2px; }
+    #bq-boot-spinner .bq-dna-strand--right { right: 2px; }
+    #bq-boot-spinner .bq-dna-strand--left i  { animation: bqBootDnaL 1.8s ease-in-out infinite; }
+    #bq-boot-spinner .bq-dna-strand--right i { animation: bqBootDnaR 1.8s ease-in-out infinite; }
+    #bq-boot-spinner .bq-dna-strand--left i:nth-child(1)  { animation-delay: 0s; }
+    #bq-boot-spinner .bq-dna-strand--left i:nth-child(2)  { animation-delay: 0.45s; }
+    #bq-boot-spinner .bq-dna-strand--left i:nth-child(3)  { animation-delay: 0.9s; }
+    #bq-boot-spinner .bq-dna-strand--left i:nth-child(4)  { animation-delay: 1.35s; }
+    #bq-boot-spinner .bq-dna-strand--right i:nth-child(1) { animation-delay: 0.225s; }
+    #bq-boot-spinner .bq-dna-strand--right i:nth-child(2) { animation-delay: 0.675s; }
+    #bq-boot-spinner .bq-dna-strand--right i:nth-child(3) { animation-delay: 1.125s; }
+    #bq-boot-spinner .bq-dna-strand--right i:nth-child(4) { animation-delay: 1.575s; }
+    #bq-boot-spinner .bq-dna-rung {
+      position: absolute;
+      left: 50%;
+      top: 4px;
+      bottom: 4px;
+      width: 2px;
+      margin-left: -1px;
+      border-radius: 2px;
+      background: linear-gradient(180deg, transparent, #c4956a 25%, #c4956a 75%, transparent);
+      animation: bqBootDnaRung 1.8s ease-in-out infinite;
+    }
+    html[data-theme="dark"] #bq-boot-spinner .bq-dna-rung { background: linear-gradient(180deg, transparent, #d9a86c 25%, #d9a86c 75%, transparent); }
+    @keyframes bqBootDnaL {
+      0%, 100% { transform: translateX(0) scale(1); }
+      25%      { transform: translateX(8px) scale(0.6); }
+      50%      { transform: translateX(0) scale(1); }
+      75%      { transform: translateX(-8px) scale(0.6); }
+    }
+    @keyframes bqBootDnaR {
+      0%, 100% { transform: translateX(0) scale(1); }
+      25%      { transform: translateX(-8px) scale(0.6); }
+      50%      { transform: translateX(0) scale(1); }
+      75%      { transform: translateX(8px) scale(0.6); }
+    }
+    @keyframes bqBootDnaRung {
+      0%, 100% { transform: scaleY(1); opacity: 1; }
+      25%      { transform: scaleY(0.5); opacity: 0.5; }
+      50%      { transform: scaleY(1); opacity: 1; }
+      75%      { transform: scaleY(0.5); opacity: 0.5; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      #bq-boot-spinner .bq-dna-strand i,
+      #bq-boot-spinner .bq-dna-rung { animation-duration: 3.6s !important; }
     }
     /* ⑤ 加载进度条 + 百分比（加权步骤估算，真实进度驱动） */
     #bq-boot-progress {
@@ -182,14 +226,9 @@
     }
     html[data-theme="dark"] #bq-boot-percent { color: #7f9189; }
     /* 动画声明（只放这里，不依赖外部 CSS 文件加载） */
-    @keyframes bqBootSpin { to { transform: rotate(360deg); } }
-    @keyframes bqBootPulse {
-      0%, 100% { transform: scale(1);    box-shadow: 0 6px 20px rgba(90, 125, 92, 0.28); }
-      50%      { transform: scale(1.04); box-shadow: 0 10px 32px rgba(90, 125, 92, 0.40); }
-    }
-    html[data-theme="dark"] #bq-boot-logo {
-      background: #3a7a4c;
-      box-shadow: 0 6px 20px rgba(107, 196, 142, 0.35);
+    @keyframes bqBootBreathe {
+      0%, 100% { opacity: 1; }
+      50%      { opacity: 0.72; }
     }
     /* 卸载 mask：通过 classList.add('is-ready') 平滑淡出，避免"忽然切走" */
     #bq-boot-mask.is-ready { opacity: 0; visibility: hidden; }
@@ -276,6 +315,8 @@
   <!-- 首屏关键 CSS：同步加载 -->
   <!-- Issue #108：首屏同步 CSS 合并为单文件（scripts/build-css-bundle.js 生成，减少 6→1 次串行请求） -->
   <link rel="stylesheet" href="css/bundle-core.css?v=20260905a">
+  <!-- Issue #139：统一加载动画库（DNA 双螺旋 / 原子轨道 / 波浪 / 追点等，纯 CSS） -->
+  <link rel="stylesheet" href="css/loaders.css?v=20260912a">
   <!-- 非首屏关键 CSS：异步加载，不阻塞首次渲染 -->
   <link rel="preload" href="css/countdown.css" as="style" data-css-async>
   <noscript><link rel="stylesheet" href="css/countdown.css"></noscript>
@@ -317,9 +358,19 @@
 <body>
   <!-- 首屏骨架遮罩：在 JS/CSS 加载前立即渲染，避免"缩小/两边白边/空白几秒"的现象 -->
   <div id="bq-boot-mask" aria-hidden="true">
-    <div id="bq-boot-logo" aria-hidden="true"></div>
+    <div id="bq-boot-logo" aria-hidden="true">
+      <svg viewBox="0 0 28 28" fill="none" aria-hidden="true">
+        <circle cx="14" cy="14" r="12" stroke="#e8a830" stroke-width="2"/>
+        <circle cx="14" cy="14" r="4" fill="#e8a830"/>
+        <path d="M14 2v4M14 22v4M2 14h4M22 14h4" stroke="#5a7d5c" stroke-width="1.5"/>
+      </svg>
+    </div>
     <div id="bq-boot-label">BioQuest · 生物竞赛刷题</div>
-    <div id="bq-boot-spinner" aria-hidden="true"></div>
+    <div id="bq-boot-spinner" aria-hidden="true">
+      <span class="bq-dna-strand bq-dna-strand--left"><i></i><i></i><i></i><i></i></span>
+      <span class="bq-dna-strand bq-dna-strand--right"><i></i><i></i><i></i><i></i></span>
+      <span class="bq-dna-rung"></span>
+    </div>
     <div id="bq-boot-progress" aria-hidden="true"><div id="bq-boot-progress-fill"></div></div>
     <div id="bq-boot-percent" aria-hidden="true">0%</div>
   </div>

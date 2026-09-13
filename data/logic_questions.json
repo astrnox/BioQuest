@@ -19,7 +19,9 @@
       "酶动力学"
     ],
     "module": "module_1",
-    "category": "logic"
+    "category": "logic",
+    "id": "M1-01-d3f73a48",
+    "bioId": "M1-01-d3f73a48"
   },
   {
     "type": "single",
@@ -41,7 +43,9 @@
       "实验分析"
     ],
     "module": "module_1",
-    "category": "logic"
+    "category": "logic",
+    "id": "M1-02-459c5fac",
+    "bioId": "M1-02-459c5fac"
   },
   {
     "type": "single",
@@ -63,7 +67,9 @@
       "分泌途径"
     ],
     "module": "module_1",
-    "category": "logic"
+    "category": "logic",
+    "id": "M1-03-9d696240",
+    "bioId": "M1-03-9d696240"
   },
   {
     "type": "single",
@@ -85,7 +91,9 @@
       "实验分析"
     ],
     "module": "module_1",
-    "category": "logic"
+    "category": "logic",
+    "id": "M1-04-b6f4dddb",
+    "bioId": "M1-04-b6f4dddb"
   },
   {
     "type": "single",
@@ -107,7 +115,9 @@
       "氨基酸电离"
     ],
     "module": "module_1",
-    "category": "logic"
+    "category": "logic",
+    "id": "M1-05-fb59cba9",
+    "bioId": "M1-05-fb59cba9"
   },
   {
     "type": "single",
@@ -129,7 +139,9 @@
       "氧化磷酸化"
     ],
     "module": "module_1",
-    "category": "logic"
+    "category": "logic",
+    "id": "M1-06-cea40d29",
+    "bioId": "M1-06-cea40d29"
   },
   {
     "type": "single",
@@ -151,7 +163,9 @@
       "DNA复制"
     ],
     "module": "module_1",
-    "category": "logic"
+    "category": "logic",
+    "id": "M1-07-f5842c32",
+    "bioId": "M1-07-f5842c32"
   },
   {
     "type": "single",
@@ -173,7 +187,9 @@
       "膜转运"
     ],
     "module": "module_1",
-    "category": "logic"
+    "category": "logic",
+    "id": "M1-08-b98f7cd1",
+    "bioId": "M1-08-b98f7cd1"
   },
   {
     "type": "single",
@@ -195,7 +211,9 @@
       "细胞凋亡"
     ],
     "module": "module_1",
-    "category": "logic"
+    "category": "logic",
+    "id": "M1-09-9d243723",
+    "bioId": "M1-09-9d243723"
   },
   {
     "type": "single",
@@ -217,7 +235,9 @@
       "信号转导"
     ],
     "module": "module_1",
-    "category": "logic"
+    "category": "logic",
+    "id": "M1-10-07f07924",
+    "bioId": "M1-10-07f07924"
   },
   {
     "type": "single",
@@ -239,7 +259,9 @@
       "光合作用"
     ],
     "module": "module_2",
-    "category": "logic"
+    "category": "logic",
+    "id": "M2-01-9875a511",
+    "bioId": "M2-01-9875a511"
   },
   {
     "type": "single",
@@ -261,7 +283,9 @@
       "光合作用"
     ],
     "module": "module_2",
-    "category": "logic"
+    "category": "logic",
+    "id": "M2-02-a2bd03e5",
+    "bioId": "M2-02-a2bd03e5"
   },
   {
     "type": "single",
@@ -283,7 +307,9 @@
       "植物激素"
     ],
     "module": "module_2",
-    "category": "logic"
+    "category": "logic",
+    "id": "M2-03-2b81b3f7",
+    "bioId": "M2-03-2b81b3f7"
   },
   {
     "type": "single",
@@ -305,7 +331,9 @@
       "DNA复制"
     ],
     "module": "module_2",
-    "category": "logic"
+    "category": "logic",
+    "id": "M2-04-d5367d7d",
+    "bioId": "M2-04-d5367d7d"
   },
   {
     "type": "single",
@@ -327,7 +355,9 @@
       "微生物共生"
     ],
     "module": "module_2",
-    "category": "logic"
+    "category": "logic",
+    "id": "M2-05-9ef9cee2",
+    "bioId": "M2-05-9ef9cee2"
   },
   {
     "type": "single",
@@ -349,7 +379,9 @@
       "植物生理"
     ],
     "module": "module_2",
-    "category": "logic"
+    "category": "logic",
+    "id": "M2-06-067b45e7",
+    "bioId": "M2-06-067b45e7"
   },
   {
     "type": "single",
@@ -371,7 +403,9 @@
       "微生物代谢"
     ],
     "module": "module_2",
-    "category": "logic"
+    "category": "logic",
+    "id": "M2-07-e18c40df",
+    "bioId": "M2-07-e18c40df"
   },
   {
     "type": "single",
@@ -393,7 +427,9 @@
       "植物激素"
     ],
     "module": "module_2",
-    "category": "logic"
+    "category": "logic",
+    "id": "M2-08-3c6c07f8",
+    "bioId": "M2-08-3c6c07f8"
   },
   {
     "type": "single",
@@ -415,7 +451,9 @@
       "微生物代谢"
     ],
     "module": "module_2",
-    "category": "logic"
+    "category": "logic",
+    "id": "M2-09-ed37ca50",
+    "bioId": "M2-09-ed37ca50"
   },
   {
     "type": "single",
@@ -437,7 +475,9 @@
       "神经生理"
     ],
     "module": "module_3",
-    "category": "logic"
+    "category": "logic",
+    "id": "M3-01-583c51d4",
+    "bioId": "M3-01-583c51d4"
   },
   {
     "type": "single",
@@ -459,7 +499,9 @@
       "体温调节"
     ],
     "module": "module_3",
-    "category": "logic"
+    "category": "logic",
+    "id": "M3-02-424145ea",
+    "bioId": "M3-02-424145ea"
   },
   {
     "type": "single",
@@ -481,7 +523,9 @@
       "生态系统能量"
     ],
     "module": "module_3",
-    "category": "logic"
+    "category": "logic",
+    "id": "M3-03-15d33920",
+    "bioId": "M3-03-15d33920"
   },
   {
     "type": "single",
@@ -503,7 +547,9 @@
       "生态位"
     ],
     "module": "module_3",
-    "category": "logic"
+    "category": "logic",
+    "id": "M3-04-fc2a410b",
+    "bioId": "M3-04-fc2a410b"
   },
   {
     "type": "single",
@@ -525,7 +571,9 @@
       "内分泌"
     ],
     "module": "module_3",
-    "category": "logic"
+    "category": "logic",
+    "id": "M3-05-780ccbb7",
+    "bioId": "M3-05-780ccbb7"
   },
   {
     "type": "single",
@@ -547,7 +595,9 @@
       "群落生态"
     ],
     "module": "module_3",
-    "category": "logic"
+    "category": "logic",
+    "id": "M3-06-9f3287ee",
+    "bioId": "M3-06-9f3287ee"
   },
   {
     "type": "single",
@@ -569,7 +619,9 @@
       "种群动态"
     ],
     "module": "module_3",
-    "category": "logic"
+    "category": "logic",
+    "id": "M3-07-7df86856",
+    "bioId": "M3-07-7df86856"
   },
   {
     "type": "single",
@@ -591,7 +643,9 @@
       "神经生理"
     ],
     "module": "module_3",
-    "category": "logic"
+    "category": "logic",
+    "id": "M3-08-4451b831",
+    "bioId": "M3-08-4451b831"
   },
   {
     "type": "single",
@@ -613,7 +667,9 @@
       "连锁分析"
     ],
     "module": "module_4",
-    "category": "logic"
+    "category": "logic",
+    "id": "M4-01-0b91fe7a",
+    "bioId": "M4-01-0b91fe7a"
   },
   {
     "type": "single",
@@ -635,7 +691,9 @@
       "常染色体遗传"
     ],
     "module": "module_4",
-    "category": "logic"
+    "category": "logic",
+    "id": "M4-02-182ddc29",
+    "bioId": "M4-02-182ddc29"
   },
   {
     "type": "single",
@@ -657,7 +715,9 @@
       "群体遗传"
     ],
     "module": "module_4",
-    "category": "logic"
+    "category": "logic",
+    "id": "M4-03-a525f155",
+    "bioId": "M4-03-a525f155"
   },
   {
     "type": "single",
@@ -679,7 +739,9 @@
       "物种形成"
     ],
     "module": "module_4",
-    "category": "logic"
+    "category": "logic",
+    "id": "M4-04-43c02733",
+    "bioId": "M4-04-43c02733"
   },
   {
     "type": "single",
@@ -701,7 +763,9 @@
       "系统发育"
     ],
     "module": "module_4",
-    "category": "logic"
+    "category": "logic",
+    "id": "M4-05-e8b6b5e7",
+    "bioId": "M4-05-e8b6b5e7"
   },
   {
     "type": "single",
@@ -723,7 +787,9 @@
       "伴性遗传"
     ],
     "module": "module_4",
-    "category": "logic"
+    "category": "logic",
+    "id": "M4-06-323c746e",
+    "bioId": "M4-06-323c746e"
   },
   {
     "type": "single",
@@ -745,7 +811,9 @@
       "基因调控"
     ],
     "module": "module_4",
-    "category": "logic"
+    "category": "logic",
+    "id": "M4-07-100ea29c",
+    "bioId": "M4-07-100ea29c"
   },
   {
     "type": "single",
@@ -767,7 +835,9 @@
       "分子进化"
     ],
     "module": "module_4",
-    "category": "logic"
+    "category": "logic",
+    "id": "M4-08-41319dd5",
+    "bioId": "M4-08-41319dd5"
   },
   {
     "type": "single",
@@ -789,7 +859,9 @@
       "表观遗传"
     ],
     "module": "module_4",
-    "category": "logic"
+    "category": "logic",
+    "id": "M4-09-11c7c6b8",
+    "bioId": "M4-09-11c7c6b8"
   },
   {
     "type": "single",
@@ -811,7 +883,9 @@
       "群体遗传"
     ],
     "module": "module_4",
-    "category": "logic"
+    "category": "logic",
+    "id": "M4-10-bebf3de1",
+    "bioId": "M4-10-bebf3de1"
   },
   {
     "type": "single",
@@ -833,7 +907,9 @@
       "微生物代谢"
     ],
     "module": "module_2",
-    "category": "logic"
+    "category": "logic",
+    "id": "M2-10-1f85b162",
+    "bioId": "M2-10-1f85b162"
   },
   {
     "type": "single",
@@ -855,7 +931,9 @@
       "体温调节"
     ],
     "module": "module_3",
-    "category": "logic"
+    "category": "logic",
+    "id": "M3-09-9f6deb16",
+    "bioId": "M3-09-9f6deb16"
   },
   {
     "type": "single",
@@ -877,6 +955,8 @@
       "生态系统"
     ],
     "module": "module_3",
-    "category": "logic"
+    "category": "logic",
+    "id": "M3-10-aabef2fd",
+    "bioId": "M3-10-aabef2fd"
   }
 ]

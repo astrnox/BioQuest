@@ -2,7 +2,7 @@
  * BioQuest — 首屏同步 CSS 合并包（Issue #108，由
  * scripts/build-css-bundle.js 自动生成，勿手改。
  * 合并源：globals.css + layout.css + header.css + learning-hub.css + home.css + debug-fix.css
- * 生成时间：2026-09-06T07:24:12.494Z
+ * 生成时间：2026-09-12T16:17:54.571Z
  * ============================================================ */
 
 /* ---------- 来源: css/globals.css ---------- */
@@ -423,9 +423,11 @@ body {
   height: 36px;
   margin-left: -18px;
   border-radius: 50%;
-  border: 3px solid rgba(90, 125, 92, 0.18);
-  border-top-color: #5a7d5c;
-  animation: bqRouteSpin 0.8s linear infinite;
+  /* Issue #139：双环加载动画（外层浅环 + 主轴/副轴变色），替代旧纯 border spinner */
+  border: 3px solid rgba(90, 125, 92, 0.14);
+  border-top-color: var(--color-sage, #5a7d5c);
+  border-right-color: rgba(90, 125, 92, 0.45);
+  animation: bqRouteSpin 0.85s cubic-bezier(0.5, 0, 0.5, 1) infinite;
 }
 @keyframes bqRouteSpin {
   to { transform: rotate(360deg); }
@@ -2592,11 +2594,13 @@ body {
 .search-loading-spinner {
   width: 32px;
   height: 32px;
-  border: 3px solid rgba(58,140,92,0.15);
+  /* Issue #139：双环加载动画 */
+  border: 3px solid rgba(58, 140, 92, 0.14);
   border-top-color: #3a8c5c;
+  border-right-color: rgba(58, 140, 92, 0.45);
   border-radius: 50%;
   margin: 0 auto 12px;
-  animation: searchSpin 0.8s linear infinite;
+  animation: searchSpin 0.85s cubic-bezier(0.5, 0, 0.5, 1) infinite;
 }
 @keyframes searchSpin {
   to { transform: rotate(360deg); }

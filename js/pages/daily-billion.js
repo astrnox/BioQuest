@@ -562,7 +562,14 @@
   }
 
   function renderLoadingCard() {
-    return '<div class="db-loading-card"><div class="db-loading-content"><div class="db-spinner"></div><span>加载题目中...</span></div></div>';
+    // Issue #139：全屏加载改用原子轨道动画（bq-loader-atom，纯 CSS）
+    return '<div class="db-loading-card"><div class="db-loading-content">' +
+      '<div class="bq-loader-atom" role="status" aria-label="加载中">' +
+      '<span class="bq-atom-core"></span>' +
+      '<span class="bq-atom-orbit"><i></i></span>' +
+      '<span class="bq-atom-orbit bq-atom-orbit--2"><i></i></span>' +
+      '<span class="bq-atom-orbit bq-atom-orbit--3"><i></i></span>' +
+      '</div><span>加载题目中<span class="bq-loader-typing" aria-hidden="true"><i></i><i></i><i></i></span></span></div></div>';
   }
 
   function renderStopOverlay() {
