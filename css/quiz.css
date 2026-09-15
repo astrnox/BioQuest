@@ -2,6 +2,62 @@
  * 模拟试题页面样式
  * ============================================
  */
+
+/* 试题页点赞/点踩（评分系统） */
+.pq-vote {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+.pq-vote-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 2px 8px;
+  font-size: 0.72rem;
+  line-height: 1.6;
+  border: 1px solid rgba(107, 114, 128, 0.25);
+  border-radius: 999px;
+  background: transparent;
+  color: #6b7280;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.pq-vote-btn:hover {
+  border-color: #9ca3af;
+  color: #374151;
+}
+.pq-vote-btn.pq-vote-active {
+  background: rgba(16, 185, 129, 0.12);
+  border-color: rgba(16, 185, 129, 0.45);
+  color: #10b981;
+}
+.pq-vote-btn[data-vote="-1"].pq-vote-active {
+  background: rgba(239, 68, 68, 0.12);
+  border-color: rgba(239, 68, 68, 0.45);
+  color: #ef4444;
+}
+.pq-vote-btn svg {
+  flex-shrink: 0;
+}
+.pq-vote-count {
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+.pq-rating-tag {
+  display: inline-block;
+  margin-left: 8px;
+  font-size: 0.72rem;
+  color: #6b7280;
+  background: rgba(107, 114, 128, 0.1);
+  padding: 1px 8px;
+  border-radius: 999px;
+  vertical-align: middle;
+  font-weight: 500;
+}
+
 .quiz-toolbar {
   display: flex;
   gap: 12px;

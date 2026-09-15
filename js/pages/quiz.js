@@ -19,6 +19,10 @@ const COUNT_MULTIPLE = 5;
 const COUNT_JUDGE = 5;
 const COUNT_LOGIC = 15; // 逻辑推理模式题目数
 
+// 试题页点赞/点踩按钮图标（与练习页同一套线性图标）
+const EXAM_VOTE_UP_SVG = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3z"/></svg>';
+const EXAM_VOTE_DOWN_SVG = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 15v4a3 3 0 0 0 3 3l4-9V2H5.72a2 2 0 0 0-2 1.7l-1.38 9a2 2 0 0 0 2 2.3z"/></svg>';
+
 // HTML 转义 — 统一使用 window.escapeHtml（Q-01，规范实现在 js/core/utils.js）
 var escapeHtml = (typeof window !== 'undefined' && typeof window.escapeHtml === 'function')
   ? window.escapeHtml
@@ -301,18 +305,23 @@ function getOptionLabels(type) {
 /**
  * 逻辑题 MTF 化的「有效子题」（与 practice.js getEffectiveSubQuestions 同一算法）：
  * - 已有 subQuestions（基础知识 MTF）直接返回；
- * - 逻辑题 type==='mtf' 且为 options 数组 + answer 索引时，不改题干和选项文本，
- *   仅把每个选项转换为一条判断题陈述：原正确答案的选项 → 正确(true)，其余 → 错误(false)。
+ * - 逻辑题 type==='mtf' 且为 options 数组时，不改题干和选项文本，
+ *   仅把每个选项转换为一条判断题陈述：正确性以 mtfTruth 为准
+ *   （负向提问题「最不合理的是」等由 mtfTruth 显式给出每条陈述的真假）；
+ *   缺省时按原单选题语义：原正确答案的选项 → 正确(true)，其余 → 错误(false)。
  */
 function getEffectiveSubQuestions(q) {
   if (!q || typeof q !== 'object') return [];
   if (Array.isArray(q.subQuestions)) return q.subQuestions;
   if (q.type === 'mtf' && Array.isArray(q.options)) {
+    var truth = (Array.isArray(q.mtfTruth) && q.mtfTruth.length === q.options.length)
+      ? q.mtfTruth
+      : q.options.map(function (_, idx) { return idx === q.answer; });
     return q.options.map(function (text, idx) {
       return {
         label: 'ABCDEFGH'.charAt(idx),
         text: String(text),
-        answer: idx === q.answer
+        answer: !!truth[idx]
       };
     });
   }
@@ -388,6 +397,7 @@ function renderPaper() {
           <span class="pq-score-badge">${score}分</span>
           ${q.category === 'logic' ? '<span class="pq-type-tag pq-type-logic">【逻辑推理】</span>' : ''}
           ${q.subject ? `<span class="pq-subject-tag">${q.subject}</span>` : ''}
+          ${_examVoteHtml(i)}
         </div>
         <div class="pq-text">${escapeHtml(q.question).replace(/\n/g, '<br>')}</div>
         ${isMultiple ? '<div class="pq-multi-hint">此题为多选题，请选择所有正确答案</div>' : ''}
@@ -712,6 +722,80 @@ function setMtfAnswer(qIdx, subIdx, value) {
   }
 }
 
+/**
+ * 试题页（模拟卷）题目评分 tag + 点赞/点踩按钮。
+ * 与练习页共享同一套 localStorage 投票/评分存储（storage.js rateQuestion 系列）：
+ * - 按钮内联展示当前 up/down 计数与我的投票态；
+ * - 投票后原地刷新计数与评分 tag，不重建整卷；
+ * - 低分（Wilson < 0.35 且票数 >= 5）自动移入回收站，后续出卷不再包含。
+ */
+function _examVoteHtml(qIdx) {
+  const q = currentPaper[qIdx];
+  if (!q) return '';
+  const bioId = getQuestionBioId(q);
+  const r = (typeof window.getQuestionRating === 'function') ? window.getQuestionRating(bioId) : null;
+  const up = r ? (r.up || 0) : 0;
+  const down = r ? (r.down || 0) : 0;
+  const my = (typeof window.getMyVote === 'function') ? (window.getMyVote(bioId) || 0) : 0;
+  return `
+    <span class="pq-vote">
+      <button type="button" class="pq-vote-btn ${my === 1 ? 'pq-vote-active' : ''}" data-vote="1" data-exam-vote-q="${qIdx}"
+        title="这道题好，多刷点">
+        ${EXAM_VOTE_UP_SVG}<span class="pq-vote-count">${up}</span>
+      </button>
+      <button type="button" class="pq-vote-btn ${my === -1 ? 'pq-vote-active' : ''}" data-vote="-1" data-exam-vote-q="${qIdx}"
+        title="这道题有问题，少刷点">
+        ${EXAM_VOTE_DOWN_SVG}<span class="pq-vote-count">${down}</span>
+      </button>
+    </span>
+  `;
+}
+
+/**
+ * 试题页投票处理（同练习页 handleVoteQuestion 的语义）：
+ * 相同方向再点 = 取消投票；低分自动回收；原地刷新计数/tag。
+ */
+function _examHandleVote(qIdx, vote) {
+  const q = currentPaper[qIdx];
+  if (!q || typeof window.rateQuestion !== 'function') return;
+  const bioId = getQuestionBioId(q);
+  const myVote = (typeof window.getMyVote === 'function') ? (window.getMyVote(bioId) || 0) : 0;
+  const nextVote = (myVote === vote) ? 0 : vote;
+  const res = window.rateQuestion(bioId, nextVote);
+  if (!res) return;
+
+  const qEl = document.getElementById('pq-' + qIdx);
+  if (!qEl) return;
+  // 原地更新两个按钮的计数与激活态（不重建整卷，保持作答状态）
+  qEl.querySelectorAll('[data-exam-vote-q="' + qIdx + '"]').forEach(function (btn) {
+    const v = parseInt(btn.getAttribute('data-vote'), 10);
+    btn.classList.toggle('pq-vote-active', res.myVote === v);
+    const cnt = btn.querySelector('.pq-vote-count');
+    if (cnt) cnt.textContent = v === 1 ? res.up : res.down;
+  });
+
+  // 评分 tag：有票时展示 Wilson 分 + 票数（低分回收后标注）
+  const meta = qEl.querySelector('.pq-meta');
+  if (meta) {
+    const oldTag = meta.querySelector('[data-exam-rating-tag]');
+    if (oldTag) oldTag.remove();
+    if (res.up + res.down > 0 && typeof window.RatingCore === 'object') {
+      const score01 = window.RatingCore.wilsonScore(res.up, res.down);
+      const scoreStr = window.RatingCore.formatQuestionScore(score01);
+      const tagBtn = document.createElement('span');
+      tagBtn.className = 'pq-rating-tag';
+      tagBtn.setAttribute('data-exam-rating-tag', '');
+      tagBtn.textContent = '评分 ' + scoreStr + ' · ' + (res.up + res.down) + '票';
+      if (typeof window.recycleQuestion === 'function' &&
+          window.RatingCore.shouldRecycleQuestion(res.up, res.down)) {
+        window.recycleQuestion(bioId);
+        tagBtn.textContent += ' · 已回收';
+      }
+      meta.appendChild(tagBtn);
+    }
+  }
+}
+
 function getSingleQuestionScore(q, i) {
   const qType = q.type || 'single';
   const userAns = userAnswers[i];
@@ -868,6 +952,17 @@ document.addEventListener('DOMContentLoaded', async () => {
   if (btn) {
     btn.addEventListener('click', generateNewPaper);
   }
+
+  // 试题页点赞/点踩（事件委托：renderPaper 重建 DOM 后仍有效）
+  document.addEventListener('click', function (e) {
+    const voteBtn = e.target && e.target.closest ? e.target.closest('.pq-vote-btn') : null;
+    if (!voteBtn) return;
+    const qIdx = parseInt(voteBtn.getAttribute('data-exam-vote-q'), 10);
+    const vote = parseInt(voteBtn.getAttribute('data-vote'), 10);
+    if (!isNaN(qIdx) && (vote === 1 || vote === -1)) {
+      _examHandleVote(qIdx, vote);
+    }
+  });
 
   // 绑定类别选择按钮
   document.querySelectorAll('.quiz-category-btn').forEach(btn => {

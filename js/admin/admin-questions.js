@@ -884,6 +884,13 @@ function _answerToTTFF(answer, qType, optionCount, subQuestions) {
       return answer[k] === true ? 'T' : 'F';
     }).join('');
   }
+  // 数字索引格式（逻辑推理题：answer = 正确选项索引 0/1/2/...）：转换为 TFFF 格式
+  if (typeof answer === 'number' && isFinite(answer)) {
+    var nn = optionCount || 4;
+    var indexArr = new Array(nn).fill('F');
+    if (answer >= 0 && answer < nn) indexArr[answer] = 'T';
+    return indexArr.join('');
+  }
   var ans = String(answer || '').toUpperCase().trim();
   if (!ans) return '';
   // 判断题：T/F 直接返回

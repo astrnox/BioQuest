@@ -808,6 +808,9 @@ function handleVoteQuestion(vote) {
       PracticeState.currentIndex = 0;
       PracticeState.userAnswers = {};
       PracticeState.submitted = false;
+      // 集合已重建，必须重绘当前题（否则界面仍显示已回收的旧题，提交会答到错误的题上）
+      renderQuiz();
+      return;
     }
   }
 
