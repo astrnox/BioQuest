@@ -187,10 +187,14 @@ function generateBasicPaper() {
     return;
   }
 
-  const singles = shuffle(QData.filter(q => q.type === 'single' || !q.type));
-  const multiples = shuffle(QData.filter(q => q.type === 'multiple'));
-  const judges = shuffle(QData.filter(q => q.type === 'judge'));
-  const mtfQuestions = shuffle(QData.filter(q => q.type === 'mtf'));
+  // 每次出卷实时排除回收站题目（低分下架后不应再出现在新试卷中，
+  // 与练习页 generateQuestionSet 的过滤语义保持一致）
+  const active = QData.filter(q => !_isQuizRecycled(q));
+
+  const singles = shuffle(active.filter(q => q.type === 'single' || !q.type));
+  const multiples = shuffle(active.filter(q => q.type === 'multiple'));
+  const judges = shuffle(active.filter(q => q.type === 'judge'));
+  const mtfQuestions = shuffle(active.filter(q => q.type === 'mtf'));
 
   const pickedSingles = singles.slice(0, Math.min(COUNT_SINGLE, singles.length));
   const pickedMultiples = multiples.slice(0, Math.min(COUNT_MULTIPLE, multiples.length));
@@ -214,7 +218,9 @@ function generateLogicPaper() {
     return;
   }
 
-  const picked = shuffle(logicData).slice(0, Math.min(COUNT_LOGIC, logicData.length));
+  // 实时排除回收站题目（低分下架后不应再出现在新试卷中）
+  const active = logicData.filter(q => !_isQuizRecycled(q));
+  const picked = shuffle(active).slice(0, Math.min(COUNT_LOGIC, active.length));
 
   if (picked.length < 3) {
     alert('逻辑推理题库不足，请补充题库。');
@@ -231,19 +237,22 @@ function generateMixedPaper() {
     return;
   }
 
-  // 基础知识题：MTF 10 + 单选0/多选3/判断3（题库当前以 MTF 为主）
-  const singles = shuffle(QData.filter(q => q.type === 'single' || !q.type));
-  const multiples = shuffle(QData.filter(q => q.type === 'multiple'));
-  const judges = shuffle(QData.filter(q => q.type === 'judge'));
-  const mtfQuestions = shuffle(QData.filter(q => q.type === 'mtf'));
+  // 基础知识题：MTF 10 + 单选0/多选3/判断3（题库当前以 MTF 为主）；
+  // 每次出卷实时排除回收站题目
+  const activeQ = QData.filter(q => !_isQuizRecycled(q));
+  const singles = shuffle(activeQ.filter(q => q.type === 'single' || !q.type));
+  const multiples = shuffle(activeQ.filter(q => q.type === 'multiple'));
+  const judges = shuffle(activeQ.filter(q => q.type === 'judge'));
+  const mtfQuestions = shuffle(activeQ.filter(q => q.type === 'mtf'));
 
   const pickedSingles = singles.slice(0, Math.min(10, singles.length));
   const pickedMultiples = multiples.slice(0, Math.min(3, multiples.length));
   const pickedJudges = judges.slice(0, Math.min(3, judges.length));
   const pickedMtf = mtfQuestions.slice(0, Math.min(10, mtfQuestions.length));
 
-  // 逻辑推理题：10题
-  const pickedLogic = shuffle(logicData).slice(0, Math.min(10, logicData.length));
+  // 逻辑推理题：10题（实时排除回收站）
+  const activeLogic = logicData.filter(q => !_isQuizRecycled(q));
+  const pickedLogic = shuffle(activeLogic).slice(0, Math.min(10, activeLogic.length));
 
   const basicQuestions = [...pickedSingles, ...pickedMultiples, ...pickedJudges, ...pickedMtf];
   basicQuestions.forEach(q => { if (!q.category) q.category = 'basic'; });

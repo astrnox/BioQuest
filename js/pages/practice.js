@@ -808,6 +808,12 @@ function handleVoteQuestion(vote) {
       PracticeState.currentIndex = 0;
       PracticeState.userAnswers = {};
       PracticeState.submitted = false;
+      if (PracticeState.currentSet.length === 0) {
+        // 题库已全部被回收/过滤：回到筛选面板而非残留旧题界面
+        PracticeState.started = false;
+        showFilterPanel();
+        return;
+      }
       // 集合已重建，必须重绘当前题（否则界面仍显示已回收的旧题，提交会答到错误的题上）
       renderQuiz();
       return;
