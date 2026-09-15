@@ -573,6 +573,47 @@
 }
 
 /* ============================================================
+ * 题目投票（点赞 / 点踩）
+ * ============================================================ */
+
+.practice-vote-btn {
+  background-color: var(--surface-secondary);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-light);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 9px 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  user-select: none;
+}
+
+.practice-vote-btn:hover {
+  border-color: var(--border-default);
+  background-color: var(--surface-tertiary);
+}
+
+.practice-vote-btn svg {
+  flex-shrink: 0;
+}
+
+.practice-vote-up-active {
+  color: #10b981;
+  border-color: #10b981;
+  background-color: rgba(16, 185, 129, 0.08);
+}
+
+.practice-vote-down-active {
+  color: var(--color-error);
+  border-color: var(--color-error);
+  background-color: rgba(192, 85, 58, 0.08);
+}
+
+/* ============================================================
  * Cumulative Stats
  * ============================================================ */
 
@@ -756,7 +797,10 @@
 
 .practice-loading-overlay {
   position: fixed;
-  inset: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   background-color: rgba(255, 255, 255, 0.85);
   display: flex;
   align-items: center;

@@ -470,7 +470,7 @@ async function loadPracticeQuestions() {
       // 超长讲义过滤
       var itemsClean = (typeof window.filterQuestionList === 'function') ? window.filterQuestionList(items) : items;
       PracticeState.allQuestions = itemsClean.filter(
-        function (q) { return Array.isArray(q.subQuestions) && q.subQuestions.length >= 4; }
+        function (q) { return Array.isArray(q.subQuestions) && q.subQuestions.length >= 4 && !_isRecycledQuestion(q); }
       );
     } else {
       // 从 Supabase 直连获取
@@ -522,7 +522,7 @@ async function loadPracticeQuestions() {
             // 超长讲义过滤（cleaned 同时会把 300+ 字的选项截断）
             var fn = typeof window.filterQuestionList === 'function' ? window.filterQuestionList : function(x){return x;};
             PracticeState.allQuestions = fn(normed).filter(
-              function(q) { return Array.isArray(q.subQuestions) && q.subQuestions.length >= 4; }
+              function(q) { return Array.isArray(q.subQuestions) && q.subQuestions.length >= 4 && !_isRecycledQuestion(q); }
             );
             return;
           }
@@ -540,7 +540,7 @@ async function loadPracticeQuestions() {
         ? window.filterQuestionList(rawQuestions0)
         : rawQuestions0;
       PracticeState.allQuestions = rawQuestions.filter(
-        function (q) { return Array.isArray(q.subQuestions) && q.subQuestions.length >= 4; }
+        function (q) { return Array.isArray(q.subQuestions) && q.subQuestions.length >= 4 && !_isRecycledQuestion(q); }
       );
     }
   } catch (err) {
@@ -556,10 +556,10 @@ async function loadLogicQuestions() {
     const res = await fetch('data/logic_questions.json');
     if (res.ok) {
       var logicData = await res.json();
-      // P0-4: 应用隔离过滤
+      // P0-4: 应用隔离过滤 + 回收站过滤（低分下架题目用户不再刷到）
       PracticeState.logicData = (typeof window._filterQuarantinedQuestions === 'function')
-        ? window._filterQuarantinedQuestions(logicData)
-        : logicData;
+        ? window._filterQuarantinedQuestions(logicData).filter(function (q) { return !_isRecycledQuestion(q); })
+        : logicData.filter(function (q) { return !_isRecycledQuestion(q); });
       PracticeState.logicLoaded = true;
 
       // 加载完成后刷新筛选结果
@@ -688,8 +688,168 @@ function generateQuestionSet() {
     PracticeState.filteredQuestions.length
   );
 
-  const shuffled = shuffle([...PracticeState.filteredQuestions]);
+  // 排除已移入回收站的题目（低分题，用户不再刷到）
+  const pool = PracticeState.filteredQuestions.filter(function (q) {
+    return !_isRecycledQuestion(q);
+  });
+  if (pool.length === 0) return [];
+
+  // 基于题目评分（Wilson 区间得分）做加权抽取：
+  // 高分题出现率最多 1.3 倍、低分题最低 0.7 倍，浮动受限避免两级分化。
+  if (typeof window.RatingCore === 'object' && window.RatingCore.weightedPick) {
+    const picked = window.RatingCore.weightedPick(
+      pool,
+      function (q) {
+        const rating = _getQuestionRating(q);
+        const score01 = window.RatingCore.wilsonScore(rating.up, rating.down);
+        return window.RatingCore.ratingWeight(score01);
+      },
+      Math.min(count, pool.length)
+    );
+    return picked.map(preparePracticeQuestion);
+  }
+
+  // 兜底：等概率随机
+  const shuffled = shuffle(pool);
   return shuffled.slice(0, count).map(preparePracticeQuestion);
+}
+
+/**
+ * 读取单题评分（点赞/点踩聚合）。storage.js 未加载时返回中性值。
+ */
+function _getQuestionRating(q) {
+  if (typeof getQuestionRating === 'function') {
+    const r = getQuestionRating(getQuestionBioId(q));
+    if (r) return r;
+  }
+  return { up: 0, down: 0 };
+}
+
+/**
+ * 判断题目是否在回收站（低分被下架）。storage.js 未加载时直读 localStorage。
+ */
+function _isRecycledQuestion(q) {
+  const qId = getQuestionBioId(q);
+  if (typeof isQuestionRecycled === 'function') {
+    return isQuestionRecycled(qId);
+  }
+  try {
+    const list = JSON.parse(localStorage.getItem('bioquest_question_recycled') || '[]');
+    return Array.isArray(list) && list.indexOf(qId) !== -1;
+  } catch (e) {
+    return false;
+  }
+}
+
+/**
+ * 读取题目点赞/点踩计数（未投票时 0/0）。
+ */
+function _getRatingCounts(qId) {
+  if (typeof getQuestionRating === 'function') {
+    const r = getQuestionRating(qId);
+    if (r) return r;
+  }
+  return { up: 0, down: 0 };
+}
+
+/**
+ * 当前用户对题目的投票（1=赞, -1=踩, 0=未投）。
+ */
+function _getMyVote(qId) {
+  if (typeof getMyVote === 'function') {
+    const v = getMyVote(qId);
+    return (v === 1 || v === -1) ? v : 0;
+  }
+  return 0;
+}
+
+/**
+ * 渲染题目评分 tag（展示在题目标签组中）：
+ * - 有票时显示 Wilson 区间得分映射的 1~5 星分 + 票数；
+ * - 无票时显示「未评分」。
+ */
+function _renderRatingTag(q, qId) {
+  const counts = _getRatingCounts(qId);
+  const hasVotes = (counts.up + counts.down) > 0;
+  const rc = (typeof window.RatingCore === 'object') ? window.RatingCore : null;
+  if (!rc || !hasVotes) {
+    return '<span class="tag" data-rating-tag style="background:rgba(107,114,128,0.08);color:#6b7280;font-size:0.7rem;" title="暂无评分，点赞/点踩后可查看">评分 未评价</span>';
+  }
+  const score01 = rc.wilsonScore(counts.up, counts.down);
+  const scoreStr = rc.formatQuestionScore(score01);
+  const weight = rc.ratingWeight(score01);
+  const recycled = _isRecycledQuestion(q);
+  const color = recycled ? '#ef4444' : (score01 >= 0.6 ? '#10b981' : (score01 >= 0.4 ? '#c4956a' : '#ef4444'));
+  return `<span class="tag" data-rating-tag style="background:${color}18;color:${color};font-size:0.7rem;font-weight:600;" title="基于 ${counts.up + counts.down} 票的 Wilson 区间得分；出现率权重 ${weight.toFixed(2)}×">评分 ${scoreStr} · ${counts.up + counts.down}票${recycled ? ' · 已回收' : ''}</span>`;
+}
+
+/**
+ * 点赞/点踩处理：更新本地聚合评分；评分过低且票数足够时自动移入回收站。
+ */
+function handleVoteQuestion(vote) {
+  const q = PracticeState.currentSet[PracticeState.currentIndex];
+  if (!q) return;
+  const qId = getQuestionBioId(q);
+  if (typeof rateQuestion !== 'function') return;
+
+  // 相同方向再点一次 = 取消投票
+  const myVote = _getMyVote(qId);
+  const nextVote = (myVote === vote) ? 0 : vote;
+  const result = rateQuestion(qId, nextVote);
+  if (!result) return;
+
+  // 低分（Wilson < 0.35 且票数 >= 5）自动移入回收站
+  const rc = (typeof window.RatingCore === 'object') ? window.RatingCore : null;
+  if (rc && typeof recycleQuestion === 'function' && rc.shouldRecycleQuestion(result.up, result.down)) {
+    recycleQuestion(qId);
+    // 重新生成题目集合，让回收的题从后续练习中消失
+    if (PracticeState.currentIndex >= PracticeState.currentSet.length - 1) {
+      PracticeState.currentSet = generateQuestionSet();
+      PracticeState.currentIndex = 0;
+      PracticeState.userAnswers = {};
+      PracticeState.submitted = false;
+      if (PracticeState.currentSet.length === 0) {
+        // 题库已全部被回收/过滤：回到筛选面板而非残留旧题界面
+        PracticeState.started = false;
+        showFilterPanel();
+        return;
+      }
+      // 集合已重建，必须重绘当前题（否则界面仍显示已回收的旧题，提交会答到错误的题上）
+      renderQuiz();
+      return;
+    }
+  }
+
+  // 原地刷新评分 tag 与投票按钮（不整题重渲染）
+  _refreshVoteUI(q, qId);
+}
+
+/**
+ * 原地更新投票按钮计数/激活态与评分 tag。
+ */
+function _refreshVoteUI(q, qId) {
+  const counts = _getRatingCounts(qId);
+  const upCount = document.getElementById('practice-vote-up-count');
+  const downCount = document.getElementById('practice-vote-down-count');
+  if (upCount) upCount.textContent = String(counts.up);
+  if (downCount) downCount.textContent = String(counts.down);
+
+  const upBtn = document.getElementById('practice-vote-up-btn');
+  const downBtn = document.getElementById('practice-vote-down-btn');
+  const myVote = _getMyVote(qId);
+  if (upBtn) upBtn.classList.toggle('practice-vote-active', myVote === 1);
+  if (downBtn) downBtn.classList.toggle('practice-vote-active', myVote === -1);
+  if (upBtn) upBtn.classList.toggle('practice-vote-up-active', myVote === 1);
+  if (downBtn) downBtn.classList.toggle('practice-vote-down-active', myVote === -1);
+
+  // 刷新 tag 行内的评分标签
+  const tags = document.querySelector('.practice-quiz-tags');
+  if (tags) {
+    const oldTag = tags.querySelector('[data-rating-tag]');
+    const newTagHtml = _renderRatingTag(q, qId);
+    if (oldTag) oldTag.outerHTML = newTagHtml;
+    else tags.insertAdjacentHTML('beforeend', newTagHtml);
+  }
 }
 
 /**
@@ -700,7 +860,12 @@ function generateQuestionSet() {
  * - 解析按「原始标签 → 新槽位」重映射字母注解，保证对/错解析与随机后选项一致。
  */
 function preparePracticeQuestion(q) {
-  if (!q || typeof q !== 'object' || !Array.isArray(q.subQuestions) || q.subQuestions.length < 2) {
+  if (!q || typeof q !== 'object') return q;
+  // 管理员对本地题库的覆盖修改（题干/选项/解析等）在出题时生效
+  if (typeof applyQuestionOverride === 'function') {
+    q = applyQuestionOverride(q);
+  }
+  if (!Array.isArray(q.subQuestions) || q.subQuestions.length < 2) {
     return q;
   }
   // 深拷贝每个子题，避免改动题库本体的对象
@@ -727,6 +892,34 @@ function preparePracticeQuestion(q) {
       })
     : q.explanation;
   return Object.assign({}, q, { subQuestions: items, explanation: explanation });
+}
+
+/**
+ * 逻辑题 MTF 化的「有效子题」：
+ * - 已有 subQuestions（基础知识 MTF）直接返回；
+ * - 逻辑题 type==='mtf' 且为 options 数组 + answer 索引时，不改题干和选项文本，
+ *   仅把每个选项转换为一条判断题陈述：原正确答案的选项 → 正确(true)，其余 → 错误(false)。
+ * 转换不写入题库本体（不参与 preparePracticeQuestion 的洗牌，选项顺序 A/B/C/D 保持不变，
+ * 使解析中「选项A/选项B」等字母引用始终与渲染一致）。
+ */
+function getEffectiveSubQuestions(q) {
+  if (!q || typeof q !== 'object') return [];
+  if (Array.isArray(q.subQuestions)) return q.subQuestions;
+  if (q.type === 'mtf' && Array.isArray(q.options)) {
+    // mtfTruth（负向提问题「最不合理的是」等）显式给出每条陈述的真假；
+    // 缺省时按原单选题语义：原正确答案的选项 → 正确(true)，其余 → 错误(false)。
+    const truth = (Array.isArray(q.mtfTruth) && q.mtfTruth.length === q.options.length)
+      ? q.mtfTruth
+      : q.options.map(function (_, idx) { return idx === q.answer; });
+    return q.options.map(function (text, idx) {
+      return {
+        label: 'ABCDEFGH'.charAt(idx),
+        text: String(text),
+        answer: !!truth[idx]
+      };
+    });
+  }
+  return [];
 }
 
 function initNewSession() {
@@ -767,8 +960,8 @@ function calculateQuestionScore(q, userAnswers) {
     };
   }
 
-  // 逻辑推理题（单选题格式：options 为数组, answer 为索引 0-4）
-  if (q.category === 'logic' && Array.isArray(q.options)) {
+  // 逻辑推理题（单选题格式：options 为数组, answer 为索引 0-4；type==='mtf' 时走下方 MTF 评分）
+  if (q.category === 'logic' && Array.isArray(q.options) && q.type !== 'mtf') {
     const userAns = userAnswers[0];
     const isCorrect = userAns === q.answer;
     return {
@@ -784,8 +977,8 @@ function calculateQuestionScore(q, userAnswers) {
     };
   }
 
-  // MTF 题型（subQuestions 格式）
-  const subQuestions = q.subQuestions || [];
+  // MTF 题型（subQuestions 格式，或逻辑题 mtf 的选项转换子题）
+  const subQuestions = getEffectiveSubQuestions(q);
   if (subQuestions.length === 0) return { correct: 0, total: 1, score: 0 };
 
   const total = subQuestions.length;
@@ -925,7 +1118,7 @@ function handleSubmitAnswer() {
   // 标准单选题（题库格式）
   const isStandardChoice = q.options && typeof q.options === 'object' && !Array.isArray(q.options) && q.answer;
   // 逻辑推理题
-  const isLogicQuestion = q.category === 'logic' && Array.isArray(q.options);
+  const isLogicQuestion = q.category === 'logic' && Array.isArray(q.options) && q.type !== 'mtf';
 
   if (isStandardChoice || isLogicQuestion) {
     if (userAnswers[0] === undefined || userAnswers[0] === null) {
@@ -934,7 +1127,7 @@ function handleSubmitAnswer() {
     }
   } else {
     // MTF 题型：检查是否所有子问题都已回答
-    const subQuestions = q.subQuestions || [];
+    const subQuestions = getEffectiveSubQuestions(q);
     const allAnswered = subQuestions.every((_, idx) => userAnswers.hasOwnProperty(idx));
     if (!allAnswered) {
       alert('请对所有选项做出判断后再提交。');
@@ -1156,9 +1349,11 @@ function renderFilterPanel() {
   `
   ).join('');
 
+  // 题目数量：预设选项 + 「自定义」；questionCount 不在预设中时选中自定义并回显输入框
+  const isPresetCount = QUESTION_COUNT_OPTIONS.indexOf(PracticeState.questionCount) >= 0;
   const countOptions = QUESTION_COUNT_OPTIONS.map(
     (n) => `<option value="${n}" ${PracticeState.questionCount === n ? 'selected' : ''}>${n} 题</option>`
-  ).join('');
+  ).join('') + `<option value="custom" ${isPresetCount ? '' : 'selected'}>自定义…</option>`;
 
   const kgBanner = PracticeState.conceptFilter
     ? `<div class="practice-kg-banner" style="margin-bottom:16px;padding:14px 16px;background:var(--color-sage-light,rgba(90,125,92,0.1));border:1px solid var(--color-sage,rgba(90,125,92,0.3));border-radius:12px;position:relative;">
@@ -1269,9 +1464,18 @@ function renderFilterPanel() {
 
         <div class="practice-filter-section">
           <h3 class="practice-filter-title">题目数量</h3>
-          <select class="practice-select" id="questionCount">
-            ${countOptions}
-          </select>
+          <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+            <select class="practice-select" id="questionCount" style="min-width:110px;">
+              ${countOptions}
+            </select>
+            <input type="number" id="customQuestionCount" class="practice-select" min="1" max="200" step="1"
+              value="${isPresetCount ? '' : PracticeState.questionCount}"
+              placeholder="输入 1-200"
+              style="width:120px;${isPresetCount ? 'display:none;' : ''}" aria-label="自定义刷题数量">
+          </div>
+          <div style="font-size:0.78rem;color:var(--text-muted);margin-top:6px;">
+            预设 5/10/20/50，或选择「自定义…」输入 1-200 道（超出可用题目时按实际数量出题）
+          </div>
         </div>
 
         <div class="practice-filter-actions">
@@ -1443,7 +1647,35 @@ function bindFilterEvents() {
 
   if (countSelect) {
     countSelect.addEventListener('change', () => {
-      PracticeState.questionCount = parseInt(countSelect.value, 10);
+      const val = countSelect.value;
+      const customInput = document.getElementById('customQuestionCount');
+      if (val === 'custom') {
+        if (customInput) {
+          customInput.style.display = '';
+          customInput.focus();
+        }
+        let num = customInput ? parseInt(customInput.value, 10) : NaN;
+        if (isNaN(num) || num < 1) num = 10;
+        PracticeState.questionCount = num;
+      } else {
+        PracticeState.questionCount = parseInt(val, 10);
+        if (customInput) customInput.style.display = 'none';
+      }
+    });
+  }
+
+  const customCountInput = document.getElementById('customQuestionCount');
+  if (customCountInput) {
+    // 输入即生效（失焦/回车/输入变化时同步）
+    customCountInput.addEventListener('change', () => {
+      let num = parseInt(customCountInput.value, 10);
+      if (isNaN(num) || num < 1) num = 1;
+      if (num > 200) num = 200;
+      customCountInput.value = num;
+      PracticeState.questionCount = num;
+    });
+    customCountInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') customCountInput.blur();
     });
   }
 
@@ -1862,7 +2094,7 @@ function renderQuiz() {
   const q = PracticeState.currentSet[PracticeState.currentIndex];
   if (!q) return;
 
-  const isLogicQuestion = q.category === 'logic' && Array.isArray(q.options);
+  const isLogicQuestion = q.category === 'logic' && Array.isArray(q.options) && q.type !== 'mtf';
   const isStandardChoice = q.options && typeof q.options === 'object' && !Array.isArray(q.options) && q.answer;
   const userAnswers = PracticeState.userAnswers[PracticeState.currentIndex] || {};
 
@@ -1951,8 +2183,8 @@ function renderQuiz() {
       `;
     }
   } else {
-    // ====== MTF 题型渲染（原有逻辑）======
-    const subQuestions = q.subQuestions || [];
+    // ====== MTF 题型渲染（基础知识 subQuestions / 逻辑题 mtf 选项转换）======
+    const subQuestions = getEffectiveSubQuestions(q);
     subQuestionsHtml = subQuestions
       .map((sq, idx) => {
         const userAns = userAnswers[idx];
@@ -2048,6 +2280,7 @@ function renderQuiz() {
           ${q.subject ? '<span class="tag tag--info">' + escapeHtml(q.subject) + '</span>' : ''}
           ${typeof renderDifficultyTag === 'function' ? renderDifficultyTag(qId, q.difficulty || 3) : (q.difficulty ? '<span class="tag ' + getDifficultyClass(q.difficulty) + '">' + getDifficultyLabel(q.difficulty) + '</span>' : '')}
           ${q.concept ? '<span class="tag tag--outline">' + escapeHtml(q.concept) + '</span>' : ''}
+          ${_renderRatingTag(q, qId)}
         </div>
       </div>
 
@@ -2068,6 +2301,23 @@ function renderQuiz() {
 
       <div class="practice-actions">
         <div class="practice-actions-left">
+          <div class="practice-vote-group" style="display:inline-flex;align-items:center;gap:4px;margin-right:2px;">
+            <button class="btn btn-sm practice-vote-btn ${_getMyVote(qId) === 1 ? 'practice-vote-active practice-vote-up-active' : ''}"
+              id="practice-vote-up-btn" title="这道题好，多刷点" data-vote="1">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/>
+              </svg>
+              <span id="practice-vote-up-count">${_getRatingCounts(qId).up}</span>
+            </button>
+            <button class="btn btn-sm practice-vote-btn ${_getMyVote(qId) === -1 ? 'practice-vote-active practice-vote-down-active' : ''}"
+              id="practice-vote-down-btn" title="这道题有问题，少刷点" data-vote="-1">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M10 15v4a3 3 0 0 0 3 3l4-9V2H5.72a2 2 0 0 0-2 1.7l-1.38 9a2 2 0 0 0 2 2.3z"/>
+                <path d="M7 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h3"/>
+              </svg>
+              <span id="practice-vote-down-count">${_getRatingCounts(qId).down}</span>
+            </button>
+          </div>
           <button class="btn btn-sm practice-fav-btn ${isFav ? 'practice-fav-active' : ''}"
             id="practice-fav-btn" title="${isFav ? '取消收藏' : '收藏题目'}">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="${isFav ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -2184,6 +2434,16 @@ function bindQuizEvents() {
   const favBtn = document.getElementById('practice-fav-btn');
   if (favBtn) {
     favBtn.addEventListener('click', handleToggleFavorite);
+  }
+
+  // 点赞 / 点踩
+  const voteUpBtn = document.getElementById('practice-vote-up-btn');
+  if (voteUpBtn) {
+    voteUpBtn.addEventListener('click', function() { handleVoteQuestion(1); });
+  }
+  const voteDownBtn = document.getElementById('practice-vote-down-btn');
+  if (voteDownBtn) {
+    voteDownBtn.addEventListener('click', function() { handleVoteQuestion(-1); });
   }
 
   const wrongBtn = document.getElementById('practice-wrong-btn');
@@ -2763,7 +3023,7 @@ function _practiceInQuiz() {
 function _practiceSelectChoice(numKey) {
   var q = PracticeState.currentSet[PracticeState.currentIndex];
   if (!q) return;
-  var isLogic = q.category === 'logic' && Array.isArray(q.options);
+  var isLogic = q.category === 'logic' && Array.isArray(q.options) && q.type !== 'mtf';
   var isStd = q.options && typeof q.options === 'object' &&
               !Array.isArray(q.options) && q.answer;
   if (!isLogic && !isStd) return; // MTF 题型不适用数字键选 A/B/C/D

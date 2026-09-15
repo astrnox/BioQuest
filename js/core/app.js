@@ -1747,7 +1747,7 @@ function _resolveModuleUrl(modName) {
 // 模块名 → 子目录（js/ 下的分类存放）。页面模块默认在 pages/，其余显式归属。
 function _moduleDir(modName) {
   var core = { 'app': 1, 'app-routes': 1, 'boot-mask': 1, 'boot-lazy': 1, 'sw-register': 1,
-    'theme-init': 1, 'theme-transition': 1, 'config': 1, 'utils': 1, 'storage': 1,
+    'theme-init': 1, 'theme-transition': 1, 'config': 1, 'utils': 1, 'storage': 1, 'rating': 1,
     'supabase': 1, 'supabase-client': 1, 'loader': 1, 'question-utils': 1, 'event-bus': 1,
     'csp-events': 1, 'error-recovery': 1, 'empty-state': 1, 'a11y-utils': 1, 'sync-tabs': 1,
     'cell-loader': 1, 'lazy-images': 1, 'offline-queue': 1, 'offline-status': 1,
@@ -1769,11 +1769,12 @@ function _moduleDir(modName) {
 
 // 模块依赖表：加载某模块前先加载其依赖
 var _moduleDeps = {
-  'practice': ['question-utils', 'loader'],
+  'practice': ['question-utils', 'loader', 'rating'],
   'exam': ['question-utils', 'loader'],
   'review': ['question-utils', 'loader'],
   'wrongbook': ['question-utils', 'loader', 'review-deep'],
-  'review-deep': ['question-utils', 'loader']
+  'review-deep': ['question-utils', 'loader'],
+  'admin': ['rating']
 };
 
 // 模块名 → 初始化函数名（用于检测 head 中预加载的脚本是否已注册 init）

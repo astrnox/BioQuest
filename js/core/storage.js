@@ -17,7 +17,11 @@ var KEYS = {
   WRONG_QUESTIONS: STORAGE_PREFIX + 'wrong_questions',
   STATS: STORAGE_PREFIX + 'stats',
   DEVICE_ID: STORAGE_PREFIX + 'device_id',
-  PROFILE: STORAGE_PREFIX + 'profile'
+  PROFILE: STORAGE_PREFIX + 'profile',
+  QUESTION_RATINGS: STORAGE_PREFIX + 'question_ratings',       // { [bioId]: { up, down } } 题目评分聚合
+  QUESTION_MY_VOTES: STORAGE_PREFIX + 'question_my_votes',     // { [bioId]: 1 | -1 } 当前用户对题目的投票
+  QUESTION_RECYCLED: STORAGE_PREFIX + 'question_recycled',     // [bioId, ...] 回收站题目
+  QUESTION_OVERRIDES: STORAGE_PREFIX + 'question_overrides'    // { [bioId]: {...} } 管理员对本地题库的修改覆盖
 };
 
 /* ============================================================
@@ -694,6 +698,236 @@ function _syncFavoriteToSupabase(qId, isFav) {
     }
   }
 }
+
+/* ============================================================
+ * 题目评分 / 投票 / 回收站 / 管理员覆盖
+ * 数据来源：localStorage（QUESTION_RATINGS 等键），配合 js/core/rating.js
+ * 的纯函数算法（Wilson 评分、权重映射、回收判定）使用。
+ * ============================================================ */
+
+/**
+ * 用户对题目点赞/点踩/取消投票。
+ * @param {string} qId 题目 bioId
+ * @param {number} vote 1=点赞, -1=点踩, 0=取消
+ * @returns {{up:number, down:number, myVote:number}} 更新后的聚合与我的投票
+ */
+function rateQuestion(qId, vote) {
+  if (!qId) return null;
+  qId = (window.resolveQuestionBioId || resolveQuestionBioId)(qId);
+  vote = (vote === 1 || vote === -1) ? vote : 0;
+
+  var ratings = safeGetJSON(KEYS.QUESTION_RATINGS, {});
+  if (!ratings || typeof ratings !== 'object') ratings = {};
+  var rec = ratings[qId] || { up: 0, down: 0 };
+
+  var myVotes = safeGetJSON(KEYS.QUESTION_MY_VOTES, {});
+  if (!myVotes || typeof myVotes !== 'object') myVotes = {};
+  var prev = myVotes[qId] || 0;
+
+  // 先撤销旧投票，再应用新投票
+  if (prev === 1) rec.up = Math.max(0, (rec.up || 0) - 1);
+  else if (prev === -1) rec.down = Math.max(0, (rec.down || 0) - 1);
+
+  if (vote === 1) rec.up = (rec.up || 0) + 1;
+  else if (vote === -1) rec.down = (rec.down || 0) + 1;
+
+  if (vote === 0) delete myVotes[qId];
+  else myVotes[qId] = vote;
+
+  // 评分归零则删除记录，避免残留无意义数据
+  if ((rec.up || 0) <= 0 && (rec.down || 0) <= 0) delete ratings[qId];
+  else ratings[qId] = { up: rec.up || 0, down: rec.down || 0 };
+
+  safeSetJSON(KEYS.QUESTION_RATINGS, ratings);
+  safeSetJSON(KEYS.QUESTION_MY_VOTES, myVotes);
+
+  // 触发评分变化事件（页面刷新 tag / 权重）
+  try {
+    if (typeof window !== 'undefined' && typeof window.dispatchEvent === 'function') {
+      window.dispatchEvent(new CustomEvent('bq:question-rated', {
+        detail: { qId: qId, up: ratings[qId] ? ratings[qId].up : 0, down: ratings[qId] ? ratings[qId].down : 0, myVote: myVotes[qId] || 0 }
+      }));
+    }
+  } catch (e) {}
+
+  return { up: ratings[qId] ? ratings[qId].up : 0, down: ratings[qId] ? ratings[qId].down : 0, myVote: myVotes[qId] || 0 };
+}
+
+/**
+ * 读取单题评分聚合（不含算法计算）。
+ * @returns {{up:number, down:number}|null}
+ */
+function getQuestionRating(qId) {
+  if (!qId) return null;
+  qId = (window.resolveQuestionBioId || resolveQuestionBioId)(qId);
+  var ratings = safeGetJSON(KEYS.QUESTION_RATINGS, {});
+  var rec = (ratings && typeof ratings === 'object') ? ratings[qId] : null;
+  return rec ? { up: rec.up || 0, down: rec.down || 0 } : null;
+}
+
+/**
+ * 我的投票（1=赞, -1=踩, 0=未投）。
+ */
+function getMyVote(qId) {
+  if (!qId) return 0;
+  qId = (window.resolveQuestionBioId || resolveQuestionBioId)(qId);
+  var myVotes = safeGetJSON(KEYS.QUESTION_MY_VOTES, {});
+  return (myVotes && typeof myVotes === 'object' && myVotes[qId]) ? myVotes[qId] : 0;
+}
+
+/**
+ * 全部题目评分聚合（供管理员界面 / 诊断工具使用）。
+ * @returns {Object} { [bioId]: { up, down } }
+ */
+function getAllQuestionRatings() {
+  var ratings = safeGetJSON(KEYS.QUESTION_RATINGS, {});
+  return (ratings && typeof ratings === 'object') ? ratings : {};
+}
+
+/**
+ * 管理员重新给题目评分（直接覆盖 up/down 计数；用于误判后的纠偏）。
+ * @returns {boolean}
+ */
+function adminSetQuestionRating(qId, up, down) {
+  if (!qId) return false;
+  qId = (window.resolveQuestionBioId || resolveQuestionBioId)(qId);
+  up = Math.max(0, parseInt(up, 10) || 0);
+  down = Math.max(0, parseInt(down, 10) || 0);
+  var ratings = safeGetJSON(KEYS.QUESTION_RATINGS, {});
+  if (!ratings || typeof ratings !== 'object') ratings = {};
+  if (up === 0 && down === 0) delete ratings[qId];
+  else ratings[qId] = { up: up, down: down };
+  return safeSetJSON(KEYS.QUESTION_RATINGS, ratings);
+}
+
+/**
+ * 移入回收站（低分题目自动调用；管理员也可手动调用）。
+ * @returns {boolean}
+ */
+function recycleQuestion(qId) {
+  if (!qId) return false;
+  qId = (window.resolveQuestionBioId || resolveQuestionBioId)(qId);
+  var list = safeGetJSON(KEYS.QUESTION_RECYCLED, []);
+  if (!Array.isArray(list)) list = [];
+  if (list.indexOf(qId) === -1) {
+    list.push(qId);
+    safeSetJSON(KEYS.QUESTION_RECYCLED, list);
+  }
+  return true;
+}
+
+/**
+ * 从回收站恢复题目。
+ */
+function unrecycleQuestion(qId) {
+  if (!qId) return false;
+  qId = (window.resolveQuestionBioId || resolveQuestionBioId)(qId);
+  var list = safeGetJSON(KEYS.QUESTION_RECYCLED, []);
+  if (!Array.isArray(list)) list = [];
+  var idx = list.indexOf(qId);
+  if (idx !== -1) {
+    list.splice(idx, 1);
+    safeSetJSON(KEYS.QUESTION_RECYCLED, list);
+    return true;
+  }
+  return false;
+}
+
+/**
+ * 判断题目是否在回收站。
+ */
+function isQuestionRecycled(qId) {
+  if (!qId) return false;
+  qId = (window.resolveQuestionBioId || resolveQuestionBioId)(qId);
+  var list = safeGetJSON(KEYS.QUESTION_RECYCLED, []);
+  return Array.isArray(list) && list.indexOf(qId) !== -1;
+}
+
+/**
+ * 获取全部回收站题目 bioId 列表。
+ */
+function getRecycledQuestionIds() {
+  var list = safeGetJSON(KEYS.QUESTION_RECYCLED, []);
+  return Array.isArray(list) ? list : [];
+}
+
+/**
+ * 管理员覆盖本地题目内容（修改题干/选项/解析等）。
+ * 存储格式：{ [bioId]: { updatedAt, patch } }，patch 为题目字段的部分更新。
+ * @returns {boolean}
+ */
+function setQuestionOverride(qId, patch) {
+  if (!qId || !patch || typeof patch !== 'object') return false;
+  qId = (window.resolveQuestionBioId || resolveQuestionBioId)(qId);
+  var overrides = safeGetJSON(KEYS.QUESTION_OVERRIDES, {});
+  if (!overrides || typeof overrides !== 'object') overrides = {};
+  overrides[qId] = { updatedAt: Date.now(), patch: patch };
+  return safeSetJSON(KEYS.QUESTION_OVERRIDES, overrides);
+}
+
+/**
+ * 读取单题管理员覆盖（无则 null）。
+ */
+function getQuestionOverride(qId) {
+  if (!qId) return null;
+  qId = (window.resolveQuestionBioId || resolveQuestionBioId)(qId);
+  var overrides = safeGetJSON(KEYS.QUESTION_OVERRIDES, {});
+  var o = (overrides && typeof overrides === 'object') ? overrides[qId] : null;
+  return (o && o.patch && typeof o.patch === 'object') ? o.patch : null;
+}
+
+/**
+ * 清空单题管理员覆盖。
+ */
+function clearQuestionOverride(qId) {
+  if (!qId) return false;
+  qId = (window.resolveQuestionBioId || resolveQuestionBioId)(qId);
+  var overrides = safeGetJSON(KEYS.QUESTION_OVERRIDES, {});
+  if (!overrides || typeof overrides !== 'object' || !overrides[qId]) return false;
+  delete overrides[qId];
+  return safeSetJSON(KEYS.QUESTION_OVERRIDES, overrides);
+}
+
+/**
+ * 应用管理员覆盖到题目对象（返回浅拷贝，不改动原对象）。
+ * @param {Object} q 题目对象
+ * @returns {Object} 应用覆盖后的题目副本
+ */
+function applyQuestionOverride(q) {
+  if (!q || typeof q !== 'object') return q;
+  var patch = getQuestionOverride(getQuestionBioIdSafe(q));
+  if (!patch) return q;
+  return Object.assign({}, q, patch);
+}
+
+function getQuestionBioIdSafe(q) {
+  if (!q) return '';
+  var raw = q.bioId || q.id;
+  if (raw === undefined || raw === null || raw === '') {
+    raw = String(hashQuestionId((q.question || '') + (q.concept || '')));
+  }
+  return String((window.resolveQuestionBioId || resolveQuestionBioId)(raw));
+}
+window.getQuestionBioIdSafe = getQuestionBioIdSafe;
+
+/* —— 题目评分 / 投票 / 回收站 / 管理员覆盖：显式暴露到全局（浏览器 script 与测试均可用） —— */
+window.rateQuestion = rateQuestion;
+window.getQuestionRating = getQuestionRating;
+window.getMyVote = getMyVote;
+window.getMyVoteForQuestion = getMyVote;
+window.getAllQuestionRatings = getAllQuestionRatings;
+window.adminSetQuestionRating = adminSetQuestionRating;
+window.setQuestionRating = adminSetQuestionRating;
+window.recycleQuestion = recycleQuestion;
+window.unrecycleQuestion = unrecycleQuestion;
+window.restoreQuestion = unrecycleQuestion;
+window.isQuestionRecycled = isQuestionRecycled;
+window.getRecycledQuestionIds = getRecycledQuestionIds;
+window.setQuestionOverride = setQuestionOverride;
+window.saveQuestionOverride = setQuestionOverride;
+window.getQuestionOverride = getQuestionOverride;
+window.clearQuestionOverride = clearQuestionOverride;
+window.applyQuestionOverride = applyQuestionOverride;
 
 /* ============================================================
  * 错题管理

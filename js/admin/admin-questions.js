@@ -135,11 +135,16 @@ function renderQuestionsTab(container, questionsData) {
             <option value="single">单选题</option>
             <option value="multiple">多选题</option>
             <option value="judgment">判断题</option>
+            <option value="mtf">多判断题（MTF）</option>
           </select>
         </div>
         <div class="admin-form-group full">
           <label class="admin-form-label">题目内容</label>
           <textarea class="admin-form-textarea" id="q-text" placeholder="输入题目内容" required></textarea>
+          <div style="font-size:0.72rem;color:var(--text-muted,#8a8a8a);margin-top:4px;line-height:1.5;">
+            💡 <strong>MTF 题干规范：</strong>不要用「下列叙述最合理的是/错误的是」等限定句，应改为
+            「根据以上信息，判断以下陈述的正误。」，每个选项即为一条独立判断陈述。
+          </div>
         </div>
         <div class="admin-form-group full">
           <label class="admin-form-label">选项（每行一个选项）</label>
@@ -255,6 +260,22 @@ function renderQuestionsTab(container, questionsData) {
 
   html += '</div>';
 
+  // 本地题库评分与回收站（用户练习基于本地 JSON 题库；低分题自动进入回收站）
+  html += `
+    <div class="admin-section" id="admin-local-questions-section" style="margin-top:28px;">
+      <div class="admin-section-header">
+        <div class="admin-section-title">
+          ${ICONS.star || '★'}
+          本地题库 · 评分与回收站
+        </div>
+        <span class="admin-section-badge" style="font-size:0.72rem;color:var(--text-muted,#8a8a8a);">数据来源：data/quiz.json + data/logic_questions.json</span>
+      </div>
+      <div id="admin-local-questions-body">
+        <div style="padding:16px 0;color:var(--text-muted,#8a8a8a);font-size:0.85rem;">正在加载本地题库...</div>
+      </div>
+    </div>
+  `;
+
   // 题目编辑弹窗
   html += `
     <div class="admin-modal-overlay" id="admin-question-modal" style="display:none;">
@@ -364,6 +385,9 @@ function renderQuestionsTab(container, questionsData) {
 
   container.innerHTML = html;
 
+  // 本地题库 · 评分与回收站（异步加载渲染）
+  _renderLocalQuestionSection();
+
   // 搜索事件
   const searchInput = document.getElementById('admin-q-search');
   const searchBtn = document.getElementById('admin-q-search-btn');
@@ -458,6 +482,382 @@ window.handleDeleteQuestion = async function(id) {
   }
 };
 
+/* ============================================================
+ * 本地题库 · 评分与回收站
+ * 用户练习数据源为本地 JSON 题库（data/quiz.json + data/logic_questions.json），
+ * 评分/回收站/覆盖数据存于 localStorage（storage.js），配合 js/core/rating.js
+ * 的 Wilson 评分算法。管理员可在此查看评分、回收/恢复、重新评分、编辑题目（覆盖）。
+ * ============================================================ */
+let _localQuestionBankCache = null;
+let _localQuestionFilter = 'all'; // 'all' | 'rated' | 'recycled'
+
+/**
+ * 加载本地题库（quiz.json + logic_questions.json），按 bioId 去重并缓存。
+ */
+async function _loadLocalQuestionBank(force) {
+  if (_localQuestionBankCache && !force) return _localQuestionBankCache;
+  const list = [];
+  const results = await Promise.all([
+    fetch('data/quiz.json').then(r => r.ok ? r.json() : null).catch(() => null),
+    fetch('data/logic_questions.json').then(r => r.ok ? r.json() : null).catch(() => null)
+  ]);
+  results.forEach(function (data) {
+    if (!data) return;
+    const arr = Array.isArray(data) ? data : (data['题库'] || data.questions || []);
+    if (!Array.isArray(arr)) return;
+    const filtered = (typeof window._filterQuarantinedQuestions === 'function')
+      ? window._filterQuarantinedQuestions(arr)
+      : arr;
+    list.push.apply(list, filtered);
+  });
+  // 按 bioId 去重（与练习/测验使用同一稳定 ID 算法）
+  const seen = {};
+  const out = [];
+  list.forEach(function (q) {
+    const id = _localBioId(q);
+    if (!id || seen[id]) return;
+    seen[id] = true;
+    out.push(q);
+  });
+  _localQuestionBankCache = out;
+  return out;
+}
+
+/**
+ * 计算题目稳定 bioID（与 practice.js getQuestionBioId 同一算法）。
+ */
+function _localBioId(q) {
+  if (!q) return '';
+  if (typeof window.getQuestionBioIdSafe === 'function') return String(window.getQuestionBioIdSafe(q));
+  var raw = q.bioId || q.id;
+  if (raw === undefined || raw === null || raw === '') {
+    var hashFn = (typeof hashQuestionId === 'function')
+      ? hashQuestionId
+      : function (str) {
+          var h = 0;
+          for (var i = 0; i < str.length; i++) {
+            h = ((h << 5) - h) + str.charCodeAt(i);
+            h = h & h;
+          }
+          return Math.abs(h);
+        };
+    raw = String(hashFn((q.question || '') + (q.concept || '')));
+  }
+  return String((typeof window.resolveQuestionBioId === 'function')
+    ? window.resolveQuestionBioId(raw)
+    : raw);
+}
+
+function _localFindQuestion(bioId) {
+  const list = _localQuestionBankCache || [];
+  for (let i = 0; i < list.length; i++) {
+    if (_localBioId(list[i]) === bioId) return list[i];
+  }
+  return null;
+}
+
+function _localRatingInfo(bioId) {
+  let up = 0, down = 0;
+  if (typeof getQuestionRating === 'function') {
+    const r = getQuestionRating(bioId);
+    if (r) { up = r.up || 0; down = r.down || 0; }
+  }
+  let score01 = 0.5;
+  let weight = 1;
+  if (typeof window.RatingCore === 'object') {
+    score01 = window.RatingCore.wilsonScore(up, down);
+    weight = window.RatingCore.ratingWeight(score01);
+  }
+  return { up: up, down: down, score01: score01, weight: weight };
+}
+
+function _localIsRecycled(bioId) {
+  if (typeof isQuestionRecycled === 'function') return !!isQuestionRecycled(bioId);
+  try {
+    const list = JSON.parse(localStorage.getItem('bioquest_question_recycled') || '[]');
+    return Array.isArray(list) && list.indexOf(bioId) !== -1;
+  } catch (e) {
+    return false;
+  }
+}
+
+function _localHasOverride(bioId) {
+  if (typeof getQuestionOverride === 'function') return !!getQuestionOverride(bioId);
+  return false;
+}
+
+function _localQuestionSnippet(q) {
+  const s = q.question || (q.subQuestions && q.subQuestions[0] && q.subQuestions[0].text) || '';
+  return String(s).length > 90 ? String(s).slice(0, 90) + '…' : String(s);
+}
+
+const _LOCAL_TYPE_LABELS = { single: '单选', multiple: '多选', judgment: '判断', mtf: 'MTF' };
+
+/**
+ * 渲染「本地题库 · 评分与回收站」区块（工具栏 + 题目卡片列表 + 编辑弹窗）。
+ */
+async function _renderLocalQuestionSection() {
+  const body = document.getElementById('admin-local-questions-body');
+  if (!body) return;
+  let list = _localQuestionBankCache;
+  if (!list) {
+    body.innerHTML = '<div style="padding:16px 0;color:var(--text-muted,#8a8a8a);font-size:0.85rem;">正在加载本地题库...</div>';
+    try {
+      list = await _loadLocalQuestionBank();
+    } catch (e) {
+      body.innerHTML = '<div style="padding:16px 0;color:var(--color-error,#c0553a);font-size:0.85rem;">本地题库加载失败：' + escapeHtml(e && e.message) + '</div>';
+      return;
+    }
+  }
+
+  // 统计 + 筛选
+  let ratedCount = 0;
+  let recycledCount = 0;
+  const cards = [];
+  list.forEach(function (q) {
+    const id = _localBioId(q);
+    const info = _localRatingInfo(id);
+    const recycled = _localIsRecycled(id);
+    if (info.up + info.down > 0) ratedCount++;
+    if (recycled) recycledCount++;
+    const show = (_localQuestionFilter === 'all') ||
+      (_localQuestionFilter === 'rated' && info.up + info.down > 0) ||
+      (_localQuestionFilter === 'recycled' && recycled);
+    if (show) cards.push({ q: q, id: id, info: info, recycled: recycled });
+  });
+
+  // 回收站优先置顶，其余按评分升序（低分题优先处理）
+  cards.sort(function (a, b) {
+    if (a.recycled !== b.recycled) return a.recycled ? -1 : 1;
+    return a.info.score01 - b.info.score01;
+  });
+
+  const filterBtn = function (f, label, count, extraStyle) {
+    return `<button class="admin-btn ${_localQuestionFilter === f ? 'admin-btn--primary' : 'admin-btn--ghost'}" data-on='["adminLocalFilter","${f}"]' style="${extraStyle || ''}">${label}（${count}）</button>`;
+  };
+
+  let html = `
+    <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:14px;">
+      ${filterBtn('all', '全部', list.length)}
+      ${filterBtn('rated', '已评分', ratedCount)}
+      ${filterBtn('recycled', '回收站', recycledCount, recycledCount ? 'border-color:var(--color-error,#c0553a);color:var(--color-error,#c0553a);' : '')}
+      <button class="admin-btn admin-btn--ghost" data-on='["adminLocalRefresh"]' style="margin-left:auto;">刷新</button>
+    </div>
+  `;
+
+  if (cards.length === 0) {
+    html += `<div class="admin-empty"><div class="admin-empty-icon">${ICONS.inbox}</div><div class="admin-empty-text">暂无符合筛选条件的题目</div></div>`;
+  } else {
+    cards.forEach(function (item) {
+      const q = item.q;
+      const id = item.id;
+      const info = item.info;
+      const recycled = item.recycled;
+      const hasOverride = _localHasOverride(id);
+      const typeLabel = _LOCAL_TYPE_LABELS[q.type] || (q.type || '—');
+      const scoreStr = (typeof window.RatingCore === 'object')
+        ? window.RatingCore.formatQuestionScore(info.score01)
+        : (1 + info.score01 * 4).toFixed(1);
+      const scoreColor = info.score01 >= 0.6 ? '#10b981' : (info.score01 >= 0.4 ? '#c4956a' : '#ef4444');
+      const hasVotes = info.up + info.down > 0;
+      html += `
+        <div class="admin-q-card" style="${recycled ? 'border-color:rgba(192,85,58,0.45);background:rgba(192,85,58,0.02);' : ''}">
+          <div class="admin-q-top">
+            <div class="admin-q-body">
+              <div class="admin-q-text" title="${escapeHtml(String(q.question || ''))}">${escapeHtml(_localQuestionSnippet(q))}</div>
+              <div class="admin-q-meta">
+                <span class="admin-q-tag" style="background:rgba(168,85,247,0.1);color:#a855f7;font-size:0.65rem;">${escapeHtml(typeLabel)}</span>
+                ${q.subject ? `<span class="admin-q-tag admin-q-tag--subject">${escapeHtml(q.subject)}</span>` : ''}
+                ${q.concept ? `<span class="admin-q-tag" style="background:rgba(16,185,129,0.1);color:#10b981;">${escapeHtml(q.concept)}</span>` : ''}
+                <span class="admin-q-tag" style="background:rgba(107,114,128,0.1);color:#6b7280;font-family:var(--font-mono,monospace);font-size:0.65rem;">${escapeHtml(id)}</span>
+                ${recycled ? '<span class="admin-q-tag" style="background:rgba(192,85,58,0.12);color:#c0553a;font-weight:600;">♻ 回收站</span>' : ''}
+                ${hasOverride ? '<span class="admin-q-tag" style="background:rgba(99,102,241,0.1);color:#6366f1;">已覆盖</span>' : ''}
+              </div>
+              <div style="margin-top:6px;font-size:0.8rem;color:var(--text-muted,#8a8a8a);">
+                评分 <strong style="color:${scoreColor};">${scoreStr}</strong>
+                <span style="margin:0 6px;opacity:0.5;">|</span>
+                👍 ${info.up} · 👎 ${info.down}
+                <span style="margin:0 6px;opacity:0.5;">|</span>
+                出现率权重 ${info.weight.toFixed(2)}×
+                ${hasVotes ? '' : '<span style="margin-left:8px;font-size:0.72rem;">（暂无投票）</span>'}
+              </div>
+            </div>
+            <div class="admin-table-actions">
+              <button class="admin-btn ${recycled ? 'admin-btn--ghost' : 'admin-btn--danger'}" data-on='["adminToggleLocalRecycle","${id}"]' style="white-space:nowrap;">${recycled ? '恢复' : '回收'}</button>
+              <button class="admin-btn admin-btn--ghost" data-on='["adminRescoreLocalQuestion","${id}"]' style="white-space:nowrap;">重新评分</button>
+              <button class="admin-btn admin-btn--ghost" data-on='["adminEditLocalQuestion","${id}"]' style="white-space:nowrap;">编辑</button>
+            </div>
+          </div>
+        </div>
+      `;
+    });
+  }
+
+  body.innerHTML = html + _localEditModalHtml();
+}
+
+/**
+ * 编辑弹窗（管理员覆盖）：题干 / 选项 / TTFF 答案 / 解析。
+ */
+function _localEditModalHtml() {
+  return `
+    <div class="admin-modal-overlay" id="admin-local-edit-modal" style="display:none;">
+      <div class="admin-modal" style="max-width:640px;">
+        <div class="admin-modal-header">
+          <div class="admin-modal-title">编辑本地题目（保存为管理员覆盖）</div>
+          <button class="admin-modal-close" data-on='["adminCloseLocalEditModal"]'>&times;</button>
+        </div>
+        <form id="admin-local-edit-form" class="admin-form-grid">
+          <input type="hidden" id="local-eq-bioid">
+          <div class="admin-form-group full">
+            <label class="admin-form-label">题目内容</label>
+            <textarea class="admin-form-textarea" id="local-eq-question" required></textarea>
+          </div>
+          <div class="admin-form-group full">
+            <label class="admin-form-label">选项 / 陈述（每行一个）</label>
+            <textarea class="admin-form-textarea" id="local-eq-options" style="min-height:80px;"></textarea>
+          </div>
+          <div class="admin-form-group">
+            <label class="admin-form-label">答案（TTFF）</label>
+            <input type="text" class="admin-form-input" id="local-eq-answer" placeholder="如：TTFF">
+            <div style="font-size:0.72rem;color:var(--text-muted,#8a8a8a);margin-top:4px;">MTF 每项 T/F 对应该陈述真假；单选 TFFF=选A，多选 TTFF=选AB</div>
+          </div>
+          <div class="admin-form-group full">
+            <label class="admin-form-label">解析</label>
+            <textarea class="admin-form-textarea" id="local-eq-explanation" style="min-height:60px;"></textarea>
+          </div>
+          <div class="admin-form-group full" id="local-eq-override-row" style="display:none;">
+            <span style="font-size:0.75rem;color:#6366f1;">已存在管理员覆盖，保存将替换；可点击「清除覆盖」还原题库原题。</span>
+          </div>
+          <div class="admin-form-group full" style="display:flex;gap:8px;justify-content:flex-end;">
+            <button type="button" class="admin-btn admin-btn--ghost" id="local-eq-clear-override" data-on='["adminClearLocalOverride"]' style="display:none;">清除覆盖</button>
+            <button type="submit" class="admin-form-submit">保存覆盖</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  `;
+}
+
+window.adminLocalFilter = function(f) {
+  _localQuestionFilter = (f === 'rated' || f === 'recycled') ? f : 'all';
+  _renderLocalQuestionSection();
+};
+
+window.adminLocalRefresh = function() {
+  _loadLocalQuestionBank(true).then(function () {
+    _renderLocalQuestionSection();
+  }).catch(function () {
+    _renderLocalQuestionSection();
+  });
+};
+
+window.adminToggleLocalRecycle = function(bioId) {
+  const recycled = _localIsRecycled(bioId);
+  if (recycled) {
+    if (typeof unrecycleQuestion === 'function') unrecycleQuestion(bioId);
+  } else {
+    if (typeof recycleQuestion === 'function') recycleQuestion(bioId);
+  }
+  showAdminToast(recycled ? '已从回收站恢复' : '已移入回收站', 'success');
+  _renderLocalQuestionSection();
+};
+
+window.adminRescoreLocalQuestion = function(bioId) {
+  if (typeof adminSetQuestionRating !== 'function') { showAdminToast('存储模块未就绪', 'error'); return; }
+  const cur = (typeof getQuestionRating === 'function' ? getQuestionRating(bioId) : null) || { up: 0, down: 0 };
+  const upStr = prompt('设置「点赞数」（当前 ' + cur.up + '）：', String(cur.up));
+  if (upStr === null) return;
+  const downStr = prompt('设置「点踩数」（当前 ' + cur.down + '）：', String(cur.down));
+  if (downStr === null) return;
+  const up = parseInt(upStr, 10);
+  const down = parseInt(downStr, 10);
+  if (isNaN(up) || isNaN(down) || up < 0 || down < 0) {
+    showAdminToast('请输入非负整数', 'error');
+    return;
+  }
+  adminSetQuestionRating(bioId, up, down);
+  // 评分与回收状态联动：评分过低自动回收，评分提升后自动恢复
+  if (typeof window.RatingCore === 'object' && window.RatingCore.shouldRecycleQuestion(up, down)) {
+    if (typeof recycleQuestion === 'function') recycleQuestion(bioId);
+  } else if (typeof unrecycleQuestion === 'function') {
+    unrecycleQuestion(bioId);
+  }
+  showAdminToast('评分已更新', 'success');
+  _renderLocalQuestionSection();
+};
+
+window.adminEditLocalQuestion = function(bioId) {
+  const q = _localFindQuestion(bioId);
+  const modal = document.getElementById('admin-local-edit-modal');
+  if (!modal || !q) { showAdminToast('未找到该题目', 'error'); return; }
+  const patch = (typeof getQuestionOverride === 'function') ? getQuestionOverride(bioId) : null;
+  const eff = patch ? Object.assign({}, q, patch) : q;
+  document.getElementById('local-eq-bioid').value = bioId;
+  document.getElementById('local-eq-question').value = eff.question || '';
+  const subs = eff.subQuestions;
+  let lines = [];
+  if (Array.isArray(eff.options)) lines = eff.options.map(String);
+  else if (Array.isArray(subs)) lines = subs.map(function (s) { return s.text || ''; });
+  document.getElementById('local-eq-options').value = lines.join('\n');
+  document.getElementById('local-eq-answer').value = _answerToTTFF(eff.answer, eff.type || 'single', lines.length, subs);
+  document.getElementById('local-eq-explanation').value = eff.explanation || '';
+  document.getElementById('local-eq-override-row').style.display = patch ? '' : 'none';
+  document.getElementById('local-eq-clear-override').style.display = patch ? '' : 'none';
+  modal.style.display = 'flex';
+  // 重新绑定提交（避免重复监听）
+  const form = document.getElementById('admin-local-edit-form');
+  const newForm = form.cloneNode(true);
+  form.parentNode.replaceChild(newForm, form);
+  newForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    adminSaveLocalOverride();
+  });
+};
+
+window.adminCloseLocalEditModal = function() {
+  const modal = document.getElementById('admin-local-edit-modal');
+  if (modal) modal.style.display = 'none';
+};
+
+window.adminSaveLocalOverride = function() {
+  if (typeof setQuestionOverride !== 'function') { showAdminToast('存储模块未就绪', 'error'); return; }
+  const bioId = document.getElementById('local-eq-bioid').value;
+  const q = _localFindQuestion(bioId);
+  if (!bioId || !q) { showAdminToast('未找到该题目', 'error'); return; }
+  const type = q.type || 'single';
+  const question = document.getElementById('local-eq-question').value.trim();
+  if (!question) { showAdminToast('题干不能为空', 'error'); return; }
+  const lines = document.getElementById('local-eq-options').value.split('\n').map(function (s) { return s.trim(); }).filter(Boolean);
+  const ttff = document.getElementById('local-eq-answer').value;
+  const explanation = document.getElementById('local-eq-explanation').value;
+  const parsed = _parseTTFFAnswer(ttff, type, lines);
+  const patch = { question: question, explanation: explanation };
+  if (type === 'mtf' || type === 'multi_judge') {
+    // MTF：patch 使用 subQuestions（与本地题库/练习/测验读取一致）
+    patch.subQuestions = (parsed.subQuestions && parsed.subQuestions.length)
+      ? parsed.subQuestions
+      : lines.map(function (t, i) { return { label: String.fromCharCode(65 + i), text: t, answer: null }; });
+    patch.answer = '';
+  } else {
+    patch.options = lines;
+    patch.answer = parsed.answer;
+  }
+  setQuestionOverride(bioId, patch);
+  showAdminToast('已保存管理员覆盖', 'success');
+  adminCloseLocalEditModal();
+  _renderLocalQuestionSection();
+};
+
+window.adminClearLocalOverride = function() {
+  const bioId = document.getElementById('local-eq-bioid').value;
+  if (!bioId) return;
+  if (typeof clearQuestionOverride === 'function') clearQuestionOverride(bioId);
+  showAdminToast('已清除覆盖', 'success');
+  adminCloseLocalEditModal();
+  _renderLocalQuestionSection();
+};
+
 /* ===== 题目编辑相关 ===== */
 let _editQuestionTags = [];
 
@@ -483,6 +883,13 @@ function _answerToTTFF(answer, qType, optionCount, subQuestions) {
     return keys.map(function (k) {
       return answer[k] === true ? 'T' : 'F';
     }).join('');
+  }
+  // 数字索引格式（逻辑推理题：answer = 正确选项索引 0/1/2/...）：转换为 TFFF 格式
+  if (typeof answer === 'number' && isFinite(answer)) {
+    var nn = optionCount || 4;
+    var indexArr = new Array(nn).fill('F');
+    if (answer >= 0 && answer < nn) indexArr[answer] = 'T';
+    return indexArr.join('');
   }
   var ans = String(answer || '').toUpperCase().trim();
   if (!ans) return '';
