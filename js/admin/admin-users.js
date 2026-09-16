@@ -299,10 +299,14 @@ window.handleEditUser = function(userId, username, displayName, bioScore, totalA
       total_correct: parseInt(document.getElementById('edit-total-correct').value),
       accuracy: parseFloat(document.getElementById('edit-accuracy').value)
     };
-    // 移除空字符串字段，避免覆盖为空
+    // 移除空字符串字段，避免覆盖为空；数值字段空输入会得 NaN，必须剔除防脏数据入库
     if (!newUsername) delete updates.username;
     if (!newDisplayName) delete updates.display_name;
     if (isNaN(updates.points)) delete updates.points;
+    if (isNaN(updates.bio_score)) delete updates.bio_score;
+    if (isNaN(updates.total_answered)) delete updates.total_answered;
+    if (isNaN(updates.total_correct)) delete updates.total_correct;
+    if (isNaN(updates.accuracy)) delete updates.accuracy;
     try {
       var { error } = await sb.from('profiles').update(updates).eq('id', userId);
       if (error) { showAdminToast('更新失败: ' + parseSupabaseError(error), 'error'); return; }

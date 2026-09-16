@@ -536,7 +536,9 @@ function saveRecord(record) {
   var fullRecord = {
     id: record.id || 'rec_' + Date.now() + '_' + Math.random().toString(36).slice(2, 9),
     timestamp: record.timestamp || Date.now(),
-    date: record.date || new Date().toISOString().split('T')[0],
+    // 本地时区日期（与打卡/趋势聚合口径一致，避免 UTC 错位一天；
+    // 兜底兼容 utils 尚未就绪的极端时序）
+    date: record.date || (typeof localDateStr === 'function' ? localDateStr() : new Date().toISOString().split('T')[0]),
     totalQuestions: record.totalQuestions || 0,
     correctCount: record.correctCount || 0,
     score: record.score || 0,
@@ -580,13 +582,19 @@ function _syncPracticeRecordToSupabase(fullRecord) {
       moduleNum = parseInt(fullRecord.moduleNum, 10) || 1;
     }
     var answers = Array.isArray(fullRecord.questions) ? fullRecord.questions.map(function (q, idx) {
+      // 「正确」统一为「题级全对」：
+      //   - 考试记录（q.correctSubs/totalSubs）：正确子项数 = 总子项数
+      //   - 练习记录（仅有满分恒为 2 的 q.score）：得分 = 满分 2 即全对
+      var isFullCorrect = q.totalSubs && q.correctSubs
+        ? q.correctSubs === q.totalSubs
+        : ((q.score || 0) >= 2 - 1e-6);
       return {
         question_id: q.questionId || q.id || idx,
         question: q.question || '',
         subject: q.subject || '',
         concept: q.concept || '',
         userAnswers: q.userAnswers || {},
-        correct: (q.score || 0) > 0,
+        correct: isFullCorrect,
         score: q.score || 0
       };
     }) : [];
@@ -594,7 +602,8 @@ function _syncPracticeRecordToSupabase(fullRecord) {
       answers: answers,
       module_num: moduleNum,
       subject: fullRecord.module || '',
-      score: fullRecord.correctCount || 0,
+      // 会话总分（得分），而非答对数——答对数由 answers/correctCount 提供
+      score: fullRecord.score || 0,
       duration: fullRecord.duration || 0,
       is_correct: fullRecord.totalQuestions > 0 && fullRecord.correctCount === fullRecord.totalQuestions,
       question_id: (answers[0] && answers[0].question_id) || 0
@@ -1347,22 +1356,22 @@ async function importData(jsonString) {
     }
 
     if (data.stats) {
-      var existingStats = safeGetJSON(KEYS.STATS, {});
+      // 备份是同一设备的全量快照（见 exportData：导出完整 KEYS.STATS）。
+      // 直接「覆盖」而非相加合并，否则重复导入同一备份会让
+      // totalAnswered/totalCorrect 翻倍累积（records/favorites 均有去重，stats 必须一致）。
       var mergedStats = {};
-      for (var key in existingStats) {
-        if (existingStats.hasOwnProperty(key)) mergedStats[key] = existingStats[key];
-      }
       for (var mod in data.stats) {
         if (data.stats.hasOwnProperty(mod)) {
-          if (mergedStats[mod]) {
-            mergedStats[mod].totalAnswered += data.stats[mod].totalAnswered || 0;
-            mergedStats[mod].totalCorrect += data.stats[mod].totalCorrect || 0;
-            mergedStats[mod].accuracy = mergedStats[mod].totalAnswered > 0
-              ? Math.round((mergedStats[mod].totalCorrect / mergedStats[mod].totalAnswered) * 100)
-              : 0;
-          } else {
-            mergedStats[mod] = { totalAnswered: data.stats[mod].totalAnswered || 0, totalCorrect: data.stats[mod].totalCorrect || 0, accuracy: data.stats[mod].accuracy || 0 };
+          var src = data.stats[mod] || {};
+          var dst = {
+            totalAnswered: src.totalAnswered || 0,
+            totalCorrect: src.totalCorrect || 0,
+            accuracy: src.accuracy || 0
+          };
+          if (dst.totalAnswered > 0) {
+            dst.accuracy = Math.round((dst.totalCorrect / dst.totalAnswered) * 100);
           }
+          mergedStats[mod] = dst;
         }
       }
       safeSetJSON(KEYS.STATS, mergedStats);

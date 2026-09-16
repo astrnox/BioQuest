@@ -3288,24 +3288,30 @@ async function getUserStatsFromSupabase() {
   try {
     // 1. 拉取近 1000 条练习记录做聚合（足够覆盖学期量级）
     var { data: records, error: rErr } = await sb.from('practice_records')
-      .select('module_num, is_correct, score, created_at')
+      .select('module_num, user_answers, created_at')
       .eq('profile_id', _currentUser.id)
       .order('created_at', { ascending: false })
       .limit(1000);
     if (rErr) throw rErr;
     records = records || [];
 
-    var totalAnswered = records.length;
+    // 统计口径与本地 getStats 对齐：totalAnswered/correct 均为「题目级」而非「场次级」。
+    // user_answers 中每项对应一道题，correct=该题全对（storage.js 统一写入）。
+    var totalAnswered = 0;
     var totalCorrect = 0;
     var modules = {};
     for (var i = 0; i < records.length; i++) {
       var r = records[i];
       var modKey = 'module_' + (r.module_num || 1);
       if (!modules[modKey]) modules[modKey] = { totalAnswered: 0, totalCorrect: 0 };
-      modules[modKey].totalAnswered++;
-      if (r.is_correct) {
-        totalCorrect++;
-        modules[modKey].totalCorrect++;
+      var ansArr = Array.isArray(r.user_answers) ? r.user_answers : [];
+      totalAnswered += ansArr.length;
+      modules[modKey].totalAnswered += ansArr.length;
+      for (var k = 0; k < ansArr.length; k++) {
+        if (ansArr[k] && ansArr[k].correct) {
+          totalCorrect++;
+          modules[modKey].totalCorrect++;
+        }
       }
     }
 
@@ -3383,7 +3389,7 @@ async function getPracticeHistoryFromSupabase(limit) {
     if (error) throw error;
     if (!data || data.length === 0) return [];
 
-    // 转换为 dashboard 兼容格式
+    // 转换为 dashboard 兼容格式（correct = 全对题数，与本地 practice 记录口径一致）
     return data.map(function (r) {
       var answers = Array.isArray(r.user_answers) ? r.user_answers : [];
       var correct = 0;
@@ -3391,7 +3397,7 @@ async function getPracticeHistoryFromSupabase(limit) {
       return {
         date: r.created_at ? r.created_at.slice(0, 10) : null,
         timestamp: r.created_at ? new Date(r.created_at).getTime() : 0,
-        correct: typeof r.score === 'number' ? r.score : correct,
+        correct: correct,
         total: answers.length || 1,
         totalQuestions: answers.length || 1,
         correctCount: correct,

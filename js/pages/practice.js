@@ -997,15 +997,20 @@ function calculateQuestionScore(q, userAnswers) {
     });
   });
 
-  /* MTF 竞赛级计分标准（2025 CBO 联赛标准）
-   * 4/4 全对 2.0 分 / 3/4 正确 1.0 分 / 2/4 正确 0.2 分 / 其余 0 分 */
+  /* MTF 计分：每题满分恒为 2.0（与练习总账「满分 = 题数 × 2」一致）
+   * - 4 子题：2025 CBO 联赛标准（4/4 → 2.0，3/4 → 1.0，2/4 → 0.2，其余 0）
+   * - 非 4 子题（1/2/3 子题等判断/简式题）：按比例归一化，避免「全对不得分」。
+   *   全对 → 满分 2.0；全错 → 0；部分对 → 按比例四舍五入到 0.1。 */
   let score = 0;
-  if (correct === 4) {
-    score = 2.0;
-  } else if (correct === 3) {
-    score = 1.0;
-  } else if (correct === 2) {
-    score = 0.2;
+  if (total === 4) {
+    if (correct === 4) score = 2.0;
+    else if (correct === 3) score = 1.0;
+    else if (correct === 2) score = 0.2;
+  } else if (correct === total) {
+    score = 2.0; // 全对得满分（任意子题数）
+  } else if (correct > 0) {
+    score = Math.round((2.0 * correct / total) * 10) / 10; // 尽量不超过满分
+    if (score > 2.0) score = 2.0;
   }
 
   return { correct, total, score, details };
@@ -1058,7 +1063,13 @@ function updateStatsForQuestion(q, userAnswers) {
   }
 
   if (typeof updateStats === 'function') {
-    updateStats(q.subject, isFullyCorrect);
+    // 统计 key 统一为 module_1..4（与考试/排行榜/Supabase 同构），
+    // 使 calcBioScore 的模块难度加权与 dashboard 模块卡真正生效。
+    // 历史格式 module1..4 / unknown 保持原样，由读取端兼容。
+    var statKey = /^module(\d)$/.test(moduleId)
+      ? 'module_' + moduleId.replace(/^module/, '')
+      : moduleId;
+    updateStats(statKey, isFullyCorrect);
   }
 
   // 触发分数成就检查

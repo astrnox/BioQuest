@@ -685,8 +685,9 @@ function _loadPracticeHistory() {
  */
 function _normalizeHistoryEntry(item) {
   if (!item) return null;
-  // 解析日期
-  var dateStr = item.date || (item.timestamp ? new Date(item.timestamp).toISOString().split('T')[0] : null);
+  // 解析日期：优先显式 date；缺失时用【本地时区】从 timestamp 推导
+  // （避免 toISOString() UTC 在正时区把「今天」归到昨天）
+  var dateStr = item.date || (item.timestamp ? localDateStr(item.timestamp) : null);
   if (!dateStr) return null;
   if (dateStr.length > 10) dateStr = dateStr.slice(0, 10);
   // 解析正确数/总数
@@ -696,6 +697,8 @@ function _normalizeHistoryEntry(item) {
   } else if (typeof item.totalQuestions === 'number' || typeof item.correctCount === 'number') {
     total = item.totalQuestions || 0;
     correct = item.correctCount || 0;
+    // 防御旧考试记录：correctCount 曾为「子题正确数」，可能 > 题目数
+    if (total > 0 && correct > total) correct = total;
   } else if (Array.isArray(item.answers) && item.answers.length > 0) {
     total = item.answers.length;
     for (var a = 0; a < item.answers.length; a++) {
@@ -716,7 +719,8 @@ function _normalizeHistoryEntry(item) {
 function _getTodayCount() {
   try {
     var history = _loadPracticeHistory();
-    var todayStr = new Date().toISOString().split('T')[0];
+    // 本地时区「今天」，与历史记录的本地日期对齐（避免 UTC 错位漏计）
+    var todayStr = localTodayStr();
     var count = 0;
     for (var i = 0; i < history.length; i++) {
       var norm = _normalizeHistoryEntry(history[i]);
@@ -1025,8 +1029,19 @@ function renderDashboardPage(target) {
   var avgAcc = recentCount > 0 ? Math.round(recentAcc / recentCount) : 0;
   var trendDirection = 'stable';
   if (trend.length >= 4) {
-    var firstHalf = trend.slice(0, 3).reduce(function(s, t) { return s + t.accuracy; }, 0) / 3;
-    var secondHalf = trend.slice(3).reduce(function(s, t) { return s + t.accuracy; }, 0) / (trend.length - 3);
+    // 通用等分（前 ceil(n/2) 天 vs 后 n - ceil(n/2) 天），按答题数加权，
+    // 避免「未练习的天（count=0）」压低段内均值造成趋势误判
+    function _wAvg(seg) {
+      var wc = 0, wn = 0;
+      for (var s = 0; s < seg.length; s++) {
+        wc += seg[s].accuracy * seg[s].count;
+        wn += seg[s].count;
+      }
+      return wn > 0 ? wc / wn : 0;
+    }
+    var mid = Math.ceil(trend.length / 2);
+    var firstHalf = _wAvg(trend.slice(0, mid));
+    var secondHalf = _wAvg(trend.slice(mid));
     if (secondHalf > firstHalf + 5) trendDirection = 'up';
     else if (secondHalf < firstHalf - 5) trendDirection = 'down';
   }

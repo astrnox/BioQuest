@@ -1291,19 +1291,19 @@ function _getApiKeyConfig() {
   return _loadApiKeyConfig();
 }
 
-// 获取今日用量（按日期重置）
+// 获取今日用量（按本地日期重置，与界面「明日 0:00 重置」文案一致）
 function _getApiKeyDailyUsage() {
   try {
     var raw = localStorage.getItem(_AI_USAGE_STORAGE);
     var data = raw ? JSON.parse(raw) : {};
-    var today = new Date().toISOString().slice(0, 10); // YYYY-MM-DD
+    var today = localTodayStr(); // YYYY-MM-DD（本地时区）
     if (data.date !== today) {
       data = { date: today, count: 0 };
       localStorage.setItem(_AI_USAGE_STORAGE, JSON.stringify(data));
     }
     return data;
   } catch (e) {
-    return { date: new Date().toISOString().slice(0, 10), count: 0 };
+    return { date: localTodayStr(), count: 0 };
   }
 }
 

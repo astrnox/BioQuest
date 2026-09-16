@@ -864,6 +864,30 @@ function calcAccuracy(correct, total) {
 }
 
 /**
+ * 本地时区日期工具（规避 toISOString() UTC 造成的「今天错位一天」）
+ * 历史统计按本地日期聚合/展示时，一律使用本函数生成 YYYY-MM-DD。
+ * @param {Date|number|string} [d] - 日期对象/时间戳；缺省为当前时间
+ * @returns {string} YYYY-MM-DD（本地时区）
+ */
+function localDateStr(d) {
+  const dt = d === undefined || d === null ? new Date()
+    : (d instanceof Date ? d : new Date(d));
+  if (isNaN(dt.getTime())) return '';
+  const y = dt.getFullYear();
+  const m = String(dt.getMonth() + 1).padStart(2, '0');
+  const day = String(dt.getDate()).padStart(2, '0');
+  return y + '-' + m + '-' + day;
+}
+
+/**
+ * 本地时区「今天」的 YYYY-MM-DD
+ * @returns {string}
+ */
+function localTodayStr() {
+  return localDateStr(new Date());
+}
+
+/**
  * 获取数组中随机一个元素
  * @template T
  * @param {T[]} array - 源数组
