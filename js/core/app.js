@@ -1788,7 +1788,8 @@ function handleRoute(route) {
         '/discussion': 'initDiscussion',
         '/bio-lab': 'initBioLab',
         '/trends': 'initTrends',
-        '/teacher': 'initTeacher'
+        '/teacher': 'initTeacher',
+        '/data-lab': 'initScoreCalc'
       }[route];
       if (initFnName && typeof window[initFnName] !== 'function') {
         // 给脚本一个微任务时间完成初始化
@@ -1852,7 +1853,8 @@ function _moduleDir(modName) {
     'supabase': 1, 'supabase-client': 1, 'loader': 1, 'question-utils': 1, 'event-bus': 1,
     'csp-events': 1, 'error-recovery': 1, 'empty-state': 1, 'a11y-utils': 1, 'sync-tabs': 1,
     'cell-loader': 1, 'lazy-images': 1, 'offline-queue': 1, 'offline-status': 1,
-    'shortcut-panel': 1, 'hamburger': 1, 'hero-sketch': 1, 'micro-details': 1 };
+    'shortcut-panel': 1, 'hamburger': 1, 'hero-sketch': 1, 'micro-details': 1,
+    'score-engine': 1, 'credit-metrics': 1 };
   var algo = { 'fsrs-algorithm': 1, 'fsrs-optimizer': 1, 'irt-engine': 1 };
   var ai = { 'ai-client': 1, 'ai-key-store': 1, 'ai-diagnostic-engine': 1, 'smart-diagnosis': 1, 'multi-agent': 1 };
   var admin = { 'admin': 1, 'admin-users': 1, 'admin-questions': 1, 'admin-cards': 1,
@@ -1875,7 +1877,10 @@ var _moduleDeps = {
   'review': ['question-utils', 'loader'],
   'wrongbook': ['question-utils', 'loader', 'review-deep'],
   'review-deep': ['question-utils', 'loader'],
-  'admin': ['rating']
+  'admin': ['rating'],
+  'analytics': ['score-engine'],
+  'score-calc': ['score-engine', 'credit-metrics'],
+  'bio-calc': ['score-engine']
 };
 
 // 模块名 → 初始化函数名（用于检测 head 中预加载的脚本是否已注册 init）
@@ -1906,7 +1911,9 @@ function modNameToInitFn(modName) {
     'teacher': 'initTeacher',
     'photo-quiz': 'initPhotoQuiz',
     'learning-hub': 'initLearningHub',
-    'daily-billion': 'initDailyBillion'
+    'daily-billion': 'initDailyBillion',
+    'score-calc': 'initScoreCalc',
+    'bio-calc': 'initBioCalc'
   };
   return map[modName];
 }

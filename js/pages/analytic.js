@@ -723,44 +723,37 @@ function calcBioScore(stats) {
   }
 
   /* ============================================================
-   * 综合评分
+   * 综合评分（合成规则与 js/core/score-engine.js 完全一致；
+   * 优先调用共享纯函数，沙箱/独立加载时走内联兜底，避免双实现漂移）
    * ----------------------------------------------------------
-   * Bio Score = B×0.25 + I×0.25 + O×0.10 + G×0.15 + C×0.15 + D×0.10
-   *
-   * 交互修正：B 和 I 存在协同效应
-   *   若 B ≥ 70 且 I ≥ 70，额外 +5（基础扎实+洞察力强的协同）
-   *   若 B < 40 且 I < 40，额外 -5（基础和洞察都弱，需要重点补）
-   *
-   * 评级标准（参考 CBO 联赛奖项线 + 正态分布校准）：
-   *   S+ (95-100)：顶尖 — 全国前 1%，国一稳拿
-   *   S  (90-94) ：卓越 — 全国一等奖水准
-   *   A+ (85-89) ：优秀+ — 省一/国二水准
-   *   A  (80-84) ：优秀 — 省级一等奖水准
-   *   B+ (75-79) ：良好+ — 省一冲线区
-   *   B  (70-74) ：良好 — 省级二等奖水准
-   *   C+ (65-69) ：合格+ — 省二冲线区
-   *   C  (60-64) ：合格 — 省级三等奖水准
-   *   D+ (50-59) ：待提升 — 有基础，需系统训练
-   *   D  (0-49)  ：需努力 — 基础薄弱，建议从基础模块开始
+   * Bio Score = B×25% + I×25% + O×10% + G×15% + C×15% + D×10%
+   * 交互修正：B 与 I 协同（两强 +5，两弱 −5）
    * ============================================================ */
-  var score = Math.round(
-    B * 0.25 + I * 0.25 + O * 0.10 + G * 0.15 + C * 0.15 + D * 0.10
-  );
-
-  // 交互修正
-  if (B >= 70 && I >= 70) score += 5;
-  if (B < 40 && I < 40) score -= 5;
-
-  let grade = 'D', letter = '需努力';
-  if (score >= 95) { grade = 'S+'; letter = '顶尖'; }
-  else if (score >= 90) { grade = 'S'; letter = '卓越'; }
-  else if (score >= 85) { grade = 'A+'; letter = '优秀+'; }
-  else if (score >= 80) { grade = 'A'; letter = '优秀'; }
-  else if (score >= 75) { grade = 'B+'; letter = '良好+'; }
-  else if (score >= 70) { grade = 'B'; letter = '良好'; }
-  else if (score >= 65) { grade = 'C+'; letter = '合格+'; }
-  else if (score >= 60) { grade = 'C'; letter = '合格'; }
-  else if (score >= 50) { grade = 'D+'; letter = '待提升'; }
+  var score, grade, letter;
+  if (typeof computeBioScoreFromRaw === 'function') {
+    var _engineOut = computeBioScoreFromRaw({ B: B, I: I, O: O, G: G, C: C, D: D });
+    score = _engineOut.score;
+    grade = _engineOut.grade;
+    letter = _engineOut.letter;
+  } else {
+    score = Math.round(
+      B * 0.25 + I * 0.25 + O * 0.10 + G * 0.15 + C * 0.15 + D * 0.10
+    );
+    // 交互修正
+    if (B >= 70 && I >= 70) score += 5;
+    if (B < 40 && I < 40) score -= 5;
+    grade = 'D'; letter = '需努力';
+    // 阈值对齐历年联赛获奖线（与 score-engine 共享表一致，防漂移）
+    if (score >= 88) { grade = 'S+'; letter = '顶尖'; }
+    else if (score >= 82) { grade = 'S'; letter = '卓越'; }
+    else if (score >= 76) { grade = 'A+'; letter = '优秀+'; }
+    else if (score >= 68) { grade = 'A'; letter = '优秀'; }
+    else if (score >= 62) { grade = 'B+'; letter = '良好+'; }
+    else if (score >= 55) { grade = 'B'; letter = '良好'; }
+    else if (score >= 48) { grade = 'C+'; letter = '合格+'; }
+    else if (score >= 40) { grade = 'C'; letter = '合格'; }
+    else if (score >= 30) { grade = 'D+'; letter = '待提升'; }
+  }
 
   return {
     score: Math.min(100, Math.max(0, score)),

@@ -1188,6 +1188,13 @@ function renderSettingsPanel(container) {
         </details>
       </div>
     </div>
+
+    <!-- Bio 分计算器（六维 → Bio Score，随设置面板联动，主题复用站点变量） -->
+    <div class="user-card">
+      <div class="user-card-title">🧬 Bio 分计算器</div>
+      <div class="user-card-subtitle">输入六维属性（0-100）实时推演 Bio Score 总分与评级，公式与评级规则 100% 公开</div>
+      <div id="userBioCalcEmbed" style="margin-top:12px;"></div>
+    </div>
   `;
 
   // 主题切换
@@ -1228,6 +1235,26 @@ function renderSettingsPanel(container) {
 
   // API Key 相关交互
   _bindApiKeySettings();
+
+  // Bio 分计算器：懒加载共享模块（bio-calc + score-engine），幂等挂载
+  var bioEmbed = document.getElementById('userBioCalcEmbed');
+  function _mountBioCalc() {
+    if (!bioEmbed) return;
+    if (typeof window.renderBioCalcWidget === 'function') {
+      window.renderBioCalcWidget(bioEmbed);
+    } else if (typeof window.loadModule === 'function') {
+      window.loadModule('bio-calc').then(function () {
+        if (typeof window.renderBioCalcWidget === 'function') {
+          window.renderBioCalcWidget(bioEmbed);
+        }
+      }).catch(function () {
+        if (bioEmbed) {
+          bioEmbed.innerHTML = '<p style="font-size:0.8rem;color:var(--text-muted,#8a8a8a);">计算器加载失败，请刷新页面重试。</p>';
+        }
+      });
+    }
+  }
+  _mountBioCalc();
 }
 
 /* ============== AI API Key 管理 ============== */

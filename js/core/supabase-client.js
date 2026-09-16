@@ -1542,17 +1542,23 @@ function getPointsLevel(points) {
 }
 
 /**
- * 计算自然衰减后的信用指数
- * CR_decayed = CR * exp(-lambda * deltaDays)
+ * 计算自然衰减后的信用指数（存量数据读写前的平滑改进）
+ * 优先委托 js/core/credit-metrics.js 的 legacyDecayed（指数衰减 + 保底 10，
+ * 修复「信任无条件随时间归零」）；未加载时内联等值兜底。
  */
 function calculateDecayedPoints(currentPoints, lastUpdatedAt) {
-  if (typeof currentPoints !== 'number' || currentPoints <= 0) return 0;
+  if (typeof currentPoints !== 'number' || !isFinite(currentPoints) || currentPoints <= 0) return 0;
+  if (typeof window.legacyDecayed === 'function') {
+    return window.legacyDecayed(currentPoints, lastUpdatedAt);
+  }
   if (!lastUpdatedAt) return currentPoints;
   var now = Date.now();
   var last = new Date(lastUpdatedAt).getTime();
   var deltaDays = (now - last) / (24 * 60 * 60 * 1000);
   if (deltaDays <= 0) return currentPoints;
-  return currentPoints * Math.exp(-CR_DECAY.lambda * deltaDays);
+  var value = currentPoints * Math.exp(-CR_DECAY.lambda * deltaDays);
+  // 保底 10：历史信任不因不活跃而完全清零（违规/消费按实际扣减）
+  return Math.max(10, value);
 }
 
 /**

@@ -207,5 +207,10 @@ const Routes = {
     title: '每日亿题',
     render: 'renderDailyBillionPage',
     module: 'daily-billion'
+  },
+  '/data-lab': {
+    title: '数据实验室',
+    render: 'renderDataLabPage',
+    module: 'score-calc'
   }
 };
