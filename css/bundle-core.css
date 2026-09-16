@@ -2,7 +2,7 @@
  * BioQuest — 首屏同步 CSS 合并包（Issue #108，由
  * scripts/build-css-bundle.js 自动生成，勿手改。
  * 合并源：globals.css + layout.css + header.css + learning-hub.css + home.css + debug-fix.css
- * 生成时间：2026-09-12T16:17:54.571Z
+ * 生成时间：2026-09-16T06:31:38.746Z
  * ============================================================ */
 
 /* ---------- 来源: css/globals.css ---------- */
@@ -3652,67 +3652,125 @@ mark.search-highlight {
 
 /* ============================================================
    底部标签栏（悬浮胶囊，所有屏幕尺寸常驻，避免"导航栏不见了"）
+   样式参考 Apple Liquid Glass：强模糊毛玻璃材质 + 顶缘高光 +
+   可滑动的高亮胶囊（当前 tab 下的"液态"选中指示）
    ============================================================ */
 .bottom-tab-bar {
+  /* 材质变量：随主题切换（亮色玻璃 / 暗色玻璃） */
+  --tabbar-bg: rgba(255, 255, 255, 0.52);
+  --tabbar-border: rgba(255, 255, 255, 0.75);
+  --tabbar-inactive: rgba(44, 62, 48, 0.6);
+  --tabbar-active: #1c2a20;
+  --tabbar-glow: rgba(255, 255, 255, 0.9);
+  --tabbar-glow-shadow: 0 6px 18px rgba(44, 62, 48, 0.16), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+
   display: flex;
   position: fixed;
   bottom: 14px;
   left: 50%;
   transform: translateX(-50%);
-  width: min(92%, 420px);
+  width: min(92%, 430px);
   box-sizing: border-box;
   z-index: 1000;
-  background: rgba(18, 26, 21, 0.82);
-  -webkit-backdrop-filter: blur(14px);
-  backdrop-filter: blur(14px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 24px;
-  padding: 6px 10px;
-  padding-bottom: calc(6px + env(safe-area-inset-bottom, 0px));
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
   justify-content: space-around;
   align-items: center;
   gap: 0;
+
+  background: var(--tabbar-bg);
+  -webkit-backdrop-filter: blur(28px) saturate(190%);
+  backdrop-filter: blur(28px) saturate(190%);
+  border: 1px solid var(--tabbar-border);
+  border-radius: 26px;
+  padding: 7px 8px;
+  padding-bottom: calc(7px + env(safe-area-inset-bottom, 0px));
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.7),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.25),
+    0 14px 38px rgba(30, 40, 33, 0.22);
+}
+
+/* 暗色主题下的暗色液态玻璃 */
+[data-theme="dark"] .bottom-tab-bar {
+  --tabbar-bg: rgba(24, 31, 27, 0.5);
+  --tabbar-border: rgba(255, 255, 255, 0.16);
+  --tabbar-inactive: rgba(224, 232, 226, 0.6);
+  --tabbar-active: #f4f9f5;
+  --tabbar-glow: rgba(255, 255, 255, 0.14);
+  --tabbar-glow-shadow: 0 6px 18px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.18);
+}
+
+/* 滑动高亮胶囊：由 JS 依据当前 tab 定位（left/width），行列切换平滑滑动 */
+.bottom-tab-glow {
+  position: absolute;
+  top: 7px;
+  bottom: calc(7px + env(safe-area-inset-bottom, 0px));
+  left: 0;
+  width: 54px;
+  border-radius: 19px;
+  background: var(--tabbar-glow);
+  box-shadow: var(--tabbar-glow-shadow);
+  opacity: 0;
+  pointer-events: none;
+  will-change: left, width;
+  transition:
+    left 0.34s cubic-bezier(0.32, 0.72, 0.24, 1),
+    width 0.34s cubic-bezier(0.32, 0.72, 0.24, 1),
+    opacity 0.2s ease;
+}
+.bottom-tab-bar.has-active .bottom-tab-glow {
+  opacity: 1;
 }
 
 .bottom-tab {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 2px;
-  padding: 6px 12px;
+  gap: 3px;
+  padding: 8px 10px 7px;
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.72);
-  transition: color 0.2s ease;
-  min-width: 56px;
+  color: var(--tabbar-inactive);
+  transition: color 0.2s ease, transform 0.16s ease;
+  min-width: 54px;
   flex: 1;
+  border-radius: 18px;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
 .bottom-tab svg {
   width: 22px;
   height: 22px;
   stroke: currentColor;
-  transition: transform 0.2s ease;
+  transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .bottom-tab span {
-  font-size: 0.65rem;
-  font-weight: 500;
+  font-size: 0.62rem;
+  font-weight: 600;
   line-height: 1;
+  letter-spacing: 0.2px;
+}
+
+/* 按压反馈：点击瞬间轻微下沉 */
+.bottom-tab:active {
+  transform: scale(0.93);
 }
 
 .bottom-tab:hover,
 .bottom-tab:active {
-  color: #ffffff;
+  color: var(--tabbar-active);
 }
 
 .bottom-tab.active {
-  color: #ffffff;
+  color: var(--tabbar-active);
 }
 
+/* 选中 tab 的图标轻微上浮放大，强化"液态"动感 */
 .bottom-tab.active svg {
-  transform: scale(1.05);
+  transform: translateY(-1px) scale(1.1);
 }
 
 /* 通知弹窗（右上角收到回帖提示） */

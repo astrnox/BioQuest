@@ -1252,6 +1252,7 @@ function showAnnouncementAtIndex(index) {
 
 /**
  * 更新底部标签栏高亮状态
+ * 液态玻璃外观：选中 tab 顶部覆盖一层高亮胶囊，切换时平滑滑动
  */
 function updateBottomTabBar(route) {
   var bar = document.getElementById('bottomTabBar');
@@ -1268,16 +1269,106 @@ function updateBottomTabBar(route) {
     '/user': 'user'
   };
 
-  var activeTab = tabMap[route] || '';
-
-  tabs.forEach(function(tab) {
-    var tabName = tab.getAttribute('data-tab');
-    if (tabName === activeTab) {
-      tab.classList.add('active');
-    } else {
-      tab.classList.remove('active');
+  var activeName = tabMap[route] || '';
+  var activeTab = null;
+  for (var i = 0; i < tabs.length; i++) {
+    if (tabs[i].getAttribute('data-tab') === activeName) {
+      activeTab = tabs[i];
+      break;
     }
-  });
+  }
+  _setActiveBottomTab(activeTab);
+}
+
+/** 内部标记：胶囊是否已完成首次定位（首帧不做滑入动画） */
+var _bottomGlowReady = false;
+/** 内部标记：resize 监听已绑定 */
+var _bottomGlowResizeBound = false;
+
+/**
+ * 将底部标签栏高亮胶囊移动到指定 tab（无匹配 tab 时仅移除高亮）
+ * 供路由渲染与点击即时反馈共用：点击瞬间即更新，不等路由重新渲染
+ */
+function _setActiveBottomTab(activeTab) {
+  var bar = document.getElementById('bottomTabBar');
+  if (!bar) return;
+  var tabs = bar.querySelectorAll('.bottom-tab');
+  if (!tabs) return;
+
+  for (var i = 0; i < tabs.length; i++) {
+    if (activeTab && tabs[i] === activeTab) {
+      tabs[i].classList.add('active');
+    } else {
+      tabs[i].classList.remove('active');
+    }
+  }
+
+  if (!activeTab) {
+    // 当前路由不在底部标签内（如 /leaderboard）：隐藏高亮胶囊
+    bar.classList.remove('has-active');
+    return;
+  }
+  _positionBottomTabGlow(activeTab);
+}
+
+/**
+ * 定位液态玻璃高亮胶囊：跟随激活 tab 的位置与宽度
+ * 首帧（bar 尚无可视胶囊）不做过渡动画，避免从左上角"飞"进来的跳动
+ */
+function _positionBottomTabGlow(activeTab) {
+  var bar = document.getElementById('bottomTabBar');
+  if (!bar || !activeTab) return;
+
+  var glow = bar.querySelector('.bottom-tab-glow');
+  if (!glow) {
+    // 稳妥兜底：SW 缓存的旧 index.html 可能没有胶囊节点，动态补建
+    glow = document.createElement('div');
+    glow.className = 'bottom-tab-glow';
+    glow.setAttribute('aria-hidden', 'true');
+    bar.insertBefore(glow, bar.firstChild);
+  }
+
+  var x = activeTab.offsetLeft;
+  var w = activeTab.offsetWidth;
+
+  // 布局尚未就绪（首帧样式/字体未落定）：短暂重试，保证高亮胶囊最终可见
+  if (!w && !glow._retryT) {
+    glow._retryT = setTimeout(function () {
+      glow._retryT = null;
+      var cur = bar.querySelector('.bottom-tab.active');
+      if (cur) _positionBottomTabGlow(cur);
+    }, 250);
+    return;
+  }
+  if (!w) return;
+
+  if (!_bottomGlowReady) {
+    // 首帧：禁止过渡，直接落位
+    glow.style.transition = 'none';
+    glow.style.left = x + 'px';
+    glow.style.width = w + 'px';
+    void glow.offsetWidth; // 强制 reflow 使定位生效后再启用过渡
+    glow.style.transition = '';
+    bar.classList.add('has-active');
+    _bottomGlowReady = true;
+  } else {
+    glow.style.left = x + 'px';
+    glow.style.width = w + 'px';
+    if (!bar.classList.contains('has-active')) bar.classList.add('has-active');
+  }
+
+  if (!_bottomGlowResizeBound) {
+    _bottomGlowResizeBound = true;
+    var _resizeT;
+    window.addEventListener('resize', function () {
+      if (_resizeT) return;
+      _resizeT = setTimeout(function () {
+        _resizeT = null;
+        var cur = bar.querySelector('.bottom-tab.active');
+        if (cur) _positionBottomTabGlow(cur);
+      }, 120);
+    });
+  }
 }
 
 /**
@@ -1580,16 +1671,26 @@ function handleRoute(route) {
   };
   var modName = moduleMap[route];
 
-  // 路由切换即时反馈：模块 JS 首次加载（网络拉取）期间在目标容器上展示
-  // 轻量 loading，渲染开始即移除——避免"点击后页面长时间无任何变化"的
-  // 空白等待感（第二次进入同一路由走缓存，不显示，无闪烁）。
-  var _isFirstModuleLoad = !!modName && typeof window.loadModule === 'function' && !_loadedModules[modName];
-  if (_isFirstModuleLoad) {
+  // 路由切换即时反馈：任意模块路由（含已缓存模块）在渲染完成前都先展示
+  // 轻量 loading——避免"点击标签后旧页面原地保留、新页面在后台静默加载"的
+  // 无反馈等待。120ms 阈值延迟展示：秒开场景（缓存模块同步渲染）不闪烁。
+  var _routeFbTimer = null;
+  function _showRouteLoading() {
     try { target.classList.add('route-loading'); } catch (e) {}
   }
+  function _scheduleRouteLoading() {
+    _clearRouteLoading();
+    if (!modName || typeof window.loadModule !== 'function') return;
+    _routeFbTimer = setTimeout(_showRouteLoading, 120);
+  }
+  function _clearRouteLoading() {
+    if (_routeFbTimer) { clearTimeout(_routeFbTimer); _routeFbTimer = null; }
+    try { target.classList.remove('route-loading'); } catch (e) {}
+  }
+  _scheduleRouteLoading();
 
   var renderFn = function() {
-    try { target.classList.remove('route-loading'); } catch (e) {}
+    _clearRouteLoading();
     doRouteRender(route, target);
   };
 
@@ -1700,7 +1801,7 @@ function handleRoute(route) {
       renderFn();
       finishRouting();
     }).catch(function(err) {
-      try { target.classList.remove('route-loading'); } catch (e) {}
+      _clearRouteLoading();
       showModuleError(modName, err);
       finishRouting();
     });
@@ -2309,6 +2410,34 @@ function toggleMobileMenu() {
 }
 
 /**
+ * 空闲预加载底部标签页模块（练习/考试/仪表盘/个人中心）
+ * 首屏渲染完成后的浏览器空闲时段提前拉取脚本，让首次点击标签接近"即点即开"，
+ * 配合 handleRoute 的 loading 反馈，消除"点击后原地静默等待"
+ */
+var _tabModulesPrefetched = false;
+function _prefetchTabModules() {
+  if (_tabModulesPrefetched) return;
+  _tabModulesPrefetched = true;
+
+  var run = function () {
+    // 弱网/离线时不预加载，避免无谓网络开销
+    if (typeof navigator !== 'undefined' && navigator.onLine === false) return;
+    var mods = ['practice', 'exam', 'dashboard', 'user'];
+    mods.forEach(function (m) {
+      if (typeof window.loadModule !== 'function') return;
+      if (_loadedModules[m] || _loadingModules[m]) return;
+      try { window.loadModule(m).catch(function () {}); } catch (e) {}
+    });
+  };
+
+  if (typeof window.requestIdleCallback === 'function') {
+    try { window.requestIdleCallback(run, { timeout: 3000 }); } catch (e) { setTimeout(run, 1500); }
+  } else {
+    setTimeout(run, 1500);
+  }
+}
+
+/**
  * 关闭汉堡菜单
  */
 function closeMobileMenu() {
@@ -2387,6 +2516,17 @@ function bindEvents() {
       return;
     }
   });
+
+  // 底部标签栏：点击瞬间即高亮（液态玻璃胶囊立即滑动），不等路由渲染完成；
+  // handleRoute 渲染后会再次定位（幂等），做到"点击→反馈"几乎零延迟
+  var bottomBar = document.getElementById('bottomTabBar');
+  if (bottomBar) {
+    bottomBar.addEventListener('click', function (e) {
+      var tab = e.target && e.target.closest ? e.target.closest('.bottom-tab') : null;
+      if (!tab) return;
+      if (typeof _setActiveBottomTab === 'function') _setActiveBottomTab(tab);
+    });
+  }
 
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
@@ -5163,6 +5303,9 @@ function initApp() {
   const route = getRouteFromHash();
 
   bindEvents();
+
+  // 空闲预加载底部标签页模块：首次点击标签时不用再等脚本网络拉取
+  _prefetchTabModules();
 
   requestAnimationFrame(() => {
     handleRoute(route);
