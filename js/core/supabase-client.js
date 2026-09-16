@@ -646,10 +646,12 @@ async function registerUser(username, password, displayName, email) {
         try { upsertData.device_id = deviceId; } catch (e) {}
         await sb.from('profiles').upsert(upsertData, { onConflict: 'id' });
       } catch (e1) {
+        // 回退时也必须保留 email——否则 profiles.email 为 NULL，
+        // 后续"用户名登录"会因查不到邮箱而被拒，正确密码也会误报失败。
         try {
-          await sb.from('profiles').upsert({
-            id: data.user.id, username: username, display_name: displayName || username, user_group: initialGroup, points: POINTS_DEFAULT
-          }, { onConflict: 'id' });
+          var upsertDataFallback = { id: data.user.id, username: username, display_name: displayName || username, user_group: initialGroup, points: POINTS_DEFAULT };
+          try { upsertDataFallback.email = email; } catch (e) {}
+          await sb.from('profiles').upsert(upsertDataFallback, { onConflict: 'id' });
         } catch (e2) {
           console.warn('[BioQuest] profiles upsert 失败（已尝试回退）:', e2 && e2.message);
         }
@@ -723,22 +725,25 @@ async function loginUser(usernameOrEmail, password) {
       var profileLookup = null;
       try {
         profileLookup = await sb.from('profiles')
-          .select('email')
+          .select('id, email')
           .eq('username', usernameOrEmail)
           .maybeSingle();
         if (profileLookup.data && profileLookup.data.email) {
           email = profileLookup.data.email;
+        } else if (profileLookup.data && !profileLookup.data.email) {
+          // 用户名存在但 profiles.email 为 NULL：不要用"猜测的占位邮箱"去校验！
+          // 否则该用户若用真实邮箱注册，会被带到错误的邮箱 → 密码正确也被判"密码错误"。
+          return {
+            ok: false,
+            error: '该账号未绑定邮箱，无法用用户名登录。请用注册邮箱登录，或联系管理员补全邮箱后重试',
+            code: 'EMAIL_NOT_BOUND'
+          };
         } else {
-          // 兼容旧数据：部分用户注册时未填邮箱，Supabase 触发器生成的
-          // profiles.email 为 null（无法直接拿到）。此时回退到注册时的
-          // 占位邮箱规则（username@bioquest.local，清洗规则与注册一致），
-          // 否则这类账号用用户名+正确密码也会被误判为"用户名不存在"。
-          var cleanInput = String(usernameOrEmail).toLowerCase().replace(/[^a-z0-9]/g, '');
-          var cleanUser = cleanInput.slice(0, 20) || 'user';
-          email = cleanUser + '@bioquest.local';
+          // 用户名在 profiles 中不存在
+          return { ok: false, error: '用户名或密码错误', code: 'INVALID_CREDENTIALS' };
         }
       } catch (e) {
-        return { ok: false, error: '登录失败，请稍后重试' };
+        return { ok: false, error: '登录失败，请稍后重试', code: 'LOOKUP_ERROR' };
       }
     }
     var { data, error } = await sb.auth.signInWithPassword({
@@ -1326,6 +1331,8 @@ async function updateBioScore(bioScore, stats) {
       updated_at: new Date().toISOString()
     };
     await sb.from('profiles').upsert({ id: _currentUser.id, ...updates, device_id: localStorage.getItem('bioquest_device_id') || 'unknown' }, { onConflict: 'id' });
+    // 分数已变化：失效排行榜缓存，保证下次查询立即拿到最新值（实时更新）
+    invalidateLeaderboardCache();
 
     // 刷题奖励：每答满10题获得信用
     try {
@@ -1350,15 +1357,16 @@ async function updateBioScore(bioScore, stats) {
 }
 
 /**
- * 获取排行榜（带30秒缓存）
+ * 获取排行榜（短缓存 + 失败可感知）
+ * 缓存键按 tab 区分（fixed：checkin 不再与 bio 共用 score 缓存键）
  */
-var _leaderboardCache = { practice: null, score: null, practice_ts: 0, score_ts: 0 };
-var LEADERBOARD_CACHE_TTL = 30000;
-var LEADERBOARD_FETCH_TIMEOUT = 5000;  // 排行榜查询超短超时 5s，避免 Supabase SDK 把请求拖死或 abort 污染控制台
-var _leaderboardInflight = {};         // 防抖：同 tab 在途请求复用，避免并发 abort
+var _leaderboardCache = { bio: null, practice: null, checkin: null };
+var LEADERBOARD_CACHE_TTL = 5000;   // 短缓存：5s 内命中，超过即向数据库实时拉取
+var LEADERBOARD_FETCH_TIMEOUT = 5000;  // 排行榜查询超短超时 5s
+var _leaderboardInflight = {};         // 防抖：同 tab 在途请求复用
 
 async function getLeaderboard(tab, limit) {
-  var cacheKey = tab === 'practice' ? 'practice' : 'score';
+  var cacheKey = tab === 'practice' ? 'practice' : (tab === 'checkin' ? 'checkin' : 'bio');
   var now = Date.now();
   if (_leaderboardCache[cacheKey] && (now - _leaderboardCache[cacheKey + '_ts']) < LEADERBOARD_CACHE_TTL) {
     return _leaderboardCache[cacheKey];
@@ -1404,6 +1412,10 @@ async function getLeaderboard(tab, limit) {
       if (ctrl && typeof ctrl.signal !== 'undefined') fetchOpts.signal = ctrl.signal;
       var restRes = await fetch(SUPABASE_URL + '/rest/v1/profiles?' + restParams, fetchOpts);
       var data = restRes.ok ? (await restRes.json()) : null;
+      // 过滤孤儿行（无 username 的注册残留），避免榜上出现一堆"匿名用户"
+      if (restRes.ok && Array.isArray(data)) {
+        data = data.filter(function (p) { return p && p.username; });
+      }
       if (!data || data.length === 0) return [];
 
       var result = data.map(function(p, i) {
@@ -1480,8 +1492,11 @@ async function getLeaderboard(tab, limit) {
       _leaderboardCache[cacheKey + '_ts'] = Date.now();
       return result;
     } catch (err) {
-      // AbortError / 网络波动 / 超时 全静默，不污染控制台 error
-      return [];
+      // 失败不静默：让 UI 能区分"暂无数据"与"查询失败"（倒排到前端提示）
+      console.warn('[leaderboard] 查询失败, tab=' + tab + ':', err && err.message ? err.message : err);
+      var errArr = [];
+      errArr._error = (err && err.message) || '排行榜请求超时或网络异常';
+      return errArr;
     }
   })();
 
@@ -1489,6 +1504,14 @@ async function getLeaderboard(tab, limit) {
   _leaderboardInflight[cacheKey] = inflightPromise;
   return inflightPromise;
 }
+
+/**
+ * 失效排行榜缓存（分数更新、手动刷新时调用；下次查询必拉最新数据）
+ */
+function invalidateLeaderboardCache() {
+  _leaderboardCache = { bio: null, practice: null, checkin: null };
+}
+window.invalidateLeaderboardCache = invalidateLeaderboardCache;
 
 // ===== 用户信用（Trust / Credit）=====
 

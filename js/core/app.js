@@ -4162,9 +4162,15 @@ async function handleLogin() {
 
     } else {
       var origErr = (result && result.error) || '登录失败';
-      // 密码错误时附一条嘲讽
+      // 仅当确属"密码/凭据"错误时才附加调侃文案；
+      // 邮箱未验证、未绑定、网络等其它原因不渲染成"密码错误"，避免误导
+      var errCode = (result && result.code) || '';
       var lower = String(origErr).toLowerCase();
-      if (lower.indexOf('密码') >= 0 || lower.indexOf('password') >= 0 || lower.indexOf('invalid') >= 0 || lower.indexOf('credential') >= 0 || lower.indexOf('登录') >= 0 || lower.indexOf('auth') >= 0) {
+      var isBadCredential =
+        errCode === 'INVALID_CREDENTIALS' ||
+        lower.indexOf('密码') >= 0 || lower.indexOf('password') >= 0 ||
+        lower.indexOf('invalid') >= 0 || lower.indexOf('credential') >= 0;
+      if (isBadCredential) {
         errorEl.innerHTML = '<span style="color:#d63a2a;">' + escapeHtml(origErr) + '</span> <span style="display:inline-block;margin-left:6px;padding:2px 8px;background:rgba(214,58,42,0.1);border-radius:6px;color:#a83a2a;font-size:0.78rem;">' + _getLoginSarcastic() + '</span>';
       } else {
         errorEl.textContent = origErr;
@@ -4502,6 +4508,8 @@ window.switchLbTab = switchLbTab;
 
 /** 当前排行榜 tab */
 var _currentLbTab = 'bio';
+/** 排行榜自动刷新定时器（弹窗打开期间每 8s 静默刷新，保证实时性） */
+var _lbAutoRefreshTimer = null;
 
 /**
  * 显示排行榜弹窗（三 tab 版本：Bio 分 / 练习量 / 正确率）
@@ -4545,13 +4553,22 @@ async function showLeaderboard() {
 
   _currentLbTab = 'bio';
   await loadLbData('bio');
+
+  // 实时性：弹窗打开期间每 8s 自动刷新当前 tab，分数变动后排行榜即时可见
+  if (_lbAutoRefreshTimer) clearInterval(_lbAutoRefreshTimer);
+  _lbAutoRefreshTimer = setInterval(function () {
+    var modal = document.getElementById('leaderboard-modal');
+    if (!modal || modal.style.display === 'none' || !modal.classList.contains('visible')) return;
+    loadLbData(_currentLbTab);
+  }, 8000);
 }
 
 /**
  * 切换排行榜 tab
+ * 同 tab 点击也强制刷新（此前直接 return，用户无法手动刷新，榜单表现"死"）
  */
 async function switchLbTab(tabName) {
-  if (!tabName || tabName === _currentLbTab) return;
+  if (!tabName) return;
   _currentLbTab = tabName;
 
   var tabs = ['bio', 'practice', 'checkin'];
@@ -4576,6 +4593,10 @@ async function loadLbData(tabName) {
   try {
     var items = [];
     if (typeof window.getLeaderboard === 'function') {
+      // 打开/切换时始终拿到最新数据（清掉可能导致"死数据"的缓存）
+      if (typeof window.invalidateLeaderboardCache === 'function') {
+        window.invalidateLeaderboardCache();
+      }
       items = await window.getLeaderboard(tabName, 20);
     }
 
@@ -4588,6 +4609,13 @@ async function loadLbData(tabName) {
         html += '<div style="text-align:center;color:#6b7f74;padding:16px 12px;margin-top:12px;border-radius:12px;background:rgba(58,140,92,0.04);font-size:0.82rem;">登录后查看你的排名</div>';
       }
       listEl.innerHTML = html;
+    } else if (items && items._error) {
+      // 查询失败：给出可感知的错误提示而非"暂无排行数据"
+      listEl.innerHTML = '<div style="text-align:center;color:var(--color-error,#c0553a);padding:40px 20px;">' +
+        '<div style="font-size:0.95rem;margin-bottom:8px;">排行榜加载失败</div>' +
+        '<div style="font-size:0.78rem;color:#8a8a8a;">' + escapeHtml(items._error) + '</div>' +
+        '<button data-on=\'["_cspReload"]\' style="margin-top:14px;padding:7px 20px;background:var(--color-sage);color:#fff;border:none;border-radius:20px;font-size:0.82rem;cursor:pointer;">重新加载</button>' +
+        '</div>';
     } else {
       // Issue #125：统一「温暖空状态」组件（加载失败时回退原有提示）
       if (window.BioQuest && typeof window.BioQuest.renderEmptyState === 'function') {
@@ -4666,6 +4694,8 @@ function renderLbItems(items, tabName) {
 function closeLeaderboard() {
   var modal = document.getElementById('leaderboard-modal');
   if (modal) modal.classList.remove('visible');
+  // 关闭时停止定时刷新，避免无谓的循环拉取
+  if (_lbAutoRefreshTimer) { clearInterval(_lbAutoRefreshTimer); _lbAutoRefreshTimer = null; }
 }
 window.closeLeaderboard = closeLeaderboard;
 
@@ -4981,7 +5011,7 @@ function renderLeaderboardPage(target) {
 var _currentLbPageTab = 'bio';
 
 async function switchLbPageTab(tabName) {
-  if (!tabName || tabName === _currentLbPageTab) return;
+  if (!tabName) return;
   _currentLbPageTab = tabName;
 
   var tabs = ['bio', 'practice', 'checkin'];
@@ -5003,6 +5033,10 @@ async function loadLbPageData(tabName) {
   try {
     var items = [];
     if (typeof window.getLeaderboard === 'function') {
+      // 进入/切换页面时清缓存，保证展示的是最新数据（实时更新，非死数据）
+      if (typeof window.invalidateLeaderboardCache === 'function') {
+        window.invalidateLeaderboardCache();
+      }
       items = await window.getLeaderboard(tabName, 20);
     }
 
@@ -5015,6 +5049,13 @@ async function loadLbPageData(tabName) {
         html += '<div style="text-align:center;color:#6b7f74;padding:20px 12px;margin-top:12px;border-radius:12px;background:rgba(58,140,92,0.04);"><span style="font-size:0.84rem;">登录后查看你的排名</span> <button data-on=\'["_cspShowAuth"]\' style="margin-left:8px;padding:4px 14px;border:none;border-radius:14px;background:var(--color-sage,#5a7d5c);color:#fff;font-size:0.78rem;cursor:pointer;">登录</button></div>';
       }
       listEl.innerHTML = html;
+    } else if (items && items._error) {
+      // 查询失败：可感知的错误提示，而非误导性的"暂无排行数据"
+      listEl.innerHTML = '<div style="text-align:center;color:var(--color-error,#c0553a);padding:40px 20px;">' +
+        '<div style="font-size:0.95rem;margin-bottom:8px;">排行榜加载失败</div>' +
+        '<div style="font-size:0.78rem;color:#8a8a8a;">' + escapeHtml(items._error) + '</div>' +
+        '<button data-on=\'["_cspReload"]\' style="margin-top:14px;padding:7px 20px;background:var(--color-sage);color:#fff;border:none;border-radius:20px;font-size:0.82rem;cursor:pointer;">重新加载</button>' +
+        '</div>';
     } else {
       // Issue #125：统一「温暖空状态」组件（加载失败时回退原有提示）
       if (window.BioQuest && typeof window.BioQuest.renderEmptyState === 'function') {
