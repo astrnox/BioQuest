@@ -2138,6 +2138,59 @@ async function getPostComments(postId) {
   }
 }
 
+/**
+ * 批量获取多个帖子的评论（性能优化：替代“每帖 2 次请求”的 N+1 模式）。
+ * 社区列表页一次性展示 7 帖时，原实现会发起 14 次请求，导致加载明显变慢；
+ * 本函数用 1 次评论查询 + 1 次作者查询即可完成整页评论预载。
+ * @param {string[]} postIds
+ * @param {number} [limit] 全查询总上限（防御异常大帖），默认 300
+ * @returns {Promise<{commentsByPost: Object<string, Array>}>}
+ */
+async function getCommentsForPosts(postIds, limit) {
+  var sb = getSupabase();
+  if (!sb || !Array.isArray(postIds) || postIds.length === 0) return { commentsByPost: {} };
+  try {
+    var cap = Math.min((typeof limit === 'number' && limit > 0) ? limit : 300, 500);
+    var { data, error } = await sb.from('community_comments')
+      .select('id, post_id, author_id, content, is_deleted, created_at')
+      .in('post_id', postIds)
+      .eq('is_deleted', false)
+      .order('created_at', { ascending: true })
+      .limit(cap);
+
+    if (error) return { commentsByPost: {} };
+
+    var authorIds = (data || []).map(function (c) { return c.author_id; }).filter(function (id) { return id != null; });
+    var authorMap = {};
+    if (authorIds.length > 0) {
+      var { data: profiles } = await sb.from('profiles')
+        .select('id, username, display_name')
+        .in('id', authorIds);
+      if (profiles) {
+        profiles.forEach(function (profile) { authorMap[profile.id] = profile; });
+      }
+    }
+
+    var commentsByPost = {};
+    (data || []).forEach(function (c) {
+      var author = authorMap[c.author_id] || { username: '匿名', display_name: '匿名用户' };
+      if (!commentsByPost[c.post_id]) commentsByPost[c.post_id] = [];
+      commentsByPost[c.post_id].push({
+        id: c.id,
+        author: {
+          username: author.username || '匿名',
+          display_name: author.display_name || '匿名用户'
+        },
+        content: c.content,
+        created_at: c.created_at
+      });
+    });
+    return { commentsByPost: commentsByPost };
+  } catch (e) {
+    return { commentsByPost: {} };
+  }
+}
+
 async function addPostComment(postId, content) {
   var sb = getSupabase();
   if (!sb || !_currentUser) return { ok: false, error: '未登录' };
@@ -2488,6 +2541,7 @@ window.getCommunityPosts = getCommunityPosts;
 window.createCommunityPost = createCommunityPost;
 window.togglePostLike = togglePostLike;
 window.getPostComments = getPostComments;
+window.getCommentsForPosts = getCommentsForPosts;
 window.addPostComment = addPostComment;
 window.reportCommunityPost = reportCommunityPost;
 

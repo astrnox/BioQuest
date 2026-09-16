@@ -1613,9 +1613,6 @@ if (typeof window._cspHoverOut !== 'function') {
     html += '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>';
     html += '</button>';
     html += '<span class="community-vote-count' + votedClass + '">' + likeCount + '</span>';
-    html += '<button class="community-vote-btn community-vote-down" data-post-id="' + escapeHtml(post.id) + '" title="反对">';
-    html += '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>';
-    html += '</button>';
     html += '</div>';
 
     // 右侧内容区
@@ -1784,7 +1781,7 @@ if (typeof window._cspHoverOut !== 'function') {
     html += '</div>';
 
     // 社区统计
-    var totalPosts = _communityState.posts ? _communityState.posts.length : 0;
+    var totalPosts = _communityState.totalPosts || (_communityState.posts ? _communityState.posts.length : 0);
     var totalLikes = 0;
     if (_communityState.posts) {
       for (var j = 0; j < _communityState.posts.length; j++) {
@@ -1796,8 +1793,7 @@ if (typeof window._cspHoverOut !== 'function') {
       '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>' +
       '社区动态</div>';
     html += '<div class="community-sidebar-stat"><span>帖子总数</span><span class="community-sidebar-stat-value">' + totalPosts + '</span></div>';
-    html += '<div class="community-sidebar-stat"><span>累计点赞</span><span class="community-sidebar-stat-value">' + totalLikes + '</span></div>';
-    html += '<div class="community-sidebar-stat"><span>在线用户</span><span class="community-sidebar-stat-value">--</span></div>';
+    html += '<div class="community-sidebar-stat"><span>当前页点赞</span><span class="community-sidebar-stat-value">' + totalLikes + '</span></div>';
     html += '</div>';
 
     // 发帖指南
@@ -2021,15 +2017,7 @@ if (typeof window._cspHoverOut !== 'function') {
         var voteUpBtn = e.target.closest('.community-vote-up');
         if (voteUpBtn) {
           var postId = voteUpBtn.getAttribute('data-post-id');
-          handleVote(postId, true);
-          return;
-        }
-
-        // 投票按钮（反对）
-        var voteDownBtn = e.target.closest('.community-vote-down');
-        if (voteDownBtn) {
-          var postId = voteDownBtn.getAttribute('data-post-id');
-          handleVote(postId, false);
+          handleVote(postId);
           return;
         }
 
@@ -2135,13 +2123,17 @@ if (typeof window._cspHoverOut !== 'function') {
 
   // ===== 交互处理 =====
 
-  async function handleVote(postId, isUpvote) {
+  /**
+   * 赞同/取消赞同（社区点赞为单一模型：喜欢=1，再点取消；无点踩。
+   * 历史上 UI 曾提供「反对」按钮但与点赞共用 toggleLike，行为与「赞同」
+   * 完全一致且会把赞加到同一计数上，属误导——已移除该按钮）。
+   */
+  async function handleVote(postId) {
     if (!isUserLoggedIn()) {
       if (typeof window.showAuthModal === 'function') window.showAuthModal();
       return;
     }
 
-    // 投票复用现有的点赞 API
     try {
       var result = await toggleLike(postId);
       if (result) {
@@ -2151,18 +2143,16 @@ if (typeof window._cspHoverOut !== 'function') {
           post.likes = result.likes;
         }
 
-        // 更新 UI：投票计数和按钮状态
+        // 更新 UI：点赞计数和按钮状态
         var card = document.querySelector('.community-post-card[data-post-id="' + postId + '"]');
         if (card) {
           var countEl = card.querySelector('.community-vote-count');
           var upBtn = card.querySelector('.community-vote-up');
-          var downBtn = card.querySelector('.community-vote-down');
           if (countEl) {
             countEl.textContent = result.likes || 0;
             countEl.classList.toggle('voted', !!result.liked);
           }
           if (upBtn) upBtn.classList.toggle('voted', !!result.liked);
-          if (downBtn) downBtn.classList.remove('voted');
         }
       } else {
         _showToast('操作失败，请稍后重试');
@@ -2237,6 +2227,9 @@ if (typeof window._cspHoverOut !== 'function') {
     var input = document.querySelector('.community-comment-input[data-post-id="' + postId + '"]');
     if (!input) return;
 
+    // 防重复提交：Enter 与「发送」按钮可能同时触发
+    if (input.disabled) return;
+
     var content = input.value.trim();
     if (!content) return;
 
@@ -2261,8 +2254,8 @@ if (typeof window._cspHoverOut !== 'function') {
   }
 
   function handleShare(postId) {
-    // 复制帖子链接到剪贴板
-    var url = window.location.origin + window.location.pathname + '?post=' + postId;
+    // 复制帖子链接到剪贴板；跳回社区页时用 hash 查询定位到该帖
+    var url = window.location.origin + window.location.pathname + '#/community?post=' + encodeURIComponent(postId);
     if (navigator.clipboard && navigator.clipboard.writeText) {
       navigator.clipboard.writeText(url).then(function () {
         _showToast('链接已复制到剪贴板');
@@ -2440,34 +2433,98 @@ if (typeof window._cspHoverOut !== 'function') {
       sidebarEl.innerHTML = renderSidebar();
     }
 
+    // 分享深链：#/community?post=<id> 时定位到对应帖子（补全「分享」按钮复制链接的语义）
+    var urlPostId = (function () {
+      try {
+        var m = window.location.hash.match(/[?&]post=([^&]+)/);
+        return m ? decodeURIComponent(m[1]) : '';
+      } catch (e) { return ''; }
+    })();
+    if (urlPostId) {
+      var onPage = _communityState.posts.some(function (p) { return p.id === urlPostId; });
+      if (onPage) {
+        var targetEl = document.querySelector('.community-post-card[data-post-id="' + urlPostId + '"]');
+        if (targetEl) {
+          setTimeout(function () {
+            targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }, 300);
+        }
+      } else {
+        // 目标帖不在当前页：逐页查找（最多扫 20 页），找到后切页并定位
+        _locatePostPage(urlPostId);
+      }
+    }
+
     // 异步加载当前页帖子的评论
     loadCommentsForVisiblePosts();
+  }
+
+  /**
+   * 深链辅助：目标是分享链接中的帖子但不在当前页时，逐页扫描定位。
+   * 命中后更新分页状态并重绘、滚动到该帖；超过扫描上限则放弃。
+   * @param {string} postId
+   */
+  async function _locatePostPage(postId) {
+    var maxScan = Math.min(_communityState.totalPages, 20);
+    for (var p = 1; p <= maxScan; p++) {
+      if (p === _communityState.currentPage) continue;
+      var result = null;
+      try {
+        result = await fetchPosts(p, _communityState.currentTag);
+      } catch (e) { result = null; }
+      var list = (result && Array.isArray(result.posts)) ? result.posts : [];
+      if (list.some(function (x) { return x.id === postId; })) {
+        _communityState.currentPage = p;
+        _communityState.posts = list;
+        refreshFeed();
+        renderPagination();
+        var el = document.querySelector('.community-post-card[data-post-id="' + postId + '"]');
+        if (el) setTimeout(function () { el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 300);
+        return;
+      }
+    }
   }
 
   async function loadCommentsForVisiblePosts() {
     var posts = _communityState.posts;
     if (!posts || posts.length === 0) return;
 
-    var promises = [];
-    var postIds = [];
-    for (var i = 0; i < posts.length; i++) {
-      var post = posts[i];
-      if ((post.comment_count || 0) > 0 && !_communityState.commentsCache[post.id]) {
-        promises.push(fetchComments(post.id));
-        postIds.push(post.id);
-      }
-    }
-    if (promises.length === 0) return;
+    // 只预载「有评论且尚未缓存」的帖子
+    var targets = posts.filter(function (p) {
+      return (p.comment_count || 0) > 0 && !_communityState.commentsCache[p.id];
+    });
+    if (targets.length === 0) return;
 
-    try {
-      var results = await Promise.all(promises.map(function(p) { return p.catch(function() { return null; }); }));
-      for (var j = 0; j < results.length; j++) {
-        var result = results[j];
-        _communityState.commentsCache[postIds[j]] = (result && result.comments) ? result.comments : [];
+    var postIds = targets.map(function (p) { return p.id; });
+
+    // 性能优化：批量拉取（1 次评论查询 + 1 次作者查询），
+    // 替代原实现的每帖 2 次请求（7 帖 → 14 次），显著降低社区页加载耗时
+    if (typeof window.getCommentsForPosts === 'function' && typeof window.getSupabase === 'function') {
+      var sb = window.getSupabase();
+      if (sb) {
+        try {
+          var result = await window.getCommentsForPosts(postIds);
+          var byPost = (result && result.commentsByPost) || {};
+          postIds.forEach(function (id) {
+            _communityState.commentsCache[id] = byPost[id] || [];
+          });
+          refreshFeed();
+          return;
+        } catch (e) {
+          // 批量失败时回退逐帖加载
+        }
       }
-    } catch (e) {
-      // fallback: individual error handling already done via .catch
     }
+
+    // 兜底：逐帖加载
+    try {
+      var results = await Promise.all(postIds.map(function (id) {
+        return fetchComments(id).catch(function () { return null; });
+      }));
+      for (var j = 0; j < results.length; j++) {
+        _communityState.commentsCache[postIds[j]] = (results[j] && results[j].comments) ? results[j].comments : [];
+      }
+    } catch (e) {}
 
     refreshFeed();
   }
