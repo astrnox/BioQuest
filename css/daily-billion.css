@@ -83,6 +83,7 @@ html.dark .db-top-bar {
   display: flex;
   align-items: center;
   gap: 8px;
+  min-width: 0;
 }
 
 .db-back-btn {
@@ -117,6 +118,9 @@ html.dark .db-back-btn:hover {
   font-weight: 650;
   color: #2c3e30;
   letter-spacing: 0.02em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 [data-theme="dark"] .db-top-bar-title,
 html.dark .db-top-bar-title {
@@ -1654,6 +1658,695 @@ html.dark .db-stop-restart-btn:hover {
     animation: none;
   }
   .db-stop-card {
+    animation: none;
+  }
+}
+
+/* ============================================================
+ * 统一判卷 — 成绩单面板
+ * 作答阶段零判卷：只有「已作答」徽章；结束时在此面板统一
+ * 核对每道题得分、子项对错、解析。重点照顾易读性与操作容错。
+ * ============================================================ */
+.db-done-chip {
+  display: inline-flex;
+  align-items: center;
+  margin-left: auto;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: rgba(90, 125, 92, 0.12);
+  color: #3a6b4a;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  flex-shrink: 0;
+}
+[data-theme="dark"] .db-done-chip,
+html.dark .db-done-chip {
+  background: rgba(90, 125, 92, 0.22);
+  color: #8db899;
+}
+
+.db-done-hint,
+.db-hint {
+  margin-top: 12px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  line-height: 1.6;
+  flex-shrink: 0;
+}
+.db-done-hint {
+  background: rgba(90, 125, 92, 0.08);
+  color: #4a6b50;
+  border: 1px dashed rgba(90, 125, 92, 0.35);
+}
+.db-hint {
+  background: rgba(196, 149, 106, 0.08);
+  color: #8a6d1f;
+  border: 1px dashed rgba(196, 149, 106, 0.4);
+}
+[data-theme="dark"] .db-done-hint,
+html.dark .db-done-hint {
+  background: rgba(90, 125, 92, 0.12);
+  color: #8db899;
+  border-color: rgba(90, 125, 92, 0.35);
+}
+[data-theme="dark"] .db-hint,
+html.dark .db-hint {
+  background: rgba(196, 149, 106, 0.1);
+  color: #d4a87e;
+  border-color: rgba(196, 149, 106, 0.4);
+}
+
+.db-submit-btn--done {
+  background: #eef4ee !important;
+  color: #3a6b4a !important;
+  border: 1.5px solid rgba(90, 125, 92, 0.4) !important;
+  box-shadow: none !important;
+  cursor: default !important;
+  letter-spacing: 0.04em;
+}
+[data-theme="dark"] .db-submit-btn--done,
+html.dark .db-submit-btn--done {
+  background: rgba(90, 125, 92, 0.14) !important;
+  color: #8db899 !important;
+  border-color: rgba(90, 125, 92, 0.35) !important;
+}
+
+/* ---- 成绩单遮罩（覆盖整个刷题页，含顶栏） ---- */
+.db-report-overlay,
+.db-confirm-exit-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 60;
+  background: rgba(30, 42, 34, 0.45);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  animation: stopOverlayIn 0.25s ease-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+[data-theme="dark"] .db-report-overlay,
+html.dark .db-report-overlay,
+[data-theme="dark"] .db-confirm-exit-overlay,
+html.dark .db-confirm-exit-overlay {
+  background: rgba(0, 0, 0, 0.65);
+}
+
+.db-report-panel {
+  width: min(680px, 100%);
+  height: min(88vh, 820px);
+  background: #fff;
+  border-radius: 22px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 28px 80px rgba(20, 34, 26, 0.25);
+  animation: stopCardIn 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+  border: 1px solid rgba(236, 232, 225, 0.8);
+}
+[data-theme="dark"] .db-report-panel,
+html.dark .db-report-panel {
+  background: #20261f;
+  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.5);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+/* ---- 成绩单头部（吸顶） ---- */
+.db-report-head {
+  padding: 16px 20px 14px;
+  border-bottom: 1px solid rgba(90, 125, 92, 0.12);
+  background: linear-gradient(180deg, rgba(90, 125, 92, 0.08), rgba(90, 125, 92, 0));
+  flex-shrink: 0;
+}
+.db-report-head-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.db-report-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #2c3e30;
+  letter-spacing: 0.02em;
+}
+[data-theme="dark"] .db-report-title,
+html.dark .db-report-title {
+  color: #d4ddd6;
+}
+.db-report-close {
+  border: none;
+  background: rgba(0, 0, 0, 0.05);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 1rem;
+  color: #8a9a8e;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+.db-report-close:hover {
+  background: rgba(0, 0, 0, 0.1);
+  color: #2c3e30;
+}
+[data-theme="dark"] .db-report-close,
+html.dark .db-report-close {
+  background: rgba(255, 255, 255, 0.08);
+  color: #8db899;
+}
+[data-theme="dark"] .db-report-close:hover,
+html.dark .db-report-close:hover {
+  background: rgba(255, 255, 255, 0.14);
+  color: #d4ddd6;
+}
+
+.db-report-hero {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 12px;
+}
+.db-report-acc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 88px;
+  padding: 10px 12px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #4a7c59 0%, #3a6347 100%);
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(74, 124, 89, 0.28);
+}
+.db-report-acc-val {
+  font-size: 1.7rem;
+  font-weight: 800;
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+}
+.db-report-acc-lbl {
+  font-size: 0.7rem;
+  opacity: 0.85;
+  margin-top: 2px;
+}
+[data-theme="dark"] .db-report-acc,
+html.dark .db-report-acc {
+  background: linear-gradient(135deg, #5d9a72 0%, #4a7c59 100%);
+}
+.db-report-stats {
+  display: flex;
+  gap: 14px;
+  flex: 1;
+  flex-wrap: wrap;
+}
+.db-report-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.db-report-stat-val {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #2c3e30;
+  font-variant-numeric: tabular-nums;
+}
+.db-report-stat-val.bad { color: #c0553a; }
+.db-report-stat-val.ok { color: #3a6b4a; }
+.db-report-stat-val.na { color: #8a8a7a; }
+.db-report-stat-lbl {
+  font-size: 0.68rem;
+  color: #8a9a8e;
+  margin-top: 3px;
+}
+[data-theme="dark"] .db-report-stat-val,
+html.dark .db-report-stat-val {
+  color: #d4ddd6;
+}
+[data-theme="dark"] .db-report-stat-val.bad,
+html.dark .db-report-stat-val.bad {
+  color: #ef9a9a;
+}
+[data-theme="dark"] .db-report-stat-val.ok,
+html.dark .db-report-stat-val.ok {
+  color: #81c784;
+}
+[data-theme="dark"] .db-report-stat-lbl,
+html.dark .db-report-stat-lbl {
+  color: #6b7a70;
+}
+
+.db-report-tip {
+  margin-top: 10px;
+  font-size: 0.76rem;
+  color: #7a8a7e;
+  line-height: 1.5;
+}
+[data-theme="dark"] .db-report-tip,
+html.dark .db-report-tip {
+  color: #7d8d81;
+}
+
+/* ---- 题目明细列表（可滚动） ---- */
+.db-report-list {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 14px 16px calc(84px + env(safe-area-inset-bottom, 0px));
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* 未作答卡片内「继续作答」CTA */
+.db-report-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 12px;
+  padding: 10px 18px;
+  border-radius: 12px;
+  border: 1.5px solid rgba(90, 125, 92, 0.45);
+  background: rgba(90, 125, 92, 0.08);
+  color: #3a6b4a;
+  font-size: 0.86rem;
+  font-weight: 650;
+  cursor: pointer;
+  font-family: inherit;
+  letter-spacing: 0.02em;
+  transition: background 0.2s, transform 0.08s;
+}
+.db-report-cta:hover { background: rgba(90, 125, 92, 0.16); }
+.db-report-cta:active { transform: scale(0.97); }
+[data-theme="dark"] .db-report-cta,
+html.dark .db-report-cta {
+  background: rgba(90, 125, 92, 0.16);
+  border-color: rgba(90, 125, 92, 0.5);
+  color: #8db899;
+}
+[data-theme="dark"] .db-report-cta:hover,
+html.dark .db-report-cta:hover {
+  background: rgba(90, 125, 92, 0.26);
+}
+
+.db-report-item {
+  background: #fafbfa;
+  border: 1.5px solid #e8e2d8;
+  border-radius: 16px;
+  padding: 14px 16px;
+  cursor: pointer;
+  transition: transform 0.12s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.db-report-item:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(44, 62, 48, 0.08);
+  border-color: #d4c9b8;
+}
+.db-report-item--correct { border-color: rgba(90, 125, 92, 0.4); background: linear-gradient(180deg, #f6faf6, #fafbfa); }
+.db-report-item--wrong { border-color: rgba(192, 85, 58, 0.4); background: linear-gradient(180deg, #fdf5f2, #fafbfa); }
+.db-report-item--partial { border-color: rgba(212, 160, 48, 0.4); background: linear-gradient(180deg, #fdf8ec, #fafbfa); }
+.db-report-item--unanswered { border-style: dashed; border-color: rgba(138, 138, 122, 0.45); background: rgba(138, 138, 122, 0.04); }
+[data-theme="dark"] .db-report-item,
+html.dark .db-report-item {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+[data-theme="dark"] .db-report-item:hover,
+html.dark .db-report-item:hover {
+  border-color: rgba(255, 255, 255, 0.16);
+}
+[data-theme="dark"] .db-report-item--correct,
+html.dark .db-report-item--correct {
+  border-color: rgba(90, 125, 92, 0.5);
+  background: rgba(90, 125, 92, 0.08);
+}
+[data-theme="dark"] .db-report-item--wrong,
+html.dark .db-report-item--wrong {
+  border-color: rgba(192, 85, 58, 0.5);
+  background: rgba(192, 85, 58, 0.09);
+}
+[data-theme="dark"] .db-report-item--partial,
+html.dark .db-report-item--partial {
+  border-color: rgba(212, 160, 48, 0.5);
+  background: rgba(212, 160, 48, 0.08);
+}
+[data-theme="dark"] .db-report-item--unanswered,
+html.dark .db-report-item--unanswered {
+  border-color: rgba(138, 138, 122, 0.35);
+  background: rgba(138, 138, 122, 0.06);
+}
+
+.db-report-item-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.db-report-num {
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: #2c3e30;
+}
+[data-theme="dark"] .db-report-num,
+html.dark .db-report-num {
+  color: #d4ddd6;
+}
+.db-report-subject {
+  font-size: 0.7rem;
+  color: #8a9a8e;
+  background: rgba(138, 138, 122, 0.1);
+  padding: 2px 8px;
+  border-radius: 999px;
+}
+.db-report-status {
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 999px;
+  margin-left: auto;
+}
+.db-report-status.ok { background: rgba(90, 125, 92, 0.14); color: #3a6b4a; }
+.db-report-status.mid { background: rgba(212, 160, 48, 0.14); color: #8a6d1f; }
+.db-report-status.bad { background: rgba(192, 85, 58, 0.14); color: #a04530; }
+.db-report-status.none { background: rgba(138, 138, 122, 0.12); color: #7a7a6a; }
+[data-theme="dark"] .db-report-status.ok,
+html.dark .db-report-status.ok { background: rgba(90, 125, 92, 0.2); color: #8db899; }
+[data-theme="dark"] .db-report-status.mid,
+html.dark .db-report-status.mid { background: rgba(212, 160, 48, 0.2); color: #d4a87e; }
+[data-theme="dark"] .db-report-status.bad,
+html.dark .db-report-status.bad { background: rgba(192, 85, 58, 0.2); color: #ef9a9a; }
+[data-theme="dark"] .db-report-status.none,
+html.dark .db-report-status.none { background: rgba(138, 138, 122, 0.2); color: #9aa49c; }
+
+.db-report-score {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #3a6b4a;
+  background: rgba(90, 125, 92, 0.1);
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-variant-numeric: tabular-nums;
+  flex-shrink: 0;
+}
+.db-report-item--wrong .db-report-score { color: #a04530; background: rgba(192, 85, 58, 0.1); }
+.db-report-item--partial .db-report-score { color: #8a6d1f; background: rgba(212, 160, 48, 0.12); }
+.db-report-item--unanswered .db-report-score { color: #7a7a6a; background: rgba(138, 138, 122, 0.1); }
+[data-theme="dark"] .db-report-score,
+html.dark .db-report-score { color: #8db899; background: rgba(90, 125, 92, 0.16); }
+[data-theme="dark"] .db-report-item--wrong .db-report-score,
+html.dark .db-report-item--wrong .db-report-score { color: #ef9a9a; background: rgba(192, 85, 58, 0.16); }
+[data-theme="dark"] .db-report-item--partial .db-report-score,
+html.dark .db-report-item--partial .db-report-score { color: #d4a87e; background: rgba(212, 160, 48, 0.16); }
+
+.db-report-question {
+  margin-top: 10px;
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: #2c3e30;
+}
+[data-theme="dark"] .db-report-question,
+html.dark .db-report-question {
+  color: #c5cec8;
+}
+
+.db-report-subs {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 12px;
+}
+.db-report-sub {
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 12px;
+  padding: 10px 12px;
+  background: #fff;
+  transition: background 0.2s;
+}
+[data-theme="dark"] .db-report-sub,
+html.dark .db-report-sub {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.06);
+}
+.db-report-sub--ok {
+  background: linear-gradient(180deg, #f0f8f2, #fbfdfb);
+  border-color: rgba(90, 125, 92, 0.28);
+}
+.db-report-sub--bad {
+  background: linear-gradient(180deg, #fdf3f0, #fdfbfa);
+  border-color: rgba(192, 85, 58, 0.28);
+}
+.db-report-sub--na {
+  background: rgba(138, 138, 122, 0.05);
+  border-style: dashed;
+}
+[data-theme="dark"] .db-report-sub--ok,
+html.dark .db-report-sub--ok {
+  background: rgba(90, 125, 92, 0.1);
+  border-color: rgba(90, 125, 92, 0.35);
+}
+[data-theme="dark"] .db-report-sub--bad,
+html.dark .db-report-sub--bad {
+  background: rgba(192, 85, 58, 0.1);
+  border-color: rgba(192, 85, 58, 0.35);
+}
+
+.db-report-sub-row {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+.db-report-sub-label {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #f0ece4;
+  color: #5a6b5e;
+  font-size: 0.7rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+[data-theme="dark"] .db-report-sub-label,
+html.dark .db-report-sub-label {
+  background: rgba(255, 255, 255, 0.1);
+  color: #8db899;
+}
+.db-report-sub-text {
+  flex: 1;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: #3d4f41;
+}
+[data-theme="dark"] .db-report-sub-text,
+html.dark .db-report-sub-text {
+  color: #c5cec8;
+}
+.db-report-sub-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 6px;
+  padding-left: 32px;
+  flex-wrap: wrap;
+  font-size: 0.78rem;
+}
+.db-report-user { color: #3a6b4a; font-weight: 600; }
+.db-report-sub--bad .db-report-user { color: #a04530; }
+.db-report-sub--na .db-report-user { color: #8a8a7a; }
+.db-report-correct { color: #8a9a8e; }
+.db-report-mark {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-left: auto;
+}
+.db-report-mark.ok { background: rgba(90, 125, 92, 0.16); color: #3a6b4a; }
+.db-report-mark.bad { background: rgba(192, 85, 58, 0.16); color: #a04530; }
+[data-theme="dark"] .db-report-user,
+html.dark .db-report-user { color: #8db899; }
+[data-theme="dark"] .db-report-sub--bad .db-report-user,
+html.dark .db-report-sub--bad .db-report-user { color: #ef9a9a; }
+[data-theme="dark"] .db-report-mark.ok,
+html.dark .db-report-mark.ok { color: #81c784; background: rgba(90, 125, 92, 0.2); }
+[data-theme="dark"] .db-report-mark.bad,
+html.dark .db-report-mark.bad { color: #ef9a9a; background: rgba(192, 85, 58, 0.2); }
+
+.db-report-explanation {
+  margin-top: 12px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: rgba(196, 149, 106, 0.08);
+  border-left: 3px solid #c4956a;
+  font-size: 0.82rem;
+  line-height: 1.7;
+  color: #5a4a30;
+  display: flex;
+  gap: 8px;
+}
+.db-report-expl-label {
+  font-weight: 700;
+  color: #a07a45;
+  flex-shrink: 0;
+}
+.db-report-expl-text { flex: 1; }
+.db-report-explanation--na {
+  background: rgba(138, 138, 122, 0.06);
+  border-left-color: #8a8a7a;
+  color: #8a8a7a;
+}
+[data-theme="dark"] .db-report-explanation,
+html.dark .db-report-explanation {
+  background: rgba(196, 149, 106, 0.12);
+  color: #d8c49a;
+}
+[data-theme="dark"] .db-report-expl-label,
+html.dark .db-report-expl-label {
+  color: #d4a87e;
+}
+[data-theme="dark"] .db-report-explanation--na,
+html.dark .db-report-explanation--na {
+  background: rgba(138, 138, 122, 0.08);
+  color: #7d8d81;
+}
+
+/* ---- 底部操作（吸底） ---- */
+.db-report-footer {
+  display: flex;
+  gap: 10px;
+  padding: 12px 16px;
+  border-top: 1px solid rgba(90, 125, 92, 0.12);
+  background: rgba(244, 247, 244, 0.9);
+  flex-shrink: 0;
+}
+[data-theme="dark"] .db-report-footer,
+html.dark .db-report-footer {
+  background: #1c221b;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+.db-report-btn {
+  flex: 1;
+  padding: 11px 12px;
+  border-radius: 14px;
+  border: none;
+  font-size: 0.9rem;
+  font-weight: 650;
+  cursor: pointer;
+  font-family: inherit;
+  transition: transform 0.08s, opacity 0.2s, background 0.2s;
+  letter-spacing: 0.02em;
+}
+.db-report-btn:active { transform: scale(0.97); }
+.db-report-btn--ghost {
+  background: #fff;
+  color: #5a6b5e;
+  border: 1.5px solid rgba(0, 0, 0, 0.1);
+}
+.db-report-btn--ghost:hover { background: #f4f6f3; }
+.db-report-btn--primary {
+  background: linear-gradient(135deg, #4a7c59 0%, #3a6347 100%);
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(74, 124, 89, 0.25);
+}
+.db-report-btn--primary:hover { filter: brightness(1.06); }
+.db-report-btn--danger {
+  background: #fff;
+  color: #c0553a;
+  border: 1.5px solid rgba(192, 85, 58, 0.35);
+}
+.db-report-btn--danger:hover { background: #fdf3f0; }
+[data-theme="dark"] .db-report-btn--ghost,
+html.dark .db-report-btn--ghost {
+  background: #2a3129;
+  color: #8db899;
+  border-color: rgba(255, 255, 255, 0.12);
+}
+[data-theme="dark"] .db-report-btn--ghost:hover,
+html.dark .db-report-btn--ghost:hover {
+  background: #333c32;
+}
+[data-theme="dark"] .db-report-btn--primary,
+html.dark .db-report-btn--primary {
+  background: linear-gradient(135deg, #5d9a72 0%, #4a7c59 100%);
+}
+[data-theme="dark"] .db-report-btn--danger,
+html.dark .db-report-btn--danger {
+  background: #2a3129;
+  color: #ef9a9a;
+  border-color: rgba(192, 85, 58, 0.4);
+}
+[data-theme="dark"] .db-report-btn--danger:hover,
+html.dark .db-report-btn--danger:hover {
+  background: rgba(192, 85, 58, 0.12);
+}
+
+/* ---- 空作答确认（防误触） ---- */
+.db-confirm-exit-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 28px 24px 22px;
+  width: min(340px, 100%);
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(20, 34, 26, 0.22);
+  animation: stopCardIn 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+  border: 1px solid rgba(236, 232, 225, 0.8);
+}
+[data-theme="dark"] .db-confirm-exit-card,
+html.dark .db-confirm-exit-card {
+  background: #242a26;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+.db-confirm-exit-title {
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: #2c3e30;
+}
+[data-theme="dark"] .db-confirm-exit-title,
+html.dark .db-confirm-exit-title {
+  color: #d4ddd6;
+}
+.db-confirm-exit-desc {
+  margin: 8px 0 20px;
+  font-size: 0.86rem;
+  color: #8a9a8e;
+  line-height: 1.6;
+}
+.db-confirm-exit-actions {
+  display: flex;
+  gap: 10px;
+}
+
+/* 移动端：成绩单更贴近全屏 */
+@media (max-width: 480px) {
+  .db-report-panel {
+    width: 100%;
+    height: 96vh;
+    border-radius: 18px;
+  }
+  .db-report-hero {
+    gap: 12px;
+  }
+}
+
+/* 减弱动效 — 成绩单面板 */
+@media (prefers-reduced-motion: reduce) {
+  .db-report-overlay,
+  .db-report-panel,
+  .db-confirm-exit-overlay,
+  .db-confirm-exit-card {
     animation: none;
   }
 }
