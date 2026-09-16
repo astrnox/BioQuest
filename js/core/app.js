@@ -2695,8 +2695,12 @@ function updateAuthUI() {
   var authBtn = document.getElementById('auth-btn');
   if (!authBtn) return;
 
-  if (isLoggedIn()) {
-    var user = getCurrentUser();
+  // supabase-client 为懒加载（首屏不载入），Supabase 初始化失败走本地模式时
+  // 这些全局函数可能尚未定义——必须守卫，避免 updateAuthUI 直接抛 ReferenceError
+  var loggedIn = (typeof window.isLoggedIn === 'function') && !!window.isLoggedIn();
+  if (loggedIn) {
+    var user = (typeof window.getCurrentUser === 'function') ? window.getCurrentUser() : null;
+    if (!user) user = { user_group: 'guest', display_name: '', username: '' };
     var groupLabels = { admin: '管理员', premium: '高级会员', verified: '认证会员', member: '会员', guest: '访客' };
     var groupLabel = groupLabels[user.user_group] || '会员';
     var displayName = user.display_name || user.username || '用户';
