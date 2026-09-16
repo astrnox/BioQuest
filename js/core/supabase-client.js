@@ -1921,16 +1921,19 @@ function startOnlineTimeTracking() {
 }
 
 // ===== 社区功能 =====
-async function getCommunityPosts(page, tag) {
+async function getCommunityPosts(page, tag, sortBy) {
   var sb = getSupabase();
   if (!sb) return { posts: [], total: 0 };
   try {
-    // 主查询：带 count 元数据，避免单独发一次 head 查询（消除 ERR_ABORTED 来源）
+    // 排序规则：
+    //   推荐流：置顶优先 + 时间倒序（稳定：置顶帖常驻顶部，避免频繁跳位）
+    //   热榜：纯按点赞倒序（热度驱动，低赞置顶帖不占据榜首，语义贴合「热榜」）
     var query = sb.from('community_posts')
       .select('id, author_id, content, tags, like_count, comment_count, is_pinned, is_deleted, created_at, updated_at', { count: 'exact' })
       .eq('is_deleted', false)
-      .order('is_pinned', { ascending: false })
-      .order('created_at', { ascending: false })
+      .order(sortBy === 'hot' ? 'like_count' : 'is_pinned', { ascending: false });
+
+    query = query.order('created_at', { ascending: false })
       .range((page - 1) * 7, page * 7 - 1);
 
     if (tag && tag !== '') {
