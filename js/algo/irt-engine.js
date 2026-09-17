@@ -140,16 +140,21 @@
 
   /**
    * 用一道题的答题结果贝叶斯更新 θ
-   * 先验 N(θ_prior, 1)，似然用 3PL，后验用数值积分
+   * 先验 N(θ_prior, 1)（在线学习锚定在更新前的 θ），似然为 3PL，
+   * 后验众数通过 [-3,3] 网格（步长 0.05）的最大后验估计（MAP）求得。
+   * 注意：本实现是 MAP（众数）而非 EAP（期望积分）；对学情诊断两种口径均可接受，
+   * 但 θ 贴近 ±3 边界时网格截断会略低估后验众数——除了限制单步更新，还应注意
+   * 先验本质是「惩罚远离 θ_prior」，因此长期收敛到网格中间区域，边界影响有限。
    *
    * @param {number} thetaPrior - 更新前的 θ
    * @param {boolean} correct - 是否答对
    * @param {Object} params - 题目 IRT 参数 {a, b, c}
-   * @param {number} [stepSize=0.5] - 更新步长上限（避免单题震荡过大）
+   * @param {number} [stepSize=0.5] - 单步更新幅度上限（避免单题震荡过大）
    * @returns {number} 更新后的 θ
    */
   function updateTheta(thetaPrior, correct, params, stepSize) {
-    stepSize = stepSize || 0.5;
+    stepSize = (typeof stepSize === 'number' && isFinite(stepSize) && stepSize > 0) ? stepSize : 0.5;
+    stepSize = Math.min(stepSize, 3);
     // 似然：P(response|θ) = P^correct * (1-P)^(1-correct)
     var logLik = function (theta) {
       var p = probCorrect(theta, params);

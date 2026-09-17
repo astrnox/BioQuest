@@ -406,10 +406,38 @@
     statusEl.style.cssText = 'margin-top:4px;font-size:0.76rem;color:var(--text-muted,#8a8a8a);';
     statusEl.textContent = '准备识别...';
     progressEl.appendChild(progressFill);
+
+    // 手写开关 + 可选云端识别 key（OCR.space 免费 API）
+    var optRow = document.createElement('div');
+    optRow.style.cssText = 'display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:8px;font-size:0.76rem;';
+    var lblHand = document.createElement('label');
+    lblHand.style.cssText = 'display:inline-flex;align-items:center;gap:4px;cursor:pointer;color:var(--text-secondary,#5a6b5e);';
+    lblHand.innerHTML = '<input type="checkbox" id="wb-ocr-handwriting" style="width:auto;"> ✍️ 手写内容（识别手写笔记更稳）';
+    var keyDetails = document.createElement('details');
+    keyDetails.style.cssText = 'margin-left:auto;';
+    keyDetails.innerHTML =
+      '<summary style="cursor:pointer;color:var(--text-muted,#8a8a8a);user-select:none;">云端识别（免费，可选）</summary>' +
+      '<div style="display:flex;gap:6px;margin-top:6px;align-items:center;">' +
+        '<input id="wb-ocrspace-key" type="password" placeholder="OCR.space 免费 API Key" style="flex:1;min-width:160px;padding:5px 8px;font-size:0.76rem;border:1px solid rgba(0,0,0,0.12);border-radius:6px;">' +
+      '</div>' +
+      '<div style="font-size:0.7rem;color:var(--text-muted,#8a8a8a);margin-top:4px;">前往 ocr.space/ocrapi 免费申请（25k 次/月），key 保存在本机，识别效果显著提升。</div>';
+    optRow.appendChild(lblHand);
+    optRow.appendChild(keyDetails);
+
     previewWrap.appendChild(imgEl);
+    previewWrap.appendChild(optRow);
     previewWrap.appendChild(progressEl);
     previewWrap.appendChild(statusEl);
     if (modal) modal.insertBefore(previewWrap, modal.firstChild);
+
+    // 回填已保存的 OCR.space key，本地监听保存
+    var ocrspaceKeyInput = document.getElementById('wb-ocrspace-key');
+    if (ocrspaceKeyInput) {
+      try { ocrspaceKeyInput.value = localStorage.getItem('bioquest_ocrspace_key') || ''; } catch (e) {}
+      ocrspaceKeyInput.addEventListener('input', function () {
+        try { localStorage.setItem('bioquest_ocrspace_key', ocrspaceKeyInput.value.trim()); } catch (e) {}
+      });
+    }
 
     var qEl = document.getElementById('wb-input-question');
     if (qEl) qEl.value = '';
@@ -430,9 +458,16 @@
       };
       var setProgress = function (p) { progressFill.style.width = p + '%'; };
 
-      // =====【新路径】OcrEngine 统一4级降级：Vision → PaddleOCR → Tesseract → OCRad =====
+      // =====【新路径】OcrEngine 统一多引擎降级：Vision → PaddleOCR → Tesseract → OCRad；
+      // 勾选"手写内容"后走手写优化链（保留灰度预处理 + 可选 OCR.space 云端手写 API）
       if (window.OcrEngine && typeof window.OcrEngine.recognize === 'function') {
-        window.OcrEngine.recognize(imgData, { minTextLength: 3 }, {
+        var handCheckbox = document.getElementById('wb-ocr-handwriting');
+        var ocrspaceKeyEl = document.getElementById('wb-ocrspace-key');
+        var ocrOpts = { minTextLength: 3, handwriting: !!(handCheckbox && handCheckbox.checked) };
+        if (ocrspaceKeyEl && ocrspaceKeyEl.value && ocrspaceKeyEl.value.trim()) {
+          ocrOpts.ocrspaceApiKey = ocrspaceKeyEl.value.trim();
+        }
+        window.OcrEngine.recognize(imgData, ocrOpts, {
           setText: function (t, kind) {
             var c = '';
             if (kind === 'success') c = COLOR_SUCCESS;

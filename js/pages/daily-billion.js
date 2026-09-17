@@ -1,6 +1,7 @@
 /**
  * 每日亿题 — 随机刷题 · TikTok风格
- * v4: 本地题库Fallback · Supabase重试 · 全量审查修复 · UI优化
+ * v5: 专属题库重构（100 道联赛级送分/易错判断题，纯文字）——
+ *     云端按 daily-league 标签过滤，本地按主题分片异步加载
  */
 (function() {
   'use strict';
@@ -8,93 +9,25 @@
   var SUPABASE_URL = 'https://qxehkfucvmxuojjkdaqy.supabase.co';
   var SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InF4ZWhrZnVjdm14dW9qamtkYXF5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODY2MjU2ODUsImV4cCI6MjEwMjIwMTY4NX0.lbiJxhFvy0t_J4qSeoP6K0r53M4KaEDSKkRlZu03ze8';
 
-  var LOCAL_SAMPLE_QUESTIONS = [
-    {
-      id: 'local-1',
-      question: '所有的原核生物都具有细胞壁。',
-      subject: '细胞生物学',
-      explanation: '原核生物中，支原体是没有细胞壁的。',
-      subQuestions: [
-        { label: 'A', text: '所有的原核生物都具有细胞壁。', answer: false }
-      ]
-    },
-    {
-      id: 'local-2',
-      question: '线粒体是细胞进行有氧呼吸的主要场所。',
-      subject: '细胞生物学',
-      explanation: '有氧呼吸的第一阶段在细胞质基质中进行，第二、三阶段在线粒体中进行，线粒体是有氧呼吸的主要场所。',
-      subQuestions: [
-        { label: 'A', text: '线粒体是有氧呼吸的唯一场所。', answer: false },
-        { label: 'B', text: '线粒体含有自己的DNA和核糖体。', answer: true }
-      ]
-    },
-    {
-      id: 'local-3',
-      question: '判断下列关于光合作用的叙述是否正确。',
-      subject: '植物生理学',
-      explanation: '光反应在类囊体薄膜上进行，暗反应在叶绿体基质中进行。光反应需要光，暗反应有光无光都能进行，但需要光反应提供的ATP和NADPH。',
-      subQuestions: [
-        { label: 'A', text: '光合作用的光反应只在有光时进行。', answer: true },
-        { label: 'B', text: '暗反应必须在黑暗条件下进行。', answer: false },
-        { label: 'C', text: '氧气是由光反应产生的。', answer: true }
-      ]
-    },
-    {
-      id: 'local-4',
-      question: '判断下列关于DNA复制的叙述是否正确。',
-      subject: '分子生物学',
-      explanation: 'DNA复制是半保留复制，边解旋边复制，需要DNA聚合酶、解旋酶等多种酶参与。',
-      subQuestions: [
-        { label: 'A', text: 'DNA复制是半保留复制。', answer: true },
-        { label: 'B', text: 'DNA复制只发生在细胞核中。', answer: false }
-      ]
-    },
-    {
-      id: 'local-5',
-      question: '判断下列关于酶的叙述是否正确。',
-      subject: '生物化学',
-      explanation: '酶是活细胞产生的具有催化作用的有机物，绝大多数酶是蛋白质，少数酶是RNA。酶的催化作用具有高效性、专一性，需要适宜的温度和pH。',
-      subQuestions: [
-        { label: 'A', text: '所有的酶都是蛋白质。', answer: false },
-        { label: 'B', text: '酶在催化反应前后本身不发生变化。', answer: true },
-        { label: 'C', text: '温度越高，酶的活性越高。', answer: false },
-        { label: 'D', text: '酶只能在细胞内发挥作用。', answer: false }
-      ]
-    },
-    {
-      id: 'local-6',
-      question: '判断下列关于遗传定律的叙述是否正确。',
-      subject: '遗传学',
-      explanation: '基因分离定律的实质是等位基因随同源染色体的分开而分离；基因自由组合定律的实质是非同源染色体上的非等位基因自由组合。',
-      subQuestions: [
-        { label: 'A', text: '等位基因位于同源染色体的相同位置上。', answer: true },
-        { label: 'B', text: '基因的自由组合发生在受精作用过程中。', answer: false }
-      ]
-    },
-    {
-      id: 'local-7',
-      question: '判断下列关于生态系统的叙述是否正确。',
-      subject: '生态学',
-      explanation: '生态系统的能量流动是单向的、逐级递减的；物质循环是全球性的、循环往复的；信息传递往往是双向的。',
-      subQuestions: [
-        { label: 'A', text: '生态系统的能量流动是循环的。', answer: false },
-        { label: 'B', text: '生产者是生态系统的基石。', answer: true },
-        { label: 'C', text: '分解者能将动植物遗体分解成无机物。', answer: true }
-      ]
-    },
-    {
-      id: 'local-8',
-      question: '判断下列关于神经调节的叙述是否正确。',
-      subject: '动物生理学',
-      explanation: '神经调节的基本方式是反射，反射的结构基础是反射弧。兴奋在神经纤维上以电信号形式双向传导，在神经元之间通过突触单向传递。',
-      subQuestions: [
-        { label: 'A', text: '反射弧是反射活动的结构基础。', answer: true },
-        { label: 'B', text: '兴奋在突触处的传递是双向的。', answer: false }
-      ]
-    }
+  // ============================================================
+  // 每日亿题专属题库 v2（2026 联赛送分池）
+  // 100 道纯文字判断题（MTF，对应 2025 联赛「4 选项判断题」题型）：
+  //   - 题干简洁、纯文字、无图
+  //   - 难度对齐联赛「送分题 / 简单想一想就出来」区间
+  //   - 解析逐项说明对错依据（考点定位 + 依据/错因 + 易错提醒）
+  // 通用上传脚本会把这 6 个分片带 daily-league 标签写入 questions 表，
+  // 云端查询按该标签过滤；本地直接读取分片文件（与云端内容同源）。
+  // ============================================================
+  var LOCAL_BANK_FILES = [
+    'data/bank/daily_league_cellbio.json',            // 细胞生物学 12
+    'data/bank/daily_league_biochem_microbe.json',    // 生物化学+微生物学 13
+    'data/bank/daily_league_plant.json',              // 植物解剖与生理 15
+    'data/bank/daily_league_animal.json',             // 动物解剖与生理 15
+    'data/bank/daily_league_behavior_ecology.json',   // 动物行为+生态学 20
+    'data/bank/daily_league_genetics_evolution.json'  // 遗传+进化+系统学 25
   ];
 
-  var _localQuestions = null;
+  var _localBankPromise = null;
   var _supabaseRetryCount = 0;
   var _supabaseMaxRetries = 3;
 
@@ -167,28 +100,45 @@
     return null;
   }
 
-  function getLocalQuestions() {
-    if (!_localQuestions) {
-      var mapped = LOCAL_SAMPLE_QUESTIONS.map(function(q) {
-        return {
-          id: q.id,
-          question: q.question,
-          subject: q.subject,
-          explanation: q.explanation,
-          subQuestions: q.subQuestions.map(function(sq) {
-            return { label: sq.label, text: sq.text, answer: sq.answer };
-          })
-        };
+  // 异步加载并合并本地专属题库（6 个主题分片 + 超长讲义过滤），带缓存
+  function loadLocalBank() {
+    if (!_localBankPromise) {
+      _localBankPromise = Promise.all(LOCAL_BANK_FILES.map(function(file) {
+        return fetch(file, { cache: 'no-cache' })
+          .then(function(resp) { return resp.ok ? resp.json() : null; })
+          .catch(function() { return null; });
+      })).then(function(files) {
+        var pool = [];
+        files.forEach(function(f) {
+          if (!f) return;
+          Object.keys(f).forEach(function(id) {
+            var q = f[id];
+            if (!q || !Array.isArray(q.subQuestions)) return;
+            pool.push({
+              id: id,
+              question: q.question || '',
+              subject: q.subject || '',
+              explanation: q.explanation || '',
+              subQuestions: q.subQuestions.map(function(sq) {
+                return { label: sq.label, text: sq.text, answer: Boolean(sq.answer) };
+              })
+            });
+          });
+        });
+        // 本地题库也经过"超长知识讲义型"过滤
+        var filterFn = (typeof window.filterQuestionList === 'function') ? window.filterQuestionList : function(x){return x;};
+        return filterFn(pool);
       });
-      // 本地题库也经过"超长知识讲义型"过滤
-      var filterFn = (typeof window.filterQuestionList === 'function') ? window.filterQuestionList : function(x){return x;};
-      _localQuestions = filterFn(mapped);
     }
-    return _localQuestions;
+    return _localBankPromise;
   }
 
-  function loadQuestionsFromLocal(limit) {
-    var pool = getLocalQuestions();
+  function getLocalQuestions() {
+    return loadLocalBank();
+  }
+
+  async function loadQuestionsFromLocal(limit) {
+    var pool = await getLocalQuestions();
     var shuffled = pool.slice().sort(function() { return Math.random() - 0.5; });
     var result = [];
     var seen = state.loadedIds;
@@ -236,7 +186,7 @@
     try {
       // 首次获取总数
       if (state.totalPoolSize === 0) {
-        var countResult = await _withTimeout(sb.from('questions').select('id', { count: 'exact', head: true }).eq('type', 'mtf'), REQUEST_TIMEOUT_MS);
+        var countResult = await _withTimeout(sb.from('daily_questions').select('id', { count: 'exact', head: true }).eq('type', 'mtf').contains('tags', ['daily-league']), REQUEST_TIMEOUT_MS);
         if (!countResult.error && countResult.count !== null) {
           state.totalPoolSize = countResult.count;
         }
@@ -253,9 +203,10 @@
       var maxOffset = Math.max(0, poolSize - limit);
       var randomOffset = Math.floor(Math.random() * maxOffset);
 
-      var result = await _withTimeout(sb.from('questions')
+      var result = await _withTimeout(sb.from('daily_questions')
         .select('id,question,sub_questions,explanation,subject')
         .eq('type', 'mtf')
+        .contains('tags', ['daily-league'])
         .range(randomOffset, randomOffset + limit - 1), REQUEST_TIMEOUT_MS);
 
       if (result.error) {
@@ -271,9 +222,10 @@
       // 如果过滤后不够，再随机拉一批
       if (freshQuestions.length < limit && state.totalPoolSize > limit) {
         var retryOffset = Math.floor(Math.random() * Math.max(0, poolSize - limit));
-        var retryResult = await _withTimeout(sb.from('questions')
+        var retryResult = await _withTimeout(sb.from('daily_questions')
           .select('id,question,sub_questions,explanation,subject')
           .eq('type', 'mtf')
+          .contains('tags', ['daily-league'])
           .range(retryOffset, retryOffset + limit - 1), REQUEST_TIMEOUT_MS);
         if (retryResult.data) {
           var more = retryResult.data.filter(function(q) { return !state.loadedIds[q.id]; });
@@ -291,6 +243,10 @@
           var raw = q.sub_questions;
           if (typeof raw === 'string') raw = JSON.parse(raw);
           if (Array.isArray(raw)) {
+            // 选项排列修复：数据库存储顺序不保证（可能 B/A/D/C），统一按 label 排序展示
+            raw = raw.slice().sort(function (a, b) {
+              return String(a.label || '').localeCompare(String(b.label || ''), 'en', { numeric: true });
+            });
             subQuestions = raw.map(function(sq, i) {
               return { label: sq.label || String.fromCharCode(65 + i), text: sq.text || '', answer: Boolean(sq.answer) };
             });
@@ -322,7 +278,7 @@
     var newQuestions = null;
 
     if (state.usingLocalQuestions) {
-      newQuestions = loadQuestionsFromLocal(limit);
+      newQuestions = await loadQuestionsFromLocal(limit);
     } else {
       if (!getSupabaseClient() && _supabaseRetryCount < _supabaseMaxRetries) {
         _supabaseRetryCount++;
@@ -333,7 +289,7 @@
 
       if (newQuestions === null || (newQuestions.length === 0 && state.questions.length === 0)) {
         console.log('[每日亿题] 使用本地题库模式');
-        newQuestions = loadQuestionsFromLocal(limit);
+        newQuestions = await loadQuestionsFromLocal(limit);
         if (state.questions.length === 0 && newQuestions.length > 0) {
           showToast('已切换到本地题库模式');
         }
@@ -435,13 +391,13 @@
     html += '<div class="db-progress-wrap"><div class="db-progress-bar" id="dbProgressBar"></div></div>';
     html += '<div class="db-top-bar" id="dbTopBar">';
     html += '<div class="db-top-bar-left">';
-    html += '<a class="db-back-btn" href="#/" data-on=\'["_cspGotoHash","#/"]\' data-prevent-default>';
+    html += '<a class="db-back-btn" href="#/" data-on=\'["_dbExitFlow"]\' data-prevent-default title="返回（先看成绩单）">';
     html += '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>';
     html += '</a>';
     html += '<span class="db-top-bar-title">每日亿题</span>';
     html += '</div>';
     html += '<div class="db-top-bar-right">';
-    html += '<button class="db-stop-btn" data-action="stop" title="结束刷题">结束</button>';
+    html += '<button class="db-stop-btn" data-action="db-stop" title="结束本次刷题，统一查看得分与解析">结束并判卷</button>';
     html += '<div class="db-counter-badge" id="dbCounterBadge">';
     html += '<span>已刷</span><span class="db-counter-num" id="dbCounterNum">' + state.totalAnswered + '</span><span>题</span>';
     html += '</div>';
@@ -484,10 +440,13 @@
   }
 
   // ========== 渲染单张题目卡片 ==========
+  // 统一判卷模式：作答阶段只保留"选择 + 完成本题"，不显示任何对错/得分/解析，
+  // 全部判卷在点击「结束/返回」时由成绩单面板统一完成。
   function renderQuestionCard(q, index) {
     var submitted = state.submittedMap[q.id];
     var answers = state.answeredMap[q.id] || {};
-    var allAnswered = q.subQuestions.every(function(_, i) { return answers[i] !== undefined; });
+    // 无子选项的题目不允许提交（防御脏数据）
+    var allAnswered = q.subQuestions.length > 0 && q.subQuestions.every(function(_, i) { return answers[i] !== undefined; });
 
     var html = '';
     html += '<div class="db-card" data-question-id="' + escapeHtml(q.id) + '" data-index="' + index + '">';
@@ -498,6 +457,7 @@
     if (q.subject) html += '<span class="db-card-subject">' + escapeHtml(q.subject) + '</span>';
     // 题目ID（紧贴标签，供管理员后台按ID调题）
     html += '<span class="db-card-qid" title="题目ID（管理员可据此调出本题）">#' + escapeHtml(String(q.id)) + '</span>';
+    if (submitted) html += '<span class="db-done-chip" title="已完成本题，结束时统一判卷">已作答 ✓</span>';
     html += '</div>';
 
     html += '<div class="db-question-text">' + escapeHtml(q.question) + '</div>';
@@ -506,53 +466,30 @@
     for (var i = 0; i < q.subQuestions.length; i++) {
       var sq = q.subQuestions[i];
       var userAnswer = answers[i];
-      var correctAnswer = sq.answer;
-      var itemCls = 'db-sub-item';
-      var resultIcon = '';
-      if (submitted) {
-        itemCls += ' submitted';
-        if (userAnswer === correctAnswer) { itemCls += ' result-correct'; resultIcon = '<span class="db-sub-result-icon">&#10003;</span>'; }
-        else { itemCls += ' result-wrong'; resultIcon = '<span class="db-sub-result-icon">&#10007;</span>'; }
-      }
+      var itemCls = 'db-sub-item' + (submitted ? ' submitted' : '');
       html += '<div class="' + itemCls + '" data-sub-idx="' + i + '">';
       html += '<div class="db-sub-head">';
       html += '<span class="db-sub-label">' + escapeHtml(sq.label) + '</span>';
       html += '<span class="db-sub-text">' + escapeHtml(sq.text) + '</span>';
-      if (submitted && resultIcon) html += resultIcon;
       html += '</div>';
       html += '<div class="db-sub-toggle">';
-      html += '<button class="db-tf-btn' + (userAnswer === true ? ' selected' : '') + '" data-value="true" data-sub-idx="' + i + '">正确</button>';
-      html += '<button class="db-tf-btn' + (userAnswer === false ? ' selected' : '') + '" data-value="false" data-sub-idx="' + i + '">错误</button>';
+      html += '<button class="db-tf-btn' + (userAnswer === true ? ' selected' : '') + '" data-value="true" data-sub-idx="' + i + '"' + (submitted ? ' disabled' : '') + '>正确</button>';
+      html += '<button class="db-tf-btn' + (userAnswer === false ? ' selected' : '') + '" data-value="false" data-sub-idx="' + i + '"' + (submitted ? ' disabled' : '') + '>错误</button>';
       html += '</div></div>';
     }
     html += '</div>';
 
-    html += '<button class="db-submit-btn" data-action="submit" data-card-idx="' + index + '"' + (allAnswered && !submitted ? '' : ' disabled') + '>';
-    html += submitted ? '已提交' : '提交判断';
-    html += '</button>';
-
+    // 作答阶段提示：明确告知"结束时统一判卷"，避免用户误以为没有记录答案
     if (submitted) {
-      var correctCount = 0;
-      for (var j = 0; j < q.subQuestions.length; j++) {
-        if (answers[j] === q.subQuestions[j].answer) correctCount++;
-      }
-      var totalSub = q.subQuestions.length;
-      var allCorrect = correctCount === totalSub;
-      var allWrong = correctCount === 0;
-      var summaryCls = 'db-result-summary';
-      var summaryIcon = '', summaryText = '';
-      if (allCorrect) { summaryCls += ' all-correct'; summaryIcon = '\u2713'; summaryText = '全部正确 ' + correctCount + '/' + totalSub; }
-      else if (allWrong) { summaryCls += ' all-wrong'; summaryIcon = '\u2717'; summaryText = '全部错误 ' + correctCount + '/' + totalSub; }
-      else { summaryCls += ' partial'; summaryIcon = '\u25D0'; summaryText = '部分正确 ' + correctCount + '/' + totalSub; }
-
-      html += '<div class="db-result">';
-      html += '<div class="' + summaryCls + '"><span class="db-result-icon">' + summaryIcon + '</span><span>' + summaryText + '</span></div>';
-      if (q.explanation) {
-        html += '<div class="db-explanation"><div class="db-explanation-title">解析</div><div class="db-explanation-text">' + escapeHtml(q.explanation) + '</div></div>';
-      }
-      html += '<div class="db-swipe-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg><span>上滑下一题</span></div>';
-      html += '</div>';
+      html += '<div class="db-done-hint">本题已作答 ✓ 上滑继续刷题；点击右上角「结束并判卷」统一查看得分与解析</div>';
+    } else if (allAnswered) {
+      html += '<div class="db-hint">已选完所有小题，点击「完成本题」记录答案（对错与解析在结束时统一判卷）</div>';
     }
+
+    var submitCls = 'db-submit-btn' + (submitted ? ' db-submit-btn--done' : '');
+    html += '<button class="' + submitCls + '" data-action="submit" data-card-idx="' + index + '"' + (allAnswered && !submitted ? '' : ' disabled') + '>';
+    html += submitted ? '已完成' : '完成本题';
+    html += '</button>';
 
     html += '</div>';
     // 右侧操作栏
@@ -572,22 +509,193 @@
       '</div><span>加载题目中<span class="bq-loader-typing" aria-hidden="true"><i></i><i></i><i></i></span></span></div></div>';
   }
 
-  function renderStopOverlay() {
-    var accuracy = state.totalSubQuestions > 0 ? Math.round(state.totalCorrect / state.totalSubQuestions * 100) : 0;
-    return '<div class="db-stop-overlay" id="dbStopOverlay">' +
-      '<div class="db-stop-card">' +
-      '<div class="db-stop-icon">' + (accuracy >= 80 ? '&#9733;' : accuracy >= 60 ? '&#9679;' : '&#9675;') + '</div>' +
-      '<div class="db-stop-title">刷题统计</div>' +
-      '<div class="db-stop-stats">' +
-      '<div class="db-stop-stat"><div class="db-stop-stat-val">' + state.totalAnswered + '</div><div class="db-stop-stat-lbl">刷题数</div></div>' +
-      '<div class="db-stop-stat"><div class="db-stop-stat-val">' + state.totalSubQuestions + '</div><div class="db-stop-stat-lbl">总判断</div></div>' +
-      '<div class="db-stop-stat"><div class="db-stop-stat-val">' + accuracy + '%</div><div class="db-stop-stat-lbl">正确率</div></div>' +
-      '</div>' +
-      '<div class="db-stop-actions">' +
-      '<button class="db-stop-continue-btn" data-action="continue">继续刷题</button>' +
-      '<button class="db-stop-restart-btn" data-action="restart">重新开始</button>' +
-      '</div>' +
-      '</div></div>';
+  // ========== 成绩单面板（统一判卷） ==========
+  // 设计原则（人性化）：
+  //   1. 作答阶段零判卷——不出现对错/得分/解析，保持刷题心流
+  //   2. 结束时统一出成绩单：每题得分、每子项你的判断 vs 正确答案、解析
+  //   3. 未作答不计入正确率，但显式展示并支持"返回继续"
+  //   4. 空状态（一题没做）只轻确认退出，不弹空成绩单
+
+  // 单题成绩计算
+  function buildQuestionReport(q) {
+    var answers = state.answeredMap[q.id] || {};
+    var submitted = !!state.submittedMap[q.id];
+    var items = q.subQuestions.map(function(sq, i) {
+      var user = answers[i];
+      var isAnswered = submitted && user !== undefined;
+      return {
+        label: sq.label,
+        text: sq.text,
+        userAnswer: user,
+        correct: !!sq.answer,
+        isAnswered: isAnswered
+      };
+    });
+    var correctCount = items.filter(function(it) { return it.isAnswered && it.userAnswer === it.correct; }).length;
+    return {
+      submitted: submitted,
+      correctCount: correctCount,
+      totalSub: q.subQuestions.length,
+      items: items,
+      allCorrect: submitted && correctCount === q.subQuestions.length,
+      allWrong: submitted && correctCount === 0
+    };
+  }
+
+  function renderReportItem(r, idx) {
+    var q = state.questions[idx];
+    var cls = 'db-report-item';
+    if (!r.submitted) cls += ' db-report-item--unanswered';
+    else if (r.allCorrect) cls += ' db-report-item--correct';
+    else if (r.allWrong) cls += ' db-report-item--wrong';
+    else cls += ' db-report-item--partial';
+    var statusCls = !r.submitted ? 'none' : (r.allCorrect ? 'ok' : (r.allWrong ? 'bad' : 'mid'));
+    var statusTxt = !r.submitted ? '未作答' : (r.allCorrect ? '全部正确' : (r.allWrong ? '全部错误' : '部分正确'));
+
+    var html = '';
+    html += '<div class="' + cls + '" data-action="report-jump" data-idx="' + idx + '" title="回到本题">';
+    html += '<div class="db-report-item-head">';
+    html += '<span class="db-report-num">第 ' + (idx + 1) + ' 题</span>';
+    if (q.subject) html += '<span class="db-report-subject">' + escapeHtml(q.subject) + '</span>';
+    html += '<span class="db-report-status ' + statusCls + '">' + statusTxt + '</span>';
+    html += '<span class="db-report-score">' + (r.submitted ? '得分 ' + r.correctCount + '/' + r.totalSub : '—') + '</span>';
+    html += '</div>';
+
+    html += '<div class="db-report-question">' + escapeHtml(q.question) + '</div>';
+
+    html += '<div class="db-report-subs">';
+    for (var k = 0; k < r.items.length; k++) {
+      var it = r.items[k];
+      var subCls = 'db-report-sub';
+      var userTxt = '';
+      var mark = '';
+      var correctTxt = '';
+      if (!r.submitted || !it.isAnswered) {
+        subCls += ' db-report-sub--na';
+        userTxt = '未作答';
+        // 未作答不泄题：回到本题作答后再评判，避免"继续作答"失去意义
+        correctTxt = '作答后再评判 · 不剧透答案';
+      } else {
+        var ok = it.userAnswer === it.correct;
+        subCls += ok ? ' db-report-sub--ok' : ' db-report-sub--bad';
+        userTxt = '你判「' + (it.userAnswer ? '正确' : '错误') + '」';
+        mark = ok ? '&#10003;' : '&#10007;';
+        correctTxt = '正确答案：' + (it.correct ? '正确' : '错误');
+      }
+      html += '<div class="' + subCls + '">';
+      html += '<div class="db-report-sub-row">';
+      html += '<span class="db-report-sub-label">' + escapeHtml(it.label) + '</span>';
+      html += '<span class="db-report-sub-text">' + escapeHtml(it.text) + '</span>';
+      html += '</div>';
+      html += '<div class="db-report-sub-meta">';
+      html += '<span class="db-report-user">' + userTxt + '</span>';
+      html += '<span class="db-report-correct">' + correctTxt + '</span>';
+      if (r.submitted && it.isAnswered) html += '<span class="db-report-mark ' + (it.userAnswer === it.correct ? 'ok' : 'bad') + '">' + mark + '</span>';
+      html += '</div></div>';
+    }
+    html += '</div>';
+
+    if (r.submitted && q.explanation) {
+      html += '<div class="db-report-explanation"><span class="db-report-expl-label">解析</span><span class="db-report-expl-text">' + escapeHtml(q.explanation) + '</span></div>';
+    } else if (!r.submitted) {
+      html += '<div class="db-report-explanation db-report-explanation--na">本题未作答，完成后再来看得分与解析</div>' +
+              '<button class="db-report-cta" data-action="report-jump" data-idx="' + idx + '">继续作答 →</button>';
+    }
+    html += '</div>';
+    return html;
+  }
+
+  function renderReportPanel() {
+    var submittedCount = 0, totalSub = 0, correctSub = 0, unanswered = 0;
+    var reports = [];
+    for (var i = 0; i < state.questions.length; i++) {
+      var r = buildQuestionReport(state.questions[i]);
+      r.index = i;
+      reports.push(r);
+      if (r.submitted) { submittedCount++; totalSub += r.totalSub; correctSub += r.correctCount; }
+      else unanswered++;
+    }
+    var accuracy = totalSub > 0 ? Math.round(correctSub / totalSub * 100) : 0;
+    var wrongSubs = totalSub - correctSub;
+
+    var html = '';
+    html += '<div class="db-report-overlay" id="dbReportOverlay">';
+    html += '<div class="db-report-panel">';
+
+    // 头部（吸顶）
+    html += '<div class="db-report-head">';
+    html += '<div class="db-report-head-row">';
+    html += '<div class="db-report-title">刷题成绩单</div>';
+    html += '<button class="db-report-close" data-action="report-close" title="返回继续刷题" data-stop-propagation>&#10005;</button>';
+    html += '</div>';
+    html += '<div class="db-report-hero">';
+    html += '<div class="db-report-acc"><span class="db-report-acc-val">' + accuracy + '%</span><span class="db-report-acc-lbl">正确率</span></div>';
+    html += '<div class="db-report-stats">';
+    html += '<div class="db-report-stat"><span class="db-report-stat-val">' + submittedCount + '</span><span class="db-report-stat-lbl">已刷</span></div>';
+    html += '<div class="db-report-stat"><span class="db-report-stat-val">' + totalSub + '</span><span class="db-report-stat-lbl">判断项</span></div>';
+    html += '<div class="db-report-stat"><span class="db-report-stat-val ' + (wrongSubs ? 'bad' : 'ok') + '">' + wrongSubs + '</span><span class="db-report-stat-lbl">错项</span></div>';
+    if (unanswered) html += '<div class="db-report-stat"><span class="db-report-stat-val na">' + unanswered + '</span><span class="db-report-stat-lbl">未作答</span></div>';
+    html += '</div></div>';
+    html += '<div class="db-report-tip">' +
+      (unanswered
+        ? '有 <b>' + unanswered + '</b> 题未作答（不计入正确率），点题目可回到本题继续挑战'
+        : '全部题目已作答，点击题目下方可回到任意一题重看') +
+      '</div>';
+    html += '</div>';
+
+    // 题目明细（可滚动）
+    html += '<div class="db-report-list">';
+    for (var j = 0; j < reports.length; j++) html += renderReportItem(reports[j], j);
+    html += '</div>';
+
+    // 底部操作（吸底）
+    html += '<div class="db-report-footer">';
+    html += '<button class="db-report-btn db-report-btn--ghost" data-action="report-restart">重新开始</button>';
+    html += '<button class="db-report-btn db-report-btn--primary" data-action="report-continue">返回继续刷题</button>';
+    html += '<button class="db-report-btn db-report-btn--danger" data-action="report-exit">退出</button>';
+    html += '</div>';
+
+    html += '</div></div>';
+    return html;
+  }
+
+  function openReportPanel() {
+    if (_destroyed || !wrapperEl) return;
+    var existing = wrapperEl.querySelector('#dbReportOverlay');
+    if (existing) return;
+
+    // 一行都没作答：不要弹空成绩单，轻确认退出即可（防误触丢进度）
+    var hasAnySelection = Object.keys(state.answeredMap).length > 0;
+    if (state.totalAnswered === 0 && !hasAnySelection) {
+      showConfirmExitOverlay();
+      return;
+    }
+
+    var html = renderReportPanel();
+    wrapperEl.insertAdjacentHTML('beforeend', html);
+  }
+
+  function closeReportPanel() {
+    if (!wrapperEl) return;
+    var overlay = wrapperEl.querySelector('#dbReportOverlay');
+    if (overlay) overlay.remove();
+    var confirm = wrapperEl.querySelector('#dbConfirmExitOverlay');
+    if (confirm) confirm.remove();
+  }
+
+  // 空作答确认（防误触）：没有任何作答记录时点退出/返回的轻确认
+  function showConfirmExitOverlay() {
+    if (_destroyed || !wrapperEl) return;
+    if (wrapperEl.querySelector('#dbConfirmExitOverlay')) return;
+    var html = '<div class="db-confirm-exit-overlay" id="dbConfirmExitOverlay">' +
+      '<div class="db-confirm-exit-card">' +
+      '<div class="db-confirm-exit-title">结束每日亿题？</div>' +
+      '<div class="db-confirm-exit-desc">本次还没有作答记录，确定要退出吗？</div>' +
+      '<div class="db-confirm-exit-actions">' +
+      '<button class="db-report-btn db-report-btn--ghost" data-action="report-continue">继续刷题</button>' +
+      '<button class="db-report-btn db-report-btn--danger" data-action="report-exit">退出</button>' +
+      '</div></div></div>';
+    wrapperEl.insertAdjacentHTML('beforeend', html);
   }
 
   function renderErrorCard() {
@@ -640,10 +748,15 @@
     if (actionEl) {
       var action = actionEl.getAttribute('data-action');
       if (action === 'submit') { handleSubmitDelegated(actionEl); return; }
-      if (action === 'stop') { handleStop(); return; }
-      if (action === 'continue') { handleContinue(); return; }
+      // 注：勿用 action="stop"（与原生 window.stop 冲突，boot-lazy 兜底会 Illegal invocation）
+      if (action === 'db-stop') { handleStop(); return; }
       if (action === 'restart') { handleRestart(); return; }
       if (action === 'retry') { handleRetry(); return; }
+      if (action === 'report-close') { closeReportPanel(); return; }
+      if (action === 'report-continue') { handleReportContinue(); return; }
+      if (action === 'report-restart') { handleRestart(); return; }
+      if (action === 'report-exit') { handleReportExit(); return; }
+      if (action === 'report-jump') { handleReportJump(actionEl); return; }
       if (action === 'fav') { handleFav(actionEl); return; }
       if (action === 'like') { handleFeedback(actionEl, 'like'); return; }
       if (action === 'dislike') { handleFeedback(actionEl, 'dislike'); return; }
@@ -675,9 +788,9 @@
     btn.classList.add('selected');
 
     var answers = state.answeredMap[q.id];
-    var allAnswered = q.subQuestions.every(function(_, k) { return answers[k] !== undefined; });
+    var allAnswered = q.subQuestions.length > 0 && q.subQuestions.every(function(_, k) { return answers[k] !== undefined; });
     var submitBtn = cardEl.querySelector('.db-submit-btn');
-    if (submitBtn && allAnswered) { submitBtn.disabled = false; submitBtn.textContent = '提交判断'; }
+    if (submitBtn && allAnswered) { submitBtn.disabled = false; submitBtn.textContent = '完成本题'; }
     saveState();
   }
 
@@ -689,7 +802,7 @@
     if (!cardEl) return;
 
     var answers = state.answeredMap[q.id] || {};
-    var allAnswered = q.subQuestions.every(function(_, i) { return answers[i] !== undefined; });
+    var allAnswered = q.subQuestions.length > 0 && q.subQuestions.every(function(_, i) { return answers[i] !== undefined; });
     if (!allAnswered) return;
     if (state.submittedMap[q.id]) return;
 
@@ -698,6 +811,7 @@
     state.submittedMap[q.id] = true;
     state.totalAnswered++;
 
+    // 统一判卷：提交时只累计统计，不要在作答阶段渲染对错/解析
     var correctCount = 0;
     for (var i = 0; i < q.subQuestions.length; i++) {
       if (answers[i] === q.subQuestions[i].answer) correctCount++;
@@ -712,16 +826,16 @@
     if (typeof window.recordDailyCheckIn === 'function') { try { window.recordDailyCheckIn(); } catch(e) {} }
     if (typeof window.checkAchievement === 'function') { try { window.checkAchievement('practice', 1); } catch(e) {} }
 
+    // 作答阶段不判卷：卡片刷新为"已作答"锁定态，并平滑滚动到下一题保持刷题节奏
     cardEl.outerHTML = renderQuestionCard(q, cardIdx);
-
     setTimeout(function() {
       if (_destroyed || !pageEl) return;
-      var newCard = pageEl.querySelector('.db-card[data-index="' + cardIdx + '"]');
-      if (newCard) {
-        var result = newCard.querySelector('.db-result');
-        if (result) result.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      var cards = pageEl.querySelectorAll('.db-card');
+      if (cards.length > 1) {
+        var nextIdx = Math.min(cardIdx + 1, cards.length - 1);
+        cards[nextIdx].scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
-    }, 150);
+    }, 160);
   }
 
   // ========== 收藏 ==========
@@ -981,6 +1095,8 @@
 
   function handleTouchEnd(e) {
     if (!pageEl || _destroyed || !_touchStartY) return;
+    // 成绩单/确认面板打开时禁止滑动手势翻页，避免误滚背后列表
+    if (wrapperEl && (wrapperEl.querySelector('#dbReportOverlay') || wrapperEl.querySelector('#dbConfirmExitOverlay'))) { _touchStartY = 0; return; }
     var dy = e.changedTouches[0].clientY - _touchStartY;
     var dt = Date.now() - _touchStartTime;
     _touchStartY = 0;
@@ -999,29 +1115,52 @@
     }, isGesture ? 460 : 120);
   }
 
-  // ========== 停止 / 继续 / 重启 ==========
+  // ========== 结束判卷 / 继续 / 重启 / 退出 ==========
   function handleStop() {
-    if (_destroyed || !wrapperEl) return;
-    var existing = wrapperEl.querySelector('#dbStopOverlay');
-    if (existing) return;
-    var overlayHtml = renderStopOverlay();
-    wrapperEl.insertAdjacentHTML('beforeend', overlayHtml);
-    var actionBars = wrapperEl.querySelectorAll('.db-action-bar');
-    for (var i = 0; i < actionBars.length; i++) actionBars[i].style.display = 'none';
+    openReportPanel();
   }
 
-  function handleContinue() {
-    if (_destroyed || !wrapperEl) return;
-    var overlay = wrapperEl.querySelector('#dbStopOverlay');
-    if (overlay) overlay.remove();
-    var actionBars = wrapperEl.querySelectorAll('.db-action-bar');
-    for (var i = 0; i < actionBars.length; i++) actionBars[i].style.display = '';
+  // 顶部返回键（退出）同样进入统一判卷流程，防止误触直接丢进度
+  function handleExitRequest() {
+    openReportPanel();
+  }
+  window._dbExitFlow = handleExitRequest;
+
+  function handleReportContinue() {
+    closeReportPanel();
+    // 人性化：返回后自动定位到第一个未作答/未提交的卡片，方便接续
+    if (!pageEl) return;
+    var firstIdx = -1;
+    for (var i = 0; i < state.questions.length; i++) {
+      if (!state.submittedMap[state.questions[i].id]) { firstIdx = i; break; }
+    }
+    setTimeout(function() {
+      if (_destroyed || !pageEl || firstIdx < 0) return;
+      var card = pageEl.querySelector('.db-card[data-index="' + firstIdx + '"]');
+      if (card) card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 60);
+  }
+
+  function handleReportJump(btn) {
+    var idx = parseInt(btn.getAttribute('data-idx'), 10);
+    closeReportPanel();
+    if (isNaN(idx) || !pageEl) return;
+    setTimeout(function() {
+      if (_destroyed || !pageEl) return;
+      var card = pageEl.querySelector('.db-card[data-index="' + idx + '"]');
+      if (card) card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 60);
+  }
+
+  function handleReportExit() {
+    // 保存进度并离开（路由切换会触发 destroyDailyBillion 持久化）
+    saveState();
+    window.location.hash = '#/';
   }
 
   function handleRestart() {
     if (_destroyed || !wrapperEl) return;
-    var overlay = wrapperEl.querySelector('#dbStopOverlay');
-    if (overlay) overlay.remove();
+    closeReportPanel();
     cleanupDom();
     resetState();
     initDailyBillionCore();
@@ -1047,6 +1186,12 @@
     if (_saveTimer) { clearTimeout(_saveTimer); _saveTimer = null; }
     if (_progressTimer) { clearInterval(_progressTimer); _progressTimer = null; }
     if (_toastTimer) { clearTimeout(_toastTimer); _toastTimer = null; }
+    if (wrapperEl) {
+      var report = wrapperEl.querySelector('#dbReportOverlay');
+      if (report) report.remove();
+      var confirm = wrapperEl.querySelector('#dbConfirmExitOverlay');
+      if (confirm) confirm.remove();
+    }
     if (wrapperEl && wrapperEl.parentNode) {
       wrapperEl.parentNode.removeChild(wrapperEl);
     }
@@ -1119,6 +1264,8 @@
   function handleKeyDown(e) {
     if (!pageEl || _destroyed) return;
     if (!wrapperEl || !document.body.contains(wrapperEl)) return;
+    // 成绩单/确认面板打开时不响应翻页快捷键，防止误滚背后列表
+    if (wrapperEl.querySelector('#dbReportOverlay') || wrapperEl.querySelector('#dbConfirmExitOverlay')) return;
     var activeEl = document.activeElement;
     if (activeEl && (activeEl.tagName === 'INPUT' || activeEl.tagName === 'TEXTAREA' || activeEl.isContentEditable)) return;
     if (e.key === 'ArrowDown' || e.key === 'j') { e.preventDefault(); scrollToNextCard(); }

@@ -789,7 +789,7 @@ function renderHabitsPage(target) {
     var weekly = getWeeklyHeatmap(habit.id);
     var value = todayLog ? todayLog.value : 0;
     var completed = todayLog ? todayLog.completed : false;
-    var progress = habit.targetType === 'boolean' ? (completed ? 100 : 0) : Math.min(100, Math.round(value / habit.targetValue * 100));
+    var progress = habit.targetType === 'boolean' ? (completed ? 100 : 0) : (habit.targetValue > 0 ? Math.min(100, Math.round(value / habit.targetValue * 100)) : 0);
 
     html += '<div class="habit-card" data-hid="' + habit.id + '">';
     html += '<div class="habit-card-header">';
@@ -1022,7 +1022,7 @@ function updateHabitCardUI(hid, container) {
   var streak = getHabitStreak(hid);
   var value = todayLog ? todayLog.value : 0;
   var completed = todayLog ? todayLog.completed : false;
-  var progress = habit.targetType === 'boolean' ? (completed ? 100 : 0) : Math.min(100, Math.round(value / habit.targetValue * 100));
+  var progress = habit.targetType === 'boolean' ? (completed ? 100 : 0) : (habit.targetValue > 0 ? Math.min(100, Math.round(value / habit.targetValue * 100)) : 0);
 
   var card = container.querySelector('.habit-card[data-hid="' + hid + '"]');
   if (!card) return;

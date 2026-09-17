@@ -26,6 +26,7 @@
    * ========================================================= */
 
   var ENGINE_NAMES = {
+    OCRSPACE: 'ocrspace',   // L0 免费云 API（可选，需用户配置 key）
     VISION: 'vision',       // L1 AI多模态视觉模型 (AiClient.visionRecognize)
     PADDLE: 'paddle',       // L2 PaddleOCR ONNX (DB检测 + CRNN识别，中英混合最优)
     TESSERACT: 'tesseract', // L3 Tesseract.js v5 (社区最大，多语言兜底)
@@ -56,6 +57,9 @@
     }
   };
 
+  // 当前一次 recognize() 运行的上下文（顺序执行，单运行期无并发）
+  var _curRun = { handwriting: false, ocrspaceApiKey: '' };
+
   // CDN 资源配置（全部使用 jsDelivr，国内稳定）
   var CDN = {
     // onnxruntime-web (PaddleOCR 依赖)
@@ -72,6 +76,7 @@
     ocrad: 'https://cdn.jsdelivr.net/npm/ocrad.js@0.0.1/ocrad.js'
   };
 
+  _state.engineStates[ENGINE_NAMES.OCRSPACE] = ENGINE_STATE.IDLE;
   _state.engineStates[ENGINE_NAMES.VISION] = ENGINE_STATE.IDLE;
   _state.engineStates[ENGINE_NAMES.PADDLE] = ENGINE_STATE.IDLE;
   _state.engineStates[ENGINE_NAMES.TESSERACT] = ENGINE_STATE.IDLE;
@@ -114,21 +119,72 @@
 
   /* =========================================================
    *                 图像预处理（增强版）
-   *   复用现有 photo-quiz.js 逻辑 + 新增去噪/锐化可选步骤
+   *   - 印刷模式：灰度 + 自动阈值（大津法 Otsu）二值化，替代易失灵的
+   *     固定阈值 140/135（原实现弱光/深色背景图片会整幅变黑或变白）
+   *   - 手写模式：保留灰度（不二值化，二值化会抹掉浅色手写笔画），
+   *     百分位对比度拉伸 + 轻度锐化增强笔画边缘
    * ========================================================= */
+
+  // 大津法：遍历灰度直方图找类间方差最大的分割阈值（纯函数，可单测）
+  function _otsuThreshold(data) {
+    var hist = new Array(256);
+    for (var i = 0; i < 256; i++) hist[i] = 0;
+    var n = 0;
+    for (var i = 0; i < data.length; i += 4) { hist[data[i]]++; n++; }
+    if (n === 0) return 128;
+
+    var sum = 0;
+    for (var i = 0; i < 256; i++) sum += i * hist[i];
+    var sumB = 0, wB = 0, maxVariance = -1, threshold = 128;
+    for (var t = 0; t < 256; t++) {
+      wB += hist[t];
+      if (wB === 0) continue;
+      var wF = n - wB;
+      if (wF === 0) break;
+      sumB += t * hist[t];
+      var mB = sumB / wB;
+      var mF = (sum - sumB) / wF;
+      var variance = wB * wF * (mB - mF) * (mB - mF);
+      if (variance > maxVariance) { maxVariance = variance; threshold = t; }
+    }
+    return threshold;
+  }
+
+  // 3x3 拉普拉斯锐化（去噪版：中心 4 邻域差分），就地修改灰度数组
+  function _sharpenGrayscale(d, w, h) {
+    var src = d.slice();
+    for (var y = 1; y < h - 1; y++) {
+      for (var x = 1; x < w - 1; x++) {
+        var idx = (y * w + x) * 4;
+        var v = d[idx];
+        var lap = 4 * v - src[((y - 1) * w + x) * 4] - src[((y + 1) * w + x) * 4]
+                              - src[(y * w + (x - 1)) * 4] - src[(y * w + (x + 1)) * 4];
+        var out = v + 0.6 * lap;
+        d[idx] = d[idx + 1] = d[idx + 2] = out < 0 ? 0 : (out > 255 ? 255 : out);
+      }
+    }
+  }
 
   function _preprocessImage(dataUrl, opts, callback) {
     opts = opts || {};
-    var scale = opts.scale || 2;
+    var handwriting = !!opts.handwriting;
+    var scale = opts.scale || (handwriting ? 2.4 : 2);
     var img = new Image();
     img.crossOrigin = 'anonymous';
     img.onload = function () {
-      var w = img.width * scale, h = img.height * scale;
+      // 超大图限制输出像素，避免内存爆炸（放大后全图卷积会卡死）
+      var MAX_PIX = 3000 * 2000;
+      if (img.width * img.height * scale * scale > MAX_PIX) {
+        scale = Math.sqrt(MAX_PIX / (img.width * img.height || 1));
+      }
+      var w = Math.max(1, Math.round(img.width * scale)), h = Math.max(1, Math.round(img.height * scale));
       var canvas = document.createElement('canvas');
       canvas.width = w; canvas.height = h;
       var ctx = canvas.getContext('2d');
+      ctx.fillStyle = '#fff'; ctx.fillRect(0, 0, w, h); // 透明底画成白底，避免透明通道干扰
       ctx.drawImage(img, 0, 0, w, h);
-      var imgData = ctx.getImageData(0, 0, w, h);
+      var imgData;
+      try { imgData = ctx.getImageData(0, 0, w, h); } catch (e) { console.warn('[ocr-engine] getImageData 失败，使用原图'); callback(dataUrl); return; }
       var d = imgData.data;
 
       // 灰度
@@ -137,23 +193,27 @@
         d[i] = d[i + 1] = d[i + 2] = gray;
       }
 
-      // 对比度拉伸 (直方图归一化)
-      var minV = 255, maxV = 0;
-      for (var j = 0; j < d.length; j += 4) {
-        if (d[j] < minV) minV = d[j];
-        if (d[j] > maxV) maxV = d[j];
-      }
-      var range = Math.max(1, maxV - minV);
-      for (var k = 0; k < d.length; k += 4) {
-        var v = ((d[k] - minV) / range) * 255;
-        d[k] = d[k + 1] = d[k + 2] = v;
-      }
-
-      // 二值化（阈值自适应：Otsu简化版）
-      var threshold = opts.binaryThreshold || 140;
-      for (var m = 0; m < d.length; m += 4) {
-        var bv = d[m] > threshold ? 255 : 0;
-        d[m] = d[m + 1] = d[m + 2] = bv;
+      if (handwriting) {
+        // 百分位对比度拉伸（1% / 99% 截断，抗噪点与手写淡笔迹）
+        var sorted = new Uint8Array((w * h) | 0);
+        for (var si = 0, pi = 0; si < w * h; si++, pi += 4) sorted[si] = d[pi];
+        sorted.sort();
+        var lo = sorted[Math.floor(sorted.length * 0.02)] || 0;
+        var hi = sorted[Math.floor(sorted.length * 0.98)] || 255;
+        var rg = Math.max(1, hi - lo);
+        for (var k = 0; k < d.length; k += 4) {
+          var hv = Math.round(((d[k] - lo) / rg) * 255);
+          d[k] = d[k + 1] = d[k + 2] = hv < 0 ? 0 : (hv > 255 ? 255 : hv);
+        }
+        // 轻度锐化强化手写笔画
+        _sharpenGrayscale(d, w, h);
+      } else {
+        // 印刷模式：Otsu 自动二值化（弱光/反光背景也能自适应分割）
+        var t = _otsuThreshold(d);
+        for (var m = 0; m < d.length; m += 4) {
+          var bv = d[m] > t ? 255 : 0;
+          d[m] = d[m + 1] = d[m + 2] = bv;
+        }
       }
 
       ctx.putImageData(imgData, 0, 0);
@@ -195,7 +255,15 @@
 
     // PaddleOCR 特有修正（v5模型常见空格问题）
     if (engineName === ENGINE_NAMES.PADDLE) {
-      text = text.replace(/([\u4e00-\u9fa5])\s+([\u4e00-\u9fa5])/g, '$1$2'); // 中文间空格
+      // 仅合并行内中文间空格；不能用 \s（会把\n当空格，跨行粘成一行）。
+      // 全局正则对 A␣B␣C 的相邻重叠对只会消掉一个（如"吸 是"与"是 过"共享"是"），
+      // 因此循环合并直到收敛：至多 2 遍即可把任意长度的中文词链全合并。
+      var cnMerge = /([\u4e00-\u9fa5])[ \u3000\t]+([\u4e00-\u9fa5])/g;
+      for (var p = 0; p < 4; p++) {
+        var merged = text.replace(cnMerge, '$1$2');
+        if (merged === text) break;
+        text = merged;
+      }
       text = text.replace(/(选项)?\s*([A-D])\s*[\.、\)]\s*/g, '\n$2. '); // 选项格式化
     }
 
@@ -205,6 +273,115 @@
     }
 
     return text.trim();
+  }
+
+  /* =========================================================
+   *              候选质量评分（手写模式择优用）
+   *   手写场景单个引擎的输出常含乱码/噪声：用"有效字符密度 + 长度"
+   *   做相对排序，多引擎结果里挑最可信的一个
+   * ========================================================= */
+
+  function _rateOcrCandidate(text) {
+    if (!text) return -1;
+    var chars = String(text);
+    if (!chars.trim()) return -1;
+    var zh = (chars.match(/[\u4e00-\u9fa5]/g) || []).length;
+    var alpha = (chars.match(/[A-Za-z0-9*×²³μ其αβ%／%.%\-–]/g) || []).length; // 常用英数符号保守计
+    var meaningful = zh + alpha;
+    if (meaningful === 0) return -1;
+    var total = (chars.replace(/\s+/g, '') || '').length || 1;
+    var density = meaningful / total;              // 有效字符占比 [0,1]
+    var lenScore = Math.min(1, meaningful / 30);   // 长度奖励，≥30 有效字封顶
+    return density * 10 + lenScore * 6;
+  }
+
+  /* =========================================================
+   *              L0 引擎：OCR.space 免费云 API（可选）
+   *   免费注册 key（https://ocr.space/ocrapi 免费档 25k 次/月），
+   *   支持中文(chs) 与手写(Cloud1 backend / isHandwriting)。
+   *   浏览器直连（官方前端示例即 fetch + FormData），无需任何 SDK。
+   *   key 由用户自愿填写（localStorage: bioquest_ocrspace_key），
+   *   未配置 key 时本引擎自动跳过，不影响本地流水线。
+   * ========================================================= */
+
+  var OCRSPACE_ENDPOINT = 'https://api.ocr.space/parse/image';
+
+  function _getOcrspaceKey(opts) {
+    opts = opts || {};
+    if (opts.ocrspaceApiKey) return opts.ocrspaceApiKey;
+    try { return localStorage.getItem('bioquest_ocrspace_key') || ''; } catch (e) { return ''; }
+  }
+
+  function _tryOcrspaceEngine(imgData, ui, onResult, extra) {
+    var setText = _safeCallback(ui.setText);
+    var setProgress = _safeCallback(ui.setProgress);
+    extra = extra || {};
+    var key = _getOcrspaceKey(extra);
+    if (!key) {
+      // 未配置 key：静默跳过（不显示为失败，避免打扰未用云识别的用户）
+      onResult(null);
+      return;
+    }
+
+    setText('[L0/5] OCR.space 云端识别中（免费 API，支持中文/手写）...');
+    setProgress(15);
+
+    // dataURL → Blob → FormData
+    var fetchBody = null;
+    try {
+      var binary = atob(String(imgData).split(',')[1] || '');
+      var len = binary.length;
+      var bytes = new Uint8Array(len);
+      for (var i = 0; i < len; i++) bytes[i] = binary.charCodeAt(i);
+      var blob = new Blob([bytes], { type: 'image/png' });
+      var form = new FormData();
+      form.append('base64Image', String(imgData)); // OCR.space 支持 base64Image 字段
+      form.append('language', 'chs');
+      form.append('isOverlayRequired', 'false');
+      form.append('scale', 'true');
+      form.append('isTable', 'true');
+      form.append('OCREngine', '2');
+      if (extra.handwriting) form.append('isHandwriting', 'true');
+      fetchBody = form;
+    } catch (e) {
+      console.warn('[ocr-engine] OCR.space 请求构造失败:', e.message);
+      onResult(null);
+      return;
+    }
+
+    var ctrl = (typeof AbortController === 'function') ? new AbortController() : null;
+    var timer = ctrl ? setTimeout(function () { ctrl.abort(); }, 20000) : null;
+
+    fetch(OCRSPACE_ENDPOINT, {
+      method: 'POST',
+      body: fetchBody,
+      signal: ctrl ? ctrl.signal : undefined
+    }).then(function (r) {
+      if (timer) clearTimeout(timer);
+      return r.json();
+    }).then(function (json) {
+      var text = '';
+      if (json && Array.isArray(json.ParsedResults) && json.ParsedResults.length > 0) {
+        text = (json.ParsedResults.map(function (p) { return p.ParsedText || ''; }).join('\n')) || '';
+      } else if (json && json.ErrorMessage) {
+        console.warn('[ocr-engine] OCR.space 返回错误:', json.ErrorMessage);
+      }
+      text = _postprocessText(text, ENGINE_NAMES.OCRSPACE);
+      setProgress(100);
+      if (text && text.length >= 3) {
+        setText('[L0/5] ✓ OCR.space 识别完成，请校对', 'success');
+        onResult({ text: text, engine: ENGINE_NAMES.OCRSPACE });
+      } else {
+        setText('[L0/5] OCR.space 未识别到有效文本，进入本地引擎...', 'warn');
+        onResult(null);
+      }
+    }).catch(function (err) {
+      if (timer) clearTimeout(timer);
+      var aborted = err && (err.name === 'AbortError' || /abort/i.test(String(err.message)));
+      console.warn('[ocr-engine] OCR.space ' + (aborted ? '超时' : '请求失败') + ':', aborted ? '' : (err && err.message));
+      setText('[L0/5] OCR.space ' + (aborted ? '超时' : '不可用') + ' → 本地引擎', 'warn');
+      onResult(null);
+    });
   }
 
   /* =========================================================
@@ -329,8 +506,17 @@
 
     _loadPaddleEngine().then(function () {
       setProgress(45);
-      setText('[L2/4] PaddleOCR 识别中... (DB文本检测 + CRNN识别)');
+      setText('[L2/5] PaddleOCR 识别中... (DB文本检测 + CRNN识别)');
       var t0 = Date.now();
+      // 手写模式：先做"保留灰度"预处理（去噪/增强笔画），再交给 PaddleOCR，
+      // 不要直接送原图（拍照底色/阴影会干扰检测）
+      if (_curRun.handwriting) {
+        return new Promise(function (resolve) {
+          _preprocessImage(imgData, { handwriting: true }, function (processed) {
+            resolve(Paddle.ocr(processed));
+          });
+        });
+      }
       return Paddle.ocr(imgData);
     }).then(function (result) {
       var text = '';
@@ -395,10 +581,10 @@
     _loadTesseractEngine().then(function () {
       _state.engineStates[ENGINE_NAMES.TESSERACT] = ENGINE_STATE.LOADING;
       setProgress(20);
-      setText('[L3/4] 图像预处理（放大+灰度+二值化）...');
+      setText('[L3/5] 图像预处理（' + (_curRun.handwriting ? '手写保留灰度' : '放大+灰度+Otsu 二值化') + '）...');
 
       return new Promise(function (resolve) {
-        _preprocessImage(imgData, { scale: 2, binaryThreshold: 135 }, resolve);
+        _preprocessImage(imgData, { scale: 2, handwriting: _curRun.handwriting }, resolve);
       });
     }).then(function (processedData) {
       if (typeof window.Tesseract === 'undefined') {
@@ -406,30 +592,30 @@
       }
       setProgress(35);
 
-      // 双 PSM 策略：先 PSM 6（假设统一文本块），失败则 PSM 3（全自动）
+      // 双 PSM 策略：印刷假设统一文本块先 PSM 6；手写排版不规整直接 PSM 3
       var tryRecognize = function (psm, fallback) {
-        setText('[L3/4] Tesseract 识别中... PSM=' + psm);
+        setText('[L3/5] Tesseract 识别中... PSM=' + psm);
         return window.Tesseract.recognize(processedData, 'chi_sim+eng', {
           tessedit_pageseg_mode: psm,
           logger: function (m) {
             if (m.status === 'recognizing text') {
               var pct = Math.round(m.progress * 100);
               setProgress(35 + Math.round(pct * 0.6));
-              setText('[L3/4] Tesseract 识别中... ' + pct + '% (PSM ' + psm + ')');
+              setText('[L3/5] Tesseract 识别中... ' + pct + '% (PSM ' + psm + ')');
             }
           }
         }).then(function (result) {
           var text = (result && result.data && result.data.text) || '';
           text = _postprocessText(text, ENGINE_NAMES.TESSERACT);
           if (text.length < 5 && fallback) {
-            setText('[L3/4] 文本过短，切换 PSM=3 重试...');
-            return tryRecognize(3, false);
+            setText('[L3/5] 文本过短，切换 ' + (_curRun.handwriting ? 'PSM=6' : 'PSM=3') + ' 重试...');
+            return tryRecognize(_curRun.handwriting ? 6 : 3, false);
           }
           return text;
         });
       };
 
-      return tryRecognize(6, true);
+      return tryRecognize(_curRun.handwriting ? 3 : 6, true);
     }).then(function (text) {
       setProgress(100);
       if (text && text.length >= 3) {
@@ -548,12 +734,30 @@
     var setProgress = _safeCallback(ui.setProgress);
     var setEngine   = _safeCallback(ui.setEngine);
 
-    var engineOrder = opts.engineOrder || [
-      ENGINE_NAMES.VISION,
-      ENGINE_NAMES.PADDLE,
-      ENGINE_NAMES.TESSERACT,
-      ENGINE_NAMES.OCRAD
-    ];
+    // 上下文透传：手写标志 / OCR.space key（单次运行共享）
+    _curRun.handwriting = !!opts.handwriting;
+    _curRun.ocrspaceApiKey = (typeof opts.ocrspaceApiKey === 'string') ? opts.ocrspaceApiKey : '';
+    if (!_curRun.ocrspaceApiKey) {
+      _curRun.ocrspaceApiKey = _getOcrspaceKey({});
+    }
+
+    var engineOrder = opts.engineOrder;
+    if (!engineOrder) {
+      if (_curRun.handwriting) {
+        // 手写：云端 OCR.space（有 key 时）→ AI 视觉 → PaddleOCR → Tesseract
+        // OCRad 仅识别英文印刷体，对手写无意义，剔除
+        engineOrder = [ENGINE_NAMES.PADDLE, ENGINE_NAMES.TESSERACT];
+        if (_curRun.ocrspaceApiKey) engineOrder.unshift(ENGINE_NAMES.OCRSPACE);
+        engineOrder.unshift(ENGINE_NAMES.VISION);
+      } else {
+        engineOrder = [
+          ENGINE_NAMES.VISION,
+          ENGINE_NAMES.PADDLE,
+          ENGINE_NAMES.TESSERACT,
+          ENGINE_NAMES.OCRAD
+        ];
+      }
+    }
 
     var minTextLen = typeof opts.minTextLength === 'number' ? opts.minTextLength : 3;
     var index = 0;
@@ -570,10 +774,11 @@
 
       var runner;
       switch (engineName) {
-        case ENGINE_NAMES.VISION:    runner = _tryVisionEngine;    break;
-        case ENGINE_NAMES.PADDLE:    runner = _tryPaddleEngine;    break;
-        case ENGINE_NAMES.TESSERACT: runner = _tryTesseractEngine; break;
-        case ENGINE_NAMES.OCRAD:     runner = _tryOcradEngine;     break;
+        case ENGINE_NAMES.OCRSPACE:  runner = function (im, u, ocb) { _tryOcrspaceEngine(im, u, ocb, _curRun); }; break;
+        case ENGINE_NAMES.VISION:    runner = _tryVisionEngine;      break;
+        case ENGINE_NAMES.PADDLE:    runner = _tryPaddleEngine;      break;
+        case ENGINE_NAMES.TESSERACT: runner = _tryTesseractEngine;   break;
+        case ENGINE_NAMES.OCRAD:     runner = _tryOcradEngine;       break;
         default:
           console.warn('[ocr-engine] unknown engine:', engineName);
           return runNext();
@@ -583,10 +788,15 @@
         setText: setText,
         setProgress: setProgress
       }, function (result) {
-        if (result && result.text && result.text.length >= minTextLen) {
+        // 手写模式：需要达到最低质量分才认可（避免 Tesseract 乱码垃圾文本被当作结果）
+        var passes = result && result.text && result.text.length >= minTextLen;
+        if (passes && _curRun.handwriting && !result.engineConfidence && _rateOcrCandidate(result.text) < 3) {
+          passes = false;
+        }
+        if (passes) {
           if (typeof callback === 'function') callback(result);
         } else {
-          // 长度或结果不达标，继续下一级（L4的null会在runNext终止）
+          // 长度或质量不达标，继续下一级
           runNext();
         }
       });
@@ -627,7 +837,10 @@
     ENGINE_STATE: ENGINE_STATE,
     // 暴露内部工具供外部复用（可选）
     _preprocessImage: _preprocessImage,
-    _postprocessText: _postprocessText
+    _postprocessText: _postprocessText,
+    _otsuThreshold: _otsuThreshold,
+    _rateOcrCandidate: _rateOcrCandidate,
+    _getOcrspaceKey: _getOcrspaceKey
   };
 
   // 自动预加载策略：页面空闲时加载 L2/L3 依赖（后台准备，不阻塞UI）
@@ -1169,6 +1382,7 @@
       var list = document.createElement('div');
       _css(list, { display: 'flex', flexDirection: 'column', gap: '10px' });
       body.appendChild(list);
+      panel.appendChild(body); // 主体挂载到面板（缺失则文件选择区/进度条/任务列表不显示）
 
       // 底部
       var footer = document.createElement('div');
@@ -1319,6 +1533,13 @@
         task._subj = subjInput;
         meta.appendChild(subjInput);
 
+        // 手写开关：手写笔记走"保留灰度"预处理链 + 可选 OCR.space 手写 API
+        var handLabel = document.createElement('label');
+        handLabel.style.cssText = 'display:inline-flex;align-items:center;gap:4px;font-size:12px;color:#6a7a6e;cursor:pointer;white-space:nowrap;';
+        handLabel.innerHTML = '<input type="checkbox" style="width:auto;"> ✍️ 手写';
+        task._hand = handLabel.querySelector('input');
+        meta.appendChild(handLabel);
+
         middle.appendChild(top); middle.appendChild(ta); middle.appendChild(meta);
 
         var actions = document.createElement('div');
@@ -1427,7 +1648,8 @@
         _setRowStatus(task, 'running', '识别中');
         _updateStat();
         window.OcrEngine.recognize(task.dataUrl, {
-          minTextLength: 3
+          minTextLength: 3,
+          handwriting: !!(task._hand && task._hand.checked)
         }, {
           setProgress: function () {},
           setText: function (t) {

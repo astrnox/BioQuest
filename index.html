@@ -90,12 +90,16 @@
        空白/缩放错位/两边白边，也取代"裸 HTML"状态  */
     #bq-boot-mask {
       position: fixed;
-      inset: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
       z-index: 99999;
       display: flex;
       align-items: center;
       justify-content: center;
       flex-direction: column;
+      /* 老浏览器兼容：不依赖 flex gap（Chrome <84 / Safari <14.1），用 margin 兜底 */
       gap: 16px;
       background: radial-gradient(ellipse at 20% 20%, #f5f0e8 0%, #faf8f5 40%, #faf8f5 100%);
       /* 防止 mask 卸载时产生闪烁 */
@@ -115,6 +119,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      margin: 0 0 16px; /* 老浏览器（无 flex gap）下的间距兜底 */
       animation: bqBootBreathe 2.6s ease-in-out infinite;
     }
     #bq-boot-logo svg {
@@ -127,6 +132,7 @@
       font-weight: 600;
       color: #2c3e30;
       letter-spacing: 0.02em;
+      margin: 0 0 16px; /* 老浏览器（无 flex gap）下的间距兜底 */
     }
     html[data-theme="dark"] #bq-boot-label { color: #e0e8e2; }
     #bq-boot-spinner {
@@ -341,8 +347,8 @@
   <link rel="preload" href="css/phet-sims.css?v=20260809j" as="style" data-css-async>
   <noscript><link rel="stylesheet" href="css/phet-sims.css?v=20260809j"></noscript>
   <!-- 每日亿题样式（异步加载，不影响首屏） -->
-  <link rel="preload" href="css/daily-billion.css?v=20260809a" as="style" data-css-async>
-  <noscript><link rel="stylesheet" href="css/daily-billion.css?v=20260809a"></noscript>
+  <link rel="preload" href="css/daily-billion.css?v=20260916b" as="style" data-css-async>
+  <noscript><link rel="stylesheet" href="css/daily-billion.css?v=20260916b"></noscript>
   <!-- Issue #123/#128：全局离线提示横幅 + 生物主题微交互彩蛋 -->
   <link rel="preload" href="css/offline-status.css?v=20260828a" as="style" data-css-async>
   <noscript><link rel="stylesheet" href="css/offline-status.css?v=20260828a"></noscript>
@@ -736,7 +742,8 @@
   </footer>
 
   <!-- 移动端底部标签栏 -->
-  <nav class="bottom-tab-bar" id="bottomTabBar">
+  <nav class="bottom-tab-bar" id="bottomTabBar" aria-label="主导航">
+    <div class="bottom-tab-glow" aria-hidden="true"></div>
     <a href="#/" class="bottom-tab" data-tab="home">
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
       <span>首页</span>
@@ -791,10 +798,10 @@
   <script src="js/vendor/cal-heatmap.min.js?v=20260723d" defer></script>
   <!-- v5.0 Tier1 集成模块 -->
   <script src="js/integrations/vendor-init.js?v=20260723d" defer></script>
-  <!-- OCR 多引擎抽象层：Vision → ONNX PaddleOCR → Tesseract → OCRad 四级降级；
+  <!-- OCR 多引擎抽象层：L0 OCR.space(可选云) → L1 Vision → L2 PaddleOCR → L3 Tesseract → L4 OCRad 五级降级；
        photo-quiz.js / wrongbook.js / 社区发帖图片等模块均通过 window.OcrEngine 调用。
        文件本身非常轻（仅调度与懒加载框架），真正的引擎 CDN 在使用时按需下载。 -->
-  <script src="js/integrations/ocr-engine.js?v=20260809a" defer></script>
+  <script src="js/integrations/ocr-engine.js?v=20260916a" defer></script>
   <script src="js/integrations/study-heatmap.js?v=20260723d" defer></script>
   <script src="js/integrations/analytics-charts.js?v=20260723d" defer></script>
   <script src="js/integrations/diagram-renderer.js?v=20260723d" defer></script>
@@ -880,11 +887,11 @@
        且其功能页子模块（admin-users/questions/cards/community/ebook/ops/ocr/aigen）
        在点击对应标签时才按需加载 -->
   <script src="js/pages/learning-hub.js?v=20260809f" defer></script>
-  <script src="js/pages/daily-billion.js?v=20260905a" defer></script>
+  <script src="js/pages/daily-billion.js?v=20260916b" defer></script>
   <script src="js/engagement/points-ui.js?v=20260814a" defer></script>
   <!-- P1-2 拆分：路由配置表先于 app.js 加载，app.js 通过全局 Routes 引用 -->
   <script src="js/core/app-routes.js?v=20260821a" defer></script>
-  <script src="js/core/app.js?v=20260905a" defer></script>
+  <script src="js/core/app.js?v=20260916a" defer></script>
   <!-- PRD §5 补全模块 -->
   <script src="js/core/micro-details.js?v=20260803a" defer></script>
   <script src="js/core/sync-tabs.js?v=20260803a" defer></script>

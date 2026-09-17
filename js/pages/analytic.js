@@ -477,22 +477,61 @@ const MODULE_NAMES = [
  */
 function calcBioScore(stats) {
   const records = typeof getRecords === 'function' ? (getRecords() || []) : [];
+  /* getRecords() 按时间【降序】（最新在前）返回；凡需要「旧→新」顺序的
+   * 分析（成长性 G、全对率统计）一律使用升序副本，避免趋势方向反转。 */
+  const recordsAsc = records.slice().sort(function (a, b) {
+    return (a.timestamp || 0) - (b.timestamp || 0);
+  });
+
+  /* 本地日期（内置实现，不依赖全局工具，任何加载顺序/沙箱环境下均可计算） */
+  function localDateStr(d) {
+    var dt = (d === undefined || d === null) ? new Date() : (d instanceof Date ? d : new Date(d));
+    if (isNaN(dt.getTime())) return '';
+    var pad = function (n) { return String(n).padStart(2, '0'); };
+    return dt.getFullYear() + '-' + pad(dt.getMonth() + 1) + '-' + pad(dt.getDate());
+  }
+
+  /* 模块难度系数（科学依据：CBO 各模块典型难度 + 模块内正确率动态校准）。
+   * 键兼容 stats 与记录中的各种写法：module1..8（历史内部 key）、
+   * module_1..8（统一新格式）、以及常见中文科目名；未命中的科目按 0.7 兜底。 */
+  const MODULE_DIFFICULTY = {
+    module1: 0.6, module_1: 0.6, '细胞生物学': 0.6, '生物化学': 0.6, '分子生物学': 0.6, '细胞结构': 0.6, '细胞代谢': 0.6,
+    module2: 0.7, module_2: 0.7, '植物生理学': 0.7, '植物学': 0.7, '微生物学': 0.7, '植物生理': 0.7,
+    module3: 0.75, module_3: 0.75, '动物生理学': 0.75, '动物学': 0.75, '动物生理': 0.75,
+    module4: 0.85, module_4: 0.85, '遗传学': 0.85, '遗传': 0.85,
+    module5: 0.9, '进化': 0.9, '进化生物学': 0.9,
+    module6: 0.8, '生态学': 0.8,
+    module7: 0.65,
+    module8: 0.95
+  };
+  var MODULE_DIFF_PRESET = [0.6, 0.7, 0.75, 0.85, 0.9, 0.8, 0.65, 0.95];
+  function diffOf(key) {
+    if (!key) return 0.7;
+    if (typeof MODULE_DIFFICULTY[key] === 'number') return MODULE_DIFFICULTY[key];
+    var m = /^module[_-]([1-8])$/i.exec(String(key));
+    if (m) return MODULE_DIFF_PRESET[parseInt(m[1], 10) - 1];
+    return 0.7;
+  }
+  function clamp01(v) {
+    v = Number(v);
+    if (!v || !isFinite(v)) return 0;
+    return Math.max(0, Math.min(1, v));
+  }
 
   /* ============================================================
    * 维度一：B — 基础正确率 (Base Accuracy)
    * ----------------------------------------------------------
-   * 公式：B = 小题级正确率 × 100
    * 权重：25%
-   * 说明：最直接反映知识掌握程度，按小题粒度计算更精确
+   * 公式：B = Φ((正确率 − μ)/σ) × 100，μ=0.55、σ=0.25
+   * 说明：把正确率经正态 CDF 映射到 0-100 分（避免线性映射在两端
+   *       过度压缩/夸大）。锚点：
+   *       55% → 50 分，67.5% → 69 分，80% → 84 分，40% → 27 分
    * ============================================================ */
   const totalAns = stats.totalAnswered || 0;
   const totalCorr = stats.totalCorrect || 0;
-  const rawAccuracy = totalAns > 0 ? totalCorr / totalAns : 0;
+  const rawAccuracy = totalAns > 0 ? clamp01(totalCorr / totalAns) : 0;
 
-  // 使用正态累积分布函数做 Sigmoid 变换
-  // 将正确率映射到更合理的分数量表，避免线性映射导致极端值
-  // 锚点（与下方代码 μ=0.55, σ=0.25 保持一致）：
-  //   55% 正确率 → ~50 分，67.5% → ~69 分，80% → ~84 分，40% → ~27 分
+  // 标准正态 CDF（Abramowitz-Stegun 7.1.26 近似，误差 < 1.5e-7）
   function normCDF(x) {
     var a1 = 0.254829592, a2 = -0.284496736, a3 = 1.421413741;
     var a4 = -1.453152027, a5 = 1.061405429, p = 0.3275911;
@@ -509,64 +548,45 @@ function calcBioScore(stats) {
   /* ============================================================
    * 维度二：I — 洞察力 (Insight / Full-Correct Rate)
    * ----------------------------------------------------------
-   * 公式：I = 难度加权全对率 × 100
    * 权重：25%
-   * 说明：全对意味着完全理解，反映深度而非广度
-   *       使用模块难度系数加权：正确率低的模块全对价值更高
-   *       难度系数 d = 1 - 模块平均正确率（越高越难）
+   * 说明：I = 难度加权「题级全对率」× 100。
+   *   「全对」比「答对」更严格：一道题所有子项 100% 判对才算。
+   *   优先从练习/考试记录（records[].questions）统计真实数据；
+   *   记录无题目级明细（旧数据）时，回退「正确率^4」科学估算。
+   *   难度加权：难度高的模块全对价值更高（难度系数见 MODULE_DIFFICULTY）。
    * ============================================================ */
-  let fullyCorrect = 0;
-  let totalQuestions = 0;
-  let weightedCorrect = 0;
-  let totalWeight = 0;
+  let weightedFull = 0;
+  let weightTotal = 0;
+  let hasRealFullData = false;
 
-  // 模块难度系数表（基于 CBO 竞赛各模块典型难度）
-  const MODULE_DIFFICULTY = {
-    'module1': 0.6,  // 细胞生物学 — 基础
-    'module2': 0.7,  // 植物解剖与生理 — 中等
-    'module3': 0.75, // 动物解剖与生理 — 中等偏难
-    'module4': 0.85, // 动物行为学 — 较难
-    'module5': 0.9,  // 遗传与进化 — 难
-    'module6': 0.8,  // 生态学 — 中等偏难
-    'module7': 0.65, // 生物系统学 — 中等
-    'module8': 0.95  // 综合题 — 最难
-  };
-
-  if (stats.modules) {
-    Object.entries(stats.modules).forEach(function(entry) {
-      var key = entry[0];
-      var m = entry[1];
-      if (m.totalAnswered) {
-        totalQuestions += m.totalAnswered;
-        // 动态难度：基于模块实际正确率 + 预设难度系数的加权平均
-        var modAcc = m.totalAnswered > 0 ? (m.totalCorrect || 0) / m.totalAnswered : 0.5;
-        var presetDiff = MODULE_DIFFICULTY[key] || 0.7;
-        var dynamicDiff = 0.6 * presetDiff + 0.4 * (1 - modAcc);
-        // 估算全对数：用小题正确率推算
-        var subRatio = (m.subTotal || 0) > 0 ? (m.subCorrect || 0) / m.subTotal : modAcc;
-        // 全对概率 ≈ subRatio^4（4 小题全对的概率）
-        var estFullyCorrect = Math.round(m.totalAnswered * Math.pow(Math.max(0, subRatio), 4));
-        fullyCorrect += estFullyCorrect;
-        weightedCorrect += estFullyCorrect * dynamicDiff;
-        totalWeight += m.totalAnswered * dynamicDiff;
+  recordsAsc.forEach(function(r) {
+    var qs = Array.isArray(r.questions) ? r.questions : null;
+    if (!qs || qs.length === 0) return; // 无题目级明细，跳过本记录
+    qs.forEach(function(qi) {
+      if (!qi || typeof qi !== 'object') return;
+      var isFull = null;
+      if (typeof qi.correctSubs === 'number' && typeof qi.totalSubs === 'number') {
+        // 考试记录：正确子项数 === 总子项数
+        isFull = qi.totalSubs > 0 && qi.correctSubs === qi.totalSubs;
+      } else if (typeof qi.score === 'number' && isFinite(qi.score)) {
+        // 练习记录：每题满分恒为 2（CBO 计分统一），得分满分即全对
+        isFull = qi.score >= 2 - 1e-6;
       }
+      if (isFull === null) return;
+      hasRealFullData = true;
+      var w = diffOf(qi.subject);
+      weightTotal += w;
+      if (isFull) weightedFull += w;
     });
-  }
-
-  if (totalQuestions === 0) totalQuestions = records.length || 1;
-  if (fullyCorrect === 0 && totalAns > 0) {
-    // 回退：用正确率的 4 次方估算全对率
-    var estRate = Math.pow(Math.max(0, rawAccuracy), 4);
-    fullyCorrect = Math.round(totalAns * estRate);
-    weightedCorrect = fullyCorrect * 0.7;
-    totalWeight = totalAns * 0.7;
-  }
+  });
 
   var I;
-  if (totalWeight > 0) {
-    I = Math.round((weightedCorrect / totalWeight) * 100);
-  } else if (totalQuestions > 0) {
-    I = Math.round((fullyCorrect / totalQuestions) * 100);
+  if (hasRealFullData && weightTotal > 0) {
+    I = Math.round((weightedFull / weightTotal) * 100);
+  } else if (totalAns > 0) {
+    // 回退：用正确率的 4 次方估算全对率（4 小问独立同假设的合理上界）
+    var estRate = Math.pow(rawAccuracy, 4);
+    I = Math.round(estRate * 100);
   } else {
     I = 0;
   }
@@ -583,13 +603,13 @@ function calcBioScore(stats) {
   const practiceCount = records.length || 0;
   var baseO = Math.min(100, Math.round(Math.log2(practiceCount + 1) * 18));
 
-  // 连续性奖励：检查最近 7 天的练习天数
+  // 连续性奖励：检查最近 7 天（本地时区）的练习天数
   var recentDays = {};
-  var now = Date.now();
+  var cutoff = Date.now() - 7 * 86400000;
   records.forEach(function(r) {
-    var d = new Date(r.timestamp || 0);
-    if (now - d.getTime() < 7 * 86400000) {
-      recentDays[d.toISOString().split('T')[0]] = true;
+    var d = r.timestamp ? new Date(r.timestamp) : null;
+    if (d && !isNaN(d.getTime()) && d.getTime() >= cutoff) {
+      recentDays[localDateStr(d)] = true;
     }
   });
   var activeDays = Object.keys(recentDays).length;
@@ -600,19 +620,22 @@ function calcBioScore(stats) {
   /* ============================================================
    * 维度四：G — 成长性 (Growth / Improvement Trend)
    * ----------------------------------------------------------
-   * 公式：使用双指数平滑 (Holt's method) 拟合趋势
    * 权重：15%
-   * 说明：比简单 EWMA 更精确地捕捉趋势和水平
+   * 说明：基于【时间升序】（旧→新）记录的双指数平滑 (Holt's) 趋势。
    *       水平方程：l_t = α·y_t + (1-α)·(l_{t-1} + b_{t-1})
    *       趋势方程：b_t = β·(l_t - l_{t-1}) + (1-β)·b_{t-1}
-   *       最终 G = 50 + 趋势斜率 × 放大系数
+   *       最终 G = 50 + 趋势斜率 × 500（每次提升 1% ≈ +5 分）。
+   *       注意：底数必须「旧→新」升序，否则进步会被误判为退步。
    * ============================================================ */
-  let G = 50;
-  var scoreRates = records.map(function(r) {
-    return (r.correctCount || 0) / Math.max(1, r.totalQuestions || 1);
-  });
+  // 单条记录得分率（clamp 防御历史/异常记录中 correctCount > totalQuestions）
+  function rateOf(r) {
+    var tot = Math.max(1, r.totalQuestions || 1);
+    return clamp01((r.correctCount || 0) / tot);
+  }
+  var scoreRates = recordsAsc.map(rateOf);
 
-  if (records.length >= 4) {
+  let G = 50;
+  if (scoreRates.length >= 4) {
     // 双指数平滑 (Holt's Linear Trend)
     var alpha_h = 0.4;  // 水平平滑系数
     var beta_h = 0.3;   // 趋势平滑系数
@@ -626,11 +649,10 @@ function calcBioScore(stats) {
       trend = newTrend;
     }
 
-    // trend 是每条记录的平均变化率，放大到 0-100 分
-    // trend ≈ 0.01 表示每题提升 1%，这是显著的进步
+    // trend 是每次记录的平均变化率，放大到 0-100 分
     G = Math.round(50 + trend * 500);
     G = Math.max(0, Math.min(100, G));
-  } else if (records.length >= 2) {
+  } else if (scoreRates.length >= 2) {
     // 少量数据时用简单差分
     var firstHalf = scoreRates.slice(0, Math.ceil(scoreRates.length / 2));
     var secondHalf = scoreRates.slice(Math.ceil(scoreRates.length / 2));
@@ -645,19 +667,14 @@ function calcBioScore(stats) {
   /* ============================================================
    * 维度五：C — 一致性 (Consistency / Stability)
    * ----------------------------------------------------------
-   * 公式：基于变异系数 + 近期波动双指标
    * 权重：15%
-   * 说明：
-   *   C_total = 0.6 × C_cv + 0.4 × C_recent
-   *   C_cv = 100 × exp(-3 × CV²)  （指数衰减，CV 越大惩罚越重）
-   *   C_recent = 近 5 次得分的标准差映射
-   *   这样设计使得偶尔失常不会严重拉低分数，但持续波动会
+   * 说明：C = 0.6×C_cv + 0.4×C_recent，基于变异系数（CV）指数衰减。
+   *   C_cv = 100·e^(−3·CV²)，偶尔失常惩罚轻、持续波动惩罚重。
+   *   （一致性仅与波动幅度有关、与时间顺序无关，使用原始 records 即可）
    * ============================================================ */
   let C = 50;
   if (records.length >= 3) {
-    var rates = records.map(function(r) {
-      return (r.correctCount || 0) / Math.max(1, r.totalQuestions || 1);
-    });
+    var rates = records.map(rateOf);
     var mean = rates.reduce(function(s, v) { return s + v; }, 0) / rates.length;
     var variance = rates.reduce(function(s, v) { return s + (v - mean) * (v - mean); }, 0) / rates.length;
     var stddev = Math.sqrt(variance);
@@ -694,8 +711,8 @@ function calcBioScore(stats) {
       var key = entry[0];
       var m = entry[1];
       if (m.totalAnswered > 0) {
-        var modAcc = (m.totalCorrect || 0) / m.totalAnswered;
-        var diff = MODULE_DIFFICULTY[key] || 0.7;
+        var modAcc = clamp01((m.totalCorrect || 0) / m.totalAnswered);
+        var diff = diffOf(key);
         weightedAcc += modAcc * diff;
         totalDiff += diff;
       }
@@ -706,44 +723,37 @@ function calcBioScore(stats) {
   }
 
   /* ============================================================
-   * 综合评分
+   * 综合评分（合成规则与 js/core/score-engine.js 完全一致；
+   * 优先调用共享纯函数，沙箱/独立加载时走内联兜底，避免双实现漂移）
    * ----------------------------------------------------------
-   * Bio Score = B×0.25 + I×0.25 + O×0.10 + G×0.15 + C×0.15 + D×0.10
-   *
-   * 交互修正：B 和 I 存在协同效应
-   *   若 B ≥ 70 且 I ≥ 70，额外 +5（基础扎实+洞察力强的协同）
-   *   若 B < 40 且 I < 40，额外 -5（基础和洞察都弱，需要重点补）
-   *
-   * 评级标准（参考 CBO 联赛奖项线 + 正态分布校准）：
-   *   S+ (95-100)：顶尖 — 全国前 1%，国一稳拿
-   *   S  (90-94) ：卓越 — 全国一等奖水准
-   *   A+ (85-89) ：优秀+ — 省一/国二水准
-   *   A  (80-84) ：优秀 — 省级一等奖水准
-   *   B+ (75-79) ：良好+ — 省一冲线区
-   *   B  (70-74) ：良好 — 省级二等奖水准
-   *   C+ (65-69) ：合格+ — 省二冲线区
-   *   C  (60-64) ：合格 — 省级三等奖水准
-   *   D+ (50-59) ：待提升 — 有基础，需系统训练
-   *   D  (0-49)  ：需努力 — 基础薄弱，建议从基础模块开始
+   * Bio Score = B×25% + I×25% + O×10% + G×15% + C×15% + D×10%
+   * 交互修正：B 与 I 协同（两强 +5，两弱 −5）
    * ============================================================ */
-  var score = Math.round(
-    B * 0.25 + I * 0.25 + O * 0.10 + G * 0.15 + C * 0.15 + D * 0.10
-  );
-
-  // 交互修正
-  if (B >= 70 && I >= 70) score += 5;
-  if (B < 40 && I < 40) score -= 5;
-
-  let grade = 'D', letter = '需努力';
-  if (score >= 95) { grade = 'S+'; letter = '顶尖'; }
-  else if (score >= 90) { grade = 'S'; letter = '卓越'; }
-  else if (score >= 85) { grade = 'A+'; letter = '优秀+'; }
-  else if (score >= 80) { grade = 'A'; letter = '优秀'; }
-  else if (score >= 75) { grade = 'B+'; letter = '良好+'; }
-  else if (score >= 70) { grade = 'B'; letter = '良好'; }
-  else if (score >= 65) { grade = 'C+'; letter = '合格+'; }
-  else if (score >= 60) { grade = 'C'; letter = '合格'; }
-  else if (score >= 50) { grade = 'D+'; letter = '待提升'; }
+  var score, grade, letter;
+  if (typeof computeBioScoreFromRaw === 'function') {
+    var _engineOut = computeBioScoreFromRaw({ B: B, I: I, O: O, G: G, C: C, D: D });
+    score = _engineOut.score;
+    grade = _engineOut.grade;
+    letter = _engineOut.letter;
+  } else {
+    score = Math.round(
+      B * 0.25 + I * 0.25 + O * 0.10 + G * 0.15 + C * 0.15 + D * 0.10
+    );
+    // 交互修正
+    if (B >= 70 && I >= 70) score += 5;
+    if (B < 40 && I < 40) score -= 5;
+    grade = 'D'; letter = '需努力';
+    // 阈值对齐历年联赛获奖线（与 score-engine 共享表一致，防漂移）
+    if (score >= 88) { grade = 'S+'; letter = '顶尖'; }
+    else if (score >= 82) { grade = 'S'; letter = '卓越'; }
+    else if (score >= 76) { grade = 'A+'; letter = '优秀+'; }
+    else if (score >= 68) { grade = 'A'; letter = '优秀'; }
+    else if (score >= 62) { grade = 'B+'; letter = '良好+'; }
+    else if (score >= 55) { grade = 'B'; letter = '良好'; }
+    else if (score >= 48) { grade = 'C+'; letter = '合格+'; }
+    else if (score >= 40) { grade = 'C'; letter = '合格'; }
+    else if (score >= 30) { grade = 'D+'; letter = '待提升'; }
+  }
 
   return {
     score: Math.min(100, Math.max(0, score)),

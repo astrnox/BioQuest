@@ -30,6 +30,7 @@
     "esbuild": "^0.24.2",
     "jest": "^30.4.2",
     "jest-environment-jsdom": "^30.4.1",
-    "jsdom": "^29.1.1"
+    "jsdom": "^29.1.1",
+    "playwright": "^1.63.0"
   }
 }

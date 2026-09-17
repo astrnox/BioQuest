@@ -1118,7 +1118,8 @@ function computeTrendData(records) {
     var r = recent[i];
     var total = r.totalQuestions || 0;
     var correct = r.correctCount || 0;
-    var accuracy = total > 0 ? Math.round((correct / total) * 100) : 0;
+    // correctCount 恒钳制到题目级（≤total），防御旧考试记录中「子题正确数」>题目数
+    var accuracy = total > 0 ? Math.min(100, Math.round((Math.min(correct, total) / total) * 100)) : 0;
     var date = r.date || '';
     /* 简化日期显示 */
     if (date.length > 5) date = date.slice(5); /* MM-DD */

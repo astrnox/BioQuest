@@ -6,8 +6,11 @@
  *
  * 数学参考：Rabiner 1989 HMM 教程（BKT 是 2 状态 HMM）
  * 状态：L（已掌握）/ N（未掌握）
- * 转移矩阵：P(L→L)=(1-T), P(L→N)=T（一旦掌握不会遗忘——标准 BKT 假设）
- *          P(N→L)=T, P(N→N)=(1-T)
+ * 转移矩阵（对称单参数 T，兼顾「习得」与「遗忘」）：
+ *          P(L→L)=(1-T), P(L→N)=T
+ *          P(N→L)=T,    P(N→N)=(1-T)
+ * 注：与经典 BKT「掌握后不遗忘」的不同在于，本实现用同一 T 同时表示
+ *     习得率与遗忘率（简化单参数模型，配合 EM 估计 L0/T/S/G）。
  * 发射模型：P(correct|L)=1-S, P(wrong|L)=S
  *          P(correct|N)=G,   P(wrong|N)=1-G
  */
@@ -44,8 +47,9 @@
     var pL = L0;
     for (var i = 0; i < obs.length; i++) {
       var o = obs[i] ? 1 : 0;
-      // 预测：P(L_n | obs_{1..n-1}) = L_{n-1} + (1 - L_{n-1}) * T  （L→L=1-T，N→L=T）
-      var pL_pred = pL * (1 - T) + (1 - pL) * T;
+      // 预测：首个观测直接用初始掌握概率 L0（与 EM 的 forwardBackward 初始 π=L0
+      // 保持一致，首观测前不做学习转移）；此后每步先按转移矩阵推进状态分布。
+      var pL_pred = (i === 0) ? pL : (pL * (1 - T) + (1 - pL) * T);
       // 发射：P(correct | L_pred) = pL_pred * (1 - S) + (1 - pL_pred) * G
       var pCorrect = pL_pred * (1 - S) + (1 - pL_pred) * G;
       // 后验贝叶斯更新
@@ -200,7 +204,8 @@
     var ll = 0;
     for (var i = 0; i < obs.length; i++) {
       var o = obs[i] ? 1 : 0;
-      var pL_pred = pL * (1 - T) + (1 - pL) * T;
+      // 与 forward()/forwardBackward() 一致：首观测不预转移，直接用 L0 先验
+      var pL_pred = (i === 0) ? pL : (pL * (1 - T) + (1 - pL) * T);
       var pCorrect = pL_pred * (1 - S) + (1 - pL_pred) * G;
       var p = o ? pCorrect : (1 - pCorrect);
       if (p < EPS) p = EPS;

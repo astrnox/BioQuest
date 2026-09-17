@@ -1,97 +1,97 @@
 {
-  "M4-01-516222a8": {
-    "concept": "古 DNA 与人类演化",
-    "difficulty": "league",
-    "explanation": "A【对】依据：古 DNA 在埋藏过程中发生水解和氧化损伤，最典型的是胞嘧啶脱氨基为尿嘧啶（C→U），PCR 扩增时 U 被读为 T，导致片段末端出现 C→T 替换，这是鉴定古 DNA 真实性的关键指标。\nB【对】依据：每个细胞含数百至数千个线粒体 DNA 拷贝，而核基因组仅 2 份，在 DNA 严重降解的古样本中，mtDNA 的回收率远高于核 DNA，因此早期古 DNA 研究多从 mtDNA 入手。\nC【对】依据：通过比对尼安德特人、丹尼索瓦人和现代人类的核基因组，发现非非洲人群基因组中约 1-2% 来自尼安德特人，证实了走出非洲后存在杂交事件（introgression）。\nD【错】错因：DNA 测序仅能获取基因组序列信息，基因表达（转录组）需要 RNA 作为模板，而 RNA 比 DNA 更不稳定，古样本中极难保存完整 mRNA，因此古 DNA 无法直接反映基因表达模式。",
-    "image": {
-      "caption": "古人类适应性基因渗入检测",
-      "credit": "Zhang X et al., Mol Biol Evol 2023",
-      "doi": "10.1093/molbev/msad001",
-      "figure": "1",
-      "file": "assets/questions/M4-01-516222a8/fig1.jpg",
-      "license": "CC BY-NC 4.0",
-      "pmcId": "PMC9887621",
-      "source": "paper"
-    },
-    "question": "研究者从距今约 4 万年的尼安德特人化石中提取 DNA 并进行高通量测序，以研究古人类演化。关于古 DNA 研究，下列叙述正确的有：",
-    "references": [
-      {
-        "authors": "Prufer K et al.",
-        "doi": "10.1126/science.abi8264",
-        "journal": "Science",
-        "title": "The evolutionary history of Neanderthals and Denisovans",
-        "year": 2024
-      }
-    ],
-    "subQuestions": [
-      {
-        "answer": true,
-        "label": "A",
-        "text": "古 DNA 片段末端常出现胞嘧啶脱氨基导致的 C→T 错误，这是古 DNA 的特征性损伤模式"
-      },
-      {
-        "answer": true,
-        "label": "B",
-        "text": "线粒体 DNA 因拷贝数高，比核 DNA 更容易从古代样本中成功提取"
-      },
-      {
-        "answer": true,
-        "label": "C",
-        "text": "古核基因组分析可揭示尼安德特人与现代人类之间的基因交流事件"
-      },
-      {
-        "answer": false,
-        "label": "D",
-        "text": "古 DNA 测序可直接反映古代个体的基因表达模式"
-      }
-    ],
-    "subject": "进化生物学",
-    "tags": [
-      "molecular_evo",
-      "module_4",
-      "进化生物学",
-      "古 DNA",
-      "尼安德特人"
-    ],
-    "target": "competition",
-    "type": "mtf"
+ "M4-01-516222a8": {
+  "concept": "古 DNA 与人类演化",
+  "difficulty": "league",
+  "explanation": "A【对】依据：古 DNA 在埋藏过程中发生水解和氧化损伤，最典型的是胞嘧啶脱氨基为尿嘧啶（C→U），PCR 扩增时 U 被读为 T，导致片段末端出现 C→T 替换，这是鉴定古 DNA 真实性的关键指标。\nB【对】依据：每个细胞含数百至数千个线粒体 DNA 拷贝，而核基因组仅 2 份，在 DNA 严重降解的古样本中，mtDNA 的回收率远高于核 DNA，因此早期古 DNA 研究多从 mtDNA 入手。\nC【对】依据：通过比对尼安德特人、丹尼索瓦人和现代人类的核基因组，发现非非洲人群基因组中约 1-2% 来自尼安德特人，证实了走出非洲后存在杂交事件（introgression）。\nD【错】错因：DNA 测序仅能获取基因组序列信息，基因表达（转录组）需要 RNA 作为模板，而 RNA 比 DNA 更不稳定，古样本中极难保存完整 mRNA，因此古 DNA 无法直接反映基因表达模式。\n【思路引导】古DNA题先想“损伤与污染”两大坑：末端 C→T（胞嘧啶脱氨基为尿嘧啶）是古DNA真实性的典型指标；线粒体DNA拷贝数多，严重降解的古老样本先从线粒体入手；测序时必须设空白对照以排除现代DNA污染。",
+  "image": {
+   "caption": "古人类适应性基因渗入检测",
+   "credit": "Zhang X et al., Mol Biol Evol 2023",
+   "doi": "10.1093/molbev/msad001",
+   "figure": "1",
+   "file": "assets/questions/M4-01-516222a8/fig1.jpg",
+   "license": "CC BY-NC 4.0",
+   "pmcId": "PMC9887621",
+   "source": "paper"
   },
-  "M4-02-b7356c45": {
-    "concept": "分子钟与中性学说",
-    "difficulty": "league",
-    "explanation": "A【对】依据：中性突变不影响适合度，其在种群中的频率变化与固定由随机漂变主导。\nB【对】依据：若突变速率恒定，分子差异量与分歧时间成正比，可校准分子钟。\nC【错】错因：中性学说只解释分子水平的多数变异，承认表型水平的适应性进化仍由选择主导。\nD【对】依据：同义突变多不受选择约束，积累快；非同义突变常受纯化选择清除。",
-    "question": "木村资生的中性学说认为多数分子水平的变异是选择中性的。关于分子进化，下列叙述正确的有：",
-    "references": [],
-    "subQuestions": [
-      {
-        "answer": true,
-        "label": "A",
-        "text": "中性突变的固定主要依靠遗传漂变而非自然选择"
-      },
-      {
-        "answer": true,
-        "label": "B",
-        "text": "分子钟假说认为分子进化速率大致恒定，可用于估算分歧时间"
-      },
-      {
-        "answer": false,
-        "label": "C",
-        "text": "中性学说完全否定了自然选择的作用"
-      },
-      {
-        "answer": true,
-        "label": "D",
-        "text": "同义突变的进化速率一般高于非同义突变"
-      }
-    ],
-    "subject": "进化生物学",
-    "tags": [
-      "molecular_evo",
-      "module_4",
-      "进化生物学",
-      "分子钟与中性学说"
-    ],
-    "target": "competition",
-    "type": "mtf"
-  }
+  "question": "研究者从距今约 4 万年的尼安德特人化石中提取 DNA 并进行高通量测序，以研究古人类演化。根据以上信息，判断以下陈述的正误。",
+  "references": [
+   {
+    "authors": "Prufer K et al.",
+    "doi": "10.1126/science.abi8264",
+    "journal": "Science",
+    "title": "The evolutionary history of Neanderthals and Denisovans",
+    "year": 2024
+   }
+  ],
+  "subQuestions": [
+   {
+    "answer": true,
+    "label": "A",
+    "text": "古 DNA 片段末端常出现胞嘧啶脱氨基导致的 C→T 错误，这是古 DNA 的特征性损伤模式"
+   },
+   {
+    "answer": true,
+    "label": "B",
+    "text": "线粒体 DNA 因拷贝数高，比核 DNA 更容易从古代样本中成功提取"
+   },
+   {
+    "answer": true,
+    "label": "C",
+    "text": "古核基因组分析可揭示尼安德特人与现代人类之间的基因交流事件"
+   },
+   {
+    "answer": false,
+    "label": "D",
+    "text": "古 DNA 测序可直接反映古代个体的基因表达模式"
+   }
+  ],
+  "subject": "进化生物学",
+  "tags": [
+   "molecular_evo",
+   "module_4",
+   "进化生物学",
+   "古 DNA",
+   "尼安德特人"
+  ],
+  "target": "competition",
+  "type": "mtf"
+ },
+ "M4-02-b7356c45": {
+  "concept": "分子钟与中性学说",
+  "difficulty": "league",
+  "explanation": "A【对】依据：中性突变不影响适合度，其在种群中的频率变化与固定由随机漂变主导。\nB【对】依据：若突变速率恒定，分子差异量与分歧时间成正比，可校准分子钟。\nC【错】错因：中性学说只解释分子水平的多数变异，承认表型水平的适应性进化仍由选择主导。\nD【对】依据：同义突变多不受选择约束，积累快；非同义突变常受纯化选择清除。\n【易错易混】中性学说解释的是“分子水平”多数变异由漂变固定，并不否定“表型水平”的自然选择——二者互补而非对立。同义突变近乎中性、积累较快，非同义突变常被纯化选择清除。",
+  "question": "木村资生的中性学说认为多数分子水平的变异是选择中性的。根据以上信息，判断以下陈述的正误。",
+  "references": [],
+  "subQuestions": [
+   {
+    "answer": true,
+    "label": "A",
+    "text": "中性突变的固定主要依靠遗传漂变而非自然选择"
+   },
+   {
+    "answer": true,
+    "label": "B",
+    "text": "分子钟假说认为分子进化速率大致恒定，可用于估算分歧时间"
+   },
+   {
+    "answer": false,
+    "label": "C",
+    "text": "中性学说完全否定了自然选择的作用"
+   },
+   {
+    "answer": true,
+    "label": "D",
+    "text": "同义突变的进化速率一般高于非同义突变"
+   }
+  ],
+  "subject": "进化生物学",
+  "tags": [
+   "molecular_evo",
+   "module_4",
+   "进化生物学",
+   "分子钟与中性学说"
+  ],
+  "target": "competition",
+  "type": "mtf"
+ }
 }

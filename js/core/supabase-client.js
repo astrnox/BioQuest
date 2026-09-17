@@ -646,10 +646,12 @@ async function registerUser(username, password, displayName, email) {
         try { upsertData.device_id = deviceId; } catch (e) {}
         await sb.from('profiles').upsert(upsertData, { onConflict: 'id' });
       } catch (e1) {
+        // 回退时也必须保留 email——否则 profiles.email 为 NULL，
+        // 后续"用户名登录"会因查不到邮箱而被拒，正确密码也会误报失败。
         try {
-          await sb.from('profiles').upsert({
-            id: data.user.id, username: username, display_name: displayName || username, user_group: initialGroup, points: POINTS_DEFAULT
-          }, { onConflict: 'id' });
+          var upsertDataFallback = { id: data.user.id, username: username, display_name: displayName || username, user_group: initialGroup, points: POINTS_DEFAULT };
+          try { upsertDataFallback.email = email; } catch (e) {}
+          await sb.from('profiles').upsert(upsertDataFallback, { onConflict: 'id' });
         } catch (e2) {
           console.warn('[BioQuest] profiles upsert 失败（已尝试回退）:', e2 && e2.message);
         }
@@ -723,22 +725,25 @@ async function loginUser(usernameOrEmail, password) {
       var profileLookup = null;
       try {
         profileLookup = await sb.from('profiles')
-          .select('email')
+          .select('id, email')
           .eq('username', usernameOrEmail)
           .maybeSingle();
         if (profileLookup.data && profileLookup.data.email) {
           email = profileLookup.data.email;
+        } else if (profileLookup.data && !profileLookup.data.email) {
+          // 用户名存在但 profiles.email 为 NULL：不要用"猜测的占位邮箱"去校验！
+          // 否则该用户若用真实邮箱注册，会被带到错误的邮箱 → 密码正确也被判"密码错误"。
+          return {
+            ok: false,
+            error: '该账号未绑定邮箱，无法用用户名登录。请用注册邮箱登录，或联系管理员补全邮箱后重试',
+            code: 'EMAIL_NOT_BOUND'
+          };
         } else {
-          // 兼容旧数据：部分用户注册时未填邮箱，Supabase 触发器生成的
-          // profiles.email 为 null（无法直接拿到）。此时回退到注册时的
-          // 占位邮箱规则（username@bioquest.local，清洗规则与注册一致），
-          // 否则这类账号用用户名+正确密码也会被误判为"用户名不存在"。
-          var cleanInput = String(usernameOrEmail).toLowerCase().replace(/[^a-z0-9]/g, '');
-          var cleanUser = cleanInput.slice(0, 20) || 'user';
-          email = cleanUser + '@bioquest.local';
+          // 用户名在 profiles 中不存在
+          return { ok: false, error: '用户名或密码错误', code: 'INVALID_CREDENTIALS' };
         }
       } catch (e) {
-        return { ok: false, error: '登录失败，请稍后重试' };
+        return { ok: false, error: '登录失败，请稍后重试', code: 'LOOKUP_ERROR' };
       }
     }
     var { data, error } = await sb.auth.signInWithPassword({
@@ -1326,6 +1331,8 @@ async function updateBioScore(bioScore, stats) {
       updated_at: new Date().toISOString()
     };
     await sb.from('profiles').upsert({ id: _currentUser.id, ...updates, device_id: localStorage.getItem('bioquest_device_id') || 'unknown' }, { onConflict: 'id' });
+    // 分数已变化：失效排行榜缓存，保证下次查询立即拿到最新值（实时更新）
+    invalidateLeaderboardCache();
 
     // 刷题奖励：每答满10题获得信用
     try {
@@ -1350,15 +1357,16 @@ async function updateBioScore(bioScore, stats) {
 }
 
 /**
- * 获取排行榜（带30秒缓存）
+ * 获取排行榜（短缓存 + 失败可感知）
+ * 缓存键按 tab 区分（fixed：checkin 不再与 bio 共用 score 缓存键）
  */
-var _leaderboardCache = { practice: null, score: null, practice_ts: 0, score_ts: 0 };
-var LEADERBOARD_CACHE_TTL = 30000;
-var LEADERBOARD_FETCH_TIMEOUT = 5000;  // 排行榜查询超短超时 5s，避免 Supabase SDK 把请求拖死或 abort 污染控制台
-var _leaderboardInflight = {};         // 防抖：同 tab 在途请求复用，避免并发 abort
+var _leaderboardCache = { bio: null, practice: null, checkin: null };
+var LEADERBOARD_CACHE_TTL = 5000;   // 短缓存：5s 内命中，超过即向数据库实时拉取
+var LEADERBOARD_FETCH_TIMEOUT = 5000;  // 排行榜查询超短超时 5s
+var _leaderboardInflight = {};         // 防抖：同 tab 在途请求复用
 
 async function getLeaderboard(tab, limit) {
-  var cacheKey = tab === 'practice' ? 'practice' : 'score';
+  var cacheKey = tab === 'practice' ? 'practice' : (tab === 'checkin' ? 'checkin' : 'bio');
   var now = Date.now();
   if (_leaderboardCache[cacheKey] && (now - _leaderboardCache[cacheKey + '_ts']) < LEADERBOARD_CACHE_TTL) {
     return _leaderboardCache[cacheKey];
@@ -1404,6 +1412,10 @@ async function getLeaderboard(tab, limit) {
       if (ctrl && typeof ctrl.signal !== 'undefined') fetchOpts.signal = ctrl.signal;
       var restRes = await fetch(SUPABASE_URL + '/rest/v1/profiles?' + restParams, fetchOpts);
       var data = restRes.ok ? (await restRes.json()) : null;
+      // 过滤孤儿行（无 username 的注册残留），避免榜上出现一堆"匿名用户"
+      if (restRes.ok && Array.isArray(data)) {
+        data = data.filter(function (p) { return p && p.username; });
+      }
       if (!data || data.length === 0) return [];
 
       var result = data.map(function(p, i) {
@@ -1480,8 +1492,11 @@ async function getLeaderboard(tab, limit) {
       _leaderboardCache[cacheKey + '_ts'] = Date.now();
       return result;
     } catch (err) {
-      // AbortError / 网络波动 / 超时 全静默，不污染控制台 error
-      return [];
+      // 失败不静默：让 UI 能区分"暂无数据"与"查询失败"（倒排到前端提示）
+      console.warn('[leaderboard] 查询失败, tab=' + tab + ':', err && err.message ? err.message : err);
+      var errArr = [];
+      errArr._error = (err && err.message) || '排行榜请求超时或网络异常';
+      return errArr;
     }
   })();
 
@@ -1489,6 +1504,14 @@ async function getLeaderboard(tab, limit) {
   _leaderboardInflight[cacheKey] = inflightPromise;
   return inflightPromise;
 }
+
+/**
+ * 失效排行榜缓存（分数更新、手动刷新时调用；下次查询必拉最新数据）
+ */
+function invalidateLeaderboardCache() {
+  _leaderboardCache = { bio: null, practice: null, checkin: null };
+}
+window.invalidateLeaderboardCache = invalidateLeaderboardCache;
 
 // ===== 用户信用（Trust / Credit）=====
 
@@ -1519,17 +1542,23 @@ function getPointsLevel(points) {
 }
 
 /**
- * 计算自然衰减后的信用指数
- * CR_decayed = CR * exp(-lambda * deltaDays)
+ * 计算自然衰减后的信用指数（存量数据读写前的平滑改进）
+ * 优先委托 js/core/credit-metrics.js 的 legacyDecayed（指数衰减 + 保底 10，
+ * 修复「信任无条件随时间归零」）；未加载时内联等值兜底。
  */
 function calculateDecayedPoints(currentPoints, lastUpdatedAt) {
-  if (typeof currentPoints !== 'number' || currentPoints <= 0) return 0;
+  if (typeof currentPoints !== 'number' || !isFinite(currentPoints) || currentPoints <= 0) return 0;
+  if (typeof window.legacyDecayed === 'function') {
+    return window.legacyDecayed(currentPoints, lastUpdatedAt);
+  }
   if (!lastUpdatedAt) return currentPoints;
   var now = Date.now();
   var last = new Date(lastUpdatedAt).getTime();
   var deltaDays = (now - last) / (24 * 60 * 60 * 1000);
   if (deltaDays <= 0) return currentPoints;
-  return currentPoints * Math.exp(-CR_DECAY.lambda * deltaDays);
+  var value = currentPoints * Math.exp(-CR_DECAY.lambda * deltaDays);
+  // 保底 10：历史信任不因不活跃而完全清零（违规/消费按实际扣减）
+  return Math.max(10, value);
 }
 
 /**
@@ -1921,16 +1950,19 @@ function startOnlineTimeTracking() {
 }
 
 // ===== 社区功能 =====
-async function getCommunityPosts(page, tag) {
+async function getCommunityPosts(page, tag, sortBy) {
   var sb = getSupabase();
   if (!sb) return { posts: [], total: 0 };
   try {
-    // 主查询：带 count 元数据，避免单独发一次 head 查询（消除 ERR_ABORTED 来源）
+    // 排序规则：
+    //   推荐流：置顶优先 + 时间倒序（稳定：置顶帖常驻顶部，避免频繁跳位）
+    //   热榜：纯按点赞倒序（热度驱动，低赞置顶帖不占据榜首，语义贴合「热榜」）
     var query = sb.from('community_posts')
       .select('id, author_id, content, tags, like_count, comment_count, is_pinned, is_deleted, created_at, updated_at', { count: 'exact' })
       .eq('is_deleted', false)
-      .order('is_pinned', { ascending: false })
-      .order('created_at', { ascending: false })
+      .order(sortBy === 'hot' ? 'like_count' : 'is_pinned', { ascending: false });
+
+    query = query.order('created_at', { ascending: false })
       .range((page - 1) * 7, page * 7 - 1);
 
     if (tag && tag !== '') {
@@ -2135,6 +2167,59 @@ async function getPostComments(postId) {
     return { comments: comments };
   } catch (e) {
     return { comments: [] };
+  }
+}
+
+/**
+ * 批量获取多个帖子的评论（性能优化：替代“每帖 2 次请求”的 N+1 模式）。
+ * 社区列表页一次性展示 7 帖时，原实现会发起 14 次请求，导致加载明显变慢；
+ * 本函数用 1 次评论查询 + 1 次作者查询即可完成整页评论预载。
+ * @param {string[]} postIds
+ * @param {number} [limit] 全查询总上限（防御异常大帖），默认 300
+ * @returns {Promise<{commentsByPost: Object<string, Array>}>}
+ */
+async function getCommentsForPosts(postIds, limit) {
+  var sb = getSupabase();
+  if (!sb || !Array.isArray(postIds) || postIds.length === 0) return { commentsByPost: {} };
+  try {
+    var cap = Math.min((typeof limit === 'number' && limit > 0) ? limit : 300, 500);
+    var { data, error } = await sb.from('community_comments')
+      .select('id, post_id, author_id, content, is_deleted, created_at')
+      .in('post_id', postIds)
+      .eq('is_deleted', false)
+      .order('created_at', { ascending: true })
+      .limit(cap);
+
+    if (error) return { commentsByPost: {} };
+
+    var authorIds = (data || []).map(function (c) { return c.author_id; }).filter(function (id) { return id != null; });
+    var authorMap = {};
+    if (authorIds.length > 0) {
+      var { data: profiles } = await sb.from('profiles')
+        .select('id, username, display_name')
+        .in('id', authorIds);
+      if (profiles) {
+        profiles.forEach(function (profile) { authorMap[profile.id] = profile; });
+      }
+    }
+
+    var commentsByPost = {};
+    (data || []).forEach(function (c) {
+      var author = authorMap[c.author_id] || { username: '匿名', display_name: '匿名用户' };
+      if (!commentsByPost[c.post_id]) commentsByPost[c.post_id] = [];
+      commentsByPost[c.post_id].push({
+        id: c.id,
+        author: {
+          username: author.username || '匿名',
+          display_name: author.display_name || '匿名用户'
+        },
+        content: c.content,
+        created_at: c.created_at
+      });
+    });
+    return { commentsByPost: commentsByPost };
+  } catch (e) {
+    return { commentsByPost: {} };
   }
 }
 
@@ -2488,6 +2573,7 @@ window.getCommunityPosts = getCommunityPosts;
 window.createCommunityPost = createCommunityPost;
 window.togglePostLike = togglePostLike;
 window.getPostComments = getPostComments;
+window.getCommentsForPosts = getCommentsForPosts;
 window.addPostComment = addPostComment;
 window.reportCommunityPost = reportCommunityPost;
 
@@ -3208,24 +3294,30 @@ async function getUserStatsFromSupabase() {
   try {
     // 1. 拉取近 1000 条练习记录做聚合（足够覆盖学期量级）
     var { data: records, error: rErr } = await sb.from('practice_records')
-      .select('module_num, is_correct, score, created_at')
+      .select('module_num, user_answers, created_at')
       .eq('profile_id', _currentUser.id)
       .order('created_at', { ascending: false })
       .limit(1000);
     if (rErr) throw rErr;
     records = records || [];
 
-    var totalAnswered = records.length;
+    // 统计口径与本地 getStats 对齐：totalAnswered/correct 均为「题目级」而非「场次级」。
+    // user_answers 中每项对应一道题，correct=该题全对（storage.js 统一写入）。
+    var totalAnswered = 0;
     var totalCorrect = 0;
     var modules = {};
     for (var i = 0; i < records.length; i++) {
       var r = records[i];
       var modKey = 'module_' + (r.module_num || 1);
       if (!modules[modKey]) modules[modKey] = { totalAnswered: 0, totalCorrect: 0 };
-      modules[modKey].totalAnswered++;
-      if (r.is_correct) {
-        totalCorrect++;
-        modules[modKey].totalCorrect++;
+      var ansArr = Array.isArray(r.user_answers) ? r.user_answers : [];
+      totalAnswered += ansArr.length;
+      modules[modKey].totalAnswered += ansArr.length;
+      for (var k = 0; k < ansArr.length; k++) {
+        if (ansArr[k] && ansArr[k].correct) {
+          totalCorrect++;
+          modules[modKey].totalCorrect++;
+        }
       }
     }
 
@@ -3303,7 +3395,7 @@ async function getPracticeHistoryFromSupabase(limit) {
     if (error) throw error;
     if (!data || data.length === 0) return [];
 
-    // 转换为 dashboard 兼容格式
+    // 转换为 dashboard 兼容格式（correct = 全对题数，与本地 practice 记录口径一致）
     return data.map(function (r) {
       var answers = Array.isArray(r.user_answers) ? r.user_answers : [];
       var correct = 0;
@@ -3311,7 +3403,7 @@ async function getPracticeHistoryFromSupabase(limit) {
       return {
         date: r.created_at ? r.created_at.slice(0, 10) : null,
         timestamp: r.created_at ? new Date(r.created_at).getTime() : 0,
-        correct: typeof r.score === 'number' ? r.score : correct,
+        correct: correct,
         total: answers.length || 1,
         totalQuestions: answers.length || 1,
         correctCount: correct,

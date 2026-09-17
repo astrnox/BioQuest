@@ -272,8 +272,9 @@
       learned: learned,
       learning: total - learned,
       dueToday: dueToday,
-      avgStability: learned > 0 ? (totalStability / learned).toFixed(1) : 0,
-      avgDifficulty: learned > 0 ? (totalDifficulty / learned).toFixed(1) : 0,
+      // 保持数值类型（调用方可能参与运算；toFixed 会返回字符串导致拼接错误）
+      avgStability: learned > 0 ? Math.round((totalStability / learned) * 10) / 10 : 0,
+      avgDifficulty: learned > 0 ? Math.round((totalDifficulty / learned) * 10) / 10 : 0,
       retentionRate: Math.round(DEFAULT_PARAMS.requestRetention * 100)
     };
   }
@@ -292,8 +293,14 @@
         var s = states[id];
         if (!s || !s.stability) return;
 
-        var dueInDays = Math.floor((s.dueDate - Date.now()) / (24 * 60 * 60 * 1000));
-        if (dueInDays <= d && dueInDays > d - 1) count++;
+        // 按「本地日初」对齐到期日与今天，避免毫秒级精度把「明天到期且不足 24h」
+        // 的卡误判为今天（原实现用裸毫秒差，存在浮点边界 bug）。
+        var todayStart = new Date(); todayStart.setHours(0, 0, 0, 0);
+        var dueStart = new Date(s.dueDate); dueStart.setHours(0, 0, 0, 0);
+        var daySpan = Math.round((dueStart.getTime() - todayStart.getTime()) / (24 * 60 * 60 * 1000));
+        // 今天到期（0）或已过期（负）统一归入第 1 天复习桶；明天到期入第 2 桶…
+        var bucket = daySpan <= 0 ? 1 : daySpan + 1;
+        if (bucket === d) count++;
       });
 
       forecast.push({ day: d, count: count });

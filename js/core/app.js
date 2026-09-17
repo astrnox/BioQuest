@@ -1252,6 +1252,7 @@ function showAnnouncementAtIndex(index) {
 
 /**
  * 更新底部标签栏高亮状态
+ * 液态玻璃外观：选中 tab 顶部覆盖一层高亮胶囊，切换时平滑滑动
  */
 function updateBottomTabBar(route) {
   var bar = document.getElementById('bottomTabBar');
@@ -1268,16 +1269,106 @@ function updateBottomTabBar(route) {
     '/user': 'user'
   };
 
-  var activeTab = tabMap[route] || '';
-
-  tabs.forEach(function(tab) {
-    var tabName = tab.getAttribute('data-tab');
-    if (tabName === activeTab) {
-      tab.classList.add('active');
-    } else {
-      tab.classList.remove('active');
+  var activeName = tabMap[route] || '';
+  var activeTab = null;
+  for (var i = 0; i < tabs.length; i++) {
+    if (tabs[i].getAttribute('data-tab') === activeName) {
+      activeTab = tabs[i];
+      break;
     }
-  });
+  }
+  _setActiveBottomTab(activeTab);
+}
+
+/** 内部标记：胶囊是否已完成首次定位（首帧不做滑入动画） */
+var _bottomGlowReady = false;
+/** 内部标记：resize 监听已绑定 */
+var _bottomGlowResizeBound = false;
+
+/**
+ * 将底部标签栏高亮胶囊移动到指定 tab（无匹配 tab 时仅移除高亮）
+ * 供路由渲染与点击即时反馈共用：点击瞬间即更新，不等路由重新渲染
+ */
+function _setActiveBottomTab(activeTab) {
+  var bar = document.getElementById('bottomTabBar');
+  if (!bar) return;
+  var tabs = bar.querySelectorAll('.bottom-tab');
+  if (!tabs) return;
+
+  for (var i = 0; i < tabs.length; i++) {
+    if (activeTab && tabs[i] === activeTab) {
+      tabs[i].classList.add('active');
+    } else {
+      tabs[i].classList.remove('active');
+    }
+  }
+
+  if (!activeTab) {
+    // 当前路由不在底部标签内（如 /leaderboard）：隐藏高亮胶囊
+    bar.classList.remove('has-active');
+    return;
+  }
+  _positionBottomTabGlow(activeTab);
+}
+
+/**
+ * 定位液态玻璃高亮胶囊：跟随激活 tab 的位置与宽度
+ * 首帧（bar 尚无可视胶囊）不做过渡动画，避免从左上角"飞"进来的跳动
+ */
+function _positionBottomTabGlow(activeTab) {
+  var bar = document.getElementById('bottomTabBar');
+  if (!bar || !activeTab) return;
+
+  var glow = bar.querySelector('.bottom-tab-glow');
+  if (!glow) {
+    // 稳妥兜底：SW 缓存的旧 index.html 可能没有胶囊节点，动态补建
+    glow = document.createElement('div');
+    glow.className = 'bottom-tab-glow';
+    glow.setAttribute('aria-hidden', 'true');
+    bar.insertBefore(glow, bar.firstChild);
+  }
+
+  var x = activeTab.offsetLeft;
+  var w = activeTab.offsetWidth;
+
+  // 布局尚未就绪（首帧样式/字体未落定）：短暂重试，保证高亮胶囊最终可见
+  if (!w && !glow._retryT) {
+    glow._retryT = setTimeout(function () {
+      glow._retryT = null;
+      var cur = bar.querySelector('.bottom-tab.active');
+      if (cur) _positionBottomTabGlow(cur);
+    }, 250);
+    return;
+  }
+  if (!w) return;
+
+  if (!_bottomGlowReady) {
+    // 首帧：禁止过渡，直接落位
+    glow.style.transition = 'none';
+    glow.style.left = x + 'px';
+    glow.style.width = w + 'px';
+    void glow.offsetWidth; // 强制 reflow 使定位生效后再启用过渡
+    glow.style.transition = '';
+    bar.classList.add('has-active');
+    _bottomGlowReady = true;
+  } else {
+    glow.style.left = x + 'px';
+    glow.style.width = w + 'px';
+    if (!bar.classList.contains('has-active')) bar.classList.add('has-active');
+  }
+
+  if (!_bottomGlowResizeBound) {
+    _bottomGlowResizeBound = true;
+    var _resizeT;
+    window.addEventListener('resize', function () {
+      if (_resizeT) return;
+      _resizeT = setTimeout(function () {
+        _resizeT = null;
+        var cur = bar.querySelector('.bottom-tab.active');
+        if (cur) _positionBottomTabGlow(cur);
+      }, 120);
+    });
+  }
 }
 
 /**
@@ -1580,16 +1671,26 @@ function handleRoute(route) {
   };
   var modName = moduleMap[route];
 
-  // 路由切换即时反馈：模块 JS 首次加载（网络拉取）期间在目标容器上展示
-  // 轻量 loading，渲染开始即移除——避免"点击后页面长时间无任何变化"的
-  // 空白等待感（第二次进入同一路由走缓存，不显示，无闪烁）。
-  var _isFirstModuleLoad = !!modName && typeof window.loadModule === 'function' && !_loadedModules[modName];
-  if (_isFirstModuleLoad) {
+  // 路由切换即时反馈：任意模块路由（含已缓存模块）在渲染完成前都先展示
+  // 轻量 loading——避免"点击标签后旧页面原地保留、新页面在后台静默加载"的
+  // 无反馈等待。120ms 阈值延迟展示：秒开场景（缓存模块同步渲染）不闪烁。
+  var _routeFbTimer = null;
+  function _showRouteLoading() {
     try { target.classList.add('route-loading'); } catch (e) {}
   }
+  function _scheduleRouteLoading() {
+    _clearRouteLoading();
+    if (!modName || typeof window.loadModule !== 'function') return;
+    _routeFbTimer = setTimeout(_showRouteLoading, 120);
+  }
+  function _clearRouteLoading() {
+    if (_routeFbTimer) { clearTimeout(_routeFbTimer); _routeFbTimer = null; }
+    try { target.classList.remove('route-loading'); } catch (e) {}
+  }
+  _scheduleRouteLoading();
 
   var renderFn = function() {
-    try { target.classList.remove('route-loading'); } catch (e) {}
+    _clearRouteLoading();
     doRouteRender(route, target);
   };
 
@@ -1687,7 +1788,8 @@ function handleRoute(route) {
         '/discussion': 'initDiscussion',
         '/bio-lab': 'initBioLab',
         '/trends': 'initTrends',
-        '/teacher': 'initTeacher'
+        '/teacher': 'initTeacher',
+        '/data-lab': 'initScoreCalc'
       }[route];
       if (initFnName && typeof window[initFnName] !== 'function') {
         // 给脚本一个微任务时间完成初始化
@@ -1700,7 +1802,7 @@ function handleRoute(route) {
       renderFn();
       finishRouting();
     }).catch(function(err) {
-      try { target.classList.remove('route-loading'); } catch (e) {}
+      _clearRouteLoading();
       showModuleError(modName, err);
       finishRouting();
     });
@@ -1747,11 +1849,12 @@ function _resolveModuleUrl(modName) {
 // 模块名 → 子目录（js/ 下的分类存放）。页面模块默认在 pages/，其余显式归属。
 function _moduleDir(modName) {
   var core = { 'app': 1, 'app-routes': 1, 'boot-mask': 1, 'boot-lazy': 1, 'sw-register': 1,
-    'theme-init': 1, 'theme-transition': 1, 'config': 1, 'utils': 1, 'storage': 1,
+    'theme-init': 1, 'theme-transition': 1, 'config': 1, 'utils': 1, 'storage': 1, 'rating': 1,
     'supabase': 1, 'supabase-client': 1, 'loader': 1, 'question-utils': 1, 'event-bus': 1,
     'csp-events': 1, 'error-recovery': 1, 'empty-state': 1, 'a11y-utils': 1, 'sync-tabs': 1,
     'cell-loader': 1, 'lazy-images': 1, 'offline-queue': 1, 'offline-status': 1,
-    'shortcut-panel': 1, 'hamburger': 1, 'hero-sketch': 1, 'micro-details': 1 };
+    'shortcut-panel': 1, 'hamburger': 1, 'hero-sketch': 1, 'micro-details': 1,
+    'score-engine': 1, 'credit-metrics': 1 };
   var algo = { 'fsrs-algorithm': 1, 'fsrs-optimizer': 1, 'irt-engine': 1 };
   var ai = { 'ai-client': 1, 'ai-key-store': 1, 'ai-diagnostic-engine': 1, 'smart-diagnosis': 1, 'multi-agent': 1 };
   var admin = { 'admin': 1, 'admin-users': 1, 'admin-questions': 1, 'admin-cards': 1,
@@ -1769,11 +1872,15 @@ function _moduleDir(modName) {
 
 // 模块依赖表：加载某模块前先加载其依赖
 var _moduleDeps = {
-  'practice': ['question-utils', 'loader'],
+  'practice': ['question-utils', 'loader', 'rating'],
   'exam': ['question-utils', 'loader'],
   'review': ['question-utils', 'loader'],
   'wrongbook': ['question-utils', 'loader', 'review-deep'],
-  'review-deep': ['question-utils', 'loader']
+  'review-deep': ['question-utils', 'loader'],
+  'admin': ['rating'],
+  'analytics': ['score-engine'],
+  'score-calc': ['score-engine', 'credit-metrics'],
+  'bio-calc': ['score-engine']
 };
 
 // 模块名 → 初始化函数名（用于检测 head 中预加载的脚本是否已注册 init）
@@ -1804,7 +1911,9 @@ function modNameToInitFn(modName) {
     'teacher': 'initTeacher',
     'photo-quiz': 'initPhotoQuiz',
     'learning-hub': 'initLearningHub',
-    'daily-billion': 'initDailyBillion'
+    'daily-billion': 'initDailyBillion',
+    'score-calc': 'initScoreCalc',
+    'bio-calc': 'initBioCalc'
   };
   return map[modName];
 }
@@ -2308,6 +2417,34 @@ function toggleMobileMenu() {
 }
 
 /**
+ * 空闲预加载底部标签页模块（练习/考试/仪表盘/个人中心）
+ * 首屏渲染完成后的浏览器空闲时段提前拉取脚本，让首次点击标签接近"即点即开"，
+ * 配合 handleRoute 的 loading 反馈，消除"点击后原地静默等待"
+ */
+var _tabModulesPrefetched = false;
+function _prefetchTabModules() {
+  if (_tabModulesPrefetched) return;
+  _tabModulesPrefetched = true;
+
+  var run = function () {
+    // 弱网/离线时不预加载，避免无谓网络开销
+    if (typeof navigator !== 'undefined' && navigator.onLine === false) return;
+    var mods = ['practice', 'exam', 'dashboard', 'user'];
+    mods.forEach(function (m) {
+      if (typeof window.loadModule !== 'function') return;
+      if (_loadedModules[m] || _loadingModules[m]) return;
+      try { window.loadModule(m).catch(function () {}); } catch (e) {}
+    });
+  };
+
+  if (typeof window.requestIdleCallback === 'function') {
+    try { window.requestIdleCallback(run, { timeout: 3000 }); } catch (e) { setTimeout(run, 1500); }
+  } else {
+    setTimeout(run, 1500);
+  }
+}
+
+/**
  * 关闭汉堡菜单
  */
 function closeMobileMenu() {
@@ -2386,6 +2523,17 @@ function bindEvents() {
       return;
     }
   });
+
+  // 底部标签栏：点击瞬间即高亮（液态玻璃胶囊立即滑动），不等路由渲染完成；
+  // handleRoute 渲染后会再次定位（幂等），做到"点击→反馈"几乎零延迟
+  var bottomBar = document.getElementById('bottomTabBar');
+  if (bottomBar) {
+    bottomBar.addEventListener('click', function (e) {
+      var tab = e.target && e.target.closest ? e.target.closest('.bottom-tab') : null;
+      if (!tab) return;
+      if (typeof _setActiveBottomTab === 'function') _setActiveBottomTab(tab);
+    });
+  }
 
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
@@ -2554,8 +2702,12 @@ function updateAuthUI() {
   var authBtn = document.getElementById('auth-btn');
   if (!authBtn) return;
 
-  if (isLoggedIn()) {
-    var user = getCurrentUser();
+  // supabase-client 为懒加载（首屏不载入），Supabase 初始化失败走本地模式时
+  // 这些全局函数可能尚未定义——必须守卫，避免 updateAuthUI 直接抛 ReferenceError
+  var loggedIn = (typeof window.isLoggedIn === 'function') && !!window.isLoggedIn();
+  if (loggedIn) {
+    var user = (typeof window.getCurrentUser === 'function') ? window.getCurrentUser() : null;
+    if (!user) user = { user_group: 'guest', display_name: '', username: '' };
     var groupLabels = { admin: '管理员', premium: '高级会员', verified: '认证会员', member: '会员', guest: '访客' };
     var groupLabel = groupLabels[user.user_group] || '会员';
     var displayName = user.display_name || user.username || '用户';
@@ -4161,9 +4313,15 @@ async function handleLogin() {
 
     } else {
       var origErr = (result && result.error) || '登录失败';
-      // 密码错误时附一条嘲讽
+      // 仅当确属"密码/凭据"错误时才附加调侃文案；
+      // 邮箱未验证、未绑定、网络等其它原因不渲染成"密码错误"，避免误导
+      var errCode = (result && result.code) || '';
       var lower = String(origErr).toLowerCase();
-      if (lower.indexOf('密码') >= 0 || lower.indexOf('password') >= 0 || lower.indexOf('invalid') >= 0 || lower.indexOf('credential') >= 0 || lower.indexOf('登录') >= 0 || lower.indexOf('auth') >= 0) {
+      var isBadCredential =
+        errCode === 'INVALID_CREDENTIALS' ||
+        lower.indexOf('密码') >= 0 || lower.indexOf('password') >= 0 ||
+        lower.indexOf('invalid') >= 0 || lower.indexOf('credential') >= 0;
+      if (isBadCredential) {
         errorEl.innerHTML = '<span style="color:#d63a2a;">' + escapeHtml(origErr) + '</span> <span style="display:inline-block;margin-left:6px;padding:2px 8px;background:rgba(214,58,42,0.1);border-radius:6px;color:#a83a2a;font-size:0.78rem;">' + _getLoginSarcastic() + '</span>';
       } else {
         errorEl.textContent = origErr;
@@ -4501,6 +4659,8 @@ window.switchLbTab = switchLbTab;
 
 /** 当前排行榜 tab */
 var _currentLbTab = 'bio';
+/** 排行榜自动刷新定时器（弹窗打开期间每 8s 静默刷新，保证实时性） */
+var _lbAutoRefreshTimer = null;
 
 /**
  * 显示排行榜弹窗（三 tab 版本：Bio 分 / 练习量 / 正确率）
@@ -4544,13 +4704,22 @@ async function showLeaderboard() {
 
   _currentLbTab = 'bio';
   await loadLbData('bio');
+
+  // 实时性：弹窗打开期间每 8s 自动刷新当前 tab，分数变动后排行榜即时可见
+  if (_lbAutoRefreshTimer) clearInterval(_lbAutoRefreshTimer);
+  _lbAutoRefreshTimer = setInterval(function () {
+    var modal = document.getElementById('leaderboard-modal');
+    if (!modal || modal.style.display === 'none' || !modal.classList.contains('visible')) return;
+    loadLbData(_currentLbTab);
+  }, 8000);
 }
 
 /**
  * 切换排行榜 tab
+ * 同 tab 点击也强制刷新（此前直接 return，用户无法手动刷新，榜单表现"死"）
  */
 async function switchLbTab(tabName) {
-  if (!tabName || tabName === _currentLbTab) return;
+  if (!tabName) return;
   _currentLbTab = tabName;
 
   var tabs = ['bio', 'practice', 'checkin'];
@@ -4575,6 +4744,10 @@ async function loadLbData(tabName) {
   try {
     var items = [];
     if (typeof window.getLeaderboard === 'function') {
+      // 打开/切换时始终拿到最新数据（清掉可能导致"死数据"的缓存）
+      if (typeof window.invalidateLeaderboardCache === 'function') {
+        window.invalidateLeaderboardCache();
+      }
       items = await window.getLeaderboard(tabName, 20);
     }
 
@@ -4587,6 +4760,13 @@ async function loadLbData(tabName) {
         html += '<div style="text-align:center;color:#6b7f74;padding:16px 12px;margin-top:12px;border-radius:12px;background:rgba(58,140,92,0.04);font-size:0.82rem;">登录后查看你的排名</div>';
       }
       listEl.innerHTML = html;
+    } else if (items && items._error) {
+      // 查询失败：给出可感知的错误提示而非"暂无排行数据"
+      listEl.innerHTML = '<div style="text-align:center;color:var(--color-error,#c0553a);padding:40px 20px;">' +
+        '<div style="font-size:0.95rem;margin-bottom:8px;">排行榜加载失败</div>' +
+        '<div style="font-size:0.78rem;color:#8a8a8a;">' + escapeHtml(items._error) + '</div>' +
+        '<button data-on=\'["_cspReload"]\' style="margin-top:14px;padding:7px 20px;background:var(--color-sage);color:#fff;border:none;border-radius:20px;font-size:0.82rem;cursor:pointer;">重新加载</button>' +
+        '</div>';
     } else {
       // Issue #125：统一「温暖空状态」组件（加载失败时回退原有提示）
       if (window.BioQuest && typeof window.BioQuest.renderEmptyState === 'function') {
@@ -4665,6 +4845,8 @@ function renderLbItems(items, tabName) {
 function closeLeaderboard() {
   var modal = document.getElementById('leaderboard-modal');
   if (modal) modal.classList.remove('visible');
+  // 关闭时停止定时刷新，避免无谓的循环拉取
+  if (_lbAutoRefreshTimer) { clearInterval(_lbAutoRefreshTimer); _lbAutoRefreshTimer = null; }
 }
 window.closeLeaderboard = closeLeaderboard;
 
@@ -4980,7 +5162,7 @@ function renderLeaderboardPage(target) {
 var _currentLbPageTab = 'bio';
 
 async function switchLbPageTab(tabName) {
-  if (!tabName || tabName === _currentLbPageTab) return;
+  if (!tabName) return;
   _currentLbPageTab = tabName;
 
   var tabs = ['bio', 'practice', 'checkin'];
@@ -5002,6 +5184,10 @@ async function loadLbPageData(tabName) {
   try {
     var items = [];
     if (typeof window.getLeaderboard === 'function') {
+      // 进入/切换页面时清缓存，保证展示的是最新数据（实时更新，非死数据）
+      if (typeof window.invalidateLeaderboardCache === 'function') {
+        window.invalidateLeaderboardCache();
+      }
       items = await window.getLeaderboard(tabName, 20);
     }
 
@@ -5014,6 +5200,13 @@ async function loadLbPageData(tabName) {
         html += '<div style="text-align:center;color:#6b7f74;padding:20px 12px;margin-top:12px;border-radius:12px;background:rgba(58,140,92,0.04);"><span style="font-size:0.84rem;">登录后查看你的排名</span> <button data-on=\'["_cspShowAuth"]\' style="margin-left:8px;padding:4px 14px;border:none;border-radius:14px;background:var(--color-sage,#5a7d5c);color:#fff;font-size:0.78rem;cursor:pointer;">登录</button></div>';
       }
       listEl.innerHTML = html;
+    } else if (items && items._error) {
+      // 查询失败：可感知的错误提示，而非误导性的"暂无排行数据"
+      listEl.innerHTML = '<div style="text-align:center;color:var(--color-error,#c0553a);padding:40px 20px;">' +
+        '<div style="font-size:0.95rem;margin-bottom:8px;">排行榜加载失败</div>' +
+        '<div style="font-size:0.78rem;color:#8a8a8a;">' + escapeHtml(items._error) + '</div>' +
+        '<button data-on=\'["_cspReload"]\' style="margin-top:14px;padding:7px 20px;background:var(--color-sage);color:#fff;border:none;border-radius:20px;font-size:0.82rem;cursor:pointer;">重新加载</button>' +
+        '</div>';
     } else {
       // Issue #125：统一「温暖空状态」组件（加载失败时回退原有提示）
       if (window.BioQuest && typeof window.BioQuest.renderEmptyState === 'function') {
@@ -5121,6 +5314,9 @@ function initApp() {
   const route = getRouteFromHash();
 
   bindEvents();
+
+  // 空闲预加载底部标签页模块：首次点击标签时不用再等脚本网络拉取
+  _prefetchTabModules();
 
   requestAnimationFrame(() => {
     handleRoute(route);

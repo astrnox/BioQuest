@@ -2753,22 +2753,24 @@ function saveExamRecord(score, duration) {
     moduleCorrects[m] = correct;
   }
 
-  const totalSubQuestions = EXAM_TOTAL * 4;
-  let totalCorrectSubs = 0;
+  const totalSubPerQuestion = 4;
+  let totalFullQuestions = 0;
   for (let i = 0; i < examQuestions.length; i++) {
-    totalCorrectSubs += calcQuestionScore(i).correct;
+    if (calcQuestionScore(i).correct === totalSubPerQuestion) totalFullQuestions++;
   }
 
   if (typeof saveRecord === 'function') {
     saveRecord({
       totalQuestions: EXAM_TOTAL,
-      correctCount: totalCorrectSubs,
+      // 统一口径：correctCount = 全对题数（与 practice 纪录一致），
+      // 供 calcBioScore/趋势页正确率（≤100%）消费；错误子题数另存于 questions 明细
+      correctCount: totalFullQuestions,
       score: score,
       totalScore: TOTAL_SCORE,
       duration: duration,
       module: 'exam',
       questions: examQuestions.map((q, i) => {
-        const correctSubs = calcQuestionScore(i).correct;
+        const r = calcQuestionScore(i);
         // Issue #10：用稳定 bioID 引用题目（examQ.id/bioId 由分片加载注入）
         const examQ = examQuestions[i];
         const qBio = (examQ && (examQ.id || examQ.bioId)) || '';
@@ -2776,14 +2778,17 @@ function saveExamRecord(score, duration) {
           questionId: qBio || `exam_${i}`,
           qId: qBio || `exam_${i}`,
           question: q.question,
-          correctSubs,
-          totalSubs: 4,
+          correctSubs: r.correct,
+          totalSubs: totalSubPerQuestion,
+          subject: q.subject,
           module: getExamModuleKey(i)
         };
       })
     });
   }
 
+  // 统计写入：每题只计 1 次（updateStats 为「题目级」计数）；
+  // 「正确」判定与 practice 保持一致 = 全对才算对。
   for (let m = 1; m <= 4; m++) {
     if (typeof updateStats === 'function') {
       const modName = 'module_' + m;
@@ -2791,9 +2796,7 @@ function saveExamRecord(score, duration) {
       const end = start + QUESTIONS_PER_MODULE;
       for (let i = start; i < end; i++) {
         const result = calcQuestionScore(i);
-        for (let j = 0; j < 4; j++) {
-          updateStats(modName, result.correct > 0);
-        }
+        updateStats(modName, result.correct === totalSubPerQuestion);
       }
     }
   }

@@ -2,6 +2,62 @@
  * 模拟试题页面样式
  * ============================================
  */
+
+/* 试题页点赞/点踩（评分系统） */
+.pq-vote {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+.pq-vote-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 2px 8px;
+  font-size: 0.72rem;
+  line-height: 1.6;
+  border: 1px solid rgba(107, 114, 128, 0.25);
+  border-radius: 999px;
+  background: transparent;
+  color: #6b7280;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.pq-vote-btn:hover {
+  border-color: #9ca3af;
+  color: #374151;
+}
+.pq-vote-btn.pq-vote-active {
+  background: rgba(16, 185, 129, 0.12);
+  border-color: rgba(16, 185, 129, 0.45);
+  color: #10b981;
+}
+.pq-vote-btn[data-vote="-1"].pq-vote-active {
+  background: rgba(239, 68, 68, 0.12);
+  border-color: rgba(239, 68, 68, 0.45);
+  color: #ef4444;
+}
+.pq-vote-btn svg {
+  flex-shrink: 0;
+}
+.pq-vote-count {
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+.pq-rating-tag {
+  display: inline-block;
+  margin-left: 8px;
+  font-size: 0.72rem;
+  color: #6b7280;
+  background: rgba(107, 114, 128, 0.1);
+  padding: 1px 8px;
+  border-radius: 999px;
+  vertical-align: middle;
+  font-weight: 500;
+}
+
 .quiz-toolbar {
   display: flex;
   gap: 12px;
@@ -259,6 +315,99 @@
   border-color: var(--terracotta);
   background: var(--terracotta);
   color: #fff;
+}
+
+/* ====== MTF 多重判断题 ====== */
+.pq-mtf-card {
+  padding: 12px 14px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: #fff;
+}
+
+.pq-mtf-card.selected {
+  border-color: var(--sage);
+  background: rgba(90,125,92,0.06);
+}
+
+.pq-mtf-card.correct-ans {
+  border-color: var(--success-green);
+  background: rgba(58,140,92,0.07);
+}
+
+.pq-mtf-card.wrong-ans {
+  border-color: var(--terracotta);
+  background: rgba(192,85,58,0.07);
+}
+
+.pq-mtf-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  background: var(--sage);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  font-family: var(--font-mono, 'JetBrains Mono', monospace);
+  margin-bottom: 6px;
+}
+
+.pq-mtf-text {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--text-primary);
+}
+
+.pq-mtf-toggle {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.pq-tf-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 14px;
+  border: 1.5px solid var(--border);
+  border-radius: 20px;
+  background: #fff;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.18s;
+}
+
+.pq-tf-btn:hover {
+  border-color: var(--sage);
+  color: var(--sage);
+}
+
+.pq-tf-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.pq-tf-btn.pq-tf-active.pq-tf-true {
+  border-color: var(--success-green);
+  background: rgba(58,140,92,0.1);
+  color: #1a7f37;
+}
+
+.pq-tf-btn.pq-tf-active.pq-tf-false {
+  border-color: var(--terracotta);
+  background: rgba(192,85,58,0.1);
+  color: var(--terracotta);
+}
+
+.pq-mtf-result {
+  margin-top: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
 }
 
 .pq-exp {

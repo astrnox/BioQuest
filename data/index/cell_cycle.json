@@ -1,19 +1,19 @@
 {
-  "M1-01-8d54d522": {
-    "diff": "league",
-    "difficulty": "league",
-    "has_image": false,
-    "len": 54,
-    "module": "module_1",
-    "src": "cell_cycle",
-    "tag": "cell_cycle",
-    "tags": [
-      "cell_cycle",
-      "module_1",
-      "细胞生物学",
-      "细胞周期的调控与检查点"
-    ],
-    "target": "competition",
-    "year": null
-  }
+ "M1-01-8d54d522": {
+  "diff": "league",
+  "difficulty": "league",
+  "has_image": false,
+  "len": 53,
+  "module": "module_1",
+  "src": "cell_cycle",
+  "tag": "cell_cycle",
+  "tags": [
+   "cell_cycle",
+   "module_1",
+   "细胞生物学",
+   "细胞周期的调控与检查点"
+  ],
+  "target": "competition",
+  "year": null
+ }
 }

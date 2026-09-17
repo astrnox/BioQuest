@@ -92,7 +92,8 @@
 
   function normalizeEntry(item) {
     if (!item) return null;
-    var date = item.date || (item.timestamp ? new Date(item.timestamp).toISOString().split('T')[0] : null);
+    // 本地时区日期（避免 UTC 在正时区错位一天）
+    var date = item.date || (item.timestamp ? localDateStr(item.timestamp) : null);
     if (!date) return null;
     if (date.length > 10) date = date.slice(0, 10);
 
@@ -105,6 +106,8 @@
     } else if (typeof item.totalQuestions === 'number' || typeof item.correctCount === 'number') {
       total = item.totalQuestions || 0;
       correct = item.correctCount || 0;
+      // 防御旧考试记录：correctCount 曾为子题级，可能 > 题目数
+      if (total > 0 && correct > total) correct = total;
     } else if (Array.isArray(item.answers) && item.answers.length > 0) {
       total = item.answers.length;
       for (var k = 0; k < item.answers.length; k++) {
@@ -147,7 +150,7 @@
   function filterRecent(history, days) {
     var cutoff = new Date();
     cutoff.setDate(cutoff.getDate() - days);
-    var cutStr = cutoff.toISOString().split('T')[0];
+    var cutStr = localDateStr(cutoff);
     return history.filter(function (h) { return h.date >= cutStr; });
   }
 
@@ -171,7 +174,7 @@
     for (var i = days - 1; i >= 0; i--) {
       var d = new Date(now);
       d.setDate(d.getDate() - i);
-      arr.push(d.toISOString().split('T')[0]);
+      arr.push(localDateStr(d));
     }
     return arr;
   }
@@ -369,7 +372,7 @@
       for (var r = 0; r < 7; r++) {
         var dateObj = new Date(curMonday);
         dateObj.setDate(dateObj.getDate() - (weeks - 1 - wi) * 7 + r);
-        var dStr = dateObj.toISOString().split('T')[0];
+        var dStr = localDateStr(dateObj);
         var isFuture = dateObj > now;
         var cnt = (!isFuture && dayMap[dStr]) ? dayMap[dStr].total : 0;
         if (cnt > max) max = cnt;
@@ -416,9 +419,9 @@
   function buildWeeklyReport(history) {
     var now = new Date();
     var weekAgo = new Date(now); weekAgo.setDate(weekAgo.getDate() - 7);
-    var weekStr = weekAgo.toISOString().split('T')[0];
+    var weekStr = localDateStr(weekAgo);
     var twoWeek = new Date(weekAgo); twoWeek.setDate(twoWeek.getDate() - 7);
-    var twoWeekStr = twoWeek.toISOString().split('T')[0];
+    var twoWeekStr = localDateStr(twoWeek);
 
     var thisWeek = history.filter(function (h) { return h.date >= weekStr; });
     var lastWeek = history.filter(function (h) { return h.date >= twoWeekStr && h.date < weekStr; });
@@ -435,8 +438,11 @@
     var stats = {};
     try { stats = JSON.parse(localStorage.getItem('bioquest_stats') || '{}'); } catch (e) {}
     var bioScore = stats.bio_score || 0;
-    // 本周 Bio 分增量估算（正确率 * 题量上限 50 / 10）
-    var bioDelta = tTotal > 0 ? Math.round((tCorrect / tTotal) * Math.min(tTotal, 50) / 10) : 0;
+    // 本周 Bio 分趋势：近两周正确率之差（百分点，保留 1 位小数）
+    // 替代旧的「答对数 × 题量截断」估算——原式与 Bio Score 公式无关且量纲失真
+    var bioDelta = (tTotal > 0 || lTotal > 0)
+      ? Math.round((accuracy - lastAcc) * 10) / 10
+      : 0;
 
     var dimThis = { '分子': { t: 0, c: 0 }, '细胞': { t: 0, c: 0 }, '遗传': { t: 0, c: 0 }, '进化': { t: 0, c: 0 }, '生态': { t: 0, c: 0 } };
     var dimLast = { '分子': { t: 0, c: 0 }, '细胞': { t: 0, c: 0 }, '遗传': { t: 0, c: 0 }, '进化': { t: 0, c: 0 }, '生态': { t: 0, c: 0 } };
@@ -467,11 +473,12 @@
     if (!history.length) return 0;
     var dayMap = groupByDay(history);
     var cur = new Date();
-    var today = cur.toISOString().split('T')[0];
+    // 本地时区「今天」（避免 UTC 在正时区把今天读成昨天导致连胜少计）
+    var today = localTodayStr();
     if (!dayMap[today]) cur.setDate(cur.getDate() - 1);
     var streak = 0;
     while (true) {
-      var ds = cur.toISOString().split('T')[0];
+      var ds = localDateStr(cur);
       if (dayMap[ds] && dayMap[ds].total > 0) { streak++; cur.setDate(cur.getDate() - 1); }
       else break;
     }

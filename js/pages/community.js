@@ -42,7 +42,7 @@ if (typeof window._cspHoverOut !== 'function') {
     totalPages: 1,
     totalPosts: 0,
     currentTag: '',
-    activeTab: 'recommend',   // 'follow' | 'recommend' | 'hot'
+    activeTab: 'recommend',   // 'recommend' | 'hot'
     hasMore: true,
     loading: false,
     expandedPostId: null,
@@ -172,20 +172,15 @@ if (typeof window._cspHoverOut !== 'function') {
     // Code: `text`
     html = html.replace(/`(.+?)`/g, '<code>$1</code>');
     // Images: ![alt](src) — must be before links
-    // 懒加载策略：不直接加载图片，显示占位符，点击后加载（避免社区进入时大量图片请求导致卡顿）
-    // 重要：占位符 div 不使用内联 onclick 字符串拼接（防止外层属性被注入的引号截断）
+    // 懒加载：使用原生 loading="lazy"（浏览器按视口延迟加载，节省流量且无需点击）
     html = html.replace(/!\[(.+?)\]\((.+?)\)/g, function (match, alt, src) {
       var safeSrc = src.trim();
       if (/^\s*(javascript|vbscript)\s*:/i.test(safeSrc)) return escapeHtml(alt);
       var dataUri = safeSrc.indexOf('data:') === 0;
-      // data: 直接渲染（本地上传的小图），http(s) 走点击加载
       if (dataUri) {
-        return '<img src="' + escapeHtml(safeSrc) + '" alt="' + escapeHtml(alt) + '" style="max-width:100%;max-height:480px;object-fit:contain;border-radius:8px;margin:8px 0;cursor:pointer;loading:lazy;" class="community-img-clickable">';
+        return '<img src="' + escapeHtml(safeSrc) + '" alt="' + escapeHtml(alt) + '" style="max-width:100%;max-height:480px;object-fit:contain;border-radius:8px;margin:8px 0;cursor:pointer;" loading="lazy" class="community-img-clickable">';
       }
-      return '<div class="community-img-placeholder" data-img-src="' + escapeHtml(safeSrc) + '" data-img-alt="' + escapeHtml(alt) + '" ' +
-        'style="display:flex;align-items:center;justify-content:center;gap:8px;padding:24px;margin:8px 0;border:1px dashed var(--border-light,#ddd);border-radius:8px;cursor:pointer;color:var(--text-muted,#8a8a8a);font-size:0.85rem;background:var(--color-cream-dark,#f9fafb);transition:all 0.2s;">' +
-        '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>' +
-        '<span>点击加载图片</span></div>';
+      return '<img src="' + escapeHtml(safeSrc) + '" alt="' + escapeHtml(alt) + '" style="max-width:100%;max-height:480px;object-fit:contain;border-radius:8px;margin:8px 0;cursor:pointer;" loading="lazy" class="community-img-clickable" referrerpolicy="no-referrer">';
     });
     // Links: [text](url) — 过滤 javascript: 等危险协议防 XSS
     // 安全修复（P1 XSS）：URL 必须先转义再插入 href 属性，防止 " 字符截断属性造成属性注入
@@ -801,12 +796,49 @@ if (typeof window._cspHoverOut !== 'function') {
         flex: 1;\
         padding: 7px 12px;\
         border: 1px solid var(--border-light);\
-        border-radius: 20px;\
+        border-radius: 16px;\
         font-size: 0.82rem;\
+        font-family: inherit;\
+        line-height: 1.5;\
         background: var(--surface-secondary, #fafaf8);\
         color: var(--text-primary);\
         outline: none;\
         transition: border-color 0.2s ease;\
+        min-height: 34px;\
+        max-height: 96px;\
+        resize: none;\
+        box-sizing: border-box;\
+        overflow-y: auto;\
+      }\
+\
+      .community-comment-login-hint {\
+        display: flex;\
+        align-items: center;\
+        justify-content: space-between;\
+        gap: 8px;\
+        padding: 8px 14px;\
+        border: 1px dashed var(--border-default);\
+        border-radius: 14px;\
+        background: var(--surface-secondary, #fafaf8);\
+        font-size: 0.8rem;\
+        color: var(--text-secondary);\
+      }\
+\
+      .community-comment-login-btn {\
+        background: var(--color-sage);\
+        color: #fff;\
+        border: none;\
+        padding: 5px 14px;\
+        border-radius: 9999px;\
+        font-size: 0.78rem;\
+        font-weight: 500;\
+        cursor: pointer;\
+        transition: all 0.2s ease;\
+        white-space: nowrap;\
+      }\
+\
+      .community-comment-login-btn:hover {\
+        box-shadow: 0 2px 8px rgba(90, 125, 92, 0.3);\
       }\
 \
       .community-comment-input:focus {\
@@ -1345,20 +1377,42 @@ if (typeof window._cspHoverOut !== 'function') {
   // ===== API 调用 =====
 
   async function fetchPosts(page, tag) {
+    // 等待 Supabase 客户端动态加载完成（有限超时）：
+    // 如果脚本尚未就绪就直接渲染 seed，随后又被真实数据替换，
+    // 会造成「列表忽然变化」的不一致体验；但也不能无限等待阻塞首屏。
+    var cloudReady = await _waitSupabaseClient(2500);
+    // 排序依据：热榜按点赞倒序，其余按时间倒序
+    var sortBy = _communityState.activeTab === 'hot' ? 'hot' : 'recent';
     // 使用 Supabase 直连
-    if (typeof window.getCommunityPosts === 'function' && typeof window.getSupabase === 'function') {
-      var sb = window.getSupabase();
-      if (sb) {
-        var result = await window.getCommunityPosts(page, tag);
+    if (cloudReady && typeof window.getCommunityPosts === 'function') {
+      try {
+        var result = await window.getCommunityPosts(page, tag, sortBy);
         if (result && result.posts && result.posts.length > 0) {
           return result;
         }
-        // 修复 P1-5：Supabase 返回空结果时降级到本地 seed 数据，避免冷启动死寂
-        return _loadSeedPosts(page, tag);
-      }
+      } catch (e) {}
+      // Supabase 返回空结果时降级到本地 seed 数据，避免冷启动死寂（P1-5）
+      return _loadSeedPosts(page, tag, sortBy);
     }
-    // Supabase 未配置 → 直接走 seed
-    return _loadSeedPosts(page, tag);
+    // Supabase 未配置 / 未就绪 → 直接走 seed
+    return _loadSeedPosts(page, tag, sortBy);
+  }
+
+  /**
+   * 轮询等待社区所需的 Supabase 客户端就绪（getCommunityPosts 与其依赖均已挂载）。
+   * @param {number} timeoutMs 最长等待毫秒数
+   * @returns {Promise<boolean>} 是否就绪
+   */
+  async function _waitSupabaseClient(timeoutMs) {
+    var deadline = Date.now() + (timeoutMs || 2500);
+    while (Date.now() < deadline) {
+      if (typeof window.getCommunityPosts === 'function' &&
+          typeof window.getSupabase === 'function' && window.getSupabase()) {
+        return true;
+      }
+      await new Promise(function (r) { setTimeout(r, 150); });
+    }
+    return false;
   }
 
   /**
@@ -1366,7 +1420,7 @@ if (typeof window._cspHoverOut !== 'function') {
    * 仅在 Supabase 无数据时使用，不替代真实社区
    */
   var _seedCache = null;
-  function _loadSeedPosts(page, tag) {
+  function _loadSeedPosts(page, tag, sortBy) {
     page = page || 1;
     return new Promise(function (resolve) {
       function applyFilter(data) {
@@ -1374,12 +1428,21 @@ if (typeof window._cspHoverOut !== 'function') {
         if (tag && tag !== 'all') {
           posts = posts.filter(function (p) { return p.tags && p.tags.indexOf(tag) >= 0; });
         }
-        // 按置顶 + 时间排序
-        posts.sort(function (a, b) {
-          if (a.is_pinned && !b.is_pinned) return -1;
-          if (!a.is_pinned && b.is_pinned) return 1;
-          return new Date(b.created_at) - new Date(a.created_at);
-        });
+        // 热榜：按点赞数倒序；其余按置顶 + 时间排序
+        if (sortBy === 'hot') {
+          posts.sort(function (a, b) {
+            var la = a.like_count || a.likes || 0;
+            var lb = b.like_count || b.likes || 0;
+            if (lb !== la) return lb - la;
+            return new Date(b.created_at) - new Date(a.created_at);
+          });
+        } else {
+          posts.sort(function (a, b) {
+            if (a.is_pinned && !b.is_pinned) return -1;
+            if (!a.is_pinned && b.is_pinned) return 1;
+            return new Date(b.created_at) - new Date(a.created_at);
+          });
+        }
         var pageSize = 7;
         var start = (page - 1) * pageSize;
         var paged = posts.slice(start, start + pageSize);
@@ -1613,9 +1676,6 @@ if (typeof window._cspHoverOut !== 'function') {
     html += '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>';
     html += '</button>';
     html += '<span class="community-vote-count' + votedClass + '">' + likeCount + '</span>';
-    html += '<button class="community-vote-btn community-vote-down" data-post-id="' + escapeHtml(post.id) + '" title="反对">';
-    html += '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>';
-    html += '</button>';
     html += '</div>';
 
     // 右侧内容区
@@ -1660,12 +1720,6 @@ if (typeof window._cspHoverOut !== 'function') {
     html += '<span>分享</span>';
     html += '</button>';
 
-    // 收藏按钮
-    html += '<button class="community-action-btn community-bookmark-btn" data-post-id="' + escapeHtml(post.id) + '" title="收藏">';
-    html += '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>';
-    html += '<span>收藏</span>';
-    html += '</button>';
-
     // 举报按钮（不显示在自己的帖子上）
     var currentUserId = (typeof getCurrentUser === 'function' && getCurrentUser()) ? getCurrentUser().id : null;
     if (currentUserId && post.author_id !== currentUserId) {
@@ -1684,6 +1738,26 @@ if (typeof window._cspHoverOut !== 'function') {
     return html;
   }
 
+  /**
+   * 评论输入区（登录用户）或登录引导（未登录）。
+   * textarea 支持换行：Enter 发送、Shift+Enter 换行。
+   */
+  function renderCommentInput(postId) {
+    var pid = escapeHtml(postId);
+    if (!isUserLoggedIn()) {
+      return '<div class="community-comment-login-hint">' +
+        '<span>登录后可参与评论</span>' +
+        '<button type="button" class="community-comment-login-btn" data-on=\'["_cspShowAuth"]\'>去登录</button>' +
+        '</div>';
+    }
+    // 注意：textarea 不内置 data-on 触发 Enter（防止重复绑定 keydown 事件）。
+    // Enter 发送 / Shift+Enter 换行统一在 feed 的 keydown 委托中处理。
+    return '<div class="community-comment-input-area">' +
+      '<textarea rows="1" class="community-comment-input" placeholder="写下你的评论...（Enter 发送，Shift+Enter 换行）" data-post-id="' + pid + '"></textarea>' +
+      '<button type="button" class="community-comment-submit" data-post-id="' + pid + '">发送</button>' +
+      '</div>';
+  }
+
   function renderCommentsSection(post) {
     var html = '';
     var comments = _communityState.commentsCache[post.id] || null;
@@ -1691,14 +1765,9 @@ if (typeof window._cspHoverOut !== 'function') {
     var isExpanded = _communityState.commentsExpanded[post.id] || false;
     var PREVIEW_LIMIT = 3;
 
-    // 如果没有评论且评论未加载，仅显示评论输入（登录用户）
+    // 如果没有评论且评论未加载，仅显示评论输入/登录引导
     if (!comments || comments.length === 0) {
-      if (isUserLoggedIn()) {
-        html += '<div class="community-comment-input-area" style="margin-top:12px;">';
-        html += '<input type="text" class="community-comment-input" placeholder="写下你的评论..." data-post-id="' + escapeHtml(post.id) + '" />';
-        html += '<button class="community-comment-submit" data-post-id="' + escapeHtml(post.id) + '">发送</button>';
-        html += '</div>';
-      }
+      html += '<div style="margin-top:12px;">' + renderCommentInput(post.id) + '</div>';
       return html;
     }
 
@@ -1735,18 +1804,20 @@ if (typeof window._cspHoverOut !== 'function') {
 
     html += '</div>'; // .community-comments-inline
 
-    // 评论输入（仅登录用户，始终可见）
-    if (isUserLoggedIn()) {
-      html += '<div class="community-comment-input-area">';
-      html += '<input type="text" class="community-comment-input" placeholder="写下你的评论..." data-post-id="' + escapeHtml(post.id) + '" />';
-      html += '<button class="community-comment-submit" data-post-id="' + escapeHtml(post.id) + '">发送</button>';
-      html += '</div>';
-    }
+    // 评论输入（始终可见：登录用户显示输入框，未登录显示登录引导）
+    html += renderCommentInput(post.id);
 
     return html;
   }
 
-  function renderEmptyState() {
+  function renderEmptyState(reason) {
+    if (reason === 'tag') {
+      return '<div class="community-empty">' +
+        '<div class="community-empty-icon"></div>' +
+        '<div class="community-empty-title">该标签下暂无帖子</div>' +
+        '<div class="community-empty-desc">试试其他标签，或发布第一帖开启讨论吧</div>' +
+        '</div>';
+    }
     return '<div class="community-empty">' +
       '<div class="community-empty-icon"></div>' +
       '<div class="community-empty-title">还没有帖子</div>' +
@@ -1784,7 +1855,7 @@ if (typeof window._cspHoverOut !== 'function') {
     html += '</div>';
 
     // 社区统计
-    var totalPosts = _communityState.posts ? _communityState.posts.length : 0;
+    var totalPosts = _communityState.totalPosts || (_communityState.posts ? _communityState.posts.length : 0);
     var totalLikes = 0;
     if (_communityState.posts) {
       for (var j = 0; j < _communityState.posts.length; j++) {
@@ -1796,8 +1867,7 @@ if (typeof window._cspHoverOut !== 'function') {
       '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>' +
       '社区动态</div>';
     html += '<div class="community-sidebar-stat"><span>帖子总数</span><span class="community-sidebar-stat-value">' + totalPosts + '</span></div>';
-    html += '<div class="community-sidebar-stat"><span>累计点赞</span><span class="community-sidebar-stat-value">' + totalLikes + '</span></div>';
-    html += '<div class="community-sidebar-stat"><span>在线用户</span><span class="community-sidebar-stat-value">--</span></div>';
+    html += '<div class="community-sidebar-stat"><span>当前页点赞</span><span class="community-sidebar-stat-value">' + totalLikes + '</span></div>';
     html += '</div>';
 
     // 发帖指南
@@ -1818,7 +1888,6 @@ if (typeof window._cspHoverOut !== 'function') {
 
   function renderTabBar() {
     var tabs = [
-      { key: 'follow', label: '关注' },
       { key: 'recommend', label: '推荐' },
       { key: 'hot', label: '热榜' }
     ];
@@ -2021,15 +2090,7 @@ if (typeof window._cspHoverOut !== 'function') {
         var voteUpBtn = e.target.closest('.community-vote-up');
         if (voteUpBtn) {
           var postId = voteUpBtn.getAttribute('data-post-id');
-          handleVote(postId, true);
-          return;
-        }
-
-        // 投票按钮（反对）
-        var voteDownBtn = e.target.closest('.community-vote-down');
-        if (voteDownBtn) {
-          var postId = voteDownBtn.getAttribute('data-post-id');
-          handleVote(postId, false);
+          handleVote(postId);
           return;
         }
 
@@ -2065,36 +2126,11 @@ if (typeof window._cspHoverOut !== 'function') {
           return;
         }
 
-        // 收藏
-        var bookmarkBtn = e.target.closest('.community-bookmark-btn');
-        if (bookmarkBtn) {
-          var postId = bookmarkBtn.getAttribute('data-post-id');
-          handleBookmark(postId);
-          return;
-        }
-
         // 举报帖子
         var reportBtn = e.target.closest('.community-report-btn');
         if (reportBtn) {
           var reportPostId = reportBtn.getAttribute('data-post-id');
           showReportModal(reportPostId);
-          return;
-        }
-
-        // 图片占位符点击加载
-        var imgPlaceholder = e.target.closest('.community-img-placeholder');
-        if (imgPlaceholder) {
-          var src = imgPlaceholder.getAttribute('data-img-src');
-          var alt = imgPlaceholder.getAttribute('data-img-alt') || '';
-          if (src) {
-            var img = document.createElement('img');
-            img.src = src;
-            img.alt = alt;
-            img.style.cssText = 'max-width:100%;max-height:480px;object-fit:contain;border-radius:8px;margin:8px 0;cursor:pointer;display:block;';
-            img.className = 'community-img-clickable';
-            img.loading = 'lazy';
-            imgPlaceholder.parentNode.replaceChild(img, imgPlaceholder);
-          }
           return;
         }
 
@@ -2106,10 +2142,12 @@ if (typeof window._cspHoverOut !== 'function') {
         }
       });
 
-      // 评论输入回车
+      // 评论输入：Enter 发送、Shift+Enter 换行
       feed.addEventListener('keydown', function (e) {
         if (e.key === 'Enter' && e.target.classList.contains('community-comment-input')) {
           var postId = e.target.getAttribute('data-post-id');
+          if (e.shiftKey) return;   // Shift+Enter 保留默认换行
+          e.preventDefault();        // 阻止 textarea 插入换行
           handleSubmitComment(postId);
         }
       });
@@ -2135,13 +2173,17 @@ if (typeof window._cspHoverOut !== 'function') {
 
   // ===== 交互处理 =====
 
-  async function handleVote(postId, isUpvote) {
+  /**
+   * 赞同/取消赞同（社区点赞为单一模型：喜欢=1，再点取消；无点踩。
+   * 历史上 UI 曾提供「反对」按钮但与点赞共用 toggleLike，行为与「赞同」
+   * 完全一致且会把赞加到同一计数上，属误导——已移除该按钮）。
+   */
+  async function handleVote(postId) {
     if (!isUserLoggedIn()) {
       if (typeof window.showAuthModal === 'function') window.showAuthModal();
       return;
     }
 
-    // 投票复用现有的点赞 API
     try {
       var result = await toggleLike(postId);
       if (result) {
@@ -2151,18 +2193,16 @@ if (typeof window._cspHoverOut !== 'function') {
           post.likes = result.likes;
         }
 
-        // 更新 UI：投票计数和按钮状态
+        // 更新 UI：点赞计数和按钮状态
         var card = document.querySelector('.community-post-card[data-post-id="' + postId + '"]');
         if (card) {
           var countEl = card.querySelector('.community-vote-count');
           var upBtn = card.querySelector('.community-vote-up');
-          var downBtn = card.querySelector('.community-vote-down');
           if (countEl) {
             countEl.textContent = result.likes || 0;
             countEl.classList.toggle('voted', !!result.liked);
           }
           if (upBtn) upBtn.classList.toggle('voted', !!result.liked);
-          if (downBtn) downBtn.classList.remove('voted');
         }
       } else {
         _showToast('操作失败，请稍后重试');
@@ -2200,6 +2240,11 @@ if (typeof window._cspHoverOut !== 'function') {
   }
 
   async function handleScrollToComments(postId) {
+    // 未登录：引导登录而不是滚到一片空白
+    if (!isUserLoggedIn()) {
+      if (typeof window.showAuthModal === 'function') window.showAuthModal();
+      return;
+    }
     // 如果评论尚未加载，先加载
     if (!_communityState.commentsCache[postId]) {
       var result = await fetchComments(postId);
@@ -2237,6 +2282,9 @@ if (typeof window._cspHoverOut !== 'function') {
     var input = document.querySelector('.community-comment-input[data-post-id="' + postId + '"]');
     if (!input) return;
 
+    // 防重复提交：Enter 与「发送」按钮可能同时触发
+    if (input.disabled) return;
+
     var content = input.value.trim();
     if (!content) return;
 
@@ -2257,12 +2305,15 @@ if (typeof window._cspHoverOut !== 'function') {
         post.comment_count = (post.comment_count || 0) + 1;
       }
       refreshFeed();
+      _showToast('评论已发布');
+    } else {
+      _showToast('评论发送失败，请稍后重试');
     }
   }
 
   function handleShare(postId) {
-    // 复制帖子链接到剪贴板
-    var url = window.location.origin + window.location.pathname + '?post=' + postId;
+    // 复制帖子链接到剪贴板；跳回社区页时用 hash 查询定位到该帖
+    var url = window.location.origin + window.location.pathname + '#/community?post=' + encodeURIComponent(postId);
     if (navigator.clipboard && navigator.clipboard.writeText) {
       navigator.clipboard.writeText(url).then(function () {
         _showToast('链接已复制到剪贴板');
@@ -2272,10 +2323,6 @@ if (typeof window._cspHoverOut !== 'function') {
     } else {
       _showToast('分享链接：' + url);
     }
-  }
-
-  function handleBookmark(postId) {
-    _showToast('收藏功能开发中，敬请期待');
   }
 
   // ===== 举报功能 =====
@@ -2394,7 +2441,8 @@ if (typeof window._cspHoverOut !== 'function') {
     if (!feed) return;
 
     if (_communityState.posts.length === 0) {
-      feed.innerHTML = renderEmptyState();
+      // 标签筛选无结果时给出更具体的空状态文案
+      feed.innerHTML = renderEmptyState(_communityState.currentTag ? 'tag' : '');
       return;
     }
 
@@ -2440,34 +2488,98 @@ if (typeof window._cspHoverOut !== 'function') {
       sidebarEl.innerHTML = renderSidebar();
     }
 
+    // 分享深链：#/community?post=<id> 时定位到对应帖子（补全「分享」按钮复制链接的语义）
+    var urlPostId = (function () {
+      try {
+        var m = window.location.hash.match(/[?&]post=([^&]+)/);
+        return m ? decodeURIComponent(m[1]) : '';
+      } catch (e) { return ''; }
+    })();
+    if (urlPostId) {
+      var onPage = _communityState.posts.some(function (p) { return p.id === urlPostId; });
+      if (onPage) {
+        var targetEl = document.querySelector('.community-post-card[data-post-id="' + urlPostId + '"]');
+        if (targetEl) {
+          setTimeout(function () {
+            targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }, 300);
+        }
+      } else {
+        // 目标帖不在当前页：逐页查找（最多扫 20 页），找到后切页并定位
+        _locatePostPage(urlPostId);
+      }
+    }
+
     // 异步加载当前页帖子的评论
     loadCommentsForVisiblePosts();
+  }
+
+  /**
+   * 深链辅助：目标是分享链接中的帖子但不在当前页时，逐页扫描定位。
+   * 命中后更新分页状态并重绘、滚动到该帖；超过扫描上限则放弃。
+   * @param {string} postId
+   */
+  async function _locatePostPage(postId) {
+    var maxScan = Math.min(_communityState.totalPages, 20);
+    for (var p = 1; p <= maxScan; p++) {
+      if (p === _communityState.currentPage) continue;
+      var result = null;
+      try {
+        result = await fetchPosts(p, _communityState.currentTag);
+      } catch (e) { result = null; }
+      var list = (result && Array.isArray(result.posts)) ? result.posts : [];
+      if (list.some(function (x) { return x.id === postId; })) {
+        _communityState.currentPage = p;
+        _communityState.posts = list;
+        refreshFeed();
+        renderPagination();
+        var el = document.querySelector('.community-post-card[data-post-id="' + postId + '"]');
+        if (el) setTimeout(function () { el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 300);
+        return;
+      }
+    }
   }
 
   async function loadCommentsForVisiblePosts() {
     var posts = _communityState.posts;
     if (!posts || posts.length === 0) return;
 
-    var promises = [];
-    var postIds = [];
-    for (var i = 0; i < posts.length; i++) {
-      var post = posts[i];
-      if ((post.comment_count || 0) > 0 && !_communityState.commentsCache[post.id]) {
-        promises.push(fetchComments(post.id));
-        postIds.push(post.id);
-      }
-    }
-    if (promises.length === 0) return;
+    // 只预载「有评论且尚未缓存」的帖子
+    var targets = posts.filter(function (p) {
+      return (p.comment_count || 0) > 0 && !_communityState.commentsCache[p.id];
+    });
+    if (targets.length === 0) return;
 
-    try {
-      var results = await Promise.all(promises.map(function(p) { return p.catch(function() { return null; }); }));
-      for (var j = 0; j < results.length; j++) {
-        var result = results[j];
-        _communityState.commentsCache[postIds[j]] = (result && result.comments) ? result.comments : [];
+    var postIds = targets.map(function (p) { return p.id; });
+
+    // 性能优化：批量拉取（1 次评论查询 + 1 次作者查询），
+    // 替代原实现的每帖 2 次请求（7 帖 → 14 次），显著降低社区页加载耗时
+    if (typeof window.getCommentsForPosts === 'function' && typeof window.getSupabase === 'function') {
+      var sb = window.getSupabase();
+      if (sb) {
+        try {
+          var result = await window.getCommentsForPosts(postIds);
+          var byPost = (result && result.commentsByPost) || {};
+          postIds.forEach(function (id) {
+            _communityState.commentsCache[id] = byPost[id] || [];
+          });
+          refreshFeed();
+          return;
+        } catch (e) {
+          // 批量失败时回退逐帖加载
+        }
       }
-    } catch (e) {
-      // fallback: individual error handling already done via .catch
     }
+
+    // 兜底：逐帖加载
+    try {
+      var results = await Promise.all(postIds.map(function (id) {
+        return fetchComments(id).catch(function () { return null; });
+      }));
+      for (var j = 0; j < results.length; j++) {
+        _communityState.commentsCache[postIds[j]] = (results[j] && results[j].comments) ? results[j].comments : [];
+      }
+    } catch (e) {}
 
     refreshFeed();
   }
@@ -2687,6 +2799,7 @@ if (typeof window._cspHoverOut !== 'function') {
         var ok = await createPost(content, selectedTags);
         if (ok) {
           closeCompose();
+          _showToast('发布成功');
           // 刷新列表
           _communityState.currentPage = 1;
           _communityState.posts = [];
