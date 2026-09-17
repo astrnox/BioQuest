@@ -1,0 +1,11 @@
+{
+  "caption": "生长动力学比较：A) 祖先株；B) 携带 lacI⁻ 的进化克隆（EV^lacI⁻）；C) 携带 lacI⁺ 的进化克隆（EV^lacI⁺）；D) 三者的直接对比（绿色为 EV^lacI⁻），横轴为时间（h），纵轴为 OD",
+  "credit": "Karkare K et al., Molecular Biology and Evolution 2021",
+  "doi": "10.1093/molbev/msab077",
+  "figure": "5",
+  "file": "assets/questions/gene_regulation/lac-fitness.jpg",
+  "license": "CC BY 4.0",
+  "pmcId": "PMC8233506",
+  "source": "paper",
+  "question_id": "lacI 负调控在进化背景下的生长动力学"
+}

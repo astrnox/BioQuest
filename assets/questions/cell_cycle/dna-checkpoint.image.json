@@ -1,0 +1,11 @@
+{
+  "caption": "DNA 损伤检查点信号网络：上）DSB→ATM，ssDNA/复制应激→ATR；中）CHK2/CHK1 两级介质；下）p53-p21（G1 阻滞）、CDC25A（S 期阻滞）、CDC25C-WEE1/PKMYT1（G2/M 阻滞）等效应分子",
+  "credit": "Li Q et al., Signal Transduction and Targeted Therapy 2023",
+  "doi": "10.1038/s41392-023-01548-8",
+  "figure": "4",
+  "file": "assets/questions/cell_cycle/dna-checkpoint.jpg",
+  "license": "CC BY 4.0",
+  "pmcId": "PMC10485079",
+  "source": "paper",
+  "question_id": "ATM-ATR 检查点通路的效应网络"
+}

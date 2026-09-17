@@ -4055,3 +4055,25 @@ html[data-theme="dark"] .bottom-tab-bar.is-dragging .bottom-tab-glow {
   backface-visibility: hidden;
 }
 
+
+/* ============ 批注图解析（期刊原图 + 批注） ============ */
+.exp-figure {
+  margin: 12px 0;
+  padding: 6px;
+  text-align: center;
+  background: var(--surface-2, #fafafa);
+  border: 1px solid var(--border-color, rgba(0, 0, 0, .1));
+  border-radius: 10px;
+}
+.exp-figure .exp-annotated {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  display: inline-block;
+}
+.exp-figure figcaption {
+  margin-top: 6px;
+  font-size: .78rem;
+  line-height: 1.5;
+  color: var(--text-secondary, #6b7280);
+}

@@ -1,0 +1,11 @@
+{
+  "caption": "基于 LD 谱的 26 个人群层次聚类树：叶节点按大洲着色（EAS 粉、SAS 红、EUR 蓝、AMR 绿、AFR 紫），分支高度表示 LD 谱差异（0-2500）；PEL 以长独立分支远离其他美洲人群",
+  "credit": "Lv W et al., Genome Biology 2026",
+  "doi": "10.1186/s13059-026-04019-9",
+  "figure": "3",
+  "file": "assets/questions/molecular_evo/ld-clusters.jpg",
+  "license": "CC BY 4.0",
+  "pmcId": "PMC13097867",
+  "source": "paper",
+  "question_id": "基于 LD 谱的人群遗传聚类推断"
+}

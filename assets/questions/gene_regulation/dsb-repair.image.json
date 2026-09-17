@@ -1,0 +1,11 @@
+{
+  "caption": "DSB 修复通路全景：左支 NHEJ（Ku70/80→DNA-PKcs→XRCC4-LigIV）；右支 HR（MRN/ATM→末端切除→RPA/ATR→RAD51 装载→姊妹染色单体模板）、TMEJ（Polθ）与 SSA（RAD52）；中央粉色框为各通路靶向抑制剂",
+  "credit": "Li Q et al., Signal Transduction and Targeted Therapy 2023",
+  "doi": "10.1038/s41392-023-01548-8",
+  "figure": "3",
+  "file": "assets/questions/gene_regulation/dsb-repair.jpg",
+  "license": "CC BY 4.0",
+  "pmcId": "PMC10485079",
+  "source": "paper",
+  "question_id": "DNA 双链断裂修复通路 NHEJ 与 HR 的细胞周期选择"
+}

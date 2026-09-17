@@ -596,7 +596,7 @@
     html += '</div>';
 
     if (r.submitted && q.explanation) {
-      html += '<div class="db-report-explanation"><span class="db-report-expl-label">解析</span><span class="db-report-expl-text">' + escapeHtml(q.explanation) + '</span></div>';
+      html += '<div class="db-report-explanation"><span class="db-report-expl-label">解析</span><span class="db-report-expl-text">' + renderExplanationWithImages(q.explanation) + '</span></div>';
     } else if (!r.submitted) {
       html += '<div class="db-report-explanation db-report-explanation--na">本题未作答，完成后再来看得分与解析</div>' +
               '<button class="db-report-cta" data-action="report-jump" data-idx="' + idx + '">继续作答 →</button>';

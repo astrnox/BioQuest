@@ -471,7 +471,7 @@
         </div>
         <div class="dq-explanation">
           <div class="dq-explanation-title">解析</div>
-          <div class="dq-explanation-text">${escapeHtml(q.explanation)}</div>
+          <div class="dq-explanation-text">${renderExplanationWithImages(q.explanation)}</div>
         </div>
       ` : ''}
     `;

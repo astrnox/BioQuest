@@ -1,0 +1,11 @@
+{
+  "caption": "m6A 介导的 RNA 命运决定：(A) 降解通路——核内 YTHDC1→exosome，胞质 YTHDFs→脱腺苷化/内切切割/脱帽；(B) 稳定化通路——核内 YTHDC1 多聚桥接、胞质 IGF2BP 保护",
+  "credit": "Wei G, Biochemical Society Transactions 2024",
+  "doi": "10.1042/BST20230574",
+  "figure": "2",
+  "file": "assets/questions/rna_biology/m6a-stability.jpg",
+  "license": "CC BY 4.0",
+  "pmcId": "PMC11088905",
+  "source": "paper",
+  "question_id": "m6A 阅读器决定 mRNA 降解或稳定的命运"
+}
