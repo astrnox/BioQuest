@@ -6,8 +6,9 @@ BioQuest — 全量种子数据上传脚本（新 Supabase）
 
 功能：
   1. 校验连接 + 建表（若表不存在，自动执行 schema.sql 关键表；否则跳过）
-  2. 题库：清空 questions 表并上传 data/bank/*.json（400 道 MTF 新题）
-     （daily亿题 / 每日一题 / 练习 / 课堂 均从 questions 表取题，上传后自动生效）
+  2. 题库：清空 questions 表并上传 data/bank/*.json（练习 / 模考 / 课堂共用）；
+     data/bank/daily_league_*.json（每日亿题专属 100 题）写入独立表 daily_questions，
+     先执行 sql/migration_v10_daily_bank.sql 建表，两题库互不混杂
   3. 卡片：upload data/cards.json -> cards 表（存在则 upsert）
   4. 资源：upload data/resources.json -> resources 表
   5. 社区：upload data/community.json -> community_posts 表（自动适配 author_id）
@@ -119,12 +120,14 @@ def build_question_record(qid, q):
 
 
 def upload_questions():
-    print("\n=== [1/4] 题库 questions ===")
+    print("\n=== [1/4] 题库 questions（练习 / 模考 / 课堂共用） ===")
     if not check_table("questions"):
         print("⚠️  questions 表不存在！请先执行 schema.sql 建表后再运行。")
         return 0, 0
     bank_dir = ROOT / "data" / "bank"
-    files = sorted(bank_dir.glob("*.json"))
+    # 每日亿题专属分片（daily_league_*.json）进入独立表 daily_questions，
+    # 与共享题库彻底隔离，绝不写入 questions 表。
+    files = sorted(f for f in bank_dir.glob("*.json") if not f.name.startswith("daily_league_"))
     all_records = []
     total = 0
     for f in files:
@@ -151,6 +154,44 @@ def upload_questions():
         print(f"  进度 {min(ok, total)}/{total}")
         time.sleep(0.2)
     print(f"  ✅ 题库上传完成: {ok}/{total}")
+    return ok, total
+
+
+# ============================================================
+# 每日亿题专属题库上传（daily_questions 表，与其他题库隔离）
+# ============================================================
+def upload_daily_questions():
+    print("\n=== [每日亿题] 专属题库 daily_questions ===")
+    if not check_table("daily_questions"):
+        print("❌ daily_questions 表不存在！请先在 Supabase SQL 编辑器执行 sql/migration_v10_daily_bank.sql 再运行。")
+        return 0, 0
+    bank_dir = ROOT / "data" / "bank"
+    files = sorted(bank_dir.glob("daily_league_*.json"))
+    all_records = []
+    total = 0
+    for f in files:
+        with open(f, encoding="utf-8") as fh:
+            data = json.load(fh)
+        for qid, q in data.items():
+            rec = build_question_record(qid, q)
+            rec["source"] = "data/bank-daily"
+            all_records.append(rec)
+            total += 1
+
+    # 只清空每日亿题专属表（绝不动 questions 表）
+    print(f"  待上传 {total} 题（来自 {len(files)} 个每日亿题分片）")
+    dele = sb("DELETE", "daily_questions?id=neq.00000000-0000-0000-0000-000000000000", prefer="return=minimal")
+    print(f"  旧题已清空: {dele if dele is not None else 'OK(空)'}")
+
+    ok = 0
+    for i in range(0, len(all_records), 50):
+        batch = all_records[i : i + 50]
+        r = sb("POST", "daily_questions", batch, prefer="return=minimal")
+        if r is not None:
+            ok += len(batch)
+        print(f"  进度 {min(ok, total)}/{total}")
+        time.sleep(0.2)
+    print(f"  ✅ 每日亿题专属题库上传完成: {ok}/{total}")
     return ok, total
 
 
@@ -288,8 +329,10 @@ if __name__ == "__main__":
     print("✅ Supabase 连接正常")
 
     n_q = 0
+    n_dq = 0
     if not no_q:
         n_q, _ = upload_questions()
+        n_dq, _ = upload_daily_questions()
     else:
         print("\n[跳过题库]")
     if not q_only:
@@ -298,5 +341,5 @@ if __name__ == "__main__":
         upload_community()
 
     print("\n" + "=" * 60)
-    print(f"✅ 全部完成。题库上传 {n_q} 题。")
+    print(f"✅ 全部完成。共享题库上传 {n_q} 题；每日亿题专属题库上传 {n_dq} 题。")
     print("=" * 60)

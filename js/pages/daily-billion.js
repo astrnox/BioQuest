@@ -186,7 +186,7 @@
     try {
       // 首次获取总数
       if (state.totalPoolSize === 0) {
-        var countResult = await _withTimeout(sb.from('questions').select('id', { count: 'exact', head: true }).eq('type', 'mtf').contains('tags', ['daily-league']), REQUEST_TIMEOUT_MS);
+        var countResult = await _withTimeout(sb.from('daily_questions').select('id', { count: 'exact', head: true }).eq('type', 'mtf').contains('tags', ['daily-league']), REQUEST_TIMEOUT_MS);
         if (!countResult.error && countResult.count !== null) {
           state.totalPoolSize = countResult.count;
         }
@@ -203,7 +203,7 @@
       var maxOffset = Math.max(0, poolSize - limit);
       var randomOffset = Math.floor(Math.random() * maxOffset);
 
-      var result = await _withTimeout(sb.from('questions')
+      var result = await _withTimeout(sb.from('daily_questions')
         .select('id,question,sub_questions,explanation,subject')
         .eq('type', 'mtf')
         .contains('tags', ['daily-league'])
@@ -222,7 +222,7 @@
       // 如果过滤后不够，再随机拉一批
       if (freshQuestions.length < limit && state.totalPoolSize > limit) {
         var retryOffset = Math.floor(Math.random() * Math.max(0, poolSize - limit));
-        var retryResult = await _withTimeout(sb.from('questions')
+        var retryResult = await _withTimeout(sb.from('daily_questions')
           .select('id,question,sub_questions,explanation,subject')
           .eq('type', 'mtf')
           .contains('tags', ['daily-league'])

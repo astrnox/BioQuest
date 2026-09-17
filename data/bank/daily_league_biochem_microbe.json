@@ -5,13 +5,35 @@
   "explanation": "考点：单糖二糖多糖与动植物体内储能物质。\nA【对】依据：葡萄糖是六碳糖（单糖），能被细胞直接吸收利用，是细胞生命活动的主要能源物质。\nB【对】依据：淀粉是植物细胞中的储能多糖，水解终产物是葡萄糖。\nC【对】依据：糖原是动物细胞中储存能量的多糖，主要分布在肝脏（肝糖原）和骨骼肌（肌糖原）中。\nD【错】错因：人体消化道内不含纤维素酶，不能消化纤维素，纤维素只是作为“食物纤维”帮助肠道蠕动。\n小提醒：几丁质、纤维素是结构物质不是储能物质，别混淆。",
   "question": "下列关于糖类的叙述，判断正误。",
   "subQuestions": [
-   {"label": "A", "text": "葡萄糖是单糖，能被细胞直接吸收利用", "answer": true},
-   {"label": "B", "text": "淀粉是植物细胞中的储能多糖", "answer": true},
-   {"label": "C", "text": "糖原是动物细胞中储存能量的多糖", "answer": true},
-   {"label": "D", "text": "人体能依靠纤维素酶消化纤维素获得能量", "answer": false}
+   {
+    "label": "A",
+    "text": "葡萄糖是单糖，能被细胞直接吸收利用",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "淀粉是植物细胞中的储能多糖",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "糖原是动物细胞中储存能量的多糖",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "人体能依靠纤维素酶消化纤维素获得能量",
+    "answer": false
+   }
   ],
   "subject": "生物化学",
-  "tags": ["daily-league", "lipid_metab", "生物化学", "糖类", "module_1"],
+  "tags": [
+   "daily-league",
+   "lipid_metab",
+   "生物化学",
+   "糖类",
+   "module_1"
+  ],
   "target": "competition",
   "type": "mtf"
  },
@@ -21,45 +43,111 @@
   "explanation": "考点：脂肪、磷脂和固醇的作用。\nA【对】依据：相同质量的脂肪氧化分解释放的能量比糖类多，是细胞内良好的储能物质。\nB【对】依据：磷脂是构成细胞膜和多种细胞器膜的重要成分，以双分子层的形式存在。\nC【对】依据：固醇类物质包括胆固醇、性激素和维生素D等，性激素能促进动物生殖器官发育。\nD【错】错因：构成细胞膜的主要脂质是磷脂而不是脂肪；细胞内也含有脂肪，但脂肪不参与细胞膜的组成。\n小提醒：见到“细胞膜的主要成分”，回答“磷脂和蛋白质”。",
   "question": "下列关于脂质的叙述，判断正误。",
   "subQuestions": [
-   {"label": "A", "text": "脂肪是细胞内良好的储能物质", "answer": true},
-   {"label": "B", "text": "磷脂是构成细胞膜的重要成分", "answer": true},
-   {"label": "C", "text": "性激素属于固醇类物质，能促进生殖器官的发育", "answer": true},
-   {"label": "D", "text": "脂肪是构成细胞膜的主要成分", "answer": false}
+   {
+    "label": "A",
+    "text": "脂肪是细胞内良好的储能物质",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "磷脂是构成细胞膜的重要成分",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "性激素属于固醇类物质，能促进生殖器官的发育",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "脂肪是构成细胞膜的主要成分",
+    "answer": false
+   }
   ],
   "subject": "生物化学",
-  "tags": ["daily-league", "lipid_metab", "生物化学", "脂质", "module_1"],
+  "tags": [
+   "daily-league",
+   "lipid_metab",
+   "生物化学",
+   "脂质",
+   "module_1"
+  ],
   "target": "competition",
   "type": "mtf"
  },
  "DL-BC-03": {
   "concept": "蛋白质的结构与功能",
   "difficulty": "league",
-  "explanation": "考点：氨基酸脱水缩合与蛋白质多样性。\nA【对】依据：组成蛋白质的氨基酸约有20种，都至少含有一个氨基和一个羧基，且都有一个氨基和羧基连在同一个碳原子上。\nB【对】依据：氨基酸之间通过脱水缩合形成肽键连接，n个氨基酸形成m条肽链时，肽键数=氨基酸数−肽链数=n−m。\nC【错】错因：组成蛋白质的氨基酸的种类、数目不同，但每条肽链中还含有游离的氨基和羧基（在两端和R基上），说“没有游离的氨基和羧基”不准确。\nD【对】依据：蛋白质结构的多样性（氨基酸种类、数目、排列顺序及肽链空间结构不同）决定了其功能的多样性。",
+  "explanation": "考点：氨基酸脱水缩合与蛋白质多样性。\nA【对】依据：组成蛋白质的氨基酸约有20种，都至少含有一个氨基和一个羧基，且都有一个氨基和羧基连在同一个碳原子上。\nB【对】依据：氨基酸之间通过脱水缩合形成肽键连接，n个氨基酸形成m条肽链时，肽键数=氨基酸数−肽链数=n−m。\nC【错】错因：组成蛋白质的氨基酸的种类、数目不同，但每条肽链中还含有游离的氨基和羧基（在两端和R基上），说“没有游离的氨基和羧基”不准确。\nD【对】依据：蛋白质结构的多样性（氨基酸种类、数目、排列顺序及肽链空间结构不同）决定了其功能的多样性。\n【通法】蛋白质计算三件套：肽键数＝氨基酸数−肽链数；每条肽链至少含1个游离氨基和1个游离羧基（在两端）；“至少”出现时先算肽链数。",
   "question": "下列关于蛋白质的叙述，判断正误。",
   "subQuestions": [
-   {"label": "A", "text": "组成蛋白质的氨基酸约有20种", "answer": true},
-   {"label": "B", "text": "n个氨基酸形成m条肽链时，肽键数为n−m", "answer": true},
-   {"label": "C", "text": "一条多肽链中不含有游离的氨基和羧基", "answer": false},
-   {"label": "D", "text": "蛋白质结构的多样性决定了其功能的多样性", "answer": true}
+   {
+    "label": "A",
+    "text": "组成蛋白质的氨基酸约有20种",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "n个氨基酸形成m条肽链时，肽键数为n−m",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "一条多肽链中不含有游离的氨基和羧基",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "蛋白质结构的多样性决定了其功能的多样性",
+    "answer": true
+   }
   ],
   "subject": "生物化学",
-  "tags": ["daily-league", "amino_acid_metab", "生物化学", "蛋白质", "module_1"],
+  "tags": [
+   "daily-league",
+   "amino_acid_metab",
+   "生物化学",
+   "蛋白质",
+   "module_1"
+  ],
   "target": "competition",
   "type": "mtf"
  },
  "DL-BC-04": {
   "concept": "核酸的种类与结构",
   "difficulty": "league",
-  "explanation": "考点：DNA与RNA的区别。\nA【对】依据：DNA一般呈双链结构，两条脱氧核苷酸链按反向平行方式盘旋成双螺旋。\nB【对】依据：构成DNA的五碳糖是脱氧核糖，构成RNA的五碳糖是核糖，这是二者名称的由来。\nC【错】错因：RNA一般是单链的（部分RNA内部可折叠配对），说“RNA是双链结构”不准确。\nD【对】依据：DNA特有的碱基是胸腺嘧啶（T），RNA特有的碱基是尿嘧啶（U），据此可区分两种核酸。",
+  "explanation": "考点：DNA与RNA的区别。\nA【对】依据：DNA一般呈双链结构，两条脱氧核苷酸链按反向平行方式盘旋成双螺旋。\nB【对】依据：构成DNA的五碳糖是脱氧核糖，构成RNA的五碳糖是核糖，这是二者名称的由来。\nC【错】错因：RNA一般是单链的（部分RNA内部可折叠配对），说“RNA是双链结构”不准确。\nD【对】依据：DNA特有的碱基是胸腺嘧啶（T），RNA特有的碱基是尿嘧啶（U），据此可区分两种核酸。\n【相关知识点】双链DNA中A＝T、G≡C，故嘌呤数＝嘧啶数；RNA是单链，没有这种数量关系。碱基互补配对（A–T/U、G–C）是DNA复制、转录和翻译共同遵循的原则。",
   "question": "下列关于DNA和RNA的叙述，判断正误。",
   "subQuestions": [
-   {"label": "A", "text": "DNA一般呈双链结构", "answer": true},
-   {"label": "B", "text": "DNA含有脱氧核糖，RNA含有核糖", "answer": true},
-   {"label": "C", "text": "RNA都是单链结构，不含双链区域", "answer": false},
-   {"label": "D", "text": "DNA特有的碱基是胸腺嘧啶（T），RNA特有的碱基是尿嘧啶（U）", "answer": true}
+   {
+    "label": "A",
+    "text": "DNA一般呈双链结构",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "DNA含有脱氧核糖，RNA含有核糖",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "RNA都是单链结构，不含双链区域",
+    "answer": false
+   },
+   {
+    "label": "D",
+    "text": "DNA特有的碱基是胸腺嘧啶（T），RNA特有的碱基是尿嘧啶（U）",
+    "answer": true
+   }
   ],
   "subject": "生物化学",
-  "tags": ["daily-league", "dna_structure", "生物化学", "核酸", "module_1"],
+  "tags": [
+   "daily-league",
+   "dna_structure",
+   "生物化学",
+   "核酸",
+   "module_1"
+  ],
   "target": "competition",
   "type": "mtf"
  },
@@ -69,13 +157,35 @@
   "explanation": "考点：DNA双螺旋结构的碱基互补配对。\nA【对】依据：DNA两条链按反向平行方式盘旋，即两条链的走向相反，构成规则的双螺旋结构。\nB【对】依据：碱基互补配对原则是A与T配对、G与C配对，因此双链DNA中A=T、G≡C。\nC【对】依据：由于A=T、G=C，双链DNA中嘌呤总数（A+G）等于嘧啶总数（T+C）。\nD【错】错因：DNA分子的基本骨架是脱氧核糖和磷酸交替连接，排列在外侧；碱基排列在内侧通过氢键配对。",
   "question": "下列关于DNA双螺旋结构的叙述，判断正误。",
   "subQuestions": [
-   {"label": "A", "text": "DNA两条链按反向平行方式盘旋形成双螺旋", "answer": true},
-   {"label": "B", "text": "A与T配对，G与C配对", "answer": true},
-   {"label": "C", "text": "双链DNA中嘌呤总数等于嘧啶总数", "answer": true},
-   {"label": "D", "text": "DNA的基本骨架由碱基排列构成", "answer": false}
+   {
+    "label": "A",
+    "text": "DNA两条链按反向平行方式盘旋形成双螺旋",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "A与T配对，G与C配对",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "双链DNA中嘌呤总数等于嘧啶总数",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "DNA的基本骨架由碱基排列构成",
+    "answer": false
+   }
   ],
   "subject": "生物化学",
-  "tags": ["daily-league", "dna_structure", "生物化学", "DNA结构", "module_1"],
+  "tags": [
+   "daily-league",
+   "dna_structure",
+   "生物化学",
+   "DNA结构",
+   "module_1"
+  ],
   "target": "competition",
   "type": "mtf"
  },
@@ -85,29 +195,73 @@
   "explanation": "考点：水的存在形式与无机盐的功能。\nA【对】依据：水是细胞中含量最多的化合物，约占细胞鲜重的85%~90%。\nB【对】依据：自由水含量越高，细胞代谢越旺盛；结合水含量高则抗逆性强（如种子晒干后耐储存）。\nC【对】依据：细胞中大多数无机盐以离子形式存在，如Na⁺、K⁺、Ca²⁺等。\nD【错】错因：Mg²⁺是叶绿素的组成成分，Fe²⁺才是血红蛋白的组成成分；缺Mg导致叶绿素合成受阻、叶片发黄。",
   "question": "下列关于细胞中水和无机盐的叙述，判断正误。",
   "subQuestions": [
-   {"label": "A", "text": "水是细胞中含量最多的化合物", "answer": true},
-   {"label": "B", "text": "自由水含量越高，细胞代谢越旺盛", "answer": true},
-   {"label": "C", "text": "细胞中的无机盐大多以离子形式存在", "answer": true},
-   {"label": "D", "text": "Mg²⁺是血红蛋白的组成成分，缺Mg会导致贫血", "answer": false}
+   {
+    "label": "A",
+    "text": "水是细胞中含量最多的化合物",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "自由水含量越高，细胞代谢越旺盛",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "细胞中的无机盐大多以离子形式存在",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "Mg²⁺是血红蛋白的组成成分，缺Mg会导致贫血",
+    "answer": false
+   }
   ],
   "subject": "生物化学",
-  "tags": ["daily-league", "bioenergetics", "生物化学", "无机盐", "module_1"],
+  "tags": [
+   "daily-league",
+   "bioenergetics",
+   "生物化学",
+   "无机盐",
+   "module_1"
+  ],
   "target": "competition",
   "type": "mtf"
  },
  "DL-BC-07": {
   "concept": "有氧呼吸的过程与场所",
   "difficulty": "league",
-  "explanation": "考点：有氧呼吸三个阶段的发生场所与产物。\nA【对】依据：有氧呼吸第一阶段在细胞质基质中进行，葡萄糖被分解为丙酮酸，并产生少量[H]和ATP。\nB【对】依据：有氧呼吸第二、三阶段在线粒体中进行，因此线粒体是有氧呼吸的主要场所。\nC【对】依据：有氧呼吸最终将葡萄糖彻底氧化分解为二氧化碳和水，释放大量能量。\nD【错】错因：葡萄糖不能直接进入线粒体，它先在细胞质基质中被分解为丙酮酸，丙酮酸再进入线粒体进一步氧化分解。",
+  "explanation": "考点：有氧呼吸三个阶段的发生场所与产物。\nA【对】依据：有氧呼吸第一阶段在细胞质基质中进行，葡萄糖被分解为丙酮酸，并产生少量[H]和ATP。\nB【对】依据：有氧呼吸第二、三阶段在线粒体中进行，因此线粒体是有氧呼吸的主要场所。\nC【对】依据：有氧呼吸最终将葡萄糖彻底氧化分解为二氧化碳和水，释放大量能量。\nD【错】错因：葡萄糖不能直接进入线粒体，它先在细胞质基质中被分解为丙酮酸，丙酮酸再进入线粒体进一步氧化分解。\n【思路引导】画一条代谢路线图“葡萄糖→（细胞质基质）丙酮酸→（线粒体）CO₂+H₂O”。有氧呼吸第一阶段不看线粒体，凡是“葡萄糖直接进线粒体”的选项直接判错。",
   "question": "下列关于有氧呼吸的叙述，判断正误。",
   "subQuestions": [
-   {"label": "A", "text": "有氧呼吸第一阶段在细胞质基质中进行", "answer": true},
-   {"label": "B", "text": "线粒体是有氧呼吸的主要场所", "answer": true},
-   {"label": "C", "text": "有氧呼吸最终把葡萄糖彻底氧化分解为二氧化碳和水", "answer": true},
-   {"label": "D", "text": "葡萄糖可以直接进入线粒体被氧化分解", "answer": false}
+   {
+    "label": "A",
+    "text": "有氧呼吸第一阶段在细胞质基质中进行",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "线粒体是有氧呼吸的主要场所",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "有氧呼吸最终把葡萄糖彻底氧化分解为二氧化碳和水",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "葡萄糖可以直接进入线粒体被氧化分解",
+    "answer": false
+   }
   ],
   "subject": "生物化学",
-  "tags": ["daily-league", "glycolysis", "生物化学", "有氧呼吸", "module_1"],
+  "tags": [
+   "daily-league",
+   "glycolysis",
+   "生物化学",
+   "有氧呼吸",
+   "module_1"
+  ],
   "target": "competition",
   "type": "mtf"
  },
@@ -117,29 +271,73 @@
   "explanation": "考点：无氧呼吸的产物类型。\nA【对】依据：高等动物和人体肌肉细胞在缺氧时进行无氧呼吸，葡萄糖分解产生乳酸，不产生二氧化碳。\nB【对】依据：酵母菌在缺氧条件下分解葡萄糖产生酒精（乙醇）和二氧化碳，可用于酿酒。\nC【对】依据：无氧呼吸虽然释放的能量少，但第一阶段仍会形成少量ATP，能为细胞供能。\nD【错】错因：无氧呼吸不消耗氧气，也基本不释放二氧化碳（乳酸型）或释放的CO₂与C6H12O6中碳完全对应（酒精型）——注意“无氧呼吸大多不产生CO₂”只适用于乳酸发酵；酒精型会产生CO₂，说法“一律”不成立。",
   "question": "下列关于无氧呼吸的叙述，判断正误。",
   "subQuestions": [
-   {"label": "A", "text": "人体肌肉细胞缺氧时无氧呼吸产生乳酸", "answer": true},
-   {"label": "B", "text": "酵母菌无氧呼吸能产生酒精和二氧化碳", "answer": true},
-   {"label": "C", "text": "无氧呼吸的第一阶段能形成少量ATP", "answer": true},
-   {"label": "D", "text": "所有类型的无氧呼吸都不产生二氧化碳", "answer": false}
+   {
+    "label": "A",
+    "text": "人体肌肉细胞缺氧时无氧呼吸产生乳酸",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "酵母菌无氧呼吸能产生酒精和二氧化碳",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "无氧呼吸的第一阶段能形成少量ATP",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "所有类型的无氧呼吸都不产生二氧化碳",
+    "answer": false
+   }
   ],
   "subject": "生物化学",
-  "tags": ["daily-league", "glycolysis", "生物化学", "无氧呼吸", "module_1"],
+  "tags": [
+   "daily-league",
+   "glycolysis",
+   "生物化学",
+   "无氧呼吸",
+   "module_1"
+  ],
   "target": "competition",
   "type": "mtf"
  },
  "DL-BC-09": {
   "concept": "光合作用的总过程",
   "difficulty": "league",
-  "explanation": "考点：光合作用场所、总反应式与暗反应。\nA【对】依据：绿色植物的光合作用在叶绿体中进行，叶绿体因此被称为“养料制造工厂”和“能量转换站”。\nB【对】依据：光合作用把二氧化碳和水转变为有机物（主要是葡萄糖），同时释放氧气。\nC【对】依据：氧气来自水的光解，发生在光反应阶段；光反应在类囊体薄膜上进行。\nD【错】错因：暗反应在叶绿体基质中进行，CO₂先被固定为三碳化合物（C₃），再被还原为有机物；暗反应本身不需要光，但离不开光反应提供的ATP和[H]（NADPH）。",
+  "explanation": "考点：光合作用场所、总反应式与暗反应。\nA【对】依据：绿色植物的光合作用在叶绿体中进行，叶绿体因此被称为“养料制造工厂”和“能量转换站”。\nB【对】依据：光合作用把二氧化碳和水转变为有机物（主要是葡萄糖），同时释放氧气。\nC【对】依据：氧气来自水的光解，发生在光反应阶段；光反应在类囊体薄膜上进行。\nD【错】错因：暗反应在叶绿体基质中进行，CO₂先被固定为三碳化合物（C₃），再被还原为有机物；暗反应本身不需要光，但离不开光反应提供的ATP和[H]（NADPH）。\n【相关知识点】光反应与暗反应是偶联的：光反应为暗反应提供ATP和NADPH（[H]），暗反应为光反应回供ADP和NADP⁺。“暗反应不需要光”正确，但“没有光反应产物也能进行”错误；C₃还原后的C₅会再生，保证循环持续。",
   "question": "下列关于光合作用的叙述，判断正误。",
   "subQuestions": [
-   {"label": "A", "text": "绿色植物光合作用的场所是叶绿体", "answer": true},
-   {"label": "B", "text": "光合作用将二氧化碳和水转变为有机物并释放氧气", "answer": true},
-   {"label": "C", "text": "光合作用释放的氧气来自水的光解", "answer": true},
-   {"label": "D", "text": "暗反应必须在黑暗条件下才能进行", "answer": false}
+   {
+    "label": "A",
+    "text": "绿色植物光合作用的场所是叶绿体",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "光合作用将二氧化碳和水转变为有机物并释放氧气",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "光合作用释放的氧气来自水的光解",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "暗反应必须在黑暗条件下才能进行",
+    "answer": false
+   }
   ],
   "subject": "植物生理学",
-  "tags": ["daily-league", "photosynthesis", "植物生理学", "光合作用", "module_2"],
+  "tags": [
+   "daily-league",
+   "photosynthesis",
+   "植物生理学",
+   "光合作用",
+   "module_2"
+  ],
   "target": "competition",
   "type": "mtf"
  },
@@ -149,45 +347,111 @@
   "explanation": "考点：光照与CO₂浓度对光合速率的影响及净光合概念。\nA【对】依据：光照强度增大，光反应加快，光合速率随之增大，达到光饱和点后不再增大。\nB【错】错因：当光合速率等于呼吸速率时，CO₂吸收量为零，这是光补偿点；说“此时植物不进行光合作用”不准确，植物仍在进行等速率的光合与呼吸。\nC【对】依据：适当提高CO₂浓度可使暗反应加固，因此在一定范围内提高CO₂浓度能提高光合速率。\nD【对】依据：植物可观察到净光合速率等于总光合速率减去呼吸速率，两者之差为负说明光合弱于呼吸。",
   "question": "下列关于环境因素影响光合作用的叙述，判断正误。",
   "subQuestions": [
-   {"label": "A", "text": "光照强度增大到一定程度后，光合速率不再继续增大", "answer": true},
-   {"label": "B", "text": "当光合速率等于呼吸速率时，植物完全不进行光合作用", "answer": false},
-   {"label": "C", "text": "在一定范围内提高CO₂浓度可以提高光合速率", "answer": true},
-   {"label": "D", "text": "净光合速率等于总光合速率减去呼吸速率", "answer": true}
+   {
+    "label": "A",
+    "text": "光照强度增大到一定程度后，光合速率不再继续增大",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "当光合速率等于呼吸速率时，植物完全不进行光合作用",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "在一定范围内提高CO₂浓度可以提高光合速率",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "净光合速率等于总光合速率减去呼吸速率",
+    "answer": true
+   }
   ],
   "subject": "植物生理学",
-  "tags": ["daily-league", "photosynthesis", "植物生理学", "光合作用", "module_2"],
+  "tags": [
+   "daily-league",
+   "photosynthesis",
+   "植物生理学",
+   "光合作用",
+   "module_2"
+  ],
   "target": "competition",
   "type": "mtf"
  },
  "DL-MB-01": {
   "concept": "细菌的结构与生殖",
   "difficulty": "league",
-  "explanation": "考点：细菌属于原核生物。\nA【对】依据：细菌没有核膜包被的细胞核，属于原核生物，遗传物质集中在拟核区域。\nB【对】依据：细菌通过二分裂方式进行繁殖，一个细胞分裂为两个子细胞。\nC【对】依据：芽孢是细菌在恶劣条件下形成的休眠体，具有极强的抗逆性，能耐受高温、干燥等。\nD【错】错因：芽孢不是生殖细胞，它不繁殖、不产生后代，只是度过不良环境的休眠体；条件适宜时一个芽孢发育成一个细菌细胞。",
+  "explanation": "考点：细菌属于原核生物。\nA【对】依据：细菌没有核膜包被的细胞核，属于原核生物，遗传物质集中在拟核区域。\nB【对】依据：细菌通过二分裂方式进行繁殖，一个细胞分裂为两个子细胞。\nC【对】依据：芽孢是细菌在恶劣条件下形成的休眠体，具有极强的抗逆性，能耐受高温、干燥等。\nD【错】错因：芽孢不是生殖细胞，它不繁殖、不产生后代，只是度过不良环境的休眠体；条件适宜时一个芽孢发育成一个细菌细胞。\n【易错易混】芽孢≠孢子：芽孢是细菌的休眠体，只用于抗逆、不用于繁殖（一个菌体形成一个芽孢、一个芽孢萌发成一个菌体）；孢子是真菌、植物等的繁殖结构，能直接发育成新个体。",
   "question": "下列关于细菌的叙述，判断正误。",
   "subQuestions": [
-   {"label": "A", "text": "细菌没有核膜包被的细胞核，属于原核生物", "answer": true},
-   {"label": "B", "text": "细菌通过二分裂方式进行繁殖", "answer": true},
-   {"label": "C", "text": "芽孢是细菌度过不良环境的休眠体，抗逆性强", "answer": true},
-   {"label": "D", "text": "一个细菌能通过形成芽孢繁殖出多个子代", "answer": false}
+   {
+    "label": "A",
+    "text": "细菌没有核膜包被的细胞核，属于原核生物",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "细菌通过二分裂方式进行繁殖",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "芽孢是细菌度过不良环境的休眠体，抗逆性强",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "一个细菌能通过形成芽孢繁殖出多个子代",
+    "answer": false
+   }
   ],
   "subject": "微生物学",
-  "tags": ["daily-league", "bacteria", "微生物学", "细菌", "module_2"],
+  "tags": [
+   "daily-league",
+   "bacteria",
+   "微生物学",
+   "细菌",
+   "module_2"
+  ],
   "target": "competition",
   "type": "mtf"
  },
  "DL-MB-02": {
   "concept": "病毒的结构与生活方式",
   "difficulty": "league",
-  "explanation": "考点：病毒无细胞结构，专性寄生。\nA【对】依据：病毒没有细胞结构，仅由核酸（DNA或RNA）和蛋白质外壳组成。\nB【对】依据：病毒必须寄生在活细胞内才能进行复制繁殖，不能独立进行代谢活动。\nC【对】依据：噬菌体是专门侵染细菌的病毒，其遗传物质是DNA。\nD【错】错因：病毒不能在普通培养基上独立培养，必须用活细胞（如活菌、活细胞株）培养，所以实验室常用大肠杆菌培养噬菌体。\n小提醒：“病毒是不是生物”看定义阵营，但“病毒不能独立代谢、必须寄生”是公认事实。",
+  "explanation": "考点：病毒无细胞结构，专性寄生。\nA【对】依据：病毒没有细胞结构，仅由核酸（DNA或RNA）和蛋白质外壳组成。\nB【对】依据：病毒必须寄生在活细胞内才能进行复制繁殖，不能独立进行代谢活动。\nC【对】依据：噬菌体是专门侵染细菌的病毒，其遗传物质是DNA。\nD【错】错因：病毒不能在普通培养基上独立培养，必须用活细胞（如活菌、活细胞株）培养，所以实验室常用大肠杆菌培养噬菌体。\n【相关知识点】病毒是“专性寄生”生物：只含有一种核酸（DNA或RNA）+蛋白质外壳；培养病毒必须用活细胞。流感病毒（RNA）、乙肝病毒（DNA）等常考“遗传物质是单链RNA还是双链DNA”的辨析。\n小提醒：“病毒是不是生物”看定义阵营，但“病毒不能独立代谢、必须寄生”是公认事实。",
   "question": "下列关于病毒的叙述，判断正误。",
   "subQuestions": [
-   {"label": "A", "text": "病毒没有细胞结构，由核酸和蛋白质构成", "answer": true},
-   {"label": "B", "text": "病毒必须寄生在活细胞内才能繁殖", "answer": true},
-   {"label": "C", "text": "噬菌体是侵染细菌的DNA病毒", "answer": true},
-   {"label": "D", "text": "病毒可以在普通培养基上独立培养", "answer": false}
+   {
+    "label": "A",
+    "text": "病毒没有细胞结构，由核酸和蛋白质构成",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "病毒必须寄生在活细胞内才能繁殖",
+    "answer": true
+   },
+   {
+    "label": "C",
+    "text": "噬菌体是侵染细菌的DNA病毒",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "病毒可以在普通培养基上独立培养",
+    "answer": false
+   }
   ],
   "subject": "微生物学",
-  "tags": ["daily-league", "virus", "微生物学", "病毒", "module_2"],
+  "tags": [
+   "daily-league",
+   "virus",
+   "微生物学",
+   "病毒",
+   "module_2"
+  ],
   "target": "competition",
   "type": "mtf"
  },
@@ -197,13 +461,35 @@
   "explanation": "考点：培养基成分与灭菌消毒的区别。\nA【对】依据：培养基一般含有水、碳源、氮源和无机盐等，以满足微生物生长繁殖的需要。\nB【错】错因：灭菌是杀灭物体上所有的微生物，包括芽孢和孢子；消毒只能杀死部分微生物（病原体），两者强度不同，不能混用。\nC【对】依据：接种环等金属器皿使用前需在酒精灯火焰上灼烧灭菌，这属于灭菌操作。\nD【对】依据：实验室常用高压蒸汽灭菌锅在121℃左右高压蒸汽条件下灭菌。",
   "question": "下列关于微生物培养的叙述，判断正误。",
   "subQuestions": [
-   {"label": "A", "text": "培养基一般需要提供碳源、氮源、水和无机盐", "answer": true},
-   {"label": "B", "text": "消毒和灭菌都是杀灭一切微生物，两者没有区别", "answer": false},
-   {"label": "C", "text": "接种环使用前应在酒精灯火焰上灼烧灭菌", "answer": true},
-   {"label": "D", "text": "实验室常用高压蒸汽灭菌锅进行灭菌", "answer": true}
+   {
+    "label": "A",
+    "text": "培养基一般需要提供碳源、氮源、水和无机盐",
+    "answer": true
+   },
+   {
+    "label": "B",
+    "text": "消毒和灭菌都是杀灭一切微生物，两者没有区别",
+    "answer": false
+   },
+   {
+    "label": "C",
+    "text": "接种环使用前应在酒精灯火焰上灼烧灭菌",
+    "answer": true
+   },
+   {
+    "label": "D",
+    "text": "实验室常用高压蒸汽灭菌锅进行灭菌",
+    "answer": true
+   }
   ],
   "subject": "微生物学",
-  "tags": ["daily-league", "microbial_metabolism", "微生物学", "微生物培养", "module_2"],
+  "tags": [
+   "daily-league",
+   "microbial_metabolism",
+   "微生物学",
+   "微生物培养",
+   "module_2"
+  ],
   "target": "competition",
   "type": "mtf"
  }
