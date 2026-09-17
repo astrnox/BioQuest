@@ -1,0 +1,402 @@
+{
+ "DL-GE-01": {
+  "concept": "基因的分离定律",
+  "difficulty": "league",
+  "explanation": "考点：分离定律的内容和实质。\nA【对】依据：分离定律的实质是等位基因随同源染色体的分开而分离，该过程发生在减数第一次分裂后期。\nB【对】依据：杂合子（Aa）自交，F₁代表现显性性状的个体占3/4，性状分离比约为显性∶隐性=3∶1。\nC【对】依据：测交是让F₁与隐性纯合子杂交，根据后代性状分离比可判断F₁产生的配子种类和比例，从而检测其基因型。\nD【错】错因：杂合子（Aa）形成的配子中，含A的配子与含a的配子数量相等（1∶1），其他等位基因的比例不能简单套用。",
+  "question": "下列关于基因分离定律的叙述，判断正误。",
+  "subQuestions": [
+   {"label": "A", "text": "等位基因随同源染色体的分开而分离", "answer": true},
+   {"label": "B", "text": "杂合子自交，后代的性状分离比约为3∶1", "answer": true},
+   {"label": "C", "text": "测交可以用于检测杂合子产生的配子种类和比例", "answer": true},
+   {"label": "D", "text": "杂合子产生的含显性基因与含隐性基因的配子数量比为1∶2", "answer": false}
+  ],
+  "subject": "遗传学",
+  "tags": ["daily-league", "mendel", "遗传学", "分离定律", "module_4"],
+  "target": "competition",
+  "type": "mtf"
+ },
+ "DL-GE-02": {
+  "concept": "显性与隐性性状",
+  "difficulty": "league",
+  "explanation": "考点：完全显性时杂合子的表现。\nA【对】依据：在完全显性的情况下，杂合子（如Aa）只表现显性性状，不表现隐性性状。\nB【对】依据：隐性性状在纯合（aa）时才能表现，杂合子中不表现。\nC【错】错因：显性性状是指杂合子中能表现出来的性状，由显性基因控制；不能说“显性性状总是对生物有利”，某些显性遗传病对个体有害。\nD【对】依据：判显隐的基本规则：具有相对性状的纯合亲本杂交，子代所表现的性状是显性性状。",
+  "question": "下列关于显性性状与隐性性状的叙述，判断正误。",
+  "subQuestions": [
+   {"label": "A", "text": "完全显性时，杂合子只表现出显性性状", "answer": true},
+   {"label": "B", "text": "隐性性状只在纯合体中表现出来", "answer": true},
+   {"label": "C", "text": "显性性状对生物的生存总是有利的", "answer": false},
+   {"label": "D", "text": "纯合亲本杂交，子代表现出来的性状一般是显性性状", "answer": true}
+  ],
+  "subject": "遗传学",
+  "tags": ["daily-league", "mendel", "遗传学", "显隐性", "module_4"],
+  "target": "competition",
+  "type": "mtf"
+ },
+ "DL-GE-03": {
+  "concept": "基因的自由组合定律",
+  "difficulty": "league",
+  "explanation": "考点：自由组合定律的实质与经典比例。\nA【对】依据：自由组合定律适用于位于非同源染色体上的非等位基因。\nB【对】依据：双杂合子（AaBb）自交，F₂代出现9∶3∶3∶1的性状分离比。\nC【错】错因：等位基因的分离仍遵循分离定律；自由组合是指非同源染色体上的非等位基因的组合，二者并不冲突。\nD【错】错因：若两对基因位于同一对同源染色体上（连锁），则不遵循自由组合定律，后代不会出现9∶3∶3∶1，因此“任何两对相对性状都遵循自由组合定律”说法错误。",
+  "question": "下列关于基因自由组合定律的叙述，判断正误。",
+  "subQuestions": [
+   {"label": "A", "text": "自由组合定律适用于非同源染色体上的非等位基因", "answer": true},
+   {"label": "B", "text": "双杂合子自交，F₂代的性状分离比是9∶3∶3∶1", "answer": true},
+   {"label": "C", "text": "发生自由组合时，等位基因的分离就不存在了", "answer": false},
+   {"label": "D", "text": "位于同一对同源染色体上的两对等位基因也遵循自由组合定律", "answer": false}
+  ],
+  "subject": "遗传学",
+  "tags": ["daily-league", "mendel", "遗传学", "自由组合", "module_4"],
+  "target": "competition",
+  "type": "mtf"
+ },
+ "DL-GE-04": {
+  "concept": "纯合子与杂合子的判断",
+  "difficulty": "league",
+  "explanation": "考点：纯合子与杂合子的定义与特点。\nA【对】依据：纯合子是指基因组成相同（如AA、aa）的个体。\nB【对】依据：杂合子自交后代会发生性状分离，纯合子自交后代会稳定遗传。\nC【错】错因：表现型相同（如显性表现型）的个体基因型可能为AA也可能为Aa，不能说一定相同；判别需要测交等进一步实验。\nD【对】依据：纯合子中不存在等位基因，杂合子含有等位基因（如Aa）。",
+  "question": "下列关于纯合子和杂合子的叙述，判断正误。",
+  "subQuestions": [
+   {"label": "A", "text": "纯合子是指基因组成相同的个体", "answer": true},
+   {"label": "B", "text": "杂合子自交后代会发生性状分离", "answer": true},
+   {"label": "C", "text": "表现型相同的个体基因型一定相同", "answer": false},
+   {"label": "D", "text": "杂合子中含有等位基因", "answer": true}
+  ],
+  "subject": "遗传学",
+  "tags": ["daily-league", "mendel", "遗传学", "纯合子杂合子", "module_4"],
+  "target": "competition",
+  "type": "mtf"
+ },
+ "DL-GE-05": {
+  "concept": "基因型与表现型的关系",
+  "difficulty": "league",
+  "explanation": "考点：表现型＝基因型＋环境。\nA【对】依据：表现型是基因型与环境共同作用的结果。\nB【对】依据：同一植物在不同光照条件下叶色可能不同（如水生植物），说明环境能影响表现型，且不改变基因型。\nC【错】错因：基因型不同表现型也可能相同（如AA与Aa都表现显性），所以“基因型不同表现型一定不同”错误。\nD【对】依据：基因型相同，由于环境不同，表现型也可能不同（如水毛茛水上叶与水底叶形态差异）。",
+  "question": "下列关于基因型与表现型关系的叙述，判断正误。",
+  "subQuestions": [
+   {"label": "A", "text": "表现型是基因型与环境共同作用的结果", "answer": true},
+   {"label": "B", "text": "环境改变表现型时，基因型一般不改变", "answer": true},
+   {"label": "C", "text": "基因型不同，表现型一定不同", "answer": false},
+   {"label": "D", "text": "同种基因型的个体在不同环境下表现型可能不同", "answer": true}
+  ],
+  "subject": "遗传学",
+  "tags": ["daily-league", "mendel", "遗传学", "表现型", "module_4"],
+  "target": "competition",
+  "type": "mtf"
+ },
+ "DL-GE-06": {
+  "concept": "伴性遗传的特点",
+  "difficulty": "league",
+  "explanation": "考点：红绿色盲是X染色体隐性遗传。\nA【对】依据：红绿色盲基因位于X染色体上，是隐性基因，属伴X隐性遗传（白化病则是常染色体隐性遗传）。\nB【对】依据：伴X隐性遗传中，男性只要有一个致病基因（XᵇY）即患病，女性需两个（XᵇXᵇ），因此男性患者多于女性。\nC【对】依据：女性患者的父亲必然是患者（女儿的一个X染色体必来自父亲）。\nD【错】错因：红绿色盲的致病基因在X染色体上，Y染色体上没有等位基因；说“位于Y染色体上”错误。",
+  "question": "下列关于伴性遗传的叙述，判断正误。",
+  "subQuestions": [
+   {"label": "A", "text": "红绿色盲的致病基因位于X染色体上", "answer": true},
+   {"label": "B", "text": "红绿色盲的患者中男性多于女性", "answer": true},
+   {"label": "C", "text": "红绿色盲女性的父亲必然也是红绿色盲", "answer": true},
+   {"label": "D", "text": "红绿色盲的致病基因位于Y染色体上", "answer": false}
+  ],
+  "subject": "遗传学",
+  "tags": ["daily-league", "sex_linkage", "遗传学", "伴性遗传", "module_4"],
+  "target": "competition",
+  "type": "mtf"
+ },
+ "DL-GE-07": {
+  "concept": "基因突变的特点",
+  "difficulty": "league",
+  "explanation": "考点：基因突变的本质和特点。\nA【对】依据：基因突变是指DNA分子中发生碱基对的增添、缺失或替换，而引起的基因结构的改变。\nB【对】依据：基因突变具有不定向性，可产生一个或多个等位基因；同时多数突变是有害或中性的，也有少数有利。\nC【错】错因：由于密码子的简并性，部分碱基变化不改变编码的氨基酸，因而基因突变不一定导致性状改变。\nD【对】依据：基因突变是生物变异的根本来源，能为进化提供原材料（与基因重组共同构成进化的原材料）。",
+  "question": "下列关于基因突变的叙述，判断正误。",
+  "subQuestions": [
+   {"label": "A", "text": "基因突变是碱基对的增添、缺失或替换引起的基因结构改变", "answer": true},
+   {"label": "B", "text": "基因突变具有不定向性", "answer": true},
+   {"label": "C", "text": "基因突变一定会引起生物性状的改变", "answer": false},
+   {"label": "D", "text": "基因突变是生物变异的根本来源", "answer": true}
+  ],
+  "subject": "遗传学",
+  "tags": ["daily-league", "gene_mutation", "遗传学", "基因突变", "module_4"],
+  "target": "competition",
+  "type": "mtf"
+ },
+ "DL-GE-08": {
+  "concept": "基因重组",
+  "difficulty": "league",
+  "explanation": "考点：基因重组发生在减数分裂过程中。\nA【错】错因：交叉互换发生在减数第一次分裂前期，是同源染色体的非姐妹染色单体之间交换片段；选项把它说成非同源染色体之间，不正确。\nB【对】依据：减数第一次分裂后期，非同源染色体的自由组合导致非同源染色体上的非等位基因自由组合，是基因重组的另一来源。\nC【错】错因：基因重组产生新的基因型，不产生新的基因；产生新基因的是基因突变。\nD【对】依据：基因重组为生物的进化提供了丰富的原材料，是有性生殖中生物变异的重要来源。",
+  "question": "下列关于基因重组的叙述，判断正误。",
+  "subQuestions": [
+   {"label": "A", "text": "交叉互换是非同源染色体的非姐妹染色单体之间发生的", "answer": false},
+   {"label": "B", "text": "非同源染色体的自由组合使非等位基因自由组合，属于基因重组", "answer": true},
+   {"label": "C", "text": "基因重组能产生新的基因", "answer": false},
+   {"label": "D", "text": "基因重组为生物进化提供原材料", "answer": true}
+  ],
+  "subject": "遗传学",
+  "tags": ["daily-league", "gene_mutation", "遗传学", "基因重组", "module_4"],
+  "target": "competition",
+  "type": "mtf"
+ },
+ "DL-GE-09": {
+  "concept": "染色体变异",
+  "difficulty": "league",
+  "explanation": "考点：染色体变异的类型与多倍体。\nA【对】依据：染色体变异包括染色体结构的改变（缺失、重复、倒位、易位）和染色体数目的改变（个别增减或成倍增减）。\nB【对】依据：秋水仙素能抑制纺锤体形成，使细胞在分裂过程中染色体数目加倍，从而获得多倍体。\nC【对】依据：多倍体植株一般茎秆粗壮、果实和种子都比较大，营养物质含量增多；但常常结实率降低。\nD【错】错因：单倍体是指体细胞中含有本物种配子染色体数目的个体，它不一定是只含一套染色体的；例如六倍体小麦的单倍体含三套染色体。",
+  "question": "下列关于染色体变异的叙述，判断正误。",
+  "subQuestions": [
+   {"label": "A", "text": "染色体变异包括结构变异和数目变异", "answer": true},
+   {"label": "B", "text": "秋水仙素能抑制纺锤体形成，使染色体数目加倍", "answer": true},
+   {"label": "C", "text": "多倍体植株一般茎秆粗壮、果实和种子较大", "answer": true},
+   {"label": "D", "text": "单倍体一定只含有一套染色体", "answer": false}
+  ],
+  "subject": "遗传学",
+  "tags": ["daily-league", "chromosome_var", "遗传学", "染色体变异", "module_4"],
+  "target": "competition",
+  "type": "mtf"
+ },
+ "DL-GE-10": {
+  "concept": "中心法则",
+  "difficulty": "league",
+  "explanation": "考点：遗传信息的传递与表达。\nA【对】依据：转录是以DNA的一条链为模板合成mRNA的过程，发生在细胞核中（原核生物在细胞质中）。\nB【对】依据：翻译是以mRNA为模板、在核糖体上合成蛋白质的过程。\nC【错】错因：RNA→DNA的逆转录只发生在逆转录病毒（如HIV）侵染的细胞内，正常的动植物细胞中不发生逆转录。\nD【对】依据：遗传信息的基本传递途径包括DNA复制、转录和翻译，这是细胞生物普遍遵循的规律。",
+  "question": "下列关于中心法则的叙述，判断正误。",
+  "subQuestions": [
+   {"label": "A", "text": "转录是以DNA的一条链为模板合成RNA的过程", "answer": true},
+   {"label": "B", "text": "翻译在核糖体上进行，以mRNA为模板合成蛋白质", "answer": true},
+   {"label": "C", "text": "逆转录过程在正常动植物细胞中普遍进行", "answer": false},
+   {"label": "D", "text": "DNA复制、转录和翻译是细胞生物遗传信息传递的主要途径", "answer": true}
+  ],
+  "subject": "分子生物学",
+  "tags": ["daily-league", "transcription", "遗传学", "中心法则", "module_4"],
+  "target": "competition",
+  "type": "mtf"
+ },
+ "DL-GE-11": {
+  "concept": "基因的表达——转录与翻译",
+  "difficulty": "league",
+  "explanation": "考点：转录与翻译的原料和场所。\nA【对】依据：转录以DNA为模板，需要四种核糖核苷酸（ATP、UTP等）作为原料。\nB【对】依据：翻译以mRNA为模板，需要20种氨基酸作为原料。\nC【错】错因：RNA聚合酶参与转录过程，在转录时沿模板链移动并合成RNA，不直接参与翻译。\nD【对】依据：原核细胞没有核膜，转录和翻译可以在同一场所（细胞质）同时进行。",
+  "question": "下列关于转录和翻译的叙述，判断正误。",
+  "subQuestions": [
+   {"label": "A", "text": "转录以DNA为模板，原料是四种核糖核苷酸", "answer": true},
+   {"label": "B", "text": "翻译以mRNA为模板，原料是氨基酸", "answer": true},
+   {"label": "C", "text": "RNA聚合酶直接参与翻译过程", "answer": false},
+   {"label": "D", "text": "原核生物的转录和翻译可以同时进行", "answer": true}
+  ],
+  "subject": "分子生物学",
+  "tags": ["daily-league", "translation", "分子生物学", "转录翻译", "module_4"],
+  "target": "competition",
+  "type": "mtf"
+ },
+ "DL-GE-12": {
+  "concept": "遗传密码与蛋白质合成",
+  "difficulty": "league",
+  "explanation": "考点：密码子的组成与读码。\nA【对】依据：密码子是mRNA上决定一个氨基酸的三个相邻碱基。\nB【对】依据：64种密码子中有61种编码氨基酸，其余3种是终止密码子（不编码氨基酸）。\nC【对】依据：由于密码子的简并性，一种氨基酸可能有多个密码子，所以一种氨基酸可由多种密码子编码。\nD【错】错因：一个密码子只能决定一种氨基酸，这是密码子的特异性；具备简并性的是“氨基酸对应多种密码子”，方向不能反。",
+  "question": "下列关于遗传密码（密码子）的叙述，判断正误。",
+  "subQuestions": [
+   {"label": "A", "text": "密码子是mRNA上决定一个氨基酸的三个相邻碱基", "answer": true},
+   {"label": "B", "text": "编码氨基酸的密码子有61种", "answer": true},
+   {"label": "C", "text": "一种氨基酸可由多种密码子编码，称为密码子的简并性", "answer": true},
+   {"label": "D", "text": "一种密码子可以决定多种不同的氨基酸", "answer": false}
+  ],
+  "subject": "分子生物学",
+  "tags": ["daily-league", "translation", "分子生物学", "密码子", "module_4"],
+  "target": "competition",
+  "type": "mtf"
+ },
+ "DL-GE-13": {
+  "concept": "基因与遗传信息",
+  "difficulty": "league",
+  "explanation": "考点：基因的概念与遗传信息的载体。\nA【对】依据：基因是有遗传效应的DNA片段，主要位于染色体上，染色体是基因的主要载体。\nB【对】依据：基因中脱氧核苷酸（碱基对）的排列顺序代表遗传信息。\nC【错】错因：一条染色体上含有许多基因，基因在染色体上呈线性排列，说“一条染色体上只有一个基因”错误。\nD【对】依据：线粒体和叶绿体中也含有少量的DNA和基因，属于细胞质遗传物质。",
+  "question": "下列关于基因和遗传信息的叙述，判断正误。",
+  "subQuestions": [
+   {"label": "A", "text": "基因是有遗传效应的DNA片段，主要分布在染色体上", "answer": true},
+   {"label": "B", "text": "基因中碱基对的排列顺序代表遗传信息", "answer": true},
+   {"label": "C", "text": "一条染色体上只有一个基因", "answer": false},
+   {"label": "D", "text": "线粒体和叶绿体中也含有少量基因", "answer": true}
+  ],
+  "subject": "分子生物学",
+  "tags": ["daily-league", "dna_structure", "遗传学", "基因", "module_4"],
+  "target": "competition",
+  "type": "mtf"
+ },
+ "DL-GE-14": {
+  "concept": "基因工程的基本工具",
+  "difficulty": "league",
+  "explanation": "考点：限制酶、DNA连接酶和运载体的作用。\nA【对】依据：限制性核酸内切酶能识别特定的核苷酸序列，并在特定位点切割DNA分子。\nB【对】依据：DNA连接酶能把两段DNA末端连接起来，构建基因表达载体时必不可少。\nC【错】错因：把目的基因和运载体连接的酶是DNA连接酶；限制酶是负责切割的。\nD【对】依据：常用的运载体有质粒、噬菌体和动植物病毒等，质粒是最常用的运载体。",
+  "question": "下列关于基因工程基本工具的说法，判断正误。",
+  "subQuestions": [
+   {"label": "A", "text": "限制酶能识别特定核苷酸序列并切割DNA", "answer": true},
+   {"label": "B", "text": "DNA连接酶能把两段DNA片段连接起来", "answer": true},
+   {"label": "C", "text": "目的基因与运载体连接需要限制酶直接完成", "answer": false},
+   {"label": "D", "text": "质粒是基因工程中最常用的运载体之一", "answer": true}
+  ],
+  "subject": "生物技术",
+  "tags": ["daily-league", "genetic_engineering", "生物技术", "基因工程", "module_4"],
+  "target": "competition",
+  "type": "mtf"
+ },
+ "DL-GE-15": {
+  "concept": "PCR技术",
+  "difficulty": "league",
+  "explanation": "考点：PCR（聚合酶链式反应）的原理与条件。\nA【对】依据：PCR是一项在体外大量扩增特定DNA片段的分子生物学技术。\nB【对】依据：PCR循环包括高温变性（DNA解链）、低温复性（引物与模板结合）和中温延伸（Taq酶催化合成）。\nC【对】依据：PCR使用耐高温的DNA聚合酶（Taq酶），它能耐受变性所需的高温。\nD【错】错因：PCR的模板是DNA（或先经逆转录得到的cDNA），不是以核糖体为模板；核糖体是翻译的场所。",
+  "question": "下列关于PCR技术的叙述，判断正误。",
+  "subQuestions": [
+   {"label": "A", "text": "PCR能在体外大量扩增特定的DNA片段", "answer": true},
+   {"label": "B", "text": "PCR循环包括变性、复性和延伸三步", "answer": true},
+   {"label": "C", "text": "PCR使用的DNA聚合酶是耐高温的Taq酶", "answer": true},
+   {"label": "D", "text": "PCR以核糖体为模板合成DNA", "answer": false}
+  ],
+  "subject": "生物技术",
+  "tags": ["daily-league", "molecular_tech", "生物技术", "PCR", "module_4"],
+  "target": "competition",
+  "type": "mtf"
+ },
+ "DL-GE-16": {
+  "concept": "种群是进化的基本单位",
+  "difficulty": "league",
+  "explanation": "考点：进化的基本单位与原材料。\nA【对】依据：生物进化的基本单位是种群，而不是个体。\nB【对】依据：进化的实质是种群基因频率的改变。\nC【错】错因：突变（基因突变和染色体变异）和基因重组共同为进化提供原材料，不能笼统地说“突变都不定向、重组也都不定向”后漏掉基因重组。\nD【对】依据：自然选择使种群的有利基因频率定向增大，不利基因频率减小，即自然选择决定进化的方向。",
+  "question": "下列关于生物进化基本观点的叙述，判断正误。",
+  "subQuestions": [
+   {"label": "A", "text": "生物进化的基本单位是种群", "answer": true},
+   {"label": "B", "text": "进化的实质是种群基因频率的改变", "answer": true},
+   {"label": "C", "text": "基因重组不能为进化提供原材料", "answer": false},
+   {"label": "D", "text": "自然选择决定生物进化的方向", "answer": true}
+  ],
+  "subject": "进化生物学",
+  "tags": ["daily-league", "population_gen", "进化生物学", "进化单位", "module_4"],
+  "target": "competition",
+  "type": "mtf"
+ },
+ "DL-GE-17": {
+  "concept": "基因频率与哈代—温伯格定律",
+  "difficulty": "league",
+  "explanation": "考点：种群基因库与基因频率计算。\nA【对】依据：种群基因库是指一个种群中全部个体所含有的全部基因。\nB【对】依据：在无突变、无选择、无遗传漂变、无迁入迁出且随机交配的理想条件下，种群基因频率保持不变，这就是哈代—温伯格平衡。\nC【对】依据：在符合哈代—温伯格平衡的种群中，若A的基因频率为p，a的基因频率为q，则AA频率=p²，Aa频率=2pq，aa频率=q²，且p²+2pq+q²=1。\nD【错】错因：自然选择、突变和遗传漂变都会改变基因频率，说“基因频率在任何时候都不变”错误。",
+  "question": "下列关于基因频率的叙述，判断正误。",
+  "subQuestions": [
+   {"label": "A", "text": "种群基因库是种群中全部个体所含有的全部基因", "answer": true},
+   {"label": "B", "text": "理想条件下（无突变、无选择、随机交配等）基因频率保持不变", "answer": true},
+   {"label": "C", "text": "符合哈代—温伯格平衡时，AA、Aa、aa的频率分别为p²、2pq、q²", "answer": true},
+   {"label": "D", "text": "自然选择存在的条件下基因频率也不会改变", "answer": false}
+  ],
+  "subject": "进化生物学",
+  "tags": ["daily-league", "population_gen", "进化生物学", "基因频率", "module_4"],
+  "target": "competition",
+  "type": "mtf"
+ },
+ "DL-GE-18": {
+  "concept": "隔离与物种形成",
+  "difficulty": "league",
+  "explanation": "考点：地理隔离与生殖隔离的作用。\nA【对】依据：物种形成的标志是出现生殖隔离：两个种群间因遗传组成改变而不能自然交配或交配后不能产生可育后代。\nB【对】依据：加拉帕戈斯群岛的地雀，因地理隔离使种群间基因交流受阻，最终形成生殖隔离，产生了不同的物种。\nC【错】错因：地理隔离不一定导致新物种形成，两个被地理隔离的种群若遗传组成变化不大，仍属于同一物种。\nD【对】依据：新物种形成一般需要突变和基因重组提供原材料、自然选择定向改变基因频率、隔离阻断基因交流这三个基本环节。",
+  "question": "下列关于隔离与物种形成的叙述，判断正误。",
+  "subQuestions": [
+   {"label": "A", "text": "新物种形成的标志是出现生殖隔离", "answer": true},
+   {"label": "B", "text": "加拉帕戈斯群岛地雀的演化说明地理隔离可能导致生殖隔离", "answer": true},
+   {"label": "C", "text": "只要发生地理隔离，就一定会产生新的物种", "answer": false},
+   {"label": "D", "text": "突变和基因重组、自然选择、隔离是物种形成的三个基本环节", "answer": true}
+  ],
+  "subject": "进化生物学",
+  "tags": ["daily-league", "speciation", "进化生物学", "隔离与物种", "module_4"],
+  "target": "competition",
+  "type": "mtf"
+ },
+ "DL-GE-19": {
+  "concept": "共同进化与协同进化",
+  "difficulty": "league",
+  "explanation": "考点：不同物种之间及物种与环境之间的共同进化。\nA【对】依据：共同进化是指不同物种之间、生物与无机环境之间在相互影响中不断进化和发展。\nB【对】依据：捕食者和被捕食者之间存在相互选择、共同进化，捕食者通常捕食行动迟缓的个体，客观上有利于种群优化。\nC【错】错因：花与传粉昆虫之间是互利关系，花的形态与昆虫的取食结构长期协同进化，说“没有协同进化关系”错误。\nD【对】依据：长颈鹿的脖子与金合欢树等其他生物及环境的相互作用体现了共同进化（各种适应性相互塑造）。",
+  "question": "下列关于共同进化的叙述，判断正误。",
+  "subQuestions": [
+   {"label": "A", "text": "共同进化包括不同物种之间以及物种与无机环境之间的相互影响", "answer": true},
+   {"label": "B", "text": "捕食者和被捕食者在长期进化中相互选择、共同进化", "answer": true},
+   {"label": "C", "text": "花和传粉昆虫之间不存在协同进化关系", "answer": false},
+   {"label": "D", "text": "共同进化塑造了生物之间以及生物与环境之间的适应性", "answer": true}
+  ],
+  "subject": "进化生物学",
+  "tags": ["daily-league", "natural_selection", "进化生物学", "共同进化", "module_4"],
+  "target": "competition",
+  "type": "mtf"
+ },
+ "DL-GE-20": {
+  "concept": "同源器官与进化证据",
+  "difficulty": "league",
+  "explanation": "考点：比较解剖学和化石对进化的证据。\nA【对】依据：蝙蝠的翼、鲸的鳍状肢和人体的上肢都源自共同祖先的前肢，来源相同、功能不同，属于同源器官，是比较解剖学的经典证据。\nB【错】错因：鸟类的翅和昆虫的翅来源不同、功能相似，属于同功器官，不是同源器官；同源器官重在“来源相同”。\nC【对】依据：化石是生物进化的最直接证据，能真实反映生物在地层中的演化序列。\nD【错】错因：比较解剖学（如同源器官、痕迹器官）正是支持生物进化的证据之一，选项说它不能为进化提供证据是错误的；胚胎学证据（如脊椎动物胚胎早期相似）同样支持生物共同由来。",
+  "question": "下列关于进化证据的叙述，判断正误。",
+  "subQuestions": [
+   {"label": "A", "text": "蝙蝠翼与人上肢是同源器官", "answer": true},
+   {"label": "B", "text": "鸟翅与昆虫翅是同源器官", "answer": false},
+   {"label": "C", "text": "化石是生物进化最直接的证据", "answer": true},
+   {"label": "D", "text": "比较解剖学只能说明生物在形态上的相似，不能为进化提供证据", "answer": false}
+  ],
+  "subject": "进化生物学",
+  "tags": ["daily-league", "macroevolution", "进化生物学", "进化证据", "module_4"],
+  "target": "competition",
+  "type": "mtf"
+ },
+ "DL-GE-21": {
+  "concept": "抗生素耐药性的进化机制",
+  "difficulty": "league",
+  "explanation": "考点：变异在前、选择在后。\nA【对】依据：细菌的耐药性变异（基因突变）在选择发生之前就已存在，抗生素只是起选择作用，把耐药菌保留下来。\nB【对】依据：抗生素对细菌施加选择压力，耐药菌存活并繁殖，导致其在群体中比例上升。\nC【错】错因：抗生素不诱导基因突变，耐药性是已有变异被选择的结果；说“细菌接触抗生素后才产生耐药性突变”把因果颠倒。\nD【对】依据：合理使用抗生素、避免滥用，能降低对耐药菌的选择压力，延缓耐药性的扩散。",
+  "question": "下列关于细菌耐药性进化的叙述，判断正误。",
+  "subQuestions": [
+   {"label": "A", "text": "耐药性变异在接触抗生素之前就已经存在", "answer": true},
+   {"label": "B", "text": "抗生素是选择性压力，能筛选出耐药菌", "answer": true},
+   {"label": "C", "text": "细菌只有在接触抗生素后才会产生耐药性突变", "answer": false},
+   {"label": "D", "text": "避免滥用抗生素有利于延缓耐药性的扩散", "answer": true}
+  ],
+  "subject": "进化生物学",
+  "tags": ["daily-league", "natural_selection", "进化生物学", "耐药性", "module_4"],
+  "target": "competition",
+  "type": "mtf"
+ },
+ "DL-GE-22": {
+  "concept": "自然选择与适应",
+  "difficulty": "league",
+  "explanation": "考点：自然选择是定向的。\nA【对】依据：变异是不定向的，而自然选择定向淘汰不利变异、保留有利变异，因此能定向改变种群的基因频率。\nB【对】依据：自然选择直接作用于个体的表现型（性状），从而影响基因频率。\nC【错】错因：自然选择使基因频率定向改变，但环境变化的剧烈程度会影响选择强度，而不改变“定向”这一本质；说“选择使基因频率随机改变”错误。\nD【对】依据：生物对环境的适应具有相对性，适应是长期自然选择的结果。",
+  "question": "下列关于自然选择与适应的叙述，判断正误。",
+  "subQuestions": [
+   {"label": "A", "text": "自然选择能定向改变种群的基因频率", "answer": true},
+   {"label": "B", "text": "自然选择直接作用的对象是个体的表现型", "answer": true},
+   {"label": "C", "text": "自然选择使种群基因频率发生随机改变", "answer": false},
+   {"label": "D", "text": "生物的适应性是长期自然选择的结果", "answer": true}
+  ],
+  "subject": "进化生物学",
+  "tags": ["daily-league", "natural_selection", "进化生物学", "自然选择", "module_4"],
+  "target": "competition",
+  "type": "mtf"
+ },
+ "DL-GE-23": {
+  "concept": "双名法",
+  "difficulty": "league",
+  "explanation": "考点：林奈双名法的组成和书写规范。\nA【对】依据：双名法由瑞典植物学家林奈创立，每个物种的学名由“属名+种加词”两部分构成。\nB【对】依据：属名的第一个字母大写，种加词全部小写，书写为拉丁文斜体。\nC【错】错因：学名是全世界统一的拉丁名，可以随分类学修订而改变，但“每个物种都有多个不同学名”不符合双名法“一物一名”的原则。\nD【对】依据：双名法使各国科学家对同一种生物使用同一个科学名称，避免名称混乱，便于国际交流。",
+  "question": "下列关于生物双名法的叙述，判断正误。",
+  "subQuestions": [
+   {"label": "A", "text": "双名法中的学名由属名和种加词两部分组成", "answer": true},
+   {"label": "B", "text": "属名首字母大写，种加词小写，学名通常用斜体书写", "answer": true},
+   {"label": "C", "text": "同一种生物在不同国家可以有两个官方学名", "answer": false},
+   {"label": "D", "text": "双名法保证了同一物种在全世界有统一的科学名称", "answer": true}
+  ],
+  "subject": "生物分类学",
+  "tags": ["daily-league", "biodiversity", "生物分类学", "双名法", "module_4"],
+  "target": "competition",
+  "type": "mtf"
+ },
+ "DL-GE-24": {
+  "concept": "生物分类的等级",
+  "difficulty": "league",
+  "explanation": "考点：分类等级与亲缘关系。\nA【对】依据：生物分类的基本等级由大到小是界、门、纲、目、科、属、种，种是最基本的分类单位。\nB【对】依据：分类等级越低，所包含的生物种类越少，生物之间的亲缘关系越近、共同特征越多。\nC【错】错因：同目的生物一定同纲，但同纲生物不一定同目；分类等级是“自上而下包含”的关系，说“同纲必定同目”颠倒包含关系。\nD【对】依据：不同物种的学名中属名相同，说明属于同一个属。",
+  "question": "下列关于生物分类等级的叙述，判断正误。",
+  "subQuestions": [
+   {"label": "A", "text": "种是最基本的生物分类单位", "answer": true},
+   {"label": "B", "text": "分类等级越低，生物亲缘关系越近", "answer": true},
+   {"label": "C", "text": "同纲的生物一定属于同一个目", "answer": false},
+   {"label": "D", "text": "不同物种的学名属名相同，说明它们属于同一个属", "answer": true}
+  ],
+  "subject": "生物分类学",
+  "tags": ["daily-league", "biodiversity", "生物分类学", "分类等级", "module_4"],
+  "target": "competition",
+  "type": "mtf"
+ },
+ "DL-GE-25": {
+  "concept": "自然选择决定适应性与进化方向",
+  "difficulty": "league",
+  "explanation": "考点：适应与自然选择的关系。\nA【对】依据：适应的形成是变异（原材料）与环境（选择压力）长期相互作用的结果。\nB【对】依据：环境改变后，原来的适应性状可能不再适应，说明适应具有相对性。\nC【错】错因：自然选择作用于现有变异，它不能“按需产生”适应性变异；变异在前、选择在后。\nD【对】依据：遗传的变异是生物进化的内因，没有可遗传的变异就没有进化。",
+  "question": "下列关于适应与进化的叙述，判断正误。",
+  "subQuestions": [
+   {"label": "A", "text": "适应是生物在自然选择下长期进化的结果", "answer": true},
+   {"label": "B", "text": "适应具有相对性，环境变化后原有适应可能失效", "answer": true},
+   {"label": "C", "text": "生物能根据需要产生适应性的变异", "answer": false},
+   {"label": "D", "text": "可遗传变异为生物进化提供原材料", "answer": true}
+  ],
+  "subject": "进化生物学",
+  "tags": ["daily-league", "natural_selection", "进化生物学", "适应", "module_4"],
+  "target": "competition",
+  "type": "mtf"
+ }
+}

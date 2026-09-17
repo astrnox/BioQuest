@@ -1,6 +1,7 @@
 /**
  * 每日亿题 — 随机刷题 · TikTok风格
- * v4: 本地题库Fallback · Supabase重试 · 全量审查修复 · UI优化
+ * v5: 专属题库重构（100 道联赛级送分/易错判断题，纯文字）——
+ *     云端按 daily-league 标签过滤，本地按主题分片异步加载
  */
 (function() {
   'use strict';
@@ -8,93 +9,25 @@
   var SUPABASE_URL = 'https://qxehkfucvmxuojjkdaqy.supabase.co';
   var SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InF4ZWhrZnVjdm14dW9qamtkYXF5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODY2MjU2ODUsImV4cCI6MjEwMjIwMTY4NX0.lbiJxhFvy0t_J4qSeoP6K0r53M4KaEDSKkRlZu03ze8';
 
-  var LOCAL_SAMPLE_QUESTIONS = [
-    {
-      id: 'local-1',
-      question: '所有的原核生物都具有细胞壁。',
-      subject: '细胞生物学',
-      explanation: '原核生物中，支原体是没有细胞壁的。',
-      subQuestions: [
-        { label: 'A', text: '所有的原核生物都具有细胞壁。', answer: false }
-      ]
-    },
-    {
-      id: 'local-2',
-      question: '线粒体是细胞进行有氧呼吸的主要场所。',
-      subject: '细胞生物学',
-      explanation: '有氧呼吸的第一阶段在细胞质基质中进行，第二、三阶段在线粒体中进行，线粒体是有氧呼吸的主要场所。',
-      subQuestions: [
-        { label: 'A', text: '线粒体是有氧呼吸的唯一场所。', answer: false },
-        { label: 'B', text: '线粒体含有自己的DNA和核糖体。', answer: true }
-      ]
-    },
-    {
-      id: 'local-3',
-      question: '判断下列关于光合作用的叙述是否正确。',
-      subject: '植物生理学',
-      explanation: '光反应在类囊体薄膜上进行，暗反应在叶绿体基质中进行。光反应需要光，暗反应有光无光都能进行，但需要光反应提供的ATP和NADPH。',
-      subQuestions: [
-        { label: 'A', text: '光合作用的光反应只在有光时进行。', answer: true },
-        { label: 'B', text: '暗反应必须在黑暗条件下进行。', answer: false },
-        { label: 'C', text: '氧气是由光反应产生的。', answer: true }
-      ]
-    },
-    {
-      id: 'local-4',
-      question: '判断下列关于DNA复制的叙述是否正确。',
-      subject: '分子生物学',
-      explanation: 'DNA复制是半保留复制，边解旋边复制，需要DNA聚合酶、解旋酶等多种酶参与。',
-      subQuestions: [
-        { label: 'A', text: 'DNA复制是半保留复制。', answer: true },
-        { label: 'B', text: 'DNA复制只发生在细胞核中。', answer: false }
-      ]
-    },
-    {
-      id: 'local-5',
-      question: '判断下列关于酶的叙述是否正确。',
-      subject: '生物化学',
-      explanation: '酶是活细胞产生的具有催化作用的有机物，绝大多数酶是蛋白质，少数酶是RNA。酶的催化作用具有高效性、专一性，需要适宜的温度和pH。',
-      subQuestions: [
-        { label: 'A', text: '所有的酶都是蛋白质。', answer: false },
-        { label: 'B', text: '酶在催化反应前后本身不发生变化。', answer: true },
-        { label: 'C', text: '温度越高，酶的活性越高。', answer: false },
-        { label: 'D', text: '酶只能在细胞内发挥作用。', answer: false }
-      ]
-    },
-    {
-      id: 'local-6',
-      question: '判断下列关于遗传定律的叙述是否正确。',
-      subject: '遗传学',
-      explanation: '基因分离定律的实质是等位基因随同源染色体的分开而分离；基因自由组合定律的实质是非同源染色体上的非等位基因自由组合。',
-      subQuestions: [
-        { label: 'A', text: '等位基因位于同源染色体的相同位置上。', answer: true },
-        { label: 'B', text: '基因的自由组合发生在受精作用过程中。', answer: false }
-      ]
-    },
-    {
-      id: 'local-7',
-      question: '判断下列关于生态系统的叙述是否正确。',
-      subject: '生态学',
-      explanation: '生态系统的能量流动是单向的、逐级递减的；物质循环是全球性的、循环往复的；信息传递往往是双向的。',
-      subQuestions: [
-        { label: 'A', text: '生态系统的能量流动是循环的。', answer: false },
-        { label: 'B', text: '生产者是生态系统的基石。', answer: true },
-        { label: 'C', text: '分解者能将动植物遗体分解成无机物。', answer: true }
-      ]
-    },
-    {
-      id: 'local-8',
-      question: '判断下列关于神经调节的叙述是否正确。',
-      subject: '动物生理学',
-      explanation: '神经调节的基本方式是反射，反射的结构基础是反射弧。兴奋在神经纤维上以电信号形式双向传导，在神经元之间通过突触单向传递。',
-      subQuestions: [
-        { label: 'A', text: '反射弧是反射活动的结构基础。', answer: true },
-        { label: 'B', text: '兴奋在突触处的传递是双向的。', answer: false }
-      ]
-    }
+  // ============================================================
+  // 每日亿题专属题库 v2（2026 联赛送分池）
+  // 100 道纯文字判断题（MTF，对应 2025 联赛「4 选项判断题」题型）：
+  //   - 题干简洁、纯文字、无图
+  //   - 难度对齐联赛「送分题 / 简单想一想就出来」区间
+  //   - 解析逐项说明对错依据（考点定位 + 依据/错因 + 易错提醒）
+  // 通用上传脚本会把这 6 个分片带 daily-league 标签写入 questions 表，
+  // 云端查询按该标签过滤；本地直接读取分片文件（与云端内容同源）。
+  // ============================================================
+  var LOCAL_BANK_FILES = [
+    'data/bank/daily_league_cellbio.json',            // 细胞生物学 12
+    'data/bank/daily_league_biochem_microbe.json',    // 生物化学+微生物学 13
+    'data/bank/daily_league_plant.json',              // 植物解剖与生理 15
+    'data/bank/daily_league_animal.json',             // 动物解剖与生理 15
+    'data/bank/daily_league_behavior_ecology.json',   // 动物行为+生态学 20
+    'data/bank/daily_league_genetics_evolution.json'  // 遗传+进化+系统学 25
   ];
 
-  var _localQuestions = null;
+  var _localBankPromise = null;
   var _supabaseRetryCount = 0;
   var _supabaseMaxRetries = 3;
 
@@ -167,28 +100,45 @@
     return null;
   }
 
-  function getLocalQuestions() {
-    if (!_localQuestions) {
-      var mapped = LOCAL_SAMPLE_QUESTIONS.map(function(q) {
-        return {
-          id: q.id,
-          question: q.question,
-          subject: q.subject,
-          explanation: q.explanation,
-          subQuestions: q.subQuestions.map(function(sq) {
-            return { label: sq.label, text: sq.text, answer: sq.answer };
-          })
-        };
+  // 异步加载并合并本地专属题库（6 个主题分片 + 超长讲义过滤），带缓存
+  function loadLocalBank() {
+    if (!_localBankPromise) {
+      _localBankPromise = Promise.all(LOCAL_BANK_FILES.map(function(file) {
+        return fetch(file, { cache: 'no-cache' })
+          .then(function(resp) { return resp.ok ? resp.json() : null; })
+          .catch(function() { return null; });
+      })).then(function(files) {
+        var pool = [];
+        files.forEach(function(f) {
+          if (!f) return;
+          Object.keys(f).forEach(function(id) {
+            var q = f[id];
+            if (!q || !Array.isArray(q.subQuestions)) return;
+            pool.push({
+              id: id,
+              question: q.question || '',
+              subject: q.subject || '',
+              explanation: q.explanation || '',
+              subQuestions: q.subQuestions.map(function(sq) {
+                return { label: sq.label, text: sq.text, answer: Boolean(sq.answer) };
+              })
+            });
+          });
+        });
+        // 本地题库也经过"超长知识讲义型"过滤
+        var filterFn = (typeof window.filterQuestionList === 'function') ? window.filterQuestionList : function(x){return x;};
+        return filterFn(pool);
       });
-      // 本地题库也经过"超长知识讲义型"过滤
-      var filterFn = (typeof window.filterQuestionList === 'function') ? window.filterQuestionList : function(x){return x;};
-      _localQuestions = filterFn(mapped);
     }
-    return _localQuestions;
+    return _localBankPromise;
   }
 
-  function loadQuestionsFromLocal(limit) {
-    var pool = getLocalQuestions();
+  function getLocalQuestions() {
+    return loadLocalBank();
+  }
+
+  async function loadQuestionsFromLocal(limit) {
+    var pool = await getLocalQuestions();
     var shuffled = pool.slice().sort(function() { return Math.random() - 0.5; });
     var result = [];
     var seen = state.loadedIds;
@@ -236,7 +186,7 @@
     try {
       // 首次获取总数
       if (state.totalPoolSize === 0) {
-        var countResult = await _withTimeout(sb.from('questions').select('id', { count: 'exact', head: true }).eq('type', 'mtf'), REQUEST_TIMEOUT_MS);
+        var countResult = await _withTimeout(sb.from('questions').select('id', { count: 'exact', head: true }).eq('type', 'mtf').contains('tags', ['daily-league']), REQUEST_TIMEOUT_MS);
         if (!countResult.error && countResult.count !== null) {
           state.totalPoolSize = countResult.count;
         }
@@ -256,6 +206,7 @@
       var result = await _withTimeout(sb.from('questions')
         .select('id,question,sub_questions,explanation,subject')
         .eq('type', 'mtf')
+        .contains('tags', ['daily-league'])
         .range(randomOffset, randomOffset + limit - 1), REQUEST_TIMEOUT_MS);
 
       if (result.error) {
@@ -274,6 +225,7 @@
         var retryResult = await _withTimeout(sb.from('questions')
           .select('id,question,sub_questions,explanation,subject')
           .eq('type', 'mtf')
+          .contains('tags', ['daily-league'])
           .range(retryOffset, retryOffset + limit - 1), REQUEST_TIMEOUT_MS);
         if (retryResult.data) {
           var more = retryResult.data.filter(function(q) { return !state.loadedIds[q.id]; });
@@ -326,7 +278,7 @@
     var newQuestions = null;
 
     if (state.usingLocalQuestions) {
-      newQuestions = loadQuestionsFromLocal(limit);
+      newQuestions = await loadQuestionsFromLocal(limit);
     } else {
       if (!getSupabaseClient() && _supabaseRetryCount < _supabaseMaxRetries) {
         _supabaseRetryCount++;
@@ -337,7 +289,7 @@
 
       if (newQuestions === null || (newQuestions.length === 0 && state.questions.length === 0)) {
         console.log('[每日亿题] 使用本地题库模式');
-        newQuestions = loadQuestionsFromLocal(limit);
+        newQuestions = await loadQuestionsFromLocal(limit);
         if (state.questions.length === 0 && newQuestions.length > 0) {
           showToast('已切换到本地题库模式');
         }
