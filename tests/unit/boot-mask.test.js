@@ -117,4 +117,30 @@ describe('boot-mask.js 首屏遮罩回归', () => {
     expect(document.body.textContent).not.toContain('页面加载失败');
     expect(document.body.textContent).not.toContain('刷新重试');
   });
+
+  test('竞态恢复：15s 兜底已展示错误页，但应用晚到加载完成 → 撤销错误页正常淡出', () => {
+    setupBaseDom();
+    // 不设置 __appBooted：应用脚本很晚才完成加载（弱网/慢终端）
+    jest.useFakeTimers();
+    evalBootMask();
+
+    // 15s 兜底：此时应用还没启动 → 展示"刷新重试"错误页
+    jest.advanceTimersByTime(16000);
+    expect(document.body.textContent).toContain('页面加载失败');
+
+    // 应用此刻才启动并渲染出首屏内容，随后派发 app-ready
+    window.__appBooted = true;
+    const pc = document.createElement('section');
+    pc.textContent = '首页内容已渲染';
+    document.getElementById('page-content').appendChild(pc);
+    document.dispatchEvent(new Event('bioquest:app-ready'));
+
+    // 越过 40ms bootTick 缓冲 + 最短展示时间 + 淡出/移除流程
+    jest.advanceTimersByTime(2500);
+
+    // 不允许继续停留在错误页 / 不允许卡死：错误文案被清除，遮罩进入淡出或已移除
+    expect(document.body.textContent).not.toContain('页面加载失败');
+    expect(document.body.textContent).not.toContain('刷新重试');
+    expect(window.BootProgress.complete).toEqual(expect.any(Function));
+  });
 });

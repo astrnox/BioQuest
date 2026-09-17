@@ -113,9 +113,12 @@
   }
 
   /** 兜底超时仍无内容：展示错误重试而不是淡出到空白页 */
+  var bootErrorShown = false; // 错误兜底已展示（app-ready 晚到时用于撤销，防止卡死）
+
   function showBootError() {
     if (done) return;
     done = true;
+    bootErrorShown = true;
     if (BootProgress) BootProgress.complete();
     // 在遮罩内渲染一个轻量错误卡片（纯 DOM API，无内联脚本，符合 CSP）
     try {
@@ -245,6 +248,13 @@
   document.addEventListener('bioquest:app-ready', function () {
     contentReady = true;
     if (window.BootProgress) BootProgress.addWeight(40, 92);
+    // 竞态撤销：弱网/慢终端下 15s 兜底可能已展示"刷新重试"错误页，
+    // 而应用此刻才真正加载完成。此时应撤销 done 标记，改走正常淡出，
+    // 绝不让用户卡死在错误页（加载完成却被误报失败）。
+    if (done && bootErrorShown) {
+      done = false;
+      bootErrorShown = false;
+    }
     // 给最后一帧布局/绘制留一点缓冲，避免淡出瞬间卡顿
     setTimeout(bootTick, 40);
   });
