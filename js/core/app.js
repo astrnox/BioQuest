@@ -5,6 +5,11 @@
  * ============================================================
  */
 
+// 启动标记：boot-mask.js 用它区分"应用脚本已开始执行"与"脚本加载/解析失败"，
+// 一旦脚本因任何原因没能跑到这里，首屏遮罩会在兜底超时后展示错误重试而不是
+// 淡出成一页空白（修复"加载到 20% 卡死 / 遮罩消失但内容没加载好"）。
+window.__appBooted = true;
+
 /* CSP 改造辅助：把无法用 data-on 数组直接表达的复杂内联处理器
  * 收敛为极小的命名函数，供 csp-events.js 的委托通过 window[fn] 查找调用。
  * 语义均与原内联表达式完全等价。 */
@@ -5319,7 +5324,18 @@ function initApp() {
   _prefetchTabModules();
 
   requestAnimationFrame(() => {
-    handleRoute(route);
+    // 路由渲染是整个启动链路的核心：任何一步抛错都不能让首屏遮罩
+    // 陷入"卡 20% 直到 15s 兜底淡出"的假死状态，这里捕获并补发
+    // bioquest:app-ready，让遮罩走完/淡出（页面内容随后由错误兜底渲染）。
+    try {
+      handleRoute(route);
+    } catch (e) {
+      console.error('[BioQuest] 初始路由渲染失败(已兜底):', e);
+      try {
+        if (window.__bootWeight) window.__bootWeight(0, 92);
+        document.dispatchEvent(new CustomEvent('bioquest:app-ready'));
+      } catch (e2) { /* ignore */ }
+    }
   });
 
   _AppState.initialized = true;

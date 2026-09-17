@@ -3644,17 +3644,30 @@ mark.search-highlight {
 
 /* ============================================================
    底部标签栏（悬浮胶囊，所有屏幕尺寸常驻，避免"导航栏不见了"）
-   样式参考 Apple Liquid Glass：强模糊毛玻璃材质 + 顶缘高光 +
-   可滑动的高亮胶囊（当前 tab 下的"液态"选中指示）
+   样式参考 Apple Liquid Glass（WWDC25 / HIG Materials）：
+    - 浮于内容层之上的通透玻璃材质：强 backdrop 模糊 + 高饱和 +
+     亮度微调，内容从下方"透出"营造纵深与动感；
+    - 顶缘/底缘高光（inset 高亮线）模拟玻璃折射的勾边；
+    - 当前 tab 的选中指示是一颗"液态玻璃液滴"（半透明渐变 + 自身
+      模糊 + 顶缘镜面高光），而非不透明的实色块。
    ============================================================ */
 .bottom-tab-bar {
   /* 材质变量：随主题切换（亮色玻璃 / 暗色玻璃） */
-  --tabbar-bg: rgba(255, 255, 255, 0.52);
-  --tabbar-border: rgba(255, 255, 255, 0.75);
-  --tabbar-inactive: rgba(44, 62, 48, 0.6);
-  --tabbar-active: #1c2a20;
-  --tabbar-glow: rgba(255, 255, 255, 0.9);
-  --tabbar-glow-shadow: 0 6px 18px rgba(44, 62, 48, 0.16), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  --tabbar-bg: linear-gradient(180deg, rgba(255, 255, 255, 0.68) 0%, rgba(255, 255, 255, 0.40) 100%);
+  --tabbar-border: rgba(255, 255, 255, 0.55);
+  --tabbar-inactive: rgba(44, 62, 48, 0.55);
+  --tabbar-active: #16221a;
+  /* 液滴胶囊材质（亮色）：顶缘镜面高光 + 中段渐隐 + 底部回光 */
+  --tabbar-glow: linear-gradient(180deg, rgba(255, 255, 255, 0.96) 0%, rgba(255, 255, 255, 0.62) 46%, rgba(255, 255, 255, 0.78) 100%);
+  --tabbar-glow-border: rgba(255, 255, 255, 0.65);
+  --tabbar-glow-shadow:
+    inset 0 1px 1px rgba(255, 255, 255, 0.95),
+    inset 0 -1px 1px rgba(30, 50, 40, 0.10),
+    0 3px 10px rgba(30, 50, 40, 0.14);
+  --tabbar-bar-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.85),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.18),
+    0 16px 40px rgba(30, 40, 33, 0.18);
 
   display: flex;
   position: fixed;
@@ -3669,44 +3682,56 @@ mark.search-highlight {
   gap: 0;
 
   background: var(--tabbar-bg);
-  -webkit-backdrop-filter: blur(28px) saturate(190%);
-  backdrop-filter: blur(28px) saturate(190%);
+  /* Safari/旧 WebKit 需要 -webkit- 前缀，双写保证全平台生效 */
+  -webkit-backdrop-filter: blur(30px) saturate(190%) brightness(1.03);
+  backdrop-filter: blur(30px) saturate(190%) brightness(1.03);
   border: 1px solid var(--tabbar-border);
   border-radius: 26px;
   padding: 7px 8px;
   padding-bottom: calc(7px + env(safe-area-inset-bottom, 0px));
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.7),
-    inset 0 -1px 0 rgba(255, 255, 255, 0.25),
-    0 14px 38px rgba(30, 40, 33, 0.22);
+  box-shadow: var(--tabbar-bar-shadow);
 }
 
 /* 暗色主题下的暗色液态玻璃 */
 [data-theme="dark"] .bottom-tab-bar {
-  --tabbar-bg: rgba(24, 31, 27, 0.5);
-  --tabbar-border: rgba(255, 255, 255, 0.16);
-  --tabbar-inactive: rgba(224, 232, 226, 0.6);
+  --tabbar-bg: linear-gradient(180deg, rgba(32, 40, 36, 0.62) 0%, rgba(20, 26, 22, 0.46) 100%);
+  --tabbar-border: rgba(255, 255, 255, 0.14);
+  --tabbar-inactive: rgba(224, 232, 226, 0.52);
   --tabbar-active: #f4f9f5;
-  --tabbar-glow: rgba(255, 255, 255, 0.14);
-  --tabbar-glow-shadow: 0 6px 18px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.18);
+  --tabbar-glow: linear-gradient(180deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.07) 48%, rgba(255, 255, 255, 0.12) 100%);
+  --tabbar-glow-border: rgba(255, 255, 255, 0.22);
+  --tabbar-glow-shadow:
+    inset 0 1px 1px rgba(255, 255, 255, 0.28),
+    inset 0 -1px 1px rgba(0, 0, 0, 0.25),
+    0 3px 10px rgba(0, 0, 0, 0.35);
+  --tabbar-bar-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.14),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.04),
+    0 16px 40px rgba(0, 0, 0, 0.35);
 }
 
-/* 滑动高亮胶囊：由 JS 依据当前 tab 定位（left/width），行列切换平滑滑动 */
+/* 滑动高亮胶囊（液态玻璃液滴）：由 JS 依据当前 tab 定位（left/width），
+   切换时平滑滑动。胶囊自身再叠加一层 backdrop 模糊，让"液滴"相对
+   tabbar 材质产生更实的玻璃折射质感（Chrome/Safari 均支持嵌套）。 */
 .bottom-tab-glow {
   position: absolute;
-  top: 7px;
-  bottom: calc(7px + env(safe-area-inset-bottom, 0px));
+  box-sizing: border-box;
+  top: 6px;
+  bottom: calc(6px + env(safe-area-inset-bottom, 0px));
   left: 0;
   width: 54px;
-  border-radius: 19px;
+  border-radius: 17px;
   background: var(--tabbar-glow);
+  border: 1px solid var(--tabbar-glow-border);
   box-shadow: var(--tabbar-glow-shadow);
+  -webkit-backdrop-filter: blur(14px) saturate(160%);
+  backdrop-filter: blur(14px) saturate(160%);
   opacity: 0;
   pointer-events: none;
   will-change: left, width;
   transition:
-    left 0.34s cubic-bezier(0.32, 0.72, 0.24, 1),
-    width 0.34s cubic-bezier(0.32, 0.72, 0.24, 1),
+    left 0.38s cubic-bezier(0.34, 0.9, 0.3, 1.1),
+    width 0.38s cubic-bezier(0.34, 0.9, 0.3, 1.1),
     opacity 0.2s ease;
 }
 .bottom-tab-bar.has-active .bottom-tab-glow {

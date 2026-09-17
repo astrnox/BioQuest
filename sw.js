@@ -9,7 +9,7 @@
 // P1-4 修复：CACHE_VERSION 由 scripts/bump-sw.js 基于 git 跟踪的 js/css/data
 // 内容哈希自动生成——修改任何 JS/CSS/data 后运行 `npm run bump:sw` 即可，
 // 不再依赖人肉维护版本号。版本号变化会触发 activate 阶段清理旧缓存并重新预热。
-var CACHE_VERSION = 'bioquest-db8e9a1a9b80'; // ← bump-sw.js 会自动改写此行
+var CACHE_VERSION = 'bioquest-af3cd007660a'; // ← bump-sw.js 会自动改写此行
 var CACHE_NAME = 'bioquest-cache-' + CACHE_VERSION;
 
 /* ========================================================================
@@ -362,7 +362,7 @@ self.addEventListener('fetch', function (event) {
     return;
   }
 
-  // 策略 3: CSS/JS - 缓存优先，网络更新
+  // 策略 3: CSS/JS - stale-while-revalidate（缓存优先返回 + 后台刷新缓存）
   // 注意：index.html 中 CSS/JS 带 ?v= 缓存破坏参数，而 CORE_ASSETS 预缓存的是无参数版本。
   // 匹配与更新缓存时均使用无查询参数的 URL，确保预缓存命中并避免同一文件多个缓存条目。
   if (url.pathname.match(/\.(css|js)$/i)) {
@@ -371,16 +371,28 @@ self.addEventListener('fetch', function (event) {
     var assetRequest = new Request(assetUrl.toString(), { mode: request.mode, credentials: request.credentials });
     event.respondWith(
       safeCacheMatch(assetRequest).then(function (cached) {
+        // 后台网络刷新：成功后覆盖缓存（下一次访问即新版本）；失败时回退缓存副本。
         var networkFetch = fetch(request).then(function (response) {
-          var clone = response.clone();
-          caches.open(CACHE_NAME).then(function (cache) {
-            cache.put(assetRequest, clone);
-          });
+          if (response && response.ok) {
+            var clone = response.clone();
+            caches.open(CACHE_NAME).then(function (cache) {
+              cache.put(assetRequest, clone);
+            });
+          }
           return response;
         }).catch(function () {
           return cached;
         });
-        return cached || networkFetch;
+        if (cached) {
+          // 修复（略 P1-4 的纯 Cache First）：立即返回旧副本，同时触发 networkFetch
+          // 后台更新缓存。原实现"命中缓存就完全不联网"，部署后新 HTML（网络优先）
+          // 会配上旧 JS/CSS（缓存命中），boot/app-ready 链路新老混用，表现为
+          // "加载动画卡 20%、遮罩消失后内容仍未加载"。SWR 让资源一次访问内收敛；
+          // 断网时仍能命中缓存副本保持离线可用。
+          networkFetch;
+          return Promise.resolve(cached);
+        }
+        return networkFetch;
       })
     );
     return;
