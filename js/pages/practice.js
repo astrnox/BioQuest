@@ -74,6 +74,43 @@ const PracticeState = {
 
 let practiceStylesInjected = false;
 
+/**
+ * 带超时与自动重试的 JSON 拉取：首次访问 CDN/静态代理冷加载常较慢甚至超时。
+ * 超时后取消挂起请求、短暂退避重试一次（CDN/HTTP 缓存往往已预热），
+ * 避免练习/逻辑题库首次加载失败后整页不可用。
+ */
+function _fetchLocalJsonWithRetry(url, attempts, timeoutMs) {
+  attempts = attempts || 2;
+  timeoutMs = timeoutMs || 15000;
+  var lastErr = null;
+  function attempt(i) {
+    var controller = (typeof AbortController !== 'undefined') ? new AbortController() : null;
+    var timer = null;
+    if (controller) {
+      timer = setTimeout(function () { try { controller.abort(); } catch (e) {} }, timeoutMs);
+    }
+    return fetch(url, controller ? { signal: controller.signal } : {})
+      .then(function (res) {
+        if (!res.ok) throw new Error('HTTP ' + res.status + ': ' + url);
+        return res.json();
+      })
+      .then(function (body) {
+        clearTimeout(timer);
+        return { ok: true, data: body };
+      })
+      .catch(function (err) {
+        clearTimeout(timer);
+        lastErr = (err && err.name === 'AbortError') ? new Error('加载超时') : err;
+        if (i < attempts) {
+          return new Promise(function (resolve) { setTimeout(resolve, 500 * i); })
+            .then(function () { return attempt(i + 1); });
+        }
+        return { ok: false, error: lastErr };
+      });
+  }
+  return attempt(1);
+}
+
 // ===== 时间/间隔常量 =====
 var PRACTICE_SYNC_DEBOUNCE_MS = 300;     // 分数同步防抖时间
 var PRACTICE_PANEL_FADE_MS = 250;         // 筛选面板淡出延迟（重渲染前等待过渡完成）
@@ -530,8 +567,9 @@ async function loadPracticeQuestions() {
       } catch (e) {
         console.warn('[Practice] 从 Supabase 加载失败，回退本地 JSON:', e.message);
       }
-      var res = await fetch('data/quiz.json');
-      var data = await res.json();
+      var res = await _fetchLocalJsonWithRetry('data/quiz.json');
+      if (!res.ok) throw (res.error || new Error('quiz.json 加载失败'));
+      var data = res.data;
       // P0-4: 应用隔离过滤 → 超长知识讲义过滤 → 筛选符合练习格式的题目
       var rawQuestions0 = (typeof window._filterQuarantinedQuestions === 'function')
         ? window._filterQuarantinedQuestions(data.题库 || [])
@@ -553,9 +591,9 @@ async function loadPracticeQuestions() {
 async function loadLogicQuestions() {
   if (PracticeState.logicLoaded) return;
   try {
-    const res = await fetch('data/logic_questions.json');
+    const res = await _fetchLocalJsonWithRetry('data/logic_questions.json');
     if (res.ok) {
-      var logicData = await res.json();
+      var logicData = res.data;
       // P0-4: 应用隔离过滤 + 回收站过滤（低分下架题目用户不再刷到）
       PracticeState.logicData = (typeof window._filterQuarantinedQuestions === 'function')
         ? window._filterQuarantinedQuestions(logicData).filter(function (q) { return !_isRecycledQuestion(q); })
