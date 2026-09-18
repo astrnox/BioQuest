@@ -8,7 +8,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <!-- Issue #15：题库分发走 jsDelivr CDN，提前建立连接 -->
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <!-- 修复：主页外置字体改为异步加载——fonts.googleapis.com 在国内不可达时
+       会拖住首屏解析（渲染阻塞样式表），首次加载表现为"必失败"。
+       media="print" 先以非阻塞方式下载，onload 后恢复为全部媒体。 -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
   <style>@font-face{font-family:'LXGW WenKai';src:url('fonts/lxgw-wenkai.ttf?v=1.522') format('truetype');font-weight:100 900;font-display:swap;}</style>
   <link rel="stylesheet" href="css/globals.css">
   <link rel="stylesheet" href="css/header.css">
@@ -121,7 +124,7 @@
   <script src="js/core/rating.js?v=20260915a"></script>
   <script src="js/core/storage.js?v=20260915a"></script>
   <script src="js/core/loader.js?v=20260816b" defer></script>
-  <script src="js/pages/quiz.js?v=20260915a"></script>
+  <script src="js/pages/quiz.js?v=20260918a"></script>
   <script>
     // 统一汉堡菜单（与主页一致）：注入主页导航结构并绑定交互
     if (window.BioQuestHamburger) {

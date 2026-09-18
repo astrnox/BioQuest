@@ -31,12 +31,42 @@ var escapeHtml = (typeof window !== 'undefined' && typeof window.escapeHtml === 
       return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
     };
 
+/**
+ * 带超时与自动重试的 JSON 拉取（首次访问 raw.githubusercontent / CDN / 静态代理
+ * 冷加载常较慢甚至超时；超时后取消挂起请求并短暂退避重试，避免页面卡在
+ * 「加载题库中...」或一次网络抖动即永久失败——重试多命中预热缓存/HTTP 缓存）。
+ */
+async function fetchJsonWithRetry(url, attempts, timeoutMs) {
+  var lastErr = null;
+  for (var i = 1; i <= attempts; i++) {
+    var controller = (typeof AbortController !== 'undefined') ? new AbortController() : null;
+    var timer = null;
+    if (controller) {
+      timer = setTimeout(function () { try { controller.abort(); } catch (e) {} }, timeoutMs);
+    }
+    try {
+      var res = await fetch(url, controller ? { signal: controller.signal } : {});
+      if (!res.ok) throw new Error('HTTP ' + res.status + ': ' + url);
+      var body = await res.json();
+      clearTimeout(timer);
+      return { ok: true, data: body };
+    } catch (err) {
+      clearTimeout(timer);
+      lastErr = (err && err.name === 'AbortError') ? new Error('加载超时') : err;
+      if (i < attempts) {
+        await new Promise(function (resolve) { setTimeout(resolve, 400 * i); });
+      }
+    }
+  }
+  return { ok: false, error: lastErr };
+}
+
 async function loadQuizData() {
   const btn = document.getElementById('quizCrawlBtn');
   const label = document.getElementById('quizLabel');
 
-  // 如果数据已加载，直接使用缓存
-  if (dataLoaded) {
+  // 两套题库都已就绪时直接使用缓存；仅加载了一部分时继续补齐其余
+  if (dataLoaded && logicLoaded) {
     if (btn) btn.disabled = false;
     if (label) updateCategoryLabel();
     return;
@@ -46,29 +76,29 @@ async function loadQuizData() {
   if (label) label.textContent = '加载题库中...';
 
   try {
-    // 并行加载两个题库
-    const [res, logicRes] = await Promise.all([
-      fetch('data/quiz.json'),
-      fetch('data/logic_questions.json').catch(function() { return null; })
+    // 并行加载两个题库（每项自带超时 + 自动重试；逻辑题库失败不影响基础知识题库）
+    const [qRes, logicRes] = await Promise.all([
+      fetchJsonWithRetry('data/quiz.json', 2, 15000),
+      fetchJsonWithRetry('data/logic_questions.json', 2, 15000)
     ]);
 
-    const qData = await res.json();
+    if (!qRes.ok) throw (qRes.error || new Error('quiz.json 加载失败'));
+
     // P0-4: 隔离过滤 → 超长知识讲义过滤 → 清洗（600字选项删；300字+截断；总分4000+删）
     var rawQ = (typeof window._filterQuarantinedQuestions === 'function')
-      ? window._filterQuarantinedQuestions(qData.题库 || [])
-      : (qData.题库 || []);
+      ? window._filterQuarantinedQuestions(qRes.data.题库 || [])
+      : (qRes.data.题库 || []);
     QData = (typeof window.filterQuestionList === 'function')
       ? window.filterQuestionList(rawQ)
       : rawQ;
     QData = QData.filter(function (q) { return !_isQuizRecycled(q); });
     dataLoaded = true;
 
-    // 并行加载逻辑题库
-    if (logicRes && logicRes.ok) {
-      var _logicRaw = await logicRes.json();
+    // 逻辑题库为可选项：失败时仅禁用逻辑/混合模式，基本信息模式仍可用
+    if (logicRes.ok) {
       var logicFiltered = (typeof window._filterQuarantinedQuestions === 'function')
-        ? window._filterQuarantinedQuestions(_logicRaw)
-        : _logicRaw;
+        ? window._filterQuarantinedQuestions(logicRes.data)
+        : logicRes.data;
       logicData = (typeof window.filterQuestionList === 'function')
         ? window.filterQuestionList(logicFiltered)
         : logicFiltered;
@@ -89,7 +119,9 @@ async function loadQuizData() {
   } catch (err) {
     console.error('加载题目数据失败', err);
     QData = [];
-    if (label) label.textContent = '加载失败，请刷新重试';
+    // 不置 dataLoaded=true：点击「在线组卷」会走重试路径再次拉取，
+    // 上一轮失败的请求可能已让 CDN/HTTP/SW 缓存预热，重试往往能成功
+    if (label) label.textContent = '加载失败，请点击「在线组卷」重试';
     if (btn) btn.disabled = false;
   }
 }
@@ -959,7 +991,17 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   const btn = document.getElementById('quizCrawlBtn');
   if (btn) {
-    btn.addEventListener('click', generateNewPaper);
+    btn.addEventListener('click', function () {
+      // 首次加载失败/部分失败时，「在线组卷」同时充当重试入口：
+      // 当前模式所需的题库未就绪则先补加载（自动重试），成功后再出卷。
+      const needData = selectedCategory !== 'logic';
+      const needLogic = selectedCategory !== 'basic';
+      if ((needData && !dataLoaded) || (needLogic && !logicLoaded)) {
+        loadQuizData().then(function () { generateNewPaper(); });
+        return;
+      }
+      generateNewPaper();
+    });
   }
 
   // 试题页点赞/点踩（事件委托：renderPaper 重建 DOM 后仍有效）

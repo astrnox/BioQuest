@@ -84,8 +84,8 @@
     ]
   },
   {
-    "type": "mtf",
-    "question": "在研究细胞信号转导时，配体L与受体R结合后，通过G蛋白激活AC产生cAMP，cAMP激活PKA，PKA磷酸化CREB调控基因表达。实验发现：加入霍乱毒素后，无配体时cAMP持续升高且CREB持续磷酸化；加入PKA抑制剂H89后，cAMP仍高但CREB不再被磷酸化。若在霍乱毒素+H89处理基础上再加入蛋白磷酸酶抑制剂okadaic acid。根据以上信息，判断以下陈述的正误。",
+    "type": "single",
+    "question": "在研究细胞信号转导时，配体L与受体R结合后，通过G蛋白激活AC产生cAMP，cAMP激活PKA，PKA磷酸化CREB调控基因表达。实验发现：加入霍乱毒素后，无配体时cAMP持续升高且CREB持续磷酸化；加入PKA抑制剂H89后，cAMP仍高但CREB不再被磷酸化。若在霍乱毒素+H89处理基础上再加入蛋白磷酸酶抑制剂okadaic acid。根据以上信息，请选出唯一正确的选项。",
     "options": [
       "CREB磷酸化水平升高",
       "CREB磷酸化水平不变",
@@ -105,17 +105,11 @@
     "module": "module_1",
     "category": "logic",
     "id": "M1-04-b6f4dddb",
-    "bioId": "M1-04-b6f4dddb",
-    "mtfTruth": [
-      false,
-      true,
-      false,
-      false
-    ]
+    "bioId": "M1-04-b6f4dddb"
   },
   {
-    "type": "mtf",
-    "question": "某酶的最适pH为7.5，其活性中心含有一个组氨酸残基（pKa≈6.0）和一个半胱氨酸残基（pKa≈8.5）。实验测定该酶在不同pH下的活性：pH 6.0时活性约为最大活性的50%，pH 7.5时活性最大，pH 9.0时活性约为最大活性的50%。根据以上信息，判断以下陈述的正误。",
+    "type": "single",
+    "question": "某酶的最适pH为7.5，其活性中心含有一个组氨酸残基（pKa≈6.0）和一个半胱氨酸残基（pKa≈8.5）。实验测定该酶在不同pH下的活性：pH 6.0时活性约为最大活性的50%，pH 7.5时活性最大，pH 9.0时活性约为最大活性的50%。根据以上信息，请选出唯一正确的选项。",
     "options": [
       "组氨酸去质子化，半胱氨酸质子化",
       "组氨酸质子化，半胱氨酸去质子化",
@@ -135,13 +129,7 @@
     "module": "module_1",
     "category": "logic",
     "id": "M1-05-fb59cba9",
-    "bioId": "M1-05-fb59cba9",
-    "mtfTruth": [
-      true,
-      false,
-      false,
-      false
-    ]
+    "bioId": "M1-05-fb59cba9"
   },
   {
     "type": "single",
@@ -378,8 +366,8 @@
     ]
   },
   {
-    "type": "mtf",
-    "question": "研究者将¹⁵N标记的大肠杆菌转移到¹⁴N培养基中培养1代后，加入丝裂霉素C（抑制DNA复制起始但不影响已起始的复制叉），再培养1代后提取DNA进行CsCl密度梯度离心，根据以上信息，判断以下陈述的正误。",
+    "type": "single",
+    "question": "研究者将¹⁵N标记的大肠杆菌转移到¹⁴N培养基中培养1代后，加入丝裂霉素C（抑制DNA复制起始但不影响已起始的复制叉），再培养1代后提取DNA进行CsCl密度梯度离心，根据以上信息，请选出唯一正确的选项。",
     "options": [
       "仅中间带（¹⁵N-¹⁴N）",
       "中间带和轻带（¹⁴N-¹⁴N）各约50%",
@@ -399,13 +387,7 @@
     "module": "module_2",
     "category": "logic",
     "id": "M2-04-d5367d7d",
-    "bioId": "M2-04-d5367d7d",
-    "mtfTruth": [
-      true,
-      false,
-      false,
-      false
-    ]
+    "bioId": "M2-04-d5367d7d"
   },
   {
     "type": "mtf",
@@ -894,8 +876,8 @@
     ]
   },
   {
-    "type": "mtf",
-    "question": "5个物种（A、B、C、D、E）的细胞色素c氨基酸差异数：A-B=1，A-C=12，A-D=14，A-E=13，B-C=12，B-D=13，B-E=12，C-D=3，C-E=5，D-E=4。根据以上信息，判断以下陈述的正误。",
+    "type": "single",
+    "question": "5个物种（A、B、C、D、E）的细胞色素c氨基酸差异数：A-B=1，A-C=12，A-D=14，A-E=13，B-C=12，B-D=13，B-E=12，C-D=3，C-E=5，D-E=4。根据以上信息，请选出唯一正确的选项。",
     "options": [
       "((A,B),(C,D,E))",
       "((A,B),((C,D),E))",
@@ -915,13 +897,7 @@
     "module": "module_4",
     "category": "logic",
     "id": "M4-05-e8b6b5e7",
-    "bioId": "M4-05-e8b6b5e7",
-    "mtfTruth": [
-      false,
-      true,
-      false,
-      false
-    ]
+    "bioId": "M4-05-e8b6b5e7"
   },
   {
     "type": "single",
@@ -948,8 +924,8 @@
     "bioId": "M4-06-323c746e"
   },
   {
-    "type": "mtf",
-    "question": "乳糖操纵子lacZ-GFP融合体在四种菌株中的表达：菌株1（野生型）+IPTG=100，-IPTG=1；菌株2（lacI⁻）+IPTG=100，-IPTG=100；菌株3（lacP⁻）+IPTG=2，-IPTG=1；菌株4（lacI⁻lacP⁻）+IPTG=2，-IPTG=1。根据以上信息，判断以下陈述的正误。",
+    "type": "single",
+    "question": "乳糖操纵子lacZ-GFP融合体在四种菌株中的表达：菌株1（野生型）+IPTG=100，-IPTG=1；菌株2（lacI⁻）+IPTG=100，-IPTG=100；菌株3（lacP⁻）+IPTG=2，-IPTG=1；菌株4（lacI⁻lacP⁻）+IPTG=2，-IPTG=1。根据以上信息，请选出唯一正确的选项。",
     "options": [
       "+IPTG时100，-IPTG时100",
       "+IPTG时100，-IPTG时1",
@@ -969,13 +945,7 @@
     "module": "module_4",
     "category": "logic",
     "id": "M4-07-100ea29c",
-    "bioId": "M4-07-100ea29c",
-    "mtfTruth": [
-      false,
-      false,
-      true,
-      false
-    ]
+    "bioId": "M4-07-100ea29c"
   },
   {
     "type": "mtf",
