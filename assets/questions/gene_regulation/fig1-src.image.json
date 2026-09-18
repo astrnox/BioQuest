@@ -1,0 +1,11 @@
+{
+  "caption": "lac 操纵子调控进化的两项关键实验数据：(A) 4 种进化环境（Lac、G/L、G_L、L_G）× 6 个重复群体中 lacI⁻ 突变频率热图；(B) lacI⁻ 在葡萄糖/乳糖/混合环境中的适合度效应",
+  "credit": "Karkare K et al., Molecular Biology and Evolution 2021",
+  "doi": "10.1093/molbev/msab077",
+  "figure": "1",
+  "file": "assets/questions/gene_regulation/fig1-src.jpg",
+  "license": "CC BY 4.0",
+  "pmcId": "PMC8233506",
+  "source": "paper",
+  "question_id": "乳糖操纵子调控的环境依赖选择与进化"
+}

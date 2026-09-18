@@ -1,0 +1,11 @@
+{
+  "caption": "GPU 加速的染色体间 LD 扫描：(A) 5 个超级人群 (B) 26 个精细人群 (C-D) chr14-chr22 LD 信号与 r²>0.8 位点对 (E-G) 随机组合预期 vs 观察基因型计数（P<2.2×10⁻¹⁶）",
+  "credit": "Lv W et al., Genome Biology 2026",
+  "doi": "10.1186/s13059-026-04019-9",
+  "figure": "1",
+  "file": "assets/questions/mendel/fig1-src.jpg",
+  "license": "CC BY 4.0",
+  "pmcId": "PMC13097867",
+  "source": "paper",
+  "question_id": "独立分配与非连锁染色体的关联（染色体间连锁不平衡）"
+}

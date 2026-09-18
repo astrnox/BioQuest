@@ -1,0 +1,11 @@
+{
+  "caption": "Stereo-seq 空间转录组学流程：(1) DNB 点阵芯片（spot 220nm），(2) CID 原位测序，(3) polyT-UMI-CID 捕获芯片，(4) 文库构建与测序，(5) 组织原位 mRNA 捕获、(6) 空间分辨率表达图谱",
+  "credit": "Zhu Y et al., Genes 2026",
+  "doi": "10.3390/genes17060604",
+  "figure": "4",
+  "file": "assets/questions/M2-01-f05ce501/fig1.jpg",
+  "license": "CC BY 4.0",
+  "pmcId": "PMC13300320",
+  "source": "paper",
+  "question_id": "Stereo-seq 空间转录组学的原理与分辨率"
+}

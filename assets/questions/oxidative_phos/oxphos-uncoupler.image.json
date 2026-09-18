@@ -1,0 +1,11 @@
+{
+  "caption": "JC-1 检测线粒体膜电位：A) 荧光显微图（上=对照、中=CCCP 10μM、下=BA 0.5mM；左列=红色聚合体、右列=绿色单体）；B/C) 红/绿荧光比值定量（P<0.0001）",
+  "credit": "Wang J et al., Frontiers in Physiology 2026",
+  "doi": "10.3389/fphys.2026.1715312",
+  "figure": "1",
+  "file": "assets/questions/oxidative_phos/oxphos-uncoupler.jpg",
+  "license": "CC BY 4.0",
+  "pmcId": "PMC12950582",
+  "source": "paper",
+  "question_id": "解偶联剂与转运抑制剂对线粒体膜电位的影响"
+}

@@ -529,7 +529,7 @@ function renderPaper() {
       html += `
         <div class="pq-exp show ${isCorrect ? 'correct' : (isPartial ? 'partial' : 'wrong')}" id="pqe-${i}">
           ${resultHtml}
-          ${q.explanation ? `<div style="margin-top:8px;font-size:0.85rem;line-height:1.6;">${escapeHtml(q.explanation)}</div>` : ''}
+          ${q.explanation ? `<div style="margin-top:8px;font-size:0.85rem;line-height:1.6;">${renderExplanationWithImages(q.explanation)}</div>` : ''}
           ${linkageBtns}
         </div>
       `;

@@ -2263,7 +2263,7 @@ function renderQuiz() {
     ? `
     <div class="practice-explanation">
       <div class="practice-explanation-title">解析</div>
-      <div class="practice-explanation-text">${escapeHtml(q.explanation)}</div>
+      <div class="practice-explanation-text">${renderExplanationWithImages(q.explanation)}</div>
     </div>
     `
     : '';

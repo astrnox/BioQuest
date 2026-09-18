@@ -2705,7 +2705,7 @@ function renderReviewMode(target) {
 
     html += `
         </div>
-        ${q.explanation ? `<div class="exam-review-q-exp">${q.explanation}</div>` : ''}
+        ${q.explanation ? `<div class="exam-review-q-exp">${renderExplanationWithImages(q.explanation)}</div>` : ''}
       </div>
     `;
   });

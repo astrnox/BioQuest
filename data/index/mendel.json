@@ -3,7 +3,7 @@
   "diff": "league",
   "difficulty": "league",
   "has_image": true,
-  "len": 64,
+  "len": 157,
   "module": "module_4",
   "src": "mendel",
   "tag": "mendel",
@@ -12,7 +12,7 @@
    "module_4",
    "遗传学",
    "自由组合定律",
-   "独立分配"
+   "连锁不平衡"
   ],
   "target": "competition",
   "year": null

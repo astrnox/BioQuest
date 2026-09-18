@@ -201,6 +201,47 @@ if (typeof window !== 'undefined') {
 }
 
 /**
+ * 解析文本渲染：安全转义 + 「批注图解析」嵌入 + 换行保留。
+ *
+ * 约定：解析文本中以独立行书写
+ *   @@ANNOTATED_IMAGE:assets/questions/<dir>/<file>-annotated.jpg
+ * 渲染端会将其替换为带边框的批注图（<figure><img><figcaption>）。
+ * 仅接受仓库内相对路径（assets/ 开头、图片扩展名），其余输入保持原样转义输出，防注入。
+ *
+ * @param {string} text - 题目解析原始文本
+ * @returns {string}     转义且安全的 HTML
+ */
+function renderExplanationWithImages(text) {
+  const raw = String(text == null ? '' : text);
+  // 1) 先取出白名单路径并暂存（避免 escapeHtml 转义 '/' 破坏标记）
+  const stashed = [];
+  const pre = raw.replace(/@@ANNOTATED_IMAGE:([A-Za-z0-9_\-./]+)/g, function (m, p) {
+    if (!/^assets\/[A-Za-z0-9_\-./]+\.(jpe?g|png|gif|webp)$/.test(p)) {
+      return m; // 非白名单路径不展开
+    }
+    stashed.push(p);
+    return '\u0000IMG' + (stashed.length - 1) + '\u0000';
+  });
+  // 2) 转义（其余文本全部按普通解析文本处理）
+  let s = escapeHtml(pre);
+  // 3) 回填图注解析图
+  s = s.replace(/\u0000IMG(\d+)\u0000/g, function (m, i) {
+    const p = stashed[Number(i)];
+    if (!p) return m;
+    return '<figure class="exp-figure">' +
+      '<img class="exp-annotated" src="' + p + '" alt="带批注的期刊原图解析" loading="lazy">' +
+      '<figcaption>图注解析：图中彩色框与引线为本题解析批注，对应题干/选项中的关键结构与因果链</figcaption>' +
+      '</figure>';
+  });
+  s = s.replace(/\n/g, '<br>');
+  return s;
+}
+if (typeof window !== 'undefined') {
+  window.renderExplanationWithImages = renderExplanationWithImages;
+  BioQuest.renderExplanationWithImages = renderExplanationWithImages;
+}
+
+/**
  * 敏感凭据脱敏（JWT / 长 Base64 签名 / AWS 密钥 / 私钥头 / Supabase service_role JWT）
  * 只打码，不删除原文 —— 便于用户在控制台/聊天里确认"自己刚才贴了密钥"，
  * 同时防止不小心被 BioQuestMarkdown 的 autoLink 索引、也防止被 localStorage/同步 持久化。

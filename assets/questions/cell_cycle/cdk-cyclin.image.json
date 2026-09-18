@@ -1,0 +1,11 @@
+{
+  "caption": "哺乳动物细胞周期的分子引擎：上方 EGFR/TKR 生长因子信号（RAS-ERK、PI3K-AKT-mTOR）驱动 Cyclin-CDK 序贯激活；中央 Rb-E2F 开关与 CKI（p16/p21/p27/p57）管制 G1/S 限制点；G2/M 处 Wee1/Myt1-CDC25 调控 CycB-CDK1",
+  "credit": "Pellarin I et al., Signal Transduction and Targeted Therapy 2025",
+  "doi": "10.1038/s41392-024-02080-z",
+  "figure": "3",
+  "file": "assets/questions/cell_cycle/cdk-cyclin.jpg",
+  "license": "CC BY 4.0",
+  "pmcId": "PMC11734941",
+  "source": "paper",
+  "question_id": "Cyclin-CDK-Rb 轴的细胞周期引擎与生长因子信号"
+}

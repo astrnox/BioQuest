@@ -1,0 +1,11 @@
+{
+  "caption": "TCR 与 CAR 识别肿瘤抗原的差异：(A) 天然 TCR-CD3 复合体依赖 MHC I 呈递，(B) CAR 的 scFv 直接结合肿瘤抗原并将共刺激域（CD28/4-1BB）与 CD3ζ 集成于同一分子，(C) scFv 来源于抗体可变区",
+  "credit": "Mitra A et al., Frontiers in Immunology 2023",
+  "doi": "10.3389/fimmu.2023.1188049",
+  "figure": "1",
+  "file": "assets/questions/M3-01-a898fe16/fig1.jpg",
+  "license": "CC BY 4.0",
+  "pmcId": "PMC10225594",
+  "source": "paper",
+  "question_id": "CAR-T 细胞对抗原识别的 MHC 非限制性与结构域重组装"
+}

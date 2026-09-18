@@ -1,0 +1,11 @@
+{
+  "caption": "TCA 循环驱动的致癌代谢重编程：左）肿瘤细胞中 SDH*/FH*/IDH* 突变导致琥珀酸、富马酸与 D-2HG 蓄积（红色），TCA 循环与糖酵解/谷氨酰胺回补并存；右）免疫细胞中衣康酸（Itaconate）等免疫代谢物生成",
+  "credit": "Sarkar S et al., Journal of Biomedical Science 2025",
+  "doi": "10.1186/s12929-025-01186-y",
+  "figure": "1",
+  "file": "assets/questions/krebs_cycle/fig1-src.jpg",
+  "license": "CC BY 4.0",
+  "pmcId": "PMC12424225",
+  "source": "paper",
+  "question_id": "TCA 循环的致癌代谢物与回补维持"
+}

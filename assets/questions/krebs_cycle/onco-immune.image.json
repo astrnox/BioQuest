@@ -1,0 +1,11 @@
+{
+  "caption": "TCA 代谢物的免疫调控网络：中心为 TCA 循环，四象限分别为衣康酸（上左）、α-KG 与 2-HG（上右）、富马酸（下左）、琥珀酸（下右）对巨噬细胞/T/NK 细胞的作用",
+  "credit": "Sarkar S et al., Journal of Biomedical Science 2025",
+  "doi": "10.1186/s12929-025-01186-y",
+  "figure": "3",
+  "file": "assets/questions/krebs_cycle/onco-immune.jpg",
+  "license": "CC BY 4.0",
+  "pmcId": "PMC12424225",
+  "source": "paper",
+  "question_id": "TCA 代谢物对免疫细胞极化的信号调控"
+}

@@ -21,7 +21,7 @@
   "diff": "league",
   "difficulty": "league",
   "has_image": true,
-  "len": 50,
+  "len": 92,
   "module": "module_1",
   "src": "rna_biology",
   "tag": "rna_biology",
@@ -48,6 +48,24 @@
    "module_1",
    "分子生物学",
    "lncRNA XIST 与 X 染色体失活"
+  ],
+  "target": "competition",
+  "year": null
+ },
+ "M1-02-af55ba03": {
+  "diff": "league",
+  "difficulty": "league",
+  "has_image": true,
+  "len": 169,
+  "module": "module_1",
+  "src": "rna_biology",
+  "tag": "rna_biology",
+  "tags": [
+   "rna_biology",
+   "module_1",
+   "分子生物学",
+   "m6A",
+   "RNA稳定性"
   ],
   "target": "competition",
   "year": null
