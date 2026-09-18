@@ -5,6 +5,11 @@
  * ============================================================
  */
 
+// 启动标记：boot-mask.js 用它区分"应用脚本已开始执行"与"脚本加载/解析失败"，
+// 一旦脚本因任何原因没能跑到这里，首屏遮罩会在兜底超时后展示错误重试而不是
+// 淡出成一页空白（修复"加载到 20% 卡死 / 遮罩消失但内容没加载好"）。
+window.__appBooted = true;
+
 /* CSP 改造辅助：把无法用 data-on 数组直接表达的复杂内联处理器
  * 收敛为极小的命名函数，供 csp-events.js 的委托通过 window[fn] 查找调用。
  * 语义均与原内联表达式完全等价。 */
@@ -2525,10 +2530,123 @@ function bindEvents() {
   });
 
   // 底部标签栏：点击瞬间即高亮（液态玻璃胶囊立即滑动），不等路由渲染完成；
-  // handleRoute 渲染后会再次定位（幂等），做到"点击→反馈"几乎零延迟
+  // handleRoute 渲染后会再次定位（幂等），做到"点击→反馈"几乎零延迟。
+  // 同时支持"按住滑动"：Pointer Events 拖动液滴胶着跟手（shadow 加深给出
+  // 液态反馈），松手吸附最近 tab 并导航 —— 完全符合 Liquid Glass 交互预期。
   var bottomBar = document.getElementById('bottomTabBar');
   if (bottomBar) {
+    var _tabDrag = null;          // 拖拽状态
+    var _suppressClick = false;   // 拖拽结束吞掉随之而来的 click（避免二次导航）
+    var _tabDragThreshold = 6;    // 触发拖拽的最小位移（px），小于它视为点击
+
+    function _tabGlowEl() {
+      return bottomBar.querySelector('.bottom-tab-glow');
+    }
+    function _tabAtCenter(cx) {
+      var tabs = bottomBar.querySelectorAll('.bottom-tab');
+      for (var i = 0; i < tabs.length; i++) {
+        var left = tabs[i].offsetLeft, w = tabs[i].offsetWidth;
+        if (cx >= left && cx <= left + w) return tabs[i];
+      }
+      return null;
+    }
+    function _tabNearest(cx) {
+      var tabs = bottomBar.querySelectorAll('.bottom-tab');
+      var best = null, bestD = Infinity;
+      for (var i = 0; i < tabs.length; i++) {
+        var c = tabs[i].offsetLeft + tabs[i].offsetWidth / 2;
+        var d = Math.abs(cx - c);
+        if (d < bestD) { bestD = d; best = tabs[i]; }
+      }
+      return best;
+    }
+    function _tabBarPadding() {
+      var cs = window.getComputedStyle ? getComputedStyle(bottomBar) : null;
+      return cs && cs.paddingLeft ? parseFloat(cs.paddingLeft) : 8;
+    }
+
+    function _tabDragStart(e) {
+      if (e.button !== undefined && e.button !== 0 && e.pointerType === 'mouse') return;
+      var glow = _tabGlowEl();
+      if (!glow) return;
+      // 记录按下时的 tab：指针捕获会把 click 重定向到 bar 本体（target 丢失锚点），
+      // 因此拖拽结束需用这里保存的引用做导航（而非事件 target）
+      var downTab = e.target && e.target.closest ? e.target.closest('.bottom-tab') : null;
+      _tabDrag = {
+        pointerId: e.pointerId,
+        startX: e.clientX,
+        startLeft: parseFloat(glow.style.left) || glow.offsetLeft || 0,
+        startCenter: (parseFloat(glow.style.left) || glow.offsetLeft || 0) + glow.offsetWidth / 2,
+        downTab: downTab,
+        moved: false,
+        captured: false
+      };
+      // 注意：这里不 setPointerCapture —— 一旦捕获，浏览器会把随后的 click 派发给
+      // bar 本身（e.target 变成 NAV 而非锚点），普通点击的高亮会失效。
+      // 捕获延后到真正产生拖拽位移时（见 _tabDragMove）。
+    }
+
+    function _tabDragMove(e) {
+      if (!_tabDrag || e.pointerId !== _tabDrag.pointerId) return;
+      var dx = e.clientX - _tabDrag.startX;
+      if (!_tabDrag.moved) {
+        if (Math.abs(dx) < _tabDragThreshold) return;
+        _tabDrag.moved = true;
+        bottomBar.classList.add('is-dragging');
+        // 仅在真正拖动时捕获指针：拖出 bar 范围后仍能继续收到 pointermove。
+        // 延迟捕获也避免普通点击被重定向（见 _tabDragStart 注）。
+        if (!_tabDrag.captured) {
+          _tabDrag.captured = true;
+          try { bottomBar.setPointerCapture(e.pointerId); } catch (err) { /* ignore */ }
+        }
+      }
+      e.preventDefault();
+      var glow = _tabGlowEl();
+      if (!glow) return;
+      var pad = _tabBarPadding();
+      var minL = pad;
+      var maxL = bottomBar.clientWidth - glow.offsetWidth - pad;
+      var left = Math.max(minL, Math.min(maxL, _tabDrag.startLeft + dx));
+      // 拖动期间禁用 CSS 过渡：液滴 1:1 胶着跟手（松手后再恢复过渡做轻弹吸附）
+      glow.style.transition = 'none';
+      glow.style.left = left + 'px';
+      _tabDrag.center = left + glow.offsetWidth / 2;
+    }
+
+    function _tabDragEnd(e) {
+      if (!_tabDrag || (e && e.pointerId !== _tabDrag.pointerId)) return;
+      var drag = _tabDrag;
+      _tabDrag = null;
+      if (drag.moved) _suppressClick = true;
+      bottomBar.classList.remove('is-dragging');
+      var glow = _tabGlowEl();
+      if (!glow) { return; }
+      // 恢复过渡（轻弹吸附用）
+      glow.style.transition = '';
+      if (!drag.moved) return; // 未拖动：交给原生 click 处理
+
+      // 计算吸附目标：优先手指所在 tab；手指在间隙时吸附最近 tab
+      var barRect = bottomBar.getBoundingClientRect();
+      var relX = (e ? e.clientX - barRect.left : (glow.offsetLeft + glow.offsetWidth / 2));
+      var target = _tabAtCenter(relX) || _tabNearest(relX);
+      if (!target) return;
+      // 立即高亮并平滑吸附过去
+      if (typeof _setActiveBottomTab === 'function') _setActiveBottomTab(target);
+      // 导航到目标 tab（hash 变更触发 handleRoute；同页 tab 无 hash 时仅高亮）
+      var href = target.getAttribute('href');
+      if (href && href.indexOf('#') === 0 && href !== window.location.hash) {
+        try { window.location.hash = href.slice(1); } catch (err) { /* ignore */ }
+      }
+    }
+
+    bottomBar.addEventListener('pointerdown', _tabDragStart);
+    bottomBar.addEventListener('pointermove', _tabDragMove);
+    bottomBar.addEventListener('pointerup', function (e) { _tabDragEnd(e); });
+    bottomBar.addEventListener('pointercancel', function (e) { _tabDragEnd(e); });
+
     bottomBar.addEventListener('click', function (e) {
+      // 拖拽刚结束：吞掉这次 click，避免触发默认锚点跳转（导航已由 _tabDragEnd 完成）
+      if (_suppressClick) { e.preventDefault(); _suppressClick = false; return; }
       var tab = e.target && e.target.closest ? e.target.closest('.bottom-tab') : null;
       if (!tab) return;
       if (typeof _setActiveBottomTab === 'function') _setActiveBottomTab(tab);
@@ -5319,7 +5437,18 @@ function initApp() {
   _prefetchTabModules();
 
   requestAnimationFrame(() => {
-    handleRoute(route);
+    // 路由渲染是整个启动链路的核心：任何一步抛错都不能让首屏遮罩
+    // 陷入"卡 20% 直到 15s 兜底淡出"的假死状态，这里捕获并补发
+    // bioquest:app-ready，让遮罩走完/淡出（页面内容随后由错误兜底渲染）。
+    try {
+      handleRoute(route);
+    } catch (e) {
+      console.error('[BioQuest] 初始路由渲染失败(已兜底):', e);
+      try {
+        if (window.__bootWeight) window.__bootWeight(0, 92);
+        document.dispatchEvent(new CustomEvent('bioquest:app-ready'));
+      } catch (e2) { /* ignore */ }
+    }
   });
 
   _AppState.initialized = true;

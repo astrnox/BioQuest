@@ -320,7 +320,7 @@
 
   <!-- 首屏关键 CSS：同步加载 -->
   <!-- Issue #108：首屏同步 CSS 合并为单文件（scripts/build-css-bundle.js 生成，减少 6→1 次串行请求） -->
-  <link rel="stylesheet" href="css/bundle-core.css?v=20260905a">
+  <link rel="stylesheet" href="css/bundle-core.css?v=20260917lg2">
   <!-- Issue #139：统一加载动画库（DNA 双螺旋 / 原子轨道 / 波浪 / 追点等，纯 CSS） -->
   <link rel="stylesheet" href="css/loaders.css?v=20260912a">
   <!-- 非首屏关键 CSS：异步加载，不阻塞首次渲染 -->
@@ -381,7 +381,7 @@
     <div id="bq-boot-percent" aria-hidden="true">0%</div>
   </div>
   <!-- 首屏骨架遮罩逻辑（外部化）：defer 加载，不阻塞内容解析；遮罩本身由上方 CSS 立即显示 -->
-  <script src="js/core/boot-mask.js?v=20260826a" defer></script>
+  <script src="js/core/boot-mask.js?v=20260917b" defer></script>
 
   <a href="#page-content" class="skip-link">跳到主要内容</a>
 
@@ -891,7 +891,7 @@
   <script src="js/engagement/points-ui.js?v=20260814a" defer></script>
   <!-- P1-2 拆分：路由配置表先于 app.js 加载，app.js 通过全局 Routes 引用 -->
   <script src="js/core/app-routes.js?v=20260821a" defer></script>
-  <script src="js/core/app.js?v=20260916a" defer></script>
+  <script src="js/core/app.js?v=20260917b" defer></script>
   <!-- PRD §5 补全模块 -->
   <script src="js/core/micro-details.js?v=20260803a" defer></script>
   <script src="js/core/sync-tabs.js?v=20260803a" defer></script>
