@@ -2895,6 +2895,9 @@ function showAuthModal(mode) {
         <div class="auth-field">
           <svg class="auth-field-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
           <input type="password" class="auth-input" id="auth-login-password" placeholder="密码" autocomplete="current-password">
+          <button type="button" class="auth-pwd-toggle" data-on='["_toggleAuthPwd","auth-login-password"]' data-stop-propagation aria-label="显示密码" title="显示密码" tabindex="-1">
+            <svg class="auth-pwd-toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+          </button>
         </div>
         <div class="slide-cap-trigger" id="slide-cap-trigger-login" data-state="pending" data-on='["_cspSlideCaptcha","login"]'>
           <svg class="slide-cap-trigger-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
@@ -2914,6 +2917,9 @@ function showAuthModal(mode) {
           <div class="auth-field">
             <svg class="auth-field-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
             <input type="password" class="auth-input" id="auth-guest-password" placeholder="设置密码（可选，用于找回账号）" autocomplete="new-password">
+            <button type="button" class="auth-pwd-toggle" data-on='["_toggleAuthPwd","auth-guest-password"]' data-stop-propagation aria-label="显示密码" title="显示密码" tabindex="-1">
+              <svg class="auth-pwd-toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+            </button>
           </div>
           <button type="button" class="auth-btn-guest" data-on='["handleGuestLogin"]' data-prevent-default style="background:linear-gradient(135deg,#c4956a,#d4a574);border:none;color:#1a2f1d;padding:10px 20px;border-radius:20px;cursor:pointer;font-size:0.9rem;font-weight:600;width:100%;transition:all 0.2s;box-shadow:0 2px 8px rgba(196,149,106,0.3);">
             🚀 游客登录（无需注册）
@@ -2941,6 +2947,9 @@ function showAuthModal(mode) {
         <div class="auth-field">
           <svg class="auth-field-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
           <input type="password" class="auth-input" id="auth-register-password" placeholder="密码（至少6位）" autocomplete="new-password">
+          <button type="button" class="auth-pwd-toggle" data-on='["_toggleAuthPwd","auth-register-password"]' data-stop-propagation aria-label="显示密码" title="显示密码" tabindex="-1">
+            <svg class="auth-pwd-toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+          </button>
         </div>
         <div class="slide-cap-trigger" id="slide-cap-trigger-register" data-state="pending" data-on='["_cspSlideCaptcha","register"]'>
           <svg class="slide-cap-trigger-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
@@ -2975,10 +2984,16 @@ function showAuthModal(mode) {
           <div class="auth-field">
             <svg class="auth-field-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
             <input type="password" class="auth-input" id="auth-forgot-newpassword" placeholder="新密码（至少 6 位）" autocomplete="new-password">
+            <button type="button" class="auth-pwd-toggle" data-on='["_toggleAuthPwd","auth-forgot-newpassword"]' data-stop-propagation aria-label="显示密码" title="显示密码" tabindex="-1">
+              <svg class="auth-pwd-toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+            </button>
           </div>
           <div class="auth-field">
             <svg class="auth-field-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
             <input type="password" class="auth-input" id="auth-forgot-newpassword2" placeholder="再次输入新密码" autocomplete="new-password">
+            <button type="button" class="auth-pwd-toggle" data-on='["_toggleAuthPwd","auth-forgot-newpassword2"]' data-stop-propagation aria-label="显示密码" title="显示密码" tabindex="-1">
+              <svg class="auth-pwd-toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+            </button>
           </div>
         </div>
 
@@ -3748,48 +3763,6 @@ function _openPasswordSetup(source) {
   });
 }
 
-// 登录错误嘲讽文案池（每次随机选一条）
-var _loginSarcasticPool = [
-  '错的',
-  '你刚才那个不算',
-  '记忆出问题了吗',
-  '要不试试 123456',
-  '键盘打字打歪了？',
-  '回车键找你算账',
-  '这是第几次了？',
-  '你确定这是你设的密码？',
-  'maybe 大小写？',
-  '好家伙',
-  '这密码和你八字不合',
-  '建议重置密码（用上面那个）',
-  '你的密码忘得比记的快',
-  '换个脑子吧',
-  '再想想？',
-  '机器人都不信这是你',
-  '认输吧 → 点「我抓不到」',
-  '你和我闹呢？',
-  'OK 我当你没打过',
-  '行吧 算你狠 再试一次',
-  'ERROR: 你妈没告诉你吗',
-  '密码不对（显然）',
-  '……',
-  '?',
-  '猜的挺好 下次别猜了',
-  '你刚才是不是回车了？',
-  '（叹气）',
-  '再输错我就给你看真实攻击',
-  '三次机会 用完没？',
-  '字典攻击都比你猜得快',
-  '你猜得比 AI 还差',
-  '这密码对吗？你心里没数？',
-  '失败成功之母 · 你已经很多妈了',
-  '要不再用「我想设置一个超强的密码」试试？'
-];
-
-function _getLoginSarcastic() {
-  return _loginSarcasticPool[Math.floor(Math.random() * _loginSarcasticPool.length)];
-}
-
 // ===== 滑动拼图验证码（纯前端，零依赖，国内友好） =====
 // 设计：用户拖动滑块到缺口位置，验证水平距离 + 通过时间
 // - 缺口位置随机（80-220px）
@@ -4121,6 +4094,32 @@ var _captchaAnswers = { register: 0, login: 0 };
 var _captchaFailCount = { register: 0, login: 0 };
 
 /**
+ * 切换密码输入框的明文/密文显示（眼睛图标按钮）
+ * 通过 data-on 委托调用：data-on='["_toggleAuthPwd", "输入框id"]'
+ * @param {string} inputId 密码输入框的 DOM id
+ */
+function _toggleAuthPwd(inputId) {
+  var input = document.getElementById(inputId);
+  if (!input) return;
+  var show = input.type === 'password';
+  input.type = show ? 'text' : 'password';
+  // 更新按钮的无障碍标签与眼睛图标（闭眼状态）
+  var btn = (this && this.tagName === 'BUTTON') ? this : null;
+  if (btn) {
+    btn.setAttribute('aria-label', show ? '隐藏密码' : '显示密码');
+    btn.setAttribute('title', show ? '隐藏密码' : '显示密码');
+    var icon = btn.querySelector('.auth-pwd-toggle-icon');
+    if (icon) {
+      icon.innerHTML = show
+        ? '<path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/>'
+        : '<path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94"/><path d="M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19"/><path d="M14.12 14.12a3 3 0 1 1-4.24-4.24"/><line x1="2" y1="2" x2="22" y2="22"/>';
+    }
+  }
+  // 保持焦点在输入框，便于继续输入
+  input.focus();
+}
+
+/**
  * 滑动触发器 UI 更新回调
  * @param {boolean} passed
  */
@@ -4430,20 +4429,9 @@ async function handleLogin() {
       }
 
     } else {
+      // 只展示原始错误信息，不再拼接任何调侃/旧人机验证文案
       var origErr = (result && result.error) || '登录失败';
-      // 仅当确属"密码/凭据"错误时才附加调侃文案；
-      // 邮箱未验证、未绑定、网络等其它原因不渲染成"密码错误"，避免误导
-      var errCode = (result && result.code) || '';
-      var lower = String(origErr).toLowerCase();
-      var isBadCredential =
-        errCode === 'INVALID_CREDENTIALS' ||
-        lower.indexOf('密码') >= 0 || lower.indexOf('password') >= 0 ||
-        lower.indexOf('invalid') >= 0 || lower.indexOf('credential') >= 0;
-      if (isBadCredential) {
-        errorEl.innerHTML = '<span style="color:#d63a2a;">' + escapeHtml(origErr) + '</span> <span style="display:inline-block;margin-left:6px;padding:2px 8px;background:rgba(214,58,42,0.1);border-radius:6px;color:#a83a2a;font-size:0.78rem;">' + _getLoginSarcastic() + '</span>';
-      } else {
-        errorEl.textContent = origErr;
-      }
+      errorEl.textContent = origErr;
       // 更新验证码状态
       if (typeof _updateSlideTriggerUI === 'function') _updateSlideTriggerUI(false);
     }

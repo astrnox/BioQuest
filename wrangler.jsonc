@@ -1,0 +1,12 @@
+{
+  // BioQuest — Cloudflare Workers Static Assets 部署配置
+  // 与 Cloudflare Pages「Workers」项目（Worker Name: gagabox）对齐。
+  // assets.directory 指向站点根（index.html 所在目录）；非站点文件
+  // 通过根目录 .assetsignore 排除（如 node_modules、sql、scripts 等）。
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "gagabox",
+  "compatibility_date": "2026-09-18",
+  "assets": {
+    "directory": "."
+  }
+}
