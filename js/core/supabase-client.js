@@ -825,6 +825,30 @@ async function loginUser(usernameOrEmail, password) {
 }
 
 /**
+ * 计算游客密码哈希（FNV-1a 32-bit + 设备ID 盐值，非加密安全，仅防明文泄漏）
+ * @param {string} password
+ * @returns {string|null}
+ */
+function _hashGuestPassword(password) {
+  try {
+    var salt = 'bioquest_guest_v1_' + (function () {
+      try { return localStorage.getItem('bioquest_device_id') || 'unknown'; }
+      catch (e) { return 'unknown'; }
+    })();
+    return (function (str) {
+      var h = 0x811c9dc5;
+      for (var i = 0; i < str.length; i++) {
+        h ^= str.charCodeAt(i);
+        h = (h * 0x01000193) >>> 0;
+      }
+      return h.toString(16).padStart(8, '0');
+    })(salt + ':' + password);
+  } catch (e) {
+    return null;
+  }
+}
+
+/**
  * 游客登录 — 无需邮箱，使用本地存储
  * 生成唯一设备ID和随机用户名，所有数据存储在 localStorage
  * @param {string} [password] - 可选密码，用于本地账号保护
@@ -867,20 +891,8 @@ function guestLogin(password, username) {
   if (password) {
     try {
       // SHA-256 + 设备ID 盐值（防止彩虹表 + 跨设备撞库）
-      var salt = 'bioquest_guest_v1_' + (function () {
-        try { return localStorage.getItem('bioquest_device_id') || 'unknown'; }
-        catch (e) { return 'unknown'; }
-      })();
-      var hash = (function (str) {
-        // 简单 FNV-1a 32-bit 哈希 + 自定义混淆（非加密安全，仅防明文泄漏）
-        var h = 0x811c9dc5;
-        for (var i = 0; i < str.length; i++) {
-          h ^= str.charCodeAt(i);
-          h = (h * 0x01000193) >>> 0;
-        }
-        return h.toString(16).padStart(8, '0');
-      })(salt + ':' + password);
-      localStorage.setItem('bioquest_guest_pwdhash', hash);
+      var hash = _hashGuestPassword(password);
+      if (hash) localStorage.setItem('bioquest_guest_pwdhash', hash);
     } catch (e) {}
   }
 
@@ -910,18 +922,28 @@ function guestLogin(password, username) {
  * 游客密码登录 — 使用用户名和密码验证本地账号
  */
 function guestLoginWithPassword(username, password) {
-  var savedPwd = localStorage.getItem('bioquest_guest_password');
   var sessionData = null;
   try {
     sessionData = JSON.parse(localStorage.getItem('bioquest_guest_session') || 'null');
   } catch (e) {}
 
-  if (!savedPwd) {
-    return { ok: false, error: '尚未设置本地账号密码，请先用游客模式登录后设置密码' };
-  }
+  // 优先用哈希校验（guestLogin 保存的 bioquest_guest_pwdhash）；
+  // 兼容旧版备份导入的明文密码（bioquest_guest_password）
+  var savedHash = null;
+  var legacyPwd = null;
+  try { savedHash = localStorage.getItem('bioquest_guest_pwdhash'); } catch (e) {}
+  try { legacyPwd = localStorage.getItem('bioquest_guest_password'); } catch (e) {}
 
-  if (password !== savedPwd) {
-    return { ok: false, error: '密码错误' };
+  if (savedHash) {
+    if (_hashGuestPassword(password) !== savedHash) {
+      return { ok: false, error: '密码错误' };
+    }
+  } else if (legacyPwd !== null) {
+    if (password !== legacyPwd) {
+      return { ok: false, error: '密码错误' };
+    }
+  } else {
+    return { ok: false, error: '尚未设置本地账号密码，请先用游客模式登录后设置密码' };
   }
 
   // 验证用户名
