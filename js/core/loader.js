@@ -273,11 +273,13 @@ function _fetchWithTimeout(url, timeoutMs, signal) {
 }
 
 /**
- * Issue #15：题库重资源统一取数通道（CDN 优先 → SHA 校验 → 同源回退）。
+ * Issue #15：题库重资源统一取数通道。
+ * 站点已部署在 Cloudflare Workers Assets（全球边缘缓存），同源即最优通道，
+ * 因此策略为「同源（Cloudflare）优先 → SHA 校验 → jsDelivr 兜底」。
  * @param {string} path 相对路径，如 'data/bank/cell_structure.json'
  * @param {string|null} expectedSha manifest 期望的 SHA-256（可空）
  * @param {AbortSignal|null} signal
- * @returns {Promise<{text:string, via:string}>} via: 'cdn' | 'origin'
+ * @returns {Promise<{text:string, via:string}>} via: 'origin' | 'cdn'
  */
 function _fetchShardText(path, expectedSha, signal) {
   function fromOrigin() {
@@ -289,40 +291,71 @@ function _fetchShardText(path, expectedSha, signal) {
     });
   }
 
-  // CDN 不可用（未解析出基址 / 本会话已禁用 / 请求来自 CDN 源本身）→ 直接同源
-  if (!_cdnBase || _cdnDisabled) return fromOrigin();
+  function fromCdn() {
+    return _fetchWithTimeout(_cdnBase + '/' + path, CDN_FETCH_TIMEOUT, signal).then(function (r) {
+      if (!r.ok) throw new Error('CDN HTTP ' + r.status + ': ' + path);
+      return r.text();
+    }).then(function (text) {
+      _cdnFailCount = 0; // 成功即重置连续失败计数
+      return { text: text, via: 'cdn' };
+    }).catch(function (err) {
+      // 调用方主动中止：不计数、不降级（上层自有中止逻辑）
+      if (err && (err.name === 'AbortError') && signal && signal.aborted) {
+        throw err;
+      }
+      // CDN 不可达/超时：计数 + 触发本会话禁用
+      _cdnFailCount++;
+      if (_cdnFailCount >= CDN_MAX_FAILURES) {
+        _cdnDisabled = true;
+        console.warn('[Loader] jsDelivr 连续 ' + _cdnFailCount + ' 次不可达，本会话禁用 CDN（同源直连）');
+      }
+      throw err;
+    });
+  }
+
+  // 校验分片与 manifest 版本一致；不一致视为未命中，交给下一通道
+  function checkSha(res) {
+    if (!expectedSha) return Promise.resolve(res);
+    return _sha256Hex(res.text).then(function (actual) {
+      if (actual && actual !== expectedSha) {
+        console.warn('[Loader] 分片陈旧（' + path + '），降级下一通道');
+        return null;
+      }
+      return res;
+    });
+  }
+
   // 本地开发（file://）或非 http(s) 页面环境无法走 CDN
   if (typeof location === 'undefined' || !/^https?:$/.test(location.protocol)) return fromOrigin();
   // 页面本身就部署在 jsDelivr 上时（预览场景），无需再绕 CDN
   if (location.hostname === 'cdn.jsdelivr.net') return fromOrigin();
 
-  return _fetchWithTimeout(_cdnBase + '/' + path, CDN_FETCH_TIMEOUT, signal).then(function (r) {
-    if (!r.ok) throw new Error('CDN HTTP ' + r.status + ': ' + path);
-    return r.text();
-  }).then(function (text) {
-    _cdnFailCount = 0; // 成功即重置连续失败计数
-    if (!expectedSha) return { text: text, via: 'cdn' };
-    // SHA 校验：CDN 内容与 manifest 版本不一致 → 视为未命中，降级同源
-    return _sha256Hex(text).then(function (actual) {
-      if (actual && actual !== expectedSha) {
-        console.warn('[Loader] CDN 分片陈旧（' + path + '），降级同源拉取');
-        return fromOrigin();
+  // 同源（Cloudflare 边缘）优先；jsDelivr 兜底
+  return fromOrigin()
+    .then(checkSha)
+    .then(function (res) {
+      if (res) return res;
+      // 同源分片陈旧 → jsDelivr 兜底
+      if (!_cdnBase || _cdnDisabled) throw new Error('STALE_ORIGIN');
+      return fromCdn().then(checkSha).then(function (res2) {
+        if (res2) return res2;
+        throw new Error('STALE_CDN');
+      });
+    })
+    .catch(function (err) {
+      // 调用方主动中止：不降级
+      if (err && (err.name === 'AbortError') && signal && signal.aborted) {
+        throw err;
       }
-      return { text: text, via: 'cdn' };
-    });
-  }).catch(function (err) {
-    // 调用方主动中止：不计数、不降级（上层自有中止逻辑）
-    if (err && (err.name === 'AbortError') && signal && signal.aborted) {
+      // 同源网络失败（非陈旧）且 CDN 可用 → CDN 兜底
+      if (err && err.message !== 'STALE_ORIGIN' && err.message !== 'STALE_CDN' && _cdnBase && !_cdnDisabled) {
+        return fromCdn().then(checkSha).then(function (res) {
+          if (res) return res;
+          throw new Error('STALE_CDN');
+        });
+      }
       throw err;
-    }
-    // CDN 不可达/超时：计数 + 降级同源
-    _cdnFailCount++;
-    if (_cdnFailCount >= CDN_MAX_FAILURES) {
-      _cdnDisabled = true;
-      console.warn('[Loader] jsDelivr 连续 ' + _cdnFailCount + ' 次不可达，本会话禁用 CDN（同源直连）');
-    }
-    return fromOrigin();
-  });
+    });
 }
 
 // 分片归属映射：新题库 tag 前缀 -> 旧前端 module 标识

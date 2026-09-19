@@ -1,0 +1,22 @@
+# Cloudflare Workers Assets 响应头（_headers 文件，语法同 Cloudflare Pages）
+# 目的：让 Cloudflare 全球边缘缓存静态资源，题库流量不落源站、不给 Supabase 加压。
+# 说明：index.html / sw.js 不在此配置（默认不缓存），避免发版更新受阻。
+
+# 不可变资源（哈希/内容寻址或基本不变）：长缓存
+/fonts/*
+/images/*
+/js/vendor/*
+/assets/lab/*
+/assets/questions/*
+/microscope-3d/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# 题库数据 JSON：短 TTL + stale-while-revalidate
+# 分片自带 manifest SHA-256 校验，loader 检测陈旧会自动降级重拉
+/data/*.json
+  Cache-Control: public, max-age=300, stale-while-revalidate=604800
+
+# 应用脚本与样式：短缓存，配合 Service Worker 更新机制
+/js/core/*
+/css/*
+  Cache-Control: public, max-age=600, stale-while-revalidate=3600
