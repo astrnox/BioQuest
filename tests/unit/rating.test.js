@@ -2,7 +2,9 @@
  * 题目评分核心算法单元测试（js/core/rating.js）
  * -------------------------------------------------
  * 验证矩阵：
- *   1. Wilson 区间得分：无票=0.5 中性、全赞趋近高分、票数越多置信越稳
+ *   1. 平滑质量分（带中性先验的 Bayesian mean）：无票=0.5 中性、
+ *      1 赞从中位起步（≥0.5，出现率不降反升）、全赞趋近高分、
+ *      票数越多越收敛到真实好评率
  *   2. 评分 → 出现率权重：0.5→1.0、1.0→1.3、0.0→0.7，钳制在 [0.7,1.3]
  *   3. 回收判定：最低票数门禁 + 低分阈值
  *   4. 展示用评分映射（1~5 星）
@@ -12,10 +14,29 @@
 
 const RatingCore = require('../../js/core/rating.js');
 
-describe('RatingCore.wilsonScore（Wilson 区间下界）', () => {
+describe('RatingCore.wilsonScore（带中性先验的平滑均值）', () => {
   test('无票返回中性 0.5', () => {
     expect(RatingCore.wilsonScore(0, 0)).toBe(0.5);
     expect(RatingCore.wilsonScore(undefined, null)).toBe(0.5);
+  });
+
+  test('1 个点赞：从中位起步（≥0.5），不再暴跌到 1.8 分', () => {
+    const s = RatingCore.wilsonScore(1, 0);
+    expect(s).toBeCloseTo(0.6, 6);
+    expect(s).toBeGreaterThanOrEqual(0.5);
+    // 5 星制展示应不低于中性 3.0
+    expect(Number(RatingCore.formatQuestionScore(s))).toBeGreaterThanOrEqual(3.0);
+  });
+
+  test('1 个点赞不降低出现率（权重 ≥ 1.0）', () => {
+    const w = RatingCore.ratingWeight(RatingCore.wilsonScore(1, 0));
+    expect(w).toBeGreaterThanOrEqual(1);
+  });
+
+  test('1 个点踩只是轻度下调（评分 ≥ 0.3，权重 ≥ 0.8）', () => {
+    const s = RatingCore.wilsonScore(0, 1);
+    expect(s).toBeCloseTo(0.4, 6);
+    expect(RatingCore.ratingWeight(s)).toBeGreaterThanOrEqual(0.8);
   });
 
   test('全赞 → 高分（但不会等于 1，保留不确定性）', () => {

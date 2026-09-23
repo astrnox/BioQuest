@@ -768,7 +768,7 @@ function setMtfAnswer(qIdx, subIdx, value) {
  * 与练习页共享同一套 localStorage 投票/评分存储（storage.js rateQuestion 系列）：
  * - 按钮内联展示当前 up/down 计数与我的投票态；
  * - 投票后原地刷新计数与评分 tag，不重建整卷；
- * - 低分（Wilson < 0.35 且票数 >= 5）自动移入回收站，后续出卷不再包含。
+ * - 低分（平滑评分 < 0.35 且票数 >= 5）自动移入回收站，后续出卷不再包含。
  */
 function _examVoteHtml(qIdx) {
   const q = currentPaper[qIdx];
@@ -815,7 +815,7 @@ function _examHandleVote(qIdx, vote) {
     if (cnt) cnt.textContent = v === 1 ? res.up : res.down;
   });
 
-  // 评分 tag：有票时展示 Wilson 分 + 票数（低分回收后标注）
+  // 评分 tag：有票时展示平滑评分 + 票数（低分回收后标注）
   const meta = qEl.querySelector('.pq-meta');
   if (meta) {
     const oldTag = meta.querySelector('[data-exam-rating-tag]');

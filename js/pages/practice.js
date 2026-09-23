@@ -506,6 +506,8 @@ async function loadPracticeQuestions() {
       var items = await window.loadQuestions(modNums, loadOpt);
       // 超长讲义过滤
       var itemsClean = (typeof window.filterQuestionList === 'function') ? window.filterQuestionList(items) : items;
+      // 保留清洗后的全量副本，供分享深链按 ID/文本兜底定位（被回收/过滤的题仍可打开）
+      PracticeState.allQuestionsRaw = itemsClean;
       PracticeState.allQuestions = itemsClean.filter(
         function (q) { return Array.isArray(q.subQuestions) && q.subQuestions.length >= 4 && !_isRecycledQuestion(q); }
       );
@@ -558,7 +560,10 @@ async function loadPracticeQuestions() {
             });
             // 超长讲义过滤（cleaned 同时会把 300+ 字的选项截断）
             var fn = typeof window.filterQuestionList === 'function' ? window.filterQuestionList : function(x){return x;};
-            PracticeState.allQuestions = fn(normed).filter(
+            var cleanedAll = fn(normed);
+            // 保留清洗后的全量副本，供分享深链按 ID/文本兜底定位
+            PracticeState.allQuestionsRaw = cleanedAll;
+            PracticeState.allQuestions = cleanedAll.filter(
               function(q) { return Array.isArray(q.subQuestions) && q.subQuestions.length >= 4 && !_isRecycledQuestion(q); }
             );
             return;
@@ -577,6 +582,8 @@ async function loadPracticeQuestions() {
       var rawQuestions = (typeof window.filterQuestionList === 'function')
         ? window.filterQuestionList(rawQuestions0)
         : rawQuestions0;
+      // 保留清洗后的全量副本，供分享深链按 ID/文本兜底定位
+      PracticeState.allQuestionsRaw = rawQuestions;
       PracticeState.allQuestions = rawQuestions.filter(
         function (q) { return Array.isArray(q.subQuestions) && q.subQuestions.length >= 4 && !_isRecycledQuestion(q); }
       );
@@ -732,7 +739,7 @@ function generateQuestionSet() {
   });
   if (pool.length === 0) return [];
 
-  // 基于题目评分（Wilson 区间得分）做加权抽取：
+  // 基于题目平滑评分（带中性先验，评分从中位起步）做加权抽取：
   // 高分题出现率最多 1.3 倍、低分题最低 0.7 倍，浮动受限避免两级分化。
   if (typeof window.RatingCore === 'object' && window.RatingCore.weightedPick) {
     const picked = window.RatingCore.weightedPick(
@@ -803,7 +810,7 @@ function _getMyVote(qId) {
 
 /**
  * 渲染题目评分 tag（展示在题目标签组中）：
- * - 有票时显示 Wilson 区间得分映射的 1~5 星分 + 票数；
+ * - 有票时显示平滑评分（带中性先验）映射的 1~5 星分 + 票数；
  * - 无票时显示「未评分」。
  */
 function _renderRatingTag(q, qId) {
@@ -818,7 +825,7 @@ function _renderRatingTag(q, qId) {
   const weight = rc.ratingWeight(score01);
   const recycled = _isRecycledQuestion(q);
   const color = recycled ? '#ef4444' : (score01 >= 0.6 ? '#10b981' : (score01 >= 0.4 ? '#c4956a' : '#ef4444'));
-  return `<span class="tag" data-rating-tag style="background:${color}18;color:${color};font-size:0.7rem;font-weight:600;" title="基于 ${counts.up + counts.down} 票的 Wilson 区间得分；出现率权重 ${weight.toFixed(2)}×">评分 ${scoreStr} · ${counts.up + counts.down}票${recycled ? ' · 已回收' : ''}</span>`;
+  return `<span class="tag" data-rating-tag style="background:${color}18;color:${color};font-size:0.7rem;font-weight:600;" title="基于 ${counts.up + counts.down} 票的平滑评分（中性起步）；出现率权重 ${weight.toFixed(2)}×">评分 ${scoreStr} · ${counts.up + counts.down}票${recycled ? ' · 已回收' : ''}</span>`;
 }
 
 /**
@@ -836,7 +843,7 @@ function handleVoteQuestion(vote) {
   const result = rateQuestion(qId, nextVote);
   if (!result) return;
 
-  // 低分（Wilson < 0.35 且票数 >= 5）自动移入回收站
+  // 低分（平滑评分 < 0.35 且票数 >= 5）自动移入回收站
   const rc = (typeof window.RatingCore === 'object') ? window.RatingCore : null;
   if (rc && typeof recycleQuestion === 'function' && rc.shouldRecycleQuestion(result.up, result.down)) {
     recycleQuestion(qId);
@@ -1936,6 +1943,7 @@ async function handlePullQuestions() {
         }
         if (localModNums.length === 0) localModNums = [1, 2, 3, 4];
         var localItems = await window.loadQuestions(localModNums, { mode: 'preferLocal' });
+        PracticeState.allQuestionsRaw = localItems || [];
         PracticeState.allQuestions = (localItems || []).filter(function (q) {
           return Array.isArray(q.subQuestions) && q.subQuestions.length >= 4;
         });
@@ -2643,6 +2651,7 @@ function renderPracticePage(target) {
   // 解析知识图谱传入的专项练习参数（URL hash 优先，sessionStorage 兜底）
   var kgData = null;
   var shareKey = null;
+  var shareQid = null;
   try {
     var hash = window.location.hash || '';
     var queryIdx = hash.indexOf('?');
@@ -2677,6 +2686,12 @@ function renderPracticePage(target) {
         if (shareKey.length > 700) shareKey = null;
         if (!shareKey) shareKey = null;
       }
+      // 分享深链的可选稳定 ID（优先按 ID 定位题目）
+      var qidParam = params.get('qid');
+      if (qidParam != null) {
+        var qidClean = String(qidParam).trim().slice(0, 128);
+        shareQid = qidClean || null;
+      }
     }
     if (!kgData) {
       var stored = sessionStorage.getItem('bioquest_kg_practice');
@@ -2703,8 +2718,8 @@ function renderPracticePage(target) {
   target.innerHTML = `<div id="practice-root"></div>`;
 
   // 分享本题深链：直接打开对应题目（答案预览），不再展示筛选面板
-  if (shareKey) {
-    handleShareQuestionDeepLink(shareKey);
+  if (shareKey || shareQid) {
+    handleShareQuestionDeepLink(shareKey, shareQid);
     return;
   }
 
@@ -2920,6 +2935,11 @@ function handleShareCurrentQuestion() {
   var shareKey = _practiceShareKey(q.question);
   var url = window.location.origin + window.location.pathname +
     '#/practice?share=' + encodeURIComponent(shareKey);
+  // 附带稳定题目 ID（loader 注入的 bioID / Supabase id）：接收端优先按 ID 定位，
+  // 题库修订、文本微调或题目被过滤后，纯文本匹配失效时仍可打开对应题目。
+  if (q.id != null && String(q.id) !== '') {
+    url += '&qid=' + encodeURIComponent(String(q.id));
+  }
 
   // 移动端原生分享（微信等渠道打开时直接带链接）
   if (typeof navigator !== 'undefined' && navigator.share) {
@@ -2960,6 +2980,7 @@ function _practiceShareKey(text) {
 /**
  * 依据分享键查找题目（练习题库 + 逻辑推理题库双源检索）
  * 优先精确匹配；其次前缀匹配（题库轻微修订后分享链接仍可用）
+ * 先查全量原始副本（含被回收/过滤的题），再查过滤后的常用池。
  */
 function findPracticeQuestionByShareKey(shareKey) {
   if (!shareKey) return null;
@@ -2967,7 +2988,13 @@ function findPracticeQuestionByShareKey(shareKey) {
   if (!norm) return null;
   var prefix = norm.slice(0, 40);
 
-  var pools = [PracticeState.allQuestions || []];
+  var pools = [];
+  if (Array.isArray(PracticeState.allQuestionsRaw) && PracticeState.allQuestionsRaw.length > 0) {
+    pools.push(PracticeState.allQuestionsRaw);
+  }
+  if (Array.isArray(PracticeState.allQuestions) && PracticeState.allQuestions.length > 0) {
+    pools.push(PracticeState.allQuestions);
+  }
   if (Array.isArray(PracticeState.logicData) && PracticeState.logicData.length > 0) {
     pools.push(PracticeState.logicData);
   }
@@ -2982,6 +3009,34 @@ function findPracticeQuestionByShareKey(shareKey) {
     for (var j = 0; j < pool.length; j++) {
       var qn = _practiceShareKey(pool[j].question);
       if ((prefix && (qn.slice(0, 40) === prefix || norm.slice(0, 40) === qn.slice(0, 40)))) return pool[j];
+    }
+  }
+  return null;
+}
+
+/**
+ * 依据题目 ID（bioID / Supabase id）查找题目，优先于文本匹配：
+ * 题库修订、文本微调或题目被过滤后，分享链接仍可打开。
+ * @param {string|null} qid
+ * @returns {*} 命中的题目对象，未命中返回 null
+ */
+function findPracticeQuestionById(qid) {
+  if (qid == null || String(qid) === '') return null;
+  var target = String(qid);
+  var pools = [];
+  if (Array.isArray(PracticeState.allQuestionsRaw) && PracticeState.allQuestionsRaw.length > 0) {
+    pools.push(PracticeState.allQuestionsRaw);
+  }
+  if (Array.isArray(PracticeState.allQuestions) && PracticeState.allQuestions.length > 0) {
+    pools.push(PracticeState.allQuestions);
+  }
+  if (Array.isArray(PracticeState.logicData) && PracticeState.logicData.length > 0) {
+    pools.push(PracticeState.logicData);
+  }
+  for (var pi = 0; pi < pools.length; pi++) {
+    var pool = pools[pi];
+    for (var i = 0; i < pool.length; i++) {
+      if (pool[i] && String(pool[i].id) === target) return pool[i];
     }
   }
   return null;
@@ -3033,17 +3088,20 @@ function startSharePreviewSession(q) {
 
 /**
  * 处理 #/practice?share=<key> 深链：
- * 确保题库加载完成 → 查找题目 → 以"答案预览"方式打开
+ * 确保题库加载完成 → 优先按 qid 定位，其次按文本匹配 → 以"答案预览"方式打开
  */
-async function handleShareQuestionDeepLink(shareKey) {
+async function handleShareQuestionDeepLink(shareKey, shareQid) {
   var root = document.getElementById('practice-root');
-  if (!root || !shareKey) return false;
+  if (!root || (!shareKey && !shareQid)) return false;
 
-  root.innerHTML =
-    '<div style="text-align:center;padding:64px 20px;">' +
-      '<div style="width:34px;height:34px;margin:0 auto 16px;border:3px solid rgba(90,125,92,0.15);border-top-color:var(--color-sage,#5a7d5c);border-radius:50%;animation:spin 0.8s linear infinite;"></div>' +
-      '<p style="color:var(--text-muted, #8a8a8a);font-size:0.9rem;">正在打开分享的题目…</p>' +
-    '</div>';
+  function showSpinner() {
+    root.innerHTML =
+      '<div style="text-align:center;padding:64px 20px;">' +
+        '<div style="width:34px;height:34px;margin:0 auto 16px;border:3px solid rgba(90,125,92,0.15);border-top-color:var(--color-sage,#5a7d5c);border-radius:50%;animation:spin 0.8s linear infinite;"></div>' +
+        '<p style="color:var(--text-muted, #8a8a8a);font-size:0.9rem;">正在打开分享的题目…</p>' +
+      '</div>';
+  }
+  showSpinner();
 
   // 题库未加载时先拉取（与正常练习同源，覆盖 MTF 题库 + 逻辑推理题库）
   if (!PracticeState.allQuestions || PracticeState.allQuestions.length === 0 || !PracticeState.logicLoaded) {
@@ -3052,15 +3110,30 @@ async function handleShareQuestionDeepLink(shareKey) {
     } catch (e) {}
   }
 
-  var found = findPracticeQuestionByShareKey(shareKey);
+  // 优先按稳定 ID 定位；无 ID 或未命中时回退文本匹配（含全量原始副本）
+  var found = shareQid ? findPracticeQuestionById(shareQid) : null;
+  if (!found && shareKey) found = findPracticeQuestionByShareKey(shareKey);
   if (!found) {
     root.innerHTML =
       '<div style="text-align:center;padding:64px 20px;">' +
         '<div style="font-size:2.6rem;margin-bottom:12px;">🔍</div>' +
         '<p style="color:var(--text-secondary, #5a6b5e);margin-bottom:6px;">没有找到这道题目</p>' +
-        '<p style="color:var(--text-muted, #8a9a8e);font-size:0.85rem;margin-bottom:20px;">题目可能已下架或题库已更新</p>' +
-        '<button id="practice-share-notfound-btn" style="padding:8px 22px;background:var(--color-sage,#5a7d5c);color:#fff;border:none;border-radius:20px;font-size:0.85rem;cursor:pointer;">去练习</button>' +
+        '<p style="color:var(--text-muted, #8a9a8e);font-size:0.85rem;margin-bottom:20px;">题目可能已下架或题库已更新，可尝试重新加载题库</p>' +
+        '<div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;">' +
+          '<button id="practice-share-retry-btn" style="padding:8px 22px;background:var(--color-sage,#5a7d5c);color:#fff;border:none;border-radius:20px;font-size:0.85rem;cursor:pointer;">重新加载并重试</button>' +
+          '<button id="practice-share-notfound-btn" style="padding:8px 22px;background:transparent;color:var(--color-sage,#5a7d5c);border:1px solid var(--color-sage,#5a7d5c);border-radius:20px;font-size:0.85rem;cursor:pointer;">去练习</button>' +
+        '</div>' +
       '</div>';
+    var retryBtn = document.getElementById('practice-share-retry-btn');
+    if (retryBtn) {
+      retryBtn.addEventListener('click', function () {
+        // 清空已缓存题库后重试，处理冷启动/网络抖动导致的首次加载不完整
+        PracticeState.allQuestions = null;
+        PracticeState.allQuestionsRaw = null;
+        PracticeState.logicLoaded = false;
+        handleShareQuestionDeepLink(shareKey, shareQid);
+      });
+    }
     var notfoundBtn = document.getElementById('practice-share-notfound-btn');
     if (notfoundBtn) {
       notfoundBtn.addEventListener('click', function () {

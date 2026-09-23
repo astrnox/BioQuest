@@ -486,7 +486,7 @@ window.handleDeleteQuestion = async function(id) {
  * 本地题库 · 评分与回收站
  * 用户练习数据源为本地 JSON 题库（data/quiz.json + data/logic_questions.json），
  * 评分/回收站/覆盖数据存于 localStorage（storage.js），配合 js/core/rating.js
- * 的 Wilson 评分算法。管理员可在此查看评分、回收/恢复、重新评分、编辑题目（覆盖）。
+ * 的平滑评分算法（带中性先验）。管理员可在此查看评分、回收/恢复、重新评分、编辑题目（覆盖）。
  * ============================================================ */
 let _localQuestionBankCache = null;
 let _localQuestionFilter = 'all'; // 'all' | 'rated' | 'recycled'
