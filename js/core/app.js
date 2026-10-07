@@ -1117,8 +1117,6 @@ function reinitHomeComponents() {
         void hero.offsetHeight;
       }
       _AppState._homePaintedReady = true;
-      // 首页首屏绘制完成：推进一次加载进度档位（配合 index.html 的加权进度估算器）
-      if (window.__bootWeight) { try { window.__bootWeight(20, 75); } catch (e) {} }
       // 若 finishRouting 已经执行过，则这里补发 app-ready 信号（解除遮罩等待）
       if (_AppState._homeRouteRendered && !_AppState._appReadyDispatched) {
         _AppState._appReadyDispatched = true;
@@ -1708,8 +1706,6 @@ function handleRoute(route) {
     _manageFocusForNewRoute();
     // 首次路由渲染完成 → 通知首屏骨架遮罩淡出（只在首次触发一次）
     if (!_AppState._appReadyDispatched) {
-      // 路由已完成首帧渲染：推进一次加载进度档位（加权进度估算器）
-      if (window.__bootWeight) { try { window.__bootWeight(15, 55); } catch (e) {} }
       var route = _AppState.currentRoute || (window.location.hash || '#/').replace(/^#/, '') || '/';
       var isHome = (route === '/' || route === '' || route === '/index.html');
       if (isHome) {
@@ -5433,7 +5429,6 @@ function initApp() {
     } catch (e) {
       console.error('[BioQuest] 初始路由渲染失败(已兜底):', e);
       try {
-        if (window.__bootWeight) window.__bootWeight(0, 92);
         document.dispatchEvent(new CustomEvent('bioquest:app-ready'));
       } catch (e2) { /* ignore */ }
     }

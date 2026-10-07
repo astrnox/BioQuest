@@ -135,102 +135,66 @@
       margin: 0 0 16px; /* 老浏览器（无 flex gap）下的间距兜底 */
     }
     html[data-theme="dark"] #bq-boot-label { color: #e0e8e2; }
-    #bq-boot-spinner {
-      /* Issue #139：首屏加载动画升级为 DNA 双螺旋（纯 CSS，不依赖外部样式，符合 boot 自包含约定） */
-      position: relative;
-      width: 40px;
-      height: 72px;
-      margin-top: 2px;
-    }
-    #bq-boot-spinner .bq-dna-strand {
-      position: absolute;
-      top: 3px;
-      bottom: 3px;
-      width: 10px;
+    /* ⑤ 碱基配对加载动画：只保留核心 —— 字母 + 细线。
+       线数即氢键数：A=T 两条，G≡C 三条（同嘌呤↔嘧啶配对规则），
+       去掉了方框/圆圈/糖磷酸骨架，纯 CSS 不依赖外部样式（boot 自包含约定）。 */
+    #bq-boot-pairs {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-    }
-    #bq-boot-spinner .bq-dna-strand i {
-      display: block;
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: #5a7d5c;
-      will-change: transform;
-    }
-    html[data-theme="dark"] #bq-boot-spinner .bq-dna-strand i { background: #6bc48e; }
-    #bq-boot-spinner .bq-dna-strand--left  { left: 2px; }
-    #bq-boot-spinner .bq-dna-strand--right { right: 2px; }
-    #bq-boot-spinner .bq-dna-strand--left i  { animation: bqBootDnaL 1.8s ease-in-out infinite; }
-    #bq-boot-spinner .bq-dna-strand--right i { animation: bqBootDnaR 1.8s ease-in-out infinite; }
-    #bq-boot-spinner .bq-dna-strand--left i:nth-child(1)  { animation-delay: 0s; }
-    #bq-boot-spinner .bq-dna-strand--left i:nth-child(2)  { animation-delay: 0.45s; }
-    #bq-boot-spinner .bq-dna-strand--left i:nth-child(3)  { animation-delay: 0.9s; }
-    #bq-boot-spinner .bq-dna-strand--left i:nth-child(4)  { animation-delay: 1.35s; }
-    #bq-boot-spinner .bq-dna-strand--right i:nth-child(1) { animation-delay: 0.225s; }
-    #bq-boot-spinner .bq-dna-strand--right i:nth-child(2) { animation-delay: 0.675s; }
-    #bq-boot-spinner .bq-dna-strand--right i:nth-child(3) { animation-delay: 1.125s; }
-    #bq-boot-spinner .bq-dna-strand--right i:nth-child(4) { animation-delay: 1.575s; }
-    #bq-boot-spinner .bq-dna-rung {
-      position: absolute;
-      left: 50%;
-      top: 4px;
-      bottom: 4px;
-      width: 2px;
-      margin-left: -1px;
-      border-radius: 2px;
-      background: linear-gradient(180deg, transparent, #c4956a 25%, #c4956a 75%, transparent);
-      animation: bqBootDnaRung 1.8s ease-in-out infinite;
-    }
-    html[data-theme="dark"] #bq-boot-spinner .bq-dna-rung { background: linear-gradient(180deg, transparent, #d9a86c 25%, #d9a86c 75%, transparent); }
-    @keyframes bqBootDnaL {
-      0%, 100% { transform: translateX(0) scale(1); }
-      25%      { transform: translateX(8px) scale(0.6); }
-      50%      { transform: translateX(0) scale(1); }
-      75%      { transform: translateX(-8px) scale(0.6); }
-    }
-    @keyframes bqBootDnaR {
-      0%, 100% { transform: translateX(0) scale(1); }
-      25%      { transform: translateX(-8px) scale(0.6); }
-      50%      { transform: translateX(0) scale(1); }
-      75%      { transform: translateX(8px) scale(0.6); }
-    }
-    @keyframes bqBootDnaRung {
-      0%, 100% { transform: scaleY(1); opacity: 1; }
-      25%      { transform: scaleY(0.5); opacity: 0.5; }
-      50%      { transform: scaleY(1); opacity: 1; }
-      75%      { transform: scaleY(0.5); opacity: 0.5; }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      #bq-boot-spinner .bq-dna-strand i,
-      #bq-boot-spinner .bq-dna-rung { animation-duration: 3.6s !important; }
-    }
-    /* ⑤ 加载进度条 + 百分比（加权步骤估算，真实进度驱动） */
-    #bq-boot-progress {
-      width: 180px;
-      height: 5px;
-      border-radius: 999px;
-      background: rgba(90, 125, 92, 0.18);
-      overflow: hidden;
+      gap: 12px;
       margin-top: 2px;
     }
-    html[data-theme="dark"] #bq-boot-progress { background: rgba(107, 196, 142, 0.2); }
-    #bq-boot-progress-fill {
-      height: 100%;
-      width: 0%;
-      border-radius: 999px;
-      background: linear-gradient(90deg, #5a7d5c, #6bc48e);
-      transition: width 0.14s linear;
+    .bq-pair {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      height: 24px;
     }
-    #bq-boot-percent {
+    .bq-base {
+      width: 18px;
+      text-align: center;
+      line-height: 1;
       font-family: var(--font-serif);
-      font-variant-numeric: tabular-nums;
-      font-size: 0.85rem;
-      color: #93a094;
-      letter-spacing: 0.04em;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #2c3e30;
     }
-    html[data-theme="dark"] #bq-boot-percent { color: #7f9189; }
+    html[data-theme="dark"] .bq-base { color: #e0e8e2; }
+    .bq-hb {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 4px;
+      width: 34px;
+      height: 24px;
+    }
+    .bq-hb i {
+      display: block;
+      height: 1.5px;
+      border-radius: 999px;
+      background: #5a7d5c;
+    }
+    html[data-theme="dark"] .bq-hb i { background: #6bc48e; }
+    .bq-pair--r1 { --bq-d: 0s; }
+    .bq-pair--r2 { --bq-d: 0.22s; }
+    .bq-pair--r3 { --bq-d: 0.44s; }
+    .bq-pair--r4 { --bq-d: 0.66s; }
+    /* 逐对"扣合"：每条氢键依次点亮后循环 */
+    @media (prefers-reduced-motion: no-preference) {
+      .bq-hb i {
+        opacity: 0;
+        animation: bqBootPair 2.8s ease-in-out infinite;
+        animation-delay: calc(var(--bq-d, 0s) + var(--bq-i, 0s));
+      }
+      .bq-hb i:nth-child(2) { --bq-i: 0.1s; }
+      .bq-hb i:nth-child(3) { --bq-i: 0.2s; }
+    }
+    @keyframes bqBootPair {
+      0%   { opacity: 0; }
+      14%  { opacity: 1; }
+      82%  { opacity: 1; }
+      100% { opacity: 0; }
+    }
     /* 动画声明（只放这里，不依赖外部 CSS 文件加载） */
     @keyframes bqBootBreathe {
       0%, 100% { opacity: 1; }
@@ -374,13 +338,12 @@
       </svg>
     </div>
     <div id="bq-boot-label">BioQuest · 生物竞赛刷题</div>
-    <div id="bq-boot-spinner" aria-hidden="true">
-      <span class="bq-dna-strand bq-dna-strand--left"><i></i><i></i><i></i><i></i></span>
-      <span class="bq-dna-strand bq-dna-strand--right"><i></i><i></i><i></i><i></i></span>
-      <span class="bq-dna-rung"></span>
+    <div id="bq-boot-pairs" aria-hidden="true">
+      <div class="bq-pair bq-pair--r1"><span class="bq-base">A</span><span class="bq-hb"><i></i><i></i></span><span class="bq-base">T</span></div>
+      <div class="bq-pair bq-pair--r2"><span class="bq-base">G</span><span class="bq-hb"><i></i><i></i><i></i></span><span class="bq-base">C</span></div>
+      <div class="bq-pair bq-pair--r3"><span class="bq-base">T</span><span class="bq-hb"><i></i><i></i></span><span class="bq-base">A</span></div>
+      <div class="bq-pair bq-pair--r4"><span class="bq-base">C</span><span class="bq-hb"><i></i><i></i><i></i></span><span class="bq-base">G</span></div>
     </div>
-    <div id="bq-boot-progress" aria-hidden="true"><div id="bq-boot-progress-fill"></div></div>
-    <div id="bq-boot-percent" aria-hidden="true">0%</div>
   </div>
   <!-- 首屏骨架遮罩逻辑（外部化）：defer 加载，不阻塞内容解析；遮罩本身由上方 CSS 立即显示 -->
   <script src="js/core/boot-mask.js?v=20260917b" defer></script>
