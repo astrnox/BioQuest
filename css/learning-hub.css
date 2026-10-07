@@ -42,7 +42,7 @@
   border: 1px solid var(--border-light, #ece8e1);
   border-radius: var(--radius-lg, 12px);
   padding: 16px;
-  box-shadow: var(--shadow-sm, 0 2px 6px rgba(0, 0, 0, 0.03));
+  box-shadow: var(--shadow-sm, 0 1px 3px rgba(44, 62, 48, 0.05));
 }
 .lmc-card-header {
   display: flex;
@@ -62,7 +62,7 @@
   display: inline-block;
   margin-left: 4px;
   padding: 1px 8px;
-  border-radius: 10px;
+  border-radius: 8px;
   font-size: 12px;
   font-weight: 600;
   font-variant-numeric: tabular-nums;
@@ -83,10 +83,10 @@
 }
 .lmc-btn-sm { padding: 4px 8px; font-size: 12px; }
 .lmc-btn-primary {
-  background: linear-gradient(135deg, var(--color-primary, #4a7c59), var(--color-primary-light, #6ba07a));
+  background: var(--color-primary, #4a7c59);
   color: var(--color-text-inverse, #fff);
 }
-.lmc-btn-primary:hover { transform: translateY(-1px); box-shadow: var(--shadow-md, 0 4px 12px rgba(74, 124, 89, 0.25)); }
+.lmc-btn-primary:hover { transform: translateY(-1px); box-shadow: var(--shadow-md, 0 2px 8px rgba(44, 62, 48, 0.06)); }
 .lmc-btn-ghost {
   background: var(--surface-secondary, #faf7f2);
   color: var(--text-primary, #1a2f1d);
@@ -108,11 +108,11 @@
   gap: 12px;
   padding: 12px;
   border: 1px solid var(--border-light, #ece8e1);
-  border-radius: 10px;
+  border-radius: 8px;
   background: var(--surface-base, #fff);
   transition: all 0.2s;
 }
-.lmc-task:hover { border-color: var(--color-sage, #4a7c59); box-shadow: var(--shadow-sm, 0 2px 8px rgba(74, 124, 89, 0.08)); }
+.lmc-task:hover { border-color: var(--color-sage, #4a7c59); box-shadow: var(--shadow-sm, 0 1px 3px rgba(44, 62, 48, 0.05)); }
 .lmc-task.lmc-due-soon { border-color: var(--state-warning, #d4a030); background: var(--state-warning-bg, #fdf8ec); }
 .lmc-task.lmc-due-overdue { border-color: var(--state-error, #c0553a); background: var(--state-error-bg, #fdf0ec); }
 
@@ -120,7 +120,7 @@
   font-size: 24px;
   width: 36px;
   height: 36px;
-  border-radius: 10px;
+  border-radius: 8px;
   background: var(--surface-secondary, #faf7f2);
   display: flex;
   align-items: center;
@@ -241,7 +241,7 @@
   padding: 8px;
   background: var(--state-success-bg, #d1fae5);
   color: var(--state-success, #047857);
-  border-radius: var(--radius-sm, 6px);
+  border-radius: var(--radius-sm, 4px);
   text-align: center;
   font-weight: 600;
   font-size: 12px;
@@ -272,7 +272,7 @@
   align-items: center;
   gap: 8px;
   padding: 6px 8px;
-  border-radius: 6px;
+  border-radius: 8px;
   font-size: 11px;
   background: var(--surface-secondary, #faf7f2);
 }
@@ -300,11 +300,11 @@
 
 .lmc-modal {
   background: var(--color-surface, #fff);
-  border-radius: var(--radius-xl, 14px);
+  border-radius: var(--radius-xl, 16px);
   width: 100%;
   max-width: 420px;
   padding: 24px;
-  box-shadow: var(--shadow-floating, 0 20px 60px rgba(0, 0, 0, 0.18));
+  box-shadow: var(--shadow-floating, 0 8px 28px rgba(44, 62, 48, 0.10));
   animation: lmc-pop-in 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 .lmc-modal--wide { max-width: 560px; }

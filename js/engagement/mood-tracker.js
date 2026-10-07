@@ -33,15 +33,6 @@
     sad: '难过'
   };
 
-  var MOOD_EMOJI = {
-    happy: '😊',
-    calm: '😌',
-    neutral: '😐',
-    anxious: '😰',
-    tired: '😴',
-    sad: '😢'
-  };
-
   // 危机关键词（与 classmate.js 的 CRISIS_KEYWORDS 保持一致）
   var CRISIS_KEYWORDS = [
     '自杀', '自残', '不想活', '想死', '了结', '结束生命',
@@ -103,7 +94,7 @@
     modal.innerHTML =
       '<div class="bq-crisis-backdrop"></div>' +
       '<div class="bq-crisis-card">' +
-        '<h2 id="bq-crisis-title">你不是一个人 💚</h2>' +
+        '<h2 id="bq-crisis-title">你不是一个人</h2>' +
         '<p>我注意到你可能正在经历困难的时刻。请记得，寻求帮助是勇敢的表现。</p>' +
         '<div class="bq-crisis-resources">' +
           '<a class="bq-crisis-item" href="tel:12320" target="_blank" rel="noopener">' +
@@ -294,7 +285,6 @@
     var moods = ['happy', 'calm', 'neutral', 'anxious', 'tired', 'sad'];
     var buttonsHtml = moods.map(function (m) {
       return '<button type="button" class="bq-mood-option" data-mood="' + m + '">' +
-        '<span class="bq-mood-emoji">' + MOOD_EMOJI[m] + '</span>' +
         '<span>' + MOOD_LABELS[m] + '</span>' +
       '</button>';
     }).join('');
@@ -378,12 +368,10 @@
     var todayLogs = getTodayLogs();
     var lastMood = todayLogs.length > 0 ? todayLogs[todayLogs.length - 1] : null;
 
-    var emoji = lastMood ? MOOD_EMOJI[lastMood.mood] : '🙂';
     var label = lastMood ? MOOD_LABELS[lastMood.mood] : '今日未打卡';
 
     container.innerHTML =
       '<div class="bq-mood-widget">' +
-        '<div class="bq-mood-widget-icon">' + emoji + '</div>' +
         '<div class="bq-mood-widget-info">' +
           '<div class="bq-mood-widget-label">' + label + '</div>' +
           '<div class="bq-mood-widget-count">今日打卡 ' + todayLogs.length + ' 次</div>' +
@@ -409,7 +397,7 @@
       '/* 危机资源弹窗 */',
       '.bq-crisis-modal { position: fixed; inset: 0; z-index: 10000; display: flex; align-items: center; justify-content: center; padding: 20px; }',
       '.bq-crisis-backdrop { position: absolute; inset: 0; background: rgba(26, 58, 42, 0.7); backdrop-filter: blur(4px); }',
-      '.bq-crisis-card { position: relative; max-width: 480px; width: 100%; background: #fff; border-radius: 20px; padding: 32px; box-shadow: 0 12px 40px rgba(0,0,0,0.2); }',
+      '.bq-crisis-card { position: relative; max-width: 480px; width: 100%; background: #fff; border-radius: 16px; padding: 32px; box-shadow: var(--shadow-floating); }',
       '.bq-crisis-card h2 { font-family: "Noto Serif SC", serif; color: #1a3a2a; font-size: 1.4rem; margin: 0 0 12px; }',
       '.bq-crisis-card p { color: #4a4a4a; font-size: 0.95rem; line-height: 1.6; margin: 0 0 16px; }',
       '.bq-crisis-resources { display: flex; flex-direction: column; gap: 10px; margin: 20px 0; }',
@@ -424,7 +412,7 @@
       '/* 情绪打卡弹窗 */',
       '.bq-mood-modal { position: fixed; inset: 0; z-index: 9999; display: flex; align-items: center; justify-content: center; padding: 20px; }',
       '.bq-mood-backdrop { position: absolute; inset: 0; background: rgba(26, 58, 42, 0.5); backdrop-filter: blur(3px); }',
-      '.bq-mood-checkin { position: relative; max-width: 420px; width: 100%; background: #fff; border-radius: 20px; padding: 28px; box-shadow: 0 12px 40px rgba(0,0,0,0.2); }',
+      '.bq-mood-checkin { position: relative; max-width: 420px; width: 100%; background: #fff; border-radius: 16px; padding: 28px; box-shadow: var(--shadow-floating); }',
       '.bq-mood-checkin h3 { font-family: "Noto Serif SC", serif; color: #1a3a2a; font-size: 1.2rem; margin: 0 0 20px; text-align: center; }',
       '.bq-mood-options { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 16px; }',
       '.bq-mood-option { display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 14px 8px; border: 2px solid #ece8e1; border-radius: 12px; background: #faf7f2; cursor: pointer; transition: all 0.15s; font-family: inherit; }',
@@ -432,21 +420,21 @@
       '.bq-mood-option.selected { border-color: #5a7d5c; background: rgba(90, 125, 92, 0.08); }',
       '.bq-mood-emoji { font-size: 1.8rem; }',
       '.bq-mood-option span:last-child { font-size: 0.78rem; color: #4a4a4a; }',
-      '.bq-mood-note { width: 100%; min-height: 70px; padding: 10px 12px; border: 1px solid #ece8e1; border-radius: 10px; font-family: inherit; font-size: 0.9rem; resize: vertical; box-sizing: border-box; }',
+      '.bq-mood-note { width: 100%; min-height: 70px; padding: 10px 12px; border: 1px solid #ece8e1; border-radius: 8px; font-family: inherit; font-size: 0.9rem; resize: vertical; box-sizing: border-box; }',
       '.bq-mood-note:focus { outline: none; border-color: #5a7d5c; }',
       '.bq-mood-actions { display: flex; gap: 10px; margin-top: 14px; }',
-      '.bq-mood-cancel { flex: 1; padding: 10px; background: #f0ebe0; color: #4a4a4a; border: none; border-radius: 10px; font-size: 0.9rem; cursor: pointer; font-family: inherit; }',
-      '.bq-mood-submit { flex: 2; padding: 10px; background: #5a7d5c; color: #fff; border: none; border-radius: 10px; font-size: 0.9rem; font-weight: 600; cursor: pointer; font-family: inherit; }',
+      '.bq-mood-cancel { flex: 1; padding: 10px; background: #f0ebe0; color: #4a4a4a; border: none; border-radius: 8px; font-size: 0.9rem; cursor: pointer; font-family: inherit; }',
+      '.bq-mood-submit { flex: 2; padding: 10px; background: #5a7d5c; color: #fff; border: none; border-radius: 8px; font-size: 0.9rem; font-weight: 600; cursor: pointer; font-family: inherit; }',
       '.bq-mood-submit:disabled { background: #c4a4a4; cursor: not-allowed; }',
       '.bq-mood-submit:not(:disabled):hover { background: #4a6d4c; }',
       '',
       '/* 常驻情绪卡片 */',
-      '.bq-mood-widget { display: flex; align-items: center; gap: 12px; padding: 14px 16px; background: linear-gradient(135deg, #faf7f2 0%, #f0ebe0 100%); border-radius: 16px; border: 1px solid #ece8e1; }',
+      '.bq-mood-widget { display: flex; align-items: center; gap: 12px; padding: 14px 16px; background: var(--color-bg-warm, #f5f0e8); border-radius: 16px; border: 1px solid #ece8e1; }',
       '.bq-mood-widget-icon { font-size: 1.6rem; }',
       '.bq-mood-widget-info { flex: 1; }',
       '.bq-mood-widget-label { font-size: 0.95rem; font-weight: 600; color: #1a3a2a; }',
       '.bq-mood-widget-count { font-size: 0.78rem; color: #8a8a8a; }',
-      '.bq-mood-widget-btn { padding: 8px 16px; background: #5a7d5c; color: #fff; border: none; border-radius: 10px; font-size: 0.85rem; font-weight: 600; cursor: pointer; font-family: inherit; }',
+      '.bq-mood-widget-btn { padding: 8px 16px; background: #5a7d5c; color: #fff; border: none; border-radius: 8px; font-size: 0.85rem; font-weight: 600; cursor: pointer; font-family: inherit; }',
       '.bq-mood-widget-btn:hover { background: #4a6d4c; }',
       '',
       '@media (prefers-reduced-motion: reduce) {',
@@ -466,7 +454,6 @@
   global.BioQuestMoodTracker = {
     MOOD_VALUES: MOOD_VALUES,
     MOOD_LABELS: MOOD_LABELS,
-    MOOD_EMOJI: MOOD_EMOJI,
     CRISIS_KEYWORDS: CRISIS_KEYWORDS,
     STORAGE_KEY: STORAGE_KEY,
     logMood: logMood,

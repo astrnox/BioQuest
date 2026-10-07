@@ -149,7 +149,7 @@
   position: absolute;
   inset: 0;
   border-radius: var(--radius-lg);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+  box-shadow: var(--shadow-floating);
   opacity: 0;
   transition: opacity 0.4s ease;
   pointer-events: none;
@@ -248,7 +248,7 @@
   padding: 16px 48px;
   border-radius: var(--radius-full);
   border: none;
-  background: linear-gradient(135deg, var(--color-sage), var(--color-mid));
+  background: var(--color-sage);
   color: #fff;
   font-size: 1.05rem;
   font-weight: 700;
@@ -257,17 +257,17 @@
   letter-spacing: 0.04em;
   -webkit-tap-highlight-color: transparent;
   min-height: 52px;
-  box-shadow: 0 4px 16px rgba(90, 125, 92, 0.25);
+  box-shadow: var(--shadow-lg);
 }
 
 .anki-flip-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 24px rgba(90, 125, 92, 0.35);
+  box-shadow: var(--shadow-lg);
 }
 
 .anki-flip-btn:active {
   transform: translateY(0) scale(0.97);
-  box-shadow: 0 2px 8px rgba(90, 125, 92, 0.2);
+  box-shadow: var(--shadow-md);
 }
 
 /* 滑动提示 */
@@ -335,7 +335,7 @@
 
 .anki-rate-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  box-shadow: var(--shadow-md);
 }
 
 .anki-rate-btn:active {
@@ -415,14 +415,14 @@
   width: 100%;
   height: 6px;
   background: var(--border-default);
-  border-radius: 3px;
+  border-radius: 2px;
   overflow: hidden;
 }
 
 .anki-progress-fill {
   height: 100%;
   background: linear-gradient(90deg, var(--color-sage), var(--color-success));
-  border-radius: 3px;
+  border-radius: 2px;
   transition: width 0.4s ease;
 }
 
@@ -508,13 +508,13 @@
 }
 
 .anki-action-primary {
-  background: linear-gradient(135deg, var(--color-sage), var(--color-mid));
+  background: var(--color-sage);
   color: #fff;
 }
 
 .anki-action-primary:hover {
   transform: translateY(-1px);
-  box-shadow: 0 4px 14px rgba(90, 125, 92, 0.3);
+  box-shadow: var(--shadow-md);
 }
 
 .anki-action-secondary {
@@ -581,7 +581,7 @@
 
 /* ==================== 深色模式适配 ==================== */
 [data-theme="dark"] .anki-card {
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--shadow-floating);
 }
 
 [data-theme="dark"] .anki-face {
@@ -664,7 +664,7 @@
 }
 
 [data-theme="dark"] .anki-flip-btn {
-  box-shadow: 0 4px 16px rgba(90, 125, 92, 0.15);
+  box-shadow: var(--shadow-lg);
 }
 
 /* ==================== 移动端响应式 ==================== */

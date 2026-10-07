@@ -22,8 +22,8 @@
     style.id = 'wrongbook-styles';
     style.textContent = `
       .wb-container { max-width: 900px; margin: 0 auto; padding: 20px; }
-      .wb-card { background: var(--card-bg, #fff); border-radius: 12px; padding: 16px; margin-bottom: 12px; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
-      .wb-card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+      .wb-card { background: var(--card-bg, #fff); border-radius: 12px; padding: 16px; margin-bottom: 12px; box-shadow: var(--shadow-sm); }
+      .wb-card:hover { box-shadow: var(--shadow-md); }
       .wb-card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; }
       .wb-title { font-weight: 600; color: var(--color-deep, #2c4a3b); margin: 0 0 6px; line-height: 1.4; }
       .wb-meta { font-size: 0.85rem; color: var(--text-muted, #888); }
@@ -93,7 +93,6 @@
       // Issue #125：统一「温暖空状态」组件（加载失败时回退原有提示）
       if (window.BioQuest && typeof window.BioQuest.renderEmptyState === 'function') {
         window.BioQuest.renderEmptyState(container, {
-          icon: '🐞',
           title: '暂无错题记录',
           hint: '练习时答错的题目会自动收录到这里，也可以点击右上角添加',
           action: { label: '去练习', onClick: function () { window.location.hash = '#/practice'; } }
@@ -120,8 +119,8 @@
         '<div class="wb-actions">' +
           '<button class="wb-btn wb-detail-btn" data-id="' + q.id + '">查看/编辑</button>' +
           '<button class="wb-btn wb-analyze-btn" data-id="' + q.id + '">AI 分析</button>' +
-          '<button class="wb-btn wb-kg-btn" data-concept="' + (q.concept || q.subject || '') + '">🗺️ 知识图谱</button>' +
-          '<button class="wb-btn wb-card-btn" data-concept="' + (q.concept || q.subject || '') + '">🃏 生成卡片</button>' +
+          '<button class="wb-btn wb-kg-btn" data-concept="' + (q.concept || q.subject || '') + '">知识图谱</button>' +
+          '<button class="wb-btn wb-card-btn" data-concept="' + (q.concept || q.subject || '') + '">生成卡片</button>' +
           '<button class="wb-btn wb-btn--danger wb-delete-btn" data-id="' + q.id + '">删除</button>' +
         '</div>' +
       '</div>';
@@ -172,7 +171,7 @@
       '<select id="wb-filter-concept">' + conceptOpts + '</select>' +
       '<select id="wb-filter-reason">' + reasonOpts + '</select>' +
       '<button class="wb-btn" id="wb-add-btn">+ 添加错题</button>' +
-      '<button class="wb-btn" id="wb-ocr-btn">📷 拍照/OCR</button>' +
+      '<button class="wb-btn" id="wb-ocr-btn">拍照/OCR</button>' +
       '<input type="file" id="wb-ocr-input" accept="image/*" capture="environment" style="display:none;">' +
     '</div>';
 
@@ -215,18 +214,18 @@
     overlay.setAttribute('aria-label', '拍照识别错题');
     overlay.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,0.85);z-index:10020;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px;';
     overlay.innerHTML =
-      '<div style="width:100%;max-width:560px;background:#fff;border-radius:14px;overflow:hidden;">' +
+      '<div style="width:100%;max-width:560px;background:#fff;border-radius:12px;overflow:hidden;">' +
         '<div style="padding:14px 18px;border-bottom:1px solid var(--border-light,#ece8e1);display:flex;justify-content:space-between;align-items:center;">' +
           '<strong style="color:var(--color-deep,#1a3a2a);">拍照识别错题</strong>' +
           '<button id="wb-cam-close" style="background:none;border:none;font-size:22px;cursor:pointer;color:var(--text-muted,#8a8a8a);">×</button>' +
         '</div>' +
         '<div style="padding:16px;">' +
-          '<div id="wb-cam-preview" style="width:100%;background:#000;border-radius:10px;min-height:200px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:0.86rem;">正在启动摄像头...</div>' +
-          '<video id="wb-cam-video" autoplay playsinline style="width:100%;border-radius:10px;display:none;"></video>' +
+          '<div id="wb-cam-preview" style="width:100%;background:#000;border-radius:8px;min-height:200px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:0.86rem;">正在启动摄像头...</div>' +
+          '<video id="wb-cam-video" autoplay playsinline style="width:100%;border-radius:8px;display:none;"></video>' +
           '<canvas id="wb-cam-canvas" style="display:none;"></canvas>' +
-          '<img id="wb-cam-shot" style="width:100%;border-radius:10px;display:none;" />' +
+          '<img id="wb-cam-shot" style="width:100%;border-radius:8px;display:none;" />' +
           '<div style="display:flex;gap:8px;margin-top:12px;justify-content:center;">' +
-            '<button id="wb-cam-capture" class="wb-btn" style="background:var(--color-sage,#5a7d5c);color:#fff;">📷 拍照</button>' +
+            '<button id="wb-cam-capture" class="wb-btn" style="background:var(--color-sage,#5a7d5c);color:#fff;">拍照</button>' +
             '<button id="wb-cam-retake" class="wb-btn" style="display:none;">重拍</button>' +
             '<button id="wb-cam-confirm" class="wb-btn" style="background:var(--color-amber,#c4956a);color:#fff;display:none;">识别</button>' +
             '<button id="wb-cam-upload" class="wb-btn">从相册选择</button>' +
@@ -395,9 +394,9 @@
     var modal = document.querySelector('.wb-modal-content') || document.querySelector('.wb-modal');
     var previewWrap = document.createElement('div');
     previewWrap.id = 'wb-ocr-preview';
-    previewWrap.style.cssText = 'margin-bottom:12px;padding:8px;background:rgba(90,125,92,0.06);border-radius:10px;';
+    previewWrap.style.cssText = 'margin-bottom:12px;padding:8px;background:rgba(90,125,92,0.06);border-radius:8px;';
     var imgEl = document.createElement('img');
-    imgEl.style.cssText = 'width:100%;max-height:160px;object-fit:contain;border-radius:6px;';
+    imgEl.style.cssText = 'width:100%;max-height:160px;object-fit:contain;border-radius:8px;';
     var progressEl = document.createElement('div');
     progressEl.style.cssText = 'margin-top:6px;height:4px;background:rgba(0,0,0,0.08);border-radius:2px;overflow:hidden;';
     var progressFill = document.createElement('div');
@@ -412,13 +411,13 @@
     optRow.style.cssText = 'display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:8px;font-size:0.76rem;';
     var lblHand = document.createElement('label');
     lblHand.style.cssText = 'display:inline-flex;align-items:center;gap:4px;cursor:pointer;color:var(--text-secondary,#5a6b5e);';
-    lblHand.innerHTML = '<input type="checkbox" id="wb-ocr-handwriting" style="width:auto;"> ✍️ 手写内容（识别手写笔记更稳）';
+    lblHand.innerHTML = '<input type="checkbox" id="wb-ocr-handwriting" style="width:auto;"> 手写内容（识别手写笔记更稳）';
     var keyDetails = document.createElement('details');
     keyDetails.style.cssText = 'margin-left:auto;';
     keyDetails.innerHTML =
       '<summary style="cursor:pointer;color:var(--text-muted,#8a8a8a);user-select:none;">云端识别（免费，可选）</summary>' +
       '<div style="display:flex;gap:6px;margin-top:6px;align-items:center;">' +
-        '<input id="wb-ocrspace-key" type="password" placeholder="OCR.space 免费 API Key" style="flex:1;min-width:160px;padding:5px 8px;font-size:0.76rem;border:1px solid rgba(0,0,0,0.12);border-radius:6px;">' +
+        '<input id="wb-ocrspace-key" type="password" placeholder="OCR.space 免费 API Key" style="flex:1;min-width:160px;padding:5px 8px;font-size:0.76rem;border:1px solid rgba(0,0,0,0.12);border-radius:8px;">' +
       '</div>' +
       '<div style="font-size:0.7rem;color:var(--text-muted,#8a8a8a);margin-top:4px;">前往 ocr.space/ocrapi 免费申请（25k 次/月），key 保存在本机，识别效果显著提升。</div>';
     optRow.appendChild(lblHand);

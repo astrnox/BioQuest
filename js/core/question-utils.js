@@ -110,7 +110,7 @@
       ? ('正确率 ' + Math.round(info.accuracy * 100) + '% | ' + info.total + '次答题')
       : ('答题不足' + MIN_ANSWERS_FOR_ADJUST + '次，显示原始难度');
 
-    return '<span class="q-diff-tag" style="background:' + info.color + ';color:#fff;font-size:0.68rem;padding:2px 8px;border-radius:10px;display:inline-flex;align-items:center;gap:2px;cursor:help;" title="' + tooltip + '">'
+    return '<span class="q-diff-tag" style="background:' + info.color + ';color:#fff;font-size:0.68rem;padding:2px 8px;border-radius:8px;display:inline-flex;align-items:center;gap:2px;cursor:help;" title="' + tooltip + '">'
       + info.label + arrow + '</span>'
       + (info.isAdjusted ? '<span class="q-diff-adjusted" style="font-size:0.6rem;color:var(--text-muted,#8a8a8a);margin-left:2px;" title="已根据正确率自动调整">&#9881;</span>' : '');
   }
@@ -256,7 +256,7 @@
           '<button class="q-feedback-close" id="qFeedbackClose">&times;</button>' +
         '</div>' +
         '<div class="q-feedback-body">' +
-          '<div class="q-feedback-question" style="background:var(--surface-secondary,#faf7f2);padding:10px 14px;border-radius:10px;font-size:0.85rem;color:var(--text-secondary,#6b7f74);margin-bottom:16px;max-height:80px;overflow:hidden;text-overflow:ellipsis;">' +
+          '<div class="q-feedback-question" style="background:var(--surface-secondary,#faf7f2);padding:10px 14px;border-radius:8px;font-size:0.85rem;color:var(--text-secondary,#6b7f74);margin-bottom:16px;max-height:80px;overflow:hidden;text-overflow:ellipsis;">' +
             escapeHtml((questionText || '').substring(0, 150)) +
           '</div>' +
           '<div style="margin-bottom:12px;">' +
@@ -273,10 +273,10 @@
     html += '</div></div>' +
           '<div style="margin-bottom:12px;">' +
             '<label style="font-size:0.82rem;color:var(--text-secondary,#6b7f74);display:block;margin-bottom:6px;">详细说明（可选）</label>' +
-            '<textarea id="qFeedbackDesc" style="width:100%;box-sizing:border-box;min-height:80px;border:1px solid var(--border-light,#ece8e1);border-radius:10px;padding:10px;font-size:0.85rem;font-family:inherit;resize:vertical;" placeholder="请描述具体问题..."></textarea>' +
+            '<textarea id="qFeedbackDesc" style="width:100%;box-sizing:border-box;min-height:80px;border:1px solid var(--border-light,#ece8e1);border-radius:8px;padding:10px;font-size:0.85rem;font-family:inherit;resize:vertical;" placeholder="请描述具体问题..."></textarea>' +
           '</div>' +
           '<div style="font-size:0.75rem;color:var(--text-muted,#8a8a8a);margin-bottom:16px;">今日剩余反馈次数：<strong style="color:' + (remaining > 0 ? 'var(--color-sage,#5a7d5c)' : '#e53e3e') + ';">' + remaining + '</strong> / ' + MAX_FEEDBACKS_PER_DAY + '</div>' +
-          '<button id="qFeedbackSubmit" class="q-feedback-submit-btn" style="width:100%;background:var(--color-sage,#5a7d5c);color:#fff;border:none;padding:12px;border-radius:10px;font-size:0.9rem;cursor:pointer;transition:all 0.15s;' + (remaining <= 0 ? 'opacity:0.5;cursor:not-allowed;' : '') + '"' + (remaining <= 0 ? ' disabled' : '') + '>提交反馈</button>' +
+          '<button id="qFeedbackSubmit" class="q-feedback-submit-btn" style="width:100%;background:var(--color-sage,#5a7d5c);color:#fff;border:none;padding:12px;border-radius:8px;font-size:0.9rem;cursor:pointer;transition:all 0.15s;' + (remaining <= 0 ? 'opacity:0.5;cursor:not-allowed;' : '') + '"' + (remaining <= 0 ? ' disabled' : '') + '>提交反馈</button>' +
           '<p id="qFeedbackError" style="color:#e53e3e;font-size:0.8rem;margin-top:8px;display:none;"></p>' +
         '</div>' +
       '</div>' +
@@ -321,7 +321,7 @@
 
     // 添加CSS动画样式
     var style = document.createElement('style');
-    style.textContent = '.q-feedback-overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.4);z-index:9999;display:flex;align-items:center;justify-content:center;animation:fadeIn 0.2s ease;}.q-feedback-modal{background:var(--surface-primary,#fff);border-radius:16px;width:90%;max-width:420px;max-height:85vh;overflow-y:auto;box-shadow:0 8px 32px rgba(0,0,0,0.15);animation:slideUp 0.3s ease;}.q-feedback-header{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid var(--border-light,#ece8e1);}.q-feedback-close{background:none;border:none;font-size:1.5rem;cursor:pointer;color:var(--text-muted,#8a8a8a);padding:0;line-height:1;}.q-feedback-body{padding:16px 20px 20px;}.q-feedback-type-label:hover{border-color:var(--color-sage,#5a7d5c);background:rgba(90,125,92,0.05);}.q-feedback-type-label input[type="radio"]:checked + span{color:var(--color-sage,#5a7d5c);}.q-feedback-submit-btn:hover:not(:disabled){background:var(--color-deep,#1a3a2a);}.q-feedback-submit-btn:disabled{opacity:0.5;cursor:not-allowed;}@keyframes fadeIn{from{opacity:0}to{opacity:1}}@keyframes slideUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}';
+    style.textContent = '.q-feedback-overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.4);z-index:9999;display:flex;align-items:center;justify-content:center;animation:fadeIn 0.2s ease;}.q-feedback-modal{background:var(--surface-primary,#fff);border-radius:16px;width:90%;max-width:420px;max-height:85vh;overflow-y:auto;box-shadow:var(--shadow-floating);animation:slideUp 0.3s ease;}.q-feedback-header{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid var(--border-light,#ece8e1);}.q-feedback-close{background:none;border:none;font-size:1.5rem;cursor:pointer;color:var(--text-muted,#8a8a8a);padding:0;line-height:1;}.q-feedback-body{padding:16px 20px 20px;}.q-feedback-type-label:hover{border-color:var(--color-sage,#5a7d5c);background:rgba(90,125,92,0.05);}.q-feedback-type-label input[type="radio"]:checked + span{color:var(--color-sage,#5a7d5c);}.q-feedback-submit-btn:hover:not(:disabled){background:var(--color-deep,#1a3a2a);}.q-feedback-submit-btn:disabled{opacity:0.5;cursor:not-allowed;}@keyframes fadeIn{from{opacity:0}to{opacity:1}}@keyframes slideUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}';
     document.head.appendChild(style);
   }
 

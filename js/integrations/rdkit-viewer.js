@@ -65,7 +65,7 @@
     var height = opts.height || 300;
 
     container.innerHTML = '<div style="text-align:center;padding:40px;color:var(--text-muted);">' +
-      '<div>🔬 正在加载分子引擎（首次约 6.7MB）...</div></div>';
+      '<div>正在加载分子引擎（首次约 6.7MB）...</div></div>';
 
     return ensureReady().then(function (rdkit) {
       var mol = null;
@@ -126,7 +126,7 @@
     if (!target) return;
     var presets = getPresets();
     var cardsHtml = presets.map(function (p) {
-      return '<div class="smiles-card" data-smiles="' + _escapeHtml(p.smiles) + '" data-name="' + _escapeHtml(p.name) + '" style="background:var(--surface-primary,#fff);border:1px solid var(--border-light,#ece8e1);border-radius:var(--radius-lg,20px);padding:20px;cursor:pointer;">' +
+      return '<div class="smiles-card" data-smiles="' + _escapeHtml(p.smiles) + '" data-name="' + _escapeHtml(p.name) + '" style="background:var(--surface-primary,#fff);border:1px solid var(--border-light,#ece8e1);border-radius:var(--radius-lg, 12px);padding:20px;cursor:pointer;">' +
         '<div style="font-family:var(--font-mono,monospace);font-size:0.78rem;color:var(--color-amber,#c4956a);font-weight:700;word-break:break-all;">' + _escapeHtml(p.smiles) + '</div>' +
         '<div style="font-family:var(--font-serif,serif);font-size:1rem;font-weight:600;color:var(--color-deep,#1a3a2a);margin:6px 0;">' + _escapeHtml(p.name) + '</div>' +
         '<div style="font-size:0.78rem;color:var(--text-muted,#8a8a8a);">点击查看 2D 结构</div>' +
@@ -135,10 +135,10 @@
 
     target.innerHTML =
       '<div style="max-width:900px;margin:0 auto;padding:24px 20px 80px;">' +
-      '<h1 style="font-family:var(--font-serif,serif);font-size:1.8rem;color:var(--color-deep,#1a3a2a);margin-bottom:8px;">🧪 SMILES 2D 分子查看器</h1>' +
+      '<h1 style="font-family:var(--font-serif,serif);font-size:1.8rem;color:var(--color-deep,#1a3a2a);margin-bottom:8px;">SMILES 2D 分子查看器</h1>' +
       '<p style="color:var(--text-muted,#8a8a8a);font-size:0.9rem;margin-bottom:24px;">基于 RDKit-JS（BSD-3）渲染 SMILES 字符串为 2D 分子结构图</p>' +
       '<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px;margin-bottom:32px;">' + cardsHtml + '</div>' +
-      '<div style="background:var(--surface-primary,#fff);border:1px solid var(--border-light,#ece8e1);border-radius:var(--radius-lg,20px);padding:20px;">' +
+      '<div style="background:var(--surface-primary,#fff);border:1px solid var(--border-light,#ece8e1);border-radius:var(--radius-lg, 12px);padding:20px;">' +
         '<h3 style="font-family:var(--font-serif,serif);font-size:1.1rem;color:var(--color-deep,#1a3a2a);margin-bottom:12px;">自定义 SMILES</h3>' +
         '<div style="display:flex;gap:8px;flex-wrap:wrap;">' +
           '<input id="smiles-input" type="text" placeholder="例如：CCO（乙醇）" style="flex:1;min-width:200px;padding:8px 12px;border:1px solid var(--border-default,#e0dcd5);border-radius:8px;font-family:var(--font-mono,monospace);font-size:0.9rem;">' +

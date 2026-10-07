@@ -7,7 +7,7 @@
  *
  * 特性：
  *   1) 环形分数表盘：分数 / 评级 / 协同修正实时变色；
- *   2) 六维双向联动输入：滑块拖动 ↔ 数字框精确输入，每条轨道
+ *   2) 六维双向联动输入：滑块拖动 数字框精确输入，每条轨道
  *      自带维度说明与权重标签，颜色随维度区分；
  *   3) 得分贡献拆解：分段堆叠条 + 逐维「×权重」明细，一眼看懂
  *      分数从哪来；
@@ -59,7 +59,7 @@
     if (document.getElementById(id)) return;
     var css = '' +
       '.bc-wrap{max-width:1020px;margin:0 auto;padding:24px 16px 56px;font-family:var(--font-sans,inherit);}' +
-      '.bc-hero{padding:24px 26px 20px;border-radius:18px;background:linear-gradient(135deg,rgba(74,124,89,.10),rgba(196,149,106,.13));border:1px solid rgba(74,124,89,.25);margin-bottom:18px;}' +
+      '.bc-hero{padding:24px 26px 20px;border-radius:16px;background:rgba(74,124,89,.10);border:1px solid rgba(74,124,89,.25);margin-bottom:18px;}' +
       '.bc-hero h1{margin:0 0 8px;font-size:1.4rem;color:var(--color-ink,#2c3e30);}' +
       '.bc-hero p{margin:0 0 10px;font-size:.92rem;color:var(--text-muted,#667);line-height:1.7;}' +
       '.bc-hero a{font-size:.82rem;color:#4a7c59;text-decoration:none;font-weight:600;}' +
@@ -68,7 +68,7 @@
       '.bc-layout{display:grid;grid-template-columns:300px 1fr;gap:16px;align-items:start;}' +
       '@media(max-width:860px){.bc-layout{grid-template-columns:1fr;}}' +
 
-      '.bc-card{background:var(--color-card,#fff);border:1px solid var(--color-border,rgba(196,149,106,.18));border-radius:16px;padding:18px;box-shadow:0 2px 10px rgba(60,80,70,.05);}' +
+      '.bc-card{background:var(--color-card,#fff);border:1px solid var(--color-border,rgba(196,149,106,.18));border-radius:16px;padding:18px;box-shadow:var(--shadow-md);}' +
 
       /* ---- 表盘卡 ---- */
       '.bc-gauge-card{position:sticky;top:14px;}' +
@@ -81,43 +81,43 @@
       '.bc-gauge-num{font-size:2.5rem;font-weight:800;line-height:1;font-family:var(--font-mono,monospace);color:#3a6b4a;}' +
       '.bc-gauge-label{font-size:.78rem;color:#99a;margin-top:2px;}' +
       '.bc-gauge-grade{margin-top:12px;text-align:center;}' +
-      '.bc-grade-badge{display:inline-block;padding:4px 14px;border-radius:999px;color:#fff;font-size:.95rem;font-weight:800;letter-spacing:.5px;}' +
+      '.bc-grade-badge{display:inline-block;padding:4px 14px;border-radius:16px;color:#fff;font-size:.95rem;font-weight:800;letter-spacing:.5px;}' +
       '.bc-grade-text{font-size:.8rem;color:#667;margin-top:6px;text-align:center;}' +
       '.bc-synergy{margin-top:10px;text-align:center;font-size:.78rem;color:#c49a4a;min-height:16px;font-weight:600;}' +
 
       /* ---- 快捷操作 ---- */
       '.bc-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;}' +
-      '.bc-btn{display:inline-flex;align-items:center;gap:5px;padding:8px 13px;border:none;border-radius:10px;background:#f0ece4;color:#556;font-size:.8rem;cursor:pointer;font-family:inherit;transition:filter .15s,background .15s;}' +
+      '.bc-btn{display:inline-flex;align-items:center;gap:5px;padding:8px 13px;border:none;border-radius:8px;background:#f0ece4;color:#556;font-size:.8rem;cursor:pointer;font-family:inherit;transition:filter .15s,background .15s;}' +
       '.bc-btn:hover{filter:brightness(.97);}' +
       '.bc-btn--primary{background:#4a7c59;color:#fff;}' +
       '.bc-btn--primary:hover{filter:brightness(1.08);}' +
       '.bc-presets-label{font-size:.72rem;color:#99a;margin:16px 0 6px;font-weight:700;letter-spacing:1px;}' +
       '.bc-presets{display:flex;flex-wrap:wrap;gap:8px;}' +
-      '.bc-chip{padding:6px 12px;border-radius:999px;border:1px solid rgba(74,124,89,.4);background:transparent;color:#4a7c59;font-size:.78rem;cursor:pointer;font-family:inherit;transition:all .15s;}' +
+      '.bc-chip{padding:6px 12px;border-radius:16px;border:1px solid rgba(74,124,89,.4);background:transparent;color:#4a7c59;font-size:.78rem;cursor:pointer;font-family:inherit;transition:all .15s;}' +
       '.bc-chip:hover{background:rgba(74,124,89,.10);}' +
       '.bc-chip--active{background:#4a7c59;color:#fff;border-color:#4a7c59;}' +
 
       /* ---- 六维输入 ---- */
       '.bc-inputs{display:flex;flex-direction:column;gap:12px;}' +
-      '.bc-dim{border:1px solid var(--color-border,rgba(196,149,106,.16));border-radius:14px;padding:12px 14px 10px;background:var(--surface-secondary,#faf9f5);}' +
+      '.bc-dim{border:1px solid var(--color-border,rgba(196,149,106,.16));border-radius:12px;padding:12px 14px 10px;background:var(--surface-secondary,#faf9f5);}' +
       '.bc-dim-head{display:flex;align-items:center;gap:10px;margin-bottom:8px;}' +
-      '.bc-dim-key{width:30px;height:30px;border-radius:9px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:.9rem;flex:none;}' +
+      '.bc-dim-key{width:30px;height:30px;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:.9rem;flex:none;}' +
       '.bc-dim-name{font-weight:700;font-size:.9rem;color:var(--color-ink,#2c3e30);flex:1;}' +
-      '.bc-dim-w{font-size:.72rem;color:#99a;background:#f0ece4;border-radius:6px;padding:2px 7px;flex:none;}' +
+      '.bc-dim-w{font-size:.72rem;color:#99a;background:#f0ece4;border-radius:8px;padding:2px 7px;flex:none;}' +
       'input[type=number].bc-num{width:58px;padding:6px 7px;border:1px solid #ccc;border-radius:8px;font-size:.9rem;text-align:center;background:#fff;color:inherit;}' +
-      'input[type=range].bc-range{width:100%;-webkit-appearance:none;appearance:none;height:8px;border-radius:5px;outline:none;background:#ece9e2;transition:background .1s;}' +
-      'input[type=range].bc-range::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:20px;height:20px;border-radius:50%;background:#fff;border:3px solid var(--c,#4a7c59);cursor:pointer;box-shadow:0 1px 4px rgba(0,0,0,.18);}' +
+      'input[type=range].bc-range{width:100%;-webkit-appearance:none;appearance:none;height:8px;border-radius:4px;outline:none;background:#ece9e2;transition:background .1s;}' +
+      'input[type=range].bc-range::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:20px;height:20px;border-radius:50%;background:#fff;border:3px solid var(--c,#4a7c59);cursor:pointer;box-shadow:var(--shadow-sm);}' +
       'input[type=range].bc-range::-moz-range-thumb{width:14px;height:14px;border-radius:50%;background:#fff;border:3px solid var(--c,#4a7c59);cursor:pointer;}' +
       '.bc-dim-help{font-size:.74rem;color:#99a;margin-top:6px;line-height:1.55;}' +
 
       /* ---- 贡献拆解 ---- */
       '.bc-contrib{margin-top:16px;}' +
       '.bc-contrib h2{font-size:1.02rem;margin:0 0 10px;color:var(--color-ink,#2c3e30);}' +
-      '.bc-seg{display:flex;height:14px;border-radius:7px;overflow:hidden;background:#ece9e2;gap:2px;}' +
+      '.bc-seg{display:flex;height:14px;border-radius:8px;overflow:hidden;background:#ece9e2;gap:2px;}' +
       '.bc-seg b{display:block;height:100%;min-width:2px;transition:width .2s ease;opacity:.95;}' +
       '.bc-contrib-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-top:12px;}' +
       '.bc-contrib-item{display:flex;align-items:center;gap:8px;font-size:.78rem;color:#556;}' +
-      '.bc-contrib-item i{width:10px;height:10px;border-radius:3px;flex:none;}' +
+      '.bc-contrib-item i{width:10px;height:10px;border-radius:2px;flex:none;}' +
       '.bc-contrib-item b{margin-left:auto;font-family:var(--font-mono,monospace);color:#3a6b4a;}' +
 
       /* ---- 公式透明 ---- */
@@ -126,11 +126,11 @@
       '.bc-explain .bc-row:last-child{border-bottom:none;}' +
       '.bc-explain .bc-row b{flex:none;min-width:110px;color:var(--color-ink,#2c3e30);}' +
       '.bc-grades{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;}' +
-      '.bc-gchip{font-size:.76rem;padding:4px 10px;border-radius:999px;color:#fff;}' +
+      '.bc-gchip{font-size:.76rem;padding:4px 10px;border-radius:16px;color:#fff;}' +
 
       /* ---- 黑暗模式 ---- */
       'html.dark .bc-card,html.dark .bc-wrap .bc-dim{background:#202622;border-color:rgba(196,149,106,.16);}' +
-      'html.dark .bc-hero{background:linear-gradient(135deg,rgba(74,124,89,.18),rgba(196,149,106,.14));border-color:rgba(74,124,89,.35);}' +
+      'html.dark .bc-hero{background:rgba(74,124,89,.18);border-color:rgba(74,124,89,.35);}' +
       'html.dark .bc-hero h1,html.dark .bc-contrib h2,html.dark .bc-dim-name,html.dark .bc-explain .bc-row b{color:#d4ddd6;}' +
       'html.dark .bc-hero p,html.dark .bc-grade-text,html.dark .bc-contrib-item{color:#b7c2ba;}' +
       'html.dark .bc-dim{background:#1d231f;}' +
@@ -345,9 +345,9 @@
       '<div class="bc-grade-text" id="bc-gauge-live"></div>' +
       '<div class="bc-synergy" id="bc-synergy"></div>' +
       '<div class="bc-actions">' +
-      '<button type="button" class="bc-btn bc-btn--primary" data-act="random">🎲 随机</button>' +
+      '<button type="button" class="bc-btn bc-btn--primary" data-act="random">随机</button>' +
       '<button type="button" class="bc-btn" data-act="reset">↺ 重置 50</button>' +
-      '<button type="button" class="bc-btn" data-act="real">⬇️ 载入真实数据</button>' +
+      '<button type="button" class="bc-btn" data-act="real">载入真实数据</button>' +
       '</div>' +
       '<div class="bc-presets-label">快捷模板</div>' +
       '<div class="bc-presets">' +
@@ -365,13 +365,13 @@
       '</div><!-- /bc-layout -->' +
 
       '<div class="bc-card bc-contrib">' +
-      '<h2>📊 得分贡献拆解 <span id="bc-seg-sum" style="font-size:.78rem;color:#99a;font-weight:400;margin-left:8px"></span></h2>' +
+      '<h2>得分贡献拆解 <span id="bc-seg-sum" style="font-size:.78rem;color:#99a;font-weight:400;margin-left:8px"></span></h2>' +
       '<div class="bc-seg" id="bc-seg"></div>' +
       '<div class="bc-contrib-list" id="bc-contrib-list"></div>' +
       '</div>' +
 
       '<div class="bc-card bc-explain">' +
-      '<h2 style="font-size:1.02rem;margin:0 0 8px;color:var(--color-ink,#2c3e30)">📐 计算规则公开</h2>' +
+      '<h2 style="font-size:1.02rem;margin:0 0 8px;color:var(--color-ink,#2c3e30)">计算规则公开</h2>' +
       '<div class="bc-row"><b>公式</b><span id="bc-formula"></span></div>' +
       '<div class="bc-row"><b>评级对照</b><span id="bc-grades"></span></div>' +
       '<div id="bc-gradenote"></div>' +
@@ -462,7 +462,7 @@
     target.innerHTML =
       '<div class="bc-wrap">' +
       '<div class="bc-hero">' +
-      '<h1>🧬 Bio 分计算器</h1>' +
+      '<h1>Bio 分计算器</h1>' +
       '<p>拖动六维滑块（或直接输入数字），总分、评级、单维贡献全部<b>实时联动</b>。公式 100% 公开、结果可复现，绝无黑箱。</p>' +
       '<a href="#/data-lab">→ 数据实验室：查看 CR 信用、正确率等全部指标的计算方式</a>' +
       '</div>' +

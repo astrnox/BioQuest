@@ -1024,7 +1024,7 @@ function renderChart(chart) {
     const src = s.split(/\s+/)[0];
     return `<div class="question-chart-wrapper" style="margin:14px auto;text-align:center;">
       <img src="${escapeHtml(src)}" alt="题目图表" loading="lazy" decoding="async" data-chart-fallback="1"
-        style="max-width:100%;max-height:min(60vh,560px);width:auto;height:auto;object-fit:contain;box-sizing:border-box;border-radius:12px;border:1px solid var(--border-light);background:var(--surface-tertiary);padding:8px;box-shadow:0 2px 8px rgba(0,0,0,0.06);display:block;margin:0 auto;">
+        style="max-width:100%;max-height:min(60vh,560px);width:auto;height:auto;object-fit:contain;box-sizing:border-box;border-radius:12px;border:1px solid var(--border-light);background:var(--surface-tertiary);padding:8px;box-shadow:var(--shadow-md);display:block;margin:0 auto;">
     </div>`;
   }
 

@@ -552,9 +552,9 @@ function renderPaper() {
       if (!isCorrect) {
         var conceptLabel = q.subject || q.category || '';
         linkageBtns = '<div class="pq-linkage" style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap;">' +
-          '<button type="button" class="btn btn-secondary btn-sm pq-linkage-btn" data-action="kg" data-concept="' + escapeHtml(conceptLabel) + '">🗺️ 查看知识图谱</button>' +
-          '<button type="button" class="btn btn-secondary btn-sm pq-linkage-btn" data-action="wrongbook" data-qidx="' + i + '">📒 加入错题本</button>' +
-          '<button type="button" class="btn btn-secondary btn-sm pq-linkage-btn" data-action="card" data-concept="' + escapeHtml(conceptLabel) + '">🃏 生成卡片</button>' +
+          '<button type="button" class="btn btn-secondary btn-sm pq-linkage-btn" data-action="kg" data-concept="' + escapeHtml(conceptLabel) + '">查看知识图谱</button>' +
+          '<button type="button" class="btn btn-secondary btn-sm pq-linkage-btn" data-action="wrongbook" data-qidx="' + i + '">加入错题本</button>' +
+          '<button type="button" class="btn btn-secondary btn-sm pq-linkage-btn" data-action="card" data-concept="' + escapeHtml(conceptLabel) + '">生成卡片</button>' +
           '</div>';
       }
 

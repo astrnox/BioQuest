@@ -71,7 +71,7 @@
       'width:90%',
       'max-height:80vh',
       'overflow-y:auto',
-      'box-shadow:0 20px 60px rgba(0,0,0,0.2)'
+      'box-shadow:var(--shadow-floating)'
     ].join(';');
 
     var html = '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;">' +
@@ -84,7 +84,7 @@
       html += '<h3 style="font-size:0.85rem;font-weight:600;color:#666;margin:0 0 8px 0;text-transform:uppercase;letter-spacing:0.5px;">' + group.section + '</h3>';
       html += '<div style="display:grid;grid-template-columns:auto 1fr;gap:6px 12px;align-items:center;">';
       group.keys.forEach(function (item) {
-        html += '<kbd style="background:#f0f0f0;padding:3px 10px;border-radius:6px;font-size:0.85rem;font-family:monospace;border:1px solid #ddd;text-align:center;white-space:nowrap;">' + item.key + '</kbd>';
+        html += '<kbd style="background:#f0f0f0;padding:3px 10px;border-radius:8px;font-size:0.85rem;font-family:monospace;border:1px solid #ddd;text-align:center;white-space:nowrap;">' + item.key + '</kbd>';
         html += '<span style="font-size:0.9rem;color:#444;">' + item.desc + '</span>';
       });
       html += '</div></div>';

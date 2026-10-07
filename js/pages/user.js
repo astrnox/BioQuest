@@ -44,9 +44,9 @@ function injectUserStyles() {
     .user-card {
       background: var(--surface-primary, #ffffff);
       border: 1px solid var(--border-light, #ece8e1);
-      border-radius: var(--radius-lg, 20px);
+      border-radius: var(--radius-lg, 12px);
       padding: 28px;
-      box-shadow: var(--shadow-sm, 0 1px 3px rgba(26,58,42,0.06));
+      box-shadow: var(--shadow-sm, 0 1px 3px rgba(44, 62, 48, 0.05));
     }
 
     .user-card--full {
@@ -94,7 +94,7 @@ function injectUserStyles() {
     .user-theme-select {
       padding: 8px 14px;
       border: 1px solid var(--border-default, #e0dcd5);
-      border-radius: var(--radius-sm, 6px);
+      border-radius: var(--radius-sm, 4px);
       background: var(--surface-secondary, #faf7f2);
       font-size: 0.85rem;
       color: var(--text-primary, #1a1a1a);
@@ -158,11 +158,11 @@ function injectUserStyles() {
 
     .user-confirm-dialog {
       background: var(--surface-primary, #ffffff);
-      border-radius: var(--radius-lg, 20px);
+      border-radius: var(--radius-lg, 12px);
       padding: 32px;
       max-width: 420px;
       width: 90%;
-      box-shadow: var(--shadow-lg, 0 8px 32px rgba(26,58,42,0.12));
+      box-shadow: var(--shadow-lg, 0 4px 16px rgba(44, 62, 48, 0.07));
       text-align: center;
     }
 
@@ -205,7 +205,7 @@ function injectUserStyles() {
       padding: 10px 14px;
       background: var(--surface-secondary, #faf7f2);
       border: 1px solid var(--border-light, #ece8e1);
-      border-radius: var(--radius-md, 12px);
+      border-radius: var(--radius-md, 8px);
       gap: 12px;
       flex-wrap: wrap;
     }
@@ -290,7 +290,7 @@ function injectUserStyles() {
       padding: 10px 14px;
       background: var(--surface-secondary, #faf7f2);
       border: 1px solid var(--border-light, #ece8e1);
-      border-radius: var(--radius-md, 12px);
+      border-radius: var(--radius-md, 8px);
       gap: 12px;
     }
 
@@ -306,7 +306,7 @@ function injectUserStyles() {
     .user-fav-go-btn {
       font-size: 0.78rem;
       padding: 6px 14px;
-      border-radius: var(--radius-sm, 6px);
+      border-radius: var(--radius-sm, 4px);
       border: 1px solid var(--color-amber, #c4956a);
       background: transparent;
       color: var(--color-amber, #c4956a);
@@ -323,7 +323,7 @@ function injectUserStyles() {
     .user-storage-info {
       padding: 16px;
       background: var(--surface-secondary, #faf7f2);
-      border-radius: var(--radius-md, 12px);
+      border-radius: var(--radius-md, 8px);
       border: 1px solid var(--border-light, #ece8e1);
     }
 
@@ -371,12 +371,12 @@ function injectUserStyles() {
       background: var(--color-deep, #1a3a2a);
       color: var(--text-inverse, #ffffff);
       padding: 12px 24px;
-      border-radius: var(--radius-md, 12px);
+      border-radius: var(--radius-md, 8px);
       font-size: 0.88rem;
       font-weight: 500;
       z-index: 2000;
       animation: slideUp 0.3s ease, fadeOut 0.3s ease 1.7s forwards;
-      box-shadow: var(--shadow-lg, 0 8px 32px rgba(26,58,42,0.12));
+      box-shadow: var(--shadow-lg, 0 4px 16px rgba(44, 62, 48, 0.07));
     }
 
     @keyframes fadeOut {
@@ -403,20 +403,20 @@ function injectUserStyles() {
       gap: 16px;
       padding: 20px;
       background: var(--surface-primary, #fff);
-      border-radius: var(--radius-lg, 20px);
-      box-shadow: var(--shadow-sm, 0 1px 3px rgba(26,58,42,0.06));
+      border-radius: var(--radius-lg, 12px);
+      box-shadow: var(--shadow-sm, 0 1px 3px rgba(44, 62, 48, 0.05));
       margin-bottom: 16px;
       cursor: pointer;
       transition: box-shadow 0.2s;
     }
     .user-profile-compact:active {
-      box-shadow: var(--shadow-md, 0 2px 8px rgba(26,58,42,0.1));
+      box-shadow: var(--shadow-md, 0 2px 8px rgba(44, 62, 48, 0.06));
     }
     .user-profile-avatar {
       width: 56px;
       height: 56px;
       border-radius: 50%;
-      background: linear-gradient(135deg, var(--color-sage, #5a7d5c), var(--color-amber, #c4956a));
+      background: var(--color-sage, #5a7d5c);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -490,8 +490,8 @@ function injectUserStyles() {
       align-items: center;
       gap: 4px;
       padding: 1px 8px;
-      border-radius: 10px;
-      background: linear-gradient(135deg, rgba(196, 149, 106, 0.12), rgba(90, 125, 92, 0.12));
+      border-radius: 8px;
+      background: rgba(196, 149, 106, 0.12);
       color: var(--color-amber-700, #8a5a2e);
       font-weight: 600;
       font-size: 0.76rem;
@@ -499,7 +499,7 @@ function injectUserStyles() {
       white-space: nowrap;
     }
     .user-profile-meta-points[data-low="true"] {
-      background: linear-gradient(135deg, rgba(255, 107, 107, 0.12), rgba(255, 165, 100, 0.12));
+      background: rgba(255, 107, 107, 0.12);
       color: #c0392b;
       border-color: rgba(255, 107, 107, 0.35);
     }
@@ -509,7 +509,7 @@ function injectUserStyles() {
     .user-profile-badge {
       font-size: 0.68rem;
       padding: 2px 8px;
-      border-radius: 10px;
+      border-radius: 8px;
       background: var(--color-sage, #5a7d5c);
       color: #fff;
       margin-left: 6px;
@@ -524,10 +524,10 @@ function injectUserStyles() {
     }
     .user-quick-item {
       background: var(--surface-primary, #fff);
-      border-radius: var(--radius-md, 12px);
+      border-radius: var(--radius-md, 8px);
       padding: 14px 8px;
       text-align: center;
-      box-shadow: var(--shadow-sm, 0 1px 3px rgba(26,58,42,0.06));
+      box-shadow: var(--shadow-sm, 0 1px 3px rgba(44, 62, 48, 0.05));
       cursor: pointer;
       transition: transform 0.15s;
     }
@@ -546,8 +546,8 @@ function injectUserStyles() {
     /* 折叠面板 */
     .user-accordion {
       background: var(--surface-primary, #fff);
-      border-radius: var(--radius-lg, 20px);
-      box-shadow: var(--shadow-sm, 0 1px 3px rgba(26,58,42,0.06));
+      border-radius: var(--radius-lg, 12px);
+      box-shadow: var(--shadow-sm, 0 1px 3px rgba(44, 62, 48, 0.05));
       margin-bottom: 12px;
       overflow: hidden;
     }
@@ -558,8 +558,8 @@ function injectUserStyles() {
       flex-direction: column;
       gap: 2px;
       background: var(--surface-primary, #fff);
-      border-radius: var(--radius-lg, 20px);
-      box-shadow: var(--shadow-sm, 0 1px 3px rgba(26,58,42,0.06));
+      border-radius: var(--radius-lg, 12px);
+      box-shadow: var(--shadow-sm, 0 1px 3px rgba(44, 62, 48, 0.05));
       overflow: hidden;
       margin-bottom: 16px;
     }
@@ -620,7 +620,7 @@ function injectUserStyles() {
     .user-accordion-icon {
       width: 36px;
       height: 36px;
-      border-radius: 10px;
+      border-radius: 8px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -683,7 +683,7 @@ function injectUserStyles() {
     .user-ach-chip {
       flex-shrink: 0;
       padding: 8px 14px;
-      border-radius: 20px;
+      border-radius: 16px;
       background: var(--surface-secondary, #faf7f2);
       border: 1px solid var(--border-light, #ece8e1);
       font-size: 0.78rem;
@@ -918,7 +918,7 @@ function renderProfilePanel(container) {
   var points = (typeof window.getPoints === 'function') ? window.getPoints() : _POINTS_DEFAULTS.BASE;
   var levelInfo = (typeof window.getPointsLevel === 'function')
     ? window.getPointsLevel(points)
-    : { label: '基本信任', title: '基本信任', color: '#5a7d5c', icon: '👍' };
+    : { label: '基本信任', title: '基本信任', color: '#5a7d5c' };
   var ptsPercent = levelInfo.nextAt ? Math.round(levelInfo.progress * 100) : 100;
 
   var upgradeHint = '';
@@ -938,7 +938,7 @@ function renderProfilePanel(container) {
         <div style="font-family:var(--font-serif,'Noto Serif SC',serif);font-size:1.3rem;font-weight:700;color:var(--color-deep,#1a3a2a);margin-bottom:4px;">${escapeHtml(displayName || '用户')}</div>
         ${username && username !== displayName ? '<div style="font-size:0.82rem;color:var(--text-muted,#8a8a8a);margin-bottom:8px;">@' + escapeHtml(username) + '</div>' : ''}
         <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
-          <span style="display:inline-block;padding:3px 12px;border-radius:9999px;font-size:0.78rem;font-weight:600;color:#fff;background:${groupColor};">${escapeHtml(groupLabel)}</span>
+          <span style="display:inline-block;padding:3px 12px;border-radius:16px;font-size:0.78rem;font-weight:600;color:#fff;background:${groupColor};">${escapeHtml(groupLabel)}</span>
           ${emailBadge}
         </div>
         ${upgradeHint}
@@ -948,11 +948,11 @@ function renderProfilePanel(container) {
           <span style="font-size:0.85rem;font-weight:600;color:var(--text-primary,#1a1a1a);">信用指数</span>
           <span style="font-size:0.85rem;font-weight:700;color:${levelInfo.color};" id="user-points-score">${points}</span>
         </div>
-        <div style="height:8px;background:var(--border-light,#ece8e1);border-radius:9999px;overflow:hidden;margin-bottom:6px;">
-          <div id="user-points-bar" style="width:${ptsPercent}%;height:100%;background:${levelInfo.color};border-radius:9999px;transition:width 0.4s ease;"></div>
+        <div style="height:8px;background:var(--border-light,#ece8e1);border-radius:16px;overflow:hidden;margin-bottom:6px;">
+          <div id="user-points-bar" style="width:${ptsPercent}%;height:100%;background:${levelInfo.color};border-radius:16px;transition:width 0.4s ease;"></div>
         </div>
         <div style="display:flex;align-items:center;justify-content:space-between;">
-          <span style="font-size:0.78rem;color:var(--text-muted,#8a8a8a);" id="user-points-level">${levelInfo.icon} ${levelInfo.title}</span>
+          <span style="font-size:0.78rem;color:var(--text-muted,#8a8a8a);" id="user-points-level">${levelInfo.title}</span>
           <span style="font-size:0.75rem;color:var(--text-muted,#8a8a8a);">信用</span>
         </div>
       </div>
@@ -972,7 +972,7 @@ function renderProfilePanel(container) {
         barEl.style.width = (lv.nextAt ? Math.round(lv.progress * 100) : 100) + '%';
         barEl.style.background = lv.color;
       }
-      if (levelEl && lv) levelEl.textContent = lv.icon + ' ' + lv.title;
+      if (levelEl && lv) levelEl.textContent = lv.title;
     }).catch(function() {});
   }
 
@@ -997,7 +997,7 @@ function renderAccountActions(container) {
     <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:16px;">
       <button id="userForceLogoutBtn" style="
         display:inline-flex;align-items:center;gap:8px;
-        padding:12px 28px;border:1.5px solid var(--color-amber,#c4956a);border-radius:20px;
+        padding:12px 28px;border:1.5px solid var(--color-amber,#c4956a);border-radius:16px;
         background:transparent;color:var(--color-amber,#c4956a);
         font-size:0.9rem;font-weight:600;cursor:pointer;
         transition:all 0.2s ease;
@@ -1006,7 +1006,7 @@ function renderAccountActions(container) {
       </button>
       <button id="userDeleteAccountBtn" style="
         display:inline-flex;align-items:center;gap:8px;
-        padding:12px 28px;border:1.5px solid var(--color-error,#c0553a);border-radius:20px;
+        padding:12px 28px;border:1.5px solid var(--color-error,#c0553a);border-radius:16px;
         background:transparent;color:var(--color-error,#c0553a);
         font-size:0.9rem;font-weight:600;cursor:pointer;
         transition:all 0.2s ease;
@@ -1036,7 +1036,7 @@ function renderSettingsPanel(container) {
   // 题库数据源：'cloud' 云端同步（默认）/ 'local' 本地题库（不发 Supabase 请求）
   const qSource = (typeof loadSetting === 'function') ? loadSetting('question_source', 'cloud') : 'cloud';
   var avatarUrl = (typeof getAvatarUrl === 'function') ? getAvatarUrl() : null;
-  var avatarHtml = avatarUrl ? '<img src="' + avatarUrl + '" alt="头像">' : '👤';
+  var avatarHtml = avatarUrl ? '<img src="' + avatarUrl + '" alt="头像">' : '';
 
   // 已保存的 API Key 配置
   var apiKeyConfig = _loadApiKeyConfig();
@@ -1123,14 +1123,14 @@ function renderSettingsPanel(container) {
         <div>
           <div class="user-setting-label">API Key</div>
           <div style="display:flex;gap:8px;margin-top:6px;">
-            <input type="password" id="aiApiKeyInput" placeholder="sk-..." value="${apiKeyConfig.apiKey ? (apiKeyConfig.apiKey.length > 4 ? '****' + apiKeyConfig.apiKey.slice(-4) : '****') : ''}" style="flex:1;padding:10px 12px;border:1px solid var(--border-light,#e3e0d8);border-radius:10px;font-size:0.88rem;font-family:var(--font-mono,monospace);background:var(--surface-primary,#fff);color:var(--text-primary,#1a1a1a);outline:none;" data-has-key="${apiKeyConfig.apiKey ? '1' : '0'}">
+            <input type="password" id="aiApiKeyInput" placeholder="sk-..." value="${apiKeyConfig.apiKey ? (apiKeyConfig.apiKey.length > 4 ? '****' + apiKeyConfig.apiKey.slice(-4) : '****') : ''}" style="flex:1;padding:10px 12px;border:1px solid var(--border-light,#e3e0d8);border-radius:8px;font-size:0.88rem;font-family:var(--font-mono,monospace);background:var(--surface-primary,#fff);color:var(--text-primary,#1a1a1a);outline:none;" data-has-key="${apiKeyConfig.apiKey ? '1' : '0'}">
             <button id="aiKeyToggleBtn" class="btn btn-sm btn-secondary" style="padding:0 14px;">显示</button>
           </div>
         </div>
 
         <div>
           <div class="user-setting-label">模型名称（可选）</div>
-          <input type="text" id="aiModelInput" placeholder="留空使用服务商默认推荐模型" value="${escapeHtml(apiKeyConfig.model || '')}" style="width:100%;margin-top:6px;padding:10px 12px;border:1px solid var(--border-light,#e3e0d8);border-radius:10px;font-size:0.84rem;background:var(--surface-primary,#fff);color:var(--text-primary,#1a1a1a);outline:none;">
+          <input type="text" id="aiModelInput" placeholder="留空使用服务商默认推荐模型" value="${escapeHtml(apiKeyConfig.model || '')}" style="width:100%;margin-top:6px;padding:10px 12px;border:1px solid var(--border-light,#e3e0d8);border-radius:8px;font-size:0.84rem;background:var(--surface-primary,#fff);color:var(--text-primary,#1a1a1a);outline:none;">
         </div>
 
         <div>
@@ -1149,40 +1149,40 @@ function renderSettingsPanel(container) {
         <div id="aiKeyTestResult" style="font-size:0.78rem;color:var(--text-muted,#8a8a8a);min-height:18px;"></div>
 
         <!-- 今日用量 -->
-        <div style="padding:10px 12px;background:rgba(90,125,92,0.06);border-radius:10px;font-size:0.8rem;color:var(--text-secondary,#4a4a4a);">
+        <div style="padding:10px 12px;background:rgba(90,125,92,0.06);border-radius:8px;font-size:0.8rem;color:var(--text-secondary,#4a4a4a);">
           <strong>今日用量：</strong> ${dailyUsage.count} / ${_AI_DAILY_LIMIT} 次
-          <div style="margin-top:6px;height:6px;background:rgba(0,0,0,0.08);border-radius:3px;overflow:hidden;">
+          <div style="margin-top:6px;height:6px;background:rgba(0,0,0,0.08);border-radius:2px;overflow:hidden;">
             <div style="width:${Math.min(100, dailyUsage.count / _AI_DAILY_LIMIT * 100)}%;height:100%;background:${dailyUsage.count >= _AI_DAILY_LIMIT ? '#e53e3e' : 'var(--color-sage,#5a7d5c)'};transition:width .3s;"></div>
           </div>
           ${dailyUsage.count >= _AI_DAILY_LIMIT ? '<div style="color:var(--color-error,#c0553a);margin-top:6px;font-size:0.76rem;">今日额度已用完，明日 0:00 重置</div>' : ''}
         </div>
 
         <!-- 申请指引 -->
-        <details style="margin-top:8px;border:1px solid var(--border-light,#ece8e1);border-radius:10px;padding:0;">
-          <summary style="padding:10px 14px;cursor:pointer;font-size:0.84rem;font-weight:600;color:var(--color-sage,#3a6b4a);">📖 如何免费申请 API Key？</summary>
+        <details style="margin-top:8px;border:1px solid var(--border-light,#ece8e1);border-radius:8px;padding:0;">
+          <summary style="padding:10px 14px;cursor:pointer;font-size:0.84rem;font-weight:600;color:var(--color-sage,#3a6b4a);">如何免费申请 API Key？</summary>
           <div style="padding:0 14px 14px;font-size:0.8rem;line-height:1.75;color:var(--text-secondary,#4a4a4a);">
             <p style="margin:8px 0 4px;"><strong>1. DeepSeek（推荐 · 性价比最高）</strong></p>
-            <p style="margin:0 0 8px;">访问 <a href="https://platform.deepseek.com" target="_blank" style="color:var(--color-amber,#c4956a);">platform.deepseek.com</a> → 注册 → 顶部「API Keys」创建。新用户送 500 万 tokens 免费额度，1 元可买 100 万 tokens。模型填 <code style="background:rgba(0,0,0,0.05);padding:1px 5px;border-radius:3px;">deepseek-chat</code></p>
+            <p style="margin:0 0 8px;">访问 <a href="https://platform.deepseek.com" target="_blank" style="color:var(--color-amber,#c4956a);">platform.deepseek.com</a> → 注册 → 顶部「API Keys」创建。新用户送 500 万 tokens 免费额度，1 元可买 100 万 tokens。模型填 <code style="background:rgba(0,0,0,0.05);padding:1px 5px;border-radius:2px;">deepseek-chat</code></p>
 
             <p style="margin:8px 0 4px;"><strong>2. 智谱 GLM（免费额度大）</strong></p>
-            <p style="margin:0 0 8px;">访问 <a href="https://open.bigmodel.cn" target="_blank" style="color:var(--color-amber,#c4956a);">open.bigmodel.cn</a> → 注册 → 「API Keys」创建。新用户送 2000 万 tokens 免费额度。模型填 <code style="background:rgba(0,0,0,0.05);padding:1px 5px;border-radius:3px;">glm-4-flash</code>（免费）或 <code style="background:rgba(0,0,0,0.05);padding:1px 5px;border-radius:3px;">glm-4-plus</code></p>
+            <p style="margin:0 0 8px;">访问 <a href="https://open.bigmodel.cn" target="_blank" style="color:var(--color-amber,#c4956a);">open.bigmodel.cn</a> → 注册 → 「API Keys」创建。新用户送 2000 万 tokens 免费额度。模型填 <code style="background:rgba(0,0,0,0.05);padding:1px 5px;border-radius:2px;">glm-4-flash</code>（免费）或 <code style="background:rgba(0,0,0,0.05);padding:1px 5px;border-radius:2px;">glm-4-plus</code></p>
 
             <p style="margin:8px 0 4px;"><strong>3. 阿里通义千问</strong></p>
-            <p style="margin:0 0 8px;">访问 <a href="https://dashscope.console.aliyun.com" target="_blank" style="color:var(--color-amber,#c4956a);">dashscope.console.aliyun.com</a> → 注册 → 「API-KEY 管理」。新用户送 100 万 tokens 免费额度。模型填 <code style="background:rgba(0,0,0,0.05);padding:1px 5px;border-radius:3px;">qwen-turbo</code></p>
+            <p style="margin:0 0 8px;">访问 <a href="https://dashscope.console.aliyun.com" target="_blank" style="color:var(--color-amber,#c4956a);">dashscope.console.aliyun.com</a> → 注册 → 「API-KEY 管理」。新用户送 100 万 tokens 免费额度。模型填 <code style="background:rgba(0,0,0,0.05);padding:1px 5px;border-radius:2px;">qwen-turbo</code></p>
 
             <p style="margin:8px 0 4px;"><strong>4. 月之暗面 Kimi</strong></p>
-            <p style="margin:0 0 8px;">访问 <a href="https://platform.moonshot.cn" target="_blank" style="color:var(--color-amber,#c4956a);">platform.moonshot.cn</a> → 注册 → 「API Key 管理」。新用户送 15 元体验金。模型填 <code style="background:rgba(0,0,0,0.05);padding:1px 5px;border-radius:3px;">moonshot-v1-8k</code></p>
+            <p style="margin:0 0 8px;">访问 <a href="https://platform.moonshot.cn" target="_blank" style="color:var(--color-amber,#c4956a);">platform.moonshot.cn</a> → 注册 → 「API Key 管理」。新用户送 15 元体验金。模型填 <code style="background:rgba(0,0,0,0.05);padding:1px 5px;border-radius:2px;">moonshot-v1-8k</code></p>
 
             <p style="margin:8px 0 4px;"><strong>5. NVIDIA NIM（1000 次免费）</strong></p>
-            <p style="margin:0 0 8px;">访问 <a href="https://build.nvidia.com" target="_blank" style="color:var(--color-amber,#c4956a);">build.nvidia.com</a> → 注册 → 任选模型 → 右侧「Get API Key」。每个账号 1000 次免费调用，可调用 Llama 3.3 70B 等开源大模型。模型填 <code style="background:rgba(0,0,0,0.05);padding:1px 5px;border-radius:3px;">meta/llama-3.3-70b-instruct</code></p>
+            <p style="margin:0 0 8px;">访问 <a href="https://build.nvidia.com" target="_blank" style="color:var(--color-amber,#c4956a);">build.nvidia.com</a> → 注册 → 任选模型 → 右侧「Get API Key」。每个账号 1000 次免费调用，可调用 Llama 3.3 70B 等开源大模型。模型填 <code style="background:rgba(0,0,0,0.05);padding:1px 5px;border-radius:2px;">meta/llama-3.3-70b-instruct</code></p>
 
             <p style="margin:8px 0 4px;"><strong>6. 硅基流动 SiliconFlow（多模型免费）</strong></p>
-            <p style="margin:0 0 8px;">访问 <a href="https://cloud.siliconflow.cn" target="_blank" style="color:var(--color-amber,#c4956a);">cloud.siliconflow.cn</a> → 注册 → 「API 密钥」。新用户送 14 元额度，Qwen2.5-7B 等小模型永久免费。模型填 <code style="background:rgba(0,0,0,0.05);padding:1px 5px;border-radius:3px;">Qwen/Qwen2.5-7B-Instruct</code></p>
+            <p style="margin:0 0 8px;">访问 <a href="https://cloud.siliconflow.cn" target="_blank" style="color:var(--color-amber,#c4956a);">cloud.siliconflow.cn</a> → 注册 → 「API 密钥」。新用户送 14 元额度，Qwen2.5-7B 等小模型永久免费。模型填 <code style="background:rgba(0,0,0,0.05);padding:1px 5px;border-radius:2px;">Qwen/Qwen2.5-7B-Instruct</code></p>
 
-            <p style="margin:10px 0 4px;padding-top:8px;border-top:1px dashed var(--border-light,#ece8e1);"><strong>🔒 隐私说明</strong></p>
+            <p style="margin:10px 0 4px;padding-top:8px;border-top:1px dashed var(--border-light,#ece8e1);"><strong>隐私说明</strong></p>
             <p style="margin:0;">API Key 仅保存在当前页面的内存中；若勾选「会话内记住」，会额外存入本标签页的 sessionStorage（关闭标签页即自动清除）。Key 不会上传服务器，也不会持久化到你浏览器的 localStorage 或磁盘，关闭浏览器后长期不留存。</p>
 
-            <p style="margin:10px 0 4px;"><strong>⚡ 用量限制</strong></p>
+            <p style="margin:10px 0 4px;"><strong>用量限制</strong></p>
             <p style="margin:0;">为避免滥用，每个用户每日限 ${_AI_DAILY_LIMIT} 次 AI 调用，0:00 自动重置。自定义 Key 用户同样受此限制。</p>
           </div>
         </details>
@@ -1191,7 +1191,7 @@ function renderSettingsPanel(container) {
 
     <!-- Bio 分计算器（六维 → Bio Score，随设置面板联动，主题复用站点变量） -->
     <div class="user-card">
-      <div class="user-card-title">🧬 Bio 分计算器</div>
+      <div class="user-card-title">Bio 分计算器</div>
       <div class="user-card-subtitle">输入六维属性（0-100）实时推演 Bio Score 总分与评级，公式与评级规则 100% 公开</div>
       <div id="userBioCalcEmbed" style="margin-top:12px;"></div>
     </div>
@@ -1575,12 +1575,12 @@ var _POINTS_DEFAULTS = {
 
 // 信任等级（由当前信用指数推导；指数越高，社区信任越高）
 var _POINTS_LEVELS = [
-  { min: 0,   label: '不受信任', title: '不受信任', color: '#c0553a', icon: '🚫' },
+  { min: 0,   label: '不受信任', title: '不受信任', color: '#c0553a' },
   { min: 10,  label: '极低信任', title: '极低信任', color: '#d47030', icon: '⚠️' },
-  { min: 30,  label: '有限信任', title: '有限信任', color: '#c49b30', icon: '🙂' },
-  { min: 50,  label: '基本信任', title: '基本信任', color: '#5a7d5c', icon: '👍' },
-  { min: 80,  label: '高度信任', title: '高度信任', color: '#3a8c5c', icon: '🌟' },
-  { min: 100, label: '极高信任', title: '极高信任', color: '#ffd700', icon: '💎' }
+  { min: 30,  label: '有限信任', title: '有限信任', color: '#c49b30' },
+  { min: 50,  label: '基本信任', title: '基本信任', color: '#5a7d5c' },
+  { min: 80,  label: '高度信任', title: '高度信任', color: '#3a8c5c' },
+  { min: 100, label: '极高信任', title: '极高信任', color: '#ffd700' }
 ];
 
 function _getPointsState() {
@@ -1681,7 +1681,6 @@ function getPointsLevel(points) {
     label: current.label,
     title: current.title,
     color: current.color,
-    icon: current.icon,
     min: curMin,
     nextAt: next ? nxtMin : null,
     progress: Math.round(progress * 1000) / 1000
@@ -2021,7 +2020,6 @@ function renderRecordsPanel(container) {
     // Issue #125（P3-22）：统一温暖空状态——生物主题 icon + 提示 + 行动按钮
     if (window.BioQuest && typeof window.BioQuest.emptyStateHTML === 'function') {
       html += window.BioQuest.emptyStateHTML({
-        icon: '🧪',
         title: '暂无学习记录',
         hint: '完成一次练习或考试后，记录会自动出现在这里',
         action: { label: '去练习', onClick: function () { if (typeof navigateTo === 'function') navigateTo('/practice'); } }
@@ -2029,7 +2027,6 @@ function renderRecordsPanel(container) {
     } else {
       html += `
         <div class="user-empty-state">
-          <div class="user-empty-state-icon">🧪</div>
           <p class="user-empty-state-text">暂无学习记录</p>
         </div>
       `;
@@ -2148,7 +2145,6 @@ function renderFavoritesPanel(container) {
     // Issue #125（P3-22）：统一温暖空状态——生物主题 icon + 提示 + 行动按钮
     if (window.BioQuest && typeof window.BioQuest.emptyStateHTML === 'function') {
       html += window.BioQuest.emptyStateHTML({
-        icon: '⭐',
         title: '暂无收藏题目',
         hint: '练习或浏览题库时点击「收藏」，题目就会出现在这里',
         action: { label: '去练习', onClick: function () { if (typeof navigateTo === 'function') navigateTo('/practice'); } }
@@ -2156,7 +2152,6 @@ function renderFavoritesPanel(container) {
     } else {
       html += `
         <div class="user-empty-state">
-          <div class="user-empty-state-icon">⭐</div>
           <p class="user-empty-state-text">暂无收藏题目</p>
         </div>
       `;
@@ -2263,7 +2258,7 @@ async function renderStreakPanel(container) {
     '<div class="user-card-subtitle">坚持学习，不断进步</div>' +
     '<div style="display:flex;align-items:center;gap:24px;margin-bottom:16px;">' +
       '<div style="text-align:center;">' +
-        '<div style="display:inline-flex;align-items:center;justify-content:center;width:2.5rem;height:2.5rem;border-radius:50%;background:linear-gradient(135deg,#ff6b35,#ff4444);color:#fff;font-size:1rem;font-weight:700;">' + (data.current_streak || 0) + '</div>' +
+        '<div style="display:inline-flex;align-items:center;justify-content:center;width:2.5rem;height:2.5rem;border-radius:50%;background:#ff6b35;color:#fff;font-size:1rem;font-weight:700;">' + (data.current_streak || 0) + '</div>' +
         '<div style="font-size:2rem;font-weight:700;color:var(--color-deep,#1a3a2a);">' + (data.current_streak || 0) + '</div>' +
         '<div style="font-size:0.75rem;color:var(--text-muted,#8a8a8a);">天连续打卡</div>' +
       '</div>' +
@@ -2275,7 +2270,7 @@ async function renderStreakPanel(container) {
     calHtml +
     (checkedToday ?
       '<div style="text-align:center;font-size:0.85rem;color:var(--color-sage,#3a8c5c);font-weight:600;">今日已打卡</div>' :
-      '<button id="userCheckInBtn" style="display:block;margin:0 auto;padding:10px 32px;background:linear-gradient(135deg,#3a8c5c,#2d6a47);color:#fff;border:none;border-radius:20px;cursor:pointer;font-size:0.9rem;font-weight:600;">立即打卡</button>'
+      '<button id="userCheckInBtn" style="display:block;margin:0 auto;padding:10px 32px;background:#3a8c5c;color:#fff;border:none;border-radius:16px;cursor:pointer;font-size:0.9rem;font-weight:600;">立即打卡</button>'
     ) +
   '</div>';
 
@@ -2337,7 +2332,7 @@ async function renderAchievementsPanel(container) {
     var t = tiers[tk];
     if (!t) return;
     var hasAny = tierStats[tk] > 0;
-    tierBarHtml += '<div title="' + t.label + '" style="flex:1;height:6px;border-radius:3px;background:' + (hasAny ? t.color : 'var(--border-light,#ece8e1)') + ';transition:background 0.3s;"></div>';
+    tierBarHtml += '<div title="' + t.label + '" style="flex:1;height:6px;border-radius:2px;background:' + (hasAny ? t.color : 'var(--border-light,#ece8e1)') + ';transition:background 0.3s;"></div>';
   });
   tierBarHtml += '</div>';
 
@@ -2422,10 +2417,10 @@ function renderUserPage(target) {
             <div style="font-size:0.9rem;color:var(--text-muted,#8a8a8a);line-height:1.7;margin-bottom:32px;">登录后即可查看学习记录、收藏夹和存储用量等个人数据</div>
             <button id="userLoginPromptBtn" style="
               display:inline-flex;align-items:center;gap:8px;
-              padding:14px 36px;border:none;border-radius:24px;
-              background:linear-gradient(135deg,var(--color-sage,#5a7d5c),var(--color-deep,#1a3a2a));
+              padding:14px 36px;border:none;border-radius:16px;
+              background:var(--color-sage,#5a7d5c);
               color:#fff;font-size:1rem;font-weight:600;cursor:pointer;
-              box-shadow:0 4px 16px rgba(26,58,42,0.2);
+              box-shadow:var(--shadow-lg);
               transition:all 0.2s ease;
             ">立即登录</button>
           </div>
@@ -2462,16 +2457,16 @@ function renderUserPage(target) {
           <div class="user-profile-info">
             <div class="user-profile-name">${escapeHtml(displayName)} <span class="user-profile-badge">${groupLabels[userGroup] || '会员'}</span></div>
             <div class="user-profile-meta">
-              <span class="user-profile-meta-points" id="userCompactPointsBadge" title="信用指数（CR）：社区对用户的信任程度，随时间衰减">⭐ 信用&nbsp;<span class="user-points-val">100</span></span>
+              <span class="user-profile-meta-points" id="userCompactPointsBadge" title="信用指数（CR）：社区对用户的信任程度，随时间衰减">信用&nbsp;<span class="user-points-val">100</span></span>
               <span class="user-profile-meta-arrow">点击查看仪表盘 →</span>
             </div>
           </div>
         </div>
 
         <!-- 我的密钥（用于教师添加学生） -->
-        <div class="user-key-card" style="margin:10px 0;padding:10px 14px;background:linear-gradient(135deg,rgba(90,125,92,0.06),rgba(196,149,106,0.06));border:1px solid var(--border-light,#ece8e1);border-radius:12px;display:flex;align-items:center;gap:10px;">
+        <div class="user-key-card" style="margin:10px 0;padding:10px 14px;background:rgba(90,125,92,0.06);border:1px solid var(--border-light,#ece8e1);border-radius:12px;display:flex;align-items:center;gap:10px;">
           <div style="flex:1;min-width:0;">
-            <div style="font-size:0.74rem;color:var(--text-muted,#8a8a8a);margin-bottom:2px;">🔑 我的密钥（教师添加学生时需要）</div>
+            <div style="font-size:0.74rem;color:var(--text-muted,#8a8a8a);margin-bottom:2px;">我的密钥（教师添加学生时需要）</div>
             <code id="user-my-key" style="font-family:var(--font-mono,monospace);font-size:0.86rem;color:var(--color-deep,#1a3a2a);font-weight:600;letter-spacing:0.5px;word-break:break-all;">${_getUserKey()}</code>
           </div>
           <button id="user-copy-key-btn" style="background:var(--color-sage,#5a7d5c);color:#fff;border:none;border-radius:8px;padding:6px 12px;font-size:0.78rem;cursor:pointer;flex-shrink:0;">复制</button>
@@ -2480,13 +2475,13 @@ function renderUserPage(target) {
         <!-- 快捷入口横排 -->
         <div class="user-quick-row">
           <div class="user-quick-item" data-on='["navigateTo","/analytics"]'>
-            <div class="user-quick-icon">📊</div><div class="user-quick-label">学习分析</div>
+            <div class="user-quick-label">学习分析</div>
           </div>
           <div class="user-quick-item" data-on='["navigateTo","/wrongbook"]'>
-            <div class="user-quick-icon">📕</div><div class="user-quick-label">错题与复盘</div>
+            <div class="user-quick-label">错题与复盘</div>
           </div>
           <div class="user-quick-item" data-on='["navigateTo","/community"]'>
-            <div class="user-quick-icon">💬</div><div class="user-quick-label">社区</div>
+            <div class="user-quick-label">社区</div>
           </div>
           <div class="user-quick-item" data-on='["navigateTo","/leaderboard"]'>
             <div class="user-quick-icon">🏆</div><div class="user-quick-label">排行</div>
@@ -2496,54 +2491,54 @@ function renderUserPage(target) {
         <!-- 功能列表（点击进入独立子页面） -->
         <div class="user-list-group" id="userListGroup">
           <div class="user-list-item" data-on='["_showUserSubPage","notifications"]'>
-            <div class="user-list-icon" style="background:#8a5ac4;">🔔</div>
+            
             <div class="user-list-info"><div class="user-list-title">通知</div><div class="user-list-desc">社区回帖和系统通知</div></div>
             <span class="user-notif-badge" id="userNotifBadge" style="display:none;">0</span>
             <svg class="user-list-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
           </div>
           <div class="user-list-item" data-on='["_showUserSubPage","streak"]'>
-            <div class="user-list-icon" style="background:#c4956a;">🔥</div>
+            
             <div class="user-list-info"><div class="user-list-title">打卡与成就</div><div class="user-list-desc">连续打卡天数与成就徽章</div></div>
             <svg class="user-list-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
           </div>
           <div class="user-list-item" data-on='["_showUserSubPage","records"]'>
-            <div class="user-list-icon" style="background:#5a7bc4;">📋</div>
+            
             <div class="user-list-info"><div class="user-list-title">学习记录</div><div class="user-list-desc">最近 20 条练习与考试记录</div></div>
             <svg class="user-list-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
           </div>
           <div class="user-list-item" data-on='["_showUserSubPage","favorites"]'>
-            <div class="user-list-icon" style="background:#c45a7a;">⭐</div>
+            
             <div class="user-list-info"><div class="user-list-title">收藏夹</div><div class="user-list-desc">已收藏的题目</div></div>
             <svg class="user-list-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
           </div>
           <div class="user-list-item" data-on='["_showUserSubPage","settings"]'>
-            <div class="user-list-icon" style="background:#5a7d5c;">⚙️</div>
+            
             <div class="user-list-info"><div class="user-list-title">设置</div><div class="user-list-desc">主题、字体大小偏好</div></div>
             <svg class="user-list-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
           </div>
           <div class="user-list-item" data-on='["_showUserSubPage","data"]'>
-            <div class="user-list-icon" style="background:#4a9c6a;">💾</div>
+            
             <div class="user-list-info"><div class="user-list-title">数据管理</div><div class="user-list-desc">导出、导入、清除学习数据</div></div>
             <svg class="user-list-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
           </div>
           <div class="user-list-item" data-on='["_showUserSubPage","storage"]'>
-            <div class="user-list-icon" style="background:#8a8a8a;">📦</div>
+            
             <div class="user-list-info"><div class="user-list-title">存储与账号</div><div class="user-list-desc">存储用量与账号操作</div></div>
             <svg class="user-list-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
           </div>
           <div class="user-list-item" data-on='["_userJoinClass"]'>
-            <div class="user-list-icon" style="background:#5a7bc4;">🏫</div>
+            
             <div class="user-list-info"><div class="user-list-title">加入班级</div><div class="user-list-desc">输入班级码和密钥加入教师班级</div></div>
             <svg class="user-list-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
           </div>
           <div class="user-list-item" data-on='["navigateTo","/credit"]'>
-            <div class="user-list-icon" style="background:#c4956a;">⭐</div>
+            
             <div class="user-list-info"><div class="user-list-title">信用中心</div><div class="user-list-desc">信用指数、信任等级、明细与社区信任排行</div></div>
             <svg class="user-list-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
           </div>
           ${userGroup === 'admin' ? `
           <div class="user-list-item" data-on='["_userAdminEntry"]'>
-            <div class="user-list-icon" style="background:#ff6b6b;">🛡️</div>
+            
             <div class="user-list-info"><div class="user-list-title">管理员入口</div><div class="user-list-desc">管理后台（需输入管理员密码）</div></div>
             <svg class="user-list-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
           </div>` : ''}
@@ -2660,7 +2655,7 @@ function _showUserSubPage(key) {
         bodyEl.innerHTML = '<div id="userSettingsContainer"></div>';
         renderSettingsPanel(document.getElementById('userSettingsContainer'));
       } else if (key === 'data') {
-        bodyEl.innerHTML = '<div id="userDataContainer"></div><div style="margin-top:16px;text-align:center;"><button data-on=\'["generateShareCard"]\' style="display:inline-flex;align-items:center;gap:8px;padding:10px 24px;border:none;border-radius:20px;background:linear-gradient(135deg,#3a8c5c,#2d6a47);color:#fff;font-size:0.85rem;font-weight:600;cursor:pointer;box-shadow:0 2px 8px rgba(26,58,42,0.15);">生成学习报告卡片</button></div>';
+        bodyEl.innerHTML = '<div id="userDataContainer"></div><div style="margin-top:16px;text-align:center;"><button data-on=\'["generateShareCard"]\' style="display:inline-flex;align-items:center;gap:8px;padding:10px 24px;border:none;border-radius:16px;background:#3a8c5c;color:#fff;font-size:0.85rem;font-weight:600;cursor:pointer;box-shadow:var(--shadow-md);">生成学习报告卡片</button></div>';
         renderDataManagement(document.getElementById('userDataContainer'));
       } else if (key === 'storage') {
         bodyEl.innerHTML = '<div id="userStorageContainer"></div><div id="userAccountActionsContainer" style="margin-top:16px;text-align:center;"></div>';
@@ -2714,12 +2709,11 @@ function renderNotificationsPanel(bodyEl) {
     '<button class="user-notif-clear" data-on=\'["_cspClearNotifs"]\'>清空</button>' +
     '</div>';
   if (!list.length) {
-    html += '<div class="user-empty-state" style="padding:48px 20px;text-align:center;color:var(--text-muted,#8a8a8a);"><div style="font-size:2.2rem;margin-bottom:10px;">🔕</div><p>暂无通知</p><p style="font-size:0.82rem;margin-top:6px;">当有人回复你的社区帖子时，会在这里提醒你</p></div>';
+    html += '<div class="user-empty-state" style="padding:48px 20px;text-align:center;color:var(--text-muted,#8a8a8a);"><p>暂无通知</p><p style="font-size:0.82rem;margin-top:6px;">当有人回复你的社区帖子时，会在这里提醒你</p></div>';
   } else {
     html += '<div class="notif-list">' + list.map(function (n) {
       var time = formatNotifTime(n.time);
       return '<div class="notif-item">' +
-        '<div class="notif-icon">💬</div>' +
         '<div class="notif-body">' +
           '<div class="notif-title">' + escapeHtml(n.commenter || '同学') + ' 回复了你</div>' +
           '<div class="notif-post">' + escapeHtml(n.postPreview || '你的帖子') + '</div>' +
@@ -2767,11 +2761,11 @@ function _userAdminEntry() {
   var overlay = document.createElement('div');
   overlay.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:10030;display:flex;align-items:center;justify-content:center;padding:20px;';
   overlay.innerHTML =
-    '<div style="background:var(--surface-primary,#fff);border-radius:14px;padding:24px;width:min(380px,92vw);box-shadow:0 8px 32px rgba(0,0,0,0.18);">' +
-      '<div style="font-family:var(--font-serif,"Noto Serif SC",serif);font-size:1.1rem;font-weight:700;color:var(--color-deep,#1a3a2a);margin-bottom:6px;">🛡️ 管理员登录</div>' +
+    '<div style="background:var(--surface-primary,#fff);border-radius:12px;padding:24px;width:min(380px,92vw);box-shadow:var(--shadow-floating);">' +
+      '<div style="font-family:var(--font-serif,"Noto Serif SC",serif);font-size:1.1rem;font-weight:700;color:var(--color-deep,#1a3a2a);margin-bottom:6px;">管理员登录</div>' +
       '<div style="font-size:0.82rem;color:var(--text-muted,#8a8a8a);margin-bottom:14px;">使用 Supabase 管理员账号（邮箱 + 密码）登录后台</div>' +
-      '<input type="email" id="user-admin-email" style="width:100%;box-sizing:border-box;padding:10px 14px;border:1px solid var(--border-light,#e3e0d8);border-radius:10px;font-size:0.92rem;outline:none;background:var(--surface-primary,#fff);color:var(--text-primary,#1a2f1d);margin-bottom:10px;" placeholder="管理员邮箱" autocomplete="username">' +
-      '<input type="password" id="user-admin-pwd" style="width:100%;box-sizing:border-box;padding:10px 14px;border:1px solid var(--border-light,#e3e0d8);border-radius:10px;font-size:0.92rem;outline:none;background:var(--surface-primary,#fff);color:var(--text-primary,#1a2f1d);" placeholder="密码" autocomplete="current-password">' +
+      '<input type="email" id="user-admin-email" style="width:100%;box-sizing:border-box;padding:10px 14px;border:1px solid var(--border-light,#e3e0d8);border-radius:8px;font-size:0.92rem;outline:none;background:var(--surface-primary,#fff);color:var(--text-primary,#1a2f1d);margin-bottom:10px;" placeholder="管理员邮箱" autocomplete="username">' +
+      '<input type="password" id="user-admin-pwd" style="width:100%;box-sizing:border-box;padding:10px 14px;border:1px solid var(--border-light,#e3e0d8);border-radius:8px;font-size:0.92rem;outline:none;background:var(--surface-primary,#fff);color:var(--text-primary,#1a2f1d);" placeholder="密码" autocomplete="current-password">' +
       '<div id="user-admin-err" style="font-size:0.78rem;color:var(--color-error,#c0553a);margin-top:6px;display:none;">登录失败：请检查邮箱/密码，或该账号无管理员权限</div>' +
       '<div style="display:flex;gap:10px;justify-content:flex-end;margin-top:18px;">' +
         '<button class="teacher-btn teacher-btn-ghost teacher-btn-sm" id="user-admin-cancel">取消</button>' +
@@ -2829,13 +2823,13 @@ function _userJoinClass() {
   var overlay = document.createElement('div');
   overlay.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:10030;display:flex;align-items:center;justify-content:center;padding:20px;';
   overlay.innerHTML =
-    '<div style="background:var(--surface-primary,#fff);border-radius:14px;padding:24px;width:min(420px,92vw);box-shadow:0 8px 32px rgba(0,0,0,0.18);">' +
-      '<div style="font-family:var(--font-serif,"Noto Serif SC",serif);font-size:1.1rem;font-weight:700;color:var(--color-deep,#1a3a2a);margin-bottom:6px;">🏫 加入班级</div>' +
+    '<div style="background:var(--surface-primary,#fff);border-radius:12px;padding:24px;width:min(420px,92vw);box-shadow:var(--shadow-floating);">' +
+      '<div style="font-family:var(--font-serif,"Noto Serif SC",serif);font-size:1.1rem;font-weight:700;color:var(--color-deep,#1a3a2a);margin-bottom:6px;">加入班级</div>' +
       '<div style="font-size:0.82rem;color:var(--text-muted,#8a8a8a);margin-bottom:14px;">输入教师的班级码和你的密钥以加入班级</div>' +
       '<label style="font-size:0.8rem;color:var(--text-secondary,#4a4a4a);display:block;margin-bottom:4px;">班级码（教师的密钥）</label>' +
-      '<input type="text" id="join-class-code" style="width:100%;box-sizing:border-box;padding:10px 14px;border:1px solid var(--border-light,#e3e0d8);border-radius:10px;font-size:0.92rem;outline:none;background:var(--surface-primary,#fff);color:var(--text-primary,#1a2f1d);margin-bottom:12px;text-transform:uppercase;" placeholder="8 位字母数字" autocomplete="off">' +
+      '<input type="text" id="join-class-code" style="width:100%;box-sizing:border-box;padding:10px 14px;border:1px solid var(--border-light,#e3e0d8);border-radius:8px;font-size:0.92rem;outline:none;background:var(--surface-primary,#fff);color:var(--text-primary,#1a2f1d);margin-bottom:12px;text-transform:uppercase;" placeholder="8 位字母数字" autocomplete="off">' +
       '<label style="font-size:0.8rem;color:var(--text-secondary,#4a4a4a);display:block;margin-bottom:4px;">我的密钥</label>' +
-      '<input type="text" id="join-my-key" style="width:100%;box-sizing:border-box;padding:10px 14px;border:1px solid var(--border-light,#e3e0d8);border-radius:10px;font-size:0.92rem;outline:none;background:var(--surface-primary,#fff);color:var(--text-primary,#1a2f1d);text-transform:uppercase;" placeholder="你的 8 位密钥" value="' + escapeHtml(myKey) + '" autocomplete="off">' +
+      '<input type="text" id="join-my-key" style="width:100%;box-sizing:border-box;padding:10px 14px;border:1px solid var(--border-light,#e3e0d8);border-radius:8px;font-size:0.92rem;outline:none;background:var(--surface-primary,#fff);color:var(--text-primary,#1a2f1d);text-transform:uppercase;" placeholder="你的 8 位密钥" value="' + escapeHtml(myKey) + '" autocomplete="off">' +
       '<div id="join-err" style="font-size:0.78rem;color:var(--color-error,#c0553a);margin-top:8px;display:none;"></div>' +
       '<div style="display:flex;gap:10px;justify-content:flex-end;margin-top:18px;">' +
         '<button class="teacher-btn teacher-btn-ghost teacher-btn-sm" id="join-cancel">取消</button>' +

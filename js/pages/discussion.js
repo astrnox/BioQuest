@@ -28,13 +28,13 @@ function injectDiscussionStyles() {
 
     /* 顶部模式切换 */
     '.disc-mode-bar { display:flex; gap:8px; justify-content:center; margin-bottom:12px; flex-shrink:0; }',
-    '.disc-mode-btn { padding:8px 18px; border:1.5px solid var(--border-light,#ece8e1); background:var(--surface-primary,#fff); border-radius:20px; cursor:pointer; font-size:0.84rem; font-weight:600; color:var(--text-secondary,#4a4a4a); transition:all .15s; }',
+    '.disc-mode-btn { padding:8px 18px; border:1.5px solid var(--border-light,#ece8e1); background:var(--surface-primary,#fff); border-radius:16px; cursor:pointer; font-size:0.84rem; font-weight:600; color:var(--text-secondary,#4a4a4a); transition:all .15s; }',
     '.disc-mode-btn.active { background:var(--color-sage,#5a7d5c); color:#fff; border-color:var(--color-sage,#5a7d5c); }',
 
     /* 智能体选择条 */
-    '.disc-agent-bar { display:flex; gap:8px; flex-wrap:wrap; justify-content:center; align-items:center; margin-bottom:12px; flex-shrink:0; padding:10px; background:var(--surface-primary,#fff); border-radius:14px; box-shadow:0 1px 4px rgba(26,58,42,0.06); }',
+    '.disc-agent-bar { display:flex; gap:8px; flex-wrap:wrap; justify-content:center; align-items:center; margin-bottom:12px; flex-shrink:0; padding:10px; background:var(--surface-primary,#fff); border-radius:12px; box-shadow:var(--shadow-sm); }',
     '.disc-agent-bar-label { font-size:0.76rem; color:var(--text-muted,#8a8a8a); margin-right:4px; }',
-    '.disc-agent-chip { display:inline-flex; align-items:center; gap:5px; padding:5px 12px; border-radius:14px; border:1.5px solid var(--border-light,#ece8e1); background:var(--surface-secondary,#faf7f2); font-size:0.78rem; cursor:pointer; transition:all .15s; user-select:none; }',
+    '.disc-agent-chip { display:inline-flex; align-items:center; gap:5px; padding:5px 12px; border-radius:12px; border:1.5px solid var(--border-light,#ece8e1); background:var(--surface-secondary,#faf7f2); font-size:0.78rem; cursor:pointer; transition:all .15s; user-select:none; }',
     '.disc-agent-chip.active { border-color:var(--color-sage,#5a7d5c); background:rgba(90,125,92,0.12); color:var(--color-sage,#3a6b4a); font-weight:600; }',
     '.disc-agent-chip:active { transform:scale(0.95); }',
     '.disc-agent-chip--add { border-style:dashed; color:var(--color-amber,#c4956a); border-color:var(--color-amber,#c4956a); }',
@@ -47,13 +47,13 @@ function injectDiscussionStyles() {
 
     /* 用户提问 */
     '.discussion-user { display:flex; justify-content:flex-end; margin-bottom:14px; }',
-    '.discussion-user-bubble { background:var(--color-sage,#5a7d5c); color:#fff; padding:10px 16px; border-radius:16px 4px 16px 16px; font-size:0.9rem; line-height:1.6; max-width:80%; word-wrap:break-word; overflow-wrap:break-word; box-shadow:0 1px 3px rgba(26,58,42,0.08); }',
+    '.discussion-user-bubble { background:var(--color-sage,#5a7d5c); color:#fff; padding:10px 16px; border-radius:16px 4px 16px 16px; font-size:0.9rem; line-height:1.6; max-width:80%; word-wrap:break-word; overflow-wrap:break-word; box-shadow:var(--shadow-sm); }',
 
     /* 群聊：智能体气泡（横向，头像+名字在左，内容在右） */
     '.disc-agent-reply { display:flex; gap:10px; margin-bottom:12px; align-items:flex-start; }',
     '.disc-agent-reply--right { flex-direction:row-reverse; }',
     '.disc-agent-avatar { width:36px; height:36px; border-radius:50%; display:flex; align-items:center; justify-content:center; color:#fff; font-size:1rem; flex-shrink:0; font-weight:700; }',
-    '.disc-agent-bubble { flex:1; min-width:0; background:var(--surface-primary,#fff); border:1px solid var(--border-light,#ece8e1); border-radius:14px; padding:12px 14px; box-shadow:0 1px 4px rgba(26,58,42,0.05); }',
+    '.disc-agent-bubble { flex:1; min-width:0; background:var(--surface-primary,#fff); border:1px solid var(--border-light,#ece8e1); border-radius:12px; padding:12px 14px; box-shadow:var(--shadow-sm); }',
     '.disc-agent-reply--right .disc-agent-bubble { background:rgba(90,125,92,0.06); border-color:rgba(90,125,92,0.2); }',
     '.disc-agent-name-row { display:flex; align-items:center; gap:6px; margin-bottom:6px; }',
     '.disc-agent-name { font-size:0.82rem; font-weight:700; color:var(--color-deep,#1a3a2a); }',
@@ -64,8 +64,8 @@ function injectDiscussionStyles() {
     '.disc-agent-body pre { background:rgba(0,0,0,0.05); padding:10px; border-radius:8px; overflow-x:auto; font-size:0.8rem; }',
 
     /* 流水线阶段卡 */
-    '.disc-stage { background:var(--surface-primary,#fff); border:1px solid var(--border-light,#ece8e1); border-radius:14px; margin-bottom:12px; overflow:hidden; box-shadow:0 1px 4px rgba(26,58,42,0.05); }',
-    '.disc-stage-head { display:flex; align-items:center; gap:10px; padding:10px 14px; background:linear-gradient(135deg,rgba(90,125,92,0.08),rgba(196,149,106,0.08)); border-bottom:1px solid var(--border-light,#ece8e1); }',
+    '.disc-stage { background:var(--surface-primary,#fff); border:1px solid var(--border-light,#ece8e1); border-radius:12px; margin-bottom:12px; overflow:hidden; box-shadow:var(--shadow-sm); }',
+    '.disc-stage-head { display:flex; align-items:center; gap:10px; padding:10px 14px; background:rgba(90,125,92,0.08); border-bottom:1px solid var(--border-light,#ece8e1); }',
     '.disc-stage-icon { width:28px; height:28px; border-radius:8px; background:var(--color-sage,#5a7d5c); color:#fff; display:flex; align-items:center; justify-content:center; font-size:0.9rem; font-weight:700; flex-shrink:0; }',
     '.disc-stage-name { font-size:0.9rem; font-weight:700; color:var(--color-deep,#1a3a2a); }',
     '.disc-stage-role { font-size:0.72rem; color:var(--text-muted,#8a8a8a); margin-left:auto; }',
@@ -76,7 +76,7 @@ function injectDiscussionStyles() {
     '.disc-stage--final .disc-stage-icon { background:var(--color-amber,#c4956a); }',
 
     /* 综合观点 */
-    '.discussion-synthesis { border-radius:14px; padding:14px 18px; background:linear-gradient(135deg,rgba(232,168,48,0.06),rgba(58,140,92,0.06)); border:1.5px solid rgba(232,168,48,0.25); margin-top:8px; }',
+    '.discussion-synthesis { border-radius:12px; padding:14px 18px; background:rgba(232,168,48,0.06); border:1.5px solid rgba(232,168,48,0.25); margin-top:8px; }',
     '.discussion-synthesis-head { display:flex; align-items:center; gap:8px; margin-bottom:8px; font-size:0.9rem; font-weight:700; color:var(--color-amber,#c4956a); font-family:var(--font-serif,"Noto Serif SC",serif); }',
     '.discussion-synthesis-body { font-size:0.88rem; line-height:1.75; color:var(--text-primary,#1a1a1a); }',
     '.discussion-synthesis-body p { margin:0 0 8px; } .discussion-synthesis-body p:last-child { margin-bottom:0; }',
@@ -91,7 +91,7 @@ function injectDiscussionStyles() {
 
     /* 输入区 */
     '.discussion-input-bar { display:flex; gap:8px; padding:10px 0 4px; flex-shrink:0; border-top:1px solid var(--border-light,#ece8e1); }',
-    '.discussion-input { flex:1; padding:12px 16px; border:1.5px solid var(--border-default,#e0dcd5); border-radius:22px; background:var(--surface-primary,#fff); color:var(--text-primary,#1a1a1a); font-size:0.9rem; outline:none; resize:none; max-height:100px; min-height:44px; font-family:inherit; line-height:1.5; transition:border-color .2s; }',
+    '.discussion-input { flex:1; padding:12px 16px; border:1.5px solid var(--border-default,#e0dcd5); border-radius:16px; background:var(--surface-primary,#fff); color:var(--text-primary,#1a1a1a); font-size:0.9rem; outline:none; resize:none; max-height:100px; min-height:44px; font-family:inherit; line-height:1.5; transition:border-color .2s; }',
     '.discussion-input:focus { border-color:var(--color-amber,#c4956a); }',
     '.discussion-send { width:44px; height:44px; border:none; border-radius:50%; background:var(--color-amber,#c4956a); color:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; flex-shrink:0; transition:all .15s; }',
     '.discussion-send:active { transform:scale(.92); }',
@@ -110,25 +110,25 @@ function injectDiscussionStyles() {
 
     /* 自定义智能体模态 */
     '.disc-modal-overlay { position:fixed; inset:0; background:rgba(5,10,7,0.5); backdrop-filter:blur(4px); z-index:9998; display:flex; align-items:center; justify-content:center; padding:20px; }',
-    '.disc-modal { background:var(--surface-primary,#fff); border-radius:16px; width:100%; max-width:460px; max-height:90vh; overflow-y:auto; padding:24px; box-shadow:0 8px 32px rgba(0,0,0,0.18); }',
+    '.disc-modal { background:var(--surface-primary,#fff); border-radius:16px; width:100%; max-width:460px; max-height:90vh; overflow-y:auto; padding:24px; box-shadow:var(--shadow-floating); }',
     '.disc-modal h3 { margin:0 0 16px; font-family:var(--font-serif,serif); color:var(--color-deep,#1a3a2a); font-size:1.15rem; }',
     '.disc-form-group { margin-bottom:14px; }',
     '.disc-form-group label { display:block; margin-bottom:5px; font-size:0.84rem; font-weight:600; color:var(--text-secondary,#4a4a4a); }',
-    '.disc-form-group input, .disc-form-group textarea { width:100%; box-sizing:border-box; padding:10px 12px; border:1px solid var(--border-light,#e3e0d8); border-radius:10px; font-size:0.9rem; background:var(--surface-primary,#fff); color:var(--text-primary,#1a1a1a); outline:none; font-family:inherit; }',
+    '.disc-form-group input, .disc-form-group textarea { width:100%; box-sizing:border-box; padding:10px 12px; border:1px solid var(--border-light,#e3e0d8); border-radius:8px; font-size:0.9rem; background:var(--surface-primary,#fff); color:var(--text-primary,#1a1a1a); outline:none; font-family:inherit; }',
     '.disc-form-group textarea { min-height:70px; resize:vertical; }',
     '.disc-form-group input:focus, .disc-form-group textarea:focus { border-color:var(--color-sage,#5a7d5c); }',
     '.disc-modal-actions { display:flex; gap:10px; justify-content:flex-end; margin-top:18px; }',
-    '.disc-btn { padding:9px 18px; border:none; border-radius:10px; cursor:pointer; font-size:0.86rem; font-weight:600; }',
+    '.disc-btn { padding:9px 18px; border:none; border-radius:8px; cursor:pointer; font-size:0.86rem; font-weight:600; }',
     '.disc-btn-primary { background:var(--color-sage,#5a7d5c); color:#fff; }',
     '.disc-btn-ghost { background:transparent; border:1px solid var(--border-light,#e3e0d8); color:var(--text-primary,#1a2f1d); }',
     '.disc-btn-danger { background:transparent; border:1px solid rgba(229,62,62,0.3); color:var(--color-error,#e53e3e); }',
     '.disc-custom-list { margin-bottom:14px; }',
-    '.disc-custom-item { display:flex; align-items:center; gap:8px; padding:8px 12px; border:1px solid var(--border-light,#ece8e1); border-radius:10px; margin-bottom:6px; font-size:0.84rem; }',
+    '.disc-custom-item { display:flex; align-items:center; gap:8px; padding:8px 12px; border:1px solid var(--border-light,#ece8e1); border-radius:8px; margin-bottom:6px; font-size:0.84rem; }',
     '.disc-custom-item .disc-custom-name { flex:1; font-weight:600; color:var(--color-deep,#1a3a2a); }',
     '.disc-custom-item .disc-custom-role { font-size:0.72rem; color:var(--text-muted,#8a8a8a); }',
 
     /* FinalResult 面板 */
-    '.disc-final-panel { background:linear-gradient(135deg,rgba(58,140,92,0.06),rgba(196,149,106,0.06)); border:1.5px solid rgba(58,140,92,0.25); border-radius:14px; padding:18px; margin-top:12px; }',
+    '.disc-final-panel { background:rgba(58,140,92,0.06); border:1.5px solid rgba(58,140,92,0.25); border-radius:12px; padding:18px; margin-top:12px; }',
     '.disc-final-head { display:flex; align-items:center; gap:8px; margin-bottom:10px; }',
     '.disc-final-title { font-family:var(--font-serif,serif); font-size:1.05rem; font-weight:700; color:var(--color-deep,#1a3a2a); }',
     '.disc-final-summary { font-size:0.86rem; color:var(--text-secondary,#4a4a4a); line-height:1.7; margin-bottom:12px; padding:10px 12px; background:rgba(255,255,255,0.5); border-radius:8px; }',
@@ -136,11 +136,11 @@ function injectDiscussionStyles() {
     '.disc-final-section h4 { margin:0 0 6px; font-size:0.92rem; color:var(--color-sage,#3a6b4a); }',
     '.disc-final-section p { margin:0; font-size:0.86rem; line-height:1.7; color:var(--text-primary,#1a1a1a); white-space:pre-wrap; }',
     '.disc-export-row { display:flex; gap:8px; flex-wrap:wrap; margin-top:14px; }',
-    '.disc-export-btn { display:inline-flex; align-items:center; gap:5px; padding:7px 14px; border:1px solid var(--border-light,#ece8e1); border-radius:10px; background:var(--surface-primary,#fff); color:var(--color-deep,#1a3a2a); font-size:0.8rem; font-weight:600; cursor:pointer; transition:all .15s; }',
+    '.disc-export-btn { display:inline-flex; align-items:center; gap:5px; padding:7px 14px; border:1px solid var(--border-light,#ece8e1); border-radius:8px; background:var(--surface-primary,#fff); color:var(--color-deep,#1a3a2a); font-size:0.8rem; font-weight:600; cursor:pointer; transition:all .15s; }',
     '.disc-export-btn:active { transform:scale(.96); }',
     '.disc-export-btn:hover { border-color:var(--color-sage,#5a7d5c); color:var(--color-sage,#3a6b4a); }',
 
-    '.disc-svg-box { margin:8px 0; padding:10px; background:var(--surface-primary,#fff); border:1px solid var(--border-light,#ece8e1); border-radius:10px; text-align:center; overflow-x:auto; }',
+    '.disc-svg-box { margin:8px 0; padding:10px; background:var(--surface-primary,#fff); border:1px solid var(--border-light,#ece8e1); border-radius:8px; text-align:center; overflow-x:auto; }',
     '.disc-svg-box svg { max-width:100%; height:auto; }',
 
     '@media (max-width:768px) { .discussion-page { padding:12px 12px 90px; } .disc-agent-bar { padding:8px; } }'
@@ -150,22 +150,22 @@ function injectDiscussionStyles() {
 
 /* ============== 预设智能体池（以生物学科为智能体） ============== */
 var DISC_PRESET_AGENTS = [
-  { key: 'genetics',  name: '遗传学',   role: '遗传学',     avatar: '🧬', color: '#5a7d5c',
+  { key: 'genetics',  name: '遗传学',   role: '遗传学',     color: '#5a7d5c',
     system_prompt: '你是遗传学专家，擅长从基因、染色体、遗传规律、分子机制等层面分析问题。' +
                    '请用专业且通俗的语言回答，结合遗传学视角，可适当引用经典实验与定律。回答控制在 300 字以内。不要输出 [[ANIM:xxx]] 标记，不要生成 SVG 代码块。' },
-  { key: 'ecology',   name: '生态学',   role: '生态学',     avatar: '🌍', color: '#3a8c5c',
+  { key: 'ecology',   name: '生态学',   role: '生态学',     color: '#3a8c5c',
     system_prompt: '你是生态学专家，擅长从种群、群落、生态系统等宏观层面分析生物学问题。' +
                    '请用专业且通俗的语言回答，结合生态学视角。回答控制在 300 字以内。不要输出 [[ANIM:xxx]] 标记，不要生成 SVG 代码块。' },
-  { key: 'evolution', name: '进化生物学', role: '进化论',   avatar: '🦋', color: '#d4974a',
+  { key: 'evolution', name: '进化生物学', role: '进化论',   color: '#d4974a',
     system_prompt: '你是进化生物学专家，擅长从自然选择、物种形成、适应辐射、系统发育等层面分析问题。' +
                    '请用专业且通俗的语言回答，结合进化视角。回答控制在 300 字以内。不要输出 [[ANIM:xxx]] 标记，不要生成 SVG 代码块。' },
-  { key: 'physiology', name: '生理学',  role: '生理学',     avatar: '💓', color: '#c45a7a',
+  { key: 'physiology', name: '生理学',  role: '生理学',     color: '#c45a7a',
     system_prompt: '你是生理学专家，擅长从器官、系统、稳态调节、神经体液调节等层面分析生物学问题。' +
                    '请用专业且通俗的语言回答，结合生理学视角。回答控制在 300 字以内。不要输出 [[ANIM:xxx]] 标记，不要生成 SVG 代码块。' },
-  { key: 'biochem',   name: '生物化学', role: '生物化学',   avatar: '⚗️', color: '#8b5cf6',
+  { key: 'biochem',   name: '生物化学', role: '生物化学',   color: '#8b5cf6',
     system_prompt: '你是生物化学专家，擅长从分子反应、酶、代谢通路等微观化学层面分析生物学问题。' +
                    '请用专业且通俗的语言回答，结合生化视角。回答控制在 300 字以内。不要输出 [[ANIM:xxx]] 标记，不要生成 SVG 代码块。' },
-  { key: 'cellbio',   name: '细胞生物学', role: '细胞生物学', avatar: '🔬', color: '#4a7fc1',
+  { key: 'cellbio',   name: '细胞生物学', role: '细胞生物学', color: '#4a7fc1',
     system_prompt: '你是细胞生物学专家，擅长从细胞结构、细胞器功能、细胞分裂、信号传导等层面分析问题。' +
                    '请用专业且通俗的语言回答，结合细胞生物学视角。回答控制在 300 字以内。不要输出 [[ANIM:xxx]] 标记，不要生成 SVG 代码块。' }
 ];
@@ -223,7 +223,7 @@ function _discAllAgents() {
     return {
       key: 'custom_' + a.id,
       name: a.name, role: a.role || '自定义',
-      avatar: a.avatar || '🧠', color: a.color || '#6b7f74',
+      color: a.color || '#6b7f74',
       system_prompt: a.system_prompt,
       custom: true
     };
@@ -364,11 +364,11 @@ function _exportChatMarkdown() {
     md += '# 群聊协作记录\n\n';
     state.rounds.forEach(function(round, idx) {
       md += '## 第 ' + (idx + 1) + ' 轮\n\n';
-      md += '### 🧑 用户提问\n\n' + (round.userMessage || '') + '\n\n';
+      md += '### 用户提问\n\n' + (round.userMessage || '') + '\n\n';
       if (round.replies) {
         Object.keys(round.replies).forEach(function(key) {
           var r = round.replies[key];
-          md += '### ' + (r.avatar || '💬') + ' ' + (r.name || key) + '（' + (r.role || '') + '）\n\n';
+          md += '### ' + (r.name || key) + '（' + (r.role || '') + '）\n\n';
           md += (r.content || '') + '\n\n';
         });
       }
@@ -384,7 +384,7 @@ function _exportChatMarkdown() {
     md += '# 流水线模式记录\n\n';
     state.pipelineRuns.forEach(function(run, idx) {
       md += '## 第 ' + (idx + 1) + ' 次运行\n\n';
-      md += '### 🧑 用户需求\n\n' + (run.userMessage || '') + '\n\n';
+      md += '### 用户需求\n\n' + (run.userMessage || '') + '\n\n';
       if (run.stages) {
         DISC_STAGES.forEach(function(st) {
           var s = run.stages[st.key];
@@ -438,7 +438,7 @@ function _renderAgentBar() {
   all.forEach(function(a) {
     var active = _discussionState.activeAgentKeys.indexOf(a.key) !== -1;
     html += '<span class="disc-agent-chip' + (active ? ' active' : '') + '" data-agent-key="' + _discEscape(a.key) + '" title="' + _discEscape(a.role) + '">' +
-      a.avatar + ' ' + _discEscape(a.name) + '</span>';
+      _discEscape(a.name) + '</span>';
   });
   html += '<span class="disc-agent-chip disc-agent-chip--add" id="disc-add-agent-btn">＋ 自建</span>';
   var n = _discussionState.activeAgentKeys.length;
@@ -535,7 +535,7 @@ function _openCustomAgentModal() {
     var newAgent = {
       id: 'a' + Date.now().toString(36),
       name: name, role: role || '自定义',
-      avatar: '🧠', color: '#6b7f74',
+      color: '#6b7f74',
       system_prompt: sysPrompt
     };
     arr.push(newAgent);
@@ -621,7 +621,6 @@ function _renderGroupRound(round) {
     reply.className = 'disc-agent-reply' + (isRight ? ' disc-agent-reply--right' : '');
     reply.id = 'round-' + round.id + '-reply-' + key;
     reply.innerHTML =
-      '<div class="disc-agent-avatar" style="background:' + (r.color || '#6b7f74') + ';">' + (r.avatar || '🧠') + '</div>' +
       '<div class="disc-agent-bubble">' +
         '<div class="disc-agent-name-row">' +
           '<span class="disc-agent-name">' + _discEscape(r.name) + '</span>' +
@@ -732,7 +731,7 @@ function _sendGroup(userMessage) {
   var repliesInit = {};
   keys.forEach(function(k) {
     var a = _discFindAgent(k);
-    repliesInit[k] = { name: a.name, role: a.role, avatar: a.avatar, color: a.color, content: '' };
+    repliesInit[k] = { name: a.name, role: a.role, color: a.color, content: '' };
   });
   var round = {
     id: 'r_' + Date.now(),
@@ -1125,7 +1124,7 @@ function _renderFinalPanel(fr) {
   var el = document.createElement('div');
   el.className = 'discussion-round';
   var html = '<div class="disc-final-panel">' +
-    '<div class="disc-final-head"><span style="font-size:1.2rem;">📄</span><span class="disc-final-title">最终成果</span></div>';
+    '<div class="disc-final-head"><span class="disc-final-title">最终成果</span></div>';
   if (fr.title) html += '<div class="disc-final-title" style="font-size:1.1rem;margin-bottom:8px;">' + _discEscape(fr.title) + '</div>';
   if (fr.summary) html += '<div class="disc-final-summary">' + _discMarkdown(fr.summary) + '</div>';
   if (Array.isArray(fr.sections)) {
@@ -1134,8 +1133,8 @@ function _renderFinalPanel(fr) {
     });
   }
   html += '<div class="disc-export-row">' +
-    '<button class="disc-export-btn" data-export="md">📋 Markdown</button>' +
-    '<button class="disc-export-btn" data-export="json">📦 JSON</button>' +
+    '<button class="disc-export-btn" data-export="md">Markdown</button>' +
+    '<button class="disc-export-btn" data-export="json">JSON</button>' +
   '</div></div>';
   el.innerHTML = html;
   el.querySelectorAll('[data-export]').forEach(function(btn) {
@@ -1184,7 +1183,7 @@ function _exportFinal(fmt) {
     });
   }
   var fullHtml = '<!DOCTYPE html><html><head><meta charset="utf-8"><title>' + _discEscape(fr.title || topic) + '</title>' +
-    '<style>body{font-family:"Noto Serif SC",serif;max-width:760px;margin:40px auto;padding:0 20px;color:#1a1a1a;line-height:1.8;}h1{color:#1a3a2a;}h2{color:#3a6b4a;border-bottom:1px solid #eee;padding-bottom:4px;}code{background:#f4f4f4;padding:2px 6px;border-radius:3px;}</style>' +
+    '<style>body{font-family:"Noto Serif SC",serif;max-width:760px;margin:40px auto;padding:0 20px;color:#1a1a1a;line-height:1.8;}h1{color:#1a3a2a;}h2{color:#3a6b4a;border-bottom:1px solid #eee;padding-bottom:4px;}code{background:#f4f4f4;padding:2px 6px;border-radius:2px;}</style>' +
     '</head><body>' + bodyHtml + '</body></html>';
 
   if (fmt === 'word') {

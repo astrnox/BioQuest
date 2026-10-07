@@ -1,9 +1,8 @@
 /**
  * 首屏骨架遮罩：加载动画展示 → 等应用首屏渲染完成（Hero/倒计时/布局已提交） → 平滑淡出进入主页面。
  * 遮罩在页面内容真正就绪后才消失，避免"内容还没渲染就过早撤遮罩"导致的卡顿/空白/下拉卡一下。
- * 进度条：加权步骤 + 时间缓动爬升，只增不减。
- *   - 真实完成节点标记权重（DOMContentLoaded → 首页绘制 → 路由完成 → app-ready）
- *   - 同时按经过时间缓慢爬升"软上限"，冷启动再慢也不会让进度条"死"在 20%
+ * 加载动画本身是纯 CSS 的碱基配对（见 index.html 内联样式），这里只负责"何时撤除遮罩"：
+ *   - 真实完成节点：bioquest:app-ready（SPA 路由首帧渲染完成后派发）
  *   - 兜底超时后：只有确认页面内容已渲染才淡出；如果应用脚本根本没启动
  *     （脚本加载/解析失败），则原地展示错误重试，而不是淡出成一页空白。
  */
@@ -12,90 +11,6 @@
   if (!mask) return;
   var done = false;
   var startTime = Date.now();
-
-  // ---- 加载进度估算器 ----
-  // 参考 GitHub 现成实现 load-time-estimate / fake-progress 的思想：
-  //   真实完成节点标记权重 → 进度只增不减（ever-increasing）→ 用渐进曲线逼近档位上限，
-  //   且未收到 app-ready 前显示不会超过"软上限"（避免"进度走完但页面还没好"的错位感）。
-  var SOFT_CAP = 88;               // 未就绪时显示上限（收到 app-ready 后立刻跳到 92 → 100）
-  var CREEP_RATE = 6;              // 每秒最少爬升百分比：慢启动时进度条不会卡死在一个数
-  var BootProgress = {
-    done: 0,   // 已完成的加权和
-    cap: 0,    // 当前"档位上限"（不会显示超过该值）
-    show: 0,   // 当前已显示的百分比
-    max: 100,
-    fill: document.getElementById('bq-boot-progress-fill'),
-    pct: document.getElementById('bq-boot-percent'),
-    _timer: null,
-    _ended: false,
-    addWeight: function (w, hi) {
-      if (this._ended) return;
-      this.done = Math.min(this.max, this.done + (w || 0));
-      var c = Math.max(this.cap, this.done);
-      if (typeof hi === 'number') c = Math.max(c, hi);
-      this.cap = Math.min(this.max, c);
-      this._tick();
-      this._schedule();
-    },
-    set: function (p) {
-      if (this._ended) return;
-      p = Math.min(this.max, Math.max(p, this.done));
-      this.done = p;
-      if (this.cap < p) this.cap = p;
-      this._tick();
-      this._schedule();
-    },
-    complete: function () {
-      this._ended = true;
-      if (this._timer) { clearTimeout(this._timer); this._timer = null; }
-      this._animate();
-    },
-    /**
-     * 时间缓动：应用未就绪期间，按经过时间把"软上限"缓慢抬高（但不越过 SOFT_CAP），
-     * 让进度条持续移动，避免低档位（DOMContentLoaded 后 cap=20）时视觉上"卡死在 20%"。
-     */
-    creep: function () {
-      if (this._ended) return;
-      if (this.show >= SOFT_CAP) return;
-      var elapsed = Date.now() - startTime;
-      var soft = Math.min(SOFT_CAP, 16 + (elapsed / 1000) * CREEP_RATE);
-      // 只抬升"软上限"不压低真实加权档位；app-ready 到达后 addWeight(40,92) 会把上限推到 92
-      if (soft > this.cap) this.cap = Math.min(this.max, soft);
-      this._tick();
-      this._schedule();
-    },
-    _schedule: function () {
-      var self = this;
-      if (this._timer || this._ended) return;
-      if (this.cap <= this.show || this.cap >= this.max) return;
-      this._timer = setTimeout(function () {
-        self._timer = null;
-        self._tick();
-        if (self.cap > self.show && self.cap < self.max) self._schedule();
-      }, 110);
-    },
-    _tick: function () {
-      if (this.cap <= this.show) return;
-      // 渐进逼近上限：越快越慢，符合"前期快、后期慢"的直觉
-      this._setShow(this.show + Math.max(0.5, (this.cap - this.show) * 0.10));
-    },
-    _animate: function () {
-      var self = this;
-      (function step() {
-        var gap = 100 - self.show;
-        if (gap <= 0.5) { self._setShow(100); return; }
-        self._setShow(self.show + Math.max(0.4, gap * 0.22));
-        requestAnimationFrame(step);
-      })();
-    },
-    _setShow: function (v) {
-      this.show = Math.min(this.max, v);
-      if (this.pct) { try { this.pct.textContent = Math.floor(this.show) + '%'; } catch (e) {} }
-      if (this.fill) { this.fill.style.width = this.show + '%'; }
-    }
-  };
-  window.BootProgress = BootProgress;
-  window.__bootWeight = function (w, hi) { if (BootProgress) BootProgress.addWeight(w, hi); };
 
   /** 确认页面内容真的渲染出来了（而不是一页空白） */
   function hasRenderedContent() {
@@ -119,7 +34,6 @@
     if (done) return;
     done = true;
     bootErrorShown = true;
-    if (BootProgress) BootProgress.complete();
     // 在遮罩内渲染一个轻量错误卡片（纯 DOM API，无内联脚本，符合 CSP）
     try {
       var box = document.createElement('div');
@@ -133,17 +47,15 @@
       var btn = document.createElement('button');
       btn.textContent = '刷新重试';
       btn.type = 'button';
-      btn.style.cssText = 'border:1px solid #3a6b4a;background:#3a6b4a;color:#fff;border-radius:18px;padding:8px 22px;font-size:0.88rem;cursor:pointer;';
+      btn.style.cssText = 'border:1px solid #3a6b4a;background:#3a6b4a;color:#fff;border-radius:16px;padding:8px 22px;font-size:0.88rem;cursor:pointer;';
       btn.addEventListener('click', function () { try { window.location.reload(); } catch (e) {} });
       box.appendChild(title);
       box.appendChild(tip);
       box.appendChild(btn);
       var logo = document.getElementById('bq-boot-logo');
       var label = document.getElementById('bq-boot-label');
-      var spinner = document.getElementById('bq-boot-spinner');
-      var progress = document.getElementById('bq-boot-progress');
-      var pct = document.getElementById('bq-boot-percent');
-      [spinner, progress, pct, logo, label].forEach(function (el) {
+      var pairs = document.getElementById('bq-boot-pairs');
+      [pairs, label, logo].forEach(function (el) {
         if (el && el.parentNode) el.parentNode.removeChild(el);
       });
       mask.appendChild(box);
@@ -153,8 +65,6 @@
   function fadeOut() {
     if (done) return;
     done = true;
-    // 开始淡出时把进度补足到 100%
-    if (BootProgress) BootProgress.complete();
     // 核心：确保撤遮罩前，浏览器已完成首屏布局与绘制。
     // 两轮 rAF 保证至少一次 layout + paint 已提交；再强制一次 reflow 读取，
     // 确保页面高度/滚动条已存在，避免"进主页后拉不动一会"的现象。
@@ -214,10 +124,9 @@
   // 遮罩只在"页面可交互"后撤除：bioquest:app-ready 由 SPA 路由在首帧渲染完成后派发，
   // 此时全部 defer 脚本已按序执行完毕、首屏已绘制，页面可点击。
   // 不再等待 window.load —— 它会被 7.6MB 字体/图片等资源无限期拖住，造成
-  // "进度条走完但页面还在加载/卡"的错位感（字体走 font-display:swap 异步加载，不影响交互）。
+  // "内容ready了但遮罩还在"的错位感（字体走 font-display:swap 异步加载，不影响交互）。
   var contentReady = false;  // bioquest:app-ready 已收到
   var APP_READY_CAP = 15000; // 正常路径兜底：app-ready 未派发也不让遮罩永久卡死
-  var creepTimer = null;
 
   function bootTick() {
     var elapsed = Date.now() - startTime;
@@ -229,25 +138,12 @@
     }
     if (contentReady || capReached) {
       startFadeOut();
-    } else if (BootProgress) {
-      BootProgress._schedule(); // 未就绪时保持进度条继续渐进逼近
     }
   }
 
-  // 进度条"永不卡死"：未就绪期间按时间持续缓动（默认档位 20% 只是加权起点）
-  function startCreep() {
-    var step = function () {
-      if (done || contentReady) { creepTimer = null; return; }
-      if (BootProgress) BootProgress.creep();
-      creepTimer = setTimeout(step, 1000);
-    };
-    creepTimer = setTimeout(step, 1000);
-  }
-
-  // 主信号：应用首屏渲染/路由完成 → 页面已可交互，撤遮罩（进度同时补足到 100%）。
+  // 主信号：应用首屏渲染/路由完成 → 页面已可交互，撤遮罩。
   document.addEventListener('bioquest:app-ready', function () {
     contentReady = true;
-    if (window.BootProgress) BootProgress.addWeight(40, 92);
     // 竞态撤销：弱网/慢终端下 15s 兜底可能已展示"刷新重试"错误页，
     // 而应用此刻才真正加载完成。此时应撤销 done 标记，改走正常淡出，
     // 绝不让用户卡死在错误页（加载完成却被误报失败）。
@@ -259,10 +155,7 @@
     setTimeout(bootTick, 40);
   });
 
-  // 进度标记：HTML/CSS/脚本解析阶段
   var onDOMReady = function () {
-    if (window.BootProgress) BootProgress.addWeight(15, 20);
-    startCreep();
     bootTick();
   };
   if (document.readyState === 'interactive' || document.readyState === 'complete') onDOMReady();

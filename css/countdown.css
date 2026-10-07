@@ -3,7 +3,7 @@
  * ============================================================ */
 
 .countdown-banner {
-  background: linear-gradient(180deg, #0c1810 0%, #1a2f1d 100%);
+  background: #0c1810;
   padding: 48px 0;
   border-top: 1px solid rgba(196, 149, 106, 0.12);
   border-bottom: 1px solid rgba(196, 149, 106, 0.12);

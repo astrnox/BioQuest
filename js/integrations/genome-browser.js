@@ -130,14 +130,14 @@
 
       // 控制面板
       '<div style="background:var(--color-surface,#fff);border:1px solid var(--color-border-light,#ece8e1);' +
-        'border-radius:var(--radius-lg,12px);padding:20px;margin-bottom:20px;">' +
+        'border-radius:var(--radius-lg, 12px);padding:20px;margin-bottom:20px;">' +
 
         // 基因组选择 + 位点输入
         '<div style="display:flex;flex-wrap:wrap;gap:12px;align-items:flex-end;margin-bottom:16px;">' +
           '<div style="flex:1;min-width:200px;">' +
             '<label style="display:block;font-size:0.8rem;color:var(--text-muted,#8a8a8a);margin-bottom:6px;">参考基因组</label>' +
             '<select id="igv-genome-select" style="width:100%;padding:8px 12px;border:1px solid var(--color-border-light,#ddd);' +
-              'border-radius:var(--radius-sm,6px);font-size:0.9rem;background:var(--color-surface,#fff);">' +
+              'border-radius:var(--radius-sm, 4px);font-size:0.9rem;background:var(--color-surface,#fff);">' +
               GENOMES.map(function (g) {
                 return '<option value="' + g.id + '"' + (g.id === currentGenome ? ' selected' : '') + '>' + g.label + '</option>';
               }).join('') +
@@ -149,9 +149,9 @@
             '<div style="display:flex;gap:8px;">' +
               '<input id="igv-locus-input" type="text" placeholder="chr17:43,044,295-43,125,482" ' +
                 'style="flex:1;padding:8px 12px;border:1px solid var(--color-border-light,#ddd);' +
-                'border-radius:var(--radius-sm,6px);font-size:0.9rem;font-family:var(--font-mono,monospace);">' +
+                'border-radius:var(--radius-sm, 4px);font-size:0.9rem;font-family:var(--font-mono,monospace);">' +
               '<button id="igv-goto-btn" class="btn" style="padding:8px 16px;background:var(--color-primary,#3a6b4a);color:#fff;' +
-                'border:none;border-radius:var(--radius-sm,6px);cursor:pointer;font-size:0.9rem;">跳转</button>' +
+                'border:none;border-radius:var(--radius-sm, 4px);cursor:pointer;font-size:0.9rem;">跳转</button>' +
             '</div>' +
           '</div>' +
         '</div>' +
@@ -163,7 +163,7 @@
             PRESET_LOCI.map(function (p) {
               return '<button class="igv-preset-btn" data-locus="' + p.locus + '" data-name="' + p.name + '" ' +
                 'style="padding:6px 14px;border:1px solid var(--color-border-light,#ddd);' +
-                'border-radius:var(--radius-pill,20px);background:var(--color-surface-elevated,#f8f5f0);' +
+                'border-radius:var(--radius-pill, 9999px);background:var(--color-surface-elevated,#f8f5f0);' +
                 'color:var(--color-text,#2d2d2d);cursor:pointer;font-size:0.82rem;transition:all 0.2s;">' +
                 p.label +
               '</button>';
@@ -174,14 +174,14 @@
 
       // 基因说明区
       '<div id="igv-gene-info" style="background:var(--color-surface-elevated,#f8f5f0);border-left:3px solid var(--color-sage,#5a7d5c);' +
-        'padding:12px 16px;margin-bottom:16px;border-radius:0 var(--radius-sm,6px) var(--radius-sm,6px) 0;' +
+        'padding:12px 16px;margin-bottom:16px;border-radius:0 var(--radius-sm, 4px) var(--radius-sm, 4px) 0;' +
         'font-size:0.85rem;color:var(--color-text,#2d2d2d);min-height:20px;">' +
         '点击上方预设基因快速定位，或输入基因座手动跳转。' +
       '</div>' +
 
       // igv 浏览器容器
       '<div style="background:var(--color-surface,#fff);border:1px solid var(--color-border-light,#ece8e1);' +
-        'border-radius:var(--radius-lg,12px);padding:8px;overflow:hidden;">' +
+        'border-radius:var(--radius-lg, 12px);padding:8px;overflow:hidden;">' +
         '<div id="' + igvContainerId + '" style="width:100%;"></div>' +
         '<div id="igv-loading" style="text-align:center;padding:60px 20px;color:var(--text-muted,#8a8a8a);">' +
           '<div style="margin-bottom:8px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg></div>' +
@@ -191,7 +191,7 @@
 
       // 教学说明
       '<div style="margin-top:24px;background:var(--color-surface,#fff);border:1px solid var(--color-border-light,#ece8e1);' +
-        'border-radius:var(--radius-lg,12px);padding:20px;">' +
+        'border-radius:var(--radius-lg, 12px);padding:20px;">' +
         '<h3 style="font-family:var(--font-serif,serif);font-size:1.1rem;color:var(--color-deep,#1a3a2a);margin-bottom:12px;">使用指南</h3>' +
         '<ul style="margin:0;padding-left:20px;color:var(--text-secondary,#4a4a4a);font-size:0.85rem;line-height:1.8;">' +
           '<li><strong>缩放</strong>：鼠标滚轮或拖选区域放大</li>' +

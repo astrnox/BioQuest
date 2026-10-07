@@ -36,12 +36,12 @@
     if (document.getElementById(id)) return;
     var css = '' +
       '.sc-wrap{max-width:980px;margin:0 auto;padding:24px 16px 48px;font-family:var(--font-sans,inherit);}' +
-      '.sc-hero{padding:22px 22px 18px;border-radius:18px;background:linear-gradient(135deg,rgba(74,124,89,.10),rgba(196,149,106,.12));border:1px solid rgba(74,124,89,.25);margin-bottom:20px;}' +
+      '.sc-hero{padding:22px 22px 18px;border-radius:16px;background:rgba(74,124,89,.10);border:1px solid rgba(74,124,89,.25);margin-bottom:20px;}' +
       '.sc-hero h1{margin:0 0 8px;font-size:1.35rem;color:var(--color-ink,#2c3e30);}' +
       '.sc-hero p{margin:0;font-size:.92rem;color:var(--text-muted,#667);line-height:1.7;}' +
       '.sc-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}' +
       '@media(max-width:820px){.sc-grid{grid-template-columns:1fr;}}' +
-      '.sc-card{background:var(--color-card,#fff);border:1px solid var(--color-border,rgba(196,149,106,.18));border-radius:16px;padding:18px;box-shadow:0 2px 10px rgba(60,80,70,.05);}' +
+      '.sc-card{background:var(--color-card,#fff);border:1px solid var(--color-border,rgba(196,149,106,.18));border-radius:16px;padding:18px;box-shadow:var(--shadow-md);}' +
       '.sc-card h2{margin:0 0 4px;font-size:1.05rem;color:var(--color-ink,#2c3e30);}' +
       '.sc-card .sc-sub{font-size:.8rem;color:var(--text-muted,#889);margin:0 0 14px;line-height:1.6;}' +
       '.sc-row{display:flex;align-items:center;gap:10px;margin:10px 0;flex-wrap:wrap;}' +
@@ -49,7 +49,7 @@
       '.sc-label small{display:block;color:#99a;font-size:.7rem;}' +
       'input[type=range].sc-range{flex:1;min-width:120px;accent-color:#4a7c59;}' +
       'input[type=number].sc-num{width:64px;padding:6px 8px;border:1px solid #ccc;border-radius:8px;font-size:.9rem;}' +
-      '.sc-btn{display:inline-flex;align-items:center;gap:6px;padding:9px 16px;border:none;border-radius:10px;background:#4a7c59;color:#fff;font-size:.86rem;cursor:pointer;font-family:inherit;transition:filter .15s;}' +
+      '.sc-btn{display:inline-flex;align-items:center;gap:6px;padding:9px 16px;border:none;border-radius:8px;background:#4a7c59;color:#fff;font-size:.86rem;cursor:pointer;font-family:inherit;transition:filter .15s;}' +
       '.sc-btn:hover{filter:brightness(1.08);}' +
       '.sc-btn--ghost{background:#fff;border:1px solid #4a7c59;color:#4a7c59;}' +
       '.sc-result{margin-top:14px;padding:14px 16px;border-radius:12px;background:rgba(74,124,89,.07);border:1px solid rgba(74,124,89,.28);}' +
@@ -57,8 +57,8 @@
       '.sc-result .sc-grade{font-size:1.05rem;color:#5a7d5c;font-weight:700;margin-top:2px;}' +
       '.sc-bars{margin-top:10px;display:flex;flex-direction:column;gap:6px;}' +
       '.sc-bar{display:flex;align-items:center;gap:8px;font-size:.78rem;color:#667;}' +
-      '.sc-bar i{flex:1;height:8px;border-radius:5px;background:#ece9e2;overflow:hidden;display:block;}' +
-      '.sc-bar i b{display:block;height:100%;background:linear-gradient(90deg,#7fae8a,#4a7c59);border-radius:5px;}' +
+      '.sc-bar i{flex:1;height:8px;border-radius:4px;background:#ece9e2;overflow:hidden;display:block;}' +
+      '.sc-bar i b{display:block;height:100%;background:#7fae8a;border-radius:4px;}' +
       '.sc-detail{font-size:.8rem;color:#667;margin-top:8px;line-height:1.7;}' +
       '.sc-legend{font-size:.78rem;color:#99a;border-top:1px dashed rgba(120,140,130,.3);margin-top:14px;padding-top:10px;line-height:1.7;}' +
       '.sc-tip{font-size:.78rem;color:#8a9;margin-top:8px;}' +
@@ -66,7 +66,7 @@
       'html.dark .sc-card{background:#202622;}' +
       'html.dark .sc-card h2,html.dark .sc-hero h1{color:#d4ddd6;}' +
       'html.dark .sc-label,html.dark .sc-bar,html.dark .sc-detail{color:#b7c2ba;}' +
-      'html.dark .sc-hero{background:linear-gradient(135deg,rgba(74,124,89,.18),rgba(196,149,106,.14));border-color:rgba(74,124,89,.35);}' +
+      'html.dark .sc-hero{background:rgba(74,124,89,.18);border-color:rgba(74,124,89,.35);}' +
       'html.dark input[type=number].sc-num{background:#161b18;border-color:#3a453e;color:#d4ddd6;}' +
       'html.dark .sc-result{background:rgba(74,124,89,.14);border-color:rgba(74,124,89,.4);}' +
       'html.dark .sc-bar i{background:#333c36;}';
@@ -213,7 +213,7 @@
     var bioHtml = '';
     if (bio) {
       bioHtml = '<div class="sc-card" style="grid-column:1/-1">' +
-        '<h2>📐 ' + esc(bio.title) + ' — 计算规则公开</h2>' +
+        '<h2>' + esc(bio.title) + ' — 计算规则公开</h2>' +
         '<p class="sc-sub">' + esc(bio.formula) + '</p>' +
         bio.dims.map(function (d) {
           return '<div class="sc-row"><span class="sc-label">' + d.name + ' <small>权重 ' + d.weight + '</small></span>' +
@@ -229,7 +229,7 @@
       var pTbl = Object.keys(cr.penalties).map(function (k) { return k + ' −' + cr.penalties[k]; }).join('、');
       var cTbl = Object.keys(cr.costs).map(function (k) { return k + ' −' + cr.costs[k]; }).join('、');
       crHtml = '<div class="sc-card" style="grid-column:1/-1">' +
-        '<h2>🛡️ ' + esc(cr.title) + ' — 计算规则公开</h2>' +
+        '<h2>' + esc(cr.title) + ' — 计算规则公开</h2>' +
         '<p class="sc-sub">' + esc(cr.formula) + '</p>' +
         '<div class="sc-detail">• ' + esc(cr.nearCause) + '</div>' +
         '<div class="sc-detail">• ' + esc(cr.baseNote) + '</div>' +
@@ -249,14 +249,14 @@
 
     var html = '' +
       '<div class="sc-wrap">' +
-      '<div class="sc-hero"><h1>🧪 数据实验室</h1>' +
+      '<div class="sc-hero"><h1>数据实验室</h1>' +
       '<p>这里 100% 公开 BioQuest 各项数据指标的计算方式。你可以像做实验一样：<b>任意输入自变量</b>（六维属性、行为次数、天数…），<b>实时观察因变量</b>（Bio Score、信用指数 CR、正确率）如何变化，所有公式与阈值一览无余。</p></div>' +
 
       '<div class="sc-grid">' +
 
       '<!-- Bio Score 计算器 -->' +
       '<div class="sc-card">' +
-      '<h2>🧬 Bio Score 推演（因变量：总分）</h2>' +
+      '<h2>Bio Score 推演（因变量：总分）</h2>' +
       '<p class="sc-sub">输入六维属性（0-100），即可算出加权总分与评级。左侧滑块可拖动，右侧数字框可精确输入。</p>' +
       '<button type="button" class="sc-btn sc-btn--ghost" data-action="sc-fill-bio">⬇️ 填入我的真实数据</button>' +
       '<div id="sc-bio-inputs">' +
@@ -272,7 +272,7 @@
 
       '<!-- CR 计算器 -->' +
       '<div class="sc-card">' +
-      '<h2>🛡️ CR 信用推演（因变量：信用指数）</h2>' +
+      '<h2>CR 信用推演（因变量：信用指数）</h2>' +
       '<p class="sc-sub">输入你的行为参数（可视为过去 N 天内的总量），实时得到 v2 科学模型的信用分与信任等级。</p>' +
       '<div class="sc-row"><span class="sc-label">行为距今天数</span><input type="number" id="sc-cr-days" class="sc-num" min="0" max="3650" value="3"></div>' +
       '<div class="sc-row"><span class="sc-label">每日登录次数</span><input type="number" id="sc-cr-login" class="sc-num" min="0" value="5"></div>' +
@@ -291,7 +291,7 @@
 
       '<!-- 正确率速算 -->' +
       '<div class="sc-card">' +
-      '<h2>🎯 正确率速算</h2>' +
+      '<h2>正确率速算</h2>' +
       '<p class="sc-sub">经典功能：正确数 ÷ 总数 = 正确率。也用于理解 stats.accuracy 的展示口径（题目级）。</p>' +
       '<div class="sc-row"><span class="sc-label">答对题数</span><input type="number" id="sc-acc-c" class="sc-num" min="0" value="8"></div>' +
       '<div class="sc-row"><span class="sc-label">总题数</span><input type="number" id="sc-acc-t" class="sc-num" min="1" value="10"></div>' +
@@ -300,7 +300,7 @@
       '</div>' +
 
       '<div class="sc-card">' +
-      '<h2>📖 为什么这么算？</h2>' +
+      '<h2>为什么这么算？</h2>' +
       '<p class="sc-sub">评分设计原则（可追溯、可辩护）：</p>' +
       '<div class="sc-detail">• <b>不能制造“幸存者偏差”</b>：正确率用正态 CDF 映射，避免简单线性在两端过分敏感（80% 与 99% 的差距不应巨大）。</div>' +
       '<div class="sc-detail">• <b>成长看“方向”而非绝对值</b>：成长性以时间升序的平滑趋势衡量，进步加分、退步减分、持平 50 分。</div>' +

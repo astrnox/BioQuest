@@ -116,15 +116,15 @@ function confirmDeleteWithTyping(message, callback) {
   overlay.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;z-index:99999;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;';
 
   var panel = document.createElement('div');
-  panel.style.cssText = 'background:#fff;border-radius:16px;padding:28px 24px;max-width:400px;width:90%;box-shadow:0 16px 48px rgba(0,0,0,0.2);font-family:system-ui,sans-serif;';
+  panel.style.cssText = 'background:#fff;border-radius:16px;padding:28px 24px;max-width:400px;width:90%;box-shadow:var(--shadow-floating);font-family:system-ui,sans-serif;';
 
   panel.innerHTML =
     '<h3 style="font-size:1.1rem;font-weight:700;margin-bottom:8px;color:#1a1a1a;">确认删除</h3>' +
     '<p style="font-size:0.9rem;color:#666;margin-bottom:16px;line-height:1.5;">' + (message || '此操作不可撤销。请输入 <strong>DELETE</strong> 确认删除：') + '</p>' +
-    '<input id="delete-confirm-input" type="text" placeholder="输入 DELETE 确认" style="width:100%;padding:10px 12px;border:2px solid #ddd;border-radius:10px;font-size:1rem;outline:none;box-sizing:border-box;font-family:monospace;" autocomplete="off">' +
+    '<input id="delete-confirm-input" type="text" placeholder="输入 DELETE 确认" style="width:100%;padding:10px 12px;border:2px solid #ddd;border-radius:8px;font-size:1rem;outline:none;box-sizing:border-box;font-family:monospace;" autocomplete="off">' +
     '<div style="display:flex;gap:8px;margin-top:16px;justify-content:flex-end;">' +
-    '  <button id="delete-confirm-cancel" style="padding:8px 20px;border-radius:10px;border:1px solid #ddd;background:#fff;color:#666;cursor:pointer;font-size:0.9rem;">取消</button>' +
-    '  <button id="delete-confirm-execute" style="padding:8px 20px;border-radius:10px;border:none;background:#c0392b;color:#fff;cursor:pointer;font-size:0.9rem;opacity:0.5;" disabled>确认删除</button>' +
+    '  <button id="delete-confirm-cancel" style="padding:8px 20px;border-radius:8px;border:1px solid #ddd;background:#fff;color:#666;cursor:pointer;font-size:0.9rem;">取消</button>' +
+    '  <button id="delete-confirm-execute" style="padding:8px 20px;border-radius:8px;border:none;background:#c0392b;color:#fff;cursor:pointer;font-size:0.9rem;opacity:0.5;" disabled>确认删除</button>' +
     '</div>';
 
   overlay.appendChild(panel);

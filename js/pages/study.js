@@ -49,7 +49,7 @@
       }
       .st-tabs { display: flex; gap: 6px; flex-wrap: wrap; max-width: 920px; margin: 0 auto; }
       .st-tab {
-        padding: 8px 18px; border-radius: 999px; cursor: pointer;
+        padding: 8px 18px; border-radius: 16px; cursor: pointer;
         font-size: 0.9rem; font-weight: 500;
         color: var(--text-secondary, #4a4a4a);
         background: transparent; border: 1px solid transparent;
@@ -59,18 +59,18 @@
       .st-tab:hover { background: rgba(90,125,92,0.08); color: var(--color-sage, #5a7d5c); }
       .st-tab.active {
         background: var(--color-sage, #5a7d5c); color: #fff;
-        box-shadow: 0 2px 8px rgba(90,125,92,0.25);
+        box-shadow: var(--shadow-md);
       }
 
       .st-card {
-        background: var(--color-white, #fff); border-radius: 14px;
+        background: var(--color-white, #fff); border-radius: 12px;
         padding: 20px; margin-bottom: 14px;
-        box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+        box-shadow: var(--shadow-sm);
         border: 1px solid var(--border-light, #eee);
       }
       .st-card h3 { margin: 0 0 14px; font-size: 1.05rem; color: var(--color-deep, #1a3a2a); font-family: var(--font-serif, serif); }
 
-      .st-task { display: flex; align-items: flex-start; gap: 10px; padding: 10px; border: 1px solid var(--border-light, #e5e7eb); border-radius: 10px; margin-bottom: 8px; transition: background 0.2s; }
+      .st-task { display: flex; align-items: flex-start; gap: 10px; padding: 10px; border: 1px solid var(--border-light, #e5e7eb); border-radius: 8px; margin-bottom: 8px; transition: background 0.2s; }
       .st-task:hover { background: rgba(90,125,92,0.03); }
       .st-task.done { opacity: 0.55; }
       .st-task.done .st-task-title { text-decoration: line-through; }
@@ -102,16 +102,16 @@
       .st-pomodoro-mode { color: var(--text-muted, #8a8a8a); font-size: 0.85rem; margin-top: 6px; letter-spacing: 0.08em; text-transform: uppercase; }
       .st-pomodoro-controls { display: flex; justify-content: center; gap: 10px; margin-top: 24px; flex-wrap: wrap; }
       .st-pomo-modes { display: flex; gap: 6px; justify-content: center; margin-top: 14px; flex-wrap: wrap; }
-      .st-pomo-mode-btn { padding: 5px 12px; border-radius: 6px; border: 1px solid var(--border-light, #ddd); background: transparent; cursor: pointer; font-size: 0.8rem; color: var(--text-secondary, #4a4a4a); }
+      .st-pomo-mode-btn { padding: 5px 12px; border-radius: 8px; border: 1px solid var(--border-light, #ddd); background: transparent; cursor: pointer; font-size: 0.8rem; color: var(--text-secondary, #4a4a4a); }
       .st-pomo-mode-btn.active { background: var(--color-sage, #5a7d5c); color: #fff; border-color: var(--color-sage, #5a7d5c); }
-      .st-pomo-link { margin-top: 16px; padding: 12px; background: var(--color-cream-dark, #f0ebe0); border-radius: 10px; font-size: 0.85rem; }
+      .st-pomo-link { margin-top: 16px; padding: 12px; background: var(--color-cream-dark, #f0ebe0); border-radius: 8px; font-size: 0.85rem; }
       .st-pomo-stat { color: var(--text-muted, #8a8a8a); font-size: 0.85rem; margin-top: 14px; }
 
       /* 课程表 */
       .st-schedule-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
       .st-schedule-table th, .st-schedule-table td { border: 1px solid var(--border-light, #e5e7eb); padding: 8px; text-align: left; vertical-align: top; }
       .st-schedule-table th { background: var(--color-cream-dark, #f9fafb); width: 70px; color: var(--color-deep, #1a3a2a); font-family: var(--font-serif, serif); }
-      .st-schedule-item { padding: 4px 6px; border-radius: 5px; margin-bottom: 4px; font-size: 0.78rem; color: #fff; display: flex; align-items: center; justify-content: space-between; gap: 4px; }
+      .st-schedule-item { padding: 4px 6px; border-radius: 4px; margin-bottom: 4px; font-size: 0.78rem; color: #fff; display: flex; align-items: center; justify-content: space-between; gap: 4px; }
 
       /* 倒计时 */
       .st-countdown { text-align: center; padding: 30px; }
@@ -120,7 +120,7 @@
 
       .st-empty { text-align: center; padding: 36px 20px; color: var(--text-muted, #8a8a8a); font-size: 0.9rem; }
 
-      .st-note { padding: 14px; border: 1px solid var(--border-light, #e5e7eb); border-radius: 10px; margin-bottom: 8px; transition: border-color 0.2s; }
+      .st-note { padding: 14px; border: 1px solid var(--border-light, #e5e7eb); border-radius: 8px; margin-bottom: 8px; transition: border-color 0.2s; }
       .st-note:hover { border-color: var(--color-olive, #8ba888); }
       .st-note-title { font-weight: 600; color: var(--color-deep, #1a3a2a); }
       .st-note-meta { font-size: 0.78rem; color: var(--text-muted, #8a8a8a); margin-top: 4px; }
@@ -132,11 +132,11 @@
         z-index: 40;
         background: var(--color-white, #fff);
         border-top: 1px solid var(--border-light, #eee);
-        box-shadow: 0 -4px 20px rgba(0,0,0,0.06);
+        box-shadow: var(--shadow-lg);
         padding: 14px 20px;
       }
       .st-rhythm-inner { max-width: 920px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
-      .st-rhythm-item { text-align: center; cursor: pointer; padding: 8px 4px; border-radius: 10px; transition: background 0.2s; }
+      .st-rhythm-item { text-align: center; cursor: pointer; padding: 8px 4px; border-radius: 8px; transition: background 0.2s; }
       .st-rhythm-item:hover { background: var(--color-cream-dark, #f0ebe0); }
       .st-rhythm-value { font-size: 1.5rem; font-weight: 700; color: var(--color-sage, #5a7d5c); font-family: var(--font-serif, serif); line-height: 1.1; }
       .st-rhythm-value .unit { font-size: 0.7rem; color: var(--text-muted, #8a8a8a); font-weight: 400; margin-left: 2px; }
@@ -144,8 +144,8 @@
 
       /* 工具 Tab */
       .st-tools-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px; }
-      .st-tool-card { padding: 20px; border: 1px solid var(--border-light, #eee); border-radius: 14px; cursor: pointer; transition: all 0.25s cubic-bezier(0.22,1,0.36,1); background: var(--color-white, #fff); display: flex; flex-direction: column; gap: 8px; }
-      .st-tool-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(26,58,42,0.08); border-color: var(--color-olive, #8ba888); }
+      .st-tool-card { padding: 20px; border: 1px solid var(--border-light, #eee); border-radius: 12px; cursor: pointer; transition: all 0.25s cubic-bezier(0.22,1,0.36,1); background: var(--color-white, #fff); display: flex; flex-direction: column; gap: 8px; }
+      .st-tool-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); border-color: var(--color-olive, #8ba888); }
       .st-tool-icon { width: 44px; height: 44px; border-radius: 12px; display: flex; align-items: center; justify-content: center; background: rgba(90,125,92,0.08); color: var(--color-sage, #5a7d5c); }
       .st-tool-name { font-weight: 700; color: var(--color-deep, #1a3a2a); font-size: 1rem; font-family: var(--font-serif, serif); }
       .st-tool-desc { font-size: 0.82rem; color: var(--text-muted, #8a8a8a); line-height: 1.5; }
@@ -227,7 +227,7 @@
       { id: 'notes',     label: '笔记' },
       { id: 'countdown', label: '倒计时' },
       { id: 'tools',     label: '工具' },
-      { id: 'hub',       label: '🎯 管理' }
+      { id: 'hub',       label: '管理' }
     ];
     container.innerHTML = tabs.map(function(t) {
       return '<button class="st-tab ' + (_activeTab === t.id ? 'active' : '') + '" data-tab="' + t.id + '">' + t.label + '</button>';
@@ -279,10 +279,10 @@
     '<div class="st-card">' +
       '<h3>快速入口</h3>' +
       '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-top:8px;">' +
-        '<button class="st-btn" data-jump-tab="tasks">📋 待办列表</button>' +
-        '<button class="st-btn" data-jump-tab="pomodoro">🍅 开始番茄钟</button>' +
-        '<button class="st-btn" data-jump-tab="notes">📝 学习笔记</button>' +
-        '<button class="st-btn" data-jump-tab="countdown">⏰ 考试倒计时</button>' +
+        '<button class="st-btn" data-jump-tab="tasks">待办列表</button>' +
+        '<button class="st-btn" data-jump-tab="pomodoro">开始番茄钟</button>' +
+        '<button class="st-btn" data-jump-tab="notes">学习笔记</button>' +
+        '<button class="st-btn" data-jump-tab="countdown">考试倒计时</button>' +
       '</div>' +
     '</div>';
 
@@ -314,7 +314,6 @@
         '<div class="st-rhythm-value">' + _reviewCount + '<span class="unit">题</span></div>' +
         '<div class="st-rhythm-label">复习</div></div>' +
       '<div class="st-rhythm-item" data-jump="hub">' +
-        '<div class="st-rhythm-value">🎯<span class="unit"></span></div>' +
         '<div class="st-rhythm-label">管理</div></div>' +
       '<div class="st-rhythm-item" data-jump="countdown">' +
         '<div class="st-rhythm-value">' + (days !== null ? days : '—') + '<span class="unit">天</span></div>' +
@@ -399,7 +398,7 @@
     var todo = _tasks.filter(function(t) { return t.status !== 'done' && t.status !== 'archived'; });
     var done = _tasks.filter(function(t) { return t.status === 'done'; });
     var aiBtn = (typeof window.LearningHub !== 'undefined' && window.LearningHub._showAIBreakdownDialog)
-      ? '<button class="st-btn" id="st-ai-breakdown-btn" style="background:linear-gradient(135deg,#5a7d5c,#6ba07a);color:#fff;border:none;margin-left:8px;">🤖 AI 目标细化</button>'
+      ? '<button class="st-btn" id="st-ai-breakdown-btn" style="background:#5a7d5c;color:#fff;border:none;margin-left:8px;">AI 目标细化</button>'
       : '';
     container.innerHTML = '<div class="st-card"><h3>新建待办 ' + aiBtn + '</h3>' +
       '<div class="st-form-row"><input type="text" class="st-input" id="st-task-title" placeholder="任务名称，如：复习必修1第5章">' +
@@ -411,7 +410,7 @@
           '<div class="st-task-meta">' + (t.due_date ? '截止 ' + _formatDate(t.due_date) : '无截止日期') +
           (t.pomodoro_count ? ' · 已专注 ' + t.pomodoro_count + ' 个番茄' : '') + '</div></div>' +
           '<div class="st-task-actions">' +
-            '<button class="st-btn st-btn--small st-pomo-task" data-id="' + t.id + '" title="用番茄钟专注此任务">🍅</button>' +
+            '<button class="st-btn st-btn--small st-pomo-task" data-id="' + t.id + '" title="用番茄钟专注此任务">专注</button>' +
             '<button class="st-btn st-btn--secondary st-btn--small st-done-task" data-id="' + t.id + '">完成</button>' +
             '<button class="st-btn st-btn--danger st-btn--small st-delete-task" data-id="' + t.id + '">删除</button>' +
           '</div></div>';
@@ -721,7 +720,7 @@
     }
   }
 
-  /* ---------- 🎯 管理（嵌入 LearningHub：今日任务 / 时间线 / 进度 / AI 抢救 / 日志） ---------- */
+  /* ---------- 管理（嵌入 LearningHub：今日任务 / 时间线 / 进度 / AI 抢救 / 日志） ---------- */
   function _renderHub(container) {
     // 复用 LearningHub 模块（含 AI 自动细化目标、模态框、抢救方案等）
     if (typeof window.initLearningHub === 'function') {
@@ -729,7 +728,6 @@
     } else {
       container.innerHTML =
         '<div class="st-card" style="text-align:center;padding:32px;">' +
-          '<div style="font-size:32px;margin-bottom:8px;">📚</div>' +
           '<p style="color:var(--text-muted,#8a8a8a);">学习管理中心未加载</p>' +
           '<p style="color:var(--text-muted,#8a8a8a);font-size:12px;margin-top:4px;">请检查 js/pages/learning-hub.js 是否成功加载</p>' +
         '</div>';
@@ -784,7 +782,7 @@
     pageTarget.innerHTML = '<div style="padding:32px 20px 8px;text-align:center;">' +
       '<div style="font-family:var(--font-mono,monospace);font-size:0.72rem;letter-spacing:0.16em;color:var(--color-amber,#c4956a);text-transform:uppercase;margin-bottom:8px;">STUDY HUB</div>' +
       '<h1 style="margin:0;font-family:var(--font-serif,serif);color:var(--color-deep,#1a3a2a);font-size:1.8rem;">学习管理中心</h1>' +
-      '<p style="margin:8px 0 0;color:var(--text-muted,#8a8a8a);font-size:0.9rem;">课程表 · 待办 · 番茄钟 · 笔记 · 倒计时 · 工具 · 🎯 学习管理，一站式管理</p>' +
+      '<p style="margin:8px 0 0;color:var(--text-muted,#8a8a8a);font-size:0.9rem;">课程表 · 待办 · 番茄钟 · 笔记 · 倒计时 · 工具 · 学习管理，一站式管理</p>' +
     '</div>' +
     '<div class="st-container">' +
       '<div class="st-tabs-wrap" id="st-tabs-wrap"><div class="st-tabs" id="st-tabs"></div></div>' +

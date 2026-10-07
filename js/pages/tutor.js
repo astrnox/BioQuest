@@ -80,7 +80,7 @@ function injectTutorStyles() {
     '  color: #2c3e30;',
     '  border-radius: 4px 16px 16px 16px;',
     '  margin-left: 4px;',
-    '  box-shadow: 0 1px 1px rgba(0,0,0,0.06);',
+    '  box-shadow: var(--shadow-sm);',
     '}',
 
     /* Markdown 内容 */
@@ -168,7 +168,7 @@ function injectTutorStyles() {
     '}',
     '.tutor-quick-btn {',
     '  padding: 6px 12px;',
-    '  border-radius: 14px;',
+    '  border-radius: 12px;',
     '  background: #fff;',
     '  border: 1px solid #e2ddd6;',
     '  font-size: 0.78rem;',
@@ -195,11 +195,11 @@ function injectTutorStyles() {
     '.tutor-input-wrap {',
     '  flex: 1;',
     '  background: #fff;',
-    '  border-radius: 20px;',
+    '  border-radius: 16px;',
     '  display: flex;',
     '  align-items: flex-end;',
     '  padding: 2px 4px 2px 16px;',
-    '  box-shadow: 0 1px 3px rgba(44, 62, 48, 0.04);',
+    '  box-shadow: var(--shadow-sm);',
     '}',
     '.tutor-input {',
     '  flex: 1;',
@@ -291,7 +291,7 @@ function injectTutorStyles() {
     '  align-items: center;',
     '  justify-content: center;',
     '  font-size: 1.8rem;',
-    '  box-shadow: 0 2px 8px rgba(0,0,0,0.06);',
+    '  box-shadow: var(--shadow-md);',
     '}',
     '.tutor-welcome-title {',
     '  font-size: 1.1rem;',
@@ -303,6 +303,34 @@ function injectTutorStyles() {
     '  font-size: 0.82rem;',
     '  line-height: 1.5;',
     '}',
+
+    /* 未配置 AI Key 时的前置引导（消除「点进去是死路」） */
+    '.tutor-setup {',
+    '  max-width: 460px;',
+    '  margin: 24px auto;',
+    '  padding: 24px;',
+    '  background: #fff;',
+    '  border-radius: var(--radius-lg, 12px);',
+    '  box-shadow: var(--shadow-md);',
+    '}',
+    '.tutor-setup-title { font-size: 1.05rem; font-weight: 600; color: #1a3a2a; margin-bottom: 8px; }',
+    '.tutor-setup-desc { font-size: 0.84rem; color: #5a6b5f; line-height: 1.6; margin-bottom: 16px; }',
+    '.tutor-setup-field { margin-bottom: 12px; }',
+    '.tutor-setup-label { display: block; font-size: 0.8rem; color: #4a5a4f; margin-bottom: 6px; }',
+    '.tutor-setup select, .tutor-setup input[type="password"] {',
+    '  width: 100%; box-sizing: border-box; padding: 10px 12px;',
+    '  border: 1px solid #dcdcd4; border-radius: 8px; font-size: 0.86rem;',
+    '  background: #fff; color: #1a1a1a; font-family: inherit;',
+    '}',
+    '.tutor-setup-remember { display: flex; align-items: center; gap: 8px; font-size: 0.8rem; color: #5a6b5f; margin-bottom: 16px; }',
+    '.tutor-setup-btn {',
+    '  width: 100%; padding: 11px; border: none; border-radius: 8px;',
+    '  background: #4a7c59; color: #fff; font-size: 0.9rem; font-weight: 600;',
+    '  cursor: pointer; font-family: inherit;',
+    '}',
+    '.tutor-setup-btn:hover { background: #3f6b4c; }',
+    '.tutor-setup-msg { min-height: 18px; font-size: 0.78rem; color: #c45a4e; margin-top: 8px; }',
+    '.tutor-setup-foot { font-size: 0.76rem; color: #8a968c; margin-top: 12px; line-height: 1.6; }',
 
     /* 动画可访问性 — 尊重减少动态偏好 */
     '@media (prefers-reduced-motion: reduce) {',
@@ -321,7 +349,7 @@ function injectTutorStyles() {
 
 /* 模式配置 — 仅保留通用 */
 var TUTOR_MODES = {
-  general: { label: 'AI 导师', avatar: '🎓', greeting: '有什么生物学问题尽管问我。' }
+  general: { label: 'AI 导师', greeting: '有什么生物学问题尽管问我。' }
 };
 
 /* 快捷问题 */
@@ -541,7 +569,6 @@ function _renderTutorMessages(container) {
   if (_tutorState.messages.length === 0) {
     var mode = TUTOR_MODES[_tutorState.currentMode];
     container.innerHTML = '<div class="tutor-welcome">' +
-      '<div class="tutor-welcome-icon">' + mode.avatar + '</div>' +
       '<div class="tutor-welcome-title">' + mode.label + '</div>' +
       '<div class="tutor-welcome-desc">' + mode.greeting + '</div>' +
       '</div>';
@@ -777,11 +804,98 @@ function _finishTutorStream(aiMsg, fullText, stopped) {
   _persistCurrentSession();
 }
 
+/* 未配置 AI Key / 额度用尽时的前置引导 —— 避免用户进入对话页后无处可去 */
+function _tutorAiGate(target) {
+  if (!window.AiClient || typeof window.AiClient.canUse !== 'function') return false;
+  var check;
+  try { check = window.AiClient.canUse(); } catch (e) { return false; }
+  if (!check || check.ok) return false;
+
+  var hasKey = false;
+  try {
+    hasKey = !!(window.BioQuestKeyStore && window.BioQuestKeyStore.get &&
+      window.BioQuestKeyStore.get().length >= 8);
+  } catch (e) { hasKey = false; }
+
+  if (hasKey) {
+    // 已配置 Key 但仍不可用（多为当日额度用尽）→ 只给提示，不再展示表单
+    target.innerHTML = '<div class="tutor-page"><div class="tutor-welcome">' +
+      '<div class="tutor-welcome-title">AI 暂时不可用</div>' +
+      '<div class="tutor-welcome-desc">' + escapeHtml(check.reason || '请稍后再试。') + '</div>' +
+      '</div></div>';
+  } else {
+    _renderTutorSetup(target);
+  }
+  return true;
+}
+
+/* 内联的 API Key 配置卡：保存后即可直接开始对话（无需登录） */
+function _renderTutorSetup(target) {
+  target.innerHTML = '<div class="tutor-page"><div class="tutor-setup">' +
+    '<div class="tutor-setup-title">先配置一个免费的 AI Key</div>' +
+    '<div class="tutor-setup-desc">AI 导师由你自己的大模型 Key 驱动，直连服务商，Key 只保存在本机、不上传服务器。智谱 GLM、DeepSeek 均有免费额度。</div>' +
+    '<div class="tutor-setup-field">' +
+    '<label class="tutor-setup-label" for="tutor-provider">服务商</label>' +
+    '<select id="tutor-provider">' +
+    '<option value="zhipu">智谱 GLM（glm-4-flash 免费）</option>' +
+    '<option value="deepseek">DeepSeek</option>' +
+    '<option value="qwen">通义千问</option>' +
+    '<option value="moonshot">Kimi</option>' +
+    '<option value="nvidia">NVIDIA NIM</option>' +
+    '<option value="siliconflow">硅基流动</option>' +
+    '</select></div>' +
+    '<div class="tutor-setup-field">' +
+    '<label class="tutor-setup-label" for="tutor-key-input">API Key</label>' +
+    '<input type="password" id="tutor-key-input" placeholder="sk-..." autocomplete="off">' +
+    '</div>' +
+    '<label class="tutor-setup-remember">' +
+    '<input type="checkbox" id="tutor-key-remember" checked> 本标签页内记住（关闭标签页即清除）</label>' +
+    '<button type="button" class="tutor-setup-btn" id="tutor-key-save">保存并开始对话</button>' +
+    '<div class="tutor-setup-msg" id="tutor-key-msg"></div>' +
+    '<div class="tutor-setup-foot">也可以稍后在「我的 → 设置」中修改 Key。不配置 Key 时，练习、模考、错题本等核心功能仍可正常使用。</div>' +
+    '</div></div>';
+
+  var saveBtn = document.getElementById('tutor-key-save');
+  if (!saveBtn) return;
+  saveBtn.addEventListener('click', function () {
+    var input = document.getElementById('tutor-key-input');
+    var key = input ? String(input.value).trim() : '';
+    var msgEl = document.getElementById('tutor-key-msg');
+    if (key.length < 8) {
+      if (msgEl) msgEl.textContent = '请输入有效的 API Key（至少 8 位）';
+      return;
+    }
+    var providerEl = document.getElementById('tutor-provider');
+    var provider = providerEl ? providerEl.value : 'zhipu';
+    var rememberEl = document.getElementById('tutor-key-remember');
+    var remember = !!(rememberEl && rememberEl.checked);
+    try {
+      if (window.BioQuestKeyStore && typeof window.BioQuestKeyStore.set === 'function') {
+        window.BioQuestKeyStore.set(key, remember);
+      }
+      // provider/model 为非敏感偏好，可落 localStorage；Key 本身绝不写入
+      var prev = {};
+      try { var raw = localStorage.getItem('bioquest_ai_key_config'); if (raw) prev = JSON.parse(raw) || {}; } catch (e) { prev = {}; }
+      prev.provider = provider;
+      prev.model = prev.model || '';
+      prev.apiKey = '';
+      localStorage.setItem('bioquest_ai_key_config', JSON.stringify(prev));
+    } catch (e) {
+      if (msgEl) msgEl.textContent = '保存失败，请检查浏览器是否禁用了本地存储';
+      return;
+    }
+    renderTutorPage(target);
+  });
+}
+
 /**
  * 主渲染函数 — Telegram 风格
  */
 function renderTutorPage(target) {
   injectTutorStyles();
+
+  // 无 Key / 额度用尽时不进入对话界面，先给可操作的引导
+  if (_tutorAiGate(target)) return;
 
   var html = '<div class="tutor-page">';
 

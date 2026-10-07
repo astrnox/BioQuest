@@ -101,7 +101,7 @@
       flex-direction: column;
       /* 老浏览器兼容：不依赖 flex gap（Chrome <84 / Safari <14.1），用 margin 兜底 */
       gap: 16px;
-      background: radial-gradient(ellipse at 20% 20%, #f5f0e8 0%, #faf8f5 40%, #faf8f5 100%);
+      background: #faf8f5;
       /* 防止 mask 卸载时产生闪烁 */
       transition: opacity 0.35s ease, visibility 0.35s ease;
       -webkit-user-select: none;
@@ -109,7 +109,7 @@
       pointer-events: none;
     }
     html[data-theme="dark"] #bq-boot-mask {
-      background: radial-gradient(ellipse at 20% 20%, #1a1f1c 0%, #141a16 40%, #141a16 100%);
+      background: #141a16;
     }
     #bq-boot-logo {
       /* 与站点 header 品牌同款 SVG（金环+中心圆+绿色射线），
@@ -135,102 +135,66 @@
       margin: 0 0 16px; /* 老浏览器（无 flex gap）下的间距兜底 */
     }
     html[data-theme="dark"] #bq-boot-label { color: #e0e8e2; }
-    #bq-boot-spinner {
-      /* Issue #139：首屏加载动画升级为 DNA 双螺旋（纯 CSS，不依赖外部样式，符合 boot 自包含约定） */
-      position: relative;
-      width: 40px;
-      height: 72px;
-      margin-top: 2px;
-    }
-    #bq-boot-spinner .bq-dna-strand {
-      position: absolute;
-      top: 3px;
-      bottom: 3px;
-      width: 10px;
+    /* ⑤ 碱基配对加载动画：只保留核心 —— 字母 + 细线。
+       线数即氢键数：A=T 两条，G≡C 三条（同嘌呤↔嘧啶配对规则），
+       去掉了方框/圆圈/糖磷酸骨架，纯 CSS 不依赖外部样式（boot 自包含约定）。 */
+    #bq-boot-pairs {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-    }
-    #bq-boot-spinner .bq-dna-strand i {
-      display: block;
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: #5a7d5c;
-      will-change: transform;
-    }
-    html[data-theme="dark"] #bq-boot-spinner .bq-dna-strand i { background: #6bc48e; }
-    #bq-boot-spinner .bq-dna-strand--left  { left: 2px; }
-    #bq-boot-spinner .bq-dna-strand--right { right: 2px; }
-    #bq-boot-spinner .bq-dna-strand--left i  { animation: bqBootDnaL 1.8s ease-in-out infinite; }
-    #bq-boot-spinner .bq-dna-strand--right i { animation: bqBootDnaR 1.8s ease-in-out infinite; }
-    #bq-boot-spinner .bq-dna-strand--left i:nth-child(1)  { animation-delay: 0s; }
-    #bq-boot-spinner .bq-dna-strand--left i:nth-child(2)  { animation-delay: 0.45s; }
-    #bq-boot-spinner .bq-dna-strand--left i:nth-child(3)  { animation-delay: 0.9s; }
-    #bq-boot-spinner .bq-dna-strand--left i:nth-child(4)  { animation-delay: 1.35s; }
-    #bq-boot-spinner .bq-dna-strand--right i:nth-child(1) { animation-delay: 0.225s; }
-    #bq-boot-spinner .bq-dna-strand--right i:nth-child(2) { animation-delay: 0.675s; }
-    #bq-boot-spinner .bq-dna-strand--right i:nth-child(3) { animation-delay: 1.125s; }
-    #bq-boot-spinner .bq-dna-strand--right i:nth-child(4) { animation-delay: 1.575s; }
-    #bq-boot-spinner .bq-dna-rung {
-      position: absolute;
-      left: 50%;
-      top: 4px;
-      bottom: 4px;
-      width: 2px;
-      margin-left: -1px;
-      border-radius: 2px;
-      background: linear-gradient(180deg, transparent, #c4956a 25%, #c4956a 75%, transparent);
-      animation: bqBootDnaRung 1.8s ease-in-out infinite;
-    }
-    html[data-theme="dark"] #bq-boot-spinner .bq-dna-rung { background: linear-gradient(180deg, transparent, #d9a86c 25%, #d9a86c 75%, transparent); }
-    @keyframes bqBootDnaL {
-      0%, 100% { transform: translateX(0) scale(1); }
-      25%      { transform: translateX(8px) scale(0.6); }
-      50%      { transform: translateX(0) scale(1); }
-      75%      { transform: translateX(-8px) scale(0.6); }
-    }
-    @keyframes bqBootDnaR {
-      0%, 100% { transform: translateX(0) scale(1); }
-      25%      { transform: translateX(-8px) scale(0.6); }
-      50%      { transform: translateX(0) scale(1); }
-      75%      { transform: translateX(8px) scale(0.6); }
-    }
-    @keyframes bqBootDnaRung {
-      0%, 100% { transform: scaleY(1); opacity: 1; }
-      25%      { transform: scaleY(0.5); opacity: 0.5; }
-      50%      { transform: scaleY(1); opacity: 1; }
-      75%      { transform: scaleY(0.5); opacity: 0.5; }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      #bq-boot-spinner .bq-dna-strand i,
-      #bq-boot-spinner .bq-dna-rung { animation-duration: 3.6s !important; }
-    }
-    /* ⑤ 加载进度条 + 百分比（加权步骤估算，真实进度驱动） */
-    #bq-boot-progress {
-      width: 180px;
-      height: 5px;
-      border-radius: 999px;
-      background: rgba(90, 125, 92, 0.18);
-      overflow: hidden;
+      gap: 12px;
       margin-top: 2px;
     }
-    html[data-theme="dark"] #bq-boot-progress { background: rgba(107, 196, 142, 0.2); }
-    #bq-boot-progress-fill {
-      height: 100%;
-      width: 0%;
-      border-radius: 999px;
-      background: linear-gradient(90deg, #5a7d5c, #6bc48e);
-      transition: width 0.14s linear;
+    .bq-pair {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      height: 24px;
     }
-    #bq-boot-percent {
+    .bq-base {
+      width: 18px;
+      text-align: center;
+      line-height: 1;
       font-family: var(--font-serif);
-      font-variant-numeric: tabular-nums;
-      font-size: 0.85rem;
-      color: #93a094;
-      letter-spacing: 0.04em;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #2c3e30;
     }
-    html[data-theme="dark"] #bq-boot-percent { color: #7f9189; }
+    html[data-theme="dark"] .bq-base { color: #e0e8e2; }
+    .bq-hb {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 4px;
+      width: 34px;
+      height: 24px;
+    }
+    .bq-hb i {
+      display: block;
+      height: 1.5px;
+      border-radius: 999px;
+      background: #5a7d5c;
+    }
+    html[data-theme="dark"] .bq-hb i { background: #6bc48e; }
+    .bq-pair--r1 { --bq-d: 0s; }
+    .bq-pair--r2 { --bq-d: 0.22s; }
+    .bq-pair--r3 { --bq-d: 0.44s; }
+    .bq-pair--r4 { --bq-d: 0.66s; }
+    /* 逐对"扣合"：每条氢键依次点亮后循环 */
+    @media (prefers-reduced-motion: no-preference) {
+      .bq-hb i {
+        opacity: 0;
+        animation: bqBootPair 2.8s ease-in-out infinite;
+        animation-delay: calc(var(--bq-d, 0s) + var(--bq-i, 0s));
+      }
+      .bq-hb i:nth-child(2) { --bq-i: 0.1s; }
+      .bq-hb i:nth-child(3) { --bq-i: 0.2s; }
+    }
+    @keyframes bqBootPair {
+      0%   { opacity: 0; }
+      14%  { opacity: 1; }
+      82%  { opacity: 1; }
+      100% { opacity: 0; }
+    }
     /* 动画声明（只放这里，不依赖外部 CSS 文件加载） */
     @keyframes bqBootBreathe {
       0%, 100% { opacity: 1; }
@@ -374,13 +338,12 @@
       </svg>
     </div>
     <div id="bq-boot-label">BioQuest · 生物竞赛刷题</div>
-    <div id="bq-boot-spinner" aria-hidden="true">
-      <span class="bq-dna-strand bq-dna-strand--left"><i></i><i></i><i></i><i></i></span>
-      <span class="bq-dna-strand bq-dna-strand--right"><i></i><i></i><i></i><i></i></span>
-      <span class="bq-dna-rung"></span>
+    <div id="bq-boot-pairs" aria-hidden="true">
+      <div class="bq-pair bq-pair--r1"><span class="bq-base">A</span><span class="bq-hb"><i></i><i></i></span><span class="bq-base">T</span></div>
+      <div class="bq-pair bq-pair--r2"><span class="bq-base">G</span><span class="bq-hb"><i></i><i></i><i></i></span><span class="bq-base">C</span></div>
+      <div class="bq-pair bq-pair--r3"><span class="bq-base">T</span><span class="bq-hb"><i></i><i></i></span><span class="bq-base">A</span></div>
+      <div class="bq-pair bq-pair--r4"><span class="bq-base">C</span><span class="bq-hb"><i></i><i></i><i></i></span><span class="bq-base">G</span></div>
     </div>
-    <div id="bq-boot-progress" aria-hidden="true"><div id="bq-boot-progress-fill"></div></div>
-    <div id="bq-boot-percent" aria-hidden="true">0%</div>
   </div>
   <!-- 首屏骨架遮罩逻辑（外部化）：defer 加载，不阻塞内容解析；遮罩本身由上方 CSS 立即显示 -->
   <script src="js/core/boot-mask.js?v=20260917b" defer></script>
@@ -403,8 +366,8 @@
       <a href="#/" data-route="/">首页</a>
       <a href="#/dashboard" data-route="/dashboard">仪表盘</a>
       <a href="#/trends" data-route="/trends">趋势</a>
-      <a href="#/tutor" data-route="/tutor" style="color:var(--color-amber,#c4956a);font-weight:600;">AI 对话</a>
-      <a href="#/study?tab=hub" data-route="/study" style="color:var(--color-amber,#c4956a);font-weight:600;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:4px"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/></svg>学习管理</a>
+      <a href="#/tutor" data-route="/tutor">AI 对话</a>
+      <a href="#/study?tab=hub" data-route="/study"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:4px"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/></svg>学习管理</a>
       <a href="#/practice" data-route="/practice">练习</a>
       <a href="#/exam" data-route="/exam">模考</a>
       <a href="biology-history.html">生物学史</a>
@@ -413,15 +376,15 @@
       <a href="wiki.html">百科</a>
       <a href="#/knowledge-graph" data-route="/knowledge-graph">图谱</a>
       <a href="#/bio-lab" data-route="/bio-lab">实验室</a>
-      <a href="#/phet-sims" data-route="/phet-sims" style="color:var(--color-sage,#4a7c59);font-weight:600;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:4px"><path d="M6 18h8M8 18v3M12 18v3M5 8h10v6H5z"/><path d="M10 8V5a2 2 0 0 1 4 0v3M18 12h2v6h-2"/></svg>PhET 模拟</a>
+      <a href="#/phet-sims" data-route="/phet-sims"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:4px"><path d="M6 18h8M8 18v3M12 18v3M5 8h10v6H5z"/><path d="M10 8V5a2 2 0 0 1 4 0v3M18 12h2v6h-2"/></svg>PhET 模拟</a>
       <a href="#/sketch" data-route="/sketch">画板</a>
       <a href="#/smiles" data-route="/smiles">SMILES</a>
       <a href="#/molecules" data-route="/molecules">3D 分子</a>
-      <a href="#/genome" data-route="/genome" style="color:var(--color-sage,#4a7c59);font-weight:600;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:4px"><path d="M4 4c4 4 12 4 16 0M4 20c4-4 12-4 16 0M4 4v16M20 4v16M8 8h8M8 16h8M6 12h12"/></svg>基因组</a>
+      <a href="#/genome" data-route="/genome"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:4px"><path d="M4 4c4 4 12 4 16 0M4 20c4-4 12-4 16 0M4 4v16M20 4v16M8 8h8M8 16h8M6 12h12"/></svg>基因组</a>
       <a href="#/study" data-route="/study">学习</a>
       <a href="#/wrongbook" data-route="/wrongbook">错题录题</a>
       <a href="#/community" data-route="/community">社区</a>
-      <a href="#/daily-billion" data-route="/daily-billion" style="color:var(--color-amber,#c4956a);font-weight:600;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:4px"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>每日亿题</a>
+      <a href="#/daily-billion" data-route="/daily-billion"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:4px"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>每日亿题</a>
       <a href="#/teacher" data-route="/teacher">教师</a>
       <a href="#/user" data-route="/user">我的</a>
     </nav>
@@ -528,9 +491,8 @@
         <div class="hero-overlay"></div>
         <div class="hero-gradient-left"></div>
         <div class="hero-content">
-          <div class="hero-label">CHINA BIOLOGY OLYMPIAD 2026</div>
-          <h1 class="hero-title">探索生命的奥秘<br><span class="hero-title-accent">从这里开始</span></h1>
-          <p class="hero-subtitle">BioQuest 为每一位热爱生物学的你，提供从高考到竞赛的全链路学习工具</p>
+          <h1 class="hero-title">把生物竞赛的知识点<br><span class="hero-title-accent">一道题一道题刷明白</span></h1>
+          <p class="hero-subtitle">按 2025 联赛大纲组织：72 题全真模拟、模块化专项练习、错题自动收录。无需注册即可开始。</p>
           <div class="hero-actions">
             <button class="btn-primary-hero" data-route="/exam">
               <span>开始模考</span>
@@ -624,10 +586,9 @@
       <section class="daily-question-section" data-section="daily-question">
         <div class="container">
           <div class="section-header">
-            <div class="section-label">DAILY CHALLENGE</div>
             <h2 class="section-title">每日一题</h2>
             <p class="section-desc">每天一道精选竞赛题，保持手感，积少成多</p>
-            <a href="#/daily-billion" class="daily-billion-entry-link" style="display:inline-block;margin-top:8px;color:var(--color-amber,#c4956a);font-weight:600;font-size:0.9rem;text-decoration:none;padding:6px 16px;border:1px solid var(--color-amber,#c4956a);border-radius:20px;transition:all 0.2s;">进入每日亿题 →</a>
+            <a href="#/daily-billion" class="daily-billion-entry-link" style="display:inline-block;margin-top:8px;color:var(--color-amber,#c4956a);font-weight:600;font-size:0.9rem;text-decoration:none;padding:6px 16px;border:1px solid var(--color-amber,#c4956a);border-radius:var(--radius-pill,999px);transition:all 0.2s;">进入每日亿题 →</a>
           </div>
           <div class="daily-question-card" id="dailyQuestionCard">
             <div class="daily-question-loading" id="dailyLoading">加载中...</div>
@@ -635,33 +596,21 @@
         </div>
       </section>
 
-      <!-- Issue #129（P3-36）：本地成就徽章集合（由 js/engagement/achievements.js 渲染，游客亦可查看） -->
-      <section class="ach-home-section" data-section="achievements" style="padding:48px 0 24px;">
-        <div class="container">
-          <div class="section-header">
-            <div class="section-label">ACHIEVEMENTS</div>
-            <h2 class="section-title">我的成就徽章</h2>
-            <p class="section-desc">完成练习、收藏题目、连续打卡即可解锁生物主题徽章</p>
-          </div>
-          <div id="homeAchievementsPanel" aria-live="polite"></div>
-        </div>
-      </section>
-
-      <section class="social-impact-section" data-section="social-impact" style="padding:80px 0;background:linear-gradient(180deg,var(--surface-primary) 0%,rgba(90,125,92,0.04) 100%);">
+      <section class="social-impact-section" data-section="social-impact" style="padding:80px 0;background:var(--surface-primary);">
         <div class="container">
           <div class="section-header" style="margin-bottom:40px;">
-            <div class="section-label">SOCIAL IMPACT</div>
-            <h2 class="section-title">生物守护计划</h2>
-            <p class="section-desc">用生物知识服务社会公益：关注生物多样性保护、生态可持续与乡村教育公平</p>
+            <h2 class="section-title">公益与开放</h2>
+            <p class="section-desc">三条都可以验证的长期承诺</p>
           </div>
           <div style="display:flex;flex-wrap:wrap;gap:28px;align-items:stretch;">
-            <div style="flex:1;min-width:300px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--border-light);background:var(--surface-primary);box-shadow:var(--shadow-sm);position:relative;">
-              <img src="./images/biology-education.jpg" alt="桂林漓江山水" style="width:100%;height:220px;object-fit:cover;display:block;" loading="lazy" decoding="async">
-              <div style="position:absolute;bottom:0;right:0;background:rgba(0,0,0,0.55);color:#fff;font-size:0.65rem;padding:2px 6px;border-top-left-radius:6px;">Photo: Xiquinho Silva / CC BY 2.0 · Wikimedia Commons</div>
-            </div>
+            <div style="flex:1;min-width:300px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--border-light);background:var(--surface-primary);box-shadow:var(--shadow-sm);display:flex;flex-direction:column;">
+              <div style="position:relative;">
+                <img src="./images/biology-education.jpg" alt="桂林漓江山水" style="width:100%;height:220px;object-fit:cover;display:block;" loading="lazy" decoding="async">
+                <div style="position:absolute;bottom:0;right:0;background:rgba(0,0,0,0.55);color:#fff;font-size:0.65rem;padding:2px 6px;border-top-left-radius:6px;">Photo: Xiquinho Silva / CC BY 2.0 · Wikimedia Commons</div>
+              </div>
               <div style="padding:24px;">
                 <h3 style="font-size:1.15rem;font-weight:600;margin-bottom:10px;color:var(--color-deep);">乡村生物科普志愿行</h3>
-                <p style="font-size:0.92rem;color:var(--text-secondary);line-height:1.7;margin-bottom:16px;">BioQuest 将竞赛级生物知识拆解为适合中学生的科普内容，助力志愿者走进乡村学校，让每个孩子都能触摸生命的奥秘。</p>
+                <p style="font-size:0.92rem;color:var(--text-secondary);line-height:1.7;margin-bottom:16px;">把竞赛题里的知识点整理成能直接讲给中学生听的科普稿，供支教志愿者在乡村学校使用。</p>
                 <a class="btn-secondary-cta" href="index.html#/practice?concept=%E7%94%9F%E7%89%A9%E5%A4%9A%E6%A0%B7%E6%80%A7%E4%BF%9D%E6%8A%A4" style="display:inline-flex;align-items:center;gap:6px;text-decoration:none;">
                   进入公益专题练习
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -669,19 +618,19 @@
               </div>
             </div>
             <div style="flex:1;min-width:300px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--border-light);background:var(--surface-primary);box-shadow:var(--shadow-sm);padding:24px;display:flex;flex-direction:column;justify-content:center;">
-              <h3 style="font-size:1.15rem;font-weight:600;margin-bottom:18px;color:var(--color-deep);">我们能一起做的事</h3>
+              <h3 style="font-size:1.15rem;font-weight:600;margin-bottom:18px;color:var(--color-deep);">三条长期承诺</h3>
               <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:14px;">
                 <li style="display:flex;align-items:flex-start;gap:12px;font-size:0.94rem;color:var(--text-secondary);line-height:1.6;">
                   <span style="width:28px;height:28px;border-radius:50%;background:rgba(90,125,92,0.1);color:var(--color-sage);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:0.85rem;">1</span>
-                  <span><strong>生物多样性保护</strong>：通过题库传播濒危物种、栖息地保护等知识，提升公众生态意识。</span>
+                  <span><strong>核心题库永久免费</strong>：模拟卷与核心题库不设付费墙。</span>
                 </li>
                 <li style="display:flex;align-items:flex-start;gap:12px;font-size:0.94rem;color:var(--text-secondary);line-height:1.6;">
                   <span style="width:28px;height:28px;border-radius:50%;background:rgba(90,125,92,0.1);color:var(--color-sage);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:0.85rem;">2</span>
-                  <span><strong>教育公平</strong>：所有核心题库永久免费，让偏远地区学生也能获得高质量生物竞赛资源。</span>
+                  <span><strong>题目开源可纠错</strong>：题面与代码托管在 GitHub，发现错误可直接提交 Issue。</span>
                 </li>
                 <li style="display:flex;align-items:flex-start;gap:12px;font-size:0.94rem;color:var(--text-secondary);line-height:1.6;">
                   <span style="width:28px;height:28px;border-radius:50%;background:rgba(90,125,92,0.1);color:var(--color-sage);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:0.85rem;">3</span>
-                  <span><strong>科学辟谣</strong>：用严谨的生物学知识回应公众关切，抵制伪科学与健康谣言。</span>
+                  <span><strong>数据本地优先</strong>：学习记录默认只保存在你自己的浏览器里。</span>
                 </li>
               </ul>
             </div>
@@ -692,8 +641,8 @@
       <section class="cta-section" data-section="cta">
         <div class="container">
           <div class="cta-block">
-            <h2 class="cta-title">准备好感受生命的魅力了吗？</h2>
-            <p class="cta-subtitle">无论是系统复习还是考前冲刺，BioQuest 为你提供最科学的学习路径</p>
+            <h2 class="cta-title">现在，开始你的第一套模拟题</h2>
+            <p class="cta-subtitle">无需注册，答题记录自动保存在本地，随时可以接着刷。</p>
             <div class="cta-actions">
               <button class="btn-primary-hero btn-primary-hero--lg" data-route="/exam">
                 <span>开始模考</span>
@@ -856,7 +805,7 @@
     var debugBtn = document.createElement('button');
     debugBtn.id = 'debug-test-button';
     debugBtn.textContent = '调试测试按钮 - 点击我';
-    debugBtn.style.cssText = 'position:fixed;top:100px;right:20px;z-index:99999;background:var(--color-amber);color:var(--color-deep);padding:12px 24px;border:none;border-radius:8px;font-size:16px;cursor:pointer;box-shadow:0 8px 24px rgba(0,0,0,0.3);';
+    debugBtn.style.cssText = 'position:fixed;top:100px;right:20px;z-index:99999;background:var(--color-amber);color:var(--color-deep);padding:12px 24px;border:none;border-radius:8px;font-size:16px;cursor:pointer;box-shadow:var(--shadow-floating,0 8px 28px rgba(44,62,48,0.10));';
     debugBtn.onclick = function () {
       alert('调试按钮点击成功！点击事件工作正常！');
       console.log('调试按钮点击成功！');
@@ -881,7 +830,6 @@
   <script src="js/engagement/whiteboard.js?v=20260712k" defer></script>
   <script src="js/ai/multi-agent.js?v=20260712k" defer></script>
   <script src="js/pages/classmate.js?v=20260806a" defer></script>
-  <script src="js/pages/learning-dna.js?v=20260719v4" defer></script>
   <script src="js/engagement/mood-tracker.js?v=20260719v4" defer></script>
   <script src="js/core/a11y-utils.js?v=20260719v4" defer></script>
   <script src="js/pages/community.js?v=20260725final" defer></script>

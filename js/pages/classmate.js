@@ -26,9 +26,9 @@
 
   // ====== 4 级提示配置（与 multi-agent.js SOCRATIC_LEVELS 对齐） ======
   var LEVELS = {
-    L1: { id: 'L1', name: '提问我', icon: '💡', hint: '用反问引导你思考，不给答案线索' },
-    L2: { id: 'L2', name: '给提示', icon: '🔍', hint: '给一个关键提示，仍需自己推导' },
-    L3: { id: 'L3', name: '给思路', icon: '📝', hint: '给出推导步骤，最后一步留空' },
+    L1: { id: 'L1', name: '提问我', hint: '用反问引导你思考，不给答案线索' },
+    L2: { id: 'L2', name: '给提示', hint: '给一个关键提示，仍需自己推导' },
+    L3: { id: 'L3', name: '给思路', hint: '给出推导步骤，最后一步留空' },
     L4: { id: 'L4', name: '看答案', icon: '✅', hint: '完整答案 + 解析 + 易错点' }
   };
 
@@ -111,8 +111,8 @@
       '  max-height: 70vh;',
       '  background: var(--surface-primary, #ffffff);',
       '  border: 1px solid var(--border-light, #ece8e1);',
-      '  border-radius: var(--radius-lg, 20px);',
-      '  box-shadow: 0 12px 40px rgba(26, 58, 42, 0.18);',
+      '  border-radius: var(--radius-lg, 12px);',
+      '  box-shadow: var(--shadow-floating);',
       '  z-index: 9998;',
       '  display: flex;',
       '  flex-direction: column;',
@@ -132,7 +132,7 @@
       '  align-items: center;',
       '  gap: 8px;',
       '  padding: 12px 16px;',
-      '  background: linear-gradient(135deg, #5a7d5c 0%, #3a6347 100%);',
+      '  background: #5a7d5c;',
       '  color: #fff;',
       '  cursor: move;',
       '}',
@@ -156,7 +156,7 @@
       '  font-size: 0.7rem;',
       '  padding: 2px 8px;',
       '  background: rgba(255,255,255,0.2);',
-      '  border-radius: 9999px;',
+      '  border-radius: 16px;',
       '  margin-left: 4px;',
       '}',
       '.bq-classmate-mode-badge.empathy { background: rgba(196, 149, 106, 0.9); }',
@@ -225,7 +225,7 @@
       '  padding: 1px 6px;',
       '  background: rgba(90, 125, 92, 0.15);',
       '  color: var(--color-sage, #5a7d5c);',
-      '  border-radius: 9999px;',
+      '  border-radius: 16px;',
       '  margin-left: 6px;',
       '}',
       '.bq-classmate-input-row {',
@@ -305,12 +305,12 @@
       '  width: 56px;',
       '  height: 56px;',
       '  border-radius: 50%;',
-      '  background: linear-gradient(135deg, #5a7d5c 0%, #3a6347 100%);',
+      '  background: #5a7d5c;',
       '  color: #fff;',
       '  border: none;',
       '  cursor: pointer;',
       '  font-size: 1.6rem;',
-      '  box-shadow: 0 6px 20px rgba(26, 58, 42, 0.3);',
+      '  box-shadow: var(--shadow-lg);',
       '  z-index: 9997;',
       '  display: flex;',
       '  align-items: center;',
@@ -327,7 +327,7 @@
       '  color: #fff;',
       '  font-size: 0.66rem;',
       '  padding: 2px 6px;',
-      '  border-radius: 9999px;',
+      '  border-radius: 16px;',
       '  font-weight: 700;',
       '}',
       '@media (max-width: 640px) {',
@@ -349,7 +349,6 @@
     card.setAttribute('aria-label', '苏格拉底 AI 同学');
     card.innerHTML = [
       '<div class="bq-classmate-header" id="bq-cm-header">',
-      '  <div class="bq-classmate-avatar">🎓</div>',
       '  <div class="bq-classmate-name">苏格拉底同学<span class="bq-classmate-mode-badge" id="bq-cm-mode">L1 待提问</span></div>',
       '  <button class="bq-classmate-minimize" id="bq-cm-minimize" aria-label="最小化">—</button>',
       '  <button class="bq-classmate-close" id="bq-cm-close" aria-label="关闭">×</button>',
@@ -361,17 +360,14 @@
       '</div>',
       '<div class="bq-classmate-buttons" id="bq-cm-buttons">',
       '  <button class="bq-classmate-level-btn" data-level="L1" disabled>',
-      '    <span class="bq-classmate-level-icon">💡</span>',
       '    <span class="bq-classmate-level-name">L1 提问</span>',
       '    <span class="bq-classmate-level-hint">反问引导</span>',
       '  </button>',
       '  <button class="bq-classmate-level-btn" data-level="L2" disabled>',
-      '    <span class="bq-classmate-level-icon">🔍</span>',
       '    <span class="bq-classmate-level-name">L2 提示</span>',
       '    <span class="bq-classmate-level-hint">关键提示</span>',
       '  </button>',
       '  <button class="bq-classmate-level-btn" data-level="L3" disabled>',
-      '    <span class="bq-classmate-level-icon">📝</span>',
       '    <span class="bq-classmate-level-name">L3 思路</span>',
       '    <span class="bq-classmate-level-hint">推导步骤</span>',
       '  </button>',
@@ -388,7 +384,7 @@
     var fab = document.createElement('button');
     fab.className = 'bq-classmate-fab hidden';
     fab.setAttribute('aria-label', '打开苏格拉底同学');
-    fab.innerHTML = '🎓<span class="bq-classmate-fab-badge" id="bq-cm-fab-badge" style="display:none;">!</span>';
+    fab.innerHTML = '<span class="bq-classmate-fab-badge" id="bq-cm-fab-badge" style="display:none;">!</span>';
     document.body.appendChild(fab);
 
     state.elements = {
@@ -487,7 +483,7 @@
       state.elements.input.value = question;
       state.elements.input.focus();
     } else if (!state.currentQuestion) {
-      _addMessage('system', '👋 你好！我是你的苏格拉底同学。问我任何生物问题，我会按你选的等级引导你思考。');
+      _addMessage('system', '你好！我是你的苏格拉底同学。问我任何生物问题，我会按你选的等级引导你思考。');
     }
   }
 
@@ -521,7 +517,7 @@
     if (role === 'system') {
       msg.textContent = text;
     } else {
-      var roleLabel = role === 'user' ? '🙋 我' : '🎓 苏格拉底同学';
+      var roleLabel = role === 'user' ? '我' : '苏格拉底同学';
       var levelBadge = opts.level ? '<span class="bq-classmate-msg-level">' + opts.level + '</span>' : '';
       msg.innerHTML = '<div class="bq-classmate-msg-role">' + roleLabel + levelBadge + '</div><div></div>';
       msg.querySelector('div:last-child').textContent = text;
@@ -539,7 +535,7 @@
     var msg = document.createElement('div');
     msg.className = 'bq-classmate-msg classmate';
     var levelBadge = level ? '<span class="bq-classmate-msg-level">' + level + '</span>' : '';
-    msg.innerHTML = '<div class="bq-classmate-msg-role">🎓 苏格拉底同学' + levelBadge + '</div><div class="bq-cm-stream"></div>';
+    msg.innerHTML = '<div class="bq-classmate-msg-role">苏格拉底同学' + levelBadge + '</div><div class="bq-cm-stream"></div>';
     state.elements.body.appendChild(msg);
     state.elements.body.scrollTop = state.elements.body.scrollHeight;
     return msg.querySelector('.bq-cm-stream');
@@ -687,7 +683,7 @@
     var badge = state.elements.mode;
     if (!badge) return;
     if (state.empathyMode) {
-      badge.textContent = '💗 共情模式';
+      badge.textContent = '共情模式';
       badge.classList.add('empathy');
     } else {
       var stateLabels = { unanswered: 'L1 待提问', answered: 'L1-L2 可用', hinted: 'L1-L3 可用', revealed: 'L1-L4 可用' };
@@ -808,7 +804,7 @@
     if (state.empathyMode) {
       state.empathyMode = false;
       _updateModeBadge();
-      _addMessage('system', '🎉 答对啦！状态不错，继续加油。共情模式已关闭。');
+      _addMessage('system', '答对啦！状态不错，继续加油。共情模式已关闭。');
     }
   }
 
@@ -826,7 +822,7 @@
     _updateModeBadge();
     if (!state.isOpen) show();
     _addMessage('empathy',
-      '💗 看起来今天状态不太好，要不先休息 5 分钟？遗传学明天再战。我在这儿等你，不急。\n\n💡 顺便说一句，你已经学了挺久了，番茄钟建议你起来活动一下，喝点水。',
+      '看起来今天状态不太好，要不先休息 5 分钟？遗传学明天再战。我在这儿等你，不急。\n\n顺便说一句，你已经学了挺久了，番茄钟建议你起来活动一下，喝点水。',
       { empathy: true }
     );
     // 记录共情触发事件到 localStorage（供后续分析）
@@ -875,7 +871,7 @@
     modal.setAttribute('aria-labelledby', 'bq-classmate-crisis-title');
     modal.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,0.7);z-index:10001;display:flex;align-items:center;justify-content:center;padding:16px;';
     modal.innerHTML = [
-      '<div style="background:#fff;border-radius:16px;padding:28px;max-width:440px;width:100%;box-shadow:0 16px 48px rgba(0,0,0,0.3);">',
+      '<div style="background:#fff;border-radius:16px;padding:28px;max-width:440px;width:100%;box-shadow:var(--shadow-floating);">',
       '  <h2 id="bq-classmate-crisis-title" style="margin:0 0 12px;color:#1a3a2a;font-family:serif;">你不是一个人</h2>',
       '  <p style="color:#4a4a4a;line-height:1.7;margin:12px 0;">我注意到你可能正在经历困难的时刻。请记得，寻求帮助是勇敢的表现。</p>',
       '  <div style="background:#f8f9fa;padding:14px;border-radius:8px;margin:16px 0;">',

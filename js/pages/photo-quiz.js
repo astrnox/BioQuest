@@ -23,17 +23,17 @@
       '.pq-page{max-width:760px;margin:0 auto;padding:18px 16px 80px}' +
       '.pq-title{font-family:var(--font-serif,"Noto Serif SC",serif);font-size:1.25rem;font-weight:700;color:var(--color-deep,#1a3a2a);margin:0 0 4px}' +
       '.pq-sub{font-size:0.8rem;color:var(--text-muted,#8a8a8a);margin:0 0 14px;line-height:1.5}' +
-      '.pq-section{background:var(--surface-primary,#fff);border:1px solid var(--border-light,#ece8e1);border-radius:14px;padding:16px;margin-bottom:14px}' +
+      '.pq-section{background:var(--surface-primary,#fff);border:1px solid var(--border-light,#ece8e1);border-radius:12px;padding:16px;margin-bottom:14px}' +
       '.pq-section h3{font-size:0.95rem;font-weight:600;color:var(--color-deep,#1a3a2a);margin:0 0 8px}' +
-      '.pq-video-wrap{position:relative;width:100%;max-width:400px;aspect-ratio:4/3;background:#000;border-radius:10px;overflow:hidden;margin:0 auto}' +
+      '.pq-video-wrap{position:relative;width:100%;max-width:400px;aspect-ratio:4/3;background:#000;border-radius:8px;overflow:hidden;margin:0 auto}' +
       '.pq-video-wrap video,.pq-video-wrap img{width:100%;height:100%;object-fit:cover;display:block}' +
       '.pq-actions{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:12px}' +
-      '.pq-btn{padding:9px 18px;border-radius:9999px;font-size:0.85rem;font-weight:600;cursor:pointer;border:none;transition:all .15s}' +
+      '.pq-btn{padding:9px 18px;border-radius:16px;font-size:0.85rem;font-weight:600;cursor:pointer;border:none;transition:all .15s}' +
       '.pq-btn-primary{background:var(--color-sage,#5a7d5c);color:#fff}' +
-      '.pq-btn-primary:hover{transform:translateY(-1px);box-shadow:0 4px 12px rgba(90,125,92,.3)}' +
+      '.pq-btn-primary:hover{transform:translateY(-1px);box-shadow:var(--shadow-md)}' +
       '.pq-btn-secondary{background:var(--surface-secondary,#faf7f2);color:var(--text-secondary,#4a4a4a);border:1px solid var(--border-default,#e0dcd5)}' +
       '.pq-btn:disabled{opacity:.5;cursor:not-allowed;transform:none}' +
-      '.pq-textarea{width:100%;box-sizing:border-box;min-height:120px;padding:12px;border:1px solid var(--border-default,#e0dcd5);border-radius:10px;font-size:0.9rem;font-family:inherit;resize:vertical;background:var(--surface-primary,#fff);color:var(--text-primary,#1a1a1a)}' +
+      '.pq-textarea{width:100%;box-sizing:border-box;min-height:120px;padding:12px;border:1px solid var(--border-default,#e0dcd5);border-radius:8px;font-size:0.9rem;font-family:inherit;resize:vertical;background:var(--surface-primary,#fff);color:var(--text-primary,#1a1a1a)}' +
       '.pq-textarea:focus{outline:none;border-color:var(--color-sage,#5a7d5c)}' +
       '.pq-result-card{background:var(--surface-secondary,#faf7f2);border-radius:12px;padding:16px;border:1px solid var(--border-light,#ece8e1)}' +
       '.pq-result-q{font-size:0.95rem;font-weight:600;color:var(--color-deep,#1a3a2a);margin:0 0 12px;line-height:1.6}' +
@@ -55,11 +55,11 @@
       '.pq-history-item-q{color:var(--text-primary,#1a1a1a);font-weight:500;margin-bottom:2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}' +
       '.pq-history-item-meta{font-size:0.72rem;color:var(--text-muted,#8a8a8a)}' +
       '.pq-clear{font-size:0.75rem;color:var(--color-error,#e53e3e);cursor:pointer;background:none;border:none;padding:4px 8px}' +
-      '.pq-thumb{width:60px;height:45px;object-fit:cover;border-radius:6px;margin-right:10px;flex-shrink:0}' +
+      '.pq-thumb{width:60px;height:45px;object-fit:cover;border-radius:8px;margin-right:10px;flex-shrink:0}' +
       '.pq-history-item-row{display:flex;align-items:center}' +
       '.pq-warn{font-size:0.78rem;color:var(--color-amber,#c4956a);margin-top:8px;line-height:1.5}' +
-      '.pq-ocr-btn{padding:9px 18px;border-radius:9999px;font-size:0.85rem;font-weight:600;cursor:pointer;border:none;background:var(--color-amber,#c4956a);color:#fff;transition:all .15s}' +
-      '.pq-ocr-btn:hover:not(:disabled){transform:translateY(-1px);box-shadow:0 4px 12px rgba(196,149,106,.3)}' +
+      '.pq-ocr-btn{padding:9px 18px;border-radius:16px;font-size:0.85rem;font-weight:600;cursor:pointer;border:none;background:var(--color-amber,#c4956a);color:#fff;transition:all .15s}' +
+      '.pq-ocr-btn:hover:not(:disabled){transform:translateY(-1px);box-shadow:var(--shadow-md)}' +
       '.pq-ocr-btn:disabled{opacity:.5;cursor:not-allowed}' +
       '.pq-ocr-status{margin-top:8px;padding:8px 12px;border-radius:8px;font-size:0.8rem;line-height:1.5;background:rgba(90,125,92,0.06);color:var(--text-secondary,#4a4a4a);display:none}' +
       '.pq-ocr-progress{margin-top:6px;height:4px;background:rgba(0,0,0,0.08);border-radius:2px;overflow:hidden}' +
@@ -481,7 +481,7 @@
     html += '<button class="pq-btn pq-btn-secondary" id="pq-add-shot" style="display:none">再拍一张</button>';
     html += '<input type="file" id="pq-file" accept="image/*" style="display:none">';
     html += '</div>';
-    html += '<button class="pq-ocr-btn" id="pq-ocr" disabled>📷 OCR 识别题目文字</button>';
+    html += '<button class="pq-ocr-btn" id="pq-ocr" disabled>OCR 识别题目文字</button>';
     html += '<div class="pq-ocr-status" id="pq-ocr-status">';
     html += '<div id="pq-ocr-text"></div>';
     html += '<div class="pq-ocr-progress"><div class="pq-ocr-progress-fill" id="pq-ocr-progress-fill"></div></div>';
@@ -652,7 +652,7 @@
         progressFill: ocrProgressFill
       }, function (text, source) {
         ocrBtn.disabled = false;
-        ocrBtn.textContent = '📷 OCR 识别题目文字';
+        ocrBtn.textContent = 'OCR 识别题目文字';
         if (text) {
           // 追加到已有内容后（避免覆盖用户已输入的内容）
           var existing = questionInput.value.trim();

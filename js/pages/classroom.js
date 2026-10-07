@@ -567,7 +567,7 @@
 
     if (scene.type === 'pbl') {
       // PBL scene：展示项目，无需 LLM 讲稿
-      if (this.hooks.onScriptDone) this.hooks.onScriptDone({ script: '📝 课后项目：' + scene.content.project, whiteboard: [], kgNodes: [] });
+      if (this.hooks.onScriptDone) this.hooks.onScriptDone({ script: '课后项目：' + scene.content.project, whiteboard: [], kgNodes: [] });
       this.sceneStates.push({ type: 'pbl', project: scene.content.project });
       return;
     }

@@ -23,13 +23,13 @@ function injectTeacherStyles() {
     '.teacher-toolbar { display:flex; gap:12px; align-items:center; flex-wrap:wrap; margin-bottom:20px; }',
     '.teacher-toolbar input[type="text"] {',
     '  flex:1; min-width:200px; padding:10px 14px;',
-    '  border:1px solid var(--border-light,#e3e0d8); border-radius:10px;',
+    '  border:1px solid var(--border-light,#e3e0d8); border-radius:8px;',
     '  background:var(--surface-primary,#fff); color:var(--text-primary,#1a2f1d);',
     '  font-size:0.92rem; outline:none; transition:border-color .2s;',
     '}',
     '.teacher-toolbar input[type="text"]:focus { border-color:var(--color-sage,#5a7d5c); }',
     '.teacher-btn {',
-    '  padding:10px 18px; border:none; border-radius:10px; cursor:pointer;',
+    '  padding:10px 18px; border:none; border-radius:8px; cursor:pointer;',
     '  font-size:0.9rem; font-weight:600; transition:all .2s;',
     '}',
     '.teacher-btn-primary { background:var(--color-sage,#5a7d5c); color:#fff; }',
@@ -50,9 +50,9 @@ function injectTeacherStyles() {
     '.teacher-stat-row { display:flex; gap:16px; flex-wrap:wrap; margin-bottom:24px; }',
     '.teacher-stat-card {',
     '  flex:1; min-width:160px; padding:18px 20px;',
-    '  background:var(--surface-primary,#fff); border-radius:14px;',
+    '  background:var(--surface-primary,#fff); border-radius:12px;',
     '  border:1px solid var(--border-light,#ece8e1);',
-    '  box-shadow:var(--shadow-sm,0 1px 3px rgba(26,58,42,0.06));',
+    '  box-shadow:var(--shadow-sm, 0 1px 3px rgba(44, 62, 48, 0.05));',
     '}',
     '.teacher-stat-num { font-size:2rem; font-weight:700; color:var(--color-sage,#3a8c5c); line-height:1.1; }',
     '.teacher-stat-label { font-size:0.82rem; color:var(--text-muted,#8a8a8a); margin-top:4px; }',
@@ -60,18 +60,18 @@ function injectTeacherStyles() {
     /* 学生卡片网格 */
     '.teacher-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:16px; }',
     '.teacher-card {',
-    '  background:var(--surface-primary,#fff); border-radius:14px;',
+    '  background:var(--surface-primary,#fff); border-radius:12px;',
     '  border:1px solid var(--border-light,#ece8e1); padding:16px 18px;',
     '  cursor:pointer; transition:all .2s;',
     '}',
-    '.teacher-card:hover { border-color:var(--color-sage,#5a7d5c); box-shadow:0 4px 16px rgba(58,140,92,0.12); transform:translateY(-2px); }',
+    '.teacher-card:hover { border-color:var(--color-sage,#5a7d5c); box-shadow:var(--shadow-lg); transform:translateY(-2px); }',
     '.teacher-card-head { display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; }',
     '.teacher-card-name { font-size:1.05rem; font-weight:600; color:var(--color-deep,#1a2f1d); }',
     '.teacher-card-id { font-size:0.72rem; color:var(--text-muted,#8a8a8a); }',
     '.teacher-card-stats { display:flex; gap:14px; font-size:0.82rem; color:var(--text-secondary,#555); margin-bottom:8px; }',
     '.teacher-card-stats strong { color:var(--color-deep,#1a2f1d); font-size:0.95rem; }',
     '.teacher-card-foot { display:flex; justify-content:space-between; align-items:center; font-size:0.76rem; color:var(--text-muted,#8a8a8a); }',
-    '.teacher-tag { padding:2px 8px; border-radius:10px; font-size:0.72rem; font-weight:600; }',
+    '.teacher-tag { padding:2px 8px; border-radius:8px; font-size:0.72rem; font-weight:600; }',
     '.teacher-tag-good { background:rgba(58,140,92,0.12); color:var(--color-sage,#3a8c5c); }',
     '.teacher-tag-warn { background:rgba(232,168,48,0.15); color:#b87a1f; }',
     '.teacher-tag-risk { background:rgba(229,62,62,0.12); color:var(--color-error,#e53e3e); }',
@@ -85,7 +85,7 @@ function injectTeacherStyles() {
     '.teacher-drawer-overlay.visible { opacity:1; pointer-events:auto; }',
     '.teacher-drawer {',
     '  position:fixed; top:0; right:0; bottom:0; width:min(560px,92vw); z-index:9999;',
-    '  background:var(--surface-primary,#fff); box-shadow:-8px 0 32px rgba(0,0,0,0.18);',
+    '  background:var(--surface-primary,#fff); box-shadow:var(--shadow-floating);',
     '  transform:translateX(100%); transition:transform .3s ease;',
     '  display:flex; flex-direction:column; overflow:hidden;',
     '}',
@@ -102,14 +102,14 @@ function injectTeacherStyles() {
 
     '.teacher-weak-item { display:flex; justify-content:space-between; align-items:center; padding:8px 0; border-bottom:1px dashed var(--border-light,#ece8e1); font-size:0.86rem; }',
     '.teacher-weak-item:last-child { border-bottom:none; }',
-    '.teacher-weak-bar { width:80px; height:6px; background:var(--border-light,#ece8e1); border-radius:3px; overflow:hidden; }',
-    '.teacher-weak-bar-fill { height:100%; background:linear-gradient(90deg,#e53e3e,#e8a830); }',
+    '.teacher-weak-bar { width:80px; height:6px; background:var(--border-light,#ece8e1); border-radius:2px; overflow:hidden; }',
+    '.teacher-weak-bar-fill { height:100%; background:#e53e3e; }',
 
     '.teacher-ai-box { background:rgba(58,140,92,0.06); border:1px solid rgba(58,140,92,0.2); border-radius:12px; padding:14px 16px; margin-bottom:14px; }',
     '.teacher-ai-loading { color:var(--text-muted,#8a8a8a); font-size:0.86rem; padding:8px 0; }',
     '.teacher-ai-suggestion { font-size:0.88rem; color:var(--text-primary,#1a2f1d); padding:6px 0; line-height:1.6; border-bottom:1px dashed rgba(58,140,92,0.15); }',
     '.teacher-ai-suggestion:last-child { border-bottom:none; }',
-    '.teacher-ai-grade { display:inline-block; padding:2px 10px; border-radius:10px; background:var(--color-sage,#3a8c5c); color:#fff; font-weight:700; font-size:0.85rem; }',
+    '.teacher-ai-grade { display:inline-block; padding:2px 10px; border-radius:8px; background:var(--color-sage,#3a8c5c); color:#fff; font-weight:700; font-size:0.85rem; }',
 
     /* 空状态 */
     '.teacher-empty { text-align:center; padding:60px 20px; color:var(--text-muted,#8a8a8a); }',
@@ -118,7 +118,7 @@ function injectTeacherStyles() {
     /* SVG 图表容器 */
     '.teacher-charts { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:16px; }',
     '@media (max-width:720px) { .teacher-charts { grid-template-columns:1fr; } }',
-    '.teacher-chart-box { background:var(--surface-primary,#fff); border:1px solid var(--border-light,#ece8e1); border-radius:14px; padding:16px; }',
+    '.teacher-chart-box { background:var(--surface-primary,#fff); border:1px solid var(--border-light,#ece8e1); border-radius:12px; padding:16px; }',
     '.teacher-chart-box h4 { margin:0 0 12px; font-size:0.92rem; color:var(--color-deep,#1a2f1d); }',
     '.teacher-chart-box svg { width:100%; height:auto; display:block; }'
   ].join('\n');
@@ -142,9 +142,9 @@ function teacherModalPrompt(title, placeholder, defaultValue, callback) {
   overlay.style.alignItems = 'center';
   overlay.style.justifyContent = 'center';
   overlay.innerHTML =
-    '<div style="background:var(--surface-primary,#fff);border-radius:14px;padding:24px;width:min(420px,92vw);box-shadow:0 8px 32px rgba(0,0,0,0.18);">' +
+    '<div style="background:var(--surface-primary,#fff);border-radius:12px;padding:24px;width:min(420px,92vw);box-shadow:var(--shadow-floating);">' +
       '<div style="font-family:var(--font-serif,"Noto Serif SC",serif);font-size:1.1rem;font-weight:700;color:var(--color-deep,#1a3a2a);margin-bottom:14px;">' + escapeHtml(title || '请输入') + '</div>' +
-      '<input type="text" id="teacher-modal-input" style="width:100%;box-sizing:border-box;padding:10px 14px;border:1px solid var(--border-light,#e3e0d8);border-radius:10px;font-size:0.92rem;outline:none;background:var(--surface-primary,#fff);color:var(--text-primary,#1a2f1d);" placeholder="' + escapeHtml(placeholder || '') + '" value="' + escapeHtml(defaultValue || '') + '">' +
+      '<input type="text" id="teacher-modal-input" style="width:100%;box-sizing:border-box;padding:10px 14px;border:1px solid var(--border-light,#e3e0d8);border-radius:8px;font-size:0.92rem;outline:none;background:var(--surface-primary,#fff);color:var(--text-primary,#1a2f1d);" placeholder="' + escapeHtml(placeholder || '') + '" value="' + escapeHtml(defaultValue || '') + '">' +
       '<div style="display:flex;gap:10px;justify-content:flex-end;margin-top:18px;">' +
         '<button class="teacher-btn teacher-btn-ghost teacher-btn-sm" id="teacher-modal-cancel">取消</button>' +
         '<button class="teacher-btn teacher-btn-primary teacher-btn-sm" id="teacher-modal-ok">确定</button>' +
@@ -184,7 +184,7 @@ function teacherModalConfirm(message, callback) {
   overlay.style.alignItems = 'center';
   overlay.style.justifyContent = 'center';
   overlay.innerHTML =
-    '<div style="background:var(--surface-primary,#fff);border-radius:14px;padding:28px 24px 20px;width:min(420px,92vw);box-shadow:0 8px 32px rgba(0,0,0,0.18);text-align:center;">' +
+    '<div style="background:var(--surface-primary,#fff);border-radius:12px;padding:28px 24px 20px;width:min(420px,92vw);box-shadow:var(--shadow-floating);text-align:center;">' +
       '<div style="font-size:2rem;margin-bottom:8px;">⚠️</div>' +
       '<div style="font-size:0.92rem;color:var(--text-secondary,#4a4a4a);line-height:1.6;margin-bottom:20px;">' + escapeHtml(message || '确定执行此操作？') + '</div>' +
       '<div style="display:flex;gap:10px;justify-content:center;">' +
@@ -629,13 +629,13 @@ function teacherAddStudent() {
   overlay.style.alignItems = 'center';
   overlay.style.justifyContent = 'center';
   overlay.innerHTML =
-    '<div style="background:var(--surface-primary,#fff);border-radius:14px;padding:24px;width:min(420px,92vw);box-shadow:0 8px 32px rgba(0,0,0,0.18);">' +
+    '<div style="background:var(--surface-primary,#fff);border-radius:12px;padding:24px;width:min(420px,92vw);box-shadow:var(--shadow-floating);">' +
       '<div style="font-family:var(--font-serif,"Noto Serif SC",serif);font-size:1.1rem;font-weight:700;color:var(--color-deep,#1a3a2a);margin-bottom:6px;">添加学生</div>' +
       '<div style="font-size:0.82rem;color:var(--text-muted,#8a8a8a);margin-bottom:14px;">输入学生的用户名/昵称和密钥以验证身份</div>' +
       '<label style="font-size:0.8rem;color:var(--text-secondary,#4a4a4a);display:block;margin-bottom:4px;">学生用户名/昵称</label>' +
-      '<input type="text" id="teacher-add-name" style="width:100%;box-sizing:border-box;padding:10px 14px;border:1px solid var(--border-light,#e3e0d8);border-radius:10px;font-size:0.92rem;outline:none;background:var(--surface-primary,#fff);color:var(--text-primary,#1a2f1d);margin-bottom:12px;" placeholder="学生的用户名或昵称" autocomplete="off">' +
+      '<input type="text" id="teacher-add-name" style="width:100%;box-sizing:border-box;padding:10px 14px;border:1px solid var(--border-light,#e3e0d8);border-radius:8px;font-size:0.92rem;outline:none;background:var(--surface-primary,#fff);color:var(--text-primary,#1a2f1d);margin-bottom:12px;" placeholder="学生的用户名或昵称" autocomplete="off">' +
       '<label style="font-size:0.8rem;color:var(--text-secondary,#4a4a4a);display:block;margin-bottom:4px;">学生密钥</label>' +
-      '<input type="text" id="teacher-add-key" style="width:100%;box-sizing:border-box;padding:10px 14px;border:1px solid var(--border-light,#e3e0d8);border-radius:10px;font-size:0.92rem;outline:none;background:var(--surface-primary,#fff);color:var(--text-primary,#1a2f1d);text-transform:uppercase;" placeholder="8 位字母数字（学生本人在「我的」查看）" autocomplete="off">' +
+      '<input type="text" id="teacher-add-key" style="width:100%;box-sizing:border-box;padding:10px 14px;border:1px solid var(--border-light,#e3e0d8);border-radius:8px;font-size:0.92rem;outline:none;background:var(--surface-primary,#fff);color:var(--text-primary,#1a2f1d);text-transform:uppercase;" placeholder="8 位字母数字（学生本人在「我的」查看）" autocomplete="off">' +
       '<div id="teacher-add-err" style="font-size:0.78rem;color:var(--color-error,#c0553a);margin-top:8px;display:none;"></div>' +
       '<div style="display:flex;gap:10px;justify-content:flex-end;margin-top:18px;">' +
         '<button class="teacher-btn teacher-btn-ghost teacher-btn-sm" id="teacher-add-cancel">取消</button>' +
@@ -761,7 +761,7 @@ function teacherOpenDrawer(studentId) {
     '<div class="teacher-drawer" id="teacher-drawer">' +
       '<div class="teacher-drawer-head">' +
         '<div class="teacher-drawer-title">' + escapeHtml(student.name) + ' · 详情' +
-          (student.userKey ? '<span style="font-size:0.74rem;color:var(--text-muted,#8a8a8a);font-weight:400;margin-left:8px;">🔑 ' + escapeHtml(student.userKey) + '</span>' : '') +
+          (student.userKey ? '<span style="font-size:0.74rem;color:var(--text-muted,#8a8a8a);font-weight:400;margin-left:8px;">' + escapeHtml(student.userKey) + '</span>' : '') +
         '</div>' +
         '<button class="teacher-drawer-close" id="teacher-drawer-close" aria-label="关闭">&times;</button>' +
       '</div>' +

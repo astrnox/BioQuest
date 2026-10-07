@@ -216,7 +216,7 @@ html[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
   flex-direction: column;
   gap: 4px;
   border-bottom: 1px solid var(--color-border-light, rgba(0, 0, 0, 0.08));
-  box-shadow: var(--shadow-md, 0 4px 12px rgba(0, 0, 0, 0.1));
+  box-shadow: var(--shadow-md, 0 2px 8px rgba(44, 62, 48, 0.06));
 }
 
 .mobile-nav a {
@@ -428,5 +428,10 @@ html[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
   .page-content {
     padding-top: calc(var(--header-height) + 20px);
     padding-bottom: 32px;
+  }
+  /* 首页 Hero 需与顶栏齐平：否则会被上面的 .page-content 规则顶出 20px 空档，
+     首屏顶部多出一条露出页面底色的缝。 */
+  .page-content--home {
+    padding-top: 0;
   }
 }

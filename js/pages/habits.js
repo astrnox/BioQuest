@@ -18,9 +18,9 @@ function _releaseHabitModal() {
 }
 
 var AUTO_HABIT_DEFS = [
-  { id: 'auto_practice', name: '每日刷题', icon: '', color: '#5a7d5c', targetType: 'count', targetValue: 30, frequency: 'daily', auto: true },
-  { id: 'auto_focus', name: '专注学习', icon: '', color: '#e8a87c', targetType: 'duration', targetValue: 60, frequency: 'daily', auto: true },
-  { id: 'auto_review', name: '错题复习', icon: '', color: '#c38d9e', targetType: 'count', targetValue: 5, frequency: 'daily', auto: true }
+  { id: 'auto_practice', name: '每日刷题', color: '#5a7d5c', targetType: 'count', targetValue: 30, frequency: 'daily', auto: true },
+  { id: 'auto_focus', name: '专注学习', color: '#e8a87c', targetType: 'duration', targetValue: 60, frequency: 'daily', auto: true },
+  { id: 'auto_review', name: '错题复习', color: '#c38d9e', targetType: 'count', targetValue: 5, frequency: 'daily', auto: true }
 ];
 
 var BADGE_DEFS = [
@@ -130,7 +130,6 @@ function createHabit(data) {
   var habit = {
     id: _genId(),
     name: data.name || '新习惯',
-    icon: data.icon || '',
     color: data.color || '#5a7d5c',
     targetType: data.targetType || 'boolean',
     targetValue: typeof data.targetValue === 'number' ? data.targetValue : 1,
@@ -435,7 +434,6 @@ function syncAutoHabits() {
       habits.push({
         id: def.id,
         name: def.name,
-        icon: def.icon,
         color: def.color,
         targetType: def.targetType,
         targetValue: def.targetValue,
@@ -594,9 +592,8 @@ function checkBadges() {
 
 /* AI 目标拆解卡片 HTML */
 function _renderAiGoalCard() {
-  var html = '<div class="habit-card" id="ai-goal-card" style="margin-bottom:24px;border:1px dashed var(--color-warm,#c4956a);background:linear-gradient(135deg,rgba(196,149,106,0.05),rgba(74,124,89,0.05));">';
+  var html = '<div class="habit-card" id="ai-goal-card" style="margin-bottom:24px;border:1px dashed var(--color-warm,#c4956a);background:rgba(196,149,106,0.05);">';
   html += '<div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">';
-  html += '<span style="font-size:22px;">🎯</span>';
   html += '<div>';
   html += '<div class="habit-name" style="font-size:16px;">AI 目标拆解</div>';
   html += '<div style="font-size:12px;color:var(--text-muted);">输入你的大目标，AI 帮你拆解为每天的小目标并加入打卡</div>';
@@ -707,7 +704,7 @@ function _bindAiGoalEvents(container) {
       html += '<div style="font-weight:600;margin-bottom:10px;font-size:14px;color:var(--color-deep,#2c4a3b);">已拆解 ' + tasks.length + ' 个每日小目标</div>';
       html += '<div style="display:flex;flex-direction:column;gap:6px;max-height:240px;overflow-y:auto;">';
       for (var i = 0; i < tasks.length; i++) {
-        html += '<div style="display:flex;align-items:flex-start;gap:8px;padding:6px 8px;border-radius:6px;background:rgba(90,125,92,0.05);font-size:13px;">';
+        html += '<div style="display:flex;align-items:flex-start;gap:8px;padding:6px 8px;border-radius:8px;background:rgba(90,125,92,0.05);font-size:13px;">';
         html += '<span style="flex-shrink:0;width:22px;height:22px;border-radius:50%;background:var(--color-sage,#5a7d5c);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;">' + (i + 1) + '</span>';
         html += '<span style="flex:1;line-height:1.5;">' + tasks[i] + '</span>';
         html += '</div>';
@@ -725,13 +722,11 @@ function _bindAiGoalEvents(container) {
       if (addBtn) {
         addBtn.addEventListener('click', function () {
           var added = 0;
-          var goalIcons = ['🎯', '📖', '✏️', '🧠', '🔬', '📝', '💡', '⭐', '🌱', '💪'];
           for (var j = 0; j < tasks.length; j++) {
             var taskName = 'D' + (j + 1) + ' · ' + tasks[j];
             if (taskName.length > 40) taskName = taskName.substring(0, 40) + '...';
             createHabit({
               name: taskName,
-              icon: goalIcons[j % goalIcons.length],
               color: '#4a7c59',
               targetType: 'boolean',
               targetValue: 1,
@@ -793,7 +788,6 @@ function renderHabitsPage(target) {
 
     html += '<div class="habit-card" data-hid="' + habit.id + '">';
     html += '<div class="habit-card-header">';
-    html += '<div class="habit-icon" style="background:' + habit.color + ';">' + (habit.icon || '') + '</div>';
     html += '<div style="flex:1;">';
     html += '<div class="habit-name">' + habit.name + '</div>';
     html += '<div class="habit-streak">' + (streak > 0 ? ' ' + streak + '天' : '') + '</div>';
@@ -876,7 +870,6 @@ function renderHabitsPage(target) {
     var mh = allHabits[m];
     html += '<div class="habit-management-item">';
     html += '<div style="display:flex;align-items:center;gap:10px;flex:1;">';
-    html += '<span style="font-size:20px;">' + (mh.icon || '') + '</span>';
     html += '<div>';
     html += '<div style="font-weight:500;font-size:14px;">' + mh.name + '</div>';
     html += '<div style="font-size:12px;color:var(--text-muted);">' + (mh.auto ? '自动' : '自定义') + ' · ' + (mh.active ? '启用' : '暂停') + '</div>';
@@ -1100,12 +1093,10 @@ function showHabitModal(habit, container) {
   overlay.setAttribute('aria-label', isEdit ? '编辑习惯' : '新建习惯');
   overlay.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.4);backdrop-filter:blur(8px);z-index:2000;display:flex;align-items:center;justify-content:center;';
 
-  var iconPresets = ['📚','🏃','💧','🧘','🎹','💊','🥗','📝','🎯','🌱','☀️','🌙','💪','🧠','🎨','🔬'];
   var colorPresets = ['#5a7d5c','#e8a87c','#c38d9e','#7a9cc6','#c47a4a','#8a6ac4','#4a9c6a','#c45a7a','#c49a4a','#4aaac4'];
   var typeTabs = [{v:'count',l:'次数'},{v:'duration',l:'时长（分钟）'},{v:'boolean',l:'是否完成'}];
   var freqOpts = [{v:'daily',l:'每天'},{v:'weekly',l:'每周'}];
 
-  var currentIcon = isEdit ? (habit.icon || '') : '';
   var currentColor = isEdit ? (habit.color || '#5a7d5c') : '#5a7d5c';
   var currentType = isEdit ? (habit.targetType || 'count') : 'count';
   var currentFreq = isEdit ? (habit.frequency || 'daily') : 'daily';
@@ -1120,18 +1111,6 @@ function showHabitModal(habit, container) {
   html += '<div class="habit-form-group">';
   html += '<div class="habit-form-label">习惯名称</div>';
   html += '<input type="text" class="habit-form-input" id="hm-name" value="' + (isEdit ? habit.name : '') + '" placeholder="例如：每日背单词">';
-  html += '</div>';
-
-  // 图标选择器
-  html += '<div class="habit-form-group">';
-  html += '<div class="habit-form-label">选择图标</div>';
-  html += '<div class="habit-icon-grid" id="hm-icon-grid">';
-  for (var ii = 0; ii < iconPresets.length; ii++) {
-    var icSel = currentIcon === iconPresets[ii] ? ' selected' : '';
-    html += '<div class="habit-icon-option' + icSel + '" data-icon="' + iconPresets[ii] + '">' + iconPresets[ii] + '</div>';
-  }
-  html += '</div>';
-  html += '<input type="hidden" id="hm-icon" value="' + currentIcon + '">';
   html += '</div>';
 
   // 颜色选择器
@@ -1208,16 +1187,6 @@ function showHabitModal(habit, container) {
     if (e.target === overlay) closeModal();
   });
 
-  // 图标选择交互
-  var iconOpts = overlay.querySelectorAll('.habit-icon-option');
-  iconOpts.forEach(function(el) {
-    el.addEventListener('click', function() {
-      iconOpts.forEach(function(o) { o.classList.remove('selected'); });
-      el.classList.add('selected');
-      document.getElementById('hm-icon').value = el.dataset.icon;
-    });
-  });
-
   // 颜色选择交互
   var colorSwatches = overlay.querySelectorAll('.habit-color-swatch');
   var colorInput = document.getElementById('hm-color');
@@ -1248,7 +1217,6 @@ function showHabitModal(habit, container) {
 
   document.getElementById('hm-save').addEventListener('click', function() {
     var name = document.getElementById('hm-name').value.trim();
-    var icon = document.getElementById('hm-icon').value.trim();
     var color = document.getElementById('hm-color').value;
     var targetType = document.getElementById('hm-targetType').value;
     var targetValue = parseInt(document.getElementById('hm-targetValue').value, 10) || 1;
@@ -1261,9 +1229,9 @@ function showHabitModal(habit, container) {
     }
 
     if (isEdit) {
-      updateHabit(habit.id, { name: name, icon: icon, color: color, targetType: targetType, targetValue: targetValue, step: step, frequency: frequency });
+      updateHabit(habit.id, { name: name, color: color, targetType: targetType, targetValue: targetValue, step: step, frequency: frequency });
     } else {
-      createHabit({ name: name, icon: icon, color: color, targetType: targetType, targetValue: targetValue, step: step, frequency: frequency });
+      createHabit({ name: name, color: color, targetType: targetType, targetValue: targetValue, step: step, frequency: frequency });
     }
 
     closeModal();

@@ -463,8 +463,8 @@
         '<span>概念掌握度 · ' + escapeHtml(concept) + '</span>' +
         '<span>' + masteryPct + '%</span>' +
         '</div>' +
-        '<div style="height:6px;background:var(--border-default);border-radius:3px;overflow:hidden;">' +
-        '<div style="height:100%;width:' + masteryPct + '%;background:' + masteryColor + ';border-radius:3px;transition:width 0.4s ease;"></div>' +
+        '<div style="height:6px;background:var(--border-default);border-radius:2px;overflow:hidden;">' +
+        '<div style="height:100%;width:' + masteryPct + '%;background:' + masteryColor + ';border-radius:2px;transition:width 0.4s ease;"></div>' +
         '</div>' +
         '</div>';
 

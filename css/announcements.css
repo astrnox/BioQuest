@@ -3,7 +3,7 @@
    ============================================================ */
 
 .announcement-banner {
-  background: linear-gradient(135deg, #1a3a2a 0%, #2d5a3d 100%);
+  background: #1a3a2a;
   border-bottom: 1px solid rgba(232, 168, 48, 0.2);
   padding: 10px 0;
   position: relative;
@@ -17,7 +17,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(90deg, rgba(232,168,48,0.05) 0%, transparent 50%, rgba(232,168,48,0.05) 100%);
+  background: none;
   pointer-events: none;
 }
 

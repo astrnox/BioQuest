@@ -21,7 +21,7 @@
   var STEPS = [
     {
       title: '欢迎来到 BioQuest',
-      text: '这里是从高考到竞赛的生物学习平台：刷题、错题、记忆卡片、AI 导师一站式搞定。',
+      text: '刷题、错题本、记忆卡片都在这里；答完自动判分，错题自动收录。',
       targetSelector: null
     },
     {
@@ -110,8 +110,8 @@
       'width:100%',
       'background:#ffffff',
       'border:1px solid rgba(232,168,48,0.5)',
-      'border-radius:14px',
-      'box-shadow:0 8px 28px rgba(0,0,0,0.16)',
+      'border-radius:12px',
+      'box-shadow:var(--shadow-floating)',
       'padding:16px 18px',
       'font-family:var(--font-sans, sans-serif)',
       'color:#2c3e30'

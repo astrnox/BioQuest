@@ -740,7 +740,7 @@
   font-size: 0.66rem;
   font-weight: 600;
   padding: 1px 6px;
-  border-radius: var(--radius-full, 999px);
+  border-radius: var(--radius-full, 9999px);
   background: rgba(255, 255, 255, 0.55);
   color: inherit;
   opacity: 0.85;

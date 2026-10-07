@@ -67,12 +67,12 @@ var POINTS_PENALTIES = {
 
 // 5. 信任等级（由当前信用指数推导；指数越高，社区信任越高）
 var POINTS_LEVELS = [
-  { min: 0,   label: '不受信任', title: '不受信任', color: '#c0553a', icon: '🚫' },
+  { min: 0,   label: '不受信任', title: '不受信任', color: '#c0553a' },
   { min: 10,  label: '极低信任', title: '极低信任', color: '#d47030', icon: '⚠️' },
-  { min: 30,  label: '有限信任', title: '有限信任', color: '#c49b30', icon: '🙂' },
-  { min: 50,  label: '基本信任', title: '基本信任', color: '#5a7d5c', icon: '👍' },
-  { min: 80,  label: '高度信任', title: '高度信任', color: '#3a8c5c', icon: '🌟' },
-  { min: 100, label: '极高信任', title: '极高信任', color: '#ffd700', icon: '💎' }
+  { min: 30,  label: '有限信任', title: '有限信任', color: '#c49b30' },
+  { min: 50,  label: '基本信任', title: '基本信任', color: '#5a7d5c' },
+  { min: 80,  label: '高度信任', title: '高度信任', color: '#3a8c5c' },
+  { min: 100, label: '极高信任', title: '极高信任', color: '#ffd700' }
 ];
 
 var _UNCIVIL_WORDS = ['傻逼','脑残','nmsl','你妈','草泥马','滚','去死','废物','垃圾','贱','sb','cnm','tmd','mdzz','智障','混蛋','狗屎','屎','烂','白痴','蠢货','婊子','娘炮','死全家','杀了你','操','肏','日你妈','麻痹','特么','马勒戈壁','法克','fuck','shit','bitch'];
@@ -2504,14 +2504,14 @@ function _showAchievementNotification(ach, tierInfo) {
       var st = document.createElement('style');
       st.id = 'achieve-notif-style';
       st.textContent = [
-        '.ach-notif{position:fixed;top:20px;right:20px;z-index:10000;display:flex;align-items:center;gap:14px;max-width:340px;padding:14px 18px 14px 14px;border-radius:16px;overflow:hidden;color:var(--color-text,#2c3e30);background:linear-gradient(180deg,var(--color-surface,#fff),var(--color-surface-sunken,#f7f4f0));border:1px solid rgba(196,149,106,.35);box-shadow:0 14px 44px rgba(20,30,20,.18),0 2px 8px rgba(0,0,0,.06),inset 0 1px 0 rgba(255,255,255,.7);font-family:var(--font-sans,system-ui,sans-serif);animation:achIn .55s cubic-bezier(.22,1,.36,1)}',
+        '.ach-notif{position:fixed;top:20px;right:20px;z-index:10000;display:flex;align-items:center;gap:14px;max-width:340px;padding:14px 18px 14px 14px;border-radius:16px;overflow:hidden;color:var(--color-text,#2c3e30);background:var(--color-surface,#fff);border:1px solid rgba(196,149,106,.35);box-shadow:0 14px 44px rgba(20,30,20,.18),0 2px 8px rgba(0,0,0,.06),inset 0 1px 0 rgba(255,255,255,.7);font-family:var(--font-sans,system-ui,sans-serif);animation:achIn .55s cubic-bezier(.22,1,.36,1)}',
         '.ach-notif.out{animation:achOut .45s ease forwards}',
-        '.ach-notif-icon{flex-shrink:0;width:54px;height:54px;display:flex;align-items:center;justify-content:center;border-radius:15px;background:radial-gradient(circle at 30% 22%,rgba(255,255,255,.9),rgba(241,232,214,.5));box-shadow:inset 0 0 0 1px rgba(196,149,106,.35),0 4px 14px rgba(0,0,0,.08)}',
+        '.ach-notif-icon{flex-shrink:0;width:54px;height:54px;display:flex;align-items:center;justify-content:center;border-radius:16px;background:var(--color-bg-warm,#f5f0e8);box-shadow:inset 0 0 0 1px rgba(196,149,106,.35),0 4px 14px rgba(0,0,0,.08)}',
         '.ach-notif-body{min-width:0}',
         '.ach-notif-tier{font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;margin-bottom:3px}',
         '.ach-notif-name{font-family:var(--font-serif,\'Noto Serif SC\',serif);font-size:1.05rem;font-weight:700;line-height:1.3;color:var(--color-deep,#1a2f1d)}',
         '.ach-notif-desc{font-size:.78rem;color:var(--color-text-muted,#8a8578);margin-top:3px;line-height:1.45}',
-        '.ach-notif-shine{position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,rgba(201,169,106,.55),transparent)}',
+        '.ach-notif-shine{position:absolute;top:0;left:0;right:0;height:2px;background:none}',
         '@keyframes achIn{from{transform:translateX(120%) scale(.96);opacity:0}to{transform:translateX(0) scale(1);opacity:1}}',
         '@keyframes achOut{to{transform:translateX(120%) scale(.96);opacity:0}}',
         '@media(prefers-reduced-motion:reduce){.ach-notif{animation:none}}'

@@ -62,8 +62,8 @@ function renderOcrTab(container) {
               <span id="ocr-progress-text">处理中...</span>
               <span id="ocr-progress-pct" style="font-weight:600;color:#3a6b4a;">0%</span>
             </div>
-            <div style="height:6px;background:#e0e0e0;border-radius:3px;overflow:hidden;">
-              <div id="ocr-progress-bar" style="height:100%;background:linear-gradient(90deg,#5a7d5c,#3a6b4a);width:0%;transition:width .3s;"></div>
+            <div style="height:6px;background:#e0e0e0;border-radius:2px;overflow:hidden;">
+              <div id="ocr-progress-bar" style="height:100%;background:#5a7d5c;width:0%;transition:width .3s;"></div>
             </div>
           </div>
 
@@ -279,7 +279,7 @@ function _ocrUpdateQueueUI() {
 
   queue.innerHTML = _ocrPendingQueue.map((q, idx) => `
     <div class="ocr-queue-item" data-idx="${idx}" style="
-      border:1px solid #e0e0e0;border-radius:10px;padding:12px;margin-bottom:10px;background:#fff;">
+      border:1px solid #e0e0e0;border-radius:8px;padding:12px;margin-bottom:10px;background:#fff;">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
         <div style="font-size:11px;color:#888;">${escapeHtml(q.filename || '')} · ID: ${q.id}</div>
         <div style="display:flex;gap:6px;">
@@ -332,20 +332,20 @@ function _ocrEditItem(idx) {
       <h3 style="margin:0 0 16px;">编辑题目</h3>
       <div style="margin-bottom:12px;">
         <label style="font-size:12px;color:#666;display:block;margin-bottom:4px;">题干</label>
-        <textarea id="ocr-edit-stem" style="width:100%;min-height:80px;padding:8px;border:1px solid #ccc;border-radius:6px;font-family:inherit;font-size:14px;">${escapeHtml(q.stem || '')}</textarea>
+        <textarea id="ocr-edit-stem" style="width:100%;min-height:80px;padding:8px;border:1px solid #ccc;border-radius:8px;font-family:inherit;font-size:14px;">${escapeHtml(q.stem || '')}</textarea>
       </div>
       <div style="margin-bottom:12px;">
         <label style="font-size:12px;color:#666;display:block;margin-bottom:4px;">选项（A-D，每行一个）</label>
-        <textarea id="ocr-edit-options" style="width:100%;min-height:80px;padding:8px;border:1px solid #ccc;border-radius:6px;font-family:inherit;font-size:14px;">${escapeHtml(optText)}</textarea>
+        <textarea id="ocr-edit-options" style="width:100%;min-height:80px;padding:8px;border:1px solid #ccc;border-radius:8px;font-family:inherit;font-size:14px;">${escapeHtml(optText)}</textarea>
       </div>
       <div style="margin-bottom:12px;display:flex;gap:12px;">
         <div style="flex:1;">
           <label style="font-size:12px;color:#666;display:block;margin-bottom:4px;">答案 (A/B/C/D)</label>
-          <input id="ocr-edit-answer" value="${escapeHtml(q.answer || '')}" style="width:100%;padding:8px;border:1px solid #ccc;border-radius:6px;" />
+          <input id="ocr-edit-answer" value="${escapeHtml(q.answer || '')}" style="width:100%;padding:8px;border:1px solid #ccc;border-radius:8px;" />
         </div>
         <div style="flex:1;">
           <label style="font-size:12px;color:#666;display:block;margin-bottom:4px;">难度</label>
-          <select id="ocr-edit-difficulty" style="width:100%;padding:8px;border:1px solid #ccc;border-radius:6px;">
+          <select id="ocr-edit-difficulty" style="width:100%;padding:8px;border:1px solid #ccc;border-radius:8px;">
             <option value="basic" ${q.difficulty === 'basic' ? 'selected' : ''}>基础</option>
             <option value="league" ${q.difficulty === 'league' ? 'selected' : ''}>联赛</option>
             <option value="national" ${q.difficulty === 'national' ? 'selected' : ''}>国赛</option>
@@ -355,15 +355,15 @@ function _ocrEditItem(idx) {
       </div>
       <div style="margin-bottom:12px;">
         <label style="font-size:12px;color:#666;display:block;margin-bottom:4px;">解析</label>
-        <textarea id="ocr-edit-analysis" style="width:100%;min-height:80px;padding:8px;border:1px solid #ccc;border-radius:6px;font-family:inherit;font-size:14px;">${escapeHtml(q.analysis || '')}</textarea>
+        <textarea id="ocr-edit-analysis" style="width:100%;min-height:80px;padding:8px;border:1px solid #ccc;border-radius:8px;font-family:inherit;font-size:14px;">${escapeHtml(q.analysis || '')}</textarea>
       </div>
       <div style="margin-bottom:12px;">
         <label style="font-size:12px;color:#666;display:block;margin-bottom:4px;">OCR 原文（仅参考）</label>
-        <div style="padding:8px;background:#f5f5f5;border-radius:6px;font-size:12px;color:#666;max-height:100px;overflow:auto;">${escapeHtml(q.ocr_text || '')}</div>
+        <div style="padding:8px;background:#f5f5f5;border-radius:8px;font-size:12px;color:#666;max-height:100px;overflow:auto;">${escapeHtml(q.ocr_text || '')}</div>
       </div>
       <div style="display:flex;gap:8px;justify-content:flex-end;">
-        <button id="ocr-edit-cancel" class="admin-btn-secondary" style="padding:8px 16px;border-radius:6px;cursor:pointer;border:1px solid #ccc;background:#fff;">取消</button>
-        <button id="ocr-edit-save" class="admin-btn-primary" style="padding:8px 16px;border-radius:6px;cursor:pointer;background:#3a6b4a;color:#fff;border:none;">保存</button>
+        <button id="ocr-edit-cancel" class="admin-btn-secondary" style="padding:8px 16px;border-radius:8px;cursor:pointer;border:1px solid #ccc;background:#fff;">取消</button>
+        <button id="ocr-edit-save" class="admin-btn-primary" style="padding:8px 16px;border-radius:8px;cursor:pointer;background:#3a6b4a;color:#fff;border:none;">保存</button>
       </div>
     </div>
   `;

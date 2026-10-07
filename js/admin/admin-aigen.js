@@ -79,7 +79,7 @@ function renderAiGenTab(container) {
           </div>
 
           <button id="aigen-generate-btn"
-            style="width:100%;padding:12px;background:linear-gradient(135deg,#5a7d5c,#3a6b4a);color:#fff;border:none;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;">
+            style="width:100%;padding:12px;background:#5a7d5c;color:#fff;border:none;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
             AI 生成题目
           </button>
@@ -87,8 +87,8 @@ function renderAiGenTab(container) {
           <div id="aigen-status" style="margin-top:12px;display:none;"></div>
           <div id="aigen-progress" style="display:none;margin-top:12px;">
             <div style="font-size:13px;color:#555;margin-bottom:6px;" id="aigen-progress-text">初始化中...</div>
-            <div style="height:6px;background:#e0e0e0;border-radius:3px;overflow:hidden;">
-              <div id="aigen-progress-bar" style="height:100%;background:linear-gradient(90deg,#5a7d5c,#3a6b4a);width:0%;transition:width .3s;"></div>
+            <div style="height:6px;background:#e0e0e0;border-radius:2px;overflow:hidden;">
+              <div id="aigen-progress-bar" style="height:100%;background:#5a7d5c;width:0%;transition:width .3s;"></div>
             </div>
           </div>
         </div>
@@ -383,10 +383,10 @@ function _aiGenUpdateQueueUI() {
     if (q.chart) {
       imgPreview = '<div style="margin:8px 0;"><img src="' + escapeHtml(q.chart) + '" style="max-width:100%;max-height:200px;border-radius:8px;border:1px solid #ddd;" alt="题目配图"></div>';
     } else if (q.image_prompt) {
-      imgPreview = '<div style="margin:8px 0;padding:8px;background:#fff3e0;border-radius:6px;font-size:12px;color:#e65100;">⚠️ 配图未生成/上传</div>';
+      imgPreview = '<div style="margin:8px 0;padding:8px;background:#fff3e0;border-radius:8px;font-size:12px;color:#e65100;">⚠️ 配图未生成/上传</div>';
     }
 
-    return '<div style="border:1px solid #e0e0e0;border-radius:10px;padding:14px;margin-bottom:10px;background:#fff;">' +
+    return '<div style="border:1px solid #e0e0e0;border-radius:8px;padding:14px;margin-bottom:10px;background:#fff;">' +
       '<div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;">' +
         '<div style="display:flex;gap:6px;flex-wrap:wrap;">' +
           '<span style="padding:2px 8px;background:#e8f5e9;color:#2e7d32;border-radius:4px;font-size:11px;">AI生成</span>' +
@@ -394,14 +394,14 @@ function _aiGenUpdateQueueUI() {
           '<span style="padding:2px 8px;background:#f3e5f5;color:#7b1fa2;border-radius:4px;font-size:11px;">' + escapeHtml(q.difficulty) + '</span>' +
         '</div>' +
         '<div style="display:flex;gap:6px;">' +
-          '<button class="aigen-del-btn" data-idx="' + idx + '" style="padding:4px 10px;border:1px solid #ef9a9a;background:#ffebee;color:#c62828;border-radius:6px;cursor:pointer;font-size:12px;">删除</button>' +
-          '<button class="aigen-approve-btn" data-idx="' + idx + '" style="padding:4px 10px;border:none;background:#5a7d5c;color:#fff;border-radius:6px;cursor:pointer;font-size:12px;">入库</button>' +
+          '<button class="aigen-del-btn" data-idx="' + idx + '" style="padding:4px 10px;border:1px solid #ef9a9a;background:#ffebee;color:#c62828;border-radius:8px;cursor:pointer;font-size:12px;">删除</button>' +
+          '<button class="aigen-approve-btn" data-idx="' + idx + '" style="padding:4px 10px;border:none;background:#5a7d5c;color:#fff;border-radius:8px;cursor:pointer;font-size:12px;">入库</button>' +
         '</div>' +
       '</div>' +
       '<div style="font-size:14px;margin-bottom:8px;line-height:1.5;">' + escapeHtml(q.question) + '</div>' +
       imgPreview +
       subHtml +
-      '<div style="margin-top:8px;padding:8px;background:#f5f5f5;border-radius:6px;font-size:12px;color:#555;">' +
+      '<div style="margin-top:8px;padding:8px;background:#f5f5f5;border-radius:8px;font-size:12px;color:#555;">' +
         '<strong>解析：</strong>' + escapeHtml(q.explanation || q.answer || '') +
       '</div>' +
       (q.subject ? '<div style="margin-top:4px;font-size:11px;color:#888;">学科：' + escapeHtml(q.subject) + ' | 概念：' + escapeHtml(q.concept || '') + '</div>' : '') +

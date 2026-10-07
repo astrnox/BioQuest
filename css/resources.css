@@ -199,7 +199,7 @@
 
 .resource-item:hover {
   border-color: var(--sage);
-  box-shadow: 0 4px 16px rgba(26,47,29,0.09);
+  box-shadow: var(--shadow-lg);
   transform: translateY(-3px);
 }
 
@@ -264,7 +264,7 @@
 /* 资源卡片激活状态 */
 .resource-item--active {
   border-color: var(--sage);
-  box-shadow: 0 4px 16px rgba(26,47,29,0.12);
+  box-shadow: var(--shadow-lg);
   background: var(--surface-secondary);
 }
 

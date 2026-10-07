@@ -528,7 +528,7 @@
   font-size: var(--font-size-xs);
   font-weight: 700;
   padding: 1px 8px;
-  border-radius: 6px;
+  border-radius: 8px;
 }
 .wiki-diff-add { color: var(--color-success); background: rgba(58,140,92,0.12); }
 .wiki-diff-del { color: var(--color-error); background: rgba(192,85,58,0.12); }
@@ -617,7 +617,7 @@
 .wiki-editor-preview h3 { font-size: var(--font-size-base); margin: 12px 0 4px; }
 .wiki-editor-preview p { margin: 8px 0; }
 .wiki-editor-preview ul, .wiki-editor-preview ol { margin: 8px 0; padding-left: 22px; }
-.wiki-editor-preview code { font-family: var(--font-mono); background: var(--color-surface); padding: 1px 4px; border-radius: 3px; font-size: 0.88em; }
+.wiki-editor-preview code { font-family: var(--font-mono); background: var(--color-surface); padding: 1px 4px; border-radius: 2px; font-size: 0.88em; }
 .wiki-editor-preview blockquote { margin: 8px 0; padding: 6px 12px; border-left: 3px solid var(--color-border); color: var(--color-text-secondary); }
 
 /* ===== 导入 ===== */

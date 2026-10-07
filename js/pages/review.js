@@ -26,7 +26,6 @@
 
   function _renderEmpty(container, msg) {
     container.innerHTML = '<div style="text-align:center;padding:60px 20px;">' +
-      '<div style="font-size:3rem;margin-bottom:16px;">🎉</div>' +
       '<div style="font-size:1.2rem;color:var(--color-deep,#1a3a2a);font-weight:600;margin-bottom:8px;">' + escapeHtml(msg || '今日无错题复习') + '</div>' +
       '<div style="color:var(--text-muted);">保持每日练习，错题会自动进入复习队列。</div>' +
       '</div>';
@@ -42,9 +41,9 @@
     var html = '<div class="review-card" style="max-width:720px;margin:0 auto;">' +
       '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">' +
         '<span style="font-size:0.8rem;color:var(--text-muted);">复习 ' + (_currentIndex + 1) + ' / ' + _currentCards.length + '</span>' +
-        '<span style="font-size:0.75rem;color:var(--text-muted);background:var(--surface-secondary);padding:3px 10px;border-radius:9999px;">' + (card.subject || '生物') + '</span>' +
+        '<span style="font-size:0.75rem;color:var(--text-muted);background:var(--surface-secondary);padding:3px 10px;border-radius:16px;">' + (card.subject || '生物') + '</span>' +
       '</div>' +
-      '<div style="background:#fff;border:1px solid var(--border-light);border-radius:16px;padding:24px;margin-bottom:20px;box-shadow:0 2px 8px rgba(0,0,0,0.04);">' +
+      '<div style="background:#fff;border:1px solid var(--border-light);border-radius:16px;padding:24px;margin-bottom:20px;box-shadow:var(--shadow-md);">' +
         '<div style="font-size:1.1rem;line-height:1.7;color:var(--text-primary);margin-bottom:16px;">' + escapeHtml(card.question_text || '题目内容未保存') + '</div>' +
         (card.concept ? '<div style="font-size:0.8rem;color:var(--text-muted);margin-top:8px;">知识点：' + escapeHtml(card.concept) + '</div>' : '') +
       '</div>' +
@@ -98,7 +97,7 @@
     var style = document.createElement('style');
     style.id = 'review-module-styles';
     style.textContent = '.review-btn{padding:14px 12px;border:none;border-radius:12px;font-size:0.95rem;font-weight:600;cursor:pointer;transition:transform 0.15s,box-shadow 0.15s;}' +
-      '.review-btn:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,0,0,0.1);}' +
+      '.review-btn:hover{transform:translateY(-2px);box-shadow:var(--shadow-md);}' +
       '.review-btn--again{background:#fff0f0;color:#c0553a;border:1px solid #f0d0d0;}' +
       '.review-btn--hard{background:#fff8e8;color:#c49b30;border:1px solid #f0e0b0;}' +
       '.review-btn--good{background:#f0f8f0;color:#3a8c5c;border:1px solid #d0e8d0;}' +

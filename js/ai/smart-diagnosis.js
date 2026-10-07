@@ -82,16 +82,16 @@ function injectDiagnosisStyles() {
     .diagnosis-overview-card {\
       background: var(--surface-primary, #ffffff);\
       border: 1px solid var(--border-light, #ece8e1);\
-      border-radius: var(--radius-lg, 20px);\
+      border-radius: var(--radius-lg, 12px);\
       padding: 24px;\
       text-align: center;\
-      box-shadow: var(--shadow-sm, 0 1px 3px rgba(26,58,42,0.06));\
+      box-shadow: var(--shadow-sm, 0 1px 3px rgba(44, 62, 48, 0.05));\
       transition: transform var(--transition-fast, 0.15s ease), box-shadow var(--transition-fast, 0.15s ease);\
     }\
     \
     .diagnosis-overview-card:hover {\
       transform: translateY(-2px);\
-      box-shadow: var(--shadow-md, 0 4px 16px rgba(26,58,42,0.08));\
+      box-shadow: var(--shadow-md, 0 2px 8px rgba(44, 62, 48, 0.06));\
     }\
     \
     .diagnosis-overview-icon {\
@@ -128,10 +128,10 @@ function injectDiagnosisStyles() {
     .diagnosis-section {\
       background: var(--surface-primary, #ffffff);\
       border: 1px solid var(--border-light, #ece8e1);\
-      border-radius: var(--radius-lg, 20px);\
+      border-radius: var(--radius-lg, 12px);\
       padding: 28px;\
       margin-bottom: 24px;\
-      box-shadow: var(--shadow-sm, 0 1px 3px rgba(26,58,42,0.06));\
+      box-shadow: var(--shadow-sm, 0 1px 3px rgba(44, 62, 48, 0.05));\
     }\
     \
     .diagnosis-section-title {\
@@ -162,7 +162,7 @@ function injectDiagnosisStyles() {
       padding: 12px 16px;\
       background: var(--surface-secondary, #faf7f2);\
       border: 1px solid var(--border-light, #ece8e1);\
-      border-radius: var(--radius-md, 12px);\
+      border-radius: var(--radius-md, 8px);\
       transition: border-color var(--transition-fast, 0.15s ease);\
     }\
     \
@@ -276,7 +276,7 @@ function injectDiagnosisStyles() {
     }\
     \
     .diagnosis-heatmap-cell {\
-      border-radius: var(--radius-md, 12px);\
+      border-radius: var(--radius-md, 8px);\
       padding: 20px 16px;\
       text-align: center;\
       transition: transform var(--transition-fast, 0.15s ease), box-shadow var(--transition-fast, 0.15s ease);\
@@ -287,7 +287,7 @@ function injectDiagnosisStyles() {
     \
     .diagnosis-heatmap-cell:hover {\
       transform: translateY(-2px);\
-      box-shadow: var(--shadow-md, 0 4px 16px rgba(26,58,42,0.1));\
+      box-shadow: var(--shadow-md, 0 2px 8px rgba(44, 62, 48, 0.06));\
     }\
     \
     .diagnosis-heatmap-cell::before {\
@@ -297,7 +297,7 @@ function injectDiagnosisStyles() {
       left: 0;\
       right: 0;\
       height: 4px;\
-      border-radius: var(--radius-md, 12px) var(--radius-md, 12px) 0 0;\
+      border-radius: var(--radius-md, 8px) var(--radius-md, 8px) 0 0;\
     }\
     \
     .diagnosis-heatmap-module {\
@@ -369,13 +369,13 @@ function injectDiagnosisStyles() {
       padding: 16px;\
       background: var(--surface-secondary, #faf7f2);\
       border: 1px solid var(--border-light, #ece8e1);\
-      border-radius: var(--radius-md, 12px);\
+      border-radius: var(--radius-md, 8px);\
     }\
     \
     .diagnosis-type-icon {\
       width: 42px;\
       height: 42px;\
-      border-radius: var(--radius-sm, 6px);\
+      border-radius: var(--radius-sm, 4px);\
       display: flex;\
       align-items: center;\
       justify-content: center;\
@@ -398,13 +398,13 @@ function injectDiagnosisStyles() {
     .diagnosis-type-bar {\
       height: 6px;\
       background: var(--surface-tertiary, #f0ebe0);\
-      border-radius: 3px;\
+      border-radius: 2px;\
       overflow: hidden;\
     }\
     \
     .diagnosis-type-bar-fill {\
       height: 100%;\
-      border-radius: 3px;\
+      border-radius: 2px;\
       transition: width 0.6s ease;\
     }\
     \
@@ -429,7 +429,7 @@ function injectDiagnosisStyles() {
       padding: 16px 20px;\
       background: var(--surface-secondary, #faf7f2);\
       border: 1px solid var(--border-light, #ece8e1);\
-      border-radius: var(--radius-md, 12px);\
+      border-radius: var(--radius-md, 8px);\
       transition: border-color var(--transition-fast, 0.15s ease);\
     }\
     \
@@ -557,7 +557,7 @@ function injectDiagnosisStyles() {
       margin-top: 16px;\
       padding: 12px;\
       background: var(--surface-secondary, #faf7f2);\
-      border-radius: var(--radius-sm, 6px);\
+      border-radius: var(--radius-sm, 4px);\
       font-size: 0.85rem;\
       color: var(--text-secondary, #4a4a4a);\
     }\
@@ -579,13 +579,13 @@ function injectDiagnosisStyles() {
       padding: 16px;\
       background: var(--surface-secondary, #faf7f2);\
       border: 1px solid var(--border-light, #ece8e1);\
-      border-radius: var(--radius-md, 12px);\
+      border-radius: var(--radius-md, 8px);\
     }\
     \
     .diagnosis-advice-priority {\
       width: 36px;\
       height: 36px;\
-      border-radius: var(--radius-sm, 6px);\
+      border-radius: var(--radius-sm, 4px);\
       display: flex;\
       align-items: center;\
       justify-content: center;\
@@ -635,7 +635,7 @@ function injectDiagnosisStyles() {
     .diagnosis-advice-btn {\
       font-size: 0.78rem;\
       padding: 6px 16px;\
-      border-radius: var(--radius-sm, 6px);\
+      border-radius: var(--radius-sm, 4px);\
       border: 1px solid var(--color-sage, #5a7d5c);\
       background: transparent;\
       color: var(--color-sage, #5a7d5c);\
@@ -692,7 +692,7 @@ function injectDiagnosisStyles() {
     \
     .diagnosis-empty-btn:hover {\
       transform: translateY(-1px);\
-      box-shadow: 0 4px 12px rgba(90,125,92,0.3);\
+      box-shadow: var(--shadow-md);\
     }\
     \
     /* 双栏布局 */\
@@ -935,7 +935,7 @@ var DIAGNOSIS_RULES = {
   // 学习行为标注规则：所有匹配的规则都会被收集
   annotations: [
     {
-      id: 'low_volume', label: '练习量不足', icon: '📉',
+      id: 'low_volume', label: '练习量不足',
       condition: function (ctx) { return ctx.totalAnswered < 20; },
       suggestion: '建议增加练习量到至少 20 题，以建立基线数据'
     },
@@ -945,22 +945,22 @@ var DIAGNOSIS_RULES = {
       suggestion: '放慢节奏，加强错题复盘，关注理解而非数量'
     },
     {
-      id: 'no_recent_activity', label: '近期无活动', icon: '💤',
+      id: 'no_recent_activity', label: '近期无活动',
       condition: function (ctx) { return ctx.daysSinceLastActivity >= 7; },
       suggestion: '尽快恢复学习节奏，避免遗忘曲线下降'
     },
     {
-      id: 'improving', label: '快速提升中', icon: '🚀',
+      id: 'improving', label: '快速提升中',
       condition: function (ctx) { return ctx.trendDelta > 10; },
       suggestion: '保持当前节奏，可适当挑战更高难度'
     },
     {
-      id: 'declining', label: '状态下滑', icon: '📉',
+      id: 'declining', label: '状态下滑',
       condition: function (ctx) { return ctx.trendDelta < -10; },
       suggestion: '回顾近期错题，调整学习方法'
     },
     {
-      id: 'streak_break', label: '连续中断', icon: '🔥',
+      id: 'streak_break', label: '连续中断',
       condition: function (ctx) { return ctx.streak === 0 && ctx.totalAnswered > 0; },
       suggestion: '重新建立每日学习习惯'
     },
@@ -1473,11 +1473,11 @@ function renderHeatmap(weakPoints) {
 
   /* 热力图图例 */
   html += '<div style="display:flex;justify-content:center;gap:12px;margin-top:16px;flex-wrap:wrap;">';
-  html += '<div style="display:flex;align-items:center;gap:4px;font-size:0.72rem;color:var(--text-muted);"><span style="width:14px;height:14px;border-radius:3px;background:rgba(192,85,58,0.4);"></span>严重薄弱(&lt;30%)</div>';
-  html += '<div style="display:flex;align-items:center;gap:4px;font-size:0.72rem;color:var(--text-muted);"><span style="width:14px;height:14px;border-radius:3px;background:rgba(196,149,106,0.4);"></span>薄弱(30-49%)</div>';
-  html += '<div style="display:flex;align-items:center;gap:4px;font-size:0.72rem;color:var(--text-muted);"><span style="width:14px;height:14px;border-radius:3px;background:rgba(139,168,136,0.4);"></span>一般(50-64%)</div>';
-  html += '<div style="display:flex;align-items:center;gap:4px;font-size:0.72rem;color:var(--text-muted);"><span style="width:14px;height:14px;border-radius:3px;background:rgba(90,125,92,0.35);"></span>良好(65-79%)</div>';
-  html += '<div style="display:flex;align-items:center;gap:4px;font-size:0.72rem;color:var(--text-muted);"><span style="width:14px;height:14px;border-radius:3px;background:rgba(58,140,92,0.35);"></span>优秀(≥80%)</div>';
+  html += '<div style="display:flex;align-items:center;gap:4px;font-size:0.72rem;color:var(--text-muted);"><span style="width:14px;height:14px;border-radius:2px;background:rgba(192,85,58,0.4);"></span>严重薄弱(&lt;30%)</div>';
+  html += '<div style="display:flex;align-items:center;gap:4px;font-size:0.72rem;color:var(--text-muted);"><span style="width:14px;height:14px;border-radius:2px;background:rgba(196,149,106,0.4);"></span>薄弱(30-49%)</div>';
+  html += '<div style="display:flex;align-items:center;gap:4px;font-size:0.72rem;color:var(--text-muted);"><span style="width:14px;height:14px;border-radius:2px;background:rgba(139,168,136,0.4);"></span>一般(50-64%)</div>';
+  html += '<div style="display:flex;align-items:center;gap:4px;font-size:0.72rem;color:var(--text-muted);"><span style="width:14px;height:14px;border-radius:2px;background:rgba(90,125,92,0.35);"></span>良好(65-79%)</div>';
+  html += '<div style="display:flex;align-items:center;gap:4px;font-size:0.72rem;color:var(--text-muted);"><span style="width:14px;height:14px;border-radius:2px;background:rgba(58,140,92,0.35);"></span>优秀(≥80%)</div>';
   html += '</div>';
 
   html += '</div>';
@@ -1693,7 +1693,7 @@ function renderLearningPath(learningPath) {
     html += '<div class="diagnosis-path-step" style="margin-bottom:20px;padding:16px;background:var(--surface-secondary,#faf7f2);border-radius:12px;border-left:4px solid ' + levelColor + ';">';
     html += '<div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">';
     html += '<span style="font-weight:700;font-size:1.05rem;color:var(--color-deep,#1a3a2a);">' + (i + 1) + '. ' + step.label + '</span>';
-    html += '<span style="font-size:0.75rem;padding:2px 8px;background:' + levelColor + ';color:#fff;border-radius:10px;">' + levelLabel + ' (' + step.accuracy + '%)</span>';
+    html += '<span style="font-size:0.75rem;padding:2px 8px;background:' + levelColor + ';color:#fff;border-radius:8px;">' + levelLabel + ' (' + step.accuracy + '%)</span>';
     html += '</div>';
     html += '<div style="font-size:0.85rem;color:var(--text-secondary,#4a4a4a);">' + step.desc + '</div>';
 
@@ -1701,7 +1701,7 @@ function renderLearningPath(learningPath) {
       html += '<div style="margin-top:10px;font-size:0.82rem;">';
       html += '<span style="color:var(--text-muted,#8a8a8a);">前置依赖：</span>';
       for (var d = 0; d < step.dependencies.length; d++) {
-        html += '<span style="display:inline-block;margin-right:6px;padding:2px 8px;background:rgba(90,125,92,0.1);color:var(--color-sage,#5a7d5c);border-radius:6px;font-size:0.78rem;">' + step.dependencies[d] + '</span>';
+        html += '<span style="display:inline-block;margin-right:6px;padding:2px 8px;background:rgba(90,125,92,0.1);color:var(--color-sage,#5a7d5c);border-radius:8px;font-size:0.78rem;">' + step.dependencies[d] + '</span>';
         if (d < step.dependencies.length - 1) html += '<span style="color:var(--text-muted,#8a8a8a);margin:0 2px;">→</span>';
       }
       html += '</div>';
@@ -1767,7 +1767,7 @@ function renderSmartDiagnosisPage(target) {
   html += '<div class="diagnosis-header-title">学情诊断</div>';
   html += '<div class="diagnosis-header-desc">基于 ' + data.totalAnswered + ' 道练习数据的学情分析报告</div>';
   // 修复 P1-3：诚实标注诊断方法，避免"AI 诊断"误导
-  html += '<div class="diagnosis-header-method" style="margin-top:8px;font-size:0.78rem;color:var(--text-secondary,#6b7f74);background:var(--color-cream,#faf7f2);padding:6px 12px;border-radius:var(--radius-sm,6px);display:inline-block;">诊断方法：规则引擎 + BKT 贝叶斯知识追踪（纯本地计算，无需 AI 调用）</div>';
+  html += '<div class="diagnosis-header-method" style="margin-top:8px;font-size:0.78rem;color:var(--text-secondary,#6b7f74);background:var(--color-cream,#faf7f2);padding:6px 12px;border-radius:var(--radius-sm, 4px);display:inline-block;">诊断方法：规则引擎 + BKT 贝叶斯知识追踪（纯本地计算，无需 AI 调用）</div>';
   html += '</div>';
 
   html += renderDiagnosisOverview(data);

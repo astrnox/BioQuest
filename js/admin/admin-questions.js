@@ -142,7 +142,7 @@ function renderQuestionsTab(container, questionsData) {
           <label class="admin-form-label">题目内容</label>
           <textarea class="admin-form-textarea" id="q-text" placeholder="输入题目内容" required></textarea>
           <div style="font-size:0.72rem;color:var(--text-muted,#8a8a8a);margin-top:4px;line-height:1.5;">
-            💡 <strong>MTF 题干规范：</strong>不要用「下列叙述最合理的是/错误的是」等限定句，应改为
+            <strong>MTF 题干规范：</strong>不要用「下列叙述最合理的是/错误的是」等限定句，应改为
             「根据以上信息，判断以下陈述的正误。」，每个选项即为一条独立判断陈述。
           </div>
         </div>
@@ -213,7 +213,7 @@ function renderQuestionsTab(container, questionsData) {
       const subsHtml = _renderSubQuestionsHtml(q.sub_questions || q.subQuestions);
       // Supabase 实时查看链接（按 id 拉取单题）
       const supaLink = q.id
-        ? `<a href="https://supabase.com/dashboard/project/qxehkfucvmxuojjkdaqy/editor/2920?filter=id%3Deq%3A${encodeURIComponent(q.id)}" target="_blank" rel="noopener" class="admin-q-tag" style="background:rgba(99,102,241,0.1);color:#6366f1;text-decoration:none;font-size:0.65rem;cursor:pointer;" title="在 Supabase 中查看">↗ Supabase</a>`
+        ? `<a href="https://supabase.com/dashboard/project/qxehkfucvmxuojjkdaqy/editor/2920?filter=id%3Deq%3A${encodeURIComponent(q.id)}" target="_blank" rel="noopener" class="admin-q-tag" style="background:rgba(99,102,241,0.1);color:#6366f1;text-decoration:none;font-size:0.65rem;cursor:pointer;" title="在 Supabase 中查看">Supabase</a>`
         : '';
       html += `
         <div class="admin-q-card" data-question-id="${q.id}">
@@ -307,7 +307,7 @@ function renderQuestionsTab(container, questionsData) {
             <label class="admin-form-label">选项（每行一个）</label>
             <textarea class="admin-form-textarea" id="eq-options" style="min-height:80px;"></textarea>
             <div style="font-size:0.72rem;color:var(--text-muted,#8a8a8a);margin-top:4px;line-height:1.5;">
-              💡 <strong>选项格式：</strong>每行一个选项，选项数量决定答案长度。<br>
+              <strong>选项格式：</strong>每行一个选项，选项数量决定答案长度。<br>
               • 单选题 / 多选题 / 判断题：直接写选项文字（如：<code>酶是蛋白质</code>）<br>
               • 多判断题（MTF）：写描述文字即可，无需标注对错（对错统一在「答案」字段用 TTFF 表示）
             </div>
@@ -316,7 +316,7 @@ function renderQuestionsTab(container, questionsData) {
             <label class="admin-form-label">答案（TTFF 格式，大小写均可）</label>
             <input type="text" class="admin-form-input" id="eq-answer" placeholder="如：TTFF / ttff / TfFf">
             <div style="font-size:0.72rem;color:var(--text-muted,#8a8a8a);margin-top:4px;line-height:1.6;">
-              💡 <strong>答案格式（统一 TTFF）：</strong>按选项顺序，每项用 <code>T</code> 或 <code>F</code> 表示。<br>
+              <strong>答案格式（统一 TTFF）：</strong>按选项顺序，每项用 <code>T</code> 或 <code>F</code> 表示。<br>
               • <strong>T</strong> = 该选项属于正确答案集合；<strong>F</strong> = 该选项不属于答案集合<br>
               • 单选题（4 选项）：<code>TFFF</code> 表示选 A；<code>FFTF</code> 表示选 C<br>
               • 多选题（4 选项）：<code>TTFF</code> 表示选 AB；<code>TFFT</code> 表示选 AD<br>
@@ -670,13 +670,13 @@ async function _renderLocalQuestionSection() {
                 ${q.subject ? `<span class="admin-q-tag admin-q-tag--subject">${escapeHtml(q.subject)}</span>` : ''}
                 ${q.concept ? `<span class="admin-q-tag" style="background:rgba(16,185,129,0.1);color:#10b981;">${escapeHtml(q.concept)}</span>` : ''}
                 <span class="admin-q-tag" style="background:rgba(107,114,128,0.1);color:#6b7280;font-family:var(--font-mono,monospace);font-size:0.65rem;">${escapeHtml(id)}</span>
-                ${recycled ? '<span class="admin-q-tag" style="background:rgba(192,85,58,0.12);color:#c0553a;font-weight:600;">♻ 回收站</span>' : ''}
+                ${recycled ? '<span class="admin-q-tag" style="background:rgba(192,85,58,0.12);color:#c0553a;font-weight:600;">回收站</span>' : ''}
                 ${hasOverride ? '<span class="admin-q-tag" style="background:rgba(99,102,241,0.1);color:#6366f1;">已覆盖</span>' : ''}
               </div>
               <div style="margin-top:6px;font-size:0.8rem;color:var(--text-muted,#8a8a8a);">
                 评分 <strong style="color:${scoreColor};">${scoreStr}</strong>
                 <span style="margin:0 6px;opacity:0.5;">|</span>
-                👍 ${info.up} · 👎 ${info.down}
+                ${info.up} · ${info.down}
                 <span style="margin:0 6px;opacity:0.5;">|</span>
                 出现率权重 ${info.weight.toFixed(2)}×
                 ${hasVotes ? '' : '<span style="margin-left:8px;font-size:0.72rem;">（暂无投票）</span>'}
