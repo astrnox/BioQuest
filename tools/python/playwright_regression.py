@@ -1,6 +1,6 @@
 """
 BioQuest 回归测试：验证关键路由可加载、控制台无致命错误、
-dashboard 预测兜底、虚拟实验室参数控件等核心功能。
+dashboard 核心区块、虚拟实验室参数控件等核心功能。
 """
 from playwright.sync_api import sync_playwright, expect
 import sys
@@ -47,15 +47,34 @@ def run_tests():
             except Exception as e:
                 failed_routes.append(f"{route}: {e}")
 
-        # dashboard 预测兜底：访问 dashboard 后检查预测列表不为空
+        # dashboard 核心区块：校验保留下来的数据区仍在渲染，
+        # 并确保已下线模块不再出现（Issue #185）。
+        # 背景：PR #174 移除了「AI 考点预测」与「学习 DNA 双画像」，
+        #       原先断言 .dash-forecast-item 的写法已失效，导致回归必挂。
+        # 注意：/dashboard 路由配置了 auth:true，匿名（未登录）会话下不会渲染仪表盘，
+        #       故仅在仪表盘真正渲染时才断言区块，避免匿名跑测产生假失败。
         try:
             page.goto(f"{BASE_URL}/#/dashboard", wait_until="networkidle", timeout=15000)
             page.wait_for_timeout(1200)
-            forecast_items = page.locator(".dash-forecast-item").all()
-            if len(forecast_items) == 0:
-                errors.append("dashboard 考点预测列表为空（兜底未生效）")
+            if page.locator(".dash-goal-section").count() > 0:
+                # 保留区块：Bio Score 统计卡 / 今日计划列表
+                if page.locator(".dash-stat-label", has_text="Bio Score").count() == 0:
+                    errors.append("dashboard Bio Score 统计卡未渲染")
+                if page.locator(".dash-plan-item").count() == 0:
+                    errors.append("dashboard 今日计划列表为空")
+            else:
+                warnings.append("dashboard 未渲染（匿名会话受 auth:true 限制），跳过区块断言")
+            # 已下线模块在任何情况下都不应再出现在 DOM 中
+            removed_modules = {
+                ".dash-forecast-item": "AI 考点预测",
+                "#dash-forecast-container": "AI 考点预测容器",
+                ".dash-dna-section": "学习 DNA 双画像",
+            }
+            for selector, name in removed_modules.items():
+                if page.locator(selector).count() > 0:
+                    errors.append(f"dashboard 已下线模块仍存在: {name}({selector})")
         except Exception as e:
-            errors.append(f"dashboard 预测测试失败: {e}")
+            errors.append(f"dashboard 核心区块测试失败: {e}")
 
         # 虚拟实验室：enzyme 实验参数控件
         try:
@@ -110,7 +129,7 @@ def handle_console(msg):
         "[SW]",
         " fallbacks ",
     ]
-    # 静态 http.server 不支持 POST /forecast，dashboard 已本地兜底，控制台 501 可忽略
+    # 静态 http.server 不支持 POST 类接口（如 trends 页的 /forecast），相关 501 可忽略
     is_static_501 = "Failed to load resource" in text and "501" in text
     if msg.type == "error":
         if any(i in text for i in ignored) or is_static_501:
