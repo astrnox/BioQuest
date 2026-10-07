@@ -365,13 +365,13 @@
       '</div><!-- /bc-layout -->' +
 
       '<div class="bc-card bc-contrib">' +
-      '<h2>📊 得分贡献拆解 <span id="bc-seg-sum" style="font-size:.78rem;color:#99a;font-weight:400;margin-left:8px"></span></h2>' +
+      '<h2>得分贡献拆解 <span id="bc-seg-sum" style="font-size:.78rem;color:#99a;font-weight:400;margin-left:8px"></span></h2>' +
       '<div class="bc-seg" id="bc-seg"></div>' +
       '<div class="bc-contrib-list" id="bc-contrib-list"></div>' +
       '</div>' +
 
       '<div class="bc-card bc-explain">' +
-      '<h2 style="font-size:1.02rem;margin:0 0 8px;color:var(--color-ink,#2c3e30)">📐 计算规则公开</h2>' +
+      '<h2 style="font-size:1.02rem;margin:0 0 8px;color:var(--color-ink,#2c3e30)">计算规则公开</h2>' +
       '<div class="bc-row"><b>公式</b><span id="bc-formula"></span></div>' +
       '<div class="bc-row"><b>评级对照</b><span id="bc-grades"></span></div>' +
       '<div id="bc-gradenote"></div>' +
@@ -462,7 +462,7 @@
     target.innerHTML =
       '<div class="bc-wrap">' +
       '<div class="bc-hero">' +
-      '<h1>🧬 Bio 分计算器</h1>' +
+      '<h1>Bio 分计算器</h1>' +
       '<p>拖动六维滑块（或直接输入数字），总分、评级、单维贡献全部<b>实时联动</b>。公式 100% 公开、结果可复现，绝无黑箱。</p>' +
       '<a href="#/data-lab">→ 数据实验室：查看 CR 信用、正确率等全部指标的计算方式</a>' +
       '</div>' +

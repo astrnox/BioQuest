@@ -1427,7 +1427,6 @@ function renderFilterPanel() {
   container.innerHTML = `
     <div class="animate-fade-in">
       <section class="section" style="padding-top:0;padding-bottom:32px;">
-        <div class="section-label">PRACTICE</div>
         <h2 class="section-title">专项练习</h2>
         <p class="section-desc">按知识点分类进行针对性练习，巩固薄弱环节。</p>
       </section>
@@ -2563,7 +2562,6 @@ function showSummary() {
   container.innerHTML = `
     <div class="animate-fade-in">
       <section class="section" style="padding-top:0;padding-bottom:24px;">
-        <div class="section-label">PRACTICE SUMMARY</div>
         <h2 class="section-title">练习小结</h2>
         <p class="section-desc">恭喜完成练习！查看你的学习成果。</p>
       </section>

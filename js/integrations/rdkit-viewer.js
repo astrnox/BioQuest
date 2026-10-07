@@ -135,7 +135,7 @@
 
     target.innerHTML =
       '<div style="max-width:900px;margin:0 auto;padding:24px 20px 80px;">' +
-      '<h1 style="font-family:var(--font-serif,serif);font-size:1.8rem;color:var(--color-deep,#1a3a2a);margin-bottom:8px;">🧪 SMILES 2D 分子查看器</h1>' +
+      '<h1 style="font-family:var(--font-serif,serif);font-size:1.8rem;color:var(--color-deep,#1a3a2a);margin-bottom:8px;">SMILES 2D 分子查看器</h1>' +
       '<p style="color:var(--text-muted,#8a8a8a);font-size:0.9rem;margin-bottom:24px;">基于 RDKit-JS（BSD-3）渲染 SMILES 字符串为 2D 分子结构图</p>' +
       '<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px;margin-bottom:32px;">' + cardsHtml + '</div>' +
       '<div style="background:var(--surface-primary,#fff);border:1px solid var(--border-light,#ece8e1);border-radius:var(--radius-lg,20px);padding:20px;">' +

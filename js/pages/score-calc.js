@@ -213,7 +213,7 @@
     var bioHtml = '';
     if (bio) {
       bioHtml = '<div class="sc-card" style="grid-column:1/-1">' +
-        '<h2>📐 ' + esc(bio.title) + ' — 计算规则公开</h2>' +
+        '<h2>' + esc(bio.title) + ' — 计算规则公开</h2>' +
         '<p class="sc-sub">' + esc(bio.formula) + '</p>' +
         bio.dims.map(function (d) {
           return '<div class="sc-row"><span class="sc-label">' + d.name + ' <small>权重 ' + d.weight + '</small></span>' +
@@ -229,7 +229,7 @@
       var pTbl = Object.keys(cr.penalties).map(function (k) { return k + ' −' + cr.penalties[k]; }).join('、');
       var cTbl = Object.keys(cr.costs).map(function (k) { return k + ' −' + cr.costs[k]; }).join('、');
       crHtml = '<div class="sc-card" style="grid-column:1/-1">' +
-        '<h2>🛡️ ' + esc(cr.title) + ' — 计算规则公开</h2>' +
+        '<h2>' + esc(cr.title) + ' — 计算规则公开</h2>' +
         '<p class="sc-sub">' + esc(cr.formula) + '</p>' +
         '<div class="sc-detail">• ' + esc(cr.nearCause) + '</div>' +
         '<div class="sc-detail">• ' + esc(cr.baseNote) + '</div>' +
@@ -249,14 +249,14 @@
 
     var html = '' +
       '<div class="sc-wrap">' +
-      '<div class="sc-hero"><h1>🧪 数据实验室</h1>' +
+      '<div class="sc-hero"><h1>数据实验室</h1>' +
       '<p>这里 100% 公开 BioQuest 各项数据指标的计算方式。你可以像做实验一样：<b>任意输入自变量</b>（六维属性、行为次数、天数…），<b>实时观察因变量</b>（Bio Score、信用指数 CR、正确率）如何变化，所有公式与阈值一览无余。</p></div>' +
 
       '<div class="sc-grid">' +
 
       '<!-- Bio Score 计算器 -->' +
       '<div class="sc-card">' +
-      '<h2>🧬 Bio Score 推演（因变量：总分）</h2>' +
+      '<h2>Bio Score 推演（因变量：总分）</h2>' +
       '<p class="sc-sub">输入六维属性（0-100），即可算出加权总分与评级。左侧滑块可拖动，右侧数字框可精确输入。</p>' +
       '<button type="button" class="sc-btn sc-btn--ghost" data-action="sc-fill-bio">⬇️ 填入我的真实数据</button>' +
       '<div id="sc-bio-inputs">' +
@@ -272,7 +272,7 @@
 
       '<!-- CR 计算器 -->' +
       '<div class="sc-card">' +
-      '<h2>🛡️ CR 信用推演（因变量：信用指数）</h2>' +
+      '<h2>CR 信用推演（因变量：信用指数）</h2>' +
       '<p class="sc-sub">输入你的行为参数（可视为过去 N 天内的总量），实时得到 v2 科学模型的信用分与信任等级。</p>' +
       '<div class="sc-row"><span class="sc-label">行为距今天数</span><input type="number" id="sc-cr-days" class="sc-num" min="0" max="3650" value="3"></div>' +
       '<div class="sc-row"><span class="sc-label">每日登录次数</span><input type="number" id="sc-cr-login" class="sc-num" min="0" value="5"></div>' +
@@ -291,7 +291,7 @@
 
       '<!-- 正确率速算 -->' +
       '<div class="sc-card">' +
-      '<h2>🎯 正确率速算</h2>' +
+      '<h2>正确率速算</h2>' +
       '<p class="sc-sub">经典功能：正确数 ÷ 总数 = 正确率。也用于理解 stats.accuracy 的展示口径（题目级）。</p>' +
       '<div class="sc-row"><span class="sc-label">答对题数</span><input type="number" id="sc-acc-c" class="sc-num" min="0" value="8"></div>' +
       '<div class="sc-row"><span class="sc-label">总题数</span><input type="number" id="sc-acc-t" class="sc-num" min="1" value="10"></div>' +
@@ -300,7 +300,7 @@
       '</div>' +
 
       '<div class="sc-card">' +
-      '<h2>📖 为什么这么算？</h2>' +
+      '<h2>为什么这么算？</h2>' +
       '<p class="sc-sub">评分设计原则（可追溯、可辩护）：</p>' +
       '<div class="sc-detail">• <b>不能制造“幸存者偏差”</b>：正确率用正态 CDF 映射，避免简单线性在两端过分敏感（80% 与 99% 的差距不应巨大）。</div>' +
       '<div class="sc-detail">• <b>成长看“方向”而非绝对值</b>：成长性以时间升序的平滑趋势衡量，进步加分、退步减分、持平 50 分。</div>' +

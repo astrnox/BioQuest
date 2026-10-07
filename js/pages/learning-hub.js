@@ -187,7 +187,7 @@
     var html = `
       <div class="lmc-wrap">
         <div class="lmc-header">
-          <h1>📚 学习管理中心</h1>
+          <h1>学习管理中心</h1>
           <div class="lmc-subtitle">参考 Deadline Quest 设计 · 今日任务 + 进度 + AI 抢救</div>
         </div>
 
@@ -196,7 +196,7 @@
           <div class="lmc-col lmc-col-main">
             <div class="lmc-card">
               <div class="lmc-card-header">
-                <h2>🎯 今日任务（${state.tasks.length}）</h2>
+                <h2>今日任务（${state.tasks.length}）</h2>
                 <button class="lmc-btn lmc-btn-ghost" id="lmc-add-task-btn">+ 新建</button>
               </div>
               <div class="lmc-task-list" id="lmc-task-list"></div>
@@ -204,7 +204,7 @@
 
             <div class="lmc-card">
               <div class="lmc-card-header">
-                <h2>📅 截止时间线</h2>
+                <h2>截止时间线</h2>
               </div>
               <div class="lmc-timeline" id="lmc-timeline"></div>
             </div>
@@ -214,7 +214,7 @@
           <div class="lmc-col lmc-col-side">
             <div class="lmc-card lmc-card-progress" id="lmc-progress-card">
               <div class="lmc-card-header">
-                <h2>📊 答题进度</h2>
+                <h2>答题进度</h2>
               </div>
               <div class="lmc-progress" id="lmc-progress"></div>
             </div>
@@ -228,7 +228,7 @@
 
             <div class="lmc-card">
               <div class="lmc-card-header">
-                <h2>📋 任务日志 <span class="lmc-log-count">${state.logs.length} 条</span></h2>
+                <h2>任务日志 <span class="lmc-log-count">${state.logs.length} 条</span></h2>
                 <button class="lmc-btn lmc-btn-ghost" id="lmc-clear-logs-btn">清空</button>
               </div>
               <div class="lmc-logs" id="lmc-logs"></div>

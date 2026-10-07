@@ -521,7 +521,6 @@ function renderCardsPage() {
   container.innerHTML = `
     <div style="max-width:720px;margin:0 auto;padding:40px 20px 60px;">
       <div class="anki-page-header" style="margin-bottom:32px;">
-        <div class="section-label">SPACED REPETITION</div>
         <h2 class="section-title" style="font-size:2rem;">间隔重复记忆卡</h2>
         <p class="section-desc">基于 FSRS 算法的智能复习系统 · 选择牌组开始学习</p>
       </div>

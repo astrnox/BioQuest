@@ -21,7 +21,7 @@
   var STEPS = [
     {
       title: '欢迎来到 BioQuest',
-      text: '这里是从高考到竞赛的生物学习平台：刷题、错题、记忆卡片、AI 导师一站式搞定。',
+      text: '刷题、错题本、记忆卡片都在这里；答完自动判分，错题自动收录。',
       targetSelector: null
     },
     {

@@ -250,13 +250,13 @@
     if (!target) return;
     target.innerHTML =
       '<div style="max-width:1000px;margin:0 auto;padding:24px 20px 80px;">' +
-      '<h1 style="font-family:var(--font-serif,serif);font-size:1.8rem;color:var(--color-deep,#1a3a2a);margin-bottom:8px;">💬 学习社区</h1>' +
+      '<h1 style="font-family:var(--font-serif,serif);font-size:1.8rem;color:var(--color-deep,#1a3a2a);margin-bottom:8px;">学习社区</h1>' +
       '<p style="color:var(--text-muted,#8a8a8a);font-size:0.9rem;margin-bottom:24px;">基于 quikchat（BSD-2）的实时讨论</p>' +
 
       '<div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:24px;">' +
         // 左侧：实时聊天
         '<div style="background:var(--surface-primary,#fff);border:1px solid var(--border-light,#ece8e1);border-radius:var(--radius-lg,20px);padding:20px;">' +
-          '<h3 style="font-family:var(--font-serif,serif);font-size:1.1rem;color:var(--color-deep,#1a3a2a);margin-bottom:12px;">📡 实时讨论室</h3>' +
+          '<h3 style="font-family:var(--font-serif,serif);font-size:1.1rem;color:var(--color-deep,#1a3a2a);margin-bottom:12px;">实时讨论室</h3>' +
           '<div id="community-chat" style="height:400px;background:#faf7f2;border-radius:8px;overflow:hidden;"></div>' +
         '</div>' +
         // 右侧：说明

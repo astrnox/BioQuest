@@ -510,7 +510,7 @@
       _renderQuizStage(scene);
     } else if (scene.type === 'pbl') {
       stage.innerHTML = '<div style="padding:32px;color:#333;overflow:auto;height:100%;">'
-        + '<h3 style="margin-bottom:16px;">🎯 课后项目</h3>'
+        + '<h3 style="margin-bottom:16px;">课后项目</h3>'
         + '<p style="margin:16px 0;font-size:15px;line-height:1.7;">' + _escapeHtml(scene.content.project || '') + '</p>'
         + '<h4 style="margin-top:24px;">项目脚手架：</h4>'
         + '<ol style="line-height:2;padding-left:24px;">' + (scene.content.scaffold || []).map(function (s) { return '<li>' + _escapeHtml(s) + '</li>'; }).join('') + '</ol>'

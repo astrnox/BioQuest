@@ -175,7 +175,7 @@
 
     target.innerHTML =
       '<div style="max-width:900px;margin:0 auto;padding:24px 20px 80px;">' +
-      '<h1 style="font-family:var(--font-serif,serif);font-size:1.8rem;color:var(--color-deep,#1a3a2a);margin-bottom:8px;">🧬 3D 分子查看器</h1>' +
+      '<h1 style="font-family:var(--font-serif,serif);font-size:1.8rem;color:var(--color-deep,#1a3a2a);margin-bottom:8px;">3D 分子查看器</h1>' +
       '<p style="color:var(--text-muted,#8a8a8a);font-size:0.9rem;margin-bottom:24px;">基于 3Dmol.js（BSD-3-Clause）渲染蛋白质/DNA 3D 结构</p>' +
       '<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px;margin-bottom:32px;">' + cardsHtml + '</div>' +
       '<div id="molecule-viewer-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:1000;align-items:center;justify-content:center;">' +
