@@ -1767,6 +1767,37 @@ window.getQuestionBankCount = function () {
     return Promise.resolve(null);
   }
 };
+/**
+ * 读取「可练题总数」＝ 模块精编题（manifest.total_questions）
+ *                       + 逻辑推理题（data/logic_questions.json）。
+ * 首页「题库总量」与练习页默认「可用题目」共用同一口径：
+ * 练习页默认类别为「全部」，题库 = 基础知识题 + 逻辑推理题，
+ * 若首页只显示 manifest.total_questions 会与练习页数字对不上。
+ * @returns {Promise<number|null>} 无法获取模块题数时返回 null；逻辑题读取失败按 0 计
+ */
+var _playableCountCache = null;
+window.getPlayableQuestionCount = function () {
+  if (_playableCountCache !== null) return Promise.resolve(_playableCountCache);
+  var moduleCountP = (typeof window.getQuestionBankCount === 'function')
+    ? window.getQuestionBankCount()
+    : Promise.resolve(null);
+  var logicCountP = _fetchJSON('data/logic_questions.json', null)
+    .then(function (data) {
+      var arr = Array.isArray(data)
+        ? data
+        : (data && (data['题库'] || data.questions || data.items));
+      if (!Array.isArray(arr) && data && typeof data === 'object') arr = Object.values(data);
+      return (arr && arr.length) || 0;
+    })
+    .catch(function () { return 0; });
+  return Promise.all([moduleCountP, logicCountP]).then(function (r) {
+    var moduleCount = r[0];
+    if (!moduleCount) return null;
+    var total = moduleCount + r[1];
+    _playableCountCache = total;
+    return total;
+  }).catch(function () { return null; });
+};
 // Issue #10：分片题库 API（供外部按需刷新 / 迁移 / 查询 bioID 映射）
 window.loadAllShards = _loadAllShards;
 window.loadBioIdMap = _loadBioIdMap;

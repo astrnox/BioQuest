@@ -1538,7 +1538,8 @@ function renderFilterPanel() {
             开始练习
           </button>
           ${PracticeState.filteredQuestions.length > 0
-            ? `<span style="font-size:0.875rem;color:var(--text-muted);margin-left:12px;">
+            ? `<span style="font-size:0.875rem;color:var(--text-muted);margin-left:12px;"
+                     title="当前筛选条件下可练的题目数（基础知识题 + 逻辑推理题）；改动模块/难度/类别会实时变化">
               共 ${PracticeState.filteredQuestions.length} 道可用题目
             </span>`
             : ''}

@@ -1102,14 +1102,20 @@ function reinitHomeComponents() {
     _AppState._countdownTimer = update() ? setInterval(update, 1000) : null;
   }
 
-  // 首页「题库总量」动态化：读取本地题库总数（不写死），云端场景不虚标
+  // 首页「题库总量」动态化：与练习页「可用题目」保持同一口径
+  // （模块精编题 manifest.total_questions + 逻辑推理题 logic_questions.json）。
+  // 若只读 manifest.total_questions 会漏掉逻辑推理题，导致与练习页数字对不上。
   const statTotalQ = document.getElementById('statTotalQuestions');
   if (statTotalQ) {
-    if (typeof window.getQuestionBankCount === 'function') {
-      window.getQuestionBankCount().then(function (n) {
-        if (n && statTotalQ) statTotalQ.textContent = String(n);
-      });
-    }
+    const countP = (typeof window.getPlayableQuestionCount === 'function')
+      ? window.getPlayableQuestionCount()
+      : (typeof window.getQuestionBankCount === 'function'
+          ? window.getQuestionBankCount()
+          : Promise.resolve(null));
+    Promise.resolve(countP).then(function (n) {
+      if (n && statTotalQ) statTotalQ.textContent = String(n);
+    });
+    statTotalQ.title = '可练题总数：模块精编题 + 逻辑推理题';
   }
 
   if (typeof initHeroSketch === 'function') {
