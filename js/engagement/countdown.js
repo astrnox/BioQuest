@@ -1,9 +1,13 @@
 /**
  * ============================================
- * 倒计时功能
+ * 倒计时功能（全站唯一实现 + 唯一数据源）
  * ============================================
+ * 目标日期只在本文件定义；首页静态渲染与 SPA 返回首页
+ * （app.js 的 reinitHomeComponents）都调用 window.BioQuestCountdown.init()，
+ * 不再各写一份计算逻辑、也不在多处硬编码日期。
  */
 (function() {
+  // 全站唯一的倒计时目标日期：下一届全国中学生生物学联赛
   const TARGET_DATE = new Date('2026-08-16T09:00:00+08:00');
   let timer = null;
 
@@ -25,12 +29,12 @@
     }
   }
 
+  // 渲染一帧；返回是否仍在倒计时（false 表示已过期，调用方应停掉定时器）
   function update() {
     const diff = TARGET_DATE - new Date();
     if (diff <= 0) {
       showExpired();
-      if (timer) { clearInterval(timer); timer = null; }
-      return;
+      return false;
     }
 
     const days = Math.floor(diff / (1000 * 60 * 60 * 24));
@@ -47,10 +51,16 @@
     if (hoursEl) hoursEl.textContent = pad(hours);
     if (minsEl) minsEl.textContent = pad(mins);
     if (secsEl) secsEl.textContent = pad(secs);
+    return true;
   }
 
-  update();
-  if (timer === null && TARGET_DATE - Date.now() > 0) {
-    timer = setInterval(update, 1000);
+  // 幂等启动：SPA 返回首页时会重复调用，先清掉旧定时器，避免叠加多个 interval
+  function init() {
+    if (timer) { clearInterval(timer); timer = null; }
+    timer = update() ? setInterval(update, 1000) : null;
   }
+
+  window.BioQuestCountdown = { TARGET_DATE: TARGET_DATE, init: init, update: update };
+
+  init();
 })();
