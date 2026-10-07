@@ -42,7 +42,6 @@
     if (!document.body) return;
     var toast = _el('div', 'bq-notify-popup');
     toast.innerHTML =
-      '<div class="bq-notify-icon">💬</div>' +
       '<div class="bq-notify-body">' +
         '<div class="bq-notify-title">' + escapeHtml(notif.commenter || '同学') + ' 回复了你</div>' +
         '<div class="bq-notify-post">' + escapeHtml(notif.postPreview || '你的帖子') + '</div>' +

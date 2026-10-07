@@ -865,7 +865,7 @@
 
   /* ========================================================================
    * 新增 OCR 应用场景 1：全局图片 OCR 浮窗
-   *   - 右键 或 长按 页面任意 <img>，弹出"📋 OCR 识别文字"按钮
+   *   - 右键 或 长按 页面任意 <img>，弹出"OCR 识别文字"按钮
    *   - 识别结果可：复制到剪贴板 / 追加到附近的 textarea / 手动编辑
    *   - 完全自包含：不修改其他模块任何代码，所有 DOM 与样式在这里构建
    * ======================================================================== */
@@ -967,16 +967,16 @@
     function _showTrigger(x, y, img) {
       _hideTrigger();
       btnTrigger = document.createElement('button');
-      btnTrigger.textContent = '📋 OCR 识别文字';
+      btnTrigger.textContent = 'OCR 识别文字';
       _css(btnTrigger, {
         position: 'fixed', zIndex: 2147483645,
         left: x + 'px', top: y + 'px',
         transform: 'translate(-50%, -110%)',
-        padding: '7px 13px', borderRadius: '999px',
+        padding: '7px 13px', borderRadius: '16px',
         background: SAGE, color: '#fff',
         fontSize: '13px', fontWeight: 600, letterSpacing: '0.02em',
         border: 'none', cursor: 'pointer',
-        boxShadow: '0 6px 18px rgba(90,125,92,0.28), 0 2px 6px rgba(0,0,0,0.08)',
+        boxShadow: 'var(--shadow-lg)',
         whiteSpace: 'nowrap'
       });
       btnTrigger.addEventListener('click', function (ev) {
@@ -999,8 +999,8 @@
         width: 'min(560px, calc(100vw - 32px))',
         maxHeight: 'min(72vh, 680px)',
         background: '#fff',
-        borderRadius: '14px',
-        boxShadow: '0 24px 60px rgba(26,58,42,0.22), 0 6px 18px rgba(0,0,0,0.12)',
+        borderRadius: '12px',
+        boxShadow: 'var(--shadow-floating)',
         display: 'flex', flexDirection: 'column',
         overflow: 'hidden',
         fontFamily: '-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",Segoe UI,Arial,sans-serif',
@@ -1010,16 +1010,16 @@
       _css(head, {
         display: 'flex', alignItems: 'center', justifyContent: 'space-between',
         padding: '14px 18px', borderBottom: '1px solid rgba(90,125,92,0.12)',
-        background: 'linear-gradient(180deg, rgba(90,125,92,0.06), rgba(90,125,92,0))'
+        background: 'transparent'
       });
       var title = document.createElement('div');
-      title.innerHTML = '<strong style="font-size:15px;">📝 OCR 识别结果</strong>' +
+      title.innerHTML = '<strong style="font-size:15px;">OCR 识别结果</strong>' +
                         '<span id="ocr-panel-engine" style="margin-left:8px;font-size:12px;color:#8a8a8a;"></span>';
       var close = document.createElement('button');
       close.textContent = '✕';
       _css(close, {
         border: 'none', background: 'transparent', fontSize: '18px',
-        cursor: 'pointer', color: '#8a8a8a', padding: '2px 6px', borderRadius: '6px'
+        cursor: 'pointer', color: '#8a8a8a', padding: '2px 6px', borderRadius: '8px'
       });
       close.addEventListener('mouseenter', function () { close.style.background = 'rgba(0,0,0,0.06)'; });
       close.addEventListener('mouseleave', function () { close.style.background = 'transparent'; });
@@ -1064,7 +1064,7 @@
       _css(ta, {
         width: '100%', minHeight: '180px', resize: 'vertical',
         padding: '10px 12px', fontSize: '14px', lineHeight: '1.65',
-        borderRadius: '10px', border: '1px solid rgba(90,125,92,0.22)',
+        borderRadius: '8px', border: '1px solid rgba(90,125,92,0.22)',
         boxSizing: 'border-box', fontFamily: 'inherit'
       });
       ta.value = initialText || '';
@@ -1081,16 +1081,16 @@
         var b = document.createElement('button');
         b.textContent = text;
         _css(b, {
-          padding: '8px 14px', borderRadius: '10px', border: 'none', cursor: 'pointer',
+          padding: '8px 14px', borderRadius: '8px', border: 'none', cursor: 'pointer',
           fontSize: '13.5px', fontWeight: 600, color: '#fff', background: color,
-          boxShadow: '0 2px 6px rgba(0,0,0,0.08)', transition: 'transform .08s'
+          boxShadow: 'var(--shadow-sm)', transition: 'transform .08s'
         });
         b.addEventListener('mousedown', function () { b.style.transform = 'scale(0.97)'; });
         b.addEventListener('mouseup',   function () { b.style.transform = 'scale(1)'; });
         b.addEventListener('click', handler);
         return b;
       }
-      var btnCopy = makeBtn('📋 复制到剪贴板', SAGE, function () {
+      var btnCopy = makeBtn('复制到剪贴板', SAGE, function () {
         var v = ta.value || '';
         if (!v) { status.textContent = '没有文本可复制'; status.style.color = AMBER; return; }
         try {
@@ -1109,13 +1109,13 @@
       var nearby = _findNearbyTextarea();
       var btnAppend = null;
       if (nearby) {
-        btnAppend = makeBtn('✏️ 追加到输入框', '#3a6b9a', function () {
+        btnAppend = makeBtn('追加到输入框', '#3a6b9a', function () {
           var ok = _appendToEditable(nearby, ta.value);
           status.textContent = ok ? '✓ 已追加到输入框' : '追加失败，请手动复制';
           status.style.color = ok ? SAGE : AMBER;
         });
       }
-      var btnRetry = makeBtn('🔁 重新识别', AMBER, function () {
+      var btnRetry = makeBtn('重新识别', AMBER, function () {
         fill.style.width = '0';
         ta.value = '';
         _runImageOcr(img, { ta: ta, status: status, fill: fill, engineSpan: resultPanel.querySelector('#ocr-panel-engine') });
@@ -1233,8 +1233,8 @@
 
   /* ========================================================================
    * 新增 OCR 应用场景 2：错题本 批量 OCR 录入
-   *   - MutationObserver 检测到错题本 UI 出现后，在「📷 拍照/OCR」按钮旁
-   *     自动追加一个「📥 批量OCR录入」按钮
+   *   - MutationObserver 检测到错题本 UI 出现后，在「拍照/OCR」按钮旁
+   *     自动追加一个「批量OCR录入」按钮
    *   - 用户可一次上传多张错题图片，按顺序批量 OCR，每识别成功一张
    *     自动通过 window.addWrongQuestion() 存入错题本（零侵入 wrongbook.js）
    *   - 面板显示进度 / 成功失败计数 / 失败重试 / 失败项手动编辑后保存
@@ -1269,9 +1269,9 @@
       var btn = document.createElement('button');
       btn.setAttribute('data-ocr-batch-btn', '1');
       btn.className = host.className || 'wb-btn';
-      btn.textContent = '📥 批量OCR录入';
+      btn.textContent = '批量OCR录入';
       _css(btn, {
-        background: 'linear-gradient(135deg, ' + DEEP + ' 0%, ' + SAGE + ' 100%)',
+        background: DEEP,
         color: '#fff',
         marginLeft: '6px',
         fontSize: '0.85rem'
@@ -1298,7 +1298,7 @@
       _css(panel, {
         width: 'min(720px, 100%)', maxHeight: 'min(82vh, 780px)',
         background: '#fff', borderRadius: '16px', overflow: 'hidden',
-        boxShadow: '0 28px 80px rgba(26,58,42,0.28)',
+        boxShadow: 'var(--shadow-floating)',
         fontFamily: '-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",Segoe UI,Arial,sans-serif',
         color: DEEP, display: 'flex', flexDirection: 'column'
       });
@@ -1309,16 +1309,16 @@
         padding: '16px 20px', display: 'flex', alignItems: 'center',
         justifyContent: 'space-between',
         borderBottom: '1px solid rgba(90,125,92,0.12)',
-        background: 'linear-gradient(180deg, rgba(90,125,92,0.07), rgba(90,125,92,0))'
+        background: 'transparent'
       });
       var titleEl = document.createElement('div');
-      titleEl.innerHTML = '<strong style="font-size:16px;">📥 错题本 · 批量OCR录入</strong>' +
+      titleEl.innerHTML = '<strong style="font-size:16px;">错题本 · 批量OCR录入</strong>' +
                          '<div id="ocr-batch-stat" style="margin-top:4px;font-size:12px;color:#8a8a8a;">选择图片，按顺序 OCR 识别并入库</div>';
       var closeBtn = document.createElement('button');
       closeBtn.textContent = '✕';
       _css(closeBtn, {
         border: 'none', background: 'transparent', fontSize: '20px',
-        cursor: 'pointer', color: '#8a8a8a', padding: '2px 8px', borderRadius: '6px'
+        cursor: 'pointer', color: '#8a8a8a', padding: '2px 8px', borderRadius: '8px'
       });
       closeBtn.addEventListener('click', _closeBatchPanel);
       head.appendChild(titleEl); head.appendChild(closeBtn);
@@ -1335,12 +1335,11 @@
       _css(pickerWrap, {
         display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
         gap: '8px', padding: '22px 16px',
-        border: '2px dashed rgba(90,125,92,0.35)', borderRadius: '14px',
+        border: '2px dashed rgba(90,125,92,0.35)', borderRadius: '12px',
         cursor: 'pointer', background: 'rgba(90,125,92,0.035)',
         transition: 'all .2s', color: SAGE, textAlign: 'center'
       });
       pickerWrap.innerHTML =
-        '<div style="font-size:28px;">🖼️</div>' +
         '<div style="font-size:14.5px;font-weight:600;">点击选择多张错题图片（或拖拽到此处）</div>' +
         '<div style="font-size:12px;color:#8a8a8a;">支持多选 · JPG/PNG/WebP · 推荐：清晰、光线充足、裁剪到题目区域</div>';
       var fileInput = document.createElement('input');
@@ -1372,7 +1371,7 @@
 
       // 进度条
       var bar = document.createElement('div');
-      _css(bar, { height: '5px', background: 'rgba(0,0,0,0.06)', borderRadius: '3px', overflow: 'hidden' });
+      _css(bar, { height: '5px', background: 'rgba(0,0,0,0.06)', borderRadius: '2px', overflow: 'hidden' });
       var fill = document.createElement('div');
       _css(fill, { width: '0', height: '100%', background: SAGE, transition: 'width .25s' });
       bar.appendChild(fill);
@@ -1392,28 +1391,28 @@
         background: 'rgba(90,125,92,0.03)'
       });
       var btnStart = document.createElement('button');
-      btnStart.textContent = '▶️ 开始识别';
+      btnStart.textContent = '开始识别';
       _css(btnStart, {
-        padding: '9px 18px', borderRadius: '10px', border: 'none', cursor: 'pointer',
+        padding: '9px 18px', borderRadius: '8px', border: 'none', cursor: 'pointer',
         fontSize: '14px', fontWeight: 700, color: '#fff', background: SAGE,
-        boxShadow: '0 2px 10px rgba(90,125,92,0.25)', transition: 'transform .08s'
+        boxShadow: 'var(--shadow-md)', transition: 'transform .08s'
       });
       btnStart.addEventListener('mousedown', function () { btnStart.style.transform = 'scale(0.97)'; });
       btnStart.addEventListener('mouseup',   function () { btnStart.style.transform = 'scale(1)'; });
       btnStart.addEventListener('click', function () { _runAll(); });
       var btnClear = document.createElement('button');
-      btnClear.textContent = '🗑️ 清空';
+      btnClear.textContent = '清空';
       _css(btnClear, {
-        padding: '9px 14px', borderRadius: '10px', border: '1px solid rgba(0,0,0,0.12)', cursor: 'pointer',
+        padding: '9px 14px', borderRadius: '8px', border: '1px solid rgba(0,0,0,0.12)', cursor: 'pointer',
         fontSize: '14px', background: '#fff', color: DEEP
       });
       btnClear.addEventListener('click', function () {
         tasks.length = 0; list.innerHTML = ''; fill.style.width = '0'; _updateStat();
       });
       var btnJump = document.createElement('button');
-      btnJump.textContent = '✏️ 前往错题本列表';
+      btnJump.textContent = '前往错题本列表';
       _css(btnJump, {
-        padding: '9px 14px', borderRadius: '10px', border: '1px solid ' + SAGE, cursor: 'pointer',
+        padding: '9px 14px', borderRadius: '8px', border: '1px solid ' + SAGE, cursor: 'pointer',
         fontSize: '14px', background: '#fff', color: SAGE
       });
       btnJump.addEventListener('click', function () {
@@ -1503,7 +1502,7 @@
         var statusPill = document.createElement('span');
         statusPill.textContent = '待识别';
         _css(statusPill, {
-          fontSize: '11.5px', padding: '2px 8px', borderRadius: '999px',
+          fontSize: '11.5px', padding: '2px 8px', borderRadius: '16px',
           background: 'rgba(0,0,0,0.05)', color: '#7a7a7a', fontWeight: 600
         });
         task._statusPill = statusPill;
@@ -1527,7 +1526,7 @@
         _css(subjInput, {
           flex: '1 1 140px', minWidth: '120px',
           padding: '6px 10px', fontSize: '12.5px',
-          borderRadius: '7px', border: '1px solid rgba(0,0,0,0.12)',
+          borderRadius: '8px', border: '1px solid rgba(0,0,0,0.12)',
           fontFamily: 'inherit'
         });
         task._subj = subjInput;
@@ -1536,7 +1535,7 @@
         // 手写开关：手写笔记走"保留灰度"预处理链 + 可选 OCR.space 手写 API
         var handLabel = document.createElement('label');
         handLabel.style.cssText = 'display:inline-flex;align-items:center;gap:4px;font-size:12px;color:#6a7a6e;cursor:pointer;white-space:nowrap;';
-        handLabel.innerHTML = '<input type="checkbox" style="width:auto;"> ✍️ 手写';
+        handLabel.innerHTML = '<input type="checkbox" style="width:auto;"> 手写';
         task._hand = handLabel.querySelector('input');
         meta.appendChild(handLabel);
 
@@ -1545,14 +1544,14 @@
         var actions = document.createElement('div');
         _css(actions, { display: 'flex', flexDirection: 'column', gap: '6px', minWidth: '84px' });
         var btnSave = document.createElement('button');
-        btnSave.textContent = '💾 保存';
+        btnSave.textContent = '保存';
         _css(btnSave, {
           padding: '6px 10px', borderRadius: '8px', border: 'none', cursor: 'pointer',
           fontSize: '12.5px', background: SAGE, color: '#fff', fontWeight: 600
         });
         btnSave.addEventListener('click', function () { _saveTask(task, { manual: true }); });
         var btnRetry = document.createElement('button');
-        btnRetry.textContent = '🔁 重识';
+        btnRetry.textContent = '重识';
         _css(btnRetry, {
           padding: '6px 10px', borderRadius: '8px', border: 'none', cursor: 'pointer',
           fontSize: '12.5px', background: AMBER, color: '#fff', fontWeight: 600

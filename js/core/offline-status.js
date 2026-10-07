@@ -20,7 +20,6 @@
     el.setAttribute('role', 'status');
     el.setAttribute('aria-live', 'polite');
     el.innerHTML =
-      '<span class="bq-ob-icon" aria-hidden="true">📡</span>' +
       '<span class="bq-ob-text">当前处于离线状态，部分功能可能不可用</span>' +
       '<span class="bq-ob-pending" style="display:none"></span>' +
       '<button type="button" class="bq-ob-btn" data-ob-action="reload">重新连接</button>';

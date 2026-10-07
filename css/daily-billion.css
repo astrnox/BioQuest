@@ -36,7 +36,7 @@ html.dark #dbWrapper {
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
-  background: linear-gradient(180deg, #faf8f5 0%, #f5f0e8 100%);
+  background: #faf8f5;
   font-family: var(--font-sans, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif);
   z-index: 1;
   padding-left: env(safe-area-inset-left, 0px);
@@ -44,7 +44,7 @@ html.dark #dbWrapper {
 }
 [data-theme="dark"] .db-page,
 html.dark .db-page {
-  background: linear-gradient(180deg, #1a1f1c 0%, #151917 100%);
+  background: #1a1f1c;
 }
 
 /* 隐藏滚动条但保留功能 */
@@ -138,15 +138,15 @@ html.dark .db-top-bar-title {
   align-items: center;
   gap: 5px;
   padding: 6px 14px;
-  border-radius: 20px;
-  background: linear-gradient(135deg, #c4956a 0%, #d4a87e 100%);
+  border-radius: 16px;
+  background: var(--color-warm);
   color: #fff;
   font-size: 0.78rem;
   font-weight: 600;
   letter-spacing: 0.02em;
   white-space: nowrap;
   transition: transform 0.2s cubic-bezier(0.22, 1, 0.36, 1);
-  box-shadow: 0 4px 12px rgba(196, 149, 106, 0.3);
+  box-shadow: var(--shadow-md);
 }
 .db-counter-badge.pulse {
   animation: counterPulse 0.4s cubic-bezier(0.22, 1, 0.36, 1);
@@ -158,8 +158,8 @@ html.dark .db-top-bar-title {
 }
 [data-theme="dark"] .db-counter-badge,
 html.dark .db-counter-badge {
-  background: linear-gradient(135deg, #c4956a 0%, #b08d5e 100%);
-  box-shadow: 0 4px 12px rgba(196, 149, 106, 0.2);
+  background: #c4956a;
+  box-shadow: var(--shadow-md);
 }
 
 .db-counter-num {
@@ -331,7 +331,7 @@ html.dark .db-card-subject {
   letter-spacing: 0.02em;
   font-weight: 600;
   padding: 3px 8px;
-  border-radius: 10px;
+  border-radius: 8px;
   background: rgba(196, 149, 106, 0.08);
   border: 0.5px solid rgba(196, 149, 106, 0.18);
   cursor: default;
@@ -381,12 +381,12 @@ html.dark .db-question-text {
   border-radius: 16px;
   background: #ffffff;
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 1px 3px rgba(44, 62, 48, 0.03);
+  box-shadow: var(--shadow-sm);
 }
 
 .db-sub-item:hover {
   border-color: #d4c9b8;
-  box-shadow: 0 3px 8px rgba(44, 62, 48, 0.05);
+  box-shadow: var(--shadow-md);
 }
 [data-theme="dark"] .db-sub-item,
 html.dark .db-sub-item {
@@ -410,7 +410,7 @@ html.dark .db-sub-item:hover {
   width: 26px;
   height: 26px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #f5f0e8 0%, #ede9e3 100%);
+  background: var(--color-bg-warm);
   color: #5a6b5e;
   display: flex;
   align-items: center;
@@ -447,7 +447,7 @@ html.dark .db-sub-text {
 .db-tf-btn {
   flex: 1;
   padding: 10px 0;
-  border-radius: 14px;
+  border-radius: 12px;
   border: 1.5px solid #e2ddd6;
   background: #faf8f5;
   color: #5a6b5e;
@@ -514,34 +514,34 @@ html.dark .db-action-btn:focus-visible {
 
 /* 选中 - 正确 */
 .db-tf-btn[data-value="true"].selected {
-  background: linear-gradient(135deg, #edf7f0 0%, #dff0e4 100%);
+  background: #edf7f0;
   border-color: #3a8c5c;
   color: #2d6a45;
   font-weight: 700;
-  box-shadow: 0 2px 8px rgba(58, 140, 92, 0.15);
+  box-shadow: var(--shadow-md);
 }
 [data-theme="dark"] .db-tf-btn[data-value="true"].selected,
 html.dark .db-tf-btn[data-value="true"].selected {
-  background: linear-gradient(135deg, rgba(58, 140, 92, 0.2) 0%, rgba(58, 140, 92, 0.1) 100%);
+  background: rgba(58, 140, 92, 0.2);
   border-color: #4caf70;
   color: #81c784;
-  box-shadow: 0 2px 8px rgba(58, 140, 92, 0.1);
+  box-shadow: var(--shadow-md);
 }
 
 /* 选中 - 错误 */
 .db-tf-btn[data-value="false"].selected {
-  background: linear-gradient(135deg, #fdf0ec 0%, #f9e4de 100%);
+  background: #fdf0ec;
   border-color: #c0553a;
   color: #a04530;
   font-weight: 700;
-  box-shadow: 0 2px 8px rgba(192, 85, 58, 0.15);
+  box-shadow: var(--shadow-md);
 }
 [data-theme="dark"] .db-tf-btn[data-value="false"].selected,
 html.dark .db-tf-btn[data-value="false"].selected {
-  background: linear-gradient(135deg, rgba(192, 85, 58, 0.2) 0%, rgba(192, 85, 58, 0.1) 100%);
+  background: rgba(192, 85, 58, 0.2);
   border-color: #e07050;
   color: #ef9a9a;
-  box-shadow: 0 2px 8px rgba(192, 85, 58, 0.1);
+  box-shadow: var(--shadow-md);
 }
 
 [data-theme="dark"] .db-tf-btn,
@@ -565,7 +565,7 @@ html.dark .db-tf-btn:not(.selected):hover {
   padding: 15px;
   border-radius: 16px;
   border: none;
-  background: linear-gradient(135deg, #4a7c59 0%, #3a6347 100%);
+  background: var(--color-primary);
   color: #fff;
   font-size: 0.96rem;
   font-weight: 650;
@@ -575,22 +575,22 @@ html.dark .db-tf-btn:not(.selected):hover {
   flex-shrink: 0;
   -webkit-tap-highlight-color: transparent;
   letter-spacing: 0.04em;
-  box-shadow: 0 6px 20px rgba(74, 124, 89, 0.25);
+  box-shadow: var(--shadow-lg);
 }
 .db-submit-btn:active { transform: scale(0.97); }
 .db-submit-btn:hover:not(:disabled) {
-  background: linear-gradient(135deg, #5d9a72 0%, #4a7c59 100%);
-  box-shadow: 0 8px 24px rgba(74, 124, 89, 0.3);
+  background: #5d9a72;
+  box-shadow: var(--shadow-lg);
 }
 [data-theme="dark"] .db-submit-btn,
 html.dark .db-submit-btn {
-  background: linear-gradient(135deg, #5d9a72 0%, #4a7c59 100%);
-  box-shadow: 0 6px 20px rgba(74, 124, 89, 0.2);
+  background: #5d9a72;
+  box-shadow: var(--shadow-lg);
 }
 [data-theme="dark"] .db-submit-btn:hover:not(:disabled),
 html.dark .db-submit-btn:hover:not(:disabled) {
-  background: linear-gradient(135deg, #6bab82 0%, #5d9a72 100%);
-  box-shadow: 0 8px 24px rgba(74, 124, 89, 0.25);
+  background: #6bab82;
+  box-shadow: var(--shadow-lg);
 }
 
 .db-submit-btn:not(:disabled) {
@@ -639,14 +639,14 @@ html.dark .db-submit-btn:disabled {
   align-items: center;
   gap: 10px;
   padding: 14px 18px;
-  border-radius: 14px;
+  border-radius: 12px;
   font-weight: 650;
   font-size: 0.92rem;
   margin-bottom: 14px;
 }
 
 .db-result-summary.all-correct {
-  background: linear-gradient(135deg, #edf7f0 0%, #dff0e4 100%);
+  background: #edf7f0;
   color: #2d6a45;
   border: 1px solid rgba(58, 140, 92, 0.2);
 }
@@ -658,7 +658,7 @@ html.dark .db-result-summary.all-correct {
 }
 
 .db-result-summary.partial {
-  background: linear-gradient(135deg, #fdf8ec 0%, #f9f0d4 100%);
+  background: #fdf8ec;
   color: #8a6d1f;
   border: 1px solid rgba(212, 160, 48, 0.2);
 }
@@ -670,7 +670,7 @@ html.dark .db-result-summary.partial {
 }
 
 .db-result-summary.all-wrong {
-  background: linear-gradient(135deg, #fdf0ec 0%, #f9e4de 100%);
+  background: #fdf0ec;
   color: #a04530;
   border: 1px solid rgba(192, 85, 58, 0.2);
 }
@@ -688,11 +688,11 @@ html.dark .db-result-summary.all-wrong {
 
 .db-explanation {
   padding: 18px 20px;
-  border-radius: 14px;
+  border-radius: 12px;
   background: #ffffff;
   border: 1px solid #ede9e3;
   border-left: 4px solid #c4956a;
-  box-shadow: 0 1px 4px rgba(44, 62, 48, 0.03);
+  box-shadow: var(--shadow-sm);
 }
 [data-theme="dark"] .db-explanation,
 html.dark .db-explanation {
@@ -727,12 +727,12 @@ html.dark .db-explanation-text {
 /* 子问题结果状态 */
 .db-sub-item.result-correct {
   border-color: rgba(58, 140, 92, 0.3);
-  background: linear-gradient(135deg, #f7fbf8 0%, #edf7f0 100%);
+  background: #f7fbf8;
 }
 .db-sub-item.result-correct .db-sub-label {
-  background: linear-gradient(135deg, #3a8c5c 0%, #2d6a45 100%);
+  background: #3a8c5c;
   color: #fff;
-  box-shadow: 0 2px 6px rgba(58, 140, 92, 0.2);
+  box-shadow: var(--shadow-sm);
 }
 [data-theme="dark"] .db-sub-item.result-correct,
 html.dark .db-sub-item.result-correct {
@@ -742,12 +742,12 @@ html.dark .db-sub-item.result-correct {
 
 .db-sub-item.result-wrong {
   border-color: rgba(192, 85, 58, 0.3);
-  background: linear-gradient(135deg, #fef8f6 0%, #fdf0ec 100%);
+  background: #fef8f6;
 }
 .db-sub-item.result-wrong .db-sub-label {
-  background: linear-gradient(135deg, #c0553a 0%, #a04530 100%);
+  background: #c0553a;
   color: #fff;
-  box-shadow: 0 2px 6px rgba(192, 85, 58, 0.2);
+  box-shadow: var(--shadow-sm);
 }
 [data-theme="dark"] .db-sub-item.result-wrong,
 html.dark .db-sub-item.result-wrong {
@@ -856,15 +856,15 @@ html.dark .db-spinner {
   color: #8a9a8e;
   background: #ffffff;
   padding: 40px 36px;
-  border-radius: 24px;
-  box-shadow: 0 8px 32px rgba(44, 62, 48, 0.08);
+  border-radius: 16px;
+  box-shadow: var(--shadow-floating);
   border: 1px solid #ede9e3;
 }
 [data-theme="dark"] .db-end-content,
 html.dark .db-end-content {
   background: rgba(255, 255, 255, 0.05);
   border-color: rgba(255, 255, 255, 0.08);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--shadow-floating);
 }
 
 .db-end-icon {
@@ -929,24 +929,24 @@ html.dark .db-end-stat-lbl {
   padding: 13px 36px;
   border-radius: 16px;
   border: none;
-  background: linear-gradient(135deg, #4a7c59 0%, #3a6347 100%);
+  background: var(--color-primary);
   color: #fff;
   font-size: 0.92rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
   font-family: inherit;
-  box-shadow: 0 6px 20px rgba(74, 124, 89, 0.25);
+  box-shadow: var(--shadow-lg);
   letter-spacing: 0.03em;
 }
 .db-retry-btn:active { transform: scale(0.96); }
 .db-retry-btn:hover {
-  background: linear-gradient(135deg, #5d9a72 0%, #4a7c59 100%);
-  box-shadow: 0 8px 24px rgba(74, 124, 89, 0.3);
+  background: #5d9a72;
+  box-shadow: var(--shadow-lg);
 }
 [data-theme="dark"] .db-retry-btn,
 html.dark .db-retry-btn {
-  background: linear-gradient(135deg, #5d9a72 0%, #4a7c59 100%);
+  background: #5d9a72;
 }
 
 /* ----- 错误状态 ----- */
@@ -996,7 +996,7 @@ html.dark .db-error-desc {
 
 .db-error-retry-btn {
   padding: 11px 30px;
-  border-radius: 14px;
+  border-radius: 12px;
   border: 1.5px solid #e2ddd6;
   background: #ffffff;
   color: #4a7c59;
@@ -1043,7 +1043,7 @@ html.dark .db-error-retry-btn:hover {
   .db-sub-item {
     padding: 14px 15px;
     gap: 10px;
-    border-radius: 14px;
+    border-radius: 12px;
   }
 
   .db-sub-text {
@@ -1065,7 +1065,7 @@ html.dark .db-error-retry-btn:hover {
   .db-submit-btn {
     padding: 14px;
     font-size: 0.92rem;
-    border-radius: 14px;
+    border-radius: 12px;
   }
 
   .db-top-bar {
@@ -1194,7 +1194,7 @@ html.dark .db-error-retry-btn:hover {
 
   .db-sub-item {
     padding: 18px 22px;
-    border-radius: 18px;
+    border-radius: 16px;
   }
 
   .db-tf-btn {
@@ -1205,7 +1205,7 @@ html.dark .db-error-retry-btn:hover {
   .db-submit-btn {
     padding: 17px;
     font-size: 1.02rem;
-    border-radius: 18px;
+    border-radius: 16px;
   }
 }
 
@@ -1278,7 +1278,7 @@ html.dark .db-error-retry-btn:hover {
   justify-content: center;
   cursor: pointer;
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 2px 8px rgba(44, 62, 48, 0.08);
+  box-shadow: var(--shadow-md);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   will-change: transform;
@@ -1290,7 +1290,7 @@ html.dark .db-error-retry-btn:hover {
 
 .db-action-btn:hover {
   transform: scale(1.08);
-  box-shadow: 0 4px 12px rgba(44, 62, 48, 0.12);
+  box-shadow: var(--shadow-md);
 }
 
 .db-action-btn:active {
@@ -1301,14 +1301,14 @@ html.dark .db-error-retry-btn:hover {
 html.dark .db-action-btn {
   background: rgba(30, 35, 32, 0.92);
   color: #8db899;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--shadow-md);
 }
 
 /* 收藏激活态 */
 .db-action-btn.db-fav-btn.active {
   color: #c0553a;
   background: rgba(192, 85, 58, 0.1);
-  box-shadow: 0 2px 8px rgba(192, 85, 58, 0.15);
+  box-shadow: var(--shadow-md);
 }
 [data-theme="dark"] .db-action-btn.db-fav-btn.active,
 html.dark .db-action-btn.db-fav-btn.active {
@@ -1320,7 +1320,7 @@ html.dark .db-action-btn.db-fav-btn.active {
 .db-action-btn.db-like-btn.active {
   color: #3a8c5c;
   background: rgba(58, 140, 92, 0.1);
-  box-shadow: 0 2px 8px rgba(58, 140, 92, 0.15);
+  box-shadow: var(--shadow-md);
 }
 [data-theme="dark"] .db-action-btn.db-like-btn.active,
 html.dark .db-action-btn.db-like-btn.active {
@@ -1391,7 +1391,7 @@ html.dark .db-progress-bar {
   -webkit-backdrop-filter: blur(12px);
   color: #fff;
   padding: 10px 20px;
-  border-radius: 14px;
+  border-radius: 12px;
   font-size: 0.84rem;
   font-weight: 500;
   letter-spacing: 0.02em;
@@ -1400,7 +1400,7 @@ html.dark .db-progress-bar {
   transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
   pointer-events: none;
   white-space: nowrap;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  box-shadow: var(--shadow-lg);
 }
 [data-theme="dark"] .db-toast,
 html.dark .db-toast {
@@ -1426,7 +1426,7 @@ html.dark .db-toast {
     width: 36px;
     height: 36px;
     background: rgba(255, 255, 255, 0.85);
-    box-shadow: 0 2px 6px rgba(44, 62, 48, 0.1);
+    box-shadow: var(--shadow-sm);
   }
   .db-action-btn svg {
     width: 17px;
@@ -1445,7 +1445,7 @@ html.dark .db-toast {
  * ============================================================ */
 .db-stop-btn {
   padding: 6px 14px;
-  border-radius: 14px;
+  border-radius: 12px;
   border: 1px solid rgba(192, 85, 58, 0.2);
   background: rgba(192, 85, 58, 0.06);
   color: #c0553a;
@@ -1507,19 +1507,19 @@ html.dark .db-stop-overlay {
 
 .db-stop-card {
   background: #ffffff;
-  border-radius: 24px;
+  border-radius: 16px;
   padding: 40px 36px 32px;
   max-width: 380px;
   width: 100%;
   text-align: center;
-  box-shadow: 0 20px 60px rgba(44, 62, 48, 0.15);
+  box-shadow: var(--shadow-floating);
   animation: stopCardIn 0.4s cubic-bezier(0.22, 1, 0.36, 1);
   border: 1px solid #ede9e3;
 }
 [data-theme="dark"] .db-stop-card,
 html.dark .db-stop-card {
   background: #242a26;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  box-shadow: var(--shadow-floating);
   border-color: rgba(255, 255, 255, 0.08);
 }
 
@@ -1596,7 +1596,7 @@ html.dark .db-stop-stat-lbl {
   padding: 14px;
   border-radius: 16px;
   border: none;
-  background: linear-gradient(135deg, #4a7c59 0%, #3a6347 100%);
+  background: var(--color-primary);
   color: #fff;
   font-size: 0.94rem;
   font-weight: 650;
@@ -1604,24 +1604,24 @@ html.dark .db-stop-stat-lbl {
   transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
   font-family: inherit;
   letter-spacing: 0.03em;
-  box-shadow: 0 6px 20px rgba(74, 124, 89, 0.25);
+  box-shadow: var(--shadow-lg);
 }
 .db-stop-continue-btn:active {
   transform: scale(0.97);
 }
 .db-stop-continue-btn:hover {
-  background: linear-gradient(135deg, #5d9a72 0%, #4a7c59 100%);
-  box-shadow: 0 8px 24px rgba(74, 124, 89, 0.3);
+  background: #5d9a72;
+  box-shadow: var(--shadow-lg);
 }
 [data-theme="dark"] .db-stop-continue-btn,
 html.dark .db-stop-continue-btn {
-  background: linear-gradient(135deg, #5d9a72 0%, #4a7c59 100%);
+  background: #5d9a72;
 }
 
 .db-stop-restart-btn {
   width: 100%;
   padding: 12px;
-  border-radius: 14px;
+  border-radius: 12px;
   border: 1.5px solid #e2ddd6;
   background: transparent;
   color: #8a9a8e;
@@ -1672,7 +1672,7 @@ html.dark .db-stop-restart-btn:hover {
   align-items: center;
   margin-left: auto;
   padding: 3px 10px;
-  border-radius: 999px;
+  border-radius: 16px;
   background: rgba(90, 125, 92, 0.12);
   color: #3a6b4a;
   font-size: 0.72rem;
@@ -1761,18 +1761,18 @@ html.dark .db-confirm-exit-overlay {
   width: min(680px, 100%);
   height: min(88vh, 820px);
   background: #fff;
-  border-radius: 22px;
+  border-radius: 16px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  box-shadow: 0 28px 80px rgba(20, 34, 26, 0.25);
+  box-shadow: var(--shadow-floating);
   animation: stopCardIn 0.35s cubic-bezier(0.22, 1, 0.36, 1);
   border: 1px solid rgba(236, 232, 225, 0.8);
 }
 [data-theme="dark"] .db-report-panel,
 html.dark .db-report-panel {
   background: #20261f;
-  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.5);
+  box-shadow: var(--shadow-floating);
   border-color: rgba(255, 255, 255, 0.08);
 }
 
@@ -1780,7 +1780,7 @@ html.dark .db-report-panel {
 .db-report-head {
   padding: 16px 20px 14px;
   border-bottom: 1px solid rgba(90, 125, 92, 0.12);
-  background: linear-gradient(180deg, rgba(90, 125, 92, 0.08), rgba(90, 125, 92, 0));
+  background: rgba(90, 125, 92, 0.08);
   flex-shrink: 0;
 }
 .db-report-head-row {
@@ -1841,9 +1841,9 @@ html.dark .db-report-close:hover {
   min-width: 88px;
   padding: 10px 12px;
   border-radius: 16px;
-  background: linear-gradient(135deg, #4a7c59 0%, #3a6347 100%);
+  background: var(--color-primary);
   color: #fff;
-  box-shadow: 0 6px 18px rgba(74, 124, 89, 0.28);
+  box-shadow: var(--shadow-lg);
 }
 .db-report-acc-val {
   font-size: 1.7rem;
@@ -1858,7 +1858,7 @@ html.dark .db-report-close:hover {
 }
 [data-theme="dark"] .db-report-acc,
 html.dark .db-report-acc {
-  background: linear-gradient(135deg, #5d9a72 0%, #4a7c59 100%);
+  background: #5d9a72;
 }
 .db-report-stats {
   display: flex;
@@ -1965,12 +1965,12 @@ html.dark .db-report-cta:hover {
 }
 .db-report-item:hover {
   transform: translateY(-1px);
-  box-shadow: 0 4px 14px rgba(44, 62, 48, 0.08);
+  box-shadow: var(--shadow-md);
   border-color: #d4c9b8;
 }
-.db-report-item--correct { border-color: rgba(90, 125, 92, 0.4); background: linear-gradient(180deg, #f6faf6, #fafbfa); }
-.db-report-item--wrong { border-color: rgba(192, 85, 58, 0.4); background: linear-gradient(180deg, #fdf5f2, #fafbfa); }
-.db-report-item--partial { border-color: rgba(212, 160, 48, 0.4); background: linear-gradient(180deg, #fdf8ec, #fafbfa); }
+.db-report-item--correct { border-color: rgba(90, 125, 92, 0.4); background: #f6faf6; }
+.db-report-item--wrong { border-color: rgba(192, 85, 58, 0.4); background: #fdf5f2; }
+.db-report-item--partial { border-color: rgba(212, 160, 48, 0.4); background: #fdf8ec; }
 .db-report-item--unanswered { border-style: dashed; border-color: rgba(138, 138, 122, 0.45); background: rgba(138, 138, 122, 0.04); }
 [data-theme="dark"] .db-report-item,
 html.dark .db-report-item {
@@ -2022,13 +2022,13 @@ html.dark .db-report-num {
   color: #8a9a8e;
   background: rgba(138, 138, 122, 0.1);
   padding: 2px 8px;
-  border-radius: 999px;
+  border-radius: 16px;
 }
 .db-report-status {
   font-size: 0.7rem;
   font-weight: 600;
   padding: 2px 8px;
-  border-radius: 999px;
+  border-radius: 16px;
   margin-left: auto;
 }
 .db-report-status.ok { background: rgba(90, 125, 92, 0.14); color: #3a6b4a; }
@@ -2050,7 +2050,7 @@ html.dark .db-report-status.none { background: rgba(138, 138, 122, 0.2); color: 
   color: #3a6b4a;
   background: rgba(90, 125, 92, 0.1);
   padding: 2px 10px;
-  border-radius: 999px;
+  border-radius: 16px;
   font-variant-numeric: tabular-nums;
   flex-shrink: 0;
 }
@@ -2094,11 +2094,11 @@ html.dark .db-report-sub {
   border-color: rgba(255, 255, 255, 0.06);
 }
 .db-report-sub--ok {
-  background: linear-gradient(180deg, #f0f8f2, #fbfdfb);
+  background: #f0f8f2;
   border-color: rgba(90, 125, 92, 0.28);
 }
 .db-report-sub--bad {
-  background: linear-gradient(180deg, #fdf3f0, #fdfbfa);
+  background: #fdf3f0;
   border-color: rgba(192, 85, 58, 0.28);
 }
 .db-report-sub--na {
@@ -2240,7 +2240,7 @@ html.dark .db-report-footer {
 .db-report-btn {
   flex: 1;
   padding: 11px 12px;
-  border-radius: 14px;
+  border-radius: 12px;
   border: none;
   font-size: 0.9rem;
   font-weight: 650;
@@ -2257,9 +2257,9 @@ html.dark .db-report-footer {
 }
 .db-report-btn--ghost:hover { background: #f4f6f3; }
 .db-report-btn--primary {
-  background: linear-gradient(135deg, #4a7c59 0%, #3a6347 100%);
+  background: var(--color-primary);
   color: #fff;
-  box-shadow: 0 4px 14px rgba(74, 124, 89, 0.25);
+  box-shadow: var(--shadow-md);
 }
 .db-report-btn--primary:hover { filter: brightness(1.06); }
 .db-report-btn--danger {
@@ -2280,7 +2280,7 @@ html.dark .db-report-btn--ghost:hover {
 }
 [data-theme="dark"] .db-report-btn--primary,
 html.dark .db-report-btn--primary {
-  background: linear-gradient(135deg, #5d9a72 0%, #4a7c59 100%);
+  background: #5d9a72;
 }
 [data-theme="dark"] .db-report-btn--danger,
 html.dark .db-report-btn--danger {
@@ -2296,11 +2296,11 @@ html.dark .db-report-btn--danger:hover {
 /* ---- 空作答确认（防误触） ---- */
 .db-confirm-exit-card {
   background: #fff;
-  border-radius: 20px;
+  border-radius: 16px;
   padding: 28px 24px 22px;
   width: min(340px, 100%);
   text-align: center;
-  box-shadow: 0 20px 60px rgba(20, 34, 26, 0.22);
+  box-shadow: var(--shadow-floating);
   animation: stopCardIn 0.35s cubic-bezier(0.22, 1, 0.36, 1);
   border: 1px solid rgba(236, 232, 225, 0.8);
 }
@@ -2334,7 +2334,7 @@ html.dark .db-confirm-exit-title {
   .db-report-panel {
     width: 100%;
     height: 96vh;
-    border-radius: 18px;
+    border-radius: 16px;
   }
   .db-report-hero {
     gap: 12px;

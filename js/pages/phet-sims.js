@@ -149,7 +149,7 @@
       title: '能量形式与转化',
       topic: '分子生物学',
       topic_zh: 'ATP 能量货币 · 热力学',
-      desc: '观察机械能→热能→化学能→光能→电能之间的转化，系统总能量始终守恒；可对照 ATP ↔ ADP + Pi 循环供能。',
+      desc: '观察机械能→热能→化学能→光能→电能之间的转化，系统总能量始终守恒；可对照 ATP ADP + Pi 循环供能。',
       knowledge: '对应「细胞代谢与热力学」：热力学第一定律（守恒）、第二定律（熵增）、ΔG = ΔH - TΔS、吸能反应/放能反应与 ATP 偶联。'
     },
     // 18. 生物化学（生命分子构建）
@@ -314,7 +314,6 @@
   function _renderHeader() {
     return '' +
       '<div class="phet-header">' +
-        '<div class="phet-header-icon">🧬</div>' +
         '<h1 class="phet-title">PhET 互动模拟实验</h1>' +
         '<p class="phet-subtitle">基于 PhET Interactive Simulations，由科罗拉多大学博尔德分校提供</p>' +
         '<p class="phet-desc">通过互动可视化深入理解生物学的核心机制 — 基因表达、自然选择、膜运输、神经冲动、DNA 力学等。每个模拟对应一个核心生物学概念，配合教材学习效果更佳。</p>' +
@@ -364,12 +363,12 @@
         '<div class="phet-card-body">' +
           '<p class="phet-card-desc">' + escapeHtml(sim.desc) + '</p>' +
           '<div class="phet-card-knowledge">' +
-            '<span class="phet-card-knowledge-label">📚 教材对应</span>' +
+            '<span class="phet-card-knowledge-label">教材对应</span>' +
             '<p>' + escapeHtml(sim.knowledge) + '</p>' +
           '</div>' +
         '</div>' +
         '<button class="phet-card-btn" data-action="open-sim" data-sim-id="' + escapeHtml(sim.id) + '">' +
-          '▶ 启动互动模拟' +
+          '启动互动模拟' +
         '</button>' +
       '</article>';
   }
@@ -426,11 +425,11 @@
         '<div class="phet-modal-footer">' +
           '<div class="phet-modal-desc">' + escapeHtml(sim.desc) + '</div>' +
           '<div class="phet-modal-knowledge">' +
-            '<strong>📚 教材对应：</strong>' + escapeHtml(sim.knowledge) +
+            '<strong>教材对应：</strong>' + escapeHtml(sim.knowledge) +
           '</div>' +
           '<a href="https://phet.colorado.edu/sims/html/' + escapeHtml(simId) + '/latest/' + escapeHtml(simId) + '_en.html" ' +
              'target="_blank" rel="noopener noreferrer" class="phet-modal-openlink">' +
-            '↗ 在 PhET 官网打开（全屏）' +
+            '在 PhET 官网打开（全屏）' +
           '</a>' +
           '<p class="phet-modal-attribution">' +
             '模拟由 <a href="https://phet.colorado.edu" target="_blank" rel="noopener noreferrer">PhET Interactive Simulations</a>，' +
@@ -476,7 +475,7 @@
           '<p>由于 PhET 模拟资源较大或第三方 Cookie 策略，iframe 内可能无法直接加载。可以直接在新标签页打开：</p>' +
           '<a href="https://phet.colorado.edu/sims/html/' + escapeHtml(simId) + '/latest/' + escapeHtml(simId) + '_en.html" ' +
              'target="_blank" rel="noopener noreferrer" class="phet-modal-fallback-btn">' +
-            '↗ 在 PhET 官网新标签页打开（推荐）' +
+            '在 PhET 官网新标签页打开（推荐）' +
           '</a>';
         footer.insertBefore(fallback, footer.firstChild);
       }
@@ -540,7 +539,7 @@
       _renderTopicFilter() +
       _renderSimGrid('全部') +
       '<div class="phet-footer">' +
-        '<p>💡 提示：首次加载模拟需要数秒，加载完成后浏览器会自动缓存。支持将模拟下载到 <code>vendor/phet/&lt;simId&gt;/</code> 目录实现本地秒开（遵循 CC BY 4.0）。</p>' +
+        '<p>提示：首次加载模拟需要数秒，加载完成后浏览器会自动缓存。支持将模拟下载到 <code>vendor/phet/&lt;simId&gt;/</code> 目录实现本地秒开（遵循 CC BY 4.0）。</p>' +
         '<p class="phet-license">' +
           '本页集成 PhET Interactive Simulations HTML5 文件，版权归 ' +
           '<a href="https://phet.colorado.edu" target="_blank" rel="noopener noreferrer">University of Colorado Boulder</a> ' +

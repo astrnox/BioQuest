@@ -468,8 +468,8 @@
     leftCanvas.width = 460;
     leftCanvas.height = 600;
     renderDoubleHelix(leftCanvas, opts.learningDNA || '', opts.moodDNA || '', {
-      label1: '🧬 学习 DNA',
-      label2: '💚 情绪 DNA',
+      label1: '学习 DNA',
+      label2: '情绪 DNA',
       background: 'rgba(255,255,255,0.6)'
     });
     ctx.drawImage(leftCanvas, 80, 320, 920, 600);
@@ -509,7 +509,7 @@
       y += 60;
       ctx.font = '600 22px "Noto Serif SC", serif';
       ctx.fillStyle = '#c4956a';
-      ctx.fillText('💡 AI 诊断', 100, y);
+      ctx.fillText('AI 诊断', 100, y);
       y += 36;
       ctx.font = '400 22px "Noto Serif SC", serif';
       ctx.fillStyle = '#4a4a4a';

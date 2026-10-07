@@ -33,9 +33,9 @@ function injectExamStyles() {
     .exam-start-card {
       background: var(--surface-primary, #ffffff);
       border: 1px solid var(--border-light, #ece8e1);
-      border-radius: var(--radius-lg, 20px);
+      border-radius: var(--radius-lg, 12px);
       padding: 48px;
-      box-shadow: var(--shadow-md, 0 4px 16px rgba(26,58,42,0.08));
+      box-shadow: var(--shadow-md, 0 2px 8px rgba(44, 62, 48, 0.06));
     }
 
     .exam-start-header {
@@ -117,7 +117,7 @@ function injectExamStyles() {
     .exam-module-card {
       background: var(--surface-secondary, #faf7f2);
       border: 1px solid var(--border-light, #ece8e1);
-      border-radius: var(--radius-md, 12px);
+      border-radius: var(--radius-md, 8px);
       padding: 20px 16px;
       text-align: center;
       transition: transform var(--transition-fast, 0.15s ease),
@@ -126,7 +126,7 @@ function injectExamStyles() {
 
     .exam-module-card:hover {
       transform: translateY(-2px);
-      box-shadow: var(--shadow-md, 0 4px 16px rgba(26,58,42,0.08));
+      box-shadow: var(--shadow-md, 0 2px 8px rgba(44, 62, 48, 0.06));
     }
 
     .exam-module-num {
@@ -160,7 +160,7 @@ function injectExamStyles() {
       flex-direction: column;
       height: calc(100vh - var(--header-height, 64px) - 80px);
       background: var(--surface-secondary, #faf7f2);
-      border-radius: var(--radius-lg, 20px);
+      border-radius: var(--radius-lg, 12px);
       overflow: hidden;
       border: 1px solid var(--border-light, #ece8e1);
     }
@@ -199,7 +199,7 @@ function injectExamStyles() {
       gap: 8px;
       padding: 8px 20px;
       background: rgba(255, 255, 255, 0.1);
-      border-radius: var(--radius-md, 12px);
+      border-radius: var(--radius-md, 8px);
       transition: background-color var(--transition-base, 0.25s ease);
     }
 
@@ -285,7 +285,7 @@ function injectExamStyles() {
     .exam-nav-dot {
       width: 10px;
       height: 10px;
-      border-radius: 3px;
+      border-radius: 2px;
       flex-shrink: 0;
     }
 
@@ -320,7 +320,7 @@ function injectExamStyles() {
       max-width: 40px;
       max-height: 40px;
       border: 1px solid var(--border-default, #e0dcd5);
-      border-radius: var(--radius-sm, 6px);
+      border-radius: var(--radius-sm, 4px);
       background: var(--exam-nav-unanswered);
       font-size: 0.75rem;
       font-weight: 600;
@@ -350,7 +350,7 @@ function injectExamStyles() {
       border-color: var(--exam-nav-current);
       color: #fff;
       transform: scale(1.12);
-      box-shadow: 0 2px 8px rgba(196, 149, 106, 0.4);
+      box-shadow: var(--shadow-md);
     }
 
     .exam-nav-item--marked {
@@ -472,7 +472,7 @@ function injectExamStyles() {
 
     .exam-question-chart {
       margin-bottom: 16px;
-      border-radius: var(--radius-md, 12px);
+      border-radius: var(--radius-md, 8px);
     }
 
     .exam-q-hint {
@@ -480,7 +480,7 @@ function injectExamStyles() {
       color: var(--color-amber, #c4956a);
       background: rgba(196, 149, 106, 0.07);
       padding: 8px 14px;
-      border-radius: var(--radius-sm, 6px);
+      border-radius: var(--radius-sm, 4px);
       margin-bottom: 16px;
       font-weight: 500;
     }
@@ -499,7 +499,7 @@ function injectExamStyles() {
       padding: 14px 16px;
       background: var(--surface-primary, #ffffff);
       border: 1px solid var(--border-light, #ece8e1);
-      border-radius: var(--radius-md, 12px);
+      border-radius: var(--radius-md, 8px);
       transition: border-color var(--transition-fast, 0.15s ease);
     }
 
@@ -538,7 +538,7 @@ function injectExamStyles() {
       gap: 4px;
       padding: 6px 14px;
       border: 1.5px solid var(--border-default, #e0dcd5);
-      border-radius: var(--radius-sm, 6px);
+      border-radius: var(--radius-sm, 4px);
       background: var(--surface-primary, #ffffff);
       font-size: 0.82rem;
       font-weight: 500;
@@ -656,9 +656,9 @@ function injectExamStyles() {
     .exam-result-card {
       background: var(--surface-primary, #ffffff);
       border: 1px solid var(--border-light, #ece8e1);
-      border-radius: var(--radius-lg, 20px);
+      border-radius: var(--radius-lg, 12px);
       padding: 48px;
-      box-shadow: var(--shadow-md, 0 4px 16px rgba(26,58,42,0.08));
+      box-shadow: var(--shadow-md, 0 2px 8px rgba(44, 62, 48, 0.06));
     }
 
     .exam-result-header {
@@ -776,7 +776,7 @@ function injectExamStyles() {
     .exam-module-score-card {
       background: var(--surface-secondary, #faf7f2);
       border: 1px solid var(--border-light, #ece8e1);
-      border-radius: var(--radius-md, 12px);
+      border-radius: var(--radius-md, 8px);
       padding: 20px 16px;
       text-align: center;
     }
@@ -811,7 +811,7 @@ function injectExamStyles() {
     .exam-module-score-bar {
       height: 6px;
       background: var(--border-light, #ece8e1);
-      border-radius: 3px;
+      border-radius: 2px;
       overflow: hidden;
       margin-bottom: 6px;
     }
@@ -819,7 +819,7 @@ function injectExamStyles() {
     .exam-module-score-fill {
       height: 100%;
       background: var(--color-sage, #5a7d5c);
-      border-radius: 3px;
+      border-radius: 2px;
       transition: width 0.6s ease;
     }
 
@@ -837,7 +837,7 @@ function injectExamStyles() {
 
     .exam-detail-item {
       aspect-ratio: 1;
-      border-radius: var(--radius-sm, 6px);
+      border-radius: var(--radius-sm, 4px);
       border: 1px solid var(--border-default, #e0dcd5);
       display: flex;
       flex-direction: column;
@@ -897,7 +897,7 @@ function injectExamStyles() {
       padding: 14px 18px;
       background: var(--surface-secondary, #faf7f2);
       border: 1px solid var(--border-light, #ece8e1);
-      border-radius: var(--radius-md, 12px);
+      border-radius: var(--radius-md, 8px);
     }
 
     .exam-wrong-num {
@@ -925,7 +925,7 @@ function injectExamStyles() {
       padding: 32px;
       background: rgba(58, 140, 92, 0.05);
       border: 1px solid rgba(58, 140, 92, 0.15);
-      border-radius: var(--radius-md, 12px);
+      border-radius: var(--radius-md, 8px);
     }
 
     .exam-perfect-icon {
@@ -967,7 +967,7 @@ function injectExamStyles() {
       padding: 20px 24px;
       background: var(--surface-secondary, #faf7f2);
       border: 1px solid var(--border-light, #ece8e1);
-      border-radius: var(--radius-md, 12px);
+      border-radius: var(--radius-md, 8px);
     }
 
     .exam-review-q-header {
@@ -1036,7 +1036,7 @@ function injectExamStyles() {
 
     .exam-review-sub {
       padding: 10px 14px;
-      border-radius: var(--radius-sm, 6px);
+      border-radius: var(--radius-sm, 4px);
       border: 1px solid var(--border-light, #ece8e1);
       background: var(--surface-primary, #ffffff);
     }
@@ -1101,7 +1101,7 @@ function injectExamStyles() {
       padding: 12px 16px;
       background: rgba(196, 149, 106, 0.06);
       border: 1px solid rgba(196, 149, 106, 0.15);
-      border-radius: var(--radius-sm, 6px);
+      border-radius: var(--radius-sm, 4px);
       font-size: 0.85rem;
       line-height: 1.7;
       color: var(--text-secondary, #4a4a4a);
@@ -1158,7 +1158,7 @@ function injectExamStyles() {
       .exam-interface {
         height: auto;
         min-height: calc(100vh - var(--header-height, 64px) - 40px);
-        border-radius: var(--radius-md, 12px);
+        border-radius: var(--radius-md, 8px);
       }
 
       .exam-topbar {

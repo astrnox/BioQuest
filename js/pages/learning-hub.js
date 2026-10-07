@@ -221,7 +221,7 @@
 
             <div class="lmc-card lmc-card-rescue" id="lmc-rescue-card" style="display:none;">
               <div class="lmc-card-header">
-                <h2>🆘 AI 抢救方案</h2>
+                <h2>AI 抢救方案</h2>
               </div>
               <div class="lmc-rescue" id="lmc-rescue"></div>
             </div>
@@ -262,30 +262,28 @@
         'aborted': '<span class="lmc-badge lmc-badge-aborted">已放弃</span>'
       }[t.status] || '';
       var priorityDot = { 'high': '🔴', 'medium': '🟡', 'low': '🟢' }[t.priority] || '⚪';
-      var typeIcon = { 'classroom': '🎓', 'practice': '✏️', 'review': '🔁', 'custom': '📌' }[t.type] || '📌';
       var dueText = _formatDue(t.dueAt);
       var dueClass = t.dueAt < Date.now() ? 'lmc-due-overdue' : (t.dueAt - Date.now() < 3600000 ? 'lmc-due-soon' : '');
       var progressBar = t.progress > 0
         ? '<div class="lmc-task-progress"><div class="lmc-task-progress-fill" style="width:' + t.progress + '%;"></div></div>'
         : '';
-      var sourceLabel = { 'ai-breakdown': '🤖 AI 细化', 'manual': '👤 手动', 'auto-review': '🔁 自动' }[t.source] || ('来源：' + t.source);
+      var sourceLabel = { 'ai-breakdown': 'AI 细化', 'manual': '手动', 'auto-review': '自动' }[t.source] || ('来源：' + t.source);
       return `
         <div class="lmc-task ${dueClass}" data-task-id="${t.id}">
-          <div class="lmc-task-icon">${typeIcon}</div>
           <div class="lmc-task-body">
             <div class="lmc-task-title" data-action="edit-task" data-task-id="${t.id}" style="cursor:pointer;">${_escapeHtml(t.title)} <span class="lmc-task-priority">${priorityDot}</span></div>
             <div class="lmc-task-meta">
               ${statusBadge}
-              <span class="lmc-due ${dueClass}">📅 ${dueText}</span>
+              <span class="lmc-due ${dueClass}">${dueText}</span>
               <span class="lmc-task-source">${sourceLabel}</span>
             </div>
             ${progressBar}
           </div>
           <div class="lmc-task-actions">
             ${t.status !== 'done' ? '<button class="lmc-btn lmc-btn-primary lmc-btn-sm" data-action="mark-done" data-task-id="' + t.id + '" title="标记完成">✓</button>' : ''}
-            ${t.type === 'classroom' ? '<button class="lmc-btn lmc-btn-primary lmc-btn-sm" data-action="start-classroom" data-topic="' + _escapeAttr(t.topic || t.title) + '">🎓 课堂</button>' : ''}
-            ${t.type === 'practice' ? '<button class="lmc-btn lmc-btn-primary lmc-btn-sm" data-action="start-practice" data-topic="' + _escapeAttr(t.topic || t.title) + '">✏️ 刷题</button>' : ''}
-            ${t.type === 'review' ? '<button class="lmc-btn lmc-btn-primary lmc-btn-sm" data-action="start-review" data-topic="' + _escapeAttr(t.topic || t.title) + '">🔁 复习</button>' : ''}
+            ${t.type === 'classroom' ? '<button class="lmc-btn lmc-btn-primary lmc-btn-sm" data-action="start-classroom" data-topic="' + _escapeAttr(t.topic || t.title) + '">课堂</button>' : ''}
+            ${t.type === 'practice' ? '<button class="lmc-btn lmc-btn-primary lmc-btn-sm" data-action="start-practice" data-topic="' + _escapeAttr(t.topic || t.title) + '">刷题</button>' : ''}
+            ${t.type === 'review' ? '<button class="lmc-btn lmc-btn-primary lmc-btn-sm" data-action="start-review" data-topic="' + _escapeAttr(t.topic || t.title) + '">复习</button>' : ''}
             <button class="lmc-btn lmc-btn-ghost lmc-btn-sm" data-action="edit-task" data-task-id="${t.id}" title="编辑">✎</button>
             <button class="lmc-btn lmc-btn-ghost lmc-btn-sm" data-action="delete-task" data-task-id="${t.id}" title="删除">×</button>
           </div>
@@ -307,13 +305,12 @@
     el.innerHTML = sorted.map(function (t, i) {
       var daysFromNow = Math.ceil((t.dueAt - now) / 86400000);
       var dayLabel = daysFromNow < 0 ? ('已过 ' + (-daysFromNow) + ' 天') : (daysFromNow === 0 ? '今天' : ('还有 ' + daysFromNow + ' 天'));
-      var typeIcon = { 'classroom': '🎓', 'practice': '✏️', 'review': '🔁', 'custom': '📌' }[t.type] || '📌';
       return `
         <div class="lmc-tl-item ${t.status === 'done' ? 'lmc-tl-done' : ''}">
           <div class="lmc-tl-dot"></div>
           <div class="lmc-tl-line"></div>
           <div class="lmc-tl-body">
-            <div class="lmc-tl-title">${typeIcon} ${_escapeHtml(t.title)}</div>
+            <div class="lmc-tl-title">${_escapeHtml(t.title)}</div>
             <div class="lmc-tl-time">${dayLabel} · ${_formatTime(t.dueAt)}</div>
           </div>
         </div>
@@ -350,7 +347,7 @@
       return;
     }
     el.innerHTML = state.logs.slice(0, 10).map(function (log) {
-      var levelIcon = { 'info': 'ℹ️', 'success': '✅', 'warning': '⚠️', 'error': '❌', 'activity': '📝' }[log.level] || 'ℹ️';
+      var levelIcon = { 'info': 'ℹ️', 'success': '✅', 'warning': '⚠️', 'error': '❌' }[log.level] || 'ℹ️';
       return `
         <div class="lmc-log-item lmc-log-${log.level}">
           <span class="lmc-log-icon">${levelIcon}</span>
@@ -374,9 +371,9 @@
         body.innerHTML = `
           <div class="lmc-rescue-msg">⚠️ 检测到 ${failed.length} 个未完成任务。AI 建议：</div>
           <ul class="lmc-rescue-list">
-            <li>🎯 把任务拆分成 2-3 个 25 分钟专注块</li>
-            <li>📚 优先完成 <strong>${_escapeHtml(failed[0].title)}</strong>（最高优先级）</li>
-            <li>🤖 使用 AI 对话规划路径或进入专项练习直接刷题</li>
+            <li>把任务拆分成 2-3 个 25 分钟专注块</li>
+            <li>优先完成 <strong>${_escapeHtml(failed[0].title)}</strong>（最高优先级）</li>
+            <li>使用 AI 对话规划路径或进入专项练习直接刷题</li>
           </ul>
           <button class="lmc-btn lmc-btn-primary" id="lmc-apply-rescue-btn">应用 AI 抢救方案</button>
         `;
@@ -577,9 +574,9 @@
         <label class="lmc-form-label">
           <span>任务类型</span>
           <select class="lmc-form-input" id="lmc-form-type">
-            <option value="custom">📌 自定义</option>
-            <option value="practice">✏️ 刷题</option>
-            <option value="review">🔁 复习</option>
+            <option value="custom">自定义</option>
+            <option value="practice">刷题</option>
+            <option value="review">复习</option>
           </select>
         </label>
         <label class="lmc-form-label">
@@ -640,9 +637,9 @@
         <label class="lmc-form-label">
           <span>任务类型</span>
           <select class="lmc-form-input" id="lmc-edit-type">
-            <option value="custom" ${t.type === 'custom' ? 'selected' : ''}>📌 自定义</option>
-            <option value="practice" ${t.type === 'practice' || t.type === 'classroom' ? 'selected' : ''}>✏️ 刷题</option>
-            <option value="review" ${t.type === 'review' ? 'selected' : ''}>🔁 复习</option>
+            <option value="custom" ${t.type === 'custom' ? 'selected' : ''}>自定义</option>
+            <option value="practice" ${t.type === 'practice' || t.type === 'classroom' ? 'selected' : ''}>刷题</option>
+            <option value="review" ${t.type === 'review' ? 'selected' : ''}>复习</option>
           </select>
         </label>
         <label class="lmc-form-label">
@@ -709,12 +706,12 @@
           </select>
         </label>
         <div class="lmc-ai-tip">
-          💡 AI 会根据目标生成可执行的学习计划，每条任务都关联到 刷题/复习/自定义 模块
+          AI 会根据目标生成可执行的学习计划，每条任务都关联到 刷题/复习/自定义 模块
         </div>
       </div>
     `;
     _showModal({
-      title: '🤖 AI 自动细化目标',
+      title: 'AI 自动细化目标',
       content: content,
       actions: [
         { label: '取消', handler: function () { _closeModal(); } },

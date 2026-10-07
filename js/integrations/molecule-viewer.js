@@ -166,7 +166,7 @@
     if (!target) return;
     var presets = getPresets();
     var cardsHtml = presets.map(function (p) {
-      return '<div class="molecule-card" data-pdb="' + p.id + '" style="background:var(--surface-primary,#fff);border:1px solid var(--border-light,#ece8e1);border-radius:var(--radius-lg,20px);padding:20px;cursor:pointer;">' +
+      return '<div class="molecule-card" data-pdb="' + p.id + '" style="background:var(--surface-primary,#fff);border:1px solid var(--border-light,#ece8e1);border-radius:var(--radius-lg, 12px);padding:20px;cursor:pointer;">' +
         '<div style="font-family:var(--font-mono,monospace);font-size:0.78rem;color:var(--color-amber,#c4956a);font-weight:700;">' + p.id + '</div>' +
         '<div style="font-family:var(--font-serif,serif);font-size:1rem;font-weight:600;color:var(--color-deep,#1a3a2a);margin:6px 0;">' + p.name + '</div>' +
         '<div style="font-size:0.78rem;color:var(--text-muted,#8a8a8a);">点击查看 3D 结构</div>' +
@@ -185,10 +185,10 @@
             '<button id="molecule-close-btn" style="background:none;border:none;font-size:1.5rem;cursor:pointer;">×</button>' +
           '</div>' +
           '<div style="display:flex;gap:8px;margin-bottom:8px;flex-wrap:wrap;">' +
-            '<button class="mol-style-btn" data-style="cartoon" style="padding:6px 12px;border:1px solid var(--border-light,#ece8e1);background:var(--surface-primary,#fff);border-radius:6px;cursor:pointer;font-size:0.85rem;">卡通</button>' +
-            '<button class="mol-style-btn" data-style="stick" style="padding:6px 12px;border:1px solid var(--border-light,#ece8e1);background:var(--surface-primary,#fff);border-radius:6px;cursor:pointer;font-size:0.85rem;">球棍</button>' +
-            '<button class="mol-style-btn" data-style="line" style="padding:6px 12px;border:1px solid var(--border-light,#ece8e1);background:var(--surface-primary,#fff);border-radius:6px;cursor:pointer;font-size:0.85rem;">线框</button>' +
-            '<button class="mol-style-btn" data-style="sphere" style="padding:6px 12px;border:1px solid var(--border-light,#ece8e1);background:var(--surface-primary,#fff);border-radius:6px;cursor:pointer;font-size:0.85rem;">空间填充</button>' +
+            '<button class="mol-style-btn" data-style="cartoon" style="padding:6px 12px;border:1px solid var(--border-light,#ece8e1);background:var(--surface-primary,#fff);border-radius:8px;cursor:pointer;font-size:0.85rem;">卡通</button>' +
+            '<button class="mol-style-btn" data-style="stick" style="padding:6px 12px;border:1px solid var(--border-light,#ece8e1);background:var(--surface-primary,#fff);border-radius:8px;cursor:pointer;font-size:0.85rem;">球棍</button>' +
+            '<button class="mol-style-btn" data-style="line" style="padding:6px 12px;border:1px solid var(--border-light,#ece8e1);background:var(--surface-primary,#fff);border-radius:8px;cursor:pointer;font-size:0.85rem;">线框</button>' +
+            '<button class="mol-style-btn" data-style="sphere" style="padding:6px 12px;border:1px solid var(--border-light,#ece8e1);background:var(--surface-primary,#fff);border-radius:8px;cursor:pointer;font-size:0.85rem;">空间填充</button>' +
           '</div>' +
           '<div id="molecule-3d-container" style="width:100%;height:500px;background:#faf7f2;border-radius:8px;"></div>' +
         '</div>' +

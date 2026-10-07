@@ -56,7 +56,7 @@
     var html = '<div style="max-width:800px;margin:0 auto;">' +
       '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;">' +
         '<h2 style="margin:0;color:var(--color-deep);">悬赏广场</h2>' +
-        '<button id="bounty-create-btn" style="padding:8px 18px;background:var(--color-sage);color:#fff;border:none;border-radius:10px;font-weight:600;cursor:pointer;">发布悬赏</button>' +
+        '<button id="bounty-create-btn" style="padding:8px 18px;background:var(--color-sage);color:#fff;border:none;border-radius:8px;font-weight:600;cursor:pointer;">发布悬赏</button>' +
       '</div>';
 
     if (!bounties || bounties.length === 0) {
@@ -66,7 +66,7 @@
       bounties.forEach(function(b) {
         var profile = b.profiles || {};
         var author = profile.display_name || profile.username || '匿名用户';
-        html += '<div class="bounty-item" data-id="' + escapeHtml(b.id) + '" style="background:#fff;border:1px solid var(--border-light);border-radius:14px;padding:18px;cursor:pointer;transition:box-shadow 0.2s;">' +
+        html += '<div class="bounty-item" data-id="' + escapeHtml(b.id) + '" style="background:#fff;border:1px solid var(--border-light);border-radius:12px;padding:18px;cursor:pointer;transition:box-shadow 0.2s;">' +
           '<div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px;">' +
             '<div style="flex:1;">' +
               '<div style="font-size:1.05rem;font-weight:600;color:var(--text-primary);margin-bottom:6px;">' + escapeHtml(b.title) + '</div>' +
@@ -114,25 +114,25 @@
       '<h2 style="color:var(--color-deep);">发布悬赏</h2>' +
       '<div style="margin-bottom:14px;">' +
         '<label style="display:block;font-size:0.85rem;color:var(--text-muted);margin-bottom:6px;">标题</label>' +
-        '<input id="bounty-title" type="text" style="width:100%;padding:10px;border:1px solid var(--border-light);border-radius:10px;box-sizing:border-box;" placeholder="简明描述你的问题">' +
+        '<input id="bounty-title" type="text" style="width:100%;padding:10px;border:1px solid var(--border-light);border-radius:8px;box-sizing:border-box;" placeholder="简明描述你的问题">' +
       '</div>' +
       '<div style="margin-bottom:14px;">' +
         '<label style="display:block;font-size:0.85rem;color:var(--text-muted);margin-bottom:6px;">问题详情</label>' +
-        '<textarea id="bounty-content" rows="5" style="width:100%;padding:10px;border:1px solid var(--border-light);border-radius:10px;box-sizing:border-box;resize:vertical;" placeholder="详细描述你的问题、已尝试的思路、期望的答案..."></textarea>' +
+        '<textarea id="bounty-content" rows="5" style="width:100%;padding:10px;border:1px solid var(--border-light);border-radius:8px;box-sizing:border-box;resize:vertical;" placeholder="详细描述你的问题、已尝试的思路、期望的答案..."></textarea>' +
       '</div>' +
       '<div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px;">' +
         '<div>' +
           '<label style="display:block;font-size:0.85rem;color:var(--text-muted);margin-bottom:6px;">悬赏信用（最少 5）</label>' +
-          '<input id="bounty-reward" type="number" min="5" value="10" style="width:100%;padding:10px;border:1px solid var(--border-light);border-radius:10px;box-sizing:border-box;">' +
+          '<input id="bounty-reward" type="number" min="5" value="10" style="width:100%;padding:10px;border:1px solid var(--border-light);border-radius:8px;box-sizing:border-box;">' +
         '</div>' +
         '<div>' +
           '<label style="display:block;font-size:0.85rem;color:var(--text-muted);margin-bottom:6px;">有效期（天，0=不限制）</label>' +
-          '<input id="bounty-expires" type="number" min="0" value="7" style="width:100%;padding:10px;border:1px solid var(--border-light);border-radius:10px;box-sizing:border-box;">' +
+          '<input id="bounty-expires" type="number" min="0" value="7" style="width:100%;padding:10px;border:1px solid var(--border-light);border-radius:8px;box-sizing:border-box;">' +
         '</div>' +
       '</div>' +
       '<div style="display:flex;gap:10px;">' +
-        '<button id="bounty-submit" style="flex:1;padding:12px;background:var(--color-sage);color:#fff;border:none;border-radius:10px;font-weight:600;cursor:pointer;">发布</button>' +
-        '<button id="bounty-cancel" style="padding:12px 20px;background:var(--surface-secondary);color:var(--text-primary);border:1px solid var(--border-light);border-radius:10px;cursor:pointer;">取消</button>' +
+        '<button id="bounty-submit" style="flex:1;padding:12px;background:var(--color-sage);color:#fff;border:none;border-radius:8px;font-weight:600;cursor:pointer;">发布</button>' +
+        '<button id="bounty-cancel" style="padding:12px 20px;background:var(--surface-secondary);color:var(--text-primary);border:1px solid var(--border-light);border-radius:8px;cursor:pointer;">取消</button>' +
       '</div>' +
     '</div>';
 
@@ -200,7 +200,7 @@
       answers.forEach(function(a) {
         var ap = a.profiles || {};
         var aName = ap.display_name || ap.username || '匿名';
-        html += '<div style="background:#fff;border:1px solid var(--border-light);border-radius:14px;padding:18px;' + (a.is_accepted ? 'border-color:var(--color-sage);box-shadow:0 0 0 1px var(--color-sage);' : '') + '">' +
+        html += '<div style="background:#fff;border:1px solid var(--border-light);border-radius:12px;padding:18px;' + (a.is_accepted ? 'border-color:var(--color-sage);box-shadow:0 0 0 1px var(--color-sage);' : '') + '">' +
           '<div style="font-size:0.8rem;color:var(--text-muted);margin-bottom:10px;">' + escapeHtml(aName) + ' · ' + _formatTimeAgo(a.created_at) + (a.is_accepted ? ' <span style="color:var(--color-sage);font-weight:600;">✓ 已采纳</span>' : '') + '</div>' +
           '<div style="line-height:1.6;color:var(--text-primary);white-space:pre-wrap;">' + escapeHtml(a.content) + '</div>';
         if (isOwner && bounty.status === 'open' && !a.is_accepted) {
@@ -213,10 +213,10 @@
 
     // 回答输入框
     if (_isLoggedIn() && !isOwner && bounty.status === 'open') {
-      html += '<div style="background:#fff;border:1px solid var(--border-light);border-radius:14px;padding:18px;">' +
+      html += '<div style="background:#fff;border:1px solid var(--border-light);border-radius:12px;padding:18px;">' +
         '<h4 style="margin:0 0 12px;color:var(--color-deep);">写回答</h4>' +
-        '<textarea id="bounty-answer-content" rows="4" style="width:100%;padding:10px;border:1px solid var(--border-light);border-radius:10px;box-sizing:border-box;resize:vertical;margin-bottom:12px;" placeholder="分享你的思路和答案..."></textarea>' +
-        '<button id="bounty-answer-submit" style="padding:10px 20px;background:var(--color-sage);color:#fff;border:none;border-radius:10px;font-weight:600;cursor:pointer;">提交回答</button>' +
+        '<textarea id="bounty-answer-content" rows="4" style="width:100%;padding:10px;border:1px solid var(--border-light);border-radius:8px;box-sizing:border-box;resize:vertical;margin-bottom:12px;" placeholder="分享你的思路和答案..."></textarea>' +
+        '<button id="bounty-answer-submit" style="padding:10px 20px;background:var(--color-sage);color:#fff;border:none;border-radius:8px;font-weight:600;cursor:pointer;">提交回答</button>' +
       '</div>';
     }
 

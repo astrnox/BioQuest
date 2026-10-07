@@ -159,7 +159,7 @@
   function _renderToolbar(wrapper) {
     var toolbar = document.createElement('div');
     toolbar.className = 'bq-whiteboard-toolbar';
-    toolbar.style.cssText = 'position:absolute;top:8px;right:8px;display:flex;gap:6px;background:rgba(255,255,255,0.9);padding:6px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.1);';
+    toolbar.style.cssText = 'position:absolute;top:8px;right:8px;display:flex;gap:6px;background:rgba(255,255,255,0.9);padding:6px;border-radius:8px;box-shadow:var(--shadow-md);';
 
     var colors = ['#4a7c59', '#c4956a', '#1a3a2a', '#d44', '#37a', '#999'];
     colors.forEach(function (c) {
@@ -201,7 +201,7 @@
   }
 
   function _btnStyle() {
-    return 'border:1px solid #ddd;background:#fff;border-radius:6px;padding:4px 10px;cursor:pointer;font-size:13px;color:#333;';
+    return 'border:1px solid #ddd;background:#fff;border-radius:8px;padding:4px 10px;cursor:pointer;font-size:13px;color:#333;';
   }
 
   // ====== AI 绘图指令（T3-6） ======

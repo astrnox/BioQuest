@@ -34,9 +34,9 @@ function injectAnalyticsStyles() {
     .analytics-card {
       background: var(--surface-primary, #ffffff);
       border: 1px solid var(--border-light, #ece8e1);
-      border-radius: var(--radius-lg, 20px);
+      border-radius: var(--radius-lg, 12px);
       padding: 28px;
-      box-shadow: var(--shadow-sm, 0 1px 3px rgba(26,58,42,0.06));
+      box-shadow: var(--shadow-sm, 0 1px 3px rgba(44, 62, 48, 0.05));
     }
 
     .analytics-card--full {
@@ -128,7 +128,7 @@ function injectAnalyticsStyles() {
       padding: 12px 16px;
       background: var(--surface-secondary, #faf7f2);
       border: 1px solid var(--border-light, #ece8e1);
-      border-radius: var(--radius-md, 12px);
+      border-radius: var(--radius-md, 8px);
       gap: 12px;
       flex-wrap: wrap;
     }
@@ -178,7 +178,7 @@ function injectAnalyticsStyles() {
     .wrong-book-btn {
       font-size: 0.78rem;
       padding: 6px 14px;
-      border-radius: var(--radius-sm, 6px);
+      border-radius: var(--radius-sm, 4px);
       border: 1px solid var(--border-default, #e0dcd5);
       background: var(--surface-primary, #ffffff);
       color: var(--text-secondary, #4a4a4a);
@@ -224,7 +224,7 @@ function injectAnalyticsStyles() {
       text-align: center;
       padding: 20px 16px;
       background: var(--surface-secondary, #faf7f2);
-      border-radius: var(--radius-md, 12px);
+      border-radius: var(--radius-md, 8px);
       border: 1px solid var(--border-light, #ece8e1);
     }
 
@@ -268,14 +268,14 @@ function injectAnalyticsStyles() {
     .stats-accuracy-track {
       height: 10px;
       background: var(--surface-tertiary, #f0ebe0);
-      border-radius: 5px;
+      border-radius: 4px;
       overflow: hidden;
     }
 
     .stats-accuracy-fill {
       height: 100%;
-      background: linear-gradient(90deg, var(--color-sage, #5a7d5c), var(--color-amber, #c4956a));
-      border-radius: 5px;
+      background: var(--color-sage, #5a7d5c);
+      border-radius: 4px;
       transition: width 0.6s ease;
     }
 
@@ -310,13 +310,13 @@ function injectAnalyticsStyles() {
       flex: 1;
       height: 24px;
       background: var(--surface-tertiary, #f0ebe0);
-      border-radius: var(--radius-sm, 6px);
+      border-radius: var(--radius-sm, 4px);
       overflow: hidden;
     }
 
     .stats-bar-fill {
       height: 100%;
-      border-radius: var(--radius-sm, 6px);
+      border-radius: var(--radius-sm, 4px);
       display: flex;
       align-items: center;
       justify-content: flex-end;
@@ -357,7 +357,7 @@ function injectAnalyticsStyles() {
       padding: 10px 14px;
       background: var(--surface-secondary, #faf7f2);
       border: 1px solid var(--border-light, #ece8e1);
-      border-radius: var(--radius-md, 12px);
+      border-radius: var(--radius-md, 8px);
       gap: 12px;
       flex-wrap: wrap;
     }

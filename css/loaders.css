@@ -137,7 +137,7 @@
   margin: -6px 0 0 -6px;
   border-radius: 50%;
   background: var(--atom-accent);
-  box-shadow: 0 0 10px rgba(196, 149, 106, 0.5);
+  box-shadow: var(--shadow-md);
 }
 
 .bq-atom-orbit {
@@ -180,7 +180,7 @@
 .bq-loader-wave i {
   width: 5px;
   height: 100%;
-  border-radius: 3px;
+  border-radius: 2px;
   background: var(--wave-color);
   animation: bqWave 1.2s ease-in-out infinite;
 }

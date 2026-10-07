@@ -47,7 +47,7 @@
       var btn = document.createElement('button');
       btn.textContent = '刷新重试';
       btn.type = 'button';
-      btn.style.cssText = 'border:1px solid #3a6b4a;background:#3a6b4a;color:#fff;border-radius:18px;padding:8px 22px;font-size:0.88rem;cursor:pointer;';
+      btn.style.cssText = 'border:1px solid #3a6b4a;background:#3a6b4a;color:#fff;border-radius:16px;padding:8px 22px;font-size:0.88rem;cursor:pointer;';
       btn.addEventListener('click', function () { try { window.location.reload(); } catch (e) {} });
       box.appendChild(title);
       box.appendChild(tip);

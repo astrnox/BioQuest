@@ -541,7 +541,7 @@ window.handleViewPostDetail = async function(postId) {
             </div>
             <div style="font-size:0.75rem;color:var(--text-muted,#8a8a8a);margin-bottom:12px;">点赞 ${post.like_count || 0} · 评论 ${post.comment_count || 0}</div>
           </div>
-          <div style="background:var(--surface-secondary,#faf7f2);border-radius:10px;padding:16px;margin-bottom:20px;">
+          <div style="background:var(--surface-secondary,#faf7f2);border-radius:8px;padding:16px;margin-bottom:20px;">
             <div style="font-size:0.82rem;font-weight:600;color:var(--color-deep,#1a3a2a);margin-bottom:8px;">帖子内容</div>
             <div style="font-size:0.85rem;line-height:1.7;color:var(--text-primary,#1a2f1d);word-break:break-word;">
               ${(window.renderMarkdown ? window.renderMarkdown(post.content || '') : escapeHtml(post.content || ''))}
@@ -582,7 +582,7 @@ window.handleEditComment = async function(commentId, postId) {
     '<div class="admin-modal" style="max-width:460px;">' +
       '<div class="admin-modal-header"><h3 class="admin-modal-title">编辑评论</h3><button class="admin-modal-close" data-on=\'["_cspRemoveOverlay"]\'>×</button></div>' +
       '<div class="admin-modal-body" style="padding:20px;">' +
-        '<textarea id="edit-comment-textarea" style="width:100%;box-sizing:border-box;min-height:100px;padding:10px 14px;border:1px solid var(--border-light,#e3e0d8);border-radius:10px;font-size:0.88rem;outline:none;background:var(--surface-primary,#fff);color:var(--text-primary,#1a2f1d);resize:vertical;" placeholder="评论内容">' + escapeHtml(oldContent) + '</textarea>' +
+        '<textarea id="edit-comment-textarea" style="width:100%;box-sizing:border-box;min-height:100px;padding:10px 14px;border:1px solid var(--border-light,#e3e0d8);border-radius:8px;font-size:0.88rem;outline:none;background:var(--surface-primary,#fff);color:var(--text-primary,#1a2f1d);resize:vertical;" placeholder="评论内容">' + escapeHtml(oldContent) + '</textarea>' +
         '<div style="display:flex;gap:10px;justify-content:flex-end;margin-top:16px;">' +
           '<button class="admin-btn admin-btn--ghost" data-on=\'["_cspRemoveOverlay"]\'>取消</button>' +
           '<button class="admin-btn admin-btn--primary" id="edit-comment-save">保存</button>' +
@@ -688,7 +688,7 @@ window.handleManagePostComments = async function(postId) {
           <div class="admin-modal-title">帖子评论管理</div>
           <button class="admin-modal-close" data-on='["closeCommentsModal"]'>&times;</button>
         </div>
-        <div style="max-height:400px;overflow-y:auto;border:1px solid var(--border-light,#ece8e1);border-radius:10px;">
+        <div style="max-height:400px;overflow-y:auto;border:1px solid var(--border-light,#ece8e1);border-radius:8px;">
           ${commentListHtml}
         </div>
         <div style="margin-top:16px;font-size:0.78rem;color:var(--text-muted,#8a8a8a);">共 ${comments.length} 条评论</div>

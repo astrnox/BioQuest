@@ -76,7 +76,7 @@
   color: var(--marigold);
   background: rgba(196, 149, 106, 0.12);
   padding: 7px 16px;
-  border-radius: var(--radius-pill, 20px);
+  border-radius: var(--radius-pill, 9999px);
   border: 1px solid rgba(196, 149, 106, 0.18);
   margin-bottom: 32px;
   animation: heroFadeIn 0.8s ease forwards;
@@ -93,11 +93,9 @@
   animation: heroFadeIn 0.8s 0.1s ease both;
 }
 
+/* 装饰性渐变已收敛为纯色（文本渐变改为纯色文字） */
 .hero-title-accent {
-  background: linear-gradient(120deg, #e8a830, #d4a574, #e8a830);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #e8a830;
 }
 
 .hero-subtitle {
@@ -127,7 +125,7 @@
   border-radius: var(--radius-lg, 12px);
   border: none;
   cursor: pointer;
-  background: linear-gradient(135deg, var(--color-warm, #c4956a), var(--color-warm-light, #d4a574));
+  background: var(--color-warm, #c4956a);
   color: var(--color-primary-900, #1a2f1d);
   position: relative;
   overflow: hidden;
@@ -151,8 +149,8 @@
 
 .btn-primary-hero:hover {
   transform: translateY(-2px);
-  box-shadow: var(--shadow-button, 0 8px 28px rgba(196, 149, 106, 0.35));
-  background: linear-gradient(135deg, var(--color-warm-light, #d4a574), var(--color-warm-200, #e0b98a));
+  box-shadow: var(--shadow-button, 0 1px 3px rgba(44, 62, 48, 0.08));
+  background: var(--color-warm-light, #d4a574);
 }
 
 .btn-primary-hero:active {
@@ -162,7 +160,7 @@
 .btn-primary-hero--lg {
   font-size: 1.1rem;
   padding: 18px 40px;
-  border-radius: var(--radius-xl, 14px);
+  border-radius: var(--radius-xl, 16px);
 }
 
 .btn-outline-hero {
@@ -273,10 +271,7 @@
 }
 
 .stat-item:hover .stat-value {
-  background: linear-gradient(135deg, var(--color-mid), var(--color-amber));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--color-mid);
 }
 
 .stat-value {
@@ -304,14 +299,14 @@
 .stat-divider {
   width: 1px;
   height: 48px;
-  background: linear-gradient(to bottom, transparent, var(--border-light), transparent);
+  background: var(--border-light);
 }
 
 /* ----- MODULES ----- */
 .modules-section {
   padding: 100px 0;
   background: var(--surface-secondary);
-  background: linear-gradient(180deg, var(--color-cream) 0%, var(--surface-secondary) 50%, var(--color-cream) 100%);
+  background: var(--color-cream);
 }
 
 .section-header {
@@ -339,7 +334,7 @@
 .module-block:hover {
   background: rgba(26, 58, 42, 0.03);
   transform: translateY(-3px);
-  box-shadow: 0 8px 32px rgba(26, 58, 42, 0.06);
+  box-shadow: var(--shadow-floating);
   border-left-color: var(--color-amber);
 }
 
@@ -369,7 +364,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 18px;
+  border-radius: 16px;
   background: rgba(26, 58, 42, 0.04);
   transition: background 0.35s ease, transform 0.35s ease;
 }
@@ -420,7 +415,6 @@
 .cta-section {
   padding: 100px 0;
   background: var(--color-deep);
-  background: linear-gradient(160deg, #1a2f1d, #0c1810), radial-gradient(ellipse at 30% 50%, rgba(196, 149, 106, 0.04) 0%, transparent 60%), radial-gradient(ellipse at 70% 80%, rgba(90, 125, 92, 0.03) 0%, transparent 50%);
   background-blend-mode: normal, normal, normal;
   position: relative;
   overflow: hidden;
@@ -434,7 +428,7 @@
   transform: translateX(-50%);
   width: 600px;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(196, 149, 106, 0.25), transparent);
+  background: rgba(196, 149, 106, 0.25);
 }
 
 .cta-block {
@@ -537,7 +531,7 @@
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.3s ease, transform 0.3s ease;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  box-shadow: var(--shadow-lg);
   border: none;
 }
 
@@ -549,7 +543,7 @@
 .scroll-down-indicator:hover {
   background: var(--color-sage);
   transform: translateY(-2px);
-  box-shadow: 0 6px 24px rgba(0,0,0,0.25);
+  box-shadow: var(--shadow-lg);
 }
 
 /* ============================================================
@@ -643,7 +637,7 @@
   .module-icon-area {
     width: 56px;
     height: 56px;
-    border-radius: 14px;
+    border-radius: 12px;
   }
 
   .cta-section {
@@ -675,7 +669,7 @@
 /* ====== 每日一题 ====== */
 .daily-question-section {
   padding: 60px 0 40px;
-  background: linear-gradient(135deg, rgba(90,125,92,0.04) 0%, rgba(232,168,48,0.04) 100%);
+  background: rgba(90, 125, 92, 0.04);
 }
 
 .daily-question-card {
@@ -684,7 +678,7 @@
   background: var(--surface, #fff);
   border-radius: 16px;
   padding: 32px;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+  box-shadow: var(--shadow-lg);
   border: 1px solid var(--border, #e8e6e1);
 }
 
@@ -807,7 +801,7 @@
 .dq-result {
   margin-top: 20px;
   padding: 14px 18px;
-  border-radius: 10px;
+  border-radius: 8px;
   font-weight: 600;
   font-size: 0.95rem;
 }
@@ -826,7 +820,7 @@
   margin-top: 16px;
   padding: 18px;
   background: rgba(232,168,48,0.06);
-  border-radius: 10px;
+  border-radius: 8px;
   border-left: 3px solid #e8a830;
 }
 
@@ -851,10 +845,7 @@
 .biology-history-section {
   position: relative;
   padding: 96px 0 120px;
-  background:
-    radial-gradient(ellipse at 20% 20%, rgba(196, 149, 106, 0.12) 0%, transparent 45%),
-    radial-gradient(ellipse at 85% 80%, rgba(90, 125, 92, 0.1) 0%, transparent 40%),
-    linear-gradient(160deg, #1a2f1d 0%, #14261a 50%, #1a2f1d 100%);
+  background: #1a2f1d;
   overflow: hidden;
   isolation: isolate;
 }
@@ -879,7 +870,7 @@
   left: -5%;
   width: 110%;
   height: 120px;
-  background: linear-gradient(90deg, transparent, rgba(196, 149, 106, 0.08), transparent);
+  background: rgba(196, 149, 106, 0.08);
   transform: rotate(-2deg);
   pointer-events: none;
   z-index: 1;
@@ -981,8 +972,8 @@
   bottom: 12px;
   left: 38px;
   width: 2px;
-  background: linear-gradient(180deg, rgba(196, 149, 106, 0.55), rgba(196, 149, 106, 0.25) 80%, transparent);
-  border-radius: 999px;
+  background: rgba(196, 149, 106, 0.55);
+  border-radius: 16px;
 }
 
 .bio-history-event {
@@ -1029,7 +1020,7 @@
   width: 20px;
   height: 2px;
   background: rgba(196, 149, 106, 0.45);
-  border-radius: 999px;
+  border-radius: 16px;
 }
 
 .bio-history-line::after {
@@ -1049,7 +1040,7 @@
   position: relative;
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 18px;
+  border-radius: 16px;
   padding: 22px 24px;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
@@ -1057,7 +1048,7 @@
               background 0.3s ease,
               border-color 0.3s ease,
               box-shadow 0.3s ease;
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.16);
+  box-shadow: var(--shadow-floating);
 }
 
 .bio-history-event:hover .bio-history-card,
@@ -1065,7 +1056,7 @@
   background: rgba(255, 255, 255, 0.1);
   border-color: rgba(196, 149, 106, 0.3);
   transform: translateY(-4px);
-  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.24);
+  box-shadow: var(--shadow-floating);
 }
 
 .bio-history-card-year {
@@ -1114,10 +1105,7 @@
 
 /* 浅色模式适配 */
 [data-theme="light"] .biology-history-section {
-  background:
-    radial-gradient(ellipse at 20% 20%, rgba(196, 149, 106, 0.12) 0%, transparent 45%),
-    radial-gradient(ellipse at 85% 80%, rgba(90, 125, 92, 0.08) 0%, transparent 40%),
-    linear-gradient(160deg, #1b3a2d 0%, #162f22 50%, #1b3a2d 100%);
+  background: #1b3a2d;
 }
 
 [data-theme="light"] .biology-history-title-main,

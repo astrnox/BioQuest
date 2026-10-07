@@ -393,8 +393,8 @@ async function refreshAnnouncementList(container) {
     var html = '<div style="display:flex;flex-direction:column;gap:12px;">';
     for (var i = 0; i < announcements.length; i++) {
       var a = announcements[i];
-      var statusBadge = a.is_active ? '<span style="background:#3a8c5c;color:#fff;font-size:0.7rem;padding:2px 8px;border-radius:10px;">已发布</span>' : '<span style="background:#888;color:#fff;font-size:0.7rem;padding:2px 8px;border-radius:10px;">已下架</span>';
-      var pinBadge = a.is_pinned ? '<span style="background:#e8a830;color:#fff;font-size:0.7rem;padding:2px 8px;border-radius:10px;">置顶</span>' : '';
+      var statusBadge = a.is_active ? '<span style="background:#3a8c5c;color:#fff;font-size:0.7rem;padding:2px 8px;border-radius:8px;">已发布</span>' : '<span style="background:#888;color:#fff;font-size:0.7rem;padding:2px 8px;border-radius:8px;">已下架</span>';
+      var pinBadge = a.is_pinned ? '<span style="background:#e8a830;color:#fff;font-size:0.7rem;padding:2px 8px;border-radius:8px;">置顶</span>' : '';
       var dateStr = a.created_at ? new Date(a.created_at).toLocaleString('zh-CN') : '';
       html += '<div style="background:var(--surface-secondary,#faf7f2);border:1px solid var(--border-light,#ece8e1);border-radius:12px;padding:16px;">' +
         '<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">' +
@@ -478,8 +478,8 @@ function showAnnouncementEditor(container, announcement) {
           ${isEdit ? '<label style="display:flex;align-items:center;gap:6px;font-size:0.85rem;cursor:pointer;"><input type="checkbox" id="announce-active" ' + (announcement?.is_active ? 'checked' : '') + '> 已发布</label>' : ''}
         </div>
         <div style="display:flex;gap:12px;margin-top:8px;">
-          <button id="announce-save-btn" style="background:var(--color-sage,#5a7d5c);color:#fff;border:none;padding:10px 24px;border-radius:10px;cursor:pointer;font-size:0.9rem;">${isEdit ? '保存修改' : '发布公告'}</button>
-          <button id="announce-cancel-btn" style="background:transparent;border:1px solid var(--border-light,#ece8e1);padding:10px 24px;border-radius:10px;cursor:pointer;font-size:0.9rem;color:var(--text-secondary,#6b7f74);">取消</button>
+          <button id="announce-save-btn" style="background:var(--color-sage,#5a7d5c);color:#fff;border:none;padding:10px 24px;border-radius:8px;cursor:pointer;font-size:0.9rem;">${isEdit ? '保存修改' : '发布公告'}</button>
+          <button id="announce-cancel-btn" style="background:transparent;border:1px solid var(--border-light,#ece8e1);padding:10px 24px;border-radius:8px;cursor:pointer;font-size:0.9rem;color:var(--text-secondary,#6b7f74);">取消</button>
         </div>
         <p id="announce-editor-error" style="color:#e53e3e;font-size:0.85rem;display:none;"></p>
       </div>

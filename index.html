@@ -101,7 +101,7 @@
       flex-direction: column;
       /* 老浏览器兼容：不依赖 flex gap（Chrome <84 / Safari <14.1），用 margin 兜底 */
       gap: 16px;
-      background: radial-gradient(ellipse at 20% 20%, #f5f0e8 0%, #faf8f5 40%, #faf8f5 100%);
+      background: #faf8f5;
       /* 防止 mask 卸载时产生闪烁 */
       transition: opacity 0.35s ease, visibility 0.35s ease;
       -webkit-user-select: none;
@@ -109,7 +109,7 @@
       pointer-events: none;
     }
     html[data-theme="dark"] #bq-boot-mask {
-      background: radial-gradient(ellipse at 20% 20%, #1a1f1c 0%, #141a16 40%, #141a16 100%);
+      background: #141a16;
     }
     #bq-boot-logo {
       /* 与站点 header 品牌同款 SVG（金环+中心圆+绿色射线），
@@ -588,7 +588,7 @@
           <div class="section-header">
             <h2 class="section-title">每日一题</h2>
             <p class="section-desc">每天一道精选竞赛题，保持手感，积少成多</p>
-            <a href="#/daily-billion" class="daily-billion-entry-link" style="display:inline-block;margin-top:8px;color:var(--color-amber,#c4956a);font-weight:600;font-size:0.9rem;text-decoration:none;padding:6px 16px;border:1px solid var(--color-amber,#c4956a);border-radius:20px;transition:all 0.2s;">进入每日亿题 →</a>
+            <a href="#/daily-billion" class="daily-billion-entry-link" style="display:inline-block;margin-top:8px;color:var(--color-amber,#c4956a);font-weight:600;font-size:0.9rem;text-decoration:none;padding:6px 16px;border:1px solid var(--color-amber,#c4956a);border-radius:var(--radius-pill,999px);transition:all 0.2s;">进入每日亿题 →</a>
           </div>
           <div class="daily-question-card" id="dailyQuestionCard">
             <div class="daily-question-loading" id="dailyLoading">加载中...</div>
@@ -607,7 +607,7 @@
         </div>
       </section>
 
-      <section class="social-impact-section" data-section="social-impact" style="padding:80px 0;background:linear-gradient(180deg,var(--surface-primary) 0%,rgba(90,125,92,0.04) 100%);">
+      <section class="social-impact-section" data-section="social-impact" style="padding:80px 0;background:var(--surface-primary);">
         <div class="container">
           <div class="section-header" style="margin-bottom:40px;">
             <h2 class="section-title">公益与开放</h2>
@@ -816,7 +816,7 @@
     var debugBtn = document.createElement('button');
     debugBtn.id = 'debug-test-button';
     debugBtn.textContent = '调试测试按钮 - 点击我';
-    debugBtn.style.cssText = 'position:fixed;top:100px;right:20px;z-index:99999;background:var(--color-amber);color:var(--color-deep);padding:12px 24px;border:none;border-radius:8px;font-size:16px;cursor:pointer;box-shadow:0 8px 24px rgba(0,0,0,0.3);';
+    debugBtn.style.cssText = 'position:fixed;top:100px;right:20px;z-index:99999;background:var(--color-amber);color:var(--color-deep);padding:12px 24px;border:none;border-radius:8px;font-size:16px;cursor:pointer;box-shadow:var(--shadow-floating,0 8px 28px rgba(44,62,48,0.10));';
     debugBtn.onclick = function () {
       alert('调试按钮点击成功！点击事件工作正常！');
       console.log('调试按钮点击成功！');

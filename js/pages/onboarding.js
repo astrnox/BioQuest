@@ -110,8 +110,8 @@
       'width:100%',
       'background:#ffffff',
       'border:1px solid rgba(232,168,48,0.5)',
-      'border-radius:14px',
-      'box-shadow:0 8px 28px rgba(0,0,0,0.16)',
+      'border-radius:12px',
+      'box-shadow:var(--shadow-floating)',
       'padding:16px 18px',
       'font-family:var(--font-sans, sans-serif)',
       'color:#2c3e30'

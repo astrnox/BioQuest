@@ -390,7 +390,7 @@
 .study-detail-card-header {
   padding: 24px 28px 20px;
   border-bottom: 1px solid var(--border-light);
-  background: linear-gradient(135deg, rgba(90, 125, 92, 0.04) 0%, rgba(196, 149, 106, 0.03) 100%);
+  background: var(--color-surface-sunken);
 }
 
 .study-detail-breadcrumb {
@@ -528,7 +528,7 @@
   align-items: center;
   gap: 8px;
   padding: 10px 20px;
-  background: linear-gradient(135deg, var(--color-sage), var(--color-mid));
+  background: var(--color-sage);
   color: #fff;
   border-radius: var(--radius-md);
   font-size: 0.88rem;
@@ -725,7 +725,7 @@
 }
 
 [data-theme="dark"] .study-detail-card-header {
-  background: linear-gradient(135deg, rgba(90, 125, 92, 0.06) 0%, rgba(196, 149, 106, 0.04) 100%);
+  background: var(--color-surface-sunken);
 }
 
 [data-theme="dark"] .study-mastery-btn {

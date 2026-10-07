@@ -80,7 +80,7 @@ function injectTutorStyles() {
     '  color: #2c3e30;',
     '  border-radius: 4px 16px 16px 16px;',
     '  margin-left: 4px;',
-    '  box-shadow: 0 1px 1px rgba(0,0,0,0.06);',
+    '  box-shadow: var(--shadow-sm);',
     '}',
 
     /* Markdown 内容 */
@@ -168,7 +168,7 @@ function injectTutorStyles() {
     '}',
     '.tutor-quick-btn {',
     '  padding: 6px 12px;',
-    '  border-radius: 14px;',
+    '  border-radius: 12px;',
     '  background: #fff;',
     '  border: 1px solid #e2ddd6;',
     '  font-size: 0.78rem;',
@@ -195,11 +195,11 @@ function injectTutorStyles() {
     '.tutor-input-wrap {',
     '  flex: 1;',
     '  background: #fff;',
-    '  border-radius: 20px;',
+    '  border-radius: 16px;',
     '  display: flex;',
     '  align-items: flex-end;',
     '  padding: 2px 4px 2px 16px;',
-    '  box-shadow: 0 1px 3px rgba(44, 62, 48, 0.04);',
+    '  box-shadow: var(--shadow-sm);',
     '}',
     '.tutor-input {',
     '  flex: 1;',
@@ -291,7 +291,7 @@ function injectTutorStyles() {
     '  align-items: center;',
     '  justify-content: center;',
     '  font-size: 1.8rem;',
-    '  box-shadow: 0 2px 8px rgba(0,0,0,0.06);',
+    '  box-shadow: var(--shadow-md);',
     '}',
     '.tutor-welcome-title {',
     '  font-size: 1.1rem;',
@@ -321,7 +321,7 @@ function injectTutorStyles() {
 
 /* 模式配置 — 仅保留通用 */
 var TUTOR_MODES = {
-  general: { label: 'AI 导师', avatar: '🎓', greeting: '有什么生物学问题尽管问我。' }
+  general: { label: 'AI 导师', greeting: '有什么生物学问题尽管问我。' }
 };
 
 /* 快捷问题 */
@@ -541,7 +541,6 @@ function _renderTutorMessages(container) {
   if (_tutorState.messages.length === 0) {
     var mode = TUTOR_MODES[_tutorState.currentMode];
     container.innerHTML = '<div class="tutor-welcome">' +
-      '<div class="tutor-welcome-icon">' + mode.avatar + '</div>' +
       '<div class="tutor-welcome-title">' + mode.label + '</div>' +
       '<div class="tutor-welcome-desc">' + mode.greeting + '</div>' +
       '</div>';

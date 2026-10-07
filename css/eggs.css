@@ -26,7 +26,7 @@
   border-radius: 50%;
   width: 26px;
   height: 26px;
-  background: radial-gradient(circle at 35% 35%, #ffdf8e, #f2b04d 70%, #d98e33);
+  background: #ffdf8e;
   border: 2px solid #b9762a;
   top: 8px;
 }

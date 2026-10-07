@@ -26,7 +26,7 @@
 .habits-page::before {
   width: 300px;
   height: 300px;
-  background: radial-gradient(circle, rgba(90, 125, 92, 0.35), transparent 70%);
+  background: none;
   top: -80px;
   left: -80px;
   animation: floatParticle1 10s ease-in-out infinite alternate;
@@ -35,7 +35,7 @@
 .habits-page::after {
   width: 260px;
   height: 260px;
-  background: radial-gradient(circle, rgba(196, 168, 130, 0.3), transparent 70%);
+  background: none;
   bottom: -60px;
   right: -60px;
   animation: floatParticle2 12s ease-in-out infinite alternate;
@@ -68,10 +68,7 @@
 .habits-title {
   font-size: 32px;
   font-weight: 800;
-  background: linear-gradient(135deg, var(--color-sage) 0%, var(--color-clay) 60%, #d4a843 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--color-sage);
   letter-spacing: -0.02em;
   text-shadow: none;
   filter: drop-shadow(0 2px 4px rgba(90, 125, 92, 0.15));
@@ -102,7 +99,7 @@
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   box-shadow:
-    0 8px 32px rgba(26, 58, 42, 0.08),
+    var(--shadow-floating)
     inset 0 1px 0 rgba(255, 255, 255, 0.6);
   padding: 24px;
   transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
@@ -133,7 +130,7 @@
 .habit-card:hover {
   transform: translateY(-6px) rotateX(2deg) rotateY(-1deg) scale(1.01);
   box-shadow:
-    0 20px 50px rgba(26, 58, 42, 0.14),
+    var(--shadow-floating)
     inset 0 1px 0 rgba(255, 255, 255, 0.7);
 }
 
@@ -142,13 +139,13 @@
   background: rgba(30, 36, 33, 0.55);
   border-color: rgba(255, 255, 255, 0.08);
   box-shadow:
-    0 8px 32px rgba(0, 0, 0, 0.35),
+    var(--shadow-floating)
     inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
 [data-theme="dark"] .habit-card:hover {
   box-shadow:
-    0 20px 50px rgba(0, 0, 0, 0.5),
+    var(--shadow-floating)
     inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 
@@ -170,13 +167,13 @@
   font-size: 20px;
   color: #ffffff;
   flex-shrink: 0;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  box-shadow: var(--shadow-md);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .habit-card:hover .habit-icon {
   transform: scale(1.1) rotate(-4deg);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+  box-shadow: var(--shadow-lg);
 }
 
 .habit-name {
@@ -194,7 +191,7 @@
   font-size: 12px;
   font-weight: 700;
   color: #d46b1a;
-  background: linear-gradient(135deg, rgba(255, 200, 120, 0.25), rgba(255, 160, 60, 0.15));
+  background: rgba(255, 200, 120, 0.25);
   padding: 5px 12px;
   border-radius: var(--radius-full);
   margin-left: auto;
@@ -209,7 +206,7 @@
     transform: scale(1);
   }
   50% {
-    box-shadow: 0 0 14px 4px rgba(255, 160, 60, 0.15);
+    box-shadow: var(--shadow-md);
     transform: scale(1.04);
   }
 }
@@ -263,7 +260,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, var(--color-sage), #3e6b40);
+  background: var(--color-sage);
   color: #ffffff;
   font-size: 14px;
   font-weight: 700;
@@ -272,13 +269,13 @@
   border: none;
   cursor: pointer;
   letter-spacing: 0.02em;
-  box-shadow: 0 4px 14px rgba(90, 125, 92, 0.35);
+  box-shadow: var(--shadow-md);
   transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
 }
 
 .habit-checkin-btn:hover {
   transform: translateY(-2px) scale(1.03);
-  box-shadow: 0 8px 24px rgba(90, 125, 92, 0.45);
+  box-shadow: var(--shadow-lg);
   filter: brightness(1.08);
 }
 
@@ -288,24 +285,24 @@
 
 /* 已完成状态 — 霓虹绿光 */
 .habit-checkin-btn.completed {
-  background: linear-gradient(135deg, #3a8c5c, #2d6a47);
-  box-shadow: 0 0 12px rgba(58, 140, 92, 0.45), 0 0 28px rgba(58, 140, 92, 0.2);
+  background: #3a8c5c;
+  box-shadow: var(--shadow-md);
   cursor: default;
   animation: neonGlowGreen 2.5s ease-in-out infinite;
 }
 
 .habit-checkin-btn.completed:hover {
   transform: none;
-  box-shadow: 0 0 12px rgba(58, 140, 92, 0.45), 0 0 28px rgba(58, 140, 92, 0.2);
+  box-shadow: var(--shadow-md);
   filter: none;
 }
 
 @keyframes neonGlowGreen {
   0%, 100% {
-    box-shadow: 0 0 10px rgba(58, 140, 92, 0.4), 0 0 24px rgba(58, 140, 92, 0.15);
+    box-shadow: var(--shadow-md);
   }
   50% {
-    box-shadow: 0 0 18px rgba(58, 140, 92, 0.6), 0 0 40px rgba(58, 140, 92, 0.25);
+    box-shadow: var(--shadow-lg);
   }
 }
 
@@ -319,7 +316,7 @@
 .habit-weekly-day {
   width: 18px;
   height: 18px;
-  border-radius: 5px;
+  border-radius: 4px;
   background: var(--bg-secondary);
   transition: transform 0.25s ease, background 0.3s ease, box-shadow 0.25s ease;
   cursor: default;
@@ -327,13 +324,13 @@
 
 .habit-weekly-day:hover {
   transform: scale(1.35);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  box-shadow: var(--shadow-md);
   z-index: 2;
 }
 
 .habit-weekly-day.completed {
   background: var(--color-sage);
-  box-shadow: 0 0 6px rgba(90, 125, 92, 0.35);
+  box-shadow: var(--shadow-sm);
 }
 
 /* ---------- 日历热力图 ---------- */
@@ -349,7 +346,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 10px;
+  border-radius: 8px;
   font-size: 12px;
   font-weight: 600;
   color: var(--text-primary);
@@ -363,7 +360,7 @@
 
 .calendar-day:hover {
   transform: scale(1.25);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+  box-shadow: var(--shadow-md);
   z-index: 2;
 }
 
@@ -383,7 +380,7 @@
   white-space: nowrap;
   pointer-events: none;
   opacity: 0.95;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--shadow-md);
   z-index: 10;
 }
 
@@ -411,7 +408,7 @@
 .calendar-day.intensity-100 {
   background: var(--color-sage);
   color: #ffffff;
-  box-shadow: 0 0 10px rgba(90, 125, 92, 0.35);
+  box-shadow: var(--shadow-md);
 }
 
 /* ---------- 徽章展架 (3D perspective shelf) ---------- */
@@ -441,21 +438,21 @@
   width: 48px;
   height: 48px;
   border-radius: var(--radius-full);
-  background: linear-gradient(135deg, var(--color-clay), #b08d5e);
+  background: var(--color-clay);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 22px;
   margin-bottom: 8px;
   box-shadow:
-    0 6px 16px rgba(196, 168, 130, 0.35),
+    var(--shadow-lg)
     inset 0 1px 0 rgba(255, 255, 255, 0.3);
   transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .badge-item:hover .badge-icon {
   box-shadow:
-    0 10px 28px rgba(196, 168, 130, 0.45),
+    var(--shadow-floating)
     inset 0 1px 0 rgba(255, 255, 255, 0.35);
   transform: scale(1.1);
 }
@@ -527,7 +524,7 @@
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   box-shadow:
-    0 24px 60px rgba(26, 58, 42, 0.18),
+    var(--shadow-floating)
     inset 0 1px 0 rgba(255, 255, 255, 0.7);
   padding: 28px;
   margin: 16px;
@@ -538,7 +535,7 @@
   background: rgba(30, 36, 33, 0.75);
   border-color: rgba(255, 255, 255, 0.08);
   box-shadow:
-    0 24px 60px rgba(0, 0, 0, 0.5),
+    var(--shadow-floating)
     inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
@@ -570,7 +567,7 @@
   width: 100%;
   padding: 12px 16px;
   border: 1.5px solid rgba(0, 0, 0, 0.08);
-  border-radius: 14px;
+  border-radius: 12px;
   font-size: 14px;
   color: var(--text-primary);
   background: rgba(255, 255, 255, 0.6);
@@ -616,7 +613,7 @@
 .habit-modal-close {
   width: 36px;
   height: 36px;
-  border-radius: 10px;
+  border-radius: 8px;
   border: none;
   background: rgba(0,0,0,0.04);
   color: var(--text-muted);
@@ -683,7 +680,7 @@
   border: 3px solid transparent;
   cursor: pointer;
   transition: all 0.2s ease;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: var(--shadow-sm);
 }
 
 .habit-color-swatch:hover {
@@ -735,7 +732,7 @@
   flex: 1;
   padding: 9px 12px;
   border: none;
-  border-radius: 10px;
+  border-radius: 8px;
   font-size: 13px;
   font-weight: 500;
   cursor: pointer;
@@ -753,7 +750,7 @@
 .habit-type-tab.active {
   background: var(--color-sage);
   color: #fff;
-  box-shadow: 0 2px 8px rgba(90,125,92,0.25);
+  box-shadow: var(--shadow-md);
 }
 
 /* 保存按钮 */
@@ -761,20 +758,20 @@
   width: 100%;
   padding: 14px;
   border: none;
-  border-radius: 14px;
+  border-radius: 12px;
   font-size: 15px;
   font-weight: 700;
   cursor: pointer;
-  background: linear-gradient(135deg, var(--color-sage), #3e6b40);
+  background: var(--color-sage);
   color: #fff;
-  box-shadow: 0 6px 20px rgba(90,125,92,0.35);
+  box-shadow: var(--shadow-lg);
   transition: all 0.25s ease;
   margin-top: 4px;
 }
 
 .habit-save-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 28px rgba(90,125,92,0.45);
+  box-shadow: var(--shadow-floating);
 }
 
 .habit-save-btn:active {

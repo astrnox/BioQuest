@@ -22,7 +22,7 @@
 
   function _getLevel() {
     var pts = _getBalance();
-    return (typeof root.getPointsLevel === 'function') ? root.getPointsLevel(pts) : { label: '基本信任', title: '基本信任', color: '#5a7d5c', icon: '👍' };
+    return (typeof root.getPointsLevel === 'function') ? root.getPointsLevel(pts) : { label: '基本信任', title: '基本信任', color: '#5a7d5c' };
   }
 
   function _renderHistory(history) {
@@ -30,7 +30,6 @@
       // Issue #125：统一「温暖空状态」组件（加载失败时回退原有提示）
       if (root.BioQuest && typeof root.BioQuest.emptyStateHTML === 'function') {
         return root.BioQuest.emptyStateHTML({
-          icon: '📥',
           title: '暂无信用变动记录',
           hint: '答对题目、每日签到、发布帖子等行为会在这里留下记录'
         });
@@ -77,22 +76,22 @@
 
     target.innerHTML = '<div style="max-width:860px;margin:0 auto;padding:24px 20px 80px;">' +
       '<h1 style="margin:0 0 4px;font-family:var(--font-serif,serif);color:var(--color-deep);">信用中心</h1>' +
-      '<p style="margin:0 0 20px;color:var(--text-muted);font-size:0.9rem;">信用点（CR）衡量社区对你的信任程度：用符合社区期望的行为赢得信任，用信任行使对社区影响更大的行为 🤝</p>' +
+      '<p style="margin:0 0 20px;color:var(--text-muted);font-size:0.9rem;">信用点（CR）衡量社区对你的信任程度：用符合社区期望的行为赢得信任，用信任行使对社区影响更大的行为</p>' +
 
       '<div style="display:flex;gap:16px;flex-wrap:wrap;margin-bottom:20px;">' +
-        '<div style="flex:1;min-width:220px;background:linear-gradient(135deg,var(--color-sage,#5a7d5c),var(--color-deep,#1a3a2a));color:#fff;border-radius:20px;padding:24px;box-shadow:var(--shadow-md);">' +
+        '<div style="flex:1;min-width:220px;background:var(--color-sage,#5a7d5c);color:#fff;border-radius:16px;padding:24px;box-shadow:var(--shadow-md);">' +
           '<div style="font-size:0.85rem;opacity:0.85;">当前信用指数</div>' +
           '<div style="font-size:2.4rem;font-weight:700;margin:4px 0;">' + balance + '</div>' +
-          '<div style="font-size:0.9rem;opacity:0.95;">' + level.icon + ' ' + level.title + '</div>' +
+          '<div style="font-size:0.9rem;opacity:0.95;">' + (level.icon ? level.icon + ' ' : '') + level.title + '</div>' +
         '</div>' +
-        '<div style="flex:1;min-width:220px;background:var(--surface-primary,#fff);border:1px solid var(--border-light,#ece8e1);border-radius:20px;padding:24px;box-shadow:var(--shadow-sm);">' +
+        '<div style="flex:1;min-width:220px;background:var(--surface-primary,#fff);border:1px solid var(--border-light,#ece8e1);border-radius:16px;padding:24px;box-shadow:var(--shadow-sm);">' +
           '<div style="font-size:0.85rem;color:var(--text-muted);margin-bottom:8px;">信任等级进度</div>' +
           (level.nextAt
             ? '<div style="font-size:0.9rem;color:var(--text-secondary);margin-bottom:8px;">提升至 <strong>' + level.nextAt + '</strong> 信用指数</div>' +
-              '<div style="height:8px;background:var(--border-light,#ece8e1);border-radius:9999px;overflow:hidden;">' +
-                '<div style="width:' + Math.round(level.progress * 100) + '%;height:100%;background:' + level.color + ';border-radius:9999px;"></div>' +
+              '<div style="height:8px;background:var(--border-light,#ece8e1);border-radius:16px;overflow:hidden;">' +
+                '<div style="width:' + Math.round(level.progress * 100) + '%;height:100%;background:' + level.color + ';border-radius:16px;"></div>' +
               '</div>'
-            : '<div style="font-size:0.9rem;color:var(--color-success,#3a8c5c);">已达最高信任等级 💎</div>') +
+            : '<div style="font-size:0.9rem;color:var(--color-success,#3a8c5c);">已达最高信任等级</div>') +
         '</div>' +
       '</div>' +
 
@@ -125,11 +124,11 @@
       var rows = (list || []).map(function (item, i) {
         var rankClass = i === 0 ? '🥇' : (i === 1 ? '🥈' : (i === 2 ? '🥉' : String(i + 1)));
         var isMe = myId && item.id === myId;
-        var lv = item.level || { title: '基本信任', color: '#5a7d5c', icon: '👍' };
+        var lv = item.level || { title: '基本信任', color: '#5a7d5c' };
         return '<div style="display:flex;align-items:center;gap:12px;padding:12px 16px;background:' + (isMe ? 'rgba(196,149,106,0.12)' : 'var(--surface-primary,#fff)') + ';border:1px solid ' + (isMe ? 'var(--color-amber,#c4956a)' : 'var(--border-light,#ece8e1)') + ';border-radius:12px;margin-bottom:8px;">' +
           '<span style="width:40px;font-size:1.2rem;font-weight:700;color:var(--color-deep,#1a3a2a);text-align:center;">' + rankClass + '</span>' +
-          '<span style="flex:1;font-size:0.95rem;font-weight:600;color:var(--text-primary);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">' + (isMe ? '⭐ ' : '') + escapeHtml(item.display_name || item.username || '匿名用户') + '</span>' +
-          '<span style="font-size:0.8rem;color:' + lv.color + ';white-space:nowrap;">' + lv.icon + ' ' + lv.title + '</span>' +
+          '<span style="flex:1;font-size:0.95rem;font-weight:600;color:var(--text-primary);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">' + escapeHtml(item.display_name || item.username || '匿名用户') + '</span>' +
+          '<span style="font-size:0.8rem;color:' + lv.color + ';white-space:nowrap;">' + (lv.icon ? lv.icon + ' ' : '') + lv.title + '</span>' +
           '<span style="font-size:1rem;font-weight:700;color:var(--color-amber,#c4956a);min-width:70px;text-align:right;">' + item.points + '</span>' +
         '</div>';
       }).join('');
@@ -140,7 +139,6 @@
       if (!rows) {
         if (root.BioQuest && typeof root.BioQuest.emptyStateHTML === 'function') {
           rows = root.BioQuest.emptyStateHTML({
-            icon: '📈',
             title: '暂无信用排行',
             hint: '答对题目、每日签到等行为会积累信用点，来成为社区最受信任的用户',
             action: {
@@ -154,11 +152,11 @@
       }
 
       if (myId && !userInList) {
-        var myLv = (typeof root.getPointsLevel === 'function') ? root.getPointsLevel(myPoints) : { title: '基本信任', color: '#5a7d5c', icon: '👍' };
+        var myLv = (typeof root.getPointsLevel === 'function') ? root.getPointsLevel(myPoints) : { title: '基本信任', color: '#5a7d5c' };
         rows += '<div style="display:flex;align-items:center;gap:12px;padding:12px 16px;background:rgba(196,149,106,0.12);border:1px solid var(--color-amber,#c4956a);border-radius:12px;margin-top:12px;">' +
           '<span style="width:40px;font-size:1.2rem;font-weight:700;color:var(--color-deep,#1a3a2a);text-align:center;">···</span>' +
-          '<span style="flex:1;font-size:0.95rem;font-weight:600;color:var(--text-primary);">⭐ ' + escapeHtml((me && (me.display_name || me.username)) || '我') + '</span>' +
-          '<span style="font-size:0.8rem;color:' + myLv.color + ';white-space:nowrap;">' + myLv.icon + ' ' + myLv.title + '</span>' +
+          '<span style="flex:1;font-size:0.95rem;font-weight:600;color:var(--text-primary);">' + escapeHtml((me && (me.display_name || me.username)) || '我') + '</span>' +
+          '<span style="font-size:0.8rem;color:' + myLv.color + ';white-space:nowrap;">' + (myLv.icon ? myLv.icon + ' ' : '') + myLv.title + '</span>' +
           '<span style="font-size:1rem;font-weight:700;color:var(--color-amber,#c4956a);min-width:70px;text-align:right;">' + myPoints + '</span>' +
         '</div>';
       }

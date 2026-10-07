@@ -46,7 +46,7 @@ function injectDashboardStyles() {
     '  width: 44px;',
     '  height: 44px;',
     '  border-radius: 50%;',
-    '  background: linear-gradient(135deg, var(--color-sage, #5a7d5c), var(--color-amber, #c4956a));',
+    '  background: var(--color-sage, #5a7d5c);',
     '  display: flex;',
     '  align-items: center;',
     '  justify-content: center;',
@@ -63,9 +63,9 @@ function injectDashboardStyles() {
     '  align-items: center;',
     '  gap: 24px;',
     '  background: var(--surface-primary, #fff);',
-    '  border-radius: var(--radius-lg, 20px);',
+    '  border-radius: var(--radius-lg, 12px);',
     '  padding: 28px 24px;',
-    '  box-shadow: var(--shadow-sm, 0 1px 3px rgba(26,58,42,0.06));',
+    '  box-shadow: var(--shadow-sm, 0 1px 3px rgba(44, 62, 48, 0.05));',
     '  margin-bottom: 20px;',
     '}',
     '.dash-goal-ring {',
@@ -119,7 +119,7 @@ function injectDashboardStyles() {
     '  background: var(--color-sage, #5a7d5c);',
     '  color: #fff;',
     '  border: none;',
-    '  border-radius: 20px;',
+    '  border-radius: 16px;',
     '  font-size: 0.85rem;',
     '  font-weight: 500;',
     '  cursor: pointer;',
@@ -143,10 +143,10 @@ function injectDashboardStyles() {
     '}',
     '.dash-stat-card {',
     '  background: var(--surface-primary, #fff);',
-    '  border-radius: var(--radius-md, 12px);',
+    '  border-radius: var(--radius-md, 8px);',
     '  padding: 16px 12px;',
     '  text-align: center;',
-    '  box-shadow: var(--shadow-sm, 0 1px 3px rgba(26,58,42,0.06));',
+    '  box-shadow: var(--shadow-sm, 0 1px 3px rgba(44, 62, 48, 0.05));',
     '  cursor: pointer;',
     '  transition: transform 0.15s, box-shadow 0.15s;',
     '}',
@@ -175,9 +175,9 @@ function injectDashboardStyles() {
     /* 区块卡片 */
     '.dash-section {',
     '  background: var(--surface-primary, #fff);',
-    '  border-radius: var(--radius-lg, 20px);',
+    '  border-radius: var(--radius-lg, 12px);',
     '  padding: 24px 20px;',
-    '  box-shadow: var(--shadow-sm, 0 1px 3px rgba(26,58,42,0.06));',
+    '  box-shadow: var(--shadow-sm, 0 1px 3px rgba(44, 62, 48, 0.05));',
     '  margin-bottom: 16px;',
     '}',
     '.dash-section-header {',
@@ -263,7 +263,7 @@ function injectDashboardStyles() {
     '  gap: 12px;',
     '  padding: 12px 14px;',
     '  background: var(--surface-secondary, #faf7f2);',
-    '  border-radius: var(--radius-md, 12px);',
+    '  border-radius: var(--radius-md, 8px);',
     '  cursor: pointer;',
     '  transition: background 0.15s;',
     '}',
@@ -273,7 +273,7 @@ function injectDashboardStyles() {
     '.dash-weak-icon {',
     '  width: 36px;',
     '  height: 36px;',
-    '  border-radius: 10px;',
+    '  border-radius: 8px;',
     '  display: flex;',
     '  align-items: center;',
     '  justify-content: center;',
@@ -313,7 +313,7 @@ function injectDashboardStyles() {
     '  gap: 12px;',
     '  padding: 14px 16px;',
     '  background: var(--surface-secondary, #faf7f2);',
-    '  border-radius: var(--radius-md, 12px);',
+    '  border-radius: var(--radius-md, 8px);',
     '  border-left: 3px solid var(--color-sage, #5a7d5c);',
     '  cursor: pointer;',
     '  transition: transform 0.15s;',
@@ -413,7 +413,7 @@ function injectDashboardStyles() {
     '  gap: 12px;',
     '  padding: 12px 14px;',
     '  background: var(--surface-secondary, #faf7f2);',
-    '  border-radius: var(--radius-md, 12px);',
+    '  border-radius: var(--radius-md, 8px);',
     '  cursor: pointer;',
     '  transition: transform 0.15s;',
     '}',
@@ -434,7 +434,7 @@ function injectDashboardStyles() {
     '  color: #fff;',
     '}',
     '.dash-forecast-rank--top {',
-    '  background: linear-gradient(135deg, #c4956a, #c47a4a);',
+    '  background: var(--color-warm, #c4956a);',
     '}',
     '.dash-forecast-info {',
     '  flex: 1;',
@@ -502,9 +502,9 @@ function injectDashboardStyles() {
     '/* v4.0 学习 DNA 双画像 */',
     '.dash-dna-section {',
     '  background: var(--surface-primary, #ffffff);',
-    '  border-radius: var(--radius-lg, 20px);',
+    '  border-radius: var(--radius-lg, 12px);',
     '  padding: 20px;',
-    '  box-shadow: var(--shadow-sm, 0 2px 8px rgba(26,58,42,0.04));',
+    '  box-shadow: var(--shadow-sm, 0 1px 3px rgba(44, 62, 48, 0.05));',
     '  border: 1px solid var(--border-light, #ece8e1);',
     '}',
     '.dash-dna-canvases {',
@@ -515,7 +515,7 @@ function injectDashboardStyles() {
     '}',
     '.dash-dna-canvas-wrap {',
     '  position: relative;',
-    '  background: linear-gradient(135deg, #faf7f2 0%, #f5f0e6 100%);',
+    '  background: var(--color-bg-warm, #f5f0e8);',
     '  border-radius: 12px;',
     '  padding: 8px;',
     '  border: 1px solid var(--border-light, #ece8e1);',
@@ -567,7 +567,7 @@ function injectDashboardStyles() {
     '  border: 1px solid var(--border-default, #e0dcd5);',
     '  background: var(--surface-primary, #fff);',
     '  color: var(--text-secondary, #4a4a4a);',
-    '  border-radius: 10px;',
+    '  border-radius: 8px;',
     '  font-size: 0.82rem;',
     '  font-weight: 500;',
     '  cursor: pointer;',
@@ -593,7 +593,7 @@ function injectDashboardStyles() {
     '  align-items: center;',
     '  gap: 14px;',
     '  padding: 12px 16px;',
-    '  background: linear-gradient(135deg, #faf7f2 0%, #f0ebe0 100%);',
+    '  background: var(--color-bg-warm, #f5f0e8);',
     '  border-radius: 16px;',
     '  border: 1px solid var(--border-light, #ece8e1);',
     '  margin-bottom: 14px;',
@@ -607,7 +607,7 @@ function injectDashboardStyles() {
     '  background: var(--color-sage, #5a7d5c);',
     '  color: #fff;',
     '  border: none;',
-    '  border-radius: 10px;',
+    '  border-radius: 8px;',
     '  font-size: 0.85rem;',
     '  font-weight: 600;',
     '  cursor: pointer;',
@@ -620,7 +620,7 @@ function injectDashboardStyles() {
     '  gap: 10px;',
     '  padding: 8px 12px;',
     '  background: rgba(196, 149, 106, 0.07);',
-    '  border-radius: 10px;',
+    '  border-radius: 8px;',
     '  font-size: 0.82rem;',
     '  margin-top: 8px;',
     '}',
@@ -856,7 +856,7 @@ function _renderBioScoreBars(components) {
  */
 function _loadForecast(container) {
   if (!container) return;
-  container.innerHTML = '<div class="dash-forecast-loading">🔮 AI 正在分析考点趋势...</div>';
+  container.innerHTML = '<div class="dash-forecast-loading">AI 正在分析考点趋势...</div>';
 
   // 收集用户薄弱模块
   var stats = _getUserStats();
@@ -1003,10 +1003,10 @@ function renderDashboardPage(target) {
 
   // 模块掌握度排名
   var moduleLabels = {
-    'module_1': { name: '生化与细胞', icon: '🧬', color: '#5a7bc4' },
-    'module_2': { name: '植物与微生物', icon: '🌱', color: '#5aaa5a' },
-    'module_3': { name: '动物与生态', icon: '🐾', color: '#c45a7a' },
-    'module_4': { name: '遗传与进化', icon: '🧪', color: '#c47a4a' }
+    'module_1': { name: '生化与细胞', color: '#5a7bc4' },
+    'module_2': { name: '植物与微生物', color: '#5aaa5a' },
+    'module_3': { name: '动物与生态', color: '#c45a7a' },
+    'module_4': { name: '遗传与进化', color: '#c47a4a' }
   };
   var weakModules = [];
   Object.keys(moduleLabels).forEach(function(key) {
@@ -1015,7 +1015,7 @@ function renderDashboardPage(target) {
     var correct = m.totalCorrect || 0;
     var acc = total > 0 ? Math.round(correct / total * 100) : -1;
     if (acc >= 0 && acc < 70) {
-      weakModules.push({ key: key, name: moduleLabels[key].name, icon: moduleLabels[key].icon, color: moduleLabels[key].color, acc: acc, total: total });
+      weakModules.push({ key: key, name: moduleLabels[key].name, color: moduleLabels[key].color, acc: acc, total: total });
     }
   });
   weakModules.sort(function(a, b) { return a.acc - b.acc; });
@@ -1120,7 +1120,6 @@ function renderDashboardPage(target) {
     topWeak.forEach(function(m) {
       var accColor = m.acc < 40 ? '#c45a5a' : m.acc < 60 ? '#c49a4a' : '#5a7d5c';
       html += '<div class="dash-weak-item" data-on=\'["navigateTo","/practice"]\'>' +
-        '<div class="dash-weak-icon" style="background:' + m.color + '22;color:' + m.color + ';">' + m.icon + '</div>' +
         '<div class="dash-weak-info"><div class="dash-weak-name">' + escapeHtml(m.name) + '</div>' +
         '<div class="dash-weak-desc">' + m.total + '题已练 · 建议加强</div></div>' +
         '<div class="dash-weak-acc" style="color:' + accColor + ';">' + m.acc + '%</div>' +
@@ -1132,14 +1131,14 @@ function renderDashboardPage(target) {
   // v4.0 学习 DNA + 情绪 DNA 双画像
   html += '<div class="dash-section">' +
     '<div class="dash-section-header">' +
-    '<span class="dash-section-title">🧬 学习 DNA 双画像</span>' +
+    '<span class="dash-section-title">学习 DNA 双画像</span>' +
     '<span class="dash-section-link" id="dash-dna-share-btn">分享卡片 ›</span>' +
     '</div>' +
     '<div class="dash-dna-section">' +
     '<div class="dash-dna-canvases">' +
     '<div class="dash-dna-canvas-wrap">' +
     '<canvas id="dash-dna-learning" width="280" height="220" aria-label="学习 DNA 双螺旋"></canvas>' +
-    '<div class="dash-dna-canvas-label">🧬 学习 DNA（左链） + 💚 情绪 DNA（右链）</div>' +
+    '<div class="dash-dna-canvas-label">学习 DNA（左链） + 情绪 DNA（右链）</div>' +
     '</div>' +
     '</div>' +
     '<div class="dash-dna-analysis" id="dash-dna-analysis">' +
@@ -1151,12 +1150,12 @@ function renderDashboardPage(target) {
     '<div class="dash-dna-analysis-block">压力指数: <strong id="dash-dna-stress">--</strong></div>' +
     '</div>' +
     '<div class="dash-dna-diagnosis" id="dash-dna-diagnosis" style="display:none;">' +
-    '<div class="dash-dna-diagnosis-title">💡 AI 诊断</div>' +
+    '<div class="dash-dna-diagnosis-title">AI 诊断</div>' +
     '<div id="dash-dna-diagnosis-text"></div>' +
     '</div>' +
     '<div class="dash-dna-actions">' +
-    '<button type="button" class="dash-dna-btn dash-dna-btn--primary" id="dash-dna-mood-btn">📝 情绪打卡</button>' +
-    '<button type="button" class="dash-dna-btn" id="dash-dna-share-btn-2">📤 生成分享卡片</button>' +
+    '<button type="button" class="dash-dna-btn dash-dna-btn--primary" id="dash-dna-mood-btn">情绪打卡</button>' +
+    '<button type="button" class="dash-dna-btn" id="dash-dna-share-btn-2">生成分享卡片</button>' +
     '</div>' +
     '</div>' +
     '</div>';
@@ -1168,18 +1167,15 @@ function renderDashboardPage(target) {
     '</div>' +
     '<div class="dash-plan-list">' +
     '<div class="dash-plan-item" data-on=\'["navigateTo","/practice"]\'>' +
-    '<span class="dash-plan-icon">📝</span>' +
     '<div class="dash-plan-info"><div class="dash-plan-title">每日练习</div>' +
     '<div class="dash-plan-desc">完成 ' + Math.max(0, dailyGoal - todayCount) + ' 题达到今日目标</div></div>' +
     '<span class="dash-plan-arrow">›</span></div>' +
     '<div class="dash-plan-item" data-on=\'["navigateTo","/review"]\'>' +
-    '<span class="dash-plan-icon">🔁</span>' +
     '<div class="dash-plan-info"><div class="dash-plan-title">复习错题</div>' +
     '<div class="dash-plan-desc">基于遗忘曲线的智能复习</div></div>' +
     '<span class="dash-plan-arrow">›</span></div>';
   if (topWeak.length > 0) {
     html += '<div class="dash-plan-item" data-on=\'["navigateTo","/practice"]\' style="border-left-color:#c45a5a;">' +
-      '<span class="dash-plan-icon">🎯</span>' +
       '<div class="dash-plan-info"><div class="dash-plan-title">专项突破</div>' +
       '<div class="dash-plan-desc">针对「' + escapeHtml(topWeak[0].name) + '」进行强化训练</div></div>' +
       '<span class="dash-plan-arrow">›</span></div>';
@@ -1207,12 +1203,11 @@ function renderDashboardPage(target) {
       '<div class="dash-trend-summary">' +
       '<span style="font-size:0.82rem;color:var(--text-muted);">平均正确率 <strong style="color:var(--color-deep);">' + avgAcc + '%</strong></span>' +
       '<span class="dash-trend-trend" style="color:' + (trendDirection === 'up' ? '#5a7d5c' : trendDirection === 'down' ? '#c45a5a' : 'var(--text-muted)') + ';">' +
-      (trendDirection === 'up' ? '↗ 上升中' : trendDirection === 'down' ? '↘ 需加油' : '→ 稳定') + '</span>' +
+      (trendDirection === 'up' ? '上升中' : trendDirection === 'down' ? '需加油' : '→ 稳定') + '</span>' +
       '</div></div>';
   } else {
     html += '<div class="dash-section">' +
       '<div class="dash-empty">' +
-      '<div class="dash-empty-icon">📊</div>' +
       '<div class="dash-empty-text">开始练习后，这里会展示你的学习趋势</div>' +
       '<button class="dash-goal-btn" data-on=\'["navigateTo","/practice"]\'>立即开始</button>' +
       '</div></div>';
@@ -1221,7 +1216,7 @@ function renderDashboardPage(target) {
   // AI 考点预测
   html += '<div class="dash-section">' +
     '<div class="dash-section-header">' +
-    '<span class="dash-section-title">🔮 AI 考点预测</span>' +
+    '<span class="dash-section-title">AI 考点预测</span>' +
     '<span class="dash-section-link" data-on=\'["navigateTo","/practice"]\'>去练习 ›</span>' +
     '</div>' +
     '<div id="dash-forecast-container"></div>' +
@@ -1291,8 +1286,8 @@ function _renderDNAPortrait(stats, bioScore) {
 
     // 5. 渲染双螺旋
     window.LearningDNA.renderDoubleHelix(canvas, learning.dna, mood.dna, {
-      label1: '🧬 学习',
-      label2: '💚 情绪'
+      label1: '学习',
+      label2: '情绪'
     });
 
     // 6. 填充分析数据

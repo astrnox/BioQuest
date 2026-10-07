@@ -63,7 +63,7 @@
       btn.textContent = '我知道了，继续浏览';
       btn.style.cssText =
         'margin-left:10px;border:1px solid #c4956a;background:#fff;color:#5a4320;' +
-        'border-radius:14px;padding:4px 14px;font-size:13px;cursor:pointer;vertical-align:middle;';
+        'border-radius:12px;padding:4px 14px;font-size:13px;cursor:pointer;vertical-align:middle;';
 
       notice.appendChild(text);
       notice.appendChild(btn);

@@ -78,7 +78,7 @@ if (typeof window._cspHoverOut !== 'function') {
     toast.id = 'community-toast';
     toast.style.cssText = 'position:fixed;bottom:80px;left:50%;transform:translateX(-50%);background:var(--color-error);color:#fff;padding:14px 20px;border-radius:12px;font-size:14px;z-index:10000;animation:fadeInUp 0.3s ease;max-width:92%;text-align:center;display:flex;flex-direction:column;gap:10px;align-items:center;';
     toast.innerHTML = '<div>' + escapeHtml(msg) + '</div>' +
-      '<button id="community-appeal-btn" style="background:#fff;color:var(--color-error);border:none;padding:6px 16px;border-radius:9999px;font-size:13px;font-weight:600;cursor:pointer;">我觉得被误判，提交申诉</button>';
+      '<button id="community-appeal-btn" style="background:#fff;color:var(--color-error);border:none;padding:6px 16px;border-radius:16px;font-size:13px;font-weight:600;cursor:pointer;">我觉得被误判，提交申诉</button>';
     document.body.appendChild(toast);
 
     var appealBtn = document.getElementById('community-appeal-btn');
@@ -118,14 +118,14 @@ if (typeof window._cspHoverOut !== 'function') {
       overlay.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:10001;display:flex;align-items:center;justify-content:center;padding:20px;';
 
       var panel = document.createElement('div');
-      panel.style.cssText = 'background:var(--color-white,#fff);border-radius:var(--radius-lg,20px);box-shadow:var(--shadow-lg,0 8px 32px rgba(0,0,0,0.2));max-width:480px;width:100%;padding:24px;';
+      panel.style.cssText = 'background:var(--color-white,#fff);border-radius:var(--radius-lg, 12px);box-shadow:var(--shadow-lg, 0 4px 16px rgba(44, 62, 48, 0.07));max-width:480px;width:100%;padding:24px;';
       panel.innerHTML =
         '<h3 style="margin:0 0 8px 0;font-size:1.15rem;color:var(--color-deep,#1a3a2a);">提交申诉</h3>' +
         '<p style="margin:0 0 16px 0;font-size:0.9rem;color:var(--text-secondary,#4a4a4a);">请说明为什么你认为这条内容没有违规（可选）</p>' +
-        '<textarea id="community-appeal-input" rows="4" placeholder="例如：该内容是学术讨论，不含违规信息..." style="width:100%;box-sizing:border-box;padding:10px 14px;border:1px solid var(--border-default,#ddd);border-radius:var(--radius-sm,6px);font-size:0.9rem;font-family:inherit;resize:vertical;outline:none;"></textarea>' +
+        '<textarea id="community-appeal-input" rows="4" placeholder="例如：该内容是学术讨论，不含违规信息..." style="width:100%;box-sizing:border-box;padding:10px 14px;border:1px solid var(--border-default,#ddd);border-radius:var(--radius-sm, 4px);font-size:0.9rem;font-family:inherit;resize:vertical;outline:none;"></textarea>' +
         '<div style="display:flex;justify-content:flex-end;gap:10px;margin-top:16px;">' +
-          '<button id="community-appeal-cancel" type="button" style="padding:8px 18px;border:1px solid var(--border-default,#ddd);background:transparent;color:var(--text-secondary,#4a4a4a);border-radius:var(--radius-sm,6px);cursor:pointer;font-size:0.9rem;">取消</button>' +
-          '<button id="community-appeal-submit" type="button" style="padding:8px 18px;border:none;background:var(--color-primary,#4a7c59);color:#fff;border-radius:var(--radius-sm,6px);cursor:pointer;font-size:0.9rem;font-weight:600;">提交申诉</button>' +
+          '<button id="community-appeal-cancel" type="button" style="padding:8px 18px;border:1px solid var(--border-default,#ddd);background:transparent;color:var(--text-secondary,#4a4a4a);border-radius:var(--radius-sm, 4px);cursor:pointer;font-size:0.9rem;">取消</button>' +
+          '<button id="community-appeal-submit" type="button" style="padding:8px 18px;border:none;background:var(--color-primary,#4a7c59);color:#fff;border-radius:var(--radius-sm, 4px);cursor:pointer;font-size:0.9rem;font-weight:600;">提交申诉</button>' +
         '</div>';
 
       overlay.appendChild(panel);
@@ -390,11 +390,11 @@ if (typeof window._cspHoverOut !== 'function') {
 \
       .community-post-btn:hover {\
         transform: translateY(-1px);\
-        box-shadow: 0 4px 14px rgba(90, 125, 92, 0.35);\
+        box-shadow: var(--shadow-md);\
       }\
 \
       .community-login-banner {\
-        background: linear-gradient(135deg, rgba(90,125,92,0.06), rgba(90,125,92,0.02));\
+        background: rgba(90,125,92,0.06);\
         border: 1px solid rgba(90,125,92,0.15);\
         border-radius: var(--radius-md);\
         padding: 14px 18px;\
@@ -424,7 +424,7 @@ if (typeof window._cspHoverOut !== 'function') {
       }\
 \
       .community-login-banner-btn:hover {\
-        box-shadow: 0 2px 8px rgba(90, 125, 92, 0.3);\
+        box-shadow: var(--shadow-md);\
       }\
 \
       /* ===== 标签筛选 ===== */\
@@ -532,7 +532,7 @@ if (typeof window._cspHoverOut !== 'function') {
       }\
 \
       .community-post-card.pinned {\
-        background: linear-gradient(135deg, rgba(196,149,106,0.03), var(--surface-primary));\
+        background: var(--color-warm-50, #fdf5ee);\
         border-left: 0;\
       }\
 \
@@ -818,7 +818,7 @@ if (typeof window._cspHoverOut !== 'function') {
         gap: 8px;\
         padding: 8px 14px;\
         border: 1px dashed var(--border-default);\
-        border-radius: 14px;\
+        border-radius: 12px;\
         background: var(--surface-secondary, #fafaf8);\
         font-size: 0.8rem;\
         color: var(--text-secondary);\
@@ -829,7 +829,7 @@ if (typeof window._cspHoverOut !== 'function') {
         color: #fff;\
         border: none;\
         padding: 5px 14px;\
-        border-radius: 9999px;\
+        border-radius: 16px;\
         font-size: 0.78rem;\
         font-weight: 500;\
         cursor: pointer;\
@@ -838,7 +838,7 @@ if (typeof window._cspHoverOut !== 'function') {
       }\
 \
       .community-comment-login-btn:hover {\
-        box-shadow: 0 2px 8px rgba(90, 125, 92, 0.3);\
+        box-shadow: var(--shadow-md);\
       }\
 \
       .community-comment-input:focus {\
@@ -851,7 +851,7 @@ if (typeof window._cspHoverOut !== 'function') {
         color: #fff;\
         border: none;\
         padding: 7px 14px;\
-        border-radius: 20px;\
+        border-radius: 16px;\
         font-size: 0.8rem;\
         font-weight: 500;\
         cursor: pointer;\
@@ -860,7 +860,7 @@ if (typeof window._cspHoverOut !== 'function') {
       }\
 \
       .community-comment-submit:hover {\
-        box-shadow: 0 2px 8px rgba(90, 125, 92, 0.3);\
+        box-shadow: var(--shadow-md);\
       }\
 \
       /* 浮动发布按钮 */\
@@ -879,13 +879,13 @@ if (typeof window._cspHoverOut !== 'function') {
         display: flex;\
         align-items: center;\
         justify-content: center;\
-        box-shadow: 0 4px 16px rgba(90,125,92,0.4);\
+        box-shadow: var(--shadow-lg);\
         transition: all 0.25s ease;\
       }\
 \
       .community-float-publish:hover {\
         transform: translateY(-2px) scale(1.05);\
-        box-shadow: 0 6px 22px rgba(90,125,92,0.5);\
+        box-shadow: var(--shadow-lg);\
       }\
 \
       .community-float-publish svg {\
@@ -1045,7 +1045,7 @@ if (typeof window._cspHoverOut !== 'function') {
       }\
 \
       .community-compose-submit-btn:hover {\
-        box-shadow: 0 2px 10px rgba(90,125,92,0.3);\
+        box-shadow: var(--shadow-md);\
       }\
 \
       .community-compose-submit-btn:disabled {\
@@ -1572,7 +1572,7 @@ if (typeof window._cspHoverOut !== 'function') {
     var overlay = document.createElement('div');
     overlay.id = 'community-lightbox';
     overlay.style.cssText = 'position:fixed;inset:0;z-index:10002;background:rgba(0,0,0,0.85);display:flex;align-items:center;justify-content:center;cursor:pointer;padding:20px;animation:communityFadeIn 0.2s ease;';
-    overlay.innerHTML = '<img src="' + escapeHtml(src) + '" alt="' + escapeHtml(alt || '') + '" style="max-width:100%;max-height:100%;object-fit:contain;border-radius:8px;box-shadow:0 8px 32px rgba(0,0,0,0.5);">';
+    overlay.innerHTML = '<img src="' + escapeHtml(src) + '" alt="' + escapeHtml(alt || '') + '" style="max-width:100%;max-height:100%;object-fit:contain;border-radius:8px;box-shadow:var(--shadow-floating);">';
     document.body.appendChild(overlay);
     document.body.style.overflow = 'hidden';
 
@@ -2645,14 +2645,14 @@ if (typeof window._cspHoverOut !== 'function') {
       '<button class="community-compose-close" id="community-compose-close">&times;</button>' +
       '</div>' +
       '<div class="community-compose-md-toolbar" style="display:flex;gap:4px;flex-wrap:wrap;margin-bottom:8px;padding:6px;background:var(--color-cream-dark,#f0ebe0);border-radius:8px;">' +
-        '<button type="button" class="community-md-btn" data-md="bold" title="加粗 (Ctrl+B)" style="padding:4px 10px;border:none;background:transparent;border-radius:6px;cursor:pointer;font-weight:700;font-size:0.85rem;color:var(--text-primary);"><b>B</b></button>' +
-        '<button type="button" class="community-md-btn" data-md="italic" title="斜体 (Ctrl+I)" style="padding:4px 10px;border:none;background:transparent;border-radius:6px;cursor:pointer;font-style:italic;font-size:0.85rem;color:var(--text-primary);"><i>I</i></button>' +
-        '<button type="button" class="community-md-btn" data-md="code" title="行内代码" style="padding:4px 10px;border:none;background:transparent;border-radius:6px;cursor:pointer;font-family:monospace;font-size:0.85rem;color:var(--text-primary);">&lt;/&gt;</button>' +
-        '<button type="button" class="community-md-btn" data-md="h2" title="标题" style="padding:4px 10px;border:none;background:transparent;border-radius:6px;cursor:pointer;font-size:0.85rem;color:var(--text-primary);">H</button>' +
-        '<button type="button" class="community-md-btn" data-md="quote" title="引用" style="padding:4px 10px;border:none;background:transparent;border-radius:6px;cursor:pointer;font-size:0.85rem;color:var(--text-primary);">❝</button>' +
-        '<button type="button" class="community-md-btn" data-md="list" title="列表" style="padding:4px 10px;border:none;background:transparent;border-radius:6px;cursor:pointer;font-size:0.85rem;color:var(--text-primary);">•</button>' +
-        '<button type="button" class="community-md-btn" data-md="link" title="链接" style="padding:4px 10px;border:none;background:transparent;border-radius:6px;cursor:pointer;font-size:0.85rem;color:var(--text-primary);">🔗</button>' +
-        '<button type="button" class="community-md-btn" data-md="image" title="图片" style="padding:4px 10px;border:none;background:transparent;border-radius:6px;cursor:pointer;font-size:0.85rem;color:var(--text-primary);">🖼</button>' +
+        '<button type="button" class="community-md-btn" data-md="bold" title="加粗 (Ctrl+B)" style="padding:4px 10px;border:none;background:transparent;border-radius:8px;cursor:pointer;font-weight:700;font-size:0.85rem;color:var(--text-primary);"><b>B</b></button>' +
+        '<button type="button" class="community-md-btn" data-md="italic" title="斜体 (Ctrl+I)" style="padding:4px 10px;border:none;background:transparent;border-radius:8px;cursor:pointer;font-style:italic;font-size:0.85rem;color:var(--text-primary);"><i>I</i></button>' +
+        '<button type="button" class="community-md-btn" data-md="code" title="行内代码" style="padding:4px 10px;border:none;background:transparent;border-radius:8px;cursor:pointer;font-family:monospace;font-size:0.85rem;color:var(--text-primary);">&lt;/&gt;</button>' +
+        '<button type="button" class="community-md-btn" data-md="h2" title="标题" style="padding:4px 10px;border:none;background:transparent;border-radius:8px;cursor:pointer;font-size:0.85rem;color:var(--text-primary);">H</button>' +
+        '<button type="button" class="community-md-btn" data-md="quote" title="引用" style="padding:4px 10px;border:none;background:transparent;border-radius:8px;cursor:pointer;font-size:0.85rem;color:var(--text-primary);">❝</button>' +
+        '<button type="button" class="community-md-btn" data-md="list" title="列表" style="padding:4px 10px;border:none;background:transparent;border-radius:8px;cursor:pointer;font-size:0.85rem;color:var(--text-primary);">•</button>' +
+        '<button type="button" class="community-md-btn" data-md="link" title="链接" style="padding:4px 10px;border:none;background:transparent;border-radius:8px;cursor:pointer;font-size:0.85rem;color:var(--text-primary);">链接</button>' +
+        '<button type="button" class="community-md-btn" data-md="image" title="图片" style="padding:4px 10px;border:none;background:transparent;border-radius:8px;cursor:pointer;font-size:0.85rem;color:var(--text-primary);">图片</button>' +
       '</div>' +
       '<textarea class="community-compose-textarea" id="community-compose-textarea" placeholder="分享你的学习心得、提问或讨论...&#10;&#10;支持 Markdown：**加粗** *斜体* `代码` # 标题 > 引用 - 列表 [链接](url) ![图片](url)"></textarea>' +
       '<div class="community-compose-toolbar">' +

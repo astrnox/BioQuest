@@ -50,7 +50,7 @@ button,
   background-color: var(--color-surface);
   background-image: none;
   z-index: 101;
-  box-shadow: -16px 0 48px rgba(20, 30, 20, 0.22);
+  box-shadow: var(--shadow-floating);
   border-left: 1px solid var(--color-border-light, rgba(0, 0, 0, 0.08));
   transform: translateX(102%);
   opacity: 1;
@@ -79,7 +79,7 @@ button,
 .mn-brand { display: flex; align-items: center; gap: 10px; }
 .mn-brand-name { font-family: var(--font-serif); font-weight: 700; font-size: 1.15rem; color: var(--color-deep, #1a2f1d); }
 .mn-close {
-  width: 34px; height: 34px; border: none; border-radius: 10px;
+  width: 34px; height: 34px; border: none; border-radius: 8px;
   background: var(--color-surface-sunken, rgba(0, 0, 0, 0.05));
   color: var(--color-text-muted, #8a8578);
   font-size: 1.05rem; line-height: 1; cursor: pointer;

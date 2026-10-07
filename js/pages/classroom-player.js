@@ -91,7 +91,7 @@
       '<div class="classroom-header">',
       '  <div class="classroom-title">AI 生物课堂</div>',
       '  <div class="classroom-actions">',
-      '    <button id="cls-tts-toggle" class="cls-btn" title="语音讲解">🔊</button>',
+      '    <button id="cls-tts-toggle" class="cls-btn" title="语音讲解">语音</button>',
       '    <button id="cls-close" class="cls-btn" title="退出课堂">✕</button>',
       '  </div>',
       '</div>',
@@ -138,19 +138,10 @@
     var tabs = ol.scenes.map(function (s, i) {
       return '<button class="cls-tab" data-idx="' + i + '" title="' + s.title + '">'
         + '<span class="cls-tab-num">' + (i + 1) + '</span>'
-        + '<span class="cls-tab-name">' + _sceneIcon(s.type) + ' ' + s.title + '</span>'
+        + '<span class="cls-tab-name">' + s.title + '</span>'
         + '</button>';
     }).join('');
     elements.sceneTabs.innerHTML = tabs;
-  }
-
-  function _sceneIcon(type) {
-    return ({
-      intro: '💡', lecture: '📖', simulate: '🔬',
-      discuss: '💬', quiz: '✏️', pbl: '🎯',
-      // v4.0 新增类型
-      animation: '🎬', discussion: '💬'
-    })[type] || '•';
   }
 
   // ====== 启动课堂 ======
@@ -161,7 +152,7 @@
         _updateProgress(idx, ol.scenes.length);
         _markTabActive(idx);
         _renderStageForScene(scene);
-        _addDialogMessage('system', '📚 进入第 ' + (idx + 1) + ' 段：' + scene.title);
+        _addDialogMessage('system', '进入第 ' + (idx + 1) + ' 段：' + scene.title);
       },
       onScriptChunk: function (chunk) {
         // 流式追加到当前消息（如启用流式）
@@ -194,7 +185,7 @@
         if (scene.type === 'quiz' && result) {
           _addDialogMessage('system', '测验完成：' + (result.correct || 0) + '/' + (result.total || 0) + ' 正确');
         } else if (scene.type === 'discuss') {
-          _addDialogMessage('system', '💬 讨论环节结束');
+          _addDialogMessage('system', '讨论环节结束');
         }
       },
       onClassroomEnd: function (data) {
@@ -215,7 +206,7 @@
         _updateProgress(idx, ol.scenes.length);
         _markTabActive(idx);
         _renderStageForScene(scene);
-        _addDialogMessage('system', '📚 进入第 ' + (idx + 1) + ' 段：' + scene.title);
+        _addDialogMessage('system', '进入第 ' + (idx + 1) + ' 段：' + scene.title);
       },
       onScriptChunk: function (text) {
         // v4 文本段会通过 renderText 流式追加到对话框
@@ -242,7 +233,7 @@
         if (scene.type === 'quiz' && result) {
           _addDialogMessage('system', '测验完成：' + (result.correct || 0) + '/' + (result.total || 0) + ' 正确');
         } else if (scene.type === 'discussion' || scene.type === 'discuss') {
-          _addDialogMessage('system', '💬 讨论环节结束');
+          _addDialogMessage('system', '讨论环节结束');
         }
       },
       onClassroomEnd: function (data) {
@@ -279,7 +270,7 @@
               resolve();
             }, 2500);
           } else {
-            _addDialogMessage('system', '📍 高亮：' + selector);
+            _addDialogMessage('system', '高亮：' + selector);
             setTimeout(resolve, 800);
           }
         });
@@ -290,9 +281,9 @@
           if (window.KnowledgeGraphController) {
             var ok = window.KnowledgeGraphController.highlightNodeById(nodeId)
               || window.KnowledgeGraphController.highlightNodeByLabel(nodeId);
-            if (ok) _addDialogMessage('system', '✨ 知识图谱节点已点亮：' + nodeId);
+            if (ok) _addDialogMessage('system', '知识图谱节点已点亮：' + nodeId);
           } else {
-            _addDialogMessage('system', '✨ 点亮节点：' + nodeId);
+            _addDialogMessage('system', '点亮节点：' + nodeId);
           }
           setTimeout(resolve, 1500);
         });
@@ -329,7 +320,7 @@
             } catch (e) { resolve(); }
           } else {
             // TTS 不可用：在对话框显示音频图标 + 文本
-            _addDialogMessage('system', '🔊 ' + text);
+            _addDialogMessage('system', text);
             setTimeout(resolve, 500);
           }
         });
@@ -340,12 +331,12 @@
           if (window.BioAnimationController && typeof window.BioAnimationController.setProcessByName === 'function') {
             try {
               window.BioAnimationController.setProcessByName(animationId);
-              _addDialogMessage('system', '🎬 播放动画：' + animationId);
+              _addDialogMessage('system', '播放动画：' + animationId);
             } catch (e) {
-              _addDialogMessage('system', '🎬 动画播放失败：' + animationId);
+              _addDialogMessage('system', '动画播放失败：' + animationId);
             }
           } else {
-            _addDialogMessage('system', '🎬 动画：' + animationId + '（动画模块未加载）');
+            _addDialogMessage('system', '动画：' + animationId + '（动画模块未加载）');
           }
           setTimeout(resolve, 1000);
         });
@@ -382,11 +373,11 @@
           });
           var concept = params.concept || (outline && outline.topic) || '';
           var count = parseInt(params.count || '3', 10);
-          _addDialogMessage('system', '✏️ 推送 ' + count + ' 道关于「' + concept + '」的测验题');
+          _addDialogMessage('system', '推送 ' + count + ' 道关于「' + concept + '」的测验题');
           // 走和 quiz scene 一样的拉题 + 渲染流程
           var stage = elements.stage;
           if (stage) {
-            stage.innerHTML = '<div class="cls-quiz-wrap" style="padding:24px;overflow:auto;height:100%;"><p style="color:#666;">⏳ 正在加载「' + _escapeHtml(concept) + '」相关题目...</p></div>';
+            stage.innerHTML = '<div class="cls-quiz-wrap" style="padding:24px;overflow:auto;height:100%;"><p style="color:#666;">正在加载「' + _escapeHtml(concept) + '」相关题目...</p></div>';
             _loadQuestionsByTag(concept, count).then(function (set) {
               if (!set || !set.length) {
                 stage.querySelector('.cls-quiz-wrap').innerHTML = '<p style="color:#d44;">未找到相关题目，跳过测验。</p>';
@@ -407,7 +398,7 @@
       // 触发多智能体讨论
       discuss: function (topic) {
         return new Promise(function (resolve) {
-          _addDialogMessage('system', '💬 启动讨论：' + topic);
+          _addDialogMessage('system', '启动讨论：' + topic);
           if (window.MultiAgentDiscussion && typeof window.MultiAgentDiscussion.runDiscussion === 'function') {
             window.MultiAgentDiscussion.runDiscussion({
               topic: (outline && outline.topic) || '',
@@ -440,7 +431,7 @@
       // 路由跳转
       navigate: function (route) {
         return new Promise(function (resolve) {
-          _addDialogMessage('system', '🔗 跳转到：' + route);
+          _addDialogMessage('system', '跳转到：' + route);
           // 不在课堂中直接跳转（会破坏课堂 UI），仅提示用户
           setTimeout(resolve, 500);
         });
@@ -461,7 +452,7 @@
       var msg = document.createElement('div');
       msg.className = 'cls-msg cls-msg-teacher';
       msg.style.cssText = 'margin:8px 0;padding:10px 12px;background:#fff;border:1px solid #eee;border-radius:8px;font-size:14px;line-height:1.6;';
-      msg.innerHTML = '<div style="font-weight:600;font-size:12px;color:#4a7c59;margin-bottom:4px;">🎤 主讲老师</div><div class="cls-streaming"></div>';
+      msg.innerHTML = '<div style="font-weight:600;font-size:12px;color:#4a7c59;margin-bottom:4px;">主讲老师</div><div class="cls-streaming"></div>';
       elements.dialog.appendChild(msg);
       _v4TeacherStreamEl = msg.querySelector('.cls-streaming');
       _v4TeacherStreamText = '';
@@ -501,8 +492,8 @@
       // animation 场景：额外准备动画容器（供 ACTION:play 注入）
       if (scene.type === 'animation' && scene.content && scene.content.animationId) {
         var animHint = document.createElement('div');
-        animHint.style.cssText = 'position:absolute;top:12px;right:12px;background:rgba(26,58,42,0.85);color:#fff;padding:6px 12px;border-radius:6px;font-size:12px;z-index:5;';
-        animHint.textContent = '🔬 动画：' + scene.content.animationId;
+        animHint.style.cssText = 'position:absolute;top:12px;right:12px;background:rgba(26,58,42,0.85);color:#fff;padding:6px 12px;border-radius:8px;font-size:12px;z-index:5;';
+        animHint.textContent = '动画：' + scene.content.animationId;
         stage.style.position = 'relative';
         stage.appendChild(animHint);
       }
@@ -521,7 +512,7 @@
 
   function _renderQuizStage(scene) {
     var stage = elements.stage;
-    stage.innerHTML = '<div class="cls-quiz-wrap" style="padding:24px;overflow:auto;height:100%;"><p style="color:#666;">⏳ 正在从题库按主题加载题目...</p></div>';
+    stage.innerHTML = '<div class="cls-quiz-wrap" style="padding:24px;overflow:auto;height:100%;"><p style="color:#666;">正在从题库按主题加载题目...</p></div>';
     var topic = (outline && outline.topic) || '';
     var count = (scene.content && scene.content.count) || 3;
 
@@ -622,7 +613,7 @@
     set.forEach(function (q, qi) {
       var card = document.createElement('div');
       card.className = 'cls-quiz-card';
-      card.style.cssText = 'background:#fff;border:1px solid #e8e8e8;border-radius:10px;padding:18px;margin-bottom:14px;';
+      card.style.cssText = 'background:#fff;border:1px solid #e8e8e8;border-radius:8px;padding:18px;margin-bottom:14px;';
 
       // 归一化 options 为 [{key:'A', text:'...'}] 数组
       var optList = [];
@@ -637,14 +628,14 @@
       }
 
       var optionsHtml = optList.map(function (opt) {
-        return '<label class="cls-quiz-opt" data-key="' + opt.key + '" style="display:block;padding:10px 12px;cursor:pointer;border-radius:6px;margin:4px 0;border:1px solid #eee;transition:background 0.15s;">'
+        return '<label class="cls-quiz-opt" data-key="' + opt.key + '" style="display:block;padding:10px 12px;cursor:pointer;border-radius:8px;margin:4px 0;border:1px solid #eee;transition:background 0.15s;">'
           + '<input type="radio" name="q' + qi + '" value="' + opt.key + '" style="margin-right:10px;">'
           + '<b>' + opt.key + '.</b> ' + _escapeHtml(opt.text) + '</label>';
       }).join('');
 
       card.innerHTML = '<div style="font-weight:600;margin-bottom:10px;color:#1a3a2a;font-size:15px;line-height:1.6;">Q' + (qi + 1) + '. ' + _escapeHtml(q.stem) + '</div>'
         + optionsHtml
-        + '<div class="cls-quiz-analysis" style="display:none;margin-top:12px;padding:12px;background:#f8f9fa;border-radius:6px;font-size:13px;color:#555;line-height:1.6;"></div>';
+        + '<div class="cls-quiz-analysis" style="display:none;margin-top:12px;padding:12px;background:#f8f9fa;border-radius:8px;font-size:13px;color:#555;line-height:1.6;"></div>';
       wrap.appendChild(card);
 
       var inputs = card.querySelectorAll('input[type=radio]');
@@ -703,13 +694,13 @@
 
   function _addDialogMessage(role, text) {
     var roleMap = {
-      teacher: { name: '主讲老师', icon: '🎤', cls: 'cls-msg-teacher' },
-      assistant: { name: '助教', icon: '🤔', cls: 'cls-msg-assistant' },
-      student_top: { name: '学霸同学', icon: '🎓', cls: 'cls-msg-student-top' },
-      student_confused: { name: '困惑同学', icon: '❓', cls: 'cls-msg-student-confused' },
-      student_app: { name: '应用同学', icon: '💡', cls: 'cls-msg-student-app' },
-      system: { name: '系统', icon: '📋', cls: 'cls-msg-system' },
-      user: { name: '我', icon: '🙋', cls: 'cls-msg-user' }
+      teacher: { name: '主讲老师', cls: 'cls-msg-teacher' },
+      assistant: { name: '助教', cls: 'cls-msg-assistant' },
+      student_top: { name: '学霸同学', cls: 'cls-msg-student-top' },
+      student_confused: { name: '困惑同学', cls: 'cls-msg-student-confused' },
+      student_app: { name: '应用同学', cls: 'cls-msg-student-app' },
+      system: { name: '系统', cls: 'cls-msg-system' },
+      user: { name: '我', cls: 'cls-msg-user' }
     };
     var cfg = roleMap[role] || roleMap.system;
     var msg = document.createElement('div');
@@ -724,7 +715,7 @@
     } else {
       msg.style.background = role === 'user' ? '#e8f5e9' : '#fff';
       msg.style.border = '1px solid #eee';
-      msg.innerHTML = '<div style="font-weight:600;font-size:12px;color:#4a7c59;margin-bottom:4px;">' + cfg.icon + ' ' + cfg.name + '</div>'
+      msg.innerHTML = '<div style="font-weight:600;font-size:12px;color:#4a7c59;margin-bottom:4px;">' + cfg.name + '</div>'
         + '<div>' + _escapeHtml(text) + '</div>';
     }
     elements.dialog.appendChild(msg);
@@ -758,10 +749,10 @@
       }
       if (TTS.isEnabled()) {
         TTS.disable();
-        elements.ttsToggle.textContent = '🔇';
+        elements.ttsToggle.textContent = '静音';
       } else {
         TTS.enable();
-        elements.ttsToggle.textContent = '🔊';
+        elements.ttsToggle.textContent = '语音';
         _addDialogMessage('system', '已开启语音讲解');
       }
     };
@@ -802,7 +793,7 @@
     var msgEl = document.createElement('div');
     msgEl.className = 'cls-msg cls-msg-teacher';
     msgEl.style.cssText = 'margin:8px 0;padding:10px 12px;background:#fff;border:1px solid #eee;border-radius:8px;font-size:14px;';
-    msgEl.innerHTML = '<div style="font-weight:600;font-size:12px;color:#4a7c59;margin-bottom:4px;">🎤 主讲老师</div><div class="cls-streaming"></div>';
+    msgEl.innerHTML = '<div style="font-weight:600;font-size:12px;color:#4a7c59;margin-bottom:4px;">主讲老师</div><div class="cls-streaming"></div>';
     elements.dialog.appendChild(msgEl);
     var streamTarget = msgEl.querySelector('.cls-streaming');
     var acc = '';
@@ -840,7 +831,7 @@
       if (window.KnowledgeGraphController) {
         var ok = window.KnowledgeGraphController.highlightNodeById(nodeId)
           || window.KnowledgeGraphController.highlightNodeByLabel(nodeId);
-        if (ok) _addDialogMessage('system', '✨ 知识图谱节点已点亮');
+        if (ok) _addDialogMessage('system', '知识图谱节点已点亮');
       }
     });
     EventBus.on(EventBus.ACTION.HIGHLIGHT_KG_SUBGRAPH, function (nodeIds) {
@@ -851,7 +842,7 @@
 
     // T1-6: 实验演示（简化为提示）
     EventBus.on(EventBus.ACTION.LAB_RUN_STEP, function (expId, stepIdx) {
-      _addDialogMessage('system', '🔬 实验演示：' + expId + ' 第 ' + (stepIdx + 1) + ' 步');
+      _addDialogMessage('system', '实验演示：' + expId + ' 第 ' + (stepIdx + 1) + ' 步');
     });
 
     // T1-7: 推送测验题（已由 orchestrator 触发 quiz scene，这里仅提示）
@@ -894,7 +885,6 @@
 
     stage.innerHTML = [
       '<div style="padding:32px;text-align:center;overflow:auto;height:100%;">',
-      '  <div style="font-size:48px;">🎉</div>',
       '  <h2 style="margin:12px 0;">课堂完成！</h2>',
       '  <p style="color:#666;">' + (outline ? outline.title : '') + '</p>',
       '  <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:16px;max-width:480px;margin:24px auto;">',
@@ -911,7 +901,7 @@
       '  </div>',
       '</div>'
     ].join('');
-    elements.dialog.innerHTML = '<div class="cls-msg cls-msg-system" style="text-align:center;color:#666;">🎉 课堂已结束，查看你的学习数据</div>';
+    elements.dialog.innerHTML = '<div class="cls-msg cls-msg-system" style="text-align:center;color:#666;">课堂已结束，查看你的学习数据</div>';
   }
 
   // ====== 辅助 ======

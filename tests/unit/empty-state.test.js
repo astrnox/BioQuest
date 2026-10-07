@@ -2,9 +2,9 @@
  * BioQuest — Issue #125（P3-22）统一「温暖空状态」组件单元测试
  *
  * 覆盖：
- *   1. emptyStateHTML 基本结构（icon / title / hint / 行动按钮）；
- *   2. 无参数时的默认文案与图标兜底；
- *   3. pickIcon 按关键词智能选图标；
+ *   1. emptyStateHTML 基本结构（title / hint / 行动按钮）；
+ *   2. 无参数时的默认文案；
+ *   3. 不渲染装饰性 emoji 图标；
  *   4. escapeHtml 转义，防止注入；
  *   5. renderEmptyState 写入容器并注册事件委托；
  *   6. 全局 click 委托触发 action.onClick（不依赖内联脚本，符合 CSP）。
@@ -45,7 +45,7 @@ function loadHarness() {
 }
 
 describe('Issue #125 统一空状态组件', () => {
-  test('emptyStateHTML 渲染完整结构（icon + title + hint + action）', () => {
+  test('emptyStateHTML 渲染完整结构（title + hint + action）', () => {
     const { api } = loadHarness();
     const html = api.emptyStateHTML({
       title: '暂无错题记录',
@@ -66,19 +66,11 @@ describe('Issue #125 统一空状态组件', () => {
     expect(html).not.toContain('data-empty-action');
   });
 
-  test('pickIcon 按标题关键词选择生物主题图标', () => {
+  test('不再渲染装饰性 emoji 图标', () => {
     const { api } = loadHarness();
-    expect(api.emptyStateHTML({ title: '暂无收藏题目' })).toContain('⭐');
-    expect(api.emptyStateHTML({ title: '暂无错题' })).toContain('🐞');
-    expect(api.emptyStateHTML({ title: '排行榜未上榜' })).toContain('📈');
-    expect(api.emptyStateHTML({ title: '打卡记录' })).toContain('🔥');
-  });
-
-  test('显式 icon 优先于关键词推断', () => {
-    const { api } = loadHarness();
-    const html = api.emptyStateHTML({ title: '暂无错题', icon: '🧬' });
-    expect(html).toContain('🧬');
-    expect(html).not.toContain('🐞');
+    const html = api.emptyStateHTML({ title: '暂无收藏题目' });
+    expect(html).not.toContain('bq-empty-icon');
+    expect(html).not.toMatch(/\p{Emoji_Presentation}/u);
   });
 
   test('标题与按钮文本均做 HTML 转义，防注入', () => {

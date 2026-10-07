@@ -156,7 +156,7 @@ function renderPrivacyPage(target) {
   target.innerHTML =
   '<div style="max-width:860px;margin:0 auto;padding:40px 20px 64px;font-family:var(--font-sans,\'Noto Sans SC\',sans-serif);color:' + s.text + ';line-height:1.8;">' +
     '<a href="#/" style="display:inline-flex;align-items:center;gap:6px;color:' + s.sage + ';text-decoration:none;font-size:0.88rem;margin-bottom:20px;">← 返回首页</a>' +
-    '<div style="background:' + s.card + ';border:1px solid ' + s.border + ';border-radius:16px;padding:36px 40px 44px;box-shadow:0 4px 20px rgba(0,0,0,0.04);">' +
+    '<div style="background:' + s.card + ';border:1px solid ' + s.border + ';border-radius:16px;padding:36px 40px 44px;box-shadow:var(--shadow-lg);">' +
       '<h1 style="font-family:var(--font-serif,\'Noto Serif SC\',serif);font-size:1.7rem;color:' + s.accent + ';margin:0 0 6px;">隐私政策</h1>' +
       '<p style="color:' + s.muted + ';font-size:0.82rem;margin:0 0 26px;">更新日期：2026-08-19 · 适用于 BioQuest（生物竞赛学习平台）</p>' +
       _privacySection('一、我们收集哪些数据', [
@@ -232,7 +232,7 @@ function _maybeShowPrivacyNotice() {
     el.setAttribute('aria-live', 'polite');
     el.style.cssText = 'position:fixed;left:12px;right:12px;bottom:12px;z-index:2147483000;' +
       'display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:14px 16px;border-radius:12px;' +
-      'background:#ffffff;border:1px solid #ece8e1;box-shadow:0 6px 24px rgba(0,0,0,0.12);' +
+      'background:#ffffff;border:1px solid #ece8e1;box-shadow:var(--shadow-lg);' +
       'font-family:var(--font-sans, sans-serif);font-size:0.85rem;color:#2c3e30;line-height:1.5;max-width:640px;margin:0 auto;';
     var txt = document.createElement('span');
     txt.style.cssText = 'flex:1 1 100%;';
@@ -1527,7 +1527,6 @@ function _denyRouteAccess(route, access) {
   target.innerHTML =
     '<div class="animate-fade-in" style="display:flex;align-items:center;justify-content:center;min-height:60vh;">' +
       '<div style="text-align:center;max-width:420px;padding:48px 32px;">' +
-        '<div style="font-size:3.5rem;margin-bottom:16px;">' + (denied ? '🔒' : '👋') + '</div>' +
         '<div style="font-family:var(--font-serif,\'Noto Serif SC\',serif);font-size:1.4rem;font-weight:700;color:var(--color-deep,#1a3a2a);margin-bottom:8px;">' +
           (denied ? '权限不足' : '请先登录') +
         '</div>' +
@@ -1535,8 +1534,8 @@ function _denyRouteAccess(route, access) {
           (denied ? '需要管理员权限才能访问此页面' : '登录后即可访问此页面') +
         '</div>' +
         '<div style="display:flex;gap:16px;justify-content:center;">' +
-          '<button id="routeAccessLoginBtn" style="display:inline-flex;align-items:center;gap:8px;padding:14px 30px;border:none;border-radius:24px;background:linear-gradient(135deg,var(--color-sage,#5a7d5c),var(--color-deep,#1a3a2a));color:#fff;font-size:1rem;font-weight:600;cursor:pointer;box-shadow:0 4px 16px rgba(26,58,42,0.2);">' + (denied ? '切换账号' : '立即登录') + '</button>' +
-          '<button id="routeAccessHomeBtn" style="display:inline-flex;align-items:center;gap:8px;padding:14px 30px;border:1px solid var(--border-light,#ece8e1);border-radius:24px;background:var(--bg-card,#fff);color:var(--text-primary,#1a2f1d);font-size:1rem;font-weight:600;cursor:pointer;">返回首页</button>' +
+          '<button id="routeAccessLoginBtn" style="display:inline-flex;align-items:center;gap:8px;padding:14px 30px;border:none;border-radius:16px;background:var(--color-sage,#5a7d5c);color:#fff;font-size:1rem;font-weight:600;cursor:pointer;box-shadow:var(--shadow-lg);">' + (denied ? '切换账号' : '立即登录') + '</button>' +
+          '<button id="routeAccessHomeBtn" style="display:inline-flex;align-items:center;gap:8px;padding:14px 30px;border:1px solid var(--border-light,#ece8e1);border-radius:16px;background:var(--bg-card,#fff);color:var(--text-primary,#1a2f1d);font-size:1rem;font-weight:600;cursor:pointer;">返回首页</button>' +
         '</div>' +
       '</div>' +
     '</div>';
@@ -2112,7 +2111,7 @@ function doRouteRender(route, target) {
         '<div style="font-size:48px;margin-bottom:16px;opacity:0.3;">需要登录</div>' +
         '<h2 style="font-size:20px;font-weight:600;margin-bottom:8px;">权限不足</h2>' +
         '<p style="font-size:14px;color:var(--text-secondary);margin-bottom:20px;">此功能需要【' + (groupLabels[requiredGroup] || requiredGroup) + '】及以上权限</p>' +
-        '<button data-on=\'["_cspShowAuth"]\' style="background:var(--color-sage);color:#fff;border:none;padding:10px 24px;border-radius:20px;cursor:pointer;">升级权限</button>' +
+        '<button data-on=\'["_cspShowAuth"]\' style="background:var(--color-sage);color:#fff;border:none;padding:10px 24px;border-radius:16px;cursor:pointer;">升级权限</button>' +
         '</div>';
       return;
     }
@@ -2838,14 +2837,14 @@ function updateAuthUI() {
       avatarHtml = '<span style="width:24px;height:24px;border-radius:50%;background:var(--color-warm,#c4956a);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:600;flex-shrink:0;">' + initialSafe + '</span>';
     }
     authBtn.innerHTML = avatarHtml + '<span style="max-width:90px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">' + displayNameSafe + '</span> <span style="font-size:0.7rem;opacity:0.7;">' + groupLabel + '</span>';
-    authBtn.style.cssText = 'background: var(--color-deep, #1a3a2a); color: #fff; border: none; padding: 6px 14px; border-radius: 20px; cursor: pointer; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 8px; max-width: 240px;';
+    authBtn.style.cssText = 'background: var(--color-deep, #1a3a2a); color: #fff; border: none; padding: 6px 14px; border-radius: 16px; cursor: pointer; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 8px; max-width: 240px;';
     authBtn.onclick = function() {
       navigateTo('/user');
     };
     authBtn.title = groupLabel + (isGuest ? ' · 点击进入用户中心（可升级为正式会员）' : ' · 点击进入用户中心');
   } else {
     authBtn.textContent = '登录';
-    authBtn.style.cssText = 'background: linear-gradient(135deg, #3a8c5c, #2d6a47); color: #fff; border: none; padding: 8px 16px; border-radius: 20px; cursor: pointer; font-size: 0.85rem;';
+    authBtn.style.cssText = 'background: #3a8c5c; color: #fff; border: none; padding: 8px 16px; border-radius: 16px; cursor: pointer; font-size: 0.85rem;';
     authBtn.onclick = showAuthModal;
     authBtn.title = '登录/注册 BioQuest 账号';
   }
@@ -2916,8 +2915,8 @@ function showAuthModal(mode) {
               <svg class="auth-pwd-toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
             </button>
           </div>
-          <button type="button" class="auth-btn-guest" data-on='["handleGuestLogin"]' data-prevent-default style="background:linear-gradient(135deg,#c4956a,#d4a574);border:none;color:#1a2f1d;padding:10px 20px;border-radius:20px;cursor:pointer;font-size:0.9rem;font-weight:600;width:100%;transition:all 0.2s;box-shadow:0 2px 8px rgba(196,149,106,0.3);">
-            🚀 游客登录（无需注册）
+          <button type="button" class="auth-btn-guest" data-on='["handleGuestLogin"]' data-prevent-default style="background:#c4956a;border:none;color:#1a2f1d;padding:10px 20px;border-radius:16px;cursor:pointer;font-size:0.9rem;font-weight:600;width:100%;transition:all 0.2s;box-shadow:var(--shadow-md);">
+            游客登录（无需注册）
           </button>
         </div>
         <div style="text-align:center;margin-top:6px;">
@@ -3550,7 +3549,7 @@ function _showPasswordSetup(onConfirm) {
     '    <div class="pwd-setup-row">',
     '      <div class="pwd-setup-input-wrap">',
     '        <input type="password" class="pwd-setup-input" id="pwd-setup-input" placeholder="输入或生成密码" autocomplete="off">',
-    '        <button type="button" class="pwd-setup-toggle" id="pwd-setup-toggle" title="隐藏/显示">👁</button>',
+    '        <button type="button" class="pwd-setup-toggle" id="pwd-setup-toggle" title="隐藏/显示"></button>',
     '      </div>',
     '      <button type="button" class="pwd-setup-gen" id="pwd-setup-gen">XKCD 生成</button>',
     '    </div>',
@@ -3565,7 +3564,7 @@ function _showPasswordSetup(onConfirm) {
     '    </div>',
     '    <div class="pwd-sarcastic" id="pwd-sarcastic">"随便按的？"</div>',
     '    <div class="pwd-attack-section">',
-    '      <div class="pwd-attack-title">🛡 字典攻击演示 <span class="pwd-attack-hint">模拟 · 不会真攻击</span></div>',
+    '      <div class="pwd-attack-title">字典攻击演示 <span class="pwd-attack-hint">模拟 · 不会真攻击</span></div>',
     '      <div class="pwd-attack-row">',
     '        <button type="button" class="pwd-attack-start" id="pwd-attack-start">开始攻击</button>',
     '        <div class="pwd-attack-progress">',
@@ -3619,10 +3618,8 @@ function _showPasswordSetup(onConfirm) {
   toggle.addEventListener('click', function () {
     if (input.type === 'password') {
       input.type = 'text';
-      toggle.textContent = '🙈';
     } else {
       input.type = 'password';
-      toggle.textContent = '👁';
     }
   });
 
@@ -3631,7 +3628,6 @@ function _showPasswordSetup(onConfirm) {
     var pwd = _generateXKCDPassword();
     input.value = pwd;
     input.type = 'text';
-    toggle.textContent = '🙈';
     updateUI();
   });
 
@@ -4270,9 +4266,9 @@ async function handleForgotPassword() {
       if (btn1) { btn1.disabled = false; btn1.textContent = '查询密钥'; }
       if (res && res.ok && res.userKey) {
         if (successEl) {
-          successEl.innerHTML = '<div style="background:rgba(58,140,92,0.12);padding:14px;border-radius:10px;margin:10px 0;">' +
+          successEl.innerHTML = '<div style="background:rgba(58,140,92,0.12);padding:14px;border-radius:8px;margin:10px 0;">' +
             '<div style="font-size:0.82rem;color:#3a8c5c;margin-bottom:6px;">你的 8 字符密钥：</div>' +
-            '<div style="font-family:monospace;font-size:1.4rem;letter-spacing:4px;font-weight:700;color:#fff;background:rgba(0,0,0,0.3);padding:10px;border-radius:6px;text-align:center;">' + escapeHtml(res.userKey) + '</div>' +
+            '<div style="font-family:monospace;font-size:1.4rem;letter-spacing:4px;font-weight:700;color:#fff;background:rgba(0,0,0,0.3);padding:10px;border-radius:8px;text-align:center;">' + escapeHtml(res.userKey) + '</div>' +
             '<div style="font-size:0.72rem;color:#8a9a8a;margin-top:6px;">请截图保存（密钥只展示一次）</div>' +
             '</div>';
         }
@@ -4327,7 +4323,7 @@ async function handleForgotPassword() {
             '你的密码已成功重置。<br>请使用新密码登录。' +
           '</p>' +
           '<button data-on=\'["authSwitchToLogin"]\' ' +
-            'style="background:var(--color-sage,#3a8c5c);color:#fff;border:none;padding:8px 20px;border-radius:20px;cursor:pointer;font-size:0.85rem;margin-top:8px;">' +
+            'style="background:var(--color-sage,#3a8c5c);color:#fff;border:none;padding:8px 20px;border-radius:16px;cursor:pointer;font-size:0.85rem;margin-top:8px;">' +
             '返回登录</button>' +
         '</div>';
       }
@@ -4593,7 +4589,7 @@ async function handleRegister() {
   if (btn) {
     if (btn.disabled) return;
     btn.disabled = true;
-    btn.innerHTML = '注册中... <span style="display:block;font-size:0.7rem;font-weight:normal;opacity:0.85;margin-top:2px;">📧 请耐心等待，数据库在韩国</span>';
+    btn.innerHTML = '注册中... <span style="display:block;font-size:0.7rem;font-weight:normal;opacity:0.85;margin-top:2px;">请耐心等待，数据库在韩国</span>';
   }
   errorEl.textContent = '';
 
@@ -4680,7 +4676,6 @@ function _showUserKeyCard(userKey, onConfirm) {
   modal.innerHTML = [
     '<div class="userkey-card-overlay">',
     '  <div class="userkey-card-panel">',
-    '    <div class="userkey-card-icon">🔐</div>',
     '    <h2 class="userkey-card-title">请保存你的密钥</h2>',
     '    <p class="userkey-card-sub">这是你的 8 字符密钥，用于忘记密码时验证身份</p>',
     '    <div class="userkey-card-key" id="userkey-card-key-display">' + escapeHtml(userKey) + '</div>',
@@ -4866,13 +4861,12 @@ async function loadLbData(tabName) {
       listEl.innerHTML = '<div style="text-align:center;color:var(--color-error,#c0553a);padding:40px 20px;">' +
         '<div style="font-size:0.95rem;margin-bottom:8px;">排行榜加载失败</div>' +
         '<div style="font-size:0.78rem;color:#8a8a8a;">' + escapeHtml(items._error) + '</div>' +
-        '<button data-on=\'["_cspReload"]\' style="margin-top:14px;padding:7px 20px;background:var(--color-sage);color:#fff;border:none;border-radius:20px;font-size:0.82rem;cursor:pointer;">重新加载</button>' +
+        '<button data-on=\'["_cspReload"]\' style="margin-top:14px;padding:7px 20px;background:var(--color-sage);color:#fff;border:none;border-radius:16px;font-size:0.82rem;cursor:pointer;">重新加载</button>' +
         '</div>';
     } else {
       // Issue #125：统一「温暖空状态」组件（加载失败时回退原有提示）
       if (window.BioQuest && typeof window.BioQuest.renderEmptyState === 'function') {
         window.BioQuest.renderEmptyState(listEl, {
-          icon: '📈',
           title: '暂无排行数据',
           hint: '完成练习后即可上榜'
         });
@@ -4955,7 +4949,7 @@ window.closeLeaderboard = closeLeaderboard;
  * 渲染"我的位置"信息条
  */
 function renderMyRank(rank) {
-  return '<div style="text-align:center;padding:12px 20px;margin-top:16px;background:rgba(58,140,92,0.1);border-radius:10px;border:1px solid rgba(58,140,92,0.15);font-size:0.9rem;color:var(--color-sage,#3a8c5c);">' +
+  return '<div style="text-align:center;padding:12px 20px;margin-top:16px;background:rgba(58,140,92,0.1);border-radius:8px;border:1px solid rgba(58,140,92,0.15);font-size:0.9rem;color:var(--color-sage,#3a8c5c);">' +
     '我的位置: <strong style="font-size:1.1rem;">#' + rank + '</strong>' +
   '</div>';
 }
@@ -4973,17 +4967,16 @@ function renderMyRank(rank) {
 function renderClassroomPage(target) {
   // 推荐话题（覆盖联赛核心考点）
   var recommended = [
-    { topic: '光合作用的光反应与暗反应', icon: '🌿', kgNodeId: 'photosynthesis' },
-    { topic: '减数分裂与遗传规律', icon: '🧬', kgNodeId: 'meiosis' },
-    { topic: 'DNA 复制的半保留机制', icon: '🔬', kgNodeId: 'dna' },
-    { topic: '细胞呼吸的能量转化', icon: '⚡', kgNodeId: 'respiration' },
-    { topic: '神经冲动的传导机制', icon: '📶', kgNodeId: 'membrane' },
-    { topic: '基因表达：转录与翻译', icon: '📝', kgNodeId: 'transcription' }
+    { topic: '光合作用的光反应与暗反应', kgNodeId: 'photosynthesis' },
+    { topic: '减数分裂与遗传规律', kgNodeId: 'meiosis' },
+    { topic: 'DNA 复制的半保留机制', kgNodeId: 'dna' },
+    { topic: '细胞呼吸的能量转化', kgNodeId: 'respiration' },
+    { topic: '神经冲动的传导机制', kgNodeId: 'membrane' },
+    { topic: '基因表达：转录与翻译', kgNodeId: 'transcription' }
   ];
 
   var cardsHtml = recommended.map(function (r, i) {
     return '<button class="cls-topic-card" data-topic="' + _escapeHtmlAttr(r.topic) + '" data-kg="' + _escapeHtmlAttr(r.kgNodeId) + '">'
-      + '<span class="cls-topic-icon">' + r.icon + '</span>'
       + '<span class="cls-topic-name">' + r.topic + '</span>'
       + '<span class="cls-topic-arrow">→</span>'
       + '</button>';
@@ -4992,7 +4985,6 @@ function renderClassroomPage(target) {
   target.innerHTML = [
     '<div class="cls-page">',
     '  <div class="cls-page-header">',
-    '    <div class="cls-page-icon">🎓</div>',
     '    <h1 class="cls-page-title">AI 生物课堂</h1>',
     '    <p class="cls-page-subtitle">输入任意生物主题，AI 老师将为你生成 6 段式沉浸课堂：导入 → 讲解 → 模拟 → 讨论 → 测验 → 项目</p>',
     '  </div>',
@@ -5232,7 +5224,7 @@ async function handleResetPasswordSubmit() {
         '<div style="font-size:3rem;margin-bottom:16px;">&#10003;</div>' +
         '<h2 style="font-size:1.3rem;margin-bottom:8px;color:var(--color-sage,#3a8c5c);">密码修改成功</h2>' +
         '<p style="font-size:0.9rem;color:var(--text-secondary,#8a8a8a);margin-bottom:24px;">请使用新密码登录</p>' +
-        '<button data-on=\'["_cspGotoHash","/"]\' style="background:var(--color-sage,#3a8c5c);color:#fff;border:none;padding:10px 24px;border-radius:20px;cursor:pointer;font-size:0.9rem;">返回首页</button>' +
+        '<button data-on=\'["_cspGotoHash","/"]\' style="background:var(--color-sage,#3a8c5c);color:#fff;border:none;padding:10px 24px;border-radius:16px;cursor:pointer;font-size:0.9rem;">返回首页</button>' +
       '</div>';
     }
   } catch (e) {
@@ -5298,7 +5290,7 @@ async function loadLbPageData(tabName) {
       if (myRank) html += renderMyRank(myRank);
       else if (typeof window.isLoggedIn !== 'function' || !window.isLoggedIn()) {
         // 游客提示登录后可见自己的排名
-        html += '<div style="text-align:center;color:#6b7f74;padding:20px 12px;margin-top:12px;border-radius:12px;background:rgba(58,140,92,0.04);"><span style="font-size:0.84rem;">登录后查看你的排名</span> <button data-on=\'["_cspShowAuth"]\' style="margin-left:8px;padding:4px 14px;border:none;border-radius:14px;background:var(--color-sage,#5a7d5c);color:#fff;font-size:0.78rem;cursor:pointer;">登录</button></div>';
+        html += '<div style="text-align:center;color:#6b7f74;padding:20px 12px;margin-top:12px;border-radius:12px;background:rgba(58,140,92,0.04);"><span style="font-size:0.84rem;">登录后查看你的排名</span> <button data-on=\'["_cspShowAuth"]\' style="margin-left:8px;padding:4px 14px;border:none;border-radius:12px;background:var(--color-sage,#5a7d5c);color:#fff;font-size:0.78rem;cursor:pointer;">登录</button></div>';
       }
       listEl.innerHTML = html;
     } else if (items && items._error) {
@@ -5306,13 +5298,12 @@ async function loadLbPageData(tabName) {
       listEl.innerHTML = '<div style="text-align:center;color:var(--color-error,#c0553a);padding:40px 20px;">' +
         '<div style="font-size:0.95rem;margin-bottom:8px;">排行榜加载失败</div>' +
         '<div style="font-size:0.78rem;color:#8a8a8a;">' + escapeHtml(items._error) + '</div>' +
-        '<button data-on=\'["_cspReload"]\' style="margin-top:14px;padding:7px 20px;background:var(--color-sage);color:#fff;border:none;border-radius:20px;font-size:0.82rem;cursor:pointer;">重新加载</button>' +
+        '<button data-on=\'["_cspReload"]\' style="margin-top:14px;padding:7px 20px;background:var(--color-sage);color:#fff;border:none;border-radius:16px;font-size:0.82rem;cursor:pointer;">重新加载</button>' +
         '</div>';
     } else {
       // Issue #125：统一「温暖空状态」组件（加载失败时回退原有提示）
       if (window.BioQuest && typeof window.BioQuest.renderEmptyState === 'function') {
         window.BioQuest.renderEmptyState(listEl, {
-          icon: '📈',
           title: '暂无排行数据',
           hint: '完成练习后即可上榜'
         });
@@ -5348,10 +5339,10 @@ function showStorageStatus(status) {
     'background:' + info.color,
     'color:#fff',
     'padding:6px 12px',
-    'border-radius:20px',
+    'border-radius:16px',
     'font-size:12px',
     'font-weight:500',
-    'box-shadow:0 2px 8px rgba(0,0,0,0.15)',
+    'box-shadow:var(--shadow-md)',
     'pointer-events:none',
     'transition:opacity 0.3s'
   ].join(';');
@@ -5476,9 +5467,9 @@ function openDonation() {
         overflow-y: auto;
         background: #111613;
         border: 1px solid rgba(58, 140, 92, 0.2);
-        border-radius: var(--radius-lg, 20px);
+        border-radius: var(--radius-lg, 12px);
         padding: 36px 32px 28px;
-        box-shadow: 0 0 30px rgba(58, 140, 92, 0.15),
+        box-shadow: var(--shadow-floating)
                     0 20px 48px rgba(26, 42, 24, 0.25);
         animation: donationSlideUp 0.3s ease;
       }
@@ -5537,7 +5528,7 @@ function openDonation() {
         padding: 24px;
         background: rgba(232, 168, 48, 0.08);
         border: 1px solid rgba(232, 168, 48, 0.25);
-        border-radius: var(--radius-md, 12px);
+        border-radius: var(--radius-md, 8px);
         margin-bottom: 20px;
       }
 
@@ -5546,18 +5537,18 @@ function openDonation() {
         align-items: center;
         gap: 10px;
         padding: 14px 28px;
-        border-radius: var(--radius-md, 12px);
-        background: linear-gradient(135deg, #e8a830, #c4956a);
+        border-radius: var(--radius-md, 8px);
+        background: #e8a830;
         color: #1a2f1d;
         font-weight: 700;
         font-size: 1rem;
         text-decoration: none;
         transition: transform 0.2s ease, box-shadow 0.2s ease;
-        box-shadow: 0 4px 16px rgba(232, 168, 48, 0.35);
+        box-shadow: var(--shadow-lg);
       }
       .donation-link-btn:hover {
         transform: translateY(-2px);
-        box-shadow: 0 8px 24px rgba(232, 168, 48, 0.5);
+        box-shadow: var(--shadow-lg);
       }
       .donation-link-btn svg {
         width: 22px;
@@ -5711,11 +5702,11 @@ function showFeedbackModal() {
 
         <div class="auth-field" style="margin-bottom:14px;">
           <label style="display:block;font-size:0.82rem;color:var(--text-secondary,#8a8a8a);margin-bottom:6px;">反馈类型</label>
-          <select id="feedback-type" style="width:100%;padding:10px 14px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:10px;color:var(--text-primary,#e0e0e0);font-size:0.9rem;outline:none;">
-            <option value="bug">🐛 Bug 报告</option>
-            <option value="feature">✨ 功能建议</option>
-            <option value="question_error">📖 题目/内容纠错</option>
-            <option value="suggestion">💬 其他建议</option>
+          <select id="feedback-type" style="width:100%;padding:10px 14px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:8px;color:var(--text-primary,#e0e0e0);font-size:0.9rem;outline:none;">
+            <option value="bug">Bug 报告</option>
+            <option value="feature">功能建议</option>
+            <option value="question_error">题目/内容纠错</option>
+            <option value="suggestion">其他建议</option>
           </select>
         </div>
 
@@ -5734,7 +5725,7 @@ function showFeedbackModal() {
           <input type="text" id="feedback-contact" class="auth-input" placeholder="QQ/微信/邮箱，方便我们回复" style="width:100%;box-sizing:border-box;">
         </div>
 
-        <div style="margin-bottom:14px;padding:10px 12px;background:rgba(58,140,92,0.08);border:1px solid rgba(58,140,92,0.25);border-radius:10px;font-size:0.82rem;color:var(--text-secondary,#9aa5a0);line-height:1.6;">
+        <div style="margin-bottom:14px;padding:10px 12px;background:rgba(58,140,92,0.08);border:1px solid rgba(58,140,92,0.25);border-radius:8px;font-size:0.82rem;color:var(--text-secondary,#9aa5a0);line-height:1.6;">
           想得到更快的回复，建议直接去 GitHub 提 Issue（有模板，填起来很快）：
           <br>
           <button type="button" data-stop-propagation data-on='["_cspOpenGitHub"]' style="margin-top:8px;padding:6px 14px;border-radius:8px;background:rgba(58,140,92,0.15);border:1px solid rgba(58,140,92,0.4);color:#7fd0a3;font-size:0.82rem;cursor:pointer;">前往 GitHub 提 Issue →</button>
@@ -5875,10 +5866,10 @@ function showToast(message, typeOrDuration, duration) {
     'background:' + typeBg,
     'color:#fff',
     'padding:12px 24px',
-    'border-radius:24px',
+    'border-radius:16px',
     'font-size:0.9rem',
     'font-weight:500',
-    'box-shadow:0 4px 20px rgba(0,0,0,0.3)',
+    'box-shadow:var(--shadow-lg)',
     'border:1px solid ' + typeBorder,
     'animation:toastSlideUp 0.3s ease',
     'max-width:90vw',
@@ -5936,10 +5927,10 @@ function showUndoToast(message, onUndo, options) {
     'background:rgba(26,58,42,0.96)',
     'color:#fff',
     'padding:12px 18px',
-    'border-radius:14px',
+    'border-radius:12px',
     'font-size:0.9rem',
     'font-weight:500',
-    'box-shadow:0 4px 20px rgba(0,0,0,0.3)',
+    'box-shadow:var(--shadow-lg)',
     'border:1px solid rgba(58,140,92,0.3)',
     'animation:toastSlideUp 0.3s ease',
     'max-width:90vw',
@@ -6068,7 +6059,7 @@ window.showUndoToast = showUndoToast;
           'padding:12px 24px',
           'border-radius:16px',
           'font-size:0.9rem',
-          'box-shadow:0 4px 20px rgba(0,0,0,0.3)',
+          'box-shadow:var(--shadow-lg)',
           'border:1px solid rgba(58,140,92,0.3)',
           'display:flex',
           'align-items:center',
@@ -6151,8 +6142,8 @@ window.showUndoToast = showUndoToast;
       var el = document.createElement('div');
       el.id = 'bq-update-toast';
       el.style.cssText = 'position:fixed;bottom:110px;left:50%;transform:translateX(-50%);' +
-        'z-index:99999;background:rgba(26,58,42,0.95);color:#fff;padding:10px 22px;border-radius:14px;' +
-        'font-size:0.88rem;box-shadow:0 4px 20px rgba(0,0,0,0.3);max-width:86vw;text-align:center;';
+        'z-index:99999;background:rgba(26,58,42,0.95);color:#fff;padding:10px 22px;border-radius:12px;' +
+        'font-size:0.88rem;box-shadow:var(--shadow-lg);max-width:86vw;text-align:center;';
       el.textContent = text;
       document.body.appendChild(el);
       setTimeout(function () { if (el.parentNode) el.remove(); }, ms || 2600);
@@ -6286,7 +6277,7 @@ window.showUndoToast = showUndoToast;
       'bottom:16px',
       'z-index:99998',
       'max-width:min(340px, 86vw)',
-      'background:linear-gradient(135deg,#2c5a3a,#1a3a2a)',
+      'background:#2c5a3a',
       'color:#fff',
       'padding:12px 16px',
       'border-radius:16px',
@@ -6295,16 +6286,16 @@ window.showUndoToast = showUndoToast;
       'display:flex',
       'align-items:center',
       'gap:12px',
-      'box-shadow:0 6px 24px rgba(0,0,0,0.35)',
+      'box-shadow:var(--shadow-lg)',
       'animation:toastSlideUp 0.3s ease'
     ].join(';');
-    bar.appendChild(document.createTextNode('📱 将 BioQuest 添加至主屏幕，随时随地学习'));
+    bar.appendChild(document.createTextNode('将 BioQuest 添加至主屏幕，随时随地学习'));
 
     var btn = document.createElement('button');
     btn.type = 'button';
     btn.id = 'bq-install-btn';
     btn.textContent = '安装 App';
-    btn.style.cssText = 'flex:none;padding:8px 16px;border:none;border-radius:10px;background:#fff;color:#1a3a2a;font-weight:700;cursor:pointer;';
+    btn.style.cssText = 'flex:none;padding:8px 16px;border:none;border-radius:8px;background:#fff;color:#1a3a2a;font-weight:700;cursor:pointer;';
     bar.appendChild(btn);
 
     var dismissBtn = document.createElement('button');

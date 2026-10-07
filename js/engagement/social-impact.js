@@ -83,14 +83,14 @@
   var COLLECTION_KEY = 'bioquest_species_collection';
 
   var ENDANGERED_SPECIES = [
-    { id: 'panda', name: '大熊猫', latin: 'Ailuropoda melanoleuca', status: 'VU', iucn: '易危', icon: '🐼', desc: '中国特有物种，栖息于四川、陕西、甘肃的山区竹林中。' },
-    { id: 'tiger', name: '华南虎', latin: 'Panthera tigris amoyensis', status: 'CR', iucn: '极危', icon: '🐯', desc: '中国特有亚种，野外可能已灭绝，仅存于动物园。' },
-    { id: 'snowleopard', name: '雪豹', latin: 'Panthera uncia', status: 'VU', iucn: '易危', icon: '🐆', desc: '栖息于中亚高山地区，被称为"雪山之王"。' },
-    { id: 'yangsifen', name: '扬子鳄', latin: 'Alligator sinensis', status: 'CR', iucn: '极危', icon: '🐊', desc: '中国特有鳄鱼，野生种群不足200条。' },
-    { id: 'chinese_sturgeon', name: '中华鲟', latin: 'Acipenser sinensis', status: 'CR', iucn: '极危', icon: '🐟', desc: '长江特有洄游鱼类，被誉为"水中大熊猫"。' },
-    { id: 'golden_monkey', name: '金丝猴', latin: 'Rhinopithecus roxellana', status: 'VU', iucn: '易危', icon: '🐒', desc: '中国特有灵长类，生活在海拔3000米以上的高山森林。' },
-    { id: 'baiji', name: '白鱀豚', latin: 'Lipotes vexillifer', status: 'CR', iucn: '极危（可能已灭绝）', icon: '🐬', desc: '长江特有淡水豚类，2006年后未在野外发现。' },
-    { id: 'crested_ibis', name: '朱鹮', latin: 'Nipponia nippon', status: 'EN', iucn: '濒危', icon: '🦩', desc: '曾被认为灭绝，1981年在陕西洋县重新发现7只。' }
+    { id: 'panda', name: '大熊猫', latin: 'Ailuropoda melanoleuca', status: 'VU', iucn: '易危', desc: '中国特有物种，栖息于四川、陕西、甘肃的山区竹林中。' },
+    { id: 'tiger', name: '华南虎', latin: 'Panthera tigris amoyensis', status: 'CR', iucn: '极危', desc: '中国特有亚种，野外可能已灭绝，仅存于动物园。' },
+    { id: 'snowleopard', name: '雪豹', latin: 'Panthera uncia', status: 'VU', iucn: '易危', desc: '栖息于中亚高山地区，被称为"雪山之王"。' },
+    { id: 'yangsifen', name: '扬子鳄', latin: 'Alligator sinensis', status: 'CR', iucn: '极危', desc: '中国特有鳄鱼，野生种群不足200条。' },
+    { id: 'chinese_sturgeon', name: '中华鲟', latin: 'Acipenser sinensis', status: 'CR', iucn: '极危', desc: '长江特有洄游鱼类，被誉为"水中大熊猫"。' },
+    { id: 'golden_monkey', name: '金丝猴', latin: 'Rhinopithecus roxellana', status: 'VU', iucn: '易危', desc: '中国特有灵长类，生活在海拔3000米以上的高山森林。' },
+    { id: 'baiji', name: '白鱀豚', latin: 'Lipotes vexillifer', status: 'CR', iucn: '极危（可能已灭绝）', desc: '长江特有淡水豚类，2006年后未在野外发现。' },
+    { id: 'crested_ibis', name: '朱鹮', latin: 'Nipponia nippon', status: 'EN', iucn: '濒危', desc: '曾被认为灭绝，1981年在陕西洋县重新发现7只。' }
   ];
 
   var SpeciesCollection = {
@@ -144,7 +144,6 @@
         var owned = collection.indexOf(species.id) >= 0;
         html += '<div style="border-radius:12px;padding:12px;text-align:center;' +
           (owned ? 'background:rgba(90,125,92,0.1);border:1px solid rgba(90,125,92,0.2);' : 'background:rgba(0,0,0,0.03);border:1px dashed #ddd;') + '">';
-        html += '<div style="font-size:2rem;margin-bottom:4px;' + (owned ? '' : 'filter:grayscale(1);opacity:0.3;') + '">' + species.icon + '</div>';
         html += '<div style="font-size:0.85rem;font-weight:600;color:' + (owned ? '#1a1a1a' : '#999') + ';">' + (owned ? species.name : '???') + '</div>';
         if (owned) {
           html += '<div style="font-size:0.7rem;color:#999;font-style:italic;">' + species.latin + '</div>';

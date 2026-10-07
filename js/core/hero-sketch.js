@@ -50,7 +50,7 @@ function initHeroSketch() {
       'animation:heroFloat ' + (Math.random() * 7 + 7) + 's ease-in-out infinite',
       'animation-delay:' + (Math.random() * -12) + 's',
       'pointer-events:none',
-      'box-shadow:0 0 ' + (size * (isLarge ? 4 : 2)) + 'px ' + color
+      'box-shadow:var(--shadow-sm) ' + (size * (isLarge ? 4 : 2)) + 'px ' + color
     ].join(';');
     container.appendChild(dot);
   }

@@ -221,7 +221,7 @@ function injectPracticeStyles() {
       display: flex;
       gap: 6px;
       background: var(--surface-secondary, #f5f3ef);
-      border-radius: 10px;
+      border-radius: 8px;
       padding: 4px;
     }
 
@@ -245,7 +245,7 @@ function injectPracticeStyles() {
     .practice-category-btn.active {
       background: var(--color-sage, #5a7d5c);
       color: #fff;
-      box-shadow: 0 2px 8px rgba(90, 125, 92, 0.3);
+      box-shadow: var(--shadow-md);
     }
 
     /* 练习模式按钮 */
@@ -257,7 +257,7 @@ function injectPracticeStyles() {
     .practice-mode-btn {
       padding: 8px 18px;
       border: 1.5px solid var(--border-default, #e0dcd5);
-      border-radius: 10px;
+      border-radius: 8px;
       font-size: 0.875rem;
       font-weight: 500;
       cursor: pointer;
@@ -273,17 +273,17 @@ function injectPracticeStyles() {
       background: var(--color-sage, #5a7d5c);
       border-color: var(--color-sage, #5a7d5c);
       color: #fff;
-      box-shadow: 0 2px 8px rgba(90, 125, 92, 0.3);
+      box-shadow: var(--shadow-md);
     }
     .practice-mode-btn[data-mode="gaokao"].active {
       background: #3a7d5c;
       border-color: #3a7d5c;
-      box-shadow: 0 2px 8px rgba(58, 125, 92, 0.3);
+      box-shadow: var(--shadow-md);
     }
     .practice-mode-btn[data-mode="competition"].active {
       background: #5a5a9c;
       border-color: #5a5a9c;
-      box-shadow: 0 2px 8px rgba(90, 90, 156, 0.3);
+      box-shadow: var(--shadow-md);
     }
 
     /* 逻辑推理题选项样式 */
@@ -293,7 +293,7 @@ function injectPracticeStyles() {
       gap: 12px;
       padding: 12px 16px;
       border: 1.5px solid var(--border, #e0e0e0);
-      border-radius: 10px;
+      border-radius: 8px;
       cursor: pointer;
       transition: all 0.2s;
       margin-bottom: 8px;
@@ -361,7 +361,7 @@ function injectPracticeStyles() {
       margin-top: 14px;
       padding: 10px 14px;
       border: 1px dashed var(--border-light, #ece8e1);
-      border-radius: 10px;
+      border-radius: 8px;
       background: var(--surface-secondary, rgba(0,0,0,0.02));
       font-size: 0.78rem;
       color: var(--text-muted, #8a8a8a);
@@ -377,7 +377,7 @@ function injectPracticeStyles() {
       padding: 1px 6px;
       border: 1px solid var(--border-light, #d8d4cc);
       border-bottom-width: 2px;
-      border-radius: 5px;
+      border-radius: 4px;
       background: var(--surface-primary, #fff);
       color: var(--text-secondary, #555);
       font-family: var(--font-mono, ui-monospace, monospace);
@@ -1414,10 +1414,10 @@ function renderFilterPanel() {
   const kgBanner = PracticeState.conceptFilter
     ? `<div class="practice-kg-banner" style="margin-bottom:16px;padding:14px 16px;background:var(--color-sage-light,rgba(90,125,92,0.1));border:1px solid var(--color-sage,rgba(90,125,92,0.3));border-radius:12px;position:relative;">
         <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
-          <span style="display:inline-flex;align-items:center;gap:4px;padding:4px 12px;background:var(--color-sage,rgba(90,125,92,0.2));border-radius:20px;font-size:0.85rem;font-weight:600;color:var(--color-deep);">
-            🎯 ${escapeHtml(PracticeState.conceptFilter)}
+          <span style="display:inline-flex;align-items:center;gap:4px;padding:4px 12px;background:var(--color-sage,rgba(90,125,92,0.2));border-radius:16px;font-size:0.85rem;font-weight:600;color:var(--color-deep);">
+            ${escapeHtml(PracticeState.conceptFilter)}
           </span>
-          ${PracticeState.kgCategory ? `<span style="display:inline-flex;align-items:center;gap:4px;padding:4px 10px;background:rgba(59,130,246,0.1);border:1px solid rgba(59,130,246,0.25);border-radius:20px;font-size:0.8rem;color:#3b82f6;">${escapeHtml(PracticeState.kgCategory)}</span>` : ''}
+          ${PracticeState.kgCategory ? `<span style="display:inline-flex;align-items:center;gap:4px;padding:4px 10px;background:rgba(59,130,246,0.1);border:1px solid rgba(59,130,246,0.25);border-radius:16px;font-size:0.8rem;color:#3b82f6;">${escapeHtml(PracticeState.kgCategory)}</span>` : ''}
           <button id="practice-clear-concept-btn" style="display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;border:1px solid var(--color-sage,rgba(90,125,92,0.3));background:transparent;color:var(--text-muted);cursor:pointer;font-size:14px;line-height:1;padding:0;margin-left:auto;" title="清除专项筛选">✕</button>
         </div>
         <div style="font-size:0.82rem;color:var(--text-muted);margin-top:8px;">来自知识图谱的专项练习 · 点击 ✕ 可恢复常规筛选</div>
@@ -3114,12 +3114,11 @@ async function handleShareQuestionDeepLink(shareKey, shareQid) {
   if (!found) {
     root.innerHTML =
       '<div style="text-align:center;padding:64px 20px;">' +
-        '<div style="font-size:2.6rem;margin-bottom:12px;">🔍</div>' +
         '<p style="color:var(--text-secondary, #5a6b5e);margin-bottom:6px;">没有找到这道题目</p>' +
         '<p style="color:var(--text-muted, #8a9a8e);font-size:0.85rem;margin-bottom:20px;">题目可能已下架或题库已更新，可尝试重新加载题库</p>' +
         '<div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;">' +
-          '<button id="practice-share-retry-btn" style="padding:8px 22px;background:var(--color-sage,#5a7d5c);color:#fff;border:none;border-radius:20px;font-size:0.85rem;cursor:pointer;">重新加载并重试</button>' +
-          '<button id="practice-share-notfound-btn" style="padding:8px 22px;background:transparent;color:var(--color-sage,#5a7d5c);border:1px solid var(--color-sage,#5a7d5c);border-radius:20px;font-size:0.85rem;cursor:pointer;">去练习</button>' +
+          '<button id="practice-share-retry-btn" style="padding:8px 22px;background:var(--color-sage,#5a7d5c);color:#fff;border:none;border-radius:16px;font-size:0.85rem;cursor:pointer;">重新加载并重试</button>' +
+          '<button id="practice-share-notfound-btn" style="padding:8px 22px;background:transparent;color:var(--color-sage,#5a7d5c);border:1px solid var(--color-sage,#5a7d5c);border-radius:16px;font-size:0.85rem;cursor:pointer;">去练习</button>' +
         '</div>' +
       '</div>';
     var retryBtn = document.getElementById('practice-share-retry-btn');
@@ -3246,7 +3245,7 @@ function showLastQuestionEffect(callback) {
     'left:0',
     'right:0',
     'z-index:9999',
-    'background:linear-gradient(135deg,#1a3a2a,#c4956a)',
+    'background:var(--color-deep,#1a3a2a)',
     'color:#fff',
     'text-align:center',
     'padding:12px 20px',

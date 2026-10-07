@@ -191,7 +191,7 @@ function showToast(message) {
   if (existing) existing.remove();
   var toast = document.createElement('div');
   toast.id = 'admin-toast';
-  toast.style.cssText = 'position:fixed;bottom:80px;left:50%;transform:translateX(-50%);background:var(--color-deep,#1a3a2a);color:#fff;padding:12px 28px;border-radius:12px;font-size:0.88rem;z-index:9999;box-shadow:0 4px 16px rgba(0,0,0,0.2);animation:slideUp 0.3s ease,fadeOut 0.3s ease 1.7s forwards;';
+  toast.style.cssText = 'position:fixed;bottom:80px;left:50%;transform:translateX(-50%);background:var(--color-deep,#1a3a2a);color:#fff;padding:12px 28px;border-radius:12px;font-size:0.88rem;z-index:9999;box-shadow:var(--shadow-lg);animation:slideUp 0.3s ease,fadeOut 0.3s ease 1.7s forwards;';
   toast.textContent = message;
   document.body.appendChild(toast);
   setTimeout(function() { if (toast.parentNode) toast.remove(); }, 2200);
@@ -218,9 +218,9 @@ function injectAdminStyles() {
       max-width: 420px;
       background: var(--surface-primary, #ffffff);
       border: 1px solid var(--border-light, #ece8e1);
-      border-radius: 24px;
+      border-radius: 16px;
       padding: 48px 40px;
-      box-shadow: 0 4px 24px rgba(26,58,42,0.08), 0 1px 3px rgba(26,58,42,0.04);
+      box-shadow: var(--shadow-lg);
       text-align: center;
       position: relative;
       overflow: hidden;
@@ -233,19 +233,19 @@ function injectAdminStyles() {
       left: 0;
       right: 0;
       height: 4px;
-      background: linear-gradient(90deg, var(--color-sage, #5a7d5c), var(--color-amber, #c4956a));
+      background: var(--color-sage, #5a7d5c);
     }
 
     .admin-login-icon {
       width: 64px;
       height: 64px;
       margin: 0 auto 20px;
-      background: linear-gradient(135deg, var(--color-sage, #5a7d5c), var(--color-deep, #1a3a2a));
-      border-radius: 18px;
+      background: var(--color-sage, #5a7d5c);
+      border-radius: 16px;
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 4px 12px rgba(90,125,92,0.25);
+      box-shadow: var(--shadow-md);
     }
 
     .admin-login-icon svg {
@@ -302,7 +302,7 @@ function injectAdminStyles() {
       width: 100%;
       padding: 14px 18px 14px 46px;
       border: 1.5px solid var(--border-light, #ece8e1);
-      border-radius: 14px;
+      border-radius: 12px;
       font-size: 0.95rem;
       background: var(--surface-secondary, #faf7f2);
       transition: all 0.25s ease;
@@ -323,10 +323,10 @@ function injectAdminStyles() {
 
     .admin-login-btn {
       padding: 14px 28px;
-      background: linear-gradient(135deg, var(--color-sage, #5a7d5c), var(--color-deep, #1a3a2a));
+      background: var(--color-sage, #5a7d5c);
       color: #fff;
       border: none;
-      border-radius: 14px;
+      border-radius: 12px;
       font-size: 1rem;
       font-weight: 600;
       cursor: pointer;
@@ -337,7 +337,7 @@ function injectAdminStyles() {
 
     .admin-login-btn:hover {
       transform: translateY(-1px);
-      box-shadow: 0 6px 20px rgba(90,125,92,0.3);
+      box-shadow: var(--shadow-lg);
     }
 
     .admin-login-btn:active {
@@ -386,8 +386,8 @@ function injectAdminStyles() {
       justify-content: space-between;
       margin-bottom: 28px;
       padding: 28px 32px;
-      background: linear-gradient(135deg, var(--color-deep, #1a3a2a) 0%, #2a4a34 100%);
-      border-radius: 20px;
+      background: var(--color-deep, #1a3a2a);
+      border-radius: 16px;
       color: #fff;
       position: relative;
       overflow: hidden;
@@ -400,7 +400,7 @@ function injectAdminStyles() {
       right: -10%;
       width: 300px;
       height: 300px;
-      background: radial-gradient(circle, rgba(196,149,106,0.15) 0%, transparent 70%);
+      background: none;
       border-radius: 50%;
     }
 
@@ -437,7 +437,7 @@ function injectAdminStyles() {
       background: rgba(255,255,255,0.12);
       border: 1px solid rgba(255,255,255,0.2);
       color: #fff;
-      border-radius: 10px;
+      border-radius: 8px;
       font-size: 0.85rem;
       font-weight: 500;
       cursor: pointer;
@@ -457,7 +457,7 @@ function injectAdminStyles() {
       margin-bottom: 24px;
       background: var(--surface-primary, #ffffff);
       border: 1px solid var(--border-light, #ece8e1);
-      border-radius: 14px;
+      border-radius: 12px;
       padding: 6px;
     }
 
@@ -466,7 +466,7 @@ function injectAdminStyles() {
       padding: 12px 20px;
       background: transparent;
       border: none;
-      border-radius: 10px;
+      border-radius: 8px;
       cursor: pointer;
       font-weight: 600;
       font-size: 0.9rem;
@@ -496,7 +496,7 @@ function injectAdminStyles() {
     .admin-tab.active {
       background: var(--color-sage, #5a7d5c);
       color: #fff;
-      box-shadow: 0 2px 8px rgba(90,125,92,0.25);
+      box-shadow: var(--shadow-md);
     }
 
     /* ===== 统计卡片 ===== */
@@ -520,7 +520,7 @@ function injectAdminStyles() {
 
     .admin-stat-card:hover {
       transform: translateY(-2px);
-      box-shadow: 0 4px 16px rgba(26,58,42,0.08);
+      box-shadow: var(--shadow-lg);
     }
 
     .admin-stat-icon {
@@ -575,10 +575,10 @@ function injectAdminStyles() {
     .admin-section {
       background: var(--surface-primary, #ffffff);
       border: 1px solid var(--border-light, #ece8e1);
-      border-radius: 20px;
+      border-radius: 16px;
       padding: 28px;
       margin-bottom: 24px;
-      box-shadow: 0 1px 3px rgba(26,58,42,0.04);
+      box-shadow: var(--shadow-sm);
     }
 
     .admin-section-header {
@@ -678,7 +678,7 @@ function injectAdminStyles() {
     /* ===== 按钮 ===== */
     .admin-btn {
       padding: 8px 16px;
-      border-radius: 10px;
+      border-radius: 8px;
       font-size: 0.82rem;
       font-weight: 600;
       cursor: pointer;
@@ -734,7 +734,7 @@ function injectAdminStyles() {
     .admin-q-card {
       background: var(--surface-secondary, #faf7f2);
       border: 1px solid var(--border-light, #ece8e1);
-      border-radius: 14px;
+      border-radius: 12px;
       padding: 18px 20px;
       margin-bottom: 12px;
       transition: all 0.2s;
@@ -742,7 +742,7 @@ function injectAdminStyles() {
 
     .admin-q-card:hover {
       border-color: var(--color-sage, #5a7d5c);
-      box-shadow: 0 2px 8px rgba(90,125,92,0.08);
+      box-shadow: var(--shadow-md);
     }
 
     .admin-q-top {
@@ -859,10 +859,10 @@ function injectAdminStyles() {
 
     .admin-form-submit {
       padding: 14px 28px;
-      background: linear-gradient(135deg, var(--color-sage, #5a7d5c), var(--color-deep, #1a3a2a));
+      background: var(--color-sage, #5a7d5c);
       color: #fff;
       border: none;
-      border-radius: 14px;
+      border-radius: 12px;
       font-size: 0.95rem;
       font-weight: 600;
       cursor: pointer;
@@ -873,7 +873,7 @@ function injectAdminStyles() {
 
     .admin-form-submit:hover {
       transform: translateY(-1px);
-      box-shadow: 0 6px 20px rgba(90,125,92,0.3);
+      box-shadow: var(--shadow-lg);
     }
 
     /* ===== 空状态 & 加载 ===== */
@@ -915,7 +915,7 @@ function injectAdminStyles() {
       display: inline-block;
       background: var(--surface-secondary, #faf7f2);
       padding: 12px 18px;
-      border-radius: 10px;
+      border-radius: 8px;
       max-width: 480px;
     }
 
@@ -989,13 +989,13 @@ function injectAdminStyles() {
 
     .admin-modal {
       background: var(--surface-primary, #ffffff);
-      border-radius: 20px;
+      border-radius: 16px;
       padding: 32px;
       max-width: 500px;
       width: 90%;
       max-height: 90vh;
       overflow-y: auto;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+      box-shadow: var(--shadow-floating);
     }
 
     .admin-modal-header {
@@ -2171,7 +2171,7 @@ function showAdminToast(message, type = 'success') {
     background: ${bgColor}; color: #fff; padding: 14px 24px;
     border-radius: 12px; font-size: 0.88rem; font-weight: 500;
     display: flex; align-items: center; gap: 10px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+    box-shadow: var(--shadow-lg);
     animation: adminToastIn 0.35s ease; max-width: 380px;
   `;
   toast.innerHTML = `${iconSvg}<span>${message}</span>`;
