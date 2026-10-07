@@ -38,8 +38,7 @@
     style.textContent =
       '.bq-legacy .countdown-banner,' +
       '.bq-legacy .announcement-banner,' +
-      '.bq-legacy .daily-question-section,' +
-      '.bq-legacy .ach-home-section{display:none !important;}';
+      '.bq-legacy .daily-question-section{display:none !important;}';
     if (document.head) document.head.appendChild(style);
 
     // ③ 顶部静态提示条（纯内联样式）

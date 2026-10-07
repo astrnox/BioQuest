@@ -1071,10 +1071,23 @@ function reinitHomeComponents() {
 
   if (daysEl || hoursEl || minsEl || secsEl) {
     const TARGET_DATE = new Date('2026-08-16T09:00:00+08:00');
+    const cdBanner = document.querySelector('.countdown-banner');
     function pad(n) { return String(n).padStart(2, '0'); }
+    // 目标日期已过：归零展示会一直是「00天00时00分00秒」，且每秒空转毫无意义。
+    // 这里切换为「下一届备考期」文案、隐藏数字区并停掉定时器。
+    function showExpired() {
+      if (cdBanner) {
+        const label = cdBanner.querySelector('.countdown-label');
+        const date = cdBanner.querySelector('.countdown-date');
+        const digits = cdBanner.querySelector('.countdown-digits');
+        if (label) label.textContent = '下一届全国中学生生物学联赛';
+        if (date) date.textContent = '备考期 · 具体日期待官方公布';
+        if (digits) digits.style.display = 'none';
+      }
+    }
     function update() {
-      const now = new Date();
-      const diff = Math.max(0, TARGET_DATE - now);
+      const diff = TARGET_DATE - new Date();
+      if (diff <= 0) { showExpired(); return false; }
       const days = Math.floor(diff / (1000 * 60 * 60 * 24));
       const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
       const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
@@ -1083,10 +1096,10 @@ function reinitHomeComponents() {
       if (hoursEl) hoursEl.textContent = pad(hours);
       if (minsEl) minsEl.textContent = pad(mins);
       if (secsEl) secsEl.textContent = pad(secs);
+      return true;
     }
-    update();
     if (_AppState._countdownTimer) clearInterval(_AppState._countdownTimer);
-    _AppState._countdownTimer = setInterval(update, 1000);
+    _AppState._countdownTimer = update() ? setInterval(update, 1000) : null;
   }
 
   // 首页「题库总量」动态化：读取本地题库总数（不写死），云端场景不虚标

@@ -401,73 +401,6 @@ function injectDashboardStyles() {
     '  margin-bottom: 16px;',
     '}',
 
-    /* 考点预测 */
-    '.dash-forecast {',
-    '  display: flex;',
-    '  flex-direction: column;',
-    '  gap: 10px;',
-    '}',
-    '.dash-forecast-item {',
-    '  display: flex;',
-    '  align-items: flex-start;',
-    '  gap: 12px;',
-    '  padding: 12px 14px;',
-    '  background: var(--surface-secondary, #faf7f2);',
-    '  border-radius: var(--radius-md, 8px);',
-    '  cursor: pointer;',
-    '  transition: transform 0.15s;',
-    '}',
-    '.dash-forecast-item:active {',
-    '  transform: scale(0.98);',
-    '}',
-    '.dash-forecast-rank {',
-    '  width: 28px;',
-    '  height: 28px;',
-    '  border-radius: 50%;',
-    '  display: flex;',
-    '  align-items: center;',
-    '  justify-content: center;',
-    '  font-size: 0.8rem;',
-    '  font-weight: 700;',
-    '  flex-shrink: 0;',
-    '  background: var(--color-sage, #5a7d5c);',
-    '  color: #fff;',
-    '}',
-    '.dash-forecast-rank--top {',
-    '  background: var(--color-warm, #c4956a);',
-    '}',
-    '.dash-forecast-info {',
-    '  flex: 1;',
-    '  min-width: 0;',
-    '}',
-    '.dash-forecast-name {',
-    '  font-size: 0.88rem;',
-    '  font-weight: 600;',
-    '  color: var(--text-primary, #1a1a1a);',
-    '  display: flex;',
-    '  align-items: center;',
-    '  gap: 8px;',
-    '}',
-    '.dash-forecast-conf {',
-    '  font-size: 0.68rem;',
-    '  padding: 1px 6px;',
-    '  border-radius: 8px;',
-    '  background: var(--color-sage, #5a7d5c);',
-    '  color: #fff;',
-    '}',
-    '.dash-forecast-tip {',
-    '  font-size: 0.75rem;',
-    '  color: var(--text-muted, #8a8a8a);',
-    '  margin-top: 4px;',
-    '  line-height: 1.5;',
-    '}',
-    '.dash-forecast-loading {',
-    '  text-align: center;',
-    '  padding: 20px;',
-    '  color: var(--text-muted, #8a8a8a);',
-    '  font-size: 0.82rem;',
-    '}',
-
     /* 响应式 */
     '@media (max-width: 640px) {',
     '  .dash-stats-row {',
@@ -499,95 +432,6 @@ function injectDashboardStyles() {
     '  }',
     '}',
     '',
-    '/* v4.0 学习 DNA 双画像 */',
-    '.dash-dna-section {',
-    '  background: var(--surface-primary, #ffffff);',
-    '  border-radius: var(--radius-lg, 12px);',
-    '  padding: 20px;',
-    '  box-shadow: var(--shadow-sm, 0 1px 3px rgba(44, 62, 48, 0.05));',
-    '  border: 1px solid var(--border-light, #ece8e1);',
-    '}',
-    '.dash-dna-canvases {',
-    '  display: grid;',
-    '  grid-template-columns: 1fr 1fr;',
-    '  gap: 16px;',
-    '  margin: 12px 0;',
-    '}',
-    '.dash-dna-canvas-wrap {',
-    '  position: relative;',
-    '  background: var(--color-bg-warm, #f5f0e8);',
-    '  border-radius: 12px;',
-    '  padding: 8px;',
-    '  border: 1px solid var(--border-light, #ece8e1);',
-    '}',
-    '.dash-dna-canvas-wrap canvas {',
-    '  width: 100%;',
-    '  height: 220px;',
-    '  display: block;',
-    '}',
-    '.dash-dna-canvas-label {',
-    '  font-size: 0.78rem;',
-    '  font-weight: 600;',
-    '  color: var(--text-secondary, #4a4a4a);',
-    '  text-align: center;',
-    '  padding: 4px 0 2px;',
-    '}',
-    '.dash-dna-analysis {',
-    '  display: grid;',
-    '  grid-template-columns: 1fr 1fr;',
-    '  gap: 12px;',
-    '  font-size: 0.82rem;',
-    '  padding: 10px 0;',
-    '  border-top: 1px solid var(--border-light, #ece8e1);',
-    '}',
-    '.dash-dna-analysis-block { padding: 4px 0; }',
-    '.dash-dna-analysis-block strong { color: var(--color-deep, #1a3a2a); }',
-    '.dash-dna-diagnosis {',
-    '  margin-top: 12px;',
-    '  padding: 12px 14px;',
-    '  background: rgba(196, 149, 106, 0.07);',
-    '  border-left: 3px solid var(--color-amber, #c4956a);',
-    '  border-radius: 8px;',
-    '  font-size: 0.85rem;',
-    '  line-height: 1.6;',
-    '  color: var(--text-secondary, #4a4a4a);',
-    '}',
-    '.dash-dna-diagnosis-title {',
-    '  font-weight: 600;',
-    '  color: var(--color-amber, #c4956a);',
-    '  margin-bottom: 4px;',
-    '}',
-    '.dash-dna-actions {',
-    '  display: flex;',
-    '  gap: 8px;',
-    '  margin-top: 12px;',
-    '}',
-    '.dash-dna-btn {',
-    '  padding: 8px 16px;',
-    '  border: 1px solid var(--border-default, #e0dcd5);',
-    '  background: var(--surface-primary, #fff);',
-    '  color: var(--text-secondary, #4a4a4a);',
-    '  border-radius: 8px;',
-    '  font-size: 0.82rem;',
-    '  font-weight: 500;',
-    '  cursor: pointer;',
-    '  font-family: inherit;',
-    '  transition: all 0.15s ease;',
-    '}',
-    '.dash-dna-btn:hover {',
-    '  border-color: var(--color-amber, #c4956a);',
-    '  color: var(--color-amber, #c4956a);',
-    '}',
-    '.dash-dna-btn--primary {',
-    '  background: var(--color-deep, #1a3a2a);',
-    '  color: #fff;',
-    '  border-color: var(--color-deep, #1a3a2a);',
-    '}',
-    '.dash-dna-btn--primary:hover {',
-    '  background: var(--color-sage, #5a7d5c);',
-    '  border-color: var(--color-sage, #5a7d5c);',
-    '  color: #fff;',
-    '}',
     '.dash-mood-widget {',
     '  display: flex;',
     '  align-items: center;',
@@ -613,21 +457,7 @@ function injectDashboardStyles() {
     '  cursor: pointer;',
     '  font-family: inherit;',
     '}',
-    '.dash-mood-widget-btn:hover { background: #4a6d4c; }',
-    '.dash-stress-card {',
-    '  display: flex;',
-    '  align-items: center;',
-    '  gap: 10px;',
-    '  padding: 8px 12px;',
-    '  background: rgba(196, 149, 106, 0.07);',
-    '  border-radius: 8px;',
-    '  font-size: 0.82rem;',
-    '  margin-top: 8px;',
-    '}',
-    '@media (max-width: 640px) {',
-    '  .dash-dna-canvases { grid-template-columns: 1fr; }',
-    '  .dash-dna-analysis { grid-template-columns: 1fr; }',
-    '}'
+    '.dash-mood-widget-btn:hover { background: #4a6d4c; }'
   ].join('\n');
   document.head.appendChild(style);
 }
@@ -852,128 +682,6 @@ function _renderBioScoreBars(components) {
 }
 
 /**
- * 加载考点预测（异步）
- */
-function _loadForecast(container) {
-  if (!container) return;
-  container.innerHTML = '<div class="dash-forecast-loading">AI 正在分析考点趋势...</div>';
-
-  // 收集用户薄弱模块
-  var stats = _getUserStats();
-  var weakModules = [];
-  Object.keys(stats.modules || {}).forEach(function(key) {
-    var m = stats.modules[key];
-    var total = m.totalAnswered || 0;
-    var correct = m.totalCorrect || 0;
-    if (total > 0 && correct / total < 0.6) weakModules.push(key);
-  });
-
-  // 本地兜底预测：根据薄弱模块生成，保证静态部署/无后端时仍可展示
-  function _buildLocalForecasts() {
-    var conceptBank = {
-      'module_1': [
-        { concept: '蛋白质结构与酶活性', tip: '重点复习一级结构到四级结构的维系键，以及温度、pH 对酶促反应的影响。' },
-        { concept: '细胞呼吸与光合作用', tip: '对比有氧呼吸三阶段与光反应、暗反应的物质变化和能量转化。' },
-        { concept: '细胞膜物质运输', tip: '区分自由扩散、协助扩散、主动运输和胞吞胞吐的实例与特点。' }
-      ],
-      'module_2': [
-        { concept: '植物激素调节', tip: '掌握生长素两重性及各激素协同/拮抗作用的经典实验。' },
-        { concept: '微生物培养与计数', tip: '平板划线法、稀释涂布平板法和菌落计数原则（30-300）。' },
-        { concept: '群落与生态系统', tip: '能量流动单向递减、物质循环全球性和信息传递类型。' }
-      ],
-      'module_3': [
-        { concept: '神经调节与体液调节', tip: '反射弧完整性、突触信号传递及负反馈调节实例。' },
-        { concept: '免疫调节', tip: '特异性免疫过程、疫苗原理和自身免疫病辨析。' },
-        { concept: '生态系统的稳定性', tip: '抵抗力稳定性与恢复力稳定性的关系及影响因素。' }
-      ],
-      'module_4': [
-        { concept: '孟德尔遗传定律', tip: '分离定律和自由组合定律的实质、验证方法及异常分离比。' },
-        { concept: '伴性遗传与人类遗传病', tip: '系谱图判断、遗传方式推断及概率计算。' },
-        { concept: '现代生物进化理论', tip: '种群基因频率、自然选择作用及物种形成环节。' }
-      ]
-    };
-    var forecasts = [];
-    var seen = {};
-    weakModules.forEach(function(mod) {
-      (conceptBank[mod] || []).forEach(function(item) {
-        if (!seen[item.concept]) {
-          seen[item.concept] = true;
-          forecasts.push({ concept: item.concept, confidence: 0.72, practice_tip: item.tip });
-        }
-      });
-    });
-    if (forecasts.length === 0) {
-      forecasts = [
-        { concept: '细胞代谢综合', confidence: 0.7, practice_tip: '细胞呼吸与光合作用联系紧密，建议通过流程图梳理物质和能量变化。' },
-        { concept: '遗传规律应用', confidence: 0.65, practice_tip: '多练系谱图与异常分离比，掌握配子法和分支法。' },
-        { concept: '稳态与调节', confidence: 0.6, practice_tip: '神经-体液-免疫调节网络中，反馈调节和信号分子是关键。' }
-      ];
-    }
-    return forecasts.slice(0, 5);
-  }
-
-  function _renderForecasts(forecasts) {
-    if (!forecasts || forecasts.length === 0) {
-      container.innerHTML = '<div class="dash-forecast-loading">暂无预测数据</div>';
-      return;
-    }
-    var html = '<div class="dash-forecast">';
-    forecasts.forEach(function(f, i) {
-      var conf = Math.round((f.confidence || 0.5) * 100);
-      var confColor = conf >= 75 ? '#5a7d5c' : conf >= 50 ? '#c49a4a' : '#aaa';
-      html += '<div class="dash-forecast-item" data-on=\'["navigateTo","/practice"]\'>' +
-        '<div class="dash-forecast-rank' + (i === 0 ? ' dash-forecast-rank--top' : '') + '">' + (i + 1) + '</div>' +
-        '<div class="dash-forecast-info">' +
-        '<div class="dash-forecast-name">' + escapeHtml(f.concept || '未知考点') +
-        '<span class="dash-forecast-conf" style="background:' + confColor + ';">' + conf + '%</span></div>' +
-        '<div class="dash-forecast-tip">' + escapeHtml(f.practice_tip || f.reason || '') + '</div>' +
-        '</div></div>';
-    });
-    html += '</div>';
-    container.innerHTML = html;
-  }
-
-  // 静态部署（无后端 / 用户未配置 AI Key）时直接走本地兜底预测，
-  // 避免对 /forecast 发起 POST 触发浏览器 "Failed to load resource: 501" console.error。
-  // 注：fetch 的 .catch() 只能吞掉 Promise reject，无法抑制浏览器自动产生的网络错误日志。
-  var _hasForecastBackend = (function () {
-    try {
-      var raw = localStorage.getItem('bioquest_ai_key_config');
-      if (raw) {
-        var cfg = JSON.parse(raw);
-        if (cfg && cfg.apiKey) return true;   // 用户配置了 AI Key → 后端可能可用
-      }
-    } catch (e) {}
-    return false;
-  })();
-
-  if (!_hasForecastBackend) {
-    _renderForecasts(_buildLocalForecasts());
-    return;
-  }
-
-  fetch('/forecast', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ stats: { weak_modules: weakModules } })
-  }).then(function(r) {
-    // 非 2xx 响应也尝试解析，解析失败则走兜底
-    if (!r.ok) throw new Error('forecast_http_' + r.status);
-    return r.json();
-  })
-    .then(function(data) {
-      if (!data.ok || !data.forecasts || data.forecasts.length === 0) {
-        _renderForecasts(_buildLocalForecasts());
-        return;
-      }
-      _renderForecasts(data.forecasts.slice(0, 5));
-    }).catch(function(err) {
-      // 静态部署无后端时：使用本地基于薄弱模块的兜底预测，避免空白与控制台报错
-      _renderForecasts(_buildLocalForecasts());
-    });
-}
-
-/**
  * 主渲染函数
  */
 function renderDashboardPage(target) {
@@ -1128,38 +836,6 @@ function renderDashboardPage(target) {
     html += '</div></div>';
   }
 
-  // v4.0 学习 DNA + 情绪 DNA 双画像
-  html += '<div class="dash-section">' +
-    '<div class="dash-section-header">' +
-    '<span class="dash-section-title">学习 DNA 双画像</span>' +
-    '<span class="dash-section-link" id="dash-dna-share-btn">分享卡片 ›</span>' +
-    '</div>' +
-    '<div class="dash-dna-section">' +
-    '<div class="dash-dna-canvases">' +
-    '<div class="dash-dna-canvas-wrap">' +
-    '<canvas id="dash-dna-learning" width="280" height="220" aria-label="学习 DNA 双螺旋"></canvas>' +
-    '<div class="dash-dna-canvas-label">学习 DNA（左链） + 情绪 DNA（右链）</div>' +
-    '</div>' +
-    '</div>' +
-    '<div class="dash-dna-analysis" id="dash-dna-analysis">' +
-    '<div class="dash-dna-analysis-block">完整度: <strong id="dash-dna-completeness">--</strong></div>' +
-    '<div class="dash-dna-analysis-block">互补度: <strong id="dash-dna-complementarity">--</strong></div>' +
-    '<div class="dash-dna-analysis-block">最强模块: <strong id="dash-dna-strongest">--</strong></div>' +
-    '<div class="dash-dna-analysis-block">最弱模块: <strong id="dash-dna-weakest">--</strong></div>' +
-    '<div class="dash-dna-analysis-block">情绪积极度: <strong id="dash-dna-positivity">--</strong></div>' +
-    '<div class="dash-dna-analysis-block">压力指数: <strong id="dash-dna-stress">--</strong></div>' +
-    '</div>' +
-    '<div class="dash-dna-diagnosis" id="dash-dna-diagnosis" style="display:none;">' +
-    '<div class="dash-dna-diagnosis-title">AI 诊断</div>' +
-    '<div id="dash-dna-diagnosis-text"></div>' +
-    '</div>' +
-    '<div class="dash-dna-actions">' +
-    '<button type="button" class="dash-dna-btn dash-dna-btn--primary" id="dash-dna-mood-btn">情绪打卡</button>' +
-    '<button type="button" class="dash-dna-btn" id="dash-dna-share-btn-2">生成分享卡片</button>' +
-    '</div>' +
-    '</div>' +
-    '</div>';
-
   // 今日计划
   html += '<div class="dash-section">' +
     '<div class="dash-section-header">' +
@@ -1213,24 +889,11 @@ function renderDashboardPage(target) {
       '</div></div>';
   }
 
-  // AI 考点预测
-  html += '<div class="dash-section">' +
-    '<div class="dash-section-header">' +
-    '<span class="dash-section-title">AI 考点预测</span>' +
-    '<span class="dash-section-link" data-on=\'["navigateTo","/practice"]\'>去练习 ›</span>' +
-    '</div>' +
-    '<div id="dash-forecast-container"></div>' +
-    '</div>';
-
   html += '</div>'; // .dashboard-page
   target.innerHTML = html;
 
-  // 异步加载考点预测
-  _loadForecast(document.getElementById('dash-forecast-container'));
-
-  // v4.0 渲染情绪卡片 + 学习 DNA 双画像
+  // 渲染今日情绪卡片
   _renderMoodWidget();
-  _renderDNAPortrait(stats, bioScore);
 }
 
 /**
@@ -1248,122 +911,6 @@ function _renderMoodWidget() {
   } catch (e) {
     container.innerHTML = '';
   }
-}
-
-/**
- * v4.0 渲染学习 DNA + 情绪 DNA 双画像
- */
-function _renderDNAPortrait(stats, bioScore) {
-  if (!window.LearningDNA) return;
-  var canvas = document.getElementById('dash-dna-learning');
-  if (!canvas) return;
-
-  try {
-    // 1. 学习 DNA
-    var learning = window.LearningDNA.buildFromUserStats(stats);
-    var learningAnalysis = window.LearningDNA.analyzeLearningDNA(learning.dna);
-
-    // 2. 情绪 DNA
-    var moodLogs = [];
-    if (window.BioQuestMoodTracker && typeof window.BioQuestMoodTracker.getRecentLogs === 'function') {
-      moodLogs = window.BioQuestMoodTracker.getRecentLogs(8);
-    }
-    var mood = window.LearningDNA.buildFromMoodLogs(moodLogs);
-    var moodAnalysis = window.LearningDNA.analyzeMoodDNA(mood.dna);
-
-    // 3. 互补度
-    var complementarity = window.LearningDNA.computeComplementarity(learning.dna, mood.dna);
-
-    // 4. 压力指数
-    var stressIndex = 0;
-    if (window.BioQuestMoodTracker && typeof window.BioQuestMoodTracker.computeStressIndex === 'function') {
-      var recentAcc = stats.totalAnswered > 0 ? (stats.totalCorrect / stats.totalAnswered) : 0.7;
-      stressIndex = window.BioQuestMoodTracker.computeStressIndex(moodLogs, recentAcc, 120);
-    }
-    var stressLevel = window.BioQuestMoodTracker && window.BioQuestMoodTracker.getStressLevel
-      ? window.BioQuestMoodTracker.getStressLevel(stressIndex)
-      : { label: '--', color: '#888' };
-
-    // 5. 渲染双螺旋
-    window.LearningDNA.renderDoubleHelix(canvas, learning.dna, mood.dna, {
-      label1: '学习',
-      label2: '情绪'
-    });
-
-    // 6. 填充分析数据
-    _setText('dash-dna-completeness', learningAnalysis.completeness + '%');
-    _setText('dash-dna-complementarity', Math.round(complementarity * 100) + '%');
-    _setText('dash-dna-strongest', learningAnalysis.strongest ? learningAnalysis.strongest.label : '--');
-    _setText('dash-dna-weakest', learningAnalysis.weakest ? learningAnalysis.weakest.label : '--');
-    _setText('dash-dna-positivity', moodAnalysis.positivity + '%');
-    var stressEl = document.getElementById('dash-dna-stress');
-    if (stressEl) {
-      stressEl.textContent = stressIndex + '（' + stressLevel.label + '）';
-      stressEl.style.color = stressLevel.color;
-    }
-
-    // 7. AI 诊断
-    var diagnosis = window.LearningDNA.generateDiagnosis(learningAnalysis, moodAnalysis, complementarity);
-    if (diagnosis) {
-      var diagEl = document.getElementById('dash-dna-diagnosis');
-      var diagText = document.getElementById('dash-dna-diagnosis-text');
-      if (diagEl) diagEl.style.display = 'block';
-      if (diagText) diagText.textContent = diagnosis;
-    }
-
-    // 8. 分享卡片按钮
-    function triggerShare() {
-      try {
-        var userName = '同学';
-        try {
-          var user = window.getCurrentUser ? window.getCurrentUser() : null;
-          if (user && user.display_name) userName = user.display_name;
-        } catch (e) {}
-        var grade = bioScore ? bioScore.grade : '';
-        window.LearningDNA.downloadShareCard({
-          userName: userName,
-          grade: grade,
-          learningDNA: learning.dna,
-          moodDNA: mood.dna,
-          learningAnalysis: learningAnalysis,
-          moodAnalysis: moodAnalysis,
-          complementarity: complementarity,
-          diagnosis: diagnosis
-        });
-      } catch (e) {
-        console.warn('[Dashboard] share card failed:', e && e.message);
-      }
-    }
-    var shareBtn1 = document.getElementById('dash-dna-share-btn');
-    var shareBtn2 = document.getElementById('dash-dna-share-btn-2');
-    if (shareBtn1) shareBtn1.addEventListener('click', triggerShare);
-    if (shareBtn2) shareBtn2.addEventListener('click', triggerShare);
-
-    // 9. 情绪打卡按钮
-    var moodBtn = document.getElementById('dash-dna-mood-btn');
-    if (moodBtn) {
-      moodBtn.addEventListener('click', function () {
-        if (window.BioQuestMoodTracker && typeof window.BioQuestMoodTracker.showCheckinModal === 'function') {
-          var hour = new Date().getHours();
-          var period = hour < 12 ? 'morning' : (hour < 18 ? 'noon' : 'evening');
-          window.BioQuestMoodTracker.showCheckinModal({
-            period: period,
-            onSubmitted: function () {
-              _renderMoodWidget();
-              _renderDNAPortrait(stats, bioScore);
-            }
-          });
-        }
-      });
-    }
-  } catch (e) {
-    console.warn('[Dashboard] DNA portrait render failed:', e && e.message);
-  }
-}
-
-function _setText(id, text) {
-  var el = document.getElementById(id);
-  if (el) el.textContent = text;
 }
 
 /**

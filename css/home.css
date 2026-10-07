@@ -190,7 +190,9 @@
 
 .hero-scroll-hint {
   position: absolute;
-  bottom: 40px;
+  /* 底部悬浮 Tab 栏固定在 bottom:14px（高约 66px），提示放 40px 会被其盖住；
+     抬到 104px 让「向下滚动」提示浮在 Tab 栏之上，首屏底部不再两层重叠。 */
+  bottom: 104px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;

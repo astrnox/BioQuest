@@ -2,7 +2,7 @@
  * BioQuest — 首屏同步 CSS 合并包（Issue #108，由
  * scripts/build-css-bundle.js 自动生成，勿手改。
  * 合并源：globals.css + layout.css + header.css + learning-hub.css + home.css + debug-fix.css
- * 生成时间：2026-10-07T03:35:25.500Z
+ * 生成时间：2026-10-07T04:26:28.843Z
  * ============================================================ */
 
 /* ---------- 来源: css/globals.css ---------- */
@@ -4550,6 +4550,11 @@ html[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
     padding-top: calc(var(--header-height) + 20px);
     padding-bottom: 32px;
   }
+  /* 首页 Hero 需与顶栏齐平：否则会被上面的 .page-content 规则顶出 20px 空档，
+     首屏顶部多出一条露出页面底色的缝。 */
+  .page-content--home {
+    padding-top: 0;
+  }
 }
 
 /* ---------- 来源: css/header.css ---------- */
@@ -5355,7 +5360,9 @@ textarea.lmc-form-input { resize: vertical; min-height: 60px; line-height: 1.5; 
 
 .hero-scroll-hint {
   position: absolute;
-  bottom: 40px;
+  /* 底部悬浮 Tab 栏固定在 bottom:14px（高约 66px），提示放 40px 会被其盖住；
+     抬到 104px 让「向下滚动」提示浮在 Tab 栏之上，首屏底部不再两层重叠。 */
+  bottom: 104px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;

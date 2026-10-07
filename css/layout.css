@@ -429,4 +429,9 @@ html[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
     padding-top: calc(var(--header-height) + 20px);
     padding-bottom: 32px;
   }
+  /* 首页 Hero 需与顶栏齐平：否则会被上面的 .page-content 规则顶出 20px 空档，
+     首屏顶部多出一条露出页面底色的缝。 */
+  .page-content--home {
+    padding-top: 0;
+  }
 }
