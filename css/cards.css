@@ -421,7 +421,7 @@
 
 .anki-progress-fill {
   height: 100%;
-  background: linear-gradient(90deg, var(--color-sage), var(--color-success));
+  background: var(--color-sage);
   border-radius: 2px;
   transition: width 0.4s ease;
 }

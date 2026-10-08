@@ -109,7 +109,7 @@ function injectDiscussionStyles() {
     '.discussion-quick-btn:active { transform:scale(.96); background:var(--color-amber,#c4956a); color:#fff; }',
 
     /* 自定义智能体模态 */
-    '.disc-modal-overlay { position:fixed; inset:0; background:rgba(5,10,7,0.5); backdrop-filter:blur(4px); z-index:9998; display:flex; align-items:center; justify-content:center; padding:20px; }',
+    '.disc-modal-overlay { position:fixed; inset:0; background:rgba(5,10,7,0.66); z-index:9998; display:flex; align-items:center; justify-content:center; padding:20px; }',
     '.disc-modal { background:var(--surface-primary,#fff); border-radius:16px; width:100%; max-width:460px; max-height:90vh; overflow-y:auto; padding:24px; box-shadow:var(--shadow-floating); }',
     '.disc-modal h3 { margin:0 0 16px; font-family:var(--font-serif,serif); color:var(--color-deep,#1a3a2a); font-size:1.15rem; }',
     '.disc-form-group { margin-bottom:14px; }',
@@ -373,7 +373,7 @@ function _exportChatMarkdown() {
         });
       }
       if (round.synthesis) {
-        md += '### ✦ 综合观点\n\n' + (round.synthesis || '') + '\n\n';
+        md += '### 综合观点\n\n' + (round.synthesis || '') + '\n\n';
       }
       md += '---\n\n';
     });
@@ -395,7 +395,7 @@ function _exportChatMarkdown() {
         });
       }
       if (run.final) {
-        md += '### ✦ 最终成品\n\n' + (run.final.summary || '') + '\n\n';
+        md += '### 最终成品\n\n' + (run.final.summary || '') + '\n\n';
         if (run.final.sections) {
           run.final.sections.forEach(function(sec) {
             md += '#### ' + (sec.heading || '') + '\n\n' + (sec.content || '') + '\n\n';
@@ -639,7 +639,7 @@ function _renderGroupRound(round) {
     var sBody;
     if (round.synthesis) sBody = _discMdWithCursor(round.synthesis, round.synthesisStreaming);
     else sBody = '<span>综合中<span class="discussion-dots"><span></span><span></span><span></span></span></span>';
-    synth.innerHTML = '<div class="discussion-synthesis-head"><span>✦</span>综合观点</div><div class="discussion-synthesis-body">' + sBody + '</div>';
+    synth.innerHTML = '<div class="discussion-synthesis-head">综合观点</div><div class="discussion-synthesis-body">' + sBody + '</div>';
     el.appendChild(synth);
   }
   return el;

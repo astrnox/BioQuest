@@ -520,9 +520,10 @@ function renderCardsPage() {
 
   container.innerHTML = `
     <div style="max-width:720px;margin:0 auto;padding:40px 20px 60px;">
-      <div class="anki-page-header" style="margin-bottom:32px;">
-        <h2 class="section-title" style="font-size:2rem;">间隔重复记忆卡</h2>
-        <p class="section-desc">基于 FSRS 算法的智能复习系统 · 选择牌组开始学习</p>
+      <!-- P1：页头统一使用全局组件（不再逐页写内联字号/样式） -->
+      <div class="bq-section-header">
+        <h2 class="bq-section-header__title">间隔重复记忆卡</h2>
+        <p class="bq-section-header__desc">基于 FSRS 的间隔重复复习 · 选择牌组开始学习</p>
       </div>
 
       <!-- 牌组选择器（动态渲染） -->
@@ -2909,7 +2910,7 @@ function showAuthModal(mode) {
               <svg class="auth-pwd-toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
             </button>
           </div>
-          <button type="button" class="auth-btn-guest" data-on='["handleGuestLogin"]' data-prevent-default style="background:#c4956a;border:none;color:#1a2f1d;padding:10px 20px;border-radius:16px;cursor:pointer;font-size:0.9rem;font-weight:600;width:100%;transition:all 0.2s;box-shadow:var(--shadow-md);">
+          <button type="button" class="bq-btn bq-btn--warm bq-btn--block" data-on='["handleGuestLogin"]' data-prevent-default>
             游客登录（无需注册）
           </button>
         </div>
@@ -2919,7 +2920,7 @@ function showAuthModal(mode) {
       </div>
       <div class="auth-form-panel" id="auth-form-register">
         <h2 class="auth-form-title">创建账号</h2>
-        <p class="auth-form-sub">加入 BioQuest 开启生物学习之旅</p>
+        <p class="auth-form-sub">注册 BioQuest 账号，开始刷题</p>
         <div class="auth-field">
           <svg class="auth-field-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/></svg>
           <input type="text" class="auth-input" id="auth-register-username" placeholder="用户名" autocomplete="username">
@@ -3401,7 +3402,7 @@ function _showMinesweeperCaptcha(type) {
         flagged -= 1;
       } else {
         cell.classList.add('flag');
-        cell.textContent = '⚑';
+        cell.innerHTML = BQ_ICONS.flag;
         flagged += 1;
       }
     }
@@ -3469,7 +3470,7 @@ function _calcPasswordStrength(pwd) {
   var commonPwd = ['123456', 'password', 'qwerty', 'abc123', '111111', '12345', 'iloveyou', 'admin', 'welcome', 'letmein'];
   if (commonPwd.some(function (c) { return pwd.toLowerCase().indexOf(c) >= 0; })) {
     score = Math.max(0, score - 2);
-    factors.push('⚠常见');
+    factors.push('常见密码');
   }
 
   // 重复字符扣分
@@ -3652,7 +3653,7 @@ function _showPasswordSetup(onConfirm) {
     }
     attackStart.textContent = '停止';
     attackFill.style.transform = 'scaleX(0)';
-    attackFill.style.background = 'linear-gradient(90deg, #d63a2a, #e87a3a, #e8c43a, #a8d63a, #3a8c5c)';
+    attackFill.style.background = '#d63a2a';
     attackLog.innerHTML = '';
     var tried = 0;
     var lastMs = Date.now();
@@ -3681,7 +3682,7 @@ function _showPasswordSetup(onConfirm) {
         var sampleWords = ['password', 'qwerty', 'letmein', 'admin', 'iloveyou', 'monkey', 'dragon', 'abc123', 'pokemon'];
         var sw = sampleWords[Math.floor(Math.random() * sampleWords.length)] + Math.floor(Math.random() * 99);
         var logLine = document.createElement('div');
-        logLine.textContent = '✗ ' + sw;
+        logLine.textContent = '× ' + sw;
         attackLog.appendChild(logLine);
         if (attackLog.children.length > 5) attackLog.removeChild(attackLog.firstChild);
         attackLog.scrollTop = attackLog.scrollHeight;
@@ -3690,7 +3691,7 @@ function _showPasswordSetup(onConfirm) {
       if (likelyHit && tried >= maxTries * 0.95) {
         attackFill.style.background = '#d63a2a';
         var hitLine = document.createElement('div');
-        hitLine.textContent = '✓ 已破解：' + pwd;
+        hitLine.textContent = '√ 已破解：' + pwd;
         hitLine.style.color = '#d63a2a';
         hitLine.style.fontWeight = '700';
         attackLog.appendChild(hitLine);
@@ -3701,7 +3702,7 @@ function _showPasswordSetup(onConfirm) {
       if (tried >= maxTries) {
         attackFill.style.background = '#3a8c5c';
         var safeLine = document.createElement('div');
-        safeLine.textContent = '✓ 攻击终止 · 密码安全';
+        safeLine.textContent = '√ 攻击终止 · 密码安全';
         safeLine.style.color = '#3a8c5c';
         safeLine.style.fontWeight = '700';
         attackLog.appendChild(safeLine);
@@ -4040,7 +4041,7 @@ function _showSlideCaptcha(type) {
         return;
       }
       pass = true;
-      status.textContent = '✓ 验证通过';
+      status.textContent = '验证通过';
       status.className = 'slide-cap-status ok';
       piece.classList.add('passed');
       _markSlideCaptchaPassed(type);
@@ -4128,8 +4129,8 @@ function _updateSlideTriggerUI(passed) {
     var type = el.id.indexOf('login') >= 0 ? 'login' : 'register';
     if (passed && _isSlideCaptchaPassed(type)) {
       el.dataset.state = 'passed';
-      if (textEl) textEl.textContent = '✓ 已通过安全验证';
-      if (arrowEl) arrowEl.textContent = '✓';
+      if (textEl) textEl.textContent = '已通过安全验证';
+      if (arrowEl) arrowEl.textContent = '√';
     } else {
       el.dataset.state = 'pending';
       if (textEl) textEl.textContent = '点击完成安全验证';
@@ -4366,7 +4367,7 @@ async function handleForgotPassword() {
       var forgotForm = document.getElementById('auth-form-forgot');
       if (forgotForm) {
         forgotForm.innerHTML = '<div style="text-align:center;padding:20px 0;">' +
-          '<div style="font-size:2.2rem;margin-bottom:12px;">✓</div>' +
+          '<div class="bq-result-icon">' + BQ_ICONS.checkCircleLarge + '</div>' +
           '<h3 style="font-size:1.1rem;margin-bottom:8px;color:var(--color-sage,#3a8c5c);">密码已重置</h3>' +
           '<p style="font-size:0.85rem;color:var(--text-secondary,#8a8a8a);line-height:1.6;margin-bottom:12px;">' +
             '你的密码已成功重置。<br>请使用新密码登录。' +
@@ -4729,9 +4730,9 @@ function _showUserKeyCard(userKey, onConfirm) {
     '    <p class="userkey-card-sub">这是你的 8 字符密钥，用于忘记密码时验证身份</p>',
     '    <div class="userkey-card-key" id="userkey-card-key-display">' + escapeHtml(userKey) + '</div>',
     '    <div class="userkey-card-tips">',
-    '      <div class="userkey-card-tip">✓ 请截图保存或抄写在纸上</div>',
-    '      <div class="userkey-card-tip">✓ 不要告诉任何人</div>',
-    '      <div class="userkey-card-tip">✓ 丢失后无法找回，需要重置密码</div>',
+    '      <div class="userkey-card-tip">' + BQ_ICONS.check + ' 请截图保存或抄写在纸上</div>',
+    '      <div class="userkey-card-tip">' + BQ_ICONS.check + ' 不要告诉任何人</div>',
+    '      <div class="userkey-card-tip">' + BQ_ICONS.check + ' 丢失后无法找回，需要重置密码</div>',
     '    </div>',
     '    <button type="button" class="userkey-card-btn" id="userkey-card-btn">我已保存密钥</button>',
     '  </div>',
@@ -5489,8 +5490,7 @@ function openDonation() {
         display: flex;
         align-items: center;
         justify-content: center;
-        background: rgba(5, 10, 7, 0.75);
-        backdrop-filter: blur(20px) saturate(180%);
+        background: rgba(5, 10, 7, 0.88);
         animation: donationFadeIn 0.25s ease;
       }
 
@@ -6117,7 +6117,7 @@ window.showUndoToast = showUndoToast;
         ].join(';');
         banner.innerHTML = '<span>新版本可用</span>' +
           '<button data-on=\'["_cspReload"]\' style="padding:6px 16px;border-radius:8px;border:none;background:#5a7d5c;color:#fff;cursor:pointer;font-size:0.85rem;font-weight:600;white-space:nowrap;">刷新</button>' +
-          '<button data-on=\'["_cspRemoveParent"]\' style="padding:6px 10px;border-radius:8px;border:none;background:transparent;color:#999;cursor:pointer;font-size:0.85rem;">✕</button>';
+          '<button data-on=\'["_cspRemoveParent"]\' style="padding:6px 10px;border-radius:8px;border:none;background:transparent;color:#999;cursor:pointer;font-size:0.85rem;">×</button>';
         document.body.appendChild(banner);
       }, 0);
     });
@@ -6348,7 +6348,7 @@ window.showUndoToast = showUndoToast;
 
     var dismissBtn = document.createElement('button');
     dismissBtn.type = 'button';
-    dismissBtn.textContent = '✕';
+    dismissBtn.textContent = '×';
     dismissBtn.setAttribute('aria-label', '不再提示');
     dismissBtn.style.cssText = 'flex:none;padding:2px 8px;border:none;background:transparent;color:rgba(255,255,255,0.7);cursor:pointer;font-size:1.1rem;';
     bar.appendChild(dismissBtn);

@@ -132,20 +132,8 @@
   transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
 }
 
-.btn-primary-hero::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 60%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
-  transition: left 0.5s ease;
-}
-
-.btn-primary-hero:hover::after {
-  left: 120%;
-}
+/* P0 去装饰：移除按钮"扫光"（::after 渐变滑过）效果，
+   按钮反馈只用底色/边框，不做光效。 */
 
 .btn-primary-hero:hover {
   transform: translateY(-2px);
@@ -743,7 +731,7 @@
 }
 
 .dq-option:hover {
-  border-color: var(--color-sage, #5a7d5c);
+  border-color: var(--color-sage);
   background: rgba(90,125,92,0.04);
 }
 
@@ -768,13 +756,13 @@
 }
 
 .dq-selected {
-  border-color: var(--color-sage, #5a7d5c);
+  border-color: var(--color-sage);
   background: rgba(90,125,92,0.06);
 }
 
 .dq-selected .dq-marker {
-  border-color: var(--color-sage, #5a7d5c);
-  background: var(--color-sage, #5a7d5c);
+  border-color: var(--color-sage);
+  background: var(--color-sage);
   color: #fff;
 }
 
@@ -1040,12 +1028,11 @@
 
 .bio-history-card {
   position: relative;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 16px;
+  /* P0 去玻璃：改为实色深面板（原 rgba+blur(8px)） */
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-xl);
   padding: 22px 24px;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
   transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
               background 0.3s ease,
               border-color 0.3s ease,

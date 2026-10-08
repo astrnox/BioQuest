@@ -68,7 +68,7 @@ var POINTS_PENALTIES = {
 // 5. 信任等级（由当前信用指数推导；指数越高，社区信任越高）
 var POINTS_LEVELS = [
   { min: 0,   label: '不受信任', title: '不受信任', color: '#c0553a' },
-  { min: 10,  label: '极低信任', title: '极低信任', color: '#d47030', icon: '⚠️' },
+  { min: 10,  label: '极低信任', title: '极低信任', color: '#d47030' },
   { min: 30,  label: '有限信任', title: '有限信任', color: '#c49b30' },
   { min: 50,  label: '基本信任', title: '基本信任', color: '#5a7d5c' },
   { min: 80,  label: '高度信任', title: '高度信任', color: '#3a8c5c' },
@@ -560,9 +560,9 @@ async function registerUser(username, password, displayName, email) {
       } else if (msg.includes('User already registered')) {
         msg = '该邮箱已被注册，请直接登录';
       } else if (msg.includes('Email signups are disabled') || msg.includes('signups are disabled')) {
-        msg = '⚠️ Supabase 关闭了邮箱注册功能。请去 Dashboard → Authentication → Providers → Email → 打开 "Enable Email provider" 开关';
+        msg = 'Supabase 关闭了邮箱注册功能。请去 Dashboard → Authentication → Providers → Email → 打开 "Enable Email provider" 开关';
       } else if (msg.includes('Signups not allowed') || msg.includes('signups_disabled')) {
-        msg = '⚠️ Supabase 禁止新用户注册。请去 Dashboard → Authentication → Providers → Email → 打开注册开关';
+        msg = 'Supabase 禁止新用户注册。请去 Dashboard → Authentication → Providers → Email → 打开注册开关';
       } else if (msg.includes('Email not confirmed') || msg.includes('email_not_confirmed')) {
         msg = '请先完成邮箱验证（auto_confirm 触发器未生效，请去 Supabase 检查 trigger）';
       } else if (msg.includes('Password') || msg.includes('password')) {

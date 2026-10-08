@@ -303,9 +303,7 @@
 .wiki-modal-backdrop {
   position: absolute;
   inset: 0;
-  background: rgba(26, 47, 29, 0.4);
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
+  background: rgba(26, 47, 29, 0.5);
   animation: wikiFade 0.2s ease;
 }
 @keyframes wikiFade { from { opacity: 0; } to { opacity: 1; } }

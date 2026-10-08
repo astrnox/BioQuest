@@ -47,7 +47,7 @@
         '<div class="bq-notify-post">' + escapeHtml(notif.postPreview || '你的帖子') + '</div>' +
         '<div class="bq-notify-comment">' + escapeHtml(notif.comment || '') + '</div>' +
       '</div>' +
-      '<button class="bq-notify-close" aria-label="关闭">✕</button>';
+      '<button class="bq-notify-close" aria-label="关闭">×</button>';
     document.body.appendChild(toast);
 
     var close = function () {

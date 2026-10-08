@@ -261,7 +261,7 @@
         '</div>' +
         // 右侧：说明
         '<div style="background:var(--surface-primary,#fff);border:1px solid var(--border-light,#ece8e1);border-radius:var(--radius-lg, 12px);padding:20px;">' +
-          '<h3 style="font-family:var(--font-serif,serif);font-size:1.1rem;color:var(--color-deep,#1a3a2a);margin-bottom:12px;">ℹ️ 使用说明</h3>' +
+          '<h3 style="font-family:var(--font-serif,serif);font-size:1.1rem;color:var(--color-deep,#1a3a2a);margin-bottom:12px;">使用说明</h3>' +
           '<ul style="margin:0;padding-left:20px;color:var(--text-secondary,#4a4a4a);font-size:0.85rem;line-height:1.8;">' +
             '<li>左侧实时讨论室基于 quikchat，消息保存在本地浏览器</li>' +
             '<li>支持 Markdown 格式（粗体、斜体、行内代码、链接）</li>' +

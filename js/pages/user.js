@@ -1487,21 +1487,21 @@ function _testAiKeyConnection() {
     })
   }).then(function(resp) {
     if (resp.ok) {
-      resultEl.textContent = '✓ 连接成功！模型 ' + model + ' 可用';
+      resultEl.textContent = '连接成功，模型 ' + model + ' 可用';
       resultEl.style.color = 'var(--color-sage,#3a6b4a)';
       // 保存配置（携带「会话内记住」偏好）
       _saveApiKeyConfig(cfg, document.getElementById('aiKeyRememberCb')
         ? document.getElementById('aiKeyRememberCb').checked : false);
     } else {
       return resp.text().then(function(txt) {
-        var msg = '✗ 连接失败（HTTP ' + resp.status + '）';
+        var msg = '连接失败（HTTP ' + resp.status + '）';
         try { var j = JSON.parse(txt); if (j.error && j.error.message) msg += '：' + j.error.message; } catch(e) {}
         resultEl.textContent = msg;
         resultEl.style.color = 'var(--color-error,#c0553a)';
       });
     }
   }).catch(function(err) {
-    resultEl.textContent = '✗ 网络错误：' + (err.message || err);
+    resultEl.textContent = '网络错误：' + (err.message || err);
     resultEl.style.color = 'var(--color-error,#c0553a)';
   });
 }
@@ -1576,7 +1576,7 @@ var _POINTS_DEFAULTS = {
 // 信任等级（由当前信用指数推导；指数越高，社区信任越高）
 var _POINTS_LEVELS = [
   { min: 0,   label: '不受信任', title: '不受信任', color: '#c0553a' },
-  { min: 10,  label: '极低信任', title: '极低信任', color: '#d47030', icon: '⚠️' },
+  { min: 10,  label: '极低信任', title: '极低信任', color: '#d47030' },
   { min: 30,  label: '有限信任', title: '有限信任', color: '#c49b30' },
   { min: 50,  label: '基本信任', title: '基本信任', color: '#5a7d5c' },
   { min: 80,  label: '高度信任', title: '高度信任', color: '#3a8c5c' },
@@ -2484,7 +2484,7 @@ function renderUserPage(target) {
             <div class="user-quick-label">社区</div>
           </div>
           <div class="user-quick-item" data-on='["navigateTo","/leaderboard"]'>
-            <div class="user-quick-icon">🏆</div><div class="user-quick-label">排行</div>
+            <div class="user-quick-label">排行</div>
           </div>
         </div>
 

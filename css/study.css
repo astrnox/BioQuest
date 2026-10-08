@@ -116,7 +116,7 @@
 
 .study-progress-bar-fill {
   height: 100%;
-  background: linear-gradient(90deg, var(--color-sage), var(--color-mid), var(--color-deep));
+  background: var(--color-mid);
   border-radius: var(--radius-full);
   transition: width 0.6s cubic-bezier(0.22, 1, 0.36, 1);
   min-width: 0;
@@ -702,7 +702,7 @@
 
 .study-tree-mini-fill {
   height: 100%;
-  background: linear-gradient(90deg, var(--color-sage), var(--color-mid));
+  background: var(--color-mid);
   border-radius: var(--radius-full);
   transition: width 0.4s ease;
 }

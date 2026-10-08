@@ -56,7 +56,7 @@
     // 信用等级（与现有 CI 视觉一致，阈值沿用 0/10/30/50/80/100）
     LEVELS: [
       { min: 0,   label: '不受信任', title: '不受信任', color: '#c0553a' },
-      { min: 10,  label: '极低信任', title: '极低信任', color: '#d47030', icon: '⚠️' },
+      { min: 10,  label: '极低信任', title: '极低信任', color: '#d47030' },
       { min: 30,  label: '有限信任', title: '有限信任', color: '#c49b30' },
       { min: 50,  label: '基本信任', title: '基本信任', color: '#5a7d5c' },
       { min: 80,  label: '高度信任', title: '高度信任', color: '#3a8c5c' },

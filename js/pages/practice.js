@@ -1418,9 +1418,9 @@ function renderFilterPanel() {
             ${escapeHtml(PracticeState.conceptFilter)}
           </span>
           ${PracticeState.kgCategory ? `<span style="display:inline-flex;align-items:center;gap:4px;padding:4px 10px;background:rgba(59,130,246,0.1);border:1px solid rgba(59,130,246,0.25);border-radius:16px;font-size:0.8rem;color:#3b82f6;">${escapeHtml(PracticeState.kgCategory)}</span>` : ''}
-          <button id="practice-clear-concept-btn" style="display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;border:1px solid var(--color-sage,rgba(90,125,92,0.3));background:transparent;color:var(--text-muted);cursor:pointer;font-size:14px;line-height:1;padding:0;margin-left:auto;" title="清除专项筛选">✕</button>
+          <button id="practice-clear-concept-btn" style="display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;border:1px solid var(--color-sage,rgba(90,125,92,0.3));background:transparent;color:var(--text-muted);cursor:pointer;font-size:14px;line-height:1;padding:0;margin-left:auto;" title="清除专项筛选">×</button>
         </div>
-        <div style="font-size:0.82rem;color:var(--text-muted);margin-top:8px;">来自知识图谱的专项练习 · 点击 ✕ 可恢复常规筛选</div>
+        <div style="font-size:0.82rem;color:var(--text-muted);margin-top:8px;">来自知识图谱的专项练习 · 点击 × 可恢复常规筛选</div>
       </div>`
     : '';
 

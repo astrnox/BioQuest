@@ -940,7 +940,7 @@ var DIAGNOSIS_RULES = {
       suggestion: '建议增加练习量到至少 20 题，以建立基线数据'
     },
     {
-      id: 'high_volume_low_acc', label: '刷题多但效果差', icon: '⚠️',
+      id: 'high_volume_low_acc', label: '刷题多但效果差',
       condition: function (ctx) { return ctx.totalAnswered >= 50 && ctx.accuracy < 50; },
       suggestion: '放慢节奏，加强错题复盘，关注理解而非数量'
     },
@@ -965,7 +965,7 @@ var DIAGNOSIS_RULES = {
       suggestion: '重新建立每日学习习惯'
     },
     {
-      id: 'excellent', label: '表现优异', icon: '🏆',
+      id: 'excellent', label: '表现优异',
       condition: function (ctx) { return ctx.accuracy >= 90 && ctx.totalAnswered >= 30; },
       suggestion: '可挑战更高难度的题目，或帮助其他同学'
     }

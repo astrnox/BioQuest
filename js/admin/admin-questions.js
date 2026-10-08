@@ -265,7 +265,7 @@ function renderQuestionsTab(container, questionsData) {
     <div class="admin-section" id="admin-local-questions-section" style="margin-top:28px;">
       <div class="admin-section-header">
         <div class="admin-section-title">
-          ${ICONS.star || '★'}
+          ${ICONS.star || ''}
           本地题库 · 评分与回收站
         </div>
         <span class="admin-section-badge" style="font-size:0.72rem;color:var(--text-muted,#8a8a8a);">数据来源：data/quiz.json + data/logic_questions.json</span>
@@ -322,7 +322,7 @@ function renderQuestionsTab(container, questionsData) {
               • 多选题（4 选项）：<code>TTFF</code> 表示选 AB；<code>TFFT</code> 表示选 AD<br>
               • 判断题（1 选项）：<code>T</code> 表示对；<code>F</code> 表示错<br>
               • 多判断题：每项 T/F 直接对应该选项描述的真假<br>
-              ⚠️ <strong>「问错的是？」类题目：</strong>T 表示该选项在答案视角下正确（即该选项确实是「错的」、属于答案），F 表示该选项在答案视角下错误（即该选项其实是对的、不属于答案）。<br>
+              <strong>「问错的是？」类题目：</strong>T 表示该选项在答案视角下正确（即该选项确实是「错的」、属于答案），F 表示该选项在答案视角下错误（即该选项其实是对的、不属于答案）。<br>
               例：题目问「下列哪个错误」，答案是 A 和 B 错误 → TTFF 格式填 <code>TTFF</code>（A、B 是答案→T；C、D 不是答案→F）。
             </div>
           </div>

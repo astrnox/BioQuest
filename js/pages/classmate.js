@@ -29,7 +29,7 @@
     L1: { id: 'L1', name: '提问我', hint: '用反问引导你思考，不给答案线索' },
     L2: { id: 'L2', name: '给提示', hint: '给一个关键提示，仍需自己推导' },
     L3: { id: 'L3', name: '给思路', hint: '给出推导步骤，最后一步留空' },
-    L4: { id: 'L4', name: '看答案', icon: '✅', hint: '完整答案 + 解析 + 易错点' }
+    L4: { id: 'L4', name: '看答案', hint: '完整答案 + 解析 + 易错点' }
   };
 
   // ====== 状态机（§C.2.1） ======
@@ -372,7 +372,7 @@
       '    <span class="bq-classmate-level-hint">推导步骤</span>',
       '  </button>',
       '  <button class="bq-classmate-level-btn" data-level="L4" disabled>',
-      '    <span class="bq-classmate-level-icon">✅</span>',
+      '    <span class="bq-classmate-level-icon">' + BQ_ICONS.checkCircle + '</span>',
       '    <span class="bq-classmate-level-name">L4 答案</span>',
       '    <span class="bq-classmate-level-hint">完整解析</span>',
       '  </button>',
@@ -879,7 +879,7 @@
       '    <div style="margin:6px 0;"><strong>北京心理危机研究与干预中心</strong>：010-82951332</div>',
       '    <div style="margin:6px 0;"><strong>生命热线</strong>：400-161-9995</div>',
       '  </div>',
-      '  <p style="font-size:0.78rem;color:#999;margin:12px 0;">⚠️ BioQuest 不是医疗机构，本卡片仅提供资源转介，不构成医学诊断或治疗建议。如遇紧急情况请立即拨打 120。</p>',
+      '  <p style="font-size:0.78rem;color:#999;margin:12px 0;">BioQuest 不是医疗机构，本卡片仅提供资源转介，不构成医学诊断或治疗建议。如遇紧急情况请立即拨打 120。</p>',
       '  <div style="display:flex;gap:8px;margin-top:16px;">',
       '    <a href="tel:12320" style="flex:1;padding:10px;background:#5a7d5c;color:#fff;text-align:center;border-radius:8px;text-decoration:none;font-weight:600;">立即拨打 12320</a>',
       '    <button class="bq-crisis-close" type="button" style="flex:1;padding:10px;background:#f5f3ef;border:1px solid #e0dcd5;border-radius:8px;cursor:pointer;font-family:inherit;">我已了解</button>',

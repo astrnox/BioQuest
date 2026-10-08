@@ -183,7 +183,7 @@
     el.innerHTML =
       '<div class="sc-result">' +
       '<div class="sc-result-big">' + r.score + ' <span style="font-size:.9rem;color:#8a9">/ 200</span></div>' +
-      '<div class="sc-grade">' + esc(level.icon) + ' ' + esc(level.label) + (level.nextAt != null ? '（距下一级还需 ' + Math.max(0, Math.ceil(level.nextAt - r.score)) + ' 分）' : '（已满级）') + '</div>' +
+      '<div class="sc-grade">' + esc(level.label) + (level.nextAt != null ? '（距下一级还需 ' + Math.max(0, Math.ceil(level.nextAt - r.score)) + ' 分）' : '（已满级）') + '</div>' +
       '<div class="sc-detail">' +
       '基础 ' + r.parts.base + ' + 行为收益 ' + r.parts.gains +
       ' − 违规 ' + r.parts.penalties + ' − 消费 ' + r.parts.spends +
@@ -258,7 +258,7 @@
       '<div class="sc-card">' +
       '<h2>Bio Score 推演（因变量：总分）</h2>' +
       '<p class="sc-sub">输入六维属性（0-100），即可算出加权总分与评级。左侧滑块可拖动，右侧数字框可精确输入。</p>' +
-      '<button type="button" class="sc-btn sc-btn--ghost" data-action="sc-fill-bio">⬇️ 填入我的真实数据</button>' +
+      '<button type="button" class="sc-btn sc-btn--ghost" data-action="sc-fill-bio">填入我的真实数据</button>' +
       '<div id="sc-bio-inputs">' +
       ['B', 'I', 'O', 'G', 'C', 'D'].map(function (k) {
         var name = { B: '基础正确率 B', I: '洞察力 I', O: '活跃度 O', G: '成长性 G', C: '一致性 C', D: '难度突破 D' }[k];

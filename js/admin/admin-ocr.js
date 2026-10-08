@@ -151,9 +151,9 @@ async function _ocrCheckVisionStatus() {
     const data = await res.json();
     const count = (data && data.available) ? data.available.length : 0;
     if (count === 0) {
-      _ocrShowStatus('⚠️ 当前未配置任何 vision 模型，OCR 功能不可用。请在 server.py 配置 ZHIPU_API_KEY / QWEN_API_KEY / SILICONFLOW_API_KEY / NVIDIA_API_KEY / OPENAI_API_KEY 中至少一个。', 'error', 15000);
+      _ocrShowStatus('当前未配置任何 vision 模型，OCR 功能不可用。请在 server.py 配置 ZHIPU_API_KEY / QWEN_API_KEY / SILICONFLOW_API_KEY / NVIDIA_API_KEY / OPENAI_API_KEY 中至少一个。', 'error', 15000);
     } else {
-      _ocrShowStatus(`✅ 已配置 ${count} 个 vision 模型：${data.available.map(v => v.model).join(', ')}`, 'success', 6000);
+      _ocrShowStatus(`已配置 ${count} 个 vision 模型：${data.available.map(v => v.model).join(', ')}`, 'success', 6000);
     }
   } catch (e) {
     console.warn('[OCR] 检查 vision 状态失败:', e);

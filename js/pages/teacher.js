@@ -79,7 +79,7 @@ function injectTeacherStyles() {
     /* 详情抽屉 */
     '.teacher-drawer-overlay {',
     '  position:fixed; inset:0; z-index:9998;',
-    '  background:rgba(5,10,7,0.5); backdrop-filter:blur(4px);',
+    '  background:rgba(5,10,7,0.66);',
     '  opacity:0; pointer-events:none; transition:opacity .25s;',
     '}',
     '.teacher-drawer-overlay.visible { opacity:1; pointer-events:auto; }',
@@ -185,7 +185,7 @@ function teacherModalConfirm(message, callback) {
   overlay.style.justifyContent = 'center';
   overlay.innerHTML =
     '<div style="background:var(--surface-primary,#fff);border-radius:12px;padding:28px 24px 20px;width:min(420px,92vw);box-shadow:var(--shadow-floating);text-align:center;">' +
-      '<div style="font-size:2rem;margin-bottom:8px;">⚠️</div>' +
+      '<div class="bq-result-icon bq-result-icon--warning">' + BQ_ICONS.alert + '</div>' +
       '<div style="font-size:0.92rem;color:var(--text-secondary,#4a4a4a);line-height:1.6;margin-bottom:20px;">' + escapeHtml(message || '确定执行此操作？') + '</div>' +
       '<div style="display:flex;gap:10px;justify-content:center;">' +
         '<button class="teacher-btn teacher-btn-ghost teacher-btn-sm" id="teacher-modal-cancel">取消</button>' +

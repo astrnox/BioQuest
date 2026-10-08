@@ -848,7 +848,7 @@ function renderDashboardPage(target) {
     '<span class="dash-plan-arrow">›</span></div>' +
     '<div class="dash-plan-item" data-on=\'["navigateTo","/review"]\'>' +
     '<div class="dash-plan-info"><div class="dash-plan-title">复习错题</div>' +
-    '<div class="dash-plan-desc">基于遗忘曲线的智能复习</div></div>' +
+    '<div class="dash-plan-desc">基于遗忘曲线的复习安排</div></div>' +
     '<span class="dash-plan-arrow">›</span></div>';
   if (topWeak.length > 0) {
     html += '<div class="dash-plan-item" data-on=\'["navigateTo","/practice"]\' style="border-left-color:#c45a5a;">' +

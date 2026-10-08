@@ -175,7 +175,8 @@
   }
 
   function paintRange(el, v, color) {
-    el.style.background = 'linear-gradient(90deg,' + color + ' 0%,' + color + ' ' + v + '%,#ece9e2 ' + v + '%)';
+    /* P0 去渐变：滑杆填充改为单色（原两段渐变填充） */
+    el.style.background = color;
   }
 
   function setEnable(enabled) {
@@ -421,7 +422,7 @@
         var isRange = el.className.indexOf('bc-range') >= 0;
         var other = $id(isRange ? 'bc-' + k + '-n' : 'bc-' + k + '-r');
         if (isRange) {
-          el.style.background = 'linear-gradient(90deg,' + (DIM_META[k] ? DIM_META[k].color : '#4a7c59') + ' 0%,' + (DIM_META[k] ? DIM_META[k].color : '#4a7c59') + ' ' + el.value + '%,#ece9e2 ' + el.value + '%)';
+          el.style.background = (DIM_META[k] ? DIM_META[k].color : '#4a7c59');
           if (other) other.value = clampNum(el.value, 0, 100);
         } else if (other) {
           other.value = clampNum(el.value, 0, 100);

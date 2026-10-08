@@ -66,7 +66,7 @@ function renderAiGenTab(container) {
               <input type="checkbox" id="aigen-need-image" checked style="width:16px;height:16px;">
               <span>生成题目配图（文生图）</span>
             </label>
-            ${!hasImg ? '<div style="font-size:12px;color:#c62828;margin-top:4px;">⚠️ 文生图需要配置 AI API Key（推荐智谱 CogView-3-Flash，免费）</div>' : ''}
+            ${!hasImg ? '<div style="font-size:12px;color:#c62828;margin-top:4px;">注意：文生图需要配置 AI API Key（推荐智谱 CogView-3-Flash，免费）</div>' : ''}
           </div>
 
           <div style="margin-bottom:14px;">
@@ -330,7 +330,7 @@ async function _aiGenGenerate() {
     _aiGenUpdateQueueUI();
     _aiGenShowProgress('完成！', 100);
     setTimeout(_aiGenHideProgress, 1000);
-    _aiGenShowStatus('✅ 成功生成 ' + generated.length + ' 道题目！请预览后入库。', 'success');
+    _aiGenShowStatus('成功生成 ' + generated.length + ' 道题目！请预览后入库。', 'success');
 
   } catch(err) {
     console.error('[AI Gen] 生成失败:', err);
@@ -383,7 +383,7 @@ function _aiGenUpdateQueueUI() {
     if (q.chart) {
       imgPreview = '<div style="margin:8px 0;"><img src="' + escapeHtml(q.chart) + '" style="max-width:100%;max-height:200px;border-radius:8px;border:1px solid #ddd;" alt="题目配图"></div>';
     } else if (q.image_prompt) {
-      imgPreview = '<div style="margin:8px 0;padding:8px;background:#fff3e0;border-radius:8px;font-size:12px;color:#e65100;">⚠️ 配图未生成/上传</div>';
+      imgPreview = '<div style="margin:8px 0;padding:8px;background:#fff3e0;border-radius:8px;font-size:12px;color:#e65100;">注意：配图未生成/上传</div>';
     }
 
     return '<div style="border:1px solid #e0e0e0;border-radius:8px;padding:14px;margin-bottom:10px;background:#fff;">' +

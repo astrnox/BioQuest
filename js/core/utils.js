@@ -17,6 +17,38 @@ var BioQuest = (typeof window !== 'undefined' ? window.BioQuest : null) || {};
 if (typeof window !== 'undefined') { window.BioQuest = BioQuest; }
 
 /**
+ * ═══ 全站图标系统（P0 设计整改）═══
+ * 统一替代散落在各页面的 emoji（奖杯 / 奖牌 / 对勾 / 警告等）。
+ * 约定：
+ *   - 线性风格：24 viewBox / stroke 1.8 / currentColor（随文字颜色）；
+ *   - 默认 16px，用外层类覆盖尺寸（如 .bq-result-icon svg 为 32px）；
+ *   - 颜色只用 color 控制，不要在图标上写 fill。
+ * 用法：el.innerHTML = BQ_ICONS.check + ' 已完成'
+ */
+var BQ_ICONS = (function () {
+  function svg(inner, size) {
+    var s = size || 16;
+    return '<svg width="' + s + '" height="' + s + '" viewBox="0 0 24 24" fill="none" stroke="currentColor" ' +
+      'stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">' +
+      inner + '</svg>';
+  }
+  return {
+    check: svg('<path d="M20 6 9 17l-5-5"/>'),
+    checkCircle: svg('<circle cx="12" cy="12" r="9"/><path d="m8.5 12.5 2.5 2.5 4.5-5"/>'),
+    alert: svg('<path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4"/><path d="M12 17h.01"/>'),
+    info: svg('<circle cx="12" cy="12" r="9"/><path d="M12 16v-4"/><path d="M12 8h.01"/>'),
+    x: svg('<path d="M18 6 6 18M6 6l12 12"/>'),
+    edit: svg('<path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 1 1 3 3L7 19l-4 1 1-4Z"/>'),
+    trophy: svg('<path d="M8 4h8v6a4 4 0 0 1-8 0V4Z"/><path d="M8 6H5.5a2.5 2.5 0 0 0 3 4"/><path d="M16 6h2.5a2.5 2.5 0 0 1-3 4"/><path d="M12 14v4"/><path d="M8.5 21h7"/>'),
+    flag: svg('<path d="M5 21V4"/><path d="M5 4h11l-1.5 3.5L16 11H5"/>'),
+    /* 大尺寸场景（成功页/空态）用带圈图标 */
+    checkCircleLarge: svg('<circle cx="12" cy="12" r="9"/><path d="m8.5 12.5 2.5 2.5 4.5-5"/>', 32)
+  };
+})();
+BioQuest.icons = BQ_ICONS;
+if (typeof window !== 'undefined') { window.BQ_ICONS = BQ_ICONS; }
+
+/**
  * Fisher-Yates 洗牌算法
  * 原地随机打乱数组顺序
  * @template T

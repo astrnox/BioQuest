@@ -1016,7 +1016,7 @@
       title.innerHTML = '<strong style="font-size:15px;">OCR 识别结果</strong>' +
                         '<span id="ocr-panel-engine" style="margin-left:8px;font-size:12px;color:#8a8a8a;"></span>';
       var close = document.createElement('button');
-      close.textContent = '✕';
+      close.textContent = '×';
       _css(close, {
         border: 'none', background: 'transparent', fontSize: '18px',
         cursor: 'pointer', color: '#8a8a8a', padding: '2px 6px', borderRadius: '8px'
@@ -1315,7 +1315,7 @@
       titleEl.innerHTML = '<strong style="font-size:16px;">错题本 · 批量OCR录入</strong>' +
                          '<div id="ocr-batch-stat" style="margin-top:4px;font-size:12px;color:#8a8a8a;">选择图片，按顺序 OCR 识别并入库</div>';
       var closeBtn = document.createElement('button');
-      closeBtn.textContent = '✕';
+      closeBtn.textContent = '×';
       _css(closeBtn, {
         border: 'none', background: 'transparent', fontSize: '20px',
         cursor: 'pointer', color: '#8a8a8a', padding: '2px 8px', borderRadius: '8px'
@@ -1558,7 +1558,7 @@
         });
         btnRetry.addEventListener('click', function () { _runTask(task); });
         var btnRm = document.createElement('button');
-        btnRm.textContent = '✕ 移除';
+        btnRm.textContent = '× 移除';
         _css(btnRm, {
           padding: '5px 10px', borderRadius: '8px', cursor: 'pointer',
           fontSize: '12.5px', background: '#fff',

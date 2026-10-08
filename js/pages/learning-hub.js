@@ -261,7 +261,7 @@
         'failed': '<span class="lmc-badge lmc-badge-failed">未完成</span>',
         'aborted': '<span class="lmc-badge lmc-badge-aborted">已放弃</span>'
       }[t.status] || '';
-      var priorityDot = { 'high': '🔴', 'medium': '🟡', 'low': '🟢' }[t.priority] || '⚪';
+      var priorityDot = '<span class="bq-dot bq-dot--' + (['high', 'medium', 'low'].indexOf(t.priority) >= 0 ? t.priority : 'none') + '"></span>';
       var dueText = _formatDue(t.dueAt);
       var dueClass = t.dueAt < Date.now() ? 'lmc-due-overdue' : (t.dueAt - Date.now() < 3600000 ? 'lmc-due-soon' : '');
       var progressBar = t.progress > 0
@@ -280,11 +280,11 @@
             ${progressBar}
           </div>
           <div class="lmc-task-actions">
-            ${t.status !== 'done' ? '<button class="lmc-btn lmc-btn-primary lmc-btn-sm" data-action="mark-done" data-task-id="' + t.id + '" title="标记完成">✓</button>' : ''}
+            ${t.status !== 'done' ? '<button class="lmc-btn lmc-btn-primary lmc-btn-sm" data-action="mark-done" data-task-id="' + t.id + '" title="标记完成">' + BQ_ICONS.check + '</button>' : ''}
             ${t.type === 'classroom' ? '<button class="lmc-btn lmc-btn-primary lmc-btn-sm" data-action="start-classroom" data-topic="' + _escapeAttr(t.topic || t.title) + '">课堂</button>' : ''}
             ${t.type === 'practice' ? '<button class="lmc-btn lmc-btn-primary lmc-btn-sm" data-action="start-practice" data-topic="' + _escapeAttr(t.topic || t.title) + '">刷题</button>' : ''}
             ${t.type === 'review' ? '<button class="lmc-btn lmc-btn-primary lmc-btn-sm" data-action="start-review" data-topic="' + _escapeAttr(t.topic || t.title) + '">复习</button>' : ''}
-            <button class="lmc-btn lmc-btn-ghost lmc-btn-sm" data-action="edit-task" data-task-id="${t.id}" title="编辑">✎</button>
+            <button class="lmc-btn lmc-btn-ghost lmc-btn-sm" data-action="edit-task" data-task-id="${t.id}" title="编辑">${BQ_ICONS.edit}</button>
             <button class="lmc-btn lmc-btn-ghost lmc-btn-sm" data-action="delete-task" data-task-id="${t.id}" title="删除">×</button>
           </div>
         </div>
@@ -335,7 +335,7 @@
         <span>进度：${pct}%</span>
         <span>还可答：${p.available} 题</span>
       </div>
-      ${p.answered >= p.needed ? '<div class="lmc-prog-done">✅ 已达到目标！</div>' : ''}
+      ${p.answered >= p.needed ? '<div class="lmc-prog-done">' + BQ_ICONS.check + ' 已达到目标</div>' : ''}
     `;
   }
 
@@ -347,7 +347,7 @@
       return;
     }
     el.innerHTML = state.logs.slice(0, 10).map(function (log) {
-      var levelIcon = { 'info': 'ℹ️', 'success': '✅', 'warning': '⚠️', 'error': '❌' }[log.level] || 'ℹ️';
+      var levelIcon = { 'info': BQ_ICONS.info, 'success': BQ_ICONS.checkCircle, 'warning': BQ_ICONS.alert, 'error': BQ_ICONS.x }[log.level] || BQ_ICONS.info;
       return `
         <div class="lmc-log-item lmc-log-${log.level}">
           <span class="lmc-log-icon">${levelIcon}</span>
@@ -369,7 +369,7 @@
       if (card) card.style.display = 'block';
       if (body) {
         body.innerHTML = `
-          <div class="lmc-rescue-msg">⚠️ 检测到 ${failed.length} 个未完成任务。AI 建议：</div>
+          <div class="lmc-rescue-msg">检测到 ${failed.length} 个未完成任务。建议：</div>
           <ul class="lmc-rescue-list">
             <li>把任务拆分成 2-3 个 25 分钟专注块</li>
             <li>优先完成 <strong>${_escapeHtml(failed[0].title)}</strong>（最高优先级）</li>
@@ -582,9 +582,9 @@
         <label class="lmc-form-label">
           <span>优先级</span>
           <select class="lmc-form-input" id="lmc-form-priority">
-            <option value="low">🟢 低</option>
-            <option value="medium" selected>🟡 中</option>
-            <option value="high">🔴 高</option>
+            <option value="low">低</option>
+            <option value="medium" selected>中</option>
+            <option value="high">高</option>
           </select>
         </label>
         <label class="lmc-form-label">
@@ -645,9 +645,9 @@
         <label class="lmc-form-label">
           <span>优先级</span>
           <select class="lmc-form-input" id="lmc-edit-priority">
-            <option value="low" ${t.priority === 'low' ? 'selected' : ''}>🟢 低</option>
-            <option value="medium" ${t.priority === 'medium' ? 'selected' : ''}>🟡 中</option>
-            <option value="high" ${t.priority === 'high' ? 'selected' : ''}>🔴 高</option>
+            <option value="low" ${t.priority === 'low' ? 'selected' : ''}>低</option>
+            <option value="medium" ${t.priority === 'medium' ? 'selected' : ''}>中</option>
+            <option value="high" ${t.priority === 'high' ? 'selected' : ''}>高</option>
           </select>
         </label>
         <label class="lmc-form-label">

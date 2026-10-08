@@ -87,6 +87,11 @@ jobs:
         # 无保护表 → 非零退出（防「anon key 暴露 + RLS 配置错误」导致全表泄露）。
         run: node scripts/audit-rls.js
 
+      - name: 设计规范审计（P0 设计整改门禁）
+        # 防"AI 味"回潮：彩色 emoji / backdrop-filter 模糊 / 渐变 超出预算即失败；
+        # 内联样式数与硬编码色值数采用棘轮（不得超过基线，只许下降）。
+        run: npm run audit:design
+
       - name: 发布资源压缩构建验证（Issue #112）
         # 验证 js/css 可经 esbuild 压缩进 dist/（构建产物不入库）,
         # 且首屏同步 CSS 可合并为 bundle-core.css（Issue #108）。

@@ -90,17 +90,13 @@
   perspective: 1200px;
 }
 
-/* ---------- 玻璃态习惯卡片 ---------- */
+/* ---------- 习惯卡片（P0 去玻璃：实色卡片 + 1px 边框） ---------- */
 .habit-card {
   position: relative;
-  background: rgba(255, 255, 255, 0.55);
+  background: var(--color-surface);
   border-radius: var(--radius-card);
-  border: 1px solid rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  box-shadow:
-    var(--shadow-floating)
-    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-floating);
   padding: 24px;
   transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
               box-shadow 0.45s cubic-bezier(0.22, 1, 0.36, 1);
@@ -128,25 +124,18 @@
 }
 
 .habit-card:hover {
-  transform: translateY(-6px) rotateX(2deg) rotateY(-1deg) scale(1.01);
-  box-shadow:
-    var(--shadow-floating)
-    inset 0 1px 0 rgba(255, 255, 255, 0.7);
+  /* P0 去玻璃：去掉镜面内高光；同时收敛 3D 倾斜炫技为轻微位移 */
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-floating);
 }
 
-/* 深色模式玻璃态 */
+/* 深色模式：材质已走主题 token，无需单独的"玻璃态"覆盖 */
 [data-theme="dark"] .habit-card {
-  background: rgba(30, 36, 33, 0.55);
-  border-color: rgba(255, 255, 255, 0.08);
-  box-shadow:
-    var(--shadow-floating)
-    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  border-color: var(--color-border);
 }
 
 [data-theme="dark"] .habit-card:hover {
-  box-shadow:
-    var(--shadow-floating)
-    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  box-shadow: var(--shadow-floating);
 }
 
 /* ---------- 卡片头部 ---------- */
@@ -500,9 +489,7 @@
 .habit-modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.45);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background: rgba(0, 0, 0, 0.55);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -518,25 +505,17 @@
 .habit-modal {
   width: 100%;
   max-width: 480px;
-  background: rgba(255, 255, 255, 0.75);
+  background: var(--color-surface);
   border-radius: var(--radius-card);
-  border: 1px solid rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  box-shadow:
-    var(--shadow-floating)
-    inset 0 1px 0 rgba(255, 255, 255, 0.7);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-floating);
   padding: 28px;
   margin: 16px;
   animation: modalSlideUp 0.35s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 [data-theme="dark"] .habit-modal {
-  background: rgba(30, 36, 33, 0.75);
-  border-color: rgba(255, 255, 255, 0.08);
-  box-shadow:
-    var(--shadow-floating)
-    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  border-color: var(--color-border);
 }
 
 @keyframes modalSlideUp {

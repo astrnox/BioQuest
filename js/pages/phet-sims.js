@@ -471,7 +471,7 @@
         var fallback = document.createElement('div');
         fallback.className = 'phet-modal-fallback';
         fallback.innerHTML = '' +
-          '<div class="phet-modal-fallback-title">⚠ 模拟加载较慢或被浏览器阻止</div>' +
+          '<div class="phet-modal-fallback-title">注意：模拟加载较慢或被浏览器阻止</div>' +
           '<p>由于 PhET 模拟资源较大或第三方 Cookie 策略，iframe 内可能无法直接加载。可以直接在新标签页打开：</p>' +
           '<a href="https://phet.colorado.edu/sims/html/' + escapeHtml(simId) + '/latest/' + escapeHtml(simId) + '_en.html" ' +
              'target="_blank" rel="noopener noreferrer" class="phet-modal-fallback-btn">' +

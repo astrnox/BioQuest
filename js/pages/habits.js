@@ -1091,7 +1091,7 @@ function showHabitModal(habit, container) {
   overlay.setAttribute('role', 'dialog');
   overlay.setAttribute('aria-modal', 'true');
   overlay.setAttribute('aria-label', isEdit ? '编辑习惯' : '新建习惯');
-  overlay.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.4);backdrop-filter:blur(8px);z-index:2000;display:flex;align-items:center;justify-content:center;';
+  overlay.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.6);z-index:2000;display:flex;align-items:center;justify-content:center;';
 
   var colorPresets = ['#5a7d5c','#e8a87c','#c38d9e','#7a9cc6','#c47a4a','#8a6ac4','#4a9c6a','#c45a7a','#c49a4a','#4aaac4'];
   var typeTabs = [{v:'count',l:'次数'},{v:'duration',l:'时长（分钟）'},{v:'boolean',l:'是否完成'}];

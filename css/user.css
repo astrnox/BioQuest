@@ -246,7 +246,7 @@
 
 .user-record-type--practice {
   background: rgba(90, 125, 92, 0.1);
-  color: var(--color-sage, #5a7d5c);
+  color: var(--color-sage);
 }
 
 .user-record-type--exam {
@@ -282,7 +282,7 @@
 .user-fav-group-title {
   font-size: 0.85rem;
   font-weight: 700;
-  color: var(--color-sage, #5a7d5c);
+  color: var(--color-sage);
   margin-bottom: 8px;
   padding-bottom: 6px;
   border-bottom: 1px solid var(--border-light, #ece8e1);
@@ -343,7 +343,7 @@
 
 .user-storage-fill {
   height: 100%;
-  background: var(--color-sage, #5a7d5c);
+  background: var(--color-sage);
   border-radius: 4px;
   transition: width 0.4s ease;
 }

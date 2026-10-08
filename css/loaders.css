@@ -29,7 +29,7 @@
  *   </div>
  * ============================================================ */
 .bq-loader-dna {
-  --dna-color: var(--color-sage, #5a7d5c);
+  --dna-color: var(--color-sage);
   --dna-accent: var(--color-amber, #c4956a);
   position: relative;
   width: 48px;
@@ -120,7 +120,7 @@
  *   </div>
  * ============================================================ */
 .bq-loader-atom {
-  --atom-color: var(--color-sage, #5a7d5c);
+  --atom-color: var(--color-sage);
   --atom-accent: var(--color-amber, #c4956a);
   position: relative;
   width: 48px;
@@ -170,7 +170,7 @@
  * 结构：<div class="bq-loader-wave" role="status" aria-label="加载中"><i></i>×5</div>
  * ============================================================ */
 .bq-loader-wave {
-  --wave-color: var(--color-sage, #5a7d5c);
+  --wave-color: var(--color-sage);
   display: flex;
   align-items: center;
   gap: 5px;
@@ -199,7 +199,7 @@
  * 结构：<div class="bq-loader-chase" role="status" aria-label="加载中"><i></i>×8</div>
  * ============================================================ */
 .bq-loader-chase {
-  --chase-color: var(--color-sage, #5a7d5c);
+  --chase-color: var(--color-sage);
   position: relative;
   width: 40px;
   height: 40px;
@@ -237,7 +237,7 @@
  * 5) 双环加载器（单元素，替换旧 border spinner，用于路由/搜索/按钮）
  * ============================================================ */
 .bq-loader-dualring {
-  --ring-color: var(--color-sage, #5a7d5c);
+  --ring-color: var(--color-sage);
   display: inline-block;
   width: 30px;
   height: 30px;
@@ -253,7 +253,7 @@
  * 结构：<div class="bq-loader-dots" role="status" aria-label="加载中"><i></i>×3</div>
  * ============================================================ */
 .bq-loader-dots {
-  --dots-color: var(--color-sage, #5a7d5c);
+  --dots-color: var(--color-sage);
   display: flex;
   gap: 7px;
   margin: 0 auto;

@@ -86,7 +86,7 @@
 
   function _renderDone(container) {
     container.innerHTML = '<div style="text-align:center;padding:60px 20px;">' +
-      '<div style="font-size:3rem;margin-bottom:16px;">✅</div>' +
+      '<div class="bq-result-icon">' + BQ_ICONS.checkCircleLarge + '</div>' +
       '<div style="font-size:1.2rem;color:var(--color-deep,#1a3a2a);font-weight:600;margin-bottom:8px;">今日复习完成</div>' +
       '<div style="color:var(--text-muted);">坚持复习，遗忘曲线会记得你的努力。</div>' +
       '</div>';

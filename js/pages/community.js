@@ -901,8 +901,7 @@ if (typeof window._cspHoverOut !== 'function') {
         display: flex;\
         align-items: center;\
         justify-content: center;\
-        background: rgba(5, 10, 7, 0.5);\
-        backdrop-filter: blur(8px);\
+        background: rgba(5, 10, 7, 0.66);\
         animation: communityFadeIn 0.2s ease;\
       }\
 \
@@ -2649,7 +2648,7 @@ if (typeof window._cspHoverOut !== 'function') {
         '<button type="button" class="community-md-btn" data-md="italic" title="斜体 (Ctrl+I)" style="padding:4px 10px;border:none;background:transparent;border-radius:8px;cursor:pointer;font-style:italic;font-size:0.85rem;color:var(--text-primary);"><i>I</i></button>' +
         '<button type="button" class="community-md-btn" data-md="code" title="行内代码" style="padding:4px 10px;border:none;background:transparent;border-radius:8px;cursor:pointer;font-family:monospace;font-size:0.85rem;color:var(--text-primary);">&lt;/&gt;</button>' +
         '<button type="button" class="community-md-btn" data-md="h2" title="标题" style="padding:4px 10px;border:none;background:transparent;border-radius:8px;cursor:pointer;font-size:0.85rem;color:var(--text-primary);">H</button>' +
-        '<button type="button" class="community-md-btn" data-md="quote" title="引用" style="padding:4px 10px;border:none;background:transparent;border-radius:8px;cursor:pointer;font-size:0.85rem;color:var(--text-primary);">❝</button>' +
+        '<button type="button" class="community-md-btn" data-md="quote" title="引用" style="padding:4px 10px;border:none;background:transparent;border-radius:8px;cursor:pointer;font-size:0.85rem;color:var(--text-primary);">”</button>' +
         '<button type="button" class="community-md-btn" data-md="list" title="列表" style="padding:4px 10px;border:none;background:transparent;border-radius:8px;cursor:pointer;font-size:0.85rem;color:var(--text-primary);">•</button>' +
         '<button type="button" class="community-md-btn" data-md="link" title="链接" style="padding:4px 10px;border:none;background:transparent;border-radius:8px;cursor:pointer;font-size:0.85rem;color:var(--text-primary);">链接</button>' +
         '<button type="button" class="community-md-btn" data-md="image" title="图片" style="padding:4px 10px;border:none;background:transparent;border-radius:8px;cursor:pointer;font-size:0.85rem;color:var(--text-primary);">图片</button>' +

@@ -45,7 +45,6 @@
         padding-left: 20px;
         padding-right: 20px;
         border-bottom: 1px solid var(--border-light, #e5e7eb);
-        backdrop-filter: blur(8px);
       }
       .st-tabs { display: flex; gap: 6px; flex-wrap: wrap; max-width: 920px; margin: 0 auto; }
       .st-tab {
@@ -274,7 +273,7 @@
         '<div class="st-stat-box"><div class="st-stat-value">' + _formatDuration(focusMin) + '</div><div class="st-stat-label">今日专注</div></div>' +
         '<div class="st-stat-box"><div class="st-stat-value">' + (days !== null ? days : '—') + '</div><div class="st-stat-label">距联考</div></div>' +
       '</div>' +
-      (overdueTasks > 0 ? '<div style="margin-top:16px;padding:12px;background:rgba(217,83,79,0.06);border-radius:8px;color:#a94442;font-size:0.88rem;">⚠️ 有 ' + overdueTasks + ' 个待办已逾期，请尽快处理</div>' : '') +
+      (overdueTasks > 0 ? '<div class="bq-note bq-note--danger" style="margin-top:16px;"><span class="bq-note__icon">' + BQ_ICONS.alert + '</span><span>有 ' + overdueTasks + ' 个待办已逾期，请尽快处理</span></div>' : '') +
     '</div>' +
     '<div class="st-card">' +
       '<h3>快速入口</h3>' +

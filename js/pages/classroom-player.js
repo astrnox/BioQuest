@@ -92,7 +92,7 @@
       '  <div class="classroom-title">AI 生物课堂</div>',
       '  <div class="classroom-actions">',
       '    <button id="cls-tts-toggle" class="cls-btn" title="语音讲解">语音</button>',
-      '    <button id="cls-close" class="cls-btn" title="退出课堂">✕</button>',
+      '    <button id="cls-close" class="cls-btn" title="退出课堂">×</button>',
       '  </div>',
       '</div>',
       '<div class="classroom-body">',

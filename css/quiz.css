@@ -88,11 +88,11 @@
 
 .quiz-category-btn:hover {
   background: rgba(90, 125, 92, 0.1);
-  color: var(--color-sage, #5a7d5c);
+  color: var(--color-sage);
 }
 
 .quiz-category-btn.active {
-  background: var(--color-sage, #5a7d5c);
+  background: var(--color-sage);
   color: #fff;
   box-shadow: var(--shadow-md);
 }

@@ -768,7 +768,7 @@ function _sendTutorMessage(text) {
       if (err && err.name === 'AbortError') {
         _finishTutorStream(aiMsg, fullText, true);
       } else {
-        _finishTutorStream(aiMsg, '⚠ ' + (err && err.message ? err.message : String(err || '网络异常')));
+        _finishTutorStream(aiMsg, '注意：' + (err && err.message ? err.message : String(err || '网络异常')));
       }
     }
   });
