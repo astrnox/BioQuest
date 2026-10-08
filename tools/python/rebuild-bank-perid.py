@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-BioQuest 题库 per-id 重构终端（v1.1 存储规范落地）
+TATABOX 题库 per-id 重构终端（v1.1 存储规范落地）
 ====================================================
 把题库由「一主题一个 JSON」重构为「一题一文件 + id大全」四件套：
 
@@ -355,7 +355,7 @@ def new_question(tag, difficulty, qid, module="module_1", subject="生物学科"
 
 # ---------------------------------------------------------------- main
 def main():
-    ap = argparse.ArgumentParser(description="BioQuest 题库 per-id 重构终端")
+    ap = argparse.ArgumentParser(description="TATABOX 题库 per-id 重构终端")
     ap.add_argument("mode", choices=["build", "clear", "verify", "new"])
     ap.add_argument("--from-bank", action="store_true")
     ap.add_argument("--per-id-only", action="store_true")

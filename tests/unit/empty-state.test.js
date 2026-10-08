@@ -1,5 +1,5 @@
 /**
- * BioQuest — Issue #125（P3-22）统一「温暖空状态」组件单元测试
+ * TATABOX — Issue #125（P3-22）统一「温暖空状态」组件单元测试
  *
  * 覆盖：
  *   1. emptyStateHTML 基本结构（title / hint / 行动按钮）；
@@ -35,7 +35,7 @@ function makeContainer() {
  */
 function loadHarness() {
   const doc = { addEventListener() {} };
-  const win = { BioQuest: null };
+  const win = { TATABOX: null };
   const factory = new Function(
     'window', 'document', 'console',
     source + '\n;return { api: window.BioQuest };'
@@ -105,7 +105,7 @@ describe('Issue #125 统一空状态组件', () => {
       'window', 'document', 'console',
       source + '\n;return { api: window.BioQuest };'
     );
-    const out = factory({ BioQuest: null }, doc, console);
+    const out = factory({ TATABOX: null }, doc, console);
     const container = makeContainer();
     out.api.renderEmptyState(container, {
       title: '空',
@@ -137,7 +137,7 @@ describe('Issue #125 统一空状态组件', () => {
       'window', 'document', 'console',
       source + '\n;return { api: window.BioQuest };'
     );
-    const out = factory({ BioQuest: null }, doc, console);
+    const out = factory({ TATABOX: null }, doc, console);
     out.api.emptyStateHTML({
       title: '空',
       action: { label: '去练习', onClick: function () { called.push('go'); } }
@@ -158,7 +158,7 @@ describe('Issue #125 统一空状态组件', () => {
       'window', 'document', 'console',
       source + '\n;return { api: window.BioQuest };'
     );
-    const out = factory({ BioQuest: null }, doc, console);
+    const out = factory({ TATABOX: null }, doc, console);
     const container = makeContainer();
     out.api.renderEmptyState(container, { title: '空', action: { label: 'L', onClick: function () {} } });
     expect(() => clickHandlers[0]({ target: null })).not.toThrow();

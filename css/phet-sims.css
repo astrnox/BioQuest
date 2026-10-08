@@ -1,5 +1,5 @@
 /* ============================================================
- * BioQuest — PhET 互动模拟实验页样式
+ * TATABOX — PhET 互动模拟实验页样式
  * 遵循 Trae 设计系统：Modern Botanical Laboratory
  * ============================================================ */
 
@@ -137,7 +137,6 @@
 }
 
 .phet-card:hover {
-  transform: translateY(-2px);
   box-shadow: var(--shadow-md, 0 2px 8px rgba(44, 62, 48, 0.06));
   border-color: var(--color-sage);
 }
@@ -454,7 +453,6 @@
 
 .phet-modal-fallback-btn:hover {
   background: var(--color-amber-dark, #a87a4f);
-  transform: translateY(-1px);
 }
 
 .phet-modal-attribution {

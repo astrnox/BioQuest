@@ -1,6 +1,6 @@
 /**
  * ============================================================
- * BioQuest — PRD §5 微细节补全模块
+ * TATABOX — PRD §5 微细节补全模块
  * 包含：图片懒加载、复制题目为Markdown、DELETE确认删除、字体大小
  * ============================================================
  */
@@ -88,7 +88,7 @@ function copyQuestionAsMarkdown(questionEl) {
     if (explanation) {
       md += '## 解析\n\n' + explanation.textContent.trim() + '\n';
     }
-    md += '\n---\n> 来自 BioQuest';
+    md += '\n---\n> 来自 TATABOX';
 
     navigator.clipboard.writeText(md).then(function () {
       if (typeof showToast === 'function') showToast('已复制为 Markdown', 'success', 2000);
@@ -104,7 +104,7 @@ function copyQuestionAsMarkdown(questionEl) {
       if (typeof showToast === 'function') showToast('已复制为 Markdown', 'success', 2000);
     });
   } catch (e) {
-    console.warn('[BioQuest] 复制失败:', e);
+    console.warn('[TATABOX] 复制失败:', e);
   }
 }
 

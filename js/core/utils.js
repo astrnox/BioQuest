@@ -1,6 +1,6 @@
 /**
  * ============================================================
- * BioQuest — 工具函数集合
+ * TATABOX — 工具函数集合
  * 提供常用的通用工具函数
  * ============================================================
  */
@@ -8,13 +8,13 @@
 'use strict';
 
 /**
- * BioQuest 全局命名空间（Q-03 保守实施）
+ * TATABOX 全局命名空间（Q-03 保守实施）
  * 作为全站公共工具与常量的规范挂载点。新代码应优先使用 BioQuest.* 路径；
  * 旧的 window.* 平铺别名保留以向后兼容，避免一次性迁移 40+ 全局导致回归。
  * 已注册：escapeHtml、loadScriptOnce（均提供 window.* 别名）
  */
-var BioQuest = (typeof window !== 'undefined' ? window.BioQuest : null) || {};
-if (typeof window !== 'undefined') { window.BioQuest = BioQuest; }
+var TATABOX = (typeof window !== 'undefined' ? window.BioQuest : null) || {};
+if (typeof window !== 'undefined') { window.BioQuest = TATABOX; }
 
 /**
  * ═══ 全站图标系统（P0 设计整改）═══
@@ -57,7 +57,7 @@ if (typeof window !== 'undefined') { window.BQ_ICONS = BQ_ICONS; }
  */
 function shuffle(array) {
   if (!Array.isArray(array)) {
-    console.warn('[BioQuest Utils] shuffle 需要数组参数');
+    console.warn('[TATABOX Utils] shuffle 需要数组参数');
     return array;
   }
 
@@ -108,7 +108,7 @@ function formatTime(seconds, options = {}) {
  */
 function debounce(fn, delay) {
   if (typeof fn !== 'function') {
-    throw new TypeError('[BioQuest Utils] debounce 需要函数作为第一个参数');
+    throw new TypeError('[TATABOX Utils] debounce 需要函数作为第一个参数');
   }
 
   let timer = null;
@@ -143,7 +143,7 @@ function debounce(fn, delay) {
  */
 function throttle(fn, delay) {
   if (typeof fn !== 'function') {
-    throw new TypeError('[BioQuest Utils] throttle 需要函数作为第一个参数');
+    throw new TypeError('[TATABOX Utils] throttle 需要函数作为第一个参数');
   }
 
   let lastTime = 0;
@@ -226,7 +226,7 @@ function escapeHtml(str) {
 
 // 显式暴露到 window，作为全站唯一的 escapeHtml 规范实现（Q-01 统一）
 // 各模块应使用 window.escapeHtml，避免重复定义导致行为不一致
-// Q-03：同时注册到 BioQuest 命名空间作为规范路径
+// Q-03：同时注册到 TATABOX 命名空间作为规范路径
 if (typeof window !== 'undefined') {
   window.escapeHtml = escapeHtml;
   BioQuest.escapeHtml = escapeHtml;
@@ -796,7 +796,7 @@ if (typeof window !== 'undefined') {
     }
   }
 
-  // 暴露到 BioQuest + window（tutor/discussion/practice 均可直接用）
+  // 暴露到 TATABOX + window（tutor/discussion/practice 均可直接用）
   if (typeof window !== 'undefined') {
     window.BioQuestMarkdown = renderBioQuestMarkdown;
     BioQuest.markdown = renderBioQuestMarkdown;
@@ -861,7 +861,7 @@ if (typeof window !== 'undefined' && typeof window.loadScriptOnce !== 'function'
       return p;
     };
   })();
-  // Q-03：同时注册到 BioQuest 命名空间作为规范路径
+  // Q-03：同时注册到 TATABOX 命名空间作为规范路径
   BioQuest.loadScriptOnce = window.loadScriptOnce;
 }
 
@@ -1171,7 +1171,7 @@ function sanitizeUrlParam(value, maxLen) {
   return cleaned;
 }
 
-// Q-03：注册到 BioQuest 命名空间（各调用点统一走 window.BioQuest.sanitizeUrlParam）
+// Q-03：注册到 TATABOX 命名空间（各调用点统一走 window.BioQuest.sanitizeUrlParam）
 if (typeof window !== 'undefined') {
   BioQuest.sanitizeUrlParam = sanitizeUrlParam;
   BioQuest.isChartImageSrc = isChartImageSrc;
@@ -1222,7 +1222,7 @@ async function copyToClipboard(text) {
     document.body.removeChild(textarea);
     return success;
   } catch (e) {
-    console.warn('[BioQuest Utils] 复制失败:', e.message);
+    console.warn('[TATABOX Utils] 复制失败:', e.message);
     return false;
   }
 }

@@ -1,6 +1,6 @@
 /**
  * ============================================================
- * BioQuest — 社区模块增强集成（quikchat）
+ * TATABOX — 社区模块增强集成（quikchat）
  *
  * quikchat (BSD-2)：轻量实时聊天 UI（5KB gzip）
  *   - 纯 vanilla JS，UMD 加载，全局变量 window.quikchat（构造函数）
@@ -274,7 +274,7 @@
 
     // 挂载 quikchat
     mountChat('community-chat', {
-      title: 'BioQuest 讨论室',
+      title: 'TATABOX 讨论室',
       userName: '学习者',
       storageKey: 'bioquest_community_chat'
     }).catch(function () {});

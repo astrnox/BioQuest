@@ -1,6 +1,6 @@
 /**
  * ============================================================
- * BioQuest — 学情趋势 & 冲刺周报模块
+ * TATABOX — 学情趋势 & 冲刺周报模块
  * 数据可视化：纯 SVG 绘制趋势图，Canvas 导出周报卡片
  * 读取 localStorage(bioquest_history) 学习历史
  * ============================================================
@@ -765,7 +765,7 @@
     // 底部
     ctx.fillStyle = 'rgba(255,255,255,0.35)';
     ctx.font = '12px sans-serif';
-    ctx.fillText('BioQuest 生物竞赛学习平台 · ' + new Date().toLocaleDateString('zh-CN'), 40, 772);
+    ctx.fillText('TATABOX 高中学习平台 · ' + new Date().toLocaleDateString('zh-CN'), 40, 772);
     ctx.fillText('bioquest.dada.im', 470, 772);
 
     try {

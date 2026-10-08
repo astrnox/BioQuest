@@ -1,5 +1,5 @@
 /**
- * BioQuest — RDKit 2D 分子结构查看器集成模块
+ * TATABOX — RDKit 2D 分子结构查看器集成模块
  * 基于 @rdkit/rdkit (BSD-3-Clause) 渲染 SMILES → 2D 分子结构图
  * 懒加载策略：RDKit_minimal.wasm 体积 6.7MB，首次调用 render() 才加载
  */

@@ -1,4 +1,4 @@
-// BioQuest 浏览器回归测试 + UI 一致性检查
+// TATABOX 浏览器回归测试 + UI 一致性检查
 // 使用 Playwright 自动化测试 http://localhost:8765
 const { chromium } = require('playwright');
 const fs = require('fs');

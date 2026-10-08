@@ -1,6 +1,6 @@
 /**
  * ============================================================
- * BioQuest — AI 对话增强集成（marked）
+ * TATABOX — AI 对话增强集成（marked）
  *
  * marked (MIT)：UMD markdown 解析器，用于流式渲染 LLM 响应
  *

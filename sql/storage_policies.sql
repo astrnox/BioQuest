@@ -1,4 +1,4 @@
--- BioQuest Storage RLS Policies for bioquest-ebooks bucket
+-- TATABOX Storage RLS Policies for bioquest-ebooks bucket
 -- 在 Supabase Dashboard → SQL Editor 中执行此文件
 -- ============================================================
 -- [幂等改造] Issue #143

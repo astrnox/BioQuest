@@ -1,6 +1,6 @@
 /**
  * ============================================================
- * BioQuest - 管理员后台模块
+ * TATABOX - 管理员后台模块
  * 题目管理、用户管理、密钥验证
  * 设计风格：与主站一致，深绿/琥珀色系，衬线字体
  * ============================================================
@@ -2006,7 +2006,7 @@ function renderAdminDashboard(target) {
             ${ICONS.settings}
             管理面板
           </div>
-          <div class="admin-dash-subtitle">BioQuest 后台管理系统</div>
+          <div class="admin-dash-subtitle">TATABOX 后台管理系统</div>
         </div>
         <button class="admin-dash-logout" id="admin-logout-btn">
           ${ICONS.logout}

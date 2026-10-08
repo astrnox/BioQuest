@@ -1,4 +1,4 @@
-// BioQuest 浏览器回归测试 v2 - 含交互场景
+// TATABOX 浏览器回归测试 v2 - 含交互场景
 const { chromium } = require('playwright');
 const fs = require('fs');
 const path = require('path');

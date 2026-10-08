@@ -1,6 +1,6 @@
 /**
  * ============================================================
- * BioQuest — PRD §1.3：社会价值落地
+ * TATABOX — PRD §1.3：社会价值落地
  * 乡村科普模式 + 濒危物种卡片收集系统
  * ============================================================
  */
@@ -163,5 +163,5 @@
   window.SpeciesCollection = SpeciesCollection;
   window.ENDANGERED_SPECIES = ENDANGERED_SPECIES;
 
-  console.log('[BioQuest] 社会价值模块已加载（乡村科普模式 + 濒危物种卡片）');
+  console.log('[TATABOX] 社会价值模块已加载（乡村科普模式 + 濒危物种卡片）');
 })();

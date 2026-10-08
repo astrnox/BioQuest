@@ -1,5 +1,5 @@
 /**
- * BioQuest — P1-7：AppState 只读 Proxy 封装单元测试
+ * TATABOX — P1-7：AppState 只读 Proxy 封装单元测试
  *
  * 覆盖：
  *   1. 内部 `_AppState`（app.js 内部引用）仍然可写，用于路由/主题等状态更新；

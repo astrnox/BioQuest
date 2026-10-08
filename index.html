@@ -35,7 +35,7 @@
   ">
   <link rel="manifest" href="manifest.json">
   <!-- 内联 SVG favicon：避免浏览器默认请求 /favicon.ico 产生 404 -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%235a7d5c' rx='12'/%3E%3Ccircle cx='32' cy='32' r='16' fill='none' stroke='%23fff' stroke-width='2'/%3E%3Ccircle cx='32' cy='32' r='8' fill='%23fff'/%3E%3C/svg%3E">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%2764%27%20height%3D%2764%27%20viewBox%3D%270%200%2032%2032%27%3E%3Crect%20width%3D%2732%27%20height%3D%2732%27%20rx%3D%277%27%20fill%3D%27%231a2f1d%27%2F%3E%3Cg%20fill%3D%27none%27%20stroke-linecap%3D%27round%27%3E%3Crect%20x%3D%273%27%20y%3D%273%27%20width%3D%2726%27%20height%3D%2726%27%20rx%3D%277.6%27%20stroke%3D%27%23d4a87e%27%20stroke-width%3D%272.6%27%2F%3E%3Cpath%20d%3D%27M16%2010.2v11.8%27%20stroke%3D%27%23f5f0e8%27%20stroke-width%3D%272.6%27%2F%3E%3Cpath%20d%3D%27M11.2%2010.2h9.6%27%20stroke%3D%27%23f5f0e8%27%20stroke-width%3D%272.6%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E">
 
   <!-- ================================================================
        首屏防白边 / 防缩放闪烁 / 防 FOUC / 防主题闪烁（内联，渲染前必执行）
@@ -120,7 +120,6 @@
       align-items: center;
       justify-content: center;
       margin: 0 0 16px; /* 老浏览器（无 flex gap）下的间距兜底 */
-      animation: bqBootBreathe 2.6s ease-in-out infinite;
     }
     #bq-boot-logo svg {
       width: 48px;
@@ -196,10 +195,6 @@
       100% { opacity: 0; }
     }
     /* 动画声明（只放这里，不依赖外部 CSS 文件加载） */
-    @keyframes bqBootBreathe {
-      0%, 100% { opacity: 1; }
-      50%      { opacity: 0.72; }
-    }
     /* 卸载 mask：通过 classList.add('is-ready') 平滑淡出，避免"忽然切走" */
     #bq-boot-mask.is-ready { opacity: 0; visibility: hidden; }
     /* 每日亿题入口 hover（原内联 onmouseover/onmouseout 已改纯 CSS） */
@@ -210,28 +205,28 @@
   <script src="js/core/legacy-probe.js?v=20260919a"></script>
 
   <!-- Primary SEO -->
-  <title>BioQuest — 生物竞赛刷题平台 | 全真模拟 · 专项练习 · 错题本</title>
-  <meta name="description" content="BioQuest 是面向生物竞赛备考的智能学习平台。基于2025联赛新大纲，提供72题全真模拟考试、模块化专项练习、能力雷达图诊断、智能错题本管理和交互式知识图谱。支持手机端和电脑端。">
-  <meta name="keywords" content="生物竞赛,生物联赛,生物奥赛,刷题平台,生物题库,全真模拟,能力诊断,错题本,BioQuest">
-  <meta name="author" content="BioQuest">
+  <title>TATABOX — 高中学习刷题平台 | 专项练习 · 全真模拟 · 错题本</title>
+  <meta name="description" content="TATABOX 是面向高中学习的刷题与复习平台：专项练习、全真模拟、能力诊断、错题管理与知识卡片，支持手机和电脑。">
+  <meta name="keywords" content="生物竞赛,生物联赛,生物奥赛,刷题平台,生物题库,全真模拟,能力诊断,错题本,TATABOX">
+  <meta name="author" content="TATABOX">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
   <link rel="canonical" href="https://astrnox.github.io/BioQuest/">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="BioQuest">
-  <meta property="og:title" content="BioQuest — 生物竞赛智能刷题平台">
-  <meta property="og:description" content="全真模拟考试、模块化专项练习、能力雷达图诊断、智能错题本。基于2025联赛新大纲，助你高效备考生物竞赛。">
+  <meta property="og:site_name" content="TATABOX">
+  <meta property="og:title" content="TATABOX — 高中学习刷题平台">
+  <meta property="og:description" content="专项练习、全真模拟、能力诊断、错题管理与知识卡片，支持手机和电脑。">
   <meta property="og:url" content="https://astrnox.github.io/BioQuest/">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:image" content="https://astrnox.github.io/BioQuest/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="BioQuest 生物竞赛学习平台">
+  <meta property="og:image:alt" content="TATABOX 高中学习平台">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="BioQuest — 生物竞赛智能刷题平台">
+  <meta name="twitter:title" content="TATABOX — 高中学习刷题平台">
   <meta name="twitter:description" content="全真模拟 · 专项练习 · 错题本 · 雷达诊断。基于2025联赛新大纲。">
   <meta name="twitter:image" content="https://astrnox.github.io/BioQuest/og-image.png">
 
@@ -240,14 +235,14 @@
   {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    "name": "BioQuest",
-    "description": "基于2025联赛新大纲的生物竞赛智能学习平台，提供全真模拟考试、模块化专项练习、能力雷达图诊断和智能错题本管理。",
+    "name": "TATABOX",
+    "description": "面向高中学习的刷题与复习平台，提供专项练习、全真模拟、能力诊断和错题管理。",
     "url": "https://astrnox.github.io/BioQuest/",
     "applicationCategory": "EducationalApplication",
     "operatingSystem": "Web",
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" },
     "inLanguage": "zh-CN",
-    "author": { "@type": "Organization", "name": "BioQuest" }
+    "author": { "@type": "Organization", "name": "TATABOX" }
   }
   </script>
 
@@ -331,13 +326,13 @@
   <!-- 首屏骨架遮罩：在 JS/CSS 加载前立即渲染，避免"缩小/两边白边/空白几秒"的现象 -->
   <div id="bq-boot-mask" aria-hidden="true">
     <div id="bq-boot-logo" aria-hidden="true">
-      <svg viewBox="0 0 28 28" fill="none" aria-hidden="true">
-        <circle cx="14" cy="14" r="12" stroke="#e8a830" stroke-width="2"/>
-        <circle cx="14" cy="14" r="4" fill="#e8a830"/>
-        <path d="M14 2v4M14 22v4M2 14h4M22 14h4" stroke="#5a7d5c" stroke-width="1.5"/>
+      <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+        <rect x="3" y="3" width="26" height="26" rx="7.6" stroke="#d4a87e" stroke-width="2.6"/>
+        <path d="M16 10.2v11.8" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
+        <path d="M11.2 10.2h9.6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
       </svg>
     </div>
-    <div id="bq-boot-label">BioQuest · 生物竞赛刷题</div>
+    <div id="bq-boot-label">TATABOX · 高中学习平台</div>
     <div id="bq-boot-pairs" aria-hidden="true">
       <div class="bq-pair bq-pair--r1"><span class="bq-base">A</span><span class="bq-hb"><i></i><i></i></span><span class="bq-base">T</span></div>
       <div class="bq-pair bq-pair--r2"><span class="bq-base">G</span><span class="bq-hb"><i></i><i></i><i></i></span><span class="bq-base">C</span></div>
@@ -354,12 +349,12 @@
 
   <header class="header">
     <a href="#/" class="header-brand">
-      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
-        <circle cx="14" cy="14" r="12" stroke="#e8a830" stroke-width="2"/>
-        <circle cx="14" cy="14" r="4" fill="#e8a830"/>
-        <path d="M14 2v4M14 22v4M2 14h4M22 14h4" stroke="#5a7d5c" stroke-width="1.5"/>
+      <svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+        <rect x="3" y="3" width="26" height="26" rx="7.6" stroke="#d4a87e" stroke-width="2.6"/>
+        <path d="M16 10.2v11.8" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
+        <path d="M11.2 10.2h9.6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
       </svg>
-      <span class="logo-text">BioQuest</span>
+      <span class="logo-text">TATABOX</span>
     </a>
 
     <nav class="header-nav" id="desktopNav">
@@ -405,12 +400,12 @@
   <nav class="mobile-nav" id="mobileNav" aria-label="导航菜单">
     <div class="mn-header">
       <div class="mn-brand">
-        <svg width="30" height="30" viewBox="0 0 28 28" fill="none" aria-hidden="true">
-          <circle cx="14" cy="14" r="12" stroke="#e8a830" stroke-width="2"/>
-          <circle cx="14" cy="14" r="4" fill="#e8a830"/>
-          <path d="M14 2v4M14 22v4M2 14h4M22 14h4" stroke="#5a7d5c" stroke-width="1.5"/>
+        <svg width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <rect x="3" y="3" width="26" height="26" rx="7.6" stroke="#d4a87e" stroke-width="2.6"/>
+          <path d="M16 10.2v11.8" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
+          <path d="M11.2 10.2h9.6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
         </svg>
-        <span class="mn-brand-name">BioQuest</span>
+        <span class="mn-brand-name">TATABOX</span>
       </div>
       <button id="mobileNavClose" class="mn-close" aria-label="关闭菜单">×</button>
     </div>
@@ -659,7 +654,7 @@
   <footer class="footer">
     <div class="footer-content">
       <div class="footer-top">
-        <div class="footer-brand">BioQuest — 生物竞赛学习平台</div>
+        <div class="footer-brand">TATABOX — 高中学习平台</div>
         <a href="https://github.com/astrnox/BioQuest" target="_blank" rel="noopener" class="footer-github" title="GitHub 仓库">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
           <span>GitHub</span>
@@ -781,7 +776,7 @@
   <!-- 降级导航：由 boot-lazy.js 统一处理（app.js 未加载时兜底 data-route 点击） -->
   <!-- 全局调试脚本（已禁用）
   <script>
-    console.log('%c BioQuest 调试模式 ', 'background: #1a3a2a; color: #e8a830; font-weight: bold; padding: 4px 12px; border-radius: 4px;');
+    console.log('%c TATABOX 调试模式 ', 'background: #1a3a2a; color: #e8a830; font-weight: bold; padding: 4px 12px; border-radius: 4px;');
 
     // 全局点击监控器 - 查看点击是否被捕获
     document.addEventListener('click', function (e) {

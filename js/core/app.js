@@ -1,6 +1,6 @@
 /**
  * ============================================================
- * BioQuest — SPA 路由与全局状态管理
+ * TATABOX — SPA 路由与全局状态管理
  * 使用 hash-based 路由实现单页应用导航
  * ============================================================
  */
@@ -119,7 +119,7 @@ function createReadOnlyStateView(target) {
     get: function (t, k) { return t[k]; },
     set: function (t, k, v) {
       if (k === '__proto__' || k === 'prototype' || k === 'constructor') return false;
-      console.warn('[BioQuest] AppState 为只读视图，已拒绝外部写入:', String(k));
+      console.warn('[TATABOX] AppState 为只读视图，已拒绝外部写入:', String(k));
       return true; // 严格模式返回 false 会抛错，改为静默拒绝
     },
     deleteProperty: function () { return false; },
@@ -158,7 +158,7 @@ function renderPrivacyPage(target) {
     '<a href="#/" style="display:inline-flex;align-items:center;gap:6px;color:' + s.sage + ';text-decoration:none;font-size:0.88rem;margin-bottom:20px;">← 返回首页</a>' +
     '<div style="background:' + s.card + ';border:1px solid ' + s.border + ';border-radius:16px;padding:36px 40px 44px;box-shadow:var(--shadow-lg);">' +
       '<h1 style="font-family:var(--font-serif,\'Noto Serif SC\',serif);font-size:1.7rem;color:' + s.accent + ';margin:0 0 6px;">隐私政策</h1>' +
-      '<p style="color:' + s.muted + ';font-size:0.82rem;margin:0 0 26px;">更新日期：2026-08-19 · 适用于 BioQuest（生物竞赛学习平台）</p>' +
+      '<p style="color:' + s.muted + ';font-size:0.82rem;margin:0 0 26px;">更新日期：2026-08-19 · 适用于 TATABOX（高中学习平台）</p>' +
       _privacySection('一、我们收集哪些数据', [
         '账户信息：你在登录/注册时提供的姓名、邮箱（例如通过 Supabase 账号系统）。',
         '学习数据：练习作答、错题、收藏、统计、习惯打卡、徽章与学习进度等，默认仅保存在你的浏览器本地（localStorage／IndexedDB）。',
@@ -199,7 +199,7 @@ function renderPrivacyPage(target) {
         '我们会不时更新本政策，重大变更将在页面明显位置提示。',
         '如有隐私相关问题，可通过邮箱联系作者：astrnox@163.com（或 QQ：3930523703）。'
       ]) +
-      '<div style="margin-top:8px;padding-top:18px;border-top:1px solid ' + s.border + ';font-size:0.82rem;color:' + s.muted + ';">BioQuest · 本政策以最新页面版本为准。</div>' +
+      '<div style="margin-top:8px;padding-top:18px;border-top:1px solid ' + s.border + ';font-size:0.82rem;color:' + s.muted + ';">TATABOX · 本政策以最新页面版本为准。</div>' +
     '</div>' +
   '</div>';
   try { if (typeof updatePageTitle === 'function') updatePageTitle('/privacy'); } catch (e) {}
@@ -339,7 +339,7 @@ function navigateTo(route, options = {}) {
   const { replace = false } = options;
 
   if (!Routes[route]) {
-    console.warn(`[BioQuest] 未知路由: ${route}，回退到首页`);
+    console.warn(`[TATABOX] 未知路由: ${route}，回退到首页`);
     route = '/';
   }
 
@@ -363,7 +363,10 @@ window.navigateTo = navigateTo;
 function updatePageTitle(route) {
   const routeConfig = Routes[route];
   if (routeConfig) {
-    document.title = `${routeConfig.title} - BioQuest 生物竞赛学习平台`;
+    // 首页用完整品牌语（与静态 <title> 保持一致），其余路由为「页面名 - 品牌」
+    document.title = route === '/'
+      ? 'TATABOX — 高中学习刷题平台'
+      : `${routeConfig.title} - TATABOX 高中学习平台`;
   }
 }
 
@@ -608,7 +611,7 @@ function renderSearchPage() {
       </div>
       <div class="search-results-area" id="search-results-area">
         <div class="search-empty-state">
-          <div class="search-empty-icon">[BioQuest]</div>
+          <div class="search-empty-icon">[TATABOX]</div>
           <p>输入关键词开始搜索</p>
           <p class="search-empty-hint">支持搜索本地题库和多个生竞专业网站</p>
         </div>
@@ -1095,7 +1098,7 @@ function reinitHomeComponents() {
   }
 
   if (typeof initHeroSketch === 'function') {
-    try { initHeroSketch(); } catch (e) { console.warn('[BioQuest] Hero sketch init failed:', e); }
+    try { initHeroSketch(); } catch (e) { console.warn('[TATABOX] Hero sketch init failed:', e); }
   }
 
   // 初始化平滑滚动动画（全局，首屏可见元素立即触发动画）
@@ -1133,7 +1136,7 @@ function scheduleIdleWork(fn, options) {
     try {
       fn();
     } catch (e) {
-      console.warn('[BioQuest] 空闲任务执行失败:', e);
+      console.warn('[TATABOX] 空闲任务执行失败:', e);
     }
   };
 
@@ -1172,7 +1175,7 @@ function initNonCriticalHomeModules() {
           window.initBiologyTimeline(bioSection);
         }
       }).catch(function (err) {
-        console.warn('[BioQuest] 生物学史模块加载失败:', err);
+        console.warn('[TATABOX] 生物学史模块加载失败:', err);
       });
     }
   }
@@ -1505,7 +1508,7 @@ function _checkRouteAccess(route) {
  * 用户停留在目标页看到「请先登录/权限不足」提示，避免被误认为还要重新登录。
  */
 function _denyRouteAccess(route, access) {
-  console.warn('[BioQuest] 路由访问被拒绝（随登录后恢复）:', access);
+  console.warn('[TATABOX] 路由访问被拒绝（随登录后恢复）:', access);
   try { sessionStorage.setItem('bioquest:authRedirect', route); } catch (e) {}
 
   var target = (typeof _AppState !== 'undefined' && _AppState.rootElement) || document.getElementById('page-content');
@@ -1602,7 +1605,7 @@ function handleRoute(route) {
   // 防止递归调用导致栈溢出；同时把最新请求记下来，当前渲染结束后补跑
   if (_routingInProgress) {
     _pendingRoute = route;
-    console.warn('[BioQuest] handleRoute 被递归调用，已暂存:', route);
+    console.warn('[TATABOX] handleRoute 被递归调用，已暂存:', route);
     return;
   }
   _routingInProgress = true;
@@ -1635,7 +1638,7 @@ function handleRoute(route) {
 
   // 清理全屏模块（如每日亿题）
   if (route !== '/daily-billion' && typeof window.destroyDailyBillion === 'function') {
-    try { window.destroyDailyBillion(); } catch(e) { console.warn('[BioQuest] 清理daily-billion模块失败:', e); }
+    try { window.destroyDailyBillion(); } catch(e) { console.warn('[TATABOX] 清理daily-billion模块失败:', e); }
   }
 
   // 延迟加载对应模块 — 动态加载 JS 文件
@@ -1748,7 +1751,7 @@ function handleRoute(route) {
   }
 
   function showModuleError(modName, err) {
-    console.error('[BioQuest] 模块加载失败:', modName, err);
+    console.error('[TATABOX] 模块加载失败:', modName, err);
     target.innerHTML = '<div style="text-align:center;padding:60px 20px;">' +
       '<p style="color:var(--color-error);font-size:1.1rem;margin-bottom:8px;">模块加载失败</p>' +
       '<p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:16px;">' + escapeHtml(err && err.message ? err.message : '请检查网络或刷新页面重试') + '</p>' +
@@ -2040,7 +2043,7 @@ function _safeInit(initFnName, route, target) {
   var _initDepthKey = '_initDepth_' + initFnName;
   var _depth = window[_initDepthKey] || 0;
   if (_depth > 3) {
-    console.error('[BioQuest] 模块初始化递归检测 (depth=' + _depth + '):', route, initFnName);
+    console.error('[TATABOX] 模块初始化递归检测 (depth=' + _depth + '):', route, initFnName);
     _renderModuleError(target, route, new Error('模块初始化递归过深: ' + initFnName));
     return;
   }
@@ -2071,11 +2074,11 @@ function _safeInit(initFnName, route, target) {
       try {
         window[initFnName](target);
       } catch (err) {
-        console.error('[BioQuest] 模块初始化失败:', route, initFnName, err);
+        console.error('[TATABOX] 模块初始化失败:', route, initFnName, err);
         _renderModuleError(target, route, err);
       }
     } else {
-      console.error('[BioQuest] 模块初始化函数未找到:', route, initFnName);
+      console.error('[TATABOX] 模块初始化函数未找到:', route, initFnName);
       _renderModuleError(target, route, new Error('模块初始化函数未找到: ' + initFnName));
     }
   } finally {
@@ -2086,7 +2089,7 @@ function _safeInit(initFnName, route, target) {
 function doRouteRender(route, target) {
   _doRouteRenderCount++;
   if (_doRouteRenderCount > 5) {
-    var recErr = new Error('[BioQuest] doRouteRender 递归检测! count=' + _doRouteRenderCount + ' route=' + route);
+    var recErr = new Error('[TATABOX] doRouteRender 递归检测! count=' + _doRouteRenderCount + ' route=' + route);
     console.error(recErr.stack);
     _doRouteRenderCount = 0;
     return;
@@ -2306,7 +2309,7 @@ function doRouteRender(route, target) {
     // 更新底部标签栏高亮
     updateBottomTabBar(route);
   } catch (err) {
-    console.error('[BioQuest] 路由渲染错误:', route, err);
+    console.error('[TATABOX] 路由渲染错误:', route, err);
     try {
       target.innerHTML = '<div style="text-align:center;padding:64px 24px;"><p style="color:var(--color-error);">页面加载失败，请刷新重试</p><p style="color:var(--text-muted);font-size:0.85rem;margin-top:8px;">路由: ' + route + '</p></div>';
     } catch (e2) { /* ignore */ }
@@ -2665,7 +2668,7 @@ async function loadPageModule(moduleName) {
     const module = await import(`./${moduleName}.js?v=20260809g`);
     _AppState.pageModules[moduleName] = module;
   } catch (err) {
-    console.warn(`[BioQuest] 模块 ${moduleName} 加载失败:`, err.message);
+    console.warn(`[TATABOX] 模块 ${moduleName} 加载失败:`, err.message);
   }
 }
 
@@ -2690,7 +2693,7 @@ function restoreSettings() {
       }
     }
   } catch (e) {
-    console.warn('[BioQuest] 设置恢复失败:', e);
+    console.warn('[TATABOX] 设置恢复失败:', e);
   }
 }
 
@@ -2750,7 +2753,7 @@ async function initSupabase() {
       sdkWait += 200;
     }
     if (typeof window.supabase === 'undefined') {
-      console.warn('[BioQuest] Supabase SDK 加载超时，使用本地模式');
+      console.warn('[TATABOX] Supabase SDK 加载超时，使用本地模式');
       showStorageStatus('local');
       updateAuthUI();
       _resolveAuthReady();
@@ -2795,7 +2798,7 @@ async function initSupabase() {
     // 未登录用户使用本地存储
     showStorageStatus('local');
   } catch (e) {
-    console.warn('[BioQuest] Supabase 初始化失败，使用本地模式:', e.message);
+    console.warn('[TATABOX] Supabase 初始化失败，使用本地模式:', e.message);
     showStorageStatus('local');
   }
   updateAuthUI();
@@ -2841,7 +2844,7 @@ function updateAuthUI() {
     authBtn.textContent = '登录';
     authBtn.style.cssText = 'background: #3a8c5c; color: #fff; border: none; padding: 8px 16px; border-radius: 16px; cursor: pointer; font-size: 0.85rem;';
     authBtn.onclick = showAuthModal;
-    authBtn.title = '登录/注册 BioQuest 账号';
+    authBtn.title = '登录/注册 TATABOX 账号';
   }
 }
 
@@ -2862,7 +2865,7 @@ function showAuthModal(mode) {
   overlay.className = 'auth-modal-overlay';
   overlay.setAttribute('role', 'dialog');
   overlay.setAttribute('aria-modal', 'true');
-  overlay.setAttribute('aria-label', '登录或注册 BioQuest 账号');
+  overlay.setAttribute('aria-label', '登录或注册 TATABOX 账号');
   overlay.innerHTML = `
     <div class="auth-container" id="auth-container">
       <button class="auth-close-btn" data-on='["closeAuthModal"]' title="关闭">
@@ -2876,7 +2879,7 @@ function showAuthModal(mode) {
       </div>
       <div class="auth-form-panel active" id="auth-form-login">
         <h2 class="auth-form-title">欢迎回来</h2>
-        <p class="auth-form-sub">登录你的 BioQuest 账号继续探索</p>
+        <p class="auth-form-sub">登录你的 TATABOX 账号继续探索</p>
         <div class="auth-field">
           <svg class="auth-field-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/></svg>
           <input type="text" class="auth-input" id="auth-login-username" placeholder="用户名 / 邮箱" autocomplete="username">
@@ -2920,7 +2923,7 @@ function showAuthModal(mode) {
       </div>
       <div class="auth-form-panel" id="auth-form-register">
         <h2 class="auth-form-title">创建账号</h2>
-        <p class="auth-form-sub">注册 BioQuest 账号，开始刷题</p>
+        <p class="auth-form-sub">注册 TATABOX 账号，开始刷题</p>
         <div class="auth-field">
           <svg class="auth-field-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/></svg>
           <input type="text" class="auth-input" id="auth-register-username" placeholder="用户名" autocomplete="username">
@@ -3870,7 +3873,7 @@ function _showSlideCaptcha(type) {
       '        </defs>',
       '        <rect width="' + containerWidth + '" height="' + containerHeight + '" fill="url(#slideGrad' + bgSeed + ')"/>',
       '        <rect width="' + containerWidth + '" height="' + containerHeight + '" fill="url(#slidePattern' + bgSeed + ')"/>',
-      '        <text x="' + (containerWidth / 2) + '" y="' + (containerHeight / 2 + 12) + '" text-anchor="middle" fill="rgba(255,255,255,0.32)" font-size="38" font-weight="900" font-family="monospace">BioQuest</text>',
+      '        <text x="' + (containerWidth / 2) + '" y="' + (containerHeight / 2 + 12) + '" text-anchor="middle" fill="rgba(255,255,255,0.32)" font-size="38" font-weight="900" font-family="monospace">TATABOX</text>',
       '        ' + dots,
       '        <!-- 缺口：显示为半透明深色，提示目标位置 -->',
       '        <path d="' + piecePath + '" transform="translate(' + targetX + ',' + targetY + ')" fill="rgba(0,0,0,0.55)" stroke="rgba(255,255,255,0.85)" stroke-width="2.5"/>',
@@ -4288,7 +4291,7 @@ async function handleForgotPassword() {
         if (errorEl) errorEl.textContent = (res && res.error) || '查询失败';
       }
     } catch (e) {
-      console.error('[BioQuest] recoverUserKey 异常:', e);
+      console.error('[TATABOX] recoverUserKey 异常:', e);
       if (errorEl) errorEl.textContent = '查询异常: ' + (e.message || String(e));
       if (btn1) { btn1.disabled = false; btn1.textContent = '查询密钥'; }
     }
@@ -4326,7 +4329,7 @@ async function handleForgotPassword() {
         if (errorEl) errorEl.textContent = (mailRes && mailRes.error) || '发送失败，请稍后重试';
       }
     } catch (e) {
-      console.error('[BioQuest] 邮箱重置异常:', e);
+      console.error('[TATABOX] 邮箱重置异常:', e);
       if (errorEl) errorEl.textContent = '发送异常: ' + (e.message || String(e));
       if (btnE) { btnE.disabled = false; btnE.textContent = '发送重置邮件'; }
     }
@@ -4381,7 +4384,7 @@ async function handleForgotPassword() {
       if (errorEl) errorEl.textContent = (result && result.error) || '重置失败';
     }
   } catch (e) {
-    console.error('[BioQuest] handleForgotPassword 异常:', e);
+    console.error('[TATABOX] handleForgotPassword 异常:', e);
     if (errorEl) errorEl.textContent = '重置异常: ' + (e.message || String(e));
     if (btn) { btn.disabled = false; btn.textContent = '重置密码'; }
   }
@@ -4477,7 +4480,7 @@ async function handleLogin() {
       if (typeof _updateSlideTriggerUI === 'function') _updateSlideTriggerUI(false);
     }
   } catch (e) {
-    console.error('[BioQuest] handleLogin 异常:', e);
+    console.error('[TATABOX] handleLogin 异常:', e);
     errorEl.textContent = '登录异常: ' + (e.message || String(e));
     refreshCaptcha('login');
   }
@@ -4630,7 +4633,7 @@ async function handleRegister() {
 
   if (typeof registerUser !== 'function') {
     errorEl.textContent = '系统未就绪，请刷新页面后重试';
-    console.error('[BioQuest] registerUser 函数未定义！');
+    console.error('[TATABOX] registerUser 函数未定义！');
     return;
   }
 
@@ -4647,7 +4650,7 @@ async function handleRegister() {
     var result = await registerUser(username, password, displayName, email);
 
   } catch (e) {
-    console.error('[BioQuest] handleRegister 异常:', e);
+    console.error('[TATABOX] handleRegister 异常:', e);
     errorEl.textContent = '注册异常: ' + (e.message || String(e));
     if (btn) { btn.disabled = false; btn.textContent = '注 册'; }
     return;
@@ -4708,7 +4711,7 @@ function _continueRegisterSuccess(result, password) {
   var uname = (result.user || {}).username || '用户';
 
   if (typeof showToast === 'function') {
-    showToast('注册成功！欢迎加入 BioQuest');
+    showToast('注册成功！欢迎加入 TATABOX');
   }
 }
 
@@ -5108,7 +5111,7 @@ function renderClassroomPage(target) {
     }
 
     if (mode === 'omaic') {
-      // OpenMAIC 6 步进度模式：先显示生成进度，跑完进入 BioQuest 课堂
+      // OpenMAIC 6 步进度模式：先显示生成进度，跑完进入 TATABOX 课堂
       if (!window.OpenMAICClassroomRunner) {
         hint.textContent = 'OpenMAIC Runner 未加载，降级为普通模式';
         hint.style.color = '#d44';
@@ -5429,7 +5432,7 @@ function initApp() {
   // 使用 requestIdleCallback 在空闲时初始化，确保首屏交互优先
   var _initSupabase = function() {
     initSupabase().catch(function(e) {
-      console.warn('[BioQuest] Supabase 初始化失败，使用本地模式:', e.message);
+      console.warn('[TATABOX] Supabase 初始化失败，使用本地模式:', e.message);
       showStorageStatus('local');
       updateAuthUI();
     });
@@ -5442,7 +5445,7 @@ function initApp() {
 
   const root = document.getElementById('page-content');
   if (!root) {
-    console.error('[BioQuest] 找不到 #page-content 元素');
+    console.error('[TATABOX] 找不到 #page-content 元素');
     return;
   }
 
@@ -5466,7 +5469,7 @@ function initApp() {
     try {
       handleRoute(route);
     } catch (e) {
-      console.error('[BioQuest] 初始路由渲染失败(已兜底):', e);
+      console.error('[TATABOX] 初始路由渲染失败(已兜底):', e);
       try {
         document.dispatchEvent(new CustomEvent('bioquest:app-ready'));
       } catch (e2) { /* ignore */ }
@@ -5652,7 +5655,7 @@ function openDonation() {
     <div class="donation-modal">
       <button class="donation-close" aria-label="关闭">&times;</button>
       <div class="donation-title">赞赏支持</div>
-      <div class="donation-desc">BioQuest 是开源免费的生物竞赛学习平台。如果您觉得这个项目有帮助，欢迎通过爱发电支持我们持续维护和更新。</div>
+      <div class="donation-desc">TATABOX 是开源免费的高中学习平台。如果您觉得这个项目有帮助，欢迎通过爱发电支持我们持续维护和更新。</div>
       <div class="donation-qr-area">
         <a href="https://ifdian.net/a/astrnox" target="_blank" rel="noopener noreferrer" class="donation-link-btn">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -5746,7 +5749,7 @@ function showFeedbackModal() {
       </button>
       <div style="padding:24px 20px;">
         <h2 class="auth-form-title" style="margin-bottom:4px;">用户反馈</h2>
-        <p class="auth-form-sub" style="margin-bottom:20px;">告诉我们你的想法，帮助我们改进 BioQuest</p>
+        <p class="auth-form-sub" style="margin-bottom:20px;">告诉我们你的想法，帮助我们改进 TATABOX</p>
 
         <div class="auth-field" style="margin-bottom:14px;">
           <label style="display:block;font-size:0.82rem;color:var(--text-secondary,#8a8a8a);margin-bottom:6px;">反馈类型</label>
@@ -6318,7 +6321,7 @@ window.showUndoToast = showUndoToast;
     var bar = document.createElement('div');
     bar.id = 'bq-install-bar';
     bar.setAttribute('role', 'region');   // 非模态横幅，避免误导屏读器认为是对话框
-    bar.setAttribute('aria-label', '安装 BioQuest 应用');
+    bar.setAttribute('aria-label', '安装 TATABOX 应用');
     bar.style.cssText = [
       'position:fixed',
       'left:16px',
@@ -6337,7 +6340,7 @@ window.showUndoToast = showUndoToast;
       'box-shadow:var(--shadow-lg)',
       'animation:toastSlideUp 0.3s ease'
     ].join(';');
-    bar.appendChild(document.createTextNode('将 BioQuest 添加至主屏幕，随时随地学习'));
+    bar.appendChild(document.createTextNode('将 TATABOX 添加至主屏幕，随时随地学习'));
 
     var btn = document.createElement('button');
     btn.type = 'button';

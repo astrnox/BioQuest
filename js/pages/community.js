@@ -1,6 +1,6 @@
 /**
  * ============================================================
- * BioQuest — 社区模块
+ * TATABOX — 社区模块
  * 提供帖子发布、评论、点赞、标签筛选等功能
  * ============================================================
  */
@@ -1985,7 +1985,7 @@ if (typeof window._cspHoverOut !== 'function') {
       bindCommunityEvents(target);
       loadPosts();
     } catch (err) {
-      console.error('[BioQuest Community] renderCommunityPage 异常:', err);
+      console.error('[TATABOX Community] renderCommunityPage 异常:', err);
       target.innerHTML = '<div style="text-align:center;padding:60px 20px;">' +
         '<p style="color:var(--color-error);font-size:1.1rem;margin-bottom:8px;">社区页面渲染失败</p>' +
         '<p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:16px;">请刷新页面或稍后重试</p>' +
@@ -2844,12 +2844,12 @@ if (typeof window._cspHoverOut !== 'function') {
         }
       }
       if (!target) {
-        console.error('[BioQuest Community] initCommunity 找不到目标容器');
+        console.error('[TATABOX Community] initCommunity 找不到目标容器');
         return;
       }
       renderCommunityPage(target);
     } catch (err) {
-      console.error('[BioQuest Community] initCommunity 异常:', err);
+      console.error('[TATABOX Community] initCommunity 异常:', err);
       if (target) {
         target.innerHTML = '<div style="text-align:center;padding:60px 20px;">' +
           '<p style="color:var(--color-error);font-size:1.1rem;margin-bottom:8px;">社区模块初始化失败</p>' +

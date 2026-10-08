@@ -1,6 +1,6 @@
 /*!
  * learning-hub.js
- * BioQuest 学习管理中心（参考 Deadline Quest 项目设计）
+ * TATABOX 学习管理中心（参考 Deadline Quest 项目设计）
  *
  * 功能：
  *  - 今日任务聚合（聚合今日 AI 课堂 + 刷题 + 复习）

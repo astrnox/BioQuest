@@ -1,6 +1,6 @@
 /**
  * ============================================================
- * BioQuest v3.1 — AI 课堂 Orchestrator（T0-7/T1-1/T1-3）
+ * TATABOX v3.1 — AI 课堂 Orchestrator（T0-7/T1-1/T1-3）
  * 一键生成 6-scene AI 生物课堂，按大纲顺序执行
  *
  * 课堂结构（参考 OpenMAIC 课堂范式）：
@@ -855,7 +855,7 @@
       {
         role: 'system',
         content: [
-          '你是 BioQuest 的 AI 生物老师，正在讲一节关于「' + outline.topic + '」的课。',
+          '你是 TATABOX 的 AI 生物老师，正在讲一节关于「' + outline.topic + '」的课。',
           '当前场景：' + scene.title + '（' + scene.type + '）',
           '场景配置：' + sceneCtx,
           '',

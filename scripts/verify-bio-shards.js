@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * BioQuest — 题库校验器（Issue #10，CI 使用）
+ * TATABOX — 题库校验器（Issue #10，CI 使用）
  *
  * 适配 #150 新题库（M 格式 bioID）：
  *   1. manifest 结构

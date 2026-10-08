@@ -1,4 +1,4 @@
-// BioQuest 浏览器回归测试 v3 - 全面覆盖，覆盖所有 P0/P1 修复
+// TATABOX 浏览器回归测试 v3 - 全面覆盖，覆盖所有 P0/P1 修复
 const { chromium } = require('playwright');
 const fs = require('fs');
 const path = require('path');

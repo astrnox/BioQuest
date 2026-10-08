@@ -1,5 +1,5 @@
 /**
- * BioQuest — vendor 初始化模块
+ * TATABOX — vendor 初始化模块
  * 在所有 vendor 库加载完成后统一初始化（mermaid/PDF.js worker 等）
  */
 (function () {

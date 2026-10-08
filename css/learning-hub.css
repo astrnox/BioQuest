@@ -86,7 +86,7 @@
   background: var(--color-primary, #4a7c59);
   color: var(--color-text-inverse, #fff);
 }
-.lmc-btn-primary:hover { transform: translateY(-1px); box-shadow: var(--shadow-md, 0 2px 8px rgba(44, 62, 48, 0.06)); }
+.lmc-btn-primary:hover { box-shadow: var(--shadow-md, 0 2px 8px rgba(44, 62, 48, 0.06)); }
 .lmc-btn-ghost {
   background: var(--surface-secondary, #faf7f2);
   color: var(--text-primary, #1a2f1d);

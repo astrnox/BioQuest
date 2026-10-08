@@ -1,6 +1,6 @@
 /**
  * ============================================================
- * BioQuest — PRD §5-36：背景音效 (Web Audio API)
+ * TATABOX — PRD §5-36：背景音效 (Web Audio API)
  * 可选白噪音/翻页声/雨声，无需音频文件
  * ============================================================
  */
@@ -121,7 +121,7 @@
       sourceNodes.push(node);
       _currentSound = type;
     } catch (e) {
-      console.warn('[BioQuest] 音效启动失败:', e.message);
+      console.warn('[TATABOX] 音效启动失败:', e.message);
     }
   }
 
@@ -180,5 +180,5 @@
     getCurrentSound: getCurrentSound
   };
 
-  console.log('[BioQuest] 背景音效模块已加载');
+  console.log('[TATABOX] 背景音效模块已加载');
 })();

@@ -1,12 +1,12 @@
 #!/usr/bin/env node
 /**
- * BioQuest — manifest CDN 锚点一致性校验（PR #25 修复配套）
+ * TATABOX — manifest CDN 锚点一致性校验（PR #25 修复配套）
  * ============================================================
  * 背景：generate-bio-shards.js 会把「生成环境的 origin slug + HEAD SHA」写入
  * data/manifest.json 的 { git, repo }，前端据此构造 jsDelivr 版本化 URL：
  *   https://cdn.jsdelivr.net/gh/<repo>@<git>/data/...
  * 若贡献者在自己的 fork 中生成 manifest 并提交（如 PR #25 曾写入
- * repo=qian163/BioQuest），合并部署后全部题库重资源会指向第三方 fork：
+ * repo=qian163/TATABOX），合并部署后全部题库重资源会指向第三方 fork：
  * 应用靠「SHA 不符→降级同源」「404→回退」自愈不会立刻挂，
  * 但版本化 CDN 分发对官方部署实际失效，并隐式依赖第三方 fork 常驻。
  *

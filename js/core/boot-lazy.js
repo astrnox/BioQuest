@@ -37,7 +37,7 @@
     s.src = 'https://unpkg.com/@supabase/supabase-js@' + SUPABASE_JS_VERSION + '/dist/umd/supabase.min.js';
     s.defer = true;
     s.onerror = function () {
-      console.warn('[BioQuest] Supabase SDK 镜像加载失败，将使用本地存储模式');
+      console.warn('[TATABOX] Supabase SDK 镜像加载失败，将使用本地存储模式');
       document.documentElement.classList.add('supabase-fallback');
       if (typeof window.showStorageStatus === 'function') window.showStorageStatus('local');
     };

@@ -20,7 +20,7 @@
     {
       "date": "2026-07-19",
       "version": "4.0.0",
-      "description": "BioQuest v4.0 复赛优化：仪表盘 /forecast 本地兜底、虚拟实验室参数控件与 Canvas 渲染、PWA Service Worker 注册及缓存键去查询参数、全站模态可访问性（role/aria-modal/aria-label + trapFocus）、habits/wrongbook 错题模态焦点陷阱、Playwright 回归测试覆盖。"
+      "description": "TATABOX v4.0 复赛优化：仪表盘 /forecast 本地兜底、虚拟实验室参数控件与 Canvas 渲染、PWA Service Worker 注册及缓存键去查询参数、全站模态可访问性（role/aria-modal/aria-label + trapFocus）、habits/wrongbook 错题模态焦点陷阱、Playwright 回归测试覆盖。"
     },
     {
       "date": "2026-06-28",

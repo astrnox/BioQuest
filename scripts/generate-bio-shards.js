@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * BioQuest — 题库重建生成器（Issue #10）
+ * TATABOX — 题库重建生成器（Issue #10）
  * ============================================================
  * 将散落题库重建为「按考点分类」的三层分片架构：
  *   - data/manifest.json           { rev, updated_at, total, topics, sources, files:{path:sha256} }

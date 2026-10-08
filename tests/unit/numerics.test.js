@@ -1,5 +1,5 @@
 /**
- * BioQuest — 数值设计合理性测试（Numeric Design Sanity）
+ * TATABOX — 数值设计合理性测试（Numeric Design Sanity）
  *
  * 目标：用强审视角校验「核心数值系统的设计自洽性」，全部加载真实源码、给定
  * 确定性输入做可复现断言，不依赖浏览器 / 后端 / 网络。

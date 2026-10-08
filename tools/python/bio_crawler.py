@@ -1,5 +1,5 @@
 """
-BioQuest 高中生物题目爬虫 v1.1
+TATABOX 高中生物题目爬虫 v1.1
 
 目标：从允许爬取的免费公开网站抓取高中生物题目（含解析），
 输出格式与 server.py / pool.json 保持一致，可直接合并入库或同步到 Supabase。
@@ -1111,7 +1111,7 @@ def merge_into_pool(crawled_path: str, pool_path: str):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="BioQuest 高中生物题目爬虫")
+    parser = argparse.ArgumentParser(description="TATABOX 高中生物题目爬虫")
     parser.add_argument("--mode", choices=["html", "pdf", "merge"], default="html",
                         help="爬取模式: html=网页, pdf=PDF真题, merge=合并到pool.json")
     parser.add_argument("--start-urls", type=str, default="",

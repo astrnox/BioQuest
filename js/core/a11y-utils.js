@@ -1,6 +1,6 @@
 /**
  * ============================================================
- * BioQuest — 可访问性工具模块（a11y utilities）
+ * TATABOX — 可访问性工具模块（a11y utilities）
  * 提供：
  *   1. 模态焦点陷阱（trapFocus）—— Tab/Shift+Tab 在模态内循环，ESC 触发回调
  *   2. aria-live 通告区（createLiveRegion / announce）—— 屏幕阅读器友好的动态内容播报

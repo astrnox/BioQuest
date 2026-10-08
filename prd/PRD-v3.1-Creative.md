@@ -1,4 +1,4 @@
-# BioQuest PRD v3.1 — 从刷题 App 升级为 AI 生物课堂
+# TATABOX PRD v3.1 — 从刷题 App 升级为 AI 生物课堂
 
 > 版本 3.1 | 2026-06-28 | 参考 OpenMAIC 优化版
 > 定位不变：纯前端 SPA + Supabase + 用户自配 LLM
@@ -12,7 +12,7 @@
 
 v3.0 提出 12 个创新方向，但定位仍是"刷题 + 可视化 + 游戏化"。参考 [OpenMAIC](https://github.com/THU-MAIC/OpenMAIC)（清华多智能体交互课堂）后，发现根本性差距：
 
-| 维度 | OpenMAIC | BioQuest v3.0 | 差距 |
+| 维度 | OpenMAIC | TATABOX v3.0 | 差距 |
 |------|----------|---------------|------|
 | 核心范式 | **AI 课堂**（老师讲+同学讨论） | 刷题 + AI 答疑 | 缺"课堂"叙事 |
 | AI 角色 | 主动操作 UI、画白板、TTS 朗读 | 文字对话 | AI 是被动的 |
@@ -27,7 +27,7 @@ v3.0 提出 12 个创新方向，但定位仍是"刷题 + 可视化 + 游戏化"
 
 ### 0.3 纯前端约束下的可行性声明
 
-OpenMAIC 是 Next.js 全栈（需服务端 LLM 代理）。BioQuest v3.1 **坚守纯前端**：
+OpenMAIC 是 Next.js 全栈（需服务端 LLM 代理）。TATABOX v3.1 **坚守纯前端**：
 - "一键课程生成"用前端 SSE 直连 LLM（已有 AiClient）
 - "AI 老师操作 UI"用前端事件总线 + postMessage
 - "白板"用 Canvas + yjs for IndexedDB（无服务端 CRDT）
@@ -122,7 +122,7 @@ v3.0 的 12 个创新模块**不废弃**，而是被重新组织为"课堂的组
 
 **直接对标 OpenMAIC**，但全部生物主题化。
 
-| 类型 | BioQuest 实现 | 现有基础 | 新增工作 |
+| 类型 | TATABOX 实现 | 现有基础 | 新增工作 |
 |------|---------------|----------|----------|
 | 🌐 **3D 可视化** | 3D 细胞器探索（Three.js） | v3.0 §2.6 规划 | 自建低多边形细胞器模型 |
 | ⚙️ **模拟仿真** | 虚拟实验室 + Canvas 动画 | 已有 6 实验 + 7 动画 | AI 老师可远程操作 |
@@ -662,7 +662,7 @@ async function withRetry(fn, { maxRetries = 3, backoff = 'exponential' } = {}) {
 
 ## 10. 与 OpenMAIC 的差异化定位
 
-| 维度 | OpenMAIC | BioQuest v3.1 |
+| 维度 | OpenMAIC | TATABOX v3.1 |
 |------|----------|---------------|
 | 学科 | 通用（任何主题） | **生物专精**（联赛+课标） |
 | 定位 | 通用 AI 课堂平台 | 生物备考 + 探索 |
@@ -674,7 +674,7 @@ async function withRetry(fn, { maxRetries = 3, backoff = 'exponential' } = {}) {
 | PWA | 无 | **有**（离线缓存） |
 | 生物特色 | 无 | 7 Canvas 动画 + 6 虚拟实验 + 生物 RPG |
 
-**核心差异化**：OpenMAIC 是"通用课堂生成器"，BioQuest 是"生物专精 + 学情算法 + 纯前端"的 AI 课堂。我们不做通用，做深生物。
+**核心差异化**：OpenMAIC 是"通用课堂生成器"，TATABOX 是"生物专精 + 学情算法 + 纯前端"的 AI 课堂。我们不做通用，做深生物。
 
 ---
 
@@ -745,7 +745,7 @@ async function withRetry(fn, { maxRetries = 3, backoff = 'exponential' } = {}) {
 
 ## 附录 B：竞品差异化矩阵（含 OpenMAIC）
 
-| 能力 | 普通刷题 | 学而思 | OpenMAIC | BioQuest v3.1 |
+| 能力 | 普通刷题 | 学而思 | OpenMAIC | TATABOX v3.1 |
 |------|----------|--------|----------|---------------|
 | AI 课堂生成 | ✗ | ✗ | ✓（通用） | ✓（生物专精） |
 | 多智能体讨论 | ✗ | ✗ | ✓ | ✓ |
@@ -764,7 +764,7 @@ async function withRetry(fn, { maxRetries = 3, backoff = 'exponential' } = {}) {
 | 生物 Canvas 动画 | ✗ | ✗ | ✗ | ✓（7 个） |
 | 虚拟生物实验 | ✗ | ✗ | ✗ | ✓（6 个） |
 
-**结论**：BioQuest v3.1 在"AI 课堂"维度对标 OpenMAIC，在"学情算法"和"生物专精"维度超越 OpenMAIC，在"纯前端部署"维度独有优势。
+**结论**：TATABOX v3.1 在"AI 课堂"维度对标 OpenMAIC，在"学情算法"和"生物专精"维度超越 OpenMAIC，在"纯前端部署"维度独有优势。
 
 ---
 

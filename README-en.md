@@ -1,8 +1,8 @@
-# BioQuest — Biology Learning Platform for High School Students
+# TATABOX — Biology Learning Platform for High School Students
 
 <div align="center">
 
-![BioQuest homepage screenshot](screenshots/home-final.png)
+![TATABOX homepage screenshot](screenshots/home-final.png)
 
 **From biology-league prep to Gaokao mock exams — practice biology with one website.**
 
@@ -20,7 +20,7 @@
 
 ## What is this?
 
-BioQuest is a biology learning website built specifically for high school students. Whether you are preparing for the National High School Biology League, grinding Gaokao mock exams, or reinforcing what you learned in class, you can use it.
+TATABOX is a biology learning website built specifically for high school students. Whether you are preparing for the National High School Biology League, grinding Gaokao mock exams, or reinforcing what you learned in class, you can use it.
 
 ---
 
@@ -212,11 +212,11 @@ Question-bank data lives in the `data/` folder — just edit the JSON to add que
 - Thanks to the Open Spaced Repetition community for the FSRS algorithm
 - Thanks to all the open-source library authors
 - Thanks to [PhET Interactive Simulations](https://phet.colorado.edu) (University of Colorado Boulder) for high-quality interactive simulations
-- Thanks to every student using BioQuest to study biology — best of luck on your exams!
+- Thanks to every student using TATABOX to study biology — best of luck on your exams!
 
 ---
 *Note: I'm a high school student myself, so it may take a while to respond to issues 😅*
 
 <div align="center">
-Use BioQuest, and never get lost in biology 🌱
+Use TATABOX, and never get lost in biology 🌱
 </div>

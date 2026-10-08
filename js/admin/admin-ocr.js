@@ -1,5 +1,5 @@
 /**
- * BioQuest - 管理后台 · OCR 录题子模块（Issue #17 自 admin.js 拆分）
+ * TATABOX - 管理后台 · OCR 录题子模块（Issue #17 自 admin.js 拆分）
  * 由 admin.js 的 loadTabContent 在切换到「OCR 录题」标签时动态注入加载。
  * 依赖：js/admin/admin.js（核心）；识别走 AI vision 接口（无本地重依赖）。
  */

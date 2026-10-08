@@ -1,7 +1,7 @@
 /* ============================================================
  * 每日亿题 — TikTok风格刷题界面
  * 设计：简洁卡片 + 流畅滑动 + 自然温馨配色
- * 配色：对齐BioQuest主色调（鼠尾草绿 + 陶土橘 + 奶油白）
+ * 配色：对齐TATABOX主色调（鼠尾草绿 + 陶土橘 + 奶油白）
  * 响应式：移动端/平板/桌面全覆盖，支持刘海屏安全区
  * ============================================================ */
 
@@ -773,7 +773,6 @@ html.dark .db-sub-item.result-wrong {
   color: #c4956a;
   font-size: 0.82rem;
   font-weight: 500;
-  animation: hintFloat 2.5s ease-in-out infinite;
   flex-shrink: 0;
   will-change: transform;
 }
@@ -782,10 +781,6 @@ html.dark .db-swipe-hint {
   color: #d4a87e;
 }
 
-@keyframes hintFloat {
-  0%, 100% { opacity: 0.6; transform: translateY(0); }
-  50% { opacity: 1; transform: translateY(-5px); }
-}
 
 .db-swipe-hint svg {
   width: 20px;
@@ -1946,7 +1941,6 @@ html.dark .db-report-cta:hover {
   transition: transform 0.12s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 .db-report-item:hover {
-  transform: translateY(-1px);
   box-shadow: var(--shadow-md);
   border-color: #d4c9b8;
 }

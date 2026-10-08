@@ -1,4 +1,4 @@
-# BioQuest 第三方域名白名单
+# TATABOX 第三方域名白名单
 # 来源：/workspace/index.html 实际出现的全部外部 URL（src/href），按用途分类。
 # 规则：每行一个域名；空行与以 # 开头的行为注释，均忽略。
 # 说明：本文件只列"允许出现"的域名，静态资源（script/link stylesheet/preload katex）

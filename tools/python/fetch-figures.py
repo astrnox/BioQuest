@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-BioQuest 论文配图管线（v1.1 图片规则落地）
+TATABOX 论文配图管线（v1.1 图片规则落地）
 ===========================================
 目标：带图题占比 ≥ 30%，且图片必须「真实有效」——来自开放获取（OA / CC-BY）论文
 原文配图或仓库已授权素材，禁止 AI 生成图冒充、禁止盗链、禁止无许可搬用。
@@ -240,7 +240,7 @@ def license_check(args):
 
 
 def main():
-    ap = argparse.ArgumentParser(description="BioQuest 论文配图管线（真实 OA 图 → 题目 image 字段）")
+    ap = argparse.ArgumentParser(description="TATABOX 论文配图管线（真实 OA 图 → 题目 image 字段）")
     sub = ap.add_subparsers(dest="cmd", required=True)
 
     p = sub.add_parser("stage")

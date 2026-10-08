@@ -1,5 +1,5 @@
 /**
- * BioQuest — 图表渲染集成模块（Mermaid）
+ * TATABOX — 图表渲染集成模块（Mermaid）
  * 把文本格式图表（流程图/时序图/类图等）渲染为 SVG
  * 依赖：js/vendor/mermaid.min.js -> window.mermaid
  * 注：P0 性能优化——mermaid 首屏不再预载，改为按需惰性加载；

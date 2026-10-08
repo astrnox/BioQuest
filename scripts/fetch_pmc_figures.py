@@ -8,7 +8,7 @@
 """
 import sys, re, json, html, os, urllib.request, urllib.parse
 
-UA = {"User-Agent": "Mozilla/5.0 (BioQuest figure fetch; cc-by reuse)", "Accept": "*/*"}
+UA = {"User-Agent": "Mozilla/5.0 (TATABOX figure fetch; cc-by reuse)", "Accept": "*/*"}
 
 def fetch(url, max_redirects=8):
     req = urllib.request.Request(url, headers=UA)

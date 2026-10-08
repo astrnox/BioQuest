@@ -1,5 +1,5 @@
 /**
- * BioQuest — Excalidraw 手绘白板集成模块
+ * TATABOX — Excalidraw 手绘白板集成模块
  * 依赖顺序：React → ReactDOM → jsx-runtime polyfill → Excalidraw
  * 全部懒加载，仅在用户首次访问手绘页时按顺序注入
  */

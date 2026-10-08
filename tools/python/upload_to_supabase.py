@@ -1,5 +1,5 @@
 """
-BioQuest — 上传本地 pool.json 到 Supabase
+TATABOX — 上传本地 pool.json 到 Supabase
 用法：python scripts/upload_to_supabase.py
 """
 import json

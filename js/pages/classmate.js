@@ -1,6 +1,6 @@
 /**
  * ============================================================
- * BioQuest v4.0 — 苏格拉底 AI 同学（§7.2 + C.2 POC）
+ * TATABOX v4.0 — 苏格拉底 AI 同学（§7.2 + C.2 POC）
  *
  * 与初赛 AI 导师（师生权威）不同，AI 同学是平等的学习伙伴：
  *   - 不直接给答案，按学生选择的"提示等级"回应（L1→L4）
@@ -879,7 +879,7 @@
       '    <div style="margin:6px 0;"><strong>北京心理危机研究与干预中心</strong>：010-82951332</div>',
       '    <div style="margin:6px 0;"><strong>生命热线</strong>：400-161-9995</div>',
       '  </div>',
-      '  <p style="font-size:0.78rem;color:#999;margin:12px 0;">BioQuest 不是医疗机构，本卡片仅提供资源转介，不构成医学诊断或治疗建议。如遇紧急情况请立即拨打 120。</p>',
+      '  <p style="font-size:0.78rem;color:#999;margin:12px 0;">TATABOX 不是医疗机构，本卡片仅提供资源转介，不构成医学诊断或治疗建议。如遇紧急情况请立即拨打 120。</p>',
       '  <div style="display:flex;gap:8px;margin-top:16px;">',
       '    <a href="tel:12320" style="flex:1;padding:10px;background:#5a7d5c;color:#fff;text-align:center;border-radius:8px;text-decoration:none;font-weight:600;">立即拨打 12320</a>',
       '    <button class="bq-crisis-close" type="button" style="flex:1;padding:10px;background:#f5f3ef;border:1px solid #e0dcd5;border-radius:8px;cursor:pointer;font-family:inherit;">我已了解</button>',

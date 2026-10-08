@@ -1,5 +1,5 @@
 /**
- * BioQuest — FSRS 优化器 / 分片哈希 Web Worker（Issue #14）
+ * TATABOX — FSRS 优化器 / 分片哈希 Web Worker（Issue #14）
  *
  * 设计要点
  *  - 一份纯函数代码同时服务两个上下文：

@@ -1,6 +1,6 @@
 /**
  * ============================================================
- * BioQuest — 练习模式模块
+ * TATABOX — 练习模式模块
  * 支持 MTF（多重判断）题型的专项练习，含筛选、答题、计分、
  * 收藏、错题管理和数据持久化
  * ============================================================
@@ -589,7 +589,7 @@ async function loadPracticeQuestions() {
       );
     }
   } catch (err) {
-    console.error('[BioQuest Practice] 加载题目数据失败:', err.message);
+    console.error('[TATABOX Practice] 加载题目数据失败:', err.message);
     PracticeState.allQuestions = [];
   }
 }
@@ -2733,7 +2733,7 @@ function renderPracticePage(target) {
   // 处理错题重做参数
   handleRedoQuestion(redoData);
   } catch (err) {
-    console.error('[BioQuest Practice] renderPracticePage 异常:', err);
+    console.error('[TATABOX Practice] renderPracticePage 异常:', err);
     target.innerHTML = '<div style="text-align:center;padding:60px 20px;">' +
       '<p style="color:var(--color-error);font-size:1.1rem;margin-bottom:8px;">练习模块加载失败</p>' +
       '<p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:16px;">请刷新页面或稍后重试</p>' +
@@ -2859,7 +2859,7 @@ function handleRedoQuestion(redoData) {
     return true;
   }
 
-  console.warn('[BioQuest Practice] 无法找到要重做的题目');
+  console.warn('[TATABOX Practice] 无法找到要重做的题目');
   alert('无法加载该题目，可能已被清除或不存在于当前题库中');
   restorePracticeUI();
   return false;
@@ -2895,7 +2895,7 @@ function ensureMinSubQuestions(q) {
  */
 function startRedoSession(questions) {
   if (!questions || !Array.isArray(questions) || questions.length === 0) {
-    console.warn('[BioQuest Practice] startRedoSession: 无有效题目');
+    console.warn('[TATABOX Practice] startRedoSession: 无有效题目');
     restorePracticeUI();
     return;
   }
@@ -2943,8 +2943,8 @@ function handleShareCurrentQuestion() {
   // 移动端原生分享（微信等渠道打开时直接带链接）
   if (typeof navigator !== 'undefined' && navigator.share) {
     navigator.share({
-      title: 'BioQuest · 好题分享',
-      text: (q.question || '').slice(0, 80) + '……（来自 BioQuest 刷题）',
+      title: 'TATABOX · 好题分享',
+      text: (q.question || '').slice(0, 80) + '……（来自 TATABOX 刷题）',
       url: url
     }).catch(function (e) {
       // 用户取消分享不视为错误；其余情况回退到复制链接
@@ -3176,12 +3176,12 @@ function initPractice(target) {
       }
     }
     if (!target) {
-      console.error('[BioQuest Practice] initPractice 找不到目标容器');
+      console.error('[TATABOX Practice] initPractice 找不到目标容器');
       return;
     }
     renderPracticePage(target);
   } catch (err) {
-    console.error('[BioQuest Practice] initPractice 异常:', err);
+    console.error('[TATABOX Practice] initPractice 异常:', err);
     if (target) {
       target.innerHTML = '<div style="text-align:center;padding:60px 20px;">' +
         '<p style="color:var(--color-error);font-size:1.1rem;margin-bottom:8px;">练习模块初始化失败</p>' +

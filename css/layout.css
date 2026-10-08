@@ -1,5 +1,5 @@
 /* ============================================================
- * BioQuest — 布局与导航样式
+ * TATABOX — 布局与导航样式
  * ============================================================ */
 
 /* ----- 顶部导航栏 ----- */
@@ -176,13 +176,8 @@ html[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
 }
 
 /* 汉堡线呼吸动画（未激活时） */
-@keyframes hamburgerBreathe {
-  0%, 100% { opacity: 0.8; }
-  50% { opacity: 1; }
-}
 
 .hamburger:not(.active):hover .hamburger-line {
-  animation: hamburgerBreathe 1.2s ease-in-out infinite;
 }
 
 .hamburger:not(.active):hover .hamburger-line:nth-child(2) {

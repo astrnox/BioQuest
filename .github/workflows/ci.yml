@@ -1,4 +1,4 @@
-# BioQuest 持续集成
+# TATABOX 持续集成
 # 每次 push / PR 自动运行：
 #   1. JS 语法检查（node --check 全部 js）
 #   2. 单元测试（Jest：IRT / FSRS 核心算法）

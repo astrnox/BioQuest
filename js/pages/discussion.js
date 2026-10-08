@@ -1,6 +1,6 @@
 /**
  * ============================================================
- * BioQuest — AI 多智能体协作讨论模块
+ * TATABOX — AI 多智能体协作讨论模块
  * 三大核心功能：
  *   1. 多智能体群聊协作：自动召集 3-5 位智能体，依次发言、自主协商、综合观点
  *   2. 流水线模式：数据采集 → 撰写 → 校对 → 整合 四阶段顺序接力
@@ -352,7 +352,7 @@ function _exportChatMarkdown() {
     return;
   }
 
-  var md = '# BioQuest AI 讨论记录\n\n';
+  var md = '# TATABOX AI 讨论记录\n\n';
   md += '- **模式**：' + (state.mode === 'pipeline' ? '流水线模式' : '群聊协作模式') + '\n';
   md += '- **时间**：' + new Date().toLocaleString('zh-CN') + '\n';
   md += '- **群聊轮次**：' + (state.rounds ? state.rounds.length : 0) + '\n';

@@ -7,7 +7,7 @@
 - Local file: `assets/omax-compound-microscope.glb`
 - License: Creative Commons Attribution 3.0
 - License URL: https://creativecommons.org/licenses/by/3.0/
-- Changes: the display pedestal is hidden at runtime; materials, lighting, scale, framing, and interactive part transforms are adapted for the BioQuest prototype.
+- Changes: the display pedestal is hidden at runtime; materials, lighting, scale, framing, and interactive part transforms are adapted for the TATABOX prototype.
 
 ## Onion Epidermis Cells W.M. 40x - 150
 

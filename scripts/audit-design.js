@@ -134,7 +134,7 @@ function main() {
   }
 
   /* ── 输出 ── */
-  console.log('BioQuest 设计规范审计');
+  console.log('TATABOX 设计规范审计');
   console.log('──────────────────────────────────────────────');
   report.forEach((l) => console.log('  ' + l));
   console.log('──────────────────────────────────────────────');

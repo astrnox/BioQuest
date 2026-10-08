@@ -1,6 +1,6 @@
 /**
  * ============================================================
- * BioQuest — PhET 互动模拟实验集成
+ * TATABOX — PhET 互动模拟实验集成
  * 通过 iframe 嵌入 PhET Interactive Simulations (CC BY 4.0)
  * 来源：https://phet.colorado.edu
  * 许可证：HTML 模拟文件遵循 CC BY 4.0，需署名 University of Colorado Boulder
@@ -544,7 +544,7 @@
           '本页集成 PhET Interactive Simulations HTML5 文件，版权归 ' +
           '<a href="https://phet.colorado.edu" target="_blank" rel="noopener noreferrer">University of Colorado Boulder</a> ' +
           '所有，遵循 <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a> 许可证。' +
-          'BioQuest 仅通过 iframe 嵌入官方模拟文件，未修改 PhET 源代码。' +
+          'TATABOX 仅通过 iframe 嵌入官方模拟文件，未修改 PhET 源代码。' +
         '</p>' +
       '</div>' +
     '</div>';

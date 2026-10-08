@@ -1,10 +1,10 @@
-# BioQuest — 高中生生物学习平台
+# TATABOX — 高中生生物学习平台
 
 > [English Version](./README-en.md) | 中文版
 
 <div align="center">
 
-![BioQuest 首页截图](screenshots/home-final.png)
+![TATABOX 首页截图](screenshots/home-final.png)
 
 **从联赛备考到高考模拟，一个网站搞定你的生物练习**
 
@@ -22,7 +22,7 @@
 
 ## 这是什么
 
-BioQuest 是一个面向高中生的生物学习网站。无论是备战全国中学生生物联赛、刷高考模拟题，还是巩固课本知识，都可以在这里完成。
+TATABOX 是一个面向高中生的生物学习网站。无论是备战全国中学生生物联赛、刷高考模拟题，还是巩固课本知识，都可以在这里完成。
 
 > [!IMPORTANT]
 > 📚 **题库现状说明**：目前题库内的题目部分为**占位演示数据**——题库系统刚完成重建（新 M 格式），已覆盖 80 个生物学科主题、共约 100 道题，用于展示刷题、错题本、能力诊断等完整功能链路。高质量真题与精编解析正在**持续生产中**。
@@ -48,7 +48,7 @@ BioQuest 是一个面向高中生的生物学习网站。无论是备战全国�
 ```bash
 # 1. 克隆仓库
 git clone https://github.com/astrnox/BioQuest.git
-cd BioQuest
+cd TATABOX
 
 # 2. 本地预览（任选其一）
 python -m http.server 8000   # Python
@@ -248,13 +248,13 @@ MPL-2.0 为弱 copyleft 协议：允许修改与商用，但修改过的文件�
 - 感谢所有开源库的作者
 - 感谢 [PhET Interactive Simulations](https://phet.colorado.edu)（科罗拉多大学博尔德分校）提供的优质互动模拟
 - 感谢[DNSHE](https://dnshe.com)的免费二级域名
-- 感谢每一位使用 BioQuest 学生物的同学，祝考试顺利
+- 感谢每一位使用 TATABOX 学生物的同学，祝考试顺利
 
 
 ---
 **计划改名为GAGABOX,敬请期待~**
 <div align="center">
 
-用 BioQuest，学生物不迷路
+用 TATABOX，学生物不迷路
 
 </div>

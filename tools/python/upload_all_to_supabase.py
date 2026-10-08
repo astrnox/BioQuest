@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-BioQuest — 全量种子数据上传脚本（新 Supabase）
+TATABOX — 全量种子数据上传脚本（新 Supabase）
 ================================================
 在「能连通 Supabase 的本地环境」中运行（沙盒网络被白名单限制，无法直连新项目）。
 
@@ -317,7 +317,7 @@ if __name__ == "__main__":
     no_q = "--no-questions" in sys.argv
 
     print("=" * 60)
-    print("BioQuest 全量种子数据上传")
+    print("TATABOX 全量种子数据上传")
     print(f"Supabase: {SUPABASE_URL}")
     print("=" * 60)
 

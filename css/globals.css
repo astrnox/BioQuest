@@ -1,5 +1,5 @@
 /* ============================================================
- * BioQuest — 全局样式变量与基础样式
+ * TATABOX — 全局样式变量与基础样式
  * 设计主题: Fresh Natural + Japanese Wabi-Sabi Literary
  * 配色系统对齐 trae design (bioquest-redesign/colors_and_type.css)
  * 旧变量保留为别名，确保向后兼容
@@ -529,7 +529,6 @@ body {
 }
 
 .btn-primary:hover:not(:disabled) {
-  transform: translateY(-1px);
   box-shadow: var(--shadow-button);
 }
 
@@ -604,7 +603,6 @@ body {
 
 .card:hover {
   box-shadow: var(--shadow-md);
-  transform: translateY(-2px);
   border-color: var(--border-default);
 }
 
@@ -1018,7 +1016,6 @@ body {
   white-space: nowrap;
 }
 .auth-btn:hover {
-  transform: translateY(-1px);
   box-shadow: var(--shadow-button, 0 1px 3px rgba(44, 62, 48, 0.08));
 }
 
@@ -1352,7 +1349,6 @@ body {
 .slide-cap-trigger:hover {
   background: rgba(58, 140, 92, 0.18);
   border-color: #3a8c5c;
-  transform: translateY(-1px);
   box-shadow: var(--shadow-md);
 }
 .slide-cap-trigger:active {
@@ -1743,7 +1739,6 @@ body {
 }
 .pwd-setup-gen:hover {
   background: #4a9c6c;
-  transform: translateY(-1px);
 }
 .pwd-strength-wrap { margin-bottom: 12px; }
 .pwd-strength-bar {
@@ -1893,7 +1888,6 @@ body {
 }
 .pwd-setup-confirm:hover {
   background: #4a9c6c;
-  transform: translateY(-1px);
 }
 
 /* ===== 扫雷验证码 ===== */
@@ -2101,7 +2095,6 @@ body {
   box-shadow: var(--shadow-md);
 }
 .userkey-card-btn:hover {
-  transform: translateY(-1px);
   box-shadow: var(--shadow-lg);
 }
 
@@ -2132,7 +2125,6 @@ body {
   font-family: inherit;
 }
 .auth-form-panel .auth-btn:hover {
-  transform: translateY(-1.5px);
   box-shadow: var(--shadow-lg);
   background: #45a06a;
 }
@@ -2668,7 +2660,6 @@ body {
 .search-result-card:hover {
   border-color: #3a8c5c;
   box-shadow: var(--shadow-md);
-  transform: translateY(-1px);
 }
 
 .search-result-local {
@@ -3187,7 +3178,6 @@ mark.search-highlight {
   box-shadow: var(--shadow-md);
 }
 .cls-input-row button:hover {
-  transform: translateY(-1px);
   box-shadow: var(--shadow-lg);
 }
 .cls-section-label {
@@ -3217,7 +3207,6 @@ mark.search-highlight {
 .cls-topic-card:hover {
   border-color: var(--color-primary, #4a7c59);
   background: var(--color-primary-50, #edf5f0);
-  transform: translateY(-1px);
   box-shadow: var(--shadow-sm, 0 1px 3px rgba(44, 62, 48, 0.05));
 }
 .cls-topic-icon {
@@ -3557,7 +3546,6 @@ mark.search-highlight {
   cursor: default;
 }
 .k-card:hover {
-  transform: translateY(-3px);
   box-shadow: var(--shadow-floating);
   border-color: #f0b8d8;
 }
@@ -3817,10 +3805,7 @@ html[data-theme="dark"] .bottom-tab-bar.is-dragging .bottom-tab-glow {
   color: var(--tabbar-active);
 }
 
-/* 选中 tab 的图标轻微上浮放大，强化"液态"动感 */
-.bottom-tab.active svg {
-  transform: translateY(-1px) scale(1.1);
-}
+/* P1：取消选中 tab 图标"上浮放大"装饰（颜色由 .bottom-tab.active 统一控制） */
 
 /* 通知弹窗（右上角收到回帖提示） */
 .bq-notify-popup {
@@ -3998,11 +3983,6 @@ html[data-theme="dark"] .bottom-tab-bar.is-dragging .bottom-tab-glow {
   font-size: 44px;
   line-height: 1;
   filter: saturate(0.85);
-  animation: bqEmptyBob 2.4s ease-in-out infinite;
-}
-@keyframes bqEmptyBob {
-  0%, 100% { transform: translateY(0); }
-  50%      { transform: translateY(-6px); }
 }
 .bq-empty-title {
   margin: 0;
@@ -4027,7 +4007,6 @@ html[data-theme="dark"] .bottom-tab-bar.is-dragging .bottom-tab-glow {
   transition: transform 0.15s ease, opacity 0.15s ease;
 }
 .bq-empty-cta:hover {
-  transform: translateY(-1px);
   opacity: 0.92;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -4081,7 +4060,7 @@ html[data-theme="dark"] .bottom-tab-bar.is-dragging .bottom-tab-glow {
 }
 
 /* ════════════════════════════════════════════════════════════
-   BioQuest 全局组件层（设计系统 v2；P0/P1 设计整改）
+   TATABOX 全局组件层（设计系统 v2；P0/P1 设计整改）
    ────────────────────────────────────────────────────────────
    契约（新代码必须遵守）：
      1. 颜色/圆角/阴影/间距一律引用上方全局 token，禁止就地发明数值；
@@ -4090,7 +4069,7 @@ html[data-theme="dark"] .bottom-tab-bar.is-dragging .bottom-tab-glow {
      3. 图标统一用 js/core/utils.js 的 BQ_ICONS（线性 1.8 stroke）；
         不允许 emoji 作为图标；
      4. 页面/组件优先复用本节类，不要在 JS 模板里拼内联样式。
-   命名：bq- 前缀（BioQuest 设计系统）。
+   命名：bq- 前缀（TATABOX 设计系统）。
    ════════════════════════════════════════════════════════════ */
 
 /* ── 图标（配合 BQ_ICONS 使用） ── */
@@ -4230,4 +4209,12 @@ html[data-theme="dark"] .bottom-tab-bar.is-dragging .bottom-tab-glow {
   padding: var(--spacing-2xl) var(--spacing-lg);
   text-align: center;
   color: var(--color-text-muted);
+}
+
+/* ── 程序化聚焦不画焦点环 ──
+   路由切换后会把焦点交给标题/容器（tabindex="-1"），这些元素本身不可交互、
+   键盘也无法到达，Chrome 的 :focus-visible 会画出一圈突兀的绿框（观感像误加的描边）。 */
+[tabindex="-1"]:focus,
+[tabindex="-1"]:focus-visible {
+  outline: none;
 }

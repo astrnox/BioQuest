@@ -1,5 +1,5 @@
 /**
- * BioQuest — IRT (项目反应理论) 增强模块
+ * TATABOX — IRT (项目反应理论) 增强模块
  * 包装 @geekie/irt 库（3PL 模型），提供：
  *   - ability 估计（EAP / 最大似然）
  *   - 题目信息曲线 I(θ)

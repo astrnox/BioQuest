@@ -1,5 +1,5 @@
 /**
- * BioQuest — FSRS 参数优化器（Issue #14：Web Worker 化）
+ * TATABOX — FSRS 参数优化器（Issue #14：Web Worker 化）
  *
  * 本文件是「客户端壳」：
  *  - 优先把重计算（19 维梯度下降 fit / 批量调度 / 分片 SHA-256）postMessage 给 Web Worker

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-BioQuest - 知识卡片自动出题机
+TATABOX - 知识卡片自动出题机
 
 核心思想：
 从 cards.json 的结构化知识 → 自动生成多种题型题目
@@ -286,10 +286,10 @@ def generate_fill_blank(concepts):
 
 
 def main():
-    print('[BioQuest] 正在加载知识卡片...')
+    print('[TATABOX] 正在加载知识卡片...')
     categories = load_cards()
     concepts = extract_all_concepts(categories)
-    print(f'[BioQuest] 共加载 {len(concepts)} 张知识卡片')
+    print(f'[TATABOX] 共加载 {len(concepts)} 张知识卡片')
 
     # 按模块分组
     module_map = {
@@ -305,7 +305,7 @@ def main():
         if not module_concepts:
             continue
 
-        print(f'\n[BioQuest] 正在生成模块: {module_name} ({len(module_concepts)} 张卡片)')
+        print(f'\n[TATABOX] 正在生成模块: {module_name} ({len(module_concepts)} 张卡片)')
 
         single = generate_single_choice(module_concepts)
         tf = generate_tf_questions(module_concepts)
@@ -322,8 +322,8 @@ def main():
         print(f'  填空: {len(fill)} 题')
 
     # 输出统计
-    print(f'\n[BioQuest] 合计: {len(all_questions)} 题')
-    print(f'[BioQuest] 按类型统计:')
+    print(f'\n[TATABOX] 合计: {len(all_questions)} 题')
+    print(f'[TATABOX] 按类型统计:')
     type_counts = {}
     for q in all_questions:
         t = q.get('type', 'unknown')
@@ -341,7 +341,7 @@ def main():
             '生成时间': 'auto_generated',
         }, f, ensure_ascii=False, indent=2)
 
-    print(f'\n[BioQuest] 已保存到 {output_path}')
+    print(f'\n[TATABOX] 已保存到 {output_path}')
     return output_path
 
 

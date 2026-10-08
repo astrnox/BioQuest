@@ -1,6 +1,6 @@
 /**
  * ============================================================
- * BioQuest — 教师协同视图（教师/家长学习监控面板）
+ * TATABOX — 教师协同视图（教师/家长学习监控面板）
  * 入口：输入"班级码"或"学生ID"查看学生数据
  * 简化版：用 localStorage 'bioquest_class_data' 模拟班级数据
  * ============================================================
@@ -1036,7 +1036,7 @@ function teacherExportCSV(student) {
       if (typeof showToast === 'function') showToast('班级暂无学生，无法导出');
       return;
     }
-    rows.push(['BioQuest 班级报告', '', '', '', '', '']);
+    rows.push(['TATABOX 班级报告', '', '', '', '', '']);
     rows.push(['导出时间', new Date().toLocaleString('zh-CN')]);
     rows.push([]);
     rows.push(['姓名', '学生ID', 'Bio分', '正确率', '累计答题', '最后活跃', '状态']);

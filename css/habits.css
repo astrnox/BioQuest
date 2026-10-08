@@ -29,7 +29,6 @@
   background: none;
   top: -80px;
   left: -80px;
-  animation: floatParticle1 10s ease-in-out infinite alternate;
 }
 
 .habits-page::after {
@@ -38,20 +37,11 @@
   background: none;
   bottom: -60px;
   right: -60px;
-  animation: floatParticle2 12s ease-in-out infinite alternate;
 }
 
-@keyframes floatParticle1 {
-  0%   { transform: translate(0, 0) scale(1); }
-  50%  { transform: translate(30px, 40px) scale(1.1); }
-  100% { transform: translate(-20px, 20px) scale(0.95); }
-}
 
-@keyframes floatParticle2 {
-  0%   { transform: translate(0, 0) scale(1); }
-  50%  { transform: translate(-25px, -35px) scale(1.08); }
-  100% { transform: translate(15px, -15px) scale(0.92); }
-}
+
+
 
 /* ---------- 头部 ---------- */
 .habits-header {
@@ -125,7 +115,6 @@
 
 .habit-card:hover {
   /* P0 去玻璃：去掉镜面内高光；同时收敛 3D 倾斜炫技为轻微位移 */
-  transform: translateY(-2px);
   box-shadow: var(--shadow-floating);
 }
 
@@ -185,20 +174,10 @@
   border-radius: var(--radius-full);
   margin-left: auto;
   border: 1px solid rgba(255, 180, 80, 0.25);
-  animation: flamePulse 2.2s ease-in-out infinite;
   text-shadow: 0 1px 2px rgba(255, 140, 0, 0.15);
 }
 
-@keyframes flamePulse {
-  0%, 100% {
-    box-shadow: 0 0 0 0 rgba(255, 160, 60, 0.35);
-    transform: scale(1);
-  }
-  50% {
-    box-shadow: var(--shadow-md);
-    transform: scale(1.04);
-  }
-}
+
 
 /* ---------- 环形进度 (SVG) ---------- */
 .habit-progress {
@@ -263,7 +242,6 @@
 }
 
 .habit-checkin-btn:hover {
-  transform: translateY(-2px) scale(1.03);
   box-shadow: var(--shadow-lg);
   filter: brightness(1.08);
 }
@@ -277,7 +255,6 @@
   background: #3a8c5c;
   box-shadow: var(--shadow-md);
   cursor: default;
-  animation: neonGlowGreen 2.5s ease-in-out infinite;
 }
 
 .habit-checkin-btn.completed:hover {
@@ -286,14 +263,7 @@
   filter: none;
 }
 
-@keyframes neonGlowGreen {
-  0%, 100% {
-    box-shadow: var(--shadow-md);
-  }
-  50% {
-    box-shadow: var(--shadow-lg);
-  }
-}
+
 
 /* ---------- 周视图小方块 ---------- */
 .habit-weekly {
@@ -419,8 +389,9 @@
   transform-style: preserve-3d;
 }
 
+/* P1：徽章 hover 只保留边框/底色反馈（去掉 3D 倾斜） */
 .badge-item:hover {
-  transform: translateY(-6px) rotateX(4deg) scale(1.05);
+  border-color: var(--color-sage);
 }
 
 .badge-item .badge-icon {
@@ -749,7 +720,6 @@
 }
 
 .habit-save-btn:hover {
-  transform: translateY(-2px);
   box-shadow: var(--shadow-floating);
 }
 

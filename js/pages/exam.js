@@ -1,6 +1,6 @@
 /**
  * ============================================================
- * BioQuest — 全真模拟考试模块
+ * TATABOX — 全真模拟考试模块
  * 72题 × 2分 = 144分满分，限时150分钟
  * 四大模块各18题，严格按2025联赛比例
  * ============================================================
@@ -1347,7 +1347,7 @@ async function loadQuizData() {
       try {
         await window.ensureQuestionLoaderReady({ timeout: 8000, attempts: 2 });
       } catch (e) {
-        console.warn('[BioQuest Exam] loader.js 加载失败，回退本地 JSON:', e);
+        console.warn('[TATABOX Exam] loader.js 加载失败，回退本地 JSON:', e);
       }
     }
 
@@ -1371,14 +1371,14 @@ async function loadQuizData() {
             updateProgress(pct, '正在加载题库…', (m ? ('模块 ' + m + ' +' + n + ' 题') : '合并本地题库'));
           },
           onBackgroundDone: function (status) {
-            console.info('[BioQuest Exam] 后台题库同步完成：', status);
+            console.info('[TATABOX Exam] 后台题库同步完成：', status);
           }
         };
         allQuestions = await window.loadQuestions([1, 2, 3, 4], loadOpts);
         updateProgress(75, '正在合并题目…', '已加载 ' + (allQuestions ? allQuestions.length : 0) + ' 道');
       }
     } catch (e) {
-      console.warn('[BioQuest Exam] loadQuestions 失败，回退本地:', e);
+      console.warn('[TATABOX Exam] loadQuestions 失败，回退本地:', e);
     }
 
     if (!allQuestions || allQuestions.length === 0) {
@@ -1409,7 +1409,7 @@ async function loadQuizData() {
     });
 
     if (QData.length < EXAM_TOTAL) {
-      console.warn('[BioQuest Exam] 题库题数不足: 只有 ' + QData.length + ' 题，需要 ' + EXAM_TOTAL + ' 题（将动态缩小题量）');
+      console.warn('[TATABOX Exam] 题库题数不足: 只有 ' + QData.length + ' 题，需要 ' + EXAM_TOTAL + ' 题（将动态缩小题量）');
       // 题库不足时动态缩小考试题量，而非阻断考试
       if (QData.length >= 20) {
         EXAM_TOTAL_ACTUAL = QData.length;
@@ -1426,7 +1426,7 @@ async function loadQuizData() {
 
     return true;
   } catch (err) {
-    console.error('[BioQuest Exam] 加载题目数据失败', err);
+    console.error('[TATABOX Exam] 加载题目数据失败', err);
     QData = [];
     var status = document.getElementById('examLoadingStatus');
     if (status) status.textContent = '加载失败: ' + (err.message || '未知错误');
@@ -1633,7 +1633,7 @@ function autoSave() {
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
   } catch (e) {
-    console.warn('[BioQuest Exam] 自动保存失败:', e.message);
+    console.warn('[TATABOX Exam] 自动保存失败:', e.message);
   }
 }
 
@@ -1956,7 +1956,7 @@ async function startExam(target, paperMode) {
   }
   // 题库不足 72 题时动态缩小题量（已在 loadQuizData 中设置 EXAM_TOTAL_ACTUAL），不阻断考试
   if (QData.length < EXAM_TOTAL) {
-    console.warn('[BioQuest Exam] 题库不足 72 题，本次考试题量缩小为 ' + EXAM_TOTAL_ACTUAL + ' 题');
+    console.warn('[TATABOX Exam] 题库不足 72 题，本次考试题量缩小为 ' + EXAM_TOTAL_ACTUAL + ' 题');
   }
 
   clearExamState();
@@ -1982,7 +1982,7 @@ function renderExamInterface(target) {
     <div class="exam-interface">
       <div class="exam-topbar" id="examTopbar">
         <div class="exam-topbar-left">
-          <span class="exam-topbar-label">BioQuest 全真模拟考试</span>
+          <span class="exam-topbar-label">TATABOX 全真模拟考试</span>
           <span class="exam-topbar-progress">${totalAnswered} / ${EXAM_TOTAL} 已答</span>
         </div>
         <div class="exam-timer" id="examTimer">
@@ -2850,7 +2850,7 @@ function initExam(target) {
     }
 
     if (!target) {
-      console.error('[BioQuest Exam] initExam 找不到目标容器');
+      console.error('[TATABOX Exam] initExam 找不到目标容器');
       return;
     }
 
@@ -2892,10 +2892,10 @@ function initExam(target) {
         renderExamStartPage(target);
       } else {
         // loadQuizData 已在目标容器内渲染错误提示，无需额外操作
-        console.warn('[BioQuest Exam] 题库加载失败，已显示错误提示');
+        console.warn('[TATABOX Exam] 题库加载失败，已显示错误提示');
       }
     }).catch(function(err) {
-      console.error('[BioQuest Exam] loadQuizData 异常:', err);
+      console.error('[TATABOX Exam] loadQuizData 异常:', err);
       target.innerHTML = '<div style="text-align:center;padding:60px 20px;">' +
         '<p style="color:var(--color-error);font-size:1.1rem;margin-bottom:8px;">考试模块加载失败</p>' +
         '<p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:16px;">' + escapeHtml(err && err.message ? err.message : '请刷新页面重试') + '</p>' +
@@ -2903,7 +2903,7 @@ function initExam(target) {
         '</div>';
     });
   } catch (err) {
-    console.error('[BioQuest Exam] initExam 异常:', err);
+    console.error('[TATABOX Exam] initExam 异常:', err);
     if (target) {
       target.innerHTML = '<div style="text-align:center;padding:60px 20px;">' +
         '<p style="color:var(--color-error);font-size:1.1rem;margin-bottom:8px;">考试模块初始化失败</p>' +

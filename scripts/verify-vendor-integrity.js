@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 'use strict';
 /**
- * BioQuest — vendor 完整性校验门禁（P0 供应链安全）
+ * TATABOX — vendor 完整性校验门禁（P0 供应链安全）
  *
  * 目的：杜绝"被捧杀/投毒"——任何人以"升级某库"为名替换 js/vendor/ 下的三方
  * min 文件（或新增一个带后门的文件），只要不同步更新清单，CI 就会报红，

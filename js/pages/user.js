@@ -1,6 +1,6 @@
 /**
  * ============================================================
- * BioQuest — 用户中心模块
+ * TATABOX — 用户中心模块
  * 设置面板、数据管理、学习记录、收藏夹、存储用量
  * ============================================================
  */
@@ -892,7 +892,7 @@ function renderProfilePanel(container) {
         emailVerified = !!(user.emailVerified || user.email_verified);
       }
     } catch (e) {
-      console.warn('[BioQuest] 获取用户信息失败:', e);
+      console.warn('[TATABOX] 获取用户信息失败:', e);
     }
   }
 
@@ -2005,7 +2005,7 @@ function renderRecordsPanel(container) {
       var recData = raw && raw.data ? raw.data : raw;
       records = Array.isArray(recData) ? recData : [];
     } catch (e) {
-      console.warn('[BioQuest] 获取学习记录失败:', e);
+      console.warn('[TATABOX] 获取学习记录失败:', e);
       records = [];
     }
   }
@@ -2073,7 +2073,7 @@ function renderFavoritesPanel(container) {
       var favData = rawFav && rawFav.data ? rawFav.data : rawFav;
       favIds = Array.isArray(favData) ? favData : [];
     } catch (e) {
-      console.warn('[BioQuest] 获取收藏列表失败:', e);
+      console.warn('[TATABOX] 获取收藏列表失败:', e);
       favIds = [];
     }
   }
@@ -2088,7 +2088,7 @@ function renderFavoritesPanel(container) {
       var wrongData = rawWrong && rawWrong.data ? rawWrong.data : rawWrong;
       wrongQuestions = Array.isArray(wrongData) ? wrongData : [];
     } catch (e) {
-      console.warn('[BioQuest] 获取错题列表失败:', e);
+      console.warn('[TATABOX] 获取错题列表失败:', e);
       wrongQuestions = [];
     }
   }
@@ -2110,7 +2110,7 @@ function renderFavoritesPanel(container) {
       var recData = rawRec && rawRec.data ? rawRec.data : rawRec;
       records = Array.isArray(recData) ? recData : [];
     } catch (e) {
-      console.warn('[BioQuest] 获取记录列表(收藏映射)失败:', e);
+      console.warn('[TATABOX] 获取记录列表(收藏映射)失败:', e);
       records = [];
     }
   }
@@ -2589,7 +2589,7 @@ function renderUserPage(target) {
       });
     }
   } catch (err) {
-    console.error('[BioQuest] 用户中心渲染错误:', err);
+    console.error('[TATABOX] 用户中心渲染错误:', err);
     // 安全修复（P1 XSS）：err.message 转义后再注入 innerHTML
     var _ueMsg = err && err.message ? String(err.message) : '';
     var _ueEsc = _ueMsg.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
@@ -2665,7 +2665,7 @@ function _showUserSubPage(key) {
         renderNotificationsPanel(bodyEl);
       }
     } catch (e) {
-      console.warn('[BioQuest] 子页面渲染失败:', key, e);
+      console.warn('[TATABOX] 子页面渲染失败:', key, e);
       bodyEl.innerHTML = '<div class="user-empty-state"><p>加载失败</p></div>';
     }
   }, 50);
@@ -2986,7 +2986,7 @@ function generateShareCard() {
   // 标题
   ctx.fillStyle = '#e0e8e4';
   ctx.font = 'bold 28px "Noto Serif SC", serif';
-  ctx.fillText('BioQuest 学习报告', 40, 55);
+  ctx.fillText('TATABOX 学习报告', 40, 55);
 
   // 分隔线
   ctx.strokeStyle = 'rgba(255,255,255,0.2)';
@@ -3043,7 +3043,7 @@ function generateShareCard() {
   // 底部
   ctx.fillStyle = 'rgba(255,255,255,0.4)';
   ctx.font = '12px sans-serif';
-  ctx.fillText('BioQuest 生物竞赛学习平台 · ' + new Date().toLocaleDateString('zh-CN'), 40, 370);
+  ctx.fillText('TATABOX 高中学习平台 · ' + new Date().toLocaleDateString('zh-CN'), 40, 370);
   ctx.fillText('bioquest.dada.im', 460, 370);
 
   // 下载

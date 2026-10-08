@@ -1,6 +1,6 @@
 # tools/python/ — Python 工具脚本
 
-BioQuest 是纯前端项目（HTML/CSS/JS，Supabase 后端服务）。本目录集中存放仍可能使用的 Python 运维/数据工具，与前端运行无关。
+TATABOX 是纯前端项目（HTML/CSS/JS，Supabase 后端服务）。本目录集中存放仍可能使用的 Python 运维/数据工具，与前端运行无关。
 
 | 脚本 | 用途 |
 |---|---|

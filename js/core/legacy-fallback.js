@@ -54,7 +54,7 @@
 
       var text = document.createElement('span');
       text.textContent =
-        '当前浏览器内核较旧，无法完整运行 BioQuest。' +
+        '当前浏览器内核较旧，无法完整运行 TATABOX。' +
         '建议升级系统浏览器，或改用 Chrome / Edge / Safari 等现代浏览器访问，以获得完整功能。';
 
       var btn = document.createElement('button');

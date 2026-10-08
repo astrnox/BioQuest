@@ -46,7 +46,7 @@ describe('BQ_ICONS 全局图标系统', () => {
     });
   });
 
-  test('挂载在 BioQuest 命名空间下（Q-03 约定）', () => {
+  test('挂载在 TATABOX 命名空间下（Q-03 约定）', () => {
     expect(window.BioQuest.icons).toBe(window.BQ_ICONS);
   });
 });

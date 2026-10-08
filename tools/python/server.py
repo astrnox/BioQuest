@@ -1,5 +1,5 @@
 """
-BioQuest 题目生成服务 v7.0 — 高质量严审题版
+TATABOX 题目生成服务 v7.0 — 高质量严审题版
 存储: Supabase PostgreSQL + 本地 pool.json 备份
 API: NVIDIA NIM 免费 API（Qwen3.5 生成+自检）
 
@@ -791,7 +791,7 @@ def _resolve_user_api(headers):
 # ========== AI 导师系统提示词 ==========
 TUTOR_SYSTEM_PROMPTS = {
     "general": (
-        "你是 BioQuest AI 生物导师，一位耐心、专业的高中生物老师。"
+        "你是 TATABOX AI 生物导师，一位耐心、专业的高中生物老师。"
         "你的职责是用清晰、生动的语言讲解生物学概念，帮助学生理解而非死记。"
         "规则：\n"
         "1. 回答要准确、科学，符合高中生物课程标准\n"
@@ -2015,7 +2015,7 @@ class Handler(http.server.BaseHTTPRequestHandler):
                 self._json(400, {"error": "题目内容为空"}); return
 
             prompt = (
-                "你是 BioQuest 生物竞赛命题专家。用户输入了一段生物题目文字（可能完整也可能只有题干）。"
+                "你是 TATABOX 生物竞赛命题专家。用户输入了一段生物题目文字（可能完整也可能只有题干）。"
                 "请基于此生成完整的题目解析。要求：\n"
                 "1. 若输入已含选项，按原文提取；若没有，生成 4 个合理选项 A/B/C/D\n"
                 "2. 给出唯一正确答案（字母 A/B/C/D）\n"
@@ -2140,7 +2140,7 @@ class Handler(http.server.BaseHTTPRequestHandler):
                 # 调用 vision 模型识别图片中的题目文字
                 data_url = f"data:{image_mime};base64,{image_b64}"
                 ocr_prompt = (
-                    "你是 BioQuest 生物题目 OCR 专家。请仔细阅读图片中的题目，"
+                    "你是 TATABOX 生物题目 OCR 专家。请仔细阅读图片中的题目，"
                     "提取出完整的题目文字（题干、选项、图表说明等）。"
                     "如果有图表/示意图，请用文字描述其内容（如'图示：一个细胞结构图，标注了线粒体、内质网等'）。"
                     "如果有数学公式，请用 LaTeX 格式输出。\n"
@@ -2190,7 +2190,7 @@ class Handler(http.server.BaseHTTPRequestHandler):
                 # 复用 photo-quiz 逻辑：将 OCR 文本喂给 AI 生成完整题目
                 # 这里直接内联调用以避免 HTTP 循环
                 struct_prompt = (
-                    "你是 BioQuest 生物竞赛命题专家。从以下 OCR 提取的题目文字中，"
+                    "你是 TATABOX 生物竞赛命题专家。从以下 OCR 提取的题目文字中，"
                     "提取或生成完整的题目（含选项、答案、解析）。\n"
                     "要求：\n"
                     "1. 若原文已含选项 A/B/C/D，按原文提取；否则生成 4 个合理选项\n"
@@ -2966,7 +2966,7 @@ class ThreadedHTTPServer(socketserver.ThreadingMixIn, http.server.HTTPServer):
 
 # ========== 命令行入口 ==========
 def parse_args():
-    parser = argparse.ArgumentParser(description="BioQuest 题目生成服务")
+    parser = argparse.ArgumentParser(description="TATABOX 题目生成服务")
     parser.add_argument("--mode", choices=["serve","generate","retag"], default="serve",
                         help="运行模式: serve=启动HTTP服务, generate=批量生成题目, retag=重新打标")
     parser.add_argument("--type", choices=["gaokao","competition","both","multi_judge"], default="competition",

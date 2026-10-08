@@ -1,5 +1,5 @@
 /**
- * BioQuest — 智能题库加载器
+ * TATABOX — 智能题库加载器
  * 特性：IndexedDB 缓存、模块级按需加载、流式进度回调、断点续传
  */
 'use strict';

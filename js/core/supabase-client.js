@@ -1,6 +1,6 @@
 /**
  * ============================================================
- * BioQuest — Supabase 客户端（前端直连版）
+ * TATABOX — Supabase 客户端（前端直连版）
  * 用于静态托管（如彩虹云 FTP）无需 Python 后端
  * ============================================================
  */
@@ -218,7 +218,7 @@ function _setupAuthListener() {
                 }
               })
               .catch(function(e) {
-                console.warn('[BioQuest] onAuthStateChange 获取 profile 失败:', e);
+                console.warn('[TATABOX] onAuthStateChange 获取 profile 失败:', e);
               });
           }, AUTH_UPDATE_DEBOUNCE_MS); // 缩短到 200ms
         }
@@ -466,7 +466,7 @@ async function registerUser(username, password, displayName, email) {
       return { ok: false, error: '该用户名已被使用，请换一个' };
     }
   } catch (e) {
-    console.warn('[BioQuest] username 重复检查失败（非致命）:', e && e.message);
+    console.warn('[TATABOX] username 重复检查失败（非致命）:', e && e.message);
   }
 
   // 预防性检查：email 是否已被注册（仅当用户填了真实邮箱）
@@ -481,7 +481,7 @@ async function registerUser(username, password, displayName, email) {
         return { ok: false, error: '该邮箱已被注册，请直接登录或换一个' };
       }
     } catch (e) {
-      console.warn('[BioQuest] email 重复检查失败（非致命）:', e && e.message);
+      console.warn('[TATABOX] email 重复检查失败（非致命）:', e && e.message);
     }
   }
 
@@ -515,13 +515,13 @@ async function registerUser(username, password, displayName, email) {
 
     } catch (tryErr) {
       strategy1Error = tryErr;
-      console.warn('[BioQuest] signUp (含data) 抛出异常，尝试简化请求:', tryErr && tryErr.message, tryErr);
+      console.warn('[TATABOX] signUp (含data) 抛出异常，尝试简化请求:', tryErr && tryErr.message, tryErr);
       signUpResult = { data: null, error: tryErr };
     }
 
     // 策略 2：如果失败，尝试不带 options.data
     if (signUpResult && signUpResult.error) {
-      console.warn('[BioQuest] signUp 策略 1 失败，错误消息:', signUpResult.error.message);
+      console.warn('[TATABOX] signUp 策略 1 失败，错误消息:', signUpResult.error.message);
       try {
         signUpResult = await sb.auth.signUp({
           email: email,
@@ -532,7 +532,7 @@ async function registerUser(username, password, displayName, email) {
         });
 
       } catch (tryErr2) {
-        console.error('[BioQuest] signUp 策略 2 也抛出异常:', tryErr2 && tryErr2.message, tryErr2);
+        console.error('[TATABOX] signUp 策略 2 也抛出异常:', tryErr2 && tryErr2.message, tryErr2);
         if (!signUpResult || !signUpResult.error) signUpResult = { data: null, error: tryErr2 };
       }
     }
@@ -551,9 +551,9 @@ async function registerUser(username, password, displayName, email) {
         if (errName === 'AuthRetryableFetchError' || errStatus === 500) {
           msg = 'Supabase 服务暂时异常（500），可能是：邮件发送失败 / 触发器冲突 / 服务维护中。请稍后重试，或在 Supabase Dashboard 关闭「Confirm email」开关';
         }
-        console.error('[BioQuest] 注册失败 - 错误对象为空:', JSON.stringify(error), '完整 error:', error);
+        console.error('[TATABOX] 注册失败 - 错误对象为空:', JSON.stringify(error), '完整 error:', error);
       } else {
-        console.error('[BioQuest] 注册失败 - Supabase 错误消息:', msg, '完整 error:', error);
+        console.error('[TATABOX] 注册失败 - Supabase 错误消息:', msg, '完整 error:', error);
       }
       if (msg.includes('already registered') || msg.includes('already been registered') || msg.includes('unique')) {
         msg = '该邮箱已被注册，请直接登录或换一个';
@@ -608,7 +608,7 @@ async function registerUser(username, password, displayName, email) {
             id: data.user.id, username: username, display_name: displayName || username, user_group: 'member', points: POINTS_DEFAULT
           }, { onConflict: 'id' });
         } catch (e2) {
-          console.warn('[BioQuest] profiles upsert 失败（邮箱验证前，非致命）:', e2 && e2.message);
+          console.warn('[TATABOX] profiles upsert 失败（邮箱验证前，非致命）:', e2 && e2.message);
         }
       }
       clearLock();
@@ -663,7 +663,7 @@ async function registerUser(username, password, displayName, email) {
           try { upsertDataFallback.email = email; } catch (e) {}
           await sb.from('profiles').upsert(upsertDataFallback, { onConflict: 'id' });
         } catch (e2) {
-          console.warn('[BioQuest] profiles upsert 失败（已尝试回退）:', e2 && e2.message);
+          console.warn('[TATABOX] profiles upsert 失败（已尝试回退）:', e2 && e2.message);
         }
       }
 
@@ -680,10 +680,10 @@ async function registerUser(username, password, displayName, email) {
       return { ok: true, user: _currentUser, userKey: uk2 };
     }
 
-    console.error('[BioQuest] signUp 返回但 data.user 为空:', signUpResult);
+    console.error('[TATABOX] signUp 返回但 data.user 为空:', signUpResult);
     return { ok: false, error: '注册失败：服务端返回的用户信息为空，请稍后重试' };
   } catch (e) {
-    console.error('[BioQuest] registerUser 顶层异常:', e && e.message, e);
+    console.error('[TATABOX] registerUser 顶层异常:', e && e.message, e);
     return { ok: false, error: '注册失败：' + (e.message || String(e)) };
   }
 }
@@ -1258,7 +1258,7 @@ async function _doRestoreSession() {
     ]);
 
     if (sessionResult.timedOut) {
-      console.warn('[BioQuest] restoreSession: getSession 超时');
+      console.warn('[TATABOX] restoreSession: getSession 超时');
       return false;
     }
 
@@ -2362,7 +2362,7 @@ var ACHIEVEMENT_TIERS = {
 
 var ACHIEVEMENTS = {
   // ===== 新手村（新手引导） =====
-  first_login:     { name: '你好世界',       desc: '第一次打开BioQuest，勇气可嘉',  icon: 'I', category: 'journey',  tier: 'iron' },
+  first_login:     { name: '你好世界',       desc: '第一次打开TATABOX，勇气可嘉',  icon: 'I', category: 'journey',  tier: 'iron' },
   first_practice:  { name: '羊入虎口',       desc: '做了第一道题，不知道该恭喜还是该劝退', icon: 'S', category: 'journey',  tier: 'iron' },
   email_verified:  { name: '验明正身',       desc: '邮箱验证了，你终于不是黑户了',   icon: 'V', category: 'journey',  tier: 'bronze' },
 
@@ -2402,7 +2402,7 @@ var ACHIEVEMENTS = {
   community_first: { name: '社恐出没',       desc: '第一次发帖，手抖了吗？',        icon: '1st', category: 'community',  tier: 'iron' },
   community_5:     { name: '话痨上线',       desc: '发了5个帖子，你开始收不住了',    icon: '5th', category: 'community',  tier: 'bronze' },
   community_10:    { name: '社交达人',       desc: '发了10个帖子，你比老师还能说',    icon: '10th', category: 'community',  tier: 'silver' },
-  community_50:    { name: '社区顶流',       desc: '发了50个帖子，你就是BioQuest的KOL', icon: '50th', category: 'community',  tier: 'gold' },
+  community_50:    { name: '社区顶流',       desc: '发了50个帖子，你就是TATABOX的KOL', icon: '50th', category: 'community',  tier: 'gold' },
   community_100:   { name: '话痨天花板',     desc: '发了100个帖子，你确定不是来水贴的？', icon: '100th', category: 'community',  tier: 'diamond' },
 
   // ===== 考场战神（考试成就） =====
@@ -2732,7 +2732,7 @@ async function recordDailyCheckIn() {
     });
     if (!patchResult.ok) {
       // profiles 更新失败不应阻断打卡本身，仅记录
-      console.warn('[BioQuest] 打卡后更新 profiles 失败:', patchResult.status);
+      console.warn('[TATABOX] 打卡后更新 profiles 失败:', patchResult.status);
     }
 
     // 打卡加信用
@@ -3436,7 +3436,7 @@ async function getUserStatsFromSupabase() {
 
     return stats;
   } catch (e) {
-    console.warn('[BioQuest] getUserStatsFromSupabase 失败，回退 localStorage:', e && e.message);
+    console.warn('[TATABOX] getUserStatsFromSupabase 失败，回退 localStorage:', e && e.message);
     return null;
   }
 }
@@ -3479,7 +3479,7 @@ async function getPracticeHistoryFromSupabase(limit) {
       };
     });
   } catch (e) {
-    console.warn('[BioQuest] getPracticeHistoryFromSupabase 失败:', e && e.message);
+    console.warn('[TATABOX] getPracticeHistoryFromSupabase 失败:', e && e.message);
     return null;
   }
 }
@@ -3511,7 +3511,7 @@ async function getHabitLogsFromSupabase() {
       };
     });
   } catch (e) {
-    console.warn('[BioQuest] getHabitLogsFromSupabase 失败:', e && e.message);
+    console.warn('[TATABOX] getHabitLogsFromSupabase 失败:', e && e.message);
     return null;
   }
 }
@@ -3548,7 +3548,7 @@ async function syncPracticeRecordToSupabase(record) {
     if (error) throw error;
     return { ok: true };
   } catch (e) {
-    console.warn('[BioQuest] syncPracticeRecordToSupabase 失败:', e && e.message);
+    console.warn('[TATABOX] syncPracticeRecordToSupabase 失败:', e && e.message);
     return { ok: false, error: e && e.message };
   }
 }
@@ -3574,7 +3574,7 @@ async function syncHabitLogToSupabase(dateStr, streakCount) {
     if (error) throw error;
     return { ok: true };
   } catch (e) {
-    console.warn('[BioQuest] syncHabitLogToSupabase 失败:', e && e.message);
+    console.warn('[TATABOX] syncHabitLogToSupabase 失败:', e && e.message);
     return { ok: false, error: e && e.message };
   }
 }
@@ -3647,7 +3647,7 @@ async function pushUserProgressToSupabase(key, data, updatedAt) {
         return { ok: false, error: e2.message };
       }
     }
-    console.warn('[BioQuest] pushUserProgressToSupabase 失败:', key, e && e.message);
+    console.warn('[TATABOX] pushUserProgressToSupabase 失败:', key, e && e.message);
     return { ok: false, error: e && e.message };
   }
 }
@@ -3674,7 +3674,7 @@ async function pullUserProgressFromSupabase(key) {
       return { key: row.key, data: row.data, updated_at: ms, serverUpdatedAt: row.updated_at };
     });
   } catch (e) {
-    console.warn('[BioQuest] pullUserProgressFromSupabase 失败:', e && e.message);
+    console.warn('[TATABOX] pullUserProgressFromSupabase 失败:', e && e.message);
     return null;
   }
 }
@@ -3718,7 +3718,7 @@ async function getClassMembershipsFromSupabase() {
     if (error) throw error;
     return data || [];
   } catch (e) {
-    console.warn('[BioQuest] getClassMembershipsFromSupabase 失败:', e && e.message);
+    console.warn('[TATABOX] getClassMembershipsFromSupabase 失败:', e && e.message);
     return null;
   }
 }
@@ -3747,7 +3747,7 @@ async function addClassMembershipToSupabase(student) {
     if (error) throw error;
     return { ok: true, membership: data };
   } catch (e) {
-    console.warn('[BioQuest] addClassMembershipToSupabase 失败:', e && e.message);
+    console.warn('[TATABOX] addClassMembershipToSupabase 失败:', e && e.message);
     return { ok: false, error: e && e.message };
   }
 }
@@ -3769,7 +3769,7 @@ async function removeClassMembershipFromSupabase(membershipId) {
     if (error) throw error;
     return { ok: true };
   } catch (e) {
-    console.warn('[BioQuest] removeClassMembershipFromSupabase 失败:', e && e.message);
+    console.warn('[TATABOX] removeClassMembershipFromSupabase 失败:', e && e.message);
     return { ok: false, error: e && e.message };
   }
 }
@@ -3808,7 +3808,7 @@ async function getStudentDetailByKey(userKey) {
       wrongQuestions: []  // RLS 限制：教师无法直接读学生错题
     };
   } catch (e) {
-    console.warn('[BioQuest] getStudentDetailByKey 失败:', e && e.message);
+    console.warn('[TATABOX] getStudentDetailByKey 失败:', e && e.message);
     return null;
   }
 }
@@ -4366,7 +4366,7 @@ async function getStudentByKey(userKey) {
       last_active: p.updated_at || new Date().toISOString()
     };
   } catch (e) {
-    console.warn('[BioQuest] getStudentByKey 查询失败:', e);
+    console.warn('[TATABOX] getStudentByKey 查询失败:', e);
     return null;
   }
 }
@@ -4395,7 +4395,7 @@ async function saveUserKeyIfNeeded() {
       .update({ user_key: key })
       .eq('id', user.id);
   } catch (e) {
-    console.warn('[BioQuest] saveUserKeyIfNeeded 失败:', e);
+    console.warn('[TATABOX] saveUserKeyIfNeeded 失败:', e);
   }
 }
 window.saveUserKeyIfNeeded = saveUserKeyIfNeeded;
@@ -4455,12 +4455,12 @@ async function getAnnouncements(options) {
     }
     var { data, error } = await query;
     if (error) {
-      console.warn('[BioQuest] 获取公告失败:', error.message);
+      console.warn('[TATABOX] 获取公告失败:', error.message);
       return [];
     }
     return data || [];
   } catch (e) {
-    console.warn('[BioQuest] 获取公告异常:', e && e.message);
+    console.warn('[TATABOX] 获取公告异常:', e && e.message);
     return [];
   }
 }
@@ -4606,7 +4606,7 @@ async function saveAIConversation(conv) {
     if (result.error) throw result.error;
     return { ok: true, id: convId };
   } catch (e) {
-    console.warn('[BioQuest] saveAIConversation 失败:', e && e.message);
+    console.warn('[TATABOX] saveAIConversation 失败:', e && e.message);
     return { ok: false, error: e && e.message };
   }
 }
@@ -4633,7 +4633,7 @@ async function saveAIMessage(msg) {
     if (result.error) throw result.error;
     return { ok: true };
   } catch (e) {
-    console.warn('[BioQuest] saveAIMessage 失败:', e && e.message);
+    console.warn('[TATABOX] saveAIMessage 失败:', e && e.message);
     return { ok: false, error: e && e.message };
   }
 }
@@ -4658,7 +4658,7 @@ async function getAIConversations(type, limit) {
     if (result.error) throw result.error;
     return result.data || [];
   } catch (e) {
-    console.warn('[BioQuest] getAIConversations 失败:', e && e.message);
+    console.warn('[TATABOX] getAIConversations 失败:', e && e.message);
     return [];
   }
 }
@@ -4679,7 +4679,7 @@ async function getAIMessages(conversationId) {
     if (result.error) throw result.error;
     return result.data || [];
   } catch (e) {
-    console.warn('[BioQuest] getAIMessages 失败:', e && e.message);
+    console.warn('[TATABOX] getAIMessages 失败:', e && e.message);
     return [];
   }
 }
@@ -4702,7 +4702,7 @@ async function deleteAIConversation(conversationId) {
     if (r2.error) throw r2.error;
     return { ok: true };
   } catch (e) {
-    console.warn('[BioQuest] deleteAIConversation 失败:', e && e.message);
+    console.warn('[TATABOX] deleteAIConversation 失败:', e && e.message);
     return { ok: false, error: e && e.message };
   }
 }

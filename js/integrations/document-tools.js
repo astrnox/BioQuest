@@ -1,5 +1,5 @@
 /**
- * BioQuest — 文档处理集成模块（mammoth + PDF.js）
+ * TATABOX — 文档处理集成模块（mammoth + PDF.js）
  * 功能：
  *   - 从 .docx 提取纯文本/HTML
  *   - 从 .pdf 提取文本（按页）
