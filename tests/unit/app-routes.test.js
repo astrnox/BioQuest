@@ -30,11 +30,21 @@ describe('P1-2 拆分：Routes 独立文件', () => {
     expect(Routes).toBeDefined();
     expect(typeof Routes).toBe('object');
     expect(Routes['/']).toBeDefined();
-    expect(Routes['/admin'].role).toBe('admin');
+    // /admin 改为「登录即可进入 + 页内管理员密钥验证」：
+    // role 门禁会挡住持密钥的非 admin 账号（见 migration_v11_admin_auth.sql）
+    expect(Routes['/admin'].auth).toBe(true);
+    expect(Routes['/admin'].role).toBeUndefined();
   });
 
   test('app.js 不再重复声明 const Routes（避免跨脚本重复声明）', () => {
     expect(appSource).not.toMatch(/const Routes\s*=\s*\{/);
+  });
+
+  test('邮件重置落地页 /reset-password 已注册（否则 #/reset-password 会被回退到首页）', () => {
+    expect(Routes['/reset-password']).toBeDefined();
+    expect(Routes['/reset-password'].render).toBe('renderResetPasswordPage');
+    // 恢复会话是异步的，不能按"未登录"拦截，否则用户点邮件链接会落到"请先登录"
+    expect(Routes['/reset-password'].auth).toBeUndefined();
   });
 });
 

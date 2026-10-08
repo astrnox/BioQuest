@@ -1038,11 +1038,56 @@ function injectAdminStyles() {
 }
 
 /* ===== API 调用 ===== */
-// P0-2 修复：移除纯客户端 SHA-256 管理员密钥比对（可被前端绕过，不构成真实安全）。
-// 管理员认证统一走 Supabase Auth（signInWithPassword）+ 服务端 RLS：
-//   - 前端仅根据 Supabase 返回的 user_group === 'admin' 决定是否解锁管理 UI；
-//   - 真正的写权限由 sql/ 中的 RLS 策略在服务端强制，伪造前端状态无法提权。
+// 管理员认证有两条路径，均由服务端把关：
+//   1. 管理员密钥：RPC admin_login_with_key（sql/migration_v11_admin_auth.sql）
+//      在服务端比对 SHA-256 摘要，通过后把「当前登录账号」升级为 user_group='admin'；
+//      纯前端伪造状态无法提权（密钥摘要不下发、不在前端比对）。
+//   2. 管理员账号：Supabase Auth 邮箱 + 密码登录，要求账号 user_group='admin'。
+// 数据读写权限始终由 sql/ 中的 RLS 策略在服务端强制。
 // 详见 prd/BioQuest-安全与工程整改PRD.md P0-2。
+
+/**
+ * 判断是否为「服务端未部署同名 RPC」错误（PostgREST: Could not find the function ... / does not exist）
+ * @param {string} msg
+ */
+function _isMissingRpcError(msg) {
+  var s = String(msg || '');
+  return s.indexOf('Could not find') >= 0 || s.indexOf('not found') >= 0 || s.indexOf('does not exist') >= 0;
+}
+
+/**
+ * 管理员密钥验证（服务端校验）
+ * @param {string} key 管理员密钥
+ * @returns {Promise<{ok: boolean, error?: string}>}
+ */
+async function adminVerifyKey(key) {
+  if (!key || !String(key).trim()) return { ok: false, error: '请输入管理员密钥' };
+  var sb = (typeof window.getSupabase === 'function') ? window.getSupabase() : null;
+  if (!sb) return { ok: false, error: '系统未初始化，请刷新页面后重试' };
+  try {
+    var res = await sb.rpc('admin_login_with_key', { p_key: String(key).trim() });
+    if (res && res.error) {
+      var msg = res.error.message || '验证失败';
+      if (_isMissingRpcError(msg)) {
+        msg = '服务端尚未部署管理员密钥功能，请先在 Supabase 执行 sql/migration_v11_admin_auth.sql';
+      }
+      return { ok: false, error: msg };
+    }
+    var row = Array.isArray(res && res.data) ? res.data[0] : (res && res.data);
+    if (!row || !row.ok) {
+      return { ok: false, error: (row && row.error_msg) || '管理员密钥不正确' };
+    }
+    // 授权成功：服务端 profiles.user_group 已升级为 admin，这里同步内存用户并解锁管理 UI
+    var user = (typeof window.getCurrentUser === 'function') ? window.getCurrentUser() : null;
+    if (user) user.user_group = 'admin';
+    _adminAuthenticated = true;
+    sessionStorage.setItem('bioquest_admin_auth', JSON.stringify({ t: Date.now(), exp: ADMIN_TOKEN_TTL }));
+    return { ok: true };
+  } catch (e) {
+    return { ok: false, error: '验证异常：' + ((e && e.message) || e) };
+  }
+}
+window.adminVerifyKey = adminVerifyKey;
 
 // 登录管理员账号（Supabase Auth：邮箱 + 密码）
 async function adminLogin(email, password) {
@@ -1770,6 +1815,8 @@ var ICONS = {
 };
 
 /* ===== 登录页渲染 ===== */
+// 默认「管理员密钥」验证（服务端比对，适合站长本人的非 admin 账号补票）；
+// 可切换到「管理员账号密码」登录（保留原有 Supabase Auth 路径）。
 function renderAdminLoginPage(target) {
   target.innerHTML = `
     <div class="admin-login-wrap">
@@ -1778,8 +1825,22 @@ function renderAdminLoginPage(target) {
           ${ICONS.shield}
         </div>
         <div class="admin-login-title">管理员后台</div>
-        <div class="admin-login-subtitle">使用 Supabase 管理员账号登录（邮箱 + 密码）</div>
-        <form class="admin-login-form" id="admin-login-form">
+        <div class="admin-login-subtitle" id="admin-login-subtitle">输入管理员密钥完成身份验证</div>
+        <form class="admin-login-form" id="admin-key-form">
+          <div class="admin-login-input-wrap">
+            <input
+              type="password"
+              class="admin-login-input"
+              id="admin-key-input"
+              placeholder="管理员密钥"
+              required
+              autocomplete="off"
+            >
+            ${ICONS.key}
+          </div>
+          <button type="submit" class="admin-login-btn">验证进入</button>
+        </form>
+        <form class="admin-login-form" id="admin-pwd-form" style="display:none;">
           <div class="admin-login-input-wrap">
             <input
               type="email"
@@ -1794,7 +1855,7 @@ function renderAdminLoginPage(target) {
             <input
               type="password"
               class="admin-login-input"
-              id="admin-key-input"
+              id="admin-password-input"
               placeholder="密码"
               required
               autocomplete="current-password"
@@ -1805,32 +1866,86 @@ function renderAdminLoginPage(target) {
         </form>
         <div class="admin-login-error" id="admin-login-error"></div>
         <div class="admin-login-hint">
-          仅限授权管理员访问。管理员账号由 Supabase Auth 管理，密码不存于前端。
+          仅限授权管理员。密钥仅在服务端校验，验证通过后当前账号将获得管理员权限。
+          <a href="#" id="admin-toggle-pwd-mode" style="color:inherit;text-decoration:underline;">改用管理员账号密码登录</a>
         </div>
       </div>
     </div>
   `;
 
-  document.getElementById('admin-login-form').addEventListener('submit', async (e) => {
+  var errorEl = document.getElementById('admin-login-error');
+  var keyForm = document.getElementById('admin-key-form');
+  var pwdForm = document.getElementById('admin-pwd-form');
+  var subtitle = document.getElementById('admin-login-subtitle');
+  var toggleLink = document.getElementById('admin-toggle-pwd-mode');
+  var keyInput = document.getElementById('admin-key-input');
+
+  function showError(msg) {
+    if (!errorEl) return;
+    if (msg) {
+      errorEl.textContent = msg;
+      errorEl.style.display = 'block';
+    } else {
+      errorEl.textContent = '';
+      errorEl.style.display = 'none';
+    }
+  }
+  showError('');
+
+  if (keyForm) keyForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    var btn = keyForm.querySelector('.admin-login-btn');
+    showError('');
+    btn.textContent = '验证中...';
+    btn.disabled = true;
+
+    var result = await adminVerifyKey(keyInput ? keyInput.value : '');
+
+    btn.textContent = '验证进入';
+    btn.disabled = false;
+    if (result.ok) {
+      renderAdminDashboard(target);
+    } else {
+      showError(result.error || '验证失败');
+      if (keyInput) { keyInput.value = ''; keyInput.focus(); }
+    }
+  });
+
+  if (toggleLink) toggleLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    var useKey = keyForm.style.display !== 'none';
+    keyForm.style.display = useKey ? 'none' : 'block';
+    pwdForm.style.display = useKey ? 'block' : 'none';
+    if (subtitle) {
+      subtitle.textContent = useKey
+        ? '使用 Supabase 管理员账号登录（邮箱 + 密码）'
+        : '输入管理员密钥完成身份验证';
+    }
+    toggleLink.textContent = useKey ? '改用管理员密钥验证' : '改用管理员账号密码登录';
+    showError('');
+    var focusEl = useKey ? document.getElementById('admin-email-input') : keyInput;
+    if (focusEl) focusEl.focus();
+  });
+
+  if (pwdForm) pwdForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     const email = document.getElementById('admin-email-input').value.trim();
-    const key = document.getElementById('admin-key-input').value;
-    const errorEl = document.getElementById('admin-login-error');
-    const btn = e.target.querySelector('.admin-login-btn');
+    const pwd = document.getElementById('admin-password-input').value;
+    const btn = pwdForm.querySelector('.admin-login-btn');
 
+    showError('');
     btn.textContent = '登录中...';
     btn.disabled = true;
 
-    const success = await adminLogin(email, key);
+    const success = await adminLogin(email, pwd);
     if (success) {
       renderAdminDashboard(target);
     } else {
-      errorEl.textContent = '登录失败：请检查邮箱/密码，或该账号无管理员权限';
-      errorEl.style.display = 'block';
+      showError('登录失败：请检查邮箱/密码，或该账号无管理员权限');
       btn.textContent = '登录';
       btn.disabled = false;
-      document.getElementById('admin-key-input').value = '';
-      document.getElementById('admin-key-input').focus();
+      var pwdInput = document.getElementById('admin-password-input');
+      if (pwdInput) { pwdInput.value = ''; pwdInput.focus(); }
     }
   });
 }
