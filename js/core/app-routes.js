@@ -47,8 +47,9 @@ const Routes = {
     title: '管理员后台',
     render: 'renderAdminPage',
     module: 'admin',
-    auth: true,
-    role: 'admin'
+    auth: true
+    // 注意：不再用 role: 'admin' 做路由门禁（会挡住持密钥的非 admin 账号）。
+    // 管理页内部自己做身份验证：管理员密钥（服务端 RPC 校验）或管理员账号密码。
   },
   '/cards': {
     title: '知识卡片',
@@ -212,5 +213,12 @@ const Routes = {
     title: '数据实验室',
     render: 'renderDataLabPage',
     module: 'score-calc'
+  },
+  '/reset-password': {
+    title: '设置新密码',
+    render: 'renderResetPasswordPage'
+    // 邮件重置链接（Supabase Auth resetPasswordForEmail → redirectTo）的落地页。
+    // 不加 auth 门禁：恢复会话是异步的，若此时按未登录拦截会把用户挡在"请先登录"页；
+    // 提交时 Supabase 会自行校验恢复会话，无会话会返回明确错误。
   }
 };

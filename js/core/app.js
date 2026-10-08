@@ -2958,6 +2958,9 @@ function showAuthModal(mode) {
               <label style="display:flex;align-items:center;gap:6px;font-size:0.85rem;color:#cfd8d0;cursor:pointer;">
             <input type="radio" name="forgot-mode" value="recover-key" data-on-change='["toggleForgotMode"]'> 找回密钥
           </label>
+          <label style="display:flex;align-items:center;gap:6px;font-size:0.85rem;color:#cfd8d0;cursor:pointer;">
+            <input type="radio" name="forgot-mode" value="email" data-on-change='["toggleForgotMode"]'> 邮箱重置
+          </label>
         </div>
 
         <div id="forgot-mode-reset">
@@ -2995,6 +2998,14 @@ function showAuthModal(mode) {
             <input type="text" class="auth-input" id="auth-recover-email" placeholder="邮箱后缀（如 @gmail.com）" autocomplete="off">
           </div>
           <p style="font-size:0.72rem;color:#8a9a8a;margin:6px 0 12px;line-height:1.5;">需要通过用户名 + 邮箱后缀验证身份</p>
+        </div>
+
+        <div id="forgot-mode-email" style="display:none;">
+          <div class="auth-field">
+            <svg class="auth-field-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 7-4-4"/></svg>
+            <input type="email" class="auth-input" id="auth-forgot-email" placeholder="注册时填写的邮箱" autocomplete="email">
+          </div>
+          <p style="font-size:0.72rem;color:#8a9a8a;margin:6px 0 12px;line-height:1.5;">发送重置链接到该邮箱（仅对注册时填过真实邮箱的账号有效）</p>
         </div>
 
         <button type="button" class="auth-btn" data-on='["handleForgotPassword"]' data-prevent-default>重置密码</button>
@@ -4128,22 +4139,28 @@ function _updateSlideTriggerUI(passed) {
 }
 
 /**
- * 切换忘记密码面板的两种模式
+ * 切换忘记密码面板的三种模式：重置密码（密钥）/ 找回密钥 / 邮箱重置
  */
 function toggleForgotMode() {
   var mode = (document.querySelector('input[name="forgot-mode"]:checked') || {}).value || 'reset';
   var resetDiv = document.getElementById('forgot-mode-reset');
   var recoverDiv = document.getElementById('forgot-mode-recover-key');
+  var emailDiv = document.getElementById('forgot-mode-email');
   var btn = document.querySelector('#auth-form-forgot .auth-btn');
   var title = document.querySelector('#auth-form-forgot .auth-form-sub');
+  if (resetDiv) resetDiv.style.display = 'none';
+  if (recoverDiv) recoverDiv.style.display = 'none';
+  if (emailDiv) emailDiv.style.display = 'none';
   if (mode === 'recover-key') {
-    if (resetDiv) resetDiv.style.display = 'none';
     if (recoverDiv) recoverDiv.style.display = 'block';
     if (btn) btn.textContent = '查询密钥';
     if (title) title.textContent = '通过用户名 + 邮箱后缀找回密钥';
+  } else if (mode === 'email') {
+    if (emailDiv) emailDiv.style.display = 'block';
+    if (btn) btn.textContent = '发送重置邮件';
+    if (title) title.textContent = '通过注册邮箱重置密码';
   } else {
     if (resetDiv) resetDiv.style.display = 'block';
-    if (recoverDiv) recoverDiv.style.display = 'none';
     if (btn) btn.textContent = '重置密码';
     if (title) title.textContent = '使用 8 字符密钥重置密码（无需邮件）';
   }
@@ -4273,6 +4290,44 @@ async function handleForgotPassword() {
       console.error('[BioQuest] recoverUserKey 异常:', e);
       if (errorEl) errorEl.textContent = '查询异常: ' + (e.message || String(e));
       if (btn1) { btn1.disabled = false; btn1.textContent = '查询密钥'; }
+    }
+    return;
+  }
+
+  if (mode === 'email') {
+    // 邮箱重置模式：发送重置密码邮件（Supabase Auth），用户点邮件链接回到 #/reset-password 设置新密码
+    var emailInput = document.getElementById('auth-forgot-email');
+    var emailVal = emailInput ? emailInput.value.trim() : '';
+    if (!emailVal || !emailVal.includes('@')) {
+      if (errorEl) errorEl.textContent = '请输入有效的邮箱地址';
+      return;
+    }
+    if (typeof resetPassword !== 'function') {
+      try { await initSupabase(); } catch (e) { /* ignore */ }
+    }
+    if (typeof resetPassword !== 'function') {
+      if (errorEl) errorEl.textContent = '系统未就绪，请刷新页面后重试';
+      return;
+    }
+    var btnE = document.querySelector('#auth-form-forgot .auth-btn');
+    if (btnE) { if (btnE.disabled) return; btnE.disabled = true; btnE.textContent = '发送中...'; }
+    try {
+      var mailRes = await resetPassword(emailVal);
+      if (btnE) { btnE.disabled = false; btnE.textContent = '发送重置邮件'; }
+      if (mailRes && mailRes.ok) {
+        if (successEl) {
+          successEl.innerHTML = '<div style="background:rgba(58,140,92,0.12);padding:14px;border-radius:8px;margin:10px 0;text-align:left;">' +
+            '<div style="font-size:0.85rem;color:#3a8c5c;margin-bottom:6px;">重置邮件已发送</div>' +
+            '<div style="font-size:0.78rem;color:#8a9a8a;line-height:1.6;">请到邮箱查收并点击链接设置新密码（未收到请检查垃圾箱）。<br>注册时未填邮箱的账号请改用「重置密码」（8 字符密钥）。</div>' +
+            '</div>';
+        }
+      } else {
+        if (errorEl) errorEl.textContent = (mailRes && mailRes.error) || '发送失败，请稍后重试';
+      }
+    } catch (e) {
+      console.error('[BioQuest] 邮箱重置异常:', e);
+      if (errorEl) errorEl.textContent = '发送异常: ' + (e.message || String(e));
+      if (btnE) { btnE.disabled = false; btnE.textContent = '发送重置邮件'; }
     }
     return;
   }

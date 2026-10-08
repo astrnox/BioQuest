@@ -327,8 +327,53 @@ window.closeUserModal = function() {
 };
 
 window.handleResetPassword = async function(userId) {
-  const newPwd = prompt('重置该用户的密码：', '123456');
-  if (newPwd) {
-    showAdminToast('密码重置功能需要 Supabase Admin API，暂不可用', 'error');
+  if (!userId) return;
+
+  const newPwd = prompt('重置该用户的密码，请输入新密码（至少 6 位）：', '');
+  if (newPwd === null) return; // 用户取消
+  if (!newPwd || newPwd.length < 6) {
+    showAdminToast('新密码至少 6 位', 'error');
+    return;
+  }
+  const confirmPwd = prompt('请再次输入新密码以确认：', '');
+  if (confirmPwd === null) return;
+  if (confirmPwd !== newPwd) {
+    showAdminToast('两次输入的密码不一致', 'error');
+    return;
+  }
+
+  const sb = (typeof window.getSupabase === 'function') ? window.getSupabase() : null;
+  if (!sb) {
+    showAdminToast('系统未初始化，请刷新页面后重试', 'error');
+    return;
+  }
+
+  try {
+    // 权限由服务端校验（调用者 profiles.user_group='admin'），见 sql/migration_v11_admin_auth.sql
+    const { data, error } = await sb.rpc('admin_reset_password', {
+      p_user_id: userId,
+      p_new_password: newPwd
+    });
+    if (error) {
+      const msg = error.message || String(error);
+      const missingRpc = (typeof window._isMissingRpcError === 'function')
+        ? window._isMissingRpcError(msg)
+        : (msg.indexOf('Could not find') >= 0 || msg.indexOf('not found') >= 0 || msg.indexOf('does not exist') >= 0);
+      showAdminToast(
+        missingRpc
+          ? '服务端尚未部署重置功能，请先执行 sql/migration_v11_admin_auth.sql'
+          : '重置失败：' + msg,
+        'error'
+      );
+      return;
+    }
+    const row = Array.isArray(data) ? data[0] : data;
+    if (row && row.ok) {
+      showAdminToast('密码已重置，请通知该用户使用新密码登录', 'success');
+    } else {
+      showAdminToast((row && row.error_msg) || '重置失败', 'error');
+    }
+  } catch (e) {
+    showAdminToast('重置异常：' + ((e && e.message) || e), 'error');
   }
 };
