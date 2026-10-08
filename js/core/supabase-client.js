@@ -405,6 +405,18 @@ async function getUserKeyForCurrentUser() {
 }
 
 /**
+ * 计算"注册未填邮箱"账号的占位邮箱
+ * 规则必须与 registerUser 生成认证邮箱的规则完全一致，
+ * 否则登录时按用户名推导占位邮箱会失败（正确密码也会被误判为密码错误）
+ * @param {string} username
+ * @returns {string|null} 占位邮箱；用户名为空时返回 null
+ */
+function _placeholderEmailForUsername(username) {
+  var clean = String(username || '').toLowerCase().replace(/[^a-z0-9]/g, '').slice(0, 20);
+  return clean ? clean + '@bioquest.local' : null;
+}
+
+/**
  * 注册用户
  * @param {string} username - 用户名
  * @param {string} password - 密码
@@ -435,9 +447,7 @@ async function registerUser(username, password, displayName, email) {
   // email 可选：如果用户没填，自动生成一个基于用户名的假邮箱
   // 这样可以避免 Supabase 邮件发送失败导致的 500 错误
   if (!email || !email.trim()) {
-    var cleanUsername = (username || 'user').toLowerCase().replace(/[^a-z0-9]/g, '').slice(0, 20);
-    if (!cleanUsername) cleanUsername = 'user';
-    email = cleanUsername + '@bioquest.local';
+    email = _placeholderEmailForUsername(username) || 'user@bioquest.local';
 
   } else if (!email.includes('@')) {
     return { ok: false, error: '请输入有效的邮箱地址（或留空使用占位）' };
@@ -718,44 +728,77 @@ async function loginUser(usernameOrEmail, password) {
   if (!sb) return { ok: false, error: 'Supabase 未初始化' };
 
   try {
-    // 判断输入是邮箱还是用户名
-    var email = usernameOrEmail;
-    if (!usernameOrEmail.includes('@')) {
+    // 判断输入是邮箱还是用户名，并解析候选登录邮箱（用户名登录时可能有多个候选）
+    var emailCandidates = [];
+    var usernameProfileUnbound = false; // 用户名存在但 profiles.email 为 NULL
+    if (usernameOrEmail.includes('@')) {
+      emailCandidates.push(usernameOrEmail);
+    } else {
       // 用户名登录：先从 profiles 表查找对应的邮箱
       var profileLookup = null;
       try {
         profileLookup = await sb.from('profiles')
-          .select('id, email')
+          .select('id, username, email')
           .eq('username', usernameOrEmail)
           .maybeSingle();
-        if (profileLookup.data && profileLookup.data.email) {
-          email = profileLookup.data.email;
-        } else if (profileLookup.data && !profileLookup.data.email) {
-          // 用户名存在但 profiles.email 为 NULL：不要用"猜测的占位邮箱"去校验！
-          // 否则该用户若用真实邮箱注册，会被带到错误的邮箱 → 密码正确也被判"密码错误"。
-          return {
-            ok: false,
-            error: '该账号未绑定邮箱，无法用用户名登录。请用注册邮箱登录，或联系管理员补全邮箱后重试',
-            code: 'EMAIL_NOT_BOUND'
-          };
-        } else {
-          // 用户名在 profiles 中不存在
-          return { ok: false, error: '用户名或密码错误', code: 'INVALID_CREDENTIALS' };
-        }
       } catch (e) {
-        return { ok: false, error: '登录失败，请稍后重试', code: 'LOOKUP_ERROR' };
+        // 查询失败不致命：仍可尝试下面的占位邮箱候选
+        profileLookup = null;
+      }
+      var lookupProfile = (profileLookup && profileLookup.data) || null;
+      usernameProfileUnbound = !!(lookupProfile && !lookupProfile.email);
+
+      // 候选 1：profiles.email（注册时填过真实邮箱的账号走这里）
+      if (lookupProfile && lookupProfile.email) {
+        emailCandidates.push(lookupProfile.email);
+      }
+      // 候选 2（兜底）：注册未填邮箱的账号，认证邮箱固定为
+      // <清洗后的用户名>@bioquest.local；历史账号的 profiles.email 可能为 NULL
+      // （触发器未回填/回填被数据库触发器拦截），此时按注册规则推导出的占位邮箱
+      // 才是真实认证邮箱。不用真实密码校验一次就断言"密码错误"会把这类账号挡在门外。
+      var placeholderEmail = _placeholderEmailForUsername(
+        (lookupProfile && lookupProfile.username) || usernameOrEmail
+      );
+      if (placeholderEmail && emailCandidates.indexOf(placeholderEmail) === -1) {
+        emailCandidates.push(placeholderEmail);
       }
     }
-    var { data, error } = await sb.auth.signInWithPassword({
-      email: email,
-      password: password
-    });
 
-    if (error) {
+    if (!emailCandidates.length) {
+      return { ok: false, error: '用户名或密码错误', code: 'INVALID_CREDENTIALS' };
+    }
+
+    // 依次尝试候选邮箱：仅当"凭据错误"时才尝试下一个候选，
+    // 其它错误（邮箱未验证/限流/网络等）立即返回，避免掩盖真实原因。
+    // 这样真实邮箱注册的账号优先命中候选 1，不会被误带到占位邮箱。
+    var data = null;
+    var error = null;
+    var email = emailCandidates[0];
+    for (var ci = 0; ci < emailCandidates.length; ci++) {
+      email = emailCandidates[ci];
+      var signInResult = await sb.auth.signInWithPassword({
+        email: email,
+        password: password
+      });
+      if (signInResult && !signInResult.error && signInResult.data) {
+        data = signInResult.data;
+        error = null;
+        break;
+      }
+      error = (signInResult && signInResult.error) || null;
+      var failMsg = (error && error.message) || '';
+      if (failMsg.indexOf('Invalid login credentials') === -1) break;
+    }
+
+    if (!data) {
       // 友好化错误信息
-      var msg = error.message;
+      var msg = (error && error.message) || '用户名/邮箱或密码错误';
       if (msg.includes('Invalid login credentials')) {
-        msg = '用户名/邮箱或密码错误';
+        // 用户名确实存在、但 profiles.email 为 NULL 且占位邮箱也无法登录：
+        // 该账号认证邮箱应是注册时填写的真实邮箱，引导改用邮箱登录，避免"密码错误"误导
+        msg = usernameProfileUnbound
+          ? '用户名或密码错误；该账号未绑定邮箱，若注册时填写过邮箱，请改用注册邮箱登录'
+          : '用户名/邮箱或密码错误';
       } else if (msg.includes('Email not confirmed')) {
         msg = '邮箱尚未验证，请查收验证邮件后重试';
       } else if (msg.includes('rate limit')) {
