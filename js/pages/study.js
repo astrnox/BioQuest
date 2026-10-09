@@ -347,7 +347,7 @@
           (i.location ? ' @' + i.location : '') + '</span>' +
           '<button class="st-btn st-btn--secondary st-btn--small st-del-schedule" data-id="' + i.id + '" style="background:rgba(255,255,255,0.25);color:#fff;padding:2px 6px;">×</button>' +
         '</div>';
-      }).join('') : '<span style="color:var(--text-muted,#8a8a8a);">—</span>') + '</td></tr>';
+      }).join('') : '<span class="bq-text-muted">—</span>') + '</td></tr>';
     }).join('');
 
     container.innerHTML = '<div class="st-card"><h3>添加课程</h3>' +
@@ -727,7 +727,7 @@
     } else {
       container.innerHTML =
         '<div class="st-card" style="text-align:center;padding:32px;">' +
-          '<p style="color:var(--text-muted,#8a8a8a);">学习管理中心未加载</p>' +
+          '<p class="bq-text-muted">学习管理中心未加载</p>' +
           '<p style="color:var(--text-muted,#8a8a8a);font-size:12px;margin-top:4px;">请检查 js/pages/learning-hub.js 是否成功加载</p>' +
         '</div>';
     }

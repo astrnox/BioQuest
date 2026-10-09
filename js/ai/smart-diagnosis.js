@@ -1699,7 +1699,7 @@ function renderLearningPath(learningPath) {
 
     if (step.dependencies && step.dependencies.length > 0) {
       html += '<div style="margin-top:10px;font-size:0.82rem;">';
-      html += '<span style="color:var(--text-muted,#8a8a8a);">前置依赖：</span>';
+      html += '<span class="bq-text-muted">前置依赖：</span>';
       for (var d = 0; d < step.dependencies.length; d++) {
         html += '<span style="display:inline-block;margin-right:6px;padding:2px 8px;background:rgba(90,125,92,0.1);color:var(--color-sage,#5a7d5c);border-radius:8px;font-size:0.78rem;">' + step.dependencies[d] + '</span>';
         if (d < step.dependencies.length - 1) html += '<span style="color:var(--text-muted,#8a8a8a);margin:0 2px;">→</span>';

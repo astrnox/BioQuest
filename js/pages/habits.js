@@ -788,7 +788,7 @@ function renderHabitsPage(target) {
 
     html += '<div class="habit-card" data-hid="' + habit.id + '">';
     html += '<div class="habit-card-header">';
-    html += '<div style="flex:1;">';
+    html += '<div class="bq-flex-1">';
     html += '<div class="habit-name">' + habit.name + '</div>';
     html += '<div class="habit-streak">' + (streak > 0 ? ' ' + streak + '天' : '') + '</div>';
     html += '</div>';
@@ -827,20 +827,20 @@ function renderHabitsPage(target) {
   html += '</div>';
 
   // 在线时间热力图（仿 GitHub，年度）
-  html += '<div class="habit-card" style="margin-top:24px;">';
-  html += '<div class="habit-name" style="margin-bottom:16px;">在线时间热力图</div>';
+  html += '<div class="habit-card bq-mt-24">';
+  html += '<div class="habit-name bq-mb-16">在线时间热力图</div>';
   html += renderOnlineTimeHeatmap();
   html += '</div>';
 
   // 本月在线时间日历
-  html += '<div class="habit-card" style="margin-top:24px;">';
-  html += '<div class="habit-name" style="margin-bottom:16px;">本月在线时间</div>';
+  html += '<div class="habit-card bq-mt-24">';
+  html += '<div class="habit-name bq-mb-16">本月在线时间</div>';
   html += renderCalendarHeatmap();
   html += '</div>';
 
   // 徽章展示
-  html += '<div class="habit-card" style="margin-top:24px;">';
-  html += '<div class="habit-name" style="margin-bottom:16px;">成就徽章</div>';
+  html += '<div class="habit-card bq-mt-24">';
+  html += '<div class="habit-name bq-mb-16">成就徽章</div>';
   html += '<div class="badge-showcase">';
   for (var b = 0; b < BADGE_DEFS.length; b++) {
     var def = BADGE_DEFS[b];
@@ -862,8 +862,8 @@ function renderHabitsPage(target) {
   html += '</div>';
 
   // 习惯管理
-  html += '<div class="habit-card" style="margin-top:24px;">';
-  html += '<div class="habit-name" style="margin-bottom:16px;">习惯管理</div>';
+  html += '<div class="habit-card bq-mt-24">';
+  html += '<div class="habit-name bq-mb-16">习惯管理</div>';
   html += '<div class="habit-management-list">';
   var allHabits = getHabits();
   for (var m = 0; m < allHabits.length; m++) {

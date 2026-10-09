@@ -99,7 +99,7 @@
         }
       }).catch(function (err) {
         console.error('[AIChatEnhanced] 加载失败:', err);
-        el.innerHTML = '<p style="color:var(--color-error);">渲染引擎加载失败，显示纯文本</p><pre>' +
+        el.innerHTML = '<p class="bq-text-error">渲染引擎加载失败，显示纯文本</p><pre>' +
           _escapeHtml(buffer) + '</pre>';
       });
     }

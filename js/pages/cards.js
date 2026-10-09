@@ -451,7 +451,7 @@
       var mastery = getConceptMastery(concept);
       var masteryPct = Math.round(mastery * 100);
       var masteryColor = mastery >= 0.8 ? 'var(--color-success)' : (mastery >= 0.5 ? 'var(--color-warning)' : 'var(--color-error)');
-      var masteryHtml = '<div class="anki-bkt-bar" style="margin-bottom:14px;">' +
+      var masteryHtml = '<div class="anki-bkt-bar bq-mb-14">' +
         '<div style="display:flex;justify-content:space-between;align-items:center;font-size:0.76rem;color:var(--text-muted);margin-bottom:6px;">' +
         '<span>概念掌握度 · ' + escapeHtml(concept) + '</span>' +
         '<span>' + masteryPct + '%</span>' +

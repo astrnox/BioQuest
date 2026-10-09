@@ -26,9 +26,9 @@ if (typeof window._cspHoverOut !== 'function') {
       }
     }
     if (target) {
-      target.innerHTML = '<div style="text-align:center;padding:60px 20px;">' +
-        '<p style="color:var(--color-error);font-size:1.1rem;margin-bottom:8px;">社区模块加载失败</p>' +
-        '<p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:16px;">请刷新页面或稍后重试</p>' +
+      target.innerHTML = '<div class="bq-empty-block">' +
+        '<p class="bq-error-title">社区模块加载失败</p>' +
+        '<p class="bq-note">请刷新页面或稍后重试</p>' +
         '<button data-on=\'["_cspReload"]\' style="padding:8px 20px;background:var(--color-sage);color:#fff;border:none;border-radius:8px;cursor:pointer;">刷新页面</button>' +
         '</div>';
     }
@@ -1978,9 +1978,9 @@ if (typeof window._cspHoverOut !== 'function') {
       loadPosts();
     } catch (err) {
       console.error('[TATABOX Community] renderCommunityPage 异常:', err);
-      target.innerHTML = '<div style="text-align:center;padding:60px 20px;">' +
-        '<p style="color:var(--color-error);font-size:1.1rem;margin-bottom:8px;">社区页面渲染失败</p>' +
-        '<p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:16px;">请刷新页面或稍后重试</p>' +
+      target.innerHTML = '<div class="bq-empty-block">' +
+        '<p class="bq-error-title">社区页面渲染失败</p>' +
+        '<p class="bq-note">请刷新页面或稍后重试</p>' +
         '<button data-on=\'["_cspReload"]\' style="padding:8px 20px;background:var(--color-sage);color:#fff;border:none;border-radius:8px;cursor:pointer;">刷新页面</button>' +
         '</div>';
     }
@@ -2838,9 +2838,9 @@ if (typeof window._cspHoverOut !== 'function') {
     } catch (err) {
       console.error('[TATABOX Community] initCommunity 异常:', err);
       if (target) {
-        target.innerHTML = '<div style="text-align:center;padding:60px 20px;">' +
-          '<p style="color:var(--color-error);font-size:1.1rem;margin-bottom:8px;">社区模块初始化失败</p>' +
-          '<p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:16px;">请刷新页面或稍后重试</p>' +
+        target.innerHTML = '<div class="bq-empty-block">' +
+          '<p class="bq-error-title">社区模块初始化失败</p>' +
+          '<p class="bq-note">请刷新页面或稍后重试</p>' +
           '<button data-on=\'["_cspReload"]\' style="padding:8px 20px;background:var(--color-sage);color:#fff;border:none;border-radius:8px;cursor:pointer;">刷新页面</button>' +
           '</div>';
       }

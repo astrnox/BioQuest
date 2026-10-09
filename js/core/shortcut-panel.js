@@ -80,7 +80,7 @@
       '</div>';
 
     SHORTCUTS.forEach(function (group) {
-      html += '<div style="margin-bottom:16px;">';
+      html += '<div class="bq-mb-16">';
       html += '<h3 style="font-size:0.85rem;font-weight:600;color:#666;margin:0 0 8px 0;text-transform:uppercase;letter-spacing:0.5px;">' + group.section + '</h3>';
       html += '<div style="display:grid;grid-template-columns:auto 1fr;gap:6px 12px;align-items:center;">';
       group.keys.forEach(function (item) {

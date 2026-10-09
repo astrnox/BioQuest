@@ -26,7 +26,7 @@ const path = require('path');
 const ROOT = path.join(__dirname, '..');
 
 /* ── 棘轮基线：只允许下调；确需上调必须在 PR 里说明理由并在此处修改 ── */
-const BASELINE_INLINE_STYLE = 1464; // js/**（不含 vendor）中 style=" 出现次数
+const BASELINE_INLINE_STYLE = 1312; // js/**（不含 vendor）中 style=" 出现次数
 const BASELINE_UNIQUE_HEX = 470;    // js/**（不含 vendor）中唯一 #rrggbb 数量
 
 /* ── 预算 ── */

@@ -131,7 +131,7 @@ async function renderEbookTab(container) {
       <div style="margin-top:16px;">
         <h4 style="font-size:0.92rem;font-weight:600;margin-bottom:8px;color:var(--color-deep,#1a3a2a);">已保存的编辑</h4>
         <div id="ebook-saved-edits" style="font-size:0.85rem;color:var(--text-secondary,#4a4a4a);">
-          ${Object.keys(savedEdits).length === 0 ? '<span style="color:var(--text-muted,#8a8a8a);">暂无本地编辑</span>' :
+          ${Object.keys(savedEdits).length === 0 ? '<span class="bq-text-muted">暂无本地编辑</span>' :
             Object.keys(savedEdits).map(key => `<div style="padding:6px 0;border-bottom:1px solid var(--border-light,#ece8e1);display:flex;justify-content:space-between;align-items:center;"><span>${escapeHtml(key)}</span><button class="admin-btn admin-btn--danger" style="padding:4px 10px;font-size:0.75rem;" data-on='["deleteEbookEdit","${escapeHtml(key)}"]'>删除</button></div>`).join('')}
         </div>
       </div>
@@ -199,7 +199,7 @@ async function renderEbookTab(container) {
         </table>
       </div>
 
-      <div id="admin-custom-ebooks-section" style="margin-top:24px;">
+      <div id="admin-custom-ebooks-section" class="bq-mt-24">
         <h4 style="font-size:0.92rem;font-weight:600;margin-bottom:10px;color:var(--color-deep,#1a3a2a);">自定义上传的书籍</h4>
         <div id="admin-custom-ebooks-list"></div>
       </div>

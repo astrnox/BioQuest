@@ -820,7 +820,7 @@ function teacherRenderDrawerBody(student) {
     weakModules.forEach(function (m) {
       html +=
         '<div class="teacher-weak-item">' +
-          '<span>' + escapeHtml(m.module) + ' <small style="color:var(--text-muted,#8a8a8a);">(' + m.wrong + '/' + m.total + ')</small></span>' +
+          '<span>' + escapeHtml(m.module) + ' <small class="bq-text-muted">(' + m.wrong + '/' + m.total + ')</small></span>' +
           '<span style="display:flex;align-items:center;gap:8px;">' +
             '<span style="font-weight:600;color:' + (m.errorRate >= 50 ? 'var(--color-error,#e53e3e)' : '#b87a1f') + ';">' + m.errorRate + '%</span>' +
             '<span class="teacher-weak-bar"><span class="teacher-weak-bar-fill" style="width:' + m.errorRate + '%;"></span></span>' +
@@ -839,7 +839,7 @@ function teacherRenderDrawerBody(student) {
       var stem = (w.questionText || w.question || '').slice(0, 80);
       html +=
         '<div class="teacher-weak-item">' +
-          '<span style="flex:1;">' + escapeHtml(stem) + (stem.length >= 80 ? '…' : '') + '</span>' +
+          '<span class="bq-flex-1">' + escapeHtml(stem) + (stem.length >= 80 ? '…' : '') + '</span>' +
           '<span style="font-size:0.74rem;color:var(--text-muted,#8a8a8a);">' + escapeHtml(w.subject || w.module || '') + '</span>' +
         '</div>';
     });

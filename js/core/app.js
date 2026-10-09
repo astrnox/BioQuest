@@ -399,9 +399,9 @@ function renderPracticePage(target) {
     window.initPractice(target);
   } else {
     target.innerHTML = `
-      <div style="text-align:center;padding:64px 24px;">
-        <div style="font-size:2rem;margin-bottom:12px;"></div>
-        <p style="color:var(--text-muted);">练习模块加载中…</p>
+      <div class="bq-empty-block-lg">
+        <div class="bq-fs-2rem bq-mb-12"></div>
+        <p class="bq-text-muted">练习模块加载中…</p>
       </div>
     `;
     // 如果全局函数还没有，延迟再试
@@ -430,18 +430,18 @@ function renderExamPage(target) {
     } catch (err) {
       console.error('初始化考试模块失败:', err);
       target.innerHTML = `
-        <div style="text-align:center;padding:64px 24px;">
-          <div style="font-size:2rem;margin-bottom:12px;"></div>
-          <p style="color:var(--color-error);">加载考试模块失败，请刷新页面重试</p>
+        <div class="bq-empty-block-lg">
+          <div class="bq-fs-2rem bq-mb-12"></div>
+          <p class="bq-text-error">加载考试模块失败，请刷新页面重试</p>
           <p style="color:var(--text-muted);font-size:0.9rem;margin-top:8px;">错误信息: ${errText(err)}</p>
         </div>
       `;
     }
   } else {
     target.innerHTML = `
-      <div style="text-align:center;padding:64px 24px;">
-        <div style="font-size:2rem;margin-bottom:12px;"></div>
-        <p style="color:var(--text-muted);">考试模块加载中…</p>
+      <div class="bq-empty-block-lg">
+        <div class="bq-fs-2rem bq-mb-12"></div>
+        <p class="bq-text-muted">考试模块加载中…</p>
         <p style="color:var(--text-muted);font-size:0.85rem;margin-top:8px;">如长时间未响应，请刷新页面</p>
       </div>
     `;
@@ -456,9 +456,9 @@ function renderExamPage(target) {
         setTimeout(tryInit, 200);
       } else {
         target.innerHTML = `
-          <div style="text-align:center;padding:64px 24px;">
-            <div style="font-size:2rem;margin-bottom:12px;"></div>
-            <p style="color:var(--color-error);">考试模块加载超时，请刷新页面重试</p>
+          <div class="bq-empty-block-lg">
+            <div class="bq-fs-2rem bq-mb-12"></div>
+            <p class="bq-text-error">考试模块加载超时，请刷新页面重试</p>
             <button style="margin-top:16px;padding:8px 20px;background:var(--color-amber);border:none;border-radius:8px;cursor:pointer;" data-on='["_cspReload"]'>刷新页面</button>
           </div>
         `;
@@ -478,9 +478,9 @@ function renderAnalyticsPage(target) {
     window.initAnalytics(target);
   } else {
     target.innerHTML = `
-      <div style="text-align:center;padding:64px 24px;">
-        <div style="font-size:2rem;margin-bottom:12px;"></div>
-        <p style="color:var(--text-muted);">分析模块加载中…</p>
+      <div class="bq-empty-block-lg">
+        <div class="bq-fs-2rem bq-mb-12"></div>
+        <p class="bq-text-muted">分析模块加载中…</p>
       </div>
     `;
     setTimeout(() => {
@@ -501,9 +501,9 @@ function renderUserPage(target) {
     window.initUser(target);
   } else {
     target.innerHTML = `
-      <div style="text-align:center;padding:64px 24px;">
-        <div style="font-size:2rem;margin-bottom:12px;"></div>
-        <p style="color:var(--text-muted);">用户模块加载中…</p>
+      <div class="bq-empty-block-lg">
+        <div class="bq-fs-2rem bq-mb-12"></div>
+        <p class="bq-text-muted">用户模块加载中…</p>
       </div>
     `;
     setTimeout(() => {
@@ -1745,9 +1745,9 @@ function handleRoute(route) {
 
   function showModuleError(modName, err) {
     console.error('[TATABOX] 模块加载失败:', modName, err);
-    target.innerHTML = '<div style="text-align:center;padding:60px 20px;">' +
-      '<p style="color:var(--color-error);font-size:1.1rem;margin-bottom:8px;">模块加载失败</p>' +
-      '<p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:16px;">' + escapeHtml(err && err.message ? err.message : '请检查网络或刷新页面重试') + '</p>' +
+    target.innerHTML = '<div class="bq-empty-block">' +
+      '<p class="bq-error-title">模块加载失败</p>' +
+      '<p class="bq-note">' + escapeHtml(err && err.message ? err.message : '请检查网络或刷新页面重试') + '</p>' +
       '<button data-on=\'["_cspReload"]\' style="padding:8px 20px;background:var(--color-sage);color:#fff;border:none;border-radius:8px;cursor:pointer;">刷新页面</button>' +
       '</div>';
   }
@@ -2005,9 +2005,9 @@ var _doRouteRenderCount = 0;
  */
 function _renderModuleError(target, route, err) {
   try {
-    target.innerHTML = '<div style="text-align:center;padding:60px 20px;">' +
-      '<p style="color:var(--color-error);font-size:1.1rem;margin-bottom:8px;">页面加载失败</p>' +
-      '<p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:16px;">' +
+    target.innerHTML = '<div class="bq-empty-block">' +
+      '<p class="bq-error-title">页面加载失败</p>' +
+      '<p class="bq-note">' +
       escapeHtml((err && err.message) ? err.message : '模块初始化异常，请刷新页面重试') +
       '</p>' +
       '<button data-on=\'["_cspReload"]\' style="padding:8px 20px;background:var(--color-sage);color:#fff;border:none;border-radius:8px;cursor:pointer;margin-right:8px;">刷新页面</button>' +
@@ -2019,7 +2019,7 @@ function _renderModuleError(target, route, err) {
 function _showModuleLoading(target, initFnName) {
   try {
     if (!target) return;
-    target.innerHTML = '<div style="text-align:center;padding:60px 20px;">' +
+    target.innerHTML = '<div class="bq-empty-block">' +
       '<div style="display:inline-block;width:32px;height:32px;border:3px solid rgba(0,0,0,0.1);border-top-color:var(--color-sage,#5a7d5c);border-radius:50%;animation:spin 0.8s linear infinite;"></div>' +
       '<p style="color:var(--text-muted);font-size:0.9rem;margin-top:16px;">加载中...</p>' +
       '</div>' +
@@ -2098,7 +2098,7 @@ function doRouteRender(route, target) {
     var requiredGroup = routePermissions[route];
     if (requiredGroup && typeof hasPermission === 'function' && !hasPermission(requiredGroup)) {
       var groupLabels = { admin: '管理员', premium: '高级会员', verified: '认证会员', member: '普通会员', guest: '访客' };
-      target.innerHTML = '<div style="text-align:center;padding:60px 20px;">' +
+      target.innerHTML = '<div class="bq-empty-block">' +
         '<div style="font-size:48px;margin-bottom:16px;opacity:0.3;">需要登录</div>' +
         '<h2 style="font-size:20px;font-weight:600;margin-bottom:8px;">权限不足</h2>' +
         '<p style="font-size:14px;color:var(--text-secondary);margin-bottom:20px;">此功能需要【' + (groupLabels[requiredGroup] || requiredGroup) + '】及以上权限</p>' +
@@ -2304,7 +2304,7 @@ function doRouteRender(route, target) {
   } catch (err) {
     console.error('[TATABOX] 路由渲染错误:', route, err);
     try {
-      target.innerHTML = '<div style="text-align:center;padding:64px 24px;"><p style="color:var(--color-error);">页面加载失败，请刷新重试</p><p style="color:var(--text-muted);font-size:0.85rem;margin-top:8px;">路由: ' + route + '</p></div>';
+      target.innerHTML = '<div class="bq-empty-block-lg"><p class="bq-text-error">页面加载失败，请刷新重试</p><p style="color:var(--text-muted);font-size:0.85rem;margin-top:8px;">路由: ' + route + '</p></div>';
     } catch (e2) { /* ignore */ }
   } finally {
     _doRouteRenderCount--;
@@ -4871,7 +4871,7 @@ async function loadLbData(tabName) {
   var listEl = document.getElementById('lb-list') || document.querySelector('.lb-body');
   if (!listEl) return;
 
-  listEl.innerHTML = '<div style="text-align:center;color:#6b7f74;padding:40px 0;">加载中...</div>';
+  listEl.innerHTML = '<div class="bq-empty-note">加载中...</div>';
 
   // 排行榜是公开数据，游客也可查看（仅未登录时不显示"我的排名"）
   try {
@@ -4908,12 +4908,12 @@ async function loadLbData(tabName) {
           hint: '完成练习后即可上榜'
         });
       } else {
-        listEl.innerHTML = '<div style="text-align:center;color:#6b7f74;padding:40px 0;">暂无排行数据<br><span style="font-size:0.78rem;color:#8a8a8a;">完成练习后即可上榜</span></div>';
+        listEl.innerHTML = '<div class="bq-empty-note">暂无排行数据<br><span style="font-size:0.78rem;color:#8a8a8a;">完成练习后即可上榜</span></div>';
       }
     }
   } catch (err) {
     if (listEl) {
-      listEl.innerHTML = '<div style="text-align:center;color:#6b7f74;padding:40px 0;">排行榜数据暂不可用<br><span style="font-size:0.78rem;color:#8a8a8a;">' + (err && err.message ? err.message : '请稍后重试') + '</span></div>';
+      listEl.innerHTML = '<div class="bq-empty-note">排行榜数据暂不可用<br><span style="font-size:0.78rem;color:#8a8a8a;">' + (err && err.message ? err.message : '请稍后重试') + '</span></div>';
     }
   }
 }
@@ -5281,7 +5281,7 @@ function renderLeaderboardPage(target) {
       '</div>' +
     '</div>' +
     '<div class="lb-page-body" id="lb-page-list">' +
-      '<div style="text-align:center;color:#6b7f74;padding:40px 0;">加载中...</div>' +
+      '<div class="bq-empty-note">加载中...</div>' +
     '</div>' +
   '</div>';
 
@@ -5308,7 +5308,7 @@ async function loadLbPageData(tabName) {
   var listEl = document.getElementById('lb-page-list');
   if (!listEl) return;
 
-  listEl.innerHTML = '<div style="text-align:center;color:#6b7f74;padding:40px 0;">加载中...</div>';
+  listEl.innerHTML = '<div class="bq-empty-note">加载中...</div>';
 
   // 排行榜是公开数据，游客也可查看（仅未登录时不显示"我的排名"）
   try {
@@ -5345,11 +5345,11 @@ async function loadLbPageData(tabName) {
           hint: '完成练习后即可上榜'
         });
       } else {
-        listEl.innerHTML = '<div style="text-align:center;color:#6b7f74;padding:40px 0;">暂无排行数据<br><span style="font-size:0.78rem;color:#8a8a8a;">完成练习后即可上榜</span></div>';
+        listEl.innerHTML = '<div class="bq-empty-note">暂无排行数据<br><span style="font-size:0.78rem;color:#8a8a8a;">完成练习后即可上榜</span></div>';
       }
     }
   } catch (err) {
-    listEl.innerHTML = '<div style="text-align:center;color:#6b7f74;padding:40px 0;">排行榜数据暂不可用<br><span style="font-size:0.78rem;color:#8a8a8a;">' + (err && err.message ? err.message : '请稍后重试') + '</span></div>';
+    listEl.innerHTML = '<div class="bq-empty-note">排行榜数据暂不可用<br><span style="font-size:0.78rem;color:#8a8a8a;">' + (err && err.message ? err.message : '请稍后重试') + '</span></div>';
   }
 }
 
@@ -5731,7 +5731,7 @@ function showFeedbackModal() {
         <h2 class="auth-form-title" style="margin-bottom:4px;">用户反馈</h2>
         <p class="auth-form-sub" style="margin-bottom:20px;">告诉我们你的想法，帮助我们改进 TATABOX</p>
 
-        <div class="auth-field" style="margin-bottom:14px;">
+        <div class="auth-field bq-mb-14">
           <label style="display:block;font-size:0.82rem;color:var(--text-secondary,#8a8a8a);margin-bottom:6px;">反馈类型</label>
           <select id="feedback-type" style="width:100%;padding:10px 14px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:8px;color:var(--text-primary,#e0e0e0);font-size:0.9rem;outline:none;">
             <option value="bug">Bug 报告</option>
@@ -5741,17 +5741,17 @@ function showFeedbackModal() {
           </select>
         </div>
 
-        <div class="auth-field" style="margin-bottom:14px;">
+        <div class="auth-field bq-mb-14">
           <label style="display:block;font-size:0.82rem;color:var(--text-secondary,#8a8a8a);margin-bottom:6px;">标题</label>
           <input type="text" id="feedback-title" class="auth-input" placeholder="简要描述你的反馈" style="width:100%;box-sizing:border-box;">
         </div>
 
-        <div class="auth-field" style="margin-bottom:14px;">
+        <div class="auth-field bq-mb-14">
           <label style="display:block;font-size:0.82rem;color:var(--text-secondary,#8a8a8a);margin-bottom:6px;">详细描述</label>
           <textarea id="feedback-description" class="auth-input" placeholder="请详细描述问题或建议..." style="width:100%;box-sizing:border-box;min-height:100px;resize:vertical;font-family:inherit;" rows="4"></textarea>
         </div>
 
-        <div class="auth-field" style="margin-bottom:14px;">
+        <div class="auth-field bq-mb-14">
           <label style="display:block;font-size:0.82rem;color:var(--text-secondary,#8a8a8a);margin-bottom:6px;">联系方式（选填）</label>
           <input type="text" id="feedback-contact" class="auth-input" placeholder="QQ/微信/邮箱，方便我们回复" style="width:100%;box-sizing:border-box;">
         </div>

@@ -1151,23 +1151,23 @@ function renderSettingsPanel(container) {
         <details style="margin-top:8px;border:1px solid var(--border-light,#ece8e1);border-radius:8px;padding:0;">
           <summary style="padding:10px 14px;cursor:pointer;font-size:0.84rem;font-weight:600;color:var(--color-sage,#3a6b4a);">如何免费申请 API Key？</summary>
           <div style="padding:0 14px 14px;font-size:0.8rem;line-height:1.75;color:var(--text-secondary,#4a4a4a);">
-            <p style="margin:8px 0 4px;"><strong>1. DeepSeek（推荐 · 性价比最高）</strong></p>
-            <p style="margin:0 0 8px;">访问 <a href="https://platform.deepseek.com" target="_blank" style="color:var(--color-amber,#c4956a);">platform.deepseek.com</a> → 注册 → 顶部「API Keys」创建。新用户送 500 万 tokens 免费额度，1 元可买 100 万 tokens。模型填 <code style="background:rgba(0,0,0,0.05);padding:1px 5px;border-radius:2px;">deepseek-chat</code></p>
+            <p class="bq-m-0 bq-mt-8 bq-mb-4"><strong>1. DeepSeek（推荐 · 性价比最高）</strong></p>
+            <p class="bq-m-0 bq-mb-8">访问 <a href="https://platform.deepseek.com" target="_blank" style="color:var(--color-amber,#c4956a);">platform.deepseek.com</a> → 注册 → 顶部「API Keys」创建。新用户送 500 万 tokens 免费额度，1 元可买 100 万 tokens。模型填 <code class="bq-kbd">deepseek-chat</code></p>
 
-            <p style="margin:8px 0 4px;"><strong>2. 智谱 GLM（免费额度大）</strong></p>
-            <p style="margin:0 0 8px;">访问 <a href="https://open.bigmodel.cn" target="_blank" style="color:var(--color-amber,#c4956a);">open.bigmodel.cn</a> → 注册 → 「API Keys」创建。新用户送 2000 万 tokens 免费额度。模型填 <code style="background:rgba(0,0,0,0.05);padding:1px 5px;border-radius:2px;">glm-4-flash</code>（免费）或 <code style="background:rgba(0,0,0,0.05);padding:1px 5px;border-radius:2px;">glm-4-plus</code></p>
+            <p class="bq-m-0 bq-mt-8 bq-mb-4"><strong>2. 智谱 GLM（免费额度大）</strong></p>
+            <p class="bq-m-0 bq-mb-8">访问 <a href="https://open.bigmodel.cn" target="_blank" style="color:var(--color-amber,#c4956a);">open.bigmodel.cn</a> → 注册 → 「API Keys」创建。新用户送 2000 万 tokens 免费额度。模型填 <code class="bq-kbd">glm-4-flash</code>（免费）或 <code class="bq-kbd">glm-4-plus</code></p>
 
-            <p style="margin:8px 0 4px;"><strong>3. 阿里通义千问</strong></p>
-            <p style="margin:0 0 8px;">访问 <a href="https://dashscope.console.aliyun.com" target="_blank" style="color:var(--color-amber,#c4956a);">dashscope.console.aliyun.com</a> → 注册 → 「API-KEY 管理」。新用户送 100 万 tokens 免费额度。模型填 <code style="background:rgba(0,0,0,0.05);padding:1px 5px;border-radius:2px;">qwen-turbo</code></p>
+            <p class="bq-m-0 bq-mt-8 bq-mb-4"><strong>3. 阿里通义千问</strong></p>
+            <p class="bq-m-0 bq-mb-8">访问 <a href="https://dashscope.console.aliyun.com" target="_blank" style="color:var(--color-amber,#c4956a);">dashscope.console.aliyun.com</a> → 注册 → 「API-KEY 管理」。新用户送 100 万 tokens 免费额度。模型填 <code class="bq-kbd">qwen-turbo</code></p>
 
-            <p style="margin:8px 0 4px;"><strong>4. 月之暗面 Kimi</strong></p>
-            <p style="margin:0 0 8px;">访问 <a href="https://platform.moonshot.cn" target="_blank" style="color:var(--color-amber,#c4956a);">platform.moonshot.cn</a> → 注册 → 「API Key 管理」。新用户送 15 元体验金。模型填 <code style="background:rgba(0,0,0,0.05);padding:1px 5px;border-radius:2px;">moonshot-v1-8k</code></p>
+            <p class="bq-m-0 bq-mt-8 bq-mb-4"><strong>4. 月之暗面 Kimi</strong></p>
+            <p class="bq-m-0 bq-mb-8">访问 <a href="https://platform.moonshot.cn" target="_blank" style="color:var(--color-amber,#c4956a);">platform.moonshot.cn</a> → 注册 → 「API Key 管理」。新用户送 15 元体验金。模型填 <code class="bq-kbd">moonshot-v1-8k</code></p>
 
-            <p style="margin:8px 0 4px;"><strong>5. NVIDIA NIM（1000 次免费）</strong></p>
-            <p style="margin:0 0 8px;">访问 <a href="https://build.nvidia.com" target="_blank" style="color:var(--color-amber,#c4956a);">build.nvidia.com</a> → 注册 → 任选模型 → 右侧「Get API Key」。每个账号 1000 次免费调用，可调用 Llama 3.3 70B 等开源大模型。模型填 <code style="background:rgba(0,0,0,0.05);padding:1px 5px;border-radius:2px;">meta/llama-3.3-70b-instruct</code></p>
+            <p class="bq-m-0 bq-mt-8 bq-mb-4"><strong>5. NVIDIA NIM（1000 次免费）</strong></p>
+            <p class="bq-m-0 bq-mb-8">访问 <a href="https://build.nvidia.com" target="_blank" style="color:var(--color-amber,#c4956a);">build.nvidia.com</a> → 注册 → 任选模型 → 右侧「Get API Key」。每个账号 1000 次免费调用，可调用 Llama 3.3 70B 等开源大模型。模型填 <code class="bq-kbd">meta/llama-3.3-70b-instruct</code></p>
 
-            <p style="margin:8px 0 4px;"><strong>6. 硅基流动 SiliconFlow（多模型免费）</strong></p>
-            <p style="margin:0 0 8px;">访问 <a href="https://cloud.siliconflow.cn" target="_blank" style="color:var(--color-amber,#c4956a);">cloud.siliconflow.cn</a> → 注册 → 「API 密钥」。新用户送 14 元额度，Qwen2.5-7B 等小模型永久免费。模型填 <code style="background:rgba(0,0,0,0.05);padding:1px 5px;border-radius:2px;">Qwen/Qwen2.5-7B-Instruct</code></p>
+            <p class="bq-m-0 bq-mt-8 bq-mb-4"><strong>6. 硅基流动 SiliconFlow（多模型免费）</strong></p>
+            <p class="bq-m-0 bq-mb-8">访问 <a href="https://cloud.siliconflow.cn" target="_blank" style="color:var(--color-amber,#c4956a);">cloud.siliconflow.cn</a> → 注册 → 「API 密钥」。新用户送 14 元额度，Qwen2.5-7B 等小模型永久免费。模型填 <code class="bq-kbd">Qwen/Qwen2.5-7B-Instruct</code></p>
 
             <p style="margin:10px 0 4px;padding-top:8px;border-top:1px dashed var(--border-light,#ece8e1);"><strong>隐私说明</strong></p>
             <p style="margin:0;">API Key 仅保存在当前页面的内存中；若勾选「会话内记住」，会额外存入本标签页的 sessionStorage（关闭标签页即自动清除）。Key 不会上传服务器，也不会持久化到你浏览器的 localStorage 或磁盘，关闭浏览器后长期不留存。</p>
@@ -2248,7 +2248,7 @@ async function renderStreakPanel(container) {
         '<div style="font-size:2rem;font-weight:700;color:var(--color-deep,#1a3a2a);">' + (data.current_streak || 0) + '</div>' +
         '<div style="font-size:0.75rem;color:var(--text-muted,#8a8a8a);">天连续打卡</div>' +
       '</div>' +
-      '<div style="flex:1;">' +
+      '<div class="bq-flex-1">' +
         '<div style="font-size:0.85rem;color:var(--text-secondary,#555);margin-bottom:4px;">累计打卡 <strong>' + (data.total_checkins || 0) + '</strong> 天</div>' +
         '<div style="font-size:0.85rem;color:var(--text-secondary,#555);">最长连续 <strong>' + (data.longest_streak || 0) + '</strong> 天</div>' +
       '</div>' +
@@ -2579,7 +2579,7 @@ function renderUserPage(target) {
     // 安全修复（P1 XSS）：err.message 转义后再注入 innerHTML
     var _ueMsg = err && err.message ? String(err.message) : '';
     var _ueEsc = _ueMsg.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
-    target.innerHTML = '<div style="text-align:center;padding:64px 24px;"><p style="color:var(--color-error);">用户中心加载失败</p><p style="color:var(--text-muted);font-size:0.85rem;margin-top:8px;">' + _ueEsc + '</p></div>';
+    target.innerHTML = '<div class="bq-empty-block-lg"><p class="bq-text-error">用户中心加载失败</p><p style="color:var(--text-muted);font-size:0.85rem;margin-top:8px;">' + _ueEsc + '</p></div>';
   }
 }
 

@@ -211,7 +211,7 @@
       console.error('[CommunityEnhanced] quikchat 挂载失败:', err);
       if (container) {
         container.innerHTML = '<p style="color:var(--color-error,#e53935);text-align:center;padding:40px;">' +
-          '聊天室加载失败<br><small style="color:var(--text-muted,#8a8a8a);">' +
+          '聊天室加载失败<br><small class="bq-text-muted">' +
           _escapeHtml(err.message || String(err)) + '</small></p>';
       }
       throw err;

@@ -244,7 +244,7 @@ async function renderAppealsTab(container) {
                   <td style="font-size:0.82rem;font-weight:600;">${a.amount || 0}</td>
                   <td style="max-width:220px;color:var(--text-secondary);font-size:0.82rem;" title="${escapeHtml(a.content || '')}">${escapeHtml((a.content || '').slice(0,50))}${(a.content || '').length > 50 ? '...' : ''}</td>
                   <td style="max-width:180px;color:var(--text-secondary);font-size:0.82rem;" title="${escapeHtml(a.user_note || '')}">${escapeHtml((a.user_note || '').slice(0,40))}${(a.user_note || '').length > 40 ? '...' : ''}</td>
-                  <td style="font-size:0.78rem;color:var(--text-muted);white-space:nowrap;">${dateStr}${resolvedStr ? '<br><span style="color:var(--text-muted);">处理: ' + resolvedStr + '</span>' : ''}</td>
+                  <td style="font-size:0.78rem;color:var(--text-muted);white-space:nowrap;">${dateStr}${resolvedStr ? '<br><span class="bq-text-muted">处理: ' + resolvedStr + '</span>' : ''}</td>
                   <td>
                     ${a.status === 'pending' ? `
                     <div class="admin-table-actions">

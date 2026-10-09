@@ -710,7 +710,7 @@
     overlay.setAttribute('aria-label', 'AI 错题分析');
     overlay.innerHTML = '<div class="wb-modal">' +
       '<h3>AI 错题分析</h3>' +
-      '<p style="color:var(--text-muted);">正在分析中，请稍候...</p>' +
+      '<p class="bq-text-muted">正在分析中，请稍候...</p>' +
     '</div>';
     document.body.appendChild(overlay);
 
@@ -763,10 +763,10 @@
     document.getElementById('wb-ai-related-btn').addEventListener('click', async function() {
       var nodes = document.getElementById('wb-ai-nodes').value.split(',').map(function(s){return s.trim();}).filter(function(s){return s;});
       var list = document.getElementById('wb-related-list');
-      list.innerHTML = '<p style="color:var(--text-muted);">正在查找相关练习...</p>';
+      list.innerHTML = '<p class="bq-text-muted">正在查找相关练习...</p>';
       var related = await window.getRelatedPracticeQuestions(nodes, 5);
       if (!related || related.length === 0) {
-        list.innerHTML = '<p style="color:var(--text-muted);">未找到相关练习题。</p>';
+        list.innerHTML = '<p class="bq-text-muted">未找到相关练习题。</p>';
         return;
       }
       list.innerHTML = '<h4 style="margin-bottom:8px;">相关练习</h4>' + related.map(function(rq) {

@@ -96,7 +96,7 @@ async function renderCommunityTab(container) {
   `;
 
   if (loadError) {
-    html += `<div class="admin-empty" style="color:var(--color-error);"><div class="admin-empty-icon">${ICONS.shield}</div><div class="admin-empty-text">加载失败：${escapeHtml(loadError)}</div><div style="font-size:0.82rem;color:var(--text-muted);margin-top:8px;">请确认已登录 Supabase 且 user_group 设为 admin</div></div>`;
+    html += `<div class="admin-empty bq-text-error"><div class="admin-empty-icon">${ICONS.shield}</div><div class="admin-empty-text">加载失败：${escapeHtml(loadError)}</div><div style="font-size:0.82rem;color:var(--text-muted);margin-top:8px;">请确认已登录 Supabase 且 user_group 设为 admin</div></div>`;
   } else if (posts.length === 0) {
     html += `<div class="admin-empty"><div class="admin-empty-icon">${ICONS.inbox}</div><div class="admin-empty-text">Supabase 中暂无帖子</div><div style="font-size:0.82rem;color:var(--text-muted);margin-top:8px;">提示：所有用户帖子都从 Supabase 加载，不会再从本地 JSON 读取 AI 种子帖</div></div>`;
   } else {
@@ -531,7 +531,7 @@ window.handleViewPostDetail = async function(postId) {
           <button class="admin-modal-close" data-on='["closePostDetailModal"]'>×</button>
         </div>
         <div class="admin-modal-body" style="padding:20px;">
-          <div style="margin-bottom:16px;">
+          <div class="bq-mb-16">
             <div style="font-size:0.75rem;color:var(--text-muted,#8a8a8a);margin-bottom:4px;">作者ID：${escapeHtml(post.author_id || '')}</div>
             <div style="font-size:0.75rem;color:var(--text-muted,#8a8a8a);margin-bottom:4px;">时间：${post.created_at ? new Date(post.created_at).toLocaleString('zh-CN') : ''}</div>
             <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px;">

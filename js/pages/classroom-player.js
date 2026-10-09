@@ -496,9 +496,9 @@
       _renderQuizStage(scene);
     } else if (scene.type === 'pbl') {
       stage.innerHTML = '<div style="padding:32px;color:#333;overflow:auto;height:100%;">'
-        + '<h3 style="margin-bottom:16px;">课后项目</h3>'
+        + '<h3 class="bq-mb-16">课后项目</h3>'
         + '<p style="margin:16px 0;font-size:15px;line-height:1.7;">' + _escapeHtml(scene.content.project || '') + '</p>'
-        + '<h4 style="margin-top:24px;">项目脚手架：</h4>'
+        + '<h4 class="bq-mt-24">项目脚手架：</h4>'
         + '<ol style="line-height:2;padding-left:24px;">' + (scene.content.scaffold || []).map(function (s) { return '<li>' + _escapeHtml(s) + '</li>'; }).join('') + '</ol>'
         + '<button class="cls-btn" style="margin-top:20px;" data-on=\'["_cspGotoHash","#/bio-lab"]\'>前往实验室开始探究</button>'
         + '</div>';
@@ -886,7 +886,7 @@
       '  <div style="background:#f0f7f0;padding:16px;border-radius:8px;max-width:480px;margin:0 auto;">',
       '    <p style="color:#4a7c59;font-weight:600;">' + ability.desc + '</p>',
       '  </div>',
-      '  <div style="margin-top:24px;">',
+      '  <div class="bq-mt-24">',
       '    <button class="cls-btn" data-on=\'["ClassroomPlayer.close"]\'>完成</button>',
       '  </div>',
       '</div>'

@@ -257,7 +257,7 @@
           '<div class="q-feedback-question" style="background:var(--surface-secondary,#faf7f2);padding:10px 14px;border-radius:8px;font-size:0.85rem;color:var(--text-secondary,#6b7f74);margin-bottom:16px;max-height:80px;overflow:hidden;text-overflow:ellipsis;">' +
             escapeHtml((questionText || '').substring(0, 150)) +
           '</div>' +
-          '<div style="margin-bottom:12px;">' +
+          '<div class="bq-mb-12">' +
             '<label style="font-size:0.82rem;color:var(--text-secondary,#6b7f74);display:block;margin-bottom:6px;">问题类型</label>' +
             '<div class="q-feedback-types" style="display:flex;flex-wrap:wrap;gap:8px;">';
 
@@ -269,7 +269,7 @@
     }
 
     html += '</div></div>' +
-          '<div style="margin-bottom:12px;">' +
+          '<div class="bq-mb-12">' +
             '<label style="font-size:0.82rem;color:var(--text-secondary,#6b7f74);display:block;margin-bottom:6px;">详细说明（可选）</label>' +
             '<textarea id="qFeedbackDesc" style="width:100%;box-sizing:border-box;min-height:80px;border:1px solid var(--border-light,#ece8e1);border-radius:8px;padding:10px;font-size:0.85rem;font-family:inherit;resize:vertical;" placeholder="请描述具体问题..."></textarea>' +
           '</div>' +

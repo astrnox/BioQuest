@@ -2,7 +2,7 @@
  * TATABOX — 首屏同步 CSS 合并包（Issue #108，由
  * scripts/build-css-bundle.js 自动生成，勿手改。
  * 合并源：globals.css + layout.css + header.css + learning-hub.css + home.css + debug-fix.css
- * 生成时间：2026-10-08T11:14:34.283Z
+ * 生成时间：2026-10-09T12:44:32.760Z
  * ============================================================ */
 
 /* ---------- 来源: css/globals.css ---------- */
@@ -4226,6 +4226,50 @@ html[data-theme="dark"] .bottom-tab-bar.is-dragging .bottom-tab-glow {
 [tabindex="-1"]:focus-visible {
   outline: none;
 }
+
+/* ============================================================
+ * 工具类（P1-3 内联样式收敛）
+ * ------------------------------------------------------------
+ * 高频内联样式（JS 模板里复制粘贴的 style="..."）统一收敛到此，
+ * 数值只在本处定义一次；组件仍优先使用 .bq-* 语义组件类。
+ * 新代码禁止在 JS 模板中书写 style="..."，一律用下列类组合。
+ * ============================================================ */
+.bq-m-0 { margin: 0; }
+.bq-mt-8 { margin-top: var(--spacing-sm); }
+.bq-mt-24 { margin-top: var(--spacing-lg); }
+.bq-mb-4 { margin-bottom: var(--spacing-xs); }
+.bq-mb-8 { margin-bottom: var(--spacing-sm); }
+.bq-mb-12 { margin-bottom: 12px; }
+.bq-mb-14 { margin-bottom: 14px; }
+.bq-mb-16 { margin-bottom: var(--spacing-md); }
+.bq-mb-24 { margin-bottom: var(--spacing-lg); }
+.bq-center { text-align: center; }
+.bq-flex-1 { flex: 1; }
+.bq-text-muted { color: var(--text-muted); }
+.bq-text-error { color: var(--color-error); }
+.bq-fs-12 { font-size: var(--font-size-xs); }
+.bq-fs-09 { font-size: 0.9rem; }
+.bq-fs-11 { font-size: 1.1rem; }
+.bq-fs-2rem { font-size: 2rem; }
+.bq-block { display: block; }
+
+/* 表单标签 / 键值提示 / 空态区块（原高频内联样式） */
+.bq-field-label {
+  display: block;
+  font-size: var(--font-size-xs);
+  color: var(--text-muted);
+  margin-bottom: var(--spacing-xs);
+}
+.bq-kbd {
+  background: rgba(0, 0, 0, 0.05);
+  padding: 1px 5px;
+  border-radius: 2px;
+}
+.bq-empty-block { text-align: center; padding: 60px 20px; }
+.bq-empty-block-lg { text-align: center; padding: 64px 24px; }
+.bq-empty-note { text-align: center; color: var(--text-muted); padding: 40px 0; }
+.bq-note { color: var(--text-muted); font-size: 0.9rem; margin-bottom: var(--spacing-md); }
+.bq-error-title { color: var(--color-error); font-size: 1.1rem; margin-bottom: var(--spacing-sm); }
 
 
 /* ---------- 来源: css/layout.css ---------- */

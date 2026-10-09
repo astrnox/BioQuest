@@ -60,7 +60,7 @@
       '</div>';
 
     if (!bounties || bounties.length === 0) {
-      html += '<div style="text-align:center;padding:60px 20px;color:var(--text-muted);">暂无进行中的悬赏，来做第一个提问者吧。</div>';
+      html += '<div class="bq-empty-block bq-text-muted">暂无进行中的悬赏，来做第一个提问者吧。</div>';
     } else {
       html += '<div style="display:flex;flex-direction:column;gap:12px;">';
       bounties.forEach(function(b) {
@@ -68,7 +68,7 @@
         var author = profile.display_name || profile.username || '匿名用户';
         html += '<div class="bounty-item" data-id="' + escapeHtml(b.id) + '" style="background:#fff;border:1px solid var(--border-light);border-radius:12px;padding:18px;cursor:pointer;transition:box-shadow 0.2s;">' +
           '<div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px;">' +
-            '<div style="flex:1;">' +
+            '<div class="bq-flex-1">' +
               '<div style="font-size:1.05rem;font-weight:600;color:var(--text-primary);margin-bottom:6px;">' + escapeHtml(b.title) + '</div>' +
               '<div style="font-size:0.85rem;color:var(--text-muted);line-height:1.5;">' + escapeHtml((b.content || '').slice(0, 120)) + ((b.content || '').length > 120 ? '...' : '') + '</div>' +
             '</div>' +
@@ -112,11 +112,11 @@
     }
     container.innerHTML = '<div style="max-width:600px;margin:0 auto;">' +
       '<h2 style="color:var(--color-deep);">发布悬赏</h2>' +
-      '<div style="margin-bottom:14px;">' +
+      '<div class="bq-mb-14">' +
         '<label style="display:block;font-size:0.85rem;color:var(--text-muted);margin-bottom:6px;">标题</label>' +
         '<input id="bounty-title" type="text" style="width:100%;padding:10px;border:1px solid var(--border-light);border-radius:8px;box-sizing:border-box;" placeholder="简明描述你的问题">' +
       '</div>' +
-      '<div style="margin-bottom:14px;">' +
+      '<div class="bq-mb-14">' +
         '<label style="display:block;font-size:0.85rem;color:var(--text-muted);margin-bottom:6px;">问题详情</label>' +
         '<textarea id="bounty-content" rows="5" style="width:100%;padding:10px;border:1px solid var(--border-light);border-radius:8px;box-sizing:border-box;resize:vertical;" placeholder="详细描述你的问题、已尝试的思路、期望的答案..."></textarea>' +
       '</div>' +
@@ -164,10 +164,10 @@
   }
 
   async function _renderDetailPage(container, bountyId) {
-    container.innerHTML = '<div style="text-align:center;padding:60px 20px;color:var(--text-muted);">加载中...</div>';
+    container.innerHTML = '<div class="bq-empty-block bq-text-muted">加载中...</div>';
     var bounty = await _loadBountyDetail(bountyId);
     if (!bounty) {
-      container.innerHTML = '<div style="text-align:center;padding:60px 20px;color:var(--text-muted);">悬赏不存在或已删除</div>';
+      container.innerHTML = '<div class="bq-empty-block bq-text-muted">悬赏不存在或已删除</div>';
       return;
     }
 
@@ -273,7 +273,7 @@
       '<p style="margin:8px 0 0;color:var(--text-muted);font-size:0.9rem;">用信用提问，用知识赚取信用</p>' +
       '</div>' +
       '<div id="bounty-container" style="padding:20px;">' +
-        '<div style="text-align:center;padding:60px 20px;color:var(--text-muted);">加载中...</div>' +
+        '<div class="bq-empty-block bq-text-muted">加载中...</div>' +
       '</div>';
 
     var container = document.getElementById('bounty-container');

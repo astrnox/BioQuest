@@ -358,7 +358,7 @@ function renderQuestionsTab(container, questionsData) {
             <label class="admin-form-label">标签</label>
             <div id="eq-tags-container" style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:6px;"></div>
             <div style="display:flex;gap:6px;">
-              <input type="text" class="admin-form-input" id="eq-tag-input" placeholder="输入标签后回车" style="flex:1;">
+              <input type="text" class="admin-form-input" id="eq-tag-input" placeholder="输入标签后回车" class="bq-flex-1">
               <button type="button" class="admin-btn admin-btn--ghost" data-on='["addEditTag"]' style="white-space:nowrap;">添加</button>
             </div>
           </div>

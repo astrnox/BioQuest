@@ -2196,7 +2196,7 @@ function renderQuiz() {
         <div class="practice-option-result" style="margin-top:12px;">
           ${isCorrect
             ? '<span style="color:var(--color-success);">正确！</span>'
-            : `<span style="color:var(--color-error);">错误，正确答案是 ${optionLabels[q.answer]}</span>`
+            : `<span class="bq-text-error">错误，正确答案是 ${optionLabels[q.answer]}</span>`
           }
         </div>
       `;
@@ -2227,7 +2227,7 @@ function renderQuiz() {
         <div class="practice-option-result" style="margin-top:12px;">
           ${isCorrect
             ? '<span style="color:var(--color-success);">正确！</span>'
-            : `<span style="color:var(--color-error);">错误，正确答案是 ${q.answer}</span>`
+            : `<span class="bq-text-error">错误，正确答案是 ${q.answer}</span>`
           }
         </div>
       `;
@@ -2278,7 +2278,7 @@ function renderQuiz() {
               <div class="practice-option-result">
                 ${isCorrect
                   ? '<span style="color:var(--color-success);">判断正确</span>'
-                  : `<span style="color:var(--color-error);">判断错误，正确答案为「${correctAnswer ? '正确' : '错误'}」</span>`
+                  : `<span class="bq-text-error">判断错误，正确答案为「${correctAnswer ? '正确' : '错误'}」</span>`
                 }
               </div>
             ` : ''}
@@ -2726,9 +2726,9 @@ function renderPracticePage(target) {
   handleRedoQuestion(redoData);
   } catch (err) {
     console.error('[TATABOX Practice] renderPracticePage 异常:', err);
-    target.innerHTML = '<div style="text-align:center;padding:60px 20px;">' +
-      '<p style="color:var(--color-error);font-size:1.1rem;margin-bottom:8px;">练习模块加载失败</p>' +
-      '<p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:16px;">请刷新页面或稍后重试</p>' +
+    target.innerHTML = '<div class="bq-empty-block">' +
+      '<p class="bq-error-title">练习模块加载失败</p>' +
+      '<p class="bq-note">请刷新页面或稍后重试</p>' +
       '<button data-on=\'["_cspReload"]\' style="padding:8px 20px;background:var(--color-sage);color:#fff;border:none;border-radius:8px;cursor:pointer;">刷新页面</button>' +
       '</div>';
   }
@@ -3175,9 +3175,9 @@ function initPractice(target) {
   } catch (err) {
     console.error('[TATABOX Practice] initPractice 异常:', err);
     if (target) {
-      target.innerHTML = '<div style="text-align:center;padding:60px 20px;">' +
-        '<p style="color:var(--color-error);font-size:1.1rem;margin-bottom:8px;">练习模块初始化失败</p>' +
-        '<p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:16px;">请刷新页面或稍后重试</p>' +
+      target.innerHTML = '<div class="bq-empty-block">' +
+        '<p class="bq-error-title">练习模块初始化失败</p>' +
+        '<p class="bq-note">请刷新页面或稍后重试</p>' +
         '<button data-on=\'["_cspReload"]\' style="padding:8px 20px;background:var(--color-sage);color:#fff;border:none;border-radius:8px;cursor:pointer;">刷新页面</button>' +
         '</div>';
     }
