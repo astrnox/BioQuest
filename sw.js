@@ -9,7 +9,7 @@
 // P1-4 修复：CACHE_VERSION 由 scripts/bump-sw.js 基于 git 跟踪的 js/css/data
 // 内容哈希自动生成——修改任何 JS/CSS/data 后运行 `npm run bump:sw` 即可，
 // 不再依赖人肉维护版本号。版本号变化会触发 activate 阶段清理旧缓存并重新预热。
-var CACHE_VERSION = 'bioquest-577a2e04818d'; // ← bump-sw.js 会自动改写此行
+var CACHE_VERSION = 'bioquest-35dbd4cd912e'; // ← bump-sw.js 会自动改写此行
 var CACHE_NAME = 'bioquest-cache-' + CACHE_VERSION;
 
 /* ========================================================================
@@ -165,7 +165,6 @@ var WARMUP_PHASE_2 = [
 // 它们靠首次访问时的网络自然进入 Cache First 缓存
 var NEVER_PRECACHE = [
   './fonts/lxgw-wenkai.woff2',        // 7.7MB 字体
-  './fonts/lxgw-wenkai.ttf',          // ttf 备用
   './js/vendor/three.min.js',         // ~1MB Three.js
   './js/vendor/3Dmol-min.js',         // ~1MB 3Dmol
   './js/vendor/cytoscape.min.js',     // ~700KB

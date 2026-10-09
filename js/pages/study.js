@@ -1,12 +1,11 @@
 /**
  * ============================================================
  * TATABOX — 学习管理中心 (/study)
- * 实现依据：UI-UX-PRD.md 第 4.7 节（布局）+ 第 5 节（交互流程）
  *  - 6 个 Tab：课程表 / 待办 / 番茄钟 / 笔记 / 倒计时 / 工具
  *  - Tab 栏吸顶
  *  - 底部"今日学习节奏"常驻速览卡片
  *  - 待办与番茄钟数据关联（番茄完成后自动标记待办进度）
- *  - 工具 Tab 聚合 PRD 5.1 错题流程 / 5.2 虚拟实验室 等入口
+ *  - 工具 Tab 聚合错题流程 / 虚拟实验室等入口
  * ============================================================
  */
 
@@ -218,7 +217,7 @@
 
   /* ---------- Tab 栏 ---------- */
   function _renderTabs(container) {
-    // PRD 4.7：课程表 / 待办 / 番茄钟 / 笔记 / 倒计时 / 工具 / 管理
+    // 课程表 / 待办 / 番茄钟 / 笔记 / 倒计时 / 工具 / 管理
     var tabs = [
       { id: 'schedule',  label: '课程表' },
       { id: 'tasks',     label: '待办' },
@@ -437,7 +436,7 @@
     });
     container.querySelectorAll('.st-pomo-task').forEach(function(btn) {
       btn.addEventListener('click', function() {
-        // PRD 4.7：待办可关联番茄钟 —— 点击后跳转番茄钟并关联该任务
+        // 待办可关联番茄钟 —— 点击后跳转番茄钟并关联该任务
         _pomodoroLinkedTask = btn.dataset.id;
         _activeTab = 'pomodoro';
         _render();
@@ -556,7 +555,7 @@
     if (typeof window.addFocusSession === 'function') {
       await window.addFocusSession({ duration: mins, is_completed: true, task_id: _pomodoroLinkedTask || null });
     }
-    // PRD 4.7：番茄钟完成后自动标记待办进度
+    // 番茄钟完成后自动标记待办进度
     if (_pomodoroLinkedTask) {
       var task = _tasks.filter(function(t){return String(t.id) === String(_pomodoroLinkedTask);})[0];
       if (task && typeof window.updateStudyTask === 'function') {
@@ -617,7 +616,7 @@
     _render();
   }
 
-  /* ---------- 工具 Tab（聚合 PRD 5.1 / 5.2 流程入口） ---------- */
+  /* ---------- 工具 Tab（聚合错题 / 实验室等流程入口） ---------- */
   function _renderTools(container) {
     var tools = [
       {
@@ -666,7 +665,7 @@
     ];
 
     container.innerHTML = '<div class="st-card"><h3>学习工具箱</h3>' +
-      '<p style="color:var(--text-muted,#8a8a8a);font-size:0.85rem;margin:-6px 0 16px;">聚合各模块入口，PRD 第 5 节交互流程均可从此处发起</p>' +
+      '<p style="color:var(--text-muted,#8a8a8a);font-size:0.85rem;margin:-6px 0 16px;">聚合各模块入口，练习、错题、实验室都可以从这里进入</p>' +
       '<div class="st-tools-grid">' + tools.map(function(t) {
         return '<div class="st-tool-card" data-route="' + t.route + '"' + (t.action ? ' data-action="' + t.action + '"' : '') + '>' +
           '<div class="st-tool-icon">' + t.icon + '</div>' +
@@ -781,7 +780,7 @@
     pageTarget.innerHTML = '<div style="padding:32px 20px 8px;text-align:center;">' +
       '<div style="font-family:var(--font-mono,monospace);font-size:0.72rem;letter-spacing:0.16em;color:var(--color-amber,#c4956a);text-transform:uppercase;margin-bottom:8px;">STUDY HUB</div>' +
       '<h1 style="margin:0;font-family:var(--font-serif,serif);color:var(--color-deep,#1a3a2a);font-size:1.8rem;">学习管理中心</h1>' +
-      '<p style="margin:8px 0 0;color:var(--text-muted,#8a8a8a);font-size:0.9rem;">课程表 · 待办 · 番茄钟 · 笔记 · 倒计时 · 工具 · 学习管理，一站式管理</p>' +
+      '<p style="margin:8px 0 0;color:var(--text-muted,#8a8a8a);font-size:0.9rem;">课程表 · 待办 · 番茄钟 · 笔记 · 倒计时 · 工具 · 学习管理，都在这里</p>' +
     '</div>' +
     '<div class="st-container">' +
       '<div class="st-tabs-wrap" id="st-tabs-wrap"><div class="st-tabs" id="st-tabs"></div></div>' +

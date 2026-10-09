@@ -3184,7 +3184,7 @@ function initPractice(target) {
   }
 }
 
-// PRD §5-1：答题时自动隐藏 Header（向上滚动隐藏，向下滚动出现）
+// 答题时自动隐藏 Header（向上滚动隐藏，向下滚动出现）
 var _headerAutoHide = { lastScrollY: 0, enabled: false };
 
 function enableHeaderAutoHide() {
@@ -3217,7 +3217,7 @@ function _onPracticeScroll() {
   _headerAutoHide.lastScrollY = currentY;
 }
 
-// PRD §5-50：最后一题仪式感
+// 最后一题仪式感
 function showLastQuestionEffect(callback) {
   var progressBar = document.querySelector('.practice-progress-bar-fill, .progress-fill, [class*="progress"]');
   if (progressBar) {
@@ -3284,7 +3284,7 @@ window.enableHeaderAutoHide = enableHeaderAutoHide;
 window.disableHeaderAutoHide = disableHeaderAutoHide;
 window.showLastQuestionEffect = showLastQuestionEffect;
 
-// PRD §5-40：答题键盘快捷键（仅练习答题流程生效）
+// 答题键盘快捷键（仅练习答题流程生效）
 //   1 / 2 / 3 / 4 → 选 A / B / C / D（单选题：标准单选 & 逻辑推理）
 //   Space / Enter → 提交答案，已提交则跳下一题
 //   R → 重做当前题目（清空作答，可重新作答；统计仅计首次）
