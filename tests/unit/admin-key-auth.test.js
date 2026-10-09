@@ -242,9 +242,31 @@ describe('实现约束（回归护栏）', () => {
     expect(adminRouteBlock).not.toMatch(/role:/);
   });
 
-  test('「找回密码」面板已接入邮箱重置入口并复用 resetPassword()', () => {
-    expect(appSrc).toContain('forgot-mode-email');
-    expect(appSrc).toContain('auth-forgot-email');
-    expect(appSrc).toContain('resetPassword(emailVal)');
+  test('「找回密码」面板已接入邮箱重置入口并复用 resetPassword()（行为断言）', async () => {
+    // P1-1：改为行为断言 —— 真实渲染找回面板，切到邮箱模式提交，
+    // 断言 resetPassword 收到输入的邮箱值（而非源码包含某字符串）。
+    loadScript(read('js/core/utils.js'));
+    loadScript(read('js/core/auth-ui.js'));
+    document.body.innerHTML = '';
+    window.showAuthModal('login');
+    window.authSwitchToForgot();
+
+    // 面板含邮箱重置入口（forgot-mode-email 区块 + 邮箱输入框）
+    expect(document.getElementById('forgot-mode-email')).toBeTruthy();
+    const emailInput = document.getElementById('auth-forgot-email');
+    expect(emailInput).toBeTruthy();
+
+    // 切到「邮箱重置」模式并填写邮箱
+    const emailRadio = document.querySelector('input[name="forgot-mode"][value="email"]');
+    emailRadio.checked = true;
+    emailInput.value = 'reset@example.com';
+
+    // stub resetPassword，捕获实参
+    const resetCalls = [];
+    window.resetPassword = async (v) => { resetCalls.push(v); return { ok: true, message: 'sent' }; };
+
+    await window.handleForgotPassword();
+    expect(resetCalls).toEqual(['reset@example.com']);
+    expect(document.getElementById('auth-forgot-success').textContent).toContain('重置邮件已发送');
   });
 });

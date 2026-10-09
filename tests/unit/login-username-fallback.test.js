@@ -22,7 +22,15 @@ const path = require('path');
 const fs = require('fs');
 
 const ROOT = path.resolve(__dirname, '../..');
-const SRC = fs.readFileSync(path.join(ROOT, 'js/core/supabase-client.js'), 'utf8');
+// P1-1 拆分后 supabase 数据层由 5 个文件组成；按浏览器加载顺序整体求值，
+// 保证 registerUser/loginUser 的跨文件调用（checkAchievement/getStudentByKey 等）可解析。
+const SB_LAYER = [
+  'js/core/supabase-client.js',
+  'js/core/sb-gamify.js',
+  'js/core/sb-social.js',
+  'js/core/sb-data.js',
+  'js/core/sb-study.js',
+].map((f) => fs.readFileSync(path.join(ROOT, f), 'utf8'));
 
 /**
  * 构造 Supabase 查询链 mock：支持 .select().eq().maybeSingle() / .update().eq() 等
@@ -101,7 +109,7 @@ function setup(cfg) {
   };
 
   window.supabase = { createClient: function () { return client; } };
-  window.eval(SRC);
+  SB_LAYER.forEach((src) => window.eval(src));
   return { loginUser: window.loginUser, signInCalls };
 }
 
