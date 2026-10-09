@@ -22,17 +22,13 @@
 const fs = require('fs');
 const path = require('path');
 
-// ---------------------------------------------------------------------------
 // 配置
-// ---------------------------------------------------------------------------
 const SQL_DIR = path.resolve(process.env.AUDIT_SQL_DIR || path.join(__dirname, '..', 'sql'));
 
 // 已知无需 RLS 的辅助表(豁免，不判定为 violation)。
 const EXEMPT_TABLES = new Set(['migration_log']);
 
-// ---------------------------------------------------------------------------
 // 正则(全部忽略大小写)
-// ---------------------------------------------------------------------------
 // CREATE TABLE [IF NOT EXISTS] name   —— name 支持 public. 前缀、双引号。
 // [\s\S] 保证多行 CREATE TABLE 也能匹配；后面再排除 "CREATE TABLE ... AS"。
 const CREATE_TABLE_RE =
@@ -47,9 +43,7 @@ const ALTER_RLS_RE =
 const CREATE_POLICY_RE =
   /\bCREATE\s+POLICY\s+(?:IF\s+NOT\s+EXISTS\s+)?("[^"]*"|'[^']*'|[A-Za-z_][A-Za-z0-9_]*)\s+ON\s+(["`]?)([A-Za-z_][A-Za-z0-9_.]*)\2/gi;
 
-// ---------------------------------------------------------------------------
 // 工具：规范化表名(去 public. 前缀 + 去包裹引号)
-// ---------------------------------------------------------------------------
 function normalizeTable(raw) {
   let name = String(raw || '').trim();
   // 去掉包裹用的双引号/反引号
@@ -79,9 +73,7 @@ function stripSqlComments(sql) {
     .replace(/--[^\r\n]*/g, '');
 }
 
-// ---------------------------------------------------------------------------
 // 主流程
-// ---------------------------------------------------------------------------
 function main() {
   const sqlFiles = fs.readdirSync(SQL_DIR).filter((f) => /\.sql$/i.test(f)).sort();
   if (sqlFiles.length === 0) {

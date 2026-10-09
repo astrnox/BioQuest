@@ -20,7 +20,6 @@
 
   var AiClient = window.AiClient;
 
-  // ====== 角色人设库（T1-8） ======
 
   var ROLE_PERSONAS = {
     '主讲老师': {
@@ -45,7 +44,6 @@
     }
   };
 
-  // ====== 苏格拉底提示等级（T1-9） ======
 
   var SOCRATIC_LEVELS = {
     1: { name: '提问引导', desc: '只提问，不给任何提示', instruction: '请只用一个反问句引导学生思考，不提供任何答案线索。' },
@@ -54,7 +52,6 @@
     4: { name: '完整答案', desc: '直接给完整答案', instruction: '请直接给出完整答案和解释。' }
   };
 
-  // ====== 讨论流程 ======
 
   /**
    * 课堂讨论 scene 生成器
@@ -121,7 +118,6 @@
     nextTurn();
   }
 
-  // ====== 苏格拉底助教（T1-9） ======
 
   /**
    * 苏格拉底式引导
@@ -145,7 +141,6 @@
     });
   }
 
-  // ====== 暴露 API ======
   window.MultiAgentDiscussion = {
     runDiscussion: runDiscussion,
     socraticGuide: socraticGuide,

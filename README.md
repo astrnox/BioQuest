@@ -8,7 +8,7 @@
 
 **从联赛备考到高考模拟，一个网站搞定你的生物练习**
 
-[在线 Demo](https://astrnox.github.io/BioQuest/) · [开始刷题](https://astrnox.github.io/BioQuest/#/practice) · [出题/讨论](https://github.com/astrnox/BioQuest/discussions) · [反馈问题](https://github.com/astrnox/BioQuest/issues)
+[在线 Demo](https://gagabox.cc.cd/) · [开始刷题](https://gagabox.cc.cd/#/practice) · [出题/讨论](https://github.com/astrnox/BioQuest/discussions) · [反馈问题](https://github.com/astrnox/BioQuest/issues)
 
 [![Platform](https://img.shields.io/badge/platform-Web-blue?style=flat-square)]()
 [![License](https://img.shields.io/badge/license-MPL--2.0%20%2F%20CC%20BY--NC--SA%204.0-green?style=flat-square)]()

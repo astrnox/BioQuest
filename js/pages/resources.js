@@ -8,12 +8,7 @@ let currentFilter = { category: '全部', tag: '全部', keyword: '' };
 let activeResourceId = null;
 
 // HTML 转义 — 统一使用 window.escapeHtml（Q-01，规范实现在 js/core/utils.js）
-var escapeHtml = (typeof window !== 'undefined' && typeof window.escapeHtml === 'function')
-  ? window.escapeHtml
-  : function(str) {
-      if (!str) return '';
-      return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
-    };
+var escapeHtml = (typeof window !== 'undefined' ? window : globalThis).escapeHtml; // 规范实现见 js/core/utils.js（Q-01 统一）
 
 const extraPool = [
   {"source":"Cell Press","title":"细胞代谢调控网络","link":"https://www.cell.com/cell/fulltext/S0092-8674(24)00123-4","excerpt":"代谢通路与信号通路的交叉调控机制研究。","tag":"综述","category":"细胞生物学"},

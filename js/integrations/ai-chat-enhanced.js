@@ -53,7 +53,6 @@
     return window.loadScriptOnce(src, { verify: verifyFn });
   }
 
-  // ===== 流式渲染器 =====
 
   /**
    * 创建流式 markdown 渲染器
@@ -158,7 +157,6 @@
     };
   }
 
-  // ===== 单次渲染 API =====
 
   /**
    * 单次渲染 markdown（非流式）

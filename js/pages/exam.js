@@ -1429,7 +1429,7 @@ async function loadQuizData() {
     console.error('[TATABOX Exam] 加载题目数据失败', err);
     QData = [];
     var status = document.getElementById('examLoadingStatus');
-    if (status) status.textContent = '加载失败: ' + (err.message || '未知错误');
+    if (status) status.textContent = '加载失败: ' + errText(err);
     var hint = document.getElementById('examLoadingHint');
     if (hint) hint.textContent = '请确保 data/quiz.json 文件存在且格式正确';
     return false;
@@ -1925,9 +1925,7 @@ function renderExamStartPage(target) {
           : '云端优先，本地兜底（默认）';
       }
       if (dataLoaded) dataLoaded = false; // 强制下次组卷按新数据源重新加载
-      if (typeof showToast === 'function') {
-        showToast(val === 'local' ? '已切换为本地题库，开始考试时将读取 data/ 题目' : '已切换为云端同步');
-      }
+showToast(val === 'local' ? '已切换为本地题库，开始考试时将读取 data/ 题目' : '已切换为云端同步');
     });
   }
 

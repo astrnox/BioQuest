@@ -259,7 +259,7 @@ window.handleAdjustUserPoints = async function(userId, currentPoints) {
       if (crCell) crCell.textContent = result.points;
       showAdminToast('已调整用户信用为 ' + result.points, 'success');
     } else {
-      showAdminToast('调整失败：' + (result && result.error ? result.error : '未知错误'), 'error');
+      showAdminToast('调整失败：' + errText(result), 'error');
     }
   } catch (e) {
     showAdminToast('调整出错：' + e.message, 'error');

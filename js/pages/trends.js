@@ -765,7 +765,7 @@
     // 底部
     ctx.fillStyle = 'rgba(255,255,255,0.35)';
     ctx.font = '12px sans-serif';
-    ctx.fillText('TATABOX 高中学习平台 · ' + new Date().toLocaleDateString('zh-CN'), 40, 772);
+    ctx.fillText('TATABOX 高中生物学习平台 · ' + new Date().toLocaleDateString('zh-CN'), 40, 772);
     ctx.fillText('bioquest.dada.im', 470, 772);
 
     try {
@@ -773,10 +773,9 @@
       link.download = 'bioquest-weekly-' + Date.now() + '.png';
       link.href = canvas.toDataURL('image/png');
       link.click();
-      if (typeof showToast === 'function') showToast('周报已导出');
+      showToast('周报已导出');
     } catch (e) {
-      if (typeof showToast === 'function') showToast('导出失败：' + (e.message || '未知错误'));
-      else alert('导出失败：' + (e.message || '未知错误'));
+      showToast('导出失败：' + errText(e));
     }
   }
 

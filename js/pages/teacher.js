@@ -445,11 +445,6 @@ function teacherComputeWeakModules(student) {
   return result;
 }
 
-/* ============== 渲染：主页面 ============== */
-
-/**
- * 渲染教师页面
- */
 function renderTeacherPage(target) {
   injectTeacherStyles();
 
@@ -687,9 +682,7 @@ function teacherAddStudent() {
       var list = teacherLoadClass();
       list.push(student);
       teacherSaveClass(list);
-      if (typeof showToast === 'function') {
-        showToast('已添加学生：' + student.name + '（密钥 ' + key + '）');
-      }
+showToast('已添加学生：' + student.name + '（密钥 ' + key + '）');
       close();
       teacherRenderAll();
       // P0-3: 异步同步到 Supabase（dual-write）
@@ -893,7 +886,7 @@ function teacherRemoveStudent(studentId) {
   teacherSaveClass(list);
   teacherCloseDrawer();
   teacherRenderAll();
-  if (typeof showToast === 'function') showToast('已移出班级');
+  showToast('已移出班级');
   // P0-3: 异步同步到 Supabase（dual-delete）
   if (removed) {
     teacherSyncRemoveToSupabase(removed).then(function() {});
@@ -1033,7 +1026,7 @@ function teacherExportCSV(student) {
   } else {
     filename = 'bioquest_class_report.csv';
     if (list.length === 0) {
-      if (typeof showToast === 'function') showToast('班级暂无学生，无法导出');
+      showToast('班级暂无学生，无法导出');
       return;
     }
     rows.push(['TATABOX 班级报告', '', '', '', '', '']);
@@ -1089,7 +1082,7 @@ function teacherExportCSV(student) {
   document.body.removeChild(a);
   setTimeout(function () { URL.revokeObjectURL(url); }, 200);
 
-  if (typeof showToast === 'function') showToast('已导出：' + filename);
+  showToast('已导出：' + filename);
 }
 
 /* ============== 班级统计图表（SVG） ============== */

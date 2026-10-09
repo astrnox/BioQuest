@@ -4,7 +4,6 @@
  *  - data-route 点击委托兜底：app.js 未就绪时由本脚本处理 [data-route] 导航
  */
 (function () {
-  // ---- 异步 CSS 提升 ----
   // 将 <link rel="preload" as="style" data-css-async> 提升为真正生效的样式表（等价于 onload 切换 rel）。
   // 必须在 DOMContentLoaded 前执行；defer 脚本在解析完成后、DOMContentLoaded 前运行，时机满足。
   function promoteAsyncCss() {
@@ -18,14 +17,12 @@
   if (document.readyState === 'interactive' || document.readyState === 'complete') promoteAsyncCss();
   else document.addEventListener('DOMContentLoaded', promoteAsyncCss);
 
-  // ---- 首页关键模块：首屏动画立即加载（非关键模块由 app.js 延迟加载）----
   document.addEventListener('DOMContentLoaded', function () {
     if (typeof window.loadModule === 'function') {
       window.loadModule('hero-sketch');
     }
   });
 
-  // ---- Supabase 延迟加载 ----
   // #104：动态注入同样固定精确版本并携带 SRI integrity（与各页面静态
   // <script> 标签一致），杜绝"版本漂移 + 供应链被替换"风险。
   var SUPABASE_JS_VERSION = '2.115.0';
@@ -60,7 +57,6 @@
     setTimeout(__loadSupabaseSDK, 1000);
   }
 
-  // ---- data-route 点击委托兜底 ----
   // app.js 加载后会暴露 navigateTo，此时由 app.js 统一处理；这里仅作兜底
   document.addEventListener('click', function (e) {
     // data-action 委托：调用 window 上的同名函数（如 showFeedbackModal / openDonation）

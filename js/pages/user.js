@@ -17,16 +17,7 @@ window._cspClearNotifs = function () {
 };
 
 // escapeHtml 本地 fallback：优先使用全局函数，否则使用内联实现
-var escapeHtml = (typeof window !== 'undefined' && typeof window.escapeHtml === 'function')
-  ? window.escapeHtml
-  : function(str) {
-      return String(str)
-        .replace(/&/g, '&amp;')
-        .replace(/</g, '&lt;')
-        .replace(/>/g, '&gt;')
-        .replace(/"/g, '&quot;')
-        .replace(/'/g, '&#39;');
-    };
+var escapeHtml = (typeof window !== 'undefined' ? window : globalThis).escapeHtml; // 规范实现见 js/core/utils.js（Q-01 统一）
 
 function injectUserStyles() {
   if (userStylesInjected) return;
@@ -730,7 +721,6 @@ function showToast(message) {
   }, 2200);
 }
 
-// ===== 头像上传 =====
 
 /**
  * 获取当前头像 URL
@@ -817,12 +807,12 @@ function setupAvatarUpload() {
 
     var allowed = ['image/jpeg', 'image/png', 'image/webp'];
     if (allowed.indexOf(file.type) === -1) {
-      if (typeof showToast === 'function') showToast('仅支持 JPEG / PNG / WebP 格式');
+      showToast('仅支持 JPEG / PNG / WebP 格式');
       e.target.value = '';
       return;
     }
     if (file.size > 5 * 1024 * 1024) {
-      if (typeof showToast === 'function') showToast('图片大小不能超过 5MB');
+      showToast('图片大小不能超过 5MB');
       e.target.value = '';
       return;
     }
@@ -834,13 +824,13 @@ function setupAvatarUpload() {
       _compressAvatarImage(ev.target.result, 200, 0.8, function(compressed) {
         avatarBtn.classList.remove('user-profile-avatar--loading');
         if (!compressed) {
-          if (typeof showToast === 'function') showToast('图片处理失败，请更换图片');
+          showToast('图片处理失败，请更换图片');
           e.target.value = '';
           return;
         }
         // 存到 localStorage
         try { localStorage.setItem('bioquest_avatar', compressed); } catch (storageErr) {
-          if (typeof showToast === 'function') showToast('本地存储失败：' + (storageErr.message || '空间不足'));
+          showToast('本地存储失败：' + (storageErr.message || '空间不足'));
           e.target.value = '';
           return;
         }
@@ -859,13 +849,13 @@ function setupAvatarUpload() {
             } catch (uploadErr) { /* 静默 */ }
           }
         }
-        if (typeof showToast === 'function') showToast('头像已更新');
+        showToast('头像已更新');
         e.target.value = '';
       });
     };
     reader.onerror = function() {
       avatarBtn.classList.remove('user-profile-avatar--loading');
-      if (typeof showToast === 'function') showToast('读取文件失败');
+      showToast('读取文件失败');
       e.target.value = '';
     };
     reader.readAsDataURL(file);
@@ -1350,9 +1340,7 @@ function _incrementAiUsage() {
 function _canUseAi() {
   var usage = _getApiKeyDailyUsage();
   if (usage.count >= _AI_DAILY_LIMIT) {
-    if (typeof showToast === 'function') {
-      showToast('今日 AI 调用已达上限（' + _AI_DAILY_LIMIT + ' 次），明日 0:00 重置。配置自定义 API Key 可解锁更多额度。');
-    }
+showToast('今日 AI 调用已达上限（' + _AI_DAILY_LIMIT + ' 次），明日 0:00 重置。配置自定义 API Key 可解锁更多额度。');
     return false;
   }
   return true;
@@ -1411,18 +1399,16 @@ function _bindApiKeySettings() {
         model: document.getElementById('aiModelInput').value.trim()
       };
       if (!cfg.apiKey) {
-        if (typeof showToast === 'function') showToast('请输入 API Key');
+        showToast('请输入 API Key');
         return;
       }
       _saveApiKeyConfig(cfg, _rememberChecked());
       // 恢复遮罩显示
       keyInput.value = cfg.apiKey.length > 4 ? '****' + cfg.apiKey.slice(-4) : '****';
       keyInput.type = 'password';
-      if (typeof showToast === 'function') {
-        showToast(_rememberChecked()
-          ? '已保存（会话内记住：刷新不丢失，关闭标签页自动清除）'
-          : '已保存（Key 仅存当前页面内存，刷新页面后需重新输入）');
-      }
+showToast(_rememberChecked()
+  ? '已保存（会话内记住：刷新不丢失，关闭标签页自动清除）'
+  : '已保存（Key 仅存当前页面内存，刷新页面后需重新输入）');
     });
   }
 
@@ -1441,7 +1427,7 @@ function _bindApiKeySettings() {
       keyInput.value = '';
       document.getElementById('aiModelInput').value = '';
       document.getElementById('aiProviderSelect').value = 'deepseek';
-      if (typeof showToast === 'function') showToast('已清除 API Key');
+      showToast('已清除 API Key');
     });
   }
 }
@@ -1501,7 +1487,7 @@ function _testAiKeyConnection() {
       });
     }
   }).catch(function(err) {
-    resultEl.textContent = '网络错误：' + (err.message || err);
+    resultEl.textContent = '网络错误：' + errText(err);
     resultEl.style.color = 'var(--color-error,#c0553a)';
   });
 }
@@ -1822,9 +1808,9 @@ function _fallbackCopy(text) {
     ta.select();
     document.execCommand('copy');
     document.body.removeChild(ta);
-    if (typeof showToast === 'function') showToast('密钥已复制：' + text);
+    showToast('密钥已复制：' + text);
   } catch (e) {
-    if (typeof showToast === 'function') showToast('复制失败，请手动选择密钥文本');
+    showToast('复制失败，请手动选择密钥文本');
   }
 }
 window._fallbackCopy = _fallbackCopy;
@@ -2580,7 +2566,7 @@ function renderUserPage(target) {
         try {
           if (navigator.clipboard && navigator.clipboard.writeText) {
             navigator.clipboard.writeText(key).then(function() {
-              if (typeof showToast === 'function') showToast('密钥已复制：' + key);
+              showToast('密钥已复制：' + key);
             }, function() { _fallbackCopy(key); });
           } else {
             _fallbackCopy(key);
@@ -2888,11 +2874,11 @@ function _userJoinClass() {
         joinedAt: new Date().toISOString()
       });
       localStorage.setItem('bioquest_joined_classes', JSON.stringify(joined));
-      if (typeof showToast === 'function') showToast('已加入 ' + (teacher.display_name || teacher.username || '') + ' 的班级');
+      showToast('已加入 ' + (teacher.display_name || teacher.username || '') + ' 的班级');
       close();
     } catch (e) {
       btn.disabled = false; btn.textContent = '加入';
-      showErr('查询失败：' + (e.message || e)); return;
+      showErr('查询失败：' + errText(e)); return;
     }
   }
   overlay.querySelector('#join-ok').addEventListener('click', submit);
@@ -3043,7 +3029,7 @@ function generateShareCard() {
   // 底部
   ctx.fillStyle = 'rgba(255,255,255,0.4)';
   ctx.font = '12px sans-serif';
-  ctx.fillText('TATABOX 高中学习平台 · ' + new Date().toLocaleDateString('zh-CN'), 40, 370);
+  ctx.fillText('TATABOX 高中生物学习平台 · ' + new Date().toLocaleDateString('zh-CN'), 40, 370);
   ctx.fillText('bioquest.dada.im', 460, 370);
 
   // 下载
@@ -3053,7 +3039,7 @@ function generateShareCard() {
     link.href = canvas.toDataURL('image/png');
     link.click();
   } catch (e) {
-    alert('生成卡片失败：' + (e.message || '未知错误'));
+    alert('生成卡片失败：' + errText(e));
   }
 }
 

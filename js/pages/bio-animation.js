@@ -2638,8 +2638,8 @@
         card.style.left = Math.min(e.clientX - r.left + 12, r.width - 270) + 'px';
         card.style.top = Math.min(e.clientY - r.top + 12, r.height - 80) + 'px';
         // 安全：热点标注文案可能来自数据文件/远程，插入前必须转义，防 XSS（P0）
-        var _ht = (window.escapeHtml) ? window.escapeHtml(found.title || '') : String(found.title || '');
-        var _xd = (window.escapeHtml) ? window.escapeHtml(found.text || '') : String(found.text || '');
+        var _ht = window.escapeHtml(found.title || '');
+        var _xd = window.escapeHtml(found.text || '');
         card.innerHTML = '<h4>' + _ht + '</h4><p>' + _xd + '</p>';
         canvas.style.cursor = 'pointer';
       } else { card.style.display = 'none'; canvas.style.cursor = _state.dragging ? 'grabbing' : 'grab'; }
@@ -2743,7 +2743,6 @@
 
   function renderBioAnimationPage(target) { initBioAnimation(target); }
 
-  // ====== v3.1: 课堂动作控制接口（T1-4） ======
   // 供 EventBus 调用：切换动画 + 跳到指定步
   function setProcessByName(name) {
     var keys = Object.keys(_processes);

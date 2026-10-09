@@ -53,7 +53,6 @@
   };
   var KEYS = ['B', 'I', 'O', 'G', 'C', 'D'];
 
-  // ============ 样式 ============
   function injectStyles() {
     var id = 'bio-calc-style';
     if (document.getElementById(id)) return;
@@ -149,7 +148,6 @@
     document.head.appendChild(st);
   }
 
-  // ============ 输入读取 ============
   function readComp() {
     var comp = {};
     KEYS.forEach(function (k) {
@@ -184,7 +182,6 @@
     if (el) el.style.display = enabled ? 'none' : 'block';
   }
 
-  // ============ 渲染 ============
   function buildGauge(score, grade) {
     var c = 2 * Math.PI * 64; // r=64 → ≈402
     var off = c * (1 - Math.max(0, Math.min(100, score)) / 100);
@@ -291,7 +288,6 @@
     }
   }
 
-  // ============ 重算 ============
   function recompute(activePreset) {
     if (typeof window.computeBioScoreFromRaw !== 'function') {
       var g = $id('bc-gauge-num');
@@ -307,7 +303,6 @@
     renderContrib(out, comp);
   }
 
-  // ============ 快捷动作 ============
   function loadRealData() {
     try {
       var stats = null, records = [];
@@ -325,7 +320,6 @@
     }
   }
 
-  // ============ 页面渲染 ============
   function buildBioCalcWidget(host, opts) {
     opts = opts || {};
     injectStyles();

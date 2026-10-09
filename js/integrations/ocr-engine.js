@@ -884,7 +884,6 @@
       }
     }
 
-    // ---------- 把任意图片 URL（包括跨域）转成 dataURL 供 OCR 使用 ----------
     function _imgToDataURL(img, cb) {
       // 1) 优先 canvas 导出（同源 / 有 CORS）
       try {
@@ -963,7 +962,6 @@
     }
     function _hideTrigger() { _removeEl(btnTrigger); btnTrigger = null; }
 
-    // ---------- 触发按钮 ----------
     function _showTrigger(x, y, img) {
       _hideTrigger();
       btnTrigger = document.createElement('button');
@@ -988,7 +986,6 @@
       document.body.appendChild(btnTrigger);
     }
 
-    // ---------- 结果面板 ----------
     function _showResultPanel(img, initialText) {
       if (resultPanel) _removeEl(resultPanel);
       resultPanel = document.createElement('div');
@@ -1181,7 +1178,6 @@
       });
     }
 
-    // ---------- 事件绑定：右键 + 长按 ----------
     document.addEventListener('contextmenu', function (ev) {
       var img = ev.target && ev.target.closest('img');
       if (!img) return;

@@ -379,7 +379,7 @@
     };
     if (!item.subject) return alert('请输入科目');
     var res = await window.saveScheduleItem(item);
-    if (!res || !res.ok) return alert('添加失败：' + ((res && res.error) || '未知错误'));
+    if (!res || !res.ok) return alert('添加失败：' + errText(res));
     await _loadData();
     _render();
   }
@@ -387,7 +387,7 @@
   async function _deleteScheduleItem(id) {
     if (!confirm('删除该课程？')) return;
     var res = await window.deleteScheduleItem(id);
-    if (!res || !res.ok) return alert('删除失败：' + ((res && res.error) || '未知错误'));
+    if (!res || !res.ok) return alert('删除失败：' + errText(res));
     await _loadData();
     _render();
   }
@@ -453,14 +453,14 @@
       priority: document.getElementById('st-task-priority').value,
       due_date: document.getElementById('st-task-due').value ? new Date(document.getElementById('st-task-due').value).toISOString() : null
     });
-    if (!res || !res.ok) return alert('添加失败：' + ((res && res.error) || '未知错误'));
+    if (!res || !res.ok) return alert('添加失败：' + errText(res));
     await _loadData();
     _render();
   }
 
   async function _completeTask(id) {
     var res = await window.updateStudyTask(id, { status: 'done' });
-    if (!res || !res.ok) return alert('操作失败：' + ((res && res.error) || '未知错误'));
+    if (!res || !res.ok) return alert('操作失败：' + errText(res));
     await _loadData();
     _render();
   }
@@ -468,7 +468,7 @@
   async function _deleteTask(id) {
     if (!confirm('删除该任务？')) return;
     var res = await window.deleteStudyTask(id);
-    if (!res || !res.ok) return alert('删除失败：' + ((res && res.error) || '未知错误'));
+    if (!res || !res.ok) return alert('删除失败：' + errText(res));
     await _loadData();
     _render();
   }
@@ -612,7 +612,7 @@
     var content = document.getElementById('st-note-content').value.trim();
     if (!title) return alert('请输入笔记标题');
     var res = await window.addNote({ title: title, content: content });
-    if (!res || !res.ok) return alert('添加失败：' + ((res && res.error) || '未知错误'));
+    if (!res || !res.ok) return alert('添加失败：' + errText(res));
     await _loadData();
     _render();
   }

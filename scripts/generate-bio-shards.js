@@ -377,7 +377,6 @@ function main() {
     console.log(`[${src.file}] 读入 ${rawItems.length}，收录 ${collected.length}，去重 ${rawItems.length - collected.length}`);
   }
 
-  // ---- 唯一性自检（P0）----
   const allBio = [];
   for (const t of Object.keys(topicQuestions)) allBio.push(...topicQuestions[t].map((e) => e.bioId));
   const bioSet = new Set(allBio);
@@ -386,7 +385,6 @@ function main() {
     process.exit(1);
   }
 
-  // ---- 迁移映射表：oldId -> 唯一 bioID ----
   const bioIdMap = {};
   for (const oldId of Object.keys(oldIdCandidates)) {
     const cands = oldIdCandidates[oldId].slice().sort();
@@ -396,14 +394,12 @@ function main() {
 
   console.log(`[total] 收录 ${assigned} 道，去重 ${dropped} 道，考点=${Object.keys(topicQuestions).length}，关键词兜底 ${subjectFallback} 道`);
 
-  // ---- 空考点检测（必须全部非空，否则报错）----
   const emptyTopics = TOPICS.filter((t) => !topicQuestions[t.id] || topicQuestions[t.id].length === 0);
   if (emptyTopics.length) {
     console.error('[FATAL] 存在空考点（无题目可归，关键词需补充）: ' + emptyTopics.map((t) => t.id).join(', '));
     process.exit(1);
   }
 
-  // ---- 写入 index / bank ----
   fs.mkdirSync(INDEX_DIR, { recursive: true });
   fs.mkdirSync(BANK_DIR, { recursive: true });
 
@@ -428,7 +424,6 @@ function main() {
     fs.writeFileSync(bankPath, JSON.stringify(bankObj, null, 1) + '\n', 'utf8');
   }
 
-  // ---- 写入知识图谱（从 schema 单一数据源生成，保证图谱与分片一致）----
   const kg = {
     version: '3.0.0',
     updated_at: new Date().toISOString().slice(0, 10),
@@ -443,11 +438,9 @@ function main() {
   const kgPath = path.join(DATA_DIR, 'knowledge-graph.json');
   fs.writeFileSync(kgPath, JSON.stringify(kg, null, 2) + '\n', 'utf8');
 
-  // ---- 写入映射表 ----
   const mapPath = path.join(DATA_DIR, 'bioid-map.json');
   fs.writeFileSync(mapPath, JSON.stringify(bioIdMap, null, 1) + '\n', 'utf8');
 
-  // ---- 写入 manifest（SHA-256 必须在所有分片/图谱/映射表写入后计算）----
   const files = {};
   for (const t of TOPICS) {
     files['index/' + t.id + '.json'] = sha256(path.join(INDEX_DIR, t.id + '.json'));

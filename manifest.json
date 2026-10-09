@@ -1,7 +1,7 @@
 {
-  "name": "TATABOX - 高中学习平台",
+  "name": "TATABOX - 高中生物学习平台",
   "short_name": "TATABOX",
-  "description": "基于间隔重复算法与知识图谱的高中学习平台",
+  "description": "基于间隔重复算法与知识图谱的高中生物学习平台",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#1a3a2a",

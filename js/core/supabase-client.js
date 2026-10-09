@@ -25,7 +25,6 @@ function _localDateStr(date) {
   return y + '-' + m + '-' + d;
 }
 
-// ===== 用户信用指数（Trust / Credit）系统配置 =====
 // 信用点（CR）不是经验值、不是货币，而是社区对用户信任程度的量化。
 // 通过符合社区期望的行为获得信任，消费信任以做出对社区影响更大的行为；
 // 信任具有时效性（自然衰减），违规则直接扣减。
@@ -77,7 +76,6 @@ var POINTS_LEVELS = [
 
 var _UNCIVIL_WORDS = ['傻逼','脑残','nmsl','你妈','草泥马','滚','去死','废物','垃圾','贱','sb','cnm','tmd','mdzz','智障','混蛋','狗屎','屎','烂','白痴','蠢货','婊子','娘炮','死全家','杀了你','操','肏','日你妈','麻痹','特么','马勒戈壁','法克','fuck','shit','bitch'];
 
-// ===== 超时 / 间隔 / 阈值常量 =====
 var AUTH_UPDATE_DEBOUNCE_MS = 200;             // 认证状态变更防抖时间
 var USER_KEY_READ_DELAY_MS = 600;              // 等待触发器生成 user_key 的延迟
 var SESSION_RESTORE_CACHE_TTL_MS = 5000;       // restoreSession 结果缓存时长
@@ -1088,7 +1086,7 @@ function forceLogout() {
     sessionStorage.removeItem('bioquest_admin_lock');
   } catch(e) {}
 
-  if (typeof showToast === 'function') showToast('已退出登录');
+  showToast('已退出登录');
   if (typeof navigateTo === 'function') navigateTo('/');
 }
 
@@ -1578,7 +1576,6 @@ function invalidateLeaderboardCache() {
 }
 window.invalidateLeaderboardCache = invalidateLeaderboardCache;
 
-// ===== 用户信用（Trust / Credit）=====
 
 /**
  * 获取信用等级信息（由当前信用指数阈值推导）
@@ -2014,7 +2011,6 @@ function startOnlineTimeTracking() {
   }, ONLINE_TIME_HEARTBEAT_INTERVAL_MS);
 }
 
-// ===== 社区功能 =====
 async function getCommunityPosts(page, tag, sortBy) {
   var sb = getSupabase();
   if (!sb) return { posts: [], total: 0 };
@@ -2346,7 +2342,6 @@ async function addPostComment(postId, content) {
   }
 }
 
-// ===== 成就徽章系统 =====
 // 参考英雄联盟局内成就命名：幽默、嘲讽、夸张、反差
 
 var ACHIEVEMENT_TIERS = {
@@ -2361,12 +2356,10 @@ var ACHIEVEMENT_TIERS = {
 };
 
 var ACHIEVEMENTS = {
-  // ===== 新手村（新手引导） =====
   first_login:     { name: '你好世界',       desc: '第一次打开TATABOX，勇气可嘉',  icon: 'I', category: 'journey',  tier: 'iron' },
   first_practice:  { name: '羊入虎口',       desc: '做了第一道题，不知道该恭喜还是该劝退', icon: 'S', category: 'journey',  tier: 'iron' },
   email_verified:  { name: '验明正身',       desc: '邮箱验证了，你终于不是黑户了',   icon: 'V', category: 'journey',  tier: 'bronze' },
 
-  // ===== 熬夜修仙（打卡坚持） =====
   streak_3:        { name: '三分钟热度',     desc: '连续打卡3天，别告诉我第4天就溜了', icon: 'F', category: 'persistence', tier: 'iron' },
   streak_7:        { name: '一周存活',       desc: '连续打卡7天，你比90%的人持久',   icon: '7', category: 'persistence', tier: 'bronze' },
   streak_14:       { name: '习惯成自然',     desc: '连续打卡14天，不学浑身难受了吧',  icon: '14', category: 'persistence', tier: 'silver' },
@@ -2375,14 +2368,12 @@ var ACHIEVEMENTS = {
   streak_100:      { name: '百日不倒',       desc: '连续打卡100天，你是人还是机器人？', icon: '100', category: 'persistence', tier: 'diamond' },
   streak_365:      { name: '一年365天',      desc: '连续打卡365天，你赢了，真的赢了',  icon: '365', category: 'persistence', tier: 'challenger' },
 
-  // ===== 分数玄学（分数成就） =====
   score_60:        { name: '及格线上的挣扎',  desc: '60分，多一分浪费，少一分受罪',   icon: '60s', category: 'mastery',   tier: 'iron' },
   score_70:        { name: '薛定谔的70分',   desc: '70分，不好不坏，薛定谔都看不懂你', icon: '70s', category: 'mastery',   tier: 'bronze' },
   score_80:        { name: '别人家的孩子',    desc: '80分，你妈终于可以在亲戚面前吹了', icon: '80s', category: 'mastery',   tier: 'silver' },
   score_90:        { name: '卷王本王',       desc: '90分，你让其他同学怎么活？',     icon: '90s', category: 'mastery',   tier: 'gold' },
   score_100:       { name: '满分？就这？',    desc: '100分，你说的对，确实就这',      icon: '100s', category: 'mastery',   tier: 'diamond' },
 
-  // ===== 刷题机器（答题数量） =====
   questions_50:    { name: '热身运动',       desc: '50题，你才刚伸了个懒腰',        icon: '50q', category: 'conquest',  tier: 'iron' },
   questions_100:   { name: '题海入门',       desc: '100题，你已经开始湿鞋了',       icon: '100q', category: 'conquest',  tier: 'bronze' },
   questions_300:   { name: '刷题永动机',     desc: '300题，你的手指已经形成了肌肉记忆', icon: '300q', category: 'conquest',  tier: 'silver' },
@@ -2391,21 +2382,18 @@ var ACHIEVEMENTS = {
   questions_2000:  { name: '题海霸主',       desc: '2000题，出题人看到你都要绕路',   icon: '2K', category: 'conquest',  tier: 'diamond' },
   questions_5000:  { name: '你摸不到',       desc: '5000题，你的题量别人一辈子摸不到', icon: '5K', category: 'conquest',  tier: 'challenger' },
 
-  // ===== 神射手（正确率） =====
   accuracy_60:     { name: '蒙的都对',       desc: '60%正确率，你管这叫蒙的？',     icon: '60%', category: 'precision', tier: 'iron' },
   accuracy_70:     { name: '七成胜率',       desc: '70%正确率，电竞选手都羡慕你',    icon: '70%', category: 'precision', tier: 'bronze' },
   accuracy_80:     { name: '稳定输出',       desc: '80%正确率，你的正确率比A股稳定',  icon: '80%', category: 'precision', tier: 'silver' },
   accuracy_90:     { name: '完美连控',       desc: '90%正确率，题目被你控得死死的',   icon: '90%', category: 'precision', tier: 'gold' },
   accuracy_95:     { name: '题目克星',       desc: '95%正确率，题目见了你直接投降',   icon: '95%', category: 'precision', tier: 'diamond' },
 
-  // ===== 社交牛逼症（社区成就） =====
   community_first: { name: '社恐出没',       desc: '第一次发帖，手抖了吗？',        icon: '1st', category: 'community',  tier: 'iron' },
   community_5:     { name: '话痨上线',       desc: '发了5个帖子，你开始收不住了',    icon: '5th', category: 'community',  tier: 'bronze' },
   community_10:    { name: '社交达人',       desc: '发了10个帖子，你比老师还能说',    icon: '10th', category: 'community',  tier: 'silver' },
   community_50:    { name: '社区顶流',       desc: '发了50个帖子，你就是TATABOX的KOL', icon: '50th', category: 'community',  tier: 'gold' },
   community_100:   { name: '话痨天花板',     desc: '发了100个帖子，你确定不是来水贴的？', icon: '100th', category: 'community',  tier: 'diamond' },
 
-  // ===== 考场战神（考试成就） =====
   exam_first:      { name: '炮灰报到',       desc: '第一次模拟考，活下来就是胜利',    icon: '1ex', category: 'exam',      tier: 'iron' },
   exam_5:          { name: '老考生了',       desc: '5次模拟考，你已经面不改色了',    icon: '5ex', category: 'exam',      tier: 'bronze' },
   exam_10:         { name: '考场老油条',     desc: '10次模拟考，你比监考老师还淡定',   icon: '10ex', category: 'exam',      tier: 'silver' },
@@ -2675,7 +2663,6 @@ async function reportCommunityPost(postId, reason) {
   }
 }
 
-// ===== 学习打卡系统 =====
 
 /**
  * 记录今日打卡
@@ -2791,7 +2778,6 @@ async function getCheckInData() {
   }
 }
 
-// ===== 数据导出/导入系统 =====
 
 /**
  * 导出所有用户数据为 JSON 对象
@@ -2946,7 +2932,7 @@ function downloadUserData() {
   a.click();
   document.body.removeChild(a);
   URL.revokeObjectURL(url);
-  if (typeof showToast === 'function') showToast('数据已导出');
+  showToast('数据已导出');
 }
 
 /**
@@ -3059,13 +3045,9 @@ function importUserDataFromFile() {
     reader.onload = function(ev) {
       var result = importUserData(ev.target.result);
       if (result.ok) {
-        if (typeof showToast === 'function') {
-          showToast('成功导入 ' + result.count + ' 类数据');
-        }
+showToast('成功导入 ' + result.count + ' 类数据');
       } else {
-        if (typeof showToast === 'function') {
-          showToast('导入失败：' + (result.error || '未知错误'));
-        }
+showToast('导入失败：' + errText(result.error));
       }
     };
     reader.readAsText(file);
@@ -3073,7 +3055,6 @@ function importUserDataFromFile() {
   input.click();
 }
 
-// ===== 复习推送系统（基于错题 + FSRS）=====
 
 /**
  * 答错时记录错题卡片
@@ -3189,7 +3170,6 @@ async function reviewQuestion(questionId, rating) {
   }
 }
 
-// ===== 智能错题管理 =====
 
 /**
  * 获取错题本列表
@@ -3343,7 +3323,6 @@ async function getRelatedPracticeQuestions(concepts, limit) {
   }
 }
 
-// ===== 用户统计数据（P0-3：Supabase 优先 + localStorage 回退）=====
 // 修复 dashboard.js / teacher.js 直接读取 localStorage 的问题：
 // 当用户已登录时，所有统计数据优先从 Supabase 读取；未登录或离线时回退到 localStorage。
 
@@ -3579,7 +3558,6 @@ async function syncHabitLogToSupabase(dateStr, streakCount) {
   }
 }
 
-// ===== Issue #13 用户进度云端同步（user_progress 表，LWW 合并）=====
 // 数据表：user_progress (profile_id, key, data JSONB, updated_at)
 // 配套迁移：sql/migration_v8_user_progress.sql
 // 键值快照（如 'fsrs_cards'）整体存储，updated_at 做 Last-Write-Wins 冲突合并。
@@ -3698,7 +3676,6 @@ async function deleteUserProgressFromSupabase(key) {
   }
 }
 
-// ===== P0-3 班级成员关系（修复 teacher.js localStorage 模拟）=====
 // 数据表：class_memberships (teacher_id, student_id, student_key, student_name, added_at)
 // 配套迁移：sql/migration_v6_class_memberships.sql
 
@@ -3813,7 +3790,6 @@ async function getStudentDetailByKey(userKey) {
   }
 }
 
-// ===== 学习管理工具 =====
 
 /**
  * 学习任务 / 待办
@@ -4117,7 +4093,6 @@ async function deleteScheduleItem(id) {
   }
 }
 
-// ===== 问答悬赏系统 =====
 
 /**
  * 发布悬赏
@@ -4429,7 +4404,6 @@ window.downloadUserData = downloadUserData;
 window.importUserData = importUserData;
 window.importUserDataFromFile = importUserDataFromFile;
 
-// ===== 公告系统 =====
 
 /**
  * 获取公告列表
@@ -4518,7 +4492,7 @@ async function deleteAnnouncement(id) {
 }
 
 function parseAnnouncementError(error) {
-  var msg = error.message || '未知错误';
+  var msg = errText(error);
   if (msg.includes('permission') || msg.includes('policy')) return '权限不足，仅管理员可操作';
   if (msg.includes('duplicate')) return '公告已存在';
   return msg;
@@ -4577,9 +4551,7 @@ window.addClassMembershipToSupabase = addClassMembershipToSupabase;
 window.removeClassMembershipFromSupabase = removeClassMembershipFromSupabase;
 window.getStudentDetailByKey = getStudentDetailByKey;
 
-// ============================================================
 // v4.0 AI 对话持久化（ai_conversations + ai_messages 表）
-// ============================================================
 
 /**
  * 保存（upsert）AI 对话

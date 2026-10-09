@@ -229,7 +229,7 @@ function logHabit(habitId, value) {
 
   // 检查徽章
   var newBadges = checkBadges();
-  if (newBadges.length > 0 && typeof showToast === 'function') {
+  if (newBadges.length > 0) {
     newBadges.forEach(function(b) {
       showToast('获得徽章：' + b.name, 'success');
     });
@@ -674,7 +674,7 @@ function _bindAiGoalEvents(container) {
 
     var goal = input.value.trim();
     if (!goal) {
-      if (typeof showToast === 'function') showToast('请输入你的大目标', 'error');
+      showToast('请输入你的大目标', 'error');
       return;
     }
     var days = parseInt(daysInput.value, 10) || 7;
@@ -693,7 +693,7 @@ function _bindAiGoalEvents(container) {
       btn.textContent = 'AI 拆解';
       if (err) {
         // 安全修复（P1 XSS）：err.message 可能含 HTML，必须转义后再注入 innerHTML
-        var _errMsg = err && err.message ? String(err.message) : '未知错误';
+        var _errMsg = errText(err);
         var _esc = _errMsg.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
         resultDiv.innerHTML = '<div style="padding:12px;color:var(--color-error,#e53e3e);font-size:13px;">拆解失败：' + _esc + '</div>';
         return;
@@ -735,7 +735,7 @@ function _bindAiGoalEvents(container) {
             });
             added++;
           }
-          if (typeof showToast === 'function') showToast('已添加 ' + added + ' 个每日小目标到打卡列表', 'success');
+          showToast('已添加 ' + added + ' 个每日小目标到打卡列表', 'success');
           resultDiv.style.display = 'none';
           resultDiv.innerHTML = '';
           input.value = '';
@@ -1076,7 +1076,7 @@ function updateHabitCardUI(hid, container) {
 
   // 检查新徽章并 toast
   var newBadges = checkBadges();
-  if (newBadges.length > 0 && typeof showToast === 'function') {
+  if (newBadges.length > 0) {
     for (var b = 0; b < newBadges.length; b++) {
       showToast('获得徽章：' + newBadges[b].name, 'success');
     }
@@ -1224,7 +1224,7 @@ function showHabitModal(habit, container) {
     var frequency = document.getElementById('hm-frequency').value;
 
     if (!name) {
-      if (typeof showToast === 'function') showToast('请输入习惯名称', 'error');
+      showToast('请输入习惯名称', 'error');
       return;
     }
 
@@ -1244,7 +1244,7 @@ function showHabitModal(habit, container) {
 function initHabits(target) {
   syncAutoHabits();
   var newBadges = checkBadges();
-  if (newBadges.length > 0 && typeof showToast === 'function') {
+  if (newBadges.length > 0) {
     newBadges.forEach(function(b) {
       showToast('获得徽章：' + b.name, 'success');
     });

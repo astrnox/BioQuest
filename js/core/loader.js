@@ -1008,7 +1008,6 @@ function _loadByModules(modules, onProgress, signal, forceRefresh, mode, onBackg
     return Promise.resolve(result);
   }
 
-  // ---------- 首屏快速模式：立刻读本地题库（分片优先，IndexedDB 异步太慢直接跳过） ----------
   if (mode === LOAD_MODE.PREFER_LOCAL || mode === LOAD_MODE.BALANCED) {
     return _loadByModulesLocal(modules, onProgress, signal).then(function (localItems) {
       // 已经把结果给用户了；后台再跑 Supabase 同步（不阻塞 resolve）

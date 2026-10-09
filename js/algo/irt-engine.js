@@ -26,7 +26,6 @@
   var STORAGE_KEY = 'bioquest_irt_state';
   var PARAMS_KEY = 'bioquest_irt_params';  // 题库参数缓存
 
-  // ====== 题目参数管理 ======
 
   /**
    * 从题库推断 IRT 参数（启发式估计，无需人工标注）
@@ -92,7 +91,6 @@
     return cache[questionId] || { a: 1.0, b: 0, c: 0.25 };
   }
 
-  // ====== θ 估计（贝叶斯后验更新） ======
 
   /**
    * 三参数逻辑斯谛模型的答对概率
@@ -220,7 +218,6 @@
     return state;
   }
 
-  // ====== 自适应抽题 ======
 
   /**
    * 按最大信息量原则选题（最简单实现：从候选题中选信息函数最大的）
@@ -288,7 +285,6 @@
     return selected;
   }
 
-  // ====== 预测分析 ======
 
   /**
    * θ → 百分位（标准正态 CDF）。θ 被建模为 N(0,1) 的受测者能力，
@@ -390,7 +386,6 @@
     return { level: level, percentile: percentile, desc: desc };
   }
 
-  // ====== 暴露 API ======
   window.IrtEngine = {
     inferParams: inferParams,
     buildParamsCache: buildParamsCache,

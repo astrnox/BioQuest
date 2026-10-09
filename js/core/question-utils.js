@@ -6,7 +6,6 @@
 (function() {
   'use strict';
 
-  // ===== 题目难度自动调整 =====
 
   var DIFFICULTY_LABELS = ['', '简单', '较易', '中等', '较难', '困难'];
   var DIFFICULTY_COLORS = ['', '#3a8c5c', '#5a8c3a', '#c49b30', '#d47030', '#c43838'];
@@ -115,7 +114,6 @@
       + (info.isAdjusted ? '<span class="q-diff-adjusted" style="font-size:0.6rem;color:var(--text-muted,#8a8a8a);margin-left:2px;" title="已根据正确率自动调整">&#9881;</span>' : '');
   }
 
-  // ===== 题目反馈系统（每日限额） =====
 
   var MAX_FEEDBACKS_PER_DAY = 5;
 
@@ -176,7 +174,7 @@
           }
         }
       } catch (e) {
-        return { ok: false, error: '信用检查失败：' + (e.message || '未知错误') };
+        return { ok: false, error: '信用检查失败：' + errText(e) };
       }
     }
 

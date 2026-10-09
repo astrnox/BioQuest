@@ -20,7 +20,7 @@ window.handleResolveAppeal = async function(appealId, action) {
       var contentEl = document.getElementById('admin-tab-content');
       if (contentEl) renderAppealsTab(contentEl);
     } else {
-      showAdminToast('处理失败：' + (result && result.error ? result.error : '未知错误'), 'error');
+      showAdminToast('处理失败：' + errText(result), 'error');
     }
   } catch (e) {
     showAdminToast('处理出错：' + e.message, 'error');
@@ -326,7 +326,7 @@ function renderSyncTab(container) {
         syncStatus.textContent = '同步已触发，后台执行中。大约需要几分钟完成。';
         syncStatus.style.color = 'var(--color-sage)';
       } else {
-        syncStatus.textContent = '触发失败：' + (result.data.error || '未知错误');
+        syncStatus.textContent = '触发失败：' + errText(result.data.error);
         syncStatus.style.color = '#e74c3c';
       }
     } catch (e) {
@@ -437,10 +437,10 @@ async function refreshAnnouncementList(container) {
           result = { ok: false, error: e.message };
         }
         if (result && result.ok) {
-          if (typeof showToast === 'function') showToast('公告已删除');
+          showToast('公告已删除');
           await refreshAnnouncementList(container);
         } else {
-          if (typeof showToast === 'function') showToast('删除失败：' + (result.error || '未知错误'));
+          showToast('删除失败：' + errText(result.error));
         }
       });
     });
@@ -522,7 +522,7 @@ function showAnnouncementEditor(container, announcement) {
     btn.textContent = isEdit ? '保存修改' : '发布公告';
 
     if (result.ok) {
-      if (typeof showToast === 'function') showToast(isEdit ? '公告已更新' : '公告已发布');
+      showToast(isEdit ? '公告已更新' : '公告已发布');
       editorEl.style.display = 'none';
       listEl.style.display = 'block';
       await refreshAnnouncementList(container);

@@ -27,7 +27,6 @@
   var elements = {};
   var notes = [];
 
-  // ====== 主入口：打开课堂 ======
 
   /**
    * @param {Object} input - { topic, kgNodeId, sourceType, mode? }
@@ -80,7 +79,6 @@
     document.body.classList.remove('classroom-active');
   }
 
-  // ====== UI 渲染 ======
 
   function _renderShell() {
     close();  // 关闭已存在的课堂
@@ -144,7 +142,6 @@
     elements.sceneTabs.innerHTML = tabs;
   }
 
-  // ====== 启动课堂 ======
 
   function _startClassroom(ol) {
     instance = Classroom.create(ol, {
@@ -195,7 +192,6 @@
     instance.start();
   }
 
-  // ====== v4.0 课堂启动（4-scene + [ACTION:] 标签流） ======
 
   function _startClassroomV4(ol) {
     // 构造 actionCtx：为 EventBus.executeSegments 提供 ACTION 处理器
@@ -469,7 +465,6 @@
   }
   var _v4TeacherStreamLockTimer = null;
 
-  // ====== 场景舞台渲染 ======
 
   function _renderStageForScene(scene) {
     var stage = elements.stage;
@@ -690,7 +685,6 @@
     });
   }
 
-  // ====== 对话区 ======
 
   function _addDialogMessage(role, text) {
     var roleMap = {
@@ -724,7 +718,6 @@
 
   _escapeHtml = window.escapeHtml;
 
-  // ====== 控制栏 ======
 
   function _bindControls() {
     document.getElementById('cls-close').onclick = close;
@@ -814,7 +807,6 @@
     });
   }
 
-  // ====== 动作订阅（T1-4/5/6/7） ======
 
   function _subscribeActions() {
     // T1-4: 高亮动画步骤
@@ -851,7 +843,6 @@
     });
   }
 
-  // ====== 进度 / 标签 ======
 
   function _updateProgress(idx, total) {
     var pct = ((idx + 1) / total * 100).toFixed(0);
@@ -866,7 +857,6 @@
     });
   }
 
-  // ====== 结束页（T1-10） ======
 
   function _renderEndPage(data) {
     var stage = elements.stage;
@@ -904,7 +894,6 @@
     elements.dialog.innerHTML = '<div class="cls-msg cls-msg-system" style="text-align:center;color:#666;">课堂已结束，查看你的学习数据</div>';
   }
 
-  // ====== 辅助 ======
 
   function _showLoading(text) {
     if (elements.loading) {
@@ -921,7 +910,6 @@
     }
   }
 
-  // ====== 暴露 API ======
   window.ClassroomPlayer = {
     open: open,
     close: close

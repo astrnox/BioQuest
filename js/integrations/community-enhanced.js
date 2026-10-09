@@ -34,7 +34,6 @@
   var _quikchatInstance = null;
   var _quikchatContainer = null; // 记录挂载容器，便于销毁时清空
 
-  // ===== quikchat 集成 =====
 
   /**
    * 懒加载 quikchat.js
@@ -240,7 +239,6 @@
     }
   }
 
-  // ===== 页面渲染 =====
 
   /**
    * 渲染增强版社区页（quikchat 聊天）

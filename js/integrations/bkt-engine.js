@@ -87,7 +87,6 @@
 
     var alphaL = new Array(n), alphaN = new Array(n);
 
-    // ===== 前向 =====
     // 使用对数概率避免下溢
     var logL0 = Math.log(L0 + EPS);
     var logN0 = Math.log(1 - L0 + EPS);
@@ -125,7 +124,6 @@
     // 对数似然 = log(α_L(n) + α_N(n))
     var logLik = logSumExp(logAlphaL[n - 1], logAlphaN[n - 1]);
 
-    // ===== 后向（log domain） =====
     var logBetaL = new Array(n), logBetaN = new Array(n);
     logBetaL[n - 1] = 0;  // log 1
     logBetaN[n - 1] = 0;
@@ -143,7 +141,6 @@
       logBetaN[t2] = logSumExp(term3, term4);
     }
 
-    // ===== 平滑 γ_t = α(t) * β(t) / P(obs) =====
     var gammaL = new Array(n), gammaN = new Array(n);
     // 同时计算 ξ（转移统计量）：ξ_t(i, j) = α_t(i) * a_ij * b_j(o_{t+1}) * β_{t+1}(j) / P(obs)
     var xiLL = 0, xiNL = 0, xiLN = 0, xiNN = 0;  // 累加（log domain → 用 logSumExp）

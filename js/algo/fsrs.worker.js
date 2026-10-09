@@ -26,7 +26,6 @@
 (function () {
   'use strict';
 
-  // ==================== 纯常量（与 ts-fsrs 默认值一致）====================
   var DEFAULT_W = [
     0.212,    // w0
     1.2931,   // w1
@@ -56,7 +55,6 @@
   var L2_LAMBDA = 0.001;
   var EPS = 1e-4;
 
-  // ==================== FSRS-5 retention ====================
   function retention(delta_t, stability) {
     if (stability <= 0) stability = 0.01;
     if (delta_t <= 0) return 1;
@@ -259,7 +257,6 @@
       });
   }
 
-  // ==================== 上下文识别 ====================
   // Worker：有 importScripts / self，但无 window；主线程反之。
   // Node/测试：CommonJS 导出便于复用现有 Jest 断言。
   var Core = {

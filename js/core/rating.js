@@ -18,7 +18,6 @@
 
 var RatingCore = (function () {
 
-  // ===== 可调参数 =====
   var Z = 1.96;                          // （保留签名用）原 Wilson 的 95% 置信 z 值，平滑均值下不参与计算
   var PRIOR_VOTES = 4;                   // 中性先验票数（默认 2 赞 + 2 踩）：评分从中位 0.5 起步
   var WEIGHT_MIN = 0.7;                  // 出现率权重下限（基础权重 1.0 的 70%）

@@ -7,9 +7,7 @@
 (function () {
   'use strict';
 
-  // ============================================================
   // 乡村科普模式（低流量模式）
-  // ============================================================
   var LOW_FLOW_KEY = 'bioquest_low_flow_mode';
 
   var LowFlowMode = {
@@ -77,9 +75,7 @@
     document.addEventListener('DOMContentLoaded', function () { LowFlowMode.init(); });
   }
 
-  // ============================================================
   // 濒危物种卡片收集系统
-  // ============================================================
   var COLLECTION_KEY = 'bioquest_species_collection';
 
   var ENDANGERED_SPECIES = [

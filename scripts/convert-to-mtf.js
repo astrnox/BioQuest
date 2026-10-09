@@ -11,7 +11,6 @@
 const fs = require('fs');
 const path = require('path');
 
-// ===== 配置 =====
 const SUPABASE_URL = 'https://qxehkfucvmxuojjkdaqy.supabase.co';
 const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InF4ZWhrZnVjdm14dW9qamtkYXF5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODY2MjU2ODUsImV4cCI6MjEwMjIwMTY4NX0.lbiJxhFvy0t_J4qSeoP6K0r53M4KaEDSKkRlZu03ze8';
 // service_role 密钥绝不硬编码：从环境变量读取
@@ -34,7 +33,6 @@ const BATCH_SIZE = 3;        // 并发请求数
 const DELAY_MS = 2000;       // 每批之间的延迟
 const MAX_RETRIES = 3;       // 每题最大重试次数
 
-// ===== 工具函数 =====
 function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
 
 function log(msg) {
@@ -237,7 +235,6 @@ async function uploadToSupabase(questions) {
   return { ok, fail };
 }
 
-// ===== 主流程 =====
 async function main() {
   const shouldUpload = process.argv.includes('--upload');
 

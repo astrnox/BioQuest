@@ -30,7 +30,6 @@
     return Math.max(lo, Math.min(hi, v));
   }
 
-  // ============ 样式 ============
   function injectStyles() {
     var id = 'score-calc-style';
     if (document.getElementById(id)) return;
@@ -76,7 +75,6 @@
     document.head.appendChild(st);
   }
 
-  // ============ Bio Score 计算器 ============
   function readBioInputs() {
     var keys = ['B', 'I', 'O', 'G', 'C', 'D'];
     var comp = {};
@@ -130,7 +128,6 @@
     }
   }
 
-  // ============ CR 计算器 ============
   function readCrInputs() {
     return {
       days: clampNum($id('sc-cr-days') && $id('sc-cr-days').value, 0, 3650),
@@ -194,7 +191,6 @@
       '</div>';
   }
 
-  // ============ 正确率速算 ============
   function renderAccResult() {
     var c = clampNum($id('sc-acc-c') && $id('sc-acc-c').value, 0, 1e9);
     var t = clampNum($id('sc-acc-t') && $id('sc-acc-t').value, 1, 1e9);
@@ -206,7 +202,6 @@
       '<div class="sc-detail">答对 ' + c + ' / 共 ' + t + ' 题</div></div>';
   }
 
-  // ============ 公式透明卡 ============
   function renderExplain() {
     var bio = window.BIO_SCORE_EXPLAIN;
     var cr = window.CR_EXPLAIN;
@@ -242,7 +237,6 @@
     return bioHtml + crHtml;
   }
 
-  // ============ 渲染 ============
   function renderScoreCalcPage(target) {
     injectStyles();
     target = target || document.getElementById('page-content') || document.body;

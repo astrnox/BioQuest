@@ -78,7 +78,6 @@
     synth.speak(u);
   }
 
-  // ====== 对外 API ======
 
   function enable() {
     enabled = true;
@@ -125,7 +124,6 @@
     return Object.keys(ROLE_VOICE);
   }
 
-  // ====== 接入 EventBus（T3-2） ======
   // AI 老师文本自动朗读（支持第二个参数 role 指定角色音色）
   EventBus.on(EventBus.ACTION.TTS_SPEAK, function (text, role) {
     speak(text, role || '主讲老师');
@@ -134,7 +132,6 @@
     pause();
   });
 
-  // ====== 暴露 API ======
   window.BioQuestTTS = {
     enable: enable,
     disable: disable,

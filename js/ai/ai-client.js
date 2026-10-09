@@ -54,7 +54,6 @@
   //   - 无 Key 时 AI 入口显示配置引导，刷题/错题本/卡片/实验等核心功能不受影响。
   var DEFAULT_PROVIDER = 'zhipu'; // 无用户配置时的默认服务商（智谱 glm-4-flash 免费）
 
-  // ===== 调用限制 / 超时 / 重试常量 =====
   var AI_DAILY_USAGE_LIMIT = 9999;            // 用户要求：不要权限限制，额度放最大
   var AI_DEFAULT_MAX_TOKENS = 2048;         // 默认最大生成 token 数
   var AI_STREAM_MAX_TOKENS = 1024;          // 流式问答默认最大 token 数
@@ -64,7 +63,6 @@
   var AI_RETRY_MAX_ATTEMPTS = 3;           // 自动重试最大次数（专门应对 ERR_INCOMPLETE_CHUNKED_ENCODING 等网络断流）
   var AI_RETRY_BASE_DELAY_MS = 800;        // 重试退避基础延迟
 
-  // ===== fetch 重试包装器：专门修复 ERR_INCOMPLETE_CHUNKED_ENCODING / 网络断流 =====
   //   - 对 TypeError (网络层错误、chunked 编码不完整) 自动重试
   //   - 对 HTTP 5xx / 429 (限流/服务器错误) 自动重试
   //   - 4xx (除 429) 不重试，直接抛错
@@ -86,7 +84,6 @@
     return false;
   }
 
-  // ===== 统一的 !resp.ok 错误解析 =====
   // 覆盖 OpenAI 格式 / DashScope 格式 / Zhipu 格式 / 纯文本错误
   // 若遇到"modelCode 不存在 / Invalid model"等已知模型类错误，自动在错误信息末尾追加诊断建议
   function _extractApiError(status, rawText) {
@@ -750,7 +747,6 @@
     }, _requestFingerprint(url, body));
   }
 
-  // ====== SSE 解析（fetch + ReadableStream，兼容性强） ======
   function _pumpSse(resp, opts) {
     var reader = resp.body.getReader();
     var decoder = new TextDecoder();
@@ -836,7 +832,6 @@
     return pump();
   }
 
-  // ====== 后端回退（仅当 server.py 在运行时） ======
   function _backendAvailable() {
     // 通过端口探测：localhost:8000 是否响应
     // 这里简单返回 true，让 fetch 失败时尝试回退；若后端不在则回退也失败，前端报错
@@ -956,7 +951,6 @@
     });
   }
 
-  // ====== 视觉多模态 OCR（识别图片中的中英文文字，支持斜体） ======
   /**
    * 使用用户配置的视觉模型识别图片文字（OCR）
    * @param {Object} opts - { image, prompt, onDone, onError, signal }
@@ -1122,7 +1116,6 @@
     });
   }
 
-  // ====== v3.1 新增：自动重试 + Per-stage routing（T0-3/T0-4） ======
   // 借鉴 OpenMAIC PR #788：瞬时错误（429/5xx/网络）指数退避重试
 
   /**
@@ -1222,7 +1215,6 @@
     }, { maxRetries: 3, backoff: 'exponential' });
   }
 
-  // ====== 暴露 API ======
   window.AiClient = {
     streamChat: streamChat,
     chat: chat,

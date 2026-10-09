@@ -22,7 +22,6 @@
     return;
   }
 
-  // ==================== 兼容常量 ====================
 
   // TATABOX 原有 RATING 常量（与 ts-fsrs Rating 值一致：1=Again, 2=Hard, 3=Good, 4=Easy）
   var RATING = {
@@ -39,14 +38,12 @@
     easyBonus: 1.3
   };
 
-  // ==================== TATABOX 调度辅助常量 ====================
   var FSRS_MIN_STABILITY = 0.1;               // 卡片稳定性下限，避免极小值导致调度异常
   var FSRS_DEFAULT_DIFFICULTY = 5;            // 新卡/缺失难度默认值（ts-fsrs 难度中点）
   var FSRS_DEFAULT_FORECAST_DAYS = 30;         // 默认预测复习曲线天数
   var FSRS_DUE_PRIORITY_OVERDUE_WEIGHT = 10;  // 到期优先级：过期天数权重
   var FSRS_DUE_PRIORITY_LAPSE_WEIGHT = 5;     // 到期优先级：遗忘次数权重
 
-  // ==================== ts-fsrs 调度器单例 ====================
 
   var _scheduler = null;
 
@@ -61,7 +58,6 @@
     return _scheduler;
   }
 
-  // ==================== 状态格式转换 ====================
 
   /**
    * 将 TATABOX 旧格式卡片状态转换为 ts-fsrs Card 对象
@@ -129,7 +125,6 @@
     };
   }
 
-  // ==================== 核心调度函数 ====================
 
   /**
    * 主调度函数：根据当前卡片状态和用户评分，计算下次复习时间
@@ -158,7 +153,6 @@
     return fromTsCard(result.card, result.log);
   }
 
-  // ==================== 卡片状态持久化（localStorage） ====================
 
   var STORAGE_KEY = 'bioquest_fsrs_cards';
 
@@ -214,7 +208,6 @@
     return newState;
   }
 
-  // ==================== 调度：获取今日复习卡片 ====================
 
   function getDueCards(cardIds, nowTimestamp) {
     var now = nowTimestamp || Date.now();
@@ -246,7 +239,6 @@
     };
   }
 
-  // ==================== 统计与可视化 ====================
 
   function getStatistics(cardIds) {
     var states = loadCardStates();
@@ -279,7 +271,6 @@
     };
   }
 
-  // ==================== 生成预测复习曲线 ====================
 
   function generateForecast(cardIds, daysAhead) {
     daysAhead = daysAhead || FSRS_DEFAULT_FORECAST_DAYS;
@@ -309,7 +300,6 @@
     return forecast;
   }
 
-  // ==================== 暴露到全局（扩展 ts-fsrs 的 window.FSRS） ====================
 
   // 保留 ts-fsrs 原始导出（Rating, State, fsrs, createEmptyCard 等）
   // 追加 TATABOX 兼容 API

@@ -8,19 +8,7 @@
 (function() {
   'use strict';
 
-  // 局部 HTML 转义 fallback，避免未加载 app.js 时参数选项含特殊字符出错
-  function escapeHtml(str) {
-    if (typeof window !== 'undefined' && typeof window.escapeHtml === 'function') {
-      return window.escapeHtml(str);
-    }
-    if (str == null) return '';
-    return String(str)
-      .replace(/&/g, '&amp;')
-      .replace(/</g, '&lt;')
-      .replace(/>/g, '&gt;')
-      .replace(/"/g, '&quot;')
-      .replace(/'/g, '&#39;');
-  }
+  var escapeHtml = (typeof window !== 'undefined' ? window : globalThis).escapeHtml; // 规范实现见 js/core/utils.js（Q-01 统一）
 
   var _experiments = {
     microscope: {

@@ -81,7 +81,6 @@
     }, 1150);
   }
 
-  // ===== 自动触发：动态内容中出现"正确反馈 / data-egg 声明" =====
   var _lastAuto = 0;
   function maybeAutoTrigger(node) {
     if (_isReducedMotion()) return;

@@ -348,7 +348,7 @@ function _exportChatMarkdown() {
   var hasGroup = state.rounds && state.rounds.length > 0;
   var hasPipeline = state.pipelineRuns && state.pipelineRuns.length > 0;
   if (!hasGroup && !hasPipeline) {
-    if (typeof showToast === 'function') showToast('暂无对话记录可导出');
+    showToast('暂无对话记录可导出');
     return;
   }
 
@@ -413,7 +413,7 @@ function _exportChatMarkdown() {
   a.download = 'bioquest-discussion-' + Date.now() + '.md';
   a.click();
   URL.revokeObjectURL(url);
-  if (typeof showToast === 'function') showToast('对话记录已导出为 Markdown');
+  showToast('对话记录已导出为 Markdown');
 }
 
 function _updateInputPlaceholder() {
@@ -453,13 +453,13 @@ function _renderAgentBar() {
       var idx = _discussionState.activeAgentKeys.indexOf(key);
       if (idx !== -1) {
         if (_discussionState.activeAgentKeys.length <= 3) {
-          if (typeof showToast === 'function') showToast('至少需要 3 位智能体');
+          showToast('至少需要 3 位智能体');
           return;
         }
         _discussionState.activeAgentKeys.splice(idx, 1);
       } else {
         if (_discussionState.activeAgentKeys.length >= 5) {
-          if (typeof showToast === 'function') showToast('最多 5 位智能体');
+          showToast('最多 5 位智能体');
           return;
         }
         _discussionState.activeAgentKeys.push(key);
@@ -529,7 +529,7 @@ function _openCustomAgentModal() {
     var name = (overlay.querySelector('#disc-ca-name').value || '').trim();
     var role = (overlay.querySelector('#disc-ca-role').value || '').trim();
     var style = (overlay.querySelector('#disc-ca-style').value || '').trim();
-    if (!name) { if (typeof showToast === 'function') showToast('请输入名称'); return; }
+    if (!name) { showToast('请输入名称'); return; }
     var sysPrompt = style || ('你是' + name + '，一位' + (role || '专家') + '。请从你的专业角度回答问题，控制在 300 字以内。');
     var arr = _discLoadCustomAgents();
     var newAgent = {
@@ -720,7 +720,7 @@ function _sendDiscussionMessage(text) {
 function _sendGroup(userMessage) {
   var keys = _discussionState.activeAgentKeys.slice();
   if (keys.length < 3) {
-    if (typeof showToast === 'function') showToast('群聊模式至少需要 3 位智能体');
+    showToast('群聊模式至少需要 3 位智能体');
     return;
   }
   // 准备 agent 元信息 + 发给后端的 agents 配置
@@ -781,7 +781,7 @@ function _sendGroup(userMessage) {
     if (err) {
       if (err.name === 'AbortError') { _finishGroupStream(round); return; }
       round.error = err.message || '讨论失败';
-      if (typeof showToast === 'function') showToast('讨论失败：' + (err.message || err));
+      showToast('讨论失败：' + (err.message || err));
     }
     _finishGroupStream(round);
   });
@@ -929,7 +929,7 @@ function _sendPipeline(userMessage) {
     if (err) {
       if (err.name === 'AbortError') { _finishPipelineStream(run); return; }
       run.error = err.message || '流水线失败';
-      if (typeof showToast === 'function') showToast('流水线失败：' + (err.message || err));
+      showToast('流水线失败：' + (err.message || err));
     }
     _finishPipelineStream(run);
   });
@@ -1062,12 +1062,12 @@ function _buildTranscript() {
 function _finalizeDiscussion() {
   var btn = document.getElementById('disc-finalize-btn');
   if (btn) btn.disabled = true;
-  if (typeof showToast === 'function') showToast('正在整合最终成果...');
+  showToast('正在整合最终成果...');
 
   var data = _buildTranscript();
   if (!data.transcript.length) {
     if (btn) btn.disabled = false;
-    if (typeof showToast === 'function') showToast('无讨论内容可整合');
+    showToast('无讨论内容可整合');
     return;
   }
 
@@ -1111,11 +1111,11 @@ function _finalizeDiscussion() {
       _discussionState.finalResult._topic = data.topic;
       _discussionState.finalResult._mode = _discussionState.mode;
       _renderMessages(document.getElementById('discussion-messages'));
-      if (typeof showToast === 'function') showToast('最终成果已生成，可导出');
+      showToast('最终成果已生成，可导出');
     },
     onError: function (err) {
       if (btn) btn.disabled = false;
-      if (typeof showToast === 'function') showToast('整合失败：' + (err.message || err));
+      showToast('整合失败：' + (err.message || err));
     }
   });
 }
@@ -1193,7 +1193,7 @@ function _exportFinal(fmt) {
 
   if (fmt === 'pdf') {
     var w = window.open('', '_blank');
-    if (!w) { if (typeof showToast === 'function') showToast('请允许弹窗以导出 PDF'); return; }
+    if (!w) { showToast('请允许弹窗以导出 PDF'); return; }
     w.document.write(fullHtml);
     w.document.close();
     setTimeout(function() { w.focus(); w.print(); }, 400);

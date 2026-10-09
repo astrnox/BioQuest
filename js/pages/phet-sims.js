@@ -13,11 +13,9 @@
   // 局部 HTML 转义 fallback
   var escapeHtml = window.escapeHtml;
 
-  // ============================================================
   // 30 个生物学 / 生物化学 / 生物物理 / 生态 类 PhET 互动模拟
   // 全部经 fetch(URL).status === 200 真实验证（无 404）
   // 验证时间：2026-08-09，针对 https://phet.colorado.edu/sims/html/{slug}/latest/{slug}_en.html
-  // ============================================================
   var SIMS = [
     // 1. 遗传学（中心法则 / 基因表达）
     {

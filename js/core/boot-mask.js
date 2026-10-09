@@ -120,7 +120,6 @@
     return !hasRenderedContent();
   }
 
-  // ---- 就绪判定 ----
   // 遮罩只在"页面可交互"后撤除：bioquest:app-ready 由 SPA 路由在首帧渲染完成后派发，
   // 此时全部 defer 脚本已按序执行完毕、首屏已绘制，页面可点击。
   // 不再等待 window.load —— 它会被 7.6MB 字体/图片等资源无限期拖住，造成

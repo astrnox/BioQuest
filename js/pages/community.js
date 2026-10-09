@@ -35,7 +35,6 @@ if (typeof window._cspHoverOut !== 'function') {
   }
   window.initCommunity = _initCommunitySafe;
 
-  // ===== 状态管理 =====
   var _communityState = {
     posts: [],
     currentPage: 1,
@@ -58,7 +57,6 @@ if (typeof window._cspHoverOut !== 'function') {
     { key: '笔记', label: '笔记', color: '#c4956a' }
   ];
 
-  // ===== 工具函数 =====
 
   function _showToast(msg) {
     var existing = document.getElementById('community-toast');
@@ -96,7 +94,7 @@ if (typeof window._cspHoverOut !== 'function') {
         if (result && result.ok) {
           _showToast('申诉已提交，管理员复核后将恢复信用');
         } else {
-          _showToast('申诉提交失败：' + (result && result.error ? result.error : '未知错误'));
+          _showToast('申诉提交失败：' + errText(result));
         }
       });
     }
@@ -263,7 +261,6 @@ if (typeof window._cspHoverOut !== 'function') {
     return { username: '', display_name: '' };
   }
 
-  // ===== 样式注入 =====
 
   function injectCommunityStyles() {
     var styleId = 'community-styles';
@@ -1328,7 +1325,6 @@ if (typeof window._cspHoverOut !== 'function') {
     document.head.appendChild(style);
   }
 
-  // ===== 示例数据（后端不可用时使用） =====
 
   var _SAMPLE_POSTS = [
     {
@@ -1373,7 +1369,6 @@ if (typeof window._cspHoverOut !== 'function') {
     }
   ];
 
-  // ===== API 调用 =====
 
   async function fetchPosts(page, tag) {
     // 等待 Supabase 客户端动态加载完成（有限超时）：
@@ -1562,7 +1557,6 @@ if (typeof window._cspHoverOut !== 'function') {
     return false;
   }
 
-  // ===== 图片灯箱 =====
 
   function _showImageLightbox(src, alt) {
     var existing = document.getElementById('community-lightbox');
@@ -1587,7 +1581,6 @@ if (typeof window._cspHoverOut !== 'function') {
     document.addEventListener('keydown', onKeydown);
   }
 
-  // ===== 渲染函数 =====
 
   function renderSkeletons(count) {
     var html = '';
@@ -1906,7 +1899,6 @@ if (typeof window._cspHoverOut !== 'function') {
       '</svg></button>';
   }
 
-  // ===== 主渲染函数 =====
 
   function renderCommunityPage(target) {
     if (!target) return;
@@ -1994,7 +1986,6 @@ if (typeof window._cspHoverOut !== 'function') {
     }
   }
 
-  // ===== 事件绑定 =====
 
   function bindCommunityEvents(target) {
     // 发帖按钮
@@ -2170,7 +2161,6 @@ if (typeof window._cspHoverOut !== 'function') {
     }
   }
 
-  // ===== 交互处理 =====
 
   /**
    * 赞同/取消赞同（社区点赞为单一模型：喜欢=1，再点取消；无点踩。
@@ -2324,7 +2314,6 @@ if (typeof window._cspHoverOut !== 'function') {
     }
   }
 
-  // ===== 举报功能 =====
 
   function showReportModal(postId) {
     if (!isUserLoggedIn()) {
@@ -2621,7 +2610,6 @@ if (typeof window._cspHoverOut !== 'function') {
     pagination.innerHTML = html;
   }
 
-  // ===== 发帖弹窗 =====
 
   function showComposeModal() {
     var existing = document.getElementById('community-compose-overlay');
@@ -2832,7 +2820,6 @@ if (typeof window._cspHoverOut !== 'function') {
     }, 100);
   }
 
-  // ===== 初始化函数 =====
 
   function initCommunity(target) {
     try {
@@ -2860,7 +2847,6 @@ if (typeof window._cspHoverOut !== 'function') {
     }
   }
 
-  // ===== 暴露到全局 =====
   window.renderCommunityPage = renderCommunityPage;
   window.initCommunity = initCommunity;
 

@@ -331,7 +331,6 @@ async function renderEbookTab(container) {
     }
   });
 
-  // ===== PDF管理 =====
   var PDF_BOOKS = [
     { name: '陈阅增普通生物学 (第4版)', key: 'chen_biology_4th' },
     { name: '陈祖洞遗传学', key: 'chen_genetics' },
@@ -613,7 +612,7 @@ async function renderEbookTab(container) {
             const uploadData = await result.json().catch(() => ({ error: '响应解析失败' }));
             if (!result.ok || !uploadData.ok) {
               if (attempt >= MAX_RETRY - 1) {
-                showAdminToast('上传失败: ' + (uploadData.error || '未知错误'), 'error');
+                showAdminToast('上传失败: ' + errText(uploadData.error), 'error');
                 return;
               }
               throw new Error(uploadData.error || ('HTTP ' + result.status));
@@ -689,7 +688,7 @@ window.adminDeletePdf = async function(bookKey, filePath, isCustom) {
     });
     const data = await res.json().catch(() => ({ error: '响应解析失败' }));
     if (!res.ok || !data.ok) {
-      showAdminToast('删除失败: ' + (data.error || '未知错误'), 'error');
+      showAdminToast('删除失败: ' + errText(data.error), 'error');
       return;
     }
 

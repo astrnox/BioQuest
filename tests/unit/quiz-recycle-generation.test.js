@@ -37,6 +37,8 @@ describe('试题页出卷实时排除回收站题目', () => {
       return { ok: false, json: async () => ({}) };
     };
 
+    // 与浏览器一致：utils.js（规范 escapeHtml 等共享工具）先于业务模块加载
+    window.eval(read('js/core/utils.js'));
     window.eval(read('js/core/storage.js'));
     window.eval(read('js/core/rating.js'));
     const quizSrc = read('js/pages/quiz.js').replace(/^('use strict'|"use strict");?\s*\n?/, '');

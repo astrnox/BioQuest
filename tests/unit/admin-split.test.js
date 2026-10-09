@@ -35,6 +35,8 @@ const MODULES = [
 ];
 
 beforeAll(() => {
+  // 与浏览器一致：utils.js（规范 escapeHtml 等共享工具）先于业务模块加载
+  loadScript(read('js/core/utils.js'));
   loadScript(read('js/admin/admin.js'));
 });
 

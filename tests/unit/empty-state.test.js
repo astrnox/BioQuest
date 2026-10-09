@@ -17,6 +17,14 @@ const path = require('path');
 
 const SRC = path.join(__dirname, '..', '..', 'js', 'core', 'empty-state.js');
 const source = fs.readFileSync(SRC, 'utf8');
+const utilsSource = fs.readFileSync(
+  path.join(__dirname, '..', '..', 'js', 'core', 'utils.js'), 'utf8');
+
+// 从 utils.js 提取规范 escapeHtml（Q-01 唯一实现），注入沙箱 window —— 与浏览器中
+// 「utils.js 先于业务模块加载」的依赖顺序一致；测试断言的仍是真实转义行为。
+const canonicalEscapeHtml = new Function(
+  utilsSource.match(/function escapeHtml\(str\) \{[\s\S]*?\n\}/)[0] + '\n;return escapeHtml;'
+)();
 
 function listenCapture(target, type) {
   const handlers = [];
@@ -35,7 +43,7 @@ function makeContainer() {
  */
 function loadHarness() {
   const doc = { addEventListener() {} };
-  const win = { TATABOX: null };
+  const win = { TATABOX: null, escapeHtml: canonicalEscapeHtml };
   const factory = new Function(
     'window', 'document', 'console',
     source + '\n;return { api: window.BioQuest };'
@@ -77,7 +85,8 @@ describe('Issue #125 统一空状态组件', () => {
     const { api } = loadHarness();
     const html = api.emptyStateHTML({ title: '<img src=x onerror=alert(1)>', action: { label: '"\'><script>' } });
     expect(html).not.toContain('<img src=x onerror=alert(1)>');
-    expect(html).toContain('&lt;img src=x onerror=alert(1)&gt;');
+    // 规范 escapeHtml（Q-01）额外转义 = / ` 等属性注入敏感字符
+    expect(html).toContain('&lt;img src&#x3D;x onerror&#x3D;alert(1)&gt;');
     expect(html).toContain('&quot;&#39;&gt;&lt;script&gt;');
   });
 
@@ -105,7 +114,7 @@ describe('Issue #125 统一空状态组件', () => {
       'window', 'document', 'console',
       source + '\n;return { api: window.BioQuest };'
     );
-    const out = factory({ TATABOX: null }, doc, console);
+    const out = factory({ TATABOX: null, escapeHtml: canonicalEscapeHtml }, doc, console);
     const container = makeContainer();
     out.api.renderEmptyState(container, {
       title: '空',
@@ -137,7 +146,7 @@ describe('Issue #125 统一空状态组件', () => {
       'window', 'document', 'console',
       source + '\n;return { api: window.BioQuest };'
     );
-    const out = factory({ TATABOX: null }, doc, console);
+    const out = factory({ TATABOX: null, escapeHtml: canonicalEscapeHtml }, doc, console);
     out.api.emptyStateHTML({
       title: '空',
       action: { label: '去练习', onClick: function () { called.push('go'); } }
@@ -158,7 +167,7 @@ describe('Issue #125 统一空状态组件', () => {
       'window', 'document', 'console',
       source + '\n;return { api: window.BioQuest };'
     );
-    const out = factory({ TATABOX: null }, doc, console);
+    const out = factory({ TATABOX: null, escapeHtml: canonicalEscapeHtml }, doc, console);
     const container = makeContainer();
     out.api.renderEmptyState(container, { title: '空', action: { label: 'L', onClick: function () {} } });
     expect(() => clickHandlers[0]({ target: null })).not.toThrow();

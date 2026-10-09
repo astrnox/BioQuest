@@ -9,7 +9,6 @@
   var SUPABASE_URL = 'https://qxehkfucvmxuojjkdaqy.supabase.co';
   var SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InF4ZWhrZnVjdm14dW9qamtkYXF5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODY2MjU2ODUsImV4cCI6MjEwMjIwMTY4NX0.lbiJxhFvy0t_J4qSeoP6K0r53M4KaEDSKkRlZu03ze8';
 
-  // ============================================================
   // 每日亿题专属题库 v2（2026 联赛送分池）
   // 100 道纯文字判断题（MTF，对应 2025 联赛「4 选项判断题」题型）：
   //   - 题干简洁、纯文字、无图
@@ -17,7 +16,6 @@
   //   - 解析逐项说明对错依据（考点定位 + 依据/错因 + 易错提醒）
   // 通用上传脚本会把这 6 个分片带 daily-league 标签写入 questions 表，
   // 云端查询按该标签过滤；本地直接读取分片文件（与云端内容同源）。
-  // ============================================================
   var LOCAL_BANK_FILES = [
     'data/bank/daily_league_cellbio.json',            // 细胞生物学 12
     'data/bank/daily_league_biochem_microbe.json',    // 生物化学+微生物学 13
@@ -31,7 +29,6 @@
   var _supabaseRetryCount = 0;
   var _supabaseMaxRetries = 3;
 
-  // ========== 状态管理 ==========
   var state = {
     questions: [],
     loadedIds: {},           // 已加载的题目ID集合，防重复
@@ -65,7 +62,6 @@
   var _progressStart = 0;
   var _toastTimer = null;
 
-  // ========== 工具函数 ==========
   var escapeHtml = window.escapeHtml;
 
   function waitForSupabaseSDK(timeoutMs) {
@@ -161,7 +157,6 @@
     return result;
   }
 
-  // ========== 随机加载题目 ==========
   // 云题库查询统一包裹"超时保护"：Supabase 位于韩国，弱网/跨国链路下单请求
   // 可能长时间无响应（表现为进入路由后迟迟不出题、用户等待中切走路由时
   // 在途请求被取消产生 net::ERR_ABORTED）。超时后按失败处理，立即回退本地题库。
@@ -267,7 +262,6 @@
     }
   }
 
-  // ========== 加载题目（Supabase优先，本地Fallback） ==========
   async function loadQuestions(limit) {
     if (state.isLoading) return;
     state.isLoading = true;
@@ -313,7 +307,6 @@
     finishProgressBar();
   }
 
-  // ========== 进度条 ==========
   function startProgressBar() {
     _progressStart = Date.now();
     var bar = wrapperEl && wrapperEl.querySelector('#dbProgressBar');
@@ -345,7 +338,6 @@
     }
   }
 
-  // ========== Toast提示 ==========
   function showToast(msg) {
     if (_toastTimer) clearTimeout(_toastTimer);
     if (!wrapperEl) return;
@@ -363,7 +355,6 @@
     }, 2000);
   }
 
-  // ========== 刷太快检测 ==========
   function checkSpeedWarn() {
     var now = Date.now();
     if (state.lastSubmitTime > 0) {
@@ -384,7 +375,6 @@
     state.lastSubmitTime = now;
   }
 
-  // ========== 渲染顶部栏 ==========
   function renderTopBar() {
     if (!wrapperEl || _destroyed) return;
     var html = '';
@@ -412,7 +402,6 @@
     topBarEl = wrapperEl.querySelector('#dbTopBar');
   }
 
-  // ========== 渲染右侧操作栏 ==========
   function renderActionBar(q) {
     var fid = 'fav-' + q.id;
     var isFav = state.favorites[q.id];
@@ -439,7 +428,6 @@
     return html;
   }
 
-  // ========== 渲染单张题目卡片 ==========
   // 统一判卷模式：作答阶段只保留"选择 + 完成本题"，不显示任何对错/得分/解析，
   // 全部判卷在点击「结束/返回」时由成绩单面板统一完成。
   function renderQuestionCard(q, index) {
@@ -509,7 +497,6 @@
       '</div><span>加载题目中<span class="bq-loader-typing" aria-hidden="true"><i></i><i></i><i></i></span></span></div></div>';
   }
 
-  // ========== 成绩单面板（统一判卷） ==========
   // 设计原则（人性化）：
   //   1. 作答阶段零判卷——不出现对错/得分/解析，保持刷题心流
   //   2. 结束时统一出成绩单：每题得分、每子项你的判断 vs 正确答案、解析
@@ -707,7 +694,6 @@
       '</div></div>';
   }
 
-  // ========== 渲染整页 ==========
   function renderPage() {
     if (!pageEl || _destroyed) return;
     var html = '';
@@ -722,7 +708,6 @@
     updateCounter();
   }
 
-  // ========== 更新计数器 ==========
   function updateCounter() {
     var numEl = wrapperEl && wrapperEl.querySelector('#dbCounterNum');
     if (numEl) numEl.textContent = state.totalAnswered;
@@ -733,7 +718,6 @@
     if (badge) { badge.classList.remove('pulse'); void badge.offsetWidth; badge.classList.add('pulse'); }
   }
 
-  // ========== 事件委托 ==========
   function setupGlobalDelegation() {
     if (!wrapperEl || _destroyed) return;
     wrapperEl.removeEventListener('click', globalClickHandler);
@@ -838,7 +822,6 @@
     }, 160);
   }
 
-  // ========== 收藏 ==========
   function handleFav(btn) {
     var qid = btn.dataset.qid;
     if (state.favorites[qid]) {
@@ -856,7 +839,6 @@
     saveState();
   }
 
-  // ========== 赞/踩反馈 ==========
   function handleFeedback(btn, type) {
     var qid = btn.dataset.qid;
     // 切换：再次点击取消
@@ -889,7 +871,6 @@
     saveState();
   }
 
-  // ========== 分享 ==========
   function handleShare(btn) {
     var qid = btn.dataset.qid;
     var url = window.location.origin + window.location.pathname + '#/daily-billion?q=' + qid;
@@ -904,7 +885,6 @@
     }
   }
 
-  // ========== 滚动监听（懒加载 + 入场动画激活） ==========
   // 缓存：避免重复绑定 scroll fallback
   var _scrollFallbackBound = false;
   var _scrollFallbackTimer = null;
@@ -916,7 +896,6 @@
     if (!pageEl || _destroyed) return;
     if (scrollObserver) { scrollObserver.disconnect(); scrollObserver = null; }
 
-    // ========== 动画性能关键：卡片视口可见性控制入场动画 ==========
     // 问题：scroll-snap-mandatory 模式下首屏会同时创建多张卡片 DOM，
     //       浏览器同时排队播放入场动画（dbCardReveal / dbSubItemIn 等）
     //       → 合成线程压力大 → 掉帧 / 卡顿
@@ -1071,7 +1050,6 @@
         loading.innerHTML = '<div class="db-loading-content"><span>&#127881; 已刷完当前题库，厉害！</span></div>';
       }
     }
-    // ========== 关键：为新增卡片注册入场动画观察（避免离屏时也播动画造成卡顿） ==========
     if (_cardAnimObserver && addedCardEls.length > 0) {
       for (var ai = 0; ai < addedCardEls.length; ai++) {
         try { _cardAnimObserver.observe(addedCardEls[ai]); } catch (e) {}
@@ -1086,7 +1064,6 @@
     setupScrollObserver();
   }
 
-  // ========== 触摸滑动 ==========
   function handleTouchStart(e) {
     if (e.touches.length !== 1) return;
     _touchStartY = e.touches[0].clientY;
@@ -1115,7 +1092,6 @@
     }, isGesture ? 460 : 120);
   }
 
-  // ========== 结束判卷 / 继续 / 重启 / 退出 ==========
   function handleStop() {
     openReportPanel();
   }
@@ -1224,7 +1200,6 @@
     try { localStorage.removeItem('bioquest_billion_v3'); } catch(e) {}
   }
 
-  // ========== 状态持久化 ==========
   var _saveTimer = null;
   function saveState() {
     if (_saveTimer) clearTimeout(_saveTimer);
@@ -1260,7 +1235,6 @@
     } catch(e) {}
   }
 
-  // ========== 键盘快捷键 ==========
   function handleKeyDown(e) {
     if (!pageEl || _destroyed) return;
     if (!wrapperEl || !document.body.contains(wrapperEl)) return;
@@ -1305,7 +1279,6 @@
     if (prevIdx !== currentIdx) cards[prevIdx].scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
-  // ========== 初始化 ==========
   async function initDailyBillionCore() {
     if (_destroyed) return;
     if (wrapperEl) { cleanupDom(); }
@@ -1349,7 +1322,6 @@
     pageEl.addEventListener('touchend', handleTouchEnd, { passive: true });
   }
 
-  // ========== 公开接口 ==========
   function init(target) {
     targetEl = target;
     _destroyed = false;

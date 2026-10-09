@@ -111,13 +111,11 @@ function _fetchLocalJsonWithRetry(url, attempts, timeoutMs) {
   return attempt(1);
 }
 
-// ===== 时间/间隔常量 =====
 var PRACTICE_SYNC_DEBOUNCE_MS = 300;     // 分数同步防抖时间
 var PRACTICE_PANEL_FADE_MS = 250;         // 筛选面板淡出延迟（重渲染前等待过渡完成）
 var PRACTICE_PULL_TICK_MS = 1000;         // 拉取冷却倒计时刷新间隔
 var PRACTICE_LAST_Q_BANNER_MS = 1200;     // 最后一题横幅展示时长
 
-// ===== 实时分数同步机制 =====
 var SYNC_INTERVAL = 5; // 每答几题同步一次（可配置）
 var _syncAnswerCounter = 0;
 var _syncDebounceTimer = null;
@@ -1593,9 +1591,7 @@ function bindFilterEvents() {
       if (hintEl) hintEl.textContent = val === 'local'
         ? '仅从站点内 data/ 读取题目，不发远程请求'
         : '云端优先，本地兜底（默认）';
-      if (typeof showToast === 'function') {
-        showToast(val === 'local' ? '已切换为本地题库，正在重新加载题目…' : '已切换为云端同步，正在重新加载题目…');
-      }
+showToast(val === 'local' ? '已切换为本地题库，正在重新加载题目…' : '已切换为云端同步，正在重新加载题目…');
       await loadPracticeQuestions();
       applyFilters();
       updateAvailableCount();
@@ -1796,7 +1792,6 @@ function updateAvailableCount() {
   _renderPullSummary();
 }
 
-// ===== 拉取新题（带冷却） =====
 var PULL_COOLDOWN_MS = 20 * 1000; // 20 秒冷却（用户要求）
 var PULL_COOLDOWN_KEY = 'bioquest_pull_cooldown_until';
 var PULL_COOLDOWN_TIMER = null;
@@ -2175,7 +2170,6 @@ function renderQuiz() {
   const isWrongMarked = PracticeState.wrongMarked.has(qId);
 
   if (isLogicQuestion) {
-    // ====== 逻辑推理题渲染（单选题格式，options 数组）======
     const optionLabels = ['A', 'B', 'C', 'D', 'E'];
     const userAns = userAnswers[0];
 
@@ -2208,7 +2202,6 @@ function renderQuiz() {
       `;
     }
   } else if (isStandardChoice) {
-    // ====== 标准单选题渲染（题库格式，options 对象 {A:..,B:..}）======
     const userAns = userAnswers[0];
     const optionKeys = Object.keys(q.options).sort();
 
@@ -2240,7 +2233,6 @@ function renderQuiz() {
       `;
     }
   } else {
-    // ====== MTF 题型渲染（基础知识 subQuestions / 逻辑题 mtf 选项转换）======
     const subQuestions = getEffectiveSubQuestions(q);
     subQuestionsHtml = subQuestions
       .map((sq, idx) => {
@@ -2927,7 +2919,7 @@ function startRedoSession(questions) {
 function handleShareCurrentQuestion() {
   var q = PracticeState.currentSet[PracticeState.currentIndex];
   if (!q || !q.question) {
-    if (typeof showToast === 'function') showToast('没有可分享的题目');
+    showToast('没有可分享的题目');
     return;
   }
 
@@ -2959,11 +2951,11 @@ function handleShareCurrentQuestion() {
 function _practiceShareCopy(url) {
   if (typeof navigator !== 'undefined' && navigator.clipboard && navigator.clipboard.writeText) {
     navigator.clipboard.writeText(url).then(function () {
-      if (typeof showToast === 'function') showToast('链接已复制，发给好友即可查看本题');
+      showToast('链接已复制，发给好友即可查看本题');
     }).catch(function () {
-      if (typeof showToast === 'function') showToast('分享链接: ' + url);
+      showToast('分享链接: ' + url);
     });
-  } else if (typeof showToast === 'function') {
+  } else {
     showToast('分享链接: ' + url);
   }
 }
@@ -3192,9 +3184,7 @@ function initPractice(target) {
   }
 }
 
-// ============================================================
 // PRD §5-1：答题时自动隐藏 Header（向上滚动隐藏，向下滚动出现）
-// ============================================================
 var _headerAutoHide = { lastScrollY: 0, enabled: false };
 
 function enableHeaderAutoHide() {
@@ -3227,9 +3217,7 @@ function _onPracticeScroll() {
   _headerAutoHide.lastScrollY = currentY;
 }
 
-// ============================================================
 // PRD §5-50：最后一题仪式感
-// ============================================================
 function showLastQuestionEffect(callback) {
   var progressBar = document.querySelector('.practice-progress-bar-fill, .progress-fill, [class*="progress"]');
   if (progressBar) {
@@ -3296,13 +3284,11 @@ window.enableHeaderAutoHide = enableHeaderAutoHide;
 window.disableHeaderAutoHide = disableHeaderAutoHide;
 window.showLastQuestionEffect = showLastQuestionEffect;
 
-// ============================================================
 // PRD §5-40：答题键盘快捷键（仅练习答题流程生效）
 //   1 / 2 / 3 / 4 → 选 A / B / C / D（单选题：标准单选 & 逻辑推理）
 //   Space / Enter → 提交答案，已提交则跳下一题
 //   R → 重做当前题目（清空作答，可重新作答；统计仅计首次）
 //   Esc → 返回筛选（题目列表）
-// ============================================================
 var _practiceKbBound = false;
 
 function _practiceOverlayOpen() {

@@ -158,7 +158,7 @@ function renderPrivacyPage(target) {
     '<a href="#/" style="display:inline-flex;align-items:center;gap:6px;color:' + s.sage + ';text-decoration:none;font-size:0.88rem;margin-bottom:20px;">← 返回首页</a>' +
     '<div style="background:' + s.card + ';border:1px solid ' + s.border + ';border-radius:16px;padding:36px 40px 44px;box-shadow:var(--shadow-lg);">' +
       '<h1 style="font-family:var(--font-serif,\'Noto Serif SC\',serif);font-size:1.7rem;color:' + s.accent + ';margin:0 0 6px;">隐私政策</h1>' +
-      '<p style="color:' + s.muted + ';font-size:0.82rem;margin:0 0 26px;">更新日期：2026-08-19 · 适用于 TATABOX（高中学习平台）</p>' +
+      '<p style="color:' + s.muted + ';font-size:0.82rem;margin:0 0 26px;">更新日期：2026-08-19 · 适用于 TATABOX（高中生物学习平台）</p>' +
       _privacySection('一、我们收集哪些数据', [
         '账户信息：你在登录/注册时提供的姓名、邮箱（例如通过 Supabase 账号系统）。',
         '学习数据：练习作答、错题、收藏、统计、习惯打卡、徽章与学习进度等，默认仅保存在你的浏览器本地（localStorage／IndexedDB）。',
@@ -365,8 +365,8 @@ function updatePageTitle(route) {
   if (routeConfig) {
     // 首页用完整品牌语（与静态 <title> 保持一致），其余路由为「页面名 - 品牌」
     document.title = route === '/'
-      ? 'TATABOX — 高中学习刷题平台'
-      : `${routeConfig.title} - TATABOX 高中学习平台`;
+      ? 'TATABOX — 高中生物刷题平台'
+      : `${routeConfig.title} - TATABOX 高中生物学习平台`;
   }
 }
 
@@ -433,7 +433,7 @@ function renderExamPage(target) {
         <div style="text-align:center;padding:64px 24px;">
           <div style="font-size:2rem;margin-bottom:12px;"></div>
           <p style="color:var(--color-error);">加载考试模块失败，请刷新页面重试</p>
-          <p style="color:var(--text-muted);font-size:0.9rem;margin-top:8px;">错误信息: ${err.message || '未知错误'}</p>
+          <p style="color:var(--text-muted);font-size:0.9rem;margin-top:8px;">错误信息: ${errText(err)}</p>
         </div>
       `;
     }
@@ -716,7 +716,6 @@ function renderSearchPage() {
       var externalData = responses[1];
       var html = '';
 
-      // ====== 题库搜索结果 ======
       var localResults = localData.results || [];
       var localTotal = localData.total || 0;
 
@@ -776,7 +775,6 @@ function renderSearchPage() {
         html += '</div>';
       }
 
-      // ====== 外部结果 — 按 tag 分组 ======
       var allExternal = externalData.results || [];
 
       if (allExternal.length > 0) {
@@ -1054,12 +1052,7 @@ function extractTags(text) {
  * HTML 转义 — 统一使用 window.escapeHtml（Q-01）
  * 规范实现在 js/core/utils.js，避免各模块重复定义导致转义字符集不一致
  */
-var escapeHtml = (typeof window !== 'undefined' && typeof window.escapeHtml === 'function')
-  ? window.escapeHtml
-  : function(str) {
-      if (!str) return '';
-      return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
-    };
+var escapeHtml = (typeof window !== 'undefined' ? window : globalThis).escapeHtml; // 规范实现见 js/core/utils.js（Q-01 统一）
 
 /**
  * 重新初始化首页关键组件（倒计时、Hero 动画、滚动动画）
@@ -2719,12 +2712,10 @@ window.testSupabaseAPI = async function() {
  * 初始化 Supabase 云端同步
  * 先动态加载 supabase 相关脚本（首屏不加载，节省 ~140KB）
  */
-// ============================================================
 // 全局「认证就绪」信号
 // 修复：「我的」等需要登录的页面在整页加载时，会先于 Supabase 会话恢复
 // 而渲染，导致 isLoggedIn() 误判为未登录。通过该 Promise 让这些页面
 // 等待会话恢复完成后再判断登录态，实现「登录一次全局生效」。
-// ============================================================
 var _authReadyResolve = null;
 var _authReadyPromise = new Promise(function (res) { _authReadyResolve = res; });
 window._authReadyPromise = _authReadyPromise;
@@ -3763,7 +3754,6 @@ function _openPasswordSetup(source) {
   });
 }
 
-// ===== 滑动拼图验证码（纯前端，零依赖，国内友好） =====
 // 设计：用户拖动滑块到缺口位置，验证水平距离 + 通过时间
 // - 缺口位置随机（80-220px）
 // - 容差 ±5px，时间需 0.5-30s 内完成
@@ -4522,9 +4512,7 @@ async function handleGuestLogin() {
     closeAuthModal();
     showStorageStatus('local');
     updateAuthUI();
-    if (typeof showToast === 'function') {
-      showToast('已作为游客登录，数据保存在本地');
-    }
+showToast('已作为游客登录，数据保存在本地');
     // 游客登录后同样刷新当前受保护路由的登录态，避免停在「请先登录」页
     if (typeof _refreshCurrentProtectedRoute === 'function') {
       try {
@@ -4691,9 +4679,7 @@ function _continueRegisterSuccess(result, password) {
     closeAuthModal();
     showStorageStatus('cloud');
     if (typeof _setCurrentUser === 'function') _setCurrentUser(result.user);
-    if (typeof showToast === 'function') {
-      showToast('注册成功！账号已激活，正在为你登录...');
-    }
+showToast('注册成功！账号已激活，正在为你登录...');
     setTimeout(function () {
       // 自动用刚注册的密码登录
       var loginInput = document.getElementById('auth-login-username');
@@ -4710,9 +4696,7 @@ function _continueRegisterSuccess(result, password) {
   if (typeof _setCurrentUser === 'function') _setCurrentUser(result.user);
   var uname = (result.user || {}).username || '用户';
 
-  if (typeof showToast === 'function') {
-    showToast('注册成功！欢迎加入 TATABOX');
-  }
+showToast('注册成功！欢迎加入 TATABOX');
 }
 
 /**
@@ -5655,7 +5639,7 @@ function openDonation() {
     <div class="donation-modal">
       <button class="donation-close" aria-label="关闭">&times;</button>
       <div class="donation-title">赞赏支持</div>
-      <div class="donation-desc">TATABOX 是开源免费的高中学习平台。如果您觉得这个项目有帮助，欢迎通过爱发电支持我们持续维护和更新。</div>
+      <div class="donation-desc">TATABOX 是开源免费的高中生物学习平台。如果您觉得这个项目有帮助，欢迎通过爱发电支持我们持续维护和更新。</div>
       <div class="donation-qr-area">
         <a href="https://ifdian.net/a/astrnox" target="_blank" rel="noopener noreferrer" class="donation-link-btn">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -5694,9 +5678,7 @@ function openDonation() {
   }
 }
 
-// ============================================================
 // 聚合搜索功能
-// ============================================================
 
 function showSearchModal(prefillQuery) {
   if (typeof navigateTo === 'function') {
@@ -5725,9 +5707,7 @@ window.extractTags = extractTags;
 window.handleRoute = handleRoute;
 window.navigateTo = navigateTo;
 
-// ============================================================
 // 用户反馈系统
-// ============================================================
 
 /**
  * 显示反馈弹窗
@@ -5847,7 +5827,7 @@ function handleFeedbackSubmit() {
     localStorage.setItem('bioquest_feedbacks', JSON.stringify(existing));
   } catch (e) {
     if (errorEl) {
-      errorEl.textContent = '存储失败：' + (e.message || '未知错误');
+      errorEl.textContent = '存储失败：' + errText(e);
       return;
     }
   }
@@ -5870,80 +5850,7 @@ function handleFeedbackSubmit() {
   }
 
   closeFeedbackModal();
-  if (typeof showToast === 'function') {
-    showToast('感谢你的反馈！我们会认真查看每一条建议');
-  }
-}
-
-/**
- * 显示 Toast 通知
- * P1-12（Issue #121）增强：
- *   - 第二参数兼容两种形态：'error'|'success'|'info'（类型化样式）或数字（毫秒时长）；
- *     修复 habits.js 等处误传 'error' 字符串导致 setTimeout(…,'error') 被 coerce 成 0ms
- *     立即消失、且错误无视觉区分的缺陷；
- *   - 增加 role="alert" + aria-live，读屏用户可感知错误/状态提示。
- * @param {string} message 提示文本
- * @param {string|number} [typeOrDuration] 'error'|'success'|'info' 或毫秒数
- * @param {number} [duration] 显示时长（毫秒），默认 success/info 3000、error 4500
- */
-function showToast(message, typeOrDuration, duration) {
-  var type = 'info';
-  if (typeOrDuration === 'error' || typeOrDuration === 'success' || typeOrDuration === 'info') {
-    type = typeOrDuration;
-  } else if (typeof typeOrDuration === 'number' && typeOrDuration > 0) {
-    duration = typeOrDuration; // 旧签名 showToast(msg, ms) 兼容
-  }
-  if (!(typeof duration === 'number' && duration > 0)) {
-    duration = type === 'error' ? 4500 : 3000;
-  }
-
-  var existing = document.getElementById('bioquest-toast');
-  if (existing) existing.remove();
-
-  var typeBg = type === 'error' ? 'rgba(160,58,44,0.96)' : type === 'success' ? 'rgba(38,92,58,0.96)' : 'rgba(26,58,42,0.95)';
-  var typeBorder = type === 'error' ? 'rgba(200,90,70,0.5)' : type === 'success' ? 'rgba(90,180,120,0.5)' : 'rgba(58,140,92,0.3)';
-
-  var toast = document.createElement('div');
-  toast.id = 'bioquest-toast';
-  // P1-12：错误用 assertive（立即播报），其余 polite
-  toast.setAttribute('role', type === 'error' ? 'alert' : 'status');
-  toast.setAttribute('aria-live', type === 'error' ? 'assertive' : 'polite');
-  toast.style.cssText = [
-    'position:fixed',
-    'bottom:80px',
-    'left:50%',
-    'transform:translateX(-50%)',
-    'z-index:99999',
-    'background:' + typeBg,
-    'color:#fff',
-    'padding:12px 24px',
-    'border-radius:16px',
-    'font-size:0.9rem',
-    'font-weight:500',
-    'box-shadow:var(--shadow-lg)',
-    'border:1px solid ' + typeBorder,
-    'animation:toastSlideUp 0.3s ease',
-    'max-width:90vw',
-    'text-align:center',
-    'pointer-events:none'
-  ].join(';');
-  toast.textContent = message;
-  document.body.appendChild(toast);
-
-  // 添加动画样式
-  if (!document.getElementById('toast-style')) {
-    var style = document.createElement('style');
-    style.id = 'toast-style';
-    style.textContent = '@keyframes toastSlideUp{from{transform:translateX(-50%) translateY(20px);opacity:0}to{transform:translateX(-50%) translateY(0);opacity:1}}@keyframes toastSlideDown{from{transform:translateX(-50%) translateY(0);opacity:1}to{transform:translateX(-50%) translateY(20px);opacity:0}}';
-    document.head.appendChild(style);
-  }
-
-  setTimeout(function() {
-    toast.style.animation = 'toastSlideDown 0.3s ease forwards';
-    setTimeout(function() {
-      if (toast.parentNode) toast.parentNode.removeChild(toast);
-    }, 300);
-  }, duration);
+  showToast('感谢你的反馈！我们会认真查看每一条建议');
 }
 
 /**
@@ -6028,9 +5935,7 @@ window.handleFeedbackSubmit = handleFeedbackSubmit;
 window.showToast = showToast;
 window.showUndoToast = showUndoToast;
 
-// ============================================================
 // PRD §5-30：网络状态指示器
-// ============================================================
 (function () {
   var indicator = document.createElement('div');
   indicator.id = 'network-status-indicator';
@@ -6079,13 +5984,10 @@ window.showUndoToast = showUndoToast;
   document.body.appendChild(indicator);
 })();
 
-// ============================================================
 // PRD §5-31：Service Worker 更新提示（防挂起版）
-// ----------------------------------------------------------------
 // 修复：首次进入 navigator.serviceWorker.ready 可能永远 pending（新用户没有
 // controller 时），必须加超时安全网 + controllerchange 双保险，避免
 // 监听 updatefound 的回调永远注册不上导致用户感知"卡住/要刷新"。
-// ============================================================
 (function () {
   if (!('serviceWorker' in navigator)) return;
 
@@ -6175,16 +6077,13 @@ window.showUndoToast = showUndoToast;
   });
 })();
 
-// ============================================================
 // Issue #16：「检查更新」手动入口
-// ----------------------------------------------------------------
 // 两级检查：
 //   1. 外壳更新：reg.update() 发现新 SW → 提示刷新（复用上方横幅）；
 //   2. 题库更新：拉取最新 data/manifest.json，比对 rev（loader 持久化于
 //      localStorage.bq_manifest_rev）→ 有新版则清空 SW 题库 runtime cache
 //      + 触发后台增量刷新（IndexedDB 按 manifest SHA 增量替换）。
 // 全程离线安全：任何网络失败都提示"检查失败"，不影响现有功能。
-// ============================================================
 (function () {
   function _updateToast(text, ms) {
     try {
@@ -6288,15 +6187,12 @@ window.showUndoToast = showUndoToast;
   };
 })();
 
-// ============================================================
 // P1-26 修复：beforeinstallprompt — 自定义 PWA 安装引导
-// ----------------------------------------------------------------
 // 监听 beforeinstallprompt；可安装时在左下角显示自定义安装引导条，
 // 替代浏览器默认安装 UI。点击后调用 deferredPrompt.prompt()；
 // 安装完成（appinstalled）或用户拒绝/手动关闭后移除，
 // 并用 localStorage 记录"已处理"，避免重复打扰。
 // 仅 Chromium 系支持 beforeinstallprompt，其余浏览器直接跳过。
-// ============================================================
 (function () {
   if (!('beforeinstallprompt' in window)) return;
 

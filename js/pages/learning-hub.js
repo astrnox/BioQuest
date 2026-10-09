@@ -16,7 +16,6 @@
 (function (global) {
   'use strict';
 
-  // ---------- 模块状态 ----------
   var state = {
     target: null,
     userId: null,
@@ -27,7 +26,6 @@
 
   function _uid() { return (global.Auth && global.Auth.currentUser && global.Auth.currentUser.id) || 'guest'; }
 
-  // ---------- 任务模型 ----------
   // 任务类型：classroom | practice | review | custom
   // 任务状态：pending | running | done | failed | aborted
 
@@ -169,7 +167,6 @@
     }
   }
 
-  // ---------- 渲染 ----------
   function initLearningHub(target) {
     if (!target) return;
     state.target = target;
@@ -395,7 +392,6 @@
     }
   }
 
-  // ---------- 任务操作 ----------
   function addTask(task) {
     var t = {
       id: 't_' + Date.now() + '_' + Math.random().toString(36).slice(2, 6),
@@ -438,7 +434,6 @@
     _renderTimeline();
   }
 
-  // ---------- 事件绑定 ----------
   function _bindEvents() {
     if (!state.target) return;
     var addBtn = state.target.querySelector('#lmc-add-task-btn');
@@ -485,7 +480,6 @@
     }
   }
 
-  // ---------- 自定义模态框（替代 window.prompt / confirm，避免 Trae 预览错误） ----------
   // v4.0 a11y：当前活跃的焦点陷阱句柄（_closeModal 时释放）
   var _activeModalTrap = null;
   function _setupModalTrap(backdrop, initialFocus) {
@@ -563,7 +557,6 @@
     if (existing) existing.remove();
   }
 
-  // ---------- 新建任务对话框（替代 prompt） ----------
   function _showAddTaskDialog() {
     var content = `
       <div class="lmc-form">
@@ -624,7 +617,6 @@
     }, 50);
   }
 
-  // ---------- 编辑任务 ----------
   function _showEditTaskDialog(taskId) {
     var t = state.tasks.find(function (t) { return t.id === taskId; });
     if (!t) return;
@@ -689,7 +681,6 @@
     });
   }
 
-  // ---------- AI 自动细化目标为任务 ----------
   function _showAIBreakdownDialog() {
     var content = `
       <div class="lmc-form">
@@ -828,7 +819,6 @@
     _addLog('warning', message);
   }
 
-  // ---------- 清空日志（替换 confirm） ----------
   function _clearLogs() {
     _showConfirm('确定清空所有日志？', function (ok) {
       if (!ok) return;
@@ -838,7 +828,6 @@
     });
   }
 
-  // ---------- 启动器（跳转到对应模块） ----------
   // 注意：_startClassroomFromHub 已被移除（AI 课堂模块下线）。为兼容老书签/历史
   // 任务中的 start-classroom action，_delegateClick 已经把它映射到 _startPracticeFromHub。
   function _startPracticeFromHub(topic) {
@@ -848,7 +837,6 @@
     location.hash = '#/review?topic=' + encodeURIComponent(topic);
   }
 
-  // ---------- 工具 ----------
   var _escapeHtml = window.escapeHtml;
   function _escapeAttr(s) { return _escapeHtml(s).replace(/"/g, '&quot;'); }
   function _formatTime(ts) {
@@ -870,7 +858,6 @@
     return Math.round(diff / 86400000) + ' 天后';
   }
 
-  // ---------- 暴露 ----------
   global.LearningHub = {
     init: initLearningHub,
     addTask: addTask,

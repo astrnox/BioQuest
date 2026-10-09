@@ -10,11 +10,7 @@
 (function (root) {
   'use strict';
 
-  var escapeHtml = (typeof root.escapeHtml === 'function')
-    ? root.escapeHtml
-    : function (s) {
-        return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
-      };
+  var escapeHtml = root.escapeHtml; // 规范实现见 js/core/utils.js（Q-01 统一）
 
   function _getBalance() {
     return (typeof root.getPoints === 'function') ? root.getPoints() : 100;

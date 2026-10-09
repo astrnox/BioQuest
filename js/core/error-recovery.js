@@ -72,7 +72,7 @@
     if (now - _lastRejectionToastAt < 5000) return;
     _lastRejectionToastAt = now;
     if (typeof window.showToast === 'function') {
-      var brief = String(msg || '未知错误');
+      var brief = errText(msg);
       if (brief.length > 80) brief = brief.slice(0, 80) + '…';
       window.showToast('操作遇到问题：' + brief, 'error');
     }

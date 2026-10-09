@@ -74,7 +74,6 @@ function main() {
     fail('data/manifest.json JSON 解析失败: ' + e.message);
   }
 
-  // ---- 规则 1：字段存在 + 格式合法 ----
   const repo = mf.repo;
   const gitSha = mf.git;
   if (!repo || !REPO_SLUG_RE.test(repo)) {
@@ -84,7 +83,6 @@ function main() {
     fail('manifest.git 缺失或格式非法（期望 7-40 位十六进制 commit，实际: ' + JSON.stringify(gitSha) + '）');
   }
 
-  // ---- 规则 2：repo 必须指向本仓库（fork 生成的锚点在此拦截）----
   const slug = originSlug();
   if (slug === null) {
     console.warn('[warn] 无法解析 origin remote，跳过 repo 归属比对（CI 环境不应出现）');
@@ -98,7 +96,6 @@ function main() {
     );
   }
 
-  // ---- 规则 3：git 必须是本仓库的 commit ----
   const head = git('rev-parse HEAD');
   if (!head) fail('无法读取当前 HEAD（git rev-parse 失败），锚点归属无法校验');
 

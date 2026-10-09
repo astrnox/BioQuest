@@ -170,7 +170,7 @@
         destroy: function () { unmount(container); }
       };
     }).catch(function (e) {
-      container.innerHTML = '<p style="color:var(--color-error,#c0392b);text-align:center;padding:40px;">手绘白板加载失败：' + (e && e.message ? e.message : '未知错误') + '</p>';
+      container.innerHTML = '<p style="color:var(--color-error,#c0392b);text-align:center;padding:40px;">手绘白板加载失败：' + errText(e) + '</p>';
       return null;
     });
   }
