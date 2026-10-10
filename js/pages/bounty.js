@@ -113,21 +113,21 @@
     container.innerHTML = '<div style="max-width:600px;margin:0 auto;">' +
       '<h2 style="color:var(--color-deep);">发布悬赏</h2>' +
       '<div class="bq-mb-14">' +
-        '<label style="display:block;font-size:0.85rem;color:var(--text-muted);margin-bottom:6px;">标题</label>' +
-        '<input id="bounty-title" type="text" style="width:100%;padding:10px;border:1px solid var(--border-light);border-radius:8px;box-sizing:border-box;" placeholder="简明描述你的问题">' +
+        '<label class="bq-hint--block">标题</label>' +
+        '<input id="bounty-title" type="text" class="bq-input" placeholder="简明描述你的问题">' +
       '</div>' +
       '<div class="bq-mb-14">' +
-        '<label style="display:block;font-size:0.85rem;color:var(--text-muted);margin-bottom:6px;">问题详情</label>' +
+        '<label class="bq-hint--block">问题详情</label>' +
         '<textarea id="bounty-content" rows="5" style="width:100%;padding:10px;border:1px solid var(--border-light);border-radius:8px;box-sizing:border-box;resize:vertical;" placeholder="详细描述你的问题、已尝试的思路、期望的答案..."></textarea>' +
       '</div>' +
       '<div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px;">' +
         '<div>' +
-          '<label style="display:block;font-size:0.85rem;color:var(--text-muted);margin-bottom:6px;">悬赏信用（最少 5）</label>' +
-          '<input id="bounty-reward" type="number" min="5" value="10" style="width:100%;padding:10px;border:1px solid var(--border-light);border-radius:8px;box-sizing:border-box;">' +
+          '<label class="bq-hint--block">悬赏信用（最少 5）</label>' +
+          '<input id="bounty-reward" type="number" min="5" value="10" class="bq-input">' +
         '</div>' +
         '<div>' +
-          '<label style="display:block;font-size:0.85rem;color:var(--text-muted);margin-bottom:6px;">有效期（天，0=不限制）</label>' +
-          '<input id="bounty-expires" type="number" min="0" value="7" style="width:100%;padding:10px;border:1px solid var(--border-light);border-radius:8px;box-sizing:border-box;">' +
+          '<label class="bq-hint--block">有效期（天，0=不限制）</label>' +
+          '<input id="bounty-expires" type="number" min="0" value="7" class="bq-input">' +
         '</div>' +
       '</div>' +
       '<div style="display:flex;gap:10px;">' +

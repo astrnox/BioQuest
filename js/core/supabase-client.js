@@ -1354,7 +1354,7 @@ var ACHIEVEMENT_TIERS = {
 
 var ACHIEVEMENTS = {
   first_login:     { name: '你好世界',       desc: '第一次打开TATABOX，勇气可嘉',  icon: 'I', category: 'journey',  tier: 'iron' },
-  first_practice:  { name: '羊入虎口',       desc: '做了第一道题，不知道该恭喜还是该劝退', icon: 'S', category: 'journey',  tier: 'iron' },
+  first_practice:  { name: '羊入虎口',       desc: '第一道题就跳进去了，勇气可嘉',   icon: 'S', category: 'journey',  tier: 'iron' },
   email_verified:  { name: '验明正身',       desc: '邮箱验证了，你终于不是黑户了',   icon: 'V', category: 'journey',  tier: 'bronze' },
 
   streak_3:        { name: '三分钟热度',     desc: '连续打卡3天，别告诉我第4天就溜了', icon: 'F', category: 'persistence', tier: 'iron' },

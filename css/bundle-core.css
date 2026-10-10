@@ -2,7 +2,7 @@
  * TATABOX — 首屏同步 CSS 合并包（Issue #108，由
  * scripts/build-css-bundle.js 自动生成，勿手改。
  * 合并源：globals.css + layout.css + header.css + learning-hub.css + home.css + debug-fix.css
- * 生成时间：2026-10-09T12:44:32.760Z
+ * 生成时间：2026-10-10T11:26:44.677Z
  * ============================================================ */
 
 /* ---------- 来源: css/globals.css ---------- */
@@ -4236,6 +4236,7 @@ html[data-theme="dark"] .bottom-tab-bar.is-dragging .bottom-tab-glow {
  * ============================================================ */
 .bq-m-0 { margin: 0; }
 .bq-mt-8 { margin-top: var(--spacing-sm); }
+.bq-mt-12 { margin-top: 12px; }
 .bq-mt-24 { margin-top: var(--spacing-lg); }
 .bq-mb-4 { margin-bottom: var(--spacing-xs); }
 .bq-mb-8 { margin-bottom: var(--spacing-sm); }
@@ -4270,6 +4271,79 @@ html[data-theme="dark"] .bottom-tab-bar.is-dragging .bottom-tab-glow {
 .bq-empty-note { text-align: center; color: var(--text-muted); padding: 40px 0; }
 .bq-note { color: var(--text-muted); font-size: 0.9rem; margin-bottom: var(--spacing-md); }
 .bq-error-title { color: var(--color-error); font-size: 1.1rem; margin-bottom: var(--spacing-sm); }
+
+/* ============================================================
+ * 工具类（P2-4 内联样式收敛，续78ecb7f）
+ * ------------------------------------------------------------
+ * 仅抽取「跨文件出现 >=3 次、且语义明确」的写法；
+ * 一次性的布局微调（314 种只出现 1 次）刻意保留内联——为它们建类
+ * 只会产生 300+ 个一次性类名，维护成本高于收益。
+ *
+ * 注意：这里的按钮/输入框保持原有 8px 圆角与原内联数值 1:1 对应，
+ * 不套用 .bq-btn 的胶囊圆角，避免改变既有观感。
+ * ============================================================ */
+
+/* 主按钮（app.js / community.js / practice.js 共 6 处） */
+.bq-btn--compact {
+  padding: 8px 20px;
+  background: var(--color-sage);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* 次按钮/ 文字按钮（community.js 共 5 处） */
+.bq-btn--quiet {
+  padding: 4px 10px;
+  border: none;
+  background: transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  color: var(--text-primary);
+}
+
+/* 隐藏（默认 display:none，由JS 切换显示） */
+.bq-hidden { display: none; }
+
+/* 空态/加载态的垂直居中容器（app.js / community.js / user.js 共 3 处） */
+.bq-center-vh {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+}
+
+/* 表单输入框（bounty.js 共 3 处） */
+.bq-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+/* 区块辅助说明文字（app.js / bounty.js / user.js / practice.js 共 13 处） */
+.bq-hint {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+.bq-hint--block { display: block; margin-bottom: var(--spacing-xs); }
+.bq-hint--block-sm { display: block; font-size: 0.82rem; color: var(--text-secondary, #8a8a8a); margin-bottom: var(--spacing-xs); }
+.bq-hint--mt { margin-top: var(--spacing-xs); }
+.bq-hint--xs { font-size: 0.78rem; }
+.bq-hint--amber { color: var(--color-amber, #c4956a); }
+.bq-hint--success { color: var(--color-success); }
+
+/* 宽版居中说明块（points-ui.js 共 3 处） */
+.bq-panel-narrow {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 24px 20px 80px;
+  text-align: center;
+  color: var(--text-muted);
+}
 
 
 /* ---------- 来源: css/layout.css ---------- */
@@ -4345,6 +4419,139 @@ html[data-theme="dark"] .bottom-tab-bar.is-dragging .bottom-tab-glow {
 .header-nav a:focus-visible {
   box-shadow: 0 0 0 2px rgba(196, 149, 106, 0.6);
   outline: none;
+}
+
+/* ---------- 「更多」下拉（桌面端一级导航收纳） ----------
+   一级导航只留 6 项（首页/练习/模考/错题本/社区/我的），
+   其余 13 个入口收进此面板，分组沿用移动端抽屉的五组划分。 */
+.header-more {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.header-more-btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: rgba(255, 255, 255, 0.68);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-family: inherit;
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  transition: background-color var(--transition-fast),
+              color var(--transition-fast);
+}
+
+.header-more-btn:hover {
+  color: var(--color-white);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.header-more-btn:focus-visible {
+  box-shadow: 0 0 0 2px rgba(196, 149, 106, 0.6);
+  outline: none;
+}
+
+/* 展开态：按钮保持高亮，箭头翻转 */
+.header-more.is-open .header-more-btn {
+  color: var(--color-white);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* 当前路由位于面板内某入口时，「更多」按钮保持高亮 */
+.header-more.has-active .header-more-btn {
+  color: var(--color-white);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.header-more-caret {
+  transition: transform var(--transition-fast);
+}
+
+.header-more.is-open .header-more-caret {
+  transform: rotate(180deg);
+}
+
+.header-more-panel {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  z-index: 60;
+  display: flex;
+  gap: 18px;
+  padding: 14px 16px;
+  min-width: max-content;
+  /* 实色面 + 1px 边框：不使用 backdrop-filter（玻璃拟态已全站下线） */
+  background: var(--color-surface, #1d2b21);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-md, 10px);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.32);
+  animation: headerMoreIn 0.14s ease-out;
+}
+
+.header-more-panel[hidden] {
+  display: none;
+}
+
+@keyframes headerMoreIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.header-more-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  min-width: 108px;
+}
+
+.header-more-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: rgba(255, 255, 255, 0.42);
+  padding: 0 8px 6px;
+  white-space: nowrap;
+}
+
+.header-more-panel a {
+  color: rgba(255, 255, 255, 0.82);
+  text-decoration: none;
+  font-size: 0.84rem;
+  padding: 6px 8px;
+  border-radius: var(--radius-sm, 6px);
+  white-space: nowrap;
+  transition: background-color var(--transition-fast),
+              color var(--transition-fast);
+}
+
+.header-more-panel a:hover {
+  color: var(--color-white);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.header-more-panel a:focus-visible {
+  box-shadow: 0 0 0 2px rgba(196, 149, 106, 0.6);
+  outline: none;
+}
+
+.header-more-panel a.active,
+.header-more-panel a[aria-current="page"] {
+  color: var(--color-white);
+  background: rgba(255, 255, 255, 0.14);
+}
+
+/* ---------- 桌面端隐藏底部标签栏 ----------
+   ≤768px 由移动端抽屉 + 底部栏承担导航；>768px 只保留顶栏，避免两套全屏导航并存。 */
+@media (min-width: 769px) {
+  .bottom-tab-bar {
+    display: none;
+  }
 }
 
 /* 主题切换按钮 */
@@ -5329,32 +5536,19 @@ textarea.lmc-form-input { resize: vertical; min-height: 60px; line-height: 1.5; 
   overflow: hidden;
 }
 
+/* 首屏背景：静态 CSS 层次（原为 35 个随机漂移粒子）
+   为什么不用粒子：hero-overlay 为 0.45~0.96 的深色渐变，粒子在其下方几乎不可见；
+   且 35 个 Math.random 元素各自跑 7~14s 无限动画，位置每次刷新都不同。
+   现改为纯 CSS 单层实色渐变：零脚本、零常驻动画，深色主题下文字对比度不变。
+   注：渐变预算为 4 处（全站），此处只用 1 处，勿再叠加 radial 高光。 */
 .hero-bg {
   position: absolute;
   inset: 0;
   z-index: 0;
   pointer-events: none;
+  background: linear-gradient(168deg, #16281c 0%, #1d3323 42%, #2d4a2b 74%, #3f5f3c 100%);
 }
 
-.hero-bg canvas {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    160deg,
-    rgba(18, 32, 22, 0.96) 0%,
-    rgba(26, 47, 29, 0.88) 35%,
-    rgba(45, 74, 43, 0.65) 70%,
-    rgba(90, 125, 92, 0.45) 100%
-  );
-  z-index: 1;
-  pointer-events: none;
-}
 
 .hero-gradient-left {
   position: absolute;
@@ -6469,7 +6663,6 @@ textarea.lmc-form-input { resize: vertical; min-height: 60px; line-height: 1.5; 
 
 /* 确保绝对定位的装饰元素不阻挡点击 */
 .hero-bg,
-.hero-overlay,
 .hero-gradient-left,
 .hero-scroll-hint {
   pointer-events: none !important;

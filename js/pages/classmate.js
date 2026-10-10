@@ -789,7 +789,7 @@
     if (state.empathyMode) {
       state.empathyMode = false;
       _updateModeBadge();
-      _addMessage('system', '答对啦！状态不错，继续加油。共情模式已关闭。');
+      _addMessage('system', '共情模式已关闭。');
     }
   }
 

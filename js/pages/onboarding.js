@@ -20,7 +20,7 @@
   // 3 步引导内容。targetSelector 为可选的「高亮锚点」（可为空）。
   var STEPS = [
     {
-      title: '欢迎来到 TATABOX',
+      title: '三步开始刷题',
       text: '刷题、错题本、记忆卡片都在这里；答完自动判分，错题自动收录。',
       targetSelector: null
     },

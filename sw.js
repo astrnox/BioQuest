@@ -84,7 +84,6 @@ var WARMUP_PHASE_1 = [
   './js/core/shortcut-panel.js',
   './js/core/sync-tabs.js',
   './js/core/cell-loader.js',
-  './js/core/hero-sketch.js',
   './js/engagement/countdown.js',
   './js/engagement/soundscape.js',
   './js/engagement/social-impact.js',

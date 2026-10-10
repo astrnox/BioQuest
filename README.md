@@ -233,10 +233,13 @@ MPL-2.0 为弱 copyleft 协议：允许修改与商用，但修改过的文件�
 ### 代码贡献流程
 
 1. Fork 本仓库
-2. 创建功能分支（`git checkout -b feature/xxx`）
-3. 提交改动（`git commit -m '描述你的改动'`）
-4. 推送至分支（`git push origin feature/xxx`）
+2. 创建分支（`git checkout -b feat/xxx`，命名规范见 [CONTRIBUTING.md](CONTRIBUTING.md)）
+3. 提交改动（`git commit -m 'feat: 描述你的改动 (#issue号)'`，遵循 Conventional Commits）
+4. 推送至分支（`git push origin feat/xxx`）
 5. 发起 Pull Request
+
+提交前请执行 `npm run lint:js && npm run audit:design` 自查。
+完整代码风格约定见 **[docs/代码风格指南.md](docs/代码风格指南.md)**。
 
 ---
 

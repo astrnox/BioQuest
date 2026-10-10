@@ -29,7 +29,7 @@ if (typeof window._cspHoverOut !== 'function') {
       target.innerHTML = '<div class="bq-empty-block">' +
         '<p class="bq-error-title">社区模块加载失败</p>' +
         '<p class="bq-note">请刷新页面或稍后重试</p>' +
-        '<button data-on=\'["_cspReload"]\' style="padding:8px 20px;background:var(--color-sage);color:#fff;border:none;border-radius:8px;cursor:pointer;">刷新页面</button>' +
+        '<button data-on=\'["_cspReload"]\' class="bq-btn--compact">刷新页面</button>' +
         '</div>';
     }
   }
@@ -1759,7 +1759,7 @@ if (typeof window._cspHoverOut !== 'function') {
 
     // 如果没有评论且评论未加载，仅显示评论输入/登录引导
     if (!comments || comments.length === 0) {
-      html += '<div style="margin-top:12px;">' + renderCommentInput(post.id) + '</div>';
+      html += '<div class="bq-mt-12">' + renderCommentInput(post.id) + '</div>';
       return html;
     }
 
@@ -1818,7 +1818,7 @@ if (typeof window._cspHoverOut !== 'function') {
   }
 
   function renderLoginPage() {
-    return '<div class="animate-fade-in" style="display:flex;align-items:center;justify-content:center;min-height:60vh;">' +
+    return '<div class="animate-fade-in bq-center-vh" >' +
       '<div style="text-align:center;max-width:400px;padding:40px;">' +
       '<div style="font-size:48px;margin-bottom:16px;opacity:0.3;"></div>' +
       '<h2 style="font-size:22px;font-weight:600;margin-bottom:8px;color:var(--text-primary);">社区需要登录</h2>' +
@@ -1981,7 +1981,7 @@ if (typeof window._cspHoverOut !== 'function') {
       target.innerHTML = '<div class="bq-empty-block">' +
         '<p class="bq-error-title">社区页面渲染失败</p>' +
         '<p class="bq-note">请刷新页面或稍后重试</p>' +
-        '<button data-on=\'["_cspReload"]\' style="padding:8px 20px;background:var(--color-sage);color:#fff;border:none;border-radius:8px;cursor:pointer;">刷新页面</button>' +
+        '<button data-on=\'["_cspReload"]\' class="bq-btn--compact">刷新页面</button>' +
         '</div>';
     }
   }
@@ -2349,7 +2349,7 @@ if (typeof window._cspHoverOut !== 'function') {
       '<div style="padding:16px 20px;">' +
       '<div style="font-size:0.82rem;color:var(--text-muted);margin-bottom:12px;">请选择举报原因：</div>' +
       '<div>' + reasonsHtml + '</div>' +
-      '<div style="margin-top:12px;">' +
+      '<div class="bq-mt-12">' +
       '<textarea id="report-detail" placeholder="补充说明（可选）" style="width:100%;min-height:60px;padding:10px 12px;border:1px solid var(--border-light,#ddd);border-radius:8px;font-size:0.85rem;resize:vertical;font-family:inherit;"></textarea>' +
       '</div>' +
       '<div style="display:flex;gap:8px;margin-top:16px;">' +
@@ -2635,11 +2635,11 @@ if (typeof window._cspHoverOut !== 'function') {
         '<button type="button" class="community-md-btn" data-md="bold" title="加粗 (Ctrl+B)" style="padding:4px 10px;border:none;background:transparent;border-radius:8px;cursor:pointer;font-weight:700;font-size:0.85rem;color:var(--text-primary);"><b>B</b></button>' +
         '<button type="button" class="community-md-btn" data-md="italic" title="斜体 (Ctrl+I)" style="padding:4px 10px;border:none;background:transparent;border-radius:8px;cursor:pointer;font-style:italic;font-size:0.85rem;color:var(--text-primary);"><i>I</i></button>' +
         '<button type="button" class="community-md-btn" data-md="code" title="行内代码" style="padding:4px 10px;border:none;background:transparent;border-radius:8px;cursor:pointer;font-family:monospace;font-size:0.85rem;color:var(--text-primary);">&lt;/&gt;</button>' +
-        '<button type="button" class="community-md-btn" data-md="h2" title="标题" style="padding:4px 10px;border:none;background:transparent;border-radius:8px;cursor:pointer;font-size:0.85rem;color:var(--text-primary);">H</button>' +
-        '<button type="button" class="community-md-btn" data-md="quote" title="引用" style="padding:4px 10px;border:none;background:transparent;border-radius:8px;cursor:pointer;font-size:0.85rem;color:var(--text-primary);">”</button>' +
-        '<button type="button" class="community-md-btn" data-md="list" title="列表" style="padding:4px 10px;border:none;background:transparent;border-radius:8px;cursor:pointer;font-size:0.85rem;color:var(--text-primary);">•</button>' +
-        '<button type="button" class="community-md-btn" data-md="link" title="链接" style="padding:4px 10px;border:none;background:transparent;border-radius:8px;cursor:pointer;font-size:0.85rem;color:var(--text-primary);">链接</button>' +
-        '<button type="button" class="community-md-btn" data-md="image" title="图片" style="padding:4px 10px;border:none;background:transparent;border-radius:8px;cursor:pointer;font-size:0.85rem;color:var(--text-primary);">图片</button>' +
+        '<button type="button" class="community-md-btn bq-btn--quiet" data-md="h2" title="标题" >H</button>' +
+        '<button type="button" class="community-md-btn bq-btn--quiet" data-md="quote" title="引用" >”</button>' +
+        '<button type="button" class="community-md-btn bq-btn--quiet" data-md="list" title="列表" >•</button>' +
+        '<button type="button" class="community-md-btn bq-btn--quiet" data-md="link" title="链接" >链接</button>' +
+        '<button type="button" class="community-md-btn bq-btn--quiet" data-md="image" title="图片" >图片</button>' +
       '</div>' +
       '<textarea class="community-compose-textarea" id="community-compose-textarea" placeholder="分享你的学习心得、提问或讨论...&#10;&#10;支持 Markdown：**加粗** *斜体* `代码` # 标题 > 引用 - 列表 [链接](url) ![图片](url)"></textarea>' +
       '<div class="community-compose-toolbar">' +
@@ -2841,7 +2841,7 @@ if (typeof window._cspHoverOut !== 'function') {
         target.innerHTML = '<div class="bq-empty-block">' +
           '<p class="bq-error-title">社区模块初始化失败</p>' +
           '<p class="bq-note">请刷新页面或稍后重试</p>' +
-          '<button data-on=\'["_cspReload"]\' style="padding:8px 20px;background:var(--color-sage);color:#fff;border:none;border-radius:8px;cursor:pointer;">刷新页面</button>' +
+          '<button data-on=\'["_cspReload"]\' class="bq-btn--compact">刷新页面</button>' +
           '</div>';
       }
     }

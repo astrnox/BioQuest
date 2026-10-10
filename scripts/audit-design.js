@@ -26,8 +26,8 @@ const path = require('path');
 const ROOT = path.join(__dirname, '..');
 
 /* ── 棘轮基线：只允许下调；确需上调必须在 PR 里说明理由并在此处修改 ── */
-const BASELINE_INLINE_STYLE = 1312; // js/**（不含 vendor）中 style=" 出现次数
-const BASELINE_UNIQUE_HEX = 470;    // js/**（不含 vendor）中唯一 #rrggbb 数量
+const BASELINE_INLINE_STYLE = 1261; // js/**（不含 vendor）中 style=" 出现次数
+const BASELINE_UNIQUE_HEX = 469;    // js/**（不含 vendor）中唯一 #rrggbb 数量
 
 /* ── 预算 ── */
 const BUDGET_BACKDROP_FILTER = 3;
@@ -50,67 +50,117 @@ function walkJs(dir, out) {
   return out;
 }
 
+/**
+ * bundle-core.css 是 scripts/build-css-bundle.js 生成的聚合产物，
+ * 内容为下列源文件的顺序拼接。它是 index.html 实际加载的全站主样式表，
+ * 若把它排除在审计之外，等于门禁对主样式表完全失明（有人往里加毛玻璃/渐变也不报）。
+ *
+ * 处理方式：审计**源文件**（globals/layout/header/learning-hub/home/debug-fix，
+ * 它们已被 bundle 覆盖），并**额外校验 bundle 与源文件一致**——
+ * 即 bundle 不得含有源文件里不存在的 backdrop-filter/渐变，
+ * 防止绕过「改 bundle 不改源文件」这条路径。
+ */
+const BUNDLE_SOURCES = [
+  'globals.css',
+  'layout.css',
+  'header.css',
+  'learning-hub.css',
+  'home.css',
+  'debug-fix.css',
+];
+
 function collectFiles() {
   const js = walkJs(path.join(ROOT, 'js'), []);
-  const css = fs.readdirSync(path.join(ROOT, 'css'))
-    .filter((f) => f.endsWith('.css') && f !== 'bundle-core.css')
+  const allCss = fs.readdirSync(path.join(ROOT, 'css'))
+    .filter((f) => f.endsWith('.css'));
+  // css/ 下除 bundle-core.css 外的都是独立样式表（子页直接 <link>）；
+  // bundle 自身的 6 个源文件也在其中，天然被覆盖，无需重复处理。
+  const css = allCss
+    .filter((f) => f !== 'bundle-core.css')
     .map((f) => path.join(ROOT, 'css', f));
   const html = fs.readdirSync(ROOT)
     .filter((f) => f.endsWith('.html'))
     .map((f) => path.join(ROOT, f));
-  return { js, css, html };
+  return { js, css, html, bundle: path.join(ROOT, 'css', 'bundle-core.css') };
 }
 
-const isCommentLine = (line) => {
-  const t = line.trim();
-  return t.startsWith('*') || t.startsWith('//') || t.startsWith('/*') || t.startsWith('<!--');
-};
+/**
+ * 剥离注释后再检测，避免"注释里提到属性名/含emoji"被误判为真实使用。
+ * 原实现按行首判断（isCommentLine），无法处理行尾注释与多行注释，
+ * 会同时造成漏报（innerHTML 拼接串里的 emoji）与误报。
+ */
+function stripComments(src) {
+  return src
+    .replace(/\/\*[\s\S]*?\*\//g, '')   // 块注释
+    .replace(/(^|[^:])\/\/[^\n]*/g, '$1'); // 行注释（避开 http://）
+}
+
+/** 逐行扫描：先剥离注释，再匹配 */
+function scanLines(files, pattern, onHit) {
+  const re = new RegExp(pattern.source, pattern.flags.includes('g') ? pattern.flags : pattern.flags + 'g');
+  for (const f of files) {
+    if (!fs.existsSync(f)) continue;
+    const lines = stripComments(fs.readFileSync(f, 'utf8')).split('\n');
+    lines.forEach((line, i) => {
+      const m = line.match(re);
+      if (m) onHit(`${rel(f)}:${i + 1}  ${line.trim().slice(0, 70)}`, m);
+    });
+  }
+}
 
 const rel = (p) => path.relative(ROOT, p);
 
 function main() {
-  const { js, css, html } = collectFiles();
+  const { js, css, html, bundle } = collectFiles();
   const failures = [];
   const report = [];
 
   /* ── 1. 彩色 emoji ── */
   const emojiHits = [];
-  for (const f of js.concat(html, css)) {
-    const lines = fs.readFileSync(f, 'utf8').split('\n');
-    lines.forEach((line, i) => {
-      if (isCommentLine(line)) return;
-      const m = line.match(new RegExp(EMOJI_RE.source, 'gu'));
-      if (m) emojiHits.push(`${rel(f)}:${i + 1}  ${[...new Set(m)].join(' ')}  ${line.trim().slice(0, 70)}`);
-    });
-  }
+  scanLines(js.concat(html, css), EMOJI_RE, (loc, m) => {
+    emojiHits.push(`${loc}  ${[...new Set(m)].join(' ')}`);
+  });
   report.push(`彩色 emoji                    : ${emojiHits.length} 处（预算 0）`);
   if (emojiHits.length > 0) {
     failures.push(`发现 ${emojiHits.length} 处彩色 emoji（图标请改用 BQ_ICONS）：\n    ` + emojiHits.slice(0, 12).join('\n    '));
   }
 
+  /* ── 1b. bundle-core.css 与源文件一致性 ──
+     bundle 是index.html 加载的主样式表。逐条比对"源文件合计"与"bundle"的
+     backdrop-filter / 渐变数量：bundle 多出来的，说明有人绕过源文件直接改产物。 */
+  if (fs.existsSync(bundle)) {
+    const bundleSrc = stripComments(fs.readFileSync(bundle, 'utf8'));
+    const srcFiles = BUNDLE_SOURCES.map((f) => path.join(ROOT, 'css', f));
+    const srcSrc = srcFiles
+      .filter((f) => fs.existsSync(f))
+      .map((f) => stripComments(fs.readFileSync(f, 'utf8')))
+      .join('\n');
+    const count = (s, re) => (s.match(re) || []).length;
+    const bfRe = /(?<!webkit-)backdrop-filter\s*:/g;
+    const gradRe = /(linear|radial)-gradient\(/g;
+    const bfDelta = count(bundleSrc, bfRe) - count(srcSrc, bfRe);
+    const gradDelta = count(bundleSrc, gradRe) - count(srcSrc, gradRe);
+    report.push(`bundle-core 与源文件一致性      : backdrop-filter 差 ${bfDelta} / 渐变差 ${gradDelta}（须均为 0）`);
+    if (bfDelta !== 0 || gradDelta !== 0) {
+      failures.push(
+        `css/bundle-core.css 与源文件不一致（backdrop-filter 差 ${bfDelta}、渐变差 ${gradDelta}）。\n` +
+        `    bundle-core.css 由 scripts/build-css-bundle.js 从 ${BUNDLE_SOURCES.join('/')} 生成，\n` +
+        `    请修改源文件后执行 node scripts/build-css-bundle.js 重新生成，不要直接改产物。`
+      );
+    }
+  }
+
   /* ── 2. backdrop-filter 模糊 ── */
   const bfHits = [];
-  for (const f of js.concat(html, css)) {
-    const lines = fs.readFileSync(f, 'utf8').split('\n');
-    lines.forEach((line, i) => {
-      if (isCommentLine(line)) return;
-      if (/(?<!webkit-)backdrop-filter\s*:/.test(line)) bfHits.push(`${rel(f)}:${i + 1}  ${line.trim().slice(0, 70)}`);
-    });
-  }
-  report.push(`backdrop-filter（去 -webkit）  : ${bfHits.length} 处（预算 ${BUDGET_BACKDROP_FILTER}）`);
+  scanLines(js.concat(html, css), /(?<!webkit-)backdrop-filter\s*:/, (loc) => bfHits.push(loc));
+  report.push(`backdrop-filter（去-webkit）  : ${bfHits.length} 处（预算 ${BUDGET_BACKDROP_FILTER}）`);
   if (bfHits.length > BUDGET_BACKDROP_FILTER) {
     failures.push(`backdrop-filter 超出预算（${bfHits.length} > ${BUDGET_BACKDROP_FILTER}）：\n    ` + bfHits.join('\n    '));
   }
 
   /* ── 3. 渐变 ── */
   const gradHits = [];
-  for (const f of css.concat(js, html)) {
-    const lines = fs.readFileSync(f, 'utf8').split('\n');
-    lines.forEach((line, i) => {
-      if (isCommentLine(line)) return;
-      if (/(linear|radial)-gradient\(/.test(line)) gradHits.push(`${rel(f)}:${i + 1}  ${line.trim().slice(0, 70)}`);
-    });
-  }
+  scanLines(css.concat(js, html), /(linear|radial)-gradient\(/, (loc) => gradHits.push(loc));
   report.push(`渐变（linear/radial）         : ${gradHits.length} 处（预算 ${BUDGET_GRADIENT}）`);
   if (gradHits.length > BUDGET_GRADIENT) {
     failures.push(`渐变超出预算（${gradHits.length} > ${BUDGET_GRADIENT}）：\n    ` + gradHits.join('\n    '));

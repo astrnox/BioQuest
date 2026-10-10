@@ -265,7 +265,7 @@
     var days = _daysUntil(_examDate);
 
     container.innerHTML = '<div class="st-card">' +
-      '<h3>欢迎回来，开始今天的学习</h3>' +
+      '<h3>今天：' + todoCount + ' 个待办 · 番茄 ' + pomoToday + ' 个 · 专注 ' + _formatDuration(focusMin) + '</h3>' +
       '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:16px;margin-top:12px;">' +
         '<div class="st-stat-box"><div class="st-stat-value">' + todoCount + '</div><div class="st-stat-label">待办任务</div></div>' +
         '<div class="st-stat-box"><div class="st-stat-value">' + pomoToday + '</div><div class="st-stat-label">今日番茄</div></div>' +

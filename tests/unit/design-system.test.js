@@ -105,3 +105,118 @@ describe('设计审计门禁', () => {
     expect(ci).toContain('audit:design');
   });
 });
+
+/* ============================================================
+ * 导航信息架构（防止回潮到"功能堆砌"）
+ *背景：桌面顶栏曾平铺 23 个入口，且与底部标签栏并存两套全屏导航。
+ * 约定：一级只留 6 项；其余收进「更多」面板；桌面端隐藏底部栏。
+ * ============================================================ */
+describe('导航信息架构', () => {
+  const indexHtml = read('index.html');
+  const layoutCss = read('css/layout.css');
+
+  test('桌面一级导航不超过 6 项（其余收进「更多」）', () => {
+    const nav = indexHtml.match(/<nav class="header-nav"[\s\S]*?<\/nav>/);
+    expect(nav).not.toBeNull();
+    // 「更多」面板内部的链接不计入一级项
+    const topLevel = nav[0]
+      .replace(/<div class="header-more"[\s\S]*$/, '')
+      .match(/<a\b[^>]*>/g) || [];
+    expect(topLevel.length).toBeLessThanOrEqual(6);
+  });
+
+  test('「更多」面板按五组划分，与移动端抽屉一致', () => {
+    const panel = indexHtml.match(/<div class="header-more-panel"[\s\S]*?<\/div>\s*<\/div>\s*<\/nav>/);
+    expect(panel).not.toBeNull();
+    ['学习', '题库', '探索', '智能与社区', '账户'].forEach((g) => {
+      expect(panel[0]).toContain(`>${g}</div>`);
+    });
+  });
+
+  test('不再出现「错题录题」错别字', () => {
+    expect(indexHtml).not.toContain('错题录题');
+  });
+
+  test('桌面端（>768px）隐藏底部标签栏，避免两套导航并存', () => {
+    expect(layoutCss).toMatch(/@media \(min-width: 769px\)[\s\S]*?\.bottom-tab-bar\s*\{[\s\S]*?display:\s*none/);
+  });
+
+  test('「更多」按钮与面板具备可访问性关联', () => {
+    expect(indexHtml).toContain('aria-controls="headerMorePanel"');
+    expect(indexHtml).toContain('aria-haspopup="true"');
+    expect(indexHtml).toMatch(/id="headerMorePanel"[^>]*hidden/);
+  });
+});
+
+describe('首屏背景：静态 CSS 层次（无脚本粒子）', () => {
+  const indexHtml = read('index.html');
+  const homeCss = read('css/home.css');
+
+  test('不再引入 hero-sketch 随机粒子脚本', () => {
+    expect(indexHtml).not.toContain('hero-sketch');
+    expect(fs.existsSync(path.join(ROOT, 'js', 'core', 'hero-sketch.js'))).toBe(false);
+  });
+
+  test('.hero-bg 自带实色底，且不含 backdrop-filter', () => {
+    const block = homeCss.match(/\.hero-bg \{[\s\S]*?\n\}/);
+    expect(block).not.toBeNull();
+    expect(block[0]).toMatch(/background:\s*linear-gradient/);
+    expect(block[0]).not.toMatch(/backdrop-filter/);
+  });
+
+  test('hero 区域不再依赖 canvas 容器', () => {
+    expect(indexHtml).not.toContain('id="heroCanvas"');
+  });
+});
+
+/* ============================================================
+ *用户可见文案：去 AI 腔（给事实，不给情绪评价）
+ * 约定：结果页/空状态不出现「太厉害」「继续保持」「恭喜」这类评判；
+ *      「智能推荐」等含 AI 暗示的标签改为说明实际依据。
+ * ============================================================ */
+describe('用户可见文案：无 AI 腔', () => {
+  // 这些文件是结果页 / 空状态 / 诊断的主要来源
+  const COPY_FILES = [
+    'js/pages/exam.js',
+    'js/pages/analytic.js',
+    'js/pages/trends.js',
+    'js/pages/practice.js',
+    'js/pages/review-deep.js',
+    'js/pages/daily-billion.js',
+    'js/pages/classmate.js',
+    'js/pages/study.js',
+    'js/pages/onboarding.js',
+    'js/ai/smart-diagnosis.js',
+  ];
+
+  test('结果页/空状态不含情绪化评价', () => {
+    const BANNED = /继续保持|太厉害|厉害！|真棒|太棒|恭喜|继续加油|该恭喜还是该劝退/;
+    COPY_FILES.forEach((f) => {
+      expect(BANNED.test(read(f))).toBe(false);
+    });
+  });
+
+  test('「已刷完当前题库」不再带 emoji 与感叹', () => {
+    const src = read('js/pages/daily-billion.js');
+    expect(src).toContain('已刷完当前题库');
+    expect(src).not.toContain('&#127881;');
+  });
+
+  test('学习页不再使用「智能推荐」标签', () => {
+    expect(read('study.html')).not.toContain('智能推荐');
+  });
+
+  test('成就描述保留黑色幽默，但不含「该X还是该Y」两难句式', () => {
+    const src = read('js/core/supabase-client.js');
+    expect(src).not.toMatch(/该[^']*还是该/);
+    // 语气基准：成就体系整体是作者刻意写的俏皮文风，不应被整体抹平
+    expect(src).toContain('羊入虎口');
+  });
+
+  test('review-deep 有错时给出具体题数而非情绪鼓励', () => {
+    const src = read('js/pages/review-deep.js');
+    expect(src).toContain('题待复习');
+    expect(src).toMatch(/wrongCount\s*=\s*0/);
+    expect(src).toMatch(/if \(!right\) \{ allRight = false; wrongCount\+\+; \}/);
+  });
+});

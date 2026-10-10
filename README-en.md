@@ -197,10 +197,13 @@ Contributions are welcome! Whether you:
 ### How to contribute code
 
 1. Fork this repository
-2. Create your feature branch (`git checkout -b feature/xxx`)
-3. Commit your changes (`git commit -m 'add some feature'`)
-4. Push to your branch (`git push origin feature/xxx`)
+2. Create your branch (`git checkout -b feat/xxx` — see [CONTRIBUTING.md](CONTRIBUTING.md) for the naming rules)
+3. Commit your changes (`git commit -m 'feat: describe your change (#issue)'`, following Conventional Commits)
+4. Push to your branch (`git push origin feat/xxx`)
 5. Open a Pull Request
+
+Before submitting, run `npm run lint:js && npm run audit:design` to self-check.
+The full code style guide is in **[docs/代码风格指南.md](docs/代码风格指南.md)** (Chinese).
 
 Question-bank data lives in the `data/` folder — just edit the JSON to add questions.
 

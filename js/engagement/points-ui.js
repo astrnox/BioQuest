@@ -72,7 +72,7 @@
 
     target.innerHTML = '<div style="max-width:860px;margin:0 auto;padding:24px 20px 80px;">' +
       '<h1 style="margin:0 0 4px;font-family:var(--font-serif,serif);color:var(--color-deep);">信用中心</h1>' +
-      '<p style="margin:0 0 20px;color:var(--text-muted);font-size:0.9rem;">信用点（CR）衡量社区对你的信任程度：用符合社区期望的行为赢得信任，用信任行使对社区影响更大的行为</p>' +
+      '<p style="margin:0 0 20px;color:var(--text-muted);font-size:0.9rem;">信用点（CR）由社区其他成员的投票产生：发布优质内容、给出有帮助的回答会获得信用点；信用点越高，你的发言对其他人的影响越大。</p>' +
 
       '<div style="display:flex;gap:16px;flex-wrap:wrap;margin-bottom:20px;">' +
         '<div style="flex:1;min-width:220px;background:var(--color-sage,#5a7d5c);color:#fff;border-radius:16px;padding:24px;box-shadow:var(--shadow-md);">' +
@@ -104,11 +104,11 @@
   // 信用排行榜：按信用指数降序
   function initCreditLeaderboard(target) {
     if (!target) return;
-    target.innerHTML = '<div style="max-width:760px;margin:0 auto;padding:24px 20px 80px;text-align:center;color:var(--text-muted);">加载信用排行...</div>';
+    target.innerHTML = '<div class="bq-panel-narrow">加载信用排行...</div>';
 
     var fn = (typeof root.getPointsLeaderboard === 'function') ? root.getPointsLeaderboard : null;
     if (!fn) {
-      target.innerHTML = '<div style="max-width:760px;margin:0 auto;padding:24px 20px 80px;text-align:center;color:var(--text-muted);">信用排行榜服务未加载</div>';
+      target.innerHTML = '<div class="bq-panel-narrow">信用排行榜服务未加载</div>';
       return;
     }
 
@@ -167,7 +167,7 @@
         rows +
       '</div>';
     }).catch(function () {
-      target.innerHTML = '<div style="max-width:760px;margin:0 auto;padding:24px 20px 80px;text-align:center;color:var(--text-muted);">排行榜加载失败，请稍后重试</div>';
+      target.innerHTML = '<div class="bq-panel-narrow">排行榜加载失败，请稍后重试</div>';
     });
   }
 

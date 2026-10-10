@@ -2588,8 +2588,8 @@ function renderResultPage(target) {
         ` : `
         <div class="exam-result-perfect">
           <div class="exam-perfect-icon">!</div>
-          <h3>全部正确，太厉害了！</h3>
-          <p>你答对了所有72道题，满分通过！</p>
+          <h3>全部正确</h3>
+          <p>72 道题全部答对，满分。</p>
         </div>
         `}
 

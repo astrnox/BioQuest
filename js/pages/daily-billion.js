@@ -1047,7 +1047,7 @@
       // 题库到底：移除 loading 占位，显示结束提示（如果还没显示）
       var loading = pageEl.querySelector('.db-loading-card');
       if (loading) {
-        loading.innerHTML = '<div class="db-loading-content"><span>&#127881; 已刷完当前题库，厉害！</span></div>';
+        loading.innerHTML = '<div class="db-loading-content"><span>已刷完当前题库</span></div>';
       }
     }
     if (_cardAnimObserver && addedCardEls.length > 0) {

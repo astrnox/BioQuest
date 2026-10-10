@@ -4228,6 +4228,7 @@ html[data-theme="dark"] .bottom-tab-bar.is-dragging .bottom-tab-glow {
  * ============================================================ */
 .bq-m-0 { margin: 0; }
 .bq-mt-8 { margin-top: var(--spacing-sm); }
+.bq-mt-12 { margin-top: 12px; }
 .bq-mt-24 { margin-top: var(--spacing-lg); }
 .bq-mb-4 { margin-bottom: var(--spacing-xs); }
 .bq-mb-8 { margin-bottom: var(--spacing-sm); }
@@ -4262,3 +4263,76 @@ html[data-theme="dark"] .bottom-tab-bar.is-dragging .bottom-tab-glow {
 .bq-empty-note { text-align: center; color: var(--text-muted); padding: 40px 0; }
 .bq-note { color: var(--text-muted); font-size: 0.9rem; margin-bottom: var(--spacing-md); }
 .bq-error-title { color: var(--color-error); font-size: 1.1rem; margin-bottom: var(--spacing-sm); }
+
+/* ============================================================
+ * 工具类（P2-4 内联样式收敛，续78ecb7f）
+ * ------------------------------------------------------------
+ * 仅抽取「跨文件出现 >=3 次、且语义明确」的写法；
+ * 一次性的布局微调（314 种只出现 1 次）刻意保留内联——为它们建类
+ * 只会产生 300+ 个一次性类名，维护成本高于收益。
+ *
+ * 注意：这里的按钮/输入框保持原有 8px 圆角与原内联数值 1:1 对应，
+ * 不套用 .bq-btn 的胶囊圆角，避免改变既有观感。
+ * ============================================================ */
+
+/* 主按钮（app.js / community.js / practice.js 共 6 处） */
+.bq-btn--compact {
+  padding: 8px 20px;
+  background: var(--color-sage);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* 次按钮/ 文字按钮（community.js 共 5 处） */
+.bq-btn--quiet {
+  padding: 4px 10px;
+  border: none;
+  background: transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  color: var(--text-primary);
+}
+
+/* 隐藏（默认 display:none，由JS 切换显示） */
+.bq-hidden { display: none; }
+
+/* 空态/加载态的垂直居中容器（app.js / community.js / user.js 共 3 处） */
+.bq-center-vh {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+}
+
+/* 表单输入框（bounty.js 共 3 处） */
+.bq-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+/* 区块辅助说明文字（app.js / bounty.js / user.js / practice.js 共 13 处） */
+.bq-hint {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+.bq-hint--block { display: block; margin-bottom: var(--spacing-xs); }
+.bq-hint--block-sm { display: block; font-size: 0.82rem; color: var(--text-secondary, #8a8a8a); margin-bottom: var(--spacing-xs); }
+.bq-hint--mt { margin-top: var(--spacing-xs); }
+.bq-hint--xs { font-size: 0.78rem; }
+.bq-hint--amber { color: var(--color-amber, #c4956a); }
+.bq-hint--success { color: var(--color-success); }
+
+/* 宽版居中说明块（points-ui.js 共 3 处） */
+.bq-panel-narrow {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 24px 20px 80px;
+  text-align: center;
+  color: var(--text-muted);
+}

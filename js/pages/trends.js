@@ -611,7 +611,7 @@
       ? rpt.weakPoints.map(function (w) {
           return '<li><span class="wr-tag warn">错 ' + w.errorRate + '%</span>' + escHtml(w.name) + ' <span style="color:var(--text-muted,#8a8a8a);font-size:0.8rem;">（共 ' + w.total + ' 题）</span></li>';
         }).join('')
-      : '<li>本周无明显薄弱知识点，继续保持</li>';
+      : '<li>本周无明显薄弱知识点</li>';
 
     var suggestions = generateSuggestions(rpt);
     var sugHtml = suggestions.map(function (s, i) {

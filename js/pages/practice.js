@@ -1441,7 +1441,7 @@ function renderFilterPanel() {
         <div class="practice-filter-section">
           <div class="practice-filter-header">
             <h3 class="practice-filter-title">题库数据源</h3>
-            <span class="practice-filter-note" id="practice-source-status" style="font-size:0.78rem;color:var(--text-muted);">
+            <span class="practice-filter-note bq-hint--xs" id="practice-source-status" >
               ${qSource === 'local' ? '当前：本地题库' : '当前：云端同步'}
             </span>
           </div>
@@ -1450,7 +1450,7 @@ function renderFilterPanel() {
               <option value="cloud" ${qSource === 'cloud' ? 'selected' : ''}>云端同步</option>
               <option value="local" ${qSource === 'local' ? 'selected' : ''}>本地题库</option>
             </select>
-            <span style="font-size:0.78rem;color:var(--text-muted);" id="practice-source-hint">
+            <span class="bq-hint--xs" id="practice-source-hint">
               ${qSource === 'local'
                 ? '仅从站点内 data/ 读取题目，不发远程请求'
                 : '云端优先，本地兜底（默认）'}
@@ -1471,7 +1471,7 @@ function renderFilterPanel() {
               竞赛模式
             </button>
           </div>
-          <div style="font-size:0.78rem;color:var(--text-muted);">
+          <div class="bq-hint--xs">
             高考模式专为普通高中生设计，严格限定高中生物课标范围
           </div>
         </div>
@@ -1483,7 +1483,7 @@ function renderFilterPanel() {
             <button class="practice-category-btn ${PracticeState.selectedCategory === 'basic' ? 'active' : ''}" data-category="basic">基础知识</button>
             <button class="practice-category-btn ${PracticeState.selectedCategory === 'logic' ? 'active' : ''}" data-category="logic">逻辑推理</button>
           </div>
-          <div style="font-size:0.78rem;color:var(--text-muted);margin-top:6px;">
+          <div class="bq-hint--xs bq-hint--mt">
             ${PracticeState.selectedCategory === 'logic' ? '逻辑推理题：基于实验数据的分析推理，每题2分' : PracticeState.selectedCategory === 'basic' ? '基础知识题：MTF多重判断题型，每题2分' : '混合模式：基础知识 + 逻辑推理'}
           </div>
         </div>
@@ -1510,7 +1510,7 @@ function renderFilterPanel() {
           <div class="practice-filter-checks" id="targetChecks">
             ${targetChecks}
           </div>
-          <div style="font-size:0.78rem;color:var(--text-muted);margin-top:6px;">
+          <div class="bq-hint--xs bq-hint--mt">
             高考题严格限定高中课标；竞赛题可涉及大学基础生物学；共通题为两者重叠基础
           </div>
         </div>
@@ -1526,7 +1526,7 @@ function renderFilterPanel() {
               placeholder="输入 1-200"
               style="width:120px;${isPresetCount ? 'display:none;' : ''}" aria-label="自定义刷题数量">
           </div>
-          <div style="font-size:0.78rem;color:var(--text-muted);margin-top:6px;">
+          <div class="bq-hint--xs bq-hint--mt">
             预设 5/10/20/50，或选择「自定义…」输入 1-200 道（超出可用题目时按实际数量出题）
           </div>
         </div>
@@ -2193,9 +2193,9 @@ function renderQuiz() {
       const isCorrect = userAns === q.answer;
       const optionLabels = ['A', 'B', 'C', 'D', 'E'];
       subQuestionsHtml += `
-        <div class="practice-option-result" style="margin-top:12px;">
+        <div class="practice-option-result bq-mt-12" >
           ${isCorrect
-            ? '<span style="color:var(--color-success);">正确！</span>'
+            ? '<span class="bq-hint--success">正确！</span>'
             : `<span class="bq-text-error">错误，正确答案是 ${optionLabels[q.answer]}</span>`
           }
         </div>
@@ -2224,9 +2224,9 @@ function renderQuiz() {
     if (PracticeState.submitted) {
       const isCorrect = userAns === q.answer;
       subQuestionsHtml += `
-        <div class="practice-option-result" style="margin-top:12px;">
+        <div class="practice-option-result bq-mt-12" >
           ${isCorrect
-            ? '<span style="color:var(--color-success);">正确！</span>'
+            ? '<span class="bq-hint--success">正确！</span>'
             : `<span class="bq-text-error">错误，正确答案是 ${q.answer}</span>`
           }
         </div>
@@ -2277,7 +2277,7 @@ function renderQuiz() {
             ${PracticeState.submitted ? `
               <div class="practice-option-result">
                 ${isCorrect
-                  ? '<span style="color:var(--color-success);">判断正确</span>'
+                  ? '<span class="bq-hint--success">判断正确</span>'
                   : `<span class="bq-text-error">判断错误，正确答案为「${correctAnswer ? '正确' : '错误'}」</span>`
                 }
               </div>
@@ -2556,7 +2556,7 @@ function showSummary() {
     <div class="animate-fade-in">
       <section class="section" style="padding-top:0;padding-bottom:24px;">
         <h2 class="section-title">练习小结</h2>
-        <p class="section-desc">恭喜完成练习！查看你的学习成果。</p>
+        <p class="section-desc">练习完成，以下是你的学习成果。</p>
       </section>
 
       <div class="practice-summary-card">
@@ -2729,7 +2729,7 @@ function renderPracticePage(target) {
     target.innerHTML = '<div class="bq-empty-block">' +
       '<p class="bq-error-title">练习模块加载失败</p>' +
       '<p class="bq-note">请刷新页面或稍后重试</p>' +
-      '<button data-on=\'["_cspReload"]\' style="padding:8px 20px;background:var(--color-sage);color:#fff;border:none;border-radius:8px;cursor:pointer;">刷新页面</button>' +
+      '<button data-on=\'["_cspReload"]\' class="bq-btn--compact">刷新页面</button>' +
       '</div>';
   }
 }
@@ -3178,7 +3178,7 @@ function initPractice(target) {
       target.innerHTML = '<div class="bq-empty-block">' +
         '<p class="bq-error-title">练习模块初始化失败</p>' +
         '<p class="bq-note">请刷新页面或稍后重试</p>' +
-        '<button data-on=\'["_cspReload"]\' style="padding:8px 20px;background:var(--color-sage);color:#fff;border:none;border-radius:8px;cursor:pointer;">刷新页面</button>' +
+        '<button data-on=\'["_cspReload"]\' class="bq-btn--compact">刷新页面</button>' +
         '</div>';
     }
   }

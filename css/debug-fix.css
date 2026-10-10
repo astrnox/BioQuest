@@ -4,7 +4,6 @@
 
 /* 确保绝对定位的装饰元素不阻挡点击 */
 .hero-bg,
-.hero-overlay,
 .hero-gradient-left,
 .hero-scroll-hint {
   pointer-events: none !important;

@@ -17,11 +17,8 @@
   if (document.readyState === 'interactive' || document.readyState === 'complete') promoteAsyncCss();
   else document.addEventListener('DOMContentLoaded', promoteAsyncCss);
 
-  document.addEventListener('DOMContentLoaded', function () {
-    if (typeof window.loadModule === 'function') {
-      window.loadModule('hero-sketch');
-    }
-  });
+  // 注：原此处加载 hero-sketch（首屏随机粒子背景），已移除。
+  // 首屏背景改为纯 CSS 静态层次，见 css/home.css 的 .hero-bg。
 
   // #104：动态注入同样固定精确版本并携带 SRI integrity（与各页面静态
   // <script> 标签一致），杜绝"版本漂移 + 供应链被替换"风险。

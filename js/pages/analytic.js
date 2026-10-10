@@ -871,7 +871,7 @@ function renderWrongBook(container) {
     container.innerHTML = `
       <div class="empty-state">
         <div class="empty-state-icon"></div>
-        <p class="empty-state-text">暂无错题，继续保持！</p>
+        <p class="empty-state-text">暂无错题记录</p>
       </div>
     `;
     return;

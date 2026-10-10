@@ -543,11 +543,12 @@
         if (submitted) return;
         submitted = true;
         var allRight = true;
+        var wrongCount = 0;
         var detailHtml = '';
         subs.forEach(function(s) {
           var userPick = picks[s.label];
           var right = (userPick === s.answer);
-          if (!right) allRight = false;
+          if (!right) { allRight = false; wrongCount++; }
           detailHtml += '<div><strong>' + _esc(s.label) + '.</strong> ' + _esc(s.text) +
             ' → 你选 <strong>' + (userPick === undefined ? '—' : (userPick ? '√' : '×')) + '</strong>' +
             ' / 正确 <strong>' + (s.answer ? '√' : '×') + '</strong>' +
@@ -557,7 +558,7 @@
         var resultEl = document.getElementById('rd-result-' + idx);
         if (resultEl) {
           resultEl.innerHTML = '<div class="rd-practice-result ' + (allRight ? 'rd-practice-result--pass' : 'rd-practice-result--fail') + '">' +
-            '<strong>' + (allRight ? '全对，已记录为掌握！' : '有错，继续加油') + '</strong>' + detailHtml +
+            '<strong>' + (allRight ? '全对 · 已记录为掌握' : (wrongCount + ' 题待复习') ) + '</strong>' + detailHtml +
             (qItem.explanation ? '<div style="margin-top:6px;color:var(--text-secondary,#555);">解析：' + _esc(qItem.explanation) + '</div>' : '') +
           '</div>';
         }

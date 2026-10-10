@@ -1550,7 +1550,7 @@ function renderScorePaths(scorePaths) {
 
   if (scorePaths.length === 0) {
     html += '<div class="diagnosis-empty" style="padding:32px;">';
-    html += '<p style="color:var(--text-muted);font-size:0.88rem;">各模块均已达标，继续保持！</p>';
+    html += '<p style="color:var(--text-muted);font-size:0.88rem;">各模块均已达标</p>';
     html += '</div>';
   } else {
     html += '<div class="diagnosis-path-list">';

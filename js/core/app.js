@@ -384,6 +384,14 @@ function updateNavActive(route) {
       link.removeAttribute('aria-current');
     }
   });
+
+  // 「更多」按钮：当前路由落在其面板内任一入口时，保持高亮，
+  // 否则用户进入二级页后顶栏会"没有任何一级项亮起"。
+  var moreWrap = document.getElementById('headerMore');
+  if (moreWrap) {
+    var activeInside = moreWrap.querySelector('a.active') !== null;
+    moreWrap.classList.toggle('has-active', activeInside);
+  }
 }
 
 /**
@@ -439,7 +447,7 @@ function renderExamPage(target) {
       <div class="bq-empty-block-lg">
         <div class="bq-fs-2rem bq-mb-12"></div>
         <p class="bq-text-muted">考试模块加载中…</p>
-        <p style="color:var(--text-muted);font-size:0.85rem;margin-top:8px;">如长时间未响应，请刷新页面</p>
+        <p class="bq-hint bq-hint--mt">如长时间未响应，请刷新页面</p>
       </div>
     `;
     
@@ -607,9 +615,8 @@ function reinitHomeComponents() {
     statTotalQ.title = '可练题总数：模块精编题 + 逻辑推理题';
   }
 
-  if (typeof initHeroSketch === 'function') {
-    try { initHeroSketch(); } catch (e) { console.warn('[TATABOX] Hero sketch init failed:', e); }
-  }
+  // 注：原此处调用 initHeroSketch()（首屏 35 个随机漂移粒子），已移除。
+  // 首屏背景现为纯 CSS 静态层次，见 css/home.css 的 .hero-bg。
 
   // 初始化平滑滚动动画（全局，首屏可见元素立即触发动画）
   initScrollAnimations();
@@ -1033,7 +1040,7 @@ function _denyRouteAccess(route, access) {
   try { if (typeof updatePageTitle === 'function') updatePageTitle(route); } catch (e) {}
   var denied = !!(access && access.reason === 'role');
   target.innerHTML =
-    '<div class="animate-fade-in" style="display:flex;align-items:center;justify-content:center;min-height:60vh;">' +
+    '<div class="animate-fade-in bq-center-vh" >' +
       '<div style="text-align:center;max-width:420px;padding:48px 32px;">' +
         '<div style="font-family:var(--font-serif,\'Noto Serif SC\',serif);font-size:1.4rem;font-weight:700;color:var(--color-deep,#1a3a2a);margin-bottom:8px;">' +
           (denied ? '权限不足' : '请先登录') +
@@ -1265,7 +1272,7 @@ function handleRoute(route) {
     target.innerHTML = '<div class="bq-empty-block">' +
       '<p class="bq-error-title">模块加载失败</p>' +
       '<p class="bq-note">' + escapeHtml(err && err.message ? err.message : '请检查网络或刷新页面重试') + '</p>' +
-      '<button data-on=\'["_cspReload"]\' style="padding:8px 20px;background:var(--color-sage);color:#fff;border:none;border-radius:8px;cursor:pointer;">刷新页面</button>' +
+      '<button data-on=\'["_cspReload"]\' class="bq-btn--compact">刷新页面</button>' +
       '</div>';
   }
 
@@ -1360,7 +1367,7 @@ function _moduleDir(modName) {
     'supabase': 1, 'supabase-client': 1, 'loader': 1, 'question-utils': 1, 'event-bus': 1,
     'csp-events': 1, 'error-recovery': 1, 'empty-state': 1, 'a11y-utils': 1, 'sync-tabs': 1,
     'cell-loader': 1, 'lazy-images': 1, 'offline-queue': 1, 'offline-status': 1,
-    'shortcut-panel': 1, 'hamburger': 1, 'hero-sketch': 1, 'micro-details': 1,
+    'shortcut-panel': 1, 'hamburger': 1, 'micro-details': 1,
     'score-engine': 1, 'credit-metrics': 1 };
   var algo = { 'fsrs-algorithm': 1, 'fsrs-optimizer': 1, 'irt-engine': 1 };
   var ai = { 'ai-client': 1, 'ai-key-store': 1, 'ai-diagnostic-engine': 1, 'smart-diagnosis': 1, 'multi-agent': 1 };
@@ -1821,7 +1828,7 @@ function doRouteRender(route, target) {
   } catch (err) {
     console.error('[TATABOX] 路由渲染错误:', route, err);
     try {
-      target.innerHTML = '<div class="bq-empty-block-lg"><p class="bq-text-error">页面加载失败，请刷新重试</p><p style="color:var(--text-muted);font-size:0.85rem;margin-top:8px;">路由: ' + route + '</p></div>';
+      target.innerHTML = '<div class="bq-empty-block-lg"><p class="bq-text-error">页面加载失败，请刷新重试</p><p class="bq-hint bq-hint--mt">路由: ' + route + '</p></div>';
     } catch (e2) { /* ignore */ }
   } finally {
     _doRouteRenderCount--;
@@ -2030,6 +2037,46 @@ function bindEvents() {
       return;
     }
   });
+
+  /* ---------- 桌面端「更多」下拉（一级导航收纳） ----------
+     一级只留 6 项，其余入口收进 #headerMorePanel；分组与移动端抽屉一致。 */
+  (function initHeaderMore() {
+    var wrap = document.getElementById('headerMore');
+    var btn = document.getElementById('headerMoreBtn');
+    var panel = document.getElementById('headerMorePanel');
+    if (!wrap || !btn || !panel) return;
+
+    function setOpen(open) {
+      wrap.classList.toggle('is-open', open);
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      panel.hidden = !open;
+    }
+    function isOpen() { return btn.getAttribute('aria-expanded') === 'true'; }
+
+    btn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      setOpen(!isOpen());
+    });
+
+    // 点击面板内的链接后收起（路由切换由既有 data-route 委托处理）
+    panel.addEventListener('click', function (e) {
+      if (e.target.closest('a')) setOpen(false);
+    });
+
+    // 点击面板外部 / Esc / 失焦时收起
+    document.addEventListener('click', function (e) {
+      if (isOpen() && !wrap.contains(e.target)) setOpen(false);
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && isOpen()) { setOpen(false); btn.focus(); }
+    });
+    btn.addEventListener('blur', function () {
+      // 焦点完全离开「更多」区域时收起
+      setTimeout(function () {
+        if (isOpen() && !wrap.contains(document.activeElement)) setOpen(false);
+      }, 0);
+    });
+  })();
 
   // 底部标签栏：点击瞬间即高亮（液态玻璃胶囊立即滑动），不等路由渲染完成；
   // handleRoute 渲染后会再次定位（幂等），做到"点击→反馈"几乎零延迟。
@@ -3293,7 +3340,7 @@ function showFeedbackModal() {
         <p class="auth-form-sub" style="margin-bottom:20px;">告诉我们你的想法，帮助我们改进 TATABOX</p>
 
         <div class="auth-field bq-mb-14">
-          <label style="display:block;font-size:0.82rem;color:var(--text-secondary,#8a8a8a);margin-bottom:6px;">反馈类型</label>
+          <label class="bq-hint--block-sm">反馈类型</label>
           <select id="feedback-type" style="width:100%;padding:10px 14px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:8px;color:var(--text-primary,#e0e0e0);font-size:0.9rem;outline:none;">
             <option value="bug">Bug 报告</option>
             <option value="feature">功能建议</option>
@@ -3303,17 +3350,17 @@ function showFeedbackModal() {
         </div>
 
         <div class="auth-field bq-mb-14">
-          <label style="display:block;font-size:0.82rem;color:var(--text-secondary,#8a8a8a);margin-bottom:6px;">标题</label>
+          <label class="bq-hint--block-sm">标题</label>
           <input type="text" id="feedback-title" class="auth-input" placeholder="简要描述你的反馈" style="width:100%;box-sizing:border-box;">
         </div>
 
         <div class="auth-field bq-mb-14">
-          <label style="display:block;font-size:0.82rem;color:var(--text-secondary,#8a8a8a);margin-bottom:6px;">详细描述</label>
+          <label class="bq-hint--block-sm">详细描述</label>
           <textarea id="feedback-description" class="auth-input" placeholder="请详细描述问题或建议..." style="width:100%;box-sizing:border-box;min-height:100px;resize:vertical;font-family:inherit;" rows="4"></textarea>
         </div>
 
         <div class="auth-field bq-mb-14">
-          <label style="display:block;font-size:0.82rem;color:var(--text-secondary,#8a8a8a);margin-bottom:6px;">联系方式（选填）</label>
+          <label class="bq-hint--block-sm">联系方式（选填）</label>
           <input type="text" id="feedback-contact" class="auth-input" placeholder="QQ/微信/邮箱，方便我们回复" style="width:100%;box-sizing:border-box;">
         </div>
 
