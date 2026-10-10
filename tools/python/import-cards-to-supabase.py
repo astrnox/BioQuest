@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-BioQuest — 批量导入 200 张知识卡片到 Supabase cards 表
+TATABOX — 批量导入 200 张知识卡片到 Supabase cards 表
 用法: python scripts/import-cards-to-supabase.py
 
 需要环境变量：

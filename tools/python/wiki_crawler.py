@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-BioQuest —— 百科模块词条爬虫 (wiki_crawler.py)
+TATABOX —— 百科模块词条爬虫 (wiki_crawler.py)
 ================================================
 从「维基百科（中文优先）」与「百度百科」抓取约 200 个生物学词条，
 转换为 data/wiki-seed.json 所需的 entries 格式，并合并进种子文件。
@@ -557,7 +557,7 @@ def write_seed(out_path: Path, entries):
     payload = {
         "version": "1.0.0",
         "updated_at": time.strftime("%Y-%m-%d"),
-        "description": "BioQuest 百科模块词条种子，由 scripts/wiki_crawler.py 从维基百科与百度百科抓取生成。",
+        "description": "TATABOX 百科模块词条种子，由 scripts/wiki_crawler.py 从维基百科与百度百科抓取生成。",
         "entries": entries,
     }
     tmp = out_path.with_suffix(out_path.suffix + ".tmp")

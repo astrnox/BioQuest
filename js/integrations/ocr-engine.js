@@ -1,6 +1,6 @@
 /**
  * ============================================================
- * BioQuest — OCR Engine (独立多引擎调度层)
+ * TATABOX — OCR Engine (独立多引擎调度层)
  *
  * 设计原则：
  *   1. 完全独立：单一文件暴露 window.OcrEngine，无外部业务依赖
@@ -884,7 +884,6 @@
       }
     }
 
-    // ---------- 把任意图片 URL（包括跨域）转成 dataURL 供 OCR 使用 ----------
     function _imgToDataURL(img, cb) {
       // 1) 优先 canvas 导出（同源 / 有 CORS）
       try {
@@ -963,7 +962,6 @@
     }
     function _hideTrigger() { _removeEl(btnTrigger); btnTrigger = null; }
 
-    // ---------- 触发按钮 ----------
     function _showTrigger(x, y, img) {
       _hideTrigger();
       btnTrigger = document.createElement('button');
@@ -988,7 +986,6 @@
       document.body.appendChild(btnTrigger);
     }
 
-    // ---------- 结果面板 ----------
     function _showResultPanel(img, initialText) {
       if (resultPanel) _removeEl(resultPanel);
       resultPanel = document.createElement('div');
@@ -1016,7 +1013,7 @@
       title.innerHTML = '<strong style="font-size:15px;">OCR 识别结果</strong>' +
                         '<span id="ocr-panel-engine" style="margin-left:8px;font-size:12px;color:#8a8a8a;"></span>';
       var close = document.createElement('button');
-      close.textContent = '✕';
+      close.textContent = '×';
       _css(close, {
         border: 'none', background: 'transparent', fontSize: '18px',
         cursor: 'pointer', color: '#8a8a8a', padding: '2px 6px', borderRadius: '8px'
@@ -1181,7 +1178,6 @@
       });
     }
 
-    // ---------- 事件绑定：右键 + 长按 ----------
     document.addEventListener('contextmenu', function (ev) {
       var img = ev.target && ev.target.closest('img');
       if (!img) return;
@@ -1315,7 +1311,7 @@
       titleEl.innerHTML = '<strong style="font-size:16px;">错题本 · 批量OCR录入</strong>' +
                          '<div id="ocr-batch-stat" style="margin-top:4px;font-size:12px;color:#8a8a8a;">选择图片，按顺序 OCR 识别并入库</div>';
       var closeBtn = document.createElement('button');
-      closeBtn.textContent = '✕';
+      closeBtn.textContent = '×';
       _css(closeBtn, {
         border: 'none', background: 'transparent', fontSize: '20px',
         cursor: 'pointer', color: '#8a8a8a', padding: '2px 8px', borderRadius: '8px'
@@ -1558,7 +1554,7 @@
         });
         btnRetry.addEventListener('click', function () { _runTask(task); });
         var btnRm = document.createElement('button');
-        btnRm.textContent = '✕ 移除';
+        btnRm.textContent = '× 移除';
         _css(btnRm, {
           padding: '5px 10px', borderRadius: '8px', cursor: 'pointer',
           fontSize: '12.5px', background: '#fff',

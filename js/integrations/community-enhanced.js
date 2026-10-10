@@ -1,6 +1,6 @@
 /**
  * ============================================================
- * BioQuest — 社区模块增强集成（quikchat）
+ * TATABOX — 社区模块增强集成（quikchat）
  *
  * quikchat (BSD-2)：轻量实时聊天 UI（5KB gzip）
  *   - 纯 vanilla JS，UMD 加载，全局变量 window.quikchat（构造函数）
@@ -34,7 +34,6 @@
   var _quikchatInstance = null;
   var _quikchatContainer = null; // 记录挂载容器，便于销毁时清空
 
-  // ===== quikchat 集成 =====
 
   /**
    * 懒加载 quikchat.js
@@ -212,7 +211,7 @@
       console.error('[CommunityEnhanced] quikchat 挂载失败:', err);
       if (container) {
         container.innerHTML = '<p style="color:var(--color-error,#e53935);text-align:center;padding:40px;">' +
-          '聊天室加载失败<br><small style="color:var(--text-muted,#8a8a8a);">' +
+          '聊天室加载失败<br><small class="bq-text-muted">' +
           _escapeHtml(err.message || String(err)) + '</small></p>';
       }
       throw err;
@@ -240,7 +239,6 @@
     }
   }
 
-  // ===== 页面渲染 =====
 
   /**
    * 渲染增强版社区页（quikchat 聊天）
@@ -261,7 +259,7 @@
         '</div>' +
         // 右侧：说明
         '<div style="background:var(--surface-primary,#fff);border:1px solid var(--border-light,#ece8e1);border-radius:var(--radius-lg, 12px);padding:20px;">' +
-          '<h3 style="font-family:var(--font-serif,serif);font-size:1.1rem;color:var(--color-deep,#1a3a2a);margin-bottom:12px;">ℹ️ 使用说明</h3>' +
+          '<h3 style="font-family:var(--font-serif,serif);font-size:1.1rem;color:var(--color-deep,#1a3a2a);margin-bottom:12px;">使用说明</h3>' +
           '<ul style="margin:0;padding-left:20px;color:var(--text-secondary,#4a4a4a);font-size:0.85rem;line-height:1.8;">' +
             '<li>左侧实时讨论室基于 quikchat，消息保存在本地浏览器</li>' +
             '<li>支持 Markdown 格式（粗体、斜体、行内代码、链接）</li>' +
@@ -274,7 +272,7 @@
 
     // 挂载 quikchat
     mountChat('community-chat', {
-      title: 'BioQuest 讨论室',
+      title: 'TATABOX 讨论室',
       userName: '学习者',
       storageKey: 'bioquest_community_chat'
     }).catch(function () {});

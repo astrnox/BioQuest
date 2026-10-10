@@ -1,6 +1,6 @@
 /**
  * ============================================================
- * BioQuest — 用户中心模块
+ * TATABOX — 用户中心模块
  * 设置面板、数据管理、学习记录、收藏夹、存储用量
  * ============================================================
  */
@@ -17,16 +17,7 @@ window._cspClearNotifs = function () {
 };
 
 // escapeHtml 本地 fallback：优先使用全局函数，否则使用内联实现
-var escapeHtml = (typeof window !== 'undefined' && typeof window.escapeHtml === 'function')
-  ? window.escapeHtml
-  : function(str) {
-      return String(str)
-        .replace(/&/g, '&amp;')
-        .replace(/</g, '&lt;')
-        .replace(/>/g, '&gt;')
-        .replace(/"/g, '&quot;')
-        .replace(/'/g, '&#39;');
-    };
+var escapeHtml = (typeof window !== 'undefined' ? window : globalThis).escapeHtml; // 规范实现见 js/core/utils.js（Q-01 统一）
 
 function injectUserStyles() {
   if (userStylesInjected) return;
@@ -730,7 +721,6 @@ function showToast(message) {
   }, 2200);
 }
 
-// ===== 头像上传 =====
 
 /**
  * 获取当前头像 URL
@@ -817,12 +807,12 @@ function setupAvatarUpload() {
 
     var allowed = ['image/jpeg', 'image/png', 'image/webp'];
     if (allowed.indexOf(file.type) === -1) {
-      if (typeof showToast === 'function') showToast('仅支持 JPEG / PNG / WebP 格式');
+      showToast('仅支持 JPEG / PNG / WebP 格式');
       e.target.value = '';
       return;
     }
     if (file.size > 5 * 1024 * 1024) {
-      if (typeof showToast === 'function') showToast('图片大小不能超过 5MB');
+      showToast('图片大小不能超过 5MB');
       e.target.value = '';
       return;
     }
@@ -834,13 +824,13 @@ function setupAvatarUpload() {
       _compressAvatarImage(ev.target.result, 200, 0.8, function(compressed) {
         avatarBtn.classList.remove('user-profile-avatar--loading');
         if (!compressed) {
-          if (typeof showToast === 'function') showToast('图片处理失败，请更换图片');
+          showToast('图片处理失败，请更换图片');
           e.target.value = '';
           return;
         }
         // 存到 localStorage
         try { localStorage.setItem('bioquest_avatar', compressed); } catch (storageErr) {
-          if (typeof showToast === 'function') showToast('本地存储失败：' + (storageErr.message || '空间不足'));
+          showToast('本地存储失败：' + (storageErr.message || '空间不足'));
           e.target.value = '';
           return;
         }
@@ -859,13 +849,13 @@ function setupAvatarUpload() {
             } catch (uploadErr) { /* 静默 */ }
           }
         }
-        if (typeof showToast === 'function') showToast('头像已更新');
+        showToast('头像已更新');
         e.target.value = '';
       });
     };
     reader.onerror = function() {
       avatarBtn.classList.remove('user-profile-avatar--loading');
-      if (typeof showToast === 'function') showToast('读取文件失败');
+      showToast('读取文件失败');
       e.target.value = '';
     };
     reader.readAsDataURL(file);
@@ -892,7 +882,7 @@ function renderProfilePanel(container) {
         emailVerified = !!(user.emailVerified || user.email_verified);
       }
     } catch (e) {
-      console.warn('[BioQuest] 获取用户信息失败:', e);
+      console.warn('[TATABOX] 获取用户信息失败:', e);
     }
   }
 
@@ -1161,23 +1151,23 @@ function renderSettingsPanel(container) {
         <details style="margin-top:8px;border:1px solid var(--border-light,#ece8e1);border-radius:8px;padding:0;">
           <summary style="padding:10px 14px;cursor:pointer;font-size:0.84rem;font-weight:600;color:var(--color-sage,#3a6b4a);">如何免费申请 API Key？</summary>
           <div style="padding:0 14px 14px;font-size:0.8rem;line-height:1.75;color:var(--text-secondary,#4a4a4a);">
-            <p style="margin:8px 0 4px;"><strong>1. DeepSeek（推荐 · 性价比最高）</strong></p>
-            <p style="margin:0 0 8px;">访问 <a href="https://platform.deepseek.com" target="_blank" style="color:var(--color-amber,#c4956a);">platform.deepseek.com</a> → 注册 → 顶部「API Keys」创建。新用户送 500 万 tokens 免费额度，1 元可买 100 万 tokens。模型填 <code style="background:rgba(0,0,0,0.05);padding:1px 5px;border-radius:2px;">deepseek-chat</code></p>
+            <p class="bq-m-0 bq-mt-8 bq-mb-4"><strong>1. DeepSeek（推荐 · 性价比最高）</strong></p>
+            <p class="bq-m-0 bq-mb-8">访问 <a href="https://platform.deepseek.com" target="_blank" class="bq-hint--amber">platform.deepseek.com</a> → 注册 → 顶部「API Keys」创建。新用户送 500 万 tokens 免费额度，1 元可买 100 万 tokens。模型填 <code class="bq-kbd">deepseek-chat</code></p>
 
-            <p style="margin:8px 0 4px;"><strong>2. 智谱 GLM（免费额度大）</strong></p>
-            <p style="margin:0 0 8px;">访问 <a href="https://open.bigmodel.cn" target="_blank" style="color:var(--color-amber,#c4956a);">open.bigmodel.cn</a> → 注册 → 「API Keys」创建。新用户送 2000 万 tokens 免费额度。模型填 <code style="background:rgba(0,0,0,0.05);padding:1px 5px;border-radius:2px;">glm-4-flash</code>（免费）或 <code style="background:rgba(0,0,0,0.05);padding:1px 5px;border-radius:2px;">glm-4-plus</code></p>
+            <p class="bq-m-0 bq-mt-8 bq-mb-4"><strong>2. 智谱 GLM（免费额度大）</strong></p>
+            <p class="bq-m-0 bq-mb-8">访问 <a href="https://open.bigmodel.cn" target="_blank" class="bq-hint--amber">open.bigmodel.cn</a> → 注册 → 「API Keys」创建。新用户送 2000 万 tokens 免费额度。模型填 <code class="bq-kbd">glm-4-flash</code>（免费）或 <code class="bq-kbd">glm-4-plus</code></p>
 
-            <p style="margin:8px 0 4px;"><strong>3. 阿里通义千问</strong></p>
-            <p style="margin:0 0 8px;">访问 <a href="https://dashscope.console.aliyun.com" target="_blank" style="color:var(--color-amber,#c4956a);">dashscope.console.aliyun.com</a> → 注册 → 「API-KEY 管理」。新用户送 100 万 tokens 免费额度。模型填 <code style="background:rgba(0,0,0,0.05);padding:1px 5px;border-radius:2px;">qwen-turbo</code></p>
+            <p class="bq-m-0 bq-mt-8 bq-mb-4"><strong>3. 阿里通义千问</strong></p>
+            <p class="bq-m-0 bq-mb-8">访问 <a href="https://dashscope.console.aliyun.com" target="_blank" class="bq-hint--amber">dashscope.console.aliyun.com</a> → 注册 → 「API-KEY 管理」。新用户送 100 万 tokens 免费额度。模型填 <code class="bq-kbd">qwen-turbo</code></p>
 
-            <p style="margin:8px 0 4px;"><strong>4. 月之暗面 Kimi</strong></p>
-            <p style="margin:0 0 8px;">访问 <a href="https://platform.moonshot.cn" target="_blank" style="color:var(--color-amber,#c4956a);">platform.moonshot.cn</a> → 注册 → 「API Key 管理」。新用户送 15 元体验金。模型填 <code style="background:rgba(0,0,0,0.05);padding:1px 5px;border-radius:2px;">moonshot-v1-8k</code></p>
+            <p class="bq-m-0 bq-mt-8 bq-mb-4"><strong>4. 月之暗面 Kimi</strong></p>
+            <p class="bq-m-0 bq-mb-8">访问 <a href="https://platform.moonshot.cn" target="_blank" class="bq-hint--amber">platform.moonshot.cn</a> → 注册 → 「API Key 管理」。新用户送 15 元体验金。模型填 <code class="bq-kbd">moonshot-v1-8k</code></p>
 
-            <p style="margin:8px 0 4px;"><strong>5. NVIDIA NIM（1000 次免费）</strong></p>
-            <p style="margin:0 0 8px;">访问 <a href="https://build.nvidia.com" target="_blank" style="color:var(--color-amber,#c4956a);">build.nvidia.com</a> → 注册 → 任选模型 → 右侧「Get API Key」。每个账号 1000 次免费调用，可调用 Llama 3.3 70B 等开源大模型。模型填 <code style="background:rgba(0,0,0,0.05);padding:1px 5px;border-radius:2px;">meta/llama-3.3-70b-instruct</code></p>
+            <p class="bq-m-0 bq-mt-8 bq-mb-4"><strong>5. NVIDIA NIM（1000 次免费）</strong></p>
+            <p class="bq-m-0 bq-mb-8">访问 <a href="https://build.nvidia.com" target="_blank" class="bq-hint--amber">build.nvidia.com</a> → 注册 → 任选模型 → 右侧「Get API Key」。每个账号 1000 次免费调用，可调用 Llama 3.3 70B 等开源大模型。模型填 <code class="bq-kbd">meta/llama-3.3-70b-instruct</code></p>
 
-            <p style="margin:8px 0 4px;"><strong>6. 硅基流动 SiliconFlow（多模型免费）</strong></p>
-            <p style="margin:0 0 8px;">访问 <a href="https://cloud.siliconflow.cn" target="_blank" style="color:var(--color-amber,#c4956a);">cloud.siliconflow.cn</a> → 注册 → 「API 密钥」。新用户送 14 元额度，Qwen2.5-7B 等小模型永久免费。模型填 <code style="background:rgba(0,0,0,0.05);padding:1px 5px;border-radius:2px;">Qwen/Qwen2.5-7B-Instruct</code></p>
+            <p class="bq-m-0 bq-mt-8 bq-mb-4"><strong>6. 硅基流动 SiliconFlow（多模型免费）</strong></p>
+            <p class="bq-m-0 bq-mb-8">访问 <a href="https://cloud.siliconflow.cn" target="_blank" class="bq-hint--amber">cloud.siliconflow.cn</a> → 注册 → 「API 密钥」。新用户送 14 元额度，Qwen2.5-7B 等小模型永久免费。模型填 <code class="bq-kbd">Qwen/Qwen2.5-7B-Instruct</code></p>
 
             <p style="margin:10px 0 4px;padding-top:8px;border-top:1px dashed var(--border-light,#ece8e1);"><strong>隐私说明</strong></p>
             <p style="margin:0;">API Key 仅保存在当前页面的内存中；若勾选「会话内记住」，会额外存入本标签页的 sessionStorage（关闭标签页即自动清除）。Key 不会上传服务器，也不会持久化到你浏览器的 localStorage 或磁盘，关闭浏览器后长期不留存。</p>
@@ -1193,7 +1183,7 @@ function renderSettingsPanel(container) {
     <div class="user-card">
       <div class="user-card-title">Bio 分计算器</div>
       <div class="user-card-subtitle">输入六维属性（0-100）实时推演 Bio Score 总分与评级，公式与评级规则 100% 公开</div>
-      <div id="userBioCalcEmbed" style="margin-top:12px;"></div>
+      <div id="userBioCalcEmbed" class="bq-mt-12"></div>
     </div>
   `;
 
@@ -1350,9 +1340,7 @@ function _incrementAiUsage() {
 function _canUseAi() {
   var usage = _getApiKeyDailyUsage();
   if (usage.count >= _AI_DAILY_LIMIT) {
-    if (typeof showToast === 'function') {
-      showToast('今日 AI 调用已达上限（' + _AI_DAILY_LIMIT + ' 次），明日 0:00 重置。配置自定义 API Key 可解锁更多额度。');
-    }
+showToast('今日 AI 调用已达上限（' + _AI_DAILY_LIMIT + ' 次），明日 0:00 重置。配置自定义 API Key 可解锁更多额度。');
     return false;
   }
   return true;
@@ -1411,18 +1399,16 @@ function _bindApiKeySettings() {
         model: document.getElementById('aiModelInput').value.trim()
       };
       if (!cfg.apiKey) {
-        if (typeof showToast === 'function') showToast('请输入 API Key');
+        showToast('请输入 API Key');
         return;
       }
       _saveApiKeyConfig(cfg, _rememberChecked());
       // 恢复遮罩显示
       keyInput.value = cfg.apiKey.length > 4 ? '****' + cfg.apiKey.slice(-4) : '****';
       keyInput.type = 'password';
-      if (typeof showToast === 'function') {
-        showToast(_rememberChecked()
-          ? '已保存（会话内记住：刷新不丢失，关闭标签页自动清除）'
-          : '已保存（Key 仅存当前页面内存，刷新页面后需重新输入）');
-      }
+showToast(_rememberChecked()
+  ? '已保存（会话内记住：刷新不丢失，关闭标签页自动清除）'
+  : '已保存（Key 仅存当前页面内存，刷新页面后需重新输入）');
     });
   }
 
@@ -1441,7 +1427,7 @@ function _bindApiKeySettings() {
       keyInput.value = '';
       document.getElementById('aiModelInput').value = '';
       document.getElementById('aiProviderSelect').value = 'deepseek';
-      if (typeof showToast === 'function') showToast('已清除 API Key');
+      showToast('已清除 API Key');
     });
   }
 }
@@ -1487,21 +1473,21 @@ function _testAiKeyConnection() {
     })
   }).then(function(resp) {
     if (resp.ok) {
-      resultEl.textContent = '✓ 连接成功！模型 ' + model + ' 可用';
+      resultEl.textContent = '连接成功，模型 ' + model + ' 可用';
       resultEl.style.color = 'var(--color-sage,#3a6b4a)';
       // 保存配置（携带「会话内记住」偏好）
       _saveApiKeyConfig(cfg, document.getElementById('aiKeyRememberCb')
         ? document.getElementById('aiKeyRememberCb').checked : false);
     } else {
       return resp.text().then(function(txt) {
-        var msg = '✗ 连接失败（HTTP ' + resp.status + '）';
+        var msg = '连接失败（HTTP ' + resp.status + '）';
         try { var j = JSON.parse(txt); if (j.error && j.error.message) msg += '：' + j.error.message; } catch(e) {}
         resultEl.textContent = msg;
         resultEl.style.color = 'var(--color-error,#c0553a)';
       });
     }
   }).catch(function(err) {
-    resultEl.textContent = '✗ 网络错误：' + (err.message || err);
+    resultEl.textContent = '网络错误：' + errText(err);
     resultEl.style.color = 'var(--color-error,#c0553a)';
   });
 }
@@ -1576,7 +1562,7 @@ var _POINTS_DEFAULTS = {
 // 信任等级（由当前信用指数推导；指数越高，社区信任越高）
 var _POINTS_LEVELS = [
   { min: 0,   label: '不受信任', title: '不受信任', color: '#c0553a' },
-  { min: 10,  label: '极低信任', title: '极低信任', color: '#d47030', icon: '⚠️' },
+  { min: 10,  label: '极低信任', title: '极低信任', color: '#d47030' },
   { min: 30,  label: '有限信任', title: '有限信任', color: '#c49b30' },
   { min: 50,  label: '基本信任', title: '基本信任', color: '#5a7d5c' },
   { min: 80,  label: '高度信任', title: '高度信任', color: '#3a8c5c' },
@@ -1822,9 +1808,9 @@ function _fallbackCopy(text) {
     ta.select();
     document.execCommand('copy');
     document.body.removeChild(ta);
-    if (typeof showToast === 'function') showToast('密钥已复制：' + text);
+    showToast('密钥已复制：' + text);
   } catch (e) {
-    if (typeof showToast === 'function') showToast('复制失败，请手动选择密钥文本');
+    showToast('复制失败，请手动选择密钥文本');
   }
 }
 window._fallbackCopy = _fallbackCopy;
@@ -2005,7 +1991,7 @@ function renderRecordsPanel(container) {
       var recData = raw && raw.data ? raw.data : raw;
       records = Array.isArray(recData) ? recData : [];
     } catch (e) {
-      console.warn('[BioQuest] 获取学习记录失败:', e);
+      console.warn('[TATABOX] 获取学习记录失败:', e);
       records = [];
     }
   }
@@ -2073,7 +2059,7 @@ function renderFavoritesPanel(container) {
       var favData = rawFav && rawFav.data ? rawFav.data : rawFav;
       favIds = Array.isArray(favData) ? favData : [];
     } catch (e) {
-      console.warn('[BioQuest] 获取收藏列表失败:', e);
+      console.warn('[TATABOX] 获取收藏列表失败:', e);
       favIds = [];
     }
   }
@@ -2088,7 +2074,7 @@ function renderFavoritesPanel(container) {
       var wrongData = rawWrong && rawWrong.data ? rawWrong.data : rawWrong;
       wrongQuestions = Array.isArray(wrongData) ? wrongData : [];
     } catch (e) {
-      console.warn('[BioQuest] 获取错题列表失败:', e);
+      console.warn('[TATABOX] 获取错题列表失败:', e);
       wrongQuestions = [];
     }
   }
@@ -2110,7 +2096,7 @@ function renderFavoritesPanel(container) {
       var recData = rawRec && rawRec.data ? rawRec.data : rawRec;
       records = Array.isArray(recData) ? recData : [];
     } catch (e) {
-      console.warn('[BioQuest] 获取记录列表(收藏映射)失败:', e);
+      console.warn('[TATABOX] 获取记录列表(收藏映射)失败:', e);
       records = [];
     }
   }
@@ -2262,7 +2248,7 @@ async function renderStreakPanel(container) {
         '<div style="font-size:2rem;font-weight:700;color:var(--color-deep,#1a3a2a);">' + (data.current_streak || 0) + '</div>' +
         '<div style="font-size:0.75rem;color:var(--text-muted,#8a8a8a);">天连续打卡</div>' +
       '</div>' +
-      '<div style="flex:1;">' +
+      '<div class="bq-flex-1">' +
         '<div style="font-size:0.85rem;color:var(--text-secondary,#555);margin-bottom:4px;">累计打卡 <strong>' + (data.total_checkins || 0) + '</strong> 天</div>' +
         '<div style="font-size:0.85rem;color:var(--text-secondary,#555);">最长连续 <strong>' + (data.longest_streak || 0) + '</strong> 天</div>' +
       '</div>' +
@@ -2410,7 +2396,7 @@ function renderUserPage(target) {
     // 未登录时显示登录提示
     if (typeof isLoggedIn !== 'function' || !isLoggedIn()) {
       target.innerHTML = `
-        <div class="animate-fade-in" style="display:flex;align-items:center;justify-content:center;min-height:60vh;">
+        <div class="animate-fade-in bq-center-vh" >
           <div style="text-align:center;max-width:400px;padding:48px 32px;">
             <div style="font-size:3.5rem;margin-bottom:16px;"></div>
             <div style="font-family:var(--font-serif,'Noto Serif SC',serif);font-size:1.4rem;font-weight:700;color:var(--color-deep,#1a3a2a);margin-bottom:8px;">请先登录</div>
@@ -2484,7 +2470,7 @@ function renderUserPage(target) {
             <div class="user-quick-label">社区</div>
           </div>
           <div class="user-quick-item" data-on='["navigateTo","/leaderboard"]'>
-            <div class="user-quick-icon">🏆</div><div class="user-quick-label">排行</div>
+            <div class="user-quick-label">排行</div>
           </div>
         </div>
 
@@ -2580,7 +2566,7 @@ function renderUserPage(target) {
         try {
           if (navigator.clipboard && navigator.clipboard.writeText) {
             navigator.clipboard.writeText(key).then(function() {
-              if (typeof showToast === 'function') showToast('密钥已复制：' + key);
+              showToast('密钥已复制：' + key);
             }, function() { _fallbackCopy(key); });
           } else {
             _fallbackCopy(key);
@@ -2589,11 +2575,11 @@ function renderUserPage(target) {
       });
     }
   } catch (err) {
-    console.error('[BioQuest] 用户中心渲染错误:', err);
+    console.error('[TATABOX] 用户中心渲染错误:', err);
     // 安全修复（P1 XSS）：err.message 转义后再注入 innerHTML
     var _ueMsg = err && err.message ? String(err.message) : '';
     var _ueEsc = _ueMsg.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
-    target.innerHTML = '<div style="text-align:center;padding:64px 24px;"><p style="color:var(--color-error);">用户中心加载失败</p><p style="color:var(--text-muted);font-size:0.85rem;margin-top:8px;">' + _ueEsc + '</p></div>';
+    target.innerHTML = '<div class="bq-empty-block-lg"><p class="bq-text-error">用户中心加载失败</p><p class="bq-hint bq-hint--mt">' + _ueEsc + '</p></div>';
   }
 }
 
@@ -2665,7 +2651,7 @@ function _showUserSubPage(key) {
         renderNotificationsPanel(bodyEl);
       }
     } catch (e) {
-      console.warn('[BioQuest] 子页面渲染失败:', key, e);
+      console.warn('[TATABOX] 子页面渲染失败:', key, e);
       bodyEl.innerHTML = '<div class="user-empty-state"><p>加载失败</p></div>';
     }
   }, 50);
@@ -2888,11 +2874,11 @@ function _userJoinClass() {
         joinedAt: new Date().toISOString()
       });
       localStorage.setItem('bioquest_joined_classes', JSON.stringify(joined));
-      if (typeof showToast === 'function') showToast('已加入 ' + (teacher.display_name || teacher.username || '') + ' 的班级');
+      showToast('已加入 ' + (teacher.display_name || teacher.username || '') + ' 的班级');
       close();
     } catch (e) {
       btn.disabled = false; btn.textContent = '加入';
-      showErr('查询失败：' + (e.message || e)); return;
+      showErr('查询失败：' + errText(e)); return;
     }
   }
   overlay.querySelector('#join-ok').addEventListener('click', submit);
@@ -2986,7 +2972,7 @@ function generateShareCard() {
   // 标题
   ctx.fillStyle = '#e0e8e4';
   ctx.font = 'bold 28px "Noto Serif SC", serif';
-  ctx.fillText('BioQuest 学习报告', 40, 55);
+  ctx.fillText('TATABOX 学习报告', 40, 55);
 
   // 分隔线
   ctx.strokeStyle = 'rgba(255,255,255,0.2)';
@@ -3043,7 +3029,7 @@ function generateShareCard() {
   // 底部
   ctx.fillStyle = 'rgba(255,255,255,0.4)';
   ctx.font = '12px sans-serif';
-  ctx.fillText('BioQuest 生物竞赛学习平台 · ' + new Date().toLocaleDateString('zh-CN'), 40, 370);
+  ctx.fillText('TATABOX 高中生物学习平台 · ' + new Date().toLocaleDateString('zh-CN'), 40, 370);
   ctx.fillText('bioquest.dada.im', 460, 370);
 
   // 下载
@@ -3053,7 +3039,7 @@ function generateShareCard() {
     link.href = canvas.toDataURL('image/png');
     link.click();
   } catch (e) {
-    alert('生成卡片失败：' + (e.message || '未知错误'));
+    alert('生成卡片失败：' + errText(e));
   }
 }
 

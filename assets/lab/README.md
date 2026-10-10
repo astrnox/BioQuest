@@ -1,6 +1,6 @@
 # Virtual laboratory visual assets
 
-These project-bound WebP assets were prepared for the BioQuest virtual biology laboratory. They are intentionally rendered with the same bright neutral laboratory lighting, realistic glass/plastic materials, and restrained sage/cream palette so canvas overlays remain readable.
+These project-bound WebP assets were prepared for the TATABOX virtual biology laboratory. They are intentionally rendered with the same bright neutral laboratory lighting, realistic glass/plastic materials, and restrained sage/cream palette so canvas overlays remain readable.
 
 ## Generated assets and prompt direction
 

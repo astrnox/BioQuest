@@ -1,6 +1,6 @@
 /**
  * ============================================================
- * BioQuest - 管理员后台模块
+ * TATABOX - 管理员后台模块
  * 题目管理、用户管理、密钥验证
  * 设计风格：与主站一致，深绿/琥珀色系，衬线字体
  * ============================================================
@@ -11,7 +11,6 @@ var _adminAuthenticated = false;
 // admin modal 焦点陷阱管理（统一通过 MutationObserver 监听 display 变化）
 var _adminModalTraps = {};
 
-// ===== 管理员后台常量（超时 / 限制 / 重试） =====
 var ADMIN_TOKEN_TTL = 5 * 60 * 1000;            // 管理员 token 有效期（5 分钟）
 var ADMIN_COUNT_LIMIT = 100000;                 // 统计总数用的查询 limit
 var ADMIN_CARDS_COUNT_LIMIT = 1000;             // 卡片统计查询 limit
@@ -145,16 +144,7 @@ if (document.readyState === 'loading') {
 }
 
 // escapeHtml 本地 fallback
-var escapeHtml = (typeof window !== 'undefined' && typeof window.escapeHtml === 'function')
-  ? window.escapeHtml
-  : function(str) {
-      return String(str)
-        .replace(/&/g, '&amp;')
-        .replace(/</g, '&lt;')
-        .replace(/>/g, '&gt;')
-        .replace(/"/g, '&quot;')
-        .replace(/'/g, '&#39;');
-    };
+var escapeHtml = (typeof window !== 'undefined' ? window : globalThis).escapeHtml; // 规范实现见 js/core/utils.js（Q-01 统一）
 
 // 修复：当 Supabase auth 状态变化时，admin 模块同步更新认证状态
 window._onAuthUserLoaded = function(user) {
@@ -1044,7 +1034,7 @@ function injectAdminStyles() {
 //      纯前端伪造状态无法提权（密钥摘要不下发、不在前端比对）。
 //   2. 管理员账号：Supabase Auth 邮箱 + 密码登录，要求账号 user_group='admin'。
 // 数据读写权限始终由 sql/ 中的 RLS 策略在服务端强制。
-// 详见 prd/BioQuest-安全与工程整改PRD.md P0-2。
+// 详见 sql/migration_v11_admin_auth.sql。
 
 /**
  * 判断是否为「服务端未部署同名 RPC」错误（PostgREST: Could not find the function ... / does not exist）
@@ -1134,7 +1124,7 @@ async function adminLogin(email, password) {
 
 // 解析 Supabase 错误，返回用户友好的错误信息
 function parseSupabaseError(error) {
-  if (!error) return '未知错误';
+  if (!error) return errText(error);
   var msg = error.message || String(error);
   var code = error.code || '';
   var details = error.details || '';
@@ -1255,7 +1245,6 @@ async function adminFetchRest(method, table, queryParams, body) {
 
 async function handleAdminSupabaseCall(method, endpoint, body) {
   try {
-    // ===== 用户管理 =====
     if (endpoint === '/admin/users') {
       var result = await adminFetchRest('GET', 'profiles', 'select=*&order=created_at.desc', null);
       if (!result.ok) return { ok: false, data: { error: '查询用户列表失败: ' + result.data.error }, status: result.status };
@@ -1284,7 +1273,6 @@ async function handleAdminSupabaseCall(method, endpoint, body) {
       return { ok: true, data: { message: '密码重置请求已记录' }, status: 200 };
     }
 
-    // ===== 题目管理 =====
     if (endpoint.startsWith('/admin/questions') && !endpoint.startsWith('/admin/questions/')) {
       if (method === 'GET') {
         // Parse pagination params from endpoint query string
@@ -1409,7 +1397,6 @@ async function handleAdminSupabaseCall(method, endpoint, body) {
       return { ok: true, data: {}, status: 200 };
     }
 
-    // ===== 卡片管理 =====
     if (endpoint.startsWith('/admin/cards') && !endpoint.startsWith('/admin/cards/')) {
       if (method === 'GET') {
         var page = 1;
@@ -1474,7 +1461,6 @@ async function handleAdminSupabaseCall(method, endpoint, body) {
       return { ok: true, data: { categories: categories }, status: 200 };
     }
 
-    // ===== 社区帖子管理 =====
     if (endpoint.startsWith('/admin/community/posts') && !endpoint.startsWith('/admin/community/posts/')) {
       if (method === 'GET') {
         var result = await adminFetchRest('GET', 'community_posts', 'select=*&order=created_at.desc&limit=' + ADMIN_LIST_LIMIT, null);
@@ -1514,7 +1500,6 @@ async function handleAdminSupabaseCall(method, endpoint, body) {
       return { ok: true, data: {}, status: 200 };
     }
 
-    // ===== 禁言管理 =====
     if (endpoint === '/admin/community/mutes') {
       if (method === 'GET') {
         var result = await adminFetchRest('GET', 'community_mutes', 'select=*&order=created_at.desc', null);
@@ -1543,7 +1528,6 @@ async function handleAdminSupabaseCall(method, endpoint, body) {
       return { ok: true, data: {}, status: 200 };
     }
 
-    // ===== 公告管理 =====
     if (endpoint.startsWith('/admin/announcements') && !endpoint.startsWith('/admin/announcements/')) {
       if (method === 'GET') {
         var result = await adminFetchRest('GET', 'announcements', 'select=*&order=created_at.desc&limit=' + ADMIN_LIST_LIMIT, null);
@@ -1576,7 +1560,6 @@ async function handleAdminSupabaseCall(method, endpoint, body) {
       return { ok: true, data: {}, status: 200 };
     }
 
-    // ===== 反馈管理 =====
     if (endpoint === '/admin/feedbacks' && method === 'GET') {
       var result = await adminFetchRest('GET', 'feedbacks', 'select=*&order=created_at.desc&limit=' + ADMIN_FEEDBACK_LIMIT, null);
       if (!result.ok) {
@@ -1597,7 +1580,7 @@ async function handleAdminSupabaseCall(method, endpoint, body) {
     return { ok: false, data: { error: '未知的管理员操作: ' + method + ' ' + endpoint }, status: 404 };
   } catch (e) {
     console.error('[Admin] REST API 调用异常:', e);
-    return { ok: false, data: { error: '请求异常: ' + (e.message || '未知错误') }, status: 500 };
+    return { ok: false, data: { error: '请求异常: ' + errText(e) }, status: 500 };
   }
 }
 
@@ -2006,7 +1989,7 @@ function renderAdminDashboard(target) {
             ${ICONS.settings}
             管理面板
           </div>
-          <div class="admin-dash-subtitle">BioQuest 后台管理系统</div>
+          <div class="admin-dash-subtitle">TATABOX 后台管理系统</div>
         </div>
         <button class="admin-dash-logout" id="admin-logout-btn">
           ${ICONS.logout}

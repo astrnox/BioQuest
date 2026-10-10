@@ -1,12 +1,11 @@
 /* ============================================================
-   BioQuest — 题目工具模块
+   TATABOX — 题目工具模块
    功能：题目难度自动调整 + 题目反馈（每日限额）
    ============================================================ */
 
 (function() {
   'use strict';
 
-  // ===== 题目难度自动调整 =====
 
   var DIFFICULTY_LABELS = ['', '简单', '较易', '中等', '较难', '困难'];
   var DIFFICULTY_COLORS = ['', '#3a8c5c', '#5a8c3a', '#c49b30', '#d47030', '#c43838'];
@@ -115,7 +114,6 @@
       + (info.isAdjusted ? '<span class="q-diff-adjusted" style="font-size:0.6rem;color:var(--text-muted,#8a8a8a);margin-left:2px;" title="已根据正确率自动调整">&#9881;</span>' : '');
   }
 
-  // ===== 题目反馈系统（每日限额） =====
 
   var MAX_FEEDBACKS_PER_DAY = 5;
 
@@ -176,7 +174,7 @@
           }
         }
       } catch (e) {
-        return { ok: false, error: '信用检查失败：' + (e.message || '未知错误') };
+        return { ok: false, error: '信用检查失败：' + errText(e) };
       }
     }
 
@@ -259,7 +257,7 @@
           '<div class="q-feedback-question" style="background:var(--surface-secondary,#faf7f2);padding:10px 14px;border-radius:8px;font-size:0.85rem;color:var(--text-secondary,#6b7f74);margin-bottom:16px;max-height:80px;overflow:hidden;text-overflow:ellipsis;">' +
             escapeHtml((questionText || '').substring(0, 150)) +
           '</div>' +
-          '<div style="margin-bottom:12px;">' +
+          '<div class="bq-mb-12">' +
             '<label style="font-size:0.82rem;color:var(--text-secondary,#6b7f74);display:block;margin-bottom:6px;">问题类型</label>' +
             '<div class="q-feedback-types" style="display:flex;flex-wrap:wrap;gap:8px;">';
 
@@ -271,7 +269,7 @@
     }
 
     html += '</div></div>' +
-          '<div style="margin-bottom:12px;">' +
+          '<div class="bq-mb-12">' +
             '<label style="font-size:0.82rem;color:var(--text-secondary,#6b7f74);display:block;margin-bottom:6px;">详细说明（可选）</label>' +
             '<textarea id="qFeedbackDesc" style="width:100%;box-sizing:border-box;min-height:80px;border:1px solid var(--border-light,#ece8e1);border-radius:8px;padding:10px;font-size:0.85rem;font-family:inherit;resize:vertical;" placeholder="请描述具体问题..."></textarea>' +
           '</div>' +

@@ -1,5 +1,5 @@
 /* ============================================================
- * BioQuest — 学习模块样式
+ * TATABOX — 学习模块样式
  * 设计主题: Modern Botanical Laboratory
  * ============================================================ */
 
@@ -35,7 +35,6 @@
 
 .study-stat-card:hover {
   box-shadow: var(--shadow-md);
-  transform: translateY(-1px);
 }
 
 .study-stat-label {
@@ -116,7 +115,7 @@
 
 .study-progress-bar-fill {
   height: 100%;
-  background: linear-gradient(90deg, var(--color-sage), var(--color-mid), var(--color-deep));
+  background: var(--color-mid);
   border-radius: var(--radius-full);
   transition: width 0.6s cubic-bezier(0.22, 1, 0.36, 1);
   min-width: 0;
@@ -462,7 +461,6 @@
 }
 
 .study-mastery-btn:hover {
-  transform: translateY(-1px);
   box-shadow: var(--shadow-sm);
 }
 
@@ -540,7 +538,6 @@
 }
 
 .study-detail-quiz-link:hover {
-  transform: translateY(-1px);
   box-shadow: var(--shadow-button);
   color: #fff;
 }
@@ -660,7 +657,6 @@
 .study-recommend-item:hover {
   border-color: var(--color-sage);
   box-shadow: var(--shadow-md);
-  transform: translateY(-1px);
 }
 
 .study-recommend-item-dot {
@@ -702,7 +698,7 @@
 
 .study-tree-mini-fill {
   height: 100%;
-  background: linear-gradient(90deg, var(--color-sage), var(--color-mid));
+  background: var(--color-mid);
   border-radius: var(--radius-full);
   transition: width 0.4s ease;
 }

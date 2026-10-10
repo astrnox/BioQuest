@@ -1,6 +1,6 @@
 /**
  * ============================================================
- * BioQuest — 智能薄弱点诊断模块
+ * TATABOX — 智能薄弱点诊断模块
  * 创新功能：自动分析练习历史，识别薄弱知识点，
  * 给出诊断报告和个性化练习建议，预估提分路径
  * ============================================================
@@ -940,7 +940,7 @@ var DIAGNOSIS_RULES = {
       suggestion: '建议增加练习量到至少 20 题，以建立基线数据'
     },
     {
-      id: 'high_volume_low_acc', label: '刷题多但效果差', icon: '⚠️',
+      id: 'high_volume_low_acc', label: '刷题多但效果差',
       condition: function (ctx) { return ctx.totalAnswered >= 50 && ctx.accuracy < 50; },
       suggestion: '放慢节奏，加强错题复盘，关注理解而非数量'
     },
@@ -965,7 +965,7 @@ var DIAGNOSIS_RULES = {
       suggestion: '重新建立每日学习习惯'
     },
     {
-      id: 'excellent', label: '表现优异', icon: '🏆',
+      id: 'excellent', label: '表现优异',
       condition: function (ctx) { return ctx.accuracy >= 90 && ctx.totalAnswered >= 30; },
       suggestion: '可挑战更高难度的题目，或帮助其他同学'
     }
@@ -1550,7 +1550,7 @@ function renderScorePaths(scorePaths) {
 
   if (scorePaths.length === 0) {
     html += '<div class="diagnosis-empty" style="padding:32px;">';
-    html += '<p style="color:var(--text-muted);font-size:0.88rem;">各模块均已达标，继续保持！</p>';
+    html += '<p style="color:var(--text-muted);font-size:0.88rem;">各模块均已达标</p>';
     html += '</div>';
   } else {
     html += '<div class="diagnosis-path-list">';
@@ -1699,7 +1699,7 @@ function renderLearningPath(learningPath) {
 
     if (step.dependencies && step.dependencies.length > 0) {
       html += '<div style="margin-top:10px;font-size:0.82rem;">';
-      html += '<span style="color:var(--text-muted,#8a8a8a);">前置依赖：</span>';
+      html += '<span class="bq-text-muted">前置依赖：</span>';
       for (var d = 0; d < step.dependencies.length; d++) {
         html += '<span style="display:inline-block;margin-right:6px;padding:2px 8px;background:rgba(90,125,92,0.1);color:var(--color-sage,#5a7d5c);border-radius:8px;font-size:0.78rem;">' + step.dependencies[d] + '</span>';
         if (d < step.dependencies.length - 1) html += '<span style="color:var(--text-muted,#8a8a8a);margin:0 2px;">→</span>';

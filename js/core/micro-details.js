@@ -1,13 +1,11 @@
 /**
  * ============================================================
- * BioQuest — PRD §5 微细节补全模块
+ * TATABOX — PRD §5 微细节补全模块
  * 包含：图片懒加载、复制题目为Markdown、DELETE确认删除、字体大小
  * ============================================================
  */
 
-// ============================================================
 // PRD §5-47：图片懒加载（IntersectionObserver）
-// ============================================================
 var ImageLazyLoader = (function () {
   'use strict';
   var observer = null;
@@ -66,9 +64,7 @@ var ImageLazyLoader = (function () {
   return { observe: observe, scanContainer: scanContainer };
 })();
 
-// ============================================================
 // PRD §5-27：复制题目为 Markdown
-// ============================================================
 function copyQuestionAsMarkdown(questionEl) {
   if (!questionEl) return;
   try {
@@ -88,10 +84,10 @@ function copyQuestionAsMarkdown(questionEl) {
     if (explanation) {
       md += '## 解析\n\n' + explanation.textContent.trim() + '\n';
     }
-    md += '\n---\n> 来自 BioQuest';
+    md += '\n---\n> 来自 TATABOX';
 
     navigator.clipboard.writeText(md).then(function () {
-      if (typeof showToast === 'function') showToast('已复制为 Markdown', 'success', 2000);
+      showToast('已复制为 Markdown', 'success', 2000);
     }).catch(function () {
       // 降级：选中文本
       var ta = document.createElement('textarea');
@@ -101,16 +97,14 @@ function copyQuestionAsMarkdown(questionEl) {
       ta.select();
       document.execCommand('copy');
       document.body.removeChild(ta);
-      if (typeof showToast === 'function') showToast('已复制为 Markdown', 'success', 2000);
+      showToast('已复制为 Markdown', 'success', 2000);
     });
   } catch (e) {
-    console.warn('[BioQuest] 复制失败:', e);
+    console.warn('[TATABOX] 复制失败:', e);
   }
 }
 
-// ============================================================
 // PRD §5-18：输入 DELETE 确认删除
-// ============================================================
 function confirmDeleteWithTyping(message, callback) {
   var overlay = document.createElement('div');
   overlay.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;z-index:99999;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;';
@@ -173,9 +167,7 @@ function confirmDeleteWithTyping(message, callback) {
   setTimeout(function () { input.focus(); }, 100);
 }
 
-// ============================================================
 // PRD §5-35：字体大小选项
-// ============================================================
 var FontSizeManager = (function () {
   'use strict';
   var KEY = 'bioquest_font_size';

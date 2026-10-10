@@ -35,7 +35,7 @@
   ">
   <link rel="manifest" href="manifest.json">
   <!-- 内联 SVG favicon：避免浏览器默认请求 /favicon.ico 产生 404 -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%235a7d5c' rx='12'/%3E%3Ccircle cx='32' cy='32' r='16' fill='none' stroke='%23fff' stroke-width='2'/%3E%3Ccircle cx='32' cy='32' r='8' fill='%23fff'/%3E%3C/svg%3E">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%2764%27%20height%3D%2764%27%20viewBox%3D%270%200%2032%2032%27%3E%3Crect%20width%3D%2732%27%20height%3D%2732%27%20rx%3D%277%27%20fill%3D%27%231a2f1d%27%2F%3E%3Cg%20fill%3D%27none%27%20stroke-linecap%3D%27round%27%3E%3Crect%20x%3D%273%27%20y%3D%273%27%20width%3D%2726%27%20height%3D%2726%27%20rx%3D%277.6%27%20stroke%3D%27%23d4a87e%27%20stroke-width%3D%272.6%27%2F%3E%3Cpath%20d%3D%27M16%2010.2v11.8%27%20stroke%3D%27%23f5f0e8%27%20stroke-width%3D%272.6%27%2F%3E%3Cpath%20d%3D%27M11.2%2010.2h9.6%27%20stroke%3D%27%23f5f0e8%27%20stroke-width%3D%272.6%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E">
 
   <!-- ================================================================
        首屏防白边 / 防缩放闪烁 / 防 FOUC / 防主题闪烁（内联，渲染前必执行）
@@ -112,15 +112,14 @@
       background: #141a16;
     }
     #bq-boot-logo {
-      /* 与站点 header 品牌同款 SVG（金环+中心圆+绿色射线），
-         去除原"发光绿块+白圆环"的模板化设计，视觉自然贴合主题 */
+      /* 与站点 header 品牌同款 SVG（盒+T 标记，见 index.html .header-brand）。
+         字母用 currentColor，深浅主题自适应 */
       width: 48px;
       height: 48px;
       display: flex;
       align-items: center;
       justify-content: center;
       margin: 0 0 16px; /* 老浏览器（无 flex gap）下的间距兜底 */
-      animation: bqBootBreathe 2.6s ease-in-out infinite;
     }
     #bq-boot-logo svg {
       width: 48px;
@@ -196,10 +195,6 @@
       100% { opacity: 0; }
     }
     /* 动画声明（只放这里，不依赖外部 CSS 文件加载） */
-    @keyframes bqBootBreathe {
-      0%, 100% { opacity: 1; }
-      50%      { opacity: 0.72; }
-    }
     /* 卸载 mask：通过 classList.add('is-ready') 平滑淡出，避免"忽然切走" */
     #bq-boot-mask.is-ready { opacity: 0; visibility: hidden; }
     /* 每日亿题入口 hover（原内联 onmouseover/onmouseout 已改纯 CSS） */
@@ -209,45 +204,52 @@
   <!-- 旧内核浏览器兼容探测（同步）：故意使用现代语法，老内核解析失败 → 标记缺失 → 由 legacy-fallback.js 降级 -->
   <script src="js/core/legacy-probe.js?v=20260919a"></script>
 
-  <!-- Primary SEO -->
-  <title>BioQuest — 生物竞赛刷题平台 | 全真模拟 · 专项练习 · 错题本</title>
-  <meta name="description" content="BioQuest 是面向生物竞赛备考的智能学习平台。基于2025联赛新大纲，提供72题全真模拟考试、模块化专项练习、能力雷达图诊断、智能错题本管理和交互式知识图谱。支持手机端和电脑端。">
-  <meta name="keywords" content="生物竞赛,生物联赛,生物奥赛,刷题平台,生物题库,全真模拟,能力诊断,错题本,BioQuest">
-  <meta name="author" content="BioQuest">
+  <!-- Primary SEO
+       品牌定位语分工（避免后续再次漂移）：
+         · 「高中生物刷题平台」= 产品定位，用于 title / og / twitter / manifest.name，
+           即"这是个刷题工具"，对应搜索意图；
+         · 「高中生物学习平台」= 站点调性，用于 footer / 开机遮罩 / 内页 title 后缀 /
+           manifest.description，即"这是个学习站点"，对应品牌氛围。
+       keywords 保留「生物竞赛/生物联赛/生物奥赛」：竞赛考生是最精准的目标用户，
+       与可见文案分工，不冲突。 -->
+  <title>TATABOX — 高中生物刷题平台 | 专项练习 · 全真模拟 · 错题本</title>
+  <meta name="description" content="TATABOX 是面向高中生物学习的刷题与复习平台：专项练习、全真模拟、能力诊断、错题管理与知识卡片，支持手机和电脑。">
+  <meta name="keywords" content="生物竞赛,生物联赛,生物奥赛,刷题平台,生物题库,全真模拟,能力诊断,错题本,TATABOX">
+  <meta name="author" content="TATABOX">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
-  <link rel="canonical" href="https://astrnox.github.io/BioQuest/">
+  <link rel="canonical" href="https://gagabox.cc.cd/">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="BioQuest">
-  <meta property="og:title" content="BioQuest — 生物竞赛智能刷题平台">
-  <meta property="og:description" content="全真模拟考试、模块化专项练习、能力雷达图诊断、智能错题本。基于2025联赛新大纲，助你高效备考生物竞赛。">
-  <meta property="og:url" content="https://astrnox.github.io/BioQuest/">
+  <meta property="og:site_name" content="TATABOX">
+  <meta property="og:title" content="TATABOX — 高中生物刷题平台">
+  <meta property="og:description" content="专项练习、全真模拟、能力诊断、错题管理与知识卡片，支持手机和电脑。">
+  <meta property="og:url" content="https://gagabox.cc.cd/">
   <meta property="og:locale" content="zh_CN">
-  <meta property="og:image" content="https://astrnox.github.io/BioQuest/og-image.png">
+  <meta property="og:image" content="https://gagabox.cc.cd/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="BioQuest 生物竞赛学习平台">
+  <meta property="og:image:alt" content="TATABOX — 高中生物刷题平台">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="BioQuest — 生物竞赛智能刷题平台">
+  <meta name="twitter:title" content="TATABOX — 高中生物刷题平台">
   <meta name="twitter:description" content="全真模拟 · 专项练习 · 错题本 · 雷达诊断。基于2025联赛新大纲。">
-  <meta name="twitter:image" content="https://astrnox.github.io/BioQuest/og-image.png">
+  <meta name="twitter:image" content="https://gagabox.cc.cd/og-image.png">
 
   <!-- Structured Data (JSON-LD) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    "name": "BioQuest",
-    "description": "基于2025联赛新大纲的生物竞赛智能学习平台，提供全真模拟考试、模块化专项练习、能力雷达图诊断和智能错题本管理。",
-    "url": "https://astrnox.github.io/BioQuest/",
+    "name": "TATABOX",
+    "description": "面向高中生物学习的刷题与复习平台，提供专项练习、全真模拟、能力诊断和错题管理。",
+    "url": "https://gagabox.cc.cd/",
     "applicationCategory": "EducationalApplication",
     "operatingSystem": "Web",
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" },
     "inLanguage": "zh-CN",
-    "author": { "@type": "Organization", "name": "BioQuest" }
+    "author": { "@type": "Organization", "name": "TATABOX" }
   }
   </script>
 
@@ -267,8 +269,7 @@
   <style>
     @font-face {
       font-family: 'LXGW WenKai';
-      src: url('fonts/lxgw-wenkai.woff2?v=1.522') format('woff2'),
-           url('fonts/lxgw-wenkai.ttf?v=1.522') format('truetype');
+      src: url('fonts/lxgw-wenkai.woff2?v=1.522') format('woff2');
       font-weight: 100 900;
       font-style: normal;
       font-display: swap;
@@ -331,13 +332,13 @@
   <!-- 首屏骨架遮罩：在 JS/CSS 加载前立即渲染，避免"缩小/两边白边/空白几秒"的现象 -->
   <div id="bq-boot-mask" aria-hidden="true">
     <div id="bq-boot-logo" aria-hidden="true">
-      <svg viewBox="0 0 28 28" fill="none" aria-hidden="true">
-        <circle cx="14" cy="14" r="12" stroke="#e8a830" stroke-width="2"/>
-        <circle cx="14" cy="14" r="4" fill="#e8a830"/>
-        <path d="M14 2v4M14 22v4M2 14h4M22 14h4" stroke="#5a7d5c" stroke-width="1.5"/>
+      <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+        <rect x="3" y="3" width="26" height="26" rx="7.6" stroke="#d4a87e" stroke-width="2.6"/>
+        <path d="M16 10.2v11.8" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
+        <path d="M11.2 10.2h9.6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
       </svg>
     </div>
-    <div id="bq-boot-label">BioQuest · 生物竞赛刷题</div>
+    <div id="bq-boot-label">TATABOX · 高中生物学习平台</div>
     <div id="bq-boot-pairs" aria-hidden="true">
       <div class="bq-pair bq-pair--r1"><span class="bq-base">A</span><span class="bq-hb"><i></i><i></i></span><span class="bq-base">T</span></div>
       <div class="bq-pair bq-pair--r2"><span class="bq-base">G</span><span class="bq-hb"><i></i><i></i><i></i></span><span class="bq-base">C</span></div>
@@ -354,39 +355,70 @@
 
   <header class="header">
     <a href="#/" class="header-brand">
-      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
-        <circle cx="14" cy="14" r="12" stroke="#e8a830" stroke-width="2"/>
-        <circle cx="14" cy="14" r="4" fill="#e8a830"/>
-        <path d="M14 2v4M14 22v4M2 14h4M22 14h4" stroke="#5a7d5c" stroke-width="1.5"/>
+      <svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+        <rect x="3" y="3" width="26" height="26" rx="7.6" stroke="#d4a87e" stroke-width="2.6"/>
+        <path d="M16 10.2v11.8" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
+        <path d="M11.2 10.2h9.6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
       </svg>
-      <span class="logo-text">BioQuest</span>
+      <span class="logo-text">TATABOX</span>
     </a>
 
+    <!-- 桌面端一级导航：仅 6 项。其余入口收进「更多」下拉，
+       分组沿用移动端抽屉的五组划分（学习 / 题库 / 探索 / 智能与社区 / 账户），
+       保证桌面与移动的信息架构一致。原为 23 项平铺，属于功能堆砌。 -->
     <nav class="header-nav" id="desktopNav">
       <a href="#/" data-route="/">首页</a>
-      <a href="#/dashboard" data-route="/dashboard">仪表盘</a>
-      <a href="#/trends" data-route="/trends">趋势</a>
-      <a href="#/tutor" data-route="/tutor">AI 对话</a>
-      <a href="#/study?tab=hub" data-route="/study"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:4px"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/></svg>学习管理</a>
       <a href="#/practice" data-route="/practice">练习</a>
       <a href="#/exam" data-route="/exam">模考</a>
-      <a href="biology-history.html">生物学史</a>
-      <a href="cards.html">卡片</a>
-      <a href="quiz.html">试题</a>
-      <a href="wiki.html">百科</a>
-      <a href="#/knowledge-graph" data-route="/knowledge-graph">图谱</a>
-      <a href="#/bio-lab" data-route="/bio-lab">实验室</a>
-      <a href="#/phet-sims" data-route="/phet-sims"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:4px"><path d="M6 18h8M8 18v3M12 18v3M5 8h10v6H5z"/><path d="M10 8V5a2 2 0 0 1 4 0v3M18 12h2v6h-2"/></svg>PhET 模拟</a>
-      <a href="#/sketch" data-route="/sketch">画板</a>
-      <a href="#/smiles" data-route="/smiles">SMILES</a>
-      <a href="#/molecules" data-route="/molecules">3D 分子</a>
-      <a href="#/genome" data-route="/genome"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:4px"><path d="M4 4c4 4 12 4 16 0M4 20c4-4 12-4 16 0M4 4v16M20 4v16M8 8h8M8 16h8M6 12h12"/></svg>基因组</a>
-      <a href="#/study" data-route="/study">学习</a>
-      <a href="#/wrongbook" data-route="/wrongbook">错题录题</a>
+      <a href="#/wrongbook" data-route="/wrongbook">错题本</a>
       <a href="#/community" data-route="/community">社区</a>
-      <a href="#/daily-billion" data-route="/daily-billion"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:4px"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>每日亿题</a>
-      <a href="#/teacher" data-route="/teacher">教师</a>
       <a href="#/user" data-route="/user">我的</a>
+
+      <div class="header-more" id="headerMore">
+        <button type="button" class="header-more-btn" id="headerMoreBtn"
+                aria-expanded="false" aria-controls="headerMorePanel" aria-haspopup="true">
+          <span>更多</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"
+               class="header-more-caret"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="header-more-panel" id="headerMorePanel" role="menu" aria-labelledby="headerMoreBtn" hidden>
+          <div class="header-more-group">
+            <div class="header-more-label">学习</div>
+            <a href="#/study?tab=hub" data-route="/study" role="menuitem">学习管理</a>
+            <a href="#/dashboard" data-route="/dashboard" role="menuitem">仪表盘</a>
+            <a href="#/trends" data-route="/trends" role="menuitem">趋势</a>
+          </div>
+          <div class="header-more-group">
+            <div class="header-more-label">题库</div>
+            <a href="quiz.html" role="menuitem">试题</a>
+            <a href="cards.html" role="menuitem">卡片</a>
+          </div>
+          <div class="header-more-group">
+            <div class="header-more-label">探索</div>
+            <a href="#/bio-animation" data-route="/bio-animation" role="menuitem">生物动画</a>
+            <a href="biology-history.html" role="menuitem">生物学史</a>
+            <a href="wiki.html" role="menuitem">生物百科</a>
+            <a href="#/knowledge-graph" data-route="/knowledge-graph" role="menuitem">图谱</a>
+            <a href="#/bio-lab" data-route="/bio-lab" role="menuitem">实验室</a>
+            <a href="#/phet-sims" data-route="/phet-sims" role="menuitem">PhET 模拟</a>
+            <a href="#/sketch" data-route="/sketch" role="menuitem">画板</a>
+            <a href="#/smiles" data-route="/smiles" role="menuitem">SMILES</a>
+            <a href="#/molecules" data-route="/molecules" role="menuitem">3D 分子</a>
+            <a href="#/genome" data-route="/genome" role="menuitem">基因组</a>
+          </div>
+          <div class="header-more-group">
+            <div class="header-more-label">智能与社区</div>
+            <a href="#/tutor" data-route="/tutor" role="menuitem">AI 对话</a>
+            <a href="#/daily-billion" data-route="/daily-billion" role="menuitem">每日亿题</a>
+            <a href="#" role="menuitem" id="nav-leaderboard-btn-desktop">排行</a>
+          </div>
+          <div class="header-more-group">
+            <div class="header-more-label">账户</div>
+            <a href="#/teacher" data-route="/teacher" role="menuitem">教师</a>
+          </div>
+        </div>
+      </div>
     </nav>
 
     <div class="header-right">
@@ -405,14 +437,14 @@
   <nav class="mobile-nav" id="mobileNav" aria-label="导航菜单">
     <div class="mn-header">
       <div class="mn-brand">
-        <svg width="30" height="30" viewBox="0 0 28 28" fill="none" aria-hidden="true">
-          <circle cx="14" cy="14" r="12" stroke="#e8a830" stroke-width="2"/>
-          <circle cx="14" cy="14" r="4" fill="#e8a830"/>
-          <path d="M14 2v4M14 22v4M2 14h4M22 14h4" stroke="#5a7d5c" stroke-width="1.5"/>
+        <svg width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <rect x="3" y="3" width="26" height="26" rx="7.6" stroke="#d4a87e" stroke-width="2.6"/>
+          <path d="M16 10.2v11.8" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
+          <path d="M11.2 10.2h9.6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
         </svg>
-        <span class="mn-brand-name">BioQuest</span>
+        <span class="mn-brand-name">TATABOX</span>
       </div>
-      <button id="mobileNavClose" class="mn-close" aria-label="关闭菜单">✕</button>
+      <button id="mobileNavClose" class="mn-close" aria-label="关闭菜单">×</button>
     </div>
 
     <div class="mn-body">
@@ -423,7 +455,7 @@
         <a href="#/study?tab=hub" data-route="/study">学习管理</a>
         <a href="#/practice" data-route="/practice">练习</a>
         <a href="#/exam" data-route="/exam">模考</a>
-        <a href="#/wrongbook" data-route="/wrongbook">错题录题</a>
+        <a href="#/wrongbook" data-route="/wrongbook">错题本</a>
       </div>
 
       <div class="mn-section">
@@ -487,8 +519,7 @@
   <main id="app-main">
     <div id="page-content" class="page-content page-content--home">
       <section class="hero" id="main-content" data-section="hero">
-        <div class="hero-bg" id="heroCanvas"></div>
-        <div class="hero-overlay"></div>
+        <div class="hero-bg"></div>
         <div class="hero-gradient-left"></div>
         <div class="hero-content">
           <h1 class="hero-title">把生物竞赛的知识点<br><span class="hero-title-accent">一道题一道题刷明白</span></h1>
@@ -659,7 +690,7 @@
   <footer class="footer">
     <div class="footer-content">
       <div class="footer-top">
-        <div class="footer-brand">BioQuest — 生物竞赛学习平台</div>
+        <div class="footer-brand">TATABOX — 高中生物学习平台</div>
         <a href="https://github.com/astrnox/BioQuest" target="_blank" rel="noopener" class="footer-github" title="GitHub 仓库">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
           <span>GitHub</span>
@@ -781,7 +812,7 @@
   <!-- 降级导航：由 boot-lazy.js 统一处理（app.js 未加载时兜底 data-route 点击） -->
   <!-- 全局调试脚本（已禁用）
   <script>
-    console.log('%c BioQuest 调试模式 ', 'background: #1a3a2a; color: #e8a830; font-weight: bold; padding: 4px 12px; border-radius: 4px;');
+    console.log('%c TATABOX 调试模式 ', 'background: #1a3a2a; color: #e8a830; font-weight: bold; padding: 4px 12px; border-radius: 4px;');
 
     // 全局点击监控器 - 查看点击是否被捕获
     document.addEventListener('click', function (e) {
@@ -845,6 +876,10 @@
   <script src="js/engagement/points-ui.js?v=20260814a" defer></script>
   <!-- P1-2 拆分：路由配置表先于 app.js 加载，app.js 通过全局 Routes 引用 -->
   <script src="js/core/app-routes.js?v=20260821a" defer></script>
+  <!-- P1-1 拆分：认证 UI / 搜索 / 排行榜（依赖 utils.js 的 escapeHtml，须在 app.js 前） -->
+  <script src="js/core/auth-ui.js?v=20261009a" defer></script>
+  <script src="js/core/app-search.js?v=20261009a" defer></script>
+  <script src="js/core/app-leaderboard.js?v=20261009a" defer></script>
   <script src="js/core/app.js?v=20260917b" defer></script>
   <!-- PRD §5 补全模块 -->
   <script src="js/core/micro-details.js?v=20260803a" defer></script>
@@ -887,7 +922,7 @@
   <script src="vendor/openmaic/openmaic-constants.js?v=20260712j" defer></script>
   <script src="vendor/openmaic/openmaic-browser-tts.js?v=20260712j" defer></script>
   <!-- 注：AI 课堂模块已移除，首屏由 app.js 控制路由，不再加载 classroom.js/pages/classroom-player.js/runner -->
-  <!-- 首页关键模块：由 boot-lazy.js 在 DOMContentLoaded 时加载 hero-sketch；非关键模块由 app.js 延迟加载 -->
+  <!-- 首页背景为纯 CSS 静态层次（原 hero-sketch.js 随机粒子已移除：无脚本、零常驻动画） -->
   <!-- PWA Service Worker 注册（外部化 sw-register.js）：DOMContentLoaded 立即启动，配 6s 硬超时兜底 -->
   <script src="js/core/sw-register.js?v=20260820a" defer></script>
   <!-- Issue #116：图片懒加载（非首屏 <img> 补 loading="lazy"，含动态插入扫描） -->

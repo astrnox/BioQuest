@@ -1,5 +1,5 @@
 /**
- * BioQuest — Excalidraw 手绘白板集成模块
+ * TATABOX — Excalidraw 手绘白板集成模块
  * 依赖顺序：React → ReactDOM → jsx-runtime polyfill → Excalidraw
  * 全部懒加载，仅在用户首次访问手绘页时按顺序注入
  */
@@ -170,7 +170,7 @@
         destroy: function () { unmount(container); }
       };
     }).catch(function (e) {
-      container.innerHTML = '<p style="color:var(--color-error,#c0392b);text-align:center;padding:40px;">手绘白板加载失败：' + (e && e.message ? e.message : '未知错误') + '</p>';
+      container.innerHTML = '<p style="color:var(--color-error,#c0392b);text-align:center;padding:40px;">手绘白板加载失败：' + errText(e) + '</p>';
       return null;
     });
   }

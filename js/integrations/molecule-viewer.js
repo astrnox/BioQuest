@@ -1,5 +1,5 @@
 /**
- * BioQuest — 3D 分子查看器集成模块（3Dmol.js）
+ * TATABOX — 3D 分子查看器集成模块（3Dmol.js）
  */
 (function () {
   'use strict';

@@ -1,6 +1,6 @@
 /**
  * ============================================================
- * BioQuest — 错题深度复盘
+ * TATABOX — 错题深度复盘
  * 与错题本不同：强调"深度分析 + 同类题练习"
  * 数据来源：localStorage 错题记录（bioquest_wrong_questions）
  * ============================================================
@@ -101,7 +101,6 @@
     document.head.appendChild(style);
   }
 
-  // ===== 工具 =====
   function _esc(s) {
     if (s == null) return '';
     return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -124,7 +123,6 @@
     return d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0');
   }
 
-  // ===== 数据读取 =====
   function _loadWrongQuestions() {
     var list = [];
     if (typeof window.getWrongQuestions === 'function') {
@@ -166,7 +164,6 @@
     _safeSetJSON(STORAGE_MASTERY, m);
   }
 
-  // ===== 题目字段提取 =====
   function _getQuestionText(q) {
     var fq = q.fullQuestion || {};
     return q.questionText || q.question_text || fq.question || fq.stem || fq.questionText || '';
@@ -220,7 +217,6 @@
     return q.qId || q.id || q.question_id || '';
   }
 
-  // ===== SVG 图表 =====
   function _renderBarChart(data) {
     var max = 0;
     data.forEach(function(d) { if (d.value > max) max = d.value; });
@@ -271,7 +267,6 @@
     return '<div class="rd-chart-wrap"><svg width="140" height="140" viewBox="0 0 140 140">' + paths + '</svg><div class="rd-legend">' + legend + '</div></div>';
   }
 
-  // ===== 仪表盘 =====
   function _renderDashboard(container) {
     var moduleCount = {};
     var errorTypeCount = { concept: 0, careless: 0, knowledge_gap: 0, logic: 0, unanalyzed: 0 };
@@ -310,7 +305,6 @@
       '</div>';
   }
 
-  // ===== 列表 =====
   function _sortedList() {
     return _list.slice().sort(function(a, b) {
       var wa = (a.wrongCount || 1), wb = (b.wrongCount || 1);
@@ -351,7 +345,6 @@
     });
   }
 
-  // ===== 展开详情 + AI 分析 =====
   function _findQuestion(qid) {
     for (var i = 0; i < _list.length; i++) {
       if (String(_getQId(_list[i])) === String(qid)) return _list[i];
@@ -460,13 +453,12 @@
       var listEl = document.getElementById('rd-list');
       if (listEl) _renderList(listEl);
     } catch (e) {
-      if (area) area.innerHTML = '<div class="rd-loading" style="color:#b91c1c;">分析失败：' + _esc(e.message || '未知错误') + '</div>' + _renderAnalysisArea(q);
+      if (area) area.innerHTML = '<div class="rd-loading" style="color:#b91c1c;">分析失败：' + _escerrText(e) + '</div>' + _renderAnalysisArea(q);
     } finally {
       if (btn) { btn.disabled = false; btn.textContent = _getAnalysis(qid) ? '重新分析' : 'AI 深度分析'; }
     }
   }
 
-  // ===== 同类题练习 =====
   async function _loadSimilar(concept, mod) {
     if (typeof window.fetchQuestionsBatch !== 'function') return [];
     var modulesArr = mod ? [mod] : null;
@@ -551,11 +543,12 @@
         if (submitted) return;
         submitted = true;
         var allRight = true;
+        var wrongCount = 0;
         var detailHtml = '';
         subs.forEach(function(s) {
           var userPick = picks[s.label];
           var right = (userPick === s.answer);
-          if (!right) allRight = false;
+          if (!right) { allRight = false; wrongCount++; }
           detailHtml += '<div><strong>' + _esc(s.label) + '.</strong> ' + _esc(s.text) +
             ' → 你选 <strong>' + (userPick === undefined ? '—' : (userPick ? '√' : '×')) + '</strong>' +
             ' / 正确 <strong>' + (s.answer ? '√' : '×') + '</strong>' +
@@ -565,7 +558,7 @@
         var resultEl = document.getElementById('rd-result-' + idx);
         if (resultEl) {
           resultEl.innerHTML = '<div class="rd-practice-result ' + (allRight ? 'rd-practice-result--pass' : 'rd-practice-result--fail') + '">' +
-            '<strong>' + (allRight ? '全对，已记录为掌握！' : '有错，继续加油') + '</strong>' + detailHtml +
+            '<strong>' + (allRight ? '全对 · 已记录为掌握' : (wrongCount + ' 题待复习') ) + '</strong>' + detailHtml +
             (qItem.explanation ? '<div style="margin-top:6px;color:var(--text-secondary,#555);">解析：' + _esc(qItem.explanation) + '</div>' : '') +
           '</div>';
         }
@@ -590,7 +583,6 @@
     renderCurrent();
   }
 
-  // ===== 初始化 =====
   // 现作为「错题与复盘」页的「深度复盘」Tab 内嵌渲染，不再输出独立页头
   function initReviewDeep(target) {
     _addStyles();

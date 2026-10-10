@@ -1,5 +1,5 @@
 /**
- * BioQuest - 管理后台 · 运营子模块：反馈 / 申诉 / 数据同步 / 公告（Issue #17 自 admin.js 拆分）
+ * TATABOX - 管理后台 · 运营子模块：反馈 / 申诉 / 数据同步 / 公告（Issue #17 自 admin.js 拆分）
  * 由 admin.js 的 loadTabContent 在切换到对应标签时动态注入加载。
  * 依赖：js/admin/admin.js（核心）。
  */
@@ -20,7 +20,7 @@ window.handleResolveAppeal = async function(appealId, action) {
       var contentEl = document.getElementById('admin-tab-content');
       if (contentEl) renderAppealsTab(contentEl);
     } else {
-      showAdminToast('处理失败：' + (result && result.error ? result.error : '未知错误'), 'error');
+      showAdminToast('处理失败：' + errText(result), 'error');
     }
   } catch (e) {
     showAdminToast('处理出错：' + e.message, 'error');
@@ -244,7 +244,7 @@ async function renderAppealsTab(container) {
                   <td style="font-size:0.82rem;font-weight:600;">${a.amount || 0}</td>
                   <td style="max-width:220px;color:var(--text-secondary);font-size:0.82rem;" title="${escapeHtml(a.content || '')}">${escapeHtml((a.content || '').slice(0,50))}${(a.content || '').length > 50 ? '...' : ''}</td>
                   <td style="max-width:180px;color:var(--text-secondary);font-size:0.82rem;" title="${escapeHtml(a.user_note || '')}">${escapeHtml((a.user_note || '').slice(0,40))}${(a.user_note || '').length > 40 ? '...' : ''}</td>
-                  <td style="font-size:0.78rem;color:var(--text-muted);white-space:nowrap;">${dateStr}${resolvedStr ? '<br><span style="color:var(--text-muted);">处理: ' + resolvedStr + '</span>' : ''}</td>
+                  <td style="font-size:0.78rem;color:var(--text-muted);white-space:nowrap;">${dateStr}${resolvedStr ? '<br><span class="bq-text-muted">处理: ' + resolvedStr + '</span>' : ''}</td>
                   <td>
                     ${a.status === 'pending' ? `
                     <div class="admin-table-actions">
@@ -326,7 +326,7 @@ function renderSyncTab(container) {
         syncStatus.textContent = '同步已触发，后台执行中。大约需要几分钟完成。';
         syncStatus.style.color = 'var(--color-sage)';
       } else {
-        syncStatus.textContent = '触发失败：' + (result.data.error || '未知错误');
+        syncStatus.textContent = '触发失败：' + errText(result.data.error);
         syncStatus.style.color = '#e74c3c';
       }
     } catch (e) {
@@ -437,10 +437,10 @@ async function refreshAnnouncementList(container) {
           result = { ok: false, error: e.message };
         }
         if (result && result.ok) {
-          if (typeof showToast === 'function') showToast('公告已删除');
+          showToast('公告已删除');
           await refreshAnnouncementList(container);
         } else {
-          if (typeof showToast === 'function') showToast('删除失败：' + (result.error || '未知错误'));
+          showToast('删除失败：' + errText(result.error));
         }
       });
     });
@@ -522,7 +522,7 @@ function showAnnouncementEditor(container, announcement) {
     btn.textContent = isEdit ? '保存修改' : '发布公告';
 
     if (result.ok) {
-      if (typeof showToast === 'function') showToast(isEdit ? '公告已更新' : '公告已发布');
+      showToast(isEdit ? '公告已更新' : '公告已发布');
       editorEl.style.display = 'none';
       listEl.style.display = 'block';
       await refreshAnnouncementList(container);

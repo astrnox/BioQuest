@@ -1,6 +1,6 @@
 /**
  * ============================================================
- * BioQuest v3.1 — AI 白板（T3-4/T3-5/T3-6/T3-7）
+ * TATABOX v3.1 — AI 白板（T3-4/T3-5/T3-6/T3-7）
  * 纯 Canvas 实现，零依赖。AI 老师通过 EventBus 发指令绘图
  *
  * 设计原则：
@@ -30,7 +30,6 @@
   var REDO_LIMIT = 30;
   var _resizeHandler = null;
 
-  // ====== 初始化 ======
 
   function init(parentEl) {
     // 允许重复初始化：每次切换 scene 都重新建 canvas
@@ -87,7 +86,6 @@
     }
   }
 
-  // ====== 学生手动绘制 ======
 
   function _bindPointerEvents() {
     function getPos(e) {
@@ -154,7 +152,6 @@
     return canvas.toDataURL('image/png');
   }
 
-  // ====== 工具栏 ======
 
   function _renderToolbar(wrapper) {
     var toolbar = document.createElement('div');
@@ -204,7 +201,6 @@
     return 'border:1px solid #ddd;background:#fff;border-radius:8px;padding:4px 10px;cursor:pointer;font-size:13px;color:#333;';
   }
 
-  // ====== AI 绘图指令（T3-6） ======
 
   /**
    * 执行一组绘图指令（来自 LLM）
@@ -224,7 +220,6 @@
     });
   }
 
-  // ====== T3-5: 生物图形库 ======
 
   var BIO_SHAPES = {
     /**
@@ -783,7 +778,6 @@
     }
   };
 
-  // ====== 接入 EventBus（T3-7） ======
 
   function _bindEventBus() {
     EventBus.on(EventBus.ACTION.WHITEBOARD_DRAW, function (commands) {
@@ -794,7 +788,6 @@
     });
   }
 
-  // ====== 暴露 API ======
   window.Whiteboard = {
     init: init,
     destroy: destroy,

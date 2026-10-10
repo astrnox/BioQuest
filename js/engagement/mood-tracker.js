@@ -1,6 +1,6 @@
 /**
  * ============================================================
- * BioQuest v4.0 — 模块 4：身心健康融合层
+ * TATABOX v4.0 — 模块 4：身心健康融合层
  * ------------------------------------------------------------
  * - 每日多次情绪打卡（5 种情绪：开心/平静/焦虑/疲惫/难过）
  * - 压力指数计算（情绪 + 正确率 + 学习时长）
@@ -115,7 +115,7 @@
           '</div>' +
         '</div>' +
         '<p class="bq-crisis-disclaimer">' +
-          '⚠️ BioQuest 不是医疗机构，本卡片仅提供资源转介，不构成医学诊断或治疗建议。' +
+          'TATABOX 不是医疗机构，本卡片仅提供资源转介，不构成医学诊断或治疗建议。' +
           '如遇紧急情况请立即拨打 120 或前往最近医院急诊。' +
         '</p>' +
         '<button class="bq-crisis-close" type="button">我已了解</button>' +
@@ -396,7 +396,7 @@
     style.textContent = [
       '/* 危机资源弹窗 */',
       '.bq-crisis-modal { position: fixed; inset: 0; z-index: 10000; display: flex; align-items: center; justify-content: center; padding: 20px; }',
-      '.bq-crisis-backdrop { position: absolute; inset: 0; background: rgba(26, 58, 42, 0.7); backdrop-filter: blur(4px); }',
+      '.bq-crisis-backdrop { position: absolute; inset: 0; background: rgba(26, 58, 42, 0.85); }',
       '.bq-crisis-card { position: relative; max-width: 480px; width: 100%; background: #fff; border-radius: 16px; padding: 32px; box-shadow: var(--shadow-floating); }',
       '.bq-crisis-card h2 { font-family: "Noto Serif SC", serif; color: #1a3a2a; font-size: 1.4rem; margin: 0 0 12px; }',
       '.bq-crisis-card p { color: #4a4a4a; font-size: 0.95rem; line-height: 1.6; margin: 0 0 16px; }',
@@ -411,7 +411,7 @@
       '',
       '/* 情绪打卡弹窗 */',
       '.bq-mood-modal { position: fixed; inset: 0; z-index: 9999; display: flex; align-items: center; justify-content: center; padding: 20px; }',
-      '.bq-mood-backdrop { position: absolute; inset: 0; background: rgba(26, 58, 42, 0.5); backdrop-filter: blur(3px); }',
+      '.bq-mood-backdrop { position: absolute; inset: 0; background: rgba(26, 58, 42, 0.7); }',
       '.bq-mood-checkin { position: relative; max-width: 420px; width: 100%; background: #fff; border-radius: 16px; padding: 28px; box-shadow: var(--shadow-floating); }',
       '.bq-mood-checkin h3 { font-family: "Noto Serif SC", serif; color: #1a3a2a; font-size: 1.2rem; margin: 0 0 20px; text-align: center; }',
       '.bq-mood-options { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 16px; }',

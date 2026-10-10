@@ -1,5 +1,5 @@
 -- ============================================================
--- BioQuest — 百科模块 wiki_entries 表迁移
+-- TATABOX — 百科模块 wiki_entries 表迁移
 -- 在 Supabase 控制台 → SQL Editor 中执行本文件一次即可。
 -- 之后：
 --   1) 在本机运行 scripts/wiki_crawler.py --upload 抓取并上传词条
@@ -25,7 +25,7 @@ create table if not exists public.wiki_entries (
   updated_at  timestamptz not null default now()
 );
 
-comment on table public.wiki_entries is 'BioQuest 百科词条（由 wiki_crawler.py 抓取/上传）';
+comment on table public.wiki_entries is 'TATABOX 百科词条（由 wiki_crawler.py 抓取/上传）';
 
 alter table public.wiki_entries enable row level security;
 

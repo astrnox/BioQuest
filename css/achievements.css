@@ -1,5 +1,5 @@
 /* ============================================================
- * BioQuest — 轻量级成就 / 激励系统样式（P3-36）
+ * TATABOX — 轻量级成就 / 激励系统样式（P3-36）
  * 覆盖：解锁 toast（合成属性动画）、成就面板 / 网格 / 条目。
  * 兼容暗色模式（CSS 变量），并尊重 prefers-reduced-motion。
  * ============================================================ */
@@ -52,7 +52,7 @@
   gap: 14px;
   padding: 14px 18px;
   border-radius: 16px;
-  background: var(--color-sage, #5a7d5c);
+  background: var(--color-sage);
   color: #fff;
   box-shadow: var(--bq-ach-shadow);
   border: 1px solid var(--bq-ach-border);
@@ -144,7 +144,6 @@
 .bq-ach__item--earned {
   opacity: 1;
   filter: none;
-  transform: translateY(-1px);
 }
 
 .bq-ach__badge {

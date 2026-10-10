@@ -1,5 +1,5 @@
 /**
- * BioQuest — 学习热力图集成模块（cal-heatmap）
+ * TATABOX — 学习热力图集成模块（cal-heatmap）
  * 在指定容器渲染 GitHub 风格的学习记录日历
  * 依赖：js/vendor/cal-heatmap.min.js + cal-heatmap.css
  */

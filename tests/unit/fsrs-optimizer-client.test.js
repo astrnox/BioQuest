@@ -1,5 +1,5 @@
 /**
- * BioQuest — FSRS 优化器客户端壳单元测试（Issue #14：主线程兜底）
+ * TATABOX — FSRS 优化器客户端壳单元测试（Issue #14：主线程兜底）
  *
  * 验证 fsrs-optimizer.js（客户端壳）在 Web Worker 不可用的环境（如受限沙箱、
  * 旧浏览器、https 未就绪）下，自动回退到主线程 window.FSRSWorkerCore 同步执行，

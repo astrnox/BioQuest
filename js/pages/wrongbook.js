@@ -1,8 +1,3 @@
-/**
- * ============================================================
- * BioQuest — 智能错题本
- * ============================================================
- */
 
 (function() {
   'use strict';
@@ -262,7 +257,7 @@
       video.style.display = 'block';
       preview.style.display = 'none';
     }).catch(function(err) {
-      preview.textContent = '摄像头启动失败：' + (err.message || err) + '，请点"从相册选择"';
+      preview.textContent = '摄像头启动失败：' + errText(err) + '，请点"从相册选择"';
     });
 
     function closeCamera() {
@@ -316,7 +311,7 @@
     if (_tesseractLoaded && typeof window.Tesseract !== 'undefined') {
       callback(null); return;
     }
-    if (typeof showToast === 'function') showToast('正在加载 OCR 引擎（首次约 2-5 秒）...');
+    showToast('正在加载 OCR 引擎（首次约 2-5 秒）...');
     var s = document.createElement('script');
     s.src = 'https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js';
     s.onload = function() { _tesseractLoaded = true; callback(null); };
@@ -473,7 +468,7 @@
             else if (kind === 'warn') c = COLOR_WARN;
             else if (kind === 'error') c = COLOR_ERROR;
             setStatus(t, c);
-            if (typeof showToast === 'function' && (kind === 'success' || kind === 'error')) {
+            if (kind === 'success' || kind === 'error') {
               // 只在"完成/最终失败"弹 toast，中间进度不刷屏
               showToast(t.replace(/^\[L\d\/\d\]\s*(✓|✗)?\s*/, ''));
             }
@@ -493,13 +488,12 @@
         return;
       }
 
-      // =====【回退路径】OcrEngine 未就绪时走原有 Vision+Tesseract 两级逻辑 =====
       console.warn('[wrongbook] OcrEngine 未就绪，走旧版 Vision+Tesseract 双级逻辑');
       if (window.AiClient && typeof window.AiClient.visionRecognize === 'function' &&
           (typeof window.AiClient.hasVisionSupport !== 'function' || window.AiClient.hasVisionSupport())) {
         progressFill.style.width = '30%';
         statusEl.textContent = '使用视觉模型识别中（准确率最高）...';
-        if (typeof showToast === 'function') showToast('使用 AI 视觉模型识别中...');
+        showToast('使用 AI 视觉模型识别中...');
 
         window.AiClient.visionRecognize({
           image: imgData,
@@ -510,7 +504,7 @@
             statusEl.textContent = text ? '✓ AI 视觉识别完成，请校对后保存' : '✗ 未识别到文本，正在回退到本地 OCR...';
             statusEl.style.color = text ? COLOR_SUCCESS : COLOR_WARN;
             if (text) {
-              if (typeof showToast === 'function') showToast('AI 视觉识别完成，请校对后保存');
+              showToast('AI 视觉识别完成，请校对后保存');
               return;
             }
             _runTesseractOcr(imgData, imgEl, progressFill, statusEl, qEl);
@@ -525,7 +519,7 @@
           _runTesseractOcr(imgData, imgEl, progressFill, statusEl, qEl);
         });
       } else {
-        if (typeof showToast === 'function') showToast('未配置 AI API Key，使用本地 OCR（建议在「我的 → 设置」配置 API Key 以获得更好效果）');
+        showToast('未配置 AI API Key，使用本地 OCR（建议在「我的 → 设置」配置 API Key 以获得更好效果）');
         _runTesseractOcr(imgData, imgEl, progressFill, statusEl, qEl);
       }
     };
@@ -538,7 +532,7 @@
       if (err) {
         statusEl.textContent = '✗ ' + err.message;
         statusEl.style.color = 'var(--color-error,#c0553a)';
-        if (typeof showToast === 'function') showToast(err.message);
+        showToast(err.message);
         return;
       }
       statusEl.textContent = '图像预处理中...';
@@ -547,7 +541,7 @@
       _preprocessImage(imgData, function(processedData) {
         imgEl.src = processedData;
         statusEl.textContent = '本地 OCR 识别中... 0%';
-        if (typeof showToast === 'function') showToast('本地 OCR 识别中，请稍候...');
+        showToast('本地 OCR 识别中，请稍候...');
 
         // PSM 6（假设为单一统一文本块）对题目这类文本效果最好
         // 若识别失败再尝试 PSM 3（全自动，默认）
@@ -576,16 +570,16 @@
             progressFill.style.width = '100%';
             statusEl.textContent = text ? '✓ 本地识别完成，请校对后保存' : '✗ 未识别到文本，请手动输入';
             statusEl.style.color = text ? 'var(--color-sage,#3a6b4a)' : 'var(--color-error,#c0553a)';
-            if (typeof showToast === 'function') showToast(text ? '识别完成，请校对后保存' : '未识别到文本，请手动输入');
+            showToast(text ? '识别完成，请校对后保存' : '未识别到文本，请手动输入');
           }).catch(function(e) {
             if (fallback) {
               statusEl.textContent = '识别失败，重试中...';
               tryRecognize(3, false);
               return;
             }
-            statusEl.textContent = '✗ OCR 失败：' + (e.message || e);
+            statusEl.textContent = '✗ OCR 失败：' + errText(e);
             statusEl.style.color = 'var(--color-error,#c0553a)';
-            if (typeof showToast === 'function') showToast('OCR 失败：' + (e.message || e));
+            showToast('OCR 失败：' + errText(e));
           });
         };
         tryRecognize(6, true);
@@ -641,10 +635,10 @@
         difficulty: document.getElementById('wb-input-difficulty').value,
         source: 'manual'
       };
-      if (!question.question_text) { if (typeof showToast === 'function') showToast('请输入题目内容'); return; }
+      if (!question.question_text) { showToast('请输入题目内容'); return; }
       var res = await window.addWrongQuestion(question);
-      if (!res.ok) { if (typeof showToast === 'function') showToast('保存失败：' + (res.error || '未知错误')); return; }
-      if (typeof showToast === 'function') showToast('已保存');
+      if (!res.ok) { showToast('保存失败：' + errText(res.error)); return; }
+      showToast('已保存');
       _closeModal();
       await initWrongbook();
     });
@@ -697,8 +691,8 @@
         analysis: document.getElementById('wb-edit-analysis').value.trim()
       };
       var res = await window.updateWrongQuestion(id, updates);
-      if (!res.ok) { if (typeof showToast === 'function') showToast('更新失败：' + (res.error || '未知错误')); return; }
-      if (typeof showToast === 'function') showToast('已更新');
+      if (!res.ok) { showToast('更新失败：' + errText(res.error)); return; }
+      showToast('已更新');
       _closeModal();
       await initWrongbook();
     });
@@ -716,7 +710,7 @@
     overlay.setAttribute('aria-label', 'AI 错题分析');
     overlay.innerHTML = '<div class="wb-modal">' +
       '<h3>AI 错题分析</h3>' +
-      '<p style="color:var(--text-muted);">正在分析中，请稍候...</p>' +
+      '<p class="bq-text-muted">正在分析中，请稍候...</p>' +
     '</div>';
     document.body.appendChild(overlay);
 
@@ -730,7 +724,7 @@
 
     var res = await window.analyzeWrongQuestionWithAI(q.question_text, q.user_answer, q.correct_answer);
     if (!res.ok) {
-      overlay.querySelector('.wb-modal').innerHTML = '<h3>AI 分析失败</h3><p>' + (res.error || '未知错误') + '</p><button class="wb-btn wb-btn--secondary" data-on=\'["closeWrongbookModal"]\'>关闭</button>';
+      overlay.querySelector('.wb-modal').innerHTML = '<h3>AI 分析失败</h3><p>' + errText(res.error) + '</p><button class="wb-btn wb-btn--secondary" data-on=\'["closeWrongbookModal"]\'>关闭</button>';
       return;
     }
 
@@ -761,18 +755,18 @@
         knowledge_graph_nodes: document.getElementById('wb-ai-nodes').value.split(',').map(function(s){return s.trim();}).filter(function(s){return s;})
       };
       var r = await window.updateWrongQuestion(id, updates);
-      if (!r.ok) { if (typeof showToast === 'function') showToast('保存失败：' + (r.error || '未知错误')); return; }
-      if (typeof showToast === 'function') showToast('已保存');
+      if (!r.ok) { showToast('保存失败：' + errText(r.error)); return; }
+      showToast('已保存');
       _closeModal();
       await initWrongbook();
     });
     document.getElementById('wb-ai-related-btn').addEventListener('click', async function() {
       var nodes = document.getElementById('wb-ai-nodes').value.split(',').map(function(s){return s.trim();}).filter(function(s){return s;});
       var list = document.getElementById('wb-related-list');
-      list.innerHTML = '<p style="color:var(--text-muted);">正在查找相关练习...</p>';
+      list.innerHTML = '<p class="bq-text-muted">正在查找相关练习...</p>';
       var related = await window.getRelatedPracticeQuestions(nodes, 5);
       if (!related || related.length === 0) {
-        list.innerHTML = '<p style="color:var(--text-muted);">未找到相关练习题。</p>';
+        list.innerHTML = '<p class="bq-text-muted">未找到相关练习题。</p>';
         return;
       }
       list.innerHTML = '<h4 style="margin-bottom:8px;">相关练习</h4>' + related.map(function(rq) {
@@ -794,7 +788,7 @@
     }
     function doDelete() {
       return window.deleteWrongQuestion(id).then(function (res) {
-        if (!res.ok) { if (typeof showToast === 'function') showToast('删除失败：' + (res.error || '未知错误')); return null; }
+        if (!res.ok) { showToast('删除失败：' + errText(res.error)); return null; }
         return snapshot;
       });
     }
@@ -809,9 +803,9 @@
               try { await window.addWrongQuestion(snap); } catch (e) { /* 撤销失败 */ }
             }
             await initWrongbook();
-            if (typeof showToast === 'function') showToast('已恢复');
+            showToast('已恢复');
           });
-        } else if (typeof showToast === 'function') {
+        } else {
           showToast('已删除');
         }
       });
@@ -825,9 +819,9 @@
             try { await window.addWrongQuestion(snap); } catch (e) { /* 撤销失败 */ }
           }
           await initWrongbook();
-          if (typeof showToast === 'function') showToast('已恢复');
+          showToast('已恢复');
         });
-      } else if (typeof showToast === 'function') {
+      } else {
         showToast('已删除');
       }
     }

@@ -1,5 +1,5 @@
 /**
- * BioQuest 生物联赛考点 Schema —— 单一数据源（Single Source of Truth）
+ * TATABOX 生物联赛考点 Schema —— 单一数据源（Single Source of Truth）
  *
  * 本文件同时驱动：
  *   1. 知识图谱节点（data/knowledge-graph.json 由 generate 脚本据此生成）

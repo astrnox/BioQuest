@@ -1,7 +1,7 @@
 /* ============================================================
  * 每日亿题 — TikTok风格刷题界面
  * 设计：简洁卡片 + 流畅滑动 + 自然温馨配色
- * 配色：对齐BioQuest主色调（鼠尾草绿 + 陶土橘 + 奶油白）
+ * 配色：对齐TATABOX主色调（鼠尾草绿 + 陶土橘 + 奶油白）
  * 响应式：移动端/平板/桌面全覆盖，支持刘海屏安全区
  * ============================================================ */
 
@@ -64,18 +64,13 @@ html.dark .db-page {
   justify-content: space-between;
   padding: 0 16px;
   padding-top: env(safe-area-inset-top, 0px);
-  background: rgba(250, 248, 245, 0.92);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: var(--color-bg);
   border-bottom: 0.5px solid rgba(196, 149, 106, 0.12);
   will-change: transform;
   transform: translateZ(0);
 }
 [data-theme="dark"] .db-top-bar,
 html.dark .db-top-bar {
-  background: rgba(26, 31, 28, 0.92);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
   border-bottom-color: rgba(196, 149, 106, 0.1);
 }
 
@@ -778,7 +773,6 @@ html.dark .db-sub-item.result-wrong {
   color: #c4956a;
   font-size: 0.82rem;
   font-weight: 500;
-  animation: hintFloat 2.5s ease-in-out infinite;
   flex-shrink: 0;
   will-change: transform;
 }
@@ -787,10 +781,6 @@ html.dark .db-swipe-hint {
   color: #d4a87e;
 }
 
-@keyframes hintFloat {
-  0%, 100% { opacity: 0.6; transform: translateY(0); }
-  50% { opacity: 1; transform: translateY(-5px); }
-}
 
 .db-swipe-hint svg {
   width: 20px;
@@ -1279,8 +1269,6 @@ html.dark .db-error-retry-btn:hover {
   cursor: pointer;
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: var(--shadow-md);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
   will-change: transform;
 }
 .db-action-btn svg {
@@ -1361,21 +1349,16 @@ html.dark .db-action-btn.db-dislike-btn.active {
 .db-progress-bar {
   height: 100%;
   width: 0%;
-  background: linear-gradient(90deg, #c4956a 0%, #d4a87e 50%, #c4956a 100%);
-  background-size: 200% 100%;
+  background: var(--color-warm);
   opacity: 0;
   transition: opacity 0.3s ease;
   will-change: width;
   border-radius: 0 2px 2px 0;
-  animation: progressShimmer 2s linear infinite;
-}
-@keyframes progressShimmer {
-  0% { background-position: 200% 0; }
-  100% { background-position: -200% 0; }
+  /* P0 去装饰：移除进度条"流光"扫动动画（单色进度条不需要 shimmer） */
 }
 [data-theme="dark"] .db-progress-bar,
 html.dark .db-progress-bar {
-  background: linear-gradient(90deg, #c4956a 0%, #d4a87e 50%, #b08d5e 100%);
+  background: var(--color-warm);
 }
 
 /* ============================================================
@@ -1386,9 +1369,7 @@ html.dark .db-progress-bar {
   bottom: 32px;
   left: 50%;
   transform: translateX(-50%) translateY(20px);
-  background: rgba(44, 62, 48, 0.9);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgba(44, 62, 48, 0.96);
   color: #fff;
   padding: 10px 20px;
   border-radius: 12px;
@@ -1484,9 +1465,7 @@ html.dark .db-stop-btn:hover {
   position: absolute;
   inset: 0;
   z-index: 50;
-  background: rgba(44, 62, 48, 0.4);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
+  background: rgba(44, 62, 48, 0.55);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1739,9 +1718,7 @@ html.dark .db-submit-btn--done {
   position: absolute;
   inset: 0;
   z-index: 60;
-  background: rgba(30, 42, 34, 0.45);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+  background: rgba(30, 42, 34, 0.6);
   animation: stopOverlayIn 0.25s ease-out;
   display: flex;
   align-items: center;
@@ -1964,7 +1941,6 @@ html.dark .db-report-cta:hover {
   transition: transform 0.12s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 .db-report-item:hover {
-  transform: translateY(-1px);
   box-shadow: var(--shadow-md);
   border-color: #d4c9b8;
 }

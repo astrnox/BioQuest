@@ -1,5 +1,5 @@
 /* ============================================
- * BioQuest — Anki 风格间隔重复卡片样式
+ * TATABOX — Anki 风格间隔重复卡片样式
  * 移动优先、3D 翻转、Anki 风格评分按钮
  * ============================================ */
 
@@ -66,7 +66,6 @@
 
 .anki-deck-btn:hover {
   border-color: var(--color-sage);
-  transform: translateY(-1px);
   box-shadow: var(--shadow-sm);
 }
 
@@ -261,7 +260,6 @@
 }
 
 .anki-flip-btn:hover {
-  transform: translateY(-2px);
   box-shadow: var(--shadow-lg);
 }
 
@@ -288,13 +286,8 @@
   stroke: var(--text-muted);
   fill: none;
   stroke-width: 2;
-  animation: swipeHintPulse 2s ease-in-out infinite;
 }
 
-@keyframes swipeHintPulse {
-  0%, 100% { opacity: 0.4; transform: translateX(0); }
-  50% { opacity: 1; transform: translateX(4px); }
-}
 
 /* ==================== 背面元素 ==================== */
 .anki-answer-text {
@@ -334,7 +327,6 @@
 }
 
 .anki-rate-btn:hover {
-  transform: translateY(-2px);
   box-shadow: var(--shadow-md);
 }
 
@@ -421,7 +413,7 @@
 
 .anki-progress-fill {
   height: 100%;
-  background: linear-gradient(90deg, var(--color-sage), var(--color-success));
+  background: var(--color-sage);
   border-radius: 2px;
   transition: width 0.4s ease;
 }
@@ -513,7 +505,6 @@
 }
 
 .anki-action-primary:hover {
-  transform: translateY(-1px);
   box-shadow: var(--shadow-md);
 }
 

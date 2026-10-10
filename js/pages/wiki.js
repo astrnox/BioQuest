@@ -1,6 +1,6 @@
 /**
  * ============================================================
- * BioQuest — 百科模块 (Wiki Module)
+ * TATABOX — 百科模块 (Wiki Module)
  * ============================================================
  * 一个纯前端、基于 localStorage 的生物学词条 Wiki。
  * 功能：
@@ -20,7 +20,6 @@
 'use strict';
 
 (function () {
-  // ===== 常量 =====
   var STORAGE_KEY = 'bioquest_wiki_entries_v1';
   var SEED_FLAG_KEY = 'bioquest_wiki_seeded_v1';
   var SEED_URL = 'data/wiki-seed.json?v=20260812a';
@@ -48,7 +47,6 @@
     '生态学': '#2a7c4a'
   };
 
-  // ===== 状态 =====
   var state = {
     entries: [],
     filter: { keyword: '', category: '', tag: '' },
@@ -57,7 +55,6 @@
     editingId: null        // 编辑模式时的词条 id（null=新建）
   };
 
-  // ===== 存储 =====
   function loadEntries() {
     try {
       var raw = localStorage.getItem(STORAGE_KEY);
@@ -125,7 +122,6 @@
       .catch(function () { return []; });
   }
 
-  // ===== 种子初始化（首次访问：优先 Supabase，其次本地种子文件） =====
   function ensureSeed() {
     if (localStorage.getItem(SEED_FLAG_KEY)) {
       state.entries = loadEntries();
@@ -155,12 +151,11 @@
       });
   }
 
-  // ===== 工具函数 =====
   function $(sel, root) { return (root || document).querySelector(sel); }
   function $all(sel, root) { return Array.prototype.slice.call((root || document).querySelectorAll(sel)); }
 
   function esc(s) {
-    return typeof window.escapeHtml === 'function' ? window.escapeHtml(s) : String(s == null ? '' : s);
+    return window.escapeHtml(s);
   }
 
   // 仅允许 http(s) 协议的 URL（用于渲染到 href，防止 javascript: 等协议）
@@ -184,7 +179,6 @@
 
   function nowIso() { return new Date().toISOString(); }
 
-  // ===== 提交历史 & 作者 & Diff 统计 =====
 
   /**
    * 获取当前编辑者信息（头像 + 用户名/昵称）
@@ -473,7 +467,6 @@
       .sort(function (a, b) { return b.count - a.count || a.name.localeCompare(b.name); });
   }
 
-  // ===== Toast =====
   var toastTimer = null;
   function toast(msg, type) {
     type = type || 'info';
@@ -490,7 +483,6 @@
     toastTimer = setTimeout(function () { box.className = 'wiki-toast wiki-toast-' + type; }, 2600);
   }
 
-  // ===== 过滤 =====
   function filteredEntries() {
     var kw = state.filter.keyword.trim().toLowerCase();
     var cat = state.filter.category;
@@ -510,7 +502,6 @@
     });
   }
 
-  // ===== 渲染：列表 =====
   function renderAll() {
     renderToolbarCounts();
     renderCategoryChips();
@@ -601,7 +592,6 @@
     } catch (e) { return ''; }
   }
 
-  // ===== 渲染：详情 =====
   // 渲染词条编辑历史（头像 + 用户名/昵称 + 增删统计，类似 GitHub）
   function renderHistoryHtml(e) {
     var hist = (e && Array.isArray(e.history)) ? e.history.slice().reverse() : [];
@@ -667,7 +657,6 @@
     openModal('wikiDetailModal');
   }
 
-  // ===== 编辑器 =====
   function openEditor(id) {
     state.editingId = id || null;
     var e = id ? findEntry(id) : null;
@@ -753,7 +742,6 @@
       .filter(function (s) { return s.length > 0; });
   }
 
-  // ===== 删除 =====
   function deleteEntry(id) {
     var e = findEntry(id);
     if (!e) return;
@@ -765,7 +753,6 @@
     toast('已删除', 'success');
   }
 
-  // ===== 模态框控制 =====
   function openModal(id) {
     var m = document.getElementById(id);
     if (!m) return;
@@ -780,9 +767,7 @@
     if (!$all('.wiki-modal.show').length) document.body.style.overflow = '';
   }
 
-  // ============================================================
   //  从维基百科 / 百度百科导入
-  // ============================================================
 
   // 维基百科 plain-text extract → markdown
   function wikiTextToMd(text) {
@@ -1023,7 +1008,6 @@
     if (titleBox) titleBox.style.display = (source === 'manual') ? 'none' : '';
   }
 
-  // ===== 导出备份 =====
   function exportBackup() {
     try {
       var blob = new Blob([JSON.stringify(state.entries, null, 2)], { type: 'application/json' });
@@ -1041,7 +1025,6 @@
     }
   }
 
-  // ===== 事件绑定 =====
   function bindEvents() {
     // 搜索（防抖）
     var search = $('#wikiSearch');
@@ -1173,7 +1156,6 @@
     else if (kind === 'quote') linePrefix('> ');
   }
 
-  // ===== 初始化 =====
   function init() {
     bindEvents();
     ensureSeed(); // ensureSeed 内部会触发 renderAll

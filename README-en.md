@@ -1,12 +1,12 @@
-# BioQuest — Biology Learning Platform for High School Students
+# TATABOX — Biology Learning Platform for High School Students
 
 <div align="center">
 
-![BioQuest homepage screenshot](screenshots/home-final.png)
+![TATABOX homepage screenshot](screenshots/home-final.png)
 
 **From biology-league prep to Gaokao mock exams — practice biology with one website.**
 
-[🇨🇳 中文版](./README.md) · [🌐 Live Demo](https://astrnox.github.io/BioQuest/) · [📝 Start Practicing](https://astrnox.github.io/BioQuest/#/practice) · [💬 Report an Issue](https://github.com/astrnox/BioQuest/issues)
+[🇨🇳 中文版](./README.md) · [🌐 Live Demo](https://gagabox.cc.cd/) · [📝 Start Practicing](https://gagabox.cc.cd/#/practice) · [💬 Report an Issue](https://github.com/astrnox/BioQuest/issues)
 
 [![Platform](https://img.shields.io/badge/platform-Web-blue?style=flat-square)]()
 [![License: MPL 2.0](https://img.shields.io/badge/license-MPL--2.0-green?style=flat-square)](./LICENSE)
@@ -20,7 +20,7 @@
 
 ## What is this?
 
-BioQuest is a biology learning website built specifically for high school students. Whether you are preparing for the National High School Biology League, grinding Gaokao mock exams, or reinforcing what you learned in class, you can use it.
+TATABOX is a biology learning website built specifically for high school students. Whether you are preparing for the National High School Biology League, grinding Gaokao mock exams, or reinforcing what you learned in class, you can use it.
 
 ---
 
@@ -28,7 +28,7 @@ BioQuest is a biology learning website built specifically for high school studen
 
 ### 👉 Just want to use it (students / teachers)
 
-Open the online version directly: **[https://astrnox.github.io/BioQuest/](https://astrnox.github.io/BioQuest/)**
+Open the online version directly: **[https://gagabox.cc.cd/](https://gagabox.cc.cd/)**
 
 - You can practice without registering; registering lets you sync your wrong-answer book and learning progress.
 - Features like the AI tutor and photo-based question search require you to configure your own API Key (they all use the free tiers of various providers — no cost, tutorial included).
@@ -197,10 +197,13 @@ Contributions are welcome! Whether you:
 ### How to contribute code
 
 1. Fork this repository
-2. Create your feature branch (`git checkout -b feature/xxx`)
-3. Commit your changes (`git commit -m 'add some feature'`)
-4. Push to your branch (`git push origin feature/xxx`)
+2. Create your branch (`git checkout -b feat/xxx` — see [CONTRIBUTING.md](CONTRIBUTING.md) for the naming rules)
+3. Commit your changes (`git commit -m 'feat: describe your change (#issue)'`, following Conventional Commits)
+4. Push to your branch (`git push origin feat/xxx`)
 5. Open a Pull Request
+
+Before submitting, run `npm run lint:js && npm run audit:design` to self-check.
+The full code style guide is in **[docs/代码风格指南.md](docs/代码风格指南.md)** (Chinese).
 
 Question-bank data lives in the `data/` folder — just edit the JSON to add questions.
 
@@ -212,11 +215,11 @@ Question-bank data lives in the `data/` folder — just edit the JSON to add que
 - Thanks to the Open Spaced Repetition community for the FSRS algorithm
 - Thanks to all the open-source library authors
 - Thanks to [PhET Interactive Simulations](https://phet.colorado.edu) (University of Colorado Boulder) for high-quality interactive simulations
-- Thanks to every student using BioQuest to study biology — best of luck on your exams!
+- Thanks to every student using TATABOX to study biology — best of luck on your exams!
 
 ---
 *Note: I'm a high school student myself, so it may take a while to respond to issues 😅*
 
 <div align="center">
-Use BioQuest, and never get lost in biology 🌱
+Use TATABOX, and never get lost in biology 🌱
 </div>

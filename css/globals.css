@@ -1,5 +1,5 @@
 /* ============================================================
- * BioQuest — 全局样式变量与基础样式
+ * TATABOX — 全局样式变量与基础样式
  * 设计主题: Fresh Natural + Japanese Wabi-Sabi Literary
  * 配色系统对齐 trae design (bioquest-redesign/colors_and_type.css)
  * 旧变量保留为别名，确保向后兼容
@@ -213,7 +213,8 @@
   --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.3);
   --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.35);
   --shadow-floating: 0 12px 40px rgba(0, 0, 0, 0.5);
-  --shadow-button: 0 6px 20px rgba(212, 168, 126, 0.15);
+  /* 按钮阴影同样走中性投影（原来带暖色发光，违反"禁止彩色投影"约定） */
+  --shadow-button: 0 2px 8px rgba(0, 0, 0, 0.28);
 
   /* 旧变量别名同步 */
   --color-deep: var(--color-primary-900);
@@ -417,7 +418,7 @@ body {
   border-radius: 50%;
   /* Issue #139：双环加载动画（外层浅环 + 主轴/副轴变色），替代旧纯 border spinner */
   border: 3px solid rgba(90, 125, 92, 0.14);
-  border-top-color: var(--color-sage, #5a7d5c);
+  border-top-color: var(--color-sage);
   border-right-color: rgba(90, 125, 92, 0.45);
   animation: bqRouteSpin 0.85s cubic-bezier(0.5, 0, 0.5, 1) infinite;
 }
@@ -528,7 +529,6 @@ body {
 }
 
 .btn-primary:hover:not(:disabled) {
-  transform: translateY(-1px);
   box-shadow: var(--shadow-button);
 }
 
@@ -603,7 +603,6 @@ body {
 
 .card:hover {
   box-shadow: var(--shadow-md);
-  transform: translateY(-2px);
   border-color: var(--border-default);
 }
 
@@ -1017,7 +1016,6 @@ body {
   white-space: nowrap;
 }
 .auth-btn:hover {
-  transform: translateY(-1px);
   box-shadow: var(--shadow-button, 0 1px 3px rgba(44, 62, 48, 0.08));
 }
 
@@ -1034,8 +1032,9 @@ body {
   z-index: 10000;
   justify-content: center;
   align-items: center;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  /* P0 去玻璃：全站仅保留登录遮罩一处轻模糊，且降到 8px */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 .auth-modal-overlay.visible {
   display: flex;
@@ -1339,7 +1338,7 @@ body {
   background: rgba(58, 140, 92, 0.12);
   border: 2px dashed rgba(58, 140, 92, 0.45);
   border-radius: 12px;
-  color: #5a7d5c;
+  color: var(--color-sage);
   font-size: 0.92rem;
   font-weight: 600;
   cursor: pointer;
@@ -1350,7 +1349,6 @@ body {
 .slide-cap-trigger:hover {
   background: rgba(58, 140, 92, 0.18);
   border-color: #3a8c5c;
-  transform: translateY(-1px);
   box-shadow: var(--shadow-md);
 }
 .slide-cap-trigger:active {
@@ -1391,8 +1389,7 @@ body {
 .slide-cap-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.55);
-  backdrop-filter: blur(2px);
+  background: rgba(0, 0, 0, 0.62);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1664,8 +1661,7 @@ body {
   padding: 20px;
 }
 .pwd-setup-panel {
-  background: rgba(20, 28, 40, 0.95);
-  backdrop-filter: blur(20px);
+  background: #141c28;
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 16px;
   padding: 26px 28px 20px;
@@ -1743,7 +1739,6 @@ body {
 }
 .pwd-setup-gen:hover {
   background: #4a9c6c;
-  transform: translateY(-1px);
 }
 .pwd-strength-wrap { margin-bottom: 12px; }
 .pwd-strength-bar {
@@ -1834,7 +1829,8 @@ body {
 .pwd-attack-fill {
   height: 100%;
   width: 100%;
-  background: linear-gradient(90deg, #d63a2a, #e87a3a, #e8c43a, #a8d63a, #3a8c5c);
+  /* P0：彩虹渐变 → 单色（进度条不是调色板） */
+  background: var(--state-warning);
   border-radius: 2px;
   transform-origin: left center;
   will-change: transform;
@@ -1892,7 +1888,6 @@ body {
 }
 .pwd-setup-confirm:hover {
   background: #4a9c6c;
-  transform: translateY(-1px);
 }
 
 /* ===== 扫雷验证码 ===== */
@@ -2014,8 +2009,7 @@ body {
 .userkey-card-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(3px);
+  background: rgba(0, 0, 0, 0.78);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2101,7 +2095,6 @@ body {
   box-shadow: var(--shadow-md);
 }
 .userkey-card-btn:hover {
-  transform: translateY(-1px);
   box-shadow: var(--shadow-lg);
 }
 
@@ -2132,7 +2125,6 @@ body {
   font-family: inherit;
 }
 .auth-form-panel .auth-btn:hover {
-  transform: translateY(-1.5px);
   box-shadow: var(--shadow-lg);
   background: #45a06a;
 }
@@ -2240,7 +2232,6 @@ body {
   z-index: 10000;
   justify-content: center;
   align-items: center;
-  backdrop-filter: blur(16px);
 }
 .leaderboard-overlay.visible {
   display: flex;
@@ -2669,7 +2660,6 @@ body {
 .search-result-card:hover {
   border-color: #3a8c5c;
   box-shadow: var(--shadow-md);
-  transform: translateY(-1px);
 }
 
 .search-result-local {
@@ -3188,7 +3178,6 @@ mark.search-highlight {
   box-shadow: var(--shadow-md);
 }
 .cls-input-row button:hover {
-  transform: translateY(-1px);
   box-shadow: var(--shadow-lg);
 }
 .cls-section-label {
@@ -3218,7 +3207,6 @@ mark.search-highlight {
 .cls-topic-card:hover {
   border-color: var(--color-primary, #4a7c59);
   background: var(--color-primary-50, #edf5f0);
-  transform: translateY(-1px);
   box-shadow: var(--shadow-sm, 0 1px 3px rgba(44, 62, 48, 0.05));
 }
 .cls-topic-icon {
@@ -3558,7 +3546,6 @@ mark.search-highlight {
   cursor: default;
 }
 .k-card:hover {
-  transform: translateY(-3px);
   box-shadow: var(--shadow-floating);
   border-color: #f0b8d8;
 }
@@ -3675,30 +3662,23 @@ mark.search-highlight {
 
 /* ============================================================
    底部标签栏（悬浮胶囊，所有屏幕尺寸常驻，避免"导航栏不见了"）
-   样式参考 Apple Liquid Glass（WWDC25 / HIG Materials）：
-    - 浮于内容层之上的通透玻璃材质：强 backdrop 模糊 + 高饱和 +
-     亮度微调，内容从下方"透出"营造纵深与动感；
-    - 顶缘/底缘高光（inset 高亮线）模拟玻璃折射的勾边；
-    - 当前 tab 的选中指示是一颗"液态玻璃液滴"（半透明渐变 + 自身
-      模糊 + 顶缘镜面高光），而非不透明的实色块。
+   P0 设计整改：移除 Apple Liquid Glass 式"玻璃魔法"
+   （强模糊 + 高饱和 + 镜面高光 + 液滴材质），改为克制的平面材质：
+    - 实色面 + 1px 边框 + 单档中性阴影，颜色全部来自全局 token；
+    - 选中指示为实色浅底胶囊（保留左右滑动动效，去掉模糊与高光）。
    ============================================================ */
 .bottom-tab-bar {
-  /* 材质变量：随主题切换（亮色玻璃 / 暗色玻璃） */
-  --tabbar-bg: linear-gradient(180deg, rgba(255, 255, 255, 0.68) 0%, rgba(255, 255, 255, 0.40) 100%);
-  --tabbar-border: rgba(255, 255, 255, 0.55);
-  --tabbar-inactive: rgba(44, 62, 48, 0.55);
-  --tabbar-active: #16221a;
-  /* 液滴胶囊材质（亮色）：顶缘镜面高光 + 中段渐隐 + 底部回光 */
-  --tabbar-glow: linear-gradient(180deg, rgba(255, 255, 255, 0.96) 0%, rgba(255, 255, 255, 0.62) 46%, rgba(255, 255, 255, 0.78) 100%);
-  --tabbar-glow-border: rgba(255, 255, 255, 0.65);
-  --tabbar-glow-shadow:
-    inset 0 1px 1px rgba(255, 255, 255, 0.95),
-    inset 0 -1px 1px rgba(30, 50, 40, 0.10),
-    0 3px 10px rgba(30, 50, 40, 0.14);
-  --tabbar-bar-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.85),
-    inset 0 -1px 0 rgba(255, 255, 255, 0.18),
-    0 16px 40px rgba(30, 40, 33, 0.18);
+  /* 材质（P0 去玻璃）：实色面 + 1px 边框，统一走全局 token；
+     不再使用 backdrop-filter / saturate / brightness 等"玻璃魔法" */
+  --tabbar-bg: var(--color-surface);
+  --tabbar-border: var(--color-border);
+  --tabbar-inactive: var(--color-text-muted);
+  --tabbar-active: var(--color-text);
+  /* 选中胶囊：实色浅底 + 1px 边框（原"液态玻璃液滴"改为平面胶囊） */
+  --tabbar-glow: var(--color-surface-sunken);
+  --tabbar-glow-border: var(--color-border);
+  --tabbar-glow-shadow: none;
+  --tabbar-bar-shadow: var(--shadow-lg);
 
   display: flex;
   position: fixed;
@@ -3716,37 +3696,18 @@ mark.search-highlight {
   touch-action: pan-y;
 
   background: var(--tabbar-bg);
-  /* Safari/旧 WebKit 需要 -webkit- 前缀，双写保证全平台生效 */
-  -webkit-backdrop-filter: blur(30px) saturate(190%) brightness(1.03);
-  backdrop-filter: blur(30px) saturate(190%) brightness(1.03);
   border: 1px solid var(--tabbar-border);
-  border-radius: 16px;
+  border-radius: var(--radius-xl);
   padding: 7px 8px;
   padding-bottom: calc(7px + env(safe-area-inset-bottom, 0px));
   box-shadow: var(--tabbar-bar-shadow);
 }
 
-/* 暗色主题下的暗色液态玻璃 */
-[data-theme="dark"] .bottom-tab-bar {
-  --tabbar-bg: linear-gradient(180deg, rgba(32, 40, 36, 0.62) 0%, rgba(20, 26, 22, 0.46) 100%);
-  --tabbar-border: rgba(255, 255, 255, 0.14);
-  --tabbar-inactive: rgba(224, 232, 226, 0.52);
-  --tabbar-active: #f4f9f5;
-  --tabbar-glow: linear-gradient(180deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.07) 48%, rgba(255, 255, 255, 0.12) 100%);
-  --tabbar-glow-border: rgba(255, 255, 255, 0.22);
-  --tabbar-glow-shadow:
-    inset 0 1px 1px rgba(255, 255, 255, 0.28),
-    inset 0 -1px 1px rgba(0, 0, 0, 0.25),
-    0 3px 10px rgba(0, 0, 0, 0.35);
-  --tabbar-bar-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.14),
-    inset 0 -1px 0 rgba(255, 255, 255, 0.04),
-    0 16px 40px rgba(0, 0, 0, 0.35);
-}
+/* 暗色主题：无需单独覆盖 —— 材质颜色已全部使用主题感知的全局 token
+   （--color-surface / --color-border / --color-text / --shadow-lg）。 */
 
-/* 滑动高亮胶囊（液态玻璃液滴）：由 JS 依据当前 tab 定位（left/width），
-   切换时平滑滑动。胶囊自身再叠加一层 backdrop 模糊，让"液滴"相对
-   tabbar 材质产生更实的玻璃折射质感（Chrome/Safari 均支持嵌套）。 */
+/* 滑动高亮胶囊：由 JS 依据当前 tab 定位（left/width），切换时平滑滑动；
+   P0 整改后为实色浅底胶囊（不再叠加 backdrop 模糊与镜面高光）。 */
 .bottom-tab-glow {
   position: absolute;
   box-sizing: border-box;
@@ -3754,12 +3715,10 @@ mark.search-highlight {
   bottom: calc(6px + env(safe-area-inset-bottom, 0px));
   left: 0;
   width: 54px;
-  border-radius: 16px;
+  border-radius: var(--radius-xl);
   background: var(--tabbar-glow);
   border: 1px solid var(--tabbar-glow-border);
   box-shadow: var(--tabbar-glow-shadow);
-  -webkit-backdrop-filter: blur(14px) saturate(160%);
-  backdrop-filter: blur(14px) saturate(160%);
   opacity: 0;
   pointer-events: none;
   will-change: left, width;
@@ -3846,10 +3805,7 @@ html[data-theme="dark"] .bottom-tab-bar.is-dragging .bottom-tab-glow {
   color: var(--tabbar-active);
 }
 
-/* 选中 tab 的图标轻微上浮放大，强化"液态"动感 */
-.bottom-tab.active svg {
-  transform: translateY(-1px) scale(1.1);
-}
+/* P1：取消选中 tab 图标"上浮放大"装饰（颜色由 .bottom-tab.active 统一控制） */
 
 /* 通知弹窗（右上角收到回帖提示） */
 .bq-notify-popup {
@@ -4027,11 +3983,6 @@ html[data-theme="dark"] .bottom-tab-bar.is-dragging .bottom-tab-glow {
   font-size: 44px;
   line-height: 1;
   filter: saturate(0.85);
-  animation: bqEmptyBob 2.4s ease-in-out infinite;
-}
-@keyframes bqEmptyBob {
-  0%, 100% { transform: translateY(0); }
-  50%      { transform: translateY(-6px); }
 }
 .bq-empty-title {
   margin: 0;
@@ -4049,14 +4000,13 @@ html[data-theme="dark"] .bottom-tab-bar.is-dragging .bottom-tab-glow {
   padding: 7px 18px;
   border: none;
   border-radius: 16px;
-  background: var(--color-primary, #5a7d5c);
+  background: var(--color-primary);
   color: #fff;
   font-size: 0.85rem;
   cursor: pointer;
   transition: transform 0.15s ease, opacity 0.15s ease;
 }
 .bq-empty-cta:hover {
-  transform: translateY(-1px);
   opacity: 0.92;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -4107,4 +4057,282 @@ html[data-theme="dark"] .bottom-tab-bar.is-dragging .bottom-tab-glow {
   font-size: .78rem;
   line-height: 1.5;
   color: var(--text-secondary, #6b7280);
+}
+
+/* ════════════════════════════════════════════════════════════
+   TATABOX 全局组件层（设计系统 v2；P0/P1 设计整改）
+   ────────────────────────────────────────────────────────────
+   契约（新代码必须遵守）：
+     1. 颜色/圆角/阴影/间距一律引用上方全局 token，禁止就地发明数值；
+     2. 材质只有一种：实色面 + 1px 边框 + 中性阴影；
+        不允许 backdrop-filter 模糊、渐变、inset 镜面高光、彩色光晕；
+     3. 图标统一用 js/core/utils.js 的 BQ_ICONS（线性 1.8 stroke）；
+        不允许 emoji 作为图标；
+     4. 页面/组件优先复用本节类，不要在 JS 模板里拼内联样式。
+   命名：bq- 前缀（TATABOX 设计系统）。
+   ════════════════════════════════════════════════════════════ */
+
+/* ── 图标（配合 BQ_ICONS 使用） ── */
+.bq-icon { vertical-align: -0.18em; }
+
+/* ── 状态圆点（替代彩色圆点 emoji） ── */
+.bq-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-full);
+  background: var(--color-text-muted);
+  flex: none;
+}
+.bq-dot--high { background: var(--state-error); }
+.bq-dot--medium { background: var(--state-warning); }
+.bq-dot--low { background: var(--state-success); }
+.bq-dot--none { background: var(--color-border); }
+
+/* ── 结果态图标容器（替代 3rem 巨型 emoji 对勾/警告） ── */
+.bq-result-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  margin-bottom: var(--spacing-md);
+  border-radius: var(--radius-full);
+  background: var(--color-surface-sunken);
+  color: var(--color-sage);
+}
+.bq-result-icon svg { width: 32px; height: 32px; }
+.bq-result-icon--warning { color: var(--state-warning); }
+.bq-result-icon--error { color: var(--state-error); }
+
+/* ── 按钮（唯一入口：变体用修饰类，不要在模板里写样式） ── */
+.bq-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  padding: 10px var(--spacing-lg);
+  border: 1px solid transparent;
+  border-radius: var(--radius-full);
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-family: inherit;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  line-height: 1.2;
+  cursor: pointer;
+  transition: background var(--transition-fast),
+              border-color var(--transition-fast),
+              color var(--transition-fast);
+}
+.bq-btn:disabled { opacity: .6; cursor: not-allowed; }
+.bq-btn--primary { background: var(--color-sage); color: #fff; }
+.bq-btn--primary:hover:not(:disabled) { background: var(--color-primary-dark); }
+.bq-btn--ghost { background: transparent; border-color: var(--color-border); color: var(--color-text-secondary); }
+.bq-btn--ghost:hover:not(:disabled) { border-color: var(--color-sage); color: var(--color-sage); }
+.bq-btn--warm { background: var(--color-warm); color: var(--color-primary-900); }
+.bq-btn--warm:hover:not(:disabled) { background: var(--color-warm-light); }
+.bq-btn--danger { background: var(--state-error); color: #fff; }
+.bq-btn--block { display: flex; width: 100%; }
+.bq-btn--sm { padding: 6px var(--spacing-md); font-size: var(--font-size-xs); }
+
+/* ── 卡片（平面材质） ── */
+.bq-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-sm);
+}
+.bq-card--flat { box-shadow: none; }
+.bq-card--sunken { background: var(--color-surface-sunken); }
+
+/* ── 标签 chip ── */
+.bq-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px var(--spacing-sm);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  background: var(--color-surface-sunken);
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+}
+
+/* ── 页头（label / 标题 / 说明，全站统一，不再逐页自写） ── */
+.bq-section-header {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+.bq-section-header__label {
+  margin-bottom: var(--spacing-sm);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--color-sage);
+}
+.bq-section-header__title {
+  margin: 0 0 var(--spacing-sm);
+  font-family: var(--font-serif);
+  font-size: var(--font-size-3xl);
+  line-height: var(--line-height-tight);
+  color: var(--color-deep);
+}
+.bq-section-header__desc {
+  margin: 0;
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+}
+.bq-section-header--left { text-align: left; }
+
+/* ── 提示条（替代带 emoji 的警示段落） ── */
+.bq-note {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface-sunken);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-normal);
+  color: var(--color-text-secondary);
+}
+.bq-note__icon { flex: none; margin-top: 2px; color: var(--color-text-muted); }
+.bq-note--warning .bq-note__icon { color: var(--state-warning); }
+.bq-note--danger .bq-note__icon { color: var(--state-error); }
+
+/* ── 空态 ── */
+.bq-empty {
+  padding: var(--spacing-2xl) var(--spacing-lg);
+  text-align: center;
+  color: var(--color-text-muted);
+}
+
+/* ── 程序化聚焦不画焦点环 ──
+   路由切换后会把焦点交给标题/容器（tabindex="-1"），这些元素本身不可交互、
+   键盘也无法到达，Chrome 的 :focus-visible 会画出一圈突兀的绿框（观感像误加的描边）。 */
+[tabindex="-1"]:focus,
+[tabindex="-1"]:focus-visible {
+  outline: none;
+}
+
+/* ============================================================
+ * 工具类（P1-3 内联样式收敛）
+ * ------------------------------------------------------------
+ * 高频内联样式（JS 模板里复制粘贴的 style="..."）统一收敛到此，
+ * 数值只在本处定义一次；组件仍优先使用 .bq-* 语义组件类。
+ * 新代码禁止在 JS 模板中书写 style="..."，一律用下列类组合。
+ * ============================================================ */
+.bq-m-0 { margin: 0; }
+.bq-mt-8 { margin-top: var(--spacing-sm); }
+.bq-mt-12 { margin-top: 12px; }
+.bq-mt-24 { margin-top: var(--spacing-lg); }
+.bq-mb-4 { margin-bottom: var(--spacing-xs); }
+.bq-mb-8 { margin-bottom: var(--spacing-sm); }
+.bq-mb-12 { margin-bottom: 12px; }
+.bq-mb-14 { margin-bottom: 14px; }
+.bq-mb-16 { margin-bottom: var(--spacing-md); }
+.bq-mb-24 { margin-bottom: var(--spacing-lg); }
+.bq-center { text-align: center; }
+.bq-flex-1 { flex: 1; }
+.bq-text-muted { color: var(--text-muted); }
+.bq-text-error { color: var(--color-error); }
+.bq-fs-12 { font-size: var(--font-size-xs); }
+.bq-fs-09 { font-size: 0.9rem; }
+.bq-fs-11 { font-size: 1.1rem; }
+.bq-fs-2rem { font-size: 2rem; }
+.bq-block { display: block; }
+
+/* 表单标签 / 键值提示 / 空态区块（原高频内联样式） */
+.bq-field-label {
+  display: block;
+  font-size: var(--font-size-xs);
+  color: var(--text-muted);
+  margin-bottom: var(--spacing-xs);
+}
+.bq-kbd {
+  background: rgba(0, 0, 0, 0.05);
+  padding: 1px 5px;
+  border-radius: 2px;
+}
+.bq-empty-block { text-align: center; padding: 60px 20px; }
+.bq-empty-block-lg { text-align: center; padding: 64px 24px; }
+.bq-empty-note { text-align: center; color: var(--text-muted); padding: 40px 0; }
+.bq-note { color: var(--text-muted); font-size: 0.9rem; margin-bottom: var(--spacing-md); }
+.bq-error-title { color: var(--color-error); font-size: 1.1rem; margin-bottom: var(--spacing-sm); }
+
+/* ============================================================
+ * 工具类（P2-4 内联样式收敛，续78ecb7f）
+ * ------------------------------------------------------------
+ * 仅抽取「跨文件出现 >=3 次、且语义明确」的写法；
+ * 一次性的布局微调（314 种只出现 1 次）刻意保留内联——为它们建类
+ * 只会产生 300+ 个一次性类名，维护成本高于收益。
+ *
+ * 注意：这里的按钮/输入框保持原有 8px 圆角与原内联数值 1:1 对应，
+ * 不套用 .bq-btn 的胶囊圆角，避免改变既有观感。
+ * ============================================================ */
+
+/* 主按钮（app.js / community.js / practice.js 共 6 处） */
+.bq-btn--compact {
+  padding: 8px 20px;
+  background: var(--color-sage);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* 次按钮/ 文字按钮（community.js 共 5 处） */
+.bq-btn--quiet {
+  padding: 4px 10px;
+  border: none;
+  background: transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  color: var(--text-primary);
+}
+
+/* 隐藏（默认 display:none，由JS 切换显示） */
+.bq-hidden { display: none; }
+
+/* 空态/加载态的垂直居中容器（app.js / community.js / user.js 共 3 处） */
+.bq-center-vh {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+}
+
+/* 表单输入框（bounty.js 共 3 处） */
+.bq-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+/* 区块辅助说明文字（app.js / bounty.js / user.js / practice.js 共 13 处） */
+.bq-hint {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+.bq-hint--block { display: block; margin-bottom: var(--spacing-xs); }
+.bq-hint--block-sm { display: block; font-size: 0.82rem; color: var(--text-secondary, #8a8a8a); margin-bottom: var(--spacing-xs); }
+.bq-hint--mt { margin-top: var(--spacing-xs); }
+.bq-hint--xs { font-size: 0.78rem; }
+.bq-hint--amber { color: var(--color-amber, #c4956a); }
+.bq-hint--success { color: var(--color-success); }
+
+/* 宽版居中说明块（points-ui.js 共 3 处） */
+.bq-panel-narrow {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 24px 20px 80px;
+  text-align: center;
+  color: var(--text-muted);
 }

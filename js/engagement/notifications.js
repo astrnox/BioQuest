@@ -1,6 +1,6 @@
 /**
  * ============================================================
- * BioQuest — 社区回帖通知
+ * TATABOX — 社区回帖通知
  * ----------------------------------------------------------------
  * 检测"有人回复了你的社区帖子"，实现：
  *   1. 收到回帖时屏幕右上角弹出通知卡片
@@ -47,7 +47,7 @@
         '<div class="bq-notify-post">' + escapeHtml(notif.postPreview || '你的帖子') + '</div>' +
         '<div class="bq-notify-comment">' + escapeHtml(notif.comment || '') + '</div>' +
       '</div>' +
-      '<button class="bq-notify-close" aria-label="关闭">✕</button>';
+      '<button class="bq-notify-close" aria-label="关闭">×</button>';
     document.body.appendChild(toast);
 
     var close = function () {

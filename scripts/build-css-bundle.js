@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 'use strict';
 /**
- * BioQuest — 首屏同步 CSS 合并脚本（Issue #108）
+ * TATABOX — 首屏同步 CSS 合并脚本（Issue #108）
  *
  * 背景：index.html 中首屏渲染依赖的 6 个同步 CSS（globals/layout/header/
  * learning-hub/home/debug-fix）会串行阻塞首屏；合并为单个 css/bundle-core.css
@@ -33,7 +33,7 @@ const SYNC_CSS = [
 
 const parts = [];
 parts.push('/* ============================================================');
-parts.push(' * BioQuest — 首屏同步 CSS 合并包（Issue #108，由');
+parts.push(' * TATABOX — 首屏同步 CSS 合并包（Issue #108，由');
 parts.push(' * scripts/build-css-bundle.js 自动生成，勿手改。');
 parts.push(' * 合并源：' + SYNC_CSS.join(' + '));
 parts.push(' * 生成时间：' + new Date().toISOString());

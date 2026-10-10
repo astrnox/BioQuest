@@ -1,6 +1,6 @@
 /**
  * ============================================================
- * BioQuest — Bio 分计算器（#/bio-calc）
+ * TATABOX — Bio 分计算器（#/bio-calc）
  * ------------------------------------------------------------
  * 用户友好的自定义计算器：输入六维属性（B/I/O/G/C/D，0-100）
  * 实时推演 Bio Score 总分、评级与单维贡献，公式全程透明。
@@ -53,7 +53,6 @@
   };
   var KEYS = ['B', 'I', 'O', 'G', 'C', 'D'];
 
-  // ============ 样式 ============
   function injectStyles() {
     var id = 'bio-calc-style';
     if (document.getElementById(id)) return;
@@ -149,7 +148,6 @@
     document.head.appendChild(st);
   }
 
-  // ============ 输入读取 ============
   function readComp() {
     var comp = {};
     KEYS.forEach(function (k) {
@@ -175,7 +173,8 @@
   }
 
   function paintRange(el, v, color) {
-    el.style.background = 'linear-gradient(90deg,' + color + ' 0%,' + color + ' ' + v + '%,#ece9e2 ' + v + '%)';
+    /* P0 去渐变：滑杆填充改为单色（原两段渐变填充） */
+    el.style.background = color;
   }
 
   function setEnable(enabled) {
@@ -183,7 +182,6 @@
     if (el) el.style.display = enabled ? 'none' : 'block';
   }
 
-  // ============ 渲染 ============
   function buildGauge(score, grade) {
     var c = 2 * Math.PI * 64; // r=64 → ≈402
     var off = c * (1 - Math.max(0, Math.min(100, score)) / 100);
@@ -290,7 +288,6 @@
     }
   }
 
-  // ============ 重算 ============
   function recompute(activePreset) {
     if (typeof window.computeBioScoreFromRaw !== 'function') {
       var g = $id('bc-gauge-num');
@@ -306,7 +303,6 @@
     renderContrib(out, comp);
   }
 
-  // ============ 快捷动作 ============
   function loadRealData() {
     try {
       var stats = null, records = [];
@@ -324,7 +320,6 @@
     }
   }
 
-  // ============ 页面渲染 ============
   function buildBioCalcWidget(host, opts) {
     opts = opts || {};
     injectStyles();
@@ -421,7 +416,7 @@
         var isRange = el.className.indexOf('bc-range') >= 0;
         var other = $id(isRange ? 'bc-' + k + '-n' : 'bc-' + k + '-r');
         if (isRange) {
-          el.style.background = 'linear-gradient(90deg,' + (DIM_META[k] ? DIM_META[k].color : '#4a7c59') + ' 0%,' + (DIM_META[k] ? DIM_META[k].color : '#4a7c59') + ' ' + el.value + '%,#ece9e2 ' + el.value + '%)';
+          el.style.background = (DIM_META[k] ? DIM_META[k].color : '#4a7c59');
           if (other) other.value = clampNum(el.value, 0, 100);
         } else if (other) {
           other.value = clampNum(el.value, 0, 100);

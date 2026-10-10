@@ -1,4 +1,4 @@
-# BioQuest 第三方域名白名单
+# TATABOX 第三方域名白名单
 # 来源：/workspace/index.html 实际出现的全部外部 URL（src/href），按用途分类。
 # 规则：每行一个域名；空行与以 # 开头的行为注释，均忽略。
 # 说明：本文件只列"允许出现"的域名，静态资源（script/link stylesheet/preload katex）
@@ -19,8 +19,13 @@ phet.colorado.edu
 # ---- 脚本模块 CDN（CSP script-src 允许，当前 index.html 未直接引用，预留）----
 unpkg.com
 
-# ---- 本站部署域名（GitHub Pages 宿主，非第三方；canonical / og:image 指向它）----
+# ---- 本站部署域名（GitHub Pages 宿主 + 自定义域名 CNAME，非第三方）----
+# astrnox.github.io：GitHub Pages 默认域名
+# gagabox.cc.cd   ：CNAME 指向的自定义域名；index.html 的 canonical / og:url /
+#                   og:image 现已指向该域名（<link rel="canonical"> 会被
+#                   scripts/verify-third-party.js 扫描，故必须在此登记）
 astrnox.github.io
+gagabox.cc.cd
 
 # ---- 外链导航链接（footer 外部站外链接，非加载的静态资源，无需 SRI）----
 github.com

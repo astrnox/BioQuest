@@ -1,5 +1,5 @@
 /**
- * BioQuest — Issue #134：storage.js 大数据压缩（lz-string）单元测试
+ * TATABOX — Issue #134：storage.js 大数据压缩（lz-string）单元测试
  *
  * 覆盖：
  *   1. 小 payload：保持明文写入（无压缩信封），行为与旧版一致；

@@ -1,4 +1,4 @@
-// BioQuest 浏览器回归测试 v3 - 全面覆盖，覆盖所有 P0/P1 修复
+// TATABOX 浏览器回归测试 v3 - 全面覆盖，覆盖所有 P0/P1 修复
 const { chromium } = require('playwright');
 const fs = require('fs');
 const path = require('path');
@@ -39,7 +39,6 @@ function logIssue(level, page, msg, evidence) {
     '/community', '/user', '/wrongbook', '/trends'
   ];
 
-  // ===== 阶段 A: 路由扫描（页面错误 + console 错误）=====
   console.log('\n========== 阶段 A: 路由扫描 ==========');
   const routeErrors = {};
   for (const route of ROUTES) {
@@ -64,7 +63,6 @@ function logIssue(level, page, msg, evidence) {
     }
   }
 
-  // ===== 阶段 B: 关键修复点验证 =====
   console.log('\n========== 阶段 B: P0 修复点验证 ==========');
 
   // B1: cal-heatmap / d3 修复验证（首页不应再有 timeSecond 错误）
@@ -222,7 +220,6 @@ function logIssue(level, page, msg, evidence) {
     }
   }
 
-  // ===== 阶段 C: 主题切换 =====
   console.log('\n========== 阶段 C: 主题切换 ==========');
   await page.goto(BASE, { waitUntil: 'networkidle' });
   await page.waitForTimeout(1500);
@@ -260,7 +257,6 @@ function logIssue(level, page, msg, evidence) {
     logIssue('P2', 'theme', '未找到 #themeToggleMobile 按钮');
   }
 
-  // ===== 阶段 D: 移动端响应式 =====
   console.log('\n========== 阶段 D: 移动端响应式 ==========');
   await page.setViewportSize({ width: 375, height: 700 });
   await page.goto(BASE, { waitUntil: 'networkidle' });
@@ -284,7 +280,6 @@ function logIssue(level, page, msg, evidence) {
     if (await closeBtn.count()) await closeBtn.click().catch(()=>{});
   }
 
-  // ===== 阶段 E: UI 一致性检查 =====
   console.log('\n========== 阶段 E: UI 一致性 ==========');
   await page.setViewportSize({ width: 1280, height: 900 });
   const uiChecks = [];
@@ -363,7 +358,6 @@ function logIssue(level, page, msg, evidence) {
     console.log(`${r}: 圆角种类 ${pageRadii.length}`);
   }
 
-  // ===== 阶段 F: 总结 =====
   console.log('\n========== 总结 ==========');
   report.summary.routeErrors = Object.fromEntries(
     Object.entries(routeErrors).map(([r, e]) => [r, { pe: e.pageErrors.length, ce: e.consoleErrors.length }])

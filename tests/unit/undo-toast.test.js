@@ -1,5 +1,5 @@
 /**
- * BioQuest — P1-21：可撤销删除（Undo）单元测试
+ * TATABOX — P1-21：可撤销删除（Undo）单元测试
  *
  * 覆盖：
  *   1. app.js 定义 showUndoToast 且暴露 window.showUndoToast；

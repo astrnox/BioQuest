@@ -1,6 +1,6 @@
 /**
  * ============================================================
- * BioQuest — 专注模式 / 番茄钟
+ * TATABOX — 专注模式 / 番茄钟
  * 集成到学习流程的计时工具，竞品无此功能
  * 支持自定义时长、休息提醒、学习统计
  * ============================================================
@@ -295,9 +295,9 @@
 
     // 更新页面标题
     if (_isRunning) {
-      document.title = formatTime(_remainingSeconds) + ' - ' + MODE_LABELS[_currentMode] + ' | BioQuest';
+      document.title = formatTime(_remainingSeconds) + ' - ' + MODE_LABELS[_currentMode] + ' | TATABOX';
     } else {
-      document.title = '专注模式 | BioQuest';
+      document.title = '专注模式 | TATABOX';
     }
 
     // 更新统计

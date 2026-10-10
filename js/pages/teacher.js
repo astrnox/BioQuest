@@ -1,6 +1,6 @@
 /**
  * ============================================================
- * BioQuest — 教师协同视图（教师/家长学习监控面板）
+ * TATABOX — 教师协同视图（教师/家长学习监控面板）
  * 入口：输入"班级码"或"学生ID"查看学生数据
  * 简化版：用 localStorage 'bioquest_class_data' 模拟班级数据
  * ============================================================
@@ -79,7 +79,7 @@ function injectTeacherStyles() {
     /* 详情抽屉 */
     '.teacher-drawer-overlay {',
     '  position:fixed; inset:0; z-index:9998;',
-    '  background:rgba(5,10,7,0.5); backdrop-filter:blur(4px);',
+    '  background:rgba(5,10,7,0.66);',
     '  opacity:0; pointer-events:none; transition:opacity .25s;',
     '}',
     '.teacher-drawer-overlay.visible { opacity:1; pointer-events:auto; }',
@@ -185,7 +185,7 @@ function teacherModalConfirm(message, callback) {
   overlay.style.justifyContent = 'center';
   overlay.innerHTML =
     '<div style="background:var(--surface-primary,#fff);border-radius:12px;padding:28px 24px 20px;width:min(420px,92vw);box-shadow:var(--shadow-floating);text-align:center;">' +
-      '<div style="font-size:2rem;margin-bottom:8px;">⚠️</div>' +
+      '<div class="bq-result-icon bq-result-icon--warning">' + BQ_ICONS.alert + '</div>' +
       '<div style="font-size:0.92rem;color:var(--text-secondary,#4a4a4a);line-height:1.6;margin-bottom:20px;">' + escapeHtml(message || '确定执行此操作？') + '</div>' +
       '<div style="display:flex;gap:10px;justify-content:center;">' +
         '<button class="teacher-btn teacher-btn-ghost teacher-btn-sm" id="teacher-modal-cancel">取消</button>' +
@@ -445,11 +445,6 @@ function teacherComputeWeakModules(student) {
   return result;
 }
 
-/* ============== 渲染：主页面 ============== */
-
-/**
- * 渲染教师页面
- */
 function renderTeacherPage(target) {
   injectTeacherStyles();
 
@@ -687,9 +682,7 @@ function teacherAddStudent() {
       var list = teacherLoadClass();
       list.push(student);
       teacherSaveClass(list);
-      if (typeof showToast === 'function') {
-        showToast('已添加学生：' + student.name + '（密钥 ' + key + '）');
-      }
+showToast('已添加学生：' + student.name + '（密钥 ' + key + '）');
       close();
       teacherRenderAll();
       // P0-3: 异步同步到 Supabase（dual-write）
@@ -827,7 +820,7 @@ function teacherRenderDrawerBody(student) {
     weakModules.forEach(function (m) {
       html +=
         '<div class="teacher-weak-item">' +
-          '<span>' + escapeHtml(m.module) + ' <small style="color:var(--text-muted,#8a8a8a);">(' + m.wrong + '/' + m.total + ')</small></span>' +
+          '<span>' + escapeHtml(m.module) + ' <small class="bq-text-muted">(' + m.wrong + '/' + m.total + ')</small></span>' +
           '<span style="display:flex;align-items:center;gap:8px;">' +
             '<span style="font-weight:600;color:' + (m.errorRate >= 50 ? 'var(--color-error,#e53e3e)' : '#b87a1f') + ';">' + m.errorRate + '%</span>' +
             '<span class="teacher-weak-bar"><span class="teacher-weak-bar-fill" style="width:' + m.errorRate + '%;"></span></span>' +
@@ -846,7 +839,7 @@ function teacherRenderDrawerBody(student) {
       var stem = (w.questionText || w.question || '').slice(0, 80);
       html +=
         '<div class="teacher-weak-item">' +
-          '<span style="flex:1;">' + escapeHtml(stem) + (stem.length >= 80 ? '…' : '') + '</span>' +
+          '<span class="bq-flex-1">' + escapeHtml(stem) + (stem.length >= 80 ? '…' : '') + '</span>' +
           '<span style="font-size:0.74rem;color:var(--text-muted,#8a8a8a);">' + escapeHtml(w.subject || w.module || '') + '</span>' +
         '</div>';
     });
@@ -893,7 +886,7 @@ function teacherRemoveStudent(studentId) {
   teacherSaveClass(list);
   teacherCloseDrawer();
   teacherRenderAll();
-  if (typeof showToast === 'function') showToast('已移出班级');
+  showToast('已移出班级');
   // P0-3: 异步同步到 Supabase（dual-delete）
   if (removed) {
     teacherSyncRemoveToSupabase(removed).then(function() {});
@@ -1033,10 +1026,10 @@ function teacherExportCSV(student) {
   } else {
     filename = 'bioquest_class_report.csv';
     if (list.length === 0) {
-      if (typeof showToast === 'function') showToast('班级暂无学生，无法导出');
+      showToast('班级暂无学生，无法导出');
       return;
     }
-    rows.push(['BioQuest 班级报告', '', '', '', '', '']);
+    rows.push(['TATABOX 班级报告', '', '', '', '', '']);
     rows.push(['导出时间', new Date().toLocaleString('zh-CN')]);
     rows.push([]);
     rows.push(['姓名', '学生ID', 'Bio分', '正确率', '累计答题', '最后活跃', '状态']);
@@ -1089,7 +1082,7 @@ function teacherExportCSV(student) {
   document.body.removeChild(a);
   setTimeout(function () { URL.revokeObjectURL(url); }, 200);
 
-  if (typeof showToast === 'function') showToast('已导出：' + filename);
+  showToast('已导出：' + filename);
 }
 
 /* ============== 班级统计图表（SVG） ============== */

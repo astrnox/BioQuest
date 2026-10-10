@@ -1,4 +1,4 @@
-# BioQuest — 题库数据流水线（P2 Issue #18）
+# TATABOX — 题库数据流水线（P2 Issue #18）
 # ============================================================
 # 目标：题库/索引（data/**）一旦变更，自动重跑生成器：
 #   1. 分配/复核 bioID、产出 index / bank / bioid-map / knowledge-graph；

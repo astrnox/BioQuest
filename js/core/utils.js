@@ -1,6 +1,6 @@
 /**
  * ============================================================
- * BioQuest — 工具函数集合
+ * TATABOX — 工具函数集合
  * 提供常用的通用工具函数
  * ============================================================
  */
@@ -8,13 +8,45 @@
 'use strict';
 
 /**
- * BioQuest 全局命名空间（Q-03 保守实施）
+ * TATABOX 全局命名空间（Q-03 保守实施）
  * 作为全站公共工具与常量的规范挂载点。新代码应优先使用 BioQuest.* 路径；
  * 旧的 window.* 平铺别名保留以向后兼容，避免一次性迁移 40+ 全局导致回归。
  * 已注册：escapeHtml、loadScriptOnce（均提供 window.* 别名）
  */
-var BioQuest = (typeof window !== 'undefined' ? window.BioQuest : null) || {};
-if (typeof window !== 'undefined') { window.BioQuest = BioQuest; }
+var TATABOX = (typeof window !== 'undefined' ? window.BioQuest : null) || {};
+if (typeof window !== 'undefined') { window.BioQuest = TATABOX; }
+
+/**
+ * ═══ 全站图标系统（P0 设计整改）═══
+ * 统一替代散落在各页面的 emoji（奖杯 / 奖牌 / 对勾 / 警告等）。
+ * 约定：
+ *   - 线性风格：24 viewBox / stroke 1.8 / currentColor（随文字颜色）；
+ *   - 默认 16px，用外层类覆盖尺寸（如 .bq-result-icon svg 为 32px）；
+ *   - 颜色只用 color 控制，不要在图标上写 fill。
+ * 用法：el.innerHTML = BQ_ICONS.check + ' 已完成'
+ */
+var BQ_ICONS = (function () {
+  function svg(inner, size) {
+    var s = size || 16;
+    return '<svg width="' + s + '" height="' + s + '" viewBox="0 0 24 24" fill="none" stroke="currentColor" ' +
+      'stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">' +
+      inner + '</svg>';
+  }
+  return {
+    check: svg('<path d="M20 6 9 17l-5-5"/>'),
+    checkCircle: svg('<circle cx="12" cy="12" r="9"/><path d="m8.5 12.5 2.5 2.5 4.5-5"/>'),
+    alert: svg('<path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4"/><path d="M12 17h.01"/>'),
+    info: svg('<circle cx="12" cy="12" r="9"/><path d="M12 16v-4"/><path d="M12 8h.01"/>'),
+    x: svg('<path d="M18 6 6 18M6 6l12 12"/>'),
+    edit: svg('<path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 1 1 3 3L7 19l-4 1 1-4Z"/>'),
+    trophy: svg('<path d="M8 4h8v6a4 4 0 0 1-8 0V4Z"/><path d="M8 6H5.5a2.5 2.5 0 0 0 3 4"/><path d="M16 6h2.5a2.5 2.5 0 0 1-3 4"/><path d="M12 14v4"/><path d="M8.5 21h7"/>'),
+    flag: svg('<path d="M5 21V4"/><path d="M5 4h11l-1.5 3.5L16 11H5"/>'),
+    /* 大尺寸场景（成功页/空态）用带圈图标 */
+    checkCircleLarge: svg('<circle cx="12" cy="12" r="9"/><path d="m8.5 12.5 2.5 2.5 4.5-5"/>', 32)
+  };
+})();
+TATABOX.icons = BQ_ICONS;
+if (typeof window !== 'undefined') { window.BQ_ICONS = BQ_ICONS; }
 
 /**
  * Fisher-Yates 洗牌算法
@@ -25,7 +57,7 @@ if (typeof window !== 'undefined') { window.BioQuest = BioQuest; }
  */
 function shuffle(array) {
   if (!Array.isArray(array)) {
-    console.warn('[BioQuest Utils] shuffle 需要数组参数');
+    console.warn('[TATABOX Utils] shuffle 需要数组参数');
     return array;
   }
 
@@ -76,7 +108,7 @@ function formatTime(seconds, options = {}) {
  */
 function debounce(fn, delay) {
   if (typeof fn !== 'function') {
-    throw new TypeError('[BioQuest Utils] debounce 需要函数作为第一个参数');
+    throw new TypeError('[TATABOX Utils] debounce 需要函数作为第一个参数');
   }
 
   let timer = null;
@@ -111,7 +143,7 @@ function debounce(fn, delay) {
  */
 function throttle(fn, delay) {
   if (typeof fn !== 'function') {
-    throw new TypeError('[BioQuest Utils] throttle 需要函数作为第一个参数');
+    throw new TypeError('[TATABOX Utils] throttle 需要函数作为第一个参数');
   }
 
   let lastTime = 0;
@@ -192,12 +224,110 @@ function escapeHtml(str) {
   return str.replace(/[&<>"'/`=]/g, (char) => entityMap[char]);
 }
 
-// 显式暴露到 window，作为全站唯一的 escapeHtml 规范实现（Q-01 统一）
-// 各模块应使用 window.escapeHtml，避免重复定义导致行为不一致
-// Q-03：同时注册到 BioQuest 命名空间作为规范路径
-if (typeof window !== 'undefined') {
-  window.escapeHtml = escapeHtml;
-  BioQuest.escapeHtml = escapeHtml;
+/**
+ * 统一错误文本提取 —— 全站错误兜底的唯一入口。
+ * 收敛此前散落各处的 `xxx.message || '未知错误'` 复制粘贴样板。
+ * @param {*} err - Error / { message } / { error } / 字符串 / 空值
+ * @param {string} [fallback] - 提取不到有效文本时的兜底文案，默认「未知错误」
+ * @returns {string}
+ */
+function errText(err, fallback) {
+  var fb = fallback || '未知错误';
+  if (err == null) return fb;
+  if (typeof err === 'string') return err || fb;
+  if (typeof err.message === 'string' && err.message) return err.message;
+  if (typeof err.error === 'string' && err.error) return err.error;
+  return fb;
+}
+
+/**
+ * toast 动效样式（一次性注入）。showToast / showUndoToast 共用。
+ */
+function ensureToastStyle() {
+  if (typeof document === 'undefined' || !document.getElementById) return;
+  if (document.getElementById('toast-style')) return;
+  var style = document.createElement('style');
+  style.id = 'toast-style';
+  style.textContent = '@keyframes toastSlideUp{from{transform:translateX(-50%) translateY(20px);opacity:0}to{transform:translateX(-50%) translateY(0);opacity:1}}@keyframes toastSlideDown{from{transform:translateX(-50%) translateY(0);opacity:1}to{transform:translateX(-50%) translateY(20px);opacity:0}}';
+  document.head.appendChild(style);
+}
+
+/**
+ * 显示 Toast 通知（全站唯一实现，Q-01 统一；原先散在 app.js 导致无 app.js 页面静默丢提示）
+ * P1-12（Issue #121）增强：
+ *   - 第二参数兼容两种形态：'error'|'success'|'info'（类型化样式）或数字（毫秒时长）；
+ *   - 增加 role="alert" + aria-live，读屏用户可感知错误/状态提示。
+ * @param {string} message 提示文本
+ * @param {string|number} [typeOrDuration] 'error'|'success'|'info' 或毫秒数
+ * @param {number} [duration] 显示时长（毫秒），默认 success/info 3000、error 4500
+ */
+function showToast(message, typeOrDuration, duration) {
+  var type = 'info';
+  if (typeOrDuration === 'error' || typeOrDuration === 'success' || typeOrDuration === 'info') {
+    type = typeOrDuration;
+  } else if (typeof typeOrDuration === 'number' && typeOrDuration > 0) {
+    duration = typeOrDuration; // 旧签名 showToast(msg, ms) 兼容
+  }
+  if (!(typeof duration === 'number' && duration > 0)) {
+    duration = type === 'error' ? 4500 : 3000;
+  }
+
+  var existing = document.getElementById('bioquest-toast');
+  if (existing) existing.remove();
+
+  var typeBg = type === 'error' ? 'rgba(160,58,44,0.96)' : type === 'success' ? 'rgba(38,92,58,0.96)' : 'rgba(26,58,42,0.95)';
+  var typeBorder = type === 'error' ? 'rgba(200,90,70,0.5)' : type === 'success' ? 'rgba(90,180,120,0.5)' : 'rgba(58,140,92,0.3)';
+
+  var toast = document.createElement('div');
+  toast.id = 'bioquest-toast';
+  // P1-12：错误用 assertive（立即播报），其余 polite
+  toast.setAttribute('role', type === 'error' ? 'alert' : 'status');
+  toast.setAttribute('aria-live', type === 'error' ? 'assertive' : 'polite');
+  toast.style.cssText = [
+    'position:fixed',
+    'bottom:80px',
+    'left:50%',
+    'transform:translateX(-50%)',
+    'z-index:99999',
+    'background:' + typeBg,
+    'color:#fff',
+    'padding:12px 24px',
+    'border-radius:16px',
+    'font-size:0.9rem',
+    'font-weight:500',
+    'box-shadow:var(--shadow-lg)',
+    'border:1px solid ' + typeBorder,
+    'animation:toastSlideUp 0.3s ease',
+    'max-width:90vw',
+    'text-align:center',
+    'pointer-events:none'
+  ].join(';');
+  toast.textContent = message;
+  document.body.appendChild(toast);
+  ensureToastStyle();
+
+  setTimeout(function() {
+    toast.style.animation = 'toastSlideDown 0.3s ease forwards';
+    setTimeout(function() {
+      if (toast.parentNode) toast.parentNode.removeChild(toast);
+    }, 300);
+  }, duration);
+}
+
+// 显式暴露，作为全站共享工具的规范挂载点（Q-01/Q-03 统一）。
+// 浏览器走 window，Node 测试环境走 globalThis（历史浏览器无 globalThis 时自动跳过）。
+var _toolRoot = (typeof window !== 'undefined') ? window
+  : ((typeof globalThis !== 'undefined') ? globalThis : null);
+if (_toolRoot) {
+  _toolRoot.escapeHtml = escapeHtml;
+  _toolRoot.errText = errText;
+  _toolRoot.showToast = showToast;
+  _toolRoot.ensureToastStyle = ensureToastStyle;
+  if (_toolRoot.BioQuest) {
+    _toolRoot.BioQuest.escapeHtml = escapeHtml;
+    _toolRoot.BioQuest.errText = errText;
+    _toolRoot.BioQuest.showToast = showToast;
+  }
 }
 
 /**
@@ -238,7 +368,7 @@ function renderExplanationWithImages(text) {
 }
 if (typeof window !== 'undefined') {
   window.renderExplanationWithImages = renderExplanationWithImages;
-  BioQuest.renderExplanationWithImages = renderExplanationWithImages;
+  TATABOX.renderExplanationWithImages = renderExplanationWithImages;
 }
 
 /**
@@ -296,7 +426,7 @@ function redactSensitiveSecrets(text) {
 
 if (typeof window !== 'undefined') {
   window.redactSensitiveSecrets = redactSensitiveSecrets;
-  BioQuest.redactSensitiveSecrets = redactSensitiveSecrets;
+  TATABOX.redactSensitiveSecrets = redactSensitiveSecrets;
 }
 
 /**
@@ -404,8 +534,8 @@ function filterQuestionList(list) {
 if (typeof window !== 'undefined') {
   window.filterLectureStyleQuestion = filterLectureStyleQuestion;
   window.filterQuestionList = filterQuestionList;
-  BioQuest.filterLectureStyleQuestion = filterLectureStyleQuestion;
-  BioQuest.filterQuestionList = filterQuestionList;
+  TATABOX.filterLectureStyleQuestion = filterLectureStyleQuestion;
+  TATABOX.filterQuestionList = filterQuestionList;
 }
 
 /**
@@ -496,7 +626,6 @@ if (typeof window !== 'undefined') {
     var sanitize = opts.sanitize !== false;
     var preserveSvg = opts.preserveSvg !== false;
 
-    // ========== Step -1：敏感凭据脱敏（JWT / Supabase service_role / AWS AK 等）==========
     // 放在所有处理之前做 —— 否则 autoLink 之后 <a> 里再替换会破坏 DOM。
     // 仅对代码/文本里"裸露"的凭据打码，已正确 stash 的链接/代码不受影响。
     try {
@@ -523,7 +652,6 @@ if (typeof window !== 'undefined') {
       return h;
     }
 
-    // ========= Step 0. 保护块 =========
     // 0.1 代码块 ``` （允许 ```svg / ```xml 特殊处理）
     raw = raw.replace(/```([\w +\-]*)\n?([\s\S]*?)```/g, function (_m, lang, code) {
       var L = (lang || '').trim().toLowerCase();
@@ -543,13 +671,11 @@ if (typeof window !== 'undefined') {
     // 先把 [[ANIM:xxx]] 清理（AI 客户端内部动画标记）
     raw = raw.replace(/\[\[ANIM:\w+\]\]/g, '');
 
-    // ========= Step 1. 先按 "行" 处理块级结构 =========
     // 先统一换行
     raw = raw.replace(/\r\n?/g, '\n');
     // 把水平分隔线替换成占位（空行包围）
     raw = raw.replace(/^[ \t]*(?:[-*_])[ \t]*(?:[-*_])[ \t]*(?:[-*_])[ \t\-*_]*$/gm, '\n\n__BQ_HR__\n\n');
 
-    // ========= Step 1.1. 表格（GitHub-Flavored Markdown）==========
     // 连续以 | 开头的行，第二行为分隔行（|---|）时识别为表格。
     // 通过占位符 __BQ_TABLE_n 在行循环中作为块级元素输出（避免被 <p> 包裹）。
     var _tables = [];
@@ -690,18 +816,15 @@ if (typeof window !== 'undefined') {
     }
     var html = blocks.join('\n');
 
-    // ========= Step 8. 还原暂存块 =========
     html = unstash(html);
 
     if (sanitize) html = _sanitizeFinalHtml(html);
     return html;
 
-    // ---------- helper：行内 markdown ----------
     function inlineMd(s) {
       if (!s) return '';
       var t = s;
 
-      // === 关键修复：escapeHtml 之前先把"有结构"的 markdown 元素 stash ===
       // 避免 escapeHtml 把 & 变成 &amp; 导致 URL_RE 结尾误判（; 在排除集合里）
       // 注意：刻意不在这里还原上层 STASH（占位符不含 _*~[] 所以完全不会被误伤）
 
@@ -764,10 +887,10 @@ if (typeof window !== 'undefined') {
     }
   }
 
-  // 暴露到 BioQuest + window（tutor/discussion/practice 均可直接用）
+  // 暴露到 TATABOX + window（tutor/discussion/practice 均可直接用）
   if (typeof window !== 'undefined') {
     window.BioQuestMarkdown = renderBioQuestMarkdown;
-    BioQuest.markdown = renderBioQuestMarkdown;
+    TATABOX.markdown = renderBioQuestMarkdown;
   }
 })();
 
@@ -829,8 +952,8 @@ if (typeof window !== 'undefined' && typeof window.loadScriptOnce !== 'function'
       return p;
     };
   })();
-  // Q-03：同时注册到 BioQuest 命名空间作为规范路径
-  BioQuest.loadScriptOnce = window.loadScriptOnce;
+  // Q-03：同时注册到 TATABOX 命名空间作为规范路径
+  TATABOX.loadScriptOnce = window.loadScriptOnce;
 }
 
 /**
@@ -1139,10 +1262,10 @@ function sanitizeUrlParam(value, maxLen) {
   return cleaned;
 }
 
-// Q-03：注册到 BioQuest 命名空间（各调用点统一走 window.BioQuest.sanitizeUrlParam）
+// Q-03：注册到 TATABOX 命名空间（各调用点统一走 window.BioQuest.sanitizeUrlParam）
 if (typeof window !== 'undefined') {
-  BioQuest.sanitizeUrlParam = sanitizeUrlParam;
-  BioQuest.isChartImageSrc = isChartImageSrc;
+  TATABOX.sanitizeUrlParam = sanitizeUrlParam;
+  TATABOX.isChartImageSrc = isChartImageSrc;
 }
 
 /**
@@ -1190,7 +1313,7 @@ async function copyToClipboard(text) {
     document.body.removeChild(textarea);
     return success;
   } catch (e) {
-    console.warn('[BioQuest Utils] 复制失败:', e.message);
+    console.warn('[TATABOX Utils] 复制失败:', e.message);
     return false;
   }
 }

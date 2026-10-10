@@ -18,7 +18,7 @@
 
 ## 架构总览
 
-BioQuest 是**纯前端静态应用 + Supabase（Auth / 数据库 / RLS）**架构：
+TATABOX 是**纯前端静态应用 + Supabase（Auth / 数据库 / RLS）**架构：
 
 - 前端静态托管（如 GitHub Pages），无自建业务后端、无服务端会话；
 - 认证与数据全部直连 Supabase，写权限由服务端 **RLS（Row Level Security）强制**；

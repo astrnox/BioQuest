@@ -1,5 +1,5 @@
 /* ============================================================
- * BioQuest — 练习模式样式
+ * TATABOX — 练习模式样式
  * ============================================================ */
 
 /* ============================================================
@@ -209,7 +209,7 @@
 }
 
 .practice-pull-status--success {
-  color: var(--color-sage, #5a7d5c);
+  color: var(--color-sage);
 }
 
 .practice-pull-status--error {
@@ -782,7 +782,7 @@
 .practice-loading-bar,
 .exam-loading-bar {
   height: 100%;
-  background: linear-gradient(90deg, var(--color-sage), var(--color-amber));
+  background: var(--color-sage);
   border-radius: 16px;
   transition: width 0.4s ease;
   width: 0%;
@@ -801,12 +801,11 @@
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: rgba(255, 255, 255, 0.92);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 100;
-  backdrop-filter: blur(2px);
 }
 
 .practice-loading-bar-legacy {

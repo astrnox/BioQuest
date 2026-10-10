@@ -1,6 +1,6 @@
 /**
  * ============================================================
- * BioQuest v3.1 — 课堂播放器 UI + 动作订阅（T1-2 / T1-4/5/6/7）
+ * TATABOX v3.1 — 课堂播放器 UI + 动作订阅（T1-2 / T1-4/5/6/7）
  * 提供全屏沉浸式课堂播放界面
  *
  * 功能：
@@ -27,7 +27,6 @@
   var elements = {};
   var notes = [];
 
-  // ====== 主入口：打开课堂 ======
 
   /**
    * @param {Object} input - { topic, kgNodeId, sourceType, mode? }
@@ -80,7 +79,6 @@
     document.body.classList.remove('classroom-active');
   }
 
-  // ====== UI 渲染 ======
 
   function _renderShell() {
     close();  // 关闭已存在的课堂
@@ -92,7 +90,7 @@
       '  <div class="classroom-title">AI 生物课堂</div>',
       '  <div class="classroom-actions">',
       '    <button id="cls-tts-toggle" class="cls-btn" title="语音讲解">语音</button>',
-      '    <button id="cls-close" class="cls-btn" title="退出课堂">✕</button>',
+      '    <button id="cls-close" class="cls-btn" title="退出课堂">×</button>',
       '  </div>',
       '</div>',
       '<div class="classroom-body">',
@@ -144,7 +142,6 @@
     elements.sceneTabs.innerHTML = tabs;
   }
 
-  // ====== 启动课堂 ======
 
   function _startClassroom(ol) {
     instance = Classroom.create(ol, {
@@ -195,7 +192,6 @@
     instance.start();
   }
 
-  // ====== v4.0 课堂启动（4-scene + [ACTION:] 标签流） ======
 
   function _startClassroomV4(ol) {
     // 构造 actionCtx：为 EventBus.executeSegments 提供 ACTION 处理器
@@ -469,7 +465,6 @@
   }
   var _v4TeacherStreamLockTimer = null;
 
-  // ====== 场景舞台渲染 ======
 
   function _renderStageForScene(scene) {
     var stage = elements.stage;
@@ -501,9 +496,9 @@
       _renderQuizStage(scene);
     } else if (scene.type === 'pbl') {
       stage.innerHTML = '<div style="padding:32px;color:#333;overflow:auto;height:100%;">'
-        + '<h3 style="margin-bottom:16px;">课后项目</h3>'
+        + '<h3 class="bq-mb-16">课后项目</h3>'
         + '<p style="margin:16px 0;font-size:15px;line-height:1.7;">' + _escapeHtml(scene.content.project || '') + '</p>'
-        + '<h4 style="margin-top:24px;">项目脚手架：</h4>'
+        + '<h4 class="bq-mt-24">项目脚手架：</h4>'
         + '<ol style="line-height:2;padding-left:24px;">' + (scene.content.scaffold || []).map(function (s) { return '<li>' + _escapeHtml(s) + '</li>'; }).join('') + '</ol>'
         + '<button class="cls-btn" style="margin-top:20px;" data-on=\'["_cspGotoHash","#/bio-lab"]\'>前往实验室开始探究</button>'
         + '</div>';
@@ -690,7 +685,6 @@
     });
   }
 
-  // ====== 对话区 ======
 
   function _addDialogMessage(role, text) {
     var roleMap = {
@@ -724,7 +718,6 @@
 
   _escapeHtml = window.escapeHtml;
 
-  // ====== 控制栏 ======
 
   function _bindControls() {
     document.getElementById('cls-close').onclick = close;
@@ -814,7 +807,6 @@
     });
   }
 
-  // ====== 动作订阅（T1-4/5/6/7） ======
 
   function _subscribeActions() {
     // T1-4: 高亮动画步骤
@@ -851,7 +843,6 @@
     });
   }
 
-  // ====== 进度 / 标签 ======
 
   function _updateProgress(idx, total) {
     var pct = ((idx + 1) / total * 100).toFixed(0);
@@ -866,7 +857,6 @@
     });
   }
 
-  // ====== 结束页（T1-10） ======
 
   function _renderEndPage(data) {
     var stage = elements.stage;
@@ -896,7 +886,7 @@
       '  <div style="background:#f0f7f0;padding:16px;border-radius:8px;max-width:480px;margin:0 auto;">',
       '    <p style="color:#4a7c59;font-weight:600;">' + ability.desc + '</p>',
       '  </div>',
-      '  <div style="margin-top:24px;">',
+      '  <div class="bq-mt-24">',
       '    <button class="cls-btn" data-on=\'["ClassroomPlayer.close"]\'>完成</button>',
       '  </div>',
       '</div>'
@@ -904,7 +894,6 @@
     elements.dialog.innerHTML = '<div class="cls-msg cls-msg-system" style="text-align:center;color:#666;">课堂已结束，查看你的学习数据</div>';
   }
 
-  // ====== 辅助 ======
 
   function _showLoading(text) {
     if (elements.loading) {
@@ -921,7 +910,6 @@
     }
   }
 
-  // ====== 暴露 API ======
   window.ClassroomPlayer = {
     open: open,
     close: close

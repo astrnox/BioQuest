@@ -1,6 +1,6 @@
 /**
  * ============================================================
- * BioQuest — 虚拟生物实验室
+ * TATABOX — 虚拟生物实验室
  * 六项实验：显微镜观察、叶绿体色素层析、DNA 粗提取、平板划线、酶活性探究、质壁分离
  * ============================================================
  */
@@ -8,19 +8,7 @@
 (function() {
   'use strict';
 
-  // 局部 HTML 转义 fallback，避免未加载 app.js 时参数选项含特殊字符出错
-  function escapeHtml(str) {
-    if (typeof window !== 'undefined' && typeof window.escapeHtml === 'function') {
-      return window.escapeHtml(str);
-    }
-    if (str == null) return '';
-    return String(str)
-      .replace(/&/g, '&amp;')
-      .replace(/</g, '&lt;')
-      .replace(/>/g, '&gt;')
-      .replace(/"/g, '&quot;')
-      .replace(/'/g, '&#39;');
-  }
+  var escapeHtml = (typeof window !== 'undefined' ? window : globalThis).escapeHtml; // 规范实现见 js/core/utils.js（Q-01 统一）
 
   var _experiments = {
     microscope: {
@@ -1114,7 +1102,7 @@
       .bl2-subtitle { max-width:760px; margin:10px 0 0; color:var(--bl-muted); line-height:1.75; }
       .bl2-select-wrap { position:relative; z-index:1; }
       .bl2-select-wrap label { display:block; margin:0 0 7px; color:var(--bl-muted); font-size:.78rem; font-weight:700; letter-spacing:.08em; }
-      .bl2-select { width:100%; appearance:none; padding:13px 42px 13px 15px; border:1px solid #cdd8d0; border-radius:12px; background:#fbfcfb linear-gradient(45deg,transparent 50%,var(--bl-green) 50%) calc(100% - 17px) 52%/6px 6px no-repeat; color:var(--bl-ink); font:700 .95rem/1.2 inherit; outline:none; }
+      .bl2-select { width:100%; appearance:none; padding:13px 42px 13px 15px; border:1px solid #cdd8d0; border-radius:12px; background:#fbfcfb url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%234a7c59' stroke-width='1.6'/%3E%3C/svg%3E") calc(100% - 17px) 52%/10px 6px no-repeat; color:var(--bl-ink); font:700 .95rem/1.2 inherit; outline:none; }
       .bl2-select:focus-visible { border-color:var(--bl-green); box-shadow:0 0 0 4px rgba(74,124,89,.15); }
       .bl2-progress { padding:18px 22px 16px; background:#fff; border:1px solid var(--bl-line); border-top:0; }
       .bl2-progress-line { height:4px; margin:0 5px 13px; border-radius:16px; background:#e8ede9; overflow:hidden; }
@@ -1146,7 +1134,7 @@
       .bl2-page.is-microscope-launch .bl2-progress, .bl2-page.is-microscope-launch .bl2-tray, .bl2-page.is-microscope-launch .bl2-panel, .bl2-page.is-microscope-launch .bl2-stage-top { display:none; }
       .bl2-page.is-microscope-launch .bl2-workspace { grid-template-columns:1fr; }
       .bl2-page.is-microscope-launch .bl2-stage { height:620px; }
-      .bl2-live, .bl2-model { display:inline-flex; align-items:center; gap:7px; padding:7px 10px; border:1px solid rgba(74,124,89,.18); border-radius:16px; background:rgba(255,255,255,.88); color:var(--bl-green-dark); font-size:.72rem; font-weight:700; backdrop-filter:blur(10px); }
+      .bl2-live, .bl2-model { display:inline-flex; align-items:center; gap:7px; padding:7px 10px; border:1px solid rgba(74,124,89,.18); border-radius:16px; background:rgba(255,255,255,.96); color:var(--bl-green-dark); font-size:.72rem; font-weight:700; }
       .bl2-live::before { content:''; width:7px; height:7px; border-radius:50%; background:var(--bl-fluor); box-shadow:0 0 0 4px rgba(207,255,87,.25); }
       .bl2-model { color:var(--bl-muted); font-weight:500; }
       .bl2-tray { margin-top:12px; padding:15px; border:1px solid var(--bl-line); border-radius:16px; background:#fff; box-shadow:var(--shadow-floating); }
@@ -1163,7 +1151,7 @@
       .bl2-panel-index { margin:0 0 8px; color:var(--bl-green); font:700 .73rem/1 var(--font-mono,monospace); letter-spacing:.12em; }
       .bl2-panel h2 { margin:0; color:var(--bl-green-dark); font-family:var(--font-serif,'LXGW WenKai',serif); font-size:1.55rem; line-height:1.3; }
       .bl2-instruction { margin:13px 0 0; color:#46544a; line-height:1.8; font-size:.94rem; }
-      .bl2-instruction mark, .bl2-why mark, .bl2-report mark { padding:.02em .18em; border-radius:2px; color:inherit; background:linear-gradient(transparent 44%,rgba(207,255,87,.72) 44%); }
+      .bl2-instruction mark, .bl2-why mark, .bl2-report mark { padding:.02em .18em; border-radius:2px; color:inherit; background:rgba(207,255,87,.55); }
       .bl2-why { margin-top:16px; padding:14px 15px; border-left:4px solid var(--bl-warm); border-radius:4px 12px 12px 4px; background:#fbf6ef; color:#5f5549; font-size:.86rem; line-height:1.7; }
       .bl2-why strong { display:block; margin-bottom:3px; color:#8a5f38; font-size:.74rem; letter-spacing:.08em; }
       .bl2-param { margin-top:16px; padding:16px; border:1px solid #cdddcf; border-radius:12px; background:#f4f8f5; }
@@ -2509,7 +2497,7 @@
     if(!host)return;
     if(_state.animId){cancelAnimationFrame(_state.animId);_state.animId=null;}
     if(_labState.animId){cancelAnimationFrame(_labState.animId);_labState.animId=null;}
-    host.innerHTML='<section class="bl2-page"><header class="bl2-header"><div><p class="bl2-kicker">BioQuest · Interactive Lab</p><h1>虚拟生物实验室</h1><p class="bl2-subtitle">不是按按钮播放答案：选择器材、调整条件、观察实时变化，再用证据完成结果判读。</p></div><div class="bl2-select-wrap"><label for="bl2-exp-select">选择实验</label><select class="bl2-select" id="bl2-exp-select">'+Object.keys(_experiments).map(function(key){return '<option value="'+key+'">'+_labEscape(_experiments[key].name)+'</option>';}).join('')+'</select></div></header><nav class="bl2-progress" aria-label="实验步骤"><div class="bl2-progress-line"><div class="bl2-progress-fill" id="bl2-progress-fill"></div></div><ol class="bl2-step-list" id="bl2-step-list"></ol></nav><div class="bl2-workspace"><div class="bl2-visual-column"><div class="bl2-stage"><canvas class="bl2-canvas" id="bio-lab-canvas" aria-label="实验现象实时模型"></canvas><div class="bl2-stage-top"><span class="bl2-live"><span id="bl2-live-name"></span></span><span class="bl2-model" id="bl2-model-kind">真实材质 · 教学模拟</span></div></div><section class="bl2-tray" aria-label="实验器材台"><div class="bl2-tray-head"><strong>器材台</strong><span>选错会提示，连续两次可见高亮</span></div><div class="bl2-tools" id="bl2-tools"></div></section></div><aside class="bl2-panel" id="bl2-panel"></aside></div><footer class="bl2-footer-note"><span>模型用于理解变量与现象的因果关系；真实实验须遵守教师指导和实验室安全规范。</span><span>荧光绿 = 当前重点 / 合理设置</span></footer></section>';
+    host.innerHTML='<section class="bl2-page"><header class="bl2-header"><div><p class="bl2-kicker">TATABOX · Interactive Lab</p><h1>虚拟生物实验室</h1><p class="bl2-subtitle">不是按按钮播放答案：选择器材、调整条件、观察实时变化，再用证据完成结果判读。</p></div><div class="bl2-select-wrap"><label for="bl2-exp-select">选择实验</label><select class="bl2-select" id="bl2-exp-select">'+Object.keys(_experiments).map(function(key){return '<option value="'+key+'">'+_labEscape(_experiments[key].name)+'</option>';}).join('')+'</select></div></header><nav class="bl2-progress" aria-label="实验步骤"><div class="bl2-progress-line"><div class="bl2-progress-fill" id="bl2-progress-fill"></div></div><ol class="bl2-step-list" id="bl2-step-list"></ol></nav><div class="bl2-workspace"><div class="bl2-visual-column"><div class="bl2-stage"><canvas class="bl2-canvas" id="bio-lab-canvas" aria-label="实验现象实时模型"></canvas><div class="bl2-stage-top"><span class="bl2-live"><span id="bl2-live-name"></span></span><span class="bl2-model" id="bl2-model-kind">真实材质 · 教学模拟</span></div></div><section class="bl2-tray" aria-label="实验器材台"><div class="bl2-tray-head"><strong>器材台</strong><span>选错会提示，连续两次可见高亮</span></div><div class="bl2-tools" id="bl2-tools"></div></section></div><aside class="bl2-panel" id="bl2-panel"></aside></div><footer class="bl2-footer-note"><span>模型用于理解变量与现象的因果关系；真实实验须遵守教师指导和实验室安全规范。</span><span>荧光绿 = 当前重点 / 合理设置</span></footer></section>';
     var stage = host.querySelector('.bl2-stage');
     var microscopeLaunch = document.createElement('section');
     microscopeLaunch.className = 'bl2-microscope-launch';

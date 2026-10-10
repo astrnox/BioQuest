@@ -1,5 +1,5 @@
 /**
- * BioQuest DataStore（Dexie）——schema 版本化迁移单元测试
+ * TATABOX DataStore（Dexie）——schema 版本化迁移单元测试
  * P2 Issue #19：数据迁移与回归测试
  *
  * 覆盖：

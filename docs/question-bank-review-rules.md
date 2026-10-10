@@ -1,4 +1,4 @@
-# BioQuest 题库审核与去留规则（联赛级质量标准）
+# TATABOX 题库审核与去留规则（联赛级质量标准）
 
 > 版本：v1.1 ｜ 适用范围：`/workspace/data/questions/**`（per-id 单题文件）、`data/questions/id-all.json`（id大全）、`data/bank/*.json`（兼容合并产物）、`assets/questions/**`（题目配图）
 > 编写目的：为**题目去留**提供可执行、可复核、可归档的统一裁决依据；

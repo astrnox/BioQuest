@@ -1,5 +1,5 @@
 /* ============================================================
- * BioQuest — 学习分析页面样式
+ * TATABOX — 学习分析页面样式
  * ============================================================ */
 
 .analytics-grid {
@@ -96,7 +96,7 @@
 .wrong-book-group-title {
   font-size: 0.85rem;
   font-weight: 700;
-  color: var(--color-sage, #5a7d5c);
+  color: var(--color-sage);
   margin-bottom: 8px;
   padding-bottom: 6px;
   border-bottom: 1px solid var(--border-light, #ece8e1);
@@ -141,7 +141,7 @@
   padding: 2px 10px;
   border-radius: var(--radius-full, 9999px);
   background: rgba(90, 125, 92, 0.1);
-  color: var(--color-sage, #5a7d5c);
+  color: var(--color-sage);
 }
 
 .wrong-book-count {
@@ -243,7 +243,7 @@
   font-family: var(--font-mono, monospace);
   font-size: 0.9rem;
   font-weight: 700;
-  color: var(--color-sage, #5a7d5c);
+  color: var(--color-sage);
 }
 
 .stats-accuracy-track {
@@ -255,7 +255,7 @@
 
 .stats-accuracy-fill {
   height: 100%;
-  background: var(--color-sage, #5a7d5c);
+  background: var(--color-sage);
   border-radius: 4px;
   transition: width 0.6s ease;
 }
@@ -313,7 +313,7 @@
   min-width: 0;
 }
 
-.stats-bar-fill--1 { background: var(--color-sage, #5a7d5c); }
+.stats-bar-fill--1 { background: var(--color-sage); }
 .stats-bar-fill--2 { background: var(--color-olive, #8ba888); }
 .stats-bar-fill--3 { background: var(--color-amber, #c4956a); }
 .stats-bar-fill--4 { background: var(--color-amber-light, #d4a574); }
@@ -361,7 +361,7 @@
 
 .stats-record-type--practice {
   background: rgba(90, 125, 92, 0.1);
-  color: var(--color-sage, #5a7d5c);
+  color: var(--color-sage);
 }
 
 .stats-record-type--exam {
@@ -477,13 +477,13 @@
 }
 
 .bioscore-grade--a {
-  background: #5a7d5c;
+  background: var(--color-sage);
   color: #fff;
   box-shadow: var(--shadow-lg);
 }
 
 .bioscore-grade--b {
-  background: #5a7d5c;
+  background: var(--color-sage);
   color: #fff;
 }
 
@@ -553,7 +553,7 @@
 .bioscore-metric-label strong {
   font-size: 0.95rem;
   margin-right: 4px;
-  color: var(--color-sage, #5a7d5c);
+  color: var(--color-sage);
 }
 
 .bioscore-metric-bar {
@@ -567,7 +567,7 @@
   height: 100%;
   border-radius: 2px;
   transition: width 0.8s cubic-bezier(0.22, 1, 0.36, 1);
-  background: var(--color-sage, #5a7d5c);
+  background: var(--color-sage);
 }
 
 .bioscore-metric-val {
@@ -592,7 +592,7 @@
 .bioscore-metric-formula {
   font-size: 0.68rem;
   font-family: var(--font-mono, monospace);
-  color: var(--color-sage, #5a7d5c);
+  color: var(--color-sage);
   background: rgba(90,125,92,0.06);
   padding: 2px 6px;
   border-radius: 4px;
@@ -642,7 +642,7 @@
 .bioscore-criteria-s { background: #c4956a; }
 .bioscore-criteria-aplus { background: #3a8c5c; }
 .bioscore-criteria-a { background: #4a9c6c; }
-.bioscore-criteria-bplus { background: #5a7d5c; }
+.bioscore-criteria-bplus { background: var(--color-sage); }
 .bioscore-criteria-b { background: #6b9e6d; }
 .bioscore-criteria-cplus { background: #8ba888; }
 .bioscore-criteria-c { background: #9aba98; }
@@ -676,7 +676,7 @@
   color: #fff;
 }
 .bioscore-grade--bplus {
-  background: #5a7d5c;
+  background: var(--color-sage);
   color: #fff;
 }
 .bioscore-grade--cplus {

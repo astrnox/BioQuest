@@ -1,5 +1,5 @@
 /**
- * BioQuest — Issue #105：EventHub 事件监听集中管理单元测试
+ * TATABOX — Issue #105：EventHub 事件监听集中管理单元测试
  *
  * 覆盖：
  *   1. on/off（元素模式）正确配对，解除后不再触发；

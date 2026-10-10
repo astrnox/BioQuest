@@ -1,5 +1,5 @@
 /* ============================================================
- * BioQuest — PhET 互动模拟实验页样式
+ * TATABOX — PhET 互动模拟实验页样式
  * 遵循 Trae 设计系统：Modern Botanical Laboratory
  * ============================================================ */
 
@@ -34,7 +34,7 @@
 
 .phet-subtitle {
   font-size: 0.85rem;
-  color: var(--color-sage, #5a7d5c);
+  color: var(--color-sage);
   margin-bottom: 12px;
   font-weight: 500;
 }
@@ -56,7 +56,7 @@
 }
 
 .phet-attribution-link {
-  color: var(--color-sage, #5a7d5c);
+  color: var(--color-sage);
   text-decoration: none;
   font-weight: 500;
 }
@@ -87,13 +87,13 @@
 }
 
 .phet-topic-btn:hover {
-  border-color: var(--color-sage, #5a7d5c);
-  color: var(--color-sage, #5a7d5c);
+  border-color: var(--color-sage);
+  color: var(--color-sage);
 }
 
 .phet-topic-btn--active {
-  background: var(--color-sage, #5a7d5c);
-  border-color: var(--color-sage, #5a7d5c);
+  background: var(--color-sage);
+  border-color: var(--color-sage);
   color: #fff;
 }
 
@@ -105,7 +105,7 @@
   text-align: center;
   border-radius: 16px;
   background: rgba(90, 125, 92, 0.12);
-  color: var(--color-sage, #5a7d5c);
+  color: var(--color-sage);
   font-size: 0.72rem;
   font-weight: 600;
   line-height: 1.4;
@@ -137,9 +137,8 @@
 }
 
 .phet-card:hover {
-  transform: translateY(-2px);
   box-shadow: var(--shadow-md, 0 2px 8px rgba(44, 62, 48, 0.06));
-  border-color: var(--color-sage, #5a7d5c);
+  border-color: var(--color-sage);
 }
 
 .phet-card-header {
@@ -152,7 +151,7 @@
   display: inline-block;
   padding: 3px 10px;
   background: rgba(90, 125, 92, 0.1);
-  color: var(--color-sage, #5a7d5c);
+  color: var(--color-sage);
   border-radius: var(--radius-full, 9999px);
   font-size: 0.7rem;
   font-weight: 600;
@@ -198,7 +197,7 @@
   display: block;
   margin-bottom: 4px;
   font-weight: 600;
-  color: var(--color-sage, #5a7d5c);
+  color: var(--color-sage);
 }
 
 .phet-card-btn {
@@ -206,7 +205,7 @@
   width: calc(100% - 40px);
   margin: 0 20px 20px;
   padding: 12px 16px;
-  background: var(--color-sage, #5a7d5c);
+  background: var(--color-sage);
   color: #fff;
   border: none;
   border-radius: var(--radius-md, 8px);
@@ -285,7 +284,7 @@
 
 .phet-modal-subtitle {
   font-size: 0.78rem;
-  color: var(--color-sage, #5a7d5c);
+  color: var(--color-sage);
 }
 
 .phet-modal-close {
@@ -454,7 +453,6 @@
 
 .phet-modal-fallback-btn:hover {
   background: var(--color-amber-dark, #a87a4f);
-  transform: translateY(-1px);
 }
 
 .phet-modal-attribution {
@@ -464,7 +462,7 @@
 }
 
 .phet-modal-attribution a {
-  color: var(--color-sage, #5a7d5c);
+  color: var(--color-sage);
   text-decoration: none;
 }
 
@@ -491,7 +489,7 @@
 }
 
 .phet-license a {
-  color: var(--color-sage, #5a7d5c);
+  color: var(--color-sage);
   text-decoration: none;
 }
 

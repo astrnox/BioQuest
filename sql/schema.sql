@@ -1,5 +1,5 @@
 -- ============================================================
--- BioQuest — Supabase 数据库 Schema (前端直连版)
+-- TATABOX — Supabase 数据库 Schema (前端直连版)
 -- 在 Supabase SQL Editor 中运行此文件以初始化数据库
 -- ============================================================
 -- [幂等改造] Issue #143
@@ -18,7 +18,7 @@ CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 CREATE TABLE IF NOT EXISTS profiles (
   id UUID PRIMARY KEY REFERENCES auth.users(id) ON DELETE CASCADE,
   username TEXT UNIQUE,
-  display_name TEXT DEFAULT 'BioQuest User',
+  display_name TEXT DEFAULT 'TATABOX User',
   avatar_url TEXT,
   bio_score INTEGER DEFAULT 0,
   practice_count INTEGER DEFAULT 0,

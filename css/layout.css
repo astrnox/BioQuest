@@ -1,5 +1,5 @@
 /* ============================================================
- * BioQuest — 布局与导航样式
+ * TATABOX — 布局与导航样式
  * ============================================================ */
 
 /* ----- 顶部导航栏 ----- */
@@ -9,9 +9,8 @@
   left: 0;
   right: 0;
   height: var(--header-height);
-  background: rgba(26, 58, 42, 0.94);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  /* P0 去玻璃：实色导航栏（与 header.css 保持同一材质，避免两处漂移） */
+  background: var(--color-primary-900);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -71,6 +70,139 @@
 .header-nav a:focus-visible {
   box-shadow: 0 0 0 2px rgba(196, 149, 106, 0.6);
   outline: none;
+}
+
+/* ---------- 「更多」下拉（桌面端一级导航收纳） ----------
+   一级导航只留 6 项（首页/练习/模考/错题本/社区/我的），
+   其余 13 个入口收进此面板，分组沿用移动端抽屉的五组划分。 */
+.header-more {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.header-more-btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: rgba(255, 255, 255, 0.68);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-family: inherit;
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  transition: background-color var(--transition-fast),
+              color var(--transition-fast);
+}
+
+.header-more-btn:hover {
+  color: var(--color-white);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.header-more-btn:focus-visible {
+  box-shadow: 0 0 0 2px rgba(196, 149, 106, 0.6);
+  outline: none;
+}
+
+/* 展开态：按钮保持高亮，箭头翻转 */
+.header-more.is-open .header-more-btn {
+  color: var(--color-white);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* 当前路由位于面板内某入口时，「更多」按钮保持高亮 */
+.header-more.has-active .header-more-btn {
+  color: var(--color-white);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.header-more-caret {
+  transition: transform var(--transition-fast);
+}
+
+.header-more.is-open .header-more-caret {
+  transform: rotate(180deg);
+}
+
+.header-more-panel {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  z-index: 60;
+  display: flex;
+  gap: 18px;
+  padding: 14px 16px;
+  min-width: max-content;
+  /* 实色面 + 1px 边框：不使用 backdrop-filter（玻璃拟态已全站下线） */
+  background: var(--color-surface, #1d2b21);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-md, 10px);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.32);
+  animation: headerMoreIn 0.14s ease-out;
+}
+
+.header-more-panel[hidden] {
+  display: none;
+}
+
+@keyframes headerMoreIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.header-more-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  min-width: 108px;
+}
+
+.header-more-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: rgba(255, 255, 255, 0.42);
+  padding: 0 8px 6px;
+  white-space: nowrap;
+}
+
+.header-more-panel a {
+  color: rgba(255, 255, 255, 0.82);
+  text-decoration: none;
+  font-size: 0.84rem;
+  padding: 6px 8px;
+  border-radius: var(--radius-sm, 6px);
+  white-space: nowrap;
+  transition: background-color var(--transition-fast),
+              color var(--transition-fast);
+}
+
+.header-more-panel a:hover {
+  color: var(--color-white);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.header-more-panel a:focus-visible {
+  box-shadow: 0 0 0 2px rgba(196, 149, 106, 0.6);
+  outline: none;
+}
+
+.header-more-panel a.active,
+.header-more-panel a[aria-current="page"] {
+  color: var(--color-white);
+  background: rgba(255, 255, 255, 0.14);
+}
+
+/* ---------- 桌面端隐藏底部标签栏 ----------
+   ≤768px 由移动端抽屉 + 底部栏承担导航；>768px 只保留顶栏，避免两套全屏导航并存。 */
+@media (min-width: 769px) {
+  .bottom-tab-bar {
+    display: none;
+  }
 }
 
 /* 主题切换按钮 */
@@ -177,13 +309,8 @@ html[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
 }
 
 /* 汉堡线呼吸动画（未激活时） */
-@keyframes hamburgerBreathe {
-  0%, 100% { opacity: 0.8; }
-  50% { opacity: 1; }
-}
 
 .hamburger:not(.active):hover .hamburger-line {
-  animation: hamburgerBreathe 1.2s ease-in-out infinite;
 }
 
 .hamburger:not(.active):hover .hamburger-line:nth-child(2) {

@@ -1,6 +1,6 @@
 /**
  * ============================================================
- * BioQuest — 信用中心 & 信用排行榜
+ * TATABOX — 信用中心 & 信用排行榜
  * 信用点（CR）是社区对用户信任程度的量化，不是经验值、也不是货币。
  * 通过符合社区期望的行为赢得信任，消费信任以做出对社区影响更大的行为。
  * 依赖：user.js（getPoints/getPointsDetail/getPointsLevel）
@@ -10,11 +10,7 @@
 (function (root) {
   'use strict';
 
-  var escapeHtml = (typeof root.escapeHtml === 'function')
-    ? root.escapeHtml
-    : function (s) {
-        return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
-      };
+  var escapeHtml = root.escapeHtml; // 规范实现见 js/core/utils.js（Q-01 统一）
 
   function _getBalance() {
     return (typeof root.getPoints === 'function') ? root.getPoints() : 100;
@@ -76,13 +72,13 @@
 
     target.innerHTML = '<div style="max-width:860px;margin:0 auto;padding:24px 20px 80px;">' +
       '<h1 style="margin:0 0 4px;font-family:var(--font-serif,serif);color:var(--color-deep);">信用中心</h1>' +
-      '<p style="margin:0 0 20px;color:var(--text-muted);font-size:0.9rem;">信用点（CR）衡量社区对你的信任程度：用符合社区期望的行为赢得信任，用信任行使对社区影响更大的行为</p>' +
+      '<p style="margin:0 0 20px;color:var(--text-muted);font-size:0.9rem;">信用点（CR）由社区其他成员的投票产生：发布优质内容、给出有帮助的回答会获得信用点；信用点越高，你的发言对其他人的影响越大。</p>' +
 
       '<div style="display:flex;gap:16px;flex-wrap:wrap;margin-bottom:20px;">' +
         '<div style="flex:1;min-width:220px;background:var(--color-sage,#5a7d5c);color:#fff;border-radius:16px;padding:24px;box-shadow:var(--shadow-md);">' +
           '<div style="font-size:0.85rem;opacity:0.85;">当前信用指数</div>' +
           '<div style="font-size:2.4rem;font-weight:700;margin:4px 0;">' + balance + '</div>' +
-          '<div style="font-size:0.9rem;opacity:0.95;">' + (level.icon ? level.icon + ' ' : '') + level.title + '</div>' +
+          '<div style="font-size:0.9rem;opacity:0.95;">' + level.title + '</div>' +
         '</div>' +
         '<div style="flex:1;min-width:220px;background:var(--surface-primary,#fff);border:1px solid var(--border-light,#ece8e1);border-radius:16px;padding:24px;box-shadow:var(--shadow-sm);">' +
           '<div style="font-size:0.85rem;color:var(--text-muted);margin-bottom:8px;">信任等级进度</div>' +
@@ -108,11 +104,11 @@
   // 信用排行榜：按信用指数降序
   function initCreditLeaderboard(target) {
     if (!target) return;
-    target.innerHTML = '<div style="max-width:760px;margin:0 auto;padding:24px 20px 80px;text-align:center;color:var(--text-muted);">加载信用排行...</div>';
+    target.innerHTML = '<div class="bq-panel-narrow">加载信用排行...</div>';
 
     var fn = (typeof root.getPointsLeaderboard === 'function') ? root.getPointsLeaderboard : null;
     if (!fn) {
-      target.innerHTML = '<div style="max-width:760px;margin:0 auto;padding:24px 20px 80px;text-align:center;color:var(--text-muted);">信用排行榜服务未加载</div>';
+      target.innerHTML = '<div class="bq-panel-narrow">信用排行榜服务未加载</div>';
       return;
     }
 
@@ -122,13 +118,14 @@
       var myPoints = (typeof root.getPoints === 'function') ? root.getPoints() : 100;
 
       var rows = (list || []).map(function (item, i) {
-        var rankClass = i === 0 ? '🥇' : (i === 1 ? '🥈' : (i === 2 ? '🥉' : String(i + 1)));
+        var rankClass = String(i + 1);
+        var rankColor = i === 0 ? 'var(--color-amber,#c4956a)' : (i < 3 ? 'var(--color-sage,#5a7d5c)' : 'var(--color-deep,#1a3a2a)');
         var isMe = myId && item.id === myId;
         var lv = item.level || { title: '基本信任', color: '#5a7d5c' };
         return '<div style="display:flex;align-items:center;gap:12px;padding:12px 16px;background:' + (isMe ? 'rgba(196,149,106,0.12)' : 'var(--surface-primary,#fff)') + ';border:1px solid ' + (isMe ? 'var(--color-amber,#c4956a)' : 'var(--border-light,#ece8e1)') + ';border-radius:12px;margin-bottom:8px;">' +
-          '<span style="width:40px;font-size:1.2rem;font-weight:700;color:var(--color-deep,#1a3a2a);text-align:center;">' + rankClass + '</span>' +
+          '<span style="width:40px;font-size:1.2rem;font-weight:700;color:' + rankColor + ';text-align:center;">' + rankClass + '</span>' +
           '<span style="flex:1;font-size:0.95rem;font-weight:600;color:var(--text-primary);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">' + escapeHtml(item.display_name || item.username || '匿名用户') + '</span>' +
-          '<span style="font-size:0.8rem;color:' + lv.color + ';white-space:nowrap;">' + (lv.icon ? lv.icon + ' ' : '') + lv.title + '</span>' +
+          '<span style="font-size:0.8rem;color:' + lv.color + ';white-space:nowrap;">' + lv.title + '</span>' +
           '<span style="font-size:1rem;font-weight:700;color:var(--color-amber,#c4956a);min-width:70px;text-align:right;">' + item.points + '</span>' +
         '</div>';
       }).join('');
@@ -163,14 +160,14 @@
 
       target.innerHTML = '<div style="max-width:760px;margin:0 auto;padding:24px 20px 80px;">' +
         '<h1 style="margin:0 0 4px;font-family:var(--font-serif,serif);color:var(--color-deep);">信用排行榜</h1>' +
-        '<p style="margin:0 0 20px;color:var(--text-muted);font-size:0.9rem;">按社区信任指数排名，用可靠行为赢得信任 🏆</p>' +
+        '<p style="margin:0 0 20px;color:var(--text-muted);font-size:0.9rem;">按社区信任指数排名 · 可靠行为会持续累积信任</p>' +
         '<div style="display:flex;gap:10px;margin-bottom:16px;">' +
           '<a href="#/credit" style="padding:8px 18px;background:var(--surface-primary,#fff);border:1px solid var(--border-light,#ece8e1);border-radius:16px;font-size:0.85rem;color:var(--color-sage,#5a7d5c);text-decoration:none;">信用中心 →</a>' +
         '</div>' +
         rows +
       '</div>';
     }).catch(function () {
-      target.innerHTML = '<div style="max-width:760px;margin:0 auto;padding:24px 20px 80px;text-align:center;color:var(--text-muted);">排行榜加载失败，请稍后重试</div>';
+      target.innerHTML = '<div class="bq-panel-narrow">排行榜加载失败，请稍后重试</div>';
     });
   }
 

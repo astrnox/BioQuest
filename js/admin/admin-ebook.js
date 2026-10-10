@@ -1,5 +1,5 @@
 /**
- * BioQuest - 管理后台 · 电子书管理子模块（Issue #17 自 admin.js 拆分）
+ * TATABOX - 管理后台 · 电子书管理子模块（Issue #17 自 admin.js 拆分）
  * 由 admin.js 的 loadTabContent 在切换到「电子书管理」标签时动态注入加载。
  * 依赖：js/admin/admin.js（核心）；笔记数据 js/pages/ebook.js 在本模块内按需动态加载。
  */
@@ -131,7 +131,7 @@ async function renderEbookTab(container) {
       <div style="margin-top:16px;">
         <h4 style="font-size:0.92rem;font-weight:600;margin-bottom:8px;color:var(--color-deep,#1a3a2a);">已保存的编辑</h4>
         <div id="ebook-saved-edits" style="font-size:0.85rem;color:var(--text-secondary,#4a4a4a);">
-          ${Object.keys(savedEdits).length === 0 ? '<span style="color:var(--text-muted,#8a8a8a);">暂无本地编辑</span>' :
+          ${Object.keys(savedEdits).length === 0 ? '<span class="bq-text-muted">暂无本地编辑</span>' :
             Object.keys(savedEdits).map(key => `<div style="padding:6px 0;border-bottom:1px solid var(--border-light,#ece8e1);display:flex;justify-content:space-between;align-items:center;"><span>${escapeHtml(key)}</span><button class="admin-btn admin-btn--danger" style="padding:4px 10px;font-size:0.75rem;" data-on='["deleteEbookEdit","${escapeHtml(key)}"]'>删除</button></div>`).join('')}
         </div>
       </div>
@@ -199,7 +199,7 @@ async function renderEbookTab(container) {
         </table>
       </div>
 
-      <div id="admin-custom-ebooks-section" style="margin-top:24px;">
+      <div id="admin-custom-ebooks-section" class="bq-mt-24">
         <h4 style="font-size:0.92rem;font-weight:600;margin-bottom:10px;color:var(--color-deep,#1a3a2a);">自定义上传的书籍</h4>
         <div id="admin-custom-ebooks-list"></div>
       </div>
@@ -331,7 +331,6 @@ async function renderEbookTab(container) {
     }
   });
 
-  // ===== PDF管理 =====
   var PDF_BOOKS = [
     { name: '陈阅增普通生物学 (第4版)', key: 'chen_biology_4th' },
     { name: '陈祖洞遗传学', key: 'chen_genetics' },
@@ -613,7 +612,7 @@ async function renderEbookTab(container) {
             const uploadData = await result.json().catch(() => ({ error: '响应解析失败' }));
             if (!result.ok || !uploadData.ok) {
               if (attempt >= MAX_RETRY - 1) {
-                showAdminToast('上传失败: ' + (uploadData.error || '未知错误'), 'error');
+                showAdminToast('上传失败: ' + errText(uploadData.error), 'error');
                 return;
               }
               throw new Error(uploadData.error || ('HTTP ' + result.status));
@@ -689,7 +688,7 @@ window.adminDeletePdf = async function(bookKey, filePath, isCustom) {
     });
     const data = await res.json().catch(() => ({ error: '响应解析失败' }));
     if (!res.ok || !data.ok) {
-      showAdminToast('删除失败: ' + (data.error || '未知错误'), 'error');
+      showAdminToast('删除失败: ' + errText(data.error), 'error');
       return;
     }
 

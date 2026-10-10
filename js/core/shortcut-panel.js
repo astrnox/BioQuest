@@ -1,6 +1,6 @@
 /**
  * ============================================================
- * BioQuest — PRD §5-40：快捷键面板
+ * TATABOX — PRD §5-40：快捷键面板
  * 按 "?" 显示所有快捷键说明
  * ============================================================
  */
@@ -80,7 +80,7 @@
       '</div>';
 
     SHORTCUTS.forEach(function (group) {
-      html += '<div style="margin-bottom:16px;">';
+      html += '<div class="bq-mb-16">';
       html += '<h3 style="font-size:0.85rem;font-weight:600;color:#666;margin:0 0 8px 0;text-transform:uppercase;letter-spacing:0.5px;">' + group.section + '</h3>';
       html += '<div style="display:grid;grid-template-columns:auto 1fr;gap:6px 12px;align-items:center;">';
       group.keys.forEach(function (item) {
@@ -91,7 +91,7 @@
     });
 
     html += '<div style="margin-top:16px;padding-top:12px;border-top:1px solid #eee;font-size:0.8rem;color:#999;text-align:center;">' +
-      'BioQuest 支持键盘快捷键操作，提升刷题效率' +
+      'TATABOX 支持键盘快捷键操作，提升刷题效率' +
       '</div>';
 
     card.innerHTML = html;
@@ -136,5 +136,5 @@
 
   window.ShortcutPanel = { show: show, hide: hide, toggle: toggle };
 
-  console.log('[BioQuest] 快捷键面板已加载');
+  console.log('[TATABOX] 快捷键面板已加载');
 })();

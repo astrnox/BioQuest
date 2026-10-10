@@ -1,6 +1,6 @@
 /**
  * ============================================================
- * BioQuest v3.1 — AI 课堂 Orchestrator（T0-7/T1-1/T1-3）
+ * TATABOX v3.1 — AI 课堂 Orchestrator（T0-7/T1-1/T1-3）
  * 一键生成 6-scene AI 生物课堂，按大纲顺序执行
  *
  * 课堂结构（参考 OpenMAIC 课堂范式）：
@@ -23,7 +23,6 @@
   var IrtEngine = window.IrtEngine;
   var MultiAgent = window.MultiAgentDiscussion;
 
-  // ====== T0-7: 课堂大纲 JSON Schema ======
   /**
    * 课堂大纲结构定义（用于 LLM 约束输出）
    * @typedef {Object} ClassroomOutline
@@ -54,7 +53,6 @@
     ]
   };
 
-  // ====== T1-1: 课堂生成 ======
 
   /**
    * 生成课堂大纲
@@ -158,7 +156,6 @@
     };
   }
 
-  // ====== T1-3: AI 老师讲稿生成（结构化 JSON 输出） ======
 
   /**
    * 为某个场景生成 AI 老师讲稿 + 白板绘图指令
@@ -270,7 +267,6 @@
     };
   }
 
-  // ====== v3.1+: 直接生成 OpenMAIC DSL Stage JSON ======
   // 借力 OpenMAIC 的 Slide/Action/Stage 范式，让 LLM 一次性输出完整课堂 JSON
 
   /**
@@ -522,7 +518,6 @@
     };
   }
 
-  // ====== 课堂执行引擎 ======
 
   /**
    * 课堂实例
@@ -644,7 +639,6 @@
     this._next();
   };
 
-  // ====== 辅助：加载知识图谱节点 ======
 
   function _loadKgNode(nodeId) {
     if (!nodeId) return Promise.resolve(null);
@@ -660,7 +654,6 @@
       .catch(function () { return null; });
   }
 
-  // ====== v3.1+: DSL 模式课堂播放 ======
 
   /**
    * 播放 OpenMAIC DSL Stage
@@ -727,7 +720,6 @@
     return Promise.resolve();
   }
 
-  // ====== v4.0 4-scene 深化课堂（§7.1 + C.1.2 POC） ======
   //
   // 与 v3.1 的 6-scene 模式并存。v4.0 特点：
   //   1. 4 scene 结构：lecture(导入) → animation(讲解) → discussion(讨论) → quiz(测验)
@@ -855,7 +847,7 @@
       {
         role: 'system',
         content: [
-          '你是 BioQuest 的 AI 生物老师，正在讲一节关于「' + outline.topic + '」的课。',
+          '你是 TATABOX 的 AI 生物老师，正在讲一节关于「' + outline.topic + '」的课。',
           '当前场景：' + scene.title + '（' + scene.type + '）',
           '场景配置：' + sceneCtx,
           '',
@@ -1028,7 +1020,6 @@
     this._next();
   };
 
-  // ====== 暴露 API ======
   window.Classroom = {
     generateOutline: generateOutline,
     generateScript: generateScript,

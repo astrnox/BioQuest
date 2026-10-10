@@ -1,6 +1,6 @@
 /**
  * ============================================================
- * BioQuest — PhET 互动模拟实验集成
+ * TATABOX — PhET 互动模拟实验集成
  * 通过 iframe 嵌入 PhET Interactive Simulations (CC BY 4.0)
  * 来源：https://phet.colorado.edu
  * 许可证：HTML 模拟文件遵循 CC BY 4.0，需署名 University of Colorado Boulder
@@ -13,11 +13,9 @@
   // 局部 HTML 转义 fallback
   var escapeHtml = window.escapeHtml;
 
-  // ============================================================
   // 30 个生物学 / 生物化学 / 生物物理 / 生态 类 PhET 互动模拟
   // 全部经 fetch(URL).status === 200 真实验证（无 404）
   // 验证时间：2026-08-09，针对 https://phet.colorado.edu/sims/html/{slug}/latest/{slug}_en.html
-  // ============================================================
   var SIMS = [
     // 1. 遗传学（中心法则 / 基因表达）
     {
@@ -471,7 +469,7 @@
         var fallback = document.createElement('div');
         fallback.className = 'phet-modal-fallback';
         fallback.innerHTML = '' +
-          '<div class="phet-modal-fallback-title">⚠ 模拟加载较慢或被浏览器阻止</div>' +
+          '<div class="phet-modal-fallback-title">注意：模拟加载较慢或被浏览器阻止</div>' +
           '<p>由于 PhET 模拟资源较大或第三方 Cookie 策略，iframe 内可能无法直接加载。可以直接在新标签页打开：</p>' +
           '<a href="https://phet.colorado.edu/sims/html/' + escapeHtml(simId) + '/latest/' + escapeHtml(simId) + '_en.html" ' +
              'target="_blank" rel="noopener noreferrer" class="phet-modal-fallback-btn">' +
@@ -544,7 +542,7 @@
           '本页集成 PhET Interactive Simulations HTML5 文件，版权归 ' +
           '<a href="https://phet.colorado.edu" target="_blank" rel="noopener noreferrer">University of Colorado Boulder</a> ' +
           '所有，遵循 <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a> 许可证。' +
-          'BioQuest 仅通过 iframe 嵌入官方模拟文件，未修改 PhET 源代码。' +
+          'TATABOX 仅通过 iframe 嵌入官方模拟文件，未修改 PhET 源代码。' +
         '</p>' +
       '</div>' +
     '</div>';

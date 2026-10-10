@@ -1,6 +1,6 @@
 /**
  * ============================================================
- * BioQuest — 错题复习推送模块
+ * TATABOX — 错题复习推送模块
  * 基于 FSRS 算法，每日推送到期错题
  * ============================================================
  */
@@ -25,9 +25,9 @@
   }
 
   function _renderEmpty(container, msg) {
-    container.innerHTML = '<div style="text-align:center;padding:60px 20px;">' +
+    container.innerHTML = '<div class="bq-empty-block">' +
       '<div style="font-size:1.2rem;color:var(--color-deep,#1a3a2a);font-weight:600;margin-bottom:8px;">' + escapeHtml(msg || '今日无错题复习') + '</div>' +
-      '<div style="color:var(--text-muted);">保持每日练习，错题会自动进入复习队列。</div>' +
+      '<div class="bq-text-muted">保持每日练习，错题会自动进入复习队列。</div>' +
       '</div>';
   }
 
@@ -85,10 +85,10 @@
   }
 
   function _renderDone(container) {
-    container.innerHTML = '<div style="text-align:center;padding:60px 20px;">' +
-      '<div style="font-size:3rem;margin-bottom:16px;">✅</div>' +
+    container.innerHTML = '<div class="bq-empty-block">' +
+      '<div class="bq-result-icon">' + BQ_ICONS.checkCircleLarge + '</div>' +
       '<div style="font-size:1.2rem;color:var(--color-deep,#1a3a2a);font-weight:600;margin-bottom:8px;">今日复习完成</div>' +
-      '<div style="color:var(--text-muted);">坚持复习，遗忘曲线会记得你的努力。</div>' +
+      '<div class="bq-text-muted">坚持复习，遗忘曲线会记得你的努力。</div>' +
       '</div>';
   }
 
@@ -115,7 +115,7 @@
       '<p style="margin:8px 0 0;color:var(--text-muted);font-size:0.9rem;">基于 FSRS 间隔重复算法推送的错题</p>' +
       '</div>' +
       '<div id="review-container" style="padding:20px;">' +
-        '<div style="text-align:center;padding:60px 20px;color:var(--text-muted);">加载中...</div>' +
+        '<div class="bq-empty-block bq-text-muted">加载中...</div>' +
       '</div>';
 
     _currentCards = await _loadDueCards();

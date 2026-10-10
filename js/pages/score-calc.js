@@ -1,6 +1,6 @@
 /**
  * ============================================================
- * BioQuest — 数据实验室（#/data-lab）
+ * TATABOX — 数据实验室（#/data-lab）
  * ------------------------------------------------------------
  * 目标：把 Bio Score / 信用指数 CR 等核心数据的计算方式完全透明地公开，
  * 并提供「自变量 → 因变量」的实时推演：
@@ -30,7 +30,6 @@
     return Math.max(lo, Math.min(hi, v));
   }
 
-  // ============ 样式 ============
   function injectStyles() {
     var id = 'score-calc-style';
     if (document.getElementById(id)) return;
@@ -76,7 +75,6 @@
     document.head.appendChild(st);
   }
 
-  // ============ Bio Score 计算器 ============
   function readBioInputs() {
     var keys = ['B', 'I', 'O', 'G', 'C', 'D'];
     var comp = {};
@@ -130,7 +128,6 @@
     }
   }
 
-  // ============ CR 计算器 ============
   function readCrInputs() {
     return {
       days: clampNum($id('sc-cr-days') && $id('sc-cr-days').value, 0, 3650),
@@ -183,7 +180,7 @@
     el.innerHTML =
       '<div class="sc-result">' +
       '<div class="sc-result-big">' + r.score + ' <span style="font-size:.9rem;color:#8a9">/ 200</span></div>' +
-      '<div class="sc-grade">' + esc(level.icon) + ' ' + esc(level.label) + (level.nextAt != null ? '（距下一级还需 ' + Math.max(0, Math.ceil(level.nextAt - r.score)) + ' 分）' : '（已满级）') + '</div>' +
+      '<div class="sc-grade">' + esc(level.label) + (level.nextAt != null ? '（距下一级还需 ' + Math.max(0, Math.ceil(level.nextAt - r.score)) + ' 分）' : '（已满级）') + '</div>' +
       '<div class="sc-detail">' +
       '基础 ' + r.parts.base + ' + 行为收益 ' + r.parts.gains +
       ' − 违规 ' + r.parts.penalties + ' − 消费 ' + r.parts.spends +
@@ -194,7 +191,6 @@
       '</div>';
   }
 
-  // ============ 正确率速算 ============
   function renderAccResult() {
     var c = clampNum($id('sc-acc-c') && $id('sc-acc-c').value, 0, 1e9);
     var t = clampNum($id('sc-acc-t') && $id('sc-acc-t').value, 1, 1e9);
@@ -206,7 +202,6 @@
       '<div class="sc-detail">答对 ' + c + ' / 共 ' + t + ' 题</div></div>';
   }
 
-  // ============ 公式透明卡 ============
   function renderExplain() {
     var bio = window.BIO_SCORE_EXPLAIN;
     var cr = window.CR_EXPLAIN;
@@ -242,7 +237,6 @@
     return bioHtml + crHtml;
   }
 
-  // ============ 渲染 ============
   function renderScoreCalcPage(target) {
     injectStyles();
     target = target || document.getElementById('page-content') || document.body;
@@ -250,7 +244,7 @@
     var html = '' +
       '<div class="sc-wrap">' +
       '<div class="sc-hero"><h1>数据实验室</h1>' +
-      '<p>这里 100% 公开 BioQuest 各项数据指标的计算方式。你可以像做实验一样：<b>任意输入自变量</b>（六维属性、行为次数、天数…），<b>实时观察因变量</b>（Bio Score、信用指数 CR、正确率）如何变化，所有公式与阈值一览无余。</p></div>' +
+      '<p>这里 100% 公开 TATABOX 各项数据指标的计算方式。你可以像做实验一样：<b>任意输入自变量</b>（六维属性、行为次数、天数…），<b>实时观察因变量</b>（Bio Score、信用指数 CR、正确率）如何变化，所有公式与阈值一览无余。</p></div>' +
 
       '<div class="sc-grid">' +
 
@@ -258,7 +252,7 @@
       '<div class="sc-card">' +
       '<h2>Bio Score 推演（因变量：总分）</h2>' +
       '<p class="sc-sub">输入六维属性（0-100），即可算出加权总分与评级。左侧滑块可拖动，右侧数字框可精确输入。</p>' +
-      '<button type="button" class="sc-btn sc-btn--ghost" data-action="sc-fill-bio">⬇️ 填入我的真实数据</button>' +
+      '<button type="button" class="sc-btn sc-btn--ghost" data-action="sc-fill-bio">填入我的真实数据</button>' +
       '<div id="sc-bio-inputs">' +
       ['B', 'I', 'O', 'G', 'C', 'D'].map(function (k) {
         var name = { B: '基础正确率 B', I: '洞察力 I', O: '活跃度 O', G: '成长性 G', C: '一致性 C', D: '难度突破 D' }[k];

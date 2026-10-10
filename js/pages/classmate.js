@@ -1,6 +1,6 @@
 /**
  * ============================================================
- * BioQuest v4.0 — 苏格拉底 AI 同学（§7.2 + C.2 POC）
+ * TATABOX v4.0 — 苏格拉底 AI 同学（§7.2 + C.2 POC）
  *
  * 与初赛 AI 导师（师生权威）不同，AI 同学是平等的学习伙伴：
  *   - 不直接给答案，按学生选择的"提示等级"回应（L1→L4）
@@ -24,15 +24,13 @@
   var MultiAgent = window.MultiAgentDiscussion;
   var AiClient = window.AiClient;
 
-  // ====== 4 级提示配置（与 multi-agent.js SOCRATIC_LEVELS 对齐） ======
   var LEVELS = {
     L1: { id: 'L1', name: '提问我', hint: '用反问引导你思考，不给答案线索' },
     L2: { id: 'L2', name: '给提示', hint: '给一个关键提示，仍需自己推导' },
     L3: { id: 'L3', name: '给思路', hint: '给出推导步骤，最后一步留空' },
-    L4: { id: 'L4', name: '看答案', icon: '✅', hint: '完整答案 + 解析 + 易错点' }
+    L4: { id: 'L4', name: '看答案', hint: '完整答案 + 解析 + 易错点' }
   };
 
-  // ====== 状态机（§C.2.1） ======
   var STATE_MACHINE = {
     unanswered: { canAsk: ['L1'] },
     answered:   { canAsk: ['L1', 'L2'] },
@@ -40,25 +38,21 @@
     revealed:   { canAsk: ['L1', 'L2', 'L3', 'L4'] }
   };
 
-  // ====== 危机关键词（§7.4.5 + §C.4.1） ======
   var CRISIS_KEYWORDS = [
     '不想活了', '想死', '自杀', '自残', '了此一生', '结束一切', '结束生命',
     '活不下去', '没有意义', '想消失', '解脱', '了结', '绝望', '撑不下去',
     '伤害自己', '割腕', '跳楼', '安眠药', '崩溃'
   ];
 
-  // ====== 共情模式触发条件 ======
   var EMPATHY_TRIGGERS = {
     consecutiveWrong: 5,      // 连续答错 5 题
     lowMoodToday: true,       // 今日情绪打卡为"低落"或"疲惫"
     studyMinutesNoBreak: 120  // 连续学习 2 小时未休息
   };
 
-  // ====== 持久化（localStorage） ======
   var STORAGE_KEY = 'bioquest_classmate_sessions';
   var MAX_SESSIONS = 20;
 
-  // ====== 内部状态 ======
   var state = {
     currentQuestion: null,
     currentState: 'unanswered',
@@ -74,7 +68,6 @@
     streamingText: ''
   };
 
-  // ====== 初始化（读取 localStorage） ======
   function _init() {
     try {
       var raw = localStorage.getItem(STORAGE_KEY);
@@ -94,7 +87,6 @@
     }
   }
 
-  // ====== CSS 注入 ======
   var _stylesInjected = false;
   function _injectStyles() {
     if (_stylesInjected) return;
@@ -341,7 +333,6 @@
     document.head.appendChild(style);
   }
 
-  // ====== 创建卡片 DOM ======
   function _buildCard() {
     var card = document.createElement('div');
     card.className = 'bq-classmate-card hidden';
@@ -372,7 +363,7 @@
       '    <span class="bq-classmate-level-hint">推导步骤</span>',
       '  </button>',
       '  <button class="bq-classmate-level-btn" data-level="L4" disabled>',
-      '    <span class="bq-classmate-level-icon">✅</span>',
+      '    <span class="bq-classmate-level-icon">' + BQ_ICONS.checkCircle + '</span>',
       '    <span class="bq-classmate-level-name">L4 答案</span>',
       '    <span class="bq-classmate-level-hint">完整解析</span>',
       '  </button>',
@@ -470,7 +461,6 @@
     });
   }
 
-  // ====== 显示 / 隐藏 ======
   function show(question) {
     if (!state.elements.card) {
       _injectStyles();
@@ -508,7 +498,6 @@
     }
   }
 
-  // ====== 添加消息到对话框 ======
   function _addMessage(role, text, opts) {
     opts = opts || {};
     if (!state.elements.body) return;
@@ -541,7 +530,6 @@
     return msg.querySelector('.bq-cm-stream');
   }
 
-  // ====== 发送问题 ======
   function _onSendQuestion() {
     var q = state.elements.input.value.trim();
     if (!q) return;
@@ -595,7 +583,6 @@
     return merged;
   }
 
-  // ====== 请求某级提示 ======
   function ask(level) {
     if (!level || !LEVELS[level]) {
       console.warn('[Classmate] invalid level:', level);
@@ -692,7 +679,6 @@
     }
   }
 
-  // ====== 持久化会话 ======
   function _persistCurrentSession() {
     if (!state.currentQuestion) return;
     var existing = state.sessions.find(function (s) { return s.id === state.currentSessionId; });
@@ -780,7 +766,6 @@
     return true;
   }
 
-  // ====== 外部触发：答错上报（用于共情模式检测） ======
   /**
    * 上报一次答错
    * @param {Object} opts - { question, concept?, subject? }
@@ -804,7 +789,7 @@
     if (state.empathyMode) {
       state.empathyMode = false;
       _updateModeBadge();
-      _addMessage('system', '答对啦！状态不错，继续加油。共情模式已关闭。');
+      _addMessage('system', '共情模式已关闭。');
     }
   }
 
@@ -833,7 +818,6 @@
     } catch (e) {}
   }
 
-  // ====== 危机干预 ======
   /**
    * 检测文本是否包含危机关键词
    */
@@ -879,7 +863,7 @@
       '    <div style="margin:6px 0;"><strong>北京心理危机研究与干预中心</strong>：010-82951332</div>',
       '    <div style="margin:6px 0;"><strong>生命热线</strong>：400-161-9995</div>',
       '  </div>',
-      '  <p style="font-size:0.78rem;color:#999;margin:12px 0;">⚠️ BioQuest 不是医疗机构，本卡片仅提供资源转介，不构成医学诊断或治疗建议。如遇紧急情况请立即拨打 120。</p>',
+      '  <p style="font-size:0.78rem;color:#999;margin:12px 0;">TATABOX 不是医疗机构，本卡片仅提供资源转介，不构成医学诊断或治疗建议。如遇紧急情况请立即拨打 120。</p>',
       '  <div style="display:flex;gap:8px;margin-top:16px;">',
       '    <a href="tel:12320" style="flex:1;padding:10px;background:#5a7d5c;color:#fff;text-align:center;border-radius:8px;text-decoration:none;font-weight:600;">立即拨打 12320</a>',
       '    <button class="bq-crisis-close" type="button" style="flex:1;padding:10px;background:#f5f3ef;border:1px solid #e0dcd5;border-radius:8px;cursor:pointer;font-family:inherit;">我已了解</button>',
@@ -911,7 +895,6 @@
     }
   }
 
-  // ====== 重置 ======
   function reset() {
     state.currentQuestion = null;
     state.currentState = 'unanswered';
@@ -923,7 +906,6 @@
     _updateModeBadge();
   }
 
-  // ====== 暴露 API ======
   window.BioQuestClassmate = {
     show: show,
     close: close,

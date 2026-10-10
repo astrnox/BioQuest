@@ -1,5 +1,5 @@
 /**
- * BioQuest — 数据存储集成模块（Dexie / IndexedDB）
+ * TATABOX — 数据存储集成模块（Dexie / IndexedDB）
  * 提供 IndexedDB 的轻量 ORM 封装，作为 Supabase 离线回退方案
  * 依赖：js/vendor/dexie.min.js -> window.Dexie
  *
@@ -312,7 +312,6 @@
     return coll.equals(range).toArray();
   }
 
-  // ===== 便捷方法 =====
 
   /**
    * 添加复习记录

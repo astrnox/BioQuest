@@ -1,6 +1,6 @@
 /**
  * ============================================================
- * BioQuest — AI 对话增强集成（marked）
+ * TATABOX — AI 对话增强集成（marked）
  *
  * marked (MIT)：UMD markdown 解析器，用于流式渲染 LLM 响应
  *
@@ -53,7 +53,6 @@
     return window.loadScriptOnce(src, { verify: verifyFn });
   }
 
-  // ===== 流式渲染器 =====
 
   /**
    * 创建流式 markdown 渲染器
@@ -100,7 +99,7 @@
         }
       }).catch(function (err) {
         console.error('[AIChatEnhanced] 加载失败:', err);
-        el.innerHTML = '<p style="color:var(--color-error);">渲染引擎加载失败，显示纯文本</p><pre>' +
+        el.innerHTML = '<p class="bq-text-error">渲染引擎加载失败，显示纯文本</p><pre>' +
           _escapeHtml(buffer) + '</pre>';
       });
     }
@@ -158,7 +157,6 @@
     };
   }
 
-  // ===== 单次渲染 API =====
 
   /**
    * 单次渲染 markdown（非流式）

@@ -1,4 +1,4 @@
-// BioQuest 浏览器回归测试 v2 - 含交互场景
+// TATABOX 浏览器回归测试 v2 - 含交互场景
 const { chromium } = require('playwright');
 const fs = require('fs');
 const path = require('path');
@@ -29,7 +29,6 @@ function logIssue(level, page, msg, evidence) {
   page.on('console', msg => { if (msg.type() === 'error') consoleErrors.push({ text: msg.text(), url: page.url() }); });
   page.on('pageerror', err => pageErrors.push({ msg: err.message, url: page.url() }));
 
-  // === 1. 主题切换深入测试 ===
   console.log('\n=== 1. 主题切换 ===');
   await page.goto(BASE, { waitUntil: 'networkidle' });
   await page.waitForTimeout(2000);
@@ -55,7 +54,6 @@ function logIssue(level, page, msg, evidence) {
     await page.screenshot({ path: path.join(OUT, 'screenshots', 'theme-after-toggle.png') });
   }
 
-  // === 2. Sketch 修复验证（关键 P0）===
   console.log('\n=== 2. Sketch 修复验证 ===');
   const beforeErrs = pageErrors.length;
   await page.goto(BASE + '#/sketch', { waitUntil: 'networkidle' });
@@ -71,7 +69,6 @@ function logIssue(level, page, msg, evidence) {
     console.log('✓ sketch 修复成功');
   }
 
-  // === 3. Games 交互测试（点击开始游戏）===
   console.log('\n=== 3. Games 启动测试 ===');
   await page.goto(BASE + '#/games', { waitUntil: 'networkidle' });
   await page.waitForTimeout(1500);
@@ -93,7 +90,6 @@ function logIssue(level, page, msg, evidence) {
     logIssue('P1', 'games', '开始游戏按钮未找到');
   }
 
-  // === 4. SMILES 交互测试（点击预设分子卡片）===
   console.log('\n=== 4. SMILES 点击预设 ===');
   await page.goto(BASE + '#/smiles', { waitUntil: 'networkidle' });
   await page.waitForTimeout(1500);
@@ -112,7 +108,6 @@ function logIssue(level, page, msg, evidence) {
     }
   }
 
-  // === 5. 自定义 SMILES 输入测试 ===
   console.log('\n=== 5. 自定义 SMILES 输入 ===');
   const smilesInput = page.locator('#smiles-input');
   if (await smilesInput.count()) {
@@ -125,7 +120,6 @@ function logIssue(level, page, msg, evidence) {
     if (customSvg === 0) logIssue('P2', 'smiles', '自定义 SMILES 渲染未出现 SVG');
   }
 
-  // === 6. Molecules 路由测试 ===
   console.log('\n=== 6. Molecules 3D 路由 ===');
   await page.goto(BASE + '#/molecules', { waitUntil: 'networkidle' });
   await page.waitForTimeout(2000);
@@ -134,7 +128,6 @@ function logIssue(level, page, msg, evidence) {
   const molCanvas = await page.locator('#page-content canvas').count();
   console.log('molecules canvas 数:', molCanvas);
 
-  // === 7. Community-Enhanced 交互测试 ===
   console.log('\n=== 7. Community-Enhanced ===');
   await page.goto(BASE + '#/community-enhanced', { waitUntil: 'networkidle' });
   await page.waitForTimeout(3000);
@@ -153,7 +146,6 @@ function logIssue(level, page, msg, evidence) {
     console.log('发送后消息 DOM 数:', msgCount);
   }
 
-  // === 8. 移动端响应式 ===
   console.log('\n=== 8. 移动端 ===');
   await page.setViewportSize({ width: 375, height: 700 });
   await page.goto(BASE, { waitUntil: 'networkidle' });
@@ -179,7 +171,6 @@ function logIssue(level, page, msg, evidence) {
   const overflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
   if (overflow > 5) logIssue('P2', 'mobile', `移动端横向溢出 ${overflow}px`);
 
-  // === 9. UI 一致性深入 ===
   console.log('\n=== 9. UI 一致性 ===');
   await page.setViewportSize({ width: 1280, height: 900 });
   await page.goto(BASE, { waitUntil: 'networkidle' });
@@ -213,7 +204,6 @@ function logIssue(level, page, msg, evidence) {
   console.log('按钮背景色种类:', bgs.length);
   report.summary.colorVariety = { radii, btnBgs: bgs };
 
-  // === 10. 总结 ===
   report.summary.consoleErrors = consoleErrors.length;
   report.summary.pageErrors = pageErrors.length;
   report.summary.totalIssues = report.issues.length;

@@ -1,6 +1,6 @@
 /**
  * ============================================================
- * BioQuest — 仪表盘模块（不背单词风格）
+ * TATABOX — 仪表盘模块（不背单词风格）
  * 整合诊断、Bio Score、学习计划、趋势分析
  * 设计：大圆环进度 + 横向统计卡 + 今日计划 + 诊断摘要
  * ============================================================
@@ -848,7 +848,7 @@ function renderDashboardPage(target) {
     '<span class="dash-plan-arrow">›</span></div>' +
     '<div class="dash-plan-item" data-on=\'["navigateTo","/review"]\'>' +
     '<div class="dash-plan-info"><div class="dash-plan-title">复习错题</div>' +
-    '<div class="dash-plan-desc">基于遗忘曲线的智能复习</div></div>' +
+    '<div class="dash-plan-desc">基于遗忘曲线的复习安排</div></div>' +
     '<span class="dash-plan-arrow">›</span></div>';
   if (topWeak.length > 0) {
     html += '<div class="dash-plan-item" data-on=\'["navigateTo","/practice"]\' style="border-left-color:#c45a5a;">' +

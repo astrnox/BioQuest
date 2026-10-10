@@ -1,6 +1,6 @@
 /**
  * ============================================================
- * BioQuest - Service Worker（离线缓存）
+ * TATABOX - Service Worker（离线缓存）
  * 基于 PWA 标准，完全免费，无需任何后端服务
  * ============================================================
  */
@@ -9,7 +9,7 @@
 // P1-4 修复：CACHE_VERSION 由 scripts/bump-sw.js 基于 git 跟踪的 js/css/data
 // 内容哈希自动生成——修改任何 JS/CSS/data 后运行 `npm run bump:sw` 即可，
 // 不再依赖人肉维护版本号。版本号变化会触发 activate 阶段清理旧缓存并重新预热。
-var CACHE_VERSION = 'bioquest-40905498aaae'; // ← bump-sw.js 会自动改写此行
+var CACHE_VERSION = 'bioquest-35dbd4cd912e'; // ← bump-sw.js 会自动改写此行
 var CACHE_NAME = 'bioquest-cache-' + CACHE_VERSION;
 
 /* ========================================================================
@@ -46,6 +46,9 @@ var SKELETON_ASSETS = [
   './css/learning-hub.css',
   // 初始化关键 JS（其余 defer 都靠网络命中后自然进缓存）
   './js/core/app.js',
+  './js/core/auth-ui.js',
+  './js/core/app-search.js',
+  './js/core/app-leaderboard.js',
   './js/core/utils.js',
   './js/core/loader.js',
   './js/core/question-utils.js',
@@ -81,7 +84,6 @@ var WARMUP_PHASE_1 = [
   './js/core/shortcut-panel.js',
   './js/core/sync-tabs.js',
   './js/core/cell-loader.js',
-  './js/core/hero-sketch.js',
   './js/engagement/countdown.js',
   './js/engagement/soundscape.js',
   './js/engagement/social-impact.js',
@@ -114,6 +116,10 @@ var WARMUP_PHASE_2 = [
   './js/ai/smart-diagnosis.js',
   './js/core/storage.js',
   './js/core/supabase-client.js',
+  './js/core/sb-gamify.js',
+  './js/core/sb-social.js',
+  './js/core/sb-data.js',
+  './js/core/sb-study.js',
   './js/core/supabase.js',
   './js/pages/resources.js',
   './js/pages/ebook.js',
@@ -158,7 +164,6 @@ var WARMUP_PHASE_2 = [
 // 它们靠首次访问时的网络自然进入 Cache First 缓存
 var NEVER_PRECACHE = [
   './fonts/lxgw-wenkai.woff2',        // 7.7MB 字体
-  './fonts/lxgw-wenkai.ttf',          // ttf 备用
   './js/vendor/three.min.js',         // ~1MB Three.js
   './js/vendor/3Dmol-min.js',         // ~1MB 3Dmol
   './js/vendor/cytoscape.min.js',     // ~700KB

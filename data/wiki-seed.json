@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "updated_at": "2026-08-12",
-  "description": "BioQuest 百科模块的初始词条种子。这些生物学词条由人工整理为 Markdown，作为 Wiki 模块首次加载时的示范内容；用户可在前端继续创建/编辑/从维基百科与百度百科导入新词条。source=seed 表示种子词条。",
+  "description": "TATABOX 百科模块的初始词条种子。这些生物学词条由人工整理为 Markdown，作为 Wiki 模块首次加载时的示范内容；用户可在前端继续创建/编辑/从维基百科与百度百科导入新词条。source=seed 表示种子词条。",
   "entries": [
     {
       "id": "seed-mitochondrion",

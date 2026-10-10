@@ -29,7 +29,6 @@
   background: none;
   top: -80px;
   left: -80px;
-  animation: floatParticle1 10s ease-in-out infinite alternate;
 }
 
 .habits-page::after {
@@ -38,20 +37,11 @@
   background: none;
   bottom: -60px;
   right: -60px;
-  animation: floatParticle2 12s ease-in-out infinite alternate;
 }
 
-@keyframes floatParticle1 {
-  0%   { transform: translate(0, 0) scale(1); }
-  50%  { transform: translate(30px, 40px) scale(1.1); }
-  100% { transform: translate(-20px, 20px) scale(0.95); }
-}
 
-@keyframes floatParticle2 {
-  0%   { transform: translate(0, 0) scale(1); }
-  50%  { transform: translate(-25px, -35px) scale(1.08); }
-  100% { transform: translate(15px, -15px) scale(0.92); }
-}
+
+
 
 /* ---------- 头部 ---------- */
 .habits-header {
@@ -90,17 +80,13 @@
   perspective: 1200px;
 }
 
-/* ---------- 玻璃态习惯卡片 ---------- */
+/* ---------- 习惯卡片（P0 去玻璃：实色卡片 + 1px 边框） ---------- */
 .habit-card {
   position: relative;
-  background: rgba(255, 255, 255, 0.55);
+  background: var(--color-surface);
   border-radius: var(--radius-card);
-  border: 1px solid rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  box-shadow:
-    var(--shadow-floating)
-    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-floating);
   padding: 24px;
   transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
               box-shadow 0.45s cubic-bezier(0.22, 1, 0.36, 1);
@@ -128,25 +114,17 @@
 }
 
 .habit-card:hover {
-  transform: translateY(-6px) rotateX(2deg) rotateY(-1deg) scale(1.01);
-  box-shadow:
-    var(--shadow-floating)
-    inset 0 1px 0 rgba(255, 255, 255, 0.7);
+  /* P0 去玻璃：去掉镜面内高光；同时收敛 3D 倾斜炫技为轻微位移 */
+  box-shadow: var(--shadow-floating);
 }
 
-/* 深色模式玻璃态 */
+/* 深色模式：材质已走主题 token，无需单独的"玻璃态"覆盖 */
 [data-theme="dark"] .habit-card {
-  background: rgba(30, 36, 33, 0.55);
-  border-color: rgba(255, 255, 255, 0.08);
-  box-shadow:
-    var(--shadow-floating)
-    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  border-color: var(--color-border);
 }
 
 [data-theme="dark"] .habit-card:hover {
-  box-shadow:
-    var(--shadow-floating)
-    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  box-shadow: var(--shadow-floating);
 }
 
 /* ---------- 卡片头部 ---------- */
@@ -196,20 +174,10 @@
   border-radius: var(--radius-full);
   margin-left: auto;
   border: 1px solid rgba(255, 180, 80, 0.25);
-  animation: flamePulse 2.2s ease-in-out infinite;
   text-shadow: 0 1px 2px rgba(255, 140, 0, 0.15);
 }
 
-@keyframes flamePulse {
-  0%, 100% {
-    box-shadow: 0 0 0 0 rgba(255, 160, 60, 0.35);
-    transform: scale(1);
-  }
-  50% {
-    box-shadow: var(--shadow-md);
-    transform: scale(1.04);
-  }
-}
+
 
 /* ---------- 环形进度 (SVG) ---------- */
 .habit-progress {
@@ -274,7 +242,6 @@
 }
 
 .habit-checkin-btn:hover {
-  transform: translateY(-2px) scale(1.03);
   box-shadow: var(--shadow-lg);
   filter: brightness(1.08);
 }
@@ -288,7 +255,6 @@
   background: #3a8c5c;
   box-shadow: var(--shadow-md);
   cursor: default;
-  animation: neonGlowGreen 2.5s ease-in-out infinite;
 }
 
 .habit-checkin-btn.completed:hover {
@@ -297,14 +263,7 @@
   filter: none;
 }
 
-@keyframes neonGlowGreen {
-  0%, 100% {
-    box-shadow: var(--shadow-md);
-  }
-  50% {
-    box-shadow: var(--shadow-lg);
-  }
-}
+
 
 /* ---------- 周视图小方块 ---------- */
 .habit-weekly {
@@ -430,8 +389,9 @@
   transform-style: preserve-3d;
 }
 
+/* P1：徽章 hover 只保留边框/底色反馈（去掉 3D 倾斜） */
 .badge-item:hover {
-  transform: translateY(-6px) rotateX(4deg) scale(1.05);
+  border-color: var(--color-sage);
 }
 
 .badge-item .badge-icon {
@@ -500,9 +460,7 @@
 .habit-modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.45);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background: rgba(0, 0, 0, 0.55);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -518,25 +476,17 @@
 .habit-modal {
   width: 100%;
   max-width: 480px;
-  background: rgba(255, 255, 255, 0.75);
+  background: var(--color-surface);
   border-radius: var(--radius-card);
-  border: 1px solid rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  box-shadow:
-    var(--shadow-floating)
-    inset 0 1px 0 rgba(255, 255, 255, 0.7);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-floating);
   padding: 28px;
   margin: 16px;
   animation: modalSlideUp 0.35s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 [data-theme="dark"] .habit-modal {
-  background: rgba(30, 36, 33, 0.75);
-  border-color: rgba(255, 255, 255, 0.08);
-  box-shadow:
-    var(--shadow-floating)
-    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  border-color: var(--color-border);
 }
 
 @keyframes modalSlideUp {
@@ -770,7 +720,6 @@
 }
 
 .habit-save-btn:hover {
-  transform: translateY(-2px);
   box-shadow: var(--shadow-floating);
 }
 

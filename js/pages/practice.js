@@ -1,6 +1,6 @@
 /**
  * ============================================================
- * BioQuest — 练习模式模块
+ * TATABOX — 练习模式模块
  * 支持 MTF（多重判断）题型的专项练习，含筛选、答题、计分、
  * 收藏、错题管理和数据持久化
  * ============================================================
@@ -111,13 +111,11 @@ function _fetchLocalJsonWithRetry(url, attempts, timeoutMs) {
   return attempt(1);
 }
 
-// ===== 时间/间隔常量 =====
 var PRACTICE_SYNC_DEBOUNCE_MS = 300;     // 分数同步防抖时间
 var PRACTICE_PANEL_FADE_MS = 250;         // 筛选面板淡出延迟（重渲染前等待过渡完成）
 var PRACTICE_PULL_TICK_MS = 1000;         // 拉取冷却倒计时刷新间隔
 var PRACTICE_LAST_Q_BANNER_MS = 1200;     // 最后一题横幅展示时长
 
-// ===== 实时分数同步机制 =====
 var SYNC_INTERVAL = 5; // 每答几题同步一次（可配置）
 var _syncAnswerCounter = 0;
 var _syncDebounceTimer = null;
@@ -589,7 +587,7 @@ async function loadPracticeQuestions() {
       );
     }
   } catch (err) {
-    console.error('[BioQuest Practice] 加载题目数据失败:', err.message);
+    console.error('[TATABOX Practice] 加载题目数据失败:', err.message);
     PracticeState.allQuestions = [];
   }
 }
@@ -1418,9 +1416,9 @@ function renderFilterPanel() {
             ${escapeHtml(PracticeState.conceptFilter)}
           </span>
           ${PracticeState.kgCategory ? `<span style="display:inline-flex;align-items:center;gap:4px;padding:4px 10px;background:rgba(59,130,246,0.1);border:1px solid rgba(59,130,246,0.25);border-radius:16px;font-size:0.8rem;color:#3b82f6;">${escapeHtml(PracticeState.kgCategory)}</span>` : ''}
-          <button id="practice-clear-concept-btn" style="display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;border:1px solid var(--color-sage,rgba(90,125,92,0.3));background:transparent;color:var(--text-muted);cursor:pointer;font-size:14px;line-height:1;padding:0;margin-left:auto;" title="清除专项筛选">✕</button>
+          <button id="practice-clear-concept-btn" style="display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;border:1px solid var(--color-sage,rgba(90,125,92,0.3));background:transparent;color:var(--text-muted);cursor:pointer;font-size:14px;line-height:1;padding:0;margin-left:auto;" title="清除专项筛选">×</button>
         </div>
-        <div style="font-size:0.82rem;color:var(--text-muted);margin-top:8px;">来自知识图谱的专项练习 · 点击 ✕ 可恢复常规筛选</div>
+        <div style="font-size:0.82rem;color:var(--text-muted);margin-top:8px;">来自知识图谱的专项练习 · 点击 × 可恢复常规筛选</div>
       </div>`
     : '';
 
@@ -1443,7 +1441,7 @@ function renderFilterPanel() {
         <div class="practice-filter-section">
           <div class="practice-filter-header">
             <h3 class="practice-filter-title">题库数据源</h3>
-            <span class="practice-filter-note" id="practice-source-status" style="font-size:0.78rem;color:var(--text-muted);">
+            <span class="practice-filter-note bq-hint--xs" id="practice-source-status" >
               ${qSource === 'local' ? '当前：本地题库' : '当前：云端同步'}
             </span>
           </div>
@@ -1452,7 +1450,7 @@ function renderFilterPanel() {
               <option value="cloud" ${qSource === 'cloud' ? 'selected' : ''}>云端同步</option>
               <option value="local" ${qSource === 'local' ? 'selected' : ''}>本地题库</option>
             </select>
-            <span style="font-size:0.78rem;color:var(--text-muted);" id="practice-source-hint">
+            <span class="bq-hint--xs" id="practice-source-hint">
               ${qSource === 'local'
                 ? '仅从站点内 data/ 读取题目，不发远程请求'
                 : '云端优先，本地兜底（默认）'}
@@ -1473,7 +1471,7 @@ function renderFilterPanel() {
               竞赛模式
             </button>
           </div>
-          <div style="font-size:0.78rem;color:var(--text-muted);">
+          <div class="bq-hint--xs">
             高考模式专为普通高中生设计，严格限定高中生物课标范围
           </div>
         </div>
@@ -1485,7 +1483,7 @@ function renderFilterPanel() {
             <button class="practice-category-btn ${PracticeState.selectedCategory === 'basic' ? 'active' : ''}" data-category="basic">基础知识</button>
             <button class="practice-category-btn ${PracticeState.selectedCategory === 'logic' ? 'active' : ''}" data-category="logic">逻辑推理</button>
           </div>
-          <div style="font-size:0.78rem;color:var(--text-muted);margin-top:6px;">
+          <div class="bq-hint--xs bq-hint--mt">
             ${PracticeState.selectedCategory === 'logic' ? '逻辑推理题：基于实验数据的分析推理，每题2分' : PracticeState.selectedCategory === 'basic' ? '基础知识题：MTF多重判断题型，每题2分' : '混合模式：基础知识 + 逻辑推理'}
           </div>
         </div>
@@ -1512,7 +1510,7 @@ function renderFilterPanel() {
           <div class="practice-filter-checks" id="targetChecks">
             ${targetChecks}
           </div>
-          <div style="font-size:0.78rem;color:var(--text-muted);margin-top:6px;">
+          <div class="bq-hint--xs bq-hint--mt">
             高考题严格限定高中课标；竞赛题可涉及大学基础生物学；共通题为两者重叠基础
           </div>
         </div>
@@ -1528,7 +1526,7 @@ function renderFilterPanel() {
               placeholder="输入 1-200"
               style="width:120px;${isPresetCount ? 'display:none;' : ''}" aria-label="自定义刷题数量">
           </div>
-          <div style="font-size:0.78rem;color:var(--text-muted);margin-top:6px;">
+          <div class="bq-hint--xs bq-hint--mt">
             预设 5/10/20/50，或选择「自定义…」输入 1-200 道（超出可用题目时按实际数量出题）
           </div>
         </div>
@@ -1593,9 +1591,7 @@ function bindFilterEvents() {
       if (hintEl) hintEl.textContent = val === 'local'
         ? '仅从站点内 data/ 读取题目，不发远程请求'
         : '云端优先，本地兜底（默认）';
-      if (typeof showToast === 'function') {
-        showToast(val === 'local' ? '已切换为本地题库，正在重新加载题目…' : '已切换为云端同步，正在重新加载题目…');
-      }
+showToast(val === 'local' ? '已切换为本地题库，正在重新加载题目…' : '已切换为云端同步，正在重新加载题目…');
       await loadPracticeQuestions();
       applyFilters();
       updateAvailableCount();
@@ -1796,7 +1792,6 @@ function updateAvailableCount() {
   _renderPullSummary();
 }
 
-// ===== 拉取新题（带冷却） =====
 var PULL_COOLDOWN_MS = 20 * 1000; // 20 秒冷却（用户要求）
 var PULL_COOLDOWN_KEY = 'bioquest_pull_cooldown_until';
 var PULL_COOLDOWN_TIMER = null;
@@ -2175,7 +2170,6 @@ function renderQuiz() {
   const isWrongMarked = PracticeState.wrongMarked.has(qId);
 
   if (isLogicQuestion) {
-    // ====== 逻辑推理题渲染（单选题格式，options 数组）======
     const optionLabels = ['A', 'B', 'C', 'D', 'E'];
     const userAns = userAnswers[0];
 
@@ -2199,16 +2193,15 @@ function renderQuiz() {
       const isCorrect = userAns === q.answer;
       const optionLabels = ['A', 'B', 'C', 'D', 'E'];
       subQuestionsHtml += `
-        <div class="practice-option-result" style="margin-top:12px;">
+        <div class="practice-option-result bq-mt-12" >
           ${isCorrect
-            ? '<span style="color:var(--color-success);">正确！</span>'
-            : `<span style="color:var(--color-error);">错误，正确答案是 ${optionLabels[q.answer]}</span>`
+            ? '<span class="bq-hint--success">正确！</span>'
+            : `<span class="bq-text-error">错误，正确答案是 ${optionLabels[q.answer]}</span>`
           }
         </div>
       `;
     }
   } else if (isStandardChoice) {
-    // ====== 标准单选题渲染（题库格式，options 对象 {A:..,B:..}）======
     const userAns = userAnswers[0];
     const optionKeys = Object.keys(q.options).sort();
 
@@ -2231,16 +2224,15 @@ function renderQuiz() {
     if (PracticeState.submitted) {
       const isCorrect = userAns === q.answer;
       subQuestionsHtml += `
-        <div class="practice-option-result" style="margin-top:12px;">
+        <div class="practice-option-result bq-mt-12" >
           ${isCorrect
-            ? '<span style="color:var(--color-success);">正确！</span>'
-            : `<span style="color:var(--color-error);">错误，正确答案是 ${q.answer}</span>`
+            ? '<span class="bq-hint--success">正确！</span>'
+            : `<span class="bq-text-error">错误，正确答案是 ${q.answer}</span>`
           }
         </div>
       `;
     }
   } else {
-    // ====== MTF 题型渲染（基础知识 subQuestions / 逻辑题 mtf 选项转换）======
     const subQuestions = getEffectiveSubQuestions(q);
     subQuestionsHtml = subQuestions
       .map((sq, idx) => {
@@ -2285,8 +2277,8 @@ function renderQuiz() {
             ${PracticeState.submitted ? `
               <div class="practice-option-result">
                 ${isCorrect
-                  ? '<span style="color:var(--color-success);">判断正确</span>'
-                  : `<span style="color:var(--color-error);">判断错误，正确答案为「${correctAnswer ? '正确' : '错误'}」</span>`
+                  ? '<span class="bq-hint--success">判断正确</span>'
+                  : `<span class="bq-text-error">判断错误，正确答案为「${correctAnswer ? '正确' : '错误'}」</span>`
                 }
               </div>
             ` : ''}
@@ -2564,7 +2556,7 @@ function showSummary() {
     <div class="animate-fade-in">
       <section class="section" style="padding-top:0;padding-bottom:24px;">
         <h2 class="section-title">练习小结</h2>
-        <p class="section-desc">恭喜完成练习！查看你的学习成果。</p>
+        <p class="section-desc">练习完成，以下是你的学习成果。</p>
       </section>
 
       <div class="practice-summary-card">
@@ -2733,11 +2725,11 @@ function renderPracticePage(target) {
   // 处理错题重做参数
   handleRedoQuestion(redoData);
   } catch (err) {
-    console.error('[BioQuest Practice] renderPracticePage 异常:', err);
-    target.innerHTML = '<div style="text-align:center;padding:60px 20px;">' +
-      '<p style="color:var(--color-error);font-size:1.1rem;margin-bottom:8px;">练习模块加载失败</p>' +
-      '<p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:16px;">请刷新页面或稍后重试</p>' +
-      '<button data-on=\'["_cspReload"]\' style="padding:8px 20px;background:var(--color-sage);color:#fff;border:none;border-radius:8px;cursor:pointer;">刷新页面</button>' +
+    console.error('[TATABOX Practice] renderPracticePage 异常:', err);
+    target.innerHTML = '<div class="bq-empty-block">' +
+      '<p class="bq-error-title">练习模块加载失败</p>' +
+      '<p class="bq-note">请刷新页面或稍后重试</p>' +
+      '<button data-on=\'["_cspReload"]\' class="bq-btn--compact">刷新页面</button>' +
       '</div>';
   }
 }
@@ -2859,7 +2851,7 @@ function handleRedoQuestion(redoData) {
     return true;
   }
 
-  console.warn('[BioQuest Practice] 无法找到要重做的题目');
+  console.warn('[TATABOX Practice] 无法找到要重做的题目');
   alert('无法加载该题目，可能已被清除或不存在于当前题库中');
   restorePracticeUI();
   return false;
@@ -2895,7 +2887,7 @@ function ensureMinSubQuestions(q) {
  */
 function startRedoSession(questions) {
   if (!questions || !Array.isArray(questions) || questions.length === 0) {
-    console.warn('[BioQuest Practice] startRedoSession: 无有效题目');
+    console.warn('[TATABOX Practice] startRedoSession: 无有效题目');
     restorePracticeUI();
     return;
   }
@@ -2927,7 +2919,7 @@ function startRedoSession(questions) {
 function handleShareCurrentQuestion() {
   var q = PracticeState.currentSet[PracticeState.currentIndex];
   if (!q || !q.question) {
-    if (typeof showToast === 'function') showToast('没有可分享的题目');
+    showToast('没有可分享的题目');
     return;
   }
 
@@ -2943,8 +2935,8 @@ function handleShareCurrentQuestion() {
   // 移动端原生分享（微信等渠道打开时直接带链接）
   if (typeof navigator !== 'undefined' && navigator.share) {
     navigator.share({
-      title: 'BioQuest · 好题分享',
-      text: (q.question || '').slice(0, 80) + '……（来自 BioQuest 刷题）',
+      title: 'TATABOX · 好题分享',
+      text: (q.question || '').slice(0, 80) + '……（来自 TATABOX 刷题）',
       url: url
     }).catch(function (e) {
       // 用户取消分享不视为错误；其余情况回退到复制链接
@@ -2959,11 +2951,11 @@ function handleShareCurrentQuestion() {
 function _practiceShareCopy(url) {
   if (typeof navigator !== 'undefined' && navigator.clipboard && navigator.clipboard.writeText) {
     navigator.clipboard.writeText(url).then(function () {
-      if (typeof showToast === 'function') showToast('链接已复制，发给好友即可查看本题');
+      showToast('链接已复制，发给好友即可查看本题');
     }).catch(function () {
-      if (typeof showToast === 'function') showToast('分享链接: ' + url);
+      showToast('分享链接: ' + url);
     });
-  } else if (typeof showToast === 'function') {
+  } else {
     showToast('分享链接: ' + url);
   }
 }
@@ -3176,25 +3168,23 @@ function initPractice(target) {
       }
     }
     if (!target) {
-      console.error('[BioQuest Practice] initPractice 找不到目标容器');
+      console.error('[TATABOX Practice] initPractice 找不到目标容器');
       return;
     }
     renderPracticePage(target);
   } catch (err) {
-    console.error('[BioQuest Practice] initPractice 异常:', err);
+    console.error('[TATABOX Practice] initPractice 异常:', err);
     if (target) {
-      target.innerHTML = '<div style="text-align:center;padding:60px 20px;">' +
-        '<p style="color:var(--color-error);font-size:1.1rem;margin-bottom:8px;">练习模块初始化失败</p>' +
-        '<p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:16px;">请刷新页面或稍后重试</p>' +
-        '<button data-on=\'["_cspReload"]\' style="padding:8px 20px;background:var(--color-sage);color:#fff;border:none;border-radius:8px;cursor:pointer;">刷新页面</button>' +
+      target.innerHTML = '<div class="bq-empty-block">' +
+        '<p class="bq-error-title">练习模块初始化失败</p>' +
+        '<p class="bq-note">请刷新页面或稍后重试</p>' +
+        '<button data-on=\'["_cspReload"]\' class="bq-btn--compact">刷新页面</button>' +
         '</div>';
     }
   }
 }
 
-// ============================================================
-// PRD §5-1：答题时自动隐藏 Header（向上滚动隐藏，向下滚动出现）
-// ============================================================
+// 答题时自动隐藏 Header（向上滚动隐藏，向下滚动出现）
 var _headerAutoHide = { lastScrollY: 0, enabled: false };
 
 function enableHeaderAutoHide() {
@@ -3227,9 +3217,7 @@ function _onPracticeScroll() {
   _headerAutoHide.lastScrollY = currentY;
 }
 
-// ============================================================
-// PRD §5-50：最后一题仪式感
-// ============================================================
+// 最后一题仪式感
 function showLastQuestionEffect(callback) {
   var progressBar = document.querySelector('.practice-progress-bar-fill, .progress-fill, [class*="progress"]');
   if (progressBar) {
@@ -3296,13 +3284,11 @@ window.enableHeaderAutoHide = enableHeaderAutoHide;
 window.disableHeaderAutoHide = disableHeaderAutoHide;
 window.showLastQuestionEffect = showLastQuestionEffect;
 
-// ============================================================
-// PRD §5-40：答题键盘快捷键（仅练习答题流程生效）
+// 答题键盘快捷键（仅练习答题流程生效）
 //   1 / 2 / 3 / 4 → 选 A / B / C / D（单选题：标准单选 & 逻辑推理）
 //   Space / Enter → 提交答案，已提交则跳下一题
 //   R → 重做当前题目（清空作答，可重新作答；统计仅计首次）
 //   Esc → 返回筛选（题目列表）
-// ============================================================
 var _practiceKbBound = false;
 
 function _practiceOverlayOpen() {

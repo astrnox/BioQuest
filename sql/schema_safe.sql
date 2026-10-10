@@ -1,5 +1,5 @@
 -- ============================================================
--- BioQuest — Supabase 数据库 Schema (前端直连版)
+-- TATABOX — Supabase 数据库 Schema (前端直连版)
 -- 在 Supabase SQL Editor 中运行此文件以初始化数据库
 -- 安全版：可以处理旧表存在的情况
 -- ============================================================
@@ -42,7 +42,7 @@ BEGIN
         
         -- 添加 display_name 列（如果不存在）
         IF NOT EXISTS (SELECT 1 FROM information_schema.columns WHERE table_name = 'profiles' AND column_name = 'display_name' AND table_schema = 'public') THEN
-            ALTER TABLE profiles ADD COLUMN display_name TEXT DEFAULT 'BioQuest User';
+            ALTER TABLE profiles ADD COLUMN display_name TEXT DEFAULT 'TATABOX User';
         END IF;
         
         -- 添加 bio_score 列（如果不存在）
@@ -95,7 +95,7 @@ BEGIN
         CREATE TABLE profiles (
             id UUID PRIMARY KEY REFERENCES auth.users(id) ON DELETE CASCADE,
             username TEXT UNIQUE,
-            display_name TEXT DEFAULT 'BioQuest User',
+            display_name TEXT DEFAULT 'TATABOX User',
             avatar_url TEXT,
             user_group TEXT DEFAULT 'member',
             bio_score INTEGER DEFAULT 0,

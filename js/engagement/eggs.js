@@ -1,6 +1,6 @@
 /**
  * ============================================================
- * BioQuest — 生物主题微交互彩蛋（Issue #128）
+ * TATABOX — 生物主题微交互彩蛋（Issue #128）
  *  - 答题正确：细胞分裂动画爆发（自动检测 .pq-exp.show.correct /
  *    .practice-answer-correct 等元素出现时触发，也支持声明式
  *    [data-egg="cell-division"]）；
@@ -81,7 +81,6 @@
     }, 1150);
   }
 
-  // ===== 自动触发：动态内容中出现"正确反馈 / data-egg 声明" =====
   var _lastAuto = 0;
   function maybeAutoTrigger(node) {
     if (_isReducedMotion()) return;

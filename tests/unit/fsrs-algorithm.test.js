@@ -1,5 +1,5 @@
 /**
- * BioQuest FSRS 调度器单元测试
+ * TATABOX FSRS 调度器单元测试
  * 覆盖：fsrsSchedule 首次/复习调度、评分对间隔的影响、卡片状态转移、
  *      getDueCards 到期摘取、reviewCard 持久化、SM-2 兼容接口。
  *
@@ -33,7 +33,7 @@ function loadFsrs() {
 const { FSRS, localStorage } = loadFsrs();
 const R = FSRS.RATING;
 
-// 新建一张未复习卡片（BioQuest 格式）
+// 新建一张未复习卡片（TATABOX 格式）
 function newCard() {
   return {
     stability: 0,

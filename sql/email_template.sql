@@ -1,5 +1,5 @@
 -- ============================================================
--- BioQuest — Supabase 邮件模板（请在 Dashboard 配置）
+-- TATABOX — Supabase 邮件模板（请在 Dashboard 配置）
 -- ============================================================
 -- [幂等改造] Issue #143
 -- 本文件为「配置文档」：全部内容均为注释 / /* SQL 块注释 */，不含任何
@@ -23,7 +23,7 @@
 -- 1. 注册确认邮件模板（在 Dashboard → Auth → Email Templates → Confirm signup 粘贴）
 -- ============================================================
 -- Subject (主题)：
---   [BioQuest] 请确认你的注册邮箱
+--   [TATABOX] 请确认你的注册邮箱
 --
 -- Body (正文，HTML + 纯文本双版本)：
 -- HTML 版本：
@@ -34,12 +34,12 @@
 <body style="margin:0;padding:0;background:#f4f6f8;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#1a2b3c;">
   <div style="max-width:560px;margin:32px auto;background:#ffffff;border-radius:8px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.05);">
     <div style="padding:24px 32px;border-bottom:1px solid #e8ecf0;">
-      <h1 style="margin:0;font-size:18px;font-weight:600;color:#2a5a2a;">BioQuest · 生物学习平台</h1>
+      <h1 style="margin:0;font-size:18px;font-weight:600;color:#2a5a2a;">TATABOX · 生物学习平台</h1>
     </div>
     <div style="padding:32px;">
       <p style="margin:0 0 16px 0;font-size:15px;line-height:1.6;">你好，</p>
       <p style="margin:0 0 24px 0;font-size:15px;line-height:1.6;">
-        感谢你注册 BioQuest 账号。点击下方按钮完成邮箱验证，即可解锁完整功能。
+        感谢你注册 TATABOX 账号。点击下方按钮完成邮箱验证，即可解锁完整功能。
       </p>
       <p style="margin:0 0 32px 0;text-align:center;">
         <a href="{{ .ConfirmationURL }}"
@@ -54,11 +54,11 @@
         {{ .ConfirmationURL }}
       </p>
       <p style="margin:0 0 8px 0;font-size:13px;line-height:1.6;color:#6a7a8a;">
-        此链接 24 小时内有效。如果你没有注册 BioQuest 账号，请忽略此邮件。
+        此链接 24 小时内有效。如果你没有注册 TATABOX 账号，请忽略此邮件。
       </p>
     </div>
     <div style="padding:16px 32px;background:#f4f6f8;font-size:12px;color:#8a9aaa;line-height:1.5;">
-      <p style="margin:0 0 4px 0;">BioQuest · 用生物知识服务社会公益</p>
+      <p style="margin:0 0 4px 0;">TATABOX · 用生物知识服务社会公益</p>
       <p style="margin:0;">
         <a href="https://astrnox.github.io/BioQuest/" style="color:#6a7a8a;text-decoration:none;">项目主页</a> ·
         <a href="mailto:support@bio.sumalink.cn?subject=取消订阅" style="color:#6a7a8a;text-decoration:none;">联系我们</a>
@@ -73,15 +73,15 @@
 /*
 你好，
 
-感谢你注册 BioQuest 账号。点击下方链接完成邮箱验证，即可解锁完整功能：
+感谢你注册 TATABOX 账号。点击下方链接完成邮箱验证，即可解锁完整功能：
 
 {{ .ConfirmationURL }}
 
 此链接 24 小时内有效。
-如果你没有注册 BioQuest 账号，请忽略此邮件。
+如果你没有注册 TATABOX 账号，请忽略此邮件。
 
 ——
-BioQuest · 用生物知识服务社会公益
+TATABOX · 用生物知识服务社会公益
 项目主页：https://astrnox.github.io/BioQuest/
 联系我们：support@bio.sumalink.cn
 */
@@ -90,7 +90,7 @@ BioQuest · 用生物知识服务社会公益
 -- 2. 密码重置邮件模板（Confirm signup → Reset password 模板页签）
 -- ============================================================
 -- Subject：
---   [BioQuest] 重置你的密码
+--   [TATABOX] 重置你的密码
 --
 -- Body（HTML）：
 /*
@@ -100,7 +100,7 @@ BioQuest · 用生物知识服务社会公益
 <body style="margin:0;padding:0;background:#f4f6f8;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#1a2b3c;">
   <div style="max-width:560px;margin:32px auto;background:#ffffff;border-radius:8px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.05);">
     <div style="padding:24px 32px;border-bottom:1px solid #e8ecf0;">
-      <h1 style="margin:0;font-size:18px;font-weight:600;color:#2a5a2a;">BioQuest · 密码重置</h1>
+      <h1 style="margin:0;font-size:18px;font-weight:600;color:#2a5a2a;">TATABOX · 密码重置</h1>
     </div>
     <div style="padding:32px;">
       <p style="margin:0 0 16px 0;font-size:15px;line-height:1.6;">你好，</p>
@@ -124,7 +124,7 @@ BioQuest · 用生物知识服务社会公益
       </p>
     </div>
     <div style="padding:16px 32px;background:#f4f6f8;font-size:12px;color:#8a9aaa;line-height:1.5;">
-      <p style="margin:0 0 4px 0;">BioQuest · 用生物知识服务社会公益</p>
+      <p style="margin:0 0 4px 0;">TATABOX · 用生物知识服务社会公益</p>
       <p style="margin:0;">
         <a href="https://astrnox.github.io/BioQuest/" style="color:#6a7a8a;text-decoration:none;">项目主页</a>
       </p>
@@ -155,7 +155,7 @@ BioQuest · 用生物知识服务社会公益
 --   User:        apikey
 --   Password:    <your-sendgrid-api-key>
 --   Sender email: noreply@bio.sumalink.cn
---   Sender name:  BioQuest
+--   Sender name:  TATABOX
 --   Enable custom SMTP: ON
 --
 -- 启用自定义 SMTP 后，Authentication → Email Templates 里
@@ -166,7 +166,7 @@ BioQuest · 用生物知识服务社会公益
 -- 5. 反垃圾要点自检清单
 -- ============================================================
 -- [ ] 1. 自定义 SMTP 已开启（不是默认 supabase.io 域名）
--- [ ] 2. 发件人带品牌名（如 BioQuest <noreply@bio.sumalink.cn>）
+-- [ ] 2. 发件人带品牌名（如 TATABOX <noreply@bio.sumalink.cn>）
 -- [ ] 3. 主题无感叹号、无 ALL CAPS
 -- [ ] 4. 正文同时提供 HTML 和纯文本版本
 -- [ ] 5. 链接数量 < 3 个，且至少有 1 个指向 bio.sumalink.cn

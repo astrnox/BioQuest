@@ -1,5 +1,5 @@
 /**
- * BioQuest — FSRS Worker 核心单元测试（Issue #14）
+ * TATABOX — FSRS Worker 核心单元测试（Issue #14）
  *
  * 验证：
  *  - 纯函数核心（js/algo/fsrs.worker.js 的 CommonJS 导出）可直接在 Node 加载，

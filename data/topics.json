@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "updated_at": "2026-08-12",
-  "description": "BioQuest 电子书关联知识点 Topic 字典。每条记录对应 ebook.js 中 section.relatedTopics 引用的 ID，提供名称、学科分类、所属模块、描述与关键词，供「关联知识点」渲染与检索使用。",
+  "description": "TATABOX 电子书关联知识点 Topic 字典。每条记录对应 ebook.js 中 section.relatedTopics 引用的 ID，提供名称、学科分类、所属模块、描述与关键词，供「关联知识点」渲染与检索使用。",
   "moduleLabels": {
     "module1": "模块一 · 细胞与分子",
     "module2": "模块二 · 植物与微生物",

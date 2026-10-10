@@ -1,5 +1,5 @@
 /**
- * BioQuest - 管理后台 · 用户管理子模块（Issue #17 自 admin.js 拆分）
+ * TATABOX - 管理后台 · 用户管理子模块（Issue #17 自 admin.js 拆分）
  * 由 admin.js 的 loadTabContent 在切换到「用户管理」标签时动态注入加载。
  * 依赖：js/admin/admin.js（核心，必须已加载——提供 API/Toast/ICONS/分页状态等共享定义）。
  */
@@ -259,7 +259,7 @@ window.handleAdjustUserPoints = async function(userId, currentPoints) {
       if (crCell) crCell.textContent = result.points;
       showAdminToast('已调整用户信用为 ' + result.points, 'success');
     } else {
-      showAdminToast('调整失败：' + (result && result.error ? result.error : '未知错误'), 'error');
+      showAdminToast('调整失败：' + errText(result), 'error');
     }
   } catch (e) {
     showAdminToast('调整出错：' + e.message, 'error');

@@ -1,6 +1,6 @@
 /**
  * ============================================================
- * BioQuest — AI 生物导师对话模块（Telegram 风格）
+ * TATABOX — AI 生物导师对话模块（Telegram 风格）
  * 仅保留通用模式，基于秘塔知识库
  * ============================================================
  */
@@ -768,7 +768,7 @@ function _sendTutorMessage(text) {
       if (err && err.name === 'AbortError') {
         _finishTutorStream(aiMsg, fullText, true);
       } else {
-        _finishTutorStream(aiMsg, '⚠ ' + (err && err.message ? err.message : String(err || '网络异常')));
+        _finishTutorStream(aiMsg, '注意：' + (err && err.message ? err.message : String(err || '网络异常')));
       }
     }
   });
@@ -1001,7 +1001,7 @@ function renderTutorPage(target) {
   if (exportBtn) {
     exportBtn.addEventListener('click', function() {
       if (_tutorState.messages.length === 0) return;
-      var md = '# BioQuest AI 导师对话记录\n\n';
+      var md = '# TATABOX AI 导师对话记录\n\n';
       md += '- **时间**：' + new Date().toLocaleString('zh-CN') + '\n';
       md += '- **消息数**：' + _tutorState.messages.length + '\n\n---\n\n';
       _tutorState.messages.forEach(function(msg) {

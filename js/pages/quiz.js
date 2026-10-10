@@ -24,12 +24,7 @@ const EXAM_VOTE_UP_SVG = '<svg width="13" height="13" viewBox="0 0 24 24" fill="
 const EXAM_VOTE_DOWN_SVG = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 15v4a3 3 0 0 0 3 3l4-9V2H5.72a2 2 0 0 0-2 1.7l-1.38 9a2 2 0 0 0 2 2.3z"/></svg>';
 
 // HTML 转义 — 统一使用 window.escapeHtml（Q-01，规范实现在 js/core/utils.js）
-var escapeHtml = (typeof window !== 'undefined' && typeof window.escapeHtml === 'function')
-  ? window.escapeHtml
-  : function(str) {
-      if (!str) return '';
-      return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
-    };
+var escapeHtml = (typeof window !== 'undefined' ? window : globalThis).escapeHtml; // 规范实现见 js/core/utils.js（Q-01 统一）
 
 /**
  * 带超时与自动重试的 JSON 拉取（首次访问 raw.githubusercontent / CDN / 静态代理
@@ -447,7 +442,6 @@ function renderPaper() {
     `;
 
     if (isMtf) {
-      // ====== MTF 题型渲染（subQuestions 格式，或逻辑题 mtf 的选项转换子题）======
       const subQuestions = getEffectiveSubQuestions(q);
       const userAnsObj = (userAnswers[i] && typeof userAnswers[i] === 'object' && !Array.isArray(userAnswers[i]))
         ? userAnswers[i]

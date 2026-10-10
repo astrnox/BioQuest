@@ -1,6 +1,6 @@
 /*!
  * learning-hub.js
- * BioQuest 学习管理中心（参考 Deadline Quest 项目设计）
+ * TATABOX 学习管理中心（参考 Deadline Quest 项目设计）
  *
  * 功能：
  *  - 今日任务聚合（聚合今日 AI 课堂 + 刷题 + 复习）
@@ -16,7 +16,6 @@
 (function (global) {
   'use strict';
 
-  // ---------- 模块状态 ----------
   var state = {
     target: null,
     userId: null,
@@ -27,7 +26,6 @@
 
   function _uid() { return (global.Auth && global.Auth.currentUser && global.Auth.currentUser.id) || 'guest'; }
 
-  // ---------- 任务模型 ----------
   // 任务类型：classroom | practice | review | custom
   // 任务状态：pending | running | done | failed | aborted
 
@@ -169,7 +167,6 @@
     }
   }
 
-  // ---------- 渲染 ----------
   function initLearningHub(target) {
     if (!target) return;
     state.target = target;
@@ -261,7 +258,7 @@
         'failed': '<span class="lmc-badge lmc-badge-failed">未完成</span>',
         'aborted': '<span class="lmc-badge lmc-badge-aborted">已放弃</span>'
       }[t.status] || '';
-      var priorityDot = { 'high': '🔴', 'medium': '🟡', 'low': '🟢' }[t.priority] || '⚪';
+      var priorityDot = '<span class="bq-dot bq-dot--' + (['high', 'medium', 'low'].indexOf(t.priority) >= 0 ? t.priority : 'none') + '"></span>';
       var dueText = _formatDue(t.dueAt);
       var dueClass = t.dueAt < Date.now() ? 'lmc-due-overdue' : (t.dueAt - Date.now() < 3600000 ? 'lmc-due-soon' : '');
       var progressBar = t.progress > 0
@@ -280,11 +277,11 @@
             ${progressBar}
           </div>
           <div class="lmc-task-actions">
-            ${t.status !== 'done' ? '<button class="lmc-btn lmc-btn-primary lmc-btn-sm" data-action="mark-done" data-task-id="' + t.id + '" title="标记完成">✓</button>' : ''}
+            ${t.status !== 'done' ? '<button class="lmc-btn lmc-btn-primary lmc-btn-sm" data-action="mark-done" data-task-id="' + t.id + '" title="标记完成">' + BQ_ICONS.check + '</button>' : ''}
             ${t.type === 'classroom' ? '<button class="lmc-btn lmc-btn-primary lmc-btn-sm" data-action="start-classroom" data-topic="' + _escapeAttr(t.topic || t.title) + '">课堂</button>' : ''}
             ${t.type === 'practice' ? '<button class="lmc-btn lmc-btn-primary lmc-btn-sm" data-action="start-practice" data-topic="' + _escapeAttr(t.topic || t.title) + '">刷题</button>' : ''}
             ${t.type === 'review' ? '<button class="lmc-btn lmc-btn-primary lmc-btn-sm" data-action="start-review" data-topic="' + _escapeAttr(t.topic || t.title) + '">复习</button>' : ''}
-            <button class="lmc-btn lmc-btn-ghost lmc-btn-sm" data-action="edit-task" data-task-id="${t.id}" title="编辑">✎</button>
+            <button class="lmc-btn lmc-btn-ghost lmc-btn-sm" data-action="edit-task" data-task-id="${t.id}" title="编辑">${BQ_ICONS.edit}</button>
             <button class="lmc-btn lmc-btn-ghost lmc-btn-sm" data-action="delete-task" data-task-id="${t.id}" title="删除">×</button>
           </div>
         </div>
@@ -335,7 +332,7 @@
         <span>进度：${pct}%</span>
         <span>还可答：${p.available} 题</span>
       </div>
-      ${p.answered >= p.needed ? '<div class="lmc-prog-done">✅ 已达到目标！</div>' : ''}
+      ${p.answered >= p.needed ? '<div class="lmc-prog-done">' + BQ_ICONS.check + ' 已达到目标</div>' : ''}
     `;
   }
 
@@ -347,7 +344,7 @@
       return;
     }
     el.innerHTML = state.logs.slice(0, 10).map(function (log) {
-      var levelIcon = { 'info': 'ℹ️', 'success': '✅', 'warning': '⚠️', 'error': '❌' }[log.level] || 'ℹ️';
+      var levelIcon = { 'info': BQ_ICONS.info, 'success': BQ_ICONS.checkCircle, 'warning': BQ_ICONS.alert, 'error': BQ_ICONS.x }[log.level] || BQ_ICONS.info;
       return `
         <div class="lmc-log-item lmc-log-${log.level}">
           <span class="lmc-log-icon">${levelIcon}</span>
@@ -369,7 +366,7 @@
       if (card) card.style.display = 'block';
       if (body) {
         body.innerHTML = `
-          <div class="lmc-rescue-msg">⚠️ 检测到 ${failed.length} 个未完成任务。AI 建议：</div>
+          <div class="lmc-rescue-msg">检测到 ${failed.length} 个未完成任务。建议：</div>
           <ul class="lmc-rescue-list">
             <li>把任务拆分成 2-3 个 25 分钟专注块</li>
             <li>优先完成 <strong>${_escapeHtml(failed[0].title)}</strong>（最高优先级）</li>
@@ -395,7 +392,6 @@
     }
   }
 
-  // ---------- 任务操作 ----------
   function addTask(task) {
     var t = {
       id: 't_' + Date.now() + '_' + Math.random().toString(36).slice(2, 6),
@@ -438,7 +434,6 @@
     _renderTimeline();
   }
 
-  // ---------- 事件绑定 ----------
   function _bindEvents() {
     if (!state.target) return;
     var addBtn = state.target.querySelector('#lmc-add-task-btn');
@@ -485,7 +480,6 @@
     }
   }
 
-  // ---------- 自定义模态框（替代 window.prompt / confirm，避免 Trae 预览错误） ----------
   // v4.0 a11y：当前活跃的焦点陷阱句柄（_closeModal 时释放）
   var _activeModalTrap = null;
   function _setupModalTrap(backdrop, initialFocus) {
@@ -563,7 +557,6 @@
     if (existing) existing.remove();
   }
 
-  // ---------- 新建任务对话框（替代 prompt） ----------
   function _showAddTaskDialog() {
     var content = `
       <div class="lmc-form">
@@ -582,9 +575,9 @@
         <label class="lmc-form-label">
           <span>优先级</span>
           <select class="lmc-form-input" id="lmc-form-priority">
-            <option value="low">🟢 低</option>
-            <option value="medium" selected>🟡 中</option>
-            <option value="high">🔴 高</option>
+            <option value="low">低</option>
+            <option value="medium" selected>中</option>
+            <option value="high">高</option>
           </select>
         </label>
         <label class="lmc-form-label">
@@ -624,7 +617,6 @@
     }, 50);
   }
 
-  // ---------- 编辑任务 ----------
   function _showEditTaskDialog(taskId) {
     var t = state.tasks.find(function (t) { return t.id === taskId; });
     if (!t) return;
@@ -645,9 +637,9 @@
         <label class="lmc-form-label">
           <span>优先级</span>
           <select class="lmc-form-input" id="lmc-edit-priority">
-            <option value="low" ${t.priority === 'low' ? 'selected' : ''}>🟢 低</option>
-            <option value="medium" ${t.priority === 'medium' ? 'selected' : ''}>🟡 中</option>
-            <option value="high" ${t.priority === 'high' ? 'selected' : ''}>🔴 高</option>
+            <option value="low" ${t.priority === 'low' ? 'selected' : ''}>低</option>
+            <option value="medium" ${t.priority === 'medium' ? 'selected' : ''}>中</option>
+            <option value="high" ${t.priority === 'high' ? 'selected' : ''}>高</option>
           </select>
         </label>
         <label class="lmc-form-label">
@@ -689,7 +681,6 @@
     });
   }
 
-  // ---------- AI 自动细化目标为任务 ----------
   function _showAIBreakdownDialog() {
     var content = `
       <div class="lmc-form">
@@ -828,7 +819,6 @@
     _addLog('warning', message);
   }
 
-  // ---------- 清空日志（替换 confirm） ----------
   function _clearLogs() {
     _showConfirm('确定清空所有日志？', function (ok) {
       if (!ok) return;
@@ -838,7 +828,6 @@
     });
   }
 
-  // ---------- 启动器（跳转到对应模块） ----------
   // 注意：_startClassroomFromHub 已被移除（AI 课堂模块下线）。为兼容老书签/历史
   // 任务中的 start-classroom action，_delegateClick 已经把它映射到 _startPracticeFromHub。
   function _startPracticeFromHub(topic) {
@@ -848,7 +837,6 @@
     location.hash = '#/review?topic=' + encodeURIComponent(topic);
   }
 
-  // ---------- 工具 ----------
   var _escapeHtml = window.escapeHtml;
   function _escapeAttr(s) { return _escapeHtml(s).replace(/"/g, '&quot;'); }
   function _formatTime(ts) {
@@ -870,7 +858,6 @@
     return Math.round(diff / 86400000) + ' 天后';
   }
 
-  // ---------- 暴露 ----------
   global.LearningHub = {
     init: initLearningHub,
     addTask: addTask,

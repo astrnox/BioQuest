@@ -12,32 +12,19 @@
   overflow: hidden;
 }
 
+/* 首屏背景：静态 CSS 层次（原为 35 个随机漂移粒子）
+   为什么不用粒子：hero-overlay 为 0.45~0.96 的深色渐变，粒子在其下方几乎不可见；
+   且 35 个 Math.random 元素各自跑 7~14s 无限动画，位置每次刷新都不同。
+   现改为纯 CSS 单层实色渐变：零脚本、零常驻动画，深色主题下文字对比度不变。
+   注：渐变预算为 4 处（全站），此处只用 1 处，勿再叠加 radial 高光。 */
 .hero-bg {
   position: absolute;
   inset: 0;
   z-index: 0;
   pointer-events: none;
+  background: linear-gradient(168deg, #16281c 0%, #1d3323 42%, #2d4a2b 74%, #3f5f3c 100%);
 }
 
-.hero-bg canvas {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    160deg,
-    rgba(18, 32, 22, 0.96) 0%,
-    rgba(26, 47, 29, 0.88) 35%,
-    rgba(45, 74, 43, 0.65) 70%,
-    rgba(90, 125, 92, 0.45) 100%
-  );
-  z-index: 1;
-  pointer-events: none;
-}
 
 .hero-gradient-left {
   position: absolute;
@@ -132,23 +119,10 @@
   transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
 }
 
-.btn-primary-hero::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 60%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
-  transition: left 0.5s ease;
-}
-
-.btn-primary-hero:hover::after {
-  left: 120%;
-}
+/* P0 去装饰：移除按钮"扫光"（::after 渐变滑过）效果，
+   按钮反馈只用底色/边框，不做光效。 */
 
 .btn-primary-hero:hover {
-  transform: translateY(-2px);
   box-shadow: var(--shadow-button, 0 1px 3px rgba(44, 62, 48, 0.08));
   background: var(--color-warm-light, #d4a574);
 }
@@ -181,7 +155,6 @@
 .btn-outline-hero:hover {
   border-color: rgba(255, 255, 255, 0.6);
   background: rgba(255, 255, 255, 0.08);
-  transform: translateY(-2px);
 }
 
 .btn-outline-hero:active {
@@ -203,8 +176,7 @@
   color: rgba(255, 255, 255, 0.35);
   font-size: 0.72rem;
   letter-spacing: 0.08em;
-  animation: scrollPulse 2.5s ease-in-out infinite;
-  animation: heroFadeIn 0.8s 0.6s ease both, scrollPulse 2.5s 1s ease-in-out infinite;
+  animation: heroFadeIn 0.8s 0.6s ease both;
 }
 
 .scroll-line {
@@ -223,7 +195,6 @@
   width: 100%;
   height: 40%;
   background: rgba(255, 255, 255, 0.5);
-  animation: scrollDot 2.5s ease-in-out infinite;
 }
 
 @keyframes heroFadeIn {
@@ -237,16 +208,9 @@
   }
 }
 
-@keyframes scrollPulse {
-  0%, 100% { opacity: 0.35; }
-  50% { opacity: 0.7; }
-}
 
-@keyframes scrollDot {
-  0% { transform: translateY(-100%); }
-  50% { transform: translateY(160%); }
-  100% { transform: translateY(-100%); }
-}
+
+
 
 /* ----- STATS STRIP ----- */
 .stats-strip {
@@ -269,7 +233,6 @@
 }
 
 .stat-item:hover {
-  transform: translateY(-3px);
 }
 
 .stat-item:hover .stat-value {
@@ -335,7 +298,6 @@
 
 .module-block:hover {
   background: rgba(26, 58, 42, 0.03);
-  transform: translateY(-3px);
   box-shadow: var(--shadow-floating);
   border-left-color: var(--color-amber);
 }
@@ -480,7 +442,6 @@
 .btn-secondary-cta:hover {
   border-color: rgba(255, 255, 255, 0.5);
   background: rgba(255, 255, 255, 0.06);
-  transform: translateY(-2px);
 }
 
 .btn-secondary-cta:active {
@@ -544,7 +505,6 @@
 
 .scroll-down-indicator:hover {
   background: var(--color-sage);
-  transform: translateY(-2px);
   box-shadow: var(--shadow-lg);
 }
 
@@ -743,7 +703,7 @@
 }
 
 .dq-option:hover {
-  border-color: var(--color-sage, #5a7d5c);
+  border-color: var(--color-sage);
   background: rgba(90,125,92,0.04);
 }
 
@@ -768,13 +728,13 @@
 }
 
 .dq-selected {
-  border-color: var(--color-sage, #5a7d5c);
+  border-color: var(--color-sage);
   background: rgba(90,125,92,0.06);
 }
 
 .dq-selected .dq-marker {
-  border-color: var(--color-sage, #5a7d5c);
-  background: var(--color-sage, #5a7d5c);
+  border-color: var(--color-sage);
+  background: var(--color-sage);
   color: #fff;
 }
 
@@ -1040,12 +1000,11 @@
 
 .bio-history-card {
   position: relative;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 16px;
+  /* P0 去玻璃：改为实色深面板（原 rgba+blur(8px)） */
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-xl);
   padding: 22px 24px;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
   transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
               background 0.3s ease,
               border-color 0.3s ease,

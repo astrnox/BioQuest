@@ -23,7 +23,7 @@ function setupBaseDom() {
   document.body.innerHTML =
     '<div id="bq-boot-mask" aria-hidden="true">' +
     '<div id="bq-boot-logo"><svg></svg></div>' +
-    '<div id="bq-boot-label">BioQuest</div>' +
+    '<div id="bq-boot-label">TATABOX</div>' +
     '<div id="bq-boot-pairs" aria-hidden="true">' +
     '<div class="bq-pair bq-pair--r1"><span class="bq-base">A</span>' +
     '<span class="bq-hb"><i></i><i></i></span><span class="bq-base">T</span></div>' +

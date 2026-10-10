@@ -1,5 +1,5 @@
 /**
- * BioQuest — 学习分析图表集成模块（Chart.js）
+ * TATABOX — 学习分析图表集成模块（Chart.js）
  * 提供折线、雷达、柱状、环形等图表的统一封装
  * 依赖：js/vendor/chart.umd.min.js -> window.Chart
  */

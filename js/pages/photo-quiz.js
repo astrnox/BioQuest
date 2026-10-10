@@ -1,6 +1,6 @@
 /**
  * ============================================================
- * BioQuest — 拍照录题模块
+ * TATABOX — 拍照录题模块
  * 拍照/上传图片（仅本地存档）+ 手动输入题目文字
  * 调用后端 /photo-quiz 让 AI 生成选项、答案与解析
  * 历史记录保存在 localStorage（最近 20 条）
@@ -191,7 +191,6 @@
       if (progressFill) progressFill.style.width = p + '%';
     };
 
-    // ---------- 新路径：OcrEngine 统一4级降级（L1 Vision → L2 PaddleOCR → L3 Tesseract → L4 OCRad） ----------
     if (window.OcrEngine && typeof window.OcrEngine.recognize === 'function') {
       window.OcrEngine.recognize(imgData, {
         // 生物题目常见长度：题干+选项通常超过10字，严格一点可避免无意义识别结果被误当"成功"
@@ -222,7 +221,6 @@
       return;
     }
 
-    // ---------- 回退路径：OcrEngine 未加载时走原有两级逻辑（Vision + Tesseract） ----------
     console.warn('[photo-quiz] OcrEngine 未就绪，走旧版 Vision+Tesseract 双级逻辑');
     // 策略 1：优先使用视觉多模态 OCR（最佳准确率，支持斜体）
     if (window.AiClient && typeof window.AiClient.visionRecognize === 'function' &&
@@ -517,7 +515,6 @@
 
     target.innerHTML = html;
 
-    // ===== 绑定事件 =====
     var videoWrap = document.getElementById('pq-video-wrap');
     var startBtn = document.getElementById('pq-start-cam');
     var captureBtn = document.getElementById('pq-capture');

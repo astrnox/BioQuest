@@ -1,6 +1,6 @@
 /**
  * ============================================================
- * BioQuest — PRD §5-46：多标签页数据同步 (BroadcastChannel)
+ * TATABOX — PRD §5-46：多标签页数据同步 (BroadcastChannel)
  * 使用 BroadcastChannel API 在多个标签页之间同步答题状态
  * ============================================================
  */
@@ -83,5 +83,5 @@
     }
   };
 
-  console.log('[BioQuest] BroadcastChannel 多标签页同步已启动');
+  console.log('[TATABOX] BroadcastChannel 多标签页同步已启动');
 })();

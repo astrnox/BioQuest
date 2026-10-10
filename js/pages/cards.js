@@ -1,6 +1,6 @@
 /**
  * ============================================================
- * BioQuest — Anki 风格间隔重复知识卡片系统
+ * TATABOX — Anki 风格间隔重复知识卡片系统
  * 基于 ts-fsrs (FSRS-5) 算法的 spaced repetition flashcards
  * ============================================================
  */
@@ -8,7 +8,6 @@
 (function () {
   'use strict';
 
-  // ==================== 常量配置 ====================
   var STORAGE_KEY = 'anki_progress_v2'; // v2: FSRS-4.5 + BKT
   var BKT_STORAGE_KEY = 'bioquest_bkt_v1';
   var NEW_CARDS_PER_DAY = 20;
@@ -23,7 +22,6 @@
     pS: 0.10     // 失误概率（掌握但答错）
   };
 
-  // ==================== 全局状态 ====================
   var KData = { 分类: [] };
   var currentDeckIndex = -1;       // 当前选中的牌组（分类）索引
   var sessionState = null;         // 当前学习会话状态
@@ -52,7 +50,6 @@
    * @property {number} totalNew - 总新卡数
    */
 
-  // ==================== localStorage 持久化 ====================
 
   /**
    * 加载所有牌组的进度数据
@@ -98,7 +95,6 @@
     return allProgress[deckId];
   }
 
-  // ==================== FSRS-4.5 + BKT 算法核心 ====================
 
   /**
    * 将 UI 评分映射到 FSRS 评分：again->1, good->3, easy->4
@@ -148,7 +144,6 @@
     };
   }
 
-  // ==================== BKT (Bayesian Knowledge Tracing) ====================
 
   function loadBKT() {
     try {
@@ -206,7 +201,6 @@
     return newPL;
   }
 
-  // ==================== 数据加载 ====================
 
   async function loadData() {
     // 优先从 Supabase 加载卡片数据
@@ -244,7 +238,6 @@
     }
   }
 
-  // ==================== UI 初始化与渲染 ====================
 
   function initApp() {
     renderDeckSelector();
@@ -458,7 +451,7 @@
       var mastery = getConceptMastery(concept);
       var masteryPct = Math.round(mastery * 100);
       var masteryColor = mastery >= 0.8 ? 'var(--color-success)' : (mastery >= 0.5 ? 'var(--color-warning)' : 'var(--color-error)');
-      var masteryHtml = '<div class="anki-bkt-bar" style="margin-bottom:14px;">' +
+      var masteryHtml = '<div class="anki-bkt-bar bq-mb-14">' +
         '<div style="display:flex;justify-content:space-between;align-items:center;font-size:0.76rem;color:var(--text-muted);margin-bottom:6px;">' +
         '<span>概念掌握度 · ' + escapeHtml(concept) + '</span>' +
         '<span>' + masteryPct + '%</span>' +
@@ -713,7 +706,6 @@
    */
   var escapeHtml = window.escapeHtml;
 
-  // ==================== 键盘快捷键 ====================
 
   function handleKeydown(e) {
     if (!sessionState) return;
@@ -743,7 +735,6 @@
     }
   }
 
-  // ==================== 暴露全局 API ====================
 
   // 暴露 handleRate 供内联 onclick 调用（事件委托的备份）
   window._ankiHandleRate = handleRate;
@@ -766,7 +757,6 @@
     }
   };
 
-  // ==================== 初始化入口 ====================
 
   document.addEventListener('DOMContentLoaded', function () {
     document.addEventListener('keydown', handleKeydown);

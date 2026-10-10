@@ -1,5 +1,5 @@
 /**
- * BioQuest — 数据计算严苛审查回归测试（score-audit）
+ * TATABOX — 数据计算严苛审查回归测试（score-audit）
  *
  * 针对全库数据计算审查中确认并修复的科学性问题做回归防护：
  *   1) calcBioScore（js/pages/analytic.js）

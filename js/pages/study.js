@@ -1,12 +1,11 @@
 /**
  * ============================================================
- * BioQuest — 学习管理中心 (/study)
- * 实现依据：UI-UX-PRD.md 第 4.7 节（布局）+ 第 5 节（交互流程）
+ * TATABOX — 学习管理中心 (/study)
  *  - 6 个 Tab：课程表 / 待办 / 番茄钟 / 笔记 / 倒计时 / 工具
  *  - Tab 栏吸顶
  *  - 底部"今日学习节奏"常驻速览卡片
  *  - 待办与番茄钟数据关联（番茄完成后自动标记待办进度）
- *  - 工具 Tab 聚合 PRD 5.1 错题流程 / 5.2 虚拟实验室 等入口
+ *  - 工具 Tab 聚合错题流程 / 虚拟实验室等入口
  * ============================================================
  */
 
@@ -45,7 +44,6 @@
         padding-left: 20px;
         padding-right: 20px;
         border-bottom: 1px solid var(--border-light, #e5e7eb);
-        backdrop-filter: blur(8px);
       }
       .st-tabs { display: flex; gap: 6px; flex-wrap: wrap; max-width: 920px; margin: 0 auto; }
       .st-tab {
@@ -219,7 +217,7 @@
 
   /* ---------- Tab 栏 ---------- */
   function _renderTabs(container) {
-    // PRD 4.7：课程表 / 待办 / 番茄钟 / 笔记 / 倒计时 / 工具 / 管理
+    // 课程表 / 待办 / 番茄钟 / 笔记 / 倒计时 / 工具 / 管理
     var tabs = [
       { id: 'schedule',  label: '课程表' },
       { id: 'tasks',     label: '待办' },
@@ -267,14 +265,14 @@
     var days = _daysUntil(_examDate);
 
     container.innerHTML = '<div class="st-card">' +
-      '<h3>欢迎回来，开始今天的学习</h3>' +
+      '<h3>今天：' + todoCount + ' 个待办 · 番茄 ' + pomoToday + ' 个 · 专注 ' + _formatDuration(focusMin) + '</h3>' +
       '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:16px;margin-top:12px;">' +
         '<div class="st-stat-box"><div class="st-stat-value">' + todoCount + '</div><div class="st-stat-label">待办任务</div></div>' +
         '<div class="st-stat-box"><div class="st-stat-value">' + pomoToday + '</div><div class="st-stat-label">今日番茄</div></div>' +
         '<div class="st-stat-box"><div class="st-stat-value">' + _formatDuration(focusMin) + '</div><div class="st-stat-label">今日专注</div></div>' +
         '<div class="st-stat-box"><div class="st-stat-value">' + (days !== null ? days : '—') + '</div><div class="st-stat-label">距联考</div></div>' +
       '</div>' +
-      (overdueTasks > 0 ? '<div style="margin-top:16px;padding:12px;background:rgba(217,83,79,0.06);border-radius:8px;color:#a94442;font-size:0.88rem;">⚠️ 有 ' + overdueTasks + ' 个待办已逾期，请尽快处理</div>' : '') +
+      (overdueTasks > 0 ? '<div class="bq-note bq-note--danger" style="margin-top:16px;"><span class="bq-note__icon">' + BQ_ICONS.alert + '</span><span>有 ' + overdueTasks + ' 个待办已逾期，请尽快处理</span></div>' : '') +
     '</div>' +
     '<div class="st-card">' +
       '<h3>快速入口</h3>' +
@@ -348,7 +346,7 @@
           (i.location ? ' @' + i.location : '') + '</span>' +
           '<button class="st-btn st-btn--secondary st-btn--small st-del-schedule" data-id="' + i.id + '" style="background:rgba(255,255,255,0.25);color:#fff;padding:2px 6px;">×</button>' +
         '</div>';
-      }).join('') : '<span style="color:var(--text-muted,#8a8a8a);">—</span>') + '</td></tr>';
+      }).join('') : '<span class="bq-text-muted">—</span>') + '</td></tr>';
     }).join('');
 
     container.innerHTML = '<div class="st-card"><h3>添加课程</h3>' +
@@ -380,7 +378,7 @@
     };
     if (!item.subject) return alert('请输入科目');
     var res = await window.saveScheduleItem(item);
-    if (!res || !res.ok) return alert('添加失败：' + ((res && res.error) || '未知错误'));
+    if (!res || !res.ok) return alert('添加失败：' + errText(res));
     await _loadData();
     _render();
   }
@@ -388,7 +386,7 @@
   async function _deleteScheduleItem(id) {
     if (!confirm('删除该课程？')) return;
     var res = await window.deleteScheduleItem(id);
-    if (!res || !res.ok) return alert('删除失败：' + ((res && res.error) || '未知错误'));
+    if (!res || !res.ok) return alert('删除失败：' + errText(res));
     await _loadData();
     _render();
   }
@@ -438,7 +436,7 @@
     });
     container.querySelectorAll('.st-pomo-task').forEach(function(btn) {
       btn.addEventListener('click', function() {
-        // PRD 4.7：待办可关联番茄钟 —— 点击后跳转番茄钟并关联该任务
+        // 待办可关联番茄钟 —— 点击后跳转番茄钟并关联该任务
         _pomodoroLinkedTask = btn.dataset.id;
         _activeTab = 'pomodoro';
         _render();
@@ -454,14 +452,14 @@
       priority: document.getElementById('st-task-priority').value,
       due_date: document.getElementById('st-task-due').value ? new Date(document.getElementById('st-task-due').value).toISOString() : null
     });
-    if (!res || !res.ok) return alert('添加失败：' + ((res && res.error) || '未知错误'));
+    if (!res || !res.ok) return alert('添加失败：' + errText(res));
     await _loadData();
     _render();
   }
 
   async function _completeTask(id) {
     var res = await window.updateStudyTask(id, { status: 'done' });
-    if (!res || !res.ok) return alert('操作失败：' + ((res && res.error) || '未知错误'));
+    if (!res || !res.ok) return alert('操作失败：' + errText(res));
     await _loadData();
     _render();
   }
@@ -469,7 +467,7 @@
   async function _deleteTask(id) {
     if (!confirm('删除该任务？')) return;
     var res = await window.deleteStudyTask(id);
-    if (!res || !res.ok) return alert('删除失败：' + ((res && res.error) || '未知错误'));
+    if (!res || !res.ok) return alert('删除失败：' + errText(res));
     await _loadData();
     _render();
   }
@@ -557,7 +555,7 @@
     if (typeof window.addFocusSession === 'function') {
       await window.addFocusSession({ duration: mins, is_completed: true, task_id: _pomodoroLinkedTask || null });
     }
-    // PRD 4.7：番茄钟完成后自动标记待办进度
+    // 番茄钟完成后自动标记待办进度
     if (_pomodoroLinkedTask) {
       var task = _tasks.filter(function(t){return String(t.id) === String(_pomodoroLinkedTask);})[0];
       if (task && typeof window.updateStudyTask === 'function') {
@@ -613,12 +611,12 @@
     var content = document.getElementById('st-note-content').value.trim();
     if (!title) return alert('请输入笔记标题');
     var res = await window.addNote({ title: title, content: content });
-    if (!res || !res.ok) return alert('添加失败：' + ((res && res.error) || '未知错误'));
+    if (!res || !res.ok) return alert('添加失败：' + errText(res));
     await _loadData();
     _render();
   }
 
-  /* ---------- 工具 Tab（聚合 PRD 5.1 / 5.2 流程入口） ---------- */
+  /* ---------- 工具 Tab（聚合错题 / 实验室等流程入口） ---------- */
   function _renderTools(container) {
     var tools = [
       {
@@ -667,7 +665,7 @@
     ];
 
     container.innerHTML = '<div class="st-card"><h3>学习工具箱</h3>' +
-      '<p style="color:var(--text-muted,#8a8a8a);font-size:0.85rem;margin:-6px 0 16px;">聚合各模块入口，PRD 第 5 节交互流程均可从此处发起</p>' +
+      '<p style="color:var(--text-muted,#8a8a8a);font-size:0.85rem;margin:-6px 0 16px;">聚合各模块入口，练习、错题、实验室都可以从这里进入</p>' +
       '<div class="st-tools-grid">' + tools.map(function(t) {
         return '<div class="st-tool-card" data-route="' + t.route + '"' + (t.action ? ' data-action="' + t.action + '"' : '') + '>' +
           '<div class="st-tool-icon">' + t.icon + '</div>' +
@@ -728,7 +726,7 @@
     } else {
       container.innerHTML =
         '<div class="st-card" style="text-align:center;padding:32px;">' +
-          '<p style="color:var(--text-muted,#8a8a8a);">学习管理中心未加载</p>' +
+          '<p class="bq-text-muted">学习管理中心未加载</p>' +
           '<p style="color:var(--text-muted,#8a8a8a);font-size:12px;margin-top:4px;">请检查 js/pages/learning-hub.js 是否成功加载</p>' +
         '</div>';
     }
@@ -782,7 +780,7 @@
     pageTarget.innerHTML = '<div style="padding:32px 20px 8px;text-align:center;">' +
       '<div style="font-family:var(--font-mono,monospace);font-size:0.72rem;letter-spacing:0.16em;color:var(--color-amber,#c4956a);text-transform:uppercase;margin-bottom:8px;">STUDY HUB</div>' +
       '<h1 style="margin:0;font-family:var(--font-serif,serif);color:var(--color-deep,#1a3a2a);font-size:1.8rem;">学习管理中心</h1>' +
-      '<p style="margin:8px 0 0;color:var(--text-muted,#8a8a8a);font-size:0.9rem;">课程表 · 待办 · 番茄钟 · 笔记 · 倒计时 · 工具 · 学习管理，一站式管理</p>' +
+      '<p style="margin:8px 0 0;color:var(--text-muted,#8a8a8a);font-size:0.9rem;">课程表 · 待办 · 番茄钟 · 笔记 · 倒计时 · 工具 · 学习管理，都在这里</p>' +
     '</div>' +
     '<div class="st-container">' +
       '<div class="st-tabs-wrap" id="st-tabs-wrap"><div class="st-tabs" id="st-tabs"></div></div>' +

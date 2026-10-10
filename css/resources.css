@@ -200,7 +200,6 @@
 .resource-item:hover {
   border-color: var(--sage);
   box-shadow: var(--shadow-lg);
-  transform: translateY(-3px);
 }
 
 .resource-item:hover::before {

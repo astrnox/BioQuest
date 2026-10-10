@@ -1,5 +1,5 @@
 /**
- * BioQuest - 管理后台 · OCR 录题子模块（Issue #17 自 admin.js 拆分）
+ * TATABOX - 管理后台 · OCR 录题子模块（Issue #17 自 admin.js 拆分）
  * 由 admin.js 的 loadTabContent 在切换到「OCR 录题」标签时动态注入加载。
  * 依赖：js/admin/admin.js（核心）；识别走 AI vision 接口（无本地重依赖）。
  */
@@ -36,11 +36,11 @@ function renderOcrTab(container) {
           </div>
 
           <div style="margin-top:12px;display:flex;gap:8px;">
-            <button id="ocr-batch-btn" class="admin-btn-secondary" style="flex:1;">
+            <button id="ocr-batch-btn" class="admin-btn-secondary bq-flex-1">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
               批量上传（最多 10 张）
             </button>
-            <button id="ocr-clear-btn" class="admin-btn-secondary" style="flex:1;">
+            <button id="ocr-clear-btn" class="admin-btn-secondary bq-flex-1">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
               清空
             </button>
@@ -75,10 +75,10 @@ function renderOcrTab(container) {
           </div>
 
           <div id="ocr-batch-actions" style="display:none;margin-top:12px;display:flex;gap:8px;">
-            <button id="ocr-approve-all-btn" class="admin-btn-primary" style="flex:1;">
+            <button id="ocr-approve-all-btn" class="admin-btn-primary bq-flex-1">
               ✓ 全部确认入库
             </button>
-            <button id="ocr-reject-all-btn" class="admin-btn-secondary" style="flex:1;">
+            <button id="ocr-reject-all-btn" class="admin-btn-secondary bq-flex-1">
               ✗ 全部拒绝
             </button>
           </div>
@@ -151,9 +151,9 @@ async function _ocrCheckVisionStatus() {
     const data = await res.json();
     const count = (data && data.available) ? data.available.length : 0;
     if (count === 0) {
-      _ocrShowStatus('⚠️ 当前未配置任何 vision 模型，OCR 功能不可用。请在 server.py 配置 ZHIPU_API_KEY / QWEN_API_KEY / SILICONFLOW_API_KEY / NVIDIA_API_KEY / OPENAI_API_KEY 中至少一个。', 'error', 15000);
+      _ocrShowStatus('当前未配置任何 vision 模型，OCR 功能不可用。请在 server.py 配置 ZHIPU_API_KEY / QWEN_API_KEY / SILICONFLOW_API_KEY / NVIDIA_API_KEY / OPENAI_API_KEY 中至少一个。', 'error', 15000);
     } else {
-      _ocrShowStatus(`✅ 已配置 ${count} 个 vision 模型：${data.available.map(v => v.model).join(', ')}`, 'success', 6000);
+      _ocrShowStatus(`已配置 ${count} 个 vision 模型：${data.available.map(v => v.model).join(', ')}`, 'success', 6000);
     }
   } catch (e) {
     console.warn('[OCR] 检查 vision 状态失败:', e);
@@ -330,21 +330,21 @@ function _ocrEditItem(idx) {
   modal.innerHTML = `
     <div class="lmc-modal" style="background:#fff;border-radius:12px;max-width:640px;width:90%;max-height:90vh;overflow:auto;padding:24px;">
       <h3 style="margin:0 0 16px;">编辑题目</h3>
-      <div style="margin-bottom:12px;">
-        <label style="font-size:12px;color:#666;display:block;margin-bottom:4px;">题干</label>
+      <div class="bq-mb-12">
+        <label class="bq-field-label">题干</label>
         <textarea id="ocr-edit-stem" style="width:100%;min-height:80px;padding:8px;border:1px solid #ccc;border-radius:8px;font-family:inherit;font-size:14px;">${escapeHtml(q.stem || '')}</textarea>
       </div>
-      <div style="margin-bottom:12px;">
-        <label style="font-size:12px;color:#666;display:block;margin-bottom:4px;">选项（A-D，每行一个）</label>
+      <div class="bq-mb-12">
+        <label class="bq-field-label">选项（A-D，每行一个）</label>
         <textarea id="ocr-edit-options" style="width:100%;min-height:80px;padding:8px;border:1px solid #ccc;border-radius:8px;font-family:inherit;font-size:14px;">${escapeHtml(optText)}</textarea>
       </div>
       <div style="margin-bottom:12px;display:flex;gap:12px;">
-        <div style="flex:1;">
-          <label style="font-size:12px;color:#666;display:block;margin-bottom:4px;">答案 (A/B/C/D)</label>
+        <div class="bq-flex-1">
+          <label class="bq-field-label">答案 (A/B/C/D)</label>
           <input id="ocr-edit-answer" value="${escapeHtml(q.answer || '')}" style="width:100%;padding:8px;border:1px solid #ccc;border-radius:8px;" />
         </div>
-        <div style="flex:1;">
-          <label style="font-size:12px;color:#666;display:block;margin-bottom:4px;">难度</label>
+        <div class="bq-flex-1">
+          <label class="bq-field-label">难度</label>
           <select id="ocr-edit-difficulty" style="width:100%;padding:8px;border:1px solid #ccc;border-radius:8px;">
             <option value="basic" ${q.difficulty === 'basic' ? 'selected' : ''}>基础</option>
             <option value="league" ${q.difficulty === 'league' ? 'selected' : ''}>联赛</option>
@@ -353,12 +353,12 @@ function _ocrEditItem(idx) {
           </select>
         </div>
       </div>
-      <div style="margin-bottom:12px;">
-        <label style="font-size:12px;color:#666;display:block;margin-bottom:4px;">解析</label>
+      <div class="bq-mb-12">
+        <label class="bq-field-label">解析</label>
         <textarea id="ocr-edit-analysis" style="width:100%;min-height:80px;padding:8px;border:1px solid #ccc;border-radius:8px;font-family:inherit;font-size:14px;">${escapeHtml(q.analysis || '')}</textarea>
       </div>
-      <div style="margin-bottom:12px;">
-        <label style="font-size:12px;color:#666;display:block;margin-bottom:4px;">OCR 原文（仅参考）</label>
+      <div class="bq-mb-12">
+        <label class="bq-field-label">OCR 原文（仅参考）</label>
         <div style="padding:8px;background:#f5f5f5;border-radius:8px;font-size:12px;color:#666;max-height:100px;overflow:auto;">${escapeHtml(q.ocr_text || '')}</div>
       </div>
       <div style="display:flex;gap:8px;justify-content:flex-end;">

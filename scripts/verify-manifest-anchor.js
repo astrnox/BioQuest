@@ -1,12 +1,12 @@
 #!/usr/bin/env node
 /**
- * BioQuest — manifest CDN 锚点一致性校验（PR #25 修复配套）
+ * TATABOX — manifest CDN 锚点一致性校验（PR #25 修复配套）
  * ============================================================
  * 背景：generate-bio-shards.js 会把「生成环境的 origin slug + HEAD SHA」写入
  * data/manifest.json 的 { git, repo }，前端据此构造 jsDelivr 版本化 URL：
  *   https://cdn.jsdelivr.net/gh/<repo>@<git>/data/...
  * 若贡献者在自己的 fork 中生成 manifest 并提交（如 PR #25 曾写入
- * repo=qian163/BioQuest），合并部署后全部题库重资源会指向第三方 fork：
+ * repo=qian163/TATABOX），合并部署后全部题库重资源会指向第三方 fork：
  * 应用靠「SHA 不符→降级同源」「404→回退」自愈不会立刻挂，
  * 但版本化 CDN 分发对官方部署实际失效，并隐式依赖第三方 fork 常驻。
  *
@@ -74,7 +74,6 @@ function main() {
     fail('data/manifest.json JSON 解析失败: ' + e.message);
   }
 
-  // ---- 规则 1：字段存在 + 格式合法 ----
   const repo = mf.repo;
   const gitSha = mf.git;
   if (!repo || !REPO_SLUG_RE.test(repo)) {
@@ -84,7 +83,6 @@ function main() {
     fail('manifest.git 缺失或格式非法（期望 7-40 位十六进制 commit，实际: ' + JSON.stringify(gitSha) + '）');
   }
 
-  // ---- 规则 2：repo 必须指向本仓库（fork 生成的锚点在此拦截）----
   const slug = originSlug();
   if (slug === null) {
     console.warn('[warn] 无法解析 origin remote，跳过 repo 归属比对（CI 环境不应出现）');
@@ -98,7 +96,6 @@ function main() {
     );
   }
 
-  // ---- 规则 3：git 必须是本仓库的 commit ----
   const head = git('rev-parse HEAD');
   if (!head) fail('无法读取当前 HEAD（git rev-parse 失败），锚点归属无法校验');
 

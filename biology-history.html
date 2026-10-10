@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>生物学史 - BioQuest</title>
-  <meta name="description" content="从林奈到 AlphaFold，回顾改变生物学的关键时刻。BioQuest 生物学史时间轴以滑动方式展现生命科学的重大里程碑。">
+  <title>生物学史 - TATABOX</title>
+  <meta name="description" content="从林奈到 AlphaFold，回顾改变生物学的关键时刻。TATABOX 生物学史时间轴以滑动方式展现生命科学的重大里程碑。">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <style>@font-face{font-family:'LXGW WenKai';src:url('fonts/lxgw-wenkai.ttf?v=1.522') format('truetype');font-weight:100 900;font-display:swap;}</style>
+  <style>@font-face{font-family:'LXGW WenKai';src:url('fonts/lxgw-wenkai.woff2?v=1.522') format('woff2');font-weight:100 900;font-display:swap;}</style>
   <link rel="stylesheet" href="css/globals.css">
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/footer.css">
@@ -27,8 +27,7 @@
       position: sticky;
       top: calc(var(--header-height, 64px));
       z-index: 10;
-      background: rgba(250, 247, 242, 0.92);
-      backdrop-filter: blur(8px);
+      background: #faf7f2;
       border-bottom: 1px solid var(--border-light, rgba(0,0,0,0.06));
       padding: 12px 0;
       margin: 0 0 32px;
@@ -83,11 +82,12 @@
 <body>
   <header class="header">
     <a href="index.html" class="header-brand">
-      <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-        <circle cx="14" cy="14" r="12" stroke="#e8a830" stroke-width="2"/>
-        <circle cx="14" cy="14" r="4" fill="#e8a830"/>
+      <svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+        <rect x="3" y="3" width="26" height="26" rx="7.6" stroke="#d4a87e" stroke-width="2.6"/>
+        <path d="M16 10.2v11.8" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
+        <path d="M11.2 10.2h9.6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
       </svg>
-      BioQuest
+      TATABOX
     </a>
     <div class="header-right">
       <button class="hamburger" id="hamburgerBtn" aria-label="菜单">
@@ -102,14 +102,14 @@
   <nav class="mobile-nav" id="mobileNav">
     <div style="display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid var(--border-light);">
       <div style="display:flex;align-items:center;gap:10px;">
-        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
-          <circle cx="14" cy="14" r="12" stroke="#e8a830" stroke-width="2"/>
-          <circle cx="14" cy="14" r="4" fill="#e8a830"/>
-          <path d="M14 2v4M14 22v4M2 14h4M22 14h4" stroke="#5a7d5c" stroke-width="1.5"/>
-        </svg>
-        <span style="font-weight:700;font-size:1.1rem;color:var(--color-deep);">BioQuest</span>
+        <svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+        <rect x="3" y="3" width="26" height="26" rx="7.6" stroke="#d4a87e" stroke-width="2.6"/>
+        <path d="M16 10.2v11.8" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
+        <path d="M11.2 10.2h9.6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
+      </svg>
+        <span style="font-weight:700;font-size:1.1rem;color:var(--color-deep);">TATABOX</span>
       </div>
-      <button id="mobileNavClose" style="background:none;border:none;font-size:22px;cursor:pointer;color:var(--text-muted);padding:4px 8px;">✕</button>
+      <button id="mobileNavClose" style="background:none;border:none;font-size:22px;cursor:pointer;color:var(--text-muted);padding:4px 8px;">×</button>
     </div>
     <div class="mobile-nav-scroll">
       <a href="index.html" data-route="/">首页</a>
@@ -164,7 +164,7 @@
 
   <footer class="footer">
     <div class="footer-content">
-      <div class="footer-brand">BioQuest — 生物竞赛学习平台</div>
+      <div class="footer-brand">TATABOX — 高中生物学习平台</div>
       <div class="footer-links">
         <a href="study.html">学习模块</a>
         <a href="cards.html">知识卡片</a>

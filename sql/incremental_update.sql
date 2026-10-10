@@ -1,5 +1,5 @@
 -- ============================================================
--- BioQuest — 增量更新 SQL（直接粘贴到 Supabase SQL Editor 运行）
+-- TATABOX — 增量更新 SQL（直接粘贴到 Supabase SQL Editor 运行）
 -- 包含：user_group 列、ebook_pdfs 表、Storage Bucket、RLS 策略、
 --       community 表、daily_checkins 表、achievements 表、streak 字段
 -- 健壮版：每个语句独立容错，可重复运行，不会因单点失败导致整体崩溃

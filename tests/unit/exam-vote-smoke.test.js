@@ -30,6 +30,8 @@ describe('试题页（quiz.html）投票/评分冒烟', () => {
       return { ok: false, json: async () => ({}) };
     };
 
+    // 与浏览器一致：utils.js（规范 escapeHtml 等共享工具）先于业务模块加载
+    window.eval(read('js/core/utils.js'));
     // storage.js / rating.js 显式挂载到 window，直接求值即可
     window.eval(read('js/core/storage.js'));
     window.eval(read('js/core/rating.js'));

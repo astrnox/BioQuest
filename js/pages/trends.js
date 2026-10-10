@@ -1,6 +1,6 @@
 /**
  * ============================================================
- * BioQuest — 学情趋势 & 冲刺周报模块
+ * TATABOX — 学情趋势 & 冲刺周报模块
  * 数据可视化：纯 SVG 绘制趋势图，Canvas 导出周报卡片
  * 读取 localStorage(bioquest_history) 学习历史
  * ============================================================
@@ -611,7 +611,7 @@
       ? rpt.weakPoints.map(function (w) {
           return '<li><span class="wr-tag warn">错 ' + w.errorRate + '%</span>' + escHtml(w.name) + ' <span style="color:var(--text-muted,#8a8a8a);font-size:0.8rem;">（共 ' + w.total + ' 题）</span></li>';
         }).join('')
-      : '<li>本周无明显薄弱知识点，继续保持</li>';
+      : '<li>本周无明显薄弱知识点</li>';
 
     var suggestions = generateSuggestions(rpt);
     var sugHtml = suggestions.map(function (s, i) {
@@ -765,7 +765,7 @@
     // 底部
     ctx.fillStyle = 'rgba(255,255,255,0.35)';
     ctx.font = '12px sans-serif';
-    ctx.fillText('BioQuest 生物竞赛学习平台 · ' + new Date().toLocaleDateString('zh-CN'), 40, 772);
+    ctx.fillText('TATABOX 高中生物学习平台 · ' + new Date().toLocaleDateString('zh-CN'), 40, 772);
     ctx.fillText('bioquest.dada.im', 470, 772);
 
     try {
@@ -773,10 +773,9 @@
       link.download = 'bioquest-weekly-' + Date.now() + '.png';
       link.href = canvas.toDataURL('image/png');
       link.click();
-      if (typeof showToast === 'function') showToast('周报已导出');
+      showToast('周报已导出');
     } catch (e) {
-      if (typeof showToast === 'function') showToast('导出失败：' + (e.message || '未知错误'));
-      else alert('导出失败：' + (e.message || '未知错误'));
+      showToast('导出失败：' + errText(e));
     }
   }
 

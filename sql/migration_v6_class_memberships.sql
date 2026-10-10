@@ -1,5 +1,5 @@
 -- ============================================================
--- BioQuest Migration V6 — 班级成员关系表（P0-3 修复 teacher.js localStorage）
+-- TATABOX Migration V6 — 班级成员关系表（P0-3 修复 teacher.js localStorage）
 -- 解决 PRD §5.11 T-1：「班级数据全部走 Supabase（删除 teacher.js localStorage 模拟）」
 -- ============================================================
 -- [幂等改造] Issue #143

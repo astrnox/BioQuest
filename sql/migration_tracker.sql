@@ -1,5 +1,5 @@
 -- ============================================================
--- BioQuest — Migration Tracker（迁移版本追踪）
+-- TATABOX — Migration Tracker（迁移版本追踪）
 -- GitHub Issue #143：保证 SQL migration 幂等，避免重复执行报错
 --
 -- 用途：

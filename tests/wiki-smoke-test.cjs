@@ -1,4 +1,4 @@
-/* BioQuest Wiki 模块 — jsdom 烟雾测试
+/* TATABOX Wiki 模块 — jsdom 烟雾测试
  * 运行：node tests/wiki-smoke-test.cjs （需 jsdom，已列为 devDependency）
  * 覆盖：种子加载、搜索、分类筛选、详情渲染、编辑器实时预览、CRUD、维基导入、导出。
  */
@@ -44,7 +44,7 @@ const clickEl = (el) => { if (el) el.dispatchEvent(new window.Event('click', { b
 function setInput(el, val) { el.value = val; el.dispatchEvent(new window.Event('input', { bubbles: true, cancelable: true })); }
 
 (async () => {
-  console.log('\n== BioQuest Wiki 烟雾测试 ==\n');
+  console.log('\n== TATABOX Wiki 烟雾测试 ==\n');
   await sleep(150);
 
   const cards = $all('#wikiGrid .wiki-card');

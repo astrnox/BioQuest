@@ -1,6 +1,6 @@
 /**
  * ============================================================
- * BioQuest v3.1 — TTS 语音讲解（T3-1/T3-2/T3-3）
+ * TATABOX v3.1 — TTS 语音讲解（T3-1/T3-2/T3-3）
  * L1 方案：浏览器内置 SpeechSynthesis API（零成本、离线可用）
  * 多角色音色：主讲老师 / 助教 / 学霸同学 / 困惑同学
  *
@@ -78,7 +78,6 @@
     synth.speak(u);
   }
 
-  // ====== 对外 API ======
 
   function enable() {
     enabled = true;
@@ -125,7 +124,6 @@
     return Object.keys(ROLE_VOICE);
   }
 
-  // ====== 接入 EventBus（T3-2） ======
   // AI 老师文本自动朗读（支持第二个参数 role 指定角色音色）
   EventBus.on(EventBus.ACTION.TTS_SPEAK, function (text, role) {
     speak(text, role || '主讲老师');
@@ -134,7 +132,6 @@
     pause();
   });
 
-  // ====== 暴露 API ======
   window.BioQuestTTS = {
     enable: enable,
     disable: disable,

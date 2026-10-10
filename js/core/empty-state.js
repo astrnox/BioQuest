@@ -1,6 +1,6 @@
 /**
  * ============================================================
- * BioQuest — 统一「温暖空状态」组件（Issue #125）
+ * TATABOX — 统一「温暖空状态」组件（Issue #125）
  * 为各数据区域（错题/收藏/排行/点数流水等）提供一致的空状态：
  * 标题 + 提示 + 可选行动按钮。
  *
@@ -16,11 +16,7 @@
   'use strict';
   if (typeof window === 'undefined') return;
 
-  function escapeHtml(s) {
-    return String(s == null ? '' : s)
-      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
-      .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
-  }
+  var escapeHtml = (typeof window !== 'undefined' ? window : globalThis).escapeHtml; // 规范实现见 js/core/utils.js（Q-01 统一）
 
   /**
    * 生成空状态 HTML 字符串。

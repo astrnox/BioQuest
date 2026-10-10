@@ -1,6 +1,6 @@
 /**
  * ============================================================
- * BioQuest v3.1 — IRT 自适应学习引擎（T0-5/T0-6）
+ * TATABOX v3.1 — IRT 自适应学习引擎（T0-5/T0-6）
  * 项目反应理论（Item Response Theory）三参数逻辑斯谛模型
  * 实时 θ 估计 + 自适应抽题 + 模考分数预测
  * 纯前端零依赖，与现有 BKT 引擎互补
@@ -26,7 +26,6 @@
   var STORAGE_KEY = 'bioquest_irt_state';
   var PARAMS_KEY = 'bioquest_irt_params';  // 题库参数缓存
 
-  // ====== 题目参数管理 ======
 
   /**
    * 从题库推断 IRT 参数（启发式估计，无需人工标注）
@@ -92,7 +91,6 @@
     return cache[questionId] || { a: 1.0, b: 0, c: 0.25 };
   }
 
-  // ====== θ 估计（贝叶斯后验更新） ======
 
   /**
    * 三参数逻辑斯谛模型的答对概率
@@ -220,7 +218,6 @@
     return state;
   }
 
-  // ====== 自适应抽题 ======
 
   /**
    * 按最大信息量原则选题（最简单实现：从候选题中选信息函数最大的）
@@ -288,7 +285,6 @@
     return selected;
   }
 
-  // ====== 预测分析 ======
 
   /**
    * θ → 百分位（标准正态 CDF）。θ 被建模为 N(0,1) 的受测者能力，
@@ -390,7 +386,6 @@
     return { level: level, percentile: percentile, desc: desc };
   }
 
-  // ====== 暴露 API ======
   window.IrtEngine = {
     inferParams: inferParams,
     buildParamsCache: buildParamsCache,

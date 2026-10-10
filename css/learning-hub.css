@@ -86,7 +86,7 @@
   background: var(--color-primary, #4a7c59);
   color: var(--color-text-inverse, #fff);
 }
-.lmc-btn-primary:hover { transform: translateY(-1px); box-shadow: var(--shadow-md, 0 2px 8px rgba(44, 62, 48, 0.06)); }
+.lmc-btn-primary:hover { box-shadow: var(--shadow-md, 0 2px 8px rgba(44, 62, 48, 0.06)); }
 .lmc-btn-ghost {
   background: var(--surface-secondary, #faf7f2);
   color: var(--text-primary, #1a2f1d);
@@ -159,7 +159,7 @@
 }
 .lmc-task-progress-fill {
   height: 100%;
-  background: linear-gradient(90deg, var(--color-sage, #4a7c59), var(--color-primary-light, #6ba07a));
+  background: var(--color-sage, #4a7c59);
   transition: width 0.3s;
 }
 
@@ -227,7 +227,7 @@
 }
 .lmc-prog-bar-fill {
   height: 100%;
-  background: linear-gradient(90deg, var(--color-sage, #4a7c59), var(--color-primary-light, #6ba07a));
+  background: var(--color-sage, #4a7c59);
   transition: width 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 .lmc-prog-foot {
@@ -357,7 +357,7 @@
 }
 .lmc-form-input:focus {
   outline: none;
-  border-color: var(--color-sage, #5a7d5c);
+  border-color: var(--color-sage);
   box-shadow: 0 0 0 3px rgba(90, 125, 92, 0.12);
 }
 .lmc-form-input[type="datetime-local"],
@@ -392,4 +392,4 @@ textarea.lmc-form-input { resize: vertical; min-height: 60px; line-height: 1.5; 
   gap: 4px;
   flex-shrink: 0;
 }
-.lmc-task-title:hover { color: var(--color-sage, #5a7d5c); }
+.lmc-task-title:hover { color: var(--color-sage); }

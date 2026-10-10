@@ -1,6 +1,6 @@
 /**
  * ============================================================
- * BioQuest — 全站统一汉堡菜单模块
+ * TATABOX — 全站统一汉堡菜单模块
  * 以主页（index.html）的移动端导航为准，供其它多页页面（MPA）
  * 复用，保证所有界面的汉堡菜单结构、交互与主页完全一致。
  *
@@ -36,7 +36,7 @@
     '      <circle cx="14" cy="14" r="4" fill="#e8a830"/>',
     '      <path d="M14 2v4M14 22v4M2 14h4M22 14h4" stroke="#5a7d5c" stroke-width="1.5"/>',
     '    </svg>',
-    '    <span class="mn-brand-name">BioQuest</span>',
+    '    <span class="mn-brand-name">TATABOX</span>',
     '  </div>',
     '  <button id="mobileNavClose" class="mn-close" aria-label="关闭菜单">×</button>',
     '</div>',

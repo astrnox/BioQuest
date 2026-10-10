@@ -1,5 +1,5 @@
 /**
- * BioQuest - 管理后台 · AI 出题子模块（Issue #17 自 admin.js 拆分）
+ * TATABOX - 管理后台 · AI 出题子模块（Issue #17 自 admin.js 拆分）
  * 由 admin.js 的 loadTabContent 在切换到「AI 出题」标签时动态注入加载。
  * 依赖：js/admin/admin.js（核心）。
  */
@@ -34,7 +34,7 @@ function renderAiGenTab(container) {
         <div style="background:#f8f9fa;border-radius:12px;padding:20px;">
           <h4 style="margin:0 0 16px;font-size:15px;">出题配置</h4>
 
-          <div style="margin-bottom:14px;">
+          <div class="bq-mb-14">
             <label style="font-size:13px;color:#555;display:block;margin-bottom:6px;font-weight:600;">知识点/主题 *</label>
             <input type="text" id="aigen-topic" placeholder="例如：细胞呼吸、光合作用、遗传学连锁互换..."
               style="width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-size:14px;box-sizing:border-box;">
@@ -61,15 +61,15 @@ function renderAiGenTab(container) {
             </div>
           </div>
 
-          <div style="margin-bottom:14px;">
+          <div class="bq-mb-14">
             <label style="display:flex;align-items:center;gap:8px;font-size:13px;cursor:pointer;">
               <input type="checkbox" id="aigen-need-image" checked style="width:16px;height:16px;">
               <span>生成题目配图（文生图）</span>
             </label>
-            ${!hasImg ? '<div style="font-size:12px;color:#c62828;margin-top:4px;">⚠️ 文生图需要配置 AI API Key（推荐智谱 CogView-3-Flash，免费）</div>' : ''}
+            ${!hasImg ? '<div style="font-size:12px;color:#c62828;margin-top:4px;">注意：文生图需要配置 AI API Key（推荐智谱 CogView-3-Flash，免费）</div>' : ''}
           </div>
 
-          <div style="margin-bottom:14px;">
+          <div class="bq-mb-14">
             <label style="font-size:13px;color:#555;display:block;margin-bottom:6px;font-weight:600;">题目数量</label>
             <select id="aigen-count" style="width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-size:14px;">
               <option value="1">1 题</option>
@@ -102,10 +102,10 @@ function renderAiGenTab(container) {
             </div>
           </div>
           <div id="aigen-batch-actions" style="display:none;margin-top:12px;gap:8px;display:none;">
-            <button id="aigen-approve-all-btn" class="admin-btn-primary" style="flex:1;">
+            <button id="aigen-approve-all-btn" class="admin-btn-primary bq-flex-1">
               ✓ 全部入库到 Supabase
             </button>
-            <button id="aigen-clear-btn" class="admin-btn-secondary" style="flex:1;">
+            <button id="aigen-clear-btn" class="admin-btn-secondary bq-flex-1">
               清空
             </button>
           </div>
@@ -330,7 +330,7 @@ async function _aiGenGenerate() {
     _aiGenUpdateQueueUI();
     _aiGenShowProgress('完成！', 100);
     setTimeout(_aiGenHideProgress, 1000);
-    _aiGenShowStatus('✅ 成功生成 ' + generated.length + ' 道题目！请预览后入库。', 'success');
+    _aiGenShowStatus('成功生成 ' + generated.length + ' 道题目！请预览后入库。', 'success');
 
   } catch(err) {
     console.error('[AI Gen] 生成失败:', err);
@@ -373,7 +373,7 @@ function _aiGenUpdateQueueUI() {
         var tfColor = ans ? '#2e7d32' : '#c62828';
         return '<div style="display:flex;align-items:flex-start;gap:8px;padding:6px 0;font-size:13px;border-bottom:1px dashed #eee;">' +
           '<span style="font-weight:600;color:#555;min-width:20px;">' + letter + '.</span>' +
-          '<span style="flex:1;">' + escapeHtml(sq.text || '') + '</span>' +
+          '<span class="bq-flex-1">' + escapeHtml(sq.text || '') + '</span>' +
           '<span style="color:' + tfColor + ';font-weight:600;">' + tfIcon + '</span>' +
         '</div>';
       }).join('');
@@ -383,7 +383,7 @@ function _aiGenUpdateQueueUI() {
     if (q.chart) {
       imgPreview = '<div style="margin:8px 0;"><img src="' + escapeHtml(q.chart) + '" style="max-width:100%;max-height:200px;border-radius:8px;border:1px solid #ddd;" alt="题目配图"></div>';
     } else if (q.image_prompt) {
-      imgPreview = '<div style="margin:8px 0;padding:8px;background:#fff3e0;border-radius:8px;font-size:12px;color:#e65100;">⚠️ 配图未生成/上传</div>';
+      imgPreview = '<div style="margin:8px 0;padding:8px;background:#fff3e0;border-radius:8px;font-size:12px;color:#e65100;">注意：配图未生成/上传</div>';
     }
 
     return '<div style="border:1px solid #e0e0e0;border-radius:8px;padding:14px;margin-bottom:10px;background:#fff;">' +

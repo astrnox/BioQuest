@@ -1,5 +1,5 @@
 /* ============================================================
-   BioQuest — 公告栏样式
+   TATABOX — 公告栏样式
    ============================================================ */
 
 .announcement-banner {
@@ -35,13 +35,8 @@
   color: #e8a830;
   display: flex;
   align-items: center;
-  animation: announce-pulse 2s ease-in-out infinite;
 }
 
-@keyframes announce-pulse {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.7; transform: scale(1.1); }
-}
 
 .announcement-marquee {
   flex: 1;

@@ -1,5 +1,5 @@
 """
-BioQuest 回归测试：验证关键路由可加载、控制台无致命错误、
+TATABOX 回归测试：验证关键路由可加载、控制台无致命错误、
 dashboard 核心区块、虚拟实验室参数控件等核心功能。
 """
 from playwright.sync_api import sync_playwright, expect
@@ -125,7 +125,7 @@ def handle_console(msg):
     # 过滤已知非致命警告与静态部署下的预期错误
     ignored = [
         "Supabase SDK",
-        "[BioQuest]",
+        "[TATABOX]",
         "[SW]",
         " fallbacks ",
     ]

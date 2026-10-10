@@ -1,6 +1,6 @@
 /**
  * ============================================================
- * BioQuest — AI 多智能体协作讨论模块
+ * TATABOX — AI 多智能体协作讨论模块
  * 三大核心功能：
  *   1. 多智能体群聊协作：自动召集 3-5 位智能体，依次发言、自主协商、综合观点
  *   2. 流水线模式：数据采集 → 撰写 → 校对 → 整合 四阶段顺序接力
@@ -109,7 +109,7 @@ function injectDiscussionStyles() {
     '.discussion-quick-btn:active { transform:scale(.96); background:var(--color-amber,#c4956a); color:#fff; }',
 
     /* 自定义智能体模态 */
-    '.disc-modal-overlay { position:fixed; inset:0; background:rgba(5,10,7,0.5); backdrop-filter:blur(4px); z-index:9998; display:flex; align-items:center; justify-content:center; padding:20px; }',
+    '.disc-modal-overlay { position:fixed; inset:0; background:rgba(5,10,7,0.66); z-index:9998; display:flex; align-items:center; justify-content:center; padding:20px; }',
     '.disc-modal { background:var(--surface-primary,#fff); border-radius:16px; width:100%; max-width:460px; max-height:90vh; overflow-y:auto; padding:24px; box-shadow:var(--shadow-floating); }',
     '.disc-modal h3 { margin:0 0 16px; font-family:var(--font-serif,serif); color:var(--color-deep,#1a3a2a); font-size:1.15rem; }',
     '.disc-form-group { margin-bottom:14px; }',
@@ -348,11 +348,11 @@ function _exportChatMarkdown() {
   var hasGroup = state.rounds && state.rounds.length > 0;
   var hasPipeline = state.pipelineRuns && state.pipelineRuns.length > 0;
   if (!hasGroup && !hasPipeline) {
-    if (typeof showToast === 'function') showToast('暂无对话记录可导出');
+    showToast('暂无对话记录可导出');
     return;
   }
 
-  var md = '# BioQuest AI 讨论记录\n\n';
+  var md = '# TATABOX AI 讨论记录\n\n';
   md += '- **模式**：' + (state.mode === 'pipeline' ? '流水线模式' : '群聊协作模式') + '\n';
   md += '- **时间**：' + new Date().toLocaleString('zh-CN') + '\n';
   md += '- **群聊轮次**：' + (state.rounds ? state.rounds.length : 0) + '\n';
@@ -373,7 +373,7 @@ function _exportChatMarkdown() {
         });
       }
       if (round.synthesis) {
-        md += '### ✦ 综合观点\n\n' + (round.synthesis || '') + '\n\n';
+        md += '### 综合观点\n\n' + (round.synthesis || '') + '\n\n';
       }
       md += '---\n\n';
     });
@@ -395,7 +395,7 @@ function _exportChatMarkdown() {
         });
       }
       if (run.final) {
-        md += '### ✦ 最终成品\n\n' + (run.final.summary || '') + '\n\n';
+        md += '### 最终成品\n\n' + (run.final.summary || '') + '\n\n';
         if (run.final.sections) {
           run.final.sections.forEach(function(sec) {
             md += '#### ' + (sec.heading || '') + '\n\n' + (sec.content || '') + '\n\n';
@@ -413,7 +413,7 @@ function _exportChatMarkdown() {
   a.download = 'bioquest-discussion-' + Date.now() + '.md';
   a.click();
   URL.revokeObjectURL(url);
-  if (typeof showToast === 'function') showToast('对话记录已导出为 Markdown');
+  showToast('对话记录已导出为 Markdown');
 }
 
 function _updateInputPlaceholder() {
@@ -453,13 +453,13 @@ function _renderAgentBar() {
       var idx = _discussionState.activeAgentKeys.indexOf(key);
       if (idx !== -1) {
         if (_discussionState.activeAgentKeys.length <= 3) {
-          if (typeof showToast === 'function') showToast('至少需要 3 位智能体');
+          showToast('至少需要 3 位智能体');
           return;
         }
         _discussionState.activeAgentKeys.splice(idx, 1);
       } else {
         if (_discussionState.activeAgentKeys.length >= 5) {
-          if (typeof showToast === 'function') showToast('最多 5 位智能体');
+          showToast('最多 5 位智能体');
           return;
         }
         _discussionState.activeAgentKeys.push(key);
@@ -529,7 +529,7 @@ function _openCustomAgentModal() {
     var name = (overlay.querySelector('#disc-ca-name').value || '').trim();
     var role = (overlay.querySelector('#disc-ca-role').value || '').trim();
     var style = (overlay.querySelector('#disc-ca-style').value || '').trim();
-    if (!name) { if (typeof showToast === 'function') showToast('请输入名称'); return; }
+    if (!name) { showToast('请输入名称'); return; }
     var sysPrompt = style || ('你是' + name + '，一位' + (role || '专家') + '。请从你的专业角度回答问题，控制在 300 字以内。');
     var arr = _discLoadCustomAgents();
     var newAgent = {
@@ -639,7 +639,7 @@ function _renderGroupRound(round) {
     var sBody;
     if (round.synthesis) sBody = _discMdWithCursor(round.synthesis, round.synthesisStreaming);
     else sBody = '<span>综合中<span class="discussion-dots"><span></span><span></span><span></span></span></span>';
-    synth.innerHTML = '<div class="discussion-synthesis-head"><span>✦</span>综合观点</div><div class="discussion-synthesis-body">' + sBody + '</div>';
+    synth.innerHTML = '<div class="discussion-synthesis-head">综合观点</div><div class="discussion-synthesis-body">' + sBody + '</div>';
     el.appendChild(synth);
   }
   return el;
@@ -720,7 +720,7 @@ function _sendDiscussionMessage(text) {
 function _sendGroup(userMessage) {
   var keys = _discussionState.activeAgentKeys.slice();
   if (keys.length < 3) {
-    if (typeof showToast === 'function') showToast('群聊模式至少需要 3 位智能体');
+    showToast('群聊模式至少需要 3 位智能体');
     return;
   }
   // 准备 agent 元信息 + 发给后端的 agents 配置
@@ -781,7 +781,7 @@ function _sendGroup(userMessage) {
     if (err) {
       if (err.name === 'AbortError') { _finishGroupStream(round); return; }
       round.error = err.message || '讨论失败';
-      if (typeof showToast === 'function') showToast('讨论失败：' + (err.message || err));
+      showToast('讨论失败：' + (err.message || err));
     }
     _finishGroupStream(round);
   });
@@ -929,7 +929,7 @@ function _sendPipeline(userMessage) {
     if (err) {
       if (err.name === 'AbortError') { _finishPipelineStream(run); return; }
       run.error = err.message || '流水线失败';
-      if (typeof showToast === 'function') showToast('流水线失败：' + (err.message || err));
+      showToast('流水线失败：' + (err.message || err));
     }
     _finishPipelineStream(run);
   });
@@ -1062,12 +1062,12 @@ function _buildTranscript() {
 function _finalizeDiscussion() {
   var btn = document.getElementById('disc-finalize-btn');
   if (btn) btn.disabled = true;
-  if (typeof showToast === 'function') showToast('正在整合最终成果...');
+  showToast('正在整合最终成果...');
 
   var data = _buildTranscript();
   if (!data.transcript.length) {
     if (btn) btn.disabled = false;
-    if (typeof showToast === 'function') showToast('无讨论内容可整合');
+    showToast('无讨论内容可整合');
     return;
   }
 
@@ -1111,11 +1111,11 @@ function _finalizeDiscussion() {
       _discussionState.finalResult._topic = data.topic;
       _discussionState.finalResult._mode = _discussionState.mode;
       _renderMessages(document.getElementById('discussion-messages'));
-      if (typeof showToast === 'function') showToast('最终成果已生成，可导出');
+      showToast('最终成果已生成，可导出');
     },
     onError: function (err) {
       if (btn) btn.disabled = false;
-      if (typeof showToast === 'function') showToast('整合失败：' + (err.message || err));
+      showToast('整合失败：' + (err.message || err));
     }
   });
 }
@@ -1193,7 +1193,7 @@ function _exportFinal(fmt) {
 
   if (fmt === 'pdf') {
     var w = window.open('', '_blank');
-    if (!w) { if (typeof showToast === 'function') showToast('请允许弹窗以导出 PDF'); return; }
+    if (!w) { showToast('请允许弹窗以导出 PDF'); return; }
     w.document.write(fullHtml);
     w.document.close();
     setTimeout(function() { w.focus(); w.print(); }, 400);

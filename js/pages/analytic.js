@@ -1,6 +1,6 @@
 /**
  * ============================================================
- * BioQuest — 学习分析模块
+ * TATABOX — 学习分析模块
  * 能力雷达图、错题本、学习统计
  * ============================================================
  */
@@ -871,7 +871,7 @@ function renderWrongBook(container) {
     container.innerHTML = `
       <div class="empty-state">
         <div class="empty-state-icon"></div>
-        <p class="empty-state-text">暂无错题，继续保持！</p>
+        <p class="empty-state-text">暂无错题记录</p>
       </div>
     `;
     return;
